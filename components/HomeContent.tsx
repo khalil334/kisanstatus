@@ -13,7 +13,8 @@ import AiAssistant from '@/components/AiAssistant';
 import KisanTemplates from '@/components/KisanTemplates';
 
 const ARTICLES = [
-  { slug:'pm-kisan-ekyc-online-2026',                      title:'PM Kisan eKYC Online 2026',             emoji:'🔐', desc:'Ghar baithe free mein eKYC karo — OTP ya CSC dono tarike',        category:'eKYC',         isNew:true  },
+  { slug:'pm-kisan-23vi-kist-2026-status-check',            title:'PM Kisan 23vi Kist Status Check 2026',  emoji:'📆', desc:'23vi kist kab aayegi — status check, date aur eligibility',      category:'Status',       isNew:true  },
+{ slug:'pm-kisan-ekyc-online-2026',                      title:'PM Kisan eKYC Online 2026',             emoji:'🔐', desc:'Ghar baithe free mein eKYC karo — OTP ya CSC dono tarike',        category:'eKYC',         isNew:true  },
   { slug:'pm-kisan-payment-failed-status-2026',             title:'PM Kisan Payment Failed Fix 2026',      emoji:'💸', desc:'Payment nahi aayi? Bank error, NPCI issue — seedha solution',    category:'Payment',      isNew:true  },
   { slug:'pm-kisan-rejected-list-2026',                     title:'PM Kisan Rejected List 2026',           emoji:'📋', desc:'Rejected kyun hua? 10 reasons aur har ek ka fix',               category:'Rejection',    isNew:true  },
   { slug:'pm-kisan-registration-online-2026',               title:'PM Kisan Registration Online 2026',     emoji:'📝', desc:'Pehli baar register karna hai? Documents se lekar submit tak',   category:'Registration', isNew:true  },
