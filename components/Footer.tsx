@@ -56,21 +56,7 @@ export default function Footer() {
                 <Link href="/" className="hover:text-green-400 transition-colors">Home</Link>
               </li>
               <li>
-                <Link href="/pm-kisan-status" className="hover:text-green-400 transition-colors">
-                  PM Kisan Status Check
-                </Link>
-              </li>
-              <li>
-                <Link href="/new-registration" className="hover:text-green-400 transition-colors">
-                  New Registration / Apply
-                </Link>
-              </li>
-              <li>
-                <Link href="/beneficiary-list/andhra-pradesh" className="hover:text-green-400 transition-colors">
-                  Beneficiary List by State
-                </Link>
-              </li>
-              <li>
+                <Link href="/
                 <Link href="/about" className="hover:text-green-400 transition-colors">
                   About Us
                 </Link>
@@ -83,11 +69,6 @@ export default function Footer() {
               <li>
                 <Link href="/contact" className="hover:text-green-400 transition-colors">
                   Contact Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/official-links" className="hover:text-green-400 transition-colors">
-                  Sarkari Official Links
                 </Link>
               </li>
               <li>
