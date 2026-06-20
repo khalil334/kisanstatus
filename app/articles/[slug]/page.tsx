@@ -30,8 +30,7 @@ const COMPONENTS: Record<string, React.ComponentType> = {
   PmfbyCropInsurance2026:                     dynamic(() => import('@/components/articles/PmfbyCropInsurance2026')),
 };
 PmKisan23viKistStatusCheck2026: dynamic(() => import('@/components/articles/PmKisan23viKistStatusCheck2026')),
-export const revalidate = 86400;
-
+};
 export async function generateStaticParams() {
   return ARTICLES.map(a => ({ slug: a.slug }));
 }
