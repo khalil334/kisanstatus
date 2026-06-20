@@ -142,10 +142,7 @@ export default function PMKisanPaymentFailed() {
         alt="Indian farmer in wheat field checking mobile phone for PM Kisan payment status"
         src="/images/hero-banner.png"
       />
-      <div className="image-note">
-        <strong>Image Optimization Tip:</strong> Convert all images to WebP format. Keep each image under 150 KB. Use responsive images with <code>srcset</code> for mobile. Compress using TinyPNG or Squoosh before uploading.
-      </div>
-
+   
       <div className="intro-story">
         <h2>Ramesh Ka Darr — Jo Har Kisan Ko Samajhna Chahiye</h2>
         <p>Ramesh ek chhote gaon ka kisan hai. Uske paas do bigha zameen hai, ek bachha aur budhi maa. Jab bhi PM Kisan ki kist aati hai, ghar mein thodi khushi aa jati hai. Lekin is baar kuch alag hua.</p>
