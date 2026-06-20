@@ -1,0 +1,41 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="KisanStatus.com logo">
+  <!-- Background: transparent -->
+
+  <!-- Farmer hat -->
+  <g transform="translate(4, 8)">
+    <!-- Hat brim -->
+    <ellipse cx="20" cy="33" rx="19" ry="4.5" fill="#16A34A"/>
+    <!-- Hat dome -->
+    <path d="M6 33 Q6 14 20 11 Q34 14 34 33" fill="#16A34A"/>
+    <!-- Hat band highlight -->
+    <path d="M6 33 Q6 27 20 26 Q34 27 34 33" fill="#15803D" opacity="0.5"/>
+    <!-- Hat highlight -->
+    <path d="M13 17 Q20 13 27 17" stroke="#4ADE80" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+  </g>
+
+  <!-- Wheat stalk -->
+  <g transform="translate(28, 2)">
+    <!-- Main stem -->
+    <line x1="9" y1="46" x2="9" y2="4" stroke="#16A34A" stroke-width="2" stroke-linecap="round"/>
+    <!-- Top grain -->
+    <ellipse cx="9" cy="5" rx="3.5" ry="5.5" fill="#16A34A"/>
+    <!-- Left grain 1 -->
+    <ellipse cx="4.5" cy="14" rx="3" ry="4.5" fill="#16A34A" transform="rotate(-22 4.5 14)"/>
+    <!-- Right grain 1 -->
+    <ellipse cx="13.5" cy="14" rx="3" ry="4.5" fill="#16A34A" transform="rotate(22 13.5 14)"/>
+    <!-- Left grain 2 -->
+    <ellipse cx="4" cy="23" rx="2.8" ry="4" fill="#16A34A" transform="rotate(-22 4 23)"/>
+    <!-- Right grain 2 -->
+    <ellipse cx="14" cy="23" rx="2.8" ry="4" fill="#16A34A" transform="rotate(22 14 23)"/>
+    <!-- Left grain 3 -->
+    <ellipse cx="4.5" cy="32" rx="2.5" ry="3.5" fill="#16A34A" transform="rotate(-22 4.5 32)"/>
+    <!-- Right grain 3 -->
+    <ellipse cx="13.5" cy="32" rx="2.5" ry="3.5" fill="#16A34A" transform="rotate(22 13.5 32)"/>
+  </g>
+
+  <!-- Brand text: KisanStatus.com -->
+  <text x="56" y="25" font-family="Poppins, Georgia, serif" font-weight="700" font-size="18" fill="#16A34A" letter-spacing="-0.5">KisanStatus</text>
+  <text x="56" y="40" font-family="Poppins, Georgia, serif" font-weight="500" font-size="11" fill="#15803D" letter-spacing="1">.in</text>
+  <!-- Tagline -->
+  <text x="56" y="53" font-family="system-ui, Arial, sans-serif" font-weight="400" font-size="9" fill="#6B7280" letter-spacing="0.5">PM KISAN STATUS 2026</text>
+</svg>
