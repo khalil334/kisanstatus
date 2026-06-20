@@ -56,7 +56,7 @@ export async function POST(req: NextRequest) {
       },
       signal: AbortSignal.timeout(20000), // give up after 20s instead of hanging for minutes
       body: JSON.stringify({
-        model: 'nvidia/nvidia-nemotron-nano-9b-v2',
+        model: 'nvidia/nemotron-nano-9b-v2',
         messages: [{ role: 'system', content: SYSTEM_PROMPT }, ...trimmedHistory],
         temperature: 0.2,
         max_tokens: 400,
