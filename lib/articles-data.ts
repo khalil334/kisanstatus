@@ -1,0 +1,143 @@
+/**
+ * lib/articles-data.ts
+ * Central metadata for all 15 articles — used by [slug]/page.tsx
+ * To add a new article: add entry here + create components/articles/YourComponent.tsx
+ */
+
+export interface ArticleMeta {
+  slug:          string;
+  title:         string;
+  desc:          string;
+  ogTitle:       string;
+  keywords:      string[];
+  component:     string;
+  publishedTime?: string; // ISO 8601, e.g. '2026-01-15T08:00:00+05:30'
+  modifiedTime?:  string; // ISO 8601
+}
+
+export const ARTICLES: ArticleMeta[] = [
+  {
+    slug:       'kisan-rin-kaha-se-le-2026',
+    title:      "Kisan Rin Kaha Se Le 2026 | Kisan Credit Card, Bank Loan, CSC Center Guide",
+    desc:       "Kisan Rin Kaha Se Le 2026 \u2013 Jaaniye Kisan Credit Card, SBI Kisan Loan, Cooperative Society, CSC Center se loan kaise milta hai. Rajpal Chacha ki kahani se seekhein sahi tarika.",
+    ogTitle:    "Kisan Rin Kaha Se Le 2026 \u2013 Puri Jankari Hindi Mein",
+    keywords:   ['Kisan Rin Kaha Se Le 2026', 'Kisan Credit Card', 'Kisan Loan 2026', 'SBI Kisan Loan', 'CSC Center Loan', 'Cooperative Society Loan'],
+    component:  'KisanRinKahaSeLe2026',
+  },
+  {
+    slug:       'kisan-tractor-loan-2026',
+    title:      "Kisan Tractor Loan Kaise Le Bina Down Payment 2026 | Complete Guide",
+    desc:       "Kisan tractor loan kaise le bina down payment ke? Jaaniye bank aur finance company se tractor loan lene ka pura process, eligibility, documents, interest rates, EMI calculation aur government subsidy options \u2013 2026 complete guide.",
+    ogTitle:    "Kisan Tractor Loan Kaise Le Bina Down Payment 2026",
+    keywords:   ['Kisan Tractor Loan Kaise Le Bina Down Payment', 'Tractor Loan Without Down Payment', 'Kisan Tractor Finance 2026', 'Tractor Loan Eligibility For Farmers', 'Tractor Loan Documents Required', 'tractor loan bank se kaise le'],
+    component:  'KisanTractorLoan2026',
+  },
+  {
+    slug:       'pm-kisan-21vi-installment-status-check',
+    title:      "PM Kisan 21vi Installment Status Check 2026 | Aadhaar & Mobile Se Check Karo",
+    desc:       "PM Kisan 21vi Installment Status Check 2026 \u2014 Aadhaar number se, Mobile number se, step-by-step guide. eKYC status, payment fail reason, aur beneficiary list \u2014 sab ek jagah. Sidhu Singh.",
+    ogTitle:    "PM Kisan 21vi Installment Status Check 2026 \u2014 Step by Step Guide",
+    keywords:   ['PM Kisan 21vi installment status check', 'PM Kisan 21vi kist 2026', 'PM Kisan beneficiary status 2026', 'PM Kisan status check aadhaar', 'PM Kisan payment status check online', 'pm kisan 21 installment date'],
+    component:  'PmKisan21viInstallmentStatusCheck',
+  },
+  {
+    slug:       'pm-kisan-beneficiary-list-2026',
+    title:      "PM Kisan Beneficiary List 2026 | Village Wise Naam Check Karo",
+    desc:       "PM Kisan beneficiary list 2026 check karo \u2014 naam online search karo, village wise list dekho, PDF download karo aur missing naam fix karo. Sidhu Singh ki guide.",
+    ogTitle:    "PM Kisan Beneficiary List 2026 \u2014 Village Wise Check",
+    keywords:   ['PM Kisan beneficiary list 2026', 'PM Kisan village wise list', 'PM Kisan list mein naam check', 'PM Kisan PDF download', 'pm kisan beneficiary status 2026'],
+    component:  'PmKisanBeneficiaryList2026',
+  },
+  {
+    slug:       'pm-kisan-beneficiary-list-village-wise-2026',
+    title:      "PM Kisan Beneficiary List Village Wise 2026 | Apne Gaon Ki List Dekhen",
+    desc:       "PM Kisan Beneficiary List Village Wise 2026 kaise dekhen? State, District, Block aur Village select karke apna naam check karein. PDF download, eKYC, naam missing ho to kya karein \u2014 sab kuch yahan milega.",
+    ogTitle:    "PM Kisan Beneficiary List Village Wise 2026 \u2014 Gaon Ki List Kaise Dekhen",
+    keywords:   ['PM Kisan Beneficiary List Village Wise 2026', 'PM Kisan Village Wise Beneficiary List', 'PM Kisan Beneficiary List Check Online', 'PM Kisan Beneficiary List PDF Download', 'PM Kisan Beneficiary Status Village Wise', 'PM Kisan list me naam kaise dekhen'],
+    component:  'PmKisanBeneficiaryListVillageWise2026',
+  },
+  {
+    slug:       'pm-kisan-correction-deactivate-block-guide-2026',
+    title:      "PM Kisan Correction, Deactivate Aur Block Guide 2026 | Naam, Aadhaar, Bank Fix Karo",
+    desc:       "PM Kisan naam correction, Aadhaar correction, bank account update, deactivate account reactivation, aur block fix karne ka poora guide 2026. Step-by-step Hinglish mein \u2014 Sidhu Singh.",
+    ogTitle:    "PM Kisan Correction, Deactivate & Block Guide 2026",
+    keywords:   ['PM Kisan correction 2026', 'PM Kisan naam correction kaise kare', 'PM Kisan account deactivate', 'PM Kisan block account fix', 'PM Kisan bank account correction', 'PM Kisan Aadhaar correction'],
+    component:  'PmKisanCorrectionDeactivateBlockGuide2026',
+  },
+  {
+    slug:       'pm-kisan-ekyc-online-2026',
+    title:      "PM Kisan Payment Failed \u2014 Reasons & Fix",
+    desc:       "PM Kisan eKYC online 2026 complete guide. Aadhaar OTP se ghar baithe ya CSC biometric se eKYC karo. Status check, common errors fix \u2014 Sidhu Singh.",
+    ogTitle:    "PM Kisan eKYC Online 2026 \u2014 Complete Guide",
+    keywords:   ['PM Kisan eKYC online 2026', 'PM Kisan eKYC kaise kare', 'PM Kisan Aadhaar OTP eKYC', 'PM Kisan CSC eKYC', 'pm kisan ekyc status check 2026'],
+    component:  'PmKisanEkycOnline2026',
+  },
+  {
+    slug:       'pm-kisan-installment-history-check-online',
+    title:      "PM Kisan Installment History Check Online 2026 | Purani Installments Kaise Dekhen",
+    desc:       "PM Kisan Installment History Check Online kaise karein? Registration number, mobile number ya Aadhaar se pichli sari installments ki details dekhen. Missing payment, failed transaction aur eKYC problems ka complete solution yahan hai.",
+    ogTitle:    "PM Kisan Installment History Check Online 2026 \u2014 Pichli Sari Payments Ek Jagah",
+    keywords:   ['PM Kisan Installment History Check Online', 'PM Kisan Installment History 2026', 'PM Kisan Payment History Check', 'PM Kisan Installment Status History', 'PM Kisan Previous Installment Details', 'PM Kisan purani installment kaise dekhen'],
+    component:  'PmKisanInstallmentHistoryCheckOnline',
+  },
+  {
+    slug:       'pm-kisan-land-seeding-status-check',
+    title:      "PM Kisan Land Seeding Status Check 2026 | Pending, Rejected, Approved Guide",
+    desc:       "PM Kisan Land Seeding Status Check kaise kare 2026 mein \u2013 Pending, Rejected, Approved ka matlab, common errors, documents, aur step-by-step solution guide in Hinglish.",
+    ogTitle:    "PM Kisan Land Seeding Status Check 2026 \u2013 Puri Jankari Hinglish Mein",
+    keywords:   ['PM Kisan Land Seeding Status Check', 'PM Kisan Land Seeding Status Online', 'PM Kisan Land Seeding Status 2026', 'PM Kisan Land Seeding Problem Solution', 'Land Seeding Pending Fix', 'PM Kisan Installment Not Coming'],
+    component:  'PmKisanLandSeedingStatusCheck',
+  },
+  {
+    slug:       'pm-kisan-name-correction-online-2026',
+    title:      "PM Kisan eKYC Online 2026",
+    desc:       "PM Kisan name correction online 2026 \u2014 Aadhaar naam mismatch, bank account naam galat, spelling error sab fix karo. Step-by-step guide \u2014 Sidhu Singh.",
+    ogTitle:    "PM Kisan Name Correction Online 2026",
+    keywords:   ['PM Kisan name correction online 2026', 'PM Kisan naam correction kaise kare', 'PM Kisan Aadhaar name mismatch', 'PM Kisan bank name correction', 'pm kisan naam update 2026'],
+    component:  'PmKisanNameCorrectionOnline2026',
+  },
+  {
+    slug:       'pm-kisan-payment-failed-status-2026',
+    title:      "PM Kisan eKYC Online 2026",
+    desc:       "PM Kisan payment failed status 2026 \u2014 error codes, Aadhaar mismatch, bank verification problems aur step-by-step solutions. Sidhu Singh ki complete guide.",
+    ogTitle:    "PM Kisan Payment Failed Status 2026 \u2014 Reasons & Solutions",
+    keywords:   ['PM Kisan payment failed 2026', 'PM Kisan payment fail reason', 'PM Kisan NPCI error', 'PM Kisan Aadhaar mismatch payment', 'pm kisan payment nahi aayi solution'],
+    component:  'PmKisanPaymentFailedStatus2026',
+  },
+  {
+    slug:       'pm-kisan-problems-solution-guide-2026',
+    title:      "PM Kisan Problems Solution Guide 2026 | RFT, PFMS, Payment Fail \u2014 Sab Fix Karo",
+    desc:       "PM Kisan ki 10 sabse badi problems aur unka seedha hal \u2014 RFT Signed, PFMS Pending, Payment Fail, Registration ID bhool gaye, naam galat, eKYC pending. Step-by-step Hinglish guide \u2014 Sidhu Singh.",
+    ogTitle:    "PM Kisan Problems Solution Guide 2026 \u2014 10 Problems, 10 Solutions",
+    keywords:   ['PM Kisan problems solution 2026', 'PM Kisan RFT signed matlab', 'PM Kisan PFMS pending', 'PM Kisan payment fail solution', 'PM Kisan registration ID kaise pata kare', 'PM Kisan naam galat solution'],
+    component:  'PmKisanProblemsSolutionGuide2026',
+  },
+  {
+    slug:       'pm-kisan-registration-online-2026',
+    title:      "PM Kisan eKYC Online 2026",
+    desc:       "PM Kisan registration online 2026 \u2014 naye farmers ke liye complete guide. Eligibility, required documents, step-by-step process, status check aur common errors fix. Sidhu Singh.",
+    ogTitle:    "PM Kisan Registration Online 2026 \u2014 Complete Guide",
+    keywords:   ['PM Kisan registration online 2026', 'PM Kisan new farmer registration', 'PM Kisan registration kaise kare', 'PM Kisan eligibility 2026', 'pm kisan registration status check'],
+    component:  'PmKisanRegistrationOnline2026',
+  },
+  {
+    slug:       'pm-kisan-rejected-list-2026',
+    title:      "PM Kisan Payment Failed 2026",
+    desc:       "PM Kisan rejected list 2026 check karo \u2014 naam rejection reasons, Aadhaar mismatch, eKYC problems aur step-by-step solutions. Sidhu Singh ki complete guide.",
+    ogTitle:    "PM Kisan Rejected List 2026 \u2014 Reasons & Fix",
+    keywords:   ['PM Kisan rejected list 2026', 'PM Kisan rejection reason', 'PM Kisan naam rejected', 'PM Kisan application rejected fix', 'pm kisan rejected list me naam hataye'],
+    component:  'PmKisanRejectedList2026',
+  },
+  {
+    slug:       'pmfby-crop-insurance-2026',
+    title:      "PMFBY Crop Insurance Claim Status Check 2026 | Pradhan Mantri Fasal Bima Yojana Guide",
+    desc:       "PMFBY crop insurance claim status check kaise karein? Pradhan Mantri Fasal Bima Yojana 2026 mein registration, claim file karna, online status track karna aur insurance payment receive karna \u2013 Ramlal Verma ki story ke saath poori jaankari.",
+    ogTitle:    "PMFBY Crop Insurance Claim Status Check 2026 \u2013 Complete Guide",
+    keywords:   ['PMFBY Crop Insurance', 'PMFBY Claim Status Check', 'Pradhan Mantri Fasal Bima Yojana 2026', 'Crop Insurance Claim Online', 'PMFBY Insurance Payment Status', 'fasal bima yojana claim kaise kare'],
+    component:  'PmfbyCropInsurance2026',
+  }
+];
+
+export const ARTICLES_MAP = Object.fromEntries(
+  ARTICLES.map(a => [a.slug, a])
+);

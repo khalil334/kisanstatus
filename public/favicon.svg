@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#14532d"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded square background -->
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+
+  <!-- Soil ground line -->
+  <rect x="0" y="46" width="64" height="18" rx="0" fill="#052e16" opacity="0.45"/>
+  <rect x="0" y="60" width="64" height="4" rx="0" fill="#052e16" opacity="0.3"/>
+
+  <!-- Sun (top right) -->
+  <circle cx="50" cy="14" r="7" fill="url(#sun)" opacity="0.92"/>
+  <!-- Sun rays -->
+  <g stroke="#fbbf24" stroke-width="1.5" stroke-linecap="round" opacity="0.8">
+    <line x1="50" y1="4"  x2="50" y2="2"/>
+    <line x1="50" y1="24" x2="50" y2="26"/>
+    <line x1="40" y1="14" x2="38" y2="14"/>
+    <line x1="60" y1="14" x2="62" y2="14"/>
+    <line x1="43" y1="7"  x2="41.5" y2="5.5"/>
+    <line x1="57" y1="21" x2="58.5" y2="22.5"/>
+    <line x1="57" y1="7"  x2="58.5" y2="5.5"/>
+    <line x1="43" y1="21" x2="41.5" y2="22.5"/>
+  </g>
+
+  <!-- Main wheat stalk (center) -->
+  <line x1="22" y1="47" x2="22" y2="12" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+  <!-- Top grain head -->
+  <ellipse cx="22" cy="12" rx="4.5" ry="7" fill="#fff" opacity="0.95"/>
+  <!-- Left grains -->
+  <ellipse cx="16" cy="21" rx="3.5" ry="6" fill="#fff" opacity="0.9" transform="rotate(-25 16 21)"/>
+  <ellipse cx="15" cy="31" rx="3" ry="5" fill="#fff" opacity="0.85" transform="rotate(-25 15 31)"/>
+  <ellipse cx="16" cy="40" rx="2.5" ry="4" fill="#fff" opacity="0.75" transform="rotate(-25 16 40)"/>
+  <!-- Right grains -->
+  <ellipse cx="28" cy="21" rx="3.5" ry="6" fill="#fff" opacity="0.9" transform="rotate(25 28 21)"/>
+  <ellipse cx="29" cy="31" rx="3" ry="5" fill="#fff" opacity="0.85" transform="rotate(25 29 31)"/>
+  <ellipse cx="28" cy="40" rx="2.5" ry="4" fill="#fff" opacity="0.75" transform="rotate(25 28 40)"/>
+
+  <!-- Second smaller stalk (left) -->
+  <line x1="10" y1="47" x2="10" y2="22" stroke="#fff" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+  <ellipse cx="10" cy="22" rx="3" ry="5" fill="#fff" opacity="0.6"/>
+  <ellipse cx="6"  cy="29" rx="2.5" ry="4" fill="#fff" opacity="0.55" transform="rotate(-22 6 29)"/>
+  <ellipse cx="14" cy="29" rx="2.5" ry="4" fill="#fff" opacity="0.55" transform="rotate(22 14 29)"/>
+
+  <!-- "KS" badge bottom right -->
+  <rect x="36" y="38" width="22" height="16" rx="5" fill="#fff" opacity="0.15"/>
+  <text x="47" y="51" text-anchor="middle" font-family="Arial,sans-serif" font-weight="900" font-size="11" fill="#fff" opacity="0.95" letter-spacing="-0.5">KS</text>
+</svg>
