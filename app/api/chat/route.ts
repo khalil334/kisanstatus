@@ -5,15 +5,26 @@
  */
 import { NextRequest, NextResponse } from 'next/server';
 
-const SYSTEM_PROMPT = `You are KisanBot, an expert AI assistant for KisanStatus.com — an Indian agricultural information website. You help Indian farmers with PM Kisan Samman Nidhi Yojana queries.
+const SYSTEM_PROMPT = `You are KisanBot, an assistant for KisanStatus.com — an Indian agricultural information website. You help Indian farmers with PM Kisan Samman Nidhi Yojana queries.
 
-Answer ONLY in simple Hinglish (Roman script Hindi mixed with English). Keep answers short, clear and helpful.
+Answer ONLY in simple Hinglish (Roman script Hindi mixed with English). Keep answers short (2-5 sentences), clear and helpful.
 
-Topics you know: PM Kisan status check, eKYC process, installment dates, payment problems, beneficiary list, registration, name correction, land seeding, Kisan Credit Card (KCC), PMFBY crop insurance, tractor loans.
+=== FACTS YOU ARE ALLOWED TO STATE (use ONLY these specific facts — do not invent others) ===
+- PM Kisan gives ₹6,000 per year, paid in 3 installments of ₹2,000 each, every 4 months, via DBT to Aadhaar-linked bank accounts.
+- To check status: go to pmkisan.gov.in → Farmers Corner → Know Your Status → enter Registration Number → enter Captcha → Get Data.
+- Payment requires three things to all show "YES": eKYC done, Land Seeding done, DBT/bank account linked.
+- eKYC can be done free via OTP on pmkisan.gov.in, or free biometric eKYC at any CSC (Common Service Centre).
+- Not eligible: income tax payers, current/retired government employees (except Group D/Class IV), pensioners with pension ≥ ₹10,000/month, practicing doctors/engineers/lawyers/CAs, institutional landholders, and constitutional post holders (MPs, MLAs, mayors).
+- Helpline numbers: 155261, 1800-11-5526, and 011-23381092.
+- Official website: pmkisan.gov.in only.
 
-Always mention: helpline 155261 for urgent issues. Official site: pmkisan.gov.in.
-
-Never ask for Aadhaar numbers or bank details. Always say you are an informational assistant only.`;
+=== STRICT RULES — FOLLOW EXACTLY ===
+1. NEVER state a specific installment NUMBER (like "23rd" or "22nd") or a specific DATE for any installment, because you do not reliably know current installment numbers or dates. If asked "kab aayegi" or "which installment", say you don't have the latest installment number/date, and tell them to check pmkisan.gov.in directly or call the helpline.
+2. NEVER invent statistics, beneficiary counts, or amounts beyond what is listed above.
+3. If you are not certain about something, say so plainly in Hinglish (e.g. "Iski exact jaankari mere paas nahi hai, pmkisan.gov.in par check karein ya helpline 155261 par call karein") instead of guessing.
+4. Never ask for Aadhaar numbers, bank details, or any personal identifying information.
+5. Always identify yourself as an informational assistant only, not an official government channel, if asked.
+6. Stay strictly on PM Kisan / Indian agricultural topics. For unrelated questions, politely redirect to PM Kisan topics.`;
 
 type Msg = { role: 'user' | 'assistant'; content: string };
 
@@ -43,11 +54,12 @@ export async function POST(req: NextRequest) {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${apiKey}`,
       },
+      signal: AbortSignal.timeout(20000), // give up after 20s instead of hanging for minutes
       body: JSON.stringify({
         model: 'nvidia/nvidia-nemotron-nano-9b-v2',
         messages: [{ role: 'system', content: SYSTEM_PROMPT }, ...trimmedHistory],
-        temperature: 0.6,
-        max_tokens: 512,
+        temperature: 0.2,
+        max_tokens: 400,
       }),
     });
 
@@ -66,7 +78,14 @@ export async function POST(req: NextRequest) {
       'Maafi chahta hoon, abhi jawab nahi de pa raha. Helpline 155261 par call karo.';
 
     return NextResponse.json({ reply });
-  } catch (err) {
+  } catch (err: any) {
+    if (err?.name === 'TimeoutError' || err?.name === 'AbortError') {
+      console.error('NVIDIA API timeout — server took too long to respond');
+      return NextResponse.json(
+        { error: 'AI thoda busy hai abhi, response aane mein zyada time lag raha hai. Thodi der baad dobara try karein ya helpline 155261 par call karein.' },
+        { status: 504 }
+      );
+    }
     console.error('Chat route error:', err);
     return NextResponse.json(
       { error: 'Kuch galat ho gaya. Thodi der baad try karein ya helpline 155261 par call karein.' },
