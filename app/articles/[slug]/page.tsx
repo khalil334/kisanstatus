@@ -29,7 +29,7 @@ const COMPONENTS: Record<string, React.ComponentType> = {
   PmKisanRejectedList2026:                    dynamic(() => import('@/components/articles/PmKisanRejectedList2026')),
   PmfbyCropInsurance2026:                     dynamic(() => import('@/components/articles/PmfbyCropInsurance2026')),
 };
-
+PmKisan23viKistStatusCheck2026: dynamic(() => import('@/components/articles/PmKisan23viKistStatusCheck2026')),
 export const revalidate = 86400;
 
 export async function generateStaticParams() {
