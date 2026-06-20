@@ -136,7 +136,15 @@ export const ARTICLES: ArticleMeta[] = [
     keywords:   ['PMFBY Crop Insurance', 'PMFBY Claim Status Check', 'Pradhan Mantri Fasal Bima Yojana 2026', 'Crop Insurance Claim Online', 'PMFBY Insurance Payment Status', 'fasal bima yojana claim kaise kare'],
     component:  'PmfbyCropInsurance2026',
   }
-];
+{
+  slug: 'pm-kisan-23vi-kist-2026-status-check',
+  title: 'PM Kisan 23vi Kist Status Check 2026',
+  desc: 'PM Kisan Yojana ki 23vi kist ka status online kaise check karein. Mobile number, Aadhaar, Registration number se payment status check karein.',
+  keywords: ['PM Kisan 23vi Kist', 'PM Kisan Status Check', '23vi Kist Payment Status', 'PM Kisan Next Installment'],
+  ogTitle: 'PM Kisan 23vi Kist Status Check 2026 - Complete Guide',
+  component: 'PmKisan23viKistStatusCheck2026',
+  publishedTime: '2026-04-01T00:00:00+05:30',
+},];
 
 export const ARTICLES_MAP = Object.fromEntries(
   ARTICLES.map(a => [a.slug, a])
