@@ -1,6 +1,6 @@
 /**
  * app/articles/[slug]/page.tsx
- * Dynamic route — serves ALL 15 articles
+ * Dynamic route — serves ALL 16 articles
  * Content lives in components/articles/*.tsx
  * Metadata lives in lib/articles-data.ts
  */
@@ -16,6 +16,7 @@ const COMPONENTS: Record<string, React.ComponentType> = {
   KisanRinKahaSeLe2026:                      dynamic(() => import('@/components/articles/KisanRinKahaSeLe2026')),
   KisanTractorLoan2026:                       dynamic(() => import('@/components/articles/KisanTractorLoan2026')),
   PmKisan21viInstallmentStatusCheck:          dynamic(() => import('@/components/articles/PmKisan21viInstallmentStatusCheck')),
+  PmKisan23viKistStatusCheck2026:             dynamic(() => import('@/components/articles/PmKisan23viKistStatusCheck2026')),
   PmKisanBeneficiaryList2026:                 dynamic(() => import('@/components/articles/PmKisanBeneficiaryList2026')),
   PmKisanBeneficiaryListVillageWise2026:      dynamic(() => import('@/components/articles/PmKisanBeneficiaryListVillageWise2026')),
   PmKisanCorrectionDeactivateBlockGuide2026:  dynamic(() => import('@/components/articles/PmKisanCorrectionDeactivateBlockGuide2026')),
@@ -29,8 +30,9 @@ const COMPONENTS: Record<string, React.ComponentType> = {
   PmKisanRejectedList2026:                    dynamic(() => import('@/components/articles/PmKisanRejectedList2026')),
   PmfbyCropInsurance2026:                     dynamic(() => import('@/components/articles/PmfbyCropInsurance2026')),
 };
-PmKisan23viKistStatusCheck2026: dynamic(() => import('@/components/articles/PmKisan23viKistStatusCheck2026')),
-};
+
+export const revalidate = 86400;
+
 export async function generateStaticParams() {
   return ARTICLES.map(a => ({ slug: a.slug }));
 }
