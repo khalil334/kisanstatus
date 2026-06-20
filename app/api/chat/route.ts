@@ -44,7 +44,7 @@ export async function POST(req: NextRequest) {
         Authorization: `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        model: 'nvidia/nemotron-3-ultra-550b-a55b',
+        model: 'nvidia/llama-3.1-nemotron-nano-8b-v1',
         messages: [{ role: 'system', content: SYSTEM_PROMPT }, ...trimmedHistory],
         temperature: 0.6,
         max_tokens: 512,
