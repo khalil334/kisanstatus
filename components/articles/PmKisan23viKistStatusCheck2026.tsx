@@ -1,53 +1,7 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 
 const SITE_URL = "https://kisanstatus.com";
-const PAGE_PATH = "/blog/pm-kisan-23vi-kist-2026-status-check";
-
-export const metadata: Metadata = {
-  title:
-    "PM Kisan 23vi Kist 2026: Status Check, Date & Eligibility | Full Guide",
-  description:
-    "PM Kisan 23vi kist 2026 kab aayegi? PM Kisan status check, eligibility criteria, e-KYC, aur payment update ki poori jaankari ek hi jagah — Hinglish mein, aasan tarike se.",
-  keywords: [
-    "PM Kisan 23vi kist",
-    "PM Kisan status check",
-    "PM Kisan Yojana 2026",
-    "PM Kisan payment update",
-    "pmkisan.gov.in",
-    "PM Kisan eligibility",
-    "PM Kisan e-KYC",
-    "PM Kisan helpline number",
-  ],
-  alternates: {
-    canonical: PAGE_PATH,
-  },
-  openGraph: {
-    title: "PM Kisan 23vi Kist 2026: Status Check, Date & Eligibility | Full Guide",
-    description:
-      "PM Kisan 23vi kist 2026 ki poori jaankari — expected date, status check tarika, eligibility, e-KYC, common problems aur unke solutions.",
-    url: PAGE_PATH,
-    siteName: "KisanStatus.com",
-    locale: "hi_IN",
-    type: "article",
-    publishedTime: "2026-06-20T00:00:00+05:30",
-    images: [
-      {
-        url: "/images/payment-success.webp",
-        width: 1680,
-        height: 946,
-        alt: "PM Kisan 23vi kist payment successful confirmation screen kisan ke mobile par",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "PM Kisan 23vi Kist 2026: Status Check, Date & Eligibility | Full Guide",
-    description:
-      "23vi kist kab aayegi, status kaise check karein, eligibility kya hai — poori jaankari ek jagah.",
-    images: ["/images/payment-success.webp"],
-  },
-};
+const PAGE_PATH = "/articles/pm-kisan-23vi-kist-2026-status-check";
 
 const articleJsonLd = {
   "@context": "https://schema.org",
@@ -133,7 +87,7 @@ const faqJsonLd = {
   ],
 };
 
-export default function PMKisan23viKistArticle() {
+export default function PmKisan23viKistStatusCheck2026() {
   return (
     <>
       <script
@@ -151,8 +105,8 @@ export default function PMKisan23viKistArticle() {
             Home
           </a>{" "}
           <span className="text-stone-400">/</span>{" "}
-          <a href="/blog" className="hover:text-emerald-700">
-            Blog
+          <a href="/articles" className="hover:text-emerald-700">
+            Articles
           </a>{" "}
           <span className="text-stone-400">/</span>{" "}
           <span className="text-stone-700">PM Kisan 23vi Kist 2026</span>
