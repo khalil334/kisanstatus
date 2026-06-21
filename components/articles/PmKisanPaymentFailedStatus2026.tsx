@@ -1,30 +1,33 @@
 import Head from 'next/head';
+import { AuthorBox, BottomNav, Disclaimer, CalcBanner, fmtDate } from '@/components/ArticleShared';
+
+const MODIFIED = '2026-06-22';
 
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "PM Kisan Payment Failed Reason — Complete Guide to Check & Fix Online",
-  "description": "Understand why PM Kisan payments fail and learn step-by-step how to check status, identify issues, and fix them online or offline.",
+  "headline": "PM Kisan Payment Failed Status 2026 — Reasons & Solutions",
+  "description": "PM Kisan payment failed status 2026 — error codes, Aadhaar mismatch, bank verification problems aur step-by-step solutions.",
   "author": {
     "@type": "Person",
-    "name": "Agricultural Content Desk",
-    "url": "https://example.com/about"
+    "name": "Sidhu Singh",
+    "url": "https://kisanstatus.com/about"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Kisan Help Desk",
+    "name": "KisanStatus.com",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://example.com/logo.png"
+      "url": "https://kisanstatus.com/images/logo.png"
     }
   },
-  "datePublished": "2024-01-15",
-  "dateModified": "2024-01-15",
+  "datePublished": "2026-06-10",
+  "dateModified": "2026-06-22",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://example.com/pm-kisan-payment-failed-guide"
+    "@id": "https://kisanstatus.com/articles/pm-kisan-payment-failed-status-2026"
   },
-  "image": "https://example.com/images/hero-banner.png"
+  "image": "https://kisanstatus.com/images/hero-banner.png"
 };
 
 const faqSchema = {
@@ -181,11 +184,11 @@ export default function PMKisanPaymentFailed() {
       {/* Contextual Internal Links */}
       <div className="internal-links">
         <strong>Related Guides:</strong>{' '}
-        <a href="#">PM Kisan Status Check</a> |{' '}
-        <a href="#">PM Kisan eKYC</a> |{' '}
-        <a href="#">Farmer Registry</a> |{' '}
-        <a href="#">Beneficiary List</a> |{' '}
-        <a href="#">Aadhaar Seeding</a>
+        <a href="/articles/pm-kisan-23vi-kist-2026-status-check">PM Kisan Status Check</a> |{' '}
+        <a href="/articles/pm-kisan-ekyc-online-2026">PM Kisan eKYC</a> |{' '}
+        <a href="/articles/pm-kisan-registration-online-2026">Farmer Registry</a> |{' '}
+        <a href="/articles/pm-kisan-beneficiary-list-2026">Beneficiary List</a> |{' '}
+        <a href="/articles/pm-kisan-land-seeding-status-check">Aadhaar Seeding</a>
       </div>
 
       <h2 id="what-is-failure">PM Kisan Payment Failed — Kya Matlab Hota Hai?</h2>
@@ -306,7 +309,7 @@ export default function PMKisanPaymentFailed() {
       </div>
 
       <h2 id="check-online">How To Check PM Kisan Payment Status Online — Step By Step</h2>
-      <p>Ab aapko pata chal gaya ki problem kya-kya ho sakti hai. Ab main bataunga ki <a href="#">PM Kisan Status Check</a> kaise kare online — ghar baithe baithe.</p>
+      <p>Ab aapko pata chal gaya ki problem kya-kya ho sakti hai. Ab main bataunga ki <a href="/articles/pm-kisan-23vi-kist-2026-status-check">PM Kisan Status Check</a> kaise kare online — ghar baithe baithe.</p>
       <table>
         <tbody>
           <tr>
@@ -518,7 +521,7 @@ export default function PMKisanPaymentFailed() {
       </div>
       <div className="faq-item">
         <div className="faq-q">2. PM Kisan payment failed hone par kya karein?</div>
-        <p>Sabse pehle pmkisan.gov.in pe jake apna <a href="#">PM Kisan Status Check</a> karein. Wahan exact reason likha hota hai. Us reason ke hisaab se fix karein.</p>
+        <p>Sabse pehle pmkisan.gov.in pe jake apna <a href="/articles/pm-kisan-23vi-kist-2026-status-check">PM Kisan Status Check</a> karein. Wahan exact reason likha hota hai. Us reason ke hisaab se fix karein.</p>
       </div>
       <div className="faq-item">
         <div className="faq-q">3. Bank account mismatch kaise thik karein?</div>
@@ -526,11 +529,11 @@ export default function PMKisanPaymentFailed() {
       </div>
       <div className="faq-item">
         <div className="faq-q">4. Aadhaar seeding ka status kaise check karein?</div>
-        <p>Bank mein jake pucho — &quot;Mera <a href="#">Aadhaar Seeding</a> hua hai kya?&quot; Ya phir *99# dial karke NPCI status check kar sakte ho.</p>
+        <p>Bank mein jake pucho — &quot;Mera <a href="/articles/pm-kisan-land-seeding-status-check">Aadhaar Seeding</a> hua hai kya?&quot; Ya phir *99# dial karke NPCI status check kar sakte ho.</p>
       </div>
       <div className="faq-item">
         <div className="faq-q">5. eKYC pending ho to payment milegi ya nahi?</div>
-        <p>Nahi. <a href="#">PM Kisan eKYC</a> complete hona mandatory hai. Bina iske payment release nahi hoti. CSC center ya bank mein jake turant karwao.</p>
+        <p>Nahi. <a href="/articles/pm-kisan-ekyc-online-2026">PM Kisan eKYC</a> complete hona mandatory hai. Bina iske payment release nahi hoti. CSC center ya bank mein jake turant karwao.</p>
       </div>
       <div className="faq-item">
         <div className="faq-q">6. Kya inactive account mein payment aa sakti hai?</div>
@@ -546,7 +549,7 @@ export default function PMKisanPaymentFailed() {
       </div>
       <div className="faq-item">
         <div className="faq-q">9. Duplicate beneficiary ka problem kaise solve karein?</div>
-        <p>Ek family mein ek hi beneficiary allowed hai. Agar do naam hain, toh ek ko voluntarily bandh karwao. <a href="#">Beneficiary List</a> check karke verify karein.</p>
+        <p>Ek family mein ek hi beneficiary allowed hai. Agar do naam hain, toh ek ko voluntarily bandh karwao. <a href="/articles/pm-kisan-beneficiary-list-2026">Beneficiary List</a> check karke verify karein.</p>
       </div>
       <div className="faq-item">
         <div className="faq-q">10. PM Kisan installment mein kitna paisa milta hai?</div>
@@ -562,7 +565,7 @@ export default function PMKisanPaymentFailed() {
       </div>
       <div className="faq-item">
         <div className="faq-q">13. Agar naam PM Kisan list mein hi nahi hai, toh?</div>
-        <p>Tab aapko shuru se apply karna padega. &quot;New <a href="#">Farmer Registry</a>&quot; pe jao, apne zameen ka detail do, Aadhaar do, aur apply karo. 2-3 mahine mein verification hota hai.</p>
+        <p>Tab aapko shuru se apply karna padega. &quot;New <a href="/articles/pm-kisan-registration-online-2026">Farmer Registry</a>&quot; pe jao, apne zameen ka detail do, Aadhaar do, aur apply karo. 2-3 mahine mein verification hota hai.</p>
       </div>
       <div className="faq-item">
         <div className="faq-q">14. Kya Aadhaar seeding aur NPCI mapping same cheez hai?</div>
@@ -582,22 +585,34 @@ export default function PMKisanPaymentFailed() {
       {/* EEAT Author Note */}
       <div className="eeat-note">
         <h3>About This Guide — Expertise, Experience, Authority &amp; Trust (EEAT)</h3>
-        <p><strong>Authored by:</strong> Agricultural Content Desk — a team of rural banking and agricultural scheme researchers with 5+ years of experience documenting government welfare processes for farmers across India.</p>
+        <p><strong>Authored by:</strong> Sidhu Singh — Agricultural Expert &amp; Farmer Advocate, jo pichhle 5 saal se Indian farmers ko government schemes navigate karne mein help kar rahe hain.</p>
         <p><strong>How we built this guide:</strong></p>
         <ul>
-          <li>We analyzed hundreds of real farmer queries from CSC centers and bank branches.</li>
-          <li>We cross-verified all steps with the official PM Kisan portal (pmkisan.gov.in).</li>
-          <li>We consulted bank officers, CSC operators, and district agriculture officials.</li>
-          <li>All official links, helpline numbers, and processes are verified against government sources.</li>
-          <li>This article is updated whenever PM Kisan guidelines change. Last verified against official portal guidelines.</li>
+          <li>Hundreds of real farmer queries from CSC centers and bank branches analyze ki gayi.</li>
+          <li>Har step ko official PM Kisan portal (pmkisan.gov.in) se cross-verify kiya gaya.</li>
+          <li>Bank officers, CSC operators, aur district agriculture officials se consult kiya gaya.</li>
+          <li>Saare official links, helpline numbers, aur processes government sources se verified hain.</li>
+          <li>Yeh article PM Kisan guidelines change hone par update hoti hai.</li>
         </ul>
-        <p><strong>Our commitment:</strong> We do not accept payments from agents or middlemen. This guide is 100% free and intended to help farmers access their rightful benefits directly.</p>
-        <p><strong>Feedback?</strong> If you find any outdated step or have a new issue not covered here, reach out via our contact page so we can update this guide for the farmer community.</p>
+        <p><strong>Our commitment:</strong> Hum kisi bhi agent ya middleman se payment nahi lete. Yeh guide 100% free hai aur farmers ko unka rightful benefit seedha access karwane ke liye hai.</p>
+      </div>
+
+      <div style={{margin:'2.5rem 0', padding:'1.5rem', borderRadius:'1rem', background:'linear-gradient(to right, #166534, #16a34a)', color:'#fff', textAlign:'center'}}>
+        <p style={{fontSize:'1.5rem', marginBottom:'0.5rem'}}>📆</p>
+        <p style={{fontSize:'1.125rem', fontWeight:900, marginBottom:'0.25rem'}}>Payment Kyun Fail Hua — 4 Sawaal Mein Pata Karo</p>
+        <p style={{fontSize:'0.875rem', color:'#dcfce7', marginBottom:'1rem'}}>eKYC, bank seeding, land seeding, status — sab ek hi tool mein check karo</p>
+        <a href="/calculator/installment-tracker" style={{display:'inline-flex', alignItems:'center', gap:'0.5rem', background:'#fff', color:'#166534', fontWeight:900, padding:'0.75rem 1.5rem', borderRadius:'0.75rem', fontSize:'0.875rem', textDecoration:'none'}}>
+          📆 Installment Tracker Kholo →
+        </a>
       </div>
 
       <hr />
       <p><small><strong>Secondary Keywords Used:</strong> PM Kisan payment failed, installment not received, rejected payment, status check, beneficiary payment issue, Aadhaar seeding, eKYC, farmer registry</small></p>
       <p><small><strong>Category:</strong> Agriculture &amp; Government Schemes | <strong>Reading Time:</strong> ~12 minutes</small></p>
+
+      <AuthorBox modified={MODIFIED}/>
+      <BottomNav/>
+      <Disclaimer/>
     </>
   );
 }
