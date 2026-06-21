@@ -6,12 +6,12 @@ const PAGE_PATH = "/articles/pm-kisan-23vi-kist-2026-status-check";
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "PM Kisan 23vi Kist 2026: Status Check, Date & Eligibility | Full Guide",
+  headline: "PM Kisan 23vi Kist 2026: Released — Status Check, Date & Eligibility | Full Guide",
   description:
-    "PM Kisan 23vi kist 2026 ki poori jaankari — expected date, status check tarika, eligibility, e-KYC, common problems aur unke solutions.",
+    "PM Kisan 23vi kist 20 June 2026 ko release ho chuki hai — 9.44 crore kisanon ko ₹2,000 mila. Status check tarika, eligibility, e-KYC aur agar paisa na aaya ho toh solution.",
   image: [`${SITE_URL}/images/payment-success.webp`],
   datePublished: "2026-06-20T00:00:00+05:30",
-  dateModified: "2026-06-20T00:00:00+05:30",
+  dateModified: "2026-06-21T00:00:00+05:30",
   author: {
     "@type": "Organization",
     name: "KisanStatus.com",
@@ -41,7 +41,7 @@ const faqJsonLd = {
       name: "PM Kisan 23vi kist kab aayegi?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "PM Kisan ki 23vi kist June-July 2026 ke beech mein aane ki umeed hai. Sarkar har 4 mahine mein kist bhejti hai aur exact date official announcement ke saath confirm hoti hai.",
+        text: "PM Kisan ki 23vi kist 20 June 2026 ko release ho chuki hai. Prime Minister Narendra Modi ne Hooghly, West Bengal se yeh kist digitally release ki, jisse 9.44 crore se zyada kisanon ko ₹2,000 prati kisan mila — total ₹18,880 crore se zyada DBT ke through transfer hue.",
       },
     },
     {
@@ -78,10 +78,10 @@ const faqJsonLd = {
     },
     {
       "@type": "Question",
-      name: "Ek saal mein kitni kist milti hai PM Kisan mein?",
+      name: "PM Kisan ki agli (24vi) kist kab aayegi?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "PM Kisan scheme mein saal mein 3 kist milti hain, har ek ₹2000 ki, total ₹6000 saalana. Yeh paisa har 4 mahine ke gap mein DBT ke through bank account mein aata hai.",
+        text: "23vi kist June 2026 mein release ho chuki hai, isliye 24vi kist agle cycle yani August-November 2026 ke beech expected hai. Exact date sarkar ki official announcement ke baad confirm hogi.",
       },
     },
   ],
@@ -116,14 +116,23 @@ export default function PmKisan23viKistStatusCheck2026() {
         <p className="mt-4 text-sm font-medium tracking-wide text-emerald-700">
           KisanStatus.com <span className="text-stone-400">|</span>{" "}
           <time dateTime="2026-06-20">20 June 2026</time>{" "}
+          <span className="text-stone-400">|</span>{" "}
+          <span className="text-emerald-800">
+            Updated <time dateTime="2026-06-21">21 June 2026</time>
+          </span>{" "}
           <span className="text-stone-400">|</span> 8 min read
         </p>
 
         {/* Title */}
         <h1 className="mt-3 text-3xl font-extrabold leading-tight text-stone-900 sm:text-4xl">
-          PM Kisan 23vi Kist 2026: Status Check, Date, Eligibility aur
-          Payment Update — Poori Jaankari
+          PM Kisan 23vi Kist 2026: Release Ho Gayi! Status Check, Date,
+          Eligibility aur Payment Update — Poori Jaankari
         </h1>
+
+        {/* Released banner */}
+        <p className="mt-4 inline-block rounded-full bg-emerald-100 px-4 py-1.5 text-sm font-semibold text-emerald-800">
+          ✅ 23vi Kist Released — 20 June 2026 — ₹2,000 per kisan
+        </p>
 
         {/* Hero image */}
         <div className="mt-8 overflow-hidden rounded-2xl">
@@ -156,9 +165,10 @@ export default function PmKisan23viKistStatusCheck2026() {
         <div className="mt-8 space-y-4 text-[17px] leading-relaxed text-stone-700">
           <p>Namaskar Kisan Bhaiyo aur Behno!</p>
           <p>
-            Aap sab ka <strong>KisanStatus.com</strong> par swagat hai. Agar
-            aap <strong>PM Kisan 23vi kist</strong> ka intezaar kar rahe ho,
-            toh yeh article aapke liye hi likha gaya hai.
+            Khushkhabri hai — <strong>PM Kisan 23vi kist release ho chuki
+            hai!</strong> Agar aapko abhi tak apne account mein paisa aaya
+            ya nahi yeh confirm karna hai, toh yeh article aapke liye hi
+            likha gaya hai.
           </p>
           <p>
             Pradhan Mantri Kisan Samman Nidhi Yojana (PM Kisan Yojana 2026)
@@ -167,11 +177,10 @@ export default function PmKisan23viKistStatusCheck2026() {
             account mein DBT (Direct Benefit Transfer) ke through aata hai.
           </p>
           <p>
-            Is article mein hum cover karenge:{" "}
-            <strong>PM Kisan status check</strong> ka aasan tarika, 23vi
-            kist kab aane ki umeed hai, kaun eligible hai, aur agar paisa na
-            aaye toh kya karna chahiye. Saath mein latest{" "}
-            <strong>PM Kisan payment update</strong> bhi milegi.
+            Is article mein hum cover karenge: <strong>PM Kisan status
+            check</strong> ka aasan tarika, 23vi kist ki poori details,
+            kaun eligible hai, aur agar paisa abhi tak na aaya ho toh kya
+            karna chahiye.
           </p>
           <p>
             Tension lene ki zaroorat nahi hai. Chaliye step by step
@@ -184,7 +193,7 @@ export default function PmKisan23viKistStatusCheck2026() {
           id="kist-details"
           className="mt-12 text-2xl font-bold text-stone-900"
         >
-          PM Kisan 23vi Kist Details — Kab Aayegi?
+          PM Kisan 23vi Kist Details — Release Ho Gayi
         </h2>
         <div className="mt-4 space-y-4 text-[17px] leading-relaxed text-stone-700">
           <p>
@@ -194,24 +203,24 @@ export default function PmKisan23viKistStatusCheck2026() {
             mein seedha credit hoti hai.
           </p>
           <p>
-            <strong>22vi kist 13 March 2026</strong> ko release hui thi.
-            Prime Minister ne Guwahati, Assam se yeh kist digitally release
-            ki thi, jisse karib 9.3 crore kisanon ko fayda hua.
+            <strong>23vi kist 20 June 2026</strong> ko release hui.
+            Prime Minister Narendra Modi ne <strong>Hooghly, West
+            Bengal</strong> se yeh kist digitally release ki, jisse{" "}
+            <strong>9.44 crore se zyada kisanon</strong> ko fayda hua aur
+            total <strong>₹18,880 crore se zyada</strong> seedha bank
+            accounts mein DBT ke through transfer hue.
           </p>
           <p>
-            Ab baat karein <strong>23vi kist</strong> ki, toh installment
-            cycle ke hisaab se yeh{" "}
-            <strong>June-July 2026</strong> ke beech mein aane ki umeed hai.
-          </p>
-          <p>
-            Lekin yaad rakhna — sarkar ne abhi tak koi official date
-            announce nahi ki hai. Jab bhi date confirm hogi, official
-            announcement aane ke baad hi paise transfer hone shuru honge.
+            Agar aapne abhi tak apna status check nahi kiya, toh neeche di
+            gayi step-by-step guide follow karke 2 minute mein check kar
+            lo ki paisa aaya ya nahi.
           </p>
           <p>
             Pichle kuch installments ka pattern dekhein toh kist generally
             financial year ke har 4-mahine ke cycle mein release hoti hai —
-            yani April-July, August-November, aur December-March.
+            yani April-July, August-November, aur December-March. Is
+            hisaab se <strong>24vi kist August-November 2026</strong> ke
+            beech expected hai.
           </p>
           <p className="rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-stone-800">
             <strong>Yaad rakho:</strong> Paisa seedha aapke Aadhaar-linked
@@ -251,16 +260,21 @@ export default function PmKisan23viKistStatusCheck2026() {
                 <tr className="bg-emerald-50">
                   <td className="px-4 py-2 font-semibold">23vi Kist</td>
                   <td className="px-4 py-2 font-semibold">
-                    Expected: June-July 2026
+                    20 June 2026 — ✅ Released
                   </td>
                   <td className="px-4 py-2 font-semibold">₹2,000</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-2">24vi Kist</td>
+                  <td className="px-4 py-2">Expected: Aug-Nov 2026</td>
+                  <td className="px-4 py-2">₹2,000</td>
                 </tr>
               </tbody>
             </table>
           </div>
           <p className="text-sm text-stone-500">
-            Note: 23vi kist ki date abhi tak officially announce nahi hui
-            hai. Yeh table sirf pattern samajhne ke liye hai.
+            Note: 24vi kist ki exact date abhi officially announce nahi
+            hui hai. Yeh table sirf pattern samajhne ke liye hai.
           </p>
         </div>
 
@@ -292,6 +306,17 @@ export default function PmKisan23viKistStatusCheck2026() {
           <p>
             Agar internet slow hai ya website load nahi ho rahi, app
             zyada smooth chal jata hai. Ek baar try kar ke dekho.
+          </p>
+          <p>
+            Apna saalana ₹6,000 ka labh, kist-wise breakdown aur agli kist
+            ka estimate ek jagah dekhna hai? Hamara{" "}
+            <a
+              href="/calculator"
+              className="font-semibold text-emerald-700 underline"
+            >
+              free PM Kisan Calculator
+            </a>{" "}
+            try karo — koi login nahi chahiye.
           </p>
         </div>
 
@@ -337,7 +362,7 @@ export default function PmKisan23viKistStatusCheck2026() {
           <p>
             Bas! Aapka poora status screen par aa jayega.{" "}
             <strong>
-              Kaunsi kist aa gayi, kaunsi pending hai, sab kuch dikh jayega.
+              23vi kist aa gayi ya nahi, sab kuch dikh jayega.
             </strong>
           </p>
           <p>
@@ -348,7 +373,15 @@ export default function PmKisan23viKistStatusCheck2026() {
           <p>
             Mobile number nahi hai? Koi baat nahi — apne najdiki CSC
             (Common Service Centre) par jaakar bhi free mein status check
-            karwaya ja sakta hai.
+            karwaya ja sakta hai. Apne raajya ki gaon-wise list dekhne ke
+            liye hamari{" "}
+            <a
+              href="/articles/pm-kisan-beneficiary-list-2026"
+              className="font-semibold text-emerald-700 underline"
+            >
+              Beneficiary List guide
+            </a>{" "}
+            bhi padh sakte ho.
           </p>
         </div>
 
@@ -477,6 +510,16 @@ export default function PmKisan23viKistStatusCheck2026() {
                   bhi ho jata hai kisi-kisi case mein.
                 </li>
               </ol>
+              <p className="mt-2">
+                Poora step-by-step process janne ke liye hamari{" "}
+                <a
+                  href="/articles/pm-kisan-ekyc-online-2026"
+                  className="font-semibold text-emerald-700 underline"
+                >
+                  eKYC guide
+                </a>{" "}
+                padho.
+              </p>
             </div>
 
             <div>
@@ -516,9 +559,8 @@ export default function PmKisan23viKistStatusCheck2026() {
                 Problem 4: Payment Aane Mein Delay
               </h3>
               <p className="mt-1">
-                Sabse pehle thoda intezar karo — kai baar sarkar process
-                mein thoda time leti hai. Lekin agar baaki sabko mil gaya
-                aur aapka nahi aaya, toh turant action lo:
+                23vi kist release ho chuki hai, lekin agar baaki sabko mil
+                gaya aur aapka nahi aaya, toh turant action lo:
               </p>
               <ul className="ml-5 mt-2 list-disc space-y-2">
                 <li>
@@ -567,6 +609,17 @@ export default function PmKisan23viKistStatusCheck2026() {
                   karo. Shayad koi technical error ho.
                 </li>
               </ul>
+              <p className="mt-2">
+                Payment fail hone ke har reason aur uska fix detail mein
+                janne ke liye{" "}
+                <a
+                  href="/articles/pm-kisan-payment-failed-status-2026"
+                  className="font-semibold text-emerald-700 underline"
+                >
+                  Payment Failed guide
+                </a>{" "}
+                padho.
+              </p>
             </div>
           </div>
 
@@ -607,8 +660,9 @@ export default function PmKisan23viKistStatusCheck2026() {
               1. PM Kisan 23vi kist kab aayegi?
             </h3>
             <p className="mt-1">
-              June-July 2026 ke beech mein aane ki umeed hai. Exact date
-              sarkar ki official announcement ke baad confirm hogi.
+              23vi kist 20 June 2026 ko release ho chuki hai — 9.44 crore
+              se zyada kisanon ko ₹2,000 mila hai. Apna status abhi check
+              karo.
             </p>
           </div>
           <div>
@@ -654,23 +708,23 @@ export default function PmKisan23viKistStatusCheck2026() {
           </div>
           <div>
             <h3 className="text-lg font-semibold text-stone-900">
-              6. Ek saal mein kitni kist milti hai?
+              6. PM Kisan ki agli (24vi) kist kab aayegi?
             </h3>
             <p className="mt-1">
-              Saal mein 3 kist milti hain, har ek ₹2,000 ki — total ₹6,000
-              saalana, har 4 mahine ke gap mein.
+              23vi kist June 2026 mein release ho chuki hai, isliye 24vi
+              kist August-November 2026 ke beech expected hai. Exact date
+              official announcement ke baad confirm hogi.
             </p>
           </div>
         </div>
 
         <h2 className="mt-12 text-2xl font-bold text-stone-900">
-          23vi Kist Aane Se Pehle Yeh Checklist Zaroor Poori Kar Lein
+          Agli Kist Turant Aaye, Iske Liye Yeh Checklist Abhi Poori Kar Lein
         </h2>
         <div className="mt-4 space-y-4 text-[17px] leading-relaxed text-stone-700">
           <p>
-            Jab bhi 23vi kist release hogi, sirf wahi farmers ko paisa
-            milega jinki saari details sahi hain. Isliye abhi se yeh
-            checklist follow kar lein:
+            23vi kist toh aa gayi, lekin agli (24vi) kist bina kisi
+            dikkat ke aane ke liye abhi se yeh checklist follow kar lein:
           </p>
           <ul className="ml-5 list-disc space-y-2">
             <li>✅ e-KYC status &lsquo;YES&rsquo; hai ya nahi, check karein.</li>
@@ -686,7 +740,7 @@ export default function PmKisan23viKistStatusCheck2026() {
             </li>
           </ul>
           <p>
-            Yeh paanch points agar sahi hain, toh 23vi kist ka paisa bina
+            Yeh paanch points agar sahi hain, toh agli kist ka paisa bina
             kisi dikkat ke aapke account mein time par aa jayega.
           </p>
         </div>
@@ -704,12 +758,8 @@ export default function PmKisan23viKistStatusCheck2026() {
           </p>
           <p>
             Sabse important baat — apna <strong>e-KYC, Land Seeding aur
-            DBT link</strong> abhi check kar lo, taaki jab bhi 23vi kist
-            release ho, aapka paisa bina kisi rukawat ke aa jaye.
-          </p>
-          <p>
-            23vi kist ka intezaar karte raho.{" "}
-            <strong>Paisa zaroor aayega.</strong>
+            DBT link</strong> abhi check kar lo, taaki agli kist bhi bina
+            kisi rukawat ke aapke account mein aa jaye.
           </p>
           <p className="rounded-xl border border-emerald-200 bg-emerald-50 p-4 font-medium text-stone-800">
             👉 Abhi apna status check karo:{" "}
