@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     { url: BASE_URL,                                       lastModified: STATIC_DATE, changeFrequency: 'daily',   priority: 1.0  },
     { url: `${BASE_URL}/calculator`,                              lastModified: STATIC_DATE, changeFrequency: 'weekly',  priority: 0.8  },
+    { url: `${BASE_URL}/calculator/installment-tracker`,          lastModified: STATIC_DATE, changeFrequency: 'weekly',  priority: 0.9  },
     { url: `${BASE_URL}/calculator/pm-kisan-benefit`,             lastModified: STATIC_DATE, changeFrequency: 'weekly',  priority: 0.8  },
     { url: `${BASE_URL}/calculator/kcc-loan-emi`,                 lastModified: STATIC_DATE, changeFrequency: 'weekly',  priority: 0.8  },
     { url: `${BASE_URL}/calculator/pmfby-premium`,                lastModified: STATIC_DATE, changeFrequency: 'weekly',  priority: 0.8  },
