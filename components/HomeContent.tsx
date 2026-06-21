@@ -35,8 +35,8 @@ const ARTICLES = [
 // ── Devanagari Hindi FAQs — voice search optimized ──────────────────────────
 const FAQS = [
   {
-    q:'पीएम किसान की 23वीं किस्त कब आएगी?',
-    a:'23वीं किस्त जून-जुलाई 2026 में expected है। 22वीं किस्त 13 मार्च 2026 को ₹2,000 DBT से आई थी। किस्त पाने के लिए eKYC complete और bank में Aadhaar seeding होनी चाहिए। Status check: pmkisan.gov.in → Beneficiary Status।',
+    q:'पीएम किसान की 23वीं किस्त कब आई?',
+    a:'23वीं किस्त 20 जून 2026 को release हो चुकी है — 9.44 करोड़ से ज़्यादा किसानों को ₹2,000 DBT से मिले हैं। अगर अभी तक पैसा नहीं आया तो eKYC और bank में Aadhaar seeding ज़रूर check करें। Status check: pmkisan.gov.in → Beneficiary Status।',
   },
   {
     q:'पीएम किसान eKYC नहीं हुई तो क्या पैसा आएगा?',
@@ -73,7 +73,8 @@ const STATS = [
   { label:'Per Kist',        value:'₹2,000',   sub:'Seedha bank mein',    icon:'🏦', grad:'from-blue-400 to-cyan-600'      },
   { label:'Registered Kisan',value:'11 Cr+',   sub:'Poore India mein',    icon:'👨‍🌾', grad:'from-amber-400 to-orange-500'   },
   { label:'22vi Kist',       value:'Released', sub:'13 March 2026',       icon:'✅', grad:'from-green-400 to-emerald-600'  },
-  { label:'23vi Kist',       value:'Expected', sub:'Jun–Jul 2026',        icon:'⏳', grad:'from-yellow-400 to-amber-500'   },
+  { label:'23vi Kist',       value:'Released', sub:'20 June 2026',        icon:'✅', grad:'from-green-400 to-emerald-600'  },
+  { label:'24vi Kist',       value:'Expected', sub:'Aug–Nov 2026',        icon:'⏳', grad:'from-yellow-400 to-amber-500'   },
 ];
 
 export default function HomeContent() {
@@ -124,8 +125,8 @@ export default function HomeContent() {
 
             {/* H2 — Semantic subheading */}
             <h2 className="text-base md:text-lg text-green-100/85 mb-5 max-w-xl leading-relaxed font-normal">
-              Kisan bhai — <strong className="text-white">23vi kist ka wait kar rahe ho?</strong> Pehle yahan padho kya karna hai:
-              eKYC complete karo, bank Aadhaar seed karo, status check karo.{' '}
+              Kisan bhai — <strong className="text-white">23vi kist release ho chuki hai!</strong> Apna status abhi check karo:
+              eKYC complete karo, bank Aadhaar seed karo, paisa aaya ya nahi dekho.{' '}
               <span className="text-green-300 font-semibold">Sab free — 10 minute mein.</span>
             </h2>
 
@@ -188,7 +189,7 @@ export default function HomeContent() {
             </div>
             <div className="p-4">
               {/* Internal guide link — not direct gov link */}
-              <Link href="/articles/pm-kisan-21vi-installment-status-check"
+              <Link href="/articles/pm-kisan-23vi-kist-2026-status-check"
                 className="w-full flex items-center justify-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold py-3 rounded-xl text-sm transition-colors">
                 📖 Status Check Guide Padho
               </Link>
@@ -382,10 +383,10 @@ export default function HomeContent() {
           <div className="space-y-4">
             {[
               {
-                n:1, color:'bg-green-700', title:'23वीं किस्त के लिए अभी क्या करें?',
+                n:1, color:'bg-green-700', title:'23वीं किस्त आ चुकी है — अब क्या check करें?',
                 content:(
                   <div className="text-sm text-gray-700 space-y-2">
-                    <p>बहुत से किसान सोचते हैं कि बस <strong>registered हैं तो पैसा आ जाएगा</strong> — यह गलत है। हर किस्त से पहले यह 3 चीज़ें check करनी ज़रूरी हैं:</p>
+                    <p>23वीं किस्त <strong>20 जून 2026</strong> को release हो चुकी है। अगर अभी तक पैसा account में नहीं आया, या अगली किस्त के लिए तैयार रहना है, तो यह 3 चीज़ें ज़रूर check करें:</p>
                     <div className="space-y-2 mt-3">
                       {[
                         {n:'1',t:'eKYC Complete है?',d:'pmkisan.gov.in → eKYC → Status check करो। "eKYC Done" नहीं दिखता तो अभी करो — free है।'},
