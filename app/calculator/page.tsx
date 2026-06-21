@@ -2,12 +2,21 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Free Kisan Calculators 2026 — PM Kisan, KCC Loan, PMFBY, MSP, Crop Profit | KisanStatus.com',
-  description: '5 free agricultural calculators for Indian farmers — PM Kisan benefit, KCC loan EMI, PMFBY fasal bima premium, MSP income aur crop profit/loss. No registration.',
+  title: 'Free Kisan Calculators 2026 — Installment Tracker, PM Kisan, KCC Loan, PMFBY, MSP, Crop Profit | KisanStatus.com',
+  description: '6 free agricultural calculators for Indian farmers — Installment status tracker, PM Kisan benefit, KCC loan EMI, PMFBY fasal bima premium, MSP income aur crop profit/loss. No registration.',
   alternates: { canonical: 'https://kisanstatus.com/calculator' },
 };
 
 const CALCS = [
+  {
+    href:'/calculator/installment-tracker',
+    emoji:'📆',
+    title:'Installment Status Tracker',
+    hindi:'किस्त स्टेटस ट्रैकर',
+    desc:'23vi kist aayi ya nahi? eKYC, bank seeding, land seeding check karke 4 sawaal mein exact reason pata karo.',
+    tags:['23vi Kist Tracker','eKYC Check','Instant Result'],
+    bg:'bg-teal-50', border:'border-teal-200', btn:'bg-teal-700 hover:bg-teal-600',
+  },
   {
     href:'/calculator/pm-kisan-benefit',
     emoji:'🌾',
@@ -62,10 +71,10 @@ export default function CalculatorIndexPage() {
         <div className="container-site text-center max-w-3xl">
           <span className="inline-block bg-white/15 text-green-200 text-xs font-bold px-4 py-2 rounded-full mb-4 uppercase tracking-wider">🧮 Free Tools</span>
           <h1 className="text-2xl md:text-4xl font-black text-white mb-3">
-            Kisan Calculators — KCC, PMFBY, MSP & Crop Profit
+            Kisan Calculators — Installment Tracker, KCC, PMFBY, MSP & Crop Profit
           </h1>
           <h2 className="text-green-200 text-sm md:text-base font-normal max-w-2xl mx-auto">
-            कृषि कैलकुलेटर — 5 free tools, koi registration nahi, koi charge nahi. Bank jaane se pehle hisaab karo.
+            कृषि कैलकुलेटर — 6 free tools, koi registration nahi, koi charge nahi. Bank jaane se pehle hisaab karo.
           </h2>
         </div>
       </div>
