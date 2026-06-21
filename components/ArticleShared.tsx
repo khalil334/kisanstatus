@@ -181,13 +181,19 @@ export function Disclaimer() {
 export function CalcBanner() {
   return (
     <div className="my-8 p-6 bg-gradient-to-r from-green-800 to-green-600 rounded-2xl text-white text-center">
-      <p className="text-2xl mb-2">🧮</p>
-      <p className="font-black text-lg mb-1">Free Kisan Calculators</p>
-      <p className="text-green-100 text-sm mb-4">PM Kisan benefit, KCC loan EMI, PMFBY premium, MSP income — sab free, koi login nahi</p>
-      <Link href="/calculator"
-        className="inline-flex items-center gap-2 bg-white text-green-800 font-black px-6 py-3 rounded-xl text-sm hover:bg-green-50 transition-colors">
-        🧮 Calculator Kholo →
-      </Link>
+      <p className="text-2xl mb-2">📆</p>
+      <p className="font-black text-lg mb-1">23vi Kist Ruki Hai? Pata Karo Kyun</p>
+      <p className="text-green-100 text-sm mb-4">eKYC, bank seeding, land seeding check karo — 4 sawaal mein exact reason. Plus PM Kisan benefit, KCC EMI, PMFBY premium calculators — sab free</p>
+      <div className="flex flex-wrap justify-center gap-2.5">
+        <Link href="/calculator/installment-tracker"
+          className="inline-flex items-center gap-2 bg-white text-green-800 font-black px-6 py-3 rounded-xl text-sm hover:bg-green-50 transition-colors">
+          📆 Installment Tracker Kholo →
+        </Link>
+        <Link href="/calculator"
+          className="inline-flex items-center gap-2 bg-white/15 border border-white/30 text-white font-bold px-6 py-3 rounded-xl text-sm hover:bg-white/25 transition-colors">
+          🧮 Sab Calculators Dekho
+        </Link>
+      </div>
     </div>
   );
 }
