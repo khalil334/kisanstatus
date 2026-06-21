@@ -27,7 +27,7 @@ export default function Header() {
     <header className="bg-white border-b border-green-100 sticky top-0 z-30 shadow-sm" role="banner">
       {/* Announcement bar */}
       <div className="bg-primary-600 text-white text-xs text-center py-1.5 px-4">
-        🌾 PM Kisan 23vi Kist: Jun-Jul 2026 expected — eKYC abhi kara lo warna kist ruk sakti hai | Helpline: 155261
+        🌾 PM Kisan 23vi Kist: 20 June 2026 ko release ho chuki hai — eKYC abhi kara lo warna agli kist ruk sakti hai | Helpline: 155261
       </div>
 
       {/* Main header row */}
