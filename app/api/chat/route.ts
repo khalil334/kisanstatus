@@ -1,6 +1,6 @@
 /**
  * app/api/chat/route.ts
- * Server-side proxy for NVIDIA Nemotron API.
+ * Server-side proxy for NVIDIA Nemotron (via OpenRouter).
  * The API key stays here, on the server — never sent to the browser.
  */
 import { NextRequest, NextResponse } from 'next/server';
@@ -30,7 +30,7 @@ type Msg = { role: 'user' | 'assistant'; content: string };
 
 export async function POST(req: NextRequest) {
   try {
-    const apiKey = process.env.NVIDIA_API_KEY;
+    const apiKey = process.env.OPENROUTER_API_KEY;
 
     if (!apiKey) {
       return NextResponse.json(
@@ -48,15 +48,17 @@ export async function POST(req: NextRequest) {
       content: String(m.content || '').slice(0, 2000),
     }));
 
-    const upstream = await fetch('https://integrate.api.nvidia.com/v1/chat/completions', {
+    const upstream = await fetch('https://openrouter.ai/api/v1/chat/completions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${apiKey}`,
+        'HTTP-Referer': 'https://kisanstatus.com',
+        'X-Title': 'KisanStatus.com',
       },
       signal: AbortSignal.timeout(20000), // give up after 20s instead of hanging for minutes
       body: JSON.stringify({
-        model: 'nvidia/nemotron-nano-9b-v2',
+        model: 'nvidia/nemotron-nano-9b-v2:free',
         messages: [{ role: 'system', content: SYSTEM_PROMPT }, ...trimmedHistory],
         temperature: 0.2,
         max_tokens: 400,
@@ -65,7 +67,7 @@ export async function POST(req: NextRequest) {
 
     if (!upstream.ok) {
       const errText = await upstream.text().catch(() => '');
-      console.error('NVIDIA API error:', upstream.status, errText);
+      console.error('OpenRouter API error:', upstream.status, errText);
       return NextResponse.json(
         { error: 'AI service abhi available nahi hai. Helpline 155261 par call karein.' },
         { status: 502 }
@@ -80,7 +82,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ reply });
   } catch (err: any) {
     if (err?.name === 'TimeoutError' || err?.name === 'AbortError') {
-      console.error('NVIDIA API timeout — server took too long to respond');
+      console.error('OpenRouter API timeout — server took too long to respond');
       return NextResponse.json(
         { error: 'AI thoda busy hai abhi, response aane mein zyada time lag raha hai. Thodi der baad dobara try karein ya helpline 155261 par call karein.' },
         { status: 504 }
