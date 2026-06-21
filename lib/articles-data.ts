@@ -66,7 +66,7 @@ export const ARTICLES: ArticleMeta[] = [
   },
   {
     slug:       'pm-kisan-ekyc-online-2026',
-    title:      "PM Kisan Payment Failed — Reasons & Fix",
+    title:      "PM Kisan eKYC Online 2026 | Aadhaar OTP & CSC Verification Complete Guide",
     desc:       "PM Kisan eKYC online 2026 complete guide. Aadhaar OTP se ghar baithe ya CSC biometric se eKYC karo. Status check, common errors fix — Sidhu Singh.",
     ogTitle:    "PM Kisan eKYC Online 2026 — Complete Guide",
     keywords:   ['PM Kisan eKYC online 2026', 'PM Kisan eKYC kaise kare', 'PM Kisan Aadhaar OTP eKYC', 'PM Kisan CSC eKYC', 'pm kisan ekyc status check 2026'],
@@ -90,7 +90,7 @@ export const ARTICLES: ArticleMeta[] = [
   },
   {
     slug:       'pm-kisan-name-correction-online-2026',
-    title:      "PM Kisan eKYC Online 2026",
+    title:      "PM Kisan Name Correction Online 2026 | Aadhaar Naam Mismatch Fix Guide",
     desc:       "PM Kisan name correction online 2026 — Aadhaar naam mismatch, bank account naam galat, spelling error sab fix karo. Step-by-step guide — Sidhu Singh.",
     ogTitle:    "PM Kisan Name Correction Online 2026",
     keywords:   ['PM Kisan name correction online 2026', 'PM Kisan naam correction kaise kare', 'PM Kisan Aadhaar name mismatch', 'PM Kisan bank name correction', 'pm kisan naam update 2026'],
@@ -98,7 +98,7 @@ export const ARTICLES: ArticleMeta[] = [
   },
   {
     slug:       'pm-kisan-payment-failed-status-2026',
-    title:      "PM Kisan eKYC Online 2026",
+    title:      "PM Kisan Payment Failed Status 2026 — Reasons & Solutions",
     desc:       "PM Kisan payment failed status 2026 — error codes, Aadhaar mismatch, bank verification problems aur step-by-step solutions. Sidhu Singh ki complete guide.",
     ogTitle:    "PM Kisan Payment Failed Status 2026 — Reasons & Solutions",
     keywords:   ['PM Kisan payment failed 2026', 'PM Kisan payment fail reason', 'PM Kisan NPCI error', 'PM Kisan Aadhaar mismatch payment', 'pm kisan payment nahi aayi solution'],
@@ -114,7 +114,7 @@ export const ARTICLES: ArticleMeta[] = [
   },
   {
     slug:       'pm-kisan-registration-online-2026',
-    title:      "PM Kisan eKYC Online 2026",
+    title:      "PM Kisan Registration Online 2026 | Complete Guide",
     desc:       "PM Kisan registration online 2026 — naye farmers ke liye complete guide. Eligibility, required documents, step-by-step process, status check aur common errors fix. Sidhu Singh.",
     ogTitle:    "PM Kisan Registration Online 2026 — Complete Guide",
     keywords:   ['PM Kisan registration online 2026', 'PM Kisan new farmer registration', 'PM Kisan registration kaise kare', 'PM Kisan eligibility 2026', 'pm kisan registration status check'],
@@ -122,7 +122,7 @@ export const ARTICLES: ArticleMeta[] = [
   },
   {
     slug:       'pm-kisan-rejected-list-2026',
-    title:      "PM Kisan Payment Failed 2026",
+    title:      "PM Kisan Rejected List 2026 — Reasons & Fix",
     desc:       "PM Kisan rejected list 2026 check karo — naam rejection reasons, Aadhaar mismatch, eKYC problems aur step-by-step solutions. Sidhu Singh ki complete guide.",
     ogTitle:    "PM Kisan Rejected List 2026 — Reasons & Fix",
     keywords:   ['PM Kisan rejected list 2026', 'PM Kisan rejection reason', 'PM Kisan naam rejected', 'PM Kisan application rejected fix', 'pm kisan rejected list me naam hataye'],
