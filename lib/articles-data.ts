@@ -1,6 +1,6 @@
 /**
  * lib/articles-data.ts
- * Central metadata for all 16 articles — used by [slug]/page.tsx
+ * Central metadata for all 17 articles — used by [slug]/page.tsx
  * To add a new article: add entry here + create components/articles/YourComponent.tsx
  */
 
@@ -144,6 +144,16 @@ export const ARTICLES: ArticleMeta[] = [
     keywords:   ['PM Kisan 23vi Kist', 'PM Kisan Status Check', '23vi Kist Payment Status', 'PM Kisan Next Installment'],
     component:  'PmKisan23viKistStatusCheck2026',
     publishedTime: '2026-04-01T00:00:00+05:30',
+  },
+  {
+    slug:       'kisan-credit-card-online-apply-2026',
+    title:      "Kisan Credit Card (KCC) Online Apply 2026 | Eligibility, Documents Aur Loan Limit Guide",
+    desc:       "Kisan Credit Card online apply 2026 — eligibility, documents, loan limit ₹5 lakh tak, interest rate 4% se shuru. Step-by-step Hinglish guide — Sidhu Singh.",
+    ogTitle:    "Kisan Credit Card (KCC) Online Apply 2026 — Complete Guide",
+    keywords:   ['Kisan Credit Card Online Apply 2026', 'KCC Apply Online', 'KCC Eligibility 2026', 'KCC Loan Limit', 'KCC Interest Rate 2026', 'Kisan Credit Card Documents Required'],
+    component:  'KisanCreditCardOnlineApply2026',
+    publishedTime: '2026-06-01T08:00:00+05:30',
+    modifiedTime:  '2026-06-21T08:00:00+05:30',
   },
 ];
 
