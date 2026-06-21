@@ -7,12 +7,12 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import dynamic from 'next/dynamic';
-import { ARTICLES_MAP, ARTICLES } from '@/lib/articles-data';
+import { ARTICLES_MAP, ARTICLES, type ArticleMeta } from '@/lib/articles-data';
 
 const DOMAIN = 'https://kisanstatus.com';
 
 // ── Dynamic imports ────────────────────────────────────────────────────────
-const COMPONENTS: Record<string, React.ComponentType> = {
+const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> = {
   KisanRinKahaSeLe2026:                      dynamic(() => import('@/components/articles/KisanRinKahaSeLe2026')),
   KisanTractorLoan2026:                       dynamic(() => import('@/components/articles/KisanTractorLoan2026')),
   PmKisan21viInstallmentStatusCheck:          dynamic(() => import('@/components/articles/PmKisan21viInstallmentStatusCheck')),
@@ -85,5 +85,5 @@ export default async function ArticlePage({
   if (!article) notFound();
   const ArticleComponent = COMPONENTS[article.component];
   if (!ArticleComponent) notFound();
-  return <ArticleComponent />;
+  return <ArticleComponent article={article} />;
 }
