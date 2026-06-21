@@ -50,6 +50,7 @@ export function fmt(n:number) {
 }
 
 export const OTHER_CALCS = [
+  { href:'/calculator/installment-tracker', emoji:'📆', name:'Installment Tracker', color:'bg-teal-50 border-teal-200 text-teal-800' },
   { href:'/calculator/pm-kisan-benefit', emoji:'🌾', name:'PM Kisan Benefit', color:'bg-green-50 border-green-200 text-green-800' },
   { href:'/calculator/kcc-loan-emi',     emoji:'🏦', name:'KCC Loan EMI',     color:'bg-blue-50 border-blue-200 text-blue-800'   },
   { href:'/calculator/pmfby-premium',    emoji:'🛡️', name:'PMFBY Premium',    color:'bg-amber-50 border-amber-200 text-amber-800' },
