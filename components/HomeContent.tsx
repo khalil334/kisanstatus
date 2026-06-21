@@ -125,29 +125,29 @@ export default function HomeContent() {
 
             {/* H2 — Semantic subheading */}
             <h2 className="text-base md:text-lg text-green-100/85 mb-5 max-w-xl leading-relaxed font-normal">
-              Kisan bhai — <strong className="text-white">23vi kist release ho chuki hai!</strong> Apna status abhi check karo:
+              Kisan bhai — <strong className="text-white">23vi kist 20 June 2026 ko release ho chuki hai!</strong> Apna status abhi check karo:
               eKYC complete karo, bank Aadhaar seed karo, paisa aaya ya nahi dekho.{' '}
               <span className="text-green-300 font-semibold">Sab free — 10 minute mein.</span>
             </h2>
 
             {/* Urgency alert */}
-            <div className="flex items-start gap-3 bg-red-500/20 border border-red-400/40 rounded-xl px-4 py-3 max-w-lg mb-6">
-              <span className="text-red-300 text-xl shrink-0">🚨</span>
+            <div className="flex items-start gap-3 bg-green-500/20 border border-green-400/40 rounded-xl px-4 py-3 max-w-lg mb-6">
+              <span className="text-green-300 text-xl shrink-0">✅</span>
               <div>
-                <p className="text-white font-bold text-sm">eKYC बिना किस्त नहीं आएगी!</p>
-                <p className="text-red-200 text-xs mt-0.5">Abhi check karo — 5 minute mein ho jaata hai. Bilkul free.</p>
+                <p className="text-white font-bold text-sm">23vi Kist Release Ho Chuki — 20 June 2026!</p>
+                <p className="text-green-200 text-xs mt-0.5">Paisa aaya ya nahi — abhi status check karo. eKYC pending hai to turant karo.</p>
               </div>
             </div>
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-3">
-              <Link href="/articles/pm-kisan-ekyc-online-2026"
+              <Link href="/articles/pm-kisan-23vi-kist-2026-status-check"
                 className="inline-flex items-center gap-2 bg-green-400 hover:bg-green-300 text-gray-900 font-black px-5 py-3 rounded-xl text-sm transition-all hover:scale-105 shadow-lg shadow-green-900/40">
-                🔐 eKYC Karo — Free
+                📆 23vi Kist Status Dekho
               </Link>
-              <Link href="/pm-kisan-status"
+              <Link href="/articles/pm-kisan-ekyc-online-2026"
                 className="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 border border-white/30 text-white font-bold px-5 py-3 rounded-xl text-sm transition-all hover:scale-105">
-                ✅ Status Check Karo
+                🔐 eKYC Karo — Free
               </Link>
               <Link href="/calculator"
                 className="inline-flex items-center gap-2 bg-amber-400/25 hover:bg-amber-400/35 border border-amber-300/50 text-amber-200 font-bold px-5 py-3 rounded-xl text-sm transition-all hover:scale-105">
@@ -191,7 +191,7 @@ export default function HomeContent() {
               {/* Internal guide link — not direct gov link */}
               <Link href="/articles/pm-kisan-23vi-kist-2026-status-check"
                 className="w-full flex items-center justify-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold py-3 rounded-xl text-sm transition-colors">
-                📖 Status Check Guide Padho
+                📖 23vi Kist Status Guide Padho
               </Link>
               <p className="text-center text-white/30 text-[10px] mt-2">Guide padhne ke baad official site par jao</p>
             </div>
