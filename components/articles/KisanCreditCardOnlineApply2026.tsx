@@ -7,8 +7,8 @@ import type { ArticleMeta } from '@/lib/articles-data';
 const DOMAIN = 'https://kisanstatus.com';
 
 export default function KisanCreditCardOnlineApply2026({ article }: { article: ArticleMeta }) {
-  const PUBLISHED = article.publishedTime;
-  const MODIFIED  = article.modifiedTime ?? article.publishedTime;
+  const PUBLISHED = article.publishedTime ?? '2026-06-01T08:00:00+05:30';
+  const MODIFIED  = article.modifiedTime  ?? PUBLISHED;
   const ARTICLE_URL = `${DOMAIN}/articles/${article.slug}`;
   const ABS_HERO = `${DOMAIN}/images/kisan-credit-card-apply-online-hero.webp`;
 
