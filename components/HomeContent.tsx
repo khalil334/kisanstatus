@@ -30,7 +30,8 @@ const ARTICLES = [
   { slug:'pm-kisan-21vi-installment-status-check',          title:'PM Kisan 21vi Kist Status Check',      emoji:'📅', desc:'21vi kist aayi ki nahi — mobile se 2 minute mein check karo',  category:'Status',       isNew:false },
   { slug:'pm-kisan-correction-deactivate-block-guide-2026', title:'PM Kisan Correction & Deactivate Guide',emoji:'🛠️', desc:'Naam, bank, zameen — correction guide aur deactivate fix',    category:'Correction',   isNew:false },
   { slug:'pm-kisan-problems-solution-guide-2026',           title:'PM Kisan 10 Common Problems — Fix',    emoji:'🔧', desc:'RFT pending, PFMS error, payment fail — 10 problems ka hal',   category:'Problems',     isNew:false },
-];
+
+{ slug:'pm-kisan-fto-generated-ka-matlab-kya-hai', title:'PM Kisan FTO Generated Ka Matlab', emoji:'📄', desc:'FTO Generated dikhta hai? Matlab kya hai aur payment kab aayegi', category:'Payment', isNew:true },];
 
 // ── Devanagari Hindi FAQs — voice search optimized ──────────────────────────
 const FAQS = [
