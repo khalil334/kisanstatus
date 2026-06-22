@@ -28,6 +28,32 @@ Answer ONLY in simple Hinglish (Roman script Hindi mixed with English). Keep ans
 
 type Msg = { role: 'user' | 'assistant'; content: string };
 
+// Try multiple free models in order — if one is rate-limited/down, fall back to the next.
+const MODELS = [
+  'nvidia/nemotron-nano-9b-v2:free',
+  'meta-llama/llama-3.3-70b-instruct:free',
+  'google/gemma-3-27b-it:free',
+];
+
+async function callOpenRouter(apiKey: string, model: string, messages: any[]) {
+  return fetch('https://openrouter.ai/api/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${apiKey}`,
+      'HTTP-Referer': 'https://kisanstatus.com',
+      'X-Title': 'KisanStatus.com',
+    },
+    signal: AbortSignal.timeout(15000), // shorter per-model timeout so fallback has time to run
+    body: JSON.stringify({
+      model,
+      messages,
+      temperature: 0.2,
+      max_tokens: 400,
+    }),
+  });
+}
+
 export async function POST(req: NextRequest) {
   try {
     const apiKey = process.env.OPENROUTER_API_KEY;
@@ -48,46 +74,51 @@ export async function POST(req: NextRequest) {
       content: String(m.content || '').slice(0, 2000),
     }));
 
-    const upstream = await fetch('https://openrouter.ai/api/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${apiKey}`,
-        'HTTP-Referer': 'https://kisanstatus.com',
-        'X-Title': 'KisanStatus.com',
-      },
-      signal: AbortSignal.timeout(20000), // give up after 20s instead of hanging for minutes
-      body: JSON.stringify({
-        model: 'nvidia/nemotron-nano-9b-v2:free',
-        messages: [{ role: 'system', content: SYSTEM_PROMPT }, ...trimmedHistory],
-        temperature: 0.2,
-        max_tokens: 400,
-      }),
-    });
+    const fullMessages = [{ role: 'system', content: SYSTEM_PROMPT }, ...trimmedHistory];
 
-    if (!upstream.ok) {
-      const errText = await upstream.text().catch(() => '');
-      console.error('OpenRouter API error:', upstream.status, errText);
-      return NextResponse.json(
-        { error: 'AI service abhi available nahi hai. Helpline 155261 par call karein.' },
-        { status: 502 }
-      );
+    let lastStatus = 0;
+    let lastErrText = '';
+
+    for (const model of MODELS) {
+      try {
+        const upstream = await callOpenRouter(apiKey, model, fullMessages);
+
+        if (upstream.ok) {
+          const data = await upstream.json();
+          const reply =
+            data?.choices?.[0]?.message?.content ||
+            'Maafi chahta hoon, abhi jawab nahi de pa raha. Helpline 155261 par call karo.';
+          return NextResponse.json({ reply });
+        }
+
+        lastStatus = upstream.status;
+        lastErrText = await upstream.text().catch(() => '');
+        console.error(`OpenRouter API error (model: ${model}):`, lastStatus, lastErrText);
+
+        // Only fall through to next model on rate-limit/availability errors; otherwise stop.
+        if (lastStatus !== 429 && lastStatus !== 502 && lastStatus !== 503) break;
+      } catch (innerErr: any) {
+        if (innerErr?.name === 'TimeoutError' || innerErr?.name === 'AbortError') {
+          console.error(`OpenRouter timeout (model: ${model})`);
+          lastStatus = 504;
+          continue; // try next model
+        }
+        throw innerErr;
+      }
     }
 
-    const data = await upstream.json();
-    const reply =
-      data?.choices?.[0]?.message?.content ||
-      'Maafi chahta hoon, abhi jawab nahi de pa raha. Helpline 155261 par call karo.';
-
-    return NextResponse.json({ reply });
-  } catch (err: any) {
-    if (err?.name === 'TimeoutError' || err?.name === 'AbortError') {
-      console.error('OpenRouter API timeout — server took too long to respond');
+    if (lastStatus === 504) {
       return NextResponse.json(
         { error: 'AI thoda busy hai abhi, response aane mein zyada time lag raha hai. Thodi der baad dobara try karein ya helpline 155261 par call karein.' },
         { status: 504 }
       );
     }
+
+    return NextResponse.json(
+      { error: 'AI service abhi available nahi hai. Helpline 155261 par call karein.' },
+      { status: 502 }
+    );
+  } catch (err: any) {
     console.error('Chat route error:', err);
     return NextResponse.json(
       { error: 'Kuch galat ho gaya. Thodi der baad try karein ya helpline 155261 par call karein.' },
