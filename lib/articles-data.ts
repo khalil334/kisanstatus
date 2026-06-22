@@ -1,6 +1,6 @@
 /**
  * lib/articles-data.ts
- * Central metadata for all 17 articles — used by [slug]/page.tsx
+ * Central metadata for all 18 articles — used by [slug]/page.tsx
  * To add a new article: add entry here + create components/articles/YourComponent.tsx
  */
 
@@ -154,6 +154,17 @@ export const ARTICLES: ArticleMeta[] = [
     component:  'KisanCreditCardOnlineApply2026',
     publishedTime: '2026-06-01T08:00:00+05:30',
     modifiedTime:  '2026-06-21T08:00:00+05:30',
+  },
+  // ── NEW ARTICLE ──────────────────────────────────────────────────────────
+  {
+    slug:       'pm-kisan-fto-generated-ka-matlab-kya-hai',
+    title:      "PM Kisan FTO Generated Ka Matlab Kya Hai 2026 | FTO Status Complete Guide",
+    desc:       "PM Kisan FTO Generated ka matlab kya hai? FTO Pending, FTO Processed aur Payment Order ka poora explanation — step-by-step Hinglish guide. Sidhu Singh.",
+    ogTitle:    "PM Kisan FTO Generated Ka Matlab Kya Hai 2026 — Complete Guide",
+    keywords:   ['PM Kisan FTO Generated', 'FTO Generated matlab', 'PM Kisan FTO status', 'PM Kisan payment FTO', 'FTO processed meaning', 'PM Kisan FTO kya hota hai'],
+    component:  'PmKisanFtoGeneratedKaMatlabKyaHai',
+    publishedTime: '2026-06-23T08:00:00+05:30',
+    modifiedTime:  '2026-06-23T08:00:00+05:30',
   },
 ];
 
