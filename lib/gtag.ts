@@ -16,7 +16,7 @@ export type GTagEvent = {
 // ── Measurement ID ─────────────────────────────────────────────────────────────
 // TODO: Replace with your GA4 Measurement ID — e.g. NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
 export const GA_MEASUREMENT_ID =
-  process.env.NEXT_PUBLIC_GA_ID ?? 'G-XXXXXXXXXX';
+  process.env.NEXT_PUBLIC_GA_ID ?? 'G-GZLLLGC4VC';
 
 // ── Page View ─────────────────────────────────────────────────────────────────
 
