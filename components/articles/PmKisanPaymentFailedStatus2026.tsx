@@ -139,7 +139,6 @@ export default function PMKisanPaymentFailed() {
       </Head>
 
       <h1>PM Kisan Payment Failed Reason — Complete Guide to Check &amp; Fix Online</h1>
-      <p><strong>Primary Keyword:</strong> PM Kisan Payment Failed</p>
 
       <img
         alt="Indian farmer in wheat field checking mobile phone for PM Kisan payment status"
@@ -265,10 +264,6 @@ export default function PMKisanPaymentFailed() {
       <p><strong>Fix:</strong> Najdeeki CSC center ya bank branch mein jao aur eKYC complete karao. Joint account ho toh dono ka karana pad sakta hai.</p>
       <div className="disclaimer-box">
         <strong>Note:</strong> Upar diye gaye naam aur situations sirf samjhane ke liye example hain.
-      </div>
-
-      <div className="image-note">
-        <strong>Image Tip:</strong> Use this screenshot to show farmers what a CSC center visit looks like. Keep under 150 KB in WebP. Remove generic field photos that add no instructional value.
       </div>
 
       <h3>5. Land Record Verification Pending — Bhulekth Ka Chakkar</h3>
@@ -605,10 +600,6 @@ export default function PMKisanPaymentFailed() {
           📆 Installment Tracker Kholo →
         </a>
       </div>
-
-      <hr />
-      <p><small><strong>Secondary Keywords Used:</strong> PM Kisan payment failed, installment not received, rejected payment, status check, beneficiary payment issue, Aadhaar seeding, eKYC, farmer registry</small></p>
-      <p><small><strong>Category:</strong> Agriculture &amp; Government Schemes | <strong>Reading Time:</strong> ~12 minutes</small></p>
 
       <AuthorBox modified={MODIFIED}/>
       <BottomNav/>
