@@ -1,6 +1,6 @@
 /**
  * app/articles/[slug]/page.tsx
- * Dynamic route — serves ALL 17 articles
+ * Dynamic route — serves ALL 18 articles
  * Content lives in components/articles/*.tsx
  * Metadata lives in lib/articles-data.ts
  */
@@ -30,6 +30,8 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   PmKisanRegistrationOnline2026:              dynamic(() => import('@/components/articles/PmKisanRegistrationOnline2026')),
   PmKisanRejectedList2026:                    dynamic(() => import('@/components/articles/PmKisanRejectedList2026')),
   PmfbyCropInsurance2026:                     dynamic(() => import('@/components/articles/PmfbyCropInsurance2026')),
+  // ── NEW ──
+  PmKisanFtoGeneratedKaMatlabKyaHai:          dynamic(() => import('@/components/articles/pm-kisan-fto-generated-ka-matlab-kya-hai')),
 };
 
 export const revalidate = 86400;
