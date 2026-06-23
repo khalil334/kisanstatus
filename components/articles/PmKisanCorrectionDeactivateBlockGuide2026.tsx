@@ -52,18 +52,7 @@ export default function PmKisanCorrectionDeactivateBlockGuide2026() {
       </div>
 
       <div className="container-site max-w-3xl py-8">
-        <div className="my-6 rounded-2xl overflow-hidden border border-green-100 shadow-md">
-          <img
-            src="/images/correction-guide.png"
-            alt="PM Kisan correction aur deactivate guide 2026"
-            className="w-full object-cover"
-            style={{ maxHeight: '420px', objectPosition: 'center' }}
-            loading="lazy"
-            width="1200"
-            height="630"
-          />
-          <p className="text-center text-xs text-gray-500 py-2 bg-green-50 border-t border-green-100">PM Kisan Correction Guide 2026 — Naam Bank Zameen Sab Fix</p>
-        </div>
+        <SvgCorrection caption="PM Kisan Correction Guide 2026 — Naam Bank Zameen Sab Fix" />
 
         {/* Quick decision chart */}
         <div className="my-6 p-5 bg-blue-50 border-2 border-blue-400 border-l-[6px] rounded-xl">
@@ -128,18 +117,7 @@ export default function PmKisanCorrectionDeactivateBlockGuide2026() {
           <h2 className="text-xl font-black text-gray-900 mb-4 pb-2 border-b-2 border-green-100">
             Section 3 — Deactivated Account Reactivate Kaise Karein
           </h2>
-          <div className="my-6 rounded-2xl overflow-hidden border border-green-100 shadow-md">
-          <img
-            src="/images/correction-guide.png"
-            alt="PM Kisan correction aur deactivate guide 2026"
-            className="w-full object-cover"
-            style={{ maxHeight: '420px', objectPosition: 'center' }}
-            loading="lazy"
-            width="1200"
-            height="630"
-          />
-          <p className="text-center text-xs text-gray-500 py-2 bg-green-50 border-t border-green-100">PM Kisan Deactivated Account — Reactivation Process 2026</p>
-        </div>
+          <SvgDeactivate caption="PM Kisan Deactivated Account — Reactivation Process 2026" />
           <p className="text-gray-700 text-sm leading-relaxed mb-4">
             Deactivation tab hoti hai jab state ya PM Kisan team ko lagta hai ki koi ineligibility condition aa gayi — family member sarkari naukri mein, zameen transfer, ya income change.
           </p>
@@ -233,6 +211,7 @@ export default function PmKisanCorrectionDeactivateBlockGuide2026() {
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-gray-900 mb-4 pb-2 border-b-2 border-green-100">FAQ</h2>
+          <SvgFAQ caption="PM Kisan Correction — Aksar Pooche Jaane Wale Sawaal" />
           <div className="space-y-3">
             {[
               {q:'Ek se zyada correction ek saath ho sakti hain?',a:'Naam aur bank correction saath ho sakti hain — portal par dono options hain. Land correction alag process hai — office se. Deactivation aur naam correction alag alag resolve hoti hain.'},
