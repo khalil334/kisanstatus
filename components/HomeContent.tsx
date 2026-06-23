@@ -284,9 +284,9 @@ export default function HomeContent() {
             ))}
           </div>
 
-          {/* Articles Grid */}
+          {/* Articles Grid — sirf 6 dikhao */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {filtered.map(article => (
+            {filtered.slice(0, 6).map(article => (
               <Link
                 key={article.slug}
                 href={`/articles/${article.slug}`}
@@ -314,6 +314,18 @@ export default function HomeContent() {
                 </div>
               </Link>
             ))}
+          </div>
+
+          {/* View All Button */}
+          <div className="text-center mt-8">
+            <Link
+              href="/articles"
+              className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-black px-8 py-3.5 rounded-xl text-sm transition-all hover:scale-105 shadow-lg shadow-green-900/20"
+            >
+              📚 Saari Guides Dekho — {ARTICLES.length} Articles
+              <span className="text-green-200">→</span>
+            </Link>
+            <p className="text-gray-400 text-xs mt-2">PM Kisan, eKYC, Loan, Insurance — sab topics</p>
           </div>
         </div>
       </section>
