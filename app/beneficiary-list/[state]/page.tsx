@@ -26,166 +26,239 @@ const stateData: Record<string, {
   'manipur': { name: 'Manipur', slug: 'manipur', crop: 'rice, vegetables & horticulture', article: 'Manipur\'s farming is centered in the Imphal Valley where rice is the dominant crop, supplemented by vegetables, fruits, and flowers. Small rice farmers in Imphal East, Imphal West, Thoubal, and Bishnupur are PM Kisan Samman Nidhi beneficiaries. To check PM Kisan status Manipur 2026, visit pmkisan.gov.in with your Aadhaar. Manipur uses state land revenue records (Patta documents) for PM Kisan verification. For Manipur PM Kisan beneficiary list, select your district and gram panchayat. Hill district farmers in Churachandpur and Ukhrul face additional registration challenges due to customary land ownership. Black rice (Chakhao) and organic vegetable farmers with own land are eligible. eKYC at CSC centres available in major Manipur towns. Contact Manipur Agriculture Department Imphal for assistance.', keywords: ['pm kisan manipur 2026', 'manipur pm kisan beneficiary list', 'pm kisan status manipur', 'manipur kisan samman nidhi 2026', 'pm kisan mn farmer list'] },
   'meghalaya': { name: 'Meghalaya', slug: 'meghalaya', crop: 'rice, ginger & turmeric', article: 'Meghalaya\'s tribal farming communities grow rice, ginger, turmeric, and black pepper on hilly terrain using traditional agroforestry methods. Small farmers in East Khasi Hills, West Khasi Hills, and Jaintia Hills are PM Kisan beneficiaries. To check PM Kisan status Meghalaya 2026, visit pmkisan.gov.in/BeneficiaryStatus.aspx. Meghalaya has unique matrilineal land ownership customs — women farmers here have relatively better land documentation for PM Kisan. For Meghalaya PM Kisan beneficiary list, select your district and community block. Ginger and turmeric spice farmers with recorded land are eligible for PM Kisan. eKYC for Meghalaya farmers at CSC centres in Shillong and district headquarters. PM Kisan helpline: 155261 for registration support.', keywords: ['pm kisan meghalaya 2026', 'meghalaya pm kisan beneficiary list', 'pm kisan status meghalaya', 'meghalaya kisan samman nidhi 2026', 'pm kisan ml farmer list'] },
   'mizoram': { name: 'Mizoram', slug: 'mizoram', crop: 'rice, ginger & vegetables', article: 'Mizoram\'s farmers are transitioning from traditional jhum (shifting) cultivation to settled terrace farming for rice, ginger, and vegetables. Small farmers with settled land ownership in Aizawl, Lunglei, and Champhai are eligible for PM Kisan Samman Nidhi. To check PM Kisan status Mizoram 2026, visit pmkisan.gov.in with Aadhaar. Village land passes (LPC) serve as primary land ownership proof for PM Kisan in Mizoram. For Mizoram PM Kisan beneficiary list, select district and RD block on the official portal. Ginger cultivation in Champhai and passion fruit farming are key activities eligible for PM Kisan. Farmers with community-assigned land for permanent cultivation qualify. eKYC at CSC centres in Aizawl and district towns. Contact Mizoram Agriculture Department for registration help.', keywords: ['pm kisan mizoram 2026', 'mizoram pm kisan beneficiary list', 'pm kisan status mizoram', 'mizoram kisan samman nidhi 2026', 'pm kisan mz farmer list'] },
-  'nagaland': { name: 'Nagaland', slug: 'nagaland', crop: 'rice, maize & horticulture', article: 'Nagaland\'s tribal farming communities grow rice, maize, and horticulture crops including pineapple and kiwi on terraced hill slopes. Small farmers with settled land rights in Kohima, Dimapur, Wokha, and Mokokchung are eligible for PM Kisan Samman Nidhi. To check PM Kisan status Nagaland 2026, visit pmkisan.gov.in/BeneficiaryStatus.aspx. Nagaland tribal land is largely under customary clan ownership — farmers with individual land holding documents or allotment certificates are eligible. For Nagaland PM Kisan beneficiary list, select your district and block. Pineapple and kiwi orchard farmers with documented land are eligible. Dimapur district has the highest number of registered PM Kisan farmers in Nagaland. eKYC at CSC centres available in major towns. Helpline: 155261.', keywords: ['pm kisan nagaland 2026', 'nagaland pm kisan beneficiary list', 'pm kisan status nagaland', 'nagaland kisan samman nidhi 2026', 'pm kisan nl farmer list'] },
-  'odisha': { name: 'Odisha', slug: 'odisha', crop: 'rice, pulses & oilseeds', article: 'Odisha is a major rice-producing state with the Mahanadi river delta supporting extensive paddy cultivation. Coastal and tribal rice farmers in Cuttack, Puri, Ganjam, and Koraput are significant PM Kisan beneficiaries — over 40 lakh registered. To check PM Kisan status Odisha 2026, visit pmkisan.gov.in with Aadhaar. Odisha uses the Bhulekh land records portal (bhulekh.ori.nic.in) for PM Kisan land verification. For Odisha PM Kisan village beneficiary list, select district, tehsil, village, and khatian type. The KALIA scheme (Krushak Assistance for Livelihood and Income Augmentation) supplements PM Kisan income. Tribal farmers in Koraput, Rayagada, and Malkangiri under ST category receive additional state support. eKYC at Mo Seva Kendra centres across all Odisha districts. PM Kisan 22vi kist released 13 March 2026; 23vi kist expected Jun-Jul 2026.', keywords: ['pm kisan odisha 2026', 'odisha pm kisan beneficiary list', 'pm kisan status odisha', 'odisha kisan samman nidhi village list', 'pm kisan or farmer list download'] },
-  'punjab': { name: 'Punjab', slug: 'punjab', crop: 'wheat, rice & potato', article: 'Punjab is the "Granary of India" for its wheat and rice production in the fertile doab plains. Small and marginal farmers in Punjab with less than 2 hectares of land qualify for PM Kisan, though Punjab has relatively fewer beneficiaries due to larger average farm sizes. To check PM Kisan status Punjab 2026, visit pmkisan.gov.in/BeneficiaryStatus.aspx. Punjab uses Fard land ownership records through the PLRS portal for PM Kisan verification. For Punjab PM Kisan village beneficiary list, select district, tehsil, and village. Small farmers in Sangrur, Barnala, Fazilka, and Mansa are primary beneficiaries. Punjab government integrated PM Kisan data with the Punjab Girdawari system. Note: Punjab farmers who lease land (not owned) are not eligible for PM Kisan. eKYC at CSC centres widely available.', keywords: ['pm kisan punjab 2026', 'punjab pm kisan beneficiary list', 'pm kisan status punjab', 'punjab kisan samman nidhi village list', 'pm kisan pb farmer list download'] },
-  'rajasthan': { name: 'Rajasthan', slug: 'rajasthan', crop: 'bajra, wheat & mustard', article: 'Rajasthan is India\'s largest state with significant agriculture in bajra (pearl millet), wheat, mustard, and cumin despite semi-arid conditions. Small and marginal farmers are major PM Kisan beneficiaries — over 60 lakh registered. To check PM Kisan status Rajasthan 2026, visit pmkisan.gov.in/BeneficiaryStatus.aspx. Rajasthan uses Apna Khata land records portal (apnakhata.raj.nic.in) for PM Kisan land seeding. For Rajasthan PM Kisan village beneficiary list, select district, tehsil, and village. Bajra farmers in Barmer and Jodhpur, mustard growers in Alwar and Bharatpur, and wheat farmers in Sriganganagar benefit the most. Rajasthan ke kisanon ke liye jo barish pe nirbhar rehte hain, yeh ₹6000 bahut kaam aata hai. eKYC available at E-Mitra Kiosk centres across Rajasthan. PM Kisan 22vi kist released 13 March 2026; 23vi kist expected Jun-Jul 2026.', keywords: ['pm kisan rajasthan 2026', 'rajasthan pm kisan beneficiary list', 'pm kisan status rajasthan', 'rajasthan kisan samman nidhi village list', 'pm kisan rj farmer list download'] },
-  'sikkim': { name: 'Sikkim', slug: 'sikkim', crop: 'cardamom, ginger & organic rice', article: 'Sikkim is India\'s first fully organic state, famous for its cardamom cultivation, ginger, and organic rice farming. Small organic farmers in East Sikkim, South Sikkim, and West Sikkim are eligible for PM Kisan Samman Nidhi. To check PM Kisan status Sikkim 2026, visit pmkisan.gov.in with Aadhaar. Sikkim uses Revenue Order (RO) and Land Pass Book for PM Kisan land verification. For Sikkim PM Kisan beneficiary list, select your district and gram panchayat. Cardamom and large cardamom farmers in Dzongu and Soreng are significant PM Kisan recipients. The Sikkim government\'s organic farming support schemes work alongside PM Kisan. eKYC at CSC centres in Gangtok and district headquarters. Contact Sikkim Agriculture Department for registration assistance.', keywords: ['pm kisan sikkim 2026', 'sikkim pm kisan beneficiary list', 'pm kisan status sikkim', 'sikkim kisan samman nidhi 2026', 'pm kisan sk organic farmer'] },
-  'tamil-nadu': { name: 'Tamil Nadu', slug: 'tamil-nadu', crop: 'rice, banana & cotton', article: 'Tamil Nadu has a rich agricultural tradition centered on rice in the Cauvery delta, banana farming in Trichy and Theni, and cotton in the Kongu belt — over 40 lakh registered PM Kisan beneficiaries. To check PM Kisan status Tamil Nadu 2026, visit pmkisan.gov.in/BeneficiaryStatus.aspx. Tamil Nadu uses Patta (land ownership certificate) and Chitta (land revenue record) for PM Kisan verification through Tn eServices portal. For Tamil Nadu PM Kisan village beneficiary list, select district, taluk, and revenue village. Delta district rice farmers in Thanjavur, Tiruvarur, and Nagapattinam depend on PM Kisan income. Uzhavar Pathukappu Thittam insurance scheme bhi PM Kisan ke saath milkar TN farmers ko sahara deti hai. eKYC at CSC and e-Sevai centres across Tamil Nadu. PM Kisan 22vi kist released 13 March 2026; 23vi kist expected Jun-Jul 2026.', keywords: ['pm kisan tamil nadu 2026', 'tamil nadu pm kisan beneficiary list', 'pm kisan status tn 2026', 'tamil nadu kisan samman nidhi village list', 'pm kisan tn farmer list download'] },
-  'telangana': { name: 'Telangana', slug: 'telangana', crop: 'cotton, rice & chilli', article: 'Telangana is known for cotton, paddy, and chilli cultivation on the Deccan plateau. Major farming districts include Nalgonda, Warangal, Karimnagar, and Adilabad — over 35 lakh registered PM Kisan beneficiaries. To check PM Kisan status Telangana 2026, visit pmkisan.gov.in/BeneficiaryStatus.aspx. Telangana uses Dharani portal (dharani.telangana.gov.in) for land records integrated with PM Kisan. For Telangana PM Kisan village beneficiary list, select district, mandal, and village. The state Rythu Bandhu scheme provides ₹5000 per acre per season alongside PM Kisan income. Cotton farmers in Adilabad and chilli farmers in Khammam benefit significantly. eKYC available at MeeSeva centres across all Telangana districts. PM Kisan 22vi kist released 13 March 2026; 23vi kist expected Jun-Jul 2026.', keywords: ['pm kisan telangana 2026', 'telangana pm kisan beneficiary list', 'pm kisan status telangana', 'telangana kisan samman nidhi village list', 'pm kisan ts farmer list download'] },
-  'tripura': { name: 'Tripura', slug: 'tripura', crop: 'rice, rubber & pineapple', article: 'Tripura\'s farming is characterized by rice in the plains, rubber in the hills, and pineapple making it one of India\'s top pineapple producers. Small farmers in West Tripura, Sipahijala, Gomati, and Khowai are PM Kisan beneficiaries. To check PM Kisan status Tripura 2026, visit pmkisan.gov.in with Aadhaar. Tripura uses Periodic Patta and Tribally Assigned Land certificates for PM Kisan registration. For Tripura PM Kisan village beneficiary list, select district and RD block. Pineapple farmers in Jirania and rubber smallholders with settled land rights are eligible. Tribal farmers under the Tripura Tribal Areas Autonomous District Council have land ownership certificates recognized. eKYC available across all 8 districts. Helpline: 155261.', keywords: ['pm kisan tripura 2026', 'tripura pm kisan beneficiary list', 'pm kisan status tripura', 'tripura kisan samman nidhi 2026', 'pm kisan tr farmer list'] },
-  'uttar-pradesh': { name: 'Uttar Pradesh', slug: 'uttar-pradesh', crop: 'wheat, sugarcane & potato', article: 'Uttar Pradesh has India\'s highest number of PM Kisan Samman Nidhi beneficiaries — over 2.5 crore registered farmers. UP farmers grow wheat in Gangetic plains, sugarcane in western UP (Meerut, Muzaffarnagar), potato in Agra and Farrukhabad, and rice in eastern UP. To check PM Kisan status UP 2026, visit pmkisan.gov.in/BeneficiaryStatus.aspx. UP uses Khatauni (land register) on the UP Bhulekh portal (upbhulekh.gov.in) for PM Kisan land verification. For UP PM Kisan village beneficiary list, select district, tehsil, and gram panchayat. Western UP sugarcane farmers, Bundelkhand small farmers facing drought, and eastern UP rice farmers particularly depend on ₹6000 annual support. eKYC widely available at CSC, Jan Seva Kendra, and UP Online centres. The 22vi kist released 13 March 2026; 23vi kist expected Jun-Jul 2026.', keywords: ['pm kisan uttar pradesh 2026', 'up pm kisan beneficiary list', 'pm kisan status up 2026', 'uttar pradesh kisan samman nidhi village list', 'pm kisan up farmer list download'] },
-  'uttarakhand': { name: 'Uttarakhand', slug: 'uttarakhand', crop: 'wheat, rice & apple', article: 'Uttarakhand has small hill farmers growing wheat and rice on terraced fields in Pauri, Chamoli, and Pithoragarh, alongside apple orchards in Tehri and Uttarkashi. The state\'s small landholding hill farmers are significant PM Kisan beneficiaries. To check PM Kisan status Uttarakhand 2026, visit pmkisan.gov.in with Aadhaar. Uttarakhand uses Bhulekh land records (devbhoomi.nic.in) for PM Kisan verification. For Uttarakhand PM Kisan village beneficiary list, select district, tehsil, and village. Many Uttarakhand hill farms have fragmented small plots — all qualifying farmers regardless of land size receive the ₹6000 annual benefit. Migration from hills to cities has affected some land records — verify Khatauni is current. eKYC at CSC centres in Dehradun and all district towns. PM Kisan helpline: 155261.', keywords: ['pm kisan uttarakhand 2026', 'uttarakhand pm kisan beneficiary list', 'pm kisan status uttarakhand', 'uttarakhand kisan samman nidhi 2026', 'pm kisan uk farmer list'] },
-  'west-bengal': { name: 'West Bengal', slug: 'west-bengal', crop: 'rice, jute & potato', article: 'West Bengal is a major agricultural state with extensive rice cultivation in the Gangetic delta, jute farming (world\'s largest producer), and potato cultivation in Hooghly, Bankura, and Burdwan — over 60 lakh registered PM Kisan beneficiaries. To check PM Kisan status West Bengal 2026, visit pmkisan.gov.in/BeneficiaryStatus.aspx. West Bengal uses the Banglarbhumi land records portal (banglarbhumi.gov.in) for PM Kisan verification. For WB PM Kisan village beneficiary list, select district, block, and mouza. The Krishak Bandhu state scheme provides additional ₹5000 per acre per year alongside PM Kisan. Jute farmers in Murshidabad and rice growers in Burdwan depend heavily on PM Kisan. eKYC at Duare Sarkar and CSC centres. Contact WB Agriculture Department Kolkata for payment disputes.', keywords: ['pm kisan west bengal 2026', 'west bengal pm kisan beneficiary list', 'pm kisan status wb 2026', 'west bengal kisan samman nidhi village list', 'pm kisan wb farmer list download'] },
-  'andaman-nicobar': { name: 'Andaman & Nicobar Islands', slug: 'andaman-nicobar', crop: 'coconut, spices & rice', article: 'Andaman and Nicobar Islands have a small farming community growing coconut, spices, and some paddy. Small farmers with land ownership documents are eligible for PM Kisan Samman Nidhi. To check PM Kisan status Andaman Nicobar 2026, visit pmkisan.gov.in/BeneficiaryStatus.aspx with Aadhaar. Land in tribal areas requires clearance under A&N Islands Protection Act. Settlers with regular land ownership documents are eligible. For A&N PM Kisan beneficiary list, select your tehsil. PM Kisan registration assistance available at Agriculture Department Port Blair. eKYC at CSC centres in Port Blair and major island settlements. Contact UT Administration for registration support.', keywords: ['pm kisan andaman nicobar 2026', 'andaman nicobar pm kisan farmer list', 'pm kisan status andaman 2026', 'andaman nicobar kisan samman nidhi', 'pm kisan an farmer list'] },
-  'chandigarh': { name: 'Chandigarh', slug: 'chandigarh', crop: 'wheat & vegetables', article: 'Chandigarh as a Union Territory has limited agricultural area but small farmers with cultivable land in rural parts are eligible for PM Kisan Samman Nidhi. To check PM Kisan status Chandigarh 2026, visit pmkisan.gov.in/BeneficiaryStatus.aspx. Land records in Chandigarh are maintained by the Estate Office and Revenue Department. Farmers with Jamabandi records confirming agricultural ownership qualify. For Chandigarh PM Kisan beneficiary list, visit the official portal and select sector or village. PM Kisan registration is handled through the UT Agriculture Department. eKYC at CSC centres in Chandigarh is straightforward. Vegetable farmers and wheat growers in rural Chandigarh are the primary PM Kisan beneficiaries.', keywords: ['pm kisan chandigarh 2026', 'chandigarh pm kisan farmer list', 'pm kisan status chandigarh', 'chandigarh kisan samman nidhi 2026', 'pm kisan ch farmer'] },
-  'dadra-nagar-haveli': { name: 'Dadra & Nagar Haveli', slug: 'dadra-nagar-haveli', crop: 'rice & vegetables', article: 'Dadra and Nagar Haveli (DNHDD UT) has a tribal farming community primarily growing rice, pulses, and vegetables. Tribal farmers with land ownership rights are eligible for PM Kisan Samman Nidhi. To check PM Kisan status Dadra Nagar Haveli 2026, visit pmkisan.gov.in. Land records through the Revenue Administration Department. For DNHDD PM Kisan beneficiary list, select your tehsil on the official portal. Most farmers here belong to tribal communities with land under tribal rights acts. Registration done through the local Agriculture Office in Silvassa. eKYC available at CSC centres in Silvassa and villages. The ₹2000 per installment significantly supports subsistence farmers in this small UT.', keywords: ['pm kisan dadra nagar haveli 2026', 'dnhdd pm kisan farmer list', 'pm kisan status dadra nagar haveli', 'dadra nagar haveli kisan samman nidhi', 'pm kisan tribal farmer dnhdd'] },
-  'delhi': { name: 'Delhi', slug: 'delhi', crop: 'vegetables & wheat', article: 'Delhi has a small farming community in rural areas of the National Capital Territory, primarily growing vegetables, flowers, and some wheat. Small farmers with agricultural land in South Delhi, West Delhi, and Outer Delhi rural areas are eligible for PM Kisan. To check PM Kisan status Delhi 2026, visit pmkisan.gov.in/BeneficiaryStatus.aspx. Delhi uses Revenue Department Jamabandi land records for PM Kisan verification. For Delhi PM Kisan beneficiary list, select your tehsil or village. PM Kisan registration for Delhi farmers done at Block Agriculture Office. eKYC at CSC centres across Delhi. Urban expansion has reduced agricultural land but remaining rural farmers receive PM Kisan support. Contact Delhi Agriculture Department for registration and payment issues.', keywords: ['pm kisan delhi 2026', 'delhi pm kisan farmer list', 'pm kisan status delhi', 'delhi kisan samman nidhi 2026', 'pm kisan dl rural farmer list'] },
-  'jammu-kashmir': { name: 'Jammu & Kashmir', slug: 'jammu-kashmir', crop: 'apple, rice & saffron', article: 'Jammu and Kashmir is renowned for world-class apple orchards in Sopore and Shopian, saffron cultivation in Pampore, and rice farming in the Kashmir Valley. Small farmers and apple growers with land ownership are eligible for PM Kisan Samman Nidhi. To check PM Kisan status J&K 2026, visit pmkisan.gov.in with Aadhaar. J&K uses Jamabandi/Girdawari land revenue records for PM Kisan verification. For J&K PM Kisan village beneficiary list, select district and tehsil. Apple farmers in Baramulla and Kupwara, saffron growers in Budgam, and rice farmers in Anantnag benefit from ₹6000 annual PM Kisan income. PM Kisan registration available at Block Agriculture offices in both Jammu and Kashmir divisions. eKYC at CSC and Common Facility Centres.', keywords: ['pm kisan jammu kashmir 2026', 'jk pm kisan beneficiary list', 'pm kisan status jammu kashmir', 'jammu kashmir kisan samman nidhi 2026', 'pm kisan jk farmer list'] },
-  'ladakh': { name: 'Ladakh', slug: 'ladakh', crop: 'barley, wheat & apricot', article: 'Ladakh, India\'s newest Union Territory, has small farmers growing barley, wheat, and apricot in the high-altitude cold desert environment. Small farmers in Leh and Kargil districts with agricultural land are eligible for PM Kisan Samman Nidhi. To check PM Kisan status Ladakh 2026, visit pmkisan.gov.in with Aadhaar. Ladakh land records maintained through the Revenue Department following J&K land laws. For Ladakh PM Kisan beneficiary list, select district and tehsil. Apricot and pea farmers in Leh, barley growers in Kargil, and walnut cultivators are typical PM Kisan beneficiaries. PM Kisan registration support available at Hill Development Council Agriculture offices. eKYC at available service centres. Contact Ladakh Agriculture Department for help.', keywords: ['pm kisan ladakh 2026', 'ladakh pm kisan farmer list', 'pm kisan status ladakh', 'ladakh kisan samman nidhi 2026', 'pm kisan la high altitude farmer'] },
-  'lakshadweep': { name: 'Lakshadweep', slug: 'lakshadweep', crop: 'coconut & traditional crops', article: 'Lakshadweep is an archipelago where the primary agricultural activity is coconut cultivation providing copra, coir, and coconut oil. Small coconut farmers on islands like Kavaratti, Agatti, Minicoy, and Andrott with land ownership are eligible for PM Kisan. To check PM Kisan status Lakshadweep 2026, visit pmkisan.gov.in/BeneficiaryStatus.aspx. Lakshadweep land records follow the UT Revenue Administration Act. For Lakshadweep PM Kisan beneficiary list, select island on the portal. Coconut farmers who own land plots for coconut cultivation qualify for ₹6000 annual benefit. PM Kisan registration in Lakshadweep handled by UT Agriculture Department in Kavaratti. eKYC assistance available at UT administration offices. The small island farming community benefits from PM Kisan as coconut prices fluctuate seasonally.', keywords: ['pm kisan lakshadweep 2026', 'lakshadweep pm kisan coconut farmer', 'pm kisan status lakshadweep', 'lakshadweep kisan samman nidhi 2026', 'pm kisan ld island farmer'] },
-  'puducherry': { name: 'Puducherry', slug: 'puducherry', crop: 'rice, sugarcane & groundnut', article: 'Puducherry (Pondicherry) is a Union Territory with productive agricultural land along the Coromandel coast supporting rice, sugarcane, and groundnut cultivation. Small farmers in Puducherry, Karaikal, Mahe, and Yanam with own land are PM Kisan beneficiaries. To check PM Kisan status Puducherry 2026, visit pmkisan.gov.in/BeneficiaryStatus.aspx. Puducherry uses Chitta and Adangal land records for PM Kisan verification. For Puducherry PM Kisan beneficiary list, select commune and village. Rice farmers in Karaikal, sugarcane growers in Ariyankuppam, and groundnut farmers in Mannadipet are typical beneficiaries. UT Agriculture Department in Puducherry handles PM Kisan registration. eKYC at CSC centres in all four Puducherry regions. Contact Puducherry Agriculture Department for payment issues.', keywords: ['pm kisan puducherry 2026', 'puducherry pm kisan farmer list', 'pm kisan status pondicherry', 'puducherry kisan samman nidhi 2026', 'pm kisan py farmer list'] },
+  'nagaland': { name: 'Nagaland', slug: 'nagaland', crop: 'rice, maize & horticulture', article: 'Nagaland\'s tribal farming communities grow rice, maize, and horticulture crops including pineapple and kiwi on terraced hill slopes. Small farmers with settled land rights in Kohima, Dimapur, Wokha, and Mokokchung are eligible for PM Kisan Samman Nidhi. To check PM Kisan status Nagaland 2026, visit pmkisan.gov.in with Aadhaar. Nagaland tribal land ownership is governed by customary law — Land Commission certificates help in PM Kisan registration. For Nagaland PM Kisan beneficiary list, select district and block. Pineapple, kiwi, and large cardamom farmers with registered land are eligible. eKYC at CSC centres in Kohima and Dimapur. PM Kisan helpline 155261 for Nagaland farmers.', keywords: ['pm kisan nagaland 2026', 'nagaland pm kisan beneficiary list', 'pm kisan status nagaland', 'nagaland kisan samman nidhi 2026', 'pm kisan nl farmer list'] },
+  'odisha': { name: 'Odisha', slug: 'odisha', crop: 'rice, pulses & oilseeds', article: 'Odisha is a major rice-producing state with farmers in the fertile coastal plains and inland river valleys. Over 40 lakh PM Kisan registered farmers in Odisha benefit from the ₹6000 annual scheme. To check PM Kisan status Odisha 2026, visit pmkisan.gov.in/BeneficiaryStatus.aspx with Aadhaar. Odisha uses Bhulekh land records portal for PM Kisan land seeding verification. For Odisha PM Kisan village beneficiary list, select district, tehsil, and village. Tribal farmers in Koraput, Malkangiri, and Rayagada with patta land are eligible. The KALIA (Krushak Assistance for Livelihood and Income Augmentation) scheme works alongside PM Kisan. Farmers can do eKYC at CSC centres available across all 30 districts. PM Kisan 22vi kist released 13 March 2026; 23vi kist Jun-Jul 2026.', keywords: ['pm kisan odisha 2026', 'odisha pm kisan beneficiary list', 'pm kisan status odisha', 'odisha kisan samman nidhi village list', 'pm kisan od farmer list download'] },
+  'punjab': { name: 'Punjab', slug: 'punjab', crop: 'wheat, rice & maize', article: 'Punjab is India\'s agricultural powerhouse — the "Granary of India" — with highly productive wheat and rice cultivation. Small and marginal farmers with less than 2 hectares are eligible for PM Kisan Samman Nidhi despite Punjab\'s large farm size average. To check PM Kisan status Punjab 2026, visit pmkisan.gov.in/BeneficiaryStatus.aspx. Punjab uses Jamabandi land records for PM Kisan verification. For Punjab PM Kisan village beneficiary list, select district, tehsil, and village. Note: Many Punjab farmers are excluded due to income tax payment or government employment — check eligibility carefully. Punjab government\'s Ghar Ghar Rozgar portal may have integration with PM Kisan. eKYC at any CSC in Punjab. PM Kisan helpline: 155261 / 011-24300606.', keywords: ['pm kisan punjab 2026', 'punjab pm kisan beneficiary list', 'pm kisan status punjab', 'punjab kisan samman nidhi village list', 'pm kisan pb farmer list'] },
+  'rajasthan': { name: 'Rajasthan', slug: 'rajasthan', crop: 'bajra, wheat & mustard', article: 'Rajasthan is India\'s largest state with vast arid and semi-arid agricultural zones growing bajra, wheat, mustard, and pulses. Small farmers in Rajasthan\'s drought-prone districts like Barmer, Jaisalmer, and Bikaner depend heavily on PM Kisan Samman Nidhi — over 65 lakh registered beneficiaries. To check PM Kisan status Rajasthan 2026, visit pmkisan.gov.in with Aadhaar. Rajasthan uses Apna Khata (E-Dharti) land records portal for PM Kisan verification. For Rajasthan PM Kisan village beneficiary list, select district, tehsil, and village. Bajra and mustard farmers in the Thar desert belt are primary beneficiaries. eKYC available at e-Mitra CSC centres across all 50 districts. PM Kisan 22vi kist released 13 March 2026; 23vi kist expected Jun-Jul 2026.', keywords: ['pm kisan rajasthan 2026', 'rajasthan pm kisan beneficiary list', 'pm kisan status rajasthan', 'rajasthan kisan samman nidhi village list', 'pm kisan rj farmer list download'] },
+  'sikkim': { name: 'Sikkim', slug: 'sikkim', crop: 'cardamom, ginger & rice', article: 'Sikkim is India\'s first fully organic state, known for large cardamom cultivation and high-altitude rice farming. Small farmers with land holdings in East, West, North, and South Sikkim districts are eligible for PM Kisan Samman Nidhi. To check PM Kisan status Sikkim 2026, visit pmkisan.gov.in with Aadhaar. Sikkim uses LPC (Land Possession Certificate) for PM Kisan land verification. For Sikkim PM Kisan beneficiary list, select district and gram panchayat unit. Organic cardamom and ginger farmers with own land are eligible. The Sikkim Organic Mission works alongside PM Kisan to support organic transition costs. eKYC at CSC centres in Gangtok and district towns. PM Kisan helpline: 155261.', keywords: ['pm kisan sikkim 2026', 'sikkim pm kisan beneficiary list', 'pm kisan status sikkim', 'sikkim kisan samman nidhi 2026', 'pm kisan sk farmer list'] },
+  'tamil-nadu': { name: 'Tamil Nadu', slug: 'tamil-nadu', crop: 'rice, banana & sugarcane', article: 'Tamil Nadu has a diverse agricultural sector with rice cultivation in the Cauvery delta, banana plantations in Trichy and Erode, and sugarcane in Coimbatore. Over 40 lakh PM Kisan registered farmers in Tamil Nadu. To check PM Kisan status Tamil Nadu 2026, visit pmkisan.gov.in/BeneficiaryStatus.aspx. Tamil Nadu uses Patta (land ownership certificate) for PM Kisan verification — available at Village Administrative Officer offices. For Tamil Nadu PM Kisan village beneficiary list, select district, taluk, and village. Note: Tamil Nadu farmers also receive CM Uzhavar Pathukappu Thittam additional support. Banana and mango farmers with own land in the Vaigai and Cauvery belt are eligible. eKYC at CSC and Common Service Centres statewide. PM Kisan 22vi kist released 13 March 2026.', keywords: ['pm kisan tamil nadu 2026', 'tamil nadu pm kisan beneficiary list', 'pm kisan status tamil nadu', 'tamil nadu kisan samman nidhi village list', 'pm kisan tn farmer list download'] },
+  'telangana': { name: 'Telangana', slug: 'telangana', crop: 'rice, cotton & turmeric', article: 'Telangana is a major rice and cotton producing state with the Godavari and Krishna river systems supporting irrigation. Over 35 lakh PM Kisan registered farmers in Telangana. To check PM Kisan status Telangana 2026, visit pmkisan.gov.in/BeneficiaryStatus.aspx. Telangana uses Dharani portal (dharani.telangana.gov.in) for land records linked to PM Kisan verification. For Telangana PM Kisan village beneficiary list, select district, mandal, and village. The Rythu Bandhu state scheme (₹10,000 per acre per year) works alongside PM Kisan — Telangana farmers can receive both benefits. Turmeric farmers in Nizamabad and cotton farmers in Warangal are key PM Kisan recipients. eKYC at Mee Seva centres available across all 33 districts.', keywords: ['pm kisan telangana 2026', 'telangana pm kisan beneficiary list', 'pm kisan status telangana', 'telangana kisan samman nidhi village list', 'pm kisan ts farmer list download'] },
+  'tripura': { name: 'Tripura', slug: 'tripura', crop: 'rice, rubber & pineapple', article: 'Tripura\'s agriculture includes rice cultivation in river valleys, rubber plantations in Gomati and Khowai districts, and pineapple farming. Small farmers in Tripura\'s eight districts are eligible for PM Kisan Samman Nidhi. To check PM Kisan status Tripura 2026, visit pmkisan.gov.in with Aadhaar. Tripura uses Bhu-Sanjog land records system for PM Kisan verification. For Tripura PM Kisan beneficiary list, select district and block. Rubber smallholders with less than 2 hectares of plantation land are eligible for PM Kisan. Pineapple farmers and bamboo cultivators with registered land also qualify. eKYC at CSC centres available across all 8 districts. Contact Tripura Agriculture Department Agartala for registration support.', keywords: ['pm kisan tripura 2026', 'tripura pm kisan beneficiary list', 'pm kisan status tripura', 'tripura kisan samman nidhi 2026', 'pm kisan tr farmer list'] },
+  'uttar-pradesh': { name: 'Uttar Pradesh', slug: 'uttar-pradesh', crop: 'wheat, sugarcane & rice', article: 'Uttar Pradesh is India\'s most populous state and has the highest number of PM Kisan Samman Nidhi beneficiaries — over 2.5 crore registered farmers. Wheat farmers in the western plains, sugarcane growers in the Terai belt, and rice cultivators in eastern UP are all major beneficiaries. To check PM Kisan status UP 2026, visit pmkisan.gov.in/BeneficiaryStatus.aspx and enter your Aadhaar number. UP uses Bhulekh (upbhulekh.gov.in) land records portal for PM Kisan land seeding verification — farmers can check Khatauni online. For UP PM Kisan village beneficiary list, select your district, tehsil, and gram panchayat. Small sugarcane farmers in Muzaffarnagar, Meerut, and Lakhimpur Kheri heavily rely on ₹6000 annual PM Kisan benefit. PM Kisan 22vi kist released 13 March 2026; 23vi kist expected Jun-Jul 2026. eKYC mandatory — complete at pmkisan.gov.in or nearest Jan Seva Kendra in UP.', keywords: ['pm kisan up 2026', 'uttar pradesh pm kisan beneficiary list', 'pm kisan status uttar pradesh 2026', 'up pm kisan village list download', 'pm kisan up farmer list 2026'] },
+  'uttarakhand': { name: 'Uttarakhand', slug: 'uttarakhand', crop: 'rice, wheat & horticulture', article: 'Uttarakhand\'s farmers cultivate rice and wheat on terraced mountain fields alongside horticulture including apple, pear, and citrus fruits. Small hill farmers in Pauri, Tehri, Almora, Pithoragarh, and other districts are eligible for PM Kisan Samman Nidhi. To check PM Kisan status Uttarakhand 2026, visit pmkisan.gov.in with Aadhaar. Uttarakhand uses Bhulekh UK land records for PM Kisan verification. For Uttarakhand PM Kisan village beneficiary list, select district, tehsil, and village. Hill farmers with small landholdings (sometimes less than 0.1 hectare) are eligible. eKYC available at CSC Lok Seva Kendras across all 13 districts. Contact Uttarakhand Agriculture Department Dehradun for support.', keywords: ['pm kisan uttarakhand 2026', 'uttarakhand pm kisan beneficiary list', 'pm kisan status uttarakhand', 'uttarakhand kisan samman nidhi 2026', 'pm kisan uk farmer list'] },
+  'west-bengal': { name: 'West Bengal', slug: 'west-bengal', crop: 'rice, jute & potato', article: 'West Bengal is a leading producer of rice, jute, potato, and vegetables with millions of small and marginal farmers in the Gangetic delta and Rarh regions. To check PM Kisan status West Bengal 2026, visit pmkisan.gov.in/BeneficiaryStatus.aspx. West Bengal uses Banglarbhumi land records portal for verification. Note: West Bengal initially had delays in PM Kisan implementation but most farmers are now registered. For WB PM Kisan village beneficiary list, select district, block, and gram panchayat. Jute farmers in Murshidabad and Nadia, potato growers in Hooghly and Burdwan, and rice farmers across the state are key beneficiaries — over 70 lakh registered. eKYC at Tathya Mitra Kendra CSC centres available statewide. PM Kisan helpline: 155261.', keywords: ['pm kisan west bengal 2026', 'wb pm kisan beneficiary list', 'pm kisan status west bengal', 'west bengal kisan samman nidhi village list', 'pm kisan wb farmer list download'] },
 };
 
-export async function generateStaticParams() {
-  return Object.keys(stateData).map((state) => ({ state }));
-}
+// ── generateMetadata ─────────────────────────────────────────────────────────
+export async function generateMetadata(
+  { params }: { params: { state: string } }
+): Promise<Metadata> {
+  const s = stateData[params.state];
+  if (!s) return { title: 'State Not Found' };
 
-export async function generateMetadata({ params }: { params: Promise<{ state: string }> }): Promise<Metadata> {
-  const { state } = await params;
-  const data = stateData[state];
-  if (!data) return { title: 'State Not Found' };
+  const title = `PM Kisan Beneficiary List ${s.name} 2026 — Village List, Status Check & eKYC`;
+  const description = `${s.name} mein PM Kisan Samman Nidhi beneficiary list 2026 check karo. ${s.name} ke ${s.crop} farmers ke liye installment status, village list download, aur eKYC guide. 23vi kist Jun-Jul 2026.`;
+  const url = `https://kisanstatus.com/beneficiary-list/${s.slug}`;
+
   return {
-    title: `${data.name} PM Kisan Beneficiary List 2026 — Download State Farmer List`,
-    description: `Download ${data.name} PM Kisan Samman Nidhi beneficiary list 2026. Check state farmer list village-wise, PM Kisan status in ${data.name}, and installment payment details.`,
-    keywords: data.keywords,
-    alternates: { canonical: `https://kisanstatus.com/beneficiary-list/${data.slug}` },
+    title,
+    description,
+    keywords: s.keywords.join(', '),
+    alternates: { canonical: url },
+    openGraph: {
+      title,
+      description,
+      url,
+      siteName: 'KisanStatus.com',
+      type: 'article',
+      images: [{ url: 'https://kisanstatus.com/og-image.jpg', width: 1200, height: 630, alt: `PM Kisan ${s.name} Beneficiary List 2026` }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: ['https://kisanstatus.com/og-image.jpg'],
+    },
   };
 }
 
-export default async function BeneficiaryStatePage({ params }: { params: Promise<{ state: string }> }) {
-  const { state } = await params;
-  const data = stateData[state];
-  if (!data) notFound();
+// ── Page Component ────────────────────────────────────────────────────────────
+export default function BeneficiaryStatePage({ params }: { params: { state: string } }) {
+  const s = stateData[params.state];
+  if (!s) notFound();
 
-  const articleSchema = {
-    '@context': 'https://schema.org', '@type': 'Article',
-    headline: `${data.name} PM Kisan Beneficiary List 2026`,
-    description: `PM Kisan guide for ${data.name} farmers.`,
-    keywords: data.keywords.join(', '),
-    author: { '@type': 'Organization', name: 'KisanStatus.com' },
-    publisher: { '@type': 'Organization', name: 'KisanStatus.com', url: 'https://kisanstatus.com' },
-    datePublished: '2026-01-01', dateModified: '2026-06-01',
-    mainEntityOfPage: `https://kisanstatus.com/beneficiary-list/${data.slug}`,
+  const url = `https://kisanstatus.com/beneficiary-list/${s.slug}`;
+  const publishDate = '2026-01-01T00:00:00+05:30';
+  const modifiedDate = new Date().toISOString();
+
+  // JSON-LD Article Schema
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: `PM Kisan Beneficiary List ${s.name} 2026 — Village List & Status Check`,
+    description: `${s.name} mein PM Kisan Samman Nidhi beneficiary list 2026, village list download, installment status check, aur eKYC guide.`,
+    url,
+    datePublished: publishDate,
+    dateModified: modifiedDate,
+    author: { '@type': 'Person', name: 'Sidhu Singh', url: 'https://kisanstatus.com/about' },
+    publisher: {
+      '@type': 'Organization',
+      name: 'KisanStatus.com',
+      url: 'https://kisanstatus.com',
+      logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.png' },
+    },
+    image: { '@type': 'ImageObject', url: 'https://kisanstatus.com/og-image.jpg', width: 1200, height: 630 },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    keywords: s.keywords.join(', '),
+    articleSection: 'PM Kisan Yojana',
+    inLanguage: 'hi-IN',
   };
 
-  const relatedStates = Object.values(stateData).filter((s) => s.slug !== data.slug).slice(0, 10);
+  // BreadcrumbList Schema
+  const breadcrumbLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kisanstatus.com' },
+      { '@type': 'ListItem', position: 2, name: 'Beneficiary List', item: 'https://kisanstatus.com/beneficiary-list' },
+      { '@type': 'ListItem', position: 3, name: s.name, item: url },
+    ],
+  };
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      {/* JSON-LD Schemas */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
+
+      {/* Hero */}
       <div className="bg-primary-600 py-10">
-        <div className="container-site">
-          <nav className="text-green-200 text-sm mb-3 flex items-center gap-1 flex-wrap" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-white">Home</Link><span>/</span>
-            <span>Beneficiary List</span><span>/</span>
-            <span className="text-white font-medium">{data.name}</span>
-          </nav>
-          <h1 className="text-2xl md:text-4xl font-bold text-white leading-tight">
-            {data.name} PM Kisan Beneficiary List 2026
+        <div className="container-site text-center max-w-3xl">
+          <span className="inline-block bg-white/15 text-green-200 text-xs font-bold px-4 py-2 rounded-full mb-4 uppercase tracking-wider">
+            🌾 PM Kisan Beneficiary List
+          </span>
+          <h1 className="text-2xl md:text-4xl font-black text-white mb-3">
+            PM Kisan Beneficiary List {s.name} 2026
           </h1>
-          <p className="text-green-100 mt-2 text-sm md:text-base">
-            Village-wise farmer list · Status check · {data.crop}
+          <p className="text-green-200 text-sm md:text-base max-w-2xl mx-auto">
+            {s.name} ke {s.crop} farmers ke liye PM Kisan Samman Nidhi status check, village list download aur eKYC guide — 23vi kist Jun-Jul 2026.
           </p>
         </div>
       </div>
-      <div className="container-site py-10 space-y-10">
-        {/* CTA */}
-        <div className="rounded-2xl border-2 border-primary-600 bg-green-50 p-6 md:p-8 text-center">
-          <div className="text-4xl mb-3" aria-hidden="true">📋</div>
-          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
-            Download {data.name} PM Kisan List
-          </h2>
-          <p className="text-gray-600 text-sm mb-6 max-w-lg mx-auto">
-            Gaon-wise beneficiary list Government of India ki official PM Kisan website par available hai — neeche button se seedha khul jaayegi.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="https://pmkisan.gov.in/Rpt_BeneficiaryStatus_pub.aspx" target="_blank" rel="noopener noreferrer" className="btn-primary">
-              📥 View Beneficiary List ↗
-            </a>
-            <a href="https://pmkisan.gov.in/BeneficiaryStatus.aspx" target="_blank" rel="noopener noreferrer" className="btn-secondary">
-              ✅ Check Individual Status ↗
-            </a>
+
+      <div className="container-site py-10 max-w-3xl mx-auto">
+
+        {/* Breadcrumb */}
+        <nav className="text-xs text-gray-500 mb-6 flex gap-1 flex-wrap" aria-label="Breadcrumb">
+          <Link href="/" className="hover:text-green-700">Home</Link>
+          <span>/</span>
+          <Link href="/beneficiary-list" className="hover:text-green-700">Beneficiary List</Link>
+          <span>/</span>
+          <span className="text-gray-800 font-medium">{s.name}</span>
+        </nav>
+
+        {/* Quick Status Check CTA */}
+        <div className="bg-green-50 border border-green-200 rounded-2xl p-5 mb-8 flex flex-col sm:flex-row gap-4 items-center">
+          <div className="flex-1">
+            <p className="font-black text-green-900 text-base">⚡ {s.name} PM Kisan Status Check करें</p>
+            <p className="text-xs text-green-700 mt-1">Aadhaar number se turant apna beneficiary status check karo</p>
           </div>
-          <p className="mt-3 text-xs text-gray-500">🔒 Yeh links seedha pmkisan.gov.in (official) par le jaate hain</p>
+          <a
+            href="https://pmkisan.gov.in/BeneficiaryStatus.aspx"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 bg-green-700 hover:bg-green-600 text-white font-black px-5 py-3 rounded-xl text-sm transition-colors"
+          >
+            Official Portal →
+          </a>
         </div>
-        {/* Steps */}
-        <section aria-labelledby="steps-heading">
-          <h2 id="steps-heading" className="section-title mb-5">How to View {data.name} Beneficiary List</h2>
-          <div className="space-y-3">
-            {[
-              `Visit pmkisan.gov.in and click "Farmers Corner"`,
-              `Click "Beneficiary List"`,
-              `Select State: ${data.name} from the dropdown`,
-              `Select your District, Sub-District, Block, and Village`,
-              `Click "Get Report" to view the village-wise PM Kisan list`,
-            ].map((step, i) => (
-              <div key={i} className="card flex items-start gap-4">
-                <div className="w-9 h-9 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold text-sm shrink-0">{i + 1}</div>
-                <p className="text-gray-800 text-sm md:text-base pt-1.5">{step}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-        {/* Article */}
-        <section aria-labelledby="article-heading">
-          <h2 id="article-heading" className="section-title mb-4">
-            PM Kisan Status Check {data.name} 2026 — Complete Guide
+
+        {/* Main Article Content */}
+        <article className="prose prose-sm max-w-none text-gray-700 leading-relaxed mb-8">
+          <h2 className="text-lg font-black text-gray-900 mb-3">
+            {s.name} Mein PM Kisan Status Kaise Check Karein?
           </h2>
-          <div className="card bg-green-50 border-green-200">
-            <p className="text-gray-800 text-base leading-relaxed">{data.article}</p>
-            <div className="mt-4 flex flex-wrap gap-2">
-              {data.keywords.map((kw) => (
-                <span key={kw} className="text-xs px-2.5 py-1 bg-white border border-green-200 rounded-full text-green-700 font-medium">{kw}</span>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* Quick facts */}
-        <section aria-labelledby="facts-heading">
-          <h2 id="facts-heading" className="section-title mb-5">{data.name} PM Kisan Quick Facts</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <p>{s.article}</p>
+        </article>
+
+        {/* Step-by-step box */}
+        <div className="bg-white border border-gray-200 rounded-2xl p-6 mb-8 shadow-sm">
+          <h2 className="font-black text-gray-900 text-base mb-4">
+            📋 {s.name} PM Kisan Village List — Step-by-Step
+          </h2>
+          <ol className="space-y-3">
             {[
-              { icon: '🌾', label: 'Main Crops', value: data.crop },
-              { icon: '💰', label: 'Annual Benefit', value: '₹6,000 (3 × ₹2,000)' },
-              { icon: '📅', label: 'Next Installment', value: 'Expected Nov–Dec 2026' },
-              { icon: '🏦', label: 'Payment Method', value: 'Direct Bank Transfer (DBT)' },
-              { icon: '🌐', label: 'Official Site', value: 'pmkisan.gov.in' },
-              { icon: '📞', label: 'Helpline', value: '155261' },
-            ].map((fact) => (
-              <div key={fact.label} className="card flex items-start gap-3">
-                <span className="text-2xl shrink-0" aria-hidden="true">{fact.icon}</span>
-                <div>
-                  <div className="text-xs text-gray-500 font-medium">{fact.label}</div>
-                  <div className="text-sm font-semibold text-gray-900 mt-0.5">{fact.value}</div>
-                </div>
+              { step: '1', text: 'pmkisan.gov.in par jao → "Farmers Corner" section mein jao' },
+              { step: '2', text: '"Beneficiary List" option click karo' },
+              { step: '3', text: `State mein "${s.name}" select karo` },
+              { step: '4', text: 'Apna District, Sub-District, Block aur Village select karo' },
+              { step: '5', text: '"Get Report" click karo — aapke village ki poori list aayegi' },
+            ].map(({ step, text }) => (
+              <li key={step} className="flex gap-3 items-start">
+                <span className="shrink-0 w-7 h-7 rounded-full bg-green-700 text-white text-xs font-black flex items-center justify-center">{step}</span>
+                <span className="text-sm text-gray-700 pt-0.5">{text}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+
+        {/* eKYC Alert */}
+        <div className="bg-amber-50 border border-amber-200 rounded-2xl p-5 mb-8">
+          <p className="font-black text-amber-900 text-sm mb-1">⚠️ eKYC Mandatory Hai — Nahi Karaya To Kist Ruk Jayegi!</p>
+          <p className="text-xs text-amber-800">
+            {s.name} ke sabhi PM Kisan farmers ke liye eKYC zaroori hai. pmkisan.gov.in par OTP se ghar baithe karo, ya nearest CSC centre par jakar biometric eKYC karwao. PM Kisan helpline: <strong>155261</strong> / <strong>011-24300606</strong>
+          </p>
+        </div>
+
+        {/* FAQ */}
+        <div className="bg-white border border-gray-200 rounded-2xl p-6 mb-8 shadow-sm">
+          <h2 className="font-black text-gray-900 text-base mb-4">❓ {s.name} PM Kisan — Aksar Puche Jane Wale Sawal</h2>
+          <div className="space-y-4">
+            {[
+              {
+                q: `${s.name} mein PM Kisan 23vi kist kab aayegi?`,
+                a: '23vi kist June-July 2026 mein expected hai. 22vi kist 13 March 2026 ko release hui thi.',
+              },
+              {
+                q: `${s.name} PM Kisan beneficiary list mein naam kaise check karein?`,
+                a: `pmkisan.gov.in → Beneficiary List → ${s.name} → Apna District, Block, Village select karo → Get Report.`,
+              },
+              {
+                q: 'Paisa nahi aaya to kya karein?',
+                a: 'Bank account, Aadhaar seeding, NPCI mapping aur eKYC status check karo. PM Kisan helpline 155261 par call karo.',
+              },
+              {
+                q: `${s.name} mein PM Kisan registration kahan hoga?`,
+                a: 'Nearest CSC centre, Block Agriculture Officer, ya pmkisan.gov.in par self-registration kar sakte ho.',
+              },
+            ].map(({ q, a }) => (
+              <div key={q} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
+                <p className="font-bold text-gray-900 text-sm mb-1">Q: {q}</p>
+                <p className="text-xs text-gray-600">A: {a}</p>
               </div>
             ))}
           </div>
-        </section>
-        {/* Other states */}
-        <section aria-labelledby="states-heading">
-          <h2 id="states-heading" className="text-lg font-bold text-gray-900 mb-4">Check Other State Lists</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
-            {relatedStates.map((s) => (
-              <Link key={s.slug} href={`/beneficiary-list/${s.slug}`}
-                className="text-sm px-3 py-2.5 bg-white border border-green-200 rounded-xl text-center text-green-700 font-medium hover:bg-green-50 hover:border-green-400 transition-colors">
-                {s.name}
+        </div>
+
+        {/* Related Links */}
+        <div className="p-5 bg-green-50 border border-green-200 rounded-2xl">
+          <p className="font-black text-green-900 text-sm mb-3">📖 Related PM Kisan Guides</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+            {[
+              { href: '/articles/pm-kisan-ekyc-online-2026', l: '🔐 eKYC Guide' },
+              { href: '/articles/pm-kisan-23vi-kist-2026-status-check', l: '📅 23vi Kist Status' },
+              { href: '/articles/pm-kisan-payment-failed-status-2026', l: '💸 Payment Fix' },
+              { href: '/calculator/installment-tracker', l: '📆 Installment Tracker' },
+              { href: '/articles/pm-kisan-registration-online-2026', l: '📝 Registration' },
+              { href: '/calculator/pm-kisan-benefit', l: '🌾 Benefit Calculator' },
+            ].map(({ href, l }) => (
+              <Link
+                key={href}
+                href={href}
+                className="text-xs px-3 py-2 bg-white border border-green-200 text-green-800 rounded-xl hover:bg-green-700 hover:text-white transition-colors font-medium text-center"
+              >
+                {l}
               </Link>
             ))}
           </div>
-        </section>
+        </div>
+
       </div>
     </>
   );
+}
+
+// Static params for all states
+export function generateStaticParams() {
+  return Object.keys(stateData).map((state) => ({ state }));
 }
