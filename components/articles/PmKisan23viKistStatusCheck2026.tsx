@@ -38,7 +38,7 @@ const faqJsonLd = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "PM Kisan 23vi kist kab aayegi?",
+      name: "PM Kisan 23vi kist kab aayi?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "PM Kisan ki 23vi kist 20 June 2026 ko release ho chuki hai. Prime Minister Narendra Modi ne Hooghly, West Bengal se yeh kist digitally release ki, jisse 9.44 crore se zyada kisanon ko ₹2,000 prati kisan mila — total ₹18,880 crore se zyada DBT ke through transfer hue.",
@@ -165,10 +165,10 @@ export default function PmKisan23viKistStatusCheck2026() {
         <div className="mt-8 space-y-4 text-[17px] leading-relaxed text-stone-700">
           <p>Namaskar Kisan Bhaiyo aur Behno!</p>
           <p>
-            Khushkhabri hai — <strong>PM Kisan 23vi kist release ho chuki
-            hai!</strong> Agar aapko abhi tak apne account mein paisa aaya
-            ya nahi yeh confirm karna hai, toh yeh article aapke liye hi
-            likha gaya hai.
+            Khushkhabri hai —{" "}
+            <strong>PM Kisan 23vi kist release ho chuki hai!</strong> Agar
+            aapko abhi tak apne account mein paisa aaya ya nahi yeh confirm
+            karna hai, toh yeh article aapke liye hi likha gaya hai.
           </p>
           <p>
             Pradhan Mantri Kisan Samman Nidhi Yojana (PM Kisan Yojana 2026)
@@ -177,14 +177,14 @@ export default function PmKisan23viKistStatusCheck2026() {
             account mein DBT (Direct Benefit Transfer) ke through aata hai.
           </p>
           <p>
-            Is article mein hum cover karenge: <strong>PM Kisan status
-            check</strong> ka aasan tarika, 23vi kist ki poori details,
-            kaun eligible hai, aur agar paisa abhi tak na aaya ho toh kya
-            karna chahiye.
+            Is article mein hum cover karenge:{" "}
+            <strong>PM Kisan status check</strong> ka aasan tarika, 23vi kist
+            ki poori details, kaun eligible hai, aur agar paisa abhi tak na
+            aaya ho toh kya karna chahiye.
           </p>
           <p>
-            Tension lene ki zaroorat nahi hai. Chaliye step by step
-            samajhte hain — bas thoda waqt do, sab clear ho jayega.
+            Tension lene ki zaroorat nahi hai. Chaliye step by step samajhte
+            hain — bas thoda waqt do, sab clear ho jayega.
           </p>
         </div>
 
@@ -197,39 +197,41 @@ export default function PmKisan23viKistStatusCheck2026() {
         </h2>
         <div className="mt-4 space-y-4 text-[17px] leading-relaxed text-stone-700">
           <p>
-            PM Kisan Yojana 2026 mein har saal sarkar <strong>3 kist</strong>{" "}
-            bhejti hai. Har kist <strong>₹2,000</strong> ki hoti hai, aur
-            yeh har 4 mahine ke gap mein aapke Aadhaar-linked bank account
-            mein seedha credit hoti hai.
+            PM Kisan Yojana 2026 mein har saal sarkar{" "}
+            <strong>3 kist</strong> bhejti hai. Har kist{" "}
+            <strong>₹2,000</strong> ki hoti hai, aur yeh har 4 mahine ke gap
+            mein aapke Aadhaar-linked bank account mein seedha credit hoti
+            hai.
           </p>
           <p>
-            <strong>23vi kist 20 June 2026</strong> ko release hui.
-            Prime Minister Narendra Modi ne <strong>Hooghly, West
-            Bengal</strong> se yeh kist digitally release ki, jisse{" "}
+            <strong>23vi kist 20 June 2026</strong> ko release hui. Prime
+            Minister Narendra Modi ne{" "}
+            <strong>Hooghly, West Bengal</strong> se yeh kist digitally
+            release ki, jisse{" "}
             <strong>9.44 crore se zyada kisanon</strong> ko fayda hua aur
             total <strong>₹18,880 crore se zyada</strong> seedha bank
             accounts mein DBT ke through transfer hue.
           </p>
           <p>
             Agar aapne abhi tak apna status check nahi kiya, toh neeche di
-            gayi step-by-step guide follow karke 2 minute mein check kar
-            lo ki paisa aaya ya nahi.
+            gayi step-by-step guide follow karke 2 minute mein check kar lo
+            ki paisa aaya ya nahi.
           </p>
           <p>
             Pichle kuch installments ka pattern dekhein toh kist generally
             financial year ke har 4-mahine ke cycle mein release hoti hai —
-            yani April-July, August-November, aur December-March. Is
-            hisaab se <strong>24vi kist August-November 2026</strong> ke
-            beech expected hai.
+            yani April-July, August-November, aur December-March. Is hisaab
+            se <strong>24vi kist August-November 2026</strong> ke beech
+            expected hai.
           </p>
           <p className="rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-stone-800">
             <strong>Yaad rakho:</strong> Paisa seedha aapke Aadhaar-linked
-            bank account mein aata hai. Kisi bichauliye ya agent ki
-            zaroorat nahi hoti.
+            bank account mein aata hai. Kisi bichauliye ya agent ki zaroorat
+            nahi hoti.
           </p>
 
           <h3 className="text-lg font-semibold text-stone-900">
-            Pichli Kist Ka Record (Quick Look)
+            Pichli Kiston Ka Record (Quick Look)
           </h3>
           <div className="overflow-hidden rounded-xl border border-stone-200">
             <table className="w-full text-left text-[15px]">
@@ -244,37 +246,58 @@ export default function PmKisan23viKistStatusCheck2026() {
                   <th className="px-4 py-2 font-semibold text-stone-900">
                     Amount
                   </th>
+                  <th className="px-4 py-2 font-semibold text-stone-900">
+                    Status
+                  </th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-stone-200">
-                <tr>
-                  <td className="px-4 py-2">21vi Kist</td>
-                  <td className="px-4 py-2">November 2025</td>
-                  <td className="px-4 py-2">₹2,000</td>
+                <tr className="bg-emerald-50">
+                  <td className="px-4 py-2 font-semibold">23vi Kist</td>
+                  <td className="px-4 py-2 font-semibold">20 June 2026</td>
+                  <td className="px-4 py-2 font-semibold">₹2,000</td>
+                  <td className="px-4 py-2">
+                    <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-xs font-semibold text-emerald-800">
+                      ✅ Released
+                    </span>
+                  </td>
                 </tr>
                 <tr>
                   <td className="px-4 py-2">22vi Kist</td>
                   <td className="px-4 py-2">13 March 2026</td>
                   <td className="px-4 py-2">₹2,000</td>
-                </tr>
-                <tr className="bg-emerald-50">
-                  <td className="px-4 py-2 font-semibold">23vi Kist</td>
-                  <td className="px-4 py-2 font-semibold">
-                    20 June 2026 — ✅ Released
+                  <td className="px-4 py-2">
+                    <span className="rounded-full bg-stone-100 px-2 py-0.5 text-xs font-semibold text-stone-600">
+                      Released
+                    </span>
                   </td>
-                  <td className="px-4 py-2 font-semibold">₹2,000</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-2">21vi Kist</td>
+                  <td className="px-4 py-2">November 2025</td>
+                  <td className="px-4 py-2">₹2,000</td>
+                  <td className="px-4 py-2">
+                    <span className="rounded-full bg-stone-100 px-2 py-0.5 text-xs font-semibold text-stone-600">
+                      Released
+                    </span>
+                  </td>
                 </tr>
                 <tr>
                   <td className="px-4 py-2">24vi Kist</td>
-                  <td className="px-4 py-2">Expected: Aug-Nov 2026</td>
+                  <td className="px-4 py-2">Expected: Aug–Nov 2026</td>
                   <td className="px-4 py-2">₹2,000</td>
+                  <td className="px-4 py-2">
+                    <span className="rounded-full bg-orange-100 px-2 py-0.5 text-xs font-semibold text-orange-700">
+                      Expected
+                    </span>
+                  </td>
                 </tr>
               </tbody>
             </table>
           </div>
           <p className="text-sm text-stone-500">
-            Note: 24vi kist ki exact date abhi officially announce nahi
-            hui hai. Yeh table sirf pattern samajhne ke liye hai.
+            Note: 24vi kist ki exact date abhi officially announce nahi hui
+            hai. Yeh table sirf pattern samajhne ke liye hai.
           </p>
         </div>
 
@@ -293,8 +316,9 @@ export default function PmKisan23viKistStatusCheck2026() {
         </h2>
         <div className="mt-4 space-y-4 text-[17px] leading-relaxed text-stone-700">
           <p>
-            Website ke alawa, sarkar ne <strong>PM Kisan Mobile App</strong>{" "}
-            bhi launch ki hai, jo Google Play Store par free available hai.
+            Website ke alawa, sarkar ne{" "}
+            <strong>PM Kisan Mobile App</strong> bhi launch ki hai, jo Google
+            Play Store par free available hai.
           </p>
           <p>App mein yeh sab kar sakte ho:</p>
           <ul className="ml-5 list-disc space-y-2">
@@ -304,8 +328,8 @@ export default function PmKisan23viKistStatusCheck2026() {
             <li>Helpline aur grievance section access karna.</li>
           </ul>
           <p>
-            Agar internet slow hai ya website load nahi ho rahi, app
-            zyada smooth chal jata hai. Ek baar try kar ke dekho.
+            Agar internet slow hai ya website load nahi ho rahi, app zyada
+            smooth chal jata hai. Ek baar try kar ke dekho.
           </p>
           <p>
             Apna saalana ₹6,000 ka labh, kist-wise breakdown aur agli kist
@@ -330,51 +354,48 @@ export default function PmKisan23viKistStatusCheck2026() {
         <div className="mt-4 space-y-4 text-[17px] leading-relaxed text-stone-700">
           <p>
             Ghabrao mat. Mobile se ghar baithe hi{" "}
-            <strong>PM Kisan status check</strong> kiya ja sakta hai. Bas
-            yeh steps follow karo:
+            <strong>PM Kisan status check</strong> kiya ja sakta hai. Bas yeh
+            steps follow karo:
           </p>
-
           <ol className="ml-5 list-decimal space-y-3">
             <li>
               Official website <strong>pmkisan.gov.in</strong> par jayein.
             </li>
             <li>
-              Home page par <strong>&lsquo;Farmers Corner&rsquo;</strong>{" "}
-              section mein <strong>&lsquo;Know Your Status&rsquo;</strong>{" "}
-              wale option par click karein.
+              Home page par{" "}
+              <strong>&lsquo;Farmers Corner&rsquo;</strong> section mein{" "}
+              <strong>&lsquo;Know Your Status&rsquo;</strong> wale option par
+              click karein.
             </li>
             <li>
               Apna <strong>Registration Number</strong> daalein.
               <br />
               <span className="text-stone-500">
                 Tip: Agar registration number yaad nahi hai, toh{" "}
-                <strong>&lsquo;Know your registration no.&rsquo;</strong>{" "}
-                par click karke apna mobile number ya Aadhaar number daalke
+                <strong>&lsquo;Know your registration no.&rsquo;</strong> par
+                click karke apna mobile number ya Aadhaar number daalke
                 nikaal lein.
               </span>
             </li>
             <li>
-              Captcha daalein aur <strong>&lsquo;Get Data&rsquo;</strong>{" "}
-              par click karein.
+              Captcha daalein aur{" "}
+              <strong>&lsquo;Get Data&rsquo;</strong> par click karein.
             </li>
           </ol>
-
           <p>
             Bas! Aapka poora status screen par aa jayega.{" "}
-            <strong>
-              23vi kist aa gayi ya nahi, sab kuch dikh jayega.
-            </strong>
+            <strong>23vi kist aa gayi ya nahi, sab kuch dikh jayega.</strong>
           </p>
           <p>
-            Agar status mein <strong>&ldquo;FTO Processed&rdquo;</strong>{" "}
-            likha dikhe, iska matlab hai Fund Transfer Order successful ho
-            gaya hai aur paisa 24-48 ghante mein account mein aa jayega.
+            Agar status mein{" "}
+            <strong>&ldquo;FTO Processed&rdquo;</strong> likha dikhe, iska
+            matlab hai Fund Transfer Order successful ho gaya hai aur paisa
+            24–48 ghante mein account mein aa jayega.
           </p>
           <p>
-            Mobile number nahi hai? Koi baat nahi — apne najdiki CSC
-            (Common Service Centre) par jaakar bhi free mein status check
-            karwaya ja sakta hai. Apne raajya ki gaon-wise list dekhne ke
-            liye hamari{" "}
+            Mobile number nahi hai? Koi baat nahi — apne najdiki CSC (Common
+            Service Centre) par jaakar bhi free mein status check karwaya ja
+            sakta hai. Apne raajya ki gaon-wise list dekhne ke liye hamari{" "}
             <a
               href="/articles/pm-kisan-beneficiary-list-2026"
               className="font-semibold text-emerald-700 underline"
@@ -396,7 +417,10 @@ export default function PmKisan23viKistStatusCheck2026() {
         </div>
 
         {/* Section 3: Eligibility */}
-        <h2 id="eligibility" className="mt-12 text-2xl font-bold text-stone-900">
+        <h2
+          id="eligibility"
+          className="mt-12 text-2xl font-bold text-stone-900"
+        >
           PM Kisan Eligibility Criteria
         </h2>
         <div className="mt-4 space-y-4 text-[17px] leading-relaxed text-stone-700">
@@ -405,14 +429,13 @@ export default function PmKisan23viKistStatusCheck2026() {
             ke kuch clear criteria hain — chaliye samajhte hain kaun apply
             kar sakta hai aur kaun nahi.
           </p>
-
           <h3 className="text-lg font-semibold text-stone-900">
             Kaun Eligible Hai?
           </h3>
           <ul className="ml-5 list-disc space-y-2">
             <li>
-              Cultivable zameen rakhne wale small aur marginal farmer
-              families (husband, wife, aur minor children).
+              Cultivable zameen rakhne wale small aur marginal farmer families
+              (husband, wife, aur minor children).
             </li>
             <li>Zameen ka record official state land records mein ho.</li>
             <li>Aadhaar card hona mandatory hai.</li>
@@ -422,13 +445,13 @@ export default function PmKisan23viKistStatusCheck2026() {
               individual beneficiary ke roop mein eligible hain.
             </li>
           </ul>
-
           <h3 className="text-lg font-semibold text-stone-900">
             Kaun Eligible Nahi Hai?
           </h3>
           <p>
-            Kuch categories ko is yojana se <strong>exclude</strong> kiya
-            gaya hai, zameen hone ke bawajood bhi:
+            Kuch categories ko is yojana se{" "}
+            <strong>exclude</strong> kiya gaya hai, zameen hone ke bawajood
+            bhi:
           </p>
           <ul className="ml-5 list-disc space-y-2">
             <li>
@@ -437,24 +460,24 @@ export default function PmKisan23viKistStatusCheck2026() {
             </li>
             <li>
               <strong>Sarkari employees</strong> — central ya state
-              government, PSU, ya autonomous body ke serving/retired
-              officers (Group D aur Class IV staff ko chhodkar).
+              government, PSU, ya autonomous body ke serving/retired officers
+              (Group D aur Class IV staff ko chhodkar).
             </li>
             <li>
               <strong>High pension wale pensioners</strong> — jinki monthly
               pension ₹10,000 ya usse zyada hai.
             </li>
             <li>
-              <strong>Practicing professionals</strong> — doctors,
-              engineers, lawyers, architects, aur chartered accountants.
+              <strong>Practicing professionals</strong> — doctors, engineers,
+              lawyers, architects, aur chartered accountants.
             </li>
             <li>
-              <strong>Institutional landholders</strong> — trust, society
-              ya company ke naam par zameen.
+              <strong>Institutional landholders</strong> — trust, society ya
+              company ke naam par zameen.
             </li>
             <li>
-              Constitutional post holders, MPs, MLAs, mayors aur
-              panchayat chairpersons.
+              Constitutional post holders, MPs, MLAs, mayors aur panchayat
+              chairpersons.
             </li>
           </ul>
           <p>
@@ -462,7 +485,6 @@ export default function PmKisan23viKistStatusCheck2026() {
             parivar ineligible ho jata hai. Isliye apply karne se pehle yeh
             criteria zaroor check kar lein.
           </p>
-
           <h3 className="text-lg font-semibold text-stone-900">
             Registration Ke Liye Zaroori Documents
           </h3>
@@ -480,325 +502,233 @@ export default function PmKisan23viKistStatusCheck2026() {
         </div>
 
         {/* Section 4: Common Problems */}
-        <h2 id="problems" className="mt-12 text-2xl font-bold text-stone-900">
+        <h2
+          id="problems"
+          className="mt-12 text-2xl font-bold text-stone-900"
+        >
           Common Problems &amp; Solutions
         </h2>
-        <div className="mt-4 space-y-4 text-[17px] leading-relaxed text-stone-700">
-          <p className="rounded-xl border border-amber-200 bg-amber-50 p-4 font-semibold text-amber-900">
-            ⚠️ Dhyan se padho ye section. Bahut zaroori hai.
-          </p>
-          <p>
-            Status check karne par 3 cheezon ke aage{" "}
-            <strong>&ldquo;YES&rdquo;</strong> likha hona chahiye. Agar kahi{" "}
-            <strong>&ldquo;NO&rdquo;</strong> dikh raha hai toh samjho paisa
-            ruk sakta hai.
-          </p>
-
-          <div className="space-y-6">
-            <div>
-              <h3 className="text-lg font-semibold text-stone-900">
-                Problem 1: e-KYC Pending
-              </h3>
-              <p className="mt-1">
-                Agar e-KYC &lsquo;NO&rsquo; hai toh turant karwa lo. Do
-                tareeke hain:
-              </p>
-              <ol className="ml-5 mt-2 list-decimal space-y-1">
-                <li>Najdiki CSC center par jakar biometric se karwayein.</li>
-                <li>
-                  pmkisan.gov.in par face authentication ya mobile OTP se
-                  bhi ho jata hai kisi-kisi case mein.
-                </li>
-              </ol>
-              <p className="mt-2">
-                Poora step-by-step process janne ke liye hamari{" "}
-                <a
-                  href="/articles/pm-kisan-ekyc-online-2026"
-                  className="font-semibold text-emerald-700 underline"
-                >
-                  eKYC guide
-                </a>{" "}
-                padho.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold text-stone-900">
-                Problem 2: Land Seeding NO
-              </h3>
-              <p className="mt-1">
-                Agar &lsquo;NO&rsquo; dikha raha hai matlab aapki zameen ka
-                record portal mein update nahi hua hai.
-              </p>
-              <p className="mt-1">
-                <strong>Kya karein:</strong> Apne patwari ya tehsildar se
-                milo. Zameen ke papers lekar jao. Wo record update kar
-                denge.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold text-stone-900">
-                Problem 3: DBT Link NO
-              </h3>
-              <p className="mt-1">Ye sabse important hai.</p>
-              <p className="mt-1">
-                Agar DBT link nahi hai toh paisa bank mein ghussega hi
-                nahi.
-              </p>
-              <p className="mt-1">
-                <strong>Suggestion:</strong> Post office account wale
-                bhaiyon ko alag se dhyan dena chahiye. Kai baar post
-                office ka DBT link proper nahi hota. Bank account mein
-                shift kar lo ya bank mein jakar DBT active karwa lo.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold text-stone-900">
-                Problem 4: Payment Aane Mein Delay
-              </h3>
-              <p className="mt-1">
-                23vi kist release ho chuki hai, lekin agar baaki sabko mil
-                gaya aur aapka nahi aaya, toh turant action lo:
-              </p>
-              <ul className="ml-5 mt-2 list-disc space-y-2">
-                <li>
-                  <strong>PM Kisan Helpline</strong> numbers par call karo:
-                  <div className="mt-2 space-y-1 text-stone-800">
-                    <p>
-                      📞{" "}
-                      <a
-                        href="tel:155261"
-                        className="underline hover:text-emerald-700"
-                      >
-                        155261
-                      </a>
-                    </p>
-                    <p>
-                      📞{" "}
-                      <a
-                        href="tel:18001155526"
-                        className="underline hover:text-emerald-700"
-                      >
-                        1800-11-5526
-                      </a>
-                    </p>
-                    <p>
-                      📞{" "}
-                      <a
-                        href="tel:01123381092"
-                        className="underline hover:text-emerald-700"
-                      >
-                        011-23381092
-                      </a>
-                    </p>
-                  </div>
-                </li>
-                <li>
-                  Apne <strong>jila krishi adhikari (Agriculture Officer)</strong>{" "}
-                  se milo. Unko apna registration number aur Aadhaar batao.
-                </li>
-                <li>
-                  Bank mein jaakar <strong>account statement</strong> check
-                  karo. Kabhi-kabhi paisa aaya hota hai lekin SMS nahi
-                  aata.
-                </li>
-                <li>
-                  CSC center ya PM Kisan portal par status dobara check
-                  karo. Shayad koi technical error ho.
-                </li>
-              </ul>
-              <p className="mt-2">
-                Payment fail hone ke har reason aur uska fix detail mein
-                janne ke liye{" "}
-                <a
-                  href="/articles/pm-kisan-payment-failed-status-2026"
-                  className="font-semibold text-emerald-700 underline"
-                >
-                  Payment Failed guide
-                </a>{" "}
-                padho.
-              </p>
-            </div>
-          </div>
-
-          <p className="rounded-xl border border-emerald-200 bg-emerald-50 p-4 font-medium text-stone-800">
-            Jab tak e-KYC, Land Seeding aur DBT link teen &lsquo;YES&rsquo;
-            nahi hoti, tab tak paisa aane ka rasta band hai. Isliye pehle hi
-            check kar lo.
-          </p>
-        </div>
-
-        <div className="mt-8 overflow-hidden rounded-2xl">
-          <Image
-            src="/images/csc-center.webp"
-            alt="CSC Digital Seva center par kisan PM Kisan e-KYC ke liye biometric verification karwate hue"
-            width={1680}
-            height={946}
-            className="h-auto w-full object-cover"
-          />
-        </div>
-
-        <div className="mt-8 overflow-hidden rounded-2xl">
-          <Image
-            src="/images/verification-success.webp"
-            alt="PM Kisan e-KYC, Land Seeding aur DBT verification successful dashboard"
-            width={1680}
-            height={1120}
-            className="h-auto w-full object-cover"
-          />
-        </div>
-
-        {/* FAQs */}
-        <h2 id="faqs" className="mt-12 text-2xl font-bold text-stone-900">
-          FAQs — PM Kisan 23vi Kist 2026
-        </h2>
         <div className="mt-4 space-y-6 text-[17px] leading-relaxed text-stone-700">
-          <div>
-            <h3 className="text-lg font-semibold text-stone-900">
-              1. PM Kisan 23vi kist kab aayegi?
-            </h3>
-            <p className="mt-1">
-              23vi kist 20 June 2026 ko release ho chuki hai — 9.44 crore
-              se zyada kisanon ko ₹2,000 mila hai. Apna status abhi check
-              karo.
+          <p>
+            Kai kisanon ko PM Kisan mein paisa aane mein problem aati hai.
+            Neeche sabse common issues aur unke solutions diye gaye hain:
+          </p>
+
+          {/* Problem 1 */}
+          <div className="rounded-xl border border-red-100 bg-red-50 p-4">
+            <p className="font-semibold text-red-800">
+              🔴 Problem: Paisa Nahi Aaya
+            </p>
+            <p className="mt-2 text-stone-700">
+              <strong>Check karo:</strong> pmkisan.gov.in par &lsquo;Know Your
+              Status&rsquo; mein dekhein ki kist ka status kya hai.
+            </p>
+            <ul className="mt-2 ml-5 list-disc space-y-1 text-stone-700">
+              <li>
+                <strong>e-KYC pending?</strong> — Turant complete karein OTP
+                ya CSC biometric se.
+              </li>
+              <li>
+                <strong>Land Seeding nahi hui?</strong> — Apne patwari ya
+                agriculture office se zameen verify karwayein.
+              </li>
+              <li>
+                <strong>Bank NPCI se link nahi?</strong> — Apni bank mein
+                jaake Aadhaar seeding karwayein.
+              </li>
+              <li>
+                <strong>FTO Processed dikha raha hai?</strong> — 24–48 ghante
+                wait karein, paisa aa jayega.
+              </li>
+            </ul>
+          </div>
+
+          {/* Problem 2 */}
+          <div className="rounded-xl border border-yellow-100 bg-yellow-50 p-4">
+            <p className="font-semibold text-yellow-800">
+              🟡 Problem: e-KYC Pending
+            </p>
+            <p className="mt-2 text-stone-700">
+              pmkisan.gov.in par &lsquo;e-KYC&rsquo; option se Aadhaar OTP se
+              verify karein. Ya nearest CSC centre par fingerprint se complete
+              karwayein. Bina e-KYC ke kist nahi milegi.
             </p>
           </div>
-          <div>
-            <h3 className="text-lg font-semibold text-stone-900">
-              2. PM Kisan status kaise check karein?
-            </h3>
-            <p className="mt-1">
-              pmkisan.gov.in par jaakar &lsquo;Know Your Status&rsquo; par
-              click karein, Registration Number daalein, Captcha bharein
-              aur &lsquo;Get Data&rsquo; par click karein.
+
+          {/* Problem 3 */}
+          <div className="rounded-xl border border-yellow-100 bg-yellow-50 p-4">
+            <p className="font-semibold text-yellow-800">
+              🟡 Problem: Aadhaar Authentication Failed
+            </p>
+            <p className="mt-2 text-stone-700">
+              PM Kisan mein naam aur Aadhaar par naam exactly match karna
+              chahiye. Naam correction ke liye apne Block Agriculture Officer
+              (BAO) se milein aur written application dein.
             </p>
           </div>
-          <div>
-            <h3 className="text-lg font-semibold text-stone-900">
-              3. PM Kisan ke liye eligibility kya hai?
-            </h3>
-            <p className="mt-1">
-              Cultivable zameen rakhne wale farmer families eligible hain.
-              Income tax payers, sarkari naukri wale, high-pension
-              pensioners, aur practicing professionals exclude hain.
+
+          {/* Problem 4 */}
+          <div className="rounded-xl border border-yellow-100 bg-yellow-50 p-4">
+            <p className="font-semibold text-yellow-800">
+              🟡 Problem: Payment Reversed / Wapas Aa Gayi
+            </p>
+            <p className="mt-2 text-stone-700">
+              Bank account inactive hai ya naam mismatch hai. Bank mein
+              jaakar account activate karwayein aur PM Kisan mein updated bank
+              details update karein.
             </p>
           </div>
-          <div>
-            <h3 className="text-lg font-semibold text-stone-900">
-              4. PM Kisan ka paisa nahi aaya toh kya karein?
-            </h3>
-            <p className="mt-1">
-              Pehle e-KYC, Land Seeding aur DBT bank link status check
-              karein. Sab &lsquo;YES&rsquo; hone ke baad bhi paisa na aaye
-              toh helpline 155261 ya 1800-11-5526 par call karein.
+
+          <div className="rounded-xl border border-stone-200 bg-stone-50 p-4">
+            <p className="font-semibold text-stone-800">
+              📞 PM Kisan Helpline
             </p>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold text-stone-900">
-              5. PM Kisan mein naya registration kaise karein?
-            </h3>
-            <p className="mt-1">
-              pmkisan.gov.in par &lsquo;New Farmer Registration&rsquo;
-              option se ya apne najdiki CSC center jaakar Aadhaar, zameen
-              ke documents aur bank details ke saath registration kar
-              sakte hain.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold text-stone-900">
-              6. PM Kisan ki agli (24vi) kist kab aayegi?
-            </h3>
-            <p className="mt-1">
-              23vi kist June 2026 mein release ho chuki hai, isliye 24vi
-              kist August-November 2026 ke beech expected hai. Exact date
-              official announcement ke baad confirm hogi.
-            </p>
+            <ul className="mt-2 space-y-1 text-stone-700">
+              <li>
+                Helpline:{" "}
+                <strong>
+                  <a href="tel:155261" className="text-emerald-700">
+                    155261
+                  </a>
+                </strong>
+              </li>
+              <li>
+                Toll Free:{" "}
+                <strong>
+                  <a href="tel:18001155526" className="text-emerald-700">
+                    1800-11-5526
+                  </a>
+                </strong>
+              </li>
+              <li>
+                Email:{" "}
+                <strong>
+                  <a
+                    href="mailto:pmkisan-ict@gov.in"
+                    className="text-emerald-700"
+                  >
+                    pmkisan-ict@gov.in
+                  </a>
+                </strong>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <h2 className="mt-12 text-2xl font-bold text-stone-900">
-          Agli Kist Turant Aaye, Iske Liye Yeh Checklist Abhi Poori Kar Lein
+        {/* Section 5: FAQs */}
+        <h2 id="faqs" className="mt-12 text-2xl font-bold text-stone-900">
+          Frequently Asked Questions (FAQs)
         </h2>
-        <div className="mt-4 space-y-4 text-[17px] leading-relaxed text-stone-700">
-          <p>
-            23vi kist toh aa gayi, lekin agli (24vi) kist bina kisi
-            dikkat ke aane ke liye abhi se yeh checklist follow kar lein:
-          </p>
-          <ul className="ml-5 list-disc space-y-2">
-            <li>✅ e-KYC status &lsquo;YES&rsquo; hai ya nahi, check karein.</li>
-            <li>✅ Land Seeding portal par update hai ya nahi, confirm karein.</li>
-            <li>✅ Bank account Aadhaar se DBT-linked hai ya nahi.</li>
-            <li>
-              ✅ Mobile number registration ke time wala hi active hai ya
-              nahi.
-            </li>
-            <li>
-              ✅ Naam, spelling aur bank details Aadhaar se match karti
-              hain ya nahi.
-            </li>
-          </ul>
-          <p>
-            Yeh paanch points agar sahi hain, toh agli kist ka paisa bina
-            kisi dikkat ke aapke account mein time par aa jayega.
-          </p>
-        </div>
-
-        <div className="my-10 rounded-2xl bg-gradient-to-r from-green-800 to-green-600 p-6 text-center text-white">
-          <p className="mb-2 text-2xl">📆</p>
-          <p className="mb-1 text-lg font-black">23vi Kist Ruki Hai? Pata Karo Kyun</p>
-          <p className="mb-4 text-sm text-green-100">
-            eKYC, bank seeding, land seeding check karo — 4 sawaal mein exact reason pata chal jayega
-          </p>
-          <a
-            href="/calculator/installment-tracker"
-            className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-black text-green-800 transition-colors hover:bg-green-50"
-          >
-            📆 Installment Tracker Kholo →
-          </a>
-        </div>
-
-        {/* Conclusion / CTA */}
-        <h2 className="mt-12 text-2xl font-bold text-stone-900">
-          Conclusion: Aapka Bhai Hamesha Aapke Saath!
-        </h2>
-        <div className="mt-4 space-y-4 text-[17px] leading-relaxed text-stone-700">
-          <p>
-            Toh bhaiyon aur behno, ab aapko{" "}
-            <strong>PM Kisan 23vi kist</strong>, status check ka tarika,
-            eligibility, aur common problems ke solutions sab samajh aa
-            gaye honge.
-          </p>
-          <p>
-            Sabse important baat — apna <strong>e-KYC, Land Seeding aur
-            DBT link</strong> abhi check kar lo, taaki agli kist bhi bina
-            kisi rukawat ke aapke account mein aa jaye.
-          </p>
-          <p className="rounded-xl border border-emerald-200 bg-emerald-50 p-4 font-medium text-stone-800">
-            👉 Abhi apna status check karo:{" "}
-            <a
-              href="https://pmkisan.gov.in"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-semibold text-emerald-700 underline"
+        <div className="mt-4 space-y-4">
+          {[
+            {
+              q: "PM Kisan 23vi kist kab aayi?",
+              a: "20 June 2026 ko PM Modi ne Hooghly, West Bengal se 23vi kist release ki. 9.44 crore kisanon ko ₹2,000 prati kisan — total ₹18,880 crore DBT se transfer hue.",
+            },
+            {
+              q: "PM Kisan 24vi kist kab aayegi?",
+              a: "23vi kist June 2026 mein release hui hai. Pattern ke hisaab se 24vi kist August–November 2026 ke beech expected hai. Exact date official announcement par confirm hogi.",
+            },
+            {
+              q: "Status check karne par kuch nahi dikh raha?",
+              a: "Registration number sahi daalein. Agar registered nahi ho toh 'Know your registration no.' option se mobile ya Aadhaar se pehle number dhundho, phir status check karo.",
+            },
+            {
+              q: "e-KYC zaruri hai kya?",
+              a: "Haan, e-KYC mandatory hai. Bina e-KYC ke kist band ho jaati hai. pmkisan.gov.in par OTP se ya CSC biometric se turant complete karein.",
+            },
+            {
+              q: "Paisa kisi aur ke account mein gaya toh kya karein?",
+              a: "PM Kisan helpline 155261 par turant call karein. Apna registration number aur bank details ready rakhein.",
+            },
+            {
+              q: "Naya registration kaise karein?",
+              a: "pmkisan.gov.in par 'New Farmer Registration' par click karein ya nearest CSC centre par jaakar Aadhaar, zameen documents aur bank details ke saath apply karein.",
+            },
+          ].map(({ q, a }) => (
+            <details
+              key={q}
+              className="rounded-xl border border-stone-200 overflow-hidden"
             >
-              pmkisan.gov.in
-            </a>{" "}
-            par jaakar. Aur <strong>KisanStatus.com</strong> ko bookmark kar
-            lo — yahan aapko har <strong>PM Kisan payment update</strong>{" "}
-            sabse pehle milegi.
-          </p>
-          <p>Aap sab ko achhi fasal ho, achha mausam ho, aur achha paisa ho!</p>
-          <p className="text-lg font-bold text-emerald-700">
-            Jai Jawan, Jai Kisan!
-          </p>
+              <summary className="cursor-pointer bg-stone-50 px-4 py-3 font-semibold text-stone-800 hover:bg-emerald-50 list-none flex items-center justify-between">
+                <span>{q}</span>
+                <span className="text-emerald-600 text-lg flex-shrink-0 ml-2">+</span>
+              </summary>
+              <div className="px-4 py-3 text-stone-700 leading-relaxed border-t border-stone-200 text-[15px]">
+                {a}
+              </div>
+            </details>
+          ))}
         </div>
 
-        <hr className="mt-12 border-stone-200" />
-        <p className="mt-6 text-sm text-stone-500">
-          © 2026 KisanStatus.com | Har Kisan Ki Awaaz
-        </p>
+        {/* Related Articles */}
+        <section aria-label="Related Articles" className="mt-12">
+          <h2 className="text-xl font-bold text-stone-900 mb-4">
+            📌 Yeh Bhi Padhein
+          </h2>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {[
+              {
+                href: "/articles/pm-kisan-mobile-number-change",
+                title: "PM Kisan Details Update Guide",
+                desc: "Mobile number, bank account aur Aadhaar update karne ki poori jaankari.",
+                icon: "✏️",
+              },
+              {
+                href: "/articles/agristack-kya-hai",
+                title: "AgriStack Kya Hai – Farmer ID Guide",
+                desc: "AgriStack kya hai, Farmer ID kaise banegi aur kisan ko kya fayde milenge.",
+                icon: "🌾",
+              },
+            ].map(({ href, title, desc, icon }) => (
+              <a
+                key={href}
+                href={href}
+                className="flex gap-3 p-4 border border-emerald-200 rounded-xl bg-emerald-50 hover:bg-emerald-100 transition-colors"
+              >
+                <span className="text-2xl flex-shrink-0">{icon}</span>
+                <div>
+                  <p className="font-semibold text-emerald-800 text-sm">
+                    {title}
+                  </p>
+                  <p className="text-stone-600 text-xs mt-0.5">{desc}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        {/* Author Box */}
+        <aside
+          aria-label="About the Author"
+          className="mt-12 border border-stone-200 rounded-xl p-5 bg-stone-50 flex gap-4 items-start"
+        >
+          <div
+            className="w-14 h-14 rounded-full bg-emerald-700 flex items-center justify-center text-white text-xl font-bold flex-shrink-0"
+            aria-hidden="true"
+          >
+            KS
+          </div>
+          <div>
+            <p className="font-bold text-stone-800 text-base">
+              KisanStatus Editorial Team
+            </p>
+            <p className="text-xs text-emerald-700 mb-2 font-medium">
+              PM Kisan Installment &amp; Scheme Tracker
+            </p>
+            <p className="text-sm text-stone-600 leading-relaxed">
+              Hamare researchers PM Kisan ki har nai kist, e-KYC deadlines
+              aur portal changes ko real-time track karte hain. Yeh article
+              official pmkisan.gov.in portal aur government press releases
+              par based hai aur regular basis par update hota hai.
+            </p>
+            <p className="text-xs text-stone-400 mt-2">
+              Published:{" "}
+              <time dateTime="2026-06-20">20 June 2026</time> · Updated:{" "}
+              <time dateTime="2026-06-21">21 June 2026</time>
+            </p>
+          </div>
+        </aside>
       </article>
     </>
   );
