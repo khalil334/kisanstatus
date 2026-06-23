@@ -34,6 +34,7 @@ const nextConfig = {
   },
 
   // Redirect www → non-www (pick one canonical form)
+  // + Permanent 301 redirects for old expired-domain URLs → new 2026 articles
   async redirects() {
     return [
       {
@@ -41,6 +42,37 @@ const nextConfig = {
         has: [{ type: 'host', value: 'www.kisanstatus.com' }],
         destination: 'https://kisanstatus.com/:path*',
         permanent: true, // 301 redirect
+      },
+      // ── Old expired-domain URLs → new articles (permanent 301) ──────────
+      {
+        source: '/pm-kisan-beneficiary-status',
+        destination: '/articles/pm-kisan-21vi-installment-status-check',
+        permanent: true,
+      },
+      {
+        source: '/pm-kisan-beneficiary-status/',
+        destination: '/articles/pm-kisan-21vi-installment-status-check',
+        permanent: true,
+      },
+      {
+        source: '/pm-kisan-kyc-csc',
+        destination: '/articles/pm-kisan-ekyc-online-2026',
+        permanent: true,
+      },
+      {
+        source: '/pm-kisan-kyc-csc/',
+        destination: '/articles/pm-kisan-ekyc-online-2026',
+        permanent: true,
+      },
+      {
+        source: '/pm-kisan-beneficiary-list',
+        destination: '/articles/pm-kisan-beneficiary-list-2026',
+        permanent: true,
+      },
+      {
+        source: '/pm-kisan-beneficiary-list/',
+        destination: '/articles/pm-kisan-beneficiary-list-2026',
+        permanent: true,
       },
     ];
   },
