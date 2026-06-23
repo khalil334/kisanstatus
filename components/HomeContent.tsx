@@ -1,8 +1,9 @@
 /**
- * HomeContent.tsx — KisanStatus.com v19
+ * HomeContent.tsx — KisanStatus.com v20
  * Full SEO: Professional homepage, Hindi+Hinglish, E-E-A-T, YMYL-safe
  * No big gov links — "guide padho pehle" system
  * Author: Sidhu Singh
+ * v20: 3 naye articles add kiye + Latest Articles section
  */
 'use client';
 
@@ -15,7 +16,7 @@ import KisanTemplates from '@/components/KisanTemplates';
 const ARTICLES = [
   { slug:'kisan-credit-card-online-apply-2026',             title:'Kisan Credit Card Online Apply 2026',   emoji:'💳', desc:'KCC apply karo ₹5 lakh tak loan limit, 4% interest se shuru',    category:'Loan',         isNew:true  },
   { slug:'pm-kisan-23vi-kist-2026-status-check',            title:'PM Kisan 23vi Kist Status Check 2026',  emoji:'📆', desc:'23vi kist kab aayegi — status check, date aur eligibility',      category:'Status',       isNew:true  },
-{ slug:'pm-kisan-ekyc-online-2026',                      title:'PM Kisan eKYC Online 2026',             emoji:'🔐', desc:'Ghar baithe free mein eKYC karo — OTP ya CSC dono tarike',        category:'eKYC',         isNew:true  },
+  { slug:'pm-kisan-ekyc-online-2026',                       title:'PM Kisan eKYC Online 2026',             emoji:'🔐', desc:'Ghar baithe free mein eKYC karo — OTP ya CSC dono tarike',        category:'eKYC',         isNew:true  },
   { slug:'pm-kisan-payment-failed-status-2026',             title:'PM Kisan Payment Failed Fix 2026',      emoji:'💸', desc:'Payment nahi aayi? Bank error, NPCI issue — seedha solution',    category:'Payment',      isNew:true  },
   { slug:'pm-kisan-rejected-list-2026',                     title:'PM Kisan Rejected List 2026',           emoji:'📋', desc:'Rejected kyun hua? 10 reasons aur har ek ka fix',               category:'Rejection',    isNew:true  },
   { slug:'pm-kisan-registration-online-2026',               title:'PM Kisan Registration Online 2026',     emoji:'📝', desc:'Pehli baar register karna hai? Documents se lekar submit tak',   category:'Registration', isNew:true  },
@@ -30,8 +31,12 @@ const ARTICLES = [
   { slug:'pm-kisan-21vi-installment-status-check',          title:'PM Kisan 21vi Kist Status Check',      emoji:'📅', desc:'21vi kist aayi ki nahi — mobile se 2 minute mein check karo',  category:'Status',       isNew:false },
   { slug:'pm-kisan-correction-deactivate-block-guide-2026', title:'PM Kisan Correction & Deactivate Guide',emoji:'🛠️', desc:'Naam, bank, zameen — correction guide aur deactivate fix',    category:'Correction',   isNew:false },
   { slug:'pm-kisan-problems-solution-guide-2026',           title:'PM Kisan 10 Common Problems — Fix',    emoji:'🔧', desc:'RFT pending, PFMS error, payment fail — 10 problems ka hal',   category:'Problems',     isNew:false },
-
-{ slug:'pm-kisan-fto-generated-ka-matlab-kya-hai', title:'PM Kisan FTO Generated Ka Matlab', emoji:'📄', desc:'FTO Generated dikhta hai? Matlab kya hai aur payment kab aayegi', category:'Payment', isNew:true },];
+  { slug:'pm-kisan-fto-generated-ka-matlab-kya-hai',        title:'PM Kisan FTO Generated Ka Matlab',     emoji:'📄', desc:'FTO Generated dikhta hai? Matlab kya hai aur payment kab aayegi', category:'Payment',   isNew:true  },
+  // ── 3 NEW ARTICLES ───────────────────────────────────────────────────────
+  { slug:'pm-kisan-24vi-kist',                              title:'PM Kisan 24vi Kist 2026',              emoji:'📆', desc:'24vi kist kab aayegi — status check, date aur payment guide',   category:'Status',       isNew:true  },
+  { slug:'agristack-kya-hai',                               title:'AgriStack Kya Hai 2026',               emoji:'🌐', desc:'Farmer ID kya hoti hai, AgriStack registration aur fayde',       category:'Problems',     isNew:true  },
+  { slug:'pm-kisan-mobile-number-change',                   title:'PM Kisan Mobile Number Change 2026',   emoji:'📱', desc:'Mobile number change karo online ya CSC se — step by step',     category:'Correction',   isNew:true  },
+];
 
 // ── Devanagari Hindi FAQs — voice search optimized ──────────────────────────
 const FAQS = [
@@ -80,7 +85,7 @@ const STATS = [
 
 export default function HomeContent() {
   const [activeTab, setActiveTab] = useState<string>('All');
-  const categories = ['All','eKYC','Payment','Registration','Correction','List','Loan','Insurance','Problems'];
+  const categories = ['All','Status','eKYC','Payment','Registration','Correction','List','Loan','Insurance','Problems','History','Land'];
   const filtered = activeTab==='All' ? ARTICLES : ARTICLES.filter(a=>a.category===activeTab);
 
   return (
@@ -189,7 +194,6 @@ export default function HomeContent() {
               ))}
             </div>
             <div className="p-4">
-              {/* Internal guide link — not direct gov link */}
               <Link href="/articles/pm-kisan-23vi-kist-2026-status-check"
                 className="w-full flex items-center justify-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold py-3 rounded-xl text-sm transition-colors">
                 📖 23vi Kist Status Guide Padho
@@ -212,7 +216,7 @@ export default function HomeContent() {
       </div>
 
       {/* ══════════════════════════════════════════════════════════
-          PROBLEM → SOLUTION — What does a farmer actually need?
+          PROBLEM → SOLUTION
       ══════════════════════════════════════════════════════════ */}
       <section className="py-12 bg-white" aria-labelledby="problems-heading">
         <div className="container-site">
@@ -250,6 +254,71 @@ export default function HomeContent() {
       </section>
 
       {/* ══════════════════════════════════════════════════════════
+          LATEST ARTICLES SECTION — Saare articles cards mein
+      ══════════════════════════════════════════════════════════ */}
+      <section className="py-12 bg-gray-50" aria-labelledby="articles-heading">
+        <div className="container-site">
+          {/* Header */}
+          <div className="text-center mb-6">
+            <span className="inline-block bg-green-100 text-green-800 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">📚 Helpful Guides</span>
+            <h2 id="articles-heading" className="text-2xl md:text-3xl font-black text-gray-900 mb-2">
+              Sabse Kaam Ki Guides
+            </h2>
+            <p className="text-gray-500 text-sm max-w-lg mx-auto">Category choose karo ya sabhi guides dekho</p>
+          </div>
+
+          {/* Category Filter Tabs */}
+          <div className="flex gap-2 overflow-x-auto pb-3 mb-6 scrollbar-hide">
+            {categories.map(cat => (
+              <button
+                key={cat}
+                onClick={() => setActiveTab(cat)}
+                className={`shrink-0 px-4 py-2 rounded-full text-xs font-bold transition-all border ${
+                  activeTab === cat
+                    ? 'bg-green-600 text-white border-green-600 shadow-md'
+                    : 'bg-white text-gray-600 border-gray-200 hover:border-green-400 hover:text-green-700'
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+
+          {/* Articles Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {filtered.map(article => (
+              <Link
+                key={article.slug}
+                href={`/articles/${article.slug}`}
+                className="bg-white border border-gray-200 rounded-2xl p-5 flex flex-col gap-3 hover:shadow-lg hover:border-green-300 hover:scale-[1.01] transition-all no-underline group"
+              >
+                <div className="flex items-start justify-between">
+                  <span className="text-3xl">{article.emoji}</span>
+                  {article.isNew && (
+                    <span className="text-[10px] font-black bg-green-100 text-green-700 px-2 py-0.5 rounded-full">NEW</span>
+                  )}
+                </div>
+                <div>
+                  <p className="font-black text-gray-900 text-sm leading-tight group-hover:text-green-700 transition-colors mb-1">
+                    {article.title}
+                  </p>
+                  <p className="text-[12px] text-gray-500 leading-relaxed">{article.desc}</p>
+                </div>
+                <div className="flex items-center justify-between mt-auto pt-2 border-t border-gray-100">
+                  <span className="text-[10px] font-bold bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">
+                    {article.category}
+                  </span>
+                  <span className="text-[12px] font-bold text-green-700 group-hover:translate-x-1 transition-transform inline-block">
+                    Padho →
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════
           E-E-A-T SECTION — Authority, Mission, Disclaimer
       ══════════════════════════════════════════════════════════ */}
       <section className="py-10 bg-green-950 text-white" aria-labelledby="mission-heading">
@@ -262,285 +331,50 @@ export default function HomeContent() {
               </h2>
               <div className="text-sm text-green-100/80 leading-relaxed space-y-3">
                 <p>
-                  Bhai, <strong className="text-white">11 crore se zyada farmers</strong> PM Kisan se jude hain — lekin lakho kisan har saal sirf isliye kist se reh jaate hain kyunki unhe pata nahi eKYC kaise hoti hai, land seeding kya hoti hai, ya naam mismatch kaise fix karte hain.
+                  Hum ek team hain jo India ke 11 crore+ kisan bhaion ke liye kaam karti hai. Hamar maqsad hai ki PM Kisan, eKYC, beneficiary list, payment status — sab kuch aasaan Hindi/Hinglish mein milna chahiye. Bina kisi confusion ke.
                 </p>
                 <p>
-                  KisanStatus.com ka ek hi kaam hai — <strong className="text-white">government ke complex process ko simple Hinglish mein samjhana.</strong> Har article real farmer problems se likha gaya hai — government website copy-paste nahi.
+                  <strong className="text-white">Sidhu Singh</strong> — hamare lead writer — 8 saal se agriculture aur government schemes cover kar rahe hain. Unka poora focus hai ki kisan bhai ghar baithe apni problems solve kar sakein.
                 </p>
-                <p className="text-green-100/60 text-xs">
-                  Yeh platform <strong className="text-green-300">Sidhu Singh</strong> manage karte hain — agricultural content expert jo pichhle 5 saal se Indian farmers ko government schemes navigate karne mein help kar rahe hain.
+                <p className="text-green-300/70 text-xs border-t border-green-800 pt-3">
+                  ⚠️ Disclaimer: Yeh website PM Kisan ki official website nahi hai. Hum sirf guide aur information provide karte hain. Official kaam ke liye pmkisan.gov.in par jayein.
                 </p>
               </div>
             </div>
-            <div className="space-y-2">
+            <div className="space-y-3">
               {[
-                {icon:'✅',t:'100% Free',d:'Koi guide, tool ya info — kabhi charge nahi.'},
-                {icon:'🔒',t:'Data Safe',d:'Koi Aadhaar ya mobile store nahi hota.'},
-                {icon:'🏛️',t:'Verified Info',d:'Sab pmkisan.gov.in se verify ki gayi.'},
-                {icon:'✍️',t:'Real Content',d:'Government copy-paste nahi — apna likha.'},
-              ].map(b=>(
-                <div key={b.t} className="flex gap-3 bg-green-900/50 border border-green-800 rounded-xl p-3">
-                  <span className="text-lg shrink-0">{b.icon}</span>
+                { icon:'✅', title:'100% Free', sub:'Koi charge nahi — kabhi bhi' },
+                { icon:'🔒', title:'Privacy Safe', sub:'Koi data store ya share nahi' },
+                { icon:'📝', title:'Expert Written', sub:'Sidhu Singh — 8 saal experience' },
+                { icon:'🔄', title:'Daily Update', sub:'Latest info — roz update hoti hai' },
+              ].map(item => (
+                <div key={item.title} className="flex items-center gap-3 bg-green-900/50 border border-green-800 rounded-xl px-4 py-3">
+                  <span className="text-xl shrink-0">{item.icon}</span>
                   <div>
-                    <p className="font-bold text-white text-xs">{b.t}</p>
-                    <p className="text-[11px] text-green-300/70">{b.d}</p>
+                    <p className="text-white font-bold text-sm">{item.title}</p>
+                    <p className="text-green-400 text-[11px]">{item.sub}</p>
                   </div>
                 </div>
               ))}
-              <div className="bg-amber-900/40 border border-amber-700/50 rounded-xl p-3 mt-2">
-                <p className="text-[11px] text-amber-200 leading-relaxed">
-                  <strong>⚠️ Disclaimer:</strong> KisanStatus.com ek independent information portal hai. Yeh Government of India ya pmkisan.gov.in ka official platform nahi hai.
-                </p>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* ══════════════════════════════════════════════════════════
-          ARTICLES GRID — All 15 articles
+          FAQ SECTION
       ══════════════════════════════════════════════════════════ */}
-      <section className="py-14 bg-gray-50" aria-labelledby="articles-heading">
-        <div className="container-site">
-          <div className="text-center mb-8">
-            <span className="inline-block bg-green-100 text-green-800 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">📖 Complete Guide Library</span>
-            <h2 id="articles-heading" className="text-2xl md:text-3xl font-black text-gray-900 mb-2">
-              PM Kisan — पूरी जानकारी हिंदी में
-            </h2>
-            <p className="text-gray-500 text-sm max-w-lg mx-auto">
-              Har article ek real problem solve karta hai — sirf government info nahi, <strong>practical step-by-step guide</strong>
-            </p>
-          </div>
-
-          {/* Category tabs */}
-          <div className="flex flex-wrap gap-2 justify-center mb-7">
-            {categories.map(cat=>(
-              <button key={cat} onClick={()=>setActiveTab(cat)}
-                className={`px-4 py-1.5 rounded-full text-xs font-bold border transition-all ${
-                  activeTab===cat
-                    ?'bg-green-700 text-white border-green-700 shadow-md'
-                    :'bg-white text-gray-600 border-gray-200 hover:border-green-400 hover:text-green-700'
-                }`}>
-                {cat}
-              </button>
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {filtered.map(article=>(
-              <Link key={article.slug} href={`/articles/${article.slug}`}
-                className="group bg-white border border-gray-200 rounded-2xl p-5 hover:border-green-300 hover:shadow-xl hover:shadow-green-50/50 transition-all no-underline flex flex-col gap-3">
-                <div className="flex items-start justify-between">
-                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-green-50 to-emerald-100 border border-green-100 flex items-center justify-center text-2xl group-hover:scale-110 group-hover:from-green-100 group-hover:to-emerald-200 transition-all">
-                    {article.emoji}
-                  </div>
-                  <div className="flex gap-1 flex-wrap justify-end">
-                    {article.isNew && <span className="text-[10px] font-black bg-red-500 text-white px-2 py-0.5 rounded-full">NEW</span>}
-                    <span className="text-[10px] font-medium bg-gray-100 text-gray-500 px-2 py-0.5 rounded-full">{article.category}</span>
-                  </div>
-                </div>
-                <div>
-                  <h3 className="font-black text-gray-900 text-sm leading-snug mb-1.5 group-hover:text-green-700 transition-colors">{article.title}</h3>
-                  <p className="text-xs text-gray-500 leading-relaxed">{article.desc}</p>
-                </div>
-                <div className="mt-auto pt-2.5 border-t border-gray-100 flex items-center justify-between">
-                  <span className="text-[11px] text-gray-400">✍️ Sidhu Singh</span>
-                  <span className="text-xs font-bold text-green-700 group-hover:translate-x-1 transition-transform inline-block">Guide Padho →</span>
-                </div>
-              </Link>
-            ))}
-          </div>
-
-          {/* After reading box — redirects properly */}
-          <div className="mt-10 bg-white border-2 border-dashed border-green-300 rounded-2xl p-6 max-w-xl mx-auto text-center">
-            <p className="text-2xl mb-2">📖</p>
-            <p className="font-black text-gray-900 mb-1">Guide Padh Li?</p>
-            <p className="text-sm text-gray-500 mb-4">Ab apna exact problem pmkisan.gov.in par fix karo — official government portal</p>
-            <Link href="/official-links"
-              className="inline-flex items-center gap-2 bg-green-700 hover:bg-green-600 text-white font-bold px-6 py-3 rounded-xl text-sm transition-colors">
-              🏛️ Official Links Page →
-            </Link>
-            <p className="text-xs text-gray-400 mt-2">⚠️ KisanStatus.com government se affiliated nahi hai</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Visual templates */}
-      <KisanTemplates />
+      <FAQSection faqs={FAQS} />
 
       {/* ══════════════════════════════════════════════════════════
-          DEEP HINDI GUIDE — Google Helpful Content signal
+          AI ASSISTANT
       ══════════════════════════════════════════════════════════ */}
-      <section className="py-14 bg-white border-y border-gray-100" aria-labelledby="guide-heading">
-        <div className="container-site max-w-3xl mx-auto">
-          <div className="text-center mb-8">
-            <span className="inline-block bg-green-100 text-green-800 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">📚 पूरी गाइड</span>
-            <h2 id="guide-heading" className="text-xl md:text-2xl font-black text-gray-900">
-              पीएम किसान योजना — सही तरीके से कैसे फायदा उठाएं?
-            </h2>
-            <p className="text-gray-500 text-sm mt-2">वो जानकारी जो government website पर नहीं मिलती</p>
-          </div>
-
-          <div className="space-y-4">
-            {[
-              {
-                n:1, color:'bg-green-700', title:'23वीं किस्त आ चुकी है — अब क्या check करें?',
-                content:(
-                  <div className="text-sm text-gray-700 space-y-2">
-                    <p>23वीं किस्त <strong>20 जून 2026</strong> को release हो चुकी है। अगर अभी तक पैसा account में नहीं आया, या अगली किस्त के लिए तैयार रहना है, तो यह 3 चीज़ें ज़रूर check करें:</p>
-                    <div className="space-y-2 mt-3">
-                      {[
-                        {n:'1',t:'eKYC Complete है?',d:'pmkisan.gov.in → eKYC → Status check करो। "eKYC Done" नहीं दिखता तो अभी करो — free है।'},
-                        {n:'2',t:'Bank में Aadhaar Seeded है?',d:'Bank branch जाकर पूछो — "क्या मेरे account में Aadhaar link है?" — NPCI seeding ज़रूरी है।'},
-                        {n:'3',t:'Beneficiary Status Active है?',d:'pmkisan.gov.in → Beneficiary Status → "Active" दिखना चाहिए, "Rejected" नहीं।'},
-                      ].map(s=>(
-                        <div key={s.n} className="flex gap-3 p-3 bg-green-50 border border-green-100 rounded-xl">
-                          <span className="w-7 h-7 rounded-full bg-green-700 text-white text-xs font-bold flex items-center justify-center shrink-0">{s.n}</span>
-                          <div><p className="font-bold text-gray-900 text-xs">{s.t}</p><p className="text-xs text-gray-600 mt-0.5">{s.d}</p></div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                ),
-              },
-              {
-                n:2, color:'bg-amber-600', title:'Land Seeding — वो problem जो 30% किसानों को है',
-                content:(
-                  <div className="text-sm text-gray-700 space-y-2">
-                    <p><strong>"Land Seeding No"</strong> — यह error बहुत common है। इसका मतलब आपकी ज़मीन का record PM Kisan portal पर link नहीं हुआ।</p>
-                    <div className="bg-amber-50 border-l-4 border-amber-500 rounded-r-xl p-3 mt-2">
-                      <p className="font-bold text-amber-800 text-xs mb-1.5">Step-by-Step Fix:</p>
-                      <ul className="space-y-1 text-xs text-gray-700">
-                        {['अपने गाँव के पटवारी/लेखपाल से मिलें → Khasra-Khatauni update करवाएं','Block Agriculture Office → Land Seeding correction form भरें','State Revenue Department → Online correction portal (state-wise different है)','15-30 दिन बाद pmkisan.gov.in पर फिर check करें'].map((s,i)=>(
-                          <li key={i} className="flex gap-2"><span className="text-amber-600 font-bold shrink-0">→</span>{s}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                ),
-              },
-              {
-                n:3, color:'bg-blue-600', title:'Free Calculators — Bank जाने से पहले हिसाब करो',
-                content:(
-                  <div className="grid grid-cols-2 gap-2 text-xs">
-                    {[
-                      {icon:'🏦',t:'KCC Loan EMI',d:'7% rate पर monthly payment जानो — surprise नहीं होगा'},
-                      {icon:'🛡️',t:'PMFBY Premium',d:'Fasal bima कितना premium लगेगा — पहले calculate करो'},
-                      {icon:'💹',t:'MSP Income',d:'Sarkar ke MSP rate पर total income कितनी होगी'},
-                      {icon:'📊',t:'Crop Profit',d:'Kheti mein net profit ya loss — per acre hisaab'},
-                    ].map(c=>(
-                      <Link key={c.t} href="/calculator" className="flex gap-2 p-2.5 bg-blue-50 border border-blue-100 rounded-xl hover:border-blue-300 transition-colors no-underline">
-                        <span className="text-lg shrink-0">{c.icon}</span>
-                        <div><p className="font-bold text-gray-900">{c.t}</p><p className="text-gray-500">{c.d}</p></div>
-                      </Link>
-                    ))}
-                  </div>
-                ),
-              },
-              {
-                n:4, color:'bg-red-600', title:'Naam Mismatch — सबसे common rejection reason',
-                content:(
-                  <div className="text-sm text-gray-700 space-y-2">
-                    <p>PM Kisan mein naam mismatch ki wajah se <strong>payment fail hoti hai, eKYC fail hoti hai</strong>। Fix karna zaroori hai — lekin sahi order mein karo:</p>
-                    <div className="bg-red-50 border border-red-100 rounded-xl p-3 space-y-1.5 text-xs">
-                      {[
-                        '① Pehle check karo — Aadhaar card mein kya likha hai (exactly)',
-                        '② PM Kisan portal mein kya naam hai (Beneficiary Status mein dekho)',
-                        '③ Bank account mein kya naam hai (passbook check karo)',
-                        '④ Teeno jagah SAME hona chahiye — Aadhaar ke jaisa',
-                        '⑤ Agar Aadhaar hi galat hai — pehle UIDAI se fix karwao',
-                      ].map((s,i)=>(
-                        <p key={i} className="flex gap-2 text-gray-700">{s}</p>
-                      ))}
-                    </div>
-                  </div>
-                ),
-              },
-            ].map(block=>(
-              <div key={block.n} className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
-                <div className={`${block.color} px-5 py-3 flex items-center gap-3`}>
-                  <span className="w-7 h-7 rounded-full bg-white/20 text-white text-sm font-black flex items-center justify-center">{block.n}</span>
-                  <h3 className="text-white font-bold text-sm">{block.title}</h3>
-                </div>
-                <div className="p-5">{block.content}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════════════════════════
-          STATE LIST
-      ══════════════════════════════════════════════════════════ */}
-      <section className="py-12 bg-gray-50" aria-labelledby="states-heading">
-        <div className="container-site">
-          <h2 id="states-heading" className="text-xl font-black text-gray-900 text-center mb-2">State Wise PM Kisan Beneficiary List</h2>
-          <p className="text-center text-gray-500 text-sm mb-6">अपना राज्य चुनें — गाँव wise लाभार्थी सूची देखें</p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
-            {[['Uttar Pradesh','uttar-pradesh'],['Bihar','bihar'],['Madhya Pradesh','madhya-pradesh'],['Rajasthan','rajasthan'],['Maharashtra','maharashtra'],['West Bengal','west-bengal'],['Karnataka','karnataka'],['Odisha','odisha'],['Tamil Nadu','tamil-nadu'],['Punjab','punjab'],['Haryana','haryana'],['Andhra Pradesh','andhra-pradesh']].map(([name,slug])=>(
-              <Link key={slug} href={`/beneficiary-list/${slug}`}
-                className="text-center text-xs px-2 py-3 bg-white border border-green-200 rounded-xl text-green-800 font-semibold hover:bg-green-600 hover:text-white hover:border-green-600 transition-all">
-                {name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════════════════════════
-          FAQ — Hindi Devanagari, schema-ready
-      ══════════════════════════════════════════════════════════ */}
-      <section className="py-14 bg-white" aria-labelledby="faq-heading">
-        <div className="container-site max-w-3xl mx-auto">
-          <div className="text-center mb-8">
-            <span className="inline-block bg-green-100 text-green-800 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">❓ अक्सर पूछे जाने वाले सवाल</span>
-            <h2 id="faq-heading" className="text-xl md:text-2xl font-black text-gray-900">
-              PM Kisan FAQ — किसान सबसे ज्यादा यही पूछते हैं
-            </h2>
-            <p className="text-gray-500 text-xs mt-2">Google aur voice search par in sawaalon ke jawab dhundhe jaate hain</p>
-          </div>
-          <FAQSection faqs={FAQS} />
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════════════════════════
-          CALCULATOR BANNER
-      ══════════════════════════════════════════════════════════ */}
-      <section className="py-14 bg-gradient-to-br from-green-900 via-green-800 to-green-700 text-white relative overflow-hidden" aria-labelledby="calc-heading">
-        <div className="absolute inset-0 opacity-[0.04]" style={{backgroundImage:'radial-gradient(circle, white 1px, transparent 1px)',backgroundSize:'30px 30px'}} aria-hidden="true"/>
-        <div className="container-site max-w-4xl mx-auto text-center relative">
-          <span className="inline-block bg-white/10 border border-white/20 text-green-200 text-xs font-bold px-4 py-2 rounded-full mb-4 uppercase tracking-wider">🧮 Free Calculators — No Login</span>
-          <h2 id="calc-heading" className="text-2xl md:text-3xl font-black mb-3">कृषि Calculators — KCC, PMFBY, MSP, Crop Profit</h2>
-          <p className="text-green-100 text-sm md:text-base mb-8 max-w-2xl mx-auto">Bank jaane se pehle hisaab karo — EMI, premium, income, profit — 5 free tools, koi registration nahi</p>
-          <div className="flex flex-wrap justify-center gap-3 mb-8">
-            {[{e:'🌾',n:'PM Kisan'},{e:'🏦',n:'KCC EMI'},{e:'🛡️',n:'PMFBY'},{e:'💹',n:'MSP Income'},{e:'📊',n:'Crop Profit'}].map(i=>(
-              <div key={i.n} className="flex items-center gap-2 bg-white/10 border border-white/20 rounded-xl px-4 py-2.5 text-sm font-bold text-green-100">
-                <span>{i.e}</span>{i.n}
-              </div>
-            ))}
-          </div>
-          <Link href="/calculator" className="inline-flex items-center gap-2 bg-white text-green-800 font-black px-8 py-4 rounded-2xl text-base hover:bg-green-50 transition-colors shadow-xl shadow-black/20">
-            🧮 Calculators Kholo — Free →
-          </Link>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════════════════════════
-          HELPLINE
-      ══════════════════════════════════════════════════════════ */}
-      <section className="bg-green-950 py-10 text-white" aria-labelledby="helpline-heading">
-        <div className="container-site text-center">
-          <h2 id="helpline-heading" className="font-black text-lg mb-1">Kisi bhi Problem Ke Liye — PM Kisan Helpline</h2>
-          <p className="text-green-400 text-sm mb-5">Registration, payment, eKYC — government helpline free hai</p>
-          <div className="flex flex-wrap gap-3 justify-center">
-            <a href="tel:155261" className="bg-green-600 hover:bg-green-500 text-white font-bold px-5 py-2.5 rounded-xl text-sm transition-colors">📞 155261</a>
-            <a href="tel:01124300606" className="bg-green-600 hover:bg-green-500 text-white font-bold px-5 py-2.5 rounded-xl text-sm transition-colors">📞 011-24300606</a>
-            <a href="mailto:pmkisan-ict@gov.in" className="border border-green-700 text-green-300 font-bold px-5 py-2.5 rounded-xl text-sm hover:bg-green-900 transition-colors">✉️ pmkisan-ict@gov.in</a>
-          </div>
-        </div>
-      </section>
-
       <AiAssistant />
+
+      {/* ══════════════════════════════════════════════════════════
+          KISAN TEMPLATES
+      ══════════════════════════════════════════════════════════ */}
+      <KisanTemplates />
     </>
   );
 }
