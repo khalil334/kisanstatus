@@ -1,4 +1,4 @@
-# KisanStatus.in
+# KisanStatus.com
 
 > PM Kisan Status Check 2026 — 21st Installment Informational Website
 
@@ -138,9 +138,9 @@ kisanstatus/
 
 ## ⚠️ Disclaimer
 
-KisanStatus.in is NOT an official Government of India website.
+KisanStatus.com is NOT an official Government of India website.
 For official PM Kisan information, visit [pmkisan.gov.in](https://pmkisan.gov.in)
 
 ---
 
-© 2026 KisanStatus.in — Contact: pubggamenewone@gmail.com
+© 2026 KisanStatus.com — Contact: kisanstatus.support@gmail.com
