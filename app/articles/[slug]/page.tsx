@@ -1,6 +1,6 @@
 /**
  * app/articles/[slug]/page.tsx
- * Dynamic route — serves ALL 18 articles
+ * Dynamic route — serves ALL 21 articles
  * Content lives in components/articles/*.tsx
  * Metadata lives in lib/articles-data.ts
  */
@@ -14,7 +14,7 @@ const DOMAIN = 'https://kisanstatus.com';
 // ── Dynamic imports ────────────────────────────────────────────────────────
 const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> = {
   KisanCreditCardOnlineApply2026:             dynamic(() => import('@/components/articles/KisanCreditCardOnlineApply2026')),
-  KisanRinKahaSeLe2026:                      dynamic(() => import('@/components/articles/KisanRinKahaSeLe2026')),
+  KisanRinKahaSeLe2026:                       dynamic(() => import('@/components/articles/KisanRinKahaSeLe2026')),
   KisanTractorLoan2026:                       dynamic(() => import('@/components/articles/KisanTractorLoan2026')),
   PmKisan21viInstallmentStatusCheck:          dynamic(() => import('@/components/articles/PmKisan21viInstallmentStatusCheck')),
   PmKisan23viKistStatusCheck2026:             dynamic(() => import('@/components/articles/PmKisan23viKistStatusCheck2026')),
@@ -30,8 +30,11 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   PmKisanRegistrationOnline2026:              dynamic(() => import('@/components/articles/PmKisanRegistrationOnline2026')),
   PmKisanRejectedList2026:                    dynamic(() => import('@/components/articles/PmKisanRejectedList2026')),
   PmfbyCropInsurance2026:                     dynamic(() => import('@/components/articles/PmfbyCropInsurance2026')),
-  // ── NEW ──
   PmKisanFtoGeneratedKaMatlabKyaHai:          dynamic(() => import('@/components/articles/pm-kisan-fto-generated-ka-matlab-kya-hai')),
+  // ── 3 NEW ─────────────────────────────────────────────────────────────────
+  PmKisan24viKist2026:                        dynamic(() => import('@/components/articles/PmKisan24viKist2026')),
+  AgriStackKyaHai2026:                        dynamic(() => import('@/components/articles/AgriStackKyaHai2026')),
+  PmKisanMobileNumberChange2026:              dynamic(() => import('@/components/articles/PmKisanMobileNumberChange2026')),
 };
 
 export const revalidate = 86400;
