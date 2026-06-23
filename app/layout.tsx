@@ -80,11 +80,11 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
+    // FIX: removed fake hi-IN/en-IN duplicate language alternates.
+    // There is no separate English version of this site — pointing both
+    // language tags at the exact same URL was an invalid hreflang signal.
+    // Canonical alone is correct here for a single-language site.
     canonical: 'https://kisanstatus.com',
-    languages: {
-      'hi-IN': 'https://kisanstatus.com',
-      'en-IN': 'https://kisanstatus.com',
-    },
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GSC_TOKEN ?? 'oGrO0aRNLLhCgHq0Bn-sh3FdgKye7TlbAn2pAk8YdMQ',
@@ -143,11 +143,10 @@ export default function RootLayout({
                 url: 'https://kisanstatus.com',
                 description: "PM Kisan Samman Nidhi status check, eKYC guide, beneficiary list — India's #1 free kisan information portal.",
                 inLanguage: 'hi-IN',
-                potentialAction: {
-                  '@type': 'SearchAction',
-                  target: { '@type': 'EntryPoint', urlTemplate: 'https://kisanstatus.com/search?q={search_term_string}' },
-                  'query-input': 'required name=search_term_string',
-                },
+                // FIX: removed fake "potentialAction: SearchAction" block.
+                // The site has no working /search?q= page, so this was
+                // claiming a feature that doesn't exist — Google could
+                // flag it as invalid structured data in Search Console.
               },
               {
                 '@context': 'https://schema.org',
