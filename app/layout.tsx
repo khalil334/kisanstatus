@@ -54,7 +54,7 @@ export const metadata: Metadata = {
       'PM Kisan Samman Nidhi status check 2026 — 23vi kist, eKYC, beneficiary list. pmkisan.gov.in verified. Free guide.',
     images: [
       {
-        url:    '/og-image.jpg',
+        url:    'https://kisanstatus.com/og-image.jpg',
         width:  1200,
         height: 630,
         alt:    'PM Kisan Status Check 2026 – KisanStatus.com',
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     card:        'summary_large_image',
     title:       'PM Kisan Status Check 2026 – 23vi Kist',
     description: 'PM Kisan beneficiary status, 23vi kist dates, eKYC guide aur ₹6000 annual benefit — free.',
-    images:      ['/og-image.jpg'],
+    images:      ['https://kisanstatus.com/og-image.jpg'],
     site:        '@kisanstatus',
   },
   robots: {
@@ -141,7 +141,7 @@ export default function RootLayout({
                 '@type': 'WebSite',
                 name: 'KisanStatus.com',
                 url: 'https://kisanstatus.com',
-                description: 'PM Kisan Samman Nidhi status check, eKYC guide, beneficiary list — India\'s #1 free kisan information portal.',
+                description: "PM Kisan Samman Nidhi status check, eKYC guide, beneficiary list — India's #1 free kisan information portal.",
                 inLanguage: 'hi-IN',
                 potentialAction: {
                   '@type': 'SearchAction',
@@ -191,17 +191,6 @@ export default function RootLayout({
           Step 4: Uncomment the script tag below
           Step 5: Update public/ads.txt with your publisher ID
           ══════════════════════════════════════════════════════
-        */}
-        {/*
-          ══════════════════════════════════════════════════
-          GOOGLE ADSENSE — READY TO ACTIVATE
-          ══════════════════════════════════════════════════
-          Step 1: Apply → https://adsense.google.com
-          Step 2: Get Publisher ID → ca-pub-XXXXXXXXXX
-          Step 3: Replace XXXXXXXXXX in line below
-          Step 4: Remove the comment tags around the script
-          Step 5: Update public/ads.txt with same publisher ID
-          ══════════════════════════════════════════════════
         */}
         {/* ADSENSE_PLACEHOLDER — Remove comment tags after approval:
         <script
