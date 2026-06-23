@@ -1,6 +1,6 @@
 /**
  * lib/articles-data.ts
- * Central metadata for all 18 articles — used by [slug]/page.tsx
+ * Central metadata for all 21 articles — used by [slug]/page.tsx
  * To add a new article: add entry here + create components/articles/YourComponent.tsx
  */
 
@@ -11,8 +11,8 @@ export interface ArticleMeta {
   ogTitle:       string;
   keywords:      string[];
   component:     string;
-  publishedTime?: string; // ISO 8601, e.g. '2026-01-15T08:00:00+05:30'
-  modifiedTime?:  string; // ISO 8601
+  publishedTime?: string;
+  modifiedTime?:  string;
 }
 
 export const ARTICLES: ArticleMeta[] = [
@@ -186,7 +186,6 @@ export const ARTICLES: ArticleMeta[] = [
     publishedTime: '2026-06-01T08:00:00+05:30',
     modifiedTime:  '2026-06-21T08:00:00+05:30',
   },
-  // ── NEW ARTICLE ──────────────────────────────────────────────────────────
   {
     slug:          'pm-kisan-fto-generated-ka-matlab-kya-hai',
     title:         "PM Kisan FTO Generated Ka Matlab Kya Hai 2026 | FTO Status Complete Guide",
@@ -196,6 +195,37 @@ export const ARTICLES: ArticleMeta[] = [
     component:     'PmKisanFtoGeneratedKaMatlabKyaHai',
     publishedTime: '2026-06-23T08:00:00+05:30',
     modifiedTime:  '2026-06-23T08:00:00+05:30',
+  },
+  // ── 3 NEW ARTICLES ───────────────────────────────────────────────────────
+  {
+    slug:          'pm-kisan-24vi-kist-2026',
+    title:         "PM Kisan 24vi Kist 2026 | Status Check, Date Aur Payment Guide",
+    desc:          "PM Kisan 24vi Kist 2026 kab aayegi? Status check kaise karein Aadhaar, Mobile aur Registration number se. Payment date, eKYC status aur payment fail solutions — complete Hinglish guide. Sidhu Singh.",
+    ogTitle:       "PM Kisan 24vi Kist 2026 — Status Check & Payment Date Guide",
+    keywords:      ['PM Kisan 24vi Kist 2026', 'PM Kisan 24vi installment', 'PM Kisan 24vi kist kab aayegi', 'PM Kisan 24 kist status check', 'PM Kisan next installment 2026', 'PM Kisan payment date 2026'],
+    component:     'PmKisan24viKist2026',
+    publishedTime: '2026-06-24T08:00:00+05:30',
+    modifiedTime:  '2026-06-24T08:00:00+05:30',
+  },
+  {
+    slug:          'agri-stack-kya-hai-2026',
+    title:         "AgriStack Kya Hai 2026 | Farmers Digital Identity & PM Kisan Connection Guide",
+    desc:          "AgriStack kya hai? Farmer ID kaise banegi, PM Kisan se kya connection hai, data privacy, benefits aur registration process — complete Hinglish guide. Sidhu Singh.",
+    ogTitle:       "AgriStack Kya Hai 2026 — Farmer Digital ID Complete Guide",
+    keywords:      ['AgriStack kya hai', 'AgriStack 2026', 'Farmer ID AgriStack', 'PM Kisan AgriStack connection', 'AgriStack farmer digital identity', 'AgriStack registration kaise kare'],
+    component:     'AgriStackKyaHai2026',
+    publishedTime: '2026-06-24T08:00:00+05:30',
+    modifiedTime:  '2026-06-24T08:00:00+05:30',
+  },
+  {
+    slug:          'pm-kisan-mobile-number-change-2026',
+    title:         "PM Kisan Mobile Number Change 2026 | Online & CSC Se Number Update Guide",
+    desc:          "PM Kisan mobile number change kaise karein 2026 mein? Online portal se ya CSC center se number update karne ka step-by-step guide. OTP verification, documents aur common errors ka solution — Sidhu Singh.",
+    ogTitle:       "PM Kisan Mobile Number Change 2026 — Complete Update Guide",
+    keywords:      ['PM Kisan mobile number change 2026', 'PM Kisan number update kaise kare', 'PM Kisan mobile number badalna', 'PM Kisan CSC mobile update', 'PM Kisan registered mobile number change', 'PM Kisan phone number update 2026'],
+    component:     'PmKisanMobileNumberChange2026',
+    publishedTime: '2026-06-24T08:00:00+05:30',
+    modifiedTime:  '2026-06-24T08:00:00+05:30',
   },
 ];
 
