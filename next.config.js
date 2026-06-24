@@ -18,13 +18,11 @@ const nextConfig = {
           { key: 'X-Frame-Options',           value: 'SAMEORIGIN' },
           { key: 'X-Content-Type-Options',    value: 'nosniff' },
           { key: 'Referrer-Policy',           value: 'strict-origin-when-cross-origin' },
-          // ✅ NEW: tells browser to preconnect DNS for pmkisan.gov.in (faster external links)
           { key: 'X-DNS-Prefetch-Control',    value: 'on' },
         ],
       },
 
-      // ✅ FIX: Static assets — 1 year cache (images, fonts, icons)
-      // Pehle pattern galat tha — parens ke andar colon nahi hona chahiye
+      // ✅ Static assets — 1 year cache
       {
         source: '/_next/static/(.*)',
         headers: [
@@ -44,7 +42,7 @@ const nextConfig = {
         ],
       },
 
-      // ✅ NEW: HTML pages — revalidate every 24 hours (SEO fresh content)
+      // ✅ HTML pages — revalidate every 24 hours
       {
         source: '/((?!_next/static|images|fonts).*)',
         headers: [
@@ -91,6 +89,38 @@ const nextConfig = {
       {
         source: '/pm-kisan-beneficiary-list/',
         destination: '/articles/pm-kisan-beneficiary-list-2026',
+        permanent: true,
+      },
+
+      // ✅ FIXED: Old wrong slugs → new correct slugs
+      {
+        source: '/articles/pm-kisan-24vi-kist-2026',
+        destination: '/articles/pm-kisan-24vi-kist',
+        permanent: true,
+      },
+      {
+        source: '/articles/pm-kisan-24vi-kist-2026/',
+        destination: '/articles/pm-kisan-24vi-kist',
+        permanent: true,
+      },
+      {
+        source: '/articles/agri-stack-kya-hai-2026',
+        destination: '/articles/agristack-kya-hai',
+        permanent: true,
+      },
+      {
+        source: '/articles/agri-stack-kya-hai-2026/',
+        destination: '/articles/agristack-kya-hai',
+        permanent: true,
+      },
+      {
+        source: '/articles/pm-kisan-mobile-number-change-2026',
+        destination: '/articles/pm-kisan-mobile-number-change',
+        permanent: true,
+      },
+      {
+        source: '/articles/pm-kisan-mobile-number-change-2026/',
+        destination: '/articles/pm-kisan-mobile-number-change',
         permanent: true,
       },
     ];
