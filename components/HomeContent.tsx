@@ -1,6 +1,5 @@
-
 /**
- * HomeContent.tsx — KisanStatus.com v24
+ * HomeContent.tsx — KisanStatus.com v25
  * FIXES:
  *  ✅ White border removed from hero glass card
  *  ✅ Article images properly loading with onError fallback
@@ -11,6 +10,7 @@
  *  ✅ Image dimensions set to prevent layout shift (CLS fix)
  *  ✅ Reduced blur-[100px] orbs → better paint performance
  *  ✅ Stats bar uses inline hooks correctly (extracted component)
+ *  ✅ FIX v25: Image filename fixed: pm-kisan-24vi-kist-october-2026.png → .webp
  */
 'use client';
 
@@ -79,7 +79,7 @@ const NEW_ARTICLES = [
     slug:     'pm-kisan-24vi-kist',
     title:    'PM Kisan 24vi Kist 2026',
     emoji:    '📆',
-    image:    '/images/pm-kisan-24vi-kist-october-2026.png',
+    image:    '/images/pm-kisan-24vi-kist-october-2026.webp', // ✅ FIXED: was .png
     desc:     '24vi kist kab aayegi — status check, date aur payment guide',
     category: 'Status',
     keywords: ['24वीं किस्त', '24vi Kist', 'October 2026', 'अगली किस्त कब आएगी'],
@@ -184,7 +184,6 @@ const websiteSchema = {
   },
 };
 
-// ✅ NEW: Article list schema for SEO (helps Google show articles in search)
 const articleListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
@@ -317,7 +316,7 @@ function BreakingAlert() {
   );
 }
 
-// ── FIX: Stat counter extracted as component (hooks can't be called inside .map()) ──
+// ── Animated Stat Box ─────────────────────────────────────────────────────────
 function AnimatedStatBox({
   icon, end, suffix, label, sub, delay,
 }: {
@@ -362,7 +361,6 @@ function ArticleImage({ src, alt, emoji }: { src: string; alt: string; emoji: st
           onError={() => setError(true)}
         />
       ) : (
-        // Fallback when image fails to load
         <div className="h-full w-full flex items-center justify-center">
           <span className="text-5xl">{emoji}</span>
         </div>
@@ -387,10 +385,7 @@ export default function HomeContent() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleListSchema) }} />
 
-      {/* ── Breaking Alert ─────────────────────────────────────────────────── */}
       <BreakingAlert />
-
-      {/* ── Live News Ticker ───────────────────────────────────────────────── */}
       <NewsTicker />
 
       {/* ══════════════════════════════════════════════════════════
@@ -404,11 +399,9 @@ export default function HomeContent() {
         }}
         aria-label="Hero"
       >
-        {/* ✅ FIX: Reduced blur radius for faster paint */}
         <div className="absolute -top-24 -left-20 w-96 h-96 rounded-full bg-emerald-400/15 blur-[80px] pointer-events-none" aria-hidden="true" />
         <div className="absolute top-1/3 -right-10 w-80 h-80 rounded-full bg-amber-400/10 blur-[80px] pointer-events-none" aria-hidden="true" />
 
-        {/* Grid pattern */}
         <div
           className="absolute inset-0 opacity-[0.03] pointer-events-none"
           aria-hidden="true"
@@ -418,7 +411,6 @@ export default function HomeContent() {
           }}
         />
 
-        {/* Hero image — ✅ fetchpriority high for LCP */}
         <div className="absolute right-0 top-0 h-full w-1/2 lg:w-3/5 opacity-35 lg:opacity-45 pointer-events-none" aria-hidden="true">
           <img
             src="/images/hero-banner.png"
@@ -429,7 +421,7 @@ export default function HomeContent() {
               WebkitMaskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 30%, rgba(0,0,0,1) 100%)',
             }}
             loading="eager"
-            // @ts-ignore — fetchpriority is valid HTML attr
+            // @ts-ignore
             fetchpriority="high"
             width={800}
             height={580}
@@ -458,7 +450,6 @@ export default function HomeContent() {
               <span className="text-green-300 font-semibold">Sab free — 10 minute mein.</span>
             </h2>
 
-            {/* Urgency alert */}
             <div className="flex items-start gap-3 bg-green-500/20 border border-green-400/40 rounded-xl px-4 py-3 max-w-lg mb-6 backdrop-blur-sm">
               <span className="text-green-300 text-xl shrink-0">✅</span>
               <div>
@@ -469,7 +460,6 @@ export default function HomeContent() {
               </div>
             </div>
 
-            {/* CTAs */}
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/articles/pm-kisan-23vi-kist-2026-status-check"
@@ -491,7 +481,6 @@ export default function HomeContent() {
               </Link>
             </div>
 
-            {/* Keyword tags */}
             <div className="flex flex-wrap gap-2 mt-5">
               {[
                 'PM Kisan 23vi Kist', 'eKYC 2026', 'Payment Failed',
@@ -507,7 +496,7 @@ export default function HomeContent() {
             </div>
           </div>
 
-          {/* RIGHT — ✅ FIX: border & bg-white/8 removed → no more white border */}
+          {/* RIGHT */}
           <div className="lg:col-span-2 flex flex-col gap-4">
             <div className="bg-white/5 backdrop-blur-md rounded-2xl overflow-hidden shadow-2xl">
               <div className="bg-gradient-to-r from-green-700/70 to-green-600/70 px-5 py-4">
@@ -535,9 +524,7 @@ export default function HomeContent() {
                         <p className="text-white/40 text-[10px]">{s.sub}</p>
                       </div>
                     </div>
-                    <span
-                      className={`font-black text-sm bg-gradient-to-r ${s.grad} bg-clip-text text-transparent`}
-                    >
+                    <span className={`font-black text-sm bg-gradient-to-r ${s.grad} bg-clip-text text-transparent`}>
                       {s.value}
                     </span>
                   </div>
@@ -578,9 +565,7 @@ export default function HomeContent() {
         </div>
       </div>
 
-      {/* ══════════════════════════════════════════════════════════
-          ANIMATED STATS BAR — ✅ FIX: extracted component, no hooks in .map()
-      ══════════════════════════════════════════════════════════ */}
+      {/* ── Animated Stats ─────────────────────────────────────────────────── */}
       <section className="py-8 bg-white border-b border-gray-100">
         <div className="container-site">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -592,9 +577,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* ══════════════════════════════════════════════════════════
-          PROBLEM → SOLUTION
-      ══════════════════════════════════════════════════════════ */}
+      {/* ── Problem → Solution ─────────────────────────────────────────────── */}
       <section className="py-12 bg-white" aria-labelledby="problems-heading">
         <div className="container-site">
           <Reveal>
@@ -642,9 +625,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* ══════════════════════════════════════════════════════════
-          LATEST 5 ARTICLES — ✅ FIX: ArticleImage component with onError fallback
-      ══════════════════════════════════════════════════════════ */}
+      {/* ── Latest Articles ────────────────────────────────────────────────── */}
       <section className="py-14 bg-gradient-to-b from-gray-50 to-white" aria-labelledby="latest-heading">
         <div className="container-site">
           <Reveal>
@@ -669,9 +650,7 @@ export default function HomeContent() {
                   href={`/articles/${a.slug}`}
                   className="group bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 no-underline h-full flex flex-col"
                 >
-                  {/* ✅ FIX: ArticleImage with graceful fallback */}
                   <ArticleImage src={a.image} alt={a.title} emoji={a.emoji} />
-
                   <div className="p-4 flex flex-col flex-1">
                     <span
                       className={`text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full self-start ${
@@ -720,9 +699,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* ══════════════════════════════════════════════════════════
-          MISSION
-      ══════════════════════════════════════════════════════════ */}
+      {/* ── Mission ────────────────────────────────────────────────────────── */}
       <section className="py-14 bg-white" aria-labelledby="mission-heading">
         <div className="container-site">
           <Reveal>
@@ -737,8 +714,7 @@ export default function HomeContent() {
           </Reveal>
           <div className="max-w-3xl mx-auto text-center text-gray-600 text-sm leading-relaxed mb-10 space-y-3">
             <p>
-              Bhai,{' '}
-              <strong>11 crore se zyada farmers</strong> PM Kisan se jude hain — lekin lakho kisan
+              Bhai, <strong>11 crore se zyada farmers</strong> PM Kisan se jude hain — lekin lakho kisan
               har saal sirf isliye kist se reh jaate hain kyunki unhe pata nahi eKYC kaise hoti hai,
               land seeding kya hoti hai, ya naam mismatch kaise fix karte hain.
             </p>
@@ -778,13 +754,8 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* Visual Templates */}
       <KisanTemplates />
-
-      {/* FAQ */}
       <FAQSection faqs={FAQS} />
-
-      {/* AI Assistant */}
       <AiAssistant />
     </>
   );
