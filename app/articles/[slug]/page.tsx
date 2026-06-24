@@ -1,6 +1,6 @@
 /**
  * app/articles/[slug]/page.tsx
- * Dynamic route — serves ALL 21 articles
+ * Dynamic route — serves ALL 22 articles
  * Content lives in components/articles/*.tsx
  * Metadata lives in lib/articles-data.ts
  */
@@ -16,6 +16,7 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   KisanCreditCardOnlineApply2026:             dynamic(() => import('@/components/articles/KisanCreditCardOnlineApply2026')),
   KisanRinKahaSeLe2026:                       dynamic(() => import('@/components/articles/KisanRinKahaSeLe2026')),
   KisanTractorLoan2026:                       dynamic(() => import('@/components/articles/KisanTractorLoan2026')),
+  NanoDap500mlPriceInIndia2026:               dynamic(() => import('@/components/articles/NanoDap500mlPriceInIndia2026')),
   PmKisan21viInstallmentStatusCheck:          dynamic(() => import('@/components/articles/PmKisan21viInstallmentStatusCheck')),
   PmKisan23viKistStatusCheck2026:             dynamic(() => import('@/components/articles/PmKisan23viKistStatusCheck2026')),
   PmKisanBeneficiaryList2026:                 dynamic(() => import('@/components/articles/PmKisanBeneficiaryList2026')),
