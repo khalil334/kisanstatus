@@ -378,11 +378,9 @@ export default function NanoDap500mlPriceInIndia2026(_: { article: ArticleMeta }
         <section id="dosage" className="mb-10">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Nano DAP Dosage Per Acre — Crop-wise Chart</h2>
 
-          {/* ✅ FIXED: removed missing nano-dap-dosage-chart.webp image block
-              Using nano-dap-500ml-price-india-2026 image as replacement (confirm exact filename) */}
           <div className="relative w-full h-56 mb-6 rounded-xl overflow-hidden">
             <Image
-              src="/images/nano-dap-500ml-price-india-2026.webp"
+              src="/images/nano-dap-500ml-bottle-hero.webp"
               alt="Nano DAP 500ml dosage guide India 2026"
               fill
               sizes="(max-width: 768px) 100vw, 768px"
