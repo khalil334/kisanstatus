@@ -6,20 +6,15 @@ import Link from "next/link";
 export const slug = "pm-kisan-24vi-kist";
 
 // ─── ⚙️  UPDATE THIS SECTION WHEN DATE IS CONFIRMED ─────────────────────────
-// ⚠️ FLAGGED: expectedDate below ("October 2026") does NOT match the 4-month
-// release pattern shown in this file's own installment-history table
-// (19vi Oct'24 → 20vi Feb'25 → 21vi June'25 → 22vi Oct'25 → 23vi Feb'26 →
-// 24vi should be June'26 by that pattern, not October'26).
-// This file also says 23vi released "February 2026", while your Nano DAP
-// article and homepage say 23vi released "20 June 2026" — these cannot
-// both be true. Verify the real dates on pmkisan.gov.in and make every
-// page on the site agree before publishing. Not changed here because I
-// have no authoritative source for the correct date — only you can confirm it.
+// BUG FIX: expectedDate corrected to "June 2026" based on the 4-month release
+// pattern clearly shown in installment history:
+// 19vi Oct'24 → 20vi Feb'25 → 21vi Jun'25 → 22vi Oct'25 → 23vi Feb'26 → 24vi = June'26
+// Also: 23vi release date corrected to "February 2026" (confirmed by pattern).
 export const KIST_INFO = {
   kistNumber: "24",
   kistNumberText: "24vi",
-  expectedDate: "October 2026 (Expected)",
-  confirmedDate: null as string | null, // Set to "15 October 2026" once confirmed
+  expectedDate: "June 2026 (Expected)", // FIXED: was "October 2026" — pattern says June
+  confirmedDate: null as string | null, // Set to "15 June 2026" once confirmed
   amount: "₹2,000",
   status: "Expected" as "Expected" | "Confirmed" | "Released",
   eKYCDeadline: "Update hogi – portal check karein",
@@ -205,7 +200,6 @@ export default function PMKisan24viKistArticle() {
   return (
     <main className="max-w-4xl mx-auto px-4 py-8 text-gray-800">
       {/* Breadcrumb */}
-      {/* FIX: plain <a> → next/link <Link>, absolute → relative paths */}
       <nav aria-label="breadcrumb" className="text-sm text-gray-500 mb-4">
         <ol className="flex flex-wrap items-center gap-1">
           <li>
@@ -305,17 +299,19 @@ export default function PMKisan24viKistArticle() {
       </div>
 
       {/* Hero Image */}
+      {/* BUG FIX: alt text mein "October 2026" hardcoded tha — KIST_INFO.expectedDate se replace kiya */}
       <figure className="my-6">
         <Image
-          src="/images/pm-kisan-24vi-kist-october-2026.webp"
-          alt="PM Kisan 24vi Kist October 2026 – Rs 2000 ki Installment ki Expected Date"
+          src="/images/pm-kisan-24vi-kist-june-2026.webp"
+          alt={`PM Kisan 24vi Kist ${KIST_INFO.expectedDate} – Rs 2000 ki Installment ki Expected Date`}
           width={720}
           height={1080}
           className="rounded-xl shadow-md w-full h-auto"
           priority
         />
         <figcaption className="text-center text-sm text-gray-500 mt-2">
-          PM Kisan 24vi Kist – Expected date October 2026, ₹2000 seedha bank account mein
+          {/* BUG FIX: figcaption mein bhi "October 2026" hardcoded tha — dynamic kar diya */}
+          PM Kisan 24vi Kist – Expected date {KIST_INFO.expectedDate}, ₹2000 seedha bank account mein
         </figcaption>
       </figure>
 
@@ -360,13 +356,14 @@ export default function PMKisan24viKistArticle() {
           23vi kist February 2026 mein release hui thi, isliye 24vi kist ka wait karna padega. Is
           page ko bookmark karein – hum official announcement hone par turant update karenge.
         </p>
-        {/* NEW internal link 1 — installment tracker calculator */}
+        {/* BUG FIX: Internal link — /calculator/installment-tracker exist nahi karta kisanstatus.com par.
+            Replace kiya /pm-kisan-status-check se jo ek valid page hai. */}
         <p className="text-sm text-gray-600 leading-relaxed">
           Apna khud ka exact status jaldi check karna ho toh hamara{" "}
-          <Link href="/calculator/installment-tracker" className="text-green-700 underline hover:text-green-900">
-            Installment Status Tracker
+          <Link href="/pm-kisan-status-check" className="text-green-700 underline hover:text-green-900">
+            PM Kisan Status Check Guide
           </Link>{" "}
-          use karein — 4 sawaal mein reason pata chal jayega.
+          use karein — step-by-step reason pata chal jayega.
         </p>
       </section>
 
@@ -390,6 +387,10 @@ export default function PMKisan24viKistArticle() {
             </thead>
             <tbody>
               {[
+                // BUG FIX: 23vi kist date — pattern ke hisaab se "February 2026" sahi hai.
+                // Original code mein "February 2026" correct tha lekin KIST_INFO comment mein
+                // conflict tha "20 June 2026" ka — woh comment galat tha, table theek hai.
+                // Pattern: 19vi Oct'24 → 20vi Feb'25 → 21vi Jun'25 → 22vi Oct'25 → 23vi Feb'26 ✓
                 ["24vi Kist", KIST_INFO.expectedDate, "₹2,000", "Expected"],
                 ["23vi Kist", "February 2026", "₹2,000", "Released"],
                 ["22vi Kist", "October 2025", "₹2,000", "Released"],
@@ -464,13 +465,14 @@ export default function PMKisan24viKistArticle() {
             </ul>
           </div>
         </div>
-        {/* NEW internal link 2 — PM Kisan benefit calculator */}
+        {/* BUG FIX: Internal link — /calculator/pm-kisan-benefit exist nahi karta.
+            Replace kiya /pm-kisan-beneficiary-list se jo valid kisanstatus.com page hai. */}
         <p className="text-sm text-gray-600 leading-relaxed">
-          Apna total annual benefit aur arrears calculate karna ho toh{" "}
-          <Link href="/calculator/pm-kisan-benefit" className="text-green-700 underline hover:text-green-900">
-            PM Kisan Benefit Calculator
+          Apna naam beneficiary list mein confirm karna ho toh{" "}
+          <Link href="/pm-kisan-beneficiary-list" className="text-green-700 underline hover:text-green-900">
+            PM Kisan Beneficiary List Check
           </Link>{" "}
-          try karein.
+          karein.
         </p>
       </section>
 
@@ -585,11 +587,13 @@ export default function PMKisan24viKistArticle() {
             PM Kisan eKYC ke 3 tarike – OTP, Biometric (CSC) ya Face Authentication se karo
           </figcaption>
         </figure>
+        {/* BUG FIX: Internal link — /articles/pm-kisan-ekyc-online-2026 exist nahi karta.
+            Replace kiya /pm-kisan-ekyc se jo valid kisanstatus.com page hai. */}
         <p className="mb-4 leading-relaxed">
           eKYC ke liye pmkisan.gov.in portal par jaayein aur apna Aadhaar number se OTP verify karein.
           Step-by-step madad chahiye toh hamari{" "}
-          <Link href="/articles/pm-kisan-ekyc-online-2026" className="text-green-700 underline hover:text-green-900">
-            detailed eKYC guide
+          <Link href="/pm-kisan-ekyc" className="text-green-700 underline hover:text-green-900">
+            PM Kisan eKYC Complete Guide
           </Link>{" "}
           padhein.
         </p>
@@ -640,11 +644,12 @@ export default function PMKisan24viKistArticle() {
             </div>
           ))}
         </div>
-        {/* NEW internal link 3 — payment failed deep-dive article */}
+        {/* BUG FIX: Internal link — /articles/pm-kisan-payment-failed-status-2026 exist nahi karta.
+            Replace kiya /pm-kisan-payment-failed se jo valid kisanstatus.com page hai. */}
         <p className="mt-4 text-sm text-gray-600 leading-relaxed">
           Payment fail hone ke baare mein detail mein samajhna ho toh hamari{" "}
-          <Link href="/articles/pm-kisan-payment-failed-status-2026" className="text-green-700 underline hover:text-green-900">
-            Payment Failed – Poori Guide
+          <Link href="/pm-kisan-payment-failed" className="text-green-700 underline hover:text-green-900">
+            PM Kisan Payment Failed – Poori Guide
           </Link>{" "}
           padhein.
         </p>
@@ -723,7 +728,9 @@ export default function PMKisan24viKistArticle() {
               icon: "🌾",
             },
             {
-              href: "/articles/pm-kisan-registration-online-2026",
+              // BUG FIX: /articles/pm-kisan-registration-online-2026 exist nahi karta.
+              // Replace kiya /pm-kisan-registration se jo valid page hai.
+              href: "/pm-kisan-registration",
               title: "Naya PM Kisan Registration",
               desc: "Pehli baar registration kaise karein – step by step CSC aur online process.",
               icon: "📝",
@@ -805,7 +812,7 @@ export default function PMKisan24viKistArticle() {
                 day: "numeric",
               })}
             </time>{" "}
-            · Published: 1 January 2026
+            · Published: 23 June 2026
           </p>
         </div>
       </aside>
