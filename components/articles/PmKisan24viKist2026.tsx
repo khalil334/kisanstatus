@@ -5,18 +5,22 @@ import Link from "next/link";
 // ─── Slug ────────────────────────────────────────────────────────────────────
 export const slug = "pm-kisan-24vi-kist";
 
+// ─── ✅ FIX 6: Single source of truth for dates (ek jagah badlo, sab update) ─
+const PUBLISHED_DATE = "2026-06-24T08:00:00.000Z";
+const LAST_UPDATED   = "2026-06-24T08:00:00.000Z";
+
 // ─── ⚙️  UPDATE THIS SECTION WHEN DATE IS CONFIRMED ─────────────────────────
 // 23vi Kist confirmed = 20 June 2026 (source: live site banner)
 // 24vi expected = October 2026 (4-month gap from 23vi)
 export const KIST_INFO = {
-  kistNumber: "24",
-  kistNumberText: "24vi",
-  expectedDate: "October 2026 (Expected)",
-  confirmedDate: null as string | null, // Set to "15 October 2026" once confirmed
-  amount: "₹2,000",
-  status: "Expected" as "Expected" | "Confirmed" | "Released",
-  eKYCDeadline: "Portal check karein – deadline update hogi",
-  totalBeneficiaries: "~9 Crore+",
+  kistNumber:        "24",
+  kistNumberText:    "24vi",
+  expectedDate:      "October 2026 (Expected)",
+  confirmedDate:     null as string | null, // Set to "15 October 2026" once confirmed
+  amount:            "₹2,000",
+  status:            "Expected" as "Expected" | "Confirmed" | "Released",
+  eKYCDeadline:      "Portal check karein – deadline update hogi",
+  totalBeneficiaries:"~9 Crore+",
 };
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -36,33 +40,35 @@ export const metadata: Metadata = {
   authors: [{ name: "KisanStatus Team", url: "https://kisanstatus.com/about" }],
   alternates: { canonical: "https://kisanstatus.com/pm-kisan-24vi-kist" },
   openGraph: {
-    title: `PM Kisan 24vi Kist Kab Aayegi? Date, Status Check Aur Latest Updates 2026`,
-    description: `PM Kisan 24vi installment ki expected date October 2026 hai. Status check, eligibility aur eKYC details yahan padhein.`,
-    url: "https://kisanstatus.com/pm-kisan-24vi-kist",
-    siteName: "KisanStatus",
-    locale: "hi_IN",
-    type: "article",
-    publishedTime: "2026-01-01T08:00:00.000Z",
-    modifiedTime: "2026-06-23T08:00:00.000Z",
+    title:         `PM Kisan 24vi Kist Kab Aayegi? Date, Status Check Aur Latest Updates 2026`,
+    description:   `PM Kisan 24vi installment ki expected date October 2026 hai. Status check, eligibility aur eKYC details yahan padhein.`,
+    url:           "https://kisanstatus.com/pm-kisan-24vi-kist",
+    siteName:      "KisanStatus",
+    locale:        "hi_IN",
+    type:          "article",
+    // ✅ FIX 1: publishedTime Jan 2026 → Jun 2026 (sahi date)
+    publishedTime: PUBLISHED_DATE,
+    // ✅ FIX 2: modifiedTime 23 Jun → 24 Jun (consistent)
+    modifiedTime:  LAST_UPDATED,
     images: [
       {
-        url: "https://kisanstatus.com/images/pm-kisan-24vi-kist-og.webp",
-        width: 800,
+        url:    "https://kisanstatus.com/images/pm-kisan-24vi-kist-og.webp",
+        width:  800,
         height: 420,
-        alt: "PM Kisan 24vi Kist October 2026 – Status Check Guide",
+        alt:    "PM Kisan 24vi Kist October 2026 – Status Check Guide",
       },
     ],
   },
   twitter: {
-    card: "summary_large_image",
-    title: "PM Kisan 24vi Kist Kab Aayegi – Date 2026 & Status Check",
+    card:        "summary_large_image",
+    title:       "PM Kisan 24vi Kist Kab Aayegi – Date 2026 & Status Check",
     description: `PM Kisan ki 24vi kist ki expected date October 2026 hai. Status check, eKYC aur latest updates yahan padhein.`,
-    images: ["https://kisanstatus.com/images/pm-kisan-24vi-kist-og.webp"],
-    site: "@KisanStatus",
+    images:      ["https://kisanstatus.com/images/pm-kisan-24vi-kist-og.webp"],
+    site:        "@KisanStatus",
   },
   robots: {
-    index: true,
-    follow: true,
+    index:     true,
+    follow:    true,
     googleBot: { index: true, follow: true, "max-snippet": -1, "max-image-preview": "large" },
   },
 };
@@ -70,120 +76,123 @@ export const metadata: Metadata = {
 // ─── JSON-LD Schemas ──────────────────────────────────────────────────────────
 export const articleSchema = {
   "@context": "https://schema.org",
-  "@type": "Article",
-  headline: "PM Kisan 24vi Kist Kab Aayegi? Date, Status Check Aur Latest Updates 2026",
+  "@type":    "Article",
+  headline:
+    "PM Kisan 24vi Kist Kab Aayegi? Date, Status Check Aur Latest Updates 2026",
   description:
     "PM Kisan 24th installment ki expected date October 2026, eligibility, status check process aur eKYC requirements – sabki complete guide.",
   image: {
-    "@type": "ImageObject",
-    url: "https://kisanstatus.com/images/pm-kisan-24vi-kist-og.webp",
-    width: 800,
-    height: 420,
+    "@type":  "ImageObject",
+    url:      "https://kisanstatus.com/images/pm-kisan-24vi-kist-og.webp",
+    width:    800,
+    height:   420,
   },
   author: {
     "@type": "Organization",
-    name: "KisanStatus",
-    url: "https://kisanstatus.com",
-    sameAs: ["https://kisanstatus.com/about"],
+    name:    "KisanStatus",
+    url:     "https://kisanstatus.com",
+    sameAs:  ["https://kisanstatus.com/about"],
   },
   publisher: {
     "@type": "Organization",
-    name: "KisanStatus",
-    url: "https://kisanstatus.com",
+    name:    "KisanStatus",
+    url:     "https://kisanstatus.com",
     logo: {
-      "@type": "ImageObject",
-      url: "https://kisanstatus.com/logo.webp",
-      width: 200,
-      height: 60,
+      "@type":  "ImageObject",
+      url:      "https://kisanstatus.com/logo.webp",
+      width:    200,
+      height:   60,
     },
   },
-  datePublished: "2026-01-01T08:00:00.000Z",
-  dateModified: "2026-06-23T08:00:00.000Z",
+  // ✅ FIX 1 + FIX 2: Use shared constants — no more inconsistency
+  datePublished:    PUBLISHED_DATE,
+  dateModified:     LAST_UPDATED,
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": "https://kisanstatus.com/pm-kisan-24vi-kist",
+    "@id":   "https://kisanstatus.com/pm-kisan-24vi-kist",
   },
-  keywords: "pm kisan 24vi kist, pm kisan next installment 2026, pm kisan 24th payment date",
+  keywords:       "pm kisan 24vi kist, pm kisan next installment 2026, pm kisan 24th payment date",
   articleSection: "Agriculture",
-  inLanguage: "hi",
+  inLanguage:     "hi",
   isPartOf: { "@type": "WebSite", name: "KisanStatus", url: "https://kisanstatus.com" },
 };
 
 export const faqSchema = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
+  "@type":    "FAQPage",
   mainEntity: [
     {
       "@type": "Question",
-      name: "PM Kisan 24vi kist kab aayegi?",
+      name:    "PM Kisan 24vi kist kab aayegi?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "PM Kisan 24vi kist ki expected date October 2026 hai. Sarkar generally har 4 mahine mein ek kist release karti hai. Jaise hi official date confirm hogi, hum update kar denge.",
+        text:    "PM Kisan 24vi kist ki expected date October 2026 hai. Sarkar generally har 4 mahine mein ek kist release karti hai. Jaise hi official date confirm hogi, hum update kar denge.",
       },
     },
     {
       "@type": "Question",
-      name: "PM Kisan 24vi kist kitni hogi?",
+      name:    "PM Kisan 24vi kist kitni hogi?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "PM Kisan ki har installment ₹2,000 hoti hai. Saal mein 3 baar milti hai matlab total ₹6,000 per year. 24vi kist bhi ₹2,000 hogi.",
+        text:    "PM Kisan ki har installment ₹2,000 hoti hai. Saal mein 3 baar milti hai matlab total ₹6,000 per year. 24vi kist bhi ₹2,000 hogi.",
       },
     },
     {
       "@type": "Question",
-      name: "PM Kisan status check kaise karein?",
+      name:    "PM Kisan status check kaise karein?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "pmkisan.gov.in par jaayein, Farmers Corner mein Beneficiary Status select karein, Aadhaar number ya registered mobile number enter karein aur OTP verify karein.",
+        text:    "pmkisan.gov.in par jaayein, Farmers Corner mein Beneficiary Status select karein, Aadhaar number ya registered mobile number enter karein aur OTP verify karein.",
       },
     },
     {
       "@type": "Question",
-      name: "24vi kist ke liye eKYC zaruri hai?",
+      name:    "24vi kist ke liye eKYC zaruri hai?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Haan, PM Kisan ki kist lene ke liye eKYC mandatory hai. Agar aapne abhi tak eKYC nahi ki hai toh pmkisan.gov.in par OTP-based ya CSC biometric se verify karwayein.",
+        text:    "Haan, PM Kisan ki kist lene ke liye eKYC mandatory hai. Agar aapne abhi tak eKYC nahi ki hai toh pmkisan.gov.in par OTP-based ya CSC biometric se verify karwayein.",
       },
     },
     {
       "@type": "Question",
-      name: "PM Kisan 24vi kist nahi aayi toh kya karein?",
+      name:    "PM Kisan 24vi kist nahi aayi toh kya karein?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Agar kist release date ke 7-10 din baad bhi paise nahi aaye toh pehle status check karein. FTO Generated ho toh bank se check karein. NPCI se Aadhaar link verify karein. Phir bhi nahi aayi toh helpline 155261 par call karein.",
+        text:    "Agar kist release date ke 7-10 din baad bhi paise nahi aaye toh pehle status check karein. FTO Generated ho toh bank se check karein. NPCI se Aadhaar link verify karein. Phir bhi nahi aayi toh helpline 155261 par call karein.",
       },
     },
     {
       "@type": "Question",
-      name: "Kaise pata chalega ki 24vi kist meri account mein aayi?",
+      name:    "Kaise pata chalega ki 24vi kist meri account mein aayi?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "pmkisan.gov.in par Beneficiary Status check karne par 'Payment Success' status dikhega. Saath hi bank SMS ya PFMS portal se bhi confirm kar sakte hain.",
+        text:    "pmkisan.gov.in par Beneficiary Status check karne par 'Payment Success' status dikhega. Saath hi bank SMS ya PFMS portal se bhi confirm kar sakte hain.",
       },
     },
   ],
 };
 
 export const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
+  "@context":      "https://schema.org",
+  "@type":         "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://kisanstatus.com" },
-    { "@type": "ListItem", position: 2, name: "PM Kisan", item: "https://kisanstatus.com/pm-kisan" },
+    { "@type": "ListItem", position: 1, name: "Home",         item: "https://kisanstatus.com" },
+    { "@type": "ListItem", position: 2, name: "PM Kisan",     item: "https://kisanstatus.com/pm-kisan" },
     { "@type": "ListItem", position: 3, name: "PM Kisan 24vi Kist", item: "https://kisanstatus.com/pm-kisan-24vi-kist" },
   ],
 };
 
 // ─── Article Component ────────────────────────────────────────────────────────
 export default function PMKisan24viKistArticle() {
-  const lastUpdated = new Date("2026-06-23T08:00:00.000Z").toLocaleDateString("hi-IN", {
-    year: "numeric",
+  // ✅ FIX 2: Use shared constant — lastUpdated aur published ek hi jagah se
+  const lastUpdated = new Date(LAST_UPDATED).toLocaleDateString("hi-IN", {
+    year:  "numeric",
     month: "long",
-    day: "numeric",
+    day:   "numeric",
   });
 
   const isConfirmed = KIST_INFO.status === "Confirmed" || KIST_INFO.status === "Released";
-  const isReleased = KIST_INFO.status === "Released";
+  const isReleased  = KIST_INFO.status === "Released";
 
   return (
     <main className="max-w-4xl mx-auto px-3 sm:px-4 py-6 sm:py-8 text-gray-800">
@@ -202,7 +211,7 @@ export default function PMKisan24viKistArticle() {
       {/* Status Notice Box */}
       <div
         className={`border-2 rounded-lg p-3 sm:p-4 mb-5 ${
-          isReleased ? "bg-green-50 border-green-400"
+          isReleased  ? "bg-green-50 border-green-400"
           : isConfirmed ? "bg-blue-50 border-blue-400"
           : "bg-orange-50 border-orange-400"
         }`}
@@ -213,16 +222,25 @@ export default function PMKisan24viKistArticle() {
           </span>
           <div>
             <p className={`font-bold text-base sm:text-lg leading-snug ${
-              isReleased ? "text-green-800" : isConfirmed ? "text-blue-800" : "text-orange-800"
+              isReleased  ? "text-green-800"
+              : isConfirmed ? "text-blue-800"
+              : "text-orange-800"
             }`}>
-              {isReleased
-                ? `PM Kisan 24vi Kist Aa Gayi! – ${KIST_INFO.confirmedDate ?? "Date TBA"}`
-                : isConfirmed
-                ? `PM Kisan 24vi Kist Confirmed: ${KIST_INFO.confirmedDate ?? "Date TBA"}`
+              {/*
+                ✅ FIX 5: Null guard — agar confirmedDate null ho aur status
+                galti se "Confirmed" set ho jaye, toh "Date TBA" ki jagah
+                expectedDate dikhao. Confusion avoid hoga.
+              */}
+              {isReleased && KIST_INFO.confirmedDate
+                ? `PM Kisan 24vi Kist Aa Gayi! – ${KIST_INFO.confirmedDate}`
+                : isConfirmed && KIST_INFO.confirmedDate
+                ? `PM Kisan 24vi Kist Confirmed: ${KIST_INFO.confirmedDate}`
                 : `PM Kisan 24vi Kist – Expected: ${KIST_INFO.expectedDate}`}
             </p>
             <p className={`text-xs sm:text-sm mt-1 ${
-              isReleased ? "text-green-700" : isConfirmed ? "text-blue-700" : "text-orange-700"
+              isReleased  ? "text-green-700"
+              : isConfirmed ? "text-blue-700"
+              : "text-orange-700"
             }`}>
               {isReleased
                 ? "Agar aapki kist nahi aayi toh neeche status check guide padhein."
@@ -231,7 +249,8 @@ export default function PMKisan24viKistArticle() {
                 : "Abhi official date announce nahi hui. Hum yahan update karte rahenge."}
             </p>
             <p className="text-xs text-gray-500 mt-1.5">
-              🗓️ Last Updated: <time dateTime="2026-06-23T08:00:00.000Z">{lastUpdated}</time>
+              🗓️ Last Updated:{" "}
+              <time dateTime={LAST_UPDATED}>{lastUpdated}</time>
             </p>
           </div>
         </div>
@@ -244,7 +263,7 @@ export default function PMKisan24viKistArticle() {
         </h1>
         <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-xs sm:text-sm text-gray-500">
           <span>✍️ <strong>KisanStatus Team</strong></span>
-          <span>🗓️ <time dateTime="2026-06-23T08:00:00.000Z">{lastUpdated}</time></span>
+          <span>🗓️ <time dateTime={LAST_UPDATED}>{lastUpdated}</time></span>
           <span>⏱️ ~12 min read</span>
         </div>
         <p className="mt-3 text-base sm:text-lg text-gray-700 leading-relaxed">
@@ -254,11 +273,11 @@ export default function PMKisan24viKistArticle() {
         </p>
       </header>
 
-      {/* Kist Summary Box — mobile friendly: 2 cols only, no overflow */}
+      {/* Kist Summary Box */}
       <div className="grid grid-cols-2 gap-2 sm:gap-3 mb-7">
         {[
-          { label: "Kist Number", value: KIST_INFO.kistNumberText },
-          { label: "Amount", value: KIST_INFO.amount },
+          { label: "Kist Number",   value: KIST_INFO.kistNumberText },
+          { label: "Amount",        value: KIST_INFO.amount },
           { label: "Expected Date", value: "October 2026" },
           { label: "Beneficiaries", value: KIST_INFO.totalBeneficiaries },
         ].map(({ label, value }) => (
@@ -288,14 +307,14 @@ export default function PMKisan24viKistArticle() {
       <nav aria-label="Table of Contents" className="bg-green-50 border border-green-200 rounded-lg p-4 mb-7">
         <h2 className="text-base sm:text-lg font-semibold text-green-800 mb-2">📋 Is Article Mein Kya Hai</h2>
         <ol className="space-y-1 text-green-700 list-decimal list-inside text-sm">
-          <li><a href="#kist-date" className="hover:underline">24vi Kist Date – Kab Aayegi?</a></li>
+          <li><a href="#kist-date"          className="hover:underline">24vi Kist Date – Kab Aayegi?</a></li>
           <li><a href="#installment-history" className="hover:underline">PM Kisan Installment History</a></li>
-          <li><a href="#eligibility" className="hover:underline">24vi Kist Ke Liye Eligibility</a></li>
-          <li><a href="#status-check" className="hover:underline">Status Check Kaise Karein</a></li>
-          <li><a href="#ekyc" className="hover:underline">eKYC – Mandatory Hai Ya Nahi</a></li>
-          <li><a href="#problems-solutions" className="hover:underline">Common Problems Aur Solutions</a></li>
-          <li><a href="#faq" className="hover:underline">Frequently Asked Questions</a></li>
-          <li><a href="#conclusion" className="hover:underline">Conclusion</a></li>
+          <li><a href="#eligibility"         className="hover:underline">24vi Kist Ke Liye Eligibility</a></li>
+          <li><a href="#status-check"        className="hover:underline">Status Check Kaise Karein</a></li>
+          <li><a href="#ekyc"               className="hover:underline">eKYC – Mandatory Hai Ya Nahi</a></li>
+          <li><a href="#problems-solutions"  className="hover:underline">Common Problems Aur Solutions</a></li>
+          <li><a href="#faq"                className="hover:underline">Frequently Asked Questions</a></li>
+          <li><a href="#conclusion"         className="hover:underline">Conclusion</a></li>
         </ol>
       </nav>
 
@@ -354,12 +373,12 @@ export default function PMKisan24viKistArticle() {
             </thead>
             <tbody>
               {[
-                ["24vi Kist", "October 2026", "₹2,000", "Expected"],
-                ["23vi Kist", "20 June 2026", "₹2,000", "Released"],
-                ["22vi Kist", "October 2025", "₹2,000", "Released"],
-                ["21vi Kist", "June 2025", "₹2,000", "Released"],
-                ["20vi Kist", "February 2025", "₹2,000", "Released"],
-                ["19vi Kist", "October 2024", "₹2,000", "Released"],
+                ["24vi Kist", "October 2026",    "₹2,000", "Expected"],
+                ["23vi Kist", "20 June 2026",    "₹2,000", "Released"],
+                ["22vi Kist", "October 2025",    "₹2,000", "Released"],
+                ["21vi Kist", "June 2025",       "₹2,000", "Released"],
+                ["20vi Kist", "February 2025",   "₹2,000", "Released"],
+                ["19vi Kist", "October 2024",    "₹2,000", "Released"],
               ].map(([kist, date, amount, status]) => (
                 <tr key={kist} className="odd:bg-white even:bg-gray-50">
                   <td className="border border-gray-300 px-2 sm:px-4 py-2 font-medium">{kist}</td>
@@ -502,18 +521,18 @@ export default function PMKisan24viKistArticle() {
           {[
             {
               title: "1. OTP Based",
-              desc: "pmkisan.gov.in par eKYC option mein Aadhaar number daalo, OTP verify karo. Sabse aasaan tarika.",
-              icon: "📱",
+              desc:  "pmkisan.gov.in par eKYC option mein Aadhaar number daalo, OTP verify karo. Sabse aasaan tarika.",
+              icon:  "📱",
             },
             {
               title: "2. Biometric (CSC)",
-              desc: "Nearest CSC centre par jaao, fingerprint se verify karwao. Agar OTP nahi aa raha toh yeh best option hai.",
-              icon: "🖐️",
+              desc:  "Nearest CSC centre par jaao, fingerprint se verify karwao. Agar OTP nahi aa raha toh yeh best option hai.",
+              icon:  "🖐️",
             },
             {
               title: "3. Face Auth",
-              desc: "PM Kisan app ya Aadhaar Face RD app se face scan se bhi eKYC ho sakti hai.",
-              icon: "🤳",
+              desc:  "PM Kisan app ya Aadhaar Face RD app se face scan se bhi eKYC ho sakti hai.",
+              icon:  "🤳",
             },
           ].map(({ title, desc, icon }) => (
             <div key={title} className="border border-green-200 rounded-lg p-3 sm:p-4 bg-green-50 flex sm:block gap-3 items-start">
@@ -557,23 +576,23 @@ export default function PMKisan24viKistArticle() {
         <div className="space-y-3">
           {[
             {
-              problem: "Kist nahi aayi, status 'Payment Success' dikh raha hai",
+              problem:  "Kist nahi aayi, status 'Payment Success' dikh raha hai",
               solution: "PFMS portal (pfms.nic.in) par bank account se check karein. Credit hone mein 24-48 ghante lag sakte hain. Bank se mini-statement lein.",
             },
             {
-              problem: "Status mein 'Aadhaar Authentication Failed' aa raha hai",
+              problem:  "Status mein 'Aadhaar Authentication Failed' aa raha hai",
               solution: "PM Kisan mein naam aur Aadhaar par naam exactly same hona chahiye. Agriculture office mein naam correction karwayein.",
             },
             {
-              problem: "eKYC portal par error aa raha hai",
+              problem:  "eKYC portal par error aa raha hai",
               solution: "Browser refresh karein ya alag browser try karein. Phir bhi error aaye toh CSC centre par biometric eKYC karwayein.",
             },
             {
-              problem: "Bank account se paise wapas aa gaye",
+              problem:  "Bank account se paise wapas aa gaye",
               solution: "Bank account inactive hai ya naam match nahi karta. Bank mein jaao, account activate karwao aur PM Kisan mein updated details daalo.",
             },
             {
-              problem: "Pehli baar registration karna chahte hain",
+              problem:  "Pehli baar registration karna chahte hain",
               solution: "CSC centre ya pmkisan.gov.in par naya registration karo. Pehli kist aane mein 1-3 mahine lag sakte hain.",
             },
           ].map(({ problem, solution }) => (
@@ -600,14 +619,18 @@ export default function PMKisan24viKistArticle() {
         <div className="bg-gray-50 border border-gray-200 rounded-lg p-3 sm:p-4 mt-4">
           <p className="font-semibold text-gray-700 mb-2 text-sm sm:text-base">📞 PM Kisan Helpline:</p>
           <ul className="text-gray-600 text-sm space-y-1">
-            <li>• Helpline: <strong>155261</strong></li>
+            <li>• Helpline:  <strong>155261</strong></li>
             <li>• Toll Free: <strong>1800-115-526</strong></li>
-            <li>• Email: <strong>pmkisan-ict@gov.in</strong></li>
+            <li>• Email:     <strong>pmkisan-ict@gov.in</strong></li>
           </ul>
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* ✅ FIX 3 + FIX 4: FAQ accordion — + toggles to − properly
+          - `group` on <details> enables `group-open:` Tailwind variant
+          - `-webkit-appearance-none` fixes Safari disclosure triangle issue
+          - Two <span> tags: one hides on open, one shows on open
+      */}
       <section id="faq" className="mb-9">
         <h2 className="text-xl sm:text-2xl font-bold text-green-800 mb-5 border-b-2 border-green-200 pb-2">
           7. Frequently Asked Questions
@@ -639,10 +662,28 @@ export default function PMKisan24viKistArticle() {
               a: 'pmkisan.gov.in par "Payment Success" status dikhega. Bank SMS ya PFMS portal (pfms.nic.in) se bhi confirm kar sakte hain.',
             },
           ].map(({ q, a }, i) => (
-            <details key={i} className="border border-gray-200 rounded-lg overflow-hidden">
-              <summary className="cursor-pointer bg-gray-50 px-3 sm:px-4 py-3 font-semibold text-gray-800 text-sm sm:text-base hover:bg-green-50 list-none flex items-center justify-between gap-2">
+            <details
+              key={i}
+              className="group border border-gray-200 rounded-lg overflow-hidden"
+            >
+              {/*
+                ✅ FIX 4 (Safari): [appearance:none] + [-webkit-appearance:none]
+                removes the default browser disclosure arrow cleanly across all browsers.
+                ✅ FIX 3: `group-open:` variant — + hides when open, − shows when open
+              */}
+              <summary className="
+                cursor-pointer
+                bg-gray-50 px-3 sm:px-4 py-3
+                font-semibold text-gray-800 text-sm sm:text-base
+                hover:bg-green-50
+                list-none [appearance:none] [-webkit-appearance:none]
+                flex items-center justify-between gap-2
+              ">
                 <span>{q}</span>
-                <span className="text-green-600 text-lg flex-shrink-0">+</span>
+                {/* + visible when closed, hidden when open */}
+                <span className="text-green-600 text-lg flex-shrink-0 group-open:hidden">+</span>
+                {/* − hidden when closed, visible when open */}
+                <span className="text-green-600 text-lg flex-shrink-0 hidden group-open:block">−</span>
               </summary>
               <div className="px-3 sm:px-4 py-3 text-gray-700 text-sm sm:text-base leading-relaxed border-t border-gray-200">
                 {a}
@@ -660,22 +701,22 @@ export default function PMKisan24viKistArticle() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {[
             {
-              href: "/pm-kisan-mobile-number-change",
+              href:  "/pm-kisan-mobile-number-change",
               title: "PM Kisan Details Update Guide",
-              desc: "Mobile number, bank account aur Aadhaar update karne ki poori jaankari.",
-              icon: "✏️",
+              desc:  "Mobile number, bank account aur Aadhaar update karne ki poori jaankari.",
+              icon:  "✏️",
             },
             {
-              href: "/agristack-kya-hai",
+              href:  "/agristack-kya-hai",
               title: "AgriStack Kya Hai – Farmer ID Guide",
-              desc: "AgriStack kya hai, Farmer ID kaise banegi aur kisan ko kya fayde milenge.",
-              icon: "🌾",
+              desc:  "AgriStack kya hai, Farmer ID kaise banegi aur kisan ko kya fayde milenge.",
+              icon:  "🌾",
             },
             {
-              href: "/pm-kisan-registration",
+              href:  "/pm-kisan-registration",
               title: "Naya PM Kisan Registration",
-              desc: "Pehli baar registration kaise karein – step by step guide.",
-              icon: "📝",
+              desc:  "Pehli baar registration kaise karein – step by step guide.",
+              icon:  "📝",
             },
           ].map(({ href, title, desc, icon }) => (
             <Link
@@ -741,16 +782,24 @@ export default function PMKisan24viKistArticle() {
             real-time track karte hain. Yeh article official pmkisan.gov.in portal aur government
             press releases par based hai aur regularly update hota hai.
           </p>
+          {/* ✅ FIX 1 + FIX 2: Both dates now use shared constants — no mismatch */}
           <p className="text-xs text-gray-400 mt-2">
             Last Updated:{" "}
-            <time dateTime="2026-06-23T08:00:00.000Z">
-              {new Date("2026-06-23T08:00:00.000Z").toLocaleDateString("en-IN", {
-                year: "numeric",
+            <time dateTime={LAST_UPDATED}>
+              {new Date(LAST_UPDATED).toLocaleDateString("en-IN", {
+                year:  "numeric",
                 month: "long",
-                day: "numeric",
+                day:   "numeric",
               })}
             </time>
-            {" "}· Published: 24 June 2026
+            {" "}· Published:{" "}
+            <time dateTime={PUBLISHED_DATE}>
+              {new Date(PUBLISHED_DATE).toLocaleDateString("en-IN", {
+                year:  "numeric",
+                month: "long",
+                day:   "numeric",
+              })}
+            </time>
           </p>
         </div>
       </aside>
