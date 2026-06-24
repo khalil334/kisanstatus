@@ -268,7 +268,7 @@ export default function HomeContent() {
             <p className="text-gray-500 text-sm max-w-lg mx-auto">Category choose karo ya sabhi guides dekho</p>
           </div>
 
-          {/* Category filter /articles page par hai — homepage par nahi */
+          {/* Category filter /articles page par hai — homepage par nahi */}
 
           {/* Articles Grid — sirf NEW articles dikhao, max 6 */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
