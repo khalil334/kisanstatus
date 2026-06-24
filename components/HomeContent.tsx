@@ -1,9 +1,10 @@
 /**
- * HomeContent.tsx — KisanStatus.com v20
+ * HomeContent.tsx — KisanStatus.com v21
  * Full SEO: Professional homepage, Hindi+Hinglish, E-E-A-T, YMYL-safe
  * No big gov links — "guide padho pehle" system
  * Author: Sidhu Singh
- * v20: 3 naye articles add kiye + Latest Articles section
+ * v21: Modern 2026-style redesign — real article hero images, glassmorphism,
+ *      gradient depth, animated accents. Hero banner path fixed.
  */
 'use client';
 
@@ -14,28 +15,27 @@ import AiAssistant from '@/components/AiAssistant';
 import KisanTemplates from '@/components/KisanTemplates';
 
 const ARTICLES = [
-  { slug:'kisan-credit-card-online-apply-2026',             title:'Kisan Credit Card Online Apply 2026',    emoji:'💳', image:null, desc:'KCC apply karo ₹5 lakh tak loan limit, 4% interest se shuru',    category:'Loan',         isNew:true  },
-  { slug:'pm-kisan-23vi-kist-2026-status-check',            title:'PM Kisan 23vi Kist Status Check 2026',   emoji:'📆', image:null, desc:'23vi kist kab aayegi — status check, date aur eligibility',      category:'Status',       isNew:true  },
-  { slug:'pm-kisan-ekyc-online-2026',                       title:'PM Kisan eKYC Online 2026',              emoji:'🔐', image:null, desc:'Ghar baithe free mein eKYC karo — OTP ya CSC dono tarike',        category:'eKYC',         isNew:true  },
-  { slug:'pm-kisan-payment-failed-status-2026',             title:'PM Kisan Payment Failed Fix 2026',       emoji:'💸', image:null, desc:'Payment nahi aayi? Bank error, NPCI issue — seedha solution',    category:'Payment',      isNew:true  },
-  { slug:'pm-kisan-rejected-list-2026',                     title:'PM Kisan Rejected List 2026',            emoji:'📋', image:null, desc:'Rejected kyun hua? 10 reasons aur har ek ka fix',               category:'Rejection',    isNew:true  },
-  { slug:'pm-kisan-registration-online-2026',               title:'PM Kisan Registration Online 2026',      emoji:'📝', image:null, desc:'Pehli baar register karna hai? Documents se lekar submit tak',   category:'Registration', isNew:true  },
-  { slug:'pm-kisan-name-correction-online-2026',            title:'PM Kisan Name Correction 2026',          emoji:'✏️', image:null, desc:'Naam mein spelling galat hai? Ghar baithe 15 min mein fix',     category:'Correction',   isNew:true  },
-  { slug:'pm-kisan-beneficiary-list-2026',                  title:'PM Kisan Beneficiary List 2026',         emoji:'📋', image:null, desc:'Apne gaon ki poori list dekho — naam hai ya nahi check karo',   category:'List',         isNew:true  },
-  { slug:'pm-kisan-installment-history-check-online',       title:'PM Kisan Kist History Check',            emoji:'📊', image:null, desc:'Kaunsi kist kab aayi — poori history ek jagah dekho',           category:'History',      isNew:false },
-  { slug:'pm-kisan-land-seeding-status-check',              title:'PM Kisan Land Seeding Status',           emoji:'🌾', image:null, desc:'Land Seeding No dikhta hai? Yeh karo — patwari se step tak',    category:'Land',         isNew:false },
-  { slug:'pm-kisan-beneficiary-list-village-wise-2026',     title:'Village Wise Beneficiary List 2026',     emoji:'🏘️', image:null, desc:'Gaon wise naam dhundho — state aur block filter se',            category:'List',         isNew:false },
-  { slug:'kisan-rin-kaha-se-le-2026',                       title:'Kisan Loan Kahan Se Le 2026',            emoji:'💰', image:null, desc:'KCC, SBI, NABARD — kaunsa loan best hai aur kaise milega',      category:'Loan',         isNew:false },
-  { slug:'pmfby-crop-insurance-2026',                       title:'PMFBY Fasal Bima Yojana 2026',           emoji:'🌱', image:null, desc:'Fasal bima claim kaise kare — premium se lekar settlement tak', category:'Insurance',    isNew:false },
-  { slug:'kisan-tractor-loan-2026',                         title:'Kisan Tractor Loan 2026',                emoji:'🚜', image:null, desc:'Tractor kharidna hai? Kaunsa loan, kitni EMI — complete guide', category:'Loan',         isNew:false },
-  { slug:'pm-kisan-21vi-installment-status-check',          title:'PM Kisan 21vi Kist Status Check',        emoji:'📅', image:null, desc:'21vi kist aayi ki nahi — mobile se 2 minute mein check karo',  category:'Status',       isNew:false },
-  { slug:'pm-kisan-correction-deactivate-block-guide-2026', title:'PM Kisan Correction & Deactivate Guide', emoji:'🛠️', image:null, desc:'Naam, bank, zameen — correction guide aur deactivate fix',    category:'Correction',   isNew:false },
-  { slug:'pm-kisan-problems-solution-guide-2026',           title:'PM Kisan 10 Common Problems — Fix',      emoji:'🔧', image:null, desc:'RFT pending, PFMS error, payment fail — 10 problems ka hal',   category:'Problems',     isNew:false },
-  { slug:'pm-kisan-fto-generated-ka-matlab-kya-hai',        title:'PM Kisan FTO Generated Ka Matlab',       emoji:'📄', image:null, desc:'FTO Generated dikhta hai? Matlab kya hai aur payment kab aayegi', category:'Payment', isNew:true  },
-  { slug:'pm-kisan-24vi-kist',                              title:'PM Kisan 24vi Kist 2026',                emoji:'📆', image:null, desc:'24vi kist kab aayegi — status check, date aur payment guide',   category:'Status',       isNew:true  },
-  { slug:'agristack-kya-hai',                               title:'AgriStack Kya Hai 2026',                 emoji:'🌐', image:null, desc:'Farmer ID kya hoti hai, AgriStack registration aur fayde',       category:'Problems',     isNew:true  },
-  { slug:'pm-kisan-mobile-number-change',                   title:'PM Kisan Mobile Number Change 2026',     emoji:'📱', image:null, desc:'Mobile number change karo online ya CSC se — step by step',     category:'Correction',   isNew:true  },
-  // ── IMAGE THUMBNAIL ARTICLE ──────────────────────────────────────────────
+  { slug:'kisan-credit-card-online-apply-2026',             title:'Kisan Credit Card Online Apply 2026',    emoji:'💳', image:'/images/kisan-credit-card-apply-online-hero.webp', desc:'KCC apply karo ₹5 lakh tak loan limit, 4% interest se shuru',    category:'Loan',         isNew:true  },
+  { slug:'pm-kisan-23vi-kist-2026-status-check',            title:'PM Kisan 23vi Kist Status Check 2026',   emoji:'📆', image:'/images/pm-kisan-status-check-steps.webp', desc:'23vi kist kab aayegi — status check, date aur eligibility',      category:'Status',       isNew:true  },
+  { slug:'pm-kisan-ekyc-online-2026',                       title:'PM Kisan eKYC Online 2026',              emoji:'🔐', image:'/images/ekyc-guide-banner.webp', desc:'Ghar baithe free mein eKYC karo — OTP ya CSC dono tarike',        category:'eKYC',         isNew:true  },
+  { slug:'pm-kisan-payment-failed-status-2026',             title:'PM Kisan Payment Failed Fix 2026',       emoji:'💸', image:'/images/pm-kisan-payment-delay-reasons-kisanstatus.webp', desc:'Payment nahi aayi? Bank error, NPCI issue — seedha solution',    category:'Payment',      isNew:true  },
+  { slug:'pm-kisan-rejected-list-2026',                     title:'PM Kisan Rejected List 2026',            emoji:'📋', image:'/images/pm-kisan-common-errors-solutions-table.webp', desc:'Rejected kyun hua? 10 reasons aur har ek ka fix',               category:'Rejection',    isNew:true  },
+  { slug:'pm-kisan-registration-online-2026',               title:'PM Kisan Registration Online 2026',      emoji:'📝', image:'/images/registration-steps.jpg', desc:'Pehli baar register karna hai? Documents se lekar submit tak',   category:'Registration', isNew:true  },
+  { slug:'pm-kisan-name-correction-online-2026',            title:'PM Kisan Name Correction 2026',          emoji:'✏️', image:'/images/name-correction.jpg', desc:'Naam mein spelling galat hai? Ghar baithe 15 min mein fix',     category:'Correction',   isNew:true  },
+  { slug:'pm-kisan-beneficiary-list-2026',                  title:'PM Kisan Beneficiary List 2026',         emoji:'📋', image:'/images/beneficiary-list-board.webp', desc:'Apne gaon ki poori list dekho — naam hai ya nahi check karo',   category:'List',         isNew:true  },
+  { slug:'pm-kisan-installment-history-check-online',       title:'PM Kisan Kist History Check',            emoji:'📊', image:'/images/pm-kisan-installment-history-20vi-to-23vi.webp', desc:'Kaunsi kist kab aayi — poori history ek jagah dekho',           category:'History',      isNew:false },
+  { slug:'pm-kisan-land-seeding-status-check',              title:'PM Kisan Land Seeding Status',           emoji:'🌾', image:'/images/land-seeding-field.webp', desc:'Land Seeding No dikhta hai? Yeh karo — patwari se step tak',    category:'Land',         isNew:false },
+  { slug:'pm-kisan-beneficiary-list-village-wise-2026',     title:'Village Wise Beneficiary List 2026',     emoji:'🏘️', image:'/images/village-wise-list.png', desc:'Gaon wise naam dhundho — state aur block filter se',            category:'List',         isNew:false },
+  { slug:'kisan-rin-kaha-se-le-2026',                       title:'Kisan Loan Kahan Se Le 2026',            emoji:'💰', image:'/images/kisan-loan-kcc.webp', desc:'KCC, SBI, NABARD — kaunsa loan best hai aur kaise milega',      category:'Loan',         isNew:false },
+  { slug:'pmfby-crop-insurance-2026',                       title:'PMFBY Fasal Bima Yojana 2026',           emoji:'🌱', image:'/images/pmfby-insurance.png', desc:'Fasal bima claim kaise kare — premium se lekar settlement tak', category:'Insurance',    isNew:false },
+  { slug:'kisan-tractor-loan-2026',                         title:'Kisan Tractor Loan 2026',                emoji:'🚜', image:'/images/tractor-loan.png', desc:'Tractor kharidna hai? Kaunsa loan, kitni EMI — complete guide', category:'Loan',         isNew:false },
+  { slug:'pm-kisan-21vi-installment-status-check',          title:'PM Kisan 21vi Kist Status Check',        emoji:'📅', image:'/images/status-check.jpg', desc:'21vi kist aayi ki nahi — mobile se 2 minute mein check karo',  category:'Status',       isNew:false },
+  { slug:'pm-kisan-correction-deactivate-block-guide-2026', title:'PM Kisan Correction & Deactivate Guide', emoji:'🛠️', image:'/images/correction-guide.webp', desc:'Naam, bank, zameen — correction guide aur deactivate fix',    category:'Correction',   isNew:false },
+  { slug:'pm-kisan-problems-solution-guide-2026',           title:'PM Kisan 10 Common Problems — Fix',      emoji:'🔧', image:'/images/problems-guide.png', desc:'RFT pending, PFMS error, payment fail — 10 problems ka hal',   category:'Problems',     isNew:false },
+  { slug:'pm-kisan-fto-generated-ka-matlab-kya-hai',        title:'PM Kisan FTO Generated Ka Matlab',       emoji:'📄', image:'/images/pm-kisan-fto-generated-featured-image-kisanstatus.webp', desc:'FTO Generated dikhta hai? Matlab kya hai aur payment kab aayegi', category:'Payment', isNew:true  },
+  { slug:'pm-kisan-24vi-kist',                              title:'PM Kisan 24vi Kist 2026',                emoji:'📆', image:'/images/pm-kisan-24vi-kist-banner.webp', desc:'24vi kist kab aayegi — status check, date aur payment guide',   category:'Status',       isNew:true  },
+  { slug:'agristack-kya-hai',                               title:'AgriStack Kya Hai 2026',                 emoji:'🌐', image:'/images/agristack-kya-hai-infographic.webp', desc:'Farmer ID kya hoti hai, AgriStack registration aur fayde',       category:'Problems',     isNew:true  },
+  { slug:'pm-kisan-mobile-number-change',                   title:'PM Kisan Mobile Number Change 2026',     emoji:'📱', image:'/images/pm-kisan-mobile-bank-aadhaar-update-banner-website.webp', desc:'Mobile number change karo online ya CSC se — step by step',     category:'Correction',   isNew:true },
   { slug:'nano-dap-500ml-price-in-india-2026',              title:'Nano DAP 500ml Price in India 2026',     emoji:'🧴', image:'/images/nano-dap-500ml-price-india-2026.webp', desc:'IFFCO Nano DAP 500ml ki price, dosage per acre aur kahan se kharidein — complete guide', category:'Loan', isNew:true },
 ];
 
@@ -95,16 +95,22 @@ export default function HomeContent() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(websiteSchema)}}/>
 
       {/* ══════════════════════════════════════════════════════════
-          HERO — Strong hook, Hinglish + Hindi keywords
+          HERO — 2026-style: layered gradient mesh, glass card, real banner
       ══════════════════════════════════════════════════════════ */}
-      <section className="relative overflow-hidden" style={{background:'linear-gradient(135deg,#052e16 0%,#14532d 50%,#166534 100%)',minHeight:'520px'}} aria-label="Hero">
-        {/* Grid pattern */}
+      <section className="relative overflow-hidden" style={{background:'linear-gradient(160deg,#03150b 0%,#0b3320 35%,#14532d 65%,#1d6b3d 100%)',minHeight:'560px'}} aria-label="Hero">
+
+        {/* Ambient glow orbs — gives 2026 "depth" feel instead of flat gradient */}
+        <div className="absolute -top-24 -left-20 w-96 h-96 rounded-full bg-emerald-400/20 blur-[100px]" aria-hidden="true" />
+        <div className="absolute top-1/3 -right-10 w-80 h-80 rounded-full bg-amber-400/15 blur-[110px]" aria-hidden="true" />
+
+        {/* Subtle grid pattern */}
         <div className="absolute inset-0 opacity-[0.035]" aria-hidden="true"
           style={{backgroundImage:'repeating-linear-gradient(90deg,#fff 0,#fff 1px,transparent 0,transparent 55px),repeating-linear-gradient(0deg,#fff 0,#fff 1px,transparent 0,transparent 55px)'}}/>
-        {/* Real hero banner image — right side */}
-        <div className="absolute right-0 top-0 h-full w-1/2 lg:w-3/5 opacity-30 lg:opacity-40" aria-hidden="true">
+
+        {/* Real hero banner image — right side, masked into background */}
+        <div className="absolute right-0 top-0 h-full w-1/2 lg:w-3/5 opacity-35 lg:opacity-45" aria-hidden="true">
           <img
-            src="/images/hero-banner.png"
+            src="/images/hero-banner.jpg"
             alt=""
             className="h-full w-full object-cover object-left"
             style={{maskImage:'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 30%, rgba(0,0,0,1) 100%)', WebkitMaskImage:'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 30%, rgba(0,0,0,1) 100%)'}}
@@ -116,7 +122,7 @@ export default function HomeContent() {
         <div className="container-site relative z-10 py-14 md:py-20 grid grid-cols-1 lg:grid-cols-5 gap-10 items-center">
           {/* LEFT — Hook copy */}
           <div className="lg:col-span-3">
-            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-green-300 text-xs font-bold px-4 py-2 rounded-full mb-5 uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-green-300 text-xs font-bold px-4 py-2 rounded-full mb-5 uppercase tracking-wider backdrop-blur-sm">
               🌾 India Ka #1 PM Kisan Information Portal
             </div>
 
@@ -138,7 +144,7 @@ export default function HomeContent() {
             </h2>
 
             {/* Urgency alert */}
-            <div className="flex items-start gap-3 bg-green-500/20 border border-green-400/40 rounded-xl px-4 py-3 max-w-lg mb-6">
+            <div className="flex items-start gap-3 bg-green-500/20 border border-green-400/40 rounded-xl px-4 py-3 max-w-lg mb-6 backdrop-blur-sm">
               <span className="text-green-300 text-xl shrink-0">✅</span>
               <div>
                 <p className="text-white font-bold text-sm">23vi Kist Release Ho Chuki — 20 June 2026!</p>
@@ -153,7 +159,7 @@ export default function HomeContent() {
                 📆 23vi Kist Status Dekho
               </Link>
               <Link href="/articles/pm-kisan-ekyc-online-2026"
-                className="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 border border-white/30 text-white font-bold px-5 py-3 rounded-xl text-sm transition-all hover:scale-105">
+                className="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 border border-white/30 text-white font-bold px-5 py-3 rounded-xl text-sm transition-all hover:scale-105 backdrop-blur-sm">
                 🔐 eKYC Karo — Free
               </Link>
               <Link href="/calculator"
@@ -173,8 +179,8 @@ export default function HomeContent() {
             </div>
           </div>
 
-          {/* RIGHT — Quick info card */}
-          <div className="lg:col-span-2 bg-white/8 backdrop-blur-sm border border-white/15 rounded-2xl overflow-hidden shadow-2xl">
+          {/* RIGHT — Quick info glass card */}
+          <div className="lg:col-span-2 bg-white/8 backdrop-blur-md border border-white/15 rounded-2xl overflow-hidden shadow-2xl">
             <div className="bg-gradient-to-r from-green-700/60 to-green-600/60 border-b border-white/10 px-5 py-4">
               <h3 className="text-white font-black text-base flex items-center gap-2">
                 <span>🏛️</span> PM Kisan — Quick Info 2026
@@ -245,9 +251,11 @@ export default function HomeContent() {
                   <span className="text-2xl">{c.icon}</span>
                   <span className={`text-[9px] font-black px-2 py-0.5 rounded-full ${c.tag}`}>Guide</span>
                 </div>
-                <p className="font-black text-gray-900 text-sm leading-tight group-hover:text-green-700 transition-colors">{c.title}</p>
-                <p className="text-[11px] text-gray-500">{c.sub}</p>
-                <span className="text-[11px] font-bold text-green-700 mt-auto group-hover:translate-x-1 transition-transform inline-block">Padho →</span>
+                <h3 className="font-bold text-gray-900 text-sm leading-tight">{c.title}</h3>
+                <p className="text-gray-500 text-xs leading-snug">{c.sub}</p>
+                <span className="text-xs font-bold text-gray-700 group-hover:translate-x-1 transition-transform inline-flex items-center gap-1 mt-1">
+                  Padho → 
+                </span>
               </Link>
             ))}
           </div>
@@ -255,136 +263,117 @@ export default function HomeContent() {
       </section>
 
       {/* ══════════════════════════════════════════════════════════
-          LATEST ARTICLES SECTION — Saare articles cards mein
+          ARTICLE LIBRARY — modern card grid, REAL hero images
       ══════════════════════════════════════════════════════════ */}
-      <section className="py-12 bg-gray-50" aria-labelledby="articles-heading">
+      <section className="py-14 bg-gradient-to-b from-gray-50 to-white" aria-labelledby="library-heading">
         <div className="container-site">
-          {/* Header */}
-          <div className="text-center mb-6">
-            <span className="inline-block bg-green-100 text-green-800 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">📚 Helpful Guides</span>
-            <h2 id="articles-heading" className="text-2xl md:text-3xl font-black text-gray-900 mb-2">
-              Sabse Kaam Ki Guides
+          <div className="text-center mb-8">
+            <span className="inline-block bg-green-100 text-green-800 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">📖 Complete Guide Library</span>
+            <h2 id="library-heading" className="text-2xl md:text-3xl font-black text-gray-900 mb-2">
+              PM Kisan — पूरी जानकारी हिंदी में
             </h2>
-            <p className="text-gray-500 text-sm max-w-lg mx-auto">Category choose karo ya sabhi guides dekho</p>
+            <p className="text-gray-500 text-sm max-w-xl mx-auto">Har article ek real problem solve karta hai — sirf government info nahi, <strong>practical step-by-step guide</strong></p>
           </div>
 
-          {/* Category filter /articles page par hai — homepage par nahi */}
+          {/* Category filter tabs */}
+          <div className="flex flex-wrap justify-center gap-2 mb-8">
+            {categories.map(cat=>(
+              <button key={cat} onClick={()=>setActiveTab(cat)}
+                className={`text-xs font-bold px-4 py-2 rounded-full transition-all ${
+                  activeTab===cat
+                    ? 'bg-green-600 text-white shadow-md shadow-green-600/30'
+                    : 'bg-white text-gray-600 border border-gray-200 hover:border-green-300 hover:text-green-700'
+                }`}>
+                {cat}
+              </button>
+            ))}
+          </div>
 
-          {/* Articles Grid — sirf NEW articles dikhao, max 6 */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {ARTICLES.filter(a => a.isNew).slice(0, 6).map(article => (
-              <Link
-                key={article.slug}
-                href={`/articles/${article.slug}`}
-                className="bg-white border border-gray-200 rounded-2xl overflow-hidden flex flex-col hover:shadow-lg hover:border-green-300 hover:scale-[1.01] transition-all no-underline group"
-              >
-                {/* Thumbnail — image if available, else emoji */}
-                {article.image ? (
-                  <div className="w-full h-36 overflow-hidden bg-gray-100">
-                    <img
-                      src={article.image}
-                      alt={article.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      loading="lazy"
-                    />
-                  </div>
-                ) : (
-                  <div className="w-full h-20 flex items-center justify-center bg-green-50">
-                    <span className="text-4xl">{article.emoji}</span>
-                  </div>
-                )}
-                <div className="p-4 flex flex-col gap-2 flex-1">
-                  <div className="flex items-start justify-between">
-                    <span className="text-[10px] font-bold bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">
-                      {article.category}
+          {/* Article card grid — image-first, modern shadow/hover depth */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {filtered.map(a=>(
+              <Link key={a.slug} href={`/articles/${a.slug}`}
+                className="group bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 no-underline">
+                <div className="relative h-44 w-full overflow-hidden bg-gray-100">
+                  <img
+                    src={a.image}
+                    alt={a.title}
+                    className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                  {a.isNew && (
+                    <span className="absolute top-3 left-3 bg-amber-400 text-gray-900 text-[10px] font-black px-2.5 py-1 rounded-full shadow-md">
+                      NEW
                     </span>
-                    {article.isNew && (
-                      <span className="text-[10px] font-black bg-green-100 text-green-700 px-2 py-0.5 rounded-full">NEW</span>
-                    )}
+                  )}
+                  <span className="absolute bottom-3 left-3 text-2xl drop-shadow-lg">{a.emoji}</span>
+                </div>
+                <div className="p-4">
+                  <span className="text-[10px] font-bold text-green-700 uppercase tracking-wide">{a.category}</span>
+                  <h3 className="font-bold text-gray-900 text-sm leading-snug mt-1 mb-1.5 group-hover:text-green-700 transition-colors">{a.title}</h3>
+                  <p className="text-gray-500 text-xs leading-relaxed mb-2">{a.desc}</p>
+                  <div className="flex items-center justify-between pt-2 border-t border-gray-100">
+                    <span className="text-[11px] text-gray-400 flex items-center gap-1">✍️ Sidhu Singh</span>
+                    <span className="text-xs font-bold text-green-600 group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                      Guide Padho →
+                    </span>
                   </div>
-                  <p className="font-black text-gray-900 text-sm leading-tight group-hover:text-green-700 transition-colors">
-                    {article.title}
-                  </p>
-                  <p className="text-[12px] text-gray-500 leading-relaxed">{article.desc}</p>
-                  <span className="text-[12px] font-bold text-green-700 mt-auto group-hover:translate-x-1 transition-transform inline-block">
-                    Padho →
-                  </span>
                 </div>
               </Link>
             ))}
           </div>
-
-          {/* View All Button */}
-          <div className="text-center mt-8">
-            <Link
-              href="/articles"
-              className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-black px-8 py-3.5 rounded-xl text-sm transition-all hover:scale-105 shadow-lg shadow-green-900/20"
-            >
-              📚 Saari Guides Dekho — {ARTICLES.length} Articles
-              <span className="text-green-200">→</span>
-            </Link>
-            <p className="text-gray-400 text-xs mt-2">PM Kisan, eKYC, Loan, Insurance — sab topics</p>
-          </div>
         </div>
       </section>
 
       {/* ══════════════════════════════════════════════════════════
-          E-E-A-T SECTION — Authority, Mission, Disclaimer
+          MISSION
       ══════════════════════════════════════════════════════════ */}
-      <section className="py-10 bg-green-950 text-white" aria-labelledby="mission-heading">
-        <div className="container-site max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-            <div className="md:col-span-2">
-              <span className="inline-block bg-green-800 text-green-300 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">🏛️ Hamara Mission</span>
-              <h2 id="mission-heading" className="text-xl font-black text-white mb-4">
-                KisanStatus.com — भारत के किसानों की अपनी website
-              </h2>
-              <div className="text-sm text-green-100/80 leading-relaxed space-y-3">
-                <p>
-                  Hum ek team hain jo India ke 11 crore+ kisan bhaion ke liye kaam karti hai. Hamar maqsad hai ki PM Kisan, eKYC, beneficiary list, payment status — sab kuch aasaan Hindi/Hinglish mein milna chahiye. Bina kisi confusion ke.
-                </p>
-                <p>
-                  <strong className="text-white">Sidhu Singh</strong> — hamare lead writer — 8 saal se agriculture aur government schemes cover kar rahe hain. Unka poora focus hai ki kisan bhai ghar baithe apni problems solve kar sakein.
-                </p>
-                <p className="text-green-300/70 text-xs border-t border-green-800 pt-3">
-                  ⚠️ Disclaimer: Yeh website PM Kisan ki official website nahi hai. Hum sirf guide aur information provide karte hain. Official kaam ke liye pmkisan.gov.in par jayein.
-                </p>
-              </div>
-            </div>
-            <div className="space-y-3">
-              {[
-                { icon:'✅', title:'100% Free', sub:'Koi charge nahi — kabhi bhi' },
-                { icon:'🔒', title:'Privacy Safe', sub:'Koi data store ya share nahi' },
-                { icon:'📝', title:'Expert Written', sub:'Sidhu Singh — 8 saal experience' },
-                { icon:'🔄', title:'Daily Update', sub:'Latest info — roz update hoti hai' },
-              ].map(item => (
-                <div key={item.title} className="flex items-center gap-3 bg-green-900/50 border border-green-800 rounded-xl px-4 py-3">
-                  <span className="text-xl shrink-0">{item.icon}</span>
-                  <div>
-                    <p className="text-white font-bold text-sm">{item.title}</p>
-                    <p className="text-green-400 text-[11px]">{item.sub}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+      <section className="py-14 bg-white" aria-labelledby="mission-heading">
+        <div className="container-site">
+          <div className="text-center mb-8">
+            <span className="inline-block bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">🏛️ Hamara Mission</span>
+            <h2 id="mission-heading" className="text-2xl md:text-3xl font-black text-gray-900 mb-2">
+              KisanStatus.com — भारत के किसानों की अपनी website
+            </h2>
           </div>
+          <div className="max-w-3xl mx-auto text-center text-gray-600 text-sm leading-relaxed mb-10 space-y-3">
+            <p>Bhai, <strong>11 crore se zyada farmers</strong> PM Kisan se jude hain — lekin lakho kisan har saal sirf isliye kist se reh jaate hain kyunki unhe pata nahi eKYC kaise hoti hai, land seeding kya hoti hai, ya naam mismatch kaise fix karte hain.</p>
+            <p>KisanStatus.com ka ek hi kaam hai — <strong>government ke complex process ko simple Hinglish mein samjhana.</strong> Har article real farmer problems se likha gaya hai — government website copy-paste nahi.</p>
+            <p>Yeh platform <strong>Sidhu Singh</strong> manage karte hain — agricultural content expert jo pichhle 5 saal se Indian farmers ko government schemes navigate karne mein help kar rahe hain.</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+            {[
+              {icon:'✅',title:'100% Free',     sub:'Koi guide, tool ya info — kabhi charge nahi.'},
+              {icon:'🔒',title:'Data Safe',     sub:'Koi Aadhaar ya mobile store nahi hota.'},
+              {icon:'🏛️',title:'Verified Info',sub:'Sab pmkisan.gov.in se verify ki gayi.'},
+              {icon:'✍️',title:'Real Content',  sub:'Government copy-paste nahi — apna likha.'},
+            ].map(f=>(
+              <div key={f.title} className="text-center p-4 rounded-2xl bg-gray-50 border border-gray-100">
+                <span className="text-2xl block mb-2">{f.icon}</span>
+                <h3 className="font-bold text-gray-900 text-sm mb-1">{f.title}</h3>
+                <p className="text-gray-500 text-[11px] leading-snug">{f.sub}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-amber-700 bg-amber-50 border border-amber-200 rounded-xl px-4 py-3 text-xs max-w-2xl mx-auto mt-8">
+            ⚠️ <strong>Disclaimer:</strong> KisanStatus.com ek independent information portal hai. Yeh Government of India ya pmkisan.gov.in ka official platform nahi hai.
+          </p>
         </div>
       </section>
 
       {/* ══════════════════════════════════════════════════════════
-          FAQ SECTION
+          VISUAL TEMPLATES (existing component, untouched)
+      ══════════════════════════════════════════════════════════ */}
+      <KisanTemplates />
+
+      {/* ══════════════════════════════════════════════════════════
+          FAQ
       ══════════════════════════════════════════════════════════ */}
       <FAQSection faqs={FAQS} />
 
-      {/* ══════════════════════════════════════════════════════════
-          AI ASSISTANT
-      ══════════════════════════════════════════════════════════ */}
+      {/* AI Assistant widget (existing component, untouched) */}
       <AiAssistant />
-
-      {/* ══════════════════════════════════════════════════════════
-          KISAN TEMPLATES
-      ══════════════════════════════════════════════════════════ */}
-      <KisanTemplates />
     </>
   );
 }
