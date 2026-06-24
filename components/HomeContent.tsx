@@ -1,14 +1,16 @@
+
 /**
- * HomeContent.tsx — KisanStatus.com v23
- * 2026-27 Ultra Modern Style:
- *  ✅ Animated ticker/marquee
- *  ✅ Live countdown to 24vi kist (October 15, 2026)
- *  ✅ Scroll animations (Intersection Observer)
- *  ✅ Breaking news style alert
- *  ✅ Animated stats counter
- *  ✅ Sirf 5 newest articles + View All button
- *  ✅ Hindi + Hinglish keyword tags
- *  ✅ Saara purana content same rakha
+ * HomeContent.tsx — KisanStatus.com v24
+ * FIXES:
+ *  ✅ White border removed from hero glass card
+ *  ✅ Article images properly loading with onError fallback
+ *  ✅ All images lazy loaded (performance boost)
+ *  ✅ Hero banner eager + fetchpriority="high" (LCP fix)
+ *  ✅ Hooks inside map() removed → Rules of Hooks violation fixed
+ *  ✅ SEO: Article section schema (ItemList) added
+ *  ✅ Image dimensions set to prevent layout shift (CLS fix)
+ *  ✅ Reduced blur-[100px] orbs → better paint performance
+ *  ✅ Stats bar uses inline hooks correctly (extracted component)
  */
 'use client';
 
@@ -63,7 +65,7 @@ function useScrollReveal() {
   useEffect(() => {
     const obs = new IntersectionObserver(
       ([e]) => { if (e.isIntersecting) { setVisible(true); obs.disconnect(); } },
-      { threshold: 0.15 }
+      { threshold: 0.1 }
     );
     if (ref.current) obs.observe(ref.current);
     return () => obs.disconnect();
@@ -71,7 +73,7 @@ function useScrollReveal() {
   return { ref, visible };
 }
 
-// ── Articles data — sirf 5 newest ────────────────────────────────────────────
+// ── Articles data ─────────────────────────────────────────────────────────────
 const NEW_ARTICLES = [
   {
     slug:     'pm-kisan-24vi-kist',
@@ -162,56 +164,66 @@ const FAQS = [
   },
 ];
 
+// ── Schema ────────────────────────────────────────────────────────────────────
 const faqSchema = {
   '@context': 'https://schema.org', '@type': 'FAQPage',
-  mainEntity: FAQS.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+  mainEntity: FAQS.map(f => ({
+    '@type': 'Question', name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
 };
+
 const websiteSchema = {
   '@context': 'https://schema.org', '@type': 'WebSite',
   name: 'KisanStatus.com', url: 'https://kisanstatus.com',
   description: 'PM Kisan Samman Nidhi status check, eKYC guide, kist dates, beneficiary list aur free agricultural calculators.',
-  potentialAction: { '@type': 'SearchAction', target: 'https://kisanstatus.com/search?q={search_term_string}', 'query-input': 'required name=search_term_string' },
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: 'https://kisanstatus.com/search?q={search_term_string}',
+    'query-input': 'required name=search_term_string',
+  },
+};
+
+// ✅ NEW: Article list schema for SEO (helps Google show articles in search)
+const articleListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'PM Kisan Latest Guides 2026',
+  url: 'https://kisanstatus.com',
+  itemListElement: NEW_ARTICLES.map((a, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    url: `https://kisanstatus.com/articles/${a.slug}`,
+    name: a.title,
+  })),
 };
 
 const STATS = [
-  { label: 'Saalana Labh',      value: '₹6,000',   sub: '3 kiston mein',    icon: '💰', grad: 'from-emerald-400 to-green-600'  },
-  { label: 'Per Kist',          value: '₹2,000',   sub: 'Seedha bank mein', icon: '🏦', grad: 'from-blue-400 to-cyan-600'      },
-  { label: 'Registered Kisan',  value: '11 Cr+',   sub: 'Poore India mein', icon: '👨‍🌾', grad: 'from-amber-400 to-orange-500'   },
-  { label: '22vi Kist',         value: 'Released', sub: '13 March 2026',    icon: '✅', grad: 'from-green-400 to-emerald-600'  },
-  { label: '23vi Kist',         value: 'Released', sub: '20 June 2026',     icon: '✅', grad: 'from-green-400 to-emerald-600'  },
-  { label: '24vi Kist',         value: 'Expected', sub: 'Oct–Nov 2026',     icon: '⏳', grad: 'from-yellow-400 to-amber-500'   },
+  { label: 'Saalana Labh',     value: '₹6,000',   sub: '3 kiston mein',    icon: '💰', grad: 'from-emerald-400 to-green-600'  },
+  { label: 'Per Kist',         value: '₹2,000',   sub: 'Seedha bank mein', icon: '🏦', grad: 'from-blue-400 to-cyan-600'      },
+  { label: 'Registered Kisan', value: '11 Cr+',   sub: 'Poore India mein', icon: '👨‍🌾', grad: 'from-amber-400 to-orange-500'   },
+  { label: '22vi Kist',        value: 'Released', sub: '13 March 2026',    icon: '✅', grad: 'from-green-400 to-emerald-600'  },
+  { label: '23vi Kist',        value: 'Released', sub: '20 June 2026',     icon: '✅', grad: 'from-green-400 to-emerald-600'  },
+  { label: '24vi Kist',        value: 'Expected', sub: 'Oct–Nov 2026',     icon: '⏳', grad: 'from-yellow-400 to-amber-500'   },
 ];
 
-// ── Animated Stat Card ────────────────────────────────────────────────────────
-function StatCard({ label, sub, icon, grad, numericEnd, staticValue }: {
-  label: string; sub: string; icon: string; grad: string;
-  numericEnd?: number; staticValue?: string;
-}) {
-  const { ref, visible } = useScrollReveal();
-  const count = useCounter(numericEnd ?? 0, 1600, visible);
-  return (
-    <div ref={ref} className={`flex items-center justify-between px-5 py-3 transition-all duration-500 ${visible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}>
-      <div className="flex items-center gap-3">
-        <span className="w-9 h-9 rounded-xl bg-white/10 flex items-center justify-center text-lg shrink-0">{icon}</span>
-        <div>
-          <p className="text-white/55 text-[11px] leading-none mb-0.5">{label}</p>
-          <p className="text-white/35 text-[10px]">{sub}</p>
-        </div>
-      </div>
-      <span className={`font-black text-sm bg-gradient-to-r ${grad} bg-clip-text text-transparent`}>
-        {staticValue ?? (numericEnd ? (numericEnd >= 1000 ? `₹${count.toLocaleString('en-IN')}` : count) : '')}
-      </span>
-    </div>
-  );
-}
-
 // ── Reveal wrapper ────────────────────────────────────────────────────────────
-function Reveal({ children, delay = 0, className = '' }: { children: React.ReactNode; delay?: number; className?: string }) {
+function Reveal({
+  children,
+  delay = 0,
+  className = '',
+}: {
+  children: React.ReactNode;
+  delay?: number;
+  className?: string;
+}) {
   const { ref, visible } = useScrollReveal();
   return (
     <div
       ref={ref}
-      className={`transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} ${className}`}
+      className={`transition-all duration-700 ${
+        visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      } ${className}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
       {children}
@@ -219,10 +231,10 @@ function Reveal({ children, delay = 0, className = '' }: { children: React.React
   );
 }
 
-// ── Ticker component ──────────────────────────────────────────────────────────
+// ── Ticker ────────────────────────────────────────────────────────────────────
 function NewsTicker() {
   return (
-    <div className="bg-red-600 text-white py-2 overflow-hidden flex items-center gap-0">
+    <div className="bg-red-600 text-white py-2 overflow-hidden flex items-center">
       <span className="shrink-0 bg-red-800 font-black text-xs px-3 py-0.5 mr-3 uppercase tracking-widest rounded-sm">
         🔴 LIVE
       </span>
@@ -246,9 +258,8 @@ function NewsTicker() {
   );
 }
 
-// ── Countdown component ───────────────────────────────────────────────────────
+// ── Countdown ─────────────────────────────────────────────────────────────────
 function KistCountdown() {
-  // October 15 2026 — expected 24vi kist date
   const { days, hours, mins, secs } = useCountdown('2026-10-15T00:00:00');
   const units = [
     { label: 'Din',    value: days  },
@@ -270,7 +281,9 @@ function KistCountdown() {
           </div>
         ))}
       </div>
-      <p className="text-white/60 text-[10px] mt-2 text-center">* Expected date — official date aane par update hogi</p>
+      <p className="text-white/60 text-[10px] mt-2 text-center">
+        * Expected date — official date aane par update hogi
+      </p>
     </div>
   );
 }
@@ -280,17 +293,85 @@ function BreakingAlert() {
   const [visible, setVisible] = useState(true);
   if (!visible) return null;
   return (
-    <div className="relative bg-gradient-to-r from-green-600 to-emerald-500 text-white px-4 py-3 flex items-start gap-3 animate-pulse-once">
+    <div className="relative bg-gradient-to-r from-green-600 to-emerald-500 text-white px-4 py-3 flex items-start gap-3">
       <span className="shrink-0 bg-white text-green-700 text-[10px] font-black px-2 py-0.5 rounded-sm uppercase tracking-wider mt-0.5">
         Breaking
       </span>
       <p className="text-sm font-bold flex-1">
         🎉 PM Kisan 23vi Kist — ₹2,000 seedha 9.44 Crore+ kisanon ke bank mein aa gayi!{' '}
-        <Link href="/articles/pm-kisan-23vi-kist-2026-status-check" className="underline text-white/90 hover:text-white">
+        <Link
+          href="/articles/pm-kisan-23vi-kist-2026-status-check"
+          className="underline text-white/90 hover:text-white"
+        >
           Apna status check karo →
         </Link>
       </p>
-      <button onClick={() => setVisible(false)} className="shrink-0 text-white/70 hover:text-white text-lg leading-none mt-0.5" aria-label="Close">×</button>
+      <button
+        onClick={() => setVisible(false)}
+        className="shrink-0 text-white/70 hover:text-white text-lg leading-none mt-0.5"
+        aria-label="Close"
+      >
+        ×
+      </button>
+    </div>
+  );
+}
+
+// ── FIX: Stat counter extracted as component (hooks can't be called inside .map()) ──
+function AnimatedStatBox({
+  icon, end, suffix, label, sub, delay,
+}: {
+  icon: string; end: number; suffix: string; label: string; sub: string; delay: number;
+}) {
+  const { ref, visible } = useScrollReveal();
+  const count = useCounter(end, 1800, visible);
+  return (
+    <div
+      ref={ref}
+      className="text-center p-4 rounded-2xl bg-gradient-to-br from-green-50 to-emerald-50 border border-green-100"
+      style={{
+        opacity: visible ? 1 : 0,
+        transform: visible ? 'translateY(0)' : 'translateY(20px)',
+        transition: `all 0.6s ease ${delay}ms`,
+      }}
+    >
+      <span className="text-3xl block mb-1">{icon}</span>
+      <p className="font-black text-2xl text-green-800 tabular-nums">
+        {count}{suffix}
+      </p>
+      <p className="font-bold text-gray-800 text-xs mt-0.5">{label}</p>
+      <p className="text-gray-400 text-[10px]">{sub}</p>
+    </div>
+  );
+}
+
+// ── Article Image with fallback ───────────────────────────────────────────────
+function ArticleImage({ src, alt, emoji }: { src: string; alt: string; emoji: string }) {
+  const [error, setError] = useState(false);
+  return (
+    <div className="relative h-44 w-full overflow-hidden bg-gradient-to-br from-green-100 to-emerald-50 shrink-0">
+      {!error ? (
+        <img
+          src={src}
+          alt={alt}
+          width={400}
+          height={176}
+          className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
+          loading="lazy"
+          decoding="async"
+          onError={() => setError(true)}
+        />
+      ) : (
+        // Fallback when image fails to load
+        <div className="h-full w-full flex items-center justify-center">
+          <span className="text-5xl">{emoji}</span>
+        </div>
+      )}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+      <span className="absolute top-3 left-3 bg-amber-400 text-gray-900 text-[10px] font-black px-2.5 py-1 rounded-full shadow-md">
+        NEW
+      </span>
+      <span className="absolute bottom-3 left-3 text-2xl drop-shadow-lg">{emoji}</span>
     </div>
   );
 }
@@ -301,8 +382,10 @@ export default function HomeContent() {
 
   return (
     <>
+      {/* ── JSON-LD Schemas ─────────────────────────────────────────────────── */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleListSchema) }} />
 
       {/* ── Breaking Alert ─────────────────────────────────────────────────── */}
       <BreakingAlert />
@@ -311,24 +394,32 @@ export default function HomeContent() {
       <NewsTicker />
 
       {/* ══════════════════════════════════════════════════════════
-          HERO — 2026-27 style
+          HERO
       ══════════════════════════════════════════════════════════ */}
       <section
         className="relative overflow-hidden"
-        style={{ background: 'linear-gradient(160deg,#03150b 0%,#0b3320 35%,#14532d 65%,#1d6b3d 100%)', minHeight: '580px' }}
+        style={{
+          background: 'linear-gradient(160deg,#03150b 0%,#0b3320 35%,#14532d 65%,#1d6b3d 100%)',
+          minHeight: '580px',
+        }}
         aria-label="Hero"
       >
-        {/* Glow orbs */}
-        <div className="absolute -top-24 -left-20 w-96 h-96 rounded-full bg-emerald-400/20 blur-[100px]" aria-hidden="true" />
-        <div className="absolute top-1/3 -right-10 w-80 h-80 rounded-full bg-amber-400/15 blur-[110px]" aria-hidden="true" />
-        <div className="absolute bottom-0 left-1/2 w-64 h-64 rounded-full bg-green-300/10 blur-[80px]" aria-hidden="true" />
+        {/* ✅ FIX: Reduced blur radius for faster paint */}
+        <div className="absolute -top-24 -left-20 w-96 h-96 rounded-full bg-emerald-400/15 blur-[80px] pointer-events-none" aria-hidden="true" />
+        <div className="absolute top-1/3 -right-10 w-80 h-80 rounded-full bg-amber-400/10 blur-[80px] pointer-events-none" aria-hidden="true" />
 
         {/* Grid pattern */}
-        <div className="absolute inset-0 opacity-[0.035]" aria-hidden="true"
-          style={{ backgroundImage: 'repeating-linear-gradient(90deg,#fff 0,#fff 1px,transparent 0,transparent 55px),repeating-linear-gradient(0deg,#fff 0,#fff 1px,transparent 0,transparent 55px)' }} />
+        <div
+          className="absolute inset-0 opacity-[0.03] pointer-events-none"
+          aria-hidden="true"
+          style={{
+            backgroundImage:
+              'repeating-linear-gradient(90deg,#fff 0,#fff 1px,transparent 0,transparent 55px),repeating-linear-gradient(0deg,#fff 0,#fff 1px,transparent 0,transparent 55px)',
+          }}
+        />
 
-        {/* Hero image right */}
-        <div className="absolute right-0 top-0 h-full w-1/2 lg:w-3/5 opacity-35 lg:opacity-45" aria-hidden="true">
+        {/* Hero image — ✅ fetchpriority high for LCP */}
+        <div className="absolute right-0 top-0 h-full w-1/2 lg:w-3/5 opacity-35 lg:opacity-45 pointer-events-none" aria-hidden="true">
           <img
             src="/images/hero-banner.png"
             alt=""
@@ -338,6 +429,10 @@ export default function HomeContent() {
               WebkitMaskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 30%, rgba(0,0,0,1) 100%)',
             }}
             loading="eager"
+            // @ts-ignore — fetchpriority is valid HTML attr
+            fetchpriority="high"
+            width={800}
+            height={580}
           />
         </div>
 
@@ -358,7 +453,8 @@ export default function HomeContent() {
             <h2 className="text-base md:text-lg text-green-100/85 mb-5 max-w-xl leading-relaxed font-normal">
               Kisan bhai —{' '}
               <strong className="text-white">23vi kist 20 June 2026 ko release ho chuki hai!</strong>{' '}
-              Apna status abhi check karo: eKYC complete karo, bank Aadhaar seed karo, paisa aaya ya nahi dekho.{' '}
+              Apna status abhi check karo: eKYC complete karo, bank Aadhaar seed karo, paisa aaya ya
+              nahi dekho.{' '}
               <span className="text-green-300 font-semibold">Sab free — 10 minute mein.</span>
             </h2>
 
@@ -367,48 +463,63 @@ export default function HomeContent() {
               <span className="text-green-300 text-xl shrink-0">✅</span>
               <div>
                 <p className="text-white font-bold text-sm">23vi Kist Release Ho Chuki — 20 June 2026!</p>
-                <p className="text-green-200 text-xs mt-0.5">Paisa aaya ya nahi — abhi status check karo. eKYC pending hai to turant karo.</p>
+                <p className="text-green-200 text-xs mt-0.5">
+                  Paisa aaya ya nahi — abhi status check karo. eKYC pending hai to turant karo.
+                </p>
               </div>
             </div>
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-3">
-              <Link href="/articles/pm-kisan-23vi-kist-2026-status-check"
-                className="inline-flex items-center gap-2 bg-green-400 hover:bg-green-300 text-gray-900 font-black px-5 py-3 rounded-xl text-sm transition-all hover:scale-105 shadow-lg shadow-green-900/40">
+              <Link
+                href="/articles/pm-kisan-23vi-kist-2026-status-check"
+                className="inline-flex items-center gap-2 bg-green-400 hover:bg-green-300 text-gray-900 font-black px-5 py-3 rounded-xl text-sm transition-all hover:scale-105 shadow-lg shadow-green-900/40"
+              >
                 📆 23vi Kist Status Dekho
               </Link>
-              <Link href="/articles/pm-kisan-ekyc-online-2026"
-                className="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 border border-white/30 text-white font-bold px-5 py-3 rounded-xl text-sm transition-all hover:scale-105 backdrop-blur-sm">
+              <Link
+                href="/articles/pm-kisan-ekyc-online-2026"
+                className="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 border border-white/30 text-white font-bold px-5 py-3 rounded-xl text-sm transition-all hover:scale-105 backdrop-blur-sm"
+              >
                 🔐 eKYC Karo — Free
               </Link>
-              <Link href="/calculator"
-                className="inline-flex items-center gap-2 bg-amber-400/25 hover:bg-amber-400/35 border border-amber-300/50 text-amber-200 font-bold px-5 py-3 rounded-xl text-sm transition-all hover:scale-105">
+              <Link
+                href="/calculator"
+                className="inline-flex items-center gap-2 bg-amber-400/25 hover:bg-amber-400/35 border border-amber-300/50 text-amber-200 font-bold px-5 py-3 rounded-xl text-sm transition-all hover:scale-105"
+              >
                 🧮 Kisan Calculator
               </Link>
             </div>
 
             {/* Keyword tags */}
             <div className="flex flex-wrap gap-2 mt-5">
-              {['PM Kisan 23vi Kist', 'eKYC 2026', 'Payment Failed', 'Rejected List', 'Name Correction', 'Beneficiary List', 'Land Seeding'].map(tag => (
-                <span key={tag} className="text-[11px] bg-white/10 border border-white/15 text-green-200 px-3 py-1 rounded-full">{tag}</span>
+              {[
+                'PM Kisan 23vi Kist', 'eKYC 2026', 'Payment Failed',
+                'Rejected List', 'Name Correction', 'Beneficiary List', 'Land Seeding',
+              ].map(tag => (
+                <span
+                  key={tag}
+                  className="text-[11px] bg-white/10 border border-white/15 text-green-200 px-3 py-1 rounded-full"
+                >
+                  {tag}
+                </span>
               ))}
             </div>
           </div>
 
-          {/* RIGHT — Glass card + countdown */}
+          {/* RIGHT — ✅ FIX: border & bg-white/8 removed → no more white border */}
           <div className="lg:col-span-2 flex flex-col gap-4">
-            {/* Quick info */}
-            <div className="bg-white/8 backdrop-blur-md border border-white/15 rounded-2xl overflow-hidden shadow-2xl">
-              <div className="bg-gradient-to-r from-green-700/60 to-green-600/60 border-b border-white/10 px-5 py-4">
+            <div className="bg-white/5 backdrop-blur-md rounded-2xl overflow-hidden shadow-2xl">
+              <div className="bg-gradient-to-r from-green-700/70 to-green-600/70 px-5 py-4">
                 <h3 className="text-white font-black text-base flex items-center gap-2">
                   🏛️ PM Kisan — Quick Info 2026
                 </h3>
               </div>
-              <div className="divide-y divide-white/8" ref={statsReveal.ref}>
+              <div className="divide-y divide-white/5" ref={statsReveal.ref}>
                 {STATS.map((s, i) => (
                   <div
                     key={s.label}
-                    className={`flex items-center justify-between px-5 py-3 transition-all duration-500`}
+                    className="flex items-center justify-between px-5 py-3 transition-all duration-500"
                     style={{
                       opacity: statsReveal.visible ? 1 : 0,
                       transform: statsReveal.visible ? 'translateX(0)' : 'translateX(-16px)',
@@ -416,26 +527,35 @@ export default function HomeContent() {
                     }}
                   >
                     <div className="flex items-center gap-3">
-                      <span className="w-9 h-9 rounded-xl bg-white/10 flex items-center justify-center text-lg shrink-0">{s.icon}</span>
+                      <span className="w-9 h-9 rounded-xl bg-white/10 flex items-center justify-center text-lg shrink-0">
+                        {s.icon}
+                      </span>
                       <div>
-                        <p className="text-white/55 text-[11px] leading-none mb-0.5">{s.label}</p>
-                        <p className="text-white/35 text-[10px]">{s.sub}</p>
+                        <p className="text-white/60 text-[11px] leading-none mb-0.5">{s.label}</p>
+                        <p className="text-white/40 text-[10px]">{s.sub}</p>
                       </div>
                     </div>
-                    <span className={`font-black text-sm bg-gradient-to-r ${s.grad} bg-clip-text text-transparent`}>{s.value}</span>
+                    <span
+                      className={`font-black text-sm bg-gradient-to-r ${s.grad} bg-clip-text text-transparent`}
+                    >
+                      {s.value}
+                    </span>
                   </div>
                 ))}
               </div>
               <div className="p-4">
-                <Link href="/articles/pm-kisan-23vi-kist-2026-status-check"
-                  className="w-full flex items-center justify-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold py-3 rounded-xl text-sm transition-colors">
+                <Link
+                  href="/articles/pm-kisan-23vi-kist-2026-status-check"
+                  className="w-full flex items-center justify-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold py-3 rounded-xl text-sm transition-colors"
+                >
                   📖 23vi Kist Status Guide Padho
                 </Link>
-                <p className="text-center text-white/30 text-[10px] mt-2">Guide padhne ke baad official site par jao</p>
+                <p className="text-center text-white/30 text-[10px] mt-2">
+                  Guide padhne ke baad official site par jao
+                </p>
               </div>
             </div>
 
-            {/* ✅ COUNTDOWN */}
             <KistCountdown />
           </div>
         </div>
@@ -445,7 +565,13 @@ export default function HomeContent() {
       <div className="bg-green-950/90 border-b border-green-900 py-2.5">
         <div className="container-site">
           <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 text-[11px] text-green-400">
-            {['✅ 100% Free', '🔒 Koi Data Store Nahi', '🏛️ pmkisan.gov.in Verified', '📞 Helpline: 155261', '✍️ Sidhu Singh — Agricultural Expert'].map(t => (
+            {[
+              '✅ 100% Free',
+              '🔒 Koi Data Store Nahi',
+              '🏛️ pmkisan.gov.in Verified',
+              '📞 Helpline: 155261',
+              '✍️ Sidhu Singh — Agricultural Expert',
+            ].map(t => (
               <span key={t}>{t}</span>
             ))}
           </div>
@@ -453,39 +579,15 @@ export default function HomeContent() {
       </div>
 
       {/* ══════════════════════════════════════════════════════════
-          ANIMATED STATS BAR
+          ANIMATED STATS BAR — ✅ FIX: extracted component, no hooks in .map()
       ══════════════════════════════════════════════════════════ */}
       <section className="py-8 bg-white border-b border-gray-100">
         <div className="container-site">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[
-              { icon: '👨‍🌾', end: 11,    suffix: ' Cr+',  label: 'Registered Farmers',   sub: 'Poore India mein'      },
-              { icon: '💰', end: 6000,  suffix: '',      label: '₹ Saalana Labh',        sub: 'Har eligible kisan ko'  },
-              { icon: '✅', end: 23,    suffix: 'vi',    label: 'Kist Ab Tak',            sub: 'June 2026 tak'          },
-              { icon: '📱', end: 100,   suffix: '% Free', label: 'Yeh Portal',            sub: 'Koi hidden charge nahi' },
-            ].map((s, i) => {
-              const { ref, visible } = useScrollReveal();
-              const count = useCounter(s.end, 1800, visible);
-              return (
-                <div
-                  key={s.label}
-                  ref={ref}
-                  className="text-center p-4 rounded-2xl bg-gradient-to-br from-green-50 to-emerald-50 border border-green-100"
-                  style={{
-                    opacity: visible ? 1 : 0,
-                    transform: visible ? 'translateY(0)' : 'translateY(20px)',
-                    transition: `all 0.6s ease ${i * 100}ms`,
-                  }}
-                >
-                  <span className="text-3xl block mb-1">{s.icon}</span>
-                  <p className="font-black text-2xl text-green-800 tabular-nums">
-                    {count}{s.suffix}
-                  </p>
-                  <p className="font-bold text-gray-800 text-xs mt-0.5">{s.label}</p>
-                  <p className="text-gray-400 text-[10px]">{s.sub}</p>
-                </div>
-              );
-            })}
+            <AnimatedStatBox icon="👨‍🌾" end={11}   suffix=" Cr+"   label="Registered Farmers"  sub="Poore India mein"       delay={0}   />
+            <AnimatedStatBox icon="💰" end={6000} suffix=""       label="₹ Saalana Labh"      sub="Har eligible kisan ko"  delay={100} />
+            <AnimatedStatBox icon="✅" end={23}   suffix="vi"     label="Kist Ab Tak"          sub="June 2026 tak"          delay={200} />
+            <AnimatedStatBox icon="📱" end={100}  suffix="% Free" label="Yeh Portal"           sub="Koi hidden charge nahi" delay={300} />
           </div>
         </div>
       </section>
@@ -497,34 +599,42 @@ export default function HomeContent() {
         <div className="container-site">
           <Reveal>
             <div className="text-center mb-8">
-              <span className="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">🤔 Aapki Problem Kya Hai?</span>
+              <span className="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">
+                🤔 Aapki Problem Kya Hai?
+              </span>
               <h2 id="problems-heading" className="text-2xl md:text-3xl font-black text-gray-900 mb-2">
                 PM Kisan Problem — Seedha Solution
               </h2>
-              <p className="text-gray-500 text-sm max-w-lg mx-auto">Jo problem hai uska naam click karo — step by step guide milegi</p>
+              <p className="text-gray-500 text-sm max-w-lg mx-auto">
+                Jo problem hai uska naam click karo — step by step guide milegi
+              </p>
             </div>
           </Reveal>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {[
-              { icon: '💸', title: 'Kist Nahi Aayi',      sub: 'Payment pending ya failed',   href: '/articles/pm-kisan-payment-failed-status-2026',  bg: 'bg-red-50',    border: 'border-red-200',    tag: 'bg-red-100 text-red-700'     },
-              { icon: '🔐', title: 'eKYC Karna Hai',       sub: 'OTP ya CSC — dono free',      href: '/articles/pm-kisan-ekyc-online-2026',             bg: 'bg-green-50',  border: 'border-green-200',  tag: 'bg-green-100 text-green-700' },
-              { icon: '❌', title: 'Rejected Ho Gaya',     sub: 'Rejection reason pata karo',  href: '/articles/pm-kisan-rejected-list-2026',           bg: 'bg-orange-50', border: 'border-orange-200', tag: 'bg-orange-100 text-orange-700'},
-              { icon: '✏️', title: 'Naam Galat Hai',       sub: '15 min mein fix karo',        href: '/articles/pm-kisan-name-correction-online-2026',  bg: 'bg-purple-50', border: 'border-purple-200', tag: 'bg-purple-100 text-purple-700'},
-              { icon: '🌾', title: 'Land Seeding No',      sub: 'Zameen link nahi — yeh karo', href: '/articles/pm-kisan-land-seeding-status-check',    bg: 'bg-yellow-50', border: 'border-yellow-200', tag: 'bg-yellow-100 text-yellow-700'},
-              { icon: '📝', title: 'Pehli Baar Register',  sub: 'New farmer registration free',href: '/articles/pm-kisan-registration-online-2026',     bg: 'bg-blue-50',   border: 'border-blue-200',   tag: 'bg-blue-100 text-blue-700'   },
-              { icon: '📋', title: 'List Mein Naam Check', sub: 'Village wise dekho',          href: '/articles/pm-kisan-beneficiary-list-2026',        bg: 'bg-teal-50',   border: 'border-teal-200',   tag: 'bg-teal-100 text-teal-700'   },
-              { icon: '🔧', title: 'Koi Aur Problem',      sub: '10 common problems guide',    href: '/articles/pm-kisan-problems-solution-guide-2026', bg: 'bg-gray-50',   border: 'border-gray-200',   tag: 'bg-gray-100 text-gray-700'   },
+              { icon: '💸', title: 'Kist Nahi Aayi',      sub: 'Payment pending ya failed',   href: '/articles/pm-kisan-payment-failed-status-2026',   bg: 'bg-red-50',    border: 'border-red-200',    tag: 'bg-red-100 text-red-700'      },
+              { icon: '🔐', title: 'eKYC Karna Hai',      sub: 'OTP ya CSC — dono free',      href: '/articles/pm-kisan-ekyc-online-2026',              bg: 'bg-green-50',  border: 'border-green-200',  tag: 'bg-green-100 text-green-700'  },
+              { icon: '❌', title: 'Rejected Ho Gaya',    sub: 'Rejection reason pata karo',  href: '/articles/pm-kisan-rejected-list-2026',            bg: 'bg-orange-50', border: 'border-orange-200', tag: 'bg-orange-100 text-orange-700'},
+              { icon: '✏️', title: 'Naam Galat Hai',      sub: '15 min mein fix karo',        href: '/articles/pm-kisan-name-correction-online-2026',   bg: 'bg-purple-50', border: 'border-purple-200', tag: 'bg-purple-100 text-purple-700'},
+              { icon: '🌾', title: 'Land Seeding No',     sub: 'Zameen link nahi — yeh karo', href: '/articles/pm-kisan-land-seeding-status-check',     bg: 'bg-yellow-50', border: 'border-yellow-200', tag: 'bg-yellow-100 text-yellow-700'},
+              { icon: '📝', title: 'Pehli Baar Register', sub: 'New farmer registration free',href: '/articles/pm-kisan-registration-online-2026',      bg: 'bg-blue-50',   border: 'border-blue-200',   tag: 'bg-blue-100 text-blue-700'    },
+              { icon: '📋', title: 'List Mein Naam',      sub: 'Village wise dekho',          href: '/articles/pm-kisan-beneficiary-list-2026',         bg: 'bg-teal-50',   border: 'border-teal-200',   tag: 'bg-teal-100 text-teal-700'    },
+              { icon: '🔧', title: 'Koi Aur Problem',     sub: '10 common problems guide',    href: '/articles/pm-kisan-problems-solution-guide-2026',  bg: 'bg-gray-50',   border: 'border-gray-200',   tag: 'bg-gray-100 text-gray-700'    },
             ].map((c, i) => (
               <Reveal key={c.href} delay={i * 60}>
-                <Link href={c.href}
-                  className={`${c.bg} ${c.border} border rounded-2xl p-4 flex flex-col gap-2 hover:shadow-lg hover:scale-[1.02] transition-all no-underline group h-full`}>
+                <Link
+                  href={c.href}
+                  className={`${c.bg} ${c.border} border rounded-2xl p-4 flex flex-col gap-2 hover:shadow-lg hover:scale-[1.02] transition-all no-underline group h-full`}
+                >
                   <div className="flex items-start justify-between">
                     <span className="text-2xl">{c.icon}</span>
                     <span className={`text-[9px] font-black px-2 py-0.5 rounded-full ${c.tag}`}>Guide</span>
                   </div>
                   <h3 className="font-bold text-gray-900 text-sm leading-tight">{c.title}</h3>
                   <p className="text-gray-500 text-xs leading-snug">{c.sub}</p>
-                  <span className="text-xs font-bold text-gray-700 group-hover:translate-x-1 transition-transform inline-flex items-center gap-1 mt-auto">Padho →</span>
+                  <span className="text-xs font-bold text-gray-700 group-hover:translate-x-1 transition-transform inline-flex items-center gap-1 mt-auto">
+                    Padho →
+                  </span>
                 </Link>
               </Reveal>
             ))}
@@ -533,7 +643,7 @@ export default function HomeContent() {
       </section>
 
       {/* ══════════════════════════════════════════════════════════
-          LATEST 5 ARTICLES
+          LATEST 5 ARTICLES — ✅ FIX: ArticleImage component with onError fallback
       ══════════════════════════════════════════════════════════ */}
       <section className="py-14 bg-gradient-to-b from-gray-50 to-white" aria-labelledby="latest-heading">
         <div className="container-site">
@@ -546,7 +656,8 @@ export default function HomeContent() {
                 PM Kisan — ताज़ी जानकारी हिंदी में
               </h2>
               <p className="text-gray-500 text-sm max-w-xl mx-auto">
-                Har article ek real problem solve karta hai — <strong>sirf government info nahi, practical step-by-step guide</strong>
+                Har article ek real problem solve karta hai —{' '}
+                <strong>sirf government info nahi, practical step-by-step guide</strong>
               </p>
             </div>
           </Reveal>
@@ -554,31 +665,40 @@ export default function HomeContent() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {NEW_ARTICLES.map((a, i) => (
               <Reveal key={a.slug} delay={i * 80}>
-                <Link href={`/articles/${a.slug}`}
-                  className="group bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 no-underline h-full flex flex-col">
-                  <div className="relative h-44 w-full overflow-hidden bg-gray-100 shrink-0">
-                    <img src={a.image} alt={a.title}
-                      className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      loading="lazy" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-                    <span className="absolute top-3 left-3 bg-amber-400 text-gray-900 text-[10px] font-black px-2.5 py-1 rounded-full shadow-md">NEW</span>
-                    <span className="absolute bottom-3 left-3 text-2xl drop-shadow-lg">{a.emoji}</span>
-                  </div>
+                <Link
+                  href={`/articles/${a.slug}`}
+                  className="group bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 no-underline h-full flex flex-col"
+                >
+                  {/* ✅ FIX: ArticleImage with graceful fallback */}
+                  <ArticleImage src={a.image} alt={a.title} emoji={a.emoji} />
+
                   <div className="p-4 flex flex-col flex-1">
-                    <span className={`text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full self-start ${CAT_COLORS[a.category] ?? 'bg-gray-100 text-gray-600'}`}>
+                    <span
+                      className={`text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full self-start ${
+                        CAT_COLORS[a.category] ?? 'bg-gray-100 text-gray-600'
+                      }`}
+                    >
                       {a.category}
                     </span>
-                    <h3 className="font-bold text-gray-900 text-sm leading-snug mt-2 mb-1.5 group-hover:text-green-700 transition-colors">{a.title}</h3>
+                    <h3 className="font-bold text-gray-900 text-sm leading-snug mt-2 mb-1.5 group-hover:text-green-700 transition-colors">
+                      {a.title}
+                    </h3>
                     <p className="text-gray-500 text-xs leading-relaxed mb-3">{a.desc}</p>
-                    {/* Hindi + Hinglish keyword tags */}
                     <div className="flex flex-wrap gap-1.5 mb-3">
                       {a.keywords.map(kw => (
-                        <span key={kw} className="text-[10px] bg-green-50 border border-green-200 text-green-700 px-2 py-0.5 rounded-full font-medium">{kw}</span>
+                        <span
+                          key={kw}
+                          className="text-[10px] bg-green-50 border border-green-200 text-green-700 px-2 py-0.5 rounded-full font-medium"
+                        >
+                          {kw}
+                        </span>
                       ))}
                     </div>
                     <div className="flex items-center justify-between pt-2 border-t border-gray-100 mt-auto">
                       <span className="text-[11px] text-gray-400">✍️ Sidhu Singh</span>
-                      <span className="text-xs font-bold text-green-600 group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">Guide Padho →</span>
+                      <span className="text-xs font-bold text-green-600 group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                        Guide Padho →
+                      </span>
                     </div>
                   </div>
                 </Link>
@@ -586,11 +706,12 @@ export default function HomeContent() {
             ))}
           </div>
 
-          {/* View All Button */}
           <Reveal delay={200}>
             <div className="flex flex-col items-center mt-10 gap-3">
-              <Link href="/articles"
-                className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-black px-8 py-4 rounded-2xl text-base transition-all hover:scale-105 shadow-lg shadow-green-600/30">
+              <Link
+                href="/articles"
+                className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-black px-8 py-4 rounded-2xl text-base transition-all hover:scale-105 shadow-lg shadow-green-600/30"
+              >
                 📚 Saari Guides Dekho — View All Articles
               </Link>
               <p className="text-gray-400 text-xs">22+ guides — PM Kisan, KCC, PMFBY, AgriStack aur zyada</p>
@@ -606,16 +727,31 @@ export default function HomeContent() {
         <div className="container-site">
           <Reveal>
             <div className="text-center mb-8">
-              <span className="inline-block bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">🏛️ Hamara Mission</span>
+              <span className="inline-block bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">
+                🏛️ Hamara Mission
+              </span>
               <h2 id="mission-heading" className="text-2xl md:text-3xl font-black text-gray-900 mb-2">
                 KisanStatus.com — भारत के किसानों की अपनी website
               </h2>
             </div>
           </Reveal>
           <div className="max-w-3xl mx-auto text-center text-gray-600 text-sm leading-relaxed mb-10 space-y-3">
-            <p>Bhai, <strong>11 crore se zyada farmers</strong> PM Kisan se jude hain — lekin lakho kisan har saal sirf isliye kist se reh jaate hain kyunki unhe pata nahi eKYC kaise hoti hai, land seeding kya hoti hai, ya naam mismatch kaise fix karte hain.</p>
-            <p>KisanStatus.com ka ek hi kaam hai — <strong>government ke complex process ko simple Hinglish mein samjhana.</strong> Har article real farmer problems se likha gaya hai — government website copy-paste nahi.</p>
-            <p>Yeh platform <strong>Sidhu Singh</strong> manage karte hain — agricultural content expert jo pichhle 5 saal se Indian farmers ko government schemes navigate karne mein help kar rahe hain.</p>
+            <p>
+              Bhai,{' '}
+              <strong>11 crore se zyada farmers</strong> PM Kisan se jude hain — lekin lakho kisan
+              har saal sirf isliye kist se reh jaate hain kyunki unhe pata nahi eKYC kaise hoti hai,
+              land seeding kya hoti hai, ya naam mismatch kaise fix karte hain.
+            </p>
+            <p>
+              KisanStatus.com ka ek hi kaam hai —{' '}
+              <strong>government ke complex process ko simple Hinglish mein samjhana.</strong> Har
+              article real farmer problems se likha gaya hai — government website copy-paste nahi.
+            </p>
+            <p>
+              Yeh platform <strong>Sidhu Singh</strong> manage karte hain — agricultural content
+              expert jo pichhle 5 saal se Indian farmers ko government schemes navigate karne mein
+              help kar rahe hain.
+            </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
             {[
@@ -635,7 +771,8 @@ export default function HomeContent() {
           </div>
           <Reveal delay={100}>
             <p className="text-center text-amber-700 bg-amber-50 border border-amber-200 rounded-xl px-4 py-3 text-xs max-w-2xl mx-auto mt-8">
-              ⚠️ <strong>Disclaimer:</strong> KisanStatus.com ek independent information portal hai. Yeh Government of India ya pmkisan.gov.in ka official platform nahi hai.
+              ⚠️ <strong>Disclaimer:</strong> KisanStatus.com ek independent information portal hai.
+              Yeh Government of India ya pmkisan.gov.in ka official platform nahi hai.
             </p>
           </Reveal>
         </div>
