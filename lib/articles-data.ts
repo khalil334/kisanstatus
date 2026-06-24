@@ -196,7 +196,6 @@ export const ARTICLES: ArticleMeta[] = [
     publishedTime: '2026-06-23T08:00:00+05:30',
     modifiedTime:  '2026-06-23T08:00:00+05:30',
   },
-  // ── NEW ARTICLE — Nano DAP ────────────────────────────────────────────────
   {
     slug:          'nano-dap-500ml-price-in-india-2026',
     title:         "Nano DAP 500ml Price In India 2026 | IFFCO Nano DAP Kahan Se Khariden & Kaise Use Karein",
@@ -207,9 +206,9 @@ export const ARTICLES: ArticleMeta[] = [
     publishedTime: '2026-06-24T08:00:00+05:30',
     modifiedTime:  '2026-06-24T08:00:00+05:30',
   },
-  // ── 3 NEW ARTICLES ───────────────────────────────────────────────────────
+  // ── FIXED SLUGS — matched to website URLs ────────────────────────────────
   {
-    slug:          'pm-kisan-24vi-kist-2026',
+    slug:          'pm-kisan-24vi-kist',            // ✅ FIXED (was: pm-kisan-24vi-kist-2026)
     title:         "PM Kisan 24vi Kist 2026 | Status Check, Date Aur Payment Guide",
     desc:          "PM Kisan 24vi Kist 2026 kab aayegi? Status check kaise karein Aadhaar, Mobile aur Registration number se. Payment date, eKYC status aur payment fail solutions — complete Hinglish guide. Sidhu Singh.",
     ogTitle:       "PM Kisan 24vi Kist 2026 — Status Check & Payment Date Guide",
@@ -219,7 +218,7 @@ export const ARTICLES: ArticleMeta[] = [
     modifiedTime:  '2026-06-24T08:00:00+05:30',
   },
   {
-    slug:          'agri-stack-kya-hai-2026',
+    slug:          'agristack-kya-hai',             // ✅ FIXED (was: agri-stack-kya-hai-2026)
     title:         "AgriStack Kya Hai 2026 | Farmers Digital Identity & PM Kisan Connection Guide",
     desc:          "AgriStack kya hai? Farmer ID kaise banegi, PM Kisan se kya connection hai, data privacy, benefits aur registration process — complete Hinglish guide. Sidhu Singh.",
     ogTitle:       "AgriStack Kya Hai 2026 — Farmer Digital ID Complete Guide",
@@ -229,7 +228,7 @@ export const ARTICLES: ArticleMeta[] = [
     modifiedTime:  '2026-06-24T08:00:00+05:30',
   },
   {
-    slug:          'pm-kisan-mobile-number-change-2026',
+    slug:          'pm-kisan-mobile-number-change', // ✅ FIXED (was: pm-kisan-mobile-number-change-2026)
     title:         "PM Kisan Mobile Number Change 2026 | Online & CSC Se Number Update Guide",
     desc:          "PM Kisan mobile number change kaise karein 2026 mein? Online portal se ya CSC center se number update karne ka step-by-step guide. OTP verification, documents aur common errors ka solution — Sidhu Singh.",
     ogTitle:       "PM Kisan Mobile Number Change 2026 — Complete Update Guide",
