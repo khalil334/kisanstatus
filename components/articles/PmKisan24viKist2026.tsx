@@ -529,7 +529,7 @@ export default function PmKisan24viKist2026() {
               icon:  "💳",
             },
             {
-              href:  "/articles/agristack-kya-hai-2026",
+              href:  "/articles/agri-stack-kya-hai-2026",
               title: "AgriStack Kya Hai – Farmer ID Guide",
               desc:  "AgriStack kya hai, Farmer ID kaise banegi aur kisan ko kya fayde milenge.",
               icon:  "🌾",
