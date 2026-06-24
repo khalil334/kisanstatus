@@ -1,234 +1,460 @@
 /**
- * lib/articles-data.ts
- * Central metadata for all 21 articles — used by [slug]/page.tsx
- * To add a new article: add entry here + create components/articles/YourComponent.tsx
+ * HomeContent.tsx — KisanStatus.com v20
+ * Full SEO: Professional homepage, Hindi+Hinglish, E-E-A-T, YMYL-safe
+ * No big gov links — "guide padho pehle" system
+ * Author: Sidhu Singh
+ * v20: 3 naye articles add kiye + Latest Articles section
  */
+'use client';
 
-export interface ArticleMeta {
-  slug:          string;
-  title:         string;
-  desc:          string;
-  ogTitle:       string;
-  keywords:      string[];
-  component:     string;
-  publishedTime?: string;
-  modifiedTime?:  string;
-}
+import { useState } from 'react';
+import Link from 'next/link';
+import FAQSection from '@/components/FAQSection';
+import AiAssistant from '@/components/AiAssistant';
+import KisanTemplates from '@/components/KisanTemplates';
 
-export const ARTICLES: ArticleMeta[] = [
-  {
-    slug:          'kisan-rin-kaha-se-le-2026',
-    title:         "Kisan Rin Kaha Se Le 2026 | Kisan Credit Card, Bank Loan, CSC Center Guide",
-    desc:          "Kisan Rin Kaha Se Le 2026 – Jaaniye Kisan Credit Card, SBI Kisan Loan, Cooperative Society, CSC Center se loan kaise milta hai. Rajpal Chacha ki kahani se seekhein sahi tarika.",
-    ogTitle:       "Kisan Rin Kaha Se Le 2026 – Puri Jankari Hindi Mein",
-    keywords:      ['Kisan Rin Kaha Se Le 2026', 'Kisan Credit Card', 'Kisan Loan 2026', 'SBI Kisan Loan', 'CSC Center Loan', 'Cooperative Society Loan'],
-    component:     'KisanRinKahaSeLe2026',
-    publishedTime: '2026-01-10T08:00:00+05:30',
-    modifiedTime:  '2026-06-23T08:00:00+05:30',
-  },
-  {
-    slug:          'kisan-tractor-loan-2026',
-    title:         "Kisan Tractor Loan Kaise Le Bina Down Payment 2026 | Complete Guide",
-    desc:          "Kisan tractor loan kaise le bina down payment ke? Jaaniye bank aur finance company se tractor loan lene ka pura process, eligibility, documents, interest rates, EMI calculation aur government subsidy options – 2026 complete guide.",
-    ogTitle:       "Kisan Tractor Loan Kaise Le Bina Down Payment 2026",
-    keywords:      ['Kisan Tractor Loan Kaise Le Bina Down Payment', 'Tractor Loan Without Down Payment', 'Kisan Tractor Finance 2026', 'Tractor Loan Eligibility For Farmers', 'Tractor Loan Documents Required', 'tractor loan bank se kaise le'],
-    component:     'KisanTractorLoan2026',
-    publishedTime: '2026-01-20T08:00:00+05:30',
-    modifiedTime:  '2026-06-23T08:00:00+05:30',
-  },
-  {
-    slug:          'pm-kisan-21vi-installment-status-check',
-    title:         "PM Kisan 21vi Installment Status Check 2026 | Aadhaar & Mobile Se Check Karo",
-    desc:          "PM Kisan 21vi Installment Status Check 2026 — Aadhaar number se, Mobile number se, step-by-step guide. eKYC status, payment fail reason, aur beneficiary list — sab ek jagah. Sidhu Singh.",
-    ogTitle:       "PM Kisan 21vi Installment Status Check 2026 — Step by Step Guide",
-    keywords:      ['PM Kisan 21vi installment status check', 'PM Kisan 21vi kist 2026', 'PM Kisan beneficiary status 2026', 'PM Kisan status check aadhaar', 'PM Kisan payment status check online', 'pm kisan 21 installment date'],
-    component:     'PmKisan21viInstallmentStatusCheck',
-    publishedTime: '2026-02-01T08:00:00+05:30',
-    modifiedTime:  '2026-06-23T08:00:00+05:30',
-  },
-  {
-    slug:          'pm-kisan-beneficiary-list-2026',
-    title:         "PM Kisan Beneficiary List 2026 | Village Wise Naam Check Karo",
-    desc:          "PM Kisan beneficiary list 2026 check karo — naam online search karo, village wise list dekho, PDF download karo aur missing naam fix karo. Sidhu Singh ki guide.",
-    ogTitle:       "PM Kisan Beneficiary List 2026 — Village Wise Check",
-    keywords:      ['PM Kisan beneficiary list 2026', 'PM Kisan village wise list', 'PM Kisan list mein naam check', 'PM Kisan PDF download', 'pm kisan beneficiary status 2026'],
-    component:     'PmKisanBeneficiaryList2026',
-    publishedTime: '2026-02-10T08:00:00+05:30',
-    modifiedTime:  '2026-06-23T08:00:00+05:30',
-  },
-  {
-    slug:          'pm-kisan-beneficiary-list-village-wise-2026',
-    title:         "PM Kisan Beneficiary List Village Wise 2026 | Apne Gaon Ki List Dekhen",
-    desc:          "PM Kisan Beneficiary List Village Wise 2026 kaise dekhen? State, District, Block aur Village select karke apna naam check karein. PDF download, eKYC, naam missing ho to kya karein — sab kuch yahan milega.",
-    ogTitle:       "PM Kisan Beneficiary List Village Wise 2026 — Gaon Ki List Kaise Dekhen",
-    keywords:      ['PM Kisan Beneficiary List Village Wise 2026', 'PM Kisan Village Wise Beneficiary List', 'PM Kisan Beneficiary List Check Online', 'PM Kisan Beneficiary List PDF Download', 'PM Kisan Beneficiary Status Village Wise', 'PM Kisan list me naam kaise dekhen'],
-    component:     'PmKisanBeneficiaryListVillageWise2026',
-    publishedTime: '2026-02-15T08:00:00+05:30',
-    modifiedTime:  '2026-06-23T08:00:00+05:30',
-  },
-  {
-    slug:          'pm-kisan-correction-deactivate-block-guide-2026',
-    title:         "PM Kisan Correction, Deactivate Aur Block Guide 2026 | Naam, Aadhaar, Bank Fix Karo",
-    desc:          "PM Kisan naam correction, Aadhaar correction, bank account update, deactivate account reactivation, aur block fix karne ka poora guide 2026. Step-by-step Hinglish mein — Sidhu Singh.",
-    ogTitle:       "PM Kisan Correction, Deactivate & Block Guide 2026",
-    keywords:      ['PM Kisan correction 2026', 'PM Kisan naam correction kaise kare', 'PM Kisan account deactivate', 'PM Kisan block account fix', 'PM Kisan bank account correction', 'PM Kisan Aadhaar correction'],
-    component:     'PmKisanCorrectionDeactivateBlockGuide2026',
-    publishedTime: '2026-02-20T08:00:00+05:30',
-    modifiedTime:  '2026-06-23T08:00:00+05:30',
-  },
-  {
-    slug:          'pm-kisan-ekyc-online-2026',
-    title:         "PM Kisan eKYC Online 2026 | Aadhaar OTP & CSC Verification Complete Guide",
-    desc:          "PM Kisan eKYC online 2026 complete guide. Aadhaar OTP se ghar baithe ya CSC biometric se eKYC karo. Status check, common errors fix — Sidhu Singh.",
-    ogTitle:       "PM Kisan eKYC Online 2026 — Complete Guide",
-    keywords:      ['PM Kisan eKYC online 2026', 'PM Kisan eKYC kaise kare', 'PM Kisan Aadhaar OTP eKYC', 'PM Kisan CSC eKYC', 'pm kisan ekyc status check 2026'],
-    component:     'PmKisanEkycOnline2026',
-    publishedTime: '2026-03-01T08:00:00+05:30',
-    modifiedTime:  '2026-06-23T08:00:00+05:30',
-  },
-  {
-    slug:          'pm-kisan-installment-history-check-online',
-    title:         "PM Kisan Installment History Check Online 2026 | Purani Installments Kaise Dekhen",
-    desc:          "PM Kisan Installment History Check Online kaise karein? Registration number, mobile number ya Aadhaar se pichli sari installments ki details dekhen. Missing payment, failed transaction aur eKYC problems ka complete solution yahan hai.",
-    ogTitle:       "PM Kisan Installment History Check Online 2026 — Pichli Sari Payments Ek Jagah",
-    keywords:      ['PM Kisan Installment History Check Online', 'PM Kisan Installment History 2026', 'PM Kisan Payment History Check', 'PM Kisan Installment Status History', 'PM Kisan Previous Installment Details', 'PM Kisan purani installment kaise dekhen'],
-    component:     'PmKisanInstallmentHistoryCheckOnline',
-    publishedTime: '2026-03-05T08:00:00+05:30',
-    modifiedTime:  '2026-06-23T08:00:00+05:30',
-  },
-  {
-    slug:          'pm-kisan-land-seeding-status-check',
-    title:         "PM Kisan Land Seeding Status Check 2026 | Pending, Rejected, Approved Guide",
-    desc:          "PM Kisan Land Seeding Status Check kaise kare 2026 mein – Pending, Rejected, Approved ka matlab, common errors, documents, aur step-by-step solution guide in Hinglish.",
-    ogTitle:       "PM Kisan Land Seeding Status Check 2026 – Puri Jankari Hinglish Mein",
-    keywords:      ['PM Kisan Land Seeding Status Check', 'PM Kisan Land Seeding Status Online', 'PM Kisan Land Seeding Status 2026', 'PM Kisan Land Seeding Problem Solution', 'Land Seeding Pending Fix', 'PM Kisan Installment Not Coming'],
-    component:     'PmKisanLandSeedingStatusCheck',
-    publishedTime: '2026-03-10T08:00:00+05:30',
-    modifiedTime:  '2026-06-23T08:00:00+05:30',
-  },
-  {
-    slug:          'pm-kisan-name-correction-online-2026',
-    title:         "PM Kisan Name Correction Online 2026 | Aadhaar Naam Mismatch Fix Guide",
-    desc:          "PM Kisan name correction online 2026 — Aadhaar naam mismatch, bank account naam galat, spelling error sab fix karo. Step-by-step guide — Sidhu Singh.",
-    ogTitle:       "PM Kisan Name Correction Online 2026",
-    keywords:      ['PM Kisan name correction online 2026', 'PM Kisan naam correction kaise kare', 'PM Kisan Aadhaar name mismatch', 'PM Kisan bank name correction', 'pm kisan naam update 2026'],
-    component:     'PmKisanNameCorrectionOnline2026',
-    publishedTime: '2026-03-15T08:00:00+05:30',
-    modifiedTime:  '2026-06-23T08:00:00+05:30',
-  },
-  {
-    slug:          'pm-kisan-payment-failed-status-2026',
-    title:         "PM Kisan Payment Failed Status 2026 — Reasons & Solutions",
-    desc:          "PM Kisan payment failed status 2026 — error codes, Aadhaar mismatch, bank verification problems aur step-by-step solutions. Sidhu Singh ki complete guide.",
-    ogTitle:       "PM Kisan Payment Failed Status 2026 — Reasons & Solutions",
-    keywords:      ['PM Kisan payment failed 2026', 'PM Kisan payment fail reason', 'PM Kisan NPCI error', 'PM Kisan Aadhaar mismatch payment', 'pm kisan payment nahi aayi solution'],
-    component:     'PmKisanPaymentFailedStatus2026',
-    publishedTime: '2026-03-20T08:00:00+05:30',
-    modifiedTime:  '2026-06-23T08:00:00+05:30',
-  },
-  {
-    slug:          'pm-kisan-problems-solution-guide-2026',
-    title:         "PM Kisan Problems Solution Guide 2026 | RFT, PFMS, Payment Fail — Sab Fix Karo",
-    desc:          "PM Kisan ki 10 sabse badi problems aur unka seedha hal — RFT Signed, PFMS Pending, Payment Fail, Registration ID bhool gaye, naam galat, eKYC pending. Step-by-step Hinglish guide — Sidhu Singh.",
-    ogTitle:       "PM Kisan Problems Solution Guide 2026 — 10 Problems, 10 Solutions",
-    keywords:      ['PM Kisan problems solution 2026', 'PM Kisan RFT signed matlab', 'PM Kisan PFMS pending', 'PM Kisan payment fail solution', 'PM Kisan registration ID kaise pata kare', 'PM Kisan naam galat solution'],
-    component:     'PmKisanProblemsSolutionGuide2026',
-    publishedTime: '2026-03-25T08:00:00+05:30',
-    modifiedTime:  '2026-06-23T08:00:00+05:30',
-  },
-  {
-    slug:          'pm-kisan-registration-online-2026',
-    title:         "PM Kisan Registration Online 2026 | Complete Guide",
-    desc:          "PM Kisan registration online 2026 — naye farmers ke liye complete guide. Eligibility, required documents, step-by-step process, status check aur common errors fix. Sidhu Singh.",
-    ogTitle:       "PM Kisan Registration Online 2026 — Complete Guide",
-    keywords:      ['PM Kisan registration online 2026', 'PM Kisan new farmer registration', 'PM Kisan registration kaise kare', 'PM Kisan eligibility 2026', 'pm kisan registration status check'],
-    component:     'PmKisanRegistrationOnline2026',
-    publishedTime: '2026-04-01T08:00:00+05:30',
-    modifiedTime:  '2026-06-23T08:00:00+05:30',
-  },
-  {
-    slug:          'pm-kisan-rejected-list-2026',
-    title:         "PM Kisan Rejected List 2026 — Reasons & Fix",
-    desc:          "PM Kisan rejected list 2026 check karo — naam rejection reasons, Aadhaar mismatch, eKYC problems aur step-by-step solutions. Sidhu Singh ki complete guide.",
-    ogTitle:       "PM Kisan Rejected List 2026 — Reasons & Fix",
-    keywords:      ['PM Kisan rejected list 2026', 'PM Kisan rejection reason', 'PM Kisan naam rejected', 'PM Kisan application rejected fix', 'pm kisan rejected list me naam hataye'],
-    component:     'PmKisanRejectedList2026',
-    publishedTime: '2026-04-10T08:00:00+05:30',
-    modifiedTime:  '2026-06-23T08:00:00+05:30',
-  },
-  {
-    slug:          'pmfby-crop-insurance-2026',
-    title:         "PMFBY Crop Insurance Claim Status Check 2026 | Pradhan Mantri Fasal Bima Yojana Guide",
-    desc:          "PMFBY crop insurance claim status check kaise karein? Pradhan Mantri Fasal Bima Yojana 2026 mein registration, claim file karna, online status track karna aur insurance payment receive karna – Ramlal Verma ki story ke saath poori jaankari.",
-    ogTitle:       "PMFBY Crop Insurance Claim Status Check 2026 – Complete Guide",
-    keywords:      ['PMFBY Crop Insurance', 'PMFBY Claim Status Check', 'Pradhan Mantri Fasal Bima Yojana 2026', 'Crop Insurance Claim Online', 'PMFBY Insurance Payment Status', 'fasal bima yojana claim kaise kare'],
-    component:     'PmfbyCropInsurance2026',
-    publishedTime: '2026-04-20T08:00:00+05:30',
-    modifiedTime:  '2026-06-23T08:00:00+05:30',
-  },
-  {
-    slug:          'pm-kisan-23vi-kist-2026-status-check',
-    title:         "PM Kisan 23vi Kist Status Check 2026",
-    desc:          "PM Kisan Yojana ki 23vi kist ka status online kaise check karein. Mobile number, Aadhaar, Registration number se payment status check karein.",
-    ogTitle:       "PM Kisan 23vi Kist Status Check 2026 - Complete Guide",
-    keywords:      ['PM Kisan 23vi Kist', 'PM Kisan Status Check', '23vi Kist Payment Status', 'PM Kisan Next Installment'],
-    component:     'PmKisan23viKistStatusCheck2026',
-    publishedTime: '2026-04-01T00:00:00+05:30',
-    modifiedTime:  '2026-06-20T08:00:00+05:30',
-  },
-  {
-    slug:          'kisan-credit-card-online-apply-2026',
-    title:         "Kisan Credit Card (KCC) Online Apply 2026 | Eligibility, Documents Aur Loan Limit Guide",
-    desc:          "Kisan Credit Card online apply 2026 — eligibility, documents, loan limit ₹5 lakh tak, interest rate 4% se shuru. Step-by-step Hinglish guide — Sidhu Singh.",
-    ogTitle:       "Kisan Credit Card (KCC) Online Apply 2026 — Complete Guide",
-    keywords:      ['Kisan Credit Card Online Apply 2026', 'KCC Apply Online', 'KCC Eligibility 2026', 'KCC Loan Limit', 'KCC Interest Rate 2026', 'Kisan Credit Card Documents Required'],
-    component:     'KisanCreditCardOnlineApply2026',
-    publishedTime: '2026-06-01T08:00:00+05:30',
-    modifiedTime:  '2026-06-21T08:00:00+05:30',
-  },
-  {
-    slug:          'pm-kisan-fto-generated-ka-matlab-kya-hai',
-    title:         "PM Kisan FTO Generated Ka Matlab Kya Hai 2026 | FTO Status Complete Guide",
-    desc:          "PM Kisan FTO Generated ka matlab kya hai? FTO Pending, FTO Processed aur Payment Order ka poora explanation — step-by-step Hinglish guide. Sidhu Singh.",
-    ogTitle:       "PM Kisan FTO Generated Ka Matlab Kya Hai 2026 — Complete Guide",
-    keywords:      ['PM Kisan FTO Generated', 'FTO Generated matlab', 'PM Kisan FTO status', 'PM Kisan payment FTO', 'FTO processed meaning', 'PM Kisan FTO kya hota hai'],
-    component:     'PmKisanFtoGeneratedKaMatlabKyaHai',
-    publishedTime: '2026-06-23T08:00:00+05:30',
-    modifiedTime:  '2026-06-23T08:00:00+05:30',
-  },
+const ARTICLES = [
+  { slug:'kisan-credit-card-online-apply-2026',             title:'Kisan Credit Card Online Apply 2026',   emoji:'💳', desc:'KCC apply karo ₹5 lakh tak loan limit, 4% interest se shuru',    category:'Loan',         isNew:true  },
+  { slug:'pm-kisan-23vi-kist-2026-status-check',            title:'PM Kisan 23vi Kist Status Check 2026',  emoji:'📆', desc:'23vi kist kab aayegi — status check, date aur eligibility',      category:'Status',       isNew:true  },
+  { slug:'pm-kisan-ekyc-online-2026',                       title:'PM Kisan eKYC Online 2026',             emoji:'🔐', desc:'Ghar baithe free mein eKYC karo — OTP ya CSC dono tarike',        category:'eKYC',         isNew:true  },
+  { slug:'pm-kisan-payment-failed-status-2026',             title:'PM Kisan Payment Failed Fix 2026',      emoji:'💸', desc:'Payment nahi aayi? Bank error, NPCI issue — seedha solution',    category:'Payment',      isNew:true  },
+  { slug:'pm-kisan-rejected-list-2026',                     title:'PM Kisan Rejected List 2026',           emoji:'📋', desc:'Rejected kyun hua? 10 reasons aur har ek ka fix',               category:'Rejection',    isNew:true  },
+  { slug:'pm-kisan-registration-online-2026',               title:'PM Kisan Registration Online 2026',     emoji:'📝', desc:'Pehli baar register karna hai? Documents se lekar submit tak',   category:'Registration', isNew:true  },
+  { slug:'pm-kisan-name-correction-online-2026',            title:'PM Kisan Name Correction 2026',         emoji:'✏️', desc:'Naam mein spelling galat hai? Ghar baithe 15 min mein fix',     category:'Correction',   isNew:true  },
+  { slug:'pm-kisan-beneficiary-list-2026',                  title:'PM Kisan Beneficiary List 2026',        emoji:'📋', desc:'Apne gaon ki poori list dekho — naam hai ya nahi check karo',   category:'List',         isNew:true  },
+  { slug:'pm-kisan-installment-history-check-online',       title:'PM Kisan Kist History Check',          emoji:'📊', desc:'Kaunsi kist kab aayi — poori history ek jagah dekho',           category:'History',      isNew:false },
+  { slug:'pm-kisan-land-seeding-status-check',              title:'PM Kisan Land Seeding Status',         emoji:'🌾', desc:'Land Seeding No dikhta hai? Yeh karo — patwari se step tak',    category:'Land',         isNew:false },
+  { slug:'pm-kisan-beneficiary-list-village-wise-2026',     title:'Village Wise Beneficiary List 2026',   emoji:'🏘️', desc:'Gaon wise naam dhundho — state aur block filter se',            category:'List',         isNew:false },
+  { slug:'kisan-rin-kaha-se-le-2026',                       title:'Kisan Loan Kahan Se Le 2026',          emoji:'💰', desc:'KCC, SBI, NABARD — kaunsa loan best hai aur kaise milega',      category:'Loan',         isNew:false },
+  { slug:'pmfby-crop-insurance-2026',                       title:'PMFBY Fasal Bima Yojana 2026',         emoji:'🌱', desc:'Fasal bima claim kaise kare — premium se lekar settlement tak', category:'Insurance',    isNew:false },
+  { slug:'kisan-tractor-loan-2026',                         title:'Kisan Tractor Loan 2026',              emoji:'🚜', desc:'Tractor kharidna hai? Kaunsa loan, kitni EMI — complete guide', category:'Loan',         isNew:false },
+  { slug:'pm-kisan-21vi-installment-status-check',          title:'PM Kisan 21vi Kist Status Check',      emoji:'📅', desc:'21vi kist aayi ki nahi — mobile se 2 minute mein check karo',  category:'Status',       isNew:false },
+  { slug:'pm-kisan-correction-deactivate-block-guide-2026', title:'PM Kisan Correction & Deactivate Guide',emoji:'🛠️', desc:'Naam, bank, zameen — correction guide aur deactivate fix',    category:'Correction',   isNew:false },
+  { slug:'pm-kisan-problems-solution-guide-2026',           title:'PM Kisan 10 Common Problems — Fix',    emoji:'🔧', desc:'RFT pending, PFMS error, payment fail — 10 problems ka hal',   category:'Problems',     isNew:false },
+  { slug:'pm-kisan-fto-generated-ka-matlab-kya-hai',        title:'PM Kisan FTO Generated Ka Matlab',     emoji:'📄', desc:'FTO Generated dikhta hai? Matlab kya hai aur payment kab aayegi', category:'Payment',   isNew:true  },
   // ── 3 NEW ARTICLES ───────────────────────────────────────────────────────
+  { slug:'pm-kisan-24vi-kist-2026',                         title:'PM Kisan 24vi Kist 2026',              emoji:'📆', desc:'24vi kist kab aayegi — status check, date aur payment guide',   category:'Status',       isNew:true,  thumbnail:'/images/pm-kisan-24vi-kist-banner.webp' },
+  { slug:'agri-stack-kya-hai-2026',                         title:'AgriStack Kya Hai 2026',               emoji:'🌐', desc:'Farmer ID kya hoti hai, AgriStack registration aur fayde',       category:'Problems',     isNew:true  },
+  { slug:'pm-kisan-mobile-number-change-2026',              title:'PM Kisan Mobile Number Change 2026',   emoji:'📱', desc:'Mobile number change karo online ya CSC se — step by step',     category:'Correction',   isNew:true  },
+];
+
+// ── Devanagari Hindi FAQs — voice search optimized ──────────────────────────
+const FAQS = [
   {
-    slug:          'pm-kisan-24vi-kist-2026',
-    title:         "PM Kisan 24vi Kist 2026 | Status Check, Date Aur Payment Guide",
-    desc:          "PM Kisan 24vi Kist 2026 kab aayegi? Status check kaise karein Aadhaar, Mobile aur Registration number se. Payment date, eKYC status aur payment fail solutions — complete Hinglish guide. Sidhu Singh.",
-    ogTitle:       "PM Kisan 24vi Kist 2026 — Status Check & Payment Date Guide",
-    keywords:      ['PM Kisan 24vi Kist 2026', 'PM Kisan 24vi installment', 'PM Kisan 24vi kist kab aayegi', 'PM Kisan 24 kist status check', 'PM Kisan next installment 2026', 'PM Kisan payment date 2026'],
-    component:     'PmKisan24viKist2026',
-    publishedTime: '2026-06-24T08:00:00+05:30',
-    modifiedTime:  '2026-06-24T08:00:00+05:30',
+    q:'पीएम किसान की 23वीं किस्त कब आई?',
+    a:'23वीं किस्त 20 जून 2026 को release हो चुकी है — 9.44 करोड़ से ज़्यादा किसानों को ₹2,000 DBT से मिले हैं। अगर अभी तक पैसा नहीं आया तो eKYC और bank में Aadhaar seeding ज़रूर check करें। Status check: pmkisan.gov.in → Beneficiary Status।',
   },
   {
-    slug:          'agri-stack-kya-hai-2026',
-    title:         "AgriStack Kya Hai 2026 | Farmers Digital Identity & PM Kisan Connection Guide",
-    desc:          "AgriStack kya hai? Farmer ID kaise banegi, PM Kisan se kya connection hai, data privacy, benefits aur registration process — complete Hinglish guide. Sidhu Singh.",
-    ogTitle:       "AgriStack Kya Hai 2026 — Farmer Digital ID Complete Guide",
-    keywords:      ['AgriStack kya hai', 'AgriStack 2026', 'Farmer ID AgriStack', 'PM Kisan AgriStack connection', 'AgriStack farmer digital identity', 'AgriStack registration kaise kare'],
-    component:     'AgriStackKyaHai2026',
-    publishedTime: '2026-06-24T08:00:00+05:30',
-    modifiedTime:  '2026-06-24T08:00:00+05:30',
+    q:'पीएम किसान eKYC नहीं हुई तो क्या पैसा आएगा?',
+    a:'नहीं — बिना eKYC के कोई भी किस्त नहीं आती, चाहे registration कितना भी सही हो। eKYC free है: pmkisan.gov.in → eKYC → Aadhaar number → OTP verify। या नज़दीकी CSC center जाएं — बिल्कुल मुफ्त।',
   },
   {
-    slug:          'pm-kisan-mobile-number-change-2026',
-    title:         "PM Kisan Mobile Number Change 2026 | Online & CSC Se Number Update Guide",
-    desc:          "PM Kisan mobile number change kaise karein 2026 mein? Online portal se ya CSC center se number update karne ka step-by-step guide. OTP verification, documents aur common errors ka solution — Sidhu Singh.",
-    ogTitle:       "PM Kisan Mobile Number Change 2026 — Complete Update Guide",
-    keywords:      ['PM Kisan mobile number change 2026', 'PM Kisan number update kaise kare', 'PM Kisan mobile number badalna', 'PM Kisan CSC mobile update', 'PM Kisan registered mobile number change', 'PM Kisan phone number update 2026'],
-    component:     'PmKisanMobileNumberChange2026',
-    publishedTime: '2026-06-24T08:00:00+05:30',
-    modifiedTime:  '2026-06-24T08:00:00+05:30',
+    q:'पीएम किसान स्टेटस में "Land Seeding No" दिखाए तो क्या करें?',
+    a:'इसका मतलब आपकी ज़मीन PM Kisan portal से link नहीं हुई। Fix: 1) अपने पटवारी/लेखपाल से मिलें 2) Khasra-Khatauni अपडेट करवाएं 3) Block Agriculture Officer को application दें 4) 15-30 दिन में status check करें।',
+  },
+  {
+    q:'पीएम किसान में नाम गलत है तो payment आएगी क्या?',
+    a:'नहीं — name mismatch से eKYC fail होती है और payment रुक जाती है। Fix: pmkisan.gov.in → Farmers Corner → Edit Aadhaar Details → Name Correction। Aadhaar card देखकर बिल्कुल same spelling डालें। 15-20 दिन में update होगा।',
+  },
+  {
+    q:'KCC (किसान क्रेडिट कार्ड) लोन कैसे मिलेगा?',
+    a:'KCC के लिए: 1) नज़दीकी SBI/PNB/Bank of Baroda जाएं 2) KCC application form भरें 3) Aadhaar, land records, photo दें 4) 7-14 दिन में approval। Interest 7% p.a. (subsidy के साथ 4% effective)। ₹1.6 लाख तक बिना collateral।',
   },
 ];
 
-export const ARTICLES_MAP = Object.fromEntries(
-  ARTICLES.map(a => [a.slug, a])
-);
+const faqSchema = {
+  '@context':'https://schema.org','@type':'FAQPage',
+  mainEntity: FAQS.map(f=>({'@type':'Question',name:f.q,acceptedAnswer:{'@type':'Answer',text:f.a}})),
+};
+
+const websiteSchema = {
+  '@context':'https://schema.org','@type':'WebSite',
+  name:'KisanStatus.com', url:'https://kisanstatus.com',
+  description:'PM Kisan Samman Nidhi status check, eKYC guide, 23vi kist dates, beneficiary list aur free agricultural calculators — India ke kisan ke liye.',
+  potentialAction:{'@type':'SearchAction',target:'https://kisanstatus.com/search?q={search_term_string}','query-input':'required name=search_term_string'},
+};
+
+const STATS = [
+  { label:'Saalana Labh',    value:'₹6,000',   sub:'3 kiston mein',       icon:'💰', grad:'from-emerald-400 to-green-600'  },
+  { label:'Per Kist',        value:'₹2,000',   sub:'Seedha bank mein',    icon:'🏦', grad:'from-blue-400 to-cyan-600'      },
+  { label:'Registered Kisan',value:'11 Cr+',   sub:'Poore India mein',    icon:'👨‍🌾', grad:'from-amber-400 to-orange-500'   },
+  { label:'22vi Kist',       value:'Released', sub:'13 March 2026',       icon:'✅', grad:'from-green-400 to-emerald-600'  },
+  { label:'23vi Kist',       value:'Released', sub:'20 June 2026',        icon:'✅', grad:'from-green-400 to-emerald-600'  },
+  { label:'24vi Kist',       value:'Expected', sub:'Aug–Nov 2026',        icon:'⏳', grad:'from-yellow-400 to-amber-500'   },
+];
+
+export default function HomeContent() {
+  const [activeTab, setActiveTab] = useState<string>('All');
+  const categories = ['All','Status','eKYC','Payment','Registration','Correction','List','Loan','Insurance','Problems','History','Land'];
+  const filtered = activeTab==='All' ? ARTICLES : ARTICLES.filter(a=>a.category===activeTab);
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema)}}/>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(websiteSchema)}}/>
+
+      {/* ══════════════════════════════════════════════════════════
+          HERO — Strong hook, Hinglish + Hindi keywords
+      ══════════════════════════════════════════════════════════ */}
+      <section className="relative overflow-hidden" style={{background:'linear-gradient(135deg,#052e16 0%,#14532d 50%,#166534 100%)',minHeight:'520px'}} aria-label="Hero">
+        {/* Grid pattern */}
+        <div className="absolute inset-0 opacity-[0.035]" aria-hidden="true"
+          style={{backgroundImage:'repeating-linear-gradient(90deg,#fff 0,#fff 1px,transparent 0,transparent 55px),repeating-linear-gradient(0deg,#fff 0,#fff 1px,transparent 0,transparent 55px)'}}/>
+        {/* Real hero banner image — right side */}
+        <div className="absolute right-0 top-0 h-full w-1/2 lg:w-3/5 opacity-30 lg:opacity-40" aria-hidden="true">
+          <img
+            src="/images/hero-banner.png"
+            alt=""
+            className="h-full w-full object-cover object-left"
+            style={{maskImage:'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 30%, rgba(0,0,0,1) 100%)', WebkitMaskImage:'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 30%, rgba(0,0,0,1) 100%)'}}
+            loading="eager"
+            fetchPriority="high"
+          />
+        </div>
+
+        <div className="container-site relative z-10 py-14 md:py-20 grid grid-cols-1 lg:grid-cols-5 gap-10 items-center">
+          {/* LEFT — Hook copy */}
+          <div className="lg:col-span-3">
+            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-green-300 text-xs font-bold px-4 py-2 rounded-full mb-5 uppercase tracking-wider">
+              🌾 India Ka #1 PM Kisan Information Portal
+            </div>
+
+            {/* H1 — Primary hook with Devanagari */}
+            <h1 className="font-black text-white leading-[1.15] mb-4 tracking-tight">
+              <span className="text-3xl md:text-5xl block">
+                PM Kisan Status Check —
+              </span>
+              <span className="text-2xl md:text-4xl block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-green-300 via-emerald-200 to-yellow-200">
+                पीएम किसान 23वीं किस्त 2026
+              </span>
+            </h1>
+
+            {/* H2 — Semantic subheading */}
+            <h2 className="text-base md:text-lg text-green-100/85 mb-5 max-w-xl leading-relaxed font-normal">
+              Kisan bhai — <strong className="text-white">23vi kist 20 June 2026 ko release ho chuki hai!</strong> Apna status abhi check karo:
+              eKYC complete karo, bank Aadhaar seed karo, paisa aaya ya nahi dekho.{' '}
+              <span className="text-green-300 font-semibold">Sab free — 10 minute mein.</span>
+            </h2>
+
+            {/* Urgency alert */}
+            <div className="flex items-start gap-3 bg-green-500/20 border border-green-400/40 rounded-xl px-4 py-3 max-w-lg mb-6">
+              <span className="text-green-300 text-xl shrink-0">✅</span>
+              <div>
+                <p className="text-white font-bold text-sm">23vi Kist Release Ho Chuki — 20 June 2026!</p>
+                <p className="text-green-200 text-xs mt-0.5">Paisa aaya ya nahi — abhi status check karo. eKYC pending hai to turant karo.</p>
+              </div>
+            </div>
+
+            {/* CTAs */}
+            <div className="flex flex-wrap gap-3">
+              <Link href="/articles/pm-kisan-23vi-kist-2026-status-check"
+                className="inline-flex items-center gap-2 bg-green-400 hover:bg-green-300 text-gray-900 font-black px-5 py-3 rounded-xl text-sm transition-all hover:scale-105 shadow-lg shadow-green-900/40">
+                📆 23vi Kist Status Dekho
+              </Link>
+              <Link href="/articles/pm-kisan-ekyc-online-2026"
+                className="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 border border-white/30 text-white font-bold px-5 py-3 rounded-xl text-sm transition-all hover:scale-105">
+                🔐 eKYC Karo — Free
+              </Link>
+              <Link href="/calculator"
+                className="inline-flex items-center gap-2 bg-amber-400/25 hover:bg-amber-400/35 border border-amber-300/50 text-amber-200 font-bold px-5 py-3 rounded-xl text-sm transition-all hover:scale-105">
+                🧮 Kisan Calculator
+              </Link>
+            </div>
+
+            {/* Search intent keywords — visible as tags */}
+            <div className="flex flex-wrap gap-2 mt-5">
+              {[
+                'PM Kisan 23vi Kist','eKYC 2026','Payment Failed','Rejected List',
+                'Name Correction','Beneficiary List','Land Seeding',
+              ].map(tag=>(
+                <span key={tag} className="text-[11px] bg-white/10 border border-white/15 text-green-200 px-3 py-1 rounded-full">{tag}</span>
+              ))}
+            </div>
+          </div>
+
+          {/* RIGHT — Quick info card */}
+          <div className="lg:col-span-2 bg-white/8 backdrop-blur-sm border border-white/15 rounded-2xl overflow-hidden shadow-2xl">
+            <div className="bg-gradient-to-r from-green-700/60 to-green-600/60 border-b border-white/10 px-5 py-4">
+              <h3 className="text-white font-black text-base flex items-center gap-2">
+                <span>🏛️</span> PM Kisan — Quick Info 2026
+              </h3>
+            </div>
+            <div className="divide-y divide-white/8">
+              {STATS.map(s=>(
+                <div key={s.label} className="flex items-center justify-between px-5 py-3">
+                  <div className="flex items-center gap-3">
+                    <span className="w-9 h-9 rounded-xl bg-white/10 flex items-center justify-center text-lg shrink-0">{s.icon}</span>
+                    <div>
+                      <p className="text-white/55 text-[11px] leading-none mb-0.5">{s.label}</p>
+                      <p className="text-white/35 text-[10px]">{s.sub}</p>
+                    </div>
+                  </div>
+                  <span className={`font-black text-sm bg-gradient-to-r ${s.grad} bg-clip-text text-transparent`}>{s.value}</span>
+                </div>
+              ))}
+            </div>
+            <div className="p-4">
+              <Link href="/articles/pm-kisan-23vi-kist-2026-status-check"
+                className="w-full flex items-center justify-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold py-3 rounded-xl text-sm transition-colors">
+                📖 23vi Kist Status Guide Padho
+              </Link>
+              <p className="text-center text-white/30 text-[10px] mt-2">Guide padhne ke baad official site par jao</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust bar */}
+      <div className="bg-green-950/90 border-b border-green-900 py-2.5">
+        <div className="container-site">
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 text-[11px] text-green-400">
+            {['✅ 100% Free','🔒 Koi Data Store Nahi','🏛️ pmkisan.gov.in Verified','📞 Helpline: 155261','✍️ Sidhu Singh — Agricultural Expert'].map(t=>(
+              <span key={t} className="flex items-center gap-1">{t}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* ══════════════════════════════════════════════════════════
+          PROBLEM → SOLUTION
+      ══════════════════════════════════════════════════════════ */}
+      <section className="py-12 bg-white" aria-labelledby="problems-heading">
+        <div className="container-site">
+          <div className="text-center mb-8">
+            <span className="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">🤔 Aapki Problem Kya Hai?</span>
+            <h2 id="problems-heading" className="text-2xl md:text-3xl font-black text-gray-900 mb-2">
+              PM Kisan Problem — Seedha Solution
+            </h2>
+            <p className="text-gray-500 text-sm max-w-lg mx-auto">Jo problem hai uska naam click karo — step by step guide milegi</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {[
+              {icon:'💸',title:'Kist Nahi Aayi',         sub:'Payment pending ya failed',   href:'/articles/pm-kisan-payment-failed-status-2026',  bg:'bg-red-50',      border:'border-red-200',    tag:'bg-red-100 text-red-700'    },
+              {icon:'🔐',title:'eKYC Karna Hai',          sub:'OTP ya CSC — dono free',      href:'/articles/pm-kisan-ekyc-online-2026',             bg:'bg-green-50',    border:'border-green-200',  tag:'bg-green-100 text-green-700'},
+              {icon:'❌',title:'Rejected Ho Gaya',        sub:'Rejection reason pata karo',  href:'/articles/pm-kisan-rejected-list-2026',           bg:'bg-orange-50',   border:'border-orange-200', tag:'bg-orange-100 text-orange-700'},
+              {icon:'✏️',title:'Naam Galat Hai',          sub:'15 min mein fix karo',        href:'/articles/pm-kisan-name-correction-online-2026',  bg:'bg-purple-50',   border:'border-purple-200', tag:'bg-purple-100 text-purple-700'},
+              {icon:'🌾',title:'Land Seeding No',         sub:'Zameen link nahi — yeh karo', href:'/articles/pm-kisan-land-seeding-status-check',    bg:'bg-yellow-50',   border:'border-yellow-200', tag:'bg-yellow-100 text-yellow-700'},
+              {icon:'📝',title:'Pehli Baar Register',     sub:'New farmer registration free',href:'/articles/pm-kisan-registration-online-2026',     bg:'bg-blue-50',     border:'border-blue-200',   tag:'bg-blue-100 text-blue-700'  },
+              {icon:'📋',title:'List Mein Naam Check',    sub:'Village wise dekho',          href:'/articles/pm-kisan-beneficiary-list-2026',        bg:'bg-teal-50',     border:'border-teal-200',   tag:'bg-teal-100 text-teal-700'  },
+              {icon:'🔧',title:'Koi Aur Problem',         sub:'10 common problems guide',    href:'/articles/pm-kisan-problems-solution-guide-2026', bg:'bg-gray-50',     border:'border-gray-200',   tag:'bg-gray-100 text-gray-700'  },
+            ].map(c=>(
+              <Link key={c.href} href={c.href}
+                className={`${c.bg} ${c.border} border rounded-2xl p-4 flex flex-col gap-2 hover:shadow-lg hover:scale-[1.02] transition-all no-underline group`}>
+                <div className="flex items-start justify-between">
+                  <span className="text-2xl">{c.icon}</span>
+                  <span className={`text-[9px] font-black px-2 py-0.5 rounded-full ${c.tag}`}>Guide</span>
+                </div>
+                <p className="font-black text-gray-900 text-sm leading-tight group-hover:text-green-700 transition-colors">{c.title}</p>
+                <p className="text-[11px] text-gray-500">{c.sub}</p>
+                <span className="text-[11px] font-bold text-green-700 mt-auto group-hover:translate-x-1 transition-transform inline-block">Padho →</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════
+          E-E-A-T SECTION — Authority, Mission, Disclaimer
+      ══════════════════════════════════════════════════════════ */}
+      <section className="py-10 bg-green-950 text-white" aria-labelledby="mission-heading">
+        <div className="container-site max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+            <div className="md:col-span-2">
+              <span className="inline-block bg-green-800 text-green-300 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">🏛️ Hamara Mission</span>
+              <h2 id="mission-heading" className="text-xl font-black text-white mb-4">
+                KisanStatus.com — भारत के किसानों की अपनी website
+              </h2>
+              <div className="text-sm text-green-100/80 leading-relaxed space-y-3">
+                <p>
+                  Bhai, <strong className="text-white">11 crore se zyada farmers</strong> PM Kisan se jude hain — lekin lakho kisan har saal sirf isliye kist se reh jaate hain kyunki unhe pata nahi eKYC kaise hoti hai, land seeding kya hoti hai, ya naam mismatch kaise fix karte hain.
+                </p>
+                <p>
+                  KisanStatus.com ka ek hi kaam hai — <strong className="text-white">government ke complex process ko simple Hinglish mein samjhana.</strong> Har article real farmer problems se likha gaya hai — government website copy-paste nahi.
+                </p>
+                <p className="text-green-100/60 text-xs">
+                  Yeh platform <strong className="text-green-300">Sidhu Singh</strong> manage karte hain — agricultural content expert jo pichhle 5 saal se Indian farmers ko government schemes navigate karne mein help kar rahe hain.
+                </p>
+              </div>
+            </div>
+            <div className="space-y-2">
+              {[
+                {icon:'✅',t:'100% Free',d:'Koi guide, tool ya info — kabhi charge nahi.'},
+                {icon:'🔒',t:'Data Safe',d:'Koi Aadhaar ya mobile store nahi hota.'},
+                {icon:'🏛️',t:'Verified Info',d:'Sab pmkisan.gov.in se verify ki gayi.'},
+                {icon:'✍️',t:'Real Content',d:'Government copy-paste nahi — apna likha.'},
+              ].map(b=>(
+                <div key={b.t} className="flex gap-3 bg-green-900/50 border border-green-800 rounded-xl p-3">
+                  <span className="text-lg shrink-0">{b.icon}</span>
+                  <div>
+                    <p className="font-bold text-white text-xs">{b.t}</p>
+                    <p className="text-[11px] text-green-300/70">{b.d}</p>
+                  </div>
+                </div>
+              ))}
+              <div className="bg-amber-900/40 border border-amber-700/50 rounded-xl p-3 mt-2">
+                <p className="text-[11px] text-amber-200 leading-relaxed">
+                  <strong>⚠️ Disclaimer:</strong> KisanStatus.com ek independent information portal hai. Yeh Government of India ya pmkisan.gov.in ka official platform nahi hai.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════
+          ARTICLES GRID — All articles, with optional thumbnail
+      ══════════════════════════════════════════════════════════ */}
+      <section className="py-14 bg-gray-50" aria-labelledby="articles-heading">
+        <div className="container-site">
+          <div className="text-center mb-8">
+            <span className="inline-block bg-green-100 text-green-800 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">📖 Complete Guide Library</span>
+            <h2 id="articles-heading" className="text-2xl md:text-3xl font-black text-gray-900 mb-2">
+              PM Kisan — पूरी जानकारी हिंदी में
+            </h2>
+            <p className="text-gray-500 text-sm max-w-lg mx-auto">
+              Har article ek real problem solve karta hai — sirf government info nahi, <strong>practical step-by-step guide</strong>
+            </p>
+          </div>
+
+          {/* Category tabs */}
+          <div className="flex flex-wrap gap-2 justify-center mb-7">
+            {categories.map(cat=>(
+              <button key={cat} onClick={()=>setActiveTab(cat)}
+                className={`px-4 py-1.5 rounded-full text-xs font-bold border transition-all ${
+                  activeTab===cat
+                    ?'bg-green-700 text-white border-green-700 shadow-md'
+                    :'bg-white text-gray-600 border-gray-200 hover:border-green-400 hover:text-green-700'
+                }`}>
+                {cat}
+              </button>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {filtered.map(article=>(
+              <Link key={article.slug} href={`/articles/${article.slug}`}
+                className="group bg-white border border-gray-200 rounded-2xl p-5 hover:border-green-300 hover:shadow-xl hover:shadow-green-50/50 transition-all no-underline flex flex-col gap-3">
+                <div className="flex items-start justify-between">
+                  {article.thumbnail ? (
+                    <div className="w-12 h-12 rounded-2xl overflow-hidden border border-green-100 shrink-0 group-hover:scale-110 transition-all">
+                      <img
+                        src={article.thumbnail}
+                        alt=""
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  ) : (
+                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-green-50 to-emerald-100 border border-green-100 flex items-center justify-center text-2xl group-hover:scale-110 group-hover:from-green-100 group-hover:to-emerald-200 transition-all">
+                      {article.emoji}
+                    </div>
+                  )}
+                  <div className="flex gap-1 flex-wrap justify-end">
+                    {article.isNew && <span className="text-[10px] font-black bg-red-500 text-white px-2 py-0.5 rounded-full">NEW</span>}
+                    <span className="text-[10px] font-medium bg-gray-100 text-gray-500 px-2 py-0.5 rounded-full">{article.category}</span>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="font-black text-gray-900 text-sm leading-snug mb-1.5 group-hover:text-green-700 transition-colors">{article.title}</h3>
+                  <p className="text-xs text-gray-500 leading-relaxed">{article.desc}</p>
+                </div>
+                <div className="mt-auto pt-2.5 border-t border-gray-100 flex items-center justify-between">
+                  <span className="text-[11px] text-gray-400">✍️ Sidhu Singh</span>
+                  <span className="text-xs font-bold text-green-700 group-hover:translate-x-1 transition-transform inline-block">Guide Padho →</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          {/* After reading box — redirects properly */}
+          <div className="mt-10 bg-white border-2 border-dashed border-green-300 rounded-2xl p-6 max-w-xl mx-auto text-center">
+            <p className="text-2xl mb-2">📖</p>
+            <p className="font-black text-gray-900 mb-1">Guide Padh Li?</p>
+            <p className="text-sm text-gray-500 mb-4">Ab apna exact problem pmkisan.gov.in par fix karo — official government portal</p>
+            <Link href="/official-links"
+              className="inline-flex items-center gap-2 bg-green-700 hover:bg-green-600 text-white font-bold px-6 py-3 rounded-xl text-sm transition-colors">
+              🏛️ Official Links Page →
+            </Link>
+            <p className="text-xs text-gray-400 mt-2">⚠️ KisanStatus.com government se affiliated nahi hai</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Visual templates */}
+      <KisanTemplates />
+
+      {/* ══════════════════════════════════════════════════════════
+          STATE LIST
+      ══════════════════════════════════════════════════════════ */}
+      <section className="py-12 bg-gray-50" aria-labelledby="states-heading">
+        <div className="container-site">
+          <h2 id="states-heading" className="text-xl font-black text-gray-900 text-center mb-2">State Wise PM Kisan Beneficiary List</h2>
+          <p className="text-center text-gray-500 text-sm mb-6">अपना राज्य चुनें — गाँव wise लाभार्थी सूची देखें</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
+            {[['Uttar Pradesh','uttar-pradesh'],['Bihar','bihar'],['Madhya Pradesh','madhya-pradesh'],['Rajasthan','rajasthan'],['Maharashtra','maharashtra'],['West Bengal','west-bengal'],['Karnataka','karnataka'],['Odisha','odisha'],['Tamil Nadu','tamil-nadu'],['Punjab','punjab'],['Haryana','haryana'],['Andhra Pradesh','andhra-pradesh']].map(([name,slug])=>(
+              <Link key={slug} href={`/beneficiary-list/${slug}`}
+                className="text-center text-xs px-2 py-3 bg-white border border-green-200 rounded-xl text-green-800 font-semibold hover:bg-green-600 hover:text-white hover:border-green-600 transition-all">
+                {name}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════
+          FAQ — Hindi Devanagari, schema-ready
+      ══════════════════════════════════════════════════════════ */}
+      <section className="py-14 bg-white" aria-labelledby="faq-heading">
+        <div className="container-site max-w-3xl mx-auto">
+          <div className="text-center mb-8">
+            <span className="inline-block bg-green-100 text-green-800 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">❓ अक्सर पूछे जाने वाले सवाल</span>
+            <h2 id="faq-heading" className="text-xl md:text-2xl font-black text-gray-900">
+              PM Kisan FAQ — किसान सबसे ज्यादा यही पूछते हैं
+            </h2>
+            <p className="text-gray-500 text-xs mt-2">Google aur voice search par in sawaalon ke jawab dhundhe jaate hain</p>
+          </div>
+          <FAQSection faqs={FAQS} />
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════
+          CALCULATOR BANNER
+      ══════════════════════════════════════════════════════════ */}
+      <section className="py-14 bg-gradient-to-br from-green-900 via-green-800 to-green-700 text-white relative overflow-hidden" aria-labelledby="calc-heading">
+        <div className="absolute inset-0 opacity-[0.04]" style={{backgroundImage:'radial-gradient(circle, white 1px, transparent 1px)',backgroundSize:'30px 30px'}} aria-hidden="true"/>
+        <div className="container-site max-w-4xl mx-auto text-center relative">
+          <span className="inline-block bg-white/10 border border-white/20 text-green-200 text-xs font-bold px-4 py-2 rounded-full mb-4 uppercase tracking-wider">🧮 Free Calculators — No Login</span>
+          <h2 id="calc-heading" className="text-2xl md:text-3xl font-black mb-3">कृषि Calculators — KCC, PMFBY, MSP, Crop Profit</h2>
+          <p className="text-green-100 text-sm md:text-base mb-8 max-w-2xl mx-auto">Bank jaane se pehle hisaab karo — EMI, premium, income, profit — 5 free tools, koi registration nahi</p>
+          <div className="flex flex-wrap justify-center gap-3 mb-8">
+            {[{e:'🌾',n:'PM Kisan'},{e:'🏦',n:'KCC EMI'},{e:'🛡️',n:'PMFBY'},{e:'💹',n:'MSP Income'},{e:'📊',n:'Crop Profit'}].map(i=>(
+              <div key={i.n} className="flex items-center gap-2 bg-white/10 border border-white/20 rounded-xl px-4 py-2.5 text-sm font-bold text-green-100">
+                <span>{i.e}</span>{i.n}
+              </div>
+            ))}
+          </div>
+          <Link href="/calculator" className="inline-flex items-center gap-2 bg-white text-green-800 font-black px-8 py-4 rounded-2xl text-base hover:bg-green-50 transition-colors shadow-xl shadow-black/20">
+            🧮 Calculators Kholo — Free →
+          </Link>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════
+          HELPLINE
+      ══════════════════════════════════════════════════════════ */}
+      <section className="bg-green-950 py-10 text-white" aria-labelledby="helpline-heading">
+        <div className="container-site text-center">
+          <h2 id="helpline-heading" className="font-black text-lg mb-1">Kisi bhi Problem Ke Liye — PM Kisan Helpline</h2>
+          <p className="text-green-400 text-sm mb-5">Registration, payment, eKYC — government helpline free hai</p>
+          <div className="flex flex-wrap gap-3 justify-center">
+            <a href="tel:155261" className="bg-green-600 hover:bg-green-500 text-white font-bold px-5 py-2.5 rounded-xl text-sm transition-colors">📞 155261</a>
+            <a href="tel:01124300606" className="bg-green-600 hover:bg-green-500 text-white font-bold px-5 py-2.5 rounded-xl text-sm transition-colors">📞 011-24300606</a>
+            <a href="mailto:pmkisan-ict@gov.in" className="border border-green-700 text-green-300 font-bold px-5 py-2.5 rounded-xl text-sm hover:bg-green-900 transition-colors">✉️ pmkisan-ict@gov.in</a>
+          </div>
+        </div>
+      </section>
+
+      <AiAssistant />
+    </>
+  );
+}
