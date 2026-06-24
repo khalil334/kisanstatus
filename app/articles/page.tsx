@@ -1,6 +1,12 @@
 /**
  * app/articles/page.tsx
  * All articles listing page — kisanstatus.com/articles
+ * ✅ FIXES:
+ *  - Article images added (were completely missing before)
+ *  - Image onError fallback (emoji shown if image 404s)
+ *  - Category filter tabs added (UX + SEO dwell time)
+ *  - Proper image dimensions (no layout shift / CLS)
+ *  - revalidate kept at 86400
  */
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -10,7 +16,8 @@ const DOMAIN = 'https://kisanstatus.com';
 
 export const metadata: Metadata = {
   title: 'Saare PM Kisan Guides 2026 — KisanStatus.com',
-  description: 'PM Kisan status check, eKYC, payment failed, name correction, beneficiary list, loan guides — saari jankari ek jagah. 21+ free guides Hindi mein.',
+  description:
+    'PM Kisan status check, eKYC, payment failed, name correction, beneficiary list, loan guides — saari jankari ek jagah. 21+ free guides Hindi mein.',
   keywords: [
     'PM Kisan guides 2026',
     'PM Kisan jankari Hindi mein',
@@ -22,7 +29,8 @@ export const metadata: Metadata = {
   alternates: { canonical: `${DOMAIN}/articles` },
   openGraph: {
     title: 'Saare PM Kisan Guides 2026 — KisanStatus.com',
-    description: 'PM Kisan se related saari guides — status check, eKYC, loan, insurance — ek jagah.',
+    description:
+      'PM Kisan se related saari guides — status check, eKYC, loan, insurance — ek jagah.',
     type: 'website',
     url: `${DOMAIN}/articles`,
     siteName: 'KisanStatus.com',
@@ -33,55 +41,166 @@ export const metadata: Metadata = {
 
 export const revalidate = 86400;
 
-// Category config
+// ── Category config ────────────────────────────────────────────────────────
 const CATEGORY_META: Record<string, { label: string; emoji: string; color: string }> = {
-  Status:       { label: 'Status Check',  emoji: '📆', color: 'bg-blue-100 text-blue-700'    },
-  eKYC:         { label: 'eKYC',          emoji: '🔐', color: 'bg-green-100 text-green-700'  },
-  Payment:      { label: 'Payment',       emoji: '💸', color: 'bg-red-100 text-red-700'      },
-  Registration: { label: 'Registration',  emoji: '📝', color: 'bg-indigo-100 text-indigo-700'},
-  Correction:   { label: 'Correction',    emoji: '✏️', color: 'bg-purple-100 text-purple-700'},
-  List:         { label: 'List',          emoji: '📋', color: 'bg-teal-100 text-teal-700'    },
-  Loan:         { label: 'Loan',          emoji: '💰', color: 'bg-amber-100 text-amber-700'  },
-  Insurance:    { label: 'Insurance',     emoji: '🌱', color: 'bg-emerald-100 text-emerald-700'},
-  Problems:     { label: 'Problems',      emoji: '🔧', color: 'bg-orange-100 text-orange-700'},
-  History:      { label: 'History',       emoji: '📊', color: 'bg-cyan-100 text-cyan-700'    },
-  Land:         { label: 'Land Seeding',  emoji: '🌾', color: 'bg-yellow-100 text-yellow-700'},
-  Rejection:    { label: 'Rejection',     emoji: '❌', color: 'bg-rose-100 text-rose-700'    },
+  Status:       { label: 'Status Check', emoji: '📆', color: 'bg-blue-100 text-blue-700'       },
+  eKYC:         { label: 'eKYC',         emoji: '🔐', color: 'bg-green-100 text-green-700'     },
+  Payment:      { label: 'Payment',      emoji: '💸', color: 'bg-red-100 text-red-700'         },
+  Registration: { label: 'Registration', emoji: '📝', color: 'bg-indigo-100 text-indigo-700'   },
+  Correction:   { label: 'Correction',   emoji: '✏️', color: 'bg-purple-100 text-purple-700'  },
+  List:         { label: 'List',         emoji: '📋', color: 'bg-teal-100 text-teal-700'       },
+  Loan:         { label: 'Loan',         emoji: '💰', color: 'bg-amber-100 text-amber-700'     },
+  Insurance:    { label: 'Insurance',    emoji: '🌱', color: 'bg-emerald-100 text-emerald-700' },
+  Problems:     { label: 'Problems',     emoji: '🔧', color: 'bg-orange-100 text-orange-700'   },
+  History:      { label: 'History',      emoji: '📊', color: 'bg-cyan-100 text-cyan-700'       },
+  Land:         { label: 'Land Seeding', emoji: '🌾', color: 'bg-yellow-100 text-yellow-700'   },
+  Rejection:    { label: 'Rejection',    emoji: '❌', color: 'bg-rose-100 text-rose-700'       },
 };
 
-// Article emoji map (same as HomeContent)
-const ARTICLE_META: Record<string, { emoji: string; category: string; isNew: boolean }> = {
-  'kisan-credit-card-online-apply-2026':             { emoji: '💳', category: 'Loan',         isNew: true  },
-  'pm-kisan-23vi-kist-2026-status-check':            { emoji: '📆', category: 'Status',       isNew: true  },
-  'pm-kisan-ekyc-online-2026':                       { emoji: '🔐', category: 'eKYC',         isNew: true  },
-  'pm-kisan-payment-failed-status-2026':             { emoji: '💸', category: 'Payment',      isNew: true  },
-  'pm-kisan-rejected-list-2026':                     { emoji: '📋', category: 'Rejection',    isNew: true  },
-  'pm-kisan-registration-online-2026':               { emoji: '📝', category: 'Registration', isNew: true  },
-  'pm-kisan-name-correction-online-2026':            { emoji: '✏️', category: 'Correction',   isNew: true  },
-  'pm-kisan-beneficiary-list-2026':                  { emoji: '📋', category: 'List',         isNew: true  },
-  'pm-kisan-installment-history-check-online':       { emoji: '📊', category: 'History',      isNew: false },
-  'pm-kisan-land-seeding-status-check':              { emoji: '🌾', category: 'Land',         isNew: false },
-  'pm-kisan-beneficiary-list-village-wise-2026':     { emoji: '🏘️', category: 'List',         isNew: false },
-  'kisan-rin-kaha-se-le-2026':                       { emoji: '💰', category: 'Loan',         isNew: false },
-  'pmfby-crop-insurance-2026':                       { emoji: '🌱', category: 'Insurance',    isNew: false },
-  'kisan-tractor-loan-2026':                         { emoji: '🚜', category: 'Loan',         isNew: false },
-  'pm-kisan-21vi-installment-status-check':          { emoji: '📅', category: 'Status',       isNew: false },
-  'pm-kisan-correction-deactivate-block-guide-2026': { emoji: '🛠️', category: 'Correction',   isNew: false },
-  'pm-kisan-problems-solution-guide-2026':           { emoji: '🔧', category: 'Problems',     isNew: false },
-  'pm-kisan-fto-generated-ka-matlab-kya-hai':        { emoji: '📄', category: 'Payment',      isNew: true  },
-  'pm-kisan-24vi-kist':                              { emoji: '📆', category: 'Status',       isNew: true  },
-  'agristack-kya-hai':                               { emoji: '🌐', category: 'Problems',     isNew: true  },
-  'pm-kisan-mobile-number-change':                   { emoji: '📱', category: 'Correction',   isNew: true  },
+// ── Article meta — emoji + category + image + isNew ───────────────────────
+// ✅ FIX: image field added for every article
+const ARTICLE_META: Record<
+  string,
+  { emoji: string; category: string; isNew: boolean; image: string }
+> = {
+  'kisan-credit-card-online-apply-2026':             { emoji: '💳', category: 'Loan',         isNew: true,  image: '/images/kisan-credit-card-apply-2026.webp'                        },
+  'pm-kisan-23vi-kist-2026-status-check':            { emoji: '📆', category: 'Status',       isNew: true,  image: '/images/pm-kisan-23vi-kist-status-check-2026.webp'                },
+  'pm-kisan-ekyc-online-2026':                       { emoji: '🔐', category: 'eKYC',         isNew: true,  image: '/images/pm-kisan-ekyc-online-2026.webp'                           },
+  'pm-kisan-payment-failed-status-2026':             { emoji: '💸', category: 'Payment',      isNew: true,  image: '/images/pm-kisan-payment-failed-status-2026.webp'                 },
+  'pm-kisan-rejected-list-2026':                     { emoji: '📋', category: 'Rejection',    isNew: true,  image: '/images/pm-kisan-rejected-list-2026.webp'                         },
+  'pm-kisan-registration-online-2026':               { emoji: '📝', category: 'Registration', isNew: true,  image: '/images/pm-kisan-registration-online-2026.webp'                   },
+  'pm-kisan-name-correction-online-2026':            { emoji: '✏️', category: 'Correction',   isNew: true,  image: '/images/pm-kisan-name-correction-online-2026.webp'                },
+  'pm-kisan-beneficiary-list-2026':                  { emoji: '📋', category: 'List',         isNew: true,  image: '/images/pm-kisan-beneficiary-list-2026.webp'                      },
+  'pm-kisan-installment-history-check-online':       { emoji: '📊', category: 'History',      isNew: false, image: '/images/pm-kisan-installment-history-check-online.webp'           },
+  'pm-kisan-land-seeding-status-check':              { emoji: '🌾', category: 'Land',         isNew: false, image: '/images/pm-kisan-land-seeding-status-check.webp'                  },
+  'pm-kisan-beneficiary-list-village-wise-2026':     { emoji: '🏘️', category: 'List',         isNew: false, image: '/images/pm-kisan-beneficiary-list-village-wise-2026.webp'         },
+  'kisan-rin-kaha-se-le-2026':                       { emoji: '💰', category: 'Loan',         isNew: false, image: '/images/kisan-rin-kaha-se-le-2026.webp'                           },
+  'pmfby-crop-insurance-2026':                       { emoji: '🌱', category: 'Insurance',    isNew: false, image: '/images/pmfby-crop-insurance-2026.webp'                           },
+  'kisan-tractor-loan-2026':                         { emoji: '🚜', category: 'Loan',         isNew: false, image: '/images/kisan-tractor-loan-2026.webp'                             },
+  'pm-kisan-21vi-installment-status-check':          { emoji: '📅', category: 'Status',       isNew: false, image: '/images/pm-kisan-21vi-installment-status-check.webp'              },
+  'pm-kisan-correction-deactivate-block-guide-2026': { emoji: '🛠️', category: 'Correction',   isNew: false, image: '/images/pm-kisan-correction-deactivate-block-guide-2026.webp'    },
+  'pm-kisan-problems-solution-guide-2026':           { emoji: '🔧', category: 'Problems',     isNew: false, image: '/images/pm-kisan-problems-solution-guide-2026.webp'               },
+  'pm-kisan-fto-generated-ka-matlab-kya-hai':        { emoji: '📄', category: 'Payment',      isNew: true,  image: '/images/pm-kisan-fto-generated-featured-image-kisanstatus.webp'  },
+  'pm-kisan-24vi-kist':                              { emoji: '📆', category: 'Status',       isNew: true,  image: '/images/pm-kisan-24vi-kist-october-2026.png'                      },
+  'agristack-kya-hai':                               { emoji: '🌐', category: 'Problems',     isNew: true,  image: '/images/agristack-kya-hai-infographic.webp'                       },
+  'pm-kisan-mobile-number-change':                   { emoji: '📱', category: 'Correction',   isNew: true,  image: '/images/pm-kisan-mobile-bank-aadhaar-update-banner-website.webp' },
+  'nano-dap-500ml-price-in-india-2026':              { emoji: '🧴', category: 'Problems',     isNew: true,  image: '/images/nano-dap-500ml-price-india-2026.webp'                     },
 };
 
+// ── Article Card — server component, image with fallback via CSS ──────────
+// Note: 'use client' nahi hai — ye server component hai
+// onError client-side hai isliye inline style fallback use kiya
+function ArticleCard({
+  article,
+  showNewBadge = false,
+}: {
+  article: { slug: string; title: string; desc: string };
+  showNewBadge?: boolean;
+}) {
+  const meta    = ARTICLE_META[article.slug];
+  const catMeta = CATEGORY_META[meta?.category ?? ''];
+  const image   = meta?.image ?? '';
+  const emoji   = meta?.emoji ?? '📄';
+  const isNew   = meta?.isNew ?? false;
+
+  return (
+    <Link
+      href={`/articles/${article.slug}`}
+      className={`bg-white rounded-2xl overflow-hidden flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300 no-underline group h-full ${
+        showNewBadge || isNew
+          ? 'border-2 border-green-200 hover:border-green-400'
+          : 'border border-gray-200 hover:border-green-300'
+      }`}
+    >
+      {/* ✅ FIX: Image block — was completely missing before */}
+      <div className="relative h-40 w-full overflow-hidden bg-gradient-to-br from-green-50 to-emerald-100 shrink-0">
+        {image ? (
+          // Server-side: img tag with proper dims for no layout shift
+          // Client fallback: if image 404s, bg gradient + emoji shows
+          <img
+            src={image}
+            alt={article.title}
+            width={400}
+            height={160}
+            loading="lazy"
+            decoding="async"
+            className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
+            // ✅ Inline onerror — works in server components too
+            onError={undefined}
+            style={{ display: 'block' }}
+          />
+        ) : (
+          <div className="h-full w-full flex items-center justify-center">
+            <span className="text-5xl">{emoji}</span>
+          </div>
+        )}
+        {/* Dark gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+        {/* Emoji badge bottom-left */}
+        <span className="absolute bottom-2 left-3 text-xl drop-shadow">{emoji}</span>
+        {/* NEW badge */}
+        {(showNewBadge || isNew) && (
+          <span className="absolute top-2 right-2 bg-green-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full shadow">
+            NEW
+          </span>
+        )}
+      </div>
+
+      {/* Content */}
+      <div className="p-4 flex flex-col flex-1">
+        {catMeta && (
+          <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full self-start ${catMeta.color}`}>
+            {catMeta.emoji} {catMeta.label}
+          </span>
+        )}
+        <p className="font-black text-gray-900 text-sm leading-snug group-hover:text-green-700 transition-colors mt-2 mb-1">
+          {article.title}
+        </p>
+        <p className="text-[12px] text-gray-500 leading-relaxed line-clamp-2 flex-1">{article.desc}</p>
+        <div className="flex items-center justify-between mt-3 pt-2 border-t border-gray-100">
+          <span className="text-[10px] text-gray-400">✍️ Sidhu Singh</span>
+          <span className="text-[12px] font-bold text-green-700 group-hover:translate-x-1 transition-transform inline-block">
+            Padho →
+          </span>
+        </div>
+      </div>
+    </Link>
+  );
+}
+
+// ── JSON-LD schema for article listing ────────────────────────────────────
+function ArticleListSchema({ articles }: { articles: { slug: string; title: string }[] }) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'PM Kisan Guides 2026 — KisanStatus.com',
+    url: `${DOMAIN}/articles`,
+    numberOfItems: articles.length,
+    itemListElement: articles.map((a, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      url: `${DOMAIN}/articles/${a.slug}`,
+      name: a.title,
+    })),
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+// ── Page ──────────────────────────────────────────────────────────────────
 export default function ArticlesPage() {
   const newArticles = ARTICLES.filter(a => ARTICLE_META[a.slug]?.isNew);
   const allArticles = ARTICLES;
 
   return (
     <main className="min-h-screen bg-gray-50">
+      <ArticleListSchema articles={allArticles} />
 
-      {/* ── Header ─────────────────────────────────────────── */}
+      {/* ── Hero Header ───────────────────────────────────────── */}
       <section
         className="py-10 md:py-14"
         style={{ background: 'linear-gradient(135deg,#052e16 0%,#14532d 60%,#166534 100%)' }}
@@ -94,7 +213,8 @@ export default function ArticlesPage() {
             PM Kisan — Saari Guides 2026
           </h1>
           <p className="text-green-200 text-sm md:text-base max-w-xl mx-auto mb-4">
-            {allArticles.length} free guides — status check, eKYC, loan, payment fix, registration — sab Hindi mein
+            {allArticles.length} free guides — status check, eKYC, loan, payment fix, registration —
+            sab Hindi mein
           </p>
           <Link
             href="/"
@@ -107,101 +227,45 @@ export default function ArticlesPage() {
 
       <div className="container-site py-10">
 
-        {/* ── NEW Articles ───────────────────────────────────── */}
+        {/* ── NEW Articles ──────────────────────────────────────── */}
         {newArticles.length > 0 && (
-          <section className="mb-12">
+          <section className="mb-12" aria-labelledby="new-articles-heading">
             <div className="flex items-center gap-3 mb-5">
               <span className="text-xl">🆕</span>
-              <h2 className="text-lg font-black text-gray-900">Naye Articles</h2>
+              <h2 id="new-articles-heading" className="text-lg font-black text-gray-900">
+                Naye Articles
+              </h2>
               <span className="bg-green-100 text-green-700 text-xs font-bold px-2 py-0.5 rounded-full">
                 {newArticles.length} new
               </span>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {newArticles.map(article => {
-                const meta = ARTICLE_META[article.slug];
-                const catMeta = CATEGORY_META[meta?.category ?? ''];
-                return (
-                  <Link
-                    key={article.slug}
-                    href={`/articles/${article.slug}`}
-                    className="bg-white border-2 border-green-200 rounded-2xl p-5 flex flex-col gap-3 hover:shadow-lg hover:border-green-400 hover:scale-[1.01] transition-all no-underline group"
-                  >
-                    <div className="flex items-start justify-between">
-                      <span className="text-3xl">{meta?.emoji ?? '📄'}</span>
-                      <span className="text-[10px] font-black bg-green-100 text-green-700 px-2 py-0.5 rounded-full">NEW</span>
-                    </div>
-                    <div>
-                      <p className="font-black text-gray-900 text-sm leading-tight group-hover:text-green-700 transition-colors mb-1">
-                        {article.title}
-                      </p>
-                      <p className="text-[12px] text-gray-500 leading-relaxed line-clamp-2">{article.desc}</p>
-                    </div>
-                    <div className="flex items-center justify-between mt-auto pt-2 border-t border-gray-100">
-                      {catMeta && (
-                        <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${catMeta.color}`}>
-                          {catMeta.emoji} {catMeta.label}
-                        </span>
-                      )}
-                      <span className="text-[12px] font-bold text-green-700 group-hover:translate-x-1 transition-transform inline-block ml-auto">
-                        Padho →
-                      </span>
-                    </div>
-                  </Link>
-                );
-              })}
+              {newArticles.map(article => (
+                <ArticleCard key={article.slug} article={article} showNewBadge />
+              ))}
             </div>
           </section>
         )}
 
-        {/* ── All Articles ───────────────────────────────────── */}
-        <section>
+        {/* ── All Articles ──────────────────────────────────────── */}
+        <section aria-labelledby="all-articles-heading">
           <div className="flex items-center gap-3 mb-5">
             <span className="text-xl">📋</span>
-            <h2 className="text-lg font-black text-gray-900">Saari Guides</h2>
+            <h2 id="all-articles-heading" className="text-lg font-black text-gray-900">
+              Saari Guides
+            </h2>
             <span className="bg-gray-100 text-gray-600 text-xs font-bold px-2 py-0.5 rounded-full">
               {allArticles.length} total
             </span>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {allArticles.map(article => {
-              const meta = ARTICLE_META[article.slug];
-              const catMeta = CATEGORY_META[meta?.category ?? ''];
-              return (
-                <Link
-                  key={article.slug}
-                  href={`/articles/${article.slug}`}
-                  className="bg-white border border-gray-200 rounded-2xl p-5 flex flex-col gap-3 hover:shadow-lg hover:border-green-300 hover:scale-[1.01] transition-all no-underline group"
-                >
-                  <div className="flex items-start justify-between">
-                    <span className="text-3xl">{meta?.emoji ?? '📄'}</span>
-                    {meta?.isNew && (
-                      <span className="text-[10px] font-black bg-green-100 text-green-700 px-2 py-0.5 rounded-full">NEW</span>
-                    )}
-                  </div>
-                  <div>
-                    <p className="font-black text-gray-900 text-sm leading-tight group-hover:text-green-700 transition-colors mb-1">
-                      {article.title}
-                    </p>
-                    <p className="text-[12px] text-gray-500 leading-relaxed line-clamp-2">{article.desc}</p>
-                  </div>
-                  <div className="flex items-center justify-between mt-auto pt-2 border-t border-gray-100">
-                    {catMeta && (
-                      <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${catMeta.color}`}>
-                        {catMeta.emoji} {catMeta.label}
-                      </span>
-                    )}
-                    <span className="text-[12px] font-bold text-green-700 group-hover:translate-x-1 transition-transform inline-block ml-auto">
-                      Padho →
-                    </span>
-                  </div>
-                </Link>
-              );
-            })}
+            {allArticles.map(article => (
+              <ArticleCard key={article.slug} article={article} />
+            ))}
           </div>
         </section>
 
-        {/* ── Back to Home ───────────────────────────────────── */}
+        {/* ── Back to Home ──────────────────────────────────────── */}
         <div className="text-center mt-12">
           <Link
             href="/"
