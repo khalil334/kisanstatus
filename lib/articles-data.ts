@@ -1,6 +1,6 @@
 /**
  * lib/articles-data.ts
- * Central metadata for all 21 articles — used by [slug]/page.tsx
+ * Central metadata for all 22 articles — used by [slug]/page.tsx
  * To add a new article: add entry here + create components/articles/YourComponent.tsx
  */
 
@@ -195,6 +195,17 @@ export const ARTICLES: ArticleMeta[] = [
     component:     'PmKisanFtoGeneratedKaMatlabKyaHai',
     publishedTime: '2026-06-23T08:00:00+05:30',
     modifiedTime:  '2026-06-23T08:00:00+05:30',
+  },
+  // ── NEW ARTICLE — Nano DAP ────────────────────────────────────────────────
+  {
+    slug:          'nano-dap-500ml-price-in-india-2026',
+    title:         "Nano DAP 500ml Price In India 2026 | IFFCO Nano DAP Kahan Se Khariden & Kaise Use Karein",
+    desc:          "Nano DAP 500ml price in India 2026 — IFFCO Nano DAP ki kimat, kahan milega, kaise use karein, traditional DAP se kya farak hai aur PM Kisan ke saath connection. Complete Hinglish guide. Sidhu Singh.",
+    ogTitle:       "Nano DAP 500ml Price In India 2026 — IFFCO Nano DAP Complete Guide",
+    keywords:      ['Nano DAP 500ml price India 2026', 'IFFCO Nano DAP price', 'Nano DAP kaise use kare', 'Nano DAP kahan milega', 'Nano DAP vs DAP', 'Nano DAP farmer guide 2026'],
+    component:     'NanoDap500mlPriceInIndia2026',
+    publishedTime: '2026-06-24T08:00:00+05:30',
+    modifiedTime:  '2026-06-24T08:00:00+05:30',
   },
   // ── 3 NEW ARTICLES ───────────────────────────────────────────────────────
   {
