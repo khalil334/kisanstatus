@@ -9,22 +9,23 @@ const nextConfig = {
   // Compress responses for better Core Web Vitals
   compress: true,
 
+  // ✅ FIX: serve images as-is from public/images/ without Next.js optimizer
+  images: {
+    unoptimized: true,
+  },
+
   // Add security + SEO headers
   async headers() {
     return [
       {
         source: '/(.*)',
         headers: [
-          // Prevent clickjacking (also good for SEO trust signals)
           { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
-          // Stop MIME sniffing
           { key: 'X-Content-Type-Options', value: 'nosniff' },
-          // Referrer policy — send origin on same-site, no referrer on cross-site
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
         ],
       },
       {
-        // Cache static assets aggressively
         source: '/(:path*\\.(?:png|jpg|jpeg|gif|svg|ico|webp|woff2|woff))',
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
@@ -33,17 +34,14 @@ const nextConfig = {
     ];
   },
 
-  // Redirect www → non-www (pick one canonical form)
-  // + Permanent 301 redirects for old expired-domain URLs → new 2026 articles
   async redirects() {
     return [
       {
         source: '/:path*',
         has: [{ type: 'host', value: 'www.kisanstatus.com' }],
         destination: 'https://kisanstatus.com/:path*',
-        permanent: true, // 301 redirect
+        permanent: true,
       },
-      // ── Old expired-domain URLs → new articles (permanent 301) ──────────
       {
         source: '/pm-kisan-beneficiary-status',
         destination: '/articles/pm-kisan-21vi-installment-status-check',
