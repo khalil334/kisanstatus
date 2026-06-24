@@ -1,10 +1,20 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 // ─── Slug ────────────────────────────────────────────────────────────────────
 export const slug = "pm-kisan-24vi-kist";
 
 // ─── ⚙️  UPDATE THIS SECTION WHEN DATE IS CONFIRMED ─────────────────────────
+// ⚠️ FLAGGED: expectedDate below ("October 2026") does NOT match the 4-month
+// release pattern shown in this file's own installment-history table
+// (19vi Oct'24 → 20vi Feb'25 → 21vi June'25 → 22vi Oct'25 → 23vi Feb'26 →
+// 24vi should be June'26 by that pattern, not October'26).
+// This file also says 23vi released "February 2026", while your Nano DAP
+// article and homepage say 23vi released "20 June 2026" — these cannot
+// both be true. Verify the real dates on pmkisan.gov.in and make every
+// page on the site agree before publishing. Not changed here because I
+// have no authoritative source for the correct date — only you can confirm it.
 export const KIST_INFO = {
   kistNumber: "24",
   kistNumberText: "24vi",
@@ -195,18 +205,19 @@ export default function PMKisan24viKistArticle() {
   return (
     <main className="max-w-4xl mx-auto px-4 py-8 text-gray-800">
       {/* Breadcrumb */}
+      {/* FIX: plain <a> → next/link <Link>, absolute → relative paths */}
       <nav aria-label="breadcrumb" className="text-sm text-gray-500 mb-4">
         <ol className="flex flex-wrap items-center gap-1">
           <li>
-            <a href="https://kisanstatus.com" className="text-green-700 hover:underline">
+            <Link href="/" className="text-green-700 hover:underline">
               Home
-            </a>
+            </Link>
           </li>
           <li aria-hidden="true">/</li>
           <li>
-            <a href="https://kisanstatus.com/pm-kisan" className="text-green-700 hover:underline">
+            <Link href="/pm-kisan" className="text-green-700 hover:underline">
               PM Kisan
-            </a>
+            </Link>
           </li>
           <li aria-hidden="true">/</li>
           <li aria-current="page" className="text-gray-700">
@@ -349,6 +360,14 @@ export default function PMKisan24viKistArticle() {
           23vi kist February 2026 mein release hui thi, isliye 24vi kist ka wait karna padega. Is
           page ko bookmark karein – hum official announcement hone par turant update karenge.
         </p>
+        {/* NEW internal link 1 — installment tracker calculator */}
+        <p className="text-sm text-gray-600 leading-relaxed">
+          Apna khud ka exact status jaldi check karna ho toh hamara{" "}
+          <Link href="/calculator/installment-tracker" className="text-green-700 underline hover:text-green-900">
+            Installment Status Tracker
+          </Link>{" "}
+          use karein — 4 sawaal mein reason pata chal jayega.
+        </p>
       </section>
 
       {/* Section 2 – History */}
@@ -445,6 +464,14 @@ export default function PMKisan24viKistArticle() {
             </ul>
           </div>
         </div>
+        {/* NEW internal link 2 — PM Kisan benefit calculator */}
+        <p className="text-sm text-gray-600 leading-relaxed">
+          Apna total annual benefit aur arrears calculate karna ho toh{" "}
+          <Link href="/calculator/pm-kisan-benefit" className="text-green-700 underline hover:text-green-900">
+            PM Kisan Benefit Calculator
+          </Link>{" "}
+          try karein.
+        </p>
       </section>
 
       {/* Section 4 – Status Check */}
@@ -560,6 +587,11 @@ export default function PMKisan24viKistArticle() {
         </figure>
         <p className="mb-4 leading-relaxed">
           eKYC ke liye pmkisan.gov.in portal par jaayein aur apna Aadhaar number se OTP verify karein.
+          Step-by-step madad chahiye toh hamari{" "}
+          <Link href="/articles/pm-kisan-ekyc-online-2026" className="text-green-700 underline hover:text-green-900">
+            detailed eKYC guide
+          </Link>{" "}
+          padhein.
         </p>
       </section>
 
@@ -608,6 +640,14 @@ export default function PMKisan24viKistArticle() {
             </div>
           ))}
         </div>
+        {/* NEW internal link 3 — payment failed deep-dive article */}
+        <p className="mt-4 text-sm text-gray-600 leading-relaxed">
+          Payment fail hone ke baare mein detail mein samajhna ho toh hamari{" "}
+          <Link href="/articles/pm-kisan-payment-failed-status-2026" className="text-green-700 underline hover:text-green-900">
+            Payment Failed – Poori Guide
+          </Link>{" "}
+          padhein.
+        </p>
         <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mt-4">
           <p className="font-semibold text-gray-700 mb-2">📞 PM Kisan Helpline:</p>
           <ul className="text-gray-600 text-sm space-y-1">
@@ -671,19 +711,25 @@ export default function PMKisan24viKistArticle() {
         <div className="grid sm:grid-cols-2 gap-4">
           {[
             {
-              href: "https://kisanstatus.com/pm-kisan-mobile-number-change",
+              href: "/pm-kisan-mobile-number-change",
               title: "PM Kisan Details Update Guide",
               desc: "Mobile number, bank account aur Aadhaar update karne ki poori jaankari.",
               icon: "✏️",
             },
             {
-              href: "https://kisanstatus.com/agristack-kya-hai",
+              href: "/agristack-kya-hai",
               title: "AgriStack Kya Hai – Farmer ID Guide",
               desc: "AgriStack kya hai, Farmer ID kaise banegi aur kisan ko kya fayde milenge.",
               icon: "🌾",
             },
+            {
+              href: "/articles/pm-kisan-registration-online-2026",
+              title: "Naya PM Kisan Registration",
+              desc: "Pehli baar registration kaise karein – step by step CSC aur online process.",
+              icon: "📝",
+            },
           ].map(({ href, title, desc, icon }) => (
-            <a
+            <Link
               key={href}
               href={href}
               className="flex gap-3 p-4 border border-green-200 rounded-lg bg-green-50 hover:bg-green-100 transition-colors"
@@ -693,7 +739,7 @@ export default function PMKisan24viKistArticle() {
                 <p className="font-semibold text-green-800 text-sm">{title}</p>
                 <p className="text-gray-600 text-xs mt-0.5">{desc}</p>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </section>
@@ -713,12 +759,12 @@ export default function PMKisan24viKistArticle() {
         </p>
         <p className="mb-4 leading-relaxed">
           Agar koi bhi problem ho toh helpline 155261 par call karein ya{" "}
-          <a
-            href="https://kisanstatus.com"
+          <Link
+            href="/"
             className="text-green-700 underline hover:text-green-900"
           >
             kisanstatus.com
-          </a>{" "}
+          </Link>{" "}
           par visit karein.
         </p>
         <div className="bg-green-100 border border-green-300 rounded-lg p-4 text-center">
