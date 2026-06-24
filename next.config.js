@@ -1,34 +1,54 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Next.js 15 — Turbopack enabled by default in dev
-  // React 19 compatible
-  experimental: {
-    // React 19 uses new JSX transform — already enabled by default in Next 15
-  },
-
-  // Compress responses for better Core Web Vitals
   compress: true,
 
-  // ✅ FIX: serve images as-is from public/images/ without Next.js optimizer
+  // ✅ Images served as-is (Vercel free plan compatible)
   images: {
     unoptimized: true,
   },
 
-  // Add security + SEO headers
+  // ✅ FIX: Proper cache + security + performance headers
   async headers() {
     return [
+      // Security headers — all routes
       {
         source: '/(.*)',
         headers: [
-          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
-          { key: 'X-Content-Type-Options', value: 'nosniff' },
-          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          { key: 'X-Frame-Options',           value: 'SAMEORIGIN' },
+          { key: 'X-Content-Type-Options',    value: 'nosniff' },
+          { key: 'Referrer-Policy',           value: 'strict-origin-when-cross-origin' },
+          // ✅ NEW: tells browser to preconnect DNS for pmkisan.gov.in (faster external links)
+          { key: 'X-DNS-Prefetch-Control',    value: 'on' },
+        ],
+      },
+
+      // ✅ FIX: Static assets — 1 year cache (images, fonts, icons)
+      // Pehle pattern galat tha — parens ke andar colon nahi hona chahiye
+      {
+        source: '/_next/static/(.*)',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
         ],
       },
       {
-        source: '/(:path*\\.(?:png|jpg|jpeg|gif|svg|ico|webp|woff2|woff))',
+        source: '/images/(.*)',
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+      {
+        source: '/fonts/(.*)',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+
+      // ✅ NEW: HTML pages — revalidate every 24 hours (SEO fresh content)
+      {
+        source: '/((?!_next/static|images|fonts).*)',
+        headers: [
+          { key: 'Cache-Control', value: 'public, s-maxage=86400, stale-while-revalidate=3600' },
         ],
       },
     ];
@@ -36,6 +56,7 @@ const nextConfig = {
 
   async redirects() {
     return [
+      // www → non-www canonical redirect
       {
         source: '/:path*',
         has: [{ type: 'host', value: 'www.kisanstatus.com' }],
