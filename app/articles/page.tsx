@@ -7,6 +7,7 @@
  *  - Category filter tabs added (UX + SEO dwell time)
  *  - Proper image dimensions (no layout shift / CLS)
  *  - revalidate kept at 86400
+ *  - v2: pm-kisan-24vi-kist image .png → .webp fix
  */
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -41,7 +42,6 @@ export const metadata: Metadata = {
 
 export const revalidate = 86400;
 
-// ── Category config ────────────────────────────────────────────────────────
 const CATEGORY_META: Record<string, { label: string; emoji: string; color: string }> = {
   Status:       { label: 'Status Check', emoji: '📆', color: 'bg-blue-100 text-blue-700'       },
   eKYC:         { label: 'eKYC',         emoji: '🔐', color: 'bg-green-100 text-green-700'     },
@@ -57,8 +57,6 @@ const CATEGORY_META: Record<string, { label: string; emoji: string; color: strin
   Rejection:    { label: 'Rejection',    emoji: '❌', color: 'bg-rose-100 text-rose-700'       },
 };
 
-// ── Article meta — emoji + category + image + isNew ───────────────────────
-// ✅ FIX: image field added for every article
 const ARTICLE_META: Record<
   string,
   { emoji: string; category: string; isNew: boolean; image: string }
@@ -81,15 +79,12 @@ const ARTICLE_META: Record<
   'pm-kisan-correction-deactivate-block-guide-2026': { emoji: '🛠️', category: 'Correction',   isNew: false, image: '/images/pm-kisan-correction-deactivate-block-guide-2026.webp'    },
   'pm-kisan-problems-solution-guide-2026':           { emoji: '🔧', category: 'Problems',     isNew: false, image: '/images/pm-kisan-problems-solution-guide-2026.webp'               },
   'pm-kisan-fto-generated-ka-matlab-kya-hai':        { emoji: '📄', category: 'Payment',      isNew: true,  image: '/images/pm-kisan-fto-generated-featured-image-kisanstatus.webp'  },
-  'pm-kisan-24vi-kist':                              { emoji: '📆', category: 'Status',       isNew: true,  image: '/images/pm-kisan-24vi-kist-october-2026.png'                      },
+  'pm-kisan-24vi-kist':                              { emoji: '📆', category: 'Status',       isNew: true,  image: '/images/pm-kisan-24vi-kist-october-2026.webp'                     }, // ✅ FIXED: .png → .webp
   'agristack-kya-hai':                               { emoji: '🌐', category: 'Problems',     isNew: true,  image: '/images/agristack-kya-hai-infographic.webp'                       },
   'pm-kisan-mobile-number-change':                   { emoji: '📱', category: 'Correction',   isNew: true,  image: '/images/pm-kisan-mobile-bank-aadhaar-update-banner-website.webp' },
   'nano-dap-500ml-price-in-india-2026':              { emoji: '🧴', category: 'Problems',     isNew: true,  image: '/images/nano-dap-500ml-price-india-2026.webp'                     },
 };
 
-// ── Article Card — server component, image with fallback via CSS ──────────
-// Note: 'use client' nahi hai — ye server component hai
-// onError client-side hai isliye inline style fallback use kiya
 function ArticleCard({
   article,
   showNewBadge = false,
@@ -112,11 +107,8 @@ function ArticleCard({
           : 'border border-gray-200 hover:border-green-300'
       }`}
     >
-      {/* ✅ FIX: Image block — was completely missing before */}
       <div className="relative h-40 w-full overflow-hidden bg-gradient-to-br from-green-50 to-emerald-100 shrink-0">
         {image ? (
-          // Server-side: img tag with proper dims for no layout shift
-          // Client fallback: if image 404s, bg gradient + emoji shows
           <img
             src={image}
             alt={article.title}
@@ -125,8 +117,6 @@ function ArticleCard({
             loading="lazy"
             decoding="async"
             className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
-            // ✅ Inline onerror — works in server components too
-            onError={undefined}
             style={{ display: 'block' }}
           />
         ) : (
@@ -134,11 +124,8 @@ function ArticleCard({
             <span className="text-5xl">{emoji}</span>
           </div>
         )}
-        {/* Dark gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-        {/* Emoji badge bottom-left */}
         <span className="absolute bottom-2 left-3 text-xl drop-shadow">{emoji}</span>
-        {/* NEW badge */}
         {(showNewBadge || isNew) && (
           <span className="absolute top-2 right-2 bg-green-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full shadow">
             NEW
@@ -146,7 +133,6 @@ function ArticleCard({
         )}
       </div>
 
-      {/* Content */}
       <div className="p-4 flex flex-col flex-1">
         {catMeta && (
           <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full self-start ${catMeta.color}`}>
@@ -168,7 +154,6 @@ function ArticleCard({
   );
 }
 
-// ── JSON-LD schema for article listing ────────────────────────────────────
 function ArticleListSchema({ articles }: { articles: { slug: string; title: string }[] }) {
   const schema = {
     '@context': 'https://schema.org',
@@ -191,7 +176,6 @@ function ArticleListSchema({ articles }: { articles: { slug: string; title: stri
   );
 }
 
-// ── Page ──────────────────────────────────────────────────────────────────
 export default function ArticlesPage() {
   const newArticles = ARTICLES.filter(a => ARTICLE_META[a.slug]?.isNew);
   const allArticles = ARTICLES;
@@ -200,7 +184,6 @@ export default function ArticlesPage() {
     <main className="min-h-screen bg-gray-50">
       <ArticleListSchema articles={allArticles} />
 
-      {/* ── Hero Header ───────────────────────────────────────── */}
       <section
         className="py-10 md:py-14"
         style={{ background: 'linear-gradient(135deg,#052e16 0%,#14532d 60%,#166534 100%)' }}
@@ -226,8 +209,6 @@ export default function ArticlesPage() {
       </section>
 
       <div className="container-site py-10">
-
-        {/* ── NEW Articles ──────────────────────────────────────── */}
         {newArticles.length > 0 && (
           <section className="mb-12" aria-labelledby="new-articles-heading">
             <div className="flex items-center gap-3 mb-5">
@@ -247,7 +228,6 @@ export default function ArticlesPage() {
           </section>
         )}
 
-        {/* ── All Articles ──────────────────────────────────────── */}
         <section aria-labelledby="all-articles-heading">
           <div className="flex items-center gap-3 mb-5">
             <span className="text-xl">📋</span>
@@ -265,7 +245,6 @@ export default function ArticlesPage() {
           </div>
         </section>
 
-        {/* ── Back to Home ──────────────────────────────────────── */}
         <div className="text-center mt-12">
           <Link
             href="/"
@@ -274,7 +253,6 @@ export default function ArticlesPage() {
             🏠 Homepage Par Wapas Jao
           </Link>
         </div>
-
       </div>
     </main>
   );
