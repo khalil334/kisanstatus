@@ -6,71 +6,19 @@ import type { ArticleMeta } from '@/lib/articles-data';
 
 const DOMAIN = 'https://kisanstatus.com';
 
+const RELATED = [
+  {slug:'pm-kisan-23vi-kist-2026-status-check',   title:'23vi Kist Status Check',      emoji:'💰'},
+  {slug:'pm-kisan-ekyc-online-2026',              title:'eKYC Karo — Free Guide',      emoji:'🔐'},
+  {slug:'pm-kisan-payment-failed-status-2026',    title:'Payment Failed Fix',          emoji:'💸'},
+  {slug:'kisan-rin-kaha-se-le-2026',              title:'Kisan Rin Kaha Se Le',        emoji:'🏦'},
+];
+
 export default function KisanCreditCardOnlineApply2026({ article }: { article: ArticleMeta }) {
   const PUBLISHED = article.publishedTime ?? '2026-06-01T08:00:00+05:30';
   const MODIFIED  = article.modifiedTime  ?? PUBLISHED;
-  const ARTICLE_URL = `${DOMAIN}/articles/${article.slug}`;
-  const ABS_HERO = `${DOMAIN}/images/kisan-credit-card-apply-online-hero.webp`;
-
-  const schemas = [
-    {
-      '@context':'https://schema.org','@type':'Article',
-      headline: article.title,
-      description: article.desc,
-      image: [ABS_HERO],
-      datePublished: PUBLISHED,
-      dateModified: MODIFIED,
-      author:{'@type':'Person',name:'Sidhu Singh',url:`${DOMAIN}/about`},
-      publisher:{
-        '@type':'Organization',
-        name:'Kisan Status',
-        url: DOMAIN,
-        logo:{'@type':'ImageObject', url:`${DOMAIN}/logo.png`},
-      },
-      mainEntityOfPage:{'@type':'WebPage','@id': ARTICLE_URL},
-      inLanguage:'hi-IN', wordCount:3200,
-    },
-    {
-      '@context':'https://schema.org','@type':'BreadcrumbList',
-      itemListElement:[
-        {'@type':'ListItem',position:1,name:'Home',item:DOMAIN},
-        {'@type':'ListItem',position:2,name:'Articles',item:`${DOMAIN}/articles`},
-        {'@type':'ListItem',position:3,name:article.title,item: ARTICLE_URL},
-      ],
-    },
-    {
-      '@context':'https://schema.org','@type':'WebPage',
-      '@id': ARTICLE_URL,
-      url: ARTICLE_URL,
-      name: article.title,
-      description: article.desc,
-      inLanguage:'hi-IN',
-      isPartOf:{'@type':'WebSite', url: DOMAIN, name:'KisanStatus.com'},
-    },
-    {
-      '@context':'https://schema.org','@type':'FAQPage',
-      mainEntity:[
-        {'@type':'Question',name:'Kisan Credit Card online apply kaise karein?',
-          acceptedAnswer:{'@type':'Answer',text:'Apne bank ki official website ya Kisan Rin Portal par jaakar KCC section mein personal aur land details bharo, documents upload karo aur submit kar do. Reference number milega jisse status track ho sakta hai.'}},
-        {'@type':'Question',name:'KCC ka maximum loan limit kitna hai 2026 mein?',
-          acceptedAnswer:{'@type':'Answer',text:'Union Budget 2025-26 ke baad interest subvention limit ₹3 lakh se ₹5 lakh kar di gayi hai. Collateral-free loan ₹2 lakh tak milta hai.'}},
-        {'@type':'Question',name:'PM Kisan beneficiary ko KCC mein priority milti hai?',
-          acceptedAnswer:{'@type':'Answer',text:'Haan — PM Kisan beneficiaries ke Aadhaar aur land records already verified hote hain, isliye unka KCC application fast-track hota hai.'}},
-      ],
-    },
-  ];
-
-  const RELATED = [
-    {slug:'pm-kisan-23vi-kist-2026-status-check',   title:'23vi Kist Status Check',      emoji:'💰'},
-    {slug:'pm-kisan-ekyc-online-2026',              title:'eKYC Karo — Free Guide',      emoji:'🔐'},
-    {slug:'pm-kisan-payment-failed-status-2026',    title:'Payment Failed Fix',          emoji:'💸'},
-    {slug:'kisan-rin-kaha-se-le-2026',              title:'Kisan Rin Kaha Se Le',        emoji:'🏦'},
-  ];
 
   return (
     <>
-      {schemas.map((s,i)=><script key={i} type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(s)}}/>)}
-
       <div className="bg-primary-600 py-8">
         <div className="container-site max-w-3xl">
           <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
@@ -131,11 +79,6 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             KCC ko ek aam credit card ki tarah samjho — bas yeh sirf agricultural activities ke liye hai. Beej,
             khaad khareedne, labour hire karne, equipment lene — sab is loan se ho sakta hai.
           </p>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            KCC se pehle, bahut se kisan local moneylenders se loan lete the jo <strong>24% se 60% tak interest</strong>{' '}
-            charge karte the. KCC ne yeh badal diya — ab crop loans bahut kam interest rate par milte hain,
-            sarkar ki subsidy ke saath.
-          </p>
           <IB><strong>💰 Asli farak:</strong> Moneylender se 24-60% interest vs KCC se sirf 4% effective rate — ₹3 lakh ke loan par yeh saalana ₹50,000+ ki bachat ban sakta hai.</IB>
         </section>
 
@@ -167,7 +110,6 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             width="1000"
             height="640"
           />
-          <p className="text-gray-700 leading-relaxed mb-4">Yeh categories KCC ke liye eligible hain:</p>
           <ul className="space-y-2 text-sm text-gray-700 mb-4">
             {[
               'Individual farmers jinke paas zameen hai',
@@ -177,7 +119,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
               'PM Kisan Yojana mein registered farmers (priority milti hai)',
             ].map(i=><li key={i} className="flex gap-2"><span className="text-primary-600 shrink-0">✓</span>{i}</li>)}
           </ul>
-          <IB><strong>👉 Tip:</strong> Agar aap PM Kisan beneficiary ho aur aapka <Link href="/articles/pm-kisan-ekyc-online-2026" className="underline font-semibold">eKYC</Link> already complete hai, toh KCC approval process bahut fast ho jaata hai — bank verification mein time bachta hai.</IB>
+          <IB><strong>👉 Tip:</strong> Agar aap PM Kisan beneficiary ho aur aapka <Link href="/articles/pm-kisan-ekyc-online-2026" className="underline font-semibold">eKYC</Link> already complete hai, toh KCC approval process bahut fast ho jaata hai.</IB>
         </section>
 
         <section className="mb-8">
@@ -214,9 +156,6 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             width="1000"
             height="560"
           />
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Union Budget 2025-26 ke baad KCC mein bade changes hue hain. Yeh latest 2026 numbers hain:
-          </p>
           <div className="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
             <table className="w-full text-sm border-collapse">
               <thead>
@@ -242,27 +181,19 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
               </tbody>
             </table>
           </div>
-          <IB><strong>📌 Yaad rakho:</strong> ₹2 lakh se zyada ke loan par bank collateral maang sakta hai (tie-up arrangement mein yeh limit ₹3 lakh tak ho sakti hai). Aadhaar submission interest subvention ke liye mandatory hai.</IB>
+          <IB><strong>📌 Yaad rakho:</strong> ₹2 lakh se zyada ke loan par bank collateral maang sakta hai. Aadhaar submission interest subvention ke liye mandatory hai.</IB>
         </section>
 
-        {/* Calculator CTA box */}
         <section className="mb-8">
           <div className="bg-green-50 border-2 border-primary-600 border-l-[6px] rounded-xl p-5">
             <h3 className="text-base font-black text-primary-800 mb-2">🧮 Calculate Your KCC Loan Amount</h3>
             <p className="text-sm text-gray-700 mb-4">
-              Apply karne se pehle apna eligible loan amount aur monthly EMI estimate karo — ek minute se kam
-              time lagega, aur bank jaane se pehle fully prepared rahoge.
+              Apply karne se pehle apna eligible loan amount aur monthly EMI estimate karo — bank jaane se pehle fully prepared rahoge.
             </p>
             <div className="flex flex-wrap gap-3">
-              <a href="https://kisanstatus.com/calculator/kcc-loan-emi" className="inline-block bg-primary-600 text-white text-sm font-bold px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors">
-                KCC Loan EMI Calculator
-              </a>
-              <a href="https://kisanstatus.com/calculator/msp-income" className="inline-block bg-white border-2 border-primary-600 text-primary-700 text-sm font-bold px-4 py-2 rounded-lg hover:bg-green-100 transition-colors">
-                MSP Income Calculator
-              </a>
-              <a href="https://kisanstatus.com/calculator" className="inline-block bg-white border-2 border-gray-300 text-gray-700 text-sm font-bold px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors">
-                All Calculators
-              </a>
+              <a href={`${DOMAIN}/calculator/kcc-loan-emi`} className="inline-block bg-primary-600 text-white text-sm font-bold px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors">KCC Loan EMI Calculator</a>
+              <a href={`${DOMAIN}/calculator/msp-income`} className="inline-block bg-white border-2 border-primary-600 text-primary-700 text-sm font-bold px-4 py-2 rounded-lg hover:bg-green-100 transition-colors">MSP Income Calculator</a>
+              <a href={`${DOMAIN}/calculator`} className="inline-block bg-white border-2 border-gray-300 text-gray-700 text-sm font-bold px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors">All Calculators</a>
             </div>
           </div>
         </section>
@@ -279,10 +210,6 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             width="1000"
             height="500"
           />
-          <p className="text-gray-700 leading-relaxed mb-4">
-            SBI, PNB, Bank of Baroda, Canara Bank jaise major banks ab dedicated KCC portals offer karte hain.
-            Kisan Rin Portal se bhi end-to-end digital application ho sakta hai.
-          </p>
           <StepList>
             <SI n={1}>Apne bank ki official website ya <strong>Kisan Rin Portal</strong> kholo, KCC section dhundo.</SI>
             <SI n={2}>Personal details bharo — naam, Aadhaar number, PAN, mobile number, zameen ki details.</SI>
@@ -296,10 +223,6 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
 
         <section className="mb-8">
           <SH>Offline Apply Karna Hai? Yeh Karo</SH>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Online comfortable nahi ho to offline process bhi available hai, especially rural areas mein jahan
-            internet kamzor hota hai.
-          </p>
           <StepList>
             <SI n={1}>Apni nearest bank branch jao — jahan already savings account hai.</SI>
             <SI n={2}>KCC application form maango, bank officer process samjha dega.</SI>
@@ -308,8 +231,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             <SI n={5}>Form submit karo counter par, verification ka wait karo.</SI>
           </StepList>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Offline process mein usually <strong>7-15 working din</strong> lagte hain. PM Kisan beneficiaries ke
-            liye yeh process fast ho sakta hai kyunki details already government database mein verified hain.
+            Offline process mein usually <strong>7-15 working din</strong> lagte hain. PM Kisan beneficiaries ke liye fast ho sakta hai.
           </p>
         </section>
 
@@ -333,7 +255,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             {[
               {q:'Kisan Credit Card online apply kaise karein?', a:'Apne bank ki website ya Kisan Rin Portal par jaakar KCC section mein personal aur land details bharo, documents upload karo aur submit kar do. Reference number milega jisse status track ho sakta hai.'},
               {q:'2026 mein KCC ka maximum loan limit kitna hai?', a:'Union Budget 2025-26 ke baad interest subvention limit ₹5 lakh tak hai. Collateral-free loan ₹2 lakh tak milta hai bina kisi security ke.'},
-              {q:'PM Kisan beneficiary ko KCC mein priority milti hai?', a:'Haan — PM Kisan beneficiaries ka Aadhaar aur land record already verified hota hai, isliye unka KCC application fast-track hota hai. Apna 23vi kist status yahan check karein: '},
+              {q:'PM Kisan beneficiary ko KCC mein priority milti hai?', a:'Haan — PM Kisan beneficiaries ka Aadhaar aur land record already verified hota hai, isliye unka KCC application fast-track hota hai.'},
               {q:'KCC ke liye collateral chahiye?', a:'₹2 lakh tak ke loan ke liye koi collateral nahi chahiye. Usse zyada ke liye bank collateral ya guarantor maang sakta hai.'},
               {q:'KCC approval mein kitna time lagta hai?', a:'Online application 7-10 working din mein process hoti hai. Offline application mein 10-15 working din lag sakte hain.'},
               {q:'Bina zameen ke KCC mil sakta hai?', a:'Haan — tenant farmers aur sharecroppers bhi apply kar sakte hain. Lease agreement ya landowner se certificate dena hoga.'},
@@ -343,10 +265,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
                   <span>{q}</span>
                   <span className="text-green-600 text-xl group-open:rotate-45 transition-transform shrink-0">+</span>
                 </summary>
-                <div className="p-4 text-sm text-gray-700 leading-relaxed border-t border-gray-100">
-                  {a}
-                  {q.includes('priority') && <Link href="/articles/pm-kisan-23vi-kist-2026-status-check" className="underline font-semibold text-primary-700">PM Kisan 23vi Kist Status Check</Link>}
-                </div>
+                <div className="p-4 text-sm text-gray-700 leading-relaxed border-t border-gray-100">{a}</div>
               </details>
             ))}
           </div>
@@ -384,7 +303,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           href="https://www.kisanrin.com"
           label="Kisan Rin Portal — KCC Apply Karo"
           guide="Apply Karo"
-          guideHref="/articles/pm-kisan-21vi-installment-status-check"
+          guideHref="/articles/pm-kisan-ekyc-online-2026"
         />
 
         <RelatedArticles articles={RELATED}/>
