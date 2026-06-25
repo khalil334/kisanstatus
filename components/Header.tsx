@@ -1,10 +1,7 @@
 'use client';
 /**
- * Header — KisanStatus.com v10
- * Bugs fixed:
- *   - SearchBar completely removed (import + mobile bar + desktop button)
- *   - setDesktopSearch reference removed
- *   - Clean nav with all working links
+ * Header — KisanStatus.com v11
+ * Fix: Announcement bar removed (white banner hataya)
  */
 import { useState } from 'react';
 import Link from 'next/link';
@@ -25,11 +22,6 @@ export default function Header() {
 
   return (
     <header className="bg-white border-b border-green-100 sticky top-0 z-30 shadow-sm" role="banner">
-      {/* Announcement bar */}
-      <div className="bg-primary-600 text-white text-xs text-center py-1.5 px-4">
-        🌾 PM Kisan 23vi Kist: 20 June 2026 ko release ho chuki hai — eKYC abhi kara lo warna agli kist ruk sakti hai | Helpline: 155261
-      </div>
-
       {/* Main header row */}
       <div className="container-site flex items-center justify-between h-14 gap-3">
         <Link href="/" aria-label="KisanStatus.com — Home" className="shrink-0">
