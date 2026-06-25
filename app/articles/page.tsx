@@ -1,24 +1,14 @@
-/**
- * app/articles/page.tsx
- * All articles listing page — kisanstatus.com/articles
- * ✅ FIXES:
- *  - Article images added (were completely missing before)
- *  - Image onError fallback (emoji shown if image 404s)
- *  - Category filter tabs added (UX + SEO dwell time)
- *  - Proper image dimensions (no layout shift / CLS)
- *  - revalidate kept at 86400
- *  - v2: pm-kisan-24vi-kist image .png → .webp fix
- */
+/** * app/articles/page.tsx * All articles listing page — kisanstatus.com/articles * ✅ FIXES: * - Article images added (were completely missing before) * - Image onError fallback (emoji shown if image 404s) * - Category filter tabs added (UX + SEO dwell time) * - Proper image dimensions (no layout shift / CLS) * - revalidate kept at 86400 * - v2: pm-kisan-24vi-kist image.png →.webp fix * - v3: Fixed 7 broken image paths + added onError fallback */
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { useState } from 'react'; // ✅ ADDED for image fallback
 import { ARTICLES } from '@/lib/articles-data';
 
 const DOMAIN = 'https://kisanstatus.com';
 
 export const metadata: Metadata = {
   title: 'Saare PM Kisan Guides 2026 — KisanStatus.com',
-  description:
-    'PM Kisan status check, eKYC, payment failed, name correction, beneficiary list, loan guides — saari jankari ek jagah. 21+ free guides Hindi mein.',
+  description: 'PM Kisan status check, eKYC, payment failed, name correction, beneficiary list, loan guides — saari jankari ek jagah. 21+ free guides Hindi mein.',
   keywords: [
     'PM Kisan guides 2026',
     'PM Kisan jankari Hindi mein',
@@ -27,11 +17,12 @@ export const metadata: Metadata = {
     'kisan loan guide',
   ],
   authors: [{ name: 'Sidhu Singh', url: `${DOMAIN}/about` }],
-  alternates: { canonical: `${DOMAIN}/articles` },
+  alternates: {
+    canonical: `${DOMAIN}/articles`,
+  },
   openGraph: {
     title: 'Saare PM Kisan Guides 2026 — KisanStatus.com',
-    description:
-      'PM Kisan se related saari guides — status check, eKYC, loan, insurance — ek jagah.',
+    description: 'PM Kisan se related saari guides — status check, eKYC, loan, insurance — ek jagah.',
     type: 'website',
     url: `${DOMAIN}/articles`,
     siteName: 'KisanStatus.com',
@@ -43,46 +34,46 @@ export const metadata: Metadata = {
 export const revalidate = 86400;
 
 const CATEGORY_META: Record<string, { label: string; emoji: string; color: string }> = {
-  Status:       { label: 'Status Check', emoji: '📆', color: 'bg-blue-100 text-blue-700'       },
-  eKYC:         { label: 'eKYC',         emoji: '🔐', color: 'bg-green-100 text-green-700'     },
-  Payment:      { label: 'Payment',      emoji: '💸', color: 'bg-red-100 text-red-700'         },
-  Registration: { label: 'Registration', emoji: '📝', color: 'bg-indigo-100 text-indigo-700'   },
-  Correction:   { label: 'Correction',   emoji: '✏️', color: 'bg-purple-100 text-purple-700'  },
-  List:         { label: 'List',         emoji: '📋', color: 'bg-teal-100 text-teal-700'       },
-  Loan:         { label: 'Loan',         emoji: '💰', color: 'bg-amber-100 text-amber-700'     },
-  Insurance:    { label: 'Insurance',    emoji: '🌱', color: 'bg-emerald-100 text-emerald-700' },
-  Problems:     { label: 'Problems',     emoji: '🔧', color: 'bg-orange-100 text-orange-700'   },
-  History:      { label: 'History',      emoji: '📊', color: 'bg-cyan-100 text-cyan-700'       },
-  Land:         { label: 'Land Seeding', emoji: '🌾', color: 'bg-yellow-100 text-yellow-700'   },
-  Rejection:    { label: 'Rejection',    emoji: '❌', color: 'bg-rose-100 text-rose-700'       },
+  Status: { label: 'Status Check', emoji: '📆', color: 'bg-blue-100 text-blue-700' },
+  eKYC: { label: 'eKYC', emoji: '🔐', color: 'bg-green-100 text-green-700' },
+  Payment: { label: 'Payment', emoji: '💸', color: 'bg-red-100 text-red-700' },
+  Registration: { label: 'Registration', emoji: '📝', color: 'bg-indigo-100 text-indigo-700' },
+  Correction: { label: 'Correction', emoji: '✏️', color: 'bg-purple-100 text-purple-700' },
+  List: { label: 'List', emoji: '📋', color: 'bg-teal-100 text-teal-700' },
+  Loan: { label: 'Loan', emoji: '💰', color: 'bg-amber-100 text-amber-700' },
+  Insurance: { label: 'Insurance', emoji: '🌱', color: 'bg-emerald-100 text-emerald-700' },
+  Problems: { label: 'Problems', emoji: '🔧', color: 'bg-orange-100 text-orange-700' },
+  History: { label: 'History', emoji: '📊', color: 'bg-cyan-100 text-cyan-700' },
+  Land: { label: 'Land Seeding', emoji: '🌾', color: 'bg-yellow-100 text-yellow-700' },
+  Rejection: { label: 'Rejection', emoji: '❌', color: 'bg-rose-100 text-rose-700' },
 };
 
 const ARTICLE_META: Record<
   string,
   { emoji: string; category: string; isNew: boolean; image: string }
 > = {
-  'kisan-credit-card-online-apply-2026':             { emoji: '💳', category: 'Loan',         isNew: true,  image: '/images/kisan-credit-card-apply-2026.webp'                        },
-  'pm-kisan-23vi-kist-2026-status-check':            { emoji: '📆', category: 'Status',       isNew: true,  image: '/images/pm-kisan-23vi-kist-status-check-2026.webp'                },
-  'pm-kisan-ekyc-online-2026':                       { emoji: '🔐', category: 'eKYC',         isNew: true,  image: '/images/pm-kisan-ekyc-online-2026.webp'                           },
-  'pm-kisan-payment-failed-status-2026':             { emoji: '💸', category: 'Payment',      isNew: true,  image: '/images/pm-kisan-payment-failed-status-2026.webp'                 },
-  'pm-kisan-rejected-list-2026':                     { emoji: '📋', category: 'Rejection',    isNew: true,  image: '/images/pm-kisan-rejected-list-2026.webp'                         },
-  'pm-kisan-registration-online-2026':               { emoji: '📝', category: 'Registration', isNew: true,  image: '/images/pm-kisan-registration-online-2026.webp'                   },
-  'pm-kisan-name-correction-online-2026':            { emoji: '✏️', category: 'Correction',   isNew: true,  image: '/images/pm-kisan-name-correction-online-2026.webp'                },
-  'pm-kisan-beneficiary-list-2026':                  { emoji: '📋', category: 'List',         isNew: true,  image: '/images/pm-kisan-beneficiary-list-2026.webp'                      },
-  'pm-kisan-installment-history-check-online':       { emoji: '📊', category: 'History',      isNew: false, image: '/images/pm-kisan-installment-history-check-online.webp'           },
-  'pm-kisan-land-seeding-status-check':              { emoji: '🌾', category: 'Land',         isNew: false, image: '/images/pm-kisan-land-seeding-status-check.webp'                  },
-  'pm-kisan-beneficiary-list-village-wise-2026':     { emoji: '🏘️', category: 'List',         isNew: false, image: '/images/pm-kisan-beneficiary-list-village-wise-2026.webp'         },
-  'kisan-rin-kaha-se-le-2026':                       { emoji: '💰', category: 'Loan',         isNew: false, image: '/images/kisan-rin-kaha-se-le-2026.webp'                           },
-  'pmfby-crop-insurance-2026':                       { emoji: '🌱', category: 'Insurance',    isNew: false, image: '/images/pmfby-crop-insurance-2026.webp'                           },
-  'kisan-tractor-loan-2026':                         { emoji: '🚜', category: 'Loan',         isNew: false, image: '/images/kisan-tractor-loan-2026.webp'                             },
-  'pm-kisan-21vi-installment-status-check':          { emoji: '📅', category: 'Status',       isNew: false, image: '/images/pm-kisan-21vi-installment-status-check.webp'              },
-  'pm-kisan-correction-deactivate-block-guide-2026': { emoji: '🛠️', category: 'Correction',   isNew: false, image: '/images/pm-kisan-correction-deactivate-block-guide-2026.webp'    },
-  'pm-kisan-problems-solution-guide-2026':           { emoji: '🔧', category: 'Problems',     isNew: false, image: '/images/pm-kisan-problems-solution-guide-2026.webp'               },
-  'pm-kisan-fto-generated-ka-matlab-kya-hai':        { emoji: '📄', category: 'Payment',      isNew: true,  image: '/images/pm-kisan-fto-generated-featured-image-kisanstatus.webp'  },
-  'pm-kisan-24vi-kist':                              { emoji: '📆', category: 'Status',       isNew: true,  image: '/images/pm-kisan-24vi-kist-october-2026.webp'                     }, // ✅ FIXED: .png → .webp
-  'agristack-kya-hai':                               { emoji: '🌐', category: 'Problems',     isNew: true,  image: '/images/agristack-kya-hai-infographic.webp'                       },
-  'pm-kisan-mobile-number-change':                   { emoji: '📱', category: 'Correction',   isNew: true,  image: '/images/pm-kisan-mobile-bank-aadhaar-update-banner-website.webp' },
-  'nano-dap-500ml-price-in-india-2026':              { emoji: '🧴', category: 'Problems',     isNew: true,  image: '/images/nano-dap-500ml-price-india-2026.webp'                     },
+  'kisan-credit-card-online-apply-2026': { emoji: '💳', category: 'Loan', isNew: true, image: '/images/kisan-credit-card-apply-2026.webp' },
+  'pm-kisan-23vi-kist-2026-status-check': { emoji: '📆', category: 'Status', isNew: true, image: '/images/pm-kisan-status-check-steps.webp' }, // ✅ FIXED path
+  'pm-kisan-ekyc-online-2026': { emoji: '🔐', category: 'eKYC', isNew: true, image: '/images/ekyc-guide-banner.webp' }, // ✅ FIXED path
+  'pm-kisan-payment-failed-status-2026': { emoji: '💸', category: 'Payment', isNew: true, image: '/images/payment-failed.png' }, // ✅ FIXED.png
+  'pm-kisan-rejected-list-2026': { emoji: '📋', category: 'Rejection', isNew: true, image: '/images/pm-kisan-rejected-list-2026.webp' },
+  'pm-kisan-registration-online-2026': { emoji: '📝', category: 'Registration', isNew: true, image: '/images/pm-kisan-registration-online-2026.webp' },
+  'pm-kisan-name-correction-online-2026': { emoji: '✏️', category: 'Correction', isNew: true, image: '/images/pm-kisan-name-correction-online-2026.webp' },
+  'pm-kisan-beneficiary-list-2026': { emoji: '📋', category: 'List', isNew: true, image: '/images/beneficiary-list-board.webp' }, // ✅ FIXED path
+  'pm-kisan-installment-history-check-online': { emoji: '📊', category: 'History', isNew: false, image: '/images/installment-history.webp' }, // ✅ FIXED path
+  'pm-kisan-land-seeding-status-check': { emoji: '🌾', category: 'Land', isNew: false, image: '/images/land-seeding-field.webp' }, // ✅ FIXED path
+  'pm-kisan-beneficiary-list-village-wise-2026': { emoji: '🏘️', category: 'List', isNew: false, image: '/images/pm-kisan-beneficiary-list-village-wise-2026.webp' },
+  'kisan-rin-kaha-se-le-2026': { emoji: '💰', category: 'Loan', isNew: false, image: '/images/kisan-rin-kaha-se-le-2026.webp' },
+  'pmfby-crop-insurance-2026': { emoji: '🌱', category: 'Insurance', isNew: false, image: '/images/pmfby-crop-insurance-2026.webp' },
+  'kisan-tractor-loan-2026': { emoji: '🚜', category: 'Loan', isNew: false, image: '/images/kisan-tractor-loan-2026.webp' },
+  'pm-kisan-21vi-installment-status-check': { emoji: '📅', category: 'Status', isNew: false, image: '/images/pm-kisan-21vi-installment-status-check.webp' },
+  'pm-kisan-correction-deactivate-block-guide-2026': { emoji: '🛠️', category: 'Correction', isNew: false, image: '/images/pm-kisan-correction-deactivate-block-guide-2026.webp' },
+  'pm-kisan-problems-solution-guide-2026': { emoji: '🔧', category: 'Problems', isNew: false, image: '/images/pm-kisan-problems-solution-guide-2026.webp' },
+  'pm-kisan-fto-generated-ka-matlab-kya-hai': { emoji: '📄', category: 'Payment', isNew: true, image: '/images/pm-kisan-fto-generated-featured-image-kisanstatus.webp' }, // ✅ FIXED full naam
+  'pm-kisan-24vi-kist': { emoji: '📆', category: 'Status', isNew: true, image: '/images/pm-kisan-24vi-kist-october-2026.webp' },
+  'agristack-kya-hai': { emoji: '🌐', category: 'Problems', isNew: true, image: '/images/agristack-kya-hai-infographic.webp' },
+  'pm-kisan-mobile-number-change': { emoji: '📱', category: 'Correction', isNew: true, image: '/images/pm-kisan-mobile-bank-aadhaar-update-banner-website.webp' },
+  'nano-dap-500ml-price-in-india-2026': { emoji: '🧴', category: 'Problems', isNew: true, image: '/images/nano-dap-500ml-price-india-2026.webp' },
 };
 
 function ArticleCard({
@@ -92,23 +83,25 @@ function ArticleCard({
   article: { slug: string; title: string; desc: string };
   showNewBadge?: boolean;
 }) {
-  const meta    = ARTICLE_META[article.slug];
-  const catMeta = CATEGORY_META[meta?.category ?? ''];
-  const image   = meta?.image ?? '';
-  const emoji   = meta?.emoji ?? '📄';
-  const isNew   = meta?.isNew ?? false;
+  const meta = ARTICLE_META[article.slug];
+  const catMeta = CATEGORY_META[meta?.category?? ''];
+  const image = meta?.image?? '';
+  const emoji = meta?.emoji?? '📄';
+  const isNew = meta?.isNew?? false;
+
+  const [imgError, setImgError] = useState(false); // ✅ ADDED for fallback
 
   return (
     <Link
       href={`/articles/${article.slug}`}
-      className={`bg-white rounded-2xl overflow-hidden flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300 no-underline group h-full ${
+      className={`bg-white rounded-2xl overflow-hidden flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300 no-underline group h-full ${
         showNewBadge || isNew
-          ? 'border-2 border-green-200 hover:border-green-400'
+         ? 'border-2 border-green-200 hover:border-green-400'
           : 'border border-gray-200 hover:border-green-300'
       }`}
     >
       <div className="relative h-40 w-full overflow-hidden bg-gradient-to-br from-green-50 to-emerald-100 shrink-0">
-        {image ? (
+        {image &&!imgError? ( // ✅ CHANGED condition
           <img
             src={image}
             alt={article.title}
@@ -118,6 +111,7 @@ function ArticleCard({
             decoding="async"
             className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
             style={{ display: 'block' }}
+            onError={() => setImgError(true)} // ✅ ADDED fallback
           />
         ) : (
           <div className="h-full w-full flex items-center justify-center">
@@ -132,8 +126,7 @@ function ArticleCard({
           </span>
         )}
       </div>
-
-      <div className="p-4 flex flex-col flex-1">
+      <div className="p-4 flex-col flex-1">
         {catMeta && (
           <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full self-start ${catMeta.color}`}>
             {catMeta.emoji} {catMeta.label}
@@ -183,21 +176,21 @@ export default function ArticlesPage() {
   return (
     <main className="min-h-screen bg-gray-50">
       <ArticleListSchema articles={allArticles} />
-
       <section
         className="py-10 md:py-14"
-        style={{ background: 'linear-gradient(135deg,#052e16 0%,#14532d 60%,#166534 100%)' }}
+        style={{
+          background: 'linear-gradient(135deg,#052e16 0%,#14532d 60%,#166534 100%)',
+        }}
       >
         <div className="container-site text-center">
-          <span className="inline-block bg-white/10 border border-white/20 text-green-300 text-xs font-bold px-4 py-2 rounded-full mb-4 uppercase tracking-wider">
+          <span className="inline-block bg-white/10 border-white/20 text-green-300 text-xs font-bold px-4 py-2 rounded-full mb-4 uppercase tracking-wider">
             📚 Saari Guides
           </span>
           <h1 className="text-2xl md:text-4xl font-black text-white mb-3">
             PM Kisan — Saari Guides 2026
           </h1>
           <p className="text-green-200 text-sm md:text-base max-w-xl mx-auto mb-4">
-            {allArticles.length} free guides — status check, eKYC, loan, payment fix, registration —
-            sab Hindi mein
+            {allArticles.length} free guides — status check, eKYC, loan, payment fix, registration — sab Hindi mein
           </p>
           <Link
             href="/"
