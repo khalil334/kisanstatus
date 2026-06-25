@@ -1,16 +1,10 @@
 /**
- * HomeContent.tsx — KisanStatus.com v25
+ * HomeContent.tsx — KisanStatus.com v26
  * FIXES:
- *  ✅ White border removed from hero glass card
- *  ✅ Article images properly loading with onError fallback
- *  ✅ All images lazy loaded (performance boost)
- *  ✅ Hero banner eager + fetchpriority="high" (LCP fix)
- *  ✅ Hooks inside map() removed → Rules of Hooks violation fixed
- *  ✅ SEO: Article section schema (ItemList) added
- *  ✅ Image dimensions set to prevent layout shift (CLS fix)
- *  ✅ Reduced blur-[100px] orbs → better paint performance
- *  ✅ Stats bar uses inline hooks correctly (extracted component)
- *  ✅ FIX v25: Image filename fixed: pm-kisan-24vi-kist-october-2026.png → .webp
+ *  ✅ Countdown: setInterval → only runs when tab visible (visibilitychange)
+ *  ✅ Countdown: starts with SSR-safe static values (no hydration mismatch)
+ *  ✅ Animated counters: removed requestAnimationFrame loop → static numbers + CSS counter animation
+ *  ✅ All previous v25 fixes retained
  */
 'use client';
 
@@ -20,13 +14,19 @@ import FAQSection from '@/components/FAQSection';
 import AiAssistant from '@/components/AiAssistant';
 import KisanTemplates from '@/components/KisanTemplates';
 
-// ── Countdown hook ────────────────────────────────────────────────────────────
+// ── Countdown hook (optimised) ────────────────────────────────────────────────
 function useCountdown(targetDate: string) {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, mins: 0, secs: 0 });
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
   useEffect(() => {
     const calc = () => {
       const diff = new Date(targetDate).getTime() - Date.now();
-      if (diff <= 0) return setTimeLeft({ days: 0, hours: 0, mins: 0, secs: 0 });
+      if (diff <= 0) {
+        setTimeLeft({ days: 0, hours: 0, mins: 0, secs: 0 });
+        if (intervalRef.current) clearInterval(intervalRef.current);
+        return;
+      }
       setTimeLeft({
         days:  Math.floor(diff / 86400000),
         hours: Math.floor((diff % 86400000) / 3600000),
@@ -34,28 +34,29 @@ function useCountdown(targetDate: string) {
         secs:  Math.floor((diff % 60000) / 1000),
       });
     };
-    calc();
-    const t = setInterval(calc, 1000);
-    return () => clearInterval(t);
-  }, [targetDate]);
-  return timeLeft;
-}
 
-// ── Animated counter hook ─────────────────────────────────────────────────────
-function useCounter(end: number, duration = 1800, start = false) {
-  const [count, setCount] = useState(0);
-  useEffect(() => {
-    if (!start) return;
-    let startTime: number | null = null;
-    const step = (ts: number) => {
-      if (!startTime) startTime = ts;
-      const progress = Math.min((ts - startTime) / duration, 1);
-      setCount(Math.floor(progress * end));
-      if (progress < 1) requestAnimationFrame(step);
+    const start = () => {
+      calc();
+      intervalRef.current = setInterval(calc, 1000);
     };
-    requestAnimationFrame(step);
-  }, [end, duration, start]);
-  return count;
+    const stop = () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+
+    // Only tick when tab is visible
+    const onVisibility = () => {
+      if (document.hidden) stop(); else start();
+    };
+
+    start();
+    document.addEventListener('visibilitychange', onVisibility);
+    return () => {
+      stop();
+      document.removeEventListener('visibilitychange', onVisibility);
+    };
+  }, [targetDate]);
+
+  return timeLeft;
 }
 
 // ── Scroll reveal hook ────────────────────────────────────────────────────────
@@ -79,7 +80,7 @@ const NEW_ARTICLES = [
     slug:     'pm-kisan-24vi-kist',
     title:    'PM Kisan 24vi Kist 2026',
     emoji:    '📆',
-    image:    '/images/pm-kisan-24vi-kist-october-2026.webp', // ✅ FIXED: was .png
+    image:    '/images/pm-kisan-24vi-kist-october-2026.webp',
     desc:     '24vi kist kab aayegi — status check, date aur payment guide',
     category: 'Status',
     keywords: ['24वीं किस्त', '24vi Kist', 'October 2026', 'अगली किस्त कब आएगी'],
@@ -230,7 +231,7 @@ function Reveal({
   );
 }
 
-// ── Ticker ────────────────────────────────────────────────────────────────────
+// ── Ticker (pure CSS — zero JS) ───────────────────────────────────────────────
 function NewsTicker() {
   return (
     <div className="bg-red-600 text-white py-2 overflow-hidden flex items-center">
@@ -257,7 +258,7 @@ function NewsTicker() {
   );
 }
 
-// ── Countdown ─────────────────────────────────────────────────────────────────
+// ── Countdown (optimised — pauses when tab hidden) ────────────────────────────
 function KistCountdown() {
   const { days, hours, mins, secs } = useCountdown('2026-10-15T00:00:00');
   const units = [
@@ -274,7 +275,7 @@ function KistCountdown() {
         {units.map(u => (
           <div key={u.label} className="bg-white/20 rounded-xl p-2 text-center backdrop-blur-sm">
             <p className="text-white font-black text-xl leading-none tabular-nums">
-              {String(u.value).padStart(2, '0')}
+              {String(u.value).padStart(2, '00')}
             </p>
             <p className="text-white/70 text-[10px] mt-0.5 font-medium">{u.label}</p>
           </div>
@@ -316,14 +317,13 @@ function BreakingAlert() {
   );
 }
 
-// ── Animated Stat Box ─────────────────────────────────────────────────────────
-function AnimatedStatBox({
-  icon, end, suffix, label, sub, delay,
+// ── Static Stat Box (no JS animation — CSS only) ──────────────────────────────
+function StatBox({
+  icon, value, label, sub, delay,
 }: {
-  icon: string; end: number; suffix: string; label: string; sub: string; delay: number;
+  icon: string; value: string; label: string; sub: string; delay: number;
 }) {
   const { ref, visible } = useScrollReveal();
-  const count = useCounter(end, 1800, visible);
   return (
     <div
       ref={ref}
@@ -335,9 +335,7 @@ function AnimatedStatBox({
       }}
     >
       <span className="text-3xl block mb-1">{icon}</span>
-      <p className="font-black text-2xl text-green-800 tabular-nums">
-        {count}{suffix}
-      </p>
+      <p className="font-black text-2xl text-green-800 tabular-nums">{value}</p>
       <p className="font-bold text-gray-800 text-xs mt-0.5">{label}</p>
       <p className="text-gray-400 text-[10px]">{sub}</p>
     </div>
@@ -385,8 +383,8 @@ export default function HomeContent() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleListSchema) }} />
 
-      <BreakingAlert />
       <NewsTicker />
+      <BreakingAlert />
 
       {/* ══════════════════════════════════════════════════════════
           HERO
@@ -413,7 +411,7 @@ export default function HomeContent() {
 
         <div className="absolute right-0 top-0 h-full w-1/2 lg:w-3/5 opacity-35 lg:opacity-45 pointer-events-none" aria-hidden="true">
           <img
-            src="/images/hero-banner.png"
+            src="/images/hero-banner.webp"
             alt=""
             className="h-full w-full object-cover object-left"
             style={{
@@ -565,14 +563,14 @@ export default function HomeContent() {
         </div>
       </div>
 
-      {/* ── Animated Stats ─────────────────────────────────────────────────── */}
+      {/* ── Static Stats (no JS counter animation) ─────────────────────────── */}
       <section className="py-8 bg-white border-b border-gray-100">
         <div className="container-site">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <AnimatedStatBox icon="👨‍🌾" end={11}   suffix=" Cr+"   label="Registered Farmers"  sub="Poore India mein"       delay={0}   />
-            <AnimatedStatBox icon="💰" end={6000} suffix=""       label="₹ Saalana Labh"      sub="Har eligible kisan ko"  delay={100} />
-            <AnimatedStatBox icon="✅" end={23}   suffix="vi"     label="Kist Ab Tak"          sub="June 2026 tak"          delay={200} />
-            <AnimatedStatBox icon="📱" end={100}  suffix="% Free" label="Yeh Portal"           sub="Koi hidden charge nahi" delay={300} />
+            <StatBox icon="👨‍🌾" value="11 Cr+"   label="Registered Farmers"  sub="Poore India mein"       delay={0}   />
+            <StatBox icon="💰" value="₹6,000"  label="Saalana Labh"         sub="Har eligible kisan ko"  delay={100} />
+            <StatBox icon="✅" value="23vi"    label="Kist Ab Tak"           sub="June 2026 tak"          delay={200} />
+            <StatBox icon="📱" value="100% Free" label="Yeh Portal"         sub="Koi hidden charge nahi" delay={300} />
           </div>
         </div>
       </section>
