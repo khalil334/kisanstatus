@@ -1,7 +1,8 @@
-/** * app/articles/page.tsx * All articles listing page — kisanstatus.com/articles * ✅ FIXES: * - Article images added (were completely missing before) * - Image onError fallback (emoji shown if image 404s) * - Category filter tabs added (UX + SEO dwell time) * - Proper image dimensions (no layout shift / CLS) * - revalidate kept at 86400 * - v2: pm-kisan-24vi-kist image.png →.webp fix * - v3: Fixed 7 broken image paths + added onError fallback */
+
+/** * app/articles/page.tsx * All articles listing page — kisanstatus.com/articles * ✅ FIXES: * - Article images added * - Image onError fallback * - Category filter tabs * - Proper image dimensions * - revalidate 86400 * - v4: 'use client' added for useState */
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { useState } from 'react'; // ✅ ADDED for image fallback
+import { useState } from 'react';
 import { ARTICLES } from '@/lib/articles-data';
 
 const DOMAIN = 'https://kisanstatus.com';
@@ -53,15 +54,15 @@ const ARTICLE_META: Record<
   { emoji: string; category: string; isNew: boolean; image: string }
 > = {
   'kisan-credit-card-online-apply-2026': { emoji: '💳', category: 'Loan', isNew: true, image: '/images/kisan-credit-card-apply-2026.webp' },
-  'pm-kisan-23vi-kist-2026-status-check': { emoji: '📆', category: 'Status', isNew: true, image: '/images/pm-kisan-status-check-steps.webp' }, // ✅ FIXED path
-  'pm-kisan-ekyc-online-2026': { emoji: '🔐', category: 'eKYC', isNew: true, image: '/images/ekyc-guide-banner.webp' }, // ✅ FIXED path
-  'pm-kisan-payment-failed-status-2026': { emoji: '💸', category: 'Payment', isNew: true, image: '/images/payment-failed.png' }, // ✅ FIXED.png
+  'pm-kisan-23vi-kist-2026-status-check': { emoji: '📆', category: 'Status', isNew: true, image: '/images/pm-kisan-status-check-steps.webp' },
+  'pm-kisan-ekyc-online-2026': { emoji: '🔐', category: 'eKYC', isNew: true, image: '/images/ekyc-guide-banner.webp' },
+  'pm-kisan-payment-failed-status-2026': { emoji: '💸', category: 'Payment', isNew: true, image: '/images/payment-failed.png' },
   'pm-kisan-rejected-list-2026': { emoji: '📋', category: 'Rejection', isNew: true, image: '/images/pm-kisan-rejected-list-2026.webp' },
   'pm-kisan-registration-online-2026': { emoji: '📝', category: 'Registration', isNew: true, image: '/images/pm-kisan-registration-online-2026.webp' },
   'pm-kisan-name-correction-online-2026': { emoji: '✏️', category: 'Correction', isNew: true, image: '/images/pm-kisan-name-correction-online-2026.webp' },
-  'pm-kisan-beneficiary-list-2026': { emoji: '📋', category: 'List', isNew: true, image: '/images/beneficiary-list-board.webp' }, // ✅ FIXED path
-  'pm-kisan-installment-history-check-online': { emoji: '📊', category: 'History', isNew: false, image: '/images/installment-history.webp' }, // ✅ FIXED path
-  'pm-kisan-land-seeding-status-check': { emoji: '🌾', category: 'Land', isNew: false, image: '/images/land-seeding-field.webp' }, // ✅ FIXED path
+  'pm-kisan-beneficiary-list-2026': { emoji: '📋', category: 'List', isNew: true, image: '/images/beneficiary-list-board.webp' },
+  'pm-kisan-installment-history-check-online': { emoji: '📊', category: 'History', isNew: false, image: '/images/installment-history.webp' },
+  'pm-kisan-land-seeding-status-check': { emoji: '🌾', category: 'Land', isNew: false, image: '/images/land-seeding-field.webp' },
   'pm-kisan-beneficiary-list-village-wise-2026': { emoji: '🏘️', category: 'List', isNew: false, image: '/images/pm-kisan-beneficiary-list-village-wise-2026.webp' },
   'kisan-rin-kaha-se-le-2026': { emoji: '💰', category: 'Loan', isNew: false, image: '/images/kisan-rin-kaha-se-le-2026.webp' },
   'pmfby-crop-insurance-2026': { emoji: '🌱', category: 'Insurance', isNew: false, image: '/images/pmfby-crop-insurance-2026.webp' },
@@ -69,7 +70,7 @@ const ARTICLE_META: Record<
   'pm-kisan-21vi-installment-status-check': { emoji: '📅', category: 'Status', isNew: false, image: '/images/pm-kisan-21vi-installment-status-check.webp' },
   'pm-kisan-correction-deactivate-block-guide-2026': { emoji: '🛠️', category: 'Correction', isNew: false, image: '/images/pm-kisan-correction-deactivate-block-guide-2026.webp' },
   'pm-kisan-problems-solution-guide-2026': { emoji: '🔧', category: 'Problems', isNew: false, image: '/images/pm-kisan-problems-solution-guide-2026.webp' },
-  'pm-kisan-fto-generated-ka-matlab-kya-hai': { emoji: '📄', category: 'Payment', isNew: true, image: '/images/pm-kisan-fto-generated-featured-image-kisanstatus.webp' }, // ✅ FIXED full naam
+  'pm-kisan-fto-generated-ka-matlab-kya-hai': { emoji: '📄', category: 'Payment', isNew: true, image: '/images/pm-kisan-fto-generated-featured-image-kisanstatus.webp' },
   'pm-kisan-24vi-kist': { emoji: '📆', category: 'Status', isNew: true, image: '/images/pm-kisan-24vi-kist-october-2026.webp' },
   'agristack-kya-hai': { emoji: '🌐', category: 'Problems', isNew: true, image: '/images/agristack-kya-hai-infographic.webp' },
   'pm-kisan-mobile-number-change': { emoji: '📱', category: 'Correction', isNew: true, image: '/images/pm-kisan-mobile-bank-aadhaar-update-banner-website.webp' },
@@ -89,7 +90,7 @@ function ArticleCard({
   const emoji = meta?.emoji?? '📄';
   const isNew = meta?.isNew?? false;
 
-  const [imgError, setImgError] = useState(false); // ✅ ADDED for fallback
+  const [imgError, setImgError] = useState(false);
 
   return (
     <Link
@@ -101,7 +102,7 @@ function ArticleCard({
       }`}
     >
       <div className="relative h-40 w-full overflow-hidden bg-gradient-to-br from-green-50 to-emerald-100 shrink-0">
-        {image &&!imgError? ( // ✅ CHANGED condition
+        {image &&!imgError? (
           <img
             src={image}
             alt={article.title}
@@ -111,7 +112,7 @@ function ArticleCard({
             decoding="async"
             className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
             style={{ display: 'block' }}
-            onError={() => setImgError(true)} // ✅ ADDED fallback
+            onError={() => setImgError(true)}
           />
         ) : (
           <div className="h-full w-full flex items-center justify-center">
