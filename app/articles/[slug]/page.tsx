@@ -1,9 +1,8 @@
 /**
- * app/articles/[slug]/page.tsx
- * Dynamic route — serves ALL articles
+ * app/articles/[slug]/page.tsx — v2
  * ✅ FIXES:
- *  - og:image per article (not generic og-image.jpg for every article)
- *  - Loading spinner for dynamic imports
+ *  - JSON-LD schemas server-side inject ho rahe hain (Google crawl ke liye)
+ *  - Per-article OG image map kept
  *  - generateStaticParams unchanged (SSG kept)
  *  - revalidate 86400 kept
  */
@@ -15,8 +14,6 @@ import { ARTICLES_MAP, ARTICLES, type ArticleMeta } from '@/lib/articles-data';
 const DOMAIN = 'https://kisanstatus.com';
 
 // ── Per-article OG image map ───────────────────────────────────────────────
-// ✅ FIX: Har article ka apna OG image — pehle sab ka ek hi og-image.jpg tha
-// Isse social sharing aur Google Discover mein better CTR milega
 const ARTICLE_OG_IMAGES: Record<string, string> = {
   'kisan-credit-card-online-apply-2026':             '/images/kisan-credit-card-apply-2026.webp',
   'pm-kisan-23vi-kist-2026-status-check':            '/images/pm-kisan-23vi-kist-status-check-2026.webp',
@@ -36,11 +33,68 @@ const ARTICLE_OG_IMAGES: Record<string, string> = {
   'pm-kisan-correction-deactivate-block-guide-2026': '/images/pm-kisan-correction-deactivate-block-guide-2026.webp',
   'pm-kisan-problems-solution-guide-2026':           '/images/pm-kisan-problems-solution-guide-2026.webp',
   'pm-kisan-fto-generated-ka-matlab-kya-hai':        '/images/pm-kisan-fto-generated-featured-image-kisanstatus.webp',
-  'pm-kisan-24vi-kist':                              '/images/pm-kisan-24vi-kist-october-2026.png',
+  'pm-kisan-24vi-kist':                              '/images/pm-kisan-24vi-kist-october-2026.webp',
   'agristack-kya-hai':                               '/images/agristack-kya-hai-infographic.webp',
   'pm-kisan-mobile-number-change':                   '/images/pm-kisan-mobile-bank-aadhaar-update-banner-website.webp',
   'nano-dap-500ml-price-in-india-2026':              '/images/nano-dap-500ml-price-india-2026.webp',
 };
+
+// ── JSON-LD schema generator (server-side) ─────────────────────────────────
+function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
+  return [
+    // Article Schema
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: article.title,
+      description: article.desc,
+      image: [ogImage],
+      datePublished: article.publishedTime ?? '2026-01-01T00:00:00+05:30',
+      dateModified:  article.modifiedTime  ?? new Date().toISOString(),
+      author: {
+        '@type': 'Person',
+        name: 'Sidhu Singh',
+        url: `${DOMAIN}/about`,
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'KisanStatus',
+        url: DOMAIN,
+        logo: {
+          '@type': 'ImageObject',
+          url: `${DOMAIN}/logo.webp`,
+        },
+      },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+      inLanguage: 'hi-IN',
+      isPartOf: { '@type': 'WebSite', name: 'KisanStatus.com', url: DOMAIN },
+    },
+    // BreadcrumbList Schema
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home',     item: DOMAIN },
+        { '@type': 'ListItem', position: 2, name: 'Articles', item: `${DOMAIN}/articles` },
+        { '@type': 'ListItem', position: 3, name: article.title, item: url },
+      ],
+    },
+    // WebPage Schema
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      '@id': url,
+      url,
+      name: article.title,
+      description: article.desc,
+      inLanguage: 'hi-IN',
+      isPartOf: { '@type': 'WebSite', url: DOMAIN, name: 'KisanStatus.com' },
+      author: { '@type': 'Person', name: 'Sidhu Singh' },
+      datePublished: article.publishedTime ?? '2026-01-01T00:00:00+05:30',
+      dateModified:  article.modifiedTime  ?? new Date().toISOString(),
+    },
+  ];
+}
 
 // ── Loading skeleton ───────────────────────────────────────────────────────
 function ArticleLoading() {
@@ -96,10 +150,9 @@ export async function generateMetadata({
   if (!article) return { title: 'Article Not Found' };
 
   const url = `${DOMAIN}/articles/${slug}`;
-  // ✅ FIX: article-specific OG image, fallback to generic
   const ogImage = ARTICLE_OG_IMAGES[slug]
     ? `${DOMAIN}${ARTICLE_OG_IMAGES[slug]}`
-    : `${DOMAIN}/og-image.jpg`;
+    : `${DOMAIN}/og-image.webp`;
 
   return {
     title:       article.title,
@@ -124,12 +177,13 @@ export async function generateMetadata({
       card:        'summary_large_image',
       title:       article.ogTitle,
       description: article.desc,
-      site:        '@KisanStatus',
+      site:        '@kisanstatus',
       images:      [ogImage],
     },
   };
 }
 
+// ── Server Component — schemas inject server-side ──────────────────────────
 export default async function ArticlePage({
   params,
 }: {
@@ -142,5 +196,26 @@ export default async function ArticlePage({
   const ArticleComponent = COMPONENTS[article.component];
   if (!ArticleComponent) notFound();
 
-  return <ArticleComponent article={article} />;
+  const url = `${DOMAIN}/articles/${slug}`;
+  const ogImage = ARTICLE_OG_IMAGES[slug]
+    ? `${DOMAIN}${ARTICLE_OG_IMAGES[slug]}`
+    : `${DOMAIN}/og-image.webp`;
+
+  const schemas = buildSchemas(article, url, ogImage);
+
+  return (
+    <>
+      {/* ✅ JSON-LD schemas — server-side render, Google crawls perfectly */}
+      {schemas.map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
+
+      {/* Article UI — dynamic client component */}
+      <ArticleComponent article={article} />
+    </>
+  );
 }
