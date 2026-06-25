@@ -18,13 +18,13 @@ export const metadata: Metadata = {
     "agristack benefits for farmers",
     "farmer id kya hai",
   ],
-  authors: [{ name: "KisanStatus Team", url: "https://kisanstatus.com/about" }],
-  alternates: { canonical: "https://kisanstatus.com/agristack-kya-hai" },
+  authors: [{ name: "Sidhu Singh", url: "https://kisanstatus.com/author" }],
+  alternates: { canonical: "https://kisanstatus.com/articles/agristack-kya-hai" },
   openGraph: {
     title: "AgriStack Kya Hai – Kisan Ke Liye Fayde, Registration Aur Farmer ID Guide",
     description:
       "AgriStack India ka national digital platform hai jo har kisan ko ek unique Farmer ID deta hai. Jaaniye registration process, fayde aur state-wise implementation.",
-    url: "https://kisanstatus.com/agristack-kya-hai",
+    url: "https://kisanstatus.com/articles/agristack-kya-hai",
     siteName: "KisanStatus",
     locale: "hi_IN",
     type: "article",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
         url: "https://kisanstatus.com/images/agristack-kya-hai-og.webp",
         width: 800,
         height: 420,
-        alt: "AgriStack Kya Hai – Farmer ID Registration Guide India 2025",
+        alt: "AgriStack Kya Hai – Farmer ID Registration Guide India 2026",
       },
     ],
   },
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     description:
       "India ka sabse bada digital farming platform – AgriStack. Har kisan ko milegi unique Farmer ID. Puri jaankari yahan padhein.",
     images: ["https://kisanstatus.com/images/agristack-kya-hai-og.webp"],
-    site: "@KisanStatus",
+    site: "@kisanstatus",
   },
   robots: {
     index: true,
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
 };
 
 // ─── JSON-LD Schemas ──────────────────────────────────────────────────────────
-export const articleSchema = {
+const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline: "AgriStack Kya Hai – Kisan Ke Liye Fayde, Registration Aur Farmer ID Guide",
@@ -68,10 +68,9 @@ export const articleSchema = {
     height: 420,
   },
   author: {
-    "@type": "Organization",
-    name: "KisanStatus",
-    url: "https://kisanstatus.com",
-    sameAs: ["https://kisanstatus.com/about"],
+    "@type": "Person",
+    name: "Sidhu Singh",
+    url: "https://kisanstatus.com/author",
   },
   publisher: {
     "@type": "Organization",
@@ -86,14 +85,17 @@ export const articleSchema = {
   },
   datePublished: "2025-01-15T08:00:00.000Z",
   dateModified: "2026-06-23T08:00:00.000Z",
-  mainEntityOfPage: { "@type": "WebPage", "@id": "https://kisanstatus.com/agristack-kya-hai" },
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": "https://kisanstatus.com/articles/agristack-kya-hai",
+  },
   keywords: "agristack kya hai, farmer id, agristack registration, agristack benefits",
   articleSection: "Agriculture",
   inLanguage: "hi",
   isPartOf: { "@type": "WebSite", name: "KisanStatus", url: "https://kisanstatus.com" },
 };
 
-export const faqSchema = {
+const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: [
@@ -148,7 +150,7 @@ export const faqSchema = {
   ],
 };
 
-export const breadcrumbSchema = {
+const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
@@ -156,14 +158,14 @@ export const breadcrumbSchema = {
     {
       "@type": "ListItem",
       position: 2,
-      name: "Agriculture Schemes",
-      item: "https://kisanstatus.com/agriculture-schemes",
+      name: "Articles",
+      item: "https://kisanstatus.com/articles",
     },
     {
       "@type": "ListItem",
       position: 3,
       name: "AgriStack Kya Hai",
-      item: "https://kisanstatus.com/agristack-kya-hai",
+      item: "https://kisanstatus.com/articles/agristack-kya-hai",
     },
   ],
 };
@@ -178,6 +180,21 @@ export default function AgriStackArticle() {
 
   return (
     <main className="max-w-4xl mx-auto px-4 py-8 text-gray-800">
+
+      {/* ── JSON-LD Schemas (FIXED: now actually rendered) ── */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
       {/* Breadcrumb */}
       <nav aria-label="breadcrumb" className="text-sm text-gray-500 mb-4">
         <ol className="flex flex-wrap items-center gap-1">
@@ -189,10 +206,10 @@ export default function AgriStackArticle() {
           <li aria-hidden="true">/</li>
           <li>
             <a
-              href="https://kisanstatus.com/agriculture-schemes"
+              href="https://kisanstatus.com/articles"
               className="text-green-700 hover:underline"
             >
-              Agriculture Schemes
+              Articles
             </a>
           </li>
           <li aria-hidden="true">/</li>
@@ -209,7 +226,7 @@ export default function AgriStackArticle() {
         </h1>
         <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500">
           <span>
-            ✍️ <strong>KisanStatus Team</strong>
+            ✍️ <strong>Sidhu Singh</strong>
           </span>
           <span>
             🗓️ Last Updated: <time dateTime="2026-06-23T08:00:00.000Z">{lastUpdated}</time>
@@ -391,7 +408,6 @@ export default function AgriStackArticle() {
           AgriStack registration abhi dono tarike se ho sakti hai – online aur offline (CSC ke
           zariye). Neeche dono methods ke steps diye gaye hain:
         </p>
-
         <h3 className="text-xl font-semibold text-gray-800 mb-3 mt-6">
           Method 1: Online Registration (agristack.gov.in)
         </h3>
@@ -411,7 +427,6 @@ export default function AgriStackArticle() {
             </li>
           ))}
         </ol>
-
         <h3 className="text-xl font-semibold text-gray-800 mb-3 mt-6">
           Method 2: CSC Centre Se Registration
         </h3>
@@ -473,56 +488,35 @@ export default function AgriStackArticle() {
             AgriStack Ecosystem – Ek Farmer ID se PM Kisan DBT, Fasal Bima, Kisan Credit Card, eNAM aur Urvarak sab connected hain
           </figcaption>
         </figure>
-
-        <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-6">
-          1️⃣ Seedha Bank Transfer – Bina Delay
-        </h3>
+        <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-6">1️⃣ Seedha Bank Transfer – Bina Delay</h3>
         <p className="mb-4 leading-relaxed">
           PM Kisan, PMFBY insurance claim ya koi bhi subsidy – Farmer ID verified hone par seedha
           aapke bank account mein aayegi. No middlemen, no corruption.
         </p>
-
-        <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-6">
-          2️⃣ Crop Loan Aasaan Hoga
-        </h3>
+        <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-6">2️⃣ Crop Loan Aasaan Hoga</h3>
         <p className="mb-4 leading-relaxed">
           Banks aur Kisan Credit Card (KCC) ke liye Farmer ID ek verified proof hai. Loan
           approval process faster hogi kyunki aapki land records already verified hain.
         </p>
-
-        <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-6">
-          3️⃣ Crop Insurance – Automatic Claims
-        </h3>
+        <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-6">3️⃣ Crop Insurance – Automatic Claims</h3>
         <p className="mb-4 leading-relaxed">
-          PMFBY (Pradhan Mantri Fasal Bima Yojana) ke claims ab Farmer ID aur Crop Registry data
-          se automatically process ho sakte hain. Aapko baar baar documents submit nahi karne
-          padenge.
+          PMFBY ke claims ab Farmer ID aur Crop Registry data se automatically process ho sakte
+          hain. Aapko baar baar documents submit nahi karne padenge.
         </p>
-
-        <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-6">
-          4️⃣ Digital Market Access – eNAM
-        </h3>
+        <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-6">4️⃣ Digital Market Access – eNAM</h3>
         <p className="mb-4 leading-relaxed">
           AgriStack data ko eNAM (National Agriculture Market) se bhi link kiya ja raha hai. Iska
           matlab kisan apni crop online bech sakenge aur best price pa sakte hain apne ghar baithe.
         </p>
-
-        <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-6">
-          5️⃣ Ek Identity – Sari Schemes
-        </h3>
+        <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-6">5️⃣ Ek Identity – Sari Schemes</h3>
         <p className="mb-4 leading-relaxed">
           PM Kisan, PMFBY, Kisan Credit Card, Soil Health Card, Kisan Maandhan – in sab schemes ke
-          liye baar baar naye forms bharne ki zaroorat nahi hogi. Ek Farmer ID se sab linked ho
-          jayega.
+          liye baar baar naye forms bharne ki zaroorat nahi hogi. Ek Farmer ID se sab linked ho jayega.
         </p>
-
-        <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-6">
-          6️⃣ Private Sector Benefits
-        </h3>
+        <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-6">6️⃣ Private Sector Benefits</h3>
         <p className="mb-4 leading-relaxed">
           Agri-tech companies aur input suppliers (seeds, fertilizers, machinery) bhi Farmer ID ke
-          zariye verified kisano ko special offers, credit facilities aur personalized services de
-          sakti hain.
+          zariye verified kisano ko special offers, credit facilities aur personalized services de sakti hain.
         </p>
       </section>
 
@@ -560,15 +554,13 @@ export default function AgriStackArticle() {
                 <tr key={state} className="odd:bg-white even:bg-gray-50">
                   <td className="border border-gray-300 px-4 py-2 font-medium">{state}</td>
                   <td className="border border-gray-300 px-4 py-2">
-                    <span
-                      className={`px-2 py-0.5 rounded text-xs font-medium ${
-                        status === "Active"
-                          ? "bg-green-100 text-green-700"
-                          : status === "Pilot Phase"
-                          ? "bg-yellow-100 text-yellow-700"
-                          : "bg-blue-100 text-blue-700"
-                      }`}
-                    >
+                    <span className={`px-2 py-0.5 rounded text-xs font-medium ${
+                      status === "Active"
+                        ? "bg-green-100 text-green-700"
+                        : status === "Pilot Phase"
+                        ? "bg-yellow-100 text-yellow-700"
+                        : "bg-blue-100 text-blue-700"
+                    }`}>
                       {status}
                     </span>
                   </td>
@@ -579,7 +571,11 @@ export default function AgriStackArticle() {
           </table>
         </div>
         <p className="mb-4 leading-relaxed">
-          Agar aap Uttar Pradesh ke kisan hain toh PM Kisan portal par apna naam check kar sakte hain aur confirm kar sakte hain ki aapka naam registered hai ya nahi.
+          Agar aap Uttar Pradesh ke kisan hain toh{" "}
+          <a href="https://kisanstatus.com/beneficiary-list/uttar-pradesh" className="text-green-700 underline hover:text-green-900">
+            PM Kisan beneficiary list UP
+          </a>{" "}
+          par apna naam check kar sakte hain.
         </p>
       </section>
 
@@ -636,14 +632,14 @@ export default function AgriStackArticle() {
         <div className="grid sm:grid-cols-2 gap-4">
           {[
             {
-              href: "https://kisanstatus.com/pm-kisan-24vi-kist",
+              href: "https://kisanstatus.com/articles/pm-kisan-24vi-kist",
               title: "PM Kisan 24vi Kist Date 2026",
               desc: "24vi installment kab aayegi, expected date aur status check karne ka tarika.",
               icon: "📅",
             },
             {
-              href: "https://kisanstatus.com/pm-kisan-mobile-number-change",
-              title: "PM Kisan Details Update Guide",
+              href: "https://kisanstatus.com/articles/pm-kisan-mobile-number-change",
+              title: "PM Kisan Mobile Number Change 2026",
               desc: "Mobile number, bank account aur Aadhaar update karne ki poori jaankari.",
               icon: "✏️",
             },
@@ -681,10 +677,7 @@ export default function AgriStackArticle() {
         </p>
         <p className="mb-4 leading-relaxed">
           Agar aapke koi aur sawaal hain toh hamari website{" "}
-          <a
-            href="https://kisanstatus.com"
-            className="text-green-700 underline hover:text-green-900"
-          >
+          <a href="https://kisanstatus.com" className="text-green-700 underline hover:text-green-900">
             kisanstatus.com
           </a>{" "}
           par visit karein. Hum regularly kisan-related latest updates post karte rehte hain.
@@ -699,7 +692,7 @@ export default function AgriStackArticle() {
         </div>
       </section>
 
-      {/* Author Box – E-E-A-T */}
+      {/* Author Box – E-E-A-T (FIXED: Sidhu Singh) */}
       <aside
         aria-label="About the Author"
         className="mb-10 border border-gray-200 rounded-xl p-5 bg-gray-50 flex gap-4 items-start"
@@ -708,32 +701,33 @@ export default function AgriStackArticle() {
           className="w-14 h-14 rounded-full bg-green-700 flex items-center justify-center text-white text-xl font-bold flex-shrink-0"
           aria-hidden="true"
         >
-          KS
+          SS
         </div>
         <div>
-          <p className="font-bold text-gray-800 text-base">KisanStatus Editorial Team</p>
+          <p className="font-bold text-gray-800 text-base">Sidhu Singh</p>
           <p className="text-xs text-green-700 mb-2 font-medium">
-            Agriculture &amp; Government Schemes Expert
+            Agricultural Content Expert – KisanStatus.com
           </p>
           <p className="text-sm text-gray-600 leading-relaxed">
-            KisanStatus team India ke kisan schemes, digital agriculture aur government portals par
-            deep expertise rakhti hai. Hamare writers aur researchers regularly PM Kisan, AgriStack,
-            eKYC aur kisan-related policies ko track karte hain taaki aapko accurate aur up-to-date
-            information mile.
+            Sidhu Singh pichhle 5 saal se Indian farmers ko government schemes navigate karne mein
+            help kar rahe hain. PM Kisan, AgriStack, eKYC aur kisan-related policies par inki
+            gehri pakad hai. Unka maksad hai government ke complex processes ko simple Hinglish
+            mein samjhana.
           </p>
           <p className="text-xs text-gray-400 mt-2">
             Last Updated:{" "}
-            <time dateTime="2026-06-23T08:00:00.000Z">
-              {new Date("2026-06-23T08:00:00.000Z").toLocaleDateString("en-IN", {
+            <time dateTime="2026-06-25T08:00:00.000Z">
+              {new Date("2026-06-25T08:00:00.000Z").toLocaleDateString("en-IN", {
                 year: "numeric",
                 month: "long",
                 day: "numeric",
               })}
             </time>{" "}
-            · Published: 15 January 2025
+            · Published: June 2026
           </p>
         </div>
       </aside>
+
     </main>
   );
 }
