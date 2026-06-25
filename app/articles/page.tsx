@@ -1,36 +1,13 @@
-/** * app/articles/page.tsx * All articles listing page — kisanstatus.com/articles * ✅ FIXES: * - Article images added * - Image onError fallback * - Category filter tabs * - Proper image dimensions * - revalidate 86400 * - v4: 'use client' added for useState */
-import type { Metadata } from 'next';
+'use client'; // ✅ Client component
+
+/** * app/articles/page.tsx * All articles listing page — kisanstatus.com/articles * ✅ FIXED: Removed metadata export for client component */
 import Link from 'next/link';
 import { useState } from 'react';
 import { ARTICLES } from '@/lib/articles-data';
 
 const DOMAIN = 'https://kisanstatus.com';
 
-export const metadata: Metadata = {
-  title: 'Saare PM Kisan Guides 2026 — KisanStatus.com',
-  description: 'PM Kisan status check, eKYC, payment failed, name correction, beneficiary list, loan guides — saari jankari ek jagah. 21+ free guides Hindi mein.',
-  keywords: [
-    'PM Kisan guides 2026',
-    'PM Kisan jankari Hindi mein',
-    'PM Kisan eKYC guide',
-    'PM Kisan payment failed solution',
-    'kisan loan guide',
-  ],
-  authors: [{ name: 'Sidhu Singh', url: `${DOMAIN}/about` }],
-  alternates: {
-    canonical: `${DOMAIN}/articles`,
-  },
-  openGraph: {
-    title: 'Saare PM Kisan Guides 2026 — KisanStatus.com',
-    description: 'PM Kisan se related saari guides — status check, eKYC, loan, insurance — ek jagah.',
-    type: 'website',
-    url: `${DOMAIN}/articles`,
-    siteName: 'KisanStatus.com',
-    locale: 'hi_IN',
-    images: [{ url: `${DOMAIN}/og-image.jpg`, width: 1200, height: 630 }],
-  },
-};
-
+// ✅ metadata export HATA DIYA - client component mein allowed nahi
 export const revalidate = 86400;
 
 const CATEGORY_META: Record<string, { label: string; emoji: string; color: string }> = {
@@ -121,24 +98,24 @@ function ArticleCard({
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
         <span className="absolute bottom-2 left-3 text-xl drop-shadow">{emoji}</span>
         {(showNewBadge || isNew) && (
-          <span className="absolute top-2 right-2 bg-green-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full shadow">
+          <span className="absolute top-2 right-2 bg-green-500 text-white text- font-black px-2 py-0.5 rounded-full shadow">
             NEW
           </span>
         )}
       </div>
       <div className="p-4 flex-col flex-1">
         {catMeta && (
-          <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full self-start ${catMeta.color}`}>
+          <span className={`text- font-bold px-2 py-0.5 rounded-full self-start ${catMeta.color}`}>
             {catMeta.emoji} {catMeta.label}
           </span>
         )}
         <p className="font-black text-gray-900 text-sm leading-snug group-hover:text-green-700 transition-colors mt-2 mb-1">
           {article.title}
         </p>
-        <p className="text-[12px] text-gray-500 leading-relaxed line-clamp-2 flex-1">{article.desc}</p>
+        <p className="text- text-gray-500 leading-relaxed line-clamp-2 flex-1">{article.desc}</p>
         <div className="flex items-center justify-between mt-3 pt-2 border-t border-gray-100">
-          <span className="text-[10px] text-gray-400">✍️ Sidhu Singh</span>
-          <span className="text-[12px] font-bold text-green-700 group-hover:translate-x-1 transition-transform inline-block">
+          <span className="text- text-gray-400">✍️ Sidhu Singh</span>
+          <span className="text- font-bold text-green-700 group-hover:translate-x-1 transition-transform inline-block">
             Padho →
           </span>
         </div>
