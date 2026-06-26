@@ -1,9 +1,10 @@
 /**
  * lib/articles-data.ts
- * Central metadata for all 23 articles — used by [slug]/page.tsx
+ * Central metadata for all 24 articles — used by [slug]/page.tsx
  * ✅ UPDATED: All articles now have Hindi + Hinglish + English keywords
  * ✅ UPDATED: All modifiedTime corrected to 2026-06-23
  * ✅ UPDATED: Added 23rd article (PM Kisan Complete Guide)
+ * ✅ UPDATED: Added 24th article (Soil Health Card Complete Guide 2026)
  */
 
 export interface ArticleMeta {
@@ -348,7 +349,7 @@ export const ARTICLES: ArticleMeta[] = [
     publishedTime: '2026-06-24T08:00:00+05:30',
     modifiedTime:  '2026-06-24T08:00:00+05:30',
   },
-  // 23 (NEW ARTICLE ADDED)
+  // 23
   {
     slug:      'pm-kisan-complete-guide',
     title:     "PM Kisan Complete Guide 2026: Solve All Problems & Check Status",
@@ -361,6 +362,22 @@ export const ARTICLES: ArticleMeta[] = [
       'pm kisan complete guide in hindi', 'pm kisan all issues fix 2026',
     ],
     component:     'PmKisanCompleteGuide',
+    publishedTime: '2026-06-27T08:00:00+05:30',
+    modifiedTime:  '2026-06-27T08:00:00+05:30',
+  },
+  // 24 (NEW ARTICLE ADDED)
+  {
+    slug:      'soil-health-card-complete-guide-2026',
+    title:     "Soil Health Card Complete Guide 2026 | Download, Status Check, PDF & Registration",
+    desc:      "Soil Health Card complete guide 2026 — download kaise kare, status check online, PDF download, registration process, card number kaise nikale, mobile se check kare.",
+    ogTitle:   "Soil Health Card Complete Guide 2026 — Download, Status & Registration",
+    keywords:  [
+      'Soil Health Card Complete Guide 2026', 'Soil Health Card Download', 'Soil Health Card Status Check', 
+      'Soil Health Card PDF Download', 'Soil Health Card Registration', 'Soil Health Card Number',
+      'मिट्टी स्वास्थ्य कार्ड 2026', 'सॉइल हेल्थ कार्ड डाउनलोड', 'मिट्टी स्वास्थ्य कार्ड स्टेटस',
+      'soil health card kaise banwaye', 'soil health card download kaise kare', 'mitti swasthya card 2026',
+    ],
+    component:     'SoilHealthCardCompleteGuide2026',
     publishedTime: '2026-06-27T08:00:00+05:30',
     modifiedTime:  '2026-06-27T08:00:00+05:30',
   },
