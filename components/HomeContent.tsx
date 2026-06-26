@@ -1,9 +1,13 @@
 /**
- * HomeContent.tsx — KisanStatus.com v26 (Updated)
+ * HomeContent.tsx — KisanStatus.com v26 (SEO OPTIMIZED)
  * CHANGES:
  *  ✅ Countdown removed
  *  ✅ Dual-language (Hinglish/Hindi) keyword support added
  *  ✅ All previous SEO/Schema features retained
+ *  ✅ NEW: Articles count updated to 24+
+ *  ✅ NEW: Soil Health Card article added
+ *  ✅ NEW: Articles sorted by date (newest first)
+ *  ✅ NEW: Enhanced SEO keywords for better Google ranking
  */
 'use client';
 
@@ -28,8 +32,34 @@ function useScrollReveal() {
   return { ref, visible };
 }
 
-// ── Articles data ─────────────────────────────────────────────────────────────
+// ── Articles data (NEWEST FIRST - Sorted by publish date) ─────────────────────
 const NEW_ARTICLES = [
+  {
+    slug:     'soil-health-card-complete-guide-2026',
+    title:    'Soil Health Card Complete Guide 2026',
+    emoji:    '🌱',
+    image:    '/images/soil-health-card-complete-guide-2026.webp',
+    desc:     'Mitti health card download, status check, PDF download aur registration — complete guide',
+    category: 'Farming',
+    publishDate: '2026-06-27',
+    keywords: {
+        hinglish: ['Soil Health Card', 'Download', 'Status Check', 'PDF'],
+        hindi: ['मिट्टी स्वास्थ्य कार्ड', 'डाउनलोड', 'स्टेटस चेक']
+    },
+  },
+  {
+    slug:     'pm-kisan-complete-guide',
+    title:    'PM Kisan Complete Guide 2026',
+    emoji:    '📖',
+    image:    '/images/pm-kisan-status-check-hero.webp',
+    desc:     'Saari problems ka solution — status check, eKYC, payment, rejection — ek hi guide mein',
+    category: 'Guide',
+    publishDate: '2026-06-27',
+    keywords: {
+        hinglish: ['Complete Guide', 'All Problems', 'Solution'],
+        hindi: ['पूर्ण गाइड', 'सभी समस्याएं', 'समाधान']
+    },
+  },
   {
     slug:     'pm-kisan-24vi-kist',
     title:    'PM Kisan 24vi Kist 2026',
@@ -37,21 +67,10 @@ const NEW_ARTICLES = [
     image:    '/images/pm-kisan-24vi-kist-october-2026.webp',
     desc:     '24vi kist kab aayegi — status check, date aur payment guide',
     category: 'Status',
+    publishDate: '2026-06-24',
     keywords: {
-        hinglish: ['24vi Kist', 'October 2026'],
+        hinglish: ['24vi Kist', 'October 2026', 'Next Installment'],
         hindi: ['24वीं किस्त', 'अगली किस्त कब आएगी']
-    },
-  },
-  {
-    slug:     'pm-kisan-fto-generated-ka-matlab-kya-hai',
-    title:    'PM Kisan FTO Generated Ka Matlab',
-    emoji:    '📄',
-    image:    '/images/pm-kisan-fto-generated-featured-image-kisanstatus.webp',
-    desc:     'FTO Generated dikhta hai? Matlab kya hai aur payment kab aayegi',
-    category: 'Payment',
-    keywords: {
-        hinglish: ['FTO Generated', 'Payment Pending'],
-        hindi: ['पेमेंट कब आएगी', 'FTO का मतलब']
     },
   },
   {
@@ -61,21 +80,10 @@ const NEW_ARTICLES = [
     image:    '/images/pm-kisan-mobile-bank-aadhaar-update-banner-website.webp',
     desc:     'Mobile number change karo online ya CSC se — step by step',
     category: 'Correction',
+    publishDate: '2026-06-24',
     keywords: {
-        hinglish: ['Mobile Change', 'CSC Center'],
+        hinglish: ['Mobile Change', 'CSC Center', 'Number Update'],
         hindi: ['मोबाइल नंबर बदलें', 'नंबर अपडेट']
-    },
-  },
-  {
-    slug:     'nano-dap-500ml-price-in-india-2026',
-    title:    'Nano DAP 500ml Price in India 2026',
-    emoji:    '🧴',
-    image:    '/images/nano-dap-500ml-price-india-2026.webp',
-    desc:     'IFFCO Nano DAP price, dosage per acre aur kahan se kharidein',
-    category: 'Farming',
-    keywords: {
-        hinglish: ['Nano DAP Price', 'IFFCO 2026'],
-        hindi: ['नैनो डीएपी', 'खाद की कीमत']
     },
   },
   {
@@ -85,9 +93,36 @@ const NEW_ARTICLES = [
     image:    '/images/agristack-kya-hai-infographic.webp',
     desc:     'Farmer ID kya hoti hai, AgriStack registration aur fayde',
     category: 'Digital',
+    publishDate: '2026-06-24',
     keywords: {
-        hinglish: ['AgriStack', 'Farmer ID'],
+        hinglish: ['AgriStack', 'Farmer ID', 'Digital Registration'],
         hindi: ['किसान आईडी', 'डिजिटल रजिस्ट्रेशन']
+    },
+  },
+  {
+    slug:     'nano-dap-500ml-price-in-india-2026',
+    title:    'Nano DAP 500ml Price in India 2026',
+    emoji:    '🧴',
+    image:    '/images/nano-dap-500ml-price-india-2026.webp',
+    desc:     'IFFCO Nano DAP price, dosage per acre aur kahan se kharidein',
+    category: 'Farming',
+    publishDate: '2026-06-24',
+    keywords: {
+        hinglish: ['Nano DAP Price', 'IFFCO 2026', 'Fertilizer'],
+        hindi: ['नैनो डीएपी', 'खाद की कीमत']
+    },
+  },
+  {
+    slug:     'pm-kisan-fto-generated-ka-matlab-kya-hai',
+    title:    'PM Kisan FTO Generated Ka Matlab',
+    emoji:    '📄',
+    image:    '/images/pm-kisan-fto-generated-featured-image-kisanstatus.webp',
+    desc:     'FTO Generated dikhta hai? Matlab kya hai aur payment kab aayegi',
+    category: 'Payment',
+    publishDate: '2026-06-23',
+    keywords: {
+        hinglish: ['FTO Generated', 'Payment Pending', 'FTO Status'],
+        hindi: ['पेमेंट कब आएगी', 'FTO का मतलब']
     },
   },
 ];
@@ -98,6 +133,7 @@ const CAT_COLORS: Record<string, string> = {
   Correction: 'bg-purple-100 text-purple-700',
   Farming:    'bg-amber-100 text-amber-700',
   Digital:    'bg-teal-100 text-teal-700',
+  Guide:      'bg-rose-100 text-rose-700',
 };
 
 // ── Ticker messages ───────────────────────────────────────────────────────────
@@ -108,9 +144,10 @@ const TICKER_ITEMS = [
   '📞 PM Kisan Helpline: 155261 | Toll Free: 1800-115-526',
   '✅ 9.44 Crore+ kisanon ko 23vi kist mil chuki hai — status check karo',
   '🌾 KisanStatus.com — Sabhi Kisanon Ke Liye — 100% Free',
+  '🌱 NEW: Soil Health Card Guide — Mitti testing se lekar PDF download tak',
 ];
 
-// ── FAQs ──────────────────────────────────────────────────────────────────────
+// ── FAQs (SEO Optimized with keywords) ──────────────────────────────────────
 const FAQS = [
   {
     q: 'पीएम किसान की 23वीं किस्त कब आई?',
@@ -132,9 +169,13 @@ const FAQS = [
     q: 'KCC (किसान क्रेडिट कार्ड) लोन कैसे मिलेगा?',
     a: 'KCC के लिए: 1) नज़दीकी SBI/PNB/Bank of Baroda जाएं 2) KCC application form भरें 3) Aadhaar, land records, photo दें 4) 7-14 दिन में approval। Interest 7% p.a. (subsidy के साथ 4% effective)। ₹1.6 लाख तक बिना collateral।',
   },
+  {
+    q: 'Soil Health Card (मिट्टी स्वास्थ्य कार्ड) कैसे बनवाएं?',
+    a: 'Soil Health Card के लिए: 1) नज़दीकी CSC center या agriculture office जाएं 2) Registration form भरें 3) Mitti ka sample dein 4) 15-30 दिन में card mil jayega। Ye bilkul free hai — download: soilhealth.dac.gov.in',
+  },
 ];
 
-// ── Schema ────────────────────────────────────────────────────────────────────
+// ── Schema (SEO Enhanced) ────────────────────────────────────────────────────
 const faqSchema = {
   '@context': 'https://schema.org', '@type': 'FAQPage',
   mainEntity: FAQS.map(f => ({
@@ -146,24 +187,27 @@ const faqSchema = {
 const websiteSchema = {
   '@context': 'https://schema.org', '@type': 'WebSite',
   name: 'KisanStatus.com', url: 'https://kisanstatus.com',
-  description: 'PM Kisan Samman Nidhi status check, eKYC guide, kist dates, beneficiary list aur free agricultural calculators.',
+  description: 'PM Kisan Samman Nidhi status check, eKYC guide, kist dates, beneficiary list aur free agricultural calculators. मिट्टी स्वास्थ्य कार्ड, KCC loan guide.',
   potentialAction: {
     '@type': 'SearchAction',
     target: 'https://kisanstatus.com/search?q={search_term_string}',
     'query-input': 'required name=search_term_string',
   },
+  inLanguage: ['hi-IN', 'en-IN'],
 };
 
 const articleListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: 'PM Kisan Latest Guides 2026',
+  name: 'PM Kisan Latest Guides 2026 — Soil Health Card, eKYC, Status Check',
   url: 'https://kisanstatus.com',
+  numberOfItems: NEW_ARTICLES.length,
   itemListElement: NEW_ARTICLES.map((a, i) => ({
     '@type': 'ListItem',
     position: i + 1,
     url: `https://kisanstatus.com/articles/${a.slug}`,
     name: a.title,
+    description: a.desc,
   })),
 };
 
@@ -171,7 +215,6 @@ const STATS = [
   { label: 'Saalana Labh',     value: '₹6,000',   sub: '3 kiston mein',    icon: '💰', grad: 'from-emerald-400 to-green-600'  },
   { label: 'Per Kist',         value: '₹2,000',   sub: 'Seedha bank mein', icon: '🏦', grad: 'from-blue-400 to-cyan-600'      },
   { label: 'Registered Kisan', value: '11 Cr+',   sub: 'Poore India mein', icon: '👨‍🌾', grad: 'from-amber-400 to-orange-500'   },
-  { label: '22vi Kist',        value: 'Released', sub: '13 March 2026',    icon: '✅', grad: 'from-green-400 to-emerald-600'  },
   { label: '23vi Kist',        value: 'Released', sub: '20 June 2026',     icon: '✅', grad: 'from-green-400 to-emerald-600'  },
   { label: '24vi Kist',        value: 'Expected', sub: 'Oct–Nov 2026',     icon: '⏳', grad: 'from-yellow-400 to-amber-500'   },
 ];
@@ -546,7 +589,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* ── Latest Articles ────────────────────────────────────────────────── */}
+      {/* ── Latest Articles (NEWEST FIRST) ────────────────────────────────── */}
       <section className="py-14 bg-gradient-to-b from-gray-50 to-white" aria-labelledby="latest-heading">
         <div className="container-site">
           <Reveal>
@@ -589,6 +632,7 @@ export default function HomeContent() {
                         <span
                           key={kw}
                           className="text-[10px] bg-green-50 border border-green-200 text-green-700 px-2 py-0.5 rounded-full font-medium"
+                          title={`Search in Hinglish: ${kw}`}
                         >
                           {kw}
                         </span>
@@ -597,6 +641,7 @@ export default function HomeContent() {
                         <span
                           key={kw}
                           className="text-[10px] bg-blue-50 border border-blue-200 text-blue-700 px-2 py-0.5 rounded-full font-medium"
+                          title={`Search in Hindi: ${kw}`}
                         >
                           {kw}
                         </span>
@@ -622,7 +667,7 @@ export default function HomeContent() {
               >
                 📚 Saari Guides Dekho — View All Articles
               </Link>
-              <p className="text-gray-400 text-xs">22+ guides — PM Kisan, KCC, PMFBY, AgriStack aur zyada</p>
+              <p className="text-gray-400 text-xs">24+ guides — PM Kisan, KCC, PMFBY, AgriStack, Soil Health Card aur zyada</p>
             </div>
           </Reveal>
         </div>
