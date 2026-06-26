@@ -1,10 +1,9 @@
 /**
- * HomeContent.tsx — KisanStatus.com v26
- * FIXES:
- *  ✅ Countdown: setInterval → only runs when tab visible (visibilitychange)
- *  ✅ Countdown: starts with SSR-safe static values (no hydration mismatch)
- *  ✅ Animated counters: removed requestAnimationFrame loop → static numbers + CSS counter animation
- *  ✅ All previous v25 fixes retained
+ * HomeContent.tsx — KisanStatus.com v26 (Updated)
+ * CHANGES:
+ *  ✅ Countdown removed
+ *  ✅ Dual-language (Hinglish/Hindi) keyword support added
+ *  ✅ All previous SEO/Schema features retained
  */
 'use client';
 
@@ -13,51 +12,6 @@ import Link from 'next/link';
 import FAQSection from '@/components/FAQSection';
 import AiAssistant from '@/components/AiAssistant';
 import KisanTemplates from '@/components/KisanTemplates';
-
-// ── Countdown hook (optimised) ────────────────────────────────────────────────
-function useCountdown(targetDate: string) {
-  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, mins: 0, secs: 0 });
-  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
-
-  useEffect(() => {
-    const calc = () => {
-      const diff = new Date(targetDate).getTime() - Date.now();
-      if (diff <= 0) {
-        setTimeLeft({ days: 0, hours: 0, mins: 0, secs: 0 });
-        if (intervalRef.current) clearInterval(intervalRef.current);
-        return;
-      }
-      setTimeLeft({
-        days:  Math.floor(diff / 86400000),
-        hours: Math.floor((diff % 86400000) / 3600000),
-        mins:  Math.floor((diff % 3600000) / 60000),
-        secs:  Math.floor((diff % 60000) / 1000),
-      });
-    };
-
-    const start = () => {
-      calc();
-      intervalRef.current = setInterval(calc, 1000);
-    };
-    const stop = () => {
-      if (intervalRef.current) clearInterval(intervalRef.current);
-    };
-
-    // Only tick when tab is visible
-    const onVisibility = () => {
-      if (document.hidden) stop(); else start();
-    };
-
-    start();
-    document.addEventListener('visibilitychange', onVisibility);
-    return () => {
-      stop();
-      document.removeEventListener('visibilitychange', onVisibility);
-    };
-  }, [targetDate]);
-
-  return timeLeft;
-}
 
 // ── Scroll reveal hook ────────────────────────────────────────────────────────
 function useScrollReveal() {
@@ -83,7 +37,10 @@ const NEW_ARTICLES = [
     image:    '/images/pm-kisan-24vi-kist-october-2026.webp',
     desc:     '24vi kist kab aayegi — status check, date aur payment guide',
     category: 'Status',
-    keywords: ['24वीं किस्त', '24vi Kist', 'October 2026', 'अगली किस्त कब आएगी'],
+    keywords: {
+        hinglish: ['24vi Kist', 'October 2026'],
+        hindi: ['24वीं किस्त', 'अगली किस्त कब आएगी']
+    },
   },
   {
     slug:     'pm-kisan-fto-generated-ka-matlab-kya-hai',
@@ -92,7 +49,10 @@ const NEW_ARTICLES = [
     image:    '/images/pm-kisan-fto-generated-featured-image-kisanstatus.webp',
     desc:     'FTO Generated dikhta hai? Matlab kya hai aur payment kab aayegi',
     category: 'Payment',
-    keywords: ['FTO Generated', 'पेमेंट कब आएगी', 'Payment Pending', 'FTO का मतलब'],
+    keywords: {
+        hinglish: ['FTO Generated', 'Payment Pending'],
+        hindi: ['पेमेंट कब आएगी', 'FTO का मतलब']
+    },
   },
   {
     slug:     'pm-kisan-mobile-number-change',
@@ -101,7 +61,10 @@ const NEW_ARTICLES = [
     image:    '/images/pm-kisan-mobile-bank-aadhaar-update-banner-website.webp',
     desc:     'Mobile number change karo online ya CSC se — step by step',
     category: 'Correction',
-    keywords: ['मोबाइल नंबर बदलें', 'Mobile Change', 'CSC Center', 'नंबर अपडेट'],
+    keywords: {
+        hinglish: ['Mobile Change', 'CSC Center'],
+        hindi: ['मोबाइल नंबर बदलें', 'नंबर अपडेट']
+    },
   },
   {
     slug:     'nano-dap-500ml-price-in-india-2026',
@@ -110,7 +73,10 @@ const NEW_ARTICLES = [
     image:    '/images/nano-dap-500ml-price-india-2026.webp',
     desc:     'IFFCO Nano DAP price, dosage per acre aur kahan se kharidein',
     category: 'Farming',
-    keywords: ['Nano DAP Price', 'नैनो डीएपी', 'IFFCO 2026', 'खाद की कीमत'],
+    keywords: {
+        hinglish: ['Nano DAP Price', 'IFFCO 2026'],
+        hindi: ['नैनो डीएपी', 'खाद की कीमत']
+    },
   },
   {
     slug:     'agristack-kya-hai',
@@ -119,7 +85,10 @@ const NEW_ARTICLES = [
     image:    '/images/agristack-kya-hai-infographic.webp',
     desc:     'Farmer ID kya hoti hai, AgriStack registration aur fayde',
     category: 'Digital',
-    keywords: ['AgriStack', 'Farmer ID', 'किसान आईडी', 'डिजिटल रजिस्ट्रेशन'],
+    keywords: {
+        hinglish: ['AgriStack', 'Farmer ID'],
+        hindi: ['किसान आईडी', 'डिजिटल रजिस्ट्रेशन']
+    },
   },
 ];
 
@@ -254,36 +223,6 @@ function NewsTicker() {
           100% { transform: translateX(-50%); }
         }
       `}</style>
-    </div>
-  );
-}
-
-// ── Countdown (optimised — pauses when tab hidden) ────────────────────────────
-function KistCountdown() {
-  const { days, hours, mins, secs } = useCountdown('2026-10-15T00:00:00');
-  const units = [
-    { label: 'Din',    value: days  },
-    { label: 'Ghante', value: hours },
-    { label: 'Minute', value: mins  },
-    { label: 'Second', value: secs  },
-  ];
-  return (
-    <div className="bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl p-4 sm:p-5 shadow-xl shadow-orange-900/30">
-      <p className="text-white/80 text-xs font-bold uppercase tracking-widest mb-1">⏳ 24vi Kist Countdown</p>
-      <p className="text-white font-black text-sm mb-3">Expected: October 15, 2026</p>
-      <div className="grid grid-cols-4 gap-2">
-        {units.map(u => (
-          <div key={u.label} className="bg-white/20 rounded-xl p-2 text-center backdrop-blur-sm">
-            <p className="text-white font-black text-xl leading-none tabular-nums">
-              {String(u.value).padStart(2, '00')}
-            </p>
-            <p className="text-white/70 text-[10px] mt-0.5 font-medium">{u.label}</p>
-          </div>
-        ))}
-      </div>
-      <p className="text-white/60 text-[10px] mt-2 text-center">
-        * Expected date — official date aane par update hogi
-      </p>
     </div>
   );
 }
@@ -478,20 +417,6 @@ export default function HomeContent() {
                 🧮 Kisan Calculator
               </Link>
             </div>
-
-            <div className="flex flex-wrap gap-2 mt-5">
-              {[
-                'PM Kisan 23vi Kist', 'eKYC 2026', 'Payment Failed',
-                'Rejected List', 'Name Correction', 'Beneficiary List', 'Land Seeding',
-              ].map(tag => (
-                <span
-                  key={tag}
-                  className="text-[11px] bg-white/10 border border-white/15 text-green-200 px-3 py-1 rounded-full"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
           </div>
 
           {/* RIGHT */}
@@ -540,8 +465,6 @@ export default function HomeContent() {
                 </p>
               </div>
             </div>
-
-            <KistCountdown />
           </div>
         </div>
       </section>
@@ -662,10 +585,18 @@ export default function HomeContent() {
                     </h3>
                     <p className="text-gray-500 text-xs leading-relaxed mb-3">{a.desc}</p>
                     <div className="flex flex-wrap gap-1.5 mb-3">
-                      {a.keywords.map(kw => (
+                      {a.keywords.hinglish.map(kw => (
                         <span
                           key={kw}
                           className="text-[10px] bg-green-50 border border-green-200 text-green-700 px-2 py-0.5 rounded-full font-medium"
+                        >
+                          {kw}
+                        </span>
+                      ))}
+                      {a.keywords.hindi.map(kw => (
+                        <span
+                          key={kw}
+                          className="text-[10px] bg-blue-50 border border-blue-200 text-blue-700 px-2 py-0.5 rounded-full font-medium"
                         >
                           {kw}
                         </span>
