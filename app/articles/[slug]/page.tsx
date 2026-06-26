@@ -6,6 +6,7 @@
  *  - generateStaticParams unchanged (SSG kept)
  *  - revalidate 86400 kept
  *  - ✅ UPDATED: Added pm-kisan-complete-guide (Article #23)
+ *  - ✅ UPDATED: Added soil-health-card-complete-guide-2026 (Article #24)
  */
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
@@ -38,8 +39,10 @@ const ARTICLE_OG_IMAGES: Record<string, string> = {
   'agristack-kya-hai':                               '/images/agristack-kya-hai-infographic.webp',
   'pm-kisan-mobile-number-change':                   '/images/pm-kisan-mobile-bank-aadhaar-update-banner-website.webp',
   'nano-dap-500ml-price-in-india-2026':              '/images/nano-dap-500ml-price-india-2026.webp',
-  // ✅ NEW ARTICLE #23
+  // ✅ ARTICLE #23
   'pm-kisan-complete-guide':                         '/images/pm-kisan-status-check-hero.webp',
+  // ✅ ARTICLE #24 (NEW)
+  'soil-health-card-complete-guide-2026':            '/images/soil-health-card-complete-guide-2026.webp',
 };
 
 // ── JSON-LD schema generator (server-side) ─────────────────────────────────
@@ -135,8 +138,10 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   PmKisan24viKist2026:                        dynamic(() => import('@/components/articles/PmKisan24viKist2026'),                       { loading: ArticleLoading }),
   AgriStackKyaHai2026:                        dynamic(() => import('@/components/articles/AgriStackKyaHai2026'),                       { loading: ArticleLoading }),
   PmKisanMobileNumberChange2026:              dynamic(() => import('@/components/articles/PmKisanMobileNumberChange2026'),             { loading: ArticleLoading }),
-  // ✅ NEW ARTICLE #23
+  // ✅ ARTICLE #23
   PmKisanCompleteGuide:                       dynamic(() => import('@/components/articles/pm-kisan-complete-guide'),                   { loading: ArticleLoading }),
+  // ✅ ARTICLE #24 (NEW)
+  SoilHealthCardCompleteGuide2026:            dynamic(() => import('@/components/articles/soil-health-card-complete-guide-2026'),      { loading: ArticleLoading }),
 };
 
 export const revalidate = 86400;
