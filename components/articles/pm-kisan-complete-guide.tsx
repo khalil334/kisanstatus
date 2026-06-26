@@ -8,7 +8,7 @@ export default function PMKisanCompleteGuide() {
       {/* Hero Image */}
       <div className="relative w-full h-64 md:h-96 mb-8 rounded-xl overflow-hidden shadow-2xl">
         <Image
-          src="/images/pm-kisan-status-check-hero.webp"
+          src="/images/pm-kisan-status-check-hero.webp
           alt="Indian farmer checking PM Kisan status on mobile phone in field"
           fill
           className="object-cover"
