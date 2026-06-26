@@ -1,7 +1,7 @@
-
 /**
  * app/articles/ArticlesClient.tsx — CLIENT COMPONENT
  * ✅ 'use client' yahan hai — UI logic yahan
+ * ✅ SEO OPTIMIZED v2.0 — 24 articles complete
  */
 'use client';
 
@@ -10,7 +10,7 @@ import { useState } from 'react';
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const CATEGORY_META: Record<string, { label: string; emoji: string; color: string }> = {
-  Status:       { label: 'Status Check', emoji: '📆', color: 'bg-blue-100 text-blue-700' },
+  Status:       { label: 'Status Check', emoji: '', color: 'bg-blue-100 text-blue-700' },
   eKYC:         { label: 'eKYC',         emoji: '🔐', color: 'bg-green-100 text-green-700' },
   Payment:      { label: 'Payment',      emoji: '💸', color: 'bg-red-100 text-red-700' },
   Registration: { label: 'Registration', emoji: '📝', color: 'bg-indigo-100 text-indigo-700' },
@@ -18,12 +18,13 @@ const CATEGORY_META: Record<string, { label: string; emoji: string; color: strin
   List:         { label: 'List',         emoji: '📋', color: 'bg-teal-100 text-teal-700' },
   Loan:         { label: 'Loan',         emoji: '💰', color: 'bg-amber-100 text-amber-700' },
   Insurance:    { label: 'Insurance',    emoji: '🌱', color: 'bg-emerald-100 text-emerald-700' },
-  Problems:     { label: 'Problems',     emoji: '🔧', color: 'bg-orange-100 text-orange-700' },
-  History:      { label: 'History',      emoji: '📊', color: 'bg-cyan-100 text-cyan-700' },
+  Problems:     { label: 'Problems',     emoji: '', color: 'bg-orange-100 text-orange-700' },
+  History:      { label: 'History',      emoji: '', color: 'bg-cyan-100 text-cyan-700' },
   Land:         { label: 'Land Seeding', emoji: '🌾', color: 'bg-yellow-100 text-yellow-700' },
   Rejection:    { label: 'Rejection',    emoji: '❌', color: 'bg-rose-100 text-rose-700' },
   Digital:      { label: 'Digital',      emoji: '🌐', color: 'bg-teal-100 text-teal-700' },
-  Farming:      { label: 'Farming',      emoji: '🌿', color: 'bg-green-100 text-green-700' },
+  Farming:      { label: 'Farming',      emoji: '', color: 'bg-green-100 text-green-700' },
+  Guide:        { label: 'Complete Guide', emoji: '', color: 'bg-rose-100 text-rose-700' },
 };
 
 const ARTICLE_META: Record<string, { emoji: string; category: string; isNew: boolean; image: string }> = {
@@ -31,7 +32,7 @@ const ARTICLE_META: Record<string, { emoji: string; category: string; isNew: boo
   'pm-kisan-23vi-kist-2026-status-check':            { emoji: '📆', category: 'Status',       isNew: true,  image: '/images/pm-kisan-status-check-steps.webp' },
   'pm-kisan-ekyc-online-2026':                       { emoji: '🔐', category: 'eKYC',         isNew: true,  image: '/images/ekyc-guide-banner.webp' },
   'pm-kisan-payment-failed-status-2026':             { emoji: '💸', category: 'Payment',      isNew: true,  image: '/images/payment-success.webp' },
-  'pm-kisan-rejected-list-2026':                     { emoji: '📋', category: 'Rejection',    isNew: true,  image: '/images/pm-kisan-rejected-list-2026.webp' },
+  'pm-kisan-rejected-list-2026':                     { emoji: '', category: 'Rejection',    isNew: true,  image: '/images/pm-kisan-rejected-list-2026.webp' },
   'pm-kisan-registration-online-2026':               { emoji: '📝', category: 'Registration', isNew: true,  image: '/images/pm-kisan-registration-online-2026.webp' },
   'pm-kisan-name-correction-online-2026':            { emoji: '✏️', category: 'Correction',   isNew: true,  image: '/images/name-correction.webp' },
   'pm-kisan-beneficiary-list-2026':                  { emoji: '📋', category: 'List',         isNew: true,  image: '/images/beneficiary-list-board.webp' },
@@ -42,13 +43,16 @@ const ARTICLE_META: Record<string, { emoji: string; category: string; isNew: boo
   'pmfby-crop-insurance-2026':                       { emoji: '🌱', category: 'Insurance',    isNew: false, image: '/images/pmfby-crop-insurance-2026.webp' },
   'kisan-tractor-loan-2026':                         { emoji: '🚜', category: 'Loan',         isNew: false, image: '/images/kisan-tractor-loan-2026.webp' },
   'pm-kisan-21vi-installment-status-check':          { emoji: '📅', category: 'Status',       isNew: false, image: '/images/pm-kisan-21vi-installment-status-check.webp' },
-  'pm-kisan-correction-deactivate-block-guide-2026': { emoji: '🛠️', category: 'Correction',   isNew: false, image: '/images/correction-guide.webp' },
+  'pm-kisan-correction-deactivate-block-guide-2026': { emoji: '️', category: 'Correction',   isNew: false, image: '/images/correction-guide.webp' },
   'pm-kisan-problems-solution-guide-2026':           { emoji: '🔧', category: 'Problems',     isNew: false, image: '/images/pm-kisan-beneficiary-status-kisanstatus.webp' },
   'pm-kisan-fto-generated-ka-matlab-kya-hai':        { emoji: '📄', category: 'Payment',      isNew: true,  image: '/images/pm-kisan-fto-generated-featured-image-kisanstatus.webp' },
   'pm-kisan-24vi-kist':                              { emoji: '📆', category: 'Status',       isNew: true,  image: '/images/pm-kisan-24vi-kist-october-2026.webp' },
-  'agristack-kya-hai':                               { emoji: '🌐', category: 'Digital',      isNew: true,  image: '/images/agristack-kya-hai-infographic.webp' },
+  'agristack-kya-hai':                               { emoji: '', category: 'Digital',      isNew: true,  image: '/images/agristack-kya-hai-infographic.webp' },
   'pm-kisan-mobile-number-change':                   { emoji: '📱', category: 'Correction',   isNew: true,  image: '/images/pm-kisan-mobile-bank-aadhaar-update-banner-website.webp' },
-  'nano-dap-500ml-price-in-india-2026':              { emoji: '🧴', category: 'Farming',      isNew: true,  image: '/images/nano-dap-500ml-price-india-2026.webp' },
+  'nano-dap-500ml-price-in-india-2026':              { emoji: '', category: 'Farming',      isNew: true,  image: '/images/nano-dap-500ml-price-india-2026.webp' },
+  // ✅ NEW ARTICLES ADDED
+  'pm-kisan-complete-guide':                         { emoji: '📖', category: 'Guide',        isNew: true,  image: '/images/pm-kisan-status-check-hero.webp' },
+  'soil-health-card-complete-guide-2026':            { emoji: '🌱', category: 'Farming',      isNew: true,  image: '/images/soil-health-card-complete-guide-2026.webp' },
 };
 
 function ArticleImage({ image, emoji, title }: { image: string; emoji: string; title: string }) {
@@ -141,7 +145,7 @@ export default function ArticlesClient({ articles }: { articles: ArticleMeta[] }
             PM Kisan — Saari Guides 2026
           </h1>
           <p className="text-green-200 text-sm md:text-base max-w-xl mx-auto mb-4">
-            {articles.length} free guides — status check, eKYC, loan, payment fix, registration — sab Hindi mein
+            {articles.length} free guides — status check, eKYC, loan, payment fix, registration, Soil Health Card — sab Hindi mein
           </p>
           <Link href="/" className="inline-flex items-center gap-2 text-green-300 hover:text-white text-sm font-bold transition-colors">
             ← Homepage Par Wapas Jao
@@ -153,7 +157,7 @@ export default function ArticlesClient({ articles }: { articles: ArticleMeta[] }
         {newArticles.length > 0 && (
           <section className="mb-12" aria-labelledby="new-articles-heading">
             <div className="flex items-center gap-3 mb-5">
-              <span className="text-xl">🆕</span>
+              <span className="text-xl"></span>
               <h2 id="new-articles-heading" className="text-lg font-black text-gray-900">Naye Articles</h2>
               <span className="bg-green-100 text-green-700 text-xs font-bold px-2 py-0.5 rounded-full">{newArticles.length} new</span>
             </div>
