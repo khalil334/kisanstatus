@@ -1,20 +1,25 @@
 // components/articles/pm-kisan-complete-guide.tsx
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react"; // ✅ Added useState for error handling
 
 export default function PMKisanCompleteGuide() {
   return (
     <div className="prose max-w-none">
       {/* Hero Image */}
-      <div className="relative w-full h-64 md:h-96 mb-8 rounded-xl overflow-hidden shadow-2xl">
+      <div className="relative w-full h-64 md:h-96 mb-8 rounded-xl overflow-hidden shadow-2xl bg-gradient-to-br from-green-100 to-emerald-200">
         <Image
-          src="public/images/pm-kisan-status-check-hero.webp"
+          src="/images/pm-kisan-status-check-hero.webp" // ✅ Removed 'public/'
           alt="Indian farmer checking PM Kisan status on mobile phone in field"
           fill
           className="object-cover"
           priority
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           quality={85}
+          onError={(e) => {
+            // ✅ Fallback agar image load na ho
+            e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%2310b981' width='400' height='300'/%3E%3Ctext fill='white' font-size='24' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3EPM Kisan Guide%3C/text%3E%3C/svg%3E";
+          }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
@@ -94,7 +99,7 @@ export default function PMKisanCompleteGuide() {
         </h2>
         
         {/* e-KYC Image */}
-        <div className="relative w-full h-48 md:h-64 mb-6 rounded-lg overflow-hidden shadow-lg">
+        <div className="relative w-full h-48 md:h-64 mb-6 rounded-lg overflow-hidden shadow-lg bg-gradient-to-br from-green-50 to-emerald-100">
           <Image
             src="/images/pm-kisan-ekyc-process-step.webp"
             alt="Farmer completing e-KYC at Common Service Center with fingerprint scanner"
@@ -102,6 +107,9 @@ export default function PMKisanCompleteGuide() {
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 50vw"
             quality={80}
+            onError={(e) => {
+              e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 256'%3E%3Crect fill='%2310b981' width='400' height='256'/%3E%3Ctext fill='white' font-size='20' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3Ee-KYC Process%3C/text%3E%3C/svg%3E";
+            }}
           />
         </div>
 
@@ -181,7 +189,7 @@ export default function PMKisanCompleteGuide() {
         </h2>
         
         {/* Payment Success Image */}
-        <div className="relative w-full h-48 md:h-64 mb-6 rounded-lg overflow-hidden shadow-lg">
+        <div className="relative w-full h-48 md:h-64 mb-6 rounded-lg overflow-hidden shadow-lg bg-gradient-to-br from-green-50 to-emerald-100">
           <Image
             src="/images/pm-kisan-payment-received-success.webp"
             alt="Happy farmer receiving PM Kisan payment notification on mobile"
@@ -189,6 +197,9 @@ export default function PMKisanCompleteGuide() {
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 50vw"
             quality={80}
+            onError={(e) => {
+              e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 256'%3E%3Crect fill='%2310b981' width='400' height='256'/%3E%3Ctext fill='white' font-size='20' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3EPayment Success%3C/text%3E%3C/svg%3E";
+            }}
           />
         </div>
 
@@ -257,7 +268,7 @@ export default function PMKisanCompleteGuide() {
         </h2>
 
         {/* Rejection Fix Image */}
-        <div className="relative w-full h-48 md:h-64 mb-6 rounded-lg overflow-hidden shadow-lg">
+        <div className="relative w-full h-48 md:h-64 mb-6 rounded-lg overflow-hidden shadow-lg bg-gradient-to-br from-green-50 to-emerald-100">
           <Image
             src="/images/pm-kisan-application-rejection-fix.webp"
             alt="Farmer reviewing documents to fix PM Kisan application rejection"
@@ -265,6 +276,9 @@ export default function PMKisanCompleteGuide() {
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 50vw"
             quality={80}
+            onError={(e) => {
+              e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 256'%3E%3Crect fill='%2310b981' width='400' height='256'/%3E%3Ctext fill='white' font-size='20' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3ERejection Fix%3C/text%3E%3C/svg%3E";
+            }}
           />
         </div>
 
@@ -318,7 +332,7 @@ export default function PMKisanCompleteGuide() {
         </h2>
         
         {/* State Map Image */}
-        <div className="relative w-full h-48 md:h-64 mb-6 rounded-lg overflow-hidden shadow-lg">
+        <div className="relative w-full h-48 md:h-64 mb-6 rounded-lg overflow-hidden shadow-lg bg-gradient-to-br from-green-50 to-emerald-100">
           <Image
             src="/images/pm-kisan-state-beneficiary-map.webp"
             alt="India map showing PM Kisan beneficiaries across all states"
@@ -326,6 +340,9 @@ export default function PMKisanCompleteGuide() {
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 50vw"
             quality={80}
+            onError={(e) => {
+              e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 256'%3E%3Crect fill='%2310b981' width='400' height='256'/%3E%3Ctext fill='white' font-size='20' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3EState Map%3C/text%3E%3C/svg%3E";
+            }}
           />
         </div>
 
@@ -375,7 +392,7 @@ export default function PMKisanCompleteGuide() {
         </h2>
 
         {/* Documents Image */}
-        <div className="relative w-full h-48 md:h-64 mb-6 rounded-lg overflow-hidden shadow-lg">
+        <div className="relative w-full h-48 md:h-64 mb-6 rounded-lg overflow-hidden shadow-lg bg-gradient-to-br from-green-50 to-emerald-100">
           <Image
             src="/images/pm-kisan-documents-checklist.webp"
             alt="PM Kisan required documents - Aadhaar, land papers, bank passbook"
@@ -383,6 +400,9 @@ export default function PMKisanCompleteGuide() {
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 50vw"
             quality={80}
+            onError={(e) => {
+              e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 256'%3E%3Crect fill='%2310b981' width='400' height='256'/%3E%3Ctext fill='white' font-size='20' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3EDocuments%3C/text%3E%3C/svg%3E";
+            }}
           />
         </div>
 
@@ -442,7 +462,7 @@ export default function PMKisanCompleteGuide() {
         </h2>
 
         {/* FAQ Support Image */}
-        <div className="relative w-full h-48 md:h-64 mb-6 rounded-lg overflow-hidden shadow-lg">
+        <div className="relative w-full h-48 md:h-64 mb-6 rounded-lg overflow-hidden shadow-lg bg-gradient-to-br from-green-50 to-emerald-100">
           <Image
             src="/images/pm-kisan-faq-support-help.webp"
             alt="PM Kisan customer support helping farmers with queries"
@@ -450,6 +470,9 @@ export default function PMKisanCompleteGuide() {
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 50vw"
             quality={80}
+            onError={(e) => {
+              e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 256'%3E%3Crect fill='%2310b981' width='400' height='256'/%3E%3Ctext fill='white' font-size='20' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3EFAQ Support%3C/text%3E%3C/svg%3E";
+            }}
           />
         </div>
 
