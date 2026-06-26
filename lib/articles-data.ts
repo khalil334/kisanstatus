@@ -1,8 +1,9 @@
 /**
  * lib/articles-data.ts
- * Central metadata for all 22 articles — used by [slug]/page.tsx
+ * Central metadata for all 23 articles — used by [slug]/page.tsx
  * ✅ UPDATED: All articles now have Hindi + Hinglish + English keywords
  * ✅ UPDATED: All modifiedTime corrected to 2026-06-23
+ * ✅ UPDATED: Added 23rd article (PM Kisan Complete Guide)
  */
 
 export interface ArticleMeta {
@@ -346,6 +347,22 @@ export const ARTICLES: ArticleMeta[] = [
     component:     'PmKisanMobileNumberChange2026',
     publishedTime: '2026-06-24T08:00:00+05:30',
     modifiedTime:  '2026-06-24T08:00:00+05:30',
+  },
+  // 23 (NEW ARTICLE ADDED)
+  {
+    slug:      'pm-kisan-complete-guide',
+    title:     "PM Kisan Complete Guide 2026: Solve All Problems & Check Status",
+    desc:      "Comprehensive 3000-word guide to solve PM Kisan issues - status check, e-KYC, payment problems, rejection solutions with step-by-step help.",
+    ogTitle:   "PM Kisan Complete Guide 2026 — Solve All Problems & Check Status",
+    keywords:  [
+      'PM Kisan complete guide 2026', 'PM Kisan status check', 'PM Kisan eKYC', 'PM Kisan payment problem', 
+      'PM Kisan rejected list fix', 'PM Kisan beneficiary list', 'PM Kisan all problems solution',
+      'पीएम किसान पूर्ण गाइड', 'पीएम किसान समस्या समाधान', 'पीएम किसान स्टेटस चेक', 'पीएम किसान ईकेवाईसी',
+      'pm kisan complete guide in hindi', 'pm kisan all issues fix 2026',
+    ],
+    component:     'PmKisanCompleteGuide',
+    publishedTime: '2026-06-27T08:00:00+05:30',
+    modifiedTime:  '2026-06-27T08:00:00+05:30',
   },
 ];
 
