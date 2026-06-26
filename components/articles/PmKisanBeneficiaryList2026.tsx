@@ -4,7 +4,7 @@ import { SvgBeneficiaryList, SvgDocuments, SvgFAQ } from '@/components/ArticleSV
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, fmtDate } from '@/components/ArticleShared';
 
 const PUBLISHED = '2026-06-04T08:00:00+05:30';
-const MODIFIED  = '2026-06-10T08:00:00+05:30';
+const MODIFIED  = '2026-06-27T08:00:00+05:30'; // ✅ Updated
 
 const DOMAIN = 'https://kisanstatus.com';
 const URL    = `${DOMAIN}/articles/pm-kisan-beneficiary-list-2026`;
@@ -13,8 +13,8 @@ const schemas = [
   {
     '@context':'https://schema.org','@type':'Article',
     headline:'PM Kisan Beneficiary List 2026 — Apna Naam Check Karo, Village Wise PDF Download',
-    description:'PM Kisan beneficiary list 2026 — apna naam kaise check kare, village wise list kaise dekhe, rejected aur inactive naam kyon hote hain — complete Hinglish guide.',
-    image:`${DOMAIN}/og-image.jpg`, datePublished:PUBLISHED, dateModified:MODIFIED,
+    description:'PM Kisan beneficiary list 2026 — 23vi kist release ho chuki hai. Apna naam kaise check kare, village wise list kaise dekhe, rejected aur inactive naam kyon hote hain — complete Hinglish guide.',
+    image:`${DOMAIN}/og-image.webp`, datePublished:PUBLISHED, dateModified:MODIFIED,
     author:{'@type':'Person',name:'Sidhu Singh',url:`${DOMAIN}/about`},
     publisher:{'@type':'Organization',name:'KisanStatus.com',url:DOMAIN},
     mainEntityOfPage:{'@type':'WebPage','@id':URL},
@@ -50,6 +50,49 @@ const RELATED = [
   {slug:'pm-kisan-land-seeding-status-check',            title:'Land Seeding Status Fix',        emoji:'🌾'},
 ];
 
+// ✅ COMPLETE STATES LIST (28 States + 8 UTs)
+const STATES_LIST = [
+  // Major States
+  ['🏔️','Uttar Pradesh','uttar-pradesh'],
+  ['🌊','Bihar','bihar'],
+  ['🌿','Madhya Pradesh','madhya-pradesh'],
+  ['☀️','Rajasthan','rajasthan'],
+  ['🌾','Maharashtra','maharashtra'],
+  ['🐟','West Bengal','west-bengal'],
+  ['🌴','Karnataka','karnataka'],
+  ['🌊','Odisha','odisha'],
+  ['🌞','Tamil Nadu','tamil-nadu'],
+  ['🌾','Punjab','punjab'],
+  ['🚜','Haryana','haryana'],
+  ['🌶️','Andhra Pradesh','andhra-pradesh'],
+  ['🌊','Kerala','kerala'],
+  ['🌴','Telangana','telangana'],
+  ['🌿','Gujarat','gujarat'],
+  ['🌾','Assam','assam'],
+  ['🌊','Jharkhand','jharkhand'],
+  ['🏔️','Uttarakhand','uttarakhand'],
+  ['🌾','Chhattisgarh','chhattisgarh'],
+  ['🌊','Himachal Pradesh','himachal-pradesh'],
+  ['🏔️','Jammu & Kashmir','jammu-and-kashmir'],
+  ['🌿','Goa','goa'],
+  ['🏔️','Sikkim','sikkim'],
+  ['🌊','Tripura','tripura'],
+  ['🌾','Meghalaya','meghalaya'],
+  ['🌿','Manipur','manipur'],
+  ['🌊','Nagaland','nagaland'],
+  ['🏔️','Arunachal Pradesh','arunachal-pradesh'],
+  ['🌾','Mizoram','mizoram'],
+  // Union Territories
+  ['🏛️','Delhi','delhi'],
+  ['🌊','Puducherry','puducherry'],
+  ['🏝️','Andaman & Nicobar','andaman-nicobar'],
+  ['🏔️','Ladakh','ladakh'],
+  ['🌊','Lakshadweep','lakshadweep'],
+  ['🏛️','Chandigarh','chandigarh'],
+  ['🌾','Dadra & Nagar Haveli','dadra-nagar-haveli'],
+  ['🏝️','Daman & Diu','daman-diu'],
+];
+
 export default function PmKisanBeneficiaryList2026() {
   return (
     <>
@@ -60,7 +103,7 @@ export default function PmKisanBeneficiaryList2026() {
         <div className="container-site max-w-3xl">
           <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
             <Link href="/" className="hover:text-white">Home</Link><span>/</span>
-            <Link href="/articles/pm-kisan-21vi-installment-status-check" className="hover:text-white">PM Kisan Guide</Link><span>/</span>
+            <Link href="/articles" className="hover:text-white">PM Kisan Guide</Link><span>/</span>
             <span className="text-white">Beneficiary List 2026</span>
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">📋 Beneficiary List</span>
@@ -209,25 +252,12 @@ export default function PmKisanBeneficiaryList2026() {
 
         {/* Section 5 — State-wise direct links */}
         <section className="mb-8">
-          <SH>State Wise Beneficiary List — Quick Links</SH>
+          <SH>State Wise Beneficiary List — Quick Links (36 States & UTs)</SH>
           <p className="text-gray-700 text-sm leading-relaxed mb-4">
-            Har state ka PM Kisan dashboard alag hota hai. Apna state select karo:
+            Har state ka PM Kisan dashboard alag hota hai. Apna state select karo — complete list neeche hai:
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-            {[
-              ['🏔️','Uttar Pradesh','uttar-pradesh'],
-              ['🌊','Bihar','bihar'],
-              ['🌿','Madhya Pradesh','madhya-pradesh'],
-              ['☀️','Rajasthan','rajasthan'],
-              ['🌾','Maharashtra','maharashtra'],
-              ['🐟','West Bengal','west-bengal'],
-              ['🌴','Karnataka','karnataka'],
-              ['🌊','Odisha','odisha'],
-              ['🌞','Tamil Nadu','tamil-nadu'],
-              ['🌾','Punjab','punjab'],
-              ['🚜','Haryana','haryana'],
-              ['🌶️','Andhra Pradesh','andhra-pradesh'],
-            ].map(([icon,name,slug])=>(
+            {STATES_LIST.map(([icon,name,slug])=>(
               <Link key={slug} href={`/beneficiary-list/${slug}`}
                 className="flex items-center gap-2 p-3 bg-white border border-green-200 rounded-xl text-green-800 text-xs font-semibold hover:bg-green-600 hover:text-white hover:border-green-600 transition-all">
                 <span>{icon}</span>{name}
@@ -236,17 +266,25 @@ export default function PmKisanBeneficiaryList2026() {
           </div>
         </section>
 
-        {/* Section 6 — Kist schedule */}
+        {/* Section 6 — Kist schedule — ✅ UPDATED */}
         <section className="mb-8">
-          <SH>23वीं किस्त — List Update Schedule</SH>
+          <SH>23वीं किस्त Release Ho Chuki — 24वीं किस्त Kab Aayegi?</SH>
+          <div className="my-4 p-4 bg-green-50 border-2 border-green-600 rounded-xl">
+            <p className="text-sm font-bold text-green-800 mb-2">✅ 23वीं किस्त — 20 June 2026 ko Release Ho Chuki!</p>
+            <p className="text-xs text-green-700">9.44 Crore+ kisanon ko ₹2,000 seedha bank mein mil chuke hain. Apna status abhi check karo.</p>
+          </div>
+          <div className="my-4 p-4 bg-amber-50 border-2 border-amber-400 rounded-xl">
+            <p className="text-sm font-bold text-amber-800 mb-2">⏳ 24वीं किस्त — October 2026 Expected</p>
+            <p className="text-xs text-amber-700">List mein naam hona chahiye — iske liye eKYC, land seeding aur bank Aadhaar seeding complete karo.</p>
+          </div>
           <p className="text-gray-700 text-sm leading-relaxed mb-4">
-            Beneficiary list har kist se pehle update hoti hai. <strong>23vi kist June-July 2026 mein expected</strong> hai. List mein naam hona chahiye — iske liye:
+            Beneficiary list har kist se pehle update hoti hai. List mein naam hona chahiye — iske liye:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
               {icon:'🔐',title:'eKYC Complete Karo',desc:'Sabse pehle — bina eKYC ke list mein nahi aao ge',href:'/articles/pm-kisan-ekyc-online-2026',cta:'eKYC Guide →'},
               {icon:'🏦',title:'Bank Aadhaar Seed Karo',desc:'Bank account mein Aadhaar link hona zaroori hai',href:'/articles/pm-kisan-payment-failed-status-2026',cta:'Payment Guide →'},
-              {icon:'✅',title:'Status Check Karo',desc:'Active dikhna chahiye — Rejected nahi',href:'/articles/pm-kisan-21vi-installment-status-check',cta:'Status Guide →'},
+              {icon:'✅',title:'Status Check Karo',desc:'Active dikhna chahiye — Rejected nahi',href:'/articles/pm-kisan-23vi-kist-2026-status-check',cta:'Status Guide →'},
               {icon:'🌾',title:'Land Seeding Fix Karo',desc:'Land Seeding No dikh raha hai to patwari se milein',href:'/articles/pm-kisan-land-seeding-status-check',cta:'Land Guide →'},
             ].map(c=>(
               <Link key={c.href} href={c.href}
@@ -285,12 +323,12 @@ export default function PmKisanBeneficiaryList2026() {
           </div>
         </section>
 
-        {/* Gov link — proper wrapper */}
+        {/* Gov link */}
         <GovLink
           href="https://pmkisan.gov.in/BeneficiaryStatus.aspx"
           label="PM Kisan Beneficiary Status Check"
           guide="Status Check Karo"
-          guideHref="/articles/pm-kisan-21vi-installment-status-check"
+          guideHref="/articles/pm-kisan-23vi-kist-2026-status-check"
         />
 
         <CalcBanner/>
