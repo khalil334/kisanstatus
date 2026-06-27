@@ -1,9 +1,9 @@
 /**
  * Official Government Links Page — KisanStatus.com
- * ✅ FIXED: Home link using <a> tag instead of <Link>
+ * ✅ FIXED: Removed unused Link import
  */
 import type { Metadata } from 'next';
-import Link from 'next/link';
+// ❌ import Link from 'next/link';  ← Ye hata diya
 
 export const metadata: Metadata = {
   title: 'Sarkari Links — PM Kisan Official Government Portals | KisanStatus.com',
@@ -99,7 +99,6 @@ export default function OfficialLinksPage() {
       <div className="bg-primary-600 py-10">
         <div className="container-site">
           <nav className="text-green-200 text-sm mb-2" aria-label="Breadcrumb">
-            {/* ✅ FIXED: <Link> ki jagah <a> tag use kiya - 100% kaam karega */}
             <a 
               href="/" 
               className="hover:text-white underline font-bold"
