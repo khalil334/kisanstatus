@@ -8,8 +8,8 @@ import KisanTemplates from '@/components/KisanTemplates';
 
 // ── CENTRALIZED STATS (Ek jagah se sab control) ─────────────────────────────
 const STATS = {
-  registeredFarmers: '11 Cr+',
-  receivedKist: '9.44 Cr+',
+  registeredFarmers: '11 Cr+',        // Total registered farmers - sab jagah ye use hoga
+  receivedKist: '9.44 Cr+',           // Sirf 23vi kist ke liye specific
   annualBenefit: '₹6,000',
   perKist: '₹2,000',
   currentKist: '23vi',
@@ -137,7 +137,7 @@ const TICKER_ITEMS = [
   `⏳ ${STATS.nextKist} Kist Expected: ${STATS.nextKistDate} — eKYC abhi complete karo`,
   '🔐 eKYC Mandatory: Bina eKYC kist NAHI milegi — pmkisan.gov.in par karo',
   '📞 PM Kisan Helpline: 155261 | Toll Free: 1800-115-526',
-  `✅ ${STATS.receivedKist} kisanon ko ${STATS.currentKist} kist mil chuki hai — status check karo`,
+  `✅ ${STATS.registeredFarmers} registered farmers — ${STATS.receivedKist} ko ${STATS.currentKist} kist mil chuki hai`,
   '🌾 KisanStatus.com — Sabhi Kisanon Ke Liye — 100% Free',
   '🌱 NEW: Soil Health Card Guide — Mitti testing se lekar PDF download tak',
 ];
@@ -146,7 +146,7 @@ const TICKER_ITEMS = [
 const FAQS = [
   {
     q: 'पीएम किसान की 23वीं किस्त कब आई?',
-    a: `23वीं किस्त ${STATS.currentKistDate} को release हो चुकी है — ${STATS.receivedKist} से ज़्यादा किसानों को ${STATS.perKist} DBT से मिले हैं। अगर अभी तक पैसा नहीं आया तो eKYC और bank में Aadhaar seeding ज़रूर check करें। Status check: pmkisan.gov.in → Beneficiary Status।`,
+    a: `23वीं किस्त ${STATS.currentKistDate} को release हो चुकी है — ${STATS.registeredFarmers} registered farmers mein se ${STATS.receivedKist} farmers को ${STATS.perKist} DBT से मिले हैं। अगर अभी तक पैसा नहीं आया तो eKYC और bank में Aadhaar seeding ज़रूर check करें। Status check: pmkisan.gov.in → Beneficiary Status।`,
   },
   {
     q: 'पीएम किसान eKYC नहीं हुई तो क्या पैसा आएगा?',
@@ -253,7 +253,7 @@ function BreakingAlert() {
         Breaking
       </span>
       <p className="text-sm font-bold flex-1">
-        🎉 PM Kisan {STATS.currentKist} Kist — {STATS.perKist} seedha {STATS.receivedKist} kisanon ke bank mein aa gayi!{' '}
+        🎉 PM Kisan {STATS.currentKist} Kist — {STATS.perKist} seedha {STATS.receivedKist} farmers ke bank mein aa gayi!{' '}
         <Link href="/articles/pm-kisan-23vi-kist-2026-status-check" className="underline text-white/90 hover:text-white">
           Apna status check karo →
         </Link>
@@ -370,7 +370,7 @@ export default function HomeContent() {
                 {[
                   { icon: '💰', label: 'Saalana Labh', value: STATS.annualBenefit, sub: '3 kiston mein', grad: 'from-emerald-400 to-green-600' },
                   { icon: '🏦', label: 'Per Kist', value: STATS.perKist, sub: 'Seedha bank mein', grad: 'from-blue-400 to-cyan-600' },
-                  { icon: '👨‍🌾', label: 'Registered Kisan', value: STATS.registeredFarmers, sub: 'Poore India mein', grad: 'from-amber-400 to-orange-500' },
+                  { icon: '👨‍🌾', label: 'Registered Farmers', value: STATS.registeredFarmers, sub: 'Poore India mein', grad: 'from-amber-400 to-orange-500' },
                   { icon: '✅', label: `${STATS.currentKist}vi Kist`, value: 'Released', sub: STATS.currentKistDate, grad: 'from-green-400 to-emerald-600' },
                   { icon: '⏳', label: `${STATS.nextKist}vi Kist`, value: 'Expected', sub: STATS.nextKistDate, grad: 'from-yellow-400 to-amber-500' },
                 ].map((s, i) => (
