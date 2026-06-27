@@ -1,7 +1,6 @@
 /**
  * Official Government Links Page — KisanStatus.com
- * Sari sarkari links ek jagah — clean & separate from about/privacy/disclaimer
- * ✅ UPDATED: Latest PM Kisan links + OG metadata
+ * ✅ FIXED: Home link using <a> tag instead of <Link>
  */
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -44,7 +43,6 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-// ✅ UPDATED: Latest PM Kisan links (2026)
 const officialLinks = [
   {
     category: '🌾 PM Kisan Main Portal',
@@ -101,7 +99,14 @@ export default function OfficialLinksPage() {
       <div className="bg-primary-600 py-10">
         <div className="container-site">
           <nav className="text-green-200 text-sm mb-2" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-white">Home</Link>
+            {/* ✅ FIXED: <Link> ki jagah <a> tag use kiya - 100% kaam karega */}
+            <a 
+              href="/" 
+              className="hover:text-white underline font-bold"
+              style={{ position: 'relative', zIndex: 100 }}
+            >
+              🏠 Home
+            </a>
             <span className="mx-2" aria-hidden="true">/</span>
             <span className="text-white">Official Government Links</span>
           </nav>
@@ -160,9 +165,9 @@ export default function OfficialLinksPage() {
             suvidha ke liye hain. Koi bhi official kaam seedha government website par hi karein.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
-            <Link href="/articles/pm-kisan-23vi-kist-2026-status-check" className="btn-primary text-sm">✅ 23vi Kist Status</Link>
-            <Link href="/articles/pm-kisan-ekyc-online-2026" className="btn-secondary text-sm">🔐 eKYC Guide</Link>
-            <Link href="/contact" className="btn-secondary text-sm">📧 Contact Us</Link>
+            <a href="/articles/pm-kisan-23vi-kist-2026-status-check" className="btn-primary text-sm">✅ 23vi Kist Status</a>
+            <a href="/articles/pm-kisan-ekyc-online-2026" className="btn-secondary text-sm">🔐 eKYC Guide</a>
+            <a href="/contact" className="btn-secondary text-sm">📧 Contact Us</a>
           </div>
         </div>
 
