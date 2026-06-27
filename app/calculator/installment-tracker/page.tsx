@@ -1,9 +1,5 @@
-/**
- * /calculator/installment-tracker — KisanStatus.com
- * PM Kisan Installment & eKYC Status Tracker — Dedicated SEO page
- */
 import type { Metadata } from 'next';
-import InstallmentTrackerCalcPage from '@/components/calculators/InstallmentTrackerCalcPage';
+// Import hata do!
 
 export const metadata: Metadata = {
   title: 'PM Kisan Installment Status Tracker 2026 — 23vi Kist Kyun Ruki?',
@@ -12,4 +8,12 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://kisanstatus.com/calculator/installment-tracker' },
 };
 
-export default function Page() { return <InstallmentTrackerCalcPage />; }
+// ✅ Directly yahan component likho
+export default function Page() {
+  const [ekyc, setEkyc] = useState('unknown');
+  // ... baaki code
+  
+  return (
+    // ... JSX
+  );
+}
