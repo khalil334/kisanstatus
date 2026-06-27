@@ -6,9 +6,12 @@ import Link from 'next/link';
 export default function PMKisanCompleteGuide() {
   return (
     <div className="prose max-w-none">
-      {/* Hero Image */}
+      {/* ✅ FIXED: Hero Image path updated to new folder */}
       <div className="relative w-full h-64 md:h-96 mb-8 rounded-xl overflow-hidden shadow-2xl bg-gradient-to-br from-green-100 to-emerald-200">
-src="/images/articles/pm-kisan-complete-guide/hero.webp"
+        <Image
+          src="/images/articles/pm-kisan-complete-guide/hero.webp"
+          alt="Indian farmer checking PM Kisan status on mobile phone in field"
+          fill
           className="object-cover"
           priority
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -35,7 +38,7 @@ src="/images/articles/pm-kisan-complete-guide/hero.webp"
         </p>
         <p className="text-lg leading-relaxed mb-4">
           Whether you're a first-time applicant or facing installation delays, this 3000-word guide covers 
-          everything from <Link href="/pm-kisan-status" className="text-green-600 underline font-semibold">status checking</Link> to 
+          everything from <Link href="/articles/pm-kisan-23vi-kist-2026-status-check" className="text-green-600 underline font-semibold">status checking</Link> to 
           <Link href="/beneficiary-list" className="text-green-600 underline font-semibold"> state-wise beneficiary lists</Link>, 
           common errors, and expert solutions.
         </p>
@@ -63,7 +66,7 @@ src="/images/articles/pm-kisan-complete-guide/hero.webp"
           <h4 className="font-bold mb-3">Method 1: Official PM Kisan Portal</h4>
           <ol className="list-decimal ml-5 space-y-3">
             <li>Visit <Link href="https://pmkisan.gov.in" className="text-blue-600 underline">pmkisan.gov.in</Link> or use our 
-              <Link href="/pm-kisan-status" className="text-green-600 underline font-semibold"> simplified status checker</Link></li>
+              <Link href="/articles/pm-kisan-23vi-kist-2026-status-check" className="text-green-600 underline font-semibold"> simplified status checker</Link></li>
             <li>Click on "Farmers Corner" → "Beneficiary Status"</li>
             <li>Enter your registered mobile number</li>
             <li>Click "Get OTP" and enter the 6-digit code</li>
@@ -208,7 +211,7 @@ src="/images/articles/pm-kisan-complete-guide/hero.webp"
         <h3 className="text-xl font-semibold mb-3 mt-6">Check Payment Status First</h3>
         <p className="mb-4">
           Before panicking, verify your payment status using our 
-          <Link href="/pm-kisan-status" className="text-green-600 underline font-semibold"> PM Kisan Status Checker</Link> or 
+          <Link href="/articles/pm-kisan-23vi-kist-2026-status-check" className="text-green-600 underline font-semibold"> PM Kisan Status Checker</Link> or 
           check your <Link href="/beneficiary-list" className="text-green-600 underline font-semibold">state beneficiary list</Link>.
         </p>
 
@@ -495,7 +498,7 @@ src="/images/articles/pm-kisan-complete-guide/hero.webp"
           <div className="border rounded-lg p-4 bg-gray-50">
             <h3 className="font-bold mb-2">Q4. How long does approval take?</h3>
             <p className="text-gray-700">A. Typically 30-60 days after document verification. You can track 
-            status using our <Link href="/pm-kisan-status" className="text-green-600 underline">status checker</Link>.</p>
+            status using our <Link href="/articles/pm-kisan-23vi-kist-2026-status-check" className="text-green-600 underline">status checker</Link>.</p>
           </div>
 
           <div className="border rounded-lg p-4 bg-gray-50">
@@ -519,7 +522,7 @@ src="/images/articles/pm-kisan-complete-guide/hero.webp"
         </h2>
 
         <div className="grid md:grid-cols-2 gap-4">
-          <Link href="/pm-kisan-status" className="bg-gradient-to-r from-green-500 to-green-600 text-white p-6 rounded-lg hover:shadow-lg transition">
+          <Link href="/articles/pm-kisan-23vi-kist-2026-status-check" className="bg-gradient-to-r from-green-500 to-green-600 text-white p-6 rounded-lg hover:shadow-lg transition">
             <h3 className="font-bold text-lg mb-2">✅ Check PM Kisan Status</h3>
             <p className="text-sm opacity-90">Verify your beneficiary status and payment history instantly</p>
           </Link>
