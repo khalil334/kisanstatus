@@ -1,13 +1,18 @@
 /**
  * Dynamic Sitemap — KisanStatus.com
- * Articles auto-generate from lib/articles-data.ts
- * Naya article add karo articles-data.ts mein — sitemap automatic update hoga
+ * ✅ FULLY AUTOMATIC — Koi manual update nahi chahiye
+ * 
+ * Auto-update hota hai jab:
+ * - Naya article add karo (articles-data.ts mein)
+ * - Naya category add karo (CATEGORIES mein)
+ * - Build hota hai (current date automatic use hoti hai)
  */
 import { MetadataRoute } from 'next';
-import { ARTICLES } from '@/lib/articles-data';
+import { ARTICLES, CATEGORIES } from '@/lib/articles-data';
 
 const BASE_URL = 'https://kisanstatus.com';
 
+// States list — agar future mein states-data.ts banao toh wahan se import karna
 const STATES = [
   'andhra-pradesh','arunachal-pradesh','assam','bihar','chhattisgarh','goa',
   'gujarat','haryana','himachal-pradesh','jharkhand','karnataka','kerala',
@@ -17,41 +22,50 @@ const STATES = [
   'ladakh','puducherry','andaman-nicobar','chandigarh','dadra-nagar-haveli','lakshadweep',
 ];
 
-const STATIC_DATE = new Date('2026-06-23');
+// ✅ FIXED: Har build par current date automatic use hogi
+const getCurrentDate = () => new Date();
 
 export default function sitemap(): MetadataRoute.Sitemap {
 
   // ── Static pages ──────────────────────────────────────────────────────────
   const staticPages: MetadataRoute.Sitemap = [
-    { url: BASE_URL,                                        lastModified: STATIC_DATE, changeFrequency: 'daily',   priority: 1.0 },
-    { url: `${BASE_URL}/pm-kisan-status`,                   lastModified: STATIC_DATE, changeFrequency: 'weekly',  priority: 0.9 },
-    { url: `${BASE_URL}/new-registration`,                  lastModified: STATIC_DATE, changeFrequency: 'weekly',  priority: 0.9 },
-    { url: `${BASE_URL}/calculator`,                        lastModified: STATIC_DATE, changeFrequency: 'weekly',  priority: 0.8 },
-    { url: `${BASE_URL}/calculator/installment-tracker`,    lastModified: STATIC_DATE, changeFrequency: 'weekly',  priority: 0.9 },
-    { url: `${BASE_URL}/calculator/pm-kisan-benefit`,       lastModified: STATIC_DATE, changeFrequency: 'weekly',  priority: 0.8 },
-    { url: `${BASE_URL}/calculator/kcc-loan-emi`,           lastModified: STATIC_DATE, changeFrequency: 'weekly',  priority: 0.8 },
-    { url: `${BASE_URL}/calculator/pmfby-premium`,          lastModified: STATIC_DATE, changeFrequency: 'weekly',  priority: 0.8 },
-    { url: `${BASE_URL}/calculator/msp-income`,             lastModified: STATIC_DATE, changeFrequency: 'weekly',  priority: 0.8 },
-    { url: `${BASE_URL}/calculator/crop-profit`,            lastModified: STATIC_DATE, changeFrequency: 'weekly',  priority: 0.8 },
-    { url: `${BASE_URL}/search`,                            lastModified: STATIC_DATE, changeFrequency: 'weekly',  priority: 0.7 },
-    { url: `${BASE_URL}/about`,                             lastModified: STATIC_DATE, changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${BASE_URL}/author`,                            lastModified: STATIC_DATE, changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${BASE_URL}/contact`,                           lastModified: STATIC_DATE, changeFrequency: 'monthly', priority: 0.5 },
-    { url: `${BASE_URL}/official-links`,                    lastModified: STATIC_DATE, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${BASE_URL}/privacy-policy`,                    lastModified: STATIC_DATE, changeFrequency: 'monthly', priority: 0.4 },
-    { url: `${BASE_URL}/disclaimer`,                        lastModified: STATIC_DATE, changeFrequency: 'monthly', priority: 0.4 },
-    { url: `${BASE_URL}/terms-of-service`,                  lastModified: STATIC_DATE, changeFrequency: 'monthly', priority: 0.4 },
+    { url: BASE_URL,                                        lastModified: getCurrentDate(), changeFrequency: 'daily',   priority: 1.0 },
+    { url: `${BASE_URL}/articles`,                          lastModified: getCurrentDate(), changeFrequency: 'daily',   priority: 0.95 },
+    { url: `${BASE_URL}/pm-kisan-status`,                   lastModified: getCurrentDate(), changeFrequency: 'weekly',  priority: 0.9 },
+    { url: `${BASE_URL}/new-registration`,                  lastModified: getCurrentDate(), changeFrequency: 'weekly',  priority: 0.9 },
+    { url: `${BASE_URL}/calculator`,                        lastModified: getCurrentDate(), changeFrequency: 'weekly',  priority: 0.8 },
+    { url: `${BASE_URL}/calculator/installment-tracker`,    lastModified: getCurrentDate(), changeFrequency: 'weekly',  priority: 0.9 },
+    { url: `${BASE_URL}/calculator/pm-kisan-benefit`,       lastModified: getCurrentDate(), changeFrequency: 'weekly',  priority: 0.8 },
+    { url: `${BASE_URL}/calculator/kcc-loan-emi`,           lastModified: getCurrentDate(), changeFrequency: 'weekly',  priority: 0.8 },
+    { url: `${BASE_URL}/calculator/pmfby-premium`,          lastModified: getCurrentDate(), changeFrequency: 'weekly',  priority: 0.8 },
+    { url: `${BASE_URL}/calculator/msp-income`,             lastModified: getCurrentDate(), changeFrequency: 'weekly',  priority: 0.8 },
+    { url: `${BASE_URL}/calculator/crop-profit`,            lastModified: getCurrentDate(), changeFrequency: 'weekly',  priority: 0.8 },
+    { url: `${BASE_URL}/search`,                            lastModified: getCurrentDate(), changeFrequency: 'weekly',  priority: 0.7 },
+    { url: `${BASE_URL}/about`,                             lastModified: getCurrentDate(), changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${BASE_URL}/author`,                            lastModified: getCurrentDate(), changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${BASE_URL}/contact`,                           lastModified: getCurrentDate(), changeFrequency: 'monthly', priority: 0.5 },
+    { url: `${BASE_URL}/official-links`,                    lastModified: getCurrentDate(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/privacy-policy`,                    lastModified: getCurrentDate(), changeFrequency: 'monthly', priority: 0.4 },
+    { url: `${BASE_URL}/disclaimer`,                        lastModified: getCurrentDate(), changeFrequency: 'monthly', priority: 0.4 },
+    { url: `${BASE_URL}/terms-of-service`,                  lastModified: getCurrentDate(), changeFrequency: 'monthly', priority: 0.4 },
   ];
 
-  // ── Article pages — AUTO from articles-data.ts ───────────────────────────
-  // Ab sirf articles-data.ts mein entry karo — sitemap automatic ban jaayega
+  // ── Category pages — ✅ AUTO from CATEGORIES ──────────────────────────────
+  const categoryPages: MetadataRoute.Sitemap = Object.keys(CATEGORIES).map((category) => ({
+    url:             `${BASE_URL}/articles/category/${category}`,
+    lastModified:    getCurrentDate(),
+    changeFrequency: 'weekly' as const,
+    priority:        0.85,
+  }));
+
+  // ── Article pages — ✅ AUTO from articles-data.ts ─────────────────────────
   const articlePages: MetadataRoute.Sitemap = ARTICLES.map((article) => ({
     url:             `${BASE_URL}/articles/${article.slug}`,
     lastModified:    article.modifiedTime
                        ? new Date(article.modifiedTime)
                        : article.publishedTime
                          ? new Date(article.publishedTime)
-                         : STATIC_DATE,
+                         : getCurrentDate(),
     changeFrequency: 'weekly' as const,
     priority:        0.9,
   }));
@@ -59,10 +73,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // ── State beneficiary list pages ──────────────────────────────────────────
   const statePages: MetadataRoute.Sitemap = STATES.map((slug) => ({
     url:             `${BASE_URL}/beneficiary-list/${slug}`,
-    lastModified:    STATIC_DATE,
+    lastModified:    getCurrentDate(),
     changeFrequency: 'weekly' as const,
     priority:        0.8,
   }));
 
-  return [...staticPages, ...articlePages, ...statePages];
+  return [...staticPages, ...categoryPages, ...articlePages, ...statePages];
 }
