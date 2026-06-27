@@ -10,34 +10,25 @@ export const metadata: Metadata = {
   title: 'PM Kisan Status Check 2026 – 23vi Kist Date, eKYC & Payment Guide | KisanStatus.com',
   description: 'PM Kisan 23vi kist status check 2026 — ₹2000 seedha bank mein. pmkisan.gov.in direct link, installment dates, eKYC guide, beneficiary list, Soil Health Card, KCC loan — sab free.',
   keywords: [
-    // Primary Keywords
     'PM Kisan status check 2026',
     'PM Kisan 23vi kist',
     'PM Kisan 24vi kist',
     'pm kisan samman nidhi 2026',
     'pmkisan gov in status',
-    
-    // Installment Related
     'PM Kisan 23rd installment',
     'PM Kisan 22nd installment',
     'PM Kisan 24th installment date',
     'PM Kisan next kist date',
     'PM Kisan payment status',
-    
-    // eKYC & Registration
     'PM Kisan eKYC 2026',
     'PM Kisan registration online',
     'PM Kisan beneficiary list 2026',
     'PM Kisan name correction',
     'PM Kisan mobile number change',
-    
-    // Financial & Loan
     'Kisan Credit Card 2026',
     'KCC loan apply online',
     'Kisan loan kaise le',
     'PM Kisan ₹6000 benefit',
-    
-    // Farming & Agriculture
     'Soil Health Card 2026',
     'Mitti swasthya card download',
     'Nano DAP price 2026',
@@ -45,8 +36,6 @@ export const metadata: Metadata = {
     'PMFBY crop insurance 2026',
     'Fasal bima yojana',
     'AgriStack farmer ID',
-    
-    // Hindi Keywords
     'पीएम किसान स्टेटस चेक 2026',
     'पीएम किसान 23वीं किस्त',
     'पीएम किसान 24वीं किस्त',
@@ -56,8 +45,6 @@ export const metadata: Metadata = {
     'किसान क्रेडिट कार्ड',
     'मिट्टी स्वास्थ्य कार्ड',
     'फसल बीमा योजना',
-    
-    // Problem-Solution Keywords
     'PM Kisan payment failed',
     'PM Kisan rejected list',
     'PM Kisan land seeding',
@@ -66,8 +53,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Sidhu Singh', url: 'https://kisanstatus.com/about' }],
   alternates: { canonical: 'https://kisanstatus.com' },
-  
-  // OpenGraph for Social Media
+
   openGraph: {
     title: 'PM Kisan Status Check 2026 – 23vi Kist Released | KisanStatus.com',
     description: 'PM Kisan 23vi kist 20 June 2026 ko release ho chuki hai — ₹2000 seedha bank mein. Status check karo, eKYC karo, paisa aaya ya nahi dekho. 100% free guide.',
@@ -84,8 +70,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  
-  // Twitter Card
+
   twitter: {
     card: 'summary_large_image',
     title: 'PM Kisan 23vi Kist Released — Status Check 2026',
@@ -94,8 +79,7 @@ export const metadata: Metadata = {
     creator: '@kisanstatus',
     images: ['https://kisanstatus.com/og-image.webp'],
   },
-  
-  // Robots Meta
+
   robots: {
     index: true,
     follow: true,
@@ -107,17 +91,15 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  
-  // Additional Meta
+
   verification: {
-    google: oGrO0aRNLLhCgHq0Bn-sh3FdgKye7TlbAn2pAk8YdMQ ,
+    google: 'oGrO0aRNLLhCgHq0Bn-sh3FdgKye7TlbAn2pAk8YdMQ',
   },
-  
-  // Category
+
   category: 'government schemes, agriculture, farming',
 };
 
-export const revalidate = 3600; // ISR: revalidate every 1 hour (homepage is time-sensitive)
+export const revalidate = 3600;
 
 export default function HomePage() {
   return <HomeContent />;
