@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: 'Soil Health Card Download Kaise Kare 2026: Status Check, PDF Download aur Registration Guide',
@@ -276,7 +277,7 @@ export default function SoilHealthCardPage() {
             </h2>
             <div className="mb-6">
               <Image 
-                src="/api/placeholder/800/400" 
+                src="/images/soil-health-card-download-guide.webp" 
                 alt="Indian farmer holding soil health card in field"
                 width={800}
                 height={400}
@@ -285,10 +286,10 @@ export default function SoilHealthCardPage() {
               />
             </div>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              Namaste kisan bhaiyon! Kya aap bhi un lakho kisano mein se hain jinka <strong>Soil Health Card</strong> kho gaya hai ya phir download nahi ho pa raha? Kya aap pareshan hain ki <strong>soil health card download kaise kare 2026</strong> ka sahi tarika nahi pata? To aap bilkul sahi jagah par hain!
+              Kisan bhai — agar Soil Health Card kho gaya hai ya download nahi ho raha, yeh guide 10 minute mein sab fix kar degi.
             </p>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              Humare paas rozana hazaron farmers call karte hain aur puchte hain - "Bhaiya, mera soil health card mil nahi raha, kya karun?" Ya phir "Mobile se soil health card kaise check kare?" In sabhi sawalon ka jawab hum is article mein detail mein dene wale hain.
+              KisanStatus par rozana hazaron farmers yeh sawal poochte hain - "Bhaiya, mera soil health card mil nahi raha, kya karun?" Ya phir "Mobile se soil health card kaise check kare?" In sabhi sawalon ka jawab hum is article mein detail mein dene wale hain.
             </p>
             <p className="text-gray-700 mb-4 leading-relaxed">
               Dekhiye, baat sirf card download karne ki nahi hai. Baat hai apni <strong>mitti ki seht</strong> ki, apni <strong>fasl ki paidawar</strong> ki, aur apni <strong>kamayi</strong> ki. Soil Health Card aaj ke samay mein har kisan ke liye utna hi zaroori hai jitna Aadhaar card ya ration card.
@@ -314,16 +315,10 @@ export default function SoilHealthCardPage() {
               <li>Aur bhi bahut kuch jo aapke liye faydemand hoga</li>
             </ul>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              To chaliye shuru karte hain aur detail mein samajhte hain ki <strong>soil health card kaise nikale</strong> aur iska pura fayda kaise uthayein.
+              Seedha kaam ki baat:
             </p>
           </div>
         </section>
-
-        {/* AD Placement */}
-        <div className="bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
-          <p className="text-gray-500 font-semibold">Advertisement Space - 728x90</p>
-          <p className="text-gray-400 text-sm">Ad Placement 1 (After Introduction)</p>
-        </div>
 
         {/* What is Soil Health Card */}
         <section className="bg-white rounded-lg shadow-lg p-6 md:p-8">
@@ -351,7 +346,7 @@ export default function SoilHealthCardPage() {
                 <li>✓ Organic Carbon</li>
                 <li>✓ Micronutrients (Zinc, Iron, etc.)</li>
                 <li>✓ Fertilizer Recommendation</li>
-                <li>✓ Fasl ke anusar salah</li>
+                <li>✓ Fasal ke anusar salah</li>
               </ul>
             </div>
           </div>
@@ -420,12 +415,6 @@ export default function SoilHealthCardPage() {
             </div>
           </div>
         </section>
-
-        {/* AD Placement */}
-        <div className="bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
-          <p className="text-gray-500 font-semibold">Advertisement Space - Responsive</p>
-          <p className="text-gray-400 text-sm">Ad Placement 2 (After Importance Section)</p>
-        </div>
 
         {/* Benefits Table */}
         <section className="bg-white rounded-lg shadow-lg p-6 md:p-8">
@@ -520,7 +509,7 @@ export default function SoilHealthCardPage() {
           </h2>
           <div className="mb-6">
             <Image 
-              src="/api/placeholder/800/400" 
+              src="/images/soil-health-card-registration-process.webp" 
               alt="Soil health testing process in Indian village"
               width={800}
               height={400}
@@ -617,12 +606,6 @@ export default function SoilHealthCardPage() {
             </p>
           </div>
         </section>
-
-        {/* AD Placement */}
-        <div className="bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
-          <p className="text-gray-500 font-semibold">Advertisement Space - 300x250</p>
-          <p className="text-gray-400 text-sm">Ad Placement 3 (After Registration)</p>
-        </div>
 
         {/* Apply Online */}
         <section className="bg-white rounded-lg shadow-lg p-6 md:p-8">
@@ -740,7 +723,7 @@ export default function SoilHealthCardPage() {
           </h2>
           <div className="mb-6">
             <Image 
-              src="/api/placeholder/800/400" 
+              src="/images/soil-health-card-status-check-online.webp" 
               alt="Indian farmer checking soil health card status online"
               width={800}
               height={400}
@@ -886,12 +869,6 @@ export default function SoilHealthCardPage() {
             </div>
           </div>
         </section>
-
-        {/* AD Placement */}
-        <div className="bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
-          <p className="text-gray-500 font-semibold">Advertisement Space - 728x90</p>
-          <p className="text-gray-400 text-sm">Ad Placement 4 (After Status Check)</p>
-        </div>
 
         {/* PDF Download */}
         <section className="bg-white rounded-lg shadow-lg p-6 md:p-8">
@@ -1079,12 +1056,6 @@ export default function SoilHealthCardPage() {
           </div>
         </section>
 
-        {/* AD Placement */}
-        <div className="bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
-          <p className="text-gray-500 font-semibold">Advertisement Space - Responsive</p>
-          <p className="text-gray-400 text-sm">Ad Placement 5 (After Card Number)</p>
-        </div>
-
         {/* Mobile Check */}
         <section className="bg-white rounded-lg shadow-lg p-6 md:p-8">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
@@ -1092,7 +1063,7 @@ export default function SoilHealthCardPage() {
           </h2>
           <div className="mb-6">
             <Image 
-              src="/api/placeholder/800/400" 
+              src="/images/soil-health-card-mobile-download.webp" 
               alt="Mobile phone showing soil health card download screen"
               width={800}
               height={400}
@@ -1324,12 +1295,6 @@ export default function SoilHealthCardPage() {
           </div>
         </section>
 
-        {/* AD Placement */}
-        <div className="bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
-          <p className="text-gray-500 font-semibold">Advertisement Space - 300x600</p>
-          <p className="text-gray-400 text-sm">Ad Placement 6 (After Problems)</p>
-        </div>
-
         {/* Real Examples */}
         <section className="bg-white rounded-lg shadow-lg p-6 md:p-8">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
@@ -1431,7 +1396,7 @@ export default function SoilHealthCardPage() {
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start">
                   <span className="text-indigo-600 mr-2">•</span>
-                  <span><strong>Fasl bone se 2-3 mahine pehle</strong> - taaki recommendation ke according fertilizer de sakein</span>
+                  <span><strong>Fasal bone se 2-3 mahine pehle</strong> - taaki recommendation ke according fertilizer de sakein</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-indigo-600 mr-2">•</span>
@@ -1596,19 +1561,13 @@ export default function SoilHealthCardPage() {
               📢 Aane Wale Changes (2026-27):
             </h4>
             <ul className="space-y-2 text-gray-700">
-              <li>• Soil Health Card ko <Link href="/pm-kisan-scheme" className="text-blue-600 hover:underline">PM Kisan Samman Nidhi</Link> se link kiya ja raha hai</li>
-              <li>• Card dikhane par <Link href="/kcc-loan" className="text-blue-600 hover:underline">KCC Loan</Link> mein additional benefits milenge</li>
+              <li>• Soil Health Card ko <Link href="/articles/pm-kisan-23vi-kist-2026-status-check" className="text-blue-600 hover:underline">PM Kisan Samman Nidhi</Link> se link kiya ja raha hai</li>
+              <li>• Card dikhane par <Link href="/articles/pm-kisan-registration-online-2026" className="text-blue-600 hover:underline">KCC Loan</Link> mein additional benefits milenge</li>
               <li>• Har block mein mobile soil testing van shuru honge</li>
               <li>• Voice-based helpline in regional languages</li>
             </ul>
           </div>
         </section>
-
-        {/* AD Placement */}
-        <div className="bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
-          <p className="text-gray-500 font-semibold">Advertisement Space - 728x90</p>
-          <p className="text-gray-400 text-sm">Ad Placement 7 (Before Conclusion)</p>
-        </div>
 
         {/* Conclusion */}
         <section className="bg-white rounded-lg shadow-lg p-6 md:p-8">
@@ -1617,7 +1576,7 @@ export default function SoilHealthCardPage() {
           </h2>
           <div className="prose prose-lg">
             <p className="text-gray-700 mb-4 leading-relaxed">
-              Dosto, humne is article mein detail mein samjha hai ki <strong>soil health card download kaise kare 2026</strong>. Umeed hai ki aapko saari jankari mil gayi hogi.
+              Bhai, is guide mein sab cover hai — <strong>soil health card download kaise kare 2026</strong>. Umeed hai ki aapko saari jankari mil gayi hogi.
             </p>
             <p className="text-gray-700 mb-4 leading-relaxed">
               Yaad rakhiye, <strong>Soil Health Card</strong> sirf ek card nahi hai - ye aapki mitti ki health ka report card hai, aapki kamayi badhane ka tool hai, aur aane wali generations ke liye mitti bachane ka zariya hai.
@@ -1658,10 +1617,10 @@ export default function SoilHealthCardPage() {
               <strong>Related Articles:</strong>
             </p>
             <ul className="space-y-2 text-gray-700 mb-6">
-              <li>• <Link href="/pm-kisan-scheme" className="text-blue-600 hover:underline font-semibold">PM Kisan Samman Nidhi - Complete Guide</Link></li>
-              <li>• <Link href="/kcc-loan" className="text-blue-600 hover:underline font-semibold">KCC Loan Kaise Le - Step by Step Process</Link></li>
-              <li>• <Link href="/nano-dap-fertilizer" className="text-blue-600 hover:underline font-semibold">Nano DAP Fertilizer - Fayde aur Nuksan</Link></li>
-              <li>• <Link href="/government-schemes" className="text-blue-600 hover:underline font-semibold">Top 10 Government Schemes for Farmers 2026</Link></li>
+              <li>• <Link href="/articles/pm-kisan-23vi-kist-2026-status-check" className="text-blue-600 hover:underline font-semibold">PM Kisan Samman Nidhi - Complete Guide</Link></li>
+              <li>• <Link href="/articles/pm-kisan-registration-online-2026" className="text-blue-600 hover:underline font-semibold">KCC Loan Kaise Le - Step by Step Process</Link></li>
+              <li>• <Link href="/articles/nano-dap-500ml-price-in-india-2026" className="text-blue-600 hover:underline font-semibold">Nano DAP Fertilizer - Fayde aur Nuksan</Link></li>
+              <li>• <Link href="/articles" className="text-blue-600 hover:underline font-semibold">Top 10 Government Schemes for Farmers 2026</Link></li>
             </ul>
 
             <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white p-6 rounded-lg text-center">
@@ -1900,27 +1859,27 @@ export default function SoilHealthCardPage() {
             Related Articles
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Link href="/pm-kisan-scheme" className="block bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg hover:shadow-lg transition-shadow">
+            <Link href="/articles/pm-kisan-23vi-kist-2026-status-check" className="block bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg hover:shadow-lg transition-shadow">
               <h3 className="font-bold text-blue-800 mb-2">PM Kisan Samman Nidhi</h3>
               <p className="text-gray-700 text-sm">₹6000 prati varsh kaise prapt karein - Complete guide</p>
             </Link>
-            <Link href="/kcc-loan" className="block bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg hover:shadow-lg transition-shadow">
+            <Link href="/articles/pm-kisan-registration-online-2026" className="block bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg hover:shadow-lg transition-shadow">
               <h3 className="font-bold text-green-800 mb-2">KCC Loan Kaise Le</h3>
               <p className="text-gray-700 text-sm">Kisan Credit Card loan ka complete process 2026</p>
             </Link>
-            <Link href="/nano-dap-fertilizer" className="block bg-gradient-to-br from-yellow-50 to-yellow-100 p-6 rounded-lg hover:shadow-lg transition-shadow">
+            <Link href="/articles/nano-dap-500ml-price-in-india-2026" className="block bg-gradient-to-br from-yellow-50 to-yellow-100 p-6 rounded-lg hover:shadow-lg transition-shadow">
               <h3 className="font-bold text-yellow-800 mb-2">Nano DAP Fertilizer</h3>
               <p className="text-gray-700 text-sm">Fayde, nuksan aur kaise use karein</p>
             </Link>
-            <Link href="/government-schemes" className="block bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg hover:shadow-lg transition-shadow">
+            <Link href="/articles" className="block bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg hover:shadow-lg transition-shadow">
               <h3 className="font-bold text-purple-800 mb-2">Government Schemes</h3>
               <p className="text-gray-700 text-sm">Top 10 schemes for farmers in 2026</p>
             </Link>
-            <Link href="/organic-farming" className="block bg-gradient-to-br from-teal-50 to-teal-100 p-6 rounded-lg hover:shadow-lg transition-shadow">
+            <Link href="/articles" className="block bg-gradient-to-br from-teal-50 to-teal-100 p-6 rounded-lg hover:shadow-lg transition-shadow">
               <h3 className="font-bold text-teal-800 mb-2">Organic Farming</h3>
               <p className="text-gray-700 text-sm">Prakritik kheti kaise karein - Step by step</p>
             </Link>
-            <Link href="/crop-insurance" className="block bg-gradient-to-br from-red-50 to-red-100 p-6 rounded-lg hover:shadow-lg transition-shadow">
+            <Link href="/articles/pm-kisan-problems-solution-guide-2026" className="block bg-gradient-to-br from-red-50 to-red-100 p-6 rounded-lg hover:shadow-lg transition-shadow">
               <h3 className="font-bold text-red-800 mb-2">Crop Insurance</h3>
               <p className="text-gray-700 text-sm">Fasal Bima Yojana - Complete information</p>
             </Link>
@@ -1928,40 +1887,8 @@ export default function SoilHealthCardPage() {
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white py-12 px-4 mt-12">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">KisanStatus.com</h3>
-              <p className="text-gray-300">
-                Bharat ke kisano ke liye sarkari yojanaon ki complete jankari. Humara mission hai har kisan tak sahi information pahunchana.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-4">Quick Links</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li><Link href="/pm-kisan-scheme" className="hover:text-white">PM Kisan Scheme</Link></li>
-                <li><Link href="/kcc-loan" className="hover:text-white">KCC Loan</Link></li>
-                <li><Link href="/government-schemes" className="hover:text-white">All Schemes</Link></li>
-                <li><Link href="/contact" className="hover:text-white">Contact Us</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-4">Contact</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li>Email: info@kisanstatus.com</li>
-                <li>Helpline: 1800-180-1551</li>
-                <li>Available: Mon-Sat, 9 AM - 6 PM</li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-700 pt-8 text-center text-gray-400">
-            <p>&copy; 2026 KisanStatus.com - All Rights Reserved</p>
-            <p className="mt-2 text-sm">Disclaimer: Ye jankari educational purpose ke liye hai. Official information ke liye hamesha government website check karein.</p>
-          </div>
-        </div>
-      </footer>
+      {/* Main Footer Component */}
+      <Footer />
     </div>
   );
 }
