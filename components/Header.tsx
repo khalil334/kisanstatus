@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useMemo, useCallback } from 'react';
+import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -12,7 +12,7 @@ const navLinks = [
   { href: '/articles', label: 'Articles' },
   { href: '/articles/pm-kisan-23vi-kist-2026-status-check', label: 'Status Check' },
   { href: '/articles/pm-kisan-registration-online-2026', label: 'New Registration' },
-  { href: '/articles/pm-kisan-beneficiary-list-2026', label: 'Beneficiary List' },
+  { href: '/beneficiary-list', label: 'Beneficiary List' },
   { href: '/calculator', label: 'Calculator' },
 ] as const;
 
@@ -23,10 +23,155 @@ const quickLinks = [
   { href: '/articles/kisan-credit-card-online-apply-2026', label: 'KCC Loan', emoji: '💳' },
 ] as const;
 
+// ── Search Data (lightweight — titles + slugs only) ─────────────────────────
+const SEARCH_ITEMS = [
+  { slug: 'pm-kisan-23vi-kist-2026-status-check', title: 'PM Kisan 23vi Kist Status Check', emoji: '📆', category: 'Status' },
+  { slug: 'pm-kisan-ekyc-online-2026', title: 'PM Kisan eKYC Online Guide', emoji: '🔐', category: 'eKYC' },
+  { slug: 'pm-kisan-payment-failed-status-2026', title: 'PM Kisan Payment Failed Fix', emoji: '💸', category: 'Payment' },
+  { slug: 'pm-kisan-registration-online-2026', title: 'PM Kisan New Registration', emoji: '📝', category: 'Registration' },
+  { slug: 'pm-kisan-name-correction-online-2026', title: 'PM Kisan Name Correction', emoji: '✏️', category: 'Correction' },
+  { slug: 'pm-kisan-beneficiary-list-2026', title: 'PM Kisan Beneficiary List', emoji: '📋', category: 'List' },
+  { slug: 'pm-kisan-rejected-list-2026', title: 'PM Kisan Rejected List Fix', emoji: '❌', category: 'Rejection' },
+  { slug: 'pm-kisan-land-seeding-status-check', title: 'Land Seeding Status Check', emoji: '🌾', category: 'Land' },
+  { slug: 'kisan-credit-card-online-apply-2026', title: 'KCC Loan Apply Online', emoji: '💳', category: 'Loan' },
+  { slug: 'pmfby-crop-insurance-2026', title: 'PMFBY Crop Insurance Guide', emoji: '🛡️', category: 'Insurance' },
+  { slug: 'soil-health-card-complete-guide-2026', title: 'Soil Health Card Guide', emoji: '🌱', category: 'Farming' },
+  { slug: 'nano-dap-500ml-price-in-india-2026', title: 'Nano DAP Price Guide', emoji: '🧴', category: 'Farming' },
+  { slug: 'agristack-kya-hai', title: 'AgriStack Farmer ID Guide', emoji: '🌐', category: 'Digital' },
+  { slug: 'pm-kisan-mobile-number-change', title: 'Mobile Number Change Guide', emoji: '📱', category: 'Correction' },
+  { slug: 'pm-kisan-complete-guide', title: 'PM Kisan Complete Guide', emoji: '📖', category: 'Guide' },
+  { slug: 'pm-kisan-24vi-kist', title: 'PM Kisan 24vi Kist Update', emoji: '📆', category: 'Status' },
+  { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Meaning', emoji: '📄', category: 'Payment' },
+  { slug: 'kisan-rin-kaha-se-le-2026', title: 'Kisan Loan Kaise Le', emoji: '💰', category: 'Loan' },
+  { slug: 'kisan-tractor-loan-2026', title: 'Tractor Loan Guide', emoji: '🚜', category: 'Loan' },
+  { slug: 'pm-kisan-problems-solution-guide-2026', title: 'PM Kisan Problems Solution', emoji: '🔧', category: 'Problems' },
+  { slug: 'pm-kisan-installment-history-check-online', title: 'Installment History Check', emoji: '📊', category: 'History' },
+  { slug: 'pm-kisan-correction-deactivate-block-guide-2026', title: 'Deactivate/Block Guide', emoji: '✏️', category: 'Correction' },
+  { slug: 'pm-kisan-beneficiary-list-village-wise-2026', title: 'Village Wise Beneficiary List', emoji: '🏘️', category: 'List' },
+];
+
+// ── Simple fuzzy search (no external library needed) ────────────────────────
+function fuzzySearch(query: string) {
+  if (!query.trim()) return [];
+  const q = query.toLowerCase().trim();
+  return SEARCH_ITEMS.filter(
+    (item) =>
+      item.title.toLowerCase().includes(q) ||
+      item.category.toLowerCase().includes(q) ||
+      item.slug.includes(q)
+  ).slice(0, 6);
+}
+
+// ── Search Modal Component ──────────────────────────────────────────────────
+function SearchModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+  const [query, setQuery] = useState('');
+  const results = useMemo(() => fuzzySearch(query), [query]);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (isOpen) {
+      setTimeout(() => inputRef.current?.focus(), 100);
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+      setQuery('');
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [isOpen]);
+
+  // Close on Escape
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+    if (isOpen) window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
+  }, [isOpen, onClose]);
+
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-0 z-[60]" role="dialog" aria-modal="true" aria-label="Search articles">
+      {/* Backdrop */}
+      <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
+
+      {/* Modal */}
+      <div className="relative max-w-lg mx-auto mt-20 md:mt-32 px-4">
+        <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-green-200">
+          {/* Search Input */}
+          <div className="flex items-center gap-3 px-4 py-3 border-b border-gray-100 bg-green-50">
+            <svg className="w-5 h-5 text-green-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+            <input
+              ref={inputRef}
+              type="text"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search karo... e.g. eKYC, payment, loan"
+              className="flex-1 bg-transparent text-sm font-medium text-gray-900 placeholder-gray-400 outline-none"
+            />
+            <button onClick={onClose} className="text-gray-400 hover:text-gray-600 text-xs font-bold px-2 py-1 rounded bg-gray-100 hover:bg-gray-200 transition-colors">
+              ESC
+            </button>
+          </div>
+
+          {/* Results */}
+          <div className="max-h-[60vh] overflow-y-auto">
+            {!query.trim() && (
+              <div className="p-6 text-center">
+                <span className="text-3xl block mb-2">🔍</span>
+                <p className="text-sm text-gray-500">Type karke search karo — articles, guides, calculators</p>
+              </div>
+            )}
+
+            {query.trim() && results.length === 0 && (
+              <div className="p-6 text-center">
+                <span className="text-3xl block mb-2">😕</span>
+                <p className="text-sm text-gray-500">"<strong>{query}</strong>" ke liye kuch nahi mila</p>
+                <Link href="/articles" onClick={onClose} className="text-green-700 text-xs font-bold mt-2 inline-block hover:underline">
+                  Saare Articles Dekho →
+                </Link>
+              </div>
+            )}
+
+            {results.map((item) => (
+              <Link
+                key={item.slug}
+                href={`/articles/${item.slug}`}
+                onClick={onClose}
+                className="flex items-center gap-3 px-4 py-3 hover:bg-green-50 transition-colors border-b border-gray-50 last:border-0 group"
+              >
+                <span className="text-xl shrink-0">{item.emoji}</span>
+                <div className="min-w-0 flex-1">
+                  <p className="text-sm font-bold text-gray-900 group-hover:text-green-700 transition-colors truncate">
+                    {item.title}
+                  </p>
+                  <p className="text-[10px] text-gray-400 font-medium uppercase tracking-wide">{item.category}</p>
+                </div>
+                <span className="text-green-600 opacity-0 group-hover:opacity-100 transition-opacity shrink-0 text-xs font-bold">→</span>
+              </Link>
+            ))}
+          </div>
+
+          {/* Footer */}
+          <div className="px-4 py-2 bg-gray-50 border-t border-gray-100 flex items-center justify-between">
+            <span className="text-[10px] text-gray-400">
+              {query.trim() ? `${results.length} results` : `${SEARCH_ITEMS.length} articles available`}
+            </span>
+            <Link href="/articles" onClick={onClose} className="text-[10px] text-green-700 font-bold hover:underline">
+              View All Articles →
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ── Header Component ────────────────────────────────────────────────────────
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const pathname = usePathname();
 
   // ── Scroll Effect ───────────────────────────────────────────────────────
@@ -43,15 +188,25 @@ export default function Header() {
     } else {
       document.body.style.overflow = '';
     }
-    return () => {
-      document.body.style.overflow = '';
-    };
+    return () => { document.body.style.overflow = ''; };
   }, [mobileOpen]);
 
   // ── Close mobile menu on route change ───────────────────────────────────
   useEffect(() => {
     setMobileOpen(false);
   }, [pathname]);
+
+  // ── Keyboard shortcut Ctrl+K for search ─────────────────────────────────
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+        e.preventDefault();
+        setSearchOpen(prev => !prev);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   // ── Memoized Active Check ───────────────────────────────────────────────
   const isActive = useCallback(
@@ -89,123 +244,155 @@ export default function Header() {
   const closeMobileMenu = useCallback(() => setMobileOpen(false), []);
 
   return (
-    <header
-      className={`bg-white border-b border-green-100 sticky top-0 z-50 transition-shadow ${
-        scrolled ? 'shadow-md' : 'shadow-sm'
-      }`}
-      role="banner"
-    >
-      <div className="container-site flex items-center justify-between h-16">
-        {/* Logo */}
-        <Link href="/" className="shrink-0" aria-label="KisanStatus Home">
-          <Logo />
-        </Link>
+    <>
+      {/* ✅ Search Modal */}
+      <SearchModal isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
 
-        {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-1 flex-1 justify-center" aria-label="Main navigation">
-          {renderedNavLinks}
-        </nav>
+      <header
+        className={`bg-white border-b border-green-100 sticky top-0 z-50 transition-shadow ${
+          scrolled ? 'shadow-md' : 'shadow-sm'
+        }`}
+        role="banner"
+      >
+        <div className="container-site flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link href="/" className="shrink-0" aria-label="KisanStatus Home">
+            <Logo />
+          </Link>
 
-        {/* Desktop Actions */}
-        <div className="hidden lg:flex items-center gap-3">
-          <LanguageSwitcher />
-          <a
-            href="https://pmkisan.gov.in/BeneficiaryStatus.aspx"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-green-600 hover:bg-green-500 text-white text-sm font-bold px-5 py-2.5 rounded-lg transition-colors shadow-sm hover:shadow-md"
-            aria-label="Check PM Kisan Status on official website"
-          >
-            Check Status ↗
-          </a>
-        </div>
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center gap-1 flex-1 justify-center" aria-label="Main navigation">
+            {renderedNavLinks}
+          </nav>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="lg:hidden p-2 text-gray-700 hover:bg-green-50 rounded-lg transition-colors"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
-          aria-expanded={mobileOpen}
-          aria-controls="mobile-menu"
-        >
-          {mobileOpen ? (
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          ) : (
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          )}
-        </button>
-      </div>
+          {/* Desktop Actions */}
+          <div className="hidden lg:flex items-center gap-2">
+            {/* ✅ Search Button */}
+            <button
+              onClick={() => setSearchOpen(true)}
+              className="flex items-center gap-2 px-3 py-2 text-sm text-gray-500 bg-gray-50 border border-gray-200 rounded-lg hover:bg-green-50 hover:text-green-700 hover:border-green-200 transition-all"
+              aria-label="Search articles"
+            >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+              <span className="font-medium">Search</span>
+              <kbd className="hidden xl:inline-flex text-[10px] font-mono text-gray-400 bg-white border border-gray-200 rounded px-1.5 py-0.5 ml-1">⌘K</kbd>
+            </button>
 
-      {/* Mobile Menu */}
-      {mobileOpen && (
-        <nav
-          id="mobile-menu"
-          className="lg:hidden border-t border-green-100 bg-white max-h-[calc(100vh-4rem)] overflow-y-auto"
-          aria-label="Mobile navigation"
-        >
-          {/* Quick Links Section */}
-          <div className="px-4 py-3 bg-green-50 border-b border-green-100">
-            <p className="text-xs font-bold text-gray-500 uppercase mb-2">Quick Links</p>
-            <div className="grid grid-cols-2 gap-2">
-              {quickLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={closeMobileMenu}
-                  className="px-3 py-2 text-xs font-medium text-gray-700 bg-white rounded-lg hover:bg-green-50 transition-colors flex items-center gap-1.5"
-                >
-                  <span aria-hidden="true">{link.emoji}</span>
-                  <span>{link.label}</span>
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Main Navigation Links */}
-          <div className="py-2">
-            {navLinks.map((link) => {
-              const active = isActive(link.href);
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={closeMobileMenu}
-                  className={`block px-4 py-3 text-sm font-medium transition-colors ${
-                    active
-                      ? 'text-green-700 bg-green-50 border-l-4 border-green-700'
-                      : 'text-gray-700 hover:bg-green-50'
-                  }`}
-                  aria-current={active ? 'page' : undefined}
-                >
-                  {link.label}
-                </Link>
-              );
-            })}
-          </div>
-
-          {/* Mobile Actions */}
-          <div className="px-4 py-3 border-t border-green-100 bg-gray-50 space-y-3">
-            <div className="flex items-center justify-between">
-              <span className="text-xs text-gray-600 font-medium">Language:</span>
-              <LanguageSwitcher />
-            </div>
+            <LanguageSwitcher />
             <a
               href="https://pmkisan.gov.in/BeneficiaryStatus.aspx"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={closeMobileMenu}
-              className="block w-full bg-green-600 hover:bg-green-500 text-white text-center font-bold py-3 rounded-lg transition-colors shadow-sm"
+              className="bg-green-600 hover:bg-green-500 text-white text-sm font-bold px-5 py-2.5 rounded-lg transition-colors shadow-sm hover:shadow-md"
               aria-label="Check PM Kisan Status on official website"
             >
-              Check Status on pmkisan.gov.in ↗
+              Check Status ↗
             </a>
           </div>
-        </nav>
-      )}
-    </header>
+
+          {/* Mobile Actions Row */}
+          <div className="flex lg:hidden items-center gap-1">
+            {/* ✅ Mobile Search Button */}
+            <button
+              onClick={() => setSearchOpen(true)}
+              className="p-2 text-gray-700 hover:bg-green-50 rounded-lg transition-colors"
+              aria-label="Search articles"
+            >
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </button>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="p-2 text-gray-700 hover:bg-green-50 rounded-lg transition-colors"
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={mobileOpen}
+              aria-controls="mobile-menu"
+            >
+              {mobileOpen ? (
+                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        {mobileOpen && (
+          <nav
+            id="mobile-menu"
+            className="lg:hidden border-t border-green-100 bg-white max-h-[calc(100vh-4rem)] overflow-y-auto"
+            aria-label="Mobile navigation"
+          >
+            {/* Quick Links Section */}
+            <div className="px-4 py-3 bg-green-50 border-b border-green-100">
+              <p className="text-xs font-bold text-gray-500 uppercase mb-2">Quick Links</p>
+              <div className="grid grid-cols-2 gap-2">
+                {quickLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={closeMobileMenu}
+                    className="px-3 py-2 text-xs font-medium text-gray-700 bg-white rounded-lg hover:bg-green-50 transition-colors flex items-center gap-1.5"
+                  >
+                    <span aria-hidden="true">{link.emoji}</span>
+                    <span>{link.label}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Main Navigation Links */}
+            <div className="py-2">
+              {navLinks.map((link) => {
+                const active = isActive(link.href);
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={closeMobileMenu}
+                    className={`block px-4 py-3 text-sm font-medium transition-colors ${
+                      active
+                        ? 'text-green-700 bg-green-50 border-l-4 border-green-700'
+                        : 'text-gray-700 hover:bg-green-50'
+                    }`}
+                    aria-current={active ? 'page' : undefined}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
+            </div>
+
+            {/* Mobile Actions */}
+            <div className="px-4 py-3 border-t border-green-100 bg-gray-50 space-y-3">
+              <div className="flex items-center justify-between">
+                <span className="text-xs text-gray-600 font-medium">Language:</span>
+                <LanguageSwitcher />
+              </div>
+              <a
+                href="https://pmkisan.gov.in/BeneficiaryStatus.aspx"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={closeMobileMenu}
+                className="block w-full bg-green-600 hover:bg-green-500 text-white text-center font-bold py-3 rounded-lg transition-colors shadow-sm"
+                aria-label="Check PM Kisan Status on official website"
+              >
+                Check Status on pmkisan.gov.in ↗
+              </a>
+            </div>
+          </nav>
+        )}
+      </header>
+    </>
   );
 }
