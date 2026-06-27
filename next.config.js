@@ -32,10 +32,56 @@ const nextConfig = {
   
   async redirects() { 
     return [ 
+      // ✅ FIX #1: ww16 subdomain spam URLs → 410 Gone (via redirect to blocked page)
+      // These tracking/affiliate spam URLs from ww16.kisanstatus.com
+      {
+        source: '/',
+        has: [
+          { type: 'host', value: 'ww16.kisanstatus.com' },
+        ],
+        destination: 'https://kisanstatus.com/',
+        permanent: true,
+      },
+      {
+        source: '/:path*',
+        has: [
+          { type: 'host', value: 'ww16.kisanstatus.com' },
+        ],
+        destination: 'https://kisanstatus.com/:path*',
+        permanent: true,
+      },
+
+      // ✅ FIX #2: Block spam query params — ?&sub1=... and ?&&tr_uuid=...
+      // These were being crawled by Google (seen in GSC Crawled report)
+      {
+        source: '/',
+        has: [{ type: 'query', key: 'sub1' }],
+        destination: 'https://kisanstatus.com/',
+        permanent: true,
+      },
+      {
+        source: '/:path*',
+        has: [{ type: 'query', key: 'sub1' }],
+        destination: 'https://kisanstatus.com/:path*',
+        permanent: true,
+      },
+      {
+        source: '/',
+        has: [{ type: 'query', key: 'tr_uuid' }],
+        destination: 'https://kisanstatus.com/',
+        permanent: true,
+      },
+      {
+        source: '/:path*',
+        has: [{ type: 'query', key: 'tr_uuid' }],
+        destination: 'https://kisanstatus.com/:path*',
+        permanent: true,
+      },
+
       // www → non-www canonical redirect 
       { source: '/:path*', has: [{ type: 'host', value: 'www.kisanstatus.com' }], destination: 'https://kisanstatus.com/:path*', permanent: true }, 
       
-      // ✅ BUG #9 FIX: /pm-kisan-status → article page
+      // /pm-kisan-status → article page
       { source: '/pm-kisan-status', destination: '/articles/pm-kisan-23vi-kist-2026-status-check', permanent: true },
       { source: '/pm-kisan-status/', destination: '/articles/pm-kisan-23vi-kist-2026-status-check', permanent: true },
       
