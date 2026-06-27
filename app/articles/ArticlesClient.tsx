@@ -1,6 +1,8 @@
 /**
  * app/articles/ArticlesClient.tsx — CLIENT COMPONENT
- * ✅ FIXED: No duplicate articles — "Naye" aur "Saari" mein alag articles
+ * ✅ FIXED: Homepage pe sirf 3 latest articles
+ * ✅ FIXED: Zero duplicates — "Naye" aur "Saari" mein alag articles
+ * ✅ AUTO: Naya article add karo → homepage pe top pe aayega, purane shift honge
  */
 'use client';
 
@@ -54,6 +56,9 @@ const ARTICLE_META: Record<string, { emoji: string; category: string; isNew: boo
   'pm-kisan-complete-guide':                         { emoji: '📖', category: 'Guide',        isNew: true,  image: '/images/pm-kisan-status-check-hero.webp' },
   'soil-health-card-complete-guide-2026':            { emoji: '🌱', category: 'Farming',      isNew: true,  image: '/images/soil-health-card-complete-guide-2026.webp' },
 };
+
+// ✅ CONFIG: Homepage pe kitne articles dikhane hain
+const HOMEPAGE_NEW_COUNT = 3;
 
 function ArticleImage({ image, emoji, title }: { image: string; emoji: string; title: string }) {
   const [loaded, setLoaded] = useState(false);
@@ -133,17 +138,23 @@ function ArticlesContent({ articles }: { articles: ArticleMeta[] }) {
   const activeCategory = searchParams.get('category') || 'all';
 
   // Filter articles based on URL parameter
-  const filteredArticles = activeCategory === 'all' 
-    ? articles 
+  const filteredArticles = activeCategory === 'all'
+    ? articles
     : articles.filter(a => ARTICLE_META[a.slug]?.category === activeCategory);
 
-  // ✅ FIX: Get only first 6 new articles for "Naye Articles" section
-  const allNewArticles = filteredArticles.filter(a => ARTICLE_META[a.slug]?.isNew);
-  const latestNewArticles = allNewArticles.slice(0, 6); // Only 6 latest
-  
-  // ✅ FIX: Get remaining articles (excluding the 6 shown in "Naye")
+  // ✅ SORT by published date (newest first) — so new articles always appear at top
+  const sortedArticles = [...filteredArticles].sort((a, b) => {
+    const dateA = new Date(a.publishedTime || 0).getTime();
+    const dateB = new Date(b.publishedTime || 0).getTime();
+    return dateB - dateA;
+  });
+
+  // ✅ TAKE only 3 latest for "Naye Articles" section
+  const latestNewArticles = sortedArticles.slice(0, HOMEPAGE_NEW_COUNT);
+
+  // ✅ REMAINING = everything EXCEPT the 3 shown above (ZERO duplicates)
   const latestNewSlugs = new Set(latestNewArticles.map(a => a.slug));
-  const remainingArticles = filteredArticles.filter(a => !latestNewSlugs.has(a.slug));
+  const remainingArticles = sortedArticles.filter(a => !latestNewSlugs.has(a.slug));
 
   return (
     <>
@@ -160,11 +171,11 @@ function ArticlesContent({ articles }: { articles: ArticleMeta[] }) {
           >
             📚 Saare ({articles.length})
           </Link>
-          
+
           {Object.entries(CATEGORY_META).map(([slug, cat]) => {
             const count = articles.filter(a => ARTICLE_META[a.slug]?.category === slug).length;
             if (count === 0) return null;
-            
+
             return (
               <Link
                 key={slug}
@@ -191,14 +202,14 @@ function ArticlesContent({ articles }: { articles: ArticleMeta[] }) {
         </div>
       ) : (
         <>
-          {/* ✅ "Naye Articles" — Only 6 latest new articles */}
+          {/* ✅ "Naye Articles" — Only 3 LATEST (sorted by date) */}
           {latestNewArticles.length > 0 && (
             <section className="mb-12" aria-labelledby="new-articles-heading">
               <div className="flex items-center gap-3 mb-5">
                 <span className="text-xl">✨</span>
                 <h2 id="new-articles-heading" className="text-lg font-black text-gray-900">Naye Articles</h2>
                 <span className="bg-green-100 text-green-700 text-xs font-bold px-2 py-0.5 rounded-full">
-                  {latestNewArticles.length} new
+                  {latestNewArticles.length} latest
                 </span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -209,7 +220,7 @@ function ArticlesContent({ articles }: { articles: ArticleMeta[] }) {
             </section>
           )}
 
-          {/* ✅ "Saari Guides" — Remaining articles (no duplicates) */}
+          {/* ✅ "Saari Guides" — REMAINING only (NO duplicates guaranteed) */}
           {remainingArticles.length > 0 && (
             <section aria-labelledby="all-articles-heading">
               <div className="flex items-center gap-3 mb-5">
