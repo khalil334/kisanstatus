@@ -110,7 +110,7 @@ export const metadata: Metadata = {
   
   // Additional Meta
   verification: {
-    google: 'your-google-verification-code', // Add your code here
+    google: oGrO0aRNLLhCgHq0Bn-sh3FdgKye7TlbAn2pAk8YdMQ ,
   },
   
   // Category
