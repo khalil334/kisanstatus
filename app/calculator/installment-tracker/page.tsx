@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import InstallmentTrackerCalcPage from '../../../components/calculator/InstallmentTrackerCalcPage';
+import InstallmentTrackerCalcPage from '../../../components/calculators/InstallmentTrackerCalcPage';
 
 export const metadata: Metadata = {
   title: 'PM Kisan Installment Status Tracker 2026 — 23vi Kist Kyun Ruki?',
