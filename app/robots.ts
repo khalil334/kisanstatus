@@ -2,6 +2,7 @@
  * robots.ts — KisanStatus.com
  * Next.js 15 dynamic robots generation
  * ✅ Allows major AI crawlers for better visibility in AI Search
+ * ✅ FIX: Blocks spam tracking URLs (?sub1=, ?tr_uuid=) from being crawled
  */
 import { MetadataRoute } from 'next';
 
@@ -16,33 +17,37 @@ export default function robots(): MetadataRoute.Robots {
           '/api/',
           '/_next/',
           '/speed-insights',
-          '/private/', // Agar koi private folder ho toh block karo
+          '/private/',
+          // ✅ FIX: Block spam tracking query param URLs
+          '/*?*sub1=',
+          '/*?*tr_uuid=',
         ],
       },
       {
         // ✅ ALLOWED: Major AI Crawlers
-        // Ye bots ab search results mein tumhara content dikha sakte hain
         userAgent: [
-          'GPTBot',           // OpenAI (ChatGPT)
-          'ChatGPT-User',     // OpenAI User Agent
-          'Claude-Web',       // Anthropic (Claude)
-          'PerplexityBot',    // Perplexity AI
-          'YouBot',           // You.com
-          'cohere-ai',        // Cohere
-          'anthropic-ai',     // Anthropic
+          'GPTBot',
+          'ChatGPT-User',
+          'Claude-Web',
+          'PerplexityBot',
+          'YouBot',
+          'cohere-ai',
+          'anthropic-ai',
         ],
         allow: '/',
         disallow: [
           '/api/',
           '/_next/',
+          // ✅ FIX: Block spam URLs for AI crawlers too
+          '/*?*sub1=',
+          '/*?*tr_uuid=',
         ],
       },
       {
         // ❌ BLOCKED: Aggressive Scrapers / Bad Bots
-        // Ye bots sirf data churate hain, value nahi dete
         userAgent: [
-          'CCBot',            // Common Crawl (optional: allow if you want open data)
-          'Google-Extended',  // Google's training bot (block if you don't want Gemini training on your data)
+          'CCBot',
+          'Google-Extended',
         ],
         disallow: '/',
       },
