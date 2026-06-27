@@ -113,28 +113,38 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Helpline Section - ORIGINAL */}
+          {/* Contact & Support - YOUR DETAILS */}
           <div>
             <h4 className="font-semibold text-white text-base mb-4 flex items-center gap-2">
               <span aria-hidden="true">📞</span>
-              24/7 Helpline
+              Contact & Support
             </h4>
             <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-4 mb-4">
               <p className="text-xs text-gray-400 mb-3">
-                PM Kisan ki kisi bhi problem ke liye call karein
+                Kisi bhi problem ke liye humse contact karein
               </p>
               <div className="space-y-2">
-                <a href="tel:155261" className="block text-center bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-3 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 text-sm">
-                  📱 155261 (Toll-Free)
+                {/* Email */}
+                <a 
+                  href="mailto:kisanstatus.support@gmail.com" 
+                  className="block text-center bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-3 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 text-sm"
+                >
+                  📧 kisanstatus.support@gmail.com
                 </a>
-                <a href="tel:01124300606" className="block text-center bg-gray-700 hover:bg-gray-600 text-white text-sm py-2 px-3 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500">
-                  📞 011-24300606
+                {/* Facebook */}
+                <a 
+                  href="https://www.facebook.com/profile.php?id=61590430994270" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block text-center bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-3 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
+                >
+                  👍 Facebook Page ↗
                 </a>
               </div>
             </div>
             <div className="text-xs text-gray-400 space-y-1">
-              <p>🌐 pmkisan.gov.in</p>
-              <p>⏰ Available 24/7</p>
+              <p>⏰ Mon-Sat: 9:30 AM - 6:00 PM</p>
+              <p>🌐 kisanstatus.com</p>
             </div>
           </div>
         </div>
