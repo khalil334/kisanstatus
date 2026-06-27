@@ -1,7 +1,7 @@
 /**
  * New PM Kisan Registration Page
  * Complete guide: How to apply/register for PM Kisan Samman Nidhi Yojana
- * Official registration link: https://pmkisan.gov.in/RegistrationForm.aspx
+ * Official registration link: https://pmkisan.gov.in/NewFarmerRegistration.aspx
  */
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -9,7 +9,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'PM Kisan New Registration 2026 – How to Apply Online at pmkisan.gov.in',
   description:
-    'Apply for PM Kisan Samman Nidhi Yojana 2026. Step-by-step guide to register online at pmkisan.gov.in/RegistrationForm.aspx. Documents required, eligibility criteria, and direct registration link.',
+    'Apply for PM Kisan Samman Nidhi Yojana 2026. Step-by-step guide to register online at pmkisan.gov.in/NewFarmerRegistration.aspx. Documents required, eligibility criteria, and direct registration link.',
   authors: [{ name: 'Sidhu Singh', url: 'https://kisanstatus.com/about' }],
   alternates: { canonical: 'https://kisanstatus.com/new-registration' },
   keywords: [
@@ -19,13 +19,36 @@ export const metadata: Metadata = {
     'PM Kisan Samman Nidhi apply',
     'PM Kisan registration documents',
   ],
+  // ✅ FIX: OpenGraph metadata added
+  openGraph: {
+    title: 'PM Kisan New Registration 2026 – Apply Online Guide',
+    description: 'Step-by-step guide to register for PM Kisan Samman Nidhi Yojana 2026. Documents, eligibility, and direct official link.',
+    url: 'https://kisanstatus.com/new-registration',
+    siteName: 'KisanStatus.com',
+    type: 'article',
+    locale: 'hi_IN',
+    images: [
+      {
+        url: 'https://kisanstatus.com/images/pm-kisan-registration-online-2026.webp',
+        width: 1200,
+        height: 630,
+        alt: 'PM Kisan New Registration 2026 Guide',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PM Kisan New Registration 2026 – Apply Online',
+    description: 'Step-by-step guide to register for PM Kisan Samman Nidhi Yojana 2026.',
+    images: ['https://kisanstatus.com/images/pm-kisan-registration-online-2026.webp'],
+  },
 };
 
-// Official government registration links
+// ✅ FIX: Official government registration links updated
 const OFFICIAL_LINKS = {
-  registration: 'https://pmkisan.gov.in/RegistrationForm.aspx',
+  registration: 'https://pmkisan.gov.in/NewFarmerRegistration.aspx',  // Updated!
   portal:       'https://pmkisan.gov.in/',
-  ekyc:         'https://pmkisan.gov.in/eKYC.aspx',
+  ekyc:         'https://pmkisan.gov.in/FarmersCorner.aspx',          // Updated!
   status:       'https://pmkisan.gov.in/BeneficiaryStatus.aspx',
   helpline:     'tel:155261',
 };
@@ -93,7 +116,7 @@ const steps = [
   {
     no: 9,
     title: 'Complete eKYC',
-    desc: 'After registration, complete your eKYC verification at pmkisan.gov.in/eKYC.aspx. eKYC is mandatory to receive payments. You can do OTP-based eKYC or visit a CSC centre for biometric eKYC.',
+    desc: 'After registration, complete your eKYC verification at pmkisan.gov.in/FarmersCorner.aspx. eKYC is mandatory to receive payments. You can do OTP-based eKYC or visit a CSC centre for biometric eKYC.',
     link: { label: 'Complete eKYC ↗', href: OFFICIAL_LINKS.ekyc },
     tip: 'eKYC must be completed before the next installment date to receive payment.',
   },
@@ -151,8 +174,9 @@ export default function NewRegistrationPage() {
             Neeche button dabao aur seedha <strong>Government of India</strong> ki official PM Kisan
             registration website par chale jao.
           </p>
+          {/* ✅ FIX: Updated URL */}
           <p className="text-xs text-gray-500 mb-6 font-mono bg-white inline-block px-3 py-1 rounded border">
-            🔗 pmkisan.gov.in/RegistrationForm.aspx
+            🔗 pmkisan.gov.in/NewFarmerRegistration.aspx
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
