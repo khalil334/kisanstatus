@@ -7,11 +7,13 @@
  *  - revalidate 86400 kept
  *  - ✅ UPDATED: Added pm-kisan-complete-guide (Article #23)
  *  - ✅ UPDATED: Added soil-health-card-complete-guide-2026 (Article #24)
+ *  - ✅ CATEGORY BADGE ADDED — Clickable category badge at top of article
  */
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import dynamic from 'next/dynamic';
-import { ARTICLES_MAP, ARTICLES, type ArticleMeta } from '@/lib/articles-data';
+import Link from 'next/link';
+import { ARTICLES_MAP, ARTICLES, CATEGORIES, type ArticleMeta } from '@/lib/articles-data';
 
 const DOMAIN = 'https://kisanstatus.com';
 
@@ -212,6 +214,7 @@ export default async function ArticlePage({
     : `${DOMAIN}/og-image.webp`;
 
   const schemas = buildSchemas(article, url, ogImage);
+  const category = CATEGORIES[article.category];
 
   return (
     <>
@@ -223,6 +226,20 @@ export default async function ArticlePage({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
       ))}
+
+      {/* ✅ CATEGORY BADGE — Clickable badge at top of article */}
+      {category && (
+        <div className="container-site pt-6">
+          <Link
+            href={`/articles/category/${article.category}`}
+            className="inline-flex items-center gap-2 bg-green-100 hover:bg-green-200 text-green-800 text-sm font-bold px-4 py-2 rounded-full transition-colors"
+          >
+            <span>📂</span>
+            <span>{category.name}</span>
+            <span className="text-green-600">→</span>
+          </Link>
+        </div>
+      )}
 
       {/* Article UI — dynamic client component */}
       <ArticleComponent article={article} />
