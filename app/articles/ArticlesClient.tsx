@@ -2,15 +2,18 @@
  * app/articles/ArticlesClient.tsx — CLIENT COMPONENT
  * ✅ 'use client' yahan hai — UI logic yahan
  * ✅ SEO OPTIMIZED v2.0 — 24 articles complete
+ * ✅ CATEGORY FILTER ADDED — URL parameter se filter hoga
  */
 'use client';
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const CATEGORY_META: Record<string, { label: string; emoji: string; color: string }> = {
-  Status:       { label: 'Status Check', emoji: '', color: 'bg-blue-100 text-blue-700' },
+  Status:       { label: 'Status Check', emoji: '📊', color: 'bg-blue-100 text-blue-700' },
   eKYC:         { label: 'eKYC',         emoji: '🔐', color: 'bg-green-100 text-green-700' },
   Payment:      { label: 'Payment',      emoji: '💸', color: 'bg-red-100 text-red-700' },
   Registration: { label: 'Registration', emoji: '📝', color: 'bg-indigo-100 text-indigo-700' },
@@ -18,13 +21,13 @@ const CATEGORY_META: Record<string, { label: string; emoji: string; color: strin
   List:         { label: 'List',         emoji: '📋', color: 'bg-teal-100 text-teal-700' },
   Loan:         { label: 'Loan',         emoji: '💰', color: 'bg-amber-100 text-amber-700' },
   Insurance:    { label: 'Insurance',    emoji: '🌱', color: 'bg-emerald-100 text-emerald-700' },
-  Problems:     { label: 'Problems',     emoji: '', color: 'bg-orange-100 text-orange-700' },
-  History:      { label: 'History',      emoji: '', color: 'bg-cyan-100 text-cyan-700' },
+  Problems:     { label: 'Problems',     emoji: '🔧', color: 'bg-orange-100 text-orange-700' },
+  History:      { label: 'History',      emoji: '📈', color: 'bg-cyan-100 text-cyan-700' },
   Land:         { label: 'Land Seeding', emoji: '🌾', color: 'bg-yellow-100 text-yellow-700' },
   Rejection:    { label: 'Rejection',    emoji: '❌', color: 'bg-rose-100 text-rose-700' },
   Digital:      { label: 'Digital',      emoji: '🌐', color: 'bg-teal-100 text-teal-700' },
-  Farming:      { label: 'Farming',      emoji: '', color: 'bg-green-100 text-green-700' },
-  Guide:        { label: 'Complete Guide', emoji: '', color: 'bg-rose-100 text-rose-700' },
+  Farming:      { label: 'Farming',      emoji: '🌱', color: 'bg-green-100 text-green-700' },
+  Guide:        { label: 'Complete Guide', emoji: '📖', color: 'bg-rose-100 text-rose-700' },
 };
 
 const ARTICLE_META: Record<string, { emoji: string; category: string; isNew: boolean; image: string }> = {
@@ -32,7 +35,7 @@ const ARTICLE_META: Record<string, { emoji: string; category: string; isNew: boo
   'pm-kisan-23vi-kist-2026-status-check':            { emoji: '📆', category: 'Status',       isNew: true,  image: '/images/pm-kisan-status-check-steps.webp' },
   'pm-kisan-ekyc-online-2026':                       { emoji: '🔐', category: 'eKYC',         isNew: true,  image: '/images/ekyc-guide-banner.webp' },
   'pm-kisan-payment-failed-status-2026':             { emoji: '💸', category: 'Payment',      isNew: true,  image: '/images/payment-success.webp' },
-  'pm-kisan-rejected-list-2026':                     { emoji: '', category: 'Rejection',    isNew: true,  image: '/images/pm-kisan-rejected-list-2026.webp' },
+  'pm-kisan-rejected-list-2026':                     { emoji: '❌', category: 'Rejection',    isNew: true,  image: '/images/pm-kisan-rejected-list-2026.webp' },
   'pm-kisan-registration-online-2026':               { emoji: '📝', category: 'Registration', isNew: true,  image: '/images/pm-kisan-registration-online-2026.webp' },
   'pm-kisan-name-correction-online-2026':            { emoji: '✏️', category: 'Correction',   isNew: true,  image: '/images/name-correction.webp' },
   'pm-kisan-beneficiary-list-2026':                  { emoji: '📋', category: 'List',         isNew: true,  image: '/images/beneficiary-list-board.webp' },
@@ -43,14 +46,13 @@ const ARTICLE_META: Record<string, { emoji: string; category: string; isNew: boo
   'pmfby-crop-insurance-2026':                       { emoji: '🌱', category: 'Insurance',    isNew: false, image: '/images/pmfby-crop-insurance-2026.webp' },
   'kisan-tractor-loan-2026':                         { emoji: '🚜', category: 'Loan',         isNew: false, image: '/images/kisan-tractor-loan-2026.webp' },
   'pm-kisan-21vi-installment-status-check':          { emoji: '📅', category: 'Status',       isNew: false, image: '/images/pm-kisan-21vi-installment-status-check.webp' },
-  'pm-kisan-correction-deactivate-block-guide-2026': { emoji: '️', category: 'Correction',   isNew: false, image: '/images/correction-guide.webp' },
+  'pm-kisan-correction-deactivate-block-guide-2026': { emoji: '✏️', category: 'Correction',   isNew: false, image: '/images/correction-guide.webp' },
   'pm-kisan-problems-solution-guide-2026':           { emoji: '🔧', category: 'Problems',     isNew: false, image: '/images/pm-kisan-beneficiary-status-kisanstatus.webp' },
   'pm-kisan-fto-generated-ka-matlab-kya-hai':        { emoji: '📄', category: 'Payment',      isNew: true,  image: '/images/pm-kisan-fto-generated-featured-image-kisanstatus.webp' },
   'pm-kisan-24vi-kist':                              { emoji: '📆', category: 'Status',       isNew: true,  image: '/images/pm-kisan-24vi-kist-october-2026.webp' },
-  'agristack-kya-hai':                               { emoji: '', category: 'Digital',      isNew: true,  image: '/images/agristack-kya-hai-infographic.webp' },
+  'agristack-kya-hai':                               { emoji: '🌐', category: 'Digital',      isNew: true,  image: '/images/agristack-kya-hai-infographic.webp' },
   'pm-kisan-mobile-number-change':                   { emoji: '📱', category: 'Correction',   isNew: true,  image: '/images/pm-kisan-mobile-bank-aadhaar-update-banner-website.webp' },
-  'nano-dap-500ml-price-in-india-2026':              { emoji: '', category: 'Farming',      isNew: true,  image: '/images/nano-dap-500ml-price-india-2026.webp' },
-  // ✅ NEW ARTICLES ADDED
+  'nano-dap-500ml-price-in-india-2026':              { emoji: '🌱', category: 'Farming',      isNew: true,  image: '/images/nano-dap-500ml-price-india-2026.webp' },
   'pm-kisan-complete-guide':                         { emoji: '📖', category: 'Guide',        isNew: true,  image: '/images/pm-kisan-status-check-hero.webp' },
   'soil-health-card-complete-guide-2026':            { emoji: '🌱', category: 'Farming',      isNew: true,  image: '/images/soil-health-card-complete-guide-2026.webp' },
 };
@@ -128,9 +130,98 @@ function ArticleCard({ article, showNewBadge = false }: { article: ArticleMeta; 
   );
 }
 
-export default function ArticlesClient({ articles }: { articles: ArticleMeta[] }) {
-  const newArticles = articles.filter(a => ARTICLE_META[a.slug]?.isNew);
+function ArticlesContent({ articles }: { articles: ArticleMeta[] }) {
+  const searchParams = useSearchParams();
+  const activeCategory = searchParams.get('category') || 'all';
 
+  // Filter articles based on URL parameter
+  const filteredArticles = activeCategory === 'all' 
+    ? articles 
+    : articles.filter(a => ARTICLE_META[a.slug]?.category === activeCategory);
+
+  const newArticles = filteredArticles.filter(a => ARTICLE_META[a.slug]?.isNew);
+
+  return (
+    <>
+      {/* Category Filter Buttons */}
+      <div className="container-site mb-8">
+        <div className="flex flex-wrap justify-center gap-2">
+          {/* All Button */}
+          <Link
+            href="/articles"
+            className={`px-4 py-2 rounded-full text-sm font-bold transition-all ${
+              activeCategory === 'all'
+                ? 'bg-[#14532d] text-white shadow-lg scale-105'
+                : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
+            }`}
+          >
+            📚 Saare ({articles.length})
+          </Link>
+          
+          {/* Category Buttons */}
+          {Object.entries(CATEGORY_META).map(([slug, cat]) => {
+            const count = articles.filter(a => ARTICLE_META[a.slug]?.category === slug).length;
+            if (count === 0) return null; // Sirf wo categories dikhao jisme articles hain
+            
+            return (
+              <Link
+                key={slug}
+                href={`/articles?category=${slug}`}
+                className={`px-4 py-2 rounded-full text-sm font-bold transition-all ${
+                  activeCategory === slug
+                    ? 'bg-[#14532d] text-white shadow-lg scale-105'
+                    : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
+                }`}
+              >
+                {cat.emoji} {cat.label} ({count})
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Filtered Articles */}
+      {filteredArticles.length === 0 ? (
+        <div className="container-site text-center py-12">
+          <p className="text-gray-500 text-lg">Is category mein koi article nahi mila.</p>
+          <Link href="/articles" className="text-green-700 font-bold hover:underline mt-4 inline-block">
+            ← Saare Articles Dekho
+          </Link>
+        </div>
+      ) : (
+        <>
+          {newArticles.length > 0 && (
+            <section className="mb-12" aria-labelledby="new-articles-heading">
+              <div className="flex items-center gap-3 mb-5">
+                <span className="text-xl">✨</span>
+                <h2 id="new-articles-heading" className="text-lg font-black text-gray-900">Naye Articles</h2>
+                <span className="bg-green-100 text-green-700 text-xs font-bold px-2 py-0.5 rounded-full">{newArticles.length} new</span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {newArticles.map(article => <ArticleCard key={article.slug} article={article} showNewBadge />)}
+              </div>
+            </section>
+          )}
+
+          <section aria-labelledby="all-articles-heading">
+            <div className="flex items-center gap-3 mb-5">
+              <span className="text-xl">📋</span>
+              <h2 id="all-articles-heading" className="text-lg font-black text-gray-900">
+                {activeCategory === 'all' ? 'Saari Guides' : `${CATEGORY_META[activeCategory]?.label || ''} Articles`}
+              </h2>
+              <span className="bg-gray-100 text-gray-600 text-xs font-bold px-2 py-0.5 rounded-full">{filteredArticles.length} total</span>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {filteredArticles.map(article => <ArticleCard key={article.slug} article={article} />)}
+            </div>
+          </section>
+        </>
+      )}
+    </>
+  );
+}
+
+export default function ArticlesClient({ articles }: { articles: ArticleMeta[] }) {
   return (
     <main className="min-h-screen bg-gray-50">
       <section
@@ -154,29 +245,9 @@ export default function ArticlesClient({ articles }: { articles: ArticleMeta[] }
       </section>
 
       <div className="container-site py-10">
-        {newArticles.length > 0 && (
-          <section className="mb-12" aria-labelledby="new-articles-heading">
-            <div className="flex items-center gap-3 mb-5">
-              <span className="text-xl"></span>
-              <h2 id="new-articles-heading" className="text-lg font-black text-gray-900">Naye Articles</h2>
-              <span className="bg-green-100 text-green-700 text-xs font-bold px-2 py-0.5 rounded-full">{newArticles.length} new</span>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {newArticles.map(article => <ArticleCard key={article.slug} article={article} showNewBadge />)}
-            </div>
-          </section>
-        )}
-
-        <section aria-labelledby="all-articles-heading">
-          <div className="flex items-center gap-3 mb-5">
-            <span className="text-xl">📋</span>
-            <h2 id="all-articles-heading" className="text-lg font-black text-gray-900">Saari Guides</h2>
-            <span className="bg-gray-100 text-gray-600 text-xs font-bold px-2 py-0.5 rounded-full">{articles.length} total</span>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {articles.map(article => <ArticleCard key={article.slug} article={article} />)}
-          </div>
-        </section>
+        <Suspense fallback={<div className="text-center py-8 text-gray-500">Loading articles...</div>}>
+          <ArticlesContent articles={articles} />
+        </Suspense>
 
         <div className="text-center mt-12">
           <Link href="/" className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-black px-8 py-3.5 rounded-xl text-sm transition-all hover:scale-105 shadow-lg">
