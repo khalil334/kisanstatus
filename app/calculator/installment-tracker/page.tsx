@@ -1,25 +1,15 @@
 'use client';
 /**
- * /calculator/installment-tracker — KisanStatus.com
- * PM Kisan Installment & eKYC Status Tracker
+ * InstallmentTrackerClient — Interactive Component
  */
 import { useState } from 'react';
 import Link from 'next/link';
-import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'PM Kisan Installment Status Tracker 2026 — 23vi Kist Kyun Ruki?',
-  description: 'PM Kisan 23vi kist status tracker — eKYC, bank Aadhaar seeding, land seeding aur beneficiary status check karke 4 sawaal mein pata karo kist kyun nahi aayi. Free tool.',
-  keywords: ['pm kisan installment tracker','pm kisan 23vi kist status check tool','pm kisan kist kyun nahi aayi','pm kisan status checker 2026','pm kisan ekyc status tracker'],
-  alternates: { canonical: 'https://kisanstatus.com/calculator/installment-tracker' },
-};
 
 const INSTALLMENT_NAME = '23वीं किस्त';
 const INSTALLMENT_DATE = new Date('2026-06-20T00:00:00+05:30');
 const NEXT_INSTALLMENT_WINDOW = '24वीं किस्त — October 2026 (Expected)';
 
-export default function Page() {
-  // ✅ FIX: Default states "unknown" - user ko pehle check karna padega
+export default function InstallmentTrackerClient() {
   const [ekyc, setEkyc] = useState('unknown');
   const [seeding, setSeeding] = useState('unknown');
   const [land, setLand] = useState('unknown');
@@ -28,13 +18,9 @@ export default function Page() {
   const today = new Date();
   const daysSince = Math.floor((today.getTime() - INSTALLMENT_DATE.getTime()) / 86400000);
 
-  // ✅ FIX: Check if user has answered all questions
   const allAnswered = ekyc !== 'unknown' && seeding !== 'unknown' && land !== 'unknown' && status !== 'unknown';
-  
-  // ✅ FIX: Only show result if user has answered everything
   const allGood = allAnswered && ekyc === 'yes' && seeding === 'yes' && land === 'yes' && status === 'active';
 
-  // ✅ FIX: Build blockers list
   const blockers: { icon: string; title: string; desc: string; href: string; cta: string }[] = [];
   if (ekyc === 'no') blockers.push({
     icon: '🔐', title: 'eKYC Pending', desc: 'Bina eKYC ke kist kabhi nahi aayegi — chahe baaki sab sahi ho.',
@@ -88,7 +74,7 @@ export default function Page() {
             <span>🧮</span> Apna Status Check Karo
           </h2>
 
-          {/* ✅ FIX: Added instruction */}
+          {/* Instruction */}
           <div className="mb-4 p-3 bg-blue-50 border border-blue-200 rounded-xl text-xs text-blue-800">
             <strong>💡 Pehle ye karo:</strong> Agar tumhe apna status nahi pata, to pehle{' '}
             <a href="https://pmkisan.gov.in/BeneficiaryStatus.aspx" target="_blank" rel="noopener noreferrer" className="underline font-bold">
@@ -140,7 +126,7 @@ export default function Page() {
             </div>
           </div>
 
-          {/* ✅ FIX: Results - only show if all answered */}
+          {/* Results */}
           {!allAnswered ? (
             <div className="mt-6 p-5 bg-gray-50 border-2 border-gray-300 rounded-2xl text-center">
               <span className="text-3xl block mb-2">🤔</span>
