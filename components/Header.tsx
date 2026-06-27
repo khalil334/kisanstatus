@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import LanguageSwitcher from './LanguageSwitcher';
 import Logo from './Logo';
+import { ARTICLES } from '@/lib/articles-data';
 
 // ── Navigation Data ─────────────────────────────────────────────────────────
 const navLinks = [
@@ -23,46 +24,45 @@ const quickLinks = [
   { href: '/articles/kisan-credit-card-online-apply-2026', label: 'KCC Loan', emoji: '💳' },
 ] as const;
 
-// ── Search Data (lightweight — titles + slugs only) ─────────────────────────
-const SEARCH_ITEMS = [
-  { slug: 'pm-kisan-23vi-kist-2026-status-check', title: 'PM Kisan 23vi Kist Status Check', emoji: '📆', category: 'Status' },
-  { slug: 'pm-kisan-ekyc-online-2026', title: 'PM Kisan eKYC Online Guide', emoji: '🔐', category: 'eKYC' },
-  { slug: 'pm-kisan-payment-failed-status-2026', title: 'PM Kisan Payment Failed Fix', emoji: '💸', category: 'Payment' },
-  { slug: 'pm-kisan-registration-online-2026', title: 'PM Kisan New Registration', emoji: '📝', category: 'Registration' },
-  { slug: 'pm-kisan-name-correction-online-2026', title: 'PM Kisan Name Correction', emoji: '✏️', category: 'Correction' },
-  { slug: 'pm-kisan-beneficiary-list-2026', title: 'PM Kisan Beneficiary List', emoji: '📋', category: 'List' },
-  { slug: 'pm-kisan-rejected-list-2026', title: 'PM Kisan Rejected List Fix', emoji: '❌', category: 'Rejection' },
-  { slug: 'pm-kisan-land-seeding-status-check', title: 'Land Seeding Status Check', emoji: '🌾', category: 'Land' },
-  { slug: 'kisan-credit-card-online-apply-2026', title: 'KCC Loan Apply Online', emoji: '💳', category: 'Loan' },
-  { slug: 'pmfby-crop-insurance-2026', title: 'PMFBY Crop Insurance Guide', emoji: '🛡️', category: 'Insurance' },
-  { slug: 'soil-health-card-complete-guide-2026', title: 'Soil Health Card Guide', emoji: '🌱', category: 'Farming' },
-  { slug: 'nano-dap-500ml-price-in-india-2026', title: 'Nano DAP Price Guide', emoji: '🧴', category: 'Farming' },
-  { slug: 'agristack-kya-hai', title: 'AgriStack Farmer ID Guide', emoji: '🌐', category: 'Digital' },
-  { slug: 'pm-kisan-mobile-number-change', title: 'Mobile Number Change Guide', emoji: '📱', category: 'Correction' },
-  { slug: 'pm-kisan-complete-guide', title: 'PM Kisan Complete Guide', emoji: '📖', category: 'Guide' },
-  { slug: 'pm-kisan-24vi-kist', title: 'PM Kisan 24vi Kist Update', emoji: '📆', category: 'Status' },
-  { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Meaning', emoji: '📄', category: 'Payment' },
-  { slug: 'kisan-rin-kaha-se-le-2026', title: 'Kisan Loan Kaise Le', emoji: '💰', category: 'Loan' },
-  { slug: 'kisan-tractor-loan-2026', title: 'Tractor Loan Guide', emoji: '🚜', category: 'Loan' },
-  { slug: 'pm-kisan-problems-solution-guide-2026', title: 'PM Kisan Problems Solution', emoji: '🔧', category: 'Problems' },
-  { slug: 'pm-kisan-installment-history-check-online', title: 'Installment History Check', emoji: '📊', category: 'History' },
-  { slug: 'pm-kisan-correction-deactivate-block-guide-2026', title: 'Deactivate/Block Guide', emoji: '✏️', category: 'Correction' },
-  { slug: 'pm-kisan-beneficiary-list-village-wise-2026', title: 'Village Wise Beneficiary List', emoji: '🏘️', category: 'List' },
-];
+// ── Dynamic Search from articles-data.ts ────────────────────────────────────
+const CATEGORY_EMOJIS: Record<string, string> = {
+  'status-check': '📆',
+  'ekyc': '🔐',
+  'payment': '💸',
+  'loan': '💳',
+  'registration': '📝',
+  'farming': '🌱',
+  'correction': '✏️',
+};
 
-// ── Simple fuzzy search (no external library needed) ────────────────────────
 function fuzzySearch(query: string) {
   if (!query.trim()) return [];
   const q = query.toLowerCase().trim();
-  return SEARCH_ITEMS.filter(
+  return ARTICLES.filter(
     (item) =>
       item.title.toLowerCase().includes(q) ||
-      item.category.toLowerCase().includes(q) ||
-      item.slug.includes(q)
-  ).slice(0, 6);
+      item.desc.toLowerCase().includes(q) ||
+      item.keywords.some((kw) => kw.toLowerCase().includes(q)) ||
+      item.category.toLowerCase().includes(q)
+  )
+    .sort((a, b) => {
+      const aExact = a.title.toLowerCase().includes(q) ? 0 : 1;
+      const bExact = b.title.toLowerCase().includes(q) ? 0 : 1;
+      if (aExact !== bExact) return aExact - bExact;
+      const dateA = new Date(a.publishedTime || 0).getTime();
+      const dateB = new Date(b.publishedTime || 0).getTime();
+      return dateB - dateA;
+    })
+    .slice(0, 6)
+    .map((a) => ({
+      slug: a.slug,
+      title: a.title,
+      emoji: CATEGORY_EMOJIS[a.category] || '📄',
+      category: a.category,
+    }));
 }
 
-// ── Search Modal Component ──────────────────────────────────────────────────
+// ── Search Modal ────────────────────────────────────────────────────────────
 function SearchModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   const [query, setQuery] = useState('');
   const results = useMemo(() => fuzzySearch(query), [query]);
@@ -79,7 +79,6 @@ function SearchModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
     return () => { document.body.style.overflow = ''; };
   }, [isOpen]);
 
-  // Close on Escape
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
     if (isOpen) window.addEventListener('keydown', handleEsc);
@@ -90,10 +89,7 @@ function SearchModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
 
   return (
     <div className="fixed inset-0 z-[60]" role="dialog" aria-modal="true" aria-label="Search articles">
-      {/* Backdrop */}
       <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
-
-      {/* Modal */}
       <div className="relative max-w-lg mx-auto mt-20 md:mt-32 px-4">
         <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-green-200">
           {/* Search Input */}
@@ -155,7 +151,7 @@ function SearchModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
           {/* Footer */}
           <div className="px-4 py-2 bg-gray-50 border-t border-gray-100 flex items-center justify-between">
             <span className="text-[10px] text-gray-400">
-              {query.trim() ? `${results.length} results` : `${SEARCH_ITEMS.length} articles available`}
+              {query.trim() ? `${results.length} results` : `${ARTICLES.length} articles available`}
             </span>
             <Link href="/articles" onClick={onClose} className="text-[10px] text-green-700 font-bold hover:underline">
               View All Articles →
@@ -174,14 +170,12 @@ export default function Header() {
   const [searchOpen, setSearchOpen] = useState(false);
   const pathname = usePathname();
 
-  // ── Scroll Effect ───────────────────────────────────────────────────────
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // ── Mobile Menu Body Scroll Lock ────────────────────────────────────────
   useEffect(() => {
     if (mobileOpen) {
       document.body.style.overflow = 'hidden';
@@ -191,12 +185,10 @@ export default function Header() {
     return () => { document.body.style.overflow = ''; };
   }, [mobileOpen]);
 
-  // ── Close mobile menu on route change ───────────────────────────────────
   useEffect(() => {
     setMobileOpen(false);
   }, [pathname]);
 
-  // ── Keyboard shortcut Ctrl+K for search ─────────────────────────────────
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
@@ -208,7 +200,6 @@ export default function Header() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  // ── Memoized Active Check ───────────────────────────────────────────────
   const isActive = useCallback(
     (href: string) => {
       if (href === '/') return pathname === '/';
@@ -217,7 +208,6 @@ export default function Header() {
     [pathname]
   );
 
-  // ── Memoized Nav Links ──────────────────────────────────────────────────
   const renderedNavLinks = useMemo(
     () =>
       navLinks.map((link) => {
@@ -240,12 +230,10 @@ export default function Header() {
     [isActive]
   );
 
-  // ── Close Mobile Menu Handler ───────────────────────────────────────────
   const closeMobileMenu = useCallback(() => setMobileOpen(false), []);
 
   return (
     <>
-      {/* ✅ Search Modal */}
       <SearchModal isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
 
       <header
@@ -267,7 +255,6 @@ export default function Header() {
 
           {/* Desktop Actions */}
           <div className="hidden lg:flex items-center gap-2">
-            {/* ✅ Search Button */}
             <button
               onClick={() => setSearchOpen(true)}
               className="flex items-center gap-2 px-3 py-2 text-sm text-gray-500 bg-gray-50 border border-gray-200 rounded-lg hover:bg-green-50 hover:text-green-700 hover:border-green-200 transition-all"
@@ -294,7 +281,6 @@ export default function Header() {
 
           {/* Mobile Actions Row */}
           <div className="flex lg:hidden items-center gap-1">
-            {/* ✅ Mobile Search Button */}
             <button
               onClick={() => setSearchOpen(true)}
               className="p-2 text-gray-700 hover:bg-green-50 rounded-lg transition-colors"
@@ -305,7 +291,6 @@ export default function Header() {
               </svg>
             </button>
 
-            {/* Mobile Menu Button */}
             <button
               className="p-2 text-gray-700 hover:bg-green-50 rounded-lg transition-colors"
               onClick={() => setMobileOpen(!mobileOpen)}
@@ -333,7 +318,6 @@ export default function Header() {
             className="lg:hidden border-t border-green-100 bg-white max-h-[calc(100vh-4rem)] overflow-y-auto"
             aria-label="Mobile navigation"
           >
-            {/* Quick Links Section */}
             <div className="px-4 py-3 bg-green-50 border-b border-green-100">
               <p className="text-xs font-bold text-gray-500 uppercase mb-2">Quick Links</p>
               <div className="grid grid-cols-2 gap-2">
@@ -351,7 +335,6 @@ export default function Header() {
               </div>
             </div>
 
-            {/* Main Navigation Links */}
             <div className="py-2">
               {navLinks.map((link) => {
                 const active = isActive(link.href);
@@ -373,7 +356,6 @@ export default function Header() {
               })}
             </div>
 
-            {/* Mobile Actions */}
             <div className="px-4 py-3 border-t border-green-100 bg-gray-50 space-y-3">
               <div className="flex items-center justify-between">
                 <span className="text-xs text-gray-600 font-medium">Language:</span>
