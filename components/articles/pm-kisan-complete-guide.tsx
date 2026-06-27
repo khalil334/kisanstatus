@@ -8,10 +8,7 @@ export default function PMKisanCompleteGuide() {
     <div className="prose max-w-none">
       {/* Hero Image */}
       <div className="relative w-full h-64 md:h-96 mb-8 rounded-xl overflow-hidden shadow-2xl bg-gradient-to-br from-green-100 to-emerald-200">
-        <Image
-          src="/images/pm-kisan-status-check-hero.webp"
-          alt="Indian farmer checking PM Kisan status on mobile phone in field"
-          fill
+src="/images/articles/pm-kisan-complete-guide/hero.webp"
           className="object-cover"
           priority
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
