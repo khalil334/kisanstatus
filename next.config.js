@@ -31,28 +31,30 @@ const nextConfig = {
   }, 
   
   async redirects() { 
-    return [ 
-      // ✅ FIX #1: ww16 subdomain spam URLs → 410 Gone (via redirect to blocked page)
-      // These tracking/affiliate spam URLs from ww16.kisanstatus.com
+    return [
+
+      // ============================================================
+      // ✅ SPAM URL BLOCK — GSC Crawled URLs Fix (All 6 URLs)
+      // ww16.kisanstatus.com + www.kisanstatus.com spam redirects
+      // Covers: ?sub1=, ?&sub1=, ?&&tr_uuid= — sab patterns
+      // ============================================================
+
+      // Block 1: ww16 subdomain — koi bhi URL → kisanstatus.com
       {
         source: '/',
-        has: [
-          { type: 'host', value: 'ww16.kisanstatus.com' },
-        ],
+        has: [{ type: 'host', value: 'ww16.kisanstatus.com' }],
         destination: 'https://kisanstatus.com/',
         permanent: true,
       },
       {
         source: '/:path*',
-        has: [
-          { type: 'host', value: 'ww16.kisanstatus.com' },
-        ],
+        has: [{ type: 'host', value: 'ww16.kisanstatus.com' }],
         destination: 'https://kisanstatus.com/:path*',
         permanent: true,
       },
 
-      // ✅ FIX #2: Block spam query params — ?&sub1=... and ?&&tr_uuid=...
-      // These were being crawled by Google (seen in GSC Crawled report)
+      // Block 2: ?sub1= query param (covers ?sub1= AND ?&sub1= dono)
+      // Ye 5 URLs cover karta hai: Aug + Oct + Dec 2025 wale
       {
         source: '/',
         has: [{ type: 'query', key: 'sub1' }],
@@ -65,6 +67,9 @@ const nextConfig = {
         destination: 'https://kisanstatus.com/:path*',
         permanent: true,
       },
+
+      // Block 3: ?tr_uuid= query param (covers ?&&tr_uuid= bhi)
+      // Ye www.kisanstatus.com wala URL cover karta hai
       {
         source: '/',
         has: [{ type: 'query', key: 'tr_uuid' }],
@@ -78,14 +83,21 @@ const nextConfig = {
         permanent: true,
       },
 
-      // www → non-www canonical redirect 
-      { source: '/:path*', has: [{ type: 'host', value: 'www.kisanstatus.com' }], destination: 'https://kisanstatus.com/:path*', permanent: true }, 
-      
-      // /pm-kisan-status → article page
+      // ============================================================
+      // ✅ CANONICAL REDIRECT — www → non-www
+      // ============================================================
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.kisanstatus.com' }],
+        destination: 'https://kisanstatus.com/:path*',
+        permanent: true,
+      },
+
+      // ============================================================
+      // ✅ PAGE REDIRECTS — Old URLs → New URLs
+      // ============================================================
       { source: '/pm-kisan-status', destination: '/articles/pm-kisan-23vi-kist-2026-status-check', permanent: true },
       { source: '/pm-kisan-status/', destination: '/articles/pm-kisan-23vi-kist-2026-status-check', permanent: true },
-      
-      // Existing redirects
       { source: '/pm-kisan-beneficiary-status', destination: '/articles/pm-kisan-21vi-installment-status-check', permanent: true }, 
       { source: '/pm-kisan-beneficiary-status/', destination: '/articles/pm-kisan-21vi-installment-status-check', permanent: true }, 
       { source: '/pm-kisan-kyc-csc', destination: '/articles/pm-kisan-ekyc-online-2026', permanent: true }, 
