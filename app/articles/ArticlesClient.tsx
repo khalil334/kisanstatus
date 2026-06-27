@@ -1,8 +1,6 @@
 /**
  * app/articles/ArticlesClient.tsx — CLIENT COMPONENT
- * ✅ 'use client' yahan hai — UI logic yahan
- * ✅ SEO OPTIMIZED v2.0 — 24 articles complete
- * ✅ CATEGORY FILTER ADDED — URL parameter se filter hoga
+ * ✅ FIXED: No duplicate articles — "Naye" aur "Saari" mein alag articles
  */
 'use client';
 
@@ -139,14 +137,19 @@ function ArticlesContent({ articles }: { articles: ArticleMeta[] }) {
     ? articles 
     : articles.filter(a => ARTICLE_META[a.slug]?.category === activeCategory);
 
-  const newArticles = filteredArticles.filter(a => ARTICLE_META[a.slug]?.isNew);
+  // ✅ FIX: Get only first 6 new articles for "Naye Articles" section
+  const allNewArticles = filteredArticles.filter(a => ARTICLE_META[a.slug]?.isNew);
+  const latestNewArticles = allNewArticles.slice(0, 6); // Only 6 latest
+  
+  // ✅ FIX: Get remaining articles (excluding the 6 shown in "Naye")
+  const latestNewSlugs = new Set(latestNewArticles.map(a => a.slug));
+  const remainingArticles = filteredArticles.filter(a => !latestNewSlugs.has(a.slug));
 
   return (
     <>
       {/* Category Filter Buttons */}
       <div className="container-site mb-8">
         <div className="flex flex-wrap justify-center gap-2">
-          {/* All Button */}
           <Link
             href="/articles"
             className={`px-4 py-2 rounded-full text-sm font-bold transition-all ${
@@ -158,10 +161,9 @@ function ArticlesContent({ articles }: { articles: ArticleMeta[] }) {
             📚 Saare ({articles.length})
           </Link>
           
-          {/* Category Buttons */}
           {Object.entries(CATEGORY_META).map(([slug, cat]) => {
             const count = articles.filter(a => ARTICLE_META[a.slug]?.category === slug).length;
-            if (count === 0) return null; // Sirf wo categories dikhao jisme articles hain
+            if (count === 0) return null;
             
             return (
               <Link
@@ -180,7 +182,6 @@ function ArticlesContent({ articles }: { articles: ArticleMeta[] }) {
         </div>
       </div>
 
-      {/* Filtered Articles */}
       {filteredArticles.length === 0 ? (
         <div className="container-site text-center py-12">
           <p className="text-gray-500 text-lg">Is category mein koi article nahi mila.</p>
@@ -190,31 +191,43 @@ function ArticlesContent({ articles }: { articles: ArticleMeta[] }) {
         </div>
       ) : (
         <>
-          {newArticles.length > 0 && (
+          {/* ✅ "Naye Articles" — Only 6 latest new articles */}
+          {latestNewArticles.length > 0 && (
             <section className="mb-12" aria-labelledby="new-articles-heading">
               <div className="flex items-center gap-3 mb-5">
                 <span className="text-xl">✨</span>
                 <h2 id="new-articles-heading" className="text-lg font-black text-gray-900">Naye Articles</h2>
-                <span className="bg-green-100 text-green-700 text-xs font-bold px-2 py-0.5 rounded-full">{newArticles.length} new</span>
+                <span className="bg-green-100 text-green-700 text-xs font-bold px-2 py-0.5 rounded-full">
+                  {latestNewArticles.length} new
+                </span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {newArticles.map(article => <ArticleCard key={article.slug} article={article} showNewBadge />)}
+                {latestNewArticles.map(article => (
+                  <ArticleCard key={article.slug} article={article} showNewBadge />
+                ))}
               </div>
             </section>
           )}
 
-          <section aria-labelledby="all-articles-heading">
-            <div className="flex items-center gap-3 mb-5">
-              <span className="text-xl">📋</span>
-              <h2 id="all-articles-heading" className="text-lg font-black text-gray-900">
-                {activeCategory === 'all' ? 'Saari Guides' : `${CATEGORY_META[activeCategory]?.label || ''} Articles`}
-              </h2>
-              <span className="bg-gray-100 text-gray-600 text-xs font-bold px-2 py-0.5 rounded-full">{filteredArticles.length} total</span>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {filteredArticles.map(article => <ArticleCard key={article.slug} article={article} />)}
-            </div>
-          </section>
+          {/* ✅ "Saari Guides" — Remaining articles (no duplicates) */}
+          {remainingArticles.length > 0 && (
+            <section aria-labelledby="all-articles-heading">
+              <div className="flex items-center gap-3 mb-5">
+                <span className="text-xl">📋</span>
+                <h2 id="all-articles-heading" className="text-lg font-black text-gray-900">
+                  {activeCategory === 'all' ? 'Saari Guides' : `${CATEGORY_META[activeCategory]?.label || ''} Articles`}
+                </h2>
+                <span className="bg-gray-100 text-gray-600 text-xs font-bold px-2 py-0.5 rounded-full">
+                  {remainingArticles.length} articles
+                </span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {remainingArticles.map(article => (
+                  <ArticleCard key={article.slug} article={article} />
+                ))}
+              </div>
+            </section>
+          )}
         </>
       )}
     </>
