@@ -42,12 +42,13 @@ const schemas = [
   },
 ];
 
+// ✅ FIXED: Updated 21vi → 23vi Kist
 const RELATED = [
   {slug:'pm-kisan-payment-failed-status-2026',          title:'Payment Failed Fix Guide',        emoji:'💸'},
   {slug:'pm-kisan-rejected-list-2026',                  title:'Rejected List — Reason & Fix',   emoji:'❌'},
   {slug:'pm-kisan-name-correction-online-2026',         title:'Name Correction Guide',           emoji:'✏️'},
   {slug:'pm-kisan-beneficiary-list-2026',               title:'Beneficiary List Check',          emoji:'📋'},
-  {slug:'pm-kisan-21vi-installment-status-check',       title:'21vi Kist Status Check',          emoji:'📅'},
+  {slug:'pm-kisan-23vi-kist-2026-status-check',         title:'23vi Kist Status Check',          emoji:'📅'},
   {slug:'pm-kisan-registration-online-2026',            title:'New Registration Guide',          emoji:'📝'},
 ];
 
@@ -59,9 +60,10 @@ export default function PmKisanEkycOnline2026() {
       {/* Header */}
       <div className="bg-primary-600 py-8">
         <div className="container-site max-w-3xl">
+          {/* ✅ FIXED: Breadcrumb updated — /articles instead of outdated 21vi link */}
           <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
             <Link href="/" className="hover:text-white">Home</Link><span>/</span>
-            <Link href="/articles/pm-kisan-21vi-installment-status-check" className="hover:text-white">PM Kisan Guide</Link><span>/</span>
+            <Link href="/articles" className="hover:text-white">Articles</Link><span>/</span>
             <span className="text-white">eKYC Online 2026</span>
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">🔐 eKYC Guide</span>
