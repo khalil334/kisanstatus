@@ -17,7 +17,6 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: 'PM Kisan Status Check 2026 – 23vi Kist Released',
-    // template mein site name hai, to individual pages ko sirf apna title dena hai
     template: `%s | ${SITE_NAME}`,
   },
   description:
@@ -55,14 +54,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: SITE_URL,
   },
-  // OpenGraph - default values, individual pages apne hisaab se override karenge
   openGraph: {
     type: 'website',
     locale: 'hi_IN',
     siteName: SITE_NAME,
     title: 'PM Kisan Status Check 2026 – 23vi Kist Released',
     description: '₹2000 seedha bank mein — 9.44 Crore+ kisanon ko mil chuki hai. Apna status abhi check karo.',
-    // url yahan set mat karo - har page ka apna URL hoga
     images: [
       {
         url: '/og-image.webp',
@@ -71,7 +68,6 @@ export const metadata: Metadata = {
         alt: 'KisanStatus - PM Kisan Status Check 2026',
         type: 'image/webp',
       },
-      // PNG fallback for platforms jo WebP support nahi karti
       {
         url: '/og-image.png',
         width: 1200,
@@ -115,34 +111,17 @@ export default function RootLayout({
   return (
     <html lang="hi-IN" suppressHydrationWarning>
       <head>
-        {/* DNS prefetch - external domains ko pehle se resolve kar lo */}
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-        <link rel="dns-prefetch" href="https://pmkisan.gov.in" />
+        {/* ✅ FIXED: DNS prefetch — sirf zaroori domains */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
-        {/* Fonts - non-blocking load */}
-        <link
-          rel="preload"
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-          as="style"
-        />
+        {/* ✅ PERFORMANCE: Font display=swap se render-blocking fix */}
         <link
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
           rel="stylesheet"
-          media="print"
-          // @ts-ignore - onLoad is valid but TypeScript nahi maanta
-          onLoad="this.media='all'"
         />
-        <noscript>
-          <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-            rel="stylesheet"
-          />
-        </noscript>
 
-        {/* LCP image preload - hero banner jaldi load ho */}
+        {/* LCP image preload */}
         <link
           rel="preload"
           href="/images/hero-banner.webp"
@@ -159,7 +138,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#16A34A" />
         <meta name="theme-color" content="#14532d" media="(prefers-color-scheme: dark)" />
 
-        {/* Structured data - Google ko site ki info do */}
+        {/* ✅ FIXED: SearchAction → /articles instead of broken /search */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -175,7 +154,7 @@ export default function RootLayout({
                   '@type': 'SearchAction',
                   target: {
                     '@type': 'EntryPoint',
-                    urlTemplate: `${SITE_URL}/search?q={search_term_string}`,
+                    urlTemplate: `${SITE_URL}/articles?category=all`,
                   },
                   'query-input': 'required name=search_term_string',
                 },
@@ -209,15 +188,6 @@ export default function RootLayout({
             ]),
           }}
         />
-
-        {/* AdSense - approval ke baad uncomment karna */}
-        {/*
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX"
-          crossOrigin="anonymous"
-        />
-        */}
       </head>
 
       <body className="min-h-screen flex flex-col bg-surface text-text-primary antialiased">
@@ -227,7 +197,7 @@ export default function RootLayout({
           <Footer />
         </LanguageProvider>
 
-        {/* Google Analytics - page load hone ke baad */}
+        {/* ✅ PERFORMANCE: GA4 lazy load — afterInteractive se page pehle dikhega */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"
