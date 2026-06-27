@@ -6,14 +6,14 @@ import FAQSection from '@/components/FAQSection';
 import AiAssistant from '@/components/AiAssistant';
 import KisanTemplates from '@/components/KisanTemplates';
 
-// ── CENTRALIZED STATS (FIXED: 23vivi → 23vi) ─────────────────────────────
+// ── CENTRALIZED STATS ─────────────────────────────────────────────────────
 const STATS = {
   registeredFarmers: '11 Cr+',
   receivedKist: '9.44 Cr+',
   annualBenefit: '₹6,000',
   perKist: '₹2,000',
-  currentKist: '23',          // ✅ FIXED: '23vi' → '23'
-  nextKist: '24',             // ✅ FIXED: '24vi' → '24'
+  currentKist: '23',
+  nextKist: '24',
   currentKistDate: '20 June 2026',
   nextKistDate: 'October 2026',
   totalArticles: '24+',
@@ -34,7 +34,9 @@ function useScrollReveal() {
   return { ref, visible };
 }
 
-// ── Articles data ───────────────────────────────────────────────────────────
+// ── ✅ FIXED: Sirf 3 Latest Articles Homepage Pe ────────────────────────────
+// Naya article add karna hai? Is array mein TOP pe daalo, purana neeche shift hoga.
+// Sirf yahan ke 3 articles homepage pe dikhenge — baaki "View All" mein jayenge.
 const NEW_ARTICLES = [
   {
     slug: 'soil-health-card-complete-guide-2026',
@@ -70,54 +72,6 @@ const NEW_ARTICLES = [
     keywords: {
       hinglish: ['24vi Kist', 'October 2026', 'Next Installment'],
       hindi: ['24वीं किस्त', 'अगली किस्त कब आएगी'],
-    },
-  },
-  {
-    slug: 'pm-kisan-mobile-number-change',
-    title: 'PM Kisan Mobile Number Change 2026',
-    emoji: '📱',
-    image: '/images/pm-kisan-mobile-bank-aadhaar-update-banner-website.webp',
-    desc: 'Mobile number change karo online ya CSC se — step by step',
-    category: 'Correction',
-    keywords: {
-      hinglish: ['Mobile Change', 'CSC Center', 'Number Update'],
-      hindi: ['मोबाइल नंबर बदलें', 'नंबर अपडेट'],
-    },
-  },
-  {
-    slug: 'agristack-kya-hai',
-    title: 'AgriStack Kya Hai 2026',
-    emoji: '🌐',
-    image: '/images/agristack-kya-hai-infographic.webp',
-    desc: 'Farmer ID kya hoti hai, AgriStack registration aur fayde',
-    category: 'Digital',
-    keywords: {
-      hinglish: ['AgriStack', 'Farmer ID', 'Digital Registration'],
-      hindi: ['किसान आईडी', 'डिजिटल रजिस्ट्रेशन'],
-    },
-  },
-  {
-    slug: 'nano-dap-500ml-price-in-india-2026',
-    title: 'Nano DAP 500ml Price in India 2026',
-    emoji: '🧴',
-    image: '/images/nano-dap-500ml-price-india-2026.webp',
-    desc: 'IFFCO Nano DAP price, dosage per acre aur kahan se kharidein',
-    category: 'Farming',
-    keywords: {
-      hinglish: ['Nano DAP Price', 'IFFCO 2026', 'Fertilizer'],
-      hindi: ['नैनो डीएपी', 'खाद की कीमत'],
-    },
-  },
-  {
-    slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai',
-    title: 'PM Kisan FTO Generated Ka Matlab',
-    emoji: '📄',
-    image: '/images/pm-kisan-fto-generated-featured-image-kisanstatus.webp',
-    desc: 'FTO Generated dikhta hai? Matlab kya hai aur payment kab aayegi',
-    category: 'Payment',
-    keywords: {
-      hinglish: ['FTO Generated', 'Payment Pending', 'FTO Status'],
-      hindi: ['पेमेंट कब आएगी', 'FTO का मतलब'],
     },
   },
 ];
@@ -181,6 +135,7 @@ const faqSchema = {
   })),
 };
 
+// ✅ FIXED: Search action now points to /articles instead of broken /search
 const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
@@ -189,7 +144,7 @@ const websiteSchema = {
   description: 'PM Kisan Samman Nidhi status check, eKYC guide, kist dates, beneficiary list aur free agricultural calculators.',
   potentialAction: {
     '@type': 'SearchAction',
-    target: 'https://kisanstatus.com/search?q={search_term_string}',
+    target: 'https://kisanstatus.com/articles?category=all',
     'query-input': 'required name=search_term_string',
   },
   inLanguage: ['hi-IN', 'en-IN'],
@@ -370,7 +325,7 @@ export default function HomeContent() {
                 {[
                   { icon: '💰', label: 'Saalana Labh', value: STATS.annualBenefit, sub: '3 kiston mein', grad: 'from-emerald-400 to-green-600' },
                   { icon: '🏦', label: 'Per Kist', value: STATS.perKist, sub: 'Seedha bank mein', grad: 'from-blue-400 to-cyan-600' },
-                  { icon: '👨‍', label: 'Registered Farmers', value: STATS.registeredFarmers, sub: 'Poore India mein', grad: 'from-amber-400 to-orange-500' },
+                  { icon: '👨‍🌾', label: 'Registered Farmers', value: STATS.registeredFarmers, sub: 'Poore India mein', grad: 'from-amber-400 to-orange-500' },
                   { icon: '✅', label: `${STATS.currentKist}vi Kist`, value: 'Released', sub: STATS.currentKistDate, grad: 'from-green-400 to-emerald-600' },
                   { icon: '⏳', label: `${STATS.nextKist}vi Kist`, value: 'Expected', sub: STATS.nextKistDate, grad: 'from-yellow-400 to-amber-500' },
                 ].map((s, i) => (
@@ -438,7 +393,7 @@ export default function HomeContent() {
               { icon: '✏️', title: 'Naam Galat Hai', sub: '15 min mein fix karo', href: '/articles/pm-kisan-name-correction-online-2026', bg: 'bg-purple-50', border: 'border-purple-200', tag: 'bg-purple-100 text-purple-700' },
               { icon: '🌾', title: 'Land Seeding No', sub: 'Zameen link nahi — yeh karo', href: '/articles/pm-kisan-land-seeding-status-check', bg: 'bg-yellow-50', border: 'border-yellow-200', tag: 'bg-yellow-100 text-yellow-700' },
               { icon: '📝', title: 'Pehli Baar Register', sub: 'New farmer registration free', href: '/articles/pm-kisan-registration-online-2026', bg: 'bg-blue-50', border: 'border-blue-200', tag: 'bg-blue-100 text-blue-700' },
-              { icon: '📋', title: 'List Mein Naam', sub: 'Village wise dekho', href: '/articles/pm-kisan-beneficiary-list-2026', bg: 'bg-teal-50', border: 'border-teal-200', tag: 'bg-teal-100 text-teal-700' },
+              { icon: '📋', title: 'List Mein Naam', sub: 'Village wise dekho', href: '/beneficiary-list', bg: 'bg-teal-50', border: 'border-teal-200', tag: 'bg-teal-100 text-teal-700' },
               { icon: '🔧', title: 'Koi Aur Problem', sub: '10 common problems guide', href: '/articles/pm-kisan-problems-solution-guide-2026', bg: 'bg-gray-50', border: 'border-gray-200', tag: 'bg-gray-100 text-gray-700' },
             ].map((c, i) => (
               <Reveal key={c.href} delay={i * 60}>
@@ -457,7 +412,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* Latest Articles */}
+      {/* ✅ FIXED: Latest Articles — Sirf 3 Dikhenge */}
       <section className="py-14 bg-gradient-to-b from-gray-50 to-white" aria-labelledby="latest-heading">
         <div className="container-site">
           <Reveal>
@@ -468,6 +423,7 @@ export default function HomeContent() {
             </div>
           </Reveal>
 
+          {/* ✅ GRID: Exactly 3 articles */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {NEW_ARTICLES.map((a, i) => (
               <Reveal key={a.slug} delay={i * 80}>
