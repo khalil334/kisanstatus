@@ -5,13 +5,11 @@ export const metadata: Metadata = {
   title: 'Free Kisan Calculators 2026 — Installment Tracker, PM Kisan, KCC Loan, PMFBY, MSP, Crop Profit',
   description: '6 free agricultural calculators for Indian farmers — Installment status tracker, PM Kisan benefit, KCC loan EMI, PMFBY fasal bima premium, MSP income aur crop profit/loss. No registration.',
   alternates: { canonical: 'https://kisanstatus.com/calculator' },
-  // FIX: page now sets its own openGraph + twitter blocks instead of
-  // silently inheriting the homepage's OG data from layout.tsx.
   openGraph: {
     type: 'website',
     url: 'https://kisanstatus.com/calculator',
     siteName: 'KisanStatus.com',
-    title: 'Free Kisan Calculators 2026 — Installment Tracker, KCC, PMFBY, MSP & Crop Profit',
+    title: 'Free Kisan Calculators 2026 — KCC, PMFBY, MSP & Crop Profit',
     description: '6 free agricultural calculators — installment tracker, PM Kisan benefit, KCC loan EMI, PMFBY premium, MSP income, crop profit/loss. No login, no charge.',
     images: [
       {
@@ -32,8 +30,6 @@ export const metadata: Metadata = {
 };
 
 // ── Calculator data ──────────────────────────────────────────────────────────
-// Grouped by real category (not random colors) so the accent color actually
-// means something: scheme tools / credit tools / insurance tools / data tools.
 const CALCS = [
   {
     href: '/calculator/installment-tracker',
@@ -99,7 +95,7 @@ const CALCS = [
   },
 ];
 
-// Accent system — one deliberate color per real category, not six random hues
+// Accent system — one deliberate color per real category
 const GROUP_STYLES: Record<string, { bar: string; chip: string; btn: string; glow: string }> = {
   scheme:    { bar: 'bg-emerald-600', chip: 'text-emerald-700 bg-emerald-50',  btn: 'bg-emerald-700 hover:bg-emerald-800', glow: 'hover:shadow-emerald-100' },
   credit:    { bar: 'bg-blue-600',    chip: 'text-blue-700 bg-blue-50',        btn: 'bg-blue-700 hover:bg-blue-800',       glow: 'hover:shadow-blue-100' },
@@ -113,7 +109,7 @@ export default function CalculatorIndexPage() {
 
   return (
     <>
-      {/* ── Hero — digital meter strip instead of plain hero text ── */}
+      {/* ── Hero ── */}
       <div className="bg-primary-600 py-10">
         <div className="container-site text-center max-w-3xl">
           <span className="inline-block bg-white/15 text-green-200 text-xs font-bold px-4 py-2 rounded-full mb-4 uppercase tracking-wider">
@@ -126,7 +122,7 @@ export default function CalculatorIndexPage() {
             कृषि कैलकुलेटर — 6 free tools, koi registration nahi, koi charge nahi. Bank jaane se pehle hisaab karo.
           </h2>
 
-          {/* Digital readout strip — meter-style stats, monospace numerals */}
+          {/* Digital readout strip */}
           <div className="flex items-center justify-center gap-6 font-mono text-white/90 text-sm border-t border-white/15 pt-5 max-w-md mx-auto">
             <div className="flex flex-col items-center">
               <span className="text-xl font-bold tabular-nums">06</span>
@@ -148,7 +144,7 @@ export default function CalculatorIndexPage() {
 
       <div className="container-site py-12 max-w-4xl mx-auto">
 
-        {/* ── Featured tool — Installment Tracker gets a bigger row because it's the timely one ── */}
+        {/* ── Featured tool ── */}
         {featured && (
           <Link
             href={featured.href}
@@ -185,7 +181,7 @@ export default function CalculatorIndexPage() {
           </Link>
         )}
 
-        {/* ── Rest of the tools — uniform ledger rows, accent = real category ── */}
+        {/* ── Rest of the tools ── */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {rest.map((c) => {
             const s = GROUP_STYLES[c.group];
@@ -248,13 +244,13 @@ export default function CalculatorIndexPage() {
           </div>
         </div>
 
-        {/* Related guides */}
+        {/* ✅ FIXED: Related guides — Updated to 23vi Kist */}
         <div className="mt-6 p-5 bg-emerald-50 border border-emerald-200 rounded-2xl">
           <p className="font-black text-emerald-900 text-sm mb-4">📖 Related PM Kisan Guides</p>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
             {[
               { href: '/articles/pm-kisan-ekyc-online-2026', l: '🔐 eKYC Guide' },
-              { href: '/articles/pm-kisan-21vi-installment-status-check', l: '📅 Status Check' },
+              { href: '/articles/pm-kisan-23vi-kist-2026-status-check', l: '📅 23vi Kist Status' },
               { href: '/articles/pm-kisan-payment-failed-status-2026', l: '💸 Payment Fix' },
               { href: '/articles/kisan-rin-kaha-se-le-2026', l: '💰 Kisan Loan Guide' },
               { href: '/articles/pmfby-crop-insurance-2026', l: '🛡️ PMFBY Guide' },
