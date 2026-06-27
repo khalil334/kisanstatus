@@ -1,6 +1,7 @@
 /**
  * Official Government Links Page — KisanStatus.com
  * Sari sarkari links ek jagah — clean & separate from about/privacy/disclaimer
+ * ✅ UPDATED: Latest PM Kisan links + OG metadata
  */
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -11,30 +12,54 @@ export const metadata: Metadata = {
     'PM Kisan, eKYC, Beneficiary Status, Agriculture Ministry — sabhi official government portals ke direct links ek jagah. pmkisan.gov.in aur doosre sarkari portals.',
   authors: [{ name: 'Sidhu Singh', url: 'https://kisanstatus.com/about' }],
   alternates: { canonical: 'https://kisanstatus.com/official-links' },
+  keywords: [
+    'pm kisan official links',
+    'pmkisan.gov.in links',
+    'sarkari links pm kisan',
+    'pm kisan government portals',
+    'kisan helpline numbers',
+  ],
   openGraph: {
-    title: 'Sarkari Official Links — KisanStatus.com',
-    description: 'PM Kisan aur sabhi sarkari portals ke direct links ek jagah.',
+    title: 'Sarkari Official Links — PM Kisan Government Portals',
+    description: 'PM Kisan aur sabhi sarkari portals ke direct links ek jagah. 23vi kist released 20 June 2026.',
     type: 'website',
     url: 'https://kisanstatus.com/official-links',
+    siteName: 'KisanStatus.com',
+    locale: 'hi_IN',
+    images: [
+      {
+        url: 'https://kisanstatus.com/images/pm-kisan-beneficiary-list-2026.webp',
+        width: 1200,
+        height: 630,
+        alt: 'PM Kisan Official Government Links',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Sarkari Official Links — PM Kisan Government Portals',
+    description: 'PM Kisan aur sabhi sarkari portals ke direct links ek jagah.',
+    images: ['https://kisanstatus.com/images/pm-kisan-beneficiary-list-2026.webp'],
   },
   robots: { index: true, follow: true },
 };
 
+// ✅ UPDATED: Latest PM Kisan links (2026)
 const officialLinks = [
   {
     category: '🌾 PM Kisan Main Portal',
     links: [
       { label: 'PM Kisan Official Homepage', url: 'https://pmkisan.gov.in/', desc: 'Pradhan Mantri Kisan Samman Nidhi ka official portal' },
       { label: 'Beneficiary Status Check', url: 'https://pmkisan.gov.in/BeneficiaryStatus.aspx', desc: 'Apna PM Kisan payment status check karo' },
-      { label: 'Beneficiary List (Village Wise)', url: 'https://pmkisan.gov.in/Rpt_BeneficiaryStatus_pub.aspx', desc: 'State, district, block, gaon ke hisaab se list' },
-      { label: 'New Farmer Registration', url: 'https://pmkisan.gov.in/RegistrationForm.aspx', desc: 'Naye kisan ka PM Kisan registration' },
+      { label: 'Beneficiary List (Dashboard)', url: 'https://pmkisan.gov.in/Dashboard.aspx', desc: 'State, district, block, gaon ke hisaab se list' },
+      { label: 'New Farmer Registration', url: 'https://pmkisan.gov.in/NewFarmerRegistration.aspx', desc: 'Naye kisan ka PM Kisan registration' },
       { label: 'Edit / Correct Aadhaar', url: 'https://pmkisan.gov.in/UpdateAadharNo.aspx', desc: 'Aadhaar number me correction karo' },
     ],
   },
   {
     category: '🔐 eKYC & Verification',
     links: [
-      { label: 'eKYC Online (OTP se)', url: 'https://pmkisan.gov.in/eKYC.aspx', desc: 'OTP se ghar baithe eKYC complete karo' },
+      { label: 'Farmers Corner (eKYC & More)', url: 'https://pmkisan.gov.in/FarmersCorner.aspx', desc: 'eKYC, status check, aur sabhi services ek jagah' },
       { label: 'Land Seeding Status', url: 'https://pmkisan.gov.in/LandSeeding.aspx', desc: 'Land seeding verification status dekho' },
       { label: 'Installment History', url: 'https://pmkisan.gov.in/AccountStatus.aspx', desc: 'Pichli kiston ka payment history check karo' },
     ],
@@ -61,7 +86,7 @@ const officialLinks = [
   {
     category: '📞 Helpline & Support',
     links: [
-      { label: 'PM Kisan Helpline — 155261', url: 'tel:155261', desc: 'Toll-free helpline — 9 AM to 5 PM' },
+      { label: 'PM Kisan Helpline — 155261', url: 'tel:155261', desc: 'Toll-free helpline — 24/7 available' },
       { label: 'PM Kisan Alternate — 011-24300606', url: 'tel:01124300606', desc: 'Direct helpline number' },
       { label: 'PM Kisan Email Support', url: 'mailto:pmkisan-ict@gov.in', desc: 'Email karein: pmkisan-ict@gov.in' },
       { label: 'Kisan Call Center — 1800-180-1551', url: 'tel:18001801551', desc: 'Agriculture helpline — free call' },
@@ -135,7 +160,7 @@ export default function OfficialLinksPage() {
             suvidha ke liye hain. Koi bhi official kaam seedha government website par hi karein.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
-            <Link href="/pm-kisan-status" className="btn-primary text-sm">✅ Status Check Guide</Link>
+            <Link href="/articles/pm-kisan-23vi-kist-2026-status-check" className="btn-primary text-sm">✅ 23vi Kist Status</Link>
             <Link href="/articles/pm-kisan-ekyc-online-2026" className="btn-secondary text-sm">🔐 eKYC Guide</Link>
             <Link href="/contact" className="btn-secondary text-sm">📧 Contact Us</Link>
           </div>
