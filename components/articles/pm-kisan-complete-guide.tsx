@@ -100,7 +100,7 @@ export default function PMKisanCompleteGuide() {
         
         <div className="relative w-full h-48 md:h-64 mb-6 rounded-lg overflow-hidden shadow-lg bg-gradient-to-br from-green-50 to-emerald-100">
           <Image
-            src="/images/pm-kisan-ekyc-process-step.webp"
+            src="/images/articles/pm-kisan-complete-guide/ekyc-process.webp"
             alt="Farmer completing e-KYC at Common Service Center with fingerprint scanner"
             fill
             className="object-cover"
@@ -190,7 +190,7 @@ export default function PMKisanCompleteGuide() {
         
         <div className="relative w-full h-48 md:h-64 mb-6 rounded-lg overflow-hidden shadow-lg bg-gradient-to-br from-green-50 to-emerald-100">
           <Image
-            src="/images/pm-kisan-payment-received-success.webp"
+            src="/images/articles/pm-kisan-complete-guide/payment-success.webp"
             alt="Happy farmer receiving PM Kisan payment notification on mobile"
             fill
             className="object-cover"
@@ -269,7 +269,7 @@ export default function PMKisanCompleteGuide() {
 
         <div className="relative w-full h-48 md:h-64 mb-6 rounded-lg overflow-hidden shadow-lg bg-gradient-to-br from-green-50 to-emerald-100">
           <Image
-            src="/images/pm-kisan-application-rejection-fix.webp"
+            src="/images/articles/pm-kisan-complete-guide/rejection-fix.webp"
             alt="Farmer reviewing documents to fix PM Kisan application rejection"
             fill
             className="object-cover"
@@ -333,7 +333,7 @@ export default function PMKisanCompleteGuide() {
         
         <div className="relative w-full h-48 md:h-64 mb-6 rounded-lg overflow-hidden shadow-lg bg-gradient-to-br from-green-50 to-emerald-100">
           <Image
-            src="/images/pm-kisan-state-beneficiary-map.webp"
+            src="/images/articles/pm-kisan-complete-guide/state-map.webp"
             alt="India map showing PM Kisan beneficiaries across all states"
             fill
             className="object-cover"
@@ -393,7 +393,7 @@ export default function PMKisanCompleteGuide() {
 
         <div className="relative w-full h-48 md:h-64 mb-6 rounded-lg overflow-hidden shadow-lg bg-gradient-to-br from-green-50 to-emerald-100">
           <Image
-            src="/images/pm-kisan-documents-checklist.webp"
+            src="/images/articles/pm-kisan-complete-guide/documents-checklist.webp"
             alt="PM Kisan required documents - Aadhaar, land papers, bank passbook"
             fill
             className="object-cover"
@@ -463,7 +463,7 @@ export default function PMKisanCompleteGuide() {
 
         <div className="relative w-full h-48 md:h-64 mb-6 rounded-lg overflow-hidden shadow-lg bg-gradient-to-br from-green-50 to-emerald-100">
           <Image
-            src="/images/pm-kisan-faq-support-help.webp"
+            src="/images/articles/pm-kisan-complete-guide/faq-support.webp"
             alt="PM Kisan customer support helping farmers with queries"
             fill
             className="object-cover"
