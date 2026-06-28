@@ -1,10 +1,10 @@
-// ✅ FIXED: Har FAQ answer mein uski detailed guide ka internal link add kiya gaya hai
+// ✅ FIXED: STATS object ab accessible hai kyunki yeh HomeContent.tsx ke andar hai
 const FAQS = [
   {
     q: 'पीएम किसान की 23वीं किस्त कब आई?',
     a: (
       <>
-        23वीं किस्त {STATS.currentKistDate} को release हो चुकी है — {STATS.registeredFarmers} registered farmers mein se {STATS.receivedKist} farmers को {STATS.perKist} DBT से मिले हैं।{' '}
+        23वीं किस्त <strong>{STATS.currentKistDate}</strong> को release हो चुकी है — {STATS.registeredFarmers} registered farmers में से {STATS.receivedKist} farmers को {STATS.perKist} DBT से मिले हैं।{' '}
         <Link href="/articles/pm-kisan-23vi-kist-2026-status-check" className="text-green-600 font-bold underline hover:no-underline">
           यहाँ क्लिक करके अपना स्टेटस चेक करें →
         </Link>
