@@ -16,7 +16,7 @@ const STATS = {
   nextKist: '24',
   currentKistDate: '20 June 2026',
   nextKistDate: 'October 2026',
-  totalArticles: '24+',
+  totalArticles: '25+',
 };
 
 // ── Scroll reveal hook ──────────────────────────────────────────────────────
@@ -38,6 +38,19 @@ function useScrollReveal() {
 // Naya article add karna hai? Is array mein TOP pe daalo, purana neeche shift hoga.
 // Sirf yahan ke 3 articles homepage pe dikhenge — baaki "View All" mein jayenge.
 const NEW_ARTICLES = [
+  // ✅ ARTICLE #25 (NEW) — TOP PE ADD KIYA
+  {
+    slug: 'pm-kisan-self-registered-status-check',
+    title: 'PM Kisan Self Registered Status Check 2026',
+    emoji: '📋',
+    image: '/images/pm-kisan-self-registered-status/pm-kisan-portal-homepage.webp',
+    desc: 'Self registration ka status kaise check karein — step-by-step guide, common problems aur solutions',
+    category: 'Status',
+    keywords: {
+      hinglish: ['Self Registered', 'Status Check', 'Online'],
+      hindi: ['सेल्फ रजिस्टर्ड', 'स्टेटस चेक', 'ऑनलाइन'],
+    },
+  },
   {
     slug: 'soil-health-card-complete-guide-2026',
     title: 'Soil Health Card Complete Guide 2026',
@@ -62,18 +75,6 @@ const NEW_ARTICLES = [
       hindi: ['पूर्ण गाइड', 'सभी समस्याएं', 'समाधान'],
     },
   },
-  {
-    slug: 'pm-kisan-24vi-kist',
-    title: 'PM Kisan 24vi Kist 2026',
-    emoji: '📆',
-    image: '/images/pm-kisan-24vi-kist-october-2026.webp',
-    desc: '24vi kist kab aayegi — status check, date aur payment guide',
-    category: 'Status',
-    keywords: {
-      hinglish: ['24vi Kist', 'October 2026', 'Next Installment'],
-      hindi: ['24वीं किस्त', 'अगली किस्त कब आएगी'],
-    },
-  },
 ];
 
 const CAT_COLORS: Record<string, string> = {
@@ -94,6 +95,7 @@ const TICKER_ITEMS = [
   `✅ ${STATS.registeredFarmers} registered farmers — ${STATS.receivedKist} ko ${STATS.currentKist}vi kist mil chuki hai`,
   '🌾 KisanStatus.com — Sabhi Kisanon Ke Liye — 100% Free',
   '🌱 NEW: Soil Health Card Guide — Mitti testing se lekar PDF download tak',
+  '📋 NEW: Self Registered Farmer Status Check — Online guide',
 ];
 
 // ── FAQs ────────────────────────────────────────────────────────────────────
