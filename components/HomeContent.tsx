@@ -34,11 +34,8 @@ function useScrollReveal() {
   return { ref, visible };
 }
 
-// ── ✅ FIXED: Sirf 3 Latest Articles Homepage Pe ────────────────────────────
-// Naya article add karna hai? Is array mein TOP pe daalo, purana neeche shift hoga.
-// Sirf yahan ke 3 articles homepage pe dikhenge — baaki "View All" mein jayenge.
+// ── ✅ Sirf 3 Latest Articles Homepage Pe ────────────────────────────
 const NEW_ARTICLES = [
-  // ✅ ARTICLE #25 (NEW) — TOP PE ADD KIYA
   {
     slug: 'pm-kisan-self-registered-status-check',
     title: 'PM Kisan Self Registered Status Check 2026',
@@ -93,9 +90,6 @@ const TICKER_ITEMS = [
   '🔐 eKYC Mandatory: Bina eKYC kist NAHI milegi — pmkisan.gov.in par karo',
   '📞 Helpline: 155261 | Toll Free: 1800-115-526',
   `✅ ${STATS.registeredFarmers} registered farmers — ${STATS.receivedKist} ko ${STATS.currentKist}vi kist mil chuki hai`,
-  '🌾 KisanStatus.com — Sabhi Kisanon Ke Liye — 100% Free',
-  '🌱 NEW: Soil Health Card Guide — Mitti testing se lekar PDF download tak',
-  '📋 NEW: Self Registered Farmer Status Check — Online guide',
 ];
 
 // ── FAQs ────────────────────────────────────────────────────────────────────
@@ -126,7 +120,7 @@ const FAQS = [
   },
 ];
 
-// ── Schema ─────────────────────────────────────────────────────────────────
+// ── Schema (Sirf FAQ aur ArticleList yahan rahenge, WebSite page.tsx mein hai) ──
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -135,21 +129,6 @@ const faqSchema = {
     name: f.q,
     acceptedAnswer: { '@type': 'Answer', text: f.a },
   })),
-};
-
-// ✅ FIXED: Search action now points to /articles instead of broken /search
-const websiteSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: 'KisanStatus.com',
-  url: 'https://kisanstatus.com',
-  description: 'PM Kisan Samman Nidhi status check, eKYC guide, kist dates, beneficiary list aur free agricultural calculators.',
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: 'https://kisanstatus.com/articles?category=all',
-    'query-input': 'required name=search_term_string',
-  },
-  inLanguage: ['hi-IN', 'en-IN'],
 };
 
 const articleListSchema = {
@@ -222,23 +201,6 @@ function BreakingAlert() {
   );
 }
 
-// ── Stat Box ────────────────────────────────────────────────────────────────
-function StatBox({ icon, value, label, sub, delay }: { icon: string; value: string; label: string; sub: string; delay: number }) {
-  const { ref, visible } = useScrollReveal();
-  return (
-    <div
-      ref={ref}
-      className="text-center p-4 rounded-2xl bg-gradient-to-br from-green-50 to-emerald-50 border border-green-100"
-      style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(20px)', transition: `all 0.6s ease ${delay}ms` }}
-    >
-      <span className="text-3xl block mb-1">{icon}</span>
-      <p className="font-black text-2xl text-green-800 tabular-nums">{value}</p>
-      <p className="font-bold text-gray-800 text-xs mt-0.5">{label}</p>
-      <p className="text-gray-400 text-[10px]">{sub}</p>
-    </div>
-  );
-}
-
 // ── Article Image ───────────────────────────────────────────────────────────
 function ArticleImage({ src, alt, emoji }: { src: string; alt: string; emoji: string }) {
   const [error, setError] = useState(false);
@@ -264,8 +226,8 @@ export default function HomeContent() {
 
   return (
     <>
+      {/* ✅ Schema: Sirf FAQ aur ItemList yahan, WebSite schema page.tsx mein hai */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleListSchema) }} />
 
       <NewsTicker />
@@ -296,14 +258,6 @@ export default function HomeContent() {
             <h2 className="text-base md:text-lg text-green-100/85 mb-5 max-w-xl leading-relaxed font-normal">
               Kisan bhai — <strong className="text-white">{STATS.currentKist}vi kist {STATS.currentKistDate} ko release ho chuki hai!</strong> Apna status abhi check karo: eKYC complete karo, bank Aadhaar seed karo, paisa aaya ya nahi dekho. <span className="text-green-300 font-semibold">Sab free — 10 minute mein.</span>
             </h2>
-
-            <div className="flex items-start gap-3 bg-green-500/20 border border-green-400/40 rounded-xl px-4 py-3 max-w-lg mb-6 backdrop-blur-sm">
-              <span className="text-green-300 text-xl shrink-0">✅</span>
-              <div>
-                <p className="text-white font-bold text-sm">{STATS.currentKist}vi Kist Release Ho Chuki — {STATS.currentKistDate}!</p>
-                <p className="text-green-200 text-xs mt-0.5">Paisa aaya ya nahi — abhi status check karo. eKYC pending hai to turant karo.</p>
-              </div>
-            </div>
 
             <div className="flex flex-wrap gap-3">
               <Link href="/articles/pm-kisan-23vi-kist-2026-status-check" className="inline-flex items-center gap-2 bg-green-400 hover:bg-green-300 text-gray-900 font-black px-5 py-3 rounded-xl text-sm transition-all hover:scale-105 shadow-lg shadow-green-900/40">
@@ -365,17 +319,7 @@ export default function HomeContent() {
         </div>
       </div>
 
-      {/* Stats */}
-      <section className="py-8 bg-white border-b border-gray-100">
-        <div className="container-site">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <StatBox icon="👨‍🌾" value={STATS.registeredFarmers} label="Registered Farmers" sub="Poore India mein" delay={0} />
-            <StatBox icon="💰" value={STATS.annualBenefit} label="Saalana Labh" sub="Har eligible kisan ko" delay={100} />
-            <StatBox icon="✅" value={STATS.currentKist} label="Kist Ab Tak" sub={`${STATS.currentKistDate} tak`} delay={200} />
-            <StatBox icon="📱" value="100% Free" label="Yeh Portal" sub="Koi hidden charge nahi" delay={300} />
-          </div>
-        </div>
-      </section>
+      {/* ✅ REMOVED: Faltu ka Stats Section hata diya gaya hai kyunki Quick Info card mein sab hai */}
 
       {/* Problem → Solution */}
       <section className="py-12 bg-white" aria-labelledby="problems-heading">
@@ -414,7 +358,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* ✅ FIXED: Latest Articles — Sirf 3 Dikhenge */}
+      {/* Latest Articles */}
       <section className="py-14 bg-gradient-to-b from-gray-50 to-white" aria-labelledby="latest-heading">
         <div className="container-site">
           <Reveal>
@@ -425,13 +369,12 @@ export default function HomeContent() {
             </div>
           </Reveal>
 
-          {/* ✅ GRID: Exactly 3 articles */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {NEW_ARTICLES.map((a, i) => (
               <Reveal key={a.slug} delay={i * 80}>
                 <Link href={`/articles/${a.slug}`} className="group bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 no-underline h-full flex flex-col">
                   <ArticleImage src={a.image} alt={a.title} emoji={a.emoji} />
-                  <div className="p-4 flex flex-col flex-1">
+                  <div className="p-4 flex-col flex-1">
                     <span className={`text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full self-start ${CAT_COLORS[a.category] ?? 'bg-gray-100 text-gray-600'}`}>{a.category}</span>
                     <h3 className="font-bold text-gray-900 text-sm leading-snug mt-2 mb-1.5 group-hover:text-green-700 transition-colors">{a.title}</h3>
                     <p className="text-gray-500 text-xs leading-relaxed mb-3">{a.desc}</p>
