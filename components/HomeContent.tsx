@@ -16,7 +16,7 @@ const STATS = {
   nextKist: '24',
   currentKistDate: '20 June 2026',
   nextKistDate: 'October 2026',
-  totalArticles: '25+',
+  totalArticles: '26+',
 };
 
 // ── Scroll reveal hook ──────────────────────────────────────────────────────
