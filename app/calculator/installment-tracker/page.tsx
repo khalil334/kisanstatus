@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+// ✅ FIXED: calculators (plural)
 import InstallmentTrackerCalcPage from '@/components/calculators/InstallmentTrackerCalcPage';
 
 const DOMAIN = 'https://kisanstatus.com';
