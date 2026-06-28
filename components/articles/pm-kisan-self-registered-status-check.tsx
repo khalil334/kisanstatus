@@ -2,25 +2,26 @@
 import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
+import type { ArticleMeta } from '@/lib/articles-data';
 
-const PmKisanSelfRegisteredStatusCheck: React.FC = () => {
+const PmKisanSelfRegisteredStatusCheck: React.FC<{ article: ArticleMeta }> = ({ article }) => {
   return (
     <>
       <Head>
-        <title>PM Kisan Self Registered Farmer Status Check 2026 | Online Status Kaise Dekhen</title>
-        <meta name="description" content="PM Kisan Self Registered Farmer Status Check kaise karein. Jaaniye kaise online check karein apna application status pmkisan.gov.in par. Step-by-step guide by Sidhu Singh." />
-        <meta name="keywords" content="pm kisan self registered farmer status check, pm kisan status check, self registration status, pmkisan status" />
+        <title>{article.title}</title>
+        <meta name="description" content={article.desc} />
+        <meta name="keywords" content={article.keywords.join(', ')} />
         <meta name="author" content="Sidhu Singh" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="PM Kisan Self Registered Farmer Status Check 2026" />
-        <meta property="og:description" content="Complete guide - Kaise check karein PM Kisan self registered farmer status online" />
+        <meta property="og:title" content={article.ogTitle} />
+        <meta property="og:description" content={article.desc} />
         <meta property="og:type" content="article" />
       </Head>
 
       <article className="max-w-4xl mx-auto px-4 py-8 prose prose-lg">
         <header className="mb-8">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            PM Kisan Self Registered Farmer Status Check 2026 | Online Status Kaise Dekhen
+            {article.title}
           </h1>
           <div className="flex items-center gap-4 text-gray-600 text-sm mb-4">
             <span className="font-semibold text-blue-600">Author: Sidhu Singh</span>
