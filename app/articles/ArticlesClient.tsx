@@ -1,9 +1,3 @@
-/**
- * app/articles/ArticlesClient.tsx — CLIENT COMPONENT
- * ✅ FIXED: Homepage pe sirf 3 latest articles
- * ✅ FIXED: Zero duplicates — "Naye" aur "Saari" mein alag articles
- * ✅ AUTO: Naya article add karo → homepage pe top pe aayega, purane shift honge
- */
 'use client';
 
 import Link from 'next/link';
@@ -55,9 +49,10 @@ const ARTICLE_META: Record<string, { emoji: string; category: string; isNew: boo
   'nano-dap-500ml-price-in-india-2026':              { emoji: '🌱', category: 'Farming',      isNew: true,  image: '/images/nano-dap-500ml-price-india-2026.webp' },
   'pm-kisan-complete-guide':                         { emoji: '📖', category: 'Guide',        isNew: true,  image: '/images/pm-kisan-status-check-hero.webp' },
   'soil-health-card-complete-guide-2026':            { emoji: '🌱', category: 'Farming',      isNew: true,  image: '/images/soil-health-card-complete-guide-2026.webp' },
+  'pm-kisan-self-registered-status-check':           { emoji: '📋', category: 'Status',       isNew: true,  image: '/images/pm-kisan-self-registered-status/pm-kisan-portal-homepage.webp' },
+  'pm-kisan-status-check-online-2026-complete-guide': { emoji: '🔍', category: 'Status',      isNew: true,  image: '/images/pm-kisan-status-check-tool-interface.webp' },
 };
 
-// ✅ CONFIG: Homepage pe kitne articles dikhane hain
 const HOMEPAGE_NEW_COUNT = 3;
 
 function ArticleImage({ image, emoji, title }: { image: string; emoji: string; title: string }) {
@@ -137,28 +132,22 @@ function ArticlesContent({ articles }: { articles: ArticleMeta[] }) {
   const searchParams = useSearchParams();
   const activeCategory = searchParams.get('category') || 'all';
 
-  // Filter articles based on URL parameter
   const filteredArticles = activeCategory === 'all'
     ? articles
     : articles.filter(a => ARTICLE_META[a.slug]?.category === activeCategory);
 
-  // ✅ SORT by published date (newest first) — so new articles always appear at top
   const sortedArticles = [...filteredArticles].sort((a, b) => {
     const dateA = new Date(a.publishedTime || 0).getTime();
     const dateB = new Date(b.publishedTime || 0).getTime();
     return dateB - dateA;
   });
 
-  // ✅ TAKE only 3 latest for "Naye Articles" section
   const latestNewArticles = sortedArticles.slice(0, HOMEPAGE_NEW_COUNT);
-
-  // ✅ REMAINING = everything EXCEPT the 3 shown above (ZERO duplicates)
   const latestNewSlugs = new Set(latestNewArticles.map(a => a.slug));
   const remainingArticles = sortedArticles.filter(a => !latestNewSlugs.has(a.slug));
 
   return (
     <>
-      {/* Category Filter Buttons */}
       <div className="container-site mb-8">
         <div className="flex flex-wrap justify-center gap-2">
           <Link
@@ -202,7 +191,6 @@ function ArticlesContent({ articles }: { articles: ArticleMeta[] }) {
         </div>
       ) : (
         <>
-          {/* ✅ "Naye Articles" — Only 3 LATEST (sorted by date) */}
           {latestNewArticles.length > 0 && (
             <section className="mb-12" aria-labelledby="new-articles-heading">
               <div className="flex items-center gap-3 mb-5">
@@ -220,7 +208,6 @@ function ArticlesContent({ articles }: { articles: ArticleMeta[] }) {
             </section>
           )}
 
-          {/* ✅ "Saari Guides" — REMAINING only (NO duplicates guaranteed) */}
           {remainingArticles.length > 0 && (
             <section aria-labelledby="all-articles-heading">
               <div className="flex items-center gap-3 mb-5">
