@@ -1,8 +1,8 @@
+// components/articles/pm-kisan-self-registered-status-check.tsx
 import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 
-// Component name PascalCase mein hi rahega (React rule)
 const PmKisanSelfRegisteredStatusCheck: React.FC = () => {
   return (
     <>
