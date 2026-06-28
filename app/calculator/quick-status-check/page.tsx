@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import QuickStatusChecker from '@/components/calculator/QuickStatusChecker';
+// ✅ FIXED: calculators (plural)
+import QuickStatusChecker from '@/components/calculators/QuickStatusChecker';
 
 const DOMAIN = 'https://kisanstatus.com';
 const PAGE_URL = `${DOMAIN}/calculator/quick-status-check`;
