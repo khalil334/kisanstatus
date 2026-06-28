@@ -169,7 +169,8 @@ function NewsTicker() {
       </span>
       <div className="overflow-hidden flex-1">
         <div className="flex gap-16 whitespace-nowrap text-xs font-medium" style={{ animation: 'marquee 35s linear infinite' }}>
-          {[...TICKER_ITEMS, ...TICKER_ITEMS].map((item, i) => (
+          {/* ✅ FIX: Sirf ek baar map karein, duplicate nahi */}
+          {TICKER_ITEMS.map((item, i) => (
             <span key={i} className="shrink-0">{item}</span>
           ))}
         </div>
