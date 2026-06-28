@@ -455,27 +455,13 @@ export default function PMKisanCompleteGuide() {
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* ✅ FAQ Section - IMAGE REMOVED */}
       <section className="mb-10">
         <h2 className="text-2xl font-bold mb-6 text-gray-800">
           Frequently Asked Questions (FAQs)
         </h2>
 
-        <div className="relative w-full h-48 md:h-64 mb-6 rounded-lg overflow-hidden shadow-lg bg-gradient-to-br from-green-50 to-emerald-100">
-          <Image
-            src="/images/articles/pm-kisan-complete-guide/faq-support.webp"
-            alt="PM Kisan customer support helping farmers with queries"
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 50vw"
-            quality={80}
-            onError={(e) => {
-              const target = e.target as HTMLImageElement;
-              target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 256'%3E%3Crect fill='%2310b981' width='400' height='256'/%3E%3Ctext fill='white' font-size='20' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3EFAQ Support%3C/text%3E%3C/svg%3E";
-            }}
-          />
-        </div>
-
+        {/* ✅ FAQ image removed - directly showing questions */}
         <div className="space-y-4">
           <div className="border rounded-lg p-4 bg-gray-50">
             <h3 className="font-bold mb-2">Q1. How many installments are paid in a year?</h3>
