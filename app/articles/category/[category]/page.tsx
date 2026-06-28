@@ -4,6 +4,7 @@
  * ✅ Unique metadata har category ke liye
  * ✅ JSON-LD CollectionPage schema
  * ✅ Same design as ArticlesClient
+ * ✅ SEO v3.0: Keywords removed, og:locale fixed to en_IN
  */
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -75,20 +76,16 @@ export async function generateMetadata({
   return {
     title: seo.title,
     description: seo.description,
-    keywords: [
-      `PM Kisan ${CATEGORIES[category as CategorySlug].name}`,
-      `PM Kisan ${category} 2026`,
-      `${seo.title}`,
-    ],
+    // ❌ BUG 1 FIXED: keywords COMPLETELY REMOVED
     authors: [{ name: 'Sidhu Singh', url: `${DOMAIN}/about` }],
-    alternates: { canonical: url },
+    alternates: { canonical: url }, // ✅ Canonical already present
     openGraph: {
       title: seo.title,
       description: seo.description,
       type: 'website',
       url,
       siteName: 'KisanStatus.com',
-      locale: 'hi_IN',
+      locale: 'en_IN', // ✅ BUG 3 FIXED: en_IN for Hinglish content
       images: [{ url: `${DOMAIN}/og-image.webp`, width: 1200, height: 630, alt: seo.title }],
     },
     twitter: {
@@ -126,7 +123,7 @@ export default async function CategoryPage({
     name: seo.title,
     description: seo.description,
     url,
-    inLanguage: 'hi-IN',
+    inLanguage: 'en-IN', // ✅ BUG 3: Consistent with og:locale
     isPartOf: { '@type': 'WebSite', name: 'KisanStatus.com', url: DOMAIN },
     numberOfItems: articles.length,
     mainEntity: {
