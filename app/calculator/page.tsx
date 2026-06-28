@@ -3,14 +3,14 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Free Kisan Calculators 2026 — Installment Tracker, PM Kisan, KCC Loan, PMFBY, MSP, Crop Profit',
-  description: '6 free agricultural calculators for Indian farmers — Installment status tracker, PM Kisan benefit, KCC loan EMI, PMFBY fasal bima premium, MSP income aur crop profit/loss. No registration.',
+  description: '7 free agricultural calculators for Indian farmers — Quick Status Checker, Installment status tracker, PM Kisan benefit, KCC loan EMI, PMFBY fasal bima premium, MSP income aur crop profit/loss. No registration.',
   alternates: { canonical: 'https://kisanstatus.com/calculator' },
   openGraph: {
     type: 'website',
     url: 'https://kisanstatus.com/calculator',
     siteName: 'KisanStatus.com',
     title: 'Free Kisan Calculators 2026 — KCC, PMFBY, MSP & Crop Profit',
-    description: '6 free agricultural calculators — installment tracker, PM Kisan benefit, KCC loan EMI, PMFBY premium, MSP income, crop profit/loss. No login, no charge.',
+    description: '7 free agricultural calculators — Quick Status Checker, installment tracker, PM Kisan benefit, KCC loan EMI, PMFBY premium, MSP income, crop profit/loss. No login, no charge.',
     images: [
       {
         url: 'https://kisanstatus.com/og-image.webp',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Free Kisan Calculators 2026 — KCC, PMFBY, MSP & Crop Profit',
-    description: '6 free agricultural calculators for Indian farmers — no login, no charge.',
+    description: '7 free agricultural calculators for Indian farmers — no login, no charge.',
     images: ['https://kisanstatus.com/og-image.webp'],
     site: '@kisanstatus',
   },
@@ -31,6 +31,19 @@ export const metadata: Metadata = {
 
 // ── Calculator data ──────────────────────────────────────────────────────────
 const CALCS = [
+  // ✅ NAYA TOOL: Quick Status Checker (Featured)
+  {
+    href: '/tools/pm-kisan-status-check',
+    index: '00',
+    emoji: '🔍',
+    title: 'Quick Status Checker',
+    hindi: 'क्विक स्टेटस चेकर',
+    desc: 'Aadhaar ya Mobile number daalein aur seedha official portal par apna 23vi Kist status check karein. Instant & Free.',
+    tags: ['Aadhaar Check', 'Mobile Check', 'Instant Redirect'],
+    group: 'scheme',
+    featured: true,
+    badge: '🔥 New Tool',
+  },
   {
     href: '/calculator/installment-tracker',
     index: '01',
@@ -40,8 +53,7 @@ const CALCS = [
     desc: '23vi kist aayi ya nahi? eKYC, bank seeding, land seeding check karke 4 sawaal mein exact reason pata karo.',
     tags: ['23vi Kist', 'eKYC Check', 'Instant Result'],
     group: 'scheme',
-    featured: true,
-    badge: 'Abhi Trending',
+    featured: false, // ✅ Changed from true to false
   },
   {
     href: '/calculator/pm-kisan-benefit',
@@ -117,16 +129,16 @@ export default function CalculatorIndexPage() {
             🧮 Free Tools
           </span>
           <h1 className="text-2xl md:text-4xl font-black text-white mb-3">
-            Kisan Calculators — Installment Tracker, KCC, PMFBY, MSP &amp; Crop Profit
+            Kisan Calculators — Quick Status Checker, KCC, PMFBY, MSP &amp; Crop Profit
           </h1>
           <h2 className="text-green-200 text-sm md:text-base font-normal max-w-2xl mx-auto mb-6">
-            कृषि कैलकुलेटर — 6 free tools, koi registration nahi, koi charge nahi. Bank jaane se pehle hisaab karo.
+            कृषि कैलकुलेटर — 7 free tools, koi registration nahi, koi charge nahi. Bank jaane se pehle hisaab karo.
           </h2>
 
           {/* Digital readout strip */}
           <div className="flex items-center justify-center gap-6 font-mono text-white/90 text-sm border-t border-white/15 pt-5 max-w-md mx-auto">
             <div className="flex flex-col items-center">
-              <span className="text-xl font-bold tabular-nums">06</span>
+              <span className="text-xl font-bold tabular-nums">07</span>
               <span className="text-[10px] uppercase tracking-wider text-green-200/80">Tools</span>
             </div>
             <span className="text-white/20">|</span>
@@ -224,10 +236,10 @@ export default function CalculatorIndexPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-700">
             <div>
               <p className="font-bold text-gray-900 mb-2 flex items-center gap-2">
-                <span className="font-mono text-emerald-600 text-xs">01</span> 🌾 PM Kisan Calculator ke liye:
+                <span className="font-mono text-emerald-600 text-xs">01</span> 🔍 Quick Status Checker ke liye:
               </p>
               <ul className="space-y-1 text-xs text-gray-600">
-                {['Registered years enter karo', 'Land area (hectare) daalo', 'eKYC status select karo', 'Miss kist count karo'].map((s) => (
+                {['Aadhaar number daalo (12 digits)', 'Mobile number daalo (10 digits)', 'Check Now button dabao', 'Seedha official portal par redirect hoga'].map((s) => (
                   <li key={s} className="flex gap-1.5"><span className="text-emerald-600 font-mono">✓</span>{s}</li>
                 ))}
               </ul>
