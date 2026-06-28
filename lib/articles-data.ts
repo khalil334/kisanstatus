@@ -291,6 +291,18 @@ export const ARTICLES: ArticleMeta[] = [
     publishedTime: '2026-06-27T08:00:00+05:30',
     modifiedTime: '2026-06-27T08:00:00+05:30',
   },
+  // ✅ ARTICLE #25 (NEW)
+  {
+    slug: 'pm-kisan-self-registered-status-check',
+    title: 'PM Kisan Self Registered Farmer Status Check 2026 | Online Status Kaise Dekhen',
+    desc: 'PM Kisan Self Registered Farmer Status Check kaise karein. Jaaniye kaise online check karein apna application status pmkisan.gov.in par.',
+    ogTitle: 'PM Kisan Self Registered Farmer Status Check 2026',
+    keywords: ['pm kisan self registered farmer status check', 'pm kisan status check', 'self registration status', 'pmkisan status', 'पीएम किसान सेल्फ रजिस्टर्ड स्टेटस'],
+    component: 'PmKisanSelfRegisteredStatusCheck',
+    category: 'status-check',
+    publishedTime: '2026-06-28T08:00:00+05:30',
+    modifiedTime: '2026-06-28T08:00:00+05:30',
+  },
 ];
 
 export const ARTICLES_MAP = Object.fromEntries(
