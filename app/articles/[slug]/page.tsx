@@ -7,6 +7,7 @@
  *  - revalidate 86400 kept
  *  - ✅ UPDATED: Added pm-kisan-complete-guide (Article #23)
  *  - ✅ UPDATED: Added soil-health-card-complete-guide-2026 (Article #24)
+ *  - ✅ UPDATED: Added pm-kisan-self-registered-status-check (Article #25)
  *  - ✅ CATEGORY BADGE ADDED — Clickable category badge at top of article
  */
 import type { Metadata } from 'next';
@@ -41,10 +42,10 @@ const ARTICLE_OG_IMAGES: Record<string, string> = {
   'agristack-kya-hai':                               '/images/agristack-kya-hai-infographic.webp',
   'pm-kisan-mobile-number-change':                   '/images/pm-kisan-mobile-bank-aadhaar-update-banner-website.webp',
   'nano-dap-500ml-price-in-india-2026':              '/images/nano-dap-500ml-price-india-2026.webp',
-  // ✅ ARTICLE #23
   'pm-kisan-complete-guide':                         '/images/pm-kisan-status-check-hero.webp',
-  // ✅ ARTICLE #24 (NEW)
   'soil-health-card-complete-guide-2026':            '/images/soil-health-card-complete-guide-2026.webp',
+  // ✅ ARTICLE #25 (NEW)
+  'pm-kisan-self-registered-status-check':           '/images/pm-kisan-self-registered-status/pm-kisan-portal-homepage.webp',
 };
 
 // ── JSON-LD schema generator (server-side) ─────────────────────────────────
@@ -140,10 +141,10 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   PmKisan24viKist2026:                        dynamic(() => import('@/components/articles/PmKisan24viKist2026'),                       { loading: ArticleLoading }),
   AgriStackKyaHai2026:                        dynamic(() => import('@/components/articles/AgriStackKyaHai2026'),                       { loading: ArticleLoading }),
   PmKisanMobileNumberChange2026:              dynamic(() => import('@/components/articles/PmKisanMobileNumberChange2026'),             { loading: ArticleLoading }),
-  // ✅ ARTICLE #23
   PmKisanCompleteGuide:                       dynamic(() => import('@/components/articles/pm-kisan-complete-guide'),                   { loading: ArticleLoading }),
-  // ✅ ARTICLE #24 (NEW)
   SoilHealthCardCompleteGuide2026:            dynamic(() => import('@/components/articles/soil-health-card-complete-guide-2026'),      { loading: ArticleLoading }),
+  // ✅ ARTICLE #25 (NEW)
+  PmKisanSelfRegisteredStatusCheck:           dynamic(() => import('@/components/articles/pm-kisan-self-registered-status-check'),     { loading: ArticleLoading }),
 };
 
 export const revalidate = 86400;
