@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-// ✅ FIXED: calculators (plural)
-import InstallmentTrackerCalcPage from '@/components/calculators/InstallmentTrackerCalcPage';
+// ✅ FIXED: lowercase filename with hyphens
+import InstallmentTrackerCalcPage from '@/components/calculators/installment-tracker-calc-page';
 
 const DOMAIN = 'https://kisanstatus.com';
 const PAGE_URL = `${DOMAIN}/calculator/installment-tracker`;
