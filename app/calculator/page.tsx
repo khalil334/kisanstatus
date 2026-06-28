@@ -2,15 +2,19 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Free Kisan Calculators 2026 — Quick Status Checker, Installment Tracker, KCC Loan, PMFBY, MSP, Crop Profit',
-  description: '7 free agricultural calculators for Indian farmers — Quick Status Checker, Installment status tracker, PM Kisan benefit, KCC loan EMI, PMFBY fasal bima premium, MSP income aur crop profit/loss. No registration.',
+  // ✅ BUG 2 FIXED: Cleaner title — removed redundant tool names
+  title: 'Free Kisan Calculators 2026 — Status Checker, KCC, PMFBY & Crop Profit | KisanStatus.com',
+  // ✅ BUG 2 FIXED: Natural description with key tools only
+  description: '7 free agricultural calculators for Indian farmers — status check, KCC loan EMI, crop insurance premium, MSP income aur profit/loss. No registration required.',
+  // ❌ BUG 1: No keywords field (confirmed clean)
   alternates: { canonical: 'https://kisanstatus.com/calculator' },
   openGraph: {
     type: 'website',
     url: 'https://kisanstatus.com/calculator',
     siteName: 'KisanStatus.com',
-    title: 'Free Kisan Calculators 2026 — Quick Status Checker, KCC, PMFBY, MSP & Crop Profit',
-    description: '7 free agricultural calculators — Quick Status Checker, installment tracker, PM Kisan benefit, KCC loan EMI, PMFBY premium, MSP income, crop profit/loss. No login, no charge.',
+    title: 'Free Kisan Calculators 2026 — Status Checker, KCC, PMFBY & Crop Profit',
+    description: '7 free agricultural calculators — status check, KCC loan EMI, crop insurance, MSP income, crop profit/loss. No login, no charge.',
+    locale: 'en_IN', // ✅ BUG 3 FIXED: Added en_IN for Hinglish content
     images: [
       {
         url: 'https://kisanstatus.com/og-image.webp',
@@ -22,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free Kisan Calculators 2026 — Quick Status Checker, KCC, PMFBY, MSP & Crop Profit',
+    title: 'Free Kisan Calculators 2026 — Status Checker, KCC, PMFBY & Crop Profit',
     description: '7 free agricultural calculators for Indian farmers — no login, no charge.',
     images: ['https://kisanstatus.com/og-image.webp'],
     site: '@kisanstatus',
