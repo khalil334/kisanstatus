@@ -1,5 +1,5 @@
 /**
- * app/articles/[slug]/page.tsx — v3
+ * app/articles/[slug]/page.tsx — v4
  * ✅ FIXES:
  *  - JSON-LD schemas server-side inject ho rahe hain (Google crawl ke liye)
  *  - Per-article OG image map kept
@@ -10,6 +10,7 @@
  *  - ✅ UPDATED: Added pm-kisan-self-registered-status-check (Article #25)
  *  - ✅ UPDATED: Added pm-kisan-status-check-online-2026-complete-guide (Article #26)
  *  - ✅ CATEGORY BADGE ADDED — Clickable category badge at top of article
+ *  - ✅ SEO v3.0: Keywords removed, og:locale fixed to en_IN, title cleaned
  */
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
@@ -46,7 +47,6 @@ const ARTICLE_OG_IMAGES: Record<string, string> = {
   'pm-kisan-complete-guide':                         '/images/pm-kisan-status-check-hero.webp',
   'soil-health-card-complete-guide-2026':            '/images/soil-health-card-complete-guide-2026.webp',
   'pm-kisan-self-registered-status-check':           '/images/pm-kisan-self-registered-status/pm-kisan-portal-homepage.webp',
-  // ✅ ARTICLE #26 (NEW)
   'pm-kisan-status-check-online-2026-complete-guide': '/images/pm-kisan-status-check-tool-interface.webp',
 };
 
@@ -56,7 +56,7 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
     {
       '@context': 'https://schema.org',
       '@type': 'Article',
-      headline: article.title,
+      headline: article.ogTitle || article.title, // ✅ BUG 2: Cleaner title in schema too
       description: article.desc,
       image: [ogImage],
       datePublished: article.publishedTime ?? '2026-01-01T00:00:00+05:30',
@@ -76,7 +76,7 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
         },
       },
       mainEntityOfPage: { '@type': 'WebPage', '@id': url },
-      inLanguage: 'hi-IN',
+      inLanguage: 'en-IN', // ✅ BUG 3: Consistent with og:locale
       isPartOf: { '@type': 'WebSite', name: 'KisanStatus.com', url: DOMAIN },
     },
     {
@@ -85,7 +85,7 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home',     item: DOMAIN },
         { '@type': 'ListItem', position: 2, name: 'Articles', item: `${DOMAIN}/articles` },
-        { '@type': 'ListItem', position: 3, name: article.title, item: url },
+        { '@type': 'ListItem', position: 3, name: article.ogTitle || article.title, item: url },
       ],
     },
     {
@@ -93,9 +93,9 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
       '@type': 'WebPage',
       '@id': url,
       url,
-      name: article.title,
+      name: article.ogTitle || article.title,
       description: article.desc,
-      inLanguage: 'hi-IN',
+      inLanguage: 'en-IN', // ✅ BUG 3: Consistent
       isPartOf: { '@type': 'WebSite', url: DOMAIN, name: 'KisanStatus.com' },
       author: { '@type': 'Person', name: 'Sidhu Singh' },
       datePublished: article.publishedTime ?? '2026-01-01T00:00:00+05:30',
@@ -143,7 +143,6 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   PmKisanCompleteGuide:                       dynamic(() => import('@/components/articles/pm-kisan-complete-guide'),                   { loading: ArticleLoading }),
   SoilHealthCardCompleteGuide2026:            dynamic(() => import('@/components/articles/soil-health-card-complete-guide-2026'),      { loading: ArticleLoading }),
   PmKisanSelfRegisteredStatusCheck:           dynamic(() => import('@/components/articles/pm-kisan-self-registered-status-check'),     { loading: ArticleLoading }),
-  // ✅ ARTICLE #26 (NEW)
   PmKisanStatusCheckOnline2026CompleteGuide:  dynamic(() => import('@/components/articles/PmKisanStatusCheckOnline2026CompleteGuide'), { loading: ArticleLoading }),
 };
 
@@ -167,20 +166,23 @@ export async function generateMetadata({
     ? `${DOMAIN}${ARTICLE_OG_IMAGES[slug]}`
     : `${DOMAIN}/og-image.webp`;
 
+  // ✅ BUG 2: Use ogTitle (cleaner) with fallback to title
+  const displayTitle = article.ogTitle || article.title;
+
   return {
-    title:       article.title,
+    title:       displayTitle,
     description: article.desc,
-    keywords:    article.keywords,
+    // ❌ BUG 1 FIXED: keywords COMPLETELY REMOVED
     authors:     [{ name: 'Sidhu Singh', url: `${DOMAIN}/about` }],
     alternates:  { canonical: url },
     openGraph: {
-      title:         article.ogTitle,
+      title:         displayTitle,
       description:   article.desc,
       type:          'article',
       url,
       siteName:      'KisanStatus.com',
-      locale:        'hi_IN',
-      images:        [{ url: ogImage, width: 1200, height: 630, alt: article.ogTitle }],
+      locale:        'en_IN', // ✅ BUG 3 FIXED: en_IN for Hinglish content
+      images:        [{ url: ogImage, width: 1200, height: 630, alt: displayTitle }],
       publishedTime: article.publishedTime ?? '2026-01-01T00:00:00+05:30',
       modifiedTime:  article.modifiedTime  ?? new Date().toISOString(),
       authors:       [`${DOMAIN}/about`],
@@ -188,7 +190,7 @@ export async function generateMetadata({
     },
     twitter: {
       card:        'summary_large_image',
-      title:       article.ogTitle,
+      title:       displayTitle,
       description: article.desc,
       site:        '@kisanstatus',
       images:      [ogImage],
