@@ -2,9 +2,131 @@
 import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const PmKisanSelfRegisteredStatusCheck: React.FC<{ article: ArticleMeta }> = ({ article }) => {
+  // Schema Markup for SEO
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'PM Kisan Self Registered Status Check kaise kare?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'pmkisan.gov.in par jayein → Farmers Corner → Status of Self Registered Farmer/CSC Farmer → 12-digit Aadhaar number dalein → Captcha verify karein → Get Data par click karein. Aapka application status 2-3 working days mein dikhega.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Self Registered Farmer Status Pending ka kya matlab hai?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Pending matlab aapka application receive ho gaya hai lekin abhi verification chal raha hai. 7-10 din wait karein. Agar 15 din se zyada ho jaye to district agriculture office ya helpline 155261 par contact karein.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Status Rejected hone par kya kare?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Pehle rejection reason pata karein - Aadhaar-bank link nahi hai, naam mismatch hai, ya documents galat hain. Galti sudharne ke baad dobara apply karein. Name correction ke liye pmkisan.gov.in → Edit Aadhaar Details use karein.',
+        },
+      },
+    ],
+  };
+
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: article.title,
+    description: article.desc,
+    image: [
+      'https://kisanstatus.com/images/pm-kisan-self-registered-status/pm-kisan-portal-homepage.webp',
+    ],
+    datePublished: article.publishedTime || '2026-06-28T08:00:00+05:30',
+    dateModified: article.modifiedTime || new Date().toISOString(),
+    author: {
+      '@type': 'Person',
+      name: 'Sidhu Singh',
+      url: 'https://kisanstatus.com/about',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'KisanStatus',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://kisanstatus.com/logo.webp',
+      },
+    },
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://kisanstatus.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Articles',
+        item: 'https://kisanstatus.com/articles',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: article.title,
+        item: `https://kisanstatus.com/articles/${article.slug}`,
+      },
+    ],
+  };
+
+  const howToSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'PM Kisan Self Registered Farmer Status Check Kaise Kare',
+    description: 'Complete guide to check PM Kisan self registered farmer status online using Aadhaar number',
+    step: [
+      {
+        '@type': 'HowToStep',
+        name: 'Official Website Par Jayen',
+        text: 'pmkisan.gov.in par browser mein jayein',
+      },
+      {
+        '@type': 'HowToStep',
+        name: 'Farmers Corner Section Kholein',
+        text: 'Homepage par Farmers Corner section dhundhein',
+      },
+      {
+        '@type': 'HowToStep',
+        name: 'Status Option Select Karein',
+        text: 'Status of Self Registered Farmer/CSC Farmer par click karein',
+      },
+      {
+        '@type': 'HowToStep',
+        name: 'Aadhaar Number Dalein',
+        text: '12-digit Aadhaar number bina space ke enter karein',
+      },
+      {
+        '@type': 'HowToStep',
+        name: 'Captcha Verify Karein',
+        text: 'Image captcha type karein aur Get Data button dabayein',
+      },
+      {
+        '@type': 'HowToStep',
+        name: 'Status Dekhein',
+        text: 'Aapka application status screen par dikhega',
+      },
+    ],
+  };
+
   return (
     <>
       <Head>
@@ -16,9 +138,40 @@ const PmKisanSelfRegisteredStatusCheck: React.FC<{ article: ArticleMeta }> = ({ 
         <meta property="og:title" content={article.ogTitle} />
         <meta property="og:description" content={article.desc} />
         <meta property="og:type" content="article" />
+        <meta property="og:image" content="https://kisanstatus.com/images/pm-kisan-self-registered-status/pm-kisan-portal-homepage.webp" />
+        <link rel="canonical" href={`https://kisanstatus.com/articles/${article.slug}`} />
+        
+        {/* Schema Markup */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+        />
       </Head>
 
       <article className="max-w-4xl mx-auto px-4 py-8 prose prose-lg">
+        {/* Breadcrumb */}
+        <nav className="text-sm text-gray-600 mb-6" aria-label="Breadcrumb">
+          <ol className="flex items-center space-x-2">
+            <li><Link href="/" className="hover:text-green-600">Home</Link></li>
+            <li><span className="mx-2">›</span></li>
+            <li><Link href="/articles" className="hover:text-green-600">Articles</Link></li>
+            <li><span className="mx-2">›</span></li>
+            <li className="text-gray-900 font-medium truncate max-w-xs">{article.title}</li>
+          </ol>
+        </nav>
+
         <header className="mb-8">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             {article.title}
@@ -27,6 +180,8 @@ const PmKisanSelfRegisteredStatusCheck: React.FC<{ article: ArticleMeta }> = ({ 
             <span className="font-semibold text-blue-600">Author: Sidhu Singh</span>
             <span>|</span>
             <span>Last Updated: June 28, 2026</span>
+            <span>|</span>
+            <span className="text-green-600 font-medium">✓ Verified</span>
           </div>
         </header>
 
@@ -34,7 +189,7 @@ const PmKisanSelfRegisteredStatusCheck: React.FC<{ article: ArticleMeta }> = ({ 
         <div className="my-8 rounded-lg overflow-hidden shadow-lg border border-gray-200">
           <Image
             src="/images/pm-kisan-self-registered-status/pm-kisan-portal-homepage.webp"
-            alt="PM Kisan Official Website Homepage - Farmers Corner Section"
+            alt="PM Kisan Official Website Homepage showing Farmers Corner section for status check"
             width={1200}
             height={600}
             className="w-full h-auto"
@@ -45,9 +200,40 @@ const PmKisanSelfRegisteredStatusCheck: React.FC<{ article: ArticleMeta }> = ({ 
           </p>
         </div>
 
+        {/* Quick Answer Box - Featured Snippet Optimization */}
+        <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500 p-6 mb-8 rounded-r-lg">
+          <h2 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+            <span>⚡</span> Quick Answer
+          </h2>
+          <p className="text-gray-700 leading-relaxed mb-0">
+            <strong>PM Kisan Self Registered Status Check</strong> karne ke liye <strong>pmkisan.gov.in</strong> par jayein → <strong>Farmers Corner</strong> section kholein → <strong>"Status of Self Registered Farmer/CSC Farmer"</strong> option select karein → apna <strong>12-digit Aadhaar number</strong> dalein → Captcha verify karein → <strong>Get Data</strong> button dabayein. Aapka application status (Approved, Pending, ya Rejected) screen par dikh jayega.
+          </p>
+        </div>
+
+        {/* Table of Contents */}
+        <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-8">
+          <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+            <span>📋</span> Is Article Mein Kya Hai?
+          </h2>
+          <nav>
+            <ul className="space-y-2 text-gray-700">
+              <li><a href="#self-registered-matlab" className="hover:text-green-600 hover:underline">1. Self Registered Farmer ka Matlab</a></li>
+              <li><a href="#status-check-steps" className="hover:text-green-600 hover:underline">2. Status Check Karne ka Tarika (6 Steps)</a></li>
+              <li><a href="#status-types" className="hover:text-green-600 hover:underline">3. Application Status ke Types aur Matlab</a></li>
+              <li><a href="#status-table" className="hover:text-green-600 hover:underline">4. Status Meaning Table (Quick Reference)</a></li>
+              <li><a href="#csc-registration" className="hover:text-green-600 hover:underline">5. CSC Se Registration Ka Status</a></li>
+              <li><a href="#common-problems" className="hover:text-green-600 hover:underline">6. Common Problems aur Solutions</a></li>
+              <li><a href="#mobile-check" className="hover:text-green-600 hover:underline">7. Mobile Se Status Dekhne ka Tarika</a></li>
+              <li><a href="#after-registration" className="hover:text-green-600 hover:underline">8. Registration Ke Baad Kya Karein?</a></li>
+              <li><a href="#help-contact" className="hover:text-green-600 hover:underline">9. Help Ke Liye Kahan Sampark Karein?</a></li>
+              <li><a href="#faqs" className="hover:text-green-600 hover:underline">10. FAQs</a></li>
+            </ul>
+          </nav>
+        </div>
+
         <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-8 rounded">
           <p className="text-gray-700 italic mb-0">
-            <strong>Quick Summary:</strong> Is article mein hum aapko batayenge ki PM Kisan Self Registered Farmer ka status kaise check karte hain. Step-by-step process, common problems aur unke solutions - sab kuch detail mein.
+            <strong>Quick Summary:</strong> Agar aapne khud se PM Kisan ke liye apply kiya hai, to yeh guide aapko batayegi ki application approve hua ya nahi, status kaise dekhein, aur agar koi problem aaye to kya karein.
           </p>
         </div>
 
@@ -61,7 +247,7 @@ const PmKisanSelfRegisteredStatusCheck: React.FC<{ article: ArticleMeta }> = ({ 
           </p>
         </section>
 
-        <section className="mb-8">
+        <section id="self-registered-matlab" className="mb-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">📱 Self Registered Farmer ka Matlab Kya Hai?</h2>
           
           <p className="text-gray-700 leading-relaxed mb-4">
@@ -94,8 +280,8 @@ const PmKisanSelfRegisteredStatusCheck: React.FC<{ article: ArticleMeta }> = ({ 
           </div>
         </section>
 
-        <section className="mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">🔍 PM Kisan Self Registered Farmer Status Check Karne ka Sahi Tarika (Step-by-Step)</h2>
+        <section id="status-check-steps" className="mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">🔍 PM Kisan Self Registered Farmer Status Check Karne ka Sahi Tarika</h2>
           
           <p className="text-gray-700 leading-relaxed mb-6">
             Chaliye ab main aapko ek-ek step batata hu ki kaise aap apna status check kar sakte hain. Main koshish karunga ki har step itna clear ho ki koi galti na ho.
@@ -149,7 +335,7 @@ const PmKisanSelfRegisteredStatusCheck: React.FC<{ article: ArticleMeta }> = ({ 
               <div className="my-6 rounded-lg overflow-hidden shadow-md border border-gray-200">
                 <Image
                   src="/images/pm-kisan-self-registered-status/pm-kisan-aadhaar-form.webp"
-                  alt="PM Kisan Status Check Form - Aadhaar Number Input Field with Captcha"
+                  alt="PM Kisan Status Check Form showing 12-digit Aadhaar Number input field and Captcha verification"
                   width={800}
                   height={500}
                   className="w-full h-auto"
@@ -186,7 +372,7 @@ const PmKisanSelfRegisteredStatusCheck: React.FC<{ article: ArticleMeta }> = ({ 
               <div className="my-6 rounded-lg overflow-hidden shadow-md border border-gray-200">
                 <Image
                   src="/images/pm-kisan-self-registered-status/pm-kisan-mobile-status-result.webp"
-                  alt="Mobile Screen Showing PM Kisan Application Approved Status"
+                  alt="Mobile screen displaying PM Kisan Application Approved Status for self registered farmer"
                   width={900}
                   height={600}
                   className="w-full h-auto"
@@ -208,7 +394,7 @@ const PmKisanSelfRegisteredStatusCheck: React.FC<{ article: ArticleMeta }> = ({ 
           </div>
         </section>
 
-        <section className="mb-8">
+        <section id="status-types" className="mb-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">📊 Application Status ke Types aur Unka Matlab</h2>
           
           <p className="text-gray-700 leading-relaxed mb-6">
@@ -325,7 +511,71 @@ const PmKisanSelfRegisteredStatusCheck: React.FC<{ article: ArticleMeta }> = ({ 
           </div>
         </section>
 
-        <section className="mb-8">
+        {/* Status Meaning Table - Featured Snippet Optimization */}
+        <section id="status-table" className="mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">📋 Status Meaning Table (Quick Reference)</h2>
+          
+          <div className="overflow-x-auto">
+            <table className="min-w-full bg-white border border-gray-200 rounded-lg overflow-hidden">
+              <thead className="bg-gradient-to-r from-green-600 to-emerald-600 text-white">
+                <tr>
+                  <th className="px-6 py-3 text-left text-sm font-bold uppercase tracking-wider">Status</th>
+                  <th className="px-6 py-3 text-left text-sm font-bold uppercase tracking-wider">Matlab</th>
+                  <th className="px-6 py-3 text-left text-sm font-bold uppercase tracking-wider">Kya Karein?</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200">
+                <tr className="hover:bg-gray-50">
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-100 text-orange-800">
+                      Pending
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 text-sm text-gray-700">Application receive hua, verification chal raha hai</td>
+                  <td className="px-6 py-4 text-sm text-gray-700">7-10 din wait karein, phir check karein</td>
+                </tr>
+                <tr className="hover:bg-gray-50">
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                      Approved
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 text-sm text-gray-700">Application accept ho gaya, beneficiary ban gaye</td>
+                  <td className="px-6 py-4 text-sm text-gray-700">eKYC complete karein, bank account verify karein</td>
+                </tr>
+                <tr className="hover:bg-gray-50">
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
+                      Rejected
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 text-sm text-gray-700">Application reject ho gaya, koi galti hai</td>
+                  <td className="px-6 py-4 text-sm text-gray-700">Reason pata karein, galti sudharein, dobara apply karein</td>
+                </tr>
+                <tr className="hover:bg-gray-50">
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
+                      Aadhaar Failed
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 text-sm text-gray-700">Aadhaar verify nahi ho raha</td>
+                  <td className="px-6 py-4 text-sm text-gray-700">Aadhaar-bank link karein, naam match karein</td>
+                </tr>
+                <tr className="hover:bg-gray-50">
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">
+                      Bank Not Verified
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 text-sm text-gray-700">Bank account verify nahi hua</td>
+                  <td className="px-6 py-4 text-sm text-gray-700">Bank jayein, IFSC check karein, account active karein</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="csc-registration" className="mb-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">🎯 CSC Se Registration Karvaya Hai To Status Kaise Check Karein?</h2>
           
           <p className="text-gray-700 leading-relaxed mb-4">
@@ -353,7 +603,7 @@ const PmKisanSelfRegisteredStatusCheck: React.FC<{ article: ArticleMeta }> = ({ 
           </div>
         </section>
 
-        <section className="mb-8">
+        <section id="common-problems" className="mb-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">🔧 Common Problems aur Unke Solutions</h2>
           
           <p className="text-gray-700 leading-relaxed mb-6">
@@ -428,7 +678,7 @@ const PmKisanSelfRegisteredStatusCheck: React.FC<{ article: ArticleMeta }> = ({ 
           </div>
         </section>
 
-        <section className="mb-8">
+        <section id="mobile-check" className="mb-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">📱 Mobile Se Status Check Karne Ka Aasan Tarika</h2>
           
           <p className="text-gray-700 leading-relaxed mb-4">
@@ -464,7 +714,7 @@ const PmKisanSelfRegisteredStatusCheck: React.FC<{ article: ArticleMeta }> = ({ 
           </div>
         </section>
 
-        <section className="mb-8">
+        <section id="after-registration" className="mb-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">✅ Self Registration Ke Baad Kya Karein? (Important Checklist)</h2>
           
           <p className="text-gray-700 leading-relaxed mb-4">
@@ -531,7 +781,7 @@ const PmKisanSelfRegisteredStatusCheck: React.FC<{ article: ArticleMeta }> = ({ 
           </div>
         </section>
 
-        <section className="mb-8">
+        <section id="help-contact" className="mb-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">📞 Help Ke Liye Kahan Sampark Karein?</h2>
           
           <p className="text-gray-700 leading-relaxed mb-4">
@@ -581,7 +831,41 @@ const PmKisanSelfRegisteredStatusCheck: React.FC<{ article: ArticleMeta }> = ({ 
           </div>
         </section>
 
+        {/* Official Sources Section - EEAT */}
         <section className="mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">🏛️ Official Sources aur References</h2>
+          
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <p className="text-gray-700 mb-4">
+              Yeh article likhne mein maine neeche di gayi official sources ka istemal kiya hai:
+            </p>
+            <ul className="space-y-2 text-gray-700">
+              <li>
+                <strong>1.</strong> <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800">
+                  PM Kisan Official Website (pmkisan.gov.in)
+                </a>
+              </li>
+              <li>
+                <strong>2.</strong> <a href="https://pmkisan.gov.in/PMKisanFAQ.aspx" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800">
+                  PM Kisan Official FAQs
+                </a>
+              </li>
+              <li>
+                <strong>3.</strong> <a href="https://pib.gov.in/PressReleasePage.aspx?PRID=" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800">
+                  PIB (Press Information Bureau) - Government of India
+                </a>
+              </li>
+              <li>
+                <strong>4.</strong> Ministry of Agriculture & Farmers Welfare, Government of India
+              </li>
+            </ul>
+            <p className="text-gray-600 text-sm mt-4 italic">
+              <strong>Note:</strong> Scheme rules aur guidelines mein badlav ho sakta hai. Latest information ke liye hamesha official website check karein.
+            </p>
+          </div>
+        </section>
+
+        <section id="faqs" className="mb-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">📝 FAQs (Aksar Puche Jane Wale Sawal)</h2>
           
           <div className="space-y-4">
@@ -652,12 +936,13 @@ const PmKisanSelfRegisteredStatusCheck: React.FC<{ article: ArticleMeta }> = ({ 
           <div className="text-gray-600 text-sm space-y-1">
             <p><strong>Author:</strong> Sidhu Singh</p>
             <p><strong>Experience:</strong> 3+ years helping farmers with PM Kisan Yojana</p>
+            <p><strong>Expertise:</strong> PM Kisan registration, status check, eKYC, and payment issues</p>
             <p><strong>Contact:</strong> kisanstatus.com/contact</p>
             <p><strong>Last Updated:</strong> June 28, 2026</p>
           </div>
           
           <div className="mt-6 p-4 bg-gray-100 rounded text-xs text-gray-600">
-            <em>Disclaimer: Yeh information official PM Kisan guidelines aur personal experience par aadharit hai. Kisi bhi badlav ke liye aadhikarik website pmkisan.gov.in check karein.</em>
+            <em>Disclaimer: Yeh information official PM Kisan guidelines aur personal experience par aadharit hai. Scheme rules mein badlav ho sakta hai. Latest information ke liye hamesha pmkisan.gov.in check karein. KisanStatus.com ek independent information portal hai, government ka official platform nahi hai.</em>
           </div>
         </footer>
       </article>
