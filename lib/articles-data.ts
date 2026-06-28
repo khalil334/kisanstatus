@@ -291,7 +291,7 @@ export const ARTICLES: ArticleMeta[] = [
     publishedTime: '2026-06-27T08:00:00+05:30',
     modifiedTime: '2026-06-27T08:00:00+05:30',
   },
-  // ✅ ARTICLE #25 (NEW)
+  // ✅ ARTICLE #25
   {
     slug: 'pm-kisan-self-registered-status-check',
     title: 'PM Kisan Self Registered Farmer Status Check 2026 | Online Status Kaise Dekhen',
@@ -302,6 +302,18 @@ export const ARTICLES: ArticleMeta[] = [
     category: 'status-check',
     publishedTime: '2026-06-28T08:00:00+05:30',
     modifiedTime: '2026-06-28T08:00:00+05:30',
+  },
+  // ✅ ARTICLE #26 (NEW) — Real Expert Status Check Guide
+  {
+    slug: 'pm-kisan-status-check-online-2026-complete-guide',
+    title: 'PM Kisan Status Check Online 2026 — Real Farmer Guide With Screenshots',
+    desc: 'PM Kisan status check kaise karein 2026 mein? Real examples ke sath step-by-step guide — Aadhaar, mobile, registration number se check karo. Common errors aur unka fix bhi.',
+    ogTitle: 'PM Kisan Status Check 2026 — Real Farmer Experience & Step-by-Step Guide',
+    keywords: ['PM Kisan status check 2026', 'PM Kisan online status', 'PM Kisan Aadhaar check', 'PM Kisan mobile check', 'पीएम किसान स्टेटस चेक', 'PM Kisan beneficiary status'],
+    component: 'PmKisanStatusCheckOnline2026CompleteGuide',
+    category: 'status-check',
+    publishedTime: '2026-06-29T08:00:00+05:30',
+    modifiedTime: '2026-06-29T08:00:00+05:30',
   },
 ];
 
