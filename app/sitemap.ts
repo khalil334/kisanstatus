@@ -1,9 +1,3 @@
-/**
- * Dynamic Sitemap — KisanStatus.com
- * ✅ FULLY AUTOMATIC — Koi manual update nahi chahiye
- * ✅ FIXED: Added /articles page, Optimized lastModified dates
- * ✅ ADDED: Quick Status Checker tool
- */
 import { MetadataRoute } from 'next';
 import { ARTICLES, CATEGORIES } from '@/lib/articles-data';
 
@@ -18,12 +12,9 @@ const STATES = [
   'ladakh', 'puducherry', 'andaman-nicobar', 'chandigarh', 'dadra-nagar-haveli', 'lakshadweep',
 ];
 
-// Helper to get current date only for truly dynamic content
 const now = new Date();
 
 export default function sitemap(): MetadataRoute.Sitemap {
-
-  // ── Static pages (Priority High) ──────────────────────────────────────────
   const staticPages: MetadataRoute.Sitemap = [
     { url: BASE_URL,                                     lastModified: now, changeFrequency: 'daily',   priority: 1.0 },
     { url: `${BASE_URL}/articles`,                       lastModified: now, changeFrequency: 'daily',   priority: 0.95 },
@@ -31,7 +22,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/pm-kisan-status`,                lastModified: now, changeFrequency: 'weekly',  priority: 0.9 },
     { url: `${BASE_URL}/new-registration`,               lastModified: now, changeFrequency: 'weekly',  priority: 0.9 },
     { url: `${BASE_URL}/calculator`,                     lastModified: now, changeFrequency: 'weekly',  priority: 0.8 },
-    // ✅ NEW: Quick Status Checker Tool Added
     { url: `${BASE_URL}/calculator/quick-status-check`,  lastModified: now, changeFrequency: 'weekly',  priority: 0.9 },
     { url: `${BASE_URL}/calculator/installment-tracker`, lastModified: now, changeFrequency: 'weekly',  priority: 0.9 },
     { url: `${BASE_URL}/calculator/pm-kisan-benefit`,    lastModified: now, changeFrequency: 'weekly',  priority: 0.8 },
@@ -48,7 +38,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/terms-of-service`,               lastModified: now, changeFrequency: 'yearly',  priority: 0.4 },
   ];
 
-  // ── Category pages — AUTO from CATEGORIES ─────────────────────────────────
   const categoryPages: MetadataRoute.Sitemap = Object.keys(CATEGORIES).map((category) => ({
     url:             `${BASE_URL}/articles/category/${category}`,
     lastModified:    now,
@@ -56,7 +45,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority:        0.85,
   }));
 
-  // ── Article pages — AUTO from articles-data.ts ────────────────────────────
   const articlePages: MetadataRoute.Sitemap = ARTICLES.map((article) => ({
     url:             `${BASE_URL}/articles/${article.slug}`,
     lastModified:    article.modifiedTime
@@ -68,10 +56,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority:        0.9,
   }));
 
-  // ── State beneficiary list pages ──────────────────────────────────────────
   const statePages: MetadataRoute.Sitemap = STATES.map((slug) => ({
     url:             `${BASE_URL}/beneficiary-list/${slug}`,
-    lastModified:    now, 
+    lastModified:    now,
     changeFrequency: 'weekly' as const,
     priority:        0.8,
   }));
