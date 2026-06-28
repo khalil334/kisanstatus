@@ -225,8 +225,9 @@ const PmKisanSelfRegisteredStatusCheck: React.FC<{ article: ArticleMeta }> = ({ 
               <li><a href="#common-problems" className="hover:text-green-600 hover:underline">6. Common Problems aur Solutions</a></li>
               <li><a href="#mobile-check" className="hover:text-green-600 hover:underline">7. Mobile Se Status Dekhne ka Tarika</a></li>
               <li><a href="#after-registration" className="hover:text-green-600 hover:underline">8. Registration Ke Baad Kya Karein?</a></li>
-              <li><a href="#help-contact" className="hover:text-green-600 hover:underline">9. Help Ke Liye Kahan Sampark Karein?</a></li>
-              <li><a href="#faqs" className="hover:text-green-600 hover:underline">10. FAQs</a></li>
+              <li><a href="#related-articles" className="hover:text-green-600 hover:underline">9. Related Articles (Zaroor Padhein)</a></li>
+              <li><a href="#help-contact" className="hover:text-green-600 hover:underline">10. Help Ke Liye Kahan Sampark Karein?</a></li>
+              <li><a href="#faqs" className="hover:text-green-600 hover:underline">11. FAQs</a></li>
             </ul>
           </nav>
         </div>
@@ -264,7 +265,7 @@ const PmKisanSelfRegisteredStatusCheck: React.FC<{ article: ArticleMeta }> = ({ 
           <div className="bg-gray-50 p-6 rounded-lg mb-4">
             <h3 className="font-semibold text-lg mb-3">Dusra Tarika: Self Registration</h3>
             <p className="text-gray-700 mb-0">
-              Aap <strong>khud ghar baithe</strong> online pmkisan.gov.in website par jakar apna registration karte hain. Ise hi <strong>Self Registration</strong> kehte hain.
+              Aap <strong>apne ghar se</strong> online pmkisan.gov.in website par jakar apna registration karte hain. Ise hi <strong>Self Registration</strong> kehte hain.
             </p>
           </div>
 
@@ -284,7 +285,7 @@ const PmKisanSelfRegisteredStatusCheck: React.FC<{ article: ArticleMeta }> = ({ 
           <h2 className="text-2xl font-bold text-gray-900 mb-4">🔍 PM Kisan Self Registered Farmer Status Check Karne ka Sahi Tarika</h2>
           
           <p className="text-gray-700 leading-relaxed mb-6">
-            Chaliye ab main aapko ek-ek step batata hu ki kaise aap apna status check kar sakte hain. Main koshish karunga ki har step itna clear ho ki koi galti na ho.
+            Chaliye ab main aapko ek-ek step batata hu ki kaise aap apna status dekh sakte hain. Main koshish karunga ki har step itna clear ho ki koi galti na ho.
           </p>
 
           <div className="space-y-6">
@@ -448,13 +449,15 @@ const PmKisanSelfRegisteredStatusCheck: React.FC<{ article: ArticleMeta }> = ({ 
               <h3 className="font-bold text-xl text-red-700 mb-3">3️⃣ Rejected</h3>
               <p className="text-gray-800 mb-3"><strong>Matlab:</strong> Aapka application reject kar diya gaya hai.</p>
               
+              {/* ✅ UPDATED: Correct eligibility criteria (2 hectare rule removed) */}
               <p className="text-gray-800 mb-2 font-semibold">Kyun Reject Hota Hai:</p>
               <ul className="list-disc list-inside text-gray-700 space-y-1 ml-4 mb-3">
-                <li>❌ Aadhaar aur bank account link nahi hai</li>
+                <li>❌ Aadhaar aur bank account link nahi hai (NPCI mapping missing)</li>
                 <li>❌ Zameen ke documents mein gadbad hai</li>
-                <li>❌ Aap PM Kisan ke liye eligible nahi hain (aapki land holding 2 hectare se zyada hai)</li>
-                <li>❌ Aap income tax payer hain</li>
-                <li>❌ Aap government employee hain</li>
+                <li>❌ Aap income tax payer hain (pichle assessment year mein)</li>
+                <li>❌ Aap government employee hain (Multi Tasking Staff ko chhodkar)</li>
+                <li>❌ Aap former/present institutional land holder hain</li>
+                <li>❌ Aap doctor, engineer, CA jaise professional hain jinhe registered hona padta hai</li>
                 <li>❌ Naam, Aadhaar ya bank details mein mismatch hai</li>
               </ul>
 
@@ -682,7 +685,7 @@ const PmKisanSelfRegisteredStatusCheck: React.FC<{ article: ArticleMeta }> = ({ 
           <h2 className="text-2xl font-bold text-gray-900 mb-4">📱 Mobile Se Status Check Karne Ka Aasan Tarika</h2>
           
           <p className="text-gray-700 leading-relaxed mb-4">
-            Bhaiyon, har kisan ke paas laptop/computer nahi hota. To chaliye main batata hu ki <strong>mobile se kaise status check karein</strong>:
+            Bhaiyon, har kisan ke paas laptop/computer nahi hota. To chaliye main batata hu ki <strong>mobile se kaise status dekhein</strong>:
           </p>
 
           <div className="space-y-4">
@@ -778,6 +781,99 @@ const PmKisanSelfRegisteredStatusCheck: React.FC<{ article: ArticleMeta }> = ({ 
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* ✅ Related Articles Section with 4 Internal Links */}
+        <section id="related-articles" className="mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">📚 Related Articles (Zaroor Padhein)</h2>
+          
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Status check karne ke baad ye articles bhi padhein taaki aapko PM Kisan scheme ki puri samajh aa jaye:
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Link 1: 23vi Kist Status */}
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 p-5 rounded-lg hover:shadow-lg transition-shadow">
+              <div className="flex items-start gap-3">
+                <span className="text-3xl">💰</span>
+                <div>
+                  <h3 className="font-bold text-gray-900 mb-2">PM Kisan 23vi Kist Status Check 2026</h3>
+                  <p className="text-gray-700 text-sm mb-3">
+                    23vi kist 20 June 2026 ko release ho chuki hai. Apna payment status check karein aur jaanein ki paisa aaya ya nahi.
+                  </p>
+                  <Link 
+                    href="/articles/pm-kisan-23vi-kist-2026-status-check" 
+                    className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800 font-semibold text-sm underline"
+                  >
+                    Status Check Karein →
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Link 2: 24vi Kist */}
+            <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 p-5 rounded-lg hover:shadow-lg transition-shadow">
+              <div className="flex items-start gap-3">
+                <span className="text-3xl">📆</span>
+                <div>
+                  <h3 className="font-bold text-gray-900 mb-2">PM Kisan 24vi Kist 2026 - Kab Aayegi?</h3>
+                  <p className="text-gray-700 text-sm mb-3">
+                    Agli installment October 2026 mein expected hai. Date, eligibility aur payment guide yahan padhein.
+                  </p>
+                  <Link 
+                    href="/articles/pm-kisan-24vi-kist" 
+                    className="inline-flex items-center gap-1 text-green-600 hover:text-green-800 font-semibold text-sm underline"
+                  >
+                    Complete Guide Padhein →
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Link 3: FTO Generated */}
+            <div className="bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-200 p-5 rounded-lg hover:shadow-lg transition-shadow">
+              <div className="flex items-start gap-3">
+                <span className="text-3xl">📋</span>
+                <div>
+                  <h3 className="font-bold text-gray-900 mb-2">PM Kisan FTO Generated Ka Matlab Kya Hai?</h3>
+                  <p className="text-gray-700 text-sm mb-3">
+                    FTO status kya hota hai? FTO Pending, FTO Processed aur Payment Order ka complete explanation.
+                  </p>
+                  <Link 
+                    href="/articles/pm-kisan-fto-generated-ka-matlab-kya-hai" 
+                    className="inline-flex items-center gap-1 text-purple-600 hover:text-purple-800 font-semibold text-sm underline"
+                  >
+                    FTO Guide Padhein →
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Link 4: Land Seeding Status */}
+            <div className="bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200 p-5 rounded-lg hover:shadow-lg transition-shadow">
+              <div className="flex items-start gap-3">
+                <span className="text-3xl">🌾</span>
+                <div>
+                  <h3 className="font-bold text-gray-900 mb-2">PM Kisan Land Seeding Status Check</h3>
+                  <p className="text-gray-700 text-sm mb-3">
+                    Zameen portal se link hai ya nahi? Pending, Rejected, Approved status ka matlab aur solution.
+                  </p>
+                  <Link 
+                    href="/articles/pm-kisan-land-seeding-status-check" 
+                    className="inline-flex items-center gap-1 text-amber-600 hover:text-amber-800 font-semibold text-sm underline"
+                  >
+                    Land Seeding Guide →
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-6 bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+            <p className="text-gray-800 mb-0">
+              <strong>💡 Pro Tip:</strong> Ye sabhi articles padhne ke baad aapko PM Kisan scheme ki complete samajh aa jayegi aur koi bhi problem aaye to aap khud solve kar payenge!
+            </p>
           </div>
         </section>
 
