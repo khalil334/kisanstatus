@@ -1,5 +1,5 @@
 /**
- * app/articles/[slug]/page.tsx — v2
+ * app/articles/[slug]/page.tsx — v3
  * ✅ FIXES:
  *  - JSON-LD schemas server-side inject ho rahe hain (Google crawl ke liye)
  *  - Per-article OG image map kept
@@ -8,6 +8,7 @@
  *  - ✅ UPDATED: Added pm-kisan-complete-guide (Article #23)
  *  - ✅ UPDATED: Added soil-health-card-complete-guide-2026 (Article #24)
  *  - ✅ UPDATED: Added pm-kisan-self-registered-status-check (Article #25)
+ *  - ✅ UPDATED: Added pm-kisan-status-check-online-2026-complete-guide (Article #26)
  *  - ✅ CATEGORY BADGE ADDED — Clickable category badge at top of article
  */
 import type { Metadata } from 'next';
@@ -44,14 +45,14 @@ const ARTICLE_OG_IMAGES: Record<string, string> = {
   'nano-dap-500ml-price-in-india-2026':              '/images/nano-dap-500ml-price-india-2026.webp',
   'pm-kisan-complete-guide':                         '/images/pm-kisan-status-check-hero.webp',
   'soil-health-card-complete-guide-2026':            '/images/soil-health-card-complete-guide-2026.webp',
-  // ✅ ARTICLE #25 (NEW)
   'pm-kisan-self-registered-status-check':           '/images/pm-kisan-self-registered-status/pm-kisan-portal-homepage.webp',
+  // ✅ ARTICLE #26 (NEW)
+  'pm-kisan-status-check-online-2026-complete-guide': '/images/pm-kisan-status-check-tool-interface.webp',
 };
 
 // ── JSON-LD schema generator (server-side) ─────────────────────────────────
 function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
   return [
-    // Article Schema
     {
       '@context': 'https://schema.org',
       '@type': 'Article',
@@ -78,7 +79,6 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
       inLanguage: 'hi-IN',
       isPartOf: { '@type': 'WebSite', name: 'KisanStatus.com', url: DOMAIN },
     },
-    // BreadcrumbList Schema
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
@@ -88,7 +88,6 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
         { '@type': 'ListItem', position: 3, name: article.title, item: url },
       ],
     },
-    // WebPage Schema
     {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
@@ -143,8 +142,9 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   PmKisanMobileNumberChange2026:              dynamic(() => import('@/components/articles/PmKisanMobileNumberChange2026'),             { loading: ArticleLoading }),
   PmKisanCompleteGuide:                       dynamic(() => import('@/components/articles/pm-kisan-complete-guide'),                   { loading: ArticleLoading }),
   SoilHealthCardCompleteGuide2026:            dynamic(() => import('@/components/articles/soil-health-card-complete-guide-2026'),      { loading: ArticleLoading }),
-  // ✅ ARTICLE #25 (NEW)
   PmKisanSelfRegisteredStatusCheck:           dynamic(() => import('@/components/articles/pm-kisan-self-registered-status-check'),     { loading: ArticleLoading }),
+  // ✅ ARTICLE #26 (NEW)
+  PmKisanStatusCheckOnline2026CompleteGuide:  dynamic(() => import('@/components/articles/PmKisanStatusCheckOnline2026CompleteGuide'), { loading: ArticleLoading }),
 };
 
 export const revalidate = 86400;
