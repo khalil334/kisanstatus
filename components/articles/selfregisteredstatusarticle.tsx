@@ -2,7 +2,8 @@ import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 
-const PMKisanSelfRegisteredStatusArticle: React.FC = () => {
+// Component name PascalCase mein hi rahega (React rule)
+const PmKisanSelfRegisteredStatusCheck: React.FC = () => {
   return (
     <>
       <Head>
@@ -663,4 +664,4 @@ const PMKisanSelfRegisteredStatusArticle: React.FC = () => {
   );
 };
 
-export default PMKisanSelfRegisteredStatusArticle;
+export default PmKisanSelfRegisteredStatusCheck;
