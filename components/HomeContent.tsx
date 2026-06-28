@@ -34,7 +34,7 @@ function useScrollReveal() {
   return { ref, visible };
 }
 
-// ── ✅ Sirf 3 Latest Articles Homepage Pe ────────────────────────────
+// ── ✅ LATEST ARTICLES: Sirf 6 NEWEST articles (no overlap with Problem Solver) ──
 const NEW_ARTICLES = [
   {
     slug: 'pm-kisan-self-registered-status-check',
@@ -56,8 +56,8 @@ const NEW_ARTICLES = [
     desc: 'Mitti health card download, status check, PDF download aur registration — complete guide',
     category: 'Farming',
     keywords: {
-      hinglish: ['Soil Health Card', 'Download', 'Status Check', 'PDF'],
-      hindi: ['मिट्टी स्वास्थ्य कार्ड', 'डाउनलोड', 'स्टेटस चेक'],
+      hinglish: ['Soil Health Card', 'Download', 'PDF'],
+      hindi: ['मिट्टी स्वास्थ्य कार्ड', 'डाउनलोड'],
     },
   },
   {
@@ -68,8 +68,44 @@ const NEW_ARTICLES = [
     desc: 'Saari problems ka solution — status check, eKYC, payment, rejection — ek hi guide mein',
     category: 'Guide',
     keywords: {
-      hinglish: ['Complete Guide', 'All Problems', 'Solution'],
-      hindi: ['पूर्ण गाइड', 'सभी समस्याएं', 'समाधान'],
+      hinglish: ['Complete Guide', 'All Problems'],
+      hindi: ['पूर्ण गाइड', 'सभी समस्याएं'],
+    },
+  },
+  {
+    slug: 'pm-kisan-24vi-kist',
+    title: 'PM Kisan 24vi Kist 2026 — Date & Status Guide',
+    emoji: '⏳',
+    image: '/images/pm-kisan-24vi-kist-october-2026.webp',
+    desc: '24vi kist kab aayegi? Expected date, eligibility check, eKYC deadline aur payment process',
+    category: 'Status',
+    keywords: {
+      hinglish: ['24vi Kist', 'Next Installment', 'October 2026'],
+      hindi: ['24वीं किस्त', 'अगली किस्त', 'अक्टूबर 2026'],
+    },
+  },
+  {
+    slug: 'agristack-kya-hai',
+    title: 'AgriStack Kya Hai 2026 — Farmer Digital ID',
+    emoji: '🆔',
+    image: '/images/agristack-kya-hai-infographic.webp',
+    desc: 'AgriStack farmer digital identity kya hai? PM Kisan se connection, benefits aur registration process',
+    category: 'Digital',
+    keywords: {
+      hinglish: ['AgriStack', 'Farmer ID', 'Digital Identity'],
+      hindi: ['एग्रीस्टैक', 'किसान आईडी', 'डिजिटल पहचान'],
+    },
+  },
+  {
+    slug: 'nano-dap-500ml-price-in-india-2026',
+    title: 'Nano DAP 500ml Price India 2026 — IFFCO Guide',
+    emoji: '🧪',
+    image: '/images/nano-dap-500ml-price-india-2026.webp',
+    desc: 'IFFCO Nano DAP 500ml ki kimat, kahan milega, kaise use karein — complete kisan guide',
+    category: 'Farming',
+    keywords: {
+      hinglish: ['Nano DAP', 'IFFCO', 'Price 2026'],
+      hindi: ['नैनो डीएपी', 'आईएफसीओ', 'कीमत 2026'],
     },
   },
 ];
@@ -120,7 +156,7 @@ const FAQS = [
   },
 ];
 
-// ── Schema (Sirf FAQ aur ArticleList yahan rahenge, WebSite page.tsx mein hai) ──
+// ── Schema ──
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -169,7 +205,6 @@ function NewsTicker() {
       </span>
       <div className="overflow-hidden flex-1">
         <div className="flex gap-16 whitespace-nowrap text-xs font-medium" style={{ animation: 'marquee 35s linear infinite' }}>
-          {/* ✅ FIX: Sirf ek baar map karein, duplicate nahi */}
           {TICKER_ITEMS.map((item, i) => (
             <span key={i} className="shrink-0">{item}</span>
           ))}
@@ -227,7 +262,6 @@ export default function HomeContent() {
 
   return (
     <>
-      {/* ✅ Schema: Sirf FAQ aur ItemList yahan, WebSite schema page.tsx mein hai */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleListSchema) }} />
 
@@ -320,9 +354,7 @@ export default function HomeContent() {
         </div>
       </div>
 
-      {/* ✅ REMOVED: Faltu ka Stats Section hata diya gaya hai kyunki Quick Info card mein sab hai */}
-
-      {/* Problem → Solution */}
+      {/* ✅ SECTION 1: Problem → Solution (Quick fixes — NOT articles) */}
       <section className="py-12 bg-white" aria-labelledby="problems-heading">
         <div className="container-site">
           <Reveal>
@@ -359,7 +391,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* Latest Articles */}
+      {/* ✅ SECTION 2: Latest Articles — 6 NEWEST only (NO overlap with Problem Solver) */}
       <section className="py-14 bg-gradient-to-b from-gray-50 to-white" aria-labelledby="latest-heading">
         <div className="container-site">
           <Reveal>
@@ -381,10 +413,10 @@ export default function HomeContent() {
                     <p className="text-gray-500 text-xs leading-relaxed mb-3">{a.desc}</p>
                     <div className="flex flex-wrap gap-1.5 mb-3">
                       {a.keywords.hinglish.map(kw => (
-                        <span key={kw} className="text-[10px] bg-green-50 border border-green-200 text-green-700 px-2 py-0.5 rounded-full font-medium" title={`Search in Hinglish: ${kw}`}>{kw}</span>
+                        <span key={kw} className="text-[10px] bg-green-50 border border-green-200 text-green-700 px-2 py-0.5 rounded-full font-medium">{kw}</span>
                       ))}
                       {a.keywords.hindi.map(kw => (
-                        <span key={kw} className="text-[10px] bg-blue-50 border border-blue-200 text-blue-700 px-2 py-0.5 rounded-full font-medium" title={`Search in Hindi: ${kw}`}>{kw}</span>
+                        <span key={kw} className="text-[10px] bg-blue-50 border border-blue-200 text-blue-700 px-2 py-0.5 rounded-full font-medium">{kw}</span>
                       ))}
                     </div>
                     <div className="flex items-center justify-between pt-2 border-t border-gray-100 mt-auto">
@@ -397,12 +429,13 @@ export default function HomeContent() {
             ))}
           </div>
 
+          {/* View All Button */}
           <Reveal delay={200}>
             <div className="flex flex-col items-center mt-10 gap-3">
               <Link href="/articles" className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-black px-8 py-4 rounded-2xl text-base transition-all hover:scale-105 shadow-lg shadow-green-600/30">
-                📚 Saari Guides Dekho — View All Articles
+                📚 Saari {STATS.totalArticles} Guides Dekho — View All Articles
               </Link>
-              <p className="text-gray-400 text-xs">{STATS.totalArticles} guides — PM Kisan, KCC, PMFBY, AgriStack, Soil Health Card aur zyada</p>
+              <p className="text-gray-400 text-xs">PM Kisan, KCC, PMFBY, AgriStack, Soil Health Card aur zyada</p>
             </div>
           </Reveal>
         </div>
