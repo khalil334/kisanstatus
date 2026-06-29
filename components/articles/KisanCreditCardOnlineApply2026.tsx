@@ -1,10 +1,8 @@
 'use client';
 import Link from 'next/link';
 import { SvgDocuments } from '@/components/ArticleSVGs';
-import { SI, StepList, IB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, fmtDate } from '@/components/ArticleShared';
+import { SI, StepList, IB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
-
-const DOMAIN = 'https://kisanstatus.com';
 
 const RELATED = [
   {slug:'pm-kisan-23vi-kist-2026-status-check',   title:'23vi Kist Status Check',      emoji:'💰'},
@@ -14,9 +12,6 @@ const RELATED = [
 ];
 
 export default function KisanCreditCardOnlineApply2026({ article }: { article: ArticleMeta }) {
-  const PUBLISHED = article.publishedTime ?? '2026-06-01T08:00:00+05:30';
-  const MODIFIED  = article.modifiedTime  ?? PUBLISHED;
-
   return (
     <>
       <div className="bg-primary-600 py-8">
@@ -28,12 +23,10 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">💳 Kisan Credit Card</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            Kisan Credit Card (KCC) Online Apply 2026 — Eligibility, Documents Aur Loan Limit
+            Kisan Credit Card (KCC) Online Apply 2026 — Complete Guide Hindi Mein
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white">Sidhu Singh</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
+            <span>✍️ <Link href="/about" className="underline hover:text-white">KisanStatus Team</Link></span>
             <span>⏱️ 15 min read</span>
           </div>
         </div>
@@ -56,44 +49,44 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
         {/* Intro */}
         <section className="mb-8">
           <p className="text-gray-700 leading-relaxed mb-4">
-            Agar aap Bharat mein kisan hain aur sasta, asaan credit dhoond rahe hain, toh{' '}
-            <strong>Kisan Credit Card (KCC)</strong> yojana sarkar ke sabse achhe financial tools mein se ek hai.
-            Beej, khaad, dawai khareedne ho ya roz-marra ke kharche manage karne hon — KCC lakhon kisanon ke liye
-            ek lifeline ki tarah kaam karta hai.
+            <strong>Namaste Kisan bhai!</strong> 🙏 Agar aap Bharat mein kheti karte hain aur aapko <strong>sasta, asaan credit</strong> chahiye — toh aap bilkul sahi jagah aaye hain! Aaj hum aapko batayenge ki <strong>Kisan Credit Card (KCC)</strong> kya hai, isse kaise apply karna hai, aur sabse important — <strong>aapko kitna fayda mil sakta hai</strong>. 🌾💰
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            2026 mein sarkar ne <strong>KCC application process</strong> ko aur aasan bana diya hai — ghar baithe
-            online apply kar sakte hain, bina lambi line mein khade hue, bina confusing paperwork ke.
+            Sochiye aapko beej, khaad, dawai khareedni hai ya kheti ka koi aur kharcha hai — lekin paisa nahi hai. Aise mein <strong>moneylender se 24-60% interest</strong> par loan lena padta hai — jo bahut mehnga padta hai! 😞 Lekin <strong>KCC se sirf 4% interest</strong> mein loan mil sakta hai — yeh hai sarkar ka tohfa kisano ke liye! 🎁
           </p>
-          <IB><strong>💡 Quick Answer:</strong> KCC ek government-backed agricultural loan scheme hai jo kisanon ko subsidized interest rate par short-term credit deti hai. Apne bank ki website par jaakar KCC form bharo, Aadhaar aur land records upload karo, aur bank verification ke baad ₹5 lakh tak ka loan 4% interest rate se mil sakta hai (prompt repayment ke saath).</IB>
+          <IB><strong>💡 Quick Answer:</strong> KCC ek government-backed agricultural loan scheme hai jo kisanon ko <strong>subsidized interest rate</strong> par short-term credit deti hai. Apne bank ki website par jaakar KCC form bharo, Aadhaar aur land records upload karo, aur bank verification ke baad <strong>₹5 lakh tak ka loan sirf 4% interest rate</strong> se mil sakta hai! 🏦✅</IB>
         </section>
 
         <section className="mb-8">
-          <SH>Kisan Credit Card Kya Hai?</SH>
+          <SH>Kisan Credit Card Kya Hai? — Simple Bhasha Mein</SH>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Kisan Credit Card ko Government of India ne RBI aur NABARD ke saath milkar shuru kiya tha. Idea simple
-            tha — kisanon ko reliable aur affordable credit ka source dena, taaki woh paise ki tension ke bina
-            kheti par focus kar sakein.
+            <strong>Kisan Credit Card</strong> ko Government of India ne <strong>RBI aur NABARD</strong> ke saath milkar shuru kiya tha. Idea bahut simple tha — <strong>kisanon ko reliable aur affordable credit</strong> ka source dena, taaki woh paise ki tension ke bina kheti par focus kar sakein. 🌾✨
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            KCC ko ek aam credit card ki tarah samjho — bas yeh sirf agricultural activities ke liye hai. Beej,
-            khaad khareedne, labour hire karne, equipment lene — sab is loan se ho sakta hai.
+            KCC ko ek <strong>aam credit card ki tarah samjho</strong> — bas yeh <strong>sirf agricultural activities</strong> ke liye hai. Beej, khaad khareedne, labour hire karne, equipment lene — <strong>sab is loan se ho sakta hai</strong>. Aur sabse achhi baat? <strong>Har season nayi application nahi deni padti</strong> — ek baar approve ho gaya toh <strong>5 saal tak use kar sakte ho!</strong> 🎉
           </p>
-          <IB><strong>💰 Asli farak:</strong> Moneylender se 24-60% interest vs KCC se sirf 4% effective rate — ₹3 lakh ke loan par yeh saalana ₹50,000+ ki bachat ban sakta hai.</IB>
+          <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg mb-4">
+            <p className="font-semibold text-blue-800">💰 Asli Farak Samjhein:</p>
+            <p className="text-blue-700 text-sm mt-1">
+              <strong>Moneylender se:</strong> 24-60% interest = ₹3 lakh par saal mein ₹72,000-1,80,000 interest 😱<br/>
+              <strong>KCC se:</strong> Sirf 4% effective rate = ₹3 lakh par saal mein sirf ₹12,000 interest 😊<br/>
+              <strong>Aapki bachat:</strong> ₹60,000-1,68,000 saalana! 🎊
+            </p>
+          </div>
         </section>
 
         <section className="mb-8">
-          <SH>Kisan Credit Card Ke Fayde</SH>
+          <SH>Kisan Credit Card Ke 5 Bade Fayde</SH>
           <div className="space-y-3">
             {[
-              {t:'Asaan Aur Tezz Credit Access', d:'KCC approve hone ke baad, jab zaroorat ho paisa nikal sakte hain. Har season nayi application nahi deni padti — limit 5 saal tak active rehti hai.', emoji:'⚡'},
-              {t:'Kam Interest Rate',            d:'Base rate 7% per annum hai, lekin time par repayment karne se effective rate sirf 4% reh jaata hai — government subvention aur Prompt Repayment Incentive milake.', emoji:'📉'},
-              {t:'Flexible Repayment',           d:'Repayment crop cycle ke hisaab se hota hai. Har mahine EMI nahi deni — harvest ke baad chukao.', emoji:'🌾'},
-              {t:'Crop Insurance Coverage',      d:'Kai banks PMFBY (Pradhan Mantri Fasal Bima Yojana) ko KCC loan ke saath bundle karte hain — natural calamity mein protection milta hai.', emoji:'🛡️'},
-              {t:'Collateral-Free Loans',        d:'₹2 lakh tak ke loan ke liye koi property ya gold pledge karne ki zaroorat nahi — chhote kisanon ke liye bhi accessible hai.', emoji:'🤝'},
-            ].map(({t,d,emoji})=>(
-              <div key={t} className="bg-white border border-gray-200 rounded-xl p-4 shadow-sm">
-                <p className="font-black text-gray-900 text-sm mb-1">{emoji} {t}</p>
+              {t:'⚡ Asaan Aur Tezz Credit Access', d:'KCC approve hone ke baad, jab zaroorat ho paisa nikal sakte hain. Har season nayi application nahi deni padti — limit 5 saal tak active rehti hai. Emergency mein turant paisa mil jaata hai!'},
+              {t:'📉 Kam Interest Rate — Sirf 4%', d:'Base rate 7% per annum hai, lekin time par repayment karne se effective rate sirf 4% reh jaata hai — government subvention aur Prompt Repayment Incentive milake. Yeh market se bahut sasta hai!'},
+              {t:'🌾 Flexible Repayment — Crop Cycle Ke Hisaab Se', d:'Repayment crop cycle ke hisaab se hota hai. Har mahine EMI nahi deni — harvest ke baad chukao. Kisan ki suvidha ke liye banaya gaya hai!'},
+              {t:'🛡️ Crop Insurance Coverage — PMFBY Bundle', d:'Kai banks PMFBY (Pradhan Mantri Fasal Bima Yojana) ko KCC loan ke saath bundle karte hain — natural calamity mein protection milta hai. Fasal kharab ho toh insurance claim milta hai!'},
+              {t:'🤝 Collateral-Free Loans — Bina Security', d:'₹2 lakh tak ke loan ke liye koi property ya gold pledge karne ki zaroorat nahi — chhote kisanon ke liye bhi accessible hai. Bina kuch girvi rakhe loan mil sakta hai!'},
+            ].map(({t,d})=>(
+              <div key={t} className="bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow">
+                <p className="font-black text-gray-900 text-sm mb-1">{t}</p>
                 <p className="text-xs text-gray-600 leading-relaxed">{d}</p>
               </div>
             ))}
@@ -110,21 +103,27 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             width="1000"
             height="640"
           />
+          <p className="text-gray-700 leading-relaxed mb-4">
+            <strong>Acchi khabar!</strong> KCC ke liye apply karne ke liye aapko bahut strict criteria meet nahi karna padta. Neeche dekhein kaun apply kar sakta hai:
+          </p>
           <ul className="space-y-2 text-sm text-gray-700 mb-4">
             {[
-              'Individual farmers jinke paas zameen hai',
-              'Tenant farmers ya sharecroppers (dusron ki zameen par kheti karne wale)',
-              'Self-Help Groups (SHGs) jo kheti se juda kaam karte hain',
-              'Dairy, poultry, fisheries jaisi allied activities karne wale farmers',
-              'PM Kisan Yojana mein registered farmers (priority milti hai)',
+              '✅ Individual farmers jinke paas zameen hai (khud ki ya lease par)',
+              '✅ Tenant farmers ya sharecroppers (dusron ki zameen par kheti karne wale)',
+              '✅ Self-Help Groups (SHGs) jo kheti se juda kaam karte hain',
+              '✅ Dairy, poultry, fisheries jaisi allied activities karne wale farmers',
+              '✅ PM Kisan Yojana mein registered farmers (priority milti hai)',
             ].map(i=><li key={i} className="flex gap-2"><span className="text-primary-600 shrink-0">✓</span>{i}</li>)}
           </ul>
-          <IB><strong>👉 Tip:</strong> Agar aap PM Kisan beneficiary ho aur aapka <Link href="/articles/pm-kisan-ekyc-online-2026" className="underline font-semibold">eKYC</Link> already complete hai, toh KCC approval process bahut fast ho jaata hai.</IB>
+          <IB><strong>👉 Pro Tip:</strong> Agar aap <Link href="/articles/pm-kisan-ekyc-online-2026" className="underline font-semibold">PM Kisan beneficiary</Link> ho aur aapka eKYC already complete hai, toh KCC approval process bahut fast ho jaata hai — kyunki aapka data already verified hai! 🚀</IB>
         </section>
 
         <section className="mb-8">
           <SH>Documents Required For KCC Application</SH>
           <SvgDocuments caption="Kisan Credit Card — Required Documents 2026"/>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Apply karne se pehle <strong>saare documents ready rakhein</strong>. Neeche complete list hai:
+          </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
             {[
               {doc:'Aadhaar Card', detail:'Bank account se linked hona zaroori', always:true},
@@ -134,7 +133,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
               {doc:'Passport Photo', detail:'2-3 recent copies', always:false},
               {doc:'Mobile Number', detail:'Aadhaar-linked, OTP verification ke liye', always:false},
             ].map(({doc,detail,always})=>(
-              <div key={doc} className="flex gap-3 p-3 bg-white border border-gray-200 rounded-xl">
+              <div key={doc} className="flex gap-3 p-3 bg-white border border-gray-200 rounded-xl hover:border-green-300 transition-colors">
                 <span className={`text-lg shrink-0 ${always?'text-green-600':'text-blue-500'}`}>{always?'✅':'📎'}</span>
                 <div>
                   <p className="font-bold text-gray-900 text-xs">{doc} {always&&<span className="text-red-500">*</span>}</p>
@@ -144,10 +143,16 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             ))}
           </div>
           <p className="text-xs text-red-600 mt-2">* = Har case mein zaroori hai</p>
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-lg mt-4">
+            <p className="font-semibold text-yellow-800">⚠️ Important:</p>
+            <p className="text-yellow-700 text-sm mt-1">
+              <strong>Saare documents clear aur valid hone chahiye.</strong> Aadhaar aur bank account mein naam match hona chahiye — warna application reject ho sakta hai! 🚫
+            </p>
+          </div>
         </section>
 
         <section className="mb-8">
-          <SH>KCC Loan Limit 2026</SH>
+          <SH>KCC Loan Limit 2026 — Kitna Loan Milega?</SH>
           <img
             src="/images/kisan-credit-card-loan-limits-interest-rates.webp"
             alt="Kisan Credit Card loan limit 2026 — minimum 10000 maximum 5 lakh interest 4 percent"
@@ -156,6 +161,9 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             width="1000"
             height="560"
           />
+          <p className="text-gray-700 leading-relaxed mb-4">
+            <strong>2026 mein sarkar ne KCC limits badha di hain!</strong> Ab pehle se zyada loan mil sakta hai. Neeche complete details hain:
+          </p>
           <div className="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
             <table className="w-full text-sm border-collapse">
               <thead>
@@ -166,12 +174,12 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
               </thead>
               <tbody>
                 {[
-                  ['Interest subvention limit', '₹5,00,000 (₹3 lakh se badhaya gaya)'],
-                  ['Collateral-free loan limit', '₹2,00,000 (₹1.6 lakh se badhaya gaya)'],
+                  ['Interest subvention limit', '₹5,00,000 (₹3 lakh se badhaya gaya) 🎉'],
+                  ['Collateral-free loan limit', '₹2,00,000 (₹1.6 lakh se badhaya gaya) 🎉'],
                   ['Base interest rate', '7% per annum'],
-                  ['Prompt Repayment Incentive', '3% subvention — effective rate 4%'],
+                  ['Prompt Repayment Incentive', '3% subvention — effective rate 4% 💰'],
                   ['Minimum loan amount', '₹10,000'],
-                  ['Validity', '5 saal, har saal 10% limit increase'],
+                  ['Validity', '5 saal, har saal 10% limit increase 📈'],
                 ].map(([t,v],i)=>(
                   <tr key={t} className={i%2===0?'bg-white':'bg-green-50/50'}>
                     <td className="p-3 border-b font-medium text-xs">{t}</td>
@@ -181,7 +189,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
               </tbody>
             </table>
           </div>
-          <IB><strong>📌 Yaad rakho:</strong> ₹2 lakh se zyada ke loan par bank collateral maang sakta hai. Aadhaar submission interest subvention ke liye mandatory hai.</IB>
+          <IB><strong>📌 Yaad rakho:</strong> ₹2 lakh se zyada ke loan par bank collateral maang sakta hai. Aadhaar submission interest subvention ke liye mandatory hai — bina Aadhaar ke 4% interest nahi milega! 🚫</IB>
         </section>
 
         <section className="mb-8">
@@ -191,9 +199,9 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
               Apply karne se pehle apna eligible loan amount aur monthly EMI estimate karo — bank jaane se pehle fully prepared rahoge.
             </p>
             <div className="flex flex-wrap gap-3">
-              <a href={`${DOMAIN}/calculator/kcc-loan-emi`} className="inline-block bg-primary-600 text-white text-sm font-bold px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors">KCC Loan EMI Calculator</a>
-              <a href={`${DOMAIN}/calculator/msp-income`} className="inline-block bg-white border-2 border-primary-600 text-primary-700 text-sm font-bold px-4 py-2 rounded-lg hover:bg-green-100 transition-colors">MSP Income Calculator</a>
-              <a href={`${DOMAIN}/calculator`} className="inline-block bg-white border-2 border-gray-300 text-gray-700 text-sm font-bold px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors">All Calculators</a>
+              <a href="https://kisanstatus.com/calculator/kcc-loan-emi" className="inline-block bg-primary-600 text-white text-sm font-bold px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors">KCC Loan EMI Calculator</a>
+              <a href="https://kisanstatus.com/calculator/msp-income" className="inline-block bg-white border-2 border-primary-600 text-primary-700 text-sm font-bold px-4 py-2 rounded-lg hover:bg-green-100 transition-colors">MSP Income Calculator</a>
+              <a href="https://kisanstatus.com/calculator" className="inline-block bg-white border-2 border-gray-300 text-gray-700 text-sm font-bold px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors">All Calculators</a>
             </div>
           </div>
         </section>
@@ -201,7 +209,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
         <CalcBanner/>
 
         <section className="mb-8">
-          <SH>KCC Ke Liye Online Apply Kaise Karein?</SH>
+          <SH>KCC Ke Liye Online Apply Kaise Karein? — Step-by-Step</SH>
           <img
             src="/images/kisan-credit-card-online-application-process.webp"
             alt="Kisan Credit Card online application process 2026 step by step"
@@ -210,6 +218,9 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             width="1000"
             height="500"
           />
+          <p className="text-gray-700 leading-relaxed mb-4">
+            <strong>Online apply karna bahut asaan hai!</strong> Ghar baithe mobile ya computer se apply kar sakte hain. Neeche complete steps hain:
+          </p>
           <StepList>
             <SI n={1}>Apne bank ki official website ya <strong>Kisan Rin Portal</strong> kholo, KCC section dhundo.</SI>
             <SI n={2}>Personal details bharo — naam, Aadhaar number, PAN, mobile number, zameen ki details.</SI>
@@ -218,11 +229,14 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             <SI n={5}>Application submit karo, reference number save kar lo tracking ke liye.</SI>
             <SI n={6}>Reference number se status online ya bank app par track karo.</SI>
           </StepList>
-          <IB><strong>💡 Tip:</strong> PM Kisan beneficiaries ke liye kuch banks ne pre-filled application forms diye hain — data entry error kam hota hai aur processing fast hoti hai.</IB>
+          <IB><strong>💡 Pro Tip:</strong> PM Kisan beneficiaries ke liye kuch banks ne <strong>pre-filled application forms</strong> diye hain — data entry error kam hota hai aur processing fast hoti hai! 🚀</IB>
         </section>
 
         <section className="mb-8">
           <SH>Offline Apply Karna Hai? Yeh Karo</SH>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Agar online process mushkil lage toh <strong>offline bhi apply kar sakte hain</strong>:
+          </p>
           <StepList>
             <SI n={1}>Apni nearest bank branch jao — jahan already savings account hai.</SI>
             <SI n={2}>KCC application form maango, bank officer process samjha dega.</SI>
@@ -231,20 +245,23 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             <SI n={5}>Form submit karo counter par, verification ka wait karo.</SI>
           </StepList>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Offline process mein usually <strong>7-15 working din</strong> lagte hain. PM Kisan beneficiaries ke liye fast ho sakta hai.
+            Offline process mein usually <strong>7-15 working din</strong> lagte hain. PM Kisan beneficiaries ke liye fast ho sakta hai. 🏦
           </p>
         </section>
 
         <section className="mb-8">
           <SH>Common Mistakes Jo Avoid Karni Chahiye</SH>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            <strong>Yeh galtiyan mat karna</strong> — warna application reject ho sakti hai ya delay ho sakta hai:
+          </p>
           <ul className="space-y-2 text-sm text-gray-700">
             {[
-              'Aadhaar aur bank account mein naam match nahi karta',
-              'Land record details galat ya Khata number mismatch',
-              'Eligibility check kiye bina apply karna',
-              'Mobile number Aadhaar/bank se link nahi hai',
-              'Form mein mandatory fields blank chhodna',
-              'Repayment schedule samjhe bina sign karna',
+              '❌ Aadhaar aur bank account mein naam match nahi karta',
+              '❌ Land record details galat ya Khata number mismatch',
+              '❌ Eligibility check kiye bina apply karna',
+              '❌ Mobile number Aadhaar/bank se link nahi hai',
+              '❌ Form mein mandatory fields blank chhodna',
+              '❌ Repayment schedule samjhe bina sign karna',
             ].map(i=><li key={i} className="flex gap-2"><span className="text-red-500 shrink-0">⚠️</span>{i}</li>)}
           </ul>
         </section>
@@ -284,18 +301,22 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
         </div>
 
         <section className="mb-8">
-          <SH>Conclusion</SH>
+          <SH>Conclusion — Aapko Kya Karna Chahiye?</SH>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Kisan Credit Card sach mein ek farmer-friendly scheme hai. Chhota kisan ho ya medium-scale — KCC har
-            kisan ko affordable credit deta hai jo kheti aage badhane mein madad karta hai.
+            <strong>Kisan Credit Card sach mein ek farmer-friendly scheme hai!</strong> 🌾 Chhota kisan ho ya medium-scale — KCC har kisan ko affordable credit deta hai jo kheti aage badhane mein madad karta hai.
           </p>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            2026 mein application process pehle se bhi simple ho gaya hai — online apply, PM Kisan beneficiaries
-            ke liye pre-filled forms, aur sarkar ki subsidy ke saath competitive interest rates.
-          </p>
+          <div className="bg-green-100 border-2 border-green-400 rounded-lg p-5 mb-4">
+            <p className="font-bold text-green-900 text-base mb-3">🎯 Aapko Abhi Kya Karna Chahiye?</p>
+            <ol className="text-green-800 text-sm space-y-2 list-decimal list-inside">
+              <li><strong>Saare documents ready karo</strong> — Aadhaar, PAN, bank passbook, land records</li>
+              <li><strong>Apne bank ki website par jao</strong> ya nearest branch visit karo</li>
+              <li><strong>KCC application fill karo</strong> — online ya offline</li>
+              <li><strong>Reference number save karo</strong> — status track karne ke liye</li>
+              <li><strong>Planting season se pehle apply karo</strong> — taaki paisa sahi waqt par mile!</li>
+            </ol>
+          </div>
           <p className="text-gray-700 leading-relaxed">
-            Documents ready rakho, details double-check karo, aur planting season shuru hone se pehle apply kar
-            do — taaki paisa sahi waqt par mil sake.
+            <strong>Deri mat karo!</strong> 🚀 2026 mein application process pehle se bhi simple ho gaya hai — online apply, PM Kisan beneficiaries ke liye pre-filled forms, aur sarkar ki subsidy ke saath competitive interest rates. <strong>Aaj hi apply karo aur apni kheti ko next level par le jao!</strong> 💪🌾
           </p>
         </section>
 
@@ -307,7 +328,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
         />
 
         <RelatedArticles articles={RELATED}/>
-        <AuthorBox modified={MODIFIED}/>
+        <AuthorBox modified={article.modifiedTime || article.publishedTime || new Date().toISOString()}/>
         <BottomNav/>
         <Disclaimer/>
       </div>
