@@ -267,7 +267,7 @@ export default function HomeContent() {
                     <h3 className="font-bold text-gray-900 text-sm leading-snug mt-2 mb-1.5 group-hover:text-green-700 transition-colors">{a.title}</h3>
                     <p className="text-gray-500 text-xs leading-relaxed mb-3 line-clamp-2">{a.desc}</p>
                     <div className="flex items-center justify-between pt-2 border-t border-gray-100 mt-auto">
-                      <span className="text-[11px] text-gray-400">✍️ Sidhu Singh</span>
+                      <span className="text-[11px] text-gray-400">✍️ KisanStatus Team</span>
                       <span className="text-xs font-bold text-green-600 group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">Padho →</span>
                     </div>
                   </div>
