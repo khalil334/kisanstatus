@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'About Us – KisanStatus.com | PM Kisan Jankari Site',
   description:
     'KisanStatus.com ek independent informational website hai jo Indian kisaanon ke liye PM Kisan Samman Nidhi ki sahi jankari deti hai. Hamare baare mein jaaniye.',
-  authors: [{ name: 'Sidhu Singh', url: 'https://kisanstatus.com/about' }],
+  authors: [{ name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' }],
   alternates: { canonical: 'https://kisanstatus.com/about' },
   openGraph: {
     title: 'About Us – KisanStatus.com',
@@ -25,7 +25,7 @@ const orgSchema = {
   name: 'KisanStatus.com',
   url: 'https://kisanstatus.com',
   foundingDate: '2025',
-  founder: { '@type': 'Person', name: 'Sidhu Singh' },
+  founder: { '@type': 'Organization', name: 'KisanStatus Team' },
   contactPoint: {
     '@type': 'ContactPoint',
     email: 'kisanstatus.support@gmail.com',
@@ -127,7 +127,6 @@ export default function AboutPage() {
         <div className="card border-primary-200 bg-green-50">
           <h2 className="text-lg font-bold text-gray-900 mb-3">🔗 Useful Links</h2>
           <div className="flex flex-wrap gap-3">
-            <Link href="/author" className="btn-secondary text-sm">👤 Author — Sidhu Singh</Link>
             <Link href="/contact" className="btn-secondary text-sm">📧 Contact Us</Link>
             <Link href="/official-links" className="btn-secondary text-sm">🏛️ Sarkari Links</Link>
             <Link href="/pm-kisan-status" className="btn-primary text-sm">✅ Status Check</Link>
