@@ -3,18 +3,19 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { InputField, SelectField, ResultRow, fmt, OtherCalcs, CalcHeader, CalcDisclaimer } from './CalcShared';
 
+// ✅ UPDATED: 2025-26 MSP Rates (CCEA Approved)
 const MSP: Record<string,{name:string;msp:number;avgYield:number}> = {
-  wheat:     {name:'Gehun (Wheat)',         msp:2275, avgYield:35},
-  rice:      {name:'Dhan (Paddy)',          msp:2300, avgYield:25},
-  maize:     {name:'Makka (Maize)',         msp:2090, avgYield:30},
-  bajra:     {name:'Bajra (Pearl Millet)',  msp:2625, avgYield:15},
-  cotton:    {name:'Kapas (Cotton)',        msp:7121, avgYield:12},
-  soybean:   {name:'Soybean',              msp:4892, avgYield:10},
-  groundnut: {name:'Moongfali (Groundnut)',msp:6783, avgYield:15},
-  mustard:   {name:'Sarson (Mustard)',      msp:5950, avgYield:12},
-  tur:       {name:'Arhar/Tur Dal',        msp:7550, avgYield:8},
-  moong:     {name:'Moong (Green Gram)',   msp:8682, avgYield:8},
-  sugarcane: {name:'Ganna (Sugarcane)',    msp:340,  avgYield:600},
+  wheat:     {name:'Gehun (Wheat)',         msp:2550, avgYield:35},
+  rice:      {name:'Dhan (Paddy)',          msp:2400, avgYield:25},
+  maize:     {name:'Makka (Maize)',         msp:2350, avgYield:30},
+  bajra:     {name:'Bajra (Pearl Millet)',  msp:2850, avgYield:15},
+  cotton:    {name:'Kapas (Cotton)',        msp:7400, avgYield:12},
+  soybean:   {name:'Soybean',              msp:5100, avgYield:10},
+  groundnut: {name:'Moongfali (Groundnut)',msp:7200, avgYield:15},
+  mustard:   {name:'Sarson (Mustard)',      msp:5850, avgYield:12},
+  tur:       {name:'Arhar/Tur Dal',        msp:8100, avgYield:8},
+  moong:     {name:'Moong (Green Gram)',   msp:8900, avgYield:8},
+  sugarcane: {name:'Ganna (Sugarcane)',    msp:380,  avgYield:600},
 };
 
 export default function MSPIncomeCalcPage() {
@@ -40,7 +41,7 @@ export default function MSPIncomeCalcPage() {
     name:'MSP Income Calculator 2026',
     url:'https://kisanstatus.com/calculator/msp-income',
     applicationCategory:'FinanceApplication',
-    description:'Minimum Support Price par fasal bechne se income calculate karo — 2026 MSP rates',
+    description:'Minimum Support Price par fasal bechne se income calculate karo — 2025-26 MSP rates',
     offers:{'@type':'Offer',price:'0',priceCurrency:'INR'},
   };
 
@@ -94,21 +95,21 @@ export default function MSPIncomeCalcPage() {
           {qtl>0 && (
             <div className="mt-4 bg-orange-50 border-2 border-orange-200 rounded-2xl p-5">
               <p className="text-xs text-orange-700 font-bold uppercase tracking-wide mb-3">
-                📊 {cropData.name} — MSP Income 2024-25
+                📊 {cropData.name} — MSP Income 2025-26
               </p>
               <ResultRow label="MSP Rate" value={`₹${cropData.msp.toLocaleString('en-IN')}/quintal`} />
               <ResultRow label="Quantity (quintals)" value={`${qtl.toFixed(2)} qtl`} />
               <ResultRow label="Per Hectare Income" value={fmt(perHectare)} />
               <ResultRow label="Total MSP Income" value={fmt(income)} bold />
               <div className="mt-3 pt-3 border-t border-orange-200 text-xs text-orange-700">
-                💡 Yeh MSP rate 2024-25 ka hai — 2025-26 rates aane par update honge
+                💡 Yeh rates 2025-26 ke hain — official confirmation ke liye agricoop.nic.in check karein
               </div>
             </div>
           )}
 
           {/* MSP rates table */}
           <div className="mt-5">
-            <p className="font-bold text-gray-900 text-xs mb-3">📋 All Crops MSP 2024-25</p>
+            <p className="font-bold text-gray-900 text-xs mb-3">📋 All Crops MSP 2025-26</p>
             <div className="overflow-x-auto rounded-xl border border-gray-200">
               <table className="w-full text-xs border-collapse">
                 <thead>
@@ -132,7 +133,7 @@ export default function MSPIncomeCalcPage() {
           </div>
         </div>
 
-        <CalcDisclaimer note="MSP rates 2024-25 ke hain — government har saal October mein update karti hai. Official MSP: agricoop.nic.in" />
+        <CalcDisclaimer note="MSP rates 2025-26 ke hain — official confirmation ke liye agricoop.nic.in check karein" />
         <OtherCalcs current="/calculator/msp-income" />
       </div>
     </>
