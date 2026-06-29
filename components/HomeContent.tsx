@@ -17,7 +17,6 @@ const STATS = {
   totalArticles: '26+',
 };
 
-// ✅ OPTIMIZATION 1: Single IntersectionObserver for all reveals
 function useScrollReveal() {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
@@ -80,7 +79,7 @@ const TICKER_ITEMS = [
   `🔴 LIVE: PM Kisan ${STATS.currentKist}vi Kist — ${STATS.currentKistDate} ko ${STATS.perKist} release ho chuki hai`,
   `⏳ ${STATS.nextKist}vi Kist Expected: ${STATS.nextKistDate} — eKYC abhi complete karo`,
   '🔐 eKYC Mandatory: Bina eKYC kist NAHI milegi — pmkisan.gov.in par karo',
-  '📞 Helpline: 155261 | Toll Free: 1800-115-526',
+  ' Helpline: 155261 | Toll Free: 1800-115-526',
   `✅ ${STATS.registeredFarmers} registered farmers — ${STATS.receivedKist} ko ${STATS.currentKist}vi kist mil chuki hai`,
 ];
 
@@ -141,7 +140,6 @@ function Reveal({ children, delay = 0, className = '' }: {
   );
 }
 
-// ✅ OPTIMIZATION 2: ArticleImage with proper sizing & lazy loading
 function ArticleImage({ src, alt, emoji }: { src: string; alt: string; emoji: string }) {
   const [error, setError] = useState(false);
   
@@ -154,7 +152,7 @@ function ArticleImage({ src, alt, emoji }: { src: string; alt: string; emoji: st
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           quality={85}
-          loading="lazy"  // ✅ Explicit lazy loading
+          loading="lazy"
           className="object-cover group-hover:scale-105 transition-transform duration-500"
           onError={() => setError(true)}
         />
@@ -176,7 +174,7 @@ export default function HomeContent() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleListSchema) }} />
 
-      {/* Ticker - ✅ OPTIMIZATION 3: CSS-only animation */}
+      {/* Ticker */}
       <div className="bg-red-600 text-white py-2 overflow-hidden flex items-center">
         <span className="shrink-0 bg-red-800 font-black text-xs px-3 py-0.5 mr-3 uppercase tracking-widest rounded-sm">
           🔴 LIVE
@@ -190,39 +188,129 @@ export default function HomeContent() {
         </div>
       </div>
 
-      {/* HERO — ✅ OPTIMIZATION 4: Remove decorative image, focus on text LCP */}
+      {/* HERO — Live Green Grass with Wind Effect */}
       <section 
-        className="relative overflow-hidden py-14 md:py-20" 
-        style={{ background: 'linear-gradient(160deg,#03150b 0%,#0b3320 35%,#14532d 65%,#1d6b3d 100%)' }}
+        className="relative overflow-hidden py-14 md:py-20"
         aria-label="Hero"
       >
-        {/* ✅ Remove heavy background image - use CSS gradients only */}
-        <div className="absolute -top-24 -left-20 w-96 h-96 rounded-full bg-emerald-400/15 blur-[80px] pointer-events-none" aria-hidden="true" />
-        <div className="absolute top-1/3 -right-10 w-80 h-80 rounded-full bg-amber-400/10 blur-[80px] pointer-events-none" aria-hidden="true" />
+        {/* Sky Gradient Background */}
+        <div 
+          className="absolute inset-0"
+          style={{
+            background: 'linear-gradient(180deg, #064e3b 0%, #065f46 30%, #047857 60%, #059669 100%)'
+          }}
+        />
 
+        {/* Sun Glow */}
+        <div className="absolute top-10 right-20 w-32 h-32 md:w-48 md:h-48 rounded-full bg-yellow-300/30 blur-3xl animate-pulse-slow" />
+
+        {/* Wind Particles - Floating */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="wind-particle wind-particle-1" />
+          <div className="wind-particle wind-particle-2" />
+          <div className="wind-particle wind-particle-3" />
+          <div className="wind-particle wind-particle-4" />
+          <div className="wind-particle wind-particle-5" />
+        </div>
+
+        {/* Grass Field at Bottom */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 md:h-40 overflow-hidden">
+          {/* Grass Layer 1 - Back (Darker) */}
+          <svg 
+            className="absolute bottom-0 w-full h-full grass-sway-slow"
+            viewBox="0 0 1200 160" 
+            preserveAspectRatio="none"
+            style={{ transformOrigin: 'bottom center' }}
+          >
+            {Array.from({ length: 60 }).map((_, i) => {
+              const x = (i / 60) * 1200;
+              const height = 60 + Math.random() * 60;
+              const lean = (Math.random() - 0.5) * 30;
+              return (
+                <path
+                  key={`g1-${i}`}
+                  d={`M${x},160 Q${x + lean},${160 - height / 2} ${x + lean * 1.5},${160 - height}`}
+                  stroke="#064e3b"
+                  strokeWidth="3"
+                  fill="none"
+                  strokeLinecap="round"
+                />
+              );
+            })}
+          </svg>
+
+          {/* Grass Layer 2 - Middle */}
+          <svg 
+            className="absolute bottom-0 w-full h-full grass-sway"
+            viewBox="0 0 1200 160" 
+            preserveAspectRatio="none"
+            style={{ transformOrigin: 'bottom center' }}
+          >
+            {Array.from({ length: 50 }).map((_, i) => {
+              const x = 10 + (i / 50) * 1200;
+              const height = 50 + Math.random() * 50;
+              const lean = (Math.random() - 0.5) * 40;
+              return (
+                <path
+                  key={`g2-${i}`}
+                  d={`M${x},160 Q${x + lean},${160 - height / 2} ${x + lean * 1.5},${160 - height}`}
+                  stroke="#047857"
+                  strokeWidth="4"
+                  fill="none"
+                  strokeLinecap="round"
+                />
+              );
+            })}
+          </svg>
+
+          {/* Grass Layer 3 - Front (Lighter, More sway) */}
+          <svg 
+            className="absolute bottom-0 w-full h-full grass-sway-fast"
+            viewBox="0 0 1200 160" 
+            preserveAspectRatio="none"
+            style={{ transformOrigin: 'bottom center' }}
+          >
+            {Array.from({ length: 40 }).map((_, i) => {
+              const x = 5 + (i / 40) * 1200;
+              const height = 40 + Math.random() * 40;
+              const lean = (Math.random() - 0.5) * 50;
+              return (
+                <path
+                  key={`g3-${i}`}
+                  d={`M${x},160 Q${x + lean},${160 - height / 2} ${x + lean * 1.5},${160 - height}`}
+                  stroke="#10b981"
+                  strokeWidth="5"
+                  fill="none"
+                  strokeLinecap="round"
+                />
+              );
+            })}
+          </svg>
+        </div>
+
+        {/* Content */}
         <div className="container-site relative z-10 max-w-3xl px-4">
-          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-green-300 text-xs font-bold px-4 py-2 rounded-full mb-5 uppercase tracking-wider backdrop-blur-sm">
-            🌾 India Ka #1 PM Kisan Information Portal
+          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-green-100 text-xs font-bold px-4 py-2 rounded-full mb-5 uppercase tracking-wider backdrop-blur-sm">
+             India Ka #1 PM Kisan Information Portal
           </div>
 
-          {/* ✅ LCP Element - Text content (fastest to render) */}
           <h1 className="font-black text-white leading-[1.15] mb-4 tracking-tight">
             <span className="text-3xl md:text-5xl block">PM Kisan Status Check —</span>
-            <span className="text-2xl md:text-4xl block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-green-300 via-emerald-200 to-yellow-200">
+            <span className="text-2xl md:text-4xl block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-amber-200 to-yellow-300">
               पीएम किसान {STATS.currentKist}वीं किस्त 2026
             </span>
           </h1>
 
-          <h2 className="text-base md:text-lg text-green-100/85 mb-6 max-w-xl leading-relaxed font-normal">
-            Kisan bhai — <strong className="text-white">{STATS.currentKist}vi kist {STATS.currentKistDate} ko release ho chuki hai!</strong> Apna status abhi check karo, eKYC complete karo, paisa aaya ya nahi dekho. <span className="text-green-300 font-semibold">Sab free — 10 minute mein.</span>
+          <h2 className="text-base md:text-lg text-green-50 mb-6 max-w-xl leading-relaxed font-normal">
+            Kisan bhai — <strong className="text-white">{STATS.currentKist}vi kist {STATS.currentKistDate} ko release ho chuki hai!</strong> Apna status abhi check karo, eKYC complete karo, paisa aaya ya nahi dekho. <span className="text-yellow-300 font-semibold">Sab free — 10 minute mein.</span>
           </h2>
 
           <div className="flex flex-wrap gap-3">
             <Link 
               href="/articles/pm-kisan-23vi-kist-2026-status-check" 
-              className="inline-flex items-center gap-2 bg-green-400 hover:bg-green-300 text-gray-900 font-black px-6 py-3.5 rounded-xl text-sm transition-all hover:scale-105 shadow-lg shadow-green-900/40"
+              className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-black px-6 py-3.5 rounded-xl text-sm transition-all hover:scale-105 shadow-lg shadow-green-900/40"
             >
-              📆 {STATS.currentKist}vi Kist Status Dekho
+               {STATS.currentKist}vi Kist Status Dekho
             </Link>
             <Link 
               href="/articles/pm-kisan-ekyc-online-2026" 
@@ -232,16 +320,74 @@ export default function HomeContent() {
             </Link>
           </div>
 
-          {/* Inline Trust Strip */}
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-8 text-[11px] text-green-300/80">
-            {['✅ 100% Free', '🔒 Koi Data Store Nahi', '🏛️ pmkisan.gov.in Verified', '📞 Helpline: 155261'].map(t => (
+          {/* Trust Strip */}
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-8 text-[11px] text-green-100">
+            {['✅ 100% Free', ' Koi Data Store Nahi', '🏛️ pmkisan.gov.in Verified', '📞 Helpline: 155261'].map(t => (
               <span key={t}>{t}</span>
             ))}
           </div>
         </div>
+
+        {/* All Animations */}
+        <style jsx>{`
+          /* Wind Particles */
+          .wind-particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+            animation: windFloat linear infinite;
+          }
+          .wind-particle-1 { top: 30%; left: -10px; animation-duration: 8s; animation-delay: 0s; }
+          .wind-particle-2 { top: 50%; left: -10px; animation-duration: 10s; animation-delay: 2s; width: 3px; height: 3px; }
+          .wind-particle-3 { top: 20%; left: -10px; animation-duration: 12s; animation-delay: 4s; width: 5px; height: 5px; background: rgba(255, 255, 255, 0.3); }
+          .wind-particle-4 { top: 60%; left: -10px; animation-duration: 9s; animation-delay: 1s; width: 3px; height: 3px; }
+          .wind-particle-5 { top: 40%; left: -10px; animation-duration: 11s; animation-delay: 3s; }
+
+          @keyframes windFloat {
+            0% { transform: translateX(0) translateY(0); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateX(calc(100vw + 20px)) translateY(-30px); opacity: 0; }
+          }
+
+          /* Grass Swaying - Wind Effect */
+          .grass-sway-slow {
+            animation: grassSwaySlow 4s ease-in-out infinite;
+          }
+          .grass-sway {
+            animation: grassSway 3s ease-in-out infinite;
+          }
+          .grass-sway-fast {
+            animation: grassSwayFast 2.5s ease-in-out infinite;
+          }
+
+          @keyframes grassSwaySlow {
+            0%, 100% { transform: rotate(-1deg); }
+            50% { transform: rotate(2deg); }
+          }
+          @keyframes grassSway {
+            0%, 100% { transform: rotate(-2deg); }
+            50% { transform: rotate(3deg); }
+          }
+          @keyframes grassSwayFast {
+            0%, 100% { transform: rotate(-3deg); }
+            50% { transform: rotate(4deg); }
+          }
+
+          /* Sun Pulse */
+          .animate-pulse-slow {
+            animation: pulseSlow 4s ease-in-out infinite;
+          }
+          @keyframes pulseSlow {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.1); }
+          }
+        `}</style>
       </section>
 
-      {/* TOP PROBLEMS — Only 4 (Focused) */}
+      {/* TOP PROBLEMS */}
       <section className="py-12 bg-white" aria-labelledby="problems-heading">
         <div className="container-site px-4">
           <Reveal>
@@ -283,7 +429,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* LATEST ARTICLES — Only 3 (Clean Grid) */}
+      {/* LATEST ARTICLES */}
       <section className="py-14 bg-gradient-to-b from-gray-50 to-white" aria-labelledby="latest-heading">
         <div className="container-site px-4">
           <Reveal>
@@ -316,24 +462,24 @@ export default function HomeContent() {
           <Reveal delay={200}>
             <div className="text-center mt-10">
               <Link href="/articles" className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-black px-8 py-3.5 rounded-xl text-sm transition-all hover:scale-105 shadow-lg shadow-green-600/30">
-                📚 Saari {STATS.totalArticles} Guides Dekho
+                 Saari {STATS.totalArticles} Guides Dekho
               </Link>
             </div>
           </Reveal>
         </div>
       </section>
 
-      {/* DISCLAIMER — Compact */}
+      {/* DISCLAIMER */}
       <div className="container-site pb-10 px-4">
         <p className="text-center text-amber-700 bg-amber-50 border border-amber-200 rounded-xl px-4 py-3 text-xs max-w-2xl mx-auto">
           ⚠️ <strong>Disclaimer:</strong> KisanStatus.com ek independent information portal hai. Yeh Government of India ya pmkisan.gov.in ka official platform nahi hai.
         </p>
       </div>
 
-      {/* FAQ — Top 3 Only */}
+      {/* FAQ */}
       <FAQSection faqs={FAQS} />
       
-      {/* ✅ Global CSS Animation */}
+      {/* Global CSS Animation */}
       <style jsx global>{`
         @keyframes marquee {
           0% { transform: translateX(0); }
