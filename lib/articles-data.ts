@@ -1,6 +1,5 @@
 // ── lib/articles-data.ts ────────────────────────────────────────────────────
 // Centralized article metadata for all pages
-// ✅ All exports verified — ARTICLES, ARTICLES_MAP, CATEGORIES, types
 
 export const CATEGORIES = {
   'status-check': { name: 'Status Check', description: 'PM Kisan kist status, beneficiary list, FTO, land seeding guides' },
@@ -10,6 +9,7 @@ export const CATEGORIES = {
   'registration': { name: 'Registration', description: 'New PM Kisan registration and eligibility guides' },
   'farming': { name: 'Farming & Schemes', description: 'Soil health, PMFBY, AgriStack, Nano DAP and other schemes' },
   'correction': { name: 'Corrections', description: 'Name, mobile, Aadhaar, bank account correction guides' },
+  'mandi': { name: 'Mandi Bhav', description: 'Daily vegetable and fruit market rates, wholesale prices' },
 } as const;
 
 export type CategorySlug = keyof typeof CATEGORIES;
@@ -291,7 +291,6 @@ export const ARTICLES: ArticleMeta[] = [
     publishedTime: '2026-06-27T08:00:00+05:30',
     modifiedTime: '2026-06-27T08:00:00+05:30',
   },
-  // ✅ ARTICLE #25
   {
     slug: 'pm-kisan-self-registered-status-check',
     title: 'PM Kisan Self Registered Farmer Status Check 2026 | Online Status Kaise Dekhen',
@@ -303,7 +302,6 @@ export const ARTICLES: ArticleMeta[] = [
     publishedTime: '2026-06-28T08:00:00+05:30',
     modifiedTime: '2026-06-28T08:00:00+05:30',
   },
-  // ✅ ARTICLE #26 (NEW) — Real Expert Status Check Guide
   {
     slug: 'pm-kisan-status-check-online-2026-complete-guide',
     title: 'PM Kisan Status Check Online 2026 — Real Farmer Guide With Screenshots',
@@ -314,6 +312,17 @@ export const ARTICLES: ArticleMeta[] = [
     category: 'status-check',
     publishedTime: '2026-06-29T08:00:00+05:30',
     modifiedTime: '2026-06-29T08:00:00+05:30',
+  },
+  {
+    slug: 'mandi-bhav-today',
+    title: 'Aaj Ka Mandi Bhav 30 June 2026 - Sabzi aur Fruit Rates Today in Hindi',
+    desc: 'Aaj ka mandi bhav - aloo ₹20-24, pyaaz ₹26-30, tamatar ₹38-45. Wholesale mandi rates today in Hindi. Daily updated sabzi aur fruit prices.',
+    ogTitle: 'Aaj Ka Mandi Bhav 30 June 2026 - Live Sabzi aur Fruit Rates',
+    keywords: ['aaj ka mandi bhav', 'mandi bhav today in hindi', 'aaj ke sabzi bhav', 'aloo ka bhav', 'pyaaz ka rate aaj', 'tamatar ka bhav kya hai', 'fruit mandi bhav', 'wholesale mandi rates', 'aaj ka sabzi rate', 'mandi rates today'],
+    component: 'MandiBhavToday',
+    category: 'mandi',
+    publishedTime: '2026-06-30T09:30:00+05:30',
+    modifiedTime: '2026-06-30T09:30:00+05:30',
   },
 ];
 
