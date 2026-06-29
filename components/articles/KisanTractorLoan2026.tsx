@@ -27,7 +27,7 @@ export default function KisanTractorLoan2026() {
           Kisan Tractor Loan Kaise Le Bina Down Payment – 2026 Complete Guide
         </h1>
         <p className="text-gray-500 text-sm mb-6">
-          ⏱ Reading Time: ~14 min &nbsp;|&nbsp; 👨‍ Hinglish Guide &nbsp;|&nbsp; 📊 Real Data + Case Studies
+          ⏱ Reading Time: ~14 min &nbsp;|&nbsp; 👨‍🌾 Hinglish Guide &nbsp;|&nbsp; 📊 Real Data + Case Studies
         </p>
 
         {/* Intro Story */}
@@ -67,7 +67,7 @@ export default function KisanTractorLoan2026() {
             Seedha jawab: <strong>haan, kuch cases mein mil sakta hai</strong> – lekin &quot;zero down payment&quot; ek marketing term hai, poori sachai thodi alag hai. Zyaadatar banks aur finance companies 85–100% tak loan deti hain tractor ki on-road price par. Matlab aapko sirf 0–15% hi apni jeb se dena pad sakta hai. 💵
           </p>
           <p className="text-gray-700 leading-relaxed mb-3">
-            Sukhdev ke case mein SBI ke <Link href="/articles/pm-kisan-23vi-kist-2026-status-check" className="text-amber-700 underline hover:text-amber-900 font-semibold">Kisan Credit Card (KCC)</Link> holder hone ki wajah se unhe 90% financing mil gayi. Sirf 10% – yani lagbhag ₹55,000 – khud dena pada ek ₹5.5 lakh ke tractor par. Yeh ek baar mein mushkil nahi tha. ✅
+            Sukhdev ke case mein SBI ke <Link href="/articles/kisan-credit-card-online-apply-2026" className="text-amber-700 underline hover:text-amber-900 font-semibold">Kisan Credit Card (KCC)</Link> holder hone ki wajah se unhe 90% financing mil gayi. Sirf 10% – yani lagbhag ₹55,000 – khud dena pada ek ₹5.5 lakh ke tractor par. Yeh ek baar mein mushkil nahi tha. ✅
           </p>
 
           <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
