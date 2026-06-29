@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef, useMemo } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import FAQSection from '@/components/FAQSection';
@@ -168,66 +168,6 @@ function ArticleImage({ src, alt, emoji }: { src: string; alt: string; emoji: st
   );
 }
 
-// ✅ STATIC WHEAT FIELD - NO ANIMATION
-function WheatField() {
-  const stalks = useMemo(() => {
-    const result = [];
-    for (let i = 0; i < 50; i++) {
-      result.push({
-        x: (i / 50) * 1200 + (i % 3) * 10,
-        height: 50 + (i % 6) * 12,
-        lean: ((i % 5) - 2) * 10,
-        color: i < 18 ? '#92400e' : i < 35 ? '#b45309' : '#d97706',
-        earColor: i < 18 ? '#b45309' : i < 35 ? '#d97706' : '#f59e0b',
-      });
-    }
-    return result;
-  }, []);
-
-  return (
-    <div className="absolute bottom-0 left-0 right-0 h-40 md:h-52 overflow-hidden">
-      {/* Ground */}
-      <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-amber-900 to-amber-800" />
-
-      {/* Static Wheat SVG */}
-      <svg 
-        className="absolute bottom-8 w-full h-full"
-        viewBox="0 0 1200 140" 
-        preserveAspectRatio="none"
-      >
-        {stalks.map((s, i) => {
-          const topX = s.x + s.lean;
-          const topY = 140 - s.height;
-          return (
-            <g key={i}>
-              {/* Stem */}
-              <path
-                d={`M${s.x},140 Q${s.x + s.lean * 0.5},${140 - s.height * 0.5} ${topX},${topY}`}
-                stroke={s.color}
-                strokeWidth="2"
-                fill="none"
-                strokeLinecap="round"
-              />
-              {/* Wheat Ear */}
-              <ellipse
-                cx={topX}
-                cy={topY - 4}
-                rx="3"
-                ry="7"
-                fill={s.earColor}
-              />
-              {/* Awns (whiskers) */}
-              <line x1={topX} y1={topY - 10} x2={topX - 2} y2={topY - 16} stroke={s.earColor} strokeWidth="0.8" />
-              <line x1={topX} y1={topY - 10} x2={topX + 2} y2={topY - 16} stroke={s.earColor} strokeWidth="0.8" />
-              <line x1={topX} y1={topY - 10} x2={topX} y2={topY - 17} stroke={s.earColor} strokeWidth="0.8" />
-            </g>
-          );
-        })}
-      </svg>
-    </div>
-  );
-}
-
 export default function HomeContent() {
   return (
     <>
@@ -248,28 +188,22 @@ export default function HomeContent() {
         </div>
       </div>
 
-      {/* HERO — Static Wheat Field */}
+      {/* ✅ HERO — Optimized Green Garden Gradient (NO SVG) */}
       <section 
         className="relative overflow-hidden py-14 md:py-20"
+        style={{
+          background: 'linear-gradient(135deg, #065f46 0%, #047857 25%, #059669 50%, #10b981 75%, #34d399 100%)'
+        }}
         aria-label="Hero"
       >
-        {/* Sky Gradient - Golden Hour */}
-        <div 
-          className="absolute inset-0"
-          style={{
-            background: 'linear-gradient(180deg, #1e3a5f 0%, #f59e0b 40%, #fbbf24 60%, #fcd34d 80%, #92400e 100%)'
-          }}
-        />
-
-        {/* Sun */}
-        <div className="absolute top-8 right-16 md:right-24 w-24 h-24 md:w-32 md:h-32 rounded-full bg-yellow-200 blur-2xl" />
-
-        {/* Static Wheat Field - NO ANIMATION */}
-        <WheatField />
+        {/* Decorative Blur Circles - CSS Only, Lightweight */}
+        <div className="absolute -top-24 -left-20 w-96 h-96 rounded-full bg-emerald-400/20 blur-[100px] pointer-events-none" />
+        <div className="absolute top-1/3 -right-10 w-80 h-80 rounded-full bg-amber-400/15 blur-[100px] pointer-events-none" />
+        <div className="absolute bottom-0 left-1/4 w-72 h-72 rounded-full bg-green-400/15 blur-[80px] pointer-events-none" />
 
         {/* Content */}
         <div className="container-site relative z-10 max-w-3xl px-4">
-          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-amber-100 text-xs font-bold px-4 py-2 rounded-full mb-5 uppercase tracking-wider backdrop-blur-sm">
+          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-green-100 text-xs font-bold px-4 py-2 rounded-full mb-5 uppercase tracking-wider backdrop-blur-sm">
             🌾 India Ka #1 PM Kisan Information Portal
           </div>
 
@@ -280,16 +214,16 @@ export default function HomeContent() {
             </span>
           </h1>
 
-          <h2 className="text-base md:text-lg text-amber-50 mb-6 max-w-xl leading-relaxed font-normal drop-shadow-md">
+          <h2 className="text-base md:text-lg text-green-50 mb-6 max-w-xl leading-relaxed font-normal drop-shadow-md">
             Kisan bhai — <strong className="text-white">{STATS.currentKist}vi kist {STATS.currentKistDate} ko release ho chuki hai!</strong> Apna status abhi check karo, eKYC complete karo, paisa aaya ya nahi dekho. <span className="text-yellow-200 font-semibold">Sab free — 10 minute mein.</span>
           </h2>
 
           <div className="flex flex-wrap gap-3">
             <Link 
               href="/articles/pm-kisan-23vi-kist-2026-status-check" 
-              className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-black px-6 py-3.5 rounded-xl text-sm transition-all hover:scale-105 shadow-lg shadow-amber-900/40"
+              className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-black px-6 py-3.5 rounded-xl text-sm transition-all hover:scale-105 shadow-lg shadow-green-900/40"
             >
-               {STATS.currentKist}vi Kist Status Dekho
+              📆 {STATS.currentKist}vi Kist Status Dekho
             </Link>
             <Link 
               href="/articles/pm-kisan-ekyc-online-2026" 
@@ -300,7 +234,7 @@ export default function HomeContent() {
           </div>
 
           {/* Trust Strip */}
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-8 text-[11px] text-amber-100 drop-shadow-md">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-8 text-[11px] text-green-100 drop-shadow-md">
             {['✅ 100% Free', '🔒 Koi Data Store Nahi', '🏛️ pmkisan.gov.in Verified', '📞 Helpline: 155261'].map(t => (
               <span key={t}>{t}</span>
             ))}
@@ -385,7 +319,7 @@ export default function HomeContent() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             {[
-              { label: 'Registered Farmers', value: '11 Cr+', icon: '‍🌾' },
+              { label: 'Registered Farmers', value: '11 Cr+', icon: '👨‍🌾' },
               { label: 'Received Payment', value: '9.44 Cr+', icon: '💰' },
               { label: 'Per Year', value: '₹6,000', icon: '📅' },
               { label: 'Per Kist', value: '₹2,000', icon: '💵' },
@@ -431,7 +365,7 @@ export default function HomeContent() {
               },
               {
                 step: '03',
-                title: '2,000 Paao',
+                title: '₹2,000 Paao',
                 desc: 'Har 4 mahine mein seedha bank account mein paisa',
                 icon: '💰',
                 color: 'bg-amber-50 border-amber-200',
@@ -540,10 +474,10 @@ export default function HomeContent() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
             {[
-              { icon: '', title: 'Soil Health Card', desc: 'Mitti testing free', color: 'bg-green-500' },
+              { icon: '🌱', title: 'Soil Health Card', desc: 'Mitti testing free', color: 'bg-green-500' },
               { icon: '💧', title: 'Irrigation Support', desc: 'Water management', color: 'bg-blue-500' },
-              { icon: '', title: 'Crop Insurance', desc: 'Fasal suraksha', color: 'bg-amber-500' },
-              { icon: '', title: 'Market Price', desc: 'Mandi bhav jaano', color: 'bg-purple-500' },
+              { icon: '🌾', title: 'Crop Insurance', desc: 'Fasal suraksha', color: 'bg-amber-500' },
+              { icon: '📊', title: 'Market Price', desc: 'Mandi bhav jaano', color: 'bg-purple-500' },
             ].map((feature, i) => (
               <Reveal key={feature.title} delay={i * 80}>
                 <div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all">
@@ -569,7 +503,7 @@ export default function HomeContent() {
       {/* FAQ */}
       <FAQSection faqs={FAQS} />
       
-      {/* Global CSS - ONLY MARQUEE (Ticker) */}
+      {/* Global CSS - Only Marquee Animation */}
       <style jsx global>{`
         @keyframes marquee {
           0% { transform: translateX(0); }
