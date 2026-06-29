@@ -188,7 +188,7 @@ export default function HomeContent() {
         </div>
       </div>
 
-      {/* ✅ HERO — Optimized Green Garden Gradient (NO SVG) */}
+      {/* HERO — Optimized Green Garden Gradient (NO SVG) */}
       <section 
         className="relative overflow-hidden py-14 md:py-20"
         style={{
@@ -426,7 +426,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* AGRICULTURE IMAGE 2 */}
+      {/* AGRICULTURE IMAGE 2 - With Market Price Link */}
       <section className="py-14 bg-gradient-to-b from-amber-50 to-white" aria-labelledby="modern-heading">
         <div className="container-site px-4">
           <Reveal>
@@ -477,16 +477,32 @@ export default function HomeContent() {
               { icon: '🌱', title: 'Soil Health Card', desc: 'Mitti testing free', color: 'bg-green-500' },
               { icon: '💧', title: 'Irrigation Support', desc: 'Water management', color: 'bg-blue-500' },
               { icon: '🌾', title: 'Crop Insurance', desc: 'Fasal suraksha', color: 'bg-amber-500' },
-              { icon: '📊', title: 'Market Price', desc: 'Mandi bhav jaano', color: 'bg-purple-500' },
+              { icon: '📊', title: 'Market Price', desc: 'Mandi bhav jaano', color: 'bg-purple-500', href: '/articles/mandi-bhav-today' },
             ].map((feature, i) => (
               <Reveal key={feature.title} delay={i * 80}>
-                <div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all">
-                  <div className={`${feature.color} w-14 h-14 rounded-2xl flex items-center justify-center text-3xl mb-4`}>
-                    {feature.icon}
+                {feature.href ? (
+                  <Link 
+                    href={feature.href}
+                    className="group bg-white rounded-2xl p-6 shadow-lg border-2 border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all block"
+                  >
+                    <div className={`${feature.color} w-14 h-14 rounded-2xl flex items-center justify-center text-3xl mb-4`}>
+                      {feature.icon}
+                    </div>
+                    <h3 className="font-bold text-gray-900 text-lg mb-2 group-hover:text-purple-700 transition-colors">{feature.title}</h3>
+                    <p className="text-gray-500 text-sm">{feature.desc}</p>
+                    <span className="inline-flex items-center gap-1 text-purple-600 text-sm font-bold mt-3 group-hover:translate-x-1 transition-transform">
+                      Dekho →
+                    </span>
+                  </Link>
+                ) : (
+                  <div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all">
+                    <div className={`${feature.color} w-14 h-14 rounded-2xl flex items-center justify-center text-3xl mb-4`}>
+                      {feature.icon}
+                    </div>
+                    <h3 className="font-bold text-gray-900 text-lg mb-2">{feature.title}</h3>
+                    <p className="text-gray-500 text-sm">{feature.desc}</p>
                   </div>
-                  <h3 className="font-bold text-gray-900 text-lg mb-2">{feature.title}</h3>
-                  <p className="text-gray-500 text-sm">{feature.desc}</p>
-                </div>
+                )}
               </Reveal>
             ))}
           </div>
