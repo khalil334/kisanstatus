@@ -113,39 +113,47 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact & Support - YOUR DETAILS */}
+          {/* Contact & Support - STATIC INFO CARD (Fixed) */}
           <div>
             <h4 className="font-semibold text-white text-base mb-4 flex items-center gap-2">
               <span aria-hidden="true">📞</span>
-              Contact & Support
+              Helpline & Support
             </h4>
-            <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-4 mb-4">
-              <p className="text-xs text-gray-400 mb-3">
-                Kisi bhi problem ke liye humse contact karein
-              </p>
-              <div className="space-y-2">
-                {/* Email */}
-                <a 
-                  href="mailto:kisanstatus.support@gmail.com" 
-                  className="block text-center bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-3 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 text-sm"
-                >
-                  📧 kisanstatus.support@gmail.com
-                </a>
-                {/* Facebook */}
-                <a 
-                  href="https://www.facebook.com/profile.php?id=61590430994270" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="block text-center bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-3 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
-                >
-                  👍 Facebook Page ↗
-                </a>
+            
+            {/* ✅ UPDATED: Clear Static Info Card (Option A) - No fake chat feel */}
+            <div className="bg-gray-800 border border-gray-700 rounded-lg p-4 mb-4">
+              <h5 className="text-sm font-bold text-green-400 mb-3 flex items-center gap-2">
+                📢 Helpline Jankari
+              </h5>
+              <div className="space-y-2.5 text-xs text-gray-300">
+                <p className="flex items-start gap-2">
+                  <span className="shrink-0 mt-0.5">📞</span> 
+                  <span>
+                    PM Kisan Helpline: <a href="tel:155261" className="text-white font-bold hover:underline">155261</a> (Toll-Free)
+                  </span>
+                </p>
+                <p className="flex items-start gap-2">
+                  <span className="shrink-0 mt-0.5">📧</span> 
+                  <span>
+                    Email: <a href="mailto:kisanstatus.support@gmail.com" className="text-white hover:underline break-all">kisanstatus.support@gmail.com</a>
+                  </span>
+                </p>
+                <p className="flex items-start gap-2">
+                  <span className="shrink-0 mt-0.5">⏰</span> 
+                  <span>Time: Mon-Sat 9:30AM - 6:00PM</span>
+                </p>
               </div>
             </div>
-            <div className="text-xs text-gray-400 space-y-1">
-              <p>⏰ Mon-Sat: 9:30 AM - 6:00 PM</p>
-              <p>🌐 kisanstatus.com</p>
-            </div>
+
+            {/* Facebook Link (Kept as a proper secondary CTA) */}
+            <a 
+              href="https://www.facebook.com/profile.php?id=61590430994270" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="block text-center bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-3 rounded-lg transition-colors text-xs"
+            >
+              👍 Facebook Page Par Follow Karein ↗
+            </a>
           </div>
         </div>
 
