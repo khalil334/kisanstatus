@@ -168,6 +168,7 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [shortcutKey, setShortcutKey] = useState<string | null>(null); // ✅ ADDED: OS detection state
   const pathname = usePathname();
 
   useEffect(() => {
@@ -188,6 +189,27 @@ export default function Header() {
   useEffect(() => {
     setMobileOpen(false);
   }, [pathname]);
+
+  // ✅ ADDED: Detect Mobile & OS for shortcut hint
+  useEffect(() => {
+    const updateShortcut = () => {
+      const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+      const isSmallScreen = window.innerWidth < 768;
+      const isMobile = isTouchDevice || isSmallScreen;
+
+      if (isMobile) {
+        setShortcutKey(null); // Mobile par badge completely hide
+      } else {
+        const isMac = navigator.platform?.toUpperCase().includes('MAC') || 
+                      navigator.userAgent?.toUpperCase().includes('MAC');
+        setShortcutKey(isMac ? '⌘K' : 'Ctrl+K'); // Desktop par OS ke hisaab se text
+      }
+    };
+
+    updateShortcut();
+    window.addEventListener('resize', updateShortcut);
+    return () => window.removeEventListener('resize', updateShortcut);
+  }, []);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -264,7 +286,13 @@ export default function Header() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
               <span className="font-medium">Search</span>
-              <kbd className="hidden xl:inline-flex text-[10px] font-mono text-gray-400 bg-white border border-gray-200 rounded px-1.5 py-0.5 ml-1">⌘K</kbd>
+              
+              {/* ✅ UPDATED: Conditional rendering based on OS and Mobile detection */}
+              {shortcutKey && (
+                <kbd className="hidden xl:inline-flex text-[10px] font-mono text-gray-400 bg-white border border-gray-200 rounded px-1.5 py-0.5 ml-1">
+                  {shortcutKey}
+                </kbd>
+              )}
             </button>
 
             <LanguageSwitcher />
