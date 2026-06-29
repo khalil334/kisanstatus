@@ -1,10 +1,7 @@
 /**
  * app/articles/category/[category]/page.tsx — SERVER COMPONENT
- * ✅ SSG — generateStaticParams se saari category pages build time par banengi
- * ✅ Unique metadata har category ke liye
- * ✅ JSON-LD CollectionPage schema
- * ✅ Same design as ArticlesClient
- * ✅ SEO v3.0: Keywords removed, og:locale fixed to en_IN
+ * SSG with generateStaticParams — all category pages built at build time
+ * JSON-LD CollectionPage + Breadcrumb schemas
  */
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -52,6 +49,11 @@ const CATEGORY_SEO: Record<CategorySlug, { title: string; description: string; e
     description: 'PM Kisan naam correction, mobile number change, Aadhaar mismatch fix, bank account update — sab online kaise karein.',
     emoji: '✏️',
   },
+  'mandi': {
+    title: 'Mandi Bhav Today 2026 — Live Sabzi aur Fruit Rates',
+    description: 'Aaj ka mandi bhav — aloo, pyaaz, tamatar, seb, kela ke wholesale rates. Daily updated market prices Hindi mein.',
+    emoji: '🏪',
+  },
 };
 
 // ── Generate all category pages at build time (SSG) ────────────────────────
@@ -76,16 +78,15 @@ export async function generateMetadata({
   return {
     title: seo.title,
     description: seo.description,
-    // ❌ BUG 1 FIXED: keywords COMPLETELY REMOVED
     authors: [{ name: 'Sidhu Singh', url: `${DOMAIN}/about` }],
-    alternates: { canonical: url }, // ✅ Canonical already present
+    alternates: { canonical: url },
     openGraph: {
       title: seo.title,
       description: seo.description,
       type: 'website',
       url,
       siteName: 'KisanStatus.com',
-      locale: 'en_IN', // ✅ BUG 3 FIXED: en_IN for Hinglish content
+      locale: 'en_IN',
       images: [{ url: `${DOMAIN}/og-image.webp`, width: 1200, height: 630, alt: seo.title }],
     },
     twitter: {
@@ -108,7 +109,6 @@ export default async function CategoryPage({
   const cat = CATEGORIES[category as CategorySlug];
   const seo = CATEGORY_SEO[category as CategorySlug];
 
-  // Agar invalid category aayi toh 404
   if (!cat || !seo) {
     notFound();
   }
@@ -116,14 +116,13 @@ export default async function CategoryPage({
   const articles = ARTICLES.filter((a) => a.category === category);
   const url = `${DOMAIN}/articles/category/${category}`;
 
-  // JSON-LD CollectionPage schema
   const collectionSchema = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
     name: seo.title,
     description: seo.description,
     url,
-    inLanguage: 'en-IN', // ✅ BUG 3: Consistent with og:locale
+    inLanguage: 'en-IN',
     isPartOf: { '@type': 'WebSite', name: 'KisanStatus.com', url: DOMAIN },
     numberOfItems: articles.length,
     mainEntity: {
@@ -137,7 +136,6 @@ export default async function CategoryPage({
     },
   };
 
-  // Breadcrumb schema
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -150,7 +148,6 @@ export default async function CategoryPage({
 
   return (
     <>
-      {/* JSON-LD Schemas */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
@@ -167,7 +164,6 @@ export default async function CategoryPage({
           style={{ background: 'linear-gradient(135deg,#052e16 0%,#14532d 60%,#166534 100%)' }}
         >
           <div className="container-site text-center">
-            {/* Breadcrumb */}
             <nav className="text-green-300 text-xs mb-4" aria-label="Breadcrumb">
               <Link href="/" className="hover:text-white transition-colors">Home</Link>
               <span className="mx-2">/</span>
