@@ -1,10 +1,18 @@
 /** @type {import('next').NextConfig} */ 
 const nextConfig = { 
-  compress: true, 
+  compress: true,
+  swcMinify: true, // ✅ NEW: Better JavaScript minification
   
   images: { 
     unoptimized: false,
-    formats: ['image/webp'],
+    formats: ['image/avif', 'image/webp'], // ✅ UPDATED: AVIF added (better compression)
+    deviceSizes: [320, 420, 640, 750, 828, 1080, 1200, 1920], // ✅ NEW: Mobile-first sizes
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384], // ✅ NEW: Thumbnail sizes
+    minimumCacheTTL: 60 * 60 * 24 * 30, // ✅ NEW: 30 days cache
+  },
+
+  experimental: {
+    optimizeCss: true, // ✅ NEW: Critical CSS inline karega
   },
   
   async headers() { 
