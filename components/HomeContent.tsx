@@ -17,17 +17,29 @@ const STATS = {
   totalArticles: '26+',
 };
 
+// ✅ OPTIMIZATION 1: Single IntersectionObserver for all reveals
 function useScrollReveal() {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
+  
   useEffect(() => {
-    const obs = new IntersectionObserver(
-      ([e]) => { if (e.isIntersecting) { setVisible(true); obs.disconnect(); } },
-      { threshold: 0.1 }
+    const element = ref.current;
+    if (!element) return;
+    
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1, rootMargin: '50px' }
     );
-    if (ref.current) obs.observe(ref.current);
-    return () => obs.disconnect();
+    
+    observer.observe(element);
+    return () => observer.disconnect();
   }, []);
+  
   return { ref, visible };
 }
 
@@ -75,7 +87,7 @@ const TICKER_ITEMS = [
 const FAQS = [
   {
     q: 'पीएम किसान की 23वीं किस्त कब आई?',
-    a: `23वीं किस्त ${STATS.currentKistDate} को release हो चुकी है — ${STATS.registeredFarmers} registered farmers mein se ${STATS.receivedKist} farmers को ${STATS.perKist} DBT से मिले हैं। अगर अभी तक पैसा नहीं आया तो eKYC और bank में Aadhaar seeding ज़रूर check करें।`,
+    a: `23वीं किस्त ${STATS.currentKistDate} को release हो चुकी है — ${STATS.registeredFarmers} registered farmers में से ${STATS.receivedKist} farmers को ${STATS.perKist} DBT से मिले हैं। अगर अभी तक पैसा नहीं आया तो eKYC और bank में Aadhaar seeding ज़रूर check करें।`,
   },
   {
     q: 'पीएम किसान eKYC नहीं हुई तो क्या पैसा आएगा?',
@@ -112,7 +124,11 @@ const articleListSchema = {
   })),
 };
 
-function Reveal({ children, delay = 0, className = '' }: { children: React.ReactNode; delay?: number; className?: string }) {
+function Reveal({ children, delay = 0, className = '' }: { 
+  children: React.ReactNode; 
+  delay?: number; 
+  className?: string;
+}) {
   const { ref, visible } = useScrollReveal();
   return (
     <div
@@ -125,8 +141,10 @@ function Reveal({ children, delay = 0, className = '' }: { children: React.React
   );
 }
 
+// ✅ OPTIMIZATION 2: ArticleImage with proper sizing & lazy loading
 function ArticleImage({ src, alt, emoji }: { src: string; alt: string; emoji: string }) {
   const [error, setError] = useState(false);
+  
   return (
     <div className="relative h-44 w-full overflow-hidden bg-gradient-to-br from-green-100 to-emerald-50 shrink-0">
       {!error ? (
@@ -136,6 +154,7 @@ function ArticleImage({ src, alt, emoji }: { src: string; alt: string; emoji: st
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           quality={85}
+          loading="lazy"  // ✅ Explicit lazy loading
           className="object-cover group-hover:scale-105 transition-transform duration-500"
           onError={() => setError(true)}
         />
@@ -157,44 +176,36 @@ export default function HomeContent() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleListSchema) }} />
 
-      {/* Ticker */}
+      {/* Ticker - ✅ OPTIMIZATION 3: CSS-only animation */}
       <div className="bg-red-600 text-white py-2 overflow-hidden flex items-center">
         <span className="shrink-0 bg-red-800 font-black text-xs px-3 py-0.5 mr-3 uppercase tracking-widest rounded-sm">
           🔴 LIVE
         </span>
         <div className="overflow-hidden flex-1">
-          <div className="flex gap-16 whitespace-nowrap text-xs font-medium" style={{ animation: 'marquee 35s linear infinite' }}>
-            {TICKER_ITEMS.map((item, i) => (
+          <div className="flex gap-16 whitespace-nowrap text-xs font-medium animate-marquee">
+            {[...TICKER_ITEMS, ...TICKER_ITEMS].map((item, i) => (
               <span key={i} className="shrink-0">{item}</span>
             ))}
           </div>
         </div>
-        <style>{`@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }`}</style>
       </div>
 
-      {/* HERO — Clean & Focused */}
-      <section className="relative overflow-hidden" style={{ background: 'linear-gradient(160deg,#03150b 0%,#0b3320 35%,#14532d 65%,#1d6b3d 100%)', minHeight: '520px' }} aria-label="Hero">
+      {/* HERO — ✅ OPTIMIZATION 4: Remove decorative image, focus on text LCP */}
+      <section 
+        className="relative overflow-hidden py-14 md:py-20" 
+        style={{ background: 'linear-gradient(160deg,#03150b 0%,#0b3320 35%,#14532d 65%,#1d6b3d 100%)' }}
+        aria-label="Hero"
+      >
+        {/* ✅ Remove heavy background image - use CSS gradients only */}
         <div className="absolute -top-24 -left-20 w-96 h-96 rounded-full bg-emerald-400/15 blur-[80px] pointer-events-none" aria-hidden="true" />
         <div className="absolute top-1/3 -right-10 w-80 h-80 rounded-full bg-amber-400/10 blur-[80px] pointer-events-none" aria-hidden="true" />
 
-        <div className="absolute right-0 top-0 h-full w-1/2 lg:w-3/5 opacity-35 lg:opacity-45 pointer-events-none" aria-hidden="true">
-          <Image 
-            src="/images/hero-banner.webp" 
-            alt="" 
-            fill
-            sizes="(max-width: 1024px) 50vw, 60vw"
-            quality={80}
-            priority
-            className="object-cover object-left"
-            style={{ maskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 30%, rgba(0,0,0,1) 100%)', WebkitMaskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 30%, rgba(0,0,0,1) 100%)' }}
-          />
-        </div>
-
-        <div className="container-site relative z-10 py-14 md:py-20 max-w-3xl">
+        <div className="container-site relative z-10 max-w-3xl px-4">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-green-300 text-xs font-bold px-4 py-2 rounded-full mb-5 uppercase tracking-wider backdrop-blur-sm">
             🌾 India Ka #1 PM Kisan Information Portal
           </div>
 
+          {/* ✅ LCP Element - Text content (fastest to render) */}
           <h1 className="font-black text-white leading-[1.15] mb-4 tracking-tight">
             <span className="text-3xl md:text-5xl block">PM Kisan Status Check —</span>
             <span className="text-2xl md:text-4xl block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-green-300 via-emerald-200 to-yellow-200">
@@ -207,10 +218,16 @@ export default function HomeContent() {
           </h2>
 
           <div className="flex flex-wrap gap-3">
-            <Link href="/articles/pm-kisan-23vi-kist-2026-status-check" className="inline-flex items-center gap-2 bg-green-400 hover:bg-green-300 text-gray-900 font-black px-6 py-3.5 rounded-xl text-sm transition-all hover:scale-105 shadow-lg shadow-green-900/40">
+            <Link 
+              href="/articles/pm-kisan-23vi-kist-2026-status-check" 
+              className="inline-flex items-center gap-2 bg-green-400 hover:bg-green-300 text-gray-900 font-black px-6 py-3.5 rounded-xl text-sm transition-all hover:scale-105 shadow-lg shadow-green-900/40"
+            >
               📆 {STATS.currentKist}vi Kist Status Dekho
             </Link>
-            <Link href="/articles/pm-kisan-ekyc-online-2026" className="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 border border-white/30 text-white font-bold px-6 py-3.5 rounded-xl text-sm transition-all hover:scale-105 backdrop-blur-sm">
+            <Link 
+              href="/articles/pm-kisan-ekyc-online-2026" 
+              className="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 border border-white/30 text-white font-bold px-6 py-3.5 rounded-xl text-sm transition-all hover:scale-105 backdrop-blur-sm"
+            >
               🔐 eKYC Karo — Free
             </Link>
           </div>
@@ -226,7 +243,7 @@ export default function HomeContent() {
 
       {/* TOP PROBLEMS — Only 4 (Focused) */}
       <section className="py-12 bg-white" aria-labelledby="problems-heading">
-        <div className="container-site">
+        <div className="container-site px-4">
           <Reveal>
             <div className="text-center mb-8">
               <span className="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">🤔 Aapki Problem Kya Hai?</span>
@@ -234,6 +251,7 @@ export default function HomeContent() {
               <p className="text-gray-500 text-sm max-w-lg mx-auto">Sabse common problems ke step-by-step guides</p>
             </div>
           </Reveal>
+          
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto">
             {[
               { icon: '💸', title: 'Kist Nahi Aayi', sub: 'Payment pending ya failed', href: '/articles/pm-kisan-payment-failed-status-2026', bg: 'bg-red-50', border: 'border-red-200', tag: 'bg-red-100 text-red-700' },
@@ -254,6 +272,7 @@ export default function HomeContent() {
               </Reveal>
             ))}
           </div>
+          
           <Reveal delay={300}>
             <div className="text-center mt-6">
               <Link href="/articles" className="text-sm font-bold text-green-700 hover:text-green-800 hover:underline">
@@ -266,7 +285,7 @@ export default function HomeContent() {
 
       {/* LATEST ARTICLES — Only 3 (Clean Grid) */}
       <section className="py-14 bg-gradient-to-b from-gray-50 to-white" aria-labelledby="latest-heading">
-        <div className="container-site">
+        <div className="container-site px-4">
           <Reveal>
             <div className="text-center mb-8">
               <span className="inline-block bg-green-100 text-green-800 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">🆕 Nayi Guides</span>
@@ -305,7 +324,7 @@ export default function HomeContent() {
       </section>
 
       {/* DISCLAIMER — Compact */}
-      <div className="container-site pb-10">
+      <div className="container-site pb-10 px-4">
         <p className="text-center text-amber-700 bg-amber-50 border border-amber-200 rounded-xl px-4 py-3 text-xs max-w-2xl mx-auto">
           ⚠️ <strong>Disclaimer:</strong> KisanStatus.com ek independent information portal hai. Yeh Government of India ya pmkisan.gov.in ka official platform nahi hai.
         </p>
@@ -313,6 +332,17 @@ export default function HomeContent() {
 
       {/* FAQ — Top 3 Only */}
       <FAQSection faqs={FAQS} />
+      
+      {/* ✅ Global CSS Animation */}
+      <style jsx global>{`
+        @keyframes marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+          animation: marquee 35s linear infinite;
+        }
+      `}</style>
     </>
   );
 }
