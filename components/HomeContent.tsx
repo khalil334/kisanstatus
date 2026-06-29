@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import FAQSection from '@/components/FAQSection';
 
 const STATS = {
@@ -129,15 +130,23 @@ function ArticleImage({ src, alt, emoji }: { src: string; alt: string; emoji: st
   return (
     <div className="relative h-44 w-full overflow-hidden bg-gradient-to-br from-green-100 to-emerald-50 shrink-0">
       {!error ? (
-        <img src={src} alt={alt} width={400} height={176} className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" onError={() => setError(true)} />
+        <Image 
+          src={src} 
+          alt={alt} 
+          fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          quality={85}
+          className="object-cover group-hover:scale-105 transition-transform duration-500"
+          onError={() => setError(true)}
+        />
       ) : (
         <div className="h-full w-full flex items-center justify-center">
           <span className="text-5xl">{emoji}</span>
         </div>
       )}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-      <span className="absolute top-3 left-3 bg-amber-400 text-gray-900 text-[10px] font-black px-2.5 py-1 rounded-full shadow-md">NEW</span>
-      <span className="absolute bottom-3 left-3 text-2xl drop-shadow-lg">{emoji}</span>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-10" />
+      <span className="absolute top-3 left-3 bg-amber-400 text-gray-900 text-[10px] font-black px-2.5 py-1 rounded-full shadow-md z-20">NEW</span>
+      <span className="absolute bottom-3 left-3 text-2xl drop-shadow-lg z-20">{emoji}</span>
     </div>
   );
 }
@@ -169,7 +178,16 @@ export default function HomeContent() {
         <div className="absolute top-1/3 -right-10 w-80 h-80 rounded-full bg-amber-400/10 blur-[80px] pointer-events-none" aria-hidden="true" />
 
         <div className="absolute right-0 top-0 h-full w-1/2 lg:w-3/5 opacity-35 lg:opacity-45 pointer-events-none" aria-hidden="true">
-          <img src="/images/hero-banner.webp" alt="" className="h-full w-full object-cover object-left" style={{ maskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 30%, rgba(0,0,0,1) 100%)', WebkitMaskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 30%, rgba(0,0,0,1) 100%)' }} loading="eager" fetchPriority="high" width={800} height={520} />
+          <Image 
+            src="/images/hero-banner.webp" 
+            alt="" 
+            fill
+            sizes="(max-width: 1024px) 50vw, 60vw"
+            quality={80}
+            priority
+            className="object-cover object-left"
+            style={{ maskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 30%, rgba(0,0,0,1) 100%)', WebkitMaskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 30%, rgba(0,0,0,1) 100%)' }}
+          />
         </div>
 
         <div className="container-site relative z-10 py-14 md:py-20 max-w-3xl">
