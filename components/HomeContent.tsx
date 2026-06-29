@@ -54,7 +54,7 @@ const TOP_ARTICLES = [
   {
     slug: 'soil-health-card-complete-guide-2026',
     title: 'Soil Health Card Complete Guide 2026',
-    emoji: '',
+    emoji: '🌱',
     image: '/images/soil-health-card-complete-guide-2026.webp',
     desc: 'Mitti health card download, status check, PDF download — complete guide',
     category: 'Farming',
@@ -79,7 +79,7 @@ const TICKER_ITEMS = [
   `🔴 LIVE: PM Kisan ${STATS.currentKist}vi Kist — ${STATS.currentKistDate} ko ${STATS.perKist} release ho chuki hai`,
   `⏳ ${STATS.nextKist}vi Kist Expected: ${STATS.nextKistDate} — eKYC abhi complete karo`,
   '🔐 eKYC Mandatory: Bina eKYC kist NAHI milegi — pmkisan.gov.in par karo',
-  '📞 Helpline: 155261 | Toll Free: 1800-115-526',
+  ' Helpline: 155261 | Toll Free: 1800-115-526',
   `✅ ${STATS.registeredFarmers} registered farmers — ${STATS.receivedKist} ko ${STATS.currentKist}vi kist mil chuki hai`,
 ];
 
@@ -168,6 +168,72 @@ function ArticleImage({ src, alt, emoji }: { src: string; alt: string; emoji: st
   );
 }
 
+// ✅ REALISTIC WHEAT STALK COMPONENT
+function WheatStalk({ x, height, lean, delay, color, earColor }: { 
+  x: number; 
+  height: number; 
+  lean: number; 
+  delay: number;
+  color: string;
+  earColor: string;
+}) {
+  const topX = x + lean;
+  const topY = 200 - height;
+  const midX = x + lean * 0.5;
+  const midY = 200 - height * 0.5;
+  
+  return (
+    <g className="wheat-stalk" style={{ animationDelay: `${delay}s` }}>
+      {/* Stem */}
+      <path
+        d={`M${x},200 Q${midX},${midY} ${topX},${topY}`}
+        stroke={color}
+        strokeWidth="2.5"
+        fill="none"
+        strokeLinecap="round"
+      />
+      
+      {/* Wheat Ear (Head) - Realistic oval shape */}
+      <ellipse
+        cx={topX}
+        cy={topY - 8}
+        rx="4"
+        ry="12"
+        fill={earColor}
+        transform={`rotate(${lean * 0.5} ${topX} ${topY - 8})`}
+      />
+      
+      {/* Grain details on ear */}
+      <ellipse cx={topX - 1} cy={topY - 14} rx="1.5" ry="2" fill="#92400e" opacity="0.6" />
+      <ellipse cx={topX + 1} cy={topY - 10} rx="1.5" ry="2" fill="#92400e" opacity="0.6" />
+      <ellipse cx={topX - 1} cy={topY - 6} rx="1.5" ry="2" fill="#92400e" opacity="0.6" />
+      
+      {/* Awns (whiskers) on top - realistic wheat feature */}
+      <line x1={topX} y1={topY - 18} x2={topX - 3} y2={topY - 28} stroke={earColor} strokeWidth="0.8" opacity="0.8" />
+      <line x1={topX} y1={topY - 18} x2={topX + 3} y2={topY - 28} stroke={earColor} strokeWidth="0.8" opacity="0.8" />
+      <line x1={topX} y1={topY - 18} x2={topX} y2={topY - 30} stroke={earColor} strokeWidth="0.8" opacity="0.8" />
+      <line x1={topX} y1={topY - 15} x2={topX - 4} y2={topY - 22} stroke={earColor} strokeWidth="0.8" opacity="0.7" />
+      <line x1={topX} y1={topY - 15} x2={topX + 4} y2={topY - 22} stroke={earColor} strokeWidth="0.8" opacity="0.7" />
+      
+      {/* Leaves */}
+      <path
+        d={`M${x + lean * 0.3},${200 - height * 0.4} Q${x + lean * 0.3 - 8},${200 - height * 0.5} ${x + lean * 0.3 - 12},${200 - height * 0.6}`}
+        stroke={color}
+        strokeWidth="1.5"
+        fill="none"
+        opacity="0.7"
+      />
+      <path
+        d={`M${x + lean * 0.6},${200 - height * 0.7} Q${x + lean * 0.6 + 8},${200 - height * 0.8} ${x + lean * 0.6 + 12},${200 - height * 0.9}`}
+        stroke={color}
+        strokeWidth="1.5"
+        fill="none"
+        opacity="0.7"
+      />
+    </g>
+  );
+}
+
 export default function HomeContent() {
   return (
     <>
@@ -188,21 +254,22 @@ export default function HomeContent() {
         </div>
       </div>
 
-      {/* HERO — Live Green Grass with Wind Effect */}
+      {/* HERO — Realistic Wheat Field with Wind Animation */}
       <section 
         className="relative overflow-hidden py-14 md:py-20"
         aria-label="Hero"
       >
-        {/* Sky Gradient Background */}
+        {/* Sky Gradient Background - Golden Hour */}
         <div 
           className="absolute inset-0"
           style={{
-            background: 'linear-gradient(180deg, #064e3b 0%, #065f46 30%, #047857 60%, #059669 100%)'
+            background: 'linear-gradient(180deg, #1e3a5f 0%, #f59e0b 40%, #fbbf24 60%, #fcd34d 80%, #92400e 100%)'
           }}
         />
 
-        {/* Sun Glow */}
-        <div className="absolute top-10 right-20 w-32 h-32 md:w-48 md:h-48 rounded-full bg-yellow-300/30 blur-3xl animate-pulse-slow" />
+        {/* Sun */}
+        <div className="absolute top-8 right-16 md:right-24 w-24 h-24 md:w-36 md:h-36 rounded-full bg-yellow-200 blur-2xl animate-pulse-slow" />
+        <div className="absolute top-12 right-20 md:right-28 w-16 h-16 md:w-24 md:h-24 rounded-full bg-yellow-100" />
 
         {/* Wind Particles - Floating */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -213,102 +280,93 @@ export default function HomeContent() {
           <div className="wind-particle wind-particle-5" />
         </div>
 
-        {/* Grass Field at Bottom */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 md:h-40 overflow-hidden">
-          {/* Grass Layer 1 - Back (Darker) */}
+        {/* ✅ REALISTIC WHEAT FIELD */}
+        <div className="absolute bottom-0 left-0 right-0 h-48 md:h-64 overflow-hidden">
+          {/* Ground base */}
+          <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-amber-900 to-amber-700" />
+
+          {/* Wheat Layer 1 - Back (Darker, smaller) */}
           <svg 
-            className="absolute bottom-0 w-full h-full grass-sway-slow"
-            viewBox="0 0 1200 160" 
+            className="absolute bottom-12 w-full h-full wheat-sway-slow"
+            viewBox="0 0 1200 200" 
             preserveAspectRatio="none"
             style={{ transformOrigin: 'bottom center' }}
           >
-            {Array.from({ length: 60 }).map((_, i) => {
-              const x = (i / 60) * 1200;
-              const height = 60 + Math.random() * 60;
-              const lean = (Math.random() - 0.5) * 30;
-              return (
-                <path
-                  key={`g1-${i}`}
-                  d={`M${x},160 Q${x + lean},${160 - height / 2} ${x + lean * 1.5},${160 - height}`}
-                  stroke="#064e3b"
-                  strokeWidth="3"
-                  fill="none"
-                  strokeLinecap="round"
-                />
-              );
-            })}
+            {Array.from({ length: 80 }).map((_, i) => (
+              <WheatStalk
+                key={`w1-${i}`}
+                x={(i / 80) * 1200 + Math.random() * 10}
+                height={80 + Math.random() * 40}
+                lean={(Math.random() - 0.5) * 25}
+                delay={Math.random() * 2}
+                color="#92400e"
+                earColor="#b45309"
+              />
+            ))}
           </svg>
 
-          {/* Grass Layer 2 - Middle */}
+          {/* Wheat Layer 2 - Middle */}
           <svg 
-            className="absolute bottom-0 w-full h-full grass-sway"
-            viewBox="0 0 1200 160" 
+            className="absolute bottom-8 w-full h-full wheat-sway"
+            viewBox="0 0 1200 200" 
             preserveAspectRatio="none"
             style={{ transformOrigin: 'bottom center' }}
           >
-            {Array.from({ length: 50 }).map((_, i) => {
-              const x = 10 + (i / 50) * 1200;
-              const height = 50 + Math.random() * 50;
-              const lean = (Math.random() - 0.5) * 40;
-              return (
-                <path
-                  key={`g2-${i}`}
-                  d={`M${x},160 Q${x + lean},${160 - height / 2} ${x + lean * 1.5},${160 - height}`}
-                  stroke="#047857"
-                  strokeWidth="4"
-                  fill="none"
-                  strokeLinecap="round"
-                />
-              );
-            })}
+            {Array.from({ length: 60 }).map((_, i) => (
+              <WheatStalk
+                key={`w2-${i}`}
+                x={(i / 60) * 1200 + Math.random() * 15}
+                height={90 + Math.random() * 50}
+                lean={(Math.random() - 0.5) * 35}
+                delay={Math.random() * 2}
+                color="#b45309"
+                earColor="#d97706"
+              />
+            ))}
           </svg>
 
-          {/* Grass Layer 3 - Front (Lighter, More sway) */}
+          {/* Wheat Layer 3 - Front (Brighter, larger) */}
           <svg 
-            className="absolute bottom-0 w-full h-full grass-sway-fast"
-            viewBox="0 0 1200 160" 
+            className="absolute bottom-0 w-full h-full wheat-sway-fast"
+            viewBox="0 0 1200 200" 
             preserveAspectRatio="none"
             style={{ transformOrigin: 'bottom center' }}
           >
-            {Array.from({ length: 40 }).map((_, i) => {
-              const x = 5 + (i / 40) * 1200;
-              const height = 40 + Math.random() * 40;
-              const lean = (Math.random() - 0.5) * 50;
-              return (
-                <path
-                  key={`g3-${i}`}
-                  d={`M${x},160 Q${x + lean},${160 - height / 2} ${x + lean * 1.5},${160 - height}`}
-                  stroke="#10b981"
-                  strokeWidth="5"
-                  fill="none"
-                  strokeLinecap="round"
-                />
-              );
-            })}
+            {Array.from({ length: 45 }).map((_, i) => (
+              <WheatStalk
+                key={`w3-${i}`}
+                x={(i / 45) * 1200 + Math.random() * 20}
+                height={100 + Math.random() * 60}
+                lean={(Math.random() - 0.5) * 45}
+                delay={Math.random() * 2}
+                color="#d97706"
+                earColor="#f59e0b"
+              />
+            ))}
           </svg>
         </div>
 
         {/* Content */}
         <div className="container-site relative z-10 max-w-3xl px-4">
-          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-green-100 text-xs font-bold px-4 py-2 rounded-full mb-5 uppercase tracking-wider backdrop-blur-sm">
+          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-amber-100 text-xs font-bold px-4 py-2 rounded-full mb-5 uppercase tracking-wider backdrop-blur-sm">
             🌾 India Ka #1 PM Kisan Information Portal
           </div>
 
-          <h1 className="font-black text-white leading-[1.15] mb-4 tracking-tight">
+          <h1 className="font-black text-white leading-[1.15] mb-4 tracking-tight drop-shadow-lg">
             <span className="text-3xl md:text-5xl block">PM Kisan Status Check —</span>
-            <span className="text-2xl md:text-4xl block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-amber-200 to-yellow-300">
+            <span className="text-2xl md:text-4xl block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-yellow-100 via-amber-200 to-yellow-300">
               पीएम किसान {STATS.currentKist}वीं किस्त 2026
             </span>
           </h1>
 
-          <h2 className="text-base md:text-lg text-green-50 mb-6 max-w-xl leading-relaxed font-normal">
-            Kisan bhai — <strong className="text-white">{STATS.currentKist}vi kist {STATS.currentKistDate} ko release ho chuki hai!</strong> Apna status abhi check karo, eKYC complete karo, paisa aaya ya nahi dekho. <span className="text-yellow-300 font-semibold">Sab free — 10 minute mein.</span>
+          <h2 className="text-base md:text-lg text-amber-50 mb-6 max-w-xl leading-relaxed font-normal drop-shadow-md">
+            Kisan bhai — <strong className="text-white">{STATS.currentKist}vi kist {STATS.currentKistDate} ko release ho chuki hai!</strong> Apna status abhi check karo, eKYC complete karo, paisa aaya ya nahi dekho. <span className="text-yellow-200 font-semibold">Sab free — 10 minute mein.</span>
           </h2>
 
           <div className="flex flex-wrap gap-3">
             <Link 
               href="/articles/pm-kisan-23vi-kist-2026-status-check" 
-              className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-black px-6 py-3.5 rounded-xl text-sm transition-all hover:scale-105 shadow-lg shadow-green-900/40"
+              className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-black px-6 py-3.5 rounded-xl text-sm transition-all hover:scale-105 shadow-lg shadow-amber-900/40"
             >
               📆 {STATS.currentKist}vi Kist Status Dekho
             </Link>
@@ -321,7 +379,7 @@ export default function HomeContent() {
           </div>
 
           {/* Trust Strip */}
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-8 text-[11px] text-green-100">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-8 text-[11px] text-amber-100 drop-shadow-md">
             {['✅ 100% Free', '🔒 Koi Data Store Nahi', '🏛️ pmkisan.gov.in Verified', '📞 Helpline: 155261'].map(t => (
               <span key={t}>{t}</span>
             ))}
@@ -334,7 +392,7 @@ export default function HomeContent() {
         <div className="container-site px-4">
           <Reveal>
             <div className="text-center mb-8">
-              <span className="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider"> Aapki Problem Kya Hai?</span>
+              <span className="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">🤔 Aapki Problem Kya Hai?</span>
               <h2 id="problems-heading" className="text-2xl md:text-3xl font-black text-gray-900 mb-2">Seedha Solution — Click Karo</h2>
               <p className="text-gray-500 text-sm max-w-lg mx-auto">Sabse common problems ke step-by-step guides</p>
             </div>
@@ -343,7 +401,7 @@ export default function HomeContent() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto">
             {[
               { icon: '💸', title: 'Kist Nahi Aayi', sub: 'Payment pending ya failed', href: '/articles/pm-kisan-payment-failed-status-2026', bg: 'bg-red-50', border: 'border-red-200', tag: 'bg-red-100 text-red-700' },
-              { icon: '🔐', title: 'eKYC Karna Hai', sub: 'OTP ya CSC — dono free', href: '/articles/pm-kisan-ekyc-online-2026', bg: 'bg-green-50', border: 'border-green-200', tag: 'bg-green-100 text-green-700' },
+              { icon: '', title: 'eKYC Karna Hai', sub: 'OTP ya CSC — dono free', href: '/articles/pm-kisan-ekyc-online-2026', bg: 'bg-green-50', border: 'border-green-200', tag: 'bg-green-100 text-green-700' },
               { icon: '❌', title: 'Rejected Ho Gaya', sub: 'Rejection reason pata karo', href: '/articles/pm-kisan-rejected-list-2026', bg: 'bg-orange-50', border: 'border-orange-200', tag: 'bg-orange-100 text-orange-700' },
               { icon: '✏️', title: 'Naam Galat Hai', sub: '15 min mein fix karo', href: '/articles/pm-kisan-name-correction-online-2026', bg: 'bg-purple-50', border: 'border-purple-200', tag: 'bg-purple-100 text-purple-700' },
             ].map((c, i) => (
@@ -376,17 +434,16 @@ export default function HomeContent() {
         <div className="container-site px-4">
           <Reveal>
             <div className="text-center mb-10">
-              <span className="inline-block bg-green-100 text-green-800 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">🌾 Hamare Kisan</span>
+              <span className="inline-block bg-green-100 text-green-800 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider"> Hamare Kisan</span>
               <h2 id="farmers-heading" className="text-2xl md:text-3xl font-black text-gray-900 mb-2">Bharat Ki Asli Taqat</h2>
               <p className="text-gray-500 text-sm max-w-xl mx-auto">11 Crore+ kisanon ko PM Kisan se mil raha hai har saal ₹6,000</p>
             </div>
           </Reveal>
 
-          {/* Main Agriculture Image */}
           <Reveal>
             <div className="relative rounded-3xl overflow-hidden shadow-2xl max-w-5xl mx-auto mb-10">
               <Image
-                src="/images/indian-farmers-wheat-field.webp"
+                src="/indian-farmers-wheat-field.webp"
                 alt="Indian Farmers in Green Wheat Field - PM Kisan Samman Nidhi Beneficiaries"
                 width={1200}
                 height={630}
@@ -405,12 +462,11 @@ export default function HomeContent() {
             </div>
           </Reveal>
 
-          {/* Stats Cards */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             {[
-              { label: 'Registered Farmers', value: '11 Cr+', icon: '‍🌾' },
+              { label: 'Registered Farmers', value: '11 Cr+', icon: '👨‍🌾' },
               { label: 'Received Payment', value: '9.44 Cr+', icon: '💰' },
-              { label: 'Per Year', value: '₹6,000', icon: '📅' },
+              { label: 'Per Year', value: '6,000', icon: '' },
               { label: 'Per Kist', value: '₹2,000', icon: '💵' },
             ].map((stat, i) => (
               <Reveal key={stat.label} delay={i * 80}>
@@ -436,7 +492,6 @@ export default function HomeContent() {
             </div>
           </Reveal>
 
-          {/* Step Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-10">
             {[
               {
@@ -450,7 +505,7 @@ export default function HomeContent() {
                 step: '02',
                 title: 'eKYC Complete Karo',
                 desc: 'OTP ya biometric se eKYC verify karo — bilkul free',
-                icon: '🔐',
+                icon: '',
                 color: 'bg-green-50 border-green-200',
               },
               {
@@ -481,7 +536,7 @@ export default function HomeContent() {
         <div className="container-site px-4">
           <Reveal>
             <div className="text-center mb-8">
-              <span className="inline-block bg-green-100 text-green-800 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">🆕 Nayi Guides</span>
+              <span className="inline-block bg-green-100 text-green-800 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider"> Nayi Guides</span>
               <h2 id="latest-heading" className="text-2xl md:text-3xl font-black text-gray-900 mb-2">ताज़ी जानकारी हिंदी में</h2>
               <p className="text-gray-500 text-sm max-w-xl mx-auto">Practical step-by-step guides — government copy-paste nahi</p>
             </div>
@@ -521,17 +576,16 @@ export default function HomeContent() {
         <div className="container-site px-4">
           <Reveal>
             <div className="text-center mb-10">
-              <span className="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">🚜 Modern Farming</span>
+              <span className="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider"> Modern Farming</span>
               <h2 id="modern-heading" className="text-2xl md:text-3xl font-black text-gray-900 mb-2">Technology + Kheti</h2>
               <p className="text-gray-500 text-sm max-w-xl mx-auto">PM Kisan ke saath modern farming se double income</p>
             </div>
           </Reveal>
 
-          {/* Modern Farming Image */}
           <Reveal>
             <div className="relative rounded-3xl overflow-hidden shadow-2xl max-w-5xl mx-auto mb-10">
               <Image
-                src="/images/modern-farming-technology-india.webp"
+                src="/modern-farming-technology-india.webp"
                 alt="Modern Farming Technology in India - Tractor, Mobile App, Digital Agriculture for PM Kisan Farmers"
                 width={1200}
                 height={630}
@@ -554,7 +608,7 @@ export default function HomeContent() {
                     <div className="text-xs opacity-90">Kabhi bhi check karo</div>
                   </div>
                   <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl">
-                    <div className="text-3xl mb-2"></div>
+                    <div className="text-3xl mb-2">💳</div>
                     <div className="font-bold">Direct Bank</div>
                     <div className="text-xs opacity-90">DBT se seedha account</div>
                   </div>
@@ -563,7 +617,6 @@ export default function HomeContent() {
             </div>
           </Reveal>
 
-          {/* Feature Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
             {[
               { icon: '', title: 'Soil Health Card', desc: 'Mitti testing free', color: 'bg-green-500' },
@@ -606,16 +659,16 @@ export default function HomeContent() {
         }
         .wind-particle {
           position: absolute;
-          width: 4px;
-          height: 4px;
-          background: rgba(255, 255, 255, 0.4);
+          width: 3px;
+          height: 3px;
+          background: rgba(255, 255, 255, 0.5);
           border-radius: 50%;
           animation: windFloat linear infinite;
         }
         .wind-particle-1 { top: 30%; left: -10px; animation-duration: 8s; animation-delay: 0s; }
-        .wind-particle-2 { top: 50%; left: -10px; animation-duration: 10s; animation-delay: 2s; width: 3px; height: 3px; }
-        .wind-particle-3 { top: 20%; left: -10px; animation-duration: 12s; animation-delay: 4s; width: 5px; height: 5px; background: rgba(255, 255, 255, 0.3); }
-        .wind-particle-4 { top: 60%; left: -10px; animation-duration: 9s; animation-delay: 1s; width: 3px; height: 3px; }
+        .wind-particle-2 { top: 50%; left: -10px; animation-duration: 10s; animation-delay: 2s; }
+        .wind-particle-3 { top: 20%; left: -10px; animation-duration: 12s; animation-delay: 4s; }
+        .wind-particle-4 { top: 60%; left: -10px; animation-duration: 9s; animation-delay: 1s; }
         .wind-particle-5 { top: 40%; left: -10px; animation-duration: 11s; animation-delay: 3s; }
         @keyframes windFloat {
           0% { transform: translateX(0) translateY(0); opacity: 0; }
@@ -623,33 +676,47 @@ export default function HomeContent() {
           90% { opacity: 1; }
           100% { transform: translateX(calc(100vw + 20px)) translateY(-30px); opacity: 0; }
         }
-        .grass-sway-slow {
-          animation: grassSwaySlow 4s ease-in-out infinite;
+        
+        /* ✅ REALISTIC WHEAT SWAY ANIMATIONS */
+        .wheat-sway-slow {
+          animation: wheatSwaySlow 5s ease-in-out infinite;
         }
-        .grass-sway {
-          animation: grassSway 3s ease-in-out infinite;
+        .wheat-sway {
+          animation: wheatSway 4s ease-in-out infinite;
         }
-        .grass-sway-fast {
-          animation: grassSwayFast 2.5s ease-in-out infinite;
+        .wheat-sway-fast {
+          animation: wheatSwayFast 3.5s ease-in-out infinite;
         }
-        @keyframes grassSwaySlow {
-          0%, 100% { transform: rotate(-1deg); }
-          50% { transform: rotate(2deg); }
+        .wheat-stalk {
+          transform-origin: bottom center;
+          animation: wheatStalkSway 3s ease-in-out infinite;
         }
-        @keyframes grassSway {
+        
+        @keyframes wheatSwaySlow {
+          0%, 100% { transform: rotate(-1.5deg) skewX(-1deg); }
+          50% { transform: rotate(2deg) skewX(1deg); }
+        }
+        @keyframes wheatSway {
+          0%, 100% { transform: rotate(-2deg) skewX(-1.5deg); }
+          50% { transform: rotate(2.5deg) skewX(1.5deg); }
+        }
+        @keyframes wheatSwayFast {
+          0%, 100% { transform: rotate(-3deg) skewX(-2deg); }
+          50% { transform: rotate(3.5deg) skewX(2deg); }
+        }
+        @keyframes wheatStalkSway {
           0%, 100% { transform: rotate(-2deg); }
+          25% { transform: rotate(1deg); }
           50% { transform: rotate(3deg); }
+          75% { transform: rotate(0deg); }
         }
-        @keyframes grassSwayFast {
-          0%, 100% { transform: rotate(-3deg); }
-          50% { transform: rotate(4deg); }
-        }
+        
         .animate-pulse-slow {
           animation: pulseSlow 4s ease-in-out infinite;
         }
         @keyframes pulseSlow {
-          0%, 100% { opacity: 0.3; transform: scale(1); }
-          50% { opacity: 0.5; transform: scale(1.1); }
+          0%, 100% { opacity: 0.4; transform: scale(1); }
+          50% { opacity: 0.7; transform: scale(1.15); }
         }
       `}</style>
     </>
