@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: 'website',
     url: `${DOMAIN}/articles`,
     siteName: 'KisanStatus.com',
-    locale: 'hi_IN',
+    locale: 'en_IN',
     images: [{ url: `${DOMAIN}/og-image.webp`, width: 1200, height: 630, alt: 'PM Kisan Articles 2026' }],
   },
   twitter: {
