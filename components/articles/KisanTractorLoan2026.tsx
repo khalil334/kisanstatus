@@ -27,7 +27,7 @@ export default function KisanTractorLoan2026() {
           Kisan Tractor Loan Kaise Le Bina Down Payment – 2026 Complete Guide
         </h1>
         <p className="text-gray-500 text-sm mb-6">
-          ⏱ Reading Time: ~14 min &nbsp;|&nbsp; 👨‍🌾 Hinglish Guide &nbsp;|&nbsp; 📊 Real Data + Case Studies
+          ⏱ Reading Time: ~14 min &nbsp;|&nbsp; 👨‍ Hinglish Guide &nbsp;|&nbsp; 📊 Real Data + Case Studies
         </p>
 
         {/* Intro Story */}
@@ -64,7 +64,7 @@ export default function KisanTractorLoan2026() {
             Kya Bina Down Payment Tractor Loan Mil Sakta Hai?
           </h2>
           <p className="text-gray-700 leading-relaxed mb-3">
-            Seedha jawab: <strong>haan, kuch cases mein mil sakta hai</strong> – lekin "zero down payment" ek marketing term hai, poori sachai thodi alag hai. Zyaadatar banks aur finance companies 85–100% tak loan deti hain tractor ki on-road price par. Matlab aapko sirf 0–15% hi apni jeb se dena pad sakta hai. 💵
+            Seedha jawab: <strong>haan, kuch cases mein mil sakta hai</strong> – lekin &quot;zero down payment&quot; ek marketing term hai, poori sachai thodi alag hai. Zyaadatar banks aur finance companies 85–100% tak loan deti hain tractor ki on-road price par. Matlab aapko sirf 0–15% hi apni jeb se dena pad sakta hai. 💵
           </p>
           <p className="text-gray-700 leading-relaxed mb-3">
             Sukhdev ke case mein SBI ke <Link href="/articles/pm-kisan-23vi-kist-2026-status-check" className="text-amber-700 underline hover:text-amber-900 font-semibold">Kisan Credit Card (KCC)</Link> holder hone ki wajah se unhe 90% financing mil gayi. Sirf 10% – yani lagbhag ₹55,000 – khud dena pada ek ₹5.5 lakh ke tractor par. Yeh ek baar mein mushkil nahi tha. ✅
@@ -261,7 +261,7 @@ export default function KisanTractorLoan2026() {
             <div className="bg-white border-l-4 border-green-500 rounded-r-lg p-5 shadow-sm">
               <h3 className="font-bold text-lg text-green-800 mb-2">📍 Case 2: Rajkumari Devi (Uttar Pradesh) – First-Time Woman Farmer</h3>
               <p className="text-gray-700 text-sm leading-relaxed mb-2">
-                Rajkumari ji ki zameen unke pita ji ke naam par thi. Bank ne initially loan reject kar diya kyunki "legal heir certificate" nahi tha. Unhonne <strong>Panchayat level se joint liability affidavit</strong> banwaya aur SC category ke under SMAM subsidy apply kiya. 45 din baad subsidy approve hui, bank ne 50% down payment adjust kar liya. Mahila kisan hone par unhe additional 0.25% interest concession mila. Aaj woh 35HP Swaraj tractor chalaati hain aur pados ke 4 gaon mein contract farming karti hain.
+                Rajkumari ji ki zameen unke pita ji ke naam par thi. Bank ne initially loan reject kar diya kyunki &quot;legal heir certificate&quot; nahi tha. Unhonne <strong>Panchayat level se joint liability affidavit</strong> banwaya aur SC category ke under SMAM subsidy apply kiya. 45 din baad subsidy approve hui, bank ne 50% down payment adjust kar liya. Mahila kisan hone par unhe additional 0.25% interest concession mila. Aaj woh 35HP Swaraj tractor chalaati hain aur pados ke 4 gaon mein contract farming karti hain.
               </p>
             </div>
 
@@ -273,9 +273,9 @@ export default function KisanTractorLoan2026() {
             </div>
 
             <div className="bg-white border-l-4 border-purple-500 rounded-r-lg p-5 shadow-sm">
-              <h3 className="font-bold text-lg text-purple-800 mb-2">📍 Case 4: "Krishi Samriddhi FPO" (Rajasthan) – Group Tractor Purchase</h3>
+              <h3 className="font-bold text-lg text-purple-800 mb-2">📍 Case 4: &quot;Krishi Samriddhi FPO&quot; (Rajasthan) – Group Tractor Purchase</h3>
               <p className="text-gray-700 text-sm leading-relaxed mb-2">
-                11 kisano ne milkar FPO register kiya. NABARD FPO scheme ke under unhonne 3 tractors ek saath finance kiye. Group guarantee hone ki wajah se kisi ko bhi individual collateral nahi dena pada. Interest rate flat 8.2% mila. Sabse bada challenge tha <strong>repayment schedule alignment</strong> – kyunki har kisan ki fasal alag time par beechti hai. Unhonne "seasonal EMI structure" request kiya bank se, jisme Oct-Nov mein double EMI aur baaki mahino mein half EMI pay hoti hai. Yeh model ab 17 districts mein replicate ho raha hai.
+                11 kisano ne milkar FPO register kiya. NABARD FPO scheme ke under unhonne 3 tractors ek saath finance kiye. Group guarantee hone ki wajah se kisi ko bhi individual collateral nahi dena pada. Interest rate flat 8.2% mila. Sabse bada challenge tha <strong>repayment schedule alignment</strong> – kyunki har kisan ki fasal alag time par beechti hai. Unhonne &quot;seasonal EMI structure&quot; request kiya bank se, jisme Oct-Nov mein double EMI aur baaki mahino mein half EMI pay hoti hai. Yeh model ab 17 districts mein replicate ho raha hai.
               </p>
             </div>
           </div>
@@ -308,7 +308,7 @@ export default function KisanTractorLoan2026() {
           <div className="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg">
             <p className="text-amber-800 text-sm font-semibold">💡 Pro Tip:</p>
             <p className="text-amber-700 text-sm mt-1">
-              Loan lene se pehle <strong>"on-road cost breakup"</strong> maango. Dealer ke quotation mein registration, insurance, aur hypothecation alag se likha hota hai. Inko loan amount mein include mat karo – warna interest par interest pay karna padega.
+              Loan lene se pehle <strong>&quot;on-road cost breakup&quot;</strong> maango. Dealer ke quotation mein registration, insurance, aur hypothecation alag se likha hota hai. Inko loan amount mein include mat karo – warna interest par interest pay karna padega.
             </p>
           </div>
         </section>
@@ -326,7 +326,7 @@ export default function KisanTractorLoan2026() {
             <li><strong>48 Hours Ke Andar Bank Inform Karein:</strong> Crop damage certificate tehsildar ya Krishi Vigyan Kendra se lein. Bank ko written application dein.</li>
             <li><strong>Loan Moratorium Request Karein:</strong> NABARD guidelines ke under crop loss par 6–12 mahine tak EMI pause hoti hai. Interest accrue hota rahega, lekin penalty nahi lagegi.</li>
             <li><strong>PMFBY Claim Link Karein:</strong> Agar aapne fasal Bima liya hai, toh claim amount directly loan account mein adjust ho sakta hai. Form 6 (Crop Loss) submit karein.</li>
-            <li><strong>Restructuring Option:</strong> Bank tenure 5 se 7 saal kar sakta hai, ya EMI amount 20% kam kar sakta hai. CIBIL par "Restructured" tag nahi aata agar timely inform kiya.</li>
+            <li><strong>Restructuring Option:</strong> Bank tenure 5 se 7 saal kar sakta hai, ya EMI amount 20% kam kar sakta hai. CIBIL par &quot;Restructured&quot; tag nahi aata agar timely inform kiya.</li>
             <li><strong>Custom Hiring Se Income Badhayein:</strong> Apna tractor pados ke kisano ko rent par dein. 1 din ka rent ₹2,500–₹4,000 hota hai. 10 din kaam = 1 mahina EMI cover.</li>
           </ol>
           <div className="bg-green-50 border border-green-200 rounded-lg p-4">
@@ -351,8 +351,8 @@ export default function KisanTractorLoan2026() {
             <ul className="space-y-2 text-sm text-gray-700">
               <li><strong>1. SMAM Portal Registration:</strong> <code>smam.gov.in</code> par farmer ID banayein. Aadhaar + land record link karein. 7-14 din verification.</li>
               <li><strong>2. Quotation Upload:</strong> Authorized dealer se tractor proforma invoice lein. Portal par upload karein. Dealer ka empaneled status check karein.</li>
-              <li><strong>3. Bank NOC:</strong> Subsidy ke liye bank se "No Objection Certificate" chahiye ki loan pending hai. Yeh branch manager se hi milta hai.</li>
-              <li><strong>4. District Approval Committee (DAC):</strong> Mahine ke 15 din baad DAC meeting hoti hai. Aapki application rank hoti hai. Priority: SC/ST > Women > Marginal Farmer > General.</li>
+              <li><strong>3. Bank NOC:</strong> Subsidy ke liye bank se &quot;No Objection Certificate&quot; chahiye ki loan pending hai. Yeh branch manager se hi milta hai.</li>
+              <li><strong>4. District Approval Committee (DAC):</strong> Mahine ke 15 din baad DAC meeting hoti hai. Aapki application rank hoti hai. Priority: SC/ST &gt; Women &gt; Marginal Farmer &gt; General.</li>
               <li><strong>5. DBT Transfer:</strong> Approval ke 30-45 din baad subsidy seedha aapke account mein aati hai. Bank automatically loan principal adjust kar leta hai.</li>
             </ul>
           </div>
@@ -494,7 +494,7 @@ export default function KisanTractorLoan2026() {
             Future Trends 2026-27: Electric Tractors & AI Credit Scoring
           </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Agri-finance tezi se modernize ho raha hai. 2026 ke baad jo naye trends aa rahe hain, unki taiyari pehle se karna chahiye: 🔋🤖
+            Agri-finance tezi se modernize ho raha hai. 2026 ke baad jo naye trends aa rahe hain, unki taiyari pehle se karna chahiye: 🔋
           </p>
 
           <div className="grid sm:grid-cols-2 gap-4 mb-5">
@@ -507,14 +507,14 @@ export default function KisanTractorLoan2026() {
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
               <h4 className="font-bold text-blue-800 mb-2">📊 AI-Based Agri Credit Scoring</h4>
               <p className="text-gray-700 text-sm">
-                Ab CIBIL ke alawa "Agri-Data Score" use ho raha hai. Satellite imagery se crop health, soil moisture, aur harvest yield predict kiya jaata hai. Agar aapka farm digital data generate karta hai (soil test, weather station, drone mapping), toh bank automatically higher limit approve karta hai bina manual verification ke.
+                Ab CIBIL ke alawa &quot;Agri-Data Score&quot; use ho raha hai. Satellite imagery se crop health, soil moisture, aur harvest yield predict kiya jaata hai. Agar aapka farm digital data generate karta hai (soil test, weather station, drone mapping), toh bank automatically higher limit approve karta hai bina manual verification ke.
               </p>
             </div>
           </div>
           <div className="bg-purple-50 border-l-4 border-purple-500 p-4 rounded-r-lg">
             <p className="text-purple-800 text-sm font-semibold">🔮 2027 Prediction:</p>
             <p className="text-purple-700 text-sm mt-1">
-              RBI "Pay-As-You-Farm" model launch karne wala hai. Isme EMI sirf harvest season mein deduct hogi, baaki mahino mein zero outflow. Sensor-based tractor usage tracking install hoga, aur interest rate dynamically adjust hoga based on actual farm income.
+              RBI &quot;Pay-As-You-Farm&quot; model launch karne wala hai. Isme EMI sirf harvest season mein deduct hogi, baaki mahino mein zero outflow. Sensor-based tractor usage tracking install hoga, aur interest rate dynamically adjust hoga based on actual farm income.
             </p>
           </div>
         </section>
