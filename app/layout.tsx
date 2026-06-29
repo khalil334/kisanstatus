@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Poppins } from 'next/font/google';
 
 import './globals.css';
 import Header from '@/components/Header';
@@ -9,9 +10,17 @@ import Footer from '@/components/Footer';
 import { GA_MEASUREMENT_ID } from '@/lib/gtag';
 import { LanguageProvider } from '@/lib/LanguageContext';
 
+// ✅ OPTIMIZED: next/font/google use kiya - self-hosted, no render-blocking
+const poppins = Poppins({
+  subsets: ['latin', 'devanagari'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--font-poppins',
+});
+
 const SITE_URL = 'https://kisanstatus.com';
 const SITE_NAME = 'KisanStatus';
-const AUTHOR = 'Sidhu Singh';
+const AUTHOR = 'KisanStatus Team';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -113,22 +122,6 @@ export default function RootLayout({
       <head>
         {/* ✅ FIXED: DNS prefetch — sirf zaroori domains */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-
-        {/* ✅ PERFORMANCE: Font display=swap se render-blocking fix */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
-
-        {/* LCP image preload */}
-        <link
-          rel="preload"
-          href="/images/hero-banner.webp"
-          as="image"
-          type="image/webp"
-          fetchPriority="high"
-        />
 
         {/* Favicons */}
         <link rel="icon" href="/favicon.ico" sizes="48x48" />
@@ -180,7 +173,7 @@ export default function RootLayout({
                   areaServed: 'IN',
                 },
                 founder: {
-                  '@type': 'Person',
+                  '@type': 'Organization',
                   name: AUTHOR,
                   url: `${SITE_URL}/about`,
                 },
@@ -190,7 +183,7 @@ export default function RootLayout({
         />
       </head>
 
-      <body className="min-h-screen flex flex-col bg-surface text-text-primary antialiased">
+      <body className={`${poppins.variable} min-h-screen flex flex-col bg-surface text-text-primary antialiased font-sans`}>
         <LanguageProvider>
           <Header />
           <main className="flex-1">{children}</main>
