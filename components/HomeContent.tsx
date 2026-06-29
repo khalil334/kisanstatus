@@ -54,7 +54,7 @@ const TOP_ARTICLES = [
   {
     slug: 'soil-health-card-complete-guide-2026',
     title: 'Soil Health Card Complete Guide 2026',
-    emoji: '🌱',
+    emoji: '',
     image: '/images/soil-health-card-complete-guide-2026.webp',
     desc: 'Mitti health card download, status check, PDF download — complete guide',
     category: 'Farming',
@@ -190,7 +190,7 @@ export default function HomeContent() {
 
       {/* HERO — Live Green Grass with Wind Effect */}
       <section 
-        className="relative overflow-hidden py-14 md:py-20 animate-grass-bg"
+        className="relative overflow-hidden py-14 md:py-20"
         aria-label="Hero"
       >
         {/* Sky Gradient Background */}
@@ -334,7 +334,7 @@ export default function HomeContent() {
         <div className="container-site px-4">
           <Reveal>
             <div className="text-center mb-8">
-              <span className="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">🤔 Aapki Problem Kya Hai?</span>
+              <span className="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider"> Aapki Problem Kya Hai?</span>
               <h2 id="problems-heading" className="text-2xl md:text-3xl font-black text-gray-900 mb-2">Seedha Solution — Click Karo</h2>
               <p className="text-gray-500 text-sm max-w-lg mx-auto">Sabse common problems ke step-by-step guides</p>
             </div>
@@ -368,6 +368,111 @@ export default function HomeContent() {
               </Link>
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      {/* AGRICULTURE IMAGE 1: Indian Farmers in Field */}
+      <section className="py-14 bg-gradient-to-b from-green-50 to-white" aria-labelledby="farmers-heading">
+        <div className="container-site px-4">
+          <Reveal>
+            <div className="text-center mb-10">
+              <span className="inline-block bg-green-100 text-green-800 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">🌾 Hamare Kisan</span>
+              <h2 id="farmers-heading" className="text-2xl md:text-3xl font-black text-gray-900 mb-2">Bharat Ki Asli Taqat</h2>
+              <p className="text-gray-500 text-sm max-w-xl mx-auto">11 Crore+ kisanon ko PM Kisan se mil raha hai har saal ₹6,000</p>
+            </div>
+          </Reveal>
+
+          {/* Main Agriculture Image */}
+          <Reveal>
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl max-w-5xl mx-auto mb-10">
+              <Image
+                src="/images/indian-farmers-wheat-field.webp"
+                alt="Indian Farmers in Green Wheat Field - PM Kisan Samman Nidhi Beneficiaries"
+                width={1200}
+                height={630}
+                quality={80}
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 1200px"
+                className="w-full h-auto"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
+                <div className="text-white">
+                  <h3 className="text-2xl md:text-3xl font-black mb-2">PM Kisan Samman Nidhi</h3>
+                  <p className="text-green-200 text-sm md:text-base">Har kisan ko ₹2,000 har 4 mahine mein — Seedha bank account mein</p>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+
+          {/* Stats Cards */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            {[
+              { label: 'Registered Farmers', value: '11 Cr+', icon: '‍🌾' },
+              { label: 'Received Payment', value: '9.44 Cr+', icon: '💰' },
+              { label: 'Per Year', value: '₹6,000', icon: '📅' },
+              { label: 'Per Kist', value: '₹2,000', icon: '💵' },
+            ].map((stat, i) => (
+              <Reveal key={stat.label} delay={i * 80}>
+                <div className="bg-white rounded-2xl p-5 shadow-lg border-2 border-green-100 text-center hover:shadow-xl transition-all">
+                  <div className="text-3xl mb-2">{stat.icon}</div>
+                  <div className="text-2xl font-black text-green-700 mb-1">{stat.value}</div>
+                  <div className="text-xs text-gray-600 font-medium">{stat.label}</div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* HOW IT WORKS */}
+      <section className="py-14 bg-white" aria-labelledby="how-heading">
+        <div className="container-site px-4">
+          <Reveal>
+            <div className="text-center mb-10">
+              <span className="inline-block bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">📋 Process</span>
+              <h2 id="how-heading" className="text-2xl md:text-3xl font-black text-gray-900 mb-2">PM Kisan — 3 Steps Mein Complete</h2>
+              <p className="text-gray-500 text-sm max-w-xl mx-auto">Bas ye 3 kaam karo, ₹2,000 har 4 mahine mein seedha bank mein</p>
+            </div>
+          </Reveal>
+
+          {/* Step Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-10">
+            {[
+              {
+                step: '01',
+                title: 'Registration Karo',
+                desc: 'pmkisan.gov.in par jaake Aadhaar number se register karo',
+                icon: '📝',
+                color: 'bg-blue-50 border-blue-200',
+              },
+              {
+                step: '02',
+                title: 'eKYC Complete Karo',
+                desc: 'OTP ya biometric se eKYC verify karo — bilkul free',
+                icon: '🔐',
+                color: 'bg-green-50 border-green-200',
+              },
+              {
+                step: '03',
+                title: '₹2,000 Paao',
+                desc: 'Har 4 mahine mein seedha bank account mein paisa',
+                icon: '💰',
+                color: 'bg-amber-50 border-amber-200',
+              },
+            ].map((item, i) => (
+              <Reveal key={item.step} delay={i * 100}>
+                <div className={`${item.color} border-2 rounded-2xl p-6 text-center hover:shadow-lg transition-all`}>
+                  <span className="text-4xl mb-3 block">{item.icon}</span>
+                  <span className="inline-block bg-white text-gray-700 text-xs font-black px-3 py-1 rounded-full mb-3">
+                    Step {item.step}
+                  </span>
+                  <h3 className="font-bold text-gray-900 text-lg mb-2">{item.title}</h3>
+                  <p className="text-gray-600 text-sm">{item.desc}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -411,6 +516,75 @@ export default function HomeContent() {
         </div>
       </section>
 
+      {/* AGRICULTURE IMAGE 2: Modern Farming + Technology */}
+      <section className="py-14 bg-gradient-to-b from-amber-50 to-white" aria-labelledby="modern-heading">
+        <div className="container-site px-4">
+          <Reveal>
+            <div className="text-center mb-10">
+              <span className="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">🚜 Modern Farming</span>
+              <h2 id="modern-heading" className="text-2xl md:text-3xl font-black text-gray-900 mb-2">Technology + Kheti</h2>
+              <p className="text-gray-500 text-sm max-w-xl mx-auto">PM Kisan ke saath modern farming se double income</p>
+            </div>
+          </Reveal>
+
+          {/* Modern Farming Image */}
+          <Reveal>
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl max-w-5xl mx-auto mb-10">
+              <Image
+                src="/images/modern-farming-technology-india.webp"
+                alt="Modern Farming Technology in India - Tractor, Mobile App, Digital Agriculture for PM Kisan Farmers"
+                width={1200}
+                height={630}
+                quality={80}
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 1200px"
+                className="w-full h-auto"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-white">
+                  <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl">
+                    <div className="text-3xl mb-2">📱</div>
+                    <div className="font-bold">Mobile Se Apply</div>
+                    <div className="text-xs opacity-90">Ghar baithe registration</div>
+                  </div>
+                  <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl">
+                    <div className="text-3xl mb-2">🌐</div>
+                    <div className="font-bold">Online Status</div>
+                    <div className="text-xs opacity-90">Kabhi bhi check karo</div>
+                  </div>
+                  <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl">
+                    <div className="text-3xl mb-2"></div>
+                    <div className="font-bold">Direct Bank</div>
+                    <div className="text-xs opacity-90">DBT se seedha account</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+
+          {/* Feature Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
+            {[
+              { icon: '', title: 'Soil Health Card', desc: 'Mitti testing free', color: 'bg-green-500' },
+              { icon: '', title: 'Irrigation Support', desc: 'Water management', color: 'bg-blue-500' },
+              { icon: '🌾', title: 'Crop Insurance', desc: 'Fasal suraksha', color: 'bg-amber-500' },
+              { icon: '', title: 'Market Price', desc: 'Mandi bhav jaano', color: 'bg-purple-500' },
+            ].map((feature, i) => (
+              <Reveal key={feature.title} delay={i * 80}>
+                <div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all">
+                  <div className={`${feature.color} w-14 h-14 rounded-2xl flex items-center justify-center text-3xl mb-4`}>
+                    {feature.icon}
+                  </div>
+                  <h3 className="font-bold text-gray-900 text-lg mb-2">{feature.title}</h3>
+                  <p className="text-gray-500 text-sm">{feature.desc}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* DISCLAIMER */}
       <div className="container-site pb-10 px-4">
         <p className="text-center text-amber-700 bg-amber-50 border border-amber-200 rounded-xl px-4 py-3 text-xs max-w-2xl mx-auto">
@@ -421,7 +595,7 @@ export default function HomeContent() {
       {/* FAQ */}
       <FAQSection faqs={FAQS} />
       
-      {/* Global CSS Animations - Single style tag */}
+      {/* Global CSS Animations */}
       <style jsx global>{`
         @keyframes marquee {
           0% { transform: translateX(0); }
