@@ -1,9 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import Image from 'next/image';
+import { useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { Suspense } from 'react';
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const CATEGORY_META: Record<string, { label: string; emoji: string; color: string }> = {
@@ -56,29 +56,27 @@ const ARTICLE_META: Record<string, { emoji: string; category: string; isNew: boo
 const HOMEPAGE_NEW_COUNT = 3;
 
 function ArticleImage({ image, emoji, title }: { image: string; emoji: string; title: string }) {
-  const [loaded, setLoaded] = useState(false);
-  const [error, setError]   = useState(false);
+  const [error, setError] = useState(false);
 
   return (
-    <div className="relative h-40 w-full overflow-hidden bg-gradient-to-br from-green-50 to-emerald-100 shrink-0 flex items-center justify-center">
-      {(!loaded || error) && (
-        <span className="text-5xl absolute">{emoji}</span>
-      )}
-      {!error && (
-        <img
+    <div className="relative h-40 w-full overflow-hidden bg-gradient-to-br from-green-50 to-emerald-100 shrink-0">
+      {!error && image ? (
+        <Image
           src={image}
           alt={title}
-          width={400}
-          height={160}
-          loading="lazy"
-          decoding="async"
-          className={`h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ${loaded ? 'opacity-100' : 'opacity-0'}`}
-          onLoad={() => setLoaded(true)}
+          fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          quality={85}
+          className="object-cover group-hover:scale-105 transition-transform duration-500"
           onError={() => setError(true)}
         />
+      ) : (
+        <div className="h-full w-full flex items-center justify-center">
+          <span className="text-5xl">{emoji}</span>
+        </div>
       )}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-      <span className="absolute bottom-2 left-3 text-xl drop-shadow">{emoji}</span>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent z-10" />
+      <span className="absolute bottom-2 left-3 text-xl drop-shadow z-20">{emoji}</span>
     </div>
   );
 }
@@ -102,7 +100,7 @@ function ArticleCard({ article, showNewBadge = false }: { article: ArticleMeta; 
       <div className="relative">
         <ArticleImage image={image} emoji={emoji} title={article.title} />
         {(showNewBadge || isNew) && (
-          <span className="absolute top-2 right-2 bg-green-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full shadow z-10">
+          <span className="absolute top-2 right-2 bg-green-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full shadow z-20">
             NEW
           </span>
         )}
@@ -118,7 +116,7 @@ function ArticleCard({ article, showNewBadge = false }: { article: ArticleMeta; 
         </p>
         <p className="text-xs text-gray-500 leading-relaxed line-clamp-2 flex-1">{article.desc}</p>
         <div className="flex items-center justify-between mt-3 pt-2 border-t border-gray-100">
-          <span className="text-[11px] text-gray-400">✍️ Sidhu Singh</span>
+          <span className="text-[11px] text-gray-400">✍️ KisanStatus Team</span>
           <span className="text-xs font-bold text-green-700 group-hover:translate-x-1 transition-transform inline-block">
             Padho →
           </span>
@@ -246,12 +244,28 @@ export default function ArticlesClient({ articles }: { articles: ArticleMeta[] }
           <h1 className="text-2xl md:text-4xl font-black text-white mb-3">
             PM Kisan — Saari Guides 2026
           </h1>
-          <p className="text-green-200 text-sm md:text-base max-w-xl mx-auto mb-4">
+          <p className="text-green-200 text-sm md:text-base max-w-xl mx-auto mb-5">
             {articles.length} free guides — status check, eKYC, loan, payment fix, registration, Soil Health Card — sab Hindi mein
           </p>
-          <Link href="/" className="inline-flex items-center gap-2 text-green-300 hover:text-white text-sm font-bold transition-colors">
-            ← Homepage Par Wapas Jao
-          </Link>
+          
+          {/* ✅ CHHOTA PM KISAN OFFICIAL BUTTON - Compact pill style */}
+          <a
+            href="https://pmkisan.gov.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 bg-white/15 hover:bg-white/25 border border-white/30 text-white text-xs font-bold px-3 py-1.5 rounded-full transition-colors backdrop-blur-sm"
+          >
+            🏛️ pmkisan.gov.in
+            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+
+          <div className="mt-4">
+            <Link href="/" className="inline-flex items-center gap-2 text-green-300 hover:text-white text-sm font-bold transition-colors">
+              ← Homepage Par Wapas Jao
+            </Link>
+          </div>
         </div>
       </section>
 
