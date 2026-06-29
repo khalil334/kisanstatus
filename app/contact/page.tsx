@@ -1,7 +1,3 @@
-/**
- * Contact Page — KisanStatus.com
- * ~189 words visible content | AdSense compliant
- */
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -9,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Contact Us – KisanStatus.com | Sampark Karein',
   description:
     'KisanStatus.com se sampark karein. Website feedback, content correction ya koi sawaal ke liye humein email karein — kisanstatus.support@gmail.com',
-  authors: [{ name: 'Sidhu Singh', url: 'https://kisanstatus.com/about' }],
+  authors: [{ name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' }],
   alternates: { canonical: 'https://kisanstatus.com/contact' },
   robots: { index: true, follow: false },
 };
@@ -55,22 +51,22 @@ export default function ContactPage() {
             </a>
           </div>
 
-          {/* Author */}
+          {/* Team */}
           <div className="card">
             <h2 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
-              <span aria-hidden="true">👨‍🌾</span> Author
+              <span aria-hidden="true">👨‍🌾</span> Hamari Team
             </h2>
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 rounded-full bg-green-100 border-2 border-green-300 flex items-center justify-center text-2xl">
                 🌾
               </div>
               <div>
-                <p className="font-bold text-gray-900">Sidhu Singh</p>
-                <p className="text-xs text-primary-600">Agricultural Expert &amp; Farmer Advocate</p>
+                <p className="font-bold text-gray-900">KisanStatus Team</p>
+                <p className="text-xs text-primary-600">Agricultural Experts &amp; Farmer Advocates</p>
               </div>
             </div>
             <Link href="/author" className="btn-secondary w-full text-center block text-sm">
-              Author Profile Dekhen →
+              Team Profile Dekhen →
             </Link>
           </div>
         </div>
