@@ -79,7 +79,7 @@ const TICKER_ITEMS = [
   `🔴 LIVE: PM Kisan ${STATS.currentKist}vi Kist — ${STATS.currentKistDate} ko ${STATS.perKist} release ho chuki hai`,
   `⏳ ${STATS.nextKist}vi Kist Expected: ${STATS.nextKistDate} — eKYC abhi complete karo`,
   '🔐 eKYC Mandatory: Bina eKYC kist NAHI milegi — pmkisan.gov.in par karo',
-  ' Helpline: 155261 | Toll Free: 1800-115-526',
+  '📞 Helpline: 155261 | Toll Free: 1800-115-526',
   `✅ ${STATS.registeredFarmers} registered farmers — ${STATS.receivedKist} ko ${STATS.currentKist}vi kist mil chuki hai`,
 ];
 
@@ -190,7 +190,7 @@ export default function HomeContent() {
 
       {/* HERO — Live Green Grass with Wind Effect */}
       <section 
-        className="relative overflow-hidden py-14 md:py-20"
+        className="relative overflow-hidden py-14 md:py-20 animate-grass-bg"
         aria-label="Hero"
       >
         {/* Sky Gradient Background */}
@@ -291,7 +291,7 @@ export default function HomeContent() {
         {/* Content */}
         <div className="container-site relative z-10 max-w-3xl px-4">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-green-100 text-xs font-bold px-4 py-2 rounded-full mb-5 uppercase tracking-wider backdrop-blur-sm">
-             India Ka #1 PM Kisan Information Portal
+            🌾 India Ka #1 PM Kisan Information Portal
           </div>
 
           <h1 className="font-black text-white leading-[1.15] mb-4 tracking-tight">
@@ -310,7 +310,7 @@ export default function HomeContent() {
               href="/articles/pm-kisan-23vi-kist-2026-status-check" 
               className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-black px-6 py-3.5 rounded-xl text-sm transition-all hover:scale-105 shadow-lg shadow-green-900/40"
             >
-               {STATS.currentKist}vi Kist Status Dekho
+              📆 {STATS.currentKist}vi Kist Status Dekho
             </Link>
             <Link 
               href="/articles/pm-kisan-ekyc-online-2026" 
@@ -322,69 +322,11 @@ export default function HomeContent() {
 
           {/* Trust Strip */}
           <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-8 text-[11px] text-green-100">
-            {['✅ 100% Free', ' Koi Data Store Nahi', '🏛️ pmkisan.gov.in Verified', '📞 Helpline: 155261'].map(t => (
+            {['✅ 100% Free', '🔒 Koi Data Store Nahi', '🏛️ pmkisan.gov.in Verified', '📞 Helpline: 155261'].map(t => (
               <span key={t}>{t}</span>
             ))}
           </div>
         </div>
-
-        {/* All Animations */}
-        <style jsx>{`
-          /* Wind Particles */
-          .wind-particle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: rgba(255, 255, 255, 0.4);
-            border-radius: 50%;
-            animation: windFloat linear infinite;
-          }
-          .wind-particle-1 { top: 30%; left: -10px; animation-duration: 8s; animation-delay: 0s; }
-          .wind-particle-2 { top: 50%; left: -10px; animation-duration: 10s; animation-delay: 2s; width: 3px; height: 3px; }
-          .wind-particle-3 { top: 20%; left: -10px; animation-duration: 12s; animation-delay: 4s; width: 5px; height: 5px; background: rgba(255, 255, 255, 0.3); }
-          .wind-particle-4 { top: 60%; left: -10px; animation-duration: 9s; animation-delay: 1s; width: 3px; height: 3px; }
-          .wind-particle-5 { top: 40%; left: -10px; animation-duration: 11s; animation-delay: 3s; }
-
-          @keyframes windFloat {
-            0% { transform: translateX(0) translateY(0); opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { transform: translateX(calc(100vw + 20px)) translateY(-30px); opacity: 0; }
-          }
-
-          /* Grass Swaying - Wind Effect */
-          .grass-sway-slow {
-            animation: grassSwaySlow 4s ease-in-out infinite;
-          }
-          .grass-sway {
-            animation: grassSway 3s ease-in-out infinite;
-          }
-          .grass-sway-fast {
-            animation: grassSwayFast 2.5s ease-in-out infinite;
-          }
-
-          @keyframes grassSwaySlow {
-            0%, 100% { transform: rotate(-1deg); }
-            50% { transform: rotate(2deg); }
-          }
-          @keyframes grassSway {
-            0%, 100% { transform: rotate(-2deg); }
-            50% { transform: rotate(3deg); }
-          }
-          @keyframes grassSwayFast {
-            0%, 100% { transform: rotate(-3deg); }
-            50% { transform: rotate(4deg); }
-          }
-
-          /* Sun Pulse */
-          .animate-pulse-slow {
-            animation: pulseSlow 4s ease-in-out infinite;
-          }
-          @keyframes pulseSlow {
-            0%, 100% { opacity: 0.3; transform: scale(1); }
-            50% { opacity: 0.5; transform: scale(1.1); }
-          }
-        `}</style>
       </section>
 
       {/* TOP PROBLEMS */}
@@ -462,7 +404,7 @@ export default function HomeContent() {
           <Reveal delay={200}>
             <div className="text-center mt-10">
               <Link href="/articles" className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-black px-8 py-3.5 rounded-xl text-sm transition-all hover:scale-105 shadow-lg shadow-green-600/30">
-                 Saari {STATS.totalArticles} Guides Dekho
+                📚 Saari {STATS.totalArticles} Guides Dekho
               </Link>
             </div>
           </Reveal>
@@ -479,7 +421,7 @@ export default function HomeContent() {
       {/* FAQ */}
       <FAQSection faqs={FAQS} />
       
-      {/* Global CSS Animation */}
+      {/* Global CSS Animations - Single style tag */}
       <style jsx global>{`
         @keyframes marquee {
           0% { transform: translateX(0); }
@@ -487,6 +429,53 @@ export default function HomeContent() {
         }
         .animate-marquee {
           animation: marquee 35s linear infinite;
+        }
+        .wind-particle {
+          position: absolute;
+          width: 4px;
+          height: 4px;
+          background: rgba(255, 255, 255, 0.4);
+          border-radius: 50%;
+          animation: windFloat linear infinite;
+        }
+        .wind-particle-1 { top: 30%; left: -10px; animation-duration: 8s; animation-delay: 0s; }
+        .wind-particle-2 { top: 50%; left: -10px; animation-duration: 10s; animation-delay: 2s; width: 3px; height: 3px; }
+        .wind-particle-3 { top: 20%; left: -10px; animation-duration: 12s; animation-delay: 4s; width: 5px; height: 5px; background: rgba(255, 255, 255, 0.3); }
+        .wind-particle-4 { top: 60%; left: -10px; animation-duration: 9s; animation-delay: 1s; width: 3px; height: 3px; }
+        .wind-particle-5 { top: 40%; left: -10px; animation-duration: 11s; animation-delay: 3s; }
+        @keyframes windFloat {
+          0% { transform: translateX(0) translateY(0); opacity: 0; }
+          10% { opacity: 1; }
+          90% { opacity: 1; }
+          100% { transform: translateX(calc(100vw + 20px)) translateY(-30px); opacity: 0; }
+        }
+        .grass-sway-slow {
+          animation: grassSwaySlow 4s ease-in-out infinite;
+        }
+        .grass-sway {
+          animation: grassSway 3s ease-in-out infinite;
+        }
+        .grass-sway-fast {
+          animation: grassSwayFast 2.5s ease-in-out infinite;
+        }
+        @keyframes grassSwaySlow {
+          0%, 100% { transform: rotate(-1deg); }
+          50% { transform: rotate(2deg); }
+        }
+        @keyframes grassSway {
+          0%, 100% { transform: rotate(-2deg); }
+          50% { transform: rotate(3deg); }
+        }
+        @keyframes grassSwayFast {
+          0%, 100% { transform: rotate(-3deg); }
+          50% { transform: rotate(4deg); }
+        }
+        .animate-pulse-slow {
+          animation: pulseSlow 4s ease-in-out infinite;
+        }
+        @keyframes pulseSlow {
+          0%, 100% { opacity: 0.3; transform: scale(1); }
+          50% { opacity: 0.5; transform: scale(1.1); }
         }
       `}</style>
     </>
