@@ -1,5 +1,5 @@
 /**
- * app/articles/[slug]/page.tsx — v4
+ * app/articles/[slug]/page.tsx — v5
  * ✅ FIXES:
  *  - JSON-LD schemas server-side inject ho rahe hain (Google crawl ke liye)
  *  - Per-article OG image map kept
@@ -9,6 +9,7 @@
  *  - ✅ UPDATED: Added soil-health-card-complete-guide-2026 (Article #24)
  *  - ✅ UPDATED: Added pm-kisan-self-registered-status-check (Article #25)
  *  - ✅ UPDATED: Added pm-kisan-status-check-online-2026-complete-guide (Article #26)
+ *  - ✅ NEW: Added mandi-bhav-today (Article #27)
  *  - ✅ CATEGORY BADGE ADDED — Clickable category badge at top of article
  *  - ✅ SEO v3.0: Keywords removed, og:locale fixed to en_IN, title cleaned
  */
@@ -48,6 +49,7 @@ const ARTICLE_OG_IMAGES: Record<string, string> = {
   'soil-health-card-complete-guide-2026':            '/images/soil-health-card-complete-guide-2026.webp',
   'pm-kisan-self-registered-status-check':           '/images/pm-kisan-self-registered-status/pm-kisan-portal-homepage.webp',
   'pm-kisan-status-check-online-2026-complete-guide': '/images/pm-kisan-status-check-tool-interface.webp',
+  'mandi-bhav-today':                                '/images/article/mandi-bhav-today.webp', // ✅ NEW ENTRY
 };
 
 // ── JSON-LD schema generator (server-side) ─────────────────────────────────
@@ -56,7 +58,7 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
     {
       '@context': 'https://schema.org',
       '@type': 'Article',
-      headline: article.ogTitle || article.title, // ✅ BUG 2: Cleaner title in schema too
+      headline: article.ogTitle || article.title,
       description: article.desc,
       image: [ogImage],
       datePublished: article.publishedTime ?? '2026-01-01T00:00:00+05:30',
@@ -76,7 +78,7 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
         },
       },
       mainEntityOfPage: { '@type': 'WebPage', '@id': url },
-      inLanguage: 'en-IN', // ✅ BUG 3: Consistent with og:locale
+      inLanguage: 'en-IN',
       isPartOf: { '@type': 'WebSite', name: 'KisanStatus.com', url: DOMAIN },
     },
     {
@@ -95,7 +97,7 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
       url,
       name: article.ogTitle || article.title,
       description: article.desc,
-      inLanguage: 'en-IN', // ✅ BUG 3: Consistent
+      inLanguage: 'en-IN',
       isPartOf: { '@type': 'WebSite', url: DOMAIN, name: 'KisanStatus.com' },
       author: { '@type': 'Person', name: 'Sidhu Singh' },
       datePublished: article.publishedTime ?? '2026-01-01T00:00:00+05:30',
@@ -144,6 +146,7 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   SoilHealthCardCompleteGuide2026:            dynamic(() => import('@/components/articles/soil-health-card-complete-guide-2026'),      { loading: ArticleLoading }),
   PmKisanSelfRegisteredStatusCheck:           dynamic(() => import('@/components/articles/pm-kisan-self-registered-status-check'),     { loading: ArticleLoading }),
   PmKisanStatusCheckOnline2026CompleteGuide:  dynamic(() => import('@/components/articles/PmKisanStatusCheckOnline2026CompleteGuide'), { loading: ArticleLoading }),
+  MandiBhavToday:                             dynamic(() => import('@/components/articles/MandiBhavContent'),                          { loading: ArticleLoading }), // ✅ NEW ENTRY
 };
 
 export const revalidate = 86400;
@@ -166,13 +169,11 @@ export async function generateMetadata({
     ? `${DOMAIN}${ARTICLE_OG_IMAGES[slug]}`
     : `${DOMAIN}/og-image.webp`;
 
-  // ✅ BUG 2: Use ogTitle (cleaner) with fallback to title
   const displayTitle = article.ogTitle || article.title;
 
   return {
     title:       displayTitle,
     description: article.desc,
-    // ❌ BUG 1 FIXED: keywords COMPLETELY REMOVED
     authors:     [{ name: 'Sidhu Singh', url: `${DOMAIN}/about` }],
     alternates:  { canonical: url },
     openGraph: {
@@ -181,7 +182,7 @@ export async function generateMetadata({
       type:          'article',
       url,
       siteName:      'KisanStatus.com',
-      locale:        'en_IN', // ✅ BUG 3 FIXED: en_IN for Hinglish content
+      locale:        'en_IN',
       images:        [{ url: ogImage, width: 1200, height: 630, alt: displayTitle }],
       publishedTime: article.publishedTime ?? '2026-01-01T00:00:00+05:30',
       modifiedTime:  article.modifiedTime  ?? new Date().toISOString(),
