@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     'पीएम किसान लाभार्थी सूची 2026',
     'pm kisan beneficiary list all states',
   ],
-  authors: [{ name: 'Sidhu Singh', url: `${DOMAIN}/about` }],
+  authors: [{ name: 'KisanStatus Team', url: `${DOMAIN}/about` }],
   alternates: { canonical: `${DOMAIN}/beneficiary-list` },
   openGraph: {
     title: 'PM Kisan Beneficiary List 2026 — All States & UTs',
@@ -124,6 +124,29 @@ export default function BeneficiaryListPage() {
       </section>
 
       <div className="container-site py-10">
+
+        {/* ✅ NEW: Prominent Disclaimer - Top Priority */}
+        <div className="bg-amber-50 border-2 border-amber-400 rounded-2xl p-6 mb-8 shadow-sm">
+          <div className="flex items-start gap-3 mb-4">
+            <span className="text-3xl shrink-0" aria-hidden="true">⚠️</span>
+            <div className="flex-1">
+              <h2 className="font-black text-amber-900 text-base mb-2">
+                Yeh Official List Nahi Hai
+              </h2>
+              <p className="text-sm text-amber-800 leading-relaxed">
+                Apna naam sirf <strong>pmkisan.gov.in</strong> par check kar sakte ho. Hum wahan tak pahunchne mein help karte hain — seedha link neeche hai.
+              </p>
+            </div>
+          </div>
+          <a
+            href="https://pmkisan.gov.in/BeneficiaryStatus.aspx"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full bg-green-700 hover:bg-green-600 text-white font-black px-5 py-4 rounded-xl text-sm transition-colors text-center shadow-md hover:shadow-lg"
+          >
+            ✅ Official List Check Karo → pmkisan.gov.in
+          </a>
+        </div>
 
         {/* Quick CTA */}
         <div className="bg-green-50 border border-green-200 rounded-2xl p-5 mb-8 flex flex-col sm:flex-row gap-4 items-center">
