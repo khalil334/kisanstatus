@@ -1,18 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, fmtDate } from '@/components/ArticleShared';
 import Image from 'next/image';
-import { SvgBeneficiaryList, SvgCorrection, SvgCropInsurance, SvgEkycStatus, SvgFAQ, SvgInstallmentHistory, SvgInstallmentStatus, SvgKisanLoan, SvgLandSeeding, SvgMobileUpdate, SvgNameCorrection, SvgPaymentFailed, SvgProblemsSolution, SvgRegistration, SvgRejectedList, SvgTractorLoan } from '@/components/ArticleSVGs';
-
-const DOMAIN = 'https://kisanstatus.com';
-const SLUG   = 'pmfby-crop-insurance-2026';
-const URL    = `${DOMAIN}/articles/${SLUG}`;
-
-
-
-
-
-
 
 export default function PmfbyCropInsurance2026() {
   return (
@@ -46,7 +34,6 @@ export default function PmfbyCropInsurance2026() {
 
         {/* ── IMAGE 1 ── */}
         <figure className="my-8 rounded-xl overflow-hidden shadow-lg">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
           <Image src="/images/pm-kisan-guide.png" alt="Pradhan Mantri Fasal Bima Yojana – PMFBY Crop Insurance 2026" className="w-full h-44 sm:h-60 object-cover" width={800} height={300} />
           <figcaption className="bg-green-700 text-white text-xs sm:text-sm text-center py-2 px-4">
             Fasal ka Nuksan Hua? PMFBY Crop Insurance Se Muawza Paaiye – Ramlal Verma Ki Tarah
@@ -202,7 +189,6 @@ export default function PmfbyCropInsurance2026() {
 
         {/* ── IMAGE 2 ── */}
         <figure className="my-8 rounded-xl overflow-hidden shadow-lg">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
           <Image src="/images/pm-kisan-guide.png" alt="PMFBY Claim Status Check Online – pmfby.gov.in Portal" className="w-full h-44 sm:h-60 object-cover" width={800} height={300} />
           <figcaption className="bg-blue-800 text-white text-xs sm:text-sm text-center py-2 px-4">
             PMFBY Portal – Claim Status Online Check Karein Ghar Baithe
@@ -241,7 +227,7 @@ export default function PmfbyCropInsurance2026() {
               <li>→ Play Store ya App Store mein <strong>"PMFBY"</strong> ya <strong>"Fasal Bima"</strong> search karein</li>
               <li>→ Official GoI app download karein (Ministry of Agriculture)</li>
               <li>→ Login karein – Aadhaar ya registered mobile number se</li>
-              <li>→ Dashboard mein <strong>&apos;My Claims&apos;</strong> section mein jaayein</li>
+              <li>→ Dashboard mein <strong>'My Claims'</strong> section mein jaayein</li>
               <li>→ Sabhi claims aur unka current status dikhai dega</li>
             </ul>
           </div>
@@ -430,7 +416,6 @@ export default function PmfbyCropInsurance2026() {
 
         {/* ── IMAGE 3 ── */}
         <figure className="my-8 rounded-xl overflow-hidden shadow-lg">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
           <Image src="/images/pm-kisan-guide.png" alt="PMFBY Insurance Payment Received – Ramlal Verma Ka Muawza Aaya" className="w-full h-44 sm:h-60 object-cover" width={800} height={300} />
           <figcaption className="bg-green-800 text-white text-xs sm:text-sm text-center py-2 px-4">
             Ramlal Verma Ke Account Mein PMFBY Ka Muawza Aaya – Agle Season Ki Kheti Saved!
@@ -511,21 +496,34 @@ export default function PmfbyCropInsurance2026() {
             </p>
           </div>
 
+          {/* ✅ FIXED: Related Articles with proper Link components */}
           <div className="bg-gray-50 rounded-xl p-5 border border-gray-200 mb-6">
             <h3 className="font-bold text-gray-800 mb-3">🔗 Related Articles (Aage Kya Padhein):</h3>
             <ul className="space-y-2">
-              {[
-                "KCC Kisan Credit Card – Kaise Banwayein Aur Kya Fayda Hai 2026",
-                "PM Kisan Samman Nidhi 19th Installment – Status Check Kaise Karein",
-                "Kisan Tractor Loan Bina Down Payment – Complete Guide 2026",
-                "NABARD Kisan Loan Yojana – Apply Kaise Karein Step By Step",
-                "PM Kisan Mobile Number Update Kaise Karein – CSC Center Process",
-              ].map((link, i) => (
-                <li key={i} className="flex items-center gap-2">
-                  <span className="text-green-500">→</span>
-                  <span className="text-green-700 text-sm font-medium hover:underline cursor-pointer">{link}</span>
-                </li>
-              ))}
+              <li className="flex items-center gap-2">
+                <span className="text-green-500">→</span>
+                <Link href="/articles/kisan-credit-card-online-apply-2026" className="text-green-700 text-sm font-medium hover:underline">
+                  KCC Kisan Credit Card – Kaise Banwayein Aur Kya Fayda Hai 2026
+                </Link>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-green-500">→</span>
+                <Link href="/articles/pm-kisan-23vi-kist-2026-status-check" className="text-green-700 text-sm font-medium hover:underline">
+                  PM Kisan Samman Nidhi 23vi Installment – Status Check Kaise Karein
+                </Link>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-green-500">→</span>
+                <Link href="/articles/kisan-tractor-loan-2026" className="text-green-700 text-sm font-medium hover:underline">
+                  Kisan Tractor Loan Bina Down Payment – Complete Guide 2026
+                </Link>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-green-500">→</span>
+                <Link href="/articles/pm-kisan-mobile-number-change" className="text-green-700 text-sm font-medium hover:underline">
+                  PM Kisan Mobile Number Update Kaise Karein – CSC Center Process
+                </Link>
+              </li>
             </ul>
           </div>
         </section>
@@ -560,4 +558,3 @@ export default function PmfbyCropInsurance2026() {
     </main>
   );
 }
-
