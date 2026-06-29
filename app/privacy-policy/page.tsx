@@ -1,7 +1,3 @@
-/**
- * Privacy Policy Page — KisanStatus.com
- * GDPR + Google AdSense compliant privacy policy
- */
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -9,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Privacy Policy – KisanStatus.com',
   description:
     'Privacy Policy for KisanStatus.com — How we collect, use and protect your information. GDPR and Google AdSense compliant.',
-  authors: [{ name: 'Sidhu Singh', url: 'https://kisanstatus.com/about' }],
+  authors: [{ name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' }],
   alternates: { canonical: 'https://kisanstatus.com/privacy-policy' },
   robots: { index: true, follow: false },
 };
