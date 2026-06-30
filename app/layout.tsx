@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
@@ -23,6 +23,15 @@ const SITE_URL = 'https://kisanstatus.com';
 const SITE_NAME = 'KisanStatus';
 const AUTHOR = 'KisanStatus Team';
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#16A34A' },
+    { media: '(prefers-color-scheme: dark)', color: '#14532d' },
+  ],
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
@@ -35,15 +44,10 @@ export const metadata: Metadata = {
   creator: AUTHOR,
   publisher: SITE_NAME,
   category: 'Agriculture',
-  alternates: {
-    canonical: SITE_URL,
-  },
   openGraph: {
     type: 'website',
     locale: 'hi_IN',
     siteName: SITE_NAME,
-    title: 'PM Kisan Status Check 2026 – 23vi Kist Released',
-    description: '₹2000 seedha bank mein — 9.44 Crore+ kisanon ko mil chuki hai. Apna status abhi check karo.',
     images: [
       {
         url: '/og-image.webp',
@@ -56,9 +60,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'PM Kisan 23vi Kist Released — Status Check 2026',
-    description: '₹2000 seedha bank mein — 9.44 Crore+ kisanon ko mil chuki hai.',
-    images: ['/og-image.webp'],
     site: '@kisanstatus',
     creator: '@kisanstatus',
   },
@@ -95,8 +96,6 @@ export default function RootLayout({
 
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
-        <meta name="theme-color" content="#16A34A" />
-        <meta name="theme-color" content="#14532d" media="(prefers-color-scheme: dark)" />
         <link rel="manifest" href="/site.webmanifest" />
 
         <script
