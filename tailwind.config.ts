@@ -2,14 +2,11 @@ import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
-      // EXTEND ONLY — do not override defaults
-      // This keeps all default Tailwind spacing, colors, borderRadius etc.
       colors: {
         primary: {
           DEFAULT: '#16A34A',
@@ -42,13 +39,12 @@ const config: Config = {
         },
       },
       fontFamily: {
-        poppins: ['Poppins', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-poppins)', 'system-ui', 'sans-serif'],
       },
       maxWidth: {
         'site': '1200px',
       },
     },
-    // DO NOT put spacing, borderRadius etc here — that overrides defaults!
   },
   plugins: [],
 };
