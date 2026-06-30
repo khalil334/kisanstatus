@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
@@ -7,8 +8,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: [
           '/api/',
-          '/_next/',
-          '/speed-insights',
           '/private/',
           '/tools/',
           '/*?*sub1=',
@@ -28,7 +27,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: [
           '/api/',
-          '/_next/',
           '/tools/',
           '/*?*sub1=',
           '/*?*tr_uuid=',
