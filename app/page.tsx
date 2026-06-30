@@ -1,28 +1,18 @@
-/**
- * Homepage — KisanStatus.com
- * Server component: exports metadata, renders HomeContent client component
- * ✅ SEO OPTIMIZED v3.0 — Keywords removed, locale fixed, title cleaned
- */
 import type { Metadata } from 'next';
 import HomeContent from '@/components/HomeContent';
 
 export const metadata: Metadata = {
-  // ✅ BUG 2 FIXED: Clean title — no keyword stuffing
   title: 'PM Kisan Status Check 2026 — 23vi Kist Guide | KisanStatus.com',
-  // ✅ BUG 2 FIXED: Natural description with only 2-3 main keywords
   description: 'PM Kisan 23vi kist status check karein, eKYC complete karein aur payment issues fix karein. Free step-by-step guide for Indian farmers.',
-  // ❌ BUG 1 FIXED: keywords array COMPLETELY REMOVED
-
   authors: [{ name: 'Sidhu Singh', url: 'https://kisanstatus.com/about' }],
   alternates: { canonical: 'https://kisanstatus.com' },
-
   openGraph: {
     title: 'PM Kisan Status Check 2026 — 23vi Kist Guide | KisanStatus.com',
     description: 'PM Kisan 23vi kist status check karein, eKYC complete karein aur payment issues fix karein. Free step-by-step guide.',
     type: 'website',
     url: 'https://kisanstatus.com',
     siteName: 'KisanStatus.com',
-    locale: 'en_IN', // ✅ BUG 3 FIXED: en_IN for Hinglish content
+    locale: 'en_IN',
     images: [
       {
         url: 'https://kisanstatus.com/og-image.webp',
@@ -32,7 +22,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-
   twitter: {
     card: 'summary_large_image',
     title: 'PM Kisan Status Check 2026 — 23vi Kist Guide',
@@ -41,7 +30,6 @@ export const metadata: Metadata = {
     creator: '@kisanstatus',
     images: ['https://kisanstatus.com/og-image.webp'],
   },
-
   robots: {
     index: true,
     follow: true,
@@ -53,11 +41,9 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-
   verification: {
     google: 'oGrO0aRNLLhCgHq0Bn-sh3FdgKye7TlbAn2pAk8YdMQ',
   },
-  // ❌ BONUS FIX: 'category' field removed — deprecated in Google metadata spec
 };
 
 export const revalidate = 3600;
