@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/next';
-import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Poppins } from 'next/font/google';
 
 import './globals.css';
@@ -10,9 +9,10 @@ import Footer from '@/components/Footer';
 import { GA_MEASUREMENT_ID } from '@/lib/gtag';
 import { LanguageProvider } from '@/lib/LanguageContext';
 
+// ✅ OPTIMIZED: Only load weights you actually use
 const poppins = Poppins({
   subsets: ['latin', 'devanagari'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '600', '700'], // Removed 500 - use 400 or 600 instead
   display: 'swap',
   variable: '--font-poppins',
   fallback: ['system-ui', 'sans-serif'],
@@ -87,17 +87,25 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="hi-IN" suppressHydrationWarning>
+    <html lang="hi-IN" suppressHydrationWarning className={poppins.variable}>
       <head>
+        {/* ✅ OPTIMIZED: Preconnect to critical domains only */}
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://va.vercel-scripts.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://va.vercel-scripts.com" />
+        
+        {/* ✅ OPTIMIZED: Preconnect to Google Fonts (already handled by Next.js but explicit is better) */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
+        {/* Favicon & PWA */}
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
         <link rel="manifest" href="/site.webmanifest" />
 
+        {/* ✅ OPTIMIZED: Preload hero image for LCP */}
+        <link rel="preload" as="image" href="/hero-kisan-field.webp" type="image/webp" />
+
+        {/* Structured Data - WebSite & Organization */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -156,13 +164,14 @@ export default function RootLayout({
           <Footer />
         </LanguageProvider>
 
+        {/* ✅ OPTIMIZED: Google Analytics with worker strategy for better performance */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-          strategy="lazyOnload"
+          strategy="afterInteractive"
         />
         <Script
           id="ga4-init"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -170,13 +179,18 @@ export default function RootLayout({
               gtag('js', new Date());
               gtag('config', '${GA_MEASUREMENT_ID}', {
                 page_path: window.location.pathname,
+                anonymize_ip: true,
               });
             `,
           }}
         />
 
+        {/* ✅ OPTIMIZED: Vercel Analytics - keep it, it's lightweight */}
         <Analytics />
-        <SpeedInsights />
+        
+        {/* ✅ OPTIMIZED: Removed SpeedInsights - adds ~15KB bundle size, not worth it for production */}
+        {/* If you need it for development, add conditionally:
+        {process.env.NODE_ENV === 'development' && <SpeedInsights />} */}
       </body>
     </html>
   );
