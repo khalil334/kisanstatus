@@ -1,89 +1,81 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  trailingSlash: false, // ✅ Add karo
-  compress: true,
-  
+  // Images optimization
   images: {
     formats: ['image/avif', 'image/webp'],
-    deviceSizes: [320, 420, 640, 750, 828, 1080, 1200, 1920],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 2592000,
+    minimumCacheTTL: 60,
+    dangerouslyAllowSVG: false,
+    contentDispositionType: 'attachment',
   },
-
-  // experimental: { optimizeCss: true }, // ❌ Remove karo (optional)
   
+  // Compression enable
+  compress: true,
+  
+  // Headers for security & performance
   async headers() {
     return [
       {
-        source: '/(.*)',
+        source: '/:path*',
         headers: [
-          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
-          { key: 'X-Content-Type-Options', value: 'nosniff' },
-          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
-          { key: 'X-DNS-Prefetch-Control', value: 'on' },
-          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
+          {
+            key: 'X-DNS-Prefetch-Control',
+            value: 'on',
+          },
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=63072000; includeSubDomains; preload',
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'SAMEORIGIN',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block',
+          },
         ],
       },
       {
-        source: '/_next/static/(.*)',
+        source: '/:path*{/}?',
+        has: [
+          {
+            type: 'header',
+            key: 'next-router-prefetch',
+          },
+        ],
         headers: [
-          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=0, must-revalidate',
+          },
         ],
       },
       {
-        source: '/images/(.*)',
+        source: '/:all*(svg|jpg|png|webp|avif)',
+        locale: false,
         headers: [
-          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
-        ],
-      },
-      {
-        source: '/fonts/(.*)',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
-        ],
-      },
-      // ✅ Articles ke liye alag cache
-      {
-        source: '/articles/:path*',
-        headers: [
-          { key: 'Cache-Control', value: 'public, s-maxage=604800, stale-while-revalidate=86400' },
-        ],
-      },
-      {
-        source: '/((?!_next/static|images|fonts|articles).*)',
-        headers: [
-          { key: 'Cache-Control', value: 'public, s-maxage=86400, stale-while-revalidate=3600' },
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
         ],
       },
     ];
   },
   
-  async redirects() {
+  // DNS Prefetch for external domains
+  async rewrites() {
     return [
-      // www → non-www
       {
-        source: '/:path*',
-        has: [{ type: 'host', value: 'www.kisanstatus.com' }],
-        destination: 'https://kisanstatus.com/:path*',
-        permanent: true,
+        source: '/_next/image',
+        destination: '/_next/image',
       },
-      // ww16 → main domain
-      {
-        source: '/:path*',
-        has: [{ type: 'host', value: 'ww16.kisanstatus.com' }],
-        destination: 'https://kisanstatus.com/:path*',
-        permanent: true,
-      },
-      
-      // Article redirects (ye sab sahi hain ✅)
-      { source: '/pm-kisan-status', destination: '/articles/pm-kisan-23vi-kist-2026-status-check', permanent: true },
-      { source: '/pm-kisan-beneficiary-status', destination: '/articles/pm-kisan-21vi-installment-status-check', permanent: true },
-      { source: '/pm-kisan-kyc-csc', destination: '/articles/pm-kisan-ekyc-online-2026', permanent: true },
-      { source: '/pm-kisan-beneficiary-list', destination: '/articles/pm-kisan-beneficiary-list-2026', permanent: true },
-      { source: '/articles/pm-kisan-24vi-kist-2026', destination: '/articles/pm-kisan-24vi-kist', permanent: true },
-      { source: '/articles/agri-stack-kya-hai-2026', destination: '/articles/agristack-kya-hai', permanent: true },
-      { source: '/articles/pm-kisan-mobile-number-change-2026', destination: '/articles/pm-kisan-mobile-number-change', permanent: true },
     ];
   },
 };
