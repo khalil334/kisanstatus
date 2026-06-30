@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useState, useEffect, ReactNode, useCallback, useMemo } from 'react';
+import React, { createContext, useContext, useState, useEffect, useCallback, useMemo } from 'react';
 import type { LangCode } from './translations';
 import t from './translations';
 import { trackEvent } from './gtag';
@@ -9,7 +9,6 @@ const STORAGE_KEY = 'ks_lang';
 const DEFAULT_LANG: LangCode = 'hi';
 const SUPPORTED_LANGS: LangCode[] = ['hi', 'en'];
 
-// Language metadata - sirf supported languages
 const LANGUAGE_META = {
   hi: { name: 'Hindi', nativeName: 'हिंदी', flag: '🇮🇳', dir: 'ltr' as const },
   en: { name: 'English', nativeName: 'English', flag: '🇬🇧', dir: 'ltr' as const },
@@ -22,6 +21,10 @@ interface LangContextType {
   isLoaded: boolean;
   getLangName: (code: LangCode) => string;
   supportedLangs: LangCode[];
+}
+
+interface LanguageProviderProps {
+  children: React.ReactNode;
 }
 
 const LangContext = createContext<LangContextType | undefined>(undefined);
@@ -38,7 +41,6 @@ function getBrowserLanguage(): LangCode {
       if (langCode.startsWith('hi')) return 'hi';
     }
     
-    // Indian languages default to Hindi
     const primaryLang = languages[0]?.toLowerCase() || '';
     const indianLangs = ['bn', 'ta', 'te', 'mr', 'gu', 'kn', 'ml', 'pa', 'ur'];
     if (indianLangs.some(lang => primaryLang.startsWith(lang))) return 'hi';
@@ -78,7 +80,7 @@ function updateDocumentLang(lang: LangCode): void {
   }
 }
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
+export function LanguageProvider({ children }: LanguageProviderProps) {
   const [lang, setLangState] = useState<LangCode>(DEFAULT_LANG);
   const [isLoaded, setIsLoaded] = useState(false);
 
