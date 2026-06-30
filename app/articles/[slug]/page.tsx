@@ -1,18 +1,3 @@
-/**
- * app/articles/[slug]/page.tsx — v5
- * ✅ FIXES:
- *  - JSON-LD schemas server-side inject ho rahe hain (Google crawl ke liye)
- *  - Per-article OG image map kept
- *  - generateStaticParams unchanged (SSG kept)
- *  - revalidate 86400 kept
- *  - ✅ UPDATED: Added pm-kisan-complete-guide (Article #23)
- *  - ✅ UPDATED: Added soil-health-card-complete-guide-2026 (Article #24)
- *  - ✅ UPDATED: Added pm-kisan-self-registered-status-check (Article #25)
- *  - ✅ UPDATED: Added pm-kisan-status-check-online-2026-complete-guide (Article #26)
- *  - ✅ NEW: Added mandi-bhav-today (Article #27)
- *  - ✅ CATEGORY BADGE ADDED — Clickable category badge at top of article
- *  - ✅ SEO v3.0: Keywords removed, og:locale fixed to en_IN, title cleaned
- */
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import dynamic from 'next/dynamic';
@@ -21,7 +6,6 @@ import { ARTICLES_MAP, ARTICLES, CATEGORIES, type ArticleMeta } from '@/lib/arti
 
 const DOMAIN = 'https://kisanstatus.com';
 
-// ── Per-article OG image map ───────────────────────────────────────────────
 const ARTICLE_OG_IMAGES: Record<string, string> = {
   'kisan-credit-card-online-apply-2026':             '/images/kisan-credit-card-apply-2026.webp',
   'pm-kisan-23vi-kist-2026-status-check':            '/images/pm-kisan-23vi-kist-status-check-2026.webp',
@@ -49,10 +33,9 @@ const ARTICLE_OG_IMAGES: Record<string, string> = {
   'soil-health-card-complete-guide-2026':            '/images/soil-health-card-complete-guide-2026.webp',
   'pm-kisan-self-registered-status-check':           '/images/pm-kisan-self-registered-status/pm-kisan-portal-homepage.webp',
   'pm-kisan-status-check-online-2026-complete-guide': '/images/pm-kisan-status-check-tool-interface.webp',
-  'mandi-bhav-today':                                '/images/article/mandi-bhav-today.webp', // ✅ NEW ENTRY
+  'mandi-bhav-today':                                '/images/article/mandi-bhav-today.webp',
 };
 
-// ── JSON-LD schema generator (server-side) ─────────────────────────────────
 function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
   return [
     {
@@ -78,8 +61,8 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
         },
       },
       mainEntityOfPage: { '@type': 'WebPage', '@id': url },
-      inLanguage: 'en-IN',
-      isPartOf: { '@type': 'WebSite', name: 'KisanStatus.com', url: DOMAIN },
+      inLanguage: 'hi-IN',
+      isPartOf: { '@type': 'WebSite', name: 'KisanStatus', url: DOMAIN },
     },
     {
       '@context': 'https://schema.org',
@@ -97,8 +80,8 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
       url,
       name: article.ogTitle || article.title,
       description: article.desc,
-      inLanguage: 'en-IN',
-      isPartOf: { '@type': 'WebSite', url: DOMAIN, name: 'KisanStatus.com' },
+      inLanguage: 'hi-IN',
+      isPartOf: { '@type': 'WebSite', url: DOMAIN, name: 'KisanStatus' },
       author: { '@type': 'Person', name: 'Sidhu Singh' },
       datePublished: article.publishedTime ?? '2026-01-01T00:00:00+05:30',
       dateModified:  article.modifiedTime  ?? new Date().toISOString(),
@@ -106,7 +89,6 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
   ];
 }
 
-// ── Loading skeleton ───────────────────────────────────────────────────────
 function ArticleLoading() {
   return (
     <div className="container-site py-10 animate-pulse">
@@ -118,7 +100,6 @@ function ArticleLoading() {
   );
 }
 
-// ── Dynamic imports ────────────────────────────────────────────────────────
 const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> = {
   KisanCreditCardOnlineApply2026:             dynamic(() => import('@/components/articles/KisanCreditCardOnlineApply2026'),            { loading: ArticleLoading }),
   KisanRinKahaSeLe2026:                       dynamic(() => import('@/components/articles/KisanRinKahaSeLe2026'),                      { loading: ArticleLoading }),
@@ -146,7 +127,7 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   SoilHealthCardCompleteGuide2026:            dynamic(() => import('@/components/articles/soil-health-card-complete-guide-2026'),      { loading: ArticleLoading }),
   PmKisanSelfRegisteredStatusCheck:           dynamic(() => import('@/components/articles/pm-kisan-self-registered-status-check'),     { loading: ArticleLoading }),
   PmKisanStatusCheckOnline2026CompleteGuide:  dynamic(() => import('@/components/articles/PmKisanStatusCheckOnline2026CompleteGuide'), { loading: ArticleLoading }),
-  MandiBhavToday:                             dynamic(() => import('@/components/articles/MandiBhavContent'),                          { loading: ArticleLoading }), // ✅ NEW ENTRY
+  MandiBhavToday:                             dynamic(() => import('@/components/articles/MandiBhavContent'),                          { loading: ArticleLoading }),
 };
 
 export const revalidate = 86400;
@@ -181,8 +162,8 @@ export async function generateMetadata({
       description:   article.desc,
       type:          'article',
       url,
-      siteName:      'KisanStatus.com',
-      locale:        'en_IN',
+      siteName:      'KisanStatus',
+      locale:        'hi_IN',
       images:        [{ url: ogImage, width: 1200, height: 630, alt: displayTitle }],
       publishedTime: article.publishedTime ?? '2026-01-01T00:00:00+05:30',
       modifiedTime:  article.modifiedTime  ?? new Date().toISOString(),
@@ -199,7 +180,6 @@ export async function generateMetadata({
   };
 }
 
-// ── Server Component — schemas inject server-side ──────────────────────────
 export default async function ArticlePage({
   params,
 }: {
@@ -222,7 +202,6 @@ export default async function ArticlePage({
 
   return (
     <>
-      {/* ✅ JSON-LD schemas — server-side render, Google crawls perfectly */}
       {schemas.map((schema, i) => (
         <script
           key={i}
@@ -231,7 +210,6 @@ export default async function ArticlePage({
         />
       ))}
 
-      {/* ✅ CATEGORY BADGE — Clickable badge at top of article */}
       {category && (
         <div className="container-site pt-6">
           <Link
@@ -245,7 +223,6 @@ export default async function ArticlePage({
         </div>
       )}
 
-      {/* Article UI — dynamic client component */}
       <ArticleComponent article={article} />
     </>
   );
