@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
+  trailingSlash: false, // ✅ Add karo
   compress: true,
   
   images: {
@@ -9,9 +11,7 @@ const nextConfig = {
     minimumCacheTTL: 2592000,
   },
 
-  experimental: {
-    optimizeCss: true,
-  },
+  // experimental: { optimizeCss: true }, // ❌ Remove karo (optional)
   
   async headers() {
     return [
@@ -43,8 +43,15 @@ const nextConfig = {
           { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
         ],
       },
+      // ✅ Articles ke liye alag cache
       {
-        source: '/((?!_next/static|images|fonts).*)',
+        source: '/articles/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, s-maxage=604800, stale-while-revalidate=86400' },
+        ],
+      },
+      {
+        source: '/((?!_next/static|images|fonts|articles).*)',
         headers: [
           { key: 'Cache-Control', value: 'public, s-maxage=86400, stale-while-revalidate=3600' },
         ],
@@ -54,48 +61,22 @@ const nextConfig = {
   
   async redirects() {
     return [
-      {
-        source: '/',
-        has: [{ type: 'host', value: 'ww16.kisanstatus.com' }],
-        destination: 'https://kisanstatus.com/',
-        permanent: true,
-      },
-      {
-        source: '/:path*',
-        has: [{ type: 'host', value: 'ww16.kisanstatus.com' }],
-        destination: 'https://kisanstatus.com/:path*',
-        permanent: true,
-      },
-      {
-        source: '/',
-        has: [{ type: 'query', key: 'sub1' }],
-        destination: 'https://kisanstatus.com/',
-        permanent: true,
-      },
-      {
-        source: '/:path*',
-        has: [{ type: 'query', key: 'sub1' }],
-        destination: 'https://kisanstatus.com/:path*',
-        permanent: true,
-      },
-      {
-        source: '/',
-        has: [{ type: 'query', key: 'tr_uuid' }],
-        destination: 'https://kisanstatus.com/',
-        permanent: true,
-      },
-      {
-        source: '/:path*',
-        has: [{ type: 'query', key: 'tr_uuid' }],
-        destination: 'https://kisanstatus.com/:path*',
-        permanent: true,
-      },
+      // www → non-www
       {
         source: '/:path*',
         has: [{ type: 'host', value: 'www.kisanstatus.com' }],
         destination: 'https://kisanstatus.com/:path*',
         permanent: true,
       },
+      // ww16 → main domain
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'ww16.kisanstatus.com' }],
+        destination: 'https://kisanstatus.com/:path*',
+        permanent: true,
+      },
+      
+      // Article redirects (ye sab sahi hain ✅)
       { source: '/pm-kisan-status', destination: '/articles/pm-kisan-23vi-kist-2026-status-check', permanent: true },
       { source: '/pm-kisan-beneficiary-status', destination: '/articles/pm-kisan-21vi-installment-status-check', permanent: true },
       { source: '/pm-kisan-kyc-csc', destination: '/articles/pm-kisan-ekyc-online-2026', permanent: true },
