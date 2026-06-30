@@ -10,7 +10,6 @@ import Footer from '@/components/Footer';
 import { GA_MEASUREMENT_ID } from '@/lib/gtag';
 import { LanguageProvider } from '@/lib/LanguageContext';
 
-// ✅ OPTIMIZED: devanagari subset only if needed, variable font for better performance
 const poppins = Poppins({
   subsets: ['latin', 'devanagari'],
   weight: ['400', '500', '600', '700'],
@@ -32,7 +31,6 @@ export const metadata: Metadata = {
   },
   description:
     'PM Kisan 23vi kist 20 June 2026 ko release — ₹2000 seedha bank mein. Apna status check karo, eKYC karo, beneficiary list dekho. 100% free guide Hindi mein.',
-  // ❌ REMOVED: keywords array (deprecated by Google)
   authors: [{ name: AUTHOR, url: `${SITE_URL}/about` }],
   creator: AUTHOR,
   publisher: SITE_NAME,
@@ -90,22 +88,17 @@ export default function RootLayout({
   return (
     <html lang="hi-IN" suppressHydrationWarning>
       <head>
-        {/* ✅ ADDED: Preconnect for faster third-party connections */}
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://va.vercel-scripts.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://va.vercel-scripts.com" />
 
-        {/* ✅ OPTIMIZED: Single favicon (SVG is best for performance) */}
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
         <meta name="theme-color" content="#16A34A" />
         <meta name="theme-color" content="#14532d" media="(prefers-color-scheme: dark)" />
-
-        {/* ✅ MOVED: Manifest to avoid render-blocking */}
         <link rel="manifest" href="/site.webmanifest" />
 
-        {/* JSON-LD Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -157,14 +150,13 @@ export default function RootLayout({
         />
       </head>
 
-      <body className={`${poppins.variable} min-h-screen flex flex-col bg-surface text-text-primary antialiased font-sans`}>
+      <body className="min-h-screen flex flex-col bg-surface text-text-primary antialiased font-sans">
         <LanguageProvider>
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
         </LanguageProvider>
 
-        {/* ✅ OPTIMIZED: GA4 with lazyOnload (loads after page is fully interactive) */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="lazyOnload"
@@ -184,7 +176,6 @@ export default function RootLayout({
           }}
         />
 
-        {/* ✅ OPTIMIZED: Vercel Analytics with lazyOnload */}
         <Analytics />
         <SpeedInsights />
       </body>
