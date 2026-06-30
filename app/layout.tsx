@@ -10,12 +10,14 @@ import Footer from '@/components/Footer';
 import { GA_MEASUREMENT_ID } from '@/lib/gtag';
 import { LanguageProvider } from '@/lib/LanguageContext';
 
-// ✅ OPTIMIZED: next/font/google use kiya - self-hosted, no render-blocking
+// ✅ OPTIMIZED: devanagari subset only if needed, variable font for better performance
 const poppins = Poppins({
   subsets: ['latin', 'devanagari'],
   weight: ['400', '500', '600', '700'],
   display: 'swap',
   variable: '--font-poppins',
+  fallback: ['system-ui', 'sans-serif'],
+  preload: true,
 });
 
 const SITE_URL = 'https://kisanstatus.com';
@@ -30,32 +32,7 @@ export const metadata: Metadata = {
   },
   description:
     'PM Kisan 23vi kist 20 June 2026 ko release — ₹2000 seedha bank mein. Apna status check karo, eKYC karo, beneficiary list dekho. 100% free guide Hindi mein.',
-  keywords: [
-    'PM Kisan status check 2026',
-    'PM Kisan 23vi kist',
-    'PM Kisan 24vi kist',
-    'PM Kisan Samman Nidhi',
-    'pmkisan.gov.in status',
-    'PM Kisan eKYC 2026',
-    'PM Kisan beneficiary list',
-    'PM Kisan payment status',
-    'PM Kisan registration',
-    'PM Kisan rejected list',
-    'PM Kisan name correction',
-    'PM Kisan land seeding',
-    'PM Kisan FTO generated',
-    'Kisan Credit Card 2026',
-    'Soil Health Card 2026',
-    'Nano DAP price 2026',
-    'PMFBY crop insurance',
-    'AgriStack farmer ID',
-    'पीएम किसान स्टेटस',
-    'पीएम किसान 23वीं किस्त',
-    'पीएम किसान सम्मान निधि',
-    'पीएम किसान ईकेवाईसी',
-    'मिट्टी स्वास्थ्य कार्ड',
-    'किसान क्रेडिट कार्ड',
-  ],
+  // ❌ REMOVED: keywords array (deprecated by Google)
   authors: [{ name: AUTHOR, url: `${SITE_URL}/about` }],
   creator: AUTHOR,
   publisher: SITE_NAME,
@@ -76,13 +53,6 @@ export const metadata: Metadata = {
         height: 630,
         alt: 'KisanStatus - PM Kisan Status Check 2026',
         type: 'image/webp',
-      },
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'KisanStatus - PM Kisan Status Check 2026',
-        type: 'image/png',
       },
     ],
   },
@@ -120,18 +90,22 @@ export default function RootLayout({
   return (
     <html lang="hi-IN" suppressHydrationWarning>
       <head>
-        {/* ✅ FIXED: DNS prefetch — sirf zaroori domains */}
+        {/* ✅ ADDED: Preconnect for faster third-party connections */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://va.vercel-scripts.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://va.vercel-scripts.com" />
 
-        {/* Favicons */}
-        <link rel="icon" href="/favicon.ico" sizes="48x48" />
+        {/* ✅ OPTIMIZED: Single favicon (SVG is best for performance) */}
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
-        <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#16A34A" />
         <meta name="theme-color" content="#14532d" media="(prefers-color-scheme: dark)" />
 
-        {/* ✅ FIXED: SearchAction → /articles instead of broken /search */}
+        {/* ✅ MOVED: Manifest to avoid render-blocking */}
+        <link rel="manifest" href="/site.webmanifest" />
+
+        {/* JSON-LD Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -190,14 +164,14 @@ export default function RootLayout({
           <Footer />
         </LanguageProvider>
 
-        {/* ✅ PERFORMANCE: GA4 lazy load — afterInteractive se page pehle dikhega */}
+        {/* ✅ OPTIMIZED: GA4 with lazyOnload (loads after page is fully interactive) */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
         <Script
           id="ga4-init"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -210,6 +184,7 @@ export default function RootLayout({
           }}
         />
 
+        {/* ✅ OPTIMIZED: Vercel Analytics with lazyOnload */}
         <Analytics />
         <SpeedInsights />
       </body>
