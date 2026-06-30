@@ -46,10 +46,22 @@ export const metadata: Metadata = {
   verification: {
     google: process.env.NEXT_PUBLIC_GSC_TOKEN ?? 'oGrO0aRNLLhCgHq0Bn-sh3FdgKye7TlbAn2pAk8YdMQ',
   },
+  // Preconnect hints for faster loading
+  metadataBase: new URL(SITE_URL),
 };
 
 export const revalidate = 3600;
 
+// Preload critical resources
 export default function HomePage() {
-  return <HomeContent />;
+  return (
+    <>
+      {/* DNS Prefetch for external domains */}
+      <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+      
+      <HomeContent />
+    </>
+  );
 }
