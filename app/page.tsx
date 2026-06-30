@@ -1,24 +1,26 @@
 import type { Metadata } from 'next';
 import HomeContent from '@/components/HomeContent';
 
+const SITE_URL = 'https://kisanstatus.com';
+
 export const metadata: Metadata = {
-  title: 'PM Kisan Status Check 2026 — 23vi Kist Guide | KisanStatus.com',
+  title: 'PM Kisan Status Check 2026 — 23vi Kist Guide',
   description: 'PM Kisan 23vi kist status check karein, eKYC complete karein aur payment issues fix karein. Free step-by-step guide for Indian farmers.',
-  authors: [{ name: 'Sidhu Singh', url: 'https://kisanstatus.com/about' }],
-  alternates: { canonical: 'https://kisanstatus.com' },
+  authors: [{ name: 'KisanStatus Team', url: `${SITE_URL}/about` }],
+  alternates: { canonical: `${SITE_URL}/` },
   openGraph: {
-    title: 'PM Kisan Status Check 2026 — 23vi Kist Guide | KisanStatus.com',
+    title: 'PM Kisan Status Check 2026 — 23vi Kist Guide',
     description: 'PM Kisan 23vi kist status check karein, eKYC complete karein aur payment issues fix karein. Free step-by-step guide.',
     type: 'website',
-    url: 'https://kisanstatus.com',
-    siteName: 'KisanStatus.com',
-    locale: 'en_IN',
+    url: `${SITE_URL}/`,
+    siteName: 'KisanStatus',
+    locale: 'hi_IN',
     images: [
       {
-        url: 'https://kisanstatus.com/og-image.webp',
+        url: `${SITE_URL}/og-image.webp`,
         width: 1200,
         height: 630,
-        alt: 'PM Kisan Status Check 2026 - KisanStatus.com',
+        alt: 'PM Kisan Status Check 2026 - KisanStatus',
       },
     ],
   },
@@ -28,7 +30,7 @@ export const metadata: Metadata = {
     description: '₹2000 seedha bank mein — 9.44 Crore+ kisanon ko mil chuki hai. Apna status abhi check karo!',
     site: '@kisanstatus',
     creator: '@kisanstatus',
-    images: ['https://kisanstatus.com/og-image.webp'],
+    images: [`${SITE_URL}/og-image.webp`],
   },
   robots: {
     index: true,
@@ -42,7 +44,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'oGrO0aRNLLhCgHq0Bn-sh3FdgKye7TlbAn2pAk8YdMQ',
+    google: process.env.NEXT_PUBLIC_GSC_TOKEN ?? 'oGrO0aRNLLhCgHq0Bn-sh3FdgKye7TlbAn2pAk8YdMQ',
   },
 };
 
