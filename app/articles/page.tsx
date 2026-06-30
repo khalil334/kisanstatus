@@ -7,7 +7,7 @@ const DOMAIN = 'https://kisanstatus.com';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'All PM Kisan Articles & Guides 2026 — KisanStatus.com',
+  title: 'All PM Kisan Articles & Guides 2026',
   description: 'PM Kisan status check, eKYC, loan, payment fix, registration guides — sab Hindi mein. Free aur simple.',
   alternates: { canonical: `${DOMAIN}/articles` },
   openGraph: {
@@ -15,8 +15,8 @@ export const metadata: Metadata = {
     description: `${ARTICLES.length}+ free guides — status check, eKYC, loan, payment fix, registration. Sab Hindi mein.`,
     type: 'website',
     url: `${DOMAIN}/articles`,
-    siteName: 'KisanStatus.com',
-    locale: 'en_IN',
+    siteName: 'KisanStatus',
+    locale: 'hi_IN',
     images: [{ url: `${DOMAIN}/og-image.webp`, width: 1200, height: 630, alt: 'PM Kisan Articles 2026' }],
   },
   twitter: {
@@ -32,7 +32,7 @@ export default function ArticlesPage() {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'PM Kisan Guides 2026 — KisanStatus.com',
+    name: 'PM Kisan Guides 2026',
     url: `${DOMAIN}/articles`,
     numberOfItems: ARTICLES.length,
     itemListElement: ARTICLES.map((a, i) => ({
