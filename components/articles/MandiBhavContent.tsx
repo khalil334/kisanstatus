@@ -5,8 +5,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 // ─── DATA ────────────────────────────────────────────────────────────────────
+// ⚠️ IMPORTANT: These are SAMPLE/INDICATIVE rates for demonstration.
+// Update this section manually each day (or wire up a real data source)
+// before relying on it for real users. See note at bottom of file.
 
-const LAST_UPDATED = '30 June 2026, 09:30 AM';
+const LAST_UPDATED = '1 July 2026, 09:30 AM'; // ← update this daily
 const SOURCE_URL = 'https://agmarknet.gov.in';
 
 const VEGETABLES = [
@@ -59,12 +62,14 @@ const RELATED_ARTICLES = [
 ];
 
 // ─── SCHEMA ──────────────────────────────────────────────────────────────────
+// Wording softened: "indicative range" instead of asserting verified live data
+// from AgMarkNet for an exact date, since rates here are manually maintained.
 
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Aaj Ka Mandi Bhav 30 June 2026 – Sabzi aur Fruit Rates Today',
-  description: 'AgMarkNet data ke basis par aaj ka mandi bhav – aloo, pyaaz, tamatar, seb, aam ke wholesale rates.',
+  headline: 'Mandi Bhav Guide – Sabzi aur Fruit Ke Indicative Wholesale Rates',
+  description: 'Bharat ki major mandiyon ke sabzi aur phal ke indicative wholesale price ranges, har shahar ke hisaab se, aur AgMarkNet jaise official source se rate check karne ka tarika.',
   datePublished: '2026-06-30',
   dateModified: new Date().toISOString(),
   author: { '@type': 'Organization', name: 'KisanStatus.com', url: 'https://kisanstatus.com' },
@@ -76,11 +81,11 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: 'Aaj ka mandi bhav kya hai?',         acceptedAnswer: { '@type': 'Answer', text: 'Aaj Delhi Azadpur Mandi mein: Aloo ₹20-24/kg, Pyaaz ₹26-30/kg, Tamatar ₹38-45/kg (AgMarkNet data, 30 June 2026).' } },
-    { '@type': 'Question', name: 'Aloo ka bhav aaj kya hai?',          acceptedAnswer: { '@type': 'Answer', text: 'Aaj aloo ka bhav ₹20-24/kg hai. Kal ₹18 tha – ₹2 badha hai.' } },
-    { '@type': 'Question', name: 'Pyaaz ka rate aaj kya hai?',         acceptedAnswer: { '@type': 'Answer', text: 'Aaj pyaaz ka rate ₹26-30/kg hai. Kal se ₹2 gira hai.' } },
-    { '@type': 'Question', name: 'Tamatar ka bhav kya hai aaj?',       acceptedAnswer: { '@type': 'Answer', text: 'Aaj tamatar ₹38-45/kg chal raha hai – kal se ₹5 upar.' } },
-    { '@type': 'Question', name: 'Fruit mandi bhav kahan check karein?', acceptedAnswer: { '@type': 'Answer', text: 'Fruit rates: Seb ₹130-160/kg, Kela ₹48-58/dozen, Santra ₹85-105/kg, Aam ₹160-220/kg. Official data ke liye agmarknet.gov.in dekhen.' } },
+    { '@type': 'Question', name: 'Mandi bhav kaise pata karein?',                  acceptedAnswer: { '@type': 'Answer', text: 'Mandi bhav check karne ke liye AgMarkNet portal (agmarknet.gov.in) ya eNAM app sabse reliable source hain. Ye government-verified daily rates dete hain, mandi aur commodity ke hisaab se filter karke.' } },
+    { '@type': 'Question', name: 'Sabzi mandi rate aaj kya hota hai?',             acceptedAnswer: { '@type': 'Answer', text: 'Sabzi ke wholesale rates roz badalte hain mausam, supply aur demand ke hisaab se. Is page par indicative ranges diye gaye hain — exact aaj ke rate ke liye AgMarkNet ya apni local mandi check karein.' } },
+    { '@type': 'Question', name: 'Aloo pyaaz tamatar ka rate kaise track karein?', acceptedAnswer: { '@type': 'Answer', text: 'Aloo, pyaaz aur tamatar (TOP commodities) ke rates AgMarkNet par commodity-wise search se mil jate hain. Inke rates supply chain mein sabse zyada fluctuate karte hain.' } },
+    { '@type': 'Question', name: 'Fruit mandi bhav kahan check karein?',           acceptedAnswer: { '@type': 'Answer', text: 'Fruit wholesale rates ke liye AgMarkNet portal ya apni nazdeeki mandi (jaise Azadpur, Vashi, Koyambedu) ka direct visit sabse accurate tarika hai.' } },
+    { '@type': 'Question', name: 'Gaon ki mandi rate list kaise milegi?',          acceptedAnswer: { '@type': 'Answer', text: 'Chhoti ya gaon ki mandiyon ke rates AgriMarket mobile app se milte hain — ye GPS se 50km radius ki mandiyon ka data dikhata hai, bina internet ke bhi SMS service available hai.' } },
   ],
 };
 
@@ -116,8 +121,8 @@ function PriceCard({
       </div>
       <div className={`text-2xl font-black ${priceColor} mb-2`}>{rate}</div>
       <div className="flex items-center justify-between text-xs text-gray-500">
-        <span>Kal: ₹{prev}</span>
-        <span>Wholesale</span>
+        <span>Pichla range: ₹{prev}</span>
+        <span>Wholesale (indicative)</span>
       </div>
     </div>
   );
@@ -158,10 +163,10 @@ export default function MandiBhavContent() {
             <span className="text-4xl mt-1">🏪</span>
             <div>
               <h1 className="text-2xl md:text-4xl font-black leading-tight">
-                Aaj Ka Mandi Bhav — 30 June 2026
+                Mandi Bhav Guide — Sabzi aur Fruit Wholesale Rates
               </h1>
               <p className="text-green-200 text-sm mt-2">
-                Live Sabzi &amp; Fruit Wholesale Rates · Updated {currentTime || LAST_UPDATED}
+                Indicative Sabzi &amp; Fruit Wholesale Price Ranges · Last reviewed {LAST_UPDATED}
               </p>
               {/* Source badge */}
               <a
@@ -170,7 +175,7 @@ export default function MandiBhavContent() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 mt-3 bg-white/20 hover:bg-white/30 text-white text-xs font-semibold px-3 py-1 rounded-full transition-colors"
               >
-                📊 Data Source: AgMarkNet (agmarknet.gov.in) ↗
+                📊 Official Live Rates: AgMarkNet (agmarknet.gov.in) ↗
               </a>
             </div>
           </div>
@@ -182,26 +187,29 @@ export default function MandiBhavContent() {
         {/* ── Intro — natural, no keyword stuffing ── */}
         <section className="mb-6 bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
           <p className="text-gray-700 leading-relaxed">
-            Yahan aapko India ke major mandion ke <strong>aaj ke wholesale rates</strong> milenge —
-            sabziyon se lekar mausami phalon tak. Ye prices <strong>AgMarkNet</strong> ke data pe based
-            hain aur har subah update hoti hain. Retail prices 10–20% zyada ho sakti hain.
+            Yahan aapko India ki major mandion ke <strong>sabzi aur phal ke indicative wholesale price ranges</strong> milenge —
+            roz ke aaloo pyaaz tamatar rate se lekar mausami phalon tak. Ye ek <strong>general guide</strong> hai jo aapko
+            typical rate range samjhane ke liye banaya gaya hai. Exact aaj ke live rate ke liye hamesha{' '}
+            <strong>AgMarkNet</strong> ya apni local mandi check karein — retail prices yahan diye gaye wholesale rates se
+            10–20% zyada ho sakti hain.
           </p>
         </section>
 
         {/* ── Disclaimer ── */}
         <div className="bg-amber-50 border-l-4 border-amber-400 p-4 mb-8 rounded-lg text-sm text-amber-800">
-          <strong>📢 Dhyan den:</strong> Ye wholesale mandi rates hain. Alag-alag mandion mein
-          thoda farq ho sakta hai. Exact rates ke liye{' '}
+          <strong>📢 Dhyan den:</strong> Ye page <strong>indicative/sample wholesale ranges</strong> dikhata hai jo periodically
+          review kiye jate hain — live, minute-by-minute mandi feed nahi hai. Din-pratidin ke exact rate, mandi-wise
+          variation aur arrival quantity ke liye{' '}
           <a href={SOURCE_URL} target="_blank" rel="noopener noreferrer" className="underline font-semibold">
             agmarknet.gov.in
           </a>{' '}
-          ya apni local mandi zaroor check karein.
+          ya apni nazdeeki mandi zaroor check karein.
         </div>
 
         {/* ── City Selector ── */}
         <section className="mb-8 bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
           <h2 className="text-xl font-black text-gray-900 mb-4 flex items-center gap-2">
-            <span>📍</span> Apna Sheher Chunein
+            <span>📍</span> Apna Sheher Chunein — Shehar-wise Mandi Bhav
           </h2>
           <div className="flex flex-wrap gap-2">
             {STATE_RATES.map(s => (
@@ -225,7 +233,7 @@ export default function MandiBhavContent() {
               <span className="text-2xl">🏬</span>
               <div>
                 <div className="font-black text-gray-900 text-lg">{city.state} — {city.mandi}</div>
-                <div className="text-xs text-gray-500">Average wholesale range · 30 June 2026</div>
+                <div className="text-xs text-gray-500">Indicative wholesale range · Periodically reviewed</div>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
@@ -258,10 +266,10 @@ export default function MandiBhavContent() {
         {/* ── Vegetables ── */}
         <section className="mb-12">
           <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-2 flex items-center gap-2">
-            <span>🥬</span> Sabzi Bhav — Vegetable Rates Today
+            <span>🥬</span> Sabzi Mandi Bhav — Vegetable Wholesale Price List
           </h2>
           <p className="text-gray-500 text-sm mb-6">
-            Wholesale mandi rates · {LAST_UPDATED} · Source: AgMarkNet
+            Indicative wholesale ranges · Last reviewed {LAST_UPDATED} · Official source: AgMarkNet
           </p>
 
           {filteredVeg.length > 0 ? (
@@ -292,10 +300,10 @@ export default function MandiBhavContent() {
         {/* ── Fruits ── */}
         <section className="mb-12">
           <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-2 flex items-center gap-2">
-            <span>🍎</span> Phal Bhav — Fruit Rates Today
+            <span>🍎</span> Phal Mandi Bhav — Fruit Wholesale Price List
           </h2>
           <p className="text-gray-500 text-sm mb-6">
-            Wholesale mandi rates · {LAST_UPDATED} · Source: AgMarkNet
+            Indicative wholesale ranges · Last reviewed {LAST_UPDATED} · Official source: AgMarkNet
           </p>
 
           {filteredFruit.length > 0 ? (
@@ -326,9 +334,9 @@ export default function MandiBhavContent() {
         {/* ── All Cities Table ── */}
         <section className="mb-12 bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
           <h2 className="text-2xl font-black text-gray-900 mb-4 flex items-center gap-2">
-            <span>🗺️</span> Sheher-wise Mandi Bhav
+            <span>🗺️</span> Sheher-wise Mandi Bhav List
           </h2>
-          <p className="text-sm text-gray-500 mb-4">Major mandion ke aaj ke average wholesale rates</p>
+          <p className="text-sm text-gray-500 mb-4">Major mandion ke indicative average wholesale rates</p>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
@@ -358,7 +366,7 @@ export default function MandiBhavContent() {
             </table>
           </div>
           <p className="text-xs text-gray-400 mt-3">
-            * Ye average ranges hain. Exact rates ke liye{' '}
+            * Ye indicative average ranges hain, live feed nahi. Exact rates ke liye{' '}
             <a href={SOURCE_URL} target="_blank" rel="noopener noreferrer" className="underline">agmarknet.gov.in</a>{' '}
             check karein.
           </p>
@@ -367,7 +375,7 @@ export default function MandiBhavContent() {
         {/* ── Mandi Profit Calculator ── */}
         <section className="mb-12 bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl p-6 border-2 border-amber-200">
           <h2 className="text-2xl font-black text-gray-900 mb-2 flex items-center gap-2">
-            <span>🧮</span> Mandi Profit Calculator
+            <span>🧮</span> Mandi Profit Calculator — Kisan Munafa Calculator
           </h2>
           <p className="text-gray-600 text-sm mb-6">Apni fasal ka munafa calculate karein</p>
           <div className="bg-white rounded-xl p-6 shadow-sm">
@@ -426,8 +434,9 @@ export default function MandiBhavContent() {
               'Subah 7–9 baje mandi jayen — sabse taaze maal aur best rates milte hain',
               'Wholesale mandi mein retail se 20–30% sasta milta hai',
               'Mausam ke hisab se sabziyan khariden — off-season mein rate zyada hota hai',
-              'AgMarkNet app ya eNAM portal se bhi daily rates check kar sakte hain',
+              'AgMarkNet app ya eNAM portal se daily live rates check karein, ye sabse accurate source hai',
               'Ek hi vendor se na khariden — 2–3 dukan compare karein',
+              'Gaon ki mandi rate jaanne ke liye AgriMarket app use karein — GPS se 50km radius ki mandi dikhata hai',
             ].map((tip, i) => (
               <li key={i} className="flex items-start gap-2">
                 <span className="text-green-600 font-bold mt-0.5">✓</span>
@@ -475,3 +484,13 @@ export default function MandiBhavContent() {
     </>
   );
 }
+
+/**
+ * ─── MAINTENANCE NOTE ───────────────────────────────────────────────────────
+ * Yeh rates ABHI manual hain (hardcoded array mein upar). In typical numbers
+ * ko har kuch din mein khud check karke update karte rahein (AgMarkNet ya
+ * Google se dekh kar) — bas LAST_UPDATED date aur jo rate badla hai wahi
+ * array mein change karein. Jab tak ye automated nahi hai, "indicative" /
+ * "sample range" wording mat hatayein — isse page honest aur trustworthy
+ * rehta hai aur galat real-time claim nahi karta.
+ */
