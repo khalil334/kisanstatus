@@ -4,9 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run update-dates && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "update-dates": "node scripts/update-article-dates.js",
+    "prebuild": "npm run update-dates",
+    "clean": "rm -rf .next",
+    "rebuild": "npm run clean && npm run build"
   },
   "dependencies": {
     "next": "16.2.7",
