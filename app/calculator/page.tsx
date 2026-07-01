@@ -124,8 +124,30 @@ export default function CalculatorIndexPage() {
   const featured = CALCS.find((c) => c.featured);
   const rest = CALCS.filter((c) => !c.featured);
 
+  // ✅ Structured Data - ItemList Schema for all calculators
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Free Kisan Calculators 2026',
+    description: '7 free agricultural calculators for Indian farmers — status check, KCC loan EMI, crop insurance premium, MSP income aur profit/loss.',
+    numberOfItems: CALCS.length,
+    itemListElement: CALCS.map((calc, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: calc.title,
+      description: calc.desc,
+      url: `https://kisanstatus.com${calc.href}`,
+    })),
+  };
+
   return (
     <>
+      {/* ✅ Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+
       {/* ── Hero ── */}
       <div className="bg-primary-600 py-10">
         <div className="container-site text-center max-w-3xl">
