@@ -98,30 +98,64 @@ const articleListSchema = {
   })),
 };
 
+// ✅ NEW: Optimized image component with error handling
 function ArticleImage({ src, alt, emoji }: { src: string; alt: string; emoji: string }) {
   const [error, setError] = useState(false);
+  const [loaded, setLoaded] = useState(false);
   
   return (
     <div className="relative h-44 w-full overflow-hidden bg-gradient-to-br from-green-100 to-emerald-50 shrink-0">
       {!error ? (
-        <Image 
-          src={src} 
-          alt={alt} 
-          fill
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          quality={80}
-          loading="lazy"
-          className="object-cover group-hover:scale-105 transition-transform duration-500"
-          onError={() => setError(true)}
-        />
+        <>
+          {!loaded && (
+            <div className="absolute inset-0 bg-gray-200 animate-pulse z-10" />
+          )}
+          <Image 
+            src={src} 
+            alt={alt} 
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            quality={80}
+            loading="lazy"
+            className={`object-cover group-hover:scale-105 transition-transform duration-500 ${loaded ? 'opacity-100' : 'opacity-0'}`}
+            onLoad={() => setLoaded(true)}
+            onError={() => setError(true)}
+          />
+        </>
       ) : (
-        <div className="h-full w-full flex items-center justify-center">
-          <span className="text-5xl">{emoji}</span>
+        <div className="h-full w-full flex items-center justify-center bg-gradient-to-br from-green-50 to-emerald-100">
+          <span className="text-5xl" role="img" aria-label={alt}>{emoji}</span>
         </div>
       )}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-10 pointer-events-none" />
       <span className="absolute top-3 left-3 bg-amber-400 text-gray-900 text-[10px] font-black px-2.5 py-1 rounded-full shadow-md z-20">NEW</span>
-      <span className="absolute bottom-3 left-3 text-2xl drop-shadow-lg z-20">{emoji}</span>
+      <span className="absolute bottom-3 left-3 text-2xl drop-shadow-lg z-20" role="img" aria-hidden="true">{emoji}</span>
+    </div>
+  );
+}
+
+// ✅ NEW: Optimized hero image component
+function HeroImage() {
+  const [error, setError] = useState(false);
+  
+  if (error) {
+    return (
+      <div className="absolute inset-0 bg-gradient-to-br from-green-800 to-emerald-600 z-0" />
+    );
+  }
+  
+  return (
+    <div className="absolute inset-0 z-0">
+      <Image
+        src="/hero-kisan-field.webp"
+        alt="PM Kisan farmers in green field - Bharat ki kisan shakti"
+        fill
+        sizes="100vw"
+        priority={true}
+        quality={75}
+        className="object-cover opacity-20"
+        onError={() => setError(true)}
+      />
     </div>
   );
 }
@@ -132,8 +166,8 @@ export default function HomeContent() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleListSchema) }} />
 
-      {/* STATIC TICKER - No Animation */}
-      <div className="bg-red-600 text-white py-2 px-4">
+      {/* STATIC TICKER - Optimized */}
+      <div className="bg-red-600 text-white py-2 px-4" role="banner" aria-label="Latest updates">
         <div className="container-site flex flex-wrap items-center justify-center gap-x-6 gap-y-1 text-xs font-medium">
           {TICKER_ITEMS.slice(0, 3).map((item, i) => (
             <span key={i} className="flex items-center gap-1">
@@ -143,29 +177,20 @@ export default function HomeContent() {
         </div>
       </div>
 
-      {/* HERO - With Priority Image for LCP */}
+      {/* HERO - Optimized with better accessibility */}
       <section 
         className="relative overflow-hidden"
         style={{
           background: 'linear-gradient(135deg, #065f46 0%, #047857 25%, #059669 50%, #10b981 75%, #34d399 100%)'
         }}
-        aria-label="Hero"
+        aria-label="Hero section - PM Kisan Status Check"
       >
         {/* Hero Background Image - PRIORITY for LCP */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/hero-kisan-field.webp"
-            alt="PM Kisan farmers in field"
-            fill
-            sizes="100vw"
-            priority={true}
-            quality={75}
-            className="object-cover opacity-20"
-          />
-        </div>
+        <HeroImage />
 
-        <div className="absolute -top-24 -left-20 w-96 h-96 rounded-full bg-emerald-400/20 blur-[100px] pointer-events-none" />
-        <div className="absolute top-1/3 -right-10 w-80 h-80 rounded-full bg-amber-400/15 blur-[100px] pointer-events-none" />
+        {/* Decorative elements */}
+        <div className="absolute -top-24 -left-20 w-96 h-96 rounded-full bg-emerald-400/20 blur-[100px] pointer-events-none" aria-hidden="true" />
+        <div className="absolute top-1/3 -right-10 w-80 h-80 rounded-full bg-amber-400/15 blur-[100px] pointer-events-none" aria-hidden="true" />
 
         <div className="container-site relative z-10 max-w-3xl px-4 py-14 md:py-20">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-green-100 text-xs font-bold px-4 py-2 rounded-full mb-5 uppercase tracking-wider backdrop-blur-sm">
@@ -186,13 +211,15 @@ export default function HomeContent() {
           <div className="flex flex-wrap gap-3">
             <Link 
               href="/articles/pm-kisan-23vi-kist-2026-status-check" 
-              className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-black px-6 py-3.5 rounded-xl text-sm transition-all hover:scale-105 shadow-lg shadow-green-900/40"
+              className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-black px-6 py-3.5 rounded-xl text-sm transition-all hover:scale-105 shadow-lg shadow-green-900/40 focus:ring-2 focus:ring-yellow-300 focus:outline-none"
+              aria-label={`Check ${STATS.currentKist}vi kist status`}
             >
               📆 {STATS.currentKist}vi Kist Status Dekho
             </Link>
             <Link 
               href="/articles/pm-kisan-ekyc-online-2026" 
-              className="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 border border-white/30 text-white font-bold px-6 py-3.5 rounded-xl text-sm transition-all hover:scale-105 backdrop-blur-sm"
+              className="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 border border-white/30 text-white font-bold px-6 py-3.5 rounded-xl text-sm transition-all hover:scale-105 backdrop-blur-sm focus:ring-2 focus:ring-white focus:outline-none"
+              aria-label="Complete eKYC verification"
             >
               🔐 eKYC Karo — Free
             </Link>
@@ -206,7 +233,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* TOP PROBLEMS - No Scroll Reveal */}
+      {/* TOP PROBLEMS - Optimized */}
       <section className="py-12 bg-white" aria-labelledby="problems-heading">
         <div className="container-site px-4">
           <div className="text-center mb-8">
@@ -222,9 +249,14 @@ export default function HomeContent() {
               { icon: '❌', title: 'Rejected Ho Gaya', sub: 'Rejection reason pata karo', href: '/articles/pm-kisan-rejected-list-2026', bg: 'bg-orange-50', border: 'border-orange-200', tag: 'bg-orange-100 text-orange-700' },
               { icon: '✏️', title: 'Naam Galat Hai', sub: '15 min mein fix karo', href: '/articles/pm-kisan-name-correction-online-2026', bg: 'bg-purple-50', border: 'border-purple-200', tag: 'bg-purple-100 text-purple-700' },
             ].map((c) => (
-              <Link key={c.href} href={c.href} className={`${c.bg} ${c.border} border rounded-2xl p-4 flex flex-col gap-2 hover:shadow-lg hover:scale-[1.02] transition-all no-underline group h-full`}>
+              <Link 
+                key={c.href} 
+                href={c.href} 
+                className={`${c.bg} ${c.border} border rounded-2xl p-4 flex flex-col gap-2 hover:shadow-lg hover:scale-[1.02] transition-all no-underline group h-full focus:ring-2 focus:ring-green-500 focus:outline-none`}
+                aria-label={`${c.title} - ${c.sub}`}
+              >
                 <div className="flex items-start justify-between">
-                  <span className="text-2xl">{c.icon}</span>
+                  <span className="text-2xl" role="img" aria-hidden="true">{c.icon}</span>
                   <span className={`text-[9px] font-black px-2 py-0.5 rounded-full ${c.tag}`}>Guide</span>
                 </div>
                 <h3 className="font-bold text-gray-900 text-sm leading-tight">{c.title}</h3>
@@ -235,14 +267,14 @@ export default function HomeContent() {
           </div>
           
           <div className="text-center mt-6">
-            <Link href="/articles" className="text-sm font-bold text-green-700 hover:text-green-800 hover:underline">
+            <Link href="/articles" className="text-sm font-bold text-green-700 hover:text-green-800 hover:underline focus:ring-2 focus:ring-green-500 focus:outline-none">
               Saari Problems Dekho →
             </Link>
           </div>
         </div>
       </section>
 
-      {/* AGRICULTURE IMAGE 1 - Lazy Load */}
+      {/* AGRICULTURE IMAGE 1 - Optimized */}
       <section className="py-14 bg-gradient-to-b from-green-50 to-white" aria-labelledby="farmers-heading">
         <div className="container-site px-4">
           <div className="text-center mb-10">
@@ -262,7 +294,7 @@ export default function HomeContent() {
               sizes="(max-width: 768px) 100vw, 1200px"
               className="w-full h-auto"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" aria-hidden="true" />
             <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
               <div className="text-white">
                 <h3 className="text-2xl md:text-3xl font-black mb-2">PM Kisan Samman Nidhi</h3>
@@ -279,7 +311,7 @@ export default function HomeContent() {
               { label: 'Per Kist', value: '₹2,000', icon: '💵' },
             ].map((stat) => (
               <div key={stat.label} className="bg-white rounded-2xl p-5 shadow-lg border-2 border-green-100 text-center hover:shadow-xl transition-all">
-                <div className="text-3xl mb-2">{stat.icon}</div>
+                <div className="text-3xl mb-2" role="img" aria-hidden="true">{stat.icon}</div>
                 <div className="text-2xl font-black text-green-700 mb-1">{stat.value}</div>
                 <div className="text-xs text-gray-600 font-medium">{stat.label}</div>
               </div>
@@ -288,7 +320,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* HOW IT WORKS - No Scroll Reveal */}
+      {/* HOW IT WORKS - Optimized */}
       <section className="py-14 bg-white" aria-labelledby="how-heading">
         <div className="container-site px-4">
           <div className="text-center mb-10">
@@ -304,7 +336,7 @@ export default function HomeContent() {
               { step: '03', title: '₹2,000 Paao', desc: 'Har 4 mahine mein seedha bank account mein paisa', icon: '💰', color: 'bg-amber-50 border-amber-200' },
             ].map((item) => (
               <div key={item.step} className={`${item.color} border-2 rounded-2xl p-6 text-center hover:shadow-lg transition-all`}>
-                <span className="text-4xl mb-3 block">{item.icon}</span>
+                <span className="text-4xl mb-3 block" role="img" aria-hidden="true">{item.icon}</span>
                 <span className="inline-block bg-white text-gray-700 text-xs font-black px-3 py-1 rounded-full mb-3">Step {item.step}</span>
                 <h3 className="font-bold text-gray-900 text-lg mb-2">{item.title}</h3>
                 <p className="text-gray-600 text-sm">{item.desc}</p>
@@ -314,7 +346,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* LATEST ARTICLES - Lazy Load Images */}
+      {/* LATEST ARTICLES - Optimized */}
       <section className="py-14 bg-gradient-to-b from-gray-50 to-white" aria-labelledby="latest-heading">
         <div className="container-site px-4">
           <div className="text-center mb-8">
@@ -325,7 +357,12 @@ export default function HomeContent() {
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-4xl mx-auto">
             {TOP_ARTICLES.map((a) => (
-              <Link key={a.slug} href={`/articles/${a.slug}`} className="group bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 no-underline h-full flex flex-col">
+              <Link 
+                key={a.slug} 
+                href={`/articles/${a.slug}`} 
+                className="group bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 no-underline h-full flex flex-col focus:ring-2 focus:ring-green-500 focus:outline-none"
+                aria-label={`Read article: ${a.title}`}
+              >
                 <ArticleImage src={a.image} alt={a.title} emoji={a.emoji} />
                 <div className="p-4 flex-col flex-1">
                   <span className={`text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full self-start ${CAT_COLORS[a.category] ?? 'bg-gray-100 text-gray-600'}`}>{a.category}</span>
@@ -341,14 +378,18 @@ export default function HomeContent() {
           </div>
 
           <div className="text-center mt-10">
-            <Link href="/articles" className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-black px-8 py-3.5 rounded-xl text-sm transition-all hover:scale-105 shadow-lg shadow-green-600/30">
+            <Link 
+              href="/articles" 
+              className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-black px-8 py-3.5 rounded-xl text-sm transition-all hover:scale-105 shadow-lg shadow-green-600/30 focus:ring-2 focus:ring-green-300 focus:outline-none"
+              aria-label={`View all ${STATS.totalArticles} guides`}
+            >
               📚 Saari {STATS.totalArticles} Guides Dekho
             </Link>
           </div>
         </div>
       </section>
 
-      {/* AGRICULTURE IMAGE 2 - Lazy Load */}
+      {/* AGRICULTURE IMAGE 2 - Optimized */}
       <section className="py-14 bg-gradient-to-b from-amber-50 to-white" aria-labelledby="modern-heading">
         <div className="container-site px-4">
           <div className="text-center mb-10">
@@ -368,21 +409,21 @@ export default function HomeContent() {
               sizes="(max-width: 768px) 100vw, 1200px"
               className="w-full h-auto"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" aria-hidden="true" />
             <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-white">
                 <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl">
-                  <div className="text-3xl mb-2">📱</div>
+                  <div className="text-3xl mb-2" role="img" aria-hidden="true">📱</div>
                   <div className="font-bold">Mobile Se Apply</div>
                   <div className="text-xs opacity-90">Ghar baithe registration</div>
                 </div>
                 <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl">
-                  <div className="text-3xl mb-2">🌐</div>
+                  <div className="text-3xl mb-2" role="img" aria-hidden="true">🌐</div>
                   <div className="font-bold">Online Status</div>
                   <div className="text-xs opacity-90">Kabhi bhi check karo</div>
                 </div>
                 <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl">
-                  <div className="text-3xl mb-2">💳</div>
+                  <div className="text-3xl mb-2" role="img" aria-hidden="true">💳</div>
                   <div className="font-bold">Direct Bank</div>
                   <div className="text-xs opacity-90">DBT se seedha account</div>
                 </div>
@@ -401,9 +442,10 @@ export default function HomeContent() {
                 <Link 
                   key={feature.title}
                   href={feature.href}
-                  className="group bg-white rounded-2xl p-6 shadow-lg border-2 border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all block"
+                  className="group bg-white rounded-2xl p-6 shadow-lg border-2 border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all block focus:ring-2 focus:ring-purple-500 focus:outline-none"
+                  aria-label={`${feature.title} - ${feature.desc}`}
                 >
-                  <div className={`${feature.color} w-14 h-14 rounded-2xl flex items-center justify-center text-3xl mb-4`}>
+                  <div className={`${feature.color} w-14 h-14 rounded-2xl flex items-center justify-center text-3xl mb-4`} role="img" aria-hidden="true">
                     {feature.icon}
                   </div>
                   <h3 className="font-bold text-gray-900 text-lg mb-2 group-hover:text-purple-700 transition-colors">{feature.title}</h3>
@@ -412,7 +454,7 @@ export default function HomeContent() {
                 </Link>
               ) : (
                 <div key={feature.title} className="bg-white rounded-2xl p-6 shadow-lg border-2 border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all">
-                  <div className={`${feature.color} w-14 h-14 rounded-2xl flex items-center justify-center text-3xl mb-4`}>
+                  <div className={`${feature.color} w-14 h-14 rounded-2xl flex items-center justify-center text-3xl mb-4`} role="img" aria-hidden="true">
                     {feature.icon}
                   </div>
                   <h3 className="font-bold text-gray-900 text-lg mb-2">{feature.title}</h3>
@@ -426,7 +468,7 @@ export default function HomeContent() {
 
       {/* DISCLAIMER */}
       <div className="container-site pb-10 px-4">
-        <p className="text-center text-amber-700 bg-amber-50 border border-amber-200 rounded-xl px-4 py-3 text-xs max-w-2xl mx-auto">
+        <p className="text-center text-amber-700 bg-amber-50 border border-amber-200 rounded-xl px-4 py-3 text-xs max-w-2xl mx-auto" role="note">
           ⚠️ <strong>Disclaimer:</strong> KisanStatus.com ek independent information portal hai. Yeh Government of India ya pmkisan.gov.in ka official platform nahi hai.
         </p>
       </div>
