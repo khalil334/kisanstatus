@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     modifiedTime: "2026-07-02T08:00:00.000Z",
     images: [
       {
-        url: "https://kisanstatus.com/images/agristack-kya-hai-og.webp",
+        url: "https://kisanstatus.com/images/articles/agristack-kya-hai/og-image.webp",
         width: 800,
         height: 420,
         alt: "Kisan Pehchaan Card Enrollment Guide 2026",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Digital Kisan Pehchaan 2026: 14-Digit ID Se Sari Schemes Ka Access",
     description: "Unique ID se sari sarkari schemes ka access. Free enrollment, instant benefits.",
-    images: ["https://kisanstatus.com/images/agristack-kya-hai-og.webp"],
+    images: ["https://kisanstatus.com/images/articles/agristack-kya-hai/og-image.webp"],
     site: "@kisanstatus",
   },
   robots: {
@@ -58,7 +58,7 @@ const articleSchema = {
   "description": "Digital kisan pehchaan patra kaise banaye? Enrollment process, documents, fayde aur real farmer experiences.",
   "image": {
     "@type": "ImageObject",
-    "url": "https://kisanstatus.com/images/agristack-kya-hai-og.webp",
+    "url": "https://kisanstatus.com/images/articles/agristack-kya-hai/og-image.webp",
     "width": 800,
     "height": 420,
   },
@@ -270,14 +270,15 @@ export default function AgriStackArticle() {
           <strong>Ab kya hoga?</strong> Yeh platform in <strong>sab data points ko ek central registry</strong> mein laata hai. Ek baar data enter hua, <strong>sab departments ko mil jaayega</strong>. Koi duplicate entry nahi, koi verification ka jhanjhat nahi! 🎉
         </p>
 
+        {/* ✅ FIXED IMAGE PATH */}
         <figure className="my-6">
           <Image
-            src="/images/agristack-kya-hai-infographic.webp"
+            src="/images/articles/agristack-kya-hai/infographic.webp"
             alt="Digital Agriculture Platform India – Complete System Overview"
             width={800}
             height={1200}
             className="rounded-xl shadow-md w-full h-auto"
-            loading="lazy"
+            priority
           />
           <figcaption className="text-center text-sm text-gray-500 mt-2">
             Digital agriculture ecosystem – ek ID se sari schemes connected
@@ -382,9 +383,10 @@ export default function AgriStackArticle() {
           </p>
         </div>
 
+        {/* ✅ FIXED IMAGE PATH */}
         <figure className="my-6">
           <Image
-            src="/images/agristack-farmer-id-card-sample.webp"
+            src="/images/articles/agristack-kya-hai/farmer-id-card-sample.webp"
             alt="Kisan Pahchan Patra Sample Card"
             width={800}
             height={533}
@@ -460,9 +462,10 @@ export default function AgriStackArticle() {
           </p>
         </div>
 
+        {/* ✅ FIXED IMAGE PATH */}
         <figure className="my-6">
           <Image
-            src="/images/agristack-registration-6-steps-guide.webp"
+            src="/images/articles/agristack-kya-hai/registration-steps.webp"
             alt="Enrollment Process 6 Steps Guide"
             width={800}
             height={1200}
@@ -484,9 +487,10 @@ export default function AgriStackArticle() {
           Yeh <strong>sirf ek enrollment process nahi hai</strong> – yeh ek <strong>complete ecosystem</strong> hai jo <strong>khetihar ki zindagi badal sakta hai</strong>. Neeche <strong>6 revolutionary benefits</strong> diye gaye hain:
         </p>
 
+        {/* ✅ FIXED IMAGE PATH */}
         <figure className="my-6">
           <Image
-            src="/images/agristack-ecosystem-farmer-id-benefits.webp"
+            src="/images/articles/agristack-kya-hai/ecosystem-benefits.webp"
             alt="Complete Ecosystem Benefits Overview"
             width={800}
             height={800}
@@ -745,7 +749,7 @@ export default function AgriStackArticle() {
         </div>
 
         <p className="mb-4 leading-relaxed">
-          <strong>Yeh aapka haq hai</strong> aur iska <strong>direct fayda aapko milega</strong> – <strong><a href="/articles/pm-kisan-23vi-kist-2026-status-check" className="text-green-700 underline hover:text-green-900 font-semibold">PM Kisan ki kist</a> ho, <a href="/articles/pmfby-crop-insurance-2026" className="text-green-700 underline hover:text-green-900 font-semibold">crop insurance</a> ho ya <a href="/articles/kisan-credit-card-online-apply-2026" className="text-green-700 underline hover:text-green-900 font-semibold">agricultural loan</a></strong> – <strong>sab kuch ek ID se connect ho jayega</strong>. <strong>Deri mat karo – aaj hi enrollment karao!</strong> 🚀🌾
+          <strong>Yeh aapka haq hai</strong> aur iska <strong>direct fayda aapko milega</strong> – <strong><a href="/articles/pm-kisan-23vi-kist-2026-status-check" className="text-green-700 underline hover:text-green-900 font-semibold">PM Kisan ki kist</a> ho, <a href="/articles/pmfby-crop-insurance-2026" className="text-green-700 underline hover:text-green-900 font-semibold">crop insurance</a> ho ya <a href="/articles/kisan-credit-card-online-apply-2026" className="text-green-700 underline hover:text-green-900 font-semibold">agricultural loan</a></strong> – <strong>sab kuch ek ID se connect ho jayega</strong>. <strong>Deri mat karo – aaj hi enrollment karao!</strong> 🚀
         </p>
 
         <p className="mb-4 leading-relaxed">
