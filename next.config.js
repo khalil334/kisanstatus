@@ -13,6 +13,54 @@ const nextConfig = {
   // Compression enable
   compress: true,
   
+  // ✅ REDIRECTS - Fix 404 broken pages
+  async redirects() {
+    return [
+      // Calculator redirects
+      {
+        source: '/calculator/farming-profit',
+        destination: '/calculator/crop-profit',
+        permanent: true,
+      },
+      {
+        source: '/calculator/kisan-loan-emi',
+        destination: '/calculator/kcc-loan-emi',
+        permanent: true,
+      },
+      
+      // PM Kisan redirects
+      {
+        source: '/pm-kisan-24vi-kist',
+        destination: '/articles/pm-kisan-23vi-kist-2026-status-check',
+        permanent: true,
+      },
+      {
+        source: '/pm-kisan',
+        destination: '/pm-kisan-status',
+        permanent: true,
+      },
+      
+      // Beneficiary list redirects
+      {
+        source: '/beneficiary-list/daman-diu',
+        destination: '/beneficiary-list/dadra-nagar-haveli',
+        permanent: true,
+      },
+      {
+        source: '/beneficiary-list/jammu-and-kashmir',
+        destination: '/beneficiary-list/jammu-kashmir',
+        permanent: true,
+      },
+      
+      // Article redirects
+      {
+        source: '/agristack-kya-hai',
+        destination: '/articles/agristack-kya-hai',
+        permanent: true,
+      },
+    ];
+  },
+  
   // Headers for security & performance
   async headers() {
     return [
