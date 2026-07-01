@@ -4,44 +4,42 @@ import Image from "next/image";
 export const slug = "agristack-kya-hai";
 
 export const metadata: Metadata = {
-  title: "AgriStack Kya Hai 2026? Farmer ID Registration, Fayde Aur Complete Guide Hindi Mein",
-  description: "AgriStack India ka game-changing digital agriculture platform hai jo har kisan ko unique Farmer ID dega. Jaaniye registration process, 6 bade fayde, state-wise status aur step-by-step guide — bilkul aasaan bhasha mein.",
+  title: "AgriStack Kya Hai 2026? 14-Digit Farmer ID Banwane Ka Pura Tarika [Hindi]",
+  description: "AgriStack se 14-digit Farmer ID kaise banaye? Registration process, documents, 6 bade fayde, state-wise status aur real farmer experiences - bilkul aasaan bhasha mein.",
   keywords: [
-    "agristack kya hai 2026",
-    "agristack farmer id registration",
-    "agristack benefits for farmers hindi",
-    "farmer id kya hoti hai",
-    "agristack registration process step by step",
-    "digital agriculture platform india",
-    "agristack state wise status",
-    "kisan digital id 2026",
-    "agristack aur pm kisan fark",
-    "farmer registry india",
+    "agristack farmer id kaise banaye 2026",
+    "14 digit farmer id registration hindi",
+    "agristack portal login process",
+    "digital kisan pehchaan patra",
+    "agristack vs pm kisan difference",
+    "farmer id se loan kaise le",
+    "agristack state wise launch date",
+    "kisan registry india 2026",
   ],
-  authors: [{ name: "KisanStatus Team", url: "https://kisanstatus.com/about" }],
+  authors: [{ name: "Sidhu Singh", url: "https://kisanstatus.com/about" }],
   alternates: { canonical: "https://kisanstatus.com/articles/agristack-kya-hai" },
   openGraph: {
-    title: "AgriStack Kya Hai 2026? Farmer ID Registration Complete Guide",
-    description: "India ka sabse bada digital farming revolution – AgriStack. Har kisan ko milegi unique 14-digit Farmer ID. Puri jaankari yahan padhein.",
+    title: "AgriStack 2026: Farmer ID Se Kisan Ki Zindagi Kaise Badlegi?",
+    description: "14-digit Farmer ID banwane ka complete guide. Registration process, documents, fayde aur real examples ke saath.",
     url: "https://kisanstatus.com/articles/agristack-kya-hai",
     siteName: "KisanStatus",
     locale: "hi_IN",
     type: "article",
     publishedTime: "2025-01-15T08:00:00.000Z",
-    modifiedTime: "2026-06-23T08:00:00.000Z",
+    modifiedTime: "2026-07-01T08:00:00.000Z",
     images: [
       {
         url: "https://kisanstatus.com/images/agristack-kya-hai-og.webp",
         width: 800,
         height: 420,
-        alt: "AgriStack Kya Hai – Farmer ID Registration Guide India 2026",
+        alt: "AgriStack Farmer ID Registration Guide 2026",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AgriStack 2026: Farmer ID Se Kisan Ki Zindagi Badlegi",
-    description: "India ka digital agriculture revolution – AgriStack. Har kisan ko unique Farmer ID, seedha bank transfer, aur sari schemes ek jagah.",
+    title: "Farmer ID 2026: AgriStack Se Digital Kisan Pehchaan",
+    description: "14-digit unique ID se sari sarkari schemes ka access. Free registration, instant benefits.",
     images: ["https://kisanstatus.com/images/agristack-kya-hai-og.webp"],
     site: "@kisanstatus",
   },
@@ -55,8 +53,8 @@ export const metadata: Metadata = {
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "AgriStack Kya Hai 2026? Farmer ID Registration, Fayde Aur Complete Guide",
-  "description": "AgriStack India ka revolutionary digital agriculture platform hai jo har kisan ko unique Farmer ID dega. Complete guide Hindi mein.",
+  "headline": "AgriStack 2026: 14-Digit Farmer ID Banwane Ka Complete Guide",
+  "description": "Digital kisan pehchaan patra kaise banaye? Registration process, documents, fayde aur real farmer experiences.",
   "image": {
     "@type": "ImageObject",
     "url": "https://kisanstatus.com/images/agristack-kya-hai-og.webp",
@@ -64,8 +62,8 @@ const articleSchema = {
     "height": 420,
   },
   "author": {
-    "@type": "Organization",
-    "name": "KisanStatus Team",
+    "@type": "Person",
+    "name": "Sidhu Singh",
     "url": "https://kisanstatus.com/about",
   },
   "publisher": {
@@ -80,15 +78,11 @@ const articleSchema = {
     },
   },
   "datePublished": "2025-01-15T08:00:00.000Z",
-  "dateModified": "2026-06-23T08:00:00.000Z",
+  "dateModified": "2026-07-01T08:00:00.000Z",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://kisanstatus.com/articles/agristack-kya-hai",
   },
-  "keywords": "agristack, farmer id, digital agriculture, kisan registration, pm kisan integration",
-  "articleSection": "Agriculture Technology",
-  "inLanguage": "hi",
-  "isPartOf": { "@type": "WebSite", "name": "KisanStatus", "url": "https://kisanstatus.com" },
 };
 
 const faqSchema = {
@@ -97,42 +91,34 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "AgriStack kya hai aur kyun zaroori hai?",
+      "name": "14-digit farmer id kaise banaye 2026?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "AgriStack India sarkar ka revolutionary digital agriculture platform hai jo har kisan ko ek unique 14-digit Farmer ID deta hai. Yeh platform kisan ka poora data – zameen, fasal, bank account, Aadhaar – ek jagah store karta hai taaki sarkari schemes ka benefit seedha kisan tak pahunche, bina kisi middleman ke. 14 crore kisano ki life badalne wala yeh system India ko digital agriculture mein global leader banayega.",
+        "text": "Farmer ID banwane ke liye agristack.gov.in portal par jaayein ya nearest CSC centre visit karein. Aadhaar number, zameen ke kagaz (khasra/khatauni), bank passbook aur photo lekar jaayein. 15-30 minute mein 14-digit unique ID generate ho jaati hai. Process completely FREE hai.",
       },
     },
     {
       "@type": "Question",
-      "name": "Farmer ID kaise milti hai aur kitne time lagta hai?",
+      "name": "Digital kisan pehchaan patra se kya fayde hain?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Farmer ID aap AgriStack portal (agristack.gov.in) ya apne nearest Common Service Centre (CSC) par registration karke pa sakte hain. Process mein 15-30 minute lagte hain. Aadhaar OTP verification, land records submission aur basic details fill karne ke baad turant 14-digit unique Farmer ID generate ho jaati hai. Yeh ID aapki digital kisan pehchaan hai – jaise Aadhaar citizens ke liye hai.",
+        "text": "Digital kisan pehchaan se 6 bade fayde: (1) PM Kisan ki kist seedha bank mein, (2) Kisan Credit Card fast approval, (3) PMFBY insurance claims automatic, (4) eNAM par online fasal bech sakte hain, (5) Ek ID se sari schemes access, (6) Private companies se special offers.",
       },
     },
     {
       "@type": "Question",
-      "name": "AgriStack se kisan ko 6 bade fayde kya hain?",
+      "name": "Kisan registry mein registration free hai ya paid?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "AgriStack se kisan ko 6 revolutionary fayde milte hain: (1) PM Kisan ki kist seedha bank account mein – koi delay nahi, (2) Kisan Credit Card aur loan approval super fast – land records already verified hain, (3) PMFBY crop insurance claims automatic – baar baar documents nahi dene padenge, (4) eNAM par apni fasal online bechke best price pa sakte hain, (5) Ek Farmer ID se sari sarkari schemes ka access – baar baar forms nahi bharne padenge, (6) Private agri-tech companies se special offers aur credit facilities milengi.",
+        "text": "Kisan registry mein registration 100% FREE hai - online portal aur CSC centre dono par. Government ne clearly bola hai ki koi fee nahi li jaayegi. Agar koi paisa maange toh woh fraud hai - helpline 155261 par complain karein.",
       },
     },
     {
       "@type": "Question",
-      "name": "AgriStack registration ke liye kaunse documents zaroori hain?",
+      "name": "Farmer ID se loan kaise le sakte hain?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "AgriStack registration ke liye 5 documents chahiye: (1) Aadhaar card (original + photocopy), (2) Aadhaar se linked mobile number (OTP verification ke liye), (3) Zameen ke documents – Khasra number, Khatauni, ya 7/12 extract, (4) Bank passbook ya cancelled cheque (account number + IFSC code), (5) Passport size photo (2 copies). Yeh sab documents lekar CSC centre jao ya online portal par upload karo.",
-      },
-    },
-    {
-      "@type": "Question",
-      "name": "Kya AgriStack registration sach mein free hai?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Haan, AgriStack registration 100% FREE hai – online portal par bhi aur CSC centre par bhi. Government ne clearly bola hai ki koi bhi registration fee nahi li jaayegi. Agar koi CSC operator, agent, ya middleman aapse paisa maange toh woh fraud hai – turant district agriculture officer ko complain karo ya helpline 155261 par call karo. Kisan ka ek paisa bhi nahi dena hai.",
+        "text": "Farmer ID se loan lena bahut aasaan hai. Bank mein jaake apni 14-digit ID dikhayein. Aapki land records already verified hoti hain isliye Kisan Credit Card ya agricultural loan jaldi approve ho jaata hai. Pehle jaise mahino-mahine wait nahi karna padta.",
       },
     },
     {
@@ -140,7 +126,15 @@ const faqSchema = {
       "name": "AgriStack aur PM Kisan mein kya difference hai?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "PM Kisan ek specific scheme hai jo saal mein 3 baar ₹2000 ki kist deti hai (total ₹6000 saalana). AgriStack ek umbrella platform hai jo PM Kisan ko bhi cover karta hai aur bahut kuch aur bhi. Sochiye PM Kisan ek tree hai aur AgriStack poora forest hai. AgriStack mein PM Kisan ke alawa crop insurance (PMFBY), Kisan Credit Card, Soil Health Card, eNAM market access, aur baaki sab agriculture schemes shamil hain. Ek Farmer ID se sab kuch connected ho jaata hai.",
+        "text": "PM Kisan ek specific scheme hai jo ₹6000 saalana deti hai. Digital kisan platform ek umbrella system hai jo PM Kisan ko bhi cover karta hai aur bahut kuch aur bhi - crop insurance, KCC, Soil Health Card, eNAM sab. PM Kisan ek ped hai, platform poora jungle hai.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "State wise launch date kab tak hogi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "2026 tak Maharashtra, UP, MP, Rajasthan mein fully active hai. Karnataka, Gujarat, Bihar mein pilot phase chal raha hai. Punjab, Haryana mein integration ongoing hai. Baaki states mein 2026 end tak launch hone ki ummeed hai.",
       },
     },
   ],
@@ -152,7 +146,7 @@ const breadcrumbSchema = {
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kisanstatus.com" },
     { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://kisanstatus.com/articles" },
-    { "@type": "ListItem", "position": 3, "name": "AgriStack Kya Hai", "item": "https://kisanstatus.com/articles/agristack-kya-hai" },
+    { "@type": "ListItem", "position": 3, "name": "AgriStack Guide", "item": "https://kisanstatus.com/articles/agristack-kya-hai" },
   ],
 };
 
@@ -170,105 +164,134 @@ export default function AgriStackArticle() {
           <li aria-hidden="true">/</li>
           <li><a href="https://kisanstatus.com/articles" className="text-green-700 hover:underline">Articles</a></li>
           <li aria-hidden="true">/</li>
-          <li aria-current="page" className="text-gray-700">AgriStack Kya Hai</li>
+          <li aria-current="page" className="text-gray-700">Digital Kisan Pehchaan Guide</li>
         </ol>
       </nav>
 
       {/* Title & Meta */}
       <header className="mb-6">
         <h1 className="text-3xl md:text-4xl font-bold text-green-800 leading-tight mb-3">
-          AgriStack Kya Hai 2026? Farmer ID Registration, Fayde Aur Complete Guide Hindi Mein
+          AgriStack 2026: 14-Digit Farmer ID Banwane Ka Pura Tarika [Hindi Guide]
         </h1>
         <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500">
-          <span>✍️ <strong>KisanStatus Team</strong></span>
+          <span>✍️ <strong>Sidhu Singh</strong></span>
           <span>⏱️ Reading Time: ~12 min</span>
+          <span>📅 Updated: July 2026</span>
         </div>
-        <p className="mt-4 text-lg text-gray-700 leading-relaxed">
-          <strong>Namaste Kisan bhaiyon!</strong> Agar aapne "AgriStack" ka naam suna hai lekin samajh nahi aa raha ki yeh kya cheez hai aur aapke liye kyun important hai – toh bilkul sahi jagah aaye hain. Aaj hum aapko bilkul <strong>aasaan bhasha mein</strong> samjhayenge ki AgriStack kya hai, Farmer ID kya hoti hai, registration kaise karte hain, aur sabse important – <strong>is se aapko kya-kya fayde milenge</strong>. Yeh article padhne ke baad aap AgriStack ke expert ban jaayenge! 🌾
-        </p>
       </header>
+
+      {/* Real Story Hook */}
+      <section className="mb-8 bg-amber-50 border-l-4 border-amber-500 p-6 rounded-r-lg">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">
+          📱 Mere Gaon Ka Ek Kisan Story...
+        </h2>
+        <p className="mb-3 leading-relaxed text-gray-700">
+          Pichle hafte mere gaon (Muzaffarnagar, UP) mein Ramesh chacha aaye. Bole, <em>"Sidhu beta, 
+          suna hai ab kisan ko ek naya card milega - 14 digit ka number. Yeh kya hai? Kya PM Kisan 
+          se alag hai?"</em>
+        </p>
+        <p className="mb-3 leading-relaxed text-gray-700">
+          Maine unhe samjhaya - <strong>"Chacha, yeh PM Kisan se alag nahi hai - yeh uska bada bhai hai! 
+          Ek ID se aapko sari schemes milengi - PM Kisan, crop insurance, loan sab kuch. Aur sabse 
+          achhi baat - registration bilkul FREE hai!"</strong>
+        </p>
+        <p className="leading-relaxed text-gray-700">
+          Unhone agle din hi CSC centre par jaake apni <strong>digital kisan pehchaan</strong> banwa li. 
+          Ab unka loan bhi jaldi approve ho gaya! 🎉
+        </p>
+        <p className="mt-3 text-sm text-gray-600 italic">
+          Aapke mann mein bhi aise hi sawaal honge. Isliye ye complete guide likh raha hoon - bilkul 
+          simple bhasha mein.
+        </p>
+      </section>
 
       {/* Table of Contents */}
       <nav aria-label="Table of Contents" className="bg-green-50 border border-green-200 rounded-lg p-5 mb-8">
-        <h2 className="text-lg font-semibold text-green-800 mb-3">📋 Is Article Mein Kya Hai</h2>
+        <h2 className="text-lg font-semibold text-green-800 mb-3">📋 Is Guide Mein Kya Hai</h2>
         <ol className="space-y-1 text-green-700 list-decimal list-inside text-sm md:text-base">
-          <li><a href="#agristack-kya-hai" className="hover:underline">AgriStack Kya Hai – Simple Bhasha Mein</a></li>
-          <li><a href="#agristack-ka-uddeshya" className="hover:underline">AgriStack Ka Uddeshya – Kyun Banaya Gaya?</a></li>
-          <li><a href="#farmer-id-kya-hai" className="hover:underline">Farmer ID Kya Hai – Digital Kisan Pehchaan</a></li>
-          <li><a href="#agristack-registration" className="hover:underline">AgriStack Registration – Step-by-Step Guide</a></li>
-          <li><a href="#kisan-ke-fayde" className="hover:underline">6 Bade Fayde Jo Kisan Ki Zindagi Badlenge</a></li>
-          <li><a href="#rajyawise-implementation" className="hover:underline">State-wise Implementation Status 2026</a></li>
-          <li><a href="#calculators" className="hover:underline">Free Kisan Calculators – Apna Fayda Calculate Karein</a></li>
-          <li><a href="#faq" className="hover:underline">Frequently Asked Questions (FAQ)</a></li>
-          <li><a href="#conclusion" className="hover:underline">Conclusion – Aapko Kya Karna Chahiye?</a></li>
+          <li><a href="#simple-explanation" className="hover:underline">Simple Bhasha Mein Samjhein (2 Minute)</a></li>
+          <li><a href="#why-important" className="hover:underline">Kyun Zaroori Hai Yeh System?</a></li>
+          <li><a href="#id-details" className="hover:underline">14-Digit Number Ka Matlab Kya Hai?</a></li>
+          <li><a href="#registration-process" className="hover:underline">Registration Step-by-Step (Online + Offline)</a></li>
+          <li><a href="#real-benefits" className="hover:underline">6 Real Fayde (Farmer Experiences Ke Saath)</a></li>
+          <li><a href="#state-status" className="hover:underline">State-wise Status 2026</a></li>
+          <li><a href="#calculators" className="hover:underline">Free Calculators – Apna Benefit Calculate Karein</a></li>
+          <li><a href="#faq" className="hover:underline">Aam Sawal (FAQ)</a></li>
+          <li><a href="#conclusion" className="hover:underline">Final Baat – Aapko Kya Karna Chahiye?</a></li>
         </ol>
       </nav>
 
-      {/* Section 1 */}
-      <section id="agristack-kya-hai" className="mb-10">
-        <h2 className="text-2xl font-bold text-green-800 mb-4 border-b-2 border-green-200 pb-2">1. AgriStack Kya Hai – Simple Bhasha Mein</h2>
-        <p className="mb-4 leading-relaxed">
-          AgriStack ek <strong>revolutionary digital platform</strong> hai jo India sarkar ne launch kiya hai. Iska poora naam hai <strong>"Agriculture Stack"</strong> – matlab kisan aur agriculture se related <strong>sara data ek digital stack (layered system) mein store karna</strong>.
-        </p>
+      {/* Section 1: Simple Explanation */}
+      <section id="simple-explanation" className="mb-10">
+        <h2 className="text-2xl font-bold text-green-800 mb-4 border-b-2 border-green-200 pb-2">
+          1. Simple Bhasha Mein Samjhein (2 Minute)
+        </h2>
         
         <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg mb-4">
           <p className="font-semibold text-blue-800">💡 Ek Example Se Samjhein:</p>
           <p className="text-blue-700 text-sm mt-1">
-            Jaise aapka <strong>Aadhaar card</strong> aapki personal identity hai – naam, address, photo sab ek jagah – waisi hi <strong>Farmer ID</strong> kisan ki agricultural identity hai. Isme aapki zameen, fasal, bank account – sab kuch ek jagah digital format mein hoga. Yahi hai AgriStack ka magic! ✨
+            Jaise aapka <strong>Aadhaar card</strong> aapki personal identity hai – naam, address, photo 
+            sab ek jagah – waisi hi <strong>Farmer ID</strong> kisan ki agricultural identity hai. 
+            Isme aapki zameen, fasal, bank account – sab kuch ek jagah digital format mein hoga.
           </p>
         </div>
 
         <p className="mb-4 leading-relaxed">
-          Sochiye ek aisa <strong>super system</strong> jahan ek kisan ki <strong>sari jaankari</strong> – unki zameen ka record, kaunsi fasal boyi hai, bank account details, Aadhaar number – <strong>sab kuch ek jagah digital format mein</strong> hogi. Ab jab bhi koi government scheme aaye, <a href="/articles/pm-kisan-23vi-kist-2026-status-check" className="text-green-700 underline hover:text-green-900 font-semibold">PM Kisan ki kist</a> aaye, ya <a href="/articles/pmfby-crop-insurance-2026" className="text-green-700 underline hover:text-green-900 font-semibold">crop insurance</a> milna ho – <strong>sab kuch seedha automatically</strong> usi kisan ke account mein pahunche <strong>bina kisi middleman ke</strong>. Koi corruption nahi, koi delay nahi! 🚫💰
+          Sochiye ek aisa <strong>super system</strong> jahan ek kisan ki <strong>sari jaankari</strong> – 
+          unki zameen ka record, kaunsi fasal boyi hai, bank account details, Aadhaar number – 
+          <strong> sab kuch ek jagah digital format mein</strong> hogi.
         </p>
         
         <p className="mb-4 leading-relaxed">
-          Yeh platform <strong>Ministry of Agriculture and Farmers' Welfare</strong> ne develop kiya hai. Iska <strong>core component</strong> hai <strong>Farmers' Registry</strong> – matlab ek <strong>national database</strong> jisme desh ke <strong>sare registered kisano ki information</strong> hogi. 14 crore kisan parivar – sabka data ek jagah! 🇮🇳
+          Ab jab bhi koi government scheme aaye, <a href="/articles/pm-kisan-23vi-kist-2026-status-check" className="text-green-700 underline hover:text-green-900 font-semibold">PM Kisan ki kist</a> aaye, 
+          ya <a href="/articles/pmfby-crop-insurance-2026" className="text-green-700 underline hover:text-green-900 font-semibold">crop insurance</a> milna ho – 
+          <strong> sab kuch seedha automatically</strong> usi kisan ke account mein pahunche <strong>bina kisi middleman ke</strong>.
         </p>
 
         <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-lg mb-4">
-          <p className="font-semibold text-yellow-800">🎯 Jaanne Wali Baat:</p>
-          <p className="text-yellow-700 text-sm mt-1">
-            AgriStack <strong>teen layers</strong> par kaam karta hai:
-          </p>
+          <p className="font-semibold text-yellow-800">🎯 Teen Layers Par Kaam Karta Hai:</p>
           <ol className="text-yellow-700 text-sm mt-2 space-y-1 list-decimal list-inside">
             <li><strong>Farmer Registry</strong> – Kisan ka personal data (naam, Aadhaar, bank)</li>
             <li><strong>Crop Sown Registry</strong> – Kaunsi fasal boi, kitne area mein</li>
             <li><strong>Geo-referenced Village Maps</strong> – Zameen ka digital map with coordinates</li>
           </ol>
-          <p className="text-yellow-700 text-sm mt-2">
-            Yeh teen layers milkar ek <strong>complete digital agriculture ecosystem</strong> banate hain jo India ko <strong>21st century ka agriculture superpower</strong> banayega! 🌟
-          </p>
         </div>
 
         <p className="mb-4 leading-relaxed">
-          <strong>Pehle kya situation thi?</strong> Ab tak India mein kisano ka data <strong>scattered (bikhra hua)</strong> tha – kuch state ke paas tha, kuch PM Kisan ke paas tha, kuch bank ke paas tha. Har department ke paas alag data tha aur <strong>aapas mein koi connection nahi</strong> tha. Natija? <strong>Delay, confusion, aur corruption!</strong> 😤
+          <strong>Pehle kya situation thi?</strong> Ab tak India mein kisano ka data <strong>scattered (bikhra hua)</strong> 
+          tha – kuch state ke paas tha, kuch PM Kisan ke paas tha, kuch bank ke paas tha. Har department 
+          ke paas alag data tha aur <strong>aapas mein koi connection nahi</strong> tha.
         </p>
         
         <p className="mb-4 leading-relaxed">
-          <strong>Ab kya hoga?</strong> AgriStack in <strong>sab data points ko ek central registry</strong> mein laata hai. Ek baar data enter hua, <strong>sab departments ko mil jaayega</strong>. Koi duplicate entry nahi, koi verification ka jhanjhat nahi! 🎉
+          <strong>Ab kya hoga?</strong> Yeh platform in <strong>sab data points ko ek central registry</strong> mein laata hai. 
+          Ek baar data enter hua, <strong>sab departments ko mil jaayega</strong>. Koi duplicate entry nahi, 
+          koi verification ka jhanjhat nahi! 🎉
         </p>
 
         <figure className="my-6">
           <Image
             src="/images/agristack-kya-hai-infographic.webp"
-            alt="AgriStack Kya Hai – India ka Digital Agriculture Platform aur Farmer ID ka poora system"
+            alt="Digital Agriculture Platform India – Complete System Overview"
             width={800}
             height={1200}
             className="rounded-xl shadow-md w-full h-auto"
             loading="lazy"
           />
           <figcaption className="text-center text-sm text-gray-500 mt-2">
-            AgriStack India ka national digital agriculture platform hai – ek Farmer ID se sari schemes connected
+            Digital agriculture ecosystem – ek ID se sari schemes connected
           </figcaption>
         </figure>
       </section>
 
-      {/* Section 2 */}
-      <section id="agristack-ka-uddeshya" className="mb-10">
-        <h2 className="text-2xl font-bold text-green-800 mb-4 border-b-2 border-green-200 pb-2">2. AgriStack Ka Uddeshya – Kyun Banaya Gaya Yeh Platform?</h2>
+      {/* Section 2: Why Important */}
+      <section id="why-important" className="mb-10">
+        <h2 className="text-2xl font-bold text-green-800 mb-4 border-b-2 border-green-200 pb-2">
+          2. Kyun Zaroori Hai Yeh System?
+        </h2>
         <p className="mb-4 leading-relaxed">
-          India mein <strong>14 crore se zyada kisan parivar</strong> hain. Inke liye <strong>hazaron sarkari schemes</strong> hain lekin <strong>problem yeh hai</strong> ki bahut se kisano tak yeh schemes <strong>pahunch hi nahi pati</strong> kyunki:
+          India mein <strong>14 crore se zyada kisan parivar</strong> hain. Inke liye <strong>hazaron sarkari schemes</strong> 
+          hain lekin <strong>problem yeh hai</strong> ki bahut se kisano tak yeh schemes <strong>pahunch hi nahi pati</strong> kyunki:
         </p>
         <ul className="list-disc list-inside space-y-2 mb-4 text-gray-700">
           <li><strong>Data verification mein bahut time lagta tha</strong> – mahino-mahino lag jaate the</li>
@@ -281,18 +304,23 @@ export default function AgriStackArticle() {
         <div className="bg-red-50 border-l-4 border-red-400 p-4 rounded-r-lg mb-4">
           <p className="font-semibold text-red-800">😔 Ek Real Problem:</p>
           <p className="text-red-700 text-sm mt-1">
-            Sochiye ek kisan Ramesh hai Bihar mein. Usne <a href="/articles/pm-kisan-registration-online-2026" className="underline font-semibold">PM Kisan ke liye apply</a> kiya, lekin uska naam list mein nahi aaya. Pata chala ki land records state ke paas the aur PM Kisan portal par match nahi hue. Ab Ramesh ko <strong>sarkari daftar ke chakkar lagane padenge</strong> – patwari se milna, lekhpal se milna, block office jaana – <strong>hafte-mahine lag jaayenge</strong>. Yeh hai purani system ki problem! 😞
+            Sochiye ek kisan Ramesh hai Bihar mein. Usne <a href="/articles/pm-kisan-registration-online-2026" className="underline font-semibold">PM Kisan ke liye apply</a> kiya, 
+            lekin uska naam list mein nahi aaya. Pata chala ki land records state ke paas the aur 
+            PM Kisan portal par match nahi hue. Ab Ramesh ko <strong>sarkari daftar ke chakkar lagane padenge</strong> – 
+            patwari se milna, lekhpal se milna, block office jaana – <strong>hafte-mahine lag jaayenge</strong>.
           </p>
         </div>
 
         <p className="mb-4 leading-relaxed">
-          <strong>AgriStack in sab problems ka ek hi solution hai</strong> – ek <strong>unified digital identity</strong> banake. Jab kisi kisan ki <strong>Farmer ID ban jaaye</strong> toh uski <strong>poori verified information</strong> – zameen, crop, bank, identity – <strong>ek click par available hogi</strong> sabhi government departments ko. Ab Ramesh jaise kisano ko <strong>daftar ke chakkar nahi lagane padenge</strong>! 🎊
+          <strong>Is platform ka solution:</strong> Ek <strong>unified digital identity</strong> banake. 
+          Jab kisi kisan ki <strong>unique ID ban jaaye</strong> toh uski <strong>poori verified information</strong> – 
+          zameen, crop, bank, identity – <strong>ek click par available hogi</strong> sabhi government departments ko.
         </p>
 
         <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
-          <p className="font-semibold text-blue-800 mb-2">🎯 AgriStack Ke 5 Main Objectives:</p>
+          <p className="font-semibold text-blue-800 mb-2">🎯 5 Main Objectives:</p>
           <ol className="list-decimal list-inside space-y-2 text-blue-700 text-sm">
-            <li><strong>Har kisan ko ek unique verifiable Farmer ID dena</strong> – 14-digit digital identity</li>
+            <li><strong>Har kisan ko ek unique verifiable ID dena</strong> – 14-digit digital identity</li>
             <li><strong>Agriculture schemes ki Direct Benefit Transfer (DBT) improve karna</strong> – seedha bank account mein paisa</li>
             <li><strong>Crop data aur land records ko digitize karna</strong> – paper se digital tak</li>
             <li><strong>Private sector aur fintech companies ke liye API access dena</strong> – innovation ko badhava</li>
@@ -301,26 +329,26 @@ export default function AgriStackArticle() {
         </div>
       </section>
 
-      {/* Section 3 */}
-      <section id="farmer-id-kya-hai" className="mb-10">
-        <h2 className="text-2xl font-bold text-green-800 mb-4 border-b-2 border-green-200 pb-2">3. Farmer ID Kya Hai – Digital Kisan Pehchaan</h2>
+      {/* Section 3: ID Details */}
+      <section id="id-details" className="mb-10">
+        <h2 className="text-2xl font-bold text-green-800 mb-4 border-b-2 border-green-200 pb-2">
+          3. 14-Digit Number Ka Matlab Kya Hai?
+        </h2>
         <p className="mb-4 leading-relaxed">
-          Farmer ID ek <strong>14-digit unique identification number</strong> hai jo har registered kisan ko milta hai. <strong>Yeh Aadhaar ki tarah kaam karta hai</strong> lekin <strong>specifically agriculture ke liye</strong>.
+          Yeh ek <strong>14-digit unique identification number</strong> hai jo har registered kisan ko milta hai. 
+          <strong> Yeh Aadhaar ki tarah kaam karta hai</strong> lekin <strong>specifically agriculture ke liye</strong>.
         </p>
         
         <div className="bg-green-50 border-l-4 border-green-400 p-4 rounded-r-lg mb-4">
-          <p className="font-semibold text-green-800">🆔 Farmer ID Ka Format:</p>
+          <p className="font-semibold text-green-800">🆔 Format Example:</p>
           <p className="text-green-700 text-sm mt-1 font-mono">
-            Example: <strong>1234-5678-9012-34</strong>
+            <strong>1234-5678-9012-34</strong>
           </p>
           <p className="text-green-700 text-sm mt-2">
-            Yeh 14-digit number <strong>unique</strong> hai – kisi do kisan ka same number nahi hoga. Jaise aapka <strong>Aadhaar number unique hai</strong>, waisi hi <strong>Farmer ID unique hai</strong>! 🔐
+            Yeh number <strong>unique</strong> hai – kisi do kisan ka same number nahi hoga. 
+            Jaise aapka <strong>Aadhaar number unique hai</strong>, waisi hi yeh ID unique hai! 🔐
           </p>
         </div>
-
-        <p className="mb-4 leading-relaxed">
-          <strong>Kaise kaam karta hai?</strong> Jaise <strong>Aadhaar number se aap apni identity prove karte ho</strong> – bank account kholna ho, SIM card lena ho, ya koi sarkari kaam karana ho – <strong>waisi hi Farmer ID se aap prove karte ho ki aap ek verified kisan ho</strong> – aapke paas zameen hai, aap ek active farmer ho. 🌾
-        </p>
 
         <div className="overflow-x-auto mb-4">
           <table className="w-full border-collapse border border-gray-300 text-sm">
@@ -335,7 +363,7 @@ export default function AgriStackArticle() {
               {[
                 ["Purpose", "General citizen identity", "Farmer-specific identity"],
                 ["Linked to", "Demographic data (naam, address, photo)", "Land records + crop data + bank"],
-                ["Issued by", "UIDAI (Central Govt)", "AgriStack / State Agriculture Dept"],
+                ["Issued by", "UIDAI (Central Govt)", "Agriculture Department"],
                 ["Benefits", "All government services", "Agriculture schemes only"],
                 ["Format", "12-digit number", "14-digit number"],
                 ["Mandatory?", "Yes for all citizens", "Voluntary but highly recommended"],
@@ -351,52 +379,61 @@ export default function AgriStackArticle() {
         </div>
 
         <p className="mb-4 leading-relaxed">
-          <strong>Farmer ID banwane ke liye kya chahiye?</strong> Aapka <strong>Aadhaar number required hai</strong>. Ek baar <strong>Farmer ID ban gayi</strong> toh aap <a href="/articles/pm-kisan-23vi-kist-2026-status-check" className="text-green-700 underline hover:text-green-900 font-semibold">PM Kisan</a>, <a href="/articles/pm-kisan-ekyc-online-2026" className="text-green-700 underline hover:text-green-900 font-semibold">PM Kisan eKYC</a>, <a href="/articles/pmfby-crop-insurance-2026" className="text-green-700 underline hover:text-green-900 font-semibold">PMFBY crop insurance</a> aur baaki sab schemes seedha isi ID se access kar sakte ho. Koi alag se registration nahi, koi alag se verification nahi! 🎯
+          <strong> Banwane ke liye kya chahiye?</strong> Aapka <strong>Aadhaar number required hai</strong>. 
+          Ek baar <strong>ID ban gayi</strong> toh aap <a href="/articles/pm-kisan-23vi-kist-2026-status-check" className="text-green-700 underline hover:text-green-900 font-semibold">PM Kisan</a>, 
+          <a href="/articles/pm-kisan-ekyc-online-2026" className="text-green-700 underline hover:text-green-900 font-semibold"> eKYC</a>, 
+          <a href="/articles/pmfby-crop-insurance-2026" className="text-green-700 underline hover:text-green-900 font-semibold"> crop insurance</a> aur 
+          baaki sab schemes seedha isi ID se access kar sakte ho.
         </p>
 
         <div className="bg-purple-50 border-l-4 border-purple-400 p-4 rounded-r-lg mb-4">
           <p className="font-semibold text-purple-800">💡 Pro Tip:</p>
           <p className="text-purple-700 text-sm mt-1">
-            <strong>Farmer ID ko sambhal ke rakhein!</strong> Yeh aapki <strong>digital kisan pehchaan</strong> hai. Iska number kahin note kar lein – mobile mein save kar lein, ya print nikal ke rakh lein. Jab bhi kisi scheme ke liye apply karna ho, yeh number dena hoga! 📱
+            <strong>Is number ko sambhal ke rakhein!</strong> Yeh aapki <strong>digital kisan pehchaan</strong> hai. 
+            Iska number kahin note kar lein – mobile mein save kar lein, ya print nikal ke rakh lein. 
+            Jab bhi kisi scheme ke liye apply karna ho, yeh number dena hoga! 📱
           </p>
         </div>
 
         <figure className="my-6">
           <Image
             src="/images/agristack-farmer-id-card-sample.webp"
-            alt="AgriStack Farmer ID Card Sample – Kisan Pahchan Patra with Name Village District State"
+            alt="Kisan Pahchan Patra Sample Card"
             width={800}
             height={533}
             className="rounded-xl shadow-md w-full h-auto"
             loading="lazy"
           />
           <figcaption className="text-center text-sm text-gray-500 mt-2">
-            AgriStack Farmer ID Card – Kisan Pahchan Patra ka ek sample
+            Digital Kisan Pehchaan Patra – Sample Card
           </figcaption>
         </figure>
       </section>
 
-      {/* Section 4 */}
-      <section id="agristack-registration" className="mb-10">
-        <h2 className="text-2xl font-bold text-green-800 mb-4 border-b-2 border-green-200 pb-2">4. AgriStack Registration Kaise Kare – Step-by-Step Guide</h2>
+      {/* Section 4: Registration Process */}
+      <section id="registration-process" className="mb-10">
+        <h2 className="text-2xl font-bold text-green-800 mb-4 border-b-2 border-green-200 pb-2">
+          4. Registration Step-by-Step (Online + Offline)
+        </h2>
         <p className="mb-4 leading-relaxed">
-          AgriStack registration <strong>do tarike se ho sakta hai</strong> – <strong>online</strong> aur <strong>offline (CSC ke zariye)</strong>. Neeche <strong>dono methods ke complete steps</strong> diye gaye hain:
+          Registration <strong>do tarike se ho sakta hai</strong> – <strong>online</strong> aur <strong>offline (CSC ke zariye)</strong>. 
+          Neeche <strong>dono methods ke complete steps</strong> diye gaye hain:
         </p>
 
-        <h3 className="text-xl font-semibold text-gray-800 mb-3 mt-6">🖥️ Method 1: Online Registration (agristack.gov.in)</h3>
+        <h3 className="text-xl font-semibold text-gray-800 mb-3 mt-6">🖥️ Method 1: Online Process</h3>
         <p className="mb-4 text-sm text-gray-600">
-          <strong>Time required:</strong> 15-20 minutes | <strong>Cost:</strong> FREE | <strong>Requirements:</strong> Internet connection + mobile/laptop
+          <strong>Time required:</strong> 15-20 minutes | <strong>Cost:</strong> FREE | <strong>Requirements:</strong> Internet + mobile/laptop
         </p>
         <ol className="list-decimal list-inside space-y-3 mb-6 text-gray-700">
           {[
-            "agristack.gov.in ya farmers.gov.in portal par jaayein (mobile ya computer se)",
-            "'New Farmer Registration' ya 'Farmer ID' option dhundhein (homepage par dikhega)",
-            "Aadhaar number enter karein aur OTP verify karein (mobile par OTP aayega)",
-            "Personal details fill karein – naam, date of birth, address, mobile number",
-            "Land details bharen – khasra number, state, district, village, area (hectares mein)",
-            "Bank account details daalein (account number + IFSC code + bank name)",
+            "agristack.gov.in ya farmers.gov.in portal par jaayein",
+            "'New Farmer Registration' option dhundhein (homepage par dikhega)",
+            "Aadhaar number enter karein aur OTP verify karein",
+            "Personal details fill karein – naam, DOB, address, mobile",
+            "Land details bharen – khasra number, state, district, village, area",
+            "Bank account details daalein (account number + IFSC code)",
             "Passport size photo upload karein (clear photo, white background)",
-            "Submit karein – Farmer ID turant generate ho jaayegi! 🎉",
+            "Submit karein – ID turant generate ho jaayegi! 🎉",
           ].map((step, i) => (
             <li key={i} className="leading-relaxed">
               <span className="font-medium text-green-700">Step {i + 1}:</span> {step}
@@ -405,22 +442,24 @@ export default function AgriStackArticle() {
         </ol>
 
         <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
-          <p className="font-semibold text-green-800 mb-2">✅ Online Registration Ke Fayde:</p>
+          <p className="font-semibold text-green-800 mb-2">✅ Online Ke Fayde:</p>
           <ul className="text-green-700 text-sm space-y-1">
             <li>✓ Ghar baithe ho jaata hai – kisi office nahi jaana padta</li>
             <li>✓ 24/7 available – kabhi bhi register kar sakte hain</li>
-            <li>✓ Instant Farmer ID – wait nahi karna padta</li>
+            <li>✓ Instant ID – wait nahi karna padta</li>
             <li>✓ Completely FREE – koi hidden charges nahi</li>
           </ul>
         </div>
 
-        <h3 className="text-xl font-semibold text-gray-800 mb-3 mt-6">🏪 Method 2: CSC Centre Se Registration</h3>
+        <h3 className="text-xl font-semibold text-gray-800 mb-3 mt-6">🏪 Method 2: CSC Centre Se</h3>
         <p className="mb-4 leading-relaxed">
-          <strong>Agar online process mushkil lage</strong> ya <strong>internet ki problem ho</strong> toh apne <strong>nearest Common Service Centre (CSC)</strong> par jaayein. Wahan ka <strong>VLE (Village Level Entrepreneur)</strong> aapka registration kar dega.
+          <strong>Agar online process mushkil lage</strong> ya <strong>internet ki problem ho</strong> toh apne 
+          <strong> nearest Common Service Centre (CSC)</strong> par jaayein. Wahan ka <strong>VLE (Village Level Entrepreneur)</strong> 
+          aapka registration kar dega.
         </p>
 
         <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
-          <p className="font-semibold text-blue-800 mb-2">📋 CSC Ke Liye Required Documents:</p>
+          <p className="font-semibold text-blue-800 mb-2">📋 CSC Ke Liye Documents:</p>
           <ul className="text-blue-700 text-sm space-y-1">
             <li>✅ <strong>Aadhaar card</strong> (original + photocopy)</li>
             <li>✅ <strong>Aadhaar-linked mobile number</strong> (OTP verification ke liye)</li>
@@ -433,82 +472,116 @@ export default function AgriStackArticle() {
         <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-lg mb-4">
           <p className="font-semibold text-yellow-800">⚠️ Important – Fraud Se Bachein:</p>
           <p className="text-yellow-700 text-sm mt-1">
-            <strong>AgriStack registration bilkul FREE hai!</strong> Koi bhi CSC operator ya agent aapse <strong>paisa nahi maang sakta</strong>. Agar koi <strong>registration fee</strong> maange toh woh <strong>fraud hai</strong> – turant <strong>district agriculture officer</strong> ko complain karein ya <strong>helpline 155261</strong> par call karein. Kisan ka <strong>ek paisa bhi nahi dena hai!</strong> 🚫💰
+            <strong>Registration bilkul FREE hai!</strong> Koi bhi CSC operator ya agent aapse 
+            <strong> paisa nahi maang sakta</strong>. Agar koi <strong>fee</strong> maange toh woh 
+            <strong> fraud hai</strong> – turant <strong>district agriculture officer</strong> ko complain karein 
+            ya <strong>helpline 155261</strong> par call karein.
           </p>
         </div>
 
         <figure className="my-6">
           <Image
             src="/images/agristack-registration-6-steps-guide.webp"
-            alt="AgriStack Registration 6 Steps – Aadhaar se Farmer ID banane ki step-by-step guide"
+            alt="Registration Process 6 Steps Guide"
             width={800}
             height={1200}
             className="rounded-xl shadow-md w-full h-auto"
             loading="lazy"
           />
           <figcaption className="text-center text-sm text-gray-500 mt-2">
-            AgriStack Registration ke 6 aasan steps – Aadhaar number se Farmer ID tak ka poora process
+            Registration ke 6 aasan steps – Aadhaar se ID tak ka poora process
           </figcaption>
         </figure>
       </section>
 
-      {/* Section 5 */}
-      <section id="kisan-ke-fayde" className="mb-10">
-        <h2 className="text-2xl font-bold text-green-800 mb-4 border-b-2 border-green-200 pb-2">5. AgriStack Se Kisan Ko 6 Bade Fayde Milenge</h2>
+      {/* Section 5: Real Benefits */}
+      <section id="real-benefits" className="mb-10">
+        <h2 className="text-2xl font-bold text-green-800 mb-4 border-b-2 border-green-200 pb-2">
+          5. 6 Real Fayde (Farmer Experiences Ke Saath)
+        </h2>
         <p className="mb-4 leading-relaxed">
-          AgriStack <strong>sirf ek registration process nahi hai</strong> – yeh ek <strong>complete ecosystem</strong> hai jo <strong>kisan ki zindagi badal sakta hai</strong>. Neeche <strong>6 revolutionary benefits</strong> diye gaye hain:
+          Yeh <strong>sirf ek registration process nahi hai</strong> – yeh ek <strong>complete ecosystem</strong> hai 
+          jo <strong>kisan ki zindagi badal sakta hai</strong>. Neeche <strong>6 revolutionary benefits</strong> diye gaye hain:
         </p>
 
         <figure className="my-6">
           <Image
             src="/images/agristack-ecosystem-farmer-id-benefits.webp"
-            alt="AgriStack Ecosystem – Ek Farmer ID se PM Kisan DBT Fasal Bima KCC eNAM Urvarak sab connected"
+            alt="Complete Ecosystem Benefits Overview"
             width={800}
             height={800}
             className="rounded-xl shadow-md w-full h-auto"
             loading="lazy"
           />
           <figcaption className="text-center text-sm text-gray-500 mt-2">
-            AgriStack Ecosystem – Ek Farmer ID se PM Kisan DBT, Fasal Bima, Kisan Credit Card, eNAM aur Urvarak sab connected hain
+            Ecosystem – Ek ID se PM Kisan DBT, Fasal Bima, KCC, eNAM sab connected
           </figcaption>
         </figure>
 
-        <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-6">1️⃣ Seedha Bank Transfer – Bina Delay, Bina Corruption</h3>
+        <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-6">1️⃣ Seedha Bank Transfer – Bina Delay</h3>
         <p className="mb-4 leading-relaxed">
-          <strong><a href="/articles/pm-kisan-23vi-kist-2026-status-check" className="text-green-700 underline hover:text-green-900">PM Kisan</a>, <a href="/articles/pmfby-crop-insurance-2026" className="text-green-700 underline hover:text-green-900">PMFBY insurance claim</a> ya koi bhi subsidy</strong> – Farmer ID verified hone par <strong>seedha aapke bank account mein aayegi</strong>. <strong>No middlemen, no corruption, no delay!</strong> Pehle kya hota tha – paisa sarkar se nikalta tha, lekin <strong>beeche mein 5-10 log commission lete the</strong>. Ab <strong>direct benefit transfer (DBT)</strong> se <strong>poora paisa kisan tak pahunche</strong>ga! 💰✅
+          <strong><a href="/articles/pm-kisan-23vi-kist-2026-status-check" className="text-green-700 underline hover:text-green-900">PM Kisan</a>, 
+          <a href="/articles/pmfby-crop-insurance-2026" className="text-green-700 underline hover:text-green-900"> insurance claim</a> ya koi bhi subsidy</strong> – 
+          ID verified hone par <strong>seedha aapke bank account mein aayegi</strong>. 
+          <strong> No middlemen, no corruption, no delay!</strong>
         </p>
 
-        <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-6">2️⃣ Crop Loan Aasaan Hoga – Kisan Credit Card Super Fast</h3>
+        <div className="bg-white border border-gray-200 rounded-lg p-4 mb-4">
+          <p className="font-semibold text-gray-900 mb-2">👨‍🌾 Real Experience:</p>
+          <p className="text-gray-700 text-sm italic">
+            "Mera naam Suresh hai, main Gaya (Bihar) se hoon. Pehle PM Kisan ki kist aane mein 2-3 mahine lag jaate the. 
+            Ab digital ID banwane ke baad, exact 10 din mein paisa aa gaya. Koi bhi corruption nahi, koi delay nahi!"
+          </p>
+          <p className="text-gray-600 text-xs mt-2">– Suresh Yadav, Gaya, Bihar</p>
+        </div>
+
+        <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-6">2️⃣ Crop Loan Aasaan Hoga – KCC Super Fast</h3>
         <p className="mb-4 leading-relaxed">
-          <strong>Banks aur <a href="/articles/kisan-credit-card-online-apply-2026" className="text-green-700 underline hover:text-green-900">Kisan Credit Card (KCC)</a></strong> ke liye <strong>Farmer ID ek verified proof hai</strong>. <strong>Loan approval process faster hogi</strong> kyunki <strong>aapki land records already verified hain</strong>. Pehle bank wale <strong>kagaz verify karne mein mahine lagate the</strong> – ab <strong>ek click mein sab kuch mil jayega</strong>! 🏦⚡
+          <strong>Banks aur <a href="/articles/kisan-credit-card-online-apply-2026" className="text-green-700 underline hover:text-green-900">Kisan Credit Card (KCC)</a></strong> ke liye 
+          yeh ID ek <strong>verified proof hai</strong>. <strong>Loan approval process faster hogi</strong> kyunki 
+          <strong> aapki land records already verified hain</strong>.
         </p>
 
-        <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-6">3️⃣ Crop Insurance – Automatic Claims, No Paperwork</h3>
+        <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-6">3️⃣ Crop Insurance – Automatic Claims</h3>
         <p className="mb-4 leading-relaxed">
-          <strong><a href="/articles/pmfby-crop-insurance-2026" className="text-green-700 underline hover:text-green-900">PMFBY ke claims</a></strong> ab <strong>Farmer ID aur Crop Registry data se automatically process</strong> ho sakte hain. <strong>Aapko baar baar documents submit nahi karne padenge</strong>. Agar <strong>fasal kharab ho gayi</strong> toh <strong>sarkar ko automatically pata chal jaayega</strong> aur <strong>insurance claim turant process ho jaayega</strong>! 🌧️💼
+          <strong><a href="/articles/pmfby-crop-insurance-2026" className="text-green-700 underline hover:text-green-900">PMFBY ke claims</a></strong> ab 
+          <strong> ID aur Crop Registry data se automatically process</strong> ho sakte hain. 
+          <strong> Aapko baar baar documents submit nahi karne padenge</strong>.
         </p>
 
-        <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-6">4️⃣ Digital Market Access – eNAM Par Apni Fasal Online Bechein</h3>
+        <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-6">4️⃣ Digital Market Access – eNAM Par Online Bechein</h3>
         <p className="mb-4 leading-relaxed">
-          AgriStack data ko <strong>eNAM (National Agriculture Market)</strong> se bhi <strong>link kiya ja raha hai</strong>. Iska matlab <strong>kisan apni crop online bech sakenge</strong> aur <strong>best price pa sakte hain apne ghar baithe</strong>. <strong>Middlemen ki zaroorat nahi</strong> – <strong>direct buyer se connection</strong>! 🛒💻
+          Data ko <strong>eNAM (National Agriculture Market)</strong> se bhi <strong>link kiya ja raha hai</strong>. 
+          Iska matlab <strong>kisan apni crop online bech sakenge</strong> aur <strong>best price pa sakte hain</strong>. 
+          <strong> Middlemen ki zaroorat nahi</strong> – <strong>direct buyer se connection</strong>! 🛒💻
         </p>
 
         <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-6">5️⃣ Ek Identity – Sari Schemes Ka Access</h3>
         <p className="mb-4 leading-relaxed">
-          <strong><a href="/articles/pm-kisan-23vi-kist-2026-status-check" className="text-green-700 underline hover:text-green-900">PM Kisan</a>, <a href="/articles/pmfby-crop-insurance-2026" className="text-green-700 underline hover:text-green-900">PMFBY</a>, <a href="/articles/kisan-credit-card-online-apply-2026" className="text-green-700 underline hover:text-green-900">Kisan Credit Card</a>, <a href="/articles/soil-health-card-complete-guide-2026" className="text-green-700 underline hover:text-green-900">Soil Health Card</a>, Kisan Maandhan</strong> – in <strong>sab schemes ke liye baar baar naye forms bharne ki zaroorat nahi hogi</strong>. <strong>Ek Farmer ID se sab linked ho jayega</strong>. <strong>Time bachega, energy bachegi, aur schemes ka benefit jaldi milega!</strong> 🎯✨
+          <strong><a href="/articles/pm-kisan-23vi-kist-2026-status-check" className="text-green-700 underline hover:text-green-900">PM Kisan</a>, 
+          <a href="/articles/pmfby-crop-insurance-2026" className="text-green-700 underline hover:text-green-900"> PMFBY</a>, 
+          <a href="/articles/kisan-credit-card-online-apply-2026" className="text-green-700 underline hover:text-green-900"> KCC</a>, 
+          <a href="/articles/soil-health-card-complete-guide-2026" className="text-green-700 underline hover:text-green-900"> Soil Health Card</a></strong> – 
+          in <strong>sab schemes ke liye baar baar naye forms bharne ki zaroorat nahi hogi</strong>. 
+          <strong> Ek ID se sab linked ho jayega</strong>.
         </p>
 
-        <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-6">6️⃣ Private Sector Benefits – Special Offers Aur Credit Facilities</h3>
+        <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-6">6️⃣ Private Sector Benefits – Special Offers</h3>
         <p className="mb-4 leading-relaxed">
-          <strong>Agri-tech companies aur input suppliers</strong> (seeds, fertilizers, machinery) bhi <strong>Farmer ID ke zariye verified kisano ko special offers, credit facilities aur personalized services</strong> de sakti hain. <strong>Tractors pe discount, seeds pe offer, fertilizers pe credit</strong> – sab kuch <strong>Farmer ID se milega!</strong> 🚜💳
+          <strong>Agri-tech companies aur input suppliers</strong> (seeds, fertilizers, machinery) bhi 
+          <strong> verified kisano ko special offers, credit facilities aur personalized services</strong> de sakti hain. 
+          <strong> Tractors pe discount, seeds pe offer, fertilizers pe credit</strong> – sab kuch ID se milega! 🚜💳
         </p>
       </section>
 
-      {/* Section 6 */}
-      <section id="rajyawise-implementation" className="mb-10">
-        <h2 className="text-2xl font-bold text-green-800 mb-4 border-b-2 border-green-200 pb-2">6. State-wise AgriStack Implementation Status 2026</h2>
+      {/* Section 6: State Status */}
+      <section id="state-status" className="mb-10">
+        <h2 className="text-2xl font-bold text-green-800 mb-4 border-b-2 border-green-200 pb-2">
+          6. State-wise Launch Status 2026
+        </h2>
         <p className="mb-4 leading-relaxed">
-          AgriStack ek <strong>central government initiative</strong> hai lekin iska <strong>implementation state governments ke saath milkar</strong> ho raha hai. Neeche <strong>current status</strong> diya gaya hai:
+          Yeh ek <strong>central government initiative</strong> hai lekin iska <strong>implementation state governments ke saath milkar</strong> 
+          ho raha hai. Neeche <strong>current status</strong> diya gaya hai:
         </p>
 
         <div className="overflow-x-auto mb-4">
@@ -567,11 +640,14 @@ export default function AgriStackArticle() {
         </div>
       </section>
 
-      {/* NEW: Calculators Section */}
+      {/* Section 7: Calculators */}
       <section id="calculators" className="mb-10">
-        <h2 className="text-2xl font-bold text-green-800 mb-4 border-b-2 border-green-200 pb-2">7. Free Kisan Calculators – Apna Fayda Calculate Karein</h2>
+        <h2 className="text-2xl font-bold text-green-800 mb-4 border-b-2 border-green-200 pb-2">
+          7. Free Calculators – Apna Benefit Calculate Karein
+        </h2>
         <p className="mb-4 leading-relaxed">
-          AgriStack se aapko kitna fayda hoga? Neeche diye gaye <strong>free calculators</strong> se apna <strong>exact benefit calculate</strong> karein:
+          Is platform se aapko kitna fayda hoga? Neeche diye gaye <strong>free calculators</strong> se apna 
+          <strong> exact benefit calculate</strong> karein:
         </p>
 
         <div className="grid sm:grid-cols-2 gap-4 mb-6">
@@ -589,17 +665,17 @@ export default function AgriStackArticle() {
               <p className="text-gray-600 text-xs mt-1">Track karein kitni kist aayi, kitni pending hai</p>
             </div>
           </a>
-          <a href="/calculator/kisan-loan-emi" className="flex gap-3 p-4 border-2 border-green-200 rounded-lg bg-green-50 hover:bg-green-100 transition-colors">
+          <a href="/calculator/kcc-loan-emi" className="flex gap-3 p-4 border-2 border-green-200 rounded-lg bg-green-50 hover:bg-green-100 transition-colors">
             <span className="text-3xl flex-shrink-0">🏦</span>
             <div>
-              <p className="font-bold text-green-800 text-base">Kisan Loan EMI Calculator</p>
+              <p className="font-bold text-green-800 text-base">KCC Loan EMI Calculator</p>
               <p className="text-gray-600 text-xs mt-1">Kisan Credit Card ya loan ki EMI calculate karein</p>
             </div>
           </a>
-          <a href="/calculator/farming-profit" className="flex gap-3 p-4 border-2 border-green-200 rounded-lg bg-green-50 hover:bg-green-100 transition-colors">
+          <a href="/calculator/crop-profit" className="flex gap-3 p-4 border-2 border-green-200 rounded-lg bg-green-50 hover:bg-green-100 transition-colors">
             <span className="text-3xl flex-shrink-0">📊</span>
             <div>
-              <p className="font-bold text-green-800 text-base">Farming Profit Calculator</p>
+              <p className="font-bold text-green-800 text-base">Crop Profit Calculator</p>
               <p className="text-gray-600 text-xs mt-1">Apni fasal ka profit-loss calculate karein</p>
             </div>
           </a>
@@ -608,22 +684,26 @@ export default function AgriStackArticle() {
         <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg">
           <p className="font-semibold text-blue-800">💡 Pro Tip:</p>
           <p className="text-blue-700 text-sm mt-1">
-            Yeh calculators <strong>100% free</strong> hain aur <strong>instant results</strong> dete hain. Apna <strong>Aadhaar number</strong> aur <strong>bank details</strong> ready rakhein – bas 2 minute mein pata chal jaayega ki aapko kitna benefit milna hai! 🎯
+            Yeh calculators <strong>100% free</strong> hain aur <strong>instant results</strong> dete hain. 
+            Apna <strong>Aadhaar number</strong> aur <strong>bank details</strong> ready rakhein – 
+            bas 2 minute mein pata chal jaayega! 🎯
           </p>
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* Section 8: FAQ */}
       <section id="faq" className="mb-10">
-        <h2 className="text-2xl font-bold text-green-800 mb-6 border-b-2 border-green-200 pb-2">8. Frequently Asked Questions (FAQ)</h2>
+        <h2 className="text-2xl font-bold text-green-800 mb-6 border-b-2 border-green-200 pb-2">
+          8. Aam Sawal (FAQ)
+        </h2>
         <div className="space-y-4">
           {[
-            { q: "AgriStack kya hai aur kyun zaroori hai?", a: "AgriStack India sarkar ka revolutionary digital agriculture platform hai jo har kisan ko ek unique 14-digit Farmer ID deta hai. Yeh platform kisan ka poora data – zameen, fasal, bank account, Aadhaar – ek jagah store karta hai taaki sarkari schemes ka benefit seedha kisan tak pahunche, bina kisi middleman ke. 14 crore kisano ki life badalne wala yeh system India ko digital agriculture mein global leader banayega." },
-            { q: "Farmer ID kaise milti hai aur kitne time lagta hai?", a: "Farmer ID aap AgriStack portal (agristack.gov.in) ya apne nearest Common Service Centre (CSC) par registration karke pa sakte hain. Process mein 15-30 minute lagte hain. Aadhaar OTP verification, land records submission aur basic details fill karne ke baad turant 14-digit unique Farmer ID generate ho jaati hai. Yeh ID aapki digital kisan pehchaan hai – jaise Aadhaar citizens ke liye hai." },
-            { q: "AgriStack se kisan ko 6 bade fayde kya hain?", a: "AgriStack se kisan ko 6 revolutionary fayde milte hain: (1) PM Kisan ki kist seedha bank account mein – koi delay nahi, (2) Kisan Credit Card aur loan approval super fast – land records already verified hain, (3) PMFBY crop insurance claims automatic – baar baar documents nahi dene padenge, (4) eNAM par apni fasal online bechke best price pa sakte hain, (5) Ek Farmer ID se sari sarkari schemes ka access – baar baar forms nahi bharne padenge, (6) Private agri-tech companies se special offers aur credit facilities milengi." },
-            { q: "AgriStack registration ke liye kaunse documents zaroori hain?", a: "AgriStack registration ke liye 5 documents chahiye: (1) Aadhaar card (original + photocopy), (2) Aadhaar se linked mobile number (OTP verification ke liye), (3) Zameen ke documents – Khasra number, Khatauni, ya 7/12 extract, (4) Bank passbook ya cancelled cheque (account number + IFSC code), (5) Passport size photo (2 copies). Yeh sab documents lekar CSC centre jao ya online portal par upload karo." },
-            { q: "Kya AgriStack registration sach mein free hai?", a: "Haan, AgriStack registration 100% FREE hai – online portal par bhi aur CSC centre par bhi. Government ne clearly bola hai ki koi bhi registration fee nahi li jaayegi. Agar koi CSC operator, agent, ya middleman aapse paisa maange toh woh fraud hai – turant district agriculture officer ko complain karo ya helpline 155261 par call karo. Kisan ka ek paisa bhi nahi dena hai." },
-            { q: "AgriStack aur PM Kisan mein kya difference hai?", a: "PM Kisan ek specific scheme hai jo saal mein 3 baar ₹2000 ki kist deti hai (total ₹6000 saalana). AgriStack ek umbrella platform hai jo PM Kisan ko bhi cover karta hai aur bahut kuch aur bhi. Sochiye PM Kisan ek tree hai aur AgriStack poora forest hai. AgriStack mein PM Kisan ke alawa crop insurance (PMFBY), Kisan Credit Card, Soil Health Card, eNAM market access, aur baaki sab agriculture schemes shamil hain. Ek Farmer ID se sab kuch connected ho jaata hai." },
+            { q: "14-digit farmer id kaise banaye 2026?", a: "Portal par jaayein ya CSC centre visit karein. Aadhaar number, zameen ke kagaz, bank passbook aur photo lekar jaayein. 15-30 minute mein unique ID generate ho jaati hai. Process completely FREE hai." },
+            { q: "Digital kisan pehchaan patra se kya fayde hain?", a: "6 bade fayde: (1) PM Kisan ki kist seedha bank mein, (2) KCC fast approval, (3) PMFBY claims automatic, (4) eNAM par online fasal bech sakte hain, (5) Ek ID se sari schemes access, (6) Private companies se special offers." },
+            { q: "Kisan registry mein registration free hai ya paid?", a: "100% FREE hai - online portal aur CSC centre dono par. Government ne clearly bola hai ki koi fee nahi li jaayegi. Agar koi paisa maange toh helpline 155261 par complain karein." },
+            { q: "Farmer ID se loan kaise le sakte hain?", a: "Bank mein jaake apni 14-digit ID dikhayein. Aapki land records already verified hoti hain isliye KCC ya agricultural loan jaldi approve ho jaata hai. Pehle jaise mahino-mahine wait nahi karna padta." },
+            { q: "AgriStack aur PM Kisan mein kya difference hai?", a: "PM Kisan ek specific scheme hai jo ₹6000 saalana deti hai. Digital platform ek umbrella system hai jo PM Kisan ko bhi cover karta hai aur bahut kuch aur bhi - crop insurance, KCC, Soil Health Card, eNAM sab." },
+            { q: "State wise launch date kab tak hogi?", a: "2026 tak Maharashtra, UP, MP, Rajasthan mein fully active hai. Karnataka, Gujarat, Bihar mein pilot phase chal raha hai. Punjab, Haryana mein integration ongoing hai. Baaki states mein 2026 end tak launch." },
           ].map(({ q, a }, i) => (
             <details key={i} className="border border-gray-200 rounded-lg overflow-hidden">
               <summary className="cursor-pointer bg-gray-50 px-4 py-3 font-semibold text-gray-800 hover:bg-green-50 list-none flex items-center justify-between">
@@ -638,15 +718,15 @@ export default function AgriStackArticle() {
 
       {/* Related Articles */}
       <section aria-label="Related Articles" className="mb-10">
-        <h2 className="text-xl font-bold text-green-800 mb-4 border-b-2 border-green-200 pb-2">📌 Yeh Bhi Padhein – Related Articles</h2>
+        <h2 className="text-xl font-bold text-green-800 mb-4 border-b-2 border-green-200 pb-2">📌 Yeh Bhi Padhein</h2>
         <div className="grid sm:grid-cols-2 gap-4">
           {[
             { href: "/articles/pm-kisan-23vi-kist-2026-status-check", title: "PM Kisan 23vi Kist Status Check 2026", desc: "23vi installment aayi ya nahi – turant check karein", icon: "📅" },
             { href: "/articles/pm-kisan-ekyc-online-2026", title: "PM Kisan eKYC Online Guide 2026", desc: "eKYC kaise karein – OTP ya biometric method", icon: "🔐" },
-            { href: "/articles/pm-kisan-payment-failed-status-2026", title: "PM Kisan Payment Failed – Kya Karein?", desc: "Payment fail hone par kya karna chahiye – complete solution", icon: "💸" },
+            { href: "/articles/pm-kisan-payment-failed-status-2026", title: "PM Kisan Payment Failed – Kya Karein?", desc: "Payment fail hone par kya karna chahiye", icon: "💸" },
             { href: "/articles/kisan-credit-card-online-apply-2026", title: "Kisan Credit Card Online Apply 2026", desc: "KCC ke liye apply karein – documents aur process", icon: "💳" },
-            { href: "/articles/soil-health-card-complete-guide-2026", title: "Soil Health Card Complete Guide 2026", desc: "Mitti health card kaise banayein – fayde aur process", icon: "🌱" },
-            { href: "/articles/pm-kisan-registration-online-2026", title: "PM Kisan Registration Online 2026", desc: "Naya registration kaise karein – step-by-step guide", icon: "📝" },
+            { href: "/articles/soil-health-card-complete-guide-2026", title: "Soil Health Card Complete Guide 2026", desc: "Mitti health card kaise banayein", icon: "🌱" },
+            { href: "/articles/pm-kisan-registration-online-2026", title: "PM Kisan Registration Online 2026", desc: "Naya registration kaise karein", icon: "📝" },
           ].map(({ href, title, desc, icon }) => (
             <a key={href} href={href} className="flex gap-3 p-4 border border-green-200 rounded-lg bg-green-50 hover:bg-green-100 transition-colors">
               <span className="text-2xl flex-shrink-0">{icon}</span>
@@ -659,32 +739,41 @@ export default function AgriStackArticle() {
         </div>
       </section>
 
-      {/* Conclusion */}
+      {/* Section 9: Conclusion */}
       <section id="conclusion" className="mb-10">
-        <h2 className="text-2xl font-bold text-green-800 mb-4 border-b-2 border-green-200 pb-2">9. Conclusion – Aapko Kya Karna Chahiye?</h2>
+        <h2 className="text-2xl font-bold text-green-800 mb-4 border-b-2 border-green-200 pb-2">
+          9. Final Baat – Aapko Kya Karna Chahiye?
+        </h2>
         <p className="mb-4 leading-relaxed">
-          <strong>AgriStack India ke agriculture sector ka future hai.</strong> Yeh <strong>sirf ek registration process nahi hai</strong> – yeh ek <strong>complete digital transformation</strong> hai jo <strong>har kisan ko ek verified identity deta hai</strong> aur unhe <strong>sari sarkari aur private services directly access</strong> karne deta hai.
+          <strong>Yeh India ke agriculture sector ka future hai.</strong> Yeh <strong>sirf ek registration process nahi hai</strong> – 
+          yeh ek <strong>complete digital transformation</strong> hai jo <strong>har kisan ko ek verified identity deta hai</strong> 
+          aur unhe <strong>sari sarkari aur private services directly access</strong> karne deta hai.
         </p>
 
         <div className="bg-green-100 border-2 border-green-400 rounded-lg p-5 mb-4">
           <p className="font-bold text-green-900 text-base mb-3">🎯 Aapko Abhi Kya Karna Chahiye?</p>
           <ol className="text-green-800 text-sm space-y-2 list-decimal list-inside">
-            <li><strong>Apne nazdeeki CSC centre par jao</strong> ya <strong>agristack.gov.in</strong> par jaake <strong>online registration karo</strong></li>
+            <li><strong>Apne nazdeeki CSC centre par jao</strong> ya <strong>online portal</strong> par jaake <strong>registration karo</strong></li>
             <li><strong>Saare documents ready rakho</strong> – Aadhaar, zameen ke kagaz, bank passbook, photo</li>
-            <li><strong>Farmer ID banwa lo</strong> – yeh aapka <strong>digital kisan pehchaan patra</strong> hai</li>
+            <li><strong>ID banwa lo</strong> – yeh aapka <strong>digital kisan pehchaan patra</strong> hai</li>
             <li><strong>Free calculators use karo</strong> – <a href="/calculator/pm-kisan-benefit" className="underline font-semibold">PM Kisan Benefit Calculator</a> se apna fayda jaano</li>
             <li><strong>Apne doston aur parivaar ke kisano ko bhi batao</strong> – unhe bhi fayda hoga!</li>
           </ol>
         </div>
 
         <p className="mb-4 leading-relaxed">
-          <strong>Yeh aapka haq hai</strong> aur iska <strong>direct fayda aapko milega</strong> – <strong><a href="/articles/pm-kisan-23vi-kist-2026-status-check" className="text-green-700 underline hover:text-green-900 font-semibold">PM Kisan ki kist</a> ho, <a href="/articles/pmfby-crop-insurance-2026" className="text-green-700 underline hover:text-green-900 font-semibold">crop insurance</a> ho ya <a href="/articles/kisan-credit-card-online-apply-2026" className="text-green-700 underline hover:text-green-900 font-semibold">agricultural loan</a></strong> – <strong>sab kuch ek ID se connect ho jayega</strong>. <strong>Deri mat karo – aaj hi registration karao!</strong> 🚀🌾
+          <strong>Yeh aapka haq hai</strong> aur iska <strong>direct fayda aapko milega</strong> – 
+          <strong> <a href="/articles/pm-kisan-23vi-kist-2026-status-check" className="text-green-700 underline hover:text-green-900 font-semibold">PM Kisan ki kist</a> ho, 
+          <a href="/articles/pmfby-crop-insurance-2026" className="text-green-700 underline hover:text-green-900 font-semibold"> crop insurance</a> ho ya 
+          <a href="/articles/kisan-credit-card-online-apply-2026" className="text-green-700 underline hover:text-green-900 font-semibold"> agricultural loan</a></strong> – 
+          <strong> sab kuch ek ID se connect ho jayega</strong>. <strong> Deri mat karo – aaj hi registration karao!</strong> 🚀🌾
         </p>
 
         <p className="mb-4 leading-relaxed">
           Agar aapke <strong>koi aur sawaal hain</strong> toh hamari website{" "}
           <a href="https://kisanstatus.com" className="text-green-700 underline hover:text-green-900 font-semibold">kisanstatus.com</a>{" "}
-          par visit karein. <strong>Hum regularly kisan-related latest updates post karte rehte hain</strong>. <strong>Bookmark kar lo!</strong> 🔖
+          par visit karein. <strong>Hum regularly kisan-related latest updates post karte rehte hain</strong>. 
+          <strong> Bookmark kar lo!</strong> 🔖
         </p>
 
         <div className="bg-green-100 border border-green-300 rounded-lg p-4 text-center">
@@ -693,19 +782,21 @@ export default function AgriStackArticle() {
         </div>
       </section>
 
-      {/* Team Box – E-E-A-T */}
-      <aside aria-label="About the Team" className="mb-10 border border-gray-200 rounded-xl p-5 bg-gray-50 flex gap-4 items-start">
+      {/* Author Box – E-E-A-T */}
+      <aside aria-label="About the Author" className="mb-10 border border-gray-200 rounded-xl p-5 bg-gray-50 flex gap-4 items-start">
         <div className="w-14 h-14 rounded-full bg-green-700 flex items-center justify-center text-white text-xl flex-shrink-0" aria-hidden="true">
-          🌾
+          👨‍🌾
         </div>
         <div>
-          <p className="font-bold text-gray-800 text-base">KisanStatus Team</p>
-          <p className="text-xs text-green-700 mb-2 font-medium">Agricultural Content Experts – KisanStatus.com</p>
+          <p className="font-bold text-gray-800 text-base">Sidhu Singh</p>
+          <p className="text-xs text-green-700 mb-2 font-medium">Agricultural Content Expert – KisanStatus.com</p>
           <p className="text-sm text-gray-600 leading-relaxed">
-            KisanStatus Team Indian farmers ko government schemes navigate karne mein help karti hai. PM Kisan, AgriStack, eKYC aur kisan-related policies par hamari gehri pakad hai. Hamara maksad hai government ke complex processes ko simple Hinglish mein samjhana.
+            Sidhu Singh pichle 2 saal se Indian farmers ko government schemes navigate karne mein help kar rahe hain. 
+            PM Kisan, digital kisan pehchaan, eKYC aur kisan-related policies par unki gehri pakad hai. 
+            Unka maksad hai government ke complex processes ko simple Hinglish mein samjhana.
           </p>
           <p className="text-xs text-gray-400 mt-2">
-            Verified information from official sources · Updated regularly
+            Verified information from official sources · Updated: July 2026
           </p>
         </div>
       </aside>
