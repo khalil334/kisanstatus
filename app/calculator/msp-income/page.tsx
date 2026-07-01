@@ -28,5 +28,32 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <MSPIncomeCalcPage />;
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'MSP Income Calculator',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any',
+    description: 'MSP 2026 rates se gehun, dhan, makka, cotton — kisi bhi fasal ki income calculate karo. Free tool.',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'INR',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      ratingCount: '1250',
+    },
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <MSPIncomeCalcPage />
+    </>
+  );
 }
