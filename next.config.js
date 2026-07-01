@@ -104,9 +104,9 @@ const nextConfig = {
           },
         ],
       },
+      // ✅ FIXED: Images ke liye optimized cache
       {
-        source: '/:all*(svg|jpg|png|webp|avif)',
-        locale: false,
+        source: '/images/:path*',
         headers: [
           {
             key: 'Cache-Control',
@@ -117,15 +117,8 @@ const nextConfig = {
     ];
   },
   
-  // DNS Prefetch for external domains
-  async rewrites() {
-    return [
-      {
-        source: '/_next/image',
-        destination: '/_next/image',
-      },
-    ];
-  },
+  // ❌ REMOVED: Unnecessary rewrites section
+  // Ye image optimization ko break kar raha tha!
 };
 
 module.exports = nextConfig;
