@@ -26,7 +26,6 @@ const ARTICLE_OG_IMAGES: Record<string, string> = {
   'pm-kisan-problems-solution-guide-2026':           '/images/pm-kisan-problems-solution-guide-2026.webp',
   'pm-kisan-fto-generated-ka-matlab-kya-hai':        '/images/pm-kisan-fto-generated-featured-image-kisanstatus.webp',
   'pm-kisan-24vi-kist':                              '/images/pm-kisan-24vi-kist-october-2026.webp',
-  // ✅ FIXED PATH - Naya folder structure
   'agristack-kya-hai':                               '/images/articles/agristack-kya-hai/infographic.webp',
   'pm-kisan-mobile-number-change':                   '/images/pm-kisan-mobile-bank-aadhaar-update-banner-website.webp',
   'nano-dap-500ml-price-in-india-2026':              '/images/nano-dap-500ml-price-india-2026.webp',
@@ -45,11 +44,11 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
       headline: article.ogTitle || article.title,
       description: article.desc,
       image: [ogImage],
-      datePublished: article.publishedTime ?? '2026-01-01T00:00:00+05:30',
-      dateModified:  article.modifiedTime  ?? new Date().toISOString(),
+      datePublished: article.publishedTime,
+      dateModified: article.modifiedTime,
       author: {
-        '@type': 'Person',
-        name: 'Sidhu Singh',
+        '@type': 'Organization',
+        name: 'KisanStatus Team',
         url: `${DOMAIN}/about`,
       },
       publisher: {
@@ -69,23 +68,10 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home',     item: DOMAIN },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: DOMAIN },
         { '@type': 'ListItem', position: 2, name: 'Articles', item: `${DOMAIN}/articles` },
         { '@type': 'ListItem', position: 3, name: article.ogTitle || article.title, item: url },
       ],
-    },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'WebPage',
-      '@id': url,
-      url,
-      name: article.ogTitle || article.title,
-      description: article.desc,
-      inLanguage: 'hi-IN',
-      isPartOf: { '@type': 'WebSite', url: DOMAIN, name: 'KisanStatus' },
-      author: { '@type': 'Person', name: 'Sidhu Singh' },
-      datePublished: article.publishedTime ?? '2026-01-01T00:00:00+05:30',
-      dateModified:  article.modifiedTime  ?? new Date().toISOString(),
     },
   ];
 }
@@ -122,7 +108,6 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   PmfbyCropInsurance2026:                     dynamic(() => import('@/components/articles/PmfbyCropInsurance2026'),                    { loading: ArticleLoading }),
   PmKisanFtoGeneratedKaMatlabKyaHai:          dynamic(() => import('@/components/articles/pm-kisan-fto-generated-ka-matlab-kya-hai'), { loading: ArticleLoading }),
   PmKisan24viKist2026:                        dynamic(() => import('@/components/articles/PmKisan24viKist2026'),                       { loading: ArticleLoading }),
-  // ✅ FIXED: ssr: false hata diya - ye build fail kar raha tha
   AgriStackKyaHai2026:                        dynamic(() => import('@/components/articles/AgriStackKyaHai2026'),                       { loading: ArticleLoading }),
   PmKisanMobileNumberChange2026:              dynamic(() => import('@/components/articles/PmKisanMobileNumberChange2026'),             { loading: ArticleLoading }),
   PmKisanCompleteGuide:                       dynamic(() => import('@/components/articles/pm-kisan-complete-guide'),                   { loading: ArticleLoading }),
@@ -155,29 +140,29 @@ export async function generateMetadata({
   const displayTitle = article.ogTitle || article.title;
 
   return {
-    title:       displayTitle,
+    title: displayTitle,
     description: article.desc,
-    authors:     [{ name: 'Sidhu Singh', url: `${DOMAIN}/about` }],
-    alternates:  { canonical: url },
+    authors: [{ name: 'KisanStatus Team', url: `${DOMAIN}/about` }],
+    alternates: { canonical: url },
     openGraph: {
-      title:         displayTitle,
-      description:   article.desc,
-      type:          'article',
+      title: displayTitle,
+      description: article.desc,
+      type: 'article',
       url,
-      siteName:      'KisanStatus',
-      locale:        'hi_IN',
-      images:        [{ url: ogImage, width: 1200, height: 630, alt: displayTitle }],
-      publishedTime: article.publishedTime ?? '2026-01-01T00:00:00+05:30',
-      modifiedTime:  article.modifiedTime  ?? new Date().toISOString(),
-      authors:       [`${DOMAIN}/about`],
-      section:       'PM Kisan Guide',
+      siteName: 'KisanStatus',
+      locale: 'hi_IN',
+      images: [{ url: ogImage, width: 1200, height: 630, alt: displayTitle }],
+      publishedTime: article.publishedTime,
+      modifiedTime: article.modifiedTime,
+      authors: [`${DOMAIN}/about`],
+      section: 'PM Kisan Guide',
     },
     twitter: {
-      card:        'summary_large_image',
-      title:       displayTitle,
+      card: 'summary_large_image',
+      title: displayTitle,
       description: article.desc,
-      site:        '@kisanstatus',
-      images:      [ogImage],
+      site: '@kisanstatus',
+      images: [ogImage],
     },
   };
 }
@@ -216,11 +201,12 @@ export default async function ArticlePage({
         <div className="container-site pt-6">
           <Link
             href={`/articles/category/${article.category}`}
-            className="inline-flex items-center gap-2 bg-green-100 hover:bg-green-200 text-green-800 text-sm font-bold px-4 py-2 rounded-full transition-colors"
+            className="inline-flex items-center gap-2 bg-green-100 hover:bg-green-200 text-green-800 text-sm font-bold px-4 py-2 rounded-full transition-colors focus:ring-2 focus:ring-green-500 focus:outline-none"
+            aria-label={`View all ${category.name} articles`}
           >
-            <span>📂</span>
+            <span aria-hidden="true">📂</span>
             <span>{category.name}</span>
-            <span className="text-green-600">→</span>
+            <span className="text-green-600" aria-hidden="true">→</span>
           </Link>
         </div>
       )}
