@@ -30,9 +30,9 @@ export const metadata: Metadata = {
     modifiedTime: "2026-07-02T08:00:00.000Z",
     images: [
       {
-        url: "https://kisanstatus.com/images/articles/agristack-kya-hai/og-image.webp",
+        url: "https://kisanstatus.com/images/articles/agristack-kya-hai/infographic.webp",
         width: 800,
-        height: 420,
+        height: 1200,
         alt: "Kisan Pehchaan Card Enrollment Guide 2026",
       },
     ],
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Digital Kisan Pehchaan 2026: 14-Digit ID Se Sari Schemes Ka Access",
     description: "Unique ID se sari sarkari schemes ka access. Free enrollment, instant benefits.",
-    images: ["https://kisanstatus.com/images/articles/agristack-kya-hai/og-image.webp"],
+    images: ["https://kisanstatus.com/images/articles/agristack-kya-hai/infographic.webp"],
     site: "@kisanstatus",
   },
   robots: {
@@ -58,9 +58,9 @@ const articleSchema = {
   "description": "Digital kisan pehchaan patra kaise banaye? Enrollment process, documents, fayde aur real farmer experiences.",
   "image": {
     "@type": "ImageObject",
-    "url": "https://kisanstatus.com/images/articles/agristack-kya-hai/og-image.webp",
+    "url": "https://kisanstatus.com/images/articles/agristack-kya-hai/infographic.webp",
     "width": 800,
-    "height": 420,
+    "height": 1200,
   },
   "author": {
     "@type": "Organization",
@@ -320,7 +320,7 @@ export default function AgriStackArticle() {
             <li><strong>Agriculture schemes ki Direct Benefit Transfer (DBT) improve karna</strong> – seedha bank account mein paisa</li>
             <li><strong>Crop data aur land records ko digitize karna</strong> – paper se online tak</li>
             <li><strong>Private sector aur fintech companies ke liye API access dena</strong> – innovation ko badhava</li>
-            <li><strong>India ko global agriculture leader banana</strong> – digital farming mein number one! 🇮🇳</li>
+            <li><strong>India ko global agriculture leader banana</strong> – digital farming mein number one! 🇮</li>
           </ol>
         </div>
       </section>
