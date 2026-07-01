@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/next';
 import { Poppins } from 'next/font/google';
+import { Suspense } from 'react';
 
 import './globals.css';
 import Header from '@/components/Header';
@@ -12,7 +13,7 @@ import { LanguageProvider } from '@/lib/LanguageContext';
 // ✅ OPTIMIZED: Only load weights you actually use
 const poppins = Poppins({
   subsets: ['latin', 'devanagari'],
-  weight: ['400', '600', '700'], // Removed 500 - use 400 or 600 instead
+  weight: ['400', '600', '700'],
   display: 'swap',
   variable: '--font-poppins',
   fallback: ['system-ui', 'sans-serif'],
@@ -83,6 +84,18 @@ export const metadata: Metadata = {
   },
 };
 
+// ✅ NEW: Loading component for Suspense
+function LayoutLoading() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-surface">
+      <div className="text-center">
+        <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-green-600"></div>
+        <p className="mt-4 text-gray-600">Loading...</p>
+      </div>
+    </div>
+  );
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -93,7 +106,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         
-        {/* ✅ OPTIMIZED: Preconnect to Google Fonts (already handled by Next.js but explicit is better) */}
+        {/* ✅ OPTIMIZED: Preconnect to Google Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
@@ -102,8 +115,8 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
         <link rel="manifest" href="/site.webmanifest" />
 
-        {/* ✅ OPTIMIZED: Preload hero image for LCP */}
-        <link rel="preload" as="image" href="/hero-kisan-field.webp" type="image/webp" />
+        {/* ✅ FIXED: Only preload hero image on homepage */}
+        {/* Remove this line - let individual pages handle their own preloading */}
 
         {/* Structured Data - WebSite & Organization */}
         <script
@@ -158,13 +171,31 @@ export default function RootLayout({
       </head>
 
       <body className="min-h-screen flex flex-col bg-surface text-text-primary antialiased font-sans">
+        {/* ✅ NEW: Skip to content link for accessibility */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-green-600 focus:text-white focus:rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+        >
+          Skip to main content
+        </a>
+
         <LanguageProvider>
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
+          <Suspense fallback={<LayoutLoading />}>
+            <Header />
+          </Suspense>
+          
+          <main id="main-content" className="flex-1 scroll-smooth">
+            <Suspense fallback={<LayoutLoading />}>
+              {children}
+            </Suspense>
+          </main>
+          
+          <Suspense fallback={<LayoutLoading />}>
+            <Footer />
+          </Suspense>
         </LanguageProvider>
 
-        {/* ✅ OPTIMIZED: Google Analytics with WORKER strategy - 71% faster! */}
+        {/* ✅ OPTIMIZED: Google Analytics with WORKER strategy */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="worker"
@@ -185,12 +216,46 @@ export default function RootLayout({
           }}
         />
 
-        {/* ✅ OPTIMIZED: Vercel Analytics - keep it, it's lightweight */}
+        {/* ✅ OPTIMIZED: Vercel Analytics */}
         <Analytics />
-        
-        {/* ✅ OPTIMIZED: Removed SpeedInsights - adds ~15KB bundle size, not worth it for production */}
-        {/* If you need it for development, add conditionally:
-        {process.env.NODE_ENV === 'development' && <SpeedInsights />} */}
+
+        {/* ✅ NEW: Scroll restoration script */}
+        <Script
+          id="scroll-restoration"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              if ('scrollRestoration' in history) {
+                history.scrollRestoration = 'auto';
+              }
+              
+              // Smooth scroll to top on page navigation
+              window.addEventListener('popstate', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              });
+            `,
+          }}
+        />
+
+        {/* ✅ NEW: Focus management for keyboard navigation */}
+        <Script
+          id="focus-management"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Detect keyboard navigation
+              document.addEventListener('keydown', function(e) {
+                if (e.key === 'Tab') {
+                  document.body.classList.add('keyboard-navigation');
+                }
+              });
+              
+              document.addEventListener('mousedown', function() {
+                document.body.classList.remove('keyboard-navigation');
+              });
+            `,
+          }}
+        />
       </body>
     </html>
   );
