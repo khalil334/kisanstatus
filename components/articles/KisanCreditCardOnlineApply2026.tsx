@@ -26,7 +26,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             KCC Loan Apply Online 2026 — 4% Interest Mein ₹5 Lakh Tak Kaise Le? [Complete Guide]
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white">Sidhu Singh</Link></span>
+            <span>✍️ <Link href="/about" className="underline hover:text-white">KisanStatus Team</Link></span>
             <span>⏱️ 15 min read</span>
             <span>📅 Updated: July 2026</span>
           </div>
@@ -53,20 +53,16 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             📱 Mere Gaon Ka Ek Kisan Story...
           </h2>
           <p className="mb-3 leading-relaxed text-gray-700">
-            Pichle hafte mere gaon (Muzaffarnagar, UP) mein Ramesh chacha aaye. Bole, <em>"Sidhu beta, 
-            mujhe beej aur khaad ke liye ₹2 lakh chahiye. Moneylender 36% interest maang raha hai. 
-            Koi sasta option hai?"</em>
+            Pichle hafte mere gaon (Muzaffarnagar, UP) mein Ramesh chacha aaye. Bole, <em>"Mujhe beej aur khaad ke liye ₹2 lakh chahiye. Moneylender 36% interest maang raha hai. Koi sasta option hai?"</em>
           </p>
           <p className="mb-3 leading-relaxed text-gray-700">
-            Maine unhe bataya - <strong>"Chacha, aapko 4% interest mein loan mil sakta hai! Sarkar ne 
-            Kisan Rin Card scheme chalayi hai. Sirf ₹2 lakh par saal mein ₹8,000 interest lagega - 
-            moneylender ke ₹72,000 ke bajaye!"</strong>
+            Maine unhe bataya - <strong>"Chacha, aapko 4% interest mein loan mil sakta hai! Sarkar ne yeh scheme chalayi hai. Sirf ₹2 lakh par saal mein ₹8,000 interest lagega - moneylender ke ₹72,000 ke bajaye!"</strong>
           </p>
           <p className="leading-relaxed text-gray-700">
             Unhone agle din hi bank mein apply kiya. 7 din mein loan approve ho gaya! 🎉
           </p>
           <p className="mt-3 text-sm text-gray-600 italic">
-            Aapke mann mein bhi aise hi sawaal honge. Isliye ye complete guide likh raha hoon.
+            Aapke mann mein bhi aise hi sawaal honge. Isliye ye complete guide likh rahe hain.
           </p>
         </section>
 
@@ -93,7 +89,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             <p className="font-semibold text-blue-800">💰 Asli Farak Samjhein:</p>
             <p className="text-blue-700 text-sm mt-1">
               <strong>Moneylender se:</strong> 24-60% interest = ₹3 lakh par saal mein ₹72,000-1,80,000 interest 😱<br/>
-              <strong>KCC se:</strong> Sirf 4% effective rate = ₹3 lakh par saal mein sirf ₹12,000 interest 😊<br/>
+              <strong>Is scheme se:</strong> Sirf 4% effective rate = ₹3 lakh par saal mein sirf ₹12,000 interest 😊<br/>
               <strong>Aapki bachat:</strong> ₹60,000-1,68,000 saalana! 🎊
             </p>
           </div>
@@ -120,7 +116,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           <div className="bg-white border border-gray-200 rounded-lg p-4 mt-4">
             <p className="font-semibold text-gray-900 mb-2">👨‍🌾 Real Experience:</p>
             <p className="text-gray-700 text-sm italic">
-              "Main Punjab ka kisan hoon. Pehle moneylender se 36% par loan leta tha. KCC banwane ke baad 
+              "Main Punjab ka kisan hoon. Pehle moneylender se 36% par loan leta tha. Yeh card banwane ke baad 
               sirf 4% interest lagta hai. ₹2 lakh par saal mein ₹72,000 bach gaya! Ab maine apne bete ki 
               padhai ke liye paise bachaye hain."
             </p>
@@ -129,7 +125,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
         </section>
 
         <section className="mb-8">
-          <SH>KCC Eligibility — Kaun Apply Kar Sakta Hai?</SH>
+          <SH>Eligibility — Kaun Apply Kar Sakta Hai?</SH>
           <img
             src="/images/kisan-credit-card-eligibility-criteria.webp"
             alt="KCC eligibility criteria 2026 — zameen, kheti, bank verification"
@@ -154,7 +150,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
         </section>
 
         <section className="mb-8">
-          <SH>Documents Required For KCC Application</SH>
+          <SH>Documents Required For Application</SH>
           <SvgDocuments caption="Kisan Rin Card — Required Documents 2026"/>
           <p className="text-gray-700 leading-relaxed mb-4">
             Apply karne se pehle <strong>saare documents ready rakhein</strong>. Neeche complete list hai:
@@ -187,7 +183,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
         </section>
 
         <section className="mb-8">
-          <SH>KCC Loan Limit 2026 — Kitna Loan Milega?</SH>
+          <SH>Loan Limit 2026 — Kitna Loan Milega?</SH>
           <img
             src="/images/kisan-credit-card-loan-limits-interest-rates.webp"
             alt="KCC loan limit 2026 — minimum 10000 maximum 5 lakh interest 4 percent"
@@ -229,7 +225,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
 
         <section className="mb-8">
           <div className="bg-green-50 border-2 border-primary-600 border-l-[6px] rounded-xl p-5">
-            <h3 className="text-base font-black text-primary-800 mb-2">🧮 Calculate Your KCC Loan Amount</h3>
+            <h3 className="text-base font-black text-primary-800 mb-2">🧮 Calculate Your Loan Amount</h3>
             <p className="text-sm text-gray-700 mb-4">
               Apply karne se pehle apna eligible loan amount aur monthly EMI estimate karo — bank jaane se pehle fully prepared rahoge.
             </p>
@@ -244,7 +240,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
         <CalcBanner/>
 
         <section className="mb-8">
-          <SH>KCC Ke Liye Online Apply Kaise Karein? — Step-by-Step</SH>
+          <SH>Online Apply Kaise Karein? — Step-by-Step</SH>
           <img
             src="/images/kisan-credit-card-online-application-process.webp"
             alt="KCC online application process 2026 step by step"
@@ -324,17 +320,17 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
         </section>
 
         <section className="mb-8">
-          <SH>FAQ — Kisan Credit Card Ke Baare Mein</SH>
+          <SH>FAQ — Loan Card Ke Baare Mein</SH>
           <div className="space-y-3">
             {[
-              {q:'KCC loan online apply kaise karein 2026?', a:'Apne bank ki website ya Kisan Rin Portal par jaakar loan section mein personal aur land details bharo, documents upload karo aur submit kar do. Reference number milega jisse status track ho sakta hai.'},
+              {q:'Loan online apply kaise karein 2026?', a:'Apne bank ki website ya Kisan Rin Portal par jaakar loan section mein personal aur land details bharo, documents upload karo aur submit kar do. Reference number milega jisse status track ho sakta hai.'},
               {q:'2026 mein maximum loan limit kitna hai?', a:'Union Budget 2025-26 ke baad interest subvention limit ₹5 lakh tak hai. Collateral-free loan ₹2 lakh tak milta hai bina kisi security ke.'},
               {q:'PM Kisan beneficiary ko priority milti hai?', a:'Haan — PM Kisan beneficiaries ka Aadhaar aur land record already verified hota hai, isliye unka application fast-track hota hai.'},
               {q:'Bina zameen ke loan mil sakta hai?', a:'Haan — tenant farmers aur sharecroppers bhi apply kar sakte hain. Lease agreement ya landowner se certificate dena hoga.'},
               {q:'Approval mein kitna time lagta hai?', a:'Online application 7-10 working din mein process hoti hai. Offline application mein 10-15 working din lag sakte hain.'},
               {q:'Collateral chahiye ya nahi?', a:'₹2 lakh tak ke loan ke liye koi collateral nahi chahiye. Usse zyada ke liye bank collateral ya guarantor maang sakta hai.'},
               {q:'4% interest kaise milega?', a:'Base rate 7% hai, lekin time par repayment karne par 3% subvention milta hai. Isliye effective rate 4% ho jaata hai. Aadhaar link hona zaroori hai.'},
-              {q:'KCC aur personal loan mein kya difference hai?', a:'Personal loan 12-24% interest mein milta hai aur kisi bhi kaam ke liye use hota hai. Yeh scheme sirf 4% mein milti hai aur specifically agriculture ke liye hai.'},
+              {q:'Yeh card aur personal loan mein kya difference hai?', a:'Personal loan 12-24% interest mein milta hai aur kisi bhi kaam ke liye use hota hai. Yeh scheme sirf 4% mein milti hai aur specifically agriculture ke liye hai.'},
             ].map(({q,a})=>(
               <details key={q} className="border border-gray-200 rounded-xl overflow-hidden group">
                 <summary className="p-4 font-semibold text-gray-900 cursor-pointer bg-gray-50 hover:bg-green-50 text-sm flex justify-between items-center gap-3">
