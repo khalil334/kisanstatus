@@ -26,7 +26,8 @@ const ARTICLE_OG_IMAGES: Record<string, string> = {
   'pm-kisan-problems-solution-guide-2026':           '/images/pm-kisan-problems-solution-guide-2026.webp',
   'pm-kisan-fto-generated-ka-matlab-kya-hai':        '/images/pm-kisan-fto-generated-featured-image-kisanstatus.webp',
   'pm-kisan-24vi-kist':                              '/images/pm-kisan-24vi-kist-october-2026.webp',
-  'agristack-kya-hai':                               '/images/agristack-kya-hai-infographic.webp',
+  // ✅ FIXED PATH - Naya folder structure
+  'agristack-kya-hai':                               '/images/articles/agristack-kya-hai/infographic.webp',
   'pm-kisan-mobile-number-change':                   '/images/pm-kisan-mobile-bank-aadhaar-update-banner-website.webp',
   'nano-dap-500ml-price-in-india-2026':              '/images/nano-dap-500ml-price-india-2026.webp',
   'pm-kisan-complete-guide':                         '/images/pm-kisan-status-check-hero.webp',
@@ -121,7 +122,7 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   PmfbyCropInsurance2026:                     dynamic(() => import('@/components/articles/PmfbyCropInsurance2026'),                    { loading: ArticleLoading }),
   PmKisanFtoGeneratedKaMatlabKyaHai:          dynamic(() => import('@/components/articles/pm-kisan-fto-generated-ka-matlab-kya-hai'), { loading: ArticleLoading }),
   PmKisan24viKist2026:                        dynamic(() => import('@/components/articles/PmKisan24viKist2026'),                       { loading: ArticleLoading }),
-  AgriStackKyaHai2026:                        dynamic(() => import('@/components/articles/AgriStackKyaHai2026'),                       { loading: ArticleLoading }),
+  AgriStackKyaHai2026:                        dynamic(() => import('@/components/articles/AgriStackKyaHai2026'),                       { loading: ArticleLoading, ssr: false }),
   PmKisanMobileNumberChange2026:              dynamic(() => import('@/components/articles/PmKisanMobileNumberChange2026'),             { loading: ArticleLoading }),
   PmKisanCompleteGuide:                       dynamic(() => import('@/components/articles/pm-kisan-complete-guide'),                   { loading: ArticleLoading }),
   SoilHealthCardCompleteGuide2026:            dynamic(() => import('@/components/articles/soil-health-card-complete-guide-2026'),      { loading: ArticleLoading }),
