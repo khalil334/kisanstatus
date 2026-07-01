@@ -9,6 +9,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: 'All PM Kisan Articles & Guides 2026',
   description: 'PM Kisan status check, eKYC, loan, payment fix, registration guides — sab Hindi mein. Free aur simple.',
+  authors: [{ name: 'KisanStatus Team', url: `${DOMAIN}/about` }],
   alternates: { canonical: `${DOMAIN}/articles` },
   openGraph: {
     title: 'All PM Kisan Articles & Guides 2026',
@@ -31,16 +32,22 @@ export const metadata: Metadata = {
 export default function ArticlesPage() {
   const schema = {
     '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    name: 'PM Kisan Guides 2026',
+    '@type': 'CollectionPage',
+    name: 'All PM Kisan Guides 2026',
+    description: 'Complete collection of PM Kisan articles in Hindi',
     url: `${DOMAIN}/articles`,
+    inLanguage: 'hi-IN',
+    isPartOf: { '@type': 'WebSite', name: 'KisanStatus', url: DOMAIN },
     numberOfItems: ARTICLES.length,
-    itemListElement: ARTICLES.map((a, i) => ({
-      '@type': 'ListItem',
-      position: i + 1,
-      url: `${DOMAIN}/articles/${a.slug}`,
-      name: a.title,
-    })),
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: ARTICLES.map((a, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        url: `${DOMAIN}/articles/${a.slug}`,
+        name: a.title,
+      })),
+    },
   };
 
   return (
