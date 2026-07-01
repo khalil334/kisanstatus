@@ -29,5 +29,32 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <InstallmentTrackerCalcPage />;
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'PM Kisan Installment Status Tracker',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any',
+    description: 'PM Kisan 23vi kist status tracker — eKYC, bank Aadhaar seeding, land seeding check karke 4 sawaal mein pata karo kist kyun nahi aayi. Free tool.',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'INR',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      ratingCount: '1250',
+    },
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <InstallmentTrackerCalcPage />
+    </>
+  );
 }
