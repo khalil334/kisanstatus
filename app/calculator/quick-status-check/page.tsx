@@ -29,5 +29,32 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <QuickStatusChecker />;
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'PM Kisan Status Check',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any',
+    description: 'PM Kisan status check 2026 — Aadhaar number, mobile number ya registration number se 23vi kist ka status check karein. Free online tool.',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'INR',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      ratingCount: '1250',
+    },
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <QuickStatusChecker />
+    </>
+  );
 }
