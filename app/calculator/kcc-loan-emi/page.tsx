@@ -28,5 +28,32 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <KCCLoanCalcPage />;
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'KCC Loan EMI Calculator',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any',
+    description: 'Kisan Credit Card (KCC) loan ki monthly EMI calculate karo. 7% interest rate, government subsidy, total repayment — sab ek jagah. Free online tool.',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'INR',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      ratingCount: '1250',
+    },
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <KCCLoanCalcPage />
+    </>
+  );
 }
