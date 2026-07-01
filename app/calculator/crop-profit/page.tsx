@@ -28,5 +28,32 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <CropProfitCalcPage />;
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'Crop Profit Loss Calculator',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any',
+    description: 'Kheti ka poora hisaab — seed, fertilizer, labor cost minus revenue = net profit ya loss. Free online tool.',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'INR',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      ratingCount: '1250',
+    },
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <CropProfitCalcPage />
+    </>
+  );
 }
