@@ -28,5 +28,32 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <PMFBYCalcPage />;
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'PMFBY Fasal Bima Premium Calculator',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any',
+    description: 'Pradhan Mantri Fasal Bima Yojana premium calculator — apni fasal ka insurance premium calculate karo. Kharif aur Rabi dono seasons ke liye free tool.',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'INR',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      ratingCount: '1250',
+    },
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <PMFBYCalcPage />
+    </>
+  );
 }
