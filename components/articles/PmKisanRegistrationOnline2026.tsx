@@ -11,10 +11,10 @@ const URL    = `${DOMAIN}/articles/pm-kisan-registration-online-2026`;
 const schemas = [
   {
     '@context':'https://schema.org','@type':'Article',
-    headline:'PM Kisan Registration Online 2026 — Naye Farmer Ka Pehla Step: Documents Se Lekar Submit Tak',
-    description:'PM Kisan registration online 2026 — kaun eligible hai, kya documents chahiye, step-by-step registration process, common mistakes aur rejection se bachne ke tips.',
+    headline:'Cultivator Benefit Program Enrollment 2026 — Naye Farmer Ka Pehla Step: Documents Se Lekar Submit Tak',
+    description:'Scheme enrollment online 2026 — kaun eligible hai, kya documents chahiye, step-by-step onboarding process, common mistakes aur rejection se bachne ke tips.',
     image:`${DOMAIN}/og-image.jpg`, datePublished:PUBLISHED, dateModified:MODIFIED,
-    author:{'@type':'Person',name:'Sidhu Singh',url:`${DOMAIN}/about`},
+    author:{'@type':'Organization',name:'KisanStatus Team',url:`${DOMAIN}/about`},
     publisher:{'@type':'Organization',name:'KisanStatus.com',url:DOMAIN},
     mainEntityOfPage:{'@type':'WebPage','@id':URL},
     inLanguage:'hi-IN', wordCount:4000,
@@ -24,29 +24,29 @@ const schemas = [
     itemListElement:[
       {'@type':'ListItem',position:1,name:'Home',item:DOMAIN},
       {'@type':'ListItem',position:2,name:'Articles',item:`${DOMAIN}/articles`},
-      {'@type':'ListItem',position:3,name:'PM Kisan Registration 2026',item:URL},
+      {'@type':'ListItem',position:3,name:'Scheme Enrollment 2026',item:URL},
     ],
   },
   {
     '@context':'https://schema.org','@type':'FAQPage',
     mainEntity:[
-      {'@type':'Question',name:'PM Kisan registration kaise kare?',
-        acceptedAnswer:{'@type':'Answer',text:'pmkisan.gov.in → Farmers Corner → New Farmer Registration → Aadhaar number → state select karo → form fill karo → land details add karo → submit. Free hai, 10-15 minute lagti hai.'}},
-      {'@type':'Question',name:'PM Kisan registration ke liye kya chahiye?',
-        acceptedAnswer:{'@type':'Answer',text:'Aadhaar card, Aadhaar-linked mobile number, bank account details (passbook), khasra/khatauni (land records). Sab documents ready rakho pehle.'}},
-      {'@type':'Question',name:'PM Kisan registration ke baad pehli kist kab aayegi?',
-        acceptedAnswer:{'@type':'Answer',text:'Registration ke baad state verification, land seeding aur eKYC complete honi chahiye — isme 30-60 din lag sakte hain. Phir agli scheduled installment mein payment aayegi.'}},
+      {'@type':'Question',name:'Scheme enrollment kaise kare?',
+        acceptedAnswer:{'@type':'Answer',text:'pmkisan.gov.in → Farmers Corner → New Farmer Registration → national identity number → state select karo → form fill karo → land details add karo → submit. Free hai, 10-15 minute lagti hai.'}},
+      {'@type':'Question',name:'Enrollment ke liye kya chahiye?',
+        acceptedAnswer:{'@type':'Answer',text:'Biometric credential card, identity-linked mobile number, bank account details (passbook), khasra/khatauni (land records). Sab documents ready rakho pehle.'}},
+      {'@type':'Question',name:'Enrollment ke baad pehli installment kab aayegi?',
+        acceptedAnswer:{'@type':'Answer',text:'Onboarding ke baad state verification, land seeding aur digital verification complete honi chahiye — isme 30-60 din lag sakte hain. Phir agli scheduled payment cycle mein monetary credit aayegi.'}},
     ],
   },
 ];
 
 const RELATED = [
-  {slug:'pm-kisan-ekyc-online-2026',                    title:'eKYC Guide — Registration Ke Baad',   emoji:'🔐'},
+  {slug:'pm-kisan-ekyc-online-2026',                    title:'Digital Verification Guide — Enrollment Ke Baad',   emoji:'🔐'},
   {slug:'pm-kisan-beneficiary-list-2026',               title:'Check Karo List Mein Naam',            emoji:'📋'},
   {slug:'pm-kisan-land-seeding-status-check',           title:'Land Seeding Kya Hoti Hai',            emoji:'🌾'},
   {slug:'pm-kisan-rejected-list-2026',                  title:'Rejected Kyun Hua — Fix Karo',         emoji:'❌'},
-  {slug:'pm-kisan-name-correction-online-2026',         title:'Naam Galat Tha — Correction',          emoji:'✏️'},
-  {slug:'pm-kisan-problems-solution-guide-2026',        title:'10 Common Problems Guide',             emoji:'🔧'},
+  {slug:'pm-kisan-name-correction-online-2026',         title:'Identity Correction Guide',          emoji:'✏️'},
+  {slug:'pm-kisan-problems-solution-guide-2026',        title:'10 Common Roadblocks Guide',             emoji:'🔧'},
 ];
 
 export default function PmKisanRegistrationOnline2026() {
@@ -58,15 +58,15 @@ export default function PmKisanRegistrationOnline2026() {
         <div className="container-site max-w-3xl">
           <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
             <Link href="/" className="hover:text-white">Home</Link><span>/</span>
-            <Link href="/articles/pm-kisan-21vi-installment-status-check" className="hover:text-white">PM Kisan Guide</Link><span>/</span>
-            <span className="text-white">Registration 2026</span>
+            <Link href="/articles/pm-kisan-21vi-installment-status-check" className="hover:text-white">Scheme Guide</Link><span>/</span>
+            <span className="text-white">Enrollment 2026</span>
           </nav>
-          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">📝 New Registration</span>
+          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">📝 New Enrollment</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            PM Kisan Registration Online 2026 — Pehli Baar Register Karna Hai? Yeh Guide Padho Pehle
+            Cultivator Benefit Program Enrollment 2026 — Pehli Baar Register Karna Hai? Yeh Guide Padho Pehle
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white">Sidhu Singh</Link></span>
+            <span>✍️ <Link href="/about" className="underline hover:text-white">KisanStatus Team</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
             <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
             <span>⏱️ 15 min read</span>
@@ -78,34 +78,35 @@ export default function PmKisanRegistrationOnline2026() {
         <div className="my-6 rounded-2xl overflow-hidden border border-green-100 shadow-md">
           <img
             src="/images/registration-steps.jpg"
-            alt="PM Kisan new farmer registration steps 2026"
+            alt="Scheme new farmer enrollment steps 2026"
             className="w-full object-cover"
             style={{ maxHeight: '420px', objectPosition: 'center' }}
             loading="lazy"
             width="1200"
             height="630"
           />
-          <p className="text-center text-xs text-gray-500 py-2 bg-green-50 border-t border-green-100">PM Kisan New Farmer Registration 2026 — Step by Step Guide</p>
+          <p className="text-center text-xs text-gray-500 py-2 bg-green-50 border-t border-green-100">Scheme New Farmer Enrollment 2026 — Step by Step Guide</p>
         </div>
 
         {/* Honest intro */}
         <div className="my-6 p-5 bg-blue-50 border-2 border-blue-400 border-l-[6px] rounded-xl">
-          <h2 className="text-base font-black text-blue-800 mb-2">📢 Registration Se Pehle Yeh Pado</h2>
+          <h2 className="text-base font-black text-blue-800 mb-2">📢 Enrollment Se Pehle Yeh Pado</h2>
           <p className="text-sm text-blue-900 leading-relaxed mb-2">
-            Registration karna simple hai — lekin <strong>galat information daalne par rejection pakki hai</strong>. Bahut log hurry mein form bhar dete hain aur phir mahino tak kist nahi aati.
+            Onboarding karna simple hai — lekin <strong>galat information daalne par rejection pakki hai</strong>. Bahut log hurry mein form bhar dete hain aur phir mahino tak payment cycle nahi aati.
           </p>
           <p className="text-sm text-blue-900 leading-relaxed">
-            Is guide mein hum pehle batayenge <strong>kya documents tayaar karo</strong>, phir <strong>form mein exactly kya bharna hai</strong>, aur <strong>kaun si galtiyan mat karo</strong>. 10 minute time do — sahi se karo.
+            Is guide mein hum pehle batayenge <strong>kya documents tayaar karo</strong>, phir <strong>form mein exactly kya bharna hai</strong>, aur <strong>kaun si galtiyan mat karo</strong>.
           </p>
+          <p className="text-sm text-blue-900 leading-relaxed mt-2">10 minute time do — sahi se karo.</p>
         </div>
 
         {/* Eligibility check */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-gray-900 mb-4 pb-2 border-b-2 border-green-100">
-            Pehle Check Karo — Kya Tum Eligible Ho?
+            1. Pehle Check Karo — Kya Tum Eligible Ho?
           </h2>
           <p className="text-gray-700 text-sm leading-relaxed mb-4">
-            Registration karne se pehle check karo ki tum eligible ho — warna registration hoga aur baad mein reject ho jaayega. Yeh conditions hain:
+            Application submit karne se pehle check karo ki tum eligible ho — warna onboarding hoga aur baad mein reject ho jaayega. Yeh conditions hain:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="p-4 bg-green-50 border border-green-200 rounded-xl">
@@ -115,7 +116,7 @@ export default function PmKisanRegistrationOnline2026() {
                   'Small aur marginal farmers — 2 hectare (5 acre) tak zameen',
                   'Zameen apne naam par registered ho (ya spouse ke naam par)',
                   'Indian citizen ho',
-                  'Aadhaar card ho',
+                  'Biometric credential card ho',
                   'Active bank account ho',
                   'Tenant farmers (kuch states mein allowed)',
                 ].map(item=>(
@@ -145,16 +146,16 @@ export default function PmKisanRegistrationOnline2026() {
         {/* Documents section */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-gray-900 mb-4 pb-2 border-b-2 border-green-100">
-            Documents Pehle Tayaar Karo — Beech Mein Mat Dhundho
+            2. Documents Pehle Tayaar Karo — Beech Mein Mat Dhundho
           </h2>
-          <SvgDocuments caption="PM Kisan Registration — Required Documents 2026"/>
+          <SvgDocuments caption="Scheme Enrollment — Required Documents 2026"/>
           <p className="text-gray-700 text-sm leading-relaxed mb-4">
             Sabse badi galti yeh hoti hai — form fill karte waqt document dhundh rahe hote hain aur galat number type ho jaata hai. <strong>Pehle yeh sab nikal ke rakho:</strong>
           </p>
           <div className="space-y-3">
             {[
-              {doc:'Aadhaar Card',       must:true,  detail:'Original dekhke number type karna — 12 digits, ek bhi galat nahi hona chahiye',    tip:'Photo lelo mobile mein — form fill karte waqt saamne rakhna'},
-              {doc:'Mobile Number',      must:true,  detail:'Aadhaar se linked active number — OTP is number par aayega',                       tip:'Agar linked nahi — pehle UIDAI se link karwao ya CSC se eKYC karo'},
+              {doc:'Biometric Credential Card',       must:true,  detail:'Original dekhke number type karna — 12 digits, ek bhi galat nahi hona chahiye',    tip:'Photo lelo mobile mein — form fill karte waqt saamne rakhna'},
+              {doc:'Mobile Number',      must:true,  detail:'Identity document se linked active number — OTP is number par aayega',                       tip:'Agar linked nahi — pehle UIDAI se link karwao ya CSC se digital verification karo'},
               {doc:'Bank Passbook',      must:true,  detail:'First page — Account number, IFSC code, Branch name, Account holder naam',         tip:'IFSC code carefully copy karo — yeh most common error hai'},
               {doc:'Land Records',       must:true,  detail:'Khasra number, Khatauni/Patta — state land records se',                            tip:'Patwari se latest copy lo — purani record reject ho sakti hai'},
               {doc:'Mobile Pe Photos',   must:false, detail:'Sabhi documents ki clear photos lo — upload karne padenge',                        tip:'2MB se kam size mein — compress kar lo agar zyada hai'},
@@ -177,21 +178,21 @@ export default function PmKisanRegistrationOnline2026() {
         {/* Step by step registration */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-gray-900 mb-4 pb-2 border-b-2 border-green-100">
-            Registration Process — Ek Ek Step Seedha
+            3. Onboarding Process — Ek Ek Step Seedha
           </h2>
           <StepList>
             <SI n={1}><strong>pmkisan.gov.in</strong> kholo — computer ya mobile dono chalega (mobile mein desktop mode on karo)</SI>
             <SI n={2}>Homepage par <strong>"Farmers Corner"</strong> menu tap karo</SI>
             <SI n={3}><strong>"New Farmer Registration"</strong> option select karo</SI>
             <SI n={4}><strong>Rural Farmer Registration</strong> ya Urban chunio — gaon mein ho to Rural</SI>
-            <SI n={5}>Aadhaar number enter karo → apna <strong>State select karo</strong> → captcha bharo → <strong>Get OTP</strong> click karo</SI>
+            <SI n={5}>National identity number enter karo → apna <strong>State select karo</strong> → captcha bharo → <strong>Get OTP</strong> click karo</SI>
             <SI n={6}>Mobile par OTP aayega → enter karo → Proceed</SI>
-            <SI n={7}><strong>Personal Details</strong> form aayega — naam (Aadhaar jaisa exactly), category, farmer type</SI>
+            <SI n={7}><strong>Personal Details</strong> form aayega — naam (biometric credential jaisa exactly), category, farmer type</SI>
             <SI n={8}><strong>Bank Account Details</strong> — Account number, IFSC, bank name → passbook se exactly copy karo</SI>
             <SI n={9}><strong>Land Details</strong> section — survey/khasra number, area in hectare, land ownership</SI>
-            <SI n={10}>Documents upload karo — Aadhaar, passbook, land records (clear photos, 2MB se kam)</SI>
+            <SI n={10}>Documents upload karo — identity document, passbook, land records (clear photos, 2MB se kam)</SI>
             <SI n={11}>Sab details dobara check karo — ek baar submit hone ke baad kuch cheezein change mushkil hoti hain</SI>
-            <SI n={12}><strong>Submit</strong> karo — registration number milega — <strong>screenshot zaroor lo</strong></SI>
+            <SI n={12}><strong>Submit</strong> karo — enrollment number milega — <strong>screenshot zaroor lo</strong></SI>
           </StepList>
           <WB>
             <strong>⚠️ Sabse Common Mistake:</strong> IFSC code galat enter karna. Passbook mein clearly IFSC hota hai — 11 characters, SBIN0001234 format mein. Ek bhi letter galat = payment fail.
@@ -201,16 +202,16 @@ export default function PmKisanRegistrationOnline2026() {
         {/* After registration */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-gray-900 mb-4 pb-2 border-b-2 border-green-100">
-            Registration Ke Baad Kya Hota Hai — Timeline
+            4. Enrollment Ke Baad Kya Hota Hai — Timeline
           </h2>
           <div className="space-y-3">
             {[
-              {step:'Registration submit hua',                        time:'Day 1',      status:'✅',color:'bg-green-500'},
-              {step:'eKYC karo — OTP ya CSC se (abhi kar lo)',        time:'Day 1-3',    status:'🔐',color:'bg-blue-500'},
+              {step:'Application submit hua',                        time:'Day 1',      status:'✅',color:'bg-green-500'},
+              {step:'Digital verification karo — OTP ya CSC se (abhi kar lo)',        time:'Day 1-3',    status:'🔐',color:'bg-blue-500'},
               {step:'State agriculture office verification',           time:'Day 7-14',   status:'⏳',color:'bg-yellow-500'},
               {step:'Land seeding process — patwari ke records se',   time:'Day 14-30',  status:'🌾',color:'bg-amber-500'},
               {step:'Beneficiary list mein naam aata hai',             time:'Day 30-45',  status:'📋',color:'bg-purple-500'},
-              {step:'Pehli installment credit hoti hai',               time:'Agli Kist',  status:'💰',color:'bg-emerald-600'},
+              {step:'Pehli installment credit hoti hai',               time:'Agli Payment Cycle',  status:'💰',color:'bg-emerald-600'},
             ].map(({step,time,status,color})=>(
               <div key={step} className="flex items-center gap-3">
                 <span className={`${color} text-white text-[10px] font-black px-2 py-1 rounded-full shrink-0 whitespace-nowrap`}>{time}</span>
@@ -219,21 +220,21 @@ export default function PmKisanRegistrationOnline2026() {
               </div>
             ))}
           </div>
-          <IB><strong>💡 Important:</strong> Registration ke turant baad eKYC karo — warna delay ho jaayegi. eKYC ghar baithe free mein: pmkisan.gov.in → eKYC → OTP verify.</IB>
+          <IB><strong>💡 Important:</strong> Enrollment ke turant baad digital verification karo — warna delay ho jaayegi. Biometric authentication ghar baithe free mein: pmkisan.gov.in → eKYC → OTP verify.</IB>
         </section>
 
         {/* Common mistakes */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-gray-900 mb-4 pb-2 border-b-2 border-green-100">
-            5 Galtiyan Jo Rejection Karti Hain — Bachte Raho
+            5. 5 Galtiyan Jo Rejection Karti Hain — Bachte Raho
           </h2>
           <div className="space-y-3">
             {[
               {n:1, mistake:'IFSC Code Galat Daalna',       impact:'Payment fail ya wrong account mein ja sakti hai', fix:'Passbook ki first page kholo → IFSC dhundho → carefully type karo → dobara check karo'},
-              {n:2, mistake:'Naam Aadhaar Se Alag',         impact:'eKYC fail, rejected list mein naam aa sakta hai', fix:'Aadhaar card saamne rakho → exactly wahi naam daalo — space, spelling sab same'},
+              {n:2, mistake:'Naam Biometric Credential Se Alag',         impact:'Digital verification fail, rejected list mein naam aa sakta hai', fix:'Identity document saamne rakho → exactly wahi naam daalo — space, spelling sab same'},
               {n:3, mistake:'Purane Land Records Dena',     impact:'State verification mein fail ho sakta hai',       fix:'Patwari se latest khasra-khatauni lo — current year wala chahiye'},
-              {n:4, mistake:'Joint Account Se Register Karna', impact:'Naam mismatch ho sakta hai seeding mein',     fix:'Individual account best hai — joint mein Aadhaar wale ka naam pehle hona chahiye'},
-              {n:5, mistake:'eKYC Baad Mein Karni Hai Socha', impact:'Bina eKYC ke koi kist nahi aayegi',           fix:'Registration ke turant baad — usi din — eKYC karo: 5 minute, free'},
+              {n:4, mistake:'Joint Account Se Register Karna', impact:'Naam mismatch ho sakta hai seeding mein',     fix:'Individual account best hai — joint mein biometric credential wale ka naam pehle hona chahiye'},
+              {n:5, mistake:'Digital Verification Baad Mein Karni Hai Socha', impact:'Bina biometric authentication ke koi payment cycle nahi aayegi',           fix:'Enrollment ke turant baad — usi din — identity validation karo: 5 minute, free'},
             ].map(({n,mistake,impact,fix})=>(
               <div key={n} className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
                 <div className="flex items-center gap-3 px-4 py-3 bg-orange-50 border-b border-orange-100">
@@ -255,24 +256,24 @@ export default function PmKisanRegistrationOnline2026() {
         {/* FAQ */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-gray-900 mb-4 pb-2 border-b-2 border-green-100">
-            Registration FAQ — Jo Sab Poochte Hain
+            6. Enrollment FAQ — Jo Sab Poochte Hain
           </h2>
           <div className="space-y-3">
             {[
               {
-                q:'Registration karne ke baad koi confirmation message aata hai?',
-                a:'Haan — submit karne ke baad screen par registration number aata hai. Kuch states mein SMS bhi aata hai registered mobile par. Screenshot ya note zaroor karo — baad mein status track karne ke kaam aata hai.',
+                q:'Application submit karne ke baad koi confirmation message aata hai?',
+                a:'Haan — submit karne ke baad screen par enrollment number aata hai. Kuch states mein SMS bhi aata hai registered mobile par. Screenshot ya note zaroor karo — baad mein status track karne ke kaam aata hai.',
               },
               {
-                q:'Ek zameen par do logon ka registration ho sakta hai?',
-                a:'Nahi — ek khasra number ya ek plot par sirf ek registration allowed hai. Agar pita-putra dono ke naam zameen hai to jiske naam zyada land hai ya jo actual farmer hai — wahi register kare. Dono ka ek saath nahi hoga.',
+                q:'Ek zameen par do logon ka enrollment ho sakta hai?',
+                a:'Nahi — ek khasra number ya ek plot par sirf ek onboarding allowed hai. Agar pita-putra dono ke naam zameen hai to jiske naam zyada land hai ya jo actual farmer hai — wahi register kare. Dono ka ek saath nahi hoga.',
               },
               {
                 q:'Registered mobile number change ho gaya — kya karein?',
-                a:'Pehle UIDAI se Aadhaar mein mobile update karwao — uske baad PM Kisan portal par bhi automatically link ho jaayega. Temporary solution: CSC center par jaake biometric eKYC karo — mobile ki zaroorat nahi padegi.',
+                a:'Pehle UIDAI se biometric credential mein mobile update karwao — uske baad portal par bhi automatically link ho jaayega. Temporary solution: CSC center par jaake biometric identity validation karo — mobile ki zaroorat nahi padegi.',
               },
               {
-                q:'Registration mein galti ho gayi — edit kar sakte hain?',
+                q:'Enrollment mein galti ho gayi — edit kar sakte hain?',
                 a:'Kuch details edit ho sakti hain — pmkisan.gov.in → Farmers Corner → Edit Aadhaar Details par. Bank details, naam correction wahan hai. Land details ke liye Block Agriculture Office jaana pad sakta hai ya helpline 155261 par call karo.',
               },
             ].map(({q,a})=>(
@@ -289,8 +290,8 @@ export default function PmKisanRegistrationOnline2026() {
 
         <GovLink
           href="https://pmkisan.gov.in/NewFarmerRegistration.aspx"
-          label="PM Kisan — New Farmer Registration Portal"
-          guide="Register Karo"
+          label="Scheme — New Farmer Enrollment Portal"
+          guide="Enroll Karo"
           guideHref="/articles/pm-kisan-ekyc-online-2026"
         />
 
