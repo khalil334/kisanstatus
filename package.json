@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run update-dates && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "update-dates": "node scripts/update-article-dates.js"
   },
   "dependencies": {
     "next": "16.2.7",
