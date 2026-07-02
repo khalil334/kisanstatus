@@ -14,7 +14,7 @@ const schemas = [
     headline:'PM Kisan 21vi 22vi Installment Status Check 2026 — Mobile Se 2 Minute Mein',
     description:'PM Kisan 21vi aur 22vi kist status check karo — Aadhaar, mobile ya registration number se. Payment date, amount, aur next installment guide — Hinglish mein.',
     image:`${DOMAIN}/og-image.jpg`, datePublished:PUBLISHED, dateModified:MODIFIED,
-    author:{'@type':'Person',name:'Sidhu Singh',url:`${DOMAIN}/about`},
+    author:{'@type':'Organization',name:'KisanStatus Team',url:`${DOMAIN}/about`},
     publisher:{'@type':'Organization',name:'KisanStatus.com',url:DOMAIN},
     mainEntityOfPage:{'@type':'WebPage','@id':URL},
     inLanguage:'hi-IN', wordCount:3800,
@@ -57,7 +57,7 @@ export default function PmKisan21viInstallmentStatusCheck() {
             PM Kisan 22vi Kist Status Check 2026 — Mobile Se 2 Minute Mein Pata Karo
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white">Sidhu Singh</Link></span>
+            <span>✍️ <Link href="/about" className="underline hover:text-white">KisanStatus Team</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
             <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
             <span>⏱️ 10 min read</span>
