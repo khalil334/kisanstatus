@@ -75,25 +75,26 @@ export default function PmKisanCorrectionDeactivateBlockGuide2026() {
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Section 1 — Naam Update
+            1. Naam Mismatch — Kaise Theek Karein?
           </h2>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Naam mismatch — UID, banking partner aur scheme portal — teeno jagah alag naam hona sabse common issue hai aur sabse easy fix bhi hai.
+            Naam mismatch — UID, banking partner aur scheme portal — teeno jagah alag naam hona sabse common issue hai.
           </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">Easy fix hai.</p>
           <StepList>
             <SI n={1}>pmkisan.gov.in → Farmers Corner → <strong>Edit UID Details</strong></SI>
             <SI n={2}><strong>Name Modification</strong> select karo</SI>
             <SI n={3}>UID card saamne rakho → EXACTLY wahi naam type karo</SI>
             <SI n={4}>UID scan upload karo (front+back, 2MB se kam)</SI>
-            <SI n={5}>Submit → Reference number note karo</SI>
-            <SI n={6}>15-20 working days mein update hoga</SI>
+            <SI n={5}>Submit karo → Reference number note karo</SI>
+            <SI n={6}>15-20 working days mein changes reflect honge</SI>
           </StepList>
           <WB><strong>⚠️ Order Important Hai:</strong> Agar UID mein bhi naam galat hai — pehle UIDAI se UID fix karo, phir scheme portal. Ulta karne se dobara problem aayegi.</WB>
         </section>
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Section 2 — Banking Partner Record Update
+            2. Banking Partner Record — Galat Details Fix
           </h2>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Galat account number, galat IFSC, ya purana closed account — yeh sab DBT transfer fail karate hain.
@@ -104,14 +105,14 @@ export default function PmKisanCorrectionDeactivateBlockGuide2026() {
             <SI n={3}>Passbook kholo — Account Number aur IFSC carefully copy karo</SI>
             <SI n={4}>New details enter karo → Banking partner name select karo</SI>
             <SI n={5}>Passbook scan upload karo (first page, clear)</SI>
-            <SI n={6}>Submit → 7-14 din mein update</SI>
+            <SI n={6}>Submit karo → 7-14 din mein changes aa jaate hain</SI>
           </StepList>
           <IB><strong>💡 Ensure Before Update:</strong> New banking partner record mein UID NPCI seeding honi chahiye — warna payment phir se fail hogi. Banking partner branch mein confirm karo pehle.</IB>
         </section>
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Section 3 — Deactivated Profile Reactivate Kaise Karein
+            3. Deactivated Profile — Reactivate Kaise Karein?
           </h2>
           <SvgDeactivate caption="Scheme Deactivated Profile — Reactivation Process 2026" />
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -136,10 +137,10 @@ export default function PmKisanCorrectionDeactivateBlockGuide2026() {
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Section 4 — Record Block/Freeze Kaise Hata
+            4. Record Block/Freeze — Unblock Process
           </h2>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Record block ya freeze hone ke do types hain — Scheme level block aur Banking partner level block. Dono ke liye alag process hai.
+            Record block ya freeze hone ke do types hain — Scheme level block aur Banking partner level block.
           </p>
           <div className="space-y-3">
             {[
@@ -174,7 +175,7 @@ export default function PmKisanCorrectionDeactivateBlockGuide2026() {
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Section 5 — Mobile Number Update
+            5. Mobile Number Change — Online Ya CSC Se
           </h2>
           <StepList>
             <SI n={1}>Nazdiki CSC (Common Service Center) dhundho — locator.csccloud.in</SI>
@@ -188,7 +189,7 @@ export default function PmKisanCorrectionDeactivateBlockGuide2026() {
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Section 6 — Zameen/Land Details Update
+            6. Zameen/Land Details — Office Se Update
           </h2>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Khasra number galat, area wrong, ya zameen ka ownership change — yeh portal se nahi hota, office se hota hai.
@@ -198,7 +199,7 @@ export default function PmKisanCorrectionDeactivateBlockGuide2026() {
             <SI n={2}>Block Agriculture Officer ke paas jao</SI>
             <SI n={3}>Land update application form bharo</SI>
             <SI n={4}>Documents submit karo: UID + naya Khasra + passbook</SI>
-            <SI n={5}>20-30 din mein portal par update hoga</SI>
+            <SI n={5}>20-30 din mein portal par changes reflect honge</SI>
           </StepList>
         </section>
 
