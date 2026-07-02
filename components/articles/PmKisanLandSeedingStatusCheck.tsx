@@ -11,8 +11,8 @@ const URL    = `${DOMAIN}/articles/pm-kisan-land-seeding-status-check`;
 const schemas = [
   {
     '@context':'https://schema.org','@type':'Article',
-    headline:'PM Kisan Land Record Linking 2026 — "Zameen Mapping Pending" Fix Karo Step by Step',
-    description:'PM Kisan zameen record linking kya hai, "Land Seeding No" kyun aata hai, patwari se kaise fix karein — complete Hinglish guide with state-wise process.',
+    headline:'PM Kisan Land Record Integration 2026 — "Zameen Mapping Pending" Fix Karo Step by Step',
+    description:'PM Kisan land record linking kya hai, "Land Seeding No" kyun aata hai, patwari se kaise fix karein — complete Hinglish guide with state-wise process.',
     image:`${DOMAIN}/og-image.jpg`, datePublished:PUBLISHED, dateModified:MODIFIED,
     author:{'@type':'Organization',name:'KisanStatus Team',url:`${DOMAIN}/about`},
     publisher:{'@type':'Organization',name:'KisanStatus.com',url:DOMAIN},
@@ -22,8 +22,8 @@ const schemas = [
   {
     '@context':'https://schema.org','@type':'FAQPage',
     mainEntity:[
-      {'@type':'Question',name:'PM Kisan zameen record linking kya hoti hai?',
-        acceptedAnswer:{'@type':'Answer',text:'Zameen record linking matlab aapki zameen ka record (khasra/khatauni) state revenue department se PM Kisan portal par link hona. Bina linking ke payment nahi hoti.'}},
+      {'@type':'Question',name:'PM Kisan land record integration kya hoti hai?',
+        acceptedAnswer:{'@type':'Answer',text:'Land record integration matlab aapki zameen ka record (khasra/khatauni) state revenue department se PM Kisan portal par link hona. Bina linking ke payment nahi hoti.'}},
       {'@type':'Question',name:'"Zameen Mapping Pending" aaye toh kya karein?',
         acceptedAnswer:{'@type':'Answer',text:'Apne gaon ke patwari/lekhapal se milein → Khasra-Khatauni update karwao → Block Agriculture Office mein Land Integration form bharo → 15-30 din mein fix hota hai.'}},
     ],
@@ -49,11 +49,11 @@ export default function PmKisanLandSeedingStatusCheck() {
           <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
             <Link href="/" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Home</Link><span>/</span>
             <Link href="/articles" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Articles</Link><span>/</span>
-            <span className="text-white font-bold">Zameen Record Linking Fix</span>
+            <span className="text-white font-bold">Land Record Integration Fix</span>
           </nav>
-          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">🌾 Zameen Mapping</span>
+          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">🌾 Land Mapping</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            PM Kisan Zameen Record Linking 2026 — &quot;Land Seeding No&quot; Kyun Aata Hai Aur Kaise Fix Karo
+            PM Kisan Land Record Integration 2026 — &quot;Land Seeding No&quot; Kyun Aata Hai Aur Kaise Fix Karo
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
@@ -68,32 +68,32 @@ export default function PmKisanLandSeedingStatusCheck() {
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <img
             src="/images/land-seeding-field.png"
-            alt="PM Kisan zameen record linking patwari se fix karo 2026"
+            alt="PM Kisan land record integration patwari se fix karo 2026"
             className="w-full object-cover"
             style={{ maxHeight: '420px', objectPosition: 'center' }}
             loading="lazy"
             width="1200"
             height="630"
           />
-          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">Zameen Record Linking — Patwari Se Fix Karo 2026</p>
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">Land Record Integration — Patwari Se Fix Karo 2026</p>
         </div>
 
         <div className="my-6 p-5 bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-500 dark:border-amber-700 border-l-[6px] rounded-xl">
-          <h2 className="text-base font-black text-amber-800 dark:text-amber-300 mb-2">🌾 Zameen Mapping — Yeh Problem 30% Farmers Ko Hai</h2>
+          <h2 className="text-base font-black text-amber-800 dark:text-amber-300 mb-2">🌾 Land Mapping — Common Problem</h2>
           <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed mb-2">
-            Madhya Pradesh ke ek kisan ki kahani — 2 saal se scheme mein registered, digital verification bhi complete, bank bhi linked. Lekin installment nahi aayi. Status check kiya — <strong>"Land Seeding: No"</strong>. Woh nahi jaante the ki yeh kya hota hai.
+            Bahut se farmers 2 saal se scheme mein registered hain, digital verification bhi complete hai, bank bhi linked hai. Lekin installment nahi aati. Status check karte hain — <strong>"Land Seeding: No"</strong>. Samajh nahi aata ki yeh kya hota hai.
           </p>
           <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
-            Patwari ke paas gaye, Khasra update karwaya, Agriculture Office mein form diya — <strong>25 din mein problem fix, aur 3 installments arrears mein ek saath credit.</strong> Is guide mein wahi process hai.
+            Patwari ke paas jaana padta hai, Khasra update karwana padta hai, Agriculture Office mein form dena padta hai — <strong>25 din mein problem fix, aur 3 installments arrears mein ek saath credit.</strong> Is guide mein wahi process hai.
           </p>
         </div>
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Zameen Record Integration Kya Hoti Hai — Simple Language Mein
+            1. Land Record Integration Kya Hai?
           </h2>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Sochna aise — PM Kisan ek database hai jo farmers ki zameen ki information rakhta hai. Yeh information state ke Revenue Department (land records) se leni padti hai.
+            PM Kisan ek database hai jo farmers ki zameen ki information rakhta hai. Yeh information state ke Revenue Department (land records) se leni padti hai.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 my-4">
             {[
@@ -108,12 +108,13 @@ export default function PmKisanLandSeedingStatusCheck() {
               </div>
             ))}
           </div>
-          <IB><strong>📌 Simple Definition:</strong> Zameen Mapping = aapki zameen ka government record PM Kisan se connected hona. Nahi hua = payment nahi. Hua = payment milegi.</IB>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">Simple hai.</p>
+          <IB><strong>📌 Definition:</strong> Land Mapping = aapki zameen ka government record PM Kisan se connected hona. Nahi hua = payment nahi. Hua = payment milegi.</IB>
         </section>
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Land Record Linking Status Check Karo
+            2. Land Record Linking Status Check
           </h2>
           <StepList>
             <SI n={1}><strong>pmkisan.gov.in</strong> kholo</SI>
@@ -132,7 +133,7 @@ export default function PmKisanLandSeedingStatusCheck() {
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            "Zameen Mapping Pending" — 5 Step Fix Process
+            3. "Zameen Mapping Pending" — 5 Step Fix Process
           </h2>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Yeh process har state mein slightly alag hai — lekin basic steps same hain:
@@ -141,7 +142,7 @@ export default function PmKisanLandSeedingStatusCheck() {
             <SI n={1}>
               <div>
                 <p className="font-bold">Apne gaon ke Patwari/Lekhapal se milein</p>
-                <p className="text-xs text-[var(--color-text-muted)] mt-1">Patwari village revenue officer hota hai — zameen ki sari entries unke paas hoti hain. "PM Kisan zameen record linking karwani hai" bolo.</p>
+                <p className="text-xs text-[var(--color-text-muted)] mt-1">Patwari village revenue officer hota hai — zameen ki sari entries unke paas hoti hain. "PM Kisan land record integration karwani hai" bolo.</p>
               </div>
             </SI>
             <SI n={2}>
@@ -170,7 +171,7 @@ export default function PmKisanLandSeedingStatusCheck() {
             </SI>
           </StepList>
 
-          <SvgDocuments caption="Zameen Record Linking Fix — Required Documents"/>
+          <SvgDocuments caption="Land Record Integration Fix — Required Documents"/>
           <div className="mt-4 overflow-x-auto rounded-xl border border-[var(--color-border)] shadow-sm">
             <table className="w-full text-xs border-collapse">
               <thead>
@@ -199,7 +200,7 @@ export default function PmKisanLandSeedingStatusCheck() {
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Zameen Mapping "Pending" Dikhta Hai — Kya Karein?
+            4. Land Mapping "Pending" — Timeline Guide
           </h2>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             "Pending" matlab process shuru ho gayi hai — wait karo. Lekin kitna wait?
@@ -224,15 +225,15 @@ export default function PmKisanLandSeedingStatusCheck() {
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Zameen Record Linking FAQ
+            5. Land Record Integration FAQ
           </h2>
-          <SvgFAQ caption="PM Kisan Zameen Mapping FAQ 2026"/>
+          <SvgFAQ caption="PM Kisan Land Mapping FAQ 2026"/>
           <div className="space-y-3 mt-4">
             {[
-              {q:'Kya zameen mapping ek baar hoti hai ya baar baar karni padti hai?',a:'Ek baar ho jaaye to permanent rehti hai — jab tak zameen ki details mein koi change na ho (sale, partition, inheritance). Agar zameen kisi aur ke naam ho jaaye ya split ho jaaye to dobara linking karni padti hai.'},
-              {q:'Tenant farmer ya share cropper ka zameen record linking kaise hoga?',a:'Kuch states mein tenant farmers ke liye alag process hai. State Agriculture Department se puchho — kuch states ne "Lease Agreement" ko integration document accept karna shuru kiya hai. UP, Bihar, MP mein tenant farmers ke liye provisions hain.'},
+              {q:'Kya land mapping ek baar hoti hai ya baar baar karni padti hai?',a:'Ek baar ho jaaye to permanent rehti hai — jab tak zameen ki details mein koi change na ho (sale, partition, inheritance). Agar zameen kisi aur ke naam ho jaaye ya split ho jaaye to dobara linking karni padti hai.'},
+              {q:'Tenant farmer ya share cropper ka land record integration kaise hoga?',a:'Kuch states mein tenant farmers ke liye alag process hai. State Agriculture Department se puchho — kuch states ne "Lease Agreement" ko integration document accept karna shuru kiya hai. UP, Bihar, MP mein tenant farmers ke liye provisions hain.'},
               {q:'Ek khasra number par do logon ka naam hai — dono ki mapping hogi?',a:'Generally ek khasra se sirf ek enrollment hoti hai. Agar do bhaiyon ki joint zameen hai — dono ek ek karte hain to system conflict detect kar sakta hai. Ek bhai registered kare ya partition karwao pehle.'},
-              {q:'Zameen mapping fix hone ke baad kitni installments ek saath milegi?',a:'Jitni installments miss huin sabki arrears milegi — ek saath. Agar 3 installments miss huin — ₹6,000 arrears + next installment ₹2,000 = ₹8,000 ek baar credit. Government paisa nahi rakhti.'},
+              {q:'Land mapping fix hone ke baad kitni installments ek saath milegi?',a:'Jitni installments miss huin sabki arrears milegi — ek saath. Agar 3 installments miss huin — ₹6,000 arrears + next installment ₹2,000 = ₹8,000 ek baar credit. Government paisa nahi rakhti.'},
             ].map(({q,a})=>(
               <details key={q} className="border border-[var(--color-border)] rounded-xl overflow-hidden group">
                 <summary className="p-4 font-semibold text-[var(--color-text)] cursor-pointer bg-[var(--color-bg-alt)] hover:bg-green-50 dark:hover:bg-green-900/20 text-sm flex justify-between items-center gap-3 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">
@@ -247,7 +248,7 @@ export default function PmKisanLandSeedingStatusCheck() {
 
         <GovLink
           href="https://pmkisan.gov.in/BeneficiaryStatus.aspx"
-          label="PM Kisan — Zameen Record Linking Status Check"
+          label="PM Kisan — Land Record Integration Status Check"
           guide="Status Check Karo"
           guideHref="/articles/pm-kisan-23vi-kist-2026-status-check"
         />
