@@ -45,9 +45,9 @@ const TOP_ARTICLES = [
 ];
 
 const CAT_COLORS: Record<string, string> = {
-  Status: 'bg-blue-100 text-blue-700',
-  Farming: 'bg-amber-100 text-amber-700',
-  Guide: 'bg-rose-100 text-rose-700',
+  Status: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300',
+  Farming: 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300',
+  Guide: 'bg-rose-100 text-rose-700 dark:bg-rose-900/30 dark:text-rose-300',
 };
 
 const TICKER_ITEMS = [
@@ -98,21 +98,18 @@ const articleListSchema = {
   })),
 };
 
-// ✅ NEW: Optimized image component with error handling
 function ArticleImage({ src, alt, emoji }: { src: string; alt: string; emoji: string }) {
   const [error, setError] = useState(false);
   const [loaded, setLoaded] = useState(false);
-  
+
   return (
-    <div className="relative h-44 w-full overflow-hidden bg-gradient-to-br from-green-100 to-emerald-50 shrink-0">
+    <div className="relative h-44 w-full overflow-hidden bg-gradient-to-br from-green-100 to-emerald-50 dark:from-green-900/30 dark:to-emerald-900/20 shrink-0">
       {!error ? (
         <>
-          {!loaded && (
-            <div className="absolute inset-0 bg-gray-200 animate-pulse z-10" />
-          )}
-          <Image 
-            src={src} 
-            alt={alt} 
+          {!loaded && <div className="absolute inset-0 bg-[var(--color-border)] animate-pulse z-10" />}
+          <Image
+            src={src}
+            alt={alt}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             quality={80}
@@ -123,7 +120,7 @@ function ArticleImage({ src, alt, emoji }: { src: string; alt: string; emoji: st
           />
         </>
       ) : (
-        <div className="h-full w-full flex items-center justify-center bg-gradient-to-br from-green-50 to-emerald-100">
+        <div className="h-full w-full flex items-center justify-center bg-gradient-to-br from-green-50 to-emerald-100 dark:from-green-900/20 dark:to-emerald-900/10">
           <span className="text-5xl" role="img" aria-label={alt}>{emoji}</span>
         </div>
       )}
@@ -134,16 +131,13 @@ function ArticleImage({ src, alt, emoji }: { src: string; alt: string; emoji: st
   );
 }
 
-// ✅ NEW: Optimized hero image component
 function HeroImage() {
   const [error, setError] = useState(false);
-  
+
   if (error) {
-    return (
-      <div className="absolute inset-0 bg-gradient-to-br from-green-800 to-emerald-600 z-0" />
-    );
+    return <div className="absolute inset-0 bg-gradient-to-br from-green-800 to-emerald-600 z-0" />;
   }
-  
+
   return (
     <div className="absolute inset-0 z-0">
       <Image
@@ -162,33 +156,25 @@ function HeroImage() {
 
 export default function HomeContent() {
   return (
-    <>
+    <div className="page-transition">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleListSchema) }} />
 
-      {/* STATIC TICKER - Optimized */}
+      {/* TICKER */}
       <div className="bg-red-600 text-white py-2 px-4" role="banner" aria-label="Latest updates">
         <div className="container-site flex flex-wrap items-center justify-center gap-x-6 gap-y-1 text-xs font-medium">
           {TICKER_ITEMS.slice(0, 3).map((item, i) => (
-            <span key={i} className="flex items-center gap-1">
-              {item}
-            </span>
+            <span key={i} className="flex items-center gap-1">{item}</span>
           ))}
         </div>
       </div>
 
-      {/* HERO - Optimized with better accessibility */}
-      <section 
-        className="relative overflow-hidden"
-        style={{
-          background: 'linear-gradient(135deg, #065f46 0%, #047857 25%, #059669 50%, #10b981 75%, #34d399 100%)'
-        }}
+      {/* HERO */}
+      <section
+        className="relative overflow-hidden bg-green-warm-gradient dark:from-green-950 dark:via-green-900 dark:to-emerald-950"
         aria-label="Hero section - PM Kisan Status Check"
       >
-        {/* Hero Background Image - PRIORITY for LCP */}
         <HeroImage />
-
-        {/* Decorative elements */}
         <div className="absolute -top-24 -left-20 w-96 h-96 rounded-full bg-emerald-400/20 blur-[100px] pointer-events-none" aria-hidden="true" />
         <div className="absolute top-1/3 -right-10 w-80 h-80 rounded-full bg-amber-400/15 blur-[100px] pointer-events-none" aria-hidden="true" />
 
@@ -209,15 +195,15 @@ export default function HomeContent() {
           </h2>
 
           <div className="flex flex-wrap gap-3">
-            <Link 
-              href="/articles/pm-kisan-23vi-kist-2026-status-check" 
+            <Link
+              href="/articles/pm-kisan-23vi-kist-2026-status-check"
               className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-black px-6 py-3.5 rounded-xl text-sm transition-all hover:scale-105 shadow-lg shadow-green-900/40 focus:ring-2 focus:ring-yellow-300 focus:outline-none"
               aria-label={`Check ${STATS.currentKist}vi kist status`}
             >
               📆 {STATS.currentKist}vi Kist Status Dekho
             </Link>
-            <Link 
-              href="/articles/pm-kisan-ekyc-online-2026" 
+            <Link
+              href="/articles/pm-kisan-ekyc-online-2026"
               className="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 border border-white/30 text-white font-bold px-6 py-3.5 rounded-xl text-sm transition-all hover:scale-105 backdrop-blur-sm focus:ring-2 focus:ring-white focus:outline-none"
               aria-label="Complete eKYC verification"
             >
@@ -233,25 +219,25 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* TOP PROBLEMS - Optimized */}
-      <section className="py-12 bg-white" aria-labelledby="problems-heading">
+      {/* TOP PROBLEMS */}
+      <section className="py-12 bg-[var(--color-card)]" aria-labelledby="problems-heading">
         <div className="container-site px-4">
           <div className="text-center mb-8">
-            <span className="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">🤔 Aapki Problem Kya Hai?</span>
-            <h2 id="problems-heading" className="text-2xl md:text-3xl font-black text-gray-900 mb-2">Seedha Solution — Click Karo</h2>
-            <p className="text-gray-500 text-sm max-w-lg mx-auto">Sabse common problems ke step-by-step guides</p>
+            <span className="inline-block bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">🤔 Aapki Problem Kya Hai?</span>
+            <h2 id="problems-heading" className="text-2xl md:text-3xl font-black text-[var(--color-text)] mb-2">Seedha Solution — Click Karo</h2>
+            <p className="text-[var(--color-text-muted)] text-sm max-w-lg mx-auto">Sabse common problems ke step-by-step guides</p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto">
             {[
-              { icon: '💸', title: 'Kist Nahi Aayi', sub: 'Payment pending ya failed', href: '/articles/pm-kisan-payment-failed-status-2026', bg: 'bg-red-50', border: 'border-red-200', tag: 'bg-red-100 text-red-700' },
-              { icon: '🔐', title: 'eKYC Karna Hai', sub: 'OTP ya CSC — dono free', href: '/articles/pm-kisan-ekyc-online-2026', bg: 'bg-green-50', border: 'border-green-200', tag: 'bg-green-100 text-green-700' },
-              { icon: '❌', title: 'Rejected Ho Gaya', sub: 'Rejection reason pata karo', href: '/articles/pm-kisan-rejected-list-2026', bg: 'bg-orange-50', border: 'border-orange-200', tag: 'bg-orange-100 text-orange-700' },
-              { icon: '✏️', title: 'Naam Galat Hai', sub: '15 min mein fix karo', href: '/articles/pm-kisan-name-correction-online-2026', bg: 'bg-purple-50', border: 'border-purple-200', tag: 'bg-purple-100 text-purple-700' },
+              { icon: '💸', title: 'Kist Nahi Aayi', sub: 'Payment pending ya failed', href: '/articles/pm-kisan-payment-failed-status-2026', bg: 'bg-red-50 dark:bg-red-900/20', border: 'border-red-200 dark:border-red-800', tag: 'bg-red-100 text-red-700 dark:bg-red-900/40 dark:text-red-300' },
+              { icon: '🔐', title: 'eKYC Karna Hai', sub: 'OTP ya CSC — dono free', href: '/articles/pm-kisan-ekyc-online-2026', bg: 'bg-green-50 dark:bg-green-900/20', border: 'border-green-200 dark:border-green-800', tag: 'bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300' },
+              { icon: '❌', title: 'Rejected Ho Gaya', sub: 'Rejection reason pata karo', href: '/articles/pm-kisan-rejected-list-2026', bg: 'bg-orange-50 dark:bg-orange-900/20', border: 'border-orange-200 dark:border-orange-800', tag: 'bg-orange-100 text-orange-700 dark:bg-orange-900/40 dark:text-orange-300' },
+              { icon: '✏️', title: 'Naam Galat Hai', sub: '15 min mein fix karo', href: '/articles/pm-kisan-name-correction-online-2026', bg: 'bg-purple-50 dark:bg-purple-900/20', border: 'border-purple-200 dark:border-purple-800', tag: 'bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300' },
             ].map((c) => (
-              <Link 
-                key={c.href} 
-                href={c.href} 
+              <Link
+                key={c.href}
+                href={c.href}
                 className={`${c.bg} ${c.border} border rounded-2xl p-4 flex flex-col gap-2 hover:shadow-lg hover:scale-[1.02] transition-all no-underline group h-full focus:ring-2 focus:ring-green-500 focus:outline-none`}
                 aria-label={`${c.title} - ${c.sub}`}
               >
@@ -259,28 +245,28 @@ export default function HomeContent() {
                   <span className="text-2xl" role="img" aria-hidden="true">{c.icon}</span>
                   <span className={`text-[9px] font-black px-2 py-0.5 rounded-full ${c.tag}`}>Guide</span>
                 </div>
-                <h3 className="font-bold text-gray-900 text-sm leading-tight">{c.title}</h3>
-                <p className="text-gray-500 text-xs leading-snug">{c.sub}</p>
-                <span className="text-xs font-bold text-gray-700 group-hover:translate-x-1 transition-transform inline-flex items-center gap-1 mt-auto">Padho →</span>
+                <h3 className="font-bold text-[var(--color-text)] text-sm leading-tight">{c.title}</h3>
+                <p className="text-[var(--color-text-muted)] text-xs leading-snug">{c.sub}</p>
+                <span className="text-xs font-bold text-[var(--color-text-muted)] group-hover:text-[var(--color-primary)] group-hover:translate-x-1 transition-all inline-flex items-center gap-1 mt-auto">Padho →</span>
               </Link>
             ))}
           </div>
-          
+
           <div className="text-center mt-6">
-            <Link href="/articles" className="text-sm font-bold text-green-700 hover:text-green-800 hover:underline focus:ring-2 focus:ring-green-500 focus:outline-none">
+            <Link href="/articles" className="text-sm font-bold text-[var(--color-primary)] hover:text-[var(--color-primary-dark)] hover:underline focus:ring-2 focus:ring-green-500 focus:outline-none rounded">
               Saari Problems Dekho →
             </Link>
           </div>
         </div>
       </section>
 
-      {/* AGRICULTURE IMAGE 1 - Optimized */}
-      <section className="py-14 bg-gradient-to-b from-green-50 to-white" aria-labelledby="farmers-heading">
+      {/* FARMERS IMAGE SECTION */}
+      <section className="py-14 bg-gradient-to-b from-green-50 to-[var(--color-card)] dark:from-green-950/30 dark:to-[var(--color-card)]" aria-labelledby="farmers-heading">
         <div className="container-site px-4">
           <div className="text-center mb-10">
-            <span className="inline-block bg-green-100 text-green-800 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">🌾 Hamare Kisan</span>
-            <h2 id="farmers-heading" className="text-2xl md:text-3xl font-black text-gray-900 mb-2">Bharat Ki Asli Taqat</h2>
-            <p className="text-gray-500 text-sm max-w-xl mx-auto">11 Crore+ kisanon ko PM Kisan se mil raha hai har saal ₹6,000</p>
+            <span className="inline-block bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">🌾 Hamare Kisan</span>
+            <h2 id="farmers-heading" className="text-2xl md:text-3xl font-black text-[var(--color-text)] mb-2">Bharat Ki Asli Taqat</h2>
+            <p className="text-[var(--color-text-muted)] text-sm max-w-xl mx-auto">11 Crore+ kisanon ko PM Kisan se mil raha hai har saal ₹6,000</p>
           </div>
 
           <div className="relative rounded-3xl overflow-hidden shadow-2xl max-w-5xl mx-auto mb-10">
@@ -305,72 +291,72 @@ export default function HomeContent() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             {[
-              { label: 'Registered Farmers', value: '11 Cr+', icon: '👨🌾' },
+              { label: 'Registered Farmers', value: '11 Cr+', icon: '👨‍🌾' },
               { label: 'Received Payment', value: '9.44 Cr+', icon: '💰' },
               { label: 'Per Year', value: '₹6,000', icon: '📅' },
               { label: 'Per Kist', value: '₹2,000', icon: '💵' },
             ].map((stat) => (
-              <div key={stat.label} className="bg-white rounded-2xl p-5 shadow-lg border-2 border-green-100 text-center hover:shadow-xl transition-all">
+              <div key={stat.label} className="bg-[var(--color-card)] rounded-2xl p-5 shadow-lg border-2 border-[var(--color-border)] text-center hover:shadow-xl transition-all">
                 <div className="text-3xl mb-2" role="img" aria-hidden="true">{stat.icon}</div>
-                <div className="text-2xl font-black text-green-700 mb-1">{stat.value}</div>
-                <div className="text-xs text-gray-600 font-medium">{stat.label}</div>
+                <div className="text-2xl font-black text-[var(--color-primary)] mb-1">{stat.value}</div>
+                <div className="text-xs text-[var(--color-text-muted)] font-medium">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* HOW IT WORKS - Optimized */}
-      <section className="py-14 bg-white" aria-labelledby="how-heading">
+      {/* HOW IT WORKS */}
+      <section className="py-14 bg-[var(--color-card)]" aria-labelledby="how-heading">
         <div className="container-site px-4">
           <div className="text-center mb-10">
-            <span className="inline-block bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">📋 Process</span>
-            <h2 id="how-heading" className="text-2xl md:text-3xl font-black text-gray-900 mb-2">PM Kisan — 3 Steps Mein Complete</h2>
-            <p className="text-gray-500 text-sm max-w-xl mx-auto">Bas ye 3 kaam karo, ₹2,000 har 4 mahine mein seedha bank mein</p>
+            <span className="inline-block bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">📋 Process</span>
+            <h2 id="how-heading" className="text-2xl md:text-3xl font-black text-[var(--color-text)] mb-2">PM Kisan — 3 Steps Mein Complete</h2>
+            <p className="text-[var(--color-text-muted)] text-sm max-w-xl mx-auto">Bas ye 3 kaam karo, ₹2,000 har 4 mahine mein seedha bank mein</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-10">
             {[
-              { step: '01', title: 'Registration Karo', desc: 'pmkisan.gov.in par jaake Aadhaar number se register karo', icon: '📝', color: 'bg-blue-50 border-blue-200' },
-              { step: '02', title: 'eKYC Complete Karo', desc: 'OTP ya biometric se eKYC verify karo — bilkul free', icon: '🔐', color: 'bg-green-50 border-green-200' },
-              { step: '03', title: '₹2,000 Paao', desc: 'Har 4 mahine mein seedha bank account mein paisa', icon: '💰', color: 'bg-amber-50 border-amber-200' },
+              { step: '01', title: 'Registration Karo', desc: 'pmkisan.gov.in par jaake Aadhaar number se register karo', icon: '📝', color: 'bg-blue-50 border-blue-200 dark:bg-blue-900/20 dark:border-blue-800' },
+              { step: '02', title: 'eKYC Complete Karo', desc: 'OTP ya biometric se eKYC verify karo — bilkul free', icon: '🔐', color: 'bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800' },
+              { step: '03', title: '₹2,000 Paao', desc: 'Har 4 mahine mein seedha bank account mein paisa', icon: '💰', color: 'bg-amber-50 border-amber-200 dark:bg-amber-900/20 dark:border-amber-800' },
             ].map((item) => (
               <div key={item.step} className={`${item.color} border-2 rounded-2xl p-6 text-center hover:shadow-lg transition-all`}>
                 <span className="text-4xl mb-3 block" role="img" aria-hidden="true">{item.icon}</span>
-                <span className="inline-block bg-white text-gray-700 text-xs font-black px-3 py-1 rounded-full mb-3">Step {item.step}</span>
-                <h3 className="font-bold text-gray-900 text-lg mb-2">{item.title}</h3>
-                <p className="text-gray-600 text-sm">{item.desc}</p>
+                <span className="inline-block bg-[var(--color-card)] text-[var(--color-text-muted)] text-xs font-black px-3 py-1 rounded-full mb-3">Step {item.step}</span>
+                <h3 className="font-bold text-[var(--color-text)] text-lg mb-2">{item.title}</h3>
+                <p className="text-[var(--color-text-muted)] text-sm">{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* LATEST ARTICLES - Optimized */}
-      <section className="py-14 bg-gradient-to-b from-gray-50 to-white" aria-labelledby="latest-heading">
+      {/* LATEST ARTICLES */}
+      <section className="py-14 bg-gradient-to-b from-gray-50 to-[var(--color-card)] dark:from-gray-900/50 dark:to-[var(--color-card)]" aria-labelledby="latest-heading">
         <div className="container-site px-4">
           <div className="text-center mb-8">
-            <span className="inline-block bg-green-100 text-green-800 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">🆕 Nayi Guides</span>
-            <h2 id="latest-heading" className="text-2xl md:text-3xl font-black text-gray-900 mb-2">ताज़ी जानकारी हिंदी में</h2>
-            <p className="text-gray-500 text-sm max-w-xl mx-auto">Practical step-by-step guides — government copy-paste nahi</p>
+            <span className="inline-block bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">🆕 Nayi Guides</span>
+            <h2 id="latest-heading" className="text-2xl md:text-3xl font-black text-[var(--color-text)] mb-2">ताज़ी जानकारी हिंदी में</h2>
+            <p className="text-[var(--color-text-muted)] text-sm max-w-xl mx-auto">Practical step-by-step guides — government copy-paste nahi</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-4xl mx-auto">
             {TOP_ARTICLES.map((a) => (
-              <Link 
-                key={a.slug} 
-                href={`/articles/${a.slug}`} 
-                className="group bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 no-underline h-full flex flex-col focus:ring-2 focus:ring-green-500 focus:outline-none"
+              <Link
+                key={a.slug}
+                href={`/articles/${a.slug}`}
+                className="group bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 no-underline h-full flex flex-col focus:ring-2 focus:ring-green-500 focus:outline-none"
                 aria-label={`Read article: ${a.title}`}
               >
                 <ArticleImage src={a.image} alt={a.title} emoji={a.emoji} />
                 <div className="p-4 flex-col flex-1">
                   <span className={`text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full self-start ${CAT_COLORS[a.category] ?? 'bg-gray-100 text-gray-600'}`}>{a.category}</span>
-                  <h3 className="font-bold text-gray-900 text-sm leading-snug mt-2 mb-1.5 group-hover:text-green-700 transition-colors">{a.title}</h3>
-                  <p className="text-gray-500 text-xs leading-relaxed mb-3 line-clamp-2">{a.desc}</p>
-                  <div className="flex items-center justify-between pt-2 border-t border-gray-100 mt-auto">
-                    <span className="text-[11px] text-gray-400">✍️ KisanStatus Team</span>
-                    <span className="text-xs font-bold text-green-600 group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">Padho →</span>
+                  <h3 className="font-bold text-[var(--color-text)] text-sm leading-snug mt-2 mb-1.5 group-hover:text-[var(--color-primary)] transition-colors">{a.title}</h3>
+                  <p className="text-[var(--color-text-muted)] text-xs leading-relaxed mb-3 line-clamp-2">{a.desc}</p>
+                  <div className="flex items-center justify-between pt-2 border-t border-[var(--color-border)] mt-auto">
+                    <span className="text-[11px] text-[var(--color-text-muted)]">✍️ KisanStatus Team</span>
+                    <span className="text-xs font-bold text-[var(--color-primary)] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">Padho →</span>
                   </div>
                 </div>
               </Link>
@@ -378,9 +364,9 @@ export default function HomeContent() {
           </div>
 
           <div className="text-center mt-10">
-            <Link 
-              href="/articles" 
-              className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-black px-8 py-3.5 rounded-xl text-sm transition-all hover:scale-105 shadow-lg shadow-green-600/30 focus:ring-2 focus:ring-green-300 focus:outline-none"
+            <Link
+              href="/articles"
+              className="inline-flex items-center gap-2 bg-[var(--color-primary)] hover:bg-[var(--color-primary-dark)] text-white font-black px-8 py-3.5 rounded-xl text-sm transition-all hover:scale-105 shadow-lg shadow-green-600/30 focus:ring-2 focus:ring-green-300 focus:outline-none"
               aria-label={`View all ${STATS.totalArticles} guides`}
             >
               📚 Saari {STATS.totalArticles} Guides Dekho
@@ -389,13 +375,13 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* AGRICULTURE IMAGE 2 - Optimized */}
-      <section className="py-14 bg-gradient-to-b from-amber-50 to-white" aria-labelledby="modern-heading">
+      {/* MODERN FARMING */}
+      <section className="py-14 bg-gradient-to-b from-amber-50 to-[var(--color-card)] dark:from-amber-950/20 dark:to-[var(--color-card)]" aria-labelledby="modern-heading">
         <div className="container-site px-4">
           <div className="text-center mb-10">
-            <span className="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">🚜 Modern Farming</span>
-            <h2 id="modern-heading" className="text-2xl md:text-3xl font-black text-gray-900 mb-2">Technology + Kheti</h2>
-            <p className="text-gray-500 text-sm max-w-xl mx-auto">PM Kisan ke saath modern farming se double income</p>
+            <span className="inline-block bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">🚜 Modern Farming</span>
+            <h2 id="modern-heading" className="text-2xl md:text-3xl font-black text-[var(--color-text)] mb-2">Technology + Kheti</h2>
+            <p className="text-[var(--color-text-muted)] text-sm max-w-xl mx-auto">PM Kisan ke saath modern farming se double income</p>
           </div>
 
           <div className="relative rounded-3xl overflow-hidden shadow-2xl max-w-5xl mx-auto mb-10">
@@ -412,21 +398,17 @@ export default function HomeContent() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" aria-hidden="true" />
             <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-white">
-                <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl">
-                  <div className="text-3xl mb-2" role="img" aria-hidden="true">📱</div>
-                  <div className="font-bold">Mobile Se Apply</div>
-                  <div className="text-xs opacity-90">Ghar baithe registration</div>
-                </div>
-                <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl">
-                  <div className="text-3xl mb-2" role="img" aria-hidden="true">🌐</div>
-                  <div className="font-bold">Online Status</div>
-                  <div className="text-xs opacity-90">Kabhi bhi check karo</div>
-                </div>
-                <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl">
-                  <div className="text-3xl mb-2" role="img" aria-hidden="true">💳</div>
-                  <div className="font-bold">Direct Bank</div>
-                  <div className="text-xs opacity-90">DBT se seedha account</div>
-                </div>
+                {[
+                  { icon: '📱', title: 'Mobile Se Apply', sub: 'Ghar baithe registration' },
+                  { icon: '🌐', title: 'Online Status', sub: 'Kabhi bhi check karo' },
+                  { icon: '💳', title: 'Direct Bank', sub: 'DBT se seedha account' },
+                ].map((item) => (
+                  <div key={item.title} className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl">
+                    <div className="text-3xl mb-2" role="img" aria-hidden="true">{item.icon}</div>
+                    <div className="font-bold">{item.title}</div>
+                    <div className="text-xs opacity-90">{item.sub}</div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -439,26 +421,22 @@ export default function HomeContent() {
               { icon: '📊', title: 'Market Price', desc: 'Mandi bhav jaano', color: 'bg-purple-500', href: '/articles/mandi-bhav-today' },
             ].map((feature) => (
               feature.href ? (
-                <Link 
+                <Link
                   key={feature.title}
                   href={feature.href}
-                  className="group bg-white rounded-2xl p-6 shadow-lg border-2 border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all block focus:ring-2 focus:ring-purple-500 focus:outline-none"
+                  className="group bg-[var(--color-card)] rounded-2xl p-6 shadow-lg border-2 border-[var(--color-border)] hover:shadow-xl hover:-translate-y-1 transition-all block focus:ring-2 focus:ring-purple-500 focus:outline-none"
                   aria-label={`${feature.title} - ${feature.desc}`}
                 >
-                  <div className={`${feature.color} w-14 h-14 rounded-2xl flex items-center justify-center text-3xl mb-4`} role="img" aria-hidden="true">
-                    {feature.icon}
-                  </div>
-                  <h3 className="font-bold text-gray-900 text-lg mb-2 group-hover:text-purple-700 transition-colors">{feature.title}</h3>
-                  <p className="text-gray-500 text-sm">{feature.desc}</p>
-                  <span className="inline-flex items-center gap-1 text-purple-600 text-sm font-bold mt-3 group-hover:translate-x-1 transition-transform">Dekho →</span>
+                  <div className={`${feature.color} w-14 h-14 rounded-2xl flex items-center justify-center text-3xl mb-4`} role="img" aria-hidden="true">{feature.icon}</div>
+                  <h3 className="font-bold text-[var(--color-text)] text-lg mb-2 group-hover:text-purple-700 dark:group-hover:text-purple-400 transition-colors">{feature.title}</h3>
+                  <p className="text-[var(--color-text-muted)] text-sm">{feature.desc}</p>
+                  <span className="inline-flex items-center gap-1 text-purple-600 dark:text-purple-400 text-sm font-bold mt-3 group-hover:translate-x-1 transition-transform">Dekho →</span>
                 </Link>
               ) : (
-                <div key={feature.title} className="bg-white rounded-2xl p-6 shadow-lg border-2 border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all">
-                  <div className={`${feature.color} w-14 h-14 rounded-2xl flex items-center justify-center text-3xl mb-4`} role="img" aria-hidden="true">
-                    {feature.icon}
-                  </div>
-                  <h3 className="font-bold text-gray-900 text-lg mb-2">{feature.title}</h3>
-                  <p className="text-gray-500 text-sm">{feature.desc}</p>
+                <div key={feature.title} className="bg-[var(--color-card)] rounded-2xl p-6 shadow-lg border-2 border-[var(--color-border)] hover:shadow-xl hover:-translate-y-1 transition-all">
+                  <div className={`${feature.color} w-14 h-14 rounded-2xl flex items-center justify-center text-3xl mb-4`} role="img" aria-hidden="true">{feature.icon}</div>
+                  <h3 className="font-bold text-[var(--color-text)] text-lg mb-2">{feature.title}</h3>
+                  <p className="text-[var(--color-text-muted)] text-sm">{feature.desc}</p>
                 </div>
               )
             ))}
@@ -468,13 +446,13 @@ export default function HomeContent() {
 
       {/* DISCLAIMER */}
       <div className="container-site pb-10 px-4">
-        <p className="text-center text-amber-700 bg-amber-50 border border-amber-200 rounded-xl px-4 py-3 text-xs max-w-2xl mx-auto" role="note">
+        <p className="text-center text-amber-700 bg-amber-50 border border-amber-200 dark:text-amber-300 dark:bg-amber-900/20 dark:border-amber-800 rounded-xl px-4 py-3 text-xs max-w-2xl mx-auto" role="note">
           ⚠️ <strong>Disclaimer:</strong> KisanStatus.com ek independent information portal hai. Yeh Government of India ya pmkisan.gov.in ka official platform nahi hai.
         </p>
       </div>
 
       {/* FAQ */}
       <FAQSection faqs={FAQS} />
-    </>
+    </div>
   );
 }
