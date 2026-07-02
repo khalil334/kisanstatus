@@ -4,11 +4,12 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { ARTICLES_MAP, ARTICLES, CATEGORIES, type ArticleMeta } from '@/lib/articles-data';
 
-// Ye domain har jagah use hota hai - SEO aur schema ke liye zaroori hai
+// Har jagah yeh domain reference use hota hai
+// Schema markup aur social sharing ke liye essential hai
 const DOMAIN = 'https://kisanstatus.com';
 
-// Har article ka apna OG image hai - social media sharing ke liye
-// Ye wala part thoda tricky hai - agar image missing hai to default use karo
+// OG images ka collection - social media previews ke liye
+// Agar kisi article ka image missing hai to default fallback use karo
 const ARTICLE_OG_IMAGES: Record<string, string> = {
   'kisan-credit-card-online-apply-2026':             '/images/kisan-credit-card-apply-2026.webp',
   'pm-kisan-23vi-kist-2026-status-check':            '/images/pm-kisan-23vi-kist-status-check-2026.webp',
@@ -39,8 +40,9 @@ const ARTICLE_OG_IMAGES: Record<string, string> = {
   'mandi-bhav-today':                                '/images/article/mandi-bhav-today.webp',
 };
 
-// Schema.org markup banane ka function - Google rich results ke liye zaroori hai
-// Ye wala part important hai SEO ke liye - bina iske Google article ko properly index nahi karta
+// Schema.org structured data generator
+// Search engines ko content samajhne mein help karta hai
+// Rich snippets aur featured snippets ke liye critical hai
 function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
   return [
     {
@@ -81,8 +83,9 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
   ];
 }
 
-// Loading skeleton - jab article load ho raha hota hai tab ye dikhta hai
-// User experience ke liye zaroori hai - blank screen se better hai
+// Skeleton loader component
+// Content load hone se pehle placeholder dikhata hai
+// Blank screen se better user experience deta hai
 function ArticleLoading() {
   return (
     <div className="container-site py-10 animate-pulse">
@@ -94,9 +97,10 @@ function ArticleLoading() {
   );
 }
 
-// Dynamic imports - articles heavy hote hain, isliye lazy loading kiya
-// Pehle sab ek saath load hote the - page slow ho jata tha
-// Ab sirf wahi article load hota hai jo user dekh raha hai
+// Lazy loading implementation
+// Heavy components ko zaroorat padne par hi load karo
+// Initial page load time significantly improve hota hai
+// Performance optimization ke liye standard practice hai
 const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> = {
   KisanCreditCardOnlineApply2026:             dynamic(() => import('@/components/articles/KisanCreditCardOnlineApply2026'),            { loading: ArticleLoading }),
   KisanRinKahaSeLe2026:                       dynamic(() => import('@/components/articles/KisanRinKahaSeLe2026'),                      { loading: ArticleLoading }),
@@ -127,16 +131,20 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   MandiBhavToday:                             dynamic(() => import('@/components/articles/MandiBhavContent'),                          { loading: ArticleLoading }),
 };
 
-// 24 ghante mein ek baar revalidate karo - daily updates ke liye
+// ISR (Incremental Static Regeneration) configuration
+// 24 hours mein ek baar content refresh hota hai
+// Fresh data aur fast loading ka balance maintain karta hai
 export const revalidate = 86400;
 
-// Static pages generate karo - build time par sab articles ke pages ban jayenge
+// Build time par sabhi article paths generate karo
+// Static site generation ke liye essential function
 export async function generateStaticParams() {
   return ARTICLES.map(a => ({ slug: a.slug }));
 }
 
-// Metadata generate karo - SEO ke liye sabse important part
-// Title, description, OG tags - sab yahan set hote hain
+// Dynamic metadata generator
+// SEO optimization ke liye critical component
+// Title, description, Open Graph tags - sab yahan configure hote hain
 export async function generateMetadata({
   params,
 }: {
@@ -145,7 +153,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const article = ARTICLES_MAP[slug];
   
-  // Article nahi mila to simple title return karo
+  // Fallback handling - agar content nahi mila to basic metadata return karo
   if (!article) return { title: 'Article Not Found' };
 
   const url = `${DOMAIN}/articles/${slug}`;
@@ -183,7 +191,8 @@ export async function generateMetadata({
   };
 }
 
-// Main page component - yahan article render hota hai
+// Main article page renderer
+// Dynamic routing aur component loading handle karta hai
 export default async function ArticlePage({
   params,
 }: {
@@ -192,12 +201,12 @@ export default async function ArticlePage({
   const { slug } = await params;
   const article = ARTICLES_MAP[slug];
   
-  // 404 handle karna zaroori hai warna Google penalty de sakta hai
+  // 404 error handling - search engine penalties se bachne ke liye critical
   if (!article) notFound();
 
   const ArticleComponent = COMPONENTS[article.component];
   
-  // Component nahi mila to bhi 404
+  // Component validation - agar missing hai to graceful degradation
   if (!ArticleComponent) notFound();
 
   const url = `${DOMAIN}/articles/${slug}`;
