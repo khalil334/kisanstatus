@@ -158,7 +158,6 @@ function SearchModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
   );
 }
 
-// ✅ NEW: Dark mode toggle component
 function ThemeToggle() {
   const [isDark, setIsDark] = useState(false);
 
@@ -285,18 +284,18 @@ export default function Header() {
     [isActive]
   );
 
-  const closeMobileMenu = useCallback(() => setMobileOpen(false), []);
-
   return (
     <>
       <SearchModal isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
 
-      {/* ✅ FIXED: Mobile menu backdrop */}
-      <div 
-        className={`mobile-menu-backdrop lg:hidden ${mobileOpen ? 'open' : ''}`}
-        onClick={closeMobileMenu}
-        aria-hidden="true"
-      />
+      {/* ✅ FIXED: Mobile backdrop with direct Tailwind */}
+      {mobileOpen && (
+        <div 
+          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+          onClick={() => setMobileOpen(false)}
+          aria-hidden="true"
+        />
+      )}
 
       <header
         className={`bg-[var(--color-card)] border-b border-[var(--color-border)] sticky top-0 z-50 transition-shadow ${
@@ -330,9 +329,7 @@ export default function Header() {
               )}
             </button>
 
-            {/* ✅ NEW: Dark mode toggle */}
             <ThemeToggle />
-
             <LanguageSwitcher />
             <a
               href="https://pmkisan.gov.in/BeneficiaryStatus.aspx"
@@ -356,7 +353,6 @@ export default function Header() {
               </svg>
             </button>
 
-            {/* ✅ NEW: Dark mode toggle (mobile) */}
             <ThemeToggle />
 
             <button
@@ -379,67 +375,69 @@ export default function Header() {
           </div>
         </div>
 
-        {/* ✅ FIXED: Using CSS classes from globals.css */}
-        <nav
-          id="mobile-menu"
-          className={`mobile-menu lg:hidden ${mobileOpen ? 'open' : ''}`}
-          aria-label="Mobile navigation"
-        >
-          <div className="px-4 py-3 bg-[var(--color-bg-alt)] border-b border-[var(--color-border)]">
-            <p className="text-xs font-bold text-[var(--color-text-muted)] uppercase mb-2">Quick Links</p>
-            <div className="grid grid-cols-2 gap-2">
-              {quickLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={closeMobileMenu}
-                  className="px-3 py-2 text-xs font-medium text-[var(--color-text)] bg-[var(--color-card)] rounded-lg hover:bg-[var(--color-bg-alt)] transition-colors flex items-center gap-1.5"
-                >
-                  <span aria-hidden="true">{link.emoji}</span>
-                  <span>{link.label}</span>
-                </Link>
-              ))}
+        {/* ✅ FIXED: Mobile menu with direct Tailwind - NO CSS class dependency */}
+        {mobileOpen && (
+          <nav
+            id="mobile-menu"
+            className="lg:hidden fixed top-16 right-0 w-80 max-w-[85vw] h-[calc(100vh-4rem)] bg-[var(--color-card)] border-l border-[var(--color-border)] shadow-2xl overflow-y-auto z-50"
+            aria-label="Mobile navigation"
+          >
+            <div className="px-4 py-3 bg-[var(--color-bg-alt)] border-b border-[var(--color-border)]">
+              <p className="text-xs font-bold text-[var(--color-text-muted)] uppercase mb-2">Quick Links</p>
+              <div className="grid grid-cols-2 gap-2">
+                {quickLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="px-3 py-2 text-xs font-medium text-[var(--color-text)] bg-[var(--color-card)] rounded-lg hover:bg-[var(--color-bg-alt)] transition-colors flex items-center gap-1.5"
+                  >
+                    <span aria-hidden="true">{link.emoji}</span>
+                    <span>{link.label}</span>
+                  </Link>
+                ))}
+              </div>
             </div>
-          </div>
 
-          <div className="py-2">
-            {navLinks.map((link) => {
-              const active = isActive(link.href);
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={closeMobileMenu}
-                  className={`block px-4 py-3 text-sm font-medium transition-colors ${
-                    active 
-                      ? 'text-[var(--color-primary)] bg-[var(--color-bg-alt)] border-l-4 border-[var(--color-primary)]' 
-                      : 'text-[var(--color-text)] hover:bg-[var(--color-bg-alt)]'
-                  }`}
-                  aria-current={active ? 'page' : undefined}
-                >
-                  {link.label}
-                </Link>
-              );
-            })}
-          </div>
-
-          <div className="px-4 py-3 border-t border-[var(--color-border)] bg-[var(--color-bg-alt)] space-y-3">
-            <div className="flex items-center justify-between">
-              <span className="text-xs text-[var(--color-text-muted)] font-medium">Language:</span>
-              <LanguageSwitcher />
+            <div className="py-2">
+              {navLinks.map((link) => {
+                const active = isActive(link.href);
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setMobileOpen(false)}
+                    className={`block px-4 py-3 text-sm font-medium transition-colors ${
+                      active 
+                        ? 'text-[var(--color-primary)] bg-[var(--color-bg-alt)] border-l-4 border-[var(--color-primary)]' 
+                        : 'text-[var(--color-text)] hover:bg-[var(--color-bg-alt)]'
+                    }`}
+                    aria-current={active ? 'page' : undefined}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
             </div>
-            <a
-              href="https://pmkisan.gov.in/BeneficiaryStatus.aspx"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={closeMobileMenu}
-              className="block w-full bg-[var(--color-primary)] hover:bg-[var(--color-primary-dark)] text-white text-center font-bold py-3 rounded-lg transition-colors shadow-sm"
-              aria-label="Check PM Kisan Status on official website"
-            >
-              Check Status on pmkisan.gov.in ↗
-            </a>
-          </div>
-        </nav>
+
+            <div className="px-4 py-3 border-t border-[var(--color-border)] bg-[var(--color-bg-alt)] space-y-3">
+              <div className="flex items-center justify-between">
+                <span className="text-xs text-[var(--color-text-muted)] font-medium">Language:</span>
+                <LanguageSwitcher />
+              </div>
+              <a
+                href="https://pmkisan.gov.in/BeneficiaryStatus.aspx"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileOpen(false)}
+                className="block w-full bg-[var(--color-primary)] hover:bg-[var(--color-primary-dark)] text-white text-center font-bold py-3 rounded-lg transition-colors shadow-sm"
+                aria-label="Check PM Kisan Status on official website"
+              >
+                Check Status on pmkisan.gov.in ↗
+              </a>
+            </div>
+          </nav>
+        )}
       </header>
     </>
   );
