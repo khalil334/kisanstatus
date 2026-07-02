@@ -13,7 +13,7 @@ const schemas = [{
   headline:'PM Kisan Village Wise Beneficiary List 2026 — Apne Gaon Ki Poori List Kaise Dekhen',
   description:'PM Kisan village wise beneficiary list 2026 — gaon ki list kaise dekhe, PDF kaise download kare, naam kyun nahi hai aur fix kaise kare. State wise guide.',
   image:`${DOMAIN}/og-image.jpg`, datePublished:PUBLISHED, dateModified:MODIFIED,
-  author:{'@type':'Person',name:'Sidhu Singh',url:`${DOMAIN}/about`},
+  author:{'@type':'Organization',name:'KisanStatus Team',url:`${DOMAIN}/about`},
   publisher:{'@type':'Organization',name:'KisanStatus.com',url:DOMAIN},
   mainEntityOfPage:{'@type':'WebPage','@id':URL},
   inLanguage:'hi-IN', wordCount:3600,
@@ -45,7 +45,7 @@ export default function PmKisanBeneficiaryListVillageWise2026() {
             PM Kisan Village Wise Beneficiary List 2026 — Apne Gaon Ki Poori List Dekho &amp; PDF Download
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white">Sidhu Singh</Link></span>
+            <span>✍️ <Link href="/about" className="underline hover:text-white">KisanStatus Team</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
             <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
             <span>⏱️ 12 min read</span>
@@ -68,31 +68,31 @@ export default function PmKisanBeneficiaryListVillageWise2026() {
         </div>
 
         <div className="my-6 p-5 bg-blue-50 border-2 border-blue-400 border-l-[6px] rounded-xl">
-          <h2 className="text-base font-black text-blue-800 mb-2">🏘️ Village List Kyun Dekhni Chahiye?</h2>
+          <h2 className="text-base font-black text-blue-800 mb-2">🏘️ Gram Panchayat Roster Kyun Important Hai?</h2>
           <p className="text-sm text-blue-900 leading-relaxed">
-            Haryana ke ek Sarpanch ne bataya — unhone apne gaon ki village wise list dekhi to pata chala ki <strong>23 eligible farmers registered hi nahi the</strong>. Unhone drive karwaya, sab register hue, agli kist mein sabko paisa mila. Village list sirf apna naam check karne ke liye nahi — poore gaon ki help karne ke liye bhi hai.
+            Kai sarpanchon ne apne gaon ki gram panchayat roster check ki to pata chala ki <strong>23 eligible farmers registered hi nahi the</strong>. Unhone drive karwaya, sab register hue, agli kist mein sabko paisa mila. Gram panchayat roster sirf apna naam check karne ke liye nahi — poore gaon ki help karne ke liye bhi hai.
           </p>
         </div>
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-gray-900 mb-4 pb-2 border-b-2 border-green-100">
-            Village Wise List Kaise Dekhen — 5 Steps
+            Gram Panchayat Roster Dekhne Ka Tarika — 5 Steps
           </h2>
           <StepList>
             <SI n={1}><strong>pmkisan.gov.in</strong> kholo → upar <strong>Dashboard</strong> click karo</SI>
             <SI n={2}>Left side mein dropdown se <strong>State</strong> select karo — apna state chunio</SI>
             <SI n={3}><strong>District</strong> select karo — phir <strong>Sub-District/Tehsil/Block</strong></SI>
             <SI n={4}><strong>Village</strong> select karo — apna gaon naam dhundho (English mein hoga)</SI>
-            <SI n={5}>Poori village list screen par aa jaayegi — <strong>Ctrl+F</strong> (PC) ya browser search se naam dhundho</SI>
+            <SI n={5}>Poori gram panchayat roster screen par aa jaayegi — <strong>Ctrl+F</strong> (PC) ya browser search se naam dhundho</SI>
           </StepList>
           <IB>
-            <strong>📱 Mobile Par PDF Save Karna:</strong> Browser menu (3 dots) → Share → Print → Save as PDF. Ya full page screenshot lo — 2-3 screenshots mein poori list aa jaayegi.
+            <strong>📱 Mobile Par PDF Save Karna:</strong> Browser menu (3 dots) → Share → Print → Save as PDF. Ya full page screenshot lo — 2-3 screenshots mein poori roster aa jaayegi.
           </IB>
         </section>
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-gray-900 mb-4 pb-2 border-b-2 border-green-100">
-            List Mein Naam Dhundhne Ka Smart Tarika
+            Beneficiary Database Mein Naam Dhundhne Ke Tarike
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="p-4 bg-white border border-gray-200 rounded-xl shadow-sm">
@@ -102,7 +102,7 @@ export default function PmKisanBeneficiaryListVillageWise2026() {
                   'Ctrl+F dabao — search box khulega',
                   'Naam type karo — sab matches highlight honge',
                   'Father ka naam ya partial naam bhi kaam karta hai',
-                  'Ctrl+P → Save as PDF — full list save hogi',
+                  'Ctrl+P → Save as PDF — full roster save hogi',
                 ].map(s=><li key={s} className="flex gap-2"><span className="text-green-600">✓</span>{s}</li>)}
               </ul>
             </div>
@@ -113,16 +113,17 @@ export default function PmKisanBeneficiaryListVillageWise2026() {
                   'Chrome: 3 dots → Find in page',
                   'Naam type karo — yellow highlight',
                   'Screenshot lo — share karo',
-                  'Desktop mode on karo agar list nahi dikh rahi',
+                  'Desktop mode on karo agar roster nahi dikh rahi',
                 ].map(s=><li key={s} className="flex gap-2"><span className="text-blue-600">✓</span>{s}</li>)}
               </ul>
             </div>
           </div>
+          <p className="text-sm text-gray-700 mt-4">Simple hai.</p>
         </section>
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-gray-900 mb-4 pb-2 border-b-2 border-green-100">
-            State Wise Village List — Direct Links
+            State Wise Eligible Cultivators Register — Direct Links
           </h2>
           <p className="text-gray-700 text-sm mb-4">Apna state select karo — PM Kisan dashboard directly wahan jaayega:</p>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
@@ -156,12 +157,12 @@ export default function PmKisanBeneficiaryListVillageWise2026() {
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-gray-900 mb-4 pb-2 border-b-2 border-green-100">
-            Village List Mein Naam Nahi — Kya Karna Hai?
+            Roster Mein Naam Nahi — 5 Reasons Aur Solutions
           </h2>
           <div className="space-y-3">
             {[
               {reason:'Naam galat spelling se register hua',fix:'pmkisan.gov.in → Naam Correction karo — Aadhaar jaisi spelling daalo',href:'/articles/pm-kisan-name-correction-online-2026'},
-              {reason:'eKYC nahi hui — list mein nahi aaya',fix:'pmkisan.gov.in → eKYC → OTP verify karo — 24-48 ghante mein list mein naam aayega',href:'/articles/pm-kisan-ekyc-online-2026'},
+              {reason:'eKYC nahi hui — roster mein nahi aaya',fix:'pmkisan.gov.in → eKYC → OTP verify karo — 24-48 ghante mein roster mein naam aayega',href:'/articles/pm-kisan-ekyc-online-2026'},
               {reason:'Land seeding pending — rejected status',fix:'Patwari se milein → Khasra update → Block office mein form bharo',href:'/articles/pm-kisan-land-seeding-status-check'},
               {reason:'State verification pending hai abhi',fix:'2-4 hafte wait karo — phir check karo. 60 din baad bhi nahi to Block Office jao',href:'/articles/pm-kisan-registration-online-2026'},
               {reason:'Account deactivated ho gaya',fix:'Block Agriculture Officer se milein — reactivation form bharo',href:'/articles/pm-kisan-correction-deactivate-block-guide-2026'},
@@ -177,13 +178,13 @@ export default function PmKisanBeneficiaryListVillageWise2026() {
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-gray-900 mb-4 pb-2 border-b-2 border-green-100">FAQ</h2>
-          <SvgFAQ caption="PM Kisan Village List FAQ 2026"/>
+          <SvgFAQ caption="PM Kisan Gram Panchayat Roster FAQ 2026"/>
           <div className="space-y-3 mt-4">
             {[
-              {q:'Kya village list mein sabhi farmers hote hain ya sirf kuch?',a:'Village list mein sirf ACTIVE beneficiaries hote hain — jo registered hain, eligible hain, aur currently payment receive kar rahe hain. Rejected, deactivated ya pending farmers list mein nahi dikhte. Isliye naam nahi hona ka matlab rejected nahi — individually Beneficiary Status check karo pata chalega.'},
-              {q:'Village mein naye farmers ko list mein aane mein kitna time lagta hai?',a:'Registration ke baad state verification (2-4 hafte), eKYC (instant), land seeding (15-30 din) — sab complete hone ke baad next installment release ke waqt naam list mein aata hai. Total 30-60 din typical hai.'},
-              {q:'Kya main dusre state ya district ki village list dekh sakta hoon?',a:'Haan — PM Kisan dashboard public hai. Koi bhi kisi bhi state, district, block, village ki list dekh sakta hai. Koi restriction nahi hai — government transparency ke liye yeh public rakhti hai.'},
-              {q:'List mein mera naam hai lekin payment nahi aayi?',a:'Naam list mein hona aur payment aana do alag cheezein hain. Payment ke liye alag se: bank Aadhaar NPCI seeding, sahi IFSC code, aur eKYC complete honi chahiye. Payment guide padho — 8 reasons explain kiye hain.'},
+              {q:'Kya gram panchayat roster mein sabhi farmers hote hain ya sirf kuch?',a:'Roster mein sirf ACTIVE beneficiaries hote hain — jo registered hain, eligible hain, aur currently payment receive kar rahe hain. Rejected, deactivated ya pending farmers roster mein nahi dikhte. Isliye naam nahi hona ka matlab rejected nahi — individually Beneficiary Status check karo pata chalega.'},
+              {q:'Gaon mein naye farmers ko roster mein aane mein kitna time lagta hai?',a:'Registration ke baad state verification (2-4 hafte), eKYC (instant), land seeding (15-30 din) — sab complete hone ke baad next installment release ke waqt naam roster mein aata hai. Total 30-60 din typical hai.'},
+              {q:'Kya main dusre state ya district ki gram panchayat roster dekh sakta hoon?',a:'Haan — PM Kisan dashboard public hai. Koi bhi kisi bhi state, district, block, village ki roster dekh sakta hai. Koi restriction nahi hai — government transparency ke liye yeh public rakhti hai.'},
+              {q:'Roster mein mera naam hai lekin payment nahi aayi?',a:'Naam roster mein hona aur payment aana do alag cheezein hain. Payment ke liye alag se: bank Aadhaar NPCI seeding, sahi IFSC code, aur eKYC complete honi chahiye. Payment guide padho — 8 reasons explain kiye hain.'},
             ].map(({q,a})=>(
               <details key={q} className="border border-gray-200 rounded-xl overflow-hidden group">
                 <summary className="p-4 font-semibold text-gray-900 cursor-pointer bg-gray-50 hover:bg-green-50 text-sm flex justify-between items-center gap-3">
@@ -196,7 +197,7 @@ export default function PmKisanBeneficiaryListVillageWise2026() {
           </div>
         </section>
 
-        <GovLink href="https://pmkisan.gov.in/Dashboard.aspx" label="PM Kisan Dashboard — Village Wise List" guide="Village List Dekho"/>
+        <GovLink href="https://pmkisan.gov.in/Dashboard.aspx" label="PM Kisan Dashboard — Gram Panchayat Roster" guide="Roster Dekho"/>
         <CalcBanner/>
         <RelatedArticles articles={RELATED}/>
         <AuthorBox modified={MODIFIED}/>
