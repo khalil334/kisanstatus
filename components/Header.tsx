@@ -89,9 +89,9 @@ function SearchModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
     <div className="fixed inset-0 z-[60]" role="dialog" aria-modal="true" aria-label="Search articles">
       <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
       <div className="relative max-w-lg mx-auto mt-20 md:mt-32 px-4">
-        <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-green-200">
-          <div className="flex items-center gap-3 px-4 py-3 border-b border-gray-100 bg-green-50">
-            <svg className="w-5 h-5 text-green-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div className="bg-[var(--color-card)] rounded-2xl shadow-2xl overflow-hidden border border-[var(--color-border)]">
+          <div className="flex items-center gap-3 px-4 py-3 border-b border-[var(--color-border)] bg-[var(--color-bg-alt)]">
+            <svg className="w-5 h-5 text-[var(--color-primary)] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
             <input
@@ -100,9 +100,9 @@ function SearchModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search karo... e.g. eKYC, payment, loan"
-              className="flex-1 bg-transparent text-sm font-medium text-gray-900 placeholder-gray-400 outline-none"
+              className="flex-1 bg-transparent text-sm font-medium text-[var(--color-text)] placeholder-[var(--color-text-muted)] outline-none"
             />
-            <button onClick={onClose} className="text-gray-400 hover:text-gray-600 text-xs font-bold px-2 py-1 rounded bg-gray-100 hover:bg-gray-200 transition-colors">
+            <button onClick={onClose} className="text-[var(--color-text-muted)] hover:text-[var(--color-text)] text-xs font-bold px-2 py-1 rounded bg-[var(--color-bg-alt)] hover:bg-[var(--color-border)] transition-colors">
               ESC
             </button>
           </div>
@@ -111,15 +111,15 @@ function SearchModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
             {!query.trim() && (
               <div className="p-6 text-center">
                 <span className="text-3xl block mb-2">🔍</span>
-                <p className="text-sm text-gray-500">Type karke search karo — articles, guides, calculators</p>
+                <p className="text-sm text-[var(--color-text-muted)]">Type karke search karo — articles, guides, calculators</p>
               </div>
             )}
 
             {query.trim() && results.length === 0 && (
               <div className="p-6 text-center">
                 <span className="text-3xl block mb-2">😕</span>
-                <p className="text-sm text-gray-500">"<strong>{query}</strong>" ke liye kuch nahi mila</p>
-                <Link href="/articles" onClick={onClose} className="text-green-700 text-xs font-bold mt-2 inline-block hover:underline">
+                <p className="text-sm text-[var(--color-text-muted)]">"<strong>{query}</strong>" ke liye kuch nahi mila</p>
+                <Link href="/articles" onClick={onClose} className="text-[var(--color-primary)] text-xs font-bold mt-2 inline-block hover:underline">
                   Saare Articles Dekho →
                 </Link>
               </div>
@@ -130,31 +130,83 @@ function SearchModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
                 key={item.slug}
                 href={`/articles/${item.slug}`}
                 onClick={onClose}
-                className="flex items-center gap-3 px-4 py-3 hover:bg-green-50 transition-colors border-b border-gray-50 last:border-0 group"
+                className="flex items-center gap-3 px-4 py-3 hover:bg-[var(--color-bg-alt)] transition-colors border-b border-[var(--color-border)] last:border-0 group"
               >
                 <span className="text-xl shrink-0">{item.emoji}</span>
                 <div className="min-w-0 flex-1">
-                  <p className="text-sm font-bold text-gray-900 group-hover:text-green-700 transition-colors truncate">
+                  <p className="text-sm font-bold text-[var(--color-text)] group-hover:text-[var(--color-primary)] transition-colors truncate">
                     {item.title}
                   </p>
-                  <p className="text-[10px] text-gray-400 font-medium uppercase tracking-wide">{item.category}</p>
+                  <p className="text-[10px] text-[var(--color-text-muted)] font-medium uppercase tracking-wide">{item.category}</p>
                 </div>
-                <span className="text-green-600 opacity-0 group-hover:opacity-100 transition-opacity shrink-0 text-xs font-bold">→</span>
+                <span className="text-[var(--color-primary)] opacity-0 group-hover:opacity-100 transition-opacity shrink-0 text-xs font-bold">→</span>
               </Link>
             ))}
           </div>
 
-          <div className="px-4 py-2 bg-gray-50 border-t border-gray-100 flex items-center justify-between">
-            <span className="text-[10px] text-gray-400">
+          <div className="px-4 py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)] flex items-center justify-between">
+            <span className="text-[10px] text-[var(--color-text-muted)]">
               {query.trim() ? `${results.length} results` : `${ARTICLES.length} articles available`}
             </span>
-            <Link href="/articles" onClick={onClose} className="text-[10px] text-green-700 font-bold hover:underline">
+            <Link href="/articles" onClick={onClose} className="text-[10px] text-[var(--color-primary)] font-bold hover:underline">
               View All Articles →
             </Link>
           </div>
         </div>
       </div>
     </div>
+  );
+}
+
+// ✅ NEW: Dark mode toggle component
+function ThemeToggle() {
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const stored = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (stored === 'dark' || (!stored && prefersDark)) {
+      document.documentElement.classList.add('dark');
+      setIsDark(true);
+    } else if (stored === 'light') {
+      document.documentElement.classList.add('light');
+      setIsDark(false);
+    }
+  }, []);
+
+  const toggle = () => {
+    const html = document.documentElement;
+    if (isDark) {
+      html.classList.remove('dark');
+      html.classList.add('light');
+      localStorage.setItem('theme', 'light');
+      setIsDark(false);
+    } else {
+      html.classList.remove('light');
+      html.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+      setIsDark(true);
+    }
+  };
+
+  return (
+    <button
+      onClick={toggle}
+      className="theme-toggle"
+      aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+      title={isDark ? 'Light Mode' : 'Dark Mode'}
+    >
+      {isDark ? (
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+      ) : (
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        </svg>
+      )}
+    </button>
   );
 }
 
@@ -220,7 +272,9 @@ export default function Header() {
             key={link.href}
             href={link.href}
             className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
-              active ? 'text-green-700 bg-green-50' : 'text-gray-700 hover:text-green-700 hover:bg-green-50'
+              active 
+                ? 'text-[var(--color-primary)] bg-[var(--color-bg-alt)]' 
+                : 'text-[var(--color-text)] hover:text-[var(--color-primary)] hover:bg-[var(--color-bg-alt)]'
             }`}
             aria-current={active ? 'page' : undefined}
           >
@@ -237,8 +291,15 @@ export default function Header() {
     <>
       <SearchModal isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
 
+      {/* ✅ FIXED: Mobile menu backdrop */}
+      <div 
+        className={`mobile-menu-backdrop lg:hidden ${mobileOpen ? 'open' : ''}`}
+        onClick={closeMobileMenu}
+        aria-hidden="true"
+      />
+
       <header
-        className={`bg-white border-b border-green-100 sticky top-0 z-50 transition-shadow ${
+        className={`bg-[var(--color-card)] border-b border-[var(--color-border)] sticky top-0 z-50 transition-shadow ${
           scrolled ? 'shadow-md' : 'shadow-sm'
         }`}
         role="banner"
@@ -255,7 +316,7 @@ export default function Header() {
           <div className="hidden lg:flex items-center gap-2">
             <button
               onClick={() => setSearchOpen(true)}
-              className="flex items-center gap-2 px-3 py-2 text-sm text-gray-500 bg-gray-50 border border-gray-200 rounded-lg hover:bg-green-50 hover:text-green-700 hover:border-green-200 transition-all"
+              className="flex items-center gap-2 px-3 py-2 text-sm text-[var(--color-text-muted)] bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-lg hover:bg-[var(--color-primary-light)] hover:text-[var(--color-primary)] hover:border-[var(--color-primary)] transition-all"
               aria-label="Search articles"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -263,18 +324,21 @@ export default function Header() {
               </svg>
               <span className="font-medium">Search</span>
               {shortcutKey && (
-                <kbd className="hidden xl:inline-flex text-[10px] font-mono text-gray-400 bg-white border border-gray-200 rounded px-1.5 py-0.5 ml-1">
+                <kbd className="hidden xl:inline-flex text-[10px] font-mono text-[var(--color-text-muted)] bg-[var(--color-card)] border border-[var(--color-border)] rounded px-1.5 py-0.5 ml-1">
                   {shortcutKey}
                 </kbd>
               )}
             </button>
+
+            {/* ✅ NEW: Dark mode toggle */}
+            <ThemeToggle />
 
             <LanguageSwitcher />
             <a
               href="https://pmkisan.gov.in/BeneficiaryStatus.aspx"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-600 hover:bg-green-500 text-white text-sm font-bold px-5 py-2.5 rounded-lg transition-colors shadow-sm hover:shadow-md"
+              className="bg-[var(--color-primary)] hover:bg-[var(--color-primary-dark)] text-white text-sm font-bold px-5 py-2.5 rounded-lg transition-colors shadow-sm hover:shadow-md"
               aria-label="Check PM Kisan Status on official website"
             >
               Check Status ↗
@@ -284,7 +348,7 @@ export default function Header() {
           <div className="flex lg:hidden items-center gap-1">
             <button
               onClick={() => setSearchOpen(true)}
-              className="p-2 text-gray-700 hover:bg-green-50 rounded-lg transition-colors"
+              className="p-2 text-[var(--color-text)] hover:bg-[var(--color-bg-alt)] rounded-lg transition-colors"
               aria-label="Search articles"
             >
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -292,8 +356,11 @@ export default function Header() {
               </svg>
             </button>
 
+            {/* ✅ NEW: Dark mode toggle (mobile) */}
+            <ThemeToggle />
+
             <button
-              className="p-2 text-gray-700 hover:bg-green-50 rounded-lg transition-colors"
+              className="p-2 text-[var(--color-text)] hover:bg-[var(--color-bg-alt)] rounded-lg transition-colors"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={mobileOpen}
@@ -312,66 +379,67 @@ export default function Header() {
           </div>
         </div>
 
-        {mobileOpen && (
-          <nav
-            id="mobile-menu"
-            className="lg:hidden border-t border-green-100 bg-white max-h-[calc(100vh-4rem)] overflow-y-auto"
-            aria-label="Mobile navigation"
-          >
-            <div className="px-4 py-3 bg-green-50 border-b border-green-100">
-              <p className="text-xs font-bold text-gray-500 uppercase mb-2">Quick Links</p>
-              <div className="grid grid-cols-2 gap-2">
-                {quickLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    onClick={closeMobileMenu}
-                    className="px-3 py-2 text-xs font-medium text-gray-700 bg-white rounded-lg hover:bg-green-50 transition-colors flex items-center gap-1.5"
-                  >
-                    <span aria-hidden="true">{link.emoji}</span>
-                    <span>{link.label}</span>
-                  </Link>
-                ))}
-              </div>
+        {/* ✅ FIXED: Using CSS classes from globals.css */}
+        <nav
+          id="mobile-menu"
+          className={`mobile-menu lg:hidden ${mobileOpen ? 'open' : ''}`}
+          aria-label="Mobile navigation"
+        >
+          <div className="px-4 py-3 bg-[var(--color-bg-alt)] border-b border-[var(--color-border)]">
+            <p className="text-xs font-bold text-[var(--color-text-muted)] uppercase mb-2">Quick Links</p>
+            <div className="grid grid-cols-2 gap-2">
+              {quickLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={closeMobileMenu}
+                  className="px-3 py-2 text-xs font-medium text-[var(--color-text)] bg-[var(--color-card)] rounded-lg hover:bg-[var(--color-bg-alt)] transition-colors flex items-center gap-1.5"
+                >
+                  <span aria-hidden="true">{link.emoji}</span>
+                  <span>{link.label}</span>
+                </Link>
+              ))}
             </div>
+          </div>
 
-            <div className="py-2">
-              {navLinks.map((link) => {
-                const active = isActive(link.href);
-                return (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    onClick={closeMobileMenu}
-                    className={`block px-4 py-3 text-sm font-medium transition-colors ${
-                      active ? 'text-green-700 bg-green-50 border-l-4 border-green-700' : 'text-gray-700 hover:bg-green-50'
-                    }`}
-                    aria-current={active ? 'page' : undefined}
-                  >
-                    {link.label}
-                  </Link>
-                );
-              })}
-            </div>
+          <div className="py-2">
+            {navLinks.map((link) => {
+              const active = isActive(link.href);
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={closeMobileMenu}
+                  className={`block px-4 py-3 text-sm font-medium transition-colors ${
+                    active 
+                      ? 'text-[var(--color-primary)] bg-[var(--color-bg-alt)] border-l-4 border-[var(--color-primary)]' 
+                      : 'text-[var(--color-text)] hover:bg-[var(--color-bg-alt)]'
+                  }`}
+                  aria-current={active ? 'page' : undefined}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+          </div>
 
-            <div className="px-4 py-3 border-t border-green-100 bg-gray-50 space-y-3">
-              <div className="flex items-center justify-between">
-                <span className="text-xs text-gray-600 font-medium">Language:</span>
-                <LanguageSwitcher />
-              </div>
-              <a
-                href="https://pmkisan.gov.in/BeneficiaryStatus.aspx"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={closeMobileMenu}
-                className="block w-full bg-green-600 hover:bg-green-500 text-white text-center font-bold py-3 rounded-lg transition-colors shadow-sm"
-                aria-label="Check PM Kisan Status on official website"
-              >
-                Check Status on pmkisan.gov.in ↗
-              </a>
+          <div className="px-4 py-3 border-t border-[var(--color-border)] bg-[var(--color-bg-alt)] space-y-3">
+            <div className="flex items-center justify-between">
+              <span className="text-xs text-[var(--color-text-muted)] font-medium">Language:</span>
+              <LanguageSwitcher />
             </div>
-          </nav>
-        )}
+            <a
+              href="https://pmkisan.gov.in/BeneficiaryStatus.aspx"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={closeMobileMenu}
+              className="block w-full bg-[var(--color-primary)] hover:bg-[var(--color-primary-dark)] text-white text-center font-bold py-3 rounded-lg transition-colors shadow-sm"
+              aria-label="Check PM Kisan Status on official website"
+            >
+              Check Status on pmkisan.gov.in ↗
+            </a>
+          </div>
+        </nav>
       </header>
     </>
   );
