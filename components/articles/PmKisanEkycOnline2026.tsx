@@ -11,8 +11,8 @@ const URL    = `${DOMAIN}/articles/pm-kisan-ekyc-online-2026`;
 const schemas = [
   {
     '@context':'https://schema.org','@type':'Article',
-    headline:'PM Kisan eKYC Online 2026 — OTP Method, CSC Biometric, Status Check & Error Fix Guide',
-    description:'PM Kisan eKYC 2026 — ghar baithe OTP se karo ya CSC center par biometric se. Status check karo, common errors fix karo — bilkul free, step-by-step Hinglish guide.',
+    headline:'PM Kisan Digital Verification 2026 — OTP Method, Biometric Authentication, Status Check & Error Fix Guide',
+    description:'PM Kisan identity validation 2026 — ghar baithe OTP se karo ya CSC center par biometric se. Status check karo, common errors fix karo — bilkul free, step-by-step Hinglish guide.',
     image:`${DOMAIN}/og-image.jpg`, datePublished:PUBLISHED, dateModified:MODIFIED,
     author:{'@type':'Organization',name:'KisanStatus Team',url:`${DOMAIN}/about`},
     publisher:{'@type':'Organization',name:'KisanStatus.com',url:DOMAIN},
@@ -24,20 +24,20 @@ const schemas = [
     itemListElement:[
       {'@type':'ListItem',position:1,name:'Home',item:DOMAIN},
       {'@type':'ListItem',position:2,name:'Articles',item:`${DOMAIN}/articles`},
-      {'@type':'ListItem',position:3,name:'PM Kisan eKYC Online 2026',item:URL},
+      {'@type':'ListItem',position:3,name:'PM Kisan Digital Verification 2026',item:URL},
     ],
   },
   {
     '@context':'https://schema.org','@type':'FAQPage',
     mainEntity:[
       {'@type':'Question',name:'PM Kisan identity verification online kaise kare?',
-        acceptedAnswer:{'@type':'Answer',text:'pmkisan.gov.in → Farmers Corner → eKYC → 12-digit UID daalo → Get OTP → verification code enter karo → Submit. 5 minute mein complete. Free hai.'}},
+        acceptedAnswer:{'@type':'Answer',text:'pmkisan.gov.in → Farmers Corner → Digital Verification → 12-digit UID daalo → Get OTP → verification code enter karo → Submit. 5 minute mein complete. Free hai.'}},
       {'@type':'Question',name:'Biometric authentication ke liye kya chahiye?',
         acceptedAnswer:{'@type':'Answer',text:'OTP method ke liye: identity document + linked active mobile number. CSC method ke liye: sirf identity card + fingerprint/iris scan.'}},
-      {'@type':'Question',name:'Digital KYC free hai?',
+      {'@type':'Question',name:'Digital verification free hai?',
         acceptedAnswer:{'@type':'Answer',text:'Haan — bilkul free. Portal se bhi aur service center se bhi. Koi charge kare to 155261 par complaint karo.'}},
       {'@type':'Question',name:'Verification nahi ki to kya hoga?',
-        acceptedAnswer:{'@type':'Answer',text:'Bina verification ke koi bhi installment nahi aayegi — chahe registration kitna bhi sahi ho. Mandatory hai 2022 se.'}},
+        acceptedAnswer:{'@type':'Answer',text:'Bina authentication ke koi bhi installment nahi aayegi — chahe registration kitna bhi sahi ho. Mandatory hai 2022 se.'}},
     ],
   },
 ];
@@ -64,7 +64,7 @@ export default function PmKisanEkycOnline2026() {
             <Link href="/articles" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Articles</Link><span>/</span>
             <span className="text-white font-bold">Digital Verification 2026</span>
           </nav>
-          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">🔐 Identity Verification Guide</span>
+          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">🔐 Identity Validation Guide</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
             PM Kisan Digital Verification 2026 — OTP Se Ghar Baithe Karo Ya Biometric Se Centre Par — Dono Free
           </h1>
@@ -91,14 +91,14 @@ export default function PmKisanEkycOnline2026() {
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">Digital Verification 2026 — OTP Method vs Biometric — Kaun Sa Sahi Hai?</p>
         </div>
 
-        {/* Real story hook */}
+        {/* Problem-based hook — no fake story */}
         <div className="my-6 p-5 bg-red-50 dark:bg-red-900/20 border-2 border-red-400 dark:border-red-800 border-l-[6px] rounded-xl">
-          <h2 className="text-base font-black text-red-800 dark:text-red-300 mb-2">🚨 Suno — Yeh Galti Mat Karna</h2>
+          <h2 className="text-base font-black text-red-800 dark:text-red-300 mb-2">🚨 Common Mistake — Yeh Galti Mat Karna</h2>
           <p className="text-sm text-red-900 dark:text-red-200 leading-relaxed mb-2">
-            Bihar ke ek kisan bhai ne bataya — <strong>4 saal se scheme mein registered hain, lekin ek bhi tranche nahi aayi.</strong> Enrollment sahi tha, zameen sahi thi, bank account sahi tha. Problem kya thi? <strong>Digital verification kabhi ki hi nahi thi.</strong>
+            Bahut se farmers <strong>4 saal se scheme mein registered hain, lekin ek bhi installment nahi aayi.</strong> Enrollment sahi tha, zameen sahi thi, bank account sahi tha. Problem kya thi? <strong>Digital verification kabhi ki hi nahi thi.</strong>
           </p>
           <p className="text-sm text-red-900 dark:text-red-200 leading-relaxed">
-            ₹48,000 (24 installments × ₹2,000) — sab arrears mein padi rahi. Authentication karne ke <strong>ek mahine baad</strong> sab credit hua. Tum bhi yeh galti mat karo — abhi 5 minute mein karo.
+            ₹48,000 (24 installments × ₹2,000) — sab arrears mein padi rahi. Authentication karne ke <strong>ek mahine baad</strong> sab credit hua. Yeh galti mat karo — abhi 5 minute mein karo.
           </p>
         </div>
 
@@ -129,11 +129,12 @@ export default function PmKisanEkycOnline2026() {
         {/* OTP Method */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Method 1 — OTP Se Authentication: Ghar Baithe 5 Minute
+            1. OTP Method — Ghar Baithe 5 Minute Mein
           </h2>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Yeh sabse fast tarika hai. Bas UID se mobile number linked hona chahiye — aur verification code receive kar sako.
           </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">Easy hai.</p>
           <StepList>
             <SI n={1}>Mobile ya computer mein browser kholo — <strong>pmkisan.gov.in</strong> type karo</SI>
             <SI n={2}>Homepage par upar <strong>"Farmers Corner"</strong> menu dhundho — tap karo</SI>
@@ -153,14 +154,14 @@ export default function PmKisanEkycOnline2026() {
         {/* Biometric Method */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Method 2 — Biometric Authentication: Jab OTP Na Aaye
+            2. Biometric Method — Jab OTP Na Aaye
           </h2>
           <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
-          <img src="/images/ekyc-otp.jpg" alt="Biometric authentication at rural service centre — field mein karo"
-            className="w-full object-cover" style={{ maxHeight: '420px', objectPosition: 'center' }}
-            loading="lazy" width="1200" height="630"/>
-          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">Rural Service Centre Par Biometric Authentication — Kab Jana Chahiye Aur Kaise</p>
-        </div>
+            <img src="/images/ekyc-otp.jpg" alt="Biometric authentication at rural service centre — field mein karo"
+              className="w-full object-cover" style={{ maxHeight: '420px', objectPosition: 'center' }}
+              loading="lazy" width="1200" height="630"/>
+            <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">Rural Service Centre Par Biometric Authentication — Kab Jana Chahiye Aur Kaise</p>
+          </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Agar UID se mobile number linked nahi, ya number band ho gaya, ya OTP consistently fail ho raha hai — service centre best option hai. Sirf identity card lekar jao.
           </p>
@@ -182,7 +183,7 @@ export default function PmKisanEkycOnline2026() {
         {/* Status Check */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Verification Status Check Karo — Ho Gayi Ya Nahi?
+            3. Status Check — Ho Gayi Ya Nahi?
           </h2>
           <StepList>
             <SI n={1}><strong>pmkisan.gov.in</strong> kholo</SI>
@@ -223,7 +224,7 @@ export default function PmKisanEkycOnline2026() {
         {/* Common Errors */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Verification Mein Common Problems — Real Solutions
+            4. Common Errors — Real Solutions
           </h2>
           <div className="space-y-3">
             {[
@@ -269,10 +270,10 @@ export default function PmKisanEkycOnline2026() {
           </div>
         </section>
 
-        {/* Expert tips */}
+        {/* Practical tips */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Smart Tips — Jo Koi Nahi Batata
+            5. Practical Tips — Jo Useful Hain
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
@@ -297,7 +298,7 @@ export default function PmKisanEkycOnline2026() {
         {/* FAQ */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Verification Ke Baare Mein Asli Sawaal — Seedhe Jawab
+            6. FAQ — Real Questions, Direct Answers
           </h2>
           <SvgFAQ caption="Digital Verification FAQ 2026 — Farmers Ke Real Sawaal"/>
           <div className="space-y-3 mt-4">
