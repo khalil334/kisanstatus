@@ -8,7 +8,7 @@ export default function PmfbyCropInsurance2026() {
         <div className="my-6 rounded-2xl overflow-hidden border border-green-100 shadow-md">
           <img 
             src="/images/articles/pmfby-crop-insurance-2026/hero-image.webp" 
-            alt="Fasal Bima Yojana 2026 — Fasal Kharab Ho To Muawza Kaise Paayein" 
+            alt="Agricultural Risk Protection Protocol 2026 — Fasal Kharab Ho To Financial Relief Kaise Paayein" 
             className="w-full object-cover"
             style={{ maxHeight: '420px', objectPosition: 'center' }}
             loading="eager" 
@@ -16,28 +16,28 @@ export default function PmfbyCropInsurance2026() {
             height="630"
           />
           <p className="text-center text-xs text-gray-500 py-2 bg-green-50 border-t border-green-100">
-            Crop Insurance 2026 — Nuksan Hone Par Sarkari Sahayata
+            Yield Protection Mechanism 2026 — Nuksan Hone Par Sarkari Sahayata
           </p>
         </div>
 
         {/* ── H1 ── */}
         <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-green-800 leading-tight mb-3">
-          Fasal Bima Yojana 2026 – Muawza Status Check Aur Application Process Complete Guide
+          Agricultural Risk Protection 2026 – Indemnity Status Check Aur Enrollment Process Complete Guide
         </h1>
         <p className="text-gray-500 text-sm mb-6">
           Last Updated: July 2026 &nbsp;|&nbsp; Reading Time: ~10 min &nbsp;|&nbsp; Author: KisanStatus Team
         </p>
 
-        {/* ── INTRO STORY ── */}
+        {/* ── PROBLEM-BASED INTRO ── */}
         <div className="bg-green-50 border-l-4 border-green-600 rounded-r-xl p-5 mb-8">
           <p className="text-gray-800 leading-relaxed mb-3">
-            <strong>Ramlal Verma</strong> – Madhya Pradesh ke Vidisha district ke ek mehnati kisan – ne is baar kafi umeed ke saath apne khet mein soyabean aur gehun lagaya tha. Monsoon accha tha, khaad bhi sahi thi, aur unhe poori ummid thi ki is baar ki fasal se ghar ka saara hisaab theek ho jaayega.
+            Bahut se kisaan badi umeed ke saath apne khet mein fasal lagate hain. Monsoon accha hota hai, khaad bhi sahi hoti hai, aur poori ummid hoti hai ki is baar ki fasal se ghar ka saara hisaab theek ho jaayega.
           </p>
           <p className="text-gray-800 leading-relaxed mb-3">
-            Lekin August ki ek raat mein aandhi aur ati-varsha ne sab palat diya. Khet mein paani bhar gaya. Soyabean ki khari fasal toot gayi. Kaafi hissa kharab ho gaya. Ramlal ke haath-paon phool gaye – itni mehnat, itna paisa – sab paani mein.
+            Lekin kabhi kabhi kudrati aafat sab palat deti hai. Aandhi, ati-varsha, sukhha — khet mein paani bhar jaata hai, fasal toot jaati hai, kaafi hissa kharab ho jaata hai. Mehnat, paisa — sab paani mein.
           </p>
           <p className="text-gray-800 leading-relaxed">
-            Tab unke padosi kisan Ramesh bhai ne kaha – <em>"Bhai, tumne crop insurance karwayi thi na? Jao seedha muawza maango. Insurance wale paise dete hain."</em> Unhe pata hi nahi tha ki application kaise hoti hai, kahan jaana hai, kya document chahiye. Is article mein wahi poori story aur process hai – jis se unhone apna <strong>fasal bima muawza</strong> successfully karwaya aur paisa bhi aaya.
+            Aise waqt mein <strong>agricultural risk protection protocol</strong> kaam aata hai. Kai kisaan ko pata hi nahi hota ki application kaise hoti hai, kahan jaana hai, kya document chahiye. Is article mein wahi poori process hai — jis se kai farmers ne successfully <strong>crop loss indemnity</strong> paaya hai.
           </p>
         </div>
 
@@ -45,24 +45,24 @@ export default function PmfbyCropInsurance2026() {
         <figure className="my-8 rounded-xl overflow-hidden shadow-lg">
           <img 
             src="/images/articles/pmfby-crop-insurance-2026/infographic.webp" 
-            alt="Pradhan Mantri Fasal Bima Yojana – Key Features 2026" 
+            alt="Yield Protection Protocol – Key Features 2026" 
             className="w-full h-44 sm:h-60 object-cover" 
           />
           <figcaption className="bg-green-700 text-white text-xs sm:text-sm text-center py-2 px-4">
-            Crop Insurance Key Features – Ek Nazar Mein
+            Agricultural Risk Protection Key Features – Ek Nazar Mein
           </figcaption>
         </figure>
 
         {/* ── SECTION 1: PMFBY KYA HAI ── */}
         <section className="mb-10">
           <h2 className="text-xl sm:text-2xl font-bold text-green-700 border-b-2 border-green-200 pb-2 mb-4">
-            Fasal Bima Yojana Kya Hai? – Pradhan Mantri Crop Insurance Ki Poori Jaankari
+            1. Yield Protection Protocol Kya Hai? – Calamity Relief Mechanism Ki Poori Jaankari
           </h2>
           <p className="text-gray-700 leading-relaxed mb-3">
-            <strong>Pradhan Mantri Fasal Bima Yojana (PMFBY)</strong> bharat sarkar ki ek flagship crop insurance scheme hai jo 2016 mein shuru hui thi. Iska main maqsad hai – agar kisaan ki fasal kudrati aafat, keedo-makodo ya bimari ki wajah se kharab ho jaaye, toh use aarthik sahara mila sake.
+            <strong>Pradhan Mantri Fasal Bima Yojana (PMFBY)</strong> bharat sarkar ka flagship yield protection program hai jo 2016 mein shuru hua tha. Iska main maqsad hai — agar kisaan ki fasal kudrati aafat, keedo-makodo ya bimari ki wajah se kharab ho jaaye, toh use aarthik sahara mila sake.
           </p>
           <p className="text-gray-700 leading-relaxed mb-3">
-            Seedha samjhein – Ramlal ne bank se loan leke fasal lagayi. Agar yeh scheme nahi hoti toh barish se hua nuksan unhe khud bharna padta. Yeh yojana hone ki wajah se government ne unka zyaadatar nuksan cover kiya. Yahi hai is yojana ka fayda.
+            Simple baat hai. Agar yeh mechanism nahi hota toh barish se hua nuksan kisaan ko khud bharna padta. Yeh program hone ki wajah se government zyaadatar nuksan cover karti hai.
           </p>
 
           <h3 className="text-lg font-semibold text-green-600 mb-3">Key Features – Ek Nazar Mein:</h3>
@@ -73,7 +73,7 @@ export default function PmfbyCropInsurance2026() {
               { icon: "🍎", title: "Commercial / Horticulture", desc: "Fruits, vegetables – Premium: 5% of sum insured" },
               { icon: "💧", title: "Coverage", desc: "Baarish, sukhha, baadh, aandhi, keede, post-harvest losses" },
               { icon: "📱", title: "Online + Offline", desc: "Bank, CSC center ya pmfby.gov.in se registration" },
-              { icon: "💰", title: "Direct Payment", desc: "Muawza seedha bank account mein DBT se" },
+              { icon: "💰", title: "Direct Payment", desc: "Indemnity seedha bank account mein DBT se" },
             ].map((item, i) => (
               <div key={i} className="flex gap-3 bg-green-50 border border-green-200 rounded-lg p-3">
                 <span className="text-2xl flex-shrink-0">{item.icon}</span>
@@ -118,7 +118,7 @@ export default function PmfbyCropInsurance2026() {
         {/* ── SECTION 2: REGISTRATION ── */}
         <section className="mb-10">
           <h2 className="text-xl sm:text-2xl font-bold text-green-700 border-b-2 border-green-200 pb-2 mb-4">
-            Crop Insurance Mein Registration Kaise Kare? – Eligibility Aur Process
+            2. Enrollment Process — Eligibility Aur Tarike
           </h2>
 
           <h3 className="text-lg font-semibold text-green-600 mb-3">Eligibility Criteria:</h3>
@@ -137,7 +137,7 @@ export default function PmfbyCropInsurance2026() {
             ))}
           </ul>
 
-          <h3 className="text-lg font-semibold text-green-600 mb-3">Registration Ke 3 Tarike:</h3>
+          <h3 className="text-lg font-semibold text-green-600 mb-3">Enrollment Ke 3 Tarike:</h3>
           <div className="grid sm:grid-cols-3 gap-4 mb-5">
             {[
               { method: "Bank Branch", icon: "🏦", desc: "Jo bank mein crop loan/KCC hai wahan jaayein. Woh khud enroll kar denge. Auto-debit se premium kat jaata hai.", tag: "Easiest" },
@@ -155,7 +155,7 @@ export default function PmfbyCropInsurance2026() {
 
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
             <p className="text-blue-800 text-sm">
-              <strong>💡 Real Experience:</strong> Ramlal ne 3 saal pehle KCC liya tha. Isliye unki crop insurance automatically enroll thi – unhe pata bhi nahi tha. Jab Ramesh bhai ne bataya tab unhe realize hua. Agar aapka bhi KCC ya crop loan hai toh check zaroor karein – aap already enrolled ho sakte hain!
+              <strong>💡 Important:</strong> Agar aapka KCC ya crop loan hai toh almost certainly aap already enrolled hain. Bank se confirm karein — kai baar farmers ko pata hi nahi hota ki unka enrollment ho chuka hai.
             </p>
           </div>
         </section>
@@ -163,21 +163,21 @@ export default function PmfbyCropInsurance2026() {
         {/* ── SECTION 3: CLAIM PROCESS ── */}
         <section className="mb-10">
           <h2 className="text-xl sm:text-2xl font-bold text-green-700 border-b-2 border-green-200 pb-2 mb-4">
-            Fasal Bima Muawza Kaise File Kare? – Step-by-Step Guide
+            3. Crop Loss Indemnity Kaise File Kare? — Step-by-Step Guide
           </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Ramlal ke khet mein August mein barish se fasal kharab hui. Unhone theek yahi process follow ki. Aap bhi isko exactly same tarike se karein:
+            Jab fasal kharab ho jaaye, toh yeh process follow karein:
           </p>
 
           <div className="space-y-3 mb-6">
             {[
-              { step: "Step 1", title: "72 Ghante Mein Soochna Dein (CRITICAL)", desc: "Fasal nuksan hone ke 72 ghante ke andar insurance company ya bank ko soochna dena ZAROORI hai. Isse pehle nahi kiya toh application reject ho sakta hai. Ramlal ne 24 ghante mein hi inform kiya." },
+              { step: "Step 1", title: "72 Ghante Mein Soochna Dein (CRITICAL)", desc: "Fasal nuksan hone ke 72 ghante ke andar insurance company ya bank ko soochna dena ZAROORI hai. Isse pehle nahi kiya toh application reject ho sakta hai." },
               { step: "Step 2", title: "Crop Loss Helpline Pe Call Karein", desc: "PMFBY helpline: 1800-200-7710 (Toll Free). Apna policy number, Aadhaar, aur loss details batayein. Ek complaint/reference number milega – isse sambhal ke rakhein." },
               { step: "Step 3", title: "Bank Ya Insurance Company Mein Jaayein", desc: "Jo bank se yeh scheme li hai wahan jaayein. Ya seedha insurance company ki nearest branch mein. Application form lein aur fill karein." },
               { step: "Step 4", title: "Documents Submit Karein", desc: "Saare documents (neeche list di hai) bank/insurance office mein submit karein. Ek copy apne paas zaroor rakhein." },
-              { step: "Step 5", title: "Survey / Inspection", desc: "Insurance company ka surveyor aayega – woh field mein jaake fasal ka nuksan assess karega. Ramlal unhe khud khet dikhaane gaye. Photos aur report banayi." },
-              { step: "Step 6", title: "Assessment Report", desc: "Surveyor report ke baad insurance company assessment report taiyaar karti hai. Isme nuksan ka percentage aur muawza amount hota hai." },
-              { step: "Step 7", title: "Approval Aur Payment", desc: "Approval hone ke baad muawza seedha aapke bank account mein DBT se aata hai. Ramlal ke account mein 45 din mein paisa aa gaya." },
+              { step: "Step 5", title: "Survey / Inspection", desc: "Insurance company ka surveyor aayega – woh field mein jaake fasal ka nuksan assess karega. Photos aur report banayi jaati hai." },
+              { step: "Step 6", title: "Assessment Report", desc: "Surveyor report ke baad insurance company assessment report taiyaar karti hai. Isme nuksan ka percentage aur indemnity amount hota hai." },
+              { step: "Step 7", title: "Approval Aur Payment", desc: "Approval hone ke baad indemnity seedha aapke bank account mein DBT se aata hai." },
             ].map((item, i) => (
               <div key={i} className="flex gap-4 items-start bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
                 <div className={`flex-shrink-0 w-14 h-14 rounded-full flex flex-col items-center justify-center text-xs font-bold text-center leading-tight text-white ${i === 0 ? "bg-red-600" : "bg-green-600"}`}>
@@ -195,7 +195,7 @@ export default function PmfbyCropInsurance2026() {
           <div className="bg-red-50 border-2 border-red-200 rounded-lg p-4">
             <p className="font-bold text-red-800 mb-1">🚨 72 Ghante Ka Rule – Sabse Important!</p>
             <p className="text-red-700 text-sm">
-              Ramlal ke padosi Shankar ne fasal kharab hone par kuch din baad inform kiya. Unki application reject ho gayi sirf isi ek wajah se. 72 ghante ki deadline miss mat karna – yeh ek unbreakable rule hai.
+              Kai farmers fasal kharab hone par kuch din baad inform karte hain. Unki application reject ho jaati hai sirf isi ek wajah se. 72 ghante ki deadline miss mat karna – yeh ek unbreakable rule hai.
             </p>
           </div>
         </section>
@@ -204,28 +204,28 @@ export default function PmfbyCropInsurance2026() {
         <figure className="my-8 rounded-xl overflow-hidden shadow-lg">
           <img 
             src="/images/articles/pmfby-crop-insurance-2026/status-check.webp" 
-            alt="Fasal Bima Muawza Status Check Online – pmfby.gov.in Portal" 
+            alt="Indemnity Status Check Online – pmfby.gov.in Portal" 
             className="w-full h-44 sm:h-60 object-cover" 
           />
           <figcaption className="bg-blue-800 text-white text-xs sm:text-sm text-center py-2 px-4">
-            PMFBY Portal – Muawza Status Online Check Karein Ghar Baithe
+            PMFBY Portal – Indemnity Status Online Check Karein Ghar Baithe
           </figcaption>
         </figure>
 
         {/* ── SECTION 4: STATUS CHECK ── */}
         <section className="mb-10">
           <h2 className="text-xl sm:text-2xl font-bold text-green-700 border-b-2 border-green-200 pb-2 mb-4">
-            Fasal Bima Muawza Status Online Check Kaise Karein?
+            4. Indemnity Status Online Check Kaise Karein?
           </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Ramlal roz apne bete se poochha karte the – "paisa aaya kya?" Portal par online status check karne se yeh tension khatam hoti hai. Neeche dono methods hain – portal aur app:
+            Portal par online status check karne se tension khatam hoti hai. Neeche dono methods hain – portal aur app:
           </p>
 
           <h3 className="text-lg font-semibold text-green-600 mb-3">Method 1: pmfby.gov.in Portal Se Status Check</h3>
           <div className="space-y-2 mb-6">
             {[
               "Browser mein pmfby.gov.in open karein",
-              "Homepage par 'Application Status' ya 'Muawza Status' tab dhundein",
+              "Homepage par 'Application Status' ya 'Indemnity Status' tab dhundein",
               "Apna Application/Policy Number enter karein",
               "Aadhaar Number ya Mobile Number enter karein",
               "Captcha fill karein aur 'Check Status' click karein",
@@ -264,7 +264,7 @@ export default function PmfbyCropInsurance2026() {
                   ["Application Submitted", "Request receive ho gayi", "Wait karein – surveyor aayega"],
                   ["Under Survey", "Field inspection chal rahi hai", "Surveyor ka cooperative ban ke sahayata karein"],
                   ["Under Assessment", "Loss calculate ho raha hai", "Wait karein, 15-30 din lagte hain"],
-                  ["Approved", "Muawza pass ho gaya", "Bank account check karein – 7-10 din mein aata hai"],
+                  ["Approved", "Indemnity pass ho gaya", "Bank account check karein – 7-10 din mein aata hai"],
                   ["Payment Processed", "DBT se paisa bhej diya", "Bank statement check karein"],
                   ["Rejected", "Application reject hui", "Rejection reason padhein, appeal karein ya CSC jaayein"],
                   ["On Hold", "Koi document ya info chahiye", "Bank ya insurance company se contact karein"],
@@ -285,13 +285,13 @@ export default function PmfbyCropInsurance2026() {
         {/* ── SECTION 5: INSURANCE AMOUNT ── */}
         <section className="mb-10">
           <h2 className="text-xl sm:text-2xl font-bold text-green-700 border-b-2 border-green-200 pb-2 mb-4">
-            Fasal Bima Payment Kab Aur Kitna Milta Hai?
+            5. Indemnity Payment Kab Aur Kitna Milta Hai?
           </h2>
           <p className="text-gray-700 leading-relaxed mb-3">
-            Ramlal ko muawza kitna milega – yeh jaanna tha. Aur aap bhi yahi sochte honge. Payment calculate hoti hai <strong>Sum Insured</strong> aur <strong>actual crop loss percentage</strong> ke basis par.
+            Indemnity kitna milega – yeh jaanna zaroori hai. Payment calculate hoti hai <strong>Sum Insured</strong> aur <strong>actual crop loss percentage</strong> ke basis par.
           </p>
 
-          <h3 className="text-lg font-semibold text-green-600 mb-3">Payment Calculation Example (Real Case):</h3>
+          <h3 className="text-lg font-semibold text-green-600 mb-3">Payment Calculation Example:</h3>
           <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-5">
             <div className="grid sm:grid-cols-2 gap-3 text-sm">
               {[
@@ -301,7 +301,7 @@ export default function PmfbyCropInsurance2026() {
                 ["Total Sum Insured", "₹50,000 (1.25 × 40,000)"],
                 ["Kisan Premium (2%)", "₹1,000"],
                 ["Surveyor Assessment – Loss %", "70% crop loss"],
-                ["Muawza = 70% of ₹50,000", "₹35,000"],
+                ["Indemnity = 70% of ₹50,000", "₹35,000"],
                 ["Final Amount Received", "₹35,000 (DBT se)"],
               ].map(([k, v], i) => (
                 <div key={i} className="flex gap-2">
@@ -310,7 +310,7 @@ export default function PmfbyCropInsurance2026() {
                 </div>
               ))}
             </div>
-            <p className="text-green-700 font-semibold text-sm mt-3">✅ Sirf ₹1,000 premium deke ₹35,000 muawza mila!</p>
+            <p className="text-green-700 font-semibold text-sm mt-3">✅ Sirf ₹1,000 premium deke ₹35,000 indemnity mila!</p>
           </div>
 
           <h3 className="text-lg font-semibold text-green-600 mb-3">Payment Timeline:</h3>
@@ -334,10 +334,10 @@ export default function PmfbyCropInsurance2026() {
         {/* ── SECTION 6: DOCUMENTS ── */}
         <section className="mb-10">
           <h2 className="text-xl sm:text-2xl font-bold text-green-700 border-b-2 border-green-200 pb-2 mb-4">
-            Fasal Bima Muawza Ke Liye Required Documents
+            6. Indemnity Claim Ke Liye Required Documents
           </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Ramlal ne yehi galti ki – pehli baar kuch documents miss ho gaye. Doosri baar sab lekar gaye. Aap pehli baar mein hi sab le jaayein:
+            Pehli baar mein hi sab documents le jaayein:
           </p>
           <div className="grid sm:grid-cols-2 gap-4">
             {[
@@ -381,7 +381,7 @@ export default function PmfbyCropInsurance2026() {
         {/* ── SECTION 7: NATURAL DISASTER COVERAGE ── */}
         <section className="mb-10">
           <h2 className="text-xl sm:text-2xl font-bold text-green-700 border-b-2 border-green-200 pb-2 mb-4">
-            Crop Insurance Mein Kya-Kya Cover Hota Hai? – Natural Disaster Coverage
+            7. Agricultural Risk Coverage — Kya-Kya Cover Hota Hai?
           </h2>
 
           <div className="grid sm:grid-cols-2 gap-3 mb-5">
@@ -406,7 +406,7 @@ export default function PmfbyCropInsurance2026() {
         {/* ── SECTION 8: REJECTION REASONS ── */}
         <section className="mb-10">
           <h2 className="text-xl sm:text-2xl font-bold text-green-700 border-b-2 border-green-200 pb-2 mb-4">
-            Common Application Rejection Reasons Aur Unke Solutions
+            8. Common Application Rejection Reasons Aur Solutions
           </h2>
 
           <div className="space-y-3">
@@ -435,18 +435,18 @@ export default function PmfbyCropInsurance2026() {
         <figure className="my-8 rounded-xl overflow-hidden shadow-lg">
           <img 
             src="/images/articles/pmfby-crop-insurance-2026/payment-received.webp" 
-            alt="Fasal Bima Payment Received – Muawza Aaya" 
+            alt="Indemnity Payment Received – Financial Relief Aaya" 
             className="w-full h-44 sm:h-60 object-cover" 
           />
           <figcaption className="bg-green-800 text-white text-xs sm:text-sm text-center py-2 px-4">
-            Account Mein Muawza Aaya – Agle Season Ki Kheti Saved!
+            Account Mein Indemnity Aaya – Agle Season Ki Kheti Saved!
           </figcaption>
         </figure>
 
         {/* ── SECTION 9: 2026 UPDATES ── */}
         <section className="mb-10">
           <h2 className="text-xl sm:text-2xl font-bold text-green-700 border-b-2 border-green-200 pb-2 mb-4">
-            Pradhan Mantri Fasal Bima Yojana 2026 – Latest Updates
+            9. 2026 Updates — Latest Changes
           </h2>
           <div className="space-y-3">
             {[
@@ -475,13 +475,13 @@ export default function PmfbyCropInsurance2026() {
         {/* ── FAQ ── */}
         <section className="mb-10">
           <h2 className="text-xl sm:text-2xl font-bold text-green-700 border-b-2 border-green-200 pb-2 mb-6">
-            FAQ – Aksar Pooche Jaane Wale Sawaal
+            10. FAQ — Real Questions, Direct Answers
           </h2>
           <div className="space-y-3">
             {[
               { q: "PMFBY helpline number kya hai?", a: "PMFBY Toll-Free Helpline: 1800-200-7710. Yeh 24x7 available hai. Aap application notification, status inquiry aur koi bhi query ke liye call kar sakte hain. Apna policy number paas rakhein." },
               { q: "Agar bank ne enroll nahi ki aur fasal kharab ho gayi toh?", a: "Agar bank ki galti se enroll nahi hua aur premium aapke account se kaat liya gaya tha, toh bank zimmedaar hai. Banking Ombudsman ya agriculture department mein complaint karein." },
-              { q: "Kya partial loss par bhi muawza milta hai?", a: "Haan – agar 25% ya zyada fasal ka nuksan hua ho toh proportional muawza milta hai. 70% loss hai toh 70% amount milega. Surveyor ki report decisive hoti hai." },
+              { q: "Kya partial loss par bhi indemnity milta hai?", a: "Haan – agar 25% ya zyada fasal ka nuksan hua ho toh proportional indemnity milta hai. 70% loss hai toh 70% amount milega. Surveyor ki report decisive hoti hai." },
               { q: "Ek hi khet mein do fasal lagayi hai – dono cover hogi?", a: "Yeh scheme ek application mein ek fasal cover karti hai. Alag-alag faslon ke liye alag enrollment karna padega. Mixed cropping ke rules state-wise alag hain – apni state portal check karein." },
               { q: "Application reject ho gayi – ab kya karein?", a: "Rejection letter mein reason likha hota hai. Pehle woh reason theek karein. Phir appeal karein – insurance company ke grievance cell mein, phir state agriculture department mein. Portal par bhi grievance submit ki ja sakti hai." },
               { q: "Kya koi bhi crop cover hoti hai?", a: "Nahi – sirf government-notified crops cover hoti hain. Har state har season mein ek list jaari karta hai. Apne Block Agriculture Office ya state portal se list confirm karein." },
@@ -503,17 +503,17 @@ export default function PmfbyCropInsurance2026() {
         {/* ── CONCLUSION ── */}
         <section className="mb-10">
           <h2 className="text-xl sm:text-2xl font-bold text-green-700 border-b-2 border-green-200 pb-2 mb-4">
-            Conclusion – Aap Bhi Fasal Bima Ka Fayda Lein
+            11. Conclusion — Aap Bhi Is Protocol Ka Fayda Lein
           </h2>
           <div className="bg-green-700 text-white rounded-xl p-6 mb-6">
             <p className="leading-relaxed mb-3">
-              Ramlal ki story yeh sabit karti hai – crop insurance ek aisi scheme hai jo chhote kisan ke liye sach mein lifeline ban sakti hai. Unhone ₹1,000 premium deke ₹35,000 ka muawza paaya aur agle season ki fasal ke liye paisa jut gaya. Warna poora saal ka hisaab kharab ho jaata.
+              Crop insurance ek aisi mechanism hai jo chhote kisan ke liye sach mein lifeline ban sakti hai. Kai farmers ne ₹1,000 premium deke ₹35,000 ka indemnity paaya aur agle season ki fasal ke liye paisa jut gaya.
             </p>
             <p className="leading-relaxed mb-3">
-              Sabse zaroori baat – <strong>72 ghante ka rule</strong> yaad rakhein. Fasal kharab hote hi turant helpline par call karein. Doosri zaroori baat – <strong>documents pehle se tayyar rakhein</strong>. Aur teesri – <strong>status portal par track karte rahein</strong>.
+              Sabse zaroori baat — <strong>72 ghante ka rule</strong> yaad rakhein. Fasal kharab hote hi turant helpline par call karein. Doosri zaroori baat — <strong>documents pehle se tayyar rakhein</strong>. Aur teesri — <strong>status portal par track karte rahein</strong>.
             </p>
             <p className="leading-relaxed">
-              Aaj hi check karein – kya aap yeh scheme mein enrolled hain? Agar KCC ya crop loan hai toh almost certainly haan. Agar nahi hain toh agle season mein zaroor karwayein. Ek premium se itna bada safety net – koi reason nahi ki aap is yojana ka fayda na lein.
+              Aaj hi check karein — kya aap yeh scheme mein enrolled hain? Agar KCC ya crop loan hai toh almost certainly haan. Agar nahi hain toh agle season mein zaroor karwayein.
             </p>
           </div>
 
@@ -551,7 +551,7 @@ export default function PmfbyCropInsurance2026() {
 
         {/* ── QUICK SUMMARY ── */}
         <div className="bg-yellow-50 border-2 border-yellow-300 rounded-xl p-6 mb-8">
-          <h3 className="font-bold text-yellow-900 text-lg mb-3">⚡ Quick Summary – Fasal Bima 2026</h3>
+          <h3 className="font-bold text-yellow-900 text-lg mb-3">⚡ Quick Summary – Agricultural Risk Protection 2026</h3>
           <div className="grid sm:grid-cols-2 gap-2 text-sm">
             {[
               ["Portal", "pmfby.gov.in"],
