@@ -5,11 +5,11 @@
  * ✅ 8 LANGUAGES SUPPORTED
  * ✅ SEO OPTIMIZED
  * ✅ ACCESSIBILITY ENHANCED
- * 
- * Languages: Hindi (hi), English (en), Bengali (bn), Tamil (ta), 
+ *
+ * Languages: Hindi (hi), English (en), Bengali (bn), Tamil (ta),
  *            Telugu (te), Marathi (mr), Punjabi (pa), Gujarati (gu)
- * 
- * @author Sidhu Singh
+ *
+ * @author KisanStatus Team
  * @version 2.0.0
  */
 
@@ -19,15 +19,14 @@ export type LangCode = 'hi' | 'en' | 'bn' | 'ta' | 'te' | 'mr' | 'pa' | 'gu';
 
 export interface LangMeta {
   code: LangCode;
-  label: string;       // native name
-  labelEn: string;     // English name
-  flag: string;        // emoji flag / symbol
+  label: string;
+  labelEn: string;
+  flag: string;
   dir: 'ltr' | 'rtl';
-  enabled: boolean;    // Whether language is fully implemented
+  enabled: boolean;
 }
 
 export interface Translations {
-  // Nav / Header
   nav_home: string;
   nav_status: string;
   nav_registration: string;
@@ -38,7 +37,6 @@ export interface Translations {
   nav_contact: string;
   announcement_bar: string;
 
-  // Hero
   hero_badge: string;
   hero_h1_line1: string;
   hero_h1_line2: string;
@@ -47,7 +45,6 @@ export interface Translations {
   hero_cta_secondary: string;
   hero_cta_calculator: string;
 
-  // Stats
   stat_farmers: string;
   stat_farmers_sub: string;
   stat_amount: string;
@@ -57,7 +54,6 @@ export interface Translations {
   stat_free: string;
   stat_free_sub: string;
 
-  // Steps section
   steps_heading: string;
   steps_sub: string;
   step1_title: string;
@@ -67,7 +63,6 @@ export interface Translations {
   step3_title: string;
   step3_desc: string;
 
-  // Feature cards
   features_heading: string;
   features_sub: string;
   feat_status_title: string;
@@ -83,19 +78,16 @@ export interface Translations {
   feat_ekyc_desc: string;
   feat_ekyc_cta: string;
 
-  // Articles section
   articles_heading: string;
   articles_sub: string;
   articles_view_all: string;
 
-  // Helpline
   helpline_heading: string;
   helpline_sub: string;
   helpline_call: string;
   helpline_email: string;
   helpline_hours: string;
 
-  // Common
   read_more: string;
   check_status: string;
   download_list: string;
@@ -106,14 +98,12 @@ export interface Translations {
   error: string;
   success: string;
 
-  // Footer
   footer_disclaimer: string;
   footer_quick_links: string;
   footer_official_links: string;
   footer_contact: string;
   footer_copyright: string;
 
-  // SEO
   seo_title: string;
   seo_description: string;
 }
@@ -210,7 +200,7 @@ const t: Record<LangCode, Translations> = {
     footer_quick_links: 'Quick Links',
     footer_official_links: 'Official Government Links',
     footer_contact: 'Contact Us',
-    footer_copyright: '© 2026 KisanStatus.com by Sidhu Singh — Informational purposes only',
+    footer_copyright: '© 2026 KisanStatus.com by KisanStatus Team — Informational purposes only',
 
     seo_title: 'PM Kisan Status Check 2026 — 23vi Kist Released | KisanStatus.com',
     seo_description: 'PM Kisan 23vi kist status check 2026 — ₹2000 seedha bank mein. eKYC guide, beneficiary list, payment fail solution — sab free.',
@@ -292,7 +282,7 @@ const t: Record<LangCode, Translations> = {
     footer_quick_links: 'Quick Links',
     footer_official_links: 'Official Government Links',
     footer_contact: 'Contact Us',
-    footer_copyright: '© 2026 KisanStatus.com by Sidhu Singh — Informational purposes only',
+    footer_copyright: '© 2026 KisanStatus.com by KisanStatus Team — Informational purposes only',
 
     seo_title: 'PM Kisan Status Check 2026 — 23rd Installment Released | KisanStatus.com',
     seo_description: 'PM Kisan 23rd installment status check 2026 — ₹2000 directly in bank. eKYC guide, beneficiary list, payment fail solution — all free.',
@@ -374,7 +364,7 @@ const t: Record<LangCode, Translations> = {
     footer_quick_links: 'দ্রুত লিঙ্ক',
     footer_official_links: 'অফিসিয়াল সরকারি লিঙ্ক',
     footer_contact: 'যোগাযোগ করুন',
-    footer_copyright: '© ২০২৬ KisanStatus.com by Sidhu Singh — শুধুমাত্র তথ্যমূলক উদ্দেশ্যে',
+    footer_copyright: '© ২০২৬ KisanStatus.com by KisanStatus Team — শুধুমাত্র তথ্যমূলক উদ্দেশ্যে',
 
     seo_title: 'PM কিষাণ স্ট্যাটাস চেক ২০২৬ — ২৩তম কিস্তি প্রকাশিত | KisanStatus.com',
     seo_description: 'PM কিষাণ ২৩তম কিস্তি স্ট্যাটাস চেক ২০২৬ — ₹২০০০ সরাসরি ব্যাঙ্কে। eKYC গাইড, সুবিধাভোগী তালিকা — সব বিনামূল্যে।',
@@ -456,7 +446,7 @@ const t: Record<LangCode, Translations> = {
     footer_quick_links: 'விரைவு இணைப்புகள்',
     footer_official_links: 'அதிகாரப்பூர்வ அரசு இணைப்புகள்',
     footer_contact: 'தொடர்பு கொள்ள',
-    footer_copyright: '© 2026 KisanStatus.com by Sidhu Singh — தகவல் நோக்கங்களுக்காக மட்டுமே',
+    footer_copyright: '© 2026 KisanStatus.com by KisanStatus Team — தகவல் நோக்கங்களுக்காக மட்டுமே',
 
     seo_title: 'PM கிசான் நிலை சரிபார்ப்பு 2026 — 23வது தவணை வெளியிடப்பட்டது | KisanStatus.com',
     seo_description: 'PM கிசான் 23வது தவணை நிலை சரிபார்ப்பு 2026 — ₹2000 நேரடியாக வங்கியில். eKYC வழிகாட்டி, பயனாளர் பட்டியல் — அனைத்தும் இலவசம்.',
@@ -538,7 +528,7 @@ const t: Record<LangCode, Translations> = {
     footer_quick_links: 'త్వరిత లింక్‌లు',
     footer_official_links: 'అధికారిక ప్రభుత్వ లింక్‌లు',
     footer_contact: 'సంప్రదించండి',
-    footer_copyright: '© 2026 KisanStatus.com by Sidhu Singh — సమాచార ప్రయోజనాల కోసం మాత్రమే',
+    footer_copyright: '© 2026 KisanStatus.com by KisanStatus Team — సమాచార ప్రయోజనాల కోసం మాత్రమే',
 
     seo_title: 'PM కిసాన్ స్టేటస్ చెక్ 2026 — 23వ వాయిదా విడుదల | KisanStatus.com',
     seo_description: 'PM కిసాన్ 23వ వాయిదా స్టేటస్ చెక్ 2026 — ₹2000 నేరుగా బ్యాంకులో. eKYC గైడ్, లబ్ధిదారుల జాబితా — అన్నీ ఉచితం.',
@@ -620,7 +610,7 @@ const t: Record<LangCode, Translations> = {
     footer_quick_links: 'झटपट लिंक्स',
     footer_official_links: 'अधिकृत सरकारी लिंक्स',
     footer_contact: 'संपर्क करा',
-    footer_copyright: '© 2026 KisanStatus.com by Sidhu Singh — केवळ माहिती हेतूंसाठी',
+    footer_copyright: '© 2026 KisanStatus.com by KisanStatus Team — केवळ माहिती हेतूंसाठी',
 
     seo_title: 'PM किसान स्थिती तपासा 2026 — 23वा हप्ता प्रकाशित | KisanStatus.com',
     seo_description: 'PM किसान 23वा हप्ता स्थिती तपासा 2026 — ₹2000 थेट बँकेत. eKYC मार्गदर्शक, लाभार्थी यादी — सर्व मोफत.',
@@ -635,11 +625,11 @@ const t: Record<LangCode, Translations> = {
     nav_calculator: 'ਕੈਲਕੁਲੇਟਰ',
     nav_about: 'ਸਾਡੇ ਬਾਰੇ',
     nav_contact: 'ਸੰਪਰਕ',
-    announcement_bar: '🌾 PM ਕਿਸਾਨ 21ਵੀਂ ਕਿਸ਼ਤ: 20 ਜੂਨ 2026 ਨੂੰ ਜਾਰੀ — ₹2,000 ਸਿੱਧਾ ਬੈਂਕ ਵਿੱਚ | 24ਵੀਂ ਕਿਸ਼ਤ ਅਕਤੂਬਰ 2026 ਉਮੀਦ',
+    announcement_bar: '🌾 PM ਕਿਸਾਨ 23ਵੀਂ ਕਿਸ਼ਤ: 20 ਜੂਨ 2026 ਨੂੰ ਜਾਰੀ — ₹2,000 ਸਿੱਧਾ ਬੈਂਕ ਵਿੱਚ | 24ਵੀਂ ਕਿਸ਼ਤ ਅਕਤੂਬਰ 2026 ਉਮੀਦ',
 
     hero_badge: 'PM ਕਿਸਾਨ ਸਨਮਾਨ ਨਿਧੀ 2026',
     hero_h1_line1: 'PM ਕਿਸਾਨ ਸਥਿਤੀ ਜਾਂਚ 2026',
-    hero_h1_line2: '21ਵੀਂ ਕਿਸ਼ਤ',
+    hero_h1_line2: '23ਵੀਂ ਕਿਸ਼ਤ',
     hero_subtitle: 'ਆਪਣੀ PM ਕਿਸਾਨ ਭੁਗਤਾਨ ਸਥਿਤੀ ਜਾਂਚੋ, ਰਾਜ ਲਾਭਪਾਤਰੀ ਸੂਚੀ ਵੇਖੋ.',
     hero_cta_primary: '✅ ਸਥਿਤੀ ਜਾਂਚੋ',
     hero_cta_secondary: '📋 ਲਾਭਪਾਤਰੀ ਸੂਚੀ',
@@ -649,7 +639,7 @@ const t: Record<LangCode, Translations> = {
     stat_farmers_sub: 'ਪੂਰੇ ਭਾਰਤ ਵਿੱਚ ਰਜਿਸਟਰਡ ਕਿਸਾਨ',
     stat_amount: '₹6,000',
     stat_amount_sub: 'ਸਾਲਾਨਾ ਲਾਭ (3 ਕਿਸ਼ਤਾਂ ਵਿੱਚ)',
-    stat_kist: '21ਵੀਂ ਕਿਸ਼ਤ',
+    stat_kist: '23ਵੀਂ ਕਿਸ਼ਤ',
     stat_kist_sub: '20 ਜੂਨ 2026 ਨੂੰ ਜਾਰੀ',
     stat_free: '100% ਮੁਫਤ',
     stat_free_sub: 'ਕੋਈ ਲੁਕਿਆ ਹੋਇਆ ਚਾਰਜ ਨਹੀਂ',
@@ -702,10 +692,10 @@ const t: Record<LangCode, Translations> = {
     footer_quick_links: 'ਤੁਰੰਤ ਲਿੰਕ',
     footer_official_links: 'ਅਧਿਕਾਰਤ ਸਰਕਾਰੀ ਲਿੰਕ',
     footer_contact: 'ਸੰਪਰਕ ਕਰੋ',
-    footer_copyright: '© 2026 KisanStatus.com by Sidhu Singh — ਸਿਰਫ ਜਾਣਕਾਰੀ ਉਦੇਸ਼ਾਂ ਲਈ',
+    footer_copyright: '© 2026 KisanStatus.com by KisanStatus Team — ਸਿਰਫ ਜਾਣਕਾਰੀ ਉਦੇਸ਼ਾਂ ਲਈ',
 
-    seo_title: 'PM ਕਿਸਾਨ ਸਥਿਤੀ ਜਾਂਚ 2026 — 21ਵੀਂ ਕਿਸ਼ਤ ਜਾਰੀ | KisanStatus.com',
-    seo_description: 'PM ਕਿਸਾਨ 21ਵੀਂ ਕਿਸ਼ਤ ਸਥਿਤੀ ਜਾਂਚ 2026 — ₹2000 ਸਿੱਧਾ ਬੈਂਕ ਵਿੱਚ. eKYC ਗਾਈਡ, ਲਾਭਪਾਤਰੀ ਸੂਚੀ — ਸਭ ਮੁਫਤ.',
+    seo_title: 'PM ਕਿਸਾਨ ਸਥਿਤੀ ਜਾਂਚ 2026 — 23ਵੀਂ ਕਿਸ਼ਤ ਜਾਰੀ | KisanStatus.com',
+    seo_description: 'PM ਕਿਸਾਨ 23ਵੀਂ ਕਿਸ਼ਤ ਸਥਿਤੀ ਜਾਂਚ 2026 — ₹2000 ਸਿੱਧਾ ਬੈਂਕ ਵਿੱਚ. eKYC ਗਾਈਡ, ਲਾਭਪਾਤਰੀ ਸੂਚੀ — ਸਭ ਮੁਫਤ.',
   },
 
   gu: {
@@ -717,11 +707,11 @@ const t: Record<LangCode, Translations> = {
     nav_calculator: 'કેલ્ક્યુલેટર',
     nav_about: 'અમારા વિશે',
     nav_contact: 'સંપર્ક',
-    announcement_bar: '🌾 PM કિસાન 21મો હપ્તો: 20 જૂન 2026 ના રોજ પ્રકાશિત — ₹2,000 સીધો બેંકમાં | 24મો હપ્તો ઓક્ટોબર 2026 અપેક્ષિત',
+    announcement_bar: '🌾 PM કિસાન 23મો હપ્તો: 20 જૂન 2026 ના રોજ પ્રકાશિત — ₹2,000 સીધો બેંકમાં | 24મો હપ્તો ઓક્ટોબર 2026 અપેક્ષિત',
 
     hero_badge: 'PM કિસાન સન્માન નિધિ 2026',
     hero_h1_line1: 'PM કિસાન સ્ટેટસ ચેક 2026',
-    hero_h1_line2: '21મો હપ્તો',
+    hero_h1_line2: '23મો હપ્તો',
     hero_subtitle: 'તમારી PM કિસાન ચુકવણી સ્થિતિ ચેક કરો, રાજ્ય લાભાર્થી યાદી જુઓ.',
     hero_cta_primary: '✅ સ્ટેટસ ચેક કરો',
     hero_cta_secondary: '📋 લાભાર્થી યાદી',
@@ -731,7 +721,7 @@ const t: Record<LangCode, Translations> = {
     stat_farmers_sub: 'સમગ્ર ભારતમાં નોંધાયેલ ખેડૂતો',
     stat_amount: '₹6,000',
     stat_amount_sub: 'વાર્ષિક લાભ (3 હપ્તામાં)',
-    stat_kist: '21મો હપ્તો',
+    stat_kist: '23મો હપ્તો',
     stat_kist_sub: '20 જૂન 2026 ના રોજ પ્રકાશિત',
     stat_free: '100% મફત',
     stat_free_sub: 'કોઈ છુપા ચાર્જ નથી',
@@ -784,10 +774,10 @@ const t: Record<LangCode, Translations> = {
     footer_quick_links: 'ઝડપી લિંક્સ',
     footer_official_links: 'અધિકૃત સરકારી લિંક્સ',
     footer_contact: 'સંપર્ક કરો',
-    footer_copyright: '© 2026 KisanStatus.com by Sidhu Singh — માત્ર માહિતી હેતુઓ માટે',
+    footer_copyright: '© 2026 KisanStatus.com by KisanStatus Team — માત્ર માહિતી હેતુઓ માટે',
 
-    seo_title: 'PM કિસાન સ્ટેટસ ચેક 2026 — 21મો હપ્તો પ્રકાશિત | KisanStatus.com',
-    seo_description: 'PM કિસાન 21મો હપ્તો સ્ટેટસ ચેક 2026 — ₹2000 સીધો બેંકમાં. eKYC ગાઈડ, લાભાર્થી યાદી — બધું મફત.',
+    seo_title: 'PM કિસાન સ્ટેટસ ચેક 2026 — 23મો હપ્તો પ્રકાશિત | KisanStatus.com',
+    seo_description: 'PM કિસાન 23મો હપ્તો સ્ટેટસ ચેક 2026 — ₹2000 સીધો બેંકમાં. eKYC ગાઈડ, લાભાર્થી યાદી — બધું મફત.',
   },
 };
 
