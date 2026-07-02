@@ -9,8 +9,6 @@ const MODIFIED  = '2026-06-23T08:00:00+05:30';
 const DOMAIN = 'https://kisanstatus.com';
 const URL    = `${DOMAIN}/articles/pm-kisan-23vi-kist-2026-status-check`;
 
-// ✅ Schema removed — [slug]/page.tsx already injects Article + Breadcrumb + WebPage schemas
-
 const RELATED = [
   { slug: 'pm-kisan-ekyc-online-2026', title: 'eKYC Complete Guide', emoji: '🔐' },
   { slug: 'pm-kisan-payment-failed-status-2026', title: 'Payment Failed Fix', emoji: '💸' },
@@ -23,8 +21,6 @@ const RELATED = [
 export default function PmKisan23viKistStatusCheck2026() {
   return (
     <>
-      {/* ✅ Schema removed — handled by [slug]/page.tsx server component */}
-
       {/* Header */}
       <div className="bg-primary-600 py-8">
         <div className="container-site max-w-3xl">
@@ -38,7 +34,7 @@ export default function PmKisan23viKistStatusCheck2026() {
             PM Kisan 23vi Kist 2026: Release Ho Gayi! Status Check, Date & Eligibility
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white">Sidhu Singh</Link></span>
+            <span>✍️ <Link href="/about" className="underline hover:text-white">KisanStatus Team</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
             <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
             <span>⏱️ 8 min read</span>
@@ -68,11 +64,12 @@ export default function PmKisan23viKistStatusCheck2026() {
         {/* Introduction */}
         <section className="mb-8">
           <p className="text-gray-700 text-sm leading-relaxed mb-4">
-            Namaskar Kisan Bhaiyo aur Behno! Khushkhabri hai — <strong>PM Kisan 23vi kist release ho chuki hai!</strong> Pradhan Mantri Narendra Modi ne Hooghly, West Bengal se yeh kist digitally release ki, jisse <strong>9.44 crore se zyada kisanon</strong> ko ₹2,000 mila — total <strong>₹18,880 crore</strong> DBT se transfer hue.
+            <strong>PM Kisan 23vi kist release ho chuki hai.</strong> Pradhan Mantri Narendra Modi ne Hooghly, West Bengal se yeh installment digitally release ki, jisse <strong>9.44 crore se zyada kisanon</strong> ko ₹2,000 mila — total <strong>₹18,880 crore</strong> DBT se transfer hue.
           </p>
           <p className="text-gray-700 text-sm leading-relaxed mb-4">
-            Agar aapko abhi tak paisa aaya ya nahi confirm karna hai, toh neeche step-by-step guide follow karo. Tension lene ki zaroorat nahi — sab clear ho jayega.
+            Agar aapko abhi tak paisa aaya ya nahi confirm karna hai, toh neeche step-by-step guide follow karo.
           </p>
+          <p className="text-gray-700 text-sm mb-4">Sab clear ho jayega.</p>
           <IB>
             <strong>✅ Yaad Rakho:</strong> Paisa seedha Aadhaar-linked bank account mein aata hai. Kisi bichauliye ya agent ki zaroorat nahi. Koi paisa maange toh fraud hai.
           </IB>
@@ -128,10 +125,10 @@ export default function PmKisan23viKistStatusCheck2026() {
         {/* Status Check Steps */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-gray-900 mb-4 pb-2 border-b-2 border-green-100">
-            Step-by-Step Status Check Guide
+            Status Check Guide — Mobile Se
           </h2>
           <p className="text-gray-700 text-sm leading-relaxed mb-4">
-            Ghar baithe mobile se 2 minute mein status check karo:
+            Ghar baithe mobile se status check karo:
           </p>
           <StepList>
             <SI n={1}>Official website <strong>pmkisan.gov.in</strong> par jao</SI>
