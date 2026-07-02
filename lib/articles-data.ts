@@ -72,7 +72,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'kisan-rin-kaha-se-le-2026',
     title: 'Kisan Rin Kaha Se Le 2026? KCC, Bank Loan, CSC Center — Puri Jankari',
-    desc: 'Pichhle saal mere chacha ko tractor ke liye loan chahiye tha. SBI gaya, cooperative gaya, CSC bhi gaya — har jagah alag process. Is guide mein sab kuch hai — kaunse bank kitna dete hain, kya documents lagenge, aur interest rate kya hai. Ek baar padh lo, phir kisi se puchne ki zaroorat nahi.',
+    desc: 'Loan chahiye to confusion hota hai — SBI, cooperative, CSC, har jagah process alag. Is guide mein sab kuch hai. Kaunse bank kitna dete hain, kya documents lagenge, interest rate kya hai. Ek baar padh lo, phir kisi se puchne ki zaroorat nahi.',
     ogTitle: 'Kisan Rin Kaha Se Le 2026 — Complete Guide Hindi Mein',
     keywords: [
       'Kisan Rin Kaha Se Le 2026',
@@ -96,7 +96,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'kisan-tractor-loan-2026',
     title: 'Tractor Loan Bina Down Payment — Kya Yeh Sach Mein Mil Sakta Hai?',
-    desc: 'Bhai, sach bataun? Jab pehli baar suna ki bina down payment ke tractor loan mil sakta hai, toh mujhe bhi yakeen nahi hua. Par phir maine 3-4 banks mein pata kiya — haan, milta hai! Mahindra Finance, TATA Capital, aur kuch state banks mein scheme hai. Is article mein poori details hai.',
+    desc: 'Bina down payment ke tractor loan? Sunne mein ajeeb lagta hai, lekin haan — milta hai. Mahindra Finance, TATA Capital, aur kuch state banks mein scheme hai. Is article mein poori details hai — eligibility se lekar documents tak.',
     ogTitle: 'Kisan Tractor Loan Bina Down Payment 2026 — Puri Jankari',
     keywords: [
       'Kisan Tractor Loan',
@@ -118,7 +118,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'pm-kisan-21vi-installment-status-check',
     title: '21vi Kist Kab Aayi? Status Check Karo 2 Minute Mein',
-    desc: '21vi kist aayi ya nahi — yeh sawal har gaon mein ghoom raha tha. Mere dost Rajesh ne phone kiya — "bhai, mere account mein nahi aaya, kya hua?" Toh maine use status check karne ka tarika bataya. Aadhaar number dala, OTP aaya, 2 minute mein pata chal gaya. Tum bhi try karo.',
+    desc: '21vi kist aayi ya nahi — yeh sawal har gaon mein ghoom raha tha. Status check karna simple hai. Aadhaar number dalo, OTP verify karo, 2 minute mein pata chal jaata hai. Step-by-step guide yahan hai.',
     ogTitle: 'PM Kisan 21vi Kist Status Check — 2 Minute Mein Jaano',
     keywords: [
       'PM Kisan 21vi installment',
@@ -138,7 +138,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'pm-kisan-beneficiary-list-2026',
     title: 'Beneficiary List 2026 — Apna Naam Kaise Check Karein?',
-    desc: 'List mein naam hai ya nahi? Yeh sawal har kisan ke dimaag mein aata hai. Kal hi gaon mein 4-5 logon ne pucha — "bhaiya, humara naam list mein hai kya?" Toh maine unhe yeh tarika bataya. Village-wise list dekh sakte ho, PDF download kar sakte ho. Try karo, kaam aayega.',
+    desc: 'List mein naam hai ya nahi? Yeh sawal har kisan ke dimaag mein aata hai. Village-wise list dekh sakte ho, PDF download kar sakte ho. Simple tarika hai — try karo, kaam aayega.',
     ogTitle: 'PM Kisan Beneficiary List 2026 — Naam Check Karo',
     keywords: [
       'PM Kisan beneficiary list 2026',
@@ -158,7 +158,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'pm-kisan-beneficiary-list-village-wise-2026',
     title: 'Apne Gaon Ki List Dekho — Village Wise Beneficiary List 2026',
-    desc: 'Socho — apne gaon mein kaun-kaun PM Kisan ka paisa le raha hai. State, District, Block select karo, phir apna gaon. Poori list aa jayegi. Maine apne gaon (Meerut ke paas) ki list dekhi — 127 log the. Kuch ke naam galat the, kuch ke account band. Yeh sab check kar sakte ho.',
+    desc: 'Apne gaon mein kaun-kaun PM Kisan ka paisa le raha hai — yeh jaanna mushkil nahi. State, District, Block select karo, phir apna gaon. Poori list aa jayegi. Kuch ke naam galat hote hain, kuch ke account band — yeh sab check kar sakte ho.',
     ogTitle: 'PM Kisan Gaon Wise List 2026 — Complete Guide',
     keywords: [
       'PM Kisan Beneficiary List Village Wise',
@@ -178,7 +178,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'pm-kisan-correction-deactivate-block-guide-2026',
     title: 'Account Block Ho Gaya? Reactivate Kaise Karein?',
-    desc: 'Ek kisan bhai ne call kiya — "bhaiya, mera account block ho gaya, ab kya karun?" Uska naam Aadhaar se match nahi ho raha tha. Maine use correction ka process bataya — online apply kiya, 10 din mein sab theek ho gaya. Agar tumhara bhi aisa hai, toh yeh padho.',
+    desc: 'Account block ho gaya to tension hoti hai. Common reason — naam Aadhaar se match nahi ho raha. Correction ka process simple hai — online apply karo, 10 din mein sab theek ho jaata hai. Agar tumhara bhi aisa hai, to yeh padho.',
     ogTitle: 'PM Kisan Account Reactivate — Naam, Aadhaar, Bank Fix',
     keywords: [
       'PM Kisan correction 2026',
@@ -199,7 +199,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'pm-kisan-ekyc-online-2026',
     title: 'eKYC Ghar Baithe Kaise Kare? OTP Ya CSC — Dono Tarike',
-    desc: 'Pehle CSC center jaana padta tha, line mein khade hona padta tha. Ab ghar baithe OTP se ho jata hai. Mere papa ko bhi nahi pata tha, unhone CSC gaya tha. Maine bataya — phone se karo, 5 minute ka kaam hai. Unhone kiya, ho gaya. Tum bhi try karo.',
+    desc: 'Pehle CSC center jaana padta tha, line mein khade hona padta tha. Ab ghar baithe OTP se ho jaata hai — 5 minute ka kaam hai. Phone se karo, simple hai. Tum bhi try karo.',
     ogTitle: 'PM Kisan eKYC Online 2026 — Ghar Baithe Karo',
     keywords: [
       'PM Kisan eKYC online 2026',
@@ -220,7 +220,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'pm-kisan-installment-history-check-online',
     title: 'Purani Kiston Ka Hisaab — Installment History Kaise Dekhein?',
-    desc: 'Kabhi-kabhi yaad nahi rehta ki pichli kistein kab aayi thi. Mere paas bhi confusion tha. Phir maine registration number se history check ki — poori list aa gayi. Kab aayi, kitni aayi, sab dikh gaya. Tum bhi dekh sakte ho.',
+    desc: 'Kabhi-kabhi yaad nahi rehta ki pichli kistein kab aayi thi. Registration number se history check kar sakte ho — poori list aa jaati hai. Kab aayi, kitni aayi, sab dikh jaata hai.',
     ogTitle: 'PM Kisan Installment History — Purani Kistein Dekho',
     keywords: [
       'PM Kisan Installment History',
@@ -240,7 +240,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'pm-kisan-land-seeding-status-check',
     title: 'Land Seeding Pending Hai? Kist Nahi Aayegi Agar...',
-    desc: 'Bhai, ek baat yaad rakhna — Land Seeding No hai toh kist ruk jaayegi. Mere ek rishtedaar ka aisa hi hua. 3 mahine wait kiya, paisa nahi aaya. Phir pata chala ki land seeding pending hai. Patwari se mila, form bhara, 15 din mein sab theek. Tum bhi check kar lo.',
+    desc: 'Ek baat yaad rakhna — Land Seeding No hai to kist ruk jaati hai. Bahut se farmers ko pata hi nahi hota ki yeh check karna zaroori hai. Patwari se milo, form bharo, 15 din mein sab theek ho jaata hai. Tum bhi check kar lo.',
     ogTitle: 'PM Kisan Land Seeding Fix — Pending, Rejected Solution',
     keywords: [
       'PM Kisan Land Seeding',
@@ -261,7 +261,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'pm-kisan-name-correction-online-2026',
     title: 'Aadhaar Se Naam Match Nahi Ho Raha? Yeh Karo',
-    desc: 'Aadhaar mein naam alag hai, bank mein alag, portal mein alag — toh payment fail ho jayegi. Mere chacha ka aisa hi tha. 2 saal se paisa nahi aa raha tha. Naam correction kiya, 10 din mein sab theek. Online ya CSC se — dono tarike hain.',
+    desc: 'Aadhaar mein naam alag hai, bank mein alag, portal mein alag — to payment fail ho jaati hai. Common problem hai. Naam correction karo, 10 din mein sab theek. Online ya CSC se — dono tarike hain.',
     ogTitle: 'PM Kisan Naam Correction — Aadhaar Match Karo',
     keywords: [
       'PM Kisan name correction',
@@ -281,7 +281,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'pm-kisan-payment-failed-status-2026',
     title: 'Paisa Nahi Aaya? Payment Fail Kyun Hua — 5 Reasons',
-    desc: 'Status check kiya toh "Payment Failed" dikh raha hai. Pehle mujhe bhi samajh nahi aaya. Phir pata chala — 5 main reasons hote hain. Aadhaar mismatch, NPCI error, bank issue, aur do aur. Har ek ka solution hai. Padho, fix karo.',
+    desc: 'Status check kiya to "Payment Failed" dikh raha hai? Pareshan mat ho. 5 main reasons hote hain — Aadhaar mismatch, NPCI error, bank issue, aur do aur. Har ek ka solution hai. Padho, fix karo.',
     ogTitle: 'PM Kisan Payment Failed — 5 Reasons Aur Fix',
     keywords: [
       'PM Kisan payment failed 2026',
@@ -302,7 +302,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'pm-kisan-problems-solution-guide-2026',
     title: '10 Badi Problems Aur Unka Seedha Hal',
-    desc: 'RFT Signed, PFMS Pending, Payment Fail — yeh sab sunke pareshan ho? Main bhi tha. Phir maine har problem ka solution dhundha. Real examples ke saath samjhaya hai. Ek baar padh lo, phir kisi se puchne ki zaroorat nahi.',
+    desc: 'RFT Signed, PFMS Pending, Payment Fail — yeh sab sunke pareshan ho? Har problem ka solution hai. Real examples ke saath samjhaya hai. Ek baar padh lo, phir kisi se puchne ki zaroorat nahi.',
     ogTitle: 'PM Kisan 10 Problems — Sab Fix Karo',
     keywords: [
       'PM Kisan problems solution',
@@ -323,7 +323,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'pm-kisan-registration-online-2026',
     title: 'Naye Farmer Ho? Registration Kaise Karein?',
-    desc: 'Mere padosi Ramu kaka naye the PM Kisan mein. Unhone socha — "yeh sab complicated hai". Par maine unki help ki. Online form bhara, documents upload kiye, 15 minute mein ho gaya. Tum bhi kar sakte ho. Bas yeh padho pehle.',
+    desc: 'PM Kisan mein naye ho to confusion hota hai — "yeh sab complicated hai". Par actually simple hai. Online form bharo, documents upload karo, 15 minute mein ho jaata hai. Tum bhi kar sakte ho. Bas yeh padho pehle.',
     ogTitle: 'PM Kisan New Registration 2026 — Step by Step',
     keywords: [
       'PM Kisan registration online 2026',
@@ -344,7 +344,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'pm-kisan-rejected-list-2026',
     title: 'Rejected List Mein Naam Hai? Fix Kaise Karein?',
-    desc: 'Ek din mere gaon ke Suresh bhai aaye — "bhaiya, mera naam rejected list mein hai". Maine unka reason check kiya — land records galat the. Patwari se mila, documents theek kiye, 20 din mein sab clear. Tumhara bhi aisa hai toh yeh padho.',
+    desc: 'Naam rejected list mein hai to tension hoti hai. Common reason — land records galat hote hain. Patwari se milo, documents theek karo, 20 din mein sab clear ho jaata hai. Tumhara bhi aisa hai to yeh padho.',
     ogTitle: 'PM Kisan Rejected List — Reason Aur Fix',
     keywords: [
       'PM Kisan rejected list 2026',
@@ -365,7 +365,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'pmfby-crop-insurance-2026',
     title: 'Fasal Kharab Ho Gayi? PMFBY Claim Kaise Karein?',
-    desc: 'Pichle saal baarish ne meri fasal kharab kar di. Maine PMFBY claim kiya. Process thoda lamba tha — 45 din lage — par paisa aa gaya. Main tumhe bataunga ki claim kaise file karna hai, status kaise check karna hai, aur kab tak paisa milega.',
+    desc: 'Fasal kharab ho gayi to PMFBY claim kar sakte ho. Process thoda lamba hai — 45 din lagte hain — lekin paisa aa jaata hai. Claim kaise file karna hai, status kaise check karna hai, aur kab tak paisa milega — sab yahan hai.',
     ogTitle: 'PMFBY Crop Insurance Claim — Complete Guide',
     keywords: [
       'PMFBY Crop Insurance',
@@ -386,7 +386,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'pm-kisan-23vi-kist-2026-status-check',
     title: '23vi Kist Aayi Ya Nahi? Abhi Check Karo',
-    desc: '23vi kist ka wait hai? Mere gaon mein 2-3 din pehle aayi. Maine mobile se check kiya — Aadhaar number dala, OTP verify kiya, 2 minute mein pata chal gaya. Tum bhi try karo. Mobile, Aadhaar, ya registration number — koi bhi use kar sakte ho.',
+    desc: '23vi kist ka wait hai? Status check karna simple hai. Mobile se check karo — Aadhaar number dalo, OTP verify karo, 2 minute mein pata chal jaata hai. Mobile, Aadhaar, ya registration number — koi bhi use kar sakte ho.',
     ogTitle: 'PM Kisan 23vi Kist Status — Abhi Check Karo',
     keywords: [
       'PM Kisan 23vi Kist',
@@ -406,7 +406,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'kisan-credit-card-online-apply-2026',
     title: 'KCC Card Banwana Hai? Online Apply Kaise Karein?',
-    desc: 'KCC card hai toh ₹5 lakh tak loan mil sakta hai, interest rate sirf 4%. Mere ek dost ne banwaya tha — online apply kiya, bank gaya, 10 din mein card aa gaya. Eligibility, documents, sab kuch yahan hai.',
+    desc: 'KCC card hai to ₹5 lakh tak loan mil sakta hai, interest rate sirf 4%. Online apply karo, bank jao, 10 din mein card aa jaata hai. Eligibility, documents, sab kuch yahan hai.',
     ogTitle: 'Kisan Credit Card Online Apply — ₹5 Lakh Loan',
     keywords: [
       'Kisan Credit Card Online Apply 2026',
@@ -427,7 +427,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai',
     title: 'FTO Generated — Iska Matlab Kya Hai? Aasan Bhasha Mein',
-    desc: 'FTO Generated, FTO Pending, Payment Order — yeh sab sunke confused ho? Main bhi tha pehle. Phir samjha — FTO matlab Fund Transfer Order. Sarkar ne paisa bhejne ka order de diya hai. Ab bank process karega. Simple hai, padho samajh jaoge.',
+    desc: 'FTO Generated, FTO Pending, Payment Order — yeh sab sunke confused ho? FTO matlab Fund Transfer Order. Sarkar ne paisa bhejne ka order de diya hai. Ab bank process karega. Simple hai, padho samajh jaoge.',
     ogTitle: 'PM Kisan FTO Generated Matlab — Aasan Guide',
     keywords: [
       'PM Kisan FTO Generated',
@@ -448,7 +448,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'nano-dap-500ml-price-in-india-2026',
     title: 'Nano DAP 500ml Ki Kimat Kitni Hai? Kahan Milega?',
-    desc: 'Nano DAP ki baat suni thi par kimat nahi pata thi. Maine IFFCO ki website check ki, local dealer se pucha — 500ml ki bottle ₹280-320 ke beech hai. Use karna bhi seekha. Benefits bhi hain — kam quantity, zyada asar. Tum bhi jaan lo.',
+    desc: 'Nano DAP ki baat suni thi par kimat nahi pata thi. IFFCO ki website check karo, local dealer se puchho — 500ml ki bottle ₹280-320 ke beech hai. Use karna bhi seekho. Benefits bhi hain — kam quantity, zyada asar.',
     ogTitle: 'Nano DAP 500ml Price — Kahan Se Khariden?',
     keywords: [
       'Nano DAP 500ml price India 2026',
@@ -469,7 +469,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'pm-kisan-24vi-kist',
     title: '24vi Kist Kab Aayegi? Date Aur Status Guide',
-    desc: '23vi toh aa gayi, ab 24vi ka wait hai. October 2026 tak aane ki umeed hai. Par eKYC zaroori hai, land seeding bhi. Maine apne liye check kiya — sab theek hai. Tum bhi apna status dekh lo. Agar kuch pending hai toh abhi fix kar lo.',
+    desc: '23vi to aa gayi, ab 24vi ka wait hai. October 2026 tak aane ki umeed hai. Par eKYC zaroori hai, land seeding bhi. Apna status dekh lo — agar kuch pending hai to abhi fix kar lo.',
     ogTitle: 'PM Kisan 24vi Kist — Kab Aayegi?',
     keywords: [
       'PM Kisan 24vi Kist 2026',
@@ -489,7 +489,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'agristack-kya-hai',
     title: 'AgriStack Kya Hai? Farmer ID Aur PM Kisan Connection',
-    desc: 'AgriStack ka naam suna hai? Main bhi confused tha pehle. Phir samjha — yeh digital farmer ID hai. PM Kisan se connected hai. Har kisan ko ek unique ID milegi. Benefits bahut hain — loan, insurance, schemes — sab ek jagah. Jaan lo, future mein kaam aayega.',
+    desc: 'AgriStack ka naam suna hai? Yeh digital farmer ID hai. PM Kisan se connected hai. Har kisan ko ek unique ID milegi. Benefits bahut hain — loan, insurance, schemes — sab ek jagah. Jaan lo, future mein kaam aayega.',
     ogTitle: 'AgriStack Kya Hai — Farmer ID Complete Guide',
     keywords: [
       'AgriStack kya hai',
@@ -510,7 +510,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'pm-kisan-mobile-number-change',
     title: 'Mobile Number Badalna Hai? Online Ya CSC Se Update Karo',
-    desc: 'Mera purana number band ho gaya tha. OTP nahi aa raha tha. CSC gaya, form bhara, 7 din mein naya number update ho gaya. Online bhi kar sakte ho. Dono tarike hain. Tum bhi kar lo, mushkil nahi hai.',
+    desc: 'Purana number band ho gaya to OTP nahi aa raha. CSC jao, form bharo, 7 din mein naya number update ho jaata hai. Online bhi kar sakte ho. Dono tarike hain. Tum bhi kar lo, mushkil nahi hai.',
     ogTitle: 'PM Kisan Mobile Number Change — Complete Guide',
     keywords: [
       'PM Kisan mobile number change 2026',
@@ -530,7 +530,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'pm-kisan-complete-guide',
     title: 'PM Kisan — Sab Problems Ka Ek Saath Hal',
-    desc: 'Kabhi status check, kabhi eKYC, kabhi payment fail — har problem alag jagah dhundhni padti thi. Maine sab ek jagah ikattha kiya hai. Yeh master guide hai. Ek baar padh lo, phir kisi se puchne ki zaroorat nahi.',
+    desc: 'Kabhi status check, kabhi eKYC, kabhi payment fail — har problem alag jagah dhundhni padti thi. Sab ek jagah ikattha kiya hai. Yeh master guide hai. Ek baar padh lo, phir kisi se puchne ki zaroorat nahi.',
     ogTitle: 'PM Kisan Complete Guide — Sab Problems Fix',
     keywords: [
       'PM Kisan complete guide 2026',
@@ -550,7 +550,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'soil-health-card-complete-guide-2026',
     title: 'Soil Health Card — Mitti Test Karwane Ka Pura Process',
-    desc: 'Mitti test karwane ka soch rahe ho? Maine pichle saal karwaya tha. CSC se form liya, sample diya, 15 din mein report aa gayi. Pata chala ki meri mitti mein zinc kam hai. Fertilizer change kiya, fasal achhi hui. Tum bhi try karo.',
+    desc: 'Mitti test karwane ka soch rahe ho? CSC se form lo, sample do, 15 din mein report aa jaati hai. Pata chalta hai ki mitti mein kya kami hai. Fertilizer change karo, fasal achhi hoti hai. Tum bhi try karo.',
     ogTitle: 'Soil Health Card Complete Guide — Sab Kuch Jaano',
     keywords: [
       'Soil Health Card Complete Guide 2026',
@@ -571,7 +571,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'pm-kisan-self-registered-status-check',
     title: 'Khud Se Registration Kiya? Status Kaise Check Karein?',
-    desc: 'Khud se apply kiya hai lekin status nahi dikh raha? Mere ek dost ne aisa hi kiya. Portal par gaya, registration number dala, status aa gaya. Tum bhi try karo. Simple hai.',
+    desc: 'Khud se apply kiya hai lekin status nahi dikh raha? Portal par jao, registration number dalo, status aa jaata hai. Tum bhi try karo. Simple hai.',
     ogTitle: 'PM Kisan Self Registered Status — Check Karo',
     keywords: [
       'pm kisan self registered farmer status check',
@@ -591,7 +591,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'pm-kisan-status-check-online-2026-complete-guide',
     title: 'Status Check Online — Real Farmer Guide With Screenshots',
-    desc: 'Status check karna hai? Main tumhe apna experience bataunga. Maine Aadhaar se kiya, mobile se kiya, registration number se bhi kiya. Screenshots bhi hain. Common errors aur unka fix bhi. Padho, try karo.',
+    desc: 'Status check karna hai? Aadhaar se karo, mobile se karo, registration number se bhi kar sakte ho. Screenshots bhi hain. Common errors aur unka fix bhi. Padho, try karo.',
     ogTitle: 'PM Kisan Status Check — Real Farmer Experience',
     keywords: [
       'PM Kisan status check 2026',
@@ -612,7 +612,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'mandi-bhav-today',
     title: 'Aaj Ka Mandi Bhav — Sabzi Aur Fruit Rates (Live Update)',
-    desc: 'Aloo ₹20-24, pyaaz ₹26-30, tamatar ₹38-45. Daily updated rates. Mere gaon ke mandi wale bhaiya se pata kiya — yeh rates hain. Roz update karta hoon. Tum bhi dekh lo, bechne se pehle jaan lo.',
+    desc: 'Aloo ₹20-24, pyaaz ₹26-30, tamatar ₹38-45. Daily updated rates. Roz update karta hoon. Tum bhi dekh lo, bechne se pehle jaan lo.',
     ogTitle: 'Aaj Ka Mandi Bhav — Live Sabzi Aur Fruit Rates',
     keywords: [
       'aaj ka mandi bhav',
