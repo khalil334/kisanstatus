@@ -109,8 +109,6 @@ export function RelatedArticles({ articles }: { articles: { slug: string; title:
     </div>
   );
 }
-
-// ✅ FIXED: Sidhu Singh → KisanStatus Team
 export function AuthorBox({ modified }: { modified: string }) {
   return (
     <div className="flex items-start gap-4 p-5 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/10 border border-[var(--color-border)] rounded-2xl my-8">
