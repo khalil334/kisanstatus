@@ -11,10 +11,10 @@ const URL    = `${DOMAIN}/articles/pm-kisan-name-correction-online-2026`;
 const schemas = [
   {
     '@context':'https://schema.org','@type':'Article',
-    headline:'PM Kisan Name Correction 2026 — Naam Galat Hai? Ghar Baithe 15 Minute Mein Fix Karo',
-    description:'PM Kisan naam correction 2026 — Aadhaar mismatch, bank naam alag, spelling galat — step-by-step Hinglish guide. Ghar baithe portal se ya CSC center se free mein fix karo.',
+    headline:'PM Kisan Beneficiary Name Modification 2026 — Identity Galat Hai? Ghar Baithe 15 Minute Mein Fix Karo',
+    description:'PM Kisan beneficiary name correction 2026 — Aadhaar mismatch, bank naam alag, spelling galat — step-by-step Hinglish guide. Ghar baithe portal se ya CSC center se free mein fix karo.',
     image:`${DOMAIN}/og-image.jpg`, datePublished:PUBLISHED, dateModified:MODIFIED,
-    author:{'@type':'Person',name:'Sidhu Singh',url:`${DOMAIN}/about`},
+    author:{'@type':'Organization',name:'KisanStatus Team',url:`${DOMAIN}/about`},
     publisher:{'@type':'Organization',name:'KisanStatus.com',url:DOMAIN},
     mainEntityOfPage:{'@type':'WebPage','@id':URL},
     inLanguage:'hi-IN', wordCount:3800,
@@ -24,29 +24,29 @@ const schemas = [
     itemListElement:[
       {'@type':'ListItem',position:1,name:'Home',item:DOMAIN},
       {'@type':'ListItem',position:2,name:'Articles',item:`${DOMAIN}/articles`},
-      {'@type':'ListItem',position:3,name:'PM Kisan Name Correction 2026',item:URL},
+      {'@type':'ListItem',position:3,name:'PM Kisan Name Modification 2026',item:URL},
     ],
   },
   {
     '@context':'https://schema.org','@type':'FAQPage',
     mainEntity:[
-      {'@type':'Question',name:'PM Kisan naam correction kaise kare?',
+      {'@type':'Question',name:'PM Kisan beneficiary name modification kaise kare?',
         acceptedAnswer:{'@type':'Answer',text:'pmkisan.gov.in → Farmers Corner → Edit Aadhaar Details → Name Correction → Aadhaar card dekh ke EXACTLY wahi naam daalo → documents upload → submit. 15-20 din mein update hoga.'}},
-      {'@type':'Question',name:'Naam correction ke baad missed kistein milegi?',
+      {'@type':'Question',name:'Identity rectification ke baad missed installments milegi?',
         acceptedAnswer:{'@type':'Answer',text:'Haan — correction approve hone ke baad sabhi missed installments arrears mein credit hoti hain — agli successful payment ke saath ek saath milegi.'}},
-      {'@type':'Question',name:'PM Kisan naam correction free hai?',
+      {'@type':'Question',name:'PM Kisan name modification free hai?',
         acceptedAnswer:{'@type':'Answer',text:'Bilkul free hai — portal se bhi aur CSC center se bhi. Koi bhi charge kare to PM Kisan helpline 155261 par complaint karo.'}},
     ],
   },
 ];
 
 const RELATED = [
-  {slug:'pm-kisan-ekyc-online-2026',                    title:'eKYC Free Guide 2026',           emoji:'🔐'},
-  {slug:'pm-kisan-payment-failed-status-2026',          title:'Payment Failed Fix',              emoji:'💸'},
-  {slug:'pm-kisan-rejected-list-2026',                  title:'Rejected List — Reason & Fix',   emoji:'❌'},
-  {slug:'pm-kisan-beneficiary-list-2026',               title:'Beneficiary List Check',          emoji:'📋'},
-  {slug:'pm-kisan-land-seeding-status-check',           title:'Land Seeding Fix',                emoji:'🌾'},
-  {slug:'pm-kisan-problems-solution-guide-2026',        title:'10 Common Problems Guide',        emoji:'🔧'},
+  {slug:'pm-kisan-ekyc-online-2026',                    title:'Digital Verification Guide 2026', emoji:'🔐'},
+  {slug:'pm-kisan-payment-failed-status-2026',          title:'DBT Transfer Failed Fix',          emoji:'💸'},
+  {slug:'pm-kisan-rejected-list-2026',                  title:'Application Declined — Reason & Fix', emoji:'❌'},
+  {slug:'pm-kisan-beneficiary-list-2026',               title:'Eligible Farmers Roster Check',     emoji:'📋'},
+  {slug:'pm-kisan-land-seeding-status-check',           title:'Land Record Integration Fix',       emoji:'🌾'},
+  {slug:'pm-kisan-problems-solution-guide-2026',        title:'10 Common Issues Guide',            emoji:'🔧'},
 ];
 
 export default function PmKisanNameCorrectionOnline2026() {
@@ -60,14 +60,14 @@ export default function PmKisanNameCorrectionOnline2026() {
           <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
             <Link href="/" className="hover:text-white">Home</Link><span>/</span>
             <Link href="/articles/pm-kisan-21vi-installment-status-check" className="hover:text-white">PM Kisan Guide</Link><span>/</span>
-            <span className="text-white">Name Correction 2026</span>
+            <span className="text-white">Identity Modification 2026</span>
           </nav>
-          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">✏️ Name Correction</span>
+          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">✏️ Beneficiary Name Update</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            PM Kisan Name Correction 2026 — Naam Galat Hai? Ghar Baithe 15 Minute Mein Fix Karo
+            PM Kisan Beneficiary Name Modification 2026 — Identity Galat Hai? Ghar Baithe 15 Minute Mein Fix Karo
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white">Sidhu Singh</Link></span>
+            <span>✍️ <Link href="/about" className="underline hover:text-white">KisanStatus Team</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
             <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
             <span>⏱️ 16 min read</span>
@@ -79,21 +79,21 @@ export default function PmKisanNameCorrectionOnline2026() {
         <div className="my-6 rounded-2xl overflow-hidden border border-green-100 shadow-md">
           <img
             src="/images/name-correction.jpg"
-            alt="PM Kisan naam correction — galat naam fix karo 2026"
+            alt="PM Kisan beneficiary name modification — galat identity fix karo 2026"
             className="w-full object-cover"
             style={{ maxHeight: '420px', objectPosition: 'center' }}
             loading="lazy"
             width="1200"
             height="630"
           />
-          <p className="text-center text-xs text-gray-500 py-2 bg-green-50 border-t border-green-100">PM Kisan Name Correction — Naam Galat Hai To Aise Fix Karo 2026</p>
+          <p className="text-center text-xs text-gray-500 py-2 bg-green-50 border-t border-green-100">PM Kisan Identity Modification — Naam Galat Hai To Aise Fix Karo 2026</p>
         </div>
 
-        {/* Real problem intro */}
+        {/* Problem statement — no fake story */}
         <div className="my-6 p-5 bg-amber-50 border-2 border-amber-500 border-l-[6px] rounded-xl">
-          <h2 className="text-base font-black text-amber-800 mb-2">⚠️ Yeh Problem Tujhe Bhi Ho Sakti Hai</h2>
+          <h2 className="text-base font-black text-amber-800 mb-2">⚠️ Common Problem — Yeh Galti Bahut Hoti Hai</h2>
           <p className="text-sm text-amber-900 leading-relaxed mb-3">
-            Socho — UP ke ek kisan ne registration ke waqt naam type kiya <strong>"RAMESH KUAMR"</strong> — ek letter galat. Bank mein naam hai <strong>"RAMESH KUMAR"</strong>. Aadhaar mein bhi <strong>"RAMESH KUMAR"</strong>. Lekin PM Kisan system ne teen jagah teen alag naam dekhe — eKYC fail, payment ruk gayi, 3 kistein miss ho gayin.
+            Registration ke waqt naam type karte waqt <strong>"RAMESH KUAMR"</strong> likh diya — ek letter galat. Bank mein naam hai <strong>"RAMESH KUMAR"</strong>. Aadhaar mein bhi <strong>"RAMESH KUMAR"</strong>. Lekin PM Kisan system ne teen jagah teen alag naam dekhe — eKYC fail, payment ruk gayi, 3 installments miss ho gayin.
           </p>
           <p className="text-sm text-amber-900 leading-relaxed">
             Yeh ek letter ki galti ₹6,000 rok sakti hai. Is guide mein seedha fix karo — koi jugaad nahi, sahi tarika.
@@ -102,7 +102,7 @@ export default function PmKisanNameCorrectionOnline2026() {
 
         {/* Quick fix */}
         <div className="my-6 p-5 bg-green-50 border-2 border-green-600 border-l-[6px] rounded-xl">
-          <h2 className="text-base font-black text-green-800 mb-3">⚡ Quick Fix — Portal Se Naam Correction</h2>
+          <h2 className="text-base font-black text-green-800 mb-3">⚡ Quick Fix — Portal Se Identity Modification</h2>
           <StepList>
             <SI n={1}><strong>pmkisan.gov.in</strong> kholo — mobile ya computer dono chalega</SI>
             <SI n={2}>Upar menu mein <strong>Farmers Corner</strong> tap karo</SI>
@@ -119,17 +119,17 @@ export default function PmKisanNameCorrectionOnline2026() {
         {/* Section 1 */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-gray-900 mb-4 pb-2 border-b-2 border-green-100">
-            Naam Mismatch Se Kya Kya Ruk Jaata Hai?
+            1. Identity Mismatch Se Kya Kya Ruk Jaata Hai?
           </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Bahut se kisan yeh nahi jaante — sirf naam ki spelling ki galti se <strong>poori chain toot jaati hai</strong>. Ek baar dekho kya kya band ho jaata hai:
+            Bahut se farmers yeh nahi jaante — sirf naam ki spelling ki galti se <strong>poori chain toot jaati hai</strong>. Ek baar dekho kya kya band ho jaata hai:
           </p>
           <div className="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
             <table className="w-full text-sm border-collapse">
               <thead>
                 <tr className="bg-primary-600 text-white">
-                  <th className="p-3 text-left">Naam Mismatch Ki Wajah Se</th>
-                  <th className="p-3 text-left">Correction Ke Baad</th>
+                  <th className="p-3 text-left">Identity Mismatch Ki Wajah Se</th>
+                  <th className="p-3 text-left">Rectification Ke Baad</th>
                 </tr>
               </thead>
               <tbody>
@@ -137,7 +137,7 @@ export default function PmKisanNameCorrectionOnline2026() {
                   ['❌ eKYC OTP match nahi hota — fail ho jaati hai','✅ eKYC turat complete ho jaati hai'],
                   ['❌ NPCI bank Aadhaar seeding reject karta hai','✅ Seeding accept hoti hai — payment channel khulta hai'],
                   ['❌ Payment DBT mein fail ya return ho jaati hai','✅ ₹2,000 seedha bank mein credit'],
-                  ['❌ Rejected list mein naam aa jaata hai','✅ Active beneficiary — agle kist mein naam confirmed'],
+                  ['❌ Rejected list mein naam aa jaata hai','✅ Active beneficiary — agle installment mein naam confirmed'],
                   ['❌ Agle installments bhi automatic ruk jaate hain','✅ Arrears sameit sab ek saath milta hai'],
                 ].map(([a,b],i)=>(
                   <tr key={i} className={i%2===0?'bg-white':'bg-green-50/50'}>
@@ -154,7 +154,7 @@ export default function PmKisanNameCorrectionOnline2026() {
         {/* Section 2 */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-gray-900 mb-4 pb-2 border-b-2 border-green-100">
-            6 Types Ki Naam Galtiyan — Pehchano Apni
+            2. 6 Types Ki Identity Galtiyan — Pehchano Apni
           </h2>
           <p className="text-gray-700 text-sm leading-relaxed mb-4">
             Real farmer cases se liye hain yeh examples — dekho konsi galti tumhari hai:
@@ -183,9 +183,9 @@ export default function PmKisanNameCorrectionOnline2026() {
         {/* Section 3 */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-gray-900 mb-4 pb-2 border-b-2 border-green-100">
-            Aadhaar Mein Hi Naam Galat Hai — Pehle Yeh Karo
+            3. Aadhaar Mein Hi Identity Galat Hai — Pehle Yeh Karo
           </h2>
-          <SvgAadhaarCorrection caption="Aadhaar Naam Galat Hai — UIDAI Se Pehle Fix Karwao"/>
+          <SvgAadhaarCorrection caption="Aadhaar Identity Galat Hai — UIDAI Se Pehle Fix Karwao"/>
           <p className="text-gray-700 text-sm leading-relaxed mb-4">
             Bahut baar aisa hota hai ki Aadhaar card mein hi naam galat enrolled ho gaya — jab school certificate ya voter ID se galat copy hua. Is case mein <strong>pehle Aadhaar thik karwana hoga, phir PM Kisan update hoga.</strong>
           </p>
@@ -221,7 +221,7 @@ export default function PmKisanNameCorrectionOnline2026() {
         {/* Section 4 */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-gray-900 mb-4 pb-2 border-b-2 border-green-100">
-            Bank Mein Naam Update Kaise Kare
+            4. Bank Mein Identity Update Kaise Kare
           </h2>
           <p className="text-gray-700 text-sm leading-relaxed mb-4">
             Bank account mein naam update karna PM Kisan portal se alag process hai — yeh seedha bank branch mein hota hai:
@@ -243,9 +243,9 @@ export default function PmKisanNameCorrectionOnline2026() {
         {/* Section 5 — Documents table */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-gray-900 mb-4 pb-2 border-b-2 border-green-100">
-            Kaun Se Documents Chahiye — Case Wise
+            5. Kaun Se Documents Chahiye — Case Wise
           </h2>
-          <SvgDocuments caption="PM Kisan Name Correction — Required Documents 2026"/>
+          <SvgDocuments caption="PM Kisan Identity Modification — Required Documents 2026"/>
           <div className="overflow-x-auto my-4 rounded-xl border border-gray-200 shadow-sm">
             <table className="w-full text-sm border-collapse">
               <thead>
@@ -278,7 +278,7 @@ export default function PmKisanNameCorrectionOnline2026() {
         {/* Section 6 — Timeline */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-gray-900 mb-4 pb-2 border-b-2 border-green-100">
-            Correction Ke Baad Kist Kab Aayegi?
+            6. Rectification Ke Baad Installment Kab Aayega?
           </h2>
           <div className="space-y-3">
             {[
@@ -286,8 +286,8 @@ export default function PmKisanNameCorrectionOnline2026() {
               {step:'State authority review karti hai documents',time:'Day 3-7',color:'bg-yellow-500'},
               {step:'Correction approve hota hai — portal update hota hai',time:'Day 15-20',color:'bg-orange-500'},
               {step:'Aadhaar seeding aur bank match verify hota hai',time:'Day 20-25',color:'bg-purple-500'},
-              {step:'Next PM Kisan installment date par ₹2,000 credit',time:'Next Kist',color:'bg-green-500'},
-              {step:'Missed kistein arrears mein ek saath credit',time:'Same Payment',color:'bg-emerald-600'},
+              {step:'Next PM Kisan installment date par ₹2,000 credit',time:'Next Installment',color:'bg-green-500'},
+              {step:'Missed installments arrears mein ek saath credit',time:'Same Payment',color:'bg-emerald-600'},
             ].map(({step,time,color})=>(
               <div key={step} className="flex items-start gap-3">
                 <span className={`${color} text-white text-[10px] font-black px-2 py-1 rounded-full shrink-0 whitespace-nowrap mt-0.5`}>{time}</span>
@@ -295,15 +295,15 @@ export default function PmKisanNameCorrectionOnline2026() {
               </div>
             ))}
           </div>
-          <IB><strong>💰 Arrears Guarantee:</strong> 3 kistein miss ho gayi? Correction ke baad teeno ki ₹6,000 ek saath credit hogi agli successful payment mein.</IB>
+          <IB><strong>💰 Arrears Guarantee:</strong> 3 installments miss ho gayi? Correction ke baad teeno ki ₹6,000 ek saath credit hogi agli successful payment mein.</IB>
         </section>
 
         {/* Section 7 — FAQ */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-gray-900 mb-4 pb-2 border-b-2 border-green-100">
-            Naam Correction — Real Sawaal, Seedhe Jawab
+            7. Identity Modification — Real Questions, Direct Answers
           </h2>
-          <SvgFaqCorrection caption="PM Kisan Name Correction FAQ — Farmers Ke Real Sawaal"/>
+          <SvgFaqCorrection caption="PM Kisan Beneficiary Name Correction FAQ — Farmers Ke Real Sawaal"/>
           <div className="space-y-3 mt-4">
             {[
               {
@@ -340,8 +340,8 @@ export default function PmKisanNameCorrectionOnline2026() {
 
         <GovLink
           href="https://pmkisan.gov.in/FarmerCornerEditAadhaar.aspx"
-          label="PM Kisan — Naam Correction Portal"
-          guide="Naam Correction Karo"
+          label="PM Kisan — Beneficiary Name Modification Portal"
+          guide="Identity Modify Karo"
           guideHref="/articles/pm-kisan-rejected-list-2026"
         />
 
