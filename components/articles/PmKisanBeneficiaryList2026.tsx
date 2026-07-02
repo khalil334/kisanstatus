@@ -147,8 +147,9 @@ export default function PmKisanBeneficiaryList2026() {
             Farmer welfare scheme mein sirf woh cultivators roster mein aate hain jo <strong>verified aur eligible</strong> hain. Yeh roster government har tranche se pehle update karti hai — isme naam hona matlab paisa aayega, nahi hona matlab koi na koi problem hai.
           </p>
           <p className="text-[var(--color-text-muted)] leading-relaxed mb-3">
-            Bahut se farmers sochte hain ki enrollment ke baad automatically roster mein aa jaate hain — yeh galat hai. Enrollment ke baad <strong>state verification, land record linking aur digital verification</strong> — teeno complete hone ke baad hi naam approved recipients roster mein aata hai.
+            Enrollment ke baad <strong>state verification, land record linking aur digital verification</strong> — teeno complete hone ke baad hi naam approved recipients roster mein aata hai.
           </p>
+          <p className="text-[var(--color-text-muted)] leading-relaxed mb-3">Simple baat hai.</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 my-4">
             {[
               {icon:'✅',title:'Active',desc:'Naam hai, installment aayegi',bg:'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800',tc:'text-green-800 dark:text-green-300'},
