@@ -3,13 +3,12 @@
  * AgriCalculator.tsx — KisanStatus.com
  * Professional Indian Agriculture Calculator
  * Tools: PM Kisan Income, MSP Earnings, Crop Profit, Irrigation Cost, Loan EMI, Fertilizer
- * Author: Sidhu Singh
+ * Author: KisanStatus Team
  */
 import { useState } from 'react';
 
 type Tab = 'pmkisan' | 'msp' | 'profit' | 'emi' | 'fertilizer' | 'irrigation';
 
-// MSP rates 2025-26 (₹/quintal)
 const MSP: Record<string, { name: string; msp: number; unit: string }> = {
   wheat:       { name: 'Gehun (Wheat)',          msp: 2275,  unit: 'quintal' },
   paddy:       { name: 'Dhan (Paddy)',            msp: 2300,  unit: 'quintal' },
@@ -34,15 +33,15 @@ function Inp({ label, value, onChange, placeholder, type = 'number', min, suffix
   { label: string; value: string | number; onChange: (v: string) => void; placeholder?: string; type?: string; min?: number; suffix?: string }) {
   return (
     <div>
-      <label className="block text-xs font-semibold text-gray-600 mb-1">{label}</label>
+      <label className="block text-xs font-semibold text-[var(--color-text-muted)] mb-1">{label}</label>
       <div className="relative">
         <input
           type={type} value={value} min={min}
           onChange={e => onChange(e.target.value)}
           placeholder={placeholder}
-          className="w-full border border-gray-200 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-200 bg-white pr-12"
+          className="w-full border border-[var(--color-border)] rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-[var(--color-primary)] focus:ring-1 focus:ring-[var(--color-primary-light)] bg-[var(--color-card)] text-[var(--color-text)] pr-12 transition-colors"
         />
-        {suffix && <span className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-gray-400 font-medium">{suffix}</span>}
+        {suffix && <span className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-[var(--color-text-muted)] font-medium">{suffix}</span>}
       </div>
     </div>
   );
@@ -52,9 +51,9 @@ function Sel({ label, value, onChange, options }:
   { label: string; value: string; onChange: (v: string) => void; options: { value: string; label: string }[] }) {
   return (
     <div>
-      <label className="block text-xs font-semibold text-gray-600 mb-1">{label}</label>
+      <label className="block text-xs font-semibold text-[var(--color-text-muted)] mb-1">{label}</label>
       <select value={value} onChange={e => onChange(e.target.value)}
-        className="w-full border border-gray-200 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-green-500 bg-white">
+        className="w-full border border-[var(--color-border)] rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-[var(--color-primary)] focus:ring-1 focus:ring-[var(--color-primary-light)] bg-[var(--color-card)] text-[var(--color-text)] transition-colors">
         {options.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
       </select>
     </div>
@@ -63,19 +62,17 @@ function Sel({ label, value, onChange, options }:
 
 function Result({ label, value, highlight, sub }: { label: string; value: string; highlight?: boolean; sub?: string }) {
   return (
-    <div className={`flex items-center justify-between py-2.5 border-b border-gray-100 last:border-0 ${highlight ? 'bg-green-50 -mx-4 px-4 rounded-xl' : ''}`}>
-      <span className="text-sm text-gray-600">{label}</span>
+    <div className={`flex items-center justify-between py-2.5 border-b border-[var(--color-border)] last:border-0 ${highlight ? 'bg-green-50 dark:bg-green-900/20 -mx-4 px-4 rounded-xl' : ''}`}>
+      <span className="text-sm text-[var(--color-text-muted)]">{label}</span>
       <div className="text-right">
-        <span className={`font-bold text-sm ${highlight ? 'text-green-700 text-base' : 'text-gray-900'}`}>{value}</span>
-        {sub && <p className="text-[10px] text-gray-400">{sub}</p>}
+        <span className={`font-bold text-sm ${highlight ? 'text-green-700 dark:text-green-300 text-base' : 'text-[var(--color-text)]'}`}>{value}</span>
+        {sub && <p className="text-[10px] text-[var(--color-text-muted)]">{sub}</p>}
       </div>
     </div>
   );
 }
 
 const fmt = (n: number) => `₹${Math.round(n).toLocaleString('en-IN')}`;
-
-// ── CALCULATORS ────────────────────────────────────────────────────────────
 
 function PmKisanCalc() {
   const [land, setLand] = useState('2');
@@ -99,22 +96,22 @@ function PmKisanCalc() {
           options={[{ value: 'yes', label: 'Haan — Done' }, { value: 'no', label: 'Nahi — Pending' }]} />
       </div>
 
-      <div className="bg-gray-50 rounded-2xl p-4 space-y-1">
+      <div className="bg-[var(--color-bg-alt)] rounded-2xl p-4 space-y-1">
         <Result label="Saalana Labh" value={eligible ? fmt(perYear) : '₹0'} />
         <Result label="Kiston ki Sankhya" value={`${kists} kist/saal`} />
         <Result label="Har Kist" value={eligible ? fmt(2000) : '₹0'} />
         <Result label={`${years} Saal Mein Total`} value={fmt(total)} highlight />
         {!eligible && (
-          <p className="text-xs text-red-600 pt-2">
+          <p className="text-xs text-red-600 dark:text-red-400 pt-2">
             {reg === 'no' ? '⚠️ Pehle registration karo — pmkisan.gov.in par free' : '⚠️ eKYC complete karo — bina eKYC kist nahi milti'}
           </p>
         )}
         {eligible && (
-          <p className="text-xs text-green-600 pt-2">✅ Aap {years} saal mein {fmt(total)} ke haqdaar hain!</p>
+          <p className="text-xs text-green-600 dark:text-green-400 pt-2">✅ Aap {years} saal mein {fmt(total)} ke haqdaar hain!</p>
         )}
       </div>
 
-      <div className="p-3 bg-blue-50 border border-blue-200 rounded-xl text-xs text-blue-800">
+      <div className="p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl text-xs text-blue-800 dark:text-blue-300">
         <strong>📌 Note:</strong> PM Kisan ₹6,000/saal sabhi registered eligible farmers ko milta hai — zameen ki size se fark nahi padta (jab tak chote/marginal farmer hain).
       </div>
     </div>
@@ -142,7 +139,7 @@ function MspCalc() {
         </div>
       </div>
 
-      <div className="bg-gray-50 rounded-2xl p-4 space-y-1">
+      <div className="bg-[var(--color-bg-alt)] rounded-2xl p-4 space-y-1">
         <Result label={`MSP Rate (${c.name})`} value={`₹${c.msp.toLocaleString()}/qtl`} />
         <Result label="Aapki Paidavar" value={`${qty} quintal`} />
         <Result label="MSP Se Kamai" value={fmt(mspEarning)} highlight />
@@ -154,13 +151,13 @@ function MspCalc() {
               value={`${diff >= 0 ? '+' : ''}${fmt(Math.abs(diff))}`}
             />
             {diff < 0 && (
-              <p className="text-xs text-amber-700 pt-1">💡 MSP par becho — market se {fmt(Math.abs(diff))} zyada milega!</p>
+              <p className="text-xs text-amber-700 dark:text-amber-400 pt-1">💡 MSP par becho — market se {fmt(Math.abs(diff))} zyada milega!</p>
             )}
           </>
         )}
       </div>
 
-      <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl text-xs text-amber-800">
+      <div className="p-3 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl text-xs text-amber-800 dark:text-amber-300">
         <strong>📌 MSP 2025-26:</strong> Government guaranteed minimum price. Agar market rate kam ho to sarkar kharidegi is rate par.
       </div>
     </div>
@@ -194,7 +191,7 @@ function ProfitCalc() {
         <Inp label="Anya Kharcha (₹/Acre)" value={other} onChange={setOther} suffix="₹" />
       </div>
 
-      <div className="bg-gray-50 rounded-2xl p-4 space-y-1">
+      <div className="bg-[var(--color-bg-alt)] rounded-2xl p-4 space-y-1">
         <Result label="Kul Amdani" value={fmt(revenue)} />
         <Result label="Kul Kharcha" value={fmt(totalCost)} />
         <Result label="Shuddh Munafa" value={profit >= 0 ? fmt(profit) : `-${fmt(Math.abs(profit))}`} highlight />
@@ -203,7 +200,7 @@ function ProfitCalc() {
       </div>
 
       {profit < 0 && (
-        <div className="p-3 bg-red-50 border border-red-200 rounded-xl text-xs text-red-800">
+        <div className="p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl text-xs text-red-800 dark:text-red-300">
           ⚠️ Is rate par nuksan ho raha hai. Kharcha kam karo ya MSP par becho.
         </div>
       )}
@@ -243,14 +240,14 @@ function EmiCalc() {
         </div>
       </div>
 
-      <div className="bg-gray-50 rounded-2xl p-4 space-y-1">
+      <div className="bg-[var(--color-bg-alt)] rounded-2xl p-4 space-y-1">
         <Result label="Har Mahine EMI" value={fmt(emi)} highlight />
         <Result label="Kul Bhugtan" value={fmt(totalPay)} />
         <Result label="Kul Byaj" value={fmt(totalInt)} />
         <Result label="Avadhi" value={`${tenure} saal (${N} mahine)`} />
       </div>
 
-      <div className="p-3 bg-blue-50 border border-blue-200 rounded-xl text-xs text-blue-800">
+      <div className="p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl text-xs text-blue-800 dark:text-blue-300">
         <strong>💡 KCC Tip:</strong> Kisan Credit Card par 3 lakh tak ka loan 7% par milta hai — agar time par chukao to 3% aur subsidy bhi milti hai — effective rate sirf 4%!
       </div>
     </div>
@@ -264,7 +261,6 @@ function FertCalc() {
   const [dap, setDap]     = useState('0');
   const [mop, setMop]     = useState('0');
 
-  // Recommended NPK per acre for common crops
   const recs: Record<string, { n: number; p: number; k: number }> = {
     wheat:    { n: 120, p: 60, k: 40 },
     paddy:    { n: 120, p: 60, k: 60 },
@@ -278,7 +274,6 @@ function FertCalc() {
   const rec = recs[crop] || recs.wheat;
   const areaNum = Number(area);
 
-  // Urea = 46% N, DAP = 18% N + 46% P, MOP = 60% K
   const nFromUrea = Number(urea) * 0.46;
   const nFromDap  = Number(dap) * 0.18;
   const pFromDap  = Number(dap) * 0.46;
@@ -288,9 +283,9 @@ function FertCalc() {
   const totalP = pFromDap / areaNum;
   const totalK = kFromMop / areaNum;
 
-  const ureaPrice = 266;  // ₹/bag 50kg (subsidized)
-  const dapPrice  = 1350; // ₹/bag 50kg
-  const mopPrice  = 1700; // ₹/bag 50kg
+  const ureaPrice = 266;
+  const dapPrice  = 1350;
+  const mopPrice  = 1700;
 
   const totalCost = Number(urea) * (ureaPrice / 50) + Number(dap) * (dapPrice / 50) + Number(mop) * (mopPrice / 50);
 
@@ -310,18 +305,17 @@ function FertCalc() {
         <Inp label="MOP/Potash (kg)" value={mop} onChange={setMop} suffix="kg" />
       </div>
 
-      {/* Recommendation */}
-      <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl text-xs">
-        <p className="font-bold text-amber-800 mb-1">📋 Recommended NPK per Acre ({crop}):</p>
-        <div className="flex gap-4 text-amber-700">
+      <div className="p-3 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl text-xs">
+        <p className="font-bold text-amber-800 dark:text-amber-300 mb-1">📋 Recommended NPK per Acre ({crop}):</p>
+        <div className="flex gap-4 text-amber-700 dark:text-amber-400">
           <span>N: <strong>{rec.n} kg</strong></span>
           <span>P: <strong>{rec.p} kg</strong></span>
           <span>K: <strong>{rec.k} kg</strong></span>
         </div>
-        <p className="text-amber-600 mt-1">= Urea: {Math.round(rec.n/0.46)} kg + DAP: {Math.round(rec.p/0.46)} kg + MOP: {Math.round(rec.k/0.60)} kg</p>
+        <p className="text-amber-600 dark:text-amber-400 mt-1">= Urea: {Math.round(rec.n/0.46)} kg + DAP: {Math.round(rec.p/0.46)} kg + MOP: {Math.round(rec.k/0.60)} kg</p>
       </div>
 
-      <div className="bg-gray-50 rounded-2xl p-4 space-y-1">
+      <div className="bg-[var(--color-bg-alt)] rounded-2xl p-4 space-y-1">
         <Result label="Applied N" value={`${totalN.toFixed(0)} kg/acre`} />
         <Result label="Applied P" value={`${totalP.toFixed(0)} kg/acre`} />
         <Result label="Applied K" value={`${totalK.toFixed(0)} kg/acre`} />
@@ -356,9 +350,8 @@ function IrrigationCalc() {
   const cropWater  = waterReq[crop] || Number(water);
   const actualWater = cropWater / m.eff;
   const costPerHour = Number(rate);
-  const pumpHours  = (actualWater * areaNum * 10) / 3600; // rough estimate
+  const pumpHours  = (actualWater * areaNum * 10) / 3600;
   const totalCost  = pumpHours * costPerHour;
-  const waterSaved = method !== 'flood' ? ((actualWater - cropWater) / actualWater * 100).toFixed(0) : '0';
 
   return (
     <div className="space-y-4">
@@ -375,7 +368,7 @@ function IrrigationCalc() {
         <Inp label="Bijli Rate (₹/hr)" value={rate} onChange={setRate} suffix="₹/hr" />
       </div>
 
-      <div className="bg-gray-50 rounded-2xl p-4 space-y-1">
+      <div className="bg-[var(--color-bg-alt)] rounded-2xl p-4 space-y-1">
         <Result label={`Fasal Zaroorat (${crop})`} value={`${cropWater} mm/season`} />
         <Result label="Method Efficiency" value={`${Math.round(m.eff * 100)}%`} />
         <Result label="Actual Water Need" value={`${Math.round(actualWater)} mm`} />
@@ -386,14 +379,13 @@ function IrrigationCalc() {
         )}
       </div>
 
-      <div className="p-3 bg-green-50 border border-green-200 rounded-xl text-xs text-green-800">
+      <div className="p-3 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl text-xs text-green-800 dark:text-green-300">
         <strong>💧 Tip:</strong> Drip ya sprinkler irrigation se 35-50% paani bachta hai — PM Krishi Sinchai Yojana mein 55% subsidy milti hai!
       </div>
     </div>
   );
 }
 
-// ── MAIN COMPONENT ─────────────────────────────────────────────────────────
 export default function AgriCalculator() {
   const [tab, setTab] = useState<Tab>('pmkisan');
 
@@ -407,46 +399,42 @@ export default function AgriCalculator() {
   ];
 
   return (
-    <section className="py-14 bg-white" id="agri-calculator" aria-labelledby="calc-heading">
+    <section className="py-14 bg-[var(--color-card)]" id="agri-calculator" aria-labelledby="calc-heading">
       <div className="container-site max-w-4xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-10">
-          <span className="inline-block bg-green-100 text-green-800 text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">
+          <span className="inline-block bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">
             🧮 Free Tool
           </span>
-          <h2 id="calc-heading" className="text-2xl md:text-3xl font-black text-gray-900 mb-2">
+          <h2 id="calc-heading" className="text-2xl md:text-3xl font-black text-[var(--color-text)] mb-2">
             Kisan Agriculture Calculator
           </h2>
-          <p className="text-gray-500 text-sm max-w-xl mx-auto">
+          <p className="text-[var(--color-text-muted)] text-sm max-w-xl mx-auto">
             India ke kisaanon ke liye — PM Kisan labh, MSP kamai, crop profit, loan EMI, khad aur sinchai kharcha ek jagah
           </p>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-3xl shadow-lg overflow-hidden">
-          {/* Tab Navigation */}
-          <div className="grid grid-cols-3 md:grid-cols-6 border-b border-gray-200 bg-gray-50">
+        <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-3xl shadow-lg overflow-hidden">
+          <div className="grid grid-cols-3 md:grid-cols-6 border-b border-[var(--color-border)] bg-[var(--color-bg-alt)]">
             {tabs.map(t => (
               <button key={t.id} onClick={() => setTab(t.id)}
-                className={`flex flex-col items-center gap-1 py-3 px-2 text-center transition-all border-b-2 ${
+                className={`flex flex-col items-center gap-1 py-3 px-2 text-center transition-all border-b-2 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:ring-inset ${
                   tab === t.id
-                    ? 'border-green-600 bg-white text-green-700'
-                    : 'border-transparent text-gray-500 hover:text-gray-700 hover:bg-white/60'
+                    ? 'border-[var(--color-primary)] bg-[var(--color-card)] text-[var(--color-primary)]'
+                    : 'border-transparent text-[var(--color-text-muted)] hover:text-[var(--color-text)] hover:bg-[var(--color-card)]'
                 }`}>
                 <span className="text-xl">{t.emoji}</span>
                 <span className="text-[10px] font-bold leading-tight">{t.label}</span>
-                <span className="text-[9px] text-gray-400 hidden md:block">{t.desc}</span>
+                <span className="text-[9px] text-[var(--color-text-muted)] hidden md:block">{t.desc}</span>
               </button>
             ))}
           </div>
 
-          {/* Calculator Body */}
           <div className="p-5 md:p-8">
-            {/* Tab title */}
             <div className="flex items-center gap-2 mb-6">
               <span className="text-2xl">{tabs.find(t => t.id === tab)?.emoji}</span>
               <div>
-                <h3 className="font-black text-gray-900">{tabs.find(t => t.id === tab)?.label} Calculator</h3>
-                <p className="text-xs text-gray-500">{tabs.find(t => t.id === tab)?.desc}</p>
+                <h3 className="font-black text-[var(--color-text)]">{tabs.find(t => t.id === tab)?.label} Calculator</h3>
+                <p className="text-xs text-[var(--color-text-muted)]">{tabs.find(t => t.id === tab)?.desc}</p>
               </div>
             </div>
 
@@ -458,9 +446,8 @@ export default function AgriCalculator() {
             {tab === 'irrigation' && <IrrigationCalc />}
           </div>
 
-          {/* Footer */}
-          <div className="bg-green-50 border-t border-green-100 px-6 py-3 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-500">
-            <span>✍️ By Sidhu Singh | KisanStatus.com</span>
+          <div className="bg-green-50 dark:bg-green-900/20 border-t border-green-100 dark:border-green-800 px-6 py-3 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-[var(--color-text-muted)]">
+            <span>✍️ By KisanStatus Team | KisanStatus.com</span>
             <span>⚠️ Yeh calculator sirf estimate deta hai — final figures official sources se verify karein</span>
           </div>
         </div>
