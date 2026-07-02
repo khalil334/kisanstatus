@@ -79,10 +79,10 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
 function ArticleLoading() {
   return (
     <div className="container-site py-10 animate-pulse">
-      <div className="h-8 bg-gray-200 rounded w-2/3 mb-4" />
-      <div className="h-4 bg-gray-100 rounded w-full mb-2" />
-      <div className="h-4 bg-gray-100 rounded w-5/6 mb-2" />
-      <div className="h-4 bg-gray-100 rounded w-4/6" />
+      <div className="h-8 bg-[var(--color-border)] rounded w-2/3 mb-4" />
+      <div className="h-4 bg-[var(--color-border)] rounded w-full mb-2" />
+      <div className="h-4 bg-[var(--color-border)] rounded w-5/6 mb-2" />
+      <div className="h-4 bg-[var(--color-border)] rounded w-4/6" />
     </div>
   );
 }
@@ -201,12 +201,12 @@ export default async function ArticlePage({
         <div className="container-site pt-6">
           <Link
             href={`/articles/category/${article.category}`}
-            className="inline-flex items-center gap-2 bg-green-100 hover:bg-green-200 text-green-800 text-sm font-bold px-4 py-2 rounded-full transition-colors focus:ring-2 focus:ring-green-500 focus:outline-none"
+            className="inline-flex items-center gap-2 bg-green-100 hover:bg-green-200 text-green-800 dark:bg-green-900/30 dark:text-green-300 dark:hover:bg-green-900/50 text-sm font-bold px-4 py-2 rounded-full transition-colors focus:ring-2 focus:ring-green-500 focus:outline-none"
             aria-label={`View all ${category.name} articles`}
           >
             <span aria-hidden="true">📂</span>
             <span>{category.name}</span>
-            <span className="text-green-600" aria-hidden="true">→</span>
+            <span className="text-green-600 dark:text-green-400" aria-hidden="true">→</span>
           </Link>
         </div>
       )}
