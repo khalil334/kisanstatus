@@ -13,42 +13,42 @@ export const revalidate = 86400;
 
 const CATEGORY_SEO: Record<CategorySlug, { title: string; description: string; emoji: string }> = {
   'status-check': {
-    title: 'PM Kisan Status Check Guides 2026 — Kist, FTO, Land Seeding',
-    description: 'PM Kisan status check, 23vi/24vi kist, FTO generated, land seeding, beneficiary list — sab guides Hindi mein.',
+    title: 'Beneficiary Verification Guides 2026 — Installment Status, FTO, Land Integration',
+    description: 'Scheme status check, 23vi/24vi installment, monetary transfer directive, land record linking — sab processes Hinglish mein.',
     emoji: '📊',
   },
   'ekyc': {
-    title: 'PM Kisan eKYC Guides 2026 — Aadhaar OTP & CSC Verification',
-    description: 'PM Kisan eKYC kaise karein — ghar baithe Aadhaar OTP se ya CSC center par biometric se.',
+    title: 'Digital Authentication Guides 2026 — Biometric OTP & CSC Verification',
+    description: 'Biometric authentication kaise karein — ghar baithe OTP se ya CSC center par fingerprint se.',
     emoji: '🔐',
   },
   'payment': {
-    title: 'PM Kisan Payment Issues 2026 — Failed, Rejected, RFT, PFMS Fix',
-    description: 'PM Kisan payment fail, rejected list, RFT signed, PFMS pending — sabhi payment problems ke solutions.',
+    title: 'Credit Transfer Issues 2026 — Failed, Rejected, RFT, PFMS Solutions',
+    description: 'Payment fail, rejected list, RFT signed, PFMS pending — sabhi transfer problems ke tested solutions.',
     emoji: '💸',
   },
   'loan': {
-    title: 'Kisan Loan & KCC Guides 2026 — Credit Card, Tractor Loan, Bank Loan',
-    description: 'Kisan Credit Card (KCC) online apply, tractor loan bina down payment, bank loan kaise le.',
+    title: 'Agricultural Credit & KCC Guides 2026 — Credit Card, Tractor Finance, Bank Loans',
+    description: 'Kisan Credit Card (KCC) online apply, tractor loan bina down payment, bank credit kaise le.',
     emoji: '💰',
   },
   'registration': {
-    title: 'PM Kisan Registration Guide 2026 — Naye Kisan Kaise Register Karein',
-    description: 'PM Kisan Samman Nidhi mein naye farmer kaise register karein — eligibility, documents, process.',
+    title: 'Scheme Enrollment Guide 2026 — Naye Kisan Kaise Register Karein',
+    description: 'Agrarian welfare program mein naye farmer kaise register karein — eligibility, documents, process.',
     emoji: '📝',
   },
   'farming': {
-    title: 'Farming Schemes 2026 — Soil Health Card, PMFBY, AgriStack, Nano DAP',
-    description: 'Soil Health Card, PMFBY crop insurance, AgriStack farmer ID, Nano DAP price — complete guide.',
+    title: 'Agricultural Programs 2026 — Soil Analysis, Crop Insurance, Digital ID, Nano Fertilizer',
+    description: 'Soil health analysis, crop insurance, digital farmer ID, nano fertilizer pricing — complete information.',
     emoji: '🌱',
   },
   'correction': {
-    title: 'PM Kisan Correction Guides 2026 — Name, Mobile, Aadhaar, Bank Fix',
-    description: 'PM Kisan naam correction, mobile number change, Aadhaar mismatch fix, bank account update.',
+    title: 'Identity Rectification Guides 2026 — Name, Mobile, Biometric, Bank Update',
+    description: 'Naam correction, mobile number change, biometric credential mismatch fix, bank account update.',
     emoji: '✏️',
   },
   'mandi': {
-    title: 'Mandi Bhav Today 2026 — Live Sabzi aur Fruit Rates',
+    title: 'Market Rates Today 2026 — Live Vegetable aur Fruit Prices',
     description: 'Aaj ka mandi bhav — aloo, pyaaz, tamatar ke wholesale rates. Daily updated market prices.',
     emoji: '🏪',
   },
@@ -104,11 +104,11 @@ export default async function CategoryPage({
 
   if (!cat || !seo) notFound();
 
-  // ✅ PERFORMANCE: Filter once, use everywhere
+  // Filter once, use everywhere
   const articles = ARTICLES.filter((a) => a.category === category);
   const url = `${DOMAIN}/articles/category/${category}`;
 
-  // ✅ SEO: Fixed language to hi-IN
+  // SEO: Fixed language to hi-IN
   const collectionSchema = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
@@ -139,7 +139,7 @@ export default async function CategoryPage({
     ],
   };
 
-  // ✅ PERFORMANCE: Pre-calculate category counts
+  // Pre-calculate category counts
   const categoryCounts = Object.fromEntries(
     Object.keys(CATEGORIES).map((slug) => [
       slug,
@@ -168,7 +168,7 @@ export default async function CategoryPage({
             </nav>
 
             <span className="inline-block bg-white/10 border border-white/20 text-green-300 text-xs font-bold px-4 py-2 rounded-full mb-4 uppercase tracking-wider">
-              {seo.emoji} {cat.name} Guides
+              {seo.emoji} {cat.name} Resources
             </span>
             <h1 id="category-heading" className="text-2xl md:text-4xl font-black text-white mb-3">
               {seo.title}
@@ -177,7 +177,7 @@ export default async function CategoryPage({
               {seo.description}
             </p>
             <div className="flex items-center justify-center gap-4 text-green-300 text-sm">
-              <span className="bg-white/10 px-3 py-1 rounded-full">📚 {articles.length} Articles</span>
+              <span className="bg-white/10 px-3 py-1 rounded-full">📚 {articles.length} Resources</span>
             </div>
           </div>
         </section>
@@ -213,18 +213,18 @@ export default async function CategoryPage({
 
           {articles.length === 0 ? (
             <div className="text-center py-12">
-              <p className="text-gray-500 text-lg">Is category mein abhi koi article nahi hai.</p>
+              <p className="text-gray-500 text-lg">Is category mein abhi koi resource nahi hai.</p>
               <Link href="/articles" className="text-green-700 font-bold hover:underline mt-4 inline-block">
-                ← Saare Articles Dekho
+                ← Saare Resources Dekho
               </Link>
             </div>
           ) : (
             <section aria-labelledby="articles-heading">
               <div className="flex items-center gap-3 mb-5">
                 <span className="text-xl" aria-hidden="true">{seo.emoji}</span>
-                <h2 id="articles-heading" className="text-lg font-black text-gray-900">{cat.name} Articles</h2>
+                <h2 id="articles-heading" className="text-lg font-black text-gray-900">{cat.name} Resources</h2>
                 <span className="bg-green-100 text-green-700 text-xs font-bold px-2 py-0.5 rounded-full">
-                  {articles.length} articles
+                  {articles.length} resources
                 </span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -261,7 +261,7 @@ export default async function CategoryPage({
               href="/articles"
               className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-black px-8 py-3.5 rounded-xl text-sm transition-all hover:scale-105 shadow-lg focus:ring-2 focus:ring-green-300 focus:outline-none"
             >
-              📚 Saare Articles Dekho
+              📚 Saare Resources Dekho
             </Link>
           </div>
         </div>
