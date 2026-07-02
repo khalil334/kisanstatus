@@ -149,8 +149,8 @@ export default function NanoDap500mlPriceInIndia2026(_: { article: ArticleMeta }
         <section id="introduction" className="mb-10">
           <h2 className="text-2xl font-bold text-[var(--color-text)] mb-4">Yeh Product Kya Hai?</h2>
           <p className="mb-4 leading-relaxed text-[var(--color-text-muted)]">
-            Namaste cultivator bhaiyon! Aaj hum baat karenge ek modern agricultural input ke baare mein —
-            <strong> IFFCO ka advanced liquid fertilizer</strong>. Agar aap soch rahe hain ki yeh product kya hai,
+            Bahut se annadata aaj kal modern agricultural inputs ke baare mein jaankari chahte hain.
+            <strong> IFFCO ka advanced liquid fertilizer</strong> unmein se ek hai. Agar aap soch rahe hain ki yeh product kya hai,
             iski kimat kya hai, aur kaise apply karein — toh yeh guide aapke liye hai.
           </p>
           <p className="mb-4 leading-relaxed text-[var(--color-text-muted)]">
@@ -565,21 +565,6 @@ export default function NanoDap500mlPriceInIndia2026(_: { article: ArticleMeta }
           </p>
         </section>
 
-        <section className="mb-10">
-          <h2 className="text-2xl font-bold text-[var(--color-text)] mb-4">Representative Cultivator Experiences</h2>
-          <p className="mb-4 text-sm text-[var(--color-text-muted)] italic">
-            Niche diye gaye anubhav common cultivator feedback patterns par based representative examples hain.
-          </p>
-          <blockquote className="border-l-4 border-green-400 dark:border-green-600 pl-4 mb-6 italic leading-relaxed bg-[var(--color-bg-alt)] py-3 pr-4 rounded-r-xl">
-            <p className="text-[var(--color-text-muted)]">&ldquo;Pehle 50 kg DAP bag uthana padta tha — ab sirf ek bottle lekar spray kar deta hoon. Gehu mein achha result mila, lekin saath mein compost aur paani dena bhi zaroori hai.&rdquo;</p>
-            <footer className="mt-2 text-sm font-semibold text-[var(--color-text)] not-italic">— Representative: Wheat cultivator, Uttar Pradesh</footer>
-          </blockquote>
-          <blockquote className="border-l-4 border-green-400 dark:border-green-600 pl-4 italic leading-relaxed bg-[var(--color-bg-alt)] py-3 pr-4 rounded-r-xl">
-            <p className="text-[var(--color-text-muted)]">&ldquo;Maine galti se dopahar mein spray kar diya — kuch pattiyan jal gayi thi. Ab hamesha shaam ko spray karta hoon.&rdquo;</p>
-            <footer className="mt-2 text-sm font-semibold text-[var(--color-text)] not-italic">— Representative: Paddy cultivator, Punjab</footer>
-          </blockquote>
-        </section>
-
         <section id="faqs" className="mb-10">
           <h2 className="text-2xl font-bold text-[var(--color-text)] mb-4">Frequently Asked Questions (FAQs)</h2>
 
@@ -639,14 +624,14 @@ export default function NanoDap500mlPriceInIndia2026(_: { article: ArticleMeta }
         <section id="conclusion" className="mb-10">
           <h2 className="text-2xl font-bold text-[var(--color-text)] mb-4">Conclusion</h2>
           <p className="mb-4 leading-relaxed text-[var(--color-text-muted)]">
-            Cultivator bhaiyon, yeh 500ml bottle ek modern aur convenient fertilizer option hai jo sahi tarike se
+            Yeh 500ml bottle ek modern aur convenient fertilizer option hai jo sahi tarike se
             use karne par farming ko easier aur cost-effective bana sakta hai.
           </p>
           <p className="mb-4 leading-relaxed text-[var(--color-text-muted)]">
             Lekin yaad rakhein — <strong>koi bhi fertilizer akela kaam nahi karta.</strong> Samay par paani,
             achha beej, aur sahi dekh-bhaal bhi zaroori hai. Pehli baar use kar rahe hain toh chhote area par test karein.
           </p>
-          <p className="font-semibold text-green-700 dark:text-green-400">🌱 Aapki fasal hamesha hari-bhari rahe! Dhanyavaad!</p>
+          <p className="font-semibold text-green-700 dark:text-green-400">Aapki fasal achhi ho — yahi hamari shubhkamnayein!</p>
         </section>
 
         <section className="border-t border-[var(--color-border)] pt-8 mb-6">
