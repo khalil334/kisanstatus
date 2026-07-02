@@ -37,7 +37,7 @@ export default function PmKisan24viKist2026() {
         <ol className="flex flex-wrap items-center gap-1">
           <li><Link href="/" className="text-[var(--color-primary)] hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">Home</Link></li>
           <li aria-hidden="true">/</li>
-          <li aria-current="page" className="text-[var(--color-text)]">24vi Tranche Guide</li>
+          <li aria-current="page" className="text-[var(--color-text)]">24vi Installment Guide</li>
         </ol>
       </nav>
 
@@ -60,10 +60,10 @@ export default function PmKisan24viKist2026() {
               : "text-orange-800 dark:text-orange-300"
             }`}>
               {isReleased && KIST_INFO.confirmedDate
-                ? `24vi Tranche Released! – ${KIST_INFO.confirmedDate}`
+                ? `24vi Installment Released! – ${KIST_INFO.confirmedDate}`
                 : isConfirmed && KIST_INFO.confirmedDate
-                ? `24vi Tranche Confirmed: ${KIST_INFO.confirmedDate}`
-                : `24vi Tranche – Expected: ${KIST_INFO.expectedDate}`}
+                ? `24vi Installment Confirmed: ${KIST_INFO.confirmedDate}`
+                : `24vi Installment – Expected: ${KIST_INFO.expectedDate}`}
             </p>
             <p className={`text-xs sm:text-sm mt-1 ${
               isReleased  ? "text-green-700 dark:text-green-400"
@@ -71,7 +71,7 @@ export default function PmKisan24viKist2026() {
               : "text-orange-700 dark:text-orange-400"
             }`}>
               {isReleased
-                ? "Agar aapki tranche nahi aayi toh neeche verification guide padhein."
+                ? "Agar aapki kist nahi aayi toh neeche verification guide padhein."
                 : isConfirmed
                 ? "Official date confirm ho gayi hai. Paise release hote hi update hoga."
                 : "Abhi official date announce nahi hui. Hum yahan update karte rahenge."}
@@ -87,7 +87,7 @@ export default function PmKisan24viKist2026() {
       {/* Title */}
       <header className="mb-5">
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--color-text)] leading-tight mb-3">
-          Farmer Welfare 24vi Tranche Kab Aayegi? Date, Status Check Aur Latest Updates 2026
+          PM Kisan 24vi Kist Kab Aayegi? Date, Status Check Aur Latest Updates 2026
         </h1>
         <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-xs sm:text-sm text-[var(--color-text-muted)]">
           <span>✍️ <Link href="/about" className="underline hover:text-[var(--color-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">KisanStatus Team</Link></span>
@@ -95,16 +95,16 @@ export default function PmKisan24viKist2026() {
           <span>⏱️ ~12 min read</span>
         </div>
         <p className="mt-3 text-base sm:text-lg text-[var(--color-text-muted)] leading-relaxed">
-          Har cultivator ka intezaar rehta hai agrarian welfare scheme ki agli tranche ka. Agar aap bhi jaanna chahte hain
-          ki 24vi installment kab aayegi, kitni aayegi, aur verification kaise karein – toh yeh
-          article aapke sare sawaalon ka jawab dega.
+          Bahut se kisanon ko agli installment ka intezaar rehta hai. Agar aap bhi jaanna chahte hain
+          ki 24vi kist kab aayegi, kitni aayegi, aur status kaise check karein – toh yeh
+          article aapke sare sawaalon ka jawab degi.
         </p>
       </header>
 
-      {/* Tranche Summary Box */}
+      {/* Installment Summary Box */}
       <div className="grid grid-cols-2 gap-2 sm:gap-3 mb-7">
         {[
-          { label: "Tranche Number",   value: KIST_INFO.kistNumberText },
+          { label: "Installment Number",   value: KIST_INFO.kistNumberText },
           { label: "Amount",        value: KIST_INFO.amount },
           { label: "Expected Date", value: "October 2026" },
           { label: "Recipients", value: KIST_INFO.totalRecipients },
@@ -120,14 +120,14 @@ export default function PmKisan24viKist2026() {
       <figure className="my-5">
         <Image
           src="/images/pm-kisan-24vi-kist-october-2026.webp"
-          alt="Farmer welfare 24vi tranche October 2026 – Rs 2000 installment date aur verification guide"
+          alt="PM Kisan 24vi kist October 2026 – Rs 2000 installment date aur verification guide"
           width={720}
           height={1080}
           className="rounded-xl shadow-md w-full h-auto"
           priority
         />
         <figcaption className="text-center text-xs sm:text-sm text-[var(--color-text-muted)] mt-2">
-          24vi Tranche – Expected October 2026, ₹2000 seedha bank account mein
+          24vi Kist – Expected October 2026, ₹2000 seedha bank account mein
         </figcaption>
       </figure>
 
@@ -135,11 +135,11 @@ export default function PmKisan24viKist2026() {
       <nav aria-label="Table of Contents" className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4 mb-7">
         <h2 className="text-base sm:text-lg font-semibold text-green-800 dark:text-green-300 mb-2">📋 Is Article Mein Kya Hai</h2>
         <ol className="space-y-1 text-green-700 dark:text-green-400 list-decimal list-inside text-sm">
-          <li><a href="#tranche-date" className="hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">24vi Tranche Date – Kab Aayegi?</a></li>
+          <li><a href="#installment-date" className="hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">24vi Kist Date – Kab Aayegi?</a></li>
           <li><a href="#payment-history" className="hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">Payment History Timeline</a></li>
-          <li><a href="#eligibility" className="hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">24vi Tranche Ke Liye Eligibility</a></li>
-          <li><a href="#verification-check" className="hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">Verification Check Kaise Karein</a></li>
-          <li><a href="#digital-auth" className="hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">Digital Authentication – Mandatory Hai Ya Nahi</a></li>
+          <li><a href="#eligibility" className="hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">24vi Kist Ke Liye Eligibility</a></li>
+          <li><a href="#verification-check" className="hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">Status Check Kaise Karein</a></li>
+          <li><a href="#digital-auth" className="hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">eKYC – Mandatory Hai Ya Nahi</a></li>
           <li><a href="#troubleshooting" className="hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">Common Issues Aur Solutions</a></li>
           <li><a href="#faq" className="hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">Frequently Asked Questions</a></li>
           <li><a href="#conclusion" className="hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">Conclusion</a></li>
@@ -147,33 +147,33 @@ export default function PmKisan24viKist2026() {
       </nav>
 
       {/* Section 1 – Date */}
-      <section id="tranche-date" className="mb-9">
+      <section id="installment-date" className="mb-9">
         <h2 className="text-xl sm:text-2xl font-bold text-[var(--color-text)] mb-3 border-b-2 border-[var(--color-border)] pb-2">
-          1. 24vi Tranche Date – Kab Aayegi?
+          1. 24vi Kist Date – Kab Aayegi?
         </h2>
         <p className="mb-4 leading-relaxed text-sm sm:text-base text-[var(--color-text-muted)]">
-          Agrarian welfare scheme ki 24vi tranche ki abhi official date announce nahi hui hai. Lekin historical pattern
+          PM Kisan ki 24vi kist ki abhi official date announce nahi hui hai. Lekin historical pattern
           ke hisaab se yeh <strong>October 2026</strong> mein aa sakti hai. Administration har 4 mahine mein
           ek installment release karti hai.
         </p>
 
         <div className="bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 rounded-lg p-3 sm:p-4 mb-4">
-          <p className="font-semibold text-orange-800 dark:text-orange-300 mb-2 text-sm sm:text-base">📊 Recent Tranche Release Pattern:</p>
+          <p className="font-semibold text-orange-800 dark:text-orange-300 mb-2 text-sm sm:text-base">📊 Recent Installment Release Pattern:</p>
           <ul className="text-orange-700 dark:text-orange-400 text-sm space-y-1">
-            <li>• 21vi Tranche → November 2025 ✅ (Released)</li>
-            <li>• 22vi Tranche → 13 March 2026 ✅ (Released)</li>
-            <li>• 23vi Tranche → 20 June 2026 ✅ (Released)</li>
-            <li>• 24vi Tranche → <strong>October 2026 (Expected)</strong></li>
+            <li>• 21vi Kist → November 2025 ✅ (Released)</li>
+            <li>• 22vi Kist → 13 March 2026 ✅ (Released)</li>
+            <li>• 23vi Kist → 20 June 2026 ✅ (Released)</li>
+            <li>• 24vi Kist → <strong>October 2026 (Expected)</strong></li>
           </ul>
         </div>
 
         <p className="mb-4 leading-relaxed text-sm sm:text-base text-[var(--color-text-muted)]">
-          23vi tranche 20 June 2026 ko release hui thi. Iske 4 mahine baad yani October 2026 mein
-          24vi tranche aane ki poori sambhavna hai. Is page ko bookmark karein – hum official
+          23vi kist 20 June 2026 ko release hui thi. Iske 4 mahine baad yani October 2026 mein
+          24vi kist aane ki poori sambhavna hai. Is page ko bookmark karein – hum official
           announcement aate hi turant update karenge.
         </p>
         <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-          Verification jaldi check karna ho toh hamari{" "}
+          Status jaldi check karna ho toh hamari{" "}
           <Link href="/articles/pm-kisan-23vi-kist-2026-status-check" className="text-[var(--color-primary)] underline hover:text-[var(--color-primary-dark)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">
             Beneficiary Verification Guide
           </Link>{" "}
@@ -184,7 +184,7 @@ export default function PmKisan24viKist2026() {
       {/* Section 2 – History */}
       <section id="payment-history" className="mb-9">
         <h2 className="text-xl sm:text-2xl font-bold text-[var(--color-text)] mb-3 border-b-2 border-[var(--color-border)] pb-2">
-          2. Payment History Timeline – Pichhli Tranches Ki Dates
+          2. Payment History Timeline – Pichhli Kiston Ki Dates
         </h2>
         <p className="mb-4 leading-relaxed text-sm sm:text-base text-[var(--color-text-muted)]">
           Neeche recent installments ki dates aur status diye gaye hain:
@@ -193,7 +193,7 @@ export default function PmKisan24viKist2026() {
           <table className="w-full border-collapse border border-[var(--color-border)] text-xs sm:text-sm">
             <thead>
               <tr className="bg-green-100 dark:bg-green-900/30">
-                <th className="border border-[var(--color-border)] px-2 sm:px-4 py-2 text-left font-semibold text-[var(--color-text)]">Tranche</th>
+                <th className="border border-[var(--color-border)] px-2 sm:px-4 py-2 text-left font-semibold text-[var(--color-text)]">Kist</th>
                 <th className="border border-[var(--color-border)] px-2 sm:px-4 py-2 text-left font-semibold text-[var(--color-text)]">Release Date</th>
                 <th className="border border-[var(--color-border)] px-2 sm:px-4 py-2 text-left font-semibold text-[var(--color-text)]">Amount</th>
                 <th className="border border-[var(--color-border)] px-2 sm:px-4 py-2 text-left font-semibold text-[var(--color-text)]">Status</th>
@@ -201,15 +201,15 @@ export default function PmKisan24viKist2026() {
             </thead>
             <tbody>
               {[
-                ["24vi Tranche", "October 2026",    "₹2,000", "Expected"],
-                ["23vi Tranche", "20 June 2026",    "₹2,000", "Released"],
-                ["22vi Tranche", "13 March 2026",   "₹2,000", "Released"],
-                ["21vi Tranche", "November 2025",   "₹2,000", "Released"],
-                ["20vi Tranche", "July 2025",       "₹2,000", "Released"],
-                ["19vi Tranche", "February 2025",   "₹2,000", "Released"],
-              ].map(([tranche, date, amount, status]) => (
-                <tr key={tranche} className="odd:bg-[var(--color-card)] even:bg-[var(--color-bg-alt)]">
-                  <td className="border border-[var(--color-border)] px-2 sm:px-4 py-2 font-medium text-[var(--color-text)]">{tranche}</td>
+                ["24vi Kist", "October 2026",    "₹2,000", "Expected"],
+                ["23vi Kist", "20 June 2026",    "₹2,000", "Released"],
+                ["22vi Kist", "13 March 2026",   "₹2,000", "Released"],
+                ["21vi Kist", "November 2025",   "₹2,000", "Released"],
+                ["20vi Kist", "July 2025",       "₹2,000", "Released"],
+                ["19vi Kist", "February 2025",   "₹2,000", "Released"],
+              ].map(([kist, date, amount, status]) => (
+                <tr key={kist} className="odd:bg-[var(--color-card)] even:bg-[var(--color-bg-alt)]">
+                  <td className="border border-[var(--color-border)] px-2 sm:px-4 py-2 font-medium text-[var(--color-text)]">{kist}</td>
                   <td className="border border-[var(--color-border)] px-2 sm:px-4 py-2 text-[var(--color-text-muted)]">{date}</td>
                   <td className="border border-[var(--color-border)] px-2 sm:px-4 py-2 text-[var(--color-text-muted)]">{amount}</td>
                   <td className="border border-[var(--color-border)] px-2 sm:px-4 py-2">
@@ -229,14 +229,14 @@ export default function PmKisan24viKist2026() {
         <figure className="my-5">
           <Image
             src="/images/pm-kisan-installment-history-20vi-to-23vi.webp"
-            alt="Payment history timeline – 19vi se 23vi tranche tak 2025 se 2026"
+            alt="Payment history timeline – 19vi se 23vi kist tak 2025 se 2026"
             width={800}
             height={505}
             className="rounded-xl shadow-md w-full h-auto"
             loading="lazy"
           />
           <figcaption className="text-center text-xs sm:text-sm text-[var(--color-text-muted)] mt-2">
-            19vi se 23vi tranche tak – Har baar ₹2000 ka seedha bank transfer
+            19vi se 23vi kist tak – Har baar ₹2000 ka seedha bank transfer
           </figcaption>
         </figure>
       </section>
@@ -244,20 +244,20 @@ export default function PmKisan24viKist2026() {
       {/* Section 3 – Eligibility */}
       <section id="eligibility" className="mb-9">
         <h2 className="text-xl sm:text-2xl font-bold text-[var(--color-text)] mb-3 border-b-2 border-[var(--color-border)] pb-2">
-          3. 24vi Tranche Ke Liye Eligibility – Kaun Eligible Hai?
+          3. 24vi Kist Ke Liye Eligibility – Kaun Eligible Hai?
         </h2>
         <p className="mb-4 leading-relaxed text-sm sm:text-base text-[var(--color-text-muted)]">
-          24vi tranche paane ke liye aapko neeche diye criteria poore karne honge:
+          24vi kist paane ke liye aapko neeche diye criteria poore karne honge:
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
           <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-3 sm:p-4">
             <p className="font-semibold text-green-800 dark:text-green-300 mb-2 text-sm sm:text-base">✅ Eligible Hain Agar:</p>
             <ul className="text-green-700 dark:text-green-400 text-sm space-y-1">
-              <li>• Aap ek small/marginal cultivator hain</li>
+              <li>• Aap ek small/marginal kisan hain</li>
               <li>• Aapke naam par agricultural land hai</li>
-              <li>• UID beneficiary portal se linked hai</li>
-              <li>• Digital authentication complete hai</li>
-              <li>• Bank account UID se NPCI linked hai</li>
+              <li>• Aadhaar beneficiary portal se linked hai</li>
+              <li>• eKYC complete hai</li>
+              <li>• Bank account Aadhaar se NPCI linked hai</li>
               <li>• Portal par details correct hain</li>
             </ul>
           </div>
@@ -269,7 +269,7 @@ export default function PmKisan24viKist2026() {
               <li>• Aap professional (doctor, CA, lawyer) hain</li>
               <li>• Aap constitutional post holder hain</li>
               <li>• Zameen aapke naam par nahi hai</li>
-              <li>• Digital verification pending hai</li>
+              <li>• eKYC pending hai</li>
             </ul>
           </div>
         </div>
@@ -285,16 +285,16 @@ export default function PmKisan24viKist2026() {
       {/* Section 4 – Verification Check */}
       <section id="verification-check" className="mb-9">
         <h2 className="text-xl sm:text-2xl font-bold text-[var(--color-text)] mb-3 border-b-2 border-[var(--color-border)] pb-2">
-          4. Beneficiary Verification Check Kaise Karein
+          4. Beneficiary Status Check Kaise Karein
         </h2>
         <p className="mb-4 leading-relaxed text-sm sm:text-base text-[var(--color-text-muted)]">
-          Verification check karne ke liye neeche diye steps follow karein:
+          Status check karne ke liye neeche diye steps follow karein:
         </p>
         <ol className="space-y-3 mb-5 text-[var(--color-text-muted)] text-sm sm:text-base">
           {[
             "pmkisan.gov.in par jaayein",
             "Farmers Corner mein 'Beneficiary Status' par click karein",
-            "UID number ya registered mobile number enter karein",
+            "Aadhaar number ya registered mobile number enter karein",
             "Verification code verify karein",
             "Aapka complete payment history aur current status dikhega",
           ].map((step, i) => (
@@ -313,21 +313,21 @@ export default function PmKisan24viKist2026() {
             <li><strong>FTO Generated:</strong> Paise administration ne release kiye, bank process mein hai</li>
             <li><strong>Payment Success:</strong> Paise aapke account mein aa gaye hain ✅</li>
             <li><strong>DBT Transfer Failed:</strong> Bank ya NPCI issue – neeche guide padhein</li>
-            <li><strong>Digital Verification Pending:</strong> Turant authentication complete karein warna tranche rukegi</li>
+            <li><strong>eKYC Pending:</strong> Turant authentication complete karein warna kist rukegi</li>
           </ul>
         </div>
 
         <figure className="my-5">
           <Image
             src="/images/pm-kisan-status-check-steps.webp"
-            alt="Beneficiary verification steps – pmkisan.gov.in par UID se payment status kaise dekhe"
+            alt="Beneficiary verification steps – pmkisan.gov.in par Aadhaar se payment status kaise dekhe"
             width={496}
             height={331}
             className="rounded-xl shadow-md w-full h-auto"
             loading="lazy"
           />
           <figcaption className="text-center text-xs sm:text-sm text-[var(--color-text-muted)] mt-2">
-            pmkisan.gov.in par UID ya Mobile Number aur verification code se payment status dekho
+            pmkisan.gov.in par Aadhaar ya Mobile Number aur verification code se payment status dekho
           </figcaption>
         </figure>
       </section>
@@ -335,10 +335,10 @@ export default function PmKisan24viKist2026() {
       {/* Section 5 – Digital Authentication */}
       <section id="digital-auth" className="mb-9">
         <h2 className="text-xl sm:text-2xl font-bold text-[var(--color-text)] mb-3 border-b-2 border-[var(--color-border)] pb-2">
-          5. Digital Authentication – 24vi Tranche Ke Liye Zaruri Hai?
+          5. eKYC – 24vi Kist Ke Liye Zaruri Hai?
         </h2>
         <p className="mb-4 leading-relaxed text-sm sm:text-base text-[var(--color-text-muted)]">
-          Haan, digital authentication <strong>mandatory</strong> hai. Bina verification ke agrarian welfare scheme ki koi bhi tranche nahi
+          Haan, eKYC <strong>mandatory</strong> hai. Bina verification ke PM Kisan ki koi bhi kist nahi
           milegi. Agar aapne abhi tak authentication nahi ki hai toh turant karein.
         </p>
 
@@ -349,7 +349,7 @@ export default function PmKisan24viKist2026() {
           {[
             {
               title: "1. OTP Based",
-              desc:  "pmkisan.gov.in par verification option mein UID number daalo, code verify karo. Sabse aasaan tarika.",
+              desc:  "pmkisan.gov.in par eKYC option mein Aadhaar number daalo, code verify karo. Sabse aasaan tarika.",
               icon:  "📱",
             },
             {
@@ -376,14 +376,14 @@ export default function PmKisan24viKist2026() {
         <figure className="my-5">
           <Image
             src="/images/pm-kisan-ekyc-3-methods.webp"
-            alt="Digital authentication kaise kare – OTP, biometric CSC aur face authentication ke 3 tarike"
+            alt="eKYC kaise kare – OTP, biometric CSC aur face authentication ke 3 tarike"
             width={496}
             height={331}
             className="rounded-xl shadow-md w-full h-auto"
             loading="lazy"
           />
           <figcaption className="text-center text-xs sm:text-sm text-[var(--color-text-muted)] mt-2">
-            Digital authentication – OTP, biometric (CSC) ya face authentication se karein
+            eKYC – OTP, biometric (CSC) ya face authentication se karein
           </figcaption>
         </figure>
 
@@ -404,12 +404,12 @@ export default function PmKisan24viKist2026() {
         <div className="space-y-3">
           {[
             {
-              issue:  "Tranche nahi aayi, status 'Payment Success' dikh raha hai",
+              issue:  "Kist nahi aayi, status 'Payment Success' dikh raha hai",
               solution: "PFMS portal (pfms.nic.in) par bank account se check karein. Credit hone mein 24-48 ghante lag sakte hain. Bank se mini-statement lein.",
             },
             {
-              issue:  "Portal par 'UID Authentication Failed' aa raha hai",
-              solution: "Portal mein naam aur UID par naam exactly same hona chahiye. Agriculture office mein naam correction karwayein.",
+              issue:  "Portal par 'Aadhaar Authentication Failed' aa raha hai",
+              solution: "Portal mein naam aur Aadhaar par naam exactly same hona chahiye. Agriculture office mein naam correction karwayein.",
             },
             {
               issue:  "Verification portal par error aa raha hai",
@@ -421,7 +421,7 @@ export default function PmKisan24viKist2026() {
             },
             {
               issue:  "Pehli baar enrollment karna chahte hain",
-              solution: "Service centre ya pmkisan.gov.in par naya enrollment karo. Pehli tranche aane mein 1-3 mahine lag sakte hain.",
+              solution: "Service centre ya pmkisan.gov.in par naya enrollment karo. Pehli kist aane mein 1-3 mahine lag sakte hain.",
             },
           ].map(({ issue, solution }) => (
             <div key={issue} className="border border-[var(--color-border)] rounded-lg overflow-hidden">
@@ -462,27 +462,27 @@ export default function PmKisan24viKist2026() {
         <div className="space-y-3">
           {[
             {
-              q: "24vi tranche kab aayegi?",
-              a: "24vi tranche ki expected date October 2026 hai. 23vi tranche 20 June 2026 ko aayi thi, isliye 4 mahine baad yani October mein 24vi tranche aane ki sambhavna hai. Jaise hi official date confirm hogi, hum update kar denge.",
+              q: "24vi kist kab aayegi?",
+              a: "24vi kist ki expected date October 2026 hai. 23vi kist 20 June 2026 ko aayi thi, isliye 4 mahine baad yani October mein 24vi kist aane ki sambhavna hai. Jaise hi official date confirm hogi, hum update kar denge.",
             },
             {
-              q: "24vi tranche kitni hogi?",
-              a: "Har installment ₹2,000 hoti hai. Saal mein 3 baar milti hai matlab kul ₹6,000 per year. 24vi tranche bhi ₹2,000 hogi.",
+              q: "24vi kist kitni hogi?",
+              a: "Har installment ₹2,000 hoti hai. Saal mein 3 baar milti hai matlab kul ₹6,000 per year. 24vi kist bhi ₹2,000 hogi.",
             },
             {
-              q: "Beneficiary verification kaise karein?",
-              a: "pmkisan.gov.in par jaayein → Farmers Corner → Beneficiary Status → UID ya mobile number enter karein → Verification code verify karein. Poori payment history dikhegi.",
+              q: "Beneficiary status kaise check karein?",
+              a: "pmkisan.gov.in par jaayein → Farmers Corner → Beneficiary Status → Aadhaar ya mobile number enter karein → Verification code verify karein. Poori payment history dikhegi.",
             },
             {
-              q: "24vi tranche ke liye digital authentication zaruri hai?",
-              a: "Haan, digital authentication mandatory hai. Bina verification ke tranche nahi milegi. pmkisan.gov.in par OTP-based ya CSC biometric se turant complete karein.",
+              q: "24vi kist ke liye eKYC zaruri hai?",
+              a: "Haan, eKYC mandatory hai. Bina verification ke kist nahi milegi. pmkisan.gov.in par OTP-based ya CSC biometric se turant complete karein.",
             },
             {
-              q: "24vi tranche nahi aayi toh kya karein?",
-              a: "Pehle verification check karein. FTO Generated ho toh bank se mini-statement lein. NPCI se UID link verify karein. Phir bhi nahi aayi toh helpline 155261 par call karein.",
+              q: "24vi kist nahi aayi toh kya karein?",
+              a: "Pehle status check karein. FTO Generated ho toh bank se mini-statement lein. NPCI se Aadhaar link verify karein. Phir bhi nahi aayi toh helpline 155261 par call karein.",
             },
             {
-              q: "Kaise pata chalega ki tranche meri account mein aayi?",
+              q: "Kaise pata chalega ki kist meri account mein aayi?",
               a: 'pmkisan.gov.in par "Payment Success" status dikhega. Bank SMS ya PFMS portal (pfms.nic.in) se bhi confirm kar sakte hain.',
             },
           ].map(({ q, a }, i) => (
@@ -527,7 +527,7 @@ export default function PmKisan24viKist2026() {
             {
               href:  "/articles/agristack-kya-hai",
               title: "AgriStack Kya Hai – Farmer ID Guide",
-              desc:  "AgriStack kya hai, Farmer ID kaise banegi aur cultivator ko kya fayde milenge.",
+              desc:  "AgriStack kya hai, Farmer ID kaise banegi aur kisan ko kya fayde milenge.",
               icon:  "🌾",
             },
             {
@@ -558,12 +558,12 @@ export default function PmKisan24viKist2026() {
           8. Conclusion
         </h2>
         <p className="mb-3 leading-relaxed text-sm sm:text-base text-[var(--color-text-muted)]">
-          24vi tranche ka intezaar bahut saare cultivators ko hai. 23vi tranche 20 June 2026 ko aayi
-          thi, isliye 24vi tranche October 2026 mein aane ki poori sambhavna hai. Abhi official date
+          24vi kist ka intezaar bahut saare kisanon ko hai. 23vi kist 20 June 2026 ko aayi
+          thi, isliye 24vi kist October 2026 mein aane ki poori sambhavna hai. Abhi official date
           announce nahi hui – is page ko bookmark karein aur regular check karte rahein.
         </p>
         <p className="mb-3 leading-relaxed text-sm sm:text-base text-[var(--color-text-muted)]">
-          Tranche milne ke liye teen cheezein zaroori hain: digital authentication complete honi chahiye, UID bank
+          Kist milne ke liye teen cheezein zaroori hain: eKYC complete honi chahiye, Aadhaar bank
           se NPCI ke zariye linked hona chahiye, aur portal par details sahi honi chahiye.
         </p>
         <p className="mb-4 leading-relaxed text-sm sm:text-base text-[var(--color-text-muted)]">
@@ -575,9 +575,9 @@ export default function PmKisan24viKist2026() {
         </p>
         <div className="bg-green-100 dark:bg-green-900/30 border border-green-300 dark:border-green-700 rounded-lg p-3 sm:p-4 text-center">
           <p className="font-semibold text-green-800 dark:text-green-300 text-sm sm:text-base">
-            🌾 Apne gaon ke cultivators ko bhi yeh guide share karein!
+            🌾 Apne gaon ke kisanon ko bhi yeh guide share karein!
           </p>
-          <p className="text-green-700 dark:text-green-400 text-xs sm:text-sm mt-1">Unki tranche bhi aaye – yahi hamari koshish hai.</p>
+          <p className="text-green-700 dark:text-green-400 text-xs sm:text-sm mt-1">Unki kist bhi aaye – yahi hamari koshish hai.</p>
         </div>
       </section>
 
@@ -596,7 +596,7 @@ export default function PmKisan24viKist2026() {
           <p className="font-bold text-[var(--color-text)] text-sm sm:text-base">KisanStatus Team</p>
           <p className="text-xs text-green-700 dark:text-green-400 mb-1.5 font-medium">Agricultural Experts &amp; Farmer Advocates</p>
           <p className="text-xs sm:text-sm text-[var(--color-text-muted)] leading-relaxed">
-            Pichhle 5 saal se Indian cultivators ko government schemes navigate karne mein help kar
+            Pichhle 5 saal se Indian kisanon ko government schemes navigate karne mein help kar
             rahe hain. Yeh article official pmkisan.gov.in portal aur government press releases
             par based hai aur regularly update hota hai.
           </p>
