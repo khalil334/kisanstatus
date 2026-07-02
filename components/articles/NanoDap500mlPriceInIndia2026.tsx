@@ -130,14 +130,14 @@ export default function NanoDap500mlPriceInIndia2026(_: { article: ArticleMeta }
         <nav className="bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-xl p-5 mb-10">
           <h2 className="text-lg font-semibold text-[var(--color-text)] mb-3">📋 Table of Contents</h2>
           <ul className="list-disc list-inside space-y-1 text-sm">
-            <li><a href="#introduction" className="text-[var(--color-primary)] hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">Liquid DAP Kya Hai?</a></li>
-            <li><a href="#price-2026" className="text-[var(--color-primary)] hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">Liquid DAP 500ml Price in India 2026</a></li>
+            <li><a href="#introduction" className="text-[var(--color-primary)] hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">Yeh Product Kya Hai?</a></li>
+            <li><a href="#price-2026" className="text-[var(--color-primary)] hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">500ml Bottle Price in India 2026</a></li>
             <li><a href="#price-today" className="text-[var(--color-primary)] hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">State-wise Price Today</a></li>
             <li><a href="#price-factors" className="text-[var(--color-primary)] hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">Price Factors</a></li>
-            <li><a href="#benefits" className="text-[var(--color-primary)] hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">Liquid DAP Benefits</a></li>
-            <li><a href="#dosage" className="text-[var(--color-primary)] hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">Foliar Dosage Per Acre (Crop-wise Chart)</a></li>
+            <li><a href="#benefits" className="text-[var(--color-primary)] hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">Foliar Spray Benefits</a></li>
+            <li><a href="#dosage" className="text-[var(--color-primary)] hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">Dosage Per Acre (Crop-wise Chart)</a></li>
             <li><a href="#how-to-use" className="text-[var(--color-primary)] hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">How to Apply – Step by Step</a></li>
-            <li><a href="#comparison" className="text-[var(--color-primary)] hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">Liquid DAP vs Traditional DAP</a></li>
+            <li><a href="#comparison" className="text-[var(--color-primary)] hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">Modern vs Traditional Fertilizer</a></li>
             <li><a href="#where-to-buy" className="text-[var(--color-primary)] hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">Where to Buy Online</a></li>
             <li><a href="#crops" className="text-[var(--color-primary)] hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">Kaunsi Fasalon ke Liye?</a></li>
             <li><a href="#mistakes" className="text-[var(--color-primary)] hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">Common Mistakes</a></li>
@@ -147,10 +147,10 @@ export default function NanoDap500mlPriceInIndia2026(_: { article: ArticleMeta }
         </nav>
 
         <section id="introduction" className="mb-10">
-          <h2 className="text-2xl font-bold text-[var(--color-text)] mb-4">Liquid DAP Kya Hai?</h2>
+          <h2 className="text-2xl font-bold text-[var(--color-text)] mb-4">Yeh Product Kya Hai?</h2>
           <p className="mb-4 leading-relaxed text-[var(--color-text-muted)]">
             Namaste cultivator bhaiyon! Aaj hum baat karenge ek modern agricultural input ke baare mein —
-            <strong> IFFCO liquid DAP 500ml</strong>. Agar aap soch rahe hain ki liquid DAP kya hai,
+            <strong> IFFCO ka advanced liquid fertilizer</strong>. Agar aap soch rahe hain ki yeh product kya hai,
             iski kimat kya hai, aur kaise apply karein — toh yeh guide aapke liye hai.
           </p>
           <p className="mb-4 leading-relaxed text-[var(--color-text-muted)]">
@@ -171,7 +171,7 @@ export default function NanoDap500mlPriceInIndia2026(_: { article: ArticleMeta }
         </section>
 
         <section id="price-2026" className="mb-10">
-          <h2 className="text-2xl font-bold text-[var(--color-text)] mb-4">Liquid DAP 500ml Price in India 2026</h2>
+          <h2 className="text-2xl font-bold text-[var(--color-text)] mb-4">500ml Bottle Price in India 2026</h2>
 
           <div className="relative w-full h-56 mb-6 rounded-xl overflow-hidden">
             <Image
@@ -185,7 +185,7 @@ export default function NanoDap500mlPriceInIndia2026(_: { article: ArticleMeta }
           </div>
 
           <p className="mb-4 leading-relaxed text-[var(--color-text-muted)]">
-            <strong>2026 mein liquid DAP 500ml bottle ki market price lagbhag ₹250 se ₹350 ke beech mein hai.</strong>{' '}
+            <strong>2026 mein yeh 500ml bottle ki market price lagbhag ₹250 se ₹350 ke beech mein hai.</strong>{' '}
             Government subsidy ke saath kuch jagah ₹200 se ₹280 mein bhi milta hai.
           </p>
 
@@ -201,9 +201,9 @@ export default function NanoDap500mlPriceInIndia2026(_: { article: ArticleMeta }
               </thead>
               <tbody>
                 {[
-                  ['IFFCO Liquid DAP (MRP)', '₹280 – ₹350', '500ml Bottle'],
-                  ['IFFCO Liquid DAP (Subsidized)', '₹200 – ₹280', '500ml Bottle'],
-                  ['Liquid DAP 1 Litre', '₹500 – ₹650', '1 Litre Bottle'],
+                  ['IFFCO (MRP)', '₹280 – ₹350', '500ml Bottle'],
+                  ['IFFCO (Subsidized)', '₹200 – ₹280', '500ml Bottle'],
+                  ['1 Litre Bottle', '₹500 – ₹650', '1 Litre Bottle'],
                   ['Traditional DAP (Granular)', '₹1,350 – ₹1,650 per 50kg', '50kg Bag'],
                 ].map(([brand, price, qty]) => (
                   <tr key={brand} className="odd:bg-[var(--color-card)] even:bg-[var(--color-bg-alt)]">
@@ -221,7 +221,7 @@ export default function NanoDap500mlPriceInIndia2026(_: { article: ArticleMeta }
         </section>
 
         <section id="price-today" className="mb-10">
-          <h2 className="text-2xl font-bold text-[var(--color-text)] mb-4">IFFCO Liquid DAP 500ml Price Today — State-wise</h2>
+          <h2 className="text-2xl font-bold text-[var(--color-text)] mb-4">IFFCO Product Price Today — State-wise</h2>
           <p className="mb-6 leading-relaxed text-[var(--color-text-muted)]">
             <strong>Haryana, Punjab, Uttar Pradesh, Maharashtra, aur Gujarat</strong> mein demand zyada hai,
             isliye yahan availability bhi achi hai.
@@ -272,7 +272,7 @@ export default function NanoDap500mlPriceInIndia2026(_: { article: ArticleMeta }
         </section>
 
         <section id="price-factors" className="mb-10">
-          <h2 className="text-2xl font-bold text-[var(--color-text)] mb-4">Factors Affecting Liquid DAP Price</h2>
+          <h2 className="text-2xl font-bold text-[var(--color-text)] mb-4">Factors Affecting Price</h2>
           <div className="space-y-4">
             {[
               ['1. Location & State Subsidies', 'Har state ka apna subsidy structure hota hai. Kuch states mein government direct subsidy deti hai jisse price kam ho jata hai.'],
@@ -290,7 +290,7 @@ export default function NanoDap500mlPriceInIndia2026(_: { article: ArticleMeta }
         </section>
 
         <section id="benefits" className="mb-10">
-          <h2 className="text-2xl font-bold text-[var(--color-text)] mb-4">Liquid DAP Benefits for Cultivators</h2>
+          <h2 className="text-2xl font-bold text-[var(--color-text)] mb-4">Foliar Spray Benefits for Cultivators</h2>
 
           <div className="relative w-full h-56 mb-6 rounded-xl overflow-hidden">
             <Image
@@ -310,7 +310,7 @@ export default function NanoDap500mlPriceInIndia2026(_: { article: ArticleMeta }
 
           <div className="space-y-4">
             {[
-              ['💧 Kam Quantity, Zyada Kaam', 'Label ke anusaar 500ml liquid DAP 1 acre ke liye istemal hota hai vs 50kg traditional DAP bag — kam mehnat, kam transport cost.'],
+              ['💧 Kam Quantity, Zyada Kaam', 'Label ke anusaar 500ml yeh product 1 acre ke liye istemal hota hai vs 50kg traditional DAP bag — kam mehnat, kam transport cost.'],
               ['⚡ Tezi Se Absorb Hota Hai', 'Nano-scale particles ki wajah se foliar spray ke roop mein jaldi absorb hota hai.'],
               ['🌱 Fasal Mein Sambhavit Sudhar', 'Kuch cultivators ke anubhav ke hisaab se yield mein sudhar dekha gaya hai — lekin fixed guarantee nahi.'],
               ['🌍 Soil Health Par Kam Asar', 'Kam quantity mein use hota hai, isliye soil pH par comparatively kam asar.'],
@@ -327,7 +327,7 @@ export default function NanoDap500mlPriceInIndia2026(_: { article: ArticleMeta }
           <div className="mt-6 relative w-full h-64 md:h-80 rounded-xl overflow-hidden">
             <Image
               src="/images/nano-dap-before-after-comparison.webp"
-              alt="Liquid DAP foliar spray — crop growth illustration before and after"
+              alt="Foliar spray — crop growth illustration before and after"
               fill
               sizes="(max-width: 768px) 100vw, 768px"
               loading="lazy"
@@ -340,12 +340,12 @@ export default function NanoDap500mlPriceInIndia2026(_: { article: ArticleMeta }
         </section>
 
         <section id="dosage" className="mb-10">
-          <h2 className="text-2xl font-bold text-[var(--color-text)] mb-4">Liquid DAP Foliar Dosage Per Acre — Crop-wise Chart</h2>
+          <h2 className="text-2xl font-bold text-[var(--color-text)] mb-4">Foliar Dosage Per Acre — Crop-wise Chart</h2>
 
           <div className="relative w-full h-56 mb-6 rounded-xl overflow-hidden">
             <Image
               src="/images/nano-dap-500ml-bottle-hero.webp"
-              alt="Liquid DAP 500ml dosage guide India 2026"
+              alt="500ml dosage guide India 2026"
               fill
               sizes="(max-width: 768px) 100vw, 768px"
               loading="lazy"
@@ -392,12 +392,12 @@ export default function NanoDap500mlPriceInIndia2026(_: { article: ArticleMeta }
         </section>
 
         <section id="how-to-use" className="mb-10">
-          <h2 className="text-2xl font-bold text-[var(--color-text)] mb-4">How to Apply Liquid DAP — Step by Step</h2>
+          <h2 className="text-2xl font-bold text-[var(--color-text)] mb-4">How to Apply — Step by Step</h2>
 
           <div className="relative w-full h-56 mb-6 rounded-xl overflow-hidden">
             <Image
               src="/images/nano-dap-benefits-farmers.webp"
-              alt="Liquid DAP foliar spray step by step guide for Indian cultivators"
+              alt="Foliar spray step by step guide for Indian cultivators"
               fill
               sizes="(max-width: 768px) 100vw, 768px"
               loading="lazy"
@@ -406,8 +406,8 @@ export default function NanoDap500mlPriceInIndia2026(_: { article: ArticleMeta }
           </div>
 
           <ol className="list-decimal list-inside space-y-3 leading-relaxed text-[var(--color-text-muted)]">
-            <li><strong>Paani mein mix karein:</strong> 500ml liquid DAP ko 100-150 litre paani mein mix karein. 15L pump mein 50-75ml daalein.</li>
-            <li><strong>Achhe se hilayein:</strong> Bottle ko shake karein taaki nano particles evenly mix ho jayein.</li>
+            <li><strong>Paani mein mix karein:</strong> 500ml product ko 100-150 litre paani mein mix karein. 15L pump mein 50-75ml daalein.</li>
+            <li><strong>Achhe se hilayein:</strong> Bottle ko shake karein taaki particles evenly mix ho jayein.</li>
             <li><strong>Sahi time spray karein:</strong> Morning ya evening mein spray karein — dopahar mein garmi ki wajah se avoid karein.</li>
             <li><strong>Dono taraf spray karein:</strong> Pattiyyon ke upar aur neeche dono taraf spray karein.</li>
             <li><strong>Mausam check karein:</strong> Spray ke 4-6 ghante baad baarish nahi honi chahiye.</li>
@@ -420,12 +420,12 @@ export default function NanoDap500mlPriceInIndia2026(_: { article: ArticleMeta }
         </section>
 
         <section id="comparison" className="mb-10">
-          <h2 className="text-2xl font-bold text-[var(--color-text)] mb-4">Liquid DAP vs Traditional DAP — Full Comparison</h2>
+          <h2 className="text-2xl font-bold text-[var(--color-text)] mb-4">Modern vs Traditional Fertilizer — Full Comparison</h2>
 
           <div className="relative w-full h-56 mb-6 rounded-xl overflow-hidden">
             <Image
               src="/images/nano-dap-vs-traditional-dap-comparison.webp"
-              alt="Liquid DAP vs traditional DAP fertilizer comparison India 2026"
+              alt="Modern vs traditional fertilizer comparison India 2026"
               fill
               sizes="(max-width: 768px) 100vw, 768px"
               loading="lazy"
@@ -434,7 +434,7 @@ export default function NanoDap500mlPriceInIndia2026(_: { article: ArticleMeta }
           </div>
 
           <p className="mb-4 leading-relaxed bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-4 text-sm text-[var(--color-text-muted)]">
-            <strong>Note:</strong> Liquid DAP traditional DAP ka pura substitute nahi hai.
+            <strong>Note:</strong> Yeh product traditional DAP ka pura substitute nahi hai.
             IFFCO aur agriculture experts dono ka sahi combination recommend karte hain.
           </p>
 
@@ -443,7 +443,7 @@ export default function NanoDap500mlPriceInIndia2026(_: { article: ArticleMeta }
               <thead className="bg-[var(--color-bg-alt)]">
                 <tr>
                   <th className="border border-[var(--color-border)] px-3 py-2 text-left text-[var(--color-text)]">Feature</th>
-                  <th className="border border-[var(--color-border)] px-3 py-2 text-left text-[var(--color-text)]">Liquid DAP</th>
+                  <th className="border border-[var(--color-border)] px-3 py-2 text-left text-[var(--color-text)]">Modern Product</th>
                   <th className="border border-[var(--color-border)] px-3 py-2 text-left text-[var(--color-text)]">Traditional DAP</th>
                 </tr>
               </thead>
@@ -469,12 +469,12 @@ export default function NanoDap500mlPriceInIndia2026(_: { article: ArticleMeta }
         </section>
 
         <section id="where-to-buy" className="mb-10">
-          <h2 className="text-2xl font-bold text-[var(--color-text)] mb-4">Where to Buy Liquid DAP Online in India</h2>
+          <h2 className="text-2xl font-bold text-[var(--color-text)] mb-4">Where to Buy Online in India</h2>
 
           <div className="relative w-full h-56 mb-6 rounded-xl overflow-hidden">
             <Image
               src="/images/nano-dap-buy-online-fertilizer.webp"
-              alt="Buy liquid DAP online India — IFFCO Amazon Flipkart Krishi Kendra"
+              alt="Buy online India — IFFCO Amazon Flipkart Krishi Kendra"
               fill
               sizes="(max-width: 768px) 100vw, 768px"
               loading="lazy"
@@ -526,7 +526,7 @@ export default function NanoDap500mlPriceInIndia2026(_: { article: ArticleMeta }
         </section>
 
         <section id="crops" className="mb-10">
-          <h2 className="text-2xl font-bold text-[var(--color-text)] mb-4">Kaunsi Fasalon Ke Liye Liquid DAP?</h2>
+          <h2 className="text-2xl font-bold text-[var(--color-text)] mb-4">Kaunsi Fasalon Ke Liye?</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
               ['🌾 Cereals (Anaj)', 'Gehu, Dhan, Makka, Jowar, Bajra'],
@@ -557,7 +557,7 @@ export default function NanoDap500mlPriceInIndia2026(_: { article: ArticleMeta }
         <section className="mb-10 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl p-6">
           <h2 className="text-xl font-bold text-[var(--color-text)] mb-3">💡 Expert Tip — KisanStatus.com Advisory</h2>
           <p className="mb-3 leading-relaxed text-[var(--color-text-muted)]">
-            Liquid DAP ka result tab behtar milta hai jab early growth stage mein use karein, aur flowering par doosra spray karein.
+            Yeh product ka result tab behtar milta hai jab early growth stage mein use karein, aur flowering par doosra spray karein.
           </p>
           <p className="leading-relaxed text-[var(--color-text-muted)]">
             <strong>Hamesha IFFCO ke official recommendations aur apne local KVK ki guidelines follow karein</strong> —
@@ -586,7 +586,7 @@ export default function NanoDap500mlPriceInIndia2026(_: { article: ArticleMeta }
           <div className="relative w-full h-64 mb-6 rounded-xl overflow-hidden">
             <Image
               src="/images/nano-dap-500ml-bottle-hero.webp"
-              alt="Liquid DAP quick reference — price dosage benefits FAQ"
+              alt="Quick reference — price dosage benefits FAQ"
               fill
               sizes="(max-width: 768px) 100vw, 768px"
               loading="lazy"
@@ -594,16 +594,16 @@ export default function NanoDap500mlPriceInIndia2026(_: { article: ArticleMeta }
             />
           </div>
 
-          <FaqItem q="Q1. Liquid DAP 500ml Price in India 2026 kya hai?" a="2026 mein liquid DAP 500ml ki price lagbhag ₹250 se ₹350 ke beech mein hai. Subsidy ke saath ₹200-₹280 mein bhi mil sakta hai. Exact price authorized dealer se confirm karein." />
-          <FaqItem q="Q2. IFFCO liquid DAP 500ml price aaj kya hai?" a="IFFCO liquid DAP 500ml ki current price lagbhag ₹280 se ₹320 ke beech mein hai. Subsidy ke saath kuch states mein ₹220-₹270 tak milta hai." />
-          <FaqItem q="Q3. Liquid DAP kaun si company banati hai?" a="IFFCO (Indian Farmers Fertiliser Cooperative Limited) liquid DAP banati hai — India ki sabse badi fertilizer cooperative society." />
-          <FaqItem q="Q4. Liquid DAP aur traditional DAP mein kya farak hai?" a="Liquid DAP foliar spray hai, traditional DAP granular soil application hai. Kai experts dono ka combination recommend karte hain." />
-          <FaqItem q="Q5. Liquid DAP ka foliar dosage 1 acre ke liye kitna hai?" a="Label ke anusaar 1 acre ke liye 500ml liquid DAP — 100-150 litre paani mein mila kar 2-3 baar spray. Exact dosage KVK se confirm karein." />
-          <FaqItem q="Q6. Kya liquid DAP urea ke saath mix ho sakta hai?" a="Kisi bhi fertilizer ya pesticide ke saath mix karne se pehle compatibility test karein ya KVK se salah lein. IFFCO guidelines follow karna sabse safe hai." />
-          <FaqItem q="Q7. Liquid DAP kis fasal ke liye use hota hai?" a="Gehu, dhan, makka, soybean, sarson, cotton, sugarcane, sabziyan — sabhi major crops ke liye. Dosage fasal ke hisaab se alag hota hai." />
-          <FaqItem q="Q8. Liquid DAP kitni baar spray karein?" a="Generally 2-3 baar — pehla early growth (15-20 din), doosra flowering stage. Kuch fasalon mein teesra fruiting stage par." />
-          <FaqItem q="Q9. Liquid DAP online kahan se kharidein?" a="IFFCO official website, Amazon, Flipkart, ya local Krishi Kendra. Hamesha authorized seller se original packaging check karke kharidein." />
-          <FaqItem q="Q10. Liquid DAP ka result kitne din mein dikhta hai?" a="Spray ke 7-10 din mein farak dikhna shuru ho sakta hai. 2-3 sprays ke baad clearer result. Soil, mausam, aur fasal ke hisaab se alag ho sakta hai." />
+          <FaqItem q="Q1. 500ml Bottle Price in India 2026 kya hai?" a="2026 mein yeh 500ml bottle ki price lagbhag ₹250 se ₹350 ke beech mein hai. Subsidy ke saath ₹200-₹280 mein bhi mil sakta hai. Exact price authorized dealer se confirm karein." />
+          <FaqItem q="Q2. IFFCO product price aaj kya hai?" a="IFFCO ka yeh product lagbhag ₹280 se ₹320 ke beech mein hai. Subsidy ke saath kuch states mein ₹220-₹270 tak milta hai." />
+          <FaqItem q="Q3. Kaun si company banati hai?" a="IFFCO (Indian Farmers Fertiliser Cooperative Limited) yeh product banati hai — India ki sabse badi fertilizer cooperative society." />
+          <FaqItem q="Q4. Traditional DAP se kya farak hai?" a="Yeh product foliar spray hai, traditional DAP granular soil application hai. Kai experts dono ka combination recommend karte hain." />
+          <FaqItem q="Q5. Foliar dosage 1 acre ke liye kitna hai?" a="Label ke anusaar 1 acre ke liye 500ml — 100-150 litre paani mein mila kar 2-3 baar spray. Exact dosage KVK se confirm karein." />
+          <FaqItem q="Q6. Kya urea ke saath mix ho sakta hai?" a="Kisi bhi fertilizer ya pesticide ke saath mix karne se pehle compatibility test karein ya KVK se salah lein. IFFCO guidelines follow karna sabse safe hai." />
+          <FaqItem q="Q7. Kis fasal ke liye use hota hai?" a="Gehu, dhan, makka, soybean, sarson, cotton, sugarcane, sabziyan — sabhi major crops ke liye. Dosage fasal ke hisaab se alag hota hai." />
+          <FaqItem q="Q8. Kitni baar spray karein?" a="Generally 2-3 baar — pehla early growth (15-20 din), doosra flowering stage. Kuch fasalon mein teesra fruiting stage par." />
+          <FaqItem q="Q9. Online kahan se kharidein?" a="IFFCO official website, Amazon, Flipkart, ya local Krishi Kendra. Hamesha authorized seller se original packaging check karke kharidein." />
+          <FaqItem q="Q10. Result kitne din mein dikhta hai?" a="Spray ke 7-10 din mein farak dikhna shuru ho sakta hai. 2-3 sprays ke baad clearer result. Soil, mausam, aur fasal ke hisaab se alag ho sakta hai." />
         </section>
 
         <section className="mb-10 space-y-4 text-sm text-[var(--color-text-muted)]">
@@ -614,7 +614,7 @@ export default function NanoDap500mlPriceInIndia2026(_: { article: ArticleMeta }
               KisanStatus.com kisi bhi price ki guarantee nahi deta.
             </p>
             <p className="leading-relaxed">
-              Liquid DAP use karne se pehle apne local KVK ya IFFCO recommendations se salah lein.
+              Yeh product use karne se pehle apne local KVK ya IFFCO recommendations se salah lein.
               <strong> Koi bhi fixed result ya guarantee nahi di jaati.</strong>
             </p>
           </div>
@@ -639,7 +639,7 @@ export default function NanoDap500mlPriceInIndia2026(_: { article: ArticleMeta }
         <section id="conclusion" className="mb-10">
           <h2 className="text-2xl font-bold text-[var(--color-text)] mb-4">Conclusion</h2>
           <p className="mb-4 leading-relaxed text-[var(--color-text-muted)]">
-            Cultivator bhaiyon, liquid DAP 500ml ek modern aur convenient fertilizer option hai jo sahi tarike se
+            Cultivator bhaiyon, yeh 500ml bottle ek modern aur convenient fertilizer option hai jo sahi tarike se
             use karne par farming ko easier aur cost-effective bana sakta hai.
           </p>
           <p className="mb-4 leading-relaxed text-[var(--color-text-muted)]">
