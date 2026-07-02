@@ -13,8 +13,8 @@ const URL    = `${DOMAIN}/articles/soil-health-card-complete-guide-2026`;
 const schemas = [
   {
     '@context': 'https://schema.org', '@type': 'Article',
-    headline: 'Mitti Swasthya Parcha 2026 — Complete Registration Guide with Official Process',
-    description: 'Mitti Swasthya Parcha 2026 — Registration process, required documents, status check, PDF download, aur common problems ka solution. Official portal ke mutabik jaankari.',
+    headline: 'Soil Health Card 2026 — Complete Registration Guide with Official Process',
+    description: 'Soil health card 2026 — Registration process, required documents, status check, PDF download, aur common problems ka solution. Official portal ke mutabik jaankari.',
     image: `${DOMAIN}/images/articles/soil-health-card-complete-guide-2026/hero.webp`,
     datePublished: PUBLISHED, dateModified: MODIFIED,
     author: { '@type': 'Organization', name: 'KisanStatus Team', url: `${DOMAIN}/about` },
@@ -27,13 +27,13 @@ const schemas = [
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: DOMAIN },
       { '@type': 'ListItem', position: 2, name: 'Articles', item: `${DOMAIN}/articles` },
-      { '@type': 'ListItem', position: 3, name: 'Mitti Swasthya Parcha Guide', item: URL },
+      { '@type': 'ListItem', position: 3, name: 'Soil Health Card Guide', item: URL },
     ],
   },
 ];
 
 const RELATED = [
-  { slug: 'pm-kisan-23vi-kist-2026-status-check', title: '23vi Kist Status', emoji: '📅' },
+  { slug: 'pm-kisan-23vi-kist-2026-status-check', title: '23vi Installment Status', emoji: '📅' },
   { slug: 'nano-dap-500ml-price-in-india-2026', title: 'Nano DAP Price', emoji: '🌱' },
   { slug: 'pmfby-crop-insurance-2026', title: 'PMFBY Insurance', emoji: '🛡️' },
 ];
@@ -48,11 +48,11 @@ export default function SoilHealthCardCompleteGuide2026() {
           <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
             <Link href="/" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Home</Link><span>/</span>
             <Link href="/articles" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Articles</Link><span>/</span>
-            <span className="text-white font-bold">Mitti Swasthya Parcha Guide</span>
+            <span className="text-white font-bold">Soil Health Card Guide</span>
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">📋 Official Process Guide — 2026</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            Mitti Swasthya Parcha 2026 — Registration Se lekar PDF Download Tak Ka Complete Guide
+            Soil Health Card 2026 — Registration Se lekar PDF Download Tak Ka Complete Guide
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
@@ -69,7 +69,7 @@ export default function SoilHealthCardCompleteGuide2026() {
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/soil-health-card-complete-guide-2026/hero.webp"
-            alt="Mitti Swasthya Parcha registration process — CSC centre par form bharte hue kisan"
+            alt="Soil health card registration process — CSC centre par form bharte hue kisan"
             width={1200}
             height={630}
             className="w-full h-auto object-cover"
@@ -78,14 +78,14 @@ export default function SoilHealthCardCompleteGuide2026() {
             sizes="(max-width: 768px) 100vw, 1200px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            📸 Mitti Swasthya Parcha — CSC centre ya online portal ke zariye registration ka process
+            📸 Soil Health Card — CSC centre ya online portal ke zariye registration ka process
           </p>
         </div>
 
         {/* OPENING */}
         <section className="mb-8">
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Mitti ki jaanch karwana aaj ke kheti ke liye zaroori ho gaya hai. Kai saalon se ek hi tarah ki fasal ugane se, ya galat matra mein khaad dalne se zameen ki quality gir jaati hai. Is problem ko samajhte hue Bharat sarkar ne 2015 mein Mitti Swasthya Parcha Yojana shuru ki thi.
+            Mitti ki jaanch karwana aaj ke kheti ke liye zaroori ho gaya hai. Kai saalon se ek hi tarah ki fasal ugane se, ya galat matra mein khaad dalne se zameen ki quality gir jaati hai. Is problem ko samajhte hue Bharat sarkar ne 2015 mein Soil Health Card Yojana shuru ki thi.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Is yojana ke tahat har kisan apni zameen ki mitti ka test karwa sakta hai — bilkul muft ya bahut kam kharch mein. Test ke baad jo report milti hai, usme likha hota hai ki aapki mitti mein kaunse nutrients hain, kaunse kam hain, aur kaunsi fasal ke liye kitni khaad dalni chahiye.
@@ -98,7 +98,7 @@ export default function SoilHealthCardCompleteGuide2026() {
         {/* WHAT IS SOIL HEALTH CARD */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Mitti Swasthya Parcha Kya Hai?
+            1. Soil Health Card Kya Hai?
           </h2>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Ye ek report card hai jo aapki zameen ki health batata hai. Jaise doctor aapke blood test ke baad report deta hai, waise hi krishi vibhag mitti ka test karke report deta hai. Is report mein 12 parameters check kiye jaate hain.
@@ -124,7 +124,7 @@ export default function SoilHealthCardCompleteGuide2026() {
         {/* WHY IMPORTANT */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Test Karwana Kyun Zaroori Hai?
+            2. Test Karwana Kyun Zaroori Hai?
           </h2>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Bahut se kisan saalon se ek hi tarah ki khaad daal rahe hain — bina ye jaane ki unki mitti ko actually kya chahiye. Iska nuksan ye hota hai:
@@ -160,7 +160,7 @@ export default function SoilHealthCardCompleteGuide2026() {
         {/* REGISTRATION PROCESS */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Registration Kaise Karein? (Dono Tarike)
+            3. Enrollment Kaise Karein? (Dono Tarike)
           </h2>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Official portal par do tarike diye gaye hain — offline CSC centre ke zariye, ya online ghar baithe. Dono tarike valid hain aur dono se same report milti hai.
@@ -170,9 +170,9 @@ export default function SoilHealthCardCompleteGuide2026() {
             <h3 className="font-black text-blue-800 dark:text-blue-300 text-sm mb-2">Tarika 1: CSC Centre Se (Offline)</h3>
             <StepList>
               <SI n={1}>Nazdiki Common Service Centre (CSC) ya Krishi Seva Kendra dhundhein</SI>
-              <SI n={2}>Saath leke jaayein — Aadhaar card, mobile number, khasra/khatauni number</SI>
+              <SI n={2}>Saath leke jaayein — biometric credential card, mobile number, khasra/khatauni number</SI>
               <SI n={3}>Operator form bharega — aapki details verify karega</SI>
-              <SI n={4}>Form submit hone par ek registration number milega — ise sambhal ke rakhein</SI>
+              <SI n={4}>Form submit hone par ek enrollment number milega — ise sambhal ke rakhein</SI>
               <SI n={5}>Mitti ka sample lene ka time fix hoga — ya to aap khud denge, ya krishi vibhag ka staff aayega</SI>
             </StepList>
           </div>
@@ -184,8 +184,8 @@ export default function SoilHealthCardCompleteGuide2026() {
               <SI n={2}>"Farmer Login" ya "New Registration" par click karein</SI>
               <SI n={3}>Apna state select karein — har state ka portal alag ho sakta hai</SI>
               <SI n={4}>Form bharein — personal details, land details, contact number</SI>
-              <SI n={5}>Documents upload karein — Aadhaar, land records</SI>
-              <SI n={6}>Submit karein — registration number note kar lein</SI>
+              <SI n={5}>Documents upload karein — biometric credential, land records</SI>
+              <SI n={6}>Submit karein — enrollment number note kar lein</SI>
             </StepList>
           </div>
 
@@ -197,10 +197,10 @@ export default function SoilHealthCardCompleteGuide2026() {
         {/* REQUIRED DOCUMENTS */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Kaunse Documents Chahiye?
+            4. Kaunse Documents Chahiye?
           </h2>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Registration ke liye ye documents zaroori hain. Dhyan rahe ki documents clear aur readable hone chahiye:
+            Enrollment ke liye ye documents zaroori hain. Dhyan rahe ki documents clear aur readable hone chahiye:
           </p>
 
           <div className="overflow-x-auto mb-4 rounded-xl border border-[var(--color-border)]">
@@ -213,7 +213,7 @@ export default function SoilHealthCardCompleteGuide2026() {
               </thead>
               <tbody>
                 <tr className="bg-[var(--color-card)]">
-                  <td className="p-2 border-b border-[var(--color-border)] font-medium">Aadhaar Card</td>
+                  <td className="p-2 border-b border-[var(--color-border)] font-medium">Biometric Credential Card</td>
                   <td className="p-2 border-b border-[var(--color-border)]">Identity verification ke liye</td>
                 </tr>
                 <tr className="bg-[var(--color-bg-alt)]">
@@ -244,16 +244,16 @@ export default function SoilHealthCardCompleteGuide2026() {
         {/* STATUS TRACKING */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Status Kaise Check Karein?
+            5. Status Kaise Check Karein?
           </h2>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Registration ke baad aap portal par apna status check kar sakte hain. Official portal ke mutabik processing time state aur season ke hisaab se alag-alag ho sakta hai.
+            Enrollment ke baad aap portal par apna status check kar sakte hain. Official portal ke mutabik processing time state aur season ke hisaab se alag-alag ho sakta hai.
           </p>
 
           <StepList>
             <SI n={1}><strong>soilhealth.dac.gov.in</strong> kholo</SI>
             <SI n={2}>"Track Application Status" par click karein</SI>
-            <SI n={3}>Registration number ya mobile number daalein</SI>
+            <SI n={3}>Enrollment number ya mobile number daalein</SI>
             <SI n={4}>OTP verify karein</SI>
             <SI n={5}>Status dikh jayega — Application Received / Sample Testing / Report Generated</SI>
           </StepList>
@@ -301,7 +301,7 @@ export default function SoilHealthCardCompleteGuide2026() {
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/soil-health-card-complete-guide-2026/dashboard.webp"
-            alt="Soil Health Card portal dashboard — Card Ready message aur Download PDF button"
+            alt="Soil health card portal dashboard — Card Ready message aur Download PDF button"
             width={1200}
             height={630}
             className="w-full h-auto object-cover"
@@ -317,7 +317,7 @@ export default function SoilHealthCardCompleteGuide2026() {
         {/* PDF DOWNLOAD */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            PDF Download Kaise Karein?
+            6. PDF Download Kaise Karein?
           </h2>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Jab card ready ho jata hai, to portal par ek notification aata hai. Download process simple hai:
@@ -325,7 +325,7 @@ export default function SoilHealthCardCompleteGuide2026() {
 
           <StepList>
             <SI n={1}><strong>soilhealth.dac.gov.in</strong> par jaayein</SI>
-            <SI n={2}>"Farmer Login" par click karein — registration number aur password daalein</SI>
+            <SI n={2}>"Farmer Login" par click karein — enrollment number aur password daalein</SI>
             <SI n={3}>Dashboard par "Download Soil Health Card" button dikhega</SI>
             <SI n={4}>Click karein — new tab mein PDF khulegi</SI>
             <SI n={5}>PDF ko save kar lein ya print nikal lein</SI>
@@ -343,10 +343,10 @@ export default function SoilHealthCardCompleteGuide2026() {
         {/* COMMON PROBLEMS */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Common Problems Aur Solutions
+            7. Common Problems Aur Solutions
           </h2>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Registration ya download ke dauran kai baar problems aa jaati hain. Ye kuch sabse common issues hain jo farmers face karte hain:
+            Enrollment ya download ke dauran kai baar problems aa jaati hain. Ye kuch sabse common issues hain jo farmers face karte hain:
           </p>
 
           <div className="space-y-3">
@@ -355,10 +355,10 @@ export default function SoilHealthCardCompleteGuide2026() {
                 <p className="font-black text-red-800 dark:text-red-300 text-sm">Problem 1: Naam Mein Spelling Galat</p>
               </div>
               <div className="p-4">
-                <p className="text-xs text-[var(--color-text-muted)] mb-2">Card print hone par naam galat aa gaya — Aadhaar se match nahi kar raha.</p>
+                <p className="text-xs text-[var(--color-text-muted)] mb-2">Card print hone par naam galat aa gaya — biometric credential se match nahi kar raha.</p>
                 <div className="flex items-start gap-2 bg-green-50 dark:bg-green-900/20 rounded-lg p-3">
                   <span className="text-green-600 dark:text-green-400 font-black text-xs shrink-0">✅ SOLUTION:</span>
-                  <p className="text-xs text-green-800 dark:text-green-300 leading-relaxed">CSC centre jaayein, Aadhaar dikhayein, correction form bharein. Kuch din mein sahi card aa jayega. Correction ke liye koi extra charge nahi lagta.</p>
+                  <p className="text-xs text-green-800 dark:text-green-300 leading-relaxed">CSC centre jaayein, biometric credential dikhayein, correction form bharein. Kuch din mein sahi card aa jayega. Correction ke liye koi extra charge nahi lagta.</p>
                 </div>
               </div>
             </div>
@@ -420,7 +420,7 @@ export default function SoilHealthCardCompleteGuide2026() {
         {/* HOW TO READ REPORT */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Report Ko Kaise Samjhein?
+            8. Report Ko Kaise Samjhein?
           </h2>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Report milne ke baad use samajhna zaroori hai. Har parameter ka ek normal range hota hai — uske andar hona chahiye.
@@ -450,7 +450,7 @@ export default function SoilHealthCardCompleteGuide2026() {
         {/* COST AND CHARGES */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Kitna Kharch Aata Hai?
+            9. Kitna Kharch Aata Hai?
           </h2>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Official portal par test muft hai, lekin CSC centre apna service charge le sakta hai. Ye charge state aur centre ke hisaab se alag-alag ho sakta hai.
@@ -497,9 +497,9 @@ export default function SoilHealthCardCompleteGuide2026() {
         {/* FAQ */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Puche Jaane Wale Sawaal
+            10. FAQ — Real Questions, Direct Answers
           </h2>
-          <SvgFAQ caption="Mitti Swasthya Parcha — Common Questions" />
+          <SvgFAQ caption="Soil Health Card — Common Questions" />
           <div className="space-y-3 mt-4">
             <details className="border border-[var(--color-border)] rounded-xl overflow-hidden group">
               <summary className="p-4 font-semibold text-[var(--color-text)] cursor-pointer bg-[var(--color-bg-alt)] hover:bg-green-50 dark:hover:bg-green-900/20 text-sm flex justify-between items-center gap-3 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">
@@ -566,8 +566,8 @@ export default function SoilHealthCardCompleteGuide2026() {
 
         <GovLink
           href="https://soilhealth.dac.gov.in"
-          label="Mitti Swasthya Parcha — Official Portal"
-          guide="Registration Ke Liye Yahaan Click Karein"
+          label="Soil Health Card — Official Portal"
+          guide="Enrollment Ke Liye Yahaan Click Karein"
           guideHref="/articles/pm-kisan-registration-online-2026"
         />
 
@@ -593,7 +593,7 @@ export default function SoilHealthCardCompleteGuide2026() {
         <div className="my-8 p-5 bg-green-100 dark:bg-green-900/30 border-2 border-green-400 dark:border-green-600 rounded-2xl text-center">
           <h3 className="font-black text-green-900 dark:text-green-200 text-lg mb-2">Kya Aapne Mitti Test Karwaya Hai?</h3>
           <p className="text-sm text-green-800 dark:text-green-300 mb-3">
-            Agar haan, to report ki salah zaroor follow karein. Agar nahi, to aaj hi registration karwayein — aapki fasal aur mitti dono ka fayda hoga.
+            Agar haan, to report ki salah zaroor follow karein. Agar nahi, to aaj hi enrollment karwayein — aapki fasal aur mitti dono ka fayda hoga.
           </p>
           <p className="text-xs text-green-700 dark:text-green-400">
             🌱 Sahi khaad, sahi matra — yahi safalta ka raaz hai
