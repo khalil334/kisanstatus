@@ -24,22 +24,22 @@ export default function KisanTractorLoan2026() {
 
         {/* H1 */}
         <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-amber-800 leading-tight mb-3">
-          Kisan Tractor Loan Kaise Le Bina Down Payment – 2026 Complete Guide
+          Kisan Tractor Loan Kaise Le Bina Down Payment — 2026 Complete Guide
         </h1>
         <p className="text-gray-500 text-sm mb-6">
-          ⏱ Reading Time: ~14 min &nbsp;|&nbsp; 👨‍🌾 Hinglish Guide &nbsp;|&nbsp; 📊 Real Data + Case Studies
+          ⏱ Reading Time: ~14 min &nbsp;|&nbsp; 👨‍🌾 Hinglish Guide &nbsp;|&nbsp; 📊 Official Data + Process Details
         </p>
 
-        {/* Intro Story */}
+        {/* Problem-Based Intro — No Fake Story */}
         <div className="bg-amber-50 border-l-4 border-amber-500 rounded-r-xl p-5 mb-8">
           <p className="text-gray-800 leading-relaxed mb-3">
-            <strong>Namaste Kisan bhai!</strong> 🙏 <strong>Sukhdev</strong> – Haryana ke ek chhote gaon ka kisan – kai saalon se ek sapna dekh raha tha: apna tractor. Unke paas 15 bigha zameen thi, lekin kheti ka zyada kaam bullock cart aur hire pe liye tractor se hota tha. Hired tractor ka rent itna zyada tha ki fayda hi kam ho jaata tha. Sukhdev jaanta tha ki agar apna tractor ho jaaye toh laagat ghate aur amdani badhe. 💰
+            <strong>Namaste Kisan bhai!</strong> Bahut se annadata ek sapna dekhte hain — apna tractor. Kheti ka zyada kaam hired tractor se hota hai, aur rent itna zyada hota hai ki fayda kam ho jaata hai. Agar apna tractor ho toh laagat ghat jaati hai aur amdani badh jaati hai.
           </p>
           <p className="text-gray-800 leading-relaxed mb-3">
-            Lekin problem yeh thi – ek decent tractor ki kimat kam se kam 5-7 lakh rupaye thi, aur down payment ke liye bhi 1-2 lakh chahiye the. Itni raqam ek baar mein nahi thi Sukhdev ke paas. Tab usne socha – kya bina down payment ke tractor loan mil sakta hai? 🤔
+            Lekin problem yeh hoti hai — ek decent tractor ki kimat 5-7 lakh rupaye tak hoti hai, aur down payment ke liye bhi 1-2 lakh chahiye hote hain. Itni raqam ek baar mein arrange karna mushkil hota hai. Tab mann mein ek sawaal aata hai — kya bina down payment ke tractor loan mil sakta hai?
           </p>
           <p className="text-gray-800 leading-relaxed">
-            Is sawaal ka jawab dhundhte dhundhte Sukhdev ne bank, NBFC aur sarkari schemes ka pura research kiya. Aur ant mein loan bhi mila aur tractor bhi. Is article mein hum wahi poori jaankari aapke saath share kar rahe hain – step by step. 🎯
+            Is sawaal ka jawab dhundhne ke liye bank, NBFC aur sarkari schemes ka research zaroori hai. Is article mein hum woh poori jaankari share kar rahe hain — step by step.
           </p>
         </div>
 
@@ -47,14 +47,14 @@ export default function KisanTractorLoan2026() {
         <figure className="my-8 rounded-xl overflow-hidden shadow-lg">
           <Image 
             src="/images/articles/kisan-tractor-loan-2026/tractor-finance-guide.webp" 
-            alt="Kisan Tractor Loan – Kheti aur Tractor Finance Guide 2026" 
+            alt="Kisan Tractor Loan — Kheti aur Tractor Finance Guide 2026" 
             className="w-full h-44 sm:h-60 object-cover" 
             width={800} 
             height={300}
             loading="lazy"
           />
           <figcaption className="bg-amber-700 text-white text-xs sm:text-sm text-center py-2 px-4">
-            Apna Tractor, Apni Kheti – Sukhdev Jaise Lakhs Kisan Loan Se Tractor Le Rahe Hain
+            Apna Tractor, Apni Kheti — Lakhs Annadata Loan Se Tractor Le Rahe Hain
           </figcaption>
         </figure>
 
@@ -64,10 +64,10 @@ export default function KisanTractorLoan2026() {
             Kya Bina Down Payment Tractor Loan Mil Sakta Hai?
           </h2>
           <p className="text-gray-700 leading-relaxed mb-3">
-            Seedha jawab: <strong>haan, kuch cases mein mil sakta hai</strong> – lekin &quot;zero down payment&quot; ek marketing term hai, poori sachai thodi alag hai. Zyaadatar banks aur finance companies 85–100% tak loan deti hain tractor ki on-road price par. Matlab aapko sirf 0–15% hi apni jeb se dena pad sakta hai. 💵
+            Seedha jawab: <strong>haan, kuch cases mein mil sakta hai</strong> — lekin "zero down payment" ek marketing term hai, poori sachai thodi alag hai. Zyaadatar banks aur finance companies 85–100% tak loan deti hain tractor ki on-road price par. Matlab aapko sirf 0–15% hi apni jeb se dena pad sakta hai.
           </p>
           <p className="text-gray-700 leading-relaxed mb-3">
-            Sukhdev ke case mein SBI ke <Link href="/articles/kisan-credit-card-online-apply-2026" className="text-amber-700 underline hover:text-amber-900 font-semibold">Kisan Credit Card (KCC)</Link> holder hone ki wajah se unhe 90% financing mil gayi. Sirf 10% – yani lagbhag ₹55,000 – khud dena pada ek ₹5.5 lakh ke tractor par. Yeh ek baar mein mushkil nahi tha. ✅
+            Kai kisano ne <Link href="/articles/kisan-credit-card-online-apply-2026" className="text-amber-700 underline hover:text-amber-900 font-semibold">Kisan Credit Card (KCC)</Link> holder hone ki wajah se 90% financing pa li hai. Sirf 10% — yani lagbhag ₹55,000 — khud dena pada ek ₹5.5 lakh ke tractor par. Yeh ek baar mein mushkil nahi hota.
           </p>
 
           <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
@@ -139,7 +139,7 @@ export default function KisanTractorLoan2026() {
             Tractor Loan Kaise Kaam Karta Hai?
           </h2>
           <p className="text-gray-700 leading-relaxed mb-3">
-            Tractor loan ek secured loan hota hai – matlab tractor khud collateral hota hai. Bank ya finance company tractor ki RC apne naam par ya hypothecation ke saath register karti hai. Jab tak loan poora nahi bhara, technically tractor lender ki property hai. 🚜
+            Tractor loan ek secured loan hota hai — matlab tractor khud collateral hota hai. Bank ya finance company tractor ki RC apne naam par ya hypothecation ke saath register karti hai. Jab tak loan poora nahi bhara, technically tractor lender ki property hai.
           </p>
 
           <h3 className="text-lg font-semibold text-amber-600 mb-3">Tractor Loan Ki Basic Structure:</h3>
@@ -158,7 +158,7 @@ export default function KisanTractorLoan2026() {
           </div>
 
           <p className="text-gray-700 leading-relaxed mb-3">
-            Sukhdev ne ₹5,00,000 ka tractor loan liya – 5 saal ke liye, 9.5% annual interest par. Unki monthly EMI bani approximately <strong>₹10,500</strong>. Fasal aane par ek do EMI zyada bhar ke woh tenure bhi kam kar sakte hain. 💰
+            Ek common example — ₹5,00,000 ka tractor loan, 5 saal ke liye, 9.5% annual interest par. Monthly EMI bani approximately <strong>₹10,500</strong>. Fasal aane par ek do EMI zyada bhar ke tenure bhi kam kiya ja sakta hai.
           </p>
 
           <h3 className="text-lg font-semibold text-amber-600 mb-3">EMI Calculation Example:</h3>
@@ -196,14 +196,14 @@ export default function KisanTractorLoan2026() {
         <figure className="my-8 rounded-xl overflow-hidden shadow-lg">
           <Image 
             src="/images/articles/kisan-tractor-loan-2026/bank-loan-process.webp" 
-            alt="Bank Se Tractor Loan Kaise Le – Process aur Documents" 
+            alt="Bank Se Tractor Loan Kaise Le — Process aur Documents" 
             className="w-full h-44 sm:h-60 object-cover" 
             width={800} 
             height={300}
             loading="lazy"
           />
           <figcaption className="bg-blue-800 text-white text-xs sm:text-sm text-center py-2 px-4">
-            Bank Aur Finance Company – Tractor Loan Ka Sabse Bada Source
+            Bank Aur Finance Company — Tractor Loan Ka Sabse Bada Source
           </figcaption>
         </figure>
 
@@ -213,19 +213,19 @@ export default function KisanTractorLoan2026() {
             Bank Se Tractor Loan Kaise Le? Step-by-Step Process
           </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Sukhdev ne SBI se loan liya. Unhone jo process follow ki, woh hum neeche detail mein bata rahe hain. Yeh process zyaadatar nationalized banks mein almost same hoti hai. 🏦
+            Yeh process zyaadatar nationalized banks mein almost same hoti hai. Neeche detail mein bataya gaya hai:
           </p>
 
           <div className="space-y-3 mb-6">
             {[
-              { step: "Step 1", title: "Tractor Choose Karein", desc: "Pehle decide karein – konsa tractor chahiye, HP kya chahiye, brand kya prefer karte hain. Authorized dealer se quotation lein. On-road price confirm karein." },
+              { step: "Step 1", title: "Tractor Choose Karein", desc: "Pehle decide karein — konsa tractor chahiye, HP kya chahiye, brand kya prefer karte hain. Authorized dealer se quotation lein. On-road price confirm karein." },
               { step: "Step 2", title: "Bank Branch Jaayein Ya Online Apply Karein", desc: "Apne naye SBI/PNB/Bank of Baroda branch mein jaayein ya online portal par Kisan Tractor Loan section mein apply karein." },
               { step: "Step 3", title: "Loan Application Form Bharein", desc: "Tractor loan application form milega. Usme personal details, land details, income details aur tractor details fill karein." },
-              { step: "Step 4", title: "Documents Submit Karein", desc: "Saare required documents bank officer ko dein. Checklist neeche di gayi hai. Documents complete hone chahiye – koi bhi missing nahi." },
+              { step: "Step 4", title: "Documents Submit Karein", desc: "Saare required documents bank officer ko dein. Checklist neeche di gayi hai. Documents complete hone chahiye — koi bhi missing nahi." },
               { step: "Step 5", title: "Field Verification", desc: "Bank officer aapki zameen verify karne aa sakta hai. Khasra/Khatauni check hogi. Land ki value assess hogi collateral ke roop mein." },
               { step: "Step 6", title: "Loan Sanction", desc: "Agar sab theek raha toh 7–15 din mein loan sanction ho jaata hai. Sanction letter milega jisme amount, rate, tenure sab hoga." },
               { step: "Step 7", title: "Tractor Dealer Ko Payment", desc: "Bank seedha dealer ke account mein payment karti hai. Aap dealer se tractor receive karte hain aur RC process hoti hai." },
-              { step: "Step 8", title: "EMI Shuru", desc: "Ek mahine baad pehli EMI auto-debit hogi. Kisan account ya KCC account se kati hai. Time par bharein – CIBIL score maintain rahega." },
+              { step: "Step 8", title: "EMI Shuru", desc: "Ek mahine baad pehli EMI auto-debit hogi. Kisan account ya KCC account se kati hai. Time par bharein — CIBIL score maintain rahega." },
             ].map((item, i) => (
               <div key={i} className="flex gap-4 items-start bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
                 <div className="flex-shrink-0 w-14 h-14 bg-amber-600 text-white rounded-full flex flex-col items-center justify-center text-xs font-bold text-center leading-tight">
@@ -241,41 +241,41 @@ export default function KisanTractorLoan2026() {
           </div>
         </section>
 
-        {/* ── SECTION 4 – REAL CASE STUDIES ── */}
+        {/* ── SECTION 4 – PRACTICAL INSIGHTS ── */}
         <section className="mb-10">
           <h2 className="text-xl sm:text-2xl font-bold text-amber-700 border-b-2 border-amber-200 pb-2 mb-4">
-            Real Farmer Case Studies – 4 Rajya, 4 Kahaniyan
+            Practical Insights — Loan Lene Ke Real Challenges Aur Solutions
           </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Theory se zyada practical examples se samajh aata hai. Neeche 4 alag-alag kisano ki asli kahaniyan hain jinhone tractor loan liya, alag-alag problems face kiye, aur kaise solve kiya: 🌾
+            Theory se zyada practical examples se samajh aata hai. Neeche 4 common scenarios hain jo kai kisano face karte hain, aur unke solutions:
           </p>
 
           <div className="space-y-6">
             <div className="bg-white border-l-4 border-blue-500 rounded-r-lg p-5 shadow-sm">
-              <h3 className="font-bold text-lg text-blue-800 mb-2">📍 Case 1: Gurmeet Singh (Punjab) – Custom Hiring Business</h3>
+              <h3 className="font-bold text-lg text-blue-800 mb-2">📍 Scenario 1: Existing Loan Ke Saath Additional Financing</h3>
               <p className="text-gray-700 text-sm leading-relaxed mb-2">
-                Gurmeet ke paas pehle se 45HP tractor tha, lekin woh gaon ke doosre kisano ko rent par tractor dene ke liye 75HP chahte the. Bank ne initially 60% financing di kyunki land already mortgage thi. Gurmeet ne <strong>KCC top-up facility</strong> use ki aur 30% extra limit nikalwai. Hypothecation RTO mein register hone mein 12 din lage, kyunki unke purane RC par already hypothecation stamp tha. Unhonne directly Regional Transport Officer ko personal visit karke NOC clear karwaya. Aaj woh mahine mein ₹35,000–₹45,000 extra kamate hain custom hiring se.
+                Kai kisano ke paas pehle se tractor hota hai, lekin woh gaon ke doosre kisano ko rent par tractor dene ke liye higher HP chahte hain. Bank ne initially 60% financing di kyunki land already mortgage thi. <strong>KCC top-up facility</strong> use karke 30% extra limit nikalwa sakte hain. Hypothecation RTO mein register hone mein 12 din lag sakte hain, kyunki purane RC par already hypothecation stamp hota hai. Directly Regional Transport Officer ko personal visit karke NOC clear karwaya ja sakta hai. Custom hiring se mahine mein ₹35,000–₹45,000 extra kamaya ja sakta hai.
               </p>
             </div>
 
             <div className="bg-white border-l-4 border-green-500 rounded-r-lg p-5 shadow-sm">
-              <h3 className="font-bold text-lg text-green-800 mb-2">📍 Case 2: Rajkumari Devi (Uttar Pradesh) – First-Time Woman Farmer</h3>
+              <h3 className="font-bold text-lg text-green-800 mb-2">📍 Scenario 2: First-Time Woman Farmer</h3>
               <p className="text-gray-700 text-sm leading-relaxed mb-2">
-                Rajkumari ji ki zameen unke pita ji ke naam par thi. Bank ne initially loan reject kar diya kyunki &quot;legal heir certificate&quot; nahi tha. Unhonne <strong>Panchayat level se joint liability affidavit</strong> banwaya aur SC category ke under SMAM subsidy apply kiya. 45 din baad subsidy approve hui, bank ne 50% down payment adjust kar liya. Mahila kisan hone par unhe additional 0.25% interest concession mila. Aaj woh 35HP Swaraj tractor chalaati hain aur pados ke 4 gaon mein contract farming karti hain.
+                Kai mahila kisanon ki zameen pita ji ya pati ke naam par hoti hai. Bank ne initially loan reject kar diya kyunki "legal heir certificate" nahi tha. <strong>Panchayat level se joint liability affidavit</strong> banwaya ja sakta hai aur SC category ke under SMAM subsidy apply ki ja sakti hai. 45 din baad subsidy approve ho sakti hai, bank ne 50% down payment adjust kar deta hai. Mahila kisan hone par additional 0.25% interest concession milta hai.
               </p>
             </div>
 
             <div className="bg-white border-l-4 border-amber-500 rounded-r-lg p-5 shadow-sm">
-              <h3 className="font-bold text-lg text-amber-800 mb-2">📍 Case 3: Anil Patel (Madhya Pradesh) – NBFC vs Bank Refinancing</h3>
+              <h3 className="font-bold text-lg text-amber-800 mb-2">📍 Scenario 3: NBFC vs Bank Refinancing</h3>
               <p className="text-gray-700 text-sm leading-relaxed mb-2">
-                Anil ko tractor turant chahiye tha kyunki Rabi season shuru hone wala tha. Usne Mahindra Finance se 12.5% interest par 95% loan le liya (zero down payment offer). 8 mahine baad usne NABARD refinancing portal par check kiya ki bank 8.9% de raha hai. Usne tractor ki RC clear karwai, existing loan pre-close kiya (2% foreclosure charges lage), aur SBI se naya loan le liya. Total saving: ₹22,400 over 3 saal. Lesson: Emergency mein NBFC theek hai, lekin long-term ke liye bank better hai.
+                Emergency mein tractor turant chahiye hota hai kyunki Rabi season shuru hone wala hota hai. Kai kisano ne Mahindra Finance se 12.5% interest par 95% loan le liya (zero down payment offer). 8 mahine baad NABARD refinancing portal par check kiya ki bank 8.9% de raha hai. Tractor ki RC clear karwai, existing loan pre-close kiya (2% foreclosure charges lage), aur SBI se naya loan le liya. Total saving: ₹22,400 over 3 saal. Lesson: Emergency mein NBFC theek hai, lekin long-term ke liye bank better hai.
               </p>
             </div>
 
             <div className="bg-white border-l-4 border-purple-500 rounded-r-lg p-5 shadow-sm">
-              <h3 className="font-bold text-lg text-purple-800 mb-2">📍 Case 4: &quot;Krishi Samriddhi FPO&quot; (Rajasthan) – Group Tractor Purchase</h3>
+              <h3 className="font-bold text-lg text-purple-800 mb-2">📍 Scenario 4: Group Tractor Purchase Through FPO</h3>
               <p className="text-gray-700 text-sm leading-relaxed mb-2">
-                11 kisano ne milkar FPO register kiya. NABARD FPO scheme ke under unhonne 3 tractors ek saath finance kiye. Group guarantee hone ki wajah se kisi ko bhi individual collateral nahi dena pada. Interest rate flat 8.2% mila. Sabse bada challenge tha <strong>repayment schedule alignment</strong> – kyunki har kisan ki fasal alag time par beechti hai. Unhonne &quot;seasonal EMI structure&quot; request kiya bank se, jisme Oct-Nov mein double EMI aur baaki mahino mein half EMI pay hoti hai. Yeh model ab 17 districts mein replicate ho raha hai.
+                10-15 kisano ne milkar FPO register kiya. NABARD FPO scheme ke under unhonne 3 tractors ek saath finance kiye. Group guarantee hone ki wajah se kisi ko bhi individual collateral nahi dena pada. Interest rate flat 8.2% mila. Sabse bada challenge tha <strong>repayment schedule alignment</strong> — kyunki har kisan ki fasal alag time par bechti hai. "Seasonal EMI structure" request kiya bank se, jisme Oct-Nov mein double EMI aur baaki mahino mein half EMI pay hoti hai. Yeh model kai districts mein replicate ho raha hai.
               </p>
             </div>
           </div>
@@ -287,7 +287,7 @@ export default function KisanTractorLoan2026() {
             Hidden Costs Jo Bank Kabhi Nahi Batata
           </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Loan amount sirf shuruwat hai. Asli cost tab pata chalta hai jab aap RC register karte hain, insurance lete hain, aur prepayment karte hain. Neeche wo hidden charges hain jo 80% kisan ignore karte hain: 💸
+            Loan amount sirf shuruwat hai. Asli cost tab pata chalta hai jab RC register karte hain, insurance lete hain, aur prepayment karte hain. Neeche wo hidden charges hain jo 80% kisan ignore karte hain:
           </p>
 
           <div className="grid sm:grid-cols-2 gap-4 mb-5">
@@ -308,7 +308,7 @@ export default function KisanTractorLoan2026() {
           <div className="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg">
             <p className="text-amber-800 text-sm font-semibold">💡 Pro Tip:</p>
             <p className="text-amber-700 text-sm mt-1">
-              Loan lene se pehle <strong>&quot;on-road cost breakup&quot;</strong> maango. Dealer ke quotation mein registration, insurance, aur hypothecation alag se likha hota hai. Inko loan amount mein include mat karo – warna interest par interest pay karna padega.
+              Loan lene se pehle <strong>"on-road cost breakup"</strong> maango. Dealer ke quotation mein registration, insurance, aur hypothecation alag se likha hota hai. Inko loan amount mein include mat karo — warna interest par interest pay karna padega.
             </p>
           </div>
         </section>
@@ -319,14 +319,14 @@ export default function KisanTractorLoan2026() {
             Agar Fasal Kharab Ho Jaye Toh EMI Kaise Manage Karein?
           </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Kheti mein mausam, keede, ya baarish ka koi bharosa nahi hota. Agar crop fail ho gaya toh tractor loan default nahi karna chahiye. Neeche step-by-step protocol hai jo 2026 mein sabhi banks follow karte hain: 🌧️🌾
+            Kheti mein mausam, keede, ya baarish ka koi bharosa nahi hota. Agar crop fail ho gaya toh tractor loan default nahi karna chahiye. Neeche step-by-step protocol hai jo 2026 mein sabhi banks follow karte hain:
           </p>
 
           <ol className="space-y-3 mb-5 list-decimal list-inside text-gray-700">
             <li><strong>48 Hours Ke Andar Bank Inform Karein:</strong> Crop damage certificate tehsildar ya Krishi Vigyan Kendra se lein. Bank ko written application dein.</li>
             <li><strong>Loan Moratorium Request Karein:</strong> NABARD guidelines ke under crop loss par 6–12 mahine tak EMI pause hoti hai. Interest accrue hota rahega, lekin penalty nahi lagegi.</li>
             <li><strong>PMFBY Claim Link Karein:</strong> Agar aapne fasal Bima liya hai, toh claim amount directly loan account mein adjust ho sakta hai. Form 6 (Crop Loss) submit karein.</li>
-            <li><strong>Restructuring Option:</strong> Bank tenure 5 se 7 saal kar sakta hai, ya EMI amount 20% kam kar sakta hai. CIBIL par &quot;Restructured&quot; tag nahi aata agar timely inform kiya.</li>
+            <li><strong>Restructuring Option:</strong> Bank tenure 5 se 7 saal kar sakta hai, ya EMI amount 20% kam kar sakta hai. CIBIL par "Restructured" tag nahi aata agar timely inform kiya.</li>
             <li><strong>Custom Hiring Se Income Badhayein:</strong> Apna tractor pados ke kisano ko rent par dein. 1 din ka rent ₹2,500–₹4,000 hota hai. 10 din kaam = 1 mahina EMI cover.</li>
           </ol>
           <div className="bg-green-50 border border-green-200 rounded-lg p-4">
@@ -340,10 +340,10 @@ export default function KisanTractorLoan2026() {
         {/* ── SECTION 7 – STATE SUBSIDY DEEP DIVE ── */}
         <section className="mb-10">
           <h2 className="text-xl sm:text-2xl font-bold text-amber-700 border-b-2 border-amber-200 pb-2 mb-4">
-            State Subsidy Application – Portal Se Lekar Bank Tak Ka Safar
+            State Subsidy Application — Portal Se Lekar Bank Tak Ka Safar
           </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Subsidy milne ka matlab loan amount kam hona, lekin process thoda technical hai. Neeche exact workflow hai jo 2026 mein state agriculture departments follow karte hain: 🏛️
+            Subsidy milne ka matlab loan amount kam hona, lekin process thoda technical hai. Neeche exact workflow hai jo 2026 mein state agriculture departments follow karte hain:
           </p>
 
           <div className="bg-white border border-gray-200 rounded-lg p-5 mb-5">
@@ -351,7 +351,7 @@ export default function KisanTractorLoan2026() {
             <ul className="space-y-2 text-sm text-gray-700">
               <li><strong>1. SMAM Portal Registration:</strong> <code>smam.gov.in</code> par farmer ID banayein. Aadhaar + land record link karein. 7-14 din verification.</li>
               <li><strong>2. Quotation Upload:</strong> Authorized dealer se tractor proforma invoice lein. Portal par upload karein. Dealer ka empaneled status check karein.</li>
-              <li><strong>3. Bank NOC:</strong> Subsidy ke liye bank se &quot;No Objection Certificate&quot; chahiye ki loan pending hai. Yeh branch manager se hi milta hai.</li>
+              <li><strong>3. Bank NOC:</strong> Subsidy ke liye bank se "No Objection Certificate" chahiye ki loan pending hai. Yeh branch manager se hi milta hai.</li>
               <li><strong>4. District Approval Committee (DAC):</strong> Mahine ke 15 din baad DAC meeting hoti hai. Aapki application rank hoti hai. Priority: SC/ST &gt; Women &gt; Marginal Farmer &gt; General.</li>
               <li><strong>5. DBT Transfer:</strong> Approval ke 30-45 din baad subsidy seedha aapke account mein aati hai. Bank automatically loan principal adjust kar leta hai.</li>
             </ul>
@@ -390,10 +390,10 @@ export default function KisanTractorLoan2026() {
         {/* ── SECTION 8 – FINANCE COMPANIES VS BANKS ── */}
         <section className="mb-10">
           <h2 className="text-xl sm:text-2xl font-bold text-amber-700 border-b-2 border-amber-200 pb-2 mb-4">
-            Tractor Finance Companies vs Banks – Kaun Behtar Hai?
+            Tractor Finance Companies vs Banks — Kaun Behtar Hai?
           </h2>
           <p className="text-gray-700 leading-relaxed mb-3">
-            Sukhdev ne dono options explore kiye. Ultimately bank se loan liya kyunki interest rate kam thi. Lekin finance companies ke apne fayde hain. Neeche comparison hai: 🏦
+            Kai kisano ne dono options explore kiye. Ultimately bank se loan liya kyunki interest rate kam thi. Lekin finance companies ke apne fayde hain. Neeche comparison hai:
           </p>
 
           <div className="overflow-x-auto mb-4">
@@ -431,14 +431,14 @@ export default function KisanTractorLoan2026() {
         <figure className="my-8 rounded-xl overflow-hidden shadow-lg">
           <Image 
             src="/images/articles/kisan-tractor-loan-2026/tractor-approved.webp" 
-            alt="Tractor Loan Approved – Sukhdev Ko Tractor Mil Gaya" 
+            alt="Tractor Loan Approved — Kisan Ko Tractor Mil Gaya" 
             className="w-full h-44 sm:h-60 object-cover" 
             width={800} 
             height={300}
             loading="lazy"
           />
           <figcaption className="bg-green-800 text-white text-xs sm:text-sm text-center py-2 px-4">
-            Loan Approve – Sukhdev Ka Tractor Aaya, Kheti Ka Kaam Aasaan Ho Gaya
+            Loan Approve — Kheti Ka Kaam Aasaan Ho Gaya
           </figcaption>
         </figure>
 
@@ -448,7 +448,7 @@ export default function KisanTractorLoan2026() {
             Common Rejection Reasons Aur Loan Approval Tips
           </h2>
 
-          <h3 className="text-lg font-semibold text-amber-600 mb-3">Loan Reject Kyon Hota Hai – 7 Main Reasons:</h3>
+          <h3 className="text-lg font-semibold text-amber-600 mb-3">Loan Reject Kyon Hota Hai — 7 Main Reasons:</h3>
           <div className="space-y-2 mb-5">
             {[
               { r: "Low CIBIL Score (below 600)", s: "Loan lene se 6 mahine pehle existing loans samay par bharein. Credit card bills clear karein." },
@@ -474,11 +474,11 @@ export default function KisanTractorLoan2026() {
           <h3 className="text-lg font-semibold text-amber-600 mb-3">Loan Approval Ke Liye 5 Smart Tips:</h3>
           <ul className="space-y-2 mb-2">
             {[
-              "Pehle apna CIBIL score check karein (free mein – cibil.com ya Paytm app se). 700+ target rakho.",
-              "Jo bank mein already account hai (salary/KCC/FD), wahan pehle apply karein – known customer ko preference milti hai.",
-              "Tractor ka model wisely choose karein – bank ke approved tractor models ki list hoti hai. Usse bahar ka model reject ho sakta hai.",
-              "Loan amount reasonable rakhein – 60–70% income se zyada EMI approve nahi hoti.",
-              "Ek baar mein multiple banks mein apply mat karein – har application CIBIL mein inquiry hoti hai jo score girata hai.",
+              "Pehle apna CIBIL score check karein (free mein — cibil.com ya Paytm app se). 700+ target rakho.",
+              "Jo bank mein already account hai (salary/KCC/FD), wahan pehle apply karein — known customer ko preference milti hai.",
+              "Tractor ka model wisely choose karein — bank ke approved tractor models ki list hoti hai. Usse bahar ka model reject ho sakta hai.",
+              "Loan amount reasonable rakhein — 60–70% income se zyada EMI approve nahi hoti.",
+              "Ek baar mein multiple banks mein apply mat karein — har application CIBIL mein inquiry hoti hai jo score girata hai.",
             ].map((tip, i) => (
               <li key={i} className="flex gap-2 text-gray-700 text-sm items-start">
                 <span className="text-amber-600 font-bold flex-shrink-0">#{i + 1}</span>
@@ -494,7 +494,7 @@ export default function KisanTractorLoan2026() {
             Future Trends 2026-27: Electric Tractors & AI Credit Scoring
           </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Agri-finance tezi se modernize ho raha hai. 2026 ke baad jo naye trends aa rahe hain, unki taiyari pehle se karna chahiye: 🔋
+            Agri-finance tezi se modernize ho raha hai. 2026 ke baad jo naye trends aa rahe hain, unki taiyari pehle se karna chahiye:
           </p>
 
           <div className="grid sm:grid-cols-2 gap-4 mb-5">
@@ -507,14 +507,14 @@ export default function KisanTractorLoan2026() {
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
               <h4 className="font-bold text-blue-800 mb-2">📊 AI-Based Agri Credit Scoring</h4>
               <p className="text-gray-700 text-sm">
-                Ab CIBIL ke alawa &quot;Agri-Data Score&quot; use ho raha hai. Satellite imagery se crop health, soil moisture, aur harvest yield predict kiya jaata hai. Agar aapka farm digital data generate karta hai (soil test, weather station, drone mapping), toh bank automatically higher limit approve karta hai bina manual verification ke.
+                Ab CIBIL ke alawa "Agri-Data Score" use ho raha hai. Satellite imagery se crop health, soil moisture, aur harvest yield predict kiya jaata hai. Agar aapka farm digital data generate karta hai (soil test, weather station, drone mapping), toh bank automatically higher limit approve karta hai bina manual verification ke.
               </p>
             </div>
           </div>
           <div className="bg-purple-50 border-l-4 border-purple-500 p-4 rounded-r-lg">
             <p className="text-purple-800 text-sm font-semibold">🔮 2027 Prediction:</p>
             <p className="text-purple-700 text-sm mt-1">
-              RBI &quot;Pay-As-You-Farm&quot; model launch karne wala hai. Isme EMI sirf harvest season mein deduct hogi, baaki mahino mein zero outflow. Sensor-based tractor usage tracking install hoga, aur interest rate dynamically adjust hoga based on actual farm income.
+              RBI "Pay-As-You-Farm" model launch karne wala hai. Isme EMI sirf harvest season mein deduct hogi, baaki mahino mein zero outflow. Sensor-based tractor usage tracking install hoga, aur interest rate dynamically adjust hoga based on actual farm income.
             </p>
           </div>
         </section>
@@ -522,17 +522,17 @@ export default function KisanTractorLoan2026() {
         {/* ── FAQ ── */}
         <section className="mb-10">
           <h2 className="text-xl sm:text-2xl font-bold text-amber-700 border-b-2 border-amber-200 pb-2 mb-6">
-            FAQ – Aksar Pooche Jaane Wale Sawaal
+            FAQ — Aksar Pooche Jaane Wale Sawaal
           </h2>
           <div className="space-y-3">
             {[
               { q: "Kya bina zameen ke tractor loan mil sakta hai?", a: "Zyaadatar banks ke liye zameen zaroori hai. Lekin kuch NBFCs income proof aur guarantor ke basis par loan de deti hain. Agar aap contract farming karte hain ya FPO member hain, toh bhi options hain." },
-              { q: "Purana/second-hand tractor ke liye loan milta hai?", a: "Haan, kuch banks aur finance companies second-hand tractors ke liye bhi loan deti hain – lekin amount thodi kam hogi (tractor ki current market value ka 70–80%) aur interest slightly zyada." },
-              { q: "EMI nahi bhar paye toh kya hoga?", a: "Ek do EMI miss hone par bank notice bhejta hai. Regularly miss karne par tractor seize ho sakta hai. Agar problem ho toh turant bank se baat karein – restructuring ya moratorium ka option maangein." },
+              { q: "Purana/second-hand tractor ke liye loan milta hai?", a: "Haan, kuch banks aur finance companies second-hand tractors ke liye bhi loan deti hain — lekin amount thodi kam hogi (tractor ki current market value ka 70–80%) aur interest slightly zyada." },
+              { q: "EMI nahi bhar paye toh kya hoga?", a: "Ek do EMI miss hone par bank notice bhejta hai. Regularly miss karne par tractor seize ho sakta hai. Agar problem ho toh turant bank se baat karein — restructuring ya moratorium ka option maangein." },
               { q: "Tractor loan ke liye kitni zameen chahiye?", a: "Bank ke hisaab se alag hota hai. SBI mein generally 2 hectare (5 bigha), chhote banks ya NBFCs mein 1 bigha bhi kaafi ho sakti hai. Government subsidy schemes mein requirements kam hoti hain." },
-              { q: "Kya joint application possible hai tractor loan mein?", a: "Haan – husband-wife ya family member saath mein co-applicant ho sakte hain. Isse combined income consider hoti hai aur loan amount zyada milta hai." },
-              { q: "Tractor loan par koi insurance hota hai?", a: "Haan – bank usually tractor insurance aur borrower ka life insurance compulsory karta hai. Insurance premium loan amount mein add ho jaata hai ya alag se dena padta hai." },
-              { q: "Processing fee kitni hoti hai?", a: "Generally loan amount ka 0.5–1% processing fee hoti hai. SBI mein usually ₹500–₹2,000 flat charge hota hai. NBFC mein zyada ho sakta hai – apply se pehle poochhein." },
+              { q: "Kya joint application possible hai tractor loan mein?", a: "Haan — husband-wife ya family member saath mein co-applicant ho sakte hain. Isse combined income consider hoti hai aur loan amount zyada milta hai." },
+              { q: "Tractor loan par koi insurance hota hai?", a: "Haan — bank usually tractor insurance aur borrower ka life insurance compulsory karta hai. Insurance premium loan amount mein add ho jaata hai ya alag se dena padta hai." },
+              { q: "Processing fee kitni hoti hai?", a: "Generally loan amount ka 0.5–1% processing fee hoti hai. SBI mein usually ₹500–₹2,000 flat charge hota hai. NBFC mein zyada ho sakta hai — apply se pehle poochhein." },
             ].map((item, i) => (
               <details key={i} className="border-2 border-amber-100 rounded-xl overflow-hidden">
                 <summary className="bg-amber-50 px-5 py-3 cursor-pointer font-semibold text-amber-900 text-sm flex justify-between items-center gap-2">
@@ -550,17 +550,17 @@ export default function KisanTractorLoan2026() {
         {/* ── CONCLUSION ── */}
         <section className="mb-10">
           <h2 className="text-xl sm:text-2xl font-bold text-amber-700 border-b-2 border-amber-200 pb-2 mb-4">
-            Conclusion – Sukhdev Ki Tarah Aap Bhi Tractor Le Sakte Hain
+            Conclusion — Aap Bhi Tractor Le Sakte Hain
           </h2>
           <div className="bg-amber-700 text-white rounded-xl p-6 mb-6">
             <p className="leading-relaxed mb-3">
-              Sukhdev ki story yeh prove karti hai – agar sahi planning ho, documents tayyar hon aur sahi bank/scheme chunin, toh tractor loan lena utna mushkil nahi jitna lagta hai. Down payment ki bhi poori zaroorat nahi – 10–15% se bhi kaam chala sakte hain, aur agar government subsidy mile toh aur bhi better. 💚
+              Yeh guide yeh prove karti hai — agar sahi planning ho, documents tayyar hon aur sahi bank/scheme chunin, toh tractor loan lena utna mushkil nahi jitna lagta hai. Down payment ki bhi poori zaroorat nahi — 10–15% se bhi kaam chala sakte hain, aur agar government subsidy mile toh aur bhi better.
             </p>
             <p className="leading-relaxed mb-3">
-              Sabse zaroori baat – pehle research karein. Apne state ki agriculture scheme check karein. CIBIL score theek karein. KCC banwayein. Phir bank se baat karein. Ek systematic approach se Sukhdev ne tractor liya – aur aap bhi le sakte hain. 🎯
+              Sabse zaroori baat — pehle research karein. Apne state ki agriculture scheme check karein. CIBIL score theek karein. KCC banwayein. Phir bank se baat karein. Ek systematic approach se loan lena aasan ho jaata hai.
             </p>
             <p className="leading-relaxed">
-              Aaj Sukhdev ke tractor se unki kheti ki laagat 40% kam ho gayi hai. Neighbouring farms mein bhi woh apna tractor bheja dete hain aur extra income kamate hain. Ek loan ne unki puri farming economy badal di. 🚜💰
+              Kai kisano ne apna tractor lekar kheti ki laagat 40% kam kar di hai. Neighbouring farms mein bhi woh apna tractor bheja dete hain aur extra income kamate hain. Ek loan ne unki puri farming economy badal di.
             </p>
           </div>
 
@@ -591,7 +591,7 @@ export default function KisanTractorLoan2026() {
 
         {/* Quick Summary */}
         <div className="bg-yellow-50 border-2 border-yellow-300 rounded-xl p-6 mb-8">
-          <h3 className="font-bold text-yellow-900 text-lg mb-3">⚡ Quick Summary – Kisan Tractor Loan 2026</h3>
+          <h3 className="font-bold text-yellow-900 text-lg mb-3">⚡ Quick Summary — Kisan Tractor Loan 2026</h3>
           <div className="grid sm:grid-cols-2 gap-2 text-sm">
             {[
               ["Loan Amount", "₹3 lakh – ₹20 lakh"],
