@@ -1,23 +1,21 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // ✅ FIXED: Image optimization
+  // Image optimization — AVIF + WebP for best compression
   images: {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: false,
-    // ❌ REMOVED: contentDispositionType: 'attachment'
-    // Ye images ko download kara deta tha instead of display!
   },
 
-  // Compression enable
+  // Gzip/Brotli compression enabled
   compress: true,
 
-  // ✅ FIXED: Redirects
+  // URL redirects — old paths to new canonical URLs
   async redirects() {
     return [
-      // Calculator redirects
+      // Calculator path corrections
       {
         source: '/calculator/farming-profit',
         destination: '/calculator/crop-profit',
@@ -29,7 +27,7 @@ const nextConfig = {
         permanent: true,
       },
 
-      // ✅ FIXED: PM Kisan redirects (correct destinations)
+      // Article path corrections
       {
         source: '/pm-kisan-24vi-kist',
         destination: '/articles/pm-kisan-24vi-kist',
@@ -46,7 +44,7 @@ const nextConfig = {
         permanent: true,
       },
 
-      // Beneficiary list redirects
+      // Beneficiary list slug corrections
       {
         source: '/beneficiary-list/daman-diu',
         destination: '/beneficiary-list/dadra-nagar-haveli',
@@ -58,7 +56,7 @@ const nextConfig = {
         permanent: true,
       },
 
-      // Article redirects
+      // Article slug correction
       {
         source: '/agristack-kya-hai',
         destination: '/articles/agristack-kya-hai',
@@ -67,7 +65,7 @@ const nextConfig = {
     ];
   },
 
-  // Security & Performance Headers
+  // Security headers + caching strategy
   async headers() {
     return [
       {
@@ -81,18 +79,18 @@ const nextConfig = {
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
         ],
       },
-      // ✅ Pages: No cache (always fresh)
+      // Pages: always fresh (no stale content)
       {
         source: '/:path*{/}?',
         has: [{ type: 'header', key: 'next-router-prefetch' }],
         headers: [{ key: 'Cache-Control', value: 'public, max-age=0, must-revalidate' }],
       },
-      // ✅ Images: Long cache (immutable)
+      // Images: cache for 1 year (immutable filenames)
       {
         source: '/images/:path*',
         headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
       },
-      // ✅ Static assets: Long cache
+      // Static assets: cache for 1 year (hashed filenames)
       {
         source: '/_next/static/:path*',
         headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
