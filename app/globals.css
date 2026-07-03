@@ -1,27 +1,39 @@
-/* ❌ REMOVED: @import url('https://fonts.googleapis.com/...') */
+/* Google Fonts — layout.tsx mein load ho rahe hain (performance ke liye) */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* ── CSS Custom Properties ─────────────────────────────────── */
+/* ── Design Tokens ───────────────────────────────────────────── */
+/* Colors, spacing, shadows — sab ek jagah se control hote hain */
 :root {
+  /* Primary palette — green theme */
   --color-primary: #16A34A;
   --color-primary-dark: #15803D;
   --color-primary-light: #BBF7D0;
+  
+  /* Accent — warm yellow for highlights */
   --color-accent: #CA8A04;
+  
+  /* Backgrounds — warm cream base */
   --color-bg: #FFFBF0;
   --color-bg-alt: #F0FDF4;
   --color-card: #FFFFFF;
+  
+  /* Borders & text */
   --color-border: #D1FAE5;
   --color-text: #1A2E1A;
   --color-text-muted: #4B7A56;
+  
+  /* Layout constraints */
   --max-w-site: 1200px;
 
+  /* Transition speeds — consistent animations */
   --transition-fast: 150ms;
   --transition-normal: 200ms;
   --transition-slow: 300ms;
 
+  /* Spacing scale */
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
@@ -29,17 +41,20 @@
   --spacing-xl: 2rem;
   --spacing-2xl: 3rem;
 
+  /* Border radius scale */
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 16px;
   --radius-xl: 20px;
   --radius-full: 9999px;
 
+  /* Elevation shadows */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 
+  /* Z-index scale — layering system */
   --z-dropdown: 100;
   --z-sticky: 200;
   --z-fixed: 300;
@@ -49,7 +64,7 @@
   --z-tooltip: 700;
 }
 
-/* ✅ FIXED: Dark mode via class (manual toggle support) */
+/* Dark mode — class-based toggle support */
 .dark {
   --color-bg: #0F1A0F;
   --color-bg-alt: #1A2E1A;
@@ -59,7 +74,7 @@
   --color-text-muted: #A8C8A8;
 }
 
-/* Auto dark mode for users without toggle preference */
+/* System preference — automatic dark mode */
 @media (prefers-color-scheme: dark) {
   :root:not(.light) {
     --color-bg: #0F1A0F;
@@ -82,7 +97,7 @@
   html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
-    scroll-padding-top: 80px;
+    scroll-padding-top: 80px; /* Account for sticky header */
   }
 
   body {
@@ -97,6 +112,7 @@
     transition: background-color var(--transition-normal) ease, color var(--transition-normal) ease;
   }
 
+  /* Typography scale — responsive sizing */
   h1 { font-family: var(--font-poppins), system-ui, sans-serif; font-size: clamp(1.875rem, 5vw, 3rem); font-weight: 700; line-height: 1.2; color: var(--color-text); letter-spacing: -0.02em; }
   h2 { font-family: var(--font-poppins), system-ui, sans-serif; font-size: clamp(1.5rem, 4vw, 2.25rem); font-weight: 700; line-height: 1.3; color: var(--color-text); letter-spacing: -0.01em; }
   h3 { font-family: var(--font-poppins), system-ui, sans-serif; font-size: clamp(1.25rem, 3vw, 1.875rem); font-weight: 600; line-height: 1.4; color: var(--color-text); }
@@ -104,20 +120,25 @@
   h5, h6 { font-family: var(--font-poppins), system-ui, sans-serif; font-size: clamp(1rem, 2vw, 1.25rem); font-weight: 600; line-height: 1.5; color: var(--color-text); }
   p { margin-bottom: 1rem; }
 
+  /* Focus states — keyboard navigation */
   :focus-visible { outline: 3px solid var(--color-primary); outline-offset: 2px; border-radius: var(--radius-sm); }
   body.keyboard-navigation *:focus { outline: 3px solid var(--color-primary); outline-offset: 2px; }
 
+  /* Selection highlight */
   ::selection { background-color: var(--color-primary); color: white; }
 
+  /* Custom scrollbar */
   * { scrollbar-width: thin; scrollbar-color: var(--color-border) transparent; }
   *::-webkit-scrollbar { width: 8px; height: 8px; background: transparent; }
   *::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: var(--radius-full); }
   *::-webkit-scrollbar-thumb:hover { background: var(--color-primary); }
 
+  /* Media defaults */
   img, svg { display: block; max-width: 100%; height: auto; }
   a { color: inherit; text-decoration: none; transition: color var(--transition-fast) ease; }
   a:hover { color: var(--color-primary); }
 
+  /* Reduced motion — accessibility */
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
       animation-duration: 0.01ms !important;
@@ -128,8 +149,9 @@
   }
 }
 
-/* ── Component Utilities ─────────────────────────────────────── */
+/* ── Component Library ───────────────────────────────────────── */
 @layer components {
+  /* Skip link — accessibility */
   .skip-link {
     position: absolute; top: -40px; left: 0;
     background: var(--color-primary); color: white;
@@ -139,11 +161,13 @@
   }
   .skip-link:focus { top: 0; }
 
+  /* Container — responsive max-width */
   .container-site { width: 100%; max-width: var(--max-w-site); margin-inline: auto; padding-inline: 1rem; }
   @media (min-width: 640px) { .container-site { padding-inline: 1.5rem; } }
   @media (min-width: 1024px) { .container-site { padding-inline: 2rem; } }
   @media (min-width: 1280px) { .container-site { padding-inline: 2.5rem; } }
 
+  /* Card — content container */
   .card {
     background: var(--color-card); border: 1px solid var(--color-border);
     border-radius: var(--radius-lg); padding: var(--spacing-lg);
@@ -152,6 +176,7 @@
   }
   .card:hover { box-shadow: var(--shadow-md); }
 
+  /* Primary button — main CTA */
   .btn-primary {
     display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
     min-height: 48px; padding: 0.75rem 1.5rem;
@@ -165,6 +190,7 @@
   .btn-primary:active { transform: translateY(0); }
   .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
 
+  /* Secondary button — outline style */
   .btn-secondary {
     display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
     min-height: 48px; padding: 0.75rem 1.5rem;
@@ -176,19 +202,23 @@
   }
   .btn-secondary:hover { background-color: var(--color-bg-alt); }
 
+  /* Section title — page headings */
   .section-title { font-family: var(--font-poppins), system-ui, sans-serif; font-size: clamp(1.25rem, 3vw, 1.875rem); font-weight: 700; color: var(--color-text); }
 
+  /* Accent badge — highlights */
   .badge-accent {
     display: inline-flex; align-items: center; gap: 0.25rem;
     padding: 0.25rem 0.75rem; background-color: #FEF9C3; color: #92400E;
     font-size: 0.875rem; font-weight: 600; border-radius: var(--radius-full); border: 1px solid #FDE68A;
   }
 
+  /* News box — important notices */
   .news-box {
     background-color: var(--color-bg-alt); border: 1px solid var(--color-border);
     border-left: 4px solid var(--color-primary); border-radius: var(--radius-md); padding: 1rem 1.25rem;
   }
 
+  /* Data table — structured content */
   .data-table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; }
   .data-table-wrapper { overflow-x: auto; border-radius: var(--radius-md); border: 1px solid var(--color-border); }
   .data-table tbody tr:nth-child(even) { background-color: var(--color-bg-alt); }
@@ -196,6 +226,7 @@
   .data-table th { background-color: var(--color-primary); color: #FFFFFF; font-family: var(--font-poppins), system-ui, sans-serif; font-weight: 600; padding: 0.75rem 1rem; text-align: left; position: sticky; top: 0; }
   .data-table td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--color-border); }
 
+  /* Feature card — interactive tiles */
   .feature-card {
     background: var(--color-card); border: 1.5px solid var(--color-border);
     border-radius: var(--radius-xl); padding: var(--spacing-lg); cursor: pointer;
@@ -204,7 +235,7 @@
   }
   .feature-card:hover { border-color: var(--color-primary); transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 
-  /* Loading skeletons */
+  /* Loading states */
   .loading-skeleton {
     background: linear-gradient(90deg, var(--color-border) 0%, var(--color-bg-alt) 50%, var(--color-border) 100%);
     background-size: 200% 100%; animation: loading-shimmer 1.5s infinite; border-radius: var(--radius-md);
@@ -243,7 +274,7 @@
   .pagination-button.active { background: var(--color-primary); color: white; border-color: var(--color-primary); }
   .pagination-button:disabled { opacity: 0.5; cursor: not-allowed; }
 
-  /* ✅ FIXED: Mobile menu with proper touch targets */
+  /* Mobile menu — slide-in drawer */
   .mobile-menu {
     position: fixed; top: 0; right: -100%; width: 80%; max-width: 320px;
     height: 100vh; height: 100dvh; background: var(--color-card);
@@ -259,7 +290,7 @@
   }
   .mobile-menu-backdrop.open { opacity: 1; visibility: visible; }
 
-  /* ✅ NEW: Dark mode toggle button */
+  /* Theme toggle — dark mode switch */
   .theme-toggle {
     display: inline-flex; align-items: center; justify-content: center;
     width: 44px; height: 44px; border-radius: var(--radius-full);
@@ -271,27 +302,33 @@
   .theme-toggle svg { width: 20px; height: 20px; }
 }
 
-/* ── Utility Extensions ──────────────────────────────────────── */
+/* ── Utility Classes ─────────────────────────────────────────── */
 @layer utilities {
+  /* Color utilities */
   .text-primary-green { color: var(--color-primary); }
   .bg-primary-green { background-color: var(--color-primary); }
   .border-primary-green { border-color: var(--color-primary); }
   .bg-warm-cream { background-color: var(--color-bg); }
   .bg-light-green { background-color: var(--color-bg-alt); }
 
+  /* FAQ accordion */
   .faq-content { overflow: hidden; transform-origin: top; transition: max-height var(--transition-normal) ease, opacity var(--transition-normal) ease; }
 
+  /* Hero overlays */
   .hero-overlay { background: linear-gradient(to right, rgba(15, 30, 15, 0.75) 0%, rgba(15, 30, 15, 0.45) 55%, rgba(15, 30, 15, 0.1) 100%); }
   .bg-green-warm-gradient { background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 50%, #FFFBF0 100%); }
 
+  /* Statistics */
   .stat-number { font-family: var(--font-poppins), system-ui, sans-serif; font-weight: 700; font-size: clamp(1.75rem, 4vw, 2.5rem); color: var(--color-primary); line-height: 1.1; }
 
+  /* Icon circles */
   .icon-circle {
     width: 3rem; height: 3rem; border-radius: 50%;
     background: linear-gradient(135deg, #DCFCE7, #BBF7D0);
     display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0;
   }
 
+  /* Article cards */
   .article-card {
     background: var(--color-card); border: 1.5px solid var(--color-border);
     border-radius: var(--radius-lg); overflow: hidden;
@@ -300,6 +337,7 @@
   }
   .article-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--color-primary); }
 
+  /* Search input */
   .search-input {
     width: 100%; padding: 0.875rem 1.25rem; padding-right: 3.5rem;
     font-size: 1rem; border: 2px solid var(--color-border); border-radius: var(--radius-full);
@@ -310,6 +348,7 @@
   .search-input:focus { border-color: var(--color-primary); box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.15); }
   .search-input::placeholder { color: var(--color-text-muted); }
 
+  /* Sticky CTA */
   .sticky-cta {
     position: fixed; bottom: 1.25rem; right: 1.25rem; z-index: var(--z-fixed);
     display: flex; align-items: center; gap: 0.5rem; min-height: 48px;
@@ -320,19 +359,21 @@
   }
   .sticky-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(22, 163, 74, 0.5); }
 
+  /* Timeline connector */
   .timeline-connector {
     position: absolute; top: 20px; left: calc(50% + 20px);
     width: calc(100% - 40px); height: 2px;
     background: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
   }
 
+  /* Page transitions */
   .page-transition { animation: fadeInUp var(--transition-normal) ease; }
   .fade-in { animation: fadeIn var(--transition-normal) ease; }
   .slide-up { animation: slideUp var(--transition-normal) ease; }
   .scale-in { animation: scaleIn var(--transition-normal) ease; }
 }
 
-/* ── Animations ──────────────────────────────────────────────── */
+/* ── Keyframe Animations ─────────────────────────────────────── */
 @keyframes loading-shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
 @keyframes spin { to { transform: rotate(360deg); } }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
