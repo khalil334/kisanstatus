@@ -1,10 +1,6 @@
 /**
- * Logo.tsx — KisanStatus.com v2.0
- * ✅ SEO OPTIMIZED
- * ✅ ACCESSIBILITY ENHANCED
- * ✅ RESPONSIVE DESIGN
- * ✅ FALLBACK MECHANISM
- * ✅ PERFORMANCE OPTIMIZED
+ * Logo.tsx — Site branding component with image fallback
+ * Responsive sizes, light/dark variants, accessible markup
  */
 import Image from 'next/image';
 
@@ -31,7 +27,7 @@ export default function Logo({ variant = 'light', size = 'md' }: LogoProps) {
       aria-label="KisanStatus.com - Home"
       role="banner"
     >
-      {/* Logo Image with Fallback */}
+      {/* Logo image with emoji fallback on error */}
       <div className="relative shrink-0 group-hover:scale-105 transition-transform duration-200">
         <Image
           src="/favicon-64x64.png"
@@ -41,7 +37,6 @@ export default function Logo({ variant = 'light', size = 'md' }: LogoProps) {
           className={`${sizes.image} object-contain`}
           priority
           onError={(e) => {
-            // Fallback to emoji if image doesn't load
             const target = e.target as HTMLImageElement;
             target.style.display = 'none';
             const parent = target.parentElement;
@@ -52,13 +47,13 @@ export default function Logo({ variant = 'light', size = 'md' }: LogoProps) {
         />
       </div>
       
-      {/* Text */}
+      {/* Brand text — tagline uses varied keyword */}
       <div className="flex flex-col">
         <p className={`font-black ${sizes.title} leading-none tracking-tight ${textColor}`}>
           KisanStatus<span className="text-green-400">.com</span>
         </p>
         <p className={`${sizes.subtitle} font-medium leading-none mt-0.5 ${subColor}`}>
-          Sabhi Kisanon Ke Liye
+          Sabhi Cultivators Ke Liye
         </p>
       </div>
     </div>
