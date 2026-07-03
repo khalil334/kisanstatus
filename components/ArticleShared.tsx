@@ -1,11 +1,18 @@
 'use client';
+/**
+ * ArticleShared.tsx — Reusable components for article pages
+ * Step lists, info boxes, government links, author box, navigation
+ * KisanStatus Team — 2026
+ */
 import Link from 'next/link';
 import React from 'react';
 
+// Date formatter — Indian locale mein readable format
 export function fmtDate(iso: string) {
   return new Date(iso).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' });
 }
 
+// Step item — numbered list with gradient connector line
 export function SI({ n, children }: { n: number; children: React.ReactNode }) {
   return (
     <li className="flex gap-3 items-stretch list-none mb-2">
@@ -22,10 +29,12 @@ export function SI({ n, children }: { n: number; children: React.ReactNode }) {
   );
 }
 
+// Step list container — ordered list wrapper
 export function StepList({ children }: { children: React.ReactNode }) {
   return <ol className="space-y-0 my-4">{children}</ol>;
 }
 
+// Info box — green border, educational content
 export function IB({ children }: { children: React.ReactNode }) {
   return (
     <div className="my-4 p-4 bg-green-50 dark:bg-green-900/20 border-l-4 border-green-600 dark:border-green-500 rounded-r-xl text-sm text-[var(--color-text)] leading-relaxed">
@@ -34,6 +43,7 @@ export function IB({ children }: { children: React.ReactNode }) {
   );
 }
 
+// Warning box — amber border, caution content
 export function WB({ children }: { children: React.ReactNode }) {
   return (
     <div className="my-4 p-4 bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 rounded-r-xl text-sm text-[var(--color-text)] leading-relaxed">
@@ -42,6 +52,7 @@ export function WB({ children }: { children: React.ReactNode }) {
   );
 }
 
+// Danger box — red border, critical information
 export function DB({ children }: { children: React.ReactNode }) {
   return (
     <div className="my-4 p-4 bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 rounded-r-xl text-sm text-[var(--color-text)] leading-relaxed">
@@ -50,6 +61,7 @@ export function DB({ children }: { children: React.ReactNode }) {
   );
 }
 
+// Section heading — styled h2 with border
 export function SH({ children }: { children: React.ReactNode }) {
   return (
     <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)] flex items-center gap-2">
@@ -58,6 +70,7 @@ export function SH({ children }: { children: React.ReactNode }) {
   );
 }
 
+// Government link card — CTA to official portal with guide link
 export function GovLink({
   href, label, guide, guideHref,
 }: { href: string; label: string; guide: string; guideHref?: string }) {
@@ -91,6 +104,7 @@ export function GovLink({
   );
 }
 
+// Related articles grid — internal linking for SEO
 export function RelatedArticles({ articles }: { articles: { slug: string; title: string; emoji: string }[] }) {
   return (
     <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
@@ -109,32 +123,35 @@ export function RelatedArticles({ articles }: { articles: { slug: string; title:
     </div>
   );
 }
+
+// Author box — credibility signal with last updated date
 export function AuthorBox({ modified }: { modified: string }) {
   return (
     <div className="flex items-start gap-4 p-5 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/10 border border-[var(--color-border)] rounded-2xl my-8">
       <div className="w-14 h-14 rounded-full bg-[var(--color-primary)] flex items-center justify-center text-2xl shrink-0 shadow-md">🌾</div>
       <div>
         <Link href="/about" className="font-black text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">KisanStatus Team</Link>
-        <p className="text-xs text-green-700 dark:text-green-400 font-semibold mt-0.5">Agricultural Expert & Farmer Advocate</p>
-        <p className="text-xs text-[var(--color-text-muted)] mt-1">Pichhle 5 saal se Indian farmers ko government schemes navigate karne mein help kar rahe hain.</p>
+        <p className="text-xs text-green-700 dark:text-green-400 font-semibold mt-0.5">Agrarian Welfare Experts & Annadata Advocates</p>
+        <p className="text-xs text-[var(--color-text-muted)] mt-1">Pichhle 5 saal se Indian cultivators ko government schemes navigate karne mein help kar rahe hain.</p>
         <p className="text-xs text-[var(--color-text-muted)] mt-1">🔄 Last Updated: {fmtDate(modified)}</p>
       </div>
     </div>
   );
 }
 
-// ✅ FIXED: Broken link /pm-kisan-status → /articles/pm-kisan-23vi-kist-2026-status-check
+// Bottom navigation — quick links to important pages
 export function BottomNav() {
+  // Internal links — sab verified hain
   const links = [
     { href:'/',                                                   l:'🏠 Home'         },
-    { href:'/articles/pm-kisan-23vi-kist-2026-status-check',     l:'✅ Status'        },
-    { href:'/articles/pm-kisan-ekyc-online-2026',                 l:'🔐 eKYC'         },
-    { href:'/articles/pm-kisan-payment-failed-status-2026',       l:'💸 Payment'      },
-    { href:'/articles/pm-kisan-name-correction-online-2026',      l:'✏️ Correction'   },
-    { href:'/articles/pm-kisan-beneficiary-list-2026',            l:'📋 Beneficiary'  },
-    { href:'/articles/pm-kisan-registration-online-2026',         l:'📝 Registration' },
-    { href:'/calculator',                                         l:'🧮 Calculator'   },
-    { href:'/about',                                              l:'👤 About'        },
+    { href:'/articles/pm-kisan-23vi-kist-2026-status-check',     l:'✅ Verification'  },
+    { href:'/articles/pm-kisan-ekyc-online-2026',                 l:'🔐 Digital Auth'  },
+    { href:'/articles/pm-kisan-payment-failed-status-2026',       l:'💸 Payment Fix'   },
+    { href:'/articles/pm-kisan-name-correction-online-2026',      l:'✏️ Identity Fix'  },
+    { href:'/articles/pm-kisan-beneficiary-list-2026',            l:'📋 Roster'        },
+    { href:'/articles/pm-kisan-registration-online-2026',         l:'📝 Enrollment'    },
+    { href:'/calculator',                                         l:'🧮 Utilities'     },
+    { href:'/about',                                              l:'👤 About'         },
   ];
   return (
     <div className="pt-6 border-t border-[var(--color-border)] mt-8">
@@ -151,6 +168,7 @@ export function BottomNav() {
   );
 }
 
+// Disclaimer — legal protection notice
 export function Disclaimer() {
   return (
     <div className="mt-6 p-4 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-xl text-xs text-[var(--color-text-muted)] leading-relaxed">
@@ -160,20 +178,21 @@ export function Disclaimer() {
   );
 }
 
+// Calculator banner — promotional CTA for utility tools
 export function CalcBanner() {
   return (
     <div className="my-8 p-6 bg-gradient-to-r from-green-800 to-green-600 rounded-2xl text-white text-center">
       <p className="text-2xl mb-2">📆</p>
-      <p className="font-black text-lg mb-1">23vi Kist Ruki Hai? Pata Karo Kyun</p>
-      <p className="text-green-100 text-sm mb-4">eKYC, bank seeding, land seeding check karo — 4 sawaal mein exact reason. Plus PM Kisan benefit, KCC EMI, PMFBY premium calculators — sab free</p>
+      <p className="font-black text-lg mb-1">23vi Tranche Ruki Hai? Pata Karo Kyun</p>
+      <p className="text-green-100 text-sm mb-4">Digital verification, bank seeding, land integration check karo — 4 sawaal mein exact reason. Plus agrarian welfare benefit, credit facility EMI, crop protection premium utilities — sab free</p>
       <div className="flex flex-wrap justify-center gap-2.5">
         <Link href="/calculator/installment-tracker"
           className="inline-flex items-center gap-2 bg-white text-green-800 font-black px-6 py-3 rounded-xl text-sm hover:bg-green-50 transition-colors focus:outline-none focus:ring-2 focus:ring-white">
-          📆 Installment Tracker Kholo →
+          📆 Tranche Tracker Kholo →
         </Link>
         <Link href="/calculator"
           className="inline-flex items-center gap-2 bg-white/15 border border-white/30 text-white font-bold px-6 py-3 rounded-xl text-sm hover:bg-white/25 transition-colors focus:outline-none focus:ring-2 focus:ring-white">
-          🧮 Sab Calculators Dekho
+          🧮 Sab Utilities Dekho
         </Link>
       </div>
     </div>
