@@ -72,12 +72,9 @@ export const metadata: Metadata = {
 
 export const revalidate = 3600;
 
-// Suspense ke liye loading state
-// Blank screen se better user experience deta hai
 function HomeLoading() {
   return (
     <div className="min-h-screen">
-      {/* Hero Skeleton */}
       <div className="relative h-[500px] bg-gradient-to-r from-green-800 to-green-600">
         <div className="container-site h-full flex items-center">
           <div className="max-w-2xl">
@@ -88,8 +85,6 @@ function HomeLoading() {
           </div>
         </div>
       </div>
-      
-      {/* Content Skeletons */}
       <div className="container-site py-12">
         <div className="grid md:grid-cols-3 gap-6">
           {[1, 2, 3].map((i) => (
@@ -104,20 +99,17 @@ function HomeLoading() {
 export default function HomePage() {
   return (
     <>
-      {/* Hero image preload — LCP improvement ke liye */}
+      {/* ✅ FIX #1: fetchPriority="high" added — CRITICAL for LCP */}
       <link
         rel="preload"
         as="image"
         href="/hero-kisan-field.webp"
         type="image/webp"
+        fetchPriority="high"
       />
-      
-      {/* Critical fonts preload */}
-      <link
-        rel="preload"
-        as="style"
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-      />
+
+      {/* ✅ FIX #2: Removed duplicate font preload — layout.tsx already handles this via next/font with preload:true */}
+      {/* Duplicate preload causes double network request = slower FCP */}
 
       {/* Homepage structured data */}
       <script
@@ -151,7 +143,6 @@ export default function HomePage() {
         }}
       />
 
-      {/* Suspense wrapper — better loading experience */}
       <Suspense fallback={<HomeLoading />}>
         <HomeContent />
       </Suspense>
