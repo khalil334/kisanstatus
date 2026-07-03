@@ -1,185 +1,9 @@
-'use client';
-
-import { useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import FAQSection from '@/components/FAQSection';
-
-// Key statistics — updated for 2026
-const STATS = {
-  registeredCultivators: '11 Cr+',
-  receivedTranche: '9.44 Cr+',
-  annualBenefit: '₹6,000',
-  perTranche: '₹2,000',
-  currentTranche: '23',
-  nextTranche: '24',
-  currentTrancheDate: '20 June 2026',
-  nextTrancheDate: 'October 2026',
-  totalArticles: '26+',
-};
-
-// Featured articles — varied keywords for SEO
-const TOP_ARTICLES = [
-  {
-    slug: 'pm-kisan-self-registered-status-check',
-    title: 'Self-Enrolled Status Verification 2026',
-    emoji: '📋',
-    image: '/images/pm-kisan-self-registered-status/pm-kisan-portal-homepage.webp',
-    desc: 'Self enrollment ka status kaise verify karein — step-by-step guide',
-    category: 'Verification',
-  },
-  {
-    slug: 'soil-health-card-complete-guide-2026',
-    title: 'Soil Analysis Card Complete Guide 2026',
-    emoji: '🌱',
-    image: '/images/soil-health-card-complete-guide-2026.webp',
-    desc: 'Mitti analysis card download, status check, PDF download — complete guide',
-    category: 'Farming',
-  },
-  {
-    slug: 'pm-kisan-complete-guide',
-    title: 'Agrarian Welfare Complete Guide 2026',
-    emoji: '📖',
-    image: '/images/pm-kisan-status-check-hero.webp',
-    desc: 'Saari problems ka solution — status verification, digital verification, payment, rejection',
-    category: 'Guide',
-  },
-];
-
-// Category color mapping
-const CAT_COLORS: Record<string, string> = {
-  Verification: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300',
-  Farming: 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300',
-  Guide: 'bg-rose-100 text-rose-700 dark:bg-rose-900/30 dark:text-rose-300',
-};
-
-// Ticker items — live updates with varied keywords
-const TICKER_ITEMS = [
-  `🔴 LIVE: Agrarian Welfare ${STATS.currentTranche}वीं किस्त — ${STATS.currentTrancheDate} को ${STATS.perTranche} रिलीज़ हो चुकी है`,
-  `⏳ ${STATS.nextTranche}वीं किस्त Expected: ${STATS.nextTrancheDate} — Digital verification अभी complete करो`,
-  '🔐 Digital Verification अनिवार्य: बिना verification किस्त NAHI मिलेगी — official portal पर करो',
-  '📞 Support Line: 155261 | Toll Free: 1800-115-526',
-  `✅ ${STATS.registeredCultivators} registered cultivators — ${STATS.receivedTranche} को ${STATS.currentTranche}वीं किस्त मिल चुकी है`,
-];
-
-// FAQ section — common questions with varied terminology
-const FAQS = [
-  {
-    q: 'Agrarian welfare की 23वीं किस्त कब आई?',
-    a: `23वीं किस्त ${STATS.currentTrancheDate} को रिलीज़ हो चुकी है — ${STATS.registeredCultivators} registered cultivators में से ${STATS.receivedTranche} cultivators को ${STATS.perTranche} DBT से मिले हैं। अगर अभी तक पैसा नहीं आया तो digital verification और bank में biometric credential seeding ज़रूर check करें।`,
-  },
-  {
-    q: 'Digital verification नहीं हुई तो क्या पैसा आएगा?',
-    a: 'नहीं — बिना digital verification के कोई भी किस्त नहीं आती। Verification free है: official portal → Verification → Biometric credential number → OTP verify। या नज़दीकी CSC center जाएं — बिल्कुल मुफ्त।',
-  },
-  {
-    q: 'Status में "Land Integration No" दिखाए तो क्या करें?',
-    a: 'इसका मतलब आपकी ज़मीन official portal से link नहीं हुई। Fix: पटवारी/लेखपाल से मिलें, Khasra-Khatauni अपडेट करवाएं, Block Agriculture Officer को application दें। 15-30 दिन में status verify करें।',
-  },
-];
-
-// FAQ structured data for SEO
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: FAQS.map(f => ({
-    '@type': 'Question',
-    name: f.q,
-    acceptedAnswer: { '@type': 'Answer', text: f.a },
-  })),
-};
-
-// Article list structured data
-const articleListSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'ItemList',
-  name: 'Agrarian Welfare Latest Guides 2026',
-  url: 'https://kisanstatus.com',
-  numberOfItems: TOP_ARTICLES.length,
-  itemListElement: TOP_ARTICLES.map((a, i) => ({
-    '@type': 'ListItem',
-    position: i + 1,
-    url: `https://kisanstatus.com/articles/${a.slug}`,
-    name: a.title,
-    description: a.desc,
-  })),
-};
-
-// Article image component with fallback
-function ArticleImage({ src, alt, emoji }: { src: string; alt: string; emoji: string }) {
-  const [error, setError] = useState(false);
-  const [loaded, setLoaded] = useState(false);
-
-  return (
-    <div className="relative h-44 w-full overflow-hidden bg-gradient-to-br from-green-100 to-emerald-50 dark:from-green-900/30 dark:to-emerald-900/20 shrink-0">
-      {!error ? (
-        <>
-          {!loaded && <div className="absolute inset-0 bg-[var(--color-border)] animate-pulse z-10" />}
-          <Image
-            src={src}
-            alt={alt}
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            quality={75}
-            loading="lazy"
-            className={`object-cover group-hover:scale-105 transition-transform duration-500 ${loaded ? 'opacity-100' : 'opacity-0'}`}
-            onLoad={() => setLoaded(true)}
-            onError={() => setError(true)}
-          />
-        </>
-      ) : (
-        <div className="h-full w-full flex items-center justify-center bg-gradient-to-br from-green-50 to-emerald-100 dark:from-green-900/20 dark:to-emerald-900/10">
-          <span className="text-5xl" role="img" aria-label={alt}>{emoji}</span>
-        </div>
-      )}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-10 pointer-events-none" />
-      <span className="absolute top-3 left-3 bg-amber-400 text-gray-900 text-[10px] font-black px-2.5 py-1 rounded-full shadow-md z-20">NEW</span>
-      <span className="absolute bottom-3 left-3 text-2xl drop-shadow-lg z-20" role="img" aria-hidden="true">{emoji}</span>
-    </div>
-  );
-}
-
-// Hero background image with fallback — LCP optimization
-function HeroImage() {
-  const [error, setError] = useState(false);
-
-  if (error) {
-    return <div className="absolute inset-0 bg-gradient-to-br from-green-800 to-emerald-600 z-0" />;
-  }
-
-  return (
-    <div className="absolute inset-0 z-0">
-      <Image
-        src="/hero-kisan-field.webp"
-        alt="Agrarian welfare beneficiaries in green field - Bharat ki cultivator shakti"
-        fill
-        sizes="100vw"
-        priority={true}
-        fetchPriority="high"
-        quality={80}
-        className="object-cover opacity-20"
-        onError={() => setError(true)}
-      />
-    </div>
-  );
-}
-
 export default function HomeContent() {
   return (
     <div className="page-transition">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleListSchema) }} />
 
-      {/* Ticker — live updates */}
-      <div className="bg-red-600 text-white py-2 px-4" role="banner" aria-label="Latest updates">
-        <div className="container-site flex flex-wrap items-center justify-center gap-x-6 gap-y-1 text-xs font-medium">
-          {TICKER_ITEMS.slice(0, 3).map((item, i) => (
-            <span key={i} className="flex items-center gap-1">{item}</span>
-          ))}
-        </div>
-      </div>
-
-      {/* Hero section — main CTA */}
+      {/* ✅ MOVED: Ticker AFTER hero for LCP */}
+      {/* Hero section FIRST — LCP element gets priority */}
       <section
         className="relative overflow-hidden bg-green-warm-gradient dark:from-green-950 dark:via-green-900 dark:to-emerald-950"
         aria-label="Hero section - Agrarian Welfare Verification"
@@ -188,19 +12,19 @@ export default function HomeContent() {
         <div className="absolute -top-24 -left-20 w-96 h-96 rounded-full bg-emerald-400/20 blur-[100px] pointer-events-none" aria-hidden="true" />
         <div className="absolute top-1/3 -right-10 w-80 h-80 rounded-full bg-amber-400/15 blur-[100px] pointer-events-none" aria-hidden="true" />
 
-        <div className="container-site relative z-10 max-w-3xl px-4 py-14 md:py-20">
-          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-green-100 text-xs font-bold px-4 py-2 rounded-full mb-5 uppercase tracking-wider backdrop-blur-sm">
+        <div className="container-site relative z-10 max-w-3xl px-4 py-10 md:py-16">
+          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-green-100 text-xs font-bold px-4 py-2 rounded-full mb-4 uppercase tracking-wider backdrop-blur-sm">
             🌾 India Ka #1 Agrarian Welfare Information Portal
           </div>
 
-          <h1 className="font-black text-white leading-[1.15] mb-4 tracking-tight drop-shadow-lg">
+          <h1 className="font-black text-white leading-[1.15] mb-3 tracking-tight drop-shadow-lg">
             <span className="text-3xl md:text-5xl block">किसान लाभ वेरिफिकेशन —</span>
             <span className="text-2xl md:text-4xl block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-yellow-100 via-amber-200 to-yellow-300">
               कृषि कल्याण {STATS.currentTranche}वीं किस्त 2026
             </span>
           </h1>
 
-          <h2 className="text-base md:text-lg text-green-50 mb-6 max-w-xl leading-relaxed font-normal drop-shadow-md">
+          <h2 className="text-base md:text-lg text-green-50 mb-5 max-w-xl leading-relaxed font-normal drop-shadow-md">
             Kisan bhai — <strong className="text-white">{STATS.currentTranche}वीं किस्त {STATS.currentTrancheDate} को रिलीज़ हो चुकी है!</strong> अपना status अभी verify करो, digital verification complete करो, पैसा आया या नहीं देखो। <span className="text-yellow-200 font-semibold">सब फ्री — 10 मिनट में।</span>
           </h2>
 
@@ -221,13 +45,26 @@ export default function HomeContent() {
             </Link>
           </div>
 
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-8 text-[11px] text-green-100 drop-shadow-md">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-6 text-[11px] text-green-100 drop-shadow-md">
             {['✅ 100% Free', '🔒 कोई Data Store नहीं', '🏛️ Official Portal Verified', '📞 Support Line: 155261'].map(t => (
               <span key={t}>{t}</span>
             ))}
           </div>
         </div>
       </section>
+
+      {/* ✅ MOVED BELOW HERO: Structured data scripts (non-render-blocking) */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleListSchema) }} />
+
+      {/* ✅ TICKER NOW BELOW HERO — doesn't push LCP element */}
+      <div className="bg-red-600 text-white py-1.5 px-4" role="banner" aria-label="Latest updates">
+        <div className="container-site flex flex-wrap items-center justify-center gap-x-6 gap-y-1 text-[11px] font-medium">
+          {TICKER_ITEMS.slice(0, 3).map((item, i) => (
+            <span key={i} className="flex items-center gap-1">{item}</span>
+          ))}
+        </div>
+      </div>
 
       {/* Common problems — quick solutions */}
       <section className="py-12 bg-[var(--color-card)]" aria-labelledby="problems-heading">
