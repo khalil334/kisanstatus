@@ -5,12 +5,28 @@
 'use client';
 
 import Link from 'next/link';
-// useState remove kar diya — is file mein koi state manage nahi ho raha (AI artifact fix)
 
-// Standard text/number input. Focus ring green rakhi hai theme ke hisaab se.
-export function InputField({ label, value, onChange, type = 'number', min, placeholder, hint, id }: {
-  label: string; value: string | number; onChange: (v: string) => void;
-  type?: string; min?: number; placeholder?: string; hint?: string; id?: string;
+// Standard text/number input with optional suffix. Focus ring green rakhi hai theme ke hisaab se.
+export function InputField({ 
+  label, 
+  value, 
+  onChange, 
+  type = 'number', 
+  min, 
+  placeholder, 
+  hint, 
+  id,
+  suffix  // ✅ Added suffix prop
+}: {
+  label: string; 
+  value: string | number; 
+  onChange: (v: string) => void;
+  type?: string; 
+  min?: number; 
+  placeholder?: string; 
+  hint?: string; 
+  id?: string;
+  suffix?: string;  // ✅ Added suffix type
 }) {
   // Accessibility fix: label aur input ko link kiya hai screen readers ke liye
   const inputId = id || label.toLowerCase().replace(/\s+/g, '-');
@@ -18,15 +34,22 @@ export function InputField({ label, value, onChange, type = 'number', min, place
   return (
     <div className="mb-4">
       <label htmlFor={inputId} className="block text-sm font-bold text-gray-700 mb-1">{label}</label>
-      <input
-        id={inputId}
-        type={type}
-        min={min}
-        value={value}
-        placeholder={placeholder}
-        onChange={e => onChange(e.target.value)}
-        className="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-400 bg-white transition-colors"
-      />
+      <div className="relative">  {/* ✅ Relative container for absolute suffix positioning */}
+        <input
+          id={inputId}
+          type={type}
+          min={min}
+          value={value}
+          placeholder={placeholder}
+          onChange={e => onChange(e.target.value)}
+          className="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-400 bg-white transition-colors pr-12"  // ✅ pr-12 for suffix spacing
+        />
+        {suffix && (  // ✅ Conditional suffix display
+          <span className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-gray-400 font-medium">
+            {suffix}
+          </span>
+        )}
+      </div>
       {hint && <p className="text-xs text-gray-400 mt-1">{hint}</p>}
     </div>
   );
