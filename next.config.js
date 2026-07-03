@@ -15,7 +15,17 @@ const nextConfig = {
   // URL redirects — old paths to new canonical URLs
   async redirects() {
     return [
-      // Calculator path corrections
+      // ── Domain canonicalization (HTTP → HTTPS + WWW removal) ──
+      {
+        source: '/:path*',
+        has: [
+          { type: 'host', value: 'www.kisanstatus.com' },
+        ],
+        destination: 'https://kisanstatus.com/:path*',
+        permanent: true,
+      },
+
+      // ── Calculator path corrections ──
       {
         source: '/calculator/farming-profit',
         destination: '/calculator/crop-profit',
@@ -26,10 +36,20 @@ const nextConfig = {
         destination: '/calculator/kcc-loan-emi',
         permanent: true,
       },
+      {
+        source: '/calculator/quick-status-check',
+        destination: '/calculator/installment-tracker',
+        permanent: true,
+      },
 
-      // Article path corrections
+      // ── Article path corrections (root level → /articles/) ──
       {
         source: '/pm-kisan-24vi-kist',
+        destination: '/articles/pm-kisan-24vi-kist',
+        permanent: true,
+      },
+      {
+        source: '/pm-kisan-24vi-kist-2026',
         destination: '/articles/pm-kisan-24vi-kist',
         permanent: true,
       },
@@ -44,7 +64,46 @@ const nextConfig = {
         permanent: true,
       },
 
-      // Beneficiary list slug corrections
+      // ── Article slug corrections (-2026 suffix removal) ──
+      {
+        source: '/articles/pm-kisan-24vi-kist-2026',
+        destination: '/articles/pm-kisan-24vi-kist',
+        permanent: true,
+      },
+      {
+        source: '/articles/agri-stack-kya-hai-2026',
+        destination: '/articles/agristack-kya-hai',
+        permanent: true,
+      },
+      {
+        source: '/articles/pm-kisan-mobile-number-change-2026',
+        destination: '/articles/pm-kisan-mobile-number-change',
+        permanent: true,
+      },
+      {
+        source: '/articles/pm-kisan-kyc-csc',
+        destination: '/articles/pm-kisan-ekyc-online-2026',
+        permanent: true,
+      },
+
+      // ── Root level article redirects ──
+      {
+        source: '/agristack-kya-hai',
+        destination: '/articles/agristack-kya-hai',
+        permanent: true,
+      },
+      {
+        source: '/kisan-rin-kaha-se-le-2026',
+        destination: '/articles/kisan-rin-kaha-se-le-2026',
+        permanent: true,
+      },
+      {
+        source: '/pm-kisan-beneficiary-list',
+        destination: '/articles/pm-kisan-beneficiary-list-2026',
+        permanent: true,
+      },
+
+      // ── Beneficiary list slug corrections ──
       {
         source: '/beneficiary-list/daman-diu',
         destination: '/beneficiary-list/dadra-nagar-haveli',
@@ -53,13 +112,6 @@ const nextConfig = {
       {
         source: '/beneficiary-list/jammu-and-kashmir',
         destination: '/beneficiary-list/jammu-kashmir',
-        permanent: true,
-      },
-
-      // Article slug correction
-      {
-        source: '/agristack-kya-hai',
-        destination: '/articles/agristack-kya-hai',
         permanent: true,
       },
     ];
