@@ -1,280 +1,245 @@
 'use client';
-import Link from 'next/link';
 
-export default function PmfbyCropInsurance2026() {
+import Link from 'next/link';
+import Image from 'next/image';
+import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
+import type { ArticleMeta } from '@/lib/articles-data';
+
+const PUBLISHED = '2026-04-20T08:00:00+05:30';
+const MODIFIED = '2026-07-04T08:00:00+05:30';
+
+const RELATED = [
+  { slug: 'kisan-credit-card-online-apply-2026', title: 'KCC Credit Card Guide', emoji: '💳' },
+  { slug: 'pm-kisan-23vi-kist-2026-status-check', title: '23vi Installment Status', emoji: '📅' },
+  { slug: 'kisan-tractor-loan-2026', title: 'Tractor Loan Guide', emoji: '🚜' },
+  { slug: 'pm-kisan-mobile-number-change', title: 'Mobile/Bank Update', emoji: '📱' },
+  { slug: 'nano-dap-500ml-price-in-india-2026', title: 'Nano DAP Price Guide', emoji: '🌱' },
+  { slug: 'soil-health-card-complete-guide-2026', title: 'Soil Health Card', emoji: '🧪' },
+];
+
+const FAQS_DATA = [
+  { q: 'PMFBY helpline number kya hai?', a: 'Toll-Free: 1800-200-7710 (24×7). Application notification, status inquiry, koi bhi query ke liye call karo. Policy number paas rakho.' },
+  { q: 'Bank ne enroll nahi ki aur fasal kharab ho gayi?', a: 'Agar premium account se kata tha lekin bank ne enroll nahi kiya toh bank zimmedaar hai. Banking Ombudsman ya agriculture department mein complaint karo.' },
+  { q: 'Partial loss par bhi indemnity milta hai?', a: 'Haan. 25%+ loss par proportional indemnity. 70% loss = 70% amount. Surveyor report decisive hoti hai.' },
+  { q: 'Ek khet mein do fasal — dono cover hogi?', a: 'Ek application = ek fasal. Alag faslon ke liye alag enrollment. Mixed cropping rules state-wise alag — state portal check karo.' },
+  { q: 'Application reject ho gayi — ab kya?', a: 'Rejection letter mein reason padho. Fix karo. Appeal karo — insurance grievance cell → state agriculture dept → portal grievance.' },
+  { q: 'Kya koi bhi crop cover hoti hai?', a: 'Nahi. Sirf government-notified crops. Har state har season mein list jaari karta hai. Block Agriculture Office se confirm karo.' },
+  { q: 'Premium kat gaya lekin policy nahi mili?', a: 'Bank se written confirmation maango. Premium kata = auto-enrolled. Policy document + receipt bank se lo — legal right hai.' },
+];
+
+export default function PmfbyCropInsurance2026({ article }: { article: ArticleMeta }) {
   return (
-    <main className="min-h-screen bg-white">
-      <article className="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
-        <div className="my-6 rounded-2xl overflow-hidden border border-green-100 shadow-md">
-          <img 
-            src="/images/articles/pmfby-crop-insurance-2026/hero-image.webp" 
-            alt="Agricultural Risk Protection Protocol 2026 — Fasal Kharab Ho To Financial Relief Kaise Paayein" 
+    <>
+      {/* Header */}
+      <div className="bg-[var(--color-primary)] py-8">
+        <div className="container-site max-w-3xl">
+          <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
+            <Link href="/" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Home</Link>
+            <span>/</span>
+            <Link href="/articles" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Articles</Link>
+            <span>/</span>
+            <span className="text-white font-bold">Crop Insurance Guide</span>
+          </nav>
+          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Fasal Bima Yojana</span>
+          <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
+            PMFBY Crop Insurance 2026: Enrollment, Claim Process, Status Check + ₹1,000 Premium Se ₹35,000 Kaise Mile
+          </h1>
+          <div className="flex flex-wrap gap-3 text-xs text-green-200">
+            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
+            <span>📅 {fmtDate(PUBLISHED)}</span>
+            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
+            <span>⏱️ 12 min read</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="container-site max-w-3xl py-8">
+
+        {/* Hero Image #1 — PRESERVED */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src={article.ogImage || '/images/articles/pmfby-crop-insurance-2026/hero-image.webp'}
+            alt="PMFBY crop insurance 2026 — fasal kharab hone par financial relief claim process"
+            width={1200}
+            height={630}
             className="w-full object-cover"
             style={{ maxHeight: '420px', objectPosition: 'center' }}
-            loading="eager" 
-            width="1200" 
-            height="630"
+            priority
+            sizes="(max-width: 768px) 100vw, 768px"
           />
-          <p className="text-center text-xs text-gray-500 py-2 bg-green-50 border-t border-green-100">
-            Yield Protection Mechanism 2026 — Nuksan Hone Par Sarkari Sahayata
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            Fasal Kharab Ho Toh Sarkari Sahayata Kaise Paayein
           </p>
         </div>
 
-        {/* ── H1 ── */}
-        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-green-800 leading-tight mb-3">
-          Agricultural Risk Protection 2026 – Indemnity Status Check Aur Enrollment Process Complete Guide
-        </h1>
-        <p className="text-gray-500 text-sm mb-6">
-          Last Updated: July 2026 &nbsp;|&nbsp; Reading Time: ~10 min &nbsp;|&nbsp; Author: KisanStatus Team
-        </p>
-
-        {/* ── PROBLEM-BASED INTRO ── */}
-        <div className="bg-green-50 border-l-4 border-green-600 rounded-r-xl p-5 mb-8">
-          <p className="text-gray-800 leading-relaxed mb-3">
-            Bahut se kisaan badi umeed ke saath apne khet mein fasal lagate hain. Monsoon accha hota hai, khaad bhi sahi hoti hai, aur poori ummid hoti hai ki is baar ki fasal se ghar ka saara hisaab theek ho jaayega.
+        {/* Emotional Hook */}
+        <div className="my-6 p-5 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 border-l-[6px] rounded-xl">
+          <p className="text-sm text-green-900 dark:text-green-200 leading-relaxed mb-2">
+            Badi umeed se fasal lagayi. Monsoon accha, khaad sahi. Phir aandhi ya ati-varsha ne sab palat diya. Mehnat, paisa — sab paani mein.
           </p>
-          <p className="text-gray-800 leading-relaxed mb-3">
-            Lekin kabhi kabhi kudrati aafat sab palat deti hai. Aandhi, ati-varsha, sukhha — khet mein paani bhar jaata hai, fasal toot jaati hai, kaafi hissa kharab ho jaata hai. Mehnat, paisa — sab paani mein.
-          </p>
-          <p className="text-gray-800 leading-relaxed">
-            Aise waqt mein <strong>agricultural risk protection protocol</strong> kaam aata hai. Kai kisaan ko pata hi nahi hota ki application kaise hoti hai, kahan jaana hai, kya document chahiye. Is article mein wahi poori process hai — jis se kai farmers ne successfully <strong>crop loss indemnity</strong> paaya hai.
+          <p className="text-sm text-green-900 dark:text-green-200 leading-relaxed">
+            Aise waqt mein <strong>PMFBY (Pradhan Mantri Fasal Bima Yojana)</strong> kaam aati hai. Kai kisan ko pata hi nahi hota ki claim kaise hota hai. Is guide mein wahi poori process hai — jis se kai farmers ne successfully indemnity paaya hai.
           </p>
         </div>
 
-        {/* ── IMAGE 1 ── */}
-        <figure className="my-8 rounded-xl overflow-hidden shadow-lg">
-          <img 
-            src="/images/articles/pmfby-crop-insurance-2026/infographic.webp" 
-            alt="Yield Protection Protocol – Key Features 2026" 
-            className="w-full h-44 sm:h-60 object-cover" 
+        {/* Infographic Image #2 — PRESERVED */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/articles/pmfby-crop-insurance-2026/infographic.webp"
+            alt="PMFBY key features infographic 2026 — premium rates, coverage, enrollment methods"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
           />
-          <figcaption className="bg-green-700 text-white text-xs sm:text-sm text-center py-2 px-4">
-            Agricultural Risk Protection Key Features – Ek Nazar Mein
-          </figcaption>
-        </figure>
-
-        {/* ── SECTION 1: PMFBY KYA HAI ── */}
-        <section className="mb-10">
-          <h2 className="text-xl sm:text-2xl font-bold text-green-700 border-b-2 border-green-200 pb-2 mb-4">
-            1. Yield Protection Protocol Kya Hai? – Calamity Relief Mechanism Ki Poori Jaankari
-          </h2>
-          <p className="text-gray-700 leading-relaxed mb-3">
-            <strong>Pradhan Mantri Fasal Bima Yojana (PMFBY)</strong> bharat sarkar ka flagship yield protection program hai jo 2016 mein shuru hua tha. Iska main maqsad hai — agar kisaan ki fasal kudrati aafat, keedo-makodo ya bimari ki wajah se kharab ho jaaye, toh use aarthik sahara mila sake.
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            PMFBY Key Features — Ek Nazar Mein
           </p>
-          <p className="text-gray-700 leading-relaxed mb-3">
-            Simple baat hai. Agar yeh mechanism nahi hota toh barish se hua nuksan kisaan ko khud bharna padta. Yeh program hone ki wajah se government zyaadatar nuksan cover karti hai.
-          </p>
+        </div>
 
-          <h3 className="text-lg font-semibold text-green-600 mb-3">Key Features – Ek Nazar Mein:</h3>
-          <div className="grid sm:grid-cols-2 gap-3 mb-5">
+        {/* What Is PMFBY */}
+        <section className="mb-8">
+          <SH>PMFBY Kya Hai?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            2016 mein shuru hua flagship yield protection program. Agar fasal kudrati aafat, keedo ya bimari se kharab ho jaaye toh aarthik sahara milta hai. Simple baat — yeh na hota toh nuksan kisan khud bharta.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
             {[
-              { icon: "🌾", title: "Kharif Crops", desc: "Dhaan, maize, bajra, soyabean – Premium: 2% of sum insured" },
-              { icon: "🌿", title: "Rabi Crops", desc: "Gehun, sarson, chana – Premium: 1.5% of sum insured" },
-              { icon: "🍎", title: "Commercial / Horticulture", desc: "Fruits, vegetables – Premium: 5% of sum insured" },
-              { icon: "💧", title: "Coverage", desc: "Baarish, sukhha, baadh, aandhi, keede, post-harvest losses" },
-              { icon: "📱", title: "Online + Offline", desc: "Bank, CSC center ya pmfby.gov.in se registration" },
-              { icon: "💰", title: "Direct Payment", desc: "Indemnity seedha bank account mein DBT se" },
-            ].map((item, i) => (
-              <div key={i} className="flex gap-3 bg-green-50 border border-green-200 rounded-lg p-3">
-                <span className="text-2xl flex-shrink-0">{item.icon}</span>
+              { icon: '🌾', title: 'Kharif Crops', desc: 'Dhaan, maize, bajra, soyabean — Premium: 2%' },
+              { icon: '🌿', title: 'Rabi Crops', desc: 'Gehun, sarson, chana — Premium: 1.5%' },
+              { icon: '🍎', title: 'Horticulture', desc: 'Fruits, vegetables — Premium: 5%' },
+              { icon: '💧', title: 'Coverage', desc: 'Baarish, sukhha, baadh, aandhi, keede, post-harvest' },
+              { icon: '📱', title: 'Online + Offline', desc: 'Bank, CSC ya pmfby.gov.in se registration' },
+              { icon: '💰', title: 'Direct Payment', desc: 'Indemnity seedha bank account mein DBT se' },
+            ].map(({ icon, title, desc }) => (
+              <div key={title} className="flex gap-3 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-3">
+                <span className="text-2xl shrink-0">{icon}</span>
                 <div>
-                  <p className="font-semibold text-gray-800 text-sm">{item.title}</p>
-                  <p className="text-gray-600 text-xs mt-0.5">{item.desc}</p>
+                  <p className="font-semibold text-[var(--color-text)] text-sm">{title}</p>
+                  <p className="text-[var(--color-text-muted)] text-xs mt-0.5">{desc}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse text-sm">
+          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
+            <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="bg-green-700 text-white">
-                  <th className="border border-green-600 px-3 py-2 text-left">Fasal Type</th>
-                  <th className="border border-green-600 px-3 py-2">Kisan Premium</th>
-                  <th className="border border-green-600 px-3 py-2">Govt Share</th>
-                  <th className="border border-green-600 px-3 py-2">Max Coverage</th>
+                <tr className="bg-[var(--color-primary)] text-white">
+                  <th className="p-3 text-left">Fasal Type</th>
+                  <th className="p-3 text-center">Kisan Premium</th>
+                  <th className="p-3 text-center">Govt Share</th>
                 </tr>
               </thead>
               <tbody>
                 {[
-                  ["Kharif (Dhaan, Soyabean etc.)", "2%", "98%", "Fasal ki full value"],
-                  ["Rabi (Gehun, Chana etc.)", "1.5%", "98.5%", "Fasal ki full value"],
-                  ["Horticulture / Commercial", "5%", "95%", "Fasal ki full value"],
-                  ["Pradhan Mantri Krishi Sinchayi", "2%", "98%", "Limited coverage"],
-                ].map((row, i) => (
-                  <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-green-50"}>
-                    <td className="border border-gray-200 px-3 py-2 font-medium">{row[0]}</td>
-                    {row.slice(1).map((cell, j) => (
-                      <td key={j} className="border border-gray-200 px-3 py-2 text-center">{cell}</td>
-                    ))}
+                  ['Kharif (Dhaan, Soyabean)', '2%', '98%'],
+                  ['Rabi (Gehun, Chana)', '1.5%', '98.5%'],
+                  ['Horticulture / Commercial', '5%', '95%'],
+                ].map(([type, prem, govt], i) => (
+                  <tr key={type} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-green-50/40 dark:bg-green-900/10'}>
+                    <td className="p-3 border-b border-[var(--color-border)] font-medium text-[var(--color-text)]">{type}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-center text-green-700 dark:text-green-400 font-bold">{prem}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-center text-[var(--color-text-muted)]">{govt}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <p className="text-xs text-gray-400 mt-2">* Kisan premium bahut kam hota hai – baki sab government bharta hai.</p>
+          <p className="text-xs text-[var(--color-text-muted)]">* Premium bahut kam — baaki sab government bharta hai.</p>
         </section>
 
-        {/* ── SECTION 2: REGISTRATION ── */}
-        <section className="mb-10">
-          <h2 className="text-xl sm:text-2xl font-bold text-green-700 border-b-2 border-green-200 pb-2 mb-4">
-            2. Enrollment Process — Eligibility Aur Tarike
-          </h2>
-
-          <h3 className="text-lg font-semibold text-green-600 mb-3">Eligibility Criteria:</h3>
-          <ul className="space-y-2 mb-5">
-            {[
-              ["Kaun apply kar sakta hai?", "Sabhi farmers – owner, tenant, sharecropper – jo notified fasal ugaate hain"],
-              ["Land requirement?", "Khasra/Khatauni ya lease agreement hona chahiye – apni ya kiraaye ki zameen"],
-              ["KCC Wale Kisan", "Agar aapne bank se Kisan Credit Card ya crop loan liya hai, automatic enroll hoti hai"],
-              ["Voluntary Enrollment", "Bina loan ke bhi koi bhi kisan voluntary basis par le sakta hai"],
-              ["Registration Deadline", "Kharif ke liye July 31 tak, Rabi ke liye December 31 tak (state wise thoda alag)"],
-            ].map(([label, desc], i) => (
-              <li key={i} className="flex gap-3 items-start bg-gray-50 rounded-lg p-3">
-                <span className="text-green-600 font-bold text-sm flex-shrink-0 min-w-[140px]">{label}</span>
-                <span className="text-gray-700 text-sm">{desc}</span>
-              </li>
-            ))}
-          </ul>
-
-          <h3 className="text-lg font-semibold text-green-600 mb-3">Enrollment Ke 3 Tarike:</h3>
-          <div className="grid sm:grid-cols-3 gap-4 mb-5">
-            {[
-              { method: "Bank Branch", icon: "🏦", desc: "Jo bank mein crop loan/KCC hai wahan jaayein. Woh khud enroll kar denge. Auto-debit se premium kat jaata hai.", tag: "Easiest" },
-              { method: "CSC Center", icon: "🖥️", desc: "Nearest Jan Seva Kendra (CSC) par jaayein. Documents de dein, operator online registration kar dega.", tag: "Offline" },
-              { method: "pmfby.gov.in", icon: "🌐", desc: "Portal par khud login karein. Aadhaar OTP se verify karein. Fasal aur land details fill karein.", tag: "Online" },
-            ].map((item, i) => (
-              <div key={i} className="border-2 border-green-200 rounded-xl p-4 bg-green-50 text-center">
-                <span className="text-3xl">{item.icon}</span>
-                <p className="font-bold text-green-800 mt-2 text-sm">{item.method}</p>
-                <span className="inline-block mt-1 px-2 py-0.5 bg-green-600 text-white text-xs rounded-full">{item.tag}</span>
-                <p className="text-gray-600 text-xs mt-2">{item.desc}</p>
-              </div>
-            ))}
+        {/* Enrollment */}
+        <section className="mb-8">
+          <SH>Enrollment Process — 3 Tarike</SH>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
+            <div className="p-4 bg-green-50 dark:bg-green-900/20 border-2 border-green-300 dark:border-green-700 rounded-xl text-center">
+              <span className="text-3xl block mb-2">🏦</span>
+              <p className="font-black text-green-800 dark:text-green-300 text-sm">Bank Branch</p>
+              <span className="inline-block mt-1 px-2 py-0.5 bg-green-600 text-white text-[10px] rounded-full font-bold">Easiest</span>
+              <p className="text-xs text-[var(--color-text-muted)] mt-2">KCC/crop loan hai toh auto-enroll. Premium auto-debit.</p>
+            </div>
+            <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-300 dark:border-blue-700 rounded-xl text-center">
+              <span className="text-3xl block mb-2">🖥️</span>
+              <p className="font-black text-blue-800 dark:text-blue-300 text-sm">CSC Center</p>
+              <span className="inline-block mt-1 px-2 py-0.5 bg-blue-600 text-white text-[10px] rounded-full font-bold">Offline</span>
+              <p className="text-xs text-[var(--color-text-muted)] mt-2">Documents de do, operator online registration karega.</p>
+            </div>
+            <div className="p-4 bg-purple-50 dark:bg-purple-900/20 border-2 border-purple-300 dark:border-purple-700 rounded-xl text-center">
+              <span className="text-3xl block mb-2">🌐</span>
+              <p className="font-black text-purple-800 dark:text-purple-300 text-sm">pmfby.gov.in</p>
+              <span className="inline-block mt-1 px-2 py-0.5 bg-purple-600 text-white text-[10px] rounded-full font-bold">Online</span>
+              <p className="text-xs text-[var(--color-text-muted)] mt-2">Aadhaar OTP verify → fasal + land details fill karo.</p>
+            </div>
           </div>
-
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-            <p className="text-blue-800 text-sm">
-              <strong>💡 Important:</strong> Agar aapka KCC ya crop loan hai toh almost certainly aap already enrolled hain. Bank se confirm karein — kai baar farmers ko pata hi nahi hota ki unka enrollment ho chuka hai.
-            </p>
-          </div>
+          <IB>
+            <strong>Important:</strong> KCC ya crop loan hai toh almost certainly already enrolled ho. Bank se confirm karo — kai farmers ko pata hi nahi hota. Deadline: Kharif July 31, Rabi Dec 31 (state-wise vary).
+          </IB>
         </section>
 
-        {/* ── SECTION 3: CLAIM PROCESS ── */}
-        <section className="mb-10">
-          <h2 className="text-xl sm:text-2xl font-bold text-green-700 border-b-2 border-green-200 pb-2 mb-4">
-            3. Crop Loss Indemnity Kaise File Kare? — Step-by-Step Guide
-          </h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Jab fasal kharab ho jaaye, toh yeh process follow karein:
-          </p>
-
-          <div className="space-y-3 mb-6">
-            {[
-              { step: "Step 1", title: "72 Ghante Mein Soochna Dein (CRITICAL)", desc: "Fasal nuksan hone ke 72 ghante ke andar insurance company ya bank ko soochna dena ZAROORI hai. Isse pehle nahi kiya toh application reject ho sakta hai." },
-              { step: "Step 2", title: "Crop Loss Helpline Pe Call Karein", desc: "PMFBY helpline: 1800-200-7710 (Toll Free). Apna policy number, Aadhaar, aur loss details batayein. Ek complaint/reference number milega – isse sambhal ke rakhein." },
-              { step: "Step 3", title: "Bank Ya Insurance Company Mein Jaayein", desc: "Jo bank se yeh scheme li hai wahan jaayein. Ya seedha insurance company ki nearest branch mein. Application form lein aur fill karein." },
-              { step: "Step 4", title: "Documents Submit Karein", desc: "Saare documents (neeche list di hai) bank/insurance office mein submit karein. Ek copy apne paas zaroor rakhein." },
-              { step: "Step 5", title: "Survey / Inspection", desc: "Insurance company ka surveyor aayega – woh field mein jaake fasal ka nuksan assess karega. Photos aur report banayi jaati hai." },
-              { step: "Step 6", title: "Assessment Report", desc: "Surveyor report ke baad insurance company assessment report taiyaar karti hai. Isme nuksan ka percentage aur indemnity amount hota hai." },
-              { step: "Step 7", title: "Approval Aur Payment", desc: "Approval hone ke baad indemnity seedha aapke bank account mein DBT se aata hai." },
-            ].map((item, i) => (
-              <div key={i} className="flex gap-4 items-start bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
-                <div className={`flex-shrink-0 w-14 h-14 rounded-full flex flex-col items-center justify-center text-xs font-bold text-center leading-tight text-white ${i === 0 ? "bg-red-600" : "bg-green-600"}`}>
-                  <span>{item.step.split(" ")[0]}</span>
-                  <span>{item.step.split(" ")[1]}</span>
-                </div>
-                <div>
-                  <p className="font-semibold text-gray-800 mb-1 text-sm">{item.title}</p>
-                  <p className="text-gray-600 text-sm">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="bg-red-50 border-2 border-red-200 rounded-lg p-4">
-            <p className="font-bold text-red-800 mb-1">🚨 72 Ghante Ka Rule – Sabse Important!</p>
-            <p className="text-red-700 text-sm">
-              Kai farmers fasal kharab hone par kuch din baad inform karte hain. Unki application reject ho jaati hai sirf isi ek wajah se. 72 ghante ki deadline miss mat karna – yeh ek unbreakable rule hai.
-            </p>
-          </div>
+        {/* Claim Process */}
+        <section className="mb-8">
+          <SH>Claim Kaise File Karein — 7 Steps</SH>
+          <StepList>
+            <SI n={1}><strong>72 Ghante Mein Soochna (CRITICAL):</strong> Nuksan ke 72h andar insurance company/bank ko inform karo. Miss kiya = reject</SI>
+            <SI n={2}><strong>Helpline Call:</strong> 1800-200-7710 → Policy number + Aadhaar + loss details batao → Reference number milega</SI>
+            <SI n={3}><strong>Bank/Insurance Office Jaao:</strong> Application form lo, fill karo</SI>
+            <SI n={4}><strong>Documents Submit:</strong> Saare documents jama karo. Ek copy apne paas rakho</SI>
+            <SI n={5}><strong>Survey/Inspection:</strong> Surveyor field mein aayega, photos lega, report banayega</SI>
+            <SI n={6}><strong>Assessment Report:</strong> Loss percentage + indemnity amount calculate hoga</SI>
+            <SI n={7}><strong>Payment:</strong> Approval ke baad DBT se seedha bank account mein</SI>
+          </StepList>
+          <DB>
+            <strong>72 Ghante Ka Rule = Unbreakable.</strong> Kai farmers kuch din baad inform karte hain — application reject. Fasal kharab hote hi TURANT call karo.
+          </DB>
         </section>
 
-        {/* ── IMAGE 2 ── */}
-        <figure className="my-8 rounded-xl overflow-hidden shadow-lg">
-          <img 
-            src="/images/articles/pmfby-crop-insurance-2026/status-check.webp" 
-            alt="Indemnity Status Check Online – pmfby.gov.in Portal" 
-            className="w-full h-44 sm:h-60 object-cover" 
+        {/* Status Check Image #3 — PRESERVED */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/articles/pmfby-crop-insurance-2026/status-check.webp"
+            alt="PMFBY indemnity status check online portal — pmfby.gov.in application tracking"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
           />
-          <figcaption className="bg-blue-800 text-white text-xs sm:text-sm text-center py-2 px-4">
-            PMFBY Portal – Indemnity Status Online Check Karein Ghar Baithe
-          </figcaption>
-        </figure>
-
-        {/* ── SECTION 4: STATUS CHECK ── */}
-        <section className="mb-10">
-          <h2 className="text-xl sm:text-2xl font-bold text-green-700 border-b-2 border-green-200 pb-2 mb-4">
-            4. Indemnity Status Online Check Kaise Karein?
-          </h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Portal par online status check karne se tension khatam hoti hai. Neeche dono methods hain – portal aur app:
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            PMFBY Portal Par Indemnity Status Online Check Karo
           </p>
+        </div>
 
-          <h3 className="text-lg font-semibold text-green-600 mb-3">Method 1: pmfby.gov.in Portal Se Status Check</h3>
-          <div className="space-y-2 mb-6">
-            {[
-              "Browser mein pmfby.gov.in open karein",
-              "Homepage par 'Application Status' ya 'Indemnity Status' tab dhundein",
-              "Apna Application/Policy Number enter karein",
-              "Aadhaar Number ya Mobile Number enter karein",
-              "Captcha fill karein aur 'Check Status' click karein",
-              "Aapka current status, payment status aur details dikhenge",
-            ].map((s, i) => (
-              <div key={i} className="flex gap-3 items-center">
-                <span className="flex-shrink-0 w-7 h-7 rounded-full bg-green-600 text-white text-xs font-bold flex items-center justify-center">{i + 1}</span>
-                <p className="text-gray-700 text-sm">{s}</p>
-              </div>
-            ))}
-          </div>
-
-          <h3 className="text-lg font-semibold text-green-600 mb-3">Method 2: Mobile App Se Status Check</h3>
-          <div className="bg-gray-50 rounded-lg p-4 mb-5">
-            <ul className="space-y-1 text-gray-700 text-sm">
-              <li>→ Play Store ya App Store mein <strong>"PMFBY"</strong> ya <strong>"Fasal Bima"</strong> search karein</li>
-              <li>→ Official GoI app download karein (Ministry of Agriculture)</li>
-              <li>→ Login karein – Aadhaar ya registered mobile number se</li>
-              <li>→ Dashboard mein <strong>'My Applications'</strong> section mein jaayein</li>
-              <li>→ Sabhi applications aur unka current status dikhai dega</li>
-            </ul>
-          </div>
-
-          <h3 className="text-lg font-semibold text-green-600 mb-3">Status Meanings – Kya Matlab Hai?</h3>
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse text-sm">
+        {/* Status Check */}
+        <section className="mb-8">
+          <SH>Status Online Kaise Check Karein</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            pmfby.gov.in → Application Status tab → Policy/Application Number + Aadhaar → Captcha → Check Status. Ya PMFBY mobile app download karo Play Store se.
+          </p>
+          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
+            <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="bg-green-700 text-white">
-                  <th className="border border-green-600 px-3 py-2">Status</th>
-                  <th className="border border-green-600 px-3 py-2">Matlab</th>
-                  <th className="border border-green-600 px-3 py-2">Aapko Kya Karna Hai</th>
+                <tr className="bg-[var(--color-primary)] text-white">
+                  <th className="p-3 text-left">Status</th>
+                  <th className="p-3 text-left">Matlab</th>
+                  <th className="p-3 text-left">Action</th>
                 </tr>
               </thead>
               <tbody>
                 {[
-                  ["Application Submitted", "Request receive ho gayi", "Wait karein – surveyor aayega"],
-                  ["Under Survey", "Field inspection chal rahi hai", "Surveyor ka cooperative ban ke sahayata karein"],
-                  ["Under Assessment", "Loss calculate ho raha hai", "Wait karein, 15-30 din lagte hain"],
-                  ["Approved", "Indemnity pass ho gaya", "Bank account check karein – 7-10 din mein aata hai"],
-                  ["Payment Processed", "DBT se paisa bhej diya", "Bank statement check karein"],
-                  ["Rejected", "Application reject hui", "Rejection reason padhein, appeal karein ya CSC jaayein"],
-                  ["On Hold", "Koi document ya info chahiye", "Bank ya insurance company se contact karein"],
-                ].map((row, i) => (
-                  <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-green-50"}>
-                    <td className="border border-gray-200 px-3 py-2">
-                      <span className={`px-2 py-0.5 rounded text-xs font-semibold ${row[0] === "Approved" || row[0] === "Payment Processed" ? "bg-green-100 text-green-700" : row[0] === "Rejected" ? "bg-red-100 text-red-700" : row[0] === "On Hold" ? "bg-yellow-100 text-yellow-700" : "bg-blue-100 text-blue-700"}`}>{row[0]}</span>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2 text-sm">{row[1]}</td>
-                    <td className="border border-gray-200 px-3 py-2 text-sm text-gray-600">{row[2]}</td>
+                  ['Submitted', 'Request receive ho gayi', 'Wait — surveyor aayega'],
+                  ['Under Survey', 'Field inspection chal rahi', 'Cooperative raho'],
+                  ['Under Assessment', 'Loss calculate ho raha', '15-30 din wait'],
+                  ['Approved', 'Indemnity pass', '7-10 din mein bank mein'],
+                  ['Payment Processed', 'DBT se bhej diya', 'Statement check karo'],
+                  ['Rejected', 'Application fail', 'Reason padho, appeal karo'],
+                  ['On Hold', 'Document/info chahiye', 'Bank/insurance contact'],
+                ].map(([status, meaning, action], i) => (
+                  <tr key={status} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
+                    <td className="p-3 border-b border-[var(--color-border)] font-semibold text-xs text-[var(--color-text)]">{status}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{meaning}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-green-700 dark:text-green-400 font-medium">{action}</td>
                   </tr>
                 ))}
               </tbody>
@@ -282,300 +247,231 @@ export default function PmfbyCropInsurance2026() {
           </div>
         </section>
 
-        {/* ── SECTION 5: INSURANCE AMOUNT ── */}
-        <section className="mb-10">
-          <h2 className="text-xl sm:text-2xl font-bold text-green-700 border-b-2 border-green-200 pb-2 mb-4">
-            5. Indemnity Payment Kab Aur Kitna Milta Hai?
-          </h2>
-          <p className="text-gray-700 leading-relaxed mb-3">
-            Indemnity kitna milega – yeh jaanna zaroori hai. Payment calculate hoti hai <strong>Sum Insured</strong> aur <strong>actual crop loss percentage</strong> ke basis par.
-          </p>
-
-          <h3 className="text-lg font-semibold text-green-600 mb-3">Payment Calculation Example:</h3>
-          <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-5">
-            <div className="grid sm:grid-cols-2 gap-3 text-sm">
+        {/* Payment Calculation */}
+        <section className="mb-8">
+          <SH>Kitna Milta Hai? Real Example</SH>
+          <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl p-5 mb-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
               {[
-                ["Fasal", "Soyabean"],
-                ["Zameen", "5 bigha (approx 1.25 hectare)"],
-                ["Sum Insured (per hectare)", "₹40,000"],
-                ["Total Sum Insured", "₹50,000 (1.25 × 40,000)"],
-                ["Kisan Premium (2%)", "₹1,000"],
-                ["Surveyor Assessment – Loss %", "70% crop loss"],
-                ["Indemnity = 70% of ₹50,000", "₹35,000"],
-                ["Final Amount Received", "₹35,000 (DBT se)"],
-              ].map(([k, v], i) => (
-                <div key={i} className="flex gap-2">
-                  <span className="font-semibold text-amber-800 flex-shrink-0">{k}:</span>
-                  <span className="text-gray-700">{v}</span>
+                ['Fasal', 'Soyabean'],
+                ['Zameen', '5 bigha (~1.25 hectare)'],
+                ['Sum Insured/hectare', '₹40,000'],
+                ['Total Sum Insured', '₹50,000'],
+                ['Kisan Premium (2%)', '₹1,000'],
+                ['Loss Assessment', '70% crop loss'],
+                ['Indemnity (70% of ₹50K)', '₹35,000'],
+              ].map(([k, v]) => (
+                <div key={k} className="flex gap-2">
+                  <span className="font-semibold text-amber-800 dark:text-amber-300 shrink-0">{k}:</span>
+                  <span className="text-[var(--color-text-muted)]">{v}</span>
                 </div>
               ))}
             </div>
-            <p className="text-green-700 font-semibold text-sm mt-3">✅ Sirf ₹1,000 premium deke ₹35,000 indemnity mila!</p>
+            <p className="text-green-700 dark:text-green-400 font-black text-sm mt-3">✅ Sirf ₹1,000 premium → ₹35,000 indemnity!</p>
           </div>
-
-          <h3 className="text-lg font-semibold text-green-600 mb-3">Payment Timeline:</h3>
-          <div className="space-y-2">
-            {[
-              { phase: "Application Submission", time: "Nuksan ke 72 ghante mein" },
-              { phase: "Survey / Inspection", time: "Application ke 5–10 din baad" },
-              { phase: "Assessment Report", time: "Survey ke 15–30 din baad" },
-              { phase: "Approval", time: "Assessment ke 7–15 din baad" },
-              { phase: "Payment (DBT)", time: "Approval ke 7–10 din mein seedha bank mein" },
-              { phase: "Total Time", time: "~45–60 din (state aur case ke hisaab se)" },
-            ].map((item, i) => (
-              <div key={i} className="flex justify-between items-center border border-gray-200 rounded-lg px-4 py-2 text-sm">
-                <span className="font-medium text-gray-800">{item.phase}</span>
-                <span className="text-green-600 font-semibold">{item.time}</span>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* ── SECTION 6: DOCUMENTS ── */}
-        <section className="mb-10">
-          <h2 className="text-xl sm:text-2xl font-bold text-green-700 border-b-2 border-green-200 pb-2 mb-4">
-            6. Indemnity Claim Ke Liye Required Documents
-          </h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Pehli baar mein hi sab documents le jaayein:
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Total timeline: ~45-60 din (application → survey → assessment → approval → DBT payment).
           </p>
-          <div className="grid sm:grid-cols-2 gap-4">
-            {[
-              {
-                cat: "Identity Documents",
-                color: "blue",
-                items: ["Aadhaar Card (original + copy)", "PAN Card", "Bank Passbook (account linked)", "Registered Mobile Number"],
-              },
-              {
-                cat: "Land / Crop Documents",
-                color: "green",
-                items: ["Khasra / Khatauni (Jamabandi)", "Crop sowing certificate (buwai ka praman)", "Land ownership / lease agreement", "Policy document / receipt"],
-              },
-              {
-                cat: "Loss Evidence",
-                color: "red",
-                items: ["Photos of damaged crop (date-stamped)", "Written complaint copy (72 hr intimation proof)", "Village Patwari / Sarpanch letter (optional but helpful)", "Meteorological/disaster report (if available)"],
-              },
-              {
-                cat: "Bank Details",
-                color: "amber",
-                items: ["Bank account number (IFSC sahit)", "Cancelled cheque", "DBT-enabled account confirm karein", "Joint account hai toh dono ki ID"],
-              },
-            ].map((cat, i) => {
-              const cm: Record<string,string> = { blue:"bg-blue-50 border-blue-200", green:"bg-green-50 border-green-200", red:"bg-red-50 border-red-200", amber:"bg-amber-50 border-amber-200" };
-              const hm: Record<string,string> = { blue:"text-blue-800", green:"text-green-800", red:"text-red-800", amber:"text-amber-800" };
-              return (
-                <div key={i} className={`border rounded-lg p-4 ${cm[cat.color]}`}>
-                  <h4 className={`font-bold mb-2 text-sm ${hm[cat.color]}`}>{cat.cat}</h4>
-                  <ul className="space-y-1">
-                    {cat.items.map((d, j) => (
-                      <li key={j} className="text-gray-700 text-xs flex gap-1.5"><span className="text-green-600">✓</span>{d}</li>
-                    ))}
-                  </ul>
-                </div>
-              );
-            })}
+        </section>
+
+        {/* Documents */}
+        <section className="mb-8">
+          <SH>Claim Ke Liye Documents</SH>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
+              <p className="font-black text-blue-800 dark:text-blue-300 text-sm mb-2">Identity</p>
+              <ul className="text-xs text-[var(--color-text-muted)] space-y-1">
+                <li>✓ Aadhaar Card (original + copy)</li>
+                <li>✓ PAN Card</li>
+                <li>✓ Bank Passbook (linked)</li>
+                <li>✓ Registered Mobile</li>
+              </ul>
+            </div>
+            <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
+              <p className="font-black text-green-800 dark:text-green-300 text-sm mb-2">Land / Crop</p>
+              <ul className="text-xs text-[var(--color-text-muted)] space-y-1">
+                <li>✓ Khasra / Khatauni</li>
+                <li>✓ Crop sowing certificate</li>
+                <li>✓ Ownership / lease agreement</li>
+                <li>✓ Policy document / receipt</li>
+              </ul>
+            </div>
+            <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
+              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-2">Loss Evidence</p>
+              <ul className="text-xs text-[var(--color-text-muted)] space-y-1">
+                <li>✓ Damaged crop photos (date-stamped)</li>
+                <li>✓ 72hr intimation proof</li>
+                <li>✓ Patwari/Sarpanch letter (helpful)</li>
+                <li>✓ Disaster report (if available)</li>
+              </ul>
+            </div>
+            <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl">
+              <p className="font-black text-amber-800 dark:text-amber-300 text-sm mb-2">Bank Details</p>
+              <ul className="text-xs text-[var(--color-text-muted)] space-y-1">
+                <li>✓ Account number + IFSC</li>
+                <li>✓ Cancelled cheque</li>
+                <li>✓ DBT-enabled confirm</li>
+                <li>✓ Joint account = dono ki ID</li>
+              </ul>
+            </div>
           </div>
         </section>
 
-        {/* ── SECTION 7: NATURAL DISASTER COVERAGE ── */}
-        <section className="mb-10">
-          <h2 className="text-xl sm:text-2xl font-bold text-green-700 border-b-2 border-green-200 pb-2 mb-4">
-            7. Agricultural Risk Coverage — Kya-Kya Cover Hota Hai?
-          </h2>
-
-          <div className="grid sm:grid-cols-2 gap-3 mb-5">
-            {[
-              { cat: "✅ Covered (Insured)", color: "green", items: ["Sukhha (Drought)", "Baadh / Ati-Varsha (Flood)", "Aandhi / Toofan (Cyclone)", "Olavrishti (Hailstorm)", "Bhumi Dhansaav (Landslide)", "Keede / Beemari (Pest/Disease)", "Post-Harvest Losses (14 din tak)", "Sowing Failure (pre-sown risk)"] },
-              { cat: "❌ Not Covered (Excluded)", color: "red", items: ["Kisan ki apni galtiyaan (negligence)", "Chori / theft", "Yudh / nuclear risk", "Deliberately set fire", "Agar premium nahi bhara", "Deadline ke baad notification", "Non-notified crops", "Tampered / wrong information"] },
-            ].map((sec, i) => (
-              <div key={i} className={`border rounded-xl p-4 ${i === 0 ? "bg-green-50 border-green-200" : "bg-red-50 border-red-200"}`}>
-                <h4 className={`font-bold mb-3 text-sm ${i === 0 ? "text-green-800" : "text-red-800"}`}>{sec.cat}</h4>
-                <ul className="space-y-1">
-                  {sec.items.map((item, j) => (
-                    <li key={j} className="text-xs text-gray-700 flex gap-1.5">
-                      <span className={i === 0 ? "text-green-600" : "text-red-500"}>{i === 0 ? "✓" : "✗"}</span>{item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+        {/* Coverage */}
+        <section className="mb-8">
+          <SH>Kya Cover Hota Hai, Kya Nahi</SH>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
+              <p className="font-black text-green-800 dark:text-green-300 text-sm mb-2">✅ Covered</p>
+              <ul className="text-xs text-[var(--color-text-muted)] space-y-1">
+                <li>✓ Sukhha, Baadh, Ati-Varsha</li>
+                <li>✓ Aandhi, Toofan, Olavrishti</li>
+                <li>✓ Bhumi Dhansaav (Landslide)</li>
+                <li>✓ Keede / Beemari (Pest/Disease)</li>
+                <li>✓ Post-Harvest Losses (14 din)</li>
+                <li>✓ Sowing Failure (pre-sown risk)</li>
+              </ul>
+            </div>
+            <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
+              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-2">❌ Not Covered</p>
+              <ul className="text-xs text-[var(--color-text-muted)] space-y-1">
+                <li>✗ Kisan ki negligence</li>
+                <li>✗ Chori / theft</li>
+                <li>✗ Yudh / nuclear risk</li>
+                <li>✗ Deliberately set fire</li>
+                <li>✗ Premium nahi bhara</li>
+                <li>✗ Deadline ke baad notification</li>
+                <li>✗ Non-notified crops</li>
+              </ul>
+            </div>
           </div>
         </section>
 
-        {/* ── SECTION 8: REJECTION REASONS ── */}
-        <section className="mb-10">
-          <h2 className="text-xl sm:text-2xl font-bold text-green-700 border-b-2 border-green-200 pb-2 mb-4">
-            8. Common Application Rejection Reasons Aur Solutions
-          </h2>
-
+        {/* Rejection Reasons */}
+        <section className="mb-8">
+          <SH>Common Rejection Reasons + Fix</SH>
           <div className="space-y-3">
             {[
-              { r: "72 Ghante Ke Baad Notification", s: "Hamesha fasal kharab hote hi turant helpline ya bank ko call karein. Screenshot/call record rakhein proof ke liye." },
-              { r: "Wrong / Mismatched Documents", s: "Aadhaar mein naam aur bank mein naam same hona chahiye. Koi bhi mismatch = delay ya rejection." },
-              { r: "Non-Notified Crop", s: "Yeh scheme sirf government-notified crops pe kaam karti hai. Pehle confirm karein ki aapki fasal notified hai ya nahi." },
-              { r: "Premium Not Paid", s: "Auto-debit fail ho jaati hai agar account mein paisa nahi tha. Bank statement check karein ki premium actually kata ya nahi." },
-              { r: "DBT Account Not Linked", s: "Bank account Aadhaar se link hona chahiye DBT ke liye. Yeh bank mein jaake confirm karein." },
-              { r: "Surveyor Visit Mein Absent", s: "Jab surveyor aaye toh khet par mojood rahein. Unhe poora khet dikhayein. Unke saath cooperative rahein." },
-              { r: "Fake / Exaggerated Loss Application", s: "Sirf actual loss report karein. Insurance company cross-verify karti hai. Jhooth pakaaya gaya toh application cancel + legal action." },
-            ].map((item, i) => (
-              <details key={i} className="border border-gray-200 rounded-lg overflow-hidden">
-                <summary className="bg-red-50 px-4 py-3 cursor-pointer font-medium text-red-800 text-sm flex items-center gap-2">
-                  <span>❌</span> {item.r}
-                </summary>
-                <div className="px-4 py-3 bg-white">
-                  <p className="text-green-700 text-sm"><strong>✅ Solution:</strong> {item.s}</p>
+              { r: '72 Ghante Baad Notification', fix: 'Turant helpline/bank call karo. Call record/screenshot proof rakho.' },
+              { r: 'Document Mismatch', fix: 'Aadhaar-bank naam same hona chahiye. Koi mismatch = delay/reject.' },
+              { r: 'Non-Notified Crop', fix: 'Pehle confirm karo fasal notified hai. Block Agri Office se pucho.' },
+              { r: 'Premium Not Paid', fix: 'Auto-debit fail? Bank statement check karo. Account mein balance rakho.' },
+              { r: 'DBT Account Not Linked', fix: 'Bank jaake Aadhaar DBT linking confirm karo.' },
+              { r: 'Surveyor Visit Mein Absent', fix: 'Jab surveyor aaye toh khet par raho. Poora khet dikhao.' },
+            ].map(({ r, fix }) => (
+              <div key={r} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl overflow-hidden">
+                <div className="bg-red-50 dark:bg-red-900/20 border-b border-red-100 dark:border-red-800 px-4 py-2.5">
+                  <p className="font-black text-red-800 dark:text-red-300 text-sm">❌ {r}</p>
                 </div>
-              </details>
-            ))}
-          </div>
-        </section>
-
-        {/* ── IMAGE 3 ── */}
-        <figure className="my-8 rounded-xl overflow-hidden shadow-lg">
-          <img 
-            src="/images/articles/pmfby-crop-insurance-2026/payment-received.webp" 
-            alt="Indemnity Payment Received – Financial Relief Aaya" 
-            className="w-full h-44 sm:h-60 object-cover" 
-          />
-          <figcaption className="bg-green-800 text-white text-xs sm:text-sm text-center py-2 px-4">
-            Account Mein Indemnity Aaya – Agle Season Ki Kheti Saved!
-          </figcaption>
-        </figure>
-
-        {/* ── SECTION 9: 2026 UPDATES ── */}
-        <section className="mb-10">
-          <h2 className="text-xl sm:text-2xl font-bold text-green-700 border-b-2 border-green-200 pb-2 mb-4">
-            9. 2026 Updates — Latest Changes
-          </h2>
-          <div className="space-y-3">
-            {[
-              { tag: "Budget 2026", color: "green", title: "PMFBY Budget ₹15,000 Crore – Record High", desc: "Budget 2026-27 mein PMFBY ke liye ₹15,000 crore allocate kiye gaye hain – pichle saal se 18% zyada. Iska matlab zyada kisan coverage aur faster settlement." },
-              { tag: "Digital Survey", color: "blue", title: "Drone Survey Ab Use Hoga", desc: "2026 se kuch states mein drone-based crop loss assessment shuru ho rahi hai. Iska fayda – surveyor ki manmani kam hogi aur accurate assessment hogi." },
-              { tag: "AI Assessment", color: "purple", title: "AI-Based Loss Calculation Pilot", desc: "Ministry of Agriculture ne AI tools se satellite imagery ke base par crop loss calculate karne ka pilot project shuru kiya hai – faster aur transparent applications ke liye." },
-              { tag: "Voluntary Enrollment", color: "amber", title: "Non-Loanee Farmers Ko Push", desc: "2026 mein government ne non-loanee (bina loan wale) kisano ko bhi enroll karne ka special drive chalaaya hai. Agar aapne abhi tak yeh scheme nahi li – agle season mein zaroor lein." },
-            ].map((item, i) => {
-              const cm: Record<string,string> = { green:"bg-green-50 border-green-200", blue:"bg-blue-50 border-blue-200", purple:"bg-purple-50 border-purple-200", amber:"bg-amber-50 border-amber-200" };
-              const tm: Record<string,string> = { green:"bg-green-100 text-green-700", blue:"bg-blue-100 text-blue-700", purple:"bg-purple-100 text-purple-700", amber:"bg-amber-100 text-amber-700" };
-              return (
-                <div key={i} className={`border rounded-lg p-4 ${cm[item.color]}`}>
-                  <div className="flex items-start gap-3">
-                    <span className={`px-2 py-0.5 rounded text-xs font-bold flex-shrink-0 ${tm[item.color]}`}>{item.tag}</span>
-                    <div>
-                      <p className="font-semibold text-gray-800 text-sm mb-1">{item.title}</p>
-                      <p className="text-gray-600 text-xs">{item.desc}</p>
-                    </div>
+                <div className="p-4">
+                  <div className="flex items-start gap-2 bg-green-50 dark:bg-green-900/20 rounded-lg p-3">
+                    <span className="text-green-600 dark:text-green-400 font-black text-xs shrink-0 mt-0.5">FIX:</span>
+                    <p className="text-xs text-green-800 dark:text-green-300 leading-relaxed">{fix}</p>
                   </div>
                 </div>
-              );
-            })}
-          </div>
-        </section>
-
-        {/* ── FAQ ── */}
-        <section className="mb-10">
-          <h2 className="text-xl sm:text-2xl font-bold text-green-700 border-b-2 border-green-200 pb-2 mb-6">
-            10. FAQ — Real Questions, Direct Answers
-          </h2>
-          <div className="space-y-3">
-            {[
-              { q: "PMFBY helpline number kya hai?", a: "PMFBY Toll-Free Helpline: 1800-200-7710. Yeh 24x7 available hai. Aap application notification, status inquiry aur koi bhi query ke liye call kar sakte hain. Apna policy number paas rakhein." },
-              { q: "Agar bank ne enroll nahi ki aur fasal kharab ho gayi toh?", a: "Agar bank ki galti se enroll nahi hua aur premium aapke account se kaat liya gaya tha, toh bank zimmedaar hai. Banking Ombudsman ya agriculture department mein complaint karein." },
-              { q: "Kya partial loss par bhi indemnity milta hai?", a: "Haan – agar 25% ya zyada fasal ka nuksan hua ho toh proportional indemnity milta hai. 70% loss hai toh 70% amount milega. Surveyor ki report decisive hoti hai." },
-              { q: "Ek hi khet mein do fasal lagayi hai – dono cover hogi?", a: "Yeh scheme ek application mein ek fasal cover karti hai. Alag-alag faslon ke liye alag enrollment karna padega. Mixed cropping ke rules state-wise alag hain – apni state portal check karein." },
-              { q: "Application reject ho gayi – ab kya karein?", a: "Rejection letter mein reason likha hota hai. Pehle woh reason theek karein. Phir appeal karein – insurance company ke grievance cell mein, phir state agriculture department mein. Portal par bhi grievance submit ki ja sakti hai." },
-              { q: "Kya koi bhi crop cover hoti hai?", a: "Nahi – sirf government-notified crops cover hoti hain. Har state har season mein ek list jaari karta hai. Apne Block Agriculture Office ya state portal se list confirm karein." },
-              { q: "Premium kat gaya lekin policy nahi mili – kya karna chahiye?", a: "Bank se written confirmation maangein. Agar bank ne premium kat liya hai toh woh automatically enrolled ho jaata hai. Policy document aur receipt bank se prapt karein – yeh aapka legal right hai." },
-            ].map((item, i) => (
-              <details key={i} className="border-2 border-green-100 rounded-xl overflow-hidden">
-                <summary className="bg-green-50 px-5 py-3 cursor-pointer font-semibold text-green-900 text-sm flex justify-between items-center gap-2">
-                  <span>Q{i + 1}: {item.q}</span>
-                  <span className="text-green-500 flex-shrink-0">▼</span>
-                </summary>
-                <div className="px-5 py-3 bg-white">
-                  <p className="text-gray-700 text-sm leading-relaxed">{item.a}</p>
-                </div>
-              </details>
+              </div>
             ))}
           </div>
         </section>
 
-        {/* ── CONCLUSION ── */}
-        <section className="mb-10">
-          <h2 className="text-xl sm:text-2xl font-bold text-green-700 border-b-2 border-green-200 pb-2 mb-4">
-            11. Conclusion — Aap Bhi Is Protocol Ka Fayda Lein
-          </h2>
-          <div className="bg-green-700 text-white rounded-xl p-6 mb-6">
-            <p className="leading-relaxed mb-3">
-              Crop insurance ek aisi mechanism hai jo chhote kisan ke liye sach mein lifeline ban sakti hai. Kai farmers ne ₹1,000 premium deke ₹35,000 ka indemnity paaya aur agle season ki fasal ke liye paisa jut gaya.
-            </p>
-            <p className="leading-relaxed mb-3">
-              Sabse zaroori baat — <strong>72 ghante ka rule</strong> yaad rakhein. Fasal kharab hote hi turant helpline par call karein. Doosri zaroori baat — <strong>documents pehle se tayyar rakhein</strong>. Aur teesri — <strong>status portal par track karte rahein</strong>.
-            </p>
-            <p className="leading-relaxed">
-              Aaj hi check karein — kya aap yeh scheme mein enrolled hain? Agar KCC ya crop loan hai toh almost certainly haan. Agar nahi hain toh agle season mein zaroor karwayein.
-            </p>
-          </div>
+        {/* Payment Received Image #4 — PRESERVED */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/articles/pmfby-crop-insurance-2026/payment-received.webp"
+            alt="PMFBY indemnity payment received in bank account — financial relief for next season"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            Indemnity Aaya — Agle Season Ki Kheti Saved
+          </p>
+        </div>
 
-          {/* ✅ FIXED: Related Articles with proper Link components */}
-          <div className="bg-gray-50 rounded-xl p-5 border border-gray-200 mb-6">
-            <h3 className="font-bold text-gray-800 mb-3">🔗 Related Articles (Aage Kya Padhein):</h3>
-            <ul className="space-y-2">
-              <li className="flex items-center gap-2">
-                <span className="text-green-500">→</span>
-                <Link href="/articles/kisan-credit-card-online-apply-2026" className="text-green-700 text-sm font-medium hover:underline">
-                  KCC Kisan Credit Card – Kaise Banwayein Aur Kya Fayda Hai 2026
-                </Link>
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-green-500">→</span>
-                <Link href="/articles/pm-kisan-23vi-kist-2026-status-check" className="text-green-700 text-sm font-medium hover:underline">
-                  PM Kisan Samman Nidhi 23vi Installment – Status Check Kaise Karein
-                </Link>
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-green-500">→</span>
-                <Link href="/articles/kisan-tractor-loan-2026" className="text-green-700 text-sm font-medium hover:underline">
-                  Kisan Tractor Loan Bina Down Payment – Complete Guide 2026
-                </Link>
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-green-500">→</span>
-                <Link href="/articles/pm-kisan-mobile-number-change" className="text-green-700 text-sm font-medium hover:underline">
-                  PM Kisan Mobile Number Update Kaise Karein – CSC Center Process
-                </Link>
-              </li>
-            </ul>
+        {/* 2026 Updates */}
+        <section className="mb-8">
+          <SH>2026 Updates — Latest Changes</SH>
+          <div className="space-y-3">
+            <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
+              <span className="inline-block px-2 py-0.5 bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300 text-[10px] font-bold rounded-full mb-2">Budget 2026</span>
+              <p className="font-black text-[var(--color-text)] text-sm mb-1">₹15,000 Crore — Record High</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Pichle saal se 18% zyada. Zyada coverage + faster settlement.</p>
+            </div>
+            <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
+              <span className="inline-block px-2 py-0.5 bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 text-[10px] font-bold rounded-full mb-2">Digital Survey</span>
+              <p className="font-black text-[var(--color-text)] text-sm mb-1">Drone-Based Assessment Shuru</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Surveyor manmani kam, accurate assessment zyada.</p>
+            </div>
+            <div className="p-4 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-xl">
+              <span className="inline-block px-2 py-0.5 bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300 text-[10px] font-bold rounded-full mb-2">AI Pilot</span>
+              <p className="font-black text-[var(--color-text)] text-sm mb-1">Satellite Imagery Se Loss Calculation</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Faster + transparent applications ke liye Ministry pilot.</p>
+            </div>
+            <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl">
+              <span className="inline-block px-2 py-0.5 bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 text-[10px] font-bold rounded-full mb-2">Voluntary Push</span>
+              <p className="font-black text-[var(--color-text)] text-sm mb-1">Non-Loanee Farmers Special Drive</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Bina loan wale kisan bhi enroll karo. Agle season mein zaroor lo.</p>
+            </div>
           </div>
         </section>
 
-        {/* ── QUICK SUMMARY ── */}
-        <div className="bg-yellow-50 border-2 border-yellow-300 rounded-xl p-6 mb-8">
-          <h3 className="font-bold text-yellow-900 text-lg mb-3">⚡ Quick Summary – Agricultural Risk Protection 2026</h3>
-          <div className="grid sm:grid-cols-2 gap-2 text-sm">
+        {/* FAQ */}
+        <section className="mb-8">
+          <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
+            Aksar Puche Jane Wale Sawal
+          </h2>
+          <FAQBlock faqs={FAQS_DATA} caption="PMFBY Crop Insurance FAQ 2026 — Verified Answers" />
+        </section>
+
+        {/* Quick Summary */}
+        <div className="bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-300 dark:border-amber-700 rounded-xl p-5 mb-8">
+          <h3 className="font-black text-amber-900 dark:text-amber-300 text-base mb-3">Quick Summary</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
             {[
-              ["Portal", "pmfby.gov.in"],
-              ["Helpline", "1800-200-7710 (Toll Free)"],
-              ["Kharif Premium", "2% of sum insured"],
-              ["Rabi Premium", "1.5% of sum insured"],
-              ["Application Deadline", "72 ghante mein inform karein"],
-              ["Payment Mode", "DBT – seedha bank account mein"],
-              ["Total Timeline", "~45–60 din"],
-              ["Govt Budget 2026", "₹15,000 crore"],
-            ].map(([k, v], i) => (
-              <div key={i} className="flex gap-2">
-                <span className="font-semibold text-yellow-800 flex-shrink-0">{k}:</span>
-                <span className="text-gray-700">{v}</span>
+              ['Portal', 'pmfby.gov.in'],
+              ['Helpline', '1800-200-7710 (24×7)'],
+              ['Kharif Premium', '2%'],
+              ['Rabi Premium', '1.5%'],
+              ['Critical Rule', '72 ghante mein inform'],
+              ['Payment', 'DBT seedha bank'],
+              ['Timeline', '~45-60 din'],
+              ['Budget 2026', '₹15,000 crore'],
+            ].map(([k, v]) => (
+              <div key={k} className="flex gap-2">
+                <span className="font-semibold text-amber-800 dark:text-amber-300 shrink-0">{k}:</span>
+                <span className="text-[var(--color-text-muted)]">{v}</span>
               </div>
             ))}
           </div>
         </div>
 
-        <p className="text-xs text-gray-400 text-center border-t pt-4">
-          Yeh article sirf informational purposes ke liye hai. Rules state aur season ke hisaab se badal sakte hain. Latest update ke liye pmfby.gov.in visit karein. | © 2026 KisanStatus.com
-        </p>
+        <GovLink
+          href="https://pmfby.gov.in"
+          label="PMFBY Official Portal — Enrollment & Status"
+          guide="Abhi Check Karo"
+          guideHref="/articles/kisan-credit-card-online-apply-2026"
+          portalName="pmfby.gov.in"
+        />
 
-      </article>
-    </main>
+        <CalcBanner
+          icon="🌾"
+          title="Apni Fasal Ki Income Calculate Karo"
+          desc="MSP income, crop profit, insurance premium — sab free calculators se"
+          primaryCta={{ href: '/calculator/msp-income', label: '📊 MSP Calculator →' }}
+          secondaryCta={{ href: '/calculator/crop-profit', label: '🌾 Crop Profit' }}
+        />
+
+        <RelatedArticles articles={RELATED} />
+        <AuthorBox modified={MODIFIED} />
+        <BottomNav extraLinks={[
+          { href: '/articles/kisan-credit-card-online-apply-2026', l: '💳 KCC Guide' },
+          { href: '/articles/kisan-tractor-loan-2026', l: '🚜 Tractor Loan' },
+          { href: '/calculator/msp-income', l: '📊 MSP Calculator' },
+        ]} />
+        <Disclaimer />
+      </div>
+    </>
   );
 }
