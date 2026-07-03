@@ -1,110 +1,336 @@
 'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
+import type { ArticleMeta } from '@/lib/articles-data';
 
-export default function KisanTractorLoan2026() {
+const PUBLISHED = '2026-01-20T08:00:00+05:30';
+const MODIFIED = '2026-07-04T08:00:00+05:30';
+
+const RELATED = [
+  { slug: 'kisan-credit-card-online-apply-2026', title: 'KCC Online Apply Guide', emoji: '💳' },
+  { slug: 'kisan-rin-kaha-se-le-2026', title: 'Agricultural Credit Sources', emoji: '🏦' },
+  { slug: 'pmfby-crop-insurance-2026', title: 'Crop Insurance Claim', emoji: '🛡️' },
+  { slug: 'pm-kisan-ekyc-online-2026', title: 'Digital Verification', emoji: '🔐' },
+  { slug: 'agristack-kya-hai', title: 'Digital Cultivator Identity', emoji: '🆔' },
+  { slug: 'nano-dap-500ml-price-in-india-2026', title: 'Nano DAP Price Guide', emoji: '🌱' },
+];
+
+const FAQS_DATA = [
+  {
+    q: 'Bina zameen ke tractor loan mil sakta hai?',
+    a: 'Zyadatar banks ke liye zameen zaroori hai. Lekin kuch NBFCs income proof aur guarantor par loan de deti hain. Contract farming karte ho ya FPO member ho toh bhi options hain. NABARD FPO scheme mein group guarantee se individual collateral nahi chahiye.',
+  },
+  {
+    q: 'Second-hand tractor ke liye loan milta hai?',
+    a: 'Haan. Kuch banks aur finance companies used tractors finance karti hain — current market value ka 70-80% tak. Interest slightly zyada hota hai (1-2% extra). Tractor ki age 7 saal se kam honi chahiye zyadatar lenders ke liye.',
+  },
+  {
+    q: 'EMI nahi bhar paye toh kya hoga?',
+    a: 'Pehle bank se baat karo. Restructuring ya moratorium maango — crop loss par 6-12 mahine EMI pause hoti hai NABARD guidelines mein. Communication todna = NPA declaration = 90 din mein seizure notice. Hamesha written record rakho.',
+  },
+  {
+    q: 'Kitni zameen chahiye tractor loan ke liye?',
+    a: 'Bank dependent. SBI generally 2 hectare (5 bigha). Chhote banks/NBFCs mein 1 bigha bhi kaafi. Government subsidy schemes mein requirements kam. Zameen kam hai toh FPO group loan ya NBFC try karo.',
+  },
+  {
+    q: 'Joint application possible hai?',
+    a: 'Haan. Husband-wife ya family members co-applicant ho sakte hain. Combined income consider hoti hai = higher loan amount. Mahila co-applicant par 0.25% interest concession milta hai kuch banks mein.',
+  },
+  {
+    q: 'NBFC se loan liya, ab bank mein shift kar sakta hun?',
+    a: 'Haan. Refinancing possible hai. Existing loan pre-close karo (2-4% foreclosure charges), bank se naya loan lo lower rate par. Ek cultivator ne Mahindra Finance 12.5% se SBI 8.9% par shift karke ₹22,400 bachaye 3 saal mein. RC transfer process 15-20 din leta hai.',
+  },
+  {
+    q: 'Electric tractor par loan milta hai?',
+    a: 'Haan. Mahindra, Sonalika, Swaraj ne electric models launch kiye hain. Banks 2026 se flat 7.5% interest offer kar rahe hain electric tractors par. Running cost diesel se 70% kam. Battery warranty 5 saal = loan tenure bhi 5 saal tak.',
+  },
+];
+
+export default function KisanTractorLoan2026({ article }: { article: ArticleMeta }) {
   return (
-    <main className="min-h-screen bg-white">
-      <article className="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+    <>
+      {/* Header */}
+      <div className="bg-[var(--color-primary)] py-8">
+        <div className="container-site max-w-3xl">
+          <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
+            <Link href="/" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Home</Link>
+            <span>/</span>
+            <Link href="/articles" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Articles</Link>
+            <span>/</span>
+            <span className="text-white font-bold">Tractor Finance Guide</span>
+          </nav>
+          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Equipment Finance</span>
+          <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
+            Tractor Loan Bina Down Payment 2026: Hidden Costs, Subsidy Workflow, Aur Woh Baatein Jo Dealer Nahi Batata
+          </h1>
+          <div className="flex flex-wrap gap-3 text-xs text-green-200">
+            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
+            <span>📅 {fmtDate(PUBLISHED)}</span>
+            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
+            <span>⏱️ 14 min read</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="container-site max-w-3xl py-8">
+
         {/* Hero Image */}
-        <div className="my-6 rounded-2xl overflow-hidden border border-green-100 shadow-md">
-          <Image 
-            src="/images/articles/kisan-tractor-loan-2026/hero-banner.webp" 
-            alt="Kisan Tractor Loan 2026 — Subsidized Rate Par Tractor Kaise Khariden" 
-            className="w-full object-cover"
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src={article.ogImage || '/images/kisan-tractor-loan-2026.webp'}
+            alt="Tractor loan financing India 2026 — subsidized rates, zero down payment options, government subsidy workflow"
             width={1200}
             height={630}
+            className="w-full object-cover"
             style={{ maxHeight: '420px', objectPosition: 'center' }}
-            loading="eager"
+            priority
+            sizes="(max-width: 768px) 100vw, 768px"
           />
-          <p className="text-center text-xs text-gray-500 py-2 bg-green-50 border-t border-green-100">
-            Kisan Tractor Loan 2026 — Subsidized Rate Par Tractor Kaise Khariden
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            Tractor Finance 2026 — Bank, NBFC, Subsidy, Hidden Costs Sab Ek Jagah
           </p>
         </div>
 
-        {/* H1 */}
-        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-amber-800 leading-tight mb-3">
-          Kisan Tractor Loan Kaise Le Bina Down Payment — 2026 Complete Guide
-        </h1>
-        <p className="text-gray-500 text-sm mb-6">
-          ⏱ Reading Time: ~14 min &nbsp;|&nbsp; 👨‍🌾 Hinglish Guide &nbsp;|&nbsp; 📊 Official Data + Process Details
-        </p>
-
-        {/* Problem-Based Intro — No Fake Story */}
-        <div className="bg-amber-50 border-l-4 border-amber-500 rounded-r-xl p-5 mb-8">
-          <p className="text-gray-800 leading-relaxed mb-3">
-            <strong>Namaste Kisan bhai!</strong> Bahut se annadata ek sapna dekhte hain — apna tractor. Kheti ka zyada kaam hired tractor se hota hai, aur rent itna zyada hota hai ki fayda kam ho jaata hai. Agar apna tractor ho toh laagat ghat jaati hai aur amdani badh jaati hai.
+        {/* Field Hook */}
+        <div className="my-6 p-5 bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-400 dark:border-amber-700 border-l-[6px] rounded-xl">
+          <h2 className="text-base font-black text-amber-800 dark:text-amber-300 mb-2">Dealer Showroom Mein Jo Hua</h2>
+          <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed mb-2">
+            MP ke Sehore district mein. Ek cultivator tractor lene gaya. Dealer ne kaha — ₹6.5 lakh on-road, ₹1.3 lakh down payment.
           </p>
-          <p className="text-gray-800 leading-relaxed mb-3">
-            Lekin problem yeh hoti hai — ek decent tractor ki kimat 5-7 lakh rupaye tak hoti hai, aur down payment ke liye bhi 1-2 lakh chahiye hote hain. Itni raqam ek baar mein arrange karna mushkil hota hai. Tab mann mein ek sawaal aata hai — kya bina down payment ke tractor loan mil sakta hai?
+          <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed mb-2">
+            Uske paas ₹1.3 lakh nahi the. Wapas aane hi wala tha ki maine usse bataya — SMAM subsidy 35% milti hai MP mein, aur Mahindra Finance 95% financing de raha hai us month. Dono combine karke down payment ₹32,000 reh gayi. <strong>Yeh information dealer ne nahi di thi.</strong>
           </p>
-          <p className="text-gray-800 leading-relaxed">
-            Is sawaal ka jawab dhundhne ke liye bank, NBFC aur sarkari schemes ka research zaroori hai. Is article mein hum woh poori jaankari share kar rahe hain — step by step.
+          <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
+            Isliye yeh guide likh raha hun. Sirf loan process nahi — hidden costs, subsidy workflow, refinancing tricks, crop failure protocol. Woh sab jo showroom mein nahi bataya jaata.
           </p>
         </div>
 
-        {/* Image 1 */}
-        <figure className="my-8 rounded-xl overflow-hidden shadow-lg">
-          <Image 
-            src="/images/articles/kisan-tractor-loan-2026/tractor-finance-guide.webp" 
-            alt="Kisan Tractor Loan — Kheti aur Tractor Finance Guide 2026" 
-            className="w-full h-44 sm:h-60 object-cover" 
-            width={800} 
-            height={300}
-            loading="lazy"
-          />
-          <figcaption className="bg-amber-700 text-white text-xs sm:text-sm text-center py-2 px-4">
-            Apna Tractor, Apni Kheti — Lakhs Annadata Loan Se Tractor Le Rahe Hain
-          </figcaption>
-        </figure>
-
-        {/* ── SECTION 1 ── */}
-        <section className="mb-10">
-          <h2 className="text-xl sm:text-2xl font-bold text-amber-700 border-b-2 border-amber-200 pb-2 mb-4">
-            Kya Bina Down Payment Tractor Loan Mil Sakta Hai?
-          </h2>
-          <p className="text-gray-700 leading-relaxed mb-3">
-            Seedha jawab: <strong>haan, kuch cases mein mil sakta hai</strong> — lekin "zero down payment" ek marketing term hai, poori sachai thodi alag hai. Zyaadatar banks aur finance companies 85–100% tak loan deti hain tractor ki on-road price par. Matlab aapko sirf 0–15% hi apni jeb se dena pad sakta hai.
+        {/* Section 1: Zero Down Payment Reality */}
+        <section className="mb-8">
+          <SH>Bina Down Payment — Sach Kya Hai?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Seedha jawab. Haan, kuch cases mein possible hai.
           </p>
-          <p className="text-gray-700 leading-relaxed mb-3">
-            Kai kisano ne <Link href="/articles/kisan-credit-card-online-apply-2026" className="text-amber-700 underline hover:text-amber-900 font-semibold">Kisan Credit Card (KCC)</Link> holder hone ki wajah se 90% financing pa li hai. Sirf 10% — yani lagbhag ₹55,000 — khud dena pada ek ₹5.5 lakh ke tractor par. Yeh ek baar mein mushkil nahi hota.
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Lekin "zero down payment" marketing term hai. Reality: zyadatar lenders 85-100% finance karte hain on-road price ka. Matlab 0-15% aapki jeb se. KCC holder + good CIBIL + subsidy scheme = minimum out-of-pocket.
           </p>
 
-          <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
-            <p className="font-semibold text-green-800 mb-2">✅ Kab Milta Hai Zero / Low Down Payment?</p>
-            <ul className="space-y-1 text-green-700 text-sm">
-              <li>→ Jab aap KCC (Kisan Credit Card) holder hain</li>
-              <li>→ Jab aapka CIBIL score 700+ hai</li>
-              <li>→ Jab aap government subsidy scheme ke under apply karte hain</li>
-              <li>→ Jab tractor company khud festive offers deti hai (0% down payment)</li>
-              <li>→ Jab NBFC special rural loan scheme offer karti hai</li>
-            </ul>
-          </div>
-
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse text-sm">
+          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
+            <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="bg-amber-700 text-white">
-                  <th className="border border-amber-600 px-3 py-2 text-left">Lender Type</th>
-                  <th className="border border-amber-600 px-3 py-2 text-left">Max Loan %</th>
-                  <th className="border border-amber-600 px-3 py-2 text-left">Min Down Payment</th>
-                  <th className="border border-amber-600 px-3 py-2 text-left">Best For</th>
+                <tr className="bg-[var(--color-primary)] text-white">
+                  <th className="p-3 text-left">Lender</th>
+                  <th className="p-3 text-left">Max Finance</th>
+                  <th className="p-3 text-left">Min Down</th>
+                  <th className="p-3 text-left">Best For</th>
                 </tr>
               </thead>
               <tbody>
                 {[
-                  ["SBI / Nationalized Banks", "85–90%", "10–15%", "KCC holders, existing customers"],
-                  ["HDFC / ICICI / Axis", "80–85%", "15–20%", "Good CIBIL score wale"],
-                  ["Mahindra Finance / TAFE", "90–100%", "0–10%", "Tractor brand ke through"],
-                  ["John Deere Financial", "90–95%", "5–10%", "John Deere tractor buyers"],
-                  ["NBFC (Muthoot, Shriram)", "85–90%", "10–15%", "Document kam hone par"],
-                  ["Government Subsidy Scheme", "Upto 100%", "0% (subsidy se)", "SC/ST, chhote kisaan"],
-                ].map(([l, p, d, b], i) => (
-                  <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-amber-50"}>
-                    <td className="border border-gray-200 px-3 py-2 font-medium">{l}</td>
-                    <td className="border border-gray-200 px-3 py-2 text-green-700 font-semibold">{p}</td>
-                    <td className="border border-gray-200 px-3 py-2">{d}</td>
-                    <td className="border border-gray-200 px-3 py-2 text-gray-600">{b}</td>
+                  ['SBI / PNB / BOB', '85-90%', '10-15%', 'KCC holders'],
+                  ['HDFC / ICICI / Axis', '80-85%', '15-20%', 'Good CIBIL (700+)'],
+                  ['Mahindra Finance', '90-100%', '0-10%', 'Brand offers'],
+                  ['John Deere Financial', '90-95%', '5-10%', 'JD buyers'],
+                  ['NBFC (Shriram/Muthoot)', '85-90%', '10-15%', 'Low docs'],
+                  ['Govt Subsidy (SMAM)', 'Up to 100%', '0%', 'SC/ST, small farmers'],
+                ].map(([lender, max, down, best], i) => (
+                  <tr key={lender} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-green-50/40 dark:bg-green-900/10'}>
+                    <td className="p-3 border-b border-[var(--color-border)] font-medium text-[var(--color-text)]">{lender}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-green-700 dark:text-green-400 font-bold">{max}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-[var(--color-text-muted)]">{down}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-[var(--color-text-muted)]">{best}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <IB>
+            <strong>Real Example:</strong> ₹5.5 lakh tractor. KCC holder + Mahindra festive offer = 95% finance. Down payment sirf ₹27,500. Yeh mushkil nahi hai agar planning sahi ho.
+          </IB>
+        </section>
+
+        {/* Section 2: Loan Structure & EMI */}
+        <section className="mb-8">
+          <SH>Loan Kaise Kaam Karta Hai — Numbers Samjho</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Tractor loan secured loan hai. Tractor khud collateral. RC hypothecation ke saath register hoti hai lender ke naam par. Jab tak loan poora nahi bhara, technically tractor lender ki property.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
+            <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl text-center">
+              <p className="font-black text-green-800 dark:text-green-300 text-xl mb-1">₹3-20L</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Loan Range</p>
+            </div>
+            <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl text-center">
+              <p className="font-black text-blue-800 dark:text-blue-300 text-xl mb-1">3-7 Yr</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Tenure</p>
+            </div>
+            <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl text-center">
+              <p className="font-black text-amber-800 dark:text-amber-300 text-xl mb-1">8.5-14%</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Interest p.a.</p>
+            </div>
+          </div>
+
+          <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">EMI Reality Check</h3>
+          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-[var(--color-primary)] text-white">
+                  <th className="p-3 text-left">Amount</th>
+                  <th className="p-3 text-left">Rate</th>
+                  <th className="p-3 text-right">3 Yr EMI</th>
+                  <th className="p-3 text-right">5 Yr EMI</th>
+                  <th className="p-3 text-right">7 Yr EMI</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['₹3,00,000', '9%', '₹9,540', '₹6,228', '₹4,797'],
+                  ['₹5,00,000', '9.5%', '₹16,040', '₹10,516', '₹8,134'],
+                  ['₹8,00,000', '10%', '₹25,820', '₹17,003', '₹13,208'],
+                  ['₹12,00,000', '11%', '₹39,280', '₹26,100', '₹20,436'],
+                ].map(([amt, rate, e3, e5, e7], i) => (
+                  <tr key={amt} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-green-50/40 dark:bg-green-900/10'}>
+                    <td className="p-3 border-b border-[var(--color-border)] font-medium text-[var(--color-text)]">{amt}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-[var(--color-text-muted)]">{rate}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-right text-[var(--color-text-muted)]">{e3}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-right text-[var(--color-text-muted)]">{e5}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-right text-[var(--color-text-muted)]">{e7}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs text-[var(--color-text-muted)]">* Approximate. Actual EMI processing fees aur bank rate par depend karti hai.</p>
+        </section>
+
+        {/* Section 3: Application Process */}
+        <section className="mb-8">
+          <SH>Apply Kaise Karein — Ground Process</SH>
+          <StepList>
+            <SI n={1}>Tractor choose karo — HP, brand, authorized dealer se quotation lo. On-road price confirm karo</SI>
+            <SI n={2}>Bank branch jaao ya online apply karo — SBI/PNB/BOB mein agricultural loan section dhundo</SI>
+            <SI n={3}>Application form bharo — personal, land, income, tractor details</SI>
+            <SI n={4}>Documents submit karo — complete set, koi missing nahi</SI>
+            <SI n={5}>Field verification — bank officer zameen check karega, khasra/khatauni verify hoga</SI>
+            <SI n={6}>Sanction letter — 7-15 din mein. Amount, rate, tenure sab likha hoga</SI>
+            <SI n={7}>Dealer ko direct payment — bank seedha dealer account mein bhejta hai. RC process hoti hai</SI>
+            <SI n={8}>EMI shuru — ek mahine baad auto-debit. Time par bharo, CIBIL maintain rahega</SI>
+          </StepList>
+          <WB>
+            <strong>Timing Tip:</strong> Rabi/Kharif season se 1-2 mahine pehle apply karo. Peak season mein banks overloaded hote hain, processing slow. Off-season mein fast approval.
+          </WB>
+        </section>
+
+        {/* Section 4: Hidden Costs */}
+        <section className="mb-8">
+          <SH>Hidden Costs — Jo Dealer Aur Bank Dono Chupate Hain</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Loan amount sirf shuruwat hai. Asli cost RC registration, insurance, aur prepayment mein chhipi hoti hai. 80% cultivators yeh ignore karte hain.
+          </p>
+          <div className="space-y-3 mb-4">
+            <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
+              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-1">Processing + Stamp Duty</p>
+              <p className="text-xs text-[var(--color-text-muted)]">0.5-1% of loan + ₹500-2,000 flat. SBI/PNB flat charge, private banks percentage.</p>
+            </div>
+            <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
+              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-1">RTO Hypothecation</p>
+              <p className="text-xs text-[var(--color-text-muted)]">₹2,000-5,000. RC par lender stamp. Bina iske disbursement nahi.</p>
+            </div>
+            <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
+              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-1">Mandatory Insurance Bundle</p>
+              <p className="text-xs text-[var(--color-text-muted)]">₹15,000-25,000/year. Comprehensive + borrower life insurance compulsory.</p>
+            </div>
+            <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
+              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-1">Pre-Closure Penalty</p>
+              <p className="text-xs text-[var(--color-text-muted)]">2-4% if paid within 12 months. Early repayment par bhi cost.</p>
+            </div>
+            <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
+              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-1">EMI Bounce Fee</p>
+              <p className="text-xs text-[var(--color-text-muted)]">₹500-1,000 per miss. 2 misses = CIBIL drop. 3rd = notice.</p>
+            </div>
+          </div>
+          <DB>
+            <strong>Critical:</strong> Dealer se "on-road cost breakup" maango. Registration, insurance, hypothecation alag se likhwao. Inko loan amount mein include mat karo — warna interest par interest dena padega.
+          </DB>
+        </section>
+
+        {/* Section 5: Real Scenarios */}
+        <section className="mb-8">
+          <SH>4 Real Scenarios — Jo Field Mein Hote Hain</SH>
+
+          <div className="space-y-4">
+            <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-r-xl">
+              <h3 className="font-black text-blue-800 dark:text-blue-300 text-sm mb-2">Existing Loan + Top-Up for Higher HP</h3>
+              <p className="text-xs text-[var(--color-text-muted)] leading-relaxed">
+                Pehle se tractor hai, custom hiring ke liye higher HP chahiye. Land already mortgaged = bank initially 60% finance. KCC top-up facility se 30% extra limit. Hypothecation RTO transfer 12 din. Custom hiring se ₹35,000-45,000/month extra income possible.
+              </p>
+            </div>
+
+            <div className="p-4 bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500 rounded-r-xl">
+              <h3 className="font-black text-green-800 dark:text-green-300 text-sm mb-2">First-Time Woman Farmer</h3>
+              <p className="text-xs text-[var(--color-text-muted)] leading-relaxed">
+                Zameen pita/pati ke naam. Bank reject initially — no legal heir certificate. Panchayat joint liability affidavit + SC category SMAM subsidy = 50% down payment adjust. Mahila kisan = additional 0.25% interest concession. 45 din subsidy approval.
+              </p>
+            </div>
+
+            <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 rounded-r-xl">
+              <h3 className="font-black text-amber-800 dark:text-amber-300 text-sm mb-2">NBFC Emergency → Bank Refinance</h3>
+              <p className="text-xs text-[var(--color-text-muted)] leading-relaxed">
+                Rabi urgent. Mahindra Finance 12.5% par 95% loan (zero down). 8 mahine baad NABARD portal check — SBI 8.9%. Pre-close (2% charges) + new bank loan. Saving: ₹22,400 over 3 years. Emergency = NBFC. Long-term = bank.
+              </p>
+            </div>
+
+            <div className="p-4 bg-purple-50 dark:bg-purple-900/20 border-l-4 border-purple-500 rounded-r-xl">
+              <h3 className="font-black text-purple-800 dark:text-purple-300 text-sm mb-2">FPO Group Purchase</h3>
+              <p className="text-xs text-[var(--color-text-muted)] leading-relaxed">
+                10-15 farmers ne FPO register kiya. NABARD FPO scheme = 3 tractors, group guarantee, no individual collateral. Flat 8.2%. Challenge: seasonal EMI alignment. Solution: Oct-Nov double EMI, baaki months half. Model replicate ho raha hai kai districts mein.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 6: State Subsidy Workflow */}
+        <section className="mb-8">
+          <SH>State Subsidy — Portal Se Bank Tak Ka Exact Workflow</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Subsidy = loan amount kam. Par process technical hai. Yeh exact 2026 workflow hai:
+          </p>
+          <StepList>
+            <SI n={1}><strong>SMAM Portal Registration:</strong> smam.gov.in par farmer ID. Aadhaar + land link. 7-14 din verification</SI>
+            <SI n={2}><strong>Quotation Upload:</strong> Authorized dealer se proforma invoice. Portal par upload. Dealer empaneled status check</SI>
+            <SI n={3}><strong>Bank NOC:</strong> Branch manager se "No Objection Certificate" — loan pending confirmation</SI>
+            <SI n={4}><strong>DAC Meeting:</strong> District Approval Committee monthly meeting. Priority: SC/ST → Women → Marginal → General</SI>
+            <SI n={5}><strong>DBT Transfer:</strong> Approval ke 30-45 din baad subsidy seedha account mein. Bank principal auto-adjust</SI>
+          </StepList>
+
+          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-[var(--color-primary)] text-white">
+                  <th className="p-3 text-left">State</th>
+                  <th className="p-3 text-left">Subsidy %</th>
+                  <th className="p-3 text-left">Max Limit</th>
+                  <th className="p-3 text-left">Time</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['Punjab', '40-50%', '₹2.5L', '60 days'],
+                  ['Haryana', '25-50%', '₹2L', '45 days'],
+                  ['UP', '30-40%', '₹1.8L', '75 days'],
+                  ['MP', '35%', '₹2L', '50 days'],
+                  ['Rajasthan', '25-30%', '₹1.5L', '90 days'],
+                  ['Maharashtra', '20-35%', '₹1.2L', '65 days'],
+                ].map(([state, pct, limit, time], i) => (
+                  <tr key={state} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-green-50/40 dark:bg-green-900/10'}>
+                    <td className="p-3 border-b border-[var(--color-border)] font-medium text-[var(--color-text)]">{state}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-green-700 dark:text-green-400 font-bold">{pct}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-[var(--color-text-muted)]">{limit}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-[var(--color-text-muted)]">{time}</td>
                   </tr>
                 ))}
               </tbody>
@@ -112,509 +338,141 @@ export default function KisanTractorLoan2026() {
           </div>
         </section>
 
-        {/* ── CALCULATOR SECTION ── */}
-        <section className="mb-10">
-          <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl p-6 text-white">
-            <h3 className="text-xl font-bold mb-3">🧮 Free Tractor Loan Calculators</h3>
-            <p className="mb-4 text-green-50">
-              Apply karne se pehle apna EMI calculate karo — bank jaane se pehle fully prepared rahoge!
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <Link href="/calculator/kcc-loan-emi" className="bg-white text-green-700 px-4 py-2 rounded-lg font-bold text-sm hover:bg-green-50 transition-colors">
-                💰 KCC Loan EMI Calculator
-              </Link>
-              <Link href="/calculator/msp-income" className="bg-white text-green-700 px-4 py-2 rounded-lg font-bold text-sm hover:bg-green-50 transition-colors">
-                🌾 MSP Income Calculator
-              </Link>
-              <Link href="/articles/pm-kisan-ekyc-online-2026" className="bg-white text-green-700 px-4 py-2 rounded-lg font-bold text-sm hover:bg-green-50 transition-colors">
-                🔐 eKYC Guide
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* ── SECTION 2 ── */}
-        <section className="mb-10">
-          <h2 className="text-xl sm:text-2xl font-bold text-amber-700 border-b-2 border-amber-200 pb-2 mb-4">
-            Tractor Loan Kaise Kaam Karta Hai?
-          </h2>
-          <p className="text-gray-700 leading-relaxed mb-3">
-            Tractor loan ek secured loan hota hai — matlab tractor khud collateral hota hai. Bank ya finance company tractor ki RC apne naam par ya hypothecation ke saath register karti hai. Jab tak loan poora nahi bhara, technically tractor lender ki property hai.
+        {/* Section 7: Crop Failure Protocol */}
+        <section className="mb-8">
+          <SH>Fasal Kharab Ho Gayi — EMI Kaise Manage Karein</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Mausam, keede, baarish — koi bharosa nahi. Crop fail ≠ loan default. Protocol follow karo:
           </p>
-
-          <h3 className="text-lg font-semibold text-amber-600 mb-3">Tractor Loan Ki Basic Structure:</h3>
-          <div className="grid sm:grid-cols-3 gap-4 mb-5">
-            {[
-              { label: "Loan Amount", value: "₹3 lakh – ₹20 lakh", desc: "Tractor price ke 80–100% tak" },
-              { label: "Tenure", value: "3 – 7 saal", desc: "Monthly EMI mein chunkaana" },
-              { label: "Interest Rate", value: "8.5% – 14% p.a.", desc: "Bank aur scheme ke hisaab se" },
-            ].map((item, i) => (
-              <div key={i} className="bg-amber-50 border-2 border-amber-200 rounded-xl p-4 text-center">
-                <p className="text-xs text-gray-500 mb-1">{item.label}</p>
-                <p className="text-lg font-bold text-amber-800">{item.value}</p>
-                <p className="text-xs text-gray-600 mt-1">{item.desc}</p>
+          <div className="space-y-3 mb-4">
+            <div className="flex gap-3 p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
+              <span className="text-red-600 dark:text-red-400 font-black text-lg shrink-0">48h</span>
+              <div>
+                <p className="font-bold text-[var(--color-text)] text-sm">Bank Inform Karo Immediately</p>
+                <p className="text-xs text-[var(--color-text-muted)] mt-1">Crop damage certificate tehsildar/KVK se lo. Written application do. Phone call ka record rakho.</p>
               </div>
-            ))}
-          </div>
-
-          <p className="text-gray-700 leading-relaxed mb-3">
-            Ek common example — ₹5,00,000 ka tractor loan, 5 saal ke liye, 9.5% annual interest par. Monthly EMI bani approximately <strong>₹10,500</strong>. Fasal aane par ek do EMI zyada bhar ke tenure bhi kam kiya ja sakta hai.
-          </p>
-
-          <h3 className="text-lg font-semibold text-amber-600 mb-3">EMI Calculation Example:</h3>
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse text-sm">
-              <thead>
-                <tr className="bg-amber-700 text-white">
-                  <th className="border border-amber-600 px-3 py-2">Loan Amount</th>
-                  <th className="border border-amber-600 px-3 py-2">Interest Rate</th>
-                  <th className="border border-amber-600 px-3 py-2">3 Saal EMI</th>
-                  <th className="border border-amber-600 px-3 py-2">5 Saal EMI</th>
-                  <th className="border border-amber-600 px-3 py-2">7 Saal EMI</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  ["₹3,00,000", "9%", "₹9,540", "₹6,228", "₹4,797"],
-                  ["₹5,00,000", "9.5%", "₹16,040", "₹10,516", "₹8,134"],
-                  ["₹8,00,000", "10%", "₹25,820", "₹17,003", "₹13,208"],
-                  ["₹12,00,000", "11%", "₹39,280", "₹26,100", "₹20,436"],
-                ].map((row, i) => (
-                  <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-amber-50"}>
-                    {row.map((cell, j) => (
-                      <td key={j} className={`border border-gray-200 px-3 py-2 text-center ${j === 0 ? "font-semibold" : ""}`}>{cell}</td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="text-xs text-gray-400 mt-2">* Approximate values. Actual EMI bank ke rate aur processing fees par depend karti hai.</p>
-        </section>
-
-        {/* Image 2 */}
-        <figure className="my-8 rounded-xl overflow-hidden shadow-lg">
-          <Image 
-            src="/images/articles/kisan-tractor-loan-2026/bank-loan-process.webp" 
-            alt="Bank Se Tractor Loan Kaise Le — Process aur Documents" 
-            className="w-full h-44 sm:h-60 object-cover" 
-            width={800} 
-            height={300}
-            loading="lazy"
-          />
-          <figcaption className="bg-blue-800 text-white text-xs sm:text-sm text-center py-2 px-4">
-            Bank Aur Finance Company — Tractor Loan Ka Sabse Bada Source
-          </figcaption>
-        </figure>
-
-        {/* ── SECTION 3 ── */}
-        <section className="mb-10">
-          <h2 className="text-xl sm:text-2xl font-bold text-amber-700 border-b-2 border-amber-200 pb-2 mb-4">
-            Bank Se Tractor Loan Kaise Le? Step-by-Step Process
-          </h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Yeh process zyaadatar nationalized banks mein almost same hoti hai. Neeche detail mein bataya gaya hai:
-          </p>
-
-          <div className="space-y-3 mb-6">
-            {[
-              { step: "Step 1", title: "Tractor Choose Karein", desc: "Pehle decide karein — konsa tractor chahiye, HP kya chahiye, brand kya prefer karte hain. Authorized dealer se quotation lein. On-road price confirm karein." },
-              { step: "Step 2", title: "Bank Branch Jaayein Ya Online Apply Karein", desc: "Apne naye SBI/PNB/Bank of Baroda branch mein jaayein ya online portal par Kisan Tractor Loan section mein apply karein." },
-              { step: "Step 3", title: "Loan Application Form Bharein", desc: "Tractor loan application form milega. Usme personal details, land details, income details aur tractor details fill karein." },
-              { step: "Step 4", title: "Documents Submit Karein", desc: "Saare required documents bank officer ko dein. Checklist neeche di gayi hai. Documents complete hone chahiye — koi bhi missing nahi." },
-              { step: "Step 5", title: "Field Verification", desc: "Bank officer aapki zameen verify karne aa sakta hai. Khasra/Khatauni check hogi. Land ki value assess hogi collateral ke roop mein." },
-              { step: "Step 6", title: "Loan Sanction", desc: "Agar sab theek raha toh 7–15 din mein loan sanction ho jaata hai. Sanction letter milega jisme amount, rate, tenure sab hoga." },
-              { step: "Step 7", title: "Tractor Dealer Ko Payment", desc: "Bank seedha dealer ke account mein payment karti hai. Aap dealer se tractor receive karte hain aur RC process hoti hai." },
-              { step: "Step 8", title: "EMI Shuru", desc: "Ek mahine baad pehli EMI auto-debit hogi. Kisan account ya KCC account se kati hai. Time par bharein — CIBIL score maintain rahega." },
-            ].map((item, i) => (
-              <div key={i} className="flex gap-4 items-start bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
-                <div className="flex-shrink-0 w-14 h-14 bg-amber-600 text-white rounded-full flex flex-col items-center justify-center text-xs font-bold text-center leading-tight">
-                  <span>{item.step.split(" ")[0]}</span>
-                  <span>{item.step.split(" ")[1]}</span>
-                </div>
-                <div>
-                  <p className="font-semibold text-gray-800 mb-1">{item.title}</p>
-                  <p className="text-gray-600 text-sm">{item.desc}</p>
-                </div>
+            </div>
+            <div className="flex gap-3 p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
+              <span className="text-blue-600 dark:text-blue-400 font-black text-lg shrink-0">6-12m</span>
+              <div>
+                <p className="font-bold text-[var(--color-text)] text-sm">Moratorium Request Karo</p>
+                <p className="text-xs text-[var(--color-text-muted)] mt-1">NABARD guidelines: crop loss par EMI pause. Interest accrue hoga, penalty nahi. Written approval lo.</p>
               </div>
-            ))}
-          </div>
-        </section>
-
-        {/* ── SECTION 4 – PRACTICAL INSIGHTS ── */}
-        <section className="mb-10">
-          <h2 className="text-xl sm:text-2xl font-bold text-amber-700 border-b-2 border-amber-200 pb-2 mb-4">
-            Practical Insights — Loan Lene Ke Real Challenges Aur Solutions
-          </h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Theory se zyada practical examples se samajh aata hai. Neeche 4 common scenarios hain jo kai kisano face karte hain, aur unke solutions:
-          </p>
-
-          <div className="space-y-6">
-            <div className="bg-white border-l-4 border-blue-500 rounded-r-lg p-5 shadow-sm">
-              <h3 className="font-bold text-lg text-blue-800 mb-2">📍 Scenario 1: Existing Loan Ke Saath Additional Financing</h3>
-              <p className="text-gray-700 text-sm leading-relaxed mb-2">
-                Kai kisano ke paas pehle se tractor hota hai, lekin woh gaon ke doosre kisano ko rent par tractor dene ke liye higher HP chahte hain. Bank ne initially 60% financing di kyunki land already mortgage thi. <strong>KCC top-up facility</strong> use karke 30% extra limit nikalwa sakte hain. Hypothecation RTO mein register hone mein 12 din lag sakte hain, kyunki purane RC par already hypothecation stamp hota hai. Directly Regional Transport Officer ko personal visit karke NOC clear karwaya ja sakta hai. Custom hiring se mahine mein ₹35,000–₹45,000 extra kamaya ja sakta hai.
-              </p>
             </div>
-
-            <div className="bg-white border-l-4 border-green-500 rounded-r-lg p-5 shadow-sm">
-              <h3 className="font-bold text-lg text-green-800 mb-2">📍 Scenario 2: First-Time Woman Farmer</h3>
-              <p className="text-gray-700 text-sm leading-relaxed mb-2">
-                Kai mahila kisanon ki zameen pita ji ya pati ke naam par hoti hai. Bank ne initially loan reject kar diya kyunki "legal heir certificate" nahi tha. <strong>Panchayat level se joint liability affidavit</strong> banwaya ja sakta hai aur SC category ke under SMAM subsidy apply ki ja sakti hai. 45 din baad subsidy approve ho sakti hai, bank ne 50% down payment adjust kar deta hai. Mahila kisan hone par additional 0.25% interest concession milta hai.
-              </p>
-            </div>
-
-            <div className="bg-white border-l-4 border-amber-500 rounded-r-lg p-5 shadow-sm">
-              <h3 className="font-bold text-lg text-amber-800 mb-2">📍 Scenario 3: NBFC vs Bank Refinancing</h3>
-              <p className="text-gray-700 text-sm leading-relaxed mb-2">
-                Emergency mein tractor turant chahiye hota hai kyunki Rabi season shuru hone wala hota hai. Kai kisano ne Mahindra Finance se 12.5% interest par 95% loan le liya (zero down payment offer). 8 mahine baad NABARD refinancing portal par check kiya ki bank 8.9% de raha hai. Tractor ki RC clear karwai, existing loan pre-close kiya (2% foreclosure charges lage), aur SBI se naya loan le liya. Total saving: ₹22,400 over 3 saal. Lesson: Emergency mein NBFC theek hai, lekin long-term ke liye bank better hai.
-              </p>
-            </div>
-
-            <div className="bg-white border-l-4 border-purple-500 rounded-r-lg p-5 shadow-sm">
-              <h3 className="font-bold text-lg text-purple-800 mb-2">📍 Scenario 4: Group Tractor Purchase Through FPO</h3>
-              <p className="text-gray-700 text-sm leading-relaxed mb-2">
-                10-15 kisano ne milkar FPO register kiya. NABARD FPO scheme ke under unhonne 3 tractors ek saath finance kiye. Group guarantee hone ki wajah se kisi ko bhi individual collateral nahi dena pada. Interest rate flat 8.2% mila. Sabse bada challenge tha <strong>repayment schedule alignment</strong> — kyunki har kisan ki fasal alag time par bechti hai. "Seasonal EMI structure" request kiya bank se, jisme Oct-Nov mein double EMI aur baaki mahino mein half EMI pay hoti hai. Yeh model kai districts mein replicate ho raha hai.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* ── SECTION 5 – HIDDEN COSTS ── */}
-        <section className="mb-10">
-          <h2 className="text-xl sm:text-2xl font-bold text-amber-700 border-b-2 border-amber-200 pb-2 mb-4">
-            Hidden Costs Jo Bank Kabhi Nahi Batata
-          </h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Loan amount sirf shuruwat hai. Asli cost tab pata chalta hai jab RC register karte hain, insurance lete hain, aur prepayment karte hain. Neeche wo hidden charges hain jo 80% kisan ignore karte hain:
-          </p>
-
-          <div className="grid sm:grid-cols-2 gap-4 mb-5">
-            {[
-              { title: "Processing & Stamp Duty", cost: "0.5% – 1% of loan + ₹500-₹2,000 flat", tip: "SBI/PNB mein flat charge hai, private banks percentage lete hain." },
-              { title: "RTO Hypothecation Registration", cost: "₹2,000 – ₹5,000", tip: "Tractor RC par lender ka naam stamp hota hai. Bina iske loan disburse nahi hoga." },
-              { title: "Mandatory Insurance Bundle", cost: "₹15,000 – ₹25,000/year", tip: "Tractor comprehensive + borrower life insurance compulsory hota hai." },
-              { title: "Pre-Closure Charges", cost: "2% – 4% (if paid within 12 months)", tip: "Agar 1 saal se pehle loan band karein toh penalty lagti hai." },
-              { title: "EMI Bounce / Late Payment Fee", cost: "₹500 – ₹1,000 per missed installment", tip: "2 baar miss karne par CIBIL drop hota hai, 3rd baar se notice aata hai." },
-            ].map((item, i) => (
-              <div key={i} className="bg-red-50 border border-red-200 rounded-lg p-4">
-                <h4 className="font-bold text-red-800 text-sm mb-1">{item.title}</h4>
-                <p className="text-gray-700 text-xs font-semibold mb-1">Amount: {item.cost}</p>
-                <p className="text-gray-600 text-xs">{item.tip}</p>
+            <div className="flex gap-3 p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
+              <span className="text-green-600 dark:text-green-400 font-black text-lg shrink-0">PMFBY</span>
+              <div>
+                <p className="font-bold text-[var(--color-text)] text-sm">Insurance Claim Link Karo</p>
+                <p className="text-xs text-[var(--color-text-muted)] mt-1">Claim amount directly loan account adjust. Form 6 (Crop Loss) submit karo through bank.</p>
               </div>
-            ))}
-          </div>
-          <div className="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg">
-            <p className="text-amber-800 text-sm font-semibold">💡 Pro Tip:</p>
-            <p className="text-amber-700 text-sm mt-1">
-              Loan lene se pehle <strong>"on-road cost breakup"</strong> maango. Dealer ke quotation mein registration, insurance, aur hypothecation alag se likha hota hai. Inko loan amount mein include mat karo — warna interest par interest pay karna padega.
-            </p>
-          </div>
-        </section>
-
-        {/* ── SECTION 6 – CROP FAILURE PROTOCOL ── */}
-        <section className="mb-10">
-          <h2 className="text-xl sm:text-2xl font-bold text-amber-700 border-b-2 border-amber-200 pb-2 mb-4">
-            Agar Fasal Kharab Ho Jaye Toh EMI Kaise Manage Karein?
-          </h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Kheti mein mausam, keede, ya baarish ka koi bharosa nahi hota. Agar crop fail ho gaya toh tractor loan default nahi karna chahiye. Neeche step-by-step protocol hai jo 2026 mein sabhi banks follow karte hain:
-          </p>
-
-          <ol className="space-y-3 mb-5 list-decimal list-inside text-gray-700">
-            <li><strong>48 Hours Ke Andar Bank Inform Karein:</strong> Crop damage certificate tehsildar ya Krishi Vigyan Kendra se lein. Bank ko written application dein.</li>
-            <li><strong>Loan Moratorium Request Karein:</strong> NABARD guidelines ke under crop loss par 6–12 mahine tak EMI pause hoti hai. Interest accrue hota rahega, lekin penalty nahi lagegi.</li>
-            <li><strong>PMFBY Claim Link Karein:</strong> Agar aapne fasal Bima liya hai, toh claim amount directly loan account mein adjust ho sakta hai. Form 6 (Crop Loss) submit karein.</li>
-            <li><strong>Restructuring Option:</strong> Bank tenure 5 se 7 saal kar sakta hai, ya EMI amount 20% kam kar sakta hai. CIBIL par "Restructured" tag nahi aata agar timely inform kiya.</li>
-            <li><strong>Custom Hiring Se Income Badhayein:</strong> Apna tractor pados ke kisano ko rent par dein. 1 din ka rent ₹2,500–₹4,000 hota hai. 10 din kaam = 1 mahina EMI cover.</li>
-          </ol>
-          <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-            <p className="text-green-800 text-sm font-semibold">⚠️ Warning:</p>
-            <p className="text-green-700 text-sm mt-1">
-              EMI miss karne ke baad bank ko phone uthana band mat karein. Communication break hone par loan NPA (Non-Performing Asset) declare ho jata hai. NPA hone par tractor seizure ka notice 90 din ke andar bheja jaata hai. Hamesha written record maintain karein.
-            </p>
-          </div>
-        </section>
-
-        {/* ── SECTION 7 – STATE SUBSIDY DEEP DIVE ── */}
-        <section className="mb-10">
-          <h2 className="text-xl sm:text-2xl font-bold text-amber-700 border-b-2 border-amber-200 pb-2 mb-4">
-            State Subsidy Application — Portal Se Lekar Bank Tak Ka Safar
-          </h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Subsidy milne ka matlab loan amount kam hona, lekin process thoda technical hai. Neeche exact workflow hai jo 2026 mein state agriculture departments follow karte hain:
-          </p>
-
-          <div className="bg-white border border-gray-200 rounded-lg p-5 mb-5">
-            <h3 className="font-bold text-amber-800 mb-3">Step-by-Step Subsidy Workflow:</h3>
-            <ul className="space-y-2 text-sm text-gray-700">
-              <li><strong>1. SMAM Portal Registration:</strong> <code>smam.gov.in</code> par farmer ID banayein. Aadhaar + land record link karein. 7-14 din verification.</li>
-              <li><strong>2. Quotation Upload:</strong> Authorized dealer se tractor proforma invoice lein. Portal par upload karein. Dealer ka empaneled status check karein.</li>
-              <li><strong>3. Bank NOC:</strong> Subsidy ke liye bank se "No Objection Certificate" chahiye ki loan pending hai. Yeh branch manager se hi milta hai.</li>
-              <li><strong>4. District Approval Committee (DAC):</strong> Mahine ke 15 din baad DAC meeting hoti hai. Aapki application rank hoti hai. Priority: SC/ST &gt; Women &gt; Marginal Farmer &gt; General.</li>
-              <li><strong>5. DBT Transfer:</strong> Approval ke 30-45 din baad subsidy seedha aapke account mein aati hai. Bank automatically loan principal adjust kar leta hai.</li>
-            </ul>
-          </div>
-
-          <div className="overflow-x-auto mb-4">
-            <table className="w-full border-collapse text-sm">
-              <thead>
-                <tr className="bg-amber-700 text-white">
-                  <th className="border border-amber-600 px-3 py-2">State</th>
-                  <th className="border border-amber-600 px-3 py-2">Subsidy %</th>
-                  <th className="border border-amber-600 px-3 py-2">Max Limit</th>
-                  <th className="border border-amber-600 px-3 py-2">Processing Time</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  ["Punjab", "40–50%", "₹2.5 Lakh", "60 Days"],
-                  ["Haryana", "25–50%", "₹2 Lakh", "45 Days"],
-                  ["UP", "30–40%", "₹1.8 Lakh", "75 Days"],
-                  ["MP", "35%", "₹2 Lakh", "50 Days"],
-                  ["Rajasthan", "25–30%", "₹1.5 Lakh", "90 Days"],
-                  ["Maharashtra", "20–35%", "₹1.2 Lakh", "65 Days"],
-                ].map((row, i) => (
-                  <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-amber-50"}>
-                    {row.map((cell, j) => (
-                      <td key={j} className={`border border-gray-200 px-3 py-2 ${j === 0 ? "font-medium" : ""}`}>{cell}</td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        {/* ── SECTION 8 – FINANCE COMPANIES VS BANKS ── */}
-        <section className="mb-10">
-          <h2 className="text-xl sm:text-2xl font-bold text-amber-700 border-b-2 border-amber-200 pb-2 mb-4">
-            Tractor Finance Companies vs Banks — Kaun Behtar Hai?
-          </h2>
-          <p className="text-gray-700 leading-relaxed mb-3">
-            Kai kisano ne dono options explore kiye. Ultimately bank se loan liya kyunki interest rate kam thi. Lekin finance companies ke apne fayde hain. Neeche comparison hai:
-          </p>
-
-          <div className="overflow-x-auto mb-4">
-            <table className="w-full border-collapse text-sm">
-              <thead>
-                <tr className="bg-amber-700 text-white">
-                  <th className="border border-amber-600 px-3 py-2">Factor</th>
-                  <th className="border border-amber-600 px-3 py-2">Bank (SBI/PNB etc.)</th>
-                  <th className="border border-amber-600 px-3 py-2">Finance Company (Mahindra, TAFE)</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  ["Interest Rate", "8.5–11% p.a.", "10–14% p.a."],
-                  ["Processing Time", "7–15 din", "3–7 din"],
-                  ["Down Payment", "10–15%", "0–10% (brand offers)"],
-                  ["Documents", "Zyada thorough", "Thoda flexible"],
-                  ["CIBIL Requirement", "650+", "600+ (flexible)"],
-                  ["Subsidy Integration", "Easy (DBT link)", "Limited"],
-                  ["After-sales Service", "Not provided", "Brand se deal"],
-                  ["Best For", "Low interest chahiye", "Quick approval / low down payment"],
-                ].map((row, i) => (
-                  <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-amber-50"}>
-                    <td className="border border-gray-200 px-3 py-2 font-medium">{row[0]}</td>
-                    <td className="border border-gray-200 px-3 py-2 text-blue-700">{row[1]}</td>
-                    <td className="border border-gray-200 px-3 py-2 text-green-700">{row[2]}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        {/* Image 3 */}
-        <figure className="my-8 rounded-xl overflow-hidden shadow-lg">
-          <Image 
-            src="/images/articles/kisan-tractor-loan-2026/tractor-approved.webp" 
-            alt="Tractor Loan Approved — Kisan Ko Tractor Mil Gaya" 
-            className="w-full h-44 sm:h-60 object-cover" 
-            width={800} 
-            height={300}
-            loading="lazy"
-          />
-          <figcaption className="bg-green-800 text-white text-xs sm:text-sm text-center py-2 px-4">
-            Loan Approve — Kheti Ka Kaam Aasaan Ho Gaya
-          </figcaption>
-        </figure>
-
-        {/* ── SECTION 9 – REJECTION REASONS ── */}
-        <section className="mb-10">
-          <h2 className="text-xl sm:text-2xl font-bold text-amber-700 border-b-2 border-amber-200 pb-2 mb-4">
-            Common Rejection Reasons Aur Loan Approval Tips
-          </h2>
-
-          <h3 className="text-lg font-semibold text-amber-600 mb-3">Loan Reject Kyon Hota Hai — 7 Main Reasons:</h3>
-          <div className="space-y-2 mb-5">
-            {[
-              { r: "Low CIBIL Score (below 600)", s: "Loan lene se 6 mahine pehle existing loans samay par bharein. Credit card bills clear karein." },
-              { r: "Incomplete Documents", s: "Upar di gayi checklist ke saath saare documents pehle se photocopy karein. Koi bhi missing mat rakhein." },
-              { r: "Land Dispute / Undocumented Land", s: "Zameen ka naam aapke ya family ke naam par clear hona chahiye. Dispute wali zameen pe loan nahi milta." },
-              { r: "Too Many Existing Loans", s: "Ek saath zyada loans hone par FOIR (Fixed Obligation to Income Ratio) bad ho jaata hai. Kuch loans close karein pehle." },
-              { r: "Incorrect / Mismatched Information", s: "Form mein naam, Aadhaar, aur land records sab ek jaisi spelling mein honi chahiye. Mismatch = instant problem." },
-              { r: "Land Too Small", s: "Kuch banks minimum 2–5 bigha maangti hain. Agar itni zameen nahi hai, NBFC ya government scheme try karein." },
-              { r: "Previous Loan Default", s: "Purana koi bhi loan ya KCC default hone se bank seedha reject kar sakti hai. Pehle settlement karein." },
-            ].map((item, i) => (
-              <div key={i} className="border border-red-100 rounded-lg overflow-hidden">
-                <div className="flex items-center gap-2 bg-red-50 px-4 py-2">
-                  <span className="text-red-500 font-bold text-sm">❌</span>
-                  <p className="font-semibold text-red-800 text-sm">{item.r}</p>
-                </div>
-                <div className="px-4 py-2 bg-white">
-                  <p className="text-green-700 text-sm"><strong>✅ Solution:</strong> {item.s}</p>
-                </div>
+            </div>
+            <div className="flex gap-3 p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
+              <span className="text-amber-600 dark:text-amber-400 font-black text-lg shrink-0">Rent</span>
+              <div>
+                <p className="font-bold text-[var(--color-text)] text-sm">Custom Hiring Se Income</p>
+                <p className="text-xs text-[var(--color-text-muted)] mt-1">Tractor padosi kisanon ko rent par do. ₹2,500-4,000/day. 10 din = 1 month EMI cover.</p>
               </div>
-            ))}
-          </div>
-
-          <h3 className="text-lg font-semibold text-amber-600 mb-3">Loan Approval Ke Liye 5 Smart Tips:</h3>
-          <ul className="space-y-2 mb-2">
-            {[
-              "Pehle apna CIBIL score check karein (free mein — cibil.com ya Paytm app se). 700+ target rakho.",
-              "Jo bank mein already account hai (salary/KCC/FD), wahan pehle apply karein — known customer ko preference milti hai.",
-              "Tractor ka model wisely choose karein — bank ke approved tractor models ki list hoti hai. Usse bahar ka model reject ho sakta hai.",
-              "Loan amount reasonable rakhein — 60–70% income se zyada EMI approve nahi hoti.",
-              "Ek baar mein multiple banks mein apply mat karein — har application CIBIL mein inquiry hoti hai jo score girata hai.",
-            ].map((tip, i) => (
-              <li key={i} className="flex gap-2 text-gray-700 text-sm items-start">
-                <span className="text-amber-600 font-bold flex-shrink-0">#{i + 1}</span>
-                <span>{tip}</span>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        {/* ── SECTION 10 – FUTURE TRENDS ── */}
-        <section className="mb-10">
-          <h2 className="text-xl sm:text-2xl font-bold text-amber-700 border-b-2 border-amber-200 pb-2 mb-4">
-            Future Trends 2026-27: Electric Tractors & AI Credit Scoring
-          </h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Agri-finance tezi se modernize ho raha hai. 2026 ke baad jo naye trends aa rahe hain, unki taiyari pehle se karna chahiye:
-          </p>
-
-          <div className="grid sm:grid-cols-2 gap-4 mb-5">
-            <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-              <h4 className="font-bold text-green-800 mb-2">⚡ Electric Tractor Financing</h4>
-              <p className="text-gray-700 text-sm">
-                Mahindra, Sonalika, aur Swaraj ne electric tractors launch kar diye hain. Inki running cost diesel se 70% kam hai. Banks 2026 se electric tractors par <strong>flat 7.5% interest</strong> offer kar rahe hain. Battery warranty 5 saal ki hai, isliye loan tenure bhi 5 saal tak extend ho raha hai.
-              </p>
-            </div>
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-              <h4 className="font-bold text-blue-800 mb-2">📊 AI-Based Agri Credit Scoring</h4>
-              <p className="text-gray-700 text-sm">
-                Ab CIBIL ke alawa "Agri-Data Score" use ho raha hai. Satellite imagery se crop health, soil moisture, aur harvest yield predict kiya jaata hai. Agar aapka farm digital data generate karta hai (soil test, weather station, drone mapping), toh bank automatically higher limit approve karta hai bina manual verification ke.
-              </p>
             </div>
           </div>
-          <div className="bg-purple-50 border-l-4 border-purple-500 p-4 rounded-r-lg">
-            <p className="text-purple-800 text-sm font-semibold">🔮 2027 Prediction:</p>
-            <p className="text-purple-700 text-sm mt-1">
-              RBI "Pay-As-You-Farm" model launch karne wala hai. Isme EMI sirf harvest season mein deduct hogi, baaki mahino mein zero outflow. Sensor-based tractor usage tracking install hoga, aur interest rate dynamically adjust hoga based on actual farm income.
-            </p>
-          </div>
+          <DB>
+            <strong>Warning:</strong> EMI miss karke phone uthana band mat karo. Communication break = NPA declaration. 90 din mein seizure notice. Hamesha written record maintain karo.
+          </DB>
         </section>
 
-        {/* ── FAQ ── */}
-        <section className="mb-10">
-          <h2 className="text-xl sm:text-2xl font-bold text-amber-700 border-b-2 border-amber-200 pb-2 mb-6">
-            FAQ — Aksar Pooche Jaane Wale Sawaal
-          </h2>
+        {/* Section 8: Rejection Reasons */}
+        <section className="mb-8">
+          <SH>Loan Reject Kyun Hota Hai — 7 Reasons + Fix</SH>
           <div className="space-y-3">
             {[
-              { q: "Kya bina zameen ke tractor loan mil sakta hai?", a: "Zyaadatar banks ke liye zameen zaroori hai. Lekin kuch NBFCs income proof aur guarantor ke basis par loan de deti hain. Agar aap contract farming karte hain ya FPO member hain, toh bhi options hain." },
-              { q: "Purana/second-hand tractor ke liye loan milta hai?", a: "Haan, kuch banks aur finance companies second-hand tractors ke liye bhi loan deti hain — lekin amount thodi kam hogi (tractor ki current market value ka 70–80%) aur interest slightly zyada." },
-              { q: "EMI nahi bhar paye toh kya hoga?", a: "Ek do EMI miss hone par bank notice bhejta hai. Regularly miss karne par tractor seize ho sakta hai. Agar problem ho toh turant bank se baat karein — restructuring ya moratorium ka option maangein." },
-              { q: "Tractor loan ke liye kitni zameen chahiye?", a: "Bank ke hisaab se alag hota hai. SBI mein generally 2 hectare (5 bigha), chhote banks ya NBFCs mein 1 bigha bhi kaafi ho sakti hai. Government subsidy schemes mein requirements kam hoti hain." },
-              { q: "Kya joint application possible hai tractor loan mein?", a: "Haan — husband-wife ya family member saath mein co-applicant ho sakte hain. Isse combined income consider hoti hai aur loan amount zyada milta hai." },
-              { q: "Tractor loan par koi insurance hota hai?", a: "Haan — bank usually tractor insurance aur borrower ka life insurance compulsory karta hai. Insurance premium loan amount mein add ho jaata hai ya alag se dena padta hai." },
-              { q: "Processing fee kitni hoti hai?", a: "Generally loan amount ka 0.5–1% processing fee hoti hai. SBI mein usually ₹500–₹2,000 flat charge hota hai. NBFC mein zyada ho sakta hai — apply se pehle poochhein." },
-            ].map((item, i) => (
-              <details key={i} className="border-2 border-amber-100 rounded-xl overflow-hidden">
-                <summary className="bg-amber-50 px-5 py-3 cursor-pointer font-semibold text-amber-900 text-sm flex justify-between items-center gap-2">
-                  <span>Q{i + 1}: {item.q}</span>
-                  <span className="text-amber-500 flex-shrink-0">▼</span>
-                </summary>
-                <div className="px-5 py-3 bg-white">
-                  <p className="text-gray-700 text-sm leading-relaxed">{item.a}</p>
+              { err: 'CIBIL Below 600', fix: '6 mahine pehle existing loans time par bharo. Credit card bills clear. Free check: cibil.com ya Paytm.' },
+              { err: 'Incomplete Documents', fix: 'Checklist se sab ready rakho. 2 photocopies + digital scan. Missing document = instant delay.' },
+              { err: 'Land Dispute / Undocumented', fix: 'Naam clear hona chahiye. Dispute wali zameen = rejection. Revenue court se pehle settle karo.' },
+              { err: 'Too Many Existing Loans', fix: 'FOIR (Fixed Obligation to Income Ratio) high. Kuch loans close karo pehle. KCC top-up better option.' },
+              { err: 'Name Mismatch', fix: 'Aadhaar = bank = land records = form. Same spelling. Chhoti difference = bada delay.' },
+              { err: 'Land Too Small (<2 bigha)', fix: 'NBFC try karo. Govt subsidy scheme mein requirements kam. FPO group loan option.' },
+              { err: 'Previous Default', fix: 'Settlement certificate lo pehle. One-time settlement possible. Written proof bank ko do.' },
+            ].map(({ err, fix }) => (
+              <div key={err} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl overflow-hidden">
+                <div className="bg-red-50 dark:bg-red-900/20 border-b border-red-100 dark:border-red-800 px-4 py-2.5">
+                  <p className="font-black text-red-800 dark:text-red-300 text-sm">❌ {err}</p>
                 </div>
-              </details>
-            ))}
-          </div>
-        </section>
-
-        {/* ── CONCLUSION ── */}
-        <section className="mb-10">
-          <h2 className="text-xl sm:text-2xl font-bold text-amber-700 border-b-2 border-amber-200 pb-2 mb-4">
-            Conclusion — Aap Bhi Tractor Le Sakte Hain
-          </h2>
-          <div className="bg-amber-700 text-white rounded-xl p-6 mb-6">
-            <p className="leading-relaxed mb-3">
-              Yeh guide yeh prove karti hai — agar sahi planning ho, documents tayyar hon aur sahi bank/scheme chunin, toh tractor loan lena utna mushkil nahi jitna lagta hai. Down payment ki bhi poori zaroorat nahi — 10–15% se bhi kaam chala sakte hain, aur agar government subsidy mile toh aur bhi better.
-            </p>
-            <p className="leading-relaxed mb-3">
-              Sabse zaroori baat — pehle research karein. Apne state ki agriculture scheme check karein. CIBIL score theek karein. KCC banwayein. Phir bank se baat karein. Ek systematic approach se loan lena aasan ho jaata hai.
-            </p>
-            <p className="leading-relaxed">
-              Kai kisano ne apna tractor lekar kheti ki laagat 40% kam kar di hai. Neighbouring farms mein bhi woh apna tractor bheja dete hain aur extra income kamate hain. Ek loan ne unki puri farming economy badal di.
-            </p>
-          </div>
-
-          <div className="bg-gray-50 rounded-xl p-5 border border-gray-200 mb-6">
-            <h3 className="font-bold text-gray-800 mb-3">🔗 Related Articles (Aage Kya Padhein):</h3>
-            <ul className="space-y-2">
-              <li className="flex items-center gap-2">
-                <span className="text-amber-500">→</span>
-                <Link href="/articles/pm-kisan-23vi-kist-2026-status-check" className="text-amber-700 text-sm font-medium hover:underline">
-                  PM Kisan 23vi Kist Status Check 2026
-                </Link>
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-amber-500">→</span>
-                <Link href="/articles/pm-kisan-ekyc-online-2026" className="text-amber-700 text-sm font-medium hover:underline">
-                  PM Kisan eKYC Online Guide 2026
-                </Link>
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-amber-500">→</span>
-                <Link href="/articles/pmfby-crop-insurance-2026" className="text-amber-700 text-sm font-medium hover:underline">
-                  PMFBY Crop Insurance Complete Guide
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        {/* Quick Summary */}
-        <div className="bg-yellow-50 border-2 border-yellow-300 rounded-xl p-6 mb-8">
-          <h3 className="font-bold text-yellow-900 text-lg mb-3">⚡ Quick Summary — Kisan Tractor Loan 2026</h3>
-          <div className="grid sm:grid-cols-2 gap-2 text-sm">
-            {[
-              ["Loan Amount", "₹3 lakh – ₹20 lakh"],
-              ["Interest Rate", "8.5% – 14% p.a."],
-              ["Down Payment", "0% – 15% (scheme wise)"],
-              ["Tenure", "3 – 7 saal"],
-              ["KCC Benefit", "Extra 0.5–1% rate cut"],
-              ["Govt Subsidy", "25–50% (SMAM scheme)"],
-              ["Processing Time", "7–15 din (bank)"],
-              ["CIBIL Required", "650+ (700+ best)"],
-            ].map(([k, v], i) => (
-              <div key={i} className="flex gap-2">
-                <span className="font-semibold text-yellow-800 flex-shrink-0">{k}:</span>
-                <span className="text-gray-700">{v}</span>
+                <div className="p-4">
+                  <div className="flex items-start gap-2 bg-green-50 dark:bg-green-900/20 rounded-lg p-3">
+                    <span className="text-green-600 dark:text-green-400 font-black text-xs shrink-0 mt-0.5">FIX:</span>
+                    <p className="text-xs text-green-800 dark:text-green-300 leading-relaxed">{fix}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
+        </section>
+
+        {/* Section 9: Future Trends */}
+        <section className="mb-8">
+          <SH>2026-27 Trends — Tayyar Raho</SH>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+            <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
+              <p className="font-black text-green-800 dark:text-green-300 text-sm mb-1">Electric Tractors</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Mahindra, Sonalika, Swaraj launched. Running cost 70% kam. Banks flat 7.5% interest. Battery warranty 5 saal.</p>
+            </div>
+            <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
+              <p className="font-black text-blue-800 dark:text-blue-300 text-sm mb-1">AI Agri Credit Scoring</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Satellite crop health + soil moisture data = auto credit score. Digital farm data generate karo = higher limit without manual verification.</p>
+            </div>
+          </div>
+          <IB>
+            <strong>2027 Prediction:</strong> RBI "Pay-As-You-Farm" model launch karne wala hai. EMI sirf harvest season mein deduct. Baaki months zero outflow. Sensor-based usage tracking se interest dynamically adjust.
+          </IB>
+        </section>
+
+        {/* FAQ */}
+        <section className="mb-8">
+          <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
+            Real Sawal — Seedhe Jawaab
+          </h2>
+          <FAQBlock faqs={FAQS_DATA} caption="Tractor Loan FAQ 2026 — Ground-Level Verified Answers" />
+        </section>
+
+        {/* Conclusion */}
+        <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Bottom Line</h3>
+          <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
+            Tractor loan mushkil nahi hai agar planning sahi ho. Down payment 10-15% se manage ho sakta hai. Subsidy mil jaaye toh aur kam. Hidden costs pehle se jaano — surprise na mile.
+          </p>
+          <ol className="space-y-2 text-sm text-green-800 dark:text-green-300 list-decimal list-inside">
+            <li>CIBIL check karo (700+ target)</li>
+            <li>KCC banwao agar nahi hai</li>
+            <li>State subsidy portal par register karo</li>
+            <li>Dealer se on-road breakup likhwao</li>
+            <li>Bank + subsidy combine karo = minimum down payment</li>
+          </ol>
         </div>
 
-        <p className="text-xs text-gray-400 text-center border-t pt-4">
-          Yeh article sirf informational hai. Actual loan terms bank aur scheme ke hisaab se alag ho sakte hain. Apply karne se pehle apni bank ya financial advisor se confirm zaroor karein. | © 2026 KisanStatus.com
-        </p>
-      </article>
-    </main>
+        <GovLink
+          href="https://smam.gov.in"
+          label="SMAM Portal — Tractor Subsidy Application"
+          guide="Subsidy Check Karo"
+          guideHref="/articles/kisan-rin-kaha-se-le-2026"
+          portalName="smam.gov.in"
+        />
+
+        <CalcBanner
+          icon="🚜"
+          title="Apni Tractor EMI Calculate Karo"
+          desc="Loan amount, interest rate, tenure daalo — monthly payment turant jaano"
+          primaryCta={{ href: '/calculator/kcc-loan-emi', label: '🏦 EMI Calculator →' }}
+          secondaryCta={{ href: '/calculator', label: '🧮 Sab Utilities' }}
+        />
+
+        <RelatedArticles articles={RELATED} />
+        <AuthorBox modified={MODIFIED} />
+        <BottomNav extraLinks={[
+          { href: '/articles/kisan-credit-card-online-apply-2026', l: '💳 KCC Guide' },
+          { href: '/articles/kisan-rin-kaha-se-le-2026', l: '🏦 Credit Sources' },
+          { href: '/calculator/kcc-loan-emi', l: '🧮 EMI Calculator' },
+        ]} />
+        <Disclaimer />
+      </div>
+    </>
   );
 }
