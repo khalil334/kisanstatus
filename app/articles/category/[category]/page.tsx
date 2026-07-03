@@ -11,10 +11,15 @@ import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL, DEFAULT_OG_IMAGE } from '
 
 export const revalidate = 86400;
 
+// Safe accessor for optional nameHi field
+// CATEGORIES type mein nameHi abhi nahi hai — jab add hoga toh yeh automatically kaam karega
+function getCatName(cat: { name: string; nameHi?: string }): string {
+  return cat.nameHi || cat.name;
+}
+
 // ═══════════════════════════════════════════════════════════
 // CATEGORY SEO CONFIG
 // Eventually merge into CATEGORIES in articles-data.ts
-// Abhi yahan rakha hai backward compatibility ke liye
 // ═══════════════════════════════════════════════════════════
 
 const CATEGORY_SEO: Record<CategorySlug, { title: string; description: string; emoji: string }> = {
@@ -118,10 +123,9 @@ export default async function CategoryPage({
 
   if (!cat || !seo) notFound();
 
-  // Single pass filter — articles + counts ek saath compute
+  // Single pass filter + counts
   const articles = ARTICLES.filter((a) => a.category === category);
 
-  // Pre-compute ALL category counts in one pass (not O(n²))
   const categoryCounts: Record<string, number> = {};
   for (const slug of Object.keys(CATEGORIES)) {
     categoryCounts[slug] = 0;
@@ -134,7 +138,6 @@ export default async function CategoryPage({
 
   const url = `${SITE_URL}/articles/category/${category}`;
 
-  // Collect unique schemes mentioned in this category for schema
   const schemesInCategory = [...new Set(
     articles.flatMap((a) => a.schemes ?? [])
   )];
@@ -167,7 +170,7 @@ export default async function CategoryPage({
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
       { '@type': 'ListItem', position: 2, name: 'Articles', item: `${SITE_URL}/articles` },
-      { '@type': 'ListItem', position: 3, name: cat.nameHi || cat.name, item: url },
+      { '@type': 'ListItem', position: 3, name: getCatName(cat), item: url },
     ],
   };
 
@@ -188,11 +191,11 @@ export default async function CategoryPage({
               <span className="mx-2">/</span>
               <Link href="/articles" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Articles</Link>
               <span className="mx-2">/</span>
-              <span className="text-white font-bold">{cat.nameHi || cat.name}</span>
+              <span className="text-white font-bold">{getCatName(cat)}</span>
             </nav>
 
             <span className="inline-block bg-white/10 border border-white/20 text-green-300 text-xs font-bold px-4 py-2 rounded-full mb-4 uppercase tracking-wider">
-              {seo.emoji} {cat.nameHi || cat.name} Resources
+              {seo.emoji} {getCatName(cat)} Resources
             </span>
             <h1 id="category-heading" className="text-2xl md:text-4xl font-black text-white mb-3">
               {seo.title}
@@ -230,7 +233,7 @@ export default async function CategoryPage({
                   }`}
                   aria-current={isActive ? 'page' : undefined}
                 >
-                  {c.nameHi || c.name} ({count})
+                  {getCatName(c)} ({count})
                 </Link>
               );
             })}
@@ -249,7 +252,7 @@ export default async function CategoryPage({
               <div className="flex items-center gap-3 mb-5">
                 <span className="text-xl" aria-hidden="true">{seo.emoji}</span>
                 <h2 id="articles-heading" className="text-lg font-black text-gray-900 dark:text-[var(--color-text)]">
-                  {cat.nameHi || cat.name} Resources
+                  {getCatName(cat)} Resources
                 </h2>
                 <span className="bg-green-100 text-green-700 text-xs font-bold px-2 py-0.5 rounded-full">
                   {articles.length} resources
@@ -264,7 +267,6 @@ export default async function CategoryPage({
                     className="bg-white dark:bg-[var(--color-card)] rounded-2xl overflow-hidden flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300 no-underline group h-full border border-gray-200 dark:border-[var(--color-border)] hover:border-green-300 focus:ring-2 focus:ring-green-500 focus:outline-none"
                     aria-label={`Read: ${article.title}`}
                   >
-                    {/* OG Image thumbnail — visual CTR boost */}
                     {article.ogImage && (
                       <div className="relative h-40 w-full overflow-hidden bg-gray-100 dark:bg-gray-800 shrink-0">
                         <Image
@@ -280,7 +282,7 @@ export default async function CategoryPage({
                     )}
                     <div className="p-5 flex flex-col flex-1">
                       <span className="text-[10px] font-bold px-2 py-0.5 rounded-full self-start bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300 mb-3">
-                        {seo.emoji} {cat.nameHi || cat.name}
+                        {seo.emoji} {getCatName(cat)}
                       </span>
                       <h3 className="font-black text-gray-900 dark:text-[var(--color-text)] text-sm leading-snug group-hover:text-green-700 dark:group-hover:text-green-400 transition-colors mb-2">
                         {article.title}
