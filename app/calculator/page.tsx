@@ -1,49 +1,49 @@
+/**
+ * /calculator — KisanStatus.com
+ * Agricultural Tools Suite — SEO optimized index page
+ */
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  // ✅ BUG 2 FIXED: Cleaner title — removed redundant tool names
-  title: 'Free Kisan Calculators 2026 — Status Checker, KCC, PMFBY & Crop Profit | KisanStatus.com',
-  // ✅ BUG 2 FIXED: Natural description with key tools only
-  description: '7 free agricultural calculators for Indian farmers — status check, KCC loan EMI, crop insurance premium, MSP income aur profit/loss. No registration required.',
-  // ❌ BUG 1: No keywords field (confirmed clean)
+  title: 'Free Agricultural Tools 2026 — Status Verification, Credit, Insurance & Profit Analysis | KisanStatus.com',
+  description: '7 free farming utilities for Indian cultivators — status verification, credit facility EMI, crop protection premium, procurement rate income aur profit/loss analysis. No registration required.',
   alternates: { canonical: 'https://kisanstatus.com/calculator' },
   openGraph: {
     type: 'website',
     url: 'https://kisanstatus.com/calculator',
     siteName: 'KisanStatus.com',
-    title: 'Free Kisan Calculators 2026 — Status Checker, KCC, PMFBY & Crop Profit',
-    description: '7 free agricultural calculators — status check, KCC loan EMI, crop insurance, MSP income, crop profit/loss. No login, no charge.',
-    locale: 'en_IN', // ✅ BUG 3 FIXED: Added en_IN for Hinglish content
+    title: 'Free Agricultural Tools 2026 — Status Verification, Credit, Insurance & Profit Analysis',
+    description: '7 free farming utilities — status verification, credit facility EMI, crop protection, procurement rate income, crop profit/loss. No login, no charge.',
+    locale: 'en_IN',
     images: [
       {
         url: 'https://kisanstatus.com/og-image.webp',
         width: 1200,
         height: 630,
-        alt: 'Free Kisan Calculators 2026 – KisanStatus.com',
+        alt: 'Free Agricultural Tools 2026 – KisanStatus.com',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free Kisan Calculators 2026 — Status Checker, KCC, PMFBY & Crop Profit',
-    description: '7 free agricultural calculators for Indian farmers — no login, no charge.',
+    title: 'Free Agricultural Tools 2026 — Status Verification, Credit, Insurance & Profit Analysis',
+    description: '7 free farming utilities for Indian cultivators — no login, no charge.',
     images: ['https://kisanstatus.com/og-image.webp'],
     site: '@kisanstatus',
   },
 };
 
-// ── Calculator data ──────────────────────────────────────────────────────────
+// ── Tools data ───────────────────────────────────────────────────────────────
 const CALCS = [
-  // ✅ NAYA TOOL: Quick Status Checker (Featured)
   {
     href: '/calculator/quick-status-check',
     index: '00',
     emoji: '🔍',
-    title: 'Quick Status Checker',
-    hindi: 'क्विक स्टेटस चेकर',
-    desc: 'Aadhaar ya Mobile number daalein aur seedha official portal par apna 23vi Kist status check karein. Instant & Free.',
-    tags: ['Aadhaar Check', 'Mobile Check', 'Instant Redirect'],
+    title: 'Quick Status Verification',
+    hindi: 'क्विक स्टेटस वेरिफिकेशन',
+    desc: 'Biometric credential ya contact number daalein aur seedha official portal par apna 23vi tranche status verify karein. Instant & Free.',
+    tags: ['Biometric Credential Check', 'Contact Check', 'Instant Redirect'],
     group: 'scheme',
     featured: true,
     badge: '🔥 New Tool',
@@ -52,10 +52,10 @@ const CALCS = [
     href: '/calculator/installment-tracker',
     index: '01',
     emoji: '📆',
-    title: 'Installment Status Tracker',
-    hindi: 'किस्त स्टेटस ट्रैकर',
-    desc: '23vi kist aayi ya nahi? eKYC, bank seeding, land seeding check karke 4 sawaal mein exact reason pata karo.',
-    tags: ['23vi Kist', 'eKYC Check', 'Instant Result'],
+    title: 'Tranche Status Tracker',
+    hindi: 'ट्रान्च स्टेटस ट्रैकर',
+    desc: '23vi tranche aayi ya nahi? Digital verification, bank seeding, land record integration check karke 4 sawaal mein exact reason pata karo.',
+    tags: ['23vi Tranche', 'Digital Verification', 'Instant Result'],
     group: 'scheme',
     featured: false,
   },
@@ -63,18 +63,18 @@ const CALCS = [
     href: '/calculator/pm-kisan-benefit',
     index: '02',
     emoji: '🌾',
-    title: 'PM Kisan Benefit Calculator',
-    hindi: 'पीएम किसान लाभ कैलकुलेटर',
-    desc: 'Saalana ₹6,000 — calculate karo kitni kistein milegi, total benefit, aur arrears. eKYC check bhi.',
-    tags: ['₹6,000/yr', '3 Installments', 'Eligibility'],
+    title: 'Cultivator Benefit Estimator',
+    hindi: 'कृषक लाभ अनुमानक',
+    desc: 'Saalana ₹6,000 — estimate karo kitni tranches milengi, total benefit, aur arrears. Digital verification check bhi.',
+    tags: ['₹6,000/yr', '3 Tranches', 'Eligibility'],
     group: 'scheme',
   },
   {
     href: '/calculator/kcc-loan-emi',
     index: '03',
     emoji: '🏦',
-    title: 'KCC Loan EMI Calculator',
-    hindi: 'KCC लोन EMI कैलकुलेटर',
+    title: 'Credit Facility EMI Calculator',
+    hindi: 'ऋण सुविधा EMI कैलकुलेटर',
     desc: 'Kisan Credit Card loan ki monthly EMI, total interest, aur 2% government subvention benefit calculate karo.',
     tags: ['7% Rate', 'Govt Subsidy', 'Monthly EMI'],
     group: 'credit',
@@ -83,8 +83,8 @@ const CALCS = [
     href: '/calculator/pmfby-premium',
     index: '04',
     emoji: '🛡️',
-    title: 'PMFBY Fasal Bima Premium',
-    hindi: 'फसल बीमा प्रीमियम कैलकुलेटर',
+    title: 'Crop Protection Premium',
+    hindi: 'फसल सुरक्षा प्रीमियम कैलकुलेटर',
     desc: 'Pradhan Mantri Fasal Bima Yojana — Kharif/Rabi fasal ka insurance premium aur maximum claim calculate karo.',
     tags: ['Kharif + Rabi', 'All Crops', 'Claim Amount'],
     group: 'insurance',
@@ -93,8 +93,8 @@ const CALCS = [
     href: '/calculator/msp-income',
     index: '05',
     emoji: '💹',
-    title: 'MSP Income Calculator',
-    hindi: 'MSP आय कैलकुलेटर',
+    title: 'Procurement Rate Income',
+    hindi: 'न्यूनतम समर्थन मूल्य आय कैलकुलेटर',
     desc: '2024-25 MSP rates par gehun, dhan, cotton, sarson — kisi bhi fasal ki total income calculate karo.',
     tags: ['2024-25 Rates', '11 Crops', 'Per Hectare'],
     group: 'data',
@@ -103,8 +103,8 @@ const CALCS = [
     href: '/calculator/crop-profit',
     index: '06',
     emoji: '📊',
-    title: 'Crop Profit/Loss Calculator',
-    hindi: 'फसल मुनाफा कैलकुलेटर',
+    title: 'Yield Profit/Loss Analyzer',
+    hindi: 'फसल लाभ/हानि विश्लेषक',
     desc: 'Seed, fertilizer, labor, irrigation — sab kharcha daalo aur net profit ya loss instantly pata karo. Per hectare breakdown.',
     tags: ['Full Season', 'All Costs', 'Net Profit'],
     group: 'data',
@@ -119,17 +119,15 @@ const GROUP_STYLES: Record<string, { bar: string; chip: string; btn: string; glo
   data:      { bar: 'bg-slate-600',   chip: 'text-slate-700 bg-slate-100',     btn: 'bg-slate-700 hover:bg-slate-800',     glow: 'hover:shadow-slate-100' },
 };
 
-// ✅ DEFAULT EXPORT
 export default function CalculatorIndexPage() {
   const featured = CALCS.find((c) => c.featured);
   const rest = CALCS.filter((c) => !c.featured);
 
-  // ✅ Structured Data - ItemList Schema for all calculators
   const itemListSchema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Free Kisan Calculators 2026',
-    description: '7 free agricultural calculators for Indian farmers — status check, KCC loan EMI, crop insurance premium, MSP income aur profit/loss.',
+    name: 'Free Agricultural Tools 2026',
+    description: '7 free farming utilities for Indian cultivators — status verification, credit facility EMI, crop protection premium, procurement rate income aur profit/loss analysis.',
     numberOfItems: CALCS.length,
     itemListElement: CALCS.map((calc, index) => ({
       '@type': 'ListItem',
@@ -142,30 +140,29 @@ export default function CalculatorIndexPage() {
 
   return (
     <>
-      {/* ✅ Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
       />
 
-      {/* ── Hero ── */}
+      {/* Hero */}
       <div className="bg-primary-600 py-10">
         <div className="container-site text-center max-w-3xl">
           <span className="inline-block bg-white/15 text-green-200 text-xs font-bold px-4 py-2 rounded-full mb-4 uppercase tracking-wider">
-            🧮 Free Tools
+            🧮 Free Utilities
           </span>
           <h1 className="text-2xl md:text-4xl font-black text-white mb-3">
-            Kisan Calculators — Quick Status Checker, KCC, PMFBY, MSP &amp; Crop Profit
+            Agricultural Tools Suite — Status Verification, Credit, Insurance, Procurement Rate &amp; Profit Analysis
           </h1>
           <h2 className="text-green-200 text-sm md:text-base font-normal max-w-2xl mx-auto mb-6">
-            कृषि कैलकुलेटर — 7 free tools, koi registration nahi, koi charge nahi. Bank jaane se pehle hisaab karo.
+            कृषि उपकरण — 7 free utilities, koi registration nahi, koi charge nahi. Bank jaane se pehle hisaab karo.
           </h2>
 
           {/* Digital readout strip */}
           <div className="flex items-center justify-center gap-6 font-mono text-white/90 text-sm border-t border-white/15 pt-5 max-w-md mx-auto">
             <div className="flex flex-col items-center">
               <span className="text-xl font-bold tabular-nums">07</span>
-              <span className="text-[10px] uppercase tracking-wider text-green-200/80">Tools</span>
+              <span className="text-[10px] uppercase tracking-wider text-green-200/80">Utilities</span>
             </div>
             <span className="text-white/20">|</span>
             <div className="flex flex-col items-center">
@@ -183,7 +180,7 @@ export default function CalculatorIndexPage() {
 
       <div className="container-site py-12 max-w-4xl mx-auto">
 
-        {/* ── Featured tool ── */}
+        {/* Featured tool */}
         {featured && (
           <Link
             href={featured.href}
@@ -220,7 +217,7 @@ export default function CalculatorIndexPage() {
           </Link>
         )}
 
-        {/* ── Rest of the tools ── */}
+        {/* Rest of the tools */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {rest.map((c) => {
             const s = GROUP_STYLES[c.group];
@@ -249,7 +246,7 @@ export default function CalculatorIndexPage() {
                   ))}
                 </div>
                 <span className={`w-full text-center ${s.btn} text-white font-black py-2.5 rounded-xl text-sm transition-colors mt-1`}>
-                  Calculator Kholo →
+                  Utility Kholo →
                 </span>
               </Link>
             );
@@ -258,21 +255,21 @@ export default function CalculatorIndexPage() {
 
         {/* Info section */}
         <div className="mt-10 bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
-          <h2 className="font-black text-gray-900 text-lg mb-4">कृषि Calculators का सही उपयोग — How To Use</h2>
+          <h2 className="font-black text-gray-900 text-lg mb-4">कृषि Utilities का सही उपयोग — How To Use</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-700">
             <div>
               <p className="font-bold text-gray-900 mb-2 flex items-center gap-2">
-                <span className="font-mono text-emerald-600 text-xs">01</span> 🔍 Quick Status Checker ke liye:
+                <span className="font-mono text-emerald-600 text-xs">01</span> 🔍 Quick Status Verification ke liye:
               </p>
               <ul className="space-y-1 text-xs text-gray-600">
-                {['Aadhaar number daalo (12 digits)', 'Mobile number daalo (10 digits)', 'Check Now button dabao', 'Seedha official portal par redirect hoga'].map((s) => (
+                {['Biometric credential number daalo (12 digits)', 'Contact number daalo (10 digits)', 'Check Now button dabao', 'Seedha official portal par redirect hoga'].map((s) => (
                   <li key={s} className="flex gap-1.5"><span className="text-emerald-600 font-mono">✓</span>{s}</li>
                 ))}
               </ul>
             </div>
             <div>
               <p className="font-bold text-gray-900 mb-2 flex items-center gap-2">
-                <span className="font-mono text-blue-600 text-xs">02</span> 🏦 KCC Loan Calculator ke liye:
+                <span className="font-mono text-blue-600 text-xs">02</span> 🏦 Credit Facility Calculator ke liye:
               </p>
               <ul className="space-y-1 text-xs text-gray-600">
                 {['Loan amount enter karo', 'Interest rate (usually 7%) daalo', 'Repayment months chunio', 'Government subsidy automatically calculate hogi'].map((s) => (
@@ -285,15 +282,15 @@ export default function CalculatorIndexPage() {
 
         {/* Related guides */}
         <div className="mt-6 p-5 bg-emerald-50 border border-emerald-200 rounded-2xl">
-          <p className="font-black text-emerald-900 text-sm mb-4">📖 Related PM Kisan Guides</p>
+          <p className="font-black text-emerald-900 text-sm mb-4">📖 Related Agrarian Welfare Guides</p>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
             {[
-              { href: '/articles/pm-kisan-ekyc-online-2026', l: '🔐 eKYC Guide' },
-              { href: '/articles/pm-kisan-23vi-kist-2026-status-check', l: '📅 23vi Kist Status' },
+              { href: '/articles/pm-kisan-ekyc-online-2026', l: '🔐 Digital Verification Guide' },
+              { href: '/articles/pm-kisan-23vi-kist-2026-status-check', l: '📅 23vi Tranche Status' },
               { href: '/articles/pm-kisan-payment-failed-status-2026', l: '💸 Payment Fix' },
-              { href: '/articles/kisan-rin-kaha-se-le-2026', l: '💰 Kisan Loan Guide' },
-              { href: '/articles/pmfby-crop-insurance-2026', l: '🛡️ PMFBY Guide' },
-              { href: '/articles/pm-kisan-registration-online-2026', l: '📝 Registration' },
+              { href: '/articles/kisan-rin-kaha-se-le-2026', l: '💰 Credit Facility Guide' },
+              { href: '/articles/pmfby-crop-insurance-2026', l: '🛡️ Crop Protection Guide' },
+              { href: '/articles/pm-kisan-registration-online-2026', l: '📝 Enrollment' },
             ].map(({ href, l }) => (
               <Link
                 key={href}
