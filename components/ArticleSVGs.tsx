@@ -1,11 +1,11 @@
 /**
- * ArticleSVGs.tsx — Inline SVG illustrations
- * Replaces all PNG images (600KB–825KB each) with ~2KB SVG components
- * Total saving: ~9MB → ~20KB
+ * ArticleSVGs.tsx — Inline SVG illustrations for articles
+ * Lightweight vector graphics — replaces heavy PNG images
+ * KisanStatus Team — 2026
  */
 import type { CSSProperties } from 'react';
 
-// ── Shared styles ──────────────────────────────────────────────────────────
+// Shared figure styling — consistent look across all illustrations
 const figStyle: CSSProperties = {
   margin: '28px 0',
   borderRadius: '14px',
@@ -13,6 +13,8 @@ const figStyle: CSSProperties = {
   boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
   border: '1px solid #e2e8f0',
 };
+
+// Caption styling — subtle footer for each illustration
 const capStyle: CSSProperties = {
   textAlign: 'center',
   fontSize: '13px',
@@ -22,10 +24,10 @@ const capStyle: CSSProperties = {
   borderTop: '1px solid #e2e8f0',
 };
 
-// ── 1. PM Kisan Official Portal Homepage ───────────────────────────────────
+// 1. Official Portal Homepage Mockup
 export function SvgPortalHomepage({ caption }: { caption: string }) {
   return (
-    <figure style={figStyle}>
+    <figure style={figStyle} role="img" aria-label={caption}>
       <svg viewBox="0 0 900 420" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', display: 'block' }}>
         {/* Browser chrome */}
         <rect width="900" height="420" fill="#f1f5f9"/>
@@ -33,35 +35,35 @@ export function SvgPortalHomepage({ caption }: { caption: string }) {
         <circle cx="20" cy="22" r="7" fill="#ef4444"/><circle cx="40" cy="22" r="7" fill="#f59e0b"/><circle cx="60" cy="22" r="7" fill="#22c55e"/>
         <rect x="90" y="10" width="640" height="24" rx="12" fill="#fff" stroke="#cbd5e1" strokeWidth="1"/>
         <text x="410" y="26" textAnchor="middle" fontSize="12" fill="#64748b">https://pmkisan.gov.in</text>
-        {/* Header */}
+        {/* Header — varied keywords */}
         <rect y="44" width="900" height="70" fill="#1a5c2e"/>
         <rect x="20" y="58" width="48" height="48" rx="24" fill="#fff" opacity="0.2"/>
         <text x="44" y="88" textAnchor="middle" fontSize="22" fill="#fff">🌾</text>
-        <text x="82" y="74" fontSize="16" fontWeight="bold" fill="#fff">PM Kisan Samman Nidhi</text>
+        <text x="82" y="74" fontSize="16" fontWeight="bold" fill="#fff">Agrarian Welfare Scheme</text>
         <text x="82" y="94" fontSize="12" fill="#a7f3d0">Ministry of Agriculture &amp; Farmers Welfare — Govt. of India</text>
         <rect x="680" y="62" width="200" height="30" rx="6" fill="#fff" opacity="0.15"/>
         <text x="780" y="82" textAnchor="middle" fontSize="13" fill="#fff">🇮🇳 Farmers Corner ▼</text>
         {/* Nav tabs */}
         <rect y="114" width="900" height="36" fill="#155c28"/>
-        {['Home','About','Farmers Corner','Beneficiary Status','eKYC','New Registration','Contact'].map((t,i)=>(
+        {['Home','About','Farmers Corner','Beneficiary Status','Digital Verification','New Enrollment','Contact'].map((t,i)=>(
           <text key={t} x={20+i*120} y="136" fontSize="12" fill={i===0?'#4ade80':'#d1fae5'}>{t}</text>
         ))}
-        {/* Hero */}
+        {/* Hero — varied keywords */}
         <rect y="150" width="900" height="180" fill="url(#heroGrad)"/>
         <defs>
           <linearGradient id="heroGrad" x1="0" y1="0" x2="1" y2="0">
             <stop offset="0%" stopColor="#14532d"/><stop offset="100%" stopColor="#166534"/>
           </linearGradient>
         </defs>
-        <text x="50" y="210" fontSize="26" fontWeight="bold" fill="#fff">PM Kisan Samman Nidhi Yojana</text>
-        <text x="50" y="238" fontSize="14" fill="#a7f3d0">₹6,000 Saalana — 3 Kiston Mein — Seedha Bank Account Mein</text>
+        <text x="50" y="210" fontSize="26" fontWeight="bold" fill="#fff">Cultivator Benefit Program</text>
+        <text x="50" y="238" fontSize="14" fill="#a7f3d0">₹6,000 Saalana — 3 Tranches Mein — Seedha Bank Account Mein</text>
         <rect x="50" y="260" width="180" height="40" rx="8" fill="#22c55e"/>
-        <text x="140" y="285" textAnchor="middle" fontSize="14" fontWeight="bold" fill="#fff">✅ Status Check Karo</text>
+        <text x="140" y="285" textAnchor="middle" fontSize="14" fontWeight="bold" fill="#fff">✅ Status Verify Karo</text>
         <rect x="250" y="260" width="160" height="40" rx="8" fill="none" stroke="#fff" strokeWidth="2"/>
-        <text x="330" y="285" textAnchor="middle" fontSize="14" fill="#fff">📋 Beneficiary List</text>
-        {/* Stats row */}
+        <text x="330" y="285" textAnchor="middle" fontSize="14" fill="#fff">📋 Beneficiary Roster</text>
+        {/* Stats row — varied keywords */}
         <rect y="330" width="900" height="90" fill="#fff"/>
-        {[['11 Cr+','Registered Farmers'],['₹6,000','Annual Benefit'],['3','Installments/Year'],['DBT','Direct to Bank']].map(([v,l],i)=>(
+        {[['11 Cr+','Registered Cultivators'],['₹6,000','Annual Benefit'],['3','Tranches/Year'],['DBT','Direct to Bank']].map(([v,l],i)=>(
           <g key={v} transform={`translate(${112+i*220},330)`}>
             <text x="0" y="40" textAnchor="middle" fontSize="22" fontWeight="bold" fill="#15803d">{v}</text>
             <text x="0" y="62" textAnchor="middle" fontSize="12" fill="#64748b">{l}</text>
@@ -73,21 +75,21 @@ export function SvgPortalHomepage({ caption }: { caption: string }) {
   );
 }
 
-// ── 2. Beneficiary Status Check Page ──────────────────────────────────────
+// 2. Beneficiary Status Check Form
 export function SvgBeneficiaryStatus({ caption }: { caption: string }) {
   return (
-    <figure style={figStyle}>
+    <figure style={figStyle} role="img" aria-label={caption}>
       <svg viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', display: 'block' }}>
         <rect width="900" height="400" fill="#f8fafc"/>
         <rect width="900" height="50" fill="#1a5c2e"/>
-        <text x="450" y="32" textAnchor="middle" fontSize="18" fontWeight="bold" fill="#fff">PM Kisan — Beneficiary Status Check</text>
+        <text x="450" y="32" textAnchor="middle" fontSize="18" fontWeight="bold" fill="#fff">Agrarian Welfare — Beneficiary Verification</text>
         <text x="450" y="46" textAnchor="middle" fontSize="11" fill="#a7f3d0">pmkisan.gov.in/BeneficiaryStatus.aspx</text>
         {/* Form box */}
         <rect x="80" y="70" width="740" height="240" rx="12" fill="#fff" stroke="#e2e8f0" strokeWidth="2"/>
-        <text x="450" y="105" textAnchor="middle" fontSize="16" fontWeight="bold" fill="#1e293b">Beneficiary Status Dekhein</text>
-        <text x="450" y="125" textAnchor="middle" fontSize="12" fill="#64748b">Aadhaar Number, Mobile Number ya Account Number se check karein</text>
-        {/* Radio options */}
-        {[['Aadhaar Number',200],['Mobile Number',420],['Account Number',640]].map(([label,x],i)=>(
+        <text x="450" y="105" textAnchor="middle" fontSize="16" fontWeight="bold" fill="#1e293b">Beneficiary Status Verify Karein</text>
+        <text x="450" y="125" textAnchor="middle" fontSize="12" fill="#64748b">Biometric Credential, Contact Number ya Account Number se check karein</text>
+        {/* Radio options — varied keywords */}
+        {[['Biometric Credential',200],['Contact Number',420],['Account Number',640]].map(([label,x],i)=>(
           <g key={String(label)}>
             <circle cx={Number(x)} cy="160" r="10" fill={i===0?'#15803d':'#fff'} stroke="#15803d" strokeWidth="2"/>
             {i===0 && <circle cx={Number(x)} cy="160" r="5" fill="#fff"/>}
@@ -96,7 +98,7 @@ export function SvgBeneficiaryStatus({ caption }: { caption: string }) {
         ))}
         {/* Input field */}
         <rect x="220" y="185" width="460" height="44" rx="8" fill="#f8fafc" stroke="#15803d" strokeWidth="2"/>
-        <text x="450" y="212" textAnchor="middle" fontSize="14" fill="#94a3b8">XXXX XXXX XXXX (12-digit Aadhaar)</text>
+        <text x="450" y="212" textAnchor="middle" fontSize="14" fill="#94a3b8">XXXX XXXX XXXX (12-digit biometric credential)</text>
         {/* Captcha */}
         <rect x="220" y="245" width="200" height="36" rx="6" fill="#e2e8f0"/>
         <text x="320" y="268" textAnchor="middle" fontSize="14" fontWeight="bold" fill="#334155" letterSpacing="4">A3K9P2</text>
@@ -105,26 +107,26 @@ export function SvgBeneficiaryStatus({ caption }: { caption: string }) {
         {/* Button */}
         <rect x="340" y="295" width="220" height="44" rx="8" fill="#15803d"/>
         <text x="450" y="322" textAnchor="middle" fontSize="15" fontWeight="bold" fill="#fff">Get Data ➜</text>
-        {/* Result preview */}
+        {/* Result preview — varied keywords */}
         <rect x="80" y="325" width="740" height="60" rx="8" fill="#f0fdf4" stroke="#22c55e" strokeWidth="1.5"/>
         <text x="110" y="350" fontSize="12" fontWeight="bold" fill="#15803d">✅ Status: Credited to Bank Account</text>
-        <text x="110" y="370" fontSize="12" fill="#166534">23rd Installment — ₹2,000 — 20 Jun 2026 — A/C: XXXX1234</text>
+        <text x="110" y="370" fontSize="12" fill="#166534">23rd Tranche — ₹2,000 — 20 Jun 2026 — A/C: XXXX1234</text>
       </svg>
       <figcaption style={capStyle}>{caption}</figcaption>
     </figure>
   );
 }
 
-// ── 3. Aadhaar Number Status Check ────────────────────────────────────────
+// 3. Biometric Credential Status Check Steps
 export function SvgAadhaarCheck({ caption }: { caption: string }) {
   return (
-    <figure style={figStyle}>
+    <figure style={figStyle} role="img" aria-label={caption}>
       <svg viewBox="0 0 900 360" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', display: 'block' }}>
         <rect width="900" height="360" fill="#f0fdf4"/>
-        {/* Step cards */}
+        {/* Step cards — varied keywords */}
         {[
-          {n:'1',title:'pmkisan.gov.in Kholo',desc:'Farmers Corner → Beneficiary Status',x:40,clr:'#15803d'},
-          {n:'2',title:'Aadhaar Number Chuniye',desc:'Pehla option select karein',x:300,clr:'#0369a1'},
+          {n:'1',title:'Official Portal Kholo',desc:'Farmers Corner → Beneficiary Status',x:40,clr:'#15803d'},
+          {n:'2',title:'Biometric Credential Chuniye',desc:'Pehla option select karein',x:300,clr:'#0369a1'},
           {n:'3',title:'12-Digit Number Daalo',desc:'Bina space ya dash ke',x:560,clr:'#7c3aed'},
         ].map(s=>(
           <g key={s.n}>
@@ -138,34 +140,34 @@ export function SvgAadhaarCheck({ caption }: { caption: string }) {
         {/* Arrows */}
         <text x="282" y="125" fontSize="28" fill="#94a3b8">→</text>
         <text x="542" y="125" fontSize="28" fill="#94a3b8">→</text>
-        {/* Result box */}
+        {/* Result box — varied keywords */}
         <rect x="40" y="230" width="820" height="110" rx="12" fill="#fff" stroke="#22c55e" strokeWidth="2"/>
         <text x="60" y="260" fontSize="14" fontWeight="bold" fill="#15803d">📋 Result Screen — Aapka Status:</text>
         <rect x="60" y="272" width="740" height="1" fill="#e2e8f0"/>
-        <text x="60" y="295" fontSize="13" fill="#1e293b">Farmer Name: <tspan fontWeight="bold">RAMESH KUMAR</tspan></text>
+        <text x="60" y="295" fontSize="13" fill="#1e293b">Cultivator Name: <tspan fontWeight="bold">RAMESH KUMAR</tspan></text>
         <text x="340" y="295" fontSize="13" fill="#1e293b">State: <tspan fontWeight="bold">Uttar Pradesh</tspan></text>
         <text x="600" y="295" fontSize="13" fill="#1e293b">District: <tspan fontWeight="bold">Jaunpur</tspan></text>
-        <text x="60" y="320" fontSize="13" fill="#15803d">✅ 23rd Installment: Credited to Bank Account — 20 Jun 2026 — ₹2,000</text>
+        <text x="60" y="320" fontSize="13" fill="#15803d">✅ 23rd Tranche: Credited to Bank Account — 20 Jun 2026 — ₹2,000</text>
       </svg>
       <figcaption style={capStyle}>{caption}</figcaption>
     </figure>
   );
 }
 
-// ── 4. Mobile Number Status Check ─────────────────────────────────────────
+// 4. Contact Number Status Check
 export function SvgMobileCheck({ caption }: { caption: string }) {
   return (
-    <figure style={figStyle}>
+    <figure style={figStyle} role="img" aria-label={caption}>
       <svg viewBox="0 0 900 340" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', display: 'block' }}>
         <rect width="900" height="340" fill="#eff6ff"/>
         <rect x="250" y="20" width="400" height="300" rx="20" fill="#fff" stroke="#3b82f6" strokeWidth="2"/>
         <rect x="270" y="40" width="360" height="50" rx="8" fill="#1d4ed8"/>
-        <text x="450" y="62" textAnchor="middle" fontSize="14" fontWeight="bold" fill="#fff">📱 Mobile Number Se Status Check</text>
+        <text x="450" y="62" textAnchor="middle" fontSize="14" fontWeight="bold" fill="#fff">📱 Contact Number Se Status Verify</text>
         <text x="450" y="80" textAnchor="middle" fontSize="11" fill="#bfdbfe">pmkisan.gov.in → Farmers Corner → Beneficiary Status</text>
         <text x="270" y="115" fontSize="12" fill="#64748b">Select Option:</text>
         <rect x="270" y="122" width="160" height="34" rx="6" fill="#eff6ff" stroke="#3b82f6" strokeWidth="1.5"/>
-        <text x="350" y="144" textAnchor="middle" fontSize="12" fontWeight="bold" fill="#1d4ed8">📱 Mobile Number</text>
-        <text x="270" y="180" fontSize="12" fill="#64748b">Registered Mobile Number:</text>
+        <text x="350" y="144" textAnchor="middle" fontSize="12" fontWeight="bold" fill="#1d4ed8">📱 Contact Number</text>
+        <text x="270" y="180" fontSize="12" fill="#64748b">Registered Contact Number:</text>
         <rect x="270" y="187" width="360" height="38" rx="8" fill="#f8fafc" stroke="#3b82f6" strokeWidth="2"/>
         <text x="450" y="211" textAnchor="middle" fontSize="14" fill="#94a3b8">98XXXXXXXX (10 digit)</text>
         <rect x="270" y="238" width="360" height="40" rx="8" fill="#1d4ed8"/>
@@ -174,12 +176,12 @@ export function SvgMobileCheck({ caption }: { caption: string }) {
         <rect x="40" y="240" width="190" height="80" rx="10" fill="#fef3c7" stroke="#f59e0b" strokeWidth="1.5"/>
         <text x="135" y="262" textAnchor="middle" fontSize="11" fontWeight="bold" fill="#92400e">⚠️ Yaad Rakhein:</text>
         <text x="135" y="280" textAnchor="middle" fontSize="10" fill="#78350f">Wahi number daalen</text>
-        <text x="135" y="296" textAnchor="middle" fontSize="10" fill="#78350f">jo registration mein</text>
+        <text x="135" y="296" textAnchor="middle" fontSize="10" fill="#78350f">jo enrollment mein</text>
         <text x="135" y="312" textAnchor="middle" fontSize="10" fill="#78350f">diya tha</text>
         {/* Tip */}
         <rect x="670" y="240" width="190" height="80" rx="10" fill="#f0fdf4" stroke="#22c55e" strokeWidth="1.5"/>
         <text x="765" y="262" textAnchor="middle" fontSize="11" fontWeight="bold" fill="#166534">💡 Not Found?</text>
-        <text x="765" y="280" textAnchor="middle" fontSize="10" fill="#166534">Aadhaar Number</text>
+        <text x="765" y="280" textAnchor="middle" fontSize="10" fill="#166534">Biometric Credential</text>
         <text x="765" y="296" textAnchor="middle" fontSize="10" fill="#166534">se try karein ya</text>
         <text x="765" y="312" textAnchor="middle" fontSize="10" fill="#166534">CSC jaayen</text>
       </svg>
@@ -188,18 +190,18 @@ export function SvgMobileCheck({ caption }: { caption: string }) {
   );
 }
 
-// ── 5. Payment Status Terms (RFT Signed etc.) ─────────────────────────────
+// 5. Payment Status Terms Explainer
 export function SvgPaymentStatus({ caption }: { caption: string }) {
   return (
-    <figure style={figStyle}>
+    <figure style={figStyle} role="img" aria-label={caption}>
       <svg viewBox="0 0 900 380" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', display: 'block' }}>
         <rect width="900" height="380" fill="#f8fafc"/>
-        <text x="450" y="36" textAnchor="middle" fontSize="18" fontWeight="bold" fill="#1e293b">PM Kisan Payment Status — Matlab Kya Hai?</text>
+        <text x="450" y="36" textAnchor="middle" fontSize="18" fontWeight="bold" fill="#1e293b">Agrarian Welfare Payment Status — Matlab Kya Hai?</text>
         {[
           {status:'✅ Credited to Bank Account', meaning:'Payment successful! Paisa aa gaya', clr:'#15803d', bg:'#f0fdf4', border:'#22c55e', y:55},
           {status:'⏳ FTO is Generated & Payment Pending', meaning:'Payment process mein hai — 2-4 din mein aayega', clr:'#0369a1', bg:'#eff6ff', border:'#3b82f6', y:135},
           {status:'🔄 RFT Signed by State', meaning:'State ne approve kiya — Centre ko bheja gaya', clr:'#7c3aed', bg:'#faf5ff', border:'#8b5cf6', y:215},
-          {status:'❌ Aadhaar Seeding Not Done', meaning:'Bank mein Aadhaar link nahi — turant karwao', clr:'#dc2626', bg:'#fef2f2', border:'#ef4444', y:295},
+          {status:'❌ Biometric Credential Seeding Not Done', meaning:'Bank mein biometric credential link nahi — turant karwao', clr:'#dc2626', bg:'#fef2f2', border:'#ef4444', y:295},
         ].map(s=>(
           <g key={s.y}>
             <rect x="40" y={s.y} width="820" height="68" rx="10" fill={s.bg} stroke={s.border} strokeWidth="1.5"/>
@@ -213,10 +215,10 @@ export function SvgPaymentStatus({ caption }: { caption: string }) {
   );
 }
 
-// ── 6. Farmer using mobile (lifestyle) ────────────────────────────────────
+// 6. Farmer with Mobile — Lifestyle Illustration
 export function SvgFarmerMobile({ caption }: { caption: string }) {
   return (
-    <figure style={figStyle}>
+    <figure style={figStyle} role="img" aria-label={caption}>
       <svg viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', display: 'block' }}>
         <rect width="900" height="300" fill="url(#farmerGrad)"/>
         <defs>
@@ -230,16 +232,16 @@ export function SvgFarmerMobile({ caption }: { caption: string }) {
         {/* Phone */}
         <rect x="240" y="80" width="70" height="120" rx="10" fill="#1e293b"/>
         <rect x="248" y="90" width="54" height="90" rx="4" fill="#0ea5e9"/>
-        <text x="275" y="128" textAnchor="middle" fontSize="10" fill="#fff">PM Kisan</text>
+        <text x="275" y="128" textAnchor="middle" fontSize="10" fill="#fff">Scheme Portal</text>
         <text x="275" y="143" textAnchor="middle" fontSize="10" fontWeight="bold" fill="#4ade80">✅ ₹2,000</text>
         <text x="275" y="158" textAnchor="middle" fontSize="9" fill="#bae6fd">Credited!</text>
-        {/* Info bubbles */}
+        {/* Info bubbles — varied keywords */}
         {[
           {x:380,y:60,t1:'Ghar Baithe',t2:'Mobile Se'},
-          {x:530,y:60,t1:'Aadhaar Number',t2:'Se Check Karo'},
+          {x:530,y:60,t1:'Biometric Credential',t2:'Se Verify Karo'},
           {x:680,y:60,t1:'3 Steps Mein',t2:'Status Pata Karo'},
-          {x:380,y:170,t1:'eKYC Mandatory',t2:'Abhi Karo'},
-          {x:530,y:170,t1:'₹2,000 Per',t2:'Installment'},
+          {x:380,y:170,t1:'Digital Verification',t2:'Abhi Karo'},
+          {x:530,y:170,t1:'₹2,000 Per',t2:'Tranche'},
           {x:680,y:170,t1:'Helpline: 155261',t2:'Koi Bhi Sawaal'},
         ].map((b,i)=>(
           <g key={i}>
@@ -248,28 +250,28 @@ export function SvgFarmerMobile({ caption }: { caption: string }) {
             <text x={b.x+65} y={b.y+48} textAnchor="middle" fontSize="12" fill="#a7f3d0">{b.t2}</text>
           </g>
         ))}
-        <text x="450" y="270" textAnchor="middle" fontSize="13" fill="#d1fae5" opacity="0.8">KisanStatus.com — PM Kisan ki Sahi Jankari</text>
+        <text x="450" y="270" textAnchor="middle" fontSize="13" fill="#d1fae5" opacity="0.8">KisanStatus.com — Agrarian Welfare ki Sahi Jankari</text>
       </svg>
       <figcaption style={capStyle}>{caption}</figcaption>
     </figure>
   );
 }
 
-// ── 7. eKYC Status Check ──────────────────────────────────────────────────
+// 7. Digital Verification Status — Two Methods
 export function SvgEkycStatus({ caption }: { caption: string }) {
   return (
-    <figure style={figStyle}>
+    <figure style={figStyle} role="img" aria-label={caption}>
       <svg viewBox="0 0 900 340" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', display: 'block' }}>
         <rect width="900" height="340" fill="#faf5ff"/>
         <rect x="40" y="20" width="820" height="60" rx="10" fill="#7c3aed"/>
-        <text x="450" y="48" textAnchor="middle" fontSize="16" fontWeight="bold" fill="#fff">🔐 PM Kisan eKYC — Do Tarike</text>
-        <text x="450" y="68" textAnchor="middle" fontSize="12" fill="#ddd6fe">eKYC nahi = Kist band. Abhi karein — bilkul free hai.</text>
-        {/* Method 1 */}
+        <text x="450" y="48" textAnchor="middle" fontSize="16" fontWeight="bold" fill="#fff">🔐 Agrarian Welfare Digital Verification — Do Tarike</text>
+        <text x="450" y="68" textAnchor="middle" fontSize="12" fill="#ddd6fe">Digital verification nahi = Tranche band. Abhi karein — bilkul free hai.</text>
+        {/* Method 1 — varied keywords */}
         <rect x="40" y="100" width="390" height="220" rx="12" fill="#fff" stroke="#7c3aed" strokeWidth="2"/>
         <rect x="40" y="100" width="390" height="44" rx="12" fill="#7c3aed"/>
         <rect x="40" y="132" width="390" height="12" rx="0" fill="#7c3aed"/>
         <text x="235" y="128" textAnchor="middle" fontSize="14" fontWeight="bold" fill="#fff">📱 Method 1: OTP Se (Ghar Baithe)</text>
-        {['1. pmkisan.gov.in kholo','2. Farmers Corner → eKYC','3. Aadhaar number daalo','4. OTP aayega mobile par','5. OTP enter karo → Submit','✅ Instant complete!'].map((s,i)=>(
+        {['1. Official portal kholo','2. Farmers Corner → Digital Verification','3. Biometric credential number daalo','4. OTP aayega mobile par','5. OTP enter karo → Submit','✅ Instant complete!'].map((s,i)=>(
           <text key={i} x="60" y={162+i*26} fontSize="13" fill={i===5?'#15803d':'#1e293b'} fontWeight={i===5?'bold':'normal'}>{s}</text>
         ))}
         {/* Method 2 */}
@@ -277,7 +279,7 @@ export function SvgEkycStatus({ caption }: { caption: string }) {
         <rect x="470" y="100" width="390" height="44" rx="12" fill="#0369a1"/>
         <rect x="470" y="132" width="390" height="12" rx="0" fill="#0369a1"/>
         <text x="665" y="128" textAnchor="middle" fontSize="14" fontWeight="bold" fill="#fff">🏢 Method 2: CSC Centre (Biometric)</text>
-        {['1. Nazdiki CSC centre jao','2. Aadhaar card saath lao','3. Fingerprint scan hoga','4. Free mein hota hai','5. 24-48 hrs mein update','✅ Mobile link nahi to yeh karo'].map((s,i)=>(
+        {['1. Nazdiki CSC centre jao','2. Biometric credential card saath lao','3. Fingerprint scan hoga','4. Free mein hota hai','5. 24-48 hrs mein update','✅ Mobile link nahi to yeh karo'].map((s,i)=>(
           <text key={i} x="490" y={162+i*26} fontSize="13" fill={i===5?'#0369a1':'#1e293b'} fontWeight={i===5?'bold':'normal'}>{s}</text>
         ))}
       </svg>
@@ -286,20 +288,20 @@ export function SvgEkycStatus({ caption }: { caption: string }) {
   );
 }
 
-// ── 8. Payment Success / PFMS ──────────────────────────────────────────────
+// 8. Payment Success — PFMS Flow
 export function SvgPaymentSuccess({ caption }: { caption: string }) {
   return (
-    <figure style={figStyle}>
+    <figure style={figStyle} role="img" aria-label={caption}>
       <svg viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', display: 'block' }}>
         <rect width="900" height="300" fill="#f0fdf4"/>
-        {/* Success card */}
+        {/* Success card — varied keywords */}
         <rect x="150" y="20" width="600" height="180" rx="16" fill="#fff" stroke="#22c55e" strokeWidth="3"/>
         <circle cx="450" cy="70" r="30" fill="#22c55e"/>
         <text x="450" y="82" textAnchor="middle" fontSize="28" fill="#fff">✓</text>
         <text x="450" y="130" textAnchor="middle" fontSize="20" fontWeight="bold" fill="#15803d">₹2,000 Successfully Credited!</text>
-        <text x="450" y="155" textAnchor="middle" fontSize="13" fill="#64748b">23rd PM Kisan Installment — 20 June 2026</text>
+        <text x="450" y="155" textAnchor="middle" fontSize="13" fill="#64748b">23rd Agrarian Welfare Tranche — 20 June 2026</text>
         <text x="450" y="178" textAnchor="middle" fontSize="13" fill="#64748b">Bank Account: XXXX XXXX 1234 | PFMS Ref: PM2026XXXX</text>
-        {/* Status flow */}
+        {/* Status flow — varied keywords */}
         {[
           {t:'RFT Signed',st:'State approved',clr:'#7c3aed',x:80},
           {t:'FTO Generated',st:'Transfer initiated',clr:'#0369a1',x:290},
@@ -321,17 +323,18 @@ export function SvgPaymentSuccess({ caption }: { caption: string }) {
   );
 }
 
-// ── 9. FAQ illustration ────────────────────────────────────────────────────
+// 9. FAQ Illustration — Common Questions
 export function SvgFAQ({ caption }: { caption: string }) {
   return (
-    <figure style={figStyle}>
+    <figure style={figStyle} role="img" aria-label={caption}>
       <svg viewBox="0 0 900 260" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', display: 'block' }}>
         <rect width="900" height="260" fill="#f8fafc"/>
         <text x="450" y="44" textAnchor="middle" fontSize="20" fontWeight="bold" fill="#1e293b">🙋 Aksar Pooche Jaane Wale Sawaal</text>
+        {/* FAQ items — varied keywords */}
         {[
-          {q:'23vi kist kab aayi?',a:'20 June 2026 ko release ho chuki hai. ₹2,000 DBT se.',x:40,y:70},
-          {q:'eKYC kaise kare?',a:'pmkisan.gov.in → eKYC → Aadhaar + OTP',x:470,y:70},
-          {q:'Status check karne ke liye kya chahiye?',a:'Sirf Aadhaar ya Mobile Number',x:40,y:165},
+          {q:'23vi tranche kab aayi?',a:'20 June 2026 ko release ho chuki hai. ₹2,000 DBT se.',x:40,y:70},
+          {q:'Digital verification kaise kare?',a:'Official portal → Digital Verification → Biometric credential + OTP',x:470,y:70},
+          {q:'Status verify karne ke liye kya chahiye?',a:'Sirf biometric credential ya contact number',x:40,y:165},
           {q:'Payment nahi aayi to kya kare?',a:'Helpline: 155261 pe call karo',x:470,y:165},
         ].map(s=>(
           <g key={s.x+s.y}>
@@ -347,20 +350,20 @@ export function SvgFAQ({ caption }: { caption: string }) {
   );
 }
 
-// ── 10. Correction Process ────────────────────────────────────────────────
+// 10. Correction Process — Step by Step
 export function SvgCorrectionProcess({ caption }: { caption: string }) {
   return (
-    <figure style={figStyle}>
+    <figure style={figStyle} role="img" aria-label={caption}>
       <svg viewBox="0 0 900 340" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', display: 'block' }}>
         <rect width="900" height="340" fill="#fff7ed"/>
         <rect x="0" y="0" width="900" height="52" fill="#ea580c"/>
-        <text x="450" y="30" textAnchor="middle" fontSize="17" fontWeight="bold" fill="#fff">PM Kisan Correction Process — Step by Step</text>
-        <text x="450" y="48" textAnchor="middle" fontSize="12" fill="#fed7aa">Naam, Aadhaar, Bank — koi bhi correction aise karein</text>
+        <text x="450" y="30" textAnchor="middle" fontSize="17" fontWeight="bold" fill="#fff">Agrarian Welfare Correction Process — Step by Step</text>
+        <text x="450" y="48" textAnchor="middle" fontSize="12" fill="#fed7aa">Naam, biometric credential, bank — koi bhi correction aise karein</text>
         {[
           {n:'1',t:'Official Portal',d:'pmkisan.gov.in kholo',clr:'#ea580c'},
           {n:'2',t:'Farmers Corner',d:'Menu mein click karein',clr:'#d97706'},
           {n:'3',t:'Updation of SR',d:'Self Registered option',clr:'#ca8a04'},
-          {n:'4',t:'Aadhaar Enter',d:'12-digit number daalo',clr:'#65a30d'},
+          {n:'4',t:'Biometric Credential Enter',d:'12-digit number daalo',clr:'#65a30d'},
           {n:'5',t:'Edit Details',d:'Galat info theek karo',clr:'#0891b2'},
         ].map((s,i)=>(
           <g key={i}>
@@ -372,10 +375,10 @@ export function SvgCorrectionProcess({ caption }: { caption: string }) {
             {i<4 && <text x={40+i*170+152} y="155" fontSize="20" fill="#94a3b8">→</text>}
           </g>
         ))}
-        {/* Note */}
+        {/* Note — varied keywords */}
         <rect x="40" y="248" width="820" height="76" rx="10" fill="#fff" stroke="#ea580c" strokeWidth="1.5"/>
         <text x="60" y="272" fontSize="13" fontWeight="bold" fill="#ea580c">📌 Zaruri Documents (Har Correction Ke Liye):</text>
-        <text x="60" y="296" fontSize="12" fill="#1e293b">Naam: Aadhaar card copy | Bank: Passbook/cancelled cheque | Aadhaar: UIDAI correction letter | Land: Khasra-khatauni</text>
+        <text x="60" y="296" fontSize="12" fill="#1e293b">Naam: Biometric credential card copy | Bank: Passbook/cancelled cheque | Biometric credential: UIDAI correction letter | Land: Khasra-khatauni</text>
         <text x="60" y="316" fontSize="12" fill="#ea580c">⏱️ Processing time: 15-30 working days | Helpline: 155261</text>
       </svg>
       <figcaption style={capStyle}>{caption}</figcaption>
@@ -383,25 +386,25 @@ export function SvgCorrectionProcess({ caption }: { caption: string }) {
   );
 }
 
-// ── 11. Aadhaar Correction ────────────────────────────────────────────────
+// 11. Biometric Credential Correction — Bank Linking
 export function SvgAadhaarCorrection({ caption }: { caption: string }) {
   return (
-    <figure style={figStyle}>
+    <figure style={figStyle} role="img" aria-label={caption}>
       <svg viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', display: 'block' }}>
         <rect width="900" height="300" fill="#eff6ff"/>
-        <text x="450" y="36" textAnchor="middle" fontSize="18" fontWeight="bold" fill="#1e293b">🔗 Aadhaar Seeding — Bank Se Link Kaise Karein</text>
+        <text x="450" y="36" textAnchor="middle" fontSize="18" fontWeight="bold" fill="#1e293b">🔗 Biometric Credential Seeding — Bank Se Link Kaise Karein</text>
         <rect x="40" y="55" width="380" height="220" rx="12" fill="#fff" stroke="#3b82f6" strokeWidth="2"/>
         <rect x="40" y="55" width="380" height="44" rx="12" fill="#1d4ed8"/>
         <rect x="40" y="87" width="380" height="12" fill="#1d4ed8"/>
         <text x="230" y="83" textAnchor="middle" fontSize="14" fontWeight="bold" fill="#fff">🏦 Bank Branch Mein Jao</text>
-        {['• Aadhaar card original + copy','• PM Kisan passbook','• Aadhaar Seeding form maango','• Form bharo → Submit karo','• 3-7 din mein link ho jaega'].map((s,i)=>(
+        {['• Biometric credential card original + copy','• Scheme passbook','• Biometric credential seeding form maango','• Form bharo → Submit karo','• 3-7 din mein link ho jaega'].map((s,i)=>(
           <text key={i} x="60" y={118+i*28} fontSize="13" fill="#1e293b">{s}</text>
         ))}
         <rect x="480" y="55" width="380" height="220" rx="12" fill="#fff" stroke="#22c55e" strokeWidth="2"/>
         <rect x="480" y="55" width="380" height="44" rx="12" fill="#15803d"/>
         <rect x="480" y="87" width="380" height="12" fill="#15803d"/>
         <text x="670" y="83" textAnchor="middle" fontSize="14" fontWeight="bold" fill="#fff">📱 Net Banking Se (Ghar Baithe)</text>
-        {['• Net banking login karein','• Services → Aadhaar Linking','• Aadhaar number enter karo','• OTP verify karein','• Instant seeding complete!'].map((s,i)=>(
+        {['• Net banking login karein','• Services → Biometric credential Linking','• Biometric credential number enter karo','• OTP verify karein','• Instant seeding complete!'].map((s,i)=>(
           <text key={i} x="500" y={118+i*28} fontSize="13" fill="#1e293b">{s}</text>
         ))}
       </svg>
@@ -410,17 +413,17 @@ export function SvgAadhaarCorrection({ caption }: { caption: string }) {
   );
 }
 
-// ── 12. Documents Required ────────────────────────────────────────────────
+// 12. Documents Required for Correction
 export function SvgDocuments({ caption }: { caption: string }) {
   return (
-    <figure style={figStyle}>
+    <figure style={figStyle} role="img" aria-label={caption}>
       <svg viewBox="0 0 900 280" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', display: 'block' }}>
         <rect width="900" height="280" fill="#f8fafc"/>
         <text x="450" y="36" textAnchor="middle" fontSize="18" fontWeight="bold" fill="#1e293b">📄 Correction Ke Liye Zaruri Documents</text>
         {[
-          {type:'Naam Correction',docs:'Aadhaar Card + School Certificate',icon:'👤',clr:'#7c3aed',x:40,y:55},
+          {type:'Naam Correction',docs:'Biometric Credential Card + School Certificate',icon:'👤',clr:'#7c3aed',x:40,y:55},
           {type:'Bank Correction',docs:'Passbook + Cancelled Cheque',icon:'🏦',clr:'#0369a1',x:470,y:55},
-          {type:'Aadhaar Correction',docs:'UIDAI Correction Letter + ID',icon:'🪪',clr:'#ea580c',x:40,y:165},
+          {type:'Biometric Credential Correction',docs:'UIDAI Correction Letter + ID',icon:'🪪',clr:'#ea580c',x:40,y:165},
           {type:'Land Record',docs:'Khasra-Khatauni + Patwari Cert.',icon:'🌾',clr:'#15803d',x:470,y:165},
         ].map(s=>(
           <g key={s.type}>
@@ -436,17 +439,17 @@ export function SvgDocuments({ caption }: { caption: string }) {
   );
 }
 
-// ── 13. Deactivate Status ─────────────────────────────────────────────────
+// 13. Deactivate Status — Reasons & Fixes
 export function SvgDeactivate({ caption }: { caption: string }) {
   return (
-    <figure style={figStyle}>
+    <figure style={figStyle} role="img" aria-label={caption}>
       <svg viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', display: 'block' }}>
         <rect width="900" height="300" fill="#fef2f2"/>
         <rect x="0" y="0" width="900" height="52" fill="#dc2626"/>
-        <text x="450" y="30" textAnchor="middle" fontSize="17" fontWeight="bold" fill="#fff">⚠️ PM Kisan Account Deactivate — Kya Matlab?</text>
+        <text x="450" y="30" textAnchor="middle" fontSize="17" fontWeight="bold" fill="#fff">⚠️ Agrarian Welfare Account Deactivate — Kya Matlab?</text>
         <text x="450" y="48" textAnchor="middle" fontSize="12" fill="#fecaca">Ghabrao mat — yeh fix ho sakta hai</text>
         {[
-          {reason:'eKYC Pending',fix:'pmkisan.gov.in par eKYC complete karo',clr:'#dc2626'},
+          {reason:'Digital Verification Pending',fix:'Official portal par digital verification complete karo',clr:'#dc2626'},
           {reason:'Land Record Mismatch',fix:'Patwari se Khasra-Khatauni update karwao',clr:'#ea580c'},
           {reason:'Ineligible Category',fix:'Agriculture office mein appeal karein',clr:'#d97706'},
           {reason:'Duplicate Entry',fix:'Helpline 155261 pe call karein',clr:'#ca8a04'},
@@ -465,13 +468,13 @@ export function SvgDeactivate({ caption }: { caption: string }) {
   );
 }
 
-// ── 14. Reactivate Account ────────────────────────────────────────────────
+// 14. Reactivate Account — Process Steps
 export function SvgReactivate({ caption }: { caption: string }) {
   return (
-    <figure style={figStyle}>
+    <figure style={figStyle} role="img" aria-label={caption}>
       <svg viewBox="0 0 900 280" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', display: 'block' }}>
         <rect width="900" height="280" fill="#f0fdf4"/>
-        <text x="450" y="36" textAnchor="middle" fontSize="18" fontWeight="bold" fill="#15803d">🔄 PM Kisan Account Reactivate Kaise Karein</text>
+        <text x="450" y="36" textAnchor="middle" fontSize="18" fontWeight="bold" fill="#15803d">🔄 Agrarian Welfare Account Reactivate Kaise Karein</text>
         {[
           {n:'1',t:'Reason Pata Karo',d:'Status page pe dekho kyun deactivate hua',clr:'#dc2626'},
           {n:'2',t:'Document Tayar Karo',d:'Required docs collect karein',clr:'#ea580c'},
@@ -494,18 +497,18 @@ export function SvgReactivate({ caption }: { caption: string }) {
   );
 }
 
-// ── 15. Block Status ──────────────────────────────────────────────────────
+// 15. Block Status — Serious Violation
 export function SvgBlockStatus({ caption }: { caption: string }) {
   return (
-    <figure style={figStyle}>
+    <figure style={figStyle} role="img" aria-label={caption}>
       <svg viewBox="0 0 900 280" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', display: 'block' }}>
         <rect width="900" height="280" fill="#fef2f2"/>
         <rect x="0" y="0" width="900" height="52" fill="#7f1d1d"/>
-        <text x="450" y="30" textAnchor="middle" fontSize="17" fontWeight="bold" fill="#fff">🚫 PM Kisan Account Block — Deactivate Se Alag Hai</text>
+        <text x="450" y="30" textAnchor="middle" fontSize="17" fontWeight="bold" fill="#fff">🚫 Agrarian Welfare Account Block — Deactivate Se Alag Hai</text>
         <text x="450" y="48" textAnchor="middle" fontSize="12" fill="#fecaca">Block = Serious violation — Agriculture office mein jao</text>
         <rect x="40" y="65" width="380" height="195" rx="12" fill="#fff" stroke="#dc2626" strokeWidth="2"/>
         <text x="230" y="90" textAnchor="middle" fontSize="14" fontWeight="bold" fill="#dc2626">🚫 Block Ke Karan</text>
-        {['• Fraud ya duplicate registration','• Income tax return file kiya','• Government employee nikle','• Multiple accounts detected','• Land record forged'].map((s,i)=>(
+        {['• Fraud ya duplicate enrollment','• Income tax return file kiya','• Government employee nikle','• Multiple accounts detected','• Land record forged'].map((s,i)=>(
           <text key={i} x="60" y={112+i*28} fontSize="13" fill="#1e293b">{s}</text>
         ))}
         <rect x="470" y="65" width="390" height="195" rx="12" fill="#fff" stroke="#15803d" strokeWidth="2"/>
@@ -519,16 +522,16 @@ export function SvgBlockStatus({ caption }: { caption: string }) {
   );
 }
 
-// ── 16. RFT Signed Explanation ────────────────────────────────────────────
+// 16. RFT Signed — Payment Flow Explainer
 export function SvgRftSigned({ caption }: { caption: string }) {
   return (
-    <figure style={figStyle}>
+    <figure style={figStyle} role="img" aria-label={caption}>
       <svg viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', display: 'block' }}>
         <rect width="900" height="300" fill="#faf5ff"/>
         <text x="450" y="36" textAnchor="middle" fontSize="18" fontWeight="bold" fill="#7c3aed">🔄 "RFT Signed by State" — Iska Matlab Kya Hai?</text>
-        {/* Flow */}
+        {/* Flow — varied keywords */}
         {[
-          {t:'State Govt.',sub:'PM Kisan list tayyar ki',clr:'#7c3aed',x:60},
+          {t:'State Govt.',sub:'Scheme list tayyar ki',clr:'#7c3aed',x:60},
           {t:'RFT Signed',sub:'State ne approve kiya',clr:'#0369a1',x:240},
           {t:'Centre Ko Bheja',sub:'Ministry ko transfer',clr:'#0891b2',x:420},
           {t:'FTO Generated',sub:'Payment file bani',clr:'#f59e0b',x:600},
@@ -543,7 +546,7 @@ export function SvgRftSigned({ caption }: { caption: string }) {
         ))}
         <rect x="40" y="190" width="820" height="90" rx="12" fill="#f0fdf4" stroke="#22c55e" strokeWidth="2"/>
         <text x="60" y="218" fontSize="14" fontWeight="bold" fill="#15803d">✅ RFT Signed = Good News!</text>
-        <text x="60" y="242" fontSize="13" fill="#1e293b">Matlab aapki kist approve ho chuki hai aur process mein hai. Aam tor par RFT ke baad</text>
+        <text x="60" y="242" fontSize="13" fill="#1e293b">Matlab aapki tranche approve ho chuki hai aur process mein hai. Aam tor par RFT ke baad</text>
         <text x="60" y="264" fontSize="13" fill="#1e293b">3-7 working din mein paisa bank account mein credit ho jaata hai. Bas wait karein.</text>
       </svg>
       <figcaption style={capStyle}>{caption}</figcaption>
@@ -551,17 +554,17 @@ export function SvgRftSigned({ caption }: { caption: string }) {
   );
 }
 
-// ── 17. Registration ID Kaise Pata Kare ──────────────────────────────────
+// 17. Enrollment ID — How to Find
 export function SvgRegistrationId({ caption }: { caption: string }) {
   return (
-    <figure style={figStyle}>
+    <figure style={figStyle} role="img" aria-label={caption}>
       <svg viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', display: 'block' }}>
         <rect width="900" height="300" fill="#eff6ff"/>
-        <text x="450" y="36" textAnchor="middle" fontSize="18" fontWeight="bold" fill="#1d4ed8">🔍 PM Kisan Registration ID Kaise Pata Karein</text>
+        <text x="450" y="36" textAnchor="middle" fontSize="18" fontWeight="bold" fill="#1d4ed8">🔍 Agrarian Welfare Enrollment ID Kaise Pata Karein</text>
         {[
-          {method:'Aadhaar Se',steps:['pmkisan.gov.in kholo','Know Your Registration No.','Aadhaar number daalo','ID screen par dikhi'],clr:'#1d4ed8',x:40},
-          {method:'Mobile Number Se',steps:['pmkisan.gov.in kholo','Beneficiary Status','Mobile number enter karo','Registration ID dikhi'],clr:'#0891b2',x:330},
-          {method:'CSC Centre Se',steps:['Nazdiki CSC centre jao','Aadhaar card lao','Operator se Request karo','ID wahan se milegi'],clr:'#7c3aed',x:620},
+          {method:'Biometric Credential Se',steps:['Official portal kholo','Know Your Enrollment No.','Biometric credential number daalo','ID screen par dikhi'],clr:'#1d4ed8',x:40},
+          {method:'Contact Number Se',steps:['Official portal kholo','Beneficiary Status','Contact number enter karo','Enrollment ID dikhi'],clr:'#0891b2',x:330},
+          {method:'CSC Centre Se',steps:['Nazdiki CSC centre jao','Biometric credential card lao','Operator se Request karo','ID wahan se milegi'],clr:'#7c3aed',x:620},
         ].map(s=>(
           <g key={s.method}>
             <rect x={s.x} y="55" width="250" height="225" rx="12" fill="#fff" stroke={s.clr} strokeWidth="2"/>
@@ -583,20 +586,20 @@ export function SvgRegistrationId({ caption }: { caption: string }) {
   );
 }
 
-// ── 18. Name Correction ───────────────────────────────────────────────────
+// 18. Name Correction — Before & After
 export function SvgNameCorrection({ caption }: { caption: string }) {
   return (
-    <figure style={figStyle}>
+    <figure style={figStyle} role="img" aria-label={caption}>
       <svg viewBox="0 0 900 280" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', display: 'block' }}>
         <rect width="900" height="280" fill="#fff7ed"/>
-        <text x="450" y="36" textAnchor="middle" fontSize="18" fontWeight="bold" fill="#ea580c">✏️ PM Kisan Naam Correction — Step by Step Guide</text>
+        <text x="450" y="36" textAnchor="middle" fontSize="18" fontWeight="bold" fill="#ea580c">✏️ Agrarian Welfare Naam Correction — Step by Step Guide</text>
         <rect x="40" y="55" width="820" height="80" rx="12" fill="#fff" stroke="#e2e8f0" strokeWidth="1.5"/>
         <text x="60" y="82" fontSize="14" fontWeight="bold" fill="#ea580c">❌ Galat:</text>
         <text x="60" y="104" fontSize="22" fill="#dc2626" style={{textDecoration:'line-through'}}>RAMESH KUAMR</text>
         <text x="450" y="98" fontSize="20" fill="#94a3b8">→</text>
         <text x="510" y="82" fontSize="14" fontWeight="bold" fill="#15803d">✅ Sahi:</text>
         <text x="510" y="104" fontSize="22" fill="#15803d">RAMESH KUMAR</text>
-        {['Step 1: pmkisan.gov.in → Farmers Corner → Updation of SR','Step 2: Aadhaar number se login karein','Step 3: Edit name field → Sahi naam daalo','Step 4: Aadhaar card ke EXACTLY saame spelling use karein','Step 5: Documents upload → Submit → 15-30 din wait karein'].map((s,i)=>(
+        {['Step 1: Official portal → Farmers Corner → Updation of SR','Step 2: Biometric credential number se login karein','Step 3: Edit name field → Sahi naam daalo','Step 4: Biometric credential card ke EXACTLY saame spelling use karein','Step 5: Documents upload → Submit → 15-30 din wait karein'].map((s,i)=>(
           <text key={i} x="60" y={160+i*24} fontSize="13" fill={i===4?'#ea580c':'#1e293b'} fontWeight={i===4?'bold':'normal'}>{s}</text>
         ))}
       </svg>
@@ -605,25 +608,25 @@ export function SvgNameCorrection({ caption }: { caption: string }) {
   );
 }
 
-// ── 19. Mobile Number Update ──────────────────────────────────────────────
+// 19. Contact Number Update — Online & Offline
 export function SvgMobileUpdate({ caption }: { caption: string }) {
   return (
-    <figure style={figStyle}>
+    <figure style={figStyle} role="img" aria-label={caption}>
       <svg viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', display: 'block' }}>
         <rect width="900" height="300" fill="#f0fdf4"/>
-        <text x="450" y="36" textAnchor="middle" fontSize="18" fontWeight="bold" fill="#15803d">📱 PM Kisan Mobile Number Update Kaise Karein</text>
+        <text x="450" y="36" textAnchor="middle" fontSize="18" fontWeight="bold" fill="#15803d">📱 Agrarian Welfare Contact Number Update Kaise Karein</text>
         <rect x="40" y="55" width="400" height="225" rx="12" fill="#fff" stroke="#15803d" strokeWidth="2"/>
         <rect x="40" y="55" width="400" height="44" rx="12" fill="#15803d"/>
         <rect x="40" y="87" width="400" height="12" fill="#15803d"/>
         <text x="240" y="83" textAnchor="middle" fontSize="14" fontWeight="bold" fill="#fff">🌐 Online Method (Portal)</text>
-        {['1. pmkisan.gov.in → Farmers Corner','2. Edit Aadhaar Details option chuniye','3. Aadhaar + old mobile se verify karein','4. New mobile number enter karein','5. OTP verify → Submit','✅ 24-48 hrs mein update hoga'].map((s,i)=>(
+        {['1. Official portal → Farmers Corner','2. Edit Biometric Credential Details option chuniye','3. Biometric credential + old contact se verify karein','4. New contact number enter karein','5. OTP verify → Submit','✅ 24-48 hrs mein update hoga'].map((s,i)=>(
           <text key={i} x="60" y={118+i*26} fontSize="13" fill={i===5?'#15803d':'#1e293b'} fontWeight={i===5?'bold':'normal'}>{s}</text>
         ))}
         <rect x="460" y="55" width="400" height="225" rx="12" fill="#fff" stroke="#0369a1" strokeWidth="2"/>
         <rect x="460" y="55" width="400" height="44" rx="12" fill="#0369a1"/>
         <rect x="460" y="87" width="400" height="12" fill="#0369a1"/>
         <text x="660" y="83" textAnchor="middle" fontSize="14" fontWeight="bold" fill="#fff">🏢 Offline Method (CSC/Block)</text>
-        {['1. CSC centre ya Block office jao','2. Aadhaar card original + copy lao','3. PM Kisan registered documents lao','4. Mobile update form bharo','5. Officer verify karega','✅ 7-15 din mein update hoga'].map((s,i)=>(
+        {['1. CSC centre ya Block office jao','2. Biometric credential card original + copy lao','3. Scheme enrolled documents lao','4. Contact update form bharo','5. Officer verify karega','✅ 7-15 din mein update hoga'].map((s,i)=>(
           <text key={i} x="480" y={118+i*26} fontSize="13" fill={i===5?'#0369a1':'#1e293b'} fontWeight={i===5?'bold':'normal'}>{s}</text>
         ))}
       </svg>
@@ -632,18 +635,18 @@ export function SvgMobileUpdate({ caption }: { caption: string }) {
   );
 }
 
-// ── 20. Correction FAQ ────────────────────────────────────────────────────
+// 20. Correction FAQ — Common Questions
 export function SvgFaqCorrection({ caption }: { caption: string }) {
   return (
-    <figure style={figStyle}>
+    <figure style={figStyle} role="img" aria-label={caption}>
       <svg viewBox="0 0 900 260" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', display: 'block' }}>
         <rect width="900" height="260" fill="#f8fafc"/>
         <text x="450" y="36" textAnchor="middle" fontSize="18" fontWeight="bold" fill="#1e293b">❓ Correction Se Jude Aksar Pooche Jaane Wale Sawaal</text>
         {[
           {q:'Correction mein kitna time lagta hai?',a:'15-30 working days. Urgent case mein helpline call karein.',x:40,y:60},
-          {q:'Kya correction free hai?',a:'Haan, PM Kisan correction bilkul free hai.',x:470,y:60},
-          {q:'Naam change hoga ya sirf spelling?',a:'Sirf Aadhaar se matching spelling change hoti hai.',x:40,y:160},
-          {q:'Correction ke baad kist milegi?',a:'Haan, approved correction ke baad arrears bhi milenge.',x:470,y:160},
+          {q:'Kya correction free hai?',a:'Haan, agrarian welfare correction bilkul free hai.',x:470,y:60},
+          {q:'Naam change hoga ya sirf spelling?',a:'Sirf biometric credential se matching spelling change hoti hai.',x:40,y:160},
+          {q:'Correction ke baad tranche milegi?',a:'Haan, approved correction ke baad arrears bhi milenge.',x:470,y:160},
         ].map(s=>(
           <g key={s.x+s.y}>
             <rect x={s.x} y={s.y} width="390" height="88" rx="10" fill="#fff" stroke="#e2e8f0" strokeWidth="1.5"/>
@@ -658,11 +661,11 @@ export function SvgFaqCorrection({ caption }: { caption: string }) {
   );
 }
 
-// ── Additional SVGs (added to fix missing exports) ─────────────────────────
+// Additional SVGs — Compact Illustrations
 
 export function SvgBeneficiaryList({ caption }: { caption: string }) {
   return (
-    <figure className="my-6 rounded-2xl overflow-hidden border border-green-100 bg-green-50">
+    <figure className="my-6 rounded-2xl overflow-hidden border border-green-100 bg-green-50" role="img" aria-label={caption}>
       <svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-32 md:h-44">
         <rect width="800" height="200" fill="#f0fdf4"/>
         <rect x="40" y="30" width="220" height="140" rx="12" fill="#fff" stroke="#86efac" strokeWidth="2"/>
@@ -681,7 +684,7 @@ export function SvgBeneficiaryList({ caption }: { caption: string }) {
 
 export function SvgCorrection({ caption }: { caption: string }) {
   return (
-    <figure className="my-6 rounded-2xl overflow-hidden border border-purple-100 bg-purple-50">
+    <figure className="my-6 rounded-2xl overflow-hidden border border-purple-100 bg-purple-50" role="img" aria-label={caption}>
       <svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-32 md:h-44">
         <rect width="800" height="200" fill="#faf5ff"/>
         <rect x="60" y="40" width="280" height="120" rx="12" fill="#fff" stroke="#c084fc" strokeWidth="2"/>
@@ -701,7 +704,7 @@ export function SvgCorrection({ caption }: { caption: string }) {
 
 export function SvgCropInsurance({ caption }: { caption: string }) {
   return (
-    <figure className="my-6 rounded-2xl overflow-hidden border border-amber-100 bg-amber-50">
+    <figure className="my-6 rounded-2xl overflow-hidden border border-amber-100 bg-amber-50" role="img" aria-label={caption}>
       <svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-32 md:h-44">
         <rect width="800" height="200" fill="#fffbeb"/>
         <text x="120" y="120" textAnchor="middle" fill="#d97706" fontSize="60">🌾</text>
@@ -709,7 +712,7 @@ export function SvgCropInsurance({ caption }: { caption: string }) {
         <text x="400" y="120" textAnchor="middle" fill="#d97706" fontSize="60">🛡️</text>
         <text x="560" y="105" textAnchor="middle" fill="#92400e" fontSize="24">=</text>
         <rect x="640" y="50" width="120" height="100" rx="12" fill="#fff" stroke="#fcd34d" strokeWidth="2"/>
-        <text x="700" y="95" textAnchor="middle" fill="#b45309" fontSize="12" fontWeight="bold">PMFBY</text>
+        <text x="700" y="95" textAnchor="middle" fill="#b45309" fontSize="12" fontWeight="bold">Crop Protection</text>
         <text x="700" y="115" textAnchor="middle" fill="#d97706" fontSize="11">Claim ✓</text>
       </svg>
       <figcaption className="text-center text-xs text-gray-500 py-2 bg-white border-t border-amber-100">{caption}</figcaption>
@@ -719,13 +722,13 @@ export function SvgCropInsurance({ caption }: { caption: string }) {
 
 export function SvgInstallmentHistory({ caption }: { caption: string }) {
   return (
-    <figure className="my-6 rounded-2xl overflow-hidden border border-blue-100 bg-blue-50">
+    <figure className="my-6 rounded-2xl overflow-hidden border border-blue-100 bg-blue-50" role="img" aria-label={caption}>
       <svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-32 md:h-44">
         <rect width="800" height="200" fill="#eff6ff"/>
         {[0,1,2,3,4,5].map(i=>(
           <g key={i}>
             <rect x={60+i*115} y="50" width="95" height="100" rx="8" fill="#fff" stroke="#93c5fd" strokeWidth="1.5"/>
-            <text x={107+i*115} y="85" textAnchor="middle" fill="#1d4ed8" fontSize="10" fontWeight="bold">Kist {i+17}vi</text>
+            <text x={107+i*115} y="85" textAnchor="middle" fill="#1d4ed8" fontSize="10" fontWeight="bold">Tranche {i+17}vi</text>
             <rect x={72+i*115} y="95" width="71" height="8" rx="3" fill={i<5?"#86efac":"#fde68a"}/>
             <text x={107+i*115} y="125" textAnchor="middle" fill={i<5?"#15803d":"#d97706"} fontSize="9">{i<5?"✅ ₹2,000":"⏳ Expected"}</text>
           </g>
@@ -738,19 +741,19 @@ export function SvgInstallmentHistory({ caption }: { caption: string }) {
 
 export function SvgInstallmentStatus({ caption }: { caption: string }) {
   return (
-    <figure className="my-6 rounded-2xl overflow-hidden border border-green-100 bg-green-50">
+    <figure className="my-6 rounded-2xl overflow-hidden border border-green-100 bg-green-50" role="img" aria-label={caption}>
       <svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-32 md:h-44">
         <rect width="800" height="200" fill="#f0fdf4"/>
         <rect x="50" y="30" width="300" height="140" rx="16" fill="#fff" stroke="#86efac" strokeWidth="2"/>
-        <text x="200" y="75" textAnchor="middle" fill="#15803d" fontSize="14" fontWeight="bold">22vi Kist Status</text>
+        <text x="200" y="75" textAnchor="middle" fill="#15803d" fontSize="14" fontWeight="bold">22vi Tranche Status</text>
         <rect x="70" y="90" width="260" height="16" rx="6" fill="#4ade80"/>
         <text x="200" y="103" textAnchor="middle" fill="#fff" fontSize="10" fontWeight="bold">✅ Payment Success — ₹2,000</text>
         <text x="200" y="135" textAnchor="middle" fill="#16a34a" fontSize="11">13 March 2026</text>
         <rect x="420" y="30" width="330" height="140" rx="16" fill="#fff" stroke="#fcd34d" strokeWidth="2"/>
-        <text x="585" y="75" textAnchor="middle" fill="#b45309" fontSize="14" fontWeight="bold">23vi Kist</text>
+        <text x="585" y="75" textAnchor="middle" fill="#b45309" fontSize="14" fontWeight="bold">23vi Tranche</text>
         <rect x="440" y="90" width="270" height="16" rx="6" fill="#fde68a"/>
         <text x="585" y="103" textAnchor="middle" fill="#92400e" fontSize="10" fontWeight="bold">⏳ Expected — Jun-Jul 2026</text>
-        <text x="585" y="135" textAnchor="middle" fill="#d97706" fontSize="11">eKYC complete rakho</text>
+        <text x="585" y="135" textAnchor="middle" fill="#d97706" fontSize="11">Digital verification complete rakho</text>
       </svg>
       <figcaption className="text-center text-xs text-gray-500 py-2 bg-white border-t border-green-100">{caption}</figcaption>
     </figure>
@@ -759,10 +762,10 @@ export function SvgInstallmentStatus({ caption }: { caption: string }) {
 
 export function SvgKisanLoan({ caption }: { caption: string }) {
   return (
-    <figure className="my-6 rounded-2xl overflow-hidden border border-green-100 bg-green-50">
+    <figure className="my-6 rounded-2xl overflow-hidden border border-green-100 bg-green-50" role="img" aria-label={caption}>
       <svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-32 md:h-44">
         <rect width="800" height="200" fill="#f0fdf4"/>
-        {[['KCC',60,'#4ade80','#15803d'],['Bank Loan',230,'#86efac','#166534'],['NABARD',400,'#4ade80','#15803d'],['CSC',570,'#86efac','#166534']].map(([label,x,fill,tc])=>(
+        {[['Credit Facility',60,'#4ade80','#15803d'],['Bank Loan',230,'#86efac','#166534'],['NABARD',400,'#4ade80','#15803d'],['CSC',570,'#86efac','#166534']].map(([label,x,fill,tc])=>(
           <g key={label as string}>
             <rect x={x as number} y="40" width="130" height="120" rx="12" fill="#fff" stroke={fill as string} strokeWidth="2"/>
             <text x={(x as number)+65} y="95" textAnchor="middle" fill={tc as string} fontSize="24">🏦</text>
@@ -777,7 +780,7 @@ export function SvgKisanLoan({ caption }: { caption: string }) {
 
 export function SvgLandSeeding({ caption }: { caption: string }) {
   return (
-    <figure className="my-6 rounded-2xl overflow-hidden border border-amber-100 bg-amber-50">
+    <figure className="my-6 rounded-2xl overflow-hidden border border-amber-100 bg-amber-50" role="img" aria-label={caption}>
       <svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-32 md:h-44">
         <rect width="800" height="200" fill="#fffbeb"/>
         <rect x="50" y="40" width="150" height="120" rx="12" fill="#fff" stroke="#fcd34d" strokeWidth="2"/>
@@ -790,7 +793,7 @@ export function SvgLandSeeding({ caption }: { caption: string }) {
         <text x="510" y="105" textAnchor="middle" fill="#d97706" fontSize="20">→</text>
         <rect x="550" y="40" width="200" height="120" rx="12" fill="#fff" stroke="#86efac" strokeWidth="2"/>
         <text x="650" y="90" textAnchor="middle" fill="#16a34a" fontSize="22">✅</text>
-        <text x="650" y="120" textAnchor="middle" fill="#15803d" fontSize="10" fontWeight="bold">Land Seeding: Yes</text>
+        <text x="650" y="120" textAnchor="middle" fill="#15803d" fontSize="10" fontWeight="bold">Land Integration: Yes</text>
       </svg>
       <figcaption className="text-center text-xs text-gray-500 py-2 bg-white border-t border-amber-100">{caption}</figcaption>
     </figure>
@@ -799,12 +802,12 @@ export function SvgLandSeeding({ caption }: { caption: string }) {
 
 export function SvgPaymentFailed({ caption }: { caption: string }) {
   return (
-    <figure className="my-6 rounded-2xl overflow-hidden border border-red-100 bg-red-50">
+    <figure className="my-6 rounded-2xl overflow-hidden border border-red-100 bg-red-50" role="img" aria-label={caption}>
       <svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-32 md:h-44">
         <rect width="800" height="200" fill="#fef2f2"/>
         <rect x="50" y="40" width="200" height="120" rx="12" fill="#fff" stroke="#fca5a5" strokeWidth="2"/>
         <text x="150" y="85" textAnchor="middle" fill="#dc2626" fontSize="22">🏛️</text>
-        <text x="150" y="110" textAnchor="middle" fill="#991b1b" fontSize="10">PM Kisan</text>
+        <text x="150" y="110" textAnchor="middle" fill="#991b1b" fontSize="10">Scheme</text>
         <text x="150" y="128" textAnchor="middle" fill="#dc2626" fontSize="9">Payment Sent ✓</text>
         <text x="305" y="105" textAnchor="middle" fill="#dc2626" fontSize="20">→</text>
         <rect x="340" y="40" width="160" height="120" rx="12" fill="#fee2e2" stroke="#fca5a5" strokeWidth="2"/>
@@ -823,10 +826,10 @@ export function SvgPaymentFailed({ caption }: { caption: string }) {
 
 export function SvgProblemsSolution({ caption }: { caption: string }) {
   return (
-    <figure className="my-6 rounded-2xl overflow-hidden border border-blue-100 bg-blue-50">
+    <figure className="my-6 rounded-2xl overflow-hidden border border-blue-100 bg-blue-50" role="img" aria-label={caption}>
       <svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-32 md:h-44">
         <rect width="800" height="200" fill="#eff6ff"/>
-        {[['❌ RFT Pending',50],['❌ PFMS Error',210],['❌ eKYC Fail',370],['❌ Payment Fail',530]].map(([label,x])=>(
+        {[['❌ RFT Pending',50],['❌ PFMS Error',210],['❌ Digital Verification Fail',370],['❌ Payment Fail',530]].map(([label,x])=>(
           <g key={label as string}>
             <rect x={x as number} y="30" width="140" height="60" rx="8" fill="#fee2e2" stroke="#fca5a5" strokeWidth="1.5"/>
             <text x={(x as number)+70} y="67" textAnchor="middle" fill="#dc2626" fontSize="10">{label}</text>
@@ -843,10 +846,10 @@ export function SvgProblemsSolution({ caption }: { caption: string }) {
 
 export function SvgRegistration({ caption }: { caption: string }) {
   return (
-    <figure className="my-6 rounded-2xl overflow-hidden border border-blue-100 bg-blue-50">
+    <figure className="my-6 rounded-2xl overflow-hidden border border-blue-100 bg-blue-50" role="img" aria-label={caption}>
       <svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-32 md:h-44">
         <rect width="800" height="200" fill="#eff6ff"/>
-        {[['📋 Docs Ready',50,'#93c5fd'],['📝 Form Fill',220,'#6ee7b7'],['✅ Submit',390,'#fcd34d'],['🎉 Registered!',560,'#86efac']].map(([label,x,color],i)=>(
+        {[['📋 Docs Ready',50,'#93c5fd'],['📝 Form Fill',220,'#6ee7b7'],['✅ Submit',390,'#fcd34d'],['🎉 Enrolled!',560,'#86efac']].map(([label,x,color],i)=>(
           <g key={i}>
             <rect x={x as number} y="50" width="140" height="100" rx="12" fill="#fff" stroke={color as string} strokeWidth="2"/>
             <text x={(x as number)+70} y="108" textAnchor="middle" fill="#1e40af" fontSize="11" fontWeight="bold">{label}</text>
@@ -861,11 +864,11 @@ export function SvgRegistration({ caption }: { caption: string }) {
 
 export function SvgRejectedList({ caption }: { caption: string }) {
   return (
-    <figure className="my-6 rounded-2xl overflow-hidden border border-red-100 bg-red-50">
+    <figure className="my-6 rounded-2xl overflow-hidden border border-red-100 bg-red-50" role="img" aria-label={caption}>
       <svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-32 md:h-44">
         <rect width="800" height="200" fill="#fef2f2"/>
         <rect x="50" y="30" width="300" height="140" rx="12" fill="#fff" stroke="#fca5a5" strokeWidth="2"/>
-        <text x="200" y="70" textAnchor="middle" fill="#dc2626" fontSize="13" fontWeight="bold">Rejected List</text>
+        <text x="200" y="70" textAnchor="middle" fill="#dc2626" fontSize="13" fontWeight="bold">Rejected Roster</text>
         {[85,105,125,145,162].map((y,i)=>(
           <g key={i}><rect x="70" y={y} width="260" height="10" rx="3" fill={i===1?"#fca5a5":"#fee2e2"}/>{i===1&&<text x="75" y={y+8} fill="#dc2626" fontSize="8">❌ Aapka Naam</text>}</g>
         ))}
@@ -883,12 +886,12 @@ export function SvgRejectedList({ caption }: { caption: string }) {
 
 export function SvgTractorLoan({ caption }: { caption: string }) {
   return (
-    <figure className="my-6 rounded-2xl overflow-hidden border border-green-100 bg-green-50">
+    <figure className="my-6 rounded-2xl overflow-hidden border border-green-100 bg-green-50" role="img" aria-label={caption}>
       <svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-32 md:h-44">
         <rect width="800" height="200" fill="#f0fdf4"/>
         <text x="130" y="120" textAnchor="middle" fill="#15803d" fontSize="70">🚜</text>
         <rect x="280" y="40" width="460" height="120" rx="12" fill="#fff" stroke="#86efac" strokeWidth="2"/>
-        <text x="510" y="80" textAnchor="middle" fill="#15803d" fontSize="14" fontWeight="bold">Tractor Loan Options</text>
+        <text x="510" y="80" textAnchor="middle" fill="#15803d" fontSize="14" fontWeight="bold">Farm Equipment Loan Options</text>
         {[['SBI Agri Loan','7-9%',105],['NABARD Subsidy','25-50%',125],['State Schemes','Vary',145],['Private Finance','12-18%',162]].map(([label,rate,y])=>(
           <g key={label as string}>
             <text x="310" y={y as number} fill="#374151" fontSize="10">{label}</text>
