@@ -120,7 +120,7 @@ function ArticleImage({ src, alt, emoji }: { src: string; alt: string; emoji: st
             alt={alt}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            quality={80}
+            quality={75}
             loading="lazy"
             className={`object-cover group-hover:scale-105 transition-transform duration-500 ${loaded ? 'opacity-100' : 'opacity-0'}`}
             onLoad={() => setLoaded(true)}
@@ -139,7 +139,7 @@ function ArticleImage({ src, alt, emoji }: { src: string; alt: string; emoji: st
   );
 }
 
-// Hero background image with fallback
+// Hero background image with fallback — LCP optimization
 function HeroImage() {
   const [error, setError] = useState(false);
 
@@ -155,7 +155,8 @@ function HeroImage() {
         fill
         sizes="100vw"
         priority={true}
-        quality={75}
+        fetchPriority="high"
+        quality={80}
         className="object-cover opacity-20"
         onError={() => setError(true)}
       />
@@ -284,7 +285,7 @@ export default function HomeContent() {
               alt="Indian Cultivators in Green Wheat Field - Agrarian Welfare Beneficiaries"
               width={1200}
               height={630}
-              quality={80}
+              quality={75}
               loading="lazy"
               sizes="(max-width: 768px) 100vw, 1200px"
               className="w-full h-auto"
@@ -399,7 +400,7 @@ export default function HomeContent() {
               alt="Modern Farming Technology in India - Tractor, Mobile App, Digital Agriculture for Cultivators"
               width={1200}
               height={630}
-              quality={80}
+              quality={75}
               loading="lazy"
               sizes="(max-width: 768px) 100vw, 1200px"
               className="w-full h-auto"
@@ -422,7 +423,7 @@ export default function HomeContent() {
             </div>
           </div>
 
-          {/* Features grid — removed broken link */}
+          {/* Features grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
             {[
               { icon: '🌱', title: 'Soil Analysis Card', desc: 'Mitti testing free', color: 'bg-green-500' },
