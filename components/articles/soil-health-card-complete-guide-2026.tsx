@@ -2,134 +2,116 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { SvgFAQ } from '@/components/ArticleSVGs';
-import { SI, StepList, IB, WB, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, fmtDate } from '@/components/ArticleShared';
+import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
+import type { ArticleMeta } from '@/lib/articles-data';
 
 const PUBLISHED = '2026-06-27T08:00:00+05:30';
-const MODIFIED  = '2026-07-02T18:30:00+05:30';
-const DOMAIN = 'https://kisanstatus.com';
-const URL    = `${DOMAIN}/articles/soil-health-card-complete-guide-2026`;
-
-const schemas = [
-  {
-    '@context': 'https://schema.org', '@type': 'Article',
-    headline: 'Soil Health Card 2026 — Complete Registration Guide with Official Process',
-    description: 'Soil health card 2026 — Registration process, required documents, status check, PDF download, aur common problems ka solution. Official portal ke mutabik jaankari.',
-    image: `${DOMAIN}/images/articles/soil-health-card-complete-guide-2026/hero.webp`,
-    datePublished: PUBLISHED, dateModified: MODIFIED,
-    author: { '@type': 'Organization', name: 'KisanStatus Team', url: `${DOMAIN}/about` },
-    publisher: { '@type': 'Organization', name: 'KisanStatus.com', url: DOMAIN },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': URL },
-    inLanguage: 'hi-IN',
-  },
-  {
-    '@context': 'https://schema.org', '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: DOMAIN },
-      { '@type': 'ListItem', position: 2, name: 'Articles', item: `${DOMAIN}/articles` },
-      { '@type': 'ListItem', position: 3, name: 'Soil Health Card Guide', item: URL },
-    ],
-  },
-];
+const MODIFIED = '2026-07-04T08:00:00+05:30';
 
 const RELATED = [
   { slug: 'pm-kisan-23vi-kist-2026-status-check', title: '23vi Installment Status', emoji: '📅' },
-  { slug: 'nano-dap-500ml-price-in-india-2026', title: 'Nano DAP Price', emoji: '🌱' },
-  { slug: 'pmfby-crop-insurance-2026', title: 'PMFBY Insurance', emoji: '🛡️' },
+  { slug: 'nano-dap-500ml-price-in-india-2026', title: 'Nano DAP Price Guide', emoji: '🌱' },
+  { slug: 'pmfby-crop-insurance-2026', title: 'PMFBY Crop Insurance', emoji: '🛡️' },
+  { slug: 'kisan-credit-card-online-apply-2026', title: 'KCC Credit Card Guide', emoji: '💳' },
+  { slug: 'agristack-kya-hai', title: 'Digital Cultivator Identity', emoji: '🆔' },
+  { slug: 'pm-kisan-registration-online-2026', title: 'New Enrollment Guide', emoji: '📝' },
 ];
 
-export default function SoilHealthCardCompleteGuide2026() {
+const FAQS_DATA = [
+  { q: 'Kitne time baad dobara test karwana chahiye?', a: 'Official recommendation: har 2-3 saal mein. Agar monsoon mein zyada barish hui ya fasal pattern badla (gehun se chawal) toh turant test karwao. Mitti ki composition badal jaati hai.' },
+  { q: 'Kirayedar kisan (batai dar) bhi test karwa sakte hain?', a: 'Haan. Zameen ka maalik hona zaroori nahi. Patta agreement ya land possession proof chahiye. Jo kheti karta hai woh eligible hai.' },
+  { q: 'Report mein likhi salah follow karna zaroori hai?', a: 'Strongly recommended hai lekin mandatory nahi. Report guideline hai — aapki mitti ki specific condition ke hisaab se. Samajh na aaye toh KVK ya krishi vibhag se consult karo.' },
+  { q: '30 din se zyada ho gaye aur card nahi aaya?', a: 'Pehle portal par status check karo. "Sample Under Testing" = thoda wait. Koi update nahi = helpline call ya CSC jaao. Kabhi-kabhi sample lab tak nahi pahunchta.' },
+  { q: 'Kya ye report kisi aur kaam aati hai?', a: 'Haan. KCC loan, crop insurance claim, organic certification, fertilizer subsidy — kai jagah useful hoti hai.' },
+  { q: 'Test kitna mehnga hai?', a: 'Official portal par muft. CSC service charge ₹20-50 (state-wise). Print ₹10-20. Correction muft. ₹100+ maange toh complaint karo.' },
+  { q: 'Password bhool gaye — kya karein?', a: '"Forgot Password" click karo → registered mobile daalo → OTP se naya password set karo. Password kahin likh ke rakho.' },
+];
+
+export default function SoilHealthCardCompleteGuide2026({ article }: { article: ArticleMeta }) {
   return (
     <>
-      {schemas.map((s, i) => <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />)}
-
+      {/* Header */}
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
           <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
-            <Link href="/" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Home</Link><span>/</span>
-            <Link href="/articles" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Articles</Link><span>/</span>
+            <Link href="/" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Home</Link>
+            <span>/</span>
+            <Link href="/articles" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Articles</Link>
+            <span>/</span>
             <span className="text-white font-bold">Soil Health Card Guide</span>
           </nav>
-          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">📋 Official Process Guide — 2026</span>
+          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Mitti Jaanch Guide 2026</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            Soil Health Card 2026 — Registration Se lekar PDF Download Tak Ka Complete Guide
+            Soil Health Card 2026: Registration Se Lekar PDF Download + Report Samajhne Tak Ka Complete Guide
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 15 min read</span>
+            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
+            <span>⏱️ 11 min read</span>
           </div>
         </div>
       </div>
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* IMAGE 1: Hero */}
+        {/* Hero Image #1 — PRESERVED */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src="/images/articles/soil-health-card-complete-guide-2026/hero.webp"
-            alt="Soil health card registration process — CSC centre par form bharte hue kisan"
+            src={article.ogImage || '/images/articles/soil-health-card-complete-guide-2026/hero.webp'}
+            alt="Soil health card registration process — CSC centre par form bharte hue kisan 2026"
             width={1200}
             height={630}
-            className="w-full h-auto object-cover"
-            style={{ maxHeight: '400px' }}
-            loading="lazy"
-            sizes="(max-width: 768px) 100vw, 1200px"
+            className="w-full object-cover"
+            style={{ maxHeight: '420px', objectPosition: 'center' }}
+            priority
+            sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            📸 Soil Health Card — CSC centre ya online portal ke zariye registration ka process
+            CSC Centre Ya Online Portal Se Registration Ka Process
           </p>
         </div>
 
-        {/* OPENING */}
+        {/* Intro */}
         <section className="mb-8">
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Mitti ki jaanch karwana aaj ke kheti ke liye zaroori ho gaya hai. Kai saalon se ek hi tarah ki fasal ugane se, ya galat matra mein khaad dalne se zameen ki quality gir jaati hai. Is problem ko samajhte hue Bharat sarkar ne 2015 mein Soil Health Card Yojana shuru ki thi.
+            Kai saalon se ek hi fasal ugane ya galat matra mein khaad dalne se zameen ki quality gir jaati hai. Isliye Bharat sarkar ne 2015 mein Soil Health Card Yojana shuru ki.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Is yojana ke tahat har kisan apni zameen ki mitti ka test karwa sakta hai — bilkul muft ya bahut kam kharch mein. Test ke baad jo report milti hai, usme likha hota hai ki aapki mitti mein kaunse nutrients hain, kaunse kam hain, aur kaunsi fasal ke liye kitni khaad dalni chahiye.
+            Har kisan apni mitti ka test karwa sakta hai — muft ya bahut kam kharch mein. Report mein likha hota hai: kaunse nutrients hain, kaunse kam hain, aur kaunsi fasal ke liye kitni khaad chahiye.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Is guide mein hum aapko registration se lekar PDF download tak ka poora process batayenge — official portal ke mutabik. Saath hi common problems aur unke solutions bhi.
+            Is guide mein registration se PDF download tak ka poora process hai — official portal ke mutabik.
           </p>
         </section>
 
-        {/* WHAT IS SOIL HEALTH CARD */}
+        {/* What Is Soil Health Card */}
         <section className="mb-8">
-          <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            1. Soil Health Card Kya Hai?
-          </h2>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Ye ek report card hai jo aapki zameen ki health batata hai. Jaise doctor aapke blood test ke baad report deta hai, waise hi krishi vibhag mitti ka test karke report deta hai. Is report mein 12 parameters check kiye jaate hain.
+          <SH>Soil Health Card Kya Hai?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Jaise doctor blood test ke baad report deta hai, waise hi krishi vibhag mitti ka test karke report deta hai. 12 parameters check hote hain:
           </p>
-
           <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl p-4 mb-4">
-            <h3 className="font-black text-green-800 dark:text-green-300 text-sm mb-2">Report Mein Ye Cheezein Hoti Hain:</h3>
             <ul className="space-y-1 text-xs text-[var(--color-text-muted)]">
               <li>✓ pH maan — mitti khatti hai ya khari</li>
-              <li>✓ Nitrogen (N), Phosphorus (P), Potassium (K) ki matra</li>
+              <li>✓ Nitrogen (N), Phosphorus (P), Potassium (K)</li>
               <li>✓ Organic Carbon — zameen ki urvarakta</li>
-              <li>✓ Sukshma poshak tatva — Zinc, Iron, Copper, Manganese, Boron</li>
-              <li>✓ Fasal ke anusar khaad ki salah</li>
-              <li>✓ Mitti ka prakar — balui, domat, chikni mitti</li>
+              <li>✓ Micronutrients — Zinc, Iron, Copper, Manganese, Boron</li>
+              <li>✓ Fasal-wise khaad ki salah</li>
+              <li>✓ Mitti ka prakar — balui, domat, chikni</li>
             </ul>
           </div>
-
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Official portal ke mutabik, ye report 2-3 saal tak valid rehti hai. Uske baad dobara test karwana chahiye kyunki mitti ki composition samay ke saath badal jaati hai.
-          </p>
+          <IB>
+            <strong>Validity:</strong> Report 2-3 saal valid rehti hai. Uske baad dobara test karwao — mitti ki composition samay ke saath badalti hai.
+          </IB>
         </section>
 
-        {/* WHY IMPORTANT */}
+        {/* Why Important */}
         <section className="mb-8">
-          <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            2. Test Karwana Kyun Zaroori Hai?
-          </h2>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Bahut se kisan saalon se ek hi tarah ki khaad daal rahe hain — bina ye jaane ki unki mitti ko actually kya chahiye. Iska nuksan ye hota hai:
+          <SH>Test Karwana Kyun Zaroori Hai?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Bahut se kisan bina jaane saalon se ek hi khaad daal rahe hain. Nuksan:
           </p>
-
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
             <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl p-4 text-center">
               <span className="text-3xl block mb-2">💸</span>
@@ -139,7 +121,7 @@ export default function SoilHealthCardCompleteGuide2026() {
             <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-xl p-4 text-center">
               <span className="text-3xl block mb-2">📉</span>
               <p className="font-black text-yellow-800 dark:text-yellow-300 text-sm">Kam Utpadan</p>
-              <p className="text-[11px] text-[var(--color-text-muted)] mt-1">Galat khaad se fasal ki quality gir sakti hai</p>
+              <p className="text-[11px] text-[var(--color-text-muted)] mt-1">Galat khaad se fasal quality girti hai</p>
             </div>
             <div className="bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 rounded-xl p-4 text-center">
               <span className="text-3xl block mb-2">🌱</span>
@@ -147,458 +129,280 @@ export default function SoilHealthCardCompleteGuide2026() {
               <p className="text-[11px] text-[var(--color-text-muted)] mt-1">Lambi avadhi mein zameen banjar ho sakti hai</p>
             </div>
           </div>
-
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Krishi Vigyan Kendra (KVK) ke scientists ke mutabik, Bharat ki kaafi zameenon mein zinc ki kami hai. Kai ilaqon mein phosphorus bahut kam hai, aur kuch jagah nitrogen zaroorat se zyada ho gaya hai. Ye sab bina test kiye pata nahi chalta.
+            KVK scientists ke mutabik, Bharat ki kaafi zameenon mein zinc ki kami hai. Kai ilaqon mein phosphorus bahut kam, kuch jagah nitrogen zaroorat se zyada. Bina test kiye pata nahi chalta.
           </p>
-
           <IB>
-            <strong>💡 Practical Tip:</strong> Agar aapne pichhle 3 saal se mitti test nahi karwayi, to ek baar zaroor karwayein. Khaas kar agar monsoon mein bahut zyada barish hui ho, ya aapne fasal ka pattern badla ho.
+            <strong>Tip:</strong> Pichhle 3 saal se test nahi karwaya? Ek baar zaroor karwao. Khaas kar agar monsoon mein zyada barish hui ya fasal pattern badla.
           </IB>
         </section>
 
-        {/* REGISTRATION PROCESS */}
+        {/* Registration Process */}
         <section className="mb-8">
-          <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            3. Enrollment Kaise Karein? (Dono Tarike)
-          </h2>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Official portal par do tarike diye gaye hain — offline CSC centre ke zariye, ya online ghar baithe. Dono tarike valid hain aur dono se same report milti hai.
-          </p>
+          <SH>Enrollment Kaise Karein? Dono Tarike</SH>
 
           <div className="mb-4 p-4 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-400 dark:border-blue-700 rounded-xl">
-            <h3 className="font-black text-blue-800 dark:text-blue-300 text-sm mb-2">Tarika 1: CSC Centre Se (Offline)</h3>
+            <h3 className="font-black text-blue-800 dark:text-blue-300 text-sm mb-2">Tarika 1: CSC Centre (Offline)</h3>
             <StepList>
-              <SI n={1}>Nazdiki Common Service Centre (CSC) ya Krishi Seva Kendra dhundhein</SI>
-              <SI n={2}>Saath leke jaayein — biometric credential card, mobile number, khasra/khatauni number</SI>
-              <SI n={3}>Operator form bharega — aapki details verify karega</SI>
-              <SI n={4}>Form submit hone par ek enrollment number milega — ise sambhal ke rakhein</SI>
-              <SI n={5}>Mitti ka sample lene ka time fix hoga — ya to aap khud denge, ya krishi vibhag ka staff aayega</SI>
+              <SI n={1}>Nazdiki CSC ya Krishi Seva Kendra dhundo</SI>
+              <SI n={2}>Le jaao: Aadhaar card, mobile, khasra/khatauni number</SI>
+              <SI n={3}>Operator form bharega, details verify karega</SI>
+              <SI n={4}>Enrollment number milega — sambhal ke rakho</SI>
+              <SI n={5}>Mitti sample lene ka time fix hoga</SI>
             </StepList>
           </div>
 
           <div className="p-4 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl">
             <h3 className="font-black text-green-800 dark:text-green-300 text-sm mb-2">Tarika 2: Online (Ghar Baithe)</h3>
             <StepList>
-              <SI n={1}><strong>soilhealth.dac.gov.in</strong> par jaayein</SI>
-              <SI n={2}>"Farmer Login" ya "New Registration" par click karein</SI>
-              <SI n={3}>Apna state select karein — har state ka portal alag ho sakta hai</SI>
-              <SI n={4}>Form bharein — personal details, land details, contact number</SI>
-              <SI n={5}>Documents upload karein — biometric credential, land records</SI>
-              <SI n={6}>Submit karein — enrollment number note kar lein</SI>
+              <SI n={1}><strong>soilhealth.dac.gov.in</strong> par jaao</SI>
+              <SI n={2}>"Farmer Login" ya "New Registration" click karo</SI>
+              <SI n={3}>State select karo — har state ka portal alag ho sakta hai</SI>
+              <SI n={4}>Form bharo — personal + land + contact details</SI>
+              <SI n={5}>Documents upload — Aadhaar, land records</SI>
+              <SI n={6}>Submit → enrollment number note karo</SI>
             </StepList>
           </div>
 
           <WB>
-            <strong>⚠️ Zaroori Baat:</strong> Jo mobile number aap denge, wahi active rakhna. Baad mein OTP, status updates, aur PDF link sab usi par aata hai. Number change ho gaya to CSC centre jaakar update karwana padega.
+            <strong>Zaroori:</strong> Jo mobile number doge, wahi active rako. OTP, status updates, PDF link sab usi par aata hai. Number change = CSC jaake update karwao.
           </WB>
         </section>
 
-        {/* REQUIRED DOCUMENTS */}
+        {/* Documents */}
         <section className="mb-8">
-          <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            4. Kaunse Documents Chahiye?
-          </h2>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Enrollment ke liye ye documents zaroori hain. Dhyan rahe ki documents clear aur readable hone chahiye:
-          </p>
-
-          <div className="overflow-x-auto mb-4 rounded-xl border border-[var(--color-border)]">
-            <table className="w-full text-xs border-collapse">
+          <SH>Kaunse Documents Chahiye?</SH>
+          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
+            <table className="w-full text-sm border-collapse">
               <thead>
                 <tr className="bg-[var(--color-primary)] text-white">
-                  <th className="p-2 text-left">Document</th>
-                  <th className="p-2 text-left">Kyun Chahiye</th>
+                  <th className="p-3 text-left">Document</th>
+                  <th className="p-3 text-left">Kyun Chahiye</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="bg-[var(--color-card)]">
-                  <td className="p-2 border-b border-[var(--color-border)] font-medium">Biometric Credential Card</td>
-                  <td className="p-2 border-b border-[var(--color-border)]">Identity verification ke liye</td>
-                </tr>
-                <tr className="bg-[var(--color-bg-alt)]">
-                  <td className="p-2 border-b border-[var(--color-border)] font-medium">Mobile Number</td>
-                  <td className="p-2 border-b border-[var(--color-border)]">OTP aur updates ke liye — active hona chahiye</td>
-                </tr>
-                <tr className="bg-[var(--color-card)]">
-                  <td className="p-2 border-b border-[var(--color-border)] font-medium">Khasra/Khatauni Number</td>
-                  <td className="p-2 border-b border-[var(--color-border)]">Zameen ki details verify karne ke liye</td>
-                </tr>
-                <tr className="bg-[var(--color-bg-alt)]">
-                  <td className="p-2 border-b border-[var(--color-border)] font-medium">Land Records (7/12, Jamabandi)</td>
-                  <td className="p-2 border-b border-[var(--color-border)]">Ownership proof — state ke hisaab se format alag</td>
-                </tr>
-                <tr className="bg-[var(--color-card)]">
-                  <td className="p-2 font-medium">Passport Size Photo</td>
-                  <td className="p-2">Recent photo — kuch states mein mandatory</td>
-                </tr>
+                {[
+                  ['Aadhaar Card', 'Identity verification'],
+                  ['Mobile Number (Active)', 'OTP aur updates'],
+                  ['Khasra/Khatauni Number', 'Zameen verify karne ke liye'],
+                  ['Land Records (7/12, Jamabandi)', 'Ownership proof — state-wise format alag'],
+                  ['Passport Size Photo', 'Kuch states mein mandatory'],
+                ].map(([doc, reason], i) => (
+                  <tr key={doc} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
+                    <td className="p-3 border-b border-[var(--color-border)] font-medium text-xs text-[var(--color-text)]">{doc}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{reason}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
-
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Agar aap kirayedar kisan hain (batai par kheti karte hain), to aapko patta agreement ya land possession proof dikhana hoga. Zameen ka maalik hona zaroori nahi — jo kheti karta hai woh eligible hai.
-          </p>
-        </section>
-
-        {/* STATUS TRACKING */}
-        <section className="mb-8">
-          <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            5. Status Kaise Check Karein?
-          </h2>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Enrollment ke baad aap portal par apna status check kar sakte hain. Official portal ke mutabik processing time state aur season ke hisaab se alag-alag ho sakta hai.
-          </p>
-
-          <StepList>
-            <SI n={1}><strong>soilhealth.dac.gov.in</strong> kholo</SI>
-            <SI n={2}>"Track Application Status" par click karein</SI>
-            <SI n={3}>Enrollment number ya mobile number daalein</SI>
-            <SI n={4}>OTP verify karein</SI>
-            <SI n={5}>Status dikh jayega — Application Received / Sample Testing / Report Generated</SI>
-          </StepList>
-
-          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)]">
-            <table className="w-full text-xs border-collapse">
-              <thead>
-                <tr className="bg-[var(--color-primary)] text-white">
-                  <th className="p-2 text-left">Status</th>
-                  <th className="p-2 text-left">Matlab</th>
-                  <th className="p-2 text-left">Kya Karein</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-[var(--color-card)]">
-                  <td className="p-2 border-b border-[var(--color-border)] font-medium">Application Received ⏳</td>
-                  <td className="p-2 border-b border-[var(--color-border)]">Form prapt ho gaya</td>
-                  <td className="p-2 border-b border-[var(--color-border)]">Intezaar karein — processing shuru hogi</td>
-                </tr>
-                <tr className="bg-[var(--color-bg-alt)]">
-                  <td className="p-2 border-b border-[var(--color-border)] font-medium">Sample Under Testing 🔬</td>
-                  <td className="p-2 border-b border-[var(--color-border)]">Lab mein test ho raha hai</td>
-                  <td className="p-2 border-b border-[var(--color-border)]">7-10 din ka wait — normal hai</td>
-                </tr>
-                <tr className="bg-[var(--color-card)]">
-                  <td className="p-2 border-b border-[var(--color-border)] font-medium">Report Generated 📋</td>
-                  <td className="p-2 border-b border-[var(--color-border)]">Test complete ho gaya</td>
-                  <td className="p-2 border-b border-[var(--color-border)]">Download ka wait karein</td>
-                </tr>
-                <tr className="bg-[var(--color-bg-alt)]">
-                  <td className="p-2 font-medium">Card Ready for Download ✅</td>
-                  <td className="p-2">PDF taiyar hai</td>
-                  <td className="p-2">Login karke download karein</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
           <IB>
-            <strong>📌 Processing Time:</strong> Official portal 15 din ka time batata hai, lekin actual time state aur season par depend karta hai. Kuch states mein 10-12 din lagte hain, kuch mein 20-25 din. 30 din se zyada ho jaye to helpline par sampark karein.
+            <strong>Tenant Farmers:</strong> Kirayedar kisan bhi eligible hain. Patta agreement ya land possession proof dikhao. Zameen ka maalik hona zaroori nahi.
           </IB>
         </section>
 
-        {/* IMAGE 2: Dashboard */}
+        {/* Status Check */}
+        <section className="mb-8">
+          <SH>Status Kaise Check Karein?</SH>
+          <StepList>
+            <SI n={1}><strong>soilhealth.dac.gov.in</strong> kholo</SI>
+            <SI n={2}>"Track Application Status" click karo</SI>
+            <SI n={3}>Enrollment number ya mobile number daalo</SI>
+            <SI n={4}>OTP verify karo</SI>
+            <SI n={5}>Status dikh jayega</SI>
+          </StepList>
+
+          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-[var(--color-primary)] text-white">
+                  <th className="p-3 text-left">Status</th>
+                  <th className="p-3 text-left">Matlab</th>
+                  <th className="p-3 text-left">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['Application Received ⏳', 'Form prapt ho gaya', 'Wait karo'],
+                  ['Sample Under Testing 🔬', 'Lab mein test ho raha', '7-10 din wait'],
+                  ['Report Generated 📋', 'Test complete', 'Download ka wait'],
+                  ['Card Ready ✅', 'PDF taiyar', 'Login → Download'],
+                ].map(([status, meaning, action], i) => (
+                  <tr key={status} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
+                    <td className="p-3 border-b border-[var(--color-border)] font-medium text-xs text-[var(--color-text)]">{status}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{meaning}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-green-700 dark:text-green-400 font-medium">{action}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <IB>
+            <strong>Processing Time:</strong> Official 15 din batata hai. Actual: 10-25 din (state/season dependent). 30+ din = helpline par sampark.
+          </IB>
+        </section>
+
+        {/* Dashboard Image #2 — PRESERVED */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/soil-health-card-complete-guide-2026/dashboard.webp"
-            alt="Soil health card portal dashboard — Card Ready message aur Download PDF button"
+            alt="Soil health card portal dashboard — Card Ready message and Download PDF button"
             width={1200}
             height={630}
-            className="w-full h-auto object-cover"
-            style={{ maxHeight: '400px' }}
+            className="w-full object-cover"
             loading="lazy"
-            sizes="(max-width: 768px) 100vw, 1200px"
+            sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            📸 Portal dashboard — jab card download ke liye taiyar ho jata hai
+            Portal Dashboard — Jab Card Download Ke Liye Taiyar Ho
           </p>
         </div>
 
-        {/* PDF DOWNLOAD */}
+        {/* PDF Download */}
         <section className="mb-8">
-          <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            6. PDF Download Kaise Karein?
-          </h2>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Jab card ready ho jata hai, to portal par ek notification aata hai. Download process simple hai:
-          </p>
-
+          <SH>PDF Download Kaise Karein?</SH>
           <StepList>
-            <SI n={1}><strong>soilhealth.dac.gov.in</strong> par jaayein</SI>
-            <SI n={2}>"Farmer Login" par click karein — enrollment number aur password daalein</SI>
-            <SI n={3}>Dashboard par "Download Soil Health Card" button dikhega</SI>
-            <SI n={4}>Click karein — new tab mein PDF khulegi</SI>
-            <SI n={5}>PDF ko save kar lein ya print nikal lein</SI>
+            <SI n={1}><strong>soilhealth.dac.gov.in</strong> → Farmer Login → enrollment + password</SI>
+            <SI n={2}>Dashboard par <strong>"Download Soil Health Card"</strong> button dikhega</SI>
+            <SI n={3}>Click karo → new tab mein PDF khulegi</SI>
+            <SI n={4}>Save karo ya print nikalo</SI>
           </StepList>
-
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Ek baar download ho gayi to PDF aapke phone ya computer mein save ho jaati hai. Baad mein bhi portal par login karke dobara download kar sakte hain.
-          </p>
-
           <WB>
-            <strong>⚠️ PDF Open Nahi Ho Rahi?</strong> Browser mein pop-up blocker disable karein. Ya alag browser try karein (Chrome, Firefox). Mobile par PDF viewer app install karein. Phir bhi problem ho to CSC centre se print nikalwa lein.
+            <strong>PDF Open Nahi Ho Rahi?</strong> Pop-up blocker disable karo. Alag browser try karo. Mobile par PDF viewer install karo. Phir bhi na ho toh CSC se print nikalwao.
           </WB>
         </section>
 
-        {/* COMMON PROBLEMS */}
+        {/* Common Problems */}
         <section className="mb-8">
-          <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            7. Common Problems Aur Solutions
-          </h2>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Enrollment ya download ke dauran kai baar problems aa jaati hain. Ye kuch sabse common issues hain jo farmers face karte hain:
-          </p>
-
+          <SH>Common Problems + Solutions</SH>
           <div className="space-y-3">
-            <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl overflow-hidden shadow-sm">
-              <div className="bg-red-50 dark:bg-red-900/20 border-b border-red-100 dark:border-red-800 px-4 py-2.5">
-                <p className="font-black text-red-800 dark:text-red-300 text-sm">Problem 1: Naam Mein Spelling Galat</p>
-              </div>
-              <div className="p-4">
-                <p className="text-xs text-[var(--color-text-muted)] mb-2">Card print hone par naam galat aa gaya — biometric credential se match nahi kar raha.</p>
-                <div className="flex items-start gap-2 bg-green-50 dark:bg-green-900/20 rounded-lg p-3">
-                  <span className="text-green-600 dark:text-green-400 font-black text-xs shrink-0">✅ SOLUTION:</span>
-                  <p className="text-xs text-green-800 dark:text-green-300 leading-relaxed">CSC centre jaayein, biometric credential dikhayein, correction form bharein. Kuch din mein sahi card aa jayega. Correction ke liye koi extra charge nahi lagta.</p>
+            {[
+              { err: 'Naam Mein Spelling Galat', fix: 'CSC jaao → Aadhaar dikhao → correction form bharo. Extra charge nahi lagta.' },
+              { err: 'Website Khul Nahi Rahi', fix: 'Subah 6-8 AM try karo (low server load). WiFi use karo. Ya CSC chale jaao.' },
+              { err: 'OTP Nahi Aa Raha', fix: 'Network check. SMS inbox full? Spam folder dekho. 5 min wait → resend. Phir bhi nahi = CSC se mobile update.' },
+              { err: 'Password Bhool Gaye', fix: '"Forgot Password" → registered mobile → OTP → naya password set. Kahin likh ke rakho.' },
+              { err: 'Card Kho Gaya', fix: 'Portal login → dobara download. Ya CSC se duplicate print (₹10-15).' },
+            ].map(({ err, fix }) => (
+              <div key={err} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl overflow-hidden shadow-sm">
+                <div className="bg-red-50 dark:bg-red-900/20 border-b border-red-100 dark:border-red-800 px-4 py-2.5">
+                  <p className="font-black text-red-800 dark:text-red-300 text-sm">❌ {err}</p>
+                </div>
+                <div className="p-4">
+                  <div className="flex items-start gap-2 bg-green-50 dark:bg-green-900/20 rounded-lg p-3">
+                    <span className="text-green-600 dark:text-green-400 font-black text-xs shrink-0 mt-0.5">FIX:</span>
+                    <p className="text-xs text-green-800 dark:text-green-300 leading-relaxed">{fix}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl overflow-hidden shadow-sm">
-              <div className="bg-red-50 dark:bg-red-900/20 border-b border-red-100 dark:border-red-800 px-4 py-2.5">
-                <p className="font-black text-red-800 dark:text-red-300 text-sm">Problem 2: Website Khul Nahi Rahi</p>
-              </div>
-              <div className="p-4">
-                <p className="text-xs text-[var(--color-text-muted)] mb-2">Portal open nahi ho raha ya bahut slow hai.</p>
-                <div className="flex items-start gap-2 bg-green-50 dark:bg-green-900/20 rounded-lg p-3">
-                  <span className="text-green-600 dark:text-green-400 font-black text-xs shrink-0">✅ SOLUTION:</span>
-                  <p className="text-xs text-green-800 dark:text-green-300 leading-relaxed">Subah jaldi (6-8 AM) try karein — server load kam hota hai. Mobile data ki jagah WiFi use karein. Phir bhi nahi to CSC centre chale jaayein.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl overflow-hidden shadow-sm">
-              <div className="bg-red-50 dark:bg-red-900/20 border-b border-red-100 dark:border-red-800 px-4 py-2.5">
-                <p className="font-black text-red-800 dark:text-red-300 text-sm">Problem 3: OTP Nahi Aa Raha</p>
-              </div>
-              <div className="p-4">
-                <p className="text-xs text-[var(--color-text-muted)] mb-2">OTP late aa raha hai ya bilkul nahi aa raha.</p>
-                <div className="flex items-start gap-2 bg-green-50 dark:bg-green-900/20 rounded-lg p-3">
-                  <span className="text-green-600 dark:text-green-400 font-black text-xs shrink-0">✅ SOLUTION:</span>
-                  <p className="text-xs text-green-800 dark:text-green-300 leading-relaxed">Network coverage check karein. SMS inbox full to nahi? Spam folder bhi dekhein. 5 minute wait karke resend karein. Phir bhi nahi to CSC se mobile number update karwayein.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl overflow-hidden shadow-sm">
-              <div className="bg-red-50 dark:bg-red-900/20 border-b border-red-100 dark:border-red-800 px-4 py-2.5">
-                <p className="font-black text-red-800 dark:text-red-300 text-sm">Problem 4: Password Bhool Gaye</p>
-              </div>
-              <div className="p-4">
-                <p className="text-xs text-[var(--color-text-muted)] mb-2">Login nahi ho raha — password yaad nahi.</p>
-                <div className="flex items-start gap-2 bg-green-50 dark:bg-green-900/20 rounded-lg p-3">
-                  <span className="text-green-600 dark:text-green-400 font-black text-xs shrink-0">✅ SOLUTION:</span>
-                  <p className="text-xs text-green-800 dark:text-green-300 leading-relaxed">"Forgot Password" link par click karein. Registered mobile number daalein. OTP se naya password set karein. Password ko kahin likh ke rakhein.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl overflow-hidden shadow-sm">
-              <div className="bg-red-50 dark:bg-red-900/20 border-b border-red-100 dark:border-red-800 px-4 py-2.5">
-                <p className="font-black text-red-800 dark:text-red-300 text-sm">Problem 5: Card Kho Gaya</p>
-              </div>
-              <div className="p-4">
-                <p className="text-xs text-[var(--color-text-muted)] mb-2">PDF delete ho gayi ya print kho gayi.</p>
-                <div className="flex items-start gap-2 bg-green-50 dark:bg-green-900/20 rounded-lg p-3">
-                  <span className="text-green-600 dark:text-green-400 font-black text-xs shrink-0">✅ SOLUTION:</span>
-                  <p className="text-xs text-green-800 dark:text-green-300 leading-relaxed">Portal par login karke dobara download karein. Ya CSC centre se duplicate print nikalwa lein — ₹10-15 lagte hain.</p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </section>
 
-        {/* HOW TO READ REPORT */}
+        {/* How To Read Report */}
         <section className="mb-8">
-          <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            8. Report Ko Kaise Samjhein?
-          </h2>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Report milne ke baad use samajhna zaroori hai. Har parameter ka ek normal range hota hai — uske andar hona chahiye.
+          <SH>Report Ko Kaise Samjhein?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Har parameter ka normal range hota hai. Uske andar hona chahiye:
           </p>
-
           <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-4 mb-4">
-            <h3 className="font-black text-blue-800 dark:text-blue-300 text-sm mb-2">Important Parameters:</h3>
             <ul className="space-y-2 text-xs text-[var(--color-text-muted)]">
-              <li><strong>pH:</strong> 6.0-7.5 normal hai. Isse kam ya zyada hone par fasal ki growth ruk sakti hai.</li>
-              <li><strong>Nitrogen:</strong> Fasal ki growth ke liye zaroori. Kam hone par patte peele pad jaate hain.</li>
-              <li><strong>Phosphorus:</strong> Jad aur phool ke liye. Kam hone par fasal der se pakta hai.</li>
-              <li><strong>Potassium:</strong> Fasal ki quality aur bimari se ladne ki shamta. Zyada hona bhi nuksan deh hai.</li>
-              <li><strong>Organic Carbon:</strong> Mitti ki urvarakta. 0.5% se zyada hona chahiye.</li>
-              <li><strong>Zinc:</strong> Bahut si zameenon mein kami hoti hai. Chhoti matra mein zaroori hai.</li>
+              <li><strong>pH:</strong> 6.0-7.5 normal. Kam/zyada = growth ruk sakti hai.</li>
+              <li><strong>Nitrogen:</strong> Growth ke liye. Kam = patte peele.</li>
+              <li><strong>Phosphorus:</strong> Jad + phool. Kam = fasal der se pakta.</li>
+              <li><strong>Potassium:</strong> Quality + disease resistance. Zyada bhi nuksan.</li>
+              <li><strong>Organic Carbon:</strong> Urvarakta. 0.5%+ hona chahiye.</li>
+              <li><strong>Zinc:</strong> Bahut si zameenon mein kami. Chhoti matra mein zaroori.</li>
             </ul>
           </div>
-
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Report ke aakhri page par fasal-wise khaad ki salah likhi hoti hai — kitni urea, DAP, MOP, ya organic khaad dalni chahiye. Is salah ko follow karna chahiye — na kam, na zyada.
+            Report ke aakhri page par fasal-wise khaad salah hoti hai — kitni urea, DAP, MOP, organic khaad. Follow karo — na kam, na zyada.
           </p>
-
           <IB>
-            <strong>💡 Expert Advice:</strong> Report sirf nitrogen-phosphorus-potassium tak seemit mat rakhein. Micronutrients section bhi padhein — zinc, iron, copper — ye bhi utne hi zaroori hain. Agar samajh na aaye to nazdiki KVK ya krishi vibhag se salah lein.
+            <strong>Expert Advice:</strong> Sirf N-P-K tak seemit mat raho. Micronutrients (zinc, iron, copper) bhi utne hi zaroori hain. Samajh na aaye toh KVK se salah lo.
           </IB>
         </section>
 
-        {/* COST AND CHARGES */}
+        {/* Cost */}
         <section className="mb-8">
-          <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            9. Kitna Kharch Aata Hai?
-          </h2>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Official portal par test muft hai, lekin CSC centre apna service charge le sakta hai. Ye charge state aur centre ke hisaab se alag-alag ho sakta hai.
-          </p>
-
-          <div className="overflow-x-auto mb-4 rounded-xl border border-[var(--color-border)]">
-            <table className="w-full text-xs border-collapse">
+          <SH>Kitna Kharch Aata Hai?</SH>
+          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
+            <table className="w-full text-sm border-collapse">
               <thead>
                 <tr className="bg-[var(--color-primary)] text-white">
-                  <th className="p-2 text-left">Service</th>
-                  <th className="p-2 text-left">Approximate Cost</th>
+                  <th className="p-3 text-left">Service</th>
+                  <th className="p-3 text-left">Cost</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="bg-[var(--color-card)]">
-                  <td className="p-2 border-b border-[var(--color-border)] font-medium">Soil Test (Official Portal)</td>
-                  <td className="p-2 border-b border-[var(--color-border)]">Muft</td>
-                </tr>
-                <tr className="bg-[var(--color-bg-alt)]">
-                  <td className="p-2 border-b border-[var(--color-border)] font-medium">CSC Service Charge</td>
-                  <td className="p-2 border-b border-[var(--color-border)]">₹20-50 (state-wise alag)</td>
-                </tr>
-                <tr className="bg-[var(--color-card)]">
-                  <td className="p-2 border-b border-[var(--color-border)] font-medium">Sample Collection (agar staff aaye)</td>
-                  <td className="p-2 border-b border-[var(--color-border)]">Muft ya nominal</td>
-                </tr>
-                <tr className="bg-[var(--color-bg-alt)]">
-                  <td className="p-2 border-b border-[var(--color-border)] font-medium">Print/Photocopy</td>
-                  <td className="p-2 border-b border-[var(--color-border)]">₹10-20</td>
-                </tr>
-                <tr className="bg-[var(--color-card)]">
-                  <td className="p-2 font-medium">Correction (naam galat hone par)</td>
-                  <td className="p-2">Muft</td>
-                </tr>
+                {[
+                  ['Soil Test (Official)', 'Muft'],
+                  ['CSC Service Charge', '₹20-50'],
+                  ['Sample Collection (staff)', 'Muft / Nominal'],
+                  ['Print/Photocopy', '₹10-20'],
+                  ['Correction', 'Muft'],
+                ].map(([service, cost], i) => (
+                  <tr key={service} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
+                    <td className="p-3 border-b border-[var(--color-border)] font-medium text-xs text-[var(--color-text)]">{service}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-green-700 dark:text-green-400 font-bold">{cost}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
-
-          <WB>
-            <strong>⚠️ Dhyan Dein:</strong> Agar koi ₹100 se zyada charge maange to wo galat hai. Aise mein helpline par complaint karein ya doosre CSC centre jaayein.
-          </WB>
+          <DB>
+            <strong>Warning:</strong> ₹100+ charge = galat. Helpline par complaint karo ya doosre CSC jaao.
+          </DB>
         </section>
 
         {/* FAQ */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            10. FAQ — Real Questions, Direct Answers
+            Aksar Puche Jane Wale Sawal
           </h2>
-          <SvgFAQ caption="Soil Health Card — Common Questions" />
-          <div className="space-y-3 mt-4">
-            <details className="border border-[var(--color-border)] rounded-xl overflow-hidden group">
-              <summary className="p-4 font-semibold text-[var(--color-text)] cursor-pointer bg-[var(--color-bg-alt)] hover:bg-green-50 dark:hover:bg-green-900/20 text-sm flex justify-between items-center gap-3 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">
-                <span>Kitne time baad dobara test karwana chahiye?</span>
-                <span className="text-green-600 dark:text-green-400 text-xl group-open:rotate-45 transition-transform shrink-0">+</span>
-              </summary>
-              <div className="p-4 text-sm text-[var(--color-text-muted)] leading-relaxed border-t border-[var(--color-border)]">
-                Official recommendation har 2-3 saal mein test karwane ki hai. Agar monsoon mein bahut zyada barish hui ho, ya aapne fasal ka pattern badla ho (jaise gehun se chawal), to turant test karwa lein. Mitti ki chemical composition badal jaati hai — chahe aapko dikhe na.
-              </div>
-            </details>
-
-            <details className="border border-[var(--color-border)] rounded-xl overflow-hidden group">
-              <summary className="p-4 font-semibold text-[var(--color-text)] cursor-pointer bg-[var(--color-bg-alt)] hover:bg-green-50 dark:hover:bg-green-900/20 text-sm flex justify-between items-center gap-3 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">
-                <span>Kirayedar kisan (batai dar) bhi test karwa sakte hain?</span>
-                <span className="text-green-600 dark:text-green-400 text-xl group-open:rotate-45 transition-transform shrink-0">+</span>
-              </summary>
-              <div className="p-4 text-sm text-[var(--color-text-muted)] leading-relaxed border-t border-[var(--color-border)]">
-                Haan, bilkul. Zameen ka maalik hona zaroori nahi. Aapke paas patta agreement ya land possession proof hona chahiye. Jo kheti karta hai woh eligible hai — chahe zameen uski ho ya kiraye ki.
-              </div>
-            </details>
-
-            <details className="border border-[var(--color-border)] rounded-xl overflow-hidden group">
-              <summary className="p-4 font-semibold text-[var(--color-text)] cursor-pointer bg-[var(--color-bg-alt)] hover:bg-green-50 dark:hover:bg-green-900/20 text-sm flex justify-between items-center gap-3 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">
-                <span>Report mein likhi salah ko follow karna zaroori hai?</span>
-                <span className="text-green-600 dark:text-green-400 text-xl group-open:rotate-45 transition-transform shrink-0">+</span>
-              </summary>
-              <div className="p-4 text-sm text-[var(--color-text-muted)] leading-relaxed border-t border-[var(--color-border)]">
-                Salah follow karna strongly recommended hai, lekin zaroori nahi. Report ek guideline hai — aapki mitti ki specific condition ke hisaab se. Agar aapko samajh na aaye to nazdiki KVK ya krishi vibhag se consult karein. Woh aapke ilaqe aur fasal ke hisaab se aur detailed advice de sakte hain.
-              </div>
-            </details>
-
-            <details className="border border-[var(--color-border)] rounded-xl overflow-hidden group">
-              <summary className="p-4 font-semibold text-[var(--color-text)] cursor-pointer bg-[var(--color-bg-alt)] hover:bg-green-50 dark:hover:bg-green-900/20 text-sm flex justify-between items-center gap-3 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">
-                <span>Agar 30 din se zyada ho gaye aur card nahi aaya?</span>
-                <span className="text-green-600 dark:text-green-400 text-xl group-open:rotate-45 transition-transform shrink-0">+</span>
-              </summary>
-              <div className="p-4 text-sm text-[var(--color-text-muted)] leading-relaxed border-t border-[var(--color-border)]">
-                Pehle portal par status check karein. Agar "Sample Under Testing" dikh raha hai to thoda aur wait karein. Agar koi update nahi to helpline par call karein ya CSC centre jaayein. Kabhi-kabhi sample lab tak nahi pahunchta ya technical issue hota hai.
-              </div>
-            </details>
-
-            <details className="border border-[var(--color-border)] rounded-xl overflow-hidden group">
-              <summary className="p-4 font-semibold text-[var(--color-text)] cursor-pointer bg-[var(--color-bg-alt)] hover:bg-green-50 dark:hover:bg-green-900/20 text-sm flex justify-between items-center gap-3 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">
-                <span>Kya ye report kisi aur kaam aati hai?</span>
-                <span className="text-green-600 dark:text-green-400 text-xl group-open:rotate-45 transition-transform shrink-0">+</span>
-              </summary>
-              <div className="p-4 text-sm text-[var(--color-text-muted)] leading-relaxed border-t border-[var(--color-border)]">
-                Haan. KCC loan lete waqt, crop insurance claim karte waqt, ya organic certification ke liye ye report useful ho sakti hai. Kuch states mein fertilizer subsidy ke liye bhi ye document maanga ja sakta hai.
-              </div>
-            </details>
-          </div>
+          <FAQBlock faqs={FAQS_DATA} caption="Soil Health Card FAQ 2026 — Verified Answers" />
         </section>
 
-        {/* HELPLINE */}
-        <div className="bg-gradient-to-br from-green-50 to-emerald-100 dark:from-green-900/20 dark:to-emerald-900/10 rounded-2xl border border-green-200 dark:border-green-800 p-5 mb-8">
-          <h3 className="font-black text-[var(--color-text)] mb-3 text-base">📞 Sahayata Ke Liye Sampark Karein</h3>
-          <div className="text-sm text-[var(--color-text-muted)] space-y-2">
-            <p>📞 <strong>Helpline:</strong> <a href="tel:18001801551" className="font-bold text-[var(--color-primary)] hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">1800-180-1551</a> — Toll-free, Mon-Sat, 9 AM - 6 PM</p>
-            <p>📧 <strong>Email:</strong> <a href="mailto:soilhealth-dac@nic.in" className="font-bold text-[var(--color-primary)] hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">soilhealth-dac@nic.in</a> — 24-48 ghante mein jawab</p>
-            <p>🌐 <strong>Website:</strong> <a href="https://soilhealth.dac.gov.in" target="_blank" rel="noopener noreferrer" className="font-bold text-[var(--color-primary)] hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">soilhealth.dac.gov.in</a></p>
-            <p>🏢 <strong>Local Office:</strong> Apne district ka Krishi Vigyan Kendra (KVK) ya Agriculture Department office se bhi sampark kar sakte hain.</p>
-          </div>
+        {/* Helpline */}
+        <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-2xl p-5 mb-8 space-y-2">
+          <p className="font-black text-[var(--color-text)] text-base mb-2">Sahayata Ke Liye Sampark</p>
+          <p className="text-sm text-[var(--color-text-muted)]">📞 Helpline: <a href="tel:18001801551" className="font-bold text-[var(--color-primary)] hover:underline">1800-180-1551</a> (Toll-free, Mon-Sat 9AM-6PM)</p>
+          <p className="text-sm text-[var(--color-text-muted)]">📧 Email: <a href="mailto:soilhealth-dac@nic.in" className="font-bold text-[var(--color-primary)] hover:underline">soilhealth-dac@nic.in</a></p>
+          <p className="text-sm text-[var(--color-text-muted)]">🌐 Portal: <a href="https://soilhealth.dac.gov.in" target="_blank" rel="noopener noreferrer" className="font-bold text-[var(--color-primary)] hover:underline">soilhealth.dac.gov.in ↗</a></p>
+          <p className="text-sm text-[var(--color-text-muted)]">🏢 Local: District KVK ya Agriculture Department office</p>
+        </div>
+
+        {/* Final CTA */}
+        <div className="my-8 p-5 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl text-center">
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-2">Kya Aapne Mitti Test Karwaya?</h3>
+          <p className="text-sm text-green-700 dark:text-green-400 mb-3">
+            Haan = report ki salah follow karo. Nahi = aaj hi enrollment karwao. Sahi khaad, sahi matra — yahi safalta ka raaz hai.
+          </p>
         </div>
 
         <GovLink
           href="https://soilhealth.dac.gov.in"
           label="Soil Health Card — Official Portal"
-          guide="Enrollment Ke Liye Yahaan Click Karein"
+          guide="Abhi Enrollment Karo"
           guideHref="/articles/pm-kisan-registration-online-2026"
+          portalName="soilhealth.dac.gov.in"
         />
 
-        <CalcBanner />
+        <CalcBanner
+          icon="🌾"
+          title="Apni Fasal Ki Income Calculate Karo"
+          desc="MSP income, crop profit — soil report ke saath milake plan karo"
+          primaryCta={{ href: '/calculator/msp-income', label: '📊 MSP Calculator →' }}
+          secondaryCta={{ href: '/calculator/crop-profit', label: '🌾 Crop Profit' }}
+        />
+
         <RelatedArticles articles={RELATED} />
-
-        {/* IMPORTANT NOTE */}
-        <div className="my-8 p-5 border-2 border-[var(--color-border)] rounded-2xl bg-[var(--color-bg-alt)]">
-          <h3 className="font-black text-[var(--color-text)] mb-2">Zaroori Suchna</h3>
-          <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-2">
-            Ye article official portal aur krishi vibhag ki jaankari par based hai. Lekin rules aur process state ke hisaab se thoda alag ho sakta hai. Apne local KVK ya agriculture office se confirm karna na bhoolen.
-          </p>
-          <p className="text-xs text-[var(--color-text-muted)] leading-relaxed italic">
-            ⚠️ KisanStatus.com sarkari department ka hissa nahi hai. Hum sirf jaankari provide karte hain. Official process ke liye hamesha government portal ya authorized centre ka hi istemaal karein.
-          </p>
-        </div>
-
         <AuthorBox modified={MODIFIED} />
-        <BottomNav />
+        <BottomNav extraLinks={[
+          { href: '/articles/nano-dap-500ml-price-in-india-2026', l: '🌱 Nano DAP Price' },
+          { href: '/articles/pmfby-crop-insurance-2026', l: '🛡️ Crop Insurance' },
+          { href: '/calculator/msp-income', l: '📊 MSP Calculator' },
+        ]} />
         <Disclaimer />
-
-        {/* FINAL CTA */}
-        <div className="my-8 p-5 bg-green-100 dark:bg-green-900/30 border-2 border-green-400 dark:border-green-600 rounded-2xl text-center">
-          <h3 className="font-black text-green-900 dark:text-green-200 text-lg mb-2">Kya Aapne Mitti Test Karwaya Hai?</h3>
-          <p className="text-sm text-green-800 dark:text-green-300 mb-3">
-            Agar haan, to report ki salah zaroor follow karein. Agar nahi, to aaj hi enrollment karwayein — aapki fasal aur mitti dono ka fayda hoga.
-          </p>
-          <p className="text-xs text-green-700 dark:text-green-400">
-            🌱 Sahi khaad, sahi matra — yahi safalta ka raaz hai
-          </p>
-        </div>
       </div>
     </>
   );
