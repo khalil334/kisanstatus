@@ -1,611 +1,410 @@
-import Image from "next/image";
-import Link from "next/link";
+'use client';
 
-// ─── ⚙️  UPDATE THIS SECTION WHEN DATE IS CONFIRMED ─────────────────────────
-// 23vi tranche confirmed = 20 June 2026 (source: live site banner)
-// 24vi expected = October 2026 (4-month gap from 23vi)
-export const KIST_INFO = {
-  kistNumber:        "24",
-  kistNumberText:    "24vi",
-  expectedDate:      "October 2026 (Expected)",
-  confirmedDate:     null as string | null, // Set to "15 October 2026" once confirmed
-  amount:            "₹2,000",
-  status:            "Expected" as "Expected" | "Confirmed" | "Released",
-  verificationDeadline: "Portal check karein – deadline update hogi",
-  totalRecipients:   "~9 Crore+",
+import Link from 'next/link';
+import Image from 'next/image';
+import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
+import type { ArticleMeta } from '@/lib/articles-data';
+
+// ═══════════════════════════════════════════════════════════
+// KIST CONFIG — Update when date confirmed
+// 23vi = 20 June 2026 (confirmed)
+// 24vi = October 2026 (expected, 4-month gap)
+// ═══════════════════════════════════════════════════════════
+
+const KIST = {
+  number: '24',
+  label: '24vi',
+  expectedDate: 'October 2026',
+  confirmedDate: null as string | null,
+  amount: '₹2,000',
+  status: 'Expected' as 'Expected' | 'Confirmed' | 'Released',
+  recipients: '~9 Crore+',
 };
-// ─────────────────────────────────────────────────────────────────────────────
 
-const LAST_UPDATED = "2026-06-24T08:00:00+05:30";
+const PUBLISHED = '2026-06-24T08:00:00+05:30';
+const MODIFIED = '2026-07-04T08:00:00+05:30';
 
-// ─── Article Component ────────────────────────────────────────────────────────
-export default function PmKisan24viKist2026() {
-  const lastUpdated = new Date(LAST_UPDATED).toLocaleDateString("hi-IN", {
-    year:  "numeric",
-    month: "long",
-    day:   "numeric",
-  });
+const RELATED = [
+  { slug: 'pm-kisan-23vi-kist-2026-status-check', title: '23vi Installment Status', emoji: '📅' },
+  { slug: 'pm-kisan-ekyc-online-2026', title: 'Digital Verification Guide', emoji: '🔐' },
+  { slug: 'pm-kisan-payment-failed-status-2026', title: 'Payment Failed Fix', emoji: '💸' },
+  { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Meaning', emoji: '💳' },
+  { slug: 'pm-kisan-beneficiary-list-2026', title: 'Beneficiary Roster Check', emoji: '📋' },
+  { slug: 'pm-kisan-registration-online-2026', title: 'New Enrollment Guide', emoji: '📝' },
+];
 
-  const isConfirmed = KIST_INFO.status === "Confirmed" || KIST_INFO.status === "Released";
-  const isReleased  = KIST_INFO.status === "Released";
+const FAQS_DATA = [
+  {
+    q: '24vi kist kab aayegi?',
+    a: 'Expected date October 2026 hai. 23vi kist 20 June 2026 ko aayi thi — 4 mahine baad yani October mein 24vi aane ki poori sambhavna hai. Official date confirm hote hi update hoga.',
+  },
+  {
+    q: '24vi kist kitni hogi?',
+    a: '₹2,000. Har installment same amount ki hoti hai. Saal mein 3 installments = ₹6,000 total annual benefit.',
+  },
+  {
+    q: 'eKYC zaroori hai 24vi ke liye?',
+    a: 'Haan, mandatory. Bina verification ke koi bhi kist nahi milegi. pmkisan.gov.in par OTP se ya CSC par biometric se turant complete karo.',
+  },
+  {
+    q: 'Status check karne par kuch nahi dikha raha?',
+    a: 'Registration number sahi daalo. Yaad nahi toh "Know your registration no." option se Aadhaar/mobile se retrieve karo. Phir dobara check karo.',
+  },
+  {
+    q: 'Kist nahi aayi lekin status "Payment Success" dikh raha hai?',
+    a: 'Bank credit hone mein 24-48 ghante lag sakte hain. PFMS portal (pfms.nic.in) par check karo ya bank se mini-statement lo. 3 din baad bhi na dikhe toh helpline 155261 par call karo.',
+  },
+  {
+    q: 'Pehli baar enrollment karna hai — 24vi kist milegi?',
+    a: 'Enrollment + eKYC + NPCI seeding complete hone ke baad next scheduled installment mein milegi. Processing mein 1-3 mahine lag sakte hain. Abhi karo toh 24vi milne ki sambhavna hai.',
+  },
+  {
+    q: 'Bank account change hua hai — kya karein?',
+    a: 'Portal par updated bank details daalo. Naye account ka Aadhaar seeding + NPCI mapping zaroori hai. Bank branch jaake "DBT enable" confirmation lo. Purana account band mat karo jab tak naya verify na ho jaye.',
+  },
+];
+
+export default function PmKisan24viKist2026({ article }: { article: ArticleMeta }) {
+  const isReleased = KIST.status === 'Released';
+  const isConfirmed = KIST.status === 'Confirmed';
 
   return (
-    <main className="max-w-4xl mx-auto px-3 sm:px-4 py-6 sm:py-8 text-[var(--color-text)]">
-
-      {/* Breadcrumb */}
-      <nav aria-label="breadcrumb" className="text-xs sm:text-sm text-[var(--color-text-muted)] mb-4">
-        <ol className="flex flex-wrap items-center gap-1">
-          <li><Link href="/" className="text-[var(--color-primary)] hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">Home</Link></li>
-          <li aria-hidden="true">/</li>
-          <li aria-current="page" className="text-[var(--color-text)]">24vi Installment Guide</li>
-        </ol>
-      </nav>
-
-      {/* Status Notice Box */}
-      <div
-        className={`border-2 rounded-lg p-3 sm:p-4 mb-5 ${
-          isReleased  ? "bg-green-50 dark:bg-green-900/20 border-green-400 dark:border-green-700"
-          : isConfirmed ? "bg-blue-50 dark:bg-blue-900/20 border-blue-400 dark:border-blue-700"
-          : "bg-orange-50 dark:bg-orange-900/20 border-orange-400 dark:border-orange-700"
-        }`}
-      >
-        <div className="flex items-start gap-2 sm:gap-3">
-          <span className="text-xl sm:text-2xl flex-shrink-0">
-            {isReleased ? "✅" : isConfirmed ? "📅" : "🔔"}
-          </span>
-          <div>
-            <p className={`font-bold text-base sm:text-lg leading-snug ${
-              isReleased  ? "text-green-800 dark:text-green-300"
-              : isConfirmed ? "text-blue-800 dark:text-blue-300"
-              : "text-orange-800 dark:text-orange-300"
-            }`}>
-              {isReleased && KIST_INFO.confirmedDate
-                ? `24vi Installment Released! – ${KIST_INFO.confirmedDate}`
-                : isConfirmed && KIST_INFO.confirmedDate
-                ? `24vi Installment Confirmed: ${KIST_INFO.confirmedDate}`
-                : `24vi Installment – Expected: ${KIST_INFO.expectedDate}`}
-            </p>
-            <p className={`text-xs sm:text-sm mt-1 ${
-              isReleased  ? "text-green-700 dark:text-green-400"
-              : isConfirmed ? "text-blue-700 dark:text-blue-400"
-              : "text-orange-700 dark:text-orange-400"
-            }`}>
-              {isReleased
-                ? "Agar aapki kist nahi aayi toh neeche verification guide padhein."
-                : isConfirmed
-                ? "Official date confirm ho gayi hai. Paise release hote hi update hoga."
-                : "Abhi official date announce nahi hui. Hum yahan update karte rahenge."}
-            </p>
-            <p className="text-xs text-[var(--color-text-muted)] mt-1.5">
-              🗓️ Last Updated:{" "}
-              <time dateTime={LAST_UPDATED}>{lastUpdated}</time>
-            </p>
+    <>
+      {/* Header */}
+      <div className="bg-[var(--color-primary)] py-8">
+        <div className="container-site max-w-3xl">
+          <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
+            <Link href="/" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Home</Link>
+            <span>/</span>
+            <Link href="/articles" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Articles</Link>
+            <span>/</span>
+            <span className="text-white font-bold">24vi Installment Guide</span>
+          </nav>
+          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Upcoming Installment</span>
+          <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
+            PM Kisan 24vi Kist Kab Aayegi? Expected Date, Status Check, Aur Tayyari Ka Pura Guide
+          </h1>
+          <div className="flex flex-wrap gap-3 text-xs text-green-200">
+            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
+            <span>📅 {fmtDate(PUBLISHED)}</span>
+            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
+            <span>⏱️ 10 min read</span>
           </div>
         </div>
       </div>
 
-      {/* Title */}
-      <header className="mb-5">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--color-text)] leading-tight mb-3">
-          PM Kisan 24vi Kist Kab Aayegi? Date, Status Check Aur Latest Updates 2026
-        </h1>
-        <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-xs sm:text-sm text-[var(--color-text-muted)]">
-          <span>✍️ <Link href="/about" className="underline hover:text-[var(--color-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">KisanStatus Team</Link></span>
-          <span>🗓️ <time dateTime={LAST_UPDATED}>{lastUpdated}</time></span>
-          <span>⏱️ ~12 min read</span>
-        </div>
-        <p className="mt-3 text-base sm:text-lg text-[var(--color-text-muted)] leading-relaxed">
-          Bahut se kisanon ko agli installment ka intezaar rehta hai. Agar aap bhi jaanna chahte hain
-          ki 24vi kist kab aayegi, kitni aayegi, aur status kaise check karein – toh yeh
-          article aapke sare sawaalon ka jawab degi.
-        </p>
-      </header>
+      <div className="container-site max-w-3xl py-8">
 
-      {/* Installment Summary Box */}
-      <div className="grid grid-cols-2 gap-2 sm:gap-3 mb-7">
-        {[
-          { label: "Installment Number",   value: KIST_INFO.kistNumberText },
-          { label: "Amount",        value: KIST_INFO.amount },
-          { label: "Expected Date", value: "October 2026" },
-          { label: "Recipients", value: KIST_INFO.totalRecipients },
-        ].map(({ label, value }) => (
-          <div key={label} className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-2.5 sm:p-3 text-center">
-            <p className="text-xs text-[var(--color-text-muted)] mb-0.5">{label}</p>
-            <p className="font-bold text-green-800 dark:text-green-300 text-sm leading-tight">{value}</p>
+        {/* Dynamic Status Notice */}
+        <div className={`mb-6 border-2 rounded-xl p-4 ${
+          isReleased ? 'bg-green-50 dark:bg-green-900/20 border-green-400 dark:border-green-700' :
+          isConfirmed ? 'bg-blue-50 dark:bg-blue-900/20 border-blue-400 dark:border-blue-700' :
+          'bg-orange-50 dark:bg-orange-900/20 border-orange-400 dark:border-orange-700'
+        }`}>
+          <div className="flex items-start gap-3">
+            <span className="text-2xl shrink-0">
+              {isReleased ? '✅' : isConfirmed ? '📅' : '🔔'}
+            </span>
+            <div>
+              <p className={`font-black text-base sm:text-lg leading-snug ${
+                isReleased ? 'text-green-800 dark:text-green-300' :
+                isConfirmed ? 'text-blue-800 dark:text-blue-300' :
+                'text-orange-800 dark:text-orange-300'
+              }`}>
+                {isReleased && KIST.confirmedDate
+                  ? `24vi Installment Released! – ${KIST.confirmedDate}`
+                  : isConfirmed && KIST.confirmedDate
+                  ? `24vi Confirmed: ${KIST.confirmedDate}`
+                  : `24vi Installment – Expected: ${KIST.expectedDate}`}
+              </p>
+              <p className={`text-xs sm:text-sm mt-1 ${
+                isReleased ? 'text-green-700 dark:text-green-400' :
+                isConfirmed ? 'text-blue-700 dark:text-blue-400' :
+                'text-orange-700 dark:text-orange-400'
+              }`}>
+                {isReleased
+                  ? 'Kist nahi aayi? Neeche verification guide padhein.'
+                  : isConfirmed
+                  ? 'Date confirm ho gayi. Release hote hi update hoga.'
+                  : 'Abhi official date announce nahi hui. Page bookmark karein.'}
+              </p>
+              <p className="text-xs text-[var(--color-text-muted)] mt-1.5">
+                🗓️ Last Updated: {fmtDate(MODIFIED)}
+              </p>
+            </div>
           </div>
-        ))}
-      </div>
-
-      {/* Hero Image */}
-      <figure className="my-5">
-        <Image
-          src="/images/pm-kisan-24vi-kist-october-2026.webp"
-          alt="PM Kisan 24vi kist October 2026 – Rs 2000 installment date aur verification guide"
-          width={720}
-          height={1080}
-          className="rounded-xl shadow-md w-full h-auto"
-          priority
-        />
-        <figcaption className="text-center text-xs sm:text-sm text-[var(--color-text-muted)] mt-2">
-          24vi Kist – Expected October 2026, ₹2000 seedha bank account mein
-        </figcaption>
-      </figure>
-
-      {/* Table of Contents */}
-      <nav aria-label="Table of Contents" className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4 mb-7">
-        <h2 className="text-base sm:text-lg font-semibold text-green-800 dark:text-green-300 mb-2">📋 Is Article Mein Kya Hai</h2>
-        <ol className="space-y-1 text-green-700 dark:text-green-400 list-decimal list-inside text-sm">
-          <li><a href="#installment-date" className="hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">24vi Kist Date – Kab Aayegi?</a></li>
-          <li><a href="#payment-history" className="hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">Payment History Timeline</a></li>
-          <li><a href="#eligibility" className="hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">24vi Kist Ke Liye Eligibility</a></li>
-          <li><a href="#verification-check" className="hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">Status Check Kaise Karein</a></li>
-          <li><a href="#digital-auth" className="hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">eKYC – Mandatory Hai Ya Nahi</a></li>
-          <li><a href="#troubleshooting" className="hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">Common Issues Aur Solutions</a></li>
-          <li><a href="#faq" className="hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">Frequently Asked Questions</a></li>
-          <li><a href="#conclusion" className="hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">Conclusion</a></li>
-        </ol>
-      </nav>
-
-      {/* Section 1 – Date */}
-      <section id="installment-date" className="mb-9">
-        <h2 className="text-xl sm:text-2xl font-bold text-[var(--color-text)] mb-3 border-b-2 border-[var(--color-border)] pb-2">
-          1. 24vi Kist Date – Kab Aayegi?
-        </h2>
-        <p className="mb-4 leading-relaxed text-sm sm:text-base text-[var(--color-text-muted)]">
-          PM Kisan ki 24vi kist ki abhi official date announce nahi hui hai. Lekin historical pattern
-          ke hisaab se yeh <strong>October 2026</strong> mein aa sakti hai. Administration har 4 mahine mein
-          ek installment release karti hai.
-        </p>
-
-        <div className="bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 rounded-lg p-3 sm:p-4 mb-4">
-          <p className="font-semibold text-orange-800 dark:text-orange-300 mb-2 text-sm sm:text-base">📊 Recent Installment Release Pattern:</p>
-          <ul className="text-orange-700 dark:text-orange-400 text-sm space-y-1">
-            <li>• 21vi Kist → November 2025 ✅ (Released)</li>
-            <li>• 22vi Kist → 13 March 2026 ✅ (Released)</li>
-            <li>• 23vi Kist → 20 June 2026 ✅ (Released)</li>
-            <li>• 24vi Kist → <strong>October 2026 (Expected)</strong></li>
-          </ul>
         </div>
 
-        <p className="mb-4 leading-relaxed text-sm sm:text-base text-[var(--color-text-muted)]">
-          23vi kist 20 June 2026 ko release hui thi. Iske 4 mahine baad yani October 2026 mein
-          24vi kist aane ki poori sambhavna hai. Is page ko bookmark karein – hum official
-          announcement aate hi turant update karenge.
-        </p>
-        <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-          Status jaldi check karna ho toh hamari{" "}
-          <Link href="/articles/pm-kisan-23vi-kist-2026-status-check" className="text-[var(--color-primary)] underline hover:text-[var(--color-primary-dark)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">
-            Beneficiary Verification Guide
-          </Link>{" "}
-          padhein.
-        </p>
-      </section>
+        {/* Hero Image */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src={article.ogImage || '/images/pm-kisan-24vi-kist-october-2026.webp'}
+            alt="PM Kisan 24vi installment October 2026 — expected date, eligibility, status check guide"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            style={{ maxHeight: '420px', objectPosition: 'center' }}
+            priority
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            24vi Kist — Expected October 2026, ₹2,000 Seedha Bank Account Mein
+          </p>
+        </div>
 
-      {/* Section 2 – History */}
-      <section id="payment-history" className="mb-9">
-        <h2 className="text-xl sm:text-2xl font-bold text-[var(--color-text)] mb-3 border-b-2 border-[var(--color-border)] pb-2">
-          2. Payment History Timeline – Pichhli Kiston Ki Dates
-        </h2>
-        <p className="mb-4 leading-relaxed text-sm sm:text-base text-[var(--color-text-muted)]">
-          Neeche recent installments ki dates aur status diye gaye hain:
-        </p>
-        <div className="overflow-x-auto mb-4 -mx-3 sm:mx-0">
-          <table className="w-full border-collapse border border-[var(--color-border)] text-xs sm:text-sm">
-            <thead>
-              <tr className="bg-green-100 dark:bg-green-900/30">
-                <th className="border border-[var(--color-border)] px-2 sm:px-4 py-2 text-left font-semibold text-[var(--color-text)]">Kist</th>
-                <th className="border border-[var(--color-border)] px-2 sm:px-4 py-2 text-left font-semibold text-[var(--color-text)]">Release Date</th>
-                <th className="border border-[var(--color-border)] px-2 sm:px-4 py-2 text-left font-semibold text-[var(--color-text)]">Amount</th>
-                <th className="border border-[var(--color-border)] px-2 sm:px-4 py-2 text-left font-semibold text-[var(--color-text)]">Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              {[
-                ["24vi Kist", "October 2026",    "₹2,000", "Expected"],
-                ["23vi Kist", "20 June 2026",    "₹2,000", "Released"],
-                ["22vi Kist", "13 March 2026",   "₹2,000", "Released"],
-                ["21vi Kist", "November 2025",   "₹2,000", "Released"],
-                ["20vi Kist", "July 2025",       "₹2,000", "Released"],
-                ["19vi Kist", "February 2025",   "₹2,000", "Released"],
-              ].map(([kist, date, amount, status]) => (
-                <tr key={kist} className="odd:bg-[var(--color-card)] even:bg-[var(--color-bg-alt)]">
-                  <td className="border border-[var(--color-border)] px-2 sm:px-4 py-2 font-medium text-[var(--color-text)]">{kist}</td>
-                  <td className="border border-[var(--color-border)] px-2 sm:px-4 py-2 text-[var(--color-text-muted)]">{date}</td>
-                  <td className="border border-[var(--color-border)] px-2 sm:px-4 py-2 text-[var(--color-text-muted)]">{amount}</td>
-                  <td className="border border-[var(--color-border)] px-2 sm:px-4 py-2">
-                    <span className={`px-1.5 py-0.5 rounded text-xs font-medium ${
-                      status === "Released"
-                        ? "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300"
-                        : "bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300"
-                    }`}>
-                      {status}
-                    </span>
-                  </td>
+        {/* Quick Summary Cards */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
+          {[
+            { label: 'Installment', value: KIST.label },
+            { label: 'Amount', value: KIST.amount },
+            { label: 'Expected', value: 'Oct 2026' },
+            { label: 'Recipients', value: KIST.recipients },
+          ].map(({ label, value }) => (
+            <div key={label} className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-3 text-center">
+              <p className="text-[10px] text-[var(--color-text-muted)] mb-0.5">{label}</p>
+              <p className="font-black text-green-800 dark:text-green-300 text-sm">{value}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Section 1: Date Prediction */}
+        <section className="mb-8">
+          <SH>24vi Kist Kab Aayegi?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Official date abhi announce nahi hui.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Lekin historical pattern clear hai — administration har 4 mahine mein installment release karti hai. 23vi kist 20 June 2026 ko aayi. Is hisaab se <strong>October 2026</strong> mein 24vi aane ki poori sambhavna hai.
+          </p>
+
+          <div className="bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 rounded-xl p-4 mb-4">
+            <p className="font-black text-orange-800 dark:text-orange-300 text-sm mb-2">Recent Release Pattern:</p>
+            <ul className="text-xs text-orange-700 dark:text-orange-400 space-y-1">
+              <li>• 21vi → November 2025 ✅</li>
+              <li>• 22vi → 13 March 2026 ✅</li>
+              <li>• 23vi → 20 June 2026 ✅</li>
+              <li>• <strong>24vi → October 2026 (Expected)</strong></li>
+            </ul>
+          </div>
+
+          <IB>
+            <strong>Note:</strong> Yeh prediction hai, guarantee nahi. Official announcement aate hi yeh page update hoga. Bookmark kar lo.
+          </IB>
+        </section>
+
+        {/* Section 2: Payment History */}
+        <section className="mb-8">
+          <SH>Pichhli Kiston Ka Record</SH>
+          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-[var(--color-primary)] text-white">
+                  <th className="p-3 text-left">Kist</th>
+                  <th className="p-3 text-left">Date</th>
+                  <th className="p-3 text-left">Amount</th>
+                  <th className="p-3 text-left">Status</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <figure className="my-5">
-          <Image
-            src="/images/pm-kisan-installment-history-20vi-to-23vi.webp"
-            alt="Payment history timeline – 19vi se 23vi kist tak 2025 se 2026"
-            width={800}
-            height={505}
-            className="rounded-xl shadow-md w-full h-auto"
-            loading="lazy"
-          />
-          <figcaption className="text-center text-xs sm:text-sm text-[var(--color-text-muted)] mt-2">
-            19vi se 23vi kist tak – Har baar ₹2000 ka seedha bank transfer
-          </figcaption>
-        </figure>
-      </section>
-
-      {/* Section 3 – Eligibility */}
-      <section id="eligibility" className="mb-9">
-        <h2 className="text-xl sm:text-2xl font-bold text-[var(--color-text)] mb-3 border-b-2 border-[var(--color-border)] pb-2">
-          3. 24vi Kist Ke Liye Eligibility – Kaun Eligible Hai?
-        </h2>
-        <p className="mb-4 leading-relaxed text-sm sm:text-base text-[var(--color-text-muted)]">
-          24vi kist paane ke liye aapko neeche diye criteria poore karne honge:
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
-          <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-3 sm:p-4">
-            <p className="font-semibold text-green-800 dark:text-green-300 mb-2 text-sm sm:text-base">✅ Eligible Hain Agar:</p>
-            <ul className="text-green-700 dark:text-green-400 text-sm space-y-1">
-              <li>• Aap ek small/marginal kisan hain</li>
-              <li>• Aapke naam par agricultural land hai</li>
-              <li>• Aadhaar beneficiary portal se linked hai</li>
-              <li>• eKYC complete hai</li>
-              <li>• Bank account Aadhaar se NPCI linked hai</li>
-              <li>• Portal par details correct hain</li>
-            </ul>
+              </thead>
+              <tbody>
+                {[
+                  { kist: '24vi', date: 'Oct 2026', amount: '₹2,000', status: 'Expected', upcoming: true },
+                  { kist: '23vi', date: '20 Jun 2026', amount: '₹2,000', status: 'Released', highlight: true },
+                  { kist: '22vi', date: '13 Mar 2026', amount: '₹2,000', status: 'Released' },
+                  { kist: '21vi', date: 'Nov 2025', amount: '₹2,000', status: 'Released' },
+                  { kist: '20vi', date: 'Jul 2025', amount: '₹2,000', status: 'Released' },
+                  { kist: '19vi', date: 'Feb 2025', amount: '₹2,000', status: 'Released' },
+                ].map((row) => (
+                  <tr key={row.kist} className={
+                    row.highlight ? 'bg-green-50 dark:bg-green-900/20 font-medium' :
+                    row.upcoming ? 'bg-orange-50 dark:bg-orange-900/20' :
+                    'bg-[var(--color-card)]'
+                  }>
+                    <td className="p-3 border-b border-[var(--color-border)] font-semibold text-xs text-[var(--color-text)]">{row.kist}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{row.date}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text)]">{row.amount}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs">
+                      <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${
+                        row.status === 'Released'
+                          ? 'bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300'
+                          : 'bg-orange-100 dark:bg-orange-900/40 text-orange-700 dark:text-orange-300'
+                      }`}>{row.status}</span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
-          <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-3 sm:p-4">
-            <p className="font-semibold text-red-800 dark:text-red-300 mb-2 text-sm sm:text-base">❌ Eligible Nahi Hain Agar:</p>
-            <ul className="text-red-700 dark:text-red-400 text-sm space-y-1">
-              <li>• Aap income tax payer hain</li>
-              <li>• Aap government employee hain</li>
-              <li>• Aap professional (doctor, CA, lawyer) hain</li>
-              <li>• Aap constitutional post holder hain</li>
-              <li>• Zameen aapke naam par nahi hai</li>
-              <li>• eKYC pending hai</li>
-            </ul>
+        </section>
+
+        {/* Section 3: Eligibility */}
+        <section className="mb-8">
+          <SH>24vi Ke Liye Eligibility</SH>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+            <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl p-4">
+              <p className="font-black text-green-800 dark:text-green-300 text-sm mb-2">✅ Eligible</p>
+              <ul className="text-xs text-[var(--color-text-muted)] space-y-1">
+                <li>✓ Small/marginal landholder</li>
+                <li>✓ Agricultural land registered</li>
+                <li>✓ Aadhaar linked + eKYC done</li>
+                <li>✓ Bank NPCI seeded</li>
+                <li>✓ Portal details correct</li>
+              </ul>
+            </div>
+            <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl p-4">
+              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-2">❌ Not Eligible</p>
+              <ul className="text-xs text-[var(--color-text-muted)] space-y-1">
+                <li>✗ Income tax payer</li>
+                <li>✗ Government employee</li>
+                <li>✗ Professional (Doctor/CA/Lawyer)</li>
+                <li>✗ Constitutional post holder</li>
+                <li>✗ eKYC pending</li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-          Apna naam approved recipients roster mein confirm karna ho toh{" "}
-          <Link href="/articles/pm-kisan-beneficiary-list-2026" className="text-[var(--color-primary)] underline hover:text-[var(--color-primary-dark)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">
-            Approved Recipients Roster Check
-          </Link>{" "}
-          karein.
-        </p>
-      </section>
+          <WB>
+            <strong>Check Karo:</strong> Apna naam <Link href="/articles/pm-kisan-beneficiary-list-2026" className="underline font-bold">approved roster</Link> mein confirm karo. Naam nahi hai toh pehle enrollment karo.
+          </WB>
+        </section>
 
-      {/* Section 4 – Verification Check */}
-      <section id="verification-check" className="mb-9">
-        <h2 className="text-xl sm:text-2xl font-bold text-[var(--color-text)] mb-3 border-b-2 border-[var(--color-border)] pb-2">
-          4. Beneficiary Status Check Kaise Karein
-        </h2>
-        <p className="mb-4 leading-relaxed text-sm sm:text-base text-[var(--color-text-muted)]">
-          Status check karne ke liye neeche diye steps follow karein:
-        </p>
-        <ol className="space-y-3 mb-5 text-[var(--color-text-muted)] text-sm sm:text-base">
-          {[
-            "pmkisan.gov.in par jaayein",
-            "Farmers Corner mein 'Beneficiary Status' par click karein",
-            "Aadhaar number ya registered mobile number enter karein",
-            "Verification code verify karein",
-            "Aapka complete payment history aur current status dikhega",
-          ].map((step, i) => (
-            <li key={i} className="flex gap-2 leading-relaxed">
-              <span className="flex-shrink-0 w-6 h-6 bg-[var(--color-primary)] text-white rounded-full text-xs font-bold flex items-center justify-center mt-0.5">
-                {i + 1}
-              </span>
-              <span>{step}</span>
-            </li>
-          ))}
-        </ol>
+        {/* Section 4: Status Check */}
+        <section className="mb-8">
+          <SH>Status Kaise Check Karein</SH>
+          <StepList>
+            <SI n={1}><strong>pmkisan.gov.in</strong> par jaao</SI>
+            <SI n={2}>Farmers Corner → <strong>Beneficiary Status</strong></SI>
+            <SI n={3}>Aadhaar ya registered mobile number enter karo</SI>
+            <SI n={4}>Captcha verify karo → <strong>Get Data</strong></SI>
+            <SI n={5}>Complete payment history + current status dikhega</SI>
+          </StepList>
 
-        <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-3 sm:p-4 mb-4">
-          <p className="font-semibold text-blue-800 dark:text-blue-300 mb-2 text-sm sm:text-base">📱 Status Ka Matlab:</p>
-          <ul className="text-blue-700 dark:text-blue-400 text-sm space-y-2">
-            <li><strong>FTO Generated:</strong> Paise administration ne release kiye, bank process mein hai</li>
-            <li><strong>Payment Success:</strong> Paise aapke account mein aa gaye hain ✅</li>
-            <li><strong>DBT Transfer Failed:</strong> Bank ya NPCI issue – neeche guide padhein</li>
-            <li><strong>eKYC Pending:</strong> Turant authentication complete karein warna kist rukegi</li>
-          </ul>
-        </div>
-
-        <figure className="my-5">
-          <Image
-            src="/images/pm-kisan-status-check-steps.webp"
-            alt="Beneficiary verification steps – pmkisan.gov.in par Aadhaar se payment status kaise dekhe"
-            width={496}
-            height={331}
-            className="rounded-xl shadow-md w-full h-auto"
-            loading="lazy"
-          />
-          <figcaption className="text-center text-xs sm:text-sm text-[var(--color-text-muted)] mt-2">
-            pmkisan.gov.in par Aadhaar ya Mobile Number aur verification code se payment status dekho
-          </figcaption>
-        </figure>
-      </section>
-
-      {/* Section 5 – Digital Authentication */}
-      <section id="digital-auth" className="mb-9">
-        <h2 className="text-xl sm:text-2xl font-bold text-[var(--color-text)] mb-3 border-b-2 border-[var(--color-border)] pb-2">
-          5. eKYC – 24vi Kist Ke Liye Zaruri Hai?
-        </h2>
-        <p className="mb-4 leading-relaxed text-sm sm:text-base text-[var(--color-text-muted)]">
-          Haan, eKYC <strong>mandatory</strong> hai. Bina verification ke PM Kisan ki koi bhi kist nahi
-          milegi. Agar aapne abhi tak authentication nahi ki hai toh turant karein.
-        </p>
-
-        <h3 className="text-lg sm:text-xl font-semibold text-[var(--color-text)] mb-3">
-          Authentication Karne Ke 3 Tarike
-        </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-5">
-          {[
-            {
-              title: "1. OTP Based",
-              desc:  "pmkisan.gov.in par eKYC option mein Aadhaar number daalo, code verify karo. Sabse aasaan tarika.",
-              icon:  "📱",
-            },
-            {
-              title: "2. Biometric (CSC)",
-              desc:  "Nearest service centre par jaao, fingerprint se verify karwao. Agar code nahi aa raha toh yeh best option hai.",
-              icon:  "🖐️",
-            },
-            {
-              title: "3. Face Auth",
-              desc:  "Mobile application ya face authentication app se face scan se bhi verification ho sakti hai.",
-              icon:  "🤳",
-            },
-          ].map(({ title, desc, icon }) => (
-            <div key={title} className="border border-green-200 dark:border-green-800 rounded-lg p-3 sm:p-4 bg-green-50 dark:bg-green-900/20 flex sm:block gap-3 items-start">
-              <span className="text-2xl flex-shrink-0">{icon}</span>
-              <div>
-                <p className="font-semibold text-green-800 dark:text-green-300 mb-1 text-sm sm:text-base">{title}</p>
-                <p className="text-xs sm:text-sm text-[var(--color-text-muted)]">{desc}</p>
+          <div className="mt-4 space-y-2">
+            {[
+              { status: 'FTO Generated', meaning: 'Administration ne release kiya. Bank process mein. 24-48h wait.' },
+              { status: 'Payment Success', meaning: 'Account mein aa gaya. Bank statement verify karo.' },
+              { status: 'DBT Failed', meaning: 'Bank/NPCI issue. Payment failed guide padho.' },
+              { status: 'eKYC Pending', meaning: 'Turant authentication karo warna kist rukegi.' },
+            ].map(({ status, meaning }) => (
+              <div key={status} className="flex gap-3 p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-lg">
+                <span className="font-black text-[var(--color-primary)] text-xs shrink-0 w-28">{status}</span>
+                <span className="text-xs text-[var(--color-text-muted)]">{meaning}</span>
               </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Section 5: eKYC */}
+        <section className="mb-8">
+          <SH>eKYC — Mandatory Hai</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Bina verification ke koi kist nahi milegi. Period.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Agar abhi tak nahi kiya toh October se pehle complete karo. Teen tarike hain:
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
+            <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
+              <span className="text-2xl block mb-2">📱</span>
+              <p className="font-black text-green-800 dark:text-green-300 text-sm mb-1">OTP Based</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Portal par Aadhaar daalo, code verify karo. Sabse aasaan.</p>
             </div>
-          ))}
-        </div>
-
-        <figure className="my-5">
-          <Image
-            src="/images/pm-kisan-ekyc-3-methods.webp"
-            alt="eKYC kaise kare – OTP, biometric CSC aur face authentication ke 3 tarike"
-            width={496}
-            height={331}
-            className="rounded-xl shadow-md w-full h-auto"
-            loading="lazy"
-          />
-          <figcaption className="text-center text-xs sm:text-sm text-[var(--color-text-muted)] mt-2">
-            eKYC – OTP, biometric (CSC) ya face authentication se karein
-          </figcaption>
-        </figure>
-
-        <p className="leading-relaxed text-sm sm:text-base text-[var(--color-text-muted)]">
-          Step-by-step madad chahiye toh hamari{" "}
-          <Link href="/articles/pm-kisan-ekyc-online-2026" className="text-[var(--color-primary)] underline hover:text-[var(--color-primary-dark)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">
-            Digital Verification Complete Guide
-          </Link>{" "}
-          padhein.
-        </p>
-      </section>
-
-      {/* Section 6 – Troubleshooting */}
-      <section id="troubleshooting" className="mb-9">
-        <h2 className="text-xl sm:text-2xl font-bold text-[var(--color-text)] mb-3 border-b-2 border-[var(--color-border)] pb-2">
-          6. Common Issues Aur Solutions
-        </h2>
-        <div className="space-y-3">
-          {[
-            {
-              issue:  "Kist nahi aayi, status 'Payment Success' dikh raha hai",
-              solution: "PFMS portal (pfms.nic.in) par bank account se check karein. Credit hone mein 24-48 ghante lag sakte hain. Bank se mini-statement lein.",
-            },
-            {
-              issue:  "Portal par 'Aadhaar Authentication Failed' aa raha hai",
-              solution: "Portal mein naam aur Aadhaar par naam exactly same hona chahiye. Agriculture office mein naam correction karwayein.",
-            },
-            {
-              issue:  "Verification portal par error aa raha hai",
-              solution: "Browser refresh karein ya alag browser try karein. Phir bhi error aaye toh service centre par biometric authentication karwayein.",
-            },
-            {
-              issue:  "Bank account se paise wapas aa gaye",
-              solution: "Bank account inactive hai ya naam match nahi karta. Bank mein jaao, account activate karwao aur portal par updated details daalo.",
-            },
-            {
-              issue:  "Pehli baar enrollment karna chahte hain",
-              solution: "Service centre ya pmkisan.gov.in par naya enrollment karo. Pehli kist aane mein 1-3 mahine lag sakte hain.",
-            },
-          ].map(({ issue, solution }) => (
-            <div key={issue} className="border border-[var(--color-border)] rounded-lg overflow-hidden">
-              <div className="bg-red-50 dark:bg-red-900/20 px-3 py-2 border-b border-red-100 dark:border-red-800">
-                <p className="font-semibold text-red-700 dark:text-red-300 text-xs sm:text-sm">🔴 Issue: {issue}</p>
-              </div>
-              <div className="px-3 py-2.5 bg-green-50 dark:bg-green-900/20">
-                <p className="text-green-800 dark:text-green-300 text-xs sm:text-sm">
-                  <span className="font-semibold">✅ Solution:</span> {solution}
-                </p>
-              </div>
+            <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
+              <span className="text-2xl block mb-2">🖐️</span>
+              <p className="font-black text-blue-800 dark:text-blue-300 text-sm mb-1">Biometric (CSC)</p>
+              <p className="text-xs text-[var(--color-text-muted)]">OTP na aaye toh CSC jaao. Fingerprint se verify.</p>
             </div>
-          ))}
-        </div>
+            <div className="p-4 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-xl">
+              <span className="text-2xl block mb-2">🤳</span>
+              <p className="font-black text-purple-800 dark:text-purple-300 text-sm mb-1">Face Auth</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Mobile app se face scan. Dono fail hon toh try karo.</p>
+            </div>
+          </div>
+          <IB>
+            <strong>Detailed Guide:</strong> Step-by-step madad chahiye toh <Link href="/articles/pm-kisan-ekyc-online-2026" className="underline font-bold">Digital Verification Complete Guide</Link> padho.
+          </IB>
+        </section>
 
-        <p className="mt-4 text-sm text-[var(--color-text-muted)] leading-relaxed">
-          DBT transfer fail ke baare mein aur detail mein padhein:{" "}
-          <Link href="/articles/pm-kisan-payment-failed-status-2026" className="text-[var(--color-primary)] underline hover:text-[var(--color-primary-dark)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">
-            DBT Transfer Failed Guide
-          </Link>
-        </p>
-
-        <div className="bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-lg p-3 sm:p-4 mt-4">
-          <p className="font-semibold text-[var(--color-text)] mb-2 text-sm sm:text-base">📞 Official Helpline:</p>
-          <ul className="text-[var(--color-text-muted)] text-sm space-y-1">
-            <li>• Helpline:  <strong>155261</strong></li>
-            <li>• Toll Free: <strong>1800-115-526</strong></li>
-            <li>• Email:     <strong>pmkisan-ict@gov.in</strong></li>
-          </ul>
-        </div>
-      </section>
-
-      {/* FAQ accordion */}
-      <section id="faq" className="mb-9">
-        <h2 className="text-xl sm:text-2xl font-bold text-[var(--color-text)] mb-5 border-b-2 border-[var(--color-border)] pb-2">
-          7. Frequently Asked Questions
-        </h2>
-        <div className="space-y-3">
-          {[
-            {
-              q: "24vi kist kab aayegi?",
-              a: "24vi kist ki expected date October 2026 hai. 23vi kist 20 June 2026 ko aayi thi, isliye 4 mahine baad yani October mein 24vi kist aane ki sambhavna hai. Jaise hi official date confirm hogi, hum update kar denge.",
-            },
-            {
-              q: "24vi kist kitni hogi?",
-              a: "Har installment ₹2,000 hoti hai. Saal mein 3 baar milti hai matlab kul ₹6,000 per year. 24vi kist bhi ₹2,000 hogi.",
-            },
-            {
-              q: "Beneficiary status kaise check karein?",
-              a: "pmkisan.gov.in par jaayein → Farmers Corner → Beneficiary Status → Aadhaar ya mobile number enter karein → Verification code verify karein. Poori payment history dikhegi.",
-            },
-            {
-              q: "24vi kist ke liye eKYC zaruri hai?",
-              a: "Haan, eKYC mandatory hai. Bina verification ke kist nahi milegi. pmkisan.gov.in par OTP-based ya CSC biometric se turant complete karein.",
-            },
-            {
-              q: "24vi kist nahi aayi toh kya karein?",
-              a: "Pehle status check karein. FTO Generated ho toh bank se mini-statement lein. NPCI se Aadhaar link verify karein. Phir bhi nahi aayi toh helpline 155261 par call karein.",
-            },
-            {
-              q: "Kaise pata chalega ki kist meri account mein aayi?",
-              a: 'pmkisan.gov.in par "Payment Success" status dikhega. Bank SMS ya PFMS portal (pfms.nic.in) se bhi confirm kar sakte hain.',
-            },
-          ].map(({ q, a }, i) => (
-            <details
-              key={i}
-              className="group border border-[var(--color-border)] rounded-lg overflow-hidden"
-            >
-              <summary className="
-                cursor-pointer
-                bg-[var(--color-bg-alt)] px-3 sm:px-4 py-3
-                font-semibold text-[var(--color-text)] text-sm sm:text-base
-                hover:bg-green-50 dark:hover:bg-green-900/20
-                list-none [appearance:none] [-webkit-appearance:none]
-                flex items-center justify-between gap-2
-                focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]
-              ">
-                <span>{q}</span>
-                <span className="text-green-600 dark:text-green-400 text-lg flex-shrink-0 group-open:hidden">+</span>
-                <span className="text-green-600 dark:text-green-400 text-lg flex-shrink-0 hidden group-open:block">−</span>
-              </summary>
-              <div className="px-3 sm:px-4 py-3 text-[var(--color-text-muted)] text-sm sm:text-base leading-relaxed border-t border-[var(--color-border)]">
-                {a}
+        {/* Section 6: Troubleshooting */}
+        <section className="mb-8">
+          <SH>Common Problems + Solutions</SH>
+          <div className="space-y-3">
+            {[
+              { err: 'Status "Success" lekin paisa nahi aaya', fix: 'PFMS (pfms.nic.in) par check karo. 24-48h lag sakte hain. Bank mini-statement lo. 3 din baad bhi nahi toh 155261 call.' },
+              { err: 'Aadhaar Authentication Failed', fix: 'Portal aur Aadhaar mein naam exactly same hona chahiye. Spelling, middle name, surname — sab match. Agriculture office mein correction karwao.' },
+              { err: 'Portal par error aa raha hai', fix: 'Browser refresh / alag browser try. Cache clear karo. Phir bhi na chale toh CSC par biometric karo.' },
+              { err: 'Paise wapas aa gaye (Reversed)', fix: 'Account inactive ya naam mismatch. Bank jaao → activate → "DBT enable" confirmation → portal par update.' },
+              { err: 'Naya enrollment — kab milegi pehli kist?', fix: 'Enrollment + eKYC + NPCI = 1-3 mahine processing. Abhi karo toh 24vi mil sakti hai.' },
+            ].map(({ err, fix }) => (
+              <div key={err} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl overflow-hidden">
+                <div className="bg-red-50 dark:bg-red-900/20 border-b border-red-100 dark:border-red-800 px-4 py-2.5">
+                  <p className="font-black text-red-800 dark:text-red-300 text-sm">❌ {err}</p>
+                </div>
+                <div className="p-4">
+                  <div className="flex items-start gap-2 bg-green-50 dark:bg-green-900/20 rounded-lg p-3">
+                    <span className="text-green-600 dark:text-green-400 font-black text-xs shrink-0 mt-0.5">FIX:</span>
+                    <p className="text-xs text-green-800 dark:text-green-300 leading-relaxed">{fix}</p>
+                  </div>
+                </div>
               </div>
-            </details>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
 
-      {/* Related Articles */}
-      <section aria-label="Related Articles" className="mb-9">
-        <h2 className="text-lg sm:text-xl font-bold text-[var(--color-text)] mb-3 border-b-2 border-[var(--color-border)] pb-2">
-          📌 Yeh Bhi Padhein
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          {[
-            {
-              href:  "/articles/pm-kisan-fto-generated-ka-matlab-kya-hai",
-              title: "FTO Generated Ka Matlab",
-              desc:  "FTO Generated, FTO Pending aur Payment Order ka poora explanation.",
-              icon:  "💳",
-            },
-            {
-              href:  "/articles/agristack-kya-hai",
-              title: "AgriStack Kya Hai – Farmer ID Guide",
-              desc:  "AgriStack kya hai, Farmer ID kaise banegi aur kisan ko kya fayde milenge.",
-              icon:  "🌾",
-            },
-            {
-              href:  "/articles/pm-kisan-registration-online-2026",
-              title: "Naya Enrollment Guide",
-              desc:  "Pehli baar enrollment kaise karein – step by step guide.",
-              icon:  "📝",
-            },
-          ].map(({ href, title, desc, icon }) => (
-            <Link
-              key={href}
-              href={href}
-              className="flex gap-3 p-3 sm:p-4 border border-green-200 dark:border-green-800 rounded-lg bg-green-50 dark:bg-green-900/20 hover:bg-green-100 dark:hover:bg-green-900/30 transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
-            >
-              <span className="text-2xl flex-shrink-0">{icon}</span>
-              <div>
-                <p className="font-semibold text-green-800 dark:text-green-300 text-sm">{title}</p>
-                <p className="text-[var(--color-text-muted)] text-xs mt-0.5">{desc}</p>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
+          <div className="mt-4 p-4 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-xl">
+            <p className="font-black text-[var(--color-text)] text-sm mb-2">Official Helpline:</p>
+            <div className="text-xs text-[var(--color-text-muted)] space-y-1">
+              <p>📞 <strong>155261</strong> (24×7 Toll Free)</p>
+              <p>📞 <strong>1800-115-526</strong> (Toll Free)</p>
+              <p>📧 <strong>pmkisan-ict@gov.in</strong></p>
+            </div>
+          </div>
+        </section>
 
-      {/* Conclusion */}
-      <section id="conclusion" className="mb-9">
-        <h2 className="text-xl sm:text-2xl font-bold text-[var(--color-text)] mb-3 border-b-2 border-[var(--color-border)] pb-2">
-          8. Conclusion
-        </h2>
-        <p className="mb-3 leading-relaxed text-sm sm:text-base text-[var(--color-text-muted)]">
-          24vi kist ka intezaar bahut saare kisanon ko hai. 23vi kist 20 June 2026 ko aayi
-          thi, isliye 24vi kist October 2026 mein aane ki poori sambhavna hai. Abhi official date
-          announce nahi hui – is page ko bookmark karein aur regular check karte rahein.
-        </p>
-        <p className="mb-3 leading-relaxed text-sm sm:text-base text-[var(--color-text-muted)]">
-          Kist milne ke liye teen cheezein zaroori hain: eKYC complete honi chahiye, Aadhaar bank
-          se NPCI ke zariye linked hona chahiye, aur portal par details sahi honi chahiye.
-        </p>
-        <p className="mb-4 leading-relaxed text-sm sm:text-base text-[var(--color-text-muted)]">
-          Koi bhi problem ho toh helpline <strong>155261</strong> par call karein ya{" "}
-          <Link href="/" className="text-[var(--color-primary)] underline hover:text-[var(--color-primary-dark)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">
-            kisanstatus.com
-          </Link>{" "}
-          par visit karein.
-        </p>
-        <div className="bg-green-100 dark:bg-green-900/30 border border-green-300 dark:border-green-700 rounded-lg p-3 sm:p-4 text-center">
-          <p className="font-semibold text-green-800 dark:text-green-300 text-sm sm:text-base">
-            🌾 Apne gaon ke kisanon ko bhi yeh guide share karein!
+        {/* FAQ */}
+        <section className="mb-8">
+          <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
+            Aksar Puche Jane Wale Sawal
+          </h2>
+          <FAQBlock faqs={FAQS_DATA} caption="24vi Installment FAQ 2026 — Verified Answers" />
+        </section>
+
+        {/* Action Conclusion */}
+        <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">October Se Pehle Yeh Karo</h3>
+          <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
+            24vi kist October mein expected hai. Tab tak yeh 3 cheezein pakki karo:
           </p>
-          <p className="text-green-700 dark:text-green-400 text-xs sm:text-sm mt-1">Unki kist bhi aaye – yahi hamari koshish hai.</p>
+          <ol className="space-y-2 text-sm text-green-800 dark:text-green-300 list-decimal list-inside">
+            <li>eKYC complete karo (agar pending hai)</li>
+            <li>Bank NPCI seeding confirm karo</li>
+            <li>Beneficiary status "Active" check karo</li>
+            <li>Yeh page bookmark karo — date confirm hote hi update hoga</li>
+          </ol>
         </div>
-      </section>
 
-      {/* Author Box */}
-      <aside
-        aria-label="About the Author"
-        className="mb-8 border border-[var(--color-border)] rounded-xl p-4 sm:p-5 bg-[var(--color-bg-alt)] flex gap-3 sm:gap-4 items-start"
-      >
-        <div
-          className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[var(--color-primary)] flex items-center justify-center text-white text-lg sm:text-xl font-bold flex-shrink-0"
-          aria-hidden="true"
-        >
-          KT
-        </div>
-        <div>
-          <p className="font-bold text-[var(--color-text)] text-sm sm:text-base">KisanStatus Team</p>
-          <p className="text-xs text-green-700 dark:text-green-400 mb-1.5 font-medium">Agricultural Experts &amp; Farmer Advocates</p>
-          <p className="text-xs sm:text-sm text-[var(--color-text-muted)] leading-relaxed">
-            Pichhle 5 saal se Indian kisanon ko government schemes navigate karne mein help kar
-            rahe hain. Yeh article official pmkisan.gov.in portal aur government press releases
-            par based hai aur regularly update hota hai.
-          </p>
-          <p className="text-xs text-[var(--color-text-muted)] mt-2">
-            🔄 Last Updated: <time dateTime={LAST_UPDATED}>{lastUpdated}</time>
-          </p>
-        </div>
-      </aside>
+        <GovLink
+          href="https://pmkisan.gov.in/BeneficiaryStatus.aspx"
+          label="PM Kisan Beneficiary Status — Official Portal"
+          guide="Abhi Status Check Karo"
+          guideHref="/articles/pm-kisan-ekyc-online-2026"
+          portalName="pmkisan.gov.in"
+        />
 
-    </main>
+        <CalcBanner
+          icon="📅"
+          title="Apni Installment Track Karo"
+          desc="Kitni kist aayi, kitni pending — complete history jaano"
+          primaryCta={{ href: '/calculator/installment-tracker', label: '📅 Tracker Kholo →' }}
+          secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: '💰 Benefit Calculator' }}
+        />
+
+        <RelatedArticles articles={RELATED} />
+        <AuthorBox modified={MODIFIED} />
+        <BottomNav extraLinks={[
+          { href: '/articles/pm-kisan-23vi-kist-2026-status-check', l: '📅 23vi Status' },
+          { href: '/articles/pm-kisan-ekyc-online-2026', l: '🔐 eKYC Guide' },
+          { href: '/calculator/installment-tracker', l: '📅 Tracker' },
+        ]} />
+        <Disclaimer />
+      </div>
+    </>
   );
 }
