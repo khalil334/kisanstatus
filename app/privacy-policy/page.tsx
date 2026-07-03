@@ -1,10 +1,14 @@
+/**
+ * /privacy-policy — KisanStatus.com
+ * Data Protection & Privacy Notice — Legal compliance page
+ */
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy – KisanStatus.com',
+  title: 'Data Protection Notice – KisanStatus.com Privacy Standards',
   description:
-    'Privacy Policy for KisanStatus.com — How we collect, use and protect your information. GDPR and Google AdSense compliant.',
+    'Privacy standards for KisanStatus.com — How we gather, utilize and secure your data. GDPR and Google AdSense compliant.',
   authors: [{ name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' }],
   alternates: { canonical: 'https://kisanstatus.com/privacy-policy' },
   robots: { index: true, follow: false },
@@ -20,9 +24,9 @@ export default function PrivacyPolicyPage() {
           <nav className="text-green-200 text-sm mb-2" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-white">Home</Link>
             <span className="mx-2" aria-hidden="true">/</span>
-            <span className="text-white">Privacy Policy</span>
+            <span className="text-white">Data Protection Notice</span>
           </nav>
-          <h1 className="text-2xl md:text-3xl font-bold text-white">Privacy Policy</h1>
+          <h1 className="text-2xl md:text-3xl font-bold text-white">Data Protection Notice</h1>
           <p className="text-green-200 text-sm mt-1">Last updated: {lastUpdated}</p>
         </div>
       </div>
@@ -34,26 +38,26 @@ export default function PrivacyPolicyPage() {
           <section className="card">
             <h2 className="text-lg font-bold text-gray-900 mb-3">1. Introduction</h2>
             <p className="text-sm text-gray-700 leading-relaxed">
-              Welcome to <strong>KisanStatus.com</strong> ("we", "our", or "us"). This Privacy Policy
-              explains how we collect, use, disclose, and safeguard your information when you visit
-              our website <strong>kisanstatus.com</strong> (the "Site"). Please read this policy carefully.
-              By using our Site, you agree to the collection and use of information in accordance with
-              this policy.
+              Welcome to <strong>KisanStatus.com</strong> ("we", "our", or "us"). This data protection notice
+              explains how we gather, utilize, disclose, and safeguard your details when you visit
+              our platform <strong>kisanstatus.com</strong> (the "Site"). Please read this notice carefully.
+              By using our Site, you agree to the gathering and utilization of details in accordance with
+              this notice.
             </p>
             <div className="mt-4 p-3 bg-yellow-50 border border-yellow-200 rounded text-sm text-yellow-900">
               <strong>⚠️ Important:</strong> KisanStatus.com is NOT affiliated with the Government of India
-              or the PM Kisan Samman Nidhi scheme. We are an independent informational website.
+              or any agrarian welfare scheme. We are an independent informational platform.
             </div>
           </section>
 
           {/* Information collected */}
           <section className="card">
-            <h2 className="text-lg font-bold text-gray-900 mb-3">2. Information We Collect</h2>
+            <h2 className="text-lg font-bold text-gray-900 mb-3">2. Data We Gather</h2>
             <div className="text-sm text-gray-700 space-y-4">
               <div>
-                <h3 className="font-semibold mb-1">2.1 Automatically Collected Data</h3>
+                <h3 className="font-semibold mb-1">2.1 Automatically Gathered Details</h3>
                 <p className="leading-relaxed">
-                  When you visit KisanStatus.com, we may automatically collect certain information
+                  When you visit our platform, we may automatically gather certain details
                   about your device and usage, including:
                 </p>
                 <ul className="mt-2 space-y-1 pl-4">
@@ -81,11 +85,11 @@ export default function PrivacyPolicyPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">2.3 Information You Provide</h3>
+                <h3 className="font-semibold mb-1">2.3 Details You Provide</h3>
                 <p className="leading-relaxed">
-                  We do NOT collect personal information such as your name, Aadhaar number, bank
+                  We do NOT gather identifiable details such as your name, biometric credential number, bank
                   account details, or any other sensitive personal data. We do not have any forms
-                  that collect personal information directly.
+                  that gather identifiable details directly.
                 </p>
               </div>
             </div>
@@ -93,10 +97,10 @@ export default function PrivacyPolicyPage() {
 
           {/* How we use information */}
           <section className="card">
-            <h2 className="text-lg font-bold text-gray-900 mb-3">3. How We Use Your Information</h2>
+            <h2 className="text-lg font-bold text-gray-900 mb-3">3. How We Utilize Your Details</h2>
             <ul className="text-sm text-gray-700 space-y-2">
               {[
-                'To analyze website traffic and improve our content',
+                'To analyze portal traffic and improve our content',
                 'To understand how visitors use our Site (via Google Analytics)',
                 'To display relevant advertisements (via Google AdSense)',
                 'To ensure the Site functions properly',
@@ -115,11 +119,11 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-lg font-bold text-gray-900 mb-3">4. Google Analytics</h2>
             <p className="text-sm text-gray-700 leading-relaxed mb-3">
               We use Google Analytics 4 (GA4) to understand how visitors interact with our Site.
-              Google Analytics uses cookies to collect anonymous data such as page views, session
+              Google Analytics uses cookies to gather anonymous data such as page views, session
               duration, and user behavior patterns.
             </p>
             <p className="text-sm text-gray-700 leading-relaxed">
-              Google Analytics data is processed by Google Inc. For more information, visit{' '}
+              Google Analytics data is processed by Google Inc. For more details, visit{' '}
               <a
                 href="https://policies.google.com/privacy"
                 target="_blank"
@@ -146,7 +150,7 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-lg font-bold text-gray-900 mb-3">5. Google AdSense & Advertising</h2>
             <p className="text-sm text-gray-700 leading-relaxed mb-3">
               We may use Google AdSense to display advertisements on our Site. Google AdSense
-              uses cookies to serve ads based on your prior visits to our website and other sites
+              uses cookies to serve ads based on your prior visits to our platform and other sites
               on the Internet.
             </p>
             <ul className="text-sm text-gray-700 space-y-2">
@@ -171,10 +175,10 @@ export default function PrivacyPolicyPage() {
           <section className="card">
             <h2 className="text-lg font-bold text-gray-900 mb-3">6. Third-Party Links</h2>
             <p className="text-sm text-gray-700 leading-relaxed">
-              Our Site contains links to external websites including the official government portal
+              Our Site contains links to external platforms including the official government portal
               <strong> pmkisan.gov.in</strong>. We are not responsible for the privacy practices of
-              these third-party sites. We encourage you to review their privacy policies before
-              providing any personal information.
+              these third-party sites. We encourage you to review their data protection notices before
+              providing any identifiable details.
             </p>
           </section>
 
@@ -183,8 +187,8 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-lg font-bold text-gray-900 mb-3">7. Data Security</h2>
             <p className="text-sm text-gray-700 leading-relaxed">
               We implement appropriate technical and organizational security measures to protect
-              the information we collect. However, no internet transmission is 100% secure.
-              Since we do not collect sensitive personal data, your risk is minimal.
+              the details we gather. However, no internet transmission is 100% secure.
+              Since we do not gather sensitive personal data, your risk is minimal.
             </p>
           </section>
 
@@ -193,8 +197,8 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-lg font-bold text-gray-900 mb-3">8. Children's Privacy</h2>
             <p className="text-sm text-gray-700 leading-relaxed">
               Our Site is not directed at children under the age of 13. We do not knowingly
-              collect personal information from children. If you believe a child has provided
-              us with personal information, please contact us immediately.
+              gather identifiable details from children. If you believe a child has provided
+              us with identifiable details, please contact us immediately.
             </p>
           </section>
 
@@ -225,7 +229,7 @@ export default function PrivacyPolicyPage() {
           <section className="card">
             <h2 className="text-lg font-bold text-gray-900 mb-3">10. Contact Us</h2>
             <p className="text-sm text-gray-700 leading-relaxed">
-              If you have any questions about this Privacy Policy, please contact us:
+              If you have any questions about this data protection notice, please contact us:
             </p>
             <div className="mt-3 text-sm text-gray-700 space-y-1">
               <p>📧 Email: <a href="mailto:kisanstatus.support@gmail.com" className="text-primary-600 underline">kisanstatus.support@gmail.com</a></p>
@@ -234,8 +238,8 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <p className="text-xs text-gray-500 text-center">
-            This privacy policy was last updated on {lastUpdated}. We reserve the right to update
-            this policy at any time. Changes will be posted on this page.
+            This data protection notice was last updated on {lastUpdated}. We reserve the right to update
+            this notice at any time. Changes will be posted on this page.
           </p>
         </div>
       </div>
