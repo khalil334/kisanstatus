@@ -1,9 +1,10 @@
 'use client';
+
 import { useState } from 'react';
 import Link from 'next/link';
 import { InputField, SelectField, ResultRow, fmt, OtherCalcs, CalcHeader, CalcDisclaimer } from './CalcShared';
 
-// ✅ UPDATED: 2025-26 MSP Rates (CCEA Approved)
+// 2025-26 MSP rates — CCEA approved. Data dfpd.gov.in se verified hai.
 const MSP: Record<string,{name:string;msp:number;avgYield:number}> = {
   wheat:     {name:'Gehun (Wheat)',         msp:2550, avgYield:35},
   rice:      {name:'Dhan (Paddy)',          msp:2400, avgYield:25},
@@ -36,29 +37,34 @@ export default function MSPIncomeCalcPage() {
   const income = qtl * cropData.msp;
   const perHectare = unit==='hectare' ? income/qtyN : income/landN;
 
+  // Schema mein naye SEO keywords — "MSP Income Calculator" repetitive tha
   const schema = {
-    '@context':'https://schema.org','@type':'WebApplication',
-    name:'MSP Income Calculator 2026',
+    '@context':'https://schema.org',
+    '@type':'WebApplication',
+    name:'Crop Procurement Rate Analyzer 2026',
     url:'https://kisanstatus.com/calculator/msp-income',
     applicationCategory:'FinanceApplication',
-    description:'Minimum Support Price par fasal bechne se income calculate karo — 2025-26 MSP rates',
+    description:'Government procurement rates par fasal bechne se revenue estimate karo — 2025-26 rates',
     offers:{'@type':'Offer',price:'0',priceCurrency:'INR'},
   };
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/>
+      
+      {/* Title mein naya keyword — "MSP Income Calculator" purana tha */}
       <CalcHeader
         emoji="💹"
-        title="MSP Income Calculator 2026"
-        subtitle="Government Minimum Support Price par fasal bechne se kitna paisa milega"
-        breadcrumb="MSP Income"
+        title="Procurement Rate Income Analyzer 2026"
+        subtitle="Government guaranteed price par fasal bechne se kitna revenue milega"
+        breadcrumb="Procurement Rate"
       />
 
       <div className="container-site max-w-2xl py-8">
 
+        {/* Intro mein naye keywords — "MSP" repetitive tha */}
         <div className="mb-6 p-4 bg-orange-50 border border-orange-200 rounded-xl text-sm text-gray-700">
-          <p><strong>💹 MSP (Minimum Support Price)</strong> woh minimum rate hai jo government guaranteed karti hai apni fasal ke liye. Mandi mein rate kam ho toh bhi government MSP pe khareedegi.</p>
+          <p><strong>💹 Government Procurement Guarantee</strong> woh minimum rate hai jo central administration apki fasal ke liye guarantee karti hai. Mandi mein rate kam ho toh bhi government is price pe khareedegi.</p>
         </div>
 
         <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
@@ -88,34 +94,36 @@ export default function MSPIncomeCalcPage() {
             <InputField
               label="Aapki zameen (hectare)"
               value={land} onChange={setLand} min={0} placeholder="1"
-              hint="Per hectare income calculate karne ke liye"
+              hint="Per hectare revenue calculate karne ke liye"
             />
           )}
 
           {qtl>0 && (
             <div className="mt-4 bg-orange-50 border-2 border-orange-200 rounded-2xl p-5">
+              {/* Result section mein naye keywords — "MSP Income" purana tha */}
               <p className="text-xs text-orange-700 font-bold uppercase tracking-wide mb-3">
-                📊 {cropData.name} — MSP Income 2025-26
+                📊 {cropData.name} — Procurement Revenue 2025-26
               </p>
-              <ResultRow label="MSP Rate" value={`₹${cropData.msp.toLocaleString('en-IN')}/quintal`} />
+              {/* Naye labels — "MSP Rate" generic tha */}
+              <ResultRow label="Guaranteed Rate" value={`₹${cropData.msp.toLocaleString('en-IN')}/quintal`} />
               <ResultRow label="Quantity (quintals)" value={`${qtl.toFixed(2)} qtl`} />
-              <ResultRow label="Per Hectare Income" value={fmt(perHectare)} />
-              <ResultRow label="Total MSP Income" value={fmt(income)} bold />
+              <ResultRow label="Per Hectare Revenue" value={fmt(perHectare)} />
+              <ResultRow label="Total Procurement Revenue" value={fmt(income)} bold />
               <div className="mt-3 pt-3 border-t border-orange-200 text-xs text-orange-700">
-                💡 Yeh rates 2025-26 ke hain — official confirmation ke liye agricoop.nic.in check karein
+                💡 Yeh rates 2025-26 ke hain — official confirmation ke liye dfpd.gov.in check karein
               </div>
             </div>
           )}
 
-          {/* MSP rates table */}
+          {/* Rates table — naya title use kiya */}
           <div className="mt-5">
-            <p className="font-bold text-gray-900 text-xs mb-3">📋 All Crops MSP 2025-26</p>
+            <p className="font-bold text-gray-900 text-xs mb-3">📋 All Crops Procurement Rates 2025-26</p>
             <div className="overflow-x-auto rounded-xl border border-gray-200">
               <table className="w-full text-xs border-collapse">
                 <thead>
                   <tr className="bg-orange-600 text-white">
                     <th className="p-2 text-left">Fasal</th>
-                    <th className="p-2 text-right">MSP (₹/qtl)</th>
+                    <th className="p-2 text-right">Guaranteed Rate (₹/qtl)</th>
                     <th className="p-2 text-right">Avg Yield</th>
                   </tr>
                 </thead>
@@ -133,7 +141,8 @@ export default function MSPIncomeCalcPage() {
           </div>
         </div>
 
-        <CalcDisclaimer note="MSP rates 2025-26 ke hain — official confirmation ke liye agricoop.nic.in check karein" />
+        {/* Disclaimer mein sahi official URL — agricoop.nic.in galat tha */}
+        <CalcDisclaimer note="Procurement rates 2025-26 ke hain — official confirmation ke liye dfpd.gov.in check karein" />
         <OtherCalcs current="/calculator/msp-income" />
       </div>
     </>
