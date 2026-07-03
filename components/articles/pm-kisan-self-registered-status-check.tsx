@@ -1,307 +1,246 @@
-import Image from 'next/image';
+'use client';
+
 import Link from 'next/link';
+import Image from 'next/image';
+import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
+
+const PUBLISHED = '2026-06-28T08:00:00+05:30';
+const MODIFIED = '2026-07-04T08:00:00+05:30';
+
+const RELATED = [
+  { slug: 'pm-kisan-23vi-kist-2026-status-check', title: '23vi Installment Status', emoji: '📅' },
+  { slug: 'pm-kisan-ekyc-online-2026', title: 'Digital Verification Guide', emoji: '🔐' },
+  { slug: 'pm-kisan-payment-failed-status-2026', title: 'Payment Failed Fix', emoji: '💸' },
+  { slug: 'pm-kisan-name-correction-online-2026', title: 'Name Correction Guide', emoji: '✏️' },
+  { slug: 'pm-kisan-rejected-list-2026', title: 'Rejected List Fix', emoji: '❌' },
+  { slug: 'pm-kisan-registration-online-2026', title: 'New Enrollment Guide', emoji: '📝' },
+];
+
+const FAQS_DATA = [
+  { q: 'Self-Enrolled Beneficiary Verification kaise kare?', a: 'pmkisan.gov.in → Farmers Corner → "Status of Self Registered Farmer/CSC Farmer" → Aadhaar number dalo → Captcha → Get Data. Status dikh jayega.' },
+  { q: 'Pending verification ka kya matlab hai?', a: 'Authentication chal raha hai. 7-10 din wait karo. 15 din se zyada ho toh helpline 155261 par call karo ya District Agriculture Office jaao.' },
+  { q: 'Rejected hone par kya kare?', a: 'Rejection reason pata karo portal par. Galti sudharo, dobara apply karo. Detailed fix ke liye Rejected List Fix Guide padho.' },
+  { q: '"No Record Found" error aa raha hai?', a: 'Aadhaar number galat hai ya enrollment submit nahi hua. Dobara check karo. Phir bhi na dikhe toh CSC center jaake confirm karo.' },
+  { q: 'Self-Enrollment aur CSC Enrollment mein kya farak hai?', a: 'Dono same scheme ke liye hain. CSC = operator ne kiya. Self = ghar baithe khud kiya. Status check process dono ke liye same hai.' },
+  { q: 'Approved dikh raha hai lekin paisa nahi aaya?', a: 'eKYC complete karo pehle. Phir NPCI seeding bank mein confirm karo. Dono done = agli cycle mein payment aayegi.' },
+];
 
 export default function PmKisanSelfRegisteredStatusCheck({ article }: { article: ArticleMeta }) {
   return (
-    <article className="max-w-4xl mx-auto px-4 py-8 prose prose-lg">
-      {/* Breadcrumb */}
-      <nav className="text-sm text-gray-600 mb-6 not-prose" aria-label="Breadcrumb">
-        <ol className="flex items-center space-x-2">
-          <li><Link href="/" className="hover:text-green-600">Home</Link></li>
-          <li><span className="mx-2">›</span></li>
-          <li><Link href="/articles" className="hover:text-green-600">Articles</Link></li>
-          <li><span className="mx-2">›</span></li>
-          <li className="text-gray-900 font-medium truncate max-w-xs">{article.title}</li>
-        </ol>
-      </nav>
-
-      <header className="mb-8 not-prose">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          {article.title}
-        </h1>
-        <div className="flex items-center gap-4 text-gray-600 text-sm mb-4">
-          <span className="font-semibold text-blue-600">Author: KisanStatus Team</span>
-          <span>|</span>
-          <span>Last Updated: June 28, 2026</span>
-          <span>|</span>
-          <span className="text-green-600 font-medium">✓ Verified</span>
+    <>
+      {/* Header */}
+      <div className="bg-[var(--color-primary)] py-8">
+        <div className="container-site max-w-3xl">
+          <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
+            <Link href="/" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Home</Link>
+            <span>/</span>
+            <Link href="/articles" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Articles</Link>
+            <span>/</span>
+            <span className="text-white font-bold truncate max-w-[200px]">{article.title || 'Self-Registered Status Check'}</span>
+          </nav>
+          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Self-Enrollment Verification</span>
+          <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
+            Khud Se Apply Kiya Tha? Ab Status Kaise Check Karein — Step-by-Step Guide
+          </h1>
+          <div className="flex flex-wrap gap-3 text-xs text-green-200">
+            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
+            <span>📅 {fmtDate(PUBLISHED)}</span>
+            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
+            <span>⏱️ 7 min read</span>
+          </div>
         </div>
-      </header>
-
-      {/* IMAGE 1: Tool Interface */}
-      <div className="my-8 rounded-lg overflow-hidden shadow-lg border border-gray-200 not-prose">
-        <Image
-          src="/images/pm-kisan-status-check-tool-interface.webp"
-          alt="Scheme verification tool interface showing biometric credential and mobile input fields"
-          width={1200}
-          height={630}
-          className="w-full h-auto"
-          priority
-        />
-        <p className="text-center text-sm text-gray-600 mt-2 italic px-4 pb-2">
-          Scheme Verification Tool — Official Portal Interface
-        </p>
       </div>
 
-      {/* Quick Answer Box */}
-      <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500 p-6 mb-8 rounded-r-lg not-prose">
-        <h2 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-          <span>⚡</span> Quick Answer
-        </h2>
-        <p className="text-gray-700 leading-relaxed mb-0">
-          <strong>Self-Enrolled Beneficiary Verification</strong> karne ke liye <strong>pmkisan.gov.in</strong> par jayein → <strong>Farmers Corner</strong> section kholein → <strong>&quot;Status of Self Registered Farmer/CSC Farmer&quot;</strong> option select karein → apna <strong>12-digit biometric credential number</strong> dalein → Captcha verify karein → <strong>Get Data</strong> button dabayein.
-        </p>
-      </div>
+      <div className="container-site max-w-3xl py-8">
 
-      {/* Table of Contents */}
-      <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-8 not-prose">
-        <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-          <span>📋</span> Is Article Mein Kya Hai?
-        </h2>
-        <nav>
-          <ul className="space-y-2 text-gray-700 text-sm">
-            <li><a href="#self-registered-matlab" className="hover:text-green-600 hover:underline">1. Self-Enrolled Beneficiary ka Matlab</a></li>
-            <li><a href="#status-check-steps" className="hover:text-green-600 hover:underline">2. Verification Check Karne ka Tarika (6 Steps)</a></li>
-            <li><a href="#status-types" className="hover:text-green-600 hover:underline">3. Application Verification ke Types aur Matlab</a></li>
-            <li><a href="#common-problems" className="hover:text-green-600 hover:underline">4. Common Problems aur Solutions</a></li>
-            <li><a href="#related-articles" className="hover:text-green-600 hover:underline">5. Related Articles</a></li>
-            <li><a href="#faqs" className="hover:text-green-600 hover:underline">6. FAQs</a></li>
-          </ul>
-        </nav>
-      </div>
-
-      <section className="mb-8">
-        <p className="text-gray-700 leading-relaxed mb-4">
-          Namaste kisan bhaiyon! Aaj hum ek bahut zaroori topic par baat karenge. Kai kisanon ko yeh confusion hoti hai ki <strong>&quot;Maine khud agrarian welfare scheme ke liye apply kiya tha, lekin ab pata nahi chal raha ki mera application approve hua ya nahi?&quot;</strong>
-        </p>
-        <p className="text-gray-700 leading-relaxed mb-4">
-          Is article mein hum detail mein samjhenge ki <strong>Self-Enrollment</strong> kya hai aur kaise verification check karein.
-        </p>
-      </section>
-
-      <section id="self-registered-matlab" className="mb-8">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">📱 1. Self-Enrolled Beneficiary ka Matlab Kya Hai?</h2>
-        <p className="text-gray-700 leading-relaxed mb-4">
-          Agrarian welfare scheme mein enrollment ke do tarike hain:
-        </p>
-        <div className="bg-gray-50 p-6 rounded-lg mb-4 not-prose">
-          <h3 className="font-semibold text-lg mb-3">Pehla Tarika: CSC Enrollment</h3>
-          <p className="text-gray-700 mb-0">
-            Aap apne najdiki <strong>CSC (Common Service Center)</strong> yani Jan Seva Kendra jakar enrollment karvate hain.
-          </p>
-        </div>
-        <div className="bg-gray-50 p-6 rounded-lg mb-4 not-prose">
-          <h3 className="font-semibold text-lg mb-3">Dusra Tarika: Self-Enrollment</h3>
-          <p className="text-gray-700 mb-0">
-            Aap <strong>apne ghar se</strong> online pmkisan.gov.in website par jakar apna enrollment karte hain. Ise hi <strong>Self-Enrollment</strong> kehte hain.
-          </p>
-        </div>
-
-        <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded mb-4 not-prose">
-          <p className="text-gray-800 mb-0">
-            <strong>💡 Common Problem:</strong><br/>
-            Kai kisanon ko lagta hai ki enrollment ke baad sab theek ho gaya. Lekin 4 mahine tak monetary credit nahi aata. Jab verification check karte hain to pata chalta hai ki application &quot;Pending&quot; tha kyunki biometric credential aur bank account link nahi tha. <strong>Verification check karna bahut zaroori hai!</strong>
-          </p>
-        </div>
-      </section>
-
-      <section id="status-check-steps" className="mb-8">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">🔍 2. Verification Check Karne ka Sahi Tarika (6 Steps)</h2>
-
-        {/* IMAGE 2: Steps Infographic */}
-        <div className="my-8 rounded-lg overflow-hidden shadow-lg border border-gray-200 not-prose">
+        {/* Hero Image #1 — PRESERVED */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src="/images/pm-kisan-status-check-steps-infographic.webp"
-            alt="Step by step infographic showing 4 steps to check scheme verification online"
+            src={article.ogImage || '/images/pm-kisan-status-check-tool-interface.webp'}
+            alt="PM Kisan self-registered farmer status check tool interface — Aadhaar input screen"
             width={1200}
             height={630}
-            className="w-full h-auto"
+            className="w-full object-cover"
+            style={{ maxHeight: '420px', objectPosition: 'center' }}
+            priority
+            sizes="(max-width: 768px) 100vw, 768px"
           />
-          <p className="text-center text-sm text-gray-600 mt-2 italic px-4 pb-2">
-            Step-by-Step Verification Check Process Infographic
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            Official Portal Par Self-Registered Status Kaise Check Karein
           </p>
         </div>
 
-        <div className="space-y-6">
-          <div className="bg-white border-2 border-blue-200 p-6 rounded-lg not-prose">
-            <h3 className="font-bold text-xl text-blue-700 mb-3">✅ Step 1: Official Website Par Jayen</h3>
-            <p className="text-gray-700 mb-3">Browser mein type karein:</p>
-            <div className="bg-blue-100 p-3 rounded font-mono text-blue-800 font-semibold text-center">pmkisan.gov.in</div>
-            <p className="text-gray-700 mt-3"><strong>⚠️ Dhyan Dein:</strong> Hamesha official website ka hi istemal karein. Fake websites se bachein.</p>
-          </div>
+        {/* Quick Answer */}
+        <div className="my-6 p-5 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 border-l-[6px] rounded-xl">
+          <h2 className="text-base font-black text-green-800 dark:text-green-300 mb-2">⚡ Quick Answer</h2>
+          <p className="text-sm text-green-900 dark:text-green-200 leading-relaxed">
+            <strong>pmkisan.gov.in</strong> → Farmers Corner → <strong>"Status of Self Registered Farmer/CSC Farmer"</strong> → Aadhaar number dalo → Captcha verify → <strong>Get Data</strong>. Status dikh jayega.
+          </p>
+        </div>
 
-          <div className="bg-white border-2 border-blue-200 p-6 rounded-lg not-prose">
-            <h3 className="font-bold text-xl text-blue-700 mb-3">✅ Step 2: Farmers Corner Mein Jayen</h3>
-            <p className="text-gray-700 mb-0">Homepage par <strong>&quot;Farmers Corner&quot;</strong> section dhundhein.</p>
-          </div>
-
-          <div className="bg-white border-2 border-blue-200 p-6 rounded-lg not-prose">
-            <h3 className="font-bold text-xl text-blue-700 mb-3">✅ Step 3: Verification Option Select Karein</h3>
-            <p className="text-gray-700 mb-0"><strong>&quot;Status of Self Registered Farmer/CSC Farmer&quot;</strong> par click karein.</p>
-          </div>
-
-          <div className="bg-white border-2 border-blue-200 p-6 rounded-lg not-prose">
-            <h3 className="font-bold text-xl text-blue-700 mb-3">✅ Step 4: Biometric Credential Number Dalein</h3>
-            <p className="text-gray-700 mb-3">12-digit biometric credential number bina space ke enter karein.</p>
-            <div className="bg-red-50 border-l-4 border-red-400 p-4 rounded">
-              <p className="text-gray-800 mb-2 font-semibold">📝 Dhyan Rakhne Wali Baatein:</p>
-              <ul className="list-disc list-inside text-gray-700 space-y-1 ml-4 mb-0">
-                <li>Biometric credential number dalte waqt koi space na dein</li>
-                <li>Sahi number dalein, varna &quot;No Record Found&quot; error aayega</li>
-                <li>Galti hone par: <Link href="/articles/pm-kisan-name-correction-online-2026" className="text-blue-600 underline hover:text-blue-800">Identity Rectification Guide →</Link></li>
-              </ul>
+        {/* What Is Self-Enrollment */}
+        <section className="mb-8">
+          <SH>Self-Enrolled Beneficiary Ka Matlab Kya Hai?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Enrollment ke do tarike hain:
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+            <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
+              <span className="text-2xl block mb-2">🏢</span>
+              <p className="font-black text-blue-800 dark:text-blue-300 text-sm mb-1">CSC Enrollment</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Jan Seva Kendra jaake operator ne enrollment kiya.</p>
+            </div>
+            <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
+              <span className="text-2xl block mb-2">🏠</span>
+              <p className="font-black text-green-800 dark:text-green-300 text-sm mb-1">Self-Enrollment</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Ghar baithe pmkisan.gov.in par khud apply kiya.</p>
             </div>
           </div>
+          <WB>
+            <strong>Common Problem:</strong> Enrollment ke baad 4 mahine tak paisa nahi aata. Check karne par pata chalta hai application "Pending" thi kyunki Aadhaar-bank link nahi tha. <strong>Status check zaroori hai!</strong>
+          </WB>
+        </section>
 
-          <div className="bg-white border-2 border-blue-200 p-6 rounded-lg not-prose">
-            <h3 className="font-bold text-xl text-blue-700 mb-3">✅ Step 5: Captcha Verify Karein</h3>
-            <p className="text-gray-700 mb-0">Image captcha type karein aur <strong>&quot;Get Data&quot;</strong> button dabayein.</p>
-          </div>
-
-          <div className="bg-white border-2 border-blue-200 p-6 rounded-lg not-prose">
-            <h3 className="font-bold text-xl text-blue-700 mb-3">✅ Step 6: Verification Dekhein</h3>
-            <p className="text-gray-700 mb-3">Aapka application verification screen par dikhega.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="status-types" className="mb-8">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">📊 3. Application Verification ke Types aur Matlab</h2>
-
-        {/* IMAGE 3: Farmer Checking Phone */}
-        <div className="my-8 rounded-lg overflow-hidden shadow-lg border border-gray-200 not-prose">
+        {/* Steps Infographic #2 — PRESERVED */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src="/images/indian-farmer-checking-phone-status.webp"
-            alt="Indian farmer checking scheme application verification on smartphone in wheat field"
+            src="/images/pm-kisan-status-check-steps-infographic.webp"
+            alt="Step by step infographic — self-registered farmer status check process on pmkisan.gov.in"
             width={1200}
             height={630}
-            className="w-full h-auto"
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
           />
-          <p className="text-center text-sm text-gray-600 mt-2 italic px-4 pb-2">
-            Kisan bhai apna verification mobile par check kar rahe hain
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            Step-by-Step Verification Process
           </p>
         </div>
 
-        <div className="overflow-x-auto not-prose">
-          <table className="w-full text-sm border border-gray-200 rounded-xl overflow-hidden">
-            <thead className="bg-green-50">
-              <tr>
-                <th className="text-left p-3 font-bold text-green-900">Verification</th>
-                <th className="text-left p-3 font-bold text-green-900">Matlab</th>
-                <th className="text-left p-3 font-bold text-green-900">Kya Karein</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-gray-100">
-              <tr>
-                <td className="p-3 font-semibold text-green-700">✅ Approved</td>
-                <td className="p-3 text-gray-700">Enrollment safal — monetary credit aana shuru hogi</td>
-                <td className="p-3 text-gray-700">Digital verification complete karein</td>
-              </tr>
-              <tr>
-                <td className="p-3 font-semibold text-amber-700">⏳ Pending</td>
-                <td className="p-3 text-gray-700">Authentication chal raha hai</td>
-                <td className="p-3 text-gray-700">7-15 din wait karein</td>
-              </tr>
-              <tr>
-                <td className="p-3 font-semibold text-red-700">❌ Rejected</td>
-                <td className="p-3 text-gray-700">Koi galti mili hai</td>
-                <td className="p-3 text-gray-700"><Link href="/articles/pm-kisan-rejected-list-2026" className="text-blue-600 underline">Application Rejection Fix Guide →</Link></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
+        {/* 6 Steps */}
+        <section className="mb-8">
+          <SH>Status Check — 6 Steps</SH>
+          <StepList>
+            <SI n={1}><strong>pmkisan.gov.in</strong> open karo. Hamesha official site — fake sites se bacho</SI>
+            <SI n={2}>Homepage par <strong>Farmers Corner</strong> section dhundo</SI>
+            <SI n={3}><strong>"Status of Self Registered Farmer/CSC Farmer"</strong> click karo</SI>
+            <SI n={4}>12-digit Aadhaar number bina space ke enter karo</SI>
+            <SI n={5}>Captcha type karo → <strong>Get Data</strong> dabao</SI>
+            <SI n={6}>Application status screen par dikh jayega</SI>
+          </StepList>
+          <DB>
+            <strong>Dhyan Rakhein:</strong> Aadhaar number galat = "No Record Found" error. Sahi number daalo. Galti ho gayi toh <Link href="/articles/pm-kisan-name-correction-online-2026" className="underline font-bold">Identity Rectification Guide</Link> padho.
+          </DB>
+        </section>
 
-      <section id="common-problems" className="mb-8">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">🔧 4. Common Problems aur Solutions</h2>
-        <div className="space-y-4">
-          <div className="bg-red-50 border border-red-200 rounded-xl p-4 not-prose">
-            <p className="font-bold text-red-800 mb-1">❌ &quot;No Record Found&quot; Error</p>
-            <p className="text-sm text-red-700">Biometric credential number galat hai ya enrollment submit nahi hua. Dobara check karein ya CSC center jayein.</p>
-          </div>
-          <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 not-prose">
-            <p className="font-bold text-amber-800 mb-1">⏳ 15 Din Se Zyada Pending</p>
-            <p className="text-sm text-amber-700">Helpline 155261 par call karein ya District Agriculture Office visit karein.</p>
-          </div>
-          <div className="bg-purple-50 border border-purple-200 rounded-xl p-4 not-prose">
-            <p className="font-bold text-purple-800 mb-1">✏️ Identity Mismatch</p>
-            <p className="text-sm text-purple-700"><Link href="/articles/pm-kisan-name-correction-online-2026" className="underline font-semibold">Identity Rectification Guide →</Link> follow karein.</p>
-          </div>
+        {/* Farmer Photo #3 — PRESERVED */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/indian-farmer-checking-phone-status.webp"
+            alt="Indian cultivator checking self-registered application status on smartphone in field"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
         </div>
-      </section>
 
-      {/* Related Articles + Official Source */}
-      <section id="related-articles" className="mb-8 not-prose">
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
-          <div className="flex items-center justify-between mb-3">
-            <h3 className="font-bold text-gray-900 text-sm">📚 Zaroor Padhein:</h3>
-            <a
-              href="https://pmkisan.gov.in"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[10px] font-bold text-blue-600 hover:text-blue-800 hover:underline flex items-center gap-1"
-            >
-              🏛️ Official Source: pmkisan.gov.in ↗
-            </a>
+        {/* Status Types Table */}
+        <section className="mb-8">
+          <SH>Status Ke Types Aur Matlab</SH>
+          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-[var(--color-primary)] text-white">
+                  <th className="p-3 text-left">Status</th>
+                  <th className="p-3 text-left">Matlab</th>
+                  <th className="p-3 text-left">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['✅ Approved', 'Enrollment safal — payment shuru hogi', 'eKYC complete karo'],
+                  ['⏳ Pending', 'Verification chal raha hai', '7-15 din wait karo'],
+                  ['❌ Rejected', 'Koi galti mili hai', <Link key="rej" href="/articles/pm-kisan-rejected-list-2026" className="text-green-700 dark:text-green-400 underline font-bold">Fix Guide →</Link>],
+                ].map(([status, meaning, action], i) => (
+                  <tr key={i} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
+                    <td className="p-3 border-b border-[var(--color-border)] font-semibold text-xs text-[var(--color-text)]">{status}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{meaning}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-green-700 dark:text-green-400 font-medium">{action}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-            {[
-              { href: '/articles/pm-kisan-23vi-kist-2026-status-check', label: '📆 23vi Installment Verification Guide' },
-              { href: '/articles/pm-kisan-ekyc-online-2026', label: '🔐 Digital Verification Kaise Karein' },
-              { href: '/articles/pm-kisan-payment-failed-status-2026', label: '💸 Credit Transfer Failed Fix' },
-              { href: '/articles/pm-kisan-name-correction-online-2026', label: '✏️ Identity Rectification' },
-              { href: '/articles/pm-kisan-rejected-list-2026', label: '❌ Application Rejection Fix' },
-              { href: '/articles/pm-kisan-registration-online-2026', label: '📝 New Enrollment Guide' },
-            ].map(({ href, label }) => (
-              <Link
-                key={href}
-                href={href}
-                className="p-2.5 bg-gray-50 hover:bg-green-50 border border-gray-200 hover:border-green-300 rounded-lg text-xs font-semibold text-gray-700 hover:text-green-700 transition-all"
-              >
-                {label} →
-              </Link>
-            ))}
+        </section>
+
+        {/* Common Problems */}
+        <section className="mb-8">
+          <SH>Common Problems + Solutions</SH>
+          <div className="space-y-3">
+            <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl p-4">
+              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-1">❌ "No Record Found"</p>
+              <p className="text-xs text-red-700 dark:text-red-400">Aadhaar galat ya enrollment submit nahi hua. Dobara check karo ya CSC jaao.</p>
+            </div>
+            <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl p-4">
+              <p className="font-black text-amber-800 dark:text-amber-300 text-sm mb-1">⏳ 15 Din Se Zyada Pending</p>
+              <p className="text-xs text-amber-700 dark:text-amber-400">Helpline 155261 par call karo ya District Agriculture Office visit karo.</p>
+            </div>
+            <div className="bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-xl p-4">
+              <p className="font-black text-purple-800 dark:text-purple-300 text-sm mb-1">✏️ Identity Mismatch</p>
+              <p className="text-xs text-purple-700 dark:text-purple-400"><Link href="/articles/pm-kisan-name-correction-online-2026" className="underline font-bold">Identity Rectification Guide →</Link> follow karo.</p>
+            </div>
+            <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-4">
+              <p className="font-black text-blue-800 dark:text-blue-300 text-sm mb-1">✅ Approved Par Paisa Nahi Aaya</p>
+              <p className="text-xs text-blue-700 dark:text-blue-400">Pehle eKYC karo. Phir bank mein NPCI seeding confirm karo. Dono done = payment aayegi.</p>
+            </div>
           </div>
+        </section>
+
+        {/* Helpline */}
+        <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl p-5 mb-8 space-y-2">
+          <p className="font-black text-[var(--color-text)] text-sm mb-2">Help Ke Liye Sampark</p>
+          <p className="text-sm text-[var(--color-text-muted)]">📞 Helpline: <a href="tel:155261" className="font-bold text-[var(--color-primary)] hover:underline">155261</a> (Toll Free)</p>
+          <p className="text-sm text-[var(--color-text-muted)]">📞 Alternate: <a href="tel:1800115526" className="font-bold text-[var(--color-primary)] hover:underline">1800-115-526</a></p>
+          <p className="text-sm text-[var(--color-text-muted)]">📧 Email: pmkisan-krishi@gov.in</p>
+          <p className="text-xs text-[var(--color-text-muted)] mt-2">⏰ Mon-Sat, 9 AM - 6 PM</p>
         </div>
-      </section>
 
-      {/* FAQs */}
-      <section id="faqs" className="mb-8 not-prose">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">❓ 6. Frequently Asked Questions — Real Questions, Direct Answers</h2>
-        <div className="space-y-4">
-          <div className="bg-gray-50 border border-gray-200 rounded-xl p-4">
-            <p className="font-bold text-gray-900 mb-2">Q: Self-Enrolled Beneficiary Verification kaise kare?</p>
-            <p className="text-sm text-gray-700">pmkisan.gov.in → Farmers Corner → Status of Self Registered Farmer → Biometric credential dalein → Get Data.</p>
-          </div>
-          <div className="bg-gray-50 border border-gray-200 rounded-xl p-4">
-            <p className="font-bold text-gray-900 mb-2">Q: Pending verification ka kya matlab hai?</p>
-            <p className="text-sm text-gray-700">Authentication chal raha hai. 7-10 din wait karein. 15 din se zyada ho toh helpline 155261 par call karein.</p>
-          </div>
-          <div className="bg-gray-50 border border-gray-200 rounded-xl p-4">
-            <p className="font-bold text-gray-900 mb-2">Q: Rejected hone par kya kare?</p>
-            <p className="text-sm text-gray-700">Rejection reason pata karein, galti sudharein, dobara apply karein. <Link href="/articles/pm-kisan-rejected-list-2026" className="text-blue-600 underline">Application Rejection Fix Guide →</Link></p>
-          </div>
-        </div>
-      </section>
+        {/* FAQ */}
+        <section className="mb-8">
+          <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
+            Aksar Puche Jane Wale Sawal
+          </h2>
+          <FAQBlock faqs={FAQS_DATA} caption="Self-Registered Status FAQ 2026 — Verified Answers" />
+        </section>
 
-      {/* Help Contact */}
-      <section id="help-contact" className="mb-8 not-prose">
-        <div className="bg-green-50 border border-green-200 rounded-xl p-5">
-          <h3 className="font-bold text-green-900 mb-3">📞 Help Ke Liye Sampark Karein</h3>
-          <div className="space-y-2 text-sm text-green-800">
-            <p>📞 <strong>Scheme Helpline:</strong> 155261 (Toll Free)</p>
-            <p>📞 <strong>Alternate:</strong> 1800-115-526</p>
-            <p>📧 <strong>Email:</strong> pmkisan-krishi@gov.in</p>
-            <p className="text-xs text-green-600 mt-2">⏰ Monday-Saturday, 9 AM - 6 PM</p>
-          </div>
-        </div>
-      </section>
+        <GovLink
+          href="https://pmkisan.gov.in"
+          label="PM Kisan Portal — Self-Registered Status Check"
+          guide="Abhi Status Dekho"
+          guideHref="/articles/pm-kisan-ekyc-online-2026"
+          portalName="pmkisan.gov.in"
+        />
 
-      {/* Disclaimer */}
-      <div className="mt-8 p-4 bg-amber-50/80 border border-amber-200/60 rounded-xl text-[11px] text-amber-800 text-center leading-relaxed not-prose">
-        ⚠️ Yeh article independent research par based hai. Official verification sirf <strong>pmkisan.gov.in</strong> par hi check karein. KisanStatus.com Government of India ka official platform nahi hai.
+        <CalcBanner
+          icon="📋"
+          title="Apna Status Track Karo"
+          desc="Kitni kist aayi, pending kya hai — complete history jaano"
+          primaryCta={{ href: '/calculator/installment-tracker', label: '📅 Tracker Kholo →' }}
+          secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: '💰 Benefit Calculator' }}
+        />
+
+        <RelatedArticles articles={RELATED} />
+        <AuthorBox modified={MODIFIED} />
+        <BottomNav extraLinks={[
+          { href: '/articles/pm-kisan-23vi-kist-2026-status-check', l: '📅 23vi Status' },
+          { href: '/articles/pm-kisan-ekyc-online-2026', l: '🔐 eKYC Guide' },
+          { href: '/articles/pm-kisan-rejected-list-2026', l: '❌ Rejected Fix' },
+        ]} />
+        <Disclaimer />
       </div>
-    </article>
+    </>
   );
 }
