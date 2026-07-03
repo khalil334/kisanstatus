@@ -1,4 +1,5 @@
 'use client';
+
 import { useState } from 'react';
 import Link from 'next/link';
 import { InputField, SelectField, ResultRow, fmt, OtherCalcs, CalcHeader, CalcDisclaimer } from './CalcShared';
@@ -25,29 +26,34 @@ export default function KCCLoanCalcPage() {
   const subsidy = Number(rate)<=7 ? P*0.02 : 0;
   const effectiveCost = totalPayable - subsidy;
 
+  // Schema mein naye SEO keywords — purane repetitive "KCC Loan" nahi
   const schema = {
-    '@context':'https://schema.org','@type':'WebApplication',
-    name:'KCC Loan EMI Calculator 2026',
+    '@context':'https://schema.org',
+    '@type':'WebApplication',
+    name:'Agricultural Credit Card EMI Calculator 2026',
     url:'https://kisanstatus.com/calculator/kcc-loan-emi',
     applicationCategory:'FinanceApplication',
-    description:'Kisan Credit Card loan ki monthly EMI aur total repayment calculate karo',
+    description:'Farm credit facility ki monthly payment aur total repayment calculate karo',
     offers:{'@type':'Offer',price:'0',priceCurrency:'INR'},
   };
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/>
+      
+      {/* Title aur breadcrumb mein naye keywords — "KCC Loan EMI" purana tha */}
       <CalcHeader
         emoji="🏦"
-        title="KCC Loan EMI Calculator 2026"
-        subtitle="Kisan Credit Card loan — monthly EMI, total interest, government subsidy sab ek jagah"
-        breadcrumb="KCC Loan EMI"
+        title="Credit Facility EMI Calculator 2026"
+        subtitle="Agricultural credit — monthly payment, total interest, government subsidy sab ek jagah"
+        breadcrumb="Credit Facility EMI"
       />
 
       <div className="container-site max-w-2xl py-8">
 
+        {/* Intro text mein naya keyword — "KCC" repetitive tha */}
         <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-xl text-sm text-gray-700">
-          <p><strong>🏦 KCC (Kisan Credit Card)</strong> pe loan lene se pehle EMI calculate karo — surprise nahi hoga. Government 2% interest subvention deti hai agar time par repay karo.</p>
+          <p><strong>🏦 Agricultural Credit Facility</strong> pe loan lene se pehle EMI calculate karo — surprise nahi hoga. Government 2% interest subvention deti hai agar time par repay karo.</p>
         </div>
 
         <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
@@ -67,12 +73,12 @@ export default function KCCLoanCalcPage() {
           <InputField
             label="Loan amount (₹)"
             value={amount} onChange={setAmount} min={1000} placeholder="100000"
-            hint="KCC crop limit usually ₹1.6 lakh tak bina collateral — ₹3 lakh tak possible"
+            hint="Credit facility crop limit usually ₹1.6 lakh tak bina collateral — ₹3 lakh tak possible"
           />
           <InputField
             label="Interest rate (% per year)"
             value={rate} onChange={setRate} min={0} placeholder="7"
-            hint="KCC subsidized rate ~7% — prompt repayment karo to effective 5% lagta hai"
+            hint="Subsidized rate ~7% — prompt repayment karo to effective 5% lagta hai"
           />
           <InputField
             label="Repayment period (months)"
@@ -82,8 +88,10 @@ export default function KCCLoanCalcPage() {
 
           {emi>0 && (
             <div className="mt-4 bg-blue-50 border-2 border-blue-200 rounded-2xl p-5">
-              <p className="text-xs text-blue-700 font-bold uppercase tracking-wide mb-3">📊 Aapki KCC EMI</p>
-              <ResultRow label="Monthly EMI" value={fmt(emi)} bold />
+              {/* Result section mein naya keyword — "KCC EMI" purana tha */}
+              <p className="text-xs text-blue-700 font-bold uppercase tracking-wide mb-3">📊 Aapki Credit Facility Payment</p>
+              {/* Naye labels — "Monthly EMI" generic tha */}
+              <ResultRow label="Monthly Payment" value={fmt(emi)} bold />
               <ResultRow label="Total Interest" value={fmt(totalInterest)} />
               <ResultRow label="Total Repayment" value={fmt(totalPayable)} />
               {subsidy>0 && (
@@ -99,7 +107,7 @@ export default function KCCLoanCalcPage() {
             </div>
           )}
 
-          {/* KCC quick facts */}
+          {/* Quick facts — naye keywords use kiye */}
           <div className="mt-5 grid grid-cols-2 gap-2">
             {[
               {t:'₹1.6 Lakh',d:'Bina collateral limit'},
@@ -115,16 +123,16 @@ export default function KCCLoanCalcPage() {
           </div>
         </div>
 
-        {/* How to apply guide */}
+        {/* How to apply guide — naya keyword use kiya */}
         <div className="mt-6 bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
-          <h3 className="font-black text-gray-900 text-sm mb-4">📋 KCC Loan Kaise Apply Karein — Quick Guide</h3>
+          <h3 className="font-black text-gray-900 text-sm mb-4">📋 Credit Facility Kaise Lein — Quick Guide</h3>
           <div className="space-y-2">
             {[
               {n:1,s:'Nazdiki SBI, PNB, Bank of Baroda ya cooperative bank jao'},
-              {n:2,s:'KCC application form maango — free milega'},
+              {n:2,s:'Credit facility application form maango — free milega'},
               {n:3,s:'Documents lo: Aadhaar, land records (khasra), bank passbook, photo'},
               {n:4,s:'Form bhar ke submit karo — 7-14 din mein verification'},
-              {n:5,s:'KCC card milega — credit limit usable hogi turant'},
+              {n:5,s:'Credit card milega — limit usable hogi turant'},
               {n:6,s:'Kist katne ke baad repay karo — 2% bonus milega'},
             ].map(({n,s})=>(
               <div key={n} className="flex gap-3 items-center">
@@ -133,13 +141,14 @@ export default function KCCLoanCalcPage() {
               </div>
             ))}
           </div>
+          {/* Link text mein naya keyword — "KCC Loan" purana tha */}
           <Link href="/articles/kisan-rin-kaha-se-le-2026"
             className="mt-4 inline-flex items-center gap-2 text-xs font-bold text-blue-700 hover:text-blue-900">
-            📖 KCC Loan Complete Guide Padho →
+            📖 Credit Facility Complete Guide Padho →
           </Link>
         </div>
 
-        <CalcDisclaimer note="Interest rates aur EMI bank-wise alag hoti hain. Actual figures ke liye apni bank branch se confirm karein." />
+        <CalcDisclaimer note="Interest rates aur payment bank-wise alag hoti hain. Actual figures ke liye apni bank branch se confirm karein." />
         <OtherCalcs current="/calculator/kcc-loan-emi" />
       </div>
     </>
