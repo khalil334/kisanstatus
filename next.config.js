@@ -12,123 +12,45 @@ const nextConfig = {
   // Gzip/Brotli compression enabled
   compress: true,
 
-  // URL redirects — old paths to new canonical URLs
+  // URL redirects — only Next.js specific ones
+  // Domain canonicalization + article slug fixes → vercel.json (edge level, faster)
   async redirects() {
     return [
-      // ── Domain canonicalization (HTTP → HTTPS + WWW removal) ──
+      // ── WWW → non-WWW (Next.js fallback if Vercel domain settings miss) ──
       {
         source: '/:path*',
-        has: [
-          { type: 'host', value: 'www.kisanstatus.com' },
-        ],
+        has: [{ type: 'host', value: 'www.kisanstatus.com' }],
         destination: 'https://kisanstatus.com/:path*',
         permanent: true,
       },
 
       // ── Calculator path corrections ──
-      {
-        source: '/calculator/farming-profit',
-        destination: '/calculator/crop-profit',
-        permanent: true,
-      },
-      {
-        source: '/calculator/kisan-loan-emi',
-        destination: '/calculator/kcc-loan-emi',
-        permanent: true,
-      },
-      {
-        source: '/calculator/quick-status-check',
-        destination: '/calculator/installment-tracker',
-        permanent: true,
-      },
+      { source: '/calculator/farming-profit', destination: '/calculator/crop-profit', permanent: true },
+      { source: '/calculator/kisan-loan-emi', destination: '/calculator/kcc-loan-emi', permanent: true },
+      { source: '/calculator/quick-status-check', destination: '/calculator/installment-tracker', permanent: true },
 
-      // ── Article path corrections (root level → /articles/) ──
-      {
-        source: '/pm-kisan-24vi-kist',
-        destination: '/articles/pm-kisan-24vi-kist',
-        permanent: true,
-      },
-      {
-        source: '/pm-kisan-24vi-kist-2026',
-        destination: '/articles/pm-kisan-24vi-kist',
-        permanent: true,
-      },
-      {
-        source: '/pm-kisan',
-        destination: '/',
-        permanent: true,
-      },
-      {
-        source: '/pm-kisan-status',
-        destination: '/articles/pm-kisan-status-check-online-2026-complete-guide',
-        permanent: true,
-      },
-
-      // ── Article slug corrections (-2026 suffix removal) ──
-      {
-        source: '/articles/pm-kisan-24vi-kist-2026',
-        destination: '/articles/pm-kisan-24vi-kist',
-        permanent: true,
-      },
-      {
-        source: '/articles/agri-stack-kya-hai-2026',
-        destination: '/articles/agristack-kya-hai',
-        permanent: true,
-      },
-      {
-        source: '/articles/pm-kisan-mobile-number-change-2026',
-        destination: '/articles/pm-kisan-mobile-number-change',
-        permanent: true,
-      },
-      {
-        source: '/articles/pm-kisan-kyc-csc',
-        destination: '/articles/pm-kisan-ekyc-online-2026',
-        permanent: true,
-      },
-
-      // ── Root level article redirects ──
-      {
-        source: '/agristack-kya-hai',
-        destination: '/articles/agristack-kya-hai',
-        permanent: true,
-      },
-      {
-        source: '/kisan-rin-kaha-se-le-2026',
-        destination: '/articles/kisan-rin-kaha-se-le-2026',
-        permanent: true,
-      },
-      {
-        source: '/pm-kisan-beneficiary-list',
-        destination: '/articles/pm-kisan-beneficiary-list-2026',
-        permanent: true,
-      },
+      // ── Root level → /articles/ redirects ──
+      { source: '/pm-kisan', destination: '/', permanent: true },
+      { source: '/pm-kisan-status', destination: '/articles/pm-kisan-status-check-online-2026-complete-guide', permanent: true },
+      { source: '/pm-kisan-24vi-kist', destination: '/articles/pm-kisan-24vi-kist', permanent: true },
+      { source: '/agristack-kya-hai', destination: '/articles/agristack-kya-hai', permanent: true },
+      { source: '/kisan-rin-kaha-se-le-2026', destination: '/articles/kisan-rin-kaha-se-le-2026', permanent: true },
+      { source: '/pm-kisan-beneficiary-list', destination: '/articles/pm-kisan-beneficiary-list-2026', permanent: true },
 
       // ── Beneficiary list slug corrections ──
-      {
-        source: '/beneficiary-list/daman-diu',
-        destination: '/beneficiary-list/dadra-nagar-haveli',
-        permanent: true,
-      },
-      {
-        source: '/beneficiary-list/jammu-and-kashmir',
-        destination: '/beneficiary-list/jammu-kashmir',
-        permanent: true,
-      },
+      { source: '/beneficiary-list/daman-diu', destination: '/beneficiary-list/dadra-nagar-haveli', permanent: true },
+      { source: '/beneficiary-list/jammu-and-kashmir', destination: '/beneficiary-list/jammu-kashmir', permanent: true },
     ];
   },
 
-  // Security headers + caching strategy
+  // Caching strategy only — security headers moved to vercel.json (edge level)
   async headers() {
     return [
+      // DNS prefetch hint
       {
         source: '/:path*',
         headers: [
           { key: 'X-DNS-Prefetch-Control', value: 'on' },
-          { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
-          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
-          { key: 'X-Content-Type-Options', value: 'nosniff' },
-          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
-          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
         ],
       },
       // Pages: always fresh (no stale content)
