@@ -1,56 +1,52 @@
 import type { Metadata } from 'next';
 import HomeContent from '@/components/HomeContent';
 import { Suspense } from 'react';
-
-const SITE_URL = 'https://kisanstatus.com';
-const SITE_NAME = 'KisanStatus';
-const AUTHOR = 'KisanStatus Team';
+import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL, DEFAULT_OG_IMAGE } from '@/lib/site-config';
 
 export const metadata: Metadata = {
-  title: 'Agrarian Welfare Verification 2026 — 23vi Tranche Released | ₹2000 Direct',
-  description: 'Cultivator benefit 23vi tranche 20 June 2026 ko release ho gayi — ₹2000 seedha bank account mein. Status verify karo, digital verification complete karo, eligible farmers roster dekho. 100% free guidance Hinglish mein.',
-  authors: [{ name: AUTHOR, url: `${SITE_URL}/about` }],
-  alternates: { 
+  title: 'PM Kisan Status Check 2026 — 23vi Kist Released | ₹2000 Direct Bank Mein',
+  description: 'PM Kisan 23vi kist 20 June 2026 ko release — ₹2000 seedha bank account mein. Status verify karo, eKYC complete karo, beneficiary roster dekho. Free guidance Hinglish mein.',
+  authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
+  alternates: {
     canonical: `${SITE_URL}/`,
     languages: {
       'hi-IN': `${SITE_URL}/`,
-      'en-US': `${SITE_URL}/en`,
     },
   },
   keywords: [
-    'agrarian welfare verification 2026',
-    'cultivator benefit 23vi tranche',
-    'scheme status check online',
-    'program digital verification',
-    'eligible farmers roster',
-    'benefit payment status',
+    'pm kisan status check 2026',
+    'pm kisan 23vi kist',
+    'kisan samman nidhi verification',
+    'pm kisan ekyc online',
+    'beneficiary list check',
+    'pm kisan payment status',
     'kisan yojana 2026',
-    'central program verification',
+    'pm kisan registration',
   ],
   openGraph: {
-    title: 'Agrarian Welfare Verification 2026 — 23vi Tranche Released',
-    description: '₹2000 seedha bank account mein — 9.44 Crore+ cultivators ko mil chuki hai. Apna status abhi verify karo!',
+    title: 'PM Kisan Status Check 2026 — 23vi Kist Released',
+    description: '₹2000 seedha bank account mein — 9.44 Crore+ kisanon ko mil chuki. Apna status abhi verify karo!',
     type: 'website',
     url: `${SITE_URL}/`,
     siteName: SITE_NAME,
     locale: 'hi_IN',
     images: [
       {
-        url: `${SITE_URL}/og-image.webp`,
+        url: DEFAULT_OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: 'Agrarian Welfare Verification 2026 - KisanStatus',
+        alt: 'PM Kisan Status Check 2026 - KisanStatus',
         type: 'image/webp',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Agrarian Welfare Verification 2026 — 23vi Tranche Released',
-    description: '₹2000 seedha bank account mein — 9.44 Crore+ cultivators ko mil chuki hai. Apna status abhi verify karo!',
+    title: 'PM Kisan Status Check 2026 — 23vi Kist Released',
+    description: '₹2000 seedha bank account mein — 9.44 Crore+ kisanon ko mil chuki. Apna status abhi verify karo!',
     site: '@kisanstatus',
     creator: '@kisanstatus',
-    images: [`${SITE_URL}/og-image.webp`],
+    images: [DEFAULT_OG_IMAGE],
   },
   robots: {
     index: true,
@@ -64,13 +60,13 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: process.env.NEXT_PUBLIC_GSC_TOKEN ?? 'oGrO0aRNLLhCgHq0Bn-sh3FdgKye7TlbAn2pAk8YdMQ',
+    google: process.env.NEXT_PUBLIC_GSC_TOKEN,
   },
   metadataBase: new URL(SITE_URL),
   category: 'Agriculture',
 };
 
-export const revalidate = 3600;
+export const revalidate = 86400;
 
 function HomeLoading() {
   return (
@@ -78,17 +74,17 @@ function HomeLoading() {
       <div className="relative h-[500px] bg-gradient-to-r from-green-800 to-green-600">
         <div className="container-site h-full flex items-center">
           <div className="max-w-2xl">
-            <div className="h-12 bg-white/20 rounded w-3/4 mb-4 animate-pulse"></div>
-            <div className="h-6 bg-white/20 rounded w-full mb-2 animate-pulse"></div>
-            <div className="h-6 bg-white/20 rounded w-5/6 mb-6 animate-pulse"></div>
-            <div className="h-12 bg-white/30 rounded w-48 animate-pulse"></div>
+            <div className="h-12 bg-white/20 rounded w-3/4 mb-4 animate-pulse" />
+            <div className="h-6 bg-white/20 rounded w-full mb-2 animate-pulse" />
+            <div className="h-6 bg-white/20 rounded w-5/6 mb-6 animate-pulse" />
+            <div className="h-12 bg-white/30 rounded w-48 animate-pulse" />
           </div>
         </div>
       </div>
       <div className="container-site py-12">
         <div className="grid md:grid-cols-3 gap-6">
           {[1, 2, 3].map((i) => (
-            <div key={i} className="h-64 bg-gray-200 rounded-xl animate-pulse"></div>
+            <div key={i} className="h-64 bg-gray-200 dark:bg-gray-800 rounded-xl animate-pulse" />
           ))}
         </div>
       </div>
@@ -97,9 +93,35 @@ function HomeLoading() {
 }
 
 export default function HomePage() {
+  const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: SITE_NAME,
+    url: SITE_URL,
+    description: 'PM Kisan verification, eKYC guide, beneficiary roster — India ka free agrarian welfare resource portal.',
+    inLanguage: 'hi-IN',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${SITE_URL}/articles?category=all`,
+      },
+      'query-input': 'required name=search_term_string',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      url: SITE_URL,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SITE_URL}/logo.webp`,
+      },
+    },
+  };
+
   return (
     <>
-      {/* ✅ FIX #1: fetchPriority="high" added — CRITICAL for LCP */}
+      {/* LCP Image Preload */}
       <link
         rel="preload"
         as="image"
@@ -108,39 +130,10 @@ export default function HomePage() {
         fetchPriority="high"
       />
 
-      {/* ✅ FIX #2: Removed duplicate font preload — layout.tsx already handles this via next/font with preload:true */}
-      {/* Duplicate preload causes double network request = slower FCP */}
-
-      {/* Homepage structured data */}
+      {/* WebSite Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'WebSite',
-            name: SITE_NAME,
-            url: SITE_URL,
-            description: 'Cultivator benefit program verification, digital authentication guide, eligible farmers roster — India ka free agrarian welfare resource portal.',
-            inLanguage: 'hi-IN',
-            potentialAction: {
-              '@type': 'SearchAction',
-              target: {
-                '@type': 'EntryPoint',
-                urlTemplate: `${SITE_URL}/articles?category=all`,
-              },
-              'query-input': 'required name=search_term_string',
-            },
-            publisher: {
-              '@type': 'Organization',
-              name: SITE_NAME,
-              url: SITE_URL,
-              logo: {
-                '@type': 'ImageObject',
-                url: `${SITE_URL}/logo.webp`,
-              },
-            },
-          }),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
 
       <Suspense fallback={<HomeLoading />}>
