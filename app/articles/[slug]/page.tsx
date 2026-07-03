@@ -2,49 +2,56 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import { ARTICLES_MAP, ARTICLES, CATEGORIES, type ArticleMeta } from '@/lib/articles-data';
+import {
+  ARTICLES_MAP,
+  ARTICLES,
+  CATEGORIES,
+  getRelatedArticles,
+  type ArticleMeta,
+} from '@/lib/articles-data';
+import {
+  SITE_URL,
+  SITE_NAME,
+  AUTHOR_NAME,
+  AUTHOR_URL,
+  TWITTER_HANDLE,
+  DEFAULT_OG_IMAGE,
+  LOGO_URL,
+} from '@/lib/site-config';
 
-// Har jagah yeh domain reference use hota hai
-// Schema markup aur social sharing ke liye essential hai
-const DOMAIN = 'https://kisanstatus.com';
+// ═══════════════════════════════════════════════════════════
+// SCHEMA BUILDER
+// Centralized structured data — ek jagah se sab articles ka schema
+// Individual components mein FAQ schema ab optional hai
+// ═══════════════════════════════════════════════════════════
 
-// OG images ka collection - social media previews ke liye
-// Agar kisi article ka image missing hai to default fallback use karo
-const ARTICLE_OG_IMAGES: Record<string, string> = {
-  'kisan-credit-card-online-apply-2026':             '/images/kisan-credit-card-apply-2026.webp',
-  'pm-kisan-23vi-kist-2026-status-check':            '/images/pm-kisan-23vi-kist-status-check-2026.webp',
-  'pm-kisan-ekyc-online-2026':                       '/images/pm-kisan-ekyc-online-2026.webp',
-  'pm-kisan-payment-failed-status-2026':             '/images/pm-kisan-payment-failed-status-2026.webp',
-  'pm-kisan-rejected-list-2026':                     '/images/pm-kisan-rejected-list-2026.webp',
-  'pm-kisan-registration-online-2026':               '/images/pm-kisan-registration-online-2026.webp',
-  'pm-kisan-name-correction-online-2026':            '/images/pm-kisan-name-correction-online-2026.webp',
-  'pm-kisan-beneficiary-list-2026':                  '/images/pm-kisan-beneficiary-list-2026.webp',
-  'pm-kisan-installment-history-check-online':       '/images/pm-kisan-installment-history-check-online.webp',
-  'pm-kisan-land-seeding-status-check':              '/images/pm-kisan-land-seeding-status-check.webp',
-  'pm-kisan-beneficiary-list-village-wise-2026':     '/images/pm-kisan-beneficiary-list-village-wise-2026.webp',
-  'kisan-rin-kaha-se-le-2026':                       '/images/kisan-rin-kaha-se-le-2026.webp',
-  'pmfby-crop-insurance-2026':                       '/images/pmfby-crop-insurance-2026.webp',
-  'kisan-tractor-loan-2026':                         '/images/kisan-tractor-loan-2026.webp',
-  'pm-kisan-21vi-installment-status-check':          '/images/pm-kisan-21vi-installment-status-check.webp',
-  'pm-kisan-correction-deactivate-block-guide-2026': '/images/pm-kisan-correction-deactivate-block-guide-2026.webp',
-  'pm-kisan-problems-solution-guide-2026':           '/images/pm-kisan-problems-solution-guide-2026.webp',
-  'pm-kisan-fto-generated-ka-matlab-kya-hai':        '/images/pm-kisan-fto-generated-featured-image-kisanstatus.webp',
-  'pm-kisan-24vi-kist':                              '/images/pm-kisan-24vi-kist-october-2026.webp',
-  'agristack-kya-hai':                               '/images/articles/agristack-kya-hai/infographic.webp',
-  'pm-kisan-mobile-number-change':                   '/images/pm-kisan-mobile-bank-aadhaar-update-banner-website.webp',
-  'nano-dap-500ml-price-in-india-2026':              '/images/nano-dap-500ml-price-india-2026.webp',
-  'pm-kisan-complete-guide':                         '/images/pm-kisan-status-check-hero.webp',
-  'soil-health-card-complete-guide-2026':            '/images/soil-health-card-complete-guide-2026.webp',
-  'pm-kisan-self-registered-status-check':           '/images/pm-kisan-self-registered-status/pm-kisan-portal-homepage.webp',
-  'pm-kisan-status-check-online-2026-complete-guide': '/images/pm-kisan-status-check-tool-interface.webp',
-  'mandi-bhav-today':                                '/images/article/mandi-bhav-today.webp',
-};
-
-// Schema.org structured data generator
-// Search engines ko content samajhne mein help karta hai
-// Rich snippets aur featured snippets ke liye critical hai
 function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
-  return [
+  const category = CATEGORIES[article.category];
+  const related = getRelatedArticles(article.slug, 5);
+
+  // Breadcrumb: Home → Articles → Category → Article
+  const breadcrumbItems = [
+    { '@type': 'ListItem' as const, position: 1, name: 'Home', item: SITE_URL },
+    { '@type': 'ListItem' as const, position: 2, name: 'Articles', item: `${SITE_URL}/articles` },
+  ];
+
+  if (category) {
+    breadcrumbItems.push({
+      '@type': 'ListItem' as const,
+      position: 3,
+      name: category.name,
+      item: `${SITE_URL}/articles/category/${article.category}`,
+    });
+  }
+
+  breadcrumbItems.push({
+    '@type': 'ListItem' as const,
+    position: category ? 4 : 3,
+    name: article.ogTitle || article.title,
+    item: url,
+  });
+
+  const schemas: object[] = [
     {
       '@context': 'https://schema.org',
       '@type': 'Article',
@@ -55,37 +62,44 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
       dateModified: article.modifiedTime,
       author: {
         '@type': 'Organization',
-        name: 'KisanStatus Team',
-        url: `${DOMAIN}/about`,
+        name: AUTHOR_NAME,
+        url: AUTHOR_URL,
       },
       publisher: {
         '@type': 'Organization',
-        name: 'KisanStatus',
-        url: DOMAIN,
-        logo: {
-          '@type': 'ImageObject',
-          url: `${DOMAIN}/logo.webp`,
-        },
+        name: SITE_NAME,
+        url: SITE_URL,
+        logo: { '@type': 'ImageObject', url: LOGO_URL },
       },
       mainEntityOfPage: { '@type': 'WebPage', '@id': url },
       inLanguage: 'hi-IN',
-      isPartOf: { '@type': 'WebSite', name: 'KisanStatus', url: DOMAIN },
+      isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: SITE_URL },
+      // Semantic linking — helps Google understand topic relationships
+      about: article.schemes?.map((s) => ({
+        '@type': 'Thing',
+        name: s,
+      })),
+      mentions: related.slice(0, 3).map((r) => ({
+        '@type': 'Article',
+        name: r.title,
+        url: `${SITE_URL}/articles/${r.slug}`,
+      })),
+      keywords: article.keywords.join(', '),
     },
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: DOMAIN },
-        { '@type': 'ListItem', position: 2, name: 'Articles', item: `${DOMAIN}/articles` },
-        { '@type': 'ListItem', position: 3, name: article.ogTitle || article.title, item: url },
-      ],
+      itemListElement: breadcrumbItems,
     },
   ];
+
+  return schemas;
 }
 
-// Skeleton loader component
-// Content load hone se pehle placeholder dikhata hai
-// Blank screen se better user experience deta hai
+// ═══════════════════════════════════════════════════════════
+// SKELETON LOADER
+// ═══════════════════════════════════════════════════════════
+
 function ArticleLoading() {
   return (
     <div className="container-site py-10 animate-pulse">
@@ -97,10 +111,12 @@ function ArticleLoading() {
   );
 }
 
-// Lazy loading implementation
-// Heavy components ko zaroorat padne par hi load karo
-// Initial page load time significantly improve hota hai
-// Performance optimization ke liye standard practice hai
+// ═══════════════════════════════════════════════════════════
+// COMPONENT REGISTRY
+// Phase 3 mein yeh template-based system se replace hoga
+// Abhi backward compatible hai — existing components kaam karenge
+// ═══════════════════════════════════════════════════════════
+
 const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> = {
   KisanCreditCardOnlineApply2026:             dynamic(() => import('@/components/articles/KisanCreditCardOnlineApply2026'),            { loading: ArticleLoading }),
   KisanRinKahaSeLe2026:                       dynamic(() => import('@/components/articles/KisanRinKahaSeLe2026'),                      { loading: ArticleLoading }),
@@ -131,20 +147,21 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   MandiBhavToday:                             dynamic(() => import('@/components/articles/MandiBhavContent'),                          { loading: ArticleLoading }),
 };
 
-// ISR (Incremental Static Regeneration) configuration
-// 24 hours mein ek baar content refresh hota hai
-// Fresh data aur fast loading ka balance maintain karta hai
+// ═══════════════════════════════════════════════════════════
+// ISR CONFIG
+// ═══════════════════════════════════════════════════════════
+
 export const revalidate = 86400;
 
-// Build time par sabhi article paths generate karo
-// Static site generation ke liye essential function
 export async function generateStaticParams() {
-  return ARTICLES.map(a => ({ slug: a.slug }));
+  return ARTICLES.map((a) => ({ slug: a.slug }));
 }
 
-// Dynamic metadata generator
-// SEO optimization ke liye critical component
-// Title, description, Open Graph tags - sab yahan configure hote hain
+// ═══════════════════════════════════════════════════════════
+// METADATA GENERATOR
+// OG image ab articles-data.ts se aata hai — no separate map
+// ═══════════════════════════════════════════════════════════
+
 export async function generateMetadata({
   params,
 }: {
@@ -152,28 +169,26 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const article = ARTICLES_MAP[slug];
-  
-  // Fallback handling - agar content nahi mila to basic metadata return karo
+
   if (!article) return { title: 'Article Not Found' };
 
-  const url = `${DOMAIN}/articles/${slug}`;
-  const ogImage = ARTICLE_OG_IMAGES[slug]
-    ? `${DOMAIN}${ARTICLE_OG_IMAGES[slug]}`
-    : `${DOMAIN}/og-image.webp`;
-
+  const url = `${SITE_URL}/articles/${slug}`;
+  const ogImage = article.ogImage
+    ? `${SITE_URL}${article.ogImage}`
+    : DEFAULT_OG_IMAGE;
   const displayTitle = article.ogTitle || article.title;
 
   return {
     title: displayTitle,
     description: article.desc,
-    authors: [{ name: 'KisanStatus Team', url: `${DOMAIN}/about` }],
+    authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
     alternates: { canonical: url },
     openGraph: {
       title: displayTitle,
       description: article.desc,
       type: 'article',
       url,
-      siteName: 'KisanStatus',
+      siteName: SITE_NAME,
       locale: 'hi_IN',
       images: [{ url: ogImage, width: 1200, height: 630, alt: displayTitle }],
       publishedTime: article.publishedTime,
@@ -184,14 +199,16 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: displayTitle,
       description: article.desc,
-      site: '@kisanstatus',
+      site: TWITTER_HANDLE,
       images: [ogImage],
     },
   };
 }
 
-// Main article page renderer
-// Dynamic routing aur component loading handle karta hai
+// ═══════════════════════════════════════════════════════════
+// PAGE RENDERER
+// ═══════════════════════════════════════════════════════════
+
 export default async function ArticlePage({
   params,
 }: {
@@ -199,20 +216,22 @@ export default async function ArticlePage({
 }) {
   const { slug } = await params;
   const article = ARTICLES_MAP[slug];
-  
-  // 404 error handling - search engine penalties se bachne ke liye critical
+
   if (!article) notFound();
 
   const ArticleComponent = COMPONENTS[article.component];
-  
-  // Component validation - agar missing hai to graceful degradation
-  if (!ArticleComponent) notFound();
 
-  const url = `${DOMAIN}/articles/${slug}`;
-  const ogImage = ARTICLE_OG_IMAGES[slug]
-    ? `${DOMAIN}${ARTICLE_OG_IMAGES[slug]}`
-    : `${DOMAIN}/og-image.webp`;
+  // Graceful degradation: component missing hone par 404 ki jagah
+  // error message dikhao taaki debug easy ho
+  if (!ArticleComponent) {
+    console.error(`[ArticlePage] Missing component: ${article.component} for slug: ${slug}`);
+    notFound();
+  }
 
+  const url = `${SITE_URL}/articles/${slug}`;
+  const ogImage = article.ogImage
+    ? `${SITE_URL}${article.ogImage}`
+    : DEFAULT_OG_IMAGE;
   const schemas = buildSchemas(article, url, ogImage);
   const category = CATEGORIES[article.category];
 
