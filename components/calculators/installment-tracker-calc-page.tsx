@@ -3,16 +3,17 @@
 import { useState } from 'react';
 import Link from 'next/link';
 
-const KIST_CONFIG = {
+// Tranche configuration — current aur next tranche ki details
+const TRANCHE_CONFIG = {
   current: {
-    name: '23वीं किस्त',
+    name: '23वीं ट्रांche',
     number: 23,
     releaseDate: new Date('2026-06-20T00:00:00+05:30'),
     amount: '₹2,000',
     beneficiaries: '9.44 crore+',
   },
   next: {
-    name: '24वीं किस्त',
+    name: '24वीं ट्रांche',
     number: 24,
     expectedDate: 'October 2026',
   },
@@ -24,17 +25,20 @@ export default function InstallmentTrackerCalcPage() {
   const [land, setLand] = useState('unknown');
   const [progress, setProgress] = useState('unknown');
 
+  // Days calculation — release date se aaj tak
   const today = new Date();
   const daysSince = Math.floor(
-    (today.getTime() - KIST_CONFIG.current.releaseDate.getTime()) / 86400000
+    (today.getTime() - TRANCHE_CONFIG.current.releaseDate.getTime()) / 86400000
   );
 
+  // Validation — sabhi fields filled hain ya nahi
   const allAnswered =
     ekyc !== 'unknown' &&
     seeding !== 'unknown' &&
     land !== 'unknown' &&
     progress !== 'unknown';
 
+  // Success condition — sab kuch theek hai
   const allGood =
     allAnswered &&
     ekyc === 'yes' &&
@@ -42,6 +46,7 @@ export default function InstallmentTrackerCalcPage() {
     land === 'yes' &&
     progress === 'active';
 
+  // Blockers array — problems collect karne ke liye
   const blockers: {
     icon: string;
     title: string;
@@ -50,6 +55,7 @@ export default function InstallmentTrackerCalcPage() {
     cta: string;
   }[] = [];
 
+  // Digital verification blocker
   if (ekyc === 'no')
     blockers.push({
       icon: '🔐',
@@ -58,50 +64,61 @@ export default function InstallmentTrackerCalcPage() {
       href: '/articles/pm-kisan-ekyc-online-2026',
       cta: 'Verification Guide',
     });
+  
+  // NPCI mapping blocker
   if (seeding === 'no')
     blockers.push({
       icon: '🏦',
       title: 'NPCI Mapping Pending',
-      desc: 'Bank mein UID link zaroori hai.',
+      desc: 'Bank mein biometric credential link zaroori hai.',
       href: '/articles/pm-kisan-payment-failed-status-2026',
-      cta: 'DBT Guide',
+      cta: 'Direct Benefit Transfer Guide',
     });
+  
+  // Land integration blocker
   if (land === 'no')
     blockers.push({
       icon: '🌾',
       title: 'Zameen Record Linking No',
       desc: 'Land record portal se connect nahi hua.',
       href: '/articles/pm-kisan-land-seeding-status-check',
-      cta: 'Land Guide',
+      cta: 'Land Integration Guide',
     });
+  
+  // Application rejection blocker
   if (progress === 'rejected')
     blockers.push({
       icon: '❌',
       title: 'Application Declined',
       desc: 'Decline reason check karo.',
       href: '/articles/pm-kisan-rejected-list-2026',
-      cta: 'Decline Guide',
+      cta: 'Rejection Fix Guide',
     });
 
-  const releaseDateStr = KIST_CONFIG.current.releaseDate.toLocaleDateString(
+  // Date formatting — Hindi locale mein
+  const releaseDateStr = TRANCHE_CONFIG.current.releaseDate.toLocaleDateString(
     'hi-IN',
     { day: 'numeric', month: 'long', year: 'numeric' }
   );
 
   return (
     <>
+      {/* Page header — gradient background */}
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
+          {/* Breadcrumb navigation */}
           <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
             <Link href="/" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Home</Link>
             <span>/</span>
-            <Link href="/calculator" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Calculator</Link>
+            <Link href="/calculator" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Utilities</Link>
             <span>/</span>
             <span className="text-white font-bold">Tranche Tracker</span>
           </nav>
+          {/* Badge — naya keyword use kiya */}
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">
             📆 Disbursement Tracker
           </span>
+          {/* Title — optimized keyword */}
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
             Agrarian Welfare Tranche Tracker 2026
           </h1>
@@ -118,21 +135,24 @@ export default function InstallmentTrackerCalcPage() {
       </div>
 
       <div className="container-site max-w-2xl py-8">
+        {/* Intro message — current tranche info */}
         <div className="mb-6 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl text-sm text-[var(--color-text)]">
           <p>
-            <strong>📆 {KIST_CONFIG.current.name}</strong> {releaseDateStr} ko
+            <strong>📆 {TRANCHE_CONFIG.current.name}</strong> {releaseDateStr} ko
             release ho chuki hai —{' '}
-            <strong>{KIST_CONFIG.current.beneficiaries}</strong> cultivators ko{' '}
-            {KIST_CONFIG.current.amount} mil chuke hain. Agar tumhare account
+            <strong>{TRANCHE_CONFIG.current.beneficiaries}</strong> cultivators ko{' '}
+            {TRANCHE_CONFIG.current.amount} mil chuke hain. Agar tumhare account
             mein abhi tak nahi aaya, neeche 4 sawaalon ke jawab do.
           </p>
         </div>
 
+        {/* Main tool card */}
         <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6 shadow-sm">
           <h2 className="font-black text-[var(--color-text)] text-base mb-5 flex items-center gap-2">
             <span>🧮</span> Apna Verification Check Karo
           </h2>
 
+          {/* Pre-check instruction */}
           <div className="mb-4 p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl text-xs text-blue-800 dark:text-blue-300">
             <strong>💡 Pehle ye karo:</strong> Agar tumhe apna progress nahi pata,
             to pehle{' '}
@@ -147,7 +167,9 @@ export default function InstallmentTrackerCalcPage() {
             , phir neeche jawab do.
           </div>
 
+          {/* Questions form */}
           <div className="space-y-4">
+            {/* Digital verification question */}
             <div>
               <label className="block text-xs font-semibold text-[var(--color-text-muted)] mb-1">
                 Digital verification complete hai?
@@ -162,9 +184,11 @@ export default function InstallmentTrackerCalcPage() {
                 <option value="no">❌ Nahi — pending hai</option>
               </select>
             </div>
+
+            {/* NPCI mapping question */}
             <div>
               <label className="block text-xs font-semibold text-[var(--color-text-muted)] mb-1">
-                Bank account mein UID seeded (NPCI link) hai?
+                Bank account mein biometric credential seeded (NPCI link) hai?
               </label>
               <select
                 value={seeding}
@@ -178,6 +202,8 @@ export default function InstallmentTrackerCalcPage() {
                 <option value="no">❌ Pata nahi / Nahi hai</option>
               </select>
             </div>
+
+            {/* Land integration question */}
             <div>
               <label className="block text-xs font-semibold text-[var(--color-text-muted)] mb-1">
                 Portal par &apos;Zameen Record Linking No&apos; to nahi dikh raha?
@@ -192,6 +218,8 @@ export default function InstallmentTrackerCalcPage() {
                 <option value="no">❌ Zameen mapping No dikh raha hai</option>
               </select>
             </div>
+
+            {/* Beneficiary progress question */}
             <div>
               <label className="block text-xs font-semibold text-[var(--color-text-muted)] mb-1">
                 Beneficiary progress kya dikha raha hai?
@@ -208,7 +236,9 @@ export default function InstallmentTrackerCalcPage() {
             </div>
           </div>
 
+          {/* Results section */}
           {!allAnswered ? (
+            /* Incomplete answers state */
             <div className="mt-6 p-5 bg-[var(--color-bg-alt)] border-2 border-[var(--color-border)] rounded-2xl text-center">
               <span className="text-3xl block mb-2">🤔</span>
               <p className="font-bold text-[var(--color-text)] mb-2">
@@ -228,6 +258,7 @@ export default function InstallmentTrackerCalcPage() {
               </a>
             </div>
           ) : allGood ? (
+            /* Success state — sab kuch theek hai */
             <div className="mt-6 p-5 bg-green-50 dark:bg-green-900/20 border-2 border-green-300 dark:border-green-700 rounded-2xl text-center">
               <span className="text-3xl block mb-2">🎉</span>
               <p className="font-black text-green-800 dark:text-green-300 mb-1">
@@ -245,11 +276,12 @@ export default function InstallmentTrackerCalcPage() {
                 🏛️ Official Verification Check Karo →
               </a>
               <p className="text-xs text-green-600 dark:text-green-400 mt-3">
-                Last release: {KIST_CONFIG.current.name} — {releaseDateStr} (
+                Last release: {TRANCHE_CONFIG.current.name} — {releaseDateStr} (
                 {daysSince} din pehle)
               </p>
             </div>
           ) : (
+            /* Problems found state — blockers display */
             <div className="mt-6 bg-orange-50 dark:bg-orange-900/20 border-2 border-orange-300 dark:border-orange-700 rounded-2xl p-5">
               <p className="text-xs text-orange-700 dark:text-orange-300 font-bold uppercase tracking-wide mb-3">
                 ⚠️ {blockers.length} Problem{blockers.length > 1 ? 's' : ''}{' '}
@@ -285,23 +317,25 @@ export default function InstallmentTrackerCalcPage() {
           )}
         </div>
 
+        {/* Next tranche info card */}
         <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl flex items-center gap-3">
           <span className="text-2xl">⏳</span>
           <div>
             <p className="font-bold text-blue-900 dark:text-blue-300 text-sm">Agli Tranche</p>
             <p className="text-xs text-blue-700 dark:text-blue-400">
-              {KIST_CONFIG.next.name} — {KIST_CONFIG.next.expectedDate}{' '}
+              {TRANCHE_CONFIG.next.name} — {TRANCHE_CONFIG.next.expectedDate}{' '}
               (Expected)
             </p>
           </div>
         </div>
 
+        {/* Quick facts cards — naye keywords use kiye */}
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
           {[
             {
               icon: '💰',
-              title: `${KIST_CONFIG.current.amount} Per Tranche`,
-              desc: `${releaseDateStr} ko ${KIST_CONFIG.current.name} mein DBT se seedha bank mein`,
+              title: `${TRANCHE_CONFIG.current.amount} Per Tranche`,
+              desc: `${releaseDateStr} ko ${TRANCHE_CONFIG.current.name} mein DBT se seedha bank mein`,
             },
             {
               icon: '🔐',
@@ -310,7 +344,7 @@ export default function InstallmentTrackerCalcPage() {
             },
             {
               icon: '📞',
-              title: 'Helpline: 155261',
+              title: 'Support Line: 155261',
               desc: 'Koi bhi problem ho — free government helpline available',
             },
           ].map(({ icon, title, desc }) => (
@@ -325,12 +359,14 @@ export default function InstallmentTrackerCalcPage() {
           ))}
         </div>
 
+        {/* Disclaimer */}
         <div className="mt-6 p-3 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl text-xs text-amber-800 dark:text-amber-300">
           <strong>⚠️ Disclaimer:</strong> Yeh tracker tumhare diye gaye jawabon
           ke hisaab se common reasons batata hai. Final progress official portal
           par hi check karo.
         </div>
 
+        {/* Related guides — naye SEO labels */}
         <div className="mt-6 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
           <p className="font-bold text-green-900 dark:text-green-300 text-sm mb-2">
             🔗 Related Guides
