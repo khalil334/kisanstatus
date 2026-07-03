@@ -46,10 +46,24 @@ export const metadata: Metadata = {
   creator: AUTHOR,
   publisher: SITE_NAME,
   category: 'Agriculture',
+  
+  // ✅ FIX #1: Explicit canonical URL
+  alternates: {
+    canonical: SITE_URL,
+    languages: {
+      'hi-IN': `${SITE_URL}/`,
+      'en-US': `${SITE_URL}/en`,
+      'x-default': `${SITE_URL}/`,
+    },
+  },
+  
   openGraph: {
     type: 'website',
     locale: 'hi_IN',
+    url: SITE_URL,
     siteName: SITE_NAME,
+    title: 'Agrarian Welfare Scheme — Beneficiary Verification Portal 2026',
+    description: '23vi tranche 20 June 2026 ko release ho gayi hai — ₹2000 seedha bank account mein.',
     images: [
       {
         url: '/og-image.webp',
@@ -64,6 +78,9 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@kisanstatus',
     creator: '@kisanstatus',
+    title: 'Agrarian Welfare Scheme — Beneficiary Verification Portal 2026',
+    description: '23vi tranche 20 June 2026 ko release ho gayi hai — ₹2000 seedha bank account mein.',
+    images: ['/og-image.webp'],
   },
   robots: {
     index: true,
@@ -104,6 +121,11 @@ export default function RootLayout({
   return (
     <html lang="hi-IN" suppressHydrationWarning className={poppins.variable}>
       <head>
+        {/* ✅ FIX #2: Hreflang tags for multi-language */}
+        <link rel="alternate" hrefLang="hi-IN" href={`${SITE_URL}/`} />
+        <link rel="alternate" hrefLang="en-US" href={`${SITE_URL}/en`} />
+        <link rel="alternate" hrefLang="x-default" href={`${SITE_URL}/`} />
+        
         {/* Critical domains — sirf inhi se preconnect karo */}
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
@@ -120,7 +142,7 @@ export default function RootLayout({
         {/* Hero image preloading individual pages handle karti hain */}
         {/* Yahan global preload nahi — page-specific better hai */}
 
-        {/* Structured data — search engines ke liye */}
+        {/* ✅ FIX #3: Fixed Organization schema - founder is Person now */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -136,7 +158,7 @@ export default function RootLayout({
                   '@type': 'SearchAction',
                   target: {
                     '@type': 'EntryPoint',
-                    urlTemplate: `${SITE_URL}/articles?category=all`,
+                    urlTemplate: `${SITE_URL}/search?q={search_term_string}`,
                   },
                   'query-input': 'required name=search_term_string',
                 },
@@ -153,7 +175,7 @@ export default function RootLayout({
                   height: 512,
                 },
                 foundingDate: '2024',
-                description: 'Free agrarian welfare scheme resource portal for Indian farmers.',
+                description: 'Free agrarian welfare scheme resource portal for Indian cultivators.',
                 contactPoint: {
                   '@type': 'ContactPoint',
                   email: 'kisanstatus.support@gmail.com',
@@ -162,10 +184,13 @@ export default function RootLayout({
                   areaServed: 'IN',
                 },
                 founder: {
-                  '@type': 'Organization',
+                  '@type': 'Person',
                   name: AUTHOR,
                   url: `${SITE_URL}/about`,
                 },
+                sameAs: [
+                  'https://www.facebook.com/profile.php?id=61590430994270',
+                ],
               },
             ]),
           }}
