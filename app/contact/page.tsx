@@ -1,8 +1,12 @@
+/**
+ * /contact — KisanStatus.com
+ * Contact & Support Information Page — SEO optimized
+ */
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Contact Us – KisanStatus.com | Sampark Karein',
+  title: 'Contact & Support — KisanStatus.com | Sampark Karein',
   description:
     'KisanStatus.com se sampark karein. Website feedback, content correction ya koi sawaal ke liye humein email karein — kisanstatus.support@gmail.com',
   authors: [{ name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' }],
@@ -19,9 +23,9 @@ export default function ContactPage() {
           <nav className="text-green-200 text-sm mb-2" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-white">Home</Link>
             <span className="mx-2" aria-hidden="true">/</span>
-            <span className="text-white">Contact Us</span>
+            <span className="text-white">Contact & Support</span>
           </nav>
-          <h1 className="text-2xl md:text-3xl font-bold text-white">Contact Us</h1>
+          <h1 className="text-2xl md:text-3xl font-bold text-white">Contact & Support</h1>
           <p className="text-green-200 text-sm mt-1">Sawaal? Feedback? Hum yahan hain.</p>
         </div>
       </div>
@@ -30,8 +34,8 @@ export default function ContactPage() {
 
         {/* Notice */}
         <div className="p-4 bg-amber-50 border border-amber-300 rounded-xl mb-8 text-sm text-amber-900">
-          <strong>⚠️ Zaruri Suchna:</strong> KisanStatus.com ek informational website hai, Government se affiliated nahi hai.
-          PM Kisan payment ya official problems ke liye seedha{' '}
+          <strong>⚠️ Zaruri Suchna:</strong> KisanStatus.com ek informational portal hai, Government se affiliated nahi hai.
+          Agrarian welfare payment ya official problems ke liye seedha{' '}
           <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer" className="underline font-semibold">pmkisan.gov.in ↗</a>{' '}
           ya helpline <strong>155261</strong> use karein.
         </div>
@@ -62,7 +66,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <p className="font-bold text-gray-900">KisanStatus Team</p>
-                <p className="text-xs text-primary-600">Agricultural Experts &amp; Farmer Advocates</p>
+                <p className="text-xs text-primary-600">Agrarian Welfare Experts &amp; Annadata Advocates</p>
               </div>
             </div>
             <Link href="/author" className="btn-secondary w-full text-center block text-sm">
@@ -71,13 +75,13 @@ export default function ContactPage() {
           </div>
         </div>
 
-        {/* PM Kisan Helpline */}
+        {/* Official Helpline */}
         <div className="card border-green-200 bg-green-50 mb-6">
           <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-            <span aria-hidden="true">🏛️</span> PM Kisan Official Helpline
+            <span aria-hidden="true">🏛️</span> Agrarian Welfare Official Helpline
           </h2>
           <p className="text-sm text-gray-600 mb-4">
-            PM Kisan payment, status, registration ya koi bhi sarkari kaam ke liye seedha official se sampark karein:
+            Cultivator benefit payment, status, enrollment ya koi bhi sarkari kaam ke liye seedha official se sampark karein:
           </p>
           <div className="space-y-3">
             {[
@@ -112,8 +116,8 @@ export default function ContactPage() {
               { icon: '✅', text: 'Naye article ka suggestion' },
               { icon: '✅', text: 'Technical feedback ya bug report' },
               { icon: '✅', text: 'Collaboration ya partnership' },
-              { icon: '❌', text: 'PM Kisan payment problems (official helpline call karo)' },
-              { icon: '❌', text: 'Aadhaar/Bank account update (Agriculture office jao)' },
+              { icon: '❌', text: 'Cultivator benefit payment problems (official helpline call karo)' },
+              { icon: '❌', text: 'Biometric credential/bank account update (Agriculture office jao)' },
             ].map((item) => (
               <div key={item.text} className="flex items-start gap-2 text-gray-700">
                 <span className={item.icon === '✅' ? 'text-green-600' : 'text-red-500'} aria-hidden="true">
