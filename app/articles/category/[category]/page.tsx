@@ -4,12 +4,18 @@
  */
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { ARTICLES, CATEGORIES, type CategorySlug } from '@/lib/articles-data';
-
-const DOMAIN = 'https://kisanstatus.com';
+import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL, DEFAULT_OG_IMAGE } from '@/lib/site-config';
 
 export const revalidate = 86400;
+
+// ═══════════════════════════════════════════════════════════
+// CATEGORY SEO CONFIG
+// Eventually merge into CATEGORIES in articles-data.ts
+// Abhi yahan rakha hai backward compatibility ke liye
+// ═══════════════════════════════════════════════════════════
 
 const CATEGORY_SEO: Record<CategorySlug, { title: string; description: string; emoji: string }> = {
   'status-check': {
@@ -54,6 +60,10 @@ const CATEGORY_SEO: Record<CategorySlug, { title: string; description: string; e
   },
 };
 
+// ═══════════════════════════════════════════════════════════
+// STATIC PARAMS & METADATA
+// ═══════════════════════════════════════════════════════════
+
 export async function generateStaticParams() {
   return Object.keys(CATEGORIES).map((category) => ({ category }));
 }
@@ -67,31 +77,35 @@ export async function generateMetadata({
   const seo = CATEGORY_SEO[category as CategorySlug];
   if (!seo) return { title: 'Category Not Found' };
 
-  const url = `${DOMAIN}/articles/category/${category}`;
+  const url = `${SITE_URL}/articles/category/${category}`;
 
   return {
     title: seo.title,
     description: seo.description,
-    authors: [{ name: 'KisanStatus Team', url: `${DOMAIN}/about` }],
+    authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
     alternates: { canonical: url },
     openGraph: {
       title: seo.title,
       description: seo.description,
       type: 'website',
       url,
-      siteName: 'KisanStatus',
+      siteName: SITE_NAME,
       locale: 'hi_IN',
-      images: [{ url: `${DOMAIN}/og-image.webp`, width: 1200, height: 630, alt: seo.title }],
+      images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: seo.title }],
     },
     twitter: {
       card: 'summary_large_image',
       title: seo.title,
       description: seo.description,
       site: '@kisanstatus',
-      images: [`${DOMAIN}/og-image.webp`],
+      images: [DEFAULT_OG_IMAGE],
     },
   };
 }
+
+// ═══════════════════════════════════════════════════════════
+// PAGE RENDERER
+// ═══════════════════════════════════════════════════════════
 
 export default async function CategoryPage({
   params,
@@ -104,11 +118,27 @@ export default async function CategoryPage({
 
   if (!cat || !seo) notFound();
 
-  // Filter once, use everywhere
+  // Single pass filter — articles + counts ek saath compute
   const articles = ARTICLES.filter((a) => a.category === category);
-  const url = `${DOMAIN}/articles/category/${category}`;
 
-  // SEO: Fixed language to hi-IN
+  // Pre-compute ALL category counts in one pass (not O(n²))
+  const categoryCounts: Record<string, number> = {};
+  for (const slug of Object.keys(CATEGORIES)) {
+    categoryCounts[slug] = 0;
+  }
+  for (const a of ARTICLES) {
+    if (categoryCounts[a.category] !== undefined) {
+      categoryCounts[a.category]++;
+    }
+  }
+
+  const url = `${SITE_URL}/articles/category/${category}`;
+
+  // Collect unique schemes mentioned in this category for schema
+  const schemesInCategory = [...new Set(
+    articles.flatMap((a) => a.schemes ?? [])
+  )];
+
   const collectionSchema = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
@@ -116,14 +146,16 @@ export default async function CategoryPage({
     description: seo.description,
     url,
     inLanguage: 'hi-IN',
-    isPartOf: { '@type': 'WebSite', name: 'KisanStatus', url: DOMAIN },
+    isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: SITE_URL },
     numberOfItems: articles.length,
+    keywords: articles.flatMap((a) => a.keywords.slice(0, 3)).join(', '),
+    about: schemesInCategory.map((s) => ({ '@type': 'Thing', name: s })),
     mainEntity: {
       '@type': 'ItemList',
       itemListElement: articles.map((a, i) => ({
         '@type': 'ListItem',
         position: i + 1,
-        url: `${DOMAIN}/articles/${a.slug}`,
+        url: `${SITE_URL}/articles/${a.slug}`,
         name: a.title,
       })),
     },
@@ -133,42 +165,34 @@ export default async function CategoryPage({
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: DOMAIN },
-      { '@type': 'ListItem', position: 2, name: 'Articles', item: `${DOMAIN}/articles` },
-      { '@type': 'ListItem', position: 3, name: cat.name, item: url },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Articles', item: `${SITE_URL}/articles` },
+      { '@type': 'ListItem', position: 3, name: cat.nameHi || cat.name, item: url },
     ],
   };
-
-  // Pre-calculate category counts
-  const categoryCounts = Object.fromEntries(
-    Object.keys(CATEGORIES).map((slug) => [
-      slug,
-      ARTICLES.filter((a) => a.category === slug).length,
-    ])
-  );
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      <main className="min-h-screen bg-gray-50">
+      <main className="min-h-screen bg-gray-50 dark:bg-[var(--color-bg)]">
+        {/* Hero Section */}
         <section
-          className="py-10 md:py-14"
-          style={{ background: 'linear-gradient(135deg,#052e16 0%,#14532d 60%,#166534 100%)' }}
+          className="py-10 md:py-14 bg-gradient-to-br from-green-950 via-green-900 to-green-800"
           aria-labelledby="category-heading"
         >
           <div className="container-site text-center">
             <nav className="text-green-300 text-xs mb-4" aria-label="Breadcrumb">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
+              <Link href="/" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Home</Link>
               <span className="mx-2">/</span>
-              <Link href="/articles" className="hover:text-white transition-colors">Articles</Link>
+              <Link href="/articles" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Articles</Link>
               <span className="mx-2">/</span>
-              <span className="text-white font-bold">{cat.name}</span>
+              <span className="text-white font-bold">{cat.nameHi || cat.name}</span>
             </nav>
 
             <span className="inline-block bg-white/10 border border-white/20 text-green-300 text-xs font-bold px-4 py-2 rounded-full mb-4 uppercase tracking-wider">
-              {seo.emoji} {cat.name} Resources
+              {seo.emoji} {cat.nameHi || cat.name} Resources
             </span>
             <h1 id="category-heading" className="text-2xl md:text-4xl font-black text-white mb-3">
               {seo.title}
@@ -183,10 +207,11 @@ export default async function CategoryPage({
         </section>
 
         <div className="container-site py-6">
+          {/* Category Filter Pills */}
           <div className="flex flex-wrap justify-center gap-2 mb-8" role="navigation" aria-label="Category filters">
             <Link
               href="/articles"
-              className="px-4 py-2 rounded-full text-sm font-bold bg-white text-gray-700 hover:bg-gray-100 border border-gray-200 transition-all"
+              className="px-4 py-2 rounded-full text-sm font-bold bg-white text-gray-700 hover:bg-gray-100 border border-gray-200 transition-all focus:outline-none focus:ring-2 focus:ring-green-500"
             >
               📚 Saare ({ARTICLES.length})
             </Link>
@@ -198,23 +223,24 @@ export default async function CategoryPage({
                 <Link
                   key={slug}
                   href={`/articles/category/${slug}`}
-                  className={`px-4 py-2 rounded-full text-sm font-bold transition-all ${
+                  className={`px-4 py-2 rounded-full text-sm font-bold transition-all focus:outline-none focus:ring-2 focus:ring-green-500 ${
                     isActive
                       ? 'bg-[#14532d] text-white shadow-lg scale-105'
                       : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
                   }`}
                   aria-current={isActive ? 'page' : undefined}
                 >
-                  {c.name} ({count})
+                  {c.nameHi || c.name} ({count})
                 </Link>
               );
             })}
           </div>
 
+          {/* Articles Grid or Empty State */}
           {articles.length === 0 ? (
             <div className="text-center py-12">
               <p className="text-gray-500 text-lg">Is category mein abhi koi resource nahi hai.</p>
-              <Link href="/articles" className="text-green-700 font-bold hover:underline mt-4 inline-block">
+              <Link href="/articles" className="text-green-700 font-bold hover:underline mt-4 inline-block focus:outline-none focus:ring-2 focus:ring-green-500 rounded">
                 ← Saare Resources Dekho
               </Link>
             </div>
@@ -222,30 +248,49 @@ export default async function CategoryPage({
             <section aria-labelledby="articles-heading">
               <div className="flex items-center gap-3 mb-5">
                 <span className="text-xl" aria-hidden="true">{seo.emoji}</span>
-                <h2 id="articles-heading" className="text-lg font-black text-gray-900">{cat.name} Resources</h2>
+                <h2 id="articles-heading" className="text-lg font-black text-gray-900 dark:text-[var(--color-text)]">
+                  {cat.nameHi || cat.name} Resources
+                </h2>
                 <span className="bg-green-100 text-green-700 text-xs font-bold px-2 py-0.5 rounded-full">
                   {articles.length} resources
                 </span>
               </div>
+
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {articles.map((article) => (
                   <Link
                     key={article.slug}
                     href={`/articles/${article.slug}`}
-                    className="bg-white rounded-2xl overflow-hidden flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300 no-underline group h-full border border-gray-200 hover:border-green-300 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                    className="bg-white dark:bg-[var(--color-card)] rounded-2xl overflow-hidden flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300 no-underline group h-full border border-gray-200 dark:border-[var(--color-border)] hover:border-green-300 focus:ring-2 focus:ring-green-500 focus:outline-none"
                     aria-label={`Read: ${article.title}`}
                   >
+                    {/* OG Image thumbnail — visual CTR boost */}
+                    {article.ogImage && (
+                      <div className="relative h-40 w-full overflow-hidden bg-gray-100 dark:bg-gray-800 shrink-0">
+                        <Image
+                          src={article.ogImage}
+                          alt={article.title}
+                          fill
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          className="object-cover group-hover:scale-105 transition-transform duration-500"
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none" />
+                      </div>
+                    )}
                     <div className="p-5 flex flex-col flex-1">
-                      <span className="text-[10px] font-bold px-2 py-0.5 rounded-full self-start bg-green-100 text-green-700 mb-3">
-                        {seo.emoji} {cat.name}
+                      <span className="text-[10px] font-bold px-2 py-0.5 rounded-full self-start bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300 mb-3">
+                        {seo.emoji} {cat.nameHi || cat.name}
                       </span>
-                      <h3 className="font-black text-gray-900 text-sm leading-snug group-hover:text-green-700 transition-colors mb-2">
+                      <h3 className="font-black text-gray-900 dark:text-[var(--color-text)] text-sm leading-snug group-hover:text-green-700 dark:group-hover:text-green-400 transition-colors mb-2">
                         {article.title}
                       </h3>
-                      <p className="text-xs text-gray-500 leading-relaxed line-clamp-3 flex-1">{article.desc}</p>
-                      <div className="flex items-center justify-between mt-3 pt-2 border-t border-gray-100">
-                        <span className="text-[11px] text-gray-400">✍️ KisanStatus Team</span>
-                        <span className="text-xs font-bold text-green-700 group-hover:translate-x-1 transition-transform inline-block">
+                      <p className="text-xs text-gray-500 dark:text-[var(--color-text-muted)] leading-relaxed line-clamp-3 flex-1">
+                        {article.desc}
+                      </p>
+                      <div className="flex items-center justify-between mt-3 pt-2 border-t border-gray-100 dark:border-[var(--color-border)]">
+                        <span className="text-[11px] text-gray-400">✍️ {AUTHOR_NAME}</span>
+                        <span className="text-xs font-bold text-green-700 dark:text-green-400 group-hover:translate-x-1 transition-transform inline-block">
                           Padho →
                         </span>
                       </div>
