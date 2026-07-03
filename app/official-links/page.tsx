@@ -1,27 +1,28 @@
 /**
  * Official Government Links Page — KisanStatus.com
- * ✅ FIXED: Removed unused Link import
+ * Central administration resources collection for cultivators
  */
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Sarkari Portals — Farmer Welfare & Agriculture Ministry Official Links | KisanStatus.com',
+  title: 'Sarkari Platforms — Agrarian Welfare & Agriculture Ministry Official Resources | KisanStatus.com',
   description:
-    'DBT portals, cultivator verification, beneficiary status, Krishi Mantralaya — sabhi government portals ke direct references ek jagah. pmkisan.gov.in aur doosre sarkari resources.',
+    'Direct benefit transfer platforms, cultivator verification dashboards, beneficiary status gateways, Krishi Mantralaya — sabhi central administration resources ke direct references ek jagah. pmkisan.gov.in aur doosre sarkari resources.',
   authors: [{ name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' }],
   alternates: { canonical: 'https://kisanstatus.com/official-links' },
   keywords: [
-    'farmer welfare portals',
-    'DBT transfer links',
-    'cultivator verification portals',
+    'agrarian welfare platforms',
+    'direct benefit transfer links',
+    'cultivator verification dashboards',
     'agriculture ministry websites',
-    'kisan helpline contacts',
-    'agrarina scheme links',
-    'rural development portals',
+    'kisan support contacts',
+    'agrarian scheme resources',
+    'rural development gateways',
+    'central administration portals',
   ],
   openGraph: {
-    title: 'Government Portals — Farmer Welfare & Agriculture Ministry Resources',
-    description: 'DBT portals aur sabhi sarkari resources ke direct references ek jagah. 23vi tranche released 20 June 2026.',
+    title: 'Central Administration Platforms — Agrarian Welfare & Agriculture Ministry Resources',
+    description: 'Direct benefit transfer platforms aur sabhi sarkari resources ke direct references ek jagah. 23vi tranche released 20 June 2026.',
     type: 'website',
     url: 'https://kisanstatus.com/official-links',
     siteName: 'KisanStatus.com',
@@ -31,14 +32,14 @@ export const metadata: Metadata = {
         url: 'https://kisanstatus.com/images/pm-kisan-beneficiary-list-2026.webp',
         width: 1200,
         height: 630,
-        alt: 'Government Portals for Farmer Welfare',
+        alt: 'Central Administration Platforms for Agrarian Welfare',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Government Portals — Farmer Welfare & Agriculture Ministry Resources',
-    description: 'DBT portals aur sabhi sarkari resources ke direct references ek jagah.',
+    title: 'Central Administration Platforms — Agrarian Welfare & Agriculture Ministry Resources',
+    description: 'Direct benefit transfer platforms aur sabhi sarkari resources ke direct references ek jagah.',
     images: ['https://kisanstatus.com/images/pm-kisan-beneficiary-list-2026.webp'],
   },
   robots: { index: true, follow: true },
@@ -46,49 +47,49 @@ export const metadata: Metadata = {
 
 const officialLinks = [
   {
-    category: '🌾 Main Beneficiary Portal',
+    category: '🌾 Main Beneficiary Platform',
     links: [
-      { label: 'Official Homepage', url: 'https://pmkisan.gov.in/', desc: 'Pradhan Mantri Kisan Samman Nidhi ka primary portal' },
-      { label: 'Beneficiary Status Verification', url: 'https://pmkisan.gov.in/BeneficiaryStatus.aspx', desc: 'Apna payment status check karo' },
+      { label: 'Official Homepage', url: 'https://pmkisan.gov.in/', desc: 'Cultivator benefit program ka primary dashboard' },
+      { label: 'Beneficiary Status Verification', url: 'https://pmkisan.gov.in/BeneficiaryStatus.aspx', desc: 'Apna monetary credit status check karo' },
       { label: 'Approved Recipients Dashboard', url: 'https://pmkisan.gov.in/Dashboard.aspx', desc: 'State, district, block, gaon ke hisaab se roster' },
-      { label: 'New Cultivator Enrollment', url: 'https://pmkisan.gov.in/NewFarmerRegistration.aspx', desc: 'Naye farmers ka enrollment' },
-      { label: 'UID Correction Portal', url: 'https://pmkisan.gov.in/UpdateAadharNo.aspx', desc: 'Identity number mein correction karo' },
+      { label: 'New Cultivator Enrollment', url: 'https://pmkisan.gov.in/NewFarmerRegistration.aspx', desc: 'Naye annadataon ka enrollment' },
+      { label: 'Identity Credential Correction', url: 'https://pmkisan.gov.in/UpdateAadharNo.aspx', desc: 'Biometric credential number mein correction karo' },
     ],
   },
   {
-    category: '🔐 Digital Verification & Land Mapping',
+    category: '🔐 Digital Authentication & Land Mapping',
     links: [
-      { label: 'Farmers Corner (All Services)', url: 'https://pmkisan.gov.in/FarmersCorner.aspx', desc: 'Digital verification, status check, aur sabhi services' },
+      { label: 'Farmers Corner (All Services)', url: 'https://pmkisan.gov.in/FarmersCorner.aspx', desc: 'Digital authentication, status check, aur sabhi services' },
       { label: 'Zameen Record Integration Status', url: 'https://pmkisan.gov.in/LandSeeding.aspx', desc: 'Land mapping verification status dekho' },
-      { label: 'Installment Payment History', url: 'https://pmkisan.gov.in/AccountStatus.aspx', desc: 'Pichli tranches ka payment history check karo' },
+      { label: 'Tranche Payment History', url: 'https://pmkisan.gov.in/AccountStatus.aspx', desc: 'Pichli tranches ka payment history check karo' },
     ],
   },
   {
-    category: '🏛️ Krishi Mantralaya & National Portals',
+    category: '🏛️ Krishi Mantralaya & National Platforms',
     links: [
       { label: 'Ministry of Agriculture & Farmers Welfare', url: 'https://agriculture.gov.in/', desc: 'Krishi Mantralaya ka official website' },
       { label: 'Mobile Application (Android)', url: 'https://play.google.com/store/apps/details?id=com.nic.project.pmkisan', desc: 'Official Android app' },
-      { label: 'Digital India Portal', url: 'https://digitalindia.gov.in/', desc: 'Digital India — e-governance services' },
-      { label: 'India.gov.in National Portal', url: 'https://www.india.gov.in/', desc: 'Government of India ka main portal' },
+      { label: 'Digital India Platform', url: 'https://digitalindia.gov.in/', desc: 'Digital India — e-governance services' },
+      { label: 'India.gov.in National Gateway', url: 'https://www.india.gov.in/', desc: 'Government of India ka main platform' },
     ],
   },
   {
-    category: '🌱 Agrarian Welfare Schemes',
+    category: '🌱 Agrarian Welfare Initiatives',
     links: [
-      { label: 'PM Fasal Bima Yojana (PMFBY)', url: 'https://pmfby.gov.in/', desc: 'Pradhan Mantri Fasal Bima Yojana — crop insurance' },
-      { label: 'Kisan Credit Card (KCC)', url: 'https://www.nabard.org/content.aspx?id=595', desc: 'Kisan Credit Card scheme information' },
-      { label: 'Soil Health Card', url: 'https://soilhealth.dac.gov.in/', desc: 'Apni zameen ka soil health card dekho' },
-      { label: 'PM Krishi Sinchai Yojana', url: 'https://pmksy.gov.in/', desc: 'Sinchai se sambandhit yojana' },
+      { label: 'PM Crop Protection Scheme (PMFBY)', url: 'https://pmfby.gov.in/', desc: 'Pradhan Mantri Fasal Bima Yojana — yield insurance' },
+      { label: 'Cultivator Credit Card (KCC)', url: 'https://www.nabard.org/content.aspx?id=595', desc: 'Credit facility scheme information' },
+      { label: 'Soil Analysis Card', url: 'https://soilhealth.dac.gov.in/', desc: 'Apni zameen ka soil analysis card dekho' },
+      { label: 'PM Irrigation Initiative', url: 'https://pmksy.gov.in/', desc: 'Sinchai se sambandhit yojana' },
       { label: 'e-NAM (National Agriculture Market)', url: 'https://enam.gov.in/', desc: 'Online agriculture market — fasal becho' },
     ],
   },
   {
-    category: '📞 Helpline & Support Contacts',
+    category: '📞 Support Contacts & Assistance',
     links: [
-      { label: 'Primary Helpline — 155261', url: 'tel:155261', desc: 'Toll-free helpline — 24/7 available' },
-      { label: 'Alternate Contact — 011-24300606', url: 'tel:01124300606', desc: 'Direct helpline number' },
-      { label: 'Email Support', url: 'mailto:pmkisan-ict@gov.in', desc: 'Email karein: pmkisan-ict@gov.in' },
-      { label: 'Kisan Call Center — 1800-180-1551', url: 'tel:18001801551', desc: 'Agriculture helpline — free call' },
+      { label: 'Primary Support Line — 155261', url: 'tel:155261', desc: 'Toll-free assistance — 24/7 available' },
+      { label: 'Alternate Contact — 011-24300606', url: 'tel:01124300606', desc: 'Direct support number' },
+      { label: 'Email Assistance', url: 'mailto:pmkisan-ict@gov.in', desc: 'Email karein: pmkisan-ict@gov.in' },
+      { label: 'Cultivator Call Center — 1800-180-1551', url: 'tel:18001801551', desc: 'Agriculture assistance — free call' },
     ],
   },
 ];
@@ -107,10 +108,10 @@ export default function OfficialLinksPage() {
               🏠 Home
             </a>
             <span className="mx-2" aria-hidden="true">/</span>
-            <span className="text-white font-bold">Government Portals</span>
+            <span className="text-white font-bold">Central Administration Platforms</span>
           </nav>
-          <h1 className="text-2xl md:text-3xl font-bold text-white">🏛️ Sarkari Official Portals</h1>
-          <p className="text-green-200 text-sm mt-1">DBT portals aur sabhi government resources ke direct references — ek jagah</p>
+          <h1 className="text-2xl md:text-3xl font-bold text-white">🏛️ Sarkari Official Platforms</h1>
+          <p className="text-green-200 text-sm mt-1">Direct benefit transfer platforms aur sabhi central administration resources ke direct references — ek jagah</p>
         </div>
       </div>
 
@@ -165,7 +166,7 @@ export default function OfficialLinksPage() {
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <a href="/articles/pm-kisan-23vi-kist-2026-status-check" className="btn-primary text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:ring-offset-2">✅ 23vi Tranche Status</a>
-            <a href="/articles/pm-kisan-ekyc-online-2026" className="btn-secondary text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">🔐 Digital Verification Guide</a>
+            <a href="/articles/pm-kisan-ekyc-online-2026" className="btn-secondary text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">🔐 Digital Authentication Guide</a>
             <a href="/contact" className="btn-secondary text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">📧 Contact Us</a>
           </div>
         </div>
