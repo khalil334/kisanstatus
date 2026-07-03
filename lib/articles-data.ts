@@ -1,59 +1,83 @@
-// ─ lib/articles-data.ts ────────────────────────────────────────────────────
-// Centralized article metadata for all pages
-// Auto-updates dates via: npm run update-dates (uses git history)
+// ── lib/articles-data.ts ───────────────────────────────────
+// Centralized article metadata — single source of truth
+// Auto-updates dates via: npm run update-dates (git history)
+
+// ═══════════════════════════════════════════════════════════
+// CATEGORIES
+// ═══════════════════════════════════════════════════════════
 
 export const CATEGORIES = {
   'status-check': {
     name: 'Verification & Status',
+    nameHi: 'सत्यापन और स्थिति',
     description: 'Tranche verification, beneficiary roster, FTO, land integration guides',
+    descriptionHi: 'किस्त सत्यापन, लाभार्थी सूची, एफटीओ, भूमि एकीकरण गाइड',
     icon: '📊',
     color: 'blue',
   },
   'ekyc': {
     name: 'Digital Verification',
+    nameHi: 'डिजिटल सत्यापन',
     description: 'Biometric credential OTP, CSC authentication and digital verification guides',
+    descriptionHi: 'बायोमेट्रिक ओटीपी, सीएससी प्रमाणीकरण और डिजिटल सत्यापन गाइड',
     icon: '🔐',
     color: 'green',
   },
   'payment': {
     name: 'Payment Issues',
+    nameHi: 'भुगतान समस्याएं',
     description: 'Payment failed, rejected roster, RFT, PFMS problems and solutions',
+    descriptionHi: 'भुगतान विफल, अस्वीकृत सूची, आरएफटी, पीएफएमएस समस्याएं और समाधान',
     icon: '💸',
     color: 'red',
   },
   'loan': {
     name: 'Credit & Loans',
+    nameHi: 'ऋण और क्रेडिट',
     description: 'Credit facility, farm equipment loan, and bank credit guides',
+    descriptionHi: 'क्रेडिट सुविधा, कृषि उपकरण ऋण, और बैंक क्रेडिट गाइड',
     icon: '🏦',
     color: 'amber',
   },
   'registration': {
     name: 'Enrollment',
+    nameHi: 'नामांकन',
     description: 'New agrarian welfare enrollment and eligibility guides',
+    descriptionHi: 'नए कृषि कल्याण नामांकन और पात्रता गाइड',
     icon: '📝',
     color: 'purple',
   },
   'farming': {
     name: 'Farming & Schemes',
+    nameHi: 'खेती और योजनाएं',
     description: 'Soil analysis, crop protection, AgriStack, Nano DAP and other schemes',
+    descriptionHi: 'मृदा विश्लेषण, फसल सुरक्षा, एग्रीस्टैक, नैनो डीएपी और अन्य योजनाएं',
     icon: '🌾',
     color: 'emerald',
   },
   'correction': {
     name: 'Identity Corrections',
+    nameHi: 'पहचान सुधार',
     description: 'Name, contact, biometric credential, bank account correction guides',
+    descriptionHi: 'नाम, संपर्क, बायोमेट्रिक, बैंक खाता सुधार गाइड',
     icon: '✏️',
     color: 'orange',
   },
   'mandi': {
     name: 'Market Rates',
+    nameHi: 'बाजार दरें',
     description: 'Daily vegetable and fruit market rates, wholesale prices',
+    descriptionHi: 'दैनिक सब्जी और फल बाजार दरें, थोक कीमतें',
     icon: '📈',
     color: 'yellow',
   },
 } as const;
 
 export type CategorySlug = keyof typeof CATEGORIES;
+
+// ═══════════════════════════════════════════════════════════
+// ARTICLE INTERFACE
+// ═══════════════════════════════════════════════════════════
 
 export interface ArticleMeta {
   slug: string;
@@ -66,7 +90,25 @@ export interface ArticleMeta {
   publishedTime: string;
   modifiedTime: string;
   readingTime?: number;
+
+  // ── NEW: Programmatic SEO fields ──
+  /** States this article is relevant to */
+  states?: readonly string[];
+  /** Districts this article mentions or targets */
+  districts?: readonly string[];
+  /** Banks referenced in this article */
+  banks?: readonly string[];
+  /** Government schemes covered */
+  schemes?: readonly string[];
+  /** OG image path relative to /images/ — centralized here */
+  ogImage?: string;
+  /** Explicit related article slugs (overrides category-based) */
+  relatedSlugs?: readonly string[];
 }
+
+// ═══════════════════════════════════════════════════════════
+// ARTICLES DATA
+// ═══════════════════════════════════════════════════════════
 
 export const ARTICLES: readonly ArticleMeta[] = [
   {
@@ -92,6 +134,10 @@ export const ARTICLES: readonly ArticleMeta[] = [
     publishedTime: '2026-01-10T08:00:00+05:30',
     modifiedTime: '2026-06-23T08:00:00+05:30',
     readingTime: 8,
+    banks: ['sbi', 'pnb', 'bob', 'cooperative'],
+    schemes: ['kcc'],
+    ogImage: '/images/kisan-rin-kaha-se-le-2026.webp',
+    relatedSlugs: ['kisan-credit-card-online-apply-2026', 'kisan-tractor-loan-2026'],
   },
   {
     slug: 'kisan-tractor-loan-2026',
@@ -114,6 +160,10 @@ export const ARTICLES: readonly ArticleMeta[] = [
     publishedTime: '2026-01-20T08:00:00+05:30',
     modifiedTime: '2026-06-23T08:00:00+05:30',
     readingTime: 10,
+    banks: ['mahindra-finance', 'tata-capital'],
+    schemes: ['nabard-tractor'],
+    ogImage: '/images/kisan-tractor-loan-2026.webp',
+    relatedSlugs: ['kisan-rin-kaha-se-le-2026', 'kisan-credit-card-online-apply-2026'],
   },
   {
     slug: 'pm-kisan-21vi-installment-status-check',
@@ -134,6 +184,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
     publishedTime: '2026-02-01T08:00:00+05:30',
     modifiedTime: '2026-06-23T08:00:00+05:30',
     readingTime: 6,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/pm-kisan-21vi-installment-status-check.webp',
+    relatedSlugs: ['pm-kisan-23vi-kist-2026-status-check', 'pm-kisan-installment-history-check-online'],
   },
   {
     slug: 'pm-kisan-beneficiary-list-2026',
@@ -154,6 +207,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
     publishedTime: '2026-02-10T08:00:00+05:30',
     modifiedTime: '2026-06-23T08:00:00+05:30',
     readingTime: 7,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/pm-kisan-beneficiary-list-2026.webp',
+    relatedSlugs: ['pm-kisan-beneficiary-list-village-wise-2026', 'pm-kisan-rejected-list-2026'],
   },
   {
     slug: 'pm-kisan-beneficiary-list-village-wise-2026',
@@ -174,6 +230,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
     publishedTime: '2026-02-15T08:00:00+05:30',
     modifiedTime: '2026-06-23T08:00:00+05:30',
     readingTime: 6,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/pm-kisan-beneficiary-list-village-wise-2026.webp',
+    relatedSlugs: ['pm-kisan-beneficiary-list-2026'],
   },
   {
     slug: 'pm-kisan-correction-deactivate-block-guide-2026',
@@ -195,6 +254,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
     publishedTime: '2026-02-20T08:00:00+05:30',
     modifiedTime: '2026-06-23T08:00:00+05:30',
     readingTime: 9,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/pm-kisan-correction-deactivate-block-guide-2026.webp',
+    relatedSlugs: ['pm-kisan-name-correction-online-2026', 'pm-kisan-payment-failed-status-2026'],
   },
   {
     slug: 'pm-kisan-ekyc-online-2026',
@@ -216,6 +278,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
     publishedTime: '2026-03-01T08:00:00+05:30',
     modifiedTime: '2026-06-23T08:00:00+05:30',
     readingTime: 7,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/pm-kisan-ekyc-online-2026.webp',
+    relatedSlugs: ['pm-kisan-23vi-kist-2026-status-check', 'pm-kisan-mobile-number-change'],
   },
   {
     slug: 'pm-kisan-installment-history-check-online',
@@ -236,6 +301,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
     publishedTime: '2026-03-05T08:00:00+05:30',
     modifiedTime: '2026-06-23T08:00:00+05:30',
     readingTime: 6,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/pm-kisan-installment-history-check-online.webp',
+    relatedSlugs: ['pm-kisan-23vi-kist-2026-status-check', 'pm-kisan-payment-failed-status-2026'],
   },
   {
     slug: 'pm-kisan-land-seeding-status-check',
@@ -257,6 +325,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
     publishedTime: '2026-03-10T08:00:00+05:30',
     modifiedTime: '2026-06-23T08:00:00+05:30',
     readingTime: 8,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/pm-kisan-land-seeding-status-check.webp',
+    relatedSlugs: ['pm-kisan-payment-failed-status-2026', 'pm-kisan-correction-deactivate-block-guide-2026'],
   },
   {
     slug: 'pm-kisan-name-correction-online-2026',
@@ -277,6 +348,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
     publishedTime: '2026-03-15T08:00:00+05:30',
     modifiedTime: '2026-06-23T08:00:00+05:30',
     readingTime: 7,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/pm-kisan-name-correction-online-2026.webp',
+    relatedSlugs: ['pm-kisan-correction-deactivate-block-guide-2026', 'pm-kisan-mobile-number-change'],
   },
   {
     slug: 'pm-kisan-payment-failed-status-2026',
@@ -298,6 +372,10 @@ export const ARTICLES: readonly ArticleMeta[] = [
     publishedTime: '2026-03-20T08:00:00+05:30',
     modifiedTime: '2026-06-23T08:00:00+05:30',
     readingTime: 8,
+    schemes: ['pm-kisan'],
+    banks: ['sbi', 'pnb', 'bob'],
+    ogImage: '/images/pm-kisan-payment-failed-status-2026.webp',
+    relatedSlugs: ['pm-kisan-land-seeding-status-check', 'pm-kisan-name-correction-online-2026', 'pm-kisan-ekyc-online-2026'],
   },
   {
     slug: 'pm-kisan-problems-solution-guide-2026',
@@ -319,6 +397,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
     publishedTime: '2026-03-25T08:00:00+05:30',
     modifiedTime: '2026-06-23T08:00:00+05:30',
     readingTime: 10,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/pm-kisan-problems-solution-guide-2026.webp',
+    relatedSlugs: ['pm-kisan-payment-failed-status-2026', 'pm-kisan-fto-generated-ka-matlab-kya-hai'],
   },
   {
     slug: 'pm-kisan-registration-online-2026',
@@ -340,6 +421,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
     publishedTime: '2026-04-01T08:00:00+05:30',
     modifiedTime: '2026-06-23T08:00:00+05:30',
     readingTime: 9,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/pm-kisan-registration-online-2026.webp',
+    relatedSlugs: ['pm-kisan-ekyc-online-2026', 'pm-kisan-self-registered-status-check'],
   },
   {
     slug: 'pm-kisan-rejected-list-2026',
@@ -361,6 +445,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
     publishedTime: '2026-04-10T08:00:00+05:30',
     modifiedTime: '2026-06-23T08:00:00+05:30',
     readingTime: 7,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/pm-kisan-rejected-list-2026.webp',
+    relatedSlugs: ['pm-kisan-beneficiary-list-2026', 'pm-kisan-correction-deactivate-block-guide-2026'],
   },
   {
     slug: 'pmfby-crop-insurance-2026',
@@ -382,6 +469,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
     publishedTime: '2026-04-20T08:00:00+05:30',
     modifiedTime: '2026-06-23T08:00:00+05:30',
     readingTime: 12,
+    schemes: ['pmfby'],
+    ogImage: '/images/pmfby-crop-insurance-2026.webp',
+    relatedSlugs: ['soil-health-card-complete-guide-2026', 'nano-dap-500ml-price-in-india-2026'],
   },
   {
     slug: 'pm-kisan-23vi-kist-2026-status-check',
@@ -402,6 +492,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
     publishedTime: '2026-04-01T00:00:00+05:30',
     modifiedTime: '2026-06-23T08:00:00+05:30',
     readingTime: 7,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/pm-kisan-23vi-kist-status-check-2026.webp',
+    relatedSlugs: ['pm-kisan-ekyc-online-2026', 'pm-kisan-payment-failed-status-2026', 'pm-kisan-24vi-kist'],
   },
   {
     slug: 'kisan-credit-card-online-apply-2026',
@@ -423,6 +516,10 @@ export const ARTICLES: readonly ArticleMeta[] = [
     publishedTime: '2026-06-01T08:00:00+05:30',
     modifiedTime: '2026-06-23T08:00:00+05:30',
     readingTime: 9,
+    banks: ['sbi', 'pnb', 'bob', 'cooperative'],
+    schemes: ['kcc'],
+    ogImage: '/images/kisan-credit-card-apply-2026.webp',
+    relatedSlugs: ['kisan-rin-kaha-se-le-2026', 'kisan-tractor-loan-2026'],
   },
   {
     slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai',
@@ -444,6 +541,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
     publishedTime: '2026-06-23T08:00:00+05:30',
     modifiedTime: '2026-06-23T08:00:00+05:30',
     readingTime: 6,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/pm-kisan-fto-generated-featured-image-kisanstatus.webp',
+    relatedSlugs: ['pm-kisan-problems-solution-guide-2026', 'pm-kisan-payment-failed-status-2026'],
   },
   {
     slug: 'nano-dap-500ml-price-in-india-2026',
@@ -465,6 +565,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
     publishedTime: '2026-06-24T08:00:00+05:30',
     modifiedTime: '2026-06-24T08:00:00+05:30',
     readingTime: 7,
+    schemes: ['nano-dap'],
+    ogImage: '/images/nano-dap-500ml-price-india-2026.webp',
+    relatedSlugs: ['soil-health-card-complete-guide-2026', 'pmfby-crop-insurance-2026'],
   },
   {
     slug: 'pm-kisan-24vi-kist',
@@ -485,6 +588,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
     publishedTime: '2026-06-24T08:00:00+05:30',
     modifiedTime: '2026-06-24T08:00:00+05:30',
     readingTime: 6,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/pm-kisan-24vi-kist-october-2026.webp',
+    relatedSlugs: ['pm-kisan-23vi-kist-2026-status-check', 'pm-kisan-ekyc-online-2026'],
   },
   {
     slug: 'agristack-kya-hai',
@@ -506,6 +612,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
     publishedTime: '2026-06-24T08:00:00+05:30',
     modifiedTime: '2026-06-24T08:00:00+05:30',
     readingTime: 10,
+    schemes: ['agristack', 'pm-kisan'],
+    ogImage: '/images/articles/agristack-kya-hai/infographic.webp',
+    relatedSlugs: ['pm-kisan-registration-online-2026', 'pm-kisan-complete-guide'],
   },
   {
     slug: 'pm-kisan-mobile-number-change',
@@ -526,6 +635,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
     publishedTime: '2026-06-24T08:00:00+05:30',
     modifiedTime: '2026-06-24T08:00:00+05:30',
     readingTime: 6,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/pm-kisan-mobile-bank-aadhaar-update-banner-website.webp',
+    relatedSlugs: ['pm-kisan-ekyc-online-2026', 'pm-kisan-name-correction-online-2026'],
   },
   {
     slug: 'pm-kisan-complete-guide',
@@ -546,6 +658,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
     publishedTime: '2026-06-27T08:00:00+05:30',
     modifiedTime: '2026-06-27T08:00:00+05:30',
     readingTime: 15,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/pm-kisan-status-check-hero.webp',
+    relatedSlugs: ['pm-kisan-23vi-kist-2026-status-check', 'pm-kisan-ekyc-online-2026', 'pm-kisan-payment-failed-status-2026'],
   },
   {
     slug: 'soil-health-card-complete-guide-2026',
@@ -567,6 +682,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
     publishedTime: '2026-06-27T08:00:00+05:30',
     modifiedTime: '2026-06-27T08:00:00+05:30',
     readingTime: 8,
+    schemes: ['soil-health-card'],
+    ogImage: '/images/soil-health-card-complete-guide-2026.webp',
+    relatedSlugs: ['nano-dap-500ml-price-in-india-2026', 'pmfby-crop-insurance-2026'],
   },
   {
     slug: 'pm-kisan-self-registered-status-check',
@@ -587,6 +705,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
     publishedTime: '2026-06-28T08:00:00+05:30',
     modifiedTime: '2026-06-28T08:00:00+05:30',
     readingTime: 7,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/pm-kisan-self-registered-status/pm-kisan-portal-homepage.webp',
+    relatedSlugs: ['pm-kisan-registration-online-2026', 'pm-kisan-23vi-kist-2026-status-check'],
   },
   {
     slug: 'pm-kisan-status-check-online-2026-complete-guide',
@@ -608,6 +729,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
     publishedTime: '2026-06-29T08:00:00+05:30',
     modifiedTime: '2026-06-29T08:00:00+05:30',
     readingTime: 10,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/pm-kisan-status-check-tool-interface.webp',
+    relatedSlugs: ['pm-kisan-23vi-kist-2026-status-check', 'pm-kisan-complete-guide'],
   },
   {
     slug: 'mandi-bhav-today',
@@ -631,101 +755,141 @@ export const ARTICLES: readonly ArticleMeta[] = [
     publishedTime: '2026-06-30T09:30:00+05:30',
     modifiedTime: '2026-06-30T09:30:00+05:30',
     readingTime: 5,
+    ogImage: '/images/article/mandi-bhav-today.webp',
   },
 ] as const;
 
-// Memoized & frozen lookup map — created only once at module load
+// ═══════════════════════════════════════════════════════════
+// LOOKUP MAP (memoized & frozen)
+// ═══════════════════════════════════════════════════════════
+
 export const ARTICLES_MAP: Readonly<Record<string, ArticleMeta>> = Object.freeze(
   Object.fromEntries(ARTICLES.map((a) => [a.slug, a]))
 );
 
-// ── Helper Functions ────────────────────────────────────────────────────────
+// ═══════════════════════════════════════════════════════════
+// HELPER FUNCTIONS
+// ═══════════════════════════════════════════════════════════
 
-/** Get single article by slug */
 export function getArticleBySlug(slug: string): ArticleMeta | undefined {
   return ARTICLES_MAP[slug];
 }
 
-/** Get all articles in a specific category */
 export function getArticlesByCategory(category: CategorySlug): readonly ArticleMeta[] {
   return ARTICLES.filter((a) => a.category === category);
 }
 
-/** Get latest N articles (sorted by publishedTime descending) */
 export function getLatestArticles(limit: number = 5): readonly ArticleMeta[] {
   return [...ARTICLES]
     .sort((a, b) => new Date(b.publishedTime).getTime() - new Date(a.publishedTime).getTime())
     .slice(0, limit);
 }
 
-/** Search articles by keyword (searches keywords, title, and description) */
 export function getArticlesByKeyword(keyword: string): readonly ArticleMeta[] {
-  const lowerKeyword = keyword.toLowerCase();
+  const lower = keyword.toLowerCase();
   return ARTICLES.filter(
     (a) =>
-      a.keywords.some((k) => k.toLowerCase().includes(lowerKeyword)) ||
-      a.title.toLowerCase().includes(lowerKeyword) ||
-      a.desc.toLowerCase().includes(lowerKeyword)
+      a.keywords.some((k) => k.toLowerCase().includes(lower)) ||
+      a.title.toLowerCase().includes(lower) ||
+      a.desc.toLowerCase().includes(lower)
   );
 }
 
-/** Get category info (icon, color, description) */
 export function getCategoryInfo(category: CategorySlug) {
   return CATEGORIES[category];
 }
 
-/** Get all category slugs */
 export function getAllCategories(): readonly CategorySlug[] {
   return Object.keys(CATEGORIES) as CategorySlug[];
 }
 
-/** Get total article count */
 export function getArticleCount(): number {
   return ARTICLES.length;
 }
 
-/** Get articles within a date range */
 export function getArticlesByDateRange(startDate: string, endDate: string): readonly ArticleMeta[] {
   const start = new Date(startDate).getTime();
   const end = new Date(endDate).getTime();
-
   return ARTICLES.filter((a) => {
-    const published = new Date(a.publishedTime).getTime();
-    return published >= start && published <= end;
+    const t = new Date(a.publishedTime).getTime();
+    return t >= start && t <= end;
   });
 }
 
-/** Get top N primary keywords for an article (for SEO meta tags) */
 export function getPrimaryKeywords(slug: string, limit: number = 3): readonly string[] {
-  const article = getArticleBySlug(slug);
-  if (!article) return [];
-  return article.keywords.slice(0, limit);
+  return getArticleBySlug(slug)?.keywords.slice(0, limit) ?? [];
 }
 
-/** Get only Hindi (Devanagari) keywords */
 export function getHindiKeywords(slug: string): readonly string[] {
-  const article = getArticleBySlug(slug);
-  if (!article) return [];
-  return article.keywords.filter((k) => /[\u0900-\u097F]/.test(k));
+  return getArticleBySlug(slug)?.keywords.filter((k) => /[\u0900-\u097F]/.test(k)) ?? [];
 }
 
-/** Get only English keywords */
 export function getEnglishKeywords(slug: string): readonly string[] {
-  const article = getArticleBySlug(slug);
-  if (!article) return [];
-  return article.keywords.filter((k) => !/[\u0900-\u097F]/.test(k));
+  return getArticleBySlug(slug)?.keywords.filter((k) => !/[\u0900-\u097F]/.test(k)) ?? [];
 }
 
-/** Get related articles from the same category (excluding current article) */
+/** Related articles: explicit relatedSlugs first, then fallback to same category */
 export function getRelatedArticles(slug: string, limit: number = 3): readonly ArticleMeta[] {
   const current = getArticleBySlug(slug);
   if (!current) return [];
+
+  // Prefer explicit related slugs
+  if (current.relatedSlugs && current.relatedSlugs.length > 0) {
+    const explicit = current.relatedSlugs
+      .map((s) => ARTICLES_MAP[s])
+      .filter(Boolean) as ArticleMeta[];
+    if (explicit.length >= limit) return explicit.slice(0, limit);
+
+    // Fill remaining from same category
+    const remaining = ARTICLES.filter(
+      (a) => a.slug !== slug && a.category === current.category && !current.relatedSlugs?.includes(a.slug)
+    );
+    return [...explicit, ...remaining].slice(0, limit);
+  }
+
+  // Fallback: same category
   return ARTICLES.filter((a) => a.slug !== slug && a.category === current.category).slice(0, limit);
 }
 
-/** Get reading time as formatted string (e.g., "8 min read") */
 export function getReadingTime(slug: string): string {
-  const article = getArticleBySlug(slug);
-  if (!article || !article.readingTime) return '5 min read';
-  return `${article.readingTime} min read`;
+  const mins = getArticleBySlug(slug)?.readingTime;
+  return mins ? `${mins} min read` : '5 min read';
+}
+
+// ── NEW: Programmatic SEO helpers ──
+
+/** Get all articles tagged with a specific scheme */
+export function getArticlesByScheme(scheme: string): readonly ArticleMeta[] {
+  return ARTICLES.filter((a) => a.schemes?.includes(scheme));
+}
+
+/** Get all articles tagged with a specific bank */
+export function getArticlesByBank(bank: string): readonly ArticleMeta[] {
+  return ARTICLES.filter((a) => a.banks?.includes(bank));
+}
+
+/** Get all articles tagged with a specific state */
+export function getArticlesByState(state: string): readonly ArticleMeta[] {
+  return ARTICLES.filter((a) => a.states?.includes(state));
+}
+
+/** Get all unique scheme slugs across all articles */
+export function getAllSchemes(): readonly string[] {
+  const set = new Set<string>();
+  ARTICLES.forEach((a) => a.schemes?.forEach((s) => set.add(s)));
+  return Array.from(set).sort();
+}
+
+/** Get all unique bank slugs across all articles */
+export function getAllBanks(): readonly string[] {
+  const set = new Set<string>();
+  ARTICLES.forEach((a) => a.banks?.forEach((b) => set.add(b)));
+  return Array.from(set).sort();
+}
+
+/** Get all unique state slugs across all articles */
+export function getAllStates(): readonly string[] {
+  const set = new Set<string>();
+  ARTICLES.forEach((a) => a.states?.forEach((s) => set.add(s)));
+  return Array.from(set).sort();
 }
