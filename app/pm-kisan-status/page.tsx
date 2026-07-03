@@ -1,44 +1,43 @@
 /**
- * PM Kisan Status Check Page
- * ✅ Green theme (#14532d) consistent design
- * ✅ JSON-LD schema for SEO
- * ✅ Updated installment table (23vi kist)
- * ✅ Better internal linking
+ * Agrarian Welfare Verification Page
+ * Green theme (#14532d) consistent design
+ * JSON-LD schema for SEO
+ * Updated tranche table (23vi tranche)
+ * Internal linking structure
  */
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
 const DOMAIN = 'https://kisanstatus.com';
 
-// ── Page metadata ─────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: 'PM Kisan Beneficiary Status Check 2026 – 23vi Kist | Direct pmkisan.gov.in Link',
+  title: 'Cultivator Benefit Verification 2026 – 23vi Tranche | Direct pmkisan.gov.in Link',
   description:
-    'Check PM Kisan Samman Nidhi Status 2026 directly. Step-by-step guide to check installment status on pmkisan.gov.in using Aadhaar, account number or mobile number.',
-  authors: [{ name: 'Sidhu Singh', url: `${DOMAIN}/about` }],
+    'Check agrarian welfare scheme status 2026 directly. Step-by-step guide to verify tranche status on pmkisan.gov.in using biometric credential, account number or contact number.',
+  authors: [{ name: 'KisanStatus Team', url: `${DOMAIN}/about` }],
   alternates: { canonical: `${DOMAIN}/pm-kisan-status` },
   keywords: [
-    'PM Kisan status check 2026',
-    'PM Kisan 23vi kist status 2026',
-    'pmkisan.gov.in beneficiary status',
-    'PM Kisan payment status',
-    'PM Kisan installment history',
-    'पीएम किसान स्टेटस चेक 2026',
-    'पीएम किसान 23वीं किस्त स्टेटस',
+    'agrarian welfare verification 2026',
+    'cultivator benefit 23vi tranche status 2026',
+    'pmkisan.gov.in beneficiary verification',
+    'scheme payment status',
+    'program tranche history',
+    'कृषि कल्याण स्टेटस चेक 2026',
+    'कृषि कल्याण 23वीं ट्रांche स्टेटस',
   ],
   openGraph: {
-    title: 'PM Kisan Beneficiary Status Check 2026 – 23vi Kist',
-    description: 'Check PM Kisan status directly on pmkisan.gov.in — step-by-step guide with installment history table.',
+    title: 'Cultivator Benefit Verification 2026 – 23vi Tranche',
+    description: 'Check agrarian welfare status directly on pmkisan.gov.in — step-by-step guide with tranche history table.',
     type: 'article',
     url: `${DOMAIN}/pm-kisan-status`,
     siteName: 'KisanStatus.com',
     locale: 'hi_IN',
-    images: [{ url: `${DOMAIN}/images/pm-kisan-status-check-steps.webp`, width: 1200, height: 630, alt: 'PM Kisan Status Check 2026' }],
+    images: [{ url: `${DOMAIN}/images/pm-kisan-status-check-steps.webp`, width: 1200, height: 630, alt: 'Cultivator Benefit Verification 2026' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'PM Kisan Status Check 2026 – 23vi Kist',
-    description: 'Check PM Kisan status directly on pmkisan.gov.in',
+    title: 'Cultivator Benefit Verification 2026 – 23vi Tranche',
+    description: 'Check agrarian welfare status directly on pmkisan.gov.in',
     site: '@kisanstatus',
     images: [`${DOMAIN}/images/pm-kisan-status-check-steps.webp`],
   },
@@ -46,7 +45,6 @@ export const metadata: Metadata = {
 
 export const revalidate = 86400;
 
-// ── Full installment history (2019–2026) ──────────────────────────────────────
 const allInstallments = [
   { no: 1,  period: 'Dec 2018 – Mar 2019', released: 'Feb 2019',      amount: 2000 },
   { no: 2,  period: 'Apr – Jul 2019',       released: 'Apr 2019',      amount: 2000 },
@@ -73,11 +71,10 @@ const allInstallments = [
   { no: 23, period: 'Apr – Jun 2026',       released: '20 Jun 2026',   amount: 2000, highlight: true },
 ];
 
-// ── Detailed steps ────────────────────────────────────────────────────────────
 const steps = [
   {
     no: 1,
-    title: 'Open the Official PM Kisan Website',
+    title: 'Open the Official Agrarian Welfare Website',
     details: [
       'Open your browser (Chrome, Firefox, or Safari)',
       'Visit: https://pmkisan.gov.in/',
@@ -86,7 +83,7 @@ const steps = [
   },
   {
     no: 2,
-    title: 'Navigate to "Beneficiary Status"',
+    title: 'Navigate to "Beneficiary Verification"',
     details: [
       'On the homepage, click the "Farmers Corner" menu',
       'Select "Beneficiary Status" from the dropdown',
@@ -98,16 +95,16 @@ const steps = [
     title: 'Select Identification Type',
     details: [
       'Choose one of the three options:',
-      '• Aadhaar Number (12-digit Aadhaar card number)',
-      '• Account Number (Bank account linked to PM Kisan)',
-      '• Mobile Number (Registered mobile number)',
+      '• Biometric Credential Number (12-digit biometric credential card number)',
+      '• Account Number (Bank account linked to agrarian welfare program)',
+      '• Contact Number (Registered contact number)',
     ],
   },
   {
     no: 4,
     title: 'Enter Your Details',
     details: [
-      'Type your selected identifier (Aadhaar/Account/Mobile)',
+      'Type your selected identifier (Biometric Credential/Account/Contact)',
       'Enter the CAPTCHA shown on screen',
       'Click the "Get Data" button',
     ],
@@ -117,18 +114,17 @@ const steps = [
     title: 'View Your Payment Status',
     details: [
       'Your complete payment history will be displayed',
-      'Check installment dates, amounts, and payment mode',
-      'If status shows "Pending" — complete eKYC at pmkisan.gov.in/eKYC.aspx',
+      'Check tranche dates, amounts, and payment mode',
+      'If status shows "Pending" — complete digital verification at pmkisan.gov.in/eKYC.aspx',
     ],
   },
 ];
 
-// ── JSON-LD Schema ────────────────────────────────────────────────────────────
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
-  name: 'How to Check PM Kisan Status 2026',
-  description: 'Step-by-step guide to check PM Kisan beneficiary status on pmkisan.gov.in',
+  name: 'How to Check Agrarian Welfare Status 2026',
+  description: 'Step-by-step guide to check cultivator benefit program status on pmkisan.gov.in',
   step: steps.map((s) => ({
     '@type': 'HowToStep',
     name: s.title,
@@ -137,11 +133,9 @@ const schema = {
   totalTime: 'PT5M',
 };
 
-// ── Page Component ────────────────────────────────────────────────────────────
 export default function PMKisanStatusPage() {
   return (
     <>
-      {/* JSON-LD Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
@@ -156,30 +150,30 @@ export default function PMKisanStatusPage() {
           <nav className="text-green-200 text-sm mb-3" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <span className="mx-2" aria-hidden="true">/</span>
-            <span className="text-white font-bold">PM Kisan Status</span>
+            <span className="text-white font-bold">Agrarian Welfare Verification</span>
           </nav>
           <span className="inline-block bg-white/10 border border-white/20 text-green-300 text-xs font-bold px-4 py-2 rounded-full mb-4 uppercase tracking-wider">
-            📊 Status Check Guide
+            📊 Verification Guide
           </span>
           <h1 className="text-2xl md:text-4xl font-black text-white leading-tight mb-3">
-            PM Kisan Beneficiary Status 2026
+            Cultivator Benefit Verification 2026
           </h1>
           <p className="text-green-100 text-sm md:text-base max-w-2xl">
-            Direct link to official pmkisan.gov.in — Check your 23vi kist status with step-by-step guide
+            Direct link to official pmkisan.gov.in — Check your 23vi tranche status with step-by-step guide
           </p>
         </div>
       </section>
 
       <div className="container-site py-10 space-y-12">
-        {/* ── BIG CTA ── */}
+        {/* BIG CTA */}
         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 text-center py-8 px-6">
           <span className="text-5xl mb-4 block" aria-hidden="true">🌾</span>
           <h2 className="text-xl font-black text-gray-900 mb-2">
-            Check Your PM Kisan Status Directly
+            Check Your Agrarian Welfare Status Directly
           </h2>
           <p className="text-gray-600 text-sm mb-6 max-w-md mx-auto">
-            Click the button below to open the official Government of India PM Kisan
-            beneficiary status page in a new tab.
+            Click the button below to open the official Government of India cultivator benefit
+            verification page in a new tab.
           </p>
           <a
             href="https://pmkisan.gov.in/BeneficiaryStatus.aspx"
@@ -187,7 +181,7 @@ export default function PMKisanStatusPage() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-[#14532d] hover:bg-green-800 text-white font-black px-8 py-3.5 rounded-xl text-sm transition-all hover:scale-105 shadow-lg"
           >
-            ✅ Check Status on pmkisan.gov.in ↗
+            ✅ Verify Status on pmkisan.gov.in ↗
           </a>
           <div className="mt-4 flex flex-wrap justify-center gap-4 text-xs text-gray-500">
             <span>🔒 Official Govt. Website</span>
@@ -196,10 +190,10 @@ export default function PMKisanStatusPage() {
           </div>
         </div>
 
-        {/* ── STEP-BY-STEP GUIDE ── */}
+        {/* STEP-BY-STEP GUIDE */}
         <section aria-labelledby="steps-heading">
           <h2 id="steps-heading" className="text-2xl font-black text-gray-900 mb-6">
-            Step-by-Step: How to Check PM Kisan Status
+            Step-by-Step: How to Check Agrarian Welfare Status
           </h2>
           <div className="space-y-4">
             {steps.map((step) => (
@@ -223,16 +217,16 @@ export default function PMKisanStatusPage() {
           </div>
         </section>
 
-        {/* ── EKYC ALERT ── */}
+        {/* DIGITAL VERIFICATION ALERT */}
         <div className="rounded-2xl border-2 border-yellow-300 bg-yellow-50 p-6">
           <div className="flex items-start gap-3">
             <span className="text-3xl shrink-0" aria-hidden="true">⚠️</span>
             <div>
-              <h3 className="font-bold text-yellow-900 mb-2">eKYC is Mandatory</h3>
+              <h3 className="font-bold text-yellow-900 mb-2">Digital Verification is Mandatory</h3>
               <p className="text-sm text-yellow-900 leading-relaxed mb-3">
                 If your payment status shows <strong>"Pending"</strong>, you must complete
-                eKYC verification. Visit the official eKYC page and complete OTP-based or
-                biometric verification using your Aadhaar number.
+                digital verification. Visit the official verification page and complete OTP-based or
+                biometric verification using your biometric credential number.
               </p>
               <a
                 href="https://pmkisan.gov.in/eKYC.aspx"
@@ -240,29 +234,29 @@ export default function PMKisanStatusPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 text-sm font-bold text-yellow-900 bg-yellow-200 hover:bg-yellow-300 px-4 py-2 rounded-lg transition-colors"
               >
-                Complete eKYC Now ↗
+                Complete Digital Verification Now ↗
               </a>
             </div>
           </div>
         </div>
 
-        {/* ── INSTALLMENT HISTORY TABLE ── */}
+        {/* TRANCHE HISTORY TABLE */}
         <section aria-labelledby="history-heading">
           <h2 id="history-heading" className="text-2xl font-black text-gray-900 mb-2">
-            PM Kisan Installment Date List (2019–2026)
+            Agrarian Welfare Tranche Date List (2019–2026)
           </h2>
           <p className="text-gray-600 text-sm mb-6">
-            Complete installment release dates — 1st to 23rd installment
+            Complete tranche release dates — 1st to 23rd tranche
           </p>
 
           <div className="w-full overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
             <table
               className="w-full text-sm min-w-[480px]"
-              aria-label="PM Kisan all installment dates"
+              aria-label="Agrarian welfare all tranche dates"
             >
               <thead className="bg-[#14532d] text-white">
                 <tr>
-                  <th scope="col" className="px-4 py-3 text-left font-bold whitespace-nowrap">Installment</th>
+                  <th scope="col" className="px-4 py-3 text-left font-bold whitespace-nowrap">Tranche</th>
                   <th scope="col" className="px-4 py-3 text-left font-bold">Period</th>
                   <th scope="col" className="px-4 py-3 text-left font-bold whitespace-nowrap">Released On</th>
                   <th scope="col" className="px-4 py-3 text-left font-bold whitespace-nowrap">Amount</th>
@@ -275,7 +269,7 @@ export default function PMKisanStatusPage() {
                     className={inst.highlight ? 'bg-green-50 font-medium' : 'hover:bg-gray-50'}
                   >
                     <td className="px-4 py-3 whitespace-nowrap font-semibold text-[#14532d]">
-                      {inst.no}{(inst.no >= 11 && inst.no <= 13) ? 'th' : inst.no % 10 === 1 ? 'st' : inst.no % 10 === 2 ? 'nd' : inst.no % 10 === 3 ? 'rd' : 'th'} Installment
+                      {inst.no}{(inst.no >= 11 && inst.no <= 13) ? 'th' : inst.no % 10 === 1 ? 'st' : inst.no % 10 === 2 ? 'nd' : inst.no % 10 === 3 ? 'rd' : 'th'} Tranche
                       {inst.highlight && (
                         <span className="ml-2 inline-block bg-green-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full">
                           Latest
@@ -289,7 +283,7 @@ export default function PMKisanStatusPage() {
                 ))}
                 {/* Upcoming row */}
                 <tr className="bg-yellow-50">
-                  <td className="px-4 py-3 font-semibold text-yellow-700">24vi Kist (Expected Oct-Nov 2026)</td>
+                  <td className="px-4 py-3 font-semibold text-yellow-700">24vi Tranche (Expected Oct-Nov 2026)</td>
                   <td className="px-4 py-3">Abhi announce nahi hua</td>
                   <td className="px-4 py-3 text-yellow-700 font-medium whitespace-nowrap">Date announced nahi</td>
                   <td className="px-4 py-3 font-medium whitespace-nowrap">₹2,000</td>
@@ -305,24 +299,24 @@ export default function PMKisanStatusPage() {
           </p>
         </section>
 
-        {/* ── TROUBLESHOOTING ── */}
+        {/* TROUBLESHOOTING */}
         <section aria-labelledby="trouble-heading">
           <h2 id="trouble-heading" className="text-2xl font-black text-gray-900 mb-6">
-            PM Kisan Mein Aam Dikkatein Aur Hal
+            Agrarian Welfare Mein Aam Dikkatein Aur Hal
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[
               {
                 problem: 'Payment status shows "Pending"',
-                solution: 'pmkisan.gov.in/eKYC.aspx par eKYC complete karo aur bank account ko Aadhaar se link karo.',
+                solution: 'pmkisan.gov.in/eKYC.aspx par digital verification complete karo aur bank account ko biometric credential se link karo.',
               },
               {
-                problem: '"Aadhaar not found" error',
-                solution: 'Nazdiki CSC (Common Service Centre) ya Gram Panchayat mein jao — wahan Aadhaar ko PM Kisan registration se link karwa sakte ho.',
+                problem: '"Biometric credential not found" error',
+                solution: 'Nazdiki CSC (Common Service Centre) ya Gram Panchayat mein jao — wahan biometric credential ko agrarian welfare enrollment se link karwa sakte ho.',
               },
               {
                 problem: 'Bank account not verified',
-                solution: 'Bank branch mein jao aur confirm karo ki Aadhaar seeding ho gayi hai — bina Aadhaar seeding ke DBT payment nahi aata.',
+                solution: 'Bank branch mein jao aur confirm karo ki biometric credential seeding ho gayi hai — bina biometric credential seeding ke DBT payment nahi aata.',
               },
               {
                 problem: 'Land records not verified',
@@ -341,7 +335,7 @@ export default function PMKisanStatusPage() {
           </div>
         </section>
 
-        {/* ── Related Articles ── */}
+        {/* Related Articles */}
         <section aria-labelledby="related-heading">
           <h2 id="related-heading" className="text-2xl font-black text-gray-900 mb-6">
             📚 Related Guides
@@ -352,31 +346,31 @@ export default function PMKisanStatusPage() {
               className="bg-white rounded-2xl p-6 text-center hover:shadow-lg hover:border-green-300 transition-all border border-gray-200 group"
             >
               <span className="text-4xl mb-3 block">📆</span>
-              <p className="font-bold text-sm text-gray-900 group-hover:text-[#14532d] transition-colors">23vi Kist Status Check</p>
+              <p className="font-bold text-sm text-gray-900 group-hover:text-[#14532d] transition-colors">23vi Tranche Verification</p>
             </Link>
             <Link
               href="/articles/pm-kisan-ekyc-online-2026"
               className="bg-white rounded-2xl p-6 text-center hover:shadow-lg hover:border-green-300 transition-all border border-gray-200 group"
             >
               <span className="text-4xl mb-3 block">🔐</span>
-              <p className="font-bold text-sm text-gray-900 group-hover:text-[#14532d] transition-colors">eKYC Complete Guide</p>
+              <p className="font-bold text-sm text-gray-900 group-hover:text-[#14532d] transition-colors">Digital Verification Guide</p>
             </Link>
             <Link
               href="/articles/pm-kisan-beneficiary-list-2026"
               className="bg-white rounded-2xl p-6 text-center hover:shadow-lg hover:border-green-300 transition-all border border-gray-200 group"
             >
               <span className="text-4xl mb-3 block">📋</span>
-              <p className="font-bold text-sm text-gray-900 group-hover:text-[#14532d] transition-colors">Beneficiary List Check</p>
+              <p className="font-bold text-sm text-gray-900 group-hover:text-[#14532d] transition-colors">Beneficiary Roster Check</p>
             </Link>
           </div>
         </section>
 
-        {/* ── Helpline ── */}
+        {/* Helpline */}
         <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl border border-green-200 p-6">
-          <h3 className="font-black text-[#14532d] mb-4 text-lg">📞 PM Kisan Helpline</h3>
+          <h3 className="font-black text-[#14532d] mb-4 text-lg">📞 Agrarian Welfare Support Line</h3>
           <div className="text-sm text-gray-800 space-y-2">
             <p>📞 Toll Free: <a href="tel:155261" className="font-bold text-[#14532d] hover:underline">155261</a></p>
-            <p>📞 Helpline: <a href="tel:01124300606" className="font-bold text-[#14532d] hover:underline">011-24300606</a></p>
+            <p>📞 Support Line: <a href="tel:01124300606" className="font-bold text-[#14532d] hover:underline">011-24300606</a></p>
             <p>📧 Email: <a href="mailto:pmkisan-ict@gov.in" className="font-bold text-[#14532d] hover:underline">pmkisan-ict@gov.in</a></p>
             <p>🌐 Website: <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer" className="font-bold text-[#14532d] hover:underline">pmkisan.gov.in ↗</a></p>
           </div>
