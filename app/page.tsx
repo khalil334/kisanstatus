@@ -7,8 +7,8 @@ const SITE_NAME = 'KisanStatus';
 const AUTHOR = 'KisanStatus Team';
 
 export const metadata: Metadata = {
-  title: 'PM Kisan Status Check 2026 — 23vi Kist Released | ₹2000 Direct',
-  description: 'PM Kisan 23vi kist 20 June 2026 ko release — ₹2000 seedha bank mein. Status check karo, eKYC karo, beneficiary list dekho. 100% free guide Hindi mein.',
+  title: 'Agrarian Welfare Verification 2026 — 23vi Tranche Released | ₹2000 Direct',
+  description: 'Cultivator benefit 23vi tranche 20 June 2026 ko release ho gayi — ₹2000 seedha bank account mein. Status verify karo, digital verification complete karo, eligible farmers roster dekho. 100% free guidance Hinglish mein.',
   authors: [{ name: AUTHOR, url: `${SITE_URL}/about` }],
   alternates: { 
     canonical: `${SITE_URL}/`,
@@ -18,18 +18,18 @@ export const metadata: Metadata = {
     },
   },
   keywords: [
-    'PM Kisan status check 2026',
-    'PM Kisan 23vi kist',
-    'PM Kisan Samman Nidhi',
-    'kisan status check online',
-    'PM Kisan eKYC',
-    'PM Kisan beneficiary list',
-    'PM Kisan payment status',
+    'agrarian welfare verification 2026',
+    'cultivator benefit 23vi tranche',
+    'scheme status check online',
+    'program digital verification',
+    'eligible farmers roster',
+    'benefit payment status',
     'kisan yojana 2026',
+    'central program verification',
   ],
   openGraph: {
-    title: 'PM Kisan Status Check 2026 — 23vi Kist Released',
-    description: '₹2000 seedha bank mein — 9.44 Crore+ kisanon ko mil chuki hai. Apna status abhi check karo!',
+    title: 'Agrarian Welfare Verification 2026 — 23vi Tranche Released',
+    description: '₹2000 seedha bank account mein — 9.44 Crore+ cultivators ko mil chuki hai. Apna status abhi verify karo!',
     type: 'website',
     url: `${SITE_URL}/`,
     siteName: SITE_NAME,
@@ -39,15 +39,15 @@ export const metadata: Metadata = {
         url: `${SITE_URL}/og-image.webp`,
         width: 1200,
         height: 630,
-        alt: 'PM Kisan Status Check 2026 - KisanStatus',
+        alt: 'Agrarian Welfare Verification 2026 - KisanStatus',
         type: 'image/webp',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'PM Kisan Status Check 2026 — 23vi Kist Released',
-    description: '₹2000 seedha bank mein — 9.44 Crore+ kisanon ko mil chuki hai. Apna status abhi check karo!',
+    title: 'Agrarian Welfare Verification 2026 — 23vi Tranche Released',
+    description: '₹2000 seedha bank account mein — 9.44 Crore+ cultivators ko mil chuki hai. Apna status abhi verify karo!',
     site: '@kisanstatus',
     creator: '@kisanstatus',
     images: [`${SITE_URL}/og-image.webp`],
@@ -72,7 +72,8 @@ export const metadata: Metadata = {
 
 export const revalidate = 3600;
 
-// ✅ NEW: Loading component for Suspense
+// Suspense ke liye loading state
+// Blank screen se better user experience deta hai
 function HomeLoading() {
   return (
     <div className="min-h-screen">
@@ -103,7 +104,7 @@ function HomeLoading() {
 export default function HomePage() {
   return (
     <>
-      {/* ✅ NEW: Preload hero image for LCP (homepage specific) */}
+      {/* Hero image preload — LCP improvement ke liye */}
       <link
         rel="preload"
         as="image"
@@ -111,14 +112,14 @@ export default function HomePage() {
         type="image/webp"
       />
       
-      {/* ✅ NEW: Preload critical fonts */}
+      {/* Critical fonts preload */}
       <link
         rel="preload"
         as="style"
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
       />
 
-      {/* ✅ NEW: Structured Data for Homepage */}
+      {/* Homepage structured data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -127,7 +128,7 @@ export default function HomePage() {
             '@type': 'WebSite',
             name: SITE_NAME,
             url: SITE_URL,
-            description: 'PM Kisan Samman Nidhi status check, eKYC guide, beneficiary list — India ka free kisan information portal.',
+            description: 'Cultivator benefit program verification, digital authentication guide, eligible farmers roster — India ka free agrarian welfare resource portal.',
             inLanguage: 'hi-IN',
             potentialAction: {
               '@type': 'SearchAction',
@@ -150,7 +151,7 @@ export default function HomePage() {
         }}
       />
 
-      {/* ✅ NEW: Suspense for better loading UX */}
+      {/* Suspense wrapper — better loading experience */}
       <Suspense fallback={<HomeLoading />}>
         <HomeContent />
       </Suspense>
