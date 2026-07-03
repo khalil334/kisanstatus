@@ -197,14 +197,14 @@ export default function RootLayout({
           </Suspense>
         </LanguageProvider>
 
-        {/* Google Analytics — worker strategy se load hota hai */}
+        {/* Google Analytics — lazyOnload strategy se load hota hai (page load ke baad) */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-          strategy="worker"
+          strategy="lazyOnload"
         />
         <Script
           id="ga4-init"
-          strategy="worker"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -218,8 +218,8 @@ export default function RootLayout({
           }}
         />
 
-        {/* Vercel Analytics */}
-        <Analytics />
+        {/* Vercel Analytics — production mein hi load hoga */}
+        {process.env.NODE_ENV === 'production' && <Analytics />}
 
         {/* Scroll restoration — page navigation ke baad top par le jaata hai */}
         <Script
@@ -231,7 +231,6 @@ export default function RootLayout({
                 history.scrollRestoration = 'auto';
               }
               
-              // Smooth scroll to top on page navigation
               window.addEventListener('popstate', function() {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               });
@@ -245,7 +244,6 @@ export default function RootLayout({
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
-              // Detect keyboard navigation
               document.addEventListener('keydown', function(e) {
                 if (e.key === 'Tab') {
                   document.body.classList.add('keyboard-navigation');
