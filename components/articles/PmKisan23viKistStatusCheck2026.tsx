@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { SvgFAQ } from '@/components/ArticleSVGs';
 import { SI, StepList, IB, WB, DB, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, fmtDate } from '@/components/ArticleShared';
 
@@ -18,9 +19,31 @@ const RELATED = [
   { slug: 'pm-kisan-registration-online-2026', title: 'New Registration', emoji: '📝' },
 ];
 
+// FAQ structured data for Google rich snippets
+const FAQS_DATA = [
+  { q: 'PM Kisan 23vi kist kab aayi?', a: '20 June 2026 ko PM Modi ne Hooghly, West Bengal se release ki. 9.44 crore kisanon ko ₹2,000 — total ₹18,880 crore DBT se transfer hue.' },
+  { q: '24vi kist kab aayegi?', a: 'Pattern ke hisaab se August-November 2026 mein expected hai. Exact date official announcement par confirm hogi.' },
+  { q: 'Status check par kuch nahi dikh raha?', a: 'Registration number sahi dalo. Yaad nahi toh "Know your registration no." se mobile/Aadhaar se pehle number dhundho.' },
+  { q: 'eKYC zaroori hai kya?', a: 'Haan, mandatory hai. Bina eKYC ke kist band. pmkisan.gov.in par OTP se ya CSC biometric se turant karo.' },
+  { q: 'Naya registration kaise karein?', a: 'pmkisan.gov.in → New Farmer Registration → Aadhaar + zameen documents + bank details. Ya CSC center jao.' },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQS_DATA.map(f => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
 export default function PmKisan23viKistStatusCheck2026() {
   return (
     <>
+      {/* FAQ Schema for Google Rich Snippets */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+
       {/* Header */}
       <div className="bg-primary-600 py-8">
         <div className="container-site max-w-3xl">
@@ -49,14 +72,17 @@ export default function PmKisan23viKistStatusCheck2026() {
           ✅ 23vi Kist Released — 20 June 2026 — ₹2,000 per kisan
         </div>
 
-        {/* Hero Image */}
+        {/* Hero Image — Next.js Image for auto optimization */}
         <div className="my-6 rounded-2xl overflow-hidden border border-green-100 shadow-md">
-          <img
+          <Image
             src="/images/payment-success.webp"
             alt="PM Kisan 23vi kist payment successful — kisan ke bank account mein paisa transfer"
+            width={1200}
+            height={630}
             className="w-full object-cover"
             style={{ maxHeight: '420px', objectPosition: 'center' }}
-            loading="lazy" width="1200" height="630"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-gray-500 py-2 bg-green-50 border-t border-green-100">PM Kisan 23vi Kist — 9.44 Crore Kisanon Ko ₹2,000 Mila</p>
         </div>
@@ -223,13 +249,7 @@ export default function PmKisan23viKistStatusCheck2026() {
           </h2>
           <SvgFAQ caption="PM Kisan 23vi Kist FAQ 2026 — Real Answers" />
           <div className="space-y-3 mt-4">
-            {[
-              { q: 'PM Kisan 23vi kist kab aayi?', a: '20 June 2026 ko PM Modi ne Hooghly, West Bengal se release ki. 9.44 crore kisanon ko ₹2,000 — total ₹18,880 crore DBT se transfer hue.' },
-              { q: '24vi kist kab aayegi?', a: 'Pattern ke hisaab se August-November 2026 mein expected hai. Exact date official announcement par confirm hogi.' },
-              { q: 'Status check par kuch nahi dikh raha?', a: 'Registration number sahi dalo. Yaad nahi toh "Know your registration no." se mobile/Aadhaar se pehle number dhundho.' },
-              { q: 'eKYC zaroori hai kya?', a: 'Haan, mandatory hai. Bina eKYC ke kist band. pmkisan.gov.in par OTP se ya CSC biometric se turant karo.' },
-              { q: 'Naya registration kaise karein?', a: 'pmkisan.gov.in → New Farmer Registration → Aadhaar + zameen documents + bank details. Ya CSC center jao.' },
-            ].map(({ q, a }) => (
+            {FAQS_DATA.map(({ q, a }) => (
               <details key={q} className="border border-gray-200 rounded-xl overflow-hidden group">
                 <summary className="p-4 font-semibold text-gray-900 cursor-pointer bg-gray-50 hover:bg-green-50 text-sm flex justify-between items-center gap-3">
                   <span>{q}</span>
