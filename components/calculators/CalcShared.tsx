@@ -16,7 +16,7 @@ export function InputField({
   placeholder, 
   hint, 
   id,
-  suffix  // ✅ Added suffix prop
+  suffix
 }: {
   label: string; 
   value: string | number; 
@@ -26,15 +26,14 @@ export function InputField({
   placeholder?: string; 
   hint?: string; 
   id?: string;
-  suffix?: string;  // ✅ Added suffix type
+  suffix?: string;
 }) {
-  // Accessibility fix: label aur input ko link kiya hai screen readers ke liye
   const inputId = id || label.toLowerCase().replace(/\s+/g, '-');
   
   return (
     <div className="mb-4">
       <label htmlFor={inputId} className="block text-sm font-bold text-gray-700 mb-1">{label}</label>
-      <div className="relative">  {/* ✅ Relative container for absolute suffix positioning */}
+      <div className="relative">
         <input
           id={inputId}
           type={type}
@@ -42,9 +41,9 @@ export function InputField({
           value={value}
           placeholder={placeholder}
           onChange={e => onChange(e.target.value)}
-          className="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-400 bg-white transition-colors pr-12"  // ✅ pr-12 for suffix spacing
+          className="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-400 bg-white transition-colors pr-12"
         />
-        {suffix && (  // ✅ Conditional suffix display
+        {suffix && (
           <span className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-gray-400 font-medium">
             {suffix}
           </span>
@@ -78,12 +77,19 @@ export function SelectField({ label, value, onChange, options, hint, id }: {
   );
 }
 
-// Result display row. Last item ka border remove karne ke liye last:border-0 use kiya.
-export function ResultRow({ label, value, bold }: { label: string; value: string; bold?: boolean }) {
+// Result display row with optional highlight and bold props
+export function ResultRow({ label, value, bold, highlight }: { 
+  label: string; 
+  value: string; 
+  bold?: boolean;
+  highlight?: boolean;  // ✅ Added highlight prop
+}) {
   return (
-    <div className={`flex justify-between items-center py-2.5 border-b border-gray-100 last:border-0 ${bold ? 'font-black text-lg' : 'text-sm'}`}>
+    <div className={`flex justify-between items-center py-2.5 border-b border-gray-100 last:border-0 ${
+      bold ? 'font-black text-lg' : 'text-sm'
+    } ${highlight ? 'bg-green-50 dark:bg-green-900/20 -mx-4 px-4 rounded-xl' : ''}`}>
       <span className="text-gray-600">{label}</span>
-      <span className={bold ? 'text-green-700 text-xl' : 'font-semibold text-gray-900'}>{value}</span>
+      <span className={(bold || highlight) ? 'text-green-700 text-xl' : 'font-semibold text-gray-900'}>{value}</span>
     </div>
   );
 }
