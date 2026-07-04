@@ -108,54 +108,30 @@ function ArticleLoading() {
 }
 
 // ═══════════════════════════════════════════════════════════
-// COMPONENT REGISTRY — ALL 26 ARTICLES
+// COMPONENT REGISTRY — ONLY 12 ARTICLES
 // ═══════════════════════════════════════════════════════════
 
 const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> = {
-  // Loan Articles
+  // Loan Articles (3)
   KisanCreditCardOnlineApply2026:             dynamic(() => import('@/components/articles/KisanCreditCardOnlineApply2026'),            { loading: ArticleLoading }),
   KisanRinKahaSeLe2026:                       dynamic(() => import('@/components/articles/KisanRinKahaSeLe2026'),                      { loading: ArticleLoading }),
   KisanTractorLoan2026:                       dynamic(() => import('@/components/articles/KisanTractorLoan2026'),                      { loading: ArticleLoading }),
-  
-  // Farming Articles
+
+  // Farming Articles (3)
   NanoDap500mlPriceInIndia2026:               dynamic(() => import('@/components/articles/NanoDap500mlPriceInIndia2026'),              { loading: ArticleLoading }),
-  PmfbyCropInsurance2026:                     dynamic(() => import('@/components/articles/PmfbyCropInsurance2026'),                    { loading: ArticleLoading }),
   AgriStackKyaHai2026:                        dynamic(() => import('@/components/articles/AgriStackKyaHai2026'),                       { loading: ArticleLoading }),
   SoilHealthCardCompleteGuide2026:            dynamic(() => import('@/components/articles/SoilHealthCardCompleteGuide2026'),           { loading: ArticleLoading }),
-  
-  // Status Check Articles
-  PmKisan23viKistStatusCheck2026:             dynamic(() => import('@/components/articles/PmKisan23viKistStatusCheck2026'),            { loading: ArticleLoading }),
+
+  // Status Check Articles (3)
   PmKisan24viKist2026:                        dynamic(() => import('@/components/articles/PmKisan24viKist2026'),                       { loading: ArticleLoading }),
-  PmKisanInstallmentHistoryCheckOnline:       dynamic(() => import('@/components/articles/PmKisanInstallmentHistoryCheckOnline'),      { loading: ArticleLoading }),
-  PmKisanLandSeedingStatusCheck:              dynamic(() => import('@/components/articles/PmKisanLandSeedingStatusCheck'),             { loading: ArticleLoading }),
-  PmKisanSelfRegisteredStatusCheck:           dynamic(() => import('@/components/articles/PmKisanSelfRegisteredStatusCheck'),          { loading: ArticleLoading }),
-  PmKisanStatusCheckOnline2026CompleteGuide:  dynamic(() => import('@/components/articles/PmKisanStatusCheckOnline2026CompleteGuide'), { loading: ArticleLoading }),
   PmKisanFtoGeneratedKaMatlabKyaHai:          dynamic(() => import('@/components/articles/PmKisanFtoGeneratedKaMatlabKyaHai'),         { loading: ArticleLoading }),
-  
-  // Beneficiary List Articles
+  PmKisanMasterGuide2026:                     dynamic(() => import('@/components/articles/PmKisanMasterGuide2026'),                    { loading: ArticleLoading }),
+
+  // Beneficiary List Articles (2)
   PmKisanBeneficiaryList2026:                 dynamic(() => import('@/components/articles/PmKisanBeneficiaryList2026'),                { loading: ArticleLoading }),
   PmKisanBeneficiaryListVillageWise2026:      dynamic(() => import('@/components/articles/PmKisanBeneficiaryListVillageWise2026'),     { loading: ArticleLoading }),
-  
-  // eKYC & Verification
-  PmKisanEkycOnline2026:                      dynamic(() => import('@/components/articles/PmKisanEkycOnline2026'),                     { loading: ArticleLoading }),
-  
-  // Payment Issues
-  PmKisanPaymentFailedStatus2026:             dynamic(() => import('@/components/articles/PmKisanPaymentFailedStatus2026'),            { loading: ArticleLoading }),
-  PmKisanProblemsSolutionGuide2026:           dynamic(() => import('@/components/articles/PmKisanProblemsSolutionGuide2026'),          { loading: ArticleLoading }),
-  PmKisanRejectedList2026:                    dynamic(() => import('@/components/articles/PmKisanRejectedList2026'),                   { loading: ArticleLoading }),
-  
-  // Registration
-  PmKisanRegistrationOnline2026:              dynamic(() => import('@/components/articles/PmKisanRegistrationOnline2026'),             { loading: ArticleLoading }),
-  
-  // Correction & Updates
-  PmKisanNameCorrectionOnline2026:            dynamic(() => import('@/components/articles/PmKisanNameCorrectionOnline2026'),           { loading: ArticleLoading }),
-  PmKisanMobileNumberChange2026:              dynamic(() => import('@/components/articles/PmKisanMobileNumberChange2026'),             { loading: ArticleLoading }),
-  PmKisanCorrectionDeactivateBlockGuide2026:  dynamic(() => import('@/components/articles/PmKisanCorrectionDeactivateBlockGuide2026'), { loading: ArticleLoading }),
-  
-  // Master Guide
-  PmKisanCompleteGuide:                       dynamic(() => import('@/components/articles/PmKisanCompleteGuide'),                      { loading: ArticleLoading }),
-  
-  // Market Rates
+
+  // Market Rates (1)
   MandiBhavToday:                             dynamic(() => import('@/components/articles/MandiBhavContent'),                          { loading: ArticleLoading }),
 };
 
