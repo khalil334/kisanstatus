@@ -5,75 +5,75 @@ import Link from 'next/link';
 import Image from 'next/image';
 import FAQSection from '@/components/FAQSection';
 
-// Key statistics — updated for 2026
+// Key statistics — updated for 12 articles
 const STATS = {
   registeredCultivators: '11 Cr+',
   receivedTranche: '9.44 Cr+',
   annualBenefit: '₹6,000',
   perTranche: '₹2,000',
-  currentTranche: '23',
-  nextTranche: '24',
-  currentTrancheDate: '20 June 2026',
-  nextTrancheDate: 'October 2026',
-  totalArticles: '26+',
+  currentTranche: '24',
+  nextTranche: '25',
+  currentTrancheDate: 'October 2026',
+  nextTrancheDate: 'February 2027',
+  totalArticles: '12',
 };
 
-// Featured articles — varied keywords for SEO
+// ✅ Featured articles — ONLY from remaining 12 articles
 const TOP_ARTICLES = [
   {
-    slug: 'pm-kisan-self-registered-status-check',
-    title: 'Self-Enrolled Status Verification 2026',
-    emoji: '📋',
-    image: '/images/pm-kisan-self-registered-status/pm-kisan-portal-homepage.webp',
-    desc: 'Self enrollment ka status kaise verify karein — step-by-step guide',
-    category: 'Verification',
+    slug: 'pm-kisan-complete-guide',
+    title: 'PM Kisan Complete Guide 2026',
+    emoji: '📖',
+    image: '/images/pm-kisan-complete-guide/hero.webp',
+    desc: 'Registration, eKYC, payment status, naam correction — sab ek jagah',
+    category: 'Guide',
   },
   {
     slug: 'soil-health-card-complete-guide-2026',
-    title: 'Soil Analysis Card Complete Guide 2026',
+    title: 'Soil Health Card Complete Guide 2026',
     emoji: '🌱',
-    image: '/images/soil-health-card-complete-guide-2026.webp',
-    desc: 'Mitti analysis card download, status check, PDF download — complete guide',
+    image: '/images/soil-health-card-complete-guide-2026/hero.webp',
+    desc: 'Mitti test karwao — CSC se form lo, sample do, 15 din mein report',
     category: 'Farming',
   },
   {
-    slug: 'pm-kisan-complete-guide',
-    title: 'Agrarian Welfare Complete Guide 2026',
-    emoji: '📖',
-    image: '/images/pm-kisan-status-check-hero.webp',
-    desc: 'Saari problems ka solution — status verification, digital verification, payment, rejection',
-    category: 'Guide',
+    slug: 'kisan-credit-card-online-apply-2026',
+    title: 'KCC Online Apply 2026 — ₹5 Lakh Loan',
+    emoji: '💳',
+    image: '/images/kisan-credit-card-online-apply-2026/hero-image.webp',
+    desc: '4% interest mein ₹5 lakh tak loan — step-by-step apply guide',
+    category: 'Loan',
   },
 ];
 
 // Category color mapping
 const CAT_COLORS: Record<string, string> = {
-  Verification: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300',
-  Farming: 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300',
   Guide: 'bg-rose-100 text-rose-700 dark:bg-rose-900/30 dark:text-rose-300',
+  Farming: 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300',
+  Loan: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300',
+  Status: 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300',
 };
 
-// Ticker items — live updates with varied keywords
+// Ticker items — updated for 24vi kist
 const TICKER_ITEMS = [
-  `🔴 LIVE: Agrarian Welfare ${STATS.currentTranche}वीं किस्त — ${STATS.currentTrancheDate} को ${STATS.perTranche} रिलीज़ हो चुकी है`,
-  `⏳ ${STATS.nextTranche}वीं किस्त Expected: ${STATS.nextTrancheDate} — Digital verification अभी complete करो`,
-  '🔐 Digital Verification अनिवार्य: बिना verification किस्त NAHI मिलेगी — official portal पर करो',
+  `⏳ ${STATS.currentTranche}वीं किस्त Expected: ${STATS.currentTrancheDate} — eKYC अभी complete करो`,
+  '🔐 eKYC अनिवार्य: बिना eKYC के किस्त NAHI मिलेगी — official portal पर करो',
   '📞 Support Line: 155261 | Toll Free: 1800-115-526',
-  `✅ ${STATS.registeredCultivators} registered cultivators — ${STATS.receivedTranche} को ${STATS.currentTranche}वीं किस्त मिल चुकी है`,
+  `✅ ${STATS.registeredCultivators} registered cultivators — ${STATS.receivedTranche} को किस्त मिल चुकी है`,
 ];
 
-// FAQ section — common questions with varied terminology
+// FAQ section — updated answers
 const FAQS = [
   {
-    q: 'Agrarian welfare की 23वीं किस्त कब आई?',
-    a: `23वीं किस्त ${STATS.currentTrancheDate} को रिलीज़ हो चुकी है — ${STATS.registeredCultivators} registered cultivators में से ${STATS.receivedTranche} cultivators को ${STATS.perTranche} DBT से मिले हैं। अगर अभी तक पैसा नहीं आया तो digital verification और bank में biometric credential seeding ज़रूर check करें।`,
+    q: 'PM Kisan की 24वीं किस्त कब आएगी?',
+    a: `24वीं किस्त ${STATS.currentTrancheDate} में आने की उम्मीद है। अगर eKYC complete है और bank account Aadhaar से linked है तो automatic credit होगी। Status pmkisan.gov.in पर check करें।`,
   },
   {
-    q: 'Digital verification नहीं हुई तो क्या पैसा आएगा?',
-    a: 'नहीं — बिना digital verification के कोई भी किस्त नहीं आती। Verification free है: official portal → Verification → Biometric credential number → OTP verify। या नज़दीकी CSC center जाएं — बिल्कुल मुफ्त।',
+    q: 'eKYC नहीं हुई तो क्या पैसा आएगा?',
+    a: 'नहीं — बिना eKYC के कोई भी किस्त नहीं आती। eKYC free है: pmkisan.gov.in → eKYC → Aadhaar number → OTP verify। या नज़दीकी CSC center जाएं — बिल्कुल मुफ्त।',
   },
   {
-    q: 'Status में "Land Integration No" दिखाए तो क्या करें?',
+    q: 'Status में "Land Seeding No" दिखाए तो क्या करें?',
     a: 'इसका मतलब आपकी ज़मीन official portal से link नहीं हुई। Fix: पटवारी/लेखपाल से मिलें, Khasra-Khatauni अपडेट करवाएं, Block Agriculture Officer को application दें। 15-30 दिन में status verify करें।',
   },
 ];
@@ -93,7 +93,7 @@ const faqSchema = {
 const articleListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: 'Agrarian Welfare Latest Guides 2026',
+  name: 'PM Kisan Latest Guides 2026',
   url: 'https://kisanstatus.com',
   numberOfItems: TOP_ARTICLES.length,
   itemListElement: TOP_ARTICLES.map((a, i) => ({
@@ -151,7 +151,7 @@ function HeroImage() {
     <div className="absolute inset-0 z-0">
       <Image
         src="/hero-kisan-field.webp"
-        alt="Agrarian welfare beneficiaries in green field - Bharat ki cultivator shakti"
+        alt="PM Kisan beneficiaries in green field - Bharat ki kisan shakti"
         fill
         sizes="100vw"
         priority={true}
@@ -171,7 +171,7 @@ export default function HomeContent() {
       {/* ✅ Hero section FIRST — LCP element gets priority */}
       <section
         className="relative overflow-hidden bg-green-warm-gradient dark:from-green-950 dark:via-green-900 dark:to-emerald-950"
-        aria-label="Hero section - Agrarian Welfare Verification"
+        aria-label="Hero section - PM Kisan Verification"
       >
         <HeroImage />
         <div className="absolute -top-24 -left-20 w-96 h-96 rounded-full bg-emerald-400/20 blur-[100px] pointer-events-none" aria-hidden="true" />
@@ -179,34 +179,34 @@ export default function HomeContent() {
 
         <div className="container-site relative z-10 max-w-3xl px-4 py-10 md:py-16">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-green-100 text-xs font-bold px-4 py-2 rounded-full mb-4 uppercase tracking-wider backdrop-blur-sm">
-            🌾 India Ka #1 Agrarian Welfare Information Portal
+            🌾 India Ka #1 PM Kisan Information Portal
           </div>
 
           <h1 className="font-black text-white leading-[1.15] mb-3 tracking-tight drop-shadow-lg">
-            <span className="text-3xl md:text-5xl block">किसान लाभ वेरिफिकेशन —</span>
+            <span className="text-3xl md:text-5xl block">PM Kisan Status Check —</span>
             <span className="text-2xl md:text-4xl block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-yellow-100 via-amber-200 to-yellow-300">
-              कृषि कल्याण {STATS.currentTranche}वीं किस्त 2026
+              {STATS.currentTranche}वीं किस्त {STATS.currentTrancheDate}
             </span>
           </h1>
 
           <h2 className="text-base md:text-lg text-green-50 mb-5 max-w-xl leading-relaxed font-normal drop-shadow-md">
-            Kisan bhai — <strong className="text-white">{STATS.currentTranche}वीं किस्त {STATS.currentTrancheDate} को रिलीज़ हो चुकी है!</strong> अपना status अभी verify करो, digital verification complete करो, पैसा आया या नहीं देखो। <span className="text-yellow-200 font-semibold">सब फ्री — 10 मिनट में।</span>
+            Kisan bhai — <strong className="text-white">{STATS.currentTranche}वीं किस्त {STATS.currentTrancheDate} में आने वाली है!</strong> अपना status अभी verify करो, eKYC complete करो, पैसा आया या नहीं देखो। <span className="text-yellow-200 font-semibold">सब फ्री — 10 मिनट में।</span>
           </h2>
 
           <div className="flex flex-wrap gap-3">
             <Link
-              href="/articles/pm-kisan-23vi-kist-2026-status-check"
+              href="/articles/pm-kisan-24vi-kist"
               className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-black px-6 py-3.5 rounded-xl text-sm transition-all hover:scale-105 shadow-lg shadow-green-900/40 focus:ring-2 focus:ring-yellow-300 focus:outline-none"
               aria-label={`${STATS.currentTranche}वीं किस्त status verify करें`}
             >
               📆 {STATS.currentTranche}वीं किस्त Status देखो
             </Link>
             <Link
-              href="/articles/pm-kisan-ekyc-online-2026"
+              href="/articles/pm-kisan-complete-guide"
               className="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 border border-white/30 text-white font-bold px-6 py-3.5 rounded-xl text-sm transition-all hover:scale-105 backdrop-blur-sm focus:ring-2 focus:ring-white focus:outline-none"
-              aria-label="Digital verification complete करें"
+              aria-label="Complete guide padhein"
             >
-              🔐 Digital Verification करो — फ्री
+              📖 Complete Guide — सब एक जगह
             </Link>
           </div>
 
@@ -231,7 +231,7 @@ export default function HomeContent() {
         </div>
       </div>
 
-      {/* Common problems — quick solutions */}
+      {/* ✅ Common problems — ONLY links to existing 12 articles */}
       <section className="py-12 bg-[var(--color-card)]" aria-labelledby="problems-heading">
         <div className="container-site px-4">
           <div className="text-center mb-8">
@@ -242,10 +242,10 @@ export default function HomeContent() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto">
             {[
-              { icon: '💸', title: 'किस्त नहीं आई', sub: 'Payment pending या failed', href: '/articles/pm-kisan-payment-failed-status-2026', bg: 'bg-red-50 dark:bg-red-900/20', border: 'border-red-200 dark:border-red-800', tag: 'bg-red-100 text-red-700 dark:bg-red-900/40 dark:text-red-300' },
-              { icon: '🔐', title: 'Digital Verification करना है', sub: 'OTP या CSC — दोनों फ्री', href: '/articles/pm-kisan-ekyc-online-2026', bg: 'bg-green-50 dark:bg-green-900/20', border: 'border-green-200 dark:border-green-800', tag: 'bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300' },
-              { icon: '❌', title: 'Rejected हो गया', sub: 'Rejection reason पता करो', href: '/articles/pm-kisan-rejected-list-2026', bg: 'bg-orange-50 dark:bg-orange-900/20', border: 'border-orange-200 dark:border-orange-800', tag: 'bg-orange-100 text-orange-700 dark:bg-orange-900/40 dark:text-orange-300' },
-              { icon: '✏️', title: 'नाम गलत है', sub: '15 मिनट में fix करो', href: '/articles/pm-kisan-name-correction-online-2026', bg: 'bg-purple-50 dark:bg-purple-900/20', border: 'border-purple-200 dark:border-purple-800', tag: 'bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300' },
+              { icon: '📊', title: 'Status Check', sub: 'किस्त आई या नहीं', href: '/articles/pm-kisan-24vi-kist', bg: 'bg-blue-50 dark:bg-blue-900/20', border: 'border-blue-200 dark:border-blue-800', tag: 'bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300' },
+              { icon: '📋', title: 'Beneficiary List', sub: 'नाम है या नहीं', href: '/articles/pm-kisan-beneficiary-list-2026', bg: 'bg-green-50 dark:bg-green-900/20', border: 'border-green-200 dark:border-green-800', tag: 'bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300' },
+              { icon: '💰', title: 'KCC Loan', sub: '4% ब्याज पर ₹5 लाख', href: '/articles/kisan-credit-card-online-apply-2026', bg: 'bg-amber-50 dark:bg-amber-900/20', border: 'border-amber-200 dark:border-amber-800', tag: 'bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300' },
+              { icon: '🌱', title: 'Soil Health Card', sub: 'मिट्टी टेस्ट फ्री', href: '/articles/soil-health-card-complete-guide-2026', bg: 'bg-purple-50 dark:bg-purple-900/20', border: 'border-purple-200 dark:border-purple-800', tag: 'bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300' },
             ].map((c) => (
               <Link
                 key={c.href}
@@ -266,7 +266,7 @@ export default function HomeContent() {
 
           <div className="text-center mt-6">
             <Link href="/articles" className="text-sm font-bold text-[var(--color-primary)] hover:text-[var(--color-primary-dark)] hover:underline focus:ring-2 focus:ring-green-500 focus:outline-none rounded">
-              सारी Problems देखो →
+              सारी Guides देखो →
             </Link>
           </div>
         </div>
@@ -278,13 +278,13 @@ export default function HomeContent() {
           <div className="text-center mb-10">
             <span className="inline-block bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">🌾 हमारे किसान</span>
             <h2 id="cultivators-heading" className="text-2xl md:text-3xl font-black text-[var(--color-text)] mb-2">भारत की असली ताकत</h2>
-            <p className="text-[var(--color-text-muted)] text-sm max-w-xl mx-auto">11 करोड़+ किसानों को agrarian welfare से मिल रहा है हर साल ₹6,000</p>
+            <p className="text-[var(--color-text-muted)] text-sm max-w-xl mx-auto">11 करोड़+ किसानों को PM Kisan से मिल रहा है हर साल ₹6,000</p>
           </div>
 
           <div className="relative rounded-3xl overflow-hidden shadow-2xl max-w-5xl mx-auto mb-10">
             <Image
               src="/indian-farmers-wheat-field.webp"
-              alt="Indian farmers in green wheat field - Agrarian welfare beneficiaries"
+              alt="Indian farmers in green wheat field - PM Kisan beneficiaries"
               width={1200}
               height={630}
               quality={75}
@@ -295,7 +295,7 @@ export default function HomeContent() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" aria-hidden="true" />
             <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
               <div className="text-white">
-                <h3 className="text-2xl md:text-3xl font-black mb-2">किसान लाभ कार्यक्रम</h3>
+                <h3 className="text-2xl md:text-3xl font-black mb-2">PM Kisan Yojana</h3>
                 <p className="text-green-200 text-sm md:text-base">हर किसान को ₹2,000 हर 4 महीने में — सीधा bank account में</p>
               </div>
             </div>
@@ -323,14 +323,14 @@ export default function HomeContent() {
         <div className="container-site px-4">
           <div className="text-center mb-10">
             <span className="inline-block bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">📋 प्रक्रिया</span>
-            <h2 id="how-heading" className="text-2xl md:text-3xl font-black text-[var(--color-text)] mb-2">कृषि कल्याण — 3 कदमों में Complete</h2>
+            <h2 id="how-heading" className="text-2xl md:text-3xl font-black text-[var(--color-text)] mb-2">PM Kisan — 3 कदमों में Complete</h2>
             <p className="text-[var(--color-text-muted)] text-sm max-w-xl mx-auto">बस ये 3 काम करो, ₹2,000 हर 4 महीने में सीधा bank में</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-10">
             {[
-              { step: '01', title: 'Enrollment करो', desc: 'Official portal पर जाके biometric credential number से enroll करो', icon: '📝', color: 'bg-blue-50 border-blue-200 dark:bg-blue-900/20 dark:border-blue-800' },
-              { step: '02', title: 'Digital Verification Complete करो', desc: 'OTP या biometric से verification verify करो — बिल्कुल फ्री', icon: '🔐', color: 'bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800' },
+              { step: '01', title: 'Registration करो', desc: 'pmkisan.gov.in पर जाके Aadhaar से register करो', icon: '📝', color: 'bg-blue-50 border-blue-200 dark:bg-blue-900/20 dark:border-blue-800' },
+              { step: '02', title: 'eKYC Complete करो', desc: 'OTP या biometric से eKYC करो — बिल्कुल फ्री', icon: '🔐', color: 'bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800' },
               { step: '03', title: '₹2,000 पाओ', desc: 'हर 4 महीने में सीधा bank account में पैसा', icon: '💰', color: 'bg-amber-50 border-amber-200 dark:bg-amber-900/20 dark:border-amber-800' },
             ].map((item) => (
               <div key={item.step} className={`${item.color} border-2 rounded-2xl p-6 text-center hover:shadow-lg transition-all`}>
@@ -344,7 +344,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* Latest articles — featured content */}
+      {/* ✅ Latest articles — ONLY from remaining 12 articles */}
       <section className="py-14 bg-gradient-to-b from-gray-50 to-[var(--color-card)] dark:from-gray-900/50 dark:to-[var(--color-card)]" aria-labelledby="latest-heading">
         <div className="container-site px-4">
           <div className="text-center mb-8">
@@ -393,7 +393,7 @@ export default function HomeContent() {
           <div className="text-center mb-10">
             <span className="inline-block bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">🚜 Modern खेती</span>
             <h2 id="modern-heading" className="text-2xl md:text-3xl font-black text-[var(--color-text)] mb-2">Technology + खेती</h2>
-            <p className="text-[var(--color-text-muted)] text-sm max-w-xl mx-auto">कृषि कल्याण के साथ modern खेती से double आमदनी</p>
+            <p className="text-[var(--color-text-muted)] text-sm max-w-xl mx-auto">PM Kisan के साथ modern खेती से double आमदनी</p>
           </div>
 
           <div className="relative rounded-3xl overflow-hidden shadow-2xl max-w-5xl mx-auto mb-10">
@@ -411,7 +411,7 @@ export default function HomeContent() {
             <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-white">
                 {[
-                  { icon: '📱', title: 'Mobile से Apply', sub: 'घर बैठे enrollment' },
+                  { icon: '📱', title: 'Mobile से Apply', sub: 'घर बैठे registration' },
                   { icon: '🌐', title: 'Online Status', sub: 'कभी भी verify करो' },
                   { icon: '💳', title: 'सीधा Bank', sub: 'DBT से सीधा account' },
                 ].map((item) => (
@@ -427,10 +427,10 @@ export default function HomeContent() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
             {[
-              { icon: '🌱', title: 'मिट्टी Analysis Card', desc: 'मिट्टी testing फ्री', color: 'bg-green-500' },
+              { icon: '🌱', title: 'Soil Health Card', desc: 'मिट्टी testing फ्री', color: 'bg-green-500' },
               { icon: '💧', title: 'सिंचाई Support', desc: 'Water management', color: 'bg-blue-500' },
-              { icon: '🌾', title: 'फसल सुरक्षा', desc: 'Fasal suraksha', color: 'bg-amber-500' },
-              { icon: '📊', title: 'Procurement Rate', desc: 'मंडी भाव जानो', color: 'bg-purple-500' },
+              { icon: '🌾', title: 'फसल सुरक्षा', desc: 'PMFBY Insurance', color: 'bg-amber-500' },
+              { icon: '📊', title: 'Mandi Bhav', desc: 'मंडी भाव जानो', color: 'bg-purple-500' },
             ].map((feature) => (
               <div key={feature.title} className="bg-[var(--color-card)] rounded-2xl p-6 shadow-lg border-2 border-[var(--color-border)] hover:shadow-xl hover:-translate-y-1 transition-all">
                 <div className={`${feature.color} w-14 h-14 rounded-2xl flex items-center justify-center text-3xl mb-4`} role="img" aria-hidden="true">{feature.icon}</div>
