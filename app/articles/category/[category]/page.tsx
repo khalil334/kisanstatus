@@ -1,7 +1,3 @@
-/**
- * app/articles/category/[category]/page.tsx — SERVER COMPONENT
- * SSG with generateStaticParams — all category pages built at build time
- */
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -10,10 +6,6 @@ import { ARTICLES, CATEGORIES, type CategorySlug } from '@/lib/articles-data';
 import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL, DEFAULT_OG_IMAGE } from '@/lib/site-config';
 
 export const revalidate = 86400;
-
-// ═══════════════════════════════════════════════════════════
-// CATEGORY SEO CONFIG
-// ═══════════════════════════════════════════════════════════
 
 const CATEGORY_SEO: Record<CategorySlug, { title: string; description: string; emoji: string; keywords: string[] }> = {
   'status-check': {
@@ -66,10 +58,6 @@ const CATEGORY_SEO: Record<CategorySlug, { title: string; description: string; e
   },
 };
 
-// ═══════════════════════════════════════════════════════════
-// STATIC PARAMS & METADATA
-// ═══════════════════════════════════════════════════════════
-
 export async function generateStaticParams() {
   return Object.keys(CATEGORIES).map((category) => ({ category }));
 }
@@ -110,27 +98,21 @@ export async function generateMetadata({
   };
 }
 
-// ═══════════════════════════════════════════════════════════
-// PAGE RENDERER
-// ═══════════════════════════════════════════════════════════
-
 export default async function CategoryPage({
   params,
 }: {
   params: Promise<{ category: string }>;
 }) {
   const { category } = await params;
-  const cat = CATEGORIES[category as CategorySlug];
+  const cat = CATEGORIES[category as CategorySlug] as { name: string; nameHi?: string; icon: string } | undefined;
   const seo = CATEGORY_SEO[category as CategorySlug];
 
   if (!cat || !seo) notFound();
 
-  // ✅ FIX: Extract catName BEFORE using it to avoid TypeScript "never" error
-  const catName = cat.nameHi || cat.name;
+  const catName = cat.nameHi ?? cat.name;
 
   const articles = ARTICLES.filter((a) => a.category === category);
 
-  // Category counts for filter pills
   const categoryCounts: Record<string, number> = {};
   for (const slug of Object.keys(CATEGORIES)) {
     categoryCounts[slug] = ARTICLES.filter((a) => a.category === slug).length;
@@ -138,12 +120,10 @@ export default async function CategoryPage({
 
   const url = `${SITE_URL}/articles/category/${category}`;
 
-  // Schemes mentioned in this category
   const schemesInCategory = [...new Set(
     articles.flatMap((a) => a.schemes ?? [])
   )];
 
-  // Collection Schema (SEO)
   const collectionSchema = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
@@ -166,7 +146,6 @@ export default async function CategoryPage({
     },
   };
 
-  // ✅ FIX: Use catName variable instead of inline cat.nameHi || cat.name
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -183,7 +162,6 @@ export default async function CategoryPage({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <main className="min-h-screen bg-[var(--color-bg)]">
-        {/* Hero Section */}
         <section
           className="py-10 md:py-14 bg-gradient-to-br from-green-950 via-green-900 to-green-800"
           aria-labelledby="category-heading"
@@ -213,7 +191,6 @@ export default async function CategoryPage({
         </section>
 
         <div className="container-site py-6">
-          {/* Category Filter Pills */}
           <div className="flex flex-wrap justify-center gap-2 mb-8" role="navigation" aria-label="Category filters">
             <Link
               href="/articles"
@@ -225,6 +202,7 @@ export default async function CategoryPage({
               const count = categoryCounts[slug] || 0;
               if (count === 0) return null;
               const isActive = slug === category;
+              const label = (c as { name: string; nameHi?: string }).nameHi ?? (c as { name: string }).name;
               return (
                 <Link
                   key={slug}
@@ -236,13 +214,12 @@ export default async function CategoryPage({
                   }`}
                   aria-current={isActive ? 'page' : undefined}
                 >
-                  {c.icon} {c.nameHi || c.name} ({count})
+                  {(c as { icon: string }).icon} {label} ({count})
                 </Link>
               );
             })}
           </div>
 
-          {/* Articles Grid or Empty State */}
           {articles.length === 0 ? (
             <div className="text-center py-16 bg-[var(--color-card)] rounded-2xl border border-[var(--color-border)]">
               <div className="text-6xl mb-4">📭</div>
