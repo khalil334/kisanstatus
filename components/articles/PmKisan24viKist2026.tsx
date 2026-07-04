@@ -5,12 +5,6 @@ import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 
-// ═══════════════════════════════════════════════════════════
-// KIST CONFIG — Update when date confirmed
-// 23vi = 20 June 2026 (confirmed)
-// 24vi = October 2026 (expected, 4-month gap)
-// ═══════════════════════════════════════════════════════════
-
 const KIST = {
   number: '24',
   label: '24vi',
@@ -25,12 +19,12 @@ const PUBLISHED = '2026-06-24T08:00:00+05:30';
 const MODIFIED = '2026-07-04T08:00:00+05:30';
 
 const RELATED = [
-  { slug: 'pm-kisan-23vi-kist-2026-status-check', title: '23vi Installment Status', emoji: '📅' },
-  { slug: 'pm-kisan-ekyc-online-2026', title: 'Digital Verification Guide', emoji: '🔐' },
-  { slug: 'pm-kisan-payment-failed-status-2026', title: 'Payment Failed Fix', emoji: '💸' },
+  { slug: 'pm-kisan-complete-guide', title: 'PM Kisan Master Guide', emoji: '📚' },
   { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Meaning', emoji: '💳' },
   { slug: 'pm-kisan-beneficiary-list-2026', title: 'Beneficiary Roster Check', emoji: '📋' },
-  { slug: 'pm-kisan-registration-online-2026', title: 'New Enrollment Guide', emoji: '📝' },
+  { slug: 'kisan-credit-card-online-apply-2026', title: 'KCC Credit Card Guide', emoji: '💰' },
+  { slug: 'nano-dap-500ml-price-in-india-2026', title: 'Nano DAP Price Guide', emoji: '🌱' },
+  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav', emoji: '📈' },
 ];
 
 const FAQS_DATA = [
@@ -135,10 +129,10 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
           </div>
         </div>
 
-        {/* Hero Image */}
+        {/* IMAGE 1: Hero */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src={article.ogImage || '/images/pm-kisan-24vi-kist-october-2026.webp'}
+            src={article.ogImage || '/images/pm-kisan-24vi-kist-og.webp'}
             alt="PM Kisan 24vi installment October 2026 — expected date, eligibility, status check guide"
             width={1200}
             height={630}
@@ -191,6 +185,22 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             <strong>Note:</strong> Yeh prediction hai, guarantee nahi. Official announcement aate hi yeh page update hoga. Bookmark kar lo.
           </IB>
         </section>
+
+        {/* IMAGE 2: Banner */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/pm-kisan-24vi-kist-banner.webp"
+            alt="PM Kisan 24vi kist banner — October 2026 release timeline and preparation checklist"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            24vi Kist Timeline — October Se Pehle Tayyari Karo
+          </p>
+        </div>
 
         {/* Section 2: Payment History */}
         <section className="mb-8">
@@ -266,6 +276,22 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
           </WB>
         </section>
 
+        {/* IMAGE 3: October 2026 */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/pm-kisan-24vi-kist-october-2026.webp"
+            alt="PM Kisan 24vi kist October 2026 calendar — expected release date and countdown"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            Expected Release — October 2026 Calendar View
+          </p>
+        </div>
+
         {/* Section 4: Status Check */}
         <section className="mb-8">
           <SH>Status Kaise Check Karein</SH>
@@ -319,7 +345,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             </div>
           </div>
           <IB>
-            <strong>Detailed Guide:</strong> Step-by-step madad chahiye toh <Link href="/articles/pm-kisan-ekyc-online-2026" className="underline font-bold">Digital Verification Complete Guide</Link> padho.
+            <strong>Detailed Guide:</strong> Step-by-step madad chahiye toh <Link href="/articles/pm-kisan-complete-guide" className="underline font-bold">PM Kisan Complete Guide</Link> padho.
           </IB>
         </section>
 
@@ -358,6 +384,22 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
           </div>
         </section>
 
+        {/* IMAGE 4: Payment Success */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/payment-success.webp"
+            alt="PM Kisan payment success notification — ₹2000 credited to bank account"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            Payment Success — ₹2,000 Seedha Bank Account Mein
+          </p>
+        </div>
+
         {/* FAQ */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
@@ -384,7 +426,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
           href="https://pmkisan.gov.in/BeneficiaryStatus.aspx"
           label="PM Kisan Beneficiary Status — Official Portal"
           guide="Abhi Status Check Karo"
-          guideHref="/articles/pm-kisan-ekyc-online-2026"
+          guideHref="/articles/pm-kisan-complete-guide"
           portalName="pmkisan.gov.in"
         />
 
@@ -399,9 +441,9 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/pm-kisan-23vi-kist-2026-status-check', l: '📅 23vi Status' },
-          { href: '/articles/pm-kisan-ekyc-online-2026', l: '🔐 eKYC Guide' },
-          { href: '/calculator/installment-tracker', l: '📅 Tracker' },
+          { href: '/articles/pm-kisan-complete-guide', l: '📚 Master Guide' },
+          { href: '/articles/pm-kisan-fto-generated-ka-matlab-kya-hai', l: '💳 FTO Guide' },
+          { href: '/articles/pm-kisan-beneficiary-list-2026', l: '📋 Beneficiary List' },
         ]} />
         <Disclaimer />
       </div>
