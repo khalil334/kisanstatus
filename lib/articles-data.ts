@@ -1,601 +1,498 @@
-// ── lib/articles-data.ts ───────────────────────────────────
-// Centralized article metadata — single source of truth
-// ⚠️ OgImage paths match actual folder structure on GitHub
+'use client';
 
-export const CATEGORIES = {
-  'status-check': {
-    name: 'Verification & Status',
-    nameHi: 'सत्यापन और स्थिति',
-    description: 'Tranche verification, beneficiary roster, FTO, land integration guides',
-    descriptionHi: 'किस्त सत्यापन, लाभार्थी सूची, एफटीओ, भूमि एकीकरण गाइड',
-    icon: '📊',
-    color: 'blue',
-  },
-  'ekyc': {
-    name: 'Digital Verification',
-    nameHi: 'डिजिटल सत्यापन',
-    description: 'Aadhaar OTP, CSC authentication and digital verification guides',
-    descriptionHi: 'बायोमेट्रिक ओटीपी, सीएससी प्रमाणीकरण और डिजिटल सत्यापन गाइड',
-    icon: '🔐',
-    color: 'green',
-  },
-  'payment': {
-    name: 'Payment Issues',
-    nameHi: 'भुगतान समस्याएं',
-    description: 'Payment failed, rejected list, RFT, PFMS problems and solutions',
-    descriptionHi: 'भुगतान विफल, अस्वीकृत सूची, आरएफटी, पीएफएमएस समस्याएं और समाधान',
-    icon: '💸',
-    color: 'red',
-  },
-  'loan': {
-    name: 'Credit & Loans',
-    nameHi: 'ऋण और क्रेडिट',
-    description: 'Credit facility, farm equipment loan, and bank credit guides',
-    descriptionHi: 'क्रेडिट सुविधा, कृषि उपकरण ऋण, और बैंक क्रेडिट गाइड',
-    icon: '🏦',
-    color: 'amber',
-  },
-  'registration': {
-    name: 'Enrollment',
-    nameHi: 'नामांकन',
-    description: 'New PM Kisan enrollment and eligibility guides',
-    descriptionHi: 'नए पीएम किसान नामांकन और पात्रता गाइड',
-    icon: '📝',
-    color: 'purple',
-  },
-  'farming': {
-    name: 'Farming & Schemes',
-    nameHi: 'खेती और योजनाएं',
-    description: 'Soil analysis, crop protection, AgriStack, Nano DAP and other schemes',
-    descriptionHi: 'मृदा विश्लेषण, फसल सुरक्षा, एग्रीस्टैक, नैनो डीएपी और अन्य योजनाएं',
-    icon: '🌾',
-    color: 'emerald',
-  },
-  'correction': {
-    name: 'Identity Corrections',
-    nameHi: 'पहचान सुधार',
-    description: 'Name, contact, Aadhaar, bank account correction guides',
-    descriptionHi: 'नाम, संपर्क, बायोमेट्रिक, बैंक खाता सुधार गाइड',
-    icon: '✏️',
-    color: 'orange',
-  },
-  'mandi': {
-    name: 'Market Rates',
-    nameHi: 'बाजार दरें',
-    description: 'Daily vegetable and fruit market rates, wholesale prices',
-    descriptionHi: 'दैनिक सब्जी और फल बाजार दरें, थोक कीमतें',
-    icon: '📈',
-    color: 'yellow',
-  },
-} as const;
+import { useEffect, useState, useMemo } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { IB, WB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock } from '@/components/ArticleShared';
+import type { ArticleMeta } from '@/lib/articles-data';
+import { SITE_URL, SITE_NAME } from '@/lib/site-config';
 
-export type CategorySlug = keyof typeof CATEGORIES;
+// ═══════════════════════════════════════════════════════════
+// UPDATED: July 4, 2026
+// Current market rates based on AgMarkNet data
+// ═══════════════════════════════════════════════════════════
 
-export interface ArticleMeta {
-  slug: string;
-  title: string;
-  desc: string;
-  ogTitle: string;
-  readonly keywords: readonly string[];
-  component: string;
-  category: CategorySlug;
-  publishedTime: string;
-  modifiedTime: string;
-  readingTime?: number;
-  states?: readonly string[];
-  districts?: readonly string[];
-  banks?: readonly string[];
-  schemes?: readonly string[];
-  ogImage?: string;
-  relatedSlugs?: readonly string[];
+const LAST_UPDATED = '4 July 2026, 08:00 AM';
+const SOURCE_URL = 'https://agmarknet.gov.in';
+
+type Trend = 'up' | 'down' | 'stable';
+
+interface CommodityItem {
+  name: string;
+  rate: string;
+  prev: number;
+  change: string;
+  trend: Trend;
 }
 
-export const ARTICLES: readonly ArticleMeta[] = [
-  {
-    slug: 'kisan-rin-kaha-se-le-2026',
-    title: 'Kisan Loan Kahan Se Milega 2026? KCC, Bank, CSC — Puri Jankari',
-    desc: 'Loan chahiye to confusion hota hai — SBI, cooperative, CSC, har jagah process alag. Is guide mein sab kuch hai.',
-    ogTitle: 'Kisan Loan Guide 2026 — Complete Jankari Hindi Mein',
-    keywords: ['kisan loan kahan se milega 2026', 'kisan credit card', 'kisan loan 2026', 'SBI kisan loan', 'CSC center loan', 'कृषि ऋण कहाँ से लें', 'किसान लोन 2026'],
-    component: 'KisanRinKahaSeLe2026',
-    category: 'loan',
-    publishedTime: '2026-01-10T08:00:00+05:30',
-    modifiedTime: '2026-07-04T08:00:00+05:30',
-    readingTime: 8,
-    banks: ['sbi', 'pnb', 'bob', 'cooperative'],
-    schemes: ['kcc'],
-    ogImage: '/images/kisan-rin-kaha-se-le-2026.webp',
-    relatedSlugs: ['kisan-credit-card-online-apply-2026', 'kisan-tractor-loan-2026'],
-  },
-  {
-    slug: 'kisan-tractor-loan-2026',
-    title: 'Tractor Loan Bina Down Payment — Kya Yeh Sach Mein Mil Sakta Hai?',
-    desc: 'Bina down payment ke tractor loan? Mahindra Finance, TATA Capital, aur state banks mein scheme hai.',
-    ogTitle: 'Tractor Loan Bina Down Payment 2026 — Puri Jankari',
-    keywords: ['tractor loan 2026', 'tractor finance 2026', 'ट्रैक्टर लोन बिना डाउन पेमेंट', 'किसान ट्रैक्टर लोन 2026'],
-    component: 'KisanTractorLoan2026',
-    category: 'loan',
-    publishedTime: '2026-01-20T08:00:00+05:30',
-    modifiedTime: '2026-07-04T08:00:00+05:30',
-    readingTime: 10,
-    banks: ['mahindra-finance', 'tata-capital'],
-    schemes: ['nabard-tractor'],
-    ogImage: '/images/kisan-tractor-loan-2026/hero-banner.webp',
-    relatedSlugs: ['kisan-rin-kaha-se-le-2026', 'kisan-credit-card-online-apply-2026'],
-  },
-  {
-    slug: 'pm-kisan-beneficiary-list-2026',
-    title: 'PM Kisan Beneficiary List 2026 — Apna Naam Kaise Check Karein?',
-    desc: 'Beneficiary list mein naam hai ya nahi? Village-wise roster dekh sakte ho, PDF download kar sakte ho.',
-    ogTitle: 'PM Kisan Beneficiary List 2026 — Naam Check Karo',
-    keywords: ['pm kisan beneficiary list 2026', 'pm kisan village wise roster', 'पीएम किसान लाभार्थी सूची 2026'],
-    component: 'PmKisanBeneficiaryList2026',
-    category: 'status-check',
-    publishedTime: '2026-02-10T08:00:00+05:30',
-    modifiedTime: '2026-07-04T08:00:00+05:30',
-    readingTime: 7,
-    schemes: ['pm-kisan'],
-    ogImage: '/images/pm-kisan-beneficiary-list-village-wise-2026.webp',
-    relatedSlugs: ['pm-kisan-beneficiary-list-village-wise-2026', 'pm-kisan-rejected-list-2026'],
-  },
-  {
-    slug: 'pm-kisan-beneficiary-list-village-wise-2026',
-    title: 'Apne Gaon Ki Beneficiary List Dekho — Village Wise Roster 2026',
-    desc: 'Apne gaon mein kaun-kaun PM Kisan ka paisa le raha hai — State, District, Block select karo.',
-    ogTitle: 'PM Kisan Gaon Wise Beneficiary List 2026 — Complete Guide',
-    keywords: ['pm kisan beneficiary list village wise', 'pm kisan gaon wise roster', 'पीएम किसान ग्राम वार लाभार्थी सूची'],
-    component: 'PmKisanBeneficiaryListVillageWise2026',
-    category: 'status-check',
-    publishedTime: '2026-02-15T08:00:00+05:30',
-    modifiedTime: '2026-07-04T08:00:00+05:30',
-    readingTime: 6,
-    schemes: ['pm-kisan'],
-    ogImage: '/images/pm-kisan-beneficiary-list-village-wise-2026.webp',
-    relatedSlugs: ['pm-kisan-beneficiary-list-2026'],
-  },
-  {
-    slug: 'pm-kisan-correction-deactivate-block-guide-2026',
-    title: 'PM Kisan Account Block? Reactivate Kaise Karein?',
-    desc: 'Account block ho gaya to tension hoti hai. Common reason — naam Aadhaar se match nahi ho raha.',
-    ogTitle: 'PM Kisan Account Reactivate — Naam, Aadhaar, Bank Fix',
-    keywords: ['pm kisan correction 2026', 'pm kisan naam correction', 'account deactivate fix', 'पीएम किसान नाम करेक्शन 2026'],
-    component: 'PmKisanCorrectionDeactivateBlockGuide2026',
-    category: 'correction',
-    publishedTime: '2026-02-20T08:00:00+05:30',
-    modifiedTime: '2026-07-04T08:00:00+05:30',
-    readingTime: 9,
-    schemes: ['pm-kisan'],
-    ogImage: '/images/pm-kisan-correction-deactivate-block-guide-2026.webp',
-    relatedSlugs: ['pm-kisan-name-correction-online-2026', 'pm-kisan-payment-failed-status-2026'],
-  },
-  {
-    slug: 'pm-kisan-ekyc-online-2026',
-    title: 'PM Kisan eKYC Online Kaise Kare? OTP Ya CSC — Dono Tarike',
-    desc: 'Ab ghar baithe OTP se eKYC ho jaata hai — 5 minute ka kaam hai. Phone se karo, simple hai.',
-    ogTitle: 'PM Kisan eKYC Online 2026 — Ghar Baithe Karo',
-    keywords: ['pm kisan ekyc online 2026', 'pm kisan biometric verification', 'पीएम किसान डिजिटल सत्यापन 2026'],
-    component: 'PmKisanEkycOnline2026',
-    category: 'ekyc',
-    publishedTime: '2026-03-01T08:00:00+05:30',
-    modifiedTime: '2026-07-04T08:00:00+05:30',
-    readingTime: 7,
-    schemes: ['pm-kisan'],
-    ogImage: '/images/pm-kisan-ekyc-online-2026.webp',
-    relatedSlugs: ['pm-kisan-23vi-kist-2026-status-check', 'pm-kisan-mobile-number-change'],
-  },
-  {
-    slug: 'pm-kisan-installment-history-check-online',
-    title: 'PM Kisan Purani Kiston Ka Hisaab — Transaction History Kaise Dekhein?',
-    desc: 'Pichli kistein kab aayi thi? Enrollment ID se history check karo — poori list aa jaati hai.',
-    ogTitle: 'PM Kisan Transaction History — Purani Kistein Dekho',
-    keywords: ['pm kisan transaction history', 'pm kisan payment history', 'पीएम किसान किस्त इतिहास ऑनलाइन'],
-    component: 'PmKisanInstallmentHistoryCheckOnline',
-    category: 'status-check',
-    publishedTime: '2026-03-05T08:00:00+05:30',
-    modifiedTime: '2026-07-04T08:00:00+05:30',
-    readingTime: 6,
-    schemes: ['pm-kisan'],
-    ogImage: '/images/pm-kisan-installment-history-check-online.webp',
-    relatedSlugs: ['pm-kisan-23vi-kist-2026-status-check', 'pm-kisan-payment-failed-status-2026'],
-  },
-  {
-    slug: 'pm-kisan-land-seeding-status-check',
-    title: 'PM Kisan Land Seeding Pending? Kist Nahi Aayegi Agar...',
-    desc: 'Land Seeding No hai to kist ruk jaati hai. Patwari se milo, form bharo, 15 din mein sab theek.',
-    ogTitle: 'PM Kisan Land Seeding Fix — Pending, Rejected Solution',
-    keywords: ['pm kisan land seeding status', 'land seeding pending fix', 'पीएम किसान लैंड सीडिंग स्टेटस'],
-    component: 'PmKisanLandSeedingStatusCheck',
-    category: 'status-check',
-    publishedTime: '2026-03-10T08:00:00+05:30',
-    modifiedTime: '2026-07-04T08:00:00+05:30',
-    readingTime: 8,
-    schemes: ['pm-kisan'],
-    ogImage: '/images/pm-kisan-land-seeding-status-check.webp',
-    relatedSlugs: ['pm-kisan-payment-failed-status-2026', 'pm-kisan-correction-deactivate-block-guide-2026'],
-  },
-  {
-    slug: 'pm-kisan-name-correction-online-2026',
-    title: 'Aadhaar Se Naam Match Nahi Ho Raha? PM Kisan Name Correction',
-    desc: 'Aadhaar mein naam alag, bank mein alag, portal mein alag — payment fail ho jaati hai.',
-    ogTitle: 'PM Kisan Name Correction — Aadhaar Match Karo',
-    keywords: ['pm kisan name correction', 'aadhaar name mismatch', 'पीएम किसान नाम सुधार 2026'],
-    component: 'PmKisanNameCorrectionOnline2026',
-    category: 'correction',
-    publishedTime: '2026-03-15T08:00:00+05:30',
-    modifiedTime: '2026-07-04T08:00:00+05:30',
-    readingTime: 7,
-    schemes: ['pm-kisan'],
-    ogImage: '/images/pm-kisan-name-correction-online-2026.webp',
-    relatedSlugs: ['pm-kisan-correction-deactivate-block-guide-2026', 'pm-kisan-mobile-number-change'],
-  },
-  {
-    slug: 'pm-kisan-payment-failed-status-2026',
-    title: 'PM Kisan Paisa Nahi Aaya? Payment Failed — 5 Reasons Aur Fix',
-    desc: 'Status check kiya to "Payment Failed" dikh raha hai? 5 main reasons hote hain.',
-    ogTitle: 'PM Kisan Payment Failed — 5 Reasons Aur Fix',
-    keywords: ['pm kisan payment failed 2026', 'NPCI error fix', 'पीएम किसान पेमेंट फेल 2026'],
-    component: 'PmKisanPaymentFailedStatus2026',
-    category: 'payment',
-    publishedTime: '2026-03-20T08:00:00+05:30',
-    modifiedTime: '2026-07-04T08:00:00+05:30',
-    readingTime: 8,
-    schemes: ['pm-kisan'],
-    banks: ['sbi', 'pnb', 'bob'],
-    ogImage: '/images/pm-kisan-payment-failed-status-2026.webp',
-    relatedSlugs: ['pm-kisan-land-seeding-status-check', 'pm-kisan-name-correction-online-2026', 'pm-kisan-ekyc-online-2026'],
-  },
-  {
-    slug: 'pm-kisan-problems-solution-guide-2026',
-    title: 'PM Kisan 10 Badi Problems Aur Unka Seedha Hal',
-    desc: 'RFT Signed, PFMS Pending, Payment Fail — har problem ka solution hai.',
-    ogTitle: 'PM Kisan 10 Problems — Sab Fix Karo',
-    keywords: ['pm kisan problems solution', 'RFT signed meaning', 'PFMS pending fix', 'पीएम किसान समस्या समाधान 2026'],
-    component: 'PmKisanProblemsSolutionGuide2026',
-    category: 'payment',
-    publishedTime: '2026-03-25T08:00:00+05:30',
-    modifiedTime: '2026-07-04T08:00:00+05:30',
-    readingTime: 10,
-    schemes: ['pm-kisan'],
-    ogImage: '/images/pm-kisan-problems-solution-guide-2026.webp',
-    relatedSlugs: ['pm-kisan-payment-failed-status-2026', 'pm-kisan-fto-generated-ka-matlab-kya-hai'],
-  },
-  {
-    slug: 'pm-kisan-registration-online-2026',
-    title: 'PM Kisan Naya Registration Kaise Karein? Online Apply Guide',
-    desc: 'PM Kisan mein naye ho? Online form bharo, documents upload karo, 15 minute mein ho jaata hai.',
-    ogTitle: 'PM Kisan New Registration 2026 — Step by Step',
-    keywords: ['pm kisan registration online 2026', 'new kisan enrollment', 'पीएम किसान रजिस्ट्रेशन ऑनलाइन 2026'],
-    component: 'PmKisanRegistrationOnline2026',
-    category: 'registration',
-    publishedTime: '2026-04-01T08:00:00+05:30',
-    modifiedTime: '2026-07-04T08:00:00+05:30',
-    readingTime: 9,
-    schemes: ['pm-kisan'],
-    ogImage: '/images/pm-kisan-registration-online-2026.webp',
-    relatedSlugs: ['pm-kisan-ekyc-online-2026', 'pm-kisan-self-registered-status-check'],
-  },
-  {
-    slug: 'pm-kisan-rejected-list-2026',
-    title: 'PM Kisan Rejected List Mein Naam? Fix Kaise Karein?',
-    desc: 'Naam rejected list mein hai? Common reason — land records galat.',
-    ogTitle: 'PM Kisan Rejected List — Reason Aur Fix',
-    keywords: ['pm kisan rejected list 2026', 'rejection reason fix', 'पीएम किसान रिजेक्टेड लिस्ट 2026'],
-    component: 'PmKisanRejectedList2026',
-    category: 'payment',
-    publishedTime: '2026-04-10T08:00:00+05:30',
-    modifiedTime: '2026-07-04T08:00:00+05:30',
-    readingTime: 7,
-    schemes: ['pm-kisan'],
-    ogImage: '/images/pm-kisan-rejected-list-2026.webp',
-    relatedSlugs: ['pm-kisan-beneficiary-list-2026', 'pm-kisan-correction-deactivate-block-guide-2026'],
-  },
-  {
-    slug: 'pmfby-crop-insurance-2026',
-    title: 'PMFBY Crop Insurance 2026 — Claim Kaise Karein? Complete Guide',
-    desc: 'Fasal kharab ho gayi? PMFBY claim kar sakte ho. 45 din lagte hain lekin paisa aa jaata hai.',
-    ogTitle: 'PMFBY Crop Insurance Claim — Complete Guide 2026',
-    keywords: ['pmfby crop insurance claim', 'fasal bima claim status', 'प्रधानमंत्री फसल बीमा योजना क्लेम'],
-    component: 'PmfbyCropInsurance2026',
-    category: 'farming',
-    publishedTime: '2026-04-20T08:00:00+05:30',
-    modifiedTime: '2026-07-04T08:00:00+05:30',
-    readingTime: 12,
-    schemes: ['pmfby'],
-    ogImage: '/images/pmfby-crop-insurance-2026/hero-image.webp',
-    relatedSlugs: ['soil-health-card-complete-guide-2026', 'nano-dap-500ml-price-in-india-2026'],
-  },
-  {
-    slug: 'pm-kisan-23vi-kist-2026-status-check',
-    title: 'PM Kisan 23vi Kist Status Check 2026 — Abhi Verify Karo',
-    desc: '23vi kist ka wait hai? Mobile se check karo — Aadhaar number dalo, OTP verify karo.',
-    ogTitle: 'PM Kisan 23vi Kist Status — Abhi Verify Karo',
-    keywords: ['pm kisan 23vi kist status 2026', 'pm kisan verification', 'पीएम किसान 23वीं किस्त स्टेटस 2026'],
-    component: 'PmKisan23viKistStatusCheck2026',
-    category: 'status-check',
-    publishedTime: '2026-04-01T00:00:00+05:30',
-    modifiedTime: '2026-07-04T08:00:00+05:30',
-    readingTime: 7,
-    schemes: ['pm-kisan'],
-    ogImage: '/images/pm-kisan-23vi-kist-2026-status-check.webp',
-    relatedSlugs: ['pm-kisan-ekyc-online-2026', 'pm-kisan-payment-failed-status-2026', 'pm-kisan-24vi-kist'],
-  },
-  {
-    slug: 'kisan-credit-card-online-apply-2026',
-    title: 'Kisan Credit Card Online Apply 2026 — ₹5 Lakh Loan, 4% Interest',
-    desc: 'KCC hai to ₹5 lakh tak loan mil sakta hai, interest rate sirf 4%.',
-    ogTitle: 'Kisan Credit Card Online Apply — ₹5 Lakh Loan 2026',
-    keywords: ['kisan credit card online apply 2026', 'KCC apply online', 'किसान क्रेडिट कार्ड ऑनलाइन अप्लाई 2026'],
-    component: 'KisanCreditCardOnlineApply2026',
-    category: 'loan',
-    publishedTime: '2026-06-01T08:00:00+05:30',
-    modifiedTime: '2026-07-04T08:00:00+05:30',
-    readingTime: 9,
-    banks: ['sbi', 'pnb', 'bob', 'cooperative'],
-    schemes: ['kcc'],
-    ogImage: '/images/kisan-credit-card-online-apply-2026/hero-image.webp',
-    relatedSlugs: ['kisan-rin-kaha-se-le-2026', 'kisan-tractor-loan-2026'],
-  },
-  {
-    slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai',
-    title: 'FTO Generated Ka Matlab Kya Hai? PM Kisan Status Explained',
-    desc: 'FTO Generated, FTO Pending — confused ho? FTO matlab Fund Transfer Order.',
-    ogTitle: 'FTO Generated Matlab — PM Kisan Status Guide',
-    keywords: ['FTO generated meaning', 'fund transfer order status', 'एफटीओ जेनरेटेड क्या होता है'],
-    component: 'PmKisanFtoGeneratedKaMatlabKyaHai',
-    category: 'status-check',
-    publishedTime: '2026-06-23T08:00:00+05:30',
-    modifiedTime: '2026-07-04T08:00:00+05:30',
-    readingTime: 6,
-    schemes: ['pm-kisan'],
-    ogImage: '/images/pm-kisan-fto-generated-ka-matlab-kya-hai.webp',
-    relatedSlugs: ['pm-kisan-problems-solution-guide-2026', 'pm-kisan-payment-failed-status-2026'],
-  },
-  {
-    slug: 'nano-dap-500ml-price-in-india-2026',
-    title: 'Nano DAP 500ml Price India 2026 — IFFCO Rate Aur Kahan Milega',
-    desc: 'IFFCO Nano DAP 500ml bottle ₹280-320 ke beech hai.',
-    ogTitle: 'Nano DAP 500ml Price 2026 — Kahan Se Khariden?',
-    keywords: ['Nano DAP 500ml price India 2026', 'IFFCO Nano DAP price', 'नैनो डीएपी 500ml कीमत 2026'],
-    component: 'NanoDap500mlPriceInIndia2026',
-    category: 'farming',
-    publishedTime: '2026-06-24T08:00:00+05:30',
-    modifiedTime: '2026-07-04T08:00:00+05:30',
-    readingTime: 7,
-    schemes: ['nano-dap'],
-    ogImage: '/images/nano-dap-500ml-price-in-india-2026.webp',
-    relatedSlugs: ['soil-health-card-complete-guide-2026', 'pmfby-crop-insurance-2026'],
-  },
-  {
-    slug: 'pm-kisan-24vi-kist',
-    title: 'PM Kisan 24vi Kist Kab Aayegi? Date Aur Status Guide 2026',
-    desc: '23vi aa gayi, ab 24vi ka wait. October 2026 tak aane ki umeed.',
-    ogTitle: 'PM Kisan 24vi Kist — Kab Aayegi 2026?',
-    keywords: ['pm kisan 24vi kist 2026', 'next kist date 2026', 'पीएम किसान 24वीं किस्त 2026'],
-    component: 'PmKisan24viKist2026',
-    category: 'status-check',
-    publishedTime: '2026-06-24T08:00:00+05:30',
-    modifiedTime: '2026-07-04T08:00:00+05:30',
-    readingTime: 6,
-    schemes: ['pm-kisan'],
-    ogImage: '/images/pm-kisan-24vi-kist-october-2026.webp',
-    relatedSlugs: ['pm-kisan-23vi-kist-2026-status-check', 'pm-kisan-ekyc-online-2026'],
-  },
-  {
-    slug: 'agristack-kya-hai',
-    title: 'AgriStack Kya Hai? Digital Kisan ID Aur PM Kisan Connection',
-    desc: 'AgriStack digital kisan ID hai. PM Kisan se connected hai.',
-    ogTitle: 'AgriStack Kya Hai — Digital Kisan ID Complete Guide',
-    keywords: ['AgriStack kya hai', 'AgriStack 2026', 'digital kisan ID AgriStack', 'एग्रीस्टैक क्या है'],
-    component: 'AgriStackKyaHai2026',
-    category: 'farming',
-    publishedTime: '2026-06-24T08:00:00+05:30',
-    modifiedTime: '2026-07-04T08:00:00+05:30',
-    readingTime: 10,
-    schemes: ['agristack', 'pm-kisan'],
-    ogImage: '/images/agristack-kya-hai/infographic.webp',
-    relatedSlugs: ['pm-kisan-registration-online-2026', 'pm-kisan-complete-guide'],
-  },
-  {
-    slug: 'pm-kisan-mobile-number-change',
-    title: 'PM Kisan Mobile Number Change — Online Ya CSC Se Update Karo',
-    desc: 'Purana number band? CSC jao, form bharo, 7 din mein naya number update.',
-    ogTitle: 'PM Kisan Mobile Number Change — Complete Guide',
-    keywords: ['pm kisan mobile number change 2026', 'mobile number update pm kisan', 'पीएम किसान मोबाइल नंबर बदलें 2026'],
-    component: 'PmKisanMobileNumberChange2026',
-    category: 'correction',
-    publishedTime: '2026-06-24T08:00:00+05:30',
-    modifiedTime: '2026-07-04T08:00:00+05:30',
-    readingTime: 6,
-    schemes: ['pm-kisan'],
-    ogImage: '/images/pm-kisan-mobile-number-change-2026.webp',
-    relatedSlugs: ['pm-kisan-ekyc-online-2026', 'pm-kisan-name-correction-online-2026'],
-  },
-  {
-    slug: 'pm-kisan-complete-guide',
-    title: 'PM Kisan Complete Guide 2026 — Sab Problems Ka Ek Saath Hal',
-    desc: 'Status verify, eKYC, payment fail — sab ek jagah.',
-    ogTitle: 'PM Kisan Complete Guide — Sab Problems Fix',
-    keywords: ['pm kisan complete guide 2026', 'all problems solution', 'पीएम किसान पूर्ण गाइड'],
-    component: 'PmKisanCompleteGuide',
-    category: 'status-check',
-    publishedTime: '2026-06-27T08:00:00+05:30',
-    modifiedTime: '2026-07-04T08:00:00+05:30',
-    readingTime: 15,
-    schemes: ['pm-kisan'],
-    ogImage: '/images/pm-kisan-complete-guide/hero.webp',
-    relatedSlugs: ['pm-kisan-23vi-kist-2026-status-check', 'pm-kisan-ekyc-online-2026', 'pm-kisan-payment-failed-status-2026'],
-  },
-  {
-    slug: 'soil-health-card-complete-guide-2026',
-    title: 'Soil Health Card 2026 — Mitti Test Karwane Ka Pura Process',
-    desc: 'Mitti test karwao — CSC se form lo, sample do, 15 din mein report.',
-    ogTitle: 'Soil Health Card Complete Guide 2026 — Sab Kuch Jaano',
-    keywords: ['soil health card complete guide 2026', 'soil health card download', 'मिट्टी स्वास्थ्य कार्ड 2026'],
-    component: 'SoilHealthCardCompleteGuide2026',
-    category: 'farming',
-    publishedTime: '2026-06-27T08:00:00+05:30',
-    modifiedTime: '2026-07-04T08:00:00+05:30',
-    readingTime: 8,
-    schemes: ['soil-health-card'],
-    ogImage: '/images/soil-health-card-complete-guide-2026/hero.webp',
-    relatedSlugs: ['nano-dap-500ml-price-in-india-2026', 'pmfby-crop-insurance-2026'],
-  },
-  {
-    slug: 'pm-kisan-self-registered-status-check',
-    title: 'PM Kisan Self-Registered Status Check — Khud Apply Kiya?',
-    desc: 'Khud se apply kiya lekin status nahi dikh raha? Portal par jao, enrollment ID dalo.',
-    ogTitle: 'PM Kisan Self-Registered Status — Verify Karo',
-    keywords: ['pm kisan self registered status check', 'self enrollment status', 'पीएम किसान सेल्फ रजिस्टर्ड स्टेटस'],
-    component: 'PmKisanSelfRegisteredStatusCheck',
-    category: 'status-check',
-    publishedTime: '2026-06-28T08:00:00+05:30',
-    modifiedTime: '2026-07-04T08:00:00+05:30',
-    readingTime: 7,
-    schemes: ['pm-kisan'],
-    ogImage: '/images/pm-kisan-self-registered-status/pm-kisan-portal-homepage.webp',
-    relatedSlugs: ['pm-kisan-registration-online-2026', 'pm-kisan-23vi-kist-2026-status-check'],
-  },
-  {
-    slug: 'pm-kisan-status-check-online-2026-complete-guide',
-    title: 'PM Kisan Status Check Online 2026 — Real Guide With Screenshots',
-    desc: 'Aadhaar se karo, mobile se karo, enrollment ID se bhi kar sakte ho.',
-    ogTitle: 'PM Kisan Status Verification — Real Guide 2026',
-    keywords: ['pm kisan status check online 2026', 'online status check', 'पीएम किसान स्टेटस चेक'],
-    component: 'PmKisanStatusCheckOnline2026CompleteGuide',
-    category: 'status-check',
-    publishedTime: '2026-06-29T08:00:00+05:30',
-    modifiedTime: '2026-07-04T08:00:00+05:30',
-    readingTime: 10,
-    schemes: ['pm-kisan'],
-    ogImage: '/images/pm-kisan-status-check-online-2026-complete-guide.webp',
-    relatedSlugs: ['pm-kisan-23vi-kist-2026-status-check', 'pm-kisan-complete-guide'],
-  },
-  {
-    slug: 'mandi-bhav-today',
-    title: 'Aaj Ka Mandi Bhav — Sabzi Aur Fruit Rates (Daily Update)',
-    desc: 'Aloo ₹20-24, pyaaz ₹26-30, tamatar ₹38-45. Daily updated rates.',
-    ogTitle: 'Aaj Ka Mandi Bhav — Live Sabzi Aur Fruit Rates',
-    keywords: ['aaj ka mandi bhav', 'mandi bhav today hindi', 'aaj ke sabzi bhav'],
-    component: 'MandiBhavToday',
-    category: 'mandi',
-    publishedTime: '2026-06-30T09:30:00+05:30',
-    modifiedTime: '2026-07-04T08:00:00+05:30',
-    readingTime: 5,
-    ogImage: '/images/mandi-bhav-today/mandi-fresh-vegetables-mixed.webp',
-  },
-] as const;
+// UPDATED RATES - July 2026 (Monsoon season impact)
+const VEGETABLES: readonly CommodityItem[] = [
+  { name: 'आलू (Aloo)',           rate: '₹20-26/kg',    prev: 22,  change: '-₹2',  trend: 'down' },
+  { name: 'प्याज (Pyaaz)',        rate: '₹28-38/kg',    prev: 32,  change: '+₹4',  trend: 'up' },
+  { name: 'टमाटर (Tamatar)',      rate: '₹45-60/kg',    prev: 42,  change: '+₹8',  trend: 'up' },
+  { name: 'गाजर (Gaajar)',        rate: '₹24-32/kg',    prev: 28,  change: '-₹3',  trend: 'down' },
+  { name: 'गोभी (Gobhi)',         rate: '₹18-24/kg',    prev: 22,  change: '-₹2',  trend: 'down' },
+  { name: 'भिंडी (Bhindi)',       rate: '₹35-45/kg',    prev: 38,  change: '-₹3',  trend: 'down' },
+  { name: 'पालक (Palak)',         rate: '₹12-18/kg',    prev: 15,  change: '-₹2',  trend: 'down' },
+  { name: 'मेथी (Methi)',         rate: '₹20-28/kg',    prev: 24,  change: '-₹2',  trend: 'down' },
+  { name: 'लौकी (Lauki)',         rate: '₹12-18/kg',    prev: 16,  change: '-₹2',  trend: 'down' },
+  { name: 'खीरा (Kheera)',        rate: '₹14-20/kg',    prev: 18,  change: '-₹2',  trend: 'down' },
+  { name: 'शिमला मिर्च (Shimla)', rate: '₹50-65/kg',    prev: 55,  change: '+₹5',  trend: 'up' },
+  { name: 'बैंगन (Baingan)',      rate: '₹22-30/kg',    prev: 26,  change: '-₹2',  trend: 'down' },
+  { name: 'मटर (Matar)',          rate: '₹40-50/kg',    prev: 45,  change: '-₹3',  trend: 'down' },
+  { name: 'मूली (Mooli)',         rate: '₹10-16/kg',    prev: 14,  change: '-₹2',  trend: 'down' },
+  { name: 'शलगम (Shalgam)',       rate: '₹14-20/kg',    prev: 18,  change: '-₹2',  trend: 'down' },
+  { name: 'हरी मिर्च (Hari Mirch)', rate: '₹60-80/kg',  prev: 70,  change: '+₹5',  trend: 'up' },
+  { name: 'अदरक (Adrak)',         rate: '₹90-120/kg',   prev: 100, change: '+₹10', trend: 'up' },
+  { name: 'लहसुन (Lehsun)',       rate: '₹140-180/kg',  prev: 160, change: '+₹10', trend: 'up' },
+];
 
-export const ARTICLES_MAP: Readonly<Record<string, ArticleMeta>> = Object.freeze(
-  Object.fromEntries(ARTICLES.map((a) => [a.slug, a]))
-);
+const FRUITS: readonly CommodityItem[] = [
+  { name: 'सेब (Seb)',            rate: '₹140-180/kg',  prev: 150, change: '+₹10', trend: 'up' },
+  { name: 'केला (Kela)',          rate: '₹50-65/dozen', prev: 55,  change: '+₹3',  trend: 'up' },
+  { name: 'संतरा (Santra)',       rate: '₹90-120/kg',   prev: 100, change: '+₹8',  trend: 'up' },
+  { name: 'अंगूर (Angoor)',       rate: '₹80-110/kg',   prev: 95,  change: '-₹5',  trend: 'down' },
+  { name: 'आम (Aam)',             rate: '₹120-180/kg',  prev: 150, change: '-₹20', trend: 'down' },
+  { name: 'पपीता (Papita)',       rate: '₹35-45/kg',    prev: 40,  change: '-₹3',  trend: 'down' },
+  { name: 'अनार (Anar)',          rate: '₹120-150/kg',  prev: 130, change: '+₹8',  trend: 'up' },
+  { name: 'नाशपाती (Nashpati)',   rate: '₹70-95/kg',    prev: 80,  change: '-₹5',  trend: 'down' },
+  { name: 'आड़ू (Aadu)',          rate: '₹60-80/kg',    prev: 70,  change: '-₹5',  trend: 'down' },
+  { name: 'लीची (Litchi)',        rate: '₹80-120/kg',   prev: 110, change: '-₹20', trend: 'down' },
+  { name: 'तरबूज (Tarbuj)',       rate: '₹15-25/kg',    prev: 20,  change: '-₹3',  trend: 'down' },
+  { name: 'खरबूजा (Kharbuja)',    rate: '₹30-45/kg',    prev: 38,  change: '-₹5',  trend: 'down' },
+];
 
-export function getArticleBySlug(slug: string): ArticleMeta | undefined {
-  return ARTICLES_MAP[slug];
+interface CityRate {
+  state: string;
+  mandi: string;
+  veg: string;
+  fruit: string;
+  id: string;
 }
 
-export function getArticlesByCategory(category: CategorySlug): readonly ArticleMeta[] {
-  return ARTICLES.filter((a) => a.category === category);
-}
+const STATE_RATES: readonly CityRate[] = [
+  { state: 'दिल्ली',    mandi: 'Azadpur Mandi',     veg: '₹24-32', fruit: '₹95-130',  id: 'delhi' },
+  { state: 'मुंबई',     mandi: 'Vashi APMC Mandi',  veg: '₹28-38', fruit: '₹100-135', id: 'mumbai' },
+  { state: 'कोलकाता',   mandi: 'Sealdah Mandi',     veg: '₹22-30', fruit: '₹90-120',  id: 'kolkata' },
+  { state: 'चेन्नई',    mandi: 'Koyambedu Mandi',   veg: '₹26-34', fruit: '₹95-125',  id: 'chennai' },
+  { state: 'बेंगलुरु',  mandi: 'Yeshwanthpur APMC', veg: '₹24-32', fruit: '₹90-120',  id: 'bengaluru' },
+  { state: 'लखनऊ',      mandi: 'Lucknow Mandi',     veg: '₹20-28', fruit: '₹85-115',  id: 'lucknow' },
+  { state: 'जयपुर',     mandi: 'Muhana Mandi',      veg: '₹22-30', fruit: '₹88-118',  id: 'jaipur' },
+  { state: 'पुणे',      mandi: 'Market Yard Pune',  veg: '₹26-34', fruit: '₹95-125',  id: 'pune' },
+];
 
-export function getLatestArticles(limit: number = 5): readonly ArticleMeta[] {
-  return [...ARTICLES]
-    .sort((a, b) => new Date(b.publishedTime).getTime() - new Date(a.publishedTime).getTime())
-    .slice(0, limit);
-}
+const RELATED = [
+  { slug: 'pm-kisan-23vi-kist-2026-status-check', title: '23vi Kist Status Check', emoji: '📆' },
+  { slug: 'pm-kisan-ekyc-online-2026', title: 'Digital Verification Guide', emoji: '🔐' },
+  { slug: 'soil-health-card-complete-guide-2026', title: 'Soil Analysis Card', emoji: '🌱' },
+  { slug: 'pm-kisan-payment-failed-status-2026', title: 'Payment Failed Fix', emoji: '💸' },
+  { slug: 'nano-dap-500ml-price-in-india-2026', title: 'Nano DAP Price Guide', emoji: '🧪' },
+  { slug: 'agristack-kya-hai', title: 'Digital Cultivator Identity', emoji: '🆔' },
+];
 
-export function getArticlesByKeyword(keyword: string): readonly ArticleMeta[] {
-  const lower = keyword.toLowerCase();
-  return ARTICLES.filter(
-    (a) =>
-      a.keywords.some((k) => k.toLowerCase().includes(lower)) ||
-      a.title.toLowerCase().includes(lower) ||
-      a.desc.toLowerCase().includes(lower)
+const FAQS_DATA = [
+  { q: 'Sabzi ka aaj ka rate kaise pata karein?', a: 'AgMarkNet portal (agmarknet.gov.in) ya eNAM app sabse bharosemand tarika hai — government-verified daily figures milte hain, mandi aur fasal ke hisaab se filter karke.' },
+  { q: 'Sabzi ka bhav roz kyun badalta hai?', a: 'Mausam, transport, arrival quantity aur demand-supply ke hisaab se thok rate din mein bhi kai baar change hota hai. Yahan diye gaye numbers typical range hain, minute-by-minute feed nahi.' },
+  { q: 'Aloo pyaaz tamatar ka rate kaise track karein?', a: 'TOP commodities (Aloo, Pyaaz, Tamatar) AgMarkNet par commodity-search se turant mil jaate hain. Inka price supply chain mein sabse zyada volatile hota hai.' },
+  { q: 'Gaon ki mandi ka bhav kaise pata chalega?', a: 'AgriMarket mobile app GPS se 50km radius ki mandi dikhata hai. Internet weak hai toh SMS service bhi available hai. Kisan Suvidha app bhi try karo.' },
+  { q: 'Sabzi rate list PDF mein kaise download karein?', a: 'AgMarkNet par state aur mandi select karke "Price Trends" section se daily rate list PDF/Excel format mein free download hoti hai.' },
+  { q: 'Mandi rate ka SMS alert kaise activate karein?', a: 'Kisan Suvidha ya AgriMarket app download karo, area select karo — daily rate SMS se milta hai. Khaas kar un jagah jahan internet weak hai.' },
+  { q: 'Thok rate aur retail rate mein kitna farak hota hai?', a: 'Generally 10-30%. Retail dukaan par transport, wastage, aur margin add hota hai. Mandi mein subah 7-9 baje best thok rate milta hai.' },
+];
+
+// ═══════════════════════════════════════════════════════════
+// SUB-COMPONENTS
+// ═══════════════════════════════════════════════════════════
+
+function TrendBadge({ trend, change }: { trend: Trend; change: string }) {
+  const cfg = {
+    up:     { bg: 'bg-red-100 dark:bg-red-900/30', text: 'text-red-700 dark:text-red-300', arrow: '↑' },
+    down:   { bg: 'bg-green-100 dark:bg-green-900/30', text: 'text-green-700 dark:text-green-300', arrow: '↓' },
+    stable: { bg: 'bg-gray-100 dark:bg-gray-800', text: 'text-gray-600 dark:text-gray-400', arrow: '→' },
+  }[trend];
+  return (
+    <span className={`text-xs font-bold px-2 py-1 rounded-full ${cfg.bg} ${cfg.text}`}>
+      {cfg.arrow} {change}
+    </span>
   );
 }
 
-export function getCategoryInfo(category: CategorySlug) {
-  return CATEGORIES[category];
+function PriceCard({ name, rate, prev, change, trend, accent }: CommodityItem & { accent: 'green' | 'amber' }) {
+  const border = accent === 'green' ? 'border-green-200 dark:border-green-800' : 'border-amber-200 dark:border-amber-800';
+  const priceColor = accent === 'green' ? 'text-green-700 dark:text-green-400' : 'text-amber-700 dark:text-amber-400';
+  return (
+    <div className={`bg-[var(--color-card)] rounded-xl shadow-sm hover:shadow-lg transition-all p-5 border-2 ${border}`}>
+      <div className="flex items-start justify-between mb-3">
+        <h3 className="font-bold text-[var(--color-text)] text-base leading-snug">{name}</h3>
+        <TrendBadge trend={trend} change={change} />
+      </div>
+      <div className={`text-2xl font-black ${priceColor} mb-2`}>{rate}</div>
+      <div className="flex items-center justify-between text-xs text-[var(--color-text-muted)]">
+        <span>Pichla: ₹{prev}</span>
+        <span>Thok (approx.)</span>
+      </div>
+    </div>
+  );
 }
 
-export function getAllCategories(): readonly CategorySlug[] {
-  return Object.keys(CATEGORIES) as CategorySlug[];
+// ═══════════════════════════════════════════════════════════
+// MAIN COMPONENT
+// ═══════════════════════════════════════════════════════════
+
+export default function MandiBhavContent({ article }: { article: ArticleMeta }) {
+  const [currentTime, setCurrentTime] = useState('');
+  const [search, setSearch] = useState('');
+  const [selectedCity, setSelectedCity] = useState('delhi');
+  const [mandiCalc, setMandiCalc] = useState({ qty: 100, rate: 25, cost: 1500 });
+
+  useEffect(() => {
+    const tick = () => setCurrentTime(new Date().toLocaleTimeString('hi-IN', { hour: '2-digit', minute: '2-digit' }));
+    tick();
+    const id = setInterval(tick, 60_000);
+    return () => clearInterval(id);
+  }, []);
+
+  const filteredVeg = useMemo(() => VEGETABLES.filter(v => v.name.toLowerCase().includes(search.toLowerCase())), [search]);
+  const filteredFruit = useMemo(() => FRUITS.filter(f => f.name.toLowerCase().includes(search.toLowerCase())), [search]);
+
+  const revenue = mandiCalc.qty * mandiCalc.rate;
+  const profit = revenue - mandiCalc.cost;
+  const city = STATE_RATES.find(s => s.id === selectedCity)!;
+
+  return (
+    <>
+      {/* Header */}
+      <div className="bg-[var(--color-primary)] py-8">
+        <div className="container-site max-w-3xl">
+          <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
+            <Link href="/" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Home</Link>
+            <span>/</span>
+            <Link href="/articles" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Articles</Link>
+            <span>/</span>
+            <span className="text-white font-bold">Market Rates</span>
+          </nav>
+          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Daily Market Reference</span>
+          <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
+            Sabzi Aur Fruit Rate Guide 2026: Shehar-wise Bhav + Munafa Calculator
+          </h1>
+          <div className="flex flex-wrap gap-3 text-xs text-green-200">
+            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
+            <span>🕐 {currentTime}</span>
+            <span>🔄 Updated: {LAST_UPDATED}</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="container-site max-w-3xl py-8">
+
+        {/* IMAGE 1: Hero - Mixed Vegetables */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src={article.ogImage || '/images/articles/mandi-bhav-today/mandi-fresh-vegetables-mixed.webp'}
+            alt="Fresh vegetables wholesale mandi rates India 2026 — daily approximate price reference"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            style={{ maxHeight: '420px', objectPosition: 'center' }}
+            priority
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            Approximate Thok Rate Range · Official Source: AgMarkNet · Updated {LAST_UPDATED}
+          </p>
+        </div>
+
+        {/* Honest Disclaimer */}
+        <WB>
+          <strong>Important:</strong> Yeh page manually reviewed approximate range dikhata hai — live feed nahi. Alag mandi mein ek hi din ka rate 2-3x tak alag ho sakta hai. Exact figure ke liye <a href={SOURCE_URL} target="_blank" rel="noopener noreferrer" className="underline font-bold">agmarknet.gov.in</a> ya nazdeeki mandi check karein. Retail rate thok se 10-30% zyada hota hai.
+        </WB>
+
+        {/* City Selector */}
+        <section className="mb-8">
+          <SH>Apna Sheher Chunein</SH>
+          <div className="flex flex-wrap gap-2 mb-4">
+            {STATE_RATES.map(s => (
+              <button
+                key={s.id}
+                onClick={() => setSelectedCity(s.id)}
+                className={`px-4 py-2 rounded-full text-sm font-semibold border-2 transition-all focus:outline-none focus:ring-2 focus:ring-green-500 ${
+                  selectedCity === s.id
+                    ? 'bg-[var(--color-primary)] border-[var(--color-primary)] text-white shadow-md'
+                    : 'bg-[var(--color-card)] border-[var(--color-border)] text-[var(--color-text)] hover:border-green-400'
+                }`}
+              >
+                {s.state}
+              </button>
+            ))}
+          </div>
+
+          <div className="bg-green-50 dark:bg-green-900/20 rounded-xl p-5 border border-green-200 dark:border-green-800">
+            <div className="flex items-center gap-2 mb-3">
+              <span className="text-2xl">🏬</span>
+              <div>
+                <div className="font-black text-[var(--color-text)] text-lg">{city.state} — {city.mandi}</div>
+                <div className="text-xs text-[var(--color-text-muted)]">Approximate range · Har kuch din review</div>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-[var(--color-card)] rounded-xl p-4 text-center border border-green-200 dark:border-green-800">
+                <div className="text-xs text-[var(--color-text-muted)] mb-1">Sabzi Average</div>
+                <div className="text-2xl font-black text-green-700 dark:text-green-400">{city.veg}</div>
+                <div className="text-xs text-[var(--color-text-muted)]">per kg</div>
+              </div>
+              <div className="bg-[var(--color-card)] rounded-xl p-4 text-center border border-amber-200 dark:border-amber-800">
+                <div className="text-xs text-[var(--color-text-muted)] mb-1">Phal Average</div>
+                <div className="text-2xl font-black text-amber-700 dark:text-amber-400">{city.fruit}</div>
+                <div className="text-xs text-[var(--color-text-muted)]">per kg</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* IMAGE 2: Potato & Onion */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/articles/mandi-bhav-today/mandi-vegetables-potato-onion.webp"
+            alt="Potato and onion wholesale mandi rates — most volatile vegetables in Indian market"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            Aloo aur Pyaaz — Sabse Zyada Price Fluctuation Wali Sabziyan
+          </p>
+        </div>
+
+        {/* Search */}
+        <div className="mb-6 relative">
+          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[var(--color-text-muted)] text-lg">🔍</span>
+          <input
+            type="text"
+            value={search}
+            onChange={e => setSearch(e.target.value)}
+            placeholder="Khojein... jaise: aloo, seb, tamatar"
+            className="w-full pl-11 pr-4 py-3 border-2 border-[var(--color-border)] rounded-xl focus:border-[var(--color-primary)] focus:outline-none text-sm bg-[var(--color-card)] text-[var(--color-text)]"
+          />
+        </div>
+
+        {/* Vegetables */}
+        <section className="mb-10">
+          <SH>Sabzi Ka Bhav — Vegetable Rates</SH>
+          <p className="text-xs text-[var(--color-text-muted)] mb-4">Approximate range · Updated {LAST_UPDATED}</p>
+
+          {filteredVeg.length > 0 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {filteredVeg.map((v, i) => (
+                <PriceCard key={i} {...v} accent="green" />
+              ))}
+            </div>
+          ) : (
+            <p className="text-[var(--color-text-muted)] text-center py-8">Koi result nahi mila.</p>
+          )}
+        </section>
+
+        {/* IMAGE 3: Tomato & Carrot */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/articles/mandi-bhav-today/mandi-vegetables-tomato-carrot.webp"
+            alt="Tomato and carrot wholesale prices — seasonal vegetables rate guide"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            Tamatar aur Gaajar — Seasonal Vegetables
+          </p>
+        </div>
+
+        {/* Fruits */}
+        <section className="mb-10">
+          <SH>Phal Ka Rate — Fruit Prices</SH>
+          <p className="text-xs text-[var(--color-text-muted)] mb-4">Approximate range · Updated {LAST_UPDATED}</p>
+
+          {filteredFruit.length > 0 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {filteredFruit.map((f, i) => (
+                <PriceCard key={i} {...f} accent="amber" />
+              ))}
+            </div>
+          ) : (
+            <p className="text-[var(--color-text-muted)] text-center py-8">Koi result nahi mila.</p>
+          )}
+        </section>
+
+        {/* IMAGE 4: Apple & Banana */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/articles/mandi-bhav-today/mandi-fruits-apple-banana.webp"
+            alt="Apple and banana wholesale mandi rates — most consumed fruits in India"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            Seb aur Kela — Sabse Zyada Khaye Jane Wale Phal
+          </p>
+        </div>
+
+        {/* All Cities Table */}
+        <section className="mb-10">
+          <SH>Sheher-wise Compare Karein</SH>
+          <div className="overflow-x-auto rounded-xl border border-[var(--color-border)] shadow-sm">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-[var(--color-primary)] text-white">
+                  <th className="p-3 text-left">Sheher</th>
+                  <th className="p-3 text-left">Mandi</th>
+                  <th className="p-3 text-left">Sabzi</th>
+                  <th className="p-3 text-left">Phal</th>
+                </tr>
+              </thead>
+              <tbody>
+                {STATE_RATES.map((r, i) => (
+                  <tr
+                    key={r.id}
+                    onClick={() => setSelectedCity(r.id)}
+                    className={`border-b border-[var(--color-border)] cursor-pointer transition-colors ${
+                      selectedCity === r.id ? 'bg-green-50 dark:bg-green-900/20' : 'hover:bg-[var(--color-bg-alt)]'
+                    }`}
+                  >
+                    <td className="p-3 font-bold text-[var(--color-text)]">{r.state}</td>
+                    <td className="p-3 text-[var(--color-text-muted)]">{r.mandi}</td>
+                    <td className="p-3 font-bold text-green-700 dark:text-green-400">{r.veg}</td>
+                    <td className="p-3 font-bold text-amber-700 dark:text-amber-400">{r.fruit}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* IMAGE 5: Mango & Orange */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/articles/mandi-bhav-today/mandi-fruits-mango-orange.webp"
+            alt="Mango and orange wholesale rates — seasonal fruit prices across Indian mandis"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            Aam aur Santra — Seasonal Fruits Price Guide
+          </p>
+        </div>
+
+        {/* Mandi Profit Calculator */}
+        <section className="mb-10">
+          <SH>Fasal Bikri Calculator — Munafa Jaano</SH>
+          <div className="bg-amber-50 dark:bg-amber-900/20 rounded-2xl p-6 border-2 border-amber-200 dark:border-amber-800">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+              {[
+                { label: 'Quantity (kg)', key: 'qty' },
+                { label: 'Rate (₹/kg)', key: 'rate' },
+                { label: 'Total Cost (₹)', key: 'cost' },
+              ].map(({ label, key }) => (
+                <div key={key}>
+                  <label className="block text-xs font-bold text-[var(--color-text-muted)] mb-1">{label}</label>
+                  <input
+                    type="number"
+                    value={mandiCalc[key as keyof typeof mandiCalc]}
+                    onChange={e => setMandiCalc(prev => ({ ...prev, [key]: Number(e.target.value) }))}
+                    className="w-full px-4 py-2 border-2 border-[var(--color-border)] rounded-lg focus:border-amber-500 focus:outline-none text-sm bg-[var(--color-card)] text-[var(--color-text)]"
+                  />
+                </div>
+              ))}
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-4 text-center border border-blue-200 dark:border-blue-800">
+                <div className="text-xs text-[var(--color-text-muted)] mb-1">Total Revenue</div>
+                <div className="text-3xl font-black text-blue-700 dark:text-blue-400">₹{revenue.toLocaleString('en-IN')}</div>
+              </div>
+              <div className={`rounded-xl p-4 text-center border ${profit >= 0 ? 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800' : 'bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800'}`}>
+                <div className="text-xs text-[var(--color-text-muted)] mb-1">Net Profit / Loss</div>
+                <div className={`text-3xl font-black ${profit >= 0 ? 'text-green-700 dark:text-green-400' : 'text-red-600 dark:text-red-400'}`}>
+                  {profit >= 0 ? '+' : ''}₹{profit.toLocaleString('en-IN')}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* IMAGE 6: Mixed Fruits */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/articles/mandi-bhav-today/mandi-fresh-fruits-mixed.webp"
+            alt="Mixed fresh fruits wholesale market rates — complete fruit price guide for farmers"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            Vividh Prakar Ke Phal — Complete Fruit Price Guide
+          </p>
+        </div>
+
+        {/* Tips */}
+        <section className="mb-10">
+          <SH>Achha Rate Lene Ki Tips</SH>
+          <div className="space-y-2">
+            {[
+              'Subah 7-9 baje mandi jaao — taaza maal + best rate',
+              'Thok market mein retail se 20-30% sasta',
+              'Mausam ke hisaab se kharido — off-season mein mehnga',
+              'AgMarkNet/eNAM se daily figures confirm karo',
+              '2-3 dukan compare karo — ek vendor se mat lo',
+              'Bechne se pehle Kisan Suvidha app par 7-day trend dekho',
+            ].map((tip) => (
+              <div key={tip} className="flex items-start gap-2 p-3 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg">
+                <span className="text-green-600 dark:text-green-400 font-bold shrink-0 mt-0.5">✓</span>
+                <span className="text-sm text-[var(--color-text-muted)]">{tip}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="mb-8">
+          <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
+            Aksar Puche Jane Wale Sawal
+          </h2>
+          <FAQBlock faqs={FAQS_DATA} caption="Mandi Rate FAQ 2026 — Verified Answers" />
+        </section>
+
+        <GovLink
+          href={SOURCE_URL}
+          label="AgMarkNet — Official Daily Mandi Rates"
+          guide="Aaj Ka Rate Dekho"
+          guideHref="/articles/nano-dap-500ml-price-in-india-2026"
+          portalName="agmarknet.gov.in"
+        />
+
+        <RelatedArticles articles={RELATED} />
+        <AuthorBox modified={article.modifiedTime || article.publishedTime || new Date().toISOString()} />
+        <BottomNav extraLinks={[
+          { href: '/articles/nano-dap-500ml-price-in-india-2026', l: '🧪 Nano DAP Price' },
+          { href: '/calculator/crop-profit', l: '📊 Crop Profit' },
+        ]} />
+        <Disclaimer />
+      </div>
+    </>
+  );
 }
 
-export function getArticleCount(): number {
-  return ARTICLES.length;
-}
-
-export function getArticlesByDateRange(startDate: string, endDate: string): readonly ArticleMeta[] {
-  const start = new Date(startDate).getTime();
-  const end = new Date(endDate).getTime();
-  return ARTICLES.filter((a) => {
-    const t = new Date(a.publishedTime).getTime();
-    return t >= start && t <= end;
-  });
-}
-
-export function getPrimaryKeywords(slug: string, limit: number = 3): readonly string[] {
-  return getArticleBySlug(slug)?.keywords.slice(0, limit) ?? [];
-}
-
-export function getHindiKeywords(slug: string): readonly string[] {
-  return getArticleBySlug(slug)?.keywords.filter((k) => /[\u0900-\u097F]/.test(k)) ?? [];
-}
-
-export function getEnglishKeywords(slug: string): readonly string[] {
-  return getArticleBySlug(slug)?.keywords.filter((k) => !/[\u0900-\u097F]/.test(k)) ?? [];
-}
-
-export function getRelatedArticles(slug: string, limit: number = 3): readonly ArticleMeta[] {
-  const current = getArticleBySlug(slug);
-  if (!current) return [];
-
-  if (current.relatedSlugs && current.relatedSlugs.length > 0) {
-    const explicit = current.relatedSlugs
-      .map((s) => ARTICLES_MAP[s])
-      .filter(Boolean) as ArticleMeta[];
-    if (explicit.length >= limit) return explicit.slice(0, limit);
-
-    const remaining = ARTICLES.filter(
-      (a) => a.slug !== slug && a.category === current.category && !current.relatedSlugs?.includes(a.slug)
-    );
-    return [...explicit, ...remaining].slice(0, limit);
-  }
-
-  return ARTICLES.filter((a) => a.slug !== slug && a.category === current.category).slice(0, limit);
-}
-
-export function getReadingTime(slug: string): string {
-  const mins = getArticleBySlug(slug)?.readingTime;
-  return mins ? `${mins} min read` : '5 min read';
-}
-
-export function getArticlesByScheme(scheme: string): readonly ArticleMeta[] {
-  return ARTICLES.filter((a) => a.schemes?.includes(scheme));
-}
-
-export function getArticlesByBank(bank: string): readonly ArticleMeta[] {
-  return ARTICLES.filter((a) => a.banks?.includes(bank));
-}
-
-export function getArticlesByState(state: string): readonly ArticleMeta[] {
-  return ARTICLES.filter((a) => a.states?.includes(state));
-}
-
-export function getAllSchemes(): readonly string[] {
-  const set = new Set<string>();
-  ARTICLES.forEach((a) => a.schemes?.forEach((s) => set.add(s)));
-  return Array.from(set).sort();
-}
-
-export function getAllBanks(): readonly string[] {
-  const set = new Set<string>();
-  ARTICLES.forEach((a) => a.banks?.forEach((b) => set.add(b)));
-  return Array.from(set).sort();
-}
-
-export function getAllStates(): readonly string[] {
-  const set = new Set<string>();
-  ARTICLES.forEach((a) => a.states?.forEach((s) => set.add(s)));
-  return Array.from(set).sort();
-}
+/**
+ * MAINTENANCE NOTE:
+ * Rates manual hain. Har kuch din AgMarkNet se check karke update karo.
+ * LAST_UPDATED date + changed ranges update karo bas.
+ * Live feed claim mat karo — multiple sources disagree 3-5x on same day.
+ */
