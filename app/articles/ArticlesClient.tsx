@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useMemo, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { SITE_URL } from '@/lib/site-config';
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const CATEGORY_META: Record<string, { label: string; emoji: string; color: string }> = {
@@ -16,42 +15,6 @@ const CATEGORY_META: Record<string, { label: string; emoji: string; color: strin
   'loan':         { label: 'Loan',         emoji: '💰', color: 'bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300' },
   'farming':      { label: 'Farming',      emoji: '🌱', color: 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300' },
   'mandi':        { label: 'Mandi Bhav',   emoji: '📈', color: 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300' },
-};
-
-// Article images — ogImage from articles-data.ts preferred, fallback here
-const ARTICLE_IMAGES: Record<string, string> = {
-  'kisan-credit-card-online-apply-2026': '/images/kisan-credit-card-apply-online-hero.webp',
-  'pm-kisan-23vi-kist-2026-status-check': '/images/pm-kisan-status-check-steps.webp',
-  'pm-kisan-ekyc-online-2026': '/images/ekyc-guide-banner.webp',
-  'pm-kisan-payment-failed-status-2026': '/images/payment-success.webp',
-  'pm-kisan-rejected-list-2026': '/images/pm-kisan-rejected-list-2026.webp',
-  'pm-kisan-registration-online-2026': '/images/pm-kisan-registration-online-2026.webp',
-  'pm-kisan-name-correction-online-2026': '/images/name-correction.webp',
-  'pm-kisan-beneficiary-list-2026': '/images/beneficiary-list-board.webp',
-  'pm-kisan-installment-history-check-online': '/images/installment-history.webp',
-  'pm-kisan-land-seeding-status-check': '/images/land-seeding-field.webp',
-  'pm-kisan-beneficiary-list-village-wise-2026': '/images/pm-kisan-beneficiary-list-village-wise-2026.webp',
-  'kisan-rin-kaha-se-le-2026': '/images/kisan-loan-kcc.webp',
-  'pmfby-crop-insurance-2026': '/images/pmfby-crop-insurance-2026.webp',
-  'kisan-tractor-loan-2026': '/images/kisan-tractor-loan-2026.webp',
-  'pm-kisan-21vi-installment-status-check': '/images/pm-kisan-21vi-installment-status-check.webp',
-  'pm-kisan-correction-deactivate-block-guide-2026': '/images/correction-guide.webp',
-  'pm-kisan-problems-solution-guide-2026': '/images/pm-kisan-beneficiary-status-kisanstatus.webp',
-  'pm-kisan-fto-generated-ka-matlab-kya-hai': '/images/pm-kisan-fto-generated-featured-image-kisanstatus.webp',
-  'pm-kisan-24vi-kist': '/images/pm-kisan-24vi-kist-october-2026.webp',
-  'agristack-kya-hai': '/images/agristack-kya-hai-infographic.webp',
-  'pm-kisan-mobile-number-change': '/images/pm-kisan-mobile-bank-aadhaar-update-banner-website.webp',
-  'nano-dap-500ml-price-in-india-2026': '/images/nano-dap-500ml-price-india-2026.webp',
-  'pm-kisan-complete-guide': '/images/pm-kisan-status-check-hero.webp',
-  'soil-health-card-complete-guide-2026': '/images/soil-health-card-complete-guide-2026.webp',
-  'pm-kisan-self-registered-status-check': '/images/pm-kisan-self-registered-status/pm-kisan-portal-homepage.webp',
-  'pm-kisan-status-check-online-2026-complete-guide': '/images/pm-kisan-status-check-tool-interface.webp',
-  'mandi-bhav-today': '/images/mandi-bhav-today.webp',
-};
-
-const CATEGORY_EMOJIS: Record<string, string> = {
-  'status-check': '📊', 'ekyc': '🔐', 'payment': '💸', 'registration': '📝',
-  'correction': '✏️', 'loan': '💰', 'farming': '🌱', 'mandi': '📈',
 };
 
 const NEW_ARTICLES_LIMIT = 3;
@@ -90,8 +53,7 @@ function ArticleImage({ image, emoji, title }: { image: string; emoji: string; t
 
 function ArticleCard({ article, showNewBadge = false }: { article: ArticleMeta; showNewBadge?: boolean }) {
   const catMeta = CATEGORY_META[article.category];
-  const image = article.ogImage || ARTICLE_IMAGES[article.slug] || '';
-  const emoji = CATEGORY_EMOJIS[article.category] || '📄';
+  const emoji = catMeta?.emoji || '📄';
 
   return (
     <Link
@@ -104,7 +66,7 @@ function ArticleCard({ article, showNewBadge = false }: { article: ArticleMeta; 
       aria-label={`Read: ${article.title}`}
     >
       <div className="relative">
-        <ArticleImage image={image} emoji={emoji} title={article.title} />
+        <ArticleImage image={article.ogImage || ''} emoji={emoji} title={article.title} />
         {showNewBadge && (
           <span className="absolute top-2 right-2 bg-green-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full shadow z-20">
             NEW
@@ -271,13 +233,13 @@ export default function ArticlesClient({ articles }: { articles: readonly Articl
       <section className="py-10 md:py-14 bg-[var(--color-primary)]" aria-labelledby="hero-heading">
         <div className="container-site text-center">
           <span className="inline-block bg-white/10 border border-white/20 text-green-300 text-xs font-bold px-4 py-2 rounded-full mb-4 uppercase tracking-wider">
-            📚 Complete Resource Library
+            📚 Kisan Resources Hub
           </span>
           <h1 id="hero-heading" className="text-2xl md:text-4xl font-black text-white mb-3">
             PM Kisan Guides & Resources 2026
           </h1>
           <p className="text-green-200 text-sm md:text-base max-w-xl mx-auto mb-5">
-            {articles.length} free resources — status check, eKYC, payment fix, enrollment, crop insurance, soil health — sab Hinglish mein
+            {articles.length} free guides — status check, eKYC, payment fix, enrollment, crop insurance, soil health — sab Hinglish mein
           </p>
           <a
             href="https://pmkisan.gov.in"
