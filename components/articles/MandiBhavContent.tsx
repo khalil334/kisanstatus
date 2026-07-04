@@ -8,8 +8,8 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { SITE_URL, SITE_NAME } from '@/lib/site-config';
 
 // ═══════════════════════════════════════════════════════════
-// UPDATED: July 4, 2026
-// Current market rates based on AgMarkNet data
+// Aakhri Update: 4 July 2026, Subah 8 Baje
+// AgMarkNet se verified rates
 // ═══════════════════════════════════════════════════════════
 
 const LAST_UPDATED = '4 July 2026, 08:00 AM';
@@ -25,7 +25,7 @@ interface CommodityItem {
   trend: Trend;
 }
 
-// UPDATED RATES - July 2026 (Monsoon season impact)
+// July 2026 Rates — Monsoon season ka asar
 const VEGETABLES: readonly CommodityItem[] = [
   { name: 'आलू (Aloo)',           rate: '₹20-26/kg',    prev: 22,  change: '-₹2',  trend: 'down' },
   { name: 'प्याज (Pyaaz)',        rate: '₹28-38/kg',    prev: 32,  change: '+₹4',  trend: 'up' },
@@ -204,7 +204,7 @@ export default function MandiBhavContent({ article }: { article: ArticleMeta }) 
 
         {/* Honest Disclaimer */}
         <WB>
-          <strong>Important:</strong> Yeh page manually reviewed approximate range dikhata hai — live feed nahi. Alag mandi mein ek hi din ka rate 2-3x tak alag ho sakta hai. Exact figure ke liye <a href={SOURCE_URL} target="_blank" rel="noopener noreferrer" className="underline font-bold">agmarknet.gov.in</a> ya nazdeeki mandi check karein. Retail rate thok se 10-30% zyada hota hai.
+          <strong>Zaroori Baat:</strong> Yeh page manually reviewed approximate range dikhata hai — live feed nahi. Alag mandi mein ek hi din ka rate 2-3x tak alag ho sakta hai. Exact figure ke liye <a href={SOURCE_URL} target="_blank" rel="noopener noreferrer" className="underline font-bold">agmarknet.gov.in</a> ya nazdeeki mandi check karein. Retail rate thok se 10-30% zyada hota hai.
         </WB>
 
         {/* City Selector */}
