@@ -76,10 +76,10 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* Hero Image */}
+        {/* IMAGE 1: Hero */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src={article.ogImage || '/images/kisan-credit-card-apply-2026.webp'}
+            src={article.ogImage || '/images/kisan-credit-card-apply-online-hero.webp'}
             alt="Agricultural credit card application process 2026 — subsidized interest rate facility for cultivators"
             width={1200}
             height={630}
@@ -93,7 +93,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </p>
         </div>
 
-        {/* Real Field Hook — Mixed rhythm */}
+        {/* Real Field Hook */}
         <div className="my-6 p-5 bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-400 dark:border-amber-700 border-l-[6px] rounded-xl">
           <h2 className="text-base font-black text-amber-800 dark:text-amber-300 mb-2">Jo Maine Bank Branches Mein Dekha Hai</h2>
           <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed mb-2">
@@ -139,6 +139,22 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             <strong>Byaj Ka Asli Hisaab:</strong> Base rate 7%. Time par repayment = 3% subvention. Effective = 4%. ₹3 lakh par saal mein ₹12,000 byaj. Local moneylender? 24-36%. Same amount par ₹72,000-1,08,000. Bachat: ₹60,000-96,000 saalana. Yeh koi chhoti rakam nahi hai.
           </IB>
         </section>
+
+        {/* IMAGE 2: Benefits */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/kisan-credit-card-benefits.webp"
+            alt="Agricultural credit card benefits — low interest, collateral-free, 5 year validity"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            KCC Ke Mukhya Fayde — 4% Byaj, Bina Security, 5 Saal Valid
+          </p>
+        </div>
 
         {/* Section 2: Priority List */}
         <section className="mb-8">
@@ -209,6 +225,22 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </DB>
         </section>
 
+        {/* IMAGE 3: Rates */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/kisan-credit-card-rates.webp"
+            alt="Kisan credit card interest rates comparison — 4% effective vs 24% moneylender"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            Interest Rate Comparison — KCC vs Local Moneylender
+          </p>
+        </div>
+
         {/* Section 4: Documents */}
         <section className="mb-8">
           <SH>Documents — Official List Vs Ground Reality</SH>
@@ -245,6 +277,22 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </IB>
         </section>
 
+        {/* IMAGE 4: Documents */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/kisan-credit-card-documents.webp"
+            alt="Kisan credit card required documents checklist — Aadhaar, PAN, land records, passbook"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            Zaroori Documents Checklist — Branch Visit Se Pehle Ready Karo
+          </p>
+        </div>
+
         {/* Section 5: Application Process */}
         <section className="mb-8">
           <SH>Application Kaise Karein</SH>
@@ -259,7 +307,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           <StepList>
             <SI n={1}>Subah 10-11 baje jaao — officers fresh, dopahar mein rush</SI>
             <SI n={2}>Loan officer / agriculture desk se milo — general counter par KCC nahi hota</SI>
-            <SI n={3}>Form + saare documents ek saath do — officer當場 verify karega</SI>
+            <SI n={3}>Form + saare documents ek saath do — officer当场 verify karega</SI>
             <SI n={4}>Naam spelling triple-check: Aadhaar = bank = form = land records</SI>
             <SI n={5}>Land details revenue records se match karo — khasra, area, village</SI>
             <SI n={6}>Acknowledgement receipt with reference number collect karo</SI>
@@ -277,6 +325,22 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             <strong>Warning:</strong> Cooperative banks aur RRBs ka online portal aksar functional nahi hota. SBI, PNB, BOB better digital infra rakhte hain. Error aaye toh branch hi reliable option hai — retry karte rehne se time waste hoga.
           </WB>
         </section>
+
+        {/* IMAGE 5: Process */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/kisan-credit-card-process.webp"
+            alt="Kisan credit card application process flowchart — step by step guide from documents to approval"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            Application Process — Documents Se Approval Tak Ka Safar
+          </p>
+        </div>
 
         {/* Section 6: Rejection Reasons */}
         <section className="mb-8">
@@ -342,6 +406,22 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </div>
         </section>
 
+        {/* IMAGE 6: Success */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/kisan-credit-card-success.webp"
+            alt="Kisan credit card approval success — farmer with credit card ready for agricultural expenses"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            Approval Success — Ab Kheti Ke Kharchon Ki Tension Nahi
+          </p>
+        </div>
+
         {/* FAQ */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
@@ -350,7 +430,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           <FAQBlock faqs={FAQS_DATA} caption="Agricultural Credit Facility FAQ 2026 — Ground-Level Verified Answers" />
         </section>
 
-        {/* Action Conclusion — Short, punchy, no filler */}
+        {/* Action Conclusion */}
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Bottom Line</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
