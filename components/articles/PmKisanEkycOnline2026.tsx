@@ -55,10 +55,10 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* Hero Image */}
+        {/* IMAGE 1: Hero */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src={article.ogImage || '/images/pm-kisan-ekyc-online-2026.webp'}
+            src={article.ogImage || '/images/articles/pm-kisan-ekyc-online-2026/og-ekyc.png'}
             alt="Digital verification OTP portal screen — mobile se ghar baithe identity confirm karo 2026"
             width={1200}
             height={630}
@@ -121,6 +121,22 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
           </div>
         </div>
 
+        {/* IMAGE 2: OTP vs Biometric Comparison */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/articles/pm-kisan-ekyc-online-2026/otp-vs-biometric.webp"
+            alt="OTP vs Biometric authentication comparison — ghar baithe mobile par ya CSC centre par fingerprint se identity verify karo"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            OTP (Left) vs Biometric (Right) — Dono Muft, Dono Official
+          </p>
+        </div>
+
         {/* OTP Method */}
         <section className="mb-8">
           <SH>OTP-Based Authentication — Step By Step</SH>
@@ -161,6 +177,22 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
             <strong>Koi Charge Nahi:</strong> Central guidelines ke mutabik completely free. Operator ₹50-200 maange toh politely refuse + 1800-1214-060 par call. License suspend ho sakta hai.
           </DB>
         </section>
+
+        {/* IMAGE 3: CSC Biometric Process */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/articles/pm-kisan-ekyc-online-2026/csc-biometric-process.webp"
+            alt="CSC centre biometric authentication process — Indian farmer fingerprint scan at Jan Seva Kendra for PM Kisan eKYC"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            CSC Centre Par Biometric Authentication — Fingerprint Scan Process
+          </p>
+        </div>
 
         {/* Status Messages Table */}
         <section className="mb-8">
