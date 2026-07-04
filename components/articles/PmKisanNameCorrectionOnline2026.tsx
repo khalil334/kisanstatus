@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import Image from 'next/image';
-import { SI, StepList, IB, WB, DB, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, fmtDate } from '@/components/ArticleShared';
+import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const PUBLISHED = '2026-06-04T08:00:00+05:30';
@@ -14,6 +14,29 @@ const RELATED = [
   {slug:'pm-kisan-beneficiary-list-2026',               title:'Eligible Farmers Roster Check',     emoji:'📋'},
   {slug:'pm-kisan-land-seeding-status-check',           title:'Land Record Integration Fix',       emoji:'🌾'},
   {slug:'pm-kisan-problems-solution-guide-2026',        title:'10 Common Issues Guide',            emoji:'🔧'},
+];
+
+const FAQS_DATA = [
+  {
+    q:'Naam correction ke baad status portal par kaafi din nahi badla — kya karna hai?',
+    a:'15-20 working days wait karo — isme Saturday/Sunday count nahi hote. 25 din baad bhi nahi badla to Reference Number lekar Block Agriculture Office jao ya helpline 155261 par call karo. Status update mein genuinely itna waqt lagta hai — patience zaruri hai.',
+  },
+  {
+    q:'Maine do baar submit kar diya galti se — kya dono process honge?',
+    a:'Ghabrao nahi — system generally latest submission ko process karta hai. Lekin agar dono approve ho jayen to confusion ho sakti hai. Helpline 155261 par call karke batao ki duplicate submission hui hai — woh ek cancel kar denge.',
+  },
+  {
+    q:'Portal par naam correction ka option nahi dikh raha — kya karna hai?',
+    a:'Kuch cases mein yeh option temporarily unavailable hota hai — server maintenance ya state-wise rollout ki wajah se. CSC center par jao — wahan operator directly PM Kisan portal par correction request daal sakta hai. Ya Block Agriculture Office mein physical application do.',
+  },
+  {
+    q:'Naam correction free hai ya kuch fees lagti hai?',
+    a:'PM Kisan portal par naam correction bilkul free hai. Aadhaar naam correction ke liye UIDAI ₹50 charge karta hai — yeh PM Kisan se alag process hai. Bank naam update bhi free hota hai. Koi bhi dukaan wala ya CSC operator PM Kisan correction ke liye charge kare to 155261 par complaint karo.',
+  },
+  {
+    q:'Naam correction ek baar hi ho sakti hai ya baar baar?',
+    a:'Generally ek hi baar hoti hai — isliye pehli baar mein sahi karo. Aadhaar card saamne rakh ke typo-free naam type karo. Agar genuinely ek baar ke baad bhi galti reh gayi to office mein manual correction possible hai — lekin yeh process lamba aur mushkil hai.',
+  },
 ];
 
 export default function PmKisanNameCorrectionOnline2026({ article }: { article: ArticleMeta }) {
@@ -226,7 +249,7 @@ export default function PmKisanNameCorrectionOnline2026({ article }: { article: 
                 ].map(([sit,doc,kahan],i)=>(
                   <tr key={sit} className={i%2===0?'bg-[var(--color-card)]':'bg-[var(--color-bg-alt)]'}>
                     <td className="p-3 border-b border-[var(--color-border)] font-medium text-xs text-[var(--color-text)]">{sit}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-gray-700 dark:text-gray-300 text-xs">{doc}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-[var(--color-text-muted)] text-xs">{doc}</td>
                     <td className="p-3 border-b border-[var(--color-border)] text-xs text-green-700 dark:text-green-400 font-medium">{kahan}</td>
                   </tr>
                 ))}
@@ -261,38 +284,7 @@ export default function PmKisanNameCorrectionOnline2026({ article }: { article: 
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             7. Identity Modification — Real Questions, Direct Answers
           </h2>
-          <div className="space-y-3 mt-4">
-            {[
-              {
-                q:'Naam correction ke baad status portal par kaafi din nahi badla — kya karna hai?',
-                a:'15-20 working days wait karo — isme Saturday/Sunday count nahi hote. 25 din baad bhi nahi badla to Reference Number lekar Block Agriculture Office jao ya helpline 155261 par call karo. Status update mein genuinely itna waqt lagta hai — patience zaruri hai.',
-              },
-              {
-                q:'Maine do baar submit kar diya galti se — kya dono process honge?',
-                a:'Ghabrao nahi — system generally latest submission ko process karta hai. Lekin agar dono approve ho jayen to confusion ho sakti hai. Helpline 155261 par call karke batao ki duplicate submission hui hai — woh ek cancel kar denge.',
-              },
-              {
-                q:'Portal par naam correction ka option nahi dikh raha — kya karna hai?',
-                a:'Kuch cases mein yeh option temporarily unavailable hota hai — server maintenance ya state-wise rollout ki wajah se. CSC center par jao — wahan operator directly PM Kisan portal par correction request daal sakta hai. Ya Block Agriculture Office mein physical application do.',
-              },
-              {
-                q:'Naam correction free hai ya kuch fees lagti hai?',
-                a:'PM Kisan portal par naam correction bilkul free hai. Aadhaar naam correction ke liye UIDAI ₹50 charge karta hai — yeh PM Kisan se alag process hai. Bank naam update bhi free hota hai. Koi bhi dukaan wala ya CSC operator PM Kisan correction ke liye charge kare to 155261 par complaint karo.',
-              },
-              {
-                q:'Naam correction ek baar hi ho sakti hai ya baar baar?',
-                a:'Generally ek hi baar hoti hai — isliye pehli baar mein sahi karo. Aadhaar card saamne rakh ke typo-free naam type karo. Agar genuinely ek baar ke baad bhi galti reh gayi to office mein manual correction possible hai — lekin yeh process lamba aur mushkil hai.',
-              },
-            ].map(({q,a})=>(
-              <details key={q} className="border border-[var(--color-border)] rounded-xl overflow-hidden group">
-                <summary className="p-4 font-semibold text-[var(--color-text)] cursor-pointer bg-[var(--color-bg-alt)] hover:bg-green-50 dark:hover:bg-green-900/20 text-sm flex justify-between items-center gap-3 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">
-                  <span>{q}</span>
-                  <span className="text-green-600 dark:text-green-400 text-xl group-open:rotate-45 transition-transform shrink-0">+</span>
-                </summary>
-                <div className="p-4 text-sm text-[var(--color-text-muted)] leading-relaxed border-t border-[var(--color-border)]">{a}</div>
-              </details>
-            ))}
-          </div>
+          <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Beneficiary Name Correction FAQ — Farmers Ke Real Sawaal" />
         </section>
 
         <GovLink
