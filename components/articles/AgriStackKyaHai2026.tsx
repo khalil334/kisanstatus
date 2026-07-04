@@ -1,4 +1,3 @@
-
 'use client';
 
 import Link from 'next/link';
@@ -77,7 +76,7 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* IMAGE 1: Hero */}
+        {/* IMAGE 1: Hero/Infographic */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/articles/agristack-kya-hai/infographic.webp'}
