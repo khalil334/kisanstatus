@@ -55,7 +55,7 @@ export default function PmKisanCompleteGuide({ article }: { article: ArticleMeta
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* Hero Image #1 — PRESERVED */}
+        {/* IMAGE 1: Hero */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md relative">
           <Image
             src={article.ogImage || '/images/articles/pm-kisan-complete-guide/hero.webp'}
@@ -117,7 +117,7 @@ export default function PmKisanCompleteGuide({ article }: { article: ArticleMeta
           </IB>
         </section>
 
-        {/* Problem 2: eKYC — Image #2 PRESERVED */}
+        {/* IMAGE 2: eKYC Process */}
         <section className="mb-8">
           <SH>2. Digital Verification Pending — Payment Blocked</SH>
 
@@ -180,7 +180,7 @@ export default function PmKisanCompleteGuide({ article }: { article: ArticleMeta
           </div>
         </section>
 
-        {/* Problem 3: Payment Not Received — Image #3 PRESERVED */}
+        {/* IMAGE 3: Payment Success */}
         <section className="mb-8">
           <SH>3. Payment Bank Mein Nahi Aaya?</SH>
 
@@ -230,7 +230,7 @@ export default function PmKisanCompleteGuide({ article }: { article: ArticleMeta
           </div>
         </section>
 
-        {/* Problem 4: Rejection — Image #4 PRESERVED */}
+        {/* IMAGE 4: Rejection Fix */}
         <section className="mb-8">
           <SH>4. Application Reject Ho Gayi?</SH>
 
@@ -276,7 +276,7 @@ export default function PmKisanCompleteGuide({ article }: { article: ArticleMeta
           </WB>
         </section>
 
-        {/* State-wise — Image #5 PRESERVED */}
+        {/* IMAGE 5: State Map */}
         <section className="mb-8">
           <SH>5. State-Wise Roster Check</SH>
 
@@ -318,7 +318,7 @@ export default function PmKisanCompleteGuide({ article }: { article: ArticleMeta
           </Link>
         </section>
 
-        {/* Documents — Image #6 PRESERVED */}
+        {/* IMAGE 6: Documents Checklist */}
         <section className="mb-8">
           <SH>6. Zaroori Documents Checklist</SH>
 
