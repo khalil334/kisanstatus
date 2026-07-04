@@ -10,11 +10,11 @@ const MODIFIED = '2026-07-04T08:00:00+05:30';
 
 const RELATED = [
   { slug: 'kisan-credit-card-online-apply-2026', title: 'KCC Online Apply Guide', emoji: '💳' },
-  { slug: 'pm-kisan-ekyc-online-2026', title: 'Digital Verification', emoji: '🔐' },
-  { slug: 'pmfby-crop-insurance-2026', title: 'Crop Insurance Claim', emoji: '🛡️' },
+  { slug: 'pm-kisan-complete-guide', title: 'PM Kisan Master Guide', emoji: '📚' },
+  { slug: 'pm-kisan-24vi-kist', title: '24vi Installment Status', emoji: '📅' },
   { slug: 'agristack-kya-hai', title: 'Digital Cultivator Identity', emoji: '🆔' },
-  { slug: 'pm-kisan-payment-failed-status-2026', title: 'Payment Failed Fix', emoji: '💸' },
   { slug: 'nano-dap-500ml-price-in-india-2026', title: 'Nano DAP Price Guide', emoji: '🌱' },
+  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav', emoji: '📈' },
 ];
 
 const FAQS_DATA = [
@@ -76,7 +76,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* IMAGE: Hero */}
+        {/* IMAGE: Hero — Only image */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/kisan-rin-kaha-se-le-2026.webp'}
@@ -196,7 +196,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
           </StepList>
 
           <WB>
-            <strong>PM Kisan Beneficiary Ho?</strong> Approval fast-track hota hai kyunki data already verified hai. eKYC complete hai toh aur bhi tez. Pehle <Link href="/articles/pm-kisan-ekyc-online-2026" className="underline font-bold">digital verification</Link> karwa lo agar pending hai.
+            <strong>PM Kisan Beneficiary Ho?</strong> Approval fast-track hota hai kyunki data already verified hai. Pehle <Link href="/articles/pm-kisan-complete-guide" className="underline font-bold">PM Kisan Complete Guide</Link> padho agar verification pending hai.
           </WB>
         </section>
 
@@ -336,7 +336,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
               <span className="text-green-600 dark:text-green-400 font-black text-lg shrink-0">02</span>
               <div>
                 <p className="font-bold text-[var(--color-text)] text-sm">eKYC Complete Karo</p>
-                <p className="text-xs text-[var(--color-text-muted)] mt-1">Digital verification done = identity pre-approved. <Link href="/articles/pm-kisan-ekyc-online-2026" className="underline">Guide yahan hai</Link>.</p>
+                <p className="text-xs text-[var(--color-text-muted)] mt-1">Digital verification done = identity pre-approved. <Link href="/articles/pm-kisan-complete-guide" className="underline">Complete Guide yahan hai</Link>.</p>
               </div>
             </div>
             <div className="flex gap-3 p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
@@ -397,7 +397,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
           href="https://pmkisan.gov.in"
           label="PM Kisan Portal — Beneficiary Verification"
           guide="Apna Status Check Karo"
-          guideHref="/articles/pm-kisan-ekyc-online-2026"
+          guideHref="/articles/pm-kisan-complete-guide"
           portalName="pmkisan.gov.in"
         />
 
@@ -413,7 +413,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
           { href: '/articles/kisan-credit-card-online-apply-2026', l: '💳 KCC Guide' },
-          { href: '/articles/pmfby-crop-insurance-2026', l: '🛡️ Crop Insurance' },
+          { href: '/articles/pm-kisan-complete-guide', l: '📚 Master Guide' },
           { href: '/calculator/kcc-loan-emi', l: '🧮 EMI Calculator' },
         ]} />
         <Disclaimer />
