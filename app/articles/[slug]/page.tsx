@@ -21,15 +21,12 @@ import {
 
 // ═══════════════════════════════════════════════════════════
 // SCHEMA BUILDER
-// Centralized structured data — ek jagah se sab articles ka schema
-// Individual components mein FAQ schema ab optional hai
 // ═══════════════════════════════════════════════════════════
 
 function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
   const category = CATEGORIES[article.category];
   const related = getRelatedArticles(article.slug, 5);
 
-  // Breadcrumb: Home → Articles → Category → Article
   const breadcrumbItems = [
     { '@type': 'ListItem' as const, position: 1, name: 'Home', item: SITE_URL },
     { '@type': 'ListItem' as const, position: 2, name: 'Articles', item: `${SITE_URL}/articles` },
@@ -74,7 +71,6 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
       mainEntityOfPage: { '@type': 'WebPage', '@id': url },
       inLanguage: 'hi-IN',
       isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: SITE_URL },
-      // Semantic linking — helps Google understand topic relationships
       about: article.schemes?.map((s) => ({
         '@type': 'Thing',
         name: s,
@@ -112,9 +108,7 @@ function ArticleLoading() {
 }
 
 // ═══════════════════════════════════════════════════════════
-// COMPONENT REGISTRY
-// Phase 3 mein yeh template-based system se replace hoga
-// Abhi backward compatible hai — existing components kaam karenge
+// COMPONENT REGISTRY — FIXED IMPORTS (kebab-case for lowercase files)
 // ═══════════════════════════════════════════════════════════
 
 const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> = {
@@ -143,7 +137,7 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   SoilHealthCardCompleteGuide2026:            dynamic(() => import('@/components/articles/soil-health-card-complete-guide-2026'),      { loading: ArticleLoading }),
   PmKisanSelfRegisteredStatusCheck:           dynamic(() => import('@/components/articles/pm-kisan-self-registered-status-check'),     { loading: ArticleLoading }),
   PmKisanStatusCheckOnline2026CompleteGuide:  dynamic(() => import('@/components/articles/PmKisanStatusCheckOnline2026CompleteGuide'), { loading: ArticleLoading }),
-  MandiBhavToday:                             dynamic(() => import('@/components/articles/MandiBhavToday'),                            { loading: ArticleLoading }),
+  MandiBhavToday:                             dynamic(() => import('@/components/articles/MandiBhavContent'),                          { loading: ArticleLoading }),
 };
 
 // ═══════════════════════════════════════════════════════════
@@ -158,7 +152,6 @@ export async function generateStaticParams() {
 
 // ═══════════════════════════════════════════════════════════
 // METADATA GENERATOR
-// OG image ab articles-data.ts se aata hai — no separate map
 // ═══════════════════════════════════════════════════════════
 
 export async function generateMetadata({
@@ -220,8 +213,6 @@ export default async function ArticlePage({
 
   const ArticleComponent = COMPONENTS[article.component];
 
-  // Graceful degradation: component missing hone par 404 ki jagah
-  // error message dikhao taaki debug easy ho
   if (!ArticleComponent) {
     console.error(`[ArticlePage] Missing component: ${article.component} for slug: ${slug}`);
     notFound();
