@@ -104,7 +104,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     readingTime: 8,
     banks: ['sbi', 'pnb', 'bob', 'cooperative'],
     schemes: ['kcc'],
-    ogImage: '/images/articles/kisan-rin-kaha-se-le-2026.webp',
+    ogImage: '/images/kisan-rin-kaha-se-le-2026.webp',
     relatedSlugs: ['kisan-credit-card-online-apply-2026', 'kisan-tractor-loan-2026'],
   },
   {
@@ -120,7 +120,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     readingTime: 10,
     banks: ['mahindra-finance', 'tata-capital'],
     schemes: ['nabard-tractor'],
-    ogImage: '/images/articles/kisan-tractor-loan-2026/hero-banner.webp',
+    ogImage: '/images/kisan-tractor-loan-2026/hero-banner.webp',
     relatedSlugs: ['kisan-rin-kaha-se-le-2026', 'kisan-credit-card-online-apply-2026'],
   },
   {
@@ -135,7 +135,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 6,
     schemes: ['pm-kisan'],
-    ogImage: '/images/articles/pm-kisan-21vi-installment-status-check.webp',
+    ogImage: '/images/pm-kisan-21vi-installment-status-check.webp',
     relatedSlugs: ['pm-kisan-23vi-kist-2026-status-check', 'pm-kisan-installment-history-check-online'],
   },
   {
@@ -150,7 +150,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 7,
     schemes: ['pm-kisan'],
-    ogImage: '/images/articles/pm-kisan-beneficiary-list-2026.webp',
+    ogImage: '/images/pm-kisan-beneficiary-list-village-wise-2026.webp',
     relatedSlugs: ['pm-kisan-beneficiary-list-village-wise-2026', 'pm-kisan-rejected-list-2026'],
   },
   {
@@ -165,7 +165,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 6,
     schemes: ['pm-kisan'],
-    ogImage: '/images/articles/pm-kisan-beneficiary-list-village-wise-2026.webp',
+    ogImage: '/images/pm-kisan-beneficiary-list-village-wise-2026.webp',
     relatedSlugs: ['pm-kisan-beneficiary-list-2026'],
   },
   {
@@ -180,7 +180,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 9,
     schemes: ['pm-kisan'],
-    ogImage: '/images/articles/pm-kisan-correction-deactivate-block-guide-2026.webp',
+    ogImage: '/images/pm-kisan-correction-deactivate-block-guide-2026.webp',
     relatedSlugs: ['pm-kisan-name-correction-online-2026', 'pm-kisan-payment-failed-status-2026'],
   },
   {
@@ -195,7 +195,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 7,
     schemes: ['pm-kisan'],
-    ogImage: '/images/articles/pm-kisan-ekyc-online-2026.webp',
+    ogImage: '/images/pm-kisan-ekyc-online-2026.webp',
     relatedSlugs: ['pm-kisan-23vi-kist-2026-status-check', 'pm-kisan-mobile-number-change'],
   },
   {
@@ -210,7 +210,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 6,
     schemes: ['pm-kisan'],
-    ogImage: '/images/articles/pm-kisan-installment-history-check-online.webp',
+    ogImage: '/images/pm-kisan-installment-history-check-online.webp',
     relatedSlugs: ['pm-kisan-23vi-kist-2026-status-check', 'pm-kisan-payment-failed-status-2026'],
   },
   {
@@ -225,7 +225,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 8,
     schemes: ['pm-kisan'],
-    ogImage: '/images/articles/pm-kisan-land-seeding-status-check.webp',
+    ogImage: '/images/pm-kisan-land-seeding-status-check.webp',
     relatedSlugs: ['pm-kisan-payment-failed-status-2026', 'pm-kisan-correction-deactivate-block-guide-2026'],
   },
   {
@@ -240,7 +240,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 7,
     schemes: ['pm-kisan'],
-    ogImage: '/images/articles/pm-kisan-name-correction-online-2026.webp',
+    ogImage: '/images/pm-kisan-name-correction-online-2026.webp',
     relatedSlugs: ['pm-kisan-correction-deactivate-block-guide-2026', 'pm-kisan-mobile-number-change'],
   },
   {
@@ -256,7 +256,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     readingTime: 8,
     schemes: ['pm-kisan'],
     banks: ['sbi', 'pnb', 'bob'],
-    ogImage: '/images/articles/pm-kisan-payment-failed-status-2026.webp',
+    ogImage: '/images/pm-kisan-payment-failed-status-2026.webp',
     relatedSlugs: ['pm-kisan-land-seeding-status-check', 'pm-kisan-name-correction-online-2026', 'pm-kisan-ekyc-online-2026'],
   },
   {
@@ -271,7 +271,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 10,
     schemes: ['pm-kisan'],
-    ogImage: '/images/articles/pm-kisan-problems-solution-guide-2026.webp',
+    ogImage: '/images/pm-kisan-problems-solution-guide-2026.webp',
     relatedSlugs: ['pm-kisan-payment-failed-status-2026', 'pm-kisan-fto-generated-ka-matlab-kya-hai'],
   },
   {
@@ -286,7 +286,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 9,
     schemes: ['pm-kisan'],
-    ogImage: '/images/articles/pm-kisan-registration-online-2026.webp',
+    ogImage: '/images/pm-kisan-registration-online-2026.webp',
     relatedSlugs: ['pm-kisan-ekyc-online-2026', 'pm-kisan-self-registered-status-check'],
   },
   {
@@ -301,7 +301,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 7,
     schemes: ['pm-kisan'],
-    ogImage: '/images/articles/pm-kisan-rejected-list-2026.webp',
+    ogImage: '/images/pm-kisan-rejected-list-2026.webp',
     relatedSlugs: ['pm-kisan-beneficiary-list-2026', 'pm-kisan-correction-deactivate-block-guide-2026'],
   },
   {
@@ -316,7 +316,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 12,
     schemes: ['pmfby'],
-    ogImage: '/images/articles/pmfby-crop-insurance-2026/hero-image.webp',
+    ogImage: '/images/pmfby-crop-insurance-2026/hero-image.webp',
     relatedSlugs: ['soil-health-card-complete-guide-2026', 'nano-dap-500ml-price-in-india-2026'],
   },
   {
@@ -331,7 +331,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 7,
     schemes: ['pm-kisan'],
-    ogImage: '/images/articles/pm-kisan-23vi-kist-2026-status-check.webp',
+    ogImage: '/images/pm-kisan-23vi-kist-2026-status-check.webp',
     relatedSlugs: ['pm-kisan-ekyc-online-2026', 'pm-kisan-payment-failed-status-2026', 'pm-kisan-24vi-kist'],
   },
   {
@@ -347,7 +347,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     readingTime: 9,
     banks: ['sbi', 'pnb', 'bob', 'cooperative'],
     schemes: ['kcc'],
-    ogImage: '/images/articles/kisan-credit-card-online-apply-2026/hero-image.webp',
+    ogImage: '/images/kisan-credit-card-online-apply-2026/hero-image.webp',
     relatedSlugs: ['kisan-rin-kaha-se-le-2026', 'kisan-tractor-loan-2026'],
   },
   {
@@ -362,7 +362,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 6,
     schemes: ['pm-kisan'],
-    ogImage: '/images/articles/pm-kisan-fto-generated-ka-matlab-kya-hai.webp',
+    ogImage: '/images/pm-kisan-fto-generated-ka-matlab-kya-hai.webp',
     relatedSlugs: ['pm-kisan-problems-solution-guide-2026', 'pm-kisan-payment-failed-status-2026'],
   },
   {
@@ -377,7 +377,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 7,
     schemes: ['nano-dap'],
-    ogImage: '/images/articles/nano-dap-500ml-price-in-india-2026.webp',
+    ogImage: '/images/nano-dap-500ml-price-in-india-2026.webp',
     relatedSlugs: ['soil-health-card-complete-guide-2026', 'pmfby-crop-insurance-2026'],
   },
   {
@@ -392,7 +392,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 6,
     schemes: ['pm-kisan'],
-    ogImage: '/images/articles/pm-kisan-24vi-kist-october-2026.webp',
+    ogImage: '/images/pm-kisan-24vi-kist-october-2026.webp',
     relatedSlugs: ['pm-kisan-23vi-kist-2026-status-check', 'pm-kisan-ekyc-online-2026'],
   },
   {
@@ -407,7 +407,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 10,
     schemes: ['agristack', 'pm-kisan'],
-    ogImage: '/images/articles/agristack-kya-hai/infographic.webp',
+    ogImage: '/images/agristack-kya-hai/infographic.webp',
     relatedSlugs: ['pm-kisan-registration-online-2026', 'pm-kisan-complete-guide'],
   },
   {
@@ -422,7 +422,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 6,
     schemes: ['pm-kisan'],
-    ogImage: '/images/articles/pm-kisan-mobile-number-change-2026.webp',
+    ogImage: '/images/pm-kisan-mobile-number-change-2026.webp',
     relatedSlugs: ['pm-kisan-ekyc-online-2026', 'pm-kisan-name-correction-online-2026'],
   },
   {
@@ -437,7 +437,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 15,
     schemes: ['pm-kisan'],
-    ogImage: '/images/articles/pm-kisan-complete-guide/hero.webp',
+    ogImage: '/images/pm-kisan-complete-guide/hero.webp',
     relatedSlugs: ['pm-kisan-23vi-kist-2026-status-check', 'pm-kisan-ekyc-online-2026', 'pm-kisan-payment-failed-status-2026'],
   },
   {
@@ -452,7 +452,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 8,
     schemes: ['soil-health-card'],
-    ogImage: '/images/articles/soil-health-card-complete-guide-2026/hero.webp',
+    ogImage: '/images/soil-health-card-complete-guide-2026/hero.webp',
     relatedSlugs: ['nano-dap-500ml-price-in-india-2026', 'pmfby-crop-insurance-2026'],
   },
   {
@@ -467,7 +467,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 7,
     schemes: ['pm-kisan'],
-    ogImage: '/images/articles/pm-kisan-self-registered-status/pm-kisan-portal-homepage.webp',
+    ogImage: '/images/pm-kisan-self-registered-status/pm-kisan-portal-homepage.webp',
     relatedSlugs: ['pm-kisan-registration-online-2026', 'pm-kisan-23vi-kist-2026-status-check'],
   },
   {
@@ -482,7 +482,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 10,
     schemes: ['pm-kisan'],
-    ogImage: '/images/articles/pm-kisan-status-check-online-2026-complete-guide.webp',
+    ogImage: '/images/pm-kisan-status-check-online-2026-complete-guide.webp',
     relatedSlugs: ['pm-kisan-23vi-kist-2026-status-check', 'pm-kisan-complete-guide'],
   },
   {
@@ -496,7 +496,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     publishedTime: '2026-06-30T09:30:00+05:30',
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 5,
-    ogImage: '/images/articles/mandi-bhav-today/mandi-fresh-vegetables-mixed.webp',
+    ogImage: '/images/mandi-bhav-today/mandi-fresh-vegetables-mixed.webp',
   },
 ] as const;
 
