@@ -8,88 +8,124 @@
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "X-XSS-Protection", "value": "1; mode=block" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" },
-        { "key": "Strict-Transport-Security", "value": "max-age=31536000; includeSubDomains; preload" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains; preload"
+        }
       ]
     },
     {
       "source": "/(.*)\\.(ico|png|svg|jpg|jpeg|gif|webp|avif|woff|woff2|ttf|eot)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=2592000, s-maxage=31536000" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000, s-maxage=31536000"
+        }
+      ]
     },
     {
       "source": "/images/articles/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=86400, s-maxage=2592000" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=2592000"
+        }
       ]
     },
     {
       "source": "/sitemap.xml",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=3600, s-maxage=3600" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=3600"
+        }
       ]
     },
     {
       "source": "/robots.txt",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=86400" }
-      ]
-    },
-    {
-      "source": "/api/(.*)",
-      "headers": [
-        { "key": "Cache-Control", "value": "no-store, no-cache, must-revalidate" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
       ]
     }
   ],
   "redirects": [
-    { "source": "/pm-kisan-21vi-installment-status-check", "destination": "/articles/pm-kisan-21vi-installment-status-check", "permanent": true },
-    { "source": "/pm-kisan-21vi-installment-status-check/", "destination": "/articles/pm-kisan-21vi-installment-status-check", "permanent": true },
-
-    { "source": "/pm-kisan-kyc-csc", "destination": "/articles/pm-kisan-ekyc-online-2026", "permanent": true },
-    { "source": "/pm-kisan-kyc-csc/", "destination": "/articles/pm-kisan-ekyc-online-2026", "permanent": true },
-
-    { "source": "/pm-kisan-beneficiary-status", "destination": "/articles/pm-kisan-23vi-kist-2026-status-check", "permanent": true },
-    { "source": "/pm-kisan-beneficiary-status/", "destination": "/articles/pm-kisan-23vi-kist-2026-status-check", "permanent": true },
-
-    { "source": "/pm-kisan-beneficiary-list", "destination": "/beneficiary-list", "permanent": true },
-    { "source": "/pm-kisan-beneficiary-list/", "destination": "/beneficiary-list", "permanent": true },
-
-    { "source": "/articles/pm-kisan-24vi-kist-2026", "destination": "/articles/pm-kisan-24vi-kist", "permanent": true },
-    { "source": "/articles/pm-kisan-24vi-kist-2026/", "destination": "/articles/pm-kisan-24vi-kist", "permanent": true },
-
-    { "source": "/articles/agri-stack-kya-hai-2026", "destination": "/articles/agristack-kya-hai", "permanent": true },
-    { "source": "/articles/agri-stack-kya-hai-2026/", "destination": "/articles/agristack-kya-hai", "permanent": true },
-
-    { "source": "/articles/pm-kisan-mobile-number-change-2026", "destination": "/articles/pm-kisan-mobile-number-change", "permanent": true },
-    { "source": "/articles/pm-kisan-mobile-number-change-2026/", "destination": "/articles/pm-kisan-mobile-number-change", "permanent": true },
-
-    { "source": "/author", "destination": "/about", "permanent": true },
-    { "source": "/author/", "destination": "/about", "permanent": true },
-
-    { "source": "/beneficiary-list/daman-diu", "destination": "/beneficiary-list/dadra-nagar-haveli", "permanent": true },
-    { "source": "/beneficiary-list/daman-diu/", "destination": "/beneficiary-list/dadra-nagar-haveli", "permanent": true },
-
-    { "source": "/articles/soil-health-card-guide-2026", "destination": "/articles/soil-health-card-complete-guide-2026", "permanent": true },
-    { "source": "/articles/soil-health-card-guide-2026/", "destination": "/articles/soil-health-card-complete-guide-2026", "permanent": true },
-
-    { "source": "/articles/nano-dap-price-2026", "destination": "/articles/nano-dap-500ml-price-in-india-2026", "permanent": true },
-    { "source": "/articles/nano-dap-price-2026/", "destination": "/articles/nano-dap-500ml-price-in-india-2026", "permanent": true },
-
-    { "source": "/articles/pmfby-insurance-2026", "destination": "/articles/pmfby-crop-insurance-2026", "permanent": true },
-    { "source": "/articles/pmfby-insurance-2026/", "destination": "/articles/pmfby-crop-insurance-2026", "permanent": true },
-
-    { "source": "/articles/kisan-loan-guide-2026", "destination": "/articles/kisan-rin-kaha-se-le-2026", "permanent": true },
-    { "source": "/articles/kisan-loan-guide-2026/", "destination": "/articles/kisan-rin-kaha-se-le-2026", "permanent": true },
-
-    { "source": "/official-links", "destination": "/contact", "permanent": true },
-    { "source": "/official-links/", "destination": "/contact", "permanent": true },
-
-    { "source": "/pm-kisan-status", "destination": "/calculator/quick-status-check", "permanent": true },
-    { "source": "/pm-kisan-status/", "destination": "/calculator/quick-status-check", "permanent": true }
+    {
+      "source": "/pm-kisan-21vi-installment-status-check",
+      "destination": "/articles/pm-kisan-21vi-installment-status-check",
+      "permanent": true
+    },
+    {
+      "source": "/pm-kisan-kyc-csc",
+      "destination": "/articles/pm-kisan-ekyc-online-2026",
+      "permanent": true
+    },
+    {
+      "source": "/pm-kisan-beneficiary-status",
+      "destination": "/articles/pm-kisan-23vi-kist-2026-status-check",
+      "permanent": true
+    },
+    {
+      "source": "/pm-kisan-beneficiary-list",
+      "destination": "/beneficiary-list",
+      "permanent": true
+    },
+    {
+      "source": "/articles/pm-kisan-24vi-kist-2026",
+      "destination": "/articles/pm-kisan-24vi-kist",
+      "permanent": true
+    },
+    {
+      "source": "/articles/agri-stack-kya-hai-2026",
+      "destination": "/articles/agristack-kya-hai",
+      "permanent": true
+    },
+    {
+      "source": "/articles/pm-kisan-mobile-number-change-2026",
+      "destination": "/articles/pm-kisan-mobile-number-change",
+      "permanent": true
+    },
+    {
+      "source": "/author",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/beneficiary-list/daman-diu",
+      "destination": "/beneficiary-list/dadra-nagar-haveli",
+      "permanent": true
+    },
+    {
+      "source": "/official-links",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/pm-kisan-status",
+      "destination": "/calculator/quick-status-check",
+      "permanent": true
+    }
   ]
 }
