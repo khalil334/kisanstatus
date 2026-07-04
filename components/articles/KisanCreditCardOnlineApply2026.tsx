@@ -140,11 +140,11 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </IB>
         </section>
 
-        {/* IMAGE 2: Benefits */}
+        {/* IMAGE 2: Eligibility Criteria */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src="/images/kisan-credit-card-benefits.webp"
-            alt="Agricultural credit card benefits — low interest, collateral-free, 5 year validity"
+            src="/images/kisan-credit-card-eligibility-criteria.webp"
+            alt="Kisan credit card eligibility criteria — who can apply, land ownership requirements"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -152,7 +152,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            KCC Ke Mukhya Fayde — 4% Byaj, Bina Security, 5 Saal Valid
+            Eligibility Criteria — Kaun Apply Kar Sakta Hai
           </p>
         </div>
 
@@ -225,11 +225,11 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </DB>
         </section>
 
-        {/* IMAGE 3: Rates */}
+        {/* IMAGE 3: Loan Limits & Interest Rates */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src="/images/kisan-credit-card-rates.webp"
-            alt="Kisan credit card interest rates comparison — 4% effective vs 24% moneylender"
+            src="/images/kisan-credit-card-loan-limits-interest-rates.webp"
+            alt="Kisan credit card loan limits and interest rates comparison — 4% effective rate"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -237,7 +237,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Interest Rate Comparison — KCC vs Local Moneylender
+            Loan Limits Aur Interest Rates — 2026 Updated
           </p>
         </div>
 
@@ -277,10 +277,10 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </IB>
         </section>
 
-        {/* IMAGE 4: Documents */}
+        {/* IMAGE 4: Documents Required */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src="/images/kisan-credit-card-documents.webp"
+            src="/images/kisan-credit-card-documents-required.webp"
             alt="Kisan credit card required documents checklist — Aadhaar, PAN, land records, passbook"
             width={1200}
             height={630}
@@ -326,11 +326,11 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </WB>
         </section>
 
-        {/* IMAGE 5: Process */}
+        {/* IMAGE 5: Online Application Process */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src="/images/kisan-credit-card-process.webp"
-            alt="Kisan credit card application process flowchart — step by step guide from documents to approval"
+            src="/images/kisan-credit-card-online-application-process.webp"
+            alt="Kisan credit card online application process flowchart — step by step guide"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -338,7 +338,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Application Process — Documents Se Approval Tak Ka Safar
+            Online Application Process — Step by Step Guide
           </p>
         </div>
 
@@ -406,11 +406,11 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </div>
         </section>
 
-        {/* IMAGE 6: Success */}
+        {/* IMAGE 6: Loan Approved Success */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src="/images/kisan-credit-card-success.webp"
-            alt="Kisan credit card approval success — farmer with credit card ready for agricultural expenses"
+            src="/images/kisan-credit-card-loan-approved.webp"
+            alt="Kisan credit card loan approval success — farmer with approved credit facility"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -418,7 +418,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Approval Success — Ab Kheti Ke Kharchon Ki Tension Nahi
+            Loan Approved — Ab Kheti Ke Kharchon Ki Tension Nahi
           </p>
         </div>
 
