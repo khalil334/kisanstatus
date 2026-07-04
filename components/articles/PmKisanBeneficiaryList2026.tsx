@@ -9,12 +9,12 @@ const PUBLISHED = '2026-02-10T08:00:00+05:30';
 const MODIFIED = '2026-07-04T08:00:00+05:30';
 
 const RELATED = [
-  { slug: 'pm-kisan-ekyc-online-2026', title: 'Digital Verification Guide', emoji: '🔐' },
-  { slug: 'pm-kisan-rejected-list-2026', title: 'Application Declined Fix', emoji: '❌' },
-  { slug: 'pm-kisan-payment-failed-status-2026', title: 'DBT Transfer Failed Fix', emoji: '💸' },
-  { slug: 'pm-kisan-name-correction-online-2026', title: 'Name Correction Guide', emoji: '✏️' },
+  { slug: 'pm-kisan-complete-guide', title: 'PM Kisan Master Guide', emoji: '📚' },
   { slug: 'pm-kisan-beneficiary-list-village-wise-2026', title: 'Village Wise Roster Guide', emoji: '🏘️' },
-  { slug: 'pm-kisan-land-seeding-status-check', title: 'Land Record Linking Fix', emoji: '🌾' },
+  { slug: 'pm-kisan-24vi-kist', title: '24vi Installment Status', emoji: '📅' },
+  { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Meaning', emoji: '💳' },
+  { slug: 'kisan-credit-card-online-apply-2026', title: 'KCC Credit Card Guide', emoji: '💰' },
+  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav', emoji: '📈' },
 ];
 
 const FAQS_DATA = [
@@ -32,7 +32,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Naam roster mein hai par payment nahi aayi — kyun?',
-    a: 'Naam hona aur payment aana alag cheez hai. Payment ke liye NPCI seeding, sahi IFSC code, aur active bank account chahiye. DBT Transfer Failed guide padho ya helpline 155261 par call karo.',
+    a: 'Naam hona aur payment aana alag cheez hai. Payment ke liye NPCI seeding, sahi IFSC code, aur active bank account chahiye. FTO Generated guide padho ya helpline 155261 par call karo.',
   },
   {
     q: 'Roster mein naam aane mein kitna time lagta hai?',
@@ -114,10 +114,12 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
       </div>
 
       <div className="container-site max-w-3xl py-8">
+
+        {/* IMAGE: Hero — Fixed path */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src={article.ogImage || '/images/pm-kisan-beneficiary-list-village-wise-2026.webp'}
-            alt="PM Kisan approved recipients roster 2026 — village wise list check, PDF download guide"
+            src={article.ogImage || '/images/pm-kisan-beneficiary-status-kisanstatus.webp'}
+            alt="PM Kisan approved recipients roster 2026 — beneficiary status check, village wise list"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -269,23 +271,23 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
         </section>
 
         <section className="mb-8">
-          <SH>23vi Released — 24vi Ke Liye Tayyar Ho</SH>
+          <SH>24vi Ke Liye Tayyar Ho</SH>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl">
-              <p className="text-sm font-black text-green-800 dark:text-green-300 mb-1">✅ 23vi — 20 June 2026 Released</p>
-              <p className="text-xs text-green-700 dark:text-green-400">9.44 Crore+ ko ₹2,000 mil chuke. Status abhi check karo.</p>
+              <p className="text-sm font-black text-green-800 dark:text-green-300 mb-1">✅ 23vi — Released</p>
+              <p className="text-xs text-green-700 dark:text-green-400">9.44 Crore+ ko ₹2,000 mil chuke.</p>
             </div>
             <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-400 dark:border-amber-700 rounded-xl">
               <p className="text-sm font-black text-amber-800 dark:text-amber-300 mb-1">⏳ 24vi — October 2026 Expected</p>
-              <p className="text-xs text-amber-700 dark:text-amber-400">Roster mein naam hona chahiye. Neeche wali checklist follow karo.</p>
+              <p className="text-xs text-amber-700 dark:text-amber-400">Roster mein naam hona chahiye. Checklist follow karo.</p>
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
-              { icon: '🔐', title: 'Digital Verification', desc: 'Bina auth ke roster mein nahi aaoge', href: '/articles/pm-kisan-ekyc-online-2026', cta: 'Verification Guide →' },
-              { icon: '🏦', title: 'Bank NPCI Seeding', desc: 'UID bank se link hona zaroori', href: '/articles/pm-kisan-payment-failed-status-2026', cta: 'DBT Guide →' },
-              { icon: '✅', title: 'Status Check', desc: 'Active dikhna chahiye', href: '/articles/pm-kisan-23vi-kist-2026-status-check', cta: 'Status Guide →' },
-              { icon: '🌾', title: 'Land Record Linking', desc: 'Land Seeding No = fix karo', href: '/articles/pm-kisan-land-seeding-status-check', cta: 'Land Guide →' },
+              { icon: '📚', title: 'Complete Guide', desc: 'Sab problems ka ek jagah hal', href: '/articles/pm-kisan-complete-guide', cta: 'Master Guide →' },
+              { icon: '💳', title: 'FTO Status', desc: 'Paisa kab aayega samjho', href: '/articles/pm-kisan-fto-generated-ka-matlab-kya-hai', cta: 'FTO Guide →' },
+              { icon: '📅', title: '24vi Kist Status', desc: 'Expected date + eligibility', href: '/articles/pm-kisan-24vi-kist', cta: '24vi Guide →' },
+              { icon: '🏘️', title: 'Village Wise Roster', desc: 'Gaon ki poori list dekho', href: '/articles/pm-kisan-beneficiary-list-village-wise-2026', cta: 'Village List →' },
             ].map(({ icon, title, desc, href, cta }) => (
               <Link
                 key={href}
@@ -314,7 +316,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
           href="https://pmkisan.gov.in/BeneficiaryStatus.aspx"
           label="PM Kisan Beneficiary Status — Official Portal"
           guide="Abhi Naam Check Karo"
-          guideHref="/articles/pm-kisan-23vi-kist-2026-status-check"
+          guideHref="/articles/pm-kisan-complete-guide"
           portalName="pmkisan.gov.in"
         />
 
@@ -330,8 +332,8 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
           { href: '/articles/pm-kisan-beneficiary-list-village-wise-2026', l: '🏘️ Village Roster' },
-          { href: '/articles/pm-kisan-rejected-list-2026', l: '❌ Rejected Fix' },
-          { href: '/beneficiary-list', l: '📋 All States' },
+          { href: '/articles/pm-kisan-complete-guide', l: '📚 Master Guide' },
+          { href: '/articles/pm-kisan-24vi-kist', l: '📅 24vi Status' },
         ]} />
         <Disclaimer />
       </div>
