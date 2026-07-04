@@ -242,10 +242,10 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
           </IB>
         </section>
 
-        {/* Dashboard Image #2 — PRESERVED */}
+        {/* Dashboard Image #2 — FIXED ✅ */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src="/images/articles/soil-health-card-complete-guide-2026/dashboard.webp"
+            src="/images/articles/soil-health-card-complete-guide-2026/dashboard-2.webp"
             alt="Soil health card portal dashboard — Card Ready message and Download PDF button"
             width={1200}
             height={630}
