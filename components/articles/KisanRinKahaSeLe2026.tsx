@@ -76,7 +76,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* Hero Image */}
+        {/* IMAGE: Hero */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/kisan-rin-kaha-se-le-2026.webp'}
