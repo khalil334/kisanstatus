@@ -1,22 +1,28 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Image optimization — AVIF + WebP for best compression
+  // ── Image Optimization ─────────────────────────────────────
   images: {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 60,
+    minimumCacheTTL: 3600, // 1 hour (was 60s — reduces origin revalidation)
     dangerouslyAllowSVG: false,
+    // Add remote domains if external images ever needed:
+    // remotePatterns: [{ protocol: 'https', hostname: 'pmkisan.gov.in' }],
   },
 
-  // Gzip/Brotli compression enabled
+  // ── Compression ────────────────────────────────────────────
   compress: true,
 
-  // URL redirects — only Next.js specific ones
-  // Domain canonicalization + article slug fixes → vercel.json (edge level, faster)
+  // ── Performance Optimizations ──────────────────────────────
+  experimental: {
+    optimizePackageImports: ['@/components/ArticleShared', '@/components/ArticleSVGs'],
+  },
+
+  // ── Redirects (Next.js level only — domain/article slugs in vercel.json) ──
   async redirects() {
     return [
-      // ── WWW → non-WWW (Next.js fallback if Vercel domain settings miss) ──
+      // WWW → non-WWW fallback (Vercel domain settings are primary)
       {
         source: '/:path*',
         has: [{ type: 'host', value: 'www.kisanstatus.com' }],
@@ -24,47 +30,54 @@ const nextConfig = {
         permanent: true,
       },
 
-      // ── Calculator path corrections ──
+      // Calculator path corrections ONLY
+      // ⚠️ Do NOT redirect /calculator/quick-status-check — it's a valid tool
       { source: '/calculator/farming-profit', destination: '/calculator/crop-profit', permanent: true },
       { source: '/calculator/kisan-loan-emi', destination: '/calculator/kcc-loan-emi', permanent: true },
-      { source: '/calculator/quick-status-check', destination: '/calculator/installment-tracker', permanent: true },
 
-      // ── Root level → /articles/ redirects ──
+      // Root-level shortcuts → /articles/ (NOT in vercel.json)
       { source: '/pm-kisan', destination: '/', permanent: true },
-      { source: '/pm-kisan-status', destination: '/articles/pm-kisan-status-check-online-2026-complete-guide', permanent: true },
-      { source: '/pm-kisan-24vi-kist', destination: '/articles/pm-kisan-24vi-kist', permanent: true },
       { source: '/agristack-kya-hai', destination: '/articles/agristack-kya-hai', permanent: true },
       { source: '/kisan-rin-kaha-se-le-2026', destination: '/articles/kisan-rin-kaha-se-le-2026', permanent: true },
-      { source: '/pm-kisan-beneficiary-list', destination: '/articles/pm-kisan-beneficiary-list-2026', permanent: true },
 
-      // ── Beneficiary list slug corrections ──
-      { source: '/beneficiary-list/daman-diu', destination: '/beneficiary-list/dadra-nagar-haveli', permanent: true },
+      // Beneficiary list slug correction (hyphen vs 'and')
       { source: '/beneficiary-list/jammu-and-kashmir', destination: '/beneficiary-list/jammu-kashmir', permanent: true },
     ];
   },
 
-  // Caching strategy only — security headers moved to vercel.json (edge level)
+  // ── Headers ────────────────────────────────────────────────
+  // Security headers → vercel.json (edge level, faster)
+  // Only caching + performance headers here
   async headers() {
     return [
-      // DNS prefetch hint
+      // DNS prefetch — HTML pages only (not static/API)
       {
-        source: '/:path*',
+        source: '/((?!_next/static|api|images).*)',
         headers: [
           { key: 'X-DNS-Prefetch-Control', value: 'on' },
         ],
       },
-      // Pages: always fresh (no stale content)
+
+      // RSC prefetch requests — always fresh
       {
         source: '/:path*{/}?',
         has: [{ type: 'header', key: 'next-router-prefetch' }],
         headers: [{ key: 'Cache-Control', value: 'public, max-age=0, must-revalidate' }],
       },
-      // Images: cache for 1 year (immutable filenames)
+
+      // Article images — shorter cache than fonts (OG images may update)
+      {
+        source: '/images/articles/:path*',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=86400, s-maxage=2592000' }],
+      },
+
+      // Site-level images (hero, logo, OG) — moderate cache
       {
         source: '/images/:path*',
-        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=604800, s-maxage=2592000' }],
       },
-      // Static assets: cache for 1 year (hashed filenames)
+
+      // Next.js static assets — immutable (hashed filenames)
       {
         source: '/_next/static/:path*',
         headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
