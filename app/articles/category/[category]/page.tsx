@@ -6,7 +6,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import { ARTICLES, CATEGORIES, type CategorySlug, getCategoryInfo } from '@/lib/articles-data';
+import { ARTICLES, CATEGORIES, type CategorySlug } from '@/lib/articles-data';
 import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL, DEFAULT_OG_IMAGE } from '@/lib/site-config';
 
 export const revalidate = 86400;
@@ -84,7 +84,6 @@ export async function generateMetadata({
   if (!seo) return { title: 'Category Not Found' };
 
   const url = `${SITE_URL}/articles/category/${category}`;
-  const catInfo = CATEGORIES[category as CategorySlug];
 
   return {
     title: seo.title,
@@ -126,6 +125,9 @@ export default async function CategoryPage({
 
   if (!cat || !seo) notFound();
 
+  // ✅ FIX: Extract catName BEFORE using it to avoid TypeScript "never" error
+  const catName = cat.nameHi || cat.name;
+
   const articles = ARTICLES.filter((a) => a.category === category);
 
   // Category counts for filter pills
@@ -164,13 +166,14 @@ export default async function CategoryPage({
     },
   };
 
+  // ✅ FIX: Use catName variable instead of inline cat.nameHi || cat.name
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
       { '@type': 'ListItem', position: 2, name: 'Articles', item: `${SITE_URL}/articles` },
-      { '@type': 'ListItem', position: 3, name: cat.nameHi || cat.name, item: url },
+      { '@type': 'ListItem', position: 3, name: catName, item: url },
     ],
   };
 
@@ -191,11 +194,11 @@ export default async function CategoryPage({
               <span className="mx-2">/</span>
               <Link href="/articles" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Articles</Link>
               <span className="mx-2">/</span>
-              <span className="text-white font-bold">{cat.nameHi || cat.name}</span>
+              <span className="text-white font-bold">{catName}</span>
             </nav>
 
             <span className="inline-block bg-white/10 border border-white/20 text-green-300 text-xs font-bold px-4 py-2 rounded-full mb-4 uppercase tracking-wider">
-              {seo.emoji} {cat.nameHi || cat.name}
+              {seo.emoji} {catName}
             </span>
             <h1 id="category-heading" className="text-2xl md:text-4xl font-black text-white mb-3 leading-tight">
               {seo.title}
@@ -256,7 +259,7 @@ export default async function CategoryPage({
               <div className="flex items-center gap-3 mb-5">
                 <span className="text-2xl" aria-hidden="true">{seo.emoji}</span>
                 <h2 id="articles-heading" className="text-lg font-black text-[var(--color-text)]">
-                  {cat.nameHi || cat.name} Resources
+                  {catName} Resources
                 </h2>
                 <span className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-xs font-bold px-2 py-0.5 rounded-full">
                   {articles.length} articles
@@ -286,7 +289,7 @@ export default async function CategoryPage({
                     )}
                     <div className="p-5 flex flex-col flex-1">
                       <span className="text-[10px] font-bold px-2 py-0.5 rounded-full self-start bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 mb-3">
-                        {seo.emoji} {cat.nameHi || cat.name}
+                        {seo.emoji} {catName}
                       </span>
                       <h3 className="font-black text-[var(--color-text)] text-sm leading-snug group-hover:text-green-700 dark:group-hover:text-green-400 transition-colors mb-2 line-clamp-2">
                         {article.title}
