@@ -27,7 +27,6 @@ const FAQS_DATA = [
   { q: 'Online kahan se kharidein?', a: 'IFFCO official website sabse trustworthy. Amazon/Flipkart par official sellers check karein. Local Krishi Kendra mein subsidy milne ki sambhavna. Hamesha original packaging QR code scan karke verify karein.' },
 ];
 
-// HowTo schema — unique SEO value, preserved separately
 const howToSchema = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
@@ -46,7 +45,6 @@ const howToSchema = {
 export default function NanoDap500mlPriceInIndia2026({ article }: { article: ArticleMeta }) {
   return (
     <>
-      {/* HowTo schema only — Article/Breadcrumb/FAQ handled by page router + FAQBlock */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
 
       {/* Header */}
@@ -74,11 +72,11 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* Hero Image */}
+        {/* IMAGE 1: Hero */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src={article.ogImage || '/images/nano-dap-500ml-price-india-2026.webp'}
-            alt="IFFCO liquid DAP 500ml bottle price India 2026 — foliar spray fertilizer"
+            src={article.ogImage || '/images/nano-dap-500ml-bottle-hero.webp'}
+            alt="IFFCO liquid DAP 500ml bottle — nano fertilizer for Indian farmers 2026"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -146,6 +144,22 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
           </WB>
         </section>
 
+        {/* IMAGE 2: Price Banner */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/nano-dap-price-banner-2026.webp"
+            alt="Nano DAP 500ml price banner 2026 — IFFCO liquid fertilizer rate comparison"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            Nano DAP Price Banner 2026 — MRP vs Subsidized Rate
+          </p>
+        </div>
+
         {/* Section 3: State-wise Pricing */}
         <section className="mb-8">
           <SH>State-wise Price Reference</SH>
@@ -189,6 +203,22 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
           </div>
         </section>
 
+        {/* IMAGE 3: Price India 2026 */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/nano-dap-500ml-price-india-2026.webp"
+            alt="Nano DAP 500ml price India 2026 — state-wise rate comparison for farmers"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            State-wise Price Comparison — June 2026 Reference
+          </p>
+        </div>
+
         {/* Section 4: Price Factors */}
         <section className="mb-8">
           <SH>Price Kyun Badalti Hai?</SH>
@@ -231,6 +261,22 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
           </div>
         </section>
 
+        {/* IMAGE 4: Benefits for Farmers */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/nano-dap-benefits-farmers.webp"
+            alt="Nano DAP benefits for Indian farmers — foliar spray advantages comparison"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            Nano DAP Ke Fayde — Kisanon Ke Liye Real Benefits
+          </p>
+        </div>
+
         {/* Section 6: Dosage Chart */}
         <section className="mb-8">
           <SH>Crop-wise Dosage Chart — Per Acre</SH>
@@ -269,6 +315,22 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
             </table>
           </div>
         </section>
+
+        {/* IMAGE 5: Before After Comparison */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/nano-dap-before-after-comparison.webp"
+            alt="Nano DAP before and after comparison — crop growth difference after foliar spray"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            Before vs After — Nano DAP Spray Ka Asar
+          </p>
+        </div>
 
         {/* Section 7: How To Apply */}
         <section className="mb-8">
@@ -322,6 +384,22 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
           </DB>
         </section>
 
+        {/* IMAGE 6: Vs Traditional DAP Comparison */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/nano-dap-vs-traditional-dap-comparison.webp"
+            alt="Nano DAP vs traditional DAP comparison — liquid foliar spray vs granular soil application"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            Nano DAP vs Traditional DAP — Detailed Comparison
+          </p>
+        </div>
+
         {/* Section 9: Where To Buy */}
         <section className="mb-8">
           <SH>Kahan Se Kharidein — Trusted Sources</SH>
@@ -345,6 +423,22 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
             <strong>Fraud Alert:</strong> Original packaging par QR code scan karo. Bohot sasta = suspicious. Fertilizer ke liye loan chahiye toh <Link href="/articles/kisan-credit-card-online-apply-2026" className="underline font-bold">KCC guide</Link> padho.
           </WB>
         </section>
+
+        {/* IMAGE 7: Buy Online */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/nano-dap-buy-online-fertilizer.webp"
+            alt="Buy Nano DAP online fertilizer — trusted sources for Indian farmers IFFCO authorized"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            Trusted Sources — Online Aur Offline Kahan Se Kharidein
+          </p>
+        </div>
 
         {/* Section 10: Common Mistakes */}
         <section className="mb-8">
