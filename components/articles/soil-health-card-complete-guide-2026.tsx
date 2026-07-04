@@ -55,7 +55,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* Hero Image #1 — PRESERVED */}
+        {/* IMAGE 1: Hero */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/articles/soil-health-card-complete-guide-2026/hero.webp'}
@@ -242,7 +242,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
           </IB>
         </section>
 
-        {/* Dashboard Image #2 — FIXED ✅ */}
+        {/* IMAGE 2: Dashboard */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/soil-health-card-complete-guide-2026/dashboard-2.webp"
