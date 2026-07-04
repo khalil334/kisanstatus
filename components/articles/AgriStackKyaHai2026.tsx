@@ -76,7 +76,7 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* Hero Image */}
+        {/* IMAGE 1: Hero */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/articles/agristack-kya-hai/infographic.webp'}
@@ -93,7 +93,7 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
           </p>
         </div>
 
-        {/* Real Field Hook — Natural rhythm variation */}
+        {/* Real Field Hook */}
         <div className="my-6 p-5 bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-400 dark:border-amber-700 border-l-[6px] rounded-xl">
           <h2 className="text-base font-black text-amber-800 dark:text-amber-300 mb-2">Jo Maine Field Mein Dekha Hai</h2>
           <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed mb-2">
@@ -133,6 +133,22 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
             Pehle? Har scheme ka alag database. PM Kisan portal par kuch, state land records mein kuch, bank mein kuch. Sync nahi hota tha. Result — naam mismatch, payment fail, mahino delay. Ab ek verified source of truth hai. Finally.
           </p>
         </section>
+
+        {/* IMAGE 2: Ecosystem Benefits */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/articles/agristack-kya-hai/ecosystem-benefits.webp"
+            alt="Digital agriculture ecosystem benefits — how cultivator ID connects schemes, loans, insurance"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            Digital Agriculture Ecosystem — Sab Schemes Ek Platform Par
+          </p>
+        </div>
 
         {/* Section 2: Why Now */}
         <section className="mb-8">
@@ -226,6 +242,22 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
             <SI n={8}>Acknowledgement receipt lo — future reference zaroori</SI>
           </StepList>
 
+          {/* IMAGE 3: Registration Steps */}
+          <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+            <Image
+              src="/images/articles/agristack-kya-hai/registration-steps.webp"
+              alt="Digital cultivator identity registration steps — CSC enrollment process visual guide"
+              width={1200}
+              height={630}
+              className="w-full object-cover"
+              loading="lazy"
+              sizes="(max-width: 768px) 100vw, 768px"
+            />
+            <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+              CSC Centre Par Registration Process — Step by Step
+            </p>
+          </div>
+
           <DB>
             <strong>Fraud Alert:</strong> FREE hai. ₹50-200 maange toh refuse. 1800-1214-060 par complaint. Maine 3 operators report karwaye UP mein — suspend hue. Receipt maangna mat bhoolna.
           </DB>
@@ -307,6 +339,23 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Kaam khatam nahi hua. Sirf shuru hua hai.
           </p>
+
+          {/* IMAGE 4: Farmer ID Card Sample */}
+          <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+            <Image
+              src="/images/articles/agristack-kya-hai/farmer-id-card-sample.webp"
+              alt="Digital cultivator identity card sample — 14-digit ID format example"
+              width={1200}
+              height={630}
+              className="w-full object-cover"
+              loading="lazy"
+              sizes="(max-width: 768px) 100vw, 768px"
+            />
+            <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+              Sample Digital Cultivator Identity Card — 14 Digit Unique Number
+            </p>
+          </div>
+
           <div className="space-y-3">
             <div className="flex gap-3 p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
               <span className="text-green-600 dark:text-green-400 font-black text-lg shrink-0">01</span>
@@ -347,7 +396,7 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
           <FAQBlock faqs={FAQS_DATA} caption="Digital Cultivator Identity FAQ 2026 — Verified Answers" />
         </section>
 
-        {/* Conclusion — Punchy, no filler */}
+        {/* Conclusion */}
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Bottom Line</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
