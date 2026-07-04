@@ -9,19 +9,19 @@ const PUBLISHED = '2026-06-23T08:00:00+05:30';
 const MODIFIED = '2026-07-04T08:00:00+05:30';
 
 const RELATED = [
-  { slug: 'pm-kisan-23vi-kist-2026-status-check', title: '23vi Installment Status', emoji: '📅' },
-  { slug: 'pm-kisan-payment-failed-status-2026', title: 'Payment Failed Fix', emoji: '💸' },
-  { slug: 'pm-kisan-ekyc-online-2026', title: 'Digital Verification Guide', emoji: '🔐' },
+  { slug: 'pm-kisan-24vi-kist', title: '24vi Installment Status', emoji: '📅' },
   { slug: 'pm-kisan-beneficiary-list-2026', title: 'Beneficiary Roster Check', emoji: '📋' },
-  { slug: 'pm-kisan-mobile-number-change', title: 'Mobile/Bank Update', emoji: '📱' },
   { slug: 'pm-kisan-complete-guide', title: 'Complete Master Guide', emoji: '📚' },
+  { slug: 'kisan-credit-card-online-apply-2026', title: 'KCC Credit Card Guide', emoji: '💳' },
+  { slug: 'nano-dap-500ml-price-in-india-2026', title: 'Nano DAP Price Guide', emoji: '🌱' },
+  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav', emoji: '📈' },
 ];
 
 const FAQS_DATA = [
   { q: 'FTO Generated ka matlab kya hai?', a: 'Fund Transfer Order. Administration ne bank ko funds bhejne ka order de diya. Achhi khabar hai — paisa confirm hai, bas bank processing baaki. 7-15 din mein account mein aayega.' },
   { q: 'FTO ke baad kitne din mein paisa aata hai?', a: 'SBI/PNB: 8-10 din. HDFC/ICICI: 10-14 din. BOB: 12-15 din. Regional Rural Banks: 15-20 din. Post Office: 15-25 din. 15 din se zyada ho jaye toh bank visit karo.' },
   { q: 'Credit Release Pending kitne din rehta hai?', a: 'Normally 3-10 din. 15 din se zyada = Aadhaar seeding ya NPCI mapping mein problem. Bank jaake dono check karwao.' },
-  { q: '23vi tranche kab release hogi?', a: 'June end se July mid tak FTO generate ho raha hai. June tak eKYC complete walon ka pehle. Baakiyon ka July end tak.' },
+  { q: '24vi tranche kab release hogi?', a: 'October 2026 mein expected hai. September end tak FTO generate hona shuru hoga. eKYC complete walon ka pehle aayega.' },
   { q: '15 din baad bhi paisa nahi aaya — kya karein?', a: 'Step 1: Bank jaake Aadhaar seeding check. Step 2: NPCI mapping verify. Step 3: Account active hai confirm. Step 4: 155261 call. Step 5: CSC visit.' },
   { q: 'Bina eKYC ke FTO generate hota hai?', a: 'Nahi. 2026 mein bina digital verification ke koi installment nahi. Pehle eKYC karo, phir 24vi (Oct 2026) ka wait.' },
   { q: 'FTO reject kyun hota hai?', a: 'Account band, Aadhaar seeding galat, naam mismatch, IFSC invalid, ya account dormant. Sabse common: Aadhaar seeding missing (90% cases).' },
@@ -58,7 +58,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* Hero Image — PRESERVED */}
+        {/* IMAGE 1: Hero */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/pm-kisan-fto-generated-featured-image-kisanstatus.webp'}
@@ -121,9 +121,9 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
           </p>
         </section>
 
-        {/* 23vi Tranche Timing */}
+        {/* 24vi Tranche Timing */}
         <section className="mb-8">
-          <SH>23vi Tranche Kab Release Hogi?</SH>
+          <SH>24vi Tranche Kab Release Hogi?</SH>
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
             <table className="w-full text-sm border-collapse">
               <thead>
@@ -135,21 +135,21 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
               </thead>
               <tbody>
                 {[
-                  ['eKYC Before June', 'Jun End - Jul First Week', '✅ Chal Raha Hai', 'green'],
-                  ['eKYC June Mein Kiya', 'Jul Mid - Jul End', '⏳ Chalu Hoga', 'blue'],
-                  ['eKYC Abhi Tak Nahi', 'Next Installment (24vi)', '❌ Nahi Milega', 'red'],
-                ].map(([cat, timing, status, color], i) => (
+                  ['eKYC Before September', 'Oct First Week', '✅ Pehle Aayega'],
+                  ['eKYC September Mein', 'Oct Mid - End', '⏳ Baad Mein'],
+                  ['eKYC Abhi Tak Nahi', 'Next Installment (25vi)', '❌ Nahi Milega'],
+                ].map(([cat, timing, status], i) => (
                   <tr key={i} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
                     <td className="p-3 border-b border-[var(--color-border)] font-medium text-xs text-[var(--color-text)]">{cat}</td>
                     <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{timing}</td>
-                    <td className={`p-3 border-b border-[var(--color-border)] text-xs font-bold text-${color}-600 dark:text-${color}-400`}>{status}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs font-bold text-green-700 dark:text-green-400">{status}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
           <DB>
-            <strong>Warning:</strong> Abhi tak <Link href="/articles/pm-kisan-ekyc-online-2026" className="underline font-bold">eKYC</Link> nahi ki? 23vi nahi milegi. Pehle authentication karo, phir 24vi (Oct 2026) ka wait.
+            <strong>Warning:</strong> Abhi tak eKYC nahi ki? 24vi nahi milegi. Pehle authentication karo, phir 25vi (Feb 2027) ka wait.
           </DB>
         </section>
 
@@ -167,16 +167,16 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
               </thead>
               <tbody>
                 {[
-                  ['SBI', '8-10', 'Sabse fast', 'green'],
-                  ['PNB', '10-12', 'Theek hai', 'green'],
-                  ['HDFC / ICICI', '10-14', 'Private banks', 'blue'],
-                  ['Bank of Baroda', '12-15', 'Thoda slow', 'yellow'],
-                  ['Regional Rural Banks', '15-20', 'Slow', 'orange'],
-                  ['Post Office', '15-25', 'Sabse slow', 'red'],
-                ].map(([bank, days, speed, color], i) => (
+                  ['SBI', '8-10', 'Sabse fast'],
+                  ['PNB', '10-12', 'Theek hai'],
+                  ['HDFC / ICICI', '10-14', 'Private banks'],
+                  ['Bank of Baroda', '12-15', 'Thoda slow'],
+                  ['Regional Rural Banks', '15-20', 'Slow'],
+                  ['Post Office', '15-25', 'Sabse slow'],
+                ].map(([bank, days, speed], i) => (
                   <tr key={bank} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
                     <td className="p-3 border-b border-[var(--color-border)] font-medium text-xs text-[var(--color-text)]">{bank}</td>
-                    <td className={`p-3 border-b border-[var(--color-border)] text-center font-bold text-xs text-${color}-700 dark:text-${color}-400`}>{days}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-center font-bold text-xs text-green-700 dark:text-green-400">{days}</td>
                     <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{speed}</td>
                   </tr>
                 ))}
@@ -244,16 +244,16 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
               </thead>
               <tbody>
                 {[
-                  ['UP', '7-10 din', 'Fast processing', 'green'],
-                  ['Punjab / Haryana', '8-12 din', 'Achha system', 'green'],
-                  ['MP', '12-15 din', 'Medium speed', 'yellow'],
-                  ['Bihar / Jharkhand', '15-20 din', 'Verification slow', 'orange'],
-                  ['Rajasthan', '15-20 din', 'Bank coordination', 'orange'],
-                  ['West Bengal', '20-30 din', 'Sabse slow', 'red'],
-                ].map(([state, delay, reason, color], i) => (
+                  ['UP', '7-10 din', 'Fast processing'],
+                  ['Punjab / Haryana', '8-12 din', 'Achha system'],
+                  ['MP', '12-15 din', 'Medium speed'],
+                  ['Bihar / Jharkhand', '15-20 din', 'Verification slow'],
+                  ['Rajasthan', '15-20 din', 'Bank coordination'],
+                  ['West Bengal', '20-30 din', 'Sabse slow'],
+                ].map(([state, delay, reason], i) => (
                   <tr key={state} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
                     <td className="p-3 border-b border-[var(--color-border)] font-medium text-xs text-[var(--color-text)]">{state}</td>
-                    <td className={`p-3 border-b border-[var(--color-border)] text-center font-bold text-xs text-${color}-600 dark:text-${color}-400`}>{delay}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-center font-bold text-xs text-[var(--color-text)]">{delay}</td>
                     <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{reason}</td>
                   </tr>
                 ))}
@@ -261,6 +261,22 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             </table>
           </div>
         </section>
+
+        {/* IMAGE 2: FAQ */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/pm-kisan-fto-faq-kisanstatus.webp"
+            alt="PM Kisan FTO frequently asked questions — common doubts about fund transfer order"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            FTO Se Jude Aksar Puche Jane Wale Sawal
+          </p>
+        </div>
 
         {/* FAQ */}
         <section className="mb-8">
@@ -287,7 +303,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
           href="https://pmkisan.gov.in/BeneficiaryStatus.aspx"
           label="PM Kisan Beneficiary Status — FTO Check"
           guide="Abhi Status Dekho"
-          guideHref="/articles/pm-kisan-payment-failed-status-2026"
+          guideHref="/articles/pm-kisan-complete-guide"
           portalName="pmkisan.gov.in"
         />
 
@@ -302,9 +318,9 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/pm-kisan-23vi-kist-2026-status-check', l: '📅 23vi Status' },
-          { href: '/articles/pm-kisan-payment-failed-status-2026', l: '💸 Payment Fix' },
-          { href: '/articles/pm-kisan-ekyc-online-2026', l: '🔐 eKYC Guide' },
+          { href: '/articles/pm-kisan-24vi-kist', l: '📅 24vi Status' },
+          { href: '/articles/pm-kisan-complete-guide', l: '📚 Master Guide' },
+          { href: '/articles/pm-kisan-beneficiary-list-2026', l: '📋 Beneficiary List' },
         ]} />
         <Disclaimer />
       </div>
