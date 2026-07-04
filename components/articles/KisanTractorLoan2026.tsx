@@ -76,10 +76,10 @@ export default function KisanTractorLoan2026({ article }: { article: ArticleMeta
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* Hero Image */}
+        {/* IMAGE 1: Hero Banner */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src={article.ogImage || '/images/kisan-tractor-loan-2026.webp'}
+            src={article.ogImage || '/images/articles/kisan-tractor-loan-2026/hero-banner.webp'}
             alt="Tractor loan financing India 2026 — subsidized rates, zero down payment options, government subsidy workflow"
             width={1200}
             height={630}
@@ -225,6 +225,22 @@ export default function KisanTractorLoan2026({ article }: { article: ArticleMeta
           </WB>
         </section>
 
+        {/* IMAGE 2: Bank Loan Process */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/articles/kisan-tractor-loan-2026/bank-loan-process.webp"
+            alt="Bank tractor loan application process flowchart — step by step guide from application to approval"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            Bank Loan Process — Application Se Lekar Disbursement Tak
+          </p>
+        </div>
+
         {/* Section 4: Hidden Costs */}
         <section className="mb-8">
           <SH>Hidden Costs — Jo Dealer Aur Bank Dono Chupate Hain</SH>
@@ -257,6 +273,22 @@ export default function KisanTractorLoan2026({ article }: { article: ArticleMeta
             <strong>Critical:</strong> Dealer se "on-road cost breakup" maango. Registration, insurance, hypothecation alag se likhwao. Inko loan amount mein include mat karo — warna interest par interest dena padega.
           </DB>
         </section>
+
+        {/* IMAGE 3: Tractor Approved */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/articles/kisan-tractor-loan-2026/tractor-approved.webp"
+            alt="Tractor loan approval success — farmer with new tractor after bank approval"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            Loan Approval Success — Tractor Delivery Day
+          </p>
+        </div>
 
         {/* Section 5: Real Scenarios */}
         <section className="mb-8">
@@ -337,6 +369,22 @@ export default function KisanTractorLoan2026({ article }: { article: ArticleMeta
             </table>
           </div>
         </section>
+
+        {/* IMAGE 4: Tractor Finance Guide */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/articles/kisan-tractor-loan-2026/tractor-finance-guide.webp"
+            alt="Complete tractor finance guide comparison — banks vs NBFC vs government subsidy options"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            Finance Options Comparison — Bank, NBFC, Subsidy
+          </p>
+        </div>
 
         {/* Section 7: Crop Failure Protocol */}
         <section className="mb-8">
