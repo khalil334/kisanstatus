@@ -164,7 +164,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     readingTime: 7,
     schemes: ['nano-dap'],
     ogImage: '/images/nano-dap-500ml-price-in-india-2026.webp',
-    relatedSlugs: ['soil-health-card-complete-guide-2026', 'pmfby-crop-insurance-2026'],
+    relatedSlugs: ['soil-health-card-complete-guide-2026', 'agristack-kya-hai'],
   },
   {
     slug: 'pm-kisan-24vi-kist',
@@ -179,7 +179,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     readingTime: 6,
     schemes: ['pm-kisan'],
     ogImage: '/images/pm-kisan-24vi-kist-october-2026.webp',
-    relatedSlugs: ['pm-kisan-23vi-kist-2026-status-check', 'pm-kisan-ekyc-online-2026'],
+    relatedSlugs: ['pm-kisan-complete-guide', 'pm-kisan-beneficiary-list-2026'],
   },
   {
     slug: 'pm-kisan-beneficiary-list-2026',
@@ -194,7 +194,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     readingTime: 7,
     schemes: ['pm-kisan'],
     ogImage: '/images/pm-kisan-beneficiary-list-village-wise-2026.webp',
-    relatedSlugs: ['pm-kisan-beneficiary-list-village-wise-2026', 'pm-kisan-rejected-list-2026'],
+    relatedSlugs: ['pm-kisan-beneficiary-list-village-wise-2026', 'pm-kisan-24vi-kist'],
   },
   {
     slug: 'pm-kisan-beneficiary-list-village-wise-2026',
@@ -209,7 +209,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     readingTime: 6,
     schemes: ['pm-kisan'],
     ogImage: '/images/pm-kisan-beneficiary-list-village-wise-2026.webp',
-    relatedSlugs: ['pm-kisan-beneficiary-list-2026'],
+    relatedSlugs: ['pm-kisan-beneficiary-list-2026', 'pm-kisan-complete-guide'],
   },
   {
     slug: 'pm-kisan-complete-guide',
@@ -224,7 +224,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     readingTime: 15,
     schemes: ['pm-kisan'],
     ogImage: '/images/pm-kisan-complete-guide/hero.webp',
-    relatedSlugs: ['pm-kisan-23vi-kist-2026-status-check', 'pm-kisan-ekyc-online-2026', 'pm-kisan-payment-failed-status-2026'],
+    relatedSlugs: ['pm-kisan-24vi-kist', 'pm-kisan-beneficiary-list-2026', 'pm-kisan-fto-generated-ka-matlab-kya-hai'],
   },
   {
     slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai',
@@ -239,7 +239,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     readingTime: 6,
     schemes: ['pm-kisan'],
     ogImage: '/images/pm-kisan-fto-generated-ka-matlab-kya-hai.webp',
-    relatedSlugs: ['pm-kisan-problems-solution-guide-2026', 'pm-kisan-payment-failed-status-2026'],
+    relatedSlugs: ['pm-kisan-complete-guide', 'pm-kisan-24vi-kist'],
   },
   {
     slug: 'soil-health-card-complete-guide-2026',
@@ -254,7 +254,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     readingTime: 8,
     schemes: ['soil-health-card'],
     ogImage: '/images/soil-health-card-complete-guide-2026/hero.webp',
-    relatedSlugs: ['nano-dap-500ml-price-in-india-2026', 'pmfby-crop-insurance-2026'],
+    relatedSlugs: ['nano-dap-500ml-price-in-india-2026', 'agristack-kya-hai'],
   },
   {
     slug: 'agristack-kya-hai',
@@ -269,7 +269,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     readingTime: 10,
     schemes: ['agristack', 'pm-kisan'],
     ogImage: '/images/agristack-kya-hai/infographic.webp',
-    relatedSlugs: ['pm-kisan-registration-online-2026', 'pm-kisan-complete-guide'],
+    relatedSlugs: ['pm-kisan-complete-guide', 'pm-kisan-24vi-kist'],
   },
 ] as const;
 
