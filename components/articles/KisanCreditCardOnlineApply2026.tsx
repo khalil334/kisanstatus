@@ -10,11 +10,11 @@ const MODIFIED = '2026-07-04T08:00:00+05:30';
 
 const RELATED = [
   { slug: 'kisan-rin-kaha-se-le-2026', title: 'Agricultural Credit Kahan Se Milega', emoji: '🏦' },
-  { slug: 'pm-kisan-ekyc-online-2026', title: 'Digital Verification Guide', emoji: '🔐' },
-  { slug: 'pm-kisan-payment-failed-status-2026', title: 'Payment Failed Fix', emoji: '💸' },
-  { slug: 'pmfby-crop-insurance-2026', title: 'Crop Insurance Claim Guide', emoji: '🛡️' },
+  { slug: 'pm-kisan-complete-guide', title: 'PM Kisan Master Guide', emoji: '📚' },
+  { slug: 'pm-kisan-24vi-kist', title: '24vi Installment Status', emoji: '📅' },
   { slug: 'agristack-kya-hai', title: 'Digital Cultivator Identity', emoji: '🆔' },
-  { slug: 'pm-kisan-23vi-kist-2026-status-check', title: '23vi Installment Status', emoji: '📅' },
+  { slug: 'nano-dap-500ml-price-in-india-2026', title: 'Nano DAP Price Guide', emoji: '🌱' },
+  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav', emoji: '📈' },
 ];
 
 const FAQS_DATA = [
@@ -449,7 +449,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           href="https://pmkisan.gov.in"
           label="PM Kisan Portal — Beneficiary Verification"
           guide="Apna Status Check Karo"
-          guideHref="/articles/pm-kisan-ekyc-online-2026"
+          guideHref="/articles/pm-kisan-complete-guide"
           portalName="pmkisan.gov.in"
         />
 
@@ -465,7 +465,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
           { href: '/articles/kisan-rin-kaha-se-le-2026', l: '🏦 Credit Guide' },
-          { href: '/articles/pmfby-crop-insurance-2026', l: '🛡️ Crop Insurance' },
+          { href: '/articles/pm-kisan-complete-guide', l: '📚 Master Guide' },
           { href: '/calculator/kcc-loan-emi', l: '🧮 EMI Calculator' },
         ]} />
         <Disclaimer />
