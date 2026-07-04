@@ -109,29 +109,30 @@ function ArticleLoading() {
 
 // ═══════════════════════════════════════════════════════════
 // COMPONENT REGISTRY — ONLY 12 ARTICLES
+// ⚠️ Import paths MUST match exact file names on GitHub
 // ═══════════════════════════════════════════════════════════
 
 const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> = {
-  // Loan Articles (3)
+  // Loan Articles (3) — PascalCase files
   KisanCreditCardOnlineApply2026:             dynamic(() => import('@/components/articles/KisanCreditCardOnlineApply2026'),            { loading: ArticleLoading }),
   KisanRinKahaSeLe2026:                       dynamic(() => import('@/components/articles/KisanRinKahaSeLe2026'),                      { loading: ArticleLoading }),
   KisanTractorLoan2026:                       dynamic(() => import('@/components/articles/KisanTractorLoan2026'),                      { loading: ArticleLoading }),
 
-  // Farming Articles (3)
+  // Farming Articles (3) — 2 PascalCase + 1 kebab-case
   NanoDap500mlPriceInIndia2026:               dynamic(() => import('@/components/articles/NanoDap500mlPriceInIndia2026'),              { loading: ArticleLoading }),
   AgriStackKyaHai2026:                        dynamic(() => import('@/components/articles/AgriStackKyaHai2026'),                       { loading: ArticleLoading }),
-  SoilHealthCardCompleteGuide2026:            dynamic(() => import('@/components/articles/SoilHealthCardCompleteGuide2026'),           { loading: ArticleLoading }),
+  SoilHealthCardCompleteGuide2026:            dynamic(() => import('@/components/articles/soil-health-card-complete-guide-2026'),      { loading: ArticleLoading }),
 
-  // Status Check Articles (3)
+  // Status Check Articles (3) — 2 PascalCase + 1 kebab-case
   PmKisan24viKist2026:                        dynamic(() => import('@/components/articles/PmKisan24viKist2026'),                       { loading: ArticleLoading }),
-  PmKisanFtoGeneratedKaMatlabKyaHai:          dynamic(() => import('@/components/articles/PmKisanFtoGeneratedKaMatlabKyaHai'),         { loading: ArticleLoading }),
+  PmKisanFtoGeneratedKaMatlabKyaHai:          dynamic(() => import('@/components/articles/pm-kisan-fto-generated-ka-matlab-kya-hai'),  { loading: ArticleLoading }),
   PmKisanMasterGuide2026:                     dynamic(() => import('@/components/articles/PmKisanMasterGuide2026'),                    { loading: ArticleLoading }),
 
-  // Beneficiary List Articles (2)
+  // Beneficiary List Articles (2) — PascalCase files
   PmKisanBeneficiaryList2026:                 dynamic(() => import('@/components/articles/PmKisanBeneficiaryList2026'),                { loading: ArticleLoading }),
   PmKisanBeneficiaryListVillageWise2026:      dynamic(() => import('@/components/articles/PmKisanBeneficiaryListVillageWise2026'),     { loading: ArticleLoading }),
 
-  // Market Rates (1)
+  // Market Rates (1) — PascalCase file
   MandiBhavToday:                             dynamic(() => import('@/components/articles/MandiBhavContent'),                          { loading: ArticleLoading }),
 };
 
