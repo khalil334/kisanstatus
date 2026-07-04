@@ -185,8 +185,8 @@ export default async function ArticlePage({
     ? `${SITE_URL}${article.ogImage}`
     : DEFAULT_OG_IMAGE;
   const schemas = buildSchemas(article, url, ogImage);
-  const cat = CATEGORIES[article.category] as { name: string; nameHi?: string } | undefined;
-  const catName = cat ? (cat.nameHi ?? cat.name) : '';
+  const rawCat = CATEGORIES[article.category];
+  const catName: string = rawCat ? ((rawCat as Record<string, string>).nameHi ?? (rawCat as Record<string, string>).name) : '';
 
   return (
     <>
@@ -198,7 +198,7 @@ export default async function ArticlePage({
         />
       ))}
 
-      {cat && (
+      {rawCat && (
         <div className="container-site pt-6">
           <Link
             href={`/articles/category/${article.category}`}
