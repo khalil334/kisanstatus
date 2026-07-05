@@ -30,7 +30,7 @@ const MSP: Record<string, { name: string; msp: number; unit: string }> = {
   sugarcane:   { name: 'Ganna (Sugarcane)',       msp: 380,   unit: 'quintal' },
 };
 
-// Tab 1: Agrarian welfare benefit estimator
+// Tab 1: PM Kisan benefit estimator
 function PmKisanCalc() {
   const [land, setLand] = useState('2');
   const [reg, setReg] = useState('yes');
@@ -49,33 +49,33 @@ function PmKisanCalc() {
         <InputField label="Kitne Saal?" value={years} onChange={setYears} placeholder="5" suffix="yr" />
         <SelectField label="Registration Hai?" value={reg} onChange={setReg}
           options={[{ value: 'yes', label: 'Haan — Registered' }, { value: 'no', label: 'Nahi — Register Karo' }]} />
-        <SelectField label="Digital Verification Complete?" value={ekyc} onChange={setEkyc}
+        <SelectField label="eKYC Complete?" value={ekyc} onChange={setEkyc}
           options={[{ value: 'yes', label: 'Haan — Done' }, { value: 'no', label: 'Nahi — Pending' }]} />
       </div>
 
       <div className="bg-[var(--color-bg-alt)] rounded-2xl p-4 space-y-1">
         <ResultRow label="Saalana Labh" value={eligible ? fmt(perYear) : '₹0'} />
-        <ResultRow label="Tranches ki Sankhya" value={`${tranches} tranche/saal`} />
-        <ResultRow label="Har Tranche" value={eligible ? fmt(2000) : '₹0'} />
+        <ResultRow label="Kist ki Sankhya" value={`${tranches} kist/saal`} />
+        <ResultRow label="Har Kist" value={eligible ? fmt(2000) : '₹0'} />
         <ResultRow label={`${years} Saal Mein Total`} value={fmt(total)} highlight />
         {!eligible && (
           <p className="text-xs text-red-600 dark:text-red-400 pt-2">
-            {reg === 'no' ? '️ Pehle enrollment karo — official portal par free' : '⚠️ Digital verification complete karo — bina verification tranche nahi milti'}
+            {reg === 'no' ? '️ Pehle enrollment karo bhai — official portal par free' : '⚠️ eKYC complete karo — bina verification kist nahi milti'}
           </p>
         )}
         {eligible && (
-          <p className="text-xs text-green-600 dark:text-green-400 pt-2">✅ Aap {years} saal mein {fmt(total)} ke haqdaar hain!</p>
+          <p className="text-xs text-green-600 dark:text-green-400 pt-2">✅ Aap {years} saal mein {fmt(total)} ke haqdaar hain bhai!</p>
         )}
       </div>
 
       <div className="p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl text-xs text-blue-800 dark:text-blue-300">
-        <strong>📌 Note:</strong> Agrarian welfare scheme ₹6,000/saal sabhi registered eligible cultivators ko milta hai — zameen ki size se fark nahi padta (jab tak chote/marginal farmer hain).
+        <strong>📌 Note:</strong> PM Kisan Samman Nidhi ₹6,000/saal sabhi registered eligible kisanon ko milta hai — zameen ki size se fark nahi padta (jab tak chote/marginal farmer hain).
       </div>
     </div>
   );
 }
 
-// Tab 2: Procurement rate income analyzer
+// Tab 2: MSP income analyzer
 function MspCalc() {
   const [crop, setCrop] = useState('wheat');
   const [qty, setQty] = useState('20');
@@ -98,25 +98,25 @@ function MspCalc() {
       </div>
 
       <div className="bg-[var(--color-bg-alt)] rounded-2xl p-4 space-y-1">
-        <ResultRow label={`Procurement Rate (${c.name})`} value={`₹${c.msp.toLocaleString()}/qtl`} />
+        <ResultRow label={`MSP Rate (${c.name})`} value={`₹${c.msp.toLocaleString()}/qtl`} />
         <ResultRow label="Aapki Paidavar" value={`${qty} quintal`} />
-        <ResultRow label="Guaranteed Price Se Kamai" value={fmt(mspEarning)} highlight />
+        <ResultRow label="MSP Se Kamai" value={fmt(mspEarning)} highlight />
         {market && (
           <>
             <ResultRow label="Market Se Kamai" value={fmt(marketEarning)} />
             <ResultRow
-              label={diff >= 0 ? 'Market Faida' : 'Guaranteed Price Faida'}
+              label={diff >= 0 ? 'Market Faida' : 'MSP Faida'}
               value={`${diff >= 0 ? '+' : ''}${fmt(Math.abs(diff))}`}
             />
             {diff < 0 && (
-              <p className="text-xs text-amber-700 dark:text-amber-400 pt-1">💡 Guaranteed rate par becho — market se {fmt(Math.abs(diff))} zyada milega!</p>
+              <p className="text-xs text-amber-700 dark:text-amber-400 pt-1">💡 MSP rate par becho bhai — market se {fmt(Math.abs(diff))} zyada milega!</p>
             )}
           </>
         )}
       </div>
 
       <div className="p-3 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl text-xs text-amber-800 dark:text-amber-300">
-        <strong>📌 2025-26 Rates:</strong> Government guaranteed minimum price. Agar market rate kam ho to sarkar kharidegi is rate par.
+        <strong>📌 2025-26 Rates:</strong> Government guaranteed minimum price. Agar market rate kam ho to sarkar kharidegi is rate par bhai.
       </div>
     </div>
   );
@@ -160,14 +160,14 @@ function ProfitCalc() {
 
       {profit < 0 && (
         <div className="p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl text-xs text-red-800 dark:text-red-300">
-          ⚠️ Is rate par nuksan ho raha hai. Kharcha kam karo ya guaranteed rate par becho.
+          ⚠️ Is rate par nuksan ho raha hai bhai. Kharcha kam karo ya MSP rate par becho.
         </div>
       )}
     </div>
   );
 }
 
-// Tab 4: Credit facility EMI calculator
+// Tab 4: KCC EMI calculator
 function EmiCalc() {
   const [amount, setAmount] = useState('100000');
   const [rate, setRate]     = useState('7');
@@ -183,9 +183,9 @@ function EmiCalc() {
 
   // Loan types — varied names for SEO
   const loanTypes: Record<string, string> = {
-    kcc: 'Credit Facility (KCC) — 7% (Subsidized)',
+    kcc: 'Kisan Credit Card (KCC) — 7% (Subsidized)',
     term: 'Agriculture Term Loan — 9-11%',
-    tractor: 'Farm Equipment Loan — 8.5-11%',
+    tractor: 'Tractor Loan — 8.5-11%',
     land: 'Zameen Kharidne Ka Loan — 9.5%',
   };
 
@@ -209,7 +209,7 @@ function EmiCalc() {
       </div>
 
       <div className="p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl text-xs text-blue-800 dark:text-blue-300">
-        <strong> Credit Facility Tip:</strong> Kisan Credit Card par 3 lakh tak ka loan 7% par milta hai — agar time par chukao to 3% aur subsidy bhi milti hai — effective rate sirf 4%!
+        <strong>💳 KCC Tip:</strong> Kisan Credit Card par 3 lakh tak ka loan 7% par milta hai — agar time par chukao to 3% aur subsidy bhi milti hai — effective rate sirf 4% bhai!
       </div>
     </div>
   );
@@ -348,7 +348,7 @@ function IrrigationCalc() {
       </div>
 
       <div className="p-3 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl text-xs text-green-800 dark:text-green-300">
-        <strong>💧 Tip:</strong> Drip ya sprinkler irrigation se 35-50% paani bachta hai — PM Krishi Sinchai Yojana mein 55% subsidy milti hai!
+        <strong>💧 Tip:</strong> Drip ya sprinkler irrigation se 35-50% paani bachta hai bhai — PM Krishi Sinchai Yojana mein 55% subsidy milti hai!
       </div>
     </div>
   );
@@ -360,12 +360,12 @@ export default function AgriCalculator() {
 
   // Tab configuration — varied labels for SEO
   const tabs: { id: Tab; label: string; emoji: string; desc: string }[] = [
-    { id: 'pmkisan',    label: 'Welfare Benefit',    emoji: '🌾', desc: 'Labh Calculator' },
-    { id: 'msp',        label: 'Procurement Rate',   emoji: '💰', desc: 'Fasal Income'    },
-    { id: 'profit',     label: 'Yield Profit',       emoji: '', desc: 'Munafa Hisab'   },
-    { id: 'emi',        label: 'Credit Facility',    emoji: '', desc: 'EMI Calculator' },
-    { id: 'fertilizer', label: 'Fertilizer Cost',    emoji: '🌿', desc: 'Khad Kharcha'   },
-    { id: 'irrigation', label: 'Irrigation Cost',    emoji: '', desc: 'Paani Kharcha'  },
+    { id: 'pmkisan',    label: 'PM Kisan',         emoji: '🌾', desc: 'Labh Calculator' },
+    { id: 'msp',        label: 'MSP Rate',         emoji: '💰', desc: 'Fasal Income'    },
+    { id: 'profit',     label: 'Crop Profit',      emoji: '', desc: 'Munafa Hisab'   },
+    { id: 'emi',        label: 'KCC EMI',          emoji: '', desc: 'EMI Calculator' },
+    { id: 'fertilizer', label: 'Fertilizer',       emoji: '🌿', desc: 'Khad Kharcha'   },
+    { id: 'irrigation', label: 'Irrigation',       emoji: '', desc: 'Paani Kharcha'  },
   ];
 
   return (
@@ -373,13 +373,13 @@ export default function AgriCalculator() {
       <div className="container-site max-w-4xl mx-auto">
         <div className="text-center mb-10">
           <span className="inline-block bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">
-            🧮 Free Utilities
+            🧮 Free Calculators
           </span>
           <h2 id="calc-heading" className="text-2xl md:text-3xl font-black text-[var(--color-text)] mb-2">
-            Agricultural Calculator Suite
+            Kisan Calculator Suite 2026
           </h2>
           <p className="text-[var(--color-text-muted)] text-sm max-w-xl mx-auto">
-            India ke cultivators ke liye — welfare benefit, procurement rate earnings, yield profit, credit facility EMI, fertilizer aur irrigation kharcha ek jagah
+            India ke kisanon ke liye — PM Kisan benefit, MSP earnings, crop profit, KCC EMI, fertilizer aur irrigation kharcha ek jagah bhai
           </p>
         </div>
 
@@ -421,7 +421,7 @@ export default function AgriCalculator() {
           {/* Footer note */}
           <div className="bg-green-50 dark:bg-green-900/20 border-t border-green-100 dark:border-green-800 px-6 py-3 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-[var(--color-text-muted)]">
             <span>✍️ By KisanStatus Team | KisanStatus.com</span>
-            <span>⚠️ Yeh tools sirf estimate dete hain — final figures official sources se verify karein</span>
+            <span>⚠️ Yeh tools sirf estimate dete hain bhai — final figures official sources se verify karein</span>
           </div>
         </div>
       </div>
