@@ -93,19 +93,19 @@ export default function HomeContent() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-green-50 to-white dark:from-gray-900 dark:to-gray-800">
-      {/* Hero Section */}
+      {/* Hero Section - UPDATED */}
       <section className="relative bg-gradient-to-r from-green-800 to-green-600 py-16 md:py-24">
         <div className="absolute inset-0 bg-[url('/hero-kisan-field.webp')] bg-cover bg-center opacity-20" />
         <div className="container-site mx-auto px-4 relative z-10">
           <div className="max-w-3xl">
             <span className="inline-block bg-white/20 border border-white/30 text-green-100 text-xs font-bold px-4 py-2 rounded-full mb-4 uppercase tracking-wider backdrop-blur-sm">
-              🌾 India Ka #1 PM Kisan Portal
+              🌾 India Ka #1 PM Kisan Samman Nidhi Portal
             </span>
             <h1 className="text-3xl md:text-5xl font-black text-white leading-tight mb-4">
               PM Kisan Status Check 2026
             </h1>
             <p className="text-green-100 text-lg md:text-xl mb-6 leading-relaxed">
-              23vi kist aa gayi! ₹2,000 seedha bank account mein. Apna status verify karo, eKYC complete karo — sab kuch free!
+              24vi kist October 2026 mein aane wali hai! ₹2,000 seedha bank account mein. Status verify karo, eKYC complete karo — sab kuch free!
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
