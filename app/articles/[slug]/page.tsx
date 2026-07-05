@@ -104,6 +104,7 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   KisanTractorLoan2026:                       dynamic(() => import('@/components/articles/KisanTractorLoan2026'),                       { loading: ArticleLoading }),
   PmKisanBeneficiaryList2026:                 dynamic(() => import('@/components/articles/PmKisanBeneficiaryList2026'),                 { loading: ArticleLoading }),
   PmKisanBeneficiaryListVillageWise2026:      dynamic(() => import('@/components/articles/PmKisanBeneficiaryListVillageWise2026'),      { loading: ArticleLoading }),
+  PmKisanEkycOnline2026:                      dynamic(() => import('@/components/articles/PmKisanEkycOnline2026'),                      { loading: ArticleLoading }),
   KisanCreditCardOnlineApply2026:             dynamic(() => import('@/components/articles/KisanCreditCardOnlineApply2026'),             { loading: ArticleLoading }),
   NanoDap500mlPriceInIndia2026:               dynamic(() => import('@/components/articles/NanoDap500mlPriceInIndia2026'),               { loading: ArticleLoading }),
   PmKisan24viKist2026:                        dynamic(() => import('@/components/articles/PmKisan24viKist2026'),                        { loading: ArticleLoading }),
@@ -111,6 +112,7 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   PmKisanMasterGuide2026:                     dynamic(() => import('@/components/articles/PmKisanMasterGuide2026'),                     { loading: ArticleLoading }),
   'pm-kisan-fto-generated-ka-matlab-kya-hai': dynamic(() => import('@/components/articles/pm-kisan-fto-generated-ka-matlab-kya-hai'), { loading: ArticleLoading }),
   'soil-health-card-complete-guide-2026':     dynamic(() => import('@/components/articles/soil-health-card-complete-guide-2026'),     { loading: ArticleLoading }),
+  PmfbyCropInsurance2026:                     dynamic(() => import('@/components/articles/PmfbyCropInsurance2026'),                     { loading: ArticleLoading }),
   'mandi-bhav-today':                         dynamic(() => import('@/components/articles/mandi-bhav-today'),                         { loading: ArticleLoading }),
 };
 
