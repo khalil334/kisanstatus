@@ -4,8 +4,8 @@ import { Suspense } from 'react';
 import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL, DEFAULT_OG_IMAGE } from '@/lib/site-config';
 
 export const metadata: Metadata = {
-  title: 'PM Kisan Status Check 2026 — 23vi Kist Released | ₹2000 Direct Bank Mein',
-  description: 'PM Kisan 23vi kist 20 June 2026 ko release — ₹2000 seedha bank account mein. Status verify karo, eKYC complete karo, beneficiary roster dekho. Free guidance Hinglish mein.',
+  title: 'PM Kisan Status Check 2026 — 24vi Kist Coming Soon | ₹2000 Direct Bank Mein',
+  description: 'PM Kisan 24vi kist October 2026 mein aane wali hai — ₹2000 seedha bank account mein. Status verify karo, eKYC complete karo, beneficiary roster dekho. Free guidance Hinglish mein.',
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   alternates: {
     canonical: `${SITE_URL}/`,
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   keywords: [
     'pm kisan status check 2026',
-    'pm kisan 23vi kist',
+    'pm kisan 24vi kist',
     'kisan samman nidhi verification',
     'pm kisan ekyc online',
     'beneficiary list check',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     'pm kisan registration',
   ],
   openGraph: {
-    title: 'PM Kisan Status Check 2026 — 23vi Kist Released',
+    title: 'PM Kisan Status Check 2026 — 24vi Kist Coming Soon',
     description: '₹2000 seedha bank account mein — 9.44 Crore+ kisanon ko mil chuki. Apna status abhi verify karo!',
     type: 'website',
     url: `${SITE_URL}/`,
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'PM Kisan Status Check 2026 — 23vi Kist Released',
+    title: 'PM Kisan Status Check 2026 — 24vi Kist Coming Soon',
     description: '₹2000 seedha bank account mein — 9.44 Crore+ kisanon ko mil chuki. Apna status abhi verify karo!',
     site: '@kisanstatus',
     creator: '@kisanstatus',
@@ -58,9 +58,6 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  verification: {
-    google: process.env.NEXT_PUBLIC_GSC_TOKEN,
   },
   metadataBase: new URL(SITE_URL),
   category: 'Agriculture',
@@ -121,7 +118,6 @@ export default function HomePage() {
 
   return (
     <>
-      {/* LCP Image Preload */}
       <link
         rel="preload"
         as="image"
@@ -130,7 +126,6 @@ export default function HomePage() {
         fetchPriority="high"
       />
 
-      {/* WebSite Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
