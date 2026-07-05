@@ -88,7 +88,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     readingTime: 10,
     banks: ['mahindra-finance', 'tata-capital'],
     schemes: ['nabard-tractor'],
-    ogImage: '/images/kisan-tractor-loan-2026/hero-banner.webp',
+    ogImage: '/images/articles/kisan-tractor-loan-2026/hero-2.webp', // ✅ FIXED
     relatedSlugs: ['KisanRinKahaSeLe2026', 'KisanCreditCardOnlineApply2026'],
   },
   {
@@ -103,7 +103,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 7,
     schemes: ['pm-kisan'],
-    ogImage: '/images/pm-kisan-beneficiary-list-village-wise-2026.webp',
+    ogImage: '/images/pm-kisan-beneficiary-list-2026.webp', // ✅ Different image
     relatedSlugs: ['PmKisanBeneficiaryListVillageWise2026', 'PmKisan24viKist2026'],
   },
   {
@@ -134,7 +134,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     readingTime: 9,
     banks: ['sbi', 'pnb', 'bob', 'cooperative'],
     schemes: ['kcc'],
-    ogImage: '/images/kisan-credit-card-online-apply-2026/hero-image.webp',
+    ogImage: '/images/kisan-credit-card-online-apply-2026.webp', // ✅ Root level image
     relatedSlugs: ['KisanRinKahaSeLe2026', 'KisanTractorLoan2026'],
   },
   {
@@ -149,7 +149,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 6,
     schemes: ['pm-kisan'],
-    ogImage: '/images/pm-kisan-fto-generated-ka-matlab-kya-hai.webp',
+    ogImage: '/images/pm-kisan-fto-generated-featured-image-kisanstatus.webp',
     relatedSlugs: ['PmKisan24viKist2026', 'PmKisanBeneficiaryList2026'],
   },
   {
@@ -164,7 +164,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 7,
     schemes: ['nano-dap'],
-    ogImage: '/images/nano-dap-500ml-price-in-india-2026.webp',
+    ogImage: '/images/nano-dap-500ml-bottle-hero.webp', // ✅ Root level
     relatedSlugs: ['soil-health-card-complete-guide-2026', 'AgriStackKyaHai2026'],
   },
   {
@@ -179,7 +179,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 6,
     schemes: ['pm-kisan'],
-    ogImage: '/images/pm-kisan-24vi-kist-october-2026.webp',
+    ogImage: '/images/pm-kisan-24vi-kist-october-2026.webp', // ✅ Root level
     relatedSlugs: ['PmKisanBeneficiaryList2026', 'pm-kisan-fto-generated-ka-matlab-kya-hai'],
   },
   {
@@ -194,7 +194,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 10,
     schemes: ['agristack', 'pm-kisan'],
-    ogImage: '/images/agristack-kya-hai/infographic.webp',
+    ogImage: '/images/articles/agristack-kya-hai/infographic.webp', // ✅ FIXED
     relatedSlugs: ['NanoDap500mlPriceInIndia2026', 'soil-health-card-complete-guide-2026'],
   },
   {
@@ -209,7 +209,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 15,
     schemes: ['pm-kisan'],
-    ogImage: '/images/pm-kisan-complete-guide/hero.webp',
+    ogImage: '/images/articles/pm-kisan-complete-guide/hero.webp',
     relatedSlugs: ['PmKisan24viKist2026', 'PmKisanBeneficiaryList2026'],
   },
   {
@@ -224,7 +224,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 8,
     schemes: ['soil-health-card'],
-    ogImage: '/images/soil-health-card-complete-guide-2026/hero.webp',
+    ogImage: '/images/articles/soil-health-card-complete-guide-2026/hero.webp',
     relatedSlugs: ['NanoDap500mlPriceInIndia2026', 'AgriStackKyaHai2026'],
   },
   {
