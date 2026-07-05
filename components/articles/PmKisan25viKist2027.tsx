@@ -127,6 +127,18 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           </p>
         </section>
 
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/articles/pm-kisan-25vi-kist-2027/installment-timeline-chart.webp"
+            alt="PM Kisan installment release gap timeline chart"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+        </div>
+
         <section className="mb-8">
           <SH>Paisa badhega ya wahi rahega?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -147,6 +159,18 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
             <SI n={5}><strong>Naam ki spelling match karo:</strong> Aadhaar aur bank mein chhota sa farak bhi problem create karta hai.</SI>
           </StepList>
         </section>
+
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/articles/pm-kisan-25vi-kist-2027/ekyc-checklist.webp"
+            alt="Farmer completing PM Kisan eKYC checklist on mobile"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+        </div>
 
         <section className="mb-8">
           <SH>Naye register karne wale kisan</SH>
@@ -171,6 +195,18 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="PM Kisan 25vi Kist FAQ" />
         </section>
+
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/articles/pm-kisan-25vi-kist-2027/payment-credited-notification.webp"
+            alt="Indian farmer receiving PM Kisan payment credited SMS notification"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+        </div>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
           Toh short mein — 23vi ho chuki hai, 24vi ka intezaar hai, 25vi abhi bahut door ki baat hai. Jo control mein hai (eKYC, bank, zameen) woh abhi theek kar lo. Baaki, jab date aayegi, khud pata chal jayega.
