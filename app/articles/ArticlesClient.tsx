@@ -6,12 +6,9 @@ import { useState, useMemo, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import type { ArticleMeta } from '@/lib/articles-data';
 
+// ✅ Sirf 4 categories — jo articles-data.ts mein hain
 const CATEGORY_META: Record<string, { label: string; emoji: string; color: string }> = {
   'status-check': { label: 'Status Check', emoji: '📊', color: 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300' },
-  'ekyc':         { label: 'eKYC',         emoji: '🔐', color: 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300' },
-  'payment':      { label: 'Payment',      emoji: '💸', color: 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300' },
-  'registration': { label: 'Registration', emoji: '📝', color: 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300' },
-  'correction':   { label: 'Correction',   emoji: '✏️', color: 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300' },
   'loan':         { label: 'Loan',         emoji: '💰', color: 'bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300' },
   'farming':      { label: 'Farming',      emoji: '🌱', color: 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300' },
   'mandi':        { label: 'Mandi Bhav',   emoji: '📈', color: 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300' },
@@ -239,7 +236,7 @@ export default function ArticlesClient({ articles }: { articles: readonly Articl
             PM Kisan Guides & Resources 2026
           </h1>
           <p className="text-green-200 text-sm md:text-base max-w-xl mx-auto mb-5">
-            {articles.length} free guides — status check, eKYC, payment fix, enrollment, crop insurance, soil health — sab Hinglish mein
+            {articles.length} free guides — status check, payment fix, crop insurance, soil health, mandi bhav — sab Hinglish mein
           </p>
           <a
             href="https://pmkisan.gov.in"
