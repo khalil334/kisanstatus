@@ -19,42 +19,42 @@ const PUBLISHED = '2026-06-24T08:00:00+05:30';
 const MODIFIED = '2026-07-04T08:00:00+05:30';
 
 const RELATED = [
-  { slug: 'pm-kisan-complete-guide', title: 'PM Kisan Master Guide', emoji: '📚' },
+  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide', emoji: '📚' },
   { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Meaning', emoji: '💳' },
-  { slug: 'pm-kisan-beneficiary-list-2026', title: 'Beneficiary Roster Check', emoji: '📋' },
-  { slug: 'kisan-credit-card-online-apply-2026', title: 'KCC Credit Card Guide', emoji: '💰' },
-  { slug: 'nano-dap-500ml-price-in-india-2026', title: 'Nano DAP Price Guide', emoji: '🌱' },
+  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List Check', emoji: '📋' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Credit Card Guide', emoji: '💰' },
+  { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price Guide', emoji: '🌱' },
   { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav', emoji: '📈' },
 ];
 
 const FAQS_DATA = [
   {
-    q: '24vi kist kab aayegi?',
-    a: 'Expected date October 2026 hai. 23vi kist 20 June 2026 ko aayi thi — 4 mahine baad yani October mein 24vi aane ki poori sambhavna hai. Official date confirm hote hi update hoga.',
+    q: 'PM Kisan ki 24vi kist kab aayegi?',
+    a: 'Dekho bhai, October 2026 mein aane ki poori umeed hai. 23vi kist 20 June 2026 ko aayi thi - matlab 4 mahine baad October mein 24vi aayegi. Official date jaise hi confirm hogi, yahan update kar denge.',
   },
   {
-    q: '24vi kist kitni hogi?',
-    a: '₹2,000. Har installment same amount ki hoti hai. Saal mein 3 installments = ₹6,000 total annual benefit.',
+    q: '24vi kist kitne rupaye ki hogi?',
+    a: '₹2,000 ki hogi - har kist same amount ki hoti hai. Saal mein 3 kist aati hain, toh total ₹6,000 milte hain saal bhar mein.',
   },
   {
-    q: 'eKYC zaroori hai 24vi ke liye?',
-    a: 'Haan, mandatory. Bina verification ke koi bhi kist nahi milegi. pmkisan.gov.in par OTP se ya CSC par biometric se turant complete karo.',
+    q: '24vi kist ke liye eKYC zaroori hai?',
+    a: 'Haan bilkul - bina eKYC ke koi kist nahi milti. Ye mandatory hai. pmkisan.gov.in par OTP se ghar baithe kar sakte ho, ya CSC center par biometric se. Free hai dono tarike.',
   },
   {
-    q: 'Status check karne par kuch nahi dikha raha?',
-    a: 'Registration number sahi daalo. Yaad nahi toh "Know your registration no." option se Aadhaar/mobile se retrieve karo. Phir dobara check karo.',
+    q: 'Status check karne par kuch nahi dikh raha?',
+    a: 'Registration number sahi daalo bhai. Yaad nahi hai toh "Know your registration no." option se Aadhaar ya mobile number se retrieve kar lo. Phir dobara check karo.',
   },
   {
     q: 'Kist nahi aayi lekin status "Payment Success" dikh raha hai?',
-    a: 'Bank credit hone mein 24-48 ghante lag sakte hain. PFMS portal (pfms.nic.in) par check karo ya bank se mini-statement lo. 3 din baad bhi na dikhe toh helpline 155261 par call karo.',
+    a: 'Bank mein credit hone mein 24-48 ghante lag sakte hain. PFMS portal (pfms.nic.in) par check karo ya bank se mini-statement le lo. 3 din baad bhi na dikhe toh helpline 155261 par call karo.',
   },
   {
-    q: 'Pehli baar enrollment karna hai — 24vi kist milegi?',
-    a: 'Enrollment + eKYC + NPCI seeding complete hone ke baad next scheduled installment mein milegi. Processing mein 1-3 mahine lag sakte hain. Abhi karo toh 24vi milne ki sambhavna hai.',
+    q: 'Pehli baar registration kiya hai - 24vi kist milegi?',
+    a: 'Registration + eKYC + NPCI seeding complete hone ke baad agli kist mein mil jayegi. Processing mein 1-3 mahine lag sakte hain. Abhi kar lo toh 24vi milne ke chances hain.',
   },
   {
-    q: 'Bank account change hua hai — kya karein?',
-    a: 'Portal par updated bank details daalo. Naye account ka Aadhaar seeding + NPCI mapping zaroori hai. Bank branch jaake "DBT enable" confirmation lo. Purana account band mat karo jab tak naya verify na ho jaye.',
+    q: 'Bank account change hua hai - ab kya karun?',
+    a: 'Portal par naye bank ki details daalo. Naye account mein Aadhaar seeding + NPCI mapping zaroori hai. Bank branch jaake "DBT enable" confirmation le lo. Purana account tab tak mat band karo jab tak naya verify na ho jaye.',
   },
 ];
 
@@ -72,9 +72,9 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             <span>/</span>
             <Link href="/articles" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Articles</Link>
             <span>/</span>
-            <span className="text-white font-bold">24vi Installment Guide</span>
+            <span className="text-white font-bold">24vi Kist Guide</span>
           </nav>
-          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Upcoming Installment</span>
+          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Upcoming Kist</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
             PM Kisan 24vi Kist Kab Aayegi? Expected Date, Status Check, Aur Tayyari Ka Pura Guide
           </h1>
@@ -106,10 +106,10 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
                 'text-orange-800 dark:text-orange-300'
               }`}>
                 {isReleased && KIST.confirmedDate
-                  ? `24vi Installment Released! – ${KIST.confirmedDate}`
+                  ? `24vi Kist Release Ho Gayi! – ${KIST.confirmedDate}`
                   : isConfirmed && KIST.confirmedDate
-                  ? `24vi Confirmed: ${KIST.confirmedDate}`
-                  : `24vi Installment – Expected: ${KIST.expectedDate}`}
+                  ? `24vi Kist Confirm: ${KIST.confirmedDate}`
+                  : `24vi Kist – Expected: ${KIST.expectedDate}`}
               </p>
               <p className={`text-xs sm:text-sm mt-1 ${
                 isReleased ? 'text-green-700 dark:text-green-400' :
@@ -119,8 +119,8 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
                 {isReleased
                   ? 'Kist nahi aayi? Neeche verification guide padhein.'
                   : isConfirmed
-                  ? 'Date confirm ho gayi. Release hote hi update hoga.'
-                  : 'Abhi official date announce nahi hui. Page bookmark karein.'}
+                  ? 'Date confirm ho gayi hai. Release hote hi update hoga.'
+                  : 'Abhi official date announce nahi hui. Page bookmark kar lo.'}
               </p>
               <p className="text-xs text-[var(--color-text-muted)] mt-1.5">
                 🗓️ Last Updated: {fmtDate(MODIFIED)}
@@ -133,7 +133,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/pm-kisan-24vi-kist-og.webp'}
-            alt="PM Kisan 24vi installment October 2026 — expected date, eligibility, status check guide"
+            alt="PM Kisan 24vi kist October 2026 — expected date, eligibility, status check guide"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -149,7 +149,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
         {/* Quick Summary Cards */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
           {[
-            { label: 'Installment', value: KIST.label },
+            { label: 'Kist', value: KIST.label },
             { label: 'Amount', value: KIST.amount },
             { label: 'Expected', value: 'Oct 2026' },
             { label: 'Recipients', value: KIST.recipients },
@@ -165,10 +165,10 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
         <section className="mb-8">
           <SH>24vi Kist Kab Aayegi?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Official date abhi announce nahi hui.
+            Official date abhi announce nahi hui hai bhai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Lekin historical pattern clear hai — administration har 4 mahine mein installment release karti hai. 23vi kist 20 June 2026 ko aayi. Is hisaab se <strong>October 2026</strong> mein 24vi aane ki poori sambhavna hai.
+            Lekin pichhle saalon ka pattern dekho toh clear hai - government har 4 mahine mein kist release karti hai. 23vi kist 20 June 2026 ko aayi thi. Is hisaab se <strong>October 2026</strong> mein 24vi kist aane ki poori umeed hai.
           </p>
 
           <div className="bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 rounded-xl p-4 mb-4">
@@ -182,7 +182,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
           </div>
 
           <IB>
-            <strong>Note:</strong> Yeh prediction hai, guarantee nahi. Official announcement aate hi yeh page update hoga. Bookmark kar lo.
+            <strong>Note:</strong> Ye prediction hai, guarantee nahi. Official announcement aate hi yeh page update hoga. Bookmark kar lo taaki miss na ho.
           </IB>
         </section>
 
@@ -248,31 +248,31 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
 
         {/* Section 3: Eligibility */}
         <section className="mb-8">
-          <SH>24vi Ke Liye Eligibility</SH>
+          <SH>24vi Kist Ke Liye Eligibility</SH>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl p-4">
-              <p className="font-black text-green-800 dark:text-green-300 text-sm mb-2">✅ Eligible</p>
+              <p className="font-black text-green-800 dark:text-green-300 text-sm mb-2">✅ Eligible Ho</p>
               <ul className="text-xs text-[var(--color-text-muted)] space-y-1">
-                <li>✓ Small/marginal landholder</li>
-                <li>✓ Agricultural land registered</li>
-                <li>✓ Aadhaar linked + eKYC done</li>
-                <li>✓ Bank NPCI seeded</li>
-                <li>✓ Portal details correct</li>
+                <li>✓ Chhota ya marginal kisan</li>
+                <li>✓ Kheti ki zameen registered hai</li>
+                <li>✓ Aadhaar linked + eKYC complete</li>
+                <li>✓ Bank mein NPCI seeding hui hai</li>
+                <li>✓ Portal par details sahi hain</li>
               </ul>
             </div>
             <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl p-4">
-              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-2">❌ Not Eligible</p>
+              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-2">❌ Eligible Nahi Ho</p>
               <ul className="text-xs text-[var(--color-text-muted)] space-y-1">
-                <li>✗ Income tax payer</li>
-                <li>✗ Government employee</li>
-                <li>✗ Professional (Doctor/CA/Lawyer)</li>
-                <li>✗ Constitutional post holder</li>
-                <li>✗ eKYC pending</li>
+                <li>✗ Income tax dete ho</li>
+                <li>✗ Government employee ho</li>
+                <li>✗ Professional ho (Doctor/CA/Lawyer)</li>
+                <li>✗ Constitutional post par ho</li>
+                <li>✗ eKYC pending hai</li>
               </ul>
             </div>
           </div>
           <WB>
-            <strong>Check Karo:</strong> Apna naam <Link href="/articles/pm-kisan-beneficiary-list-2026" className="underline font-bold">approved roster</Link> mein confirm karo. Naam nahi hai toh pehle enrollment karo.
+            <strong>Check Karo:</strong> Apna naam <Link href="/articles/PmKisanBeneficiaryList2026" className="underline font-bold">beneficiary list</Link> mein confirm karo. Naam nahi hai toh pehle registration karo.
           </WB>
         </section>
 
@@ -305,10 +305,10 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
 
           <div className="mt-4 space-y-2">
             {[
-              { status: 'FTO Generated', meaning: 'Administration ne release kiya. Bank process mein. 24-48h wait.' },
-              { status: 'Payment Success', meaning: 'Account mein aa gaya. Bank statement verify karo.' },
-              { status: 'DBT Failed', meaning: 'Bank/NPCI issue. Payment failed guide padho.' },
-              { status: 'eKYC Pending', meaning: 'Turant authentication karo warna kist rukegi.' },
+              { status: 'FTO Generated', meaning: 'Government ne release kiya. Bank process mein hai. 24-48h wait karo.' },
+              { status: 'Payment Success', meaning: 'Account mein aa gaya. Bank statement verify kar lo.' },
+              { status: 'Payment Failed', meaning: 'Bank/NPCI issue hai. Payment failed guide padho.' },
+              { status: 'eKYC Pending', meaning: 'Turant eKYC karo warna kist rukegi.' },
             ].map(({ status, meaning }) => (
               <div key={status} className="flex gap-3 p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-lg">
                 <span className="font-black text-[var(--color-primary)] text-xs shrink-0 w-28">{status}</span>
@@ -322,30 +322,30 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
         <section className="mb-8">
           <SH>eKYC — Mandatory Hai</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Bina verification ke koi kist nahi milegi. Period.
+            Bina eKYC ke koi kist nahi milegi. Period.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Agar abhi tak nahi kiya toh October se pehle complete karo. Teen tarike hain:
+            Agar abhi tak nahi ki toh October se pehle complete kar lo. Teen tarike hain:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
               <span className="text-2xl block mb-2">📱</span>
               <p className="font-black text-green-800 dark:text-green-300 text-sm mb-1">OTP Based</p>
-              <p className="text-xs text-[var(--color-text-muted)]">Portal par Aadhaar daalo, code verify karo. Sabse aasaan.</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Portal par Aadhaar daalo, OTP code verify karo. Sabse aasaan tarika.</p>
             </div>
             <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
               <span className="text-2xl block mb-2">🖐️</span>
               <p className="font-black text-blue-800 dark:text-blue-300 text-sm mb-1">Biometric (CSC)</p>
-              <p className="text-xs text-[var(--color-text-muted)]">OTP na aaye toh CSC jaao. Fingerprint se verify.</p>
+              <p className="text-xs text-[var(--color-text-muted)]">OTP na aaye toh CSC center jao. Fingerprint se verify ho jayega.</p>
             </div>
             <div className="p-4 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-xl">
               <span className="text-2xl block mb-2">🤳</span>
               <p className="font-black text-purple-800 dark:text-purple-300 text-sm mb-1">Face Auth</p>
-              <p className="text-xs text-[var(--color-text-muted)]">Mobile app se face scan. Dono fail hon toh try karo.</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Mobile app se face scan. Dono fail hon toh ye try karo.</p>
             </div>
           </div>
           <IB>
-            <strong>Detailed Guide:</strong> Step-by-step madad chahiye toh <Link href="/articles/pm-kisan-complete-guide" className="underline font-bold">PM Kisan Complete Guide</Link> padho.
+            <strong>Detailed Guide:</strong> Step-by-step madad chahiye toh <Link href="/articles/PmKisanMasterGuide2026" className="underline font-bold">PM Kisan Complete Guide</Link> padho.
           </IB>
         </section>
 
@@ -354,11 +354,11 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
           <SH>Common Problems + Solutions</SH>
           <div className="space-y-3">
             {[
-              { err: 'Status "Success" lekin paisa nahi aaya', fix: 'PFMS (pfms.nic.in) par check karo. 24-48h lag sakte hain. Bank mini-statement lo. 3 din baad bhi nahi toh 155261 call.' },
-              { err: 'Aadhaar Authentication Failed', fix: 'Portal aur Aadhaar mein naam exactly same hona chahiye. Spelling, middle name, surname — sab match. Agriculture office mein correction karwao.' },
-              { err: 'Portal par error aa raha hai', fix: 'Browser refresh / alag browser try. Cache clear karo. Phir bhi na chale toh CSC par biometric karo.' },
-              { err: 'Paise wapas aa gaye (Reversed)', fix: 'Account inactive ya naam mismatch. Bank jaao → activate → "DBT enable" confirmation → portal par update.' },
-              { err: 'Naya enrollment — kab milegi pehli kist?', fix: 'Enrollment + eKYC + NPCI = 1-3 mahine processing. Abhi karo toh 24vi mil sakti hai.' },
+              { err: 'Status "Success" lekin paisa nahi aaya', fix: 'PFMS (pfms.nic.in) par check karo. 24-48h lag sakte hain bank credit hone mein. Bank se mini-statement le lo. 3 din baad bhi nahi dikha toh 155261 call karo.' },
+              { err: 'Aadhaar Authentication Failed', fix: 'Portal aur Aadhaar mein naam exactly same hona chahiye. Spelling, middle name, surname — sab match hona chahiye. Agriculture office mein correction karwao.' },
+              { err: 'Portal par error aa raha hai', fix: 'Browser refresh karo ya alag browser try karo. Cache clear karo. Phir bhi na chale toh CSC par biometric karwao.' },
+              { err: 'Paise wapas aa gaye (Reversed)', fix: 'Account inactive hai ya naam mismatch. Bank jao → activate karo → "DBT enable" confirmation lo → portal par update karo.' },
+              { err: 'Naya registration kiya — kab milegi pehli kist?', fix: 'Registration + eKYC + NPCI = 1-3 mahine processing lagti hai. Abhi kar lo toh 24vi mil sakti hai.' },
             ].map(({ err, fix }) => (
               <div key={err} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl overflow-hidden">
                 <div className="bg-red-50 dark:bg-red-900/20 border-b border-red-100 dark:border-red-800 px-4 py-2.5">
@@ -405,14 +405,14 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Aksar Puche Jane Wale Sawal
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="24vi Installment FAQ 2026 — Verified Answers" />
+          <FAQBlock faqs={FAQS_DATA} caption="24vi Kist FAQ 2026 — Verified Answers" />
         </section>
 
         {/* Action Conclusion */}
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">October Se Pehle Yeh Karo</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            24vi kist October mein expected hai. Tab tak yeh 3 cheezein pakki karo:
+            24vi kist October mein expected hai. Tab tak yeh 3 cheezein pakki kar lo:
           </p>
           <ol className="space-y-2 text-sm text-green-800 dark:text-green-300 list-decimal list-inside">
             <li>eKYC complete karo (agar pending hai)</li>
@@ -426,13 +426,13 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
           href="https://pmkisan.gov.in/BeneficiaryStatus.aspx"
           label="PM Kisan Beneficiary Status — Official Portal"
           guide="Abhi Status Check Karo"
-          guideHref="/articles/pm-kisan-complete-guide"
+          guideHref="/articles/PmKisanMasterGuide2026"
           portalName="pmkisan.gov.in"
         />
 
         <CalcBanner
           icon="📅"
-          title="Apni Installment Track Karo"
+          title="Apni Kist Track Karo"
           desc="Kitni kist aayi, kitni pending — complete history jaano"
           primaryCta={{ href: '/calculator/installment-tracker', label: '📅 Tracker Kholo →' }}
           secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: '💰 Benefit Calculator' }}
@@ -441,9 +441,9 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/pm-kisan-complete-guide', l: '📚 Master Guide' },
+          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
           { href: '/articles/pm-kisan-fto-generated-ka-matlab-kya-hai', l: '💳 FTO Guide' },
-          { href: '/articles/pm-kisan-beneficiary-list-2026', l: '📋 Beneficiary List' },
+          { href: '/articles/PmKisanBeneficiaryList2026', l: '📋 Beneficiary List' },
         ]} />
         <Disclaimer />
       </div>
