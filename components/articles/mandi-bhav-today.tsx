@@ -81,13 +81,14 @@ const STATE_RATES: readonly CityRate[] = [
   { state: 'पुणे',      mandi: 'Market Yard Pune',  veg: '₹26-34', fruit: '₹95-125',  id: 'pune' },
 ];
 
+// ✅ FIXED: All slugs updated to match articles-data.ts
 const RELATED = [
-  { slug: 'pm-kisan-23vi-kist-2026-status-check', title: '23vi Kist Status Check', emoji: '📆' },
-  { slug: 'pm-kisan-ekyc-online-2026', title: 'Digital Verification Guide', emoji: '🔐' },
-  { slug: 'soil-health-card-complete-guide-2026', title: 'Soil Analysis Card', emoji: '🌱' },
-  { slug: 'pm-kisan-payment-failed-status-2026', title: 'Payment Failed Fix', emoji: '💸' },
-  { slug: 'nano-dap-500ml-price-in-india-2026', title: 'Nano DAP Price Guide', emoji: '🧪' },
-  { slug: 'agristack-kya-hai', title: 'Digital Cultivator Identity', emoji: '🆔' },
+  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status Check', emoji: '📆' },
+  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide', emoji: '📚' },
+  { slug: 'soil-health-card-complete-guide-2026', title: 'Soil Health Card', emoji: '🌱' },
+  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List', emoji: '📋' },
+  { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price Guide', emoji: '🧪' },
+  { slug: 'AgriStackKyaHai2026', title: 'Digital Kisan ID', emoji: '🆔' },
 ];
 
 const FAQS_DATA = [
@@ -185,7 +186,7 @@ export default function MandiBhavContent({ article }: { article: ArticleMeta }) 
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* IMAGE 1: Hero - Mixed Vegetables */}
+        {/* IMAGE 1: Hero - Mixed Vegetables — PATH UNCHANGED */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/articles/mandi-bhav-today/mandi-fresh-vegetables-mixed.webp'}
@@ -249,7 +250,7 @@ export default function MandiBhavContent({ article }: { article: ArticleMeta }) 
           </div>
         </section>
 
-        {/* IMAGE 2: Potato & Onion */}
+        {/* IMAGE 2: Potato & Onion — PATH UNCHANGED */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/mandi-bhav-today/mandi-vegetables-potato-onion.webp"
@@ -293,7 +294,7 @@ export default function MandiBhavContent({ article }: { article: ArticleMeta }) 
           )}
         </section>
 
-        {/* IMAGE 3: Tomato & Carrot */}
+        {/* IMAGE 3: Tomato & Carrot — PATH UNCHANGED */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/mandi-bhav-today/mandi-vegetables-tomato-carrot.webp"
@@ -325,7 +326,7 @@ export default function MandiBhavContent({ article }: { article: ArticleMeta }) 
           )}
         </section>
 
-        {/* IMAGE 4: Apple & Banana */}
+        {/* IMAGE 4: Apple & Banana — PATH UNCHANGED */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/mandi-bhav-today/mandi-fruits-apple-banana.webp"
@@ -374,7 +375,7 @@ export default function MandiBhavContent({ article }: { article: ArticleMeta }) 
           </div>
         </section>
 
-        {/* IMAGE 5: Mango & Orange */}
+        {/* IMAGE 5: Mango & Orange — PATH UNCHANGED */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/mandi-bhav-today/mandi-fruits-mango-orange.webp"
@@ -426,7 +427,7 @@ export default function MandiBhavContent({ article }: { article: ArticleMeta }) 
           </div>
         </section>
 
-        {/* IMAGE 6: Mixed Fruits */}
+        {/* IMAGE 6: Mixed Fruits — PATH UNCHANGED */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/mandi-bhav-today/mandi-fresh-fruits-mixed.webp"
@@ -470,18 +471,21 @@ export default function MandiBhavContent({ article }: { article: ArticleMeta }) 
           <FAQBlock faqs={FAQS_DATA} caption="Mandi Rate FAQ 2026 — Verified Answers" />
         </section>
 
+        {/* ✅ FIXED: GovLink with correct slug */}
         <GovLink
           href={SOURCE_URL}
           label="AgMarkNet — Official Daily Mandi Rates"
           guide="Aaj Ka Rate Dekho"
-          guideHref="/articles/nano-dap-500ml-price-in-india-2026"
+          guideHref="/articles/NanoDap500mlPriceInIndia2026"
           portalName="agmarknet.gov.in"
         />
 
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime || article.publishedTime || new Date().toISOString()} />
+        
+        {/* ✅ FIXED: BottomNav with correct slug */}
         <BottomNav extraLinks={[
-          { href: '/articles/nano-dap-500ml-price-in-india-2026', l: '🧪 Nano DAP Price' },
+          { href: '/articles/NanoDap500mlPriceInIndia2026', l: '🧪 Nano DAP Price' },
           { href: '/calculator/crop-profit', l: '📊 Crop Profit' },
         ]} />
         <Disclaimer />
