@@ -7,30 +7,28 @@ import LanguageSwitcher from './LanguageSwitcher';
 import Logo from './Logo';
 import { ARTICLES } from '@/lib/articles-data';
 
+// ✅ Updated: Sirf valid articles (jo exist karte hain)
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/articles', label: 'Articles' },
-  { href: '/articles/pm-kisan-23vi-kist-2026-status-check', label: 'Status Check' },
-  { href: '/articles/pm-kisan-registration-online-2026', label: 'New Registration' },
-  { href: '/beneficiary-list', label: 'Beneficiary List' },
+  { href: '/articles/PmKisan24viKist2026', label: '24vi Kist Status' },
+  { href: '/articles/PmKisanMasterGuide2026', label: 'Complete Guide' },
   { href: '/calculator', label: 'Calculator' },
 ] as const;
 
+// ✅ Updated: Sirf valid articles
 const quickLinks = [
-  { href: '/articles/pm-kisan-23vi-kist-2026-status-check', label: '23vi Kist Status', emoji: '📆' },
-  { href: '/articles/pm-kisan-ekyc-online-2026', label: 'eKYC Guide', emoji: '🔐' },
+  { href: '/articles/PmKisan24viKist2026', label: '24vi Kist Status', emoji: '📆' },
+  { href: '/articles/pm-kisan-fto-generated-ka-matlab-kya-hai', label: 'FTO Guide', emoji: '📋' },
   { href: '/articles/soil-health-card-complete-guide-2026', label: 'Soil Health Card', emoji: '🌱' },
-  { href: '/articles/kisan-credit-card-online-apply-2026', label: 'KCC Loan', emoji: '💳' },
+  { href: '/articles/KisanCreditCardOnlineApply2026', label: 'KCC Loan', emoji: '💳' },
 ] as const;
 
+// ✅ Updated: Sirf valid categories (4)
 const CATEGORY_EMOJIS: Record<string, string> = {
   'status-check': '📆',
-  'ekyc': '🔐',
-  'payment': '💸',
   'loan': '💳',
-  'registration': '📝',
   'farming': '🌱',
-  'correction': '✏️',
   'mandi': '🏪',
 };
 
@@ -99,7 +97,7 @@ function SearchModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
               type="text"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search karo... e.g. eKYC, payment, loan"
+              placeholder="Search karo... e.g. FTO, loan, mandi"
               className="flex-1 bg-transparent text-sm font-medium text-[var(--color-text)] placeholder-[var(--color-text-muted)] outline-none"
             />
             <button onClick={onClose} className="text-[var(--color-text-muted)] hover:text-[var(--color-text)] text-xs font-bold px-2 py-1 rounded bg-[var(--color-bg-alt)] hover:bg-[var(--color-border)] transition-colors">
@@ -288,7 +286,6 @@ export default function Header() {
     <>
       <SearchModal isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
 
-      {/* ✅ FIXED: Mobile backdrop with direct Tailwind */}
       {mobileOpen && (
         <div 
           className="fixed inset-0 bg-black/50 z-40 lg:hidden"
@@ -375,7 +372,6 @@ export default function Header() {
           </div>
         </div>
 
-        {/* ✅ FIXED: Mobile menu with direct Tailwind - NO CSS class dependency */}
         {mobileOpen && (
           <nav
             id="mobile-menu"
