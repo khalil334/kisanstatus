@@ -6,24 +6,24 @@ export const CATEGORIES = {
   'status-check': {
     name: 'Verification & Status',
     nameHi: 'सत्यापन और स्थिति',
-    description: 'Tranche verification, beneficiary roster, FTO, land integration guides',
-    descriptionHi: 'किस्त सत्यापन, लाभार्थी सूची, एफटीओ, भूमि एकीकरण गाइड',
+    description: 'Kist verification, beneficiary roster, FTO, eKYC, land seeding guides',
+    descriptionHi: 'किस्त सत्यापन, लाभार्थी सूची, एफटीओ, ईकेवाईसी, भूमि सीडिंग गाइड',
     icon: '📊',
     color: 'blue',
   },
   'loan': {
     name: 'Credit & Loans',
     nameHi: 'ऋण और क्रेडिट',
-    description: 'Credit facility, farm equipment loan, and bank credit guides',
-    descriptionHi: 'क्रेडिट सुविधा, कृषि उपकरण ऋण, और बैंक क्रेडिट गाइड',
+    description: 'KCC loan, farm equipment loan, and bank credit guides',
+    descriptionHi: 'केसीसी लोन, कृषि उपकरण ऋण, और बैंक क्रेडिट गाइड',
     icon: '💰',
     color: 'amber',
   },
   'farming': {
     name: 'Farming & Schemes',
     nameHi: 'खेती और योजनाएं',
-    description: 'Soil analysis, crop protection, AgriStack, Nano DAP and other schemes',
-    descriptionHi: 'मृदा विश्लेषण, फसल सुरक्षा, एग्रीस्टैक, नैनो डीएपी और अन्य योजनाएं',
+    description: 'Soil analysis, crop insurance, AgriStack, Nano DAP and other schemes',
+    descriptionHi: 'मृदा विश्लेषण, फसल बीमा, एग्रीस्टैक, नैनो डीएपी और अन्य योजनाएं',
     icon: '🌱',
     color: 'emerald',
   },
@@ -88,7 +88,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     readingTime: 10,
     banks: ['mahindra-finance', 'tata-capital'],
     schemes: ['nabard-tractor'],
-    ogImage: '/images/articles/kisan-tractor-loan-2026/hero-2.webp', // ✅ FIXED
+    ogImage: '/images/articles/kisan-tractor-loan-2026/hero-2.webp',
     relatedSlugs: ['KisanRinKahaSeLe2026', 'KisanCreditCardOnlineApply2026'],
   },
   {
@@ -103,7 +103,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 7,
     schemes: ['pm-kisan'],
-    ogImage: '/images/pm-kisan-beneficiary-list-2026.webp', // ✅ Different image
+    ogImage: '/images/pm-kisan-beneficiary-list-2026.webp',
     relatedSlugs: ['PmKisanBeneficiaryListVillageWise2026', 'PmKisan24viKist2026'],
   },
   {
@@ -122,6 +122,21 @@ export const ARTICLES: readonly ArticleMeta[] = [
     relatedSlugs: ['PmKisanBeneficiaryList2026', 'PmKisan24viKist2026'],
   },
   {
+    slug: 'PmKisanEkycOnline2026',
+    title: 'PM Kisan eKYC Online 2026: Ghar Baithe 2 Minute Mein Complete Karo',
+    desc: 'eKYC mandatory hai bina iske kist nahi milegi. OTP ya CSC biometric se free mein karo.',
+    ogTitle: 'PM Kisan eKYC Online 2026 — Free Verification Guide',
+    keywords: ['pm kisan ekyc online 2026', 'pm kisan ekyc kaise kare', 'ekyc otp verification', 'csc biometric ekyc', 'पीएम किसान ईकेवाईसी'],
+    component: 'PmKisanEkycOnline2026',
+    category: 'status-check',
+    publishedTime: '2026-03-15T08:00:00+05:30',
+    modifiedTime: '2026-07-04T08:00:00+05:30',
+    readingTime: 8,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/articles/pm-kisan-ekyc-online-2026/otp-vs-biometric.webp',
+    relatedSlugs: ['PmKisanMasterGuide2026', 'PmKisan24viKist2026', 'PmKisanBeneficiaryList2026'],
+  },
+  {
     slug: 'KisanCreditCardOnlineApply2026',
     title: 'Kisan Credit Card Online Apply 2026 — ₹5 Lakh Loan, 4% Interest',
     desc: 'KCC hai to ₹5 lakh tak loan mil sakta hai, interest rate sirf 4%.',
@@ -134,7 +149,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     readingTime: 9,
     banks: ['sbi', 'pnb', 'bob', 'cooperative'],
     schemes: ['kcc'],
-    ogImage: '/images/kisan-credit-card-online-apply-2026.webp', // ✅ Root level image
+    ogImage: '/images/kisan-credit-card-online-apply-2026.webp',
     relatedSlugs: ['KisanRinKahaSeLe2026', 'KisanTractorLoan2026'],
   },
   {
@@ -164,7 +179,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 7,
     schemes: ['nano-dap'],
-    ogImage: '/images/nano-dap-500ml-bottle-hero.webp', // ✅ Root level
+    ogImage: '/images/nano-dap-500ml-bottle-hero.webp',
     relatedSlugs: ['soil-health-card-complete-guide-2026', 'AgriStackKyaHai2026'],
   },
   {
@@ -179,7 +194,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 6,
     schemes: ['pm-kisan'],
-    ogImage: '/images/pm-kisan-24vi-kist-october-2026.webp', // ✅ Root level
+    ogImage: '/images/pm-kisan-24vi-kist-october-2026.webp',
     relatedSlugs: ['PmKisanBeneficiaryList2026', 'pm-kisan-fto-generated-ka-matlab-kya-hai'],
   },
   {
@@ -194,7 +209,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 10,
     schemes: ['agristack', 'pm-kisan'],
-    ogImage: '/images/articles/agristack-kya-hai/infographic.webp', // ✅ FIXED
+    ogImage: '/images/articles/agristack-kya-hai/infographic.webp',
     relatedSlugs: ['NanoDap500mlPriceInIndia2026', 'soil-health-card-complete-guide-2026'],
   },
   {
@@ -226,6 +241,21 @@ export const ARTICLES: readonly ArticleMeta[] = [
     schemes: ['soil-health-card'],
     ogImage: '/images/articles/soil-health-card-complete-guide-2026/hero.webp',
     relatedSlugs: ['NanoDap500mlPriceInIndia2026', 'AgriStackKyaHai2026'],
+  },
+  {
+    slug: 'PmfbyCropInsurance2026',
+    title: 'PMFBY Crop Insurance 2026: Sirf 2% Premium Mein Fasal Suraksha',
+    desc: 'Fasal kharab ho toh compensation milega. Kharif 2%, Rabi 1.5% premium. Enrollment deadline mat bhoolo.',
+    ogTitle: 'PMFBY Crop Insurance 2026 — Complete Guide Hindi Mein',
+    keywords: ['pmfby crop insurance 2026', 'fasal bima yojana', 'crop insurance claim', 'pmfby enrollment', 'प्रधानमंत्री फसल बीमा योजना'],
+    component: 'PmfbyCropInsurance2026',
+    category: 'farming',
+    publishedTime: '2026-04-01T08:00:00+05:30',
+    modifiedTime: '2026-07-04T08:00:00+05:30',
+    readingTime: 10,
+    schemes: ['pmfby'],
+    ogImage: '/images/articles/pmfby-crop-insurance-2026/hero-image.webp',
+    relatedSlugs: ['PmKisanMasterGuide2026', 'soil-health-card-complete-guide-2026', 'KisanCreditCardOnlineApply2026'],
   },
   {
     slug: 'mandi-bhav-today',
