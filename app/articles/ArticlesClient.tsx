@@ -5,14 +5,7 @@ import Image from 'next/image';
 import { useState, useMemo, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import type { ArticleMeta } from '@/lib/articles-data';
-
-// ✅ Sirf 4 categories — jo articles-data.ts mein hain
-const CATEGORY_META: Record<string, { label: string; emoji: string; color: string }> = {
-  'status-check': { label: 'Status Check', emoji: '📊', color: 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300' },
-  'loan':         { label: 'Loan',         emoji: '💰', color: 'bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300' },
-  'farming':      { label: 'Farming',      emoji: '🌱', color: 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300' },
-  'mandi':        { label: 'Mandi Bhav',   emoji: '📈', color: 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300' },
-};
+import { CATEGORIES } from '@/lib/articles-data';
 
 const NEW_ARTICLES_LIMIT = 3;
 
@@ -49,8 +42,9 @@ function ArticleImage({ image, emoji, title }: { image: string; emoji: string; t
 }
 
 function ArticleCard({ article, showNewBadge = false }: { article: ArticleMeta; showNewBadge?: boolean }) {
-  const catMeta = CATEGORY_META[article.category];
-  const emoji = catMeta?.emoji || '📄';
+  const categoryInfo = CATEGORIES[article.category] as { name: string; nameHi: string; icon: string } | undefined;
+  const emoji = categoryInfo?.icon || '📄';
+  const categoryName = categoryInfo?.nameHi || categoryInfo?.name || 'Article';
 
   return (
     <Link
@@ -71,9 +65,9 @@ function ArticleCard({ article, showNewBadge = false }: { article: ArticleMeta; 
         )}
       </div>
       <div className="p-4 flex flex-col flex-1">
-        {catMeta && (
-          <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full self-start ${catMeta.color}`}>
-            {catMeta.emoji} {catMeta.label}
+        {categoryInfo && (
+          <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full self-start bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300`}>
+            {emoji} {categoryName}
           </span>
         )}
         <h3 className="font-black text-[var(--color-text)] text-sm leading-snug group-hover:text-green-700 dark:group-hover:text-green-400 transition-colors mt-2 mb-1">
@@ -130,9 +124,10 @@ function ArticlesContent({ articles }: { articles: readonly ArticleMeta[] }) {
           >
             📚 Sab Dekho ({articles.length})
           </Link>
-          {Object.entries(CATEGORY_META).map(([slug, cat]) => {
+          {Object.entries(CATEGORIES).map(([slug, cat]) => {
             const count = categoryCounts[slug] || 0;
             if (count === 0) return null;
+            const catInfo = cat as { name: string; nameHi: string; icon: string };
             return (
               <Link
                 key={slug}
@@ -144,7 +139,7 @@ function ArticlesContent({ articles }: { articles: readonly ArticleMeta[] }) {
                 }`}
                 aria-current={activeCategory === slug ? 'page' : undefined}
               >
-                {cat.emoji} {cat.label} ({count})
+                {catInfo.icon} {catInfo.name} ({count})
               </Link>
             );
           })}
@@ -186,7 +181,7 @@ function ArticlesContent({ articles }: { articles: readonly ArticleMeta[] }) {
           <div className="flex items-center gap-3 mb-5">
             <span className="text-xl" aria-hidden="true">📋</span>
             <h2 id="all-heading" className="text-lg font-black text-[var(--color-text)]">
-              {activeCategory === 'all' ? 'Sab Resources' : `${CATEGORY_META[activeCategory]?.label || ''} Guides`}
+              {activeCategory === 'all' ? 'Sab Resources' : `${(CATEGORIES[activeCategory as keyof typeof CATEGORIES] as { name: string } | undefined)?.name || ''} Guides`}
             </h2>
             <span className="bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 text-xs font-bold px-2 py-0.5 rounded-full">
               {remainingArticles.length} guides
