@@ -34,14 +34,16 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  // ✅ FIX #2: Template removed - pages apna complete title define karenge
-  title: {
-    default: 'PM Kisan Samman Nidhi Status Check 2026 — KisanStatus',
-  },
+  
+  // ✅ FIX #2: Simple string use kiya - template ki zaroorat nahi
+  // Pages apna complete title define karenge
+  title: 'PM Kisan Samman Nidhi Status Check 2026 — KisanStatus',
+  
   // ✅ FIX #6: "Agrarian Welfare Scheme" → "PM Kisan Samman Nidhi"
   // ✅ FIX #5: "digital verification" → "eKYC"
   description:
     'PM Kisan Samman Nidhi 24vi kist October 2026 mein aane wali hai — ₹2000 seedha bank account mein. Status check karo, eKYC complete karo, beneficiary roster dekho. 100% free guidance Hinglish mein.',
+  
   authors: [{ name: AUTHOR, url: `${SITE_URL}/about` }],
   creator: AUTHOR,
   publisher: SITE_NAME,
@@ -73,6 +75,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  
   twitter: {
     card: 'summary_large_image',
     site: '@kisanstatus',
@@ -81,6 +84,7 @@ export const metadata: Metadata = {
     description: 'PM Kisan Samman Nidhi 24vi kist October 2026 mein aane wali hai — ₹2000 seedha bank account mein.',
     images: ['/og-image.webp'],
   },
+  
   robots: {
     index: true,
     follow: true,
@@ -92,9 +96,11 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  
   verification: {
     google: process.env.NEXT_PUBLIC_GSC_TOKEN ?? 'oGrO0aRNLLhCgHq0Bn-sh3FdgKye7TlbAn2pAk8YdMQ',
   },
+  
   other: {
     'geo.region': 'IN',
     'geo.placename': 'India',
