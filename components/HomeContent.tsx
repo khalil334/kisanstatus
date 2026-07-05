@@ -109,7 +109,7 @@ export default function HomeContent() {
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
-                href="/articles/pm-kisan-24vi-kist"
+                href="/articles/PmKisan24viKist2026"
                 className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold px-6 py-3 rounded-xl transition-all hover:scale-105 shadow-lg"
               >
                 📅 24vi Kist Status
@@ -193,7 +193,7 @@ export default function HomeContent() {
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             <Link
-              href="/articles/pm-kisan-24vi-kist"
+              href="/articles/PmKisan24viKist2026"
               className="bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-200 dark:border-blue-800 rounded-2xl p-6 text-center hover:shadow-lg hover:scale-105 transition-all"
             >
               <div className="text-3xl mb-2">📊</div>
@@ -201,28 +201,28 @@ export default function HomeContent() {
               <p className="text-xs text-gray-600 dark:text-gray-400">Kist aayi ya nahi</p>
             </Link>
             <Link
-              href="/articles/pm-kisan-ekyc-online-2026"
+              href="/articles/KisanCreditCardOnlineApply2026"
               className="bg-green-50 dark:bg-green-900/20 border-2 border-green-200 dark:border-green-800 rounded-2xl p-6 text-center hover:shadow-lg hover:scale-105 transition-all"
             >
-              <div className="text-3xl mb-2">🔐</div>
-              <h3 className="font-bold text-gray-900 dark:text-white text-sm mb-1">eKYC</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400">Ghar baithe karo</p>
+              <div className="text-3xl mb-2">💳</div>
+              <h3 className="font-bold text-gray-900 dark:text-white text-sm mb-1">KCC Apply</h3>
+              <p className="text-xs text-gray-600 dark:text-gray-400">₹5 Lakh Loan</p>
             </Link>
             <Link
-              href="/articles/pm-kisan-payment-failed-status-2026"
+              href="/articles/PmKisanBeneficiaryList2026"
               className="bg-red-50 dark:bg-red-900/20 border-2 border-red-200 dark:border-red-800 rounded-2xl p-6 text-center hover:shadow-lg hover:scale-105 transition-all"
-            >
-              <div className="text-3xl mb-2">💸</div>
-              <h3 className="font-bold text-gray-900 dark:text-white text-sm mb-1">Payment Fix</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400">Failed payment</p>
-            </Link>
-            <Link
-              href="/articles/pm-kisan-beneficiary-list-2026"
-              className="bg-purple-50 dark:bg-purple-900/20 border-2 border-purple-200 dark:border-purple-800 rounded-2xl p-6 text-center hover:shadow-lg hover:scale-105 transition-all"
             >
               <div className="text-3xl mb-2">📋</div>
               <h3 className="font-bold text-gray-900 dark:text-white text-sm mb-1">Beneficiary List</h3>
               <p className="text-xs text-gray-600 dark:text-gray-400">Naam check karo</p>
+            </Link>
+            <Link
+              href="/articles/soil-health-card-complete-guide-2026"
+              className="bg-purple-50 dark:bg-purple-900/20 border-2 border-purple-200 dark:border-purple-800 rounded-2xl p-6 text-center hover:shadow-lg hover:scale-105 transition-all"
+            >
+              <div className="text-3xl mb-2">🌱</div>
+              <h3 className="font-bold text-gray-900 dark:text-white text-sm mb-1">Soil Health Card</h3>
+              <p className="text-xs text-gray-600 dark:text-gray-400">Mitti test karo</p>
             </Link>
           </div>
         </div>
