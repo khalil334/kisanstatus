@@ -9,22 +9,22 @@ const PUBLISHED = '2026-06-27T08:00:00+05:30';
 const MODIFIED = '2026-07-04T08:00:00+05:30';
 
 const RELATED = [
-  { slug: 'pm-kisan-23vi-kist-2026-status-check', title: '23vi Installment Status', emoji: '📅' },
-  { slug: 'nano-dap-500ml-price-in-india-2026', title: 'Nano DAP Price Guide', emoji: '🌱' },
-  { slug: 'pmfby-crop-insurance-2026', title: 'PMFBY Crop Insurance', emoji: '🛡️' },
-  { slug: 'kisan-credit-card-online-apply-2026', title: 'KCC Credit Card Guide', emoji: '💳' },
-  { slug: 'agristack-kya-hai', title: 'Digital Cultivator Identity', emoji: '🆔' },
-  { slug: 'pm-kisan-registration-online-2026', title: 'New Enrollment Guide', emoji: '📝' },
+  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '📅' },
+  { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price Guide', emoji: '🌱' },
+  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide', emoji: '📚' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Credit Card Guide', emoji: '💳' },
+  { slug: 'AgriStackKyaHai2026', title: 'Digital Kisan ID', emoji: '🆔' },
+  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav', emoji: '📈' },
 ];
 
 const FAQS_DATA = [
-  { q: 'Kitne time baad dobara test karwana chahiye?', a: 'Official recommendation: har 2-3 saal mein. Agar monsoon mein zyada barish hui ya fasal pattern badla (gehun se chawal) toh turant test karwao. Mitti ki composition badal jaati hai.' },
-  { q: 'Kirayedar kisan (batai dar) bhi test karwa sakte hain?', a: 'Haan. Zameen ka maalik hona zaroori nahi. Patta agreement ya land possession proof chahiye. Jo kheti karta hai woh eligible hai.' },
-  { q: 'Report mein likhi salah follow karna zaroori hai?', a: 'Strongly recommended hai lekin mandatory nahi. Report guideline hai — aapki mitti ki specific condition ke hisaab se. Samajh na aaye toh KVK ya krishi vibhag se consult karo.' },
-  { q: '30 din se zyada ho gaye aur card nahi aaya?', a: 'Pehle portal par status check karo. "Sample Under Testing" = thoda wait. Koi update nahi = helpline call ya CSC jaao. Kabhi-kabhi sample lab tak nahi pahunchta.' },
-  { q: 'Kya ye report kisi aur kaam aati hai?', a: 'Haan. KCC loan, crop insurance claim, organic certification, fertilizer subsidy — kai jagah useful hoti hai.' },
-  { q: 'Test kitna mehnga hai?', a: 'Official portal par muft. CSC service charge ₹20-50 (state-wise). Print ₹10-20. Correction muft. ₹100+ maange toh complaint karo.' },
-  { q: 'Password bhool gaye — kya karein?', a: '"Forgot Password" click karo → registered mobile daalo → OTP se naya password set karo. Password kahin likh ke rakho.' },
+  { q: 'Kitne time baad dobara mitti test karwana chahiye?', a: 'Dekho bhai, official recommendation hai har 2-3 saal mein. Agar monsoon mein zyada barish hui ya fasal pattern badla (gehun se chawal) toh turant test karwao. Mitti ki composition badal jaati hai time ke saath.' },
+  { q: 'Kirayedar kisan (batai dar) bhi test karwa sakte hain?', a: 'Haan bilkul karwa sakte hain bhai. Zameen ka maalik hona zaroori nahi. Patta agreement ya land possession proof chahiye bas. Jo kheti karta hai woh eligible hai.' },
+  { q: 'Report mein likhi salah follow karna zaroori hai?', a: 'Strongly recommended hai lekin mandatory nahi bhai. Report guideline hai — aapki mitti ki specific condition ke hisaab se. Samajh na aaye toh KVK ya krishi vibhag se consult karo.' },
+  { q: '30 din se zyada ho gaye aur card nahi aaya?', a: 'Pehle portal par status check karo bhai. "Sample Under Testing" = thoda wait karo. Koi update nahi = helpline call karo ya CSC jao. Kabhi-kabhi sample lab tak nahi pahunchta.' },
+  { q: 'Kya ye report kisi aur kaam aati hai?', a: 'Haan bhai, bahut kaam aati hai. KCC loan, crop insurance claim, organic certification, fertilizer subsidy — kai jagah useful hoti hai ye report.' },
+  { q: 'Test kitna mehnga hai?', a: 'Official portal par bilkul muft hai bhai. CSC service charge ₹20-50 (state-wise). Print ₹10-20. Correction muft. ₹100+ maange toh complaint karo turant.' },
+  { q: 'Password bhool gaye — kya karein?', a: '"Forgot Password" click karo → registered mobile daalo → OTP se naya password set karo. Password kahin likh ke rakho bhai, yaad nahi rehta kabhi-kabhi.' },
 ];
 
 export default function SoilHealthCardCompleteGuide2026({ article }: { article: ArticleMeta }) {
@@ -55,7 +55,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* IMAGE 1: Hero */}
+        {/* IMAGE 1: Hero — PATH UNCHANGED */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/articles/soil-health-card-complete-guide-2026/hero.webp'}
@@ -75,13 +75,13 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
         {/* Intro */}
         <section className="mb-8">
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Kai saalon se ek hi fasal ugane ya galat matra mein khaad dalne se zameen ki quality gir jaati hai. Isliye Bharat sarkar ne 2015 mein Soil Health Card Yojana shuru ki.
+            Dekho bhai, kai saalon se ek hi fasal ugane ya galat matra mein khaad dalne se zameen ki quality gir jaati hai. Isliye Bharat sarkar ne 2015 mein Soil Health Card Yojana shuru ki thi.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Har kisan apni mitti ka test karwa sakta hai — muft ya bahut kam kharch mein. Report mein likha hota hai: kaunse nutrients hain, kaunse kam hain, aur kaunsi fasal ke liye kitni khaad chahiye.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Is guide mein registration se PDF download tak ka poora process hai — official portal ke mutabik.
+            Is guide mein registration se PDF download tak ka poora process hai — official portal ke mutabik. Seedhi baat, koi ghuma-phira ke nahi.
           </p>
         </section>
 
@@ -89,7 +89,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
         <section className="mb-8">
           <SH>Soil Health Card Kya Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Jaise doctor blood test ke baad report deta hai, waise hi krishi vibhag mitti ka test karke report deta hai. 12 parameters check hote hain:
+            Jaise doctor blood test ke baad report deta hai, waise hi krishi vibhag mitti ka test karke report deta hai bhai. 12 parameters check hote hain:
           </p>
           <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl p-4 mb-4">
             <ul className="space-y-1 text-xs text-[var(--color-text-muted)]">
@@ -102,7 +102,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
             </ul>
           </div>
           <IB>
-            <strong>Validity:</strong> Report 2-3 saal valid rehti hai. Uske baad dobara test karwao — mitti ki composition samay ke saath badalti hai.
+            <strong>Validity:</strong> Report 2-3 saal valid rehti hai bhai. Uske baad dobara test karwao — mitti ki composition samay ke saath badalti hai.
           </IB>
         </section>
 
@@ -110,7 +110,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
         <section className="mb-8">
           <SH>Test Karwana Kyun Zaroori Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Bahut se kisan bina jaane saalon se ek hi khaad daal rahe hain. Nuksan:
+            Bahut se kisan bhai bina jaane saalon se ek hi khaad daal rahe hain. Nuksan kya hota hai:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
             <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl p-4 text-center">
@@ -130,10 +130,10 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
             </div>
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            KVK scientists ke mutabik, Bharat ki kaafi zameenon mein zinc ki kami hai. Kai ilaqon mein phosphorus bahut kam, kuch jagah nitrogen zaroorat se zyada. Bina test kiye pata nahi chalta.
+            KVK scientists ke mutabik, Bharat ki kaafi zameenon mein zinc ki kami hai bhai. Kai ilaqon mein phosphorus bahut kam, kuch jagah nitrogen zaroorat se zyada. Bina test kiye pata nahi chalta.
           </p>
           <IB>
-            <strong>Tip:</strong> Pichhle 3 saal se test nahi karwaya? Ek baar zaroor karwao. Khaas kar agar monsoon mein zyada barish hui ya fasal pattern badla.
+            <strong>Tip:</strong> Pichhle 3 saal se test nahi karwaya? Ek baar zaroor karwao bhai. Khaas kar agar monsoon mein zyada barish hui ya fasal pattern badla.
           </IB>
         </section>
 
@@ -155,17 +155,17 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
           <div className="p-4 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl">
             <h3 className="font-black text-green-800 dark:text-green-300 text-sm mb-2">Tarika 2: Online (Ghar Baithe)</h3>
             <StepList>
-              <SI n={1}><strong>soilhealth.dac.gov.in</strong> par jaao</SI>
+              <SI n={1}><strong>soilhealth.dac.gov.in</strong> par jao</SI>
               <SI n={2}>"Farmer Login" ya "New Registration" click karo</SI>
               <SI n={3}>State select karo — har state ka portal alag ho sakta hai</SI>
               <SI n={4}>Form bharo — personal + land + contact details</SI>
               <SI n={5}>Documents upload — Aadhaar, land records</SI>
-              <SI n={6}>Submit → enrollment number note karo</SI>
+              <SI n={6}>Submit karo → enrollment number note kar lo</SI>
             </StepList>
           </div>
 
           <WB>
-            <strong>Zaroori:</strong> Jo mobile number doge, wahi active rako. OTP, status updates, PDF link sab usi par aata hai. Number change = CSC jaake update karwao.
+            <strong>Zaroori:</strong> Jo mobile number doge, wahi active rako bhai. OTP, status updates, PDF link sab usi par aata hai. Number change = CSC jaa ke update karwao.
           </WB>
         </section>
 
@@ -197,7 +197,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
             </table>
           </div>
           <IB>
-            <strong>Tenant Farmers:</strong> Kirayedar kisan bhi eligible hain. Patta agreement ya land possession proof dikhao. Zameen ka maalik hona zaroori nahi.
+            <strong>Tenant Farmers:</strong> Kirayedar kisan bhi eligible hain bhai. Patta agreement ya land possession proof dikhao. Zameen ka maalik hona zaroori nahi.
           </IB>
         </section>
 
@@ -238,11 +238,11 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
             </table>
           </div>
           <IB>
-            <strong>Processing Time:</strong> Official 15 din batata hai. Actual: 10-25 din (state/season dependent). 30+ din = helpline par sampark.
+            <strong>Processing Time:</strong> Official 15 din batata hai bhai. Actual: 10-25 din (state/season dependent). 30+ din = helpline par sampark karo.
           </IB>
         </section>
 
-        {/* IMAGE 2: Dashboard */}
+        {/* IMAGE 2: Dashboard — PATH UNCHANGED */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/soil-health-card-complete-guide-2026/dashboard-2.webp"
@@ -268,7 +268,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
             <SI n={4}>Save karo ya print nikalo</SI>
           </StepList>
           <WB>
-            <strong>PDF Open Nahi Ho Rahi?</strong> Pop-up blocker disable karo. Alag browser try karo. Mobile par PDF viewer install karo. Phir bhi na ho toh CSC se print nikalwao.
+            <strong>PDF Open Nahi Ho Rahi?</strong> Pop-up blocker disable karo bhai. Alag browser try karo. Mobile par PDF viewer install karo. Phir bhi na ho toh CSC se print nikalwao.
           </WB>
         </section>
 
@@ -277,10 +277,10 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
           <SH>Common Problems + Solutions</SH>
           <div className="space-y-3">
             {[
-              { err: 'Naam Mein Spelling Galat', fix: 'CSC jaao → Aadhaar dikhao → correction form bharo. Extra charge nahi lagta.' },
-              { err: 'Website Khul Nahi Rahi', fix: 'Subah 6-8 AM try karo (low server load). WiFi use karo. Ya CSC chale jaao.' },
-              { err: 'OTP Nahi Aa Raha', fix: 'Network check. SMS inbox full? Spam folder dekho. 5 min wait → resend. Phir bhi nahi = CSC se mobile update.' },
-              { err: 'Password Bhool Gaye', fix: '"Forgot Password" → registered mobile → OTP → naya password set. Kahin likh ke rakho.' },
+              { err: 'Naam Mein Spelling Galat', fix: 'CSC jao → Aadhaar dikhao → correction form bharo. Extra charge nahi lagta bhai.' },
+              { err: 'Website Khul Nahi Rahi', fix: 'Subah 6-8 AM try karo (low server load). WiFi use karo. Ya CSC chale jao.' },
+              { err: 'OTP Nahi Aa Raha', fix: 'Network check karo. SMS inbox full? Spam folder dekho. 5 min wait → resend. Phir bhi nahi = CSC se mobile update.' },
+              { err: 'Password Bhool Gaye', fix: '"Forgot Password" → registered mobile → OTP → naya password set. Kahin likh ke rakho bhai.' },
               { err: 'Card Kho Gaya', fix: 'Portal login → dobara download. Ya CSC se duplicate print (₹10-15).' },
             ].map(({ err, fix }) => (
               <div key={err} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl overflow-hidden shadow-sm">
@@ -302,7 +302,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
         <section className="mb-8">
           <SH>Report Ko Kaise Samjhein?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Har parameter ka normal range hota hai. Uske andar hona chahiye:
+            Har parameter ka normal range hota hai bhai. Uske andar hona chahiye:
           </p>
           <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-4 mb-4">
             <ul className="space-y-2 text-xs text-[var(--color-text-muted)]">
@@ -315,10 +315,10 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
             </ul>
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Report ke aakhri page par fasal-wise khaad salah hoti hai — kitni urea, DAP, MOP, organic khaad. Follow karo — na kam, na zyada.
+            Report ke aakhri page par fasal-wise khaad salah hoti hai — kitni urea, DAP, MOP, organic khaad. Follow karo bhai — na kam, na zyada.
           </p>
           <IB>
-            <strong>Expert Advice:</strong> Sirf N-P-K tak seemit mat raho. Micronutrients (zinc, iron, copper) bhi utne hi zaroori hain. Samajh na aaye toh KVK se salah lo.
+            <strong>Expert Advice:</strong> Sirf N-P-K tak seemit mat raho bhai. Micronutrients (zinc, iron, copper) bhi utne hi zaroori hain. Samajh na aaye toh KVK se salah lo.
           </IB>
         </section>
 
@@ -350,7 +350,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
             </table>
           </div>
           <DB>
-            <strong>Warning:</strong> ₹100+ charge = galat. Helpline par complaint karo ya doosre CSC jaao.
+            <strong>Warning:</strong> ₹100+ charge = galat hai bhai. Helpline par complaint karo ya doosre CSC jao.
           </DB>
         </section>
 
@@ -375,7 +375,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
         <div className="my-8 p-5 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl text-center">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-2">Kya Aapne Mitti Test Karwaya?</h3>
           <p className="text-sm text-green-700 dark:text-green-400 mb-3">
-            Haan = report ki salah follow karo. Nahi = aaj hi enrollment karwao. Sahi khaad, sahi matra — yahi safalta ka raaz hai.
+            Haan = report ki salah follow karo bhai. Nahi = aaj hi enrollment karwao. Sahi khaad, sahi matra — yahi safalta ka raaz hai.
           </p>
         </div>
 
@@ -383,7 +383,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
           href="https://soilhealth.dac.gov.in"
           label="Soil Health Card — Official Portal"
           guide="Abhi Enrollment Karo"
-          guideHref="/articles/pm-kisan-registration-online-2026"
+          guideHref="/articles/PmKisanMasterGuide2026"
           portalName="soilhealth.dac.gov.in"
         />
 
@@ -398,8 +398,8 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/nano-dap-500ml-price-in-india-2026', l: '🌱 Nano DAP Price' },
-          { href: '/articles/pmfby-crop-insurance-2026', l: '🛡️ Crop Insurance' },
+          { href: '/articles/NanoDap500mlPriceInIndia2026', l: '🌱 Nano DAP Price' },
+          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
           { href: '/calculator/msp-income', l: '📊 MSP Calculator' },
         ]} />
         <Disclaimer />
