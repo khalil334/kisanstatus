@@ -1,6 +1,5 @@
 // ── lib/articles-data.ts ───────────────────────────────────
-// Centralized article metadata — single source of truth
-// ⚠️ Component names match EXACT file names on GitHub (case-sensitive)
+// ⚠️ SLUG = FILE NAME (without .tsx) — same everywhere
 
 export const CATEGORIES = {
   'status-check': {
@@ -60,7 +59,7 @@ export interface ArticleMeta {
 
 export const ARTICLES: readonly ArticleMeta[] = [
   {
-    slug: 'kisan-rin-kaha-se-le-2026',
+    slug: 'KisanRinKahaSeLe2026',
     title: 'Kisan Loan Kahan Se Milega 2026? KCC, Bank, CSC — Puri Jankari',
     desc: 'Loan chahiye to confusion hota hai — SBI, cooperative, CSC, har jagah process alag. Is guide mein sab kuch hai.',
     ogTitle: 'Kisan Loan Guide 2026 — Complete Jankari Hindi Mein',
@@ -73,10 +72,10 @@ export const ARTICLES: readonly ArticleMeta[] = [
     banks: ['sbi', 'pnb', 'bob', 'cooperative'],
     schemes: ['kcc'],
     ogImage: '/images/kisan-rin-kaha-se-le-2026.webp',
-    relatedSlugs: ['kisan-credit-card-online-apply-2026', 'kisan-tractor-loan-2026'],
+    relatedSlugs: ['KisanCreditCardOnlineApply2026', 'KisanTractorLoan2026'],
   },
   {
-    slug: 'kisan-tractor-loan-2026',
+    slug: 'KisanTractorLoan2026',
     title: 'Tractor Loan Bina Down Payment — Kya Yeh Sach Mein Mil Sakta Hai?',
     desc: 'Bina down payment ke tractor loan? Mahindra Finance, TATA Capital, aur state banks mein scheme hai.',
     ogTitle: 'Tractor Loan Bina Down Payment 2026 — Puri Jankari',
@@ -89,10 +88,10 @@ export const ARTICLES: readonly ArticleMeta[] = [
     banks: ['mahindra-finance', 'tata-capital'],
     schemes: ['nabard-tractor'],
     ogImage: '/images/kisan-tractor-loan-2026/hero-banner.webp',
-    relatedSlugs: ['kisan-rin-kaha-se-le-2026', 'kisan-credit-card-online-apply-2026'],
+    relatedSlugs: ['KisanRinKahaSeLe2026', 'KisanCreditCardOnlineApply2026'],
   },
   {
-    slug: 'pm-kisan-beneficiary-list-2026',
+    slug: 'PmKisanBeneficiaryList2026',
     title: 'PM Kisan Beneficiary List 2026 — Apna Naam Kaise Check Karein?',
     desc: 'Beneficiary list mein naam hai ya nahi? Village-wise roster dekh sakte ho, PDF download kar sakte ho.',
     ogTitle: 'PM Kisan Beneficiary List 2026 — Naam Check Karo',
@@ -104,10 +103,10 @@ export const ARTICLES: readonly ArticleMeta[] = [
     readingTime: 7,
     schemes: ['pm-kisan'],
     ogImage: '/images/pm-kisan-beneficiary-list-village-wise-2026.webp',
-    relatedSlugs: ['pm-kisan-beneficiary-list-village-wise-2026', 'pm-kisan-24vi-kist'],
+    relatedSlugs: ['PmKisanBeneficiaryListVillageWise2026', 'PmKisan24viKist2026'],
   },
   {
-    slug: 'pm-kisan-beneficiary-list-village-wise-2026',
+    slug: 'PmKisanBeneficiaryListVillageWise2026',
     title: 'Apne Gaon Ki Beneficiary List Dekho — Village Wise Roster 2026',
     desc: 'Apne gaon mein kaun-kaun PM Kisan ka paisa le raha hai — State, District, Block select karo.',
     ogTitle: 'PM Kisan Gaon Wise Beneficiary List 2026 — Complete Guide',
@@ -119,10 +118,10 @@ export const ARTICLES: readonly ArticleMeta[] = [
     readingTime: 6,
     schemes: ['pm-kisan'],
     ogImage: '/images/pm-kisan-beneficiary-list-village-wise-2026.webp',
-    relatedSlugs: ['pm-kisan-beneficiary-list-2026', 'pm-kisan-24vi-kist'],
+    relatedSlugs: ['PmKisanBeneficiaryList2026', 'PmKisan24viKist2026'],
   },
   {
-    slug: 'kisan-credit-card-online-apply-2026',
+    slug: 'KisanCreditCardOnlineApply2026',
     title: 'Kisan Credit Card Online Apply 2026 — ₹5 Lakh Loan, 4% Interest',
     desc: 'KCC hai to ₹5 lakh tak loan mil sakta hai, interest rate sirf 4%.',
     ogTitle: 'Kisan Credit Card Online Apply — ₹5 Lakh Loan 2026',
@@ -135,7 +134,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     banks: ['sbi', 'pnb', 'bob', 'cooperative'],
     schemes: ['kcc'],
     ogImage: '/images/kisan-credit-card-online-apply-2026/hero-image.webp',
-    relatedSlugs: ['kisan-rin-kaha-se-le-2026', 'kisan-tractor-loan-2026'],
+    relatedSlugs: ['KisanRinKahaSeLe2026', 'KisanTractorLoan2026'],
   },
   {
     slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai',
@@ -150,10 +149,10 @@ export const ARTICLES: readonly ArticleMeta[] = [
     readingTime: 6,
     schemes: ['pm-kisan'],
     ogImage: '/images/pm-kisan-fto-generated-ka-matlab-kya-hai.webp',
-    relatedSlugs: ['pm-kisan-24vi-kist', 'pm-kisan-beneficiary-list-2026'],
+    relatedSlugs: ['PmKisan24viKist2026', 'PmKisanBeneficiaryList2026'],
   },
   {
-    slug: 'nano-dap-500ml-price-in-india-2026',
+    slug: 'NanoDap500mlPriceInIndia2026',
     title: 'Nano DAP 500ml Price India 2026 — IFFCO Rate Aur Kahan Milega',
     desc: 'IFFCO Nano DAP 500ml bottle ₹280-320 ke beech hai.',
     ogTitle: 'Nano DAP 500ml Price 2026 — Kahan Se Khariden?',
@@ -165,10 +164,10 @@ export const ARTICLES: readonly ArticleMeta[] = [
     readingTime: 7,
     schemes: ['nano-dap'],
     ogImage: '/images/nano-dap-500ml-price-in-india-2026.webp',
-    relatedSlugs: ['soil-health-card-complete-guide-2026', 'agristack-kya-hai'],
+    relatedSlugs: ['soil-health-card-complete-guide-2026', 'AgriStackKyaHai2026'],
   },
   {
-    slug: 'pm-kisan-24vi-kist',
+    slug: 'PmKisan24viKist2026',
     title: 'PM Kisan 24vi Kist Kab Aayegi? Date Aur Status Guide 2026',
     desc: '23vi aa gayi, ab 24vi ka wait. October 2026 tak aane ki umeed.',
     ogTitle: 'PM Kisan 24vi Kist — Kab Aayegi 2026?',
@@ -180,10 +179,10 @@ export const ARTICLES: readonly ArticleMeta[] = [
     readingTime: 6,
     schemes: ['pm-kisan'],
     ogImage: '/images/pm-kisan-24vi-kist-october-2026.webp',
-    relatedSlugs: ['pm-kisan-beneficiary-list-2026', 'pm-kisan-fto-generated-ka-matlab-kya-hai'],
+    relatedSlugs: ['PmKisanBeneficiaryList2026', 'pm-kisan-fto-generated-ka-matlab-kya-hai'],
   },
   {
-    slug: 'agristack-kya-hai',
+    slug: 'AgriStackKyaHai2026',
     title: 'AgriStack Kya Hai? Digital Kisan ID Aur PM Kisan Connection',
     desc: 'AgriStack digital kisan ID hai. PM Kisan se connected hai.',
     ogTitle: 'AgriStack Kya Hai — Digital Kisan ID Complete Guide',
@@ -195,10 +194,10 @@ export const ARTICLES: readonly ArticleMeta[] = [
     readingTime: 10,
     schemes: ['agristack', 'pm-kisan'],
     ogImage: '/images/agristack-kya-hai/infographic.webp',
-    relatedSlugs: ['nano-dap-500ml-price-in-india-2026', 'soil-health-card-complete-guide-2026'],
+    relatedSlugs: ['NanoDap500mlPriceInIndia2026', 'soil-health-card-complete-guide-2026'],
   },
   {
-    slug: 'pm-kisan-complete-guide',
+    slug: 'PmKisanMasterGuide2026',
     title: 'PM Kisan Complete Guide 2026 — Sab Problems Ka Ek Saath Hal',
     desc: 'Status verify, eKYC, payment fail — sab ek jagah.',
     ogTitle: 'PM Kisan Complete Guide — Sab Problems Fix',
@@ -210,7 +209,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     readingTime: 15,
     schemes: ['pm-kisan'],
     ogImage: '/images/pm-kisan-complete-guide/hero.webp',
-    relatedSlugs: ['pm-kisan-24vi-kist', 'pm-kisan-beneficiary-list-2026'],
+    relatedSlugs: ['PmKisan24viKist2026', 'PmKisanBeneficiaryList2026'],
   },
   {
     slug: 'soil-health-card-complete-guide-2026',
@@ -225,7 +224,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     readingTime: 8,
     schemes: ['soil-health-card'],
     ogImage: '/images/soil-health-card-complete-guide-2026/hero.webp',
-    relatedSlugs: ['nano-dap-500ml-price-in-india-2026', 'agristack-kya-hai'],
+    relatedSlugs: ['NanoDap500mlPriceInIndia2026', 'AgriStackKyaHai2026'],
   },
   {
     slug: 'mandi-bhav-today',
