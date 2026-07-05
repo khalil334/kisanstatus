@@ -66,8 +66,8 @@ function ArticleCard({ article, showNewBadge = false }: { article: ArticleMeta; 
       </div>
       <div className="p-4 flex flex-col flex-1">
         {categoryInfo && (
-          <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full self-start bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300`}>
-            {emoji} {categoryName}
+          <span className="text-[10px] font-bold px-2 py-0.5 rounded-full self-start bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">
+            {categoryName}
           </span>
         )}
         <h3 className="font-black text-[var(--color-text)] text-sm leading-snug group-hover:text-green-700 dark:group-hover:text-green-400 transition-colors mt-2 mb-1">
