@@ -193,7 +193,7 @@ export function AuthorBox({ modified }: { modified: string }) {
           {AUTHOR_NAME}
         </Link>
         <p className="text-xs text-green-700 dark:text-green-400 font-semibold mt-0.5">
-          Agrarian Welfare Experts & Annadata Advocates
+          PM Kisan Experts & Annadata Advocates
         </p>
         <p className="text-xs text-[var(--color-text-muted)] mt-1">{AUTHOR_BIO}</p>
         <p className="text-xs text-[var(--color-text-muted)] mt-1">
@@ -258,9 +258,9 @@ export function Disclaimer() {
 // ═══════════════════════════════════════════════════════════
 
 export function CalcBanner({
-  title = 'Tranche Ruki Hai? Pata Karo Kyun',
-  desc = 'Digital verification, bank seeding, land integration check karo — 4 sawaal mein exact reason.',
-  primaryCta = { href: '/calculator/installment-tracker', label: '📆 Tranche Tracker Kholo →' },
+  title = 'Kist Ruki Hai? Pata Karo Kyun',
+  desc = 'eKYC, bank seeding, land seeding check karo — 4 sawaal mein exact reason.',
+  primaryCta = { href: '/calculator/installment-tracker', label: '📆 Kist Tracker Kholo →' },
   secondaryCta = { href: '/calculator', label: '🧮 Sab Utilities Dekho' },
   icon = '📆',
 }: {
