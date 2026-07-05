@@ -40,9 +40,9 @@ function ArticleImage({ image, emoji, title }: { image: string; emoji: string; t
 }
 
 function ArticleCard({ article, showNewBadge = false }: { article: typeof ARTICLES[0]; showNewBadge?: boolean }) {
-  const category = CATEGORIES[article.category];
-  const emoji = category?.icon || '📄';
-  const categoryName = category?.nameHi || category?.name || 'Article';
+  const categoryInfo = CATEGORIES[article.category] as { name: string; nameHi: string; icon: string } | undefined;
+  const emoji = categoryInfo?.icon || '📄';
+  const categoryName = categoryInfo?.nameHi || categoryInfo?.name || 'Article';
 
   return (
     <Link
