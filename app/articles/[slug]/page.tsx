@@ -99,9 +99,7 @@ function ArticleLoading() {
   );
 }
 
-// ✅ EXACTLY 12 components — keys = file names (without .tsx)
 const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> = {
-  // PascalCase components
   KisanRinKahaSeLe2026:                       dynamic(() => import('@/components/articles/KisanRinKahaSeLe2026'),                       { loading: ArticleLoading }),
   KisanTractorLoan2026:                       dynamic(() => import('@/components/articles/KisanTractorLoan2026'),                       { loading: ArticleLoading }),
   PmKisanBeneficiaryList2026:                 dynamic(() => import('@/components/articles/PmKisanBeneficiaryList2026'),                 { loading: ArticleLoading }),
@@ -111,8 +109,6 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   PmKisan24viKist2026:                        dynamic(() => import('@/components/articles/PmKisan24viKist2026'),                        { loading: ArticleLoading }),
   AgriStackKyaHai2026:                        dynamic(() => import('@/components/articles/AgriStackKyaHai2026'),                        { loading: ArticleLoading }),
   PmKisanMasterGuide2026:                     dynamic(() => import('@/components/articles/PmKisanMasterGuide2026'),                     { loading: ArticleLoading }),
-
-  // kebab-case components
   'pm-kisan-fto-generated-ka-matlab-kya-hai': dynamic(() => import('@/components/articles/pm-kisan-fto-generated-ka-matlab-kya-hai'), { loading: ArticleLoading }),
   'soil-health-card-complete-guide-2026':     dynamic(() => import('@/components/articles/soil-health-card-complete-guide-2026'),     { loading: ArticleLoading }),
   'mandi-bhav-today':                         dynamic(() => import('@/components/articles/mandi-bhav-today'),                         { loading: ArticleLoading }),
