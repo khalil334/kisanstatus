@@ -40,6 +40,11 @@ const nextConfig = {
       // Beneficiary list slug correction
       { source: '/beneficiary-list/jammu-and-kashmir', destination: '/beneficiary-list/jammu-kashmir', permanent: true },
 
+      // 🚨 STATE-WISE BENEFICIARY LIST REDIRECTS
+      // Articles mein 36 state links hain jo /beneficiary-list/:state par jaate hain
+      // Yeh pages exist nahi karte — sabko main beneficiary list article par redirect karo
+      { source: '/beneficiary-list/:slug', destination: '/articles/PmKisanBeneficiaryList2026', permanent: true },
+
       // 🚨 SPAM/HACKED URL REDIRECTS (Google mein indexed hain)
       // Yeh sab valid articles par redirect karo taaki SEO juice save ho
       
