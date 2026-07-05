@@ -114,6 +114,8 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   'soil-health-card-complete-guide-2026':     dynamic(() => import('@/components/articles/soil-health-card-complete-guide-2026'),     { loading: ArticleLoading }),
   PmfbyCropInsurance2026:                     dynamic(() => import('@/components/articles/PmfbyCropInsurance2026'),                     { loading: ArticleLoading }),
   'mandi-bhav-today':                         dynamic(() => import('@/components/articles/mandi-bhav-today'),                         { loading: ArticleLoading }),
+  PmKisanPaymentFailedFix2026:                dynamic(() => import('@/components/articles/PmKisanPaymentFailedFix2026'),                { loading: ArticleLoading }),
+  PmKisan25viKist2027:                        dynamic(() => import('@/components/articles/PmKisan25viKist2027'),                        { loading: ArticleLoading }),
 };
 
 export const revalidate = 86400;
