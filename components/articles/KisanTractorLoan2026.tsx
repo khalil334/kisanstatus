@@ -8,13 +8,14 @@ import type { ArticleMeta } from '@/lib/articles-data';
 const PUBLISHED = '2026-01-20T08:00:00+05:30';
 const MODIFIED = '2026-07-04T08:00:00+05:30';
 
+// ✅ FIXED: Removed deleted article 'pm-kisan-ekyc-online-2026'
 const RELATED = [
   { slug: 'kisan-credit-card-online-apply-2026', title: 'KCC Online Apply Guide', emoji: '💳' },
   { slug: 'kisan-rin-kaha-se-le-2026', title: 'Agricultural Credit Sources', emoji: '🏦' },
   { slug: 'pmfby-crop-insurance-2026', title: 'Crop Insurance Claim', emoji: '🛡️' },
-  { slug: 'pm-kisan-ekyc-online-2026', title: 'Digital Verification', emoji: '🔐' },
   { slug: 'agristack-kya-hai', title: 'Digital Cultivator Identity', emoji: '🆔' },
   { slug: 'nano-dap-500ml-price-in-india-2026', title: 'Nano DAP Price Guide', emoji: '🌱' },
+  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '📅' },
 ];
 
 const FAQS_DATA = [
