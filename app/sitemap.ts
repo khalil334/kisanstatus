@@ -4,9 +4,6 @@ import { SITE_URL } from '@/lib/site-config';
 
 // ═══════════════════════════════════════════════════════════
 // STATE SLUGS
-// Eventually move to articles-data.ts as ALL_STATES
-// Abhi yahan hai kyunki beneficiary-list/[state] route
-// articles se independent hai
 // ═══════════════════════════════════════════════════════════
 
 const STATE_SLUGS = [
@@ -20,8 +17,6 @@ const STATE_SLUGS = [
 
 // ═══════════════════════════════════════════════════════════
 // SMART PRIORITY & FREQUENCY HELPERS
-// Fresh content gets higher priority
-// Content type determines change frequency
 // ═══════════════════════════════════════════════════════════
 
 function getArticlePriority(modifiedTime: string): number {
@@ -34,17 +29,15 @@ function getArticlePriority(modifiedTime: string): number {
   return 0.8;                                 // Older
 }
 
-function getArticleFrequency(category: string): MetadataRoute.Sitemap[number]['changeFrequency'] {
-  // Mandi rates change daily, corrections rarely change
+type ChangeFrequency = MetadataRoute.Sitemap[number]['changeFrequency'];
+
+function getArticleFrequency(category: string): ChangeFrequency {
+  // ✅ Sirf valid categories (jo articles-data.ts mein hain)
   switch (category) {
     case 'mandi': return 'daily';
     case 'status-check': return 'weekly';
-    case 'ekyc': return 'monthly';
-    case 'payment': return 'weekly';
     case 'loan': return 'monthly';
-    case 'registration': return 'monthly';
     case 'farming': return 'monthly';
-    case 'correction': return 'monthly';
     default: return 'weekly';
   }
 }
@@ -60,9 +53,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     { url: SITE_URL,                                     lastModified: now, changeFrequency: 'daily',   priority: 1.0 },
     { url: `${SITE_URL}/articles`,                       lastModified: now, changeFrequency: 'daily',   priority: 0.95 },
-    { url: `${SITE_URL}/beneficiary-list`,               lastModified: now, changeFrequency: 'weekly',  priority: 0.9 },
-    { url: `${SITE_URL}/pm-kisan-status`,                lastModified: now, changeFrequency: 'weekly',  priority: 0.9 },
-    { url: `${SITE_URL}/new-registration`,               lastModified: now, changeFrequency: 'weekly',  priority: 0.9 },
     { url: `${SITE_URL}/calculator`,                     lastModified: now, changeFrequency: 'weekly',  priority: 0.8 },
     { url: `${SITE_URL}/calculator/quick-status-check`,  lastModified: now, changeFrequency: 'weekly',  priority: 0.9 },
     { url: `${SITE_URL}/calculator/installment-tracker`, lastModified: now, changeFrequency: 'weekly',  priority: 0.9 },
@@ -74,13 +64,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/about`,                          lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${SITE_URL}/author`,                         lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${SITE_URL}/contact`,                        lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
-    { url: `${SITE_URL}/official-links`,                 lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${SITE_URL}/privacy-policy`,                 lastModified: now, changeFrequency: 'yearly',  priority: 0.4 },
     { url: `${SITE_URL}/disclaimer`,                     lastModified: now, changeFrequency: 'yearly',  priority: 0.4 },
     { url: `${SITE_URL}/terms-of-service`,               lastModified: now, changeFrequency: 'yearly',  priority: 0.4 },
   ];
 
-  // ── Category Pages ──
+  // ── Category Pages (sirf valid categories) ──
   const categoryPages: MetadataRoute.Sitemap = Object.keys(CATEGORIES).map((category) => ({
     url:             `${SITE_URL}/articles/category/${category}`,
     lastModified:    now,
@@ -88,7 +77,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority:        0.85,
   }));
 
-  // ── Article Pages (smart priority + frequency) ──
+  // ── Article Pages (dynamic from ARTICLES array) ──
   const articlePages: MetadataRoute.Sitemap = ARTICLES.map((article) => {
     const modified = article.modifiedTime || article.publishedTime;
     return {
