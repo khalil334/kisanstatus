@@ -10,8 +10,6 @@ import Footer from '@/components/Footer';
 import { GA_MEASUREMENT_ID } from '@/lib/gtag';
 import { LanguageProvider } from '@/lib/LanguageContext';
 
-// Font weights jo actually use hote hain — sirf wahi load karo
-// Extra weights page speed slow kar dete hain
 const poppins = Poppins({
   subsets: ['latin', 'devanagari'],
   weight: ['400', '600', '700'],
@@ -36,18 +34,19 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  // ✅ FIX #2: Template removed - pages apna complete title define karenge
   title: {
-    default: 'Agrarian Welfare Scheme — Beneficiary Verification Portal 2026',
-    template: `%s | ${SITE_NAME}`,
+    default: 'PM Kisan Samman Nidhi Status Check 2026 — KisanStatus',
   },
+  // ✅ FIX #6: "Agrarian Welfare Scheme" → "PM Kisan Samman Nidhi"
+  // ✅ FIX #5: "digital verification" → "eKYC"
   description:
-    '23vi tranche 20 June 2026 ko release ho gayi hai — ₹2000 seedha bank account mein. Status check karo, digital verification complete karo, eligible farmers roster dekho. 100% free guidance Hinglish mein.',
+    'PM Kisan Samman Nidhi 24vi kist October 2026 mein aane wali hai — ₹2000 seedha bank account mein. Status check karo, eKYC complete karo, beneficiary roster dekho. 100% free guidance Hinglish mein.',
   authors: [{ name: AUTHOR, url: `${SITE_URL}/about` }],
   creator: AUTHOR,
   publisher: SITE_NAME,
   category: 'Agriculture',
   
-  // ✅ FIX #1: Explicit canonical URL
   alternates: {
     canonical: SITE_URL,
     languages: {
@@ -62,14 +61,14 @@ export const metadata: Metadata = {
     locale: 'hi_IN',
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: 'Agrarian Welfare Scheme — Beneficiary Verification Portal 2026',
-    description: '23vi tranche 20 June 2026 ko release ho gayi hai — ₹2000 seedha bank account mein.',
+    title: 'PM Kisan Samman Nidhi Status Check 2026 — KisanStatus',
+    description: 'PM Kisan Samman Nidhi 24vi kist October 2026 mein aane wali hai — ₹2000 seedha bank account mein.',
     images: [
       {
         url: '/og-image.webp',
         width: 1200,
         height: 630,
-        alt: 'KisanStatus - Cultivator Benefit Program Portal 2026',
+        alt: 'KisanStatus - PM Kisan Samman Nidhi Portal 2026',
         type: 'image/webp',
       },
     ],
@@ -78,8 +77,8 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@kisanstatus',
     creator: '@kisanstatus',
-    title: 'Agrarian Welfare Scheme — Beneficiary Verification Portal 2026',
-    description: '23vi tranche 20 June 2026 ko release ho gayi hai — ₹2000 seedha bank account mein.',
+    title: 'PM Kisan Samman Nidhi Status Check 2026 — KisanStatus',
+    description: 'PM Kisan Samman Nidhi 24vi kist October 2026 mein aane wali hai — ₹2000 seedha bank account mein.',
     images: ['/og-image.webp'],
   },
   robots: {
@@ -102,8 +101,6 @@ export const metadata: Metadata = {
   },
 };
 
-// Suspense ke liye loading state
-// Blank screen se better user experience deta hai
 function LayoutLoading() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-surface">
@@ -121,28 +118,21 @@ export default function RootLayout({
   return (
     <html lang="hi-IN" suppressHydrationWarning className={poppins.variable}>
       <head>
-        {/* ✅ FIX #2: Hreflang tags for multi-language */}
         <link rel="alternate" hrefLang="hi-IN" href={`${SITE_URL}/`} />
         <link rel="alternate" hrefLang="en-US" href={`${SITE_URL}/en`} />
         <link rel="alternate" hrefLang="x-default" href={`${SITE_URL}/`} />
         
-        {/* Critical domains — sirf inhi se preconnect karo */}
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         
-        {/* Google Fonts — preconnect for faster loading */}
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
-        {/* Favicon & PWA setup */}
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
         <link rel="manifest" href="/site.webmanifest" />
 
-        {/* Hero image preloading individual pages handle karti hain */}
-        {/* Yahan global preload nahi — page-specific better hai */}
-
-        {/* ✅ FIX #3: Fixed Organization schema - founder is Person now */}
+        {/* ✅ FIX #6: Schema description updated */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -152,7 +142,7 @@ export default function RootLayout({
                 '@type': 'WebSite',
                 name: SITE_NAME,
                 url: SITE_URL,
-                description: 'Cultivator benefit program verification, digital authentication guide, eligible farmers roster — India ka free agrarian welfare resource portal.',
+                description: 'PM Kisan Samman Nidhi verification, eKYC guide, beneficiary roster — India ka free PM Kisan resource portal.',
                 inLanguage: 'hi-IN',
                 potentialAction: {
                   '@type': 'SearchAction',
@@ -175,7 +165,7 @@ export default function RootLayout({
                   height: 512,
                 },
                 foundingDate: '2024',
-                description: 'Free agrarian welfare scheme resource portal for Indian cultivators.',
+                description: 'Free PM Kisan Samman Nidhi resource portal for Indian cultivators.',
                 contactPoint: {
                   '@type': 'ContactPoint',
                   email: 'kisanstatus.support@gmail.com',
@@ -198,7 +188,6 @@ export default function RootLayout({
       </head>
 
       <body className="min-h-screen flex flex-col bg-surface text-text-primary antialiased font-sans">
-        {/* Accessibility — keyboard users ke liye skip link */}
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-green-600 focus:text-white focus:rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
@@ -222,7 +211,6 @@ export default function RootLayout({
           </Suspense>
         </LanguageProvider>
 
-        {/* Google Analytics — lazyOnload strategy se load hota hai (page load ke baad) */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="lazyOnload"
@@ -243,10 +231,8 @@ export default function RootLayout({
           }}
         />
 
-        {/* Vercel Analytics — production mein hi load hoga */}
         {process.env.NODE_ENV === 'production' && <Analytics />}
 
-        {/* Scroll restoration — page navigation ke baad top par le jaata hai */}
         <Script
           id="scroll-restoration"
           strategy="afterInteractive"
@@ -263,7 +249,6 @@ export default function RootLayout({
           }}
         />
 
-        {/* Focus management — keyboard navigation detect karta hai */}
         <Script
           id="focus-management"
           strategy="afterInteractive"
