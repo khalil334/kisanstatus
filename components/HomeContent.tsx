@@ -1,456 +1,601 @@
-'use client';
+// ── lib/articles-data.ts ───────────────────────────────────
+// Centralized article metadata — single source of truth
+// ⚠️ OgImage paths match actual folder structure on GitHub
 
-import { useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import FAQSection from '@/components/FAQSection';
+export const CATEGORIES = {
+  'status-check': {
+    name: 'Verification & Status',
+    nameHi: 'सत्यापन और स्थिति',
+    description: 'Tranche verification, beneficiary roster, FTO, land integration guides',
+    descriptionHi: 'किस्त सत्यापन, लाभार्थी सूची, एफटीओ, भूमि एकीकरण गाइड',
+    icon: '📊',
+    color: 'blue',
+  },
+  'ekyc': {
+    name: 'Digital Verification',
+    nameHi: 'डिजिटल सत्यापन',
+    description: 'Aadhaar OTP, CSC authentication and digital verification guides',
+    descriptionHi: 'बायोमेट्रिक ओटीपी, सीएससी प्रमाणीकरण और डिजिटल सत्यापन गाइड',
+    icon: '🔐',
+    color: 'green',
+  },
+  'payment': {
+    name: 'Payment Issues',
+    nameHi: 'भुगतान समस्याएं',
+    description: 'Payment failed, rejected list, RFT, PFMS problems and solutions',
+    descriptionHi: 'भुगतान विफल, अस्वीकृत सूची, आरएफटी, पीएफएमएस समस्याएं और समाधान',
+    icon: '💸',
+    color: 'red',
+  },
+  'loan': {
+    name: 'Credit & Loans',
+    nameHi: 'ऋण और क्रेडिट',
+    description: 'Credit facility, farm equipment loan, and bank credit guides',
+    descriptionHi: 'क्रेडिट सुविधा, कृषि उपकरण ऋण, और बैंक क्रेडिट गाइड',
+    icon: '🏦',
+    color: 'amber',
+  },
+  'registration': {
+    name: 'Enrollment',
+    nameHi: 'नामांकन',
+    description: 'New PM Kisan enrollment and eligibility guides',
+    descriptionHi: 'नए पीएम किसान नामांकन और पात्रता गाइड',
+    icon: '📝',
+    color: 'purple',
+  },
+  'farming': {
+    name: 'Farming & Schemes',
+    nameHi: 'खेती और योजनाएं',
+    description: 'Soil analysis, crop protection, AgriStack, Nano DAP and other schemes',
+    descriptionHi: 'मृदा विश्लेषण, फसल सुरक्षा, एग्रीस्टैक, नैनो डीएपी और अन्य योजनाएं',
+    icon: '🌾',
+    color: 'emerald',
+  },
+  'correction': {
+    name: 'Identity Corrections',
+    nameHi: 'पहचान सुधार',
+    description: 'Name, contact, Aadhaar, bank account correction guides',
+    descriptionHi: 'नाम, संपर्क, बायोमेट्रिक, बैंक खाता सुधार गाइड',
+    icon: '✏️',
+    color: 'orange',
+  },
+  'mandi': {
+    name: 'Market Rates',
+    nameHi: 'बाजार दरें',
+    description: 'Daily vegetable and fruit market rates, wholesale prices',
+    descriptionHi: 'दैनिक सब्जी और फल बाजार दरें, थोक कीमतें',
+    icon: '📈',
+    color: 'yellow',
+  },
+} as const;
 
-// Key statistics — updated for 12 articles
-const STATS = {
-  registeredCultivators: '11 Cr+',
-  receivedTranche: '9.44 Cr+',
-  annualBenefit: '₹6,000',
-  perTranche: '₹2,000',
-  currentTranche: '24',
-  nextTranche: '25',
-  currentTrancheDate: 'October 2026',
-  nextTrancheDate: 'February 2027',
-  totalArticles: '12',
-};
+export type CategorySlug = keyof typeof CATEGORIES;
 
-// ✅ Featured articles — ONLY from remaining 12 articles
-const TOP_ARTICLES = [
+export interface ArticleMeta {
+  slug: string;
+  title: string;
+  desc: string;
+  ogTitle: string;
+  readonly keywords: readonly string[];
+  component: string;
+  category: CategorySlug;
+  publishedTime: string;
+  modifiedTime: string;
+  readingTime?: number;
+  states?: readonly string[];
+  districts?: readonly string[];
+  banks?: readonly string[];
+  schemes?: readonly string[];
+  ogImage?: string;
+  relatedSlugs?: readonly string[];
+}
+
+export const ARTICLES: readonly ArticleMeta[] = [
   {
-    slug: 'pm-kisan-complete-guide',
-    title: 'PM Kisan Complete Guide 2026',
-    emoji: '📖',
-    image: '/images/pm-kisan-complete-guide/hero.webp',
-    desc: 'Registration, eKYC, payment status, naam correction — sab ek jagah',
-    category: 'Guide',
+    slug: 'kisan-rin-kaha-se-le-2026',
+    title: 'Kisan Loan Kahan Se Milega 2026? KCC, Bank, CSC — Puri Jankari',
+    desc: 'Loan chahiye to confusion hota hai — SBI, cooperative, CSC, har jagah process alag. Is guide mein sab kuch hai.',
+    ogTitle: 'Kisan Loan Guide 2026 — Complete Jankari Hindi Mein',
+    keywords: ['kisan loan kahan se milega 2026', 'kisan credit card', 'kisan loan 2026', 'SBI kisan loan', 'CSC center loan', 'कृषि ऋण कहाँ से लें', 'किसान लोन 2026'],
+    component: 'KisanRinKahaSeLe2026',
+    category: 'loan',
+    publishedTime: '2026-01-10T08:00:00+05:30',
+    modifiedTime: '2026-07-04T08:00:00+05:30',
+    readingTime: 8,
+    banks: ['sbi', 'pnb', 'bob', 'cooperative'],
+    schemes: ['kcc'],
+    ogImage: '/images/kisan-rin-kaha-se-le-2026.webp',
+    relatedSlugs: ['kisan-credit-card-online-apply-2026', 'kisan-tractor-loan-2026'],
   },
   {
-    slug: 'soil-health-card-complete-guide-2026',
-    title: 'Soil Health Card Complete Guide 2026',
-    emoji: '🌱',
-    image: '/images/soil-health-card-complete-guide-2026/hero.webp',
-    desc: 'Mitti test karwao — CSC se form lo, sample do, 15 din mein report',
-    category: 'Farming',
+    slug: 'kisan-tractor-loan-2026',
+    title: 'Tractor Loan Bina Down Payment — Kya Yeh Sach Mein Mil Sakta Hai?',
+    desc: 'Bina down payment ke tractor loan? Mahindra Finance, TATA Capital, aur state banks mein scheme hai.',
+    ogTitle: 'Tractor Loan Bina Down Payment 2026 — Puri Jankari',
+    keywords: ['tractor loan 2026', 'tractor finance 2026', 'ट्रैक्टर लोन बिना डाउन पेमेंट', 'किसान ट्रैक्टर लोन 2026'],
+    component: 'KisanTractorLoan2026',
+    category: 'loan',
+    publishedTime: '2026-01-20T08:00:00+05:30',
+    modifiedTime: '2026-07-04T08:00:00+05:30',
+    readingTime: 10,
+    banks: ['mahindra-finance', 'tata-capital'],
+    schemes: ['nabard-tractor'],
+    ogImage: '/images/kisan-tractor-loan-2026/hero-banner.webp',
+    relatedSlugs: ['kisan-rin-kaha-se-le-2026', 'kisan-credit-card-online-apply-2026'],
+  },
+  {
+    slug: 'pm-kisan-beneficiary-list-2026',
+    title: 'PM Kisan Beneficiary List 2026 — Apna Naam Kaise Check Karein?',
+    desc: 'Beneficiary list mein naam hai ya nahi? Village-wise roster dekh sakte ho, PDF download kar sakte ho.',
+    ogTitle: 'PM Kisan Beneficiary List 2026 — Naam Check Karo',
+    keywords: ['pm kisan beneficiary list 2026', 'pm kisan village wise roster', 'पीएम किसान लाभार्थी सूची 2026'],
+    component: 'PmKisanBeneficiaryList2026',
+    category: 'status-check',
+    publishedTime: '2026-02-10T08:00:00+05:30',
+    modifiedTime: '2026-07-04T08:00:00+05:30',
+    readingTime: 7,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/pm-kisan-beneficiary-list-village-wise-2026.webp',
+    relatedSlugs: ['pm-kisan-beneficiary-list-village-wise-2026', 'pm-kisan-rejected-list-2026'],
+  },
+  {
+    slug: 'pm-kisan-beneficiary-list-village-wise-2026',
+    title: 'Apne Gaon Ki Beneficiary List Dekho — Village Wise Roster 2026',
+    desc: 'Apne gaon mein kaun-kaun PM Kisan ka paisa le raha hai — State, District, Block select karo.',
+    ogTitle: 'PM Kisan Gaon Wise Beneficiary List 2026 — Complete Guide',
+    keywords: ['pm kisan beneficiary list village wise', 'pm kisan gaon wise roster', 'पीएम किसान ग्राम वार लाभार्थी सूची'],
+    component: 'PmKisanBeneficiaryListVillageWise2026',
+    category: 'status-check',
+    publishedTime: '2026-02-15T08:00:00+05:30',
+    modifiedTime: '2026-07-04T08:00:00+05:30',
+    readingTime: 6,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/pm-kisan-beneficiary-list-village-wise-2026.webp',
+    relatedSlugs: ['pm-kisan-beneficiary-list-2026'],
+  },
+  {
+    slug: 'pm-kisan-correction-deactivate-block-guide-2026',
+    title: 'PM Kisan Account Block? Reactivate Kaise Karein?',
+    desc: 'Account block ho gaya to tension hoti hai. Common reason — naam Aadhaar se match nahi ho raha.',
+    ogTitle: 'PM Kisan Account Reactivate — Naam, Aadhaar, Bank Fix',
+    keywords: ['pm kisan correction 2026', 'pm kisan naam correction', 'account deactivate fix', 'पीएम किसान नाम करेक्शन 2026'],
+    component: 'PmKisanCorrectionDeactivateBlockGuide2026',
+    category: 'correction',
+    publishedTime: '2026-02-20T08:00:00+05:30',
+    modifiedTime: '2026-07-04T08:00:00+05:30',
+    readingTime: 9,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/pm-kisan-correction-deactivate-block-guide-2026.webp',
+    relatedSlugs: ['pm-kisan-name-correction-online-2026', 'pm-kisan-payment-failed-status-2026'],
+  },
+  {
+    slug: 'pm-kisan-ekyc-online-2026',
+    title: 'PM Kisan eKYC Online Kaise Kare? OTP Ya CSC — Dono Tarike',
+    desc: 'Ab ghar baithe OTP se eKYC ho jaata hai — 5 minute ka kaam hai. Phone se karo, simple hai.',
+    ogTitle: 'PM Kisan eKYC Online 2026 — Ghar Baithe Karo',
+    keywords: ['pm kisan ekyc online 2026', 'pm kisan biometric verification', 'पीएम किसान डिजिटल सत्यापन 2026'],
+    component: 'PmKisanEkycOnline2026',
+    category: 'ekyc',
+    publishedTime: '2026-03-01T08:00:00+05:30',
+    modifiedTime: '2026-07-04T08:00:00+05:30',
+    readingTime: 7,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/articles/pm-kisan-ekyc-online-2026/otp-vs-biometric.webp',
+    relatedSlugs: ['pm-kisan-23vi-kist-2026-status-check', 'pm-kisan-mobile-number-change'],
+  },
+  {
+    slug: 'pm-kisan-installment-history-check-online',
+    title: 'PM Kisan Purani Kiston Ka Hisaab — Transaction History Kaise Dekhein?',
+    desc: 'Pichli kistein kab aayi thi? Enrollment ID se history check karo — poori list aa jaati hai.',
+    ogTitle: 'PM Kisan Transaction History — Purani Kistein Dekho',
+    keywords: ['pm kisan transaction history', 'pm kisan payment history', 'पीएम किसान किस्त इतिहास ऑनलाइन'],
+    component: 'PmKisanInstallmentHistoryCheckOnline',
+    category: 'status-check',
+    publishedTime: '2026-03-05T08:00:00+05:30',
+    modifiedTime: '2026-07-04T08:00:00+05:30',
+    readingTime: 6,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/pm-kisan-installment-history-check-online.webp',
+    relatedSlugs: ['pm-kisan-23vi-kist-2026-status-check', 'pm-kisan-payment-failed-status-2026'],
+  },
+  {
+    slug: 'pm-kisan-land-seeding-status-check',
+    title: 'PM Kisan Land Seeding Pending? Kist Nahi Aayegi Agar...',
+    desc: 'Land Seeding No hai to kist ruk jaati hai. Patwari se milo, form bharo, 15 din mein sab theek.',
+    ogTitle: 'PM Kisan Land Seeding Fix — Pending, Rejected Solution',
+    keywords: ['pm kisan land seeding status', 'land seeding pending fix', 'पीएम किसान लैंड सीडिंग स्टेटस'],
+    component: 'PmKisanLandSeedingStatusCheck',
+    category: 'status-check',
+    publishedTime: '2026-03-10T08:00:00+05:30',
+    modifiedTime: '2026-07-04T08:00:00+05:30',
+    readingTime: 8,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/pm-kisan-land-seeding-status-check.webp',
+    relatedSlugs: ['pm-kisan-payment-failed-status-2026', 'pm-kisan-correction-deactivate-block-guide-2026'],
+  },
+  {
+    slug: 'pm-kisan-name-correction-online-2026',
+    title: 'Aadhaar Se Naam Match Nahi Ho Raha? PM Kisan Name Correction',
+    desc: 'Aadhaar mein naam alag, bank mein alag, portal mein alag — payment fail ho jaati hai.',
+    ogTitle: 'PM Kisan Name Correction — Aadhaar Match Karo',
+    keywords: ['pm kisan name correction', 'aadhaar name mismatch', 'पीएम किसान नाम सुधार 2026'],
+    component: 'PmKisanNameCorrectionOnline2026',
+    category: 'correction',
+    publishedTime: '2026-03-15T08:00:00+05:30',
+    modifiedTime: '2026-07-04T08:00:00+05:30',
+    readingTime: 7,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/pm-kisan-name-correction-online-2026.webp',
+    relatedSlugs: ['pm-kisan-correction-deactivate-block-guide-2026', 'pm-kisan-mobile-number-change'],
+  },
+  {
+    slug: 'pm-kisan-payment-failed-status-2026',
+    title: 'PM Kisan Paisa Nahi Aaya? Payment Failed — 5 Reasons Aur Fix',
+    desc: 'Status check kiya to "Payment Failed" dikh raha hai? 5 main reasons hote hain.',
+    ogTitle: 'PM Kisan Payment Failed — 5 Reasons Aur Fix',
+    keywords: ['pm kisan payment failed 2026', 'NPCI error fix', 'पीएम किसान पेमेंट फेल 2026'],
+    component: 'PmKisanPaymentFailedStatus2026',
+    category: 'payment',
+    publishedTime: '2026-03-20T08:00:00+05:30',
+    modifiedTime: '2026-07-04T08:00:00+05:30',
+    readingTime: 8,
+    schemes: ['pm-kisan'],
+    banks: ['sbi', 'pnb', 'bob'],
+    ogImage: '/images/pm-kisan-payment-failed-status-2026.webp',
+    relatedSlugs: ['pm-kisan-land-seeding-status-check', 'pm-kisan-name-correction-online-2026', 'pm-kisan-ekyc-online-2026'],
+  },
+  {
+    slug: 'pm-kisan-problems-solution-guide-2026',
+    title: 'PM Kisan 10 Badi Problems Aur Unka Seedha Hal',
+    desc: 'RFT Signed, PFMS Pending, Payment Fail — har problem ka solution hai.',
+    ogTitle: 'PM Kisan 10 Problems — Sab Fix Karo',
+    keywords: ['pm kisan problems solution', 'RFT signed meaning', 'PFMS pending fix', 'पीएम किसान समस्या समाधान 2026'],
+    component: 'PmKisanProblemsSolutionGuide2026',
+    category: 'payment',
+    publishedTime: '2026-03-25T08:00:00+05:30',
+    modifiedTime: '2026-07-04T08:00:00+05:30',
+    readingTime: 10,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/pm-kisan-problems-solution-guide-2026.webp',
+    relatedSlugs: ['pm-kisan-payment-failed-status-2026', 'pm-kisan-fto-generated-ka-matlab-kya-hai'],
+  },
+  {
+    slug: 'pm-kisan-registration-online-2026',
+    title: 'PM Kisan Naya Registration Kaise Karein? Online Apply Guide',
+    desc: 'PM Kisan mein naye ho? Online form bharo, documents upload karo, 15 minute mein ho jaata hai.',
+    ogTitle: 'PM Kisan New Registration 2026 — Step by Step',
+    keywords: ['pm kisan registration online 2026', 'new kisan enrollment', 'पीएम किसान रजिस्ट्रेशन ऑनलाइन 2026'],
+    component: 'PmKisanRegistrationOnline2026',
+    category: 'registration',
+    publishedTime: '2026-04-01T08:00:00+05:30',
+    modifiedTime: '2026-07-04T08:00:00+05:30',
+    readingTime: 9,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/pm-kisan-registration-online-2026.webp',
+    relatedSlugs: ['pm-kisan-ekyc-online-2026', 'pm-kisan-self-registered-status-check'],
+  },
+  {
+    slug: 'pm-kisan-rejected-list-2026',
+    title: 'PM Kisan Rejected List Mein Naam? Fix Kaise Karein?',
+    desc: 'Naam rejected list mein hai? Common reason — land records galat.',
+    ogTitle: 'PM Kisan Rejected List — Reason Aur Fix',
+    keywords: ['pm kisan rejected list 2026', 'rejection reason fix', 'पीएम किसान रिजेक्टेड लिस्ट 2026'],
+    component: 'PmKisanRejectedList2026',
+    category: 'payment',
+    publishedTime: '2026-04-10T08:00:00+05:30',
+    modifiedTime: '2026-07-04T08:00:00+05:30',
+    readingTime: 7,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/pm-kisan-rejected-list-2026.webp',
+    relatedSlugs: ['pm-kisan-beneficiary-list-2026', 'pm-kisan-correction-deactivate-block-guide-2026'],
+  },
+  {
+    slug: 'pmfby-crop-insurance-2026',
+    title: 'PMFBY Crop Insurance 2026 — Claim Kaise Karein? Complete Guide',
+    desc: 'Fasal kharab ho gayi? PMFBY claim kar sakte ho. 45 din lagte hain lekin paisa aa jaata hai.',
+    ogTitle: 'PMFBY Crop Insurance Claim — Complete Guide 2026',
+    keywords: ['pmfby crop insurance claim', 'fasal bima claim status', 'प्रधानमंत्री फसल बीमा योजना क्लेम'],
+    component: 'PmfbyCropInsurance2026',
+    category: 'farming',
+    publishedTime: '2026-04-20T08:00:00+05:30',
+    modifiedTime: '2026-07-04T08:00:00+05:30',
+    readingTime: 12,
+    schemes: ['pmfby'],
+    ogImage: '/images/pmfby-crop-insurance-2026/hero-image.webp',
+    relatedSlugs: ['soil-health-card-complete-guide-2026', 'nano-dap-500ml-price-in-india-2026'],
+  },
+  {
+    slug: 'pm-kisan-23vi-kist-2026-status-check',
+    title: 'PM Kisan 23vi Kist Status Check 2026 — Abhi Verify Karo',
+    desc: '23vi kist ka wait hai? Mobile se check karo — Aadhaar number dalo, OTP verify karo.',
+    ogTitle: 'PM Kisan 23vi Kist Status — Abhi Verify Karo',
+    keywords: ['pm kisan 23vi kist status 2026', 'pm kisan verification', 'पीएम किसान 23वीं किस्त स्टेटस 2026'],
+    component: 'PmKisan23viKistStatusCheck2026',
+    category: 'status-check',
+    publishedTime: '2026-04-01T00:00:00+05:30',
+    modifiedTime: '2026-07-04T08:00:00+05:30',
+    readingTime: 7,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/pm-kisan-23vi-kist-2026-status-check.webp',
+    relatedSlugs: ['pm-kisan-ekyc-online-2026', 'pm-kisan-payment-failed-status-2026', 'pm-kisan-24vi-kist'],
   },
   {
     slug: 'kisan-credit-card-online-apply-2026',
-    title: 'KCC Online Apply 2026 — ₹5 Lakh Loan',
-    emoji: '💳',
-    image: '/images/kisan-credit-card-online-apply-2026/hero-image.webp',
-    desc: '4% interest mein ₹5 lakh tak loan — step-by-step apply guide',
-    category: 'Loan',
-  },
-];
-
-// Category color mapping
-const CAT_COLORS: Record<string, string> = {
-  Guide: 'bg-rose-100 text-rose-700 dark:bg-rose-900/30 dark:text-rose-300',
-  Farming: 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300',
-  Loan: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300',
-  Status: 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300',
-};
-
-// Ticker items — updated for 24vi kist
-const TICKER_ITEMS = [
-  `⏳ ${STATS.currentTranche}वीं किस्त Expected: ${STATS.currentTrancheDate} — eKYC अभी complete करो`,
-  '🔐 eKYC अनिवार्य: बिना eKYC के किस्त NAHI मिलेगी — official portal पर करो',
-  '📞 Support Line: 155261 | Toll Free: 1800-115-526',
-  `✅ ${STATS.registeredCultivators} registered cultivators — ${STATS.receivedTranche} को किस्त मिल चुकी है`,
-];
-
-// FAQ section — updated answers
-const FAQS = [
-  {
-    q: 'PM Kisan की 24वीं किस्त कब आएगी?',
-    a: `24वीं किस्त ${STATS.currentTrancheDate} में आने की उम्मीद है। अगर eKYC complete है और bank account Aadhaar से linked है तो automatic credit होगी। Status pmkisan.gov.in पर check करें।`,
+    title: 'Kisan Credit Card Online Apply 2026 — ₹5 Lakh Loan, 4% Interest',
+    desc: 'KCC hai to ₹5 lakh tak loan mil sakta hai, interest rate sirf 4%.',
+    ogTitle: 'Kisan Credit Card Online Apply — ₹5 Lakh Loan 2026',
+    keywords: ['kisan credit card online apply 2026', 'KCC apply online', 'किसान क्रेडिट कार्ड ऑनलाइन अप्लाई 2026'],
+    component: 'KisanCreditCardOnlineApply2026',
+    category: 'loan',
+    publishedTime: '2026-06-01T08:00:00+05:30',
+    modifiedTime: '2026-07-04T08:00:00+05:30',
+    readingTime: 9,
+    banks: ['sbi', 'pnb', 'bob', 'cooperative'],
+    schemes: ['kcc'],
+    ogImage: '/images/kisan-credit-card-online-apply-2026/hero-image.webp',
+    relatedSlugs: ['kisan-rin-kaha-se-le-2026', 'kisan-tractor-loan-2026'],
   },
   {
-    q: 'eKYC नहीं हुई तो क्या पैसा आएगा?',
-    a: 'नहीं — बिना eKYC के कोई भी किस्त नहीं आती। eKYC free है: pmkisan.gov.in → eKYC → Aadhaar number → OTP verify। या नज़दीकी CSC center जाएं — बिल्कुल मुफ्त।',
+    slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai',
+    title: 'FTO Generated Ka Matlab Kya Hai? PM Kisan Status Explained',
+    desc: 'FTO Generated, FTO Pending — confused ho? FTO matlab Fund Transfer Order.',
+    ogTitle: 'FTO Generated Matlab — PM Kisan Status Guide',
+    keywords: ['FTO generated meaning', 'fund transfer order status', 'एफटीओ जेनरेटेड क्या होता है'],
+    component: 'PmKisanFtoGeneratedKaMatlabKyaHai',
+    category: 'status-check',
+    publishedTime: '2026-06-23T08:00:00+05:30',
+    modifiedTime: '2026-07-04T08:00:00+05:30',
+    readingTime: 6,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/pm-kisan-fto-generated-ka-matlab-kya-hai.webp',
+    relatedSlugs: ['pm-kisan-problems-solution-guide-2026', 'pm-kisan-payment-failed-status-2026'],
   },
   {
-    q: 'Status में "Land Seeding No" दिखाए तो क्या करें?',
-    a: 'इसका मतलब आपकी ज़मीन official portal से link नहीं हुई। Fix: पटवारी/लेखपाल से मिलें, Khasra-Khatauni अपडेट करवाएं, Block Agriculture Officer को application दें। 15-30 दिन में status verify करें।',
+    slug: 'nano-dap-500ml-price-in-india-2026',
+    title: 'Nano DAP 500ml Price India 2026 — IFFCO Rate Aur Kahan Milega',
+    desc: 'IFFCO Nano DAP 500ml bottle ₹280-320 ke beech hai.',
+    ogTitle: 'Nano DAP 500ml Price 2026 — Kahan Se Khariden?',
+    keywords: ['Nano DAP 500ml price India 2026', 'IFFCO Nano DAP price', 'नैनो डीएपी 500ml कीमत 2026'],
+    component: 'NanoDap500mlPriceInIndia2026',
+    category: 'farming',
+    publishedTime: '2026-06-24T08:00:00+05:30',
+    modifiedTime: '2026-07-04T08:00:00+05:30',
+    readingTime: 7,
+    schemes: ['nano-dap'],
+    ogImage: '/images/nano-dap-500ml-price-in-india-2026.webp',
+    relatedSlugs: ['soil-health-card-complete-guide-2026', 'pmfby-crop-insurance-2026'],
   },
-];
+  {
+    slug: 'pm-kisan-24vi-kist',
+    title: 'PM Kisan 24vi Kist Kab Aayegi? Date Aur Status Guide 2026',
+    desc: '23vi aa gayi, ab 24vi ka wait. October 2026 tak aane ki umeed.',
+    ogTitle: 'PM Kisan 24vi Kist — Kab Aayegi 2026?',
+    keywords: ['pm kisan 24vi kist 2026', 'next kist date 2026', 'पीएम किसान 24वीं किस्त 2026'],
+    component: 'PmKisan24viKist2026',
+    category: 'status-check',
+    publishedTime: '2026-06-24T08:00:00+05:30',
+    modifiedTime: '2026-07-04T08:00:00+05:30',
+    readingTime: 6,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/pm-kisan-24vi-kist-october-2026.webp',
+    relatedSlugs: ['pm-kisan-23vi-kist-2026-status-check', 'pm-kisan-ekyc-online-2026'],
+  },
+  {
+    slug: 'agristack-kya-hai',
+    title: 'AgriStack Kya Hai? Digital Kisan ID Aur PM Kisan Connection',
+    desc: 'AgriStack digital kisan ID hai. PM Kisan se connected hai.',
+    ogTitle: 'AgriStack Kya Hai — Digital Kisan ID Complete Guide',
+    keywords: ['AgriStack kya hai', 'AgriStack 2026', 'digital kisan ID AgriStack', 'एग्रीस्टैक क्या है'],
+    component: 'AgriStackKyaHai2026',
+    category: 'farming',
+    publishedTime: '2026-06-24T08:00:00+05:30',
+    modifiedTime: '2026-07-04T08:00:00+05:30',
+    readingTime: 10,
+    schemes: ['agristack', 'pm-kisan'],
+    ogImage: '/images/agristack-kya-hai/infographic.webp',
+    relatedSlugs: ['pm-kisan-registration-online-2026', 'pm-kisan-complete-guide'],
+  },
+  {
+    slug: 'pm-kisan-mobile-number-change',
+    title: 'PM Kisan Mobile Number Change — Online Ya CSC Se Update Karo',
+    desc: 'Purana number band? CSC jao, form bharo, 7 din mein naya number update.',
+    ogTitle: 'PM Kisan Mobile Number Change — Complete Guide',
+    keywords: ['pm kisan mobile number change 2026', 'mobile number update pm kisan', 'पीएम किसान मोबाइल नंबर बदलें 2026'],
+    component: 'PmKisanMobileNumberChange2026',
+    category: 'correction',
+    publishedTime: '2026-06-24T08:00:00+05:30',
+    modifiedTime: '2026-07-04T08:00:00+05:30',
+    readingTime: 6,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/pm-kisan-mobile-number-change-2026.webp',
+    relatedSlugs: ['pm-kisan-ekyc-online-2026', 'pm-kisan-name-correction-online-2026'],
+  },
+  {
+    slug: 'pm-kisan-complete-guide',
+    title: 'PM Kisan Complete Guide 2026 — Sab Problems Ka Ek Saath Hal',
+    desc: 'Status verify, eKYC, payment fail — sab ek jagah.',
+    ogTitle: 'PM Kisan Complete Guide — Sab Problems Fix',
+    keywords: ['pm kisan complete guide 2026', 'all problems solution', 'पीएम किसान पूर्ण गाइड'],
+    component: 'PmKisanCompleteGuide',
+    category: 'status-check',
+    publishedTime: '2026-06-27T08:00:00+05:30',
+    modifiedTime: '2026-07-04T08:00:00+05:30',
+    readingTime: 15,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/pm-kisan-complete-guide/hero.webp',
+    relatedSlugs: ['pm-kisan-23vi-kist-2026-status-check', 'pm-kisan-ekyc-online-2026', 'pm-kisan-payment-failed-status-2026'],
+  },
+  {
+    slug: 'soil-health-card-complete-guide-2026',
+    title: 'Soil Health Card 2026 — Mitti Test Karwane Ka Pura Process',
+    desc: 'Mitti test karwao — CSC se form lo, sample do, 15 din mein report.',
+    ogTitle: 'Soil Health Card Complete Guide 2026 — Sab Kuch Jaano',
+    keywords: ['soil health card complete guide 2026', 'soil health card download', 'मिट्टी स्वास्थ्य कार्ड 2026'],
+    component: 'SoilHealthCardCompleteGuide2026',
+    category: 'farming',
+    publishedTime: '2026-06-27T08:00:00+05:30',
+    modifiedTime: '2026-07-04T08:00:00+05:30',
+    readingTime: 8,
+    schemes: ['soil-health-card'],
+    ogImage: '/images/soil-health-card-complete-guide-2026/hero.webp',
+    relatedSlugs: ['nano-dap-500ml-price-in-india-2026', 'pmfby-crop-insurance-2026'],
+  },
+  {
+    slug: 'pm-kisan-self-registered-status-check',
+    title: 'PM Kisan Self-Registered Status Check — Khud Apply Kiya?',
+    desc: 'Khud se apply kiya lekin status nahi dikh raha? Portal par jao, enrollment ID dalo.',
+    ogTitle: 'PM Kisan Self-Registered Status — Verify Karo',
+    keywords: ['pm kisan self registered status check', 'self enrollment status', 'पीएम किसान सेल्फ रजिस्टर्ड स्टेटस'],
+    component: 'PmKisanSelfRegisteredStatusCheck',
+    category: 'status-check',
+    publishedTime: '2026-06-28T08:00:00+05:30',
+    modifiedTime: '2026-07-04T08:00:00+05:30',
+    readingTime: 7,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/pm-kisan-self-registered-status/pm-kisan-portal-homepage.webp',
+    relatedSlugs: ['pm-kisan-registration-online-2026', 'pm-kisan-23vi-kist-2026-status-check'],
+  },
+  {
+    slug: 'pm-kisan-status-check-online-2026-complete-guide',
+    title: 'PM Kisan Status Check Online 2026 — Real Guide With Screenshots',
+    desc: 'Aadhaar se karo, mobile se karo, enrollment ID se bhi kar sakte ho.',
+    ogTitle: 'PM Kisan Status Verification — Real Guide 2026',
+    keywords: ['pm kisan status check online 2026', 'online status check', 'पीएम किसान स्टेटस चेक'],
+    component: 'PmKisanStatusCheckOnline2026CompleteGuide',
+    category: 'status-check',
+    publishedTime: '2026-06-29T08:00:00+05:30',
+    modifiedTime: '2026-07-04T08:00:00+05:30',
+    readingTime: 10,
+    schemes: ['pm-kisan'],
+    ogImage: '/images/pm-kisan-status-check-online-2026-complete-guide.webp',
+    relatedSlugs: ['pm-kisan-23vi-kist-2026-status-check', 'pm-kisan-complete-guide'],
+  },
+  {
+    slug: 'mandi-bhav-today',
+    title: 'Aaj Ka Mandi Bhav — Sabzi Aur Fruit Rates (Daily Update)',
+    desc: 'Aloo ₹20-24, pyaaz ₹26-30, tamatar ₹38-45. Daily updated rates.',
+    ogTitle: 'Aaj Ka Mandi Bhav — Live Sabzi Aur Fruit Rates',
+    keywords: ['aaj ka mandi bhav', 'mandi bhav today hindi', 'aaj ke sabzi bhav'],
+    component: 'MandiBhavContent',
+    category: 'mandi',
+    publishedTime: '2026-06-30T09:30:00+05:30',
+    modifiedTime: '2026-07-04T08:00:00+05:30',
+    readingTime: 5,
+    ogImage: '/images/articles/mandi-bhav-today/mandi-fresh-vegetables-mixed.webp',
+  },
+] as const;
 
-// FAQ structured data for SEO
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: FAQS.map(f => ({
-    '@type': 'Question',
-    name: f.q,
-    acceptedAnswer: { '@type': 'Answer', text: f.a },
-  })),
-};
+export const ARTICLES_MAP: Readonly<Record<string, ArticleMeta>> = Object.freeze(
+  Object.fromEntries(ARTICLES.map((a) => [a.slug, a]))
+);
 
-// Article list structured data
-const articleListSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'ItemList',
-  name: 'PM Kisan Latest Guides 2026',
-  url: 'https://kisanstatus.com',
-  numberOfItems: TOP_ARTICLES.length,
-  itemListElement: TOP_ARTICLES.map((a, i) => ({
-    '@type': 'ListItem',
-    position: i + 1,
-    url: `https://kisanstatus.com/articles/${a.slug}`,
-    name: a.title,
-    description: a.desc,
-  })),
-};
+export function getArticleBySlug(slug: string): ArticleMeta | undefined {
+  return ARTICLES_MAP[slug];
+}
 
-// ✅ Article image component with fallback
-function ArticleImage({ src, alt, emoji }: { src: string; alt: string; emoji: string }) {
-  const [error, setError] = useState(false);
-  const [loaded, setLoaded] = useState(false);
+export function getArticlesByCategory(category: CategorySlug): readonly ArticleMeta[] {
+  return ARTICLES.filter((a) => a.category === category);
+}
 
-  return (
-    <div className="relative h-44 w-full overflow-hidden bg-gradient-to-br from-green-100 to-emerald-50 dark:from-green-900/30 dark:to-emerald-900/20 shrink-0">
-      {!error ? (
-        <>
-          {!loaded && <div className="absolute inset-0 bg-[var(--color-border)] animate-pulse z-10" />}
-          <Image
-            src={src}
-            alt={alt}
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            quality={75}
-            loading="lazy"
-            className={`object-cover group-hover:scale-105 transition-transform duration-500 ${loaded ? 'opacity-100' : 'opacity-0'}`}
-            onLoad={() => setLoaded(true)}
-            onError={() => setError(true)}
-          />
-        </>
-      ) : (
-        <div className="h-full w-full flex items-center justify-center bg-gradient-to-br from-green-50 to-emerald-100 dark:from-green-900/20 dark:to-emerald-900/10">
-          <span className="text-5xl" role="img" aria-label={alt}>{emoji}</span>
-        </div>
-      )}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-10 pointer-events-none" />
-      <span className="absolute top-3 left-3 bg-amber-400 text-gray-900 text-[10px] font-black px-2.5 py-1 rounded-full shadow-md z-20">NEW</span>
-      <span className="absolute bottom-3 left-3 text-2xl drop-shadow-lg z-20" role="img" aria-hidden="true">{emoji}</span>
-    </div>
+export function getLatestArticles(limit: number = 5): readonly ArticleMeta[] {
+  return [...ARTICLES]
+    .sort((a, b) => new Date(b.publishedTime).getTime() - new Date(a.publishedTime).getTime())
+    .slice(0, limit);
+}
+
+export function getArticlesByKeyword(keyword: string): readonly ArticleMeta[] {
+  const lower = keyword.toLowerCase();
+  return ARTICLES.filter(
+    (a) =>
+      a.keywords.some((k) => k.toLowerCase().includes(lower)) ||
+      a.title.toLowerCase().includes(lower) ||
+      a.desc.toLowerCase().includes(lower)
   );
 }
 
-// ✅ Hero background image with fallback — LCP optimization
-function HeroImage() {
-  const [error, setError] = useState(false);
+export function getCategoryInfo(category: CategorySlug) {
+  return CATEGORIES[category];
+}
 
-  if (error) {
-    return <div className="absolute inset-0 bg-gradient-to-br from-green-800 to-emerald-600 z-0" />;
+export function getAllCategories(): readonly CategorySlug[] {
+  return Object.keys(CATEGORIES) as CategorySlug[];
+}
+
+export function getArticleCount(): number {
+  return ARTICLES.length;
+}
+
+export function getArticlesByDateRange(startDate: string, endDate: string): readonly ArticleMeta[] {
+  const start = new Date(startDate).getTime();
+  const end = new Date(endDate).getTime();
+  return ARTICLES.filter((a) => {
+    const t = new Date(a.publishedTime).getTime();
+    return t >= start && t <= end;
+  });
+}
+
+export function getPrimaryKeywords(slug: string, limit: number = 3): readonly string[] {
+  return getArticleBySlug(slug)?.keywords.slice(0, limit) ?? [];
+}
+
+export function getHindiKeywords(slug: string): readonly string[] {
+  return getArticleBySlug(slug)?.keywords.filter((k) => /[\u0900-\u097F]/.test(k)) ?? [];
+}
+
+export function getEnglishKeywords(slug: string): readonly string[] {
+  return getArticleBySlug(slug)?.keywords.filter((k) => !/[\u0900-\u097F]/.test(k)) ?? [];
+}
+
+export function getRelatedArticles(slug: string, limit: number = 3): readonly ArticleMeta[] {
+  const current = getArticleBySlug(slug);
+  if (!current) return [];
+
+  if (current.relatedSlugs && current.relatedSlugs.length > 0) {
+    const explicit = current.relatedSlugs
+      .map((s) => ARTICLES_MAP[s])
+      .filter(Boolean) as ArticleMeta[];
+    if (explicit.length >= limit) return explicit.slice(0, limit);
+
+    const remaining = ARTICLES.filter(
+      (a) => a.slug !== slug && a.category === current.category && !current.relatedSlugs?.includes(a.slug)
+    );
+    return [...explicit, ...remaining].slice(0, limit);
   }
 
-  return (
-    <div className="absolute inset-0 z-0">
-      <Image
-        src="/hero-kisan-field.webp"
-        alt="PM Kisan beneficiaries in green field - Bharat ki kisan shakti"
-        fill
-        sizes="100vw"
-        priority={true}
-        fetchPriority="high"
-        quality={80}
-        className="object-cover opacity-20"
-        onError={() => setError(true)}
-      />
-    </div>
-  );
+  return ARTICLES.filter((a) => a.slug !== slug && a.category === current.category).slice(0, limit);
 }
 
-export default function HomeContent() {
-  return (
-    <div className="page-transition">
+export function getReadingTime(slug: string): string {
+  const mins = getArticleBySlug(slug)?.readingTime;
+  return mins ? `${mins} min read` : '5 min read';
+}
 
-      {/* ✅ Hero section FIRST — LCP element gets priority */}
-      <section
-        className="relative overflow-hidden bg-green-warm-gradient dark:from-green-950 dark:via-green-900 dark:to-emerald-950"
-        aria-label="Hero section - PM Kisan Verification"
-      >
-        <HeroImage />
-        <div className="absolute -top-24 -left-20 w-96 h-96 rounded-full bg-emerald-400/20 blur-[100px] pointer-events-none" aria-hidden="true" />
-        <div className="absolute top-1/3 -right-10 w-80 h-80 rounded-full bg-amber-400/15 blur-[100px] pointer-events-none" aria-hidden="true" />
+export function getArticlesByScheme(scheme: string): readonly ArticleMeta[] {
+  return ARTICLES.filter((a) => a.schemes?.includes(scheme));
+}
 
-        <div className="container-site relative z-10 max-w-3xl px-4 py-10 md:py-16">
-          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-green-100 text-xs font-bold px-4 py-2 rounded-full mb-4 uppercase tracking-wider backdrop-blur-sm">
-            🌾 India Ka #1 PM Kisan Information Portal
-          </div>
+export function getArticlesByBank(bank: string): readonly ArticleMeta[] {
+  return ARTICLES.filter((a) => a.banks?.includes(bank));
+}
 
-          <h1 className="font-black text-white leading-[1.15] mb-3 tracking-tight drop-shadow-lg">
-            <span className="text-3xl md:text-5xl block">PM Kisan Status Check —</span>
-            <span className="text-2xl md:text-4xl block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-yellow-100 via-amber-200 to-yellow-300">
-              {STATS.currentTranche}वीं किस्त {STATS.currentTrancheDate}
-            </span>
-          </h1>
+export function getArticlesByState(state: string): readonly ArticleMeta[] {
+  return ARTICLES.filter((a) => a.states?.includes(state));
+}
 
-          <h2 className="text-base md:text-lg text-green-50 mb-5 max-w-xl leading-relaxed font-normal drop-shadow-md">
-            Kisan bhai — <strong className="text-white">{STATS.currentTranche}वीं किस्त {STATS.currentTrancheDate} में आने वाली है!</strong> अपना status अभी verify करो, eKYC complete करो, पैसा आया या नहीं देखो। <span className="text-yellow-200 font-semibold">सब फ्री — 10 मिनट में।</span>
-          </h2>
+export function getAllSchemes(): readonly string[] {
+  const set = new Set<string>();
+  ARTICLES.forEach((a) => a.schemes?.forEach((s) => set.add(s)));
+  return Array.from(set).sort();
+}
 
-          <div className="flex flex-wrap gap-3">
-            <Link
-              href="/articles/pm-kisan-24vi-kist"
-              className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-black px-6 py-3.5 rounded-xl text-sm transition-all hover:scale-105 shadow-lg shadow-green-900/40 focus:ring-2 focus:ring-yellow-300 focus:outline-none"
-              aria-label={`${STATS.currentTranche}वीं किस्त status verify करें`}
-            >
-              📆 {STATS.currentTranche}वीं किस्त Status देखो
-            </Link>
-            <Link
-              href="/articles/pm-kisan-complete-guide"
-              className="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 border border-white/30 text-white font-bold px-6 py-3.5 rounded-xl text-sm transition-all hover:scale-105 backdrop-blur-sm focus:ring-2 focus:ring-white focus:outline-none"
-              aria-label="Complete guide padhein"
-            >
-              📖 Complete Guide — सब एक जगह
-            </Link>
-          </div>
+export function getAllBanks(): readonly string[] {
+  const set = new Set<string>();
+  ARTICLES.forEach((a) => a.banks?.forEach((b) => set.add(b)));
+  return Array.from(set).sort();
+}
 
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-6 text-[11px] text-green-100 drop-shadow-md">
-            {['✅ 100% Free', '🔒 कोई Data Store नहीं', '🏛️ Official Portal Verified', '📞 Support Line: 155261'].map(t => (
-              <span key={t}>{t}</span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ✅ Structured data scripts BELOW hero (non-render-blocking) */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleListSchema) }} />
-
-      {/* ✅ TICKER BELOW HERO — doesn't push LCP element */}
-      <div className="bg-red-600 text-white py-1.5 px-4" role="banner" aria-label="Latest updates">
-        <div className="container-site flex flex-wrap items-center justify-center gap-x-6 gap-y-1 text-[11px] font-medium">
-          {TICKER_ITEMS.slice(0, 3).map((item, i) => (
-            <span key={i} className="flex items-center gap-1">{item}</span>
-          ))}
-        </div>
-      </div>
-
-      {/* ✅ Common problems — ONLY links to existing 12 articles */}
-      <section className="py-12 bg-[var(--color-card)]" aria-labelledby="problems-heading">
-        <div className="container-site px-4">
-          <div className="text-center mb-8">
-            <span className="inline-block bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">🤔 आपकी Problem क्या है?</span>
-            <h2 id="problems-heading" className="text-2xl md:text-3xl font-black text-[var(--color-text)] mb-2">सीधा Solution — Click करो</h2>
-            <p className="text-[var(--color-text-muted)] text-sm max-w-lg mx-auto">सबसे common problems के step-by-step guides</p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto">
-            {[
-              { icon: '📊', title: 'Status Check', sub: 'किस्त आई या नहीं', href: '/articles/pm-kisan-24vi-kist', bg: 'bg-blue-50 dark:bg-blue-900/20', border: 'border-blue-200 dark:border-blue-800', tag: 'bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300' },
-              { icon: '📋', title: 'Beneficiary List', sub: 'नाम है या नहीं', href: '/articles/pm-kisan-beneficiary-list-2026', bg: 'bg-green-50 dark:bg-green-900/20', border: 'border-green-200 dark:border-green-800', tag: 'bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300' },
-              { icon: '💰', title: 'KCC Loan', sub: '4% ब्याज पर ₹5 लाख', href: '/articles/kisan-credit-card-online-apply-2026', bg: 'bg-amber-50 dark:bg-amber-900/20', border: 'border-amber-200 dark:border-amber-800', tag: 'bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300' },
-              { icon: '🌱', title: 'Soil Health Card', sub: 'मिट्टी टेस्ट फ्री', href: '/articles/soil-health-card-complete-guide-2026', bg: 'bg-purple-50 dark:bg-purple-900/20', border: 'border-purple-200 dark:border-purple-800', tag: 'bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300' },
-            ].map((c) => (
-              <Link
-                key={c.href}
-                href={c.href}
-                className={`${c.bg} ${c.border} border rounded-2xl p-4 flex flex-col gap-2 hover:shadow-lg hover:scale-[1.02] transition-all no-underline group h-full focus:ring-2 focus:ring-green-500 focus:outline-none`}
-                aria-label={`${c.title} - ${c.sub}`}
-              >
-                <div className="flex items-start justify-between">
-                  <span className="text-2xl" role="img" aria-hidden="true">{c.icon}</span>
-                  <span className={`text-[9px] font-black px-2 py-0.5 rounded-full ${c.tag}`}>Guide</span>
-                </div>
-                <h3 className="font-bold text-[var(--color-text)] text-sm leading-tight">{c.title}</h3>
-                <p className="text-[var(--color-text-muted)] text-xs leading-snug">{c.sub}</p>
-                <span className="text-xs font-bold text-[var(--color-text-muted)] group-hover:text-[var(--color-primary)] group-hover:translate-x-1 transition-all inline-flex items-center gap-1 mt-auto">पढ़ो →</span>
-              </Link>
-            ))}
-          </div>
-
-          <div className="text-center mt-6">
-            <Link href="/articles" className="text-sm font-bold text-[var(--color-primary)] hover:text-[var(--color-primary-dark)] hover:underline focus:ring-2 focus:ring-green-500 focus:outline-none rounded">
-              सारी Guides देखो →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Cultivators showcase — statistics */}
-      <section className="py-14 bg-gradient-to-b from-green-50 to-[var(--color-card)] dark:from-green-950/30 dark:to-[var(--color-card)]" aria-labelledby="cultivators-heading">
-        <div className="container-site px-4">
-          <div className="text-center mb-10">
-            <span className="inline-block bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">🌾 हमारे किसान</span>
-            <h2 id="cultivators-heading" className="text-2xl md:text-3xl font-black text-[var(--color-text)] mb-2">भारत की असली ताकत</h2>
-            <p className="text-[var(--color-text-muted)] text-sm max-w-xl mx-auto">11 करोड़+ किसानों को PM Kisan से मिल रहा है हर साल ₹6,000</p>
-          </div>
-
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl max-w-5xl mx-auto mb-10">
-            <Image
-              src="/indian-farmers-wheat-field.webp"
-              alt="Indian farmers in green wheat field - PM Kisan beneficiaries"
-              width={1200}
-              height={630}
-              quality={75}
-              loading="lazy"
-              sizes="(max-width: 768px) 100vw, 1200px"
-              className="w-full h-auto"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" aria-hidden="true" />
-            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
-              <div className="text-white">
-                <h3 className="text-2xl md:text-3xl font-black mb-2">PM Kisan Yojana</h3>
-                <p className="text-green-200 text-sm md:text-base">हर किसान को ₹2,000 हर 4 महीने में — सीधा bank account में</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            {[
-              { label: 'Registered किसान', value: '11 Cr+', icon: '👨‍🌾' },
-              { label: 'Payment पा चुके', value: '9.44 Cr+', icon: '💰' },
-              { label: 'सालाना', value: '₹6,000', icon: '📅' },
-              { label: 'हर किस्त', value: '₹2,000', icon: '💵' },
-            ].map((stat) => (
-              <div key={stat.label} className="bg-[var(--color-card)] rounded-2xl p-5 shadow-lg border-2 border-[var(--color-border)] text-center hover:shadow-xl transition-all">
-                <div className="text-3xl mb-2" role="img" aria-hidden="true">{stat.icon}</div>
-                <div className="text-2xl font-black text-[var(--color-primary)] mb-1">{stat.value}</div>
-                <div className="text-xs text-[var(--color-text-muted)] font-medium">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* How it works — 3 step process */}
-      <section className="py-14 bg-[var(--color-card)]" aria-labelledby="how-heading">
-        <div className="container-site px-4">
-          <div className="text-center mb-10">
-            <span className="inline-block bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">📋 प्रक्रिया</span>
-            <h2 id="how-heading" className="text-2xl md:text-3xl font-black text-[var(--color-text)] mb-2">PM Kisan — 3 कदमों में Complete</h2>
-            <p className="text-[var(--color-text-muted)] text-sm max-w-xl mx-auto">बस ये 3 काम करो, ₹2,000 हर 4 महीने में सीधा bank में</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-10">
-            {[
-              { step: '01', title: 'Registration करो', desc: 'pmkisan.gov.in पर जाके Aadhaar से register करो', icon: '📝', color: 'bg-blue-50 border-blue-200 dark:bg-blue-900/20 dark:border-blue-800' },
-              { step: '02', title: 'eKYC Complete करो', desc: 'OTP या biometric से eKYC करो — बिल्कुल फ्री', icon: '🔐', color: 'bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800' },
-              { step: '03', title: '₹2,000 पाओ', desc: 'हर 4 महीने में सीधा bank account में पैसा', icon: '💰', color: 'bg-amber-50 border-amber-200 dark:bg-amber-900/20 dark:border-amber-800' },
-            ].map((item) => (
-              <div key={item.step} className={`${item.color} border-2 rounded-2xl p-6 text-center hover:shadow-lg transition-all`}>
-                <span className="text-4xl mb-3 block" role="img" aria-hidden="true">{item.icon}</span>
-                <span className="inline-block bg-[var(--color-card)] text-[var(--color-text-muted)] text-xs font-black px-3 py-1 rounded-full mb-3">कदम {item.step}</span>
-                <h3 className="font-bold text-[var(--color-text)] text-lg mb-2">{item.title}</h3>
-                <p className="text-[var(--color-text-muted)] text-sm">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ✅ Latest articles — ONLY from remaining 12 articles */}
-      <section className="py-14 bg-gradient-to-b from-gray-50 to-[var(--color-card)] dark:from-gray-900/50 dark:to-[var(--color-card)]" aria-labelledby="latest-heading">
-        <div className="container-site px-4">
-          <div className="text-center mb-8">
-            <span className="inline-block bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">🆕 नई Guides</span>
-            <h2 id="latest-heading" className="text-2xl md:text-3xl font-black text-[var(--color-text)] mb-2">ताज़ा जानकारी हिंदी में</h2>
-            <p className="text-[var(--color-text-muted)] text-sm max-w-xl mx-auto">Practical step-by-step guides — government copy-paste नहीं</p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-4xl mx-auto">
-            {TOP_ARTICLES.map((a) => (
-              <Link
-                key={a.slug}
-                href={`/articles/${a.slug}`}
-                className="group bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 no-underline h-full flex flex-col focus:ring-2 focus:ring-green-500 focus:outline-none"
-                aria-label={`पढ़ो: ${a.title}`}
-              >
-                <ArticleImage src={a.image} alt={a.title} emoji={a.emoji} />
-                <div className="p-4 flex-col flex-1">
-                  <span className={`text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full self-start ${CAT_COLORS[a.category] ?? 'bg-gray-100 text-gray-600'}`}>{a.category}</span>
-                  <h3 className="font-bold text-[var(--color-text)] text-sm leading-snug mt-2 mb-1.5 group-hover:text-[var(--color-primary)] transition-colors">{a.title}</h3>
-                  <p className="text-[var(--color-text-muted)] text-xs leading-relaxed mb-3 line-clamp-2">{a.desc}</p>
-                  <div className="flex items-center justify-between pt-2 border-t border-[var(--color-border)] mt-auto">
-                    <span className="text-[11px] text-[var(--color-text-muted)]">✍️ KisanStatus Team</span>
-                    <span className="text-xs font-bold text-[var(--color-primary)] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">पढ़ो →</span>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-
-          <div className="text-center mt-10">
-            <Link
-              href="/articles"
-              className="inline-flex items-center gap-2 bg-[var(--color-primary)] hover:bg-[var(--color-primary-dark)] text-white font-black px-8 py-3.5 rounded-xl text-sm transition-all hover:scale-105 shadow-lg shadow-green-600/30 focus:ring-2 focus:ring-green-300 focus:outline-none"
-              aria-label={`सभी ${STATS.totalArticles} guides देखें`}
-            >
-              📚 सारी {STATS.totalArticles} Guides देखो
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Modern farming — technology section */}
-      <section className="py-14 bg-gradient-to-b from-amber-50 to-[var(--color-card)] dark:from-amber-950/20 dark:to-[var(--color-card)]" aria-labelledby="modern-heading">
-        <div className="container-site px-4">
-          <div className="text-center mb-10">
-            <span className="inline-block bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">🚜 Modern खेती</span>
-            <h2 id="modern-heading" className="text-2xl md:text-3xl font-black text-[var(--color-text)] mb-2">Technology + खेती</h2>
-            <p className="text-[var(--color-text-muted)] text-sm max-w-xl mx-auto">PM Kisan के साथ modern खेती से double आमदनी</p>
-          </div>
-
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl max-w-5xl mx-auto mb-10">
-            <Image
-              src="/modern-farming-technology-india.webp"
-              alt="Modern farming technology in India - Tractor, mobile app, digital agriculture for cultivators"
-              width={1200}
-              height={630}
-              quality={75}
-              loading="lazy"
-              sizes="(max-width: 768px) 100vw, 1200px"
-              className="w-full h-auto"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" aria-hidden="true" />
-            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-white">
-                {[
-                  { icon: '📱', title: 'Mobile से Apply', sub: 'घर बैठे registration' },
-                  { icon: '🌐', title: 'Online Status', sub: 'कभी भी verify करो' },
-                  { icon: '💳', title: 'सीधा Bank', sub: 'DBT से सीधा account' },
-                ].map((item) => (
-                  <div key={item.title} className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl">
-                    <div className="text-3xl mb-2" role="img" aria-hidden="true">{item.icon}</div>
-                    <div className="font-bold">{item.title}</div>
-                    <div className="text-xs opacity-90">{item.sub}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
-            {[
-              { icon: '🌱', title: 'Soil Health Card', desc: 'मिट्टी testing फ्री', color: 'bg-green-500' },
-              { icon: '💧', title: 'सिंचाई Support', desc: 'Water management', color: 'bg-blue-500' },
-              { icon: '🌾', title: 'फसल सुरक्षा', desc: 'PMFBY Insurance', color: 'bg-amber-500' },
-              { icon: '📊', title: 'Mandi Bhav', desc: 'मंडी भाव जानो', color: 'bg-purple-500' },
-            ].map((feature) => (
-              <div key={feature.title} className="bg-[var(--color-card)] rounded-2xl p-6 shadow-lg border-2 border-[var(--color-border)] hover:shadow-xl hover:-translate-y-1 transition-all">
-                <div className={`${feature.color} w-14 h-14 rounded-2xl flex items-center justify-center text-3xl mb-4`} role="img" aria-hidden="true">{feature.icon}</div>
-                <h3 className="font-bold text-[var(--color-text)] text-lg mb-2">{feature.title}</h3>
-                <p className="text-[var(--color-text-muted)] text-sm">{feature.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Legal disclaimer */}
-      <div className="container-site pb-10 px-4">
-        <p className="text-center text-amber-700 bg-amber-50 border border-amber-200 dark:text-amber-300 dark:bg-amber-900/20 dark:border-amber-800 rounded-xl px-4 py-3 text-xs max-w-2xl mx-auto" role="note">
-          ⚠️ <strong>Disclaimer:</strong> KisanStatus.com एक independent information portal है। यह Government of India या official portal का official platform नहीं है।
-        </p>
-      </div>
-
-      {/* FAQ section */}
-      <FAQSection faqs={FAQS} />
-    </div>
-  );
+export function getAllStates(): readonly string[] {
+  const set = new Set<string>();
+  ARTICLES.forEach((a) => a.states?.forEach((s) => set.add(s)));
+  return Array.from(set).sort();
 }
