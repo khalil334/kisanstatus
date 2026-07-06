@@ -132,7 +132,6 @@ export default function InstallmentTrackerCalcPage() {
       </div>
 
       <div className="container-site max-w-2xl py-8">
-        {/* Detailed intro - helpful content */}
         <div className="mb-6 p-5 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl text-sm text-[var(--color-text)] leading-relaxed">
           <p className="font-bold text-green-900 dark:text-green-300 mb-2">📆 Kist Kyun Nahi Aayi? Jaano Turant</p>
           <p className="mb-2">
@@ -151,7 +150,6 @@ export default function InstallmentTrackerCalcPage() {
           </p>
         </div>
 
-        {/* Main tool card */}
         <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6 shadow-sm">
           <h2 className="font-black text-[var(--color-text)] text-base mb-5 flex items-center gap-2">
             <span>🧮</span> 4 Sawaal Mein Pata Karo
@@ -232,7 +230,6 @@ export default function InstallmentTrackerCalcPage() {
             </div>
           </div>
 
-          {/* Results */}
           {!allAnswered ? (
             <div className="mt-6 p-5 bg-[var(--color-bg-alt)] border-2 border-[var(--color-border)] rounded-2xl text-center">
               <span className="text-3xl block mb-2">🤔</span>
@@ -307,7 +304,6 @@ export default function InstallmentTrackerCalcPage() {
           )}
         </div>
 
-        {/* Next kist info */}
         <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl flex items-center gap-3">
           <span className="text-2xl">⏳</span>
           <div>
@@ -318,7 +314,6 @@ export default function InstallmentTrackerCalcPage() {
           </div>
         </div>
 
-        {/* Common problems - helpful content */}
         <div className="mt-6 bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-5 shadow-sm">
           <h3 className="font-black text-[var(--color-text)] text-sm mb-4">⚠️ Kist Kyun Rukti Hai? Common Reasons</h3>
           <div className="space-y-3 text-sm">
@@ -341,7 +336,6 @@ export default function InstallmentTrackerCalcPage() {
           </div>
         </div>
 
-        {/* How to fix - helpful content */}
         <div className="mt-6 bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-5 shadow-sm">
           <h3 className="font-black text-[var(--color-text)] text-sm mb-4">🔧 Kist Ruki Hai To Kya Karein?</h3>
           <div className="space-y-3">
@@ -361,7 +355,6 @@ export default function InstallmentTrackerCalcPage() {
           </div>
         </div>
 
-        {/* Quick facts */}
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
           {[
             {
@@ -391,7 +384,6 @@ export default function InstallmentTrackerCalcPage() {
           ))}
         </div>
 
-        {/* FAQ section - helpful content */}
         <div className="mt-6 p-5 bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-xl">
           <p className="font-bold text-[var(--color-text)] text-sm mb-3">❓ Kist Ke Baare Mein Aksar Sawaal</p>
           <div className="space-y-3 text-xs">
@@ -418,7 +410,6 @@ export default function InstallmentTrackerCalcPage() {
           </div>
         </div>
 
-        {/* Related guides */}
         <div className="mt-6 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
           <p className="font-bold text-green-900 dark:text-green-300 text-sm mb-2">📖 Related Guides</p>
           <div className="flex flex-wrap gap-2">
@@ -440,7 +431,6 @@ export default function InstallmentTrackerCalcPage() {
           </div>
         </div>
 
-        {/* Disclaimer */}
         <div className="mt-6 p-3 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl text-xs text-amber-800 dark:text-amber-300">
           <strong>⚠️ Disclaimer:</strong> Yeh tracker aapke jawabon ke basis par common reasons batata hai. Final status official portal par hi check karo.
         </div>
