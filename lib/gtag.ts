@@ -1,10 +1,4 @@
-/**
- * Google Analytics 4 helper utilities — KisanStatus.com
- * Setup: .env.local mein NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX add karo
- */
-
 export type GA4Event = 
-  // Standard GA4 Events
   | 'page_view'
   | 'scroll'
   | 'click'
@@ -19,7 +13,7 @@ export type GA4Event =
   | 'generate_lead'
   | 'view_item'
   | 'select_item'
-  | 'select_language'  // ✅ YE ADD KIYA - missing tha
+  | 'select_language'
   | 'add_to_cart'
   | 'remove_from_cart'
   | 'begin_checkout'
@@ -27,8 +21,6 @@ export type GA4Event =
   | 'add_shipping_info'
   | 'exception'
   | 'screen_view'
-  
-  // Custom Events for KisanStatus
   | 'article_view'
   | 'cta_click'
   | 'external_link_click'
