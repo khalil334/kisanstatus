@@ -9,7 +9,7 @@ import { CATEGORIES } from '@/lib/articles-data';
 
 const NEW_ARTICLES_LIMIT = 3;
 
-function ArticleImage({ image, emoji, title }: { image: string; emoji: string; title: string }) {
+function ArticleImage({ image, emoji, title, priority = false }: { image: string; emoji: string; title: string; priority?: boolean }) {
   const [error, setError] = useState(false);
   const [loaded, setLoaded] = useState(false);
 
@@ -24,7 +24,8 @@ function ArticleImage({ image, emoji, title }: { image: string; emoji: string; t
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             quality={85}
-            loading="lazy"
+            loading={priority ? 'eager' : 'lazy'}
+            priority={priority}
             className={`object-cover group-hover:scale-105 transition-all duration-500 ${loaded ? 'opacity-100' : 'opacity-0'}`}
             onLoad={() => setLoaded(true)}
             onError={() => setError(true)}
@@ -41,7 +42,7 @@ function ArticleImage({ image, emoji, title }: { image: string; emoji: string; t
   );
 }
 
-function ArticleCard({ article, showNewBadge = false }: { article: ArticleMeta; showNewBadge?: boolean }) {
+function ArticleCard({ article, showNewBadge = false, priority = false }: { article: ArticleMeta; showNewBadge?: boolean; priority?: boolean }) {
   const categoryInfo = CATEGORIES[article.category] as { name: string; nameHi: string; icon: string } | undefined;
   const emoji = categoryInfo?.icon || '📄';
   const categoryName = categoryInfo?.nameHi || categoryInfo?.name || 'Article';
@@ -57,7 +58,7 @@ function ArticleCard({ article, showNewBadge = false }: { article: ArticleMeta; 
       aria-label={`Read: ${article.title}`}
     >
       <div className="relative">
-        <ArticleImage image={article.ogImage || ''} emoji={emoji} title={article.title} />
+        <ArticleImage image={article.ogImage || ''} emoji={emoji} title={article.title} priority={priority} />
         {showNewBadge && (
           <span className="absolute top-2 right-2 bg-green-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full shadow z-20">
             NEW
@@ -110,7 +111,6 @@ function ArticlesContent({ articles }: { articles: readonly ArticleMeta[] }) {
 
   return (
     <>
-      {/* Category Filter */}
       <div className="container-site mb-8">
         <div className="flex flex-wrap justify-center gap-2" role="navigation" aria-label="Article categories">
           <Link
@@ -146,7 +146,6 @@ function ArticlesContent({ articles }: { articles: readonly ArticleMeta[] }) {
         </div>
       </div>
 
-      {/* Empty State */}
       {latestArticles.length === 0 && remainingArticles.length === 0 && (
         <div className="container-site text-center py-12">
           <div className="text-6xl mb-4">🔍</div>
@@ -157,7 +156,6 @@ function ArticlesContent({ articles }: { articles: readonly ArticleMeta[] }) {
         </div>
       )}
 
-      {/* Latest Articles */}
       {latestArticles.length > 0 && (
         <section className="mb-12" aria-labelledby="new-heading">
           <div className="flex items-center gap-3 mb-5">
@@ -168,14 +166,13 @@ function ArticlesContent({ articles }: { articles: readonly ArticleMeta[] }) {
             </span>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {latestArticles.map(article => (
-              <ArticleCard key={article.slug} article={article} showNewBadge />
+            {latestArticles.map((article, index) => (
+              <ArticleCard key={article.slug} article={article} showNewBadge priority={index === 0} />
             ))}
           </div>
         </section>
       )}
 
-      {/* Remaining Articles */}
       {remainingArticles.length > 0 && (
         <section aria-labelledby="all-heading">
           <div className="flex items-center gap-3 mb-5">
@@ -221,7 +218,6 @@ function ArticlesLoading() {
 export default function ArticlesClient({ articles }: { articles: readonly ArticleMeta[] }) {
   return (
     <main className="min-h-screen bg-[var(--color-bg)]">
-      {/* Hero */}
       <section className="py-10 md:py-14 bg-[var(--color-primary)]" aria-labelledby="hero-heading">
         <div className="container-site text-center">
           <span className="inline-block bg-white/10 border border-white/20 text-green-300 text-xs font-bold px-4 py-2 rounded-full mb-4 uppercase tracking-wider">
@@ -249,7 +245,6 @@ export default function ArticlesClient({ articles }: { articles: readonly Articl
         </div>
       </section>
 
-      {/* Articles */}
       <div className="container-site py-10">
         <Suspense fallback={<ArticlesLoading />}>
           <ArticlesContent articles={articles} />
