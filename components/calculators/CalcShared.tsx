@@ -1,12 +1,7 @@
-/**
- * CalcShared.tsx — Reusable UI blocks for all financial utilities
- * Ek baar likho, sab calculator pages mein use karo. Consistency maintain hoti hai.
- */
 'use client';
 
 import Link from 'next/link';
 
-// Standard text/number input with optional suffix. Focus ring green rakhi hai theme ke hisaab se.
 export function InputField({ 
   label, 
   value, 
@@ -54,7 +49,6 @@ export function InputField({
   );
 }
 
-// Dropdown select. Options array pass karna padta hai.
 export function SelectField({ label, value, onChange, options, hint, id }: {
   label: string; value: string; onChange: (v: string) => void;
   options: { value: string; label: string }[]; hint?: string; id?: string;
@@ -77,12 +71,11 @@ export function SelectField({ label, value, onChange, options, hint, id }: {
   );
 }
 
-// Result display row with optional highlight and bold props
 export function ResultRow({ label, value, bold, highlight }: { 
   label: string; 
   value: string; 
   bold?: boolean;
-  highlight?: boolean;  // ✅ Added highlight prop
+  highlight?: boolean;
 }) {
   return (
     <div className={`flex justify-between items-center py-2.5 border-b border-gray-100 last:border-0 ${
@@ -94,22 +87,19 @@ export function ResultRow({ label, value, bold, highlight }: {
   );
 }
 
-// Indian currency formatter. en-IN locale use kiya hai taaki commas sahi aayein (₹1,00,000).
 export function fmt(n: number) {
   return '₹' + Math.round(n).toLocaleString('en-IN');
 }
 
-// Cross-linking data. Naye SEO titles use kiye hain jo actual pages ke match karte hain.
 export const OTHER_CALCS = [
-  { href: '/calculator/installment-tracker', emoji: '📆', name: 'Tranche Status Tracker', color: 'bg-teal-50 border-teal-200 text-teal-800' },
-  { href: '/calculator/pm-kisan-benefit', emoji: '🌾', name: 'Cultivator Benefit Estimator', color: 'bg-green-50 border-green-200 text-green-800' },
-  { href: '/calculator/kcc-loan-emi', emoji: '🏦', name: 'Credit Facility EMI', color: 'bg-blue-50 border-blue-200 text-blue-800' },
-  { href: '/calculator/pmfby-premium', emoji: '🛡️', name: 'Crop Protection Premium', color: 'bg-amber-50 border-amber-200 text-amber-800' },
-  { href: '/calculator/msp-income', emoji: '💹', name: 'Procurement Rate Income', color: 'bg-orange-50 border-orange-200 text-orange-800' },
-  { href: '/calculator/crop-profit', emoji: '📊', name: 'Yield Profit/Loss', color: 'bg-purple-50 border-purple-200 text-purple-800' },
+  { href: '/calculator/installment-tracker', emoji: '📆', name: 'Kist Status Tracker', color: 'bg-teal-50 border-teal-200 text-teal-800' },
+  { href: '/calculator/pm-kisan-benefit', emoji: '🌾', name: 'PM Kisan Benefit', color: 'bg-green-50 border-green-200 text-green-800' },
+  { href: '/calculator/kcc-loan-emi', emoji: '🏦', name: 'KCC Loan EMI', color: 'bg-blue-50 border-blue-200 text-blue-800' },
+  { href: '/calculator/pmfby-premium', emoji: '🛡️', name: 'Fasal Bima Premium', color: 'bg-amber-50 border-amber-200 text-amber-800' },
+  { href: '/calculator/msp-income', emoji: '💹', name: 'MSP Income', color: 'bg-orange-50 border-orange-200 text-orange-800' },
+  { href: '/calculator/crop-profit', emoji: '📊', name: 'Fasal Munafa', color: 'bg-purple-50 border-purple-200 text-purple-800' },
 ];
 
-// Related utilities grid. Current page ko filter out karta hai taaki self-linking na ho.
 export function OtherCalcs({ current }: { current: string }) {
   return (
     <div className="mt-8 p-5 bg-gray-50 border border-gray-200 rounded-2xl">
@@ -126,12 +116,11 @@ export function OtherCalcs({ current }: { current: string }) {
   );
 }
 
-// Page header with breadcrumb. Gradient background theme ke sath match karta hai.
 export function CalcHeader({ emoji, title, subtitle, breadcrumb }: {
   emoji: string; title: string; subtitle: string; breadcrumb: string;
 }) {
   return (
-    <div className="bg-primary-600 py-8">
+    <div className="bg-[var(--color-primary)] py-8">
       <div className="container-site max-w-2xl">
         <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
           <Link href="/" className="hover:text-white">Home</Link><span>/</span>
@@ -150,11 +139,10 @@ export function CalcHeader({ emoji, title, subtitle, breadcrumb }: {
   );
 }
 
-// Legal protection ke liye zaroori hai. Estimates aur actual figures mein farq ho sakta hai.
 export function CalcDisclaimer({ note }: { note: string }) {
   return (
     <div className="mt-6 p-4 bg-amber-50 border border-amber-200 rounded-xl text-xs text-amber-800 leading-relaxed">
-      <strong>📌 Note:</strong> {note} Yeh tool sirf estimate deta hai — actual figures ke liye apne bank, CSC center ya official portal se confirm karein.
+      <strong>📌 Note:</strong> {note} Yeh sirf estimate hai — actual amount ke liye apne bank ya pmkisan.gov.in se confirm karo.
     </div>
   );
 }
