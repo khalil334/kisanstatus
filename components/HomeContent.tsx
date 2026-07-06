@@ -55,10 +55,10 @@ function ArticleCard({ article, showNewBadge = false }: { article: typeof ARTICL
       aria-label={`Read: ${article.title}`}
     >
       <div className="relative">
-        <ArticleImage 
-          image={article.ogImage || ''} 
-          emoji={emoji} 
-          title={article.title} 
+        <ArticleImage
+          image={article.ogImage || ''}
+          emoji={emoji}
+          title={article.title}
         />
         {showNewBadge && (
           <span className="absolute top-3 right-3 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow z-20">
@@ -94,9 +94,21 @@ export default function HomeContent() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-green-50 to-white dark:from-gray-900 dark:to-gray-800">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-green-800 to-green-600 py-16 md:py-24">
-        <div 
-          className="absolute inset-0 bg-[url('/indian-farmers-wheat-field.webp')] bg-cover bg-center opacity-20"
+      <section className="relative bg-gradient-to-r from-green-800 to-green-600 py-16 md:py-24 overflow-hidden">
+        {/*
+          FIX #1: Replaced CSS background-image (bg-[url(...)]) with next/image + priority.
+          CSS backgrounds are NOT discovered/preloaded by the browser preload scanner,
+          which was delaying LCP. next/image with `priority` injects a <link rel="preload">
+          in <head>, so this loads immediately instead of after CSS parsing.
+        */}
+        <Image
+          src="/indian-farmers-wheat-field.webp"
+          alt=""
+          fill
+          priority
+          quality={60}
+          sizes="100vw"
+          className="object-cover opacity-20"
           aria-hidden="true"
         />
         <div className="container-site mx-auto px-4 relative z-10">
@@ -156,18 +168,14 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════════ */}
-      {/* CALCULATOR SECTION - NEW */}
-      {/* ═══════════════════════════════════════════════════════ */}
+      {/* CALCULATOR SECTION */}
       <section className="py-14 bg-gradient-to-br from-emerald-900 via-green-800 to-emerald-900 relative overflow-hidden">
-        {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_50%)]" />
           <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_50%,rgba(255,255,255,0.08),transparent_50%)]" />
         </div>
 
         <div className="container-site mx-auto px-4 relative z-10">
-          {/* Section Header */}
           <div className="text-center mb-10">
             <span className="inline-block bg-yellow-400/20 border border-yellow-400/40 text-yellow-300 text-xs font-bold px-4 py-1.5 rounded-full mb-4 uppercase tracking-wider">
               🧮 Free Tools
@@ -180,9 +188,7 @@ export default function HomeContent() {
             </p>
           </div>
 
-          {/* Calculator Cards Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto mb-10">
-            {/* PM Kisan Benefit */}
             <Link
               href="/calculator/pm-kisan-benefit"
               className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5 hover:bg-white/20 hover:border-yellow-400/50 hover:scale-[1.02] transition-all group"
@@ -198,7 +204,6 @@ export default function HomeContent() {
               </div>
             </Link>
 
-            {/* MSP Income */}
             <Link
               href="/calculator/msp-income"
               className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5 hover:bg-white/20 hover:border-yellow-400/50 hover:scale-[1.02] transition-all group"
@@ -214,7 +219,6 @@ export default function HomeContent() {
               </div>
             </Link>
 
-            {/* Crop Profit */}
             <Link
               href="/calculator/crop-profit"
               className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5 hover:bg-white/20 hover:border-yellow-400/50 hover:scale-[1.02] transition-all group"
@@ -230,7 +234,6 @@ export default function HomeContent() {
               </div>
             </Link>
 
-            {/* KCC Loan EMI */}
             <Link
               href="/calculator/kcc-loan-emi"
               className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5 hover:bg-white/20 hover:border-yellow-400/50 hover:scale-[1.02] transition-all group"
@@ -246,7 +249,6 @@ export default function HomeContent() {
               </div>
             </Link>
 
-            {/* Fertilizer Cost */}
             <Link
               href="/calculator/fertilizer-cost"
               className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5 hover:bg-white/20 hover:border-yellow-400/50 hover:scale-[1.02] transition-all group"
@@ -262,7 +264,6 @@ export default function HomeContent() {
               </div>
             </Link>
 
-            {/* Irrigation Cost */}
             <Link
               href="/calculator/irrigation-cost"
               className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5 hover:bg-white/20 hover:border-yellow-400/50 hover:scale-[1.02] transition-all group"
@@ -279,7 +280,6 @@ export default function HomeContent() {
             </Link>
           </div>
 
-          {/* CTA Button */}
           <div className="text-center">
             <Link
               href="/calculator"
@@ -302,12 +302,20 @@ export default function HomeContent() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-green-200 dark:border-green-800 group">
+              {/*
+                FIX #2: Same wheat-field image was being requested twice on this page
+                (once in the hero, once here). Swapped this one for the "modern farming"
+                image so only ONE unique heavy image competes for bandwidth with the
+                LCP image up top.
+              */}
               <Image
-                src="/indian-farmers-wheat-field.webp"
+                src="/modern-farming-technology-india.webp"
                 alt="Indian farmers working in wheat field - Bharat ki kheti"
                 width={600}
                 height={400}
                 loading="lazy"
+                quality={75}
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
@@ -324,6 +332,8 @@ export default function HomeContent() {
                 width={600}
                 height={400}
                 loading="lazy"
+                quality={75}
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
@@ -346,12 +356,12 @@ export default function HomeContent() {
               {latestArticles.length} latest
             </span>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {latestArticles.map((article, index) => (
-              <ArticleCard 
-                key={article.slug} 
-                article={article} 
+              <ArticleCard
+                key={article.slug}
+                article={article}
                 showNewBadge={index < TOP_ARTICLES_LIMIT}
               />
             ))}
