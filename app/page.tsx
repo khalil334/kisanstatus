@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   category: 'Agriculture',
 };
 
-export const revalidate = 86400;
+export const revalidate = 3600;
 
 function HomeLoading() {
   return (
@@ -95,7 +95,7 @@ export default function HomePage() {
     '@type': 'WebSite',
     name: SITE_NAME,
     url: SITE_URL,
-    description: 'PM Kisan verification, eKYC guide, beneficiary roster — India ka free agrarian welfare resource portal.',
+    description: 'PM Kisan Samman Nidhi verification, eKYC guide, beneficiary roster — India ka free PM Kisan resource portal.',
     inLanguage: 'hi-IN',
     potentialAction: {
       '@type': 'SearchAction',
@@ -121,7 +121,7 @@ export default function HomePage() {
       <link
         rel="preload"
         as="image"
-        href="/hero-kisan-field.webp"
+        href="/hero-banner.webp"
         type="image/webp"
         fetchPriority="high"
       />
