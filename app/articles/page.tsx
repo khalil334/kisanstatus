@@ -3,13 +3,25 @@ import { ARTICLES } from '@/lib/articles-data';
 import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL, DEFAULT_OG_IMAGE } from '@/lib/site-config';
 import ArticlesClient from './ArticlesClient';
 
-export const revalidate = 86400;
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: `PM Kisan Guides & Resources 2026 — ${ARTICLES.length}+ Verified Articles`,
   description: `${ARTICLES.length}+ verified PM Kisan resources — status check, eKYC, payment fix, enrollment, crop insurance, soil health card. Hinglish mein simple explanations.`,
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   alternates: { canonical: `${SITE_URL}/articles` },
+  keywords: [
+    'pm kisan guides',
+    'pm kisan resources 2026',
+    'pm kisan articles',
+    'kisan status check guide',
+    'pm kisan ekyc guide',
+    'pm kisan payment fix',
+    'pm kisan registration guide',
+    'pm kisan crop insurance',
+    'soil health card guide',
+    'kisan credit card guide',
+  ],
   openGraph: {
     title: `PM Kisan Guides 2026 — ${ARTICLES.length}+ Verified Resources`,
     description: 'Status check, eKYC, payment fix, enrollment, crop insurance, soil health card — sab ek jagah. Hinglish mein.',
@@ -37,6 +49,11 @@ export default function ArticlesPage() {
     url: `${SITE_URL}/articles`,
     inLanguage: 'hi-IN',
     isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: SITE_URL },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
     numberOfItems: ARTICLES.length,
     mainEntity: {
       '@type': 'ItemList',
