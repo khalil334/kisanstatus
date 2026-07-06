@@ -93,15 +93,11 @@ export default function HomeContent() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-green-50 to-white dark:from-gray-900 dark:to-gray-800">
+      {/* Hero Section - CSS background only, NO Next.js Image */}
       <section className="relative bg-gradient-to-r from-green-800 to-green-600 py-16 md:py-24">
-        <Image
-          src="/hero-banner.webp"
-          alt=""
-          fill
-          priority
-          quality={75}
-          className="object-cover opacity-20"
-          sizes="100vw"
+        <div 
+          className="absolute inset-0 bg-[url('/hero-banner.webp')] bg-cover bg-center opacity-20"
+          aria-hidden="true"
         />
         <div className="container-site mx-auto px-4 relative z-10">
           <div className="max-w-3xl">
@@ -132,6 +128,7 @@ export default function HomeContent() {
         </div>
       </section>
 
+      {/* Stats Section */}
       <section className="py-12 bg-white dark:bg-gray-800">
         <div className="container-site mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
@@ -159,6 +156,7 @@ export default function HomeContent() {
         </div>
       </section>
 
+      {/* Featured Images - Lazy loaded */}
       <section className="py-12 bg-gradient-to-b from-green-50 to-white dark:from-gray-900/50 dark:to-gray-800">
         <div className="container-site mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-black text-gray-900 dark:text-white mb-8 text-center">
@@ -200,6 +198,7 @@ export default function HomeContent() {
         </div>
       </section>
 
+      {/* Latest Articles */}
       <section className="py-12 bg-gray-50 dark:bg-gray-900/50">
         <div className="container-site mx-auto px-4">
           <div className="flex items-center gap-3 mb-8">
@@ -231,6 +230,7 @@ export default function HomeContent() {
         </div>
       </section>
 
+      {/* Quick Links */}
       <section className="py-12 bg-white dark:bg-gray-800">
         <div className="container-site mx-auto px-4">
           <h2 className="text-2xl font-black text-gray-900 dark:text-white mb-8 text-center">
@@ -241,7 +241,7 @@ export default function HomeContent() {
               href="/articles/PmKisan24viKist2026"
               className="bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-200 dark:border-blue-800 rounded-2xl p-6 text-center hover:shadow-lg hover:scale-105 transition-all"
             >
-              <div className="text-3xl mb-2">📊</div>
+              <div className="text-3xl mb-2"></div>
               <h3 className="font-bold text-gray-900 dark:text-white text-sm mb-1">Status Check</h3>
               <p className="text-xs text-gray-600 dark:text-gray-400">Kist aayi ya nahi</p>
             </Link>
@@ -249,7 +249,7 @@ export default function HomeContent() {
               href="/articles/KisanCreditCardOnlineApply2026"
               className="bg-green-50 dark:bg-green-900/20 border-2 border-green-200 dark:border-green-800 rounded-2xl p-6 text-center hover:shadow-lg hover:scale-105 transition-all"
             >
-              <div className="text-3xl mb-2">💳</div>
+              <div className="text-3xl mb-2"></div>
               <h3 className="font-bold text-gray-900 dark:text-white text-sm mb-1">KCC Apply</h3>
               <p className="text-xs text-gray-600 dark:text-gray-400">₹5 Lakh Loan</p>
             </Link>
@@ -257,7 +257,7 @@ export default function HomeContent() {
               href="/articles/PmKisanBeneficiaryList2026"
               className="bg-red-50 dark:bg-red-900/20 border-2 border-red-200 dark:border-red-800 rounded-2xl p-6 text-center hover:shadow-lg hover:scale-105 transition-all"
             >
-              <div className="text-3xl mb-2">📋</div>
+              <div className="text-3xl mb-2"></div>
               <h3 className="font-bold text-gray-900 dark:text-white text-sm mb-1">Beneficiary List</h3>
               <p className="text-xs text-gray-600 dark:text-gray-400">Naam check karo</p>
             </Link>
