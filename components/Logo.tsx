@@ -1,8 +1,7 @@
-/**
- * Logo.tsx — Site branding component with image fallback
- * Responsive sizes, light/dark variants, accessible markup
- */
+'use client';
+
 import Image from 'next/image';
+import { useState } from 'react';
 
 interface LogoProps {
   variant?: 'light' | 'dark';
@@ -10,13 +9,15 @@ interface LogoProps {
 }
 
 export default function Logo({ variant = 'light', size = 'md' }: LogoProps) {
+  const [imageError, setImageError] = useState(false);
+  
   const textColor = variant === 'light' ? 'text-white' : 'text-green-800';
   const subColor = variant === 'light' ? 'text-green-200' : 'text-green-600';
   
   const sizeClasses = {
-    sm: { container: 'gap-2', image: 'w-8 h-8', title: 'text-sm', subtitle: 'text-[9px]' },
-    md: { container: 'gap-2.5', image: 'w-10 h-10', title: 'text-base', subtitle: 'text-[10px]' },
-    lg: { container: 'gap-3', image: 'w-12 h-12', title: 'text-lg', subtitle: 'text-xs' },
+    sm: { container: 'gap-2', image: 'w-8 h-8', title: 'text-sm', subtitle: 'text-[9px]', imgSize: 32 },
+    md: { container: 'gap-2.5', image: 'w-10 h-10', title: 'text-base', subtitle: 'text-[10px]', imgSize: 40 },
+    lg: { container: 'gap-3', image: 'w-12 h-12', title: 'text-lg', subtitle: 'text-xs', imgSize: 48 },
   };
 
   const sizes = sizeClasses[size];
@@ -25,29 +26,23 @@ export default function Logo({ variant = 'light', size = 'md' }: LogoProps) {
     <div 
       className={`flex items-center ${sizes.container} no-underline group focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 rounded-lg`}
       aria-label="KisanStatus.com - Home"
-      role="banner"
     >
-      {/* Logo image with emoji fallback on error */}
       <div className="relative shrink-0 group-hover:scale-105 transition-transform duration-200">
-        <Image
-          src="/favicon-64x64.png"
-          alt="KisanStatus.com logo — wheat and leaf symbol representing Indian agriculture"
-          width={size === 'sm' ? 32 : size === 'lg' ? 48 : 40}
-          height={size === 'sm' ? 32 : size === 'lg' ? 48 : 40}
-          className={`${sizes.image} object-contain`}
-          priority
-          onError={(e) => {
-            const target = e.target as HTMLImageElement;
-            target.style.display = 'none';
-            const parent = target.parentElement;
-            if (parent) {
-              parent.innerHTML = '<span class="text-3xl">🌾</span>';
-            }
-          }}
-        />
+        {imageError ? (
+          <span className="text-3xl" role="img" aria-label="KisanStatus logo">🌾</span>
+        ) : (
+          <Image
+            src="/favicon-64x64.png"
+            alt="KisanStatus.com logo"
+            width={sizes.imgSize}
+            height={sizes.imgSize}
+            className={`${sizes.image} object-contain`}
+            onError={() => setImageError(true)}
+            sizes="48px"
+          />
+        )}
       </div>
       
-      {/* Brand text — tagline uses varied keyword */}
       <div className="flex flex-col">
         <p className={`font-black ${sizes.title} leading-none tracking-tight ${textColor}`}>
           KisanStatus<span className="text-green-400">.com</span>
