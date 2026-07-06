@@ -72,6 +72,23 @@ export default function QuickStatusChecker() {
           </div>
         </div>
 
+        {/* Detailed Intro - Helpful Content */}
+        <div className="mb-6 p-5 bg-white rounded-2xl border border-gray-200 shadow-sm">
+          <h2 className="font-black text-gray-900 text-base mb-3 flex items-center gap-2">
+            <span>📖</span> PM Kisan Status Check Kaise Karein?
+          </h2>
+          <p className="text-sm text-gray-700 leading-relaxed mb-3">
+            <strong>PM Kisan Samman Nidhi</strong> ka status check karna bahut aasan hai. Aap <strong>Aadhaar number</strong>, <strong>mobile number</strong>, ya <strong>registration number</strong> se apni kist ka status dekh sakte ho.
+          </p>
+          <p className="text-sm text-gray-700 leading-relaxed mb-3">
+            <strong>24vi kist October 2026</strong> mein aane wali hai — ₹2,000 seedha bank account mein. Agar aapne <strong>eKYC</strong> complete nahi kiya hai to pehle woh karo, warna kist ruk jayegi.
+          </p>
+          <div className="p-3 bg-green-50 border border-green-200 rounded-xl">
+            <p className="text-xs text-green-800 font-bold mb-1">💡 Quick Tip:</p>
+            <p className="text-xs text-green-700">Upar apna Aadhaar number daalo aur "Status Check Karo" button dabao. Aap seedha pmkisan.gov.in par pahunch jaoge — wahan apna real status dekh sakte ho.</p>
+          </div>
+        </div>
+
         {/* Main Tool Card */}
         <div className="bg-white/80 backdrop-blur-xl rounded-2xl shadow-xl shadow-gray-200/50 border border-white/60 p-6 md:p-8">
 
@@ -188,6 +205,49 @@ export default function QuickStatusChecker() {
           </div>
         </div>
 
+        {/* Step by Step Guide - Helpful Content */}
+        <div className="mt-6 bg-white rounded-2xl border border-gray-200 shadow-sm p-5">
+          <h3 className="font-black text-gray-900 text-sm mb-4">📋 PM Kisan Status Check Karne Ka Tarika</h3>
+          <div className="space-y-3">
+            {[
+              {n:1, s:'pmkisan.gov.in kholo (upar button se khul jayega)'},
+              {n:2, s:'"Farmers Corner" menu par click karo'},
+              {n:3, s:'"Beneficiary Status" chuniye'},
+              {n:4, s:'Aadhaar number ya mobile number ya bank account number daalo'},
+              {n:5, s:'"Get Data" button dabao'},
+              {n:6, s:'Saari kiston ka status dikh jayega — kab aayi, kitni aayi'},
+            ].map(({n, s}) => (
+              <div key={n} className="flex gap-3 items-start">
+                <span className="w-7 h-7 rounded-full bg-green-600 text-white text-xs font-black flex items-center justify-center shrink-0 mt-0.5">{n}</span>
+                <p className="text-sm text-gray-700">{s}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Common Problems - Helpful Content */}
+        <div className="mt-6 bg-white rounded-2xl border border-gray-200 shadow-sm p-5">
+          <h3 className="font-black text-gray-900 text-sm mb-4">⚠️ Status Check Mein Common Problems</h3>
+          <div className="space-y-3 text-sm">
+            <div className="p-3 bg-red-50 border border-red-200 rounded-xl">
+              <p className="font-bold text-red-900 text-xs mb-1">❌ "No Records Found" aata hai</p>
+              <p className="text-xs text-red-800">Matlab aapka naam beneficiary list mein nahi hai. Pehle registration karo ya patwari se land records update karwao.</p>
+            </div>
+            <div className="p-3 bg-orange-50 border border-orange-200 rounded-xl">
+              <p className="font-bold text-orange-900 text-xs mb-1">⏳ "FTO Generated" dikh raha hai par paisa nahi aaya</p>
+              <p className="text-xs text-orange-800">Bank tak pahunchne mein 7-10 din lagte hain. Agar 15 din ho gaye to bank jao ya helpline 155261 par call karo.</p>
+            </div>
+            <div className="p-3 bg-yellow-50 border border-yellow-200 rounded-xl">
+              <p className="font-bold text-yellow-900 text-xs mb-1">🔒 "eKYC Pending" dikh raha hai</p>
+              <p className="text-xs text-yellow-800">eKYC karo turant! CSC center jao ya online Aadhaar OTP se karo. Bina eKYC ke kist nahi aayegi.</p>
+            </div>
+            <div className="p-3 bg-blue-50 border border-blue-200 rounded-xl">
+              <p className="font-bold text-blue-900 text-xs mb-1">🏦 "Bank Account Not Seeded" error</p>
+              <p className="text-xs text-blue-800">Apna bank account PM Kisan se link karo. Bank jao, Aadhaar link karwao, phir PM Kisan portal par update karo.</p>
+            </div>
+          </div>
+        </div>
+
         {/* Related Guides */}
         <div className="mt-6 bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
           <div className="flex items-center justify-between mb-3">
@@ -223,9 +283,36 @@ export default function QuickStatusChecker() {
           </div>
         </div>
 
+        {/* FAQ Section - Helpful Content */}
+        <div className="mt-6 bg-white rounded-2xl border border-gray-200 shadow-sm p-5">
+          <h3 className="font-black text-gray-900 text-sm mb-4">❓ PM Kisan Status Ke Baare Mein Sawaal</h3>
+          <div className="space-y-3 text-xs">
+            <details className="bg-gray-50 border border-gray-200 rounded-lg p-3">
+              <summary className="font-bold text-gray-900 cursor-pointer">PM Kisan status kaise check karein?</summary>
+              <p className="mt-2 text-gray-700">pmkisan.gov.in par jao → "Farmers Corner" → "Beneficiary Status" → Aadhaar ya mobile number daalo → "Get Data" dabao. Saari kiston ka status dikh jayega.</p>
+            </details>
+            <details className="bg-gray-50 border border-gray-200 rounded-lg p-3">
+              <summary className="font-bold text-gray-900 cursor-pointer">24vi kist kab aayegi?</summary>
+              <p className="mt-2 text-gray-700">24vi kist October 2026 mein aane wali hai — ₹2,000 seedha bank account mein. Pehle eKYC complete karo, warna kist ruk jayegi.</p>
+            </details>
+            <details className="bg-gray-50 border border-gray-200 rounded-lg p-3">
+              <summary className="font-bold text-gray-900 cursor-pointer">Status mein "FTO Generated" ka matlab kya hai?</summary>
+              <p className="mt-2 text-gray-700">FTO (Fund Transfer Order) generate ho gaya hai — matlab government ne paisa bhej diya hai. 7-10 din mein bank account mein aa jayega. Agar 15 din ho gaye to bank jao.</p>
+            </details>
+            <details className="bg-gray-50 border border-gray-200 rounded-lg p-3">
+              <summary className="font-bold text-gray-900 cursor-pointer">Kist kyun ruki hai?</summary>
+              <p className="mt-2 text-gray-700">3 reasons hote hain: 1) eKYC nahi hua, 2) Bank account link nahi hai, 3) Land records galat hain. Pehle status check karo — wahan reason dikhega. Fix karo, kist wapas mil jayegi.</p>
+            </details>
+            <details className="bg-gray-50 border border-gray-200 rounded-lg p-3">
+              <summary className="font-bold text-gray-900 cursor-pointer">PM Kisan helpline number kya hai?</summary>
+              <p className="mt-2 text-gray-700">155261 (toll-free) — Mon-Sat 9:30 AM se 6:00 PM. Email: pmkisan-ict@gov.in. Kisi bhi problem ke liye call karo.</p>
+            </details>
+          </div>
+        </div>
+
         {/* Disclaimer */}
         <div className="mt-5 p-3 bg-amber-50/80 border border-amber-200/60 rounded-xl text-[11px] text-amber-800 text-center leading-relaxed">
-          ⚠️ Yeh tool aapko seedha <strong>pmkisan.gov.in</strong> par le jayega. Real status sirf official website par hi dikhega.
+          ⚠️ Yeh tool aapko seedha <strong>pmkisan.gov.in</strong> par le jayega. Real status sirf official website par hi dikhega. KisanStatus.com ek independent portal hai — government se affiliated nahi hai.
         </div>
       </div>
     </div>
