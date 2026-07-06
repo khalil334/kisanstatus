@@ -1,20 +1,3 @@
-/**
- * translations.ts — Multi-language support for KisanStatus.com
- * ✅ PRODUCTION READY v2.0
- * ✅ TYPE SAFE
- * ✅ 8 LANGUAGES SUPPORTED
- * ✅ SEO OPTIMIZED
- * ✅ ACCESSIBILITY ENHANCED
- *
- * Languages: Hindi (hi), English (en), Bengali (bn), Tamil (ta),
- *            Telugu (te), Marathi (mr), Punjabi (pa), Gujarati (gu)
- *
- * @author KisanStatus Team
- * @version 2.0.0
- */
-
-// ── Types ─────────────────────────────────────────────────────────────────────
-
 export type LangCode = 'hi' | 'en' | 'bn' | 'ta' | 'te' | 'mr' | 'pa' | 'gu';
 
 export interface LangMeta {
@@ -108,8 +91,6 @@ export interface Translations {
   seo_description: string;
 }
 
-// ── Language Metadata ─────────────────────────────────────────────────────────
-
 export const LANGUAGES: LangMeta[] = [
   { code: 'hi', label: 'हिंदी',      labelEn: 'Hindi',    flag: '🇮🇳', dir: 'ltr', enabled: true },
   { code: 'en', label: 'English',    labelEn: 'English',  flag: '🇬🇧', dir: 'ltr', enabled: true },
@@ -120,8 +101,6 @@ export const LANGUAGES: LangMeta[] = [
   { code: 'pa', label: 'ਪੰਜਾਬੀ',   labelEn: 'Punjabi',  flag: '🌾', dir: 'ltr', enabled: true },
   { code: 'gu', label: 'ગુજરાતી',   labelEn: 'Gujarati', flag: '🦁', dir: 'ltr', enabled: true },
 ];
-
-// ── Translations ──────────────────────────────────────────────────────────────
 
 const t: Record<LangCode, Translations> = {
   hi: {
