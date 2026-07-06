@@ -93,9 +93,9 @@ export default function HomeContent() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-green-50 to-white dark:from-gray-900 dark:to-gray-800">
-      {/* Hero Section - UPDATED */}
+      {/* Hero Section - FIXED */}
       <section className="relative bg-gradient-to-r from-green-800 to-green-600 py-16 md:py-24">
-        <div className="absolute inset-0 bg-[url('/hero-kisan-field.webp')] bg-cover bg-center opacity-20" />
+        <div className="absolute inset-0 bg-[url('/hero-banner.webp')] bg-cover bg-center opacity-20" />
         <div className="container-site mx-auto px-4 relative z-10">
           <div className="max-w-3xl">
             <span className="inline-block bg-white/20 border border-white/30 text-green-100 text-xs font-bold px-4 py-2 rounded-full mb-4 uppercase tracking-wider backdrop-blur-sm">
@@ -130,7 +130,7 @@ export default function HomeContent() {
         <div className="container-site mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             <div className="bg-green-50 dark:bg-green-900/20 rounded-2xl p-6 text-center border-2 border-green-200 dark:border-green-800">
-              <div className="text-3xl mb-2">👨‍🌾</div>
+              <div className="text-3xl mb-2">👨‍</div>
               <div className="text-2xl md:text-3xl font-black text-green-700 dark:text-green-400 mb-1">11 Cr+</div>
               <div className="text-xs text-gray-600 dark:text-gray-400 font-medium">Registered Kisan</div>
             </div>
