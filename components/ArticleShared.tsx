@@ -1,15 +1,8 @@
 'use client';
-/**
- * ArticleShared.tsx — Reusable components for article pages
- * Data-driven, scheme-agnostic, programmatic SEO ready
- */
-import Link from 'next/link';
-import React from 'react';
-import { SITE_URL, AUTHOR_NAME, AUTHOR_BIO, DISCLAIMER_TEXT, HELPLINE } from '@/lib/site-config';
 
-// ═══════════════════════════════════════════════════════════
-// DATE FORMATTER — FIXED: hi-IN locale for Hindi dates
-// ═══════════════════════════════════════════════════════════
+import Link from 'next/link';
+import React, { memo, useMemo } from 'react';
+import { SITE_URL, AUTHOR_NAME, AUTHOR_BIO, DISCLAIMER_TEXT, HELPLINE } from '@/lib/site-config';
 
 export function fmtDate(iso: string) {
   return new Date(iso).toLocaleDateString('hi-IN', {
@@ -19,11 +12,7 @@ export function fmtDate(iso: string) {
   });
 }
 
-// ═══════════════════════════════════════════════════════════
-// STEP LIST COMPONENTS
-// ═══════════════════════════════════════════════════════════
-
-export function SI({ n, children }: { n: number; children: React.ReactNode }) {
+export const SI = memo(function SI({ n, children }: { n: number; children: React.ReactNode }) {
   return (
     <li className="flex gap-3 items-stretch list-none mb-2">
       <div className="flex flex-col items-center shrink-0 w-9">
@@ -37,57 +26,45 @@ export function SI({ n, children }: { n: number; children: React.ReactNode }) {
       </div>
     </li>
   );
-}
+});
 
 export function StepList({ children }: { children: React.ReactNode }) {
   return <ol className="space-y-0 my-4">{children}</ol>;
 }
 
-// ═══════════════════════════════════════════════════════════
-// INFO BOXES
-// ═══════════════════════════════════════════════════════════
-
-export function IB({ children }: { children: React.ReactNode }) {
+export const IB = memo(function IB({ children }: { children: React.ReactNode }) {
   return (
     <div className="my-4 p-4 bg-green-50 dark:bg-green-900/20 border-l-4 border-green-600 dark:border-green-500 rounded-r-xl text-sm text-[var(--color-text)] leading-relaxed">
       {children}
     </div>
   );
-}
+});
 
-export function WB({ children }: { children: React.ReactNode }) {
+export const WB = memo(function WB({ children }: { children: React.ReactNode }) {
   return (
     <div className="my-4 p-4 bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 rounded-r-xl text-sm text-[var(--color-text)] leading-relaxed">
       {children}
     </div>
   );
-}
+});
 
-export function DB({ children }: { children: React.ReactNode }) {
+export const DB = memo(function DB({ children }: { children: React.ReactNode }) {
   return (
     <div className="my-4 p-4 bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 rounded-r-xl text-sm text-[var(--color-text)] leading-relaxed">
       {children}
     </div>
   );
-}
+});
 
-// ═══════════════════════════════════════════════════════════
-// SECTION HEADING
-// ═══════════════════════════════════════════════════════════
-
-export function SH({ children }: { children: React.ReactNode }) {
+export const SH = memo(function SH({ children }: { children: React.ReactNode }) {
   return (
     <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)] flex items-center gap-2">
       {children}
     </h2>
   );
-}
+});
 
-// ═══════════════════════════════════════════════════════════
-// GOV LINK — Scheme-agnostic, portal URL from props
-// ═══════════════════════════════════════════════════════════
-
-export function GovLink({
+export const GovLink = memo(function GovLink({
   href,
   label,
   guide,
@@ -135,13 +112,9 @@ export function GovLink({
       </div>
     </div>
   );
-}
+});
 
-// ═══════════════════════════════════════════════════════════
-// RELATED ARTICLES — Data-driven internal linking
-// ═══════════════════════════════════════════════════════════
-
-export function RelatedArticles({
+export const RelatedArticles = memo(function RelatedArticles({
   articles,
 }: {
   articles: { slug: string; title: string; emoji?: string }[];
@@ -173,13 +146,11 @@ export function RelatedArticles({
       </div>
     </div>
   );
-}
+});
 
-// ═══════════════════════════════════════════════════════════
-// AUTHOR BOX — Centralized bio from site-config
-// ═══════════════════════════════════════════════════════════
+export const AuthorBox = memo(function AuthorBox({ modified }: { modified: string }) {
+  const formattedDate = useMemo(() => fmtDate(modified), [modified]);
 
-export function AuthorBox({ modified }: { modified: string }) {
   return (
     <div className="flex items-start gap-4 p-5 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/10 border border-[var(--color-border)] rounded-2xl my-8">
       <div className="w-14 h-14 rounded-full bg-[var(--color-primary)] flex items-center justify-center text-2xl shrink-0 shadow-md">
@@ -197,16 +168,12 @@ export function AuthorBox({ modified }: { modified: string }) {
         </p>
         <p className="text-xs text-[var(--color-text-muted)] mt-1">{AUTHOR_BIO}</p>
         <p className="text-xs text-[var(--color-text-muted)] mt-1">
-          🔄 Last Updated: {fmtDate(modified)}
+          🔄 Last Updated: {formattedDate}
         </p>
       </div>
     </div>
   );
-}
-
-// ═══════════════════════════════════════════════════════════
-// BOTTOM NAV — Context-aware quick links
-// ═══════════════════════════════════════════════════════════
+});
 
 const DEFAULT_NAV_LINKS = [
   { href: '/', l: '🏠 Home' },
@@ -214,12 +181,12 @@ const DEFAULT_NAV_LINKS = [
   { href: '/about', l: '👤 About' },
 ];
 
-export function BottomNav({
+export const BottomNav = memo(function BottomNav({
   extraLinks = [],
 }: {
   extraLinks?: { href: string; l: string }[];
 }) {
-  const links = [...DEFAULT_NAV_LINKS, ...extraLinks];
+  const links = useMemo(() => [...DEFAULT_NAV_LINKS, ...extraLinks], [extraLinks]);
 
   return (
     <div className="pt-6 border-t border-[var(--color-border)] mt-8">
@@ -239,25 +206,17 @@ export function BottomNav({
       </div>
     </div>
   );
-}
+});
 
-// ═══════════════════════════════════════════════════════════
-// DISCLAIMER — Centralized legal text from site-config
-// ═══════════════════════════════════════════════════════════
-
-export function Disclaimer() {
+export const Disclaimer = memo(function Disclaimer() {
   return (
     <div className="mt-6 p-4 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-xl text-xs text-[var(--color-text-muted)] leading-relaxed">
       <strong>⚠️ Disclaimer:</strong> {DISCLAIMER_TEXT}
     </div>
   );
-}
+});
 
-// ═══════════════════════════════════════════════════════════
-// CALC BANNER — Dynamic content via props
-// ═══════════════════════════════════════════════════════════
-
-export function CalcBanner({
+export const CalcBanner = memo(function CalcBanner({
   title = 'Kist Ruki Hai? Pata Karo Kyun',
   desc = 'eKYC, bank seeding, land seeding check karo — 4 sawaal mein exact reason.',
   primaryCta = { href: '/calculator/installment-tracker', label: '📆 Kist Tracker Kholo →' },
@@ -291,22 +250,16 @@ export function CalcBanner({
       </div>
     </div>
   );
-}
+});
 
-// ═══════════════════════════════════════════════════════════
-// FAQ BLOCK — Data-driven with auto schema generation
-// ═══════════════════════════════════════════════════════════
-
-export function FAQBlock({
+export const FAQBlock = memo(function FAQBlock({
   faqs,
   caption,
 }: {
   faqs: { q: string; a: string }[];
   caption?: string;
 }) {
-  if (faqs.length === 0) return null;
-
-  const faqSchema = {
+  const faqSchema = useMemo(() => ({
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: faqs.map((f) => ({
@@ -314,7 +267,9 @@ export function FAQBlock({
       name: f.q,
       acceptedAnswer: { '@type': 'Answer', text: f.a },
     })),
-  };
+  }), [faqs]);
+
+  if (faqs.length === 0) return null;
 
   return (
     <section className="mb-8">
@@ -345,4 +300,4 @@ export function FAQBlock({
       </div>
     </section>
   );
-}
+});
