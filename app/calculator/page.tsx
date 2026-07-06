@@ -2,10 +2,23 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '@/lib/site-config';
 
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   title: `Free PM Kisan Tools 2026 — Status Check, EMI, Insurance & Profit Calculator | ${SITE_NAME}`,
   description: '7 free kisan utilities — status verification, KCC loan EMI, crop insurance premium, MSP income aur profit/loss analysis. No registration, no charge.',
   alternates: { canonical: `${SITE_URL}/calculator` },
+  keywords: [
+    'pm kisan calculator',
+    'kcc loan emi calculator',
+    'crop insurance premium calculator',
+    'msp income calculator',
+    'crop profit calculator',
+    'pm kisan status check tool',
+    'kisan credit card emi',
+    'pmfby premium calculator',
+    'free kisan tools',
+  ],
   openGraph: {
     type: 'website',
     url: `${SITE_URL}/calculator`,
@@ -31,7 +44,7 @@ const CALCS = [
     emoji: '🔍',
     title: 'Quick Status Verification',
     hindi: 'क्विक स्टेटस वेरिफिकेशन',
-    desc: 'Aadhaar ya mobile number daalo aur seedha official portal par apna 23vi tranche status verify karo. Instant & Free.',
+    desc: 'Aadhaar ya mobile number daalo aur seedha official portal par apna 24vi tranche status verify karo. Instant & Free.',
     tags: ['Aadhaar Check', 'Mobile Check', 'Instant Redirect'],
     group: 'scheme',
     featured: true,
@@ -43,8 +56,8 @@ const CALCS = [
     emoji: '📆',
     title: 'Installment Tracker',
     hindi: 'किस्त स्टेटस ट्रैकर',
-    desc: '23vi kist aayi ya nahi? eKYC, bank seeding, land record check karke 4 sawaal mein exact reason pata karo.',
-    tags: ['23vi Kist', 'eKYC Check', 'Instant Result'],
+    desc: '24vi kist aayi ya nahi? eKYC, bank seeding, land record check karke 4 sawaal mein exact reason pata karo.',
+    tags: ['24vi Kist', 'eKYC Check', 'Instant Result'],
     group: 'scheme',
     featured: false,
   },
@@ -100,7 +113,6 @@ const CALCS = [
   },
 ];
 
-// Dark mode compatible group styles
 const GROUP_STYLES: Record<string, { bar: string; chip: string; btn: string; glow: string }> = {
   scheme:    { bar: 'bg-emerald-600', chip: 'text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-900/30', btn: 'bg-emerald-700 hover:bg-emerald-800', glow: 'hover:shadow-emerald-100 dark:hover:shadow-emerald-900/20' },
   credit:    { bar: 'bg-blue-600',    chip: 'text-blue-700 dark:text-blue-300 bg-blue-50 dark:bg-blue-900/30',        btn: 'bg-blue-700 hover:bg-blue-800',       glow: 'hover:shadow-blue-100 dark:hover:shadow-blue-900/20' },
@@ -131,7 +143,6 @@ export default function CalculatorIndexPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
 
-      {/* Hero */}
       <div className="bg-[var(--color-primary)] py-10">
         <div className="container-site text-center max-w-3xl">
           <span className="inline-block bg-white/15 text-green-200 text-xs font-bold px-4 py-2 rounded-full mb-4 uppercase tracking-wider">
@@ -163,8 +174,6 @@ export default function CalculatorIndexPage() {
       </div>
 
       <div className="container-site py-12 max-w-4xl">
-
-        {/* Featured Tool */}
         {featured && (
           <Link
             href={featured.href}
@@ -201,7 +210,6 @@ export default function CalculatorIndexPage() {
           </Link>
         )}
 
-        {/* Rest of Tools */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {rest.map((c) => {
             const s = GROUP_STYLES[c.group];
@@ -237,7 +245,6 @@ export default function CalculatorIndexPage() {
           })}
         </div>
 
-        {/* How To Use */}
         <div className="mt-10 bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6 shadow-sm">
           <h2 className="font-black text-[var(--color-text)] text-lg mb-4">कृषि Utilities का सही उपयोग</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-[var(--color-text-muted)]">
@@ -264,17 +271,16 @@ export default function CalculatorIndexPage() {
           </div>
         </div>
 
-        {/* Related Guides */}
         <div className="mt-6 p-5 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-2xl">
           <p className="font-black text-green-900 dark:text-green-300 text-sm mb-4">📖 Related PM Kisan Guides</p>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
             {[
-              { href: '/articles/pm-kisan-ekyc-online-2026', l: '🔐 eKYC Guide' },
-              { href: '/articles/pm-kisan-23vi-kist-2026-status-check', l: '📅 23vi Kist Status' },
-              { href: '/articles/pm-kisan-payment-failed-status-2026', l: '💸 Payment Fix' },
-              { href: '/articles/kisan-rin-kaha-se-le-2026', l: '💰 Loan Guide' },
-              { href: '/articles/pmfby-crop-insurance-2026', l: '🛡️ Crop Insurance' },
-              { href: '/articles/pm-kisan-registration-online-2026', l: '📝 Enrollment' },
+              { href: '/articles/PmKisanEkycOnline2026', l: '🔐 eKYC Guide' },
+              { href: '/articles/PmKisan24viKist2026', l: '📅 24vi Kist Status' },
+              { href: '/articles/PmKisanPaymentFailedFix2026', l: '💸 Payment Fix' },
+              { href: '/articles/KisanRinKahaSeLe2026', l: '💰 Loan Guide' },
+              { href: '/articles/PmfbyCropInsurance2026', l: '🛡️ Crop Insurance' },
+              { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
             ].map(({ href, l }) => (
               <Link
                 key={href}
