@@ -10,10 +10,10 @@ interface LogoProps {
 
 export default function Logo({ variant = 'light', size = 'md' }: LogoProps) {
   const [imageError, setImageError] = useState(false);
-  
+
   const textColor = variant === 'light' ? 'text-white' : 'text-green-800';
   const subColor = variant === 'light' ? 'text-green-200' : 'text-green-600';
-  
+
   const sizeClasses = {
     sm: { container: 'gap-2', image: 'w-8 h-8', title: 'text-sm', subtitle: 'text-[9px]', imgSize: 32 },
     md: { container: 'gap-2.5', image: 'w-10 h-10', title: 'text-base', subtitle: 'text-[10px]', imgSize: 40 },
@@ -23,7 +23,7 @@ export default function Logo({ variant = 'light', size = 'md' }: LogoProps) {
   const sizes = sizeClasses[size];
 
   return (
-    <div 
+    <div
       className={`flex items-center ${sizes.container} no-underline group focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 rounded-lg`}
       aria-label="KisanStatus.com - Home"
     >
@@ -36,13 +36,13 @@ export default function Logo({ variant = 'light', size = 'md' }: LogoProps) {
             alt="KisanStatus.com logo"
             width={sizes.imgSize}
             height={sizes.imgSize}
+            priority
             className={`${sizes.image} object-contain`}
             onError={() => setImageError(true)}
-            sizes="48px"
           />
         )}
       </div>
-      
+
       <div className="flex flex-col">
         <p className={`font-black ${sizes.title} leading-none tracking-tight ${textColor}`}>
           KisanStatus<span className="text-green-400">.com</span>
