@@ -164,7 +164,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     readingTime: 9,
     banks: ['sbi', 'pnb', 'bob', 'cooperative'],
     schemes: ['kcc'],
-    ogImage: '/images/kisan-credit-card-online-apply-2026.webp',
+    ogImage: '/images/kisan-credit-card-apply-online-hero.webp', // ✅ FIXED
     relatedSlugs: ['KisanRinKahaSeLe2026', 'KisanTractorLoan2026'],
   },
   {
