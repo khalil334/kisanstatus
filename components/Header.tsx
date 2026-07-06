@@ -7,7 +7,6 @@ import LanguageSwitcher from './LanguageSwitcher';
 import Logo from './Logo';
 import { ARTICLES } from '@/lib/articles-data';
 
-// ✅ Updated: Sirf valid articles (jo exist karte hain)
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/articles', label: 'Articles' },
@@ -16,7 +15,6 @@ const navLinks = [
   { href: '/calculator', label: 'Calculator' },
 ] as const;
 
-// ✅ Updated: Sirf valid articles
 const quickLinks = [
   { href: '/articles/PmKisan24viKist2026', label: '24vi Kist Status', emoji: '📆' },
   { href: '/articles/pm-kisan-fto-generated-ka-matlab-kya-hai', label: 'FTO Guide', emoji: '📋' },
@@ -24,7 +22,6 @@ const quickLinks = [
   { href: '/articles/KisanCreditCardOnlineApply2026', label: 'KCC Loan', emoji: '💳' },
 ] as const;
 
-// ✅ Updated: Sirf valid categories (4)
 const CATEGORY_EMOJIS: Record<string, string> = {
   'status-check': '📆',
   'loan': '💳',
@@ -158,8 +155,10 @@ function SearchModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
 
 function ThemeToggle() {
   const [isDark, setIsDark] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const stored = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     
@@ -186,6 +185,8 @@ function ThemeToggle() {
       setIsDark(true);
     }
   };
+
+  if (!mounted) return <div className="w-9 h-9" />;
 
   return (
     <button
@@ -216,8 +217,30 @@ export default function Header() {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+        e.preventDefault();
+        setSearchOpen(prev => !prev);
+      }
+    };
+
     window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    window.addEventListener('keydown', handleKeyDown);
+
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    const isSmallScreen = window.innerWidth < 768;
+    const isMobile = isTouchDevice || isSmallScreen;
+
+    if (!isMobile) {
+      const isMac = navigator.platform?.toUpperCase().includes('MAC') || 
+                    navigator.userAgent?.toUpperCase().includes('MAC');
+      setShortcutKey(isMac ? '⌘K' : 'Ctrl+K');
+    }
+
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('keydown', handleKeyDown);
+    };
   }, []);
 
   useEffect(() => {
@@ -228,29 +251,6 @@ export default function Header() {
   useEffect(() => {
     setMobileOpen(false);
   }, [pathname]);
-
-  useEffect(() => {
-    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-    const isSmallScreen = window.innerWidth < 768;
-    const isMobile = isTouchDevice || isSmallScreen;
-
-    if (!isMobile) {
-      const isMac = navigator.platform?.toUpperCase().includes('MAC') || 
-                    navigator.userAgent?.toUpperCase().includes('MAC');
-      setShortcutKey(isMac ? '⌘K' : 'Ctrl+K');
-    }
-  }, []);
-
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
-        e.preventDefault();
-        setSearchOpen(prev => !prev);
-      }
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
 
   const isActive = useCallback(
     (href: string) => {
