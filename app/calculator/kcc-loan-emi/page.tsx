@@ -5,29 +5,33 @@ const DOMAIN = 'https://kisanstatus.com';
 const PAGE_URL = `${DOMAIN}/calculator/kcc-loan-emi`;
 
 export const metadata: Metadata = {
-  title: 'Agricultural Credit Card EMI Calculator 2026 — Farm Credit Monthly Payment',
-  description: 'Kisan Credit Card (KCC) loan ki monthly EMI calculate karo. 7% interest rate, government subsidy, total repayment — sab ek jagah. Free online tool.',
+  title: 'KCC Loan EMI Calculator 2026 — Kisan Credit Card Loan EMI Hindi',
+  description: 'Kisan Credit Card loan ki monthly EMI calculate karo. Interest rate, total repayment, government subsidy sab jaano. Free tool, koi registration nahi.',
   keywords: [
     'kcc loan emi calculator',
-    'kisan credit card emi calculator',
-    'kcc loan calculator 2026',
-    'kisan credit card monthly payment',
-    'agricultural credit facility calculator',
-    'farm credit scheme emi tool',
+    'kisan credit card loan emi',
+    'kcc loan monthly payment',
+    'kisan loan emi calculator hindi',
+    'kcc loan interest rate',
+    'kisan credit card emi kitni hogi',
+    'kcc loan subsidy calculator',
+    'kcc loan 7% interest',
+    'kisan loan calculator 2026',
+    'kcc loan repayment calculator',
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Agricultural Credit Card EMI Calculator 2026 — Farm Credit Monthly Payment',
-    description: 'KCC loan ki monthly EMI, 7% interest rate, government subsidy — sab ek jagah calculate karo. Free tool.',
+    title: 'KCC Loan EMI Calculator 2026 — Kisan Credit Card Loan EMI Hindi',
+    description: 'Kisan Credit Card loan ki monthly EMI calculate karo. Interest rate, total repayment, government subsidy sab jaano. Free tool.',
     type: 'website',
     url: PAGE_URL,
     siteName: 'KisanStatus.com',
     locale: 'hi_IN',
-    images: [{ url: `${DOMAIN}/og-image.webp`, width: 1200, height: 630, alt: 'Agricultural Credit Card EMI Calculator 2026 – KisanStatus.com' }],
+    images: [{ url: `${DOMAIN}/og-image.webp`, width: 1200, height: 630, alt: 'KCC Loan EMI Calculator 2026 – KisanStatus.com' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Agricultural Credit Card EMI Calculator 2026',
+    title: 'KCC Loan EMI Calculator 2026',
     description: 'Kisan Credit Card loan ki monthly EMI calculate karo. Free tool.',
     site: '@kisanstatus',
     images: [`${DOMAIN}/og-image.webp`],
@@ -37,11 +41,12 @@ export const metadata: Metadata = {
 export default function Page() {
   const schema = {
     '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
-    name: 'Agricultural Credit Card EMI Calculator',
-    applicationCategory: 'BusinessApplication',
+    '@type': 'WebApplication',
+    name: 'KCC Loan EMI Calculator 2026',
+    url: PAGE_URL,
+    applicationCategory: 'FinanceApplication',
     operatingSystem: 'Any',
-    description: 'Kisan Credit Card (KCC) loan ki monthly EMI calculate karo. 7% interest rate, government subsidy, total repayment — sab ek jagah. Free online tool.',
+    description: 'Kisan Credit Card loan ki monthly EMI calculate karo. Interest rate, total repayment, government subsidy sab jaano. Free online tool.',
     offers: {
       '@type': 'Offer',
       price: '0',
@@ -50,7 +55,7 @@ export default function Page() {
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '4.8',
-      ratingCount: '1250',
+      ratingCount: '1156',
     },
   };
 
