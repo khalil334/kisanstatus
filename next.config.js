@@ -6,27 +6,9 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256],
     minimumCacheTTL: 31536000,
     dangerouslyAllowSVG: false,
-    remotePatterns: [],
-    unoptimized: false,
   },
 
   compress: true,
-
-  experimental: {
-    optimizePackageImports: [
-      '@/components/ArticleShared',
-      '@/components/ArticleSVGs',
-      'lucide-react',
-      '@radix-ui/react-icons',
-    ],
-    optimizeCss: true,
-    turbo: {
-      rules: {
-        '*.svg': ['react'],
-      },
-    },
-  },
-
   reactStrictMode: true,
 
   async redirects() {
@@ -84,13 +66,6 @@ const nextConfig = {
         headers: [{ key: 'Cache-Control', value: 'public, max-age=0, must-revalidate' }],
       },
       {
-        source: '/images/articles/:path*',
-        headers: [{ 
-          key: 'Cache-Control', 
-          value: 'public, max-age=31536000, s-maxage=31536000, immutable' 
-        }],
-      },
-      {
         source: '/images/:path*',
         headers: [{ 
           key: 'Cache-Control', 
@@ -99,13 +74,6 @@ const nextConfig = {
       },
       {
         source: '/_next/static/:path*',
-        headers: [{ 
-          key: 'Cache-Control', 
-          value: 'public, max-age=31536000, immutable' 
-        }],
-      },
-      {
-        source: '/fonts/:path*',
         headers: [{ 
           key: 'Cache-Control', 
           value: 'public, max-age=31536000, immutable' 
