@@ -93,9 +93,16 @@ export default function HomeContent() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-green-50 to-white dark:from-gray-900 dark:to-gray-800">
-      {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-green-800 to-green-600 py-16 md:py-24">
-        <div className="absolute inset-0 bg-[url('/hero-banner.webp')] bg-cover bg-center opacity-20" />
+        <Image
+          src="/hero-banner.webp"
+          alt=""
+          fill
+          priority
+          quality={75}
+          className="object-cover opacity-20"
+          sizes="100vw"
+        />
         <div className="container-site mx-auto px-4 relative z-10">
           <div className="max-w-3xl">
             <span className="inline-block bg-white/20 border border-white/30 text-green-100 text-xs font-bold px-4 py-2 rounded-full mb-4 uppercase tracking-wider backdrop-blur-sm">
@@ -125,7 +132,6 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* Stats Section */}
       <section className="py-12 bg-white dark:bg-gray-800">
         <div className="container-site mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
@@ -153,20 +159,19 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* Featured Images Section - NEW */}
       <section className="py-12 bg-gradient-to-b from-green-50 to-white dark:from-gray-900/50 dark:to-gray-800">
         <div className="container-site mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-black text-gray-900 dark:text-white mb-8 text-center">
             🌾 Bharat Ki Kheti - Hamari Pehchaan
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            {/* Indian Farmers Wheat Field */}
             <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-green-200 dark:border-green-800 group">
               <Image
                 src="/indian-farmers-wheat-field.webp"
                 alt="Indian farmers working in wheat field - Bharat ki kheti"
                 width={600}
                 height={400}
+                loading="lazy"
                 className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
@@ -176,13 +181,13 @@ export default function HomeContent() {
               </div>
             </div>
 
-            {/* Modern Farming Technology */}
             <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-blue-200 dark:border-blue-800 group">
               <Image
                 src="/modern-farming-technology-india.webp"
                 alt="Modern farming technology in India - Digital agriculture"
                 width={600}
                 height={400}
+                loading="lazy"
                 className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
@@ -195,7 +200,6 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* Latest Articles */}
       <section className="py-12 bg-gray-50 dark:bg-gray-900/50">
         <div className="container-site mx-auto px-4">
           <div className="flex items-center gap-3 mb-8">
@@ -227,7 +231,6 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* Quick Links */}
       <section className="py-12 bg-white dark:bg-gray-800">
         <div className="container-site mx-auto px-4">
           <h2 className="text-2xl font-black text-gray-900 dark:text-white mb-8 text-center">
