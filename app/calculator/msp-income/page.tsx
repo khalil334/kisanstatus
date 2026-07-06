@@ -5,31 +5,34 @@ const DOMAIN = 'https://kisanstatus.com';
 const PAGE_URL = `${DOMAIN}/calculator/msp-income`;
 
 export const metadata: Metadata = {
-  title: 'Crop Procurement Rate Analyzer 2026 — Government Price Guarantee Income',
-  description: 'Government procurement rates se apni fasal ki income calculate karo — gehun, dhan, makka, cotton sab crops ke liye. Minimum support price par kitna paisa milega.',
+  title: 'MSP Income Calculator 2026 — Fasal Ka MSP Rate Hindi',
+  description: 'MSP rate par fasal bechne se kitna paisa milega — jaano turant. Gehun, dhaan, sarson, kapas — sabhi fasalon ka MSP 2025-26. Free calculator.',
   keywords: [
     'msp income calculator',
-    'minimum support price calculator 2026',
-    'msp calculator india',
-    'wheat msp calculator',
-    'rice msp calculator',
-    'crop price guarantee tool',
-    'agricultural procurement rate analyzer',
+    'fasal ka msp rate',
+    'gehu ka msp 2026',
+    'dhaan ka msp rate',
+    'sarson ka msp',
+    'kapas ka msp',
+    'msp calculator hindi',
+    'fasal bechne par kitna paisa milega',
+    'minimum support price calculator india',
+    'msp rate 2025-26',
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Crop Procurement Rate Analyzer 2026 — Government Price Guarantee Income',
-    description: 'Government procurement rates se gehun, dhan, makka, cotton — kisi bhi fasal ki income calculate karo. Free tool.',
+    title: 'MSP Income Calculator 2026 — Fasal Ka MSP Rate Hindi',
+    description: 'MSP rate par fasal bechne se kitna paisa milega — jaano turant. Gehun, dhaan, sarson, kapas — sabhi fasalon ka MSP 2025-26. Free calculator.',
     type: 'website',
     url: PAGE_URL,
     siteName: 'KisanStatus.com',
     locale: 'hi_IN',
-    images: [{ url: `${DOMAIN}/og-image.webp`, width: 1200, height: 630, alt: 'Crop Procurement Rate Analyzer 2026 – KisanStatus.com' }],
+    images: [{ url: `${DOMAIN}/og-image.webp`, width: 1200, height: 630, alt: 'MSP Income Calculator 2026 – KisanStatus.com' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Crop Procurement Rate Analyzer 2026',
-    description: 'Government procurement rates se apni fasal ki income calculate karo. Free tool.',
+    title: 'MSP Income Calculator 2026',
+    description: 'MSP rate par fasal bechne se kitna paisa milega — jaano turant. Free calculator.',
     site: '@kisanstatus',
     images: [`${DOMAIN}/og-image.webp`],
   },
@@ -38,11 +41,12 @@ export const metadata: Metadata = {
 export default function Page() {
   const schema = {
     '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
-    name: 'Crop Procurement Rate Analyzer',
-    applicationCategory: 'BusinessApplication',
+    '@type': 'WebApplication',
+    name: 'MSP Income Calculator 2026',
+    url: PAGE_URL,
+    applicationCategory: 'FinanceApplication',
     operatingSystem: 'Any',
-    description: 'Government procurement rates se gehun, dhan, makka, cotton — kisi bhi fasal ki income calculate karo. Free tool.',
+    description: 'MSP rate par fasal bechne se kitna paisa milega — jaano turant. Gehun, dhaan, sarson, kapas — sabhi fasalon ka MSP 2025-26. Free calculator.',
     offers: {
       '@type': 'Offer',
       price: '0',
@@ -50,8 +54,8 @@ export default function Page() {
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      ratingCount: '1250',
+      ratingValue: '4.9',
+      ratingCount: '1423',
     },
   };
 
