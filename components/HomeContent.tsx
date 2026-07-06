@@ -93,10 +93,10 @@ export default function HomeContent() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-green-50 to-white dark:from-gray-900 dark:to-gray-800">
-      {/* Hero Section - CSS background only, NO Next.js Image */}
+      {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-green-800 to-green-600 py-16 md:py-24">
         <div 
-          className="absolute inset-0 bg-[url('/hero-banner.webp')] bg-cover bg-center opacity-20"
+          className="absolute inset-0 bg-[url('/indian-farmers-wheat-field.webp')] bg-cover bg-center opacity-20"
           aria-hidden="true"
         />
         <div className="container-site mx-auto px-4 relative z-10">
@@ -133,7 +133,7 @@ export default function HomeContent() {
         <div className="container-site mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             <div className="bg-green-50 dark:bg-green-900/20 rounded-2xl p-6 text-center border-2 border-green-200 dark:border-green-800">
-              <div className="text-3xl mb-2">👨‍</div>
+              <div className="text-3xl mb-2">👨‍🌾</div>
               <div className="text-2xl md:text-3xl font-black text-green-700 dark:text-green-400 mb-1">11 Cr+</div>
               <div className="text-xs text-gray-600 dark:text-gray-400 font-medium">Registered Kisan</div>
             </div>
@@ -156,7 +156,145 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* Featured Images - Lazy loaded */}
+      {/* ═══════════════════════════════════════════════════════ */}
+      {/* CALCULATOR SECTION - NEW */}
+      {/* ═══════════════════════════════════════════════════════ */}
+      <section className="py-14 bg-gradient-to-br from-emerald-900 via-green-800 to-emerald-900 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_50%)]" />
+          <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_50%,rgba(255,255,255,0.08),transparent_50%)]" />
+        </div>
+
+        <div className="container-site mx-auto px-4 relative z-10">
+          {/* Section Header */}
+          <div className="text-center mb-10">
+            <span className="inline-block bg-yellow-400/20 border border-yellow-400/40 text-yellow-300 text-xs font-bold px-4 py-1.5 rounded-full mb-4 uppercase tracking-wider">
+              🧮 Free Tools
+            </span>
+            <h2 className="text-3xl md:text-4xl font-black text-white mb-3">
+              Kisan Calculator Suite
+            </h2>
+            <p className="text-green-200 text-base md:text-lg max-w-2xl mx-auto">
+              PM Kisan benefit, MSP earnings, crop profit, KCC EMI, fertilizer cost — sab ek jagah, bilkul free!
+            </p>
+          </div>
+
+          {/* Calculator Cards Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto mb-10">
+            {/* PM Kisan Benefit */}
+            <Link
+              href="/calculator/pm-kisan-benefit"
+              className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5 hover:bg-white/20 hover:border-yellow-400/50 hover:scale-[1.02] transition-all group"
+            >
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-yellow-400 rounded-xl flex items-center justify-center text-2xl shrink-0 shadow-lg group-hover:rotate-6 transition-transform">
+                  🌾
+                </div>
+                <div>
+                  <h3 className="font-bold text-white text-base mb-1 group-hover:text-yellow-300 transition-colors">PM Kisan Benefit</h3>
+                  <p className="text-green-200 text-xs leading-relaxed">Kitni kist mili, kitni pending — saal ka total hisaab</p>
+                </div>
+              </div>
+            </Link>
+
+            {/* MSP Income */}
+            <Link
+              href="/calculator/msp-income"
+              className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5 hover:bg-white/20 hover:border-yellow-400/50 hover:scale-[1.02] transition-all group"
+            >
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-orange-400 rounded-xl flex items-center justify-center text-2xl shrink-0 shadow-lg group-hover:rotate-6 transition-transform">
+                  💰
+                </div>
+                <div>
+                  <h3 className="font-bold text-white text-base mb-1 group-hover:text-yellow-300 transition-colors">MSP Income</h3>
+                  <p className="text-green-200 text-xs leading-relaxed">Fasal ki paidavar × MSP rate = guaranteed kamai</p>
+                </div>
+              </div>
+            </Link>
+
+            {/* Crop Profit */}
+            <Link
+              href="/calculator/crop-profit"
+              className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5 hover:bg-white/20 hover:border-yellow-400/50 hover:scale-[1.02] transition-all group"
+            >
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-green-400 rounded-xl flex items-center justify-center text-2xl shrink-0 shadow-lg group-hover:rotate-6 transition-transform">
+                  📊
+                </div>
+                <div>
+                  <h3 className="font-bold text-white text-base mb-1 group-hover:text-yellow-300 transition-colors">Crop Profit</h3>
+                  <p className="text-green-200 text-xs leading-relaxed">Kharcha vs kamai — shuddh munafa jaano per acre</p>
+                </div>
+              </div>
+            </Link>
+
+            {/* KCC Loan EMI */}
+            <Link
+              href="/calculator/kcc-loan-emi"
+              className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5 hover:bg-white/20 hover:border-yellow-400/50 hover:scale-[1.02] transition-all group"
+            >
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-blue-400 rounded-xl flex items-center justify-center text-2xl shrink-0 shadow-lg group-hover:rotate-6 transition-transform">
+                  🏦
+                </div>
+                <div>
+                  <h3 className="font-bold text-white text-base mb-1 group-hover:text-yellow-300 transition-colors">KCC Loan EMI</h3>
+                  <p className="text-green-200 text-xs leading-relaxed">4% byaj par monthly EMI aur total interest</p>
+                </div>
+              </div>
+            </Link>
+
+            {/* Fertilizer Cost */}
+            <Link
+              href="/calculator/fertilizer-cost"
+              className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5 hover:bg-white/20 hover:border-yellow-400/50 hover:scale-[1.02] transition-all group"
+            >
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-lime-400 rounded-xl flex items-center justify-center text-2xl shrink-0 shadow-lg group-hover:rotate-6 transition-transform">
+                  🌿
+                </div>
+                <div>
+                  <h3 className="font-bold text-white text-base mb-1 group-hover:text-yellow-300 transition-colors">Fertilizer Cost</h3>
+                  <p className="text-green-200 text-xs leading-relaxed">Urea, DAP, MOP — NPK kharcha per acre</p>
+                </div>
+              </div>
+            </Link>
+
+            {/* Irrigation Cost */}
+            <Link
+              href="/calculator/irrigation-cost"
+              className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5 hover:bg-white/20 hover:border-yellow-400/50 hover:scale-[1.02] transition-all group"
+            >
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-cyan-400 rounded-xl flex items-center justify-center text-2xl shrink-0 shadow-lg group-hover:rotate-6 transition-transform">
+                  💧
+                </div>
+                <div>
+                  <h3 className="font-bold text-white text-base mb-1 group-hover:text-yellow-300 transition-colors">Irrigation Cost</h3>
+                  <p className="text-green-200 text-xs leading-relaxed">Drip vs flood — paani aur bijli ka kharcha</p>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          {/* CTA Button */}
+          <div className="text-center">
+            <Link
+              href="/calculator"
+              className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-black px-8 py-4 rounded-xl text-base transition-all hover:scale-105 shadow-xl"
+            >
+              🧮 Sab Calculators Kholo →
+            </Link>
+            <p className="text-green-300/70 text-xs mt-3">
+              100% Free • Koi Login Nahi • Instant Results
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Images */}
       <section className="py-12 bg-gradient-to-b from-green-50 to-white dark:from-gray-900/50 dark:to-gray-800">
         <div className="container-site mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-black text-gray-900 dark:text-white mb-8 text-center">
@@ -241,7 +379,7 @@ export default function HomeContent() {
               href="/articles/PmKisan24viKist2026"
               className="bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-200 dark:border-blue-800 rounded-2xl p-6 text-center hover:shadow-lg hover:scale-105 transition-all"
             >
-              <div className="text-3xl mb-2"></div>
+              <div className="text-3xl mb-2">📊</div>
               <h3 className="font-bold text-gray-900 dark:text-white text-sm mb-1">Status Check</h3>
               <p className="text-xs text-gray-600 dark:text-gray-400">Kist aayi ya nahi</p>
             </Link>
@@ -249,7 +387,7 @@ export default function HomeContent() {
               href="/articles/KisanCreditCardOnlineApply2026"
               className="bg-green-50 dark:bg-green-900/20 border-2 border-green-200 dark:border-green-800 rounded-2xl p-6 text-center hover:shadow-lg hover:scale-105 transition-all"
             >
-              <div className="text-3xl mb-2"></div>
+              <div className="text-3xl mb-2">💳</div>
               <h3 className="font-bold text-gray-900 dark:text-white text-sm mb-1">KCC Apply</h3>
               <p className="text-xs text-gray-600 dark:text-gray-400">₹5 Lakh Loan</p>
             </Link>
@@ -257,7 +395,7 @@ export default function HomeContent() {
               href="/articles/PmKisanBeneficiaryList2026"
               className="bg-red-50 dark:bg-red-900/20 border-2 border-red-200 dark:border-red-800 rounded-2xl p-6 text-center hover:shadow-lg hover:scale-105 transition-all"
             >
-              <div className="text-3xl mb-2"></div>
+              <div className="text-3xl mb-2">📋</div>
               <h3 className="font-bold text-gray-900 dark:text-white text-sm mb-1">Beneficiary List</h3>
               <p className="text-xs text-gray-600 dark:text-gray-400">Naam check karo</p>
             </Link>
