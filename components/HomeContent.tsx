@@ -93,7 +93,7 @@ export default function HomeContent() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-green-50 to-white dark:from-gray-900 dark:to-gray-800">
-      {/* Hero Section - FIXED */}
+      {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-green-800 to-green-600 py-16 md:py-24">
         <div className="absolute inset-0 bg-[url('/hero-banner.webp')] bg-cover bg-center opacity-20" />
         <div className="container-site mx-auto px-4 relative z-10">
@@ -148,6 +148,48 @@ export default function HomeContent() {
               <div className="text-3xl mb-2">💵</div>
               <div className="text-2xl md:text-3xl font-black text-purple-700 dark:text-purple-400 mb-1">₹2,000</div>
               <div className="text-xs text-gray-600 dark:text-gray-400 font-medium">Har Kist</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Images Section - NEW */}
+      <section className="py-12 bg-gradient-to-b from-green-50 to-white dark:from-gray-900/50 dark:to-gray-800">
+        <div className="container-site mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-black text-gray-900 dark:text-white mb-8 text-center">
+            🌾 Bharat Ki Kheti - Hamari Pehchaan
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {/* Indian Farmers Wheat Field */}
+            <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-green-200 dark:border-green-800 group">
+              <Image
+                src="/indian-farmers-wheat-field.webp"
+                alt="Indian farmers working in wheat field - Bharat ki kheti"
+                width={600}
+                height={400}
+                className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h3 className="text-white font-bold text-lg mb-1">🌾 Hamare Annadata</h3>
+                <p className="text-green-200 text-sm">Bharat ki kheti - duniya ki sabse badi kheti</p>
+              </div>
+            </div>
+
+            {/* Modern Farming Technology */}
+            <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-blue-200 dark:border-blue-800 group">
+              <Image
+                src="/modern-farming-technology-india.webp"
+                alt="Modern farming technology in India - Digital agriculture"
+                width={600}
+                height={400}
+                className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h3 className="text-white font-bold text-lg mb-1">🚜 Aadhunik Kheti</h3>
+                <p className="text-blue-200 text-sm">Technology se badhti kheti ki kamai</p>
+              </div>
             </div>
           </div>
         </div>
