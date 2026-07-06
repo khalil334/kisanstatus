@@ -1,7 +1,3 @@
-// ─ lib/articles-data.ts ───────────────────────────────────
-// Centralized article metadata — single source of truth
-// ⚠️ Component names = file names (without .tsx)
-
 export const CATEGORIES = {
   'status-check': {
     name: 'Verification & Status',
@@ -32,7 +28,7 @@ export const CATEGORIES = {
     nameHi: 'बाजार दरें',
     description: 'Daily vegetable and fruit market rates, wholesale prices',
     descriptionHi: 'दैनिक सब्जी और फल बाजार दरें, थोक कीमतें',
-    icon: '',
+    icon: '📈',  // ✅ FIXED - icon add kiya
     color: 'yellow',
   },
 } as const;
@@ -282,7 +278,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-06T08:00:00+05:30',
     readingTime: 9,
     schemes: ['pm-kisan'],
-    ogImage: undefined,
+    ogImage: '/images/articles/pm-kisan-payment-failed-fix-2026/payment-failed-hero.webp',  // ✅ FIXED
     relatedSlugs: ['pm-kisan-fto-generated-ka-matlab-kya-hai', 'PmKisanMasterGuide2026', 'PmKisan24viKist2026'],
   },
   {
@@ -297,7 +293,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-06T08:00:00+05:30',
     readingTime: 8,
     schemes: ['pm-kisan'],
-    ogImage: undefined,
+    ogImage: '/images/articles/pm-kisan-25vi-kist-2027/hero-25vi-kist.webp',  // ✅ FIXED
     relatedSlugs: ['PmKisan24viKist2026', 'PmKisanMasterGuide2026', 'PmKisanEkycOnline2026'],
   },
 ] as const;
