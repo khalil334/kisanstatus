@@ -101,11 +101,6 @@ export default function RootLayout({
         <link rel="alternate" hrefLang="hi-IN" href={`${SITE_URL}/`} />
         <link rel="alternate" hrefLang="en-US" href={`${SITE_URL}/en`} />
         <link rel="alternate" hrefLang="x-default" href={`${SITE_URL}/`} />
-        
-        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
@@ -183,13 +178,14 @@ export default function RootLayout({
           <Footer />
         </LanguageProvider>
 
+        {/* GA4 — lazyOnload se defer karo, render-blocking nahi hoga */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
         <Script
           id="ga4-init"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -204,18 +200,6 @@ export default function RootLayout({
         />
 
         {process.env.NODE_ENV === 'production' && <Analytics />}
-
-        <Script
-          id="scroll-restoration"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              if ('scrollRestoration' in history) {
-                history.scrollRestoration = 'auto';
-              }
-            `,
-          }}
-        />
       </body>
     </html>
   );
