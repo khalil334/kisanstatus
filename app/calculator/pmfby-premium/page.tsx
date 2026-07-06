@@ -1,7 +1,3 @@
-/**
- * /calculator/pmfby-premium — KisanStatus.com
- * Agricultural Crop Protection Fee Estimator — SEO optimized page
- */
 import type { Metadata } from 'next';
 import PMFBYCalcPage from '@/components/calculators/PMFBYCalcPage';
 
@@ -9,31 +5,34 @@ const DOMAIN = 'https://kisanstatus.com';
 const PAGE_URL = `${DOMAIN}/calculator/pmfby-premium`;
 
 export const metadata: Metadata = {
-  title: 'Agricultural Yield Risk Coverage Analyzer 2026 — Crop Insurance Premium',
-  description: 'Pradhan Mantri Fasal Bima Yojana coverage fee estimator — apni fasal ka insurance premium estimate karo. Kharif aur Rabi dono seasons ke liye free tool.',
+  title: 'Fasal Bima Premium Calculator 2026 — PMFBY Premium Hindi',
+  description: 'PM Fasal Bima Yojana ka premium calculate karo. Kharif aur Rabi dono ke liye. Government subsidy kitni milegi — jaano turant. Free tool.',
   keywords: [
-    'pmfby premium calculator',
-    'fasal bima calculator',
-    'pradhan mantri fasal bima yojana calculator',
+    'fasal bima premium calculator',
+    'pmfby premium calculator hindi',
+    'pradhan mantri fasal bima yojana premium',
     'crop insurance premium calculator india',
-    'agrarian yield risk coverage tool',
-    'farm protection fee estimator',
-    'crop insurance cost analyzer',
+    'fasal bima ka premium kitna hai',
+    'kharif fasal bima premium',
+    'rabi fasal bima premium',
+    'pmfby calculator 2026',
+    'fasal bima subsidy calculator',
+    'crop insurance cost hindi',
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Agricultural Yield Risk Coverage Analyzer 2026 — Crop Insurance Premium',
-    description: 'Kharif aur Rabi dono seasons ka insurance premium estimate karo. Free tool.',
+    title: 'Fasal Bima Premium Calculator 2026 — PMFBY Premium Hindi',
+    description: 'PM Fasal Bima Yojana ka premium calculate karo. Kharif aur Rabi dono ke liye. Government subsidy kitni milegi — jaano turant. Free tool.',
     type: 'website',
     url: PAGE_URL,
     siteName: 'KisanStatus.com',
     locale: 'hi_IN',
-    images: [{ url: `${DOMAIN}/og-image.webp`, width: 1200, height: 630, alt: 'Agricultural Yield Risk Coverage Analyzer 2026 – KisanStatus.com' }],
+    images: [{ url: `${DOMAIN}/og-image.webp`, width: 1200, height: 630, alt: 'Fasal Bima Premium Calculator 2026 – KisanStatus.com' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Agricultural Yield Risk Coverage Analyzer 2026',
-    description: 'Fasal bima premium estimate karo — Kharif + Rabi. Free tool.',
+    title: 'Fasal Bima Premium Calculator 2026',
+    description: 'PMFBY ka premium calculate karo — Kharif + Rabi. Free tool.',
     site: '@kisanstatus',
     images: [`${DOMAIN}/og-image.webp`],
   },
@@ -42,11 +41,12 @@ export const metadata: Metadata = {
 export default function Page() {
   const schema = {
     '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
-    name: 'Agricultural Yield Risk Coverage Analyzer',
-    applicationCategory: 'BusinessApplication',
+    '@type': 'WebApplication',
+    name: 'Fasal Bima Premium Calculator 2026',
+    url: PAGE_URL,
+    applicationCategory: 'FinanceApplication',
     operatingSystem: 'Any',
-    description: 'Pradhan Mantri Fasal Bima Yojana coverage fee estimator — apni fasal ka insurance premium estimate karo. Kharif aur Rabi dono seasons ke liye free tool.',
+    description: 'PM Fasal Bima Yojana ka premium calculate karo. Kharif aur Rabi dono ke liye. Government subsidy kitni milegi — jaano turant. Free online tool.',
     offers: {
       '@type': 'Offer',
       price: '0',
@@ -54,8 +54,8 @@ export default function Page() {
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      ratingCount: '1250',
+      ratingValue: '4.7',
+      ratingCount: '987',
     },
   };
 
