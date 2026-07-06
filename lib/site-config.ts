@@ -16,13 +16,16 @@ export const HELPLINE_ALT = '011-24300606';
 export const OFFICIAL_EMAIL = 'pmkisan-ict@gov.in';
 export const GSC_TOKEN = process.env.NEXT_PUBLIC_GSC_TOKEN;
 
-// Centralized disclaimer — har jagah same text via Disclaimer component
 export const DISCLAIMER_TEXT =
   'KisanStatus.com ek independent information portal hai — Government of India ya kisi official portal ka platform nahi hai. Yahan di gayi jankari educational purpose ke liye hai. Kisi bhi sarkari kaam ke liye official portal pmkisan.gov.in ya helpline 155261 use karein.';
 
-// Official PM Kisan portal links — centralized
 export const PMKISAN_PORTAL = 'https://pmkisan.gov.in';
 export const PMKISAN_STATUS_URL = 'https://pmkisan.gov.in/BeneficiaryStatus.aspx';
 export const PMKISAN_EKYC_URL = 'https://pmkisan.gov.in/eKYC.aspx';
 export const SOIL_HEALTH_PORTAL = 'https://soilhealth.dac.gov.in';
 export const PMFBY_PORTAL = 'https://pmfby.gov.in';
+
+export const SOCIAL_LINKS = {
+  facebook: 'https://www.facebook.com/profile.php?id=61590430994270',
+  twitter: 'https://twitter.com/kisanstatus',
+} as const;
