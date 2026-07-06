@@ -9,12 +9,12 @@ const PUBLISHED = '2026-07-05T08:00:00+05:30';
 const MODIFIED = '2026-07-05T08:00:00+05:30';
 
 const RELATED = [
-  { slug: 'kisan-credit-card-online-apply-2026', title: 'KCC Online Apply', emoji: '💳' },
-  { slug: 'nano-dap-500ml-price-in-india-2026', title: 'Nano DAP Price', emoji: '🌱' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply', emoji: '💳' },
+  { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price', emoji: '🌱' },
   { slug: 'soil-health-card-complete-guide-2026', title: 'Soil Health Card', emoji: '🌾' },
-  { slug: 'pmfby-crop-insurance-2026', title: 'Crop Insurance', emoji: '🛡️' },
-  { slug: 'agristack-kya-hai', title: 'Digital Kisan ID', emoji: '🆔' },
-  { slug: 'kisan-rin-kaha-se-le-2026', title: 'Agricultural Loan', emoji: '🏦' },
+  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '📅' },
+  { slug: 'AgriStackKyaHai2026', title: 'Digital Kisan ID', emoji: '🆔' },
+  { slug: 'KisanRinKahaSeLe2026', title: 'Kisan Loan Guide', emoji: '🏦' },
 ];
 
 const FAQS_DATA = [
@@ -43,8 +43,8 @@ const FAQS_DATA = [
     a: 'Bilkul free hai bhai! Agar purana number abhi active hai, toh online kar sakte ho. pmkisan.gov.in par jao, Edit Mobile option dhundo, OTP verify karo, naya number daal do. Agar purana number band ho chuka hai, toh CSC center jao - operator update kar dega. Wo log ₹20-30 service charge le sakte hain, lekin official charge zero hai.' 
   },
   { 
-    q: '23vi kist kab tak aayegi mere account mein?', 
-    a: 'June-July 2026 mein aani chahiye. Agar aapki eKYC complete hai aur bank account active hai, toh automatic credit ho jayegi - aapko kuch nahi karna. Bas status check karte raho portal par. Agar 15 July tak nahi aayi, toh helpline 155261 par call karo ya CSC center jao.' 
+    q: '24vi kist kab tak aayegi mere account mein?', 
+    a: 'October 2026 mein aani chahiye. Agar aapki eKYC complete hai aur bank account active hai, toh automatic credit ho jayegi - aapko kuch nahi karna. Bas status check karte raho portal par. Agar 15 October tak nahi aayi, toh helpline 155261 par call karo ya CSC center jao.' 
   },
 ];
 
@@ -156,11 +156,11 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
           </WB>
         </section>
 
-        {/* IMAGE 2: Registration Process */}
+        {/* IMAGE 2: Documents Checklist */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src="/images/articles/pm-kisan-complete-guide/registration-process.webp"
-            alt="PM Kisan registration process step by step — online and CSC center method"
+            src="/images/articles/pm-kisan-complete-guide/documents-checklist.webp"
+            alt="PM Kisan documents checklist — registration ke liye zaroori documents"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -168,7 +168,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            PM Kisan Registration Process — Online aur CSC Dono Tarike
+            Documents Checklist — Registration Ke Liye Zaroori Papers
           </p>
         </div>
 
@@ -386,11 +386,11 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
           </div>
         </section>
 
-        {/* IMAGE 5: Status Check */}
+        {/* IMAGE 5: State Map */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src="/images/articles/pm-kisan-complete-guide/status-check.webp"
-            alt="PM Kisan beneficiary status check — check payment history online"
+            src="/images/articles/pm-kisan-complete-guide/state-map.webp"
+            alt="PM Kisan state-wise beneficiary map — sabhi states ka status"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -398,7 +398,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Status Check — Apni Payment History Dekho
+            State-wise PM Kisan Beneficiaries Map
           </p>
         </div>
 
@@ -450,11 +450,11 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
           </div>
         </section>
 
-        {/* IMAGE 6: Helpline Support */}
+        {/* IMAGE 6: Rejection Fix */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src="/images/articles/pm-kisan-complete-guide/helpline-support.webp"
-            alt="PM Kisan helpline support — 155261 toll free number for farmers"
+            src="/images/articles/pm-kisan-complete-guide/rejection-fix.webp"
+            alt="PM Kisan rejection fix guide — application reject hone par kya karein"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -462,7 +462,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Helpline Support — 155261 Par Call Karo
+            Rejection Fix — Application Reject Hone Par Kya Karein
           </p>
         </div>
 
@@ -494,7 +494,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
           href="https://pmkisan.gov.in"
           label="PM Kisan Official Portal"
           guide="Abhi Check Karo"
-          guideHref="/articles/pm-kisan-23vi-kist-2026-status-check"
+          guideHref="/articles/PmKisan24viKist2026"
           portalName="pmkisan.gov.in"
         />
 
@@ -509,9 +509,9 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/pm-kisan-23vi-kist-2026-status-check', l: '📅 Status Check' },
-          { href: '/articles/pm-kisan-ekyc-online-2026', l: '🔐 eKYC Guide' },
-          { href: '/articles/pm-kisan-rejected-list-2026', l: '❌ Rejected Fix' },
+          { href: '/articles/PmKisan24viKist2026', l: '📅 24vi Kist' },
+          { href: '/articles/PmKisanBeneficiaryList2026', l: '📋 Beneficiary List' },
+          { href: '/articles/pm-kisan-fto-generated-ka-matlab-kya-hai', l: '💳 FTO Guide' },
         ]} />
         <Disclaimer />
       </div>
