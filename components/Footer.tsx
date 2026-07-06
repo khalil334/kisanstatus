@@ -13,8 +13,6 @@ export default function Footer() {
     <footer className="bg-[var(--color-text)] text-white py-12">
       <div className="container-site">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-
-          {/* About Section */}
           <div>
             <h4 className="font-semibold text-white text-base mb-4">KisanStatus.com</h4>
             <p className="text-sm text-gray-400 leading-relaxed mb-4">
@@ -22,11 +20,18 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-2 text-sm text-gray-400">
               <span aria-hidden="true">✍️</span>
-              <span>By <Link href="/about" className="text-green-400 hover:text-green-300 hover:underline font-medium focus:outline-none focus:ring-2 focus:ring-green-500 rounded">KisanStatus Team</Link></span>
+              <span>
+                By{' '}
+                <Link
+                  href="/about"
+                  className="text-green-400 hover:text-green-300 hover:underline font-medium focus:outline-none focus:ring-2 focus:ring-green-500 rounded"
+                >
+                  KisanStatus Team
+                </Link>
+              </span>
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h4 className="font-semibold text-white text-base mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm" role="list">
@@ -51,7 +56,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Official Government Links */}
           <div>
             <h4 className="font-semibold text-white text-base mb-4 flex items-center gap-2">
               <span aria-hidden="true">🏛️</span>
@@ -82,7 +86,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Helpline & Support */}
           <div>
             <h4 className="font-semibold text-white text-base mb-4 flex items-center gap-2">
               <span aria-hidden="true">📞</span>
@@ -97,13 +100,26 @@ export default function Footer() {
                 <p className="flex items-start gap-2">
                   <span className="shrink-0 mt-0.5" aria-hidden="true">📞</span>
                   <span>
-                    PM Kisan Helpline: <a href="tel:155261" className="text-white font-bold hover:underline focus:outline-none focus:ring-2 focus:ring-green-500 rounded">155261</a> (Toll-Free)
+                    PM Kisan Helpline:{' '}
+                    <a
+                      href="tel:155261"
+                      className="text-white font-bold hover:underline focus:outline-none focus:ring-2 focus:ring-green-500 rounded"
+                    >
+                      155261
+                    </a>{' '}
+                    (Toll-Free)
                   </span>
                 </p>
                 <p className="flex items-start gap-2">
                   <span className="shrink-0 mt-0.5" aria-hidden="true">📧</span>
                   <span>
-                    Email: <a href="mailto:kisanstatus.support@gmail.com" className="text-white hover:underline break-all focus:outline-none focus:ring-2 focus:ring-green-500 rounded">kisanstatus.support@gmail.com</a>
+                    Email:{' '}
+                    <a
+                      href="mailto:kisanstatus.support@gmail.com"
+                      className="text-white hover:underline break-all focus:outline-none focus:ring-2 focus:ring-green-500 rounded"
+                    >
+                      kisanstatus.support@gmail.com
+                    </a>
                   </span>
                 </p>
                 <p className="flex items-start gap-2">
@@ -125,7 +141,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-center md:text-left">
@@ -133,17 +148,19 @@ export default function Footer() {
                 © 2026 KisanStatus.com — Built with ❤️ for Indian Farmers
               </p>
               <p className="mt-1 text-xs text-gray-500">
-                By <Link href="/about" className="text-green-400 hover:text-green-300 hover:underline font-medium focus:outline-none focus:ring-2 focus:ring-green-500 rounded">KisanStatus Team</Link> |
-                Agricultural Content Expert
+                By{' '}
+                <Link
+                  href="/about"
+                  className="text-green-400 hover:text-green-300 hover:underline font-medium focus:outline-none focus:ring-2 focus:ring-green-500 rounded"
+                >
+                  KisanStatus Team
+                </Link>{' '}
+                | Agricultural Content Expert
               </p>
             </div>
             <div className="text-center md:text-right">
-              <p className="text-xs text-gray-500">
-                Independent Information Portal
-              </p>
-              <p className="text-xs text-gray-600 mt-1">
-                Not affiliated with Government of India
-              </p>
+              <p className="text-xs text-gray-500">Independent Information Portal</p>
+              <p className="text-xs text-gray-600 mt-1">Not affiliated with Government of India</p>
             </div>
           </div>
         </div>
