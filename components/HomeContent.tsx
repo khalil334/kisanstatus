@@ -193,7 +193,7 @@ export default function HomeContent() {
             </div>
           </div>
 
-          {/* Hero Image */}
+          {/* Hero Image — ✅ OPTIMIZED FOR LCP */}
           <div className="relative max-w-5xl mx-auto">
             <div className="absolute -inset-4 bg-gradient-to-r from-green-500/20 to-emerald-500/20 dark:from-green-600/20 dark:to-emerald-600/20 rounded-3xl blur-2xl" aria-hidden="true" />
             <figure className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/5 dark:ring-white/10">
@@ -203,6 +203,11 @@ export default function HomeContent() {
                 width={1200}
                 height={600}
                 priority
+                fetchPriority="high"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1024px"
+                quality={90}
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiEycf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xVsgH1fZ//2Q=="
                 className="w-full h-auto"
               />
               <figcaption className="sr-only">
@@ -307,7 +312,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* Featured Images */}
+      {/* Featured Images — ✅ OPTIMIZED */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800/50 dark:to-gray-900" aria-labelledby="featured-heading">
         <div className="container-site mx-auto px-4">
           <div className="text-center mb-14">
@@ -331,6 +336,8 @@ export default function HomeContent() {
                   alt={item.title}
                   fill
                   loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  quality={85}
                   className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" aria-hidden="true" />
