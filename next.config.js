@@ -61,6 +61,23 @@ const nextConfig = {
       { source: '/kisan-status', destination: '/articles/PmKisan24viKist2026', permanent: true },
       { source: '/kisan-status/', destination: '/articles/PmKisan24viKist2026', permanent: true },
       
+      // ✅ NEW: Scheme pages redirects (7 URLs) — Broken links fix
+      { source: '/scheme/agristack', destination: '/articles/AgriStackKyaHai2026', permanent: true },
+      { source: '/scheme/kcc', destination: '/articles/KisanCreditCardOnlineApply2026', permanent: true },
+      { source: '/scheme/pm-kisan', destination: '/articles/PmKisanMasterGuide2026', permanent: true },
+      { source: '/scheme/nabard-tractor', destination: '/articles/KisanTractorLoan2026', permanent: true },
+      { source: '/scheme/nano-dap', destination: '/articles/NanoDap500mlPriceInIndia2026', permanent: true },
+      { source: '/scheme/pmfby', destination: '/articles/PmfbyCropInsurance2026', permanent: true },
+      { source: '/scheme/soil-health-card', destination: '/articles/soil-health-card-complete-guide-2026', permanent: true },
+      
+      // ✅ NEW: Bank pages redirects (6 URLs) — Broken links fix
+      { source: '/bank/sbi', destination: '/articles/KisanRinKahaSeLe2026', permanent: true },
+      { source: '/bank/bob', destination: '/articles/KisanRinKahaSeLe2026', permanent: true },
+      { source: '/bank/pnb', destination: '/articles/KisanRinKahaSeLe2026', permanent: true },
+      { source: '/bank/cooperative', destination: '/articles/KisanRinKahaSeLe2026', permanent: true },
+      { source: '/bank/tata-capital', destination: '/articles/KisanRinKahaSeLe2026', permanent: true },
+      { source: '/bank/mahindra-finance', destination: '/articles/KisanRinKahaSeLe2026', permanent: true },
+      
       // Spam redirects
       { source: '/vulkan-vegas', destination: '/', permanent: true },
       { source: '/1xbet', destination: '/', permanent: true },
