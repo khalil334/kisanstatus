@@ -20,9 +20,46 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['@/components/ArticleShared', '@/components/ArticleSVGs', '@/lib'],
     scrollRestoration: true,
-    // TTFB improvement
     serverMinification: true,
     serverSourceMaps: false,
+  },
+
+  // ── Compiler Options — Bundle Size Reduce ──────────────────
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production' ? {
+      exclude: ['error', 'warn'],
+    } : false,
+  },
+
+  // ── Webpack Configuration — Advanced Optimization ──────────
+  webpack: (config, { dev, isServer }) => {
+    // Production optimizations
+    if (!dev && !isServer) {
+      // Split chunks for better caching
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        cacheGroups: {
+          default: false,
+          vendors: false,
+          // Vendor chunk for node_modules
+          vendor: {
+            name: 'vendor',
+            test: /[\\/]node_modules[\\/]/,
+            priority: 10,
+            chunks: 'all',
+          },
+          // Common chunk for shared code
+          common: {
+            name: 'common',
+            minChunks: 2,
+            priority: 5,
+            reuseExistingChunk: true,
+          },
+        },
+      };
+    }
+
+    return config;
   },
 
   // ── Redirects ──────────────────────────────────────────────
@@ -61,7 +98,7 @@ const nextConfig = {
       { source: '/kisan-status', destination: '/articles/PmKisan24viKist2026', permanent: true },
       { source: '/kisan-status/', destination: '/articles/PmKisan24viKist2026', permanent: true },
       
-      // ✅ NEW: Scheme pages redirects (7 URLs) — Broken links fix
+      // Scheme pages redirects (7 URLs)
       { source: '/scheme/agristack', destination: '/articles/AgriStackKyaHai2026', permanent: true },
       { source: '/scheme/kcc', destination: '/articles/KisanCreditCardOnlineApply2026', permanent: true },
       { source: '/scheme/pm-kisan', destination: '/articles/PmKisanMasterGuide2026', permanent: true },
@@ -70,7 +107,7 @@ const nextConfig = {
       { source: '/scheme/pmfby', destination: '/articles/PmfbyCropInsurance2026', permanent: true },
       { source: '/scheme/soil-health-card', destination: '/articles/soil-health-card-complete-guide-2026', permanent: true },
       
-      // ✅ NEW: Bank pages redirects (6 URLs) — Broken links fix
+      // Bank pages redirects (6 URLs)
       { source: '/bank/sbi', destination: '/articles/KisanRinKahaSeLe2026', permanent: true },
       { source: '/bank/bob', destination: '/articles/KisanRinKahaSeLe2026', permanent: true },
       { source: '/bank/pnb', destination: '/articles/KisanRinKahaSeLe2026', permanent: true },
