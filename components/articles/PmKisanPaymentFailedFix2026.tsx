@@ -9,42 +9,42 @@ const PUBLISHED = '2026-07-06T08:00:00+05:30';
 const MODIFIED = '2026-07-06T08:00:00+05:30';
 
 const RELATED = [
-  { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Meaning', emoji: '💳' },
-  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide', emoji: '📚' },
-  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '📅' },
-  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List', emoji: '📋' },
-  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide', emoji: '🔐' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Loan Guide', emoji: '💰' },
+  { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Matlab Kya Hai', emoji: '💳' },
+  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Complete Guide', emoji: '📚' },
+  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status Check', emoji: '📅' },
+  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List Mein Naam Dekho', emoji: '📋' },
+  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Kaise Karein', emoji: '🔐' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Loan Apply Online', emoji: '💰' },
 ];
 
 const FAQS_DATA = [
   {
-    q: 'Payment failed dikh raha hai par status approved hai — kyun?',
-    a: 'Bank account mein Aadhaar seed nahi hua ya NPCI mapping missing hai. Paisa government ne bheja lekin bank ne accept nahi kiya. Branch jao, Aadhaar seeding form bharo.',
+    q: 'Status mein approved dikh raha hai par paisa nahi aaya — kya hua?',
+    a: 'Bank account mein Aadhaar seed nahi hua ya NPCI mapping missing hai. Paisa government ne bheja lekin bank ne accept nahi kiya. Branch jao, Aadhaar seeding form bharo. 3-7 din mein fix ho jayega.',
   },
   {
-    q: 'Kitne din mein payment fix hoti hai?',
-    a: 'Aadhaar seeding ke baad 3-7 working days. NPCI remapping mein 7-15 din lag sakte hain. Agar 20 din se zyada ho jaye toh helpline 155261 par call karo.',
+    q: 'Kitne din mein payment fix hoti hai bank jaane ke baad?',
+    a: 'Aadhaar seeding ke baad 3-7 working days lagte hain. NPCI remapping mein 7-15 din. Agar 20 din se zyada ho jaye toh helpline 155261 par call karo ya district agriculture officer se milo.',
   },
   {
-    q: 'Kya ruki hui kist ka paisa wapas milega?',
-    a: 'Haan bhai, arrears milte hain. Jab problem fix hogi toh pichhli pending kistein ek saath aa jayengi. Koi installment permanently lost nahi hoti.',
+    q: 'Ruki hui kist ka paisa wapas milega ya gaya?',
+    a: '100% milega bhai. PM Kisan mein koi installment expire nahi hoti. Jab problem fix hogi toh pichhli sabhi pending kistein ek saath aa jayengi. Tension mat le.',
   },
   {
-    q: 'Wrong IFSC code se payment fail hui — ab kya karein?',
-    a: 'Portal par jakar bank details update karo. Farmers Corner → Edit Aadhaar/Bank Details → sahi IFSC daalo. Ya CSC jao, operator fix kar dega.',
+    q: 'IFSC code galat daal diya — ab kya karun?',
+    a: 'Portal par jakar bank details update karo. Farmers Corner → Edit Aadhaar/Bank Details → sahi IFSC daalo. Ya CSC jao, operator fix kar dega. Bank merger ke baad IFSC change ho jata hai — check karo.',
   },
   {
-    q: 'Account dormant ho gaya hai — payment aayegi?',
-    a: 'Nahi aayegi. Pehle account active karwao bank mein. ₹100 deposit karo ya KYC update karo. Phir seeding verify karo.',
+    q: 'Account dormant ho gaya hai — paisa aayega?',
+    a: 'Nahi aayega. Pehle account active karwao bank mein. ₹100 deposit karo ya KYC update karo. Phir seeding verify karo. 12 mahine se transaction nahi hua toh dormant mark ho jata hai.',
   },
   {
-    q: 'Joint account mein payment fail ho rahi hai?',
-    a: 'PM Kisan sirf individual savings account mein paisa bhejta hai. Joint, current, ya business account accept nahi hote. Naya individual account kholo aur update karo.',
+    q: 'Joint account mein payment fail ho rahi hai — kyun?',
+    a: 'PM Kisan sirf individual savings account mein paisa bhejta hai. Joint, current, ya business account accept nahi hote. Naya individual account kholo aur portal par update karo.',
   },
   {
-    q: 'Helpline par baat nahi ho rahi — alternative kya hai?',
-    a: 'Email karo: pmkisan-ict@gov.in. Ya district agriculture officer se milo. CSC par grievance register karwao — written complaint sabse effective hai.',
+    q: 'Helpline 155261 par baat nahi ho rahi — kya karun?',
+    a: 'Email karo: pmkisan-ict@gov.in. Ya district agriculture officer se milo. CSC par grievance register karwao — written complaint sabse effective hai. Phone par 100 baar try karo — kabhi kabhi line busy hoti hai.',
   },
 ];
 
@@ -95,7 +95,7 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
         <div className="my-6 p-5 bg-red-50 dark:bg-red-900/20 border-2 border-red-400 dark:border-red-700 border-l-[6px] rounded-xl">
           <h2 className="text-base font-black text-red-800 dark:text-red-300 mb-2">Sabse Pehle Yeh Samjho</h2>
           <p className="text-sm text-red-900 dark:text-red-200 leading-relaxed mb-2">
-            "Payment Failed" dekh kar ghabrao mat bhai. Iska matlab yeh nahi ki paisa chala gaya. Government ne aapke naam par fund release kiya hai — bas bank tak pahunchne mein rukawat aayi hai.
+            "Payment Failed" dekh kar ghabrao mat bhai. Paisa nahi gaya. Government ne aapke naam par fund release kiya hai — bas bank tak pahunchne mein rukawat aayi hai.
           </p>
           <p className="text-sm text-red-900 dark:text-red-200 leading-relaxed">
             Jab aap reason fix karoge, toh <strong>pichhli sabhi pending kistein ek saath aa jayengi.</strong> Koi installment permanently lost nahi hoti. Ab neeche padho — kaunsi problem hai aur kaise theek karni hai.
@@ -108,7 +108,7 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
             Portal par "Approved" dikhta hai lekin bank account khali. Yeh confusion hazaron kisanon ko hoti hai har kist mein. Root cause almost hamesha yahi hoti hai — <strong>bank account properly mapped nahi hai DBT system se.</strong>
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Government PFMS (Public Financial Management System) ke through paisa bhejti hai. PFMS ko aapka sahi bank account, sahi IFSC, aur Aadhaar link chahiye. Inme se ek bhi cheez galat ho toh transaction bounce ho jata hai. Chalo dekhte hain exactly kahan gadbad hai.
+            Government PFMS (Public Financial Management System) ke through paisa bhejti hai. PFMS ko aapka sahi bank account, sahi IFSC, aur Aadhaar link chahiye. Inme se ek bhi cheez galat ho toh transaction bounce ho jata hai.
           </p>
         </section>
 
