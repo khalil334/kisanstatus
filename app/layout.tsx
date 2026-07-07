@@ -41,11 +41,9 @@ export const metadata: Metadata = {
   category: 'Agriculture',
   alternates: {
     canonical: SITE_URL,
-    // ✅ REMOVED: /en reference (page exist nahi karta)
     languages: {
-      'hi-IN': `${SITE_URL}/`,
-      // 'en-US': `${SITE_URL}/en`,  // ❌ DELETE THIS LINE
-      'x-default': `${SITE_URL}/`,
+      'hi-IN': SITE_URL,
+      'x-default': SITE_URL,
     },
   },
   openGraph: {
@@ -99,9 +97,9 @@ export default function RootLayout({
   return (
     <html lang="hi-IN" suppressHydrationWarning className={poppins.variable}>
       <head>
-        <link rel="alternate" hrefLang="hi-IN" href={`${SITE_URL}/`} />
-        {/* ✅ REMOVED: hrefLang="en-US" */}
-        <link rel="alternate" hrefLang="x-default" href={`${SITE_URL}/`} />
+        {/* ✅ FIX: Removed hardcoded hreflang links — Next.js will auto-generate per page */}
+        {/* ❌ DELETED: <link rel="alternate" hrefLang="hi-IN" href={`${SITE_URL}/`} /> */}
+        {/* ❌ DELETED: <link rel="alternate" hrefLang="x-default" href={`${SITE_URL}/`} /> */}
 
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
