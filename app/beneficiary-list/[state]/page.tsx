@@ -304,16 +304,16 @@ export default async function BeneficiaryStatePage({
           </div>
         </div>
 
-        {/* Related Links */}
+        {/* Related Links — ✅ FIXED */}
         <div className="p-5 bg-green-50 border border-green-200 rounded-2xl">
           <p className="font-black text-green-900 text-sm mb-3">📖 Related Agrarian Welfare Guides</p>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
             {[
-              { href: '/articles/pm-kisan-ekyc-online-2026', l: '🔐 Digital Verification Guide' },
-              { href: '/articles/pm-kisan-23vi-kist-2026-status-check', l: '📅 23vi Tranche Status' },
-              { href: '/articles/pm-kisan-payment-failed-status-2026', l: '💸 Payment Fix' },
+              { href: '/articles/PmKisanEkycOnline2026', l: '🔐 Digital Verification Guide' },
+              { href: '/articles/PmKisan24viKist2026', l: '📅 24vi Tranche Status' },
+              { href: '/articles/PmKisanPaymentFailedFix2026', l: '💸 Payment Fix' },
               { href: '/calculator/installment-tracker', l: '📆 Installment Tracker' },
-              { href: '/articles/pm-kisan-registration-online-2026', l: '📝 Enrollment' },
+              { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
               { href: '/calculator/pm-kisan-benefit', l: '🌾 Benefit Calculator' },
             ].map(({ href, l }) => (
               <Link
