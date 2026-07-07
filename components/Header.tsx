@@ -186,8 +186,7 @@ function ThemeToggle() {
     }
   };
 
-  if (!mounted) return <div className="w-9 h-9" />;
-
+  // ✅ FIX: Empty div ki jagah actual button return karo (hydration mismatch fix)
   return (
     <button
       onClick={toggle}
