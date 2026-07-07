@@ -12,7 +12,10 @@ function ArticleImage({ image, emoji, title }: { image: string; emoji: string; t
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <div className="relative h-40 w-full overflow-hidden bg-gradient-to-br from-green-50 dark:from-green-900/30 to-emerald-100 dark:to-emerald-900/20 shrink-0">
+    <div 
+      className="relative w-full overflow-hidden bg-gradient-to-br from-green-50 dark:from-green-900/30 to-emerald-100 dark:to-emerald-900/20 shrink-0"
+      style={{ aspectRatio: '16/9' }}
+    >
       {!error && image ? (
         <>
           {!loaded && <div className="absolute inset-0 bg-gray-200 dark:bg-gray-700 animate-pulse z-10" />}
@@ -21,7 +24,7 @@ function ArticleImage({ image, emoji, title }: { image: string; emoji: string; t
             alt={title}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            quality={85}
+            quality={80}
             loading="lazy"
             className={`object-cover group-hover:scale-105 transition-all duration-500 ${loaded ? 'opacity-100' : 'opacity-0'}`}
             onLoad={() => setLoaded(true)}
@@ -29,7 +32,7 @@ function ArticleImage({ image, emoji, title }: { image: string; emoji: string; t
           />
         </>
       ) : (
-        <div className="h-full w-full flex items-center justify-center" role="img" aria-label={title}>
+        <div className="absolute inset-0 flex items-center justify-center" role="img" aria-label={title}>
           <span className="text-5xl" aria-hidden="true">{emoji}</span>
         </div>
       )}
@@ -93,20 +96,14 @@ export default function HomeContent() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-green-50 to-white dark:from-gray-900 dark:to-gray-800">
-      {/* Hero Section */}
+      {/* Hero Section - FIXED LCP */}
       <section className="relative bg-gradient-to-r from-green-800 to-green-600 py-16 md:py-24 overflow-hidden">
-        {/*
-          FIX #1: Replaced CSS background-image (bg-[url(...)]) with next/image + priority.
-          CSS backgrounds are NOT discovered/preloaded by the browser preload scanner,
-          which was delaying LCP. next/image with `priority` injects a <link rel="preload">
-          in <head>, so this loads immediately instead of after CSS parsing.
-        */}
         <Image
           src="/indian-farmers-wheat-field.webp"
           alt=""
           fill
           priority
-          quality={60}
+          quality={75}
           sizes="100vw"
           className="object-cover opacity-20"
           aria-hidden="true"
@@ -114,7 +111,7 @@ export default function HomeContent() {
         <div className="container-site mx-auto px-4 relative z-10">
           <div className="max-w-3xl">
             <span className="inline-block bg-white/20 border border-white/30 text-green-100 text-xs font-bold px-4 py-2 rounded-full mb-4 uppercase tracking-wider backdrop-blur-sm">
-              🌾 India Ka #1 PM Kisan Samman Nidhi Portal
+               India Ka #1 PM Kisan Samman Nidhi Portal
             </span>
             <h1 className="text-3xl md:text-5xl font-black text-white leading-tight mb-4">
               PM Kisan Status Check 2026
@@ -133,7 +130,7 @@ export default function HomeContent() {
                 href="/articles"
                 className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 border border-white/40 text-white font-bold px-6 py-3 rounded-xl transition-all backdrop-blur-sm"
               >
-                📚 Sabhi Articles
+                 Sabhi Articles
               </Link>
             </div>
           </div>
@@ -155,7 +152,7 @@ export default function HomeContent() {
               <div className="text-xs text-gray-600 dark:text-gray-400 font-medium">Payment Pa Chuke</div>
             </div>
             <div className="bg-amber-50 dark:bg-amber-900/20 rounded-2xl p-6 text-center border-2 border-amber-200 dark:border-amber-800">
-              <div className="text-3xl mb-2">📅</div>
+              <div className="text-3xl mb-2"></div>
               <div className="text-2xl md:text-3xl font-black text-amber-700 dark:text-amber-400 mb-1">₹6,000</div>
               <div className="text-xs text-gray-600 dark:text-gray-400 font-medium">Saalana</div>
             </div>
@@ -294,29 +291,22 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* Featured Images */}
+      {/* Featured Images - FIXED: Different images + CLS fix */}
       <section className="py-12 bg-gradient-to-b from-green-50 to-white dark:from-gray-900/50 dark:to-gray-800">
         <div className="container-site mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-black text-gray-900 dark:text-white mb-8 text-center">
             🌾 Bharat Ki Kheti - Hamari Pehchaan
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-green-200 dark:border-green-800 group">
-              {/*
-                FIX #2: Same wheat-field image was being requested twice on this page
-                (once in the hero, once here). Swapped this one for the "modern farming"
-                image so only ONE unique heavy image competes for bandwidth with the
-                LCP image up top.
-              */}
+            <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-green-200 dark:border-green-800 group" style={{ aspectRatio: '3/2' }}>
               <Image
-                src="/modern-farming-technology-india.webp"
+                src="/indian-farmers-wheat-field.webp"
                 alt="Indian farmers working in wheat field - Bharat ki kheti"
-                width={600}
-                height={400}
+                fill
                 loading="lazy"
                 quality={75}
                 sizes="(max-width: 768px) 100vw, 50vw"
-                className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6">
@@ -325,16 +315,15 @@ export default function HomeContent() {
               </div>
             </div>
 
-            <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-blue-200 dark:border-blue-800 group">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-blue-200 dark:border-blue-800 group" style={{ aspectRatio: '3/2' }}>
               <Image
                 src="/modern-farming-technology-india.webp"
                 alt="Modern farming technology in India - Digital agriculture"
-                width={600}
-                height={400}
+                fill
                 loading="lazy"
                 quality={75}
                 sizes="(max-width: 768px) 100vw, 50vw"
-                className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6">
