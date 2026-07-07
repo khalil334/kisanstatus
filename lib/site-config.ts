@@ -4,9 +4,9 @@
 
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://kisanstatus.com';
 export const SITE_NAME = 'KisanStatus';
-export const AUTHOR_NAME = 'Sidhu Singh';  // ✅ FIXED: Individual author name
+export const AUTHOR_NAME = 'KisanStatus Team';  // ✅ REVERTED: Team name
 export const AUTHOR_URL = `${SITE_URL}/about`;
-export const AUTHOR_BIO = 'Indian kisanon ko government schemes navigate karne mein help karne wala independent expert.';  // ✅ FIXED: Removed "team"
+export const AUTHOR_BIO = 'Indian kisanon ko government schemes navigate karne mein help karne wala independent expert team.';  // ✅ REVERTED
 export const TWITTER_HANDLE = '@kisanstatus';
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.webp`;
 export const LOGO_URL = `${SITE_URL}/logo.webp`;
