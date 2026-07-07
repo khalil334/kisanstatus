@@ -263,8 +263,7 @@ export default function HomeContent() {
                 { href: '/calculator/msp-income', icon: '', bg: 'from-orange-400 to-red-500', title: 'MSP Income', desc: 'Fasal ki paidavar × MSP rate = guaranteed kamai' },
                 { href: '/calculator/crop-profit', icon: '📊', bg: 'from-green-400 to-emerald-500', title: 'Crop Profit', desc: 'Kharcha vs kamai — shuddh munafa jaano per acre' },
                 { href: '/calculator/kcc-loan-emi', icon: '🏦', bg: 'from-blue-400 to-cyan-500', title: 'KCC Loan EMI', desc: '4% byaj par monthly EMI aur total interest' },
-                { href: '/calculator/fertilizer-cost', icon: '🌿', bg: 'from-lime-400 to-green-500', title: 'Fertilizer Cost', desc: 'Urea, DAP, MOP — NPK kharcha per acre' },
-                { href: '/calculator/irrigation-cost', icon: '💧', bg: 'from-cyan-400 to-blue-500', title: 'Irrigation Cost', desc: 'Drip vs flood — paani aur bijli ka kharcha' },
+                // ✅ REMOVED: fertilizer-cost aur irrigation-cost (ye pages exist nahi karte)
               ].map((calc, i) => (
                 <Link
                   key={i}
