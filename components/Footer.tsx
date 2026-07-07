@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
 const EXTERNAL_ICON = (
   <svg className="w-3 h-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -26,7 +27,7 @@ export default function Footer() {
                   href="/about"
                   className="text-green-400 hover:text-green-300 hover:underline font-medium focus:outline-none focus:ring-2 focus:ring-green-500 rounded"
                 >
-                  KisanStatus Team
+                  {AUTHOR_NAME}
                 </Link>
               </span>
             </div>
@@ -153,7 +154,7 @@ export default function Footer() {
                   href="/about"
                   className="text-green-400 hover:text-green-300 hover:underline font-medium focus:outline-none focus:ring-2 focus:ring-green-500 rounded"
                 >
-                  KisanStatus Team
+                  {AUTHOR_NAME}
                 </Link>{' '}
                 | Agricultural Content Expert
               </p>
