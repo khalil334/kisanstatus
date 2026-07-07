@@ -114,7 +114,7 @@ function ArticleCard({ article, showNewBadge = false }: { article: typeof ARTICL
           {article.desc}
         </p>
         <div className="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-700/50">
-          <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">✍️ KisanStatus</span>
+          <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">✍️ KisanStatus Team</span>
           <Link
             href={`/articles/${article.slug}`}
             className="text-sm font-bold text-green-700 dark:text-green-400 group-hover:translate-x-2 transition-transform duration-300 inline-flex items-center gap-1.5"
@@ -147,10 +147,7 @@ export default function HomeContent() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBSITE_SCHEMA) }}
       />
 
-      {/* Skip to main content link for accessibility */}
-      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-green-600 focus:text-white focus:px-4 focus:py-2 focus:rounded">
-        Skip to main content
-      </a>
+      {/* ✅ FIX: Removed duplicate skip link — already in layout.tsx */}
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-white via-green-50/30 to-white dark:from-gray-900 dark:via-gray-900 dark:to-gray-900 py-20 md:py-28 overflow-hidden" aria-labelledby="hero-heading">
