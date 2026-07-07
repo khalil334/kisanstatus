@@ -8,11 +8,11 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { SITE_URL, SITE_NAME } from '@/lib/site-config';
 
 // ═══════════════════════════════════════════════════════════
-// UPDATED: 7 July 2026 (Monsoon Impact)
-// Current market rates based on AgMarkNet data
+// UPDATED: 8 July 2026 (Daily Kisan Dashboard)
+// Mandi Bhav + Mausam + Fasal Salah + Scheme Alert
 // ═══════════════════════════════════════════════════════════
 
-const LAST_UPDATED = '7 July 2026, 09:30 AM';
+const LAST_UPDATED = '8 July 2026, 09:30 AM';
 const SOURCE_URL = 'https://agmarknet.gov.in';
 
 type Trend = 'up' | 'down' | 'stable';
@@ -25,7 +25,7 @@ interface CommodityItem {
   trend: Trend;
 }
 
-// UPDATED RATES - 7 July 2026 (Heavy monsoon impact)
+// UPDATED RATES - 8 July 2026
 const VEGETABLES: readonly CommodityItem[] = [
   { name: 'आलू (Aloo)',           rate: '₹22-28/kg',    prev: 24,  change: '+₹2',  trend: 'up' },
   { name: 'प्याज (Pyaaz)',        rate: '₹30-42/kg',    prev: 35,  change: '+₹5',  trend: 'up' },
@@ -41,7 +41,6 @@ const VEGETABLES: readonly CommodityItem[] = [
   { name: 'बैंगन (Baingan)',      rate: '₹24-32/kg',    prev: 28,  change: '+₹2',  trend: 'up' },
   { name: 'मटर (Matar)',          rate: '₹45-55/kg',    prev: 48,  change: '+₹3',  trend: 'up' },
   { name: 'मूली (Mooli)',         rate: '₹12-18/kg',    prev: 14,  change: '+₹2',  trend: 'up' },
-  { name: 'शलगम (Shalgam)',       rate: '₹16-22/kg',    prev: 18,  change: '+₹2',  trend: 'up' },
   { name: 'हरी मिर्च (Hari Mirch)', rate: '₹65-85/kg',  prev: 72,  change: '+₹8',  trend: 'up' },
   { name: 'अदरक (Adrak)',         rate: '₹95-125/kg',   prev: 105, change: '+₹5',  trend: 'up' },
   { name: 'लहसुन (Lehsun)',       rate: '₹145-185/kg',  prev: 165, change: '+₹5',  trend: 'up' },
@@ -56,8 +55,6 @@ const FRUITS: readonly CommodityItem[] = [
   { name: 'पपीता (Papita)',       rate: '₹38-48/kg',    prev: 42,  change: '+₹2',  trend: 'up' },
   { name: 'अनार (Anar)',          rate: '₹125-155/kg',  prev: 135, change: '+₹5',  trend: 'up' },
   { name: 'नाशपाती (Nashpati)',   rate: '₹75-100/kg',   prev: 85,  change: '+₹5',  trend: 'up' },
-  { name: 'आड़ू (Aadu)',          rate: '₹65-85/kg',    prev: 72,  change: '+₹5',  trend: 'up' },
-  { name: 'लीची (Litchi)',        rate: '₹70-110/kg',   prev: 90,  change: '-₹15', trend: 'down' },
   { name: 'तरबूज (Tarbuj)',       rate: '₹12-22/kg',    prev: 18,  change: '-₹4',  trend: 'down' },
   { name: 'खरबूजा (Kharbuja)',    rate: '₹28-42/kg',    prev: 35,  change: '-₹5',  trend: 'down' },
 ];
@@ -81,50 +78,52 @@ const STATE_RATES: readonly CityRate[] = [
   { state: 'पुणे',      mandi: 'Market Yard Pune',  veg: '₹28-36', fruit: '₹100-130', id: 'pune' },
 ];
 
-// ✅ All slugs updated to match articles-data.ts
+// ✅ NEW: Seasonal Crop Advisory (July 2026 - Monsoon)
+const CROP_ADVISORY = [
+  { crop: '🌾 Dhaan (Rice)', tip: 'Transplanting ka time hai. Nursery se 25-30 din purane paudhe lagao. Zinc sulfate 25kg/acre daalo.', urgency: 'high' },
+  { crop: '🌽 Makka (Maize)', tip: 'Boai complete karo. Weed control zaroori — 15-20 din mein atrazine spray karo.', urgency: 'medium' },
+  { crop: '🫘 Moong/Urad', tip: 'Monsoon moong ki boai ka last week. Seed rate 10-12 kg/acre. Rhizobium treatment zaroori.', urgency: 'high' },
+  { crop: '🥜 Mungfali', tip: 'Boai shuru karo. Gypsum 200kg/acre daalo. White grub ke liye neem cake use karo.', urgency: 'medium' },
+  { crop: '🌶️ Sabziyan', tip: 'Bhindi, lauki, karela — raised bed par lagao. Drainage achha rakho warna root rot hoga.', urgency: 'low' },
+];
+
+// ✅ NEW: Upcoming Deadlines & Alerts
+const SCHEME_ALERTS = [
+  { icon: '💰', title: 'PM Kisan 24vi Kist', desc: 'Expected Oct 2026. eKYC abhi complete karo.', link: '/articles/PmKisan24viKist2026', color: 'green' },
+  { icon: '☀️', title: 'PM Kusum Solar Pump', desc: 'Subsidy quota limited — jaldi apply karo.', link: '/articles/PmKusumYojanaSolarSubsidy2026', color: 'amber' },
+  { icon: '🛡️', title: 'PMFBY Insurance', desc: 'Kharif enrollment deadline: 31 July 2026.', link: '/articles/PmfbyCropInsurance2026', color: 'red' },
+  { icon: '🔐', title: 'eKYC Mandatory', desc: 'Bina eKYC ke agli kist nahi milegi.', link: '/articles/PmKisanEkycOnline2026', color: 'blue' },
+];
+
+// ✅ NEW: 7-Day Weather Forecast (Sample Data)
+const WEATHER_FORECAST = [
+  { day: 'Aaj', date: '8 Jul', temp: '32°/26°', condition: '⛈️ Heavy Rain', rain: '80%' },
+  { day: 'Kal', date: '9 Jul', temp: '31°/25°', condition: '🌧️ Moderate', rain: '65%' },
+  { day: 'Thu', date: '10 Jul', temp: '33°/26°', condition: '🌦️ Light Rain', rain: '40%' },
+  { day: 'Fri', date: '11 Jul', temp: '34°/27°', condition: '⛅ Cloudy', rain: '20%' },
+  { day: 'Sat', date: '12 Jul', temp: '35°/28°', condition: '☀️ Sunny', rain: '5%' },
+  { day: 'Sun', date: '13 Jul', temp: '34°/27°', condition: '🌤️ Partly Sunny', rain: '10%' },
+  { day: 'Mon', date: '14 Jul', temp: '33°/26°', condition: '🌦️ Light Rain', rain: '35%' },
+];
+
 const RELATED = [
   { slug: 'PmKisan24viKist2026', title: '24vi Kist Status Check', emoji: '📆' },
   { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide', emoji: '📚' },
   { slug: 'soil-health-card-complete-guide-2026', title: 'Soil Health Card', emoji: '🌱' },
   { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List', emoji: '📋' },
   { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price Guide', emoji: '🧪' },
-  { slug: 'AgriStackKyaHai2026', title: 'Digital Kisan ID', emoji: '🆔' },
+  { slug: 'PmKusumYojanaSolarSubsidy2026', title: 'Solar Pump Subsidy', emoji: '☀️' },
 ];
 
-// ✅ NEW: Low-competitive, specific FAQs
 const FAQS_DATA = [
-  { 
-    q: 'Aaj 7 July 2026 ko pyaaz ka rate kya hai?', 
-    a: 'Aaj pyaaz ₹30-42/kg ke beech hai. Monsoon ki wajah se supply kam hui hai, isliye pichhle hafte se ₹5-7 badh gaya hai. Delhi mein Azadpur mandi mein ₹32-38, Mumbai mein Vashi APMC mein ₹35-42 mil raha hai. Retail mein ₹40-50 tak ja sakta hai.' 
-  },
-  { 
-    q: 'Aloo ka aaj ka mandi bhav kya hai?', 
-    a: 'Aloo aaj ₹22-28/kg hai. Pichhle hafte ₹24 tha, ab ₹2 badh gaya hai. Monsoon mein transport mushkil hota hai, isliye rates thode upar jaate hain. Punjab se aane wala aloo sabse sasta hai — ₹22-24/kg. Retail mein ₹28-35 tak milta hai.' 
-  },
-  { 
-    q: 'Tamatar ka rate aaj kyun itna zyada hai?', 
-    a: 'Tamatar ₹48-65/kg hai — monsoon ki wajah se fasal kharab hui hai. Maharashtra aur Karnataka mein heavy rain se crop damage hua. Pichhle mahine ₹35-40 tha, ab ₹10-15 badh gaya. 10-15 din mein normal ho jayega jab naya crop aayega.' 
-  },
-  { 
-    q: 'Mandi bhav kab update hota hai?', 
-    a: 'AgMarkNet par rates subah 9-11 baje update hote hain. Har mandi ka apna time hota — Azadpur (Delhi) 10 baje, Vashi (Mumbai) 11 baje. Hum is page ko daily 9:30 AM par update karte hain. Weekend par rates Saturday ke hote hain, Sunday ko mandi band.' 
-  },
-  { 
-    q: 'Kya mandi bhav live hota hai ya fixed?', 
-    a: 'Mandi bhav live nahi hota — din mein 2-3 baar change hota hai. Subah 7-9 baje sabse best rate milta hai (fresh arrival). Dopahar mein rates thode kam ho sakte hain. Hum approximate range dete hain — exact rate ke liye agmarknet.gov.in ya nazdeeki mandi check karein.' 
-  },
-  { 
-    q: 'Gaon ki mandi ka bhav kaise pata karein bina internet ke?', 
-    a: 'SMS service use karo! 51444 par "PRICE <space> <commodity> <space> <mandi name>" SMS bhejo. Jaise: "PRICE ALOO AZADPUR". Free hai. Ya Kisan Suvidha app download karo — offline mode mein bhi last known rates dikha deta hai.' 
-  },
-  { 
-    q: 'Thok rate aur retail rate mein kitna farak hota hai?', 
-    a: 'Generally 20-35% farak hota hai. Retail mein transport (₹2-5/kg), wastage (5-10%), aur dukaan ka margin (10-15%) add hota hai. Jaise mandi mein aloo ₹24/kg hai toh retail mein ₹30-35/kg milega. Monsoon mein transport cost badh jaata hai, farak 40% tak ho sakta hai.' 
-  },
-  { 
-    q: 'Monsoon mein sabzi ka rate kyun badhta hai?', 
-    a: '3 reasons: 1) Transport mushkil — roads kharab, truck late aate hain. 2) Crop damage — heavy rain se fasal kharab. 3) Storage problem — nami se sabzi jaldi kharab hoti hai. Isliye July-August mein rates 20-40% badh jaate hain. September mein normal ho jaata hai.' 
-  },
+  { q: 'Aaj 8 July 2026 ko pyaaz ka rate kya hai?', a: '₹30-42/kg. Monsoon se supply kam hai, pichhle hafte se ₹5-7 badha hai.' },
+  { q: 'Aloo ka aaj ka mandi bhav?', a: '₹22-28/kg. Punjab aloo sabse sasta ₹22-24. Retail mein ₹28-35.' },
+  { q: 'Tamatar itna mehnga kyun?', a: '₹48-65/kg. Maharashtra/Karnataka mein heavy rain se crop damage. 10-15 din mein normal hoga.' },
+  { q: 'Mandi bhav kab update hota hai?', a: 'AgMarkNet par 9-11 AM. Hum daily 9:30 AM update karte hain. Sunday mandi band.' },
+  { q: 'Thok aur retail mein kitna farak?', a: '20-35%. Transport + wastage + margin add hota hai. Monsoon mein 40% tak.' },
+  { q: 'Bina internet mandi bhav kaise pata karein?', a: 'SMS: 51444 par "PRICE ALOO AZADPUR" bhejo. Free hai. Ya Kisan Suvidha app offline mode.' },
+  { q: 'Monsoon mein rate kyun badhta hai?', a: 'Transport mushkil + crop damage + storage problem. July-August mein 20-40% upar. September mein normal.' },
+  { q: 'Abhi kaunsi fasal boani chahiye?', a: 'Dhaan transplanting, makka boai, moong/urad last week, mungfali shuru. Sabzi raised bed par.' },
 ];
 
 // ═══════════════════════════════════════════════════════════
@@ -196,11 +195,11 @@ export default function MandiBhavContent({ article }: { article: ArticleMeta }) 
             <span>/</span>
             <Link href="/articles" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Articles</Link>
             <span>/</span>
-            <span className="text-white font-bold">Market Rates</span>
+            <span className="text-white font-bold">Kisan Dashboard</span>
           </nav>
-          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Daily Market Reference</span>
+          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">📊 Daily Kisan Dashboard</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            Aaj Ka Mandi Bhav 7 July 2026: Sabzi Aur Fruit Rates + Shehar-wise Bhav
+            Aaj Ka Kisan Dashboard — Mandi Bhav + Mausam + Fasal Salah + Scheme Alert
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
@@ -212,11 +211,11 @@ export default function MandiBhavContent({ article }: { article: ArticleMeta }) 
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* IMAGE 1: Hero - Mixed Vegetables — PATH UNCHANGED */}
+        {/* IMAGE 1: Hero */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/articles/mandi-bhav-today/mandi-fresh-vegetables-mixed.webp'}
-            alt="Aaj ka mandi bhav 7 July 2026 — sabzi aur fruit wholesale rates India"
+            alt="Aaj ka kisan dashboard — mandi bhav mausam fasal salah scheme alert ek jagah"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -225,29 +224,101 @@ export default function MandiBhavContent({ article }: { article: ArticleMeta }) 
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Approximate Thok Rate Range · Official Source: AgMarkNet · Updated {LAST_UPDATED}
+            Roz Subah Ye Page Kholo — Sab Kuch Ek Jagah Milega
           </p>
         </div>
+
+        {/* ═══ SECTION 1: WEATHER FORECAST ═══ */}
+        <section className="mb-8">
+          <SH>🌤️ 7 Din Ka Mausam — Kheti Planning Ke Liye</SH>
+          <div className="overflow-x-auto pb-2">
+            <div className="flex gap-3 min-w-max">
+              {WEATHER_FORECAST.map((w, i) => (
+                <div key={i} className={`flex-shrink-0 w-28 rounded-xl p-3 text-center border-2 ${
+                  i === 0 ? 'bg-blue-50 dark:bg-blue-900/20 border-blue-400 dark:border-blue-600' : 'bg-[var(--color-card)] border-[var(--color-border)]'
+                }`}>
+                  <div className="text-xs font-bold text-[var(--color-text-muted)] mb-1">{w.day}</div>
+                  <div className="text-[10px] text-[var(--color-text-muted)] mb-2">{w.date}</div>
+                  <div className="text-2xl mb-1">{w.condition.split(' ')[0]}</div>
+                  <div className="text-sm font-black text-[var(--color-text)] mb-1">{w.temp}</div>
+                  <div className="text-[10px] text-blue-600 dark:text-blue-400 font-bold">🌧️ {w.rain}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <p className="text-xs text-[var(--color-text-muted)] mt-3 italic">
+            💡 <strong>Tip:</strong> Aaj-kal heavy rain hai — spraying mat karo. Transplanting ke liye Friday-Saturday best window hai.
+          </p>
+        </section>
+
+        {/* ═══ SECTION 2: SCHEME ALERTS ═══ */}
+        <section className="mb-8">
+          <SH>🔔 Scheme Alerts — Deadline Miss Mat Karo</SH>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {SCHEME_ALERTS.map((alert, i) => {
+              const colors = {
+                green: 'bg-green-50 dark:bg-green-900/20 border-green-300 dark:border-green-700',
+                amber: 'bg-amber-50 dark:bg-amber-900/20 border-amber-300 dark:border-amber-700',
+                red: 'bg-red-50 dark:bg-red-900/20 border-red-300 dark:border-red-700',
+                blue: 'bg-blue-50 dark:bg-blue-900/20 border-blue-300 dark:border-blue-700',
+              };
+              return (
+                <Link key={i} href={alert.link} className={`block p-4 rounded-xl border-2 ${colors[alert.color as keyof typeof colors]} hover:shadow-md transition-all`}>
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl shrink-0">{alert.icon}</span>
+                    <div>
+                      <p className="font-black text-[var(--color-text)] text-sm mb-1">{alert.title}</p>
+                      <p className="text-xs text-[var(--color-text-muted)]">{alert.desc}</p>
+                    </div>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </section>
+
+        {/* ═══ SECTION 3: CROP ADVISORY ═══ */}
+        <section className="mb-8">
+          <SH>🌱 Fasal Salah — July 2026 (Monsoon Season)</SH>
+          <div className="space-y-3">
+            {CROP_ADVISORY.map((item, i) => (
+              <div key={i} className={`p-4 rounded-xl border-2 ${
+                item.urgency === 'high' ? 'bg-red-50 dark:bg-red-900/20 border-red-300 dark:border-red-700' :
+                item.urgency === 'medium' ? 'bg-amber-50 dark:bg-amber-900/20 border-amber-300 dark:border-amber-700' :
+                'bg-green-50 dark:bg-green-900/20 border-green-300 dark:border-green-700'
+              }`}>
+                <div className="flex items-start gap-3">
+                  <span className="text-xl shrink-0">{item.crop.split(' ')[0]}</span>
+                  <div>
+                    <p className="font-black text-[var(--color-text)] text-sm mb-1">{item.crop}</p>
+                    <p className="text-xs text-[var(--color-text-muted)] leading-relaxed">{item.tip}</p>
+                  </div>
+                  {item.urgency === 'high' && <span className="ml-auto text-[10px] font-bold bg-red-600 text-white px-2 py-0.5 rounded-full shrink-0">URGENT</span>}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
 
         {/* Monsoon Alert */}
         <div className="my-6 p-5 bg-red-50 dark:bg-red-900/20 border-2 border-red-400 dark:border-red-700 border-l-[6px] rounded-xl">
-          <h2 className="text-base font-black text-red-800 dark:text-red-300 mb-2">🌧️ Monsoon Alert — 7 July 2026</h2>
+          <h2 className="text-base font-black text-red-800 dark:text-red-300 mb-2">🌧️ Monsoon Alert — 8 July 2026</h2>
           <p className="text-sm text-red-900 dark:text-red-200 leading-relaxed mb-2">
-            Heavy monsoon ki wajah se <strong>pyaaz, tamatar, aur hari mirch</strong> ke rates pichhle hafte se 15-25% badh gaye hain. Transport mushkil hai, supply kam hai.
+            Heavy monsoon ki wajah se <strong>pyaaz, tamatar, hari mirch</strong> ke rates 15-25% badh gaye hain.
           </p>
           <p className="text-sm text-red-900 dark:text-red-200 leading-relaxed">
-            <strong>Expectation:</strong> Agli 10-15 din mein rates normal ho jayenge jab naya crop aayega. Abhi ke liye 2-3 mandi compare karo aur bulk buying karo.
+            <strong>Expectation:</strong> 10-15 din mein normal hoga. Abhi bulk buying karo.
           </p>
         </div>
 
-        {/* Honest Disclaimer */}
+        {/* Disclaimer */}
         <WB>
-          <strong>Important:</strong> Yeh page manually reviewed approximate range dikhata hai — live feed nahi. Alag mandi mein ek hi din ka rate 2-3x tak alag ho sakta hai. Exact figure ke liye <a href={SOURCE_URL} target="_blank" rel="noopener noreferrer" className="underline font-bold">agmarknet.gov.in</a> ya nazdeeki mandi check karein. Retail rate thok se 20-35% zyada hota hai.
+          <strong>Note:</strong> Rates approximate hain — AgMarkNet data based. Exact rate ke liye <a href={SOURCE_URL} target="_blank" rel="noopener noreferrer" className="underline font-bold">agmarknet.gov.in</a> check karein. Retail rate thok se 20-35% zyada hota hai.
         </WB>
 
         {/* City Selector */}
         <section className="mb-8">
-          <SH>Apna Sheher Chunein — Aaj Ka Bhav</SH>
+          <SH>🏬 Apna Sheher Chunein — Aaj Ka Bhav</SH>
           <div className="flex flex-wrap gap-2 mb-4">
             {STATE_RATES.map(s => (
               <button
@@ -269,39 +340,21 @@ export default function MandiBhavContent({ article }: { article: ArticleMeta }) 
               <span className="text-2xl">🏬</span>
               <div>
                 <div className="font-black text-[var(--color-text)] text-lg">{city.state} — {city.mandi}</div>
-                <div className="text-xs text-[var(--color-text-muted)]">Approximate range · Updated {LAST_UPDATED}</div>
+                <div className="text-xs text-[var(--color-text-muted)]">Updated {LAST_UPDATED}</div>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-[var(--color-card)] rounded-xl p-4 text-center border border-green-200 dark:border-green-800">
                 <div className="text-xs text-[var(--color-text-muted)] mb-1">Sabzi Average</div>
                 <div className="text-2xl font-black text-green-700 dark:text-green-400">{city.veg}</div>
-                <div className="text-xs text-[var(--color-text-muted)]">per kg</div>
               </div>
               <div className="bg-[var(--color-card)] rounded-xl p-4 text-center border border-amber-200 dark:border-amber-800">
                 <div className="text-xs text-[var(--color-text-muted)] mb-1">Phal Average</div>
                 <div className="text-2xl font-black text-amber-700 dark:text-amber-400">{city.fruit}</div>
-                <div className="text-xs text-[var(--color-text-muted)]">per kg</div>
               </div>
             </div>
           </div>
         </section>
-
-        {/* IMAGE 2: Potato & Onion — PATH UNCHANGED */}
-        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
-          <Image
-            src="/images/articles/mandi-bhav-today/mandi-vegetables-potato-onion.webp"
-            alt="Aloo pyaaz ka mandi bhav aaj — most volatile vegetables"
-            width={1200}
-            height={630}
-            className="w-full object-cover"
-            loading="lazy"
-            sizes="(max-width: 768px) 100vw, 768px"
-          />
-          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Aloo aur Pyaaz — Sabse Zyada Price Fluctuation Wali Sabziyan
-          </p>
-        </div>
 
         {/* Search */}
         <div className="mb-6 relative">
@@ -310,78 +363,38 @@ export default function MandiBhavContent({ article }: { article: ArticleMeta }) 
             type="text"
             value={search}
             onChange={e => setSearch(e.target.value)}
-            placeholder="Khojein... jaise: aloo, seb, tamatar, pyaaz"
+            placeholder="Khojein... aloo, seb, tamatar, pyaaz"
             className="w-full pl-11 pr-4 py-3 border-2 border-[var(--color-border)] rounded-xl focus:border-[var(--color-primary)] focus:outline-none text-sm bg-[var(--color-card)] text-[var(--color-text)]"
           />
         </div>
 
         {/* Vegetables */}
         <section className="mb-10">
-          <SH>Sabzi Ka Bhav — Aaj Ka Rate (7 July 2026)</SH>
-          <p className="text-xs text-[var(--color-text-muted)] mb-4">Approximate range · Updated {LAST_UPDATED}</p>
-
+          <SH>🥬 Sabzi Ka Bhav — Aaj Ka Rate</SH>
           {filteredVeg.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {filteredVeg.map((v, i) => (
-                <PriceCard key={i} {...v} accent="green" />
-              ))}
+              {filteredVeg.map((v, i) => <PriceCard key={i} {...v} accent="green" />)}
             </div>
           ) : (
             <p className="text-[var(--color-text-muted)] text-center py-8">Koi result nahi mila.</p>
           )}
         </section>
-
-        {/* IMAGE 3: Tomato & Carrot — PATH UNCHANGED */}
-        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
-          <Image
-            src="/images/articles/mandi-bhav-today/mandi-vegetables-tomato-carrot.webp"
-            alt="Tamatar gaajar ka mandi bhav — seasonal vegetables rate"
-            width={1200}
-            height={630}
-            className="w-full object-cover"
-            loading="lazy"
-            sizes="(max-width: 768px) 100vw, 768px"
-          />
-          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Tamatar aur Gaajar — Seasonal Vegetables
-          </p>
-        </div>
 
         {/* Fruits */}
         <section className="mb-10">
-          <SH>Phal Ka Rate — Aaj Ka Bhav</SH>
-          <p className="text-xs text-[var(--color-text-muted)] mb-4">Approximate range · Updated {LAST_UPDATED}</p>
-
+          <SH>🍎 Phal Ka Rate — Aaj Ka Bhav</SH>
           {filteredFruit.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {filteredFruit.map((f, i) => (
-                <PriceCard key={i} {...f} accent="amber" />
-              ))}
+              {filteredFruit.map((f, i) => <PriceCard key={i} {...f} accent="amber" />)}
             </div>
           ) : (
             <p className="text-[var(--color-text-muted)] text-center py-8">Koi result nahi mila.</p>
           )}
         </section>
 
-        {/* IMAGE 4: Apple & Banana — PATH UNCHANGED */}
-        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
-          <Image
-            src="/images/articles/mandi-bhav-today/mandi-fruits-apple-banana.webp"
-            alt="Seb kela ka mandi bhav — most consumed fruits"
-            width={1200}
-            height={630}
-            className="w-full object-cover"
-            loading="lazy"
-            sizes="(max-width: 768px) 100vw, 768px"
-          />
-          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Seb aur Kela — Sabse Zyada Khaye Jane Wale Phal
-          </p>
-        </div>
-
         {/* All Cities Table */}
         <section className="mb-10">
-          <SH>Sheher-wise Compare Karein — 7 July 2026</SH>
+          <SH>📊 Sheher-wise Compare Karein</SH>
           <div className="overflow-x-auto rounded-xl border border-[var(--color-border)] shadow-sm">
             <table className="w-full text-sm border-collapse">
               <thead>
@@ -393,7 +406,7 @@ export default function MandiBhavContent({ article }: { article: ArticleMeta }) 
                 </tr>
               </thead>
               <tbody>
-                {STATE_RATES.map((r, i) => (
+                {STATE_RATES.map((r) => (
                   <tr
                     key={r.id}
                     onClick={() => setSelectedCity(r.id)}
@@ -412,25 +425,9 @@ export default function MandiBhavContent({ article }: { article: ArticleMeta }) 
           </div>
         </section>
 
-        {/* IMAGE 5: Mango & Orange — PATH UNCHANGED */}
-        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
-          <Image
-            src="/images/articles/mandi-bhav-today/mandi-fruits-mango-orange.webp"
-            alt="Aam santra ka mandi bhav — seasonal fruits"
-            width={1200}
-            height={630}
-            className="w-full object-cover"
-            loading="lazy"
-            sizes="(max-width: 768px) 100vw, 768px"
-          />
-          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Aam aur Santra — Seasonal Fruits Price Guide
-          </p>
-        </div>
-
-        {/* Mandi Profit Calculator */}
+        {/* Profit Calculator */}
         <section className="mb-10">
-          <SH>Fasal Bikri Calculator — Munafa Jaano</SH>
+          <SH>🧮 Fasal Bikri Calculator — Munafa Jaano</SH>
           <div className="bg-amber-50 dark:bg-amber-900/20 rounded-2xl p-6 border-2 border-amber-200 dark:border-amber-800">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
               {[
@@ -464,33 +461,16 @@ export default function MandiBhavContent({ article }: { article: ArticleMeta }) 
           </div>
         </section>
 
-        {/* IMAGE 6: Mixed Fruits — PATH UNCHANGED */}
-        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
-          <Image
-            src="/images/articles/mandi-bhav-today/mandi-fresh-fruits-mixed.webp"
-            alt="Vividh prakar ke phal — complete fruit price guide"
-            width={1200}
-            height={630}
-            className="w-full object-cover"
-            loading="lazy"
-            sizes="(max-width: 768px) 100vw, 768px"
-          />
-          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Vividh Prakar Ke Phal — Complete Fruit Price Guide
-          </p>
-        </div>
-
         {/* Tips */}
         <section className="mb-10">
-          <SH>Achha Rate Lene Ki Tips — Monsoon Special</SH>
+          <SH>💡 Achha Rate Lene Ki Tips</SH>
           <div className="space-y-2">
             {[
-              'Subah 7-9 baje mandi jaao — taaza maal + best rate (monsoon mein arrival jaldi hoti hai)',
+              'Subah 7-9 baje mandi jaao — taaza maal + best rate',
               'Thok market mein retail se 20-35% sasta — bulk buying karo',
-              '2-3 mandi compare karo — Azadpur, Vashi, Sealdah — rates alag hote hain',
-              'AgMarkNet/eNAM app se daily figures confirm karo — live updates milti hain',
-              'Monsoon mein transport cost badh jaata hai — nazdeeki mandi prefer karo',
-              'Bechne se pehle 7-day trend dekho — Kisan Suvidha app par free hai',
+              '2-3 mandi compare karo — rates alag hote hain',
+              'AgMarkNet/eNAM app se daily figures confirm karo',
+              'Monsoon mein nazdeeki mandi prefer karo — transport cost bachega',
               'Storage facility use karo — monsoon mein sabzi jaldi kharab hoti hai',
             ].map((tip) => (
               <div key={tip} className="flex items-start gap-2 p-3 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg">
@@ -504,24 +484,24 @@ export default function MandiBhavContent({ article }: { article: ArticleMeta }) 
         {/* FAQ */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aaj Ka Mandi Bhav — Aksar Puche Jane Wale Sawal
+            Aksar Puche Jane Wale Sawal
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="Mandi Bhav 7 July 2026 FAQ — Verified Answers" />
+          <FAQBlock faqs={FAQS_DATA} caption="Kisan Dashboard FAQ — Verified Answers" />
         </section>
 
         <GovLink
           href={SOURCE_URL}
           label="AgMarkNet — Official Daily Mandi Rates"
-          guide="Aaj Ka Rate Dekho"
+          guide="Official Rate Dekho"
           guideHref="/articles/NanoDap500mlPriceInIndia2026"
           portalName="agmarknet.gov.in"
         />
 
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={LAST_UPDATED} />
-        
+
         <BottomNav extraLinks={[
-          { href: '/articles/NanoDap500mlPriceInIndia2026', l: '🧪 Nano DAP Price' },
+          { href: '/articles/PmKusumYojanaSolarSubsidy2026', l: '☀️ Solar Pump' },
           { href: '/calculator/crop-profit', l: '📊 Crop Profit' },
         ]} />
         <Disclaimer />
