@@ -119,6 +119,8 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   PmKisanPaymentFailedFix2026:                dynamic(() => import('@/components/articles/PmKisanPaymentFailedFix2026'),                { loading: ArticleLoading, ssr: true }),
   PmKisan25viKist2027:                        dynamic(() => import('@/components/articles/PmKisan25viKist2027'),                        { loading: ArticleLoading, ssr: true }),
   PmKisanSelfRegisteredStatusCheck:           dynamic(() => import('@/components/articles/PmKisanSelfRegisteredStatusCheck'),           { loading: ArticleLoading, ssr: true }),
+  // ✅ NEW ARTICLE COMPONENT ADDED
+  PmKisanCorrectionForm2026:                  dynamic(() => import('@/components/articles/PmKisanCorrectionForm2026'),                  { loading: ArticleLoading, ssr: true }),
 };
 
 export const revalidate = 3600;
