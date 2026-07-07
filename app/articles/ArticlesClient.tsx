@@ -55,7 +55,7 @@ function ArticleCard({ article, showNewBadge = false, priority = false }: { arti
           ? 'border-2 border-green-200 dark:border-green-700 hover:border-green-400 dark:hover:border-green-600'
           : 'border border-[var(--color-border)] hover:border-green-300 dark:hover:border-green-700'
       }`}
-      aria-label={`Read: ${article.title}`}
+      aria-label={`Padhein: ${article.title}`}
     >
       <div className="relative">
         <ArticleImage image={article.ogImage || ''} emoji={emoji} title={article.title} priority={priority} />
