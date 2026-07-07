@@ -16,6 +16,11 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false, // Security: Hide Next.js signature
 
+  // ── Turbopack Configuration (Next.js 16+) ─────────────────
+  turbopack: {
+    // ✅ Empty config — Turbopack default optimizations use karega
+  },
+
   // ── Performance Optimizations ──────────────────────────────
   experimental: {
     optimizePackageImports: ['@/components/ArticleShared', '@/components/ArticleSVGs', '@/lib'],
@@ -29,37 +34,6 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production' ? {
       exclude: ['error', 'warn'],
     } : false,
-  },
-
-  // ── Webpack Configuration — Advanced Optimization ──────────
-  webpack: (config, { dev, isServer }) => {
-    // Production optimizations
-    if (!dev && !isServer) {
-      // Split chunks for better caching
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
-          default: false,
-          vendors: false,
-          // Vendor chunk for node_modules
-          vendor: {
-            name: 'vendor',
-            test: /[\\/]node_modules[\\/]/,
-            priority: 10,
-            chunks: 'all',
-          },
-          // Common chunk for shared code
-          common: {
-            name: 'common',
-            minChunks: 2,
-            priority: 5,
-            reuseExistingChunk: true,
-          },
-        },
-      };
-    }
-
-    return config;
   },
 
   // ── Redirects ──────────────────────────────────────────────
