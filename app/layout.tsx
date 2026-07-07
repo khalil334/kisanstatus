@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     canonical: SITE_URL,
     languages: {
       'hi-IN': `${SITE_URL}/`,
-      'en-US': `${SITE_URL}/en`,
+      // ✅ FIX: Removed '/en' if you don't have English pages
       'x-default': `${SITE_URL}/`,
     },
   },
@@ -99,7 +99,7 @@ export default function RootLayout({
     <html lang="hi-IN" suppressHydrationWarning className={poppins.variable}>
       <head>
         <link rel="alternate" hrefLang="hi-IN" href={`${SITE_URL}/`} />
-        <link rel="alternate" hrefLang="en-US" href={`${SITE_URL}/en`} />
+        {/* ✅ FIX: Removed hrefLang="en-US" */}
         <link rel="alternate" hrefLang="x-default" href={`${SITE_URL}/`} />
 
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -147,7 +147,7 @@ export default function RootLayout({
                   areaServed: 'IN',
                 },
                 founder: {
-                  '@type': 'Person',
+                  '@type': 'Organization',  // ✅ FIX: Person → Organization (team name ke liye sahi)
                   name: AUTHOR,
                   url: `${SITE_URL}/about`,
                 },
@@ -178,7 +178,6 @@ export default function RootLayout({
           <Footer />
         </LanguageProvider>
 
-        {/* GA4 — lazyOnload se defer karo, render-blocking nahi hoga */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="lazyOnload"
