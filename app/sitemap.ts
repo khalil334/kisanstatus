@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { ARTICLES, CATEGORIES, getAllSchemes, getAllBanks } from '@/lib/articles-data';
+import { ARTICLES, CATEGORIES } from '@/lib/articles-data';
 import { SITE_URL } from '@/lib/site-config';
 
 // ═══════════════════════════════════════════════════════════
@@ -32,7 +32,6 @@ function getArticlePriority(modifiedTime: string): number {
 type ChangeFrequency = MetadataRoute.Sitemap[number]['changeFrequency'];
 
 function getArticleFrequency(category: string): ChangeFrequency {
-  // ✅ Sirf valid categories (jo articles-data.ts mein hain)
   switch (category) {
     case 'mandi': return 'daily';
     case 'status-check': return 'weekly';
@@ -96,28 +95,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority:        0.8,
   }));
 
-  // ── Scheme Pages (programmatic SEO) ──
-  const schemePages: MetadataRoute.Sitemap = getAllSchemes().map((scheme) => ({
-    url:             `${SITE_URL}/scheme/${scheme}`,
-    lastModified:    now,
-    changeFrequency: 'weekly' as const,
-    priority:        0.85,
-  }));
-
-  // ── Bank Pages (programmatic SEO) ──
-  const bankPages: MetadataRoute.Sitemap = getAllBanks().map((bank) => ({
-    url:             `${SITE_URL}/bank/${bank}`,
-    lastModified:    now,
-    changeFrequency: 'monthly' as const,
-    priority:        0.75,
-  }));
+  // ✅ FIXED: Removed schemePages and bankPages (pages exist nahi karte)
 
   return [
     ...staticPages,
     ...categoryPages,
     ...articlePages,
     ...statePages,
-    ...schemePages,
-    ...bankPages,
+    // ✅ Removed: ...schemePages, ...bankPages
   ];
 }
