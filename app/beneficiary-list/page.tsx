@@ -207,9 +207,9 @@ export default function BeneficiaryListPage() {
           <h3 className="font-black text-yellow-900 dark:text-yellow-300 text-base mb-2">⚠️ Important Information</h3>
           <ul className="space-y-2 text-sm text-yellow-900 dark:text-yellow-200">
             <li>• Beneficiary roster sirf <strong>registered kisanon</strong> ki dikhti hai</li>
-            <li>• Naam nahi hai? <Link href="/articles/pm-kisan-registration-online-2026" className="font-bold underline hover:text-yellow-700 dark:hover:text-yellow-100">Naya enrollment karo</Link></li>
-            <li>• Naam hai lekin paisa nahi aaya? <Link href="/articles/pm-kisan-payment-failed-status-2026" className="font-bold underline hover:text-yellow-700 dark:hover:text-yellow-100">Payment Fix Guide</Link></li>
-            <li>• eKYC pending? <Link href="/articles/pm-kisan-ekyc-online-2026" className="font-bold underline hover:text-yellow-700 dark:hover:text-yellow-100">Digital Verification Guide</Link></li>
+            <li>• Naam nahi hai? <Link href="/articles/PmKisanMasterGuide2026" className="font-bold underline hover:text-yellow-700 dark:hover:text-yellow-100">Master Guide Dekho</Link></li>
+            <li>• Naam hai lekin paisa nahi aaya? <Link href="/articles/PmKisanPaymentFailedFix2026" className="font-bold underline hover:text-yellow-700 dark:hover:text-yellow-100">Payment Fix Guide</Link></li>
+            <li>• eKYC pending? <Link href="/articles/PmKisanEkycOnline2026" className="font-bold underline hover:text-yellow-700 dark:hover:text-yellow-100">Digital Verification Guide</Link></li>
           </ul>
         </div>
 
@@ -218,11 +218,11 @@ export default function BeneficiaryListPage() {
           <h3 className="font-black text-green-900 dark:text-green-300 text-base mb-4">📖 Related PM Kisan Guides</h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {[
-              { href: '/articles/pm-kisan-23vi-kist-2026-status-check', label: '📅 23vi Kist Status' },
-              { href: '/articles/pm-kisan-ekyc-online-2026', label: '🔐 eKYC Guide' },
-              { href: '/articles/pm-kisan-payment-failed-status-2026', label: '💸 Payment Fix' },
-              { href: '/articles/pm-kisan-registration-online-2026', label: '📝 Enrollment' },
-              { href: '/articles/pm-kisan-name-correction-online-2026', label: '✏️ Name Fix' },
+              { href: '/articles/PmKisan24viKist2026', label: '📅 24vi Kist Status' },
+              { href: '/articles/PmKisanEkycOnline2026', label: '🔐 eKYC Guide' },
+              { href: '/articles/PmKisanPaymentFailedFix2026', label: '💸 Payment Fix' },
+              { href: '/articles/PmKisanMasterGuide2026', label: '📚 Master Guide' },
+              { href: '/articles/KisanCreditCardOnlineApply2026', label: '💳 KCC Apply' },
               { href: '/calculator/installment-tracker', label: '📆 Tracker' },
             ].map(({ href, label }) => (
               <Link
