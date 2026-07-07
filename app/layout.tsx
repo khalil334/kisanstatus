@@ -41,9 +41,10 @@ export const metadata: Metadata = {
   category: 'Agriculture',
   alternates: {
     canonical: SITE_URL,
+    // ✅ REMOVED: /en reference (page exist nahi karta)
     languages: {
       'hi-IN': `${SITE_URL}/`,
-      // ✅ FIX: Removed '/en' if you don't have English pages
+      // 'en-US': `${SITE_URL}/en`,  // ❌ DELETE THIS LINE
       'x-default': `${SITE_URL}/`,
     },
   },
@@ -99,7 +100,7 @@ export default function RootLayout({
     <html lang="hi-IN" suppressHydrationWarning className={poppins.variable}>
       <head>
         <link rel="alternate" hrefLang="hi-IN" href={`${SITE_URL}/`} />
-        {/* ✅ FIX: Removed hrefLang="en-US" */}
+        {/* ✅ REMOVED: hrefLang="en-US" */}
         <link rel="alternate" hrefLang="x-default" href={`${SITE_URL}/`} />
 
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -147,7 +148,7 @@ export default function RootLayout({
                   areaServed: 'IN',
                 },
                 founder: {
-                  '@type': 'Organization',  // ✅ FIX: Person → Organization (team name ke liye sahi)
+                  '@type': 'Organization',
                   name: AUTHOR,
                   url: `${SITE_URL}/about`,
                 },
