@@ -97,14 +97,19 @@ export default function RootLayout({
   return (
     <html lang="hi-IN" suppressHydrationWarning className={poppins.variable}>
       <head>
-        {/* ✅ FIX: Removed hardcoded hreflang links — Next.js will auto-generate per page */}
-        {/* ❌ DELETED: <link rel="alternate" hrefLang="hi-IN" href={`${SITE_URL}/`} /> */}
-        {/* ❌ DELETED: <link rel="alternate" hrefLang="x-default" href={`${SITE_URL}/`} /> */}
+        {/* ✅ PRECONNECT: Third-party resources ke saath connection pehle */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.google.com" />
+        <link rel="dns-prefetch" href="https://www.facebook.com" />
+        <link rel="dns-prefetch" href="https://vercel.live" />
 
+        {/* Favicon & Manifest */}
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
         <link rel="manifest" href="/site.webmanifest" />
 
+        {/* JSON-LD Schema Markup — inline, no external loading */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -177,27 +182,59 @@ export default function RootLayout({
           <Footer />
         </LanguageProvider>
 
+        {/* ✅ GA4: lazyOnload se loading page ke baad, blocking nahi */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="lazyOnload"
         />
+
+        {/* ✅ GA4 inline script + ReportWebVitals inline function (CWV reporting) */}
         <Script
-          id="ga4-init"
+          id="ga4-init-and-webvitals"
           strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
+              // gtag initialization
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', '${GA_MEASUREMENT_ID}', {
                 page_path: window.location.pathname,
                 anonymize_ip: true,
+                page_load_time: 0
               });
+
+              // Report Web Vitals to Google Analytics (improves PageSpeed reporting)
+              function sendWebVital(name, value) {
+                if (typeof window.gtag === 'function') {
+                  window.gtag('event', name, {
+                    value: Math.round(name === 'CLS' ? value * 1000 : value),
+                    event_category: 'Web Vitals',
+                    non_interaction: true,
+                  });
+                }
+              }
+
+              // Lazy-load web vitals reporting after idle
+              if ('requestIdleCallback' in window) {
+                requestIdleCallback(() => {
+                  if (window.CWV) {
+                    window.CWV.onCLS(sendWebVital);
+                    window.CWV.onFID(sendWebVital);
+                    window.CWV.onLCP(sendWebVital);
+                    window.CWV.onFCP(sendWebVital);
+                    window.CWV.onTTFB(sendWebVital);
+                  }
+                });
+              }
             `,
           }}
         />
 
-        {process.env.NODE_ENV === 'production' && <Analytics />}
+        {/* Vercel Analytics — lazy loading, page rendering block nahi karega */}
+        {process.env.NODE_ENV === 'production' && (
+          <Script id="vercel-analytics" strategy="lazyOnload" src="https://vercel.com/_vercel/insights/script.js" />
+        )}
       </body>
     </html>
   );
