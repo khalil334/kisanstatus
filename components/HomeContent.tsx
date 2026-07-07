@@ -12,7 +12,7 @@ function ArticleImage({ image, emoji, title }: { image: string; emoji: string; t
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <div 
+    <div
       className="relative w-full overflow-hidden bg-gray-100 dark:bg-gray-800 shrink-0"
       style={{ aspectRatio: '16/9' }}
     >
@@ -96,7 +96,7 @@ export default function HomeContent() {
 
   return (
     <main className="min-h-screen bg-white dark:bg-gray-900">
-      {/* Hero Section - Clean Professional */}
+      {/* Hero Section */}
       <section className="relative bg-white dark:bg-gray-900 py-16 md:py-24">
         <div className="container-site mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-12">
@@ -107,7 +107,7 @@ export default function HomeContent() {
               PM Kisan Status Check 2026
             </h1>
             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
-              24vi kist October 2026 mein aane wali hai! ₹2,000 seedha bank account mein. 
+              24vi kist October 2026 mein aane wali hai! ₹2,000 seedha bank account mein.
               Status verify karo, eKYC complete karo — sab kuch free!
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -126,7 +126,6 @@ export default function HomeContent() {
             </div>
           </div>
 
-          {/* Hero Image */}
           <div className="relative max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-2xl">
             <Image
               src="/indian-farmers-wheat-field.webp"
@@ -140,7 +139,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* Stats Section - Clean */}
+      {/* Stats Section */}
       <section className="py-16 bg-gray-50 dark:bg-gray-800/50">
         <div className="container-site mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
@@ -168,7 +167,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* Calculator Section - Clean */}
+      {/* Calculator Section */}
       <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container-site mx-auto px-4">
           <div className="text-center mb-12">
@@ -238,4 +237,170 @@ export default function HomeContent() {
                   🏦
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900 dark:text-white text-lg mb-2">KCC Loan EMI</h
+                  <h3 className="font-bold text-gray-900 dark:text-white text-lg mb-2">KCC Loan EMI</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">4% byaj par monthly EMI aur total interest</p>
+                </div>
+              </div>
+            </Link>
+
+            <Link
+              href="/calculator/fertilizer-cost"
+              className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 hover:bg-gray-100 dark:hover:bg-gray-700 hover:shadow-xl transition-all group border border-gray-200 dark:border-gray-700"
+            >
+              <div className="flex items-start gap-4">
+                <div className="w-14 h-14 bg-lime-500 rounded-xl flex items-center justify-center text-3xl shrink-0 shadow-lg group-hover:scale-110 transition-transform">
+                  🌿
+                </div>
+                <div>
+                  <h3 className="font-bold text-gray-900 dark:text-white text-lg mb-2">Fertilizer Cost</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Urea, DAP, MOP — NPK kharcha per acre</p>
+                </div>
+              </div>
+            </Link>
+
+            <Link
+              href="/calculator/irrigation-cost"
+              className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 hover:bg-gray-100 dark:hover:bg-gray-700 hover:shadow-xl transition-all group border border-gray-200 dark:border-gray-700"
+            >
+              <div className="flex items-start gap-4">
+                <div className="w-14 h-14 bg-cyan-500 rounded-xl flex items-center justify-center text-3xl shrink-0 shadow-lg group-hover:scale-110 transition-transform">
+                  💧
+                </div>
+                <div>
+                  <h3 className="font-bold text-gray-900 dark:text-white text-lg mb-2">Irrigation Cost</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Drip vs flood — paani aur bijli ka kharcha</p>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          <div className="text-center mt-10">
+            <Link
+              href="/calculator"
+              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-xl transition-all hover:scale-105 shadow-lg"
+            >
+              🧮 Sab Calculators Kholo →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Images */}
+      <section className="py-16 bg-gray-50 dark:bg-gray-800/50">
+        <div className="container-site mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white mb-12 text-center">
+            🌾 Bharat Ki Kheti - Hamari Pehchaan
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-gray-700 group" style={{ aspectRatio: '3/2' }}>
+              <Image
+                src="/indian-farmers-wheat-field.webp"
+                alt="Indian farmers working in wheat field - Bharat ki kheti"
+                fill
+                loading="lazy"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h3 className="text-white font-bold text-xl mb-2">🌾 Hamare Annadata</h3>
+                <p className="text-gray-200 text-sm">Bharat ki kheti - duniya ki sabse badi kheti</p>
+              </div>
+            </div>
+
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-gray-700 group" style={{ aspectRatio: '3/2' }}>
+              <Image
+                src="/modern-farming-technology-india.webp"
+                alt="Modern farming technology in India - Digital agriculture"
+                fill
+                loading="lazy"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h3 className="text-white font-bold text-xl mb-2">🚜 Aadhunik Kheti</h3>
+                <p className="text-gray-200 text-sm">Technology se badhti kheti ki kamai</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest Articles */}
+      <section className="py-16 bg-white dark:bg-gray-900">
+        <div className="container-site mx-auto px-4">
+          <div className="flex items-center justify-between mb-12">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white mb-2">Naye Articles</h2>
+              <p className="text-gray-600 dark:text-gray-400">Latest guides aur updates</p>
+            </div>
+            <span className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-sm font-bold px-4 py-2 rounded-full">
+              {latestArticles.length} latest
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {latestArticles.map((article, index) => (
+              <ArticleCard
+                key={article.slug}
+                article={article}
+                showNewBadge={index < TOP_ARTICLES_LIMIT}
+              />
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link
+              href="/articles"
+              className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-4 rounded-xl transition-all hover:scale-105 shadow-lg"
+            >
+              📚 Sabhi {allArticles.length} Articles Dekho →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Links */}
+      <section className="py-16 bg-gray-50 dark:bg-gray-800/50">
+        <div className="container-site mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white mb-12 text-center">
+            🤔 Aapki Problem Kya Hai?
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            <Link
+              href="/articles/PmKisan24viKist2026"
+              className="bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-2xl p-8 text-center hover:shadow-xl hover:border-green-500 dark:hover:border-green-600 transition-all group"
+            >
+              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">📊</div>
+              <h3 className="font-bold text-gray-900 dark:text-white text-base mb-2">Status Check</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Kist aayi ya nahi</p>
+            </Link>
+            <Link
+              href="/articles/KisanCreditCardOnlineApply2026"
+              className="bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-2xl p-8 text-center hover:shadow-xl hover:border-green-500 dark:hover:border-green-600 transition-all group"
+            >
+              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">💳</div>
+              <h3 className="font-bold text-gray-900 dark:text-white text-base mb-2">KCC Apply</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400">₹5 Lakh Loan</p>
+            </Link>
+            <Link
+              href="/articles/PmKisanBeneficiaryList2026"
+              className="bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-2xl p-8 text-center hover:shadow-xl hover:border-green-500 dark:hover:border-green-600 transition-all group"
+            >
+              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">📋</div>
+              <h3 className="font-bold text-gray-900 dark:text-white text-base mb-2">Beneficiary List</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Naam check karo</p>
+            </Link>
+            <Link
+              href="/articles/soil-health-card-complete-guide-2026"
+              className="bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-2xl p-8 text-center hover:shadow-xl hover:border-green-500 dark:hover:border-green-600 transition-all group"
+            >
+              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">🌱</div>
+              <h3 className="font-bold text-gray-900 dark:text-white text-base mb-2">Soil Health Card</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Mitti test karo</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
