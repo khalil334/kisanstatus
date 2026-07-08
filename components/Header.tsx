@@ -186,7 +186,7 @@ function ThemeToggle() {
     }
   };
 
-  // ✅ FIX: Empty div ki jagah actual button return karo (hydration mismatch fix)
+  // ✅ HYDRATION FIX: Always render same structure, only change icon
   return (
     <button
       onClick={toggle}
@@ -215,7 +215,18 @@ export default function Header() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 10);
+    // ✅ PERFORMANCE: Throttle scroll event for better performance
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 10);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
     const handleKeyDown = (e: KeyboardEvent) => {
       if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
         e.preventDefault();
@@ -294,7 +305,7 @@ export default function Header() {
       )}
 
       <header
-        className={`bg-[var(--color-card)] border-b border-[var(--color-border)] sticky top-0 z-50 transition-shadow ${
+        className={`bg-[var(--color-card)] border-b border-[var(--color-border)] sticky top-0 z-50 transition-shadow duration-200 ${
           scrolled ? 'shadow-md' : 'shadow-sm'
         }`}
         role="banner"
