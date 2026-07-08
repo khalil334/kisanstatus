@@ -9,12 +9,14 @@ import { SITE_URL, SITE_NAME } from '@/lib/site-config';
 
 // ═══════════════════════════════════════════════════════════
 // LIVE APIS - Mandi Rates + Real-time Weather
+// Keys from .env.local (never hardcoded)
 // ═══════════════════════════════════════════════════════════
 
-const MANDI_API_KEY = '579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b';
+const MANDI_API_KEY = process.env.NEXT_PUBLIC_MANDI_API_KEY || '';
+const WEATHER_API_KEY = process.env.NEXT_PUBLIC_WEATHER_API_KEY || '';
+
 const MANDI_API_URL = `https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=${MANDI_API_KEY}&format=json&limit=100`;
 
-const WEATHER_API_KEY = '41172979d253435000dfadb0faf9bf9c';
 const WEATHER_API_URL = (lat: number, lon: number) => 
   `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`;
 
@@ -199,6 +201,11 @@ export default function MandiBhavContent({ article }: { article: ArticleMeta }) 
 
   // ═══ FETCH LIVE MANDI RATES ═══
   useEffect(() => {
+    if (!MANDI_API_KEY) {
+      console.warn('NEXT_PUBLIC_MANDI_API_KEY not set in .env.local');
+      return;
+    }
+
     async function fetchMandi() {
       try {
         const res = await fetch(MANDI_API_URL);
@@ -241,6 +248,7 @@ export default function MandiBhavContent({ article }: { article: ArticleMeta }) 
         setFruits(buildItems(fruitMap, FRUITS_FALLBACK));
         setIsLive(true);
       } catch (err) {
+        console.error('Mandi fetch failed:', err);
         setIsLive(false);
       }
       setLastUpdated(new Date().toLocaleString('hi-IN'));
@@ -251,6 +259,11 @@ export default function MandiBhavContent({ article }: { article: ArticleMeta }) 
 
   // ═══ FETCH LIVE WEATHER ═══
   useEffect(() => {
+    if (!WEATHER_API_KEY) {
+      console.warn('NEXT_PUBLIC_WEATHER_API_KEY not set in .env.local');
+      return;
+    }
+
     async function fetchWeather() {
       try {
         const res = await fetch(WEATHER_API_URL(DEFAULT_LAT, DEFAULT_LON));
@@ -276,7 +289,7 @@ export default function MandiBhavContent({ article }: { article: ArticleMeta }) 
 
         setWeatherForecast(forecast);
       } catch (err) {
-        console.error('Weather fetch failed');
+        console.error('Weather fetch failed:', err);
       }
     }
 
