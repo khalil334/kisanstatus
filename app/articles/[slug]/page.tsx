@@ -88,14 +88,40 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
   return schemas;
 }
 
+// ✅ FIX: Loading skeleton with fixed heights to prevent CLS
 function ArticleLoading() {
   return (
-    <div className="container-site py-10">
-      <div className="animate-pulse space-y-4">
-        <div className="h-8 bg-gray-200 dark:bg-gray-700 rounded w-2/3" />
-        <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-full" />
-        <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-5/6" />
-        <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-4/6" />
+    <div className="container-site py-10" style={{ minHeight: '60vh' }}>
+      <div className="animate-pulse space-y-6 max-w-4xl mx-auto">
+        {/* Title placeholder */}
+        <div className="space-y-3">
+          <div className="h-10 bg-gray-200 dark:bg-gray-700 rounded w-3/4" />
+          <div className="h-10 bg-gray-200 dark:bg-gray-700 rounded w-1/2" />
+        </div>
+        
+        {/* Meta info placeholder */}
+        <div className="flex gap-4">
+          <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-24" />
+          <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-32" />
+        </div>
+        
+        {/* Content placeholders */}
+        <div className="space-y-4">
+          <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-full" />
+          <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-full" />
+          <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-5/6" />
+          <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-4/6" />
+        </div>
+        
+        {/* Image placeholder */}
+        <div className="aspect-video bg-gray-200 dark:bg-gray-700 rounded-xl w-full" />
+        
+        {/* More content */}
+        <div className="space-y-4">
+          <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-full" />
+          <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-5/6" />
+          <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-full" />
+        </div>
       </div>
     </div>
   );
@@ -120,7 +146,6 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   PmKisan25viKist2027:                        dynamic(() => import('@/components/articles/PmKisan25viKist2027'),                        { loading: ArticleLoading, ssr: true }),
   PmKisanSelfRegisteredStatusCheck:           dynamic(() => import('@/components/articles/PmKisanSelfRegisteredStatusCheck'),           { loading: ArticleLoading, ssr: true }),
   PmKisanCorrectionForm2026:                  dynamic(() => import('@/components/articles/PmKisanCorrectionForm2026'),                  { loading: ArticleLoading, ssr: true }),
-  // ✅ NEW ARTICLE COMPONENT ADDED
   PmKusumYojanaSolarSubsidy2026:              dynamic(() => import('@/components/articles/PmKusumYojanaSolarSubsidy2026'),              { loading: ArticleLoading, ssr: true }),
 };
 
