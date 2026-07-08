@@ -5,7 +5,7 @@ const nextConfig = {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 31536000, // 1 year
+    minimumCacheTTL: 31536000,
     dangerouslyAllowSVG: false,
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
@@ -14,12 +14,10 @@ const nextConfig = {
   // ── Core Settings ──────────────────────────────────────────
   compress: true,
   reactStrictMode: true,
-  poweredByHeader: false, // Security: Hide Next.js signature
+  poweredByHeader: false,
 
   // ── Turbopack Configuration (Next.js 16+) ─────────────────
-  turbopack: {
-    // ✅ Empty config — Turbopack default optimizations use karega
-  },
+  turbopack: {},
 
   // ── Performance Optimizations ──────────────────────────────
   experimental: {
@@ -35,6 +33,9 @@ const nextConfig = {
       exclude: ['error', 'warn'],
     } : false,
   },
+
+  // ── Transpile Packages — Fix Legacy JavaScript ─────────────
+  transpilePackages: ['@/components', '@/lib', '@/utils'],
 
   // ── Redirects ──────────────────────────────────────────────
   async redirects() {
@@ -103,44 +104,26 @@ const nextConfig = {
       {
         source: '/:path*',
         headers: [
-          // Security headers
           { key: 'X-Frame-Options', value: 'DENY' },
           { key: 'X-Content-Type-Options', value: 'nosniff' },
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
           { key: 'X-XSS-Protection', value: '1; mode=block' },
           { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
-          
-          // Performance: DNS prefetch
           { key: 'X-DNS-Prefetch-Control', value: 'on' },
         ],
       },
-      
-      // Images: Long-term caching
       {
         source: '/images/:path*',
-        headers: [{ 
-          key: 'Cache-Control', 
-          value: 'public, max-age=31536000, s-maxage=31536000, immutable' 
-        }],
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, s-maxage=31536000, immutable' }],
       },
-      
-      // Static assets: Long-term caching
       {
         source: '/_next/static/:path*',
-        headers: [{ 
-          key: 'Cache-Control', 
-          value: 'public, max-age=31536000, immutable' 
-        }],
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
       },
-      
-      // Fonts: Long-term caching
       {
         source: '/fonts/:path*',
-        headers: [{ 
-          key: 'Cache-Control', 
-          value: 'public, max-age=31536000, immutable' 
-        }],
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
       },
     ];
   },
