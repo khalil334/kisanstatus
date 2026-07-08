@@ -1,3 +1,10 @@
+import { notFound } from 'next/navigation';
+import Link from 'next/link';
+import type { Metadata } from 'next';
+
+// ═══════════════════════════════════════════════════════════
+// STATE DATA - 37 States & UTs
+// ═══════════════════════════════════════════════════════════
 const STATE_DATA: Record<string, {
   name: string;
   icon: string;
@@ -56,7 +63,7 @@ const STATE_DATA: Record<string, {
   },
   'odisha': {
     name: 'Odisha',
-    icon: '',
+    icon: '🌊',
     beneficiaries: '40 Lakh+',
     description: 'Odisha ke rice, pulses aur oilseeds cultivators PM Kisan beneficiaries hain.',
     districts: ['Bhubaneswar', 'Cuttack', 'Rourkela', 'Puri', 'Balasore'],
@@ -98,7 +105,7 @@ const STATE_DATA: Record<string, {
   },
   'telangana': {
     name: 'Telangana',
-    icon: '',
+    icon: '🌴',
     beneficiaries: '35 Lakh+',
     description: 'Telangana ke rice, cotton aur turmeric cultivators major beneficiaries hain.',
     districts: ['Hyderabad', 'Warangal', 'Nizamabad', 'Karimnagar', 'Khammam'],
@@ -112,7 +119,7 @@ const STATE_DATA: Record<string, {
   },
   'assam': {
     name: 'Assam',
-    icon: '',
+    icon: '🌾',
     beneficiaries: '30 Lakh+',
     description: 'Assam ke rice, tea aur jute cultivators PM Kisan se benefit le rahe hain.',
     districts: ['Guwahati', 'Silchar', 'Dibrugarh', 'Jorhat', 'Nagaon'],
@@ -140,7 +147,7 @@ const STATE_DATA: Record<string, {
   },
   'himachal-pradesh': {
     name: 'Himachal Pradesh',
-    icon: '🌊',
+    icon: '🏔️',
     beneficiaries: '10 Lakh+',
     description: 'HP ke apple, wheat aur maize cultivators PM Kisan beneficiaries hain.',
     districts: ['Shimla', 'Mandi', 'Solan', 'Dharamshala', 'Kullu'],
@@ -203,7 +210,7 @@ const STATE_DATA: Record<string, {
   },
   'mizoram': {
     name: 'Mizoram',
-    icon: '',
+    icon: '🌾',
     beneficiaries: '1 Lakh+',
     description: 'Mizoram mein rice, ginger aur vegetables cultivators PM Kisan beneficiaries hain.',
     districts: ['Aizawl', 'Lunglei', 'Champhai', 'Serchhip'],
@@ -238,14 +245,14 @@ const STATE_DATA: Record<string, {
   },
   'lakshadweep': {
     name: 'Lakshadweep',
-    icon: '',
+    icon: '🌊',
     beneficiaries: '5,000+',
     description: 'Lakshadweep ke coconut cultivators aur tuna fishermen PM Kisan beneficiaries hain.',
     districts: ['Kavaratti', 'Agatti', 'Amini', 'Minicoy'],
   },
   'chandigarh': {
     name: 'Chandigarh',
-    icon: '️',
+    icon: '🏛️',
     beneficiaries: '20,000+',
     description: 'Chandigarh ke wheat, vegetables aur dairy farmers PM Kisan se benefit le rahe hain.',
     districts: ['Chandigarh'],
@@ -255,7 +262,7 @@ const STATE_DATA: Record<string, {
     icon: '🌾',
     beneficiaries: '30,000+',
     description: 'DNH ke rice, ragi aur mango cultivators major beneficiaries hain.',
-    districts: ['Silvassa', 'Amli', 'Silvassa'],
+    districts: ['Silvassa', 'Amli'],
   },
   'daman-diu': {
     name: 'Daman & Diu',
@@ -265,3 +272,160 @@ const STATE_DATA: Record<string, {
     districts: ['Daman', 'Diu'],
   },
 };
+
+// ═══════════════════════════════════════════════════════════
+// METADATA
+// ═══════════════════════════════════════════════════════════
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ state: string }>;
+}): Promise<Metadata> {
+  const { state } = await params;
+  const stateInfo = STATE_DATA[state];
+
+  if (!stateInfo) {
+    return { title: 'State Not Found' };
+  }
+
+  return {
+    title: `PM Kisan Beneficiary List ${stateInfo.name} 2026 — Village Wise Roster & Status Check`,
+    description: `${stateInfo.name} mein PM Kisan beneficiary list check karo. ${stateInfo.beneficiaries} registered farmers. Village wise roster, status check, aur PDF download guide.`,
+  };
+}
+
+// ═══════════════════════════════════════════════════════════
+// STATIC PARAMS
+// ═══════════════════════════════════════════════════════════
+export function generateStaticParams() {
+  return Object.keys(STATE_DATA).map((state) => ({ state }));
+}
+
+// ═══════════════════════════════════════════════════════════
+// MAIN COMPONENT
+// ═══════════════════════════════════════════════════════════
+export default async function StateBeneficiaryPage({
+  params,
+}: {
+  params: Promise<{ state: string }>;
+}) {
+  const { state } = await params;
+  const stateInfo = STATE_DATA[state];
+
+  if (!stateInfo) {
+    notFound();
+  }
+
+  return (
+    <>
+      {/* Hero Section */}
+      <div className="bg-[var(--color-primary)] py-8">
+        <div className="container-site max-w-3xl text-center">
+          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">
+            {stateInfo.icon} {stateInfo.name}
+          </span>
+          <h1 className="text-2xl md:text-3xl font-black text-white mb-2">
+            PM Kisan Beneficiary List {stateInfo.name}
+          </h1>
+          <p className="text-green-200 text-sm">
+            {stateInfo.beneficiaries} Registered Farmers
+          </p>
+        </div>
+      </div>
+
+      <div className="container-site max-w-3xl py-8">
+
+        {/* Breadcrumb */}
+        <nav className="text-xs text-[var(--color-text-muted)] mb-6 flex gap-1 flex-wrap">
+          <Link href="/" className="hover:text-[var(--color-primary)]">Home</Link>
+          <span>/</span>
+          <Link href="/beneficiary-list" className="hover:text-[var(--color-primary)]">Beneficiary List</Link>
+          <span>/</span>
+          <span className="text-[var(--color-text)] font-medium">{stateInfo.name}</span>
+        </nav>
+
+        {/* Description */}
+        <section className="mb-6">
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            {stateInfo.description}
+          </p>
+        </section>
+
+        {/* Official Portal Button */}
+        <div className="mb-6">
+          <a
+            href="https://pmkisan.gov.in/BeneficiaryList.aspx"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full bg-[var(--color-primary)] hover:opacity-90 text-white font-black py-4 rounded-xl text-center transition-all shadow-md hover:shadow-lg"
+          >
+            📋 Official Beneficiary List Dekho →
+          </a>
+          <p className="text-xs text-[var(--color-text-muted)] text-center mt-2">
+            Official portal par jakar apna naam check karo
+          </p>
+        </div>
+
+        {/* Districts */}
+        <section className="mb-6">
+          <h2 className="font-black text-[var(--color-text)] mb-3">
+            📍 Major Districts:
+          </h2>
+          <div className="flex flex-wrap gap-2">
+            {stateInfo.districts.map((district) => (
+              <span
+                key={district}
+                className="px-3 py-2 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 text-xs font-bold rounded-xl"
+              >
+                {district}
+              </span>
+            ))}
+          </div>
+        </section>
+
+        {/* How to Check */}
+        <section className="mb-6">
+          <div className="bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl p-5">
+            <h2 className="font-black text-green-800 dark:text-green-300 mb-3">
+              {stateInfo.name} Mein Naam Kaise Check Karein?
+            </h2>
+            <ol className="space-y-2 text-sm text-green-800 dark:text-green-300">
+              <li><strong>1.</strong> Upar diye gaye official portal button par click karo</li>
+              <li><strong>2.</strong> "Beneficiary List" option select karo</li>
+              <li><strong>3.</strong> State mein "{stateInfo.name}" already selected hoga</li>
+              <li><strong>4.</strong> Apna District select karo</li>
+              <li><strong>5.</strong> Block aur Village choose karo</li>
+              <li><strong>6.</strong> "Get Report" click karo — poori list aa jayegi</li>
+              <li><strong>7.</strong> Ctrl+F se apna naam search karo</li>
+            </ol>
+          </div>
+        </section>
+
+        {/* PDF Download Info */}
+        <section className="mb-6">
+          <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-4">
+            <h3 className="font-black text-blue-800 dark:text-blue-300 text-sm mb-2">
+              📥 PDF Kaise Download Karein?
+            </h3>
+            <p className="text-xs text-blue-800 dark:text-blue-300">
+              Official portal par list khulne ke baad:
+              <br />
+              • <strong>PC:</strong> Ctrl+P dabao → "Save as PDF" select karo
+              <br />
+              • <strong>Mobile:</strong> Share → Print → Save as PDF
+            </p>
+          </div>
+        </section>
+
+        {/* Back Link */}
+        <Link
+          href="/beneficiary-list"
+          className="inline-flex items-center gap-2 text-[var(--color-primary)] font-bold text-sm hover:underline"
+        >
+          ← Back to All States
+        </Link>
+
+      </div>
+    </>
+  );
+}
