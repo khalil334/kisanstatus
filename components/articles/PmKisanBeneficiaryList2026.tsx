@@ -81,7 +81,6 @@ const STATES_LIST = [
 ] as const;
 
 export default function PmKisanBeneficiaryList2026({ article }: { article: ArticleMeta }) {
-  // PDF Download Function
   const handleDownloadPDF = () => {
     window.print();
   };
@@ -129,7 +128,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
           </p>
         </div>
 
-        {/* PDF Download Buttons - ADDED */}
+        {/* PDF Download Buttons */}
         <div className="my-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
           <button
             onClick={handleDownloadPDF}
@@ -198,7 +197,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
           </div>
         </section>
 
-        {/* SECTION 2: Village Wise List with PDF Download */}
+        {/* SECTION 2: Village Wise List */}
         <section className="mb-8">
           <SH>🏘️ Village Wise List Kaise Dekhen? (Poore Gaon Ki List)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -288,23 +287,21 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
           </div>
         </section>
 
-        {/* SECTION 5: State Wise Links - FIXED */}
+        {/* ✅ SECTION 5: State Wise Links - FIXED (Ab tumhari site par khulega) */}
         <section className="mb-8">
-          <SH>🗺️ State Wise List — Quick Links (36 States & UTs)</SH>
+          <SH>🗺️ State Wise List — Apna State Chunein (36 States & UTs)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Apna state select karo — official portal khulega jahan se PDF download kar sakte ho:
+            Apna state select karo — state-specific page khulega jahan se aap beneficiaries count, districts aur official portal link dekh sakte ho:
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
             {STATES_LIST.map(([icon, name, slug]) => (
-              <a
+              <Link
                 key={slug}
-                href={`https://pmkisan.gov.in/BeneficiaryList.aspx`}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={`/beneficiary-list/${slug}`}
                 className="flex items-center gap-2 p-3 bg-[var(--color-card)] border border-green-200 dark:border-green-800 rounded-xl text-green-800 dark:text-green-300 text-xs font-semibold hover:bg-[var(--color-primary)] hover:text-white hover:border-[var(--color-primary)] transition-all focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
               >
                 <span>{icon}</span>{name}
-              </a>
+              </Link>
             ))}
           </div>
         </section>
