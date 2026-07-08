@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import {
@@ -131,7 +131,7 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   KisanRinKahaSeLe2026:                       dynamic(() => import('@/components/articles/KisanRinKahaSeLe2026'),                       { loading: ArticleLoading, ssr: true }),
   KisanTractorLoan2026:                       dynamic(() => import('@/components/articles/KisanTractorLoan2026'),                       { loading: ArticleLoading, ssr: true }),
   PmKisanBeneficiaryList2026:                 dynamic(() => import('@/components/articles/PmKisanBeneficiaryList2026'),                 { loading: ArticleLoading, ssr: true }),
-  PmKisanBeneficiaryListVillageWise2026:      dynamic(() => import('@/components/articles/PmKisanBeneficiaryListVillageWise2026'),      { loading: ArticleLoading, ssr: true }),
+  // ❌ REMOVED: PmKisanBeneficiaryListVillageWise2026 (merged with main article)
   PmKisanEkycOnline2026:                      dynamic(() => import('@/components/articles/PmKisanEkycOnline2026'),                      { loading: ArticleLoading, ssr: true }),
   KisanCreditCardOnlineApply2026:             dynamic(() => import('@/components/articles/KisanCreditCardOnlineApply2026'),             { loading: ArticleLoading, ssr: true }),
   NanoDap500mlPriceInIndia2026:               dynamic(() => import('@/components/articles/NanoDap500mlPriceInIndia2026'),               { loading: ArticleLoading, ssr: true }),
@@ -161,6 +161,12 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
+  
+  // ✅ REDIRECT: Purana village wise URL → naya merged article
+  if (slug === 'PmKisanBeneficiaryListVillageWise2026') {
+    redirect('/articles/PmKisanBeneficiaryList2026');
+  }
+  
   const article = ARTICLES_MAP[slug];
 
   if (!article) return { title: 'Article Not Found' };
@@ -204,6 +210,12 @@ export default async function ArticlePage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+  
+  // ✅ REDIRECT: Purana village wise URL → naya merged article
+  if (slug === 'PmKisanBeneficiaryListVillageWise2026') {
+    redirect('/articles/PmKisanBeneficiaryList2026');
+  }
+  
   const article = ARTICLES_MAP[slug];
 
   if (!article) notFound();
