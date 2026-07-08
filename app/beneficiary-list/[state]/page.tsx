@@ -1,7 +1,7 @@
-'use client';
-
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+import PdfDownloadButton from './PdfDownloadButton';
 
 const STATE_DATA: Record<string, {
   name: string;
@@ -438,12 +438,35 @@ const STATE_DATA: Record<string, {
   },
 };
 
-export default function StateBeneficiaryPage({
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ state: string }>;
+}): Promise<Metadata> {
+  const { state } = await params;
+  const stateInfo = STATE_DATA[state];
+
+  if (!stateInfo) {
+    return { title: 'State Not Found' };
+  }
+
+  return {
+    title: `PM Kisan Beneficiary List ${stateInfo.name} 2026 — Village Wise Roster & Status Check`,
+    description: `${stateInfo.name} mein PM Kisan beneficiary list check karo. ${stateInfo.beneficiaries} registered farmers. Village wise roster, status check, aur PDF download guide.`,
+    keywords: stateInfo.keywords.join(', '),
+  };
+}
+
+export async function generateStaticParams() {
+  return Object.keys(STATE_DATA).map((state) => ({ state }));
+}
+
+export default async function StateBeneficiaryPage({
   params,
 }: {
   params: Promise<{ state: string }>;
 }) {
-  const state = params.state;
+  const { state } = await params;
   const stateInfo = STATE_DATA[state];
 
   if (!stateInfo) {
@@ -475,16 +498,7 @@ export default function StateBeneficiaryPage({
           <span className="text-[var(--color-text)] font-medium">{stateInfo.name}</span>
         </nav>
 
-        <button
-          onClick={() => window.print()}
-          className="w-full my-6 bg-green-600 hover:bg-green-700 text-white font-black py-4 rounded-xl transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2"
-        >
-          <span className="text-2xl">📥</span>
-          <div className="text-left">
-            <p className="text-sm font-bold">{stateInfo.name} PM Kisan List PDF Download</p>
-            <p className="text-xs opacity-90">Is page ko PDF mein save karo</p>
-          </div>
-        </button>
+        <PdfDownloadButton stateName={stateInfo.name} />
 
         <section className="mb-6">
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
