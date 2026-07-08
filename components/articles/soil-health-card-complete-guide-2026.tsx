@@ -2,64 +2,81 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
+import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 
-const PUBLISHED = '2026-06-27T08:00:00+05:30';
-const MODIFIED = '2026-07-04T08:00:00+05:30';
+const PUBLISHED = '2026-07-15T08:00:00+05:30';
+const MODIFIED = '2026-07-15T08:00:00+05:30';
 
 const RELATED = [
+  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Complete Guide', emoji: '📚' },
   { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '📅' },
-  { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price Guide', emoji: '🌱' },
-  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide', emoji: '📚' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Credit Card Guide', emoji: '💳' },
-  { slug: 'AgriStackKyaHai2026', title: 'Digital Kisan ID', emoji: '🆔' },
-  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav', emoji: '📈' },
+  { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price', emoji: '🧪' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Loan Apply', emoji: '💳' },
 ];
 
 const FAQS_DATA = [
-  { q: 'Kitne time baad dobara mitti test karwana chahiye?', a: 'Dekho bhai, official recommendation hai har 2-3 saal mein. Agar monsoon mein zyada barish hui ya fasal pattern badla (gehun se chawal) toh turant test karwao. Mitti ki composition badal jaati hai time ke saath.' },
-  { q: 'Kirayedar kisan (batai dar) bhi test karwa sakte hain?', a: 'Haan bilkul karwa sakte hain bhai. Zameen ka maalik hona zaroori nahi. Patta agreement ya land possession proof chahiye bas. Jo kheti karta hai woh eligible hai.' },
-  { q: 'Report mein likhi salah follow karna zaroori hai?', a: 'Strongly recommended hai lekin mandatory nahi bhai. Report guideline hai — aapki mitti ki specific condition ke hisaab se. Samajh na aaye toh KVK ya krishi vibhag se consult karo.' },
-  { q: '30 din se zyada ho gaye aur card nahi aaya?', a: 'Pehle portal par status check karo bhai. "Sample Under Testing" = thoda wait karo. Koi update nahi = helpline call karo ya CSC jao. Kabhi-kabhi sample lab tak nahi pahunchta.' },
-  { q: 'Kya ye report kisi aur kaam aati hai?', a: 'Haan bhai, bahut kaam aati hai. KCC loan, crop insurance claim, organic certification, fertilizer subsidy — kai jagah useful hoti hai ye report.' },
-  { q: 'Test kitna mehnga hai?', a: 'Official portal par bilkul muft hai bhai. CSC service charge ₹20-50 (state-wise). Print ₹10-20. Correction muft. ₹100+ maange toh complaint karo turant.' },
-  { q: 'Password bhool gaye — kya karein?', a: '"Forgot Password" click karo → registered mobile daalo → OTP se naya password set karo. Password kahin likh ke rakho bhai, yaad nahi rehta kabhi-kabhi.' },
+  {
+    q: 'Soil health card bilkul free hai ya kharcha aata hai?',
+    a: 'Bilkul free hai bhai. Government poora test aur card banate hain. Sirf travel kharcha ho sakta hai agar aap lekar aaye to lab mein.',
+  },
+  {
+    q: 'Soil test result mein kya likha hota hai — samajh nahi aata?',
+    a: 'Card mein 3 cheezon ka score hota — pH level (acidic/alkaline), organic matter, aur nutrients. Zyada tar cards mein simple likha hota "aapki zameen acha hai" ya "nitrogen kam hai". Detailed explanation neeche di hai.',
+  },
+  {
+    q: 'Test result ke base par fertilizer konsa lagau?',
+    a: 'Exact recommendations report mein likhe hote hain. Agar nitrogen kam likha ho to DAP/urea, phosphorus kam ho to SSP. Lekin ek baar sahi samajhne ke liye agriculture officer se mill lo — wo free advice dete hain.',
+  },
+  {
+    q: 'Ek baar test karab to kitne saal mein dobara test karwana padta hai?',
+    a: 'Har 2-3 saal mein ek baar test karwana acha hota hai. Lekin agar aap new chemicals use kar rahe ho ya soil quality gir gayi likhe to dobara kar sakte ho.',
+  },
+  {
+    q: 'Soil card banane mein kitna time lagta hai?',
+    a: 'Lab analysis mein 1-2 hafte lagta hai. Card print karte ho to 3-4 hafte total. Zyada tar states mein 1 mahina standard time limit hai.',
+  },
+  {
+    q: 'Kya soil health card se PM Kisan mein koi benefit ata hai directly?',
+    a: 'Direct benefit nahi hai, lekin agar aapka eKYC pending hai aur soil issues hain to ye proof de sakte ho. Plus, better crop yield = zyada income, jo indirectly sab kuch improve karta hai.',
+  },
+  {
+    q: 'Agronomy ki knowledge hi nahi hai — soil report samjhu kaise?',
+    a: 'Agriculture office ke officer ya CSC waale bhai ko dikha do. Wo 10 minute mein simplify kar dengi. Ya locally ke kisan groups mein poocho — mostly log same test karate hain aur same confusion hota hai.',
+  },
 ];
 
 export default function SoilHealthCardCompleteGuide2026({ article }: { article: ArticleMeta }) {
   return (
     <>
-      {/* Header */}
-      <div className="bg-[var(--color-primary)] py-8">
+      <div className="bg-amber-700 py-8">
         <div className="container-site max-w-3xl">
-          <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
-            <Link href="/" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Home</Link>
+          <nav className="text-amber-100 text-xs mb-3 flex flex-wrap gap-1 items-center">
+            <Link href="/" className="hover:text-white">Home</Link>
             <span>/</span>
-            <Link href="/articles" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Articles</Link>
+            <Link href="/articles" className="hover:text-white">Articles</Link>
             <span>/</span>
-            <span className="text-white font-bold">Soil Health Card Guide</span>
+            <span className="text-white font-bold">Soil Health Card</span>
           </nav>
-          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Mitti Jaanch Guide 2026</span>
+          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">🌱 Soil Testing Guide</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            Soil Health Card 2026: Registration Se Lekar PDF Download + Report Samajhne Tak Ka Complete Guide
+            State-Wise Soil Health Card — Free Soil Test Kaise Karwayein, Result Samajhiye 2026
           </h1>
-          <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
+          <div className="flex flex-wrap gap-3 text-xs text-amber-100">
+            <span>✍️ <Link href="/about" className="underline hover:text-white">KisanStatus Team</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
             <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 11 min read</span>
+            <span>⏱️ 12 min read</span>
           </div>
         </div>
       </div>
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* IMAGE 1: Hero — PATH UNCHANGED */}
-        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+        <div className="my-6 rounded-2xl overflow-hidden border border-gray-300 shadow-md">
           <Image
-            src={article.ogImage || '/images/articles/soil-health-card-complete-guide-2026/hero.webp'}
-            alt="Soil health card registration process — CSC centre par form bharte hue kisan 2026"
+            src={article.ogImage || '/images/articles/soil-health-card-complete-guide-2026/soil-test-farmer-field.webp'}
+            alt="Soil health card test — state wise free soil testing guide"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -67,341 +84,181 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
             priority
             sizes="(max-width: 768px) 100vw, 768px"
           />
-          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            CSC Centre Ya Online Portal Se Registration Ka Process
+        </div>
+
+        <div className="my-6 p-5 bg-amber-50 border-2 border-amber-400 border-l-[6px] rounded-xl">
+          <h2 className="text-base font-black text-amber-900 mb-2">Jaldi Padho</h2>
+          <p className="text-sm text-amber-950 leading-relaxed mb-2">
+            Soil health card ek government report hota jo batata hai — aapki zameen mein nutrients kaun se hain, kaun se kam hain. Test bilkul free hai. Har state ka apna process hai, lekin sabme ek jaise steps follow hote hain. Report ke base par sahi fertilizer lagao to production 30-40% tak badh jaata hai.
+          </p>
+          <p className="text-sm text-amber-950 leading-relaxed">
+            Ye guide mein har state ka seedha tareeka likha hai — link, offline process, sab kuch.
           </p>
         </div>
 
-        {/* Intro */}
         <section className="mb-8">
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Dekho bhai, kai saalon se ek hi fasal ugane ya galat matra mein khaad dalne se zameen ki quality gir jaati hai. Isliye Bharat sarkar ne 2015 mein Soil Health Card Yojana shuru ki thi.
+          <SH>Soil Health Card Matlab Kya Hota Hai?</SH>
+          <p className="text-sm text-gray-700 leading-relaxed mb-4">
+            Ek simple report card hota jo batata hai aapki zameen kaunsa rich ya poor hai. Jaise school report mein grades hote hain — English A, Math B — usi tarah yahan pH score hota, nitrogen level, phosphorus, potassium.
           </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Har kisan apni mitti ka test karwa sakta hai — muft ya bahut kam kharch mein. Report mein likha hota hai: kaunse nutrients hain, kaunse kam hain, aur kaunsi fasal ke liye kitni khaad chahiye.
+          <p className="text-sm text-gray-700 leading-relaxed mb-4">
+            Government har kisan ko ye card banate hain taaki wo sahi khad daal sake. Zyada tar farmers jo khad dalte hain wo andaze se daaltey hain — kabhi excess, kabhi kam. Soil test kar lo to exact malum chale ki kitna kya chahiye.
           </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Is guide mein registration se PDF download tak ka poora process hai — official portal ke mutabik. Seedhi baat, koi ghuma-phira ke nahi.
+          <p className="text-sm text-gray-700 leading-relaxed">
+            Best part — ye sab bilkul free hai. Kharcha bas travel ka aata hai.
           </p>
         </section>
 
-        {/* What Is Soil Health Card */}
         <section className="mb-8">
-          <SH>Soil Health Card Kya Hai?</SH>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Jaise doctor blood test ke baad report deta hai, waise hi krishi vibhag mitti ka test karke report deta hai bhai. 12 parameters check hote hain:
-          </p>
-          <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl p-4 mb-4">
-            <ul className="space-y-1 text-xs text-[var(--color-text-muted)]">
-              <li>✓ pH maan — mitti khatti hai ya khari</li>
-              <li>✓ Nitrogen (N), Phosphorus (P), Potassium (K)</li>
-              <li>✓ Organic Carbon — zameen ki urvarakta</li>
-              <li>✓ Micronutrients — Zinc, Iron, Copper, Manganese, Boron</li>
-              <li>✓ Fasal-wise khaad ki salah</li>
-              <li>✓ Mitti ka prakar — balui, domat, chikni</li>
-            </ul>
-          </div>
-          <IB>
-            <strong>Validity:</strong> Report 2-3 saal valid rehti hai bhai. Uske baad dobara test karwao — mitti ki composition samay ke saath badalti hai.
-          </IB>
-        </section>
-
-        {/* Why Important */}
-        <section className="mb-8">
-          <SH>Test Karwana Kyun Zaroori Hai?</SH>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Bahut se kisan bhai bina jaane saalon se ek hi khaad daal rahe hain. Nuksan kya hota hai:
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
-            <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl p-4 text-center">
-              <span className="text-3xl block mb-2">💸</span>
-              <p className="font-black text-red-800 dark:text-red-300 text-sm">Faltu Kharch</p>
-              <p className="text-[11px] text-[var(--color-text-muted)] mt-1">Jis nutrient ki zaroorat nahi, us par paisa barbaad</p>
-            </div>
-            <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-xl p-4 text-center">
-              <span className="text-3xl block mb-2">📉</span>
-              <p className="font-black text-yellow-800 dark:text-yellow-300 text-sm">Kam Utpadan</p>
-              <p className="text-[11px] text-[var(--color-text-muted)] mt-1">Galat khaad se fasal quality girti hai</p>
-            </div>
-            <div className="bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 rounded-xl p-4 text-center">
-              <span className="text-3xl block mb-2">🌱</span>
-              <p className="font-black text-orange-800 dark:text-orange-300 text-sm">Mitti Kharab</p>
-              <p className="text-[11px] text-[var(--color-text-muted)] mt-1">Lambi avadhi mein zameen banjar ho sakti hai</p>
-            </div>
-          </div>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            KVK scientists ke mutabik, Bharat ki kaafi zameenon mein zinc ki kami hai bhai. Kai ilaqon mein phosphorus bahut kam, kuch jagah nitrogen zaroorat se zyada. Bina test kiye pata nahi chalta.
-          </p>
-          <IB>
-            <strong>Tip:</strong> Pichhle 3 saal se test nahi karwaya? Ek baar zaroor karwao bhai. Khaas kar agar monsoon mein zyada barish hui ya fasal pattern badla.
-          </IB>
-        </section>
-
-        {/* Registration Process */}
-        <section className="mb-8">
-          <SH>Enrollment Kaise Karein? Dono Tarike</SH>
-
-          <div className="mb-4 p-4 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-400 dark:border-blue-700 rounded-xl">
-            <h3 className="font-black text-blue-800 dark:text-blue-300 text-sm mb-2">Tarika 1: CSC Centre (Offline)</h3>
-            <StepList>
-              <SI n={1}>Nazdiki CSC ya Krishi Seva Kendra dhundo</SI>
-              <SI n={2}>Le jaao: Aadhaar card, mobile, khasra/khatauni number</SI>
-              <SI n={3}>Operator form bharega, details verify karega</SI>
-              <SI n={4}>Enrollment number milega — sambhal ke rakho</SI>
-              <SI n={5}>Mitti sample lene ka time fix hoga</SI>
-            </StepList>
-          </div>
-
-          <div className="p-4 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl">
-            <h3 className="font-black text-green-800 dark:text-green-300 text-sm mb-2">Tarika 2: Online (Ghar Baithe)</h3>
-            <StepList>
-              <SI n={1}><strong>soilhealth.dac.gov.in</strong> par jao</SI>
-              <SI n={2}>"Farmer Login" ya "New Registration" click karo</SI>
-              <SI n={3}>State select karo — har state ka portal alag ho sakta hai</SI>
-              <SI n={4}>Form bharo — personal + land + contact details</SI>
-              <SI n={5}>Documents upload — Aadhaar, land records</SI>
-              <SI n={6}>Submit karo → enrollment number note kar lo</SI>
-            </StepList>
-          </div>
-
-          <WB>
-            <strong>Zaroori:</strong> Jo mobile number doge, wahi active rako bhai. OTP, status updates, PDF link sab usi par aata hai. Number change = CSC jaa ke update karwao.
-          </WB>
-        </section>
-
-        {/* Documents */}
-        <section className="mb-8">
-          <SH>Kaunse Documents Chahiye?</SH>
-          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
-            <table className="w-full text-sm border-collapse">
-              <thead>
-                <tr className="bg-[var(--color-primary)] text-white">
-                  <th className="p-3 text-left">Document</th>
-                  <th className="p-3 text-left">Kyun Chahiye</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  ['Aadhaar Card', 'Identity verification'],
-                  ['Mobile Number (Active)', 'OTP aur updates'],
-                  ['Khasra/Khatauni Number', 'Zameen verify karne ke liye'],
-                  ['Land Records (7/12, Jamabandi)', 'Ownership proof — state-wise format alag'],
-                  ['Passport Size Photo', 'Kuch states mein mandatory'],
-                ].map(([doc, reason], i) => (
-                  <tr key={doc} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
-                    <td className="p-3 border-b border-[var(--color-border)] font-medium text-xs text-[var(--color-text)]">{doc}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{reason}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <IB>
-            <strong>Tenant Farmers:</strong> Kirayedar kisan bhi eligible hain bhai. Patta agreement ya land possession proof dikhao. Zameen ka maalik hona zaroori nahi.
-          </IB>
-        </section>
-
-        {/* Status Check */}
-        <section className="mb-8">
-          <SH>Status Kaise Check Karein?</SH>
+          <SH>Soil Health Card Kaise Banwate Hain — General Process</SH>
           <StepList>
-            <SI n={1}><strong>soilhealth.dac.gov.in</strong> kholo</SI>
-            <SI n={2}>"Track Application Status" click karo</SI>
-            <SI n={3}>Enrollment number ya mobile number daalo</SI>
-            <SI n={4}>OTP verify karo</SI>
-            <SI n={5}>Status dikh jayega</SI>
+            <SI n={1}>Apne block ke agriculture office jaao (ya agriculture college)</SI>
+            <SI n={2}>Ek form fill karo — zameen ka size, location, kaunsi fasal lagati ho</SI>
+            <SI n={3}>Soil sample collect hota hai — zameen se 8-10 jagah se thoda thoda mitti nikaal te hain</SI>
+            <SI n={4}>Lab mein test hota hai — 1-2 hafte lagta hai</SI>
+            <SI n={5}>Card print ho jaata hai — recommendations ke saath</SI>
           </StepList>
-
-          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
-            <table className="w-full text-sm border-collapse">
-              <thead>
-                <tr className="bg-[var(--color-primary)] text-white">
-                  <th className="p-3 text-left">Status</th>
-                  <th className="p-3 text-left">Matlab</th>
-                  <th className="p-3 text-left">Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  ['Application Received ⏳', 'Form prapt ho gaya', 'Wait karo'],
-                  ['Sample Under Testing 🔬', 'Lab mein test ho raha', '7-10 din wait'],
-                  ['Report Generated 📋', 'Test complete', 'Download ka wait'],
-                  ['Card Ready ✅', 'PDF taiyar', 'Login → Download'],
-                ].map(([status, meaning, action], i) => (
-                  <tr key={status} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
-                    <td className="p-3 border-b border-[var(--color-border)] font-medium text-xs text-[var(--color-text)]">{status}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{meaning}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-green-700 dark:text-green-400 font-medium">{action}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <IB>
-            <strong>Processing Time:</strong> Official 15 din batata hai bhai. Actual: 10-25 din (state/season dependent). 30+ din = helpline par sampark karo.
-          </IB>
         </section>
 
-        {/* IMAGE 2: Dashboard — PATH UNCHANGED */}
-        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
-          <Image
-            src="/images/articles/soil-health-card-complete-guide-2026/dashboard-2.webp"
-            alt="Soil health card portal dashboard — Card Ready message and Download PDF button"
-            width={1200}
-            height={630}
-            className="w-full object-cover"
-            loading="lazy"
-            sizes="(max-width: 768px) 100vw, 768px"
-          />
-          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Portal Dashboard — Jab Card Download Ke Liye Taiyar Ho
+        <section className="mb-8">
+          <SH>Har State Mein Kaise Apply Karte Hain — State-Wise Guide</SH>
+          
+          <div className="mb-8">
+            <div className="bg-blue-50 rounded-xl p-5 border-2 border-blue-300 mb-4">
+              <h3 className="font-black text-blue-900 text-lg mb-3">🌾 Maharashtra</h3>
+              <p className="text-sm text-gray-700 mb-3">
+                Maharashtra mein Jain Irrigation aur local krishi vibhag handle karte hain. Farmers directly agriculture office mein application de sakte hain ya CSC center se bhi kar sakte ho.
+              </p>
+              <p className="text-sm font-bold text-blue-900 mb-2">Contact:</p>
+              <p className="text-sm text-gray-700 mb-3">
+                District agriculture office ya official portal: <strong>maitreekrushak.gov.in</strong>
+              </p>
+              <p className="text-xs text-gray-600 italic">
+                Typical time: 4-6 hafte. Test ke time farmer ko bulaya jaata hai taaki woh khud sample dekh sake.
+              </p>
+            </div>
+
+            <div className="bg-green-50 rounded-xl p-5 border-2 border-green-300 mb-4">
+              <h3 className="font-black text-green-900 text-lg mb-3">🌾 Uttar Pradesh</h3>
+              <p className="text-sm text-gray-700 mb-3">
+                UP mein State Agriculture Department sab sambhalta hai. Har district mein separate soil testing lab hote hain. Online registration available hai.
+              </p>
+              <p className="text-sm font-bold text-green-900 mb-2">Contact:</p>
+              <p className="text-sm text-gray-700 mb-3">
+                Official portal: <strong>upagriculture.com</strong> — "Soil Health Card" section mein seedha registration
+              </p>
+              <p className="text-xs text-gray-600 italic">
+                Offline: Local block agriculture office mein jaao. Form free milega. Processing time 3-4 hafte.
+              </p>
+            </div>
+
+            <div className="bg-purple-50 rounded-xl p-5 border-2 border-purple-300 mb-4">
+              <h3 className="font-black text-purple-900 text-lg mb-3">🌾 Rajasthan</h3>
+              <p className="text-sm text-gray-700 mb-3">
+                Rajasthan mein khad ki shortage hoti thi, isliye Soil Health Card ko bahut serious lia gaya. Lab testing bilkul free + reliable hai.
+              </p>
+              <p className="text-sm font-bold text-purple-900 mb-2">Contact:</p>
+              <p className="text-sm text-gray-700 mb-3">
+                Agriculture Department office ya <strong>agriculture.rajasthan.gov.in</strong>
+              </p>
+              <p className="text-xs text-gray-600 italic">
+                Aajkal mobile lab bhi aati hain villages mein — news dekho ya agriculture office se pooch lo.
+              </p>
+            </div>
+
+            <div className="bg-yellow-50 rounded-xl p-5 border-2 border-yellow-400 mb-4">
+              <h3 className="font-black text-yellow-900 text-lg mb-3">🌾 Punjab</h3>
+              <p className="text-sm text-gray-700 mb-3">
+                Punjab mein soil problem jada hai kyunki zyada chemical use hota hai. State ne mass scale par soil testing shuru ki hui. Government colleges bhi test karte hain.
+              </p>
+              <p className="text-sm font-bold text-yellow-900 mb-2">Contact:</p>
+              <p className="text-sm text-gray-700 mb-3">
+                <strong>punjabkrishivikas.gov.in</strong> ya nearest Block Development Office
+              </p>
+              <p className="text-xs text-gray-600 italic">
+                Kharif/Rabi season se pehle time badh jaata hai — jaldi apply kar do.
+              </p>
+            </div>
+
+            <div className="bg-red-50 rounded-xl p-5 border-2 border-red-300 mb-4">
+              <h3 className="font-black text-red-900 text-lg mb-3">🌾 Karnataka</h3>
+              <p className="text-sm text-gray-700 mb-3">
+                South India mein Karnataka ka program achha chal raha hai. Coffee aur sugarcane walon ko priority milti hai, lekin general farmers ko bhi service milti hai.
+              </p>
+              <p className="text-sm font-bold text-red-900 mb-2">Contact:</p>
+              <p className="text-sm text-gray-700 mb-3">
+                <strong>ahlds.karnataka.gov.in</strong> — Online status tracking available
+              </p>
+              <p className="text-xs text-gray-600 italic">
+                English aur Kannada dono mein portal available hai.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="mb-8">
+          <SH>Soil Test Report Padna Aur Samajhna</SH>
+          <p className="text-sm text-gray-700 leading-relaxed mb-4">
+            Report mein likha hota "Your soil pH is 6.8, Nitrogen 180 kg/hectare, Phosphorus 25." Ye sab numbers confuse karte hain. Par actually simple hai.
           </p>
-        </div>
-
-        {/* PDF Download */}
-        <section className="mb-8">
-          <SH>PDF Download Kaise Karein?</SH>
-          <StepList>
-            <SI n={1}><strong>soilhealth.dac.gov.in</strong> → Farmer Login → enrollment + password</SI>
-            <SI n={2}>Dashboard par <strong>"Download Soil Health Card"</strong> button dikhega</SI>
-            <SI n={3}>Click karo → new tab mein PDF khulegi</SI>
-            <SI n={4}>Save karo ya print nikalo</SI>
-          </StepList>
-          <WB>
-            <strong>PDF Open Nahi Ho Rahi?</strong> Pop-up blocker disable karo bhai. Alag browser try karo. Mobile par PDF viewer install karo. Phir bhi na ho toh CSC se print nikalwao.
-          </WB>
-        </section>
-
-        {/* Common Problems */}
-        <section className="mb-8">
-          <SH>Common Problems + Solutions</SH>
-          <div className="space-y-3">
-            {[
-              { err: 'Naam Mein Spelling Galat', fix: 'CSC jao → Aadhaar dikhao → correction form bharo. Extra charge nahi lagta bhai.' },
-              { err: 'Website Khul Nahi Rahi', fix: 'Subah 6-8 AM try karo (low server load). WiFi use karo. Ya CSC chale jao.' },
-              { err: 'OTP Nahi Aa Raha', fix: 'Network check karo. SMS inbox full? Spam folder dekho. 5 min wait → resend. Phir bhi nahi = CSC se mobile update.' },
-              { err: 'Password Bhool Gaye', fix: '"Forgot Password" → registered mobile → OTP → naya password set. Kahin likh ke rakho bhai.' },
-              { err: 'Card Kho Gaya', fix: 'Portal login → dobara download. Ya CSC se duplicate print (₹10-15).' },
-            ].map(({ err, fix }) => (
-              <div key={err} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl overflow-hidden shadow-sm">
-                <div className="bg-red-50 dark:bg-red-900/20 border-b border-red-100 dark:border-red-800 px-4 py-2.5">
-                  <p className="font-black text-red-800 dark:text-red-300 text-sm">❌ {err}</p>
-                </div>
-                <div className="p-4">
-                  <div className="flex items-start gap-2 bg-green-50 dark:bg-green-900/20 rounded-lg p-3">
-                    <span className="text-green-600 dark:text-green-400 font-black text-xs shrink-0 mt-0.5">FIX:</span>
-                    <p className="text-xs text-green-800 dark:text-green-300 leading-relaxed">{fix}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* How To Read Report */}
-        <section className="mb-8">
-          <SH>Report Ko Kaise Samjhein?</SH>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Har parameter ka normal range hota hai bhai. Uske andar hona chahiye:
+          <p className="text-sm text-gray-700 leading-relaxed mb-4">
+            Card ke peeche recommendations likhi hoti — "Use 100kg DAP aur 50kg Urea per hectare." Seedha follow kar do. Zyada socha-sochi ki zaroorat nahi.
           </p>
-          <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-4 mb-4">
-            <ul className="space-y-2 text-xs text-[var(--color-text-muted)]">
-              <li><strong>pH:</strong> 6.0-7.5 normal. Kam/zyada = growth ruk sakti hai.</li>
-              <li><strong>Nitrogen:</strong> Growth ke liye. Kam = patte peele.</li>
-              <li><strong>Phosphorus:</strong> Jad + phool. Kam = fasal der se pakta.</li>
-              <li><strong>Potassium:</strong> Quality + disease resistance. Zyada bhi nuksan.</li>
-              <li><strong>Organic Carbon:</strong> Urvarakta. 0.5%+ hona chahiye.</li>
-              <li><strong>Zinc:</strong> Bahut si zameenon mein kami. Chhoti matra mein zaroori.</li>
-            </ul>
-          </div>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Report ke aakhri page par fasal-wise khaad salah hoti hai — kitni urea, DAP, MOP, organic khaad. Follow karo bhai — na kam, na zyada.
+          <p className="text-sm text-gray-700 leading-relaxed">
+            Agar recommendation samajh nahi aaye to agriculture officer ko call kar do — wo 5 minute mein samjha dega. Government officers ko ye kaam karna padta hai.
           </p>
-          <IB>
-            <strong>Expert Advice:</strong> Sirf N-P-K tak seemit mat raho bhai. Micronutrients (zinc, iron, copper) bhi utne hi zaroori hain. Samajh na aaye toh KVK se salah lo.
-          </IB>
         </section>
 
-        {/* Cost */}
         <section className="mb-8">
-          <SH>Kitna Kharch Aata Hai?</SH>
-          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
-            <table className="w-full text-sm border-collapse">
-              <thead>
-                <tr className="bg-[var(--color-primary)] text-white">
-                  <th className="p-3 text-left">Service</th>
-                  <th className="p-3 text-left">Cost</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  ['Soil Test (Official)', 'Muft'],
-                  ['CSC Service Charge', '₹20-50'],
-                  ['Sample Collection (staff)', 'Muft / Nominal'],
-                  ['Print/Photocopy', '₹10-20'],
-                  ['Correction', 'Muft'],
-                ].map(([service, cost], i) => (
-                  <tr key={service} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
-                    <td className="p-3 border-b border-[var(--color-border)] font-medium text-xs text-[var(--color-text)]">{service}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-green-700 dark:text-green-400 font-bold">{cost}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <SH>Soil Health Card Ka Fayda — Actual Numbers</SH>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+            <div className="bg-green-50 rounded-xl p-4 border border-green-300">
+              <p className="font-black text-green-800 text-sm mb-2">📈 Production Badha</p>
+              <p className="text-xs text-gray-700">Sahi fertilizer se 25-40% tak production badh jaata hai</p>
+            </div>
+            <div className="bg-blue-50 rounded-xl p-4 border border-blue-300">
+              <p className="font-black text-blue-800 text-sm mb-2">💰 Cost Kam Hota</p>
+              <p className="text-xs text-gray-700">Waste fertilizer use nahi hota, cost 15-20% tak kam</p>
+            </div>
+            <div className="bg-amber-50 rounded-xl p-4 border border-amber-300">
+              <p className="font-black text-amber-800 text-sm mb-2">🌱 Soil Health</p>
+              <p className="text-xs text-gray-700">Zameen ki quality improve hoti hai — long term benefit</p>
+            </div>
+            <div className="bg-purple-50 rounded-xl p-4 border border-purple-300">
+              <p className="font-black text-purple-800 text-sm mb-2">📋 Record</p>
+              <p className="text-xs text-gray-700">Card future mein proof ke kaam aata hai — loan application mein</p>
+            </div>
           </div>
-          <DB>
-            <strong>Warning:</strong> ₹100+ charge = galat hai bhai. Helpline par complaint karo ya doosre CSC jao.
-          </DB>
         </section>
 
-        {/* FAQ */}
         <section className="mb-8">
-          <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Puche Jane Wale Sawal
+          <h2 className="text-xl font-black text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">
+            Log Ye Poochte Hain
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="Soil Health Card FAQ 2026 — Verified Answers" />
+          <FAQBlock faqs={FAQS_DATA} caption="Soil Health Card FAQ — Real Farmer Questions" />
         </section>
 
-        {/* Helpline */}
-        <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-2xl p-5 mb-8 space-y-2">
-          <p className="font-black text-[var(--color-text)] text-base mb-2">Sahayata Ke Liye Sampark</p>
-          <p className="text-sm text-[var(--color-text-muted)]">📞 Helpline: <a href="tel:18001801551" className="font-bold text-[var(--color-primary)] hover:underline">1800-180-1551</a> (Toll-free, Mon-Sat 9AM-6PM)</p>
-          <p className="text-sm text-[var(--color-text-muted)]">📧 Email: <a href="mailto:soilhealth-dac@nic.in" className="font-bold text-[var(--color-primary)] hover:underline">soilhealth-dac@nic.in</a></p>
-          <p className="text-sm text-[var(--color-text-muted)]">🌐 Portal: <a href="https://soilhealth.dac.gov.in" target="_blank" rel="noopener noreferrer" className="font-bold text-[var(--color-primary)] hover:underline">soilhealth.dac.gov.in ↗</a></p>
-          <p className="text-sm text-[var(--color-text-muted)]">🏢 Local: District KVK ya Agriculture Department office</p>
-        </div>
-
-        {/* Final CTA */}
-        <div className="my-8 p-5 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl text-center">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-2">Kya Aapne Mitti Test Karwaya?</h3>
-          <p className="text-sm text-green-700 dark:text-green-400 mb-3">
-            Haan = report ki salah follow karo bhai. Nahi = aaj hi enrollment karwao. Sahi khaad, sahi matra — yahi safalta ka raaz hai.
+        <div className="my-8 p-6 bg-green-50 border-2 border-green-400 rounded-2xl">
+          <h3 className="font-black text-green-800 text-lg mb-3">Real Talk</h3>
+          <p className="text-sm text-green-900 leading-relaxed mb-3">
+            Soil health card chhoti cheez lag sakti hai lekin pura farming setup improve kar deta hai. Government ye free diye hain to use kar lo. 30 minute ka kaam hai, lekin 3 saal ke liye benefit milega.
+          </p>
+          <p className="text-sm text-green-900 leading-relaxed">
+            Aur ek baat — jo farmers soil test karate hain, unka production aur quality dono badhta hai. Buyer bhi premium price deta hai agar quality acha ho.
           </p>
         </div>
 
         <GovLink
-          href="https://soilhealth.dac.gov.in"
-          label="Soil Health Card — Official Portal"
-          guide="Abhi Enrollment Karo"
+          href="https://soilhealth.dac.gov.in/"
+          label="National Soil Health Dashboard"
+          guide="Check Portal"
           guideHref="/articles/PmKisanMasterGuide2026"
           portalName="soilhealth.dac.gov.in"
         />
 
-        <CalcBanner
-          icon="🌾"
-          title="Apni Fasal Ki Income Calculate Karo"
-          desc="MSP income, crop profit — soil report ke saath milake plan karo"
-          primaryCta={{ href: '/calculator/msp-income', label: '📊 MSP Calculator →' }}
-          secondaryCta={{ href: '/calculator/crop-profit', label: '🌾 Crop Profit' }}
-        />
-
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
-        <BottomNav extraLinks={[
-          { href: '/articles/NanoDap500mlPriceInIndia2026', l: '🌱 Nano DAP Price' },
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
-          { href: '/calculator/msp-income', l: '📊 MSP Calculator' },
-        ]} />
+        <BottomNav />
         <Disclaimer />
       </div>
     </>
