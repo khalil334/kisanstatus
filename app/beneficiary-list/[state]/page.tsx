@@ -1,431 +1,398 @@
-import { notFound } from 'next/navigation';
-import Link from 'next/link';
-import type { Metadata } from 'next';
-
-// ═══════════════════════════════════════════════════════════
-// STATE DATA - 37 States & UTs
-// ═══════════════════════════════════════════════════════════
 const STATE_DATA: Record<string, {
   name: string;
   icon: string;
   beneficiaries: string;
   description: string;
   districts: string[];
+  landPortal: string;
+  stateScheme?: string;
+  helpline?: string;
+  specialNote?: string;
+  keywords: string[];
 }> = {
   'uttar-pradesh': {
     name: 'Uttar Pradesh',
     icon: '🏔️',
     beneficiaries: '2.5 Crore+',
-    description: 'UP mein sabse zyada PM Kisan beneficiaries hain. Wheat, sugarcane aur rice cultivators yahan major beneficiaries hain.',
-    districts: ['Lucknow', 'Kanpur', 'Varanasi', 'Agra', 'Meerut', 'Prayagraj', 'Ghaziabad'],
+    description: 'Uttar Pradesh mein PM Kisan ke 2.5 crore se zyada beneficiaries hain — India ka sabse bada state-wise count. Western UP (Muzaffarnagar, Meerut, Saharanpur, Shamli) mein sugarcane aur wheat cultivators major beneficiaries hain. Eastern UP (Varanasi, Gorakhpur, Basti, Azamgarh) mein rice cultivation dominant hai. Bundelkhand region (Jhansi, Banda, Mahoba) drought-prone hai — yahan PM Kisan ka ₹6000 annual support bahut crucial hai. Terai belt (Lakhimpur Kheri, Bahraich, Shravasti) mein bhi extensive farming hoti hai. UP government ne Bhulekh portal banaya hai jahan farmers apni Khatauni online check kar sakte hain. PM Kisan registration ke liye UP Kisan Sabha registration bhi mandatory hai kuch districts mein. Small aur marginal farmers (2 hectares se kam) ko ₹6000 milta hai — ₹2000 har 4 mahine mein (kist). 23vi kist June 2026 mein release ho chuki hai, 24vi kist October 2026 expected hai. UP ke sugarcane growers heavily depend karte hain is income support par kyunki sugar mills se payment delays common hain.',
+    districts: ['Lucknow', 'Kanpur', 'Varanasi', 'Agra', 'Meerut', 'Prayagraj', 'Ghaziabad', 'Moradabad', 'Gorakhpur', 'Aligarh', 'Bareilly', 'Muzaffarnagar', 'Saharanpur', 'Lakhimpur Kheri', 'Bahraich'],
+    landPortal: 'upbhulekh.gov.in (Khatauni online check karo) + upbhulekh.in (Naksha download)',
+    stateScheme: 'UP Kisan Sabha Registration mandatory in some districts + state top-up schemes',
+    helpline: '1800-180-1835 (UP Kisan Call Center) + 155261 (PM Kisan National Helpline)',
+    specialNote: 'Western UP ke sugarcane growers ko mills se payment delay hoti hai — ₹6000 crucial hai',
+    keywords: ['pm kisan up list', 'pm kisan uttar pradesh village wise', 'up bhulekh pm kisan', 'pm kisan western up', 'pm kisan eastern up', 'up kisan sabha pm kisan', 'pm kisan terai belt', 'pm kisan bundelkhand'],
   },
   'bihar': {
     name: 'Bihar',
     icon: '🌊',
     beneficiaries: '80 Lakh+',
-    description: 'Bihar ke small farmers PM Kisan se bahut benefit le rahe hain. Rice aur wheat cultivation primary hai.',
-    districts: ['Patna', 'Gaya', 'Muzaffarpur', 'Darbhanga', 'Bhagalpur', 'Purnia'],
+    description: 'Bihar mein 80 lakh se zyada PM Kisan beneficiaries registered hain — India ke top 3 states mein se ek. Gangetic plains mein wheat aur rice cultivation primary hai. North Bihar (Muzaffarpur, Darbhanga, Sitamarhi, Madhubani, Supaul) flood-prone hai — annual flooding se land records affect hote hain, isliye farmers ko regularly Bhumi Jankari portal par records update karne chahiye. South Bihar (Gaya, Nawada, Aurangabad, Rohtas) mein maize cultivation prominent hai. Central Bihar (Patna, Vaishali, Samastipur, Begusarai) mein vegetables aur fruits bhi grow hote hain. Bihar government ne Bhumi Jankari portal banaya hai jahan farmers apna land record check kar sakte hain. Joint family land ownership Bihar mein common hai — isliye PM Kisan verification mein time lagta hai. Khasra-Khatauni update karwane ke liye Circle Officer se contact karna padta hai. Bihar Rajya Fasal Sahayata Yojana state government chalati hai jo PM Kisan ke saath additional support deti hai. Small farmers (1 hectare se kam) ko ₹6000 annual milta hai.',
+    districts: ['Patna', 'Gaya', 'Muzaffarpur', 'Darbhanga', 'Bhagalpur', 'Purnia', 'Vaishali', 'Nalanda', 'Samastipur', 'Rohtas', 'Aurangabad', 'Nawada', 'Sitamarhi', 'Madhubani', 'Begusarai'],
+    landPortal: 'biharbhumi.bihar.gov.in (Bhumi Jankari portal) + land.bihar.gov.in (Khasra-Khatauni)',
+    stateScheme: 'Bihar Rajya Fasal Sahayata Yojana (additional state support)',
+    helpline: '0612-2215015 (Bihar Agriculture Department) + 155261 (National Helpline)',
+    specialNote: 'North Bihar flood-prone areas mein land records regularly update karo — Circle Officer se contact karo',
+    keywords: ['pm kisan bihar list', 'pm kisan north bihar', 'pm kisan south bihar', 'bihar bhumi jankari pm kisan', 'pm kisan flood area bihar', 'bihar rajya fasal sahayata', 'pm kisan gaya bihar', 'pm kisan muzaffarpur'],
   },
   'madhya-pradesh': {
     name: 'Madhya Pradesh',
     icon: '🌿',
     beneficiaries: '70 Lakh+',
-    description: 'MP mein soybean, wheat aur pulses cultivators PM Kisan beneficiaries hain.',
-    districts: ['Indore', 'Bhopal', 'Jabalpur', 'Gwalior', 'Ujjain', 'Sagar'],
+    description: 'Madhya Pradesh mein 70 lakh se zyada PM Kisan beneficiaries hain. Malwa plateau (Indore, Ujjain, Dewas, Dhar) par soybean cultivation bahut prominent hai — MP India ka largest soybean producer hai. Chambal region (Morena, Bhind, Gwalior) aur Bundelkhand (Datia, Tikamgarh, Chhatarpur) mein wheat aur pulses grow hote hain. MP government ne Mukhyamantri Kisan Kalyan Yojana launch ki hai jo PM Kisan ke saath ₹4000 extra deti hai per year — total ₹10,000 annual milta hai MP ke farmers ko. Tribal districts (Jhabua, Alirajpur, Barwani, Dindori) mein khas documentation requirements hain — tribal land rights certificates chahiye. Bhu-Abhilekh Naksha portal land verification ke liye use hota hai. MP Online Kiosks aur CSC centres statewide digital verification ke liye available hain. Soybean growers Malwa mein heavily depend karte hain PM Kisan par kyunki soybean prices volatile hote hain.',
+    districts: ['Indore', 'Bhopal', 'Jabalpur', 'Gwalior', 'Ujjain', 'Sagar', 'Rewa', 'Satna', 'Chhindwara', 'Hoshangabad', 'Dewas', 'Dhar', 'Morena', 'Bhind', 'Jhabua'],
+    landPortal: 'bhu-abhilekh.nic.in (Bhu-Abhilekh Naksha portal) + mpbhulekh.gov.in',
+    stateScheme: 'Mukhyamantri Kisan Kalyan Yojana (₹4000 extra per year — total ₹10,000)',
+    helpline: '1800-233-5500 (MP Kisan Call Center) + 155261',
+    specialNote: 'MP mein total ₹10,000 milta hai (₹6000 PM Kisan + ₹4000 state scheme) — sabse zyada benefit',
+    keywords: ['pm kisan mp list', 'pm kisan madhya pradesh', 'mukhyamantri kisan kalyan yojana mp', 'pm kisan malwa mp', 'pm kisan tribal mp', 'bhu-abhilekh pm kisan', 'pm kisan soybean mp', 'pm kisan indore'],
   },
   'rajasthan': {
     name: 'Rajasthan',
     icon: '☀️',
     beneficiaries: '65 Lakh+',
-    description: 'Rajasthan ke bajra, wheat aur mustard cultivators PM Kisan se benefit le rahe hain.',
-    districts: ['Jaipur', 'Jodhpur', 'Kota', 'Udaipur', 'Ajmer', 'Bikaner'],
+    description: 'Rajasthan ke 65 lakh se zyada farmers PM Kisan beneficiaries hain. Thar desert belt (Barmer, Jaisalmer, Bikaner, Churu) mein bajra cultivation prominent hai — yeh drought-prone areas hain jahan ₹6000 annual support bahut crucial hai. Eastern Rajasthan (Jaipur, Kota, Alwar, Bharatpur, Sawai Madhopur) mein wheat aur mustard grow hota hai. Southern Rajasthan (Udaipur, Banswara, Dungarpur) tribal belt hai jahan maize aur pulses cultivation hai. Rajasthan government ne Apna Khata (E-Dharti) portal banaya hai jo land records ko digital kar raha hai. E-Mitra centres statewide digital verification ke liye available hain — 50 districts mein easily accessible. Bajra aur mustard cultivators Thar desert mein PM Kisan par heavily depend karte hain kyunki rainfall unpredictable hai. Rajasthan Kisan Samman Nidhi state top-up scheme bhi hai.',
+    districts: ['Jaipur', 'Jodhpur', 'Kota', 'Udaipur', 'Ajmer', 'Bikaner', 'Sikar', 'Alwar', 'Sri Ganganagar', 'Bharatpur', 'Barmer', 'Jaisalmer', 'Churu', 'Pali', 'Nagaur'],
+    landPortal: 'apnakhata.raj.nic.in (Apna Khata portal) + edharti.rajasthan.gov.in',
+    stateScheme: 'Rajasthan Kisan Samman Nidhi (state top-up)',
+    helpline: '1800-180-6136 (Rajasthan Kisan Helpline) + 155261',
+    specialNote: 'Desert districts (Barmer, Jaisalmer) mein water scarcity — ₹6000 irrigation cost cover karta hai',
+    keywords: ['pm kisan rajasthan list', 'pm kisan desert rajasthan', 'pm kisan barmer', 'apna khata pm kisan', 'pm kisan bajra rajasthan', 'e-mitra pm kisan verification', 'pm kisan jaipur', 'pm kisan jodhpur'],
   },
   'maharashtra': {
     name: 'Maharashtra',
     icon: '🌾',
     beneficiaries: '1 Crore+',
-    description: 'Maharashtra mein cotton, sugarcane aur onion cultivators major beneficiaries hain.',
-    districts: ['Mumbai', 'Pune', 'Nagpur', 'Nashik', 'Aurangabad', 'Solapur'],
-  },
-  'west-bengal': {
-    name: 'West Bengal',
-    icon: '🐟',
-    beneficiaries: '70 Lakh+',
-    description: 'West Bengal mein rice, jute aur potato cultivators PM Kisan beneficiaries hain.',
-    districts: ['Kolkata', 'Howrah', 'North 24 Parganas', 'South 24 Parganas', 'Burdwan'],
-  },
-  'karnataka': {
-    name: 'Karnataka',
-    icon: '🌴',
-    beneficiaries: '50 Lakh+',
-    description: 'Karnataka mein sugarcane, cotton aur ragi cultivators PM Kisan se benefit le rahe hain.',
-    districts: ['Bengaluru', 'Mysuru', 'Hubballi', 'Mangaluru', 'Belagavi'],
-  },
-  'odisha': {
-    name: 'Odisha',
-    icon: '🌊',
-    beneficiaries: '40 Lakh+',
-    description: 'Odisha ke rice, pulses aur oilseeds cultivators PM Kisan beneficiaries hain.',
-    districts: ['Bhubaneswar', 'Cuttack', 'Rourkela', 'Puri', 'Balasore'],
-  },
-  'tamil-nadu': {
-    name: 'Tamil Nadu',
-    icon: '🌞',
-    beneficiaries: '40 Lakh+',
-    description: 'Tamil Nadu mein rice, banana aur sugarcane cultivators major beneficiaries hain.',
-    districts: ['Chennai', 'Coimbatore', 'Madurai', 'Tiruchirappalli', 'Salem'],
+    description: 'Maharashtra mein 1 crore se zyada registered PM Kisan beneficiaries hain — India ke top states mein se ek. Vidarbha region (Nagpur, Amravati, Wardha, Yavatmal, Akola) mein cotton cultivation prominent hai — yahan crop failure common hai, isliye PM Kisan support crucial hai. Western Maharashtra (Pune, Satara, Kolhapur, Sangli) mein sugarcane farming hai — sugar cooperatives strong hain. Nashik belt onion capital hai — onion growers volatile prices face karte hain. Konkan region (Ratnagiri, Sindhudurg, Raigad) mein rice cultivation hoti hai. Namo Shetkari Mahasanman Nidhi scheme se additional ₹6000 milta hai — total ₹12,000 annual. Mahabhumi portal (7/12 Satbara Utara) online land verification ke liye use hota hai. Maha-e-Seva Kendra statewide digital verification ke liye available hain. Vidarbha cotton growers PM Kisan par heavily depend karte hain.',
+    districts: ['Mumbai', 'Pune', 'Nagpur', 'Nashik', 'Aurangabad', 'Solapur', 'Thane', 'Amravati', 'Kolhapur', 'Satara', 'Wardha', 'Yavatmal', 'Akola', 'Ratnagiri', 'Sangli'],
+    landPortal: 'mahabhumi.gov.in (7/12 Satbara Utara online) + mahabhulekh.maharashtra.gov.in',
+    stateScheme: 'Namo Shetkari Mahasanman Nidhi (₹6000 additional — total ₹12,000)',
+    helpline: '022-26591848 (Maharashtra Agriculture Helpline) + 155261',
+    specialNote: 'Total ₹12,000 milta hai (₹6000 PM Kisan + ₹6000 state scheme) — Vidarbha cotton growers ko bahut fayda',
+    keywords: ['pm kisan maharashtra list', 'pm kisan vidarbha', 'pm kisan western maharashtra', 'namo shetkari mahasanman nidhi', '7/12 satbara pm kisan', 'pm kisan nashik onion', 'pm kisan pune', 'pm kisan nagpur'],
   },
   'punjab': {
     name: 'Punjab',
     icon: '🌾',
     beneficiaries: '30 Lakh+',
-    description: 'Punjab ke wheat, rice aur maize cultivators PM Kisan beneficiaries hain.',
-    districts: ['Amritsar', 'Ludhiana', 'Jalandhar', 'Patiala', 'Bathinda'],
+    description: 'Punjab India ka agricultural powerhouse hai — "Granary of India" ke naam se jaana jaata hai. Wheat aur rice cultivation highly productive hai. Lekin Punjab mein bahut farmers income tax payers hain ya government employees hain, isliye PM Kisan se ineligible hain. Jo small aur marginal farmers hain (less than 2 hectares) wo beneficiaries hain — 30 lakh se zyada registered. Jamabandi land records portal verification ke liye use hota hai. Punjab government ne Ghar Ghar Rozgar portal banaya hai jo PM Kisan ke saath integration kar sakta hai. Wheat growers (Mansa, Moga, Bathinda, Sangrur) aur rice growers (Tarn Taran, Gurdaspur, Hoshiarpur) major beneficiaries hain. Income tax filers aur govt employees eligible NAHI hain — eligibility check zaroor karo.',
+    districts: ['Amritsar', 'Ludhiana', 'Jalandhar', 'Patiala', 'Bathinda', 'Mohali', 'Hoshiarpur', 'Sangrur', 'Mansa', 'Faridkot', 'Moga', 'Tarn Taran', 'Gurdaspur', 'Pathankot', 'Firozpur'],
+    landPortal: 'jamabandi.punjab.gov.in (Jamabandi portal) + plrs.punjab.gov.in',
+    helpline: '1800-180-2117 (Punjab Kisan Helpline) + 155261',
+    specialNote: 'Income tax filers aur govt employees eligible NAHI hain — pehle eligibility check karo',
+    keywords: ['pm kisan punjab list', 'pm kisan punjab eligibility', 'jamabandi pm kisan', 'pm kisan punjab wheat', 'pm kisan ludhiana', 'pm kisan bathinda', 'pm kisan patiala', 'ghar ghar rozgar punjab pm kisan'],
   },
   'haryana': {
     name: 'Haryana',
     icon: '🚜',
     beneficiaries: '25 Lakh+',
-    description: 'Haryana mein wheat, rice aur sugarcane cultivators PM Kisan se benefit le rahe hain.',
-    districts: ['Chandigarh', 'Faridabad', 'Gurugram', 'Panipat', 'Ambala'],
-  },
-  'andhra-pradesh': {
-    name: 'Andhra Pradesh',
-    icon: '🌶️',
-    beneficiaries: '50 Lakh+',
-    description: 'AP ke rice, tobacco aur aquaculture farmers PM Kisan beneficiaries hain.',
-    districts: ['Visakhapatnam', 'Vijayawada', 'Guntur', 'Tirupati', 'Nellore'],
-  },
-  'kerala': {
-    name: 'Kerala',
-    icon: '🌊',
-    beneficiaries: '20 Lakh+',
-    description: 'Kerala mein rice, coconut aur rubber cultivators PM Kisan se benefit le rahe hain.',
-    districts: ['Thiruvananthapuram', 'Kochi', 'Kozhikode', 'Thrissur', 'Kollam'],
-  },
-  'telangana': {
-    name: 'Telangana',
-    icon: '🌴',
-    beneficiaries: '35 Lakh+',
-    description: 'Telangana ke rice, cotton aur turmeric cultivators major beneficiaries hain.',
-    districts: ['Hyderabad', 'Warangal', 'Nizamabad', 'Karimnagar', 'Khammam'],
+    description: 'Haryana Green Revolution belt ka part hai — wheat aur rice highly productive hai. 25 lakh se zyada registered PM Kisan beneficiaries hain. Mewat (Nuh), Sirsa, Mahendragarh districts mein small farmers significant beneficiaries hain. Meri Fasal Mera Byora scheme state government chalati hai jo PM Kisan ke saath integrate hai — ye registration mandatory hai. Jamabandi land records portal verification ke liye use hota hai. Haryana farmers jo income tax payers hain ya government employees hain wo eligible nahi hain. Wheat growers (Karnal, Kurukshetra, Kaithal) aur rice growers (Sirsa, Fatehabad, Hisar) major beneficiaries hain.',
+    districts: ['Chandigarh', 'Faridabad', 'Gurugram', 'Panipat', 'Ambala', 'Karnal', 'Hisar', 'Rohtak', 'Sirsa', 'Sonipat', 'Kurukshetra', 'Kaithal', 'Fatehabad', 'Jind', 'Nuh'],
+    landPortal: 'jamabandi.nic.in (Jamabandi portal) + bhulekh.haryana.gov.in',
+    stateScheme: 'Meri Fasal Mera Byora (mandatory registration for PM Kisan)',
+    helpline: '1800-180-2117 (Haryana Kisan Helpline) + 155261',
+    specialNote: 'Meri Fasal Mera Byora registration mandatory hai PM Kisan ke liye — bina iske nahi milega',
+    keywords: ['pm kisan haryana list', 'meri fasal mera byora', 'pm kisan mewat haryana', 'jamabandi pm kisan haryana', 'pm kisan sirsa', 'pm kisan karnal', 'pm kisan gurugram', 'pm kisan hisar'],
   },
   'gujarat': {
     name: 'Gujarat',
     icon: '🌿',
     beneficiaries: '50 Lakh+',
-    description: 'Gujarat mein cotton, groundnut aur wheat cultivators PM Kisan beneficiaries hain.',
-    districts: ['Ahmedabad', 'Surat', 'Vadodara', 'Rajkot', 'Bhavnagar'],
+    description: 'Gujarat mein 50 lakh se zyada registered PM Kisan beneficiaries hain. Saurashtra region (Rajkot, Junagadh, Bhavnagar, Amreli, Porbandar) mein cotton aur groundnut cultivation prominent hai — yeh rain-fed areas hain. South Gujarat (Surat, Valsad, Navsari, Bharuch) mein sugarcane aur vegetables grow hote hain. North Gujarat (Banaskantha, Patan, Mehsana) mein castor aur cumin farming hai. AnyRor (Any Records of Rights) system land verification ke liye use hota hai. IKHEDUT portal se enrollment easy hai — online application kar sakte hain. CSC centres statewide digital verification ke liye available hain. Saurashtra cotton growers PM Kisan par heavily depend karte hain kyunki rainfall unpredictable hai.',
+    districts: ['Ahmedabad', 'Surat', 'Vadodara', 'Rajkot', 'Bhavnagar', 'Junagadh', 'Jamnagar', 'Gandhinagar', 'Mehsana', 'Banaskantha', 'Valsad', 'Navsari', 'Bharuch', 'Amreli', 'Patan'],
+    landPortal: 'anyror.gujarat.gov.in (AnyRor portal) + ikhedut.gujarat.gov.in',
+    stateScheme: 'IKHEDUT portal integration (easy online enrollment)',
+    helpline: '1800-180-1551 (Gujarat Kisan Call Center) + 155261',
+    specialNote: 'Saurashtra cotton growers heavily depend on PM Kisan — rainfall unpredictable hai',
+    keywords: ['pm kisan gujarat list', 'pm kisan saurashtra', 'anyror pm kisan', 'ikhedut pm kisan', 'pm kisan rajkot', 'pm kisan surat', 'pm kisan groundnut gujarat', 'pm kisan castor'],
+  },
+  'telangana': {
+    name: 'Telangana',
+    icon: '🌴',
+    beneficiaries: '35 Lakh+',
+    description: 'Telangana mein 35 lakh se zyada PM Kisan beneficiaries hain. Godavari aur Krishna river systems irrigation support karte hain. Nizamabad, Karimnagar mein turmeric cultivation prominent hai — Nizamabad turmeric market famous hai. Warangal aur Khammam mein cotton farming hai. Rythu Bandhu state scheme ₹10,000 per acre per year deti hai — ye PM Kisan ke saath milta hai, toh Telangana farmers total ₹16,000+ annual receive karte hain. Dharani portal land records ke liye use hota hai. Mee Seva centres statewide digital verification ke liye available hain. Turmeric cultivators Nizamabad mein PM Kisan se bahut benefit lete hain.',
+    districts: ['Hyderabad', 'Warangal', 'Nizamabad', 'Karimnagar', 'Khammam', 'Mahbubnagar', 'Nalgonda', 'Adilabad', 'Medak', 'Rangareddy', 'Siddipet', 'Suryapet', 'Mancherial', 'Jagtial', 'Peddapalli'],
+    landPortal: 'dharani.telangana.gov.in (Dharani portal) + meeseva.telangana.gov.in',
+    stateScheme: 'Rythu Bandhu (₹10,000 per acre per year — total ₹16,000+ with PM Kisan)',
+    helpline: '1800-425-0999 (Telangana Farmer Helpline) + 155261',
+    specialNote: 'Total ₹16,000+ milta hai (₹6000 PM Kisan + ₹10,000 Rythu Bandhu) — sabse zyada benefit India mein',
+    keywords: ['pm kisan telangana list', 'rythu bandhu pm kisan', 'pm kisan nizamabad turmeric', 'dharani pm kisan', 'pm kisan warangal', 'pm kisan karimnagar', 'pm kisan hyderabad', 'mee seva pm kisan'],
+  },
+  'andhra-pradesh': {
+    name: 'Andhra Pradesh',
+    icon: '🌶️',
+    beneficiaries: '50 Lakh+',
+    description: 'Andhra Pradesh mein 50 lakh se zyada PM Kisan beneficiaries hain. Krishna aur Godavari delta regions (East Godavari, West Godavari, Krishna, Guntur) mein rice cultivation prominent hai — fertile lands mein high productivity hai. Coastal Andhra (Visakhapatnam, Vizianagaram, Srikakulam) mein aquaculture (shrimp farming) bhi bahut hai. Rayalaseema region (Kurnool, Anantapur, Kadapa, Chittoor) mein groundnut aur sunflower cultivation hai. YSR Rythu Bharosa state scheme PM Kisan ke saath additional support deti hai. AP Bhoomi portal land verification ke liye use hota hai. Delta region rice growers major beneficiaries hain.',
+    districts: ['Visakhapatnam', 'Vijayawada', 'Guntur', 'Tirupati', 'Nellore', 'Kurnool', 'Kadapa', 'Anantapur', 'Chittoor', 'East Godavari', 'West Godavari', 'Krishna', 'Prakasam', 'Vizianagaram', 'Srikakulam'],
+    landPortal: 'apmebhumi.gov.in (AP Bhoomi portal) + ap.gov.in',
+    stateScheme: 'YSR Rythu Bharosa (state top-up additional support)',
+    helpline: '1800-425-3553 (AP Kisan Helpline) + 155261',
+    specialNote: 'Delta region (Krishna, Godavari) rice growers major beneficiaries — high productivity',
+    keywords: ['pm kisan andhra pradesh list', 'pm kisan ap delta', 'ysr rythu bharosa pm kisan', 'pm kisan krishna godavari', 'pm kisan rayalaseema', 'pm kisan guntur', 'pm kisan visakhapatnam', 'ap bhoomi pm kisan'],
+  },
+  'kerala': {
+    name: 'Kerala',
+    icon: '🌊',
+    beneficiaries: '20 Lakh+',
+    description: 'Kerala mein 20 lakh se zyada PM Kisan beneficiaries hain. Kuttanad region (Alappuzha) "Rice Bowl of Kerala" ke naam se jaana jaata hai — below sea level rice cultivation unique hai. Coconut groves statewide hain — Kerala India ka largest coconut producer hai. Rubber plantations Kottayam, Pathanamthitta mein prominent hain. Idukki mein cardamom aur spices cultivation hai — hill station par organic farming. Land fragmentation zyada hai — 0.5 hectare se chhoti holdings bhi eligible hain. Akshaya CSC centres statewide digital verification ke liye available hain. Small landholdings (0.5 hectare se kam) bhi eligible hain Kerala mein.',
+    districts: ['Thiruvananthapuram', 'Kochi', 'Kozhikode', 'Thrissur', 'Kollam', 'Kottayam', 'Palakkad', 'Malappuram', 'Alappuzha', 'Idukki', 'Kannur', 'Kasaragod', 'Pathanamthitta', 'Wayanad'],
+    landPortal: 'Land tax receipts + possession certificates (Kerala mein khas system)',
+    helpline: '1800-425-0999 (Kerala Agriculture Helpline) + 155261',
+    specialNote: 'Small landholdings (0.5 hectare se kam) bhi eligible hain — land fragmentation common hai',
+    keywords: ['pm kisan kerala list', 'pm kisan kuttanad', 'pm kisan alappuzha rice', 'akshaya pm kisan', 'pm kisan kottayam rubber', 'pm kisan idukki cardamom', 'pm kisan kochi', 'pm kisan thrissur'],
+  },
+  'odisha': {
+    name: 'Odisha',
+    icon: '🌊',
+    beneficiaries: '40 Lakh+',
+    description: 'Odisha mein 40 lakh se zyada PM Kisan beneficiaries hain. Coastal plains (Cuttack, Puri, Balasore, Kendrapara, Jagatsinghpur) mein rice cultivation primary hai. KALIA scheme (Krushak Assistance for Livelihood and Income Augmentation) state government chalati hai jo PM Kisan ke saath additional support deti hai. Tribal districts (Koraput, Malkangiri, Rayagada, Nabarangpur) mein patta land holders eligible hain. Bhulekh Odisha portal land verification ke liye use hota hai. Rice growers coastal areas mein major beneficiaries hain.',
+    districts: ['Bhubaneswar', 'Cuttack', 'Rourkela', 'Puri', 'Balasore', 'Sambalpur', 'Berhampur', 'Angul', 'Koraput', 'Jajpur', 'Kendrapara', 'Jagatsinghpur', 'Malkangiri', 'Rayagada', 'Nabarangpur'],
+    landPortal: 'bhulekh.ori.nic.in (Bhulekh Odisha) + bhulekh.odisha.gov.in',
+    stateScheme: 'KALIA Scheme (Krushak Assistance for Livelihood — state top-up)',
+    helpline: '1800-345-6789 (Odisha Kisan Helpline) + 155261',
+    specialNote: 'Tribal farmers in Koraput, Malkangiri with patta land eligible — khas documentation',
+    keywords: ['pm kisan odisha list', 'kalia scheme pm kisan', 'pm kisan coastal odisha', 'bhulekh odisha pm kisan', 'pm kisan cuttack', 'pm kisan puri', 'pm kisan tribal odisha', 'pm kisan koraput'],
   },
   'assam': {
     name: 'Assam',
     icon: '🌾',
     beneficiaries: '30 Lakh+',
-    description: 'Assam ke rice, tea aur jute cultivators PM Kisan se benefit le rahe hain.',
-    districts: ['Guwahati', 'Silchar', 'Dibrugarh', 'Jorhat', 'Nagaon'],
+    description: 'Assam mein 30 lakh se zyada PM Kisan beneficiaries hain. Brahmaputra valley (Guwahati, Nagaon, Jorhat, Dibrugarh, Tinsukia) mein rice cultivation extensive hai. Assam tea gardens world-famous hain — tea workers alag scheme se hain. Annual flooding se farmers ko khas challenges face karni padti hain — land records frequently update karne padte hain. Dharitree portal Assam government ne land records ke liye banaya hai. Jute farmers Brahmaputra plains mein eligible hain agar land unke naam par hai. Silchar, Barpeta, Goalpara flood-prone hain.',
+    districts: ['Guwahati', 'Silchar', 'Dibrugarh', 'Jorhat', 'Nagaon', 'Tezpur', 'Tinsukia', 'Barpeta', 'Goalpara', 'Karimganj', 'Hailakandi', 'Dhubri', 'Kokrajhar', 'Bongaigaon'],
+    landPortal: 'dharitree.assam.gov.in (Dharitree portal) + landrecords.assam.gov.in',
+    helpline: '1800-345-6789 (Assam Agriculture Helpline) + 155261',
+    specialNote: 'Annual flooding se land records affected hote hain — regularly update karo Dharitree par',
+    keywords: ['pm kisan assam list', 'pm kisan brahmaputra valley', 'dharitree pm kisan', 'pm kisan guwahati', 'pm kisan jorhat', 'pm kisan flood area assam', 'pm kisan jute assam', 'pm kisan nagaon'],
   },
   'jharkhand': {
     name: 'Jharkhand',
     icon: '🌊',
     beneficiaries: '30 Lakh+',
-    description: 'Jharkhand mein rice, pulses aur vegetables cultivators major beneficiaries hain.',
-    districts: ['Ranchi', 'Jamshedpur', 'Dhanbad', 'Bokaro', 'Deoghar'],
+    description: 'Jharkhand mein 30 lakh se zyada PM Kisan beneficiaries hain. Large tribal farming population hai — rain-fed upland rice cultivation along with pulses aur vegetables. Chotanagpur Tenancy Act ke under tribal land rights hain — khas documentation provisions hain. Jharbhoomi portal land verification ke liye use hota hai. Women cultivators jinke naam par land hai unka registration badha hai. Pragya Kendra centres statewide digital verification ke liye available hain. Ranchi, Jamshedpur, Dhanbad, Bokaro major cities hain.',
+    districts: ['Ranchi', 'Jamshedpur', 'Dhanbad', 'Bokaro', 'Deoghar', 'Hazaribagh', 'Dumka', 'Giridih', 'Palamu', 'Chaibasa', 'Ramgarh', 'Medininagar', 'Gumla', 'Simdega', 'Lohardaga'],
+    landPortal: 'jharbhoomi.jharkhand.gov.in (Jharbhoomi portal) + jharkhand.gov.in',
+    helpline: '1800-345-6789 (Jharkhand Kisan Helpline) + 155261',
+    specialNote: 'Tribal farmers with Chotanagpur Tenancy Act land rights have special provisions — documentation check karo',
+    keywords: ['pm kisan jharkhand list', 'jharbhoomi pm kisan', 'pm kisan tribal jharkhand', 'chotanagpur tenancy act pm kisan', 'pm kisan ranchi', 'pm kisan jamshedpur', 'pragya kendra pm kisan', 'pm kisan dumka'],
   },
   'uttarakhand': {
     name: 'Uttarakhand',
     icon: '🏔️',
     beneficiaries: '15 Lakh+',
-    description: 'Uttarakhand ke rice, wheat aur horticulture farmers PM Kisan beneficiaries hain.',
-    districts: ['Dehradun', 'Haridwar', 'Roorkee', 'Haldwani', 'Rishikesh'],
+    description: 'Uttarakhand ke 15 lakh se zyada PM Kisan beneficiaries hain. Terraced mountain fields par rice aur wheat cultivation hoti hai. Horticulture prominent hai — apple, pear, citrus fruits. Hill farmers ke paas chhoti landholdings hoti hain (kabhi kabhi 0.1 hectare se kam) — sab eligible hain. Bhulekh UK portal land verification ke liye use hota hai. CSC Lok Seva Kendras statewide digital verification ke liye available hain. Dehradun, Haridwar, Roorkee major cities hain. Pauri, Almora, Nainital, Tehri, Pithoragarh hill districts hain.',
+    districts: ['Dehradun', 'Haridwar', 'Roorkee', 'Haldwani', 'Rishikesh', 'Pauri', 'Almora', 'Nainital', 'Tehri', 'Pithoragarh', 'Uttarkashi', 'Chamoli', 'Rudraprayag', 'Bageshwar', 'Champawat'],
+    landPortal: 'bhulekh.uk.gov.in (Bhulekh UK) + uk.gov.in',
+    helpline: '0135-2710334 (Uttarakhand Agriculture Department) + 155261',
+    specialNote: 'Small hill holdings (0.1 hectare se kam) bhi eligible hain — mountain farmers ko fayda',
+    keywords: ['pm kisan uttarakhand list', 'pm kisan hill uttarakhand', 'bhulekh uk pm kisan', 'pm kisan dehradun', 'pm kisan haridwar', 'pm kisan almora', 'csc lok seva kendra pm kisan', 'pm kisan nainital'],
   },
   'chhattisgarh': {
     name: 'Chhattisgarh',
     icon: '🌾',
     beneficiaries: '40 Lakh+',
-    description: 'Chhattisgarh mein rice aur pulses cultivators PM Kisan se benefit le rahe hain.',
-    districts: ['Raipur', 'Bhilai', 'Bilaspur', 'Korba', 'Durg'],
+    description: 'Chhattisgarh "Rice Bowl of India" ke naam se jaana jaata hai. 40 lakh se zyada PM Kisan beneficiaries hain. Vast paddy cultivation Chhattisgarh plains mein hoti hai. Bastar, Surguja tribal areas mein khas provisions hain land ownership ke liye. Rajiv Gandhi Kisan Nyay Yojana state government chalati hai jo PM Kisan ke saath additional support deti hai. Bhuiya portal land verification ke liye use hota hai. Raipur, Bhilai, Bilaspur major cities hain.',
+    districts: ['Raipur', 'Bhilai', 'Bilaspur', 'Korba', 'Durg', 'Rajnandgaon', 'Jagdalpur', 'Ambikapur', 'Raigarh', 'Mahasamund', 'Surguja', 'Bastar', 'Dhamtari', 'Kanker', 'Jashpur'],
+    landPortal: 'bhuiya.cgstate.gov.in (Bhuiya portal) + cgstate.gov.in',
+    stateScheme: 'Rajiv Gandhi Kisan Nyay Yojana (state top-up additional support)',
+    helpline: '1800-233-5500 (Chhattisgarh Kisan Helpline) + 155261',
+    specialNote: 'Tribal farmers in Bastar, Surguja have special land provisions — documentation check karo',
+    keywords: ['pm kisan chhattisgarh list', 'pm kisan rice bowl', 'rajiv gandhi kisan nyay yojana', 'bhuiya pm kisan', 'pm kisan raipur', 'pm kisan bastar', 'pm kisan tribal cg', 'pm kisan bilaspur'],
   },
   'himachal-pradesh': {
     name: 'Himachal Pradesh',
     icon: '🏔️',
     beneficiaries: '10 Lakh+',
-    description: 'HP ke apple, wheat aur maize cultivators PM Kisan beneficiaries hain.',
-    districts: ['Shimla', 'Mandi', 'Solan', 'Dharamshala', 'Kullu'],
+    description: 'HP ke 10 lakh se zyada PM Kisan beneficiaries hain. Apple orchards Shimla, Kullu, Kinnaur mein prominent hain — apple growers major beneficiaries hain. Wheat aur maize terraced mountain fields par grow hota hai. Himris portal land verification ke liye use hota hai. Remote tribal areas (Lahaul-Spiti, Kinnaur) mein farmers ko district Agriculture offices se enrollment mein help milti hai. ₹6000 annual support apple cultivation ke input costs cover karta hai. Mandi, Solan, Kangra, Hamirpur, Bilaspur, Una, Chamba major districts hain.',
+    districts: ['Shimla', 'Mandi', 'Solan', 'Dharamshala', 'Kullu', 'Kangra', 'Hamirpur', 'Bilaspur', 'Una', 'Chamba', 'Sirmaur', 'Kinnaur', 'Lahaul-Spiti'],
+    landPortal: 'himris.hp.gov.in (Himris portal) + hp.gov.in',
+    helpline: '0177-2622700 (HP Agriculture Department) + 155261',
+    specialNote: 'Apple growers in Shimla, Kullu, Kinnaur are major beneficiaries — ₹6000 input costs cover karta hai',
+    keywords: ['pm kisan himachal pradesh list', 'pm kisan apple hp', 'himris pm kisan', 'pm kisan shimla', 'pm kisan kullu', 'pm kisan kinnaur', 'pm kisan mandy', 'pm kisan lahual spiti'],
   },
   'jammu-kashmir': {
     name: 'Jammu & Kashmir',
     icon: '🏔️',
     beneficiaries: '12 Lakh+',
-    description: 'J&K mein apple, saffron aur rice cultivators major beneficiaries hain.',
-    districts: ['Srinagar', 'Jammu', 'Anantnag', 'Baramulla', 'Kathua'],
+    description: 'J&K mein 12 lakh se zyada PM Kisan beneficiaries hain. Kashmir Valley (Srinagar, Shopian, Kulgam, Baramulla, Pulwama) mein apple orchards world-famous hain — Shopian, Kulgam, Baramulla major apple belts. Pampore (Pulwama) mein saffron cultivation hai — Kashmir saffron duniya bhar mein famous hai. Jammu region (Jammu, Kathua, Samba, Udhampur) mein rice farming prominent hai. State land revenue records verification ke liye use hote hain. Digital verification CSC centres par available hai.',
+    districts: ['Srinagar', 'Jammu', 'Anantnag', 'Baramulla', 'Kathua', 'Shopian', 'Kulgam', 'Pulwama', 'Udhampur', 'Rajouri', 'Poonch', 'Doda', 'Kishtwar', 'Ramban', 'Reasi'],
+    landPortal: 'State land revenue records + jk.gov.in',
+    helpline: '1800-425-6789 (J&K Kisan Helpline) + 155261',
+    specialNote: 'Apple growers in Shopian, Kulgam aur saffron farmers in Pulwama (Pampore) major beneficiaries',
+    keywords: ['pm kisan jammu kashmir list', 'pm kisan kashmir apple', 'pm kisan shopian', 'pm kisan saffron pulwama', 'pm kisan jammu', 'pm kisan baramulla', 'pm kisan kulgam', 'pm kisan srinagar'],
   },
   'goa': {
     name: 'Goa',
     icon: '🌿',
     beneficiaries: '1 Lakh+',
-    description: 'Goa ke rice, coconut aur cashew cultivators PM Kisan se benefit le rahe hain.',
-    districts: ['Panaji', 'Margao', 'Vasco da Gama', 'Mapusa'],
+    description: 'Goa ke 1 lakh se zyada PM Kisan beneficiaries hain. Unique khazan (coastal paddy fields) mein rice cultivation hoti hai — below sea level farming unique hai. Cashew plantations aur coconut groves Goa ki specialty hain. Form I aur XIV land records agricultural land verification ke liye use hote hain. 2 hectares se chhoti holdings typical beneficiaries hain. Panaji, Margao, Vasco da Gama, Mapusa, Ponda major towns hain. CSC centres digital verification ke liye available hain.',
+    districts: ['Panaji', 'Margao', 'Vasco da Gama', 'Mapusa', 'Ponda'],
+    landPortal: 'Form I and XIV land records (Goa khas system)',
+    helpline: '0832-2418834 (Goa Agriculture Department) + 155261',
+    specialNote: 'Khazan (coastal paddy fields) unique to Goa — below sea level rice cultivation',
+    keywords: ['pm kisan goa list', 'pm kisan khazan goa', 'form i xiv pm kisan', 'pm kisan panaji', 'pm kisan margao', 'pm kisan cashew goa', 'pm kisan coastal goa', 'pm kisan vasco'],
   },
   'sikkim': {
     name: 'Sikkim',
     icon: '🏔️',
     beneficiaries: '50,000+',
-    description: 'Sikkim mein cardamom, ginger aur rice cultivators PM Kisan beneficiaries hain.',
+    description: 'Sikkim India ka first fully organic state hai. 50,000 se zyada PM Kisan beneficiaries hain. Large cardamom cultivation Sikkim ki specialty hai — world ka largest producer hai. High-altitude rice farming hoti hai. LPC (Land Possession Certificate) land verification ke liye use hota hai. Sikkim Organic Mission PM Kisan ke saath organic transition costs support karta hai. Gangtok, Namchi, Gyalshing, Mangan major towns hain.',
     districts: ['Gangtok', 'Namchi', 'Gyalshing', 'Mangan'],
+    landPortal: 'LPC (Land Possession Certificate) + sikkim.gov.in',
+    helpline: '03592-206739 (Sikkim Agriculture Department) + 155261',
+    specialNote: 'India ka first fully organic state — large cardamom world-famous, organic farming',
+    keywords: ['pm kisan sikkim list', 'pm kisan organic sikkim', 'pm kisan cardamom sikkim', 'lpc pm kisan sikkim', 'pm kisan gangtok', 'sikkim organic mission pm kisan', 'pm kisan namchi', 'pm kisan mangan'],
   },
   'tripura': {
     name: 'Tripura',
     icon: '🌊',
     beneficiaries: '4 Lakh+',
-    description: 'Tripura ke rice, rubber aur pineapple cultivators major beneficiaries hain.',
-    districts: ['Agartala', 'Udaipur', 'Dharmanagar', 'Kailashahar'],
+    description: 'Tripura ke 4 lakh se zyada PM Kisan beneficiaries hain. River valleys (Agartala, Udaipur) mein rice cultivation hoti hai. Gomati aur Khowai districts mein rubber plantations prominent hain. Pineapple farming bhi khas hai. Bhu-Sanjog land records system verification ke liye use hota hai. 2 hectares se chhoti rubber smallholders eligible hain. Dharmanagar, Kailashahar major towns hain.',
+    districts: ['Agartala', 'Udaipur', 'Dharmanagar', 'Kailashahar', 'Belonia', 'Ambassa', 'Khowai', 'Teliamura'],
+    landPortal: 'bhu-sanjog.tripura.gov.in (Bhu-Sanjog portal) + tripura.gov.in',
+    helpline: '0381-2322102 (Tripura Agriculture Department) + 155261',
+    specialNote: 'Rubber smallholders with less than 2 hectares eligible — Gomati, Khowai major rubber belts',
+    keywords: ['pm kisan tripura list', 'pm kisan rubber tripura', 'bhu-sanjog pm kisan', 'pm kisan agartala', 'pm kisan gomati', 'pm kisan pineapple tripura', 'pm kisan udaipur', 'pm kisan khowai'],
   },
   'meghalaya': {
     name: 'Meghalaya',
     icon: '🌾',
     beneficiaries: '3 Lakh+',
-    description: 'Meghalaya mein rice, ginger aur turmeric cultivators PM Kisan se benefit le rahe hain.',
-    districts: ['Shillong', 'Tura', 'Jowai', 'Nongstoin'],
+    description: 'Meghalaya ke 3 lakh se zyada PM Kisan beneficiaries hain. Tribal farming communities rice, ginger, turmeric, black pepper hilly terrain par grow karti hain — traditional agroforestry methods. Unique matrilineal land ownership customs hain — women cultivators ka land documentation relatively better hai. Ginger aur turmeric spice cultivators with recorded land eligible hain. Shillong, Tura, Jowai, Nongstoin major towns hain.',
+    districts: ['Shillong', 'Tura', 'Jowai', 'Nongstoin', 'Williamnagar', 'Baghmara', 'Nongpoh'],
+    landPortal: 'State land revenue records + meghalaya.gov.in',
+    helpline: '0364-2503456 (Meghalaya Agriculture Department) + 155261',
+    specialNote: 'Matrilineal land ownership — women cultivators have better documentation, unique system',
+    keywords: ['pm kisan meghalaya list', 'pm kisan matrilineal meghalaya', 'pm kisan ginger meghalaya', 'pm kisan shillong', 'pm kisan tura', 'pm kisan women farmers meghalaya', 'pm kisan turmeric meghalaya', 'pm kisan jowai'],
   },
   'manipur': {
     name: 'Manipur',
     icon: '🌿',
     beneficiaries: '3 Lakh+',
-    description: 'Manipur ke rice, vegetables aur horticulture farmers PM Kisan beneficiaries hain.',
-    districts: ['Imphal', 'Thoubal', 'Bishnupur', 'Churachandpur'],
+    description: 'Manipur ke 3 lakh se zyada PM Kisan beneficiaries hain. Imphal Valley (Imphal East, Imphal West, Thoubal, Bishnupur) mein rice dominant crop hai. Vegetables, fruits, flowers supplementary hain. Black rice (Chakhao) Manipur ki specialty hai — organic cultivation hoti hai, GI tag hai. Patta documents land ownership proof ke liye use hote hain. Hill districts (Churachandpur, Ukhrul, Senapati, Tamenglong) mein customary land ownership challenges hain.',
+    districts: ['Imphal', 'Thoubal', 'Bishnupur', 'Churachandpur', 'Ukhrul', 'Senapati', 'Tamenglong', 'Jiribam'],
+    landPortal: 'Patta documents + manipur.gov.in',
+    helpline: '0385-2445050 (Manipur Agriculture Department) + 155261',
+    specialNote: 'Black rice (Chakhao) organic cultivation unique to Manipur — GI tag, organic farming',
+    keywords: ['pm kisan manipur list', 'pm kisan black rice manipur', 'chakhao pm kisan', 'pm kisan imphal', 'pm kisan churachandpur', 'pm kisan ukhrul', 'patta pm kisan manipur', 'pm kisan organic manipur'],
   },
   'nagaland': {
     name: 'Nagaland',
     icon: '🌊',
     beneficiaries: '2 Lakh+',
-    description: 'Nagaland mein rice, maize aur horticulture cultivators major beneficiaries hain.',
-    districts: ['Kohima', 'Dimapur', 'Mokokchung', 'Wokha'],
+    description: 'Nagaland ke 2 lakh se zyada PM Kisan beneficiaries hain. Tribal farming communities rice, maize, horticulture crops (pineapple, kiwi) terraced hill slopes par grow karti hain. Customary law ke under tribal land ownership hai — Land Commission certificates enrollment mein help karte hain. Large cardamom cultivation bhi prominent hai. Kohima, Dimapur, Mokokchung, Wokha, Tuensang major towns hain.',
+    districts: ['Kohima', 'Dimapur', 'Mokokchung', 'Wokha', 'Tuensang', 'Mon', 'Phek', 'Zunheboto'],
+    landPortal: 'Land Commission certificates + nagaland.gov.in',
+    helpline: '03862-290144 (Nagaland Agriculture Department) + 155261',
+    specialNote: 'Pineapple, kiwi, large cardamom cultivators eligible — customary land ownership',
+    keywords: ['pm kisan nagaland list', 'pm kisan tribal nagaland', 'land commission pm kisan', 'pm kisan kohima', 'pm kisan dimapur', 'pm kisan pineapple nagaland', 'pm kisan kiwi nagaland', 'pm kisan wokha'],
   },
   'arunachal-pradesh': {
     name: 'Arunachal Pradesh',
     icon: '🏔️',
     beneficiaries: '2 Lakh+',
-    description: 'AP ke rice, maize aur horticulture farmers PM Kisan se benefit le rahe hain.',
-    districts: ['Itanagar', 'Naharlagun', 'Pasighat', 'Tezpur'],
+    description: 'Arunachal Pradesh ke 2 lakh se zyada PM Kisan beneficiaries hain. Predominantly tribal farming community hai — traditional rice cultivation terraced hillside fields par. Remote districts (Tawang, West Siang, Papum Pare, East Siang) mein farmers ko khas challenges. Community land ownership ke under special documentation requirements hain. District headquarters par CSC centres digital verification ke liye available hain. Itanagar, Naharlagun, Pasighat major towns hain.',
+    districts: ['Itanagar', 'Naharlagun', 'Pasighat', 'Tezpur', 'Tawang', 'West Siang', 'East Siang', 'Papum Pare', 'Lower Subansiri', 'Upper Subansiri'],
+    landPortal: 'Community land ownership documents + arunachal.gov.in',
+    helpline: '0360-2214567 (AP Agriculture Department) + 155261',
+    specialNote: 'Remote tribal areas mein CSC centres help karte hain — community land ownership',
+    keywords: ['pm kisan arunachal pradesh list', 'pm kisan tribal ap', 'pm kisan tawang', 'community land pm kisan', 'pm kisan itanagar', 'pm kisan pasighat', 'pm kisan remote ap', 'pm kisan west siang'],
   },
   'mizoram': {
     name: 'Mizoram',
     icon: '🌾',
     beneficiaries: '1 Lakh+',
-    description: 'Mizoram mein rice, ginger aur vegetables cultivators PM Kisan beneficiaries hain.',
-    districts: ['Aizawl', 'Lunglei', 'Champhai', 'Serchhip'],
+    description: 'Mizoram ke 1 lakh se zyada PM Kisan beneficiaries hain. Traditional jhum (shifting) cultivation se settled terrace farming ki taraf transition ho raha hai. Rice, ginger, vegetables prominent hain. Village land passes (LPC) primary land ownership proof hain. Ginger cultivation Champhai mein prominent hai — high quality ginger. Passion fruit farming bhi key activity hai. Aizawl, Lunglei, Champhai, Serchhip major towns hain.',
+    districts: ['Aizawl', 'Lunglei', 'Champhai', 'Serchhip', 'Kolasib', 'Lawngtlai', 'Mamit', 'Saiha'],
+    landPortal: 'Village land passes (LPC) + mizoram.gov.in',
+    helpline: '0389-2325678 (Mizoram Agriculture Department) + 155261',
+    specialNote: 'Transition from jhum to settled farming — Village LPC primary proof',
+    keywords: ['pm kisan mizoram list', 'pm kisan jhum mizoram', 'village lpc pm kisan', 'pm kisan champhai ginger', 'pm kisan aizawl', 'pm kisan passion fruit mizoram', 'pm kisan lunglei', 'pm kisan terrace mizoram'],
   },
   'delhi': {
     name: 'Delhi',
     icon: '🏛️',
     beneficiaries: '50,000+',
-    description: 'Delhi ke vegetables, dairy aur horticulture farmers PM Kisan se benefit le rahe hain.',
-    districts: ['New Delhi', 'North Delhi', 'South Delhi', 'East Delhi', 'West Delhi'],
+    description: 'Delhi ke 50,000 se zyada PM Kisan beneficiaries hain. Urban aur peri-urban farming community hai — vegetables, dairy farming, horticulture city ke outskirts par. Najafgarh, Alipur, Bawana rural districts mein small cultivators hain. Revenue Department portal land records maintain karta hai. Dairy cultivators aur vegetable growers jo city markets ko supply karte hain typical beneficiaries hain. New Delhi, North Delhi, South Delhi, East Delhi, West Delhi major areas hain.',
+    districts: ['New Delhi', 'North Delhi', 'South Delhi', 'East Delhi', 'West Delhi', 'Central Delhi', 'North West Delhi', 'South West Delhi', 'North East Delhi', 'Shahdara'],
+    landPortal: 'Delhi Revenue Department portal + delhi.gov.in',
+    helpline: '1800-180-1835 (Delhi Kisan Helpline) + 155261',
+    specialNote: 'Peri-urban vegetable growers major beneficiaries — city markets ko supply',
+    keywords: ['pm kisan delhi list', 'pm kisan peri-urban delhi', 'pm kisan najafgarh', 'pm kisan alipur', 'pm kisan bawana', 'pm kisan vegetable delhi', 'pm kisan dairy delhi', 'revenue department delhi pm kisan'],
   },
   'puducherry': {
     name: 'Puducherry',
     icon: '🌊',
     beneficiaries: '30,000+',
-    description: 'Puducherry mein rice, sugarcane aur coconut cultivators major beneficiaries hain.',
+    description: 'Puducherry ke 30,000 se zyada PM Kisan beneficiaries hain. Four regions (Puducherry, Karaikal, Mahe, Yanam) mein rice, sugarcane, coconut cultivation hoti hai. Karaikal region (Tamil Nadu enclave) mein rice cultivation prominent hai. e-District land records verification ke liye use hote hain. Puducherry, Karaikal, Mahe, Yanam four regions hain.',
     districts: ['Puducherry', 'Karaikal', 'Mahe', 'Yanam'],
+    landPortal: 'e-District portal + puducherry.gov.in',
+    helpline: '0413-2222244 (Puducherry Agriculture Department) + 155261',
+    specialNote: 'Rice cultivators in Karaikal (Tamil Nadu enclave) major beneficiaries',
+    keywords: ['pm kisan puducherry list', 'pm kisan karaikal', 'e-district pm kisan', 'pm kisan mahe', 'pm kisan yanam', 'pm kisan rice puducherry', 'pm kisan four regions', 'pm kisan sugarcane puducherry'],
   },
   'andaman-nicobar': {
     name: 'Andaman & Nicobar',
     icon: '🏝️',
     beneficiaries: '10,000+',
-    description: 'A&N ke coconut, arecanut aur spices cultivators PM Kisan beneficiaries hain.',
-    districts: ['Port Blair', 'Car Nicobar', 'Mayabunder', 'Rangat'],
+    description: 'A&N ke 10,000 se zyada PM Kisan beneficiaries hain. Unique tropical agriculture hai — coconut, arecanut, banana, spices cultivation. South Andaman (Port Blair), North Andaman (Mayabunder), Nicobar (Car Nicobar) districts mein small cultivators hain. Nicobar mein tribal farmers ke paas customary land rights hain — khas documentation requirements hain. UT land records verification ke liye use hote hain.',
+    districts: ['Port Blair', 'Car Nicobar', 'Mayabunder', 'Rangat', 'Diglipur', 'Little Andaman', 'Campbell Bay'],
+    landPortal: 'UT land records + andaman.gov.in',
+    helpline: '03192-233055 (A&N Agriculture Department) + 155261',
+    specialNote: 'Tribal farmers in Nicobar with customary land rights need special documentation',
+    keywords: ['pm kisan andaman nicobar list', 'pm kisan tropical andaman', 'pm kisan port blair', 'pm kisan nicobar tribal', 'pm kisan coconut andaman', 'pm kisan car nicobar', 'customary land pm kisan', 'pm kisan arecanut andaman'],
   },
   'ladakh': {
     name: 'Ladakh',
     icon: '🏔️',
     beneficiaries: '20,000+',
-    description: 'Ladakh mein barley, apricot aur peas cultivators PM Kisan se benefit le rahe hain.',
+    description: 'Ladakh ke 20,000 se zyada PM Kisan beneficiaries hain. Unique high-altitude agriculture hai — barley, apricot, green pea cultivation Leh aur Kargil districts mein. Cold desert region mein extreme climate hai — ₹6000 annual support high input costs cover karta hai. UT land records system verification ke liye use hota hai. Leh, Kargil two districts hain.',
     districts: ['Leh', 'Kargil'],
+    landPortal: 'UT land records + ladakh.gov.in',
+    helpline: '01982-252064 (Ladakh Agriculture Department) + 155261',
+    specialNote: 'High-altitude cold desert — ₹6000 crucial for high input costs, extreme climate',
+    keywords: ['pm kisan ladakh list', 'pm kisan high altitude', 'pm kisan leh', 'pm kisan kargil', 'pm kisan barley ladakh', 'pm kisan apricot ladakh', 'pm kisan cold desert', 'pm kisan extreme climate'],
   },
   'lakshadweep': {
     name: 'Lakshadweep',
     icon: '🌊',
     beneficiaries: '5,000+',
-    description: 'Lakshadweep ke coconut cultivators aur tuna fishermen PM Kisan beneficiaries hain.',
-    districts: ['Kavaratti', 'Agatti', 'Amini', 'Minicoy'],
+    description: 'Lakshadweep ke 5,000 se zyada PM Kisan beneficiaries hain. Economy coconut cultivation, tuna fishing, coir production par based hai. 10 inhabited islands (Kavaratti, Agatti, Amini, Minicoy, Andrott, Kalpeni, Kiltan, Chetlat, Bitra, Kadmat) par coconut cultivators primary beneficiaries hain. UT Administration land records verification ke liye use hote hain. High transportation costs ko ₹6000 help karta hai.',
+    districts: ['Kavaratti', 'Agatti', 'Amini', 'Minicoy', 'Andrott', 'Kalpeni', 'Kiltan', 'Chetlat', 'Bitra', 'Kadmat'],
+    landPortal: 'UT Administration land records + lakshadweep.gov.in',
+    helpline: '04896-266205 (Lakshadweep Agriculture Department) + 155261',
+    specialNote: 'Coconut cultivators across 10 inhabited islands — high transportation costs',
+    keywords: ['pm kisan lakshadweep list', 'pm kisan islands lakshadweep', 'pm kisan coconut lakshadweep', 'pm kisan kavaratti', 'pm kisan agatti', 'pm kisan minicoy', 'pm kisan tuna fishing', 'pm kisan high transport cost'],
   },
   'chandigarh': {
     name: 'Chandigarh',
     icon: '🏛️',
     beneficiaries: '20,000+',
-    description: 'Chandigarh ke wheat, vegetables aur dairy farmers PM Kisan se benefit le rahe hain.',
+    description: 'Chandigarh ke 20,000 se zyada PM Kisan beneficiaries hain. Limited but productive peri-urban agriculture hai — wheat, vegetables, dairy units city ke outskirts par. UT Administration land records verification ke liye use hote hain. Vegetable cultivators jo city markets ko supply karte hain aur dairy farmers typical beneficiaries hain. Chandigarh single district UT hai.',
     districts: ['Chandigarh'],
+    landPortal: 'UT Administration land records + chandigarh.gov.in',
+    helpline: '0172-2704567 (Chandigarh Agriculture Department) + 155261',
+    specialNote: 'Peri-urban vegetable suppliers to city markets — limited but productive',
+    keywords: ['pm kisan chandigarh list', 'pm kisan peri-urban chandigarh', 'pm kisan vegetable chandigarh', 'pm kisan dairy chandigarh', 'pm kisan wheat chandigarh', 'pm kisan city markets', 'pm kisan ut chandigarh'],
   },
   'dadra-nagar-haveli': {
     name: 'Dadra & Nagar Haveli',
     icon: '🌾',
     beneficiaries: '30,000+',
-    description: 'DNH ke rice, ragi aur mango cultivators major beneficiaries hain.',
+    description: 'DNH ke 30,000 se zyada PM Kisan beneficiaries hain. Tribal-dominated agriculture hai — rice, ragi, mango cultivation. Silvassa, Daman, Diu mein small tribal cultivators hain. Forest land rights holders aur mango orchard owners key beneficiaries hain. UT land records verification ke liye use hote hain. Silvassa, Amli major towns hain.',
     districts: ['Silvassa', 'Amli'],
+    landPortal: 'UT land records + dnh.gov.in',
+    helpline: '0260-3296789 (DNH Agriculture Department) + 155261',
+    specialNote: 'Tribal farmers with forest land rights eligible — mango orchard owners',
+    keywords: ['pm kisan dadra nagar haveli list', 'pm kisan tribal dnh', 'pm kisan silvassa', 'forest land pm kisan', 'pm kisan mango dnh', 'pm kisan ragi dnh', 'pm kisan amli', 'pm kisan forest rights'],
   },
   'daman-diu': {
     name: 'Daman & Diu',
     icon: '🏝️',
     beneficiaries: '10,000+',
-    description: 'Daman & Diu ke rice, coconut aur mango cultivators PM Kisan beneficiaries hain.',
+    description: 'Daman & Diu ke 10,000 se zyada PM Kisan beneficiaries hain. Rice, coconut, mango cultivation prominent hai. Small cultivators eligible hain. UT land records verification ke liye use hote hain. Daman, Diu two districts hain.',
     districts: ['Daman', 'Diu'],
+    landPortal: 'UT land records + daman.nic.in',
+    helpline: '0260-2521234 (D&D Agriculture Department) + 155261',
+    specialNote: 'Coconut aur mango cultivators major beneficiaries — small holdings',
+    keywords: ['pm kisan daman diu list', 'pm kisan coconut daman', 'pm kisan mango diu', 'pm kisan rice daman', 'pm kisan small holdings', 'pm kisan ut daman'],
   },
 };
-
-// ═══════════════════════════════════════════════════════════
-// METADATA
-// ═══════════════════════════════════════════════════════════
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ state: string }>;
-}): Promise<Metadata> {
-  const { state } = await params;
-  const stateInfo = STATE_DATA[state];
-
-  if (!stateInfo) {
-    return { title: 'State Not Found' };
-  }
-
-  return {
-    title: `PM Kisan Beneficiary List ${stateInfo.name} 2026 — Village Wise Roster & Status Check`,
-    description: `${stateInfo.name} mein PM Kisan beneficiary list check karo. ${stateInfo.beneficiaries} registered farmers. Village wise roster, status check, aur PDF download guide.`,
-  };
-}
-
-// ═══════════════════════════════════════════════════════════
-// STATIC PARAMS
-// ═══════════════════════════════════════════════════════════
-export function generateStaticParams() {
-  return Object.keys(STATE_DATA).map((state) => ({ state }));
-}
-
-// ═══════════════════════════════════════════════════════════
-// MAIN COMPONENT
-// ═══════════════════════════════════════════════════════════
-export default async function StateBeneficiaryPage({
-  params,
-}: {
-  params: Promise<{ state: string }>;
-}) {
-  const { state } = await params;
-  const stateInfo = STATE_DATA[state];
-
-  if (!stateInfo) {
-    notFound();
-  }
-
-  return (
-    <>
-      {/* Hero Section */}
-      <div className="bg-[var(--color-primary)] py-8">
-        <div className="container-site max-w-3xl text-center">
-          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">
-            {stateInfo.icon} {stateInfo.name}
-          </span>
-          <h1 className="text-2xl md:text-3xl font-black text-white mb-2">
-            PM Kisan Beneficiary List {stateInfo.name}
-          </h1>
-          <p className="text-green-200 text-sm">
-            {stateInfo.beneficiaries} Registered Farmers
-          </p>
-        </div>
-      </div>
-
-      <div className="container-site max-w-3xl py-8">
-
-        {/* Breadcrumb */}
-        <nav className="text-xs text-[var(--color-text-muted)] mb-6 flex gap-1 flex-wrap">
-          <Link href="/" className="hover:text-[var(--color-primary)]">Home</Link>
-          <span>/</span>
-          <Link href="/beneficiary-list" className="hover:text-[var(--color-primary)]">Beneficiary List</Link>
-          <span>/</span>
-          <span className="text-[var(--color-text)] font-medium">{stateInfo.name}</span>
-        </nav>
-
-        {/* Description */}
-        <section className="mb-6">
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            {stateInfo.description}
-          </p>
-        </section>
-
-        {/* Official Portal Button */}
-        <div className="mb-6">
-          <a
-            href="https://pmkisan.gov.in/BeneficiaryList.aspx"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block w-full bg-[var(--color-primary)] hover:opacity-90 text-white font-black py-4 rounded-xl text-center transition-all shadow-md hover:shadow-lg"
-          >
-            📋 Official Beneficiary List Dekho →
-          </a>
-          <p className="text-xs text-[var(--color-text-muted)] text-center mt-2">
-            Official portal par jakar apna naam check karo
-          </p>
-        </div>
-
-        {/* Districts */}
-        <section className="mb-6">
-          <h2 className="font-black text-[var(--color-text)] mb-3">
-            📍 Major Districts:
-          </h2>
-          <div className="flex flex-wrap gap-2">
-            {stateInfo.districts.map((district) => (
-              <span
-                key={district}
-                className="px-3 py-2 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 text-xs font-bold rounded-xl"
-              >
-                {district}
-              </span>
-            ))}
-          </div>
-        </section>
-
-        {/* How to Check */}
-        <section className="mb-6">
-          <div className="bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl p-5">
-            <h2 className="font-black text-green-800 dark:text-green-300 mb-3">
-              {stateInfo.name} Mein Naam Kaise Check Karein?
-            </h2>
-            <ol className="space-y-2 text-sm text-green-800 dark:text-green-300">
-              <li><strong>1.</strong> Upar diye gaye official portal button par click karo</li>
-              <li><strong>2.</strong> "Beneficiary List" option select karo</li>
-              <li><strong>3.</strong> State mein "{stateInfo.name}" already selected hoga</li>
-              <li><strong>4.</strong> Apna District select karo</li>
-              <li><strong>5.</strong> Block aur Village choose karo</li>
-              <li><strong>6.</strong> "Get Report" click karo — poori list aa jayegi</li>
-              <li><strong>7.</strong> Ctrl+F se apna naam search karo</li>
-            </ol>
-          </div>
-        </section>
-
-        {/* PDF Download Info */}
-        <section className="mb-6">
-          <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-4">
-            <h3 className="font-black text-blue-800 dark:text-blue-300 text-sm mb-2">
-              📥 PDF Kaise Download Karein?
-            </h3>
-            <p className="text-xs text-blue-800 dark:text-blue-300">
-              Official portal par list khulne ke baad:
-              <br />
-              • <strong>PC:</strong> Ctrl+P dabao → "Save as PDF" select karo
-              <br />
-              • <strong>Mobile:</strong> Share → Print → Save as PDF
-            </p>
-          </div>
-        </section>
-
-        {/* Back Link */}
-        <Link
-          href="/beneficiary-list"
-          className="inline-flex items-center gap-2 text-[var(--color-primary)] font-bold text-sm hover:underline"
-        >
-          ← Back to All States
-        </Link>
-
-      </div>
-    </>
-  );
-}
