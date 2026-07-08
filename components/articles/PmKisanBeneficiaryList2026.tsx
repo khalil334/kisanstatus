@@ -10,7 +10,7 @@ const MODIFIED = '2026-07-09T08:00:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide', emoji: '📚' },
-  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '📅' },
+  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '' },
   { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Meaning', emoji: '💳' },
   { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Credit Card Guide', emoji: '💰' },
   { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide', emoji: '🔐' },
@@ -46,9 +46,9 @@ const STATES_LIST = [
   ['🌿', 'Madhya Pradesh', 'madhya-pradesh'],
   ['☀️', 'Rajasthan', 'rajasthan'],
   ['🌾', 'Maharashtra', 'maharashtra'],
-  ['🐟', 'West Bengal', 'west-bengal'],
+  ['', 'West Bengal', 'west-bengal'],
   ['🌴', 'Karnataka', 'karnataka'],
-  ['🌊', 'Odisha', 'odisha'],
+  ['', 'Odisha', 'odisha'],
   ['🌞', 'Tamil Nadu', 'tamil-nadu'],
   ['🌾', 'Punjab', 'punjab'],
   ['🚜', 'Haryana', 'haryana'],
@@ -57,11 +57,11 @@ const STATES_LIST = [
   ['🌴', 'Telangana', 'telangana'],
   ['🌿', 'Gujarat', 'gujarat'],
   ['🌾', 'Assam', 'assam'],
-  ['🌊', 'Jharkhand', 'jharkhand'],
+  ['', 'Jharkhand', 'jharkhand'],
   ['🏔️', 'Uttarakhand', 'uttarakhand'],
   ['🌾', 'Chhattisgarh', 'chhattisgarh'],
   ['🌊', 'Himachal Pradesh', 'himachal-pradesh'],
-  ['🏔️', 'Jammu & Kashmir', 'jammu-and-kashmir'],
+  ['️', 'Jammu & Kashmir', 'jammu-and-kashmir'],
   ['🌿', 'Goa', 'goa'],
   ['🏔️', 'Sikkim', 'sikkim'],
   ['🌊', 'Tripura', 'tripura'],
@@ -71,10 +71,10 @@ const STATES_LIST = [
   ['🏔️', 'Arunachal Pradesh', 'arunachal-pradesh'],
   ['🌾', 'Mizoram', 'mizoram'],
   ['🏛️', 'Delhi', 'delhi'],
-  ['🌊', 'Puducherry', 'puducherry'],
+  ['', 'Puducherry', 'puducherry'],
   ['🏝️', 'Andaman & Nicobar', 'andaman-nicobar'],
   ['🏔️', 'Ladakh', 'ladakh'],
-  ['🌊', 'Lakshadweep', 'lakshadweep'],
+  ['', 'Lakshadweep', 'lakshadweep'],
   ['🏛️', 'Chandigarh', 'chandigarh'],
   ['🌾', 'Dadra & Nagar Haveli', 'dadra-nagar-haveli'],
   ['🏝️', 'Daman & Diu', 'daman-diu'],
@@ -103,7 +103,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
+            <span> Updated: {fmtDate(MODIFIED)}</span>
             <span>⏱️ 15 min read</span>
           </div>
         </div>
@@ -226,7 +226,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
 
         {/* SECTION 3: 7 Rejection Reasons */}
         <section className="mb-8">
-          <SH>❌ Naam Nahi Hai — 7 Common Reasons + Fix</SH>
+          <SH> Naam Nahi Hai — 7 Common Reasons + Fix</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Rejected dikh raha hai? Ek ek reason check karo — 90% cases mein yehi problems hoti hain:
           </p>
@@ -257,7 +257,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
 
         {/* SECTION 4: Status Table */}
         <section className="mb-8">
-          <SH>📊 Har Status Ka Matlab</SH>
+          <SH> Har Status Ka Matlab</SH>
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
             <table className="w-full text-sm border-collapse">
               <thead>
@@ -287,9 +287,9 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
           </div>
         </section>
 
-        {/* ✅ SECTION 5: State Wise Links - FIXED (Ab tumhari site par khulega) */}
+        {/* ✅ SECTION 5: State Wise Links - FIXED (Internal Links) */}
         <section className="mb-8">
-          <SH>🗺️ State Wise List — Apna State Chunein (36 States & UTs)</SH>
+          <SH>🗺️ State Wise List — Apna State Chunein (37 States & UTs)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Apna state select karo — state-specific page khulega jahan se aap beneficiaries count, districts aur official portal link dekh sakte ho:
           </p>
@@ -363,14 +363,14 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
           title="Apni Kist Track Karo"
           desc="Kitni kist aayi, kitni pending — complete history jaano"
           primaryCta={{ href: '/calculator/installment-tracker', label: '📅 Tracker Kholo →' }}
-          secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: '💰 Benefit Calculator' }}
+          secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: ' Benefit Calculator' }}
         />
 
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
           { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
-          { href: '/articles/PmKisan24viKist2026', l: '📅 24vi Kist' },
+          { href: '/articles/PmKisan24viKist2026', l: ' 24vi Kist' },
           { href: '/articles/PmKisanEkycOnline2026', l: '🔐 eKYC' },
         ]} />
         <Disclaimer />
