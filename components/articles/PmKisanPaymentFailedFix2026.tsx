@@ -363,3 +363,22 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
         />
 
         <CalcBanner
+          icon="💰"
+          title="Kist Ka Poora Hisaab Nikaalo"
+          desc="Ab tak kitna mila, kitna baaki — sab ek jagah calculate karo"
+          primaryCta={{ href: '/calculator/installment-tracker', label: '📅 Tracker Kholo →' }}
+          secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: '💰 Benefit Calculator' }}
+        />
+
+        <RelatedArticles articles={RELATED} />
+        <AuthorBox modified={MODIFIED} />
+
+        <BottomNav extraLinks={[
+          { href: '/articles/PmKisanEkycOnline2026', l: '🔐 eKYC Guide' },
+          { href: '/articles/PmKisanBeneficiaryList2026', l: '📋 Beneficiary List' },
+        ]} />
+        <Disclaimer />
+      </div>
+    </>
+  );
+}
