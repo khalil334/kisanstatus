@@ -1,6 +1,7 @@
+'use client';
+
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import type { Metadata } from 'next';
 
 const STATE_DATA: Record<string, {
   name: string;
@@ -437,35 +438,12 @@ const STATE_DATA: Record<string, {
   },
 };
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ state: string }>;
-}): Promise<Metadata> {
-  const { state } = await params;
-  const stateInfo = STATE_DATA[state];
-
-  if (!stateInfo) {
-    return { title: 'State Not Found' };
-  }
-
-  return {
-    title: `PM Kisan Beneficiary List ${stateInfo.name} 2026 — Village Wise Roster & Status Check`,
-    description: `${stateInfo.name} mein PM Kisan beneficiary list check karo. ${stateInfo.beneficiaries} registered farmers. Village wise roster, status check, aur PDF download guide.`,
-    keywords: stateInfo.keywords.join(', '),
-  };
-}
-
-export function generateStaticParams() {
-  return Object.keys(STATE_DATA).map((state) => ({ state }));
-}
-
-export default async function StateBeneficiaryPage({
+export default function StateBeneficiaryPage({
   params,
 }: {
   params: Promise<{ state: string }>;
 }) {
-  const { state } = await params;
+  const state = params.state;
   const stateInfo = STATE_DATA[state];
 
   if (!stateInfo) {
