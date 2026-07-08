@@ -1,18 +1,267 @@
-import { redirect } from 'next/navigation';
-
-export default function OldStatePage() {
-  redirect('/beneficiary-list');
-}
-
-export function generateStaticParams() {
-  const states = [
-    'andhra-pradesh', 'arunachal-pradesh', 'assam', 'bihar', 'chhattisgarh',
-    'goa', 'gujarat', 'haryana', 'himachal-pradesh', 'jharkhand', 'karnataka',
-    'kerala', 'madhya-pradesh', 'maharashtra', 'manipur', 'meghalaya', 'mizoram',
-    'nagaland', 'odisha', 'punjab', 'rajasthan', 'sikkim', 'tamil-nadu',
-    'telangana', 'tripura', 'uttar-pradesh', 'uttarakhand', 'west-bengal',
-    'delhi', 'jammu-kashmir', 'ladakh', 'puducherry', 'andaman-nicobar',
-    'chandigarh', 'dadra-nagar-haveli', 'daman-diu', 'lakshadweep',
-  ];
-  return states.map((state) => ({ state }));
-}
+const STATE_DATA: Record<string, {
+  name: string;
+  icon: string;
+  beneficiaries: string;
+  description: string;
+  districts: string[];
+}> = {
+  'uttar-pradesh': {
+    name: 'Uttar Pradesh',
+    icon: '🏔️',
+    beneficiaries: '2.5 Crore+',
+    description: 'UP mein sabse zyada PM Kisan beneficiaries hain. Wheat, sugarcane aur rice cultivators yahan major beneficiaries hain.',
+    districts: ['Lucknow', 'Kanpur', 'Varanasi', 'Agra', 'Meerut', 'Prayagraj', 'Ghaziabad'],
+  },
+  'bihar': {
+    name: 'Bihar',
+    icon: '🌊',
+    beneficiaries: '80 Lakh+',
+    description: 'Bihar ke small farmers PM Kisan se bahut benefit le rahe hain. Rice aur wheat cultivation primary hai.',
+    districts: ['Patna', 'Gaya', 'Muzaffarpur', 'Darbhanga', 'Bhagalpur', 'Purnia'],
+  },
+  'madhya-pradesh': {
+    name: 'Madhya Pradesh',
+    icon: '🌿',
+    beneficiaries: '70 Lakh+',
+    description: 'MP mein soybean, wheat aur pulses cultivators PM Kisan beneficiaries hain.',
+    districts: ['Indore', 'Bhopal', 'Jabalpur', 'Gwalior', 'Ujjain', 'Sagar'],
+  },
+  'rajasthan': {
+    name: 'Rajasthan',
+    icon: '☀️',
+    beneficiaries: '65 Lakh+',
+    description: 'Rajasthan ke bajra, wheat aur mustard cultivators PM Kisan se benefit le rahe hain.',
+    districts: ['Jaipur', 'Jodhpur', 'Kota', 'Udaipur', 'Ajmer', 'Bikaner'],
+  },
+  'maharashtra': {
+    name: 'Maharashtra',
+    icon: '🌾',
+    beneficiaries: '1 Crore+',
+    description: 'Maharashtra mein cotton, sugarcane aur onion cultivators major beneficiaries hain.',
+    districts: ['Mumbai', 'Pune', 'Nagpur', 'Nashik', 'Aurangabad', 'Solapur'],
+  },
+  'west-bengal': {
+    name: 'West Bengal',
+    icon: '🐟',
+    beneficiaries: '70 Lakh+',
+    description: 'West Bengal mein rice, jute aur potato cultivators PM Kisan beneficiaries hain.',
+    districts: ['Kolkata', 'Howrah', 'North 24 Parganas', 'South 24 Parganas', 'Burdwan'],
+  },
+  'karnataka': {
+    name: 'Karnataka',
+    icon: '🌴',
+    beneficiaries: '50 Lakh+',
+    description: 'Karnataka mein sugarcane, cotton aur ragi cultivators PM Kisan se benefit le rahe hain.',
+    districts: ['Bengaluru', 'Mysuru', 'Hubballi', 'Mangaluru', 'Belagavi'],
+  },
+  'odisha': {
+    name: 'Odisha',
+    icon: '',
+    beneficiaries: '40 Lakh+',
+    description: 'Odisha ke rice, pulses aur oilseeds cultivators PM Kisan beneficiaries hain.',
+    districts: ['Bhubaneswar', 'Cuttack', 'Rourkela', 'Puri', 'Balasore'],
+  },
+  'tamil-nadu': {
+    name: 'Tamil Nadu',
+    icon: '🌞',
+    beneficiaries: '40 Lakh+',
+    description: 'Tamil Nadu mein rice, banana aur sugarcane cultivators major beneficiaries hain.',
+    districts: ['Chennai', 'Coimbatore', 'Madurai', 'Tiruchirappalli', 'Salem'],
+  },
+  'punjab': {
+    name: 'Punjab',
+    icon: '🌾',
+    beneficiaries: '30 Lakh+',
+    description: 'Punjab ke wheat, rice aur maize cultivators PM Kisan beneficiaries hain.',
+    districts: ['Amritsar', 'Ludhiana', 'Jalandhar', 'Patiala', 'Bathinda'],
+  },
+  'haryana': {
+    name: 'Haryana',
+    icon: '🚜',
+    beneficiaries: '25 Lakh+',
+    description: 'Haryana mein wheat, rice aur sugarcane cultivators PM Kisan se benefit le rahe hain.',
+    districts: ['Chandigarh', 'Faridabad', 'Gurugram', 'Panipat', 'Ambala'],
+  },
+  'andhra-pradesh': {
+    name: 'Andhra Pradesh',
+    icon: '🌶️',
+    beneficiaries: '50 Lakh+',
+    description: 'AP ke rice, tobacco aur aquaculture farmers PM Kisan beneficiaries hain.',
+    districts: ['Visakhapatnam', 'Vijayawada', 'Guntur', 'Tirupati', 'Nellore'],
+  },
+  'kerala': {
+    name: 'Kerala',
+    icon: '🌊',
+    beneficiaries: '20 Lakh+',
+    description: 'Kerala mein rice, coconut aur rubber cultivators PM Kisan se benefit le rahe hain.',
+    districts: ['Thiruvananthapuram', 'Kochi', 'Kozhikode', 'Thrissur', 'Kollam'],
+  },
+  'telangana': {
+    name: 'Telangana',
+    icon: '',
+    beneficiaries: '35 Lakh+',
+    description: 'Telangana ke rice, cotton aur turmeric cultivators major beneficiaries hain.',
+    districts: ['Hyderabad', 'Warangal', 'Nizamabad', 'Karimnagar', 'Khammam'],
+  },
+  'gujarat': {
+    name: 'Gujarat',
+    icon: '🌿',
+    beneficiaries: '50 Lakh+',
+    description: 'Gujarat mein cotton, groundnut aur wheat cultivators PM Kisan beneficiaries hain.',
+    districts: ['Ahmedabad', 'Surat', 'Vadodara', 'Rajkot', 'Bhavnagar'],
+  },
+  'assam': {
+    name: 'Assam',
+    icon: '',
+    beneficiaries: '30 Lakh+',
+    description: 'Assam ke rice, tea aur jute cultivators PM Kisan se benefit le rahe hain.',
+    districts: ['Guwahati', 'Silchar', 'Dibrugarh', 'Jorhat', 'Nagaon'],
+  },
+  'jharkhand': {
+    name: 'Jharkhand',
+    icon: '🌊',
+    beneficiaries: '30 Lakh+',
+    description: 'Jharkhand mein rice, pulses aur vegetables cultivators major beneficiaries hain.',
+    districts: ['Ranchi', 'Jamshedpur', 'Dhanbad', 'Bokaro', 'Deoghar'],
+  },
+  'uttarakhand': {
+    name: 'Uttarakhand',
+    icon: '🏔️',
+    beneficiaries: '15 Lakh+',
+    description: 'Uttarakhand ke rice, wheat aur horticulture farmers PM Kisan beneficiaries hain.',
+    districts: ['Dehradun', 'Haridwar', 'Roorkee', 'Haldwani', 'Rishikesh'],
+  },
+  'chhattisgarh': {
+    name: 'Chhattisgarh',
+    icon: '🌾',
+    beneficiaries: '40 Lakh+',
+    description: 'Chhattisgarh mein rice aur pulses cultivators PM Kisan se benefit le rahe hain.',
+    districts: ['Raipur', 'Bhilai', 'Bilaspur', 'Korba', 'Durg'],
+  },
+  'himachal-pradesh': {
+    name: 'Himachal Pradesh',
+    icon: '🌊',
+    beneficiaries: '10 Lakh+',
+    description: 'HP ke apple, wheat aur maize cultivators PM Kisan beneficiaries hain.',
+    districts: ['Shimla', 'Mandi', 'Solan', 'Dharamshala', 'Kullu'],
+  },
+  'jammu-kashmir': {
+    name: 'Jammu & Kashmir',
+    icon: '🏔️',
+    beneficiaries: '12 Lakh+',
+    description: 'J&K mein apple, saffron aur rice cultivators major beneficiaries hain.',
+    districts: ['Srinagar', 'Jammu', 'Anantnag', 'Baramulla', 'Kathua'],
+  },
+  'goa': {
+    name: 'Goa',
+    icon: '🌿',
+    beneficiaries: '1 Lakh+',
+    description: 'Goa ke rice, coconut aur cashew cultivators PM Kisan se benefit le rahe hain.',
+    districts: ['Panaji', 'Margao', 'Vasco da Gama', 'Mapusa'],
+  },
+  'sikkim': {
+    name: 'Sikkim',
+    icon: '🏔️',
+    beneficiaries: '50,000+',
+    description: 'Sikkim mein cardamom, ginger aur rice cultivators PM Kisan beneficiaries hain.',
+    districts: ['Gangtok', 'Namchi', 'Gyalshing', 'Mangan'],
+  },
+  'tripura': {
+    name: 'Tripura',
+    icon: '🌊',
+    beneficiaries: '4 Lakh+',
+    description: 'Tripura ke rice, rubber aur pineapple cultivators major beneficiaries hain.',
+    districts: ['Agartala', 'Udaipur', 'Dharmanagar', 'Kailashahar'],
+  },
+  'meghalaya': {
+    name: 'Meghalaya',
+    icon: '🌾',
+    beneficiaries: '3 Lakh+',
+    description: 'Meghalaya mein rice, ginger aur turmeric cultivators PM Kisan se benefit le rahe hain.',
+    districts: ['Shillong', 'Tura', 'Jowai', 'Nongstoin'],
+  },
+  'manipur': {
+    name: 'Manipur',
+    icon: '🌿',
+    beneficiaries: '3 Lakh+',
+    description: 'Manipur ke rice, vegetables aur horticulture farmers PM Kisan beneficiaries hain.',
+    districts: ['Imphal', 'Thoubal', 'Bishnupur', 'Churachandpur'],
+  },
+  'nagaland': {
+    name: 'Nagaland',
+    icon: '🌊',
+    beneficiaries: '2 Lakh+',
+    description: 'Nagaland mein rice, maize aur horticulture cultivators major beneficiaries hain.',
+    districts: ['Kohima', 'Dimapur', 'Mokokchung', 'Wokha'],
+  },
+  'arunachal-pradesh': {
+    name: 'Arunachal Pradesh',
+    icon: '🏔️',
+    beneficiaries: '2 Lakh+',
+    description: 'AP ke rice, maize aur horticulture farmers PM Kisan se benefit le rahe hain.',
+    districts: ['Itanagar', 'Naharlagun', 'Pasighat', 'Tezpur'],
+  },
+  'mizoram': {
+    name: 'Mizoram',
+    icon: '',
+    beneficiaries: '1 Lakh+',
+    description: 'Mizoram mein rice, ginger aur vegetables cultivators PM Kisan beneficiaries hain.',
+    districts: ['Aizawl', 'Lunglei', 'Champhai', 'Serchhip'],
+  },
+  'delhi': {
+    name: 'Delhi',
+    icon: '🏛️',
+    beneficiaries: '50,000+',
+    description: 'Delhi ke vegetables, dairy aur horticulture farmers PM Kisan se benefit le rahe hain.',
+    districts: ['New Delhi', 'North Delhi', 'South Delhi', 'East Delhi', 'West Delhi'],
+  },
+  'puducherry': {
+    name: 'Puducherry',
+    icon: '🌊',
+    beneficiaries: '30,000+',
+    description: 'Puducherry mein rice, sugarcane aur coconut cultivators major beneficiaries hain.',
+    districts: ['Puducherry', 'Karaikal', 'Mahe', 'Yanam'],
+  },
+  'andaman-nicobar': {
+    name: 'Andaman & Nicobar',
+    icon: '🏝️',
+    beneficiaries: '10,000+',
+    description: 'A&N ke coconut, arecanut aur spices cultivators PM Kisan beneficiaries hain.',
+    districts: ['Port Blair', 'Car Nicobar', 'Mayabunder', 'Rangat'],
+  },
+  'ladakh': {
+    name: 'Ladakh',
+    icon: '🏔️',
+    beneficiaries: '20,000+',
+    description: 'Ladakh mein barley, apricot aur peas cultivators PM Kisan se benefit le rahe hain.',
+    districts: ['Leh', 'Kargil'],
+  },
+  'lakshadweep': {
+    name: 'Lakshadweep',
+    icon: '',
+    beneficiaries: '5,000+',
+    description: 'Lakshadweep ke coconut cultivators aur tuna fishermen PM Kisan beneficiaries hain.',
+    districts: ['Kavaratti', 'Agatti', 'Amini', 'Minicoy'],
+  },
+  'chandigarh': {
+    name: 'Chandigarh',
+    icon: '️',
+    beneficiaries: '20,000+',
+    description: 'Chandigarh ke wheat, vegetables aur dairy farmers PM Kisan se benefit le rahe hain.',
+    districts: ['Chandigarh'],
+  },
+  'dadra-nagar-haveli': {
+    name: 'Dadra & Nagar Haveli',
+    icon: '🌾',
+    beneficiaries: '30,000+',
+    description: 'DNH ke rice, ragi aur mango cultivators major beneficiaries hain.',
+    districts: ['Silvassa', 'Amli', 'Silvassa'],
+  },
+  'daman-diu': {
+    name: 'Daman & Diu',
+    icon: '🏝️',
+    beneficiaries: '10,000+',
+    description: 'Daman & Diu ke rice, coconut aur mango cultivators PM Kisan beneficiaries hain.',
+    districts: ['Daman', 'Diu'],
+  },
+};
