@@ -4,8 +4,8 @@ import { SITE_URL, SITE_NAME } from '@/lib/site-config';
 
 export const metadata: Metadata = {
   title: 'PM Kisan Beneficiary List 2026 — State Wise Village Roster Check',
-  description: 'PM Kisan beneficiary list state wise check karo. Apne gaon ki village roster dekho, naam verify karo, PDF download karo. 36 states & UTs.',
-  keywords: ['pm kisan beneficiary list', 'pm kisan state wise list', 'pm kisan village roster', 'pm kisan list 2026'],
+  description: 'PM Kisan beneficiary list state wise check karo. Apne gaon ki village roster dekho, naam verify karo, PDF download karo. 37 states & UTs.',
+  keywords: ['pm kisan beneficiary list', 'pm kisan state wise list', 'pm kisan village roster', 'pm kisan list 2026', 'pm kisan gaon wise list'],
   alternates: { canonical: `${SITE_URL}/beneficiary-list` },
   openGraph: {
     title: 'PM Kisan Beneficiary List 2026 — State Wise Check',
@@ -62,7 +62,7 @@ export default function BeneficiaryListPage() {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
     name: 'PM Kisan Beneficiary List 2026 — State Wise',
-    description: 'PM Kisan beneficiary list state wise check karo. 36 states & UTs.',
+    description: 'PM Kisan beneficiary list state wise check karo. 37 states & UTs.',
     url: `${SITE_URL}/beneficiary-list`,
     numberOfItems: STATES.length,
   };
@@ -106,17 +106,20 @@ export default function BeneficiaryListPage() {
           </a>
         </div>
 
-        {/* Intro */}
+        {/* Intro - Human Style */}
         <section className="mb-8">
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            PM Kisan beneficiary list mein naam hona matlab aap ₹2,000 ki kist ke eligible ho. Har state ki list alag hoti hai — neeche apna state select karo.
+            Bhai, PM Kisan beneficiary list mein naam hona matlab aap ₹2,000 ki kist ke eligible ho. Har 4 mahine mein paisa aata hai — April, August, December mein.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Har state ki list alag hoti hai. Kyunki har state ka land record system alag hai, verification process bhi alag. Isliye neeche apna state select karo — wahan se aapko state-specific jankari milegi.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            <strong>24vi Kist</strong> October 2026 mein expected hai. List mein naam hona zaroori hai.
+            <strong>24vi Kist</strong> October 2026 mein expected hai. Agar naam list mein nahi hai toh abhi eKYC aur land seeding complete karo.
           </p>
         </section>
 
-        {/* ✅ FIXED: State Grid - Internal Links */}
+        {/* State Grid */}
         <section className="mb-10">
           <h2 className="text-lg font-black text-[var(--color-text)] mb-4">
             🗺️ Apna State Select Karo (37 States & UTs)
@@ -142,11 +145,14 @@ export default function BeneficiaryListPage() {
           </div>
         </section>
 
-        {/* How to Check */}
+        {/* How to Check - Human Style */}
         <section className="mb-8">
           <h2 className="text-lg font-black text-[var(--color-text)] mb-4">
             📋 Village Wise List Kaise Dekhen?
           </h2>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Dekho bhai, process simple hai. Neeche diye steps follow karo:
+          </p>
           <ol className="space-y-2">
             {[
               'pmkisan.gov.in par jao → "Farmers Corner" section mein jao',
