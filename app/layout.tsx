@@ -188,53 +188,25 @@ export default function RootLayout({
           strategy="lazyOnload"
         />
 
-        {/* ✅ GA4 inline script + ReportWebVitals inline function (CWV reporting) */}
+        {/* ✅ GA4 inline script — simplified, no window.CWV dependency */}
         <Script
-          id="ga4-init-and-webvitals"
+          id="ga4-init"
           strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
-              // gtag initialization
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', '${GA_MEASUREMENT_ID}', {
                 page_path: window.location.pathname,
-                anonymize_ip: true,
-                page_load_time: 0
+                anonymize_ip: true
               });
-
-              // Report Web Vitals to Google Analytics (improves PageSpeed reporting)
-              function sendWebVital(name, value) {
-                if (typeof window.gtag === 'function') {
-                  window.gtag('event', name, {
-                    value: Math.round(name === 'CLS' ? value * 1000 : value),
-                    event_category: 'Web Vitals',
-                    non_interaction: true,
-                  });
-                }
-              }
-
-              // Lazy-load web vitals reporting after idle
-              if ('requestIdleCallback' in window) {
-                requestIdleCallback(() => {
-                  if (window.CWV) {
-                    window.CWV.onCLS(sendWebVital);
-                    window.CWV.onFID(sendWebVital);
-                    window.CWV.onLCP(sendWebVital);
-                    window.CWV.onFCP(sendWebVital);
-                    window.CWV.onTTFB(sendWebVital);
-                  }
-                });
-              }
             `,
           }}
         />
 
-        {/* Vercel Analytics — lazy loading, page rendering block nahi karega */}
-        {process.env.NODE_ENV === 'production' && (
-          <Script id="vercel-analytics" strategy="lazyOnload" src="https://vercel.com/_vercel/insights/script.js" />
-        )}
+        {/* ✅ Vercel Analytics — Official component use karo */}
+        {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
   );
