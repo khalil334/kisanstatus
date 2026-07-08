@@ -17,39 +17,26 @@ const RELATED = [
   { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav', emoji: '📈' },
 ];
 
-// ✅ REAL HUMAN STYLE FAQs - Varied lengths, tones, and structures
 const FAQS_DATA = [
   {
     q: 'Mobile number se pm kisan beneficiary list mein naam kaise check karein?',
-    a: 'Seedha pmkisan.gov.in par jao. Farmers Corner mein "Beneficiary Status" hoga. Wahan Aadhaar ki jagah apna registered mobile number daal do. OTP aayega, verify karo, aur status dikh jayega. Registration number bhool gaye ho toh bhi yahi kaam karega.',
+    a: 'Seedha pmkisan.gov.in par jao. Farmers Corner mein "Beneficiary Status" hoga. Wahan Aadhaar ki jagah apna registered mobile number daal do. OTP aayega, verify karo, aur status dikh jayega.',
   },
   {
     q: 'Gaon ki poori list kaise dekhen?',
     a: 'Dashboard option use karo portal par. State, District, Block, aur phir Village select kar lo. Poori list khul jayegi.',
   },
   {
-    q: 'PM Kisan list mein naam nahi aaya — ab kya karun bhai?',
-    a: 'Arre ghabrao mat. Pehle check karo ki eKYC hui hai ya nahi. 60% cases mein yahi dikkat hoti hai. Agar eKYC done hai, toh land seeding (zameen ka record portal se judna) pending ho sakta hai. Patwari se baat karo, Khasra-Khatauni update karwao. 15-30 din mein naam aa jayega. Agar phir bhi na aaye toh 155261 par call maar do.',
+    q: 'PM Kisan list PDF download kaise karein?',
+    a: 'Official portal par village list kholne ke baad browser ka Print option use karo (Ctrl+P) aur "Save as PDF" select karo. Ya neeche diye gaye direct download button use karo.',
   },
   {
-    q: 'Naam list mein hai par payment nahi aayi — kyun?',
-    a: 'Ye toh sabse common complaint hai. Naam aana aur paisa aana alag cheez hai bhai. Bank account mein Aadhaar link (NPCI seeding) hona chahiye. IFSC code sahi hona chahiye. Account dormant (band) nahi hona chahiye. In teeno ko check karo, warna paisa wapas chala jayega.',
+    q: 'PM Kisan list mein naam nahi aaya — ab kya karun bhai?',
+    a: 'Arre ghabrao mat. Pehle check karo ki eKYC hui hai ya nahi. 60% cases mein yahi dikkat hota hai. Agar eKYC done hai, toh land seeding pending ho sakta hai. Patwari se baat karo. 15-30 din mein naam aa jayega.',
   },
   {
     q: 'Naam aane mein kitna time lagta hai?',
     a: '15 se 30 din. Bas.',
-  },
-  {
-    q: 'Kya dusre gaon ki list bhi dekh sakte hain?',
-    a: 'Haan. Koi rok nahi hai. Transparency ke liye sarkaar ne sab kuch khula rakha hai. Padosi gaon ki list bhi dekh sakte ho.',
-  },
-  {
-    q: 'List mein kaafi naam nahi dikh rahe — kya system kharab hai?',
-    a: 'Nahi bhai, system theek hai. Portal par sirf "Active" beneficiaries dikhte hain. Jinka status Rejected, Deactivated, ya Pending hai, wo is list mein nahi aayenge. Unka process alag chal raha hai ya koi document fix pending hai. Unhe apna individual status check karna chahiye.',
-  },
-  {
-    q: 'PM Kisan village wise list PDF download kaise karein?',
-    a: 'PC par ho toh list khulne ke baad Ctrl+P dabao aur "Save as PDF" select kar lo. Mobile par ho toh Share button dabao, Print mein jao, wahan bhi Save as PDF ka option aa jayega. Ya fir seedha screenshot le lo — kaam chal jayega.',
   },
 ];
 
@@ -94,6 +81,11 @@ const STATES_LIST = [
 ] as const;
 
 export default function PmKisanBeneficiaryList2026({ article }: { article: ArticleMeta }) {
+  // PDF Download Function
+  const handleDownloadPDF = () => {
+    window.print();
+  };
+
   return (
     <>
       <div className="bg-[var(--color-primary)] py-8">
@@ -120,7 +112,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* IMAGE: Hero - FIXED PATH */}
+        {/* IMAGE: Hero */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/pm-kisan-beneficiary-status-kisanstatus.webp'}
@@ -135,6 +127,32 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
             PM Kisan Beneficiary List 2026 — Apna Naam Check Karo + Village Wise List
           </p>
+        </div>
+
+        {/* PDF Download Buttons - ADDED */}
+        <div className="my-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <button
+            onClick={handleDownloadPDF}
+            className="flex items-center justify-center gap-2 p-4 bg-green-600 hover:bg-green-700 text-white font-black rounded-xl transition-all shadow-md hover:shadow-lg"
+          >
+            <span className="text-xl">📥</span>
+            <div className="text-left">
+              <p className="text-sm">Is Page Ko PDF Mein Save Karo</p>
+              <p className="text-xs opacity-90">Print → Save as PDF</p>
+            </div>
+          </button>
+          <a
+            href="https://pmkisan.gov.in/BeneficiaryList.aspx"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 p-4 bg-blue-600 hover:bg-blue-700 text-white font-black rounded-xl transition-all shadow-md hover:shadow-lg"
+          >
+            <span className="text-xl">📋</span>
+            <div className="text-left">
+              <p className="text-sm">Official List PDF Download</p>
+              <p className="text-xs opacity-90">pmkisan.gov.in se download karo</p>
+            </div>
+          </a>
         </div>
 
         {/* Quick Individual Check */}
@@ -180,7 +198,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
           </div>
         </section>
 
-        {/* SECTION 2: Village Wise List */}
+        {/* SECTION 2: Village Wise List with PDF Download */}
         <section className="mb-8">
           <SH>🏘️ Village Wise List Kaise Dekhen? (Poore Gaon Ki List)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -195,7 +213,12 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
             <SI n={6}>PDF save: Browser Print → <strong>Save as PDF</strong></SI>
           </StepList>
           <WB>
-            <strong>Mobile Par:</strong> Share button → Print → Save as PDF. Ya screenshot lekar gallery mein save karo.
+            <strong>📥 PDF Download Kaise Karein:</strong>
+            <ul className="list-disc list-inside mt-2 space-y-1 text-xs">
+              <li><strong>PC/Laptop:</strong> List kholne ke baad <strong>Ctrl+P</strong> dabao → "Save as PDF" select karo → Save button</li>
+              <li><strong>Mobile:</strong> Share button → Print → "Save as PDF" → Download</li>
+              <li>Ya upar wala <strong>green button</strong> dabao — turant PDF ban jayegi!</li>
+            </ul>
           </WB>
           <IB>
             <strong>Pro Tip:</strong> Kisi bhi state/district/block/village ki list publicly accessible hai. Padosi gaon ki list bhi dekh sakte ho — comparison ke liye achha hai.
@@ -265,21 +288,23 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
           </div>
         </section>
 
-        {/* SECTION 5: State Wise Links */}
+        {/* SECTION 5: State Wise Links - FIXED */}
         <section className="mb-8">
           <SH>🗺️ State Wise List — Quick Links (36 States & UTs)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Apna state select karo — complete list page khulega:
+            Apna state select karo — official portal khulega jahan se PDF download kar sakte ho:
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
             {STATES_LIST.map(([icon, name, slug]) => (
-              <Link
+              <a
                 key={slug}
-                href={`/beneficiary-list/${slug}`}
+                href={`https://pmkisan.gov.in/BeneficiaryList.aspx`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 p-3 bg-[var(--color-card)] border border-green-200 dark:border-green-800 rounded-xl text-green-800 dark:text-green-300 text-xs font-semibold hover:bg-[var(--color-primary)] hover:text-white hover:border-[var(--color-primary)] transition-all focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
               >
                 <span>{icon}</span>{name}
-              </Link>
+              </a>
             ))}
           </div>
         </section>
