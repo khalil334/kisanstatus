@@ -136,10 +136,24 @@
     background: var(--color-primary);
   }
 
+  /* ✅ FIX: Images with explicit dimensions to prevent CLS */
   img, svg {
     display: block;
     max-width: 100%;
     height: auto;
+  }
+
+  /* ✅ NEW: Prevent layout shift from images without dimensions */
+  img:not([width]):not([height]) {
+    aspect-ratio: 16/9; /* Default fallback - adjust per use case */
+    background-color: var(--color-border); /* Placeholder color while loading */
+  }
+
+  /* ✅ NEW: Reserve space for hero/banner images */
+  .hero-image,
+  img[loading="lazy"] {
+    background-color: var(--color-border);
+    min-height: 200px;
   }
 
   a {
@@ -655,6 +669,12 @@
   .fade-in { animation: fadeIn var(--transition-normal) ease; }
   .slide-up { animation: slideUp var(--transition-normal) ease; }
   .scale-in { animation: scaleIn var(--transition-normal) ease; }
+
+  /* ✅ NEW: Font loading optimization to prevent CLS */
+  .font-poppins {
+    font-family: var(--font-poppins), system-ui, -apple-system, sans-serif;
+    font-display: swap;
+  }
 }
 
 /* ✅ PERFORMANCE: GPU-accelerated keyframes */
