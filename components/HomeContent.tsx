@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ARTICLES, getLatestArticles, CATEGORIES } from '@/lib/articles-data';
 
 const TOP_ARTICLES_LIMIT = 3;
@@ -134,6 +134,11 @@ function ArticleCard({ article, showNewBadge = false }: { article: typeof ARTICL
 export default function HomeContent() {
   const latestArticles = getLatestArticles(TOP_ARTICLES_LIMIT);
   const allArticles = ARTICLES;
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   return (
     <main className="min-h-screen bg-white dark:bg-gray-900">
@@ -146,8 +151,6 @@ export default function HomeContent() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBSITE_SCHEMA) }}
       />
-
-      {/* ✅ FIX: Removed duplicate skip link — already in layout.tsx */}
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-white via-green-50/30 to-white dark:from-gray-900 dark:via-gray-900 dark:to-gray-900 py-20 md:py-28 overflow-hidden" aria-labelledby="hero-heading">
@@ -218,7 +221,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Stats Section — ✅ CLS FIX: Reserve space */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800/50 dark:to-gray-900" aria-labelledby="stats-heading">
         <h2 id="stats-heading" className="sr-only">PM Kisan Yojana ke aankde</h2>
         <div className="container-site mx-auto px-4">
@@ -232,6 +235,7 @@ export default function HomeContent() {
               <div
                 key={i}
                 className="group relative bg-white dark:bg-gray-800 rounded-2xl p-7 text-center border border-gray-200/80 dark:border-gray-700/80 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 overflow-hidden"
+                style={{ minHeight: '200px' }}
               >
                 <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${stat.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} aria-hidden="true" />
                 <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-500" aria-hidden="true">{stat.icon}</div>
@@ -268,7 +272,6 @@ export default function HomeContent() {
                 { href: '/calculator/msp-income', icon: '', bg: 'from-orange-400 to-red-500', title: 'MSP Income', desc: 'Fasal ki paidavar × MSP rate = guaranteed kamai' },
                 { href: '/calculator/crop-profit', icon: '📊', bg: 'from-green-400 to-emerald-500', title: 'Crop Profit', desc: 'Kharcha vs kamai — shuddh munafa jaano per acre' },
                 { href: '/calculator/kcc-loan-emi', icon: '🏦', bg: 'from-blue-400 to-cyan-500', title: 'KCC Loan EMI', desc: '4% byaj par monthly EMI aur total interest' },
-                // ✅ REMOVED: fertilizer-cost aur irrigation-cost (ye pages exist nahi karte)
               ].map((calc, i) => (
                 <Link
                   key={i}
@@ -312,7 +315,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* Featured Images — ✅ OPTIMIZED */}
+      {/* Featured Images — ✅ CLS FIX: Explicit aspect ratio */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800/50 dark:to-gray-900" aria-labelledby="featured-heading">
         <div className="container-site mx-auto px-4">
           <div className="text-center mb-14">
@@ -339,6 +342,8 @@ export default function HomeContent() {
                   sizes="(max-width: 768px) 100vw, 50vw"
                   quality={85}
                   className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                  placeholder="blur"
+                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiEycf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xVsgH1fZ//2Q=="
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" aria-hidden="true" />
                 <figcaption className="absolute bottom-0 left-0 right-0 p-8">
