@@ -26,18 +26,18 @@ const STATES = [
   { name: 'West Bengal', icon: '🐟', beneficiaries: '70 Lakh+', slug: 'west-bengal' },
   { name: 'Karnataka', icon: '🌴', beneficiaries: '50 Lakh+', slug: 'karnataka' },
   { name: 'Odisha', icon: '🌊', beneficiaries: '40 Lakh+', slug: 'odisha' },
-  { name: 'Tamil Nadu', icon: '', beneficiaries: '40 Lakh+', slug: 'tamil-nadu' },
-  { name: 'Punjab', icon: '', beneficiaries: '30 Lakh+', slug: 'punjab' },
+  { name: 'Tamil Nadu', icon: '🌞', beneficiaries: '40 Lakh+', slug: 'tamil-nadu' },
+  { name: 'Punjab', icon: '🌾', beneficiaries: '30 Lakh+', slug: 'punjab' },
   { name: 'Haryana', icon: '🚜', beneficiaries: '25 Lakh+', slug: 'haryana' },
   { name: 'Andhra Pradesh', icon: '🌶️', beneficiaries: '50 Lakh+', slug: 'andhra-pradesh' },
-  { name: 'Kerala', icon: '', beneficiaries: '20 Lakh+', slug: 'kerala' },
+  { name: 'Kerala', icon: '🌊', beneficiaries: '20 Lakh+', slug: 'kerala' },
   { name: 'Telangana', icon: '🌴', beneficiaries: '35 Lakh+', slug: 'telangana' },
   { name: 'Gujarat', icon: '🌿', beneficiaries: '50 Lakh+', slug: 'gujarat' },
-  { name: 'Assam', icon: '', beneficiaries: '30 Lakh+', slug: 'assam' },
+  { name: 'Assam', icon: '🌾', beneficiaries: '30 Lakh+', slug: 'assam' },
   { name: 'Jharkhand', icon: '🌊', beneficiaries: '30 Lakh+', slug: 'jharkhand' },
   { name: 'Uttarakhand', icon: '🏔️', beneficiaries: '15 Lakh+', slug: 'uttarakhand' },
   { name: 'Chhattisgarh', icon: '🌾', beneficiaries: '40 Lakh+', slug: 'chhattisgarh' },
-  { name: 'Himachal Pradesh', icon: '🌊', beneficiaries: '10 Lakh+', slug: 'himachal-pradesh' },
+  { name: 'Himachal Pradesh', icon: '🏔️', beneficiaries: '10 Lakh+', slug: 'himachal-pradesh' },
   { name: 'Jammu & Kashmir', icon: '🏔️', beneficiaries: '12 Lakh+', slug: 'jammu-kashmir' },
   { name: 'Goa', icon: '🌿', beneficiaries: '1 Lakh+', slug: 'goa' },
   { name: 'Sikkim', icon: '🏔️', beneficiaries: '50,000+', slug: 'sikkim' },
@@ -53,7 +53,7 @@ const STATES = [
   { name: 'Ladakh', icon: '🏔️', beneficiaries: '20,000+', slug: 'ladakh' },
   { name: 'Lakshadweep', icon: '🌊', beneficiaries: '5,000+', slug: 'lakshadweep' },
   { name: 'Chandigarh', icon: '🏛️', beneficiaries: '20,000+', slug: 'chandigarh' },
-  { name: 'Dadra & Nagar Haveli', icon: '', beneficiaries: '30,000+', slug: 'dadra-nagar-haveli' },
+  { name: 'Dadra & Nagar Haveli', icon: '🌾', beneficiaries: '30,000+', slug: 'dadra-nagar-haveli' },
   { name: 'Daman & Diu', icon: '🏝️', beneficiaries: '10,000+', slug: 'daman-diu' },
 ] as const;
 
@@ -116,18 +116,16 @@ export default function BeneficiaryListPage() {
           </p>
         </section>
 
-        {/* State Grid */}
+        {/* ✅ FIXED: State Grid - Internal Links */}
         <section className="mb-10">
           <h2 className="text-lg font-black text-[var(--color-text)] mb-4">
-            ️ Apna State Select Karo (36 States & UTs)
+            🗺️ Apna State Select Karo (37 States & UTs)
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
             {STATES.map((state) => (
-              <a
+              <Link
                 key={state.slug}
-                href={`https://pmkisan.gov.in/BeneficiaryList.aspx`}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={`/beneficiary-list/${state.slug}`}
                 className="flex flex-col p-3 bg-[var(--color-card)] border border-green-200 dark:border-green-800 rounded-xl hover:border-[var(--color-primary)] hover:shadow-md transition-all group"
               >
                 <div className="flex items-center gap-2 mb-1">
@@ -139,7 +137,7 @@ export default function BeneficiaryListPage() {
                 <span className="text-[10px] text-green-700 dark:text-green-400 font-bold">
                   {state.beneficiaries} beneficiaries
                 </span>
-              </a>
+              </Link>
             ))}
           </div>
         </section>
@@ -177,7 +175,7 @@ export default function BeneficiaryListPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
               { href: '/articles/PmKisanBeneficiaryList2026', title: '📋 Beneficiary List Complete Guide', desc: 'Naam check karo, 7 rejection reasons + fix' },
-              { href: '/articles/PmKisan24viKist2026', title: ' 24vi Kist Status', desc: 'October 2026 mein kab aayegi' },
+              { href: '/articles/PmKisan24viKist2026', title: '📅 24vi Kist Status', desc: 'October 2026 mein kab aayegi' },
               { href: '/articles/PmKisanEkycOnline2026', title: '🔐 eKYC Guide', desc: 'Bina eKYC ke list mein naam nahi aayega' },
               { href: '/articles/PmKisanMasterGuide2026', title: '📚 Master Guide', desc: 'Sab problems ka ek jagah hal' },
               { href: '/articles/PmKisanPaymentFailedFix2026', title: '💸 Payment Failed Fix', desc: 'Naam hai par paisa nahi aaya?' },
