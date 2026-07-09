@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
@@ -14,7 +15,7 @@ const RELATED = [
   { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '' },
   { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Meaning', emoji: '💳' },
   { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Credit Card Guide', emoji: '💰' },
-  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide', emoji: '🔐' },
+  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide', emoji: '' },
   { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav', emoji: '📈' },
 ];
 
@@ -51,7 +52,7 @@ const STATES_LIST = [
   ['🌴', 'Karnataka', 'karnataka'],
   ['', 'Odisha', 'odisha'],
   ['', 'Tamil Nadu', 'tamil-nadu'],
-  ['🌾', 'Punjab', 'punjab'],
+  ['', 'Punjab', 'punjab'],
   ['', 'Haryana', 'haryana'],
   ['🌶️', 'Andhra Pradesh', 'andhra-pradesh'],
   ['🌊', 'Kerala', 'kerala'],
@@ -70,17 +71,18 @@ const STATES_LIST = [
   ['🌿', 'Manipur', 'manipur'],
   ['', 'Nagaland', 'nagaland'],
   ['🏔️', 'Arunachal Pradesh', 'arunachal-pradesh'],
-  ['🌾', 'Mizoram', 'mizoram'],
+  ['', 'Mizoram', 'mizoram'],
   ['️', 'Delhi', 'delhi'],
   ['', 'Puducherry', 'puducherry'],
   ['🏝️', 'Andaman & Nicobar', 'andaman-nicobar'],
   ['🏔️', 'Ladakh', 'ladakh'],
   ['', 'Lakshadweep', 'lakshadweep'],
-  ['🏛️', 'Chandigarh', 'chandigarh'],
+  ['️', 'Chandigarh', 'chandigarh'],
   ['🌾', 'Dadra & Nagar Haveli', 'dadra-nagar-haveli'],
-  ['🏝️', 'Daman & Diu', 'daman-diu'],
+  ['️', 'Daman & Diu', 'daman-diu'],
 ] as const;
 
+// Countdown Modal Component
 function CountdownModal({ 
   title, 
   message, 
@@ -96,19 +98,24 @@ function CountdownModal({
 }) {
   const [count, setCount] = useState(10);
   const [showDownloadBtn, setShowDownloadBtn] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     if (count === 0) {
       if (showButton) {
         setShowDownloadBtn(true);
       } else {
-        window.location.href = redirectUrl;
+        if (redirectUrl.startsWith('http')) {
+          window.location.href = redirectUrl;
+        } else {
+          router.push(redirectUrl);
+        }
       }
       return;
     }
     const timer = setTimeout(() => setCount(count - 1), 1000);
     return () => clearTimeout(timer);
-  }, [count, redirectUrl, showButton]);
+  }, [count, redirectUrl, showButton, router]);
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4" onClick={onClose}>
@@ -170,7 +177,9 @@ function CountdownModal({
   );
 }
 
+// Main Component
 export default function PmKisanBeneficiaryList2026({ article }: { article: ArticleMeta }) {
+  const router = useRouter();
   const [modal, setModal] = useState<{ 
     title: string; 
     message: string; 
@@ -187,8 +196,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
     });
   };
 
-  const handleStateClick = (stateName: string, slug: string, e: React.MouseEvent) => {
-    e.preventDefault();
+  const handleStateClick = (stateName: string, slug: string) => {
     setModal({
       title: 'Please Wait',
       message: `${stateName} ki beneficiary list par redirect ho raha hai...`,
@@ -310,12 +318,12 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
               <p className="text-xs text-[var(--color-text-muted)] mt-1">Naam hai, kist aayegi</p>
             </div>
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl text-center">
-              <span className="text-3xl block mb-2">❌</span>
+              <span className="text-3xl block mb-2"></span>
               <p className="font-black text-sm text-red-800 dark:text-red-300">Rejected</p>
               <p className="text-xs text-[var(--color-text-muted)] mt-1">Problem hai — fix karo</p>
             </div>
             <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl text-center">
-              <span className="text-3xl block mb-2"></span>
+              <span className="text-3xl block mb-2">⏳</span>
               <p className="font-black text-sm text-amber-800 dark:text-amber-300">Pending</p>
               <p className="text-xs text-[var(--color-text-muted)] mt-1">Verification chal rahi hai</p>
             </div>
@@ -337,7 +345,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
             <SI n={6}>PDF save: Browser Print → <strong>Save as PDF</strong></SI>
           </StepList>
           <WB>
-            <strong>📥 PDF Download Kaise Karein:</strong>
+            <strong> PDF Download Kaise Karein:</strong>
             <ul className="list-disc list-inside mt-2 space-y-1 text-xs">
               <li><strong>PC/Laptop:</strong> List kholne ke baad <strong>Ctrl+P</strong> dabao → "Save as PDF" select karo → Save button</li>
               <li><strong>Mobile:</strong> Share button → Print → "Save as PDF" → Download</li>
@@ -420,14 +428,13 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
             {STATES_LIST.map(([icon, name, slug]) => (
-              <Link
+              <button
                 key={slug}
-                href={`/beneficiary-list/${slug}`}
-                onClick={(e) => handleStateClick(name, slug, e)}
+                onClick={() => handleStateClick(name, slug)}
                 className="flex items-center gap-2 p-3 bg-[var(--color-card)] border border-green-200 dark:border-green-800 rounded-xl text-green-800 dark:text-green-300 text-xs font-semibold hover:bg-[var(--color-primary)] hover:text-white hover:border-[var(--color-primary)] transition-all focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
               >
                 <span>{icon}</span>{name}
-              </Link>
+              </button>
             ))}
           </div>
         </section>
@@ -448,9 +455,9 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
               { icon: '', title: 'Complete Guide', desc: 'Sab problems ka ek jagah hal', href: '/articles/PmKisanMasterGuide2026', cta: 'Master Guide →' },
-              { icon: '💳', title: 'FTO Status', desc: 'Paisa kab aayega samjho', href: '/articles/pm-kisan-fto-generated-ka-matlab-kya-hai', cta: 'FTO Guide →' },
+              { icon: '', title: 'FTO Status', desc: 'Paisa kab aayega samjho', href: '/articles/pm-kisan-fto-generated-ka-matlab-kya-hai', cta: 'FTO Guide →' },
               { icon: '📅', title: '24vi Kist Status', desc: 'Expected date + eligibility', href: '/articles/PmKisan24viKist2026', cta: '24vi Guide →' },
-              { icon: '🔐', title: 'eKYC Complete Karo', desc: 'Bina eKYC kist nahi milegi', href: '/articles/PmKisanEkycOnline2026', cta: 'eKYC Guide →' },
+              { icon: '', title: 'eKYC Complete Karo', desc: 'Bina eKYC kist nahi milegi', href: '/articles/PmKisanEkycOnline2026', cta: 'eKYC Guide →' },
             ].map(({ icon, title, desc, href, cta }) => (
               <Link
                 key={href}
@@ -485,7 +492,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
         />
 
         <CalcBanner
-          icon="📋"
+          icon=""
           title="Apni Kist Track Karo"
           desc="Kitni kist aayi, kitni pending — complete history jaano"
           primaryCta={{ href: '/calculator/installment-tracker', label: ' Tracker Kholo →' }}
