@@ -10,7 +10,7 @@ const MODIFIED = '2026-07-10T08:00:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisanMasterGuide2026', title: 'Master Guide', emoji: '' },
-  { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form', emoji: '📝' },
+  { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form', emoji: '' },
   { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List', emoji: '📋' },
 ];
 
@@ -59,9 +59,9 @@ export default function PmKisanVoluntarySurrenderGuide({ article }: { article: A
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white">KisanStatus Team</Link></span>
-            <span> {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>️ 12 min read</span>
+            <span>📅 {fmtDate(PUBLISHED)}</span>
+            <span> Updated: {fmtDate(MODIFIED)}</span>
+            <span>⏱️ 12 min read</span>
           </div>
         </div>
       </div>
@@ -122,12 +122,12 @@ export default function PmKisanVoluntarySurrenderGuide({ article }: { article: A
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
             {[
-              { icon: '‍🏫', title: 'Government Employees', desc: 'Teachers, clerks, officers — sabhi government jobs wale' },
+              { icon: '👨‍🏫', title: 'Government Employees', desc: 'Teachers, clerks, officers — sabhi government jobs wale' },
               { icon: '💰', title: 'Income Tax Filers', desc: 'Jo log income tax return file karte hain' },
               { icon: '👴', title: 'Pensioners', desc: 'Old age pension ya family pension lene wale' },
               { icon: '🏛️', title: 'MP/MLA/Officials', desc: 'Elected representatives aur unke family members' },
               { icon: '👨‍💼', title: 'Professionals', desc: 'CA, Doctor, Lawyer, Engineer — registered professionals' },
-              { icon: '', title: 'Institutional Land', desc: 'Jinki zameen trust ya company ke naam par hai' },
+              { icon: '🏢', title: 'Institutional Land', desc: 'Jinki zameen trust ya company ke naam par hai' },
             ].map(({ icon, title, desc }) => (
               <div key={title} className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
                 <span className="text-2xl block mb-2">{icon}</span>
@@ -189,7 +189,7 @@ export default function PmKisanVoluntarySurrenderGuide({ article }: { article: A
               <li>Mobile number wahi hona chahiye jo registration time par diya tha</li>
               <li>OTP aayega, usko enter karna padega</li>
               <li>Ek baar submit karne ke baad undo nahi ho sakta</li>
-              <li>15 din baad <a href="/articles/PmKisanBeneficiaryList2026" class="underline">beneficiary list</a> check karo</li>
+              <li>15 din baad <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">beneficiary list</Link> check karo</li>
             </ul>
           </WB>
         </section>
@@ -262,7 +262,7 @@ export default function PmKisanVoluntarySurrenderGuide({ article }: { article: A
               { doc: 'Registration Number', note: 'Agar yaad ho toh' },
             ].map(({ doc, note }) => (
               <div key={doc} className="p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-                <p className="font-black text-sm text-[var(--color-text)] mb-1">{doc}</p>
+                <p className="font-black text-sm text-[var(--color-text)] mb-1">📄 {doc}</p>
                 <p className="text-xs text-[var(--color-text-muted)]">{note}</p>
               </div>
             ))}
