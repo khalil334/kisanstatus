@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { SI, StepList, IB, WB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
+import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const PUBLISHED = '2026-07-10T08:00:00+05:30';
@@ -34,7 +34,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Face authentication ke baad kya karein?',
-    a: 'Authentication successful hone ke baad 2-3 din wait karo. Phir <a href="/articles/PmKisanBeneficiaryList2026" class="underline">beneficiary list</a> mein apna naam check karo. Status active dikhna chahiye.',
+    a: 'Authentication successful hone ke baad 2-3 din wait karo. Phir beneficiary list mein apna naam check karo. Status active dikhna chahiye.',
   },
   {
     q: 'Agar photo purani hai toh?',
@@ -240,7 +240,7 @@ export default function PmKisanFaceAuthenticationEkyc({ article }: { article: Ar
               },
               { 
                 error: 'App crash ho raha hai', 
-                fix: 'App ka cache clear karo. Settings {'>'} Apps {'>'} PMKisan {'>'} Storage {'>'} Clear Cache. Phir try karo.',
+                fix: 'App ka cache clear karo. Settings &gt; Apps &gt; PMKisan &gt; Storage &gt; Clear Cache. Phir try karo.',
                 extra: 'Agar phir bhi crash ho toh app uninstall karke dobara install karo.'
               },
             ].map(({ error, fix, extra }, i) => (
