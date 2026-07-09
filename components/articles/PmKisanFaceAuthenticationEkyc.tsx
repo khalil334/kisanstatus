@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
+import { SI, StepList, IB, WB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const PUBLISHED = '2026-07-10T08:00:00+05:30';
@@ -18,19 +18,19 @@ const RELATED = [
 const FAQS_DATA = [
   {
     q: 'Face authentication ke liye kaunsa app use karein?',
-    a: 'Official PMKisan App (pmkisan.gov.in se download karo). Koi third party app use mat karna. Play Store par "PMKisan" search karo ya direct government website se APK download karo.',
+    a: 'Official PMKisan App (pmkisan.gov.in se download karo). Koi third party app use mat karna.',
   },
   {
     q: 'Bina OTP ke eKYC ho sakti hai?',
-    a: 'Haan, face authentication mein OTP ki zaroorat nahi padti. Bas camera ke samne aakar apna chehra scan karna hota hai. Ye un logon ke liye hai jinka mobile number Aadhaar se link nahi hai.',
+    a: 'Haan, face authentication mein OTP ki zaroorat nahi padti. Bas camera ke samne aana hai.',
   },
   {
     q: 'Face scan fail ho raha hai, kya karein?',
-    a: 'Roshni achhi rakho, chashma utaar do, aur background plain rakho. Net bhi tez hona chahiye. 3-4 baar try karne ke baad bhi fail ho toh CSC center par chale jao.',
+    a: 'Roshni achhi rakho, chashma utaar do, aur background plain rakho. Net bhi tez hona chahiye.',
   },
   {
     q: 'Kya CSC jakar bhi karwa sakte hain?',
-    a: 'Haan, CSC wale biometric device se karwa sakte hain. ₹20-30 lag sakte hain. Ye option tab use karo jab app se na ho pa raha ho.',
+    a: 'Haan, CSC wale biometric device se karwa sakte hain. ₹20-30 lag sakte hain.',
   },
   {
     q: 'Face authentication ke baad kya karein?',
@@ -61,7 +61,7 @@ export default function PmKisanFaceAuthenticationEkyc({ article }: { article: Ar
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white">KisanStatus Team</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
+            <span> Updated: {fmtDate(MODIFIED)}</span>
             <span>⏱️ 15 min read</span>
           </div>
         </div>
@@ -240,7 +240,7 @@ export default function PmKisanFaceAuthenticationEkyc({ article }: { article: Ar
               },
               { 
                 error: 'App crash ho raha hai', 
-                fix: 'App ka cache clear karo. Settings > Apps > PMKisan > Storage > Clear Cache. Phir try karo.',
+                fix: 'App ka cache clear karo. Settings {'>'} Apps {'>'} PMKisan {'>'} Storage {'>'} Clear Cache. Phir try karo.',
                 extra: 'Agar phir bhi crash ho toh app uninstall karke dobara install karo.'
               },
             ].map(({ error, fix, extra }, i) => (
@@ -382,7 +382,7 @@ export default function PmKisanFaceAuthenticationEkyc({ article }: { article: Ar
             <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
               <p className="font-black text-sm text-[var(--color-text)] mb-2">📱 Phone Settings Check Karo:</p>
               <ul className="list-disc list-inside text-xs text-[var(--color-text-muted)] space-y-1">
-                <li>Camera permission on hai? (Settings > Apps > PMKisan > Permissions)</li>
+                <li>Camera permission on hai? (Settings &gt; Apps &gt; PMKisan &gt; Permissions)</li>
                 <li>Storage permission on hai?</li>
                 <li>Internet permission on hai?</li>
                 <li>Battery optimization off karo app ke liye</li>
