@@ -88,7 +88,7 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
   return schemas;
 }
 
-// ✅ FIX: Loading skeleton with fixed heights to prevent CLS
+// ✅ Loading skeleton with fixed heights to prevent CLS
 function ArticleLoading() {
   return (
     <div className="container-site py-10" style={{ minHeight: '60vh' }}>
@@ -128,10 +128,10 @@ function ArticleLoading() {
 }
 
 const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> = {
+  // ── EXISTING ARTICLES ───────────────────────────────────
   KisanRinKahaSeLe2026:                       dynamic(() => import('@/components/articles/KisanRinKahaSeLe2026'),                       { loading: ArticleLoading, ssr: true }),
   KisanTractorLoan2026:                       dynamic(() => import('@/components/articles/KisanTractorLoan2026'),                       { loading: ArticleLoading, ssr: true }),
   PmKisanBeneficiaryList2026:                 dynamic(() => import('@/components/articles/PmKisanBeneficiaryList2026'),                 { loading: ArticleLoading, ssr: true }),
-  // ❌ REMOVED: PmKisanBeneficiaryListVillageWise2026 (merged with main article)
   PmKisanEkycOnline2026:                      dynamic(() => import('@/components/articles/PmKisanEkycOnline2026'),                      { loading: ArticleLoading, ssr: true }),
   KisanCreditCardOnlineApply2026:             dynamic(() => import('@/components/articles/KisanCreditCardOnlineApply2026'),             { loading: ArticleLoading, ssr: true }),
   NanoDap500mlPriceInIndia2026:               dynamic(() => import('@/components/articles/NanoDap500mlPriceInIndia2026'),               { loading: ArticleLoading, ssr: true }),
@@ -147,6 +147,18 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   PmKisanSelfRegisteredStatusCheck:           dynamic(() => import('@/components/articles/PmKisanSelfRegisteredStatusCheck'),           { loading: ArticleLoading, ssr: true }),
   PmKisanCorrectionForm2026:                  dynamic(() => import('@/components/articles/PmKisanCorrectionForm2026'),                  { loading: ArticleLoading, ssr: true }),
   PmKusumYojanaSolarSubsidy2026:              dynamic(() => import('@/components/articles/PmKusumYojanaSolarSubsidy2026'),              { loading: ArticleLoading, ssr: true }),
+
+  // ── NEW 10 LOW-COMPETITION ARTICLES ─────────────────────
+  PmKisanLandSeedingForm:                     dynamic(() => import('@/components/articles/PmKisanLandSeedingForm'),                     { loading: ArticleLoading, ssr: true }),
+  PmKisanFaceAuthenticationEkyc:              dynamic(() => import('@/components/articles/PmKisanFaceAuthenticationEkyc'),              { loading: ArticleLoading, ssr: true }),
+  PmKisanVoluntarySurrenderGuide:             dynamic(() => import('@/components/articles/PmKisanVoluntarySurrenderGuide'),             { loading: ArticleLoading, ssr: true }),
+  PmKisanStateNodalOfficerList:               dynamic(() => import('@/components/articles/PmKisanStateNodalOfficerList'),               { loading: ArticleLoading, ssr: true }),
+  PmKisanBankAccountChangeProcess:            dynamic(() => import('@/components/articles/PmKisanBankAccountChangeProcess'),            { loading: ArticleLoading, ssr: true }),
+  PmKisanCscRegistrationCharges:              dynamic(() => import('@/components/articles/PmKisanCscRegistrationCharges'),              { loading: ArticleLoading, ssr: true }),
+  PmKisanMaandhanYojanaPension:               dynamic(() => import('@/components/articles/PmKisanMaandhanYojanaPension'),               { loading: ArticleLoading, ssr: true }),
+  PmKisanRejectedStatusReApplyGuide:          dynamic(() => import('@/components/articles/PmKisanRejectedStatusReApplyGuide'),          { loading: ArticleLoading, ssr: true }),
+  PmKisanVillageWiseListPdfDownload:          dynamic(() => import('@/components/articles/PmKisanVillageWiseListPdfDownload'),          { loading: ArticleLoading, ssr: true }),
+  PmKisanMobileNumberChangeUpdate:            dynamic(() => import('@/components/articles/PmKisanMobileNumberChangeUpdate'),            { loading: ArticleLoading, ssr: true }),
 };
 
 export const revalidate = 3600;
