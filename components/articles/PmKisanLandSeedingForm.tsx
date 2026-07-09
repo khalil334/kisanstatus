@@ -35,24 +35,24 @@ const FAQS_DATA = [
 ];
 
 const STATE_LINKS = [
-  { name: 'Uttar Pradesh', url: 'https://upbhulekh.gov.in' },
-  { name: 'Bihar', url: 'https://biharbhumi.bihar.gov.in' },
-  { name: 'Madhya Pradesh', url: 'https://bhu-abhilekh.nic.in' },
-  { name: 'Rajasthan', url: 'https://apnakhata.raj.nic.in' },
+  { name: 'Uttar Pradesh', url: 'https://upbhulekh.gov.in', slug: 'uttar-pradesh' },
+  { name: 'Bihar', url: 'https://biharbhumi.bihar.gov.in', slug: 'bihar' },
+  { name: 'Madhya Pradesh', url: 'https://bhu-abhilekh.nic.in', slug: 'madhya-pradesh' },
+  { name: 'Rajasthan', url: 'https://apnakhata.raj.nic.in', slug: 'rajasthan' },
 ];
 
-function CountdownModal({ stateName, url, onClose }: { stateName: string; url: string; onClose: () => void }) {
+function CountdownModal({ stateName, url, slug, onClose }: { stateName: string; url: string; slug: string; onClose: () => void }) {
   const [count, setCount] = useState(10);
+  const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
     if (count === 0) {
-      window.open(url, '_blank', 'noopener,noreferrer');
-      onClose();
+      setShowButton(true);
       return;
     }
     const timer = setTimeout(() => setCount(count - 1), 1000);
     return () => clearTimeout(timer);
-  }, [count, url, onClose]);
+  }, [count]);
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4" onClick={onClose}>
@@ -63,36 +63,51 @@ function CountdownModal({ stateName, url, onClose }: { stateName: string; url: s
         <div className="text-center">
           <div className="text-5xl mb-3">⏳</div>
           <h3 className="text-lg font-black text-gray-800 dark:text-white mb-2">
-            {stateName} Official Portal
+            Please Wait
           </h3>
           <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
-            Aapko <strong>{stateName}</strong> ki official website par redirect kiya ja raha hai.
+            {stateName} land seeding form download karne ke liye thoda intezaar karein...
           </p>
-          <div className="mb-4">
-            <div className="text-6xl font-black text-blue-600 dark:text-blue-400">
-              {count}
+          
+          {!showButton ? (
+            <div className="mb-4">
+              <div className="text-6xl font-black text-blue-600 dark:text-blue-400">
+                {count}
+              </div>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                seconds baad download link milega
+              </p>
             </div>
-            <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-              {count === 0 ? 'Redirecting...' : 'seconds mein redirect hoga'}
+          ) : (
+            <div className="mb-4 space-y-3">
+              <div className="bg-green-50 dark:bg-green-900/30 border-2 border-green-500 rounded-lg p-4">
+                <p className="text-sm font-bold text-green-800 dark:text-green-300 mb-2">
+                  ✅ {stateName} Land Seeding Form Ready Hai!
+                </p>
+                <Link
+                  href={`/articles/pm-kisan-land-seeding-form/download?state=${slug}&redirect=${encodeURIComponent(url)}`}
+                  className="inline-block w-full px-6 py-3 bg-green-600 hover:bg-green-700 text-white text-base font-bold rounded-lg transition-colors animate-pulse"
+                >
+                  📥 Click to Download PDF
+                </Link>
+              </div>
+              <p className="text-xs text-gray-500 dark:text-gray-400">
+                Upar diye gaye button par click karein
+              </p>
+            </div>
+          )}
+          
+          <div className="bg-blue-50 dark:bg-blue-900/30 rounded-lg p-3 mb-4">
+            <p className="text-xs text-blue-800 dark:text-blue-300">
+              📌 {stateName} bhulekh portal se aap land seeding form, khasra khatauni details aur PM Kisan se judi saari jaankari le sakte hain.
             </p>
           </div>
-          <div className="flex gap-2">
-            <button
-              onClick={() => {
-                window.open(url, '_blank', 'noopener,noreferrer');
-                onClose();
-              }}
-              className="flex-1 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-colors"
-            >
-              Abhi Jaayein
-            </button>
-            <button
-              onClick={onClose}
-              className="flex-1 px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-800 dark:text-white text-sm font-bold rounded-lg transition-colors"
-            >
-              Cancel
-            </button>
-          </div>
+          <button
+            onClick={onClose}
+            className="w-full px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-800 dark:text-white text-sm font-bold rounded-lg transition-colors"
+          >
+            Cancel
+          </button>
         </div>
       </div>
     </div>
@@ -100,7 +115,7 @@ function CountdownModal({ stateName, url, onClose }: { stateName: string; url: s
 }
 
 export default function PmKisanLandSeedingFormPdf2026({ article }: { article: ArticleMeta }) {
-  const [modal, setModal] = useState<{ stateName: string; url: string } | null>(null);
+  const [modal, setModal] = useState<{ stateName: string; url: string; slug: string } | null>(null);
 
   return (
     <>
@@ -108,6 +123,7 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
         <CountdownModal
           stateName={modal.stateName}
           url={modal.url}
+          slug={modal.slug}
           onClose={() => setModal(null)}
         />
       )}
@@ -127,7 +143,7 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white">KisanStatus Team</Link></span>
-            <span> {fmtDate(PUBLISHED)}</span>
+            <span>📅 {fmtDate(PUBLISHED)}</span>
             <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
             <span>⏱️ 12 min read</span>
           </div>
@@ -162,7 +178,7 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
               <div key={state.name} className="flex items-center justify-between p-3 bg-white dark:bg-gray-800 rounded-lg">
                 <span className="text-sm font-bold text-gray-800 dark:text-gray-200">{state.name}</span>
                 <button
-                  onClick={() => setModal({ stateName: state.name, url: state.url })}
+                  onClick={() => setModal({ stateName: state.name, url: state.url, slug: state.slug })}
                   className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-lg transition-colors"
                 >
                   Download PDF
@@ -179,13 +195,13 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
         <section className="mb-8">
           <SH>Land Seeding Kya Hai? Real Problem Kya Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Yeh ek aam samasya hai. Maan lijiye (illustrative example), ek kisan ne PM Kisan yojana ke liye apply kiya. Unka <Link href="/articles/PmKisanEkycOnline2026" className="underline text-green-700 dark:text-green-400">eKYC</Link> ho gaya, bank account bhi link ho gaya. Par kai mahine guzarne ke baad bhi kist ki raqam nahi aayi.
+            Dekhiye, maan lo ek kisan ne PM Kisan yojana ke liye apply kiya. eKYC ho gaya, bank account bhi link ho gaya. Par kai mahine guzarne ke baad bhi paisa nahi aaya.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Jab unhone portal par <Link href="/articles/pm-kisan-fto-generated-ka-matlab-kya-hai" className="underline text-green-700 dark:text-green-400">status check</Link> kiya, toh wahan likha tha — <strong>"Land Seeding Pending"</strong>.
+            Jab status check kiya, toh likha tha — <strong>"Land Seeding Pending"</strong>.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Aise mein kisan pareshan ho jaate hain. Patwari ke chakkar kaat-te hain, BAO office jaate hain, par har jagah se alag form maanga jaata hai. Samajh nahi aata ki aakhir kaunsa form bharna hai.
+            Aise mein kisan pareshan ho jaate hain. Patwari ke chakkar kaat-te hain, BAO office jaate hain, par har jagah se alag form maanga jaata hai. Samajh nahi aata ki kaunsa form bharna hai.
           </p>
           
           <Image
@@ -197,7 +213,7 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
           />
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Isi uljhan ko door karne ke liye humne yeh comprehensive guide taiyaar ki hai. Yahan aapko har state ka form aur step-by-step process mil jayega. Agar aap bhi <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">beneficiary list</Link> mein apna naam dhundh rahe hain aur wahan land seeding pending dikh raha hai, toh yeh lekh aapke liye bahut madadgar sabit hoga.
+            Isi problem ko solve karne ke liye humne yeh guide banaya hai. Yahan aapko har state ka land seeding form, khasra khatauni details aur step-by-step process mil jayega. Agar aap bhi beneficiary list mein apna naam dhundh rahe hain aur land seeding pending dikh raha hai, toh yeh article end tak padhein.
           </p>
         </section>
 
@@ -205,10 +221,10 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
         <section className="mb-8">
           <SH>Land Seeding Form Kyun Zaroori Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            PM Kisan samman nidhi ka labh tabhi milta hai jab kisan ki zameen ka record sarkari database ke saath properly link ho jaye.
+            PM Kisan samman nidhi ka paisa tabhi milta hai jab kisan ki zameen ka record government database mein link ho jaye.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Is prakriya ko hi <strong>Land Seeding</strong> kaha jaata hai.
+            Is process ko <strong>Land Seeding</strong> kehte hain.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 my-4">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl text-center">
