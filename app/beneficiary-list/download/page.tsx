@@ -1,12 +1,11 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { useSearchParams, useRouter } from 'next/navigation';
+import { useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 
 export default function BeneficiaryListDownloadPage() {
   const searchParams = useSearchParams();
-  const router = useRouter();
   const [isRedirecting, setIsRedirecting] = useState(false);
 
   const redirectUrl = searchParams.get('redirect') || '/beneficiary-list';
@@ -40,7 +39,7 @@ export default function BeneficiaryListDownloadPage() {
       <div className="container-site max-w-3xl py-12 px-4">
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl border-2 border-green-500 dark:border-green-700 p-6 md:p-8 mb-8">
           <div className="text-center mb-6">
-            <div className="text-6xl mb-4">📋</div>
+            <div className="text-6xl mb-4"></div>
             <h2 className="text-xl md:text-2xl font-black text-gray-800 dark:text-white mb-3">
               PM Kisan Beneficiary List
             </h2>
@@ -78,7 +77,7 @@ export default function BeneficiaryListDownloadPage() {
 
           <div className="bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-200 dark:border-blue-800 rounded-xl p-4 mb-6">
             <h3 className="font-bold text-blue-800 dark:text-blue-300 mb-2 text-sm">
-              📌 Zaroori Jaankari:
+               Zaroori Jaankari:
             </h3>
             <ul className="text-xs text-blue-700 dark:text-blue-400 space-y-1 list-disc list-inside">
               <li>Beneficiary list download karne ke liye upar diye gaye button par click karein</li>
