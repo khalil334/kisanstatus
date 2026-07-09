@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
@@ -32,7 +33,7 @@ const FAQS_DATA = [
   },
   {
     q: 'PM Kisan list mein naam nahi aaya — ab kya karun bhai?',
-    a: 'Arre ghabrao mat. Pehle check karo ki eKYC hui hai ya nahi. 60% cases mein yahi dikkat hota hai. Agar eKYC done hai, toh land seeding pending ho sakta hai. Patwari se baat karo. 15-30 din mein naam aa jayega.',
+    a: 'Arre ghabrao mat. Pehle check karo ki eKYC hui hai ya nahi. 60% cases mein yahi dikkat hoti hai. Agar eKYC done hai, toh land seeding pending ho sakta hai. Patwari se baat karo. 15-30 din mein naam aa jayega.',
   },
   {
     q: 'Naam aane mein kitna time lagta hai?',
@@ -45,32 +46,32 @@ const STATES_LIST = [
   ['🌊', 'Bihar', 'bihar'],
   ['🌿', 'Madhya Pradesh', 'madhya-pradesh'],
   ['☀️', 'Rajasthan', 'rajasthan'],
-  ['🌾', 'Maharashtra', 'maharashtra'],
+  ['', 'Maharashtra', 'maharashtra'],
   ['', 'West Bengal', 'west-bengal'],
   ['🌴', 'Karnataka', 'karnataka'],
   ['', 'Odisha', 'odisha'],
-  ['🌞', 'Tamil Nadu', 'tamil-nadu'],
+  ['', 'Tamil Nadu', 'tamil-nadu'],
   ['🌾', 'Punjab', 'punjab'],
-  ['🚜', 'Haryana', 'haryana'],
+  ['', 'Haryana', 'haryana'],
   ['🌶️', 'Andhra Pradesh', 'andhra-pradesh'],
   ['🌊', 'Kerala', 'kerala'],
   ['🌴', 'Telangana', 'telangana'],
   ['🌿', 'Gujarat', 'gujarat'],
-  ['🌾', 'Assam', 'assam'],
+  ['', 'Assam', 'assam'],
   ['', 'Jharkhand', 'jharkhand'],
   ['🏔️', 'Uttarakhand', 'uttarakhand'],
-  ['🌾', 'Chhattisgarh', 'chhattisgarh'],
+  ['', 'Chhattisgarh', 'chhattisgarh'],
   ['🌊', 'Himachal Pradesh', 'himachal-pradesh'],
   ['️', 'Jammu & Kashmir', 'jammu-and-kashmir'],
   ['🌿', 'Goa', 'goa'],
   ['🏔️', 'Sikkim', 'sikkim'],
-  ['🌊', 'Tripura', 'tripura'],
+  ['', 'Tripura', 'tripura'],
   ['🌾', 'Meghalaya', 'meghalaya'],
   ['🌿', 'Manipur', 'manipur'],
-  ['🌊', 'Nagaland', 'nagaland'],
+  ['', 'Nagaland', 'nagaland'],
   ['🏔️', 'Arunachal Pradesh', 'arunachal-pradesh'],
   ['🌾', 'Mizoram', 'mizoram'],
-  ['🏛️', 'Delhi', 'delhi'],
+  ['️', 'Delhi', 'delhi'],
   ['', 'Puducherry', 'puducherry'],
   ['🏝️', 'Andaman & Nicobar', 'andaman-nicobar'],
   ['🏔️', 'Ladakh', 'ladakh'],
@@ -80,13 +81,134 @@ const STATES_LIST = [
   ['🏝️', 'Daman & Diu', 'daman-diu'],
 ] as const;
 
+function CountdownModal({ 
+  title, 
+  message, 
+  redirectUrl, 
+  onClose,
+  showButton = false 
+}: { 
+  title: string; 
+  message: string; 
+  redirectUrl: string; 
+  onClose: () => void;
+  showButton?: boolean;
+}) {
+  const [count, setCount] = useState(10);
+  const [showDownloadBtn, setShowDownloadBtn] = useState(false);
+
+  useEffect(() => {
+    if (count === 0) {
+      if (showButton) {
+        setShowDownloadBtn(true);
+      } else {
+        window.location.href = redirectUrl;
+      }
+      return;
+    }
+    const timer = setTimeout(() => setCount(count - 1), 1000);
+    return () => clearTimeout(timer);
+  }, [count, redirectUrl, showButton]);
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4" onClick={onClose}>
+      <div
+        className="w-full max-w-md rounded-2xl bg-white dark:bg-gray-900 p-6 shadow-2xl border-2 border-green-500"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="text-center">
+          <div className="text-5xl mb-3">⏳</div>
+          <h3 className="text-lg font-black text-gray-800 dark:text-white mb-2">
+            {title}
+          </h3>
+          <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+            {message}
+          </p>
+          
+          {!showDownloadBtn ? (
+            <div className="mb-4">
+              <div className="text-6xl font-black text-green-600 dark:text-green-400">
+                {count}
+              </div>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                seconds baad redirect hoga...
+              </p>
+            </div>
+          ) : (
+            <div className="mb-4 space-y-3">
+              <div className="bg-green-50 dark:bg-green-900/30 border-2 border-green-500 rounded-lg p-4">
+                <p className="text-sm font-bold text-green-800 dark:text-green-300 mb-2">
+                  ✅ Download Ready Hai!
+                </p>
+                <Link
+                  href={`/beneficiary-list/download?redirect=${encodeURIComponent(redirectUrl)}`}
+                  className="inline-block w-full px-6 py-3 bg-green-600 hover:bg-green-700 text-white text-base font-bold rounded-lg transition-colors animate-pulse"
+                >
+                   Click to Download PDF
+                </Link>
+              </div>
+              <p className="text-xs text-gray-500 dark:text-gray-400">
+                Upar diye gaye button par click karein
+              </p>
+            </div>
+          )}
+          
+          <div className="bg-blue-50 dark:bg-blue-900/30 rounded-lg p-3 mb-4">
+            <p className="text-xs text-blue-800 dark:text-blue-300">
+              📌 Kripya dhairya rakhein. Aapko official portal par le jaaya ja raha hai.
+            </p>
+          </div>
+          <button
+            onClick={onClose}
+            className="w-full px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-800 dark:text-white text-sm font-bold rounded-lg transition-colors"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function PmKisanBeneficiaryList2026({ article }: { article: ArticleMeta }) {
+  const [modal, setModal] = useState<{ 
+    title: string; 
+    message: string; 
+    url: string; 
+    showButton?: boolean;
+  } | null>(null);
+
   const handleDownloadPDF = () => {
-    window.print();
+    setModal({
+      title: 'Please Wait',
+      message: 'PM Kisan Beneficiary List PDF download karne ke liye thoda intezaar karein...',
+      url: 'https://pmkisan.gov.in/BeneficiaryList.aspx',
+      showButton: true,
+    });
+  };
+
+  const handleStateClick = (stateName: string, slug: string, e: React.MouseEvent) => {
+    e.preventDefault();
+    setModal({
+      title: 'Please Wait',
+      message: `${stateName} ki beneficiary list par redirect ho raha hai...`,
+      url: `/beneficiary-list/${slug}`,
+      showButton: false,
+    });
   };
 
   return (
     <>
+      {modal && (
+        <CountdownModal
+          title={modal.title}
+          message={modal.message}
+          redirectUrl={modal.url}
+          showButton={modal.showButton}
+          onClose={() => setModal(null)}
+        />
+      )}
+
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
           <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
@@ -102,7 +224,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
+            <span> {fmtDate(PUBLISHED)}</span>
             <span> Updated: {fmtDate(MODIFIED)}</span>
             <span>⏱️ 15 min read</span>
           </div>
@@ -140,10 +262,13 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
               <p className="text-xs opacity-90">Print → Save as PDF</p>
             </div>
           </button>
-          <a
-            href="https://pmkisan.gov.in/BeneficiaryList.aspx"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={() => setModal({
+              title: 'Please Wait',
+              message: 'Official PM Kisan portal se list download karne ke liye thoda intezaar karein...',
+              url: 'https://pmkisan.gov.in/BeneficiaryList.aspx',
+              showButton: true,
+            })}
             className="flex items-center justify-center gap-2 p-4 bg-blue-600 hover:bg-blue-700 text-white font-black rounded-xl transition-all shadow-md hover:shadow-lg"
           >
             <span className="text-xl">📋</span>
@@ -151,7 +276,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
               <p className="text-sm">Official List PDF Download</p>
               <p className="text-xs opacity-90">pmkisan.gov.in se download karo</p>
             </div>
-          </a>
+          </button>
         </div>
 
         {/* Quick Individual Check */}
@@ -190,7 +315,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
               <p className="text-xs text-[var(--color-text-muted)] mt-1">Problem hai — fix karo</p>
             </div>
             <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl text-center">
-              <span className="text-3xl block mb-2">⏳</span>
+              <span className="text-3xl block mb-2"></span>
               <p className="font-black text-sm text-amber-800 dark:text-amber-300">Pending</p>
               <p className="text-xs text-[var(--color-text-muted)] mt-1">Verification chal rahi hai</p>
             </div>
@@ -272,7 +397,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
                   ['✅ Active', 'List mein hai — kist aayegi', 'Wait karo'],
                   ['❌ Rejected', 'Application fail — reason check karo', 'Fix karo'],
                   ['⏳ Under Verification', 'State review chal rahi hai', '2-4 hafte wait karo'],
-                  ['💳 Payment Failed', 'Approved hai, payment nahi pahunchi', 'Bank/NPCI fix karo'],
+                  [' Payment Failed', 'Approved hai, payment nahi pahunchi', 'Bank/NPCI fix karo'],
                   ['🔄 Pending', 'Registration hua, verification baaki', 'Wait karo'],
                   ['🚫 Deactivated', 'Pehle active tha, issue aaya', 'Block office contact karo'],
                 ].map(([status, meaning, action], i) => (
@@ -287,7 +412,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
           </div>
         </section>
 
-        {/* ✅ SECTION 5: State Wise Links - FIXED (Internal Links) */}
+        {/* ✅ SECTION 5: State Wise Links - WITH COUNTDOWN */}
         <section className="mb-8">
           <SH>🗺️ State Wise List — Apna State Chunein (37 States & UTs)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -298,6 +423,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
               <Link
                 key={slug}
                 href={`/beneficiary-list/${slug}`}
+                onClick={(e) => handleStateClick(name, slug, e)}
                 className="flex items-center gap-2 p-3 bg-[var(--color-card)] border border-green-200 dark:border-green-800 rounded-xl text-green-800 dark:text-green-300 text-xs font-semibold hover:bg-[var(--color-primary)] hover:text-white hover:border-[var(--color-primary)] transition-all focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
               >
                 <span>{icon}</span>{name}
@@ -321,7 +447,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
-              { icon: '📚', title: 'Complete Guide', desc: 'Sab problems ka ek jagah hal', href: '/articles/PmKisanMasterGuide2026', cta: 'Master Guide →' },
+              { icon: '', title: 'Complete Guide', desc: 'Sab problems ka ek jagah hal', href: '/articles/PmKisanMasterGuide2026', cta: 'Master Guide →' },
               { icon: '💳', title: 'FTO Status', desc: 'Paisa kab aayega samjho', href: '/articles/pm-kisan-fto-generated-ka-matlab-kya-hai', cta: 'FTO Guide →' },
               { icon: '📅', title: '24vi Kist Status', desc: 'Expected date + eligibility', href: '/articles/PmKisan24viKist2026', cta: '24vi Guide →' },
               { icon: '🔐', title: 'eKYC Complete Karo', desc: 'Bina eKYC kist nahi milegi', href: '/articles/PmKisanEkycOnline2026', cta: 'eKYC Guide →' },
@@ -362,7 +488,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
           icon="📋"
           title="Apni Kist Track Karo"
           desc="Kitni kist aayi, kitni pending — complete history jaano"
-          primaryCta={{ href: '/calculator/installment-tracker', label: '📅 Tracker Kholo →' }}
+          primaryCta={{ href: '/calculator/installment-tracker', label: ' Tracker Kholo →' }}
           secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: ' Benefit Calculator' }}
         />
 
