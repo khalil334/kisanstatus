@@ -64,7 +64,7 @@ export default function PmKisanCscRegistrationCharges({ article }: { article: Ar
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Fees & Process Guide</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            PM Kisan CSC Registration Charges: Kitne Paise Lagte Hain, Kaise Karein?
+            PM Kisan CSC Registration Charges 2026: Kitne Paise Lagte Hain, Kaise Karein?
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white">KisanStatus Team</Link></span>
@@ -81,7 +81,7 @@ export default function PmKisanCscRegistrationCharges({ article }: { article: Ar
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-csc-registration-charges/csc-registration-hero.webp"
-            alt="CSC center operator helping farmer with PM Kisan registration"
+            alt="CSC center operator helping farmer with PM Kisan registration and eKYC process"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -97,15 +97,15 @@ export default function PmKisanCscRegistrationCharges({ article }: { article: Ar
         <section className="mb-8">
           <SH>₹500 Maang Rahe Hain? Ruko, Pehle Ye Padho</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Bhai, gaon ke CSC center par gaye aur operator ne bola "PM Kisan registration ke ₹500 lagenge". Ghabra ke de diye? Ruko. Ye galat hai.
+            Bhai, ek baar mere paas ek kisan bhai ka message aaya — "CSC wale ne PM Kisan registration ke ₹500 maange hain, kya doon?" Maine turant bola — ruko, ye galat hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Sarkar ne PM Kisan ke liye CSC charges fix kiye hain. Usse ek rupya bhi zyada lena illegal hai. Lekin bahut log anjaan hote hain aur extra paise de dete hain.
+            Sarkar ne PM Kisan ke liye CSC charges fix kiye hain. Usse ek rupya bhi zyada lena illegal hai. Lekin gaon mein bahut log anjaan hote hain aur extra paise de dete hain. Aaj main aapko bataunga ki asli rate kya hai, aur agar koi zyada maange toh kaise complaint karein.
           </p>
           
           <Image
             src="/images/articles/pm-kisan-csc-registration-charges/csc-fee-chart.webp"
-            alt="Official PM Kisan CSC fee structure chart"
+            alt="Official PM Kisan CSC fee structure chart showing government fixed rates"
             width={800}
             height={450}
             className="w-full rounded-xl my-4"
@@ -142,7 +142,7 @@ export default function PmKisanCscRegistrationCharges({ article }: { article: Ar
                 {[
                   ['New Registration', '₹25 - ₹30', '10-15 minute'],
                   ['eKYC (OTP/Biometric)', '₹15 - ₹20', '5 minute'],
-                  ['Bank Account Update', '20 - ₹25', '10 minute'],
+                  ['Bank Account Update', '₹20 - ₹25', '10 minute'],
                   ['Name/Mobile Correction', '₹20 - ₹30', '15 minute'],
                   ['Status Printout', '₹10 - ₹15', '2 minute'],
                 ].map(([work, rate, time], i) => (
@@ -179,7 +179,7 @@ export default function PmKisanCscRegistrationCharges({ article }: { article: Ar
 
           <Image
             src="/images/articles/pm-kisan-csc-registration-charges/online-vs-csc.webp"
-            alt="Comparison between online free process and paid CSC process"
+            alt="Comparison between online free PM Kisan process and paid CSC center process"
             width={800}
             height={450}
             className="w-full rounded-xl my-4"
@@ -278,7 +278,7 @@ export default function PmKisanCscRegistrationCharges({ article }: { article: Ar
 
           <Image
             src="/images/articles/pm-kisan-csc-registration-charges/csc-complaint-portal.webp"
-            alt="CSC grievance portal screenshot for filing complaint"
+            alt="CSC grievance portal screenshot showing complaint form for PM Kisan fraud"
             width={800}
             height={600}
             className="w-full rounded-xl my-6"
@@ -382,7 +382,7 @@ export default function PmKisanCscRegistrationCharges({ article }: { article: Ar
         <BottomNav extraLinks={[
           { href: '/articles/PmKisanEkycOnline2026', l: '🔐 Free Online eKYC' },
           { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
-          { href: '/articles/PmKisanBankAccountChangeProcess', l: ' Bank Account Change' },
+          { href: '/articles/PmKisanBankAccountChangeProcess', l: '🏦 Bank Account Change' },
         ]} />
         <Disclaimer />
       </div>
