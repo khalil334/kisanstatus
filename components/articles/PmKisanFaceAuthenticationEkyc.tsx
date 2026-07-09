@@ -18,27 +18,27 @@ const RELATED = [
 const FAQS_DATA = [
   {
     q: 'Face authentication ke liye kaunsa app use karein?',
-    a: 'Official PMKisan App (pmkisan.gov.in se download karo). Koi third party app use mat karna.',
+    a: 'Sirf official PMKisan App hi use karna hai (pmkisan.gov.in se download karo). Play Store par koi third party app dikhe toh usse door raho — wo aapka data chura sakti hain.',
   },
   {
     q: 'Bina OTP ke eKYC ho sakti hai?',
-    a: 'Haan, face authentication mein OTP ki zaroorat nahi padti. Bas camera ke samne aana hai.',
+    a: 'Haan, bilkul. Face authentication mein OTP ki koi zaroorat nahi. Bas camera ke samne chehra dikhana hai aur jo instructions screen par aayein wo follow karne hain.',
   },
   {
     q: 'Face scan fail ho raha hai, kya karein?',
-    a: 'Roshni achhi rakho, chashma utaar do, aur background plain rakho. Net bhi tez hona chahiye.',
+    a: '90% cases mein roshni ki kami hoti hai. Khidki ke paas jakar try karo, chashma utaar do, aur background mein koi aur insaan na ho. Net bhi stable hona chahiye.',
   },
   {
     q: 'Kya CSC jakar bhi karwa sakte hain?',
-    a: 'Haan, CSC wale biometric device se karwa sakte hain. ₹20-30 lag sakte hain.',
+    a: 'Haan, nazdiki CSC center par biometric device se face authentication ho jata hai. ₹20 se ₹30 lag sakte hain. 5 minute mein kaam ho jata hai.',
   },
   {
     q: 'Face authentication ke baad kya karein?',
-    a: 'Authentication successful hone ke baad 2-3 din wait karo. Phir beneficiary list mein apna naam check karo. Status active dikhna chahiye.',
+    a: '2-3 din wait karo taaki database update ho. Phir beneficiary list mein apna naam check karo. Wahan status "Active" dikhna chahiye.',
   },
   {
-    q: 'Agar photo purani hai toh?',
-    a: 'Agar Aadhaar mein photo bahut purani hai toh face authentication fail ho sakta hai. Aise pehle Aadhaar center jakar photo update karo, phir face authentication karo.',
+    q: 'Agar Aadhaar mein photo bahut purani hai toh?',
+    a: 'Aise mein face match nahi ho pata. Pehle nazdiki Aadhaar center jakar photo update karwao, uske baad hi face authentication try karna.',
   },
 ];
 
@@ -56,7 +56,7 @@ export default function PmKisanFaceAuthenticationEkyc({ article }: { article: Ar
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">New Feature</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            PM Kisan Face Authentication eKYC: Bina OTP Ke Ghar Baithe Verification
+            PM Kisan Face Authentication eKYC 2026: Bina OTP Ke Ghar Baithe Photo Verification
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white">KisanStatus Team</Link></span>
@@ -73,7 +73,7 @@ export default function PmKisanFaceAuthenticationEkyc({ article }: { article: Ar
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-face-authentication-ekyc/face-auth-hero.webp"
-            alt="PM Kisan face authentication app screen showing face scan process"
+            alt="PM Kisan face authentication app screen showing face scan process for kisan eKYC"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -89,22 +89,22 @@ export default function PmKisanFaceAuthenticationEkyc({ article }: { article: Ar
         <section className="mb-8">
           <SH>OTP Nahi Aa Raha? Tension Mat Lo</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Bhai, bahut log pareshan hain ki OTP hi nahi aa raha. Mobile number purana hai, ya network issue hai. Aise mein <Link href="/articles/PmKisanEkycOnline2026" className="underline text-green-700 dark:text-green-400">normal eKYC</Link> ruk jaati hai.
+            Roz mere paas aise messages aate hain — "Bhaiya OTP hi nahi aa raha, kya karein?" Mobile number purana ho gaya hai, ya network sahi nahi chal raha. Aise mein <Link href="/articles/PmKisanEkycOnline2026" className="underline text-green-700 dark:text-green-400">normal eKYC</Link> ruk jaati hai aur kist aane mein dikkat hoti hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Sarkar ne iska hal nikala hai — <strong>Face Authentication</strong>. Ab camera ke samne aakar, bina OTP ke apni eKYC complete kar sakte ho.
+            Khushkhabri ye hai ki sarkar ne iska hal nikala hai — <strong>Face Authentication</strong>. Ab camera ke samne aakar, bina OTP ke apni eKYC complete kar sakte ho. Ye process PMKisan app par available hai aur bilkul free hai.
           </p>
           
           <Image
             src="/images/articles/pm-kisan-face-authentication-ekyc/face-scan-screen.webp"
-            alt="Face authentication screen in PM Kisan app showing scan process"
+            alt="Face authentication screen in PM Kisan app showing live face scan process"
             width={800}
             height={450}
             className="w-full rounded-xl my-4"
           />
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Ye feature un logon ke liye vardaan hai jinka mobile number Aadhaar se link nahi hai ya OTP receive nahi ho raha. <Link href="/beneficiary-list" className="underline text-green-700 dark:text-green-400">Beneficiary list</Link> mein naam check karne se pehle ye zaroor kar lena.
+            Ye feature un kisanon ke liye vardaan hai jinka mobile number Aadhaar se link nahi hai ya jinhe OTP receive nahi ho raha. <Link href="/beneficiary-list" className="underline text-green-700 dark:text-green-400">Beneficiary list</Link> mein naam check karne se pehle ye live face verification zaroor kar lena.
           </p>
 
           <DB>
@@ -119,7 +119,7 @@ export default function PmKisanFaceAuthenticationEkyc({ article }: { article: Ar
         <section className="mb-8">
           <SH>Face Authentication Kya Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Dekho bhai, pehle samajhte hain ki ye hai kya. Face authentication ek biometric verification hai. Jaise fingerprint se Aadhaar verify hota hai, waise hi ab chehra dikha kar verify kar sakte ho.
+            Pehle ye samajhte hain ki ye hai kya. Face authentication ek tarah ka biometric verification hai. Jaise fingerprint se Aadhaar verify hota hai, waise hi ab chehra dikha kar verify kar sakte ho. Isko PM Kisan photo verification bhi kehte hain.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             <strong>Kaise kaam karta hai?</strong>
@@ -131,7 +131,7 @@ export default function PmKisanFaceAuthenticationEkyc({ article }: { article: Ar
             <li>Agar match hua toh verified</li>
           </ul>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Ye process bilkul safe hai. Government ki official app hai. Koi third party app use mat karna.
+            Ye process bilkul safe hai. Government ki official app hai. Koi third party app use mat karna — wo aapka data chura sakti hain.
           </p>
         </section>
 
@@ -140,7 +140,7 @@ export default function PmKisanFaceAuthenticationEkyc({ article }: { article: Ar
           <SH>Kaun Logon Ko Use Karna Chahiye?</SH>
           <div className="bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 rounded-xl p-5 mb-6">
             <p className="text-sm font-black text-blue-800 dark:text-blue-300 mb-3">
-              Face authentication un logon ke liye hai jo:
+              Face authentication un kisanon ke liye hai jo:
             </p>
             <ul className="list-disc list-inside text-xs text-blue-800 dark:text-blue-300 space-y-2">
               <li>Jinka mobile number Aadhaar se link nahi hai</li>
@@ -152,7 +152,7 @@ export default function PmKisanFaceAuthenticationEkyc({ article }: { article: Ar
           </div>
           <Image
             src="/images/articles/pm-kisan-face-authentication-ekyc/who-should-use.webp"
-            alt="Farmer using face authentication on mobile"
+            alt="Farmer using face authentication on mobile phone for PM Kisan kisan eKYC"
             width={800}
             height={450}
             className="w-full rounded-xl"
@@ -163,7 +163,7 @@ export default function PmKisanFaceAuthenticationEkyc({ article }: { article: Ar
         <section className="mb-8">
           <SH>Step-by-Step: Face Authentication Kaise Karein?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Bhai, process bahut simple hai. Neeche diye gaye steps follow karo:
+            Process bahut simple hai. Neeche diye gaye steps follow karo:
           </p>
           <StepList>
             <SI n={1}>
@@ -182,7 +182,7 @@ export default function PmKisanFaceAuthenticationEkyc({ article }: { article: Ar
               <strong>Camera On Hoga:</strong> Ab camera on hoga. Apna chehra frame mein rakho. Roshni achhi honi chahiye. Peeche plain background rakho.
             </SI>
             <SI n={6}>
-              <strong>Instructions Follow Karo:</strong> Screen par likha aayega "Blink your eyes" ya "Turn your head". Jaise bola waise karo. Ye security ke liye hai taaki photo se verify na ho.
+              <strong>Instructions Follow Karo:</strong> Screen par likha aayega "Blink your eyes" ya "Turn your head". Jaise bola waise karo. Ye security ke liye hai taaki photo se verify na ho. Ise PM Kisan live face verification kehte hain.
             </SI>
             <SI n={7}>
               <strong>Success Message:</strong> Agar sab sahi hua toh "Successfully Authenticated" ka message aayega. Green tick dikhega. Screenshot le lo apne record ke liye.
@@ -203,7 +203,7 @@ export default function PmKisanFaceAuthenticationEkyc({ article }: { article: Ar
 
           <Image
             src="/images/articles/pm-kisan-face-authentication-ekyc/step-by-step-screens.webp"
-            alt="Step by step screenshots of face authentication process"
+            alt="Step by step screenshots of PMKisan app face authentication process"
             width={800}
             height={600}
             className="w-full rounded-xl my-6"
@@ -214,7 +214,7 @@ export default function PmKisanFaceAuthenticationEkyc({ article }: { article: Ar
         <section className="mb-8">
           <SH>Common Errors Aur Unka Fix</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Bhai, kabhi kabhi error aa jata hai. Ghabrana mat. Har error ka solution hai:
+            Kabhi kabhi error aa jata hai. Ghabrana mat. Har error ka solution hai:
           </p>
           <div className="space-y-3">
             {[
@@ -260,7 +260,7 @@ export default function PmKisanFaceAuthenticationEkyc({ article }: { article: Ar
         <section className="mb-8">
           <SH>CSC Center Se Bhi Karwa Sakte Ho</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Agar app se nahi ho pa raha, toh koi baat nahi. Nazdiki <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">CSC center</Link> par jakar bhi face authentication karwa sakte ho.
+            Agar app se nahi ho pa raha, toh koi baat nahi. Nazdiki <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">CSC center</Link> par jakar bhi PM Kisan camera scan karwa sakte ho.
           </p>
           <div className="bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl p-5 mb-6">
             <p className="text-sm text-green-800 dark:text-green-300 mb-3">
@@ -276,7 +276,7 @@ export default function PmKisanFaceAuthenticationEkyc({ article }: { article: Ar
           </div>
           <Image
             src="/images/articles/pm-kisan-face-authentication-ekyc/csc-face-auth.webp"
-            alt="CSC center doing face authentication for farmer"
+            alt="CSC center operator doing PM Kisan face authentication for farmer with biometric device"
             width={800}
             height={450}
             className="w-full rounded-xl my-4"
@@ -311,7 +311,7 @@ export default function PmKisanFaceAuthenticationEkyc({ article }: { article: Ar
         <section className="mb-8">
           <SH>Authentication Ke Baad Kya Karein?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Bhai, face authentication successful hone ke baad kuch steps aur hain:
+            Face authentication successful hone ke baad kuch steps aur hain:
           </p>
           <ol className="space-y-2 mb-4">
             {[
@@ -331,7 +331,7 @@ export default function PmKisanFaceAuthenticationEkyc({ article }: { article: Ar
           </ol>
           <Image
             src="/images/articles/pm-kisan-face-authentication-ekyc/success-screen.webp"
-            alt="Successful authentication confirmation screen"
+            alt="Successful PM Kisan face authentication confirmation screen with green tick"
             width={800}
             height={450}
             className="w-full rounded-xl my-4"
@@ -342,7 +342,7 @@ export default function PmKisanFaceAuthenticationEkyc({ article }: { article: Ar
         <section className="mb-8">
           <SH>Kya Har State Mein Available Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Haan bhai, ye feature ab har state mein available hai. Lekin kuch states mein alag process hai:
+            Haan, ye feature ab har state mein available hai. Lekin kuch states mein alag process hai:
           </p>
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
             <table className="w-full text-sm border-collapse">
