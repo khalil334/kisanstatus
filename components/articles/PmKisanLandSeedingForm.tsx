@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
@@ -33,9 +34,84 @@ const FAQS_DATA = [
   },
 ];
 
+const STATE_LINKS = [
+  { name: 'Uttar Pradesh', url: 'https://upbhulekh.gov.in' },
+  { name: 'Bihar', url: 'https://biharbhumi.bihar.gov.in' },
+  { name: 'Madhya Pradesh', url: 'https://bhu-abhilekh.nic.in' },
+  { name: 'Rajasthan', url: 'https://apnakhata.raj.nic.in' },
+];
+
+function CountdownModal({ stateName, url, onClose }: { stateName: string; url: string; onClose: () => void }) {
+  const [count, setCount] = useState(10);
+
+  useEffect(() => {
+    if (count === 0) {
+      window.open(url, '_blank', 'noopener,noreferrer');
+      onClose();
+      return;
+    }
+    const timer = setTimeout(() => setCount(count - 1), 1000);
+    return () => clearTimeout(timer);
+  }, [count, url, onClose]);
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4" onClick={onClose}>
+      <div
+        className="w-full max-w-sm rounded-2xl bg-white dark:bg-gray-900 p-6 shadow-2xl border-2 border-blue-500"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="text-center">
+          <div className="text-5xl mb-3">⏳</div>
+          <h3 className="text-lg font-black text-gray-800 dark:text-white mb-2">
+            {stateName} Official Portal
+          </h3>
+          <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+            Aapko <strong>{stateName}</strong> ki official website par redirect kiya ja raha hai.
+          </p>
+          <div className="mb-4">
+            <div className="text-6xl font-black text-blue-600 dark:text-blue-400">
+              {count}
+            </div>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+              {count === 0 ? 'Redirecting...' : 'seconds mein redirect hoga'}
+            </p>
+          </div>
+          <div className="flex gap-2">
+            <button
+              onClick={() => {
+                window.open(url, '_blank', 'noopener,noreferrer');
+                onClose();
+              }}
+              className="flex-1 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-colors"
+            >
+              Abhi Jaayein
+            </button>
+            <button
+              onClick={onClose}
+              className="flex-1 px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-800 dark:text-white text-sm font-bold rounded-lg transition-colors"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function PmKisanLandSeedingFormPdf2026({ article }: { article: ArticleMeta }) {
+  const [modal, setModal] = useState<{ stateName: string; url: string } | null>(null);
+
   return (
     <>
+      {modal && (
+        <CountdownModal
+          stateName={modal.stateName}
+          url={modal.url}
+          onClose={() => setModal(null)}
+        />
+      )}
+
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
           <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
@@ -51,7 +127,7 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
+            <span> {fmtDate(PUBLISHED)}</span>
             <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
             <span>⏱️ 12 min read</span>
           </div>
@@ -72,40 +148,27 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
             priority
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)]">
-            Land Seeding Form 2026 — PDF Download + State Wise Process
+            Land Seeding Form 2026 — Official State Portal Links
           </p>
         </div>
 
         {/* PDF Download Section */}
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 border-l-[6px] rounded-xl">
           <h2 className="text-base font-black text-blue-800 dark:text-blue-300 mb-3">
-            📥 State Wise Land Seeding Form PDF Download
+            📥 State Wise Land Seeding Form - Official Links
           </h2>
           <div className="space-y-2">
-            <div className="flex items-center justify-between p-3 bg-white dark:bg-gray-800 rounded-lg">
-              <span className="text-sm font-bold text-gray-800 dark:text-gray-200">Uttar Pradesh</span>
-              <a href="/downloads/UP-Land-Seeding-Form.pdf" className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-lg">
-                Download PDF
-              </a>
-            </div>
-            <div className="flex items-center justify-between p-3 bg-white dark:bg-gray-800 rounded-lg">
-              <span className="text-sm font-bold text-gray-800 dark:text-gray-200">Bihar</span>
-              <a href="/downloads/Bihar-Land-Seeding-Form.pdf" className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-lg">
-                Download PDF
-              </a>
-            </div>
-            <div className="flex items-center justify-between p-3 bg-white dark:bg-gray-800 rounded-lg">
-              <span className="text-sm font-bold text-gray-800 dark:text-gray-200">Madhya Pradesh</span>
-              <a href="/downloads/MP-Land-Seeding-Form.pdf" className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-lg">
-                Download PDF
-              </a>
-            </div>
-            <div className="flex items-center justify-between p-3 bg-white dark:bg-gray-800 rounded-lg">
-              <span className="text-sm font-bold text-gray-800 dark:text-gray-200">Rajasthan</span>
-              <a href="/downloads/Rajasthan-Land-Seeding-Form.pdf" className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-lg">
-                Download PDF
-              </a>
-            </div>
+            {STATE_LINKS.map((state) => (
+              <div key={state.name} className="flex items-center justify-between p-3 bg-white dark:bg-gray-800 rounded-lg">
+                <span className="text-sm font-bold text-gray-800 dark:text-gray-200">{state.name}</span>
+                <button
+                  onClick={() => setModal({ stateName: state.name, url: state.url })}
+                  className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-lg transition-colors"
+                >
+                  Download PDF
+                </button>
+              </div>
+            ))}
           </div>
           <IB>
             <strong>Form download karne mein dikkat aa rahi hai?</strong> Aap apne local Patwari ya nearest <Link href="/beneficiary-list" className="underline">Block Agriculture Office</Link> se sampark kar sakte hain.
