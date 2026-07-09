@@ -17,19 +17,19 @@ const RELATED = [
 const FAQS_DATA = [
   {
     q: 'Land seeding form kahan se download karein?',
-    a: 'State ke agriculture department ki website se ya patwari se le sakte ho. UP, Bihar, MP ke alag-alag forms hain.',
+    a: 'Aap apne state ki agriculture department ya revenue department ki official website se form download kar sakte hain. Iske alawa aap apne local Patwari ya CSC center se bhi form prapt kar sakte hain. Har state ka form alag hota hai.',
   },
   {
     q: 'Land seeding mein kitna time lagta hai?',
-    a: '15 se 30 din lagte hain. Patwari verification ke baad BAO approve karta hai.',
+    a: 'Form submit karne ke baad, Patwari verification aur BAO approval mein lagbhag 15 se 30 din ka samay lag sakta hai.',
   },
   {
     q: 'Khasra number kahan milega?',
-    a: 'Khatauni par likha hota hai. Online bhulekh portal par bhi dekh sakte ho.',
+    a: 'Khasra number aapki Khatauni (land record) par likha hota hai. Aap apne state ke online Bhulekh portal par jaakar bhi yeh details aasaani se dekh sakte hain.',
   },
   {
     q: 'Land seeding form fees kitni hai?',
-    a: 'Form free hai. CSC se karwana ho to ₹20-50 lag sakte hain.',
+    a: 'Sarkar dwara diya gaya form bilkul free hai. Haan, agar aap kisi CSC center ya kisi agent ke through form fill karwate hain, toh wo apni service charge ke taur par ₹20 se ₹50 le sakte hain.',
   },
 ];
 
@@ -108,7 +108,7 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
             </div>
           </div>
           <IB>
-            <strong>Form nahi mil raha?</strong> Patwari ya <Link href="/beneficiary-list" className="underline">Block Agriculture Office</Link> se contact karo.
+            <strong>Form download karne mein dikkat aa rahi hai?</strong> Aap apne local Patwari ya nearest <Link href="/beneficiary-list" className="underline">Block Agriculture Office</Link> se sampark kar sakte hain.
           </IB>
         </div>
 
@@ -116,13 +116,13 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
         <section className="mb-8">
           <SH>Land Seeding Kya Hai? Real Problem Kya Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Bhai, Meerut ke Suresh ji ne PM Kisan ke liye apply kiya. <Link href="/articles/PmKisanEkycOnline2026" className="underline text-green-700 dark:text-green-400">EKYC</Link> ho gaya, bank account link ho gaya. Lekin 3 mahine baad bhi paisa nahi aaya.
+            Yeh ek aam samasya hai. Maan lijiye (illustrative example), ek kisan ne PM Kisan yojana ke liye apply kiya. Unka <Link href="/articles/PmKisanEkycOnline2026" className="underline text-green-700 dark:text-green-400">eKYC</Link> ho gaya, bank account bhi link ho gaya. Par kai mahine guzarne ke baad bhi kist ki raqam nahi aayi.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            <Link href="/articles/pm-kisan-fto-generated-ka-matlab-kya-hai" className="underline text-green-700 dark:text-green-400">Status check</Link> kiya toh likha tha — <strong>"Land Seeding Pending"</strong>.
+            Jab unhone portal par <Link href="/articles/pm-kisan-fto-generated-ka-matlab-kya-hai" className="underline text-green-700 dark:text-green-400">status check</Link> kiya, toh wahan likha tha — <strong>"Land Seeding Pending"</strong>.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Suresh ji pareshan ho gaye. Patwari ke paas gaye, BAO ke paas gaye. Har jagah se alag-alag form maanga gaya. Kisi ko samajh nahi aaya ki kaunsa form bharna hai.
+            Aise mein kisan pareshan ho jaate hain. Patwari ke chakkar kaat-te hain, BAO office jaate hain, par har jagah se alag form maanga jaata hai. Samajh nahi aata ki aakhir kaunsa form bharna hai.
           </p>
           
           <Image
@@ -134,7 +134,7 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
           />
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Isi problem ko solve karne ke liye humne ye guide banaya hai. Har state ka form, har step ka process — sab kuch ek jagah. Agar aap bhi <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">beneficiary list</Link> mein apna naam check kar rahe hain aur land seeding pending dikh raha hai, toh ye article end tak padho.
+            Isi uljhan ko door karne ke liye humne yeh comprehensive guide taiyaar ki hai. Yahan aapko har state ka form aur step-by-step process mil jayega. Agar aap bhi <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">beneficiary list</Link> mein apna naam dhundh rahe hain aur wahan land seeding pending dikh raha hai, toh yeh lekh aapke liye bahut madadgar sabit hoga.
           </p>
         </section>
 
@@ -142,10 +142,10 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
         <section className="mb-8">
           <SH>Land Seeding Form Kyun Zaroori Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Dekho bhai, PM Kisan ka paisa tabhi milta hai jab tumhari zameen ka record government database mein link ho jaaye.
+            PM Kisan samman nidhi ka labh tabhi milta hai jab kisan ki zameen ka record sarkari database ke saath properly link ho jaye.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Is process ko <strong>Land Seeding</strong> kehte hain.
+            Is prakriya ko hi <strong>Land Seeding</strong> kaha jaata hai.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 my-4">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl text-center">
@@ -179,15 +179,15 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
               <strong>Kahan Se Milega:</strong>
             </p>
             <ul className="list-disc list-inside text-xs text-green-800 dark:text-green-300 space-y-1 mb-3">
-              <li><Link href="https://upbhulekh.gov.in" className="underline">upbhulekh.gov.in</Link> se download</li>
-              <li>Patwari se le sakte ho</li>
-              <li>CSC center par bhi milta hai</li>
+              <li><Link href="https://upbhulekh.gov.in" className="underline">upbhulekh.gov.in</Link> se download karein</li>
+              <li>Apne Patwari se prapt karein</li>
+              <li>Nazdiki CSC center par bhi uplabdh hai</li>
             </ul>
             <p className="text-sm text-green-800 dark:text-green-300 mb-3">
               <strong>Documents Required:</strong>
             </p>
             <ul className="list-disc list-inside text-xs text-green-800 dark:text-green-300 space-y-1">
-              <li>Khatauni copy</li>
+              <li>Khatauni ki copy</li>
               <li>Khasra naksha</li>
               <li>Aadhaar card</li>
               <li>Bank passbook</li>
@@ -216,7 +216,7 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
               <li>Block Agriculture Office</li>
             </ul>
             <p className="text-sm text-blue-800 dark:text-blue-300">
-              <strong>Processing Time:</strong> 20-30 din (flood area mein zyada)
+              <strong>Processing Time:</strong> Aamtaur par 20-30 din (flood-prone ilakon mein samay thoda badh sakta hai)
             </p>
           </div>
 
@@ -229,10 +229,10 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
               <strong>Online Process:</strong>
             </p>
             <ul className="list-disc list-inside text-xs text-purple-800 dark:text-purple-300 space-y-1">
-              <li><Link href="https://bhu-abhilekh.nic.in" className="underline">bhu-abhilekh.nic.in</Link> par jao</li>
-              <li>Land Seeding option select karo</li>
-              <li>Khasra number daalo</li>
-              <li>Form auto-fill ho jayega</li>
+              <li><Link href="https://bhu-abhilekh.nic.in" className="underline">bhu-abhilekh.nic.in</Link> par jaayein</li>
+              <li>Land Seeding option chunein</li>
+              <li>Apna Khasra number darj karein</li>
+              <li>Form ki details apne aap fill ho jayengi</li>
             </ul>
           </div>
 
@@ -256,14 +256,14 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
         <section className="mb-8">
           <SH>Land Seeding Form Kaise Bharein? Step-by-Step</SH>
           <StepList>
-            <SI n={1}>Form download karo ya patwari se lo</SI>
-            <SI n={2}>Apna naam, Aadhaar number likho</SI>
-            <SI n={3}>Khasra number aur khatauni number bharein</SI>
-            <SI n={4}>Zameen ka area (hectare/acre) likho</SI>
-            <SI n={5}>Bank account number aur IFSC code daalo</SI>
-            <SI n={6}>Patwari se sign karwao</SI>
-            <SI n={7}>Block Agriculture Office mein submit karo</SI>
-            <SI n={8}>15-30 din baad <Link href="/articles/pm-kisan-fto-generated-ka-matlab-kya-hai" className="underline text-green-700 dark:text-green-400">status check</Link> karo</SI>
+            <SI n={1}>Sabse pehle form download karein ya apne Patwari se prapt karein.</SI>
+            <SI n={2}>Form mein apna poora naam aur Aadhaar number dhyanpurvak likhein.</SI>
+            <SI n={3}>Apne Khasra number aur Khatauni number sahi-sahi bharein.</SI>
+            <SI n={4}>Zameen ka kul kshetra (hectare ya acre mein) mention karein.</SI>
+            <SI n={5}>Apna Bank account number aur IFSC code darj karein.</SI>
+            <SI n={6}>Form ko Patwari se verify karwa kar unka sign aur stamp lagwayein.</SI>
+            <SI n={7}>Iske baad form ko Block Agriculture Office mein jama karein.</SI>
+            <SI n={8}>Lagbhag 15 se 30 din baad portal par apna <Link href="/articles/pm-kisan-fto-generated-ka-matlab-kya-hai" className="underline text-green-700 dark:text-green-400">status check</Link> karein.</SI>
           </StepList>
 
           <Image
@@ -275,12 +275,12 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
           />
 
           <WB>
-            <strong> Important Tip:</strong>
+            <strong> Zaroori Salah:</strong>
             <ul className="list-disc list-inside mt-2 space-y-1 text-xs">
-              <li>Form hamesha black ya blue pen se bharein</li>
-              <li>Khasra number Khatauni se match karein</li>
-              <li>Patwari ka sign aur stamp zaroori hai</li>
-              <li>Form ki photocopy apne paas rakhein</li>
+              <li>Form ko hamesha black ya blue pen se hi bharein.</li>
+              <li>Dhyan rahe ki Khasra number Khatauni se bilkul match kare.</li>
+              <li>Patwari ka sign aur stamp hona anivarya hai.</li>
+              <li>Submit karne se pehle form ki ek photocopy zaroor apne paas rakh lein.</li>
             </ul>
           </WB>
         </section>
@@ -290,10 +290,10 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
           <SH>Common Problems + Solutions</SH>
           <div className="space-y-3">
             {[
-              { problem: 'Khasra number galat hai', solution: 'Khatauni check karo, patwari se correct number lo' },
-              { problem: 'Naam mismatch hai', solution: 'Aadhaar aur Khatauni mein naam same karo' },
-              { problem: 'Patwari sign nahi kar raha', solution: 'Tehsil office mein complaint karo' },
-              { problem: 'Form reject ho gaya', solution: 'BAO se reason pucho, dobara submit karo' },
+              { problem: 'Khasra number galat likh diya', solution: 'Khatauni ko dhyan se check karein aur Patwari se sahi number verify karwa lein.' },
+              { problem: 'Naam mein mismatch hai', solution: 'Aadhaar card aur Khatauni mein naam bilkul ek jaisa hona chahiye, zaroorat padne par correction karwa lein.' },
+              { problem: 'Patwari sign karne mein aanaakaani kar rahe hain', solution: 'Aise mein aap Tehsil office ya Revenue Inspector se sampark karke shikayat darj kar sakte hain.' },
+              { problem: 'Form reject ho gaya', solution: 'BAO se rejection ka kaaran jaanein, galti sudhaar kar dobara submit karein.' },
             ].map(({ problem, solution }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
                 <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">❌ {problem}</p>
@@ -317,10 +317,10 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
               </thead>
               <tbody>
                 {[
-                  ['Form Submission', 'Day 1', 'BAO office mein form jama'],
-                  ['Patwari Verification', 'Day 2-7', 'Zameen ka record check'],
-                  ['BAO Approval', 'Day 8-15', 'Officer sign karta hai'],
-                  ['Database Update', 'Day 16-30', 'PM Kisan portal par update'],
+                  ['Form Submission', 'Day 1', 'Block Agriculture Office mein form jama hota hai.'],
+                  ['Patwari Verification', 'Day 2-7', 'Patwari zameen ke record ka verification karta hai.'],
+                  ['BAO Approval', 'Day 8-15', 'Block Agriculture Officer form ko approve karke sign karte hain.'],
+                  ['Database Update', 'Day 16-30', 'PM Kisan portal par aapka record update ho jata hai.'],
                 ].map(([stage, time, desc], i) => (
                   <tr key={stage} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
                     <td className="p-3 border-b border-[var(--color-border)] font-medium text-xs text-[var(--color-text)]">{stage}</td>
