@@ -19,35 +19,35 @@ const RELATED = [
 const FAQS_DATA = [
   {
     q: 'Rejected status ka matlab kya hota hai?',
-    a: 'Iska matlab hai ki aapki application sarkar ne check ki hai aur kisi na kisi wajah se aap is scheme ke liye eligible nahi paaye gaye. Naam list se hat gaya hai.',
+    a: 'Dekho bhai, iska matlab hai ki sarkar ne aapki application check ki aur kisi wajah se aap eligible nahi paaye gaye. Naam list se hat gaya hai. Par ghabrao mat - zyadatar cases mein ye temporary hota hai aur theek ho jata hai.',
   },
   {
     q: 'Kya rejected hone ke baad dobara apply kar sakte hain?',
-    a: 'Haan, bilkul. Agar aapne galti sudhaar li hai (jaise bank account fix kiya ya land record update karwaya), toh aap dobara apply kar sakte hain.',
+    a: 'Haan bilkul bhai! Agar aapne galti sudhaar li hai - jaise bank account fix kiya, land record update karwaya, ya eKYC complete ki - toh aap dobara apply kar sakte hain. CSC center jakar correction form bharna padega.',
   },
   {
     q: 'Ruke hue paise (arrears) milenge ya nahi?',
-    a: 'Agar rejection ki galti aapki thi aur aapne use theek karke dobara apply kiya, toh pichle ruke hue paise nahi milte. Lekin agar galti sarkar ki taraf se thi, toh grievance cell se claim kar sakte ho.',
+    a: 'Sach baat bataun? Agar rejection aapki galti se hua tha (jaise galat bank details, naam mismatch), toh pichle ruke hue paise nahi milte. Jab se status active hoga uske baad ka paisa aayega. Lekin agar sarkar ki galti thi, toh grievance cell se claim kar sakte ho.',
   },
   {
     q: 'Dobara apply karne mein kitna time lagta hai?',
-    a: 'Form submit karne ke baad verification mein 15 se 30 din lagte hain. Uske baad status "Active" ho jata hai.',
+    a: 'Bhai, form submit karne ke baad verification mein 15 se 30 din lagte hain. Uske baad status "Active" ho jata hai. Agar 30 din se zyada ho jaye toh nodal officer ko email karna padega.',
   },
   {
     q: 'Agar dobara apply karne par bhi reject ho jaye toh?',
-    a: 'Toh aapko apne district ke Agriculture Officer ya State Nodal Officer ko physical complaint deni padegi.',
+    a: 'Toh phir aapko apne district ke Agriculture Officer ya State Nodal Officer ko physical complaint deni padegi. Email ya phone par baat karo. Unke contact details is article mein neeche diye hain.',
   },
   {
     q: 'Income tax filer hoon, kya main dobara apply karun?',
-    a: 'Nahi. Agar aap income tax return file karte hain, toh aap is scheme ke eligible hi nahi hain. Dobara apply karne ka koi fayda nahi.',
+    a: 'Nahi bhai, agar aap income tax return file karte hain toh aap is scheme ke eligible hi nahi hain. Dobara apply karne ka koi fayda nahi - phir se reject ho jayega.',
   },
   {
     q: 'CSC wala dobara apply karne ke kitne paise lega?',
-    a: 'Sarkari rate ₹25-₹30 hai. Usse zyada mat dena. Aur haan, correction form ke liye alag se charge nahi banta.',
+    a: 'Sarkari rate ₹25-₹30 hai bhai. Usse zyada mat dena. Aur haan, correction form ke liye alag se charge nahi banta - ye ek hi process hai.',
   },
   {
     q: 'Kya main ghar baithe online dobara apply kar sakta hoon?',
-    a: 'Nahi bhai. Jab ek baar status reject ho jata hai, toh portal par "Edit" ka option band ho jata hai. Aapko CSC ya BAO office hi jana padega.',
+    a: 'Nahi bhai. Jab ek baar status reject ho jata hai, toh portal par "Edit" ka option band ho jata hai. Aapko CSC ya BAO office hi jana padega. Online nahi ho sakta.',
   },
 ];
 
@@ -502,7 +502,7 @@ export default function PmKisanRejectedStatusReApplyGuide({ article }: { article
         <BottomNav extraLinks={[
           { href: '/articles/PmKisanBeneficiaryList2026', l: '📋 Beneficiary List' },
           { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
-          { href: '/articles/PmKisanCorrectionForm2026', l: '📝 Correction Form' },
+          { href: '/articles/PmKisanCorrectionForm2026', l: ' Correction Form' },
         ]} />
         <Disclaimer />
       </div>
