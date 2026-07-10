@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
@@ -11,29 +12,111 @@ const MODIFIED = '2026-07-04T08:00:00+05:30';
 const RELATED = [
   { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '📅' },
   { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary Roster Check', emoji: '📋' },
-  { slug: 'PmKisanMasterGuide2026', title: 'Complete Master Guide', emoji: '📚' },
+  { slug: 'PmKisanMasterGuide2026', title: 'Master Guide', emoji: '📚' },
   { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Credit Card Guide', emoji: '💳' },
   { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price Guide', emoji: '🌱' },
   { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav', emoji: '📈' },
 ];
 
 const FAQS_DATA = [
-  { q: 'FTO Generated ka matlab kya hai?', a: 'Dekho bhai, Fund Transfer Order. Government ne bank ko funds bhejne ka order de diya hai. Achhi khabar hai — paisa confirm hai, bas bank processing baaki hai. 7-15 din mein account mein aayega.' },
+  { q: 'FTO Generated ka matlab kya hai?', a: 'Dekho bhai, Fund Transfer Order. Government ne bank ko funds bhejne ka order de diya hai. Paisa confirm hai, bas bank processing baaki hai. 7-15 din mein account mein aayega.' },
   { q: 'FTO ke baad kitne din mein paisa aata hai?', a: 'SBI/PNB: 8-10 din bhai. HDFC/ICICI: 10-14 din. BOB: 12-15 din. Regional Rural Banks: 15-20 din. Post Office: 15-25 din. 15 din se zyada ho jaye toh bank visit karo.' },
   { q: 'Credit Release Pending kitne din rehta hai?', a: 'Normally 3-10 din bhai. 15 din se zyada = Aadhaar seeding ya NPCI mapping mein problem. Bank jaa ke dono check karwao.' },
   { q: '24vi kist kab release hogi?', a: 'October 2026 mein expected hai bhai. September end tak FTO generate hona shuru hoga. eKYC complete walon ka pehle aayega.' },
-  { q: '15 din baad bhi paisa nahi aaya — kya karein?', a: 'Step 1: Bank jaa ke Aadhaar seeding check. Step 2: NPCI mapping verify. Step 3: Account active hai confirm. Step 4: 155261 call. Step 5: CSC visit.' },
+  { q: '15 din baad bhi paisa nahi aaya — kya karein?', a: 'Pehle bank jaa ke Aadhaar seeding check. Phir NPCI mapping verify. Account active hai confirm. Phir 155261 call. Last option CSC visit.' },
   { q: 'Bina eKYC ke FTO generate hota hai?', a: 'Nahi bhai. 2026 mein bina digital verification ke koi kist nahi. Pehle eKYC karo, phir 24vi (Oct 2026) ka wait.' },
-  { q: 'FTO reject kyun hota hai?', a: 'Account band, Aadhaar seeding galat, naam mismatch, IFSC invalid, ya account dormant. Sabse common: Aadhaar seeding missing (90% cases).' },
-  { q: 'Kya FTO ke baad credit reject ho sakti hai?', a: 'Haan bhai, lekin rare hai (<5%). Account band ya details galat hone par. Isliye bank details updated rakho.' },
-  { q: 'Post Office account mein kitne din lagte hain?', a: 'Sabse zyada bhai — 15-25 din. Patience rakho. 25 din tak wait karo, phir helpline call.' },
+  { q: 'FTO reject kyun hota hai?', a: 'Account band, Aadhaar seeding galat, naam mismatch, IFSC invalid, ya account dormant. Zyadatar cases mein Aadhaar seeding missing hoti hai.' },
+  { q: 'Kya FTO ke baad credit reject ho sakti hai?', a: 'Haan bhai, lekin kam hota hai. Account band ya details galat hone par. Isliye bank details updated rakho.' },
+  { q: 'Post Office account mein kitne din lagte hain?', a: 'Sabse zyada bhai — 15-25 din. Thoda wait karo. 25 din tak wait karo, phir helpline call.' },
   { q: 'Mobile number change ho gaya toh status kaise check karein?', a: 'OTP nahi milega bhai. CSC jaa ke mobile update karwao pehle. Phir status check karo. Yeh bahut zaroori hai.' },
 ];
 
+function CountdownModal({ 
+  title, 
+  message, 
+  redirectUrl, 
+  onClose 
+}: { 
+  title: string; 
+  message: string; 
+  redirectUrl: string; 
+  onClose: () => void;
+}) {
+  const [count, setCount] = useState(10);
+
+  useEffect(() => {
+    if (count === 0) {
+      window.open(redirectUrl, '_blank', 'noopener,noreferrer');
+      onClose();
+      return;
+    }
+    const timer = setTimeout(() => setCount(count - 1), 1000);
+    return () => clearTimeout(timer);
+  }, [count, redirectUrl, onClose]);
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4" onClick={onClose}>
+      <div
+        className="w-full max-w-sm rounded-2xl bg-white dark:bg-gray-900 p-6 shadow-2xl border-2 border-green-500"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="text-center">
+          <div className="text-5xl mb-3">⏳</div>
+          <h3 className="text-lg font-black text-gray-800 dark:text-white mb-2">
+            {title}
+          </h3>
+          <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+            {message}
+          </p>
+          
+          <div className="mb-4">
+            <div className="text-6xl font-black text-green-600 dark:text-green-400">
+              {count}
+            </div>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+              seconds mein official portal khulega...
+            </p>
+          </div>
+          
+          <div className="bg-blue-50 dark:bg-blue-900/30 rounded-lg p-3 mb-4">
+            <p className="text-xs text-blue-800 dark:text-blue-300">
+              📌 Thoda wait karo. Official PM Kisan portal khulne wala hai.
+            </p>
+          </div>
+          <button
+            onClick={onClose}
+            className="w-full px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-800 dark:text-white text-sm font-bold rounded-lg transition-colors"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article: ArticleMeta }) {
+  const [modal, setModal] = useState<{ 
+    title: string; 
+    message: string; 
+    url: string; 
+  } | null>(null);
+
+  const handleOfficialLink = (title: string, message: string, url: string) => {
+    setModal({ title, message, url });
+  };
+
   return (
     <>
-      {/* Header */}
+      {modal && (
+        <CountdownModal
+          title={modal.title}
+          message={modal.message}
+          redirectUrl={modal.url}
+          onClose={() => setModal(null)}
+        />
+      )}
+
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
           <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
@@ -41,11 +124,11 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             <span>/</span>
             <Link href="/articles" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Articles</Link>
             <span>/</span>
-            <span className="text-white font-bold">FTO Status Explained</span>
+            <span className="text-white font-bold">FTO Status</span>
           </nav>
-          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Payment Status Guide</span>
+          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Payment Status</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            FTO Generated Ka Matlab Kya Hai? Paisa Kab Aayega? Complete Guide 2026
+            FTO Generated Ka Matlab Kya Hai? Paisa Kab Aayega?
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
@@ -58,7 +141,6 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* IMAGE 1: Hero — PATH UNCHANGED */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/pm-kisan-fto-generated-featured-image-kisanstatus.webp'}
@@ -71,26 +153,28 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            FTO Generated = Achhi Khabar — Paisa Confirm Hai
+            FTO Generated = Paisa Confirm Hai
           </p>
         </div>
 
-        {/* Hook */}
         <div className="my-6 p-5 bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-500 dark:border-amber-700 border-l-[6px] rounded-xl">
           <h2 className="text-base font-black text-amber-800 dark:text-amber-300 mb-2">Status Samajh Nahi Aa Raha?</h2>
           <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed mb-2">
             <em>"FTO dikh raha hai par paisa nahi aaya. Kya government ne dhokha de diya?"</em>
           </p>
           <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
-            <strong>Nahi bhai! Yeh achhi khabar hai.</strong> FTO = Fund Transfer Order. Government ne bank ko paisa bhejne ka order de diya hai. Bas bank processing baaki hai.
+            <strong>Nahi bhai! Yeh achhi baat hai.</strong> FTO matlab Fund Transfer Order. Government ne bank ko paisa bhejne ka order de diya hai. Bas bank process kar raha hai.
           </p>
         </div>
 
-        {/* FTO Simple Meaning */}
         <section className="mb-8">
-          <SH>FTO Ka Simple Matlab — 2 Minute Mein</SH>
+          <SH>FTO Ka Matlab Kya Hai?</SH>
+          
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Bhai suno, seedha jawab deta hoon.
+          </p>
+
           <div className="bg-green-50 dark:bg-green-900/20 border-2 border-green-300 dark:border-green-700 rounded-xl p-5 mb-6">
-            <p className="font-black text-green-800 dark:text-green-300 text-base mb-2">✅ Short Answer:</p>
             <ul className="text-sm text-green-800 dark:text-green-200 space-y-1">
               <li><strong>FTO Generated</strong> = Government ne order de diya</li>
               <li><strong>Credit Release Pending</strong> = Bank process kar raha hai</li>
@@ -98,7 +182,14 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             </ul>
           </div>
 
-          <h3 className="font-black text-[var(--color-text)] text-base mb-3">Real Life Example:</h3>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Ek example deta hoon. Maan lo aapne cheque likha. Cheque likhna matlab order de diya. Ab bank ka kaam hai use cash karna. FTO woh cheque hai bhai.
+          </p>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Teen steps hain:
+          </p>
+
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
             <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl text-center">
               <span className="text-2xl block mb-2">📝</span>
@@ -117,27 +208,31 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             </div>
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            <strong>FTO</strong> woh pehla step hai jab cheque likh diya bhai. Ab bank ka kaam hai use cash karna.
+            Abhi aap step 2 par ho. Bas thoda wait karo.
           </p>
         </section>
 
-        {/* 24vi Kist Timing */}
         <section className="mb-8">
-          <SH>24vi Kist Kab Release Hogi?</SH>
+          <SH>24vi Kist Kab Aayegi?</SH>
+          
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            October 2026 mein expected hai. Lekin ye depend karta hai ki aapne eKYC kab ki.
+          </p>
+
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
             <table className="w-full text-sm border-collapse">
               <thead>
                 <tr className="bg-[var(--color-primary)] text-white">
-                  <th className="p-3 text-left">Category</th>
-                  <th className="p-3 text-left">Timing</th>
+                  <th className="p-3 text-left">Kab eKYC Ki</th>
+                  <th className="p-3 text-left">Kab Aayegi</th>
                   <th className="p-3 text-left">Status</th>
                 </tr>
               </thead>
               <tbody>
                 {[
-                  ['eKYC Before September', 'Oct First Week', '✅ Pehle Aayega'],
-                  ['eKYC September Mein', 'Oct Mid - End', '⏳ Baad Mein'],
-                  ['eKYC Abhi Tak Nahi', 'Next Installment (25vi)', '❌ Nahi Milega'],
+                  ['September se pehle', 'October ke pehle hafte', '✅ Pehle Aayega'],
+                  ['September mein', 'October ke end tak', '⏳ Thoda baad mein'],
+                  ['Abhi tak nahi ki', '25vi kist (Feb 2027)', '❌ 24vi nahi milegi'],
                 ].map(([cat, timing, status], i) => (
                   <tr key={i} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
                     <td className="p-3 border-b border-[var(--color-border)] font-medium text-xs text-[var(--color-text)]">{cat}</td>
@@ -149,19 +244,23 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             </table>
           </div>
           <DB>
-            <strong>Warning:</strong> Abhi tak eKYC nahi ki bhai? 24vi nahi milegi. Pehle authentication karo, phir 25vi (Feb 2027) ka wait.
+            <strong>Ek baat yaad rakhna:</strong> Abhi tak eKYC nahi ki bhai? Toh 24vi nahi milegi. Pehle authentication karo, phir 25vi (Feb 2027) ka wait karo.
           </DB>
         </section>
 
-        {/* Bank Wise Timing */}
         <section className="mb-8">
-          <SH>Bank Wise Credit Timing</SH>
+          <SH>Har Bank Ka Apna Time</SH>
+          
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Har bank alag time leta hai. Maine kuch banks ka time note kiya hai:
+          </p>
+
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
             <table className="w-full text-sm border-collapse">
               <thead>
                 <tr className="bg-[var(--color-primary)] text-white">
                   <th className="p-3 text-left">Bank</th>
-                  <th className="p-3 text-center">Days</th>
+                  <th className="p-3 text-center">Kitne Din</th>
                   <th className="p-3 text-left">Speed</th>
                 </tr>
               </thead>
@@ -184,62 +283,94 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             </table>
           </div>
           <IB>
-            <strong>Tip:</strong> SBI/PNB mein 10 din baad bank jao bhai. Chhote banks mein 15-20 din wait karo.
+            <strong>Meri salah:</strong> SBI/PNB mein 10 din baad bank jao bhai. Chhote banks mein 15-20 din wait karo.
           </IB>
         </section>
 
-        {/* Mobile Verification */}
         <section className="mb-8">
-          <SH>Mobile Se Status Check — 5 Steps</SH>
+          <SH>Mobile Se Status Kaise Check Karein?</SH>
+          
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Bhai bahut simple hai. Ye steps follow karo:
+          </p>
+
           <StepList>
-            <SI n={1}><strong>pmkisan.gov.in</strong> open karo</SI>
-            <SI n={2}>Farmers Corner → <strong>Beneficiary Status</strong></SI>
-            <SI n={3}>Aadhaar number carefully enter karo</SI>
-            <SI n={4}>OTP verify karo → <strong>Get Data</strong></SI>
-            <SI n={5}>Table mein FTO status + credit release status dikhega</SI>
+            <SI n={1}><strong>pmkisan.gov.in</strong> kholo</SI>
+            <SI n={2}>Farmers Corner mein jao → <strong>Beneficiary Status</strong> par click karo</SI>
+            <SI n={3}>Aadhaar number daalo (dhyan se, ek digit bhi galat nahi hona chahiye)</SI>
+            <SI n={4}>OTP verify karo → phir <strong>Get Data</strong> button dabao</SI>
+            <SI n={5}>Table mein FTO status dikhega + credit release status bhi</SI>
           </StepList>
+          
+          <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl">
+            <p className="text-sm font-bold text-green-800 dark:text-green-300 mb-2">
+              🔍 Abhi Status Check Karo
+            </p>
+            <p className="text-xs text-green-700 dark:text-green-400 mb-3">
+              Official PM Kisan portal par jakar apna FTO status dekho. 10 second baad portal khulega.
+            </p>
+            <button
+              onClick={() => handleOfficialLink(
+                'PM Kisan Beneficiary Status',
+                'PM Kisan portal khulne wala hai. Thoda wait karo...',
+                'https://pmkisan.gov.in/BeneficiaryStatus.aspx'
+              )}
+              className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
+            >
+              📥 Yahan Click Karo → FTO Status Check Hoga
+            </button>
+          </div>
+
           <WB>
-            <strong>Common Problems:</strong> OTP nahi aa raha = mobile change hua, CSC jao. "Record Not Found" = Aadhaar galat ya enrollment nahi. Server down = subah 10-11 baje try karo.
+            <strong>Kuch common problems:</strong> OTP nahi aa raha = mobile change hua, CSC jao. "Record Not Found" = Aadhaar galat ya enrollment nahi hui. Server down = subah 10-11 baje try karo.
           </WB>
         </section>
 
-        {/* 15 Din Baad Bhi Nahi Aaye */}
         <section className="mb-8">
-          <SH>15 Din Baad Bhi Paisa Nahi? 5 Step Solution</SH>
+          <SH>15 Din Ho Gaye Par Paisa Nahi Aaya?</SH>
+          
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Tension mat lo bhai. Ye 5 steps follow karo:
+          </p>
+
           <div className="space-y-4">
             <div className="border-l-4 border-red-500 dark:border-red-700 pl-4 py-1">
-              <h3 className="font-black text-[var(--color-text)] text-sm mb-1">Step 1: Aadhaar Seeding Check (90% Problem Yahi)</h3>
-              <p className="text-xs text-[var(--color-text-muted)]">Bank jao → Counter par bolo "Aadhaar seeding check" → "Not Seeded" = turant karwao.</p>
+              <h3 className="font-black text-[var(--color-text)] text-sm mb-1">Pehle: Aadhaar Seeding Check</h3>
+              <p className="text-xs text-[var(--color-text-muted)]">Bank jao → Counter par bolo "Aadhaar seeding check karo" → Agar "Not Seeded" dikhe toh turant karwao. Zyadatar problems yahi hoti hain.</p>
             </div>
             <div className="border-l-4 border-orange-500 dark:border-orange-700 pl-4 py-1">
-              <h3 className="font-black text-[var(--color-text)] text-sm mb-1">Step 2: NPCI Mapping Verify</h3>
-              <p className="text-xs text-[var(--color-text-muted)]">Bank manager se bolo: "DBT ke liye NPCI mapping active hai kya?" Technical hai lekin woh samajh jayenge bhai.</p>
+              <h3 className="font-black text-[var(--color-text)] text-sm mb-1">Doosra: NPCI Mapping</h3>
+              <p className="text-xs text-[var(--color-text-muted)]">Bank manager se bolo: "DBT ke liye NPCI mapping active hai kya?" Thoda mushkil sunne mein hai lekin woh samajh jayenge bhai.</p>
             </div>
             <div className="border-l-4 border-yellow-500 dark:border-yellow-700 pl-4 py-1">
-              <h3 className="font-black text-[var(--color-text)] text-sm mb-1">Step 3: Account Active Hai?</h3>
-              <p className="text-xs text-[var(--color-text-muted)]">6 mahine se transaction nahi = dormant. ₹100 deposit karo → same day active.</p>
+              <h3 className="font-black text-[var(--color-text)] text-sm mb-1">Teesra: Account Active Hai?</h3>
+              <p className="text-xs text-[var(--color-text-muted)]">Agar 6 mahine se transaction nahi hua toh account dormant ho jata hai. ₹100 deposit karo → same day active ho jayega.</p>
             </div>
             <div className="border-l-4 border-blue-500 dark:border-blue-700 pl-4 py-1">
-              <h3 className="font-black text-[var(--color-text)] text-sm mb-1">Step 4: Helpline Call</h3>
-              <p className="text-xs text-[var(--color-text-muted)]">📞 155261 / 1800115526 (9AM-6PM). Aadhaar + enrollment + account number ready rakho bhai.</p>
+              <h3 className="font-black text-[var(--color-text)] text-sm mb-1">Chautha: Helpline Par Call</h3>
+              <p className="text-xs text-[var(--color-text-muted)]">📞 155261 ya 1800115526 par call karo (subah 9 se shaam 6 baje tak). Aadhaar + enrollment + account number ready rakho bhai.</p>
             </div>
             <div className="border-l-4 border-green-500 dark:border-green-700 pl-4 py-1">
-              <h3 className="font-black text-[var(--color-text)] text-sm mb-1">Step 5: CSC Visit (Last Option)</h3>
-              <p className="text-xs text-[var(--color-text-muted)]">CSC operator poora case check karke complaint register karega. 3-5 din mein resolution.</p>
+              <h3 className="font-black text-[var(--color-text)] text-sm mb-1">Aakhri: CSC Visit</h3>
+              <p className="text-xs text-[var(--color-text-muted)]">CSC operator poora case check karke complaint register karega. 3-5 din mein kaam ho jayega.</p>
             </div>
           </div>
         </section>
 
-        {/* State Wise Delay */}
         <section className="mb-8">
-          <SH>State Wise Delay Analysis</SH>
+          <SH>State Ke Hisaab Se Time</SH>
+          
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Har state mein alag time lagta hai. Maine kuch states ka time note kiya hai:
+          </p>
+
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
             <table className="w-full text-sm border-collapse">
               <thead>
                 <tr className="bg-[var(--color-primary)] text-white">
                   <th className="p-3 text-left">State</th>
-                  <th className="p-3 text-center">Delay</th>
-                  <th className="p-3 text-left">Reason</th>
+                  <th className="p-3 text-center">Kitna Time</th>
+                  <th className="p-3 text-left">Kyun</th>
                 </tr>
               </thead>
               <tbody>
@@ -262,7 +393,6 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
           </div>
         </section>
 
-        {/* IMAGE 2: FAQ — PATH UNCHANGED */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/pm-kisan-fto-faq-kisanstatus.webp"
@@ -278,17 +408,15 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
           </p>
         </div>
 
-        {/* FAQ */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Aksar Puche Jane Wale Sawal
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="FTO Status FAQ 2026 — Verified Answers" />
+          <FAQBlock faqs={FAQS_DATA} caption="FTO Status FAQ 2026" />
         </section>
 
-        {/* Conclusion */}
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Bottom Line</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Seedhi Baat</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
             FTO dikh raha hai = <strong>ghabrao mat bhai</strong>. Paisa confirm hai. 7-15 din wait karo. Uske baad bhi na aaye toh:
           </p>
@@ -299,13 +427,24 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
           </ol>
         </div>
 
-        <GovLink
-          href="https://pmkisan.gov.in/BeneficiaryStatus.aspx"
-          label="PM Kisan Beneficiary Status — FTO Check"
-          guide="Abhi Status Dekho"
-          guideHref="/articles/PmKisanMasterGuide2026"
-          portalName="pmkisan.gov.in"
-        />
+        <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 border-l-[6px] rounded-xl">
+          <h3 className="text-base font-black text-blue-800 dark:text-blue-300 mb-2">
+            🔗 PM Kisan Official Portal
+          </h3>
+          <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
+            Apna FTO status, beneficiary list, aur saari jaankari ke liye official portal par jaayein. 10 second baad portal khulega.
+          </p>
+          <button
+            onClick={() => handleOfficialLink(
+              'PM Kisan Official Portal',
+              'PM Kisan portal khulne wala hai. Thoda wait karo...',
+              'https://pmkisan.gov.in/BeneficiaryStatus.aspx'
+            )}
+            className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
+          >
+            📥 Yahan Click Karo → PM Kisan Portal Khulega
+          </button>
+        </div>
 
         <CalcBanner
           icon="📅"
