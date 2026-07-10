@@ -53,9 +53,9 @@ const VEGETABLES_FALLBACK: readonly CommodityItem[] = [
   { name: 'प्याज (Pyaaz)',        rate: '₹30-42/kg',    prev: 35,  change: '+₹5',  trend: 'up' },
   { name: 'टमाटर (Tamatar)',      rate: '₹48-65/kg',    prev: 52,  change: '+₹8',  trend: 'up' },
   { name: 'गाजर (Gaajar)',        rate: '26-34/kg',    prev: 30,  change: '-₹2',  trend: 'down' },
-  { name: 'गोभी (Gobhi)',         rate: '₹20-26/kg',    prev: 22,  change: '+₹2',  trend: 'up' },
+  { name: 'गोभी (Gobhi)',         rate: '₹20-26/kg',    prev: 22,  change: '+2',  trend: 'up' },
   { name: 'भिंडी (Bhindi)',       rate: '₹38-48/kg',    prev: 40,  change: '+₹3',  trend: 'up' },
-  { name: 'पालक (Palak)',         rate: '₹14-20/kg',    prev: 16,  change: '+₹2',  trend: 'up' },
+  { name: 'पालक (Palak)',         rate: '₹14-20/kg',    prev: 16,  change: '+2',  trend: 'up' },
   { name: 'मेथी (Methi)',         rate: '₹22-30/kg',    prev: 25,  change: '+₹2',  trend: 'up' },
 ];
 
@@ -71,7 +71,7 @@ const WEATHER_FALLBACK: readonly WeatherData[] = [
   { day: 'Kal', date: '12 Jul', temp: '31°/25°', condition: '️ Moderate', rain: '65%' },
   { day: 'Sat', date: '13 Jul', temp: '33°/26°', condition: '🌦️ Light Rain', rain: '40%' },
   { day: 'Sun', date: '14 Jul', temp: '34°/27°', condition: '⛅ Cloudy', rain: '20%' },
-  { day: 'Mon', date: '15 Jul', temp: '35°/28°', condition: '☀️ Sunny', rain: '5%' },
+  { day: 'Mon', date: '15 Jul', temp: '35°/28°', condition: '️ Sunny', rain: '5%' },
   { day: 'Tue', date: '16 Jul', temp: '34°/27°', condition: '️ Partly Sunny', rain: '10%' },
   { day: 'Wed', date: '17 Jul', temp: '33°/26°', condition: '🌦️ Light Rain', rain: '35%' },
 ];
@@ -98,18 +98,17 @@ const STATE_RATES: readonly CityRate[] = [
   { state: 'दिल्ली',    mandi: 'Azadpur Mandi',     veg: '₹26-34', fruit: '₹100-135', id: 'delhi' },
   { state: 'मुंबई',     mandi: 'Vashi APMC Mandi',  veg: '30-40', fruit: '₹105-140', id: 'mumbai' },
   { state: 'कोलकाता',   mandi: 'Sealdah Mandi',     veg: '₹24-32', fruit: '₹95-125',  id: 'kolkata' },
-  { state: 'चेन्नई',    mandi: 'Koyambedu Mandi',   veg: '₹28-36', fruit: '₹100-130', id: 'chennai' },
+  { state: 'चेन्नई',    mandi: 'Koyambedu Mandi',   veg: '₹28-36', fruit: '100-130', id: 'chennai' },
   { state: 'बेंगलुरु',  mandi: 'Yeshwanthpur APMC', veg: '₹26-34', fruit: '₹95-125',  id: 'bengaluru' },
 ];
 
 const RELATED = [
-  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '📆' },
+  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '' },
   { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide', emoji: '📚' },
   { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List', emoji: '' },
   { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Loan Guide', emoji: '💳' },
 ];
 
-// HUMAN STYLE FAQs - No AI uniform
 const FAQS_DATA = [
   { 
     q: 'Aaj ka mandi bhav kya hai?', 
@@ -188,7 +187,6 @@ function PriceCard({ name, rate, prev, change, trend, accent }: CommodityItem & 
   );
 }
 
-// COUNTDOWN MODAL COMPONENT
 function CountdownModal({ 
   title, 
   message, 
@@ -405,9 +403,10 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
 
       <div className="max-w-3xl mx-auto py-8 px-4">
 
+        {/* ORIGINAL IMAGE PATH - WAPIS Wahi */}
         <div className="my-6 rounded-2xl overflow-hidden border border-gray-300 shadow-md">
           <Image
-            src="/images/articles/mandi-bhav-today/mandi-hero.webp"
+            src={article.ogImage || '/images/articles/mandi-bhav-today/mandi-hero.webp'}
             alt="Aaj ka mandi bhav - live vegetable and fruit prices in Indian mandi 2026"
             width={1200}
             height={630}
@@ -434,7 +433,7 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
         </section>
 
         <section className="mb-8">
-          <SH>🌤️ 7 Din Ka Mausam Forecast — Mandi Bhav Par Asar</SH>
+          <SH>️ 7 Din Ka Mausam Forecast — Mandi Bhav Par Asar</SH>
           <p className="text-gray-700 text-sm leading-relaxed mb-4">
             Mausam ka seedha asar hota hai mandi bhav par. Baarish mein sabzi mehngi hoti hai, garmi mein sasti. Ye 7 din ka forecast dekho aur plan banao:
           </p>
@@ -576,7 +575,7 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
         </section>
 
         <section className="mb-8">
-          <SH>📱 Is Page Ka Sahi Istemal Kaise Karein?</SH>
+          <SH> Is Page Ka Sahi Istemal Kaise Karein?</SH>
           <p className="text-gray-700 text-sm leading-relaxed mb-3">
             Bhai, ye page sirf rates dekhne ke liye nahi hai. Isko sahi tarike se use karo toh fayda hoga:
           </p>
@@ -632,7 +631,6 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
           </p>
         </div>
 
-        {/* EXTERNAL LINK BUTTON WITH COUNTDOWN */}
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 border-l-[6px] rounded-xl">
           <h3 className="text-base font-black text-blue-800 dark:text-blue-300 mb-2">
             🔗 Official Government Data
