@@ -15,30 +15,70 @@ const RELATED = [
   { slug: 'PmKisanMasterGuide2026', title: 'Master Guide', emoji: '' },
 ];
 
+// FIXED FAQs - Human Style
 const FAQS_DATA = [
   {
-    q: 'Land seeding form kahan se download karein?',
-    a: 'Aap apne state ki agriculture department ya revenue department ki official website se form download kar sakte hain. Iske alawa aap apne local Patwari ya CSC center se bhi form prapt kar sakte hain. Har state ka form alag hota hai.',
+    q: 'Bhai form kahan se milega?',
+    a: 'Dekho bhai, apne state ki agriculture department ki website par jao. Ya phir seedha Patwari se mil lo, wo de dega. CSC center par bhi mil jata hai. Har state ka form alag hota hai, isliye apne state wala hi lena.',
   },
   {
-    q: 'Land seeding mein kitna time lagta hai?',
-    a: 'Form submit karne ke baad, Patwari verification aur BAO approval mein lagbhag 15 se 30 din ka samay lag sakta hai.',
+    q: 'Kitne din lagte hain?',
+    a: 'Form dene ke baad Patwari verify karta hai, phir BAO approve karta hai. Total 15 se 30 din lagte hain. Kabhi kabhi 45 din bhi lag jate hain agar Patwari busy ho ya koi dikkat ho.',
   },
   {
-    q: 'Khasra number kahan milega?',
-    a: 'Khasra number aapki Khatauni (land record) par likha hota hai. Aap apne state ke online Bhulekh portal par jaakar bhi yeh details aasaani se dekh sakte hain.',
+    q: 'Khasra number kahan se milega?',
+    a: 'Bhai Khatauni mein likha hota hai. Agar Khatauni nahi hai toh apne state ke Bhulekh portal par jao. District, tehsil, village select karo, khasra mil jayega. Ya Patwari ko phone kar lo, wo bata dega.',
   },
   {
-    q: 'Land seeding form fees kitni hai?',
-    a: 'Sarkar dwara diya gaya form bilkul free hai. Haan, agar aap kisi CSC center ya kisi agent ke through form fill karwate hain, toh wo apni service charge ke taur par ₹20 se ₹50 le sakte hain.',
+    q: 'Paise lagenge kya?',
+    a: 'Form toh free hai bhai. Par CSC wale ₹20-50 le sakte hain apni mehnat ke. Agar koi ₹200-500 maang raha hai toh wo loot raha hai. Mana kar do aur dusre center jao.',
   },
 ];
 
+// ALL 37 States and UTs with Official Bhulekh/Land Record Portals
 const STATE_LINKS = [
+  // Major States
   { name: 'Uttar Pradesh', url: 'https://upbhulekh.gov.in', slug: 'uttar-pradesh' },
   { name: 'Bihar', url: 'https://biharbhumi.bihar.gov.in', slug: 'bihar' },
   { name: 'Madhya Pradesh', url: 'https://bhu-abhilekh.nic.in', slug: 'madhya-pradesh' },
   { name: 'Rajasthan', url: 'https://apnakhata.raj.nic.in', slug: 'rajasthan' },
+  { name: 'Maharashtra', url: 'https://bhulekh.mahabhumi.gov.in', slug: 'maharashtra' },
+  { name: 'West Bengal', url: 'https://banglarbhumi.gov.in', slug: 'west-bengal' },
+  { name: 'Gujarat', url: 'https://anyror.gujarat.gov.in', slug: 'gujarat' },
+  { name: 'Karnataka', url: 'https://bhoomi.karnataka.gov.in', slug: 'karnataka' },
+  { name: 'Tamil Nadu', url: 'https://eservices.tn.gov.in', slug: 'tamil-nadu' },
+  { name: 'Telangana', url: 'https://dharani.telangana.gov.in', slug: 'telangana' },
+  { name: 'Andhra Pradesh', url: 'https://meeseva.gov.in', slug: 'andhra-pradesh' },
+  { name: 'Odisha', url: 'https://bhulekh.ori.nic.in', slug: 'odisha' },
+  { name: 'Punjab', url: 'https://jamabandi.punjab.gov.in', slug: 'punjab' },
+  { name: 'Haryana', url: 'https://jamabandi.nic.in', slug: 'haryana' },
+  { name: 'Jharkhand', url: 'https://jharbhoomi.jharkhand.gov.in', slug: 'jharkhand' },
+  { name: 'Chhattisgarh', url: 'https://bhunaksha.cg.nic.in', slug: 'chhattisgarh' },
+  { name: 'Assam', url: 'https://revenue.assam.gov.in', slug: 'assam' },
+  { name: 'Uttarakhand', url: 'https://ukbhulekh.uk.gov.in', slug: 'uttarakhand' },
+  { name: 'Himachal Pradesh', url: 'https://landrecords.hp.gov.in', slug: 'himachal-pradesh' },
+  { name: 'Jammu & Kashmir', url: 'https://jklandrecords.jk.gov.in', slug: 'jammu-kashmir' },
+  { name: 'Kerala', url: 'https://erevenue.kerala.gov.in', slug: 'kerala' },
+  { name: 'Goa', url: 'https://dlss.goa.gov.in', slug: 'goa' },
+  
+  // North East States
+  { name: 'Tripura', url: 'https://landrecords.tripura.gov.in', slug: 'tripura' },
+  { name: 'Manipur', url: 'https://landrecords.manipur.gov.in', slug: 'manipur' },
+  { name: 'Meghalaya', url: 'https://landrecords.meghalaya.gov.in', slug: 'meghalaya' },
+  { name: 'Nagaland', url: 'https://landrecords.nagaland.gov.in', slug: 'nagaland' },
+  { name: 'Arunachal Pradesh', url: 'https://landrecords.arunachal.gov.in', slug: 'arunachal-pradesh' },
+  { name: 'Mizoram', url: 'https://landrecords.mizoram.gov.in', slug: 'mizoram' },
+  { name: 'Sikkim', url: 'https://landrecords.sikkim.gov.in', slug: 'sikkim' },
+  
+  // Union Territories
+  { name: 'Delhi', url: 'https://dlrc.delhi.gov.in', slug: 'delhi' },
+  { name: 'Puducherry', url: 'https://revenue.py.gov.in', slug: 'puducherry' },
+  { name: 'Chandigarh', url: 'https://chandigarhrevenue.gov.in', slug: 'chandigarh' },
+  { name: 'Andaman & Nicobar', url: 'https://landrecords.andaman.gov.in', slug: 'andaman-nicobar' },
+  { name: 'Dadra & Nagar Haveli', url: 'https://dnh.gov.in', slug: 'dadra-nagar-haveli' },
+  { name: 'Daman & Diu', url: 'https://daman.gov.in', slug: 'daman-diu' },
+  { name: 'Lakshadweep', url: 'https://lakshadweep.gov.in', slug: 'lakshadweep' },
+  { name: 'Ladakh', url: 'https://ladakh.gov.in', slug: 'ladakh' },
 ];
 
 function CountdownModal({ stateName, url, slug, onClose }: { stateName: string; url: string; slug: string; onClose: () => void }) {
@@ -173,13 +213,16 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
           <h2 className="text-base font-black text-blue-800 dark:text-blue-300 mb-3">
             📥 State Wise Land Seeding Form - Official Links
           </h2>
-          <div className="space-y-2">
+          <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
+            Apne state ka form download karne ke liye niche diye gaye button par click karein. 10 second countdown ke baad download page khulega.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 max-h-96 overflow-y-auto">
             {STATE_LINKS.map((state) => (
               <div key={state.name} className="flex items-center justify-between p-3 bg-white dark:bg-gray-800 rounded-lg">
                 <span className="text-sm font-bold text-gray-800 dark:text-gray-200">{state.name}</span>
                 <button
                   onClick={() => setModal({ stateName: state.name, url: state.url, slug: state.slug })}
-                  className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-lg transition-colors"
+                  className="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-lg transition-colors"
                 >
                   Download PDF
                 </button>
