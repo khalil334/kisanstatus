@@ -13,7 +13,7 @@ const RELATED = [
   { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List Check', emoji: '📋' },
   { slug: 'PmKisanMasterGuide2026', title: 'Master Guide', emoji: '📚' },
   { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide', emoji: '🔐' },
-  { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form', emoji: '' },
+  { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form', emoji: '📝' },
 ];
 
 const FAQS_DATA = [
@@ -216,17 +216,17 @@ export default function PmKisanRejectedStatusReApplyGuide({ article }: { article
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 my-4">
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
               <span className="text-2xl block mb-2">❌</span>
-              <p className="font-black text-sm text-red-800 dark:text-red-300">Permanent Rejection</p>
+              <p className="font-black text-sm text-red-800 dark:text-red-300">Hamesha Ke Liye Reject</p>
               <p className="text-xs text-[var(--color-text-muted)] mt-1">Aap eligible hi nahi ho (Jaise Income Tax Filer).</p>
             </div>
             <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl">
-              <span className="text-2xl block mb-2">️</span>
-              <p className="font-black text-sm text-amber-800 dark:text-amber-300">Temporary Rejection</p>
+              <span className="text-2xl block mb-2">⚠️</span>
+              <p className="font-black text-sm text-amber-800 dark:text-amber-300">Asthayi Reject - Theek Ho Sakta Hai</p>
               <p className="text-xs text-[var(--color-text-muted)] mt-1">Details galat hain. Theek karo, dobara apply karo.</p>
             </div>
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Zyada tar cases "Temporary Rejection" ke hote hain. Yani galti sudhaarne se kaam ban jata hai.
+            Zyada tar cases "Asthayi Reject" ke hote hain. Yani galti sudhaarne se kaam ban jata hai.
           </p>
         </section>
 
@@ -238,31 +238,31 @@ export default function PmKisanRejectedStatusReApplyGuide({ article }: { article
           <div className="space-y-3">
             {[
               { 
-                reason: 'Land Record Mismatch (Sabse Common)', 
+                reason: 'Zameen Ka Record Galat (Sabse Common)', 
                 desc: 'Aapke Aadhaar card par jo naam hai, aur Khatauni (land record) par jo naam hai, dono mein farq hai. "Ram Kumar" aur "Ram Kumar Singh" ko system alag maanta hai.' 
               },
               { 
-                reason: 'Bank Account ya IFSC Galat', 
+                reason: 'Bank Account Ya IFSC Code Galat', 
                 desc: 'Account number galat daal diya, ya branch merge hone ki wajah se IFSC code badal gaya aur aapne purana code use kiya.' 
               },
               { 
-                reason: 'Aadhaar Seeding Missing', 
+                reason: 'Aadhaar Se Link Nahi Hai Bank', 
                 desc: 'Aapka bank account Aadhaar se link nahi hai. DBT (Direct Benefit Transfer) ke liye ye link hona 100% zaroori hai.' 
               },
               { 
-                reason: 'Duplicate Entry', 
+                reason: 'Do Baar Form Bhar Diya', 
                 desc: 'Aapne galti se do baar form bhar diya, ya aapke parivar ke do logon ne ek hi zameen par apply kar diya.' 
               },
               { 
-                reason: 'Ineligible Category', 
+                reason: 'Aap Eligible Hi Nahi Ho', 
                 desc: 'Aap income tax filer nikle, ya aapke parivar mein koi government servant nikal gaya. Ya zameen 2 hectare se zyada nikal aayi.' 
               },
               { 
-                reason: 'eKYC Pending/Failed', 
+                reason: 'eKYC Adhuri Hai Ya Fail Hui', 
                 desc: 'Aapne eKYC hi nahi kiya, ya OTP time par verify nahi kiya. Bina eKYC ke paisa ruk jata hai aur status reject ho sakta hai.' 
               },
               { 
-                reason: 'State Verification Delay', 
+                reason: 'State Verification Mein Delay', 
                 desc: 'Kabhi kabhi galti kisi ki nahi hoti. Bas state ke server par load zyada hota hai aur verification time par nahi ho paati.' 
               },
             ].map(({ reason, desc }, i) => (
@@ -384,7 +384,7 @@ export default function PmKisanRejectedStatusReApplyGuide({ article }: { article
         </section>
 
         <section className="mb-8">
-          <SH>State Wise Common Rejection Problems</SH>
+          <SH>Har State Mein Alag Problem Hai</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Har state ka land record system alag hai. Isliye rejection ke reasons bhi thode alag hote hain:
           </p>
@@ -441,7 +441,7 @@ export default function PmKisanRejectedStatusReApplyGuide({ article }: { article
         </section>
 
         <section className="mb-8">
-          <SH>PM Kisan Status Active Kaise Karein? Tracking Guide</SH>
+          <SH>PM Kisan Status Active Kaise Karein? Status Track Karne Ka Tarika</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Correction form submit karne ke baad aapka status "Pending" ya "Under Verification" dikhne lagega. Use track karne ke liye:
           </p>
