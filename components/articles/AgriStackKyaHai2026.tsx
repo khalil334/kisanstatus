@@ -1,12 +1,13 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const PUBLISHED = '2025-01-15T08:00:00+05:30';
-const MODIFIED = '2026-07-04T08:00:00+05:30';
+const MODIFIED = '2026-07-11T08:00:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisan24viKist2026', title: '24vi Kist Status Check', emoji: '📅' },
@@ -48,10 +49,92 @@ const FAQS_DATA = [
   },
 ];
 
+function CountdownModal({ 
+  title, 
+  message, 
+  redirectUrl, 
+  onClose 
+}: { 
+  title: string; 
+  message: string; 
+  redirectUrl: string; 
+  onClose: () => void;
+}) {
+  const [count, setCount] = useState(10);
+
+  useEffect(() => {
+    if (count === 0) {
+      window.open(redirectUrl, '_blank', 'noopener,noreferrer');
+      onClose();
+      return;
+    }
+    const timer = setTimeout(() => setCount(count - 1), 1000);
+    return () => clearTimeout(timer);
+  }, [count, redirectUrl, onClose]);
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4" onClick={onClose}>
+      <div
+        className="w-full max-w-sm rounded-2xl bg-white dark:bg-gray-900 p-6 shadow-2xl border-2 border-green-500"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="text-center">
+          <div className="text-5xl mb-3">⏳</div>
+          <h3 className="text-lg font-black text-gray-800 dark:text-white mb-2">
+            {title}
+          </h3>
+          <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+            {message}
+          </p>
+          
+          <div className="mb-4">
+            <div className="text-6xl font-black text-green-600 dark:text-green-400">
+              {count}
+            </div>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+              seconds mein official portal khulega...
+            </p>
+          </div>
+          
+          <div className="bg-blue-50 dark:bg-blue-900/30 rounded-lg p-3 mb-4">
+            <p className="text-xs text-blue-800 dark:text-blue-300">
+              📌 Thoda wait karo. Official portal khulne wala hai.
+            </p>
+          </div>
+          <button
+            onClick={onClose}
+            className="w-full px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-800 dark:text-white text-sm font-bold rounded-lg transition-colors"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta }) {
+  const [modal, setModal] = useState<{ 
+    title: string; 
+    message: string; 
+    url: string; 
+  } | null>(null);
+
+  const handleOfficialLink = (title: string, message: string, url: string) => {
+    setModal({ title, message, url });
+  };
+
   return (
     <>
-      {/* Header */}
+      {modal && (
+        <CountdownModal
+          title={modal.title}
+          message={modal.message}
+          redirectUrl={modal.url}
+          onClose={() => setModal(null)}
+        />
+      )}
+
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
           <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
@@ -61,7 +144,7 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
             <span>/</span>
             <span className="text-white font-bold">Digital Kisan ID Guide</span>
           </nav>
-          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">AgriStack / Digital Kisan ID</span>
+          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">AgriStack / Digital Kisan ID 2026</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
             AgriStack Digital Kisan ID 2026: 14-Digit ID Banwane Ka Asli Tarika — Jo CSC Wale Nahi Batate
           </h1>
@@ -76,7 +159,6 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* IMAGE 1: Hero/Infographic — PATH UNCHANGED */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/articles/agristack-kya-hai/infographic.webp'}
@@ -93,7 +175,6 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
           </p>
         </div>
 
-        {/* Real Field Hook */}
         <div className="my-6 p-5 bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-400 dark:border-amber-700 border-l-[6px] rounded-xl">
           <h2 className="text-base font-black text-amber-800 dark:text-amber-300 mb-2">Jo Maine Field Mein Dekha Hai</h2>
           <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed mb-2">
@@ -107,14 +188,13 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
           </p>
         </div>
 
-        {/* Section 1: What Is It */}
         <section className="mb-8">
-          <SH>AgriStack Digital Kisan ID Asli Mein Kya Hai?</SH>
+          <SH>AgriStack Kya Hai? Digital Kisan ID Asli Mein Kya Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Seedhi baat karo bhai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Government ne ek central database banaya hai jisme har registered kisan ki <strong>verified agricultural profile</strong> store hoti hai. Teen cheezein judti hain isme:
+            Government ne ek central database banaya hai jisme har registered kisan ki <strong>verified agricultural profile</strong> store hoti hai. <strong>AgriStack kya hai</strong> ye samajhna zaroori hai — teen cheezein judti hain isme:
           </p>
           <ul className="space-y-2 mb-4 text-sm text-[var(--color-text-muted)]">
             <li className="flex gap-2"><span className="text-green-600 shrink-0 font-bold">→</span> <strong>Pehchaan</strong> — naam, Aadhaar, mobile, bank</li>
@@ -122,7 +202,7 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
             <li className="flex gap-2"><span className="text-green-600 shrink-0 font-bold">→</span> <strong>Fasal</strong> — crop type, area, harvest timeline</li>
           </ul>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Teeno verify hone par milta hai <strong>14-digit unique number</strong>. Permanent agricultural identity bhai.
+            Teeno verify hone par milta hai <strong>14-digit unique number</strong>. <strong>Digital Kisan ID 2026</strong> permanent agricultural identity bhai. Isko <strong>Kisan Pehchaan Patra</strong> bhi kehte hain.
           </p>
 
           <IB>
@@ -134,7 +214,6 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
           </p>
         </section>
 
-        {/* IMAGE 2: Ecosystem Benefits — PATH UNCHANGED */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/agristack-kya-hai/ecosystem-benefits.webp"
@@ -150,7 +229,6 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
           </p>
         </div>
 
-        {/* Section 2: Why Now */}
         <section className="mb-8">
           <SH>Abhi Kyun Zaroori Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -179,7 +257,6 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
           </DB>
         </section>
 
-        {/* Section 3: Comparison Table */}
         <section className="mb-8">
           <SH>Aadhaar Vs Digital Kisan ID</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -220,9 +297,8 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
           </WB>
         </section>
 
-        {/* Section 4: Enrollment Process */}
         <section className="mb-8">
-          <SH>Enrollment — Ground Par Kaise Hota Hai</SH>
+          <SH>AgriStack Registration Kaise Kare? — Ground Par Kaise Hota Hai</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Website par steps likhe hain. Reality thodi alag hai bhai.
           </p>
@@ -242,7 +318,25 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
             <SI n={8}>Acknowledgement receipt lo — future reference zaroori hai</SI>
           </StepList>
 
-          {/* IMAGE 3: Registration Steps — PATH UNCHANGED */}
+          <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl">
+            <p className="text-sm font-bold text-green-800 dark:text-green-300 mb-2">
+              🔍 Abhi Register Karo
+            </p>
+            <p className="text-xs text-green-700 dark:text-green-400 mb-3">
+              Official Digital Agriculture portal par jakar apna <strong>AgriStack registration</strong> karo. 10 second baad portal khulega.
+            </p>
+            <button
+              onClick={() => handleOfficialLink(
+                'Digital Agriculture Portal',
+                'Official portal khulne wala hai. Thoda wait karo...',
+                'https://farmers.gov.in'
+              )}
+              className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
+            >
+              📥 Yahan Click Karo → Portal Khulega
+            </button>
+          </div>
+
           <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
             <Image
               src="/images/articles/agristack-kya-hai/registration-steps.webp"
@@ -274,7 +368,6 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
           </WB>
         </section>
 
-        {/* Section 5: Documents */}
         <section className="mb-8">
           <SH>Documents — Official Vs Actual</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -307,7 +400,6 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
           </IB>
         </section>
 
-        {/* Section 6: State Reality */}
         <section className="mb-8">
           <SH>State-Wise Asli Haal</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -333,14 +425,12 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
           </div>
         </section>
 
-        {/* Section 7: Post-Enrollment */}
         <section className="mb-8">
           <SH>ID Ban Gayi — Ab Kya?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Kaam khatam nahi hua bhai. Sirf shuru hua hai.
           </p>
 
-          {/* IMAGE 4: Farmer ID Card Sample — PATH UNCHANGED */}
           <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
             <Image
               src="/images/articles/agristack-kya-hai/farmer-id-card-sample.webp"
@@ -386,19 +476,36 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
               </div>
             </div>
           </div>
+
+          <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 rounded-xl">
+            <p className="text-sm font-bold text-blue-800 dark:text-blue-300 mb-2">
+              🔍 Status Check Karo
+            </p>
+            <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
+              Official portal par jakar apna <strong>AgriStack status check</strong> karo. 10 second baad portal khulega.
+            </p>
+            <button
+              onClick={() => handleOfficialLink(
+                'AgriStack Status Check',
+                'Official portal khulne wala hai. Thoda wait karo...',
+                'https://farmers.gov.in'
+              )}
+              className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
+            >
+              📥 Yahan Click Karo → Status Check Hoga
+            </button>
+          </div>
         </section>
 
-        {/* FAQ */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Field Se Real Sawal
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="AgriStack Digital Kisan ID FAQ 2026 — Verified Answers" />
+          <FAQBlock faqs={FAQS_DATA} caption="AgriStack Digital Kisan ID FAQ 2026" />
         </section>
 
-        {/* Conclusion */}
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Bottom Line</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Seedhi Baat</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
             Free hai bhai. 20 minute. Future mein zaroori. Abhi crowd kam CSC par. October-November mein rush hoga.
           </p>
@@ -411,13 +518,24 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
           </ol>
         </div>
 
-        <GovLink
-          href="https://farmers.gov.in"
-          label="Digital Agriculture Portal — Official Enrollment"
-          guide="Abhi Register Karo"
-          guideHref="/articles/PmKisanMasterGuide2026"
-          portalName="farmers.gov.in"
-        />
+        <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 border-l-[6px] rounded-xl">
+          <h3 className="text-base font-black text-blue-800 dark:text-blue-300 mb-2">
+            🔗 Official Digital Agriculture Portal
+          </h3>
+          <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
+            <strong>AgriStack registration</strong>, <strong>Digital Kisan ID status check</strong>, ya koi bhi kaam ke liye official portal par jaayein. 10 second baad portal khulega.
+          </p>
+          <button
+            onClick={() => handleOfficialLink(
+              'Digital Agriculture Portal',
+              'Official portal khulne wala hai. Thoda wait karo...',
+              'https://farmers.gov.in'
+            )}
+            className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
+          >
+            📥 Yahan Click Karo → Portal Khulega
+          </button>
+        </div>
 
         <CalcBanner
           icon="🆔"
