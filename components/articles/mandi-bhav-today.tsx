@@ -61,15 +61,15 @@ const VEGETABLES_FALLBACK: readonly CommodityItem[] = [
 
 const FRUITS_FALLBACK: readonly CommodityItem[] = [
   { name: 'सेब (Seb)',            rate: '145-185/kg',  prev: 160, change: '+₹5',  trend: 'up' },
-  { name: 'केला (Kela)',          rate: '₹52-68/dozen', prev: 58,  change: '+4',  trend: 'up' },
-  { name: 'संतरा (Santra)',       rate: '₹95-125/kg',   prev: 105, change: '+₹5',  trend: 'up' },
-  { name: 'अंगूर (Angoor)',       rate: '₹85-115/kg',   prev: 95,  change: '+₹5',  trend: 'up' },
+  { name: 'केला (Kela)',          rate: '52-68/dozen', prev: 58,  change: '+4',  trend: 'up' },
+  { name: 'संतरा (Santra)',       rate: '95-125/kg',   prev: 105, change: '+₹5',  trend: 'up' },
+  { name: 'अंगूर (Angoor)',       rate: '₹85-115/kg',   prev: 95,  change: '+5',  trend: 'up' },
 ];
 
 const WEATHER_FALLBACK: readonly WeatherData[] = [
-  { day: 'Aaj', date: '11 Jul', temp: '32°/26°', condition: '⛈️ Heavy Rain', rain: '80%' },
+  { day: 'Aaj', date: '11 Jul', temp: '32°/26°', condition: '️ Heavy Rain', rain: '80%' },
   { day: 'Kal', date: '12 Jul', temp: '31°/25°', condition: '️ Moderate', rain: '65%' },
-  { day: 'Sat', date: '13 Jul', temp: '33°/26°', condition: '🌦️ Light Rain', rain: '40%' },
+  { day: 'Sat', date: '13 Jul', temp: '33°/26°', condition: '️ Light Rain', rain: '40%' },
   { day: 'Sun', date: '14 Jul', temp: '34°/27°', condition: '⛅ Cloudy', rain: '20%' },
   { day: 'Mon', date: '15 Jul', temp: '35°/28°', condition: '️ Sunny', rain: '5%' },
   { day: 'Tue', date: '16 Jul', temp: '34°/27°', condition: '️ Partly Sunny', rain: '10%' },
@@ -99,14 +99,14 @@ const STATE_RATES: readonly CityRate[] = [
   { state: 'मुंबई',     mandi: 'Vashi APMC Mandi',  veg: '30-40', fruit: '₹105-140', id: 'mumbai' },
   { state: 'कोलकाता',   mandi: 'Sealdah Mandi',     veg: '₹24-32', fruit: '₹95-125',  id: 'kolkata' },
   { state: 'चेन्नई',    mandi: 'Koyambedu Mandi',   veg: '₹28-36', fruit: '100-130', id: 'chennai' },
-  { state: 'बेंगलुरु',  mandi: 'Yeshwanthpur APMC', veg: '₹26-34', fruit: '₹95-125',  id: 'bengaluru' },
+  { state: 'बेंगलुरु',  mandi: 'Yeshwanthpur APMC', veg: '₹26-34', fruit: '95-125',  id: 'bengaluru' },
 ];
 
 const RELATED = [
   { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '' },
   { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide', emoji: '📚' },
   { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List', emoji: '' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Loan Guide', emoji: '💳' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Loan Guide', emoji: '' },
 ];
 
 const FAQS_DATA = [
@@ -140,7 +140,7 @@ const FAQS_DATA = [
   },
   { 
     q: 'Sabzi ka bhav live kaise dikhta hai?', 
-    a: 'Green dot (🟢 Live) dikhega jab data real-time ho. Government ki agmarknet website se data aata hai. Agar API fail ho toh last rates dikhenge.' 
+    a: 'Green dot ( Live) dikhega jab data real-time ho. Government ki agmarknet website se data aata hai. Agar API fail ho toh last rates dikhenge.' 
   },
   { 
     q: 'Mausam ka asar mandi bhav par kya hota hai?', 
@@ -403,11 +403,11 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
 
       <div className="max-w-3xl mx-auto py-8 px-4">
 
-        {/* ORIGINAL IMAGE PATH - WAPIS Wahi */}
+        {/* IMAGE 1: Hero - Mixed Vegetables */}
         <div className="my-6 rounded-2xl overflow-hidden border border-gray-300 shadow-md">
           <Image
-            src={article.ogImage || '/images/articles/mandi-bhav-today/mandi-hero.webp'}
-            alt="Aaj ka mandi bhav - live vegetable and fruit prices in Indian mandi 2026"
+            src="/images/articles/mandi-bhav-today/mandi-fresh-vegetables-mixed.webp"
+            alt="Aaj ka mandi bhav - fresh vegetables in Indian mandi market 2026"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -454,7 +454,7 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
         </section>
 
         <section className="mb-8">
-          <SH>🏬 Sheher Chunein — State Wise Mandi Bhav</SH>
+          <SH> Sheher Chunein — State Wise Mandi Bhav</SH>
           <p className="text-gray-700 text-sm leading-relaxed mb-4">
             Har sheher mein alag rate hota hai - transport cost, demand, aur supply ki wajah se. Apna sheher chuno aur wahan ka <strong>mandi bhav state wise</strong> dekho:
           </p>
@@ -496,6 +496,20 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
           />
         </div>
 
+        {/* IMAGE 2: Potato & Onion */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-gray-300 shadow-md">
+          <Image
+            src="/images/articles/mandi-bhav-today/mandi-vegetables-potato-onion.webp"
+            alt="Aloo aur pyaaz ka mandi bhav - potato and onion wholesale rates"
+            width={800}
+            height={450}
+            className="w-full rounded-xl"
+          />
+          <p className="text-center text-xs text-gray-600 py-2 bg-gray-50">
+            Aloo aur Pyaaz - Sabse Zyada Use Hone Wali Sabziyan
+          </p>
+        </div>
+
         <section className="mb-10">
           <SH>🥬 Sabzi Mandi Bhav — Aaj Ka Live Rate</SH>
           <p className="text-gray-700 text-sm leading-relaxed mb-4">
@@ -506,6 +520,34 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
           </div>
         </section>
 
+        {/* IMAGE 3: Tomato & Carrot */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-gray-300 shadow-md">
+          <Image
+            src="/images/articles/mandi-bhav-today/mandi-vegetables-tomato-carrot.webp"
+            alt="Tamatar aur gaajar ka bhav - tomato and carrot mandi rates today"
+            width={800}
+            height={450}
+            className="w-full rounded-xl"
+          />
+          <p className="text-center text-xs text-gray-600 py-2 bg-gray-50">
+            Tamatar aur Gaajar - Daily Use Vegetables
+          </p>
+        </div>
+
+        {/* IMAGE 4: Mixed Fruits */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-gray-300 shadow-md">
+          <Image
+            src="/images/articles/mandi-bhav-today/mandi-fresh-fruits-mixed.webp"
+            alt="MandI mein fresh phal - mixed fruits wholesale market prices"
+            width={800}
+            height={450}
+            className="w-full rounded-xl"
+          />
+          <p className="text-center text-xs text-gray-600 py-2 bg-gray-50">
+            Taaze Phal - Fresh Fruits at Mandi
+          </p>
+        </div>
+
         <section className="mb-10">
           <SH>🍎 Phal Mandi Bhav — Fruit Price Today</SH>
           <p className="text-gray-700 text-sm leading-relaxed mb-4">
@@ -515,6 +557,34 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
             {filteredFruit.map((f, i) => <PriceCard key={i} {...f} accent="amber" />)}
           </div>
         </section>
+
+        {/* IMAGE 5: Apple & Banana */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-gray-300 shadow-md">
+          <Image
+            src="/images/articles/mandi-bhav-today/mandi-fruits-apple-banana.webp"
+            alt="Seb aur kela ka bhav - apple and banana wholesale price today"
+            width={800}
+            height={450}
+            className="w-full rounded-xl"
+          />
+          <p className="text-center text-xs text-gray-600 py-2 bg-gray-50">
+            Seb aur Kela - Most Popular Fruits
+          </p>
+        </div>
+
+        {/* IMAGE 6: Mango & Orange */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-gray-300 shadow-md">
+          <Image
+            src="/images/articles/mandi-bhav-today/mandi-fruits-mango-orange.webp"
+            alt="Aam aur santra ka rate - mango and orange mandi bhav today"
+            width={800}
+            height={450}
+            className="w-full rounded-xl"
+          />
+          <p className="text-center text-xs text-gray-600 py-2 bg-gray-50">
+            Aam aur Santra - Seasonal Fruits
+          </p>
+        </div>
 
         <section className="mb-8">
           <SH>💡 Kisan Ke Liye Tips — Kab Bechein, Kab Roke?</SH>
