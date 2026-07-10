@@ -1,6 +1,8 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
@@ -50,9 +52,99 @@ const FAQS_DATA = [
   },
 ];
 
+// Countdown Modal Component
+function CountdownModal({ 
+  title, 
+  message, 
+  redirectUrl, 
+  onClose
+}: { 
+  title: string; 
+  message: string; 
+  redirectUrl: string; 
+  onClose: () => void;
+}) {
+  const [count, setCount] = useState(10);
+  const router = useRouter();
+
+  useEffect(() => {
+    if (count === 0) {
+      if (redirectUrl.startsWith('http')) {
+        window.open(redirectUrl, '_blank', 'noopener,noreferrer');
+      } else {
+        router.push(redirectUrl);
+      }
+      onClose();
+      return;
+    }
+    const timer = setTimeout(() => setCount(count - 1), 1000);
+    return () => clearTimeout(timer);
+  }, [count, redirectUrl, onClose, router]);
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4" onClick={onClose}>
+      <div
+        className="w-full max-w-md rounded-2xl bg-white dark:bg-gray-900 p-6 shadow-2xl border-2 border-green-500"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="text-center">
+          <div className="text-5xl mb-3"></div>
+          <h3 className="text-lg font-black text-gray-800 dark:text-white mb-2">
+            {title}
+          </h3>
+          <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+            {message}
+          </p>
+          
+          <div className="mb-4">
+            <div className="text-6xl font-black text-green-600 dark:text-green-400">
+              {count}
+            </div>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+              seconds mein redirect hoga...
+            </p>
+          </div>
+          
+          <div className="bg-blue-50 dark:bg-blue-900/30 rounded-lg p-3 mb-4">
+            <p className="text-xs text-blue-800 dark:text-blue-300">
+              📌 Kripya dhairya rakhein. Aapko official portal par le jaaya ja raha hai.
+            </p>
+          </div>
+          <button
+            onClick={onClose}
+            className="w-full px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-800 dark:text-white text-sm font-bold rounded-lg transition-colors"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function PmKisanMobileNumberChangeUpdate({ article }: { article: ArticleMeta }) {
+  const router = useRouter();
+  const [modal, setModal] = useState<{ 
+    title: string; 
+    message: string; 
+    url: string; 
+  } | null>(null);
+
+  const handleOfficialLink = (title: string, message: string, url: string) => {
+    setModal({ title, message, url });
+  };
+
   return (
     <>
+      {modal && (
+        <CountdownModal
+          title={modal.title}
+          message={modal.message}
+          redirectUrl={modal.url}
+          onClose={() => setModal(null)}
+        />
+      )}
+
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
           <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
@@ -64,11 +156,11 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Complete Update Guide</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            PM Kisan Mobile Number Change: Purana SIM Band Ho Gaya Toh Naya Number Kaise Jodein?
+            PM Kisan Mobile Number Change 2026: Purana SIM Band Ho Gaya Toh Naya Number Kaise Jodein?
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
+            <span> {fmtDate(PUBLISHED)}</span>
             <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
             <span>⏱️ 15 min read</span>
           </div>
@@ -89,7 +181,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
             priority
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)]">
-            Mobile Number Change — Bina Purane SIM Ke Naya Number Kaise Link Karein
+            PM Kisan Mobile Number Update — Bina Purane SIM Ke Naya Number Kaise Link Karein
           </p>
         </div>
 
@@ -119,7 +211,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           </DB>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
-            Chaliye, step-by-step samajhte hain ki ye kaam kaise hota hai. Online tarika, offline tarika, aur CSC wale tarika — teeno cover karenge.
+            Chaliye, step-by-step samajhte hain ki ye kaam kaise hota hai. Online tarika, offline tarika, aur CSC wala tarika — teeno cover karenge.
           </p>
         </section>
 
@@ -130,15 +222,25 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
             Bhai, sabse pehle ye samajh lo ki PM Kisan portal par "Edit Mobile Number" ka option toh hai. Lekin wo option ek shart par kaam karta hai — aapke paas wo purana SIM card hona chahiye.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Jab aap portal par mobile number change karne jate ho, toh system OTP bhejta hai. Wo OTP kahan jata hai? Aapke <strong>purane registered number</strong> par. Agar wo SIM band hai, toh OTP aayega kahan? Kahin nahi. Isliye online method fail ho jata hai.
+            Jab aap portal par <strong>pm kisan registered mobile change</strong> karne jate ho, toh system OTP bhejta hai. Wo OTP kahan jata hai? Aapke <strong>purane registered number</strong> par. Agar wo SIM band hai, toh OTP aayega kahan? Kahin nahi. Isliye online method fail ho jata hai.
           </p>
           <div className="bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-500 dark:border-amber-700 rounded-xl p-5 mb-6">
             <p className="text-sm font-black text-amber-800 dark:text-amber-300 mb-2">
               ⚠️ Self Service Portal Trap:
             </p>
-            <p className="text-xs text-amber-800 dark:text-amber-300">
+            <p className="text-xs text-amber-800 dark:text-amber-300 mb-3">
               Bahut sare YouTube videos mein bataya jata hai ki "Ghar baithe mobile number change karo". Bhai, wo videos tab kaam karti hain jab purana SIM aapke hath mein ho. Agar SIM dead hai, toh wo videos dekh kar time waste mat karo. Seedha CSC ya BAO jao.
             </p>
+            <button
+              onClick={() => handleOfficialLink(
+                'PM Kisan Self Edit Portal',
+                'Agar aapke paas purana SIM active hai toh yahan se mobile number update kar sakte hain. 10 second baad official portal khulega...',
+                'https://pmkisan.gov.in/EditAadhaarDetails.aspx'
+              )}
+              className="w-full px-4 py-3 bg-amber-600 hover:bg-amber-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
+            >
+              🔗 Yahan Click Karo → Agar Purana SIM Active Hai To Mobile Number Update Hoga
+            </button>
           </div>
           <Image
             src="/images/articles/pm-kisan-mobile-number-change-update/self-service-portal-trap.webp"
@@ -190,6 +292,25 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
               Sarkar ne CSC services ke rates fix kiye hain. Mobile number update ke liye wo ₹20 se ₹30 se zyada nahi le sakta. Agar koi ₹100 ya ₹200 maang raha hai, toh usse behes mat karo, bas utho aur dusre CSC center par chale jao. Ya phir uska CSC ID note karke online complaint kar do.
             </p>
           </WB>
+
+          <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl">
+            <p className="text-sm font-bold text-green-800 dark:text-green-300 mb-2">
+              🔍 Nazdiki CSC Center Kaise Dhundhein?
+            </p>
+            <p className="text-xs text-green-700 dark:text-green-400 mb-3">
+              Official CSC portal par jakar apne area ka nearest center dhundh sakte hain.
+            </p>
+            <button
+              onClick={() => handleOfficialLink(
+                'CSC Center Locator',
+                'Aapke area ka nazdiki CSC center dhundhne ke liye official portal par redirect ho raha hai. 10 second baad khulega...',
+                'https://www.csc.gov.in/register'
+              )}
+              className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
+            >
+              🏪 Yahan Click Karo → Nazdiki CSC Center Ka Address Milega
+            </button>
+          </div>
         </section>
 
         {/* SECTION 3: BAO Offline Method */}
@@ -223,6 +344,25 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           <IB>
             <strong>Dhyan Rahe:</strong> BAO office mein kaam thoda slow hota hai. CSC se 15 din lagte hain, toh BAO se 30 se 45 din lag sakte hain. Isliye pehle CSC try karna.
           </IB>
+
+          <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 rounded-xl">
+            <p className="text-sm font-bold text-blue-800 dark:text-blue-300 mb-2">
+              📞 State Nodal Officer Se Sampark Karein
+            </p>
+            <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
+              Agar BAO office se bhi kaam na bane, toh apne state ke Nodal Officer se direct contact kar sakte hain.
+            </p>
+            <button
+              onClick={() => handleOfficialLink(
+                'State Nodal Officers List',
+                'PM Kisan state nodal officers ki official list par redirect ho raha hai. 10 second baad khulega...',
+                'https://pmkisan.gov.in/NodalOfficers.aspx'
+              )}
+              className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
+            >
+              📋 Yahan Click Karo → Apne State Ke Nodal Officer Ka Number Milega
+            </button>
+          </div>
         </section>
 
         {/* SECTION 4: Documents Checklist */}
@@ -240,7 +380,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
               { doc: 'Ek Passport Size Photo', note: 'Form par lagane ke liye kaam aa jati hai.' },
             ].map(({ doc, note }) => (
               <div key={doc} className="p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-                <p className="font-black text-sm text-[var(--color-text)] mb-1"> {doc}</p>
+                <p className="font-black text-sm text-[var(--color-text)] mb-1">📄 {doc}</p>
                 <p className="text-xs text-[var(--color-text-muted)]">{note}</p>
               </div>
             ))}
@@ -311,6 +451,25 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
             Jab naye number par OTP aane lage, toh samajh jao kaam ho gaya. Ab aap <Link href="/articles/PmKisanEkycOnline2026" className="underline text-green-700 dark:text-green-400">eKYC</Link> bhi kar sakte ho aur status bhi check kar sakte ho.
           </p>
+
+          <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl">
+            <p className="text-sm font-bold text-green-800 dark:text-green-300 mb-2">
+               Beneficiary Status Check Karein
+            </p>
+            <p className="text-xs text-green-700 dark:text-green-400 mb-3">
+              Official portal par apna status check karne ke liye niche button par click karein.
+            </p>
+            <button
+              onClick={() => handleOfficialLink(
+                'PM Kisan Beneficiary Status',
+                'PM Kisan beneficiary status check portal par redirect ho raha hai. 10 second baad khulega...',
+                'https://pmkisan.gov.in/BeneficiaryStatus.aspx'
+              )}
+              className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
+            >
+              ✅ Yahan Click Karo → Apna Naam List Mein Check Kar Sakte Hain
+            </button>
+          </div>
         </section>
 
         {/* SECTION 7: Does it affect Kist? */}
@@ -336,7 +495,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Aksar Puche Jane Wale Sawal
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="Mobile Number Change FAQ" />
+          <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Mobile Number Change FAQ 2026" />
         </section>
 
         <GovLink
