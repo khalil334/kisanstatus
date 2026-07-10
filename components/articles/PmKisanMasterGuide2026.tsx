@@ -1,12 +1,13 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const PUBLISHED = '2026-07-05T08:00:00+05:30';
-const MODIFIED = '2026-07-05T08:00:00+05:30';
+const MODIFIED = '2026-07-11T08:00:00+05:30';
 
 const RELATED = [
   { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply', emoji: '💳' },
@@ -48,10 +49,92 @@ const FAQS_DATA = [
   },
 ];
 
+function CountdownModal({ 
+  title, 
+  message, 
+  redirectUrl, 
+  onClose 
+}: { 
+  title: string; 
+  message: string; 
+  redirectUrl: string; 
+  onClose: () => void;
+}) {
+  const [count, setCount] = useState(10);
+
+  useEffect(() => {
+    if (count === 0) {
+      window.open(redirectUrl, '_blank', 'noopener,noreferrer');
+      onClose();
+      return;
+    }
+    const timer = setTimeout(() => setCount(count - 1), 1000);
+    return () => clearTimeout(timer);
+  }, [count, redirectUrl, onClose]);
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4" onClick={onClose}>
+      <div
+        className="w-full max-w-sm rounded-2xl bg-white dark:bg-gray-900 p-6 shadow-2xl border-2 border-green-500"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="text-center">
+          <div className="text-5xl mb-3">⏳</div>
+          <h3 className="text-lg font-black text-gray-800 dark:text-white mb-2">
+            {title}
+          </h3>
+          <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+            {message}
+          </p>
+          
+          <div className="mb-4">
+            <div className="text-6xl font-black text-green-600 dark:text-green-400">
+              {count}
+            </div>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+              seconds mein official portal khulega...
+            </p>
+          </div>
+          
+          <div className="bg-blue-50 dark:bg-blue-900/30 rounded-lg p-3 mb-4">
+            <p className="text-xs text-blue-800 dark:text-blue-300">
+              📌 Thoda wait karo. Official PM Kisan portal khulne wala hai.
+            </p>
+          </div>
+          <button
+            onClick={onClose}
+            className="w-full px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-800 dark:text-white text-sm font-bold rounded-lg transition-colors"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function PmKisanMasterGuide2026({ article }: { article: ArticleMeta }) {
+  const [modal, setModal] = useState<{ 
+    title: string; 
+    message: string; 
+    url: string; 
+  } | null>(null);
+
+  const handleOfficialLink = (title: string, message: string, url: string) => {
+    setModal({ title, message, url });
+  };
+
   return (
     <>
-      {/* Header */}
+      {modal && (
+        <CountdownModal
+          title={modal.title}
+          message={modal.message}
+          redirectUrl={modal.url}
+          onClose={() => setModal(null)}
+        />
+      )}
+
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
           <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
@@ -63,7 +146,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">🌾 Master Guide 2026</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            PM Kisan 2026: Registration Se Lekar Payment Tak — Har Problem Ka Solution Ek Jagah
+            PM Kisan Complete Guide 2026: Registration Se Lekar Payment Tak — Har Problem Ka Solution Ek Jagah
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
@@ -76,7 +159,6 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* IMAGE 1: Hero */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/articles/pm-kisan-complete-guide/hero.webp'}
@@ -93,7 +175,6 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
           </p>
         </div>
 
-        {/* Real Hook */}
         <div className="my-6 p-5 bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-400 dark:border-amber-700 border-l-[6px] rounded-xl">
           <h2 className="text-base font-black text-amber-800 dark:text-amber-300 mb-2">Sach Baat</h2>
           <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed mb-2">
@@ -104,11 +185,10 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
           </p>
         </div>
 
-        {/* Section 1: What Is PM Kisan */}
         <section className="mb-8">
-          <SH>PM Kisan Kya Hai?</SH>
+          <SH>PM Kisan Kya Hai? (PM Kisan Samman Nidhi Scheme)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Central government ki ek scheme hai ye. Har saal ₹6,000 milte hain - teen installments mein (har 4 mahine mein ₹2,000). Seedha aapke bank account mein aata hai paisa.
+            Central government ki ek scheme hai ye. <strong>PM Kisan Samman Nidhi</strong> ke naam se bhi jaani jaati hai. Har saal ₹6,000 milte hain - teen installments mein (har 4 mahine mein ₹2,000). Seedha aapke bank account mein aata hai paisa.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Kaun le sakta hai? Jo kheti karta hai. Chahe zameen 0.1 acre ho ya 50 acre - farak nahi padta. Tenant farmer bhi le sakta hai, bas zameen wale ka NOC chahiye.
@@ -118,9 +198,8 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
           </IB>
         </section>
 
-        {/* Section 2: Registration */}
         <section className="mb-8">
-          <SH>Registration Kaise Kare?</SH>
+          <SH>PM Kisan Registration Process Kaise Kare?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Do tarike hain - ya toh ghar baithe online kar lo, ya CSC center jaake karwao. Dono mein se jo aapko comfortable lage.
           </p>
@@ -136,6 +215,25 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
             <SI n={7}>Documents upload karo - Aadhaar, Khatauni, Passbook ki photo</SI>
             <SI n={8}>Submit karo - reference number ka screenshot zaroor le lo</SI>
           </StepList>
+
+          <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl">
+            <p className="text-sm font-bold text-green-800 dark:text-green-300 mb-2">
+              🔍 Abhi Registration Karo
+            </p>
+            <p className="text-xs text-green-700 dark:text-green-400 mb-3">
+              Official PM Kisan portal par jakar apna <strong>pm kisan online registration</strong> karo. 10 second baad portal khulega.
+            </p>
+            <button
+              onClick={() => handleOfficialLink(
+                'PM Kisan Registration Portal',
+                'PM Kisan portal khulne wala hai. Thoda wait karo...',
+                'https://pmkisan.gov.in'
+              )}
+              className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
+            >
+              📥 Yahan Click Karo → PM Kisan Portal Khulega
+            </button>
+          </div>
 
           <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">Tarika 2: CSC Center</h3>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -156,7 +254,6 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
           </WB>
         </section>
 
-        {/* IMAGE 2: Documents Checklist */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-complete-guide/documents-checklist.webp"
@@ -172,9 +269,8 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
           </p>
         </div>
 
-        {/* Section 3: eKYC */}
         <section className="mb-8">
-          <SH>eKYC Kyun Zaroori Hai?</SH>
+          <SH>PM Kisan eKYC Kaise Kare? (OTP + Biometric)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Bina eKYC ke payment nahi aayegi - ye yaad rakhna. 2023 se mandatory ho gaya hai. Aadhaar se aapki identity confirm hoti hai, phir hi paisa aata hai.
           </p>
@@ -197,7 +293,6 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
           </DB>
         </section>
 
-        {/* IMAGE 3: eKYC Process */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-complete-guide/ekyc-process.webp"
@@ -213,15 +308,33 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
           </p>
         </div>
 
-        {/* Section 4: Status Check */}
         <section className="mb-8">
-          <SH>Payment Status Kaise Check Kare?</SH>
+          <SH>PM Kisan Payment Status Check Kaise Kare?</SH>
           <StepList>
             <SI n={1}>pmkisan.gov.in kholo - Farmers Corner mein jao</SI>
             <SI n={2}>Beneficiary Status par click karo</SI>
             <SI n={3}>Aadhaar number daalo - Get Data dabao</SI>
             <SI n={4}>Complete history dikh jayegi - kitni aayi, kitni pending</SI>
           </StepList>
+
+          <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 rounded-xl">
+            <p className="text-sm font-bold text-blue-800 dark:text-blue-300 mb-2">
+              🔍 Status Check Karo
+            </p>
+            <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
+              Official portal par jakar apna <strong>pm kisan payment status check</strong> karo. 10 second baad portal khulega.
+            </p>
+            <button
+              onClick={() => handleOfficialLink(
+                'PM Kisan Status Check',
+                'PM Kisan portal khulne wala hai. Thoda wait karo...',
+                'https://pmkisan.gov.in/BeneficiaryStatus.aspx'
+              )}
+              className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
+            >
+              📥 Yahan Click Karo → Status Check Hoga
+            </button>
+          </div>
 
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
             <table className="w-full text-sm border-collapse">
@@ -250,7 +363,6 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
           </div>
         </section>
 
-        {/* Section 5: Payment Problems */}
         <section className="mb-8">
           <SH>Payment Kyun Nahi Aayi? — 5 Reasons</SH>
           <div className="space-y-3">
@@ -269,7 +381,6 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
           </div>
         </section>
 
-        {/* IMAGE 4: Payment Success */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-complete-guide/payment-success.webp"
@@ -285,9 +396,8 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
           </p>
         </div>
 
-        {/* Section 6: Name Correction */}
         <section className="mb-8">
-          <SH>Naam Galat Hai — Kaise Theek Kare?</SH>
+          <SH>PM Kisan Naam Correction Kaise Kare?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Registration mein typing mistake ho gayi? Koi baat nahi - ye common hai. Online theek ho jata hai, ghar baithe.
           </p>
@@ -304,9 +414,8 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
           </IB>
         </section>
 
-        {/* Section 7: Rejected List */}
         <section className="mb-8">
-          <SH>Rejected List Mein Naam — Ab Kya?</SH>
+          <SH>PM Kisan Rejected List Fix Kaise Kare?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Pehle reason dekho portal par - kyun reject hua. Phir usko fix karo.
           </p>
@@ -328,9 +437,8 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
           </WB>
         </section>
 
-        {/* Section 8: Mobile Number Change */}
         <section className="mb-8">
-          <SH>Mobile Number Change Kaise Kare?</SH>
+          <SH>PM Kisan Mobile Number Change Kaise Kare?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Purana number band ho gaya? Koi baat nahi - update ho jata hai.
           </p>
@@ -346,7 +454,6 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
           </div>
         </section>
 
-        {/* Section 9: Installment History */}
         <section className="mb-8">
           <SH>Purani Installments Ka Hisaab</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -386,7 +493,6 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
           </div>
         </section>
 
-        {/* IMAGE 5: State Map */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-complete-guide/state-map.webp"
@@ -402,7 +508,6 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
           </p>
         </div>
 
-        {/* Section 10: Common Problems */}
         <section className="mb-8">
           <SH>10 Common Problems — Quick Fixes</SH>
           <div className="space-y-2">
@@ -426,9 +531,8 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
           </div>
         </section>
 
-        {/* Section 11: Helpline */}
         <section className="mb-8">
-          <SH>Help Kahan Se Le?</SH>
+          <SH>PM Kisan Helpline Number Aur Help Kahan Se Le?</SH>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
               <p className="font-black text-green-800 dark:text-green-300 text-sm mb-2">📞 Helpline</p>
@@ -450,7 +554,6 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
           </div>
         </section>
 
-        {/* IMAGE 6: Rejection Fix */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-complete-guide/rejection-fix.webp"
@@ -466,17 +569,15 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
           </p>
         </div>
 
-        {/* FAQ */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Aksar Puche Jane Wale Sawal
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Master Guide FAQ 2026 — Real Answers" />
+          <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Master Guide FAQ 2026" />
         </section>
 
-        {/* Conclusion */}
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Bottom Line</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Seedhi Baat</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
             PM Kisan simple scheme hai. Bas teen cheezein yaad rakho:
           </p>
@@ -490,13 +591,24 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
           </p>
         </div>
 
-        <GovLink
-          href="https://pmkisan.gov.in"
-          label="PM Kisan Official Portal"
-          guide="Abhi Check Karo"
-          guideHref="/articles/PmKisan24viKist2026"
-          portalName="pmkisan.gov.in"
-        />
+        <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 border-l-[6px] rounded-xl">
+          <h3 className="text-base font-black text-blue-800 dark:text-blue-300 mb-2">
+            🔗 PM Kisan Official Portal
+          </h3>
+          <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
+            <strong>PM Kisan registration</strong>, <strong>eKYC</strong>, <strong>payment status check</strong>, ya koi bhi kaam ke liye official portal par jaayein. 10 second baad portal khulega.
+          </p>
+          <button
+            onClick={() => handleOfficialLink(
+              'PM Kisan Official Portal',
+              'PM Kisan portal khulne wala hai. Thoda wait karo...',
+              'https://pmkisan.gov.in'
+            )}
+            className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
+          >
+            📥 Yahan Click Karo → PM Kisan Portal Khulega
+          </button>
+        </div>
 
         <CalcBanner
           icon="💰"
