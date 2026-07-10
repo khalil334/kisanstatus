@@ -1,54 +1,25 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { useSearchParams, useRouter } from 'next/navigation';
+import { useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function LandSeedingDownloadPage() {
   const searchParams = useSearchParams();
-  const router = useRouter();
   const [isRedirecting, setIsRedirecting] = useState(false);
 
-  const state = searchParams.get('state');
-  const redirectUrl = searchParams.get('redirect');
-  const finalUrl = redirectUrl || 'https://pmkisan.gov.in';
-
-  const stateInfo: Record<string, { name: string; portal: string; details: string }> = {
-    'uttar-pradesh': {
-      name: 'Uttar Pradesh',
-      portal: 'UP Bhulekh Portal',
-      details: 'UP land seeding form, khasra khatauni, PM Kisan beneficiary list',
-    },
-    'bihar': {
-      name: 'Bihar',
-      portal: 'Bihar Bhumi Portal',
-      details: 'Bihar land seeding form, khasra naksha, PM Kisan status check',
-    },
-    'madhya-pradesh': {
-      name: 'Madhya Pradesh',
-      portal: 'MP Bhu-Abhilekh Portal',
-      details: 'MP land seeding form, khatauni online, PM Kisan land record',
-    },
-    'rajasthan': {
-      name: 'Rajasthan',
-      portal: 'Rajasthan Apna Khata Portal',
-      details: 'Rajasthan land seeding form, jamabandi, PM Kisan application',
-    },
-  };
-
-  const info = state ? stateInfo[state] : null;
+  const state = searchParams.get('state') || 'State';
+  const redirectUrl = searchParams.get('redirect') || '/';
 
   const handleDownload = () => {
     setIsRedirecting(true);
     setTimeout(() => {
-      window.open(finalUrl, '_blank', 'noopener,noreferrer');
+      window.open(redirectUrl, '_blank', 'noopener,noreferrer');
     }, 500);
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-800">
-      {/* Header */}
+    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white dark:from-gray-900 dark:to-gray-800">
       <div className="bg-[var(--color-primary)] py-6">
         <div className="container-site max-w-3xl">
           <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
@@ -61,25 +32,23 @@ export default function LandSeedingDownloadPage() {
             <span className="text-white font-bold">Download</span>
           </nav>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight">
-            {info ? `${info.name} Land Seeding Form Download` : 'Land Seeding Form Download'}
+            {state} Land Seeding Form Download
           </h1>
         </div>
       </div>
 
       <div className="container-site max-w-3xl py-12 px-4">
-        {/* Main Card */}
-        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl border-2 border-blue-500 dark:border-blue-700 p-6 md:p-8 mb-8">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl border-2 border-green-500 dark:border-green-700 p-6 md:p-8 mb-8">
           <div className="text-center mb-6">
             <div className="text-6xl mb-4">📄</div>
             <h2 className="text-xl md:text-2xl font-black text-gray-800 dark:text-white mb-3">
-              {info ? `${info.name} Land Seeding Form` : 'Land Seeding Form'}
+              {state} Land Seeding Form
             </h2>
             <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
-              {info?.details}
+              Official government portal se {state} ka land seeding form download karein
             </p>
           </div>
 
-          {/* Download Button */}
           <div className="mb-6">
             <button
               onClick={handleDownload}
@@ -103,11 +72,10 @@ export default function LandSeedingDownloadPage() {
               )}
             </button>
             <p className="text-xs text-gray-500 dark:text-gray-400 mt-3 text-center">
-              Click karne par aap {info?.portal || 'Official Portal'} par redirect honge
+              Click karne par aap {state} ke official bhulekh portal par redirect honge
             </p>
           </div>
 
-          {/* Info Box */}
           <div className="bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-200 dark:border-blue-800 rounded-xl p-4 mb-6">
             <h3 className="font-bold text-blue-800 dark:text-blue-300 mb-2 text-sm">
               📌 Zaroori Jaankari:
@@ -121,7 +89,6 @@ export default function LandSeedingDownloadPage() {
             </ul>
           </div>
 
-          {/* Alternative Links */}
           <div className="border-t-2 border-gray-200 dark:border-gray-700 pt-6">
             <h3 className="font-bold text-gray-800 dark:text-white mb-4 text-center">
               Anya Rajya (Other States):
@@ -155,40 +122,10 @@ export default function LandSeedingDownloadPage() {
           </div>
         </div>
 
-        {/* SEO Content */}
-        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 mb-8">
-          <h2 className="text-lg font-black text-gray-800 dark:text-white mb-4">
-            {info ? `${info.name} Land Seeding Form - Complete Guide` : 'Land Seeding Form Process'}
-          </h2>
-          <div className="prose prose-sm dark:prose-invert max-w-none text-gray-600 dark:text-gray-300 space-y-3">
-            <p>
-              {info ? `${info.name} mein PM Kisan yojana ka labh lene ke liye land seeding form bharna bahut zaroori hai.` : 'PM Kisan yojana ka labh lene ke liye land seeding form bharna bahut zaroori hai.'}
-            </p>
-            <p>
-              Is form ke through aapki zameen ka record government database mein link hota hai.
-              Khasra number, khatauni details aur zameen ka area form mein bharna padta hai.
-            </p>
-            <p>
-              <strong>Documents Required:</strong>
-            </p>
-            <ul className="list-disc list-inside space-y-1">
-              <li>Aadhaar Card</li>
-              <li>Khatauni Copy</li>
-              <li>Khasra Naksha</li>
-              <li>Bank Passbook</li>
-              <li>Passport Size Photo</li>
-            </ul>
-            <p>
-              <strong>Processing Time:</strong> Form submit karne ke baad Patwari verification aur BAO approval mein 15-30 din lagte hain.
-            </p>
-          </div>
-        </div>
-
-        {/* Back Link */}
         <div className="text-center">
           <Link
             href="/articles/pm-kisan-land-seeding-form-pdf-2026"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg transition-colors"
           >
             ← Wapas Land Seeding Form Guide Par Jaayein
           </Link>
