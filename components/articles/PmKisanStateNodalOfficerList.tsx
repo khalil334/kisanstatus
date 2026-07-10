@@ -1,12 +1,13 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const PUBLISHED = '2026-07-10T08:00:00+05:30';
-const MODIFIED = '2026-07-10T08:00:00+05:30';
+const MODIFIED = '2026-07-11T08:00:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisanPaymentFailedFix2026', title: 'Payment Failed Fix', emoji: '💸' },
@@ -75,9 +76,92 @@ const FAQS_DATA = [
   },
 ];
 
+function CountdownModal({ 
+  title, 
+  message, 
+  redirectUrl, 
+  onClose 
+}: { 
+  title: string; 
+  message: string; 
+  redirectUrl: string; 
+  onClose: () => void;
+}) {
+  const [count, setCount] = useState(10);
+
+  useEffect(() => {
+    if (count === 0) {
+      window.open(redirectUrl, '_blank', 'noopener,noreferrer');
+      onClose();
+      return;
+    }
+    const timer = setTimeout(() => setCount(count - 1), 1000);
+    return () => clearTimeout(timer);
+  }, [count, redirectUrl, onClose]);
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4" onClick={onClose}>
+      <div
+        className="w-full max-w-sm rounded-2xl bg-white dark:bg-gray-900 p-6 shadow-2xl border-2 border-green-500"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="text-center">
+          <div className="text-5xl mb-3">⏳</div>
+          <h3 className="text-lg font-black text-gray-800 dark:text-white mb-2">
+            {title}
+          </h3>
+          <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+            {message}
+          </p>
+          
+          <div className="mb-4">
+            <div className="text-6xl font-black text-green-600 dark:text-green-400">
+              {count}
+            </div>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+              seconds mein official portal khulega...
+            </p>
+          </div>
+          
+          <div className="bg-blue-50 dark:bg-blue-900/30 rounded-lg p-3 mb-4">
+            <p className="text-xs text-blue-800 dark:text-blue-300">
+              📌 Thoda wait karo. Official PM Kisan portal khulne wala hai.
+            </p>
+          </div>
+          <button
+            onClick={onClose}
+            className="w-full px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-800 dark:text-white text-sm font-bold rounded-lg transition-colors"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function PmKisanStateNodalOfficerList({ article }: { article: ArticleMeta }) {
+  const [modal, setModal] = useState<{ 
+    title: string; 
+    message: string; 
+    url: string; 
+  } | null>(null);
+
+  const handleOfficialLink = (title: string, message: string, url: string) => {
+    setModal({ title, message, url });
+  };
+
   return (
     <>
+      {modal && (
+        <CountdownModal
+          title={modal.title}
+          message={modal.message}
+          redirectUrl={modal.url}
+          onClose={() => setModal(null)}
+        />
+      )}
+
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
           <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
@@ -87,7 +171,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
             <span>/</span>
             <span className="text-white font-bold">Nodal Officers</span>
           </nav>
-          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Complete Contact List</span>
+          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">PM Kisan Shikayat Contact List 2026</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
             PM Kisan State Nodal Officer Contact List: Shikayat Kahan Karein?
           </h1>
@@ -102,7 +186,6 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* Hero Image */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-state-nodal-officer-list/officer-hero.webp"
@@ -118,14 +201,13 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
           </p>
         </div>
 
-        {/* Introduction */}
         <section className="mb-8">
           <SH>155261 Se Kaam Nahi Ban Raha?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Bhai, national helpline (155261) par call karne ke baad bhi problem solve nahi hui? Ya wahan se koi proper jawab nahi mila? Aise mein frustration hoti hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Ab seedha apne <strong>State Nodal Officer</strong> se contact karo. Har state mein ek officer baitha hai jo specifically PM Kisan ki shikayaten dekhta hai. Ye wo log hain jo actually decisions le sakte hain.
+            Ab seedha apne <strong>PM Kisan state nodal officer</strong> se contact karo. Har state mein ek officer baitha hai jo specifically PM Kisan ki shikayaten dekhta hai. Ye wo log hain jo actually decisions le sakte hain.
           </p>
           
           <Image
@@ -144,15 +226,14 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
           </DB>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
-            Is article mein humne har state ke nodal officer ka naam, email, phone number, aur address diya hai. Saath hi email likhne ka tarika bhi bataya hai. End tak padho, zaroor kaam aayega.
+            Is article mein humne har state ke <strong>pm kisan complaint email address</strong>, phone number, aur address diya hai. Saath hi <strong>pm kisan shikayat kaise karein</strong> ka tarika bhi bataya hai. End tak padho, zaroor kaam aayega.
           </p>
         </section>
 
-        {/* SECTION 1: Who is Nodal Officer */}
         <section className="mb-8">
           <SH>Nodal Officer Kaun Hota Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Dekho bhai, har state mein Agriculture Department ke andar ek officer ko PM Kisan ka incharge banaya jata hai. Usi ko <strong>Nodal Officer</strong> kehte hain.
+            Dekho bhai, har state mein Agriculture Department ke andar ek officer ko PM Kisan ka incharge banaya jata hai. Usi ko <strong>PM Kisan nodal officer</strong> kehte hain.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Ye officer directly state government ke under kaam karta hai. Iske paas power hoti hai ki wo:
@@ -169,9 +250,8 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
           </p>
         </section>
 
-        {/* SECTION 2: State Wise List */}
         <section className="mb-8">
-          <SH>State Wise Nodal Officer List</SH>
+          <SH>State Wise PM Kisan Nodal Officer List</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Neeche har state ke nodal officer ki details hain. Apna state dhundo aur contact karo:
           </p>
@@ -199,12 +279,31 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
               </tbody>
             </table>
           </div>
+
+          <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl">
+            <p className="text-sm font-bold text-green-800 dark:text-green-300 mb-2">
+              🔍 Online Complaint Karein
+            </p>
+            <p className="text-xs text-green-700 dark:text-green-400 mb-3">
+              Official PM Kisan portal par jakar apna <strong>pm kisan grievance registration</strong> karo. 10 second baad portal khulega.
+            </p>
+            <button
+              onClick={() => handleOfficialLink(
+                'PM Kisan Grievance Portal',
+                'PM Kisan portal khulne wala hai. Thoda wait karo...',
+                'https://pmkisan.gov.in'
+              )}
+              className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
+            >
+              📥 Yahan Click Karo → PM Kisan Portal Khulega
+            </button>
+          </div>
+
           <IB>
             <strong>Tip:</strong> Email karte time apna Registration Number aur Aadhaar number zaroor likhna. Jaldi reply aata hai.
           </IB>
         </section>
 
-        {/* SECTION 3: Email Template */}
         <section className="mb-8">
           <SH>Email Kaise Likhein? (Complete Template)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -254,7 +353,6 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
           </WB>
         </section>
 
-        {/* SECTION 4: Phone Call Tips */}
         <section className="mb-8">
           <SH>Phone Par Kaise Baat Karein?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -287,7 +385,6 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
           />
         </section>
 
-        {/* SECTION 5: District Level Officers */}
         <section className="mb-8">
           <SH>District Level Officers Se Bhi Contact Kar Sakte Ho</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -309,7 +406,6 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
           </p>
         </section>
 
-        {/* SECTION 6: Grievance Portal */}
         <section className="mb-8">
           <SH>PM Kisan Grievance Portal Ka Use Karein</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -323,6 +419,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
             <SI n={5}>Details likho aur submit karo</SI>
             <SI n={6}>Ek tracking number milega — usko save karo</SI>
           </StepList>
+
           <Image
             src="/images/articles/pm-kisan-state-nodal-officer-list/grievance-portal-screenshot.webp"
             alt="PM Kisan grievance portal screenshot"
@@ -330,12 +427,12 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
             height={600}
             className="w-full rounded-xl my-6"
           />
+
           <IB>
             <strong>Important:</strong> Grievance portal par complaint karne ke baad 30 din ka time milta hai officer ko reply karne ka. Agar 30 din mein reply na aaye, toh dobara complaint karo with old tracking number.
           </IB>
         </section>
 
-        {/* SECTION 7: Common Problems */}
         <section className="mb-8">
           <SH>Kis Type Ki Problems Ke Liye Contact Karein?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -346,43 +443,43 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
               { 
                 problem: 'Payment Fail Ho Gayi', 
                 desc: 'FTO generated hai lekin paisa account mein nahi aaya. 30 din ho gaye.',
-                priority: 'High'
+                priority: 'Turant Karein'
               },
               { 
                 problem: 'Status Rejected Dikh Raha', 
                 desc: 'Aap eligible hain lekin status rejected hai. Reason nahi pata.',
-                priority: 'High'
+                priority: 'Turant Karein'
               },
               { 
                 problem: 'Naam List Se Hat Gaya', 
                 desc: 'Pehle active tha, ab list mein naam nahi aa raha.',
-                priority: 'High'
+                priority: 'Turant Karein'
               },
               { 
                 problem: 'Multiple Kist Pending', 
                 desc: '2-3 kist ek saath pending hain. Koi action nahi ho raha.',
-                priority: 'Medium'
+                priority: 'Jaldi Karein'
               },
               { 
                 problem: 'Data Correction Nahi Ho Raha', 
                 desc: 'Naam ya bank details change karne ki application di thi, lekin kuch nahi hua.',
-                priority: 'Medium'
+                priority: 'Jaldi Karein'
               },
               { 
                 problem: 'Local Officer Help Nahi Kar Rahe', 
                 desc: 'BAO ya patwari se baat ki, lekin wo cooperate nahi kar rahe.',
-                priority: 'High'
+                priority: 'Turant Karein'
               },
             ].map(({ problem, desc, priority }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
                 <div className="flex items-center justify-between mb-2">
                   <p className="font-black text-sm text-[var(--color-text)]">{problem}</p>
                   <span className={`text-xs px-2 py-1 rounded-full ${
-                    priority === 'High' 
+                    priority === 'Turant Karein' 
                       ? 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300' 
                       : 'bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300'
                   }`}>
-                    {priority} Priority
+                    {priority}
                   </span>
                 </div>
                 <p className="text-xs text-[var(--color-text-muted)]">{desc}</p>
@@ -391,7 +488,6 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
           </div>
         </section>
 
-        {/* SECTION 8: Timeline */}
         <section className="mb-8">
           <SH>Reply Aane Mein Kitna Time Lagta Hai?</SH>
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
@@ -400,7 +496,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
                 <tr className="bg-[var(--color-primary)] text-white">
                   <th className="p-3 text-left">Contact Method</th>
                   <th className="p-3 text-left">Expected Time</th>
-                  <th className="p-3 text-left">Success Rate</th>
+                  <th className="p-3 text-left">Kitne Logon Ko Kaam Banta</th>
                 </tr>
               </thead>
               <tbody>
@@ -425,7 +521,6 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
           </p>
         </section>
 
-        {/* SECTION 9: What to Attach */}
         <section className="mb-8">
           <SH>Email/Complaint Ke Saath Kya Attach Karein?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -457,7 +552,6 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
           </WB>
         </section>
 
-        {/* SECTION 10: Follow Up */}
         <section className="mb-8">
           <SH>Follow Up Kaise Karein?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -484,7 +578,6 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
           />
         </section>
 
-        {/* SECTION 11: Important Tips */}
         <section className="mb-8">
           <SH>Zaroori Tips Jo Yaad Rakhein</SH>
           <div className="space-y-3">
@@ -516,7 +609,6 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
           </div>
         </section>
 
-        {/* SECTION 12: When to Escalate */}
         <section className="mb-8">
           <SH>Kab Higher Authority Ko Likhein?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -531,33 +623,58 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
             ].map(({ authority, when }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
                 <p className="font-black text-sm text-[var(--color-text)] mb-1">🏛️ {authority}</p>
-                <p className="text-xs text-[var(--color-text-muted)]"><strong>When:</strong> {when}</p>
+                <p className="text-xs text-[var(--color-text-muted)]"><strong>Kab Likhein:</strong> {when}</p>
               </div>
             ))}
           </div>
         </section>
 
-        {/* FAQ */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Aksar Puche Jane Wale Sawal
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="Nodal Officer Contact FAQ" />
+          <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Nodal Officer Contact FAQ 2026" />
         </section>
 
-        <GovLink
-          href="https://pmkisan.gov.in"
-          label="PM Kisan Grievance Portal"
-          guide="Online Complaint Karein"
-          guideHref="/articles/PmKisanMasterGuide2026"
-          portalName="pmkisan.gov.in"
-        />
+        <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Seedhi Baat</h3>
+          <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
+            Bhai, PM Kisan shikayat karna mushkil nahi hai. Bas teen cheezein yaad rakho:
+          </p>
+          <ol className="space-y-2 text-sm text-green-800 dark:text-green-300 list-decimal list-inside">
+            <li>Pehle 155261 par call karo</li>
+            <li>Kaam na bane toh state nodal officer ko email karo</li>
+            <li>Uske baad bhi kaam na bane toh grievance portal par complaint karo</li>
+          </ol>
+          <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mt-3">
+            15-30 din mein problem solve ho jayegi. Simple hai!
+          </p>
+        </div>
+
+        <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 border-l-[6px] rounded-xl">
+          <h3 className="text-base font-black text-blue-800 dark:text-blue-300 mb-2">
+            🔗 PM Kisan Official Portal
+          </h3>
+          <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
+            <strong>PM Kisan status check</strong>, <strong>PM Kisan grievance</strong>, ya koi bhi kaam ke liye official portal par jaayein. 10 second baad portal khulega.
+          </p>
+          <button
+            onClick={() => handleOfficialLink(
+              'PM Kisan Official Portal',
+              'PM Kisan portal khulne wala hai. Thoda wait karo...',
+              'https://pmkisan.gov.in'
+            )}
+            className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
+          >
+            📥 Yahan Click Karo → PM Kisan Portal Khulega
+          </button>
+        </div>
 
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
           { href: '/articles/PmKisanPaymentFailedFix2026', l: '💸 Payment Fix' },
-          { href: '/articles/PmKisanMasterGuide2026', l: ' Master Guide' },
+          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
           { href: '/articles/PmKisanBeneficiaryList2026', l: '📋 Beneficiary List' },
         ]} />
         <Disclaimer />
