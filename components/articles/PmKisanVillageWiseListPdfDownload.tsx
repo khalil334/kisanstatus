@@ -10,7 +10,7 @@ const PUBLISHED = '2026-07-10T08:00:00+05:30';
 const MODIFIED = '2026-07-11T08:00:00+05:30';
 
 const RELATED = [
-  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List Guide', emoji: '📋' },
+  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List Guide', emoji: '' },
   { slug: 'PmKisanRejectedStatusReApplyGuide', title: 'Rejected Status Fix', emoji: '❌' },
   { slug: 'PmKisanMasterGuide2026', title: 'Master Guide', emoji: '' },
   { slug: 'PmKisanStateNodalOfficerList', title: 'Nodal Officer List', emoji: '📞' },
@@ -319,12 +319,34 @@ export default function PmKisanVillageWiseListPdfDownload({ article }: { article
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
-              { state: 'Uttar Pradesh', portal: 'upbhulekh.gov.in', url: 'https://upbhulekh.gov.in', note: 'Khatauni mein beneficiary status dikhta hai.' },
+              { state: 'Andhra Pradesh', portal: 'landrecords.ap.gov.in', url: 'https://landrecords.ap.gov.in', note: 'Mee Bhoomi portal par beneficiary details.' },
+              { state: 'Arunachal Pradesh', portal: 'dipp.gov.in', url: 'https://dipp.gov.in', note: 'State land records department.' },
+              { state: 'Assam', portal: 'landrecords.assam.gov.in', url: 'https://landrecords.assam.gov.in', note: 'Assam land record portal.' },
               { state: 'Bihar', portal: 'biharbhumi.bihar.gov.in', url: 'https://biharbhumi.bihar.gov.in', note: 'Bhumi Jankari portal par roster milta hai.' },
-              { state: 'Madhya Pradesh', portal: 'mpbhulekh.gov.in', url: 'https://bhu-abhilekh.nic.in', note: 'Bhu-Abhilekh se village report nikalo.' },
-              { state: 'Rajasthan', portal: 'apnakhata.raj.nic.in', url: 'https://apnakhata.raj.nic.in', note: 'E-Dharti par gaon wise report aati hai.' },
-              { state: 'Maharashtra', portal: 'mahabhulekh.maharashtra.gov.in', url: 'https://bhulekh.mahabhumi.gov.in', note: '7/12 Utara par PM Kisan status link hai.' },
+              { state: 'Chhattisgarh', portal: 'bhuiyan.cg.nic.in', url: 'https://bhuiyan.cg.nic.in', note: 'Bhuiyan portal se village data.' },
+              { state: 'Delhi', portal: 'delhilandrecords.gov.in', url: 'https://delhilandrecords.gov.in', note: 'Delhi land records portal.' },
+              { state: 'Goa', portal: 'dlss.goa.gov.in', url: 'https://dlss.goa.gov.in', note: 'Goa land survey system.' },
+              { state: 'Gujarat', portal: 'anyror.gujarat.gov.in', url: 'https://anyror.gujarat.gov.in', note: 'Any ROR Gujarat portal.' },
+              { state: 'Haryana', portal: 'jamabandi.nic.in', url: 'https://jamabandi.nic.in', note: 'Jamabandi Haryana portal.' },
+              { state: 'Himachal Pradesh', portal: 'himbhulekh.hp.nic.in', url: 'https://himbhulekh.hp.nic.in', note: 'HP Bhulekh portal.' },
+              { state: 'Jharkhand', portal: 'jharbhoomi.jharkhand.gov.in', url: 'https://jharbhoomi.jharkhand.gov.in', note: 'Jharbhoomi portal se details.' },
               { state: 'Karnataka', portal: 'landrecords.karnataka.gov.in', url: 'https://bhoomi.karnataka.gov.in', note: 'Bhoomi RTC se details check karo.' },
+              { state: 'Kerala', portal: 'erekha.kerala.gov.in', url: 'https://erekha.kerala.gov.in', note: 'E-Rekha Kerala portal.' },
+              { state: 'Madhya Pradesh', portal: 'mpbhulekh.gov.in', url: 'https://bhu-abhilekh.nic.in', note: 'Bhu-Abhilekh se village report nikalo.' },
+              { state: 'Maharashtra', portal: 'mahabhulekh.maharashtra.gov.in', url: 'https://bhulekh.mahabhumi.gov.in', note: '7/12 Utara par PM Kisan status link hai.' },
+              { state: 'Manipur', portal: 'manipur.gov.in', url: 'https://manipur.gov.in', note: 'State land records.' },
+              { state: 'Meghalaya', portal: 'meghalaya.gov.in', url: 'https://meghalaya.gov.in', note: 'Meghalaya land records.' },
+              { state: 'Odisha', portal: 'bhulekh.ori.nic.in', url: 'https://bhulekh.ori.nic.in', note: 'Odisha Bhulekh portal.' },
+              { state: 'Punjab', portal: 'jamabandi.punjab.gov.in', url: 'https://jamabandi.punjab.gov.in', note: 'Punjab Jamabandi portal.' },
+              { state: 'Rajasthan', portal: 'apnakhata.raj.nic.in', url: 'https://apnakhata.raj.nic.in', note: 'E-Dharti par gaon wise report aati hai.' },
+              { state: 'Sikkim', portal: 'sikkim.gov.in', url: 'https://sikkim.gov.in', note: 'Sikkim land records.' },
+              { state: 'Tamil Nadu', portal: 'eservices.tnreg.gov.in', url: 'https://eservices.tnreg.gov.in', note: 'Tamil Nadu land records.' },
+              { state: 'Telangana', portal: 'dharani.telangana.gov.in', url: 'https://dharani.telangana.gov.in', note: 'Dharani portal Telangana.' },
+              { state: 'Tripura', portal: 'landrecords.tripura.gov.in', url: 'https://landrecords.tripura.gov.in', note: 'Tripura land records.' },
+              { state: 'Uttar Pradesh', portal: 'upbhulekh.gov.in', url: 'https://upbhulekh.gov.in', note: 'Khatauni mein beneficiary status dikhta hai.' },
+              { state: 'Uttarakhand', portal: 'bhulekh.uk.gov.in', url: 'https://bhulekh.uk.gov.in', note: 'UK Bhulekh portal.' },
+              { state: 'West Bengal', portal: 'banglarbhumi.gov.in', url: 'https://banglarbhumi.gov.in', note: 'Banglar Bhumi WB portal.' },
+              { state: 'Jammu & Kashmir', portal: 'jklandrecords.nic.in', url: 'https://jklandrecords.nic.in', note: 'JK land records portal.' },
             ].map(({ state, portal, url, note }) => (
               <div key={state} className="p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
                 <p className="font-black text-sm text-[var(--color-text)] mb-1">🏛️ {state}</p>
