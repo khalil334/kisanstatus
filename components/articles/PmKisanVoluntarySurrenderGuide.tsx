@@ -88,10 +88,10 @@ export default function PmKisanVoluntarySurrenderGuide({ article }: { article: A
         <section className="mb-8">
           <SH>Galti Ho Gayi? Koi Baat Nahi</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Bhai, kabhi kabhi galti se log register ho jaate hain. Jaise koi government teacher ya pensioner. Baad mein pata chalta hai ki wo eligible nahi the.
+            Kabhi kabhi aisa hota hai ki log galti se register ho jaate hain. Jaise koi government teacher ya pensioner. Baad mein pata chalta hai ki wo eligible nahi the.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Aise mein darrne ki baat nahi hai. Sarkar ne <strong>Voluntary Surrender</strong> ka option diya hai. Isse aap apne aap ko scheme se hata sakte ho.
+            Aise mein ghabrane ki zaroorat nahi hai. Sarkar ne <strong>Voluntary Surrender</strong> ka option diya hai. Isse aap apne aap ko scheme se hata sakte ho.
           </p>
           
           <Image
@@ -103,9 +103,9 @@ export default function PmKisanVoluntarySurrenderGuide({ article }: { article: A
           />
 
           <DB>
-            <strong>Real Story:</strong>
+            <strong>Field Experience:</strong>
             <p className="text-xs text-gray-700 dark:text-gray-300 mt-2">
-              Lucknow ke Suresh ji government school mein teacher hain. Unhone galti se PM Kisan ke liye apply kar diya. 3 kist mil gayi. Phir ek din news mein suna ki government employees eligible nahi hain. Wo ghabra gaye. Phir unhone voluntary surrender kiya. Jo paisa mil chuka tha wo wapas nahi karna pada. Bas aage se band ho gaya.
+              Kai gaonon mein dekha gaya hai ki government employees ne galti se apply kar diya. Kuch ko 2-3 kist bhi mil gayi. Jab unhe pata chala ki wo eligible nahi hain, toh unhone voluntary surrender kiya. Jo paisa mil chuka tha wo wapas nahi karna pada. Bas aage se band ho gaya.
             </p>
           </DB>
 
@@ -118,7 +118,7 @@ export default function PmKisanVoluntarySurrenderGuide({ article }: { article: A
         <section className="mb-8">
           <SH>Kaun Logon Ko Surrender Karna Chahiye?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Bhai, ye logon ko turant surrender karna chahiye:
+            Ye logon ko turant surrender karna chahiye:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
             {[
@@ -331,7 +331,7 @@ export default function PmKisanVoluntarySurrenderGuide({ article }: { article: A
         <section className="mb-8">
           <SH>Agar Surrender Nahi Kiya Toh?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Bhai, agar eligible nahi ho aur surrender bhi nahi kiya, toh ye problems ho sakti hain:
+            Agar eligible nahi ho aur surrender bhi nahi kiya, toh ye problems ho sakti hain:
           </p>
           <div className="space-y-3">
             {[
