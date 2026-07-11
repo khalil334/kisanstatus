@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
+import { SI, StepList, IB, WB, DB, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const PUBLISHED = '2026-07-10T08:00:00+05:30';
@@ -12,131 +12,123 @@ const MODIFIED = '2026-07-11T08:00:00+05:30';
 const RELATED = [
   { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List Guide', emoji: '📋' },
   { slug: 'PmKisanRejectedStatusReApplyGuide', title: 'Rejected Status Fix', emoji: '❌' },
-  { slug: 'PmKisanMasterGuide2026', title: 'Master Guide', emoji: '📚' },
+  { slug: 'PmKisanMasterGuide2026', title: 'Master Guide', emoji: '' },
   { slug: 'PmKisanStateNodalOfficerList', title: 'Nodal Officer List', emoji: '📞' },
 ];
 
 const FAQS_DATA = [
   {
-    q: 'Kya main apne gaon ki puri list ek saath download kar sakta hoon?',
-    a: 'Haan bhai, PM Kisan portal par "Beneficiary List" option mein State, District, Block aur Village select karke aap pure gaon ki PDF nikal sakte ho.',
+    q: 'Mere gaon mein karib 500 kisan hain, sabka data download karne mein kitna time lagega?',
+    a: 'Server load par depend karta hai. Dopahar 12-2 baje avoid karo—lunch break mein traffic zyada hota hai, slow chalta hai. Subah 9-10 baje ya shaam 7 ke baad try karo, fast khulega. Bade gaon ka information 3-4 minute mein aa jata hai.',
   },
   {
-    q: 'Mobile par PDF kaise save karein?',
-    a: 'Jab list screen par aa jaye, toh browser ke menu (3 dots) mein "Share" ya "Print" par click karo. Printer ki jagah "Save as PDF" select kar lo.',
+    q: 'File save ho gayi par phone mein open nahi ho rahi, kya karun?',
+    a: 'Reader app install karo—Adobe Acrobat ya koi bhi free viewer. Ek simple jugaad: WhatsApp par kisi ko forward kar do, wahi khul jayegi. Ya fir Google Drive mein upload karo, wahan se dekh lo.',
   },
   {
-    q: 'Agar mera naam gaon ki list mein nahi hai toh?',
-    a: 'Iska matlab aapki application reject hui hai ya pending hai. Rejected status guide padho aur turant correction karwao.',
+    q: 'Sabke naam dikh rahe hain par mera nahi, bahut pareshani ho rahi hai. Paisa milega ya nahi?',
+    a: 'Pehle individual status check karo pmkisan.gov.in par. Zyadatar cases mein eKYC pending hoti hai, ya phir Patwari ne land verification nahi kiya. Bank account ka IFSC code bhi galat ho sakta hai. CSC jakar 10 minute mein eKYC ho jati hai—wo sabse common issue hai.',
   },
   {
-    q: 'Kya Gram Pradhan ya Patwari is list ko edit kar sakte hain?',
-    a: 'Nahi. Ye list seedha central server se aati hai. Pradhan ya Patwari isme kuch add ya delete nahi kar sakte. Wo sirf verify kar sakte hain.',
+    q: 'Gram Pradhan keh rahe hain unke paas information hai, kya unse le lun ya khud download karun?',
+    a: 'Unke paas jo hai wo purani ho sakti hai—2-3 mahine pehle ki. Naye naam add hote rehte hain. Central website se hi nikalna best hai, latest milega. Agar Pradhan ji ko dikhana hai toh unhe bolo ki aaj ki date wali nikal ke dein.',
   },
   {
-    q: 'PDF bahut heavy hai, khul nahi rahi. Kya karein?',
-    a: 'Bade gaon ki list mein 500-1000 naam ho sakte hain. PC ya laptop par download karo. Mobile par hang ho sakta hai.',
+    q: 'Mere padosi ke khet ka number same hai par uska naam list mein hai mera nahi, aisa kaise?',
+    a: 'Ye serious mamla hai. Ho sakta hai aapne application hi na kiya ho, ya form reject ho gaya aur pata na chala. Zameen ka record alag-alag naam par bhi ho sakta hai. Apna Khasra number Bhulekh par check karo. Same hai toh Patwari se milna padega—wo record dekh kar bata dega.',
   },
   {
-    q: 'Kya pichle saal ki list bhi download kar sakte hain?',
-    a: 'Official portal par mostly current active list dikhti hai. Purani records ke liye apne Block Agriculture Office (BAO) mein application deni padti hai.',
+    q: 'Document download kar li, ab isme se apna naam kaise dhoondhun? Tech zyada nahi aata',
+    a: 'File kholo, upar right corner mein 🔍 (magnifying glass) ka icon hoga. Us par tap karke apna naam type karo—pehle letter se hi suggestions dikhne lagenge. Agar phone mein nahi mil raha toh kisi bacche se karwa lo, 10 second ka kaam hai.',
   },
   {
-    q: 'List mein kisi aur ke naam se meri zameen dikh rahi hai?',
-    a: 'Ye land record ka masla hai. Turant patwari se sampark karo aur Bhulekh/Khatauni mein correction karwao. Phir CSC se PM Kisan update karwao.',
+    q: 'Information mein sirf 10-12 naam hain, mere gaon mein toh 200 se zyada log hain?',
+    a: 'Galat gaon select kar liya hoga. Dobara check karo: State sahi hai? District? Block? Gaon ka naam exactly wahi hai? Occasionally same naam ke 2 gaon hote hain—ek "Rampur Khurd" aur ek "Rampur Kalan". Dropdown mein dhyan se dekho.',
   },
   {
-    q: 'Village ka naam dropdown mein nahi aa raha?',
-    a: 'Kabhi kabhi naye gaon ya chhote hamlet ka naam portal par update nahi hota. Aise mein apne Block ya District ke agriculture officer ko email karo.',
+    q: 'Apne marne wale baap ki jagah apna naam is list mein dekh sakta hoon?',
+    a: 'Agar succession transfer karwaya hai toh haan. Lekin agar abhi tak baap ka naam hai, toh CSC jakar "Succession Transfer" karwao. Death certificate, Khatauni, aur Aadhaar chahiye. Bina transfer ke paisa nahi milega—account freeze ho jata hai.',
   },
 ];
 
-function CountdownModal({ 
-  title, 
-  message, 
-  redirectUrl, 
-  onClose 
+function CountdownButton({ 
+  title,
+  description,
+  url,
+  buttonText,
+  variant = 'green'
 }: { 
-  title: string; 
-  message: string; 
-  redirectUrl: string; 
-  onClose: () => void;
+  title: string;
+  description: string;
+  url: string;
+  buttonText: string;
+  variant?: 'green' | 'blue';
 }) {
-  const [count, setCount] = useState(10);
+  const [count, setCount] = useState<number | null>(null);
 
   useEffect(() => {
+    if (count === null) return;
+    
     if (count === 0) {
-      window.open(redirectUrl, '_blank', 'noopener,noreferrer');
-      onClose();
+      window.open(url, '_blank', 'noopener,noreferrer');
+      setCount(null);
       return;
     }
+    
     const timer = setTimeout(() => setCount(count - 1), 1000);
     return () => clearTimeout(timer);
-  }, [count, redirectUrl, onClose]);
+  }, [count, url]);
+
+  const handleClick = () => {
+    setCount(10);
+  };
+
+  const bgColor = variant === 'green' 
+    ? 'bg-green-600 hover:bg-green-700' 
+    : 'bg-blue-600 hover:bg-blue-700';
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4" onClick={onClose}>
-      <div
-        className="w-full max-w-sm rounded-2xl bg-white dark:bg-gray-900 p-6 shadow-2xl border-2 border-green-500"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <div className="text-center">
-          <div className="text-5xl mb-3">⏳</div>
-          <h3 className="text-lg font-black text-gray-800 dark:text-white mb-2">
-            {title}
-          </h3>
-          <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
-            {message}
+    <div className="my-6 p-6 rounded-2xl border-2 border-gray-200 dark:border-gray-700 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800/50 dark:to-gray-900/50 shadow-lg">
+      <h4 className="text-base font-bold text-gray-900 dark:text-gray-100 mb-2">
+        {title}
+      </h4>
+      <p className="text-sm text-gray-600 dark:text-gray-400 mb-5 leading-relaxed">
+        {description}
+      </p>
+      
+      {count === null ? (
+        <button
+          onClick={handleClick}
+          className={`w-full px-6 py-4 ${bgColor} text-white text-sm font-bold rounded-xl transition-all shadow-lg hover:shadow-xl transform hover:scale-[1.02] active:scale-[0.98]`}
+        >
+          {buttonText}
+        </button>
+      ) : (
+        <div className="text-center py-4">
+          <div className={`text-6xl font-black ${variant === 'green' ? 'text-green-600 dark:text-green-400' : 'text-blue-600 dark:text-blue-400'} mb-3 animate-pulse`}>
+            {count}
+          </div>
+          <p className="text-sm text-gray-700 dark:text-gray-300 mb-1 font-semibold">
+            Official portal khulne wala hai...
           </p>
-          
-          <div className="mb-4">
-            <div className="text-6xl font-black text-green-600 dark:text-green-400">
-              {count}
-            </div>
-            <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-              seconds mein official portal khulega...
-            </p>
-          </div>
-          
-          <div className="bg-blue-50 dark:bg-blue-900/30 rounded-lg p-3 mb-4">
-            <p className="text-xs text-blue-800 dark:text-blue-300">
-              📌 Thoda wait karo. Official portal khulne wala hai.
-            </p>
-          </div>
+          <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">
+            Thoda wait karo
+          </p>
           <button
-            onClick={onClose}
-            className="w-full px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-800 dark:text-white text-sm font-bold rounded-lg transition-colors"
+            onClick={() => setCount(null)}
+            className="px-6 py-2 bg-gray-300 dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-600 text-gray-800 dark:text-white text-sm font-bold rounded-lg transition-colors"
           >
             Cancel
           </button>
         </div>
-      </div>
+      )}
     </div>
   );
 }
 
 export default function PmKisanVillageWiseListPdfDownload({ article }: { article: ArticleMeta }) {
-  const [modal, setModal] = useState<{ 
-    title: string; 
-    message: string; 
-    url: string; 
-  } | null>(null);
-
-  const handleOfficialLink = (title: string, message: string, url: string) => {
-    setModal({ title, message, url });
-  };
-
   return (
     <>
-      {modal && (
-        <CountdownModal
-          title={modal.title}
-          message={modal.message}
-          redirectUrl={modal.url}
-          onClose={() => setModal(null)}
-        />
-      )}
-
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
           <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
@@ -151,10 +143,10 @@ export default function PmKisanVillageWiseListPdfDownload({ article }: { article
             PM Kisan Village Wise List PDF Download 2026: Gaon Ki Puri List Kaise Nikalein?
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
+            <span>️ <Link href="/about" className="underline hover:text-white">KisanStatus Team</Link></span>
+            <span> {fmtDate(PUBLISHED)}</span>
             <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 15 min read</span>
+            <span>️ 15 min read</span>
           </div>
         </div>
       </div>
@@ -172,17 +164,17 @@ export default function PmKisanVillageWiseListPdfDownload({ article }: { article
             priority
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)]">
-            Village Wise List PDF — Gaon Ka Pura Roster Ek Click Mein
+            Gram Roster PDF — Gaon Ka Pura Data Ek Click Mein
           </p>
         </div>
 
         <section className="mb-8">
           <SH>Sirf Apna Naam Nahi, Pura Gaon Dekho Ek Saath</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Bhai, zyada tar log sirf apna status check karte hain. Lekin kya aapne kabhi socha hai ki aapke gaon mein total kitne kisanon ko PM Kisan ka paisa mil raha hai? Ya aapke padosi ka naam list mein aaya ya nahi?
+            Zyadatar kisan bas apna status check karte hain—ki 2000 rupaye aaye ya nahi. Lekin kabhi socha hai ki aapke gaon mein total kitne logon ko PM Kisan mil raha hai? Ya fir aapke chacha-chaacha, padosi ka naam is roster mein hai ya nahi?
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Gram Pradhan, Patwari, aur Kisan Samuh ke log aksar <strong>pm kisan village wise list</strong> mangte hain. Isse transparency banti hai. Pata chalta hai ki gaon ka kitna paisa aa raha hai aur kiska naam reh gaya.
+            Gram Pradhan, Patwari, aur Kisan Samuh ke log frequently ye list maangte rehte hain. Kyun? Kyunki isse transparency banti hai. Pata chalta hai ki gaon ka kitna paisa aa raha hai, kiska naam reh gaya, aur kiska galat hai.
           </p>
           
           <Image
@@ -194,34 +186,35 @@ export default function PmKisanVillageWiseListPdfDownload({ article }: { article
           />
 
           <DB>
-            <strong>Real Story:</strong>
+            <strong>Field Observation:</strong>
             <p className="text-xs text-gray-700 dark:text-gray-300 mt-2">
-              Azamgarh ke ek chhote se gaon mein Gram Pradhan Ramesh Yadav ne pure gaon ki PDF nikali. Unhone dekha ki 12 aise log hain jinki zameen nahi hai lekin naam list mein hai. Unhone turant BAO office mein complaint ki. 2 mahine baad un 12 logon ka naam kata aur 8 naye asli kisanon ka naam juda. Gaon walon ka bharosa sarkar par badha.
+              Azamgarh aur surrounding areas mein kai baar aisa dekha hai—Gram Pradhan ne ye roster nikali toh pata chala ki kuch logon ke naam hain jinki zameen nahi hai. Unhone BAO office mein complaint ki. Kuch mahino baad galat naam kate aur naye asli kisanon ke naam jude. Gaon walon ka bharosa badha.
             </p>
           </DB>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
-            Is article mein hum batayenge ki aap bhi apne mobile ya computer se apne gaon ki puri list PDF format mein kaise download kar sakte ho. Step-by-step guide hai, bas follow karo.
+            Aaj aapko bataunga ki aap bhi apne mobile ya computer se apne gaon ka ye data PDF format mein kaise save kar sakte ho. Steps follow karo, kaam ho jayega.
           </p>
         </section>
 
         <section className="mb-8">
-          <SH>Village Wise List Aakhir Hai Kya?</SH>
+          <SH>Village Roster Aakhir Hai Kya?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Dekho bhai, PM Kisan portal par do tarah ki lists hoti hain. Ek hoti hai <strong>Individual Status</strong>, jisme sirf aapka naam aur aapki kist ka haal dikhta hai.
+            Dekho, PM Kisan portal par do tarah ki lists hoti hain. Ek hoti hai <strong>Individual Status</strong>, jisme sirf aapka naam aur aapki kist ka haal dikhta hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Dusri hoti hai <strong>Village Roster (Gaon ki List)</strong>. Isme aapke pure gaon ke sabhi registered kisanon ka naam, unka registration number, aur bank account ka last few digits dikhai dete hain. <strong>PM Kisan gram panchayat list</strong> bhi isi ko kehte hain.
+            Dusri hoti hai <strong>Village Roster</strong>. Isme aapke pure gaon ke sabhi registered kisanon ka naam, unka registration number, aur bank account ka last few digits dikhai dete hain. Gram panchayat records bhi isi ko kehte hain.
           </p>
           <div className="bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl p-5 mb-6">
             <p className="text-sm font-black text-green-800 dark:text-green-300 mb-3">
-              Is List Ka Fayda Kya Hai?
+              Is List Ka Asli Fayda:
             </p>
             <ul className="list-disc list-inside text-xs text-green-800 dark:text-green-300 space-y-2">
-              <li>Gaon mein total kitne beneficiaries hain, pata chalta hai.</li>
-              <li>Agar aapka naam nahi hai, toh turant pata lag jata hai ki aap bahar ho.</li>
+              <li>Gaon mein total kitne beneficiaries hain, exact pata chalta hai.</li>
+              <li>Agar aapka naam nahi hai, toh immediately pata lag jata hai—koi bahana nahi.</li>
               <li>Gram Panchayat audit aur transparency ke liye kaam aati hai.</li>
               <li>Naye kisan dekh sakte hain ki unke area mein kaun-kaun juda hai.</li>
+              <li>Agar kisi ka naam galat hai toh pakda ja sakta hai.</li>
             </ul>
           </div>
         </section>
@@ -229,11 +222,11 @@ export default function PmKisanVillageWiseListPdfDownload({ article }: { article
         <section className="mb-8">
           <SH>Official Portal Se PDF Kaise Download Karein? (PC/Laptop)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Bhai, computer ya laptop par ye kaam sabse aasan hai. Neeche diye steps dhyan se follow karo:
+            Computer ya laptop par ye kaam sabse aasan hai. Agar aapke paas laptop hai toh 5 minute ka kaam hai. Neeche diye steps carefully follow karo:
           </p>
           <StepList>
             <SI n={1}>
-              <strong>Portal Kholo:</strong> Browser mein <strong>pmkisan.gov.in</strong> type karo.
+              <strong>Portal Kholo:</strong> Browser (Chrome, Firefox, Edge) mein <strong>pmkisan.gov.in</strong> type karo.
             </SI>
             <SI n={2}>
               <strong>Beneficiary List Chuno:</strong> Home page par upar menu mein "Beneficiary List" ka option hoga. Us par click karo.
@@ -264,27 +257,16 @@ export default function PmKisanVillageWiseListPdfDownload({ article }: { article
           />
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Jaise hi aap button dabayenge, screen par gaon ki puri list aa jayegi. Ab isko PDF mein save karna hai.
+            Jaise hi aap button dabayenge, screen par ye list aa jayegi. Ab isko PDF mein save karna hai.
           </p>
 
-          <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl">
-            <p className="text-sm font-bold text-green-800 dark:text-green-300 mb-2">
-              🔍 PM Kisan Portal Par Village List Dekho
-            </p>
-            <p className="text-xs text-green-700 dark:text-green-400 mb-3">
-              Official PM Kisan portal par jakar apna <strong>pm kisan village wise list pdf download</strong> karo. 10 second baad portal khulega.
-            </p>
-            <button
-              onClick={() => handleOfficialLink(
-                'PM Kisan Beneficiary List',
-                'PM Kisan portal khulne wala hai. Thoda wait karo...',
-                'https://pmkisan.gov.in/BeneficiaryList.aspx'
-              )}
-              className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
-            >
-              📥 Yahan Click Karo → PM Kisan Portal Khulega
-            </button>
-          </div>
+          <CountdownButton
+            title="🔍 PM Kisan Portal Par Beneficiary Data Dekho"
+            description="Government website par jakar apne area ka complete information view karo. 10 second baad portal khulega."
+            url="https://pmkisan.gov.in/BeneficiaryList.aspx"
+            buttonText="📥 Click Here to Open Official Portal"
+            variant="green"
+          />
 
           <div className="bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 rounded-xl p-5 mt-4">
             <p className="text-sm font-black text-blue-800 dark:text-blue-300 mb-3">
@@ -302,11 +284,11 @@ export default function PmKisanVillageWiseListPdfDownload({ article }: { article
         <section className="mb-8">
           <SH>Mobile Par PDF Kaise Save Karein? (Android & iPhone)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Bhai, gaon mein zyada tar logon ke paas laptop nahi hota, sab kaam mobile se karte hain. Mobile par PDF save karna thoda tricky hai, lekin namumkin nahi.
+            Gaon mein zyada tar logon ke paas laptop nahi hota, sab kaam mobile se karte hain. Mobile par PDF save karna thoda tricky hai, lekin namumkin nahi. Dono tarah ke phone ke liye bata raha hoon:
           </p>
           <div className="space-y-4">
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-              <p className="font-black text-sm text-[var(--color-text)] mb-2"> Android Phone (Chrome Browser)</p>
+              <p className="font-black text-sm text-[var(--color-text)] mb-2">📱 Android Phone (Chrome Browser)</p>
               <ol className="list-decimal list-inside text-xs text-[var(--color-text-muted)] space-y-1">
                 <li>List khulne ke baad upar right corner mein <strong>3 dots (⋮)</strong> par tap karo.</li>
                 <li>"Share" option par click karo.</li>
@@ -316,9 +298,9 @@ export default function PmKisanVillageWiseListPdfDownload({ article }: { article
               </ol>
             </div>
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-              <p className="font-black text-sm text-[var(--color-text)] mb-2">🍏 iPhone (Safari Browser)</p>
+              <p className="font-black text-sm text-[var(--color-text)] mb-2"> iPhone (Safari Browser)</p>
               <ol className="list-decimal list-inside text-xs text-[var(--color-text-muted)] space-y-1">
-                <li>List khulne ke baad niche <strong>Share button</strong> (box with arrow) par tap karo.</li>
+                <li>Roster khulne ke baad niche <strong>Share button</strong> (box with arrow) par tap karo.</li>
                 <li>Niche scroll karke <strong>"Print"</strong> par tap karo.</li>
                 <li>Preview image par do ungliyon se pinch-out (zoom) karo.</li>
                 <li>Ab upar right corner mein share icon dabao aur <strong>"Save to Files"</strong> chun lo.</li>
@@ -326,14 +308,14 @@ export default function PmKisanVillageWiseListPdfDownload({ article }: { article
             </div>
           </div>
           <IB>
-            <strong>Jugaad Tip:</strong> Agar PDF save nahi ho rahi, toh list ka screenshot le lo. Chhote gaon ki list ek screenshot mein aa jati hai. Bade gaon ki list ke liye 2-3 screenshot le lo aur CSC wale ko dikha do.
+            <strong>Jugaad Tip:</strong> Agar PDF save nahi ho rahi, toh is list ka screenshot le lo. Chhote gaon ka data ek screenshot mein aa jata hai. Bade gaon ke liye 2-3 screenshot le lo aur CSC wale ko dikha do.
           </IB>
         </section>
 
         <section className="mb-8">
-          <SH>State Ke Apne Portals Se Bhi List Milti Hai</SH>
+          <SH>State Ke Apne Portals Se Bhi Panchayat Wise Roster Mil Jata Hai</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Bhai, PM Kisan ka central portal kabhi kabhi slow ho jata hai ya server down rehta hai. Aise mein aap apne state ke land record portal par bhi koshish kar sakte ho. Wahan bhi <strong>pm kisan beneficiary list village wise</strong> milti hai.
+            PM Kisan ka central portal kabhi kabhi slow ho jata hai ya server down rehta hai. Aise mein aap apne state ke land record portal par bhi koshish kar sakte ho. Wahan bhi ye roster mil jata hai.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
@@ -348,16 +330,13 @@ export default function PmKisanVillageWiseListPdfDownload({ article }: { article
                 <p className="font-black text-sm text-[var(--color-text)] mb-1">🏛️ {state}</p>
                 <p className="text-xs text-blue-600 dark:text-blue-400 font-bold mb-1">{portal}</p>
                 <p className="text-xs text-[var(--color-text-muted)] mb-2">{note}</p>
-                <button
-                  onClick={() => handleOfficialLink(
-                    `${state} Bhulekh Portal`,
-                    `${state} ke official bhulekh portal par redirect ho raha hai. Thoda wait karo...`,
-                    url
-                  )}
-                  className="w-full px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-lg transition-colors"
-                >
-                  🔗 {state} Portal Kholo
-                </button>
+                <CountdownButton
+                  title={`${state} Bhulekh Portal`}
+                  description={`${state} ke official bhulekh portal par redirect ho raha hai. Thoda wait karo...`}
+                  url={url}
+                  buttonText={`🔗 ${state} Portal Kholo`}
+                  variant="blue"
+                />
               </div>
             ))}
           </div>
@@ -369,7 +348,7 @@ export default function PmKisanVillageWiseListPdfDownload({ article }: { article
         <section className="mb-8">
           <SH>PDF Ko Excel Mein Kaise Badlein? (Patwari/Pradhan Ke Liye)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Bhai, aksar Gram Pradhan ya Patwari log chahte hain ki PDF ki jagah Excel sheet mile, taaki wo filter laga sakein ya print nikal sakein.
+            Gram Pradhan ya Patwari log chahte hain ki PDF ki jagah Excel sheet mile, taaki wo filter laga sakein ya print nikal sakein.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Iska ek chhota sa jugaad hai:
@@ -399,13 +378,13 @@ export default function PmKisanVillageWiseListPdfDownload({ article }: { article
         <section className="mb-8">
           <SH>List Mein Naam Nahi Hai? Ab Kya Karein?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Bhai, pura gaon ki list nikali, sabke naam hain, lekin aapka naam nahi hai. Dil chhota mat karo. Iske 3 main reasons ho sakte hain:
+            Ye roster nikala, sabke naam hain, lekin aapka naam nahi hai. Dil chhota mat karo. Kai reasons ho sakte hain:
           </p>
           <div className="space-y-3">
             {[
               { 
                 reason: 'Application Reject Ho Gayi', 
-                fix: 'Portal par individual status check karo. Agar "Rejected" dikh raha hai, toh rejected status guide padho aur turant correction karwao.' 
+                fix: 'Portal par individual status check karo. Agar "Rejected" dikh raha hai, toh rejected status guide padho aur correction karwao.' 
               },
               { 
                 reason: 'Land Seeding Pending Hai', 
@@ -413,7 +392,7 @@ export default function PmKisanVillageWiseListPdfDownload({ article }: { article
               },
               { 
                 reason: 'eKYC Adhuri Hai', 
-                fix: 'Aajkal bina eKYC ke naam list mein nahi aata. Ghar baithe OTP se ya CSC jakar biometric eKYC karwa lo.' 
+                fix: 'Aajkal bina eKYC ke naam is list mein nahi aata. Ghar baithe OTP se ya CSC jakar biometric eKYC karwa lo.' 
               },
             ].map(({ reason, fix }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
@@ -434,15 +413,15 @@ export default function PmKisanVillageWiseListPdfDownload({ article }: { article
               },
               { 
                 issue: 'Gaon Ka Naam Dropdown Mein Nahi Hai', 
-                solution: 'Kabhi kabhi naye gaon ya chhote hamlet ka naam portal par update nahi hota. Aise mein apne Block ya District ke agriculture officer ko email karo.' 
+                solution: 'Rarely naye gaon ya chhote hamlet ka naam portal par update nahi hota. Aise mein apne Block ya District ke agriculture officer ko email karo.' 
               },
               { 
                 issue: 'PDF Blank Aa Rahi Hai', 
-                solution: 'Browser ka cache clear karo. Ya Firefox/Edge browser use karke dekho. Chrome mein kabhi kabhi glitch aata hai.' 
+                solution: 'Browser ka cache clear karo. Ya Firefox/Edge browser use karke dekho. Chrome mein kuch cases mein glitch aata hai.' 
               },
               { 
                 issue: 'List Bahut Purani Dikh Rahi Hai', 
-                solution: 'Portal par mostly current financial year ki list hoti hai. Purani list ke liye BAO office mein RTI ya application deni padti hai.' 
+                solution: 'Portal par mostly current financial year ka data hota hai. Purane records ke liye BAO office mein RTI ya application deni padti hai.' 
               },
             ].map(({ issue, solution }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
@@ -460,46 +439,35 @@ export default function PmKisanVillageWiseListPdfDownload({ article }: { article
               <strong>Fraud Se Bacho:</strong>
             </p>
             <p className="text-xs text-red-700 dark:text-red-400">
-              Village wise list mein kisanon ke bank account ke last 4 digits aur mobile number dikhai de sakte hain. Is data ka galat istemal karne se bacho. Koi bhi unknown link par click mat karo jo kahe ki "Yahan se puri list download karo". Hamesha sirf <strong>pmkisan.gov.in</strong> ka use karo.
+              Is roster mein kisanon ke bank account ke last 4 digits aur mobile number dikhai de sakte hain. Is data ka galat istemal karne se bacho. Koi bhi unknown link par click mat karo jo kahe ki "Yahan se complete data download karo". Hamesha sirf <strong>pmkisan.gov.in</strong> ka use karo.
             </p>
           </div>
         </section>
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Puche Jane Wale Sawal
+            Frequently Asked Questions
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Village Wise List PDF Download FAQ 2026" />
+          <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Beneficiary Roster PDF Download FAQ 2026" />
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Seedhi Baat</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Bhai, PM Kisan ki village wise list ek powerful tool hai. Isse aap apne gaon ka audit khud kar sakte ho. Transparency badhti hai, fraud pakde jaate hain, aur asli kisanon ko unka haq milta hai.
+            PM Kisan ka ye roster ek powerful tool hai. Isse aap apne gaon ka audit khud kar sakte ho. Transparency badhti hai, fraud pakde jaate hain, aur asli kisanon ko unka haq milta hai.
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
-            Aaj hi apne gaon ki list download karo. Apne Gram Pradhan ya Patwari ko bhi bhejo. Milke kaam karenge toh gaon ka vikas hoga.
+            Aaj hi apne gaon ki ye list save karo. Apne Gram Pradhan ya Patwari ko bhi bhejo. Milke kaam karenge toh gaon ka vikas hoga.
           </p>
         </div>
 
-        <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 border-l-[6px] rounded-xl">
-          <h3 className="text-base font-black text-blue-800 dark:text-blue-300 mb-2">
-            🔗 PM Kisan Official Portal
-          </h3>
-          <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
-            <strong>PM Kisan village wise list pdf download</strong> karne ke liye, beneficiary list dekhne ke liye, ya saari jaankari ke liye official portal par jaayein. 10 second baad portal khulega.
-          </p>
-          <button
-            onClick={() => handleOfficialLink(
-              'PM Kisan Official Portal',
-              'PM Kisan portal khulne wala hai. Thoda wait karo...',
-              'https://pmkisan.gov.in/BeneficiaryList.aspx'
-            )}
-            className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
-          >
-            📥 Yahan Click Karo → PM Kisan Portal Khulega
-          </button>
-        </div>
+        <CountdownButton
+          title="🔗 PM Kisan Official Portal"
+          description="Beneficiary data access karne ke liye, ya saari jaankari ke liye government website par jaayein. 10 second baad portal khulega."
+          url="https://pmkisan.gov.in/BeneficiaryList.aspx"
+          buttonText="📥 Yahan Click Karo → PM Kisan Portal Khulega"
+          variant="blue"
+        />
 
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
