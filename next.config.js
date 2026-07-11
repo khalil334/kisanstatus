@@ -1,3 +1,4 @@
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // ── Image Optimization ─────────────────────────────────────
@@ -9,7 +10,6 @@ const nextConfig = {
     dangerouslyAllowSVG: false,
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    quality: 85, // ✅ Improved: Better quality with good compression
     remotePatterns: [
       {
         protocol: 'https',
@@ -22,7 +22,6 @@ const nextConfig = {
   compress: true,
   reactStrictMode: true,
   poweredByHeader: false,
-  swcMinify: true, // ✅ Faster minification
 
   // ── Turbopack Configuration (Next.js 16+) ─────────────────
   turbopack: {
@@ -46,9 +45,8 @@ const nextConfig = {
     scrollRestoration: true,
     serverMinification: true,
     serverSourceMaps: false,
-    webpackBuildWorker: true, // ✅ Faster builds
-    bundlePagesExternals: true, // ✅ Reduce legacy JS
-    optimizeServerReact: true, // ✅ Better server rendering
+    webpackBuildWorker: true,
+    optimizeServerReact: true,
   },
 
   // ── Compiler Options — Bundle Size Reduce ──────────────────
@@ -56,11 +54,7 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production' ? {
       exclude: ['error', 'warn'],
     } : false,
-    reactRemoveProperties: true, // ✅ Remove test properties
-    emotion: process.env.NODE_ENV === 'production' ? {
-      sourceMap: false,
-      autoLabel: 'never',
-    } : undefined,
+    reactRemoveProperties: true,
   },
 
   // ── Transpile Packages — Fix Legacy JavaScript ─────────────
@@ -198,8 +192,6 @@ const nextConfig = {
           { key: 'X-XSS-Protection', value: '1; mode=block' },
           { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
           { key: 'X-DNS-Prefetch-Control', value: 'on' },
-          // ✅ ADD: Preconnect to external domains
-          { key: 'Link', value: '</images>; rel=preconnect' },
         ],
       },
       {
@@ -213,13 +205,6 @@ const nextConfig = {
       {
         source: '/fonts/:path*',
         headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
-      },
-      // ✅ ADD: Prefetch critical resources
-      {
-        source: '/articles/:path*',
-        headers: [
-          { key: 'Link', value: '</_next/static/css>; rel=preload; as=style' },
-        ],
       },
     ];
   },
