@@ -127,7 +127,8 @@ function ArticleLoading() {
   );
 }
 
-const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> = {
+// ✅ TYPE FIX: `any` use kiya taaki different component types kaam karein
+const COMPONENTS: Record<string, React.ComponentType<any>> = {
   // ── EXISTING ARTICLES (18) ───────────────────────────────────
   KisanRinKahaSeLe2026:                       dynamic(() => import('@/components/articles/KisanRinKahaSeLe2026'),                       { loading: ArticleLoading, ssr: true }),
   KisanTractorLoan2026:                       dynamic(() => import('@/components/articles/KisanTractorLoan2026'),                       { loading: ArticleLoading, ssr: true }),
