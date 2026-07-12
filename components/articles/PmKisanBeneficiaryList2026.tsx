@@ -19,6 +19,7 @@ const RELATED = [
   { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav', emoji: '📈' },
 ];
 
+// ✅ LOW COMPETITIVE KEYWORDS ADDED
 const FAQS_DATA = [
   {
     q: 'Mobile number se pm kisan beneficiary list mein naam kaise check karein?',
@@ -40,13 +41,33 @@ const FAQS_DATA = [
     q: 'Naam aane mein kitna time lagta hai?',
     a: '15 se 30 din. Bas.',
   },
+  {
+    q: 'Kya main apne district ki beneficiary list download kar sakta hoon?',
+    a: 'Haan bilkul! Har state/district/block/village ki list publicly available hai. Upar diye gaye state buttons par click karo — 10 second baad PDF download ka option aa jayega.',
+  },
+  {
+    q: 'PM Kisan village wise list 2026 kaise check karein?',
+    a: 'pmkisan.gov.in → Dashboard → State select karo → District → Block → Village. Poori list khul jayegi. Browser se PDF save kar sakte ho.',
+  },
+  {
+    q: 'Kya PM Kisan beneficiary list mein caste ka mention hota hai?',
+    a: 'Nahi, list mein sirf naam, father name, mobile number, aur bank details hote hain. Caste ka column nahi hai.',
+  },
+  {
+    q: 'Agar mera naam list mein nahi hai toh kya karun?',
+    a: 'Pehle eKYC check karo, phir land seeding verify karo. Dono complete hain toh 155261 helpline par call karo ya Block Agriculture Office mein complaint darj karo.',
+  },
+  {
+    q: 'Kya main pichli kiston ki list dekh sakta hoon?',
+    a: 'Haan, portal par aap previous years ki beneficiary lists bhi access kar sakte hain. Dashboard mein year ka option hota hai.',
+  },
 ];
 
 const STATES_LIST = [
   ['🏔️', 'Uttar Pradesh', 'uttar-pradesh'],
   ['🌊', 'Bihar', 'bihar'],
   ['🌿', 'Madhya Pradesh', 'madhya-pradesh'],
-  ['☀️', 'Rajasthan', 'rajasthan'],
+  ['️', 'Rajasthan', 'rajasthan'],
   ['', 'Maharashtra', 'maharashtra'],
   ['', 'West Bengal', 'west-bengal'],
   ['🌴', 'Karnataka', 'karnataka'],
@@ -55,7 +76,7 @@ const STATES_LIST = [
   ['', 'Punjab', 'punjab'],
   ['', 'Haryana', 'haryana'],
   ['🌶️', 'Andhra Pradesh', 'andhra-pradesh'],
-  ['🌊', 'Kerala', 'kerala'],
+  ['', 'Kerala', 'kerala'],
   ['🌴', 'Telangana', 'telangana'],
   ['🌿', 'Gujarat', 'gujarat'],
   ['', 'Assam', 'assam'],
@@ -75,14 +96,14 @@ const STATES_LIST = [
   ['️', 'Delhi', 'delhi'],
   ['', 'Puducherry', 'puducherry'],
   ['🏝️', 'Andaman & Nicobar', 'andaman-nicobar'],
-  ['🏔️', 'Ladakh', 'ladakh'],
+  ['️', 'Ladakh', 'ladakh'],
   ['', 'Lakshadweep', 'lakshadweep'],
   ['️', 'Chandigarh', 'chandigarh'],
   ['🌾', 'Dadra & Nagar Haveli', 'dadra-nagar-haveli'],
   ['️', 'Daman & Diu', 'daman-diu'],
 ] as const;
 
-// Countdown Modal Component
+// ✅ Countdown Modal Component - Sab states ke liye same
 function CountdownModal({ 
   title, 
   message, 
@@ -105,6 +126,7 @@ function CountdownModal({
       if (showButton) {
         setShowDownloadBtn(true);
       } else {
+        // Direct redirect for non-PDF actions
         if (redirectUrl.startsWith('http')) {
           window.location.href = redirectUrl;
         } else {
@@ -138,31 +160,31 @@ function CountdownModal({
                 {count}
               </div>
               <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                seconds baad redirect hoga...
+                seconds baad PDF download page par redirect hoga...
               </p>
             </div>
           ) : (
             <div className="mb-4 space-y-3">
               <div className="bg-green-50 dark:bg-green-900/30 border-2 border-green-500 rounded-lg p-4">
                 <p className="text-sm font-bold text-green-800 dark:text-green-300 mb-2">
-                  ✅ Download Ready Hai!
+                  ✅ PDF Download Ready Hai!
                 </p>
                 <Link
-                  href={`/beneficiary-list/download?redirect=${encodeURIComponent(redirectUrl)}`}
+                  href={redirectUrl}
                   className="inline-block w-full px-6 py-3 bg-green-600 hover:bg-green-700 text-white text-base font-bold rounded-lg transition-colors animate-pulse"
                 >
                    Click to Download PDF
                 </Link>
               </div>
               <p className="text-xs text-gray-500 dark:text-gray-400">
-                Upar diye gaye button par click karein
+                Upar diye gaye button par click karke official government portal se PDF download karein
               </p>
             </div>
           )}
           
           <div className="bg-blue-50 dark:bg-blue-900/30 rounded-lg p-3 mb-4">
             <p className="text-xs text-blue-800 dark:text-blue-300">
-              📌 Kripya dhairya rakhein. Aapko official portal par le jaaya ja raha hai.
+              📌 Kripya dhairya rakhein. Aapko official PM Kisan portal par le jaaya ja raha hai.
             </p>
           </div>
           <button
@@ -187,6 +209,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
     showButton?: boolean;
   } | null>(null);
 
+  // ✅ PDF Download - Government portal par direct redirect with button
   const handleDownloadPDF = () => {
     setModal({
       title: 'Please Wait',
@@ -196,12 +219,13 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
     });
   };
 
+  // ✅ State Click - 10 sec countdown ke baad PDF download button dikhayega
   const handleStateClick = (stateName: string, slug: string) => {
     setModal({
       title: 'Please Wait',
-      message: `${stateName} ki beneficiary list par redirect ho raha hai...`,
-      url: `/beneficiary-list/${slug}`,
-      showButton: false,
+      message: `${stateName} ki beneficiary list PDF download karne ke liye redirect ho raha hai...`,
+      url: `https://pmkisan.gov.in/BeneficiaryList.aspx?state=${slug}`,
+      showButton: true, // ✅ SAB STATES KE LIYE BUTTON DIKHAYEGA
     });
   };
 
@@ -264,7 +288,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
             onClick={handleDownloadPDF}
             className="flex items-center justify-center gap-2 p-4 bg-green-600 hover:bg-green-700 text-white font-black rounded-xl transition-all shadow-md hover:shadow-lg"
           >
-            <span className="text-xl">📥</span>
+            <span className="text-xl"></span>
             <div className="text-left">
               <p className="text-sm">Is Page Ko PDF Mein Save Karo</p>
               <p className="text-xs opacity-90">Print → Save as PDF</p>
@@ -420,11 +444,11 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
           </div>
         </section>
 
-        {/* ✅ SECTION 5: State Wise Links - WITH COUNTDOWN */}
+        {/* ✅ SECTION 5: State Wise Links - SAB STATES PDF DOWNLOAD KE LIYE */}
         <section className="mb-8">
           <SH>🗺️ State Wise List — Apna State Chunein (37 States & UTs)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Apna state select karo — state-specific page khulega jahan se aap beneficiaries count, districts aur official portal link dekh sakte ho:
+            Apna state select karo — 10 second countdown ke baad aapko official PM Kisan portal par PDF download ka option milega. Wahan se aap apne state/district/village ki poori list download kar sakte ho:
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
             {STATES_LIST.map(([icon, name, slug]) => (
@@ -436,6 +460,11 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
                 <span>{icon}</span>{name}
               </button>
             ))}
+          </div>
+          <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-300 dark:border-blue-700 rounded-lg">
+            <p className="text-xs text-blue-800 dark:text-blue-300">
+              <strong>💡 Note:</strong> Har state button par click karne ke baad 10 second ka countdown hoga, phir aapko official government portal par PDF download ka button milega. Wahan se aap apne district/block/village ki list download kar sakte hain.
+            </p>
           </div>
         </section>
 
