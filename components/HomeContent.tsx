@@ -52,6 +52,7 @@ function ArticleImage({ image, emoji, title }: { image: string; emoji: string; t
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             quality={85}
             loading="lazy"
+            decoding="async"
             className={`object-cover group-hover:scale-110 transition-transform duration-700 ease-out ${loaded ? 'opacity-100' : 'opacity-0'}`}
             onLoad={() => setLoaded(true)}
             onError={() => setError(true)}
@@ -70,7 +71,7 @@ function ArticleImage({ image, emoji, title }: { image: string; emoji: string; t
 
 function ArticleCard({ article, showNewBadge = false }: { article: typeof ARTICLES[0]; showNewBadge?: boolean }) {
   const categoryInfo = CATEGORIES[article.category] as { name: string; nameHi: string; icon: string } | undefined;
-  const emoji = categoryInfo?.icon || '📄';
+  const emoji = categoryInfo?.icon || '';
   const categoryName = categoryInfo?.nameHi || categoryInfo?.name || 'Article';
 
   return (
@@ -162,7 +163,7 @@ export default function HomeContent() {
         <div className="container-site mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-14">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-100 to-emerald-100 dark:from-green-900/40 dark:to-emerald-900/40 text-green-800 dark:text-green-300 text-sm font-bold px-5 py-2.5 rounded-full mb-8 shadow-sm border border-green-200/50 dark:border-green-700/50">
-              <span className="text-lg" aria-hidden="true"></span>
+              <span className="text-lg" aria-hidden="true">🌾</span>
               <span>India Ka #1 PM Kisan Portal</span>
             </div>
             <h1 id="hero-heading" className="text-5xl md:text-7xl font-black text-gray-900 dark:text-white leading-[1.1] mb-7 tracking-tight">
@@ -196,23 +197,26 @@ export default function HomeContent() {
             </div>
           </div>
 
-          {/* Hero Image — ✅ OPTIMIZED FOR LCP */}
+          {/* Hero Image — ✅ OPTIMIZED FOR LCP & CLS */}
           <div className="relative max-w-5xl mx-auto">
             <div className="absolute -inset-4 bg-gradient-to-r from-green-500/20 to-emerald-500/20 dark:from-green-600/20 dark:to-emerald-600/20 rounded-3xl blur-2xl" aria-hidden="true" />
             <figure className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/5 dark:ring-white/10">
-              <Image
-                src="/hero-wheat-field.webp"
-                alt="Bharatiya kisan gehu ke khet mein kaam karte hue - PM Kisan Samman Nidhi yojana ke labharthi"
-                width={1200}
-                height={600}
-                priority
-                fetchPriority="high"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1024px"
-                quality={90}
-                placeholder="blur"
-                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiEycf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xVsgH1fZ//2Q=="
-                className="w-full h-auto"
-              />
+              {/* ✅ CLS FIX: Aspect ratio container with fill */}
+              <div className="relative w-full" style={{ aspectRatio: '2/1' }}>
+                <Image
+                  src="/hero-wheat-field.webp"
+                  alt="Bharatiya kisan gehu ke khet mein kaam karte hue - PM Kisan Samman Nidhi yojana ke labharthi"
+                  fill
+                  priority
+                  fetchPriority="high"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1024px"
+                  quality={85}
+                  placeholder="blur"
+                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiEycf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xVsgH1fZ//2Q=="
+                  className="object-cover"
+                  decoding="async"
+                />
+              </div>
               <figcaption className="sr-only">
                 PM Kisan Samman Nidhi ke labharthi kisan gehu ki fasal kaat rahe hain
               </figcaption>
@@ -221,7 +225,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* Stats Section — ✅ CLS FIX: Reserve space */}
+      {/* Stats Section — ✅ CLS FIX: Reserve space with Tailwind classes */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800/50 dark:to-gray-900" aria-labelledby="stats-heading">
         <h2 id="stats-heading" className="sr-only">PM Kisan Yojana ke aankde</h2>
         <div className="container-site mx-auto px-4">
@@ -234,8 +238,7 @@ export default function HomeContent() {
             ].map((stat, i) => (
               <div
                 key={i}
-                className="group relative bg-white dark:bg-gray-800 rounded-2xl p-7 text-center border border-gray-200/80 dark:border-gray-700/80 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 overflow-hidden"
-                style={{ minHeight: '200px' }}
+                className="group relative bg-white dark:bg-gray-800 rounded-2xl p-7 text-center border border-gray-200/80 dark:border-gray-700/80 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 overflow-hidden min-h-[200px]"
               >
                 <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${stat.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} aria-hidden="true" />
                 <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-500" aria-hidden="true">{stat.icon}</div>
@@ -269,7 +272,7 @@ export default function HomeContent() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
               {[
                 { href: '/calculator/pm-kisan-benefit', icon: '🌾', bg: 'from-yellow-400 to-amber-500', title: 'PM Kisan Benefit', desc: 'Kitni kist mili, kitni pending — saal ka total hisaab' },
-                { href: '/calculator/msp-income', icon: '', bg: 'from-orange-400 to-red-500', title: 'MSP Income', desc: 'Fasal ki paidavar × MSP rate = guaranteed kamai' },
+                { href: '/calculator/msp-income', icon: '💰', bg: 'from-orange-400 to-red-500', title: 'MSP Income', desc: 'Fasal ki paidavar × MSP rate = guaranteed kamai' },
                 { href: '/calculator/crop-profit', icon: '📊', bg: 'from-green-400 to-emerald-500', title: 'Crop Profit', desc: 'Kharcha vs kamai — shuddh munafa jaano per acre' },
                 { href: '/calculator/kcc-loan-emi', icon: '🏦', bg: 'from-blue-400 to-cyan-500', title: 'KCC Loan EMI', desc: '4% byaj par monthly EMI aur total interest' },
               ].map((calc, i) => (
@@ -344,6 +347,7 @@ export default function HomeContent() {
                   className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                   placeholder="blur"
                   blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiEycf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xVsgH1fZ//2Q=="
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" aria-hidden="true" />
                 <figcaption className="absolute bottom-0 left-0 right-0 p-8">
@@ -418,9 +422,9 @@ export default function HomeContent() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-5 max-w-6xl mx-auto">
               {[
                 { href: '/articles/PmKisan24viKist2026', icon: '📊', title: 'Status Check', desc: 'Kist aayi ya nahi', color: 'from-blue-500 to-cyan-500' },
-                { href: '/articles/KisanCreditCardOnlineApply2026', icon: '💳', title: 'KCC Apply', desc: '₹5 Lakh Loan', color: 'from-green-500 to-emerald-500' },
+                { href: '/articles/KisanCreditCardOnlineApply2026', icon: '', title: 'KCC Apply', desc: '₹5 Lakh Loan', color: 'from-green-500 to-emerald-500' },
                 { href: '/articles/PmKisanBeneficiaryList2026', icon: '📋', title: 'Beneficiary List', desc: 'Naam check karo', color: 'from-red-500 to-pink-500' },
-                { href: '/articles/soil-health-card-complete-guide-2026', icon: '🌱', title: 'Soil Health Card', desc: 'Mitti test karo', color: 'from-purple-500 to-indigo-500' },
+                { href: '/articles/soil-health-card-complete-guide-2026', icon: '', title: 'Soil Health Card', desc: 'Mitti test karo', color: 'from-purple-500 to-indigo-500' },
               ].map((link, i) => (
                 <Link
                   key={i}
