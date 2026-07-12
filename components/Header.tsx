@@ -82,7 +82,11 @@ function SearchModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
 
   return (
     <div className="fixed inset-0 z-[60]" role="dialog" aria-modal="true" aria-label="Search articles">
-      <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
+      <div 
+        className="absolute inset-0 bg-black/50 backdrop-blur-sm" 
+        onClick={onClose}
+        style={{ willChange: 'opacity' }}
+      />
       <div className="relative max-w-lg mx-auto mt-20 md:mt-32 px-4">
         <div className="bg-[var(--color-card)] rounded-2xl shadow-2xl overflow-hidden border border-[var(--color-border)]">
           <div className="flex items-center gap-3 px-4 py-3 border-b border-[var(--color-border)] bg-[var(--color-bg-alt)]">
@@ -186,7 +190,6 @@ function ThemeToggle() {
     }
   };
 
-  // ✅ HYDRATION FIX: Always render same structure, only change icon
   return (
     <button
       onClick={toggle}
@@ -213,14 +216,18 @@ export default function Header() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [shortcutKey, setShortcutKey] = useState<string | null>(null);
   const pathname = usePathname();
+  const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    // ✅ PERFORMANCE: Throttle scroll event for better performance
+    // ✅ PERFORMANCE: Optimized scroll handler with requestAnimationFrame
     let ticking = false;
+    let lastScrollY = 0;
+    
     const onScroll = () => {
+      lastScrollY = window.scrollY;
       if (!ticking) {
         window.requestAnimationFrame(() => {
-          setScrolled(window.scrollY > 10);
+          setScrolled(lastScrollY > 10);
           ticking = false;
         });
         ticking = true;
@@ -301,14 +308,20 @@ export default function Header() {
           className="fixed inset-0 bg-black/50 z-40 lg:hidden"
           onClick={() => setMobileOpen(false)}
           aria-hidden="true"
+          style={{ willChange: 'opacity' }}
         />
       )}
 
       <header
+        ref={headerRef}
         className={`bg-[var(--color-card)] border-b border-[var(--color-border)] sticky top-0 z-50 transition-shadow duration-200 ${
           scrolled ? 'shadow-md' : 'shadow-sm'
         }`}
         role="banner"
+        style={{ 
+          minHeight: '64px', // ✅ CLS FIX: Reserve header height
+          contain: 'layout style' // ✅ PERFORMANCE: Prevent layout shift
+        }}
       >
         <div className="container-site flex items-center justify-between h-16">
           <Link href="/" className="shrink-0" aria-label="KisanStatus Home">
@@ -387,6 +400,10 @@ export default function Header() {
             id="mobile-menu"
             className="lg:hidden fixed top-16 right-0 w-80 max-w-[85vw] h-[calc(100vh-4rem)] bg-[var(--color-card)] border-l border-[var(--color-border)] shadow-2xl overflow-y-auto z-50"
             aria-label="Mobile navigation"
+            style={{ 
+              willChange: 'transform', // ✅ PERFORMANCE: GPU acceleration
+              transform: 'translateZ(0)' // ✅ PERFORMANCE: Force GPU layer
+            }}
           >
             <div className="px-4 py-3 bg-[var(--color-bg-alt)] border-b border-[var(--color-border)]">
               <p className="text-xs font-bold text-[var(--color-text-muted)] uppercase mb-2">Quick Links</p>
