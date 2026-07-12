@@ -228,7 +228,7 @@ export default function CHCPortal() {
       </h2>
       
       <p className="mb-4">
-        Ek realistic CHC setup ka budget banate hain. Punjab/Haryana ke liye hai yeh - high demand area.
+        Ek realistic CHC setup ka budget banate hain. Punjab/Haryana ke liye hai yeh - high demand area. Bijli ka bill kam karne ke liye aap <Link href="/kisanguides/pm-kusum-solar-pump-subsidy" className="text-blue-600 hover:underline">PM-KUSUM Solar Pump</Link> bhi install kar sakte hain jisse diesel cost zero ho jata hai.
       </p>
 
       <div className="bg-gray-50 p-4 rounded-lg mb-6">
@@ -324,7 +324,7 @@ export default function CHCPortal() {
         <div className="border-l-4 border-green-500 pl-4">
           <h3 className="font-bold text-lg">Step 2: State Agriculture Department Se Milein</h3>
           <p className="mt-2">
-            Zila ke Agriculture Officer ya Deputy Director se milein. Current guidelines denge wo. Apne state ke Agriculture Department ki official website ya agrimachinery.nic.in par state-wise CHC registration details check karein.
+            Zila ke Agriculture Officer ya Deputy Director se milein. Current guidelines denge wo. Apne state ke Agriculture Department ki official website ya agrimachinery.nic.in par state-wise CHC registration details check karein. Digital record ke liye <Link href="/kisanguides/agri-stack-kya-hai-2026" className="text-blue-600 hover:underline">AgriStack portal</Link> bhi check kar sakte hain.
           </p>
         </div>
 
@@ -392,7 +392,7 @@ export default function CHCPortal() {
       </h2>
       
       <p className="mb-4">
-        Sabse important sawaal - paisa kitna banega? Ek illustrative calculation dekhte hain.
+        Sabse important sawaal - paisa kitna banega? Ek illustrative calculation dekhte hain. Apne area ke <Link href="/kisanguides/mandi-bhav-today" className="text-blue-600 hover:underline">mandi bhav</Link> ke hisaab se rates adjust kar sakte hain.
       </p>
 
       <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-6">
@@ -601,7 +601,7 @@ export default function CHCPortal() {
       </h2>
       
       <p className="mb-4">
-        CHC chalane ke liye technical knowledge zaroori hai. Machinery operation, maintenance, customer handling - sab seekhna padta hai. Bina training ke machinery jaldi kharab ho jati hai.
+        CHC chalane ke liye technical knowledge zaroori hai. Machinery operation, maintenance, customer handling - sab seekhna padta hai. Bina training ke machinery jaldi kharab ho jati hai. Irrigation implements use karne ke liye <Link href="/kisanguides/drip-sprinkler-irrigation" className="text-blue-600 hover:underline">drip-sprinkler guide</Link> bhi padh sakte hain.
       </p>
 
       <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -661,7 +661,7 @@ export default function CHCPortal() {
         <div className="border-l-4 border-green-500 pl-4">
           <h3 className="font-bold text-lg">Phase 3: Expansion (18+ months)</h3>
           <p className="mt-2">
-            Ab doosra tractor lo, aur high-value implements (combine harvester, paddy transplanter). Multiple drivers hire karo. Nearby blocks mein expand karo. Agar possible ho toh doosra CHC kholo doosri location par. Investment: ₹15-25 lakh.
+            Ab doosra tractor lo, aur high-value implements (combine harvester, paddy transplanter). Multiple drivers hire karo. Nearby blocks mein expand karo. Agar possible ho toh doosra CHC kholo doosri location par. Value addition ke liye <Link href="/kisanguides/pmfme-yojana" className="text-blue-600 hover:underline">PMFME Yojana</Link> se subsidy le sakte hain. Investment: ₹15-25 lakh.
           </p>
         </div>
       </div>
@@ -772,6 +772,18 @@ export default function CHCPortal() {
                   </div>
                 </Link>
               </li>
+              <li>
+                <Link 
+                  href="/kisanguides/madhumakhi-palan" 
+                  className="flex items-start gap-2 text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors group"
+                >
+                  <span className="text-green-600 group-hover:translate-x-1 transition-transform">→</span>
+                  <div>
+                    <div className="font-semibold">Madhumakhi Palan</div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400">Beekeeping with NLM subsidy</div>
+                  </div>
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -810,6 +822,18 @@ export default function CHCPortal() {
                   </div>
                 </Link>
               </li>
+              <li>
+                <Link 
+                  href="/kisanguides/pmfme-yojana" 
+                  className="flex items-start gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors group"
+                >
+                  <span className="text-blue-600 group-hover:translate-x-1 transition-transform">→</span>
+                  <div>
+                    <div className="font-semibold">PMFME Yojana</div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400">Food processing subsidy 35%</div>
+                  </div>
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -843,11 +867,11 @@ export default function CHCPortal() {
               <span className="font-medium">Mushroom Kheti Guide</span>
             </Link>
             <Link 
-              href="/kisanguides/madhumakhi-palan" 
+              href="/kisanguides/soil-health-card-complete-guide-2026" 
               className="flex items-center gap-2 bg-white dark:bg-gray-800 p-3 rounded-lg hover:shadow-md transition-shadow text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400"
             >
-              <span className="text-purple-600">🐝</span>
-              <span className="font-medium">Madhumakhi Palan (Beekeeping)</span>
+              <span className="text-purple-600">🌱</span>
+              <span className="font-medium">Soil Health Card Guide</span>
             </Link>
           </div>
         </div>
