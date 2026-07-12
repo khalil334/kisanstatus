@@ -23,6 +23,15 @@ const nextConfig = {
   poweredByHeader: false,
   generateEtags: true,
 
+  // ── Turbopack Configuration (Next.js 16+) ─────────────────
+  // ✅ FIX: Turbopack config add kiya - error fix hoga
+  turbopack: {
+    resolveAlias: {
+      '@': './src',
+      '~': './src',
+    },
+  },
+
   // ── Performance Optimizations ──────────────────────────────
   experimental: {
     optimizePackageImports: [
@@ -37,7 +46,7 @@ const nextConfig = {
     scrollRestoration: true,
   },
 
-  // ── Compiler Options — Bundle Size Reduce ──────────────────
+  // ── Compiler Options ───────────────────────────────────────
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production' ? {
       exclude: ['error', 'warn'],
@@ -51,44 +60,6 @@ const nextConfig = {
     '@radix-ui/react-dropdown-menu',
     '@radix-ui/react-popover',
   ],
-
-  // ── Webpack Configuration (Minimal & Safe) ─────────────────
-  webpack: (config, { dev, isServer }) => {
-    // Production optimizations only
-    if (!dev && !isServer) {
-      // Better chunk splitting
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        minSize: 20000,
-        maxSize: 244000,
-        cacheGroups: {
-          vendor: {
-            test: /[\\/]node_modules[\\/]/,
-            name: 'vendors',
-            chunks: 'all',
-            priority: -10,
-          },
-          common: {
-            minChunks: 2,
-            priority: -20,
-            reuseExistingChunk: true,
-          },
-        },
-      };
-    }
-
-    // Exclude Node.js modules from client bundle
-    if (!isServer) {
-      config.resolve.fallback = {
-        ...config.resolve.fallback,
-        fs: false,
-        path: false,
-        os: false,
-      };
-    }
-
-    return config;
-  },
 
   // ── Redirects ──────────────────────────────────────────────
   async redirects() {
