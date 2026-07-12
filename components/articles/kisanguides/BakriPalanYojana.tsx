@@ -18,7 +18,7 @@ export default function BakriPalanYojanaNLMS() {
       </div>
 
       <Image 
-        src="/images/kisanguides/bakri-palan-nlm-subsidy.jpg"
+        src="/images/kisanguides/bakri-palan-nlm-subsidy.webp"
         alt="Bakri Palan Yojana NLM Subsidy - Goat Farming Scheme India"
         width={800}
         height={450}
@@ -46,7 +46,7 @@ export default function BakriPalanYojanaNLMS() {
       </p>
 
       <Image 
-        src="/images/kisanguides/nlm-subsidy-calculation.jpg"
+        src="/images/kisanguides/nlm-subsidy-calculation.webp"
         alt="NLM Subsidy Calculation for Goat Farming Unit Size"
         width={800}
         height={450}
@@ -128,7 +128,7 @@ export default function BakriPalanYojanaNLMS() {
       </p>
 
       <Image 
-        src="/images/kisanguides/nlm-required-documents.jpg"
+        src="/images/kisanguides/nlm-required-documents.webp"
         alt="Documents Required for NLM Goat Farming Subsidy Application"
         width={800}
         height={450}
@@ -304,7 +304,7 @@ export default function BakriPalanYojanaNLMS() {
       </div>
 
       <Image 
-        src="/images/kisanguides/goat-farming-shed-construction.jpg"
+        src="/images/kisanguides/goat-farming-shed-construction.webp"
         alt="Goat Farming Shed Construction under NLM Subsidy"
         width={800}
         height={450}
@@ -432,7 +432,7 @@ export default function BakriPalanYojanaNLMS() {
       </p>
 
       <Image 
-        src="/images/kisanguides/nlm-application-help.jpg"
+        src="/images/kisanguides/nlm-application-help.webp"
         alt="NLM Application Help and Support Resources"
         width={800}
         height={450}
