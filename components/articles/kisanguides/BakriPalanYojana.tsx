@@ -2,6 +2,7 @@
 
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function BakriPalanYojanaNLMS() {
   return (
@@ -451,32 +452,132 @@ export default function BakriPalanYojanaNLMS() {
         Sahi planning karo. Documentation prepare karo. Guidelines follow karo.
       </p>
 
-      <div className="mt-10 pt-6 border-t border-gray-300 dark:border-gray-600">
-        <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">
-          Related Articles on KisamStatus:
+      {/* Related Articles Section - Stylish UI/UX */}
+      <div className="mt-12 pt-8 border-t-2 border-gray-200 dark:border-gray-700">
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6 flex items-center gap-2">
+          <span className="text-3xl">📚</span>
+          Related Articles on KisanStatus
         </h3>
-        <ul className="space-y-2 text-sm">
-          <li>
-            <a href="/kisanguides/murrah-bhains-palan" className="text-blue-600 hover:underline dark:text-blue-400">
-              → Murrah Bhains Palan - Complete Guide
-            </a>
-          </li>
-          <li>
-            <a href="/kisanguides/poultry-farming-subsidy" className="text-blue-600 hover:underline dark:text-blue-400">
-              → Poultry Farming Subsidy 2024
-            </a>
-          </li>
-          <li>
-            <a href="/kisanguides/fisheries-subsidy-scheme" className="text-blue-600 hover:underline dark:text-blue-400">
-              → Fisheries Subsidy Scheme - Matsya Palan
-            </a>
-          </li>
-          <li>
-            <a href="/kisanguides/organic-farming-guide" className="text-blue-600 hover:underline dark:text-blue-400">
-              → Organic Farming - Step by Step Guide
-            </a>
-          </li>
-        </ul>
+        
+        <p className="text-gray-600 dark:text-gray-400 mb-6">
+          Agar aap animal husbandry aur farming subsidies mein interested hain, toh ye articles bhi padhein:
+        </p>
+
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
+          {/* Animal Husbandry Category */}
+          <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-6 rounded-xl border-2 border-green-200 dark:border-green-800 hover:shadow-lg transition-shadow">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white text-2xl">
+                🐃
+              </div>
+              <h4 className="text-lg font-bold text-green-800 dark:text-green-300">
+                Animal Husbandry Guides
+              </h4>
+            </div>
+            <ul className="space-y-3">
+              <li>
+                <Link 
+                  href="/kisanguides/murrah-bhains-palan" 
+                  className="flex items-start gap-2 text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors group"
+                >
+                  <span className="text-green-600 group-hover:translate-x-1 transition-transform">→</span>
+                  <div>
+                    <div className="font-semibold">Murrah Bhains Palan</div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400">Complete buffalo farming guide</div>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/kisanguides/poultry-farming-subsidy" 
+                  className="flex items-start gap-2 text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors group"
+                >
+                  <span className="text-green-600 group-hover:translate-x-1 transition-transform">→</span>
+                  <div>
+                    <div className="font-semibold">Poultry Farming Subsidy 2024</div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400">Chicken farming with government support</div>
+                  </div>
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Subsidy Schemes Category */}
+          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 p-6 rounded-xl border-2 border-blue-200 dark:border-blue-800 hover:shadow-lg transition-shadow">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl">
+                💰
+              </div>
+              <h4 className="text-lg font-bold text-blue-800 dark:text-blue-300">
+                Government Subsidy Schemes
+              </h4>
+            </div>
+            <ul className="space-y-3">
+              <li>
+                <Link 
+                  href="/kisanguides/fisheries-subsidy-scheme" 
+                  className="flex items-start gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors group"
+                >
+                  <span className="text-blue-600 group-hover:translate-x-1 transition-transform">→</span>
+                  <div>
+                    <div className="font-semibold">Fisheries Subsidy Scheme</div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400">Matsya Palan - PM Matsya Sampada</div>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/kisanguides/organic-farming-guide" 
+                  className="flex items-start gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors group"
+                >
+                  <span className="text-blue-600 group-hover:translate-x-1 transition-transform">→</span>
+                  <div>
+                    <div className="font-semibold">Organic Farming Guide</div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400">Step-by-step organic certification</div>
+                  </div>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Additional Resources */}
+        <div className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 p-6 rounded-xl border-2 border-purple-200 dark:border-purple-800">
+          <h4 className="text-lg font-bold text-purple-800 dark:text-purple-300 mb-4 flex items-center gap-2">
+            <span className="text-2xl">🌾</span>
+            More Farming Resources
+          </h4>
+          <div className="grid sm:grid-cols-2 gap-3">
+            <Link 
+              href="/kisanguides/drip-sprinkler-irrigation" 
+              className="flex items-center gap-2 bg-white dark:bg-gray-800 p-3 rounded-lg hover:shadow-md transition-shadow text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400"
+            >
+              <span className="text-purple-600">💧</span>
+              <span className="font-medium">Drip & Sprinkler Irrigation</span>
+            </Link>
+            <Link 
+              href="/kisanguides/vermi-compost-business" 
+              className="flex items-center gap-2 bg-white dark:bg-gray-800 p-3 rounded-lg hover:shadow-md transition-shadow text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400"
+            >
+              <span className="text-purple-600">🪱</span>
+              <span className="font-medium">Vermi Compost Business</span>
+            </Link>
+            <Link 
+              href="/kisanguides/mushroom-kheti" 
+              className="flex items-center gap-2 bg-white dark:bg-gray-800 p-3 rounded-lg hover:shadow-md transition-shadow text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400"
+            >
+              <span className="text-purple-600">🍄</span>
+              <span className="font-medium">Mushroom Kheti Guide</span>
+            </Link>
+            <Link 
+              href="/kisanguides/madhumakhi-palan" 
+              className="flex items-center gap-2 bg-white dark:bg-gray-800 p-3 rounded-lg hover:shadow-md transition-shadow text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400"
+            >
+              <span className="text-purple-600">🐝</span>
+              <span className="font-medium">Madhumakhi Palan (Beekeeping)</span>
+            </Link>
+          </div>
+        </div>
       </div>
 
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-lg border-l-4 border-orange-500">
