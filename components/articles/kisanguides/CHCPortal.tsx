@@ -1,4 +1,4 @@
- import Image from 'next/image';
+import Image from 'next/image';
 import Link from 'next/link';
 import { GovLink } from '@/components/ArticleShared';
 
@@ -18,7 +18,7 @@ export default function CHCPortal() {
       </h1>
       
       <p className="text-lg mb-4 italic">
-        Punjab ke Patiala district mein ek 38 saal ka kisan mila, naam hai Gurpreet. Uske paas 12 acre zameen hai. 2019 mein usne SMAM scheme ke under 50% subsidy par ek tractor, happy seeder, rotavator, aur laser land leveler khareeda. Aaj uski monthly income ₹65,000-75,000 hai - sirf machinery rent par.
+        Punjab ke Patiala district mein 38 saal ka kisan Gurpreet mila jiske paas 12 acre zameen hai, 2019 mein usne SMAM scheme ke under 50% subsidy par tractor, happy seeder, rotavator, laser land leveler khareeda. Aaj monthly income ₹65,000-75,000 hai. Sirf machinery rent se.
       </p>
       
       <p className="mb-6">
@@ -26,7 +26,7 @@ export default function CHCPortal() {
       </p>
       
       <p className="mb-6">
-        Yeh hai Custom Hiring Centre (CHC) ka model. Sarkar chahti hai ki har gaon mein ek CHC ho jahan kisaanon ko sasti machinery rent par mile. Aur aap is CHC ko khol kar achhi kamai kar sakte hain - 40-50% subsidy ke saath.
+        Custom Hiring Centre ka model hai yeh. Sarkar chahti hai har gaon mein ek CHC ho jahan kisaanon ko sasti machinery rent par mile. Aap CHC khol kar achhi kamai kar sakte hain - 40-50% subsidy ke saath.
       </p>
 
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
@@ -34,15 +34,15 @@ export default function CHCPortal() {
       </h2>
       
       <p className="mb-4">
-        Custom Hiring Centre ek aisa setup hai jahan aap mehngi agricultural machinery khareedte hain (subsidy ke saath), aur use gaon ke doosre kisaanon ko rent par dete hain. "Uber for Tractors" jaisa sochiye - aapke paas machinery hai, zarooratmand kisaan aapke paas aate hain, aap rent lete hain.
+        Mehngi agricultural machinery khareedte hain subsidy ke saath, gaon ke doosre kisaanon ko rent par dete hain - "Uber for Tractors" jaisa sochiye. Aapke paas machinery hai, zarooratmand kisaan aapke paas aate hain, aap rent lete hain.
       </p>
       
       <p className="mb-4">
-        India mein 85% kisaanon ke paas 2 hectare se kam zameen hai. Wo mehnga tractor ya combine harvester khareed nahi sakte. Par unhe bhi toh kheti karni hai. Yahan CHC kaam aata hai - wo aapse machinery rent par lete hain, jab unhe zaroorat ho.
+        India mein 85% kisaanon ke paas 2 hectare se kam zameen hai. Mehnga tractor ya combine harvester khareed nahi sakte. Par kheti toh karni hai. Yahan CHC kaam aata hai - wo aapse machinery rent par lete hain jab zaroorat ho.
       </p>
 
       <p className="mb-6">
-        Sarkar ka target hai - har block mein kam se kam ek CHC ho. Abhi sirf 20-25% blocks mein CHC hain. Matlab abhi bhi bahut scope hai.
+        Sarkar ka target hai har block mein kam se kam ek CHC. Abhi sirf 20-25% blocks mein CHC hain. Scope bahut hai abhi bhi.
       </p>
 
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
@@ -50,7 +50,7 @@ export default function CHCPortal() {
       </h2>
       
       <p className="mb-4">
-        CHC kholne ke liye sarkar SMAM (Sub-Mission on Agricultural Mechanization) scheme ke under 40-50% subsidy deti hai. Yeh subsidy capital investment par milti hai - tractor chhod kar baaki sab implements par.
+        CHC kholne ke liye SMAM (Sub-Mission on Agricultural Mechanization) scheme ke under 40-50% subsidy milti hai. Capital investment par yeh subsidy hai - tractor chhod kar baaki sab implements par.
       </p>
 
       <div className="bg-blue-50 border border-blue-200 rounded-lg p-5 mb-6">
@@ -84,11 +84,11 @@ export default function CHCPortal() {
       </div>
 
       <p className="mb-4">
-        <strong>Important:</strong> Tractor par subsidy nahi milti SMAM ke under. Par tractor ke saath lagne wale sab implements (rotavator, happy seeder, laser leveler, seed drill, etc.) par subsidy milti hai.
+        Tractor par subsidy nahi milti SMAM ke under. Par tractor ke saath lagne wale sab implements par subsidy milti hai - rotavator, happy seeder, laser leveler, seed drill, sab par.
       </p>
 
       <p className="mb-6">
-        Ek example dekhte hain. Agar aap ₹30 lakh ki machinery khareedte hain (tractor chhod kar), toh 40% subsidy = ₹12 lakh. Aapka out-of-pocket kharcha sirf ₹18 lakh. Yeh bahut bada advantage hai.
+        Example dekhte hain. ₹30 lakh ki machinery khareedte hain tractor chhod kar, toh 40% subsidy = ₹12 lakh. Out-of-pocket kharcha sirf ₹18 lakh. Bada advantage hai yeh.
       </p>
 
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
@@ -96,7 +96,7 @@ export default function CHCPortal() {
       </h2>
       
       <p className="mb-4">
-        Har region ki demand alag hoti hai. Par kuch aise implements hain jo har jagah chalte hain. Yeh list maine actual CHC owners se baat karke banayi hai:
+        Har region ki demand alag hoti hai. Par kuch implements hain jo har jagah chalte hain. Yeh list maine actual CHC owners se baat karke banayi hai - real data hai yeh.
       </p>
 
       <div className="overflow-x-auto mb-6">
@@ -186,11 +186,11 @@ export default function CHCPortal() {
       </div>
 
       <p className="mb-4">
-        <strong>Pro tip:</strong> Shuru mein 5-7 implements se start karein. Jo zyada demand mein ho wahi lo. Har region ki demand alag hai - Punjab/Haryana mein happy seeder, laser leveler, straw reaper ki demand zyada hai. MP/UP mein seed drill, rotavator, boom sprayer. South India mein paddy transplanter, puddle.
+        Shuru mein 5-7 implements se start karein. Jo zyada demand mein ho wahi lo. Punjab/Haryana mein happy seeder, laser leveler, straw reaper ki demand zyada hai. MP/UP mein seed drill, rotavator, boom sprayer. South India mein paddy transplanter, puddle.
       </p>
 
       <p className="mb-6">
-        Apne state ke Agriculture Department portal par jaakar implement-wise subsidy ki exact list check karein - har state mein rates thode alag hote hain.
+        State ke Agriculture Department portal par jaakar implement-wise subsidy ki exact list check karein. Har state mein rates thode alag hote hain.
       </p>
 
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
@@ -198,7 +198,7 @@ export default function CHCPortal() {
       </h2>
       
       <p className="mb-4">
-        Ek realistic CHC setup ka budget banate hain. Yeh Punjab/Haryana ke liye hai (high demand area):
+        Ek realistic CHC setup ka budget banate hain. Punjab/Haryana ke liye hai yeh - high demand area.
       </p>
 
       <div className="bg-gray-50 p-4 rounded-lg mb-6">
@@ -268,11 +268,11 @@ export default function CHCPortal() {
       </div>
 
       <p className="mb-4">
-        Yeh investment lagti hai. Par iske liye loans available hain. <Link href="/articles/KisanTractorLoan2026" className="text-blue-600 hover:underline">Tractor loan guide</Link> mein detailed process bataya gaya hai - 7 saal tak ke liye milta hai, interest rate 9-11%. Implements par SMAM subsidy mil jayegi.
+        Yeh investment lagti hai. Par loans available hain. <Link href="/articles/KisanTractorLoan2026" className="text-blue-600 hover:underline">Tractor loan guide</Link> mein detailed process bataya gaya hai - 7 saal tak ke liye milta hai, interest rate 9-11%. Implements par SMAM subsidy mil jayegi.
       </p>
 
       <p className="mb-6">
-        Agar aap group (7-10 farmers) milkar apply karte hain, toh approval chances zyada hote hain. Har farmer apna contribution dega, aur sab milkar CHC chalayenge. FPO (Farmer Producer Organization) banakar bhi apply kar sakte hain - FPOs ko priority milti hai.
+        Group (7-10 farmers) milkar apply karte hain toh approval chances zyada hote hain. Har farmer apna contribution dega, sab milkar CHC chalayenge. FPO (Farmer Producer Organization) banakar bhi apply kar sakte hain - FPOs ko priority milti hai.
       </p>
 
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
@@ -280,21 +280,21 @@ export default function CHCPortal() {
       </h2>
       
       <p className="mb-4">
-        CHC kholne ka process thoda lamba hai, par straightforward hai. Yeh steps follow karein:
+        CHC kholne ka process thoda lamba hai. Straightforward hai. Yeh steps follow karein:
       </p>
 
       <div className="space-y-4 mb-6">
         <div className="border-l-4 border-green-500 pl-4">
           <h3 className="font-bold text-lg">Step 1: Eligibility Check Karein</h3>
           <p className="mt-2">
-            Aapko farmer hona chahiye, zameen honi chahiye (owned ya leased), aur aapke paas tractor hona chahiye (ya khareedne ki capacity). Group application mein kam se kam 7-10 farmers hone chahiye.
+            Farmer hona chahiye. Zameen honi chahiye - owned ya leased. Tractor hona chahiye ya khareedne ki capacity. Group application mein kam se kam 7-10 farmers hone chahiye.
           </p>
         </div>
 
         <div className="border-l-4 border-green-500 pl-4">
           <h3 className="font-bold text-lg">Step 2: State Agriculture Department Se Milein</h3>
           <p className="mt-2">
-            Apne zila ke Agriculture Officer ya Deputy Director se milein. Wo aapko current guidelines denge. Har state ka portal alag hai - Punjab mein <em>agripb.gov.in</em>, Haryana mein <em>meri fasal</em> portal, UP mein <em>upagripard.gov.in</em>, etc.
+            Zila ke Agriculture Officer ya Deputy Director se milein. Current guidelines denge wo. Har state ka portal alag hai - Punjab mein <em>agripb.gov.in</em>, Haryana mein <em>meri fasal</em> portal, UP mein <em>upagripard.gov.in</em>, etc.
           </p>
         </div>
 
@@ -316,7 +316,7 @@ export default function CHCPortal() {
         <div className="border-l-4 border-green-500 pl-4">
           <h3 className="font-bold text-lg">Step 4: Site Inspection</h3>
           <p className="mt-2">
-            Department ke officers aapki zameen aur shed dekhne aayenge. Wo check karenge ki location suitable hai, storage space hai, aur aapka plan realistic hai.
+            Department ke officers aapki zameen aur shed dekhne aayenge. Location suitable hai, storage space hai, plan realistic hai - yeh check karenge.
           </p>
         </div>
 
@@ -330,13 +330,13 @@ export default function CHCPortal() {
         <div className="border-l-4 border-green-500 pl-4">
           <h3 className="font-bold text-lg">Step 6: CHC Portal Par Register Karein</h3>
           <p className="mt-2">
-            Apni machinery ki details state CHC portal par upload karein. Kisaan online dekh kar book kar sakte hain. Yeh bahut important hai - bina registration ke aapko portal se orders nahi milenge.
+            Machinery ki details state CHC portal par upload karein. Kisaan online dekh kar book kar sakte hain. Bahut important hai yeh - bina registration ke portal se orders nahi milenge.
           </p>
         </div>
       </div>
 
       <p className="mb-6">
-        Poora process 3-6 months lag sakta hai. Isliye patience rakhein. Aur haan, application mein koi fee nahi lagti - sab free hai.
+        Poora process 3-6 months lag sakta hai. Patience rakhein. Application mein koi fee nahi lagti - sab free hai.
       </p>
 
       <GovLink
@@ -351,7 +351,7 @@ export default function CHCPortal() {
       </h2>
       
       <p className="mb-4">
-        Ab aate hain sabse important sawaal par - paisa kitna banega? Ek realistic calculation dekhte hain:
+        Sabse important sawaal - paisa kitna banega? Ek realistic calculation dekhte hain.
       </p>
 
       <div className="overflow-x-auto mb-6">
@@ -433,15 +433,15 @@ export default function CHCPortal() {
       </p>
 
       <p className="mb-6">
-        Yeh numbers tab hain jab aap consistently kaam kar rahe hain. Shuru ke 6 mahine mein aap shayad ₹1-1.5 lakh hi kama paoge, kyunki customers build karne mein time lagta hai. Par Year 2 tak aap ₹2-3 lakh per month tak pahunch sakte hain.
+        Yeh numbers tab hain jab consistently kaam kar rahe hain. Shuru ke 6 mahine mein shayad ₹1-1.5 lakh hi kama paoge. Customers build karne mein time lagta hai. Par Year 2 tak ₹2-3 lakh per month tak pahunch sakte hain.
       </p>
 
       <p className="mb-4">
-        Loan EMI bhi deduct karni hai. Agar ₹15 lakh ka loan hai 7 saal ke liye 10% interest par, toh monthly EMI ₹26,000 aati hai. Tab bhi net profit ₹2 lakh+ per month rehta hai.
+        Loan EMI bhi deduct karni hai. ₹15 lakh ka loan hai 7 saal ke liye 10% interest par, toh monthly EMI ₹26,000 aati hai. Tab bhi net profit ₹2 lakh+ per month rehta hai.
       </p>
 
       <p className="mb-6">
-        Ek aur important point - seasonal variation. Kharif (June-October) aur Rabi (October-March) mein demand peak par hoti hai. Garmiyon (April-June) mein demand 40-50% kam ho jati hai. Aapko 12 months ka cash flow manage karna padta hai.
+        Ek aur point - seasonal variation. Kharif (June-October) aur Rabi (October-March) mein demand peak par hoti hai. Garmiyon (April-June) mein demand 40-50% kam ho jati hai. 12 months ka cash flow manage karna padta hai.
       </p>
 
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-red-700">
@@ -449,35 +449,35 @@ export default function CHCPortal() {
       </h2>
       
       <p className="mb-4">
-        CHC business sunne mein simple lagta hai, par risks hain. Yeh woh cheezein hain jo aapko pata honi chahiye:
+        CHC business sunne mein simple lagta hai. Par risks hain. Yeh woh cheezein hain jo aapko pata honi chahiye - sachhai yeh hai.
       </p>
 
       <div className="space-y-4 mb-6">
         <div className="border-l-4 border-red-500 pl-4">
           <h3 className="font-bold text-lg">Machine Breakdown (Sabse Badi Problem)</h3>
           <p className="mt-2">
-            Machinery kharab ho gayi, toh rental income band. Aur customers doosre CHC par shift ho jayenge. Season mein har machine ko 100-150 hours chalti hai - wear and tear bahut hota hai. Spare parts aur local mechanic ka intezam pehle se rakho. Budget mein 10-15% maintenance cost zaroor rakho.
+            Machinery kharab ho gayi toh rental income band. Customers doosre CHC par shift ho jayenge. Season mein har machine ko 100-150 hours chalti hai - wear and tear bahut hota hai. Spare parts aur local mechanic ka intezam pehle se rakho. Budget mein 10-15% maintenance cost zaroor rakho.
           </p>
         </div>
 
         <div className="border-l-4 border-red-500 pl-4">
           <h3 className="font-bold text-lg">Payment Recovery</h3>
           <p className="mt-2">
-            Kisaan aksar udhaar par lete hain - fasal katne ke baad denge. Par kabhi-kabhi payment 2-3 mahine late ho jata hai. Kuch cases mein default bhi ho jata hai. Isliye advance payment ya partial payment ka system rakho. Cash flow manage karna mushkil ho jata hai.
+            Kisaan aksar udhaar par lete hain - fasal katne ke baad denge. Kabhi-kabhi payment 2-3 mahine late ho jata hai. Kuch cases mein default bhi ho jata hai. Advance payment ya partial payment ka system rakho. Cash flow manage karna mushkil ho jata hai.
           </p>
         </div>
 
         <div className="border-l-4 border-red-500 pl-4">
           <h3 className="font-bold text-lg">Driver Issues</h3>
           <p className="mt-2">
-            Achha driver milna mushkil hai. Jo milta hai, wo season mein chhod deta hai (kyunki doosra CHC zyada deta hai). Ya phir drunk driving, careless operation se machinery kharab ho jati hai. Driver training aur monitoring zaroori hai.
+            Achha driver milna mushkil hai. Jo milta hai wo season mein chhod deta hai - doosra CHC zyada deta hai. Ya phir drunk driving, careless operation se machinery kharab ho jati hai. Driver training aur monitoring zaroori hai.
           </p>
         </div>
 
         <div className="border-l-4 border-red-500 pl-4">
           <h3 className="font-bold text-lg">Competition</h3>
           <p className="mt-2">
-            Agar aapke area mein doosre CHC khul gaye, toh rates gir sakte hain. 2019 mein Punjab mein CHC boom hua, aur kai areas mein rates 20-30% gir gaye. Location selection bahut zaroori hai - aise area chuno jahan competition kam ho.
+            Area mein doosre CHC khul gaye toh rates gir sakte hain. 2019 mein Punjab mein CHC boom hua, kai areas mein rates 20-30% gir gaye. Location selection bahut zaroori hai - aise area chuno jahan competition kam ho.
           </p>
         </div>
 
@@ -491,7 +491,7 @@ export default function CHCPortal() {
         <div className="border-l-4 border-red-500 pl-4">
           <h3 className="font-bold text-lg">Loan Burden</h3>
           <p className="mt-2">
-            Agar business expected level par nahi chala, toh loan EMI dena mushkil ho jata hai. ₹15-20 lakh ka loan hai, toh monthly ₹25,000-35,000 EMI hai. 2-3 mahine income kam hui, toh default ho sakta hai. Isliye apni capacity se zyada loan mat lo.
+            Business expected level par nahi chala toh loan EMI dena mushkil ho jata hai. ₹15-20 lakh ka loan hai toh monthly ₹25,000-35,000 EMI hai. 2-3 mahine income kam hui toh default ho sakta hai. Apni capacity se zyada loan mat lo.
           </p>
         </div>
       </div>
@@ -501,7 +501,7 @@ export default function CHCPortal() {
       </h2>
       
       <p className="mb-4">
-        Har state ka apna CHC portal hai. Yahan aap apni machinery ki details dalte hain, aur kisaan online book kar sakte hain. Yeh bahut important hai - bina registration ke aapko portal se orders nahi milenge.
+        Har state ka apna CHC portal hai. Yahan machinery ki details daalte hain, kisaan online book kar sakte hain. Bahut important hai yeh - bina registration ke portal se orders nahi milenge.
       </p>
 
       <div className="bg-gray-50 p-4 rounded-lg mb-6">
@@ -531,7 +531,7 @@ export default function CHCPortal() {
       </ol>
 
       <p className="mb-6">
-        Ek baar register ho gaye, toh kisaan aapko online dekh kar book kar sakte hain. Payment bhi online hoti hai, toh recovery ka issue kam hota hai.
+        Ek baar register ho gaye toh kisaan aapko online dekh kar book kar sakte hain. Payment bhi online hoti hai. Recovery ka issue kam hota hai.
       </p>
 
       <p className="mb-6">
@@ -543,7 +543,7 @@ export default function CHCPortal() {
       </h2>
       
       <p className="mb-4">
-        CHC chalane ke liye technical knowledge zaroori hai - machinery operation, maintenance, customer handling. Bina training ke machinery jaldi kharab ho jati hai.
+        CHC chalane ke liye technical knowledge zaroori hai. Machinery operation, maintenance, customer handling - sab seekhna padta hai. Bina training ke machinery jaldi kharab ho jati hai.
       </p>
 
       <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -560,7 +560,7 @@ export default function CHCPortal() {
           <strong>KVKs:</strong> Har district mein KVK CHC management training deta hai.
         </li>
         <li>
-          <strong>Successful CHC Owners:</strong> Apne area mein jo pehle se CHC chala rahe hain, unse 5-7 din kaam karke seekho. Yeh sabse practical training hai.
+          <strong>Successful CHC Owners:</strong> Apne area mein jo pehle se CHC chala rahe hain, unse 5-7 din kaam karke seekho. Sabse practical training hai yeh.
         </li>
       </ul>
 
@@ -582,21 +582,21 @@ export default function CHCPortal() {
       </h2>
       
       <p className="mb-4">
-        CHC business ko step-by-step scale karein. Direct badi investment mat karo.
+        CHC business ko step-by-step scale karein. Direct badi investment mat karo. Dheere dheere badho.
       </p>
 
       <div className="space-y-4 mb-6">
         <div className="border-l-4 border-green-500 pl-4">
           <h3 className="font-bold text-lg">Phase 1: Pilot (0-6 months)</h3>
           <p className="mt-2">
-            Apne existing tractor ke saath 3-4 implements lo. Subsidy ke liye apply karo. 10-15 regular customers banao. Seekho ki kya kaam kar raha hai, kya nahi. Investment: ₹5-8 lakh (after subsidy).
+            Existing tractor ke saath 3-4 implements lo. Subsidy ke liye apply karo. 10-15 regular customers banao. Seekho ki kya kaam kar raha hai, kya nahi. Investment: ₹5-8 lakh (after subsidy).
           </p>
         </div>
 
         <div className="border-l-4 border-green-500 pl-4">
           <h3 className="font-bold text-lg">Phase 2: Growth (6-18 months)</h3>
           <p className="mt-2">
-            Jab 20-30 regular customers ho jayein, tab aur implements lo. 1-2 drivers hire karo. Nearby villages mein expand karo. CHC portal par active raho. Investment: ₹8-12 lakh additional.
+            20-30 regular customers ho jayein tab aur implements lo. 1-2 drivers hire karo. Nearby villages mein expand karo. CHC portal par active raho. Investment: ₹8-12 lakh additional.
           </p>
         </div>
 
@@ -640,11 +640,11 @@ export default function CHCPortal() {
       </ul>
 
       <p className="mb-6">
-        Agar aap pehle category mein aate hain, toh CHC ek bahut profitable business hai. 40-50% subsidy mil rahi hai, isse na lena bewakoofi hogi. Par yaad rakho - yeh passive income nahi hai. Daily mehnat karni padegi, machines maintain karni padengi, customers handle karne padenge.
+        Pehli category mein aate hain toh CHC ek bahut profitable business hai. 40-50% subsidy mil rahi hai, isse na lena bewakoofi hogi. Par yaad rakho - yeh passive income nahi hai. Daily mehnat karni padegi, machines maintain karni padengi, customers handle karne padenge.
       </p>
 
       <p className="mb-6">
-        <strong>Meri advice:</strong> Pehle apne area ka market research karo. 5-10 existing CHC owners se baat karo, unke challenges samjho. Phir apne zila ke Agriculture Officer se milo, guidelines lo. Phir chhote scale par start karo - 3-4 implements se. Jab confidence aa jaye, tab expand karo.
+        <strong>Meri advice:</strong> Pehle apne area ka market research karo. 5-10 existing CHC owners se baat karo, unke challenges samjho. Phir apne zila ke Agriculture Officer se milo, guidelines lo. Phir chhote scale par start karo - 3-4 implements se. Jab confidence aa jaye tab expand karo.
       </p>
 
       <p className="mb-6">
@@ -652,11 +652,11 @@ export default function CHCPortal() {
       </p>
 
       <p className="mb-6">
-        CHC ek emerging opportunity hai. Sarkar isko bahut promote kar rahi hai. Agar aap sahi se execute karein, toh 2-3 saal mein ₹2-3 lakh per month profit possible hai. Par mehnat bahut hai - yeh passive income nahi hai.
+        CHC ek emerging opportunity hai. Sarkar isko bahut promote kar rahi hai. Sahi se execute karein toh 2-3 saal mein ₹2-3 lakh per month profit possible hai. Par mehnat bahut hai - yeh passive income nahi hai.
       </p>
 
       <p className="mb-6">
-        Agar aap seriously interested hain, toh pehle apne nazdeeki Agriculture Department office jayein. Wahan officers hote hain jo CHC ke baare mein guide karte hain. Wo aapko exact guidelines batayenge, aur application mein help karenge.
+        Seriously interested hain toh pehle apne nazdeeki Agriculture Department office jayein. Wahan officers hote hain jo CHC ke baare mein guide karte hain. Exact guidelines batayenge, application mein help karenge.
       </p>
 
       <p className="mb-6 italic text-gray-600">
