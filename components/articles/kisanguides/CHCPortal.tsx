@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { GovLink } from '@/components/ArticleShared';
+import ExternalLinkButton from '@/components/ExternalLinkButton';
 
 export default function CHCPortal() {
   return (
@@ -26,7 +26,7 @@ export default function CHCPortal() {
       </p>
 
       <Image 
-        src="/images/kisanguides/chc-portal-farmer-tractor.webp" 
+        src="/images/kisanguides/pchc-portal-farmer-tractor.webp" 
         alt="Indian farmer with tractor and agricultural implements at Custom Hiring Centre" 
         width={800} 
         height={450} 
@@ -216,7 +216,7 @@ export default function CHCPortal() {
       </p>
 
       <Image 
-        src="/images/kisanguides/chc-portal-implements.webp" 
+        src="/images/kisanguides/pchc-portal-implements.webp" 
         alt="Various agricultural implements - Rotavator, Happy Seeder, Laser Leveler, Seed Drill displayed at CHC" 
         width={800} 
         height={450} 
@@ -256,7 +256,7 @@ export default function CHCPortal() {
           </li>
           <li className="flex justify-between">
             <span>Boom Sprayer:</span>
-            <span className="font-semibold">₹1,20,000 - ₹1,80,000</span>
+            <span className="font-semibold">1,20,000 - ₹1,80,000</span>
           </li>
           <li className="flex justify-between">
             <span>Straw Reaper:</span>
@@ -298,7 +298,7 @@ export default function CHCPortal() {
       </div>
 
       <p className="mb-4">
-        Yeh investment lagti hai. Par loans available hain. <Link href="/articles/KisanTractorLoan2026" className="text-blue-600 hover:underline">Tractor loan guide</Link> mein detailed process bataya gaya hai - 7 saal tak ke liye milta hai, interest rate 9-11%. Implements par SMAM subsidy mil jayegi.
+        Yeh investment lagti hai. Par loans available hain. <Link href="/kisanguides/kisan-tractor-loan-2026" className="text-blue-600 hover:underline">Tractor loan guide</Link> mein detailed process bataya gaya hai - 7 saal tak ke liye milta hai, interest rate 9-11%. Implements par SMAM subsidy mil jayegi.
       </p>
 
       <p className="mb-6">
@@ -369,12 +369,15 @@ export default function CHCPortal() {
         Poora process 3-6 months lag sakta hai. Patience rakhein. Application mein koi fee nahi lagti - sab free hai.
       </p>
 
-      <GovLink
-        href="https://agrimachinery.nic.in"
-        label="Agriculture Machinery Portal"
-        guide="State-wise Guidelines Check Karein"
-        portalName="agrimachinery.nic.in"
-      />
+      <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg my-8">
+        <h3 className="font-semibold text-blue-800 dark:text-blue-300 mb-4">
+          Official Resources:
+        </h3>
+        <ExternalLinkButton 
+          url="https://agrimachinery.nic.in"
+          label="Visit Agriculture Machinery Portal - agrimachinery.nic.in"
+        />
+      </div>
 
       <Image 
         src="/images/kisanguides/chc-portal-application.webp" 
@@ -449,7 +452,7 @@ export default function CHCPortal() {
               <td className="py-2 px-4 border-b">Other implements</td>
               <td className="py-2 px-4 border-b">Various</td>
               <td className="py-2 px-4 border-b">-</td>
-              <td className="py-2 px-4 border-b">₹40,000</td>
+              <td className="py-2 px-4 border-b">40,000</td>
             </tr>
             <tr className="bg-green-50">
               <td className="py-2 px-4 border-b font-bold" colSpan={3}>Total Monthly Revenue</td>
@@ -582,7 +585,7 @@ export default function CHCPortal() {
       </p>
 
       <p className="mb-6">
-        Agriculture business loan ke liye bhi CHC registration zaroori hai. Banks ko proof chahiye ki aap actually kaam kar rahe hain. <Link href="/articles/KisanRinKahaSeLe2026" className="text-blue-600 hover:underline">Kisan loan guide</Link> mein doosre options bhi hain.
+        Agriculture business loan ke liye bhi CHC registration zaroori hai. Banks ko proof chahiye ki aap actually kaam kar rahe hain. <Link href="/kisanguides/kisan-rin-kaha-se-le-2026" className="text-blue-600 hover:underline">Kisan loan guide</Link> mein doosre options bhi hain.
       </p>
 
       <Image 
@@ -711,7 +714,7 @@ export default function CHCPortal() {
       </p>
 
       <p className="mb-6">
-        Ek aur important point - <Link href="/articles/silage-making-business-guide" className="text-blue-600 hover:underline">silage making</Link> ya <Link href="/articles/vermi-compost-business-guide" className="text-blue-600 hover:underline">vermi compost</Link> jaise doosre agri-businesses ke saath CHC ko combine karo. Multiple income streams ban jayenge. Ek machine se ek kaam nahi hota, par 5-6 machines se year-round income hoti hai.
+        Ek aur important point - <Link href="/kisanguides/silage-making-business-guide" className="text-blue-600 hover:underline">silage making</Link> ya <Link href="/kisanguides/vermi-compost-business-guide" className="text-blue-600 hover:underline">vermi compost</Link> jaise doosre agri-businesses ke saath CHC ko combine karo. Multiple income streams ban jayenge. Ek machine se ek kaam nahi hota, par 5-6 machines se year-round income hoti hai.
       </p>
 
       <p className="mb-6">
@@ -722,8 +725,136 @@ export default function CHCPortal() {
         Seriously interested hain toh pehle apne nazdeeki Agriculture Department office jayein. Wahan officers hote hain jo CHC ke baare mein guide karte hain. Exact guidelines batayenge, application mein help karenge.
       </p>
 
+      {/* Related Articles Section - Stylish UI/UX */}
+      <div className="mt-12 pt-8 border-t-2 border-gray-200 dark:border-gray-700">
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6 flex items-center gap-2">
+          <span className="text-3xl">🚜</span>
+          Related Resources on KisanStatus
+        </h3>
+        
+        <p className="text-gray-600 dark:text-gray-400 mb-6">
+          Farming machinery aur subsidies se related aur bhi helpful guides:
+        </p>
+
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
+          {/* Animal Husbandry Category */}
+          <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-6 rounded-xl border-2 border-green-200 dark:border-green-800 hover:shadow-lg transition-shadow">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white text-2xl">
+                🐐
+              </div>
+              <h4 className="text-lg font-bold text-green-800 dark:text-green-300">
+                Animal Husbandry
+              </h4>
+            </div>
+            <ul className="space-y-3">
+              <li>
+                <Link 
+                  href="/kisanguides/bakri-palan-yojana-nlm-subsidy" 
+                  className="flex items-start gap-2 text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors group"
+                >
+                  <span className="text-green-600 group-hover:translate-x-1 transition-transform">→</span>
+                  <div>
+                    <div className="font-semibold">Bakri Palan NLM Subsidy</div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400">50% subsidy on goat farming</div>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/kisanguides/poultry-farming-subsidy" 
+                  className="flex items-start gap-2 text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors group"
+                >
+                  <span className="text-green-600 group-hover:translate-x-1 transition-transform">→</span>
+                  <div>
+                    <div className="font-semibold">Poultry Farming Subsidy</div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400">Chicken farming support</div>
+                  </div>
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Subsidy Schemes Category */}
+          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 p-6 rounded-xl border-2 border-blue-200 dark:border-blue-800 hover:shadow-lg transition-shadow">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl">
+                💰
+              </div>
+              <h4 className="text-lg font-bold text-blue-800 dark:text-blue-300">
+                Government Schemes
+              </h4>
+            </div>
+            <ul className="space-y-3">
+              <li>
+                <Link 
+                  href="/kisanguides/pm-kusum-solar-pump-subsidy" 
+                  className="flex items-start gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors group"
+                >
+                  <span className="text-blue-600 group-hover:translate-x-1 transition-transform">→</span>
+                  <div>
+                    <div className="font-semibold">PM-KUSUM Solar Pump</div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400">60-90% subsidy on solar pumps</div>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/kisanguides/organic-farming-guide" 
+                  className="flex items-start gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors group"
+                >
+                  <span className="text-blue-600 group-hover:translate-x-1 transition-transform">→</span>
+                  <div>
+                    <div className="font-semibold">Organic Farming Guide</div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400">Organic certification process</div>
+                  </div>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Additional Resources */}
+        <div className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 p-6 rounded-xl border-2 border-purple-200 dark:border-purple-800">
+          <h4 className="text-lg font-bold text-purple-800 dark:text-purple-300 mb-4 flex items-center gap-2">
+            <span className="text-2xl">🌾</span>
+            More Farming Resources
+          </h4>
+          <div className="grid sm:grid-cols-2 gap-3">
+            <Link 
+              href="/kisanguides/drip-sprinkler-irrigation" 
+              className="flex items-center gap-2 bg-white dark:bg-gray-800 p-3 rounded-lg hover:shadow-md transition-shadow text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400"
+            >
+              <span className="text-purple-600">💧</span>
+              <span className="font-medium">Drip & Sprinkler Irrigation</span>
+            </Link>
+            <Link 
+              href="/kisanguides/vermi-compost-business" 
+              className="flex items-center gap-2 bg-white dark:bg-gray-800 p-3 rounded-lg hover:shadow-md transition-shadow text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400"
+            >
+              <span className="text-purple-600">🪱</span>
+              <span className="font-medium">Vermi Compost Business</span>
+            </Link>
+            <Link 
+              href="/kisanguides/mushroom-kheti" 
+              className="flex items-center gap-2 bg-white dark:bg-gray-800 p-3 rounded-lg hover:shadow-md transition-shadow text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400"
+            >
+              <span className="text-purple-600">🍄</span>
+              <span className="font-medium">Mushroom Kheti Guide</span>
+            </Link>
+            <Link 
+              href="/kisanguides/madhumakhi-palan" 
+              className="flex items-center gap-2 bg-white dark:bg-gray-800 p-3 rounded-lg hover:shadow-md transition-shadow text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400"
+            >
+              <span className="text-purple-600">🐝</span>
+              <span className="font-medium">Madhumakhi Palan (Beekeeping)</span>
+            </Link>
+          </div>
+        </div>
+      </div>
+
       <p className="mb-6 italic text-gray-600">
-        Note: Is article ki information general guidance ke liye hai. Costs, subsidies, aur procedures aapke location aur specific circumstances ke hisaab se alag ho sakte hain. Financial decisions lene se pehle agriculture officers ya CAs se consult karna samajhdari hai. Guidelines aur prices periodically update hote hain - latest info ke liye official sources check karein.
+        Note: Is article ki information general guidance ke liye hai. Costs, subsidies, aur procedures aapke location aur specific circumstances ke hisaab se alag ho sakte hain. Financial decisions lene se pehle agriculture officers ya irrigation experts se consult karna samajhdari hai. Guidelines aur prices periodically update hote hain - latest info ke liye official sources check karein.
       </p>
     </article>
   );
