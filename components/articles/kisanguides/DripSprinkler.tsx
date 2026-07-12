@@ -133,7 +133,7 @@ export default function DripSprinkler() {
       </div>
 
       <p className="mb-4">
-        Example dekhte hain. Small farmer hain, 2 acre zameen. Drip irrigation lagwate hain jiska cost ₹40,000/acre hai.
+        Example dekhte hain. Small farmer hain, 2 acre zameen. Drip irrigation lagwate hain jiska cost ₹40,000/acre hai. Investment ke liye aap <Link href="/kisanguides/kisan-credit-card-online-apply-2026" className="text-blue-600 hover:underline">Kisan Credit Card</Link> ya <Link href="/kisanguides/kisan-rin-kaha-se-le-2026" className="text-blue-600 hover:underline">bank loan</Link> le sakte hain.
       </p>
 
       <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -539,7 +539,7 @@ export default function DripSprinkler() {
         {/* Additional Resources */}
         <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-6 rounded-xl border-2 border-green-200 dark:border-green-800">
           <h4 className="text-lg font-bold text-green-800 dark:text-green-300 mb-4 flex items-center gap-2">
-            <span className="text-2xl">🌾</span>
+            <span className="text-2xl"></span>
             More Farming Guides
           </h4>
           <div className="grid sm:grid-cols-2 gap-3">
