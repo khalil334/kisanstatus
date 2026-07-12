@@ -97,11 +97,9 @@ export default function RootLayout({
   return (
     <html lang="hi-IN" suppressHydrationWarning className={poppins.variable}>
       <head>
-        {/* ✅ PRECONNECT: Third-party resources ke saath connection pehle */}
+        {/* ✅ PRECONNECT: Sirf essential third-party resources */}
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.google.com" />
-        <link rel="dns-prefetch" href="https://www.facebook.com" />
         <link rel="dns-prefetch" href="https://vercel.live" />
 
         {/* ✅ HERO IMAGE PRELOAD - LCP ke liye critical */}
@@ -113,12 +111,13 @@ export default function RootLayout({
           fetchPriority="high"
         />
 
-        {/* ✅ OG IMAGE PRELOAD - Social sharing ke liye */}
+        {/* ✅ FONT PRELOAD - Critical fonts pehle load hongi */}
         <link
           rel="preload"
-          as="image"
-          href="/og-image.webp"
-          type="image/webp"
+          as="font"
+          type="font/woff2"
+          href={`${poppins.style.fontFamily}`}
+          crossOrigin="anonymous"
         />
 
         {/* Favicon & Manifest */}
@@ -161,7 +160,7 @@ export default function RootLayout({
           }}
         />
 
-        {/* ✅ CONSOLIDATED JSON-LD Schema Markup - Single script for better performance */}
+        {/* ✅ CONSOLIDATED JSON-LD Schema Markup */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -234,13 +233,12 @@ export default function RootLayout({
           <Footer />
         </LanguageProvider>
 
-        {/* ✅ GA4: afterInteractive - Page interactive hone ke baad load hoga */}
+        {/* ✅ GA4: afterInteractive - Page interactive hone ke baad */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"
         />
 
-        {/* ✅ GA4 inline script — optimized */}
         <Script
           id="ga4-init"
           strategy="afterInteractive"
@@ -258,7 +256,7 @@ export default function RootLayout({
           }}
         />
 
-        {/* ✅ Vercel Analytics — Production mein hi load hoga */}
+        {/* ✅ Vercel Analytics — Production only */}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
