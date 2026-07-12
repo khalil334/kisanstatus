@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { AUTHOR_NAME } from '@/lib/site-config';
+import { useState, useEffect } from 'react';
 
 const EXTERNAL_ICON = (
   <svg className="w-3 h-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -10,8 +11,20 @@ const EXTERNAL_ICON = (
 );
 
 export default function Footer() {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   return (
-    <footer className="bg-[var(--color-text)] text-white py-12">
+    <footer 
+      className="bg-[var(--color-text)] text-white py-12"
+      style={{ 
+        minHeight: '400px', // ✅ CLS FIX: Reserve space for footer
+        contain: 'layout style' // ✅ PERFORMANCE: Prevent layout shift
+      }}
+    >
       <div className="container-site">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
@@ -37,12 +50,12 @@ export default function Footer() {
             <h4 className="font-semibold text-white text-base mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm" role="list">
               {[
-                { href: '/', label: '🏠 Home' },
+                { href: '/', label: ' Home' },
                 { href: '/about', label: '👤 About Us' },
                 { href: '/disclaimer', label: '⚠️ Disclaimer' },
-                { href: '/privacy-policy', label: '🔒 Privacy Policy' },
+                { href: '/privacy-policy', label: ' Privacy Policy' },
                 { href: '/contact', label: '📧 Contact Us' },
-                { href: '/articles', label: '📚 All Articles' },
+                { href: '/articles', label: ' All Articles' },
                 { href: '/calculator', label: '🧮 Calculators' },
               ].map((link) => (
                 <li key={link.href}>
