@@ -74,6 +74,8 @@
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
     scroll-padding-top: 80px;
+    /* ✅ PERFORMANCE: Prevent layout shift from scrollbar */
+    scrollbar-gutter: stable;
   }
 
   body {
@@ -86,6 +88,8 @@
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
     transition: background-color var(--transition-normal) ease, color var(--transition-normal) ease;
+    /* ✅ PERFORMANCE: Contain paint for better performance */
+    contain: style;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -154,6 +158,16 @@
   img[loading="lazy"] {
     background-color: var(--color-border);
     min-height: 200px;
+  }
+
+  /* ✅ NEW: Better image loading states */
+  img {
+    background-color: var(--color-border);
+    transition: opacity 0.3s ease;
+  }
+
+  img[data-loaded="true"] {
+    background-color: transparent;
   }
 
   a {
@@ -674,6 +688,19 @@
   .font-poppins {
     font-family: var(--font-poppins), system-ui, -apple-system, sans-serif;
     font-display: swap;
+  }
+
+  /* ✅ NEW: Prevent CLS from dynamic content */
+  .reserve-space {
+    min-height: 200px;
+    contain: layout style;
+  }
+
+  /* ✅ NEW: Image placeholder styles */
+  .img-placeholder {
+    background: linear-gradient(90deg, var(--color-border) 0%, var(--color-bg-alt) 50%, var(--color-border) 100%);
+    background-size: 200% 100%;
+    animation: loading-shimmer 1.5s infinite;
   }
 }
 
