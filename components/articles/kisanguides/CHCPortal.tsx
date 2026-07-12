@@ -6,7 +6,7 @@ export default function CHCPortal() {
   return (
     <article className="max-w-3xl mx-auto px-4 py-8 text-gray-800 leading-relaxed">
       <Image 
-        src="/images/farm-machinery/chc-portal/hero.jpg" 
+        src="/images/kisanguides/chc-portal-hero.webp" 
         alt="Custom Hiring Centre with Tractor and Farm Implements - SMAM Subsidy Guide" 
         width={800} 
         height={450} 
@@ -17,17 +17,21 @@ export default function CHCPortal() {
         Custom Hiring Centre (CHC) 2026: Apna Tractor Kiraye Par De Kar Mahine Ka ₹50,000+ Kamayein - Complete Guide
       </h1>
       
-      <p className="text-lg mb-4 italic">
-        Punjab ke Patiala district mein 38 saal ka kisan Gurpreet mila jiske paas 12 acre zameen hai, 2019 mein usne SMAM scheme ke under 50% subsidy par tractor, happy seeder, rotavator, laser land leveler khareeda. Aaj monthly income ₹65,000-75,000 hai. Sirf machinery rent se.
+      <p className="text-lg mb-4">
+        Custom Hiring Centre (CHC) ek aisa business model hai jahan aap agricultural machinery khareed kar doosre kisaanon ko rent par dete hain. SMAM scheme ke tehat 40-50% subsidy milne ki wajah se yeh ek profitable opportunity ban gaya hai.
       </p>
       
       <p className="mb-6">
-        "Bhai, mera apna kaam toh 3-4 mahine mein khatam ho jata hai. Baaki 8 mahine yeh machinery gaon ke doosre kisaanon ko rent par deta hoon. Tractor ₹800-1,000 per hour, happy seeder ₹1,200 per acre, laser leveler ₹800 per acre. Mahine ka ₹50,000-60,000 aaram se nikal aata hai," usne bataya.
+        India mein 85% kisaanon ke paas 2 hectare se kam zameen hai, isliye wo mehngi machinery khareed nahi sakte. CHC in kisaanon ko affordable rates par equipment provide karta hai, aur aap achhi kamai kar sakte hain.
       </p>
-      
-      <p className="mb-6">
-        Custom Hiring Centre ka model hai yeh. Sarkar chahti hai har gaon mein ek CHC ho jahan kisaanon ko sasti machinery rent par mile. Aap CHC khol kar achhi kamai kar sakte hain - 40-50% subsidy ke saath.
-      </p>
+
+      <Image 
+        src="/images/kisanguides/chc-portal-farmer-tractor.webp" 
+        alt="Indian farmer with tractor and agricultural implements at Custom Hiring Centre" 
+        width={800} 
+        height={450} 
+        className="rounded-xl mb-6 shadow-md" 
+      />
 
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
         CHC Hai Kya? Aur Yeh Business Model Kaise Kaam Karta Hai?
@@ -73,8 +77,8 @@ export default function CHCPortal() {
             <span className="font-semibold">50-60% subsidy</span>
           </li>
           <li className="flex justify-between">
-            <span>Maximum Subsidy Limit:</span>
-            <span className="font-semibold">₹20 lakh per CHC unit</span>
+            <span>Subsidy Amount:</span>
+            <span className="font-semibold">Project cost ke 40-50% (exact ceiling state-wise vary karti hai)</span>
           </li>
           <li className="flex justify-between">
             <span>Group Application (7-10 farmers):</span>
@@ -91,13 +95,31 @@ export default function CHCPortal() {
         Example dekhte hain. ₹30 lakh ki machinery khareedte hain tractor chhod kar, toh 40% subsidy = ₹12 lakh. Out-of-pocket kharcha sirf ₹18 lakh. Bada advantage hai yeh.
       </p>
 
+      <div className="bg-yellow-50 border border-yellow-300 rounded-lg p-5 mb-6">
+        <h3 className="font-bold text-lg mb-3 text-yellow-800">
+          🌾 CRM Scheme - Punjab/Haryana/UP/Delhi Farmers Ke Liye Special
+        </h3>
+        <p className="mb-2">
+          <strong>Important:</strong> Agar aap Punjab, Haryana, Uttar Pradesh, ya Delhi NCR region se hain, toh Happy Seeder, Super Seeder, aur straw management machinery par <strong>CRM (Crop Residue Management) Scheme</strong> ke tehat <strong>80% subsidy</strong> milti hai - jo SMAM ke generic 40-50% se kaafi zyada hai.
+        </p>
+        <p className="text-sm text-yellow-900">
+          Yeh SMAM se ALAG scheme hai. Dono schemes ka benefit ek saath nahi mil sakta, lekin CRM machinery ke liye specifically better option hai.
+        </p>
+      </div>
+
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
         Kaunsi Machinery Khareedein? High-Demand Implements List
       </h2>
       
       <p className="mb-4">
-        Har region ki demand alag hoti hai. Par kuch implements hain jo har jagah chalte hain. Yeh list maine actual CHC owners se baat karke banayi hai - real data hai yeh.
+        Har region ki demand alag hoti hai. Par kuch implements hain jo har jagah chalte hain. Industry observations ke mutabik yeh implements sabse zyada demand mein hain.
       </p>
+
+      <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-6">
+        <p className="text-sm text-amber-900 italic">
+          <strong>Note:</strong> Ye rates/figures illustrative hain aur area, season, aur competition ke hisaab se significantly vary kar sakte hain. Apne local market ka research zaroor karein before investment decision.
+        </p>
+      </div>
 
       <div className="overflow-x-auto mb-6">
         <table className="min-w-full bg-white border border-gray-300">
@@ -190,8 +212,16 @@ export default function CHCPortal() {
       </p>
 
       <p className="mb-6">
-        State ke Agriculture Department portal par jaakar implement-wise subsidy ki exact list check karein. Har state mein rates thode alag hote hain.
+        Apne state ke Agriculture Department ki official website ya agrimachinery.nic.in portal par jaakar implement-wise subsidy ki exact list check karein. Har state mein rates thode alag hote hain.
       </p>
+
+      <Image 
+        src="/images/kisanguides/chc-portal-implements.webp" 
+        alt="Various agricultural implements - Rotavator, Happy Seeder, Laser Leveler, Seed Drill displayed at CHC" 
+        width={800} 
+        height={450} 
+        className="rounded-xl mb-6 shadow-md" 
+      />
 
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
         Complete Setup Cost: Kitna Paisa Lagega?
@@ -294,7 +324,7 @@ export default function CHCPortal() {
         <div className="border-l-4 border-green-500 pl-4">
           <h3 className="font-bold text-lg">Step 2: State Agriculture Department Se Milein</h3>
           <p className="mt-2">
-            Zila ke Agriculture Officer ya Deputy Director se milein. Current guidelines denge wo. Har state ka portal alag hai - Punjab mein <em>agripb.gov.in</em>, Haryana mein <em>meri fasal</em> portal, UP mein <em>upagripard.gov.in</em>, etc.
+            Zila ke Agriculture Officer ya Deputy Director se milein. Current guidelines denge wo. Apne state ke Agriculture Department ki official website ya agrimachinery.nic.in par state-wise CHC registration details check karein.
           </p>
         </div>
 
@@ -340,10 +370,18 @@ export default function CHCPortal() {
       </p>
 
       <GovLink
-        href="https://agrimachinery.gov.in/"
+        href="https://agrimachinery.nic.in"
         label="Agriculture Machinery Portal"
         guide="State-wise Guidelines Check Karein"
-        portalName="agrimachinery.gov.in"
+        portalName="agrimachinery.nic.in"
+      />
+
+      <Image 
+        src="/images/kisanguides/chc-portal-application.webp" 
+        alt="Farmer filling CHC subsidy application form with documents at agriculture office" 
+        width={800} 
+        height={450} 
+        className="rounded-xl mb-6 shadow-md" 
       />
 
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
@@ -351,8 +389,14 @@ export default function CHCPortal() {
       </h2>
       
       <p className="mb-4">
-        Sabse important sawaal - paisa kitna banega? Ek realistic calculation dekhte hain.
+        Sabse important sawaal - paisa kitna banega? Ek illustrative calculation dekhte hain.
       </p>
+
+      <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-6">
+        <p className="text-sm text-amber-900 italic">
+          <strong>Disclaimer:</strong> Ye rates/figures illustrative hain aur area, season, aur competition ke hisaab se significantly vary kar sakte hain. Apne local market ka research zaroor karein before investment decision.
+        </p>
+      </div>
 
       <div className="overflow-x-auto mb-6">
         <table className="min-w-full bg-white border border-gray-300">
@@ -444,6 +488,14 @@ export default function CHCPortal() {
         Ek aur point - seasonal variation. Kharif (June-October) aur Rabi (October-March) mein demand peak par hoti hai. Garmiyon (April-June) mein demand 40-50% kam ho jati hai. 12 months ka cash flow manage karna padta hai.
       </p>
 
+      <Image 
+        src="/images/kisanguides/chc-portal-profit.webp" 
+        alt="CHC profit calculation chart showing monthly revenue and expenses breakdown" 
+        width={800} 
+        height={450} 
+        className="rounded-xl mb-6 shadow-md" 
+      />
+
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-red-700">
         Real Risks - Jo Koi Nahi Batata
       </h2>
@@ -505,15 +557,10 @@ export default function CHCPortal() {
       </p>
 
       <div className="bg-gray-50 p-4 rounded-lg mb-6">
-        <h3 className="font-bold text-lg mb-3">State-wise CHC Portals:</h3>
-        <ul className="space-y-2">
-          <li><strong>Punjab:</strong> agripb.gov.in (Farm Machinery Management)</li>
-          <li><strong>Haryana:</strong> merifasal.haryana.gov.in</li>
-          <li><strong>Uttar Pradesh:</strong> upagrimachinery.gov.in</li>
-          <li><strong>Madhya Pradesh:</strong> mpchc.in</li>
-          <li><strong>Rajasthan:</strong> rajchc.rajasthan.gov.in</li>
-          <li><strong>Maharashtra:</strong> mahachc.maharashtra.gov.in</li>
-        </ul>
+        <h3 className="font-bold text-lg mb-3">State-wise CHC Registration:</h3>
+        <p className="text-sm mb-3">
+          Apne state ke Agriculture Department ki official website ya <a href="https://agrimachinery.nic.in" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">agrimachinery.nic.in</a> portal par state-wise CHC registration details check karein. Har state ka alag registration process aur portal ho sakta hai.
+        </p>
       </div>
 
       <p className="mb-4">
@@ -537,6 +584,14 @@ export default function CHCPortal() {
       <p className="mb-6">
         Agriculture business loan ke liye bhi CHC registration zaroori hai. Banks ko proof chahiye ki aap actually kaam kar rahe hain. <Link href="/articles/KisanRinKahaSeLe2026" className="text-blue-600 hover:underline">Kisan loan guide</Link> mein doosre options bhi hain.
       </p>
+
+      <Image 
+        src="/images/kisanguides/chc-portal-registration.webp" 
+        alt="Farmer registering on state CHC portal using computer at agriculture office" 
+        width={800} 
+        height={450} 
+        className="rounded-xl mb-6 shadow-md" 
+      />
 
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
         Training Kahan Se Lein?
@@ -607,6 +662,14 @@ export default function CHCPortal() {
           </p>
         </div>
       </div>
+
+      <Image 
+        src="/images/kisanguides/chc-portal-scale.webp" 
+        alt="CHC business expansion from small to large scale - multiple tractors and implements" 
+        width={800} 
+        height={450} 
+        className="rounded-xl mb-6 shadow-md" 
+      />
 
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
         Kya Aapke Liye Sahi Hai? Final Decision Framework
