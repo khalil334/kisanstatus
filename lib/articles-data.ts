@@ -55,7 +55,7 @@ export interface ArticleMeta {
 }
 
 export const ARTICLES: readonly ArticleMeta[] = [
-  // ── EXISTING ARTICLES ───────────────────────────────────
+  // ── EXISTING ARTICLES (18) ───────────────────────────────────
   {
     slug: 'KisanRinKahaSeLe2026',
     title: 'Kisan Loan Kahan Se Milega 2026? KCC, Bank, CSC — Puri Jankari',
@@ -351,6 +351,8 @@ export const ARTICLES: readonly ArticleMeta[] = [
     ogImage: '/images/articles/pm-kusum-yojana-solar-subsidy-2026/solar-pump-hero.webp',
     relatedSlugs: ['KisanCreditCardOnlineApply2026', 'KisanTractorLoan2026', 'PmKisanMasterGuide2026', 'soil-health-card-complete-guide-2026'],
   },
+
+  // ── NEW 10 PM KISAN RELATED ARTICLES ─────────────────────
   {
     slug: 'PmKisanLandSeedingForm',
     title: 'PM Kisan Land Seeding Form PDF Download: State Wise Process',
@@ -548,7 +550,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     relatedSlugs: ['PmKisanCscRegistrationCharges', 'PmKisanEkycOnline2026', 'PmKisanMasterGuide2026', 'PmKisanRejectedStatusReApplyGuide'],
   },
 
-  // ── NEW 10 LOW-COMPETITION ARTICLES ─────────────────────
+  // ── NEW 10 LOW-COMPETITION FARMING ARTICLES ─────────────────────
   {
     slug: 'bakri-palan-yojana-nlm-subsidy',
     title: 'Bakri Palan Yojana 2026: NLM Subsidy, Loan Process, aur Real Profit Analysis',
