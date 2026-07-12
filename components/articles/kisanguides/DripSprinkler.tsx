@@ -95,7 +95,7 @@ export default function DripSprinkler() {
       </p>
 
       <p className="mb-6">
-        Apne area ke KVK officers se consult karein. Wo specific crop aur soil type ke liye best option bata sakte hain.
+        Apne area ke KVK officers se consult karein. Wo specific crop aur soil type ke liye best option bata sakte hain. Zameen ki quality samajhne ke liye <Link href="/SoilHealthCardCompleteGuide2026" className="text-blue-600 hover:underline">Soil Health Card</Link> bhi check kar sakte hain.
       </p>
 
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
@@ -133,7 +133,7 @@ export default function DripSprinkler() {
       </div>
 
       <p className="mb-4">
-        Example dekhte hain. Small farmer hain, 2 acre zameen. Drip irrigation lagwate hain jiska cost ₹40,000/acre hai. Investment ke liye aap <Link href="/kisanguides/kisan-credit-card-online-apply-2026" className="text-blue-600 hover:underline">Kisan Credit Card</Link> ya <Link href="/kisanguides/kisan-rin-kaha-se-le-2026" className="text-blue-600 hover:underline">bank loan</Link> le sakte hain.
+        Example dekhte hain. Small farmer hain, 2 acre zameen. Drip irrigation lagwate hain jiska cost ₹40,000/acre hai. Investment ke liye aap <Link href="/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline">Kisan Credit Card</Link> ya <Link href="/KisanRinKahaSeLe2026" className="text-blue-600 hover:underline">bank loan</Link> le sakte hain.
       </p>
 
       <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -312,14 +312,14 @@ export default function DripSprinkler() {
           <li>
             <strong className="text-blue-900">2. Solar Pump Integration:</strong>
             <p className="mt-1 text-gray-700">
-              Agar borewell par solar pump lagate hain <Link href="/kisanguides/pm-kusum-solar-pump-subsidy" className="text-blue-600 hover:underline">PM-KUSUM scheme</Link> ke tehat 60-90% subsidy milti hai. Bijli ka bill zero ho jata hai. Drip + Solar = maximum savings.
+              Agar borewell par solar pump lagate hain <Link href="/PmKusumYojanaSolarSubsidy2026" className="text-blue-600 hover:underline">PM-KUSUM scheme</Link> ke tehat 60-90% subsidy milti hai. Bijli ka bill zero ho jata hai. Drip + Solar = maximum savings.
             </p>
           </li>
 
           <li>
             <strong className="text-blue-900">3. Fertigation Training:</strong>
             <p className="mt-1 text-gray-700">
-              Drip irrigation ke saath fertigation seekhein. Khaad paani mein milakar dena. 25-35% bachat hoti hai. KVKs free training dete hain - apne nazdeeki KVK se contact karein.
+              Drip irrigation ke saath fertigation seekhein. Khaad paani mein milakar dena. 25-35% bachat hoti hai. KVKs free training dete hain - apne nazdeeki KVK se contact karein. Fertilizer efficiency badhane ke liye <Link href="/NanoDap500mlPriceInIndia2026" className="text-blue-600 hover:underline">Nano DAP</Link> ka use bhi consider karein.
             </p>
           </li>
 
@@ -475,103 +475,68 @@ export default function DripSprinkler() {
       <div className="mt-12 pt-8 border-t-2 border-gray-200 dark:border-gray-700">
         <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6 flex items-center gap-2">
           <span className="text-3xl">💧</span>
-          Related Resources on KisanStatus
+          Related Articles on KisanStatus
         </h3>
         
         <p className="text-gray-600 dark:text-gray-400 mb-6">
           Irrigation aur farming subsidies se related aur bhi helpful guides:
         </p>
 
-        <div className="grid md:grid-cols-2 gap-6 mb-8">
-          {/* Solar Energy Category */}
-          <div className="bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20 p-6 rounded-xl border-2 border-yellow-200 dark:border-yellow-800 hover:shadow-lg transition-shadow">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-yellow-600 rounded-full flex items-center justify-center text-white text-2xl">
-                ☀️
-              </div>
-              <h4 className="text-lg font-bold text-yellow-800 dark:text-yellow-300">
-                Solar Energy Solutions
-              </h4>
+        <div className="grid sm:grid-cols-2 gap-4">
+          <Link 
+            href="/CHCPortal" 
+            className="flex items-center gap-3 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-4 rounded-xl border-2 border-green-200 dark:border-green-800 hover:shadow-lg transition-all group"
+          >
+            <span className="text-3xl group-hover:scale-110 transition-transform">🚜</span>
+            <div>
+              <div className="font-semibold text-gray-900 dark:text-gray-100">Custom Hiring Centre</div>
+              <div className="text-xs text-gray-600 dark:text-gray-400">Machinery rental business</div>
             </div>
-            <ul className="space-y-3">
-              <li>
-                <Link 
-                  href="/kisanguides/pm-kusum-solar-pump-subsidy" 
-                  className="flex items-start gap-2 text-gray-700 dark:text-gray-300 hover:text-yellow-600 dark:hover:text-yellow-400 transition-colors group"
-                >
-                  <span className="text-yellow-600 group-hover:translate-x-1 transition-transform">→</span>
-                  <div>
-                    <div className="font-semibold">PM-KUSUM Solar Pump Subsidy</div>
-                    <div className="text-xs text-gray-500 dark:text-gray-400">60-90% subsidy on solar pumps</div>
-                  </div>
-                </Link>
-              </li>
-            </ul>
-          </div>
+          </Link>
 
-          {/* Water Conservation Category */}
-          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 p-6 rounded-xl border-2 border-blue-200 dark:border-blue-800 hover:shadow-lg transition-shadow">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl">
-                💧
-              </div>
-              <h4 className="text-lg font-bold text-blue-800 dark:text-blue-300">
-                Water Management
-              </h4>
+          <Link 
+            href="/PMatsyaSampada" 
+            className="flex items-center gap-3 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 p-4 rounded-xl border-2 border-blue-200 dark:border-blue-800 hover:shadow-lg transition-all group"
+          >
+            <span className="text-3xl group-hover:scale-110 transition-transform">🐟</span>
+            <div>
+              <div className="font-semibold text-gray-900 dark:text-gray-100">PM Matsya Sampada</div>
+              <div className="text-xs text-gray-600 dark:text-gray-400">Fisheries subsidy scheme</div>
             </div>
-            <ul className="space-y-3">
-              <li>
-                <Link 
-                  href="/kisanguides/water-conservation-schemes" 
-                  className="flex items-start gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors group"
-                >
-                  <span className="text-blue-600 group-hover:translate-x-1 transition-transform">→</span>
-                  <div>
-                    <div className="font-semibold">Water Conservation Schemes</div>
-                    <div className="text-xs text-gray-500 dark:text-gray-400">Farm pond, check dam subsidies</div>
-                  </div>
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
+          </Link>
 
-        {/* Additional Resources */}
-        <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-6 rounded-xl border-2 border-green-200 dark:border-green-800">
-          <h4 className="text-lg font-bold text-green-800 dark:text-green-300 mb-4 flex items-center gap-2">
-            <span className="text-2xl"></span>
-            More Farming Guides
-          </h4>
-          <div className="grid sm:grid-cols-2 gap-3">
-            <Link 
-              href="/kisanguides/bakri-palan-yojana-nlm-subsidy" 
-              className="flex items-center gap-2 bg-white dark:bg-gray-800 p-3 rounded-lg hover:shadow-md transition-shadow text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400"
-            >
-              <span className="text-green-600">🐐</span>
-              <span className="font-medium">Bakri Palan NLM Subsidy</span>
-            </Link>
-            <Link 
-              href="/kisanguides/chc-portal-custom-hiring-centre" 
-              className="flex items-center gap-2 bg-white dark:bg-gray-800 p-3 rounded-lg hover:shadow-md transition-shadow text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400"
-            >
-              <span className="text-green-600">🚜</span>
-              <span className="font-medium">Custom Hiring Centre (CHC)</span>
-            </Link>
-            <Link 
-              href="/kisanguides/organic-farming-guide" 
-              className="flex items-center gap-2 bg-white dark:bg-gray-800 p-3 rounded-lg hover:shadow-md transition-shadow text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400"
-            >
-              <span className="text-green-600">🌱</span>
-              <span className="font-medium">Organic Farming Guide</span>
-            </Link>
-            <Link 
-              href="/kisanguides/poultry-farming-subsidy" 
-              className="flex items-center gap-2 bg-white dark:bg-gray-800 p-3 rounded-lg hover:shadow-md transition-shadow text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400"
-            >
-              <span className="text-green-600">🐔</span>
-              <span className="font-medium">Poultry Farming Subsidy</span>
-            </Link>
-          </div>
+          <Link 
+            href="/PmfbyCropInsurance2026" 
+            className="flex items-center gap-3 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 p-4 rounded-xl border-2 border-purple-200 dark:border-purple-800 hover:shadow-lg transition-all group"
+          >
+            <span className="text-3xl group-hover:scale-110 transition-transform">🛡️</span>
+            <div>
+              <div className="font-semibold text-gray-900 dark:text-gray-100">PMFBY Crop Insurance</div>
+              <div className="text-xs text-gray-600 dark:text-gray-400">Crop insurance protection</div>
+            </div>
+          </Link>
+
+          <Link 
+            href="/MandiBhavToday" 
+            className="flex items-center gap-3 bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 p-4 rounded-xl border-2 border-orange-200 dark:border-orange-800 hover:shadow-lg transition-all group"
+          >
+            <span className="text-3xl group-hover:scale-110 transition-transform">📊</span>
+            <div>
+              <div className="font-semibold text-gray-900 dark:text-gray-100">Mandi Bhav Today</div>
+              <div className="text-xs text-gray-600 dark:text-gray-400">Live market prices</div>
+            </div>
+          </Link>
+
+          <Link 
+            href="/SilageMaking" 
+            className="flex items-center gap-3 bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-yellow-900/20 dark:to-amber-900/20 p-4 rounded-xl border-2 border-yellow-200 dark:border-yellow-800 hover:shadow-lg transition-all group"
+          >
+            <span className="text-3xl group-hover:scale-110 transition-transform">🌾</span>
+            <div>
+              <div className="font-semibold text-gray-900 dark:text-gray-100">Silage Making</div>
+              <div className="text-xs text-gray-600 dark:text-gray-400">Fodder conservation guide</div>
+            </div>
+          </Link>
         </div>
       </div>
 
