@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import ExternalLinkButton from '@/components/ExternalLinkButton';
+import { GovLink } from '@/components/ArticleShared';
 
 export default function DripSprinkler() {
   return (
@@ -26,7 +26,7 @@ export default function DripSprinkler() {
       </p>
       
       <p className="mb-6">
-        Yeh hai micro-irrigation (drip aur sprinkler) ki taqat. Paani bachana, bijli ka bill kam karna, khaad ki bachat, aur production badhana - sab ek saath. Sarkar ki <Link href="/pm-krishi-sinchayee-yojana" className="text-blue-600 hover:underline">PM Krishi Sinchayee Yojana (PMKSY)</Link> ke under 55-75% subsidy milti hai. Par kisaanon ko pata hi nahi hai.
+        Yeh hai micro-irrigation (drip aur sprinkler) ki taqat. Paani bachana, bijli ka bill kam karna, khaad ki bachat, aur production badhana - sab ek saath. Sarkar ki PM Krishi Sinchayee Yojana (PMKSY) ke under 55-75% subsidy milti hai. Par kisaanon ko pata hi nahi hai.
       </p>
 
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
@@ -91,7 +91,7 @@ export default function DripSprinkler() {
       </p>
 
       <p className="mb-6">
-        Detailed comparison ke liye <Link href="/sprinkler-vs-drip" className="text-blue-600 hover:underline">Sprinkler vs Drip detailed guide</Link> padhein. Aapke crop ke liye kaunsa best hai, wo wahan samjhaya gaya hai.
+        Apne area ke KVK (Krishi Vigyan Kendra) officers se consult karein - wo aapke specific crop aur soil type ke liye best option bata sakte hain.
       </p>
 
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
@@ -110,7 +110,7 @@ export default function DripSprinkler() {
             <span className="font-semibold">55-75% subsidy</span>
           </li>
           <li className="flex justify-between">
-            <span>Other Farmers (>5 hectare):</span>
+            <span>{'Other Farmers (>5 hectare):'}</span>
             <span className="font-semibold">45-55% subsidy</span>
           </li>
           <li className="flex justify-between">
@@ -140,7 +140,7 @@ export default function DripSprinkler() {
       </ul>
 
       <p className="mb-6">
-        State-wise subsidy percentages alag hote hain. <Link href="/state-irrigation-portal" className="text-blue-600 hover:underline">State-wise irrigation portal list</Link> yahan check karein - apne state ki exact subsidy pata karein.
+        State-wise subsidy percentages alag hote hain. Apne zila ke Agriculture Department portal par jaakar exact figures check karein - har state ki scheme thodi different hoti hai.
       </p>
 
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
@@ -249,7 +249,7 @@ export default function DripSprinkler() {
             Har state ka apna portal hai. Jaise Maharashtra mein <em>mkss.maharashtra.gov.in</em>, MP mein <em>mpmicroirrigation.in</em>, Rajasthan mein <em>rajmicro.rajasthan.gov.in</em>. Portal par jaakar registration karein.
           </p>
           <p className="mt-2">
-            <Link href="/state-irrigation-portal" className="text-blue-600 hover:underline">State-wise portal list</Link> yahan check karein.
+            Apne zila ke Agriculture Department office se portal ka exact URL aur registration process pata karein.
           </p>
         </div>
 
@@ -293,9 +293,11 @@ export default function DripSprinkler() {
         Poora process 2-4 months lag sakta hai. Isliye season se pehle apply karein.
       </p>
 
-      <ExternalLinkButton 
-        url="https://pmksy.gov.in/" 
-        label="PMKSY Official Portal - State-wise Guidelines Check Karein" 
+      <GovLink
+        href="https://pmksy.gov.in/"
+        label="PMKSY Official Portal"
+        guide="State-wise Guidelines Check Karein"
+        portalName="pmksy.gov.in"
       />
 
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
@@ -314,37 +316,37 @@ export default function DripSprinkler() {
               Har state ki apni schemes hoti hain jo PMKSY ke saath stack hoti hain. Jaise Gujarat mein "Gujarat Micro Irrigation Scheme", Tamil Nadu mein "Tamil Nadu Micro Irrigation Scheme". Inme additional 10-20% subsidy mil sakti hai.
             </p>
             <p className="mt-1 text-sm text-gray-600 italic">
-              Disclaimer: State schemes ke details vary karti hain. Apne zila ke Agriculture Department se latest information lein.
+              Apne zila ke Agriculture Department se latest information lein - state schemes periodically update hoti hain.
             </p>
           </li>
 
           <li>
             <strong className="text-blue-900">2. Solar Pump Integration:</strong>
             <p className="mt-1 text-gray-700">
-              Agar aap borewell par solar pump lagate hain (<Link href="/pm-kusum-yojana" className="text-blue-600 hover:underline">PM-KUSUM scheme</Link> ke under 60-90% subsidy), toh bijli ka bill zero ho jata hai. Drip + Solar = maximum savings.
+              Agar aap borewell par solar pump lagate hain (<Link href="/articles/PmKusumYojanaSolarSubsidy2026" className="text-blue-600 hover:underline">PM-KUSUM scheme</Link> ke under 60-90% subsidy), toh bijli ka bill zero ho jata hai. Drip + Solar = maximum savings.
             </p>
             <p className="mt-1 text-sm text-gray-600 italic">
-              Disclaimer: PM-KUSUM ki guidelines update hoti rehti hain. Latest details ke liye official portal check karein.
+              PM-KUSUM ki guidelines update hoti rehti hain. Latest details ke liye official portal check karein.
             </p>
           </li>
 
           <li>
             <strong className="text-blue-900">3. Fertigation Training:</strong>
             <p className="mt-1 text-gray-700">
-              Drip irrigation ke saath fertigation (khaad paani mein milakar dena) seekhein. Isse khaad ki 25-35% bachat hoti hai. KVKs free training dete hain. <Link href="/fertigation-guide" className="text-blue-600 hover:underline">Fertigation detailed guide</Link> yahan padhein.
+              Drip irrigation ke saath fertigation (khaad paani mein milakar dena) seekhein. Isse khaad ki 25-35% bachat hoti hai. KVKs free training dete hain - apne nazdeeki KVK se contact karein.
             </p>
             <p className="mt-1 text-sm text-gray-600 italic">
-              Disclaimer: Fertigation techniques crop-wise vary karti hain. Expert se consult karein.
+              Fertigation techniques crop-wise vary karti hain. Expert se consult karna behtar rehta hai.
             </p>
           </li>
 
           <li>
             <strong className="text-blue-900">4. Water Conservation Schemes:</strong>
             <p className="mt-1 text-gray-700">
-              <Link href="/water-conservation-schemes" className="text-blue-600 hover:underline">Water conservation schemes</Link> ke under farm pond, check dam, aur doosre structures par bhi subsidy milti hai. Drip ke saath combine karke maximum benefit lein.
+              Farm pond, check dam, aur doosre water conservation structures par bhi subsidy milti hai. Drip ke saath combine karke maximum benefit lein.
             </p>
             <p className="mt-1 text-sm text-gray-600 italic">
-              Disclaimer: Water conservation schemes ki eligibility vary karti hai. Latest details ke liye official portal check karein.
+              Water conservation schemes ki eligibility vary karti hai. Latest details ke liye official portal check karein.
             </p>
           </li>
         </ul>
@@ -362,7 +364,7 @@ export default function DripSprinkler() {
         <div className="border-l-4 border-red-500 pl-4">
           <h3 className="font-bold text-lg">Dripper Blockage (Sabse Common Problem)</h3>
           <p className="mt-2">
-            Agar paani mein salt hai, ya sand hai, toh drippers block ho sakte hain. Har 15-30 din mein acid flushing karni padti hai (₹500-1,000 per acre). Agar ignore kiya, toh 20-30% drippers kharab ho sakte hain. <Link href="/drip-irrigation-maintenance" className="text-blue-600 hover:underline">Maintenance guide</Link> yahan padhein.
+            Agar paani mein salt hai, ya sand hai, toh drippers block ho sakte hain. Har 15-30 din mein acid flushing karni padti hai (₹500-1,000 per acre). Agar ignore kiya, toh 20-30% drippers kharab ho sakte hain. Regular maintenance zaroori hai.
           </p>
         </div>
 
@@ -474,7 +476,7 @@ export default function DripSprinkler() {
       </p>
 
       <p className="mb-6">
-        Ek aur important point - <Link href="/crop-water-requirement" className="text-blue-600 hover:underline">crop-wise water requirement</Link> samjhein. Har crop ko kitna paani chahiye, kab chahiye - yeh jaankari hone se aap system ko optimally use kar sakte hain.
+        Ek aur important point - apne crop ki water requirement samjhein. Har crop ko kitna paani chahiye, kab chahiye - yeh jaankari hone se aap system ko optimally use kar sakte hain. Local KVK ya Agriculture University se crop-wise water requirement guide mil jayegi.
       </p>
 
       <p className="mb-6">
@@ -482,7 +484,7 @@ export default function DripSprinkler() {
       </p>
 
       <p className="mb-6 italic text-gray-600">
-        Disclaimer: Yeh article general information ke liye hai. Actual costs, subsidies, aur procedures aapke location aur specific circumstances ke hisaab se vary kar sakte hain. Koi bhi financial decision lene se pehle qualified professionals (agriculture officers, irrigation experts) se consult karein. Prices aur guidelines change hote rehte hain, isliye latest information ke liye official sources se verify karein.
+        Note: Is article ki information general guidance ke liye hai. Costs, subsidies, aur procedures aapke location aur specific circumstances ke hisaab se alag ho sakte hain. Financial decisions lene se pehle agriculture officers ya irrigation experts se consult karna samajhdari hai. Guidelines aur prices periodically update hote hain - latest info ke liye official sources check karein.
       </p>
     </article>
   );
