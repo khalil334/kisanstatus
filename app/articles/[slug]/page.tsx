@@ -128,7 +128,7 @@ function ArticleLoading() {
 }
 
 const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> = {
-  // ── EXISTING ARTICLES ───────────────────────────────────
+  // ── EXISTING ARTICLES (18) ───────────────────────────────────
   KisanRinKahaSeLe2026:                       dynamic(() => import('@/components/articles/KisanRinKahaSeLe2026'),                       { loading: ArticleLoading, ssr: true }),
   KisanTractorLoan2026:                       dynamic(() => import('@/components/articles/KisanTractorLoan2026'),                       { loading: ArticleLoading, ssr: true }),
   PmKisanBeneficiaryList2026:                 dynamic(() => import('@/components/articles/PmKisanBeneficiaryList2026'),                 { loading: ArticleLoading, ssr: true }),
@@ -148,7 +148,7 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   PmKisanCorrectionForm2026:                  dynamic(() => import('@/components/articles/PmKisanCorrectionForm2026'),                  { loading: ArticleLoading, ssr: true }),
   PmKusumYojanaSolarSubsidy2026:              dynamic(() => import('@/components/articles/PmKusumYojanaSolarSubsidy2026'),              { loading: ArticleLoading, ssr: true }),
 
-  // ── NEW 10 LOW-COMPETITION ARTICLES (PM Kisan Related) ─────────────────────
+  // ── NEW 10 PM KISAN RELATED ARTICLES ─────────────────────
   PmKisanLandSeedingForm:                     dynamic(() => import('@/components/articles/PmKisanLandSeedingForm'),                     { loading: ArticleLoading, ssr: true }),
   PmKisanFaceAuthenticationEkyc:              dynamic(() => import('@/components/articles/PmKisanFaceAuthenticationEkyc'),              { loading: ArticleLoading, ssr: true }),
   PmKisanVoluntarySurrenderGuide:             dynamic(() => import('@/components/articles/PmKisanVoluntarySurrenderGuide'),             { loading: ArticleLoading, ssr: true }),
@@ -160,7 +160,7 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   PmKisanVillageWiseListPdfDownload:          dynamic(() => import('@/components/articles/PmKisanVillageWiseListPdfDownload'),          { loading: ArticleLoading, ssr: true }),
   PmKisanMobileNumberChangeUpdate:            dynamic(() => import('@/components/articles/PmKisanMobileNumberChangeUpdate'),            { loading: ArticleLoading, ssr: true }),
 
-  // ── NEW 10 LOW-COMPETITION ARTICLES (Farming & Business) ─────────────────────
+  // ── NEW 10 LOW-COMPETITION FARMING ARTICLES ─────────────────────
   BakriPalanYojana:                           dynamic(() => import('@/components/articles/kisanguides/BakriPalanYojana'),               { loading: ArticleLoading, ssr: true }),
   MushroomKheti:                              dynamic(() => import('@/components/articles/kisanguides/MushroomKheti'),                  { loading: ArticleLoading, ssr: true }),
   MadhumakhiPalan:                            dynamic(() => import('@/components/articles/kisanguides/MadhumakhiPalan'),                { loading: ArticleLoading, ssr: true }),
