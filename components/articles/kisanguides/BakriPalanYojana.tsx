@@ -125,7 +125,7 @@ export default function BakriPalanYojanaNLMS() {
       </h2>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Documents ka jhanjhat hai, but zaroori hai - properly arrange karke rakho sab kuch.
+        Documents ka jhanjhat hai, but zaroori hai - properly arrange karke rakho sab kuch. DPR banane se pehle apni zameen ki quality samajhne ke liye <Link href="/kisanguides/soil-health-card-complete-guide-2026" className="text-blue-600 hover:underline dark:text-blue-400">Soil Health Card</Link> zaroor check kar lein.
       </p>
 
       <Image 
@@ -275,7 +275,7 @@ export default function BakriPalanYojanaNLMS() {
       </h2>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Bahut se log galat assumptions le lete hain, ye samajhna zaroori hai ki subsidy mein kya cover hota hai aur kya nahi.
+        Bahut se log galat assumptions le lete hain, ye samajhna zaroori hai ki subsidy mein kya cover hota hai aur kya nahi. Goat farming ke saath aap <Link href="/kisanguides/silage-making-business-guide" className="text-blue-600 hover:underline dark:text-blue-400">silage banana</Link> seekh sakte hain jisse feed cost 30-40% tak kam ho jati hai.
       </p>
 
       <div className="grid md:grid-cols-2 gap-6 my-8">
@@ -371,7 +371,7 @@ export default function BakriPalanYojanaNLMS() {
             Q3. क्या loan भी ले सकते हैं subsidy के साथ?
           </h4>
           <p className="text-gray-700 dark:text-gray-300 text-sm">
-            हां, subsidy 50% है, बाकी 50% के लिए bank से term loan ले सकते हैं।
+            हां, subsidy 50% है, बाकी 50% के लिए bank से term loan ले सकते हैं. <Link href="/kisanguides/kisan-credit-card-online-apply-2026" className="text-blue-600 hover:underline dark:text-blue-400">Kisan Credit Card</Link> ya <Link href="/kisanguides/kisan-rin-kaha-se-le-2026" className="text-blue-600 hover:underline dark:text-blue-400">Kisan loan guide</Link> se best options check karein.
           </p>
         </div>
 
@@ -445,7 +445,7 @@ export default function BakriPalanYojanaNLMS() {
       </h2>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Goat farming viable business option hai, NLM subsidy ise aur feasible bana deti hai, patience rakhna padega kyonki process mein time lagta hai.
+        Goat farming viable business option hai, NLM subsidy ise aur feasible bana deti hai, patience rakhna padega kyonki process mein time lagta hai. Agar aap goat meat processing ya value addition karna chahte hain toh <Link href="/kisanguides/pmfme-yojana" className="text-blue-600 hover:underline dark:text-blue-400">PMFME Yojana</Link> se 35% tak subsidy mil sakti hai.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
@@ -499,6 +499,18 @@ export default function BakriPalanYojanaNLMS() {
                   </div>
                 </Link>
               </li>
+              <li>
+                <Link 
+                  href="/kisanguides/madhumakhi-palan" 
+                  className="flex items-start gap-2 text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors group"
+                >
+                  <span className="text-green-600 group-hover:translate-x-1 transition-transform">→</span>
+                  <div>
+                    <div className="font-semibold">Madhumakhi Palan</div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400">Beekeeping with NLM subsidy</div>
+                  </div>
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -537,6 +549,18 @@ export default function BakriPalanYojanaNLMS() {
                   </div>
                 </Link>
               </li>
+              <li>
+                <Link 
+                  href="/kisanguides/chc-portal-custom-hiring-centre" 
+                  className="flex items-start gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors group"
+                >
+                  <span className="text-blue-600 group-hover:translate-x-1 transition-transform">→</span>
+                  <div>
+                    <div className="font-semibold">Custom Hiring Centre (CHC)</div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400">Machinery rental business</div>
+                  </div>
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -570,11 +594,11 @@ export default function BakriPalanYojanaNLMS() {
               <span className="font-medium">Mushroom Kheti Guide</span>
             </Link>
             <Link 
-              href="/kisanguides/madhumakhi-palan" 
+              href="/kisanguides/pm-kusum-solar-pump-subsidy" 
               className="flex items-center gap-2 bg-white dark:bg-gray-800 p-3 rounded-lg hover:shadow-md transition-shadow text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400"
             >
-              <span className="text-purple-600">🐝</span>
-              <span className="font-medium">Madhumakhi Palan (Beekeeping)</span>
+              <span className="text-purple-600">☀️</span>
+              <span className="font-medium">PM-KUSUM Solar Pump</span>
             </Link>
           </div>
         </div>
