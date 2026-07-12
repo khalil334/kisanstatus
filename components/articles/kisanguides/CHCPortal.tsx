@@ -1,6 +1,6 @@
-import Image from 'next/image';
+ import Image from 'next/image';
 import Link from 'next/link';
-import ExternalLinkButton from '@/components/ExternalLinkButton';
+import { GovLink } from '@/components/ArticleShared';
 
 export default function CHCPortal() {
   return (
@@ -190,7 +190,7 @@ export default function CHCPortal() {
       </p>
 
       <p className="mb-6">
-        <Link href="/farm-machinery-subsidy" className="text-blue-600 hover:underline">Farm machinery subsidy ki complete list</Link> yahan check karein - har implement par kitni subsidy milti hai, state-wise details.
+        Apne state ke Agriculture Department portal par jaakar implement-wise subsidy ki exact list check karein - har state mein rates thode alag hote hain.
       </p>
 
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
@@ -268,11 +268,11 @@ export default function CHCPortal() {
       </div>
 
       <p className="mb-4">
-        Yeh investment lagti hai. Par iske liye loans available hain. <Link href="/tractor-loan" className="text-blue-600 hover:underline">Tractor loan</Link> 7 saal tak ke liye milta hai, interest rate 9-11%. Implements par <Link href="/farm-machinery-subsidy" className="text-blue-600 hover:underline">SMAM subsidy</Link> mil jayegi.
+        Yeh investment lagti hai. Par iske liye loans available hain. <Link href="/articles/KisanTractorLoan2026" className="text-blue-600 hover:underline">Tractor loan guide</Link> mein detailed process bataya gaya hai - 7 saal tak ke liye milta hai, interest rate 9-11%. Implements par SMAM subsidy mil jayegi.
       </p>
 
       <p className="mb-6">
-        Agar aap group (7-10 farmers) milkar apply karte hain, toh approval chances zyada hote hain. Har farmer apna contribution dega, aur sab milkar CHC chalayenge. <Link href="/farmer-producer-organization" className="text-blue-600 hover:underline">FPO (Farmer Producer Organization)</Link> banakar bhi apply kar sakte hain - FPOs ko priority milti hai.
+        Agar aap group (7-10 farmers) milkar apply karte hain, toh approval chances zyada hote hain. Har farmer apna contribution dega, aur sab milkar CHC chalayenge. FPO (Farmer Producer Organization) banakar bhi apply kar sakte hain - FPOs ko priority milti hai.
       </p>
 
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
@@ -339,9 +339,11 @@ export default function CHCPortal() {
         Poora process 3-6 months lag sakta hai. Isliye patience rakhein. Aur haan, application mein koi fee nahi lagti - sab free hai.
       </p>
 
-      <ExternalLinkButton 
-        url="https://agrimachinery.gov.in/" 
-        label="Agriculture Machinery Portal - State-wise Guidelines Check Karein" 
+      <GovLink
+        href="https://agrimachinery.gov.in/"
+        label="Agriculture Machinery Portal"
+        guide="State-wise Guidelines Check Karein"
+        portalName="agrimachinery.gov.in"
       />
 
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
@@ -461,7 +463,7 @@ export default function CHCPortal() {
         <div className="border-l-4 border-red-500 pl-4">
           <h3 className="font-bold text-lg">Payment Recovery</h3>
           <p className="mt-2">
-            Kisaan aksar udhaar par lete hain - fasal katne ke baad denge. Par kabhi-kabhir payment 2-3 mahine late ho jata hai. Kuch cases mein default bhi ho jata hai. Isliye advance payment ya partial payment ka system rakho. Cash flow manage karna mushkil ho jata hai.
+            Kisaan aksar udhaar par lete hain - fasal katne ke baad denge. Par kabhi-kabhi payment 2-3 mahine late ho jata hai. Kuch cases mein default bhi ho jata hai. Isliye advance payment ya partial payment ka system rakho. Cash flow manage karna mushkil ho jata hai.
           </p>
         </div>
 
@@ -533,7 +535,7 @@ export default function CHCPortal() {
       </p>
 
       <p className="mb-6">
-        <Link href="/agri-business-loan" className="text-blue-600 hover:underline">Agriculture business loan</Link> ke liye bhi CHC registration zaroori hai. Banks ko proof chahiye ki aap actually kaam kar rahe hain.
+        Agriculture business loan ke liye bhi CHC registration zaroori hai. Banks ko proof chahiye ki aap actually kaam kar rahe hain. <Link href="/articles/KisanRinKahaSeLe2026" className="text-blue-600 hover:underline">Kisan loan guide</Link> mein doosre options bhi hain.
       </p>
 
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
@@ -646,7 +648,7 @@ export default function CHCPortal() {
       </p>
 
       <p className="mb-6">
-        Ek aur important point - <Link href="/silage-making-business" className="text-blue-600 hover:underline">silage making</Link> ya <Link href="/vermi-compost-business" className="text-blue-600 hover:underline">vermi compost</Link> jaise doosre agri-businesses ke saath CHC ko combine karo. Multiple income streams ban jayenge. Ek machine se ek kaam nahi hota, par 5-6 machines se year-round income hoti hai.
+        Ek aur important point - <Link href="/articles/silage-making-business-guide" className="text-blue-600 hover:underline">silage making</Link> ya <Link href="/articles/vermi-compost-business-guide" className="text-blue-600 hover:underline">vermi compost</Link> jaise doosre agri-businesses ke saath CHC ko combine karo. Multiple income streams ban jayenge. Ek machine se ek kaam nahi hota, par 5-6 machines se year-round income hoti hai.
       </p>
 
       <p className="mb-6">
@@ -658,7 +660,7 @@ export default function CHCPortal() {
       </p>
 
       <p className="mb-6 italic text-gray-600">
-        Disclaimer: Yeh article general information ke liye hai. Actual costs, subsidies, aur procedures aapke location aur specific circumstances ke hisaab se vary kar sakte hain. Koi bhi financial decision lene se pehle qualified professionals (agriculture officers, CAs) se consult karein. Prices aur guidelines change hote rehte hain, isliye latest information ke liye official sources se verify karein.
+        Note: Is article ki information general guidance ke liye hai. Costs, subsidies, aur procedures aapke location aur specific circumstances ke hisaab se alag ho sakte hain. Financial decisions lene se pehle agriculture officers ya CAs se consult karna samajhdari hai. Guidelines aur prices periodically update hote hain - latest info ke liye official sources check karein.
       </p>
     </article>
   );
