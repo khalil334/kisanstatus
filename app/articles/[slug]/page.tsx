@@ -148,7 +148,7 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   PmKisanCorrectionForm2026:                  dynamic(() => import('@/components/articles/PmKisanCorrectionForm2026'),                  { loading: ArticleLoading, ssr: true }),
   PmKusumYojanaSolarSubsidy2026:              dynamic(() => import('@/components/articles/PmKusumYojanaSolarSubsidy2026'),              { loading: ArticleLoading, ssr: true }),
 
-  // ── NEW 10 LOW-COMPETITION ARTICLES ─────────────────────
+  // ── NEW 10 LOW-COMPETITION ARTICLES (PM Kisan Related) ─────────────────────
   PmKisanLandSeedingForm:                     dynamic(() => import('@/components/articles/PmKisanLandSeedingForm'),                     { loading: ArticleLoading, ssr: true }),
   PmKisanFaceAuthenticationEkyc:              dynamic(() => import('@/components/articles/PmKisanFaceAuthenticationEkyc'),              { loading: ArticleLoading, ssr: true }),
   PmKisanVoluntarySurrenderGuide:             dynamic(() => import('@/components/articles/PmKisanVoluntarySurrenderGuide'),             { loading: ArticleLoading, ssr: true }),
@@ -159,6 +159,18 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   PmKisanRejectedStatusReApplyGuide:          dynamic(() => import('@/components/articles/PmKisanRejectedStatusReApplyGuide'),          { loading: ArticleLoading, ssr: true }),
   PmKisanVillageWiseListPdfDownload:          dynamic(() => import('@/components/articles/PmKisanVillageWiseListPdfDownload'),          { loading: ArticleLoading, ssr: true }),
   PmKisanMobileNumberChangeUpdate:            dynamic(() => import('@/components/articles/PmKisanMobileNumberChangeUpdate'),            { loading: ArticleLoading, ssr: true }),
+
+  // ── NEW 10 LOW-COMPETITION ARTICLES (Farming & Business) ─────────────────────
+  BakriPalanYojana:                           dynamic(() => import('@/components/articles/kisanguides/BakriPalanYojana'),               { loading: ArticleLoading, ssr: true }),
+  MushroomKheti:                              dynamic(() => import('@/components/articles/kisanguides/MushroomKheti'),                  { loading: ArticleLoading, ssr: true }),
+  MadhumakhiPalan:                            dynamic(() => import('@/components/articles/kisanguides/MadhumakhiPalan'),                { loading: ArticleLoading, ssr: true }),
+  PMatsyaSampada:                             dynamic(() => import('@/components/articles/kisanguides/PMatsyaSampada'),                 { loading: ArticleLoading, ssr: true }),
+  PMKisanRejected:                            dynamic(() => import('@/components/articles/kisanguides/PMKisanRejected'),                { loading: ArticleLoading, ssr: true }),
+  SilageMaking:                               dynamic(() => import('@/components/articles/kisanguides/SilageMaking'),                   { loading: ArticleLoading, ssr: true }),
+  PMFMEYojana:                                dynamic(() => import('@/components/articles/kisanguides/PMFMEYojana'),                    { loading: ArticleLoading, ssr: true }),
+  CHCPortal:                                  dynamic(() => import('@/components/articles/kisanguides/CHCPortal'),                      { loading: ArticleLoading, ssr: true }),
+  VerminCompost:                              dynamic(() => import('@/components/articles/kisanguides/VerminCompost'),                  { loading: ArticleLoading, ssr: true }),
+  DripSprinkler:                              dynamic(() => import('@/components/articles/kisanguides/DripSprinkler'),                  { loading: ArticleLoading, ssr: true }),
 };
 
 export const revalidate = 3600;
