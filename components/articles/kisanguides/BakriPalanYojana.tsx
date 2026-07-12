@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import ExternalLinkButton from '@/components/ExternalLinkButton';
+import { GovLink } from '@/components/ArticleShared';
 
 export default function BakriPalanYojana() {
   return (
@@ -191,11 +191,15 @@ export default function BakriPalanYojana() {
       </div>
 
       <p className="mb-4">
-        <strong>Eligibility Criteria:</strong> Individual farmers, SHGs (Self Help Groups), FPOs (Farmer Producer Organizations), JLGs (Joint Liability Groups), Farmer Cooperative Organisations, aur Section 8 companies apply kar sakte hain. Zameen honi chahiye - owned ya leased (minimum 5-7 years lease agreement). Bank CIBIL score theek hona chahiye (700+ recommended). Koi purana loan default nahi hona chahiye. Agar aapka <Link href="/kisan-credit-card-kcc" className="text-blue-600 hover:underline">Kisan Credit Card (KCC)</Link> already hai aur repayment history achhi hai, toh loan approval jaldi ho jata hai.
+        <strong>Eligibility Criteria:</strong> Individual farmers, SHGs (Self Help Groups), FPOs (Farmer Producer Organizations), JLGs (Joint Liability Groups), Farmer Cooperative Organisations, aur Section 8 companies apply kar sakte hain. Zameen honi chahiye - owned ya leased (minimum 5-7 years lease agreement). Bank CIBIL score theek hona chahiye (700+ recommended). Koi purana loan default nahi hona chahiye. Agar aapka <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline">Kisan Credit Card (KCC)</Link> already hai aur repayment history achhi hai, toh loan approval jaldi ho jata hai.
       </p>
 
       <p className="mb-4">
-        <strong>Subsidy Structure:</strong> General category ko <strong>50% capital subsidy</strong> milti hai, maximum ceiling <strong>₹50 lakh tak</strong> hai. Yeh subsidy capital investment par milti hai - shed construction, equipment purchase, animal purchase sab cover hota hai. North-East aur Himalayan states mein central aur state government ka funding ratio 90:10 hai, baaki states mein 60:40. Kuch specific categories (SC/ST, women entrepreneurs, North-East) ke liye additional benefits mil sakte hain - exact details ke liye apne zila ke CVO office se confirm karein.
+        <strong>Subsidy Structure:</strong> General category ko <strong>50% capital subsidy</strong> milti hai, maximum ceiling <strong>₹50 lakh tak</strong> hai. Yeh subsidy capital investment par milti hai - shed construction, equipment purchase, animal purchase sab cover hota hai. North-East aur Himalayan states mein central aur state government ka funding ratio 90:10 hai, baaki states mein 60:40.
+      </p>
+
+      <p className="mb-4">
+        SC/ST farmers, women entrepreneurs, aur North-East regions ke liye additional benefits ho sakte hain - yeh state-specific hota hai. Exact figures jaanne ke liye local CVO (Chief Veterinary Officer) se baat karna best rehta hai, kyunki guidelines periodically update hoti rehti hain.
       </p>
 
       <h3 className="text-xl font-semibold mt-6 mb-3 text-green-700" id="chhote-farmers-ke-liye-vikalp">
@@ -209,62 +213,68 @@ export default function BakriPalanYojana() {
       <div className="bg-blue-50 border border-blue-200 rounded-lg p-5 mb-6">
         <ul className="space-y-4">
           <li>
-            <strong className="text-blue-900">1. State-Level Animal Husbandry Schemes:</strong>
+            <strong className="text-blue-900">1. State-Level Goat/Pashu Palan Schemes:</strong>
             <p className="mt-1 text-gray-700">
-              Har state ki apni chhote scale ki schemes hoti hain. Jaise Rajasthan mein 'Rajasthan Pashu Palan Yojana', UP mein 'Mukhyamantri Pashudhan Vikas Yojana', MP mein 'Mukhyamantri Pashu Kisan Yojana'. Inme 20-50 animals wale units ko bhi subsidy milti hai (typically 25-40%).
+              Har state ki apni chhote scale ki schemes hoti hain, aur inke naam-benefits state ke hisaab se alag hote hain. Ek confirmed example - Madhya Pradesh ki <strong>"10+1 Goat Unit Scheme"</strong>, jo specifically chhote farmers ke liye design hui hai. Rajasthan, UP, Bihar, Maharashtra mein bhi aisi schemes hain, par exact naam aur subsidy percentage har saal change hote hain.
             </p>
             <p className="mt-1 text-sm text-gray-600 italic">
-              Disclaimer: Exact eligibility aur subsidy % state ke hisaab se vary karti hai. Apne zila ke Pashu Palan Vibhag se latest details confirm karein.
+              Best approach: Apne zila ke Pashu Palan Vibhag (Animal Husbandry Department) ko call karke pata karein ki current financial year mein kaunsi scheme chal rahi hai.
             </p>
           </li>
 
           <li>
-            <strong className="text-blue-900">2. PMEGP (Prime Minister's Employment Generation Programme):</strong>
+            <strong className="text-blue-900">2. PMEGP - Sirf Value-Addition Ke Liye (Important Clarification):</strong>
             <p className="mt-1 text-gray-700">
-              Yeh scheme chhote units ke liye perfect hai. 10-20 bakri wale farm par aapko 25-35% subsidy mil sakti hai (rural areas mein zyada). Maximum loan limit ₹25 lakh hai. KVIC (Khadi and Village Industries Commission) ke through apply hota hai. <Link href="/pmegp-yojana" className="text-blue-600 hover:underline">PMEGP scheme ki detailed guide</Link> yahan padhein.
+              Ek baat clear kar doon - PMEGP (Prime Minister's Employment Generation Programme) ki negative list mein <strong>"Animal Husbandry / Rearing" explicitly excluded hai</strong>. Matlab sirf bakriyan paalne ke liye aap PMEGP ka loan nahi le sakte.
+            </p>
+            <p className="mt-1 text-gray-700">
+              Haan, agar aap bakri palan ke saath <strong>value-addition</strong> karna chahte hain - jaise meat processing unit, packaged chevon (bakri ka gosht), ya branded dairy products - tab PMEGP eligible hai. <Link href="/articles/KisanRinKahaSeLe2026" className="text-blue-600 hover:underline">Kisan loan guide</Link> mein doosre options bhi hain.
             </p>
             <p className="mt-1 text-sm text-gray-600 italic">
-              Disclaimer: PMEGP ki guidelines periodically update hoti hain. Latest eligibility criteria ke liye KVIC office ya official portal se confirm karein.
+              Maharashtra ke residents ke liye ek alag option hai - <strong>CMEGP</strong> (state-level scheme, PMEGP se alag). Wahan 50% tak subsidy milti hai, ₹20 lakh tak, specifically 100+5 unit ke liye. Par yeh sirf Maharashtra tak seemit hai.
             </p>
           </li>
 
           <li>
             <strong className="text-blue-900">3. SC/ST Finance Corporations:</strong>
             <p className="mt-1 text-gray-700">
-              Agar aap SC/ST category se hain, toh National SC/ST Finance and Development Corporation (NSFDC) ya state-level corporations (jaise UP mein UPSFDC, Maharashtra mein Maharashtra SC/ST Finance Corporation) se concessional loans milte hain. Interest rate 4-6% hota hai, aur kuch states mein 25-50% subsidy bhi milti hai.
+              Agar aap SC/ST category se hain, toh National SC/ST Finance and Development Corporation (NSFDC) ya aapki state ki apni corporation (jaise Maharashtra mein Maharashtra SC/ST Finance Corporation) se concessional loans mil sakte hain. Interest rates aur subsidy percentages state aur scheme ke hisaab se kaafi vary karte hain - kabhi 25% se lekar 50% tak bhi ho sakta hai, aur interest rates bhi market rate se kaam hote hain.
             </p>
             <p className="mt-1 text-sm text-gray-600 italic">
-              Disclaimer: Eligibility criteria aur loan terms state corporation ke hisaab se vary karti hain. Apne zila office se details lein.
+              Exact terms jaanne ke liye apne district ke SC/ST welfare office ya corporation branch se baat karein.
             </p>
           </li>
 
           <li>
-            <strong className="text-blue-900">4. Local Cooperative Banks aur NABARD Schemes:</strong>
+            <strong className="text-blue-900">4. Local Cooperative Banks, RRBs, aur Mudra Loan:</strong>
             <p className="mt-1 text-gray-700">
-              District Central Cooperative Banks (DCCBs) aur Regional Rural Banks (RRBs) pashu palan ke liye special loan schemes chalate hain. NABARD bhi kai schemes fund karta hai jaise 'Livestock Health and Disease Control'. Inme interest rate 7-9% hota hai, aur kuch cases mein interest subsidy bhi milti hai. <Link href="/mudra-loan-kisan" className="text-blue-600 hover:underline">Mudra Loan scheme</Link> bhi check karein agar aap chhote business ke liye loan dhund rahe hain.
+              District Central Cooperative Banks (DCCBs) aur Regional Rural Banks (RRBs) aksar pashu palan ke liye special loan schemes chalate hain. Inme interest rates generally commercial banks se kam hote hain, par exact figures har bank aur scheme par depend karte hain.
+            </p>
+            <p className="mt-1 text-gray-700">
+              Ek aur option hai <Link href="/articles/KisanRinKahaSeLe2026" className="text-blue-600 hover:underline">Mudra Loan</Link> - Shishu, Kishor, aur Tarun categories mein bina collateral ke loan milta hai. Chhote goat farms ke liye yeh kaafi accessible option hai.
             </p>
             <p className="mt-1 text-sm text-gray-600 italic">
-              Disclaimer: Loan terms aur interest rates bank ke hisaab se vary karte hain. Apne nazdeeki cooperative bank ya RRB se baat karein.
+              Apne nazdeeki cooperative bank ya RRB branch mein jaakar specifically pashu palan loan ke baare mein poochein.
             </p>
           </li>
 
           <li>
             <strong className="text-blue-900">5. Agriculture Infrastructure Fund (AIF):</strong>
             <p className="mt-1 text-gray-700">
-              Agar aap infrastructure (shed, cold storage, processing unit) par invest karna chahte hain, toh AIF ke under 3% interest subsidy mil sakti hai 7 saal tak ke liye. Maximum loan ₹2 crore tak hai. <Link href="/agriculture-infrastructure-fund" className="text-blue-600 hover:underline">AIF ki complete guide</Link> yahan available hai.
+              Agar aap infrastructure par invest karna chahte hain - jaise cold storage, meat processing plant, ya bada shed - toh AIF ek option hai. Iske under interest subsidy milti hai (typically 3% tak, 7 saal ke liye), aur loan limits kaafi high hote hain (₹2 crore tak).
             </p>
             <p className="mt-1 text-sm text-gray-600 italic">
-              Disclaimer: AIF ki eligibility criteria specific hai. Detailed guidelines ke liye nazdeeki bank se pata karein.
+              Par dhyan rahe - AIF sirf infrastructure projects ke liye hai, direct animal purchase ke liye nahi. Eligibility criteria specific hai, isliye nazdeeki bank branch se details confirm karein.
             </p>
           </li>
 
           <li>
-            <strong className="text-blue-900">6. PM Kisan Sampada Yojana:</strong>
+            <strong className="text-blue-900">6. PM FME Yojana (Value Addition Ke Liye):</strong>
             <p className="mt-1 text-gray-700">
-              Agar aap bakri palan ke saath value addition (meat processing, packaging) karna chahte hain, toh PM Kisan Sampada Yojana ke under infrastructure par 35-50% subsidy mil sakti hai. Yeh <Link href="/pm-kisan-sampada-yojana" className="text-blue-600 hover:underline">PM Kisan Sampada Yojana</Link> food processing units ko promote karti hai.
+              Agar aap bakri palan ke saath <strong>meat processing ya packaging</strong> karna chahte hain, toh <Link href="/articles/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline">PM FME Yojana</Link> ek relevant option hai. Isme food processing infrastructure par substantial subsidy milti hai.
             </p>
             <p className="mt-1 text-sm text-gray-600 italic">
-              Disclaimer: PM Kisan Sampada ki eligibility criteria alag hai. Detailed information ke liye official portal ya nazdeeki agriculture office se contact karein.
+              Yeh schemes specifically processing units ke liye hain, sirf rearing ke liye nahi. Agar aap sirf 10-20 bakriyan paal rahe hain bina processing ke, toh yeh schemes aapke liye nahi hain.
             </p>
           </li>
         </ul>
@@ -294,7 +304,7 @@ export default function BakriPalanYojana() {
       </ol>
 
       <p className="mb-4">
-        <strong>Important disclaimer:</strong> NLM guidelines har state mein thode alag hote hain. Kuch states mein budget khatam ho chuka hota hai, kuch mein naya cycle shuru hone wala hota hai. Isliye apne local CVO office se latest status confirm karein. Numbers aur dates change hote rehte hain.
+        <strong>Ek practical baat:</strong> NLM guidelines har state mein thode alag apply hoti hain. Kabhi-kabhi budget khatam ho chuka hota hai, ya naya cycle shuru hone wala hota hai. Application dene se pehle local CVO office se current status zaroor pata kar lein - numbers aur timelines change hote rehte hain.
       </p>
 
       <p className="mb-4">
@@ -302,16 +312,18 @@ export default function BakriPalanYojana() {
       </p>
 
       <p className="mb-6">
-        Neeche diya gaya button aapko direct application portal par le jayega:
+        Neeche diya gaya link aapko direct application portal par le jayega:
       </p>
 
-      <ExternalLinkButton 
-        url="https://nlm.udyamimitra.in/" 
-        label="NLM Application Portal Par Jayein - Apply Karein" 
+      <GovLink
+        href="https://nlm.udyamimitra.in/"
+        label="NLM Application Portal"
+        guide="Apply Karein"
+        portalName="nlm.udyamimitra.in"
       />
 
       <p className="mb-6">
-        Agar aap chhote scale (10-50 bakri) par start karna chahte hain, toh PMEGP ya state-level schemes ke baare mein jaanne ke liye apne zila ke Industries Department ya Pashu Palan Vibhag se contact karein. <Link href="/pmegp-yojana" className="text-blue-600 hover:underline">PMEGP scheme ki detailed guide</Link> bhi padh sakte hain.
+        Chhote scale (10-50 bakri) par start karne ke liye state-level schemes best rehti hain. Apne zila ke Pashu Palan Vibhag se current schemes ke baare mein pata karein. General <Link href="/articles/KisanRinKahaSeLe2026" className="text-blue-600 hover:underline">kisan loan guide</Link> bhi padh sakte hain jisme multiple options explain kiye gaye hain.
       </p>
 
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
@@ -436,9 +448,11 @@ export default function BakriPalanYojana() {
         </li>
       </ul>
 
-      <ExternalLinkButton 
-        url="https://cirg.icar.gov.in/" 
-        label="CIRG Training Portal - Goat Farming Courses Check Karein" 
+      <GovLink
+        href="https://cirg.icar.gov.in/"
+        label="CIRG Training Portal"
+        guide="Goat Farming Courses Check Karein"
+        portalName="cirg.icar.gov.in"
       />
 
       <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -492,7 +506,7 @@ export default function BakriPalanYojana() {
       </p>
 
       <p className="mb-6">
-        Ek aur important point: <Link href="/vaccination-schedule" className="text-blue-600 hover:underline">vaccination schedule</Link> ko strictly follow karein. Yeh woh ek cheez hai jahan compromise nahi kiya ja sakta. Ek missed vaccination poori flock ko khatam kar sakti hai.
+        Ek aur important point - vaccination schedule ko strictly follow karein. Yeh woh ek cheez hai jahan compromise nahi kiya ja sakta. Ek missed vaccination poori flock ko khatam kar sakti hai. Apne local veterinary officer se complete vaccination calendar le lein.
       </p>
 
       <p className="mb-6">
@@ -500,7 +514,7 @@ export default function BakriPalanYojana() {
       </p>
 
       <p className="mb-6 italic text-gray-600">
-        Disclaimer: Yeh article general information ke liye hai. Actual costs, subsidies, aur procedures aapke location aur specific circumstances ke hisaab se vary kar sakte hain. Koi bhi financial decision lene se pehle qualified professionals (veterinary officers, agriculture officers, CAs) se consult karein. Prices aur guidelines change hote rehte hain, isliye latest information ke liye official sources se verify karein.
+        Note: Is article ki information general guidance ke liye hai. Costs, subsidies, aur procedures aapke location aur specific circumstances ke hisaab se alag ho sakte hain. Financial decisions lene se pehle veterinary officers, agriculture officers, ya CAs se consult karna samajhdari hai. Guidelines aur prices periodically update hote hain - latest info ke liye official sources check karein.
       </p>
     </article>
   );
