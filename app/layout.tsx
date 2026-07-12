@@ -104,12 +104,64 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.facebook.com" />
         <link rel="dns-prefetch" href="https://vercel.live" />
 
+        {/* ✅ HERO IMAGE PRELOAD - LCP ke liye critical */}
+        <link
+          rel="preload"
+          as="image"
+          href="/hero-wheat-field.webp"
+          type="image/webp"
+          fetchPriority="high"
+        />
+
+        {/* ✅ OG IMAGE PRELOAD - Social sharing ke liye */}
+        <link
+          rel="preload"
+          as="image"
+          href="/og-image.webp"
+          type="image/webp"
+        />
+
         {/* Favicon & Manifest */}
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
         <link rel="manifest" href="/site.webmanifest" />
 
-        {/* JSON-LD Schema Markup — inline, no external loading */}
+        {/* ✅ CRITICAL CSS INLINE - Render blocking reduce karne ke liye */}
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+              /* Critical above-the-fold styles */
+              body {
+                margin: 0;
+                font-family: var(--font-poppins, system-ui, -apple-system, sans-serif);
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+              }
+              .min-h-screen { min-height: 100vh; }
+              .flex { display: flex; }
+              .flex-col { flex-direction: column; }
+              .flex-1 { flex: 1 1 0%; }
+              
+              /* Prevent CLS for hero image */
+              .hero-image-container {
+                aspect-ratio: 2/1;
+                width: 100%;
+                position: relative;
+              }
+              
+              /* Loading skeleton */
+              @keyframes pulse {
+                0%, 100% { opacity: 1; }
+                50% { opacity: 0.5; }
+              }
+              .animate-pulse {
+                animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+              }
+            `,
+          }}
+        />
+
+        {/* ✅ CONSOLIDATED JSON-LD Schema Markup - Single script for better performance */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -182,16 +234,16 @@ export default function RootLayout({
           <Footer />
         </LanguageProvider>
 
-        {/* ✅ GA4: lazyOnload se loading page ke baad, blocking nahi */}
+        {/* ✅ GA4: afterInteractive - Page interactive hone ke baad load hoga */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-          strategy="lazyOnload"
+          strategy="afterInteractive"
         />
 
-        {/* ✅ GA4 inline script — simplified, no window.CWV dependency */}
+        {/* ✅ GA4 inline script — optimized */}
         <Script
           id="ga4-init"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -199,13 +251,14 @@ export default function RootLayout({
               gtag('js', new Date());
               gtag('config', '${GA_MEASUREMENT_ID}', {
                 page_path: window.location.pathname,
-                anonymize_ip: true
+                anonymize_ip: true,
+                send_page_view: true
               });
             `,
           }}
         />
 
-        {/* ✅ Vercel Analytics — Official component use karo */}
+        {/* ✅ Vercel Analytics — Production mein hi load hoga */}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
