@@ -133,7 +133,7 @@ export default function DripSprinkler() {
       </div>
 
       <p className="mb-4">
-        Example dekhte hain. Small farmer hain, 2 acre zameen. Drip irrigation lagwate hain jiska cost ₹40,000/acre hai. Investment ke liye aap <Link href="/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline">Kisan Credit Card</Link> ya <Link href="/KisanRinKahaSeLe2026" className="text-blue-600 hover:underline">bank loan</Link> le sakte hain.
+        Example dekhte hain. Small farmer hain, 2 acre zameen. Drip irrigation lagwate hain jiska cost ₹40,000/acre hai. Investment ke liye aap <Link href="/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline">Kisan Credit Card</Link> ya <span className="font-semibold text-gray-800 dark:text-gray-200">bank loan</span> le sakte hain.
       </p>
 
       <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -319,7 +319,7 @@ export default function DripSprinkler() {
           <li>
             <strong className="text-blue-900">3. Fertigation Training:</strong>
             <p className="mt-1 text-gray-700">
-              Drip irrigation ke saath fertigation seekhein. Khaad paani mein milakar dena. 25-35% bachat hoti hai. KVKs free training dete hain - apne nazdeeki KVK se contact karein. Fertilizer efficiency badhane ke liye <Link href="/NanoDap500mlPriceInIndia2026" className="text-blue-600 hover:underline">Nano DAP</Link> ka use bhi consider karein.
+              Drip irrigation ke saath fertigation seekhein. Khaad paani mein milakar dena. 25-35% bachat hoti hai. KVKs free training dete hain - apne nazdeeki KVK se contact karein. Fertilizer efficiency badhane ke liye <span className="font-semibold text-gray-800 dark:text-gray-200">Nano DAP</span> ka use bhi consider karein.
             </p>
           </li>
 
@@ -505,38 +505,35 @@ export default function DripSprinkler() {
             </div>
           </Link>
 
-          <Link 
-            href="/PmfbyCropInsurance2026" 
-            className="flex items-center gap-3 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 p-4 rounded-xl border-2 border-purple-200 dark:border-purple-800 hover:shadow-lg transition-all group"
+          <div 
+            className="flex items-center gap-3 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 p-4 rounded-xl border-2 border-purple-200 dark:border-purple-800 cursor-default"
           >
-            <span className="text-3xl group-hover:scale-110 transition-transform">🛡️</span>
+            <span className="text-3xl">🛡️</span>
             <div>
               <div className="font-semibold text-gray-900 dark:text-gray-100">PMFBY Crop Insurance</div>
               <div className="text-xs text-gray-600 dark:text-gray-400">Crop insurance protection</div>
             </div>
-          </Link>
+          </div>
 
-          <Link 
-            href="/MandiBhavToday" 
-            className="flex items-center gap-3 bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 p-4 rounded-xl border-2 border-orange-200 dark:border-orange-800 hover:shadow-lg transition-all group"
+          <div 
+            className="flex items-center gap-3 bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 p-4 rounded-xl border-2 border-orange-200 dark:border-orange-800 cursor-default"
           >
-            <span className="text-3xl group-hover:scale-110 transition-transform">📊</span>
+            <span className="text-3xl">📊</span>
             <div>
               <div className="font-semibold text-gray-900 dark:text-gray-100">Mandi Bhav Today</div>
               <div className="text-xs text-gray-600 dark:text-gray-400">Live market prices</div>
             </div>
-          </Link>
+          </div>
 
-          <Link 
-            href="/SilageMaking" 
-            className="flex items-center gap-3 bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-yellow-900/20 dark:to-amber-900/20 p-4 rounded-xl border-2 border-yellow-200 dark:border-yellow-800 hover:shadow-lg transition-all group"
+          <div 
+            className="flex items-center gap-3 bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-yellow-900/20 dark:to-amber-900/20 p-4 rounded-xl border-2 border-yellow-200 dark:border-yellow-800 cursor-default"
           >
-            <span className="text-3xl group-hover:scale-110 transition-transform">🌾</span>
+            <span className="text-3xl">🌾</span>
             <div>
               <div className="font-semibold text-gray-900 dark:text-gray-100">Silage Making</div>
               <div className="text-xs text-gray-600 dark:text-gray-400">Fodder conservation guide</div>
             </div>
-          </Link>
+          </div>
         </div>
       </div>
 
