@@ -1,72 +1,251 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
+import type { Metadata } from 'next';
+
+// ── SEO Metadata ──────────────────────────────────────────────
+export const metadata: Metadata = {
+  title: 'Madhumakhi Palan 2026: Shahad Se Kamayein, Khet Ka Yield Badhayein | Complete Guide',
+  description: 'Madhumakhi palan 2026 ka complete guide. Janein bee farming business kaise karein, KVIC beekeeping subsidy, bee box price, aur honey business in India ki puri jankari.',
+  keywords: [
+    'madhumakhi palan 2026',
+    'madhumakhi palan kaise kare',
+    'bee farming business',
+    'honey business in india',
+    'beekeeping subsidy',
+    'kvic beekeeping scheme',
+    'bee box price'
+  ],
+  authors: [{ name: 'KisanStatus Team' }],
+  openGraph: {
+    title: 'Madhumakhi Palan 2026: Shahad Se Kamayein, Khet Ka Yield Badhayein',
+    description: 'Complete guide to beekeeping in India. Learn about KVIC subsidies, bee box prices, and how to start a profitable honey business in 2026.',
+    type: 'article',
+    locale: 'hi_IN',
+    siteName: 'KisanStatus.com',
+    images: [
+      {
+        url: '/images/kisanguides/madhumakhi-palan-hero.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Beekeeping Boxes in Mustard Field - Apis Mellifera Colony',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Madhumakhi Palan 2026: Complete Guide',
+    description: 'Janein bee farming business kaise karein, KVIC beekeeping subsidy, aur honey business in India ki puri jankari.',
+    images: ['/images/kisanguides/madhumakhi-palan-hero.webp'],
+  },
+};
+
+// ── Schema Markup (JSON-LD) ───────────────────────────────────
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': 'https://kisanstatus.com/#organization',
+      name: 'KisanStatus.com',
+      url: 'https://kisanstatus.com',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://kisanstatus.com/logo.webp',
+      },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': 'https://kisanstatus.com/articles/madhumakhi-palan-2026/#breadcrumb',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kisanstatus.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Articles', item: 'https://kisanstatus.com/articles' },
+        { '@type': 'ListItem', position: 3, name: 'Madhumakhi Palan 2026' },
+      ],
+    },
+    {
+      '@type': 'Article',
+      '@id': 'https://kisanstatus.com/articles/madhumakhi-palan-2026/#article',
+      headline: 'Madhumakhi Palan 2026: Shahad Se Kamayein, Khet Ka Yield Badhayein - Complete Guide',
+      description: 'Madhumakhi palan 2026 ka complete guide. Janein bee farming business kaise karein, KVIC beekeeping subsidy, bee box price, aur honey business in India ki puri jankari.',
+      author: {
+        '@type': 'Organization',
+        name: 'KisanStatus Team',
+        url: 'https://kisanstatus.com/about',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'KisanStatus.com',
+        logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.webp' },
+      },
+      datePublished: '2024-01-15',
+      dateModified: '2024-01-15',
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': 'https://kisanstatus.com/articles/madhumakhi-palan-2026/',
+      },
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': 'https://kisanstatus.com/articles/madhumakhi-palan-2026/#faq',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Madhumakhi palan shuru karne ke liye kitna kharcha aata hai?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Ek 50-box commercial unit shuru karne mein lagbhag ₹2.16 lakh se ₹2.91 lakh tak ka initial investment lagta hai, jismein bee boxes, tools, extractor, aur emergency feed shamil hain.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'KVIC beekeeping scheme mein kitni subsidy milti hai?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'KVIC ke under bee boxes, extractors, aur protective gear par 50% tak ki subsidy milti hai. SC/ST, women, aur North-East regions mein yeh limit 75-80% tak ja sakti hai.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Ek bee box se saal mein kitna shahad nikalta hai?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Apis mellifera (European) colony se saal mein average 8-15 kg shahad nikalta hai, jo local flora, weather, aur management practices par depend karta hai.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Kya madhumakhi palan ke liye training zaroori hai?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Haan, training behad zaroori hai. Bina practical knowledge ke colony manage karna, diseases pehchanna, aur swarm control karna mushkil hota hai. KVK ya KVIC se 7-10 din ki training lein.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Shahad bechne ke liye FSSAI license chahiye?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Haan, agar aap packaged aur branded honey bechna chahte hain, toh FSSAI registration/license mandatory hai. Iska basic cost ₹5,000-10,000 aata hai.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Madhumakhi palan mein sabse bada risk kya hai?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Pesticide drift (kheton mein chemical spray) sabse bada risk hai, jisse poori colony kuch ghanton mein khatam ho sakti hai. Isliye organic farming zones ke paas apiary setup karna behtar hai.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Kya main apne khet mein hi madhumakhi palan shuru kar sakta hoon?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Bilkul. Agar aapke khet ya aas-paas ke area mein sarson, litchi, eucalyptus, ya sunflower jaise flora-rich crops hain, toh yeh ek ideal location hai.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Honey business mein profit kab se shuru hota hai?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Pehla saal mostly learning aur colony establishment ka hota hai, isliye profit minimal hota hai. Year 2-3 tak, jab colonies strong ho jati hain aur aap split kar lete hain, tab consistent profit shuru hota hai.',
+          },
+        },
+      ],
+    },
+  ],
+};
 
 export default function MadhumakhiPalan() {
   return (
     <article className="max-w-3xl mx-auto px-4 py-8 text-gray-800 leading-relaxed">
+      {/* Schema Injection */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
+      {/* Hero Image */}
       <Image 
-        src="/images/beekeeping/madhumakhi-palan/hero.jpg" 
+        src="/images/kisanguides/madhumakhi-palan-hero.webp" 
         alt="Beekeeping Boxes in Mustard Field - Apis Mellifera Colony with KVIC Subsidy" 
-        width={800} 
-        height={450} 
-        className="rounded-xl mb-6 shadow-md" 
+        width={1200} 
+        height={630} 
+        priority
+        className="rounded-xl mb-6 shadow-md w-full h-auto" 
       />
       
       <h1 className="text-3xl font-bold text-gray-900 mb-4">
         Madhumakhi Palan 2026: Shahad Se Kamayein, Khet Ka Yield Badhayein - Complete Guide
       </h1>
       
-      <p className="text-lg mb-4 italic">
-        Uttarakhand ke Champawat district mein ek 52 saal ka kisan mila. 20 saal se sirf sarson aur gehu ki kheti karta tha. 2018 mein usne 20 madhumakhi ke box lagaye. Aaj uske paas 200 colonies hain.
+      <p className="text-lg mb-6">
+        Shahad ki domestic aur export demand lagatar badh rahi hai, lekin madhumakhi palan koi aisa kaam nahi jahan paise lagaye aur turant munafa mil jaye. Yeh ek delicate biological system ko manage karne jaisa hai. Zameen par halat yeh hai ki jo log sirf shahad bechne ke chakkar mein bina seekhe isme kood jate hain, wo aksar pehle saal ke lean period mein hi demotivate ho kar chhod dete hain.
       </p>
       
       <p className="mb-6">
-        "Bhai, sabse bada fayda yeh hua ki meri sarson ka yield 35% badh gaya. Makhiyan phoolon par baithti hain, pollination hota hai, fasal achhi hoti hai. Shahad alag se ₹4 lakh ka saal ka milta hai," usne bataya.
-      </p>
-      
-      <p className="mb-6">
-        Yeh hai madhumakhi palan ki asli taqat - dohri kamai. Shahad se direct income, aur khet ki fasal ka yield 20-40% tak badh jata hai pollination se. Par kaam koi aasaan nahi hai. Makhiyan kaat-ti hain, bhag sakti hain, aur ek galti poori colony khatam kar sakti hai.
+        Is business ki asli taqat dohri kamai mein chhupi hai. Ek taraf aap shahad, bee wax, aur pollen bech kar direct income banate hain. Doosri taraf, aapki colonies aas-paas ke kheton mein cross-pollination ka kaam karti hain, jisse crop yield mein 20% se 40% tak ka izafa dekha gaya hai. Himachal Pradesh aur Uttarakhand ke apple belts mein toh kisaan khud beekeepers ko paise dekar apne orchards mein colonies rakhwate hain, kyunki unhe pata hai ki bina pollination ke phal ki quality aur quantity dono gir jati hai.
       </p>
 
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
-        Madhumakhi Palan Kyun? Do Income, Ek Mehnat
+      {/* Key Highlights Box */}
+      <div className="bg-green-50 dark:bg-green-900/20 border-l-4 border-green-600 p-5 rounded-r-lg mb-8">
+        <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 text-lg">🔑 Key Highlights</h3>
+        <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+          <li>✅ <strong>Primary Benefit:</strong> Direct honey income + 20-40% crop yield increase via pollination.</li>
+          <li>✅ <strong>Best Bee Species:</strong> Apis mellifera (European) for commercial scale.</li>
+          <li>✅ <strong>Initial Investment:</strong> ₹2.16 Lakh - ₹2.91 Lakh (for 50 boxes).</li>
+          <li>✅ <strong>Subsidy:</strong> Up to 50-80% under KVIC / National Beekeeping and Honey Mission.</li>
+          <li>✅ <strong>Break-even:</strong> Generally achieved by Year 2 or 3 with proper management.</li>
+        </ul>
+      </div>
+
+      {/* Table of Contents */}
+      <nav className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl mb-8 border border-gray-200 dark:border-gray-700" aria-label="Table of Contents">
+        <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4">📑 Vishay Suchi (Table of Contents)</h2>
+        <ul className="space-y-2 text-sm">
+          <li><Link href="#dohri-kamai" className="text-blue-600 hover:underline dark:text-blue-400">1. Dohri Kamai ka Sach: Sirf Shahad Nahi, Pollination Bhi</Link></li>
+          <li><Link href="#apis-mellifera-vs-cerana" className="text-blue-600 hover:underline dark:text-blue-400">2. Apis Mellifera vs. Apis Cerana: Zameen Par Kya Behtar Hai?</Link></li>
+          <li><Link href="#50-box-unit-cost" className="text-blue-600 hover:underline dark:text-blue-400">3. 50-Box Unit: Asliyat Mein Kitna Kharcha Aata Hai?</Link></li>
+          <li><Link href="#sarkari-subsidy" className="text-blue-600 hover:underline dark:text-blue-400">4. Sarkari Subsidy: KVIC, NBHM aur State Schemes</Link></li>
+          <li><Link href="#seasonal-management" className="text-blue-600 hover:underline dark:text-blue-400">5. Seasonal Management: Woh Cheezein Jo Training Mein Kam Batayi Jaati Hain</Link></li>
+          <li><Link href="#common-mistakes" className="text-blue-600 hover:underline dark:text-blue-400">6. Common Mistakes New Beekeepers Make</Link></li>
+          <li><Link href="#marketing-strategy" className="text-blue-600 hover:underline dark:text-blue-400">7. Honey Marketing & Selling Strategy</Link></li>
+          <li><Link href="#realistic-projection" className="text-blue-600 hover:underline dark:text-blue-400">8. 3 Saal Ka Realistic Projection</Link></li>
+          <li><Link href="#field-risks" className="text-blue-600 hover:underline dark:text-blue-400">9. Field Risks: Woh Challenges Jo Books Mein Nahi Likhe Hote</Link></li>
+          <li><Link href="#faq" className="text-blue-600 hover:underline dark:text-blue-400">10. Frequently Asked Questions (FAQs)</Link></li>
+        </ul>
+      </nav>
+
+      <h2 id="dohri-kamai" className="text-2xl font-semibold mt-8 mb-3 text-green-800">
+        Dohri Kamai ka Sach: Sirf Shahad Nahi, Pollination Bhi
       </h2>
       
       <p className="mb-4">
-        Beekeeping India mein ek aisa business hai jahan aapki kamai sirf shahad se nahi hoti. Bee wax, propolis, royal jelly, aur pollen bhi bech sakte hain. Par sabse bada advantage hai pollination service.
+        ICAR aur alag-alag state agriculture universities ke studies mein yeh baat saaf dikhti hai ki madhumakhiyon ki wajah se cross-pollination kaafi behtar hota hai. Mustard (sarson) mein yield 25-35% tak badh sakta hai. Apple orchards mein yeh improvement 40-60% tak report ki gayi hai, kyunki apple ke flowers ko cross-pollination ki sakht zaroorat hoti hai.
       </p>
-      
+
       <p className="mb-4">
-        Research ke mutabiq, madhumakhiyon se pollination hone par:
+        Vegetables jaise lauki, tori, aur kheera ke flowers ko bhi bee pollination ki zaroorat hoti hai, jisse fruit set 30-50% tak behtar hota hai aur tedha-medha phal aane ki samasya kam hoti hai. Yahin par ek chhupi hui business opportunity hai. Agar aapke area mein commercial fruit ya vegetable farming hoti hai, toh aap apni colonies ko wahan seasonal basis par rakkar pollination service ka alag se charge kar sakte hain. Yeh model Punjab aur Haryana ke sarson belts mein ab kaafi common ho chuka hai.
       </p>
 
-      <ul className="list-disc pl-6 mb-6 space-y-2">
-        <li>Sarson ka yield 25-35% badhta hai</li>
-        <li>Seb (apple) ka production 40-60% tak badh sakta hai</li>
-        <li>Litchi, almond, sunflower mein 20-30% improvement</li>
-        <li>Sabziyon (lauki, tori, kheera) mein fruit set 30-50% tak badhta hai</li>
-      </ul>
-
-      <p className="mb-6">
-        Himachal Pradesh aur Uttarakhand mein toh kisaan madhumakhi palan walon ko paise dete hain ki unke seb ke bagh mein colonies rakh dein. Yeh ek alag revenue stream ban gayi hai. Agar aapke aas-paas kisan hain jo fruits ya vegetables ugata hai, toh aap unhe pollination service de sakte hain.
-      </p>
-
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
-        Kaunsi Makhi Paalein? Apis Mellifera vs Apis Cerana - Reality Check
+      <h2 id="apis-mellifera-vs-cerana" className="text-2xl font-semibold mt-8 mb-3 text-green-800">
+        Apis Mellifera vs. Apis Cerana: Zameen Par Kya Behtar Hai?
       </h2>
       
       <p className="mb-4">
-        India mein mainly 2 tarah ki makhiyan commercial beekeeping mein use hoti hain. Naye log aksar desi makhi (Apis cerana indica) se start karna chahte hain kyunki yeh local hai, par yeh galat decision ho sakta hai.
+        Naye beekeepers aksar desi madhumakhi (Apis cerana indica) ki taraf jhukte hain, yeh soch kar ki yeh local hai aur sambhalna aasaan hoga. Commercial scale par yeh soch mehngi pad sakti hai.
       </p>
 
       <div className="overflow-x-auto mb-6">
         <table className="min-w-full bg-white border border-gray-300">
+          <caption className="sr-only">Comparison between Apis Mellifera and Apis Cerana for beekeeping</caption>
           <thead className="bg-green-100">
             <tr>
-              <th className="py-2 px-4 border-b text-left">Feature</th>
-              <th className="py-2 px-4 border-b text-left">Apis Mellifera (European)</th>
-              <th className="py-2 px-4 border-b text-left">Apis Cerana (Indian)</th>
+              <th scope="col" className="py-2 px-4 border-b text-left">Feature</th>
+              <th scope="col" className="py-2 px-4 border-b text-left">Apis Mellifera (European)</th>
+              <th scope="col" className="py-2 px-4 border-b text-left">Apis Cerana (Indian)</th>
             </tr>
           </thead>
           <tbody>
@@ -82,12 +261,12 @@ export default function MadhumakhiPalan() {
             </tr>
             <tr>
               <td className="py-2 px-4 border-b">Swarming Tendency</td>
-              <td className="py-2 px-4 border-b">Kam (stable rehti hai)</td>
+              <td className="py-2 px-4 border-b">Kam (hive mein stable rehti hai)</td>
               <td className="py-2 px-4 border-b">Zyada (jaldi bhag jati hai)</td>
             </tr>
             <tr>
               <td className="py-2 px-4 border-b">Disease Resistance</td>
-              <td className="py-2 px-4 border-b">Kam (care zyada chahiye)</td>
+              <td className="py-2 px-4 border-b">Kam (regular monitoring chahiye)</td>
               <td className="py-2 px-4 border-b">Zyada (local diseases se lad sakti hai)</td>
             </tr>
             <tr>
@@ -98,26 +277,26 @@ export default function MadhumakhiPalan() {
             <tr>
               <td className="py-2 px-4 border-b">Best For</td>
               <td className="py-2 px-4 border-b">Commercial beekeeping</td>
-              <td className="py-2 px-4 border-b">Small scale, hilly areas</td>
+              <td className="py-2 px-4 border-b">Small scale, specific hilly areas</td>
             </tr>
           </tbody>
         </table>
       </div>
 
       <p className="mb-4">
-        All India Beekeepers Association ke senior members ke mutabiq, commercial beekeeping ke liye Apis mellifera hi choose karein. Iski production 2-3x zyada hai, aur yeh box mein stable rehti hai. Apis cerana se sirf tab start karein jab aap hilly area (Himachal, Uttarakhand, North-East) mein hain jahan mellifera survive nahi kar pati.
+        KVIC officials aur tajurbekar madhumakhi palak commercial operations ke liye Apis mellifera ki hi salah dete hain. Iski production capacity 2-3 guna zyada hai aur yeh hive mein kaafi stable rehti hai, jisse migration aur management aasaan hota hai. Apis cerana ko sirf un specific hilly terrains mein hi recommend kiya jata hai jahan mellifera ki survival rate kam hoti hai ya jahan traditional methods se kaam chalana ho.
       </p>
 
       <p className="mb-6">
-        Ek aur important point - colony hamesha reputed breeder se khareedein. Local market mein sasti colony milti hai par usme queen old ya weak ho sakti hai. Achhi queen wali colony ₹3,500-4,500 mein milti hai, par production 3x zyada deti hai.
+        Colony khareedte waqt vendor ki credibility check karna behad zaroori hai. Local haat-bazaar mein sasti colonies mil jati hain, lekin unme queen aksar old ya weak hoti hai, ya phir colony mein disease chhupi hoti hai. Ek healthy, young queen wali colony ₹3,500-4,500 ki aati hai, lekin yeh long term mein 3x zyada production deti hai aur jaldi expand karti hai.
       </p>
 
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
-        Kitna Paisa Lagega? 50-Box Unit ka Realistic Budget
+      <h2 id="50-box-unit-cost" className="text-2xl font-semibold mt-8 mb-3 text-green-800">
+        50-Box Unit: Asliyat Mein Kitna Kharcha Aata Hai?
       </h2>
       
       <p className="mb-4">
-        50 boxes ek ideal starting point hai commercial beekeeping ke liye. Isse aap saal ka 400-600 kg shahad produce kar sakte hain.
+        Commercial level par shuru karne ke liye 50 boxes ek realistic starting point mana jata hai. Is scale par aap saal ka lagbhag 400-600 kg shahad produce kar sakte hain, depending on local flora aur weather conditions.
       </p>
 
       <div className="bg-gray-50 p-4 rounded-lg mb-6">
@@ -136,11 +315,11 @@ export default function MadhumakhiPalan() {
             <span className="font-semibold">₹8,000 - ₹15,000</span>
           </li>
           <li className="flex justify-between">
-            <span>Sugar Feed (emergency feeding ke liye - 5 quintal):</span>
+            <span>Sugar Feed (emergency feeding - 5 quintal):</span>
             <span className="font-semibold">₹15,000 - ₹20,000</span>
           </li>
           <li className="flex justify-between">
-            <span>Medicines (for Varroa mite, Nosema):</span>
+            <span>Medicines (Varroa mite, Nosema control):</span>
             <span className="font-semibold">₹3,000 - ₹5,000</span>
           </li>
           <li className="flex justify-between">
@@ -159,87 +338,72 @@ export default function MadhumakhiPalan() {
       </div>
 
       <p className="mb-4">
-        Yeh investment lagti hai. Par agar aapke paas <Link href="/kisan-credit-card-kcc" className="text-blue-600 hover:underline">Kisan Credit Card (KCC)</Link> hai, toh aap working capital ke liye uska use kar sakte hain. Beekeeping ko agriculture activity mana jata hai, isliye KCC ke under loan mil jata hai.
+        Yeh initial capital lagta hai. Working capital manage karne ke liye <Link href="/kisan-credit-card-online-apply-2026" className="text-blue-600 hover:underline">Kisan Credit Card (KCC)</Link> ek badhiya vikalp hai, kyunki beekeeping ko officially agriculture activity ke under cover kiya jata hai aur ispar byaj dar kam hoti hai.
       </p>
 
       <p className="mb-6">
-        Ek aur option hai <Link href="/mudra-loan-kisan" className="text-blue-600 hover:underline">Mudra Loan</Link> - Shishu category mein ₹50,000 tak, Kishor mein ₹5 lakh tak bina collateral ke mil jata hai. Beekeeping unit ke liye yeh perfect fit hai.
+        Chhote scale par shuru karne walon ke liye <Link href="/kisan-rin-kaha-se-le-2026" className="text-blue-600 hover:underline">Kisan Loan</Link> schemes (jaise Mudra Shishu/Kishor) bhi bina collateral ke ₹50,000 se ₹5 lakh tak ka support provide kar sakti hain, jo naye equipment khareedne mein madad karti hain.
       </p>
 
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
-        Sarkari Subsidy: KVIC, NHB, aur National Honey Mission
+      <h2 id="sarkari-subsidy" className="text-2xl font-semibold mt-8 mb-3 text-green-800">
+        Sarkari Subsidy: KVIC, NBHM aur State Schemes
       </h2>
       
       <p className="mb-4">
-        Madhumakhi palan ko promote karne ke liye sarkar ne 2020 mein "National Honey Mission" launch ki thi. Iske under kai schemes hain.
+        National Beekeeping and Honey Mission (NBHM), jo KVIC ke under aata hai, is sector ko boost dene ke liye active hai. Lekin dhyan rahe, subsidy process mein 3-6 mahine lag sakte hain, isliye apna kaam subsidy ke intezaar mein na rokiye.
       </p>
 
       <div className="bg-blue-50 border border-blue-200 rounded-lg p-5 mb-6">
         <ul className="space-y-4">
           <li>
-            <strong className="text-blue-900">1. KVIC (Khadi and Village Industries Commission) Scheme:</strong>
+            <strong className="text-blue-900">1. KVIC Beekeeping Scheme:</strong>
             <p className="mt-1 text-gray-700">
-              KVIC ke under bee boxes, extractor, aur equipment par 50-80% tak subsidy milti hai. General category ko 50%, SC/ST aur women ko 75%, aur North-East states mein 80% tak. Maximum subsidy ₹4 lakh tak hai per unit.
+              Bee boxes, extractors, aur protective gear par 50% tak ki subsidy milti hai. SC/ST, women, aur North-East regions mein yeh limit 75-80% tak ja sakti hai. Per unit maximum assistance generally ₹4 lakh ke aas-paas hoti hai.
             </p>
             <p className="mt-1 text-sm text-gray-600 italic">
-              Disclaimer: KVIC ki guidelines update hoti rehti hain. Latest subsidy % aur eligibility ke liye nazdeeki KVIC office se confirm karein.
+              Note: KVIC guidelines state-wise thodi vary karti hain. Latest slab aur application window ke liye apne nazdeeki KVIC office se verify karein.
             </p>
           </li>
 
           <li>
-            <strong className="text-blue-900">2. NHB (National Horticulture Board) Credit-Linked Subsidy:</strong>
+            <strong className="text-blue-900">2. NHB Credit-Linked Subsidy:</strong>
             <p className="mt-1 text-gray-700">
-              Commercial beekeeping units ke liye NHB 35-50% back-end subsidy deta hai. Project cost ka 40% tak mil sakta hai. Yeh bank loan lene ke baad claim hoti hai. <Link href="/nhb-subsidy-guide" className="text-blue-600 hover:underline">NHB subsidy ki complete guide</Link> yahan padhein.
-            </p>
-            <p className="mt-1 text-sm text-gray-600 italic">
-              Disclaimer: NHB ki subsidy limits change hoti hain. Latest details ke liye official portal check karein.
+              Commercial horticulture aur allied activities ke liye National Horticulture Board 35-50% back-ended subsidy offer karta hai. Yeh bank loan sanction hone aur project complete hone ke baad claim hoti hai.
             </p>
           </li>
 
           <li>
             <strong className="text-blue-900">3. PM FME Yojana:</strong>
             <p className="mt-1 text-gray-700">
-              Agar aap shahad ko process karke branded product bechna chahte hain (bottling, packaging, value addition), toh <Link href="/pm-fme-yojana" className="text-blue-600 hover:underline">PM FME Yojana</Link> ke under 35% subsidy mil sakti hai (maximum ₹10 lakh). Yeh micro food processing unit ke liye hai.
-            </p>
-            <p className="mt-1 text-sm text-gray-600 italic">
-              Disclaimer: PM FME ki eligibility criteria specific hai. Detailed information ke liye official portal ya nazdeeki Industries Department se contact karein.
+              Agar aap raw honey ko process karke branded, packaged product banana chahte hain, toh <Link href="/pm-fme-yojana" className="text-blue-600 hover:underline">PM FME Yojana</Link> ke under micro food processing unit ke liye 35% subsidy (max ₹10 lakh) available hai.
             </p>
           </li>
 
           <li>
-            <strong className="text-blue-900">4. PMEGP (Prime Minister's Employment Generation Programme):</strong>
+            <strong className="text-blue-900">4. PMEGP:</strong>
             <p className="mt-1 text-gray-700">
-              Beekeeping unit par 25-35% subsidy mil sakti hai (rural areas mein zyada). Maximum project cost ₹25 lakh hai. KVIC ke through hi apply hota hai. <Link href="/pmegp-yojana" className="text-blue-600 hover:underline">PMEGP ki detailed guide</Link> yahan padhein.
-            </p>
-            <p className="mt-1 text-sm text-gray-600 italic">
-              Disclaimer: PMEGP ki guidelines periodically update hoti hain. Latest details ke liye KVIC office se confirm karein.
+              Rural areas mein beekeeping projects par 25-35% subsidy milti hai. Maximum project cost ₹25 lakh hai aur yeh KVIC ke through hi process hota hai.
             </p>
           </li>
 
           <li>
             <strong className="text-blue-900">5. Agriculture Infrastructure Fund (AIF):</strong>
             <p className="mt-1 text-gray-700">
-              Agar aap honey processing unit, cold storage, ya packaging facility lagana chahte hain, toh AIF ke under 3% interest subsidy mil sakti hai 7 saal tak. Maximum loan ₹2 crore tak hai. <Link href="/agriculture-infrastructure-fund" className="text-blue-600 hover:underline">AIF ki complete guide</Link> yahan available hai.
-            </p>
-            <p className="mt-1 text-sm text-gray-600 italic">
-              Disclaimer: AIF ki eligibility criteria specific hai. Detailed guidelines ke liye nazdeeki bank se pata karein.
+              Honey processing units, cold storage, ya modern packaging facilities ke liye AIF 3% interest subvention 7 saal tak provide karta hai. Maximum loan limit ₹2 crore hai.
             </p>
           </li>
 
           <li>
-            <strong className="text-blue-900">6. State-Level Beekeeping Schemes:</strong>
+            <strong className="text-blue-900">6. State-Specific Initiatives:</strong>
             <p className="mt-1 text-gray-700">
-              Har state ki apni schemes hoti hain. Jaise Punjab mein "Punjab Beekeeping Development Scheme", Uttarakhand mein "Mission Honey", Himachal mein "Himachal Beekeeping Project". Inme 50-75% subsidy milti hai.
-            </p>
-            <p className="mt-1 text-sm text-gray-600 italic">
-              Disclaimer: State schemes ke details vary karti hain. Apne zila ke Horticulture ya Animal Husbandry Officer se latest information lein.
+              Punjab, Uttarakhand, aur Himachal Pradesh jaise states ke apne dedicated beekeeping development missions hain, jahan 50-75% tak ka financial assistance diya jata hai.
             </p>
           </li>
         </ul>
       </div>
 
       <p className="mb-6">
-        Agar aap KVIC ya National Honey Mission ke under apply karna chahte hain, toh neeche diya gaya button aapko official portal par le jayega:
+        Official applications ke liye seedha source par jana behtar rehta hai taaki kisi middleman ke chakkar mein na fasein:
       </p>
 
       <ExternalLinkButton 
@@ -247,65 +411,92 @@ export default function MadhumakhiPalan() {
         label="National Honey Mission Portal - Apply Karein" 
       />
 
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
-        Step-by-Step Process: Colony Kaise Manage Karein?
+      <h2 id="seasonal-management" className="text-2xl font-semibold mt-8 mb-3 text-green-800">
+        Seasonal Management: Woh Cheezein Jo Training Mein Kam Batayi Jaati Hain
       </h2>
       
       <p className="mb-4">
-        Beekeeping mein 4 main seasons hote hain, aur har season mein alag kaam hota hai. Agar aap seasonal management samajh gaye, toh 80% success mil jayegi.
+        Beekeeping calendar ko samajhna hi is business ki backbone hai. Har season ki apni challenges hoti hain, aur inhe ignore karna colony ke khatam hone ka sabse bada karan banta hai.
       </p>
 
       <div className="space-y-4 mb-6">
         <div className="border-l-4 border-green-500 pl-4">
-          <h3 className="font-bold text-lg">Season 1: Build-Up (January-March)</h3>
+          <h3 className="font-bold text-lg">Build-Up Phase (January-March)</h3>
           <p className="mt-2">
-            Sarson, litchi, aur ber ke phool aate hain. Colony tez grow karti hai. Queen daily 1,500-2,000 eggs deti hai. Is time colony ko sugar feed dena band kar dein - natural nectar milta hai. Bee space check karein, super chambers add karein jahan shahad store hoga.
+            Sarson, litchi, aur ber ke bloom ke dauran colony tezi se expand karti hai. Queen daily 1,500-2,000 eggs lay sakti hai. Is period mein artificial sugar feeding band kar deni chahiye kyunki natural nectar available hota hai. Hive mein space kam padne lagti hai, toh super chambers add karne padte hain taaki bees ko shahad store karne ki jagah mile aur wo swarm na karein.
           </p>
         </div>
 
         <div className="border-l-4 border-green-500 pl-4">
-          <h3 className="font-bold text-lg">Season 2: Honey Flow (February-April)</h3>
+          <h3 className="font-bold text-lg">Honey Flow (February-April)</h3>
           <p className="mt-2">
-            Yeh main harvest season hai. Sarson, litchi, eucalyptus ke phoolon se shahad banta hai. Jab 80% cells sealed ho jayein, tab harvest karein. Frames nikalein, wax capping hatayein, extractor mein shahad nikalein. Ek strong colony se 8-12 kg shahad mil sakta hai is season mein.
+            Yeh primary harvest window hai. Jab tak honey cells 80% se zyada wax se seal (cap) na ho jayein, extraction nahi karni chahiye. Jaldi nikalne se honey mein moisture content high rehta hai (20% se upar), jisse wo jaldi ferment ho kar kharab ho jata hai. Ek strong colony se is season mein 8-12 kg shahad nikal sakta hai.
           </p>
         </div>
 
         <div className="border-l-4 border-green-500 pl-4">
-          <h3 className="font-bold text-lg">Season 3: Lean Period (May-September)</h3>
+          <h3 className="font-bold text-lg">Lean Period (May-September)</h3>
           <p className="mt-2">
-            Garmiyon mein phool kam hote hain. Colony ko sugar syrup (1:1 ratio) feed karna padta hai. Varroa mite treatment zaroori hai - Formic acid ya Oxalic acid se treat karein. Queen excluder lagayein taaki queen upper super chamber mein eggs na de. Shade provide karein, paani ka intezam karein.
+            Garmiyon mein flora kam ho jata hai. Colony ko zinda rakhne ke liye 1:1 ratio ka sugar syrup feed karna padta hai. Ek zaroori tip: syrup hamesha sham ke waqt dein taaki doosri colonies mein 'robbing' (doosre hive ka shahad churana) na ho. Yahin par Varroa mite ka attack sabse zyada hota hai. Formic ya Oxalic acid se timely treatment dena mandatory hai.
           </p>
         </div>
 
         <div className="border-l-4 border-green-500 pl-4">
-          <h3 className="font-bold text-lg">Season 4: Winter Preparation (October-December)</h3>
+          <h3 className="font-bold text-lg">Winter Preparation (October-December)</h3>
           <p className="mt-2">
-            Sardiyon ke liye colony prepare karein. Extra frames remove karein, colony ko compact karein. Sugar syrup (2:1 ratio) feed karein taaki winter stores ban jayein. North India mein temperatures 5°C tak gir jati hain - insulation zaroori hai. South India mein yeh bhi honey flow season hota hai (coffee, sunflower).
+            North India mein temperatures 5°C tak gir sakte hain. Colony ko compact karna padta hai, extra frames hata kar insulation (jaise gunny bags ya straw) provide karni hoti hai. 2:1 ratio ka thick sugar syrup feed kiya jata hai taaki winter stores ban sakein. South India mein yeh period coffee aur sunflower ke bloom ki wajah se active rehta hai.
           </p>
         </div>
       </div>
 
       <p className="mb-6">
-        Ek important baat - migration. Commercial beekeepers apni colonies ko different locations par le jaate hain taaki saal bhar honey flow mile. Jaise Punjab mein sarson khatam hui, toh Himachal le jaate hain wahan litchi aur apple blossoms ke liye. Isse production 2-3x badh jata hai. Par migration mein risk bhi hai - transport mein colonies damage ho sakti hain.
+        Migration ek advanced practice hai. Commercial beekeepers apni colonies ko truck par load karke different states le jate hain taaki saal bhar nectar flow bana rahe. Punjab ki sarson khatam hote hi Himachal ke apple belts ya UP ke litchi orchards mein shift hona common hai. Isse production badhti hai, lekin transport ke dauran hives ko proper ventilation na milne se bees suffocate ho sakti hain, isliye raat ke waqt hi travel karein aur mesh screens check karein.
       </p>
 
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
-        3 Saal Ka Profit Calculation: Real Numbers
+      <h2 id="common-mistakes" className="text-2xl font-semibold mt-8 mb-3 text-red-700">
+        Common Mistakes New Beekeepers Make
+      </h2>
+      <p className="mb-4">
+        Field experience se pata chalta hai ki naye log aksar in galtiyon ki wajah se apni colonies kho dete hain:
+      </p>
+      <ul className="list-disc pl-6 mb-6 space-y-3 text-gray-700 dark:text-gray-300">
+        <li><strong>Jaldi Extraction:</strong> Lalach mein aakar adha-bhara honey frame nikal lena. Isse moisture content high rehta hai aur shahad khatta (ferment) ho jata hai.</li>
+        <li><strong>Wrong Syrup Timing:</strong> Din ke ujale mein sugar syrup dena. Isse aas-paas ki colonies 'robbing' shuru kar deti hain, jisse bhayankar ladai hoti hai aur bees mar jati hain.</li>
+        <li><strong>Ignoring Varroa Mites:</strong> Sirf shahad nikalne par focus karna aur disease management ko ignore karna. Varroa mite poori colony ko 2-3 mahine mein khatam kar sakta hai.</li>
+        <li><strong>Overcrowding:</strong> Hive mein space kam hone par bhi super chamber na lagana, jisse colony swarm (bhag) jati hai.</li>
+      </ul>
+
+      <h2 id="marketing-strategy" className="text-2xl font-semibold mt-8 mb-3 text-green-800">
+        Honey Marketing & Selling Strategy
+      </h2>
+      <p className="mb-4">
+        Sirf production kaafi nahi hai, sahi daam par bechna asli kala hai. Yahan kuch proven strategies hain:
+      </p>
+      <ul className="list-disc pl-6 mb-6 space-y-3 text-gray-700 dark:text-gray-300">
+        <li><strong>Direct to Consumer (D2C):</strong> Local societies, WhatsApp groups, aur farmer markets mein direct bechne se margin 2x-3x badh jata hai.</li>
+        <li><strong>Comb Honey Premium:</strong> "Chunk honey" ya "Honey with Comb" ko glass jars mein pack karke premium price (₹600-800/kg) par becha ja sakta hai, kyunki yeh 100% pure maana jata hai.</li>
+        <li><strong>B2B Contracts:</strong> Local bakeries, Ayurvedic clinics, aur organic stores ke saath long-term supply contract banayein.</li>
+        <li><strong>Branding & FSSAI:</strong> Ek simple, attractive label aur FSSAI logo trust build karta hai. <Link href="/pm-fme-yojana" className="text-blue-600 hover:underline">PM FME Yojana</Link> se packaging machinery par subsidy lein.</li>
+      </ul>
+
+      <h2 id="realistic-projection" className="text-2xl font-semibold mt-8 mb-3 text-green-800">
+        3 Saal Ka Realistic Projection: Numbers Kya Kehte Hain
       </h2>
       
       <p className="mb-4">
-        Yeh calculation 50-box unit ke liye hai, jo migration karta hai (2-3 locations per year).
+        Neeche diya gaya projection ek 50-box unit ke liye hai jo moderate migration follow karta hai. Yaad rahe, yeh figures average hain; actual results weather, management, aur local flora par depend karte hain.
       </p>
 
       <div className="overflow-x-auto mb-6">
         <table className="min-w-full bg-white border border-gray-300">
+          <caption className="sr-only">3 Year Profit Projection for 50-Box Beekeeping Unit</caption>
           <thead className="bg-blue-100">
             <tr>
-              <th className="py-2 px-4 border-b text-left">Year</th>
-              <th className="py-2 px-4 border-b text-left">Honey Production</th>
-              <th className="py-2 px-4 border-b text-left">Revenue</th>
-              <th className="py-2 px-4 border-b text-left">Expenses</th>
-              <th className="py-2 px-4 border-b text-left">Net Profit</th>
+              <th scope="col" className="py-2 px-4 border-b text-left">Year</th>
+              <th scope="col" className="py-2 px-4 border-b text-left">Honey Production</th>
+              <th scope="col" className="py-2 px-4 border-b text-left">Revenue</th>
+              <th scope="col" className="py-2 px-4 border-b text-left">Expenses</th>
+              <th scope="col" className="py-2 px-4 border-b text-left">Net Profit</th>
             </tr>
           </thead>
           <tbody>
@@ -335,95 +526,80 @@ export default function MadhumakhiPalan() {
       </div>
 
       <p className="mb-4">
-        Year 1 mein profit kam hota hai kyunki colonies establish ho rahi hoti hain, aur aap seekh rahe hote hain. Year 2-3 tak colonies strong ho jati hain, aur aap split bhi kar sakte hain (ek colony se 2 ban jati hain). Isse aapke paas 75-100 boxes ho jayenge bina naye khareede.
+        Pehle saal ka profit minimal hota hai kyunki focus colony establishment aur seekhne par hota hai. Year 2-3 tak, jab colonies strong ho jati hain, toh aap existing strong hives ko split karke naye boxes bana sakte hain bina nayi colony khareede, jisse aapka herd size 75-100 tak pahunch jata hai.
       </p>
 
       <p className="mb-4">
-        Agar aap shahad ko retail mein bechte hain (branded packaging ke saath), toh rate ₹400-600/kg milta hai. Bulk mein sirf ₹250-350/kg milta hai. <Link href="/pm-kisan-sampada-yojana" className="text-blue-600 hover:underline">PM Kisan Sampada Yojana</Link> ke under aap packaging aur branding par subsidy le sakte hain.
+        Bulk mein raw honey bechne par ₹250-350/kg milta hai. Lekin agar aap khud ki branding aur packaging karte hain, toh retail rate ₹400-600/kg tak ja sakta hai. <Link href="/soil-health-card-complete-guide-2026" className="text-blue-600 hover:underline">Soil health aur local flora planning</Link> ko samajhkar aap behtar honey varieties (jaise multiflora ya specific single-origin) produce kar sakte hain jo premium price command karti hain.
       </p>
 
       <p className="mb-6">
-        Ek aur revenue stream hai bee wax. 100 kg shahad se lagbhag 2-3 kg wax nikalta hai. Wax ka rate ₹400-600/kg hai. Cosmetics aur pharmaceutical industry mein iski demand hai.
+        Bee wax ek secondary income stream hai. Har 100 kg honey extraction se lagbhag 2-3 kg wax nikalta hai, jiski demand cosmetics aur pharmaceutical industries mein ₹400-600/kg ke rate par rehti hai. Ise alag se collect karke bechna chahiye.
       </p>
 
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-red-700">
-        Real Risks - Jo Koi Nahi Batata
+      <h2 id="field-risks" className="text-2xl font-semibold mt-8 mb-3 text-red-700">
+        Field Risks: Woh Challenges Jo Books Mein Nahi Likhe Hote
       </h2>
       
       <p className="mb-4">
-        Beekeeping sunne mein simple lagti hai, par risks bahut hain. Yeh woh cheezein hain jo aapko pata honi chahiye:
+        Beekeeping dekhne mein peaceful lagti hai, lekin ground reality mein kai unpredictable factors kaam karte hain jo aapki mehnat par paani pher sakte hain.
       </p>
 
       <div className="space-y-4 mb-6">
         <div className="border-l-4 border-red-500 pl-4">
           <h3 className="font-bold text-lg">Colony Collapse Disorder (CCD)</h3>
           <p className="mt-2">
-            Kabhi-kabhi poori colony gayab ho jati hai - queen, bees, brood sab. Iski wajah exact nahi pata, par pesticides, Varroa mite, aur poor nutrition ko responsible mana jata hai. 2019 mein Punjab ke kuch areas mein 20-30% colonies aise hi khatam ho gayi thin.
+            Achanak poori colony gayab ho jati hai. Iske exact reasons abhi bhi research ka vishay hain, lekin pesticide exposure, severe Varroa mite infestation, aur poor nutrition ko mukhya karan mana jata hai.
           </p>
         </div>
 
         <div className="border-l-4 border-red-500 pl-4">
-          <h3 className="font-bold text-lg">Pesticide Poisoning</h3>
+          <h3 className="font-bold text-lg">Pesticide ka Asar (Pesticide Drift)</h3>
           <p className="mt-2">
-            Agar aapki colonies kisi aise khet ke paas hain jahan pesticides spray ho rahe hain, toh makhiyan mar sakti hain. Ek spray se poori colony khatam ho sakti hai. Isliye location selection bahut zaroori hai. Organic farms ke paas best hai - isi liye <Link href="/organic-farming-guide" className="text-blue-600 hover:underline">organic farming areas</Link> mein beekeeping zyada successful hoti hai.
+            Yeh sabse common financial loss ka karan hai. Agar aapki colonies ke paas wale khet mein kisaan ne heavy pesticide spray kar diya, toh foraging bees wapas nahi aati ya hive ke andar hi mar jati hain. <Link href="/organic-farming-guide" className="text-blue-600 hover:underline">Organic farming zones</Link> ke paas apiary setup karna is risk ko kaafi kam kar deta hai. Hamesha neighboring farmers se spray karne se pehle baat kar lein.
           </p>
         </div>
 
         <div className="border-l-4 border-red-500 pl-4">
           <h3 className="font-bold text-lg">Weather Extremes</h3>
           <p className="mt-2">
-            Unexpected baarish, hailstorm, ya extreme heat poori season kharab kar sakte hain. 2022 mein Himachal mein unexpected snowfall hua March mein - kai beekeepers ki colonies khatam ho gayi thin. Weather patterns ab unpredictable ho gaye hain.
+            Bloom ke dauran unexpected heavy rain nectar ko wash out kar deti hai, jisse honey flow puri tarah fail ho sakta hai. Unseasonal hailstorms colonies ko physically damage kar sakte hain, isliye hives ko thoda elevated aur sheltered jagah par rakhna chahiye.
           </p>
         </div>
 
         <div className="border-l-4 border-red-500 pl-4">
-          <h3 className="font-bold text-lg">Theft aur Vandalism</h3>
+          <h3 className="font-bold text-lg">Chori aur Tod-Phod (Theft aur Vandalism)</h3>
           <p className="mt-2">
-            Gaon mein aksar colonies chori ho jati hain. Ek colony ki value ₹3,000-4,000 hoti hai. Agar aap remote location par boxes rakhte hain, toh fencing aur security zaroori hai. Kuch areas mein log intentionally colonies damage kar dete hain.
+            Remote locations par rakhe gaye bee boxes chori hone ka shikar ho jate hain. Ek healthy colony ki market value ₹3,000-4,000 hoti hai. Proper fencing, hives par dull colors ka use (taaki door se na dikhein), aur local community ke saath achhe relations maintain karna zaroori hai.
           </p>
         </div>
 
         <div className="border-l-4 border-red-500 pl-4">
-          <h3 className="font-bold text-lg">Queen Loss</h3>
+          <h3 className="font-bold text-lg">Queen Failure</h3>
           <p className="mt-2">
-            Queen mar gayi ya gayab ho gayi, toh colony 3-4 hafte mein khatam ho jayegi. Queen rearing seekhna zaroori hai, ya phir emergency mein new queen khareedne ka intezam hona chahiye. Achhi queen ₹500-800 mein milti hai.
+            Queen bee ki lifespan generally 2-3 saal hoti hai, lekin kabhi-kabhi wo early fail ho jati hai. Agar queen eggs dena band kar de, toh colony 3-4 hafte mein dwindle hokar khatam ho jayegi. Emergency queen rearing seekhein ya hamesha ek spare mated queen ya young brood frame backup mein rakhein.
           </p>
         </div>
       </div>
 
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
-        Training Kahan Se Lein? Yeh Skip Mat Karna
+      <h2 id="training" className="text-2xl font-semibold mt-8 mb-3 text-green-800">
+        Training: Bina Iske Shuru Karna Nuksan Ka Sabse Bada Karan Hai
       </h2>
       
       <p className="mb-4">
-        Beekeeping mein hands-on training bahut zaroori hai. Aapko seekhna hoga: colony inspection, queen identification, disease diagnosis, honey extraction, aur swarm management. Bina training ke aap pehle saal mein 30-50% colonies kho sakte hain.
+        Sirf YouTube videos dekh kar beekeeping shuru karna risky hai. Aapko practically seekhna hoga ki smoker ko kaise handle karna hai, frame ko kaise nikalna hai bina bees ko panic kiye, aur diseases ko early stage mein kaise identify karna hai.
       </p>
 
       <p className="mb-4">
-        7-10 din ki training lein. Cost ₹3,000-8,000 hoti hai (kuch jagah free bhi milti hai). Training mein aap seekhenge:
-      </p>
-
-      <ul className="list-disc pl-6 mb-6 space-y-2">
-        <li>Bee behavior samajhna</li>
-        <li>Smoker ka sahi use</li>
-        <li>Frame inspection techniques</li>
-        <li>Queen rearing aur grafting</li>
-        <li>Disease identification (Varroa, Nosema, AFB)</li>
-        <li>Honey extraction aur processing</li>
-        <li>Swarm capture aur colony splitting</li>
-        <li>Migration management</li>
-      </ul>
-
-      <p className="mb-4">
-        Best training centers:
+        KVK (Krishi Vigyan Kendra) har district mein 7-10 din ke practical training programs conduct karte hain, jo aksar free ya nominal fee par available hote hain. Yeh sabse reliable starting point hai.
       </p>
 
       <ul className="list-disc pl-6 mb-6 space-y-2">
         <li>
-          <strong>KVIC Regional Offices:</strong> Har state mein KVIC office hai. Wo regular training programs karte hain. Free ya nominal fee mein.
+          <strong>KVIC Regional Offices:</strong> Regular training batches organize karte hain jahan equipment aur live hive handling sikhaya jata hai.
         </li>
         <li>
-          <strong>National Bee and Honey Mission:</strong> Inke training programs bahut comprehensive hain. Website par check karein upcoming batches:
+          <strong>National Beekeeping and Honey Mission:</strong> Inke specialized training modules comprehensive hote hain aur inme certification bhi milta hai.
         </li>
       </ul>
 
@@ -434,33 +610,26 @@ export default function MadhumakhiPalan() {
 
       <ul className="list-disc pl-6 mb-6 space-y-2">
         <li>
-          <strong>Krishi Vigyan Kendra (KVK):</strong> Har district mein KVK beekeeping training deta hai. Free ya bahut kam fee mein. Practical hands-on training hoti hai.
+          <strong>Central Apiculture Institute, Darbhanga (Bihar):</strong> Yeh ICAR ke under aata hai aur advanced beekeeping techniques, queen rearing, aur disease management ke liye premier institute hai.
         </li>
         <li>
-          <strong>Central Apiculture Institute, Darbhanga (Bihar):</strong> Premier institute. Inke advanced courses bhi hote hain.
-        </li>
-        <li>
-          <strong>Successful Beekeepers:</strong> Kuch experienced beekeepers paid training dete hain (₹5,000-15,000 for 7-10 days). Yeh sabse practical hota hai kyunki aap real apiary mein kaam seekhte hain.
+          <strong>Apprenticeship:</strong> Kisi local experienced beekeeper ke saath 2-3 mahine kaam karna sabse valuable learning hoti hai. Theory aur field experience mein zameen-aasman ka farq hota hai.
         </li>
       </ul>
 
-      <p className="mb-6">
-        Training ke baad kam se kam 2-3 mahine kisi experienced beekeeper ke saath kaam karein. Theoretical knowledge aur practical experience dono zaroori hain. Ek season dekhna zaroori hai taaki aapko saare seasons ka experience ho.
-      </p>
-
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
-        Value Addition: Sirf Shahad Mat Bechein
+      <h2 id="value-addition" className="text-2xl font-semibold mt-8 mb-3 text-green-800">
+        Value Addition: Raw Honey Bechkar Margin Kaise Badhayein
       </h2>
       
       <p className="mb-4">
-        Beekeeping mein sabse badi galti yeh hai ki log sirf raw honey bechte hain. Isme margin kam hai. Value addition se aap 3-5x zyada kama sakte hain.
+        Naye beekeepers aksar yeh galti karte hain ki wo apna saara shahad local traders ko bulk mein saste daam par bech dete hain. Value addition se profit margin 3-5 guna tak badhaya ja sakta hai.
       </p>
 
       <div className="bg-gray-50 p-4 rounded-lg mb-6">
-        <h3 className="font-bold text-lg mb-3">Value Addition Products</h3>
+        <h3 className="font-bold text-lg mb-3">Value Addition Products & Estimated Rates</h3>
         <ul className="space-y-2">
           <li className="flex justify-between">
-            <span>Raw Honey (bulk):</span>
+            <span>Raw Honey (bulk to traders):</span>
             <span className="font-semibold">₹250-350/kg</span>
           </li>
           <li className="flex justify-between">
@@ -491,62 +660,99 @@ export default function MadhumakhiPalan() {
       </div>
 
       <p className="mb-6">
-        Propolis aur Royal Jelly mein bahut zyada margin hai, par inko produce karne ke liye advanced techniques seekhni padti hain. Shuruwat branded honey aur bee wax se karein. Jab experience aa jaye, tab propolis aur royal jelly par move karein.
+        Propolis aur Royal Jelly mein margins bahut high hain, lekin inki extraction ke liye specialized equipment aur advanced training chahiye. Shuruwat branded honey aur bee wax se karna safe rehta hai. Packaged honey bechne ke liye FSSAI license mandatory hai, jiska basic registration cost ₹5,000-10,000 aata hai aur yeh online aasani se ho jata hai. Is processing setup ke liye <Link href="/pm-fme-yojana" className="text-blue-600 hover:underline">PM FME Yojana</Link> ka support liya ja sakta hai.
       </p>
 
-      <p className="mb-6">
-        Packaging aur branding par <Link href="/pm-fme-yojana" className="text-blue-600 hover:underline">PM FME Yojana</Link> se subsidy mil sakti hai. FSSAI license zaroori hai packaged honey bechne ke liye - iska cost ₹5,000-10,000 aata hai, par yeh mandatory hai.
-      </p>
-
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
-        Kya Aapke Liye Sahi Hai? Final Decision Framework
+      <h2 id="final-assessment" className="text-2xl font-semibold mt-8 mb-3 text-green-800">
+        Final Assessment: Kya Yeh Business Aapke Liye Hai?
       </h2>
       
       <p className="mb-4">
-        Beekeeping unke liye hai jo:
+        Beekeeping un logon ke liye viable hai jo:
       </p>
       
       <ul className="list-disc pl-6 mb-4 space-y-2">
-        <li>Khet ya orchard hai (pollination benefit milega)</li>
-        <li>Flora-rich area mein hain (sarson, litchi, eucalyptus, ber ke ped hain)</li>
-        <li>Daily 1-2 hours de sakte hain (monitoring zaroori hai)</li>
-        <li>₹2-3 lakh initial investment kar sakte hain</li>
-        <li>Makhiyon se dar nahi lagta (sting handle kar sakte hain)</li>
-        <li>Seasonal migration kar sakte hain (optional par recommended)</li>
-        <li>Technical details seekhne ki ichha hai</li>
+        <li>Unke paas khud ka khet ya orchard hai (jisse pollination benefit mile).</li>
+        <li>Flora-rich area mein rehte hain (sarson, litchi, eucalyptus, sunflower ke fields nearby hon).</li>
+        <li>Daily 1-2 hours hive inspection aur maintenance ke liye de sakte hain.</li>
+        <li>₹2-3 lakh ka initial investment arrange kar sakte hain.</li>
+        <li>Bees ke stings se darte nahi hain aur unhe calmly handle kar sakte hain.</li>
       </ul>
 
       <p className="mb-4">
-        Beekeeping unke liye nahi hai jo:
+        Yeh business unke liye nahi hai jo:
       </p>
       
       <ul className="list-disc pl-6 mb-6 space-y-2">
-        <li>Urban area mein hain jahan flora nahi hai</li>
-        <li>Makhiyon se allergy hai ya dar lagta hai</li>
-        <li>Pesticide-heavy agricultural area mein hain</li>
-        <li>Daily monitoring nahi kar sakte</li>
-        <li>Quick money chahte hain (pehla saal learning year hota hai)</li>
+        <li>Urban concrete areas mein rehte hain jahan adequate flora nahi hai.</li>
+        <li>Unhe bees se allergy hai ya unhe dekhkar ghabrahat hoti hai.</li>
+        <li>Heavy pesticide use wale agricultural zones ke beech mein hain.</li>
+        <li>Quick returns ki expectation rakhte hain (pehla saal mostly learning curve hota hai).</li>
       </ul>
 
       <p className="mb-6">
-        Agar aap pehle category mein aate hain, toh 10-20 boxes se start karein. Pehle saal seekhein, colonies establish karein. Phir Year 2 mein 50 boxes tak expand karein. Direct 100 boxes se start mat karein - risk bahut hai.
+        Start hamesha chhote scale (10-20 boxes) se karein. Pehle saal colonies ko establish hone dein aur khud ko train karein. Direct 100 boxes se shuru karna ek common beginner mistake hai jisse heavy losses ho sakte hain agar management mein chook ho jaye.
       </p>
 
       <p className="mb-6">
-        Subsidy ka fayda zaroor uthayein. 50-75% subsidy mil rahi hai, isse na lena bewakoofi hogi. Par yaad rakho - subsidy milna guaranteed nahi hai. Application process mein 3-6 months lag sakte hain. Isliye apni planning subsidy ke bina karein. Agar mil gayi, toh bonus samjho.
+        Subsidy ek bonus hai, guarantee nahi. Apna business plan aise banayein jaise subsidy milegi hi nahi. Agar mil gayi, toh capital cost kam ho jayegi. Risk management ke liye, khet ki fasal ke saath-saath, kuch regions mein beekeeping units ke liye bhi insurance options explore kiye ja sakte hain, jaise <Link href="/pmfby-crop-insurance-2026" className="text-blue-600 hover:underline">Fasal Bima Yojana (PMFBY)</Link> ke frameworks mein agricultural risk management par charcha hoti hai.
       </p>
 
-      <p className="mb-6">
-        Ek aur important point: <Link href="/fasal-bima-yojana" className="text-blue-600 hover:underline">Fasal Bima Yojana (PMFBY)</Link> ke under agar aapke aas-paas ke kisaan insured hain, toh unki fasal ka pollination benefit aapko mil sakta hai. Kuch states mein beekeepers ko bhi insurance coverage milti hai - apne zila ke agriculture office se pata karein.
-      </p>
+      {/* FAQ Section */}
+      <h2 id="faq" className="text-2xl font-semibold mt-8 mb-3 text-green-800">
+        Frequently Asked Questions (FAQs)
+      </h2>
+      <div className="space-y-4 mb-8">
+        <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">1. Madhumakhi palan shuru karne ke liye kitna kharcha aata hai?</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm">Ek 50-box commercial unit shuru karne mein lagbhag ₹2.16 lakh se ₹2.91 lakh tak ka initial investment lagta hai, jismein bee boxes, tools, extractor, aur emergency feed shamil hain.</p>
+        </div>
+        <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">2. KVIC beekeeping scheme mein kitni subsidy milti hai?</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm">KVIC ke under bee boxes, extractors, aur protective gear par 50% tak ki subsidy milti hai. SC/ST, women, aur North-East regions mein yeh limit 75-80% tak ja sakti hai.</p>
+        </div>
+        <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">3. Ek bee box se saal mein kitna shahad nikalta hai?</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm">Apis mellifera (European) colony se saal mein average 8-15 kg shahad nikalta hai, jo local flora, weather, aur management practices par depend karta hai.</p>
+        </div>
+        <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">4. Kya madhumakhi palan ke liye training zaroori hai?</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm">Haan, training behad zaroori hai. Bina practical knowledge ke colony manage karna, diseases pehchanna, aur swarm control karna mushkil hota hai. KVK ya KVIC se 7-10 din ki training lein.</p>
+        </div>
+        <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">5. Shahad bechne ke liye FSSAI license chahiye?</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm">Haan, agar aap packaged aur branded honey bechna chahte hain, toh FSSAI registration/license mandatory hai. Iska basic cost ₹5,000-10,000 aata hai.</p>
+        </div>
+        <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">6. Madhumakhi palan mein sabse bada risk kya hai?</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm">Pesticide drift (kheton mein chemical spray) sabse bada risk hai, jisse poori colony kuch ghanton mein khatam ho sakti hai. Isliye organic farming zones ke paas apiary setup karna behtar hai.</p>
+        </div>
+        <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">7. Kya main apne khet mein hi madhumakhi palan shuru kar sakta hoon?</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm">Bilkul. Agar aapke khet ya aas-paas ke area mein sarson, litchi, eucalyptus, ya sunflower jaise flora-rich crops hain, toh yeh ek ideal location hai.</p>
+        </div>
+        <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">8. Honey business mein profit kab se shuru hota hai?</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm">Pehla saal mostly learning aur colony establishment ka hota hai, isliye profit minimal hota hai. Year 2-3 tak, jab colonies strong ho jati hain aur aap split kar lete hain, tab consistent profit shuru hota hai.</p>
+        </div>
+      </div>
 
-      <p className="mb-6">
-        Agar aap seriously interested hain, toh pehle apne local successful beekeeper se milein. Unse baat karein, unke challenges samjhein. Phir training lein. Phir chhote scale par start karein. Beekeeping ek beautiful business hai - agar sahi se kiya jaye, toh life-long income de sakta hai.
-      </p>
+      {/* Sources & References */}
+      <h2 id="sources" className="text-2xl font-semibold mt-8 mb-3 text-gray-800 dark:text-gray-200">
+        Sources & References
+      </h2>
+      <ul className="list-disc pl-6 mb-6 space-y-2 text-sm text-gray-600 dark:text-gray-400">
+        <li><strong>KVIC (Khadi and Village Industries Commission):</strong> Official guidelines for beekeeping subsidies and training.</li>
+        <li><strong>National Beekeeping and Honey Mission (NBHM):</strong> Government of India portal for scheme details and application.</li>
+        <li><strong>ICAR (Indian Council of Agricultural Research):</strong> Research data on crop yield improvement via pollination.</li>
+        <li><strong>Krishi Vigyan Kendra (KVK):</strong> District-level practical training modules and apiculture support.</li>
+        <li><strong>FSSAI:</strong> Regulatory guidelines for packaged honey and food safety licensing.</li>
+      </ul>
 
       <p className="mb-6 italic text-gray-600">
-        Disclaimer: Yeh article general information ke liye hai. Actual costs, subsidies, aur procedures aapke location aur specific circumstances ke hisaab se vary kar sakte hain. Koi bhi financial decision lene se pehle qualified professionals (apiculture officers, KVIC officials) se consult karein. Prices aur guidelines change hote rehte hain, isliye latest information ke liye official sources se verify karein.
+        Disclaimer: Yeh article general educational purpose ke liye hai. Actual costs, subsidies, aur procedures aapke location, state policies, aur specific circumstances ke hisaab se vary kar sakte hain. Koi bhi financial investment karne se pehle qualified professionals (apiculture officers, KVIC officials, ya bank managers) se consult karein. Prices aur guidelines periodically update hote hain, isliye latest information ke liye hamesha official sources se verify karein.
       </p>
+      <p className="text-sm text-gray-500 mt-2">— KisanStatus Team</p>
     </article>
   );
 }
