@@ -95,7 +95,7 @@ export default function DripSprinkler() {
       </p>
 
       <p className="mb-6">
-        Apne area ke KVK officers se consult karein. Wo specific crop aur soil type ke liye best option bata sakte hain. Zameen ki quality samajhne ke liye <Link href="/SoilHealthCardCompleteGuide2026" className="text-blue-600 hover:underline">Soil Health Card</Link> bhi check kar sakte hain.
+        Apne area ke KVK officers se consult karein. Wo specific crop aur soil type ke liye best option bata sakte hain. Zameen ki quality samajhne ke liye <Link href="/articles/SoilHealthCardCompleteGuide2026" className="text-blue-600 hover:underline">Soil Health Card</Link> bhi check kar sakte hain.
       </p>
 
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
@@ -133,7 +133,7 @@ export default function DripSprinkler() {
       </div>
 
       <p className="mb-4">
-        Example dekhte hain. Small farmer hain, 2 acre zameen. Drip irrigation lagwate hain jiska cost ₹40,000/acre hai. Investment ke liye aap <Link href="/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline">Kisan Credit Card</Link> ya <span className="font-semibold text-gray-800 dark:text-gray-200">bank loan</span> le sakte hain.
+        Example dekhte hain. Small farmer hain, 2 acre zameen. Drip irrigation lagwate hain jiska cost ₹40,000/acre hai. Investment ke liye aap <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline">Kisan Credit Card</Link> ya <span className="font-semibold text-gray-800 dark:text-gray-200">bank loan</span> le sakte hain.
       </p>
 
       <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -312,7 +312,7 @@ export default function DripSprinkler() {
           <li>
             <strong className="text-blue-900">2. Solar Pump Integration:</strong>
             <p className="mt-1 text-gray-700">
-              Agar borewell par solar pump lagate hain <Link href="/PmKusumYojanaSolarSubsidy2026" className="text-blue-600 hover:underline">PM-KUSUM scheme</Link> ke tehat 60-90% subsidy milti hai. Bijli ka bill zero ho jata hai. Drip + Solar = maximum savings.
+              Agar borewell par solar pump lagate hain <Link href="/articles/PmKusumYojanaSolarSubsidy2026" className="text-blue-600 hover:underline">PM-KUSUM scheme</Link> ke tehat 60-90% subsidy milti hai. Bijli ka bill zero ho jata hai. Drip + Solar = maximum savings.
             </p>
           </li>
 
@@ -484,7 +484,7 @@ export default function DripSprinkler() {
 
         <div className="grid sm:grid-cols-2 gap-4">
           <Link 
-            href="/CHCPortal" 
+            href="/articles/CHCPortal" 
             className="flex items-center gap-3 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-4 rounded-xl border-2 border-green-200 dark:border-green-800 hover:shadow-lg transition-all group"
           >
             <span className="text-3xl group-hover:scale-110 transition-transform">🚜</span>
@@ -495,7 +495,7 @@ export default function DripSprinkler() {
           </Link>
 
           <Link 
-            href="/PMatsyaSampada" 
+            href="/articles/PMatsyaSampada" 
             className="flex items-center gap-3 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 p-4 rounded-xl border-2 border-blue-200 dark:border-blue-800 hover:shadow-lg transition-all group"
           >
             <span className="text-3xl group-hover:scale-110 transition-transform">🐟</span>
