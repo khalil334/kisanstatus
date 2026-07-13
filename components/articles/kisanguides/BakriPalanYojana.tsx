@@ -125,7 +125,7 @@ export default function BakriPalanYojanaNLMS() {
       </h2>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Documents ka jhanjhat hai, but zaroori hai - properly arrange karke rakho sab kuch. DPR banane se pehle apni zameen ki quality samajhne ke liye <Link href="/SoilHealthCardCompleteGuide2026" className="text-blue-600 hover:underline dark:text-blue-400">Soil Health Card</Link> zaroor check kar lein.
+        Documents ka jhanjhat hai, but zaroori hai - properly arrange karke rakho sab kuch. DPR banane se pehle apni zameen ki quality samajhne ke liye <Link href="/articles/soil-health-card-complete-guide-2026" className="text-blue-600 hover:underline dark:text-blue-400">Soil Health Card</Link> zaroor check kar lein.
       </p>
 
       <Image 
@@ -275,7 +275,7 @@ export default function BakriPalanYojanaNLMS() {
       </h2>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Bahut se log galat assumptions le lete hain, ye samajhna zaroori hai ki subsidy mein kya cover hota hai aur kya nahi. Goat farming ke saath aap <Link href="/SilageMaking" className="text-blue-600 hover:underline dark:text-blue-400">silage banana</Link> seekh sakte hain jisse feed cost 30-40% tak kam ho jati hai.
+        Bahut se log galat assumptions le lete hain, ye samajhna zaroori hai ki subsidy mein kya cover hota hai aur kya nahi. Goat farming ke saath aap <span className="font-semibold text-gray-800 dark:text-gray-200">silage banana</span> seekh sakte hain jisse feed cost 30-40% tak kam ho jati hai.
       </p>
 
       <div className="grid md:grid-cols-2 gap-6 my-8">
@@ -371,7 +371,7 @@ export default function BakriPalanYojanaNLMS() {
             Q3. क्या loan भी ले सकते हैं subsidy के साथ?
           </h4>
           <p className="text-gray-700 dark:text-gray-300 text-sm">
-            हां, subsidy 50% है, बाकी 50% के लिए bank से term loan ले सकते हैं. <Link href="/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400">Kisan Credit Card</Link> ya <Link href="/KisanRinKahaSeLe2026" className="text-blue-600 hover:underline dark:text-blue-400">Kisan loan guide</Link> se best options check karein.
+            हां, subsidy 50% है, बाकी 50% के लिए bank से term loan ले सकते हैं. <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400">Kisan Credit Card</Link> ya <span className="font-semibold text-gray-800 dark:text-gray-200">Kisan loan guide</span> se best options check karein.
           </p>
         </div>
 
@@ -445,11 +445,11 @@ export default function BakriPalanYojanaNLMS() {
       </h2>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Goat farming viable business option hai, NLM subsidy ise aur feasible bana deti hai, patience rakhna padega kyonki process mein time lagta hai. Agar aap goat meat processing ya value addition karna chahte hain toh <Link href="/PMFMEYojana" className="text-blue-600 hover:underline dark:text-blue-400">PMFME Yojana</Link> se 35% tak subsidy mil sakti hai.
+        Goat farming viable business option hai, NLM subsidy ise aur feasible bana deti hai, patience rakhna padega kyonki process mein time lagta hai. Agar aap goat meat processing ya value addition karna chahte hain toh <Link href="/articles/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400">PMFME Yojana</Link> se 35% tak subsidy mil sakti hai.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Sahi planning karo. Documentation prepare karo. Guidelines follow karo. Goat waste se aap <Link href="/VermiCompost" className="text-blue-600 hover:underline dark:text-blue-400">vermi compost</Link> bhi bana sakte hain jo additional income source ban sakta hai.
+        Sahi planning karo. Documentation prepare karo. Guidelines follow karo. Goat waste se aap <span className="font-semibold text-gray-800 dark:text-gray-200">vermi compost</span> bhi bana sakte hain jo additional income source ban sakta hai.
       </p>
 
       {/* Related Articles Section - Stylish UI/UX */}
@@ -476,28 +476,22 @@ export default function BakriPalanYojanaNLMS() {
             </div>
             <ul className="space-y-3">
               <li>
-                <Link 
-                  href="/MadhumakhiPalan" 
-                  className="flex items-start gap-2 text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors group"
-                >
-                  <span className="text-green-600 group-hover:translate-x-1 transition-transform">→</span>
+                <div className="flex items-start gap-2 text-gray-700 dark:text-gray-300 group cursor-default">
+                  <span className="text-green-600">→</span>
                   <div>
                     <div className="font-semibold">Madhumakhi Palan</div>
-                    <div className="text-xs text-gray-500 dark:text-gray-400">Beekeeping with NLM subsidy</div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400">Beekeeping with KVIC subsidy</div>
                   </div>
-                </Link>
+                </div>
               </li>
               <li>
-                <Link 
-                  href="/MushroomKheti" 
-                  className="flex items-start gap-2 text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors group"
-                >
-                  <span className="text-green-600 group-hover:translate-x-1 transition-transform">→</span>
+                <div className="flex items-start gap-2 text-gray-700 dark:text-gray-300 group cursor-default">
+                  <span className="text-green-600">→</span>
                   <div>
                     <div className="font-semibold">Mushroom Kheti</div>
                     <div className="text-xs text-gray-500 dark:text-gray-400">Complete mushroom farming guide</div>
                   </div>
-                </Link>
+                </div>
               </li>
             </ul>
           </div>
@@ -515,7 +509,7 @@ export default function BakriPalanYojanaNLMS() {
             <ul className="space-y-3">
               <li>
                 <Link 
-                  href="/PMatsyaSampada" 
+                  href="/articles/pm-matsya-sampada-yojana-fish-farming" 
                   className="flex items-start gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors group"
                 >
                   <span className="text-blue-600 group-hover:translate-x-1 transition-transform">→</span>
@@ -526,16 +520,13 @@ export default function BakriPalanYojanaNLMS() {
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="/CHCPortal" 
-                  className="flex items-start gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors group"
-                >
-                  <span className="text-blue-600 group-hover:translate-x-1 transition-transform">→</span>
+                <div className="flex items-start gap-2 text-gray-700 dark:text-gray-300 group cursor-default">
+                  <span className="text-blue-600">→</span>
                   <div>
                     <div className="font-semibold">Custom Hiring Centre (CHC)</div>
                     <div className="text-xs text-gray-500 dark:text-gray-400">Machinery rental business</div>
                   </div>
-                </Link>
+                </div>
               </li>
             </ul>
           </div>
@@ -548,15 +539,12 @@ export default function BakriPalanYojanaNLMS() {
             More Farming Resources
           </h4>
           <div className="grid sm:grid-cols-2 gap-3">
-            <Link 
-              href="/DripSprinkler" 
-              className="flex items-center gap-2 bg-white dark:bg-gray-800 p-3 rounded-lg hover:shadow-md transition-shadow text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400"
-            >
+            <div className="flex items-center gap-2 bg-white dark:bg-gray-800 p-3 rounded-lg text-gray-700 dark:text-gray-300 cursor-default">
               <span className="text-purple-600">💧</span>
               <span className="font-medium">Drip & Sprinkler Irrigation</span>
-            </Link>
+            </div>
             <Link 
-              href="/PmKusumYojanaSolarSubsidy2026" 
+              href="/articles/PmKusumYojanaSolarSubsidy2026" 
               className="flex items-center gap-2 bg-white dark:bg-gray-800 p-3 rounded-lg hover:shadow-md transition-shadow text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400"
             >
               <span className="text-purple-600">☀️</span>
