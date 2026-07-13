@@ -1,16 +1,147 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
+import type { Metadata } from 'next';
+
+// ── SEO Metadata ──────────────────────────────────────────────
+export const metadata: Metadata = {
+  title: 'Mushroom Kheti 2026: Kamre Mein Shuru Karein, Subsidy aur Profit Guide',
+  description: 'Mushroom farming ka complete guide. Janein oyster mushroom kaise ugayein, NHB subsidy, 100-bag unit cost, aur real profit calculation.',
+  keywords: [
+    'mushroom kheti',
+    'oyster mushroom farming',
+    'mushroom subsidy',
+    'button mushroom kheti',
+    'mushroom business',
+    'khumbi ki kheti'
+  ],
+  authors: [{ name: 'KisanStatus Team' }],
+  openGraph: {
+    title: 'Mushroom Kheti 2026: Kamre Mein Shuru Karein, Subsidy aur Profit Guide',
+    description: 'Mushroom farming ka complete guide. Janein oyster mushroom kaise ugayein, NHB subsidy, 100-bag unit cost, aur real profit calculation.',
+    type: 'article',
+    locale: 'hi_IN',
+    siteName: 'KisanStatus.com',
+    images: [
+      {
+        url: '/images/kisanguides/mushroom-kheti/hero.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Oyster Mushroom Farming Setup in Dark Room',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Mushroom Kheti 2026: Complete Guide',
+    description: 'Janein mushroom farming kaise karein, NHB subsidy, aur 100-bag unit ka realistic profit.',
+    images: ['/images/kisanguides/mushroom-kheti/hero.webp'],
+  },
+};
+
+// ── Schema Markup (JSON-LD) ───────────────────────────────────
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': 'https://kisanstatus.com/#organization',
+      name: 'KisanStatus.com',
+      url: 'https://kisanstatus.com',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://kisanstatus.com/logo.webp',
+      },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': 'https://kisanstatus.com/articles/mushroom-kheti/#breadcrumb',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kisanstatus.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Articles', item: 'https://kisanstatus.com/articles' },
+        { '@type': 'ListItem', position: 3, name: 'Mushroom Kheti' },
+      ],
+    },
+    {
+      '@type': 'Article',
+      '@id': 'https://kisanstatus.com/articles/mushroom-kheti/#article',
+      headline: 'Mushroom Kheti 2026: Kamre Mein Shuru Karein, Subsidy aur Profit Guide',
+      description: 'Mushroom farming ka complete guide. Janein oyster mushroom kaise ugayein, NHB subsidy, 100-bag unit cost, aur real profit calculation.',
+      author: {
+        '@type': 'Organization',
+        name: 'KisanStatus Team',
+        url: 'https://kisanstatus.com/about',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'KisanStatus.com',
+        logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.webp' },
+      },
+      datePublished: '2026-01-15',
+      dateModified: '2026-07-14',
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': 'https://kisanstatus.com/articles/mushroom-kheti/',
+      },
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': 'https://kisanstatus.com/articles/mushroom-kheti/#faq',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Kya mushroom farming se kamre mein smell ya badboo aati hai?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Proper sterilization aur ventilation hone par smell minimal hoti hai. Par agar contamination ho jaye (green mold ya bacteria), toh foul smell aa sakti hai. Spent straw ko time par hata dena chahiye - agar 3-4 din se zyada pada rahe toh decomposition se smell aa sakti hai. Achhi ventilation aur regular cleaning se yeh problem avoid ki ja sakti hai.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Kya bina AC ke button mushroom ki kheti ho sakti hai?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Technically possible hai par commercially viable nahi. Button mushroom ko 14-18°C constant temperature chahiye. North India ke plains mein garmiyon mein 40-45°C tak temperature hota hai. Cooler ya evaporative cooling se 3-5 degree tak hi kami la sakte hain, jo kaafi nahi hai. Himachal, Uttarakhand jaise pahadi ilaqon mein bina AC ke ho sakta hai, par plains mein AC mandatory hai - jiska electricity bill ₹15,000-25,000 mahina aa sakta hai.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Pehli flush fail ho jaye ya contamination ho jaye toh kya karein?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Sabse pehle affected bags ko turant isolate karein aur kamre se bahar nikal dein. Baaki bags ko check karein - agar mycelium white aur healthy hai toh doosri flush aa sakti hai. Sterilization dobara karein (formalin spray), ventilation badhayein, aur humidity adjust karein. Pehli flush fail hone par discourage na hon - yeh learning curve ka part hai. Agli batch mein sterilization aur spawning process ko aur careful karein.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Kya mushroom farming mein insurance ya crop protection scheme hai?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Abhi mushroom farming ke liye dedicated crop insurance scheme limited hai. Kuch states mein horticulture crops ke under coverage mil sakta hai, par contamination ya temperature fluctuation jaise risks generally cover nahi hote. PM Fasal Bima Yojana (PMFBY) mostly field crops ke liye hai. Isliye risk management ke liye proper training, quality spawn, aur gradual scaling hi sabse achha protection hai. Kuch private insurers horticulture ventures ke liye policies offer karte hain - nazdeeki insurance company se inquire karein.',
+          },
+        },
+      ],
+    },
+  ],
+};
 
 export default function MushroomKheti() {
   return (
     <article className="max-w-3xl mx-auto px-4 py-8 text-gray-800 leading-relaxed">
+      {/* Schema Injection */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
+      {/* Image 1: Hero Image */}
       <Image 
-        src="/images/mushroom-farming/mushroom-kheti/hero.jpg" 
+        src="/images/kisanguides/mushroom-kheti/hero.webp" 
         alt="Oyster Mushroom Farming Setup in Dark Room - NHB Subsidy Guide" 
-        width={800} 
-        height={450} 
-        className="rounded-xl mb-6 shadow-md" 
+        width={1200} 
+        height={630} 
+        priority
+        className="rounded-xl mb-6 shadow-md w-full h-auto object-cover" 
       />
       
       <h1 className="text-3xl font-bold text-gray-900 mb-4">
@@ -18,19 +149,24 @@ export default function MushroomKheti() {
       </h1>
       
       <p className="text-lg mb-4 italic">
-        Himachal ke Solan district ko "Mushroom City of India" kehte hain. Wahan 1980 se hi mushroom farming hoti aa rahi hai. Par ab yeh kaam sirf pahadi ilaqon tak seemit nahi raha.
+        Himachal Pradesh ke Solan district ko "Mushroom City of India" kaha jata hai, jahan dashakon se commercial mushroom farming hoti aa rahi hai. Par ab yeh kaam sirf pahadi ilaqon tak seemit nahi raha.
       </p>
       
       <p className="mb-6">
-        Pichle saal maine Gorakhpur ke ek gaon mein ek aadmi se mulaqat ki. Uske ghar ke 2 kamre hain. Dono mein Oyster mushroom ugaata hai. Mahine ka ₹40,000-50,000 net profit nikalta hai. Khet nahi hai, sirf 2 kamre aur thodi mehnat.
-      </p>
-      
-      <p className="mb-6">
-        "Bhai, 6 mahine mein sab seekh liya. Pehle flush mein 30% kharab ho gaya. Par ab cycle samajh aa gayi hai," usne bataya. Yeh hai mushroom farming ki asliyat - kam jagah, kam investment, par technical samajh zaroori hai.
+        Aksar dekha jata hai ki naye farmers jo chhote kamron (jaise 10x10 feet) mein Oyster mushroom ugate hain, unhe shuru ke 1-2 cycles mein contamination ya temperature issues ki wajah se 20-30% crop loss ka saamna karna padta hai. Lekin jab sterilization aur humidity control ka practical cycle samajh aa jata hai, tabhi is business mein consistent profit nikalna shuru hota hai. Yeh hai mushroom farming ki asliyat - kam jagah, kam investment, par technical samajh behad zaroori hai.
       </p>
 
+      {/* Image 2: Mushroom Varieties */}
+      <Image 
+        src="/images/kisanguides/mushroom-kheti/varieties-comparison.webp" 
+        alt="Different Mushroom Varieties - Oyster, Button, Milky Comparison" 
+        width={800} 
+        height={450} 
+        className="rounded-xl mb-6 shadow-md w-full h-auto object-cover" 
+      />
+
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
-        Mushroom Farming Kyun? Zameen Nahi, Sirf Kamra Chahiye
+        Mushroom Farming Kyun? Zameen Nahi, Sirf Controlled Jagah Chahiye
       </h2>
       
       <p className="mb-4">
@@ -38,11 +174,11 @@ export default function MushroomKheti() {
       </p>
       
       <p className="mb-4">
-        Chhat, storeroom, basement, ya koi bhi khaali jagah kaam aa sakti hai. Bas 10x10 feet ka kamra bhi kaafi hai shuruwat ke liye. Yeh is business ko urban aur semi-urban areas mein bhi viable banata hai.
+        Chhat, storeroom, basement, ya koi bhi khaali jagah kaam aa sakti hai. Bas 10x10 feet ka kamra bhi shuruwat ke liye kaafi hai. Yeh is business ko urban aur semi-urban areas mein bhi viable banata hai.
       </p>
 
       <p className="mb-6">
-        Market demand ki baat karein toh mushroom ka consumption India mein pichle 5 saal mein 15-18% CAGR se badha hai. Urban areas mein log ab health-conscious ho gaye hain, aur mushroom protein ka achha source mana jata hai. Hotels, restaurants, aur catering businesses regular buyers hain.
+        Market demand ki baat karein toh mushroom ka consumption India mein pichle kuch saalon mein tezi se badha hai. Urban areas mein log ab health-conscious ho gaye hain, aur mushroom protein ka achha source mana jata hai. Hotels, restaurants, aur local catering businesses regular buyers ban sakte hain.
       </p>
 
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
@@ -50,11 +186,11 @@ export default function MushroomKheti() {
       </h2>
       
       <p className="mb-4">
-        Naye farmers sabse badi galti yahi karte hain - seedha Button mushroom par jump kar lete hain kyunki market mein zyada bikta hai. Par Button mushroom ko controlled environment (AC, humidity control) chahiye, jiska kharcha bahut zyada hai.
+        Naye farmers sabse badi galti yahi karte hain - seedha Button mushroom par jump kar lete hain kyunki market mein iski demand zyada hoti hai. Par Button mushroom ko strict controlled environment (AC, precise humidity control) chahiye, jiska setup aur maintenance kharcha bahut zyada hai.
       </p>
 
       <p className="mb-6">
-        Agar aap pehli baar shuru kar rahe hain, toh Oyster mushroom se start lein. Yeh kam temperature variation mein bhi ugg jata hai, iski bimariyan kam hoti hain, aur spawn (beej) sasta milta hai.
+        Agar aap pehli baar shuru kar rahe hain, toh Oyster mushroom se start lena behtar rehta hai. Yeh kam temperature variation mein bhi ugg jata hai, iski bimariyan relatively kam hoti hain, aur spawn (beej) aasani se aur saste mein mil jata hai.
       </p>
 
       <div className="overflow-x-auto mb-6">
@@ -102,19 +238,32 @@ export default function MushroomKheti() {
       </div>
 
       <p className="mb-6">
-        Director of Mushroom Research (DMR), Solan ke senior scientists ke mutabiq, India mein total mushroom production ka 75%+ Oyster aur Milky varieties se aata hai kyunki yeh Indian climate ke liye suitable hain. Button mushroom ka share sirf 15-20% hai, mostly Himachal, Haryana, aur Punjab tak seemit.
+        Krishi anusandhan sansthanon (jaise DMR, Solan) ke general data ke mutabiq, India mein total mushroom production ka bada hissa Oyster aur Milky varieties se aata hai kyunki yeh Indian climate ke liye relatively zyada suitable hain. Button mushroom ka share mostly Himachal, Haryana, aur Punjab ke controlled setups tak seemit hai.
       </p>
+
+      {/* Image 3: Setup Process */}
+      <Image 
+        src="/images/kisanguides/mushroom-kheti/setup-process.webp" 
+        alt="Mushroom Farming Setup Process - Bag Filling and Spawning" 
+        width={800} 
+        height={450} 
+        className="rounded-xl mb-6 shadow-md w-full h-auto object-cover" 
+      />
 
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
         Kitna Paisa Lagega? 100-Bag Unit ka Realistic Budget
       </h2>
       
       <p className="mb-4">
-        Yeh ek chhota setup hai jo beginners ke liye ideal hai. 100 bags se aap mahine ka 60-80 kg mushroom produce kar sakte hain (3-4 flushes mein).
+        Yeh ek chhota setup hai jo beginners ke liye ideal mana jata hai. 100 bags se aap mahine ka 60-80 kg mushroom produce kar sakte hain (3-4 flushes mein). 
+      </p>
+      
+      <p className="mb-4 text-sm text-gray-600 italic">
+        Note: Neeche diye gaye numbers estimated ranges hain. Yeh aapke local material rates, inflation, aur field conditions ke hisaab se badal sakte hain.
       </p>
 
       <div className="bg-gray-50 p-4 rounded-lg mb-6">
-        <h3 className="font-bold text-lg mb-3">100-Bag Oyster Mushroom Unit Setup (2026 Estimates)</h3>
+        <h3 className="font-bold text-lg mb-3">100-Bag Oyster Mushroom Unit Setup (Latest Estimates)</h3>
         <ul className="space-y-2">
           <li className="flex justify-between">
             <span>Room Preparation (shelving, insulation, ventilation):</span>
@@ -152,7 +301,7 @@ export default function MushroomKheti() {
       </div>
 
       <p className="mb-6">
-        Yeh ek chhota number hai. Par isse expand karne ke liye aapko working capital chahiye hoga. <Link href="/kisan-credit-card-kcc" className="text-blue-600 hover:underline">Kisan Credit Card (KCC)</Link> se aap short-term working capital arrange kar sakte hain, jisme interest rate 4% (timely repayment par) tak milta hai.
+        Yeh ek chhota initial investment hai. Par isse expand karne ke liye aapko working capital chahiye hoga. <Link href="/kisan-credit-card-kcc" className="text-blue-600 hover:underline">Kisan Credit Card (KCC)</Link> se aap short-term working capital arrange kar sakte hain, jisme timely repayment par interest rate kam milta hai.
       </p>
 
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
@@ -168,7 +317,7 @@ export default function MushroomKheti() {
           <li>
             <strong className="text-blue-900">1. NHB (National Horticulture Board) Credit-Linked Back-End Subsidy:</strong>
             <p className="mt-1 text-gray-700">
-              Yeh sabse popular scheme hai mushroom farmers ke liye. 1000 bags tak ke unit par aapko project cost ka 35% subsidy mil sakti hai (maximum ₹40 lakh tak). Yeh subsidy bank loan lene ke baad back-end par milti hai - matlab pehle loan lo, phir subsidy claim karo.
+              Yeh popular schemes mein se ek hai. Bade units par aapko project cost ka ek certain percentage subsidy mil sakti hai. Yeh subsidy bank loan lene ke baad back-end par milti hai - matlab pehle loan lo, phir subsidy claim karo.
             </p>
             <p className="mt-1 text-sm text-gray-600 italic">
               Disclaimer: NHB ki guidelines update hoti rehti hain. Latest subsidy % aur eligibility ke liye nazdeeki Horticulture Department office se confirm karein.
@@ -176,42 +325,26 @@ export default function MushroomKheti() {
           </li>
 
           <li>
-            <strong className="text-blue-900">2. PM FME Yojana (PM Formalisation of Micro Food Processing Enterprises):</strong>
+            <strong className="text-blue-900">2. PM FME Yojana:</strong>
             <p className="mt-1 text-gray-700">
               Agar aap mushroom ko process karke bechna chahte hain (dry mushroom, pickle, powder), toh <Link href="/pm-fme-yojana" className="text-blue-600 hover:underline">PM FME Yojana</Link> ke under 35% subsidy mil sakti hai (maximum ₹10 lakh). Yeh individual farmers aur SHGs ke liye hai.
             </p>
-            <p className="mt-1 text-sm text-gray-600 italic">
-              Disclaimer: PM FME ki eligibility criteria specific hai. Detailed information ke liye official portal ya nazdeeki Industries Department se contact karein.
-            </p>
           </li>
-
+          
           <li>
-            <strong className="text-blue-900">3. PMEGP (Prime Minister's Employment Generation Programme):</strong>
+            <strong className="text-blue-900">3. PMEGP:</strong>
             <p className="mt-1 text-gray-700">
-              Chhote units ke liye yeh scheme best hai. 25-35% subsidy (rural areas mein zyada) mil sakti hai. Maximum project cost ₹25 lakh hai. KVIC ke through apply hota hai. <Link href="/pmegp-yojana" className="text-blue-600 hover:underline">PMEGP ki detailed guide</Link> yahan padhein.
-            </p>
-            <p className="mt-1 text-sm text-gray-600 italic">
-              Disclaimer: PMEGP ki guidelines periodically update hoti hain. Latest details ke liye KVIC office se confirm karein.
+              Chhote units ke liye yeh scheme useful hai. 25-35% subsidy (rural areas mein zyada) mil sakti hai. Maximum project cost ₹25 lakh hai aur yeh KVIC ke through apply hota hai. <Link href="/pmegp-yojana" className="text-blue-600 hover:underline">PMEGP ki detailed guide</Link> yahan padhein.
             </p>
           </li>
 
           <li>
             <strong className="text-blue-900">4. State-Level Horticulture Schemes:</strong>
             <p className="mt-1 text-gray-700">
-              Har state ki apni schemes hoti hain. Jaise UP mein 'Mukhyamantri Bagwani Yojana', Haryana mein 'Horticulture Mission', Maharashtra mein 'National Horticulture Mission' ke state components. Inme 40-50% subsidy milti hai chhote farmers ko.
+              Har state ki apni schemes hoti hain (jaise UP, Haryana, Maharashtra mein alag-alag names se). Inme chhote farmers ko 40-50% tak ka financial assistance mil sakta hai.
             </p>
             <p className="mt-1 text-sm text-gray-600 italic">
               Disclaimer: State schemes ke details vary karti hain. Apne zila ke Horticulture Officer se latest information lein.
-            </p>
-          </li>
-
-          <li>
-            <strong className="text-blue-900">5. ATMA (Agriculture Technology Management Agency):</strong>
-            <p className="mt-1 text-gray-700">
-              Har zila mein ATMA office hota hai jo farmers ko training aur subsidy dono deta hai. Mushroom farming par 50-75% subsidy mil sakti hai (state ke hisaab se). Training bhi free hoti hai.
-            </p>
-            <p className="mt-1 text-sm text-gray-600 italic">
-              Disclaimer: ATMA budget har saal allocate hota hai, isliye availability confirm karein.
             </p>
           </li>
         </ul>
@@ -226,12 +359,21 @@ export default function MushroomKheti() {
         label="NHB Official Portal - Subsidy Guidelines Check Karein" 
       />
 
+      {/* Image 4: Harvesting */}
+      <Image 
+        src="/images/kisanguides/mushroom-kheti/harvesting-mushroom.webp" 
+        alt="Fresh Oyster Mushroom Harvesting from Growing Bags" 
+        width={800} 
+        height={450} 
+        className="rounded-xl mb-6 shadow-md w-full h-auto object-cover" 
+      />
+
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
         Step-by-Step Process: Oyster Mushroom Kaise Ugayein?
       </h2>
       
       <p className="mb-4">
-        Oyster mushroom ki farming 4 main steps mein hoti hai. Har step critical hai - ek galti poori crop kharab kar sakti hai.
+        Oyster mushroom ki farming 4 main steps mein hoti hai. Har step critical hai - ek chhoti si galti poori crop kharab kar sakti hai.
       </p>
 
       <div className="space-y-4 mb-6">
@@ -269,11 +411,15 @@ export default function MushroomKheti() {
       </p>
 
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
-        1 Saal Ka Profit Calculation: Real Numbers
+        1 Saal Ka Profit Calculation: Realistic Expectations
       </h2>
       
       <p className="mb-4">
-        Yeh calculation 100-bag unit ke liye hai, jo saal mein 8-10 cycles complete karta hai (har cycle 45-50 din).
+        Yeh calculation 100-bag unit ke liye hai, jo saal mein 8-10 cycles complete karta hai (har cycle 45-50 din). 
+      </p>
+      
+      <p className="mb-4 text-sm text-gray-600 italic">
+        Note: Yeh figures average estimates hain. Actual production, market rates, aur expenses aapke management aur local conditions par depend karte hain.
       </p>
 
       <div className="overflow-x-auto mb-6">
@@ -346,12 +492,21 @@ export default function MushroomKheti() {
       </div>
 
       <p className="mb-4">
-        Rukiye, ghabraiye mat. Yeh numbers dekh kar lag raha hoga ki loss ho raha hai. Par yahan ek important baat hai - <strong>pehla saal learning year hota hai</strong>. Mortality rate 20-30% hota hai, aur aap abhi scale nahi kar rahe.
+        Rukiye, ghabraiye mat. Yeh numbers dekh kar lag raha hoga ki loss ho raha hai. Par yahan ek important baat hai - <strong>pehla saal learning year hota hai</strong>. Mortality rate 20-30% ho sakta hai, aur aap abhi scale nahi kar rahe hote.
       </p>
 
       <p className="mb-6">
         Jab aap 300-500 bags tak expand karte hain (Year 2-3), tab economies of scale kaam aati hain. 500 bags unit par annual net profit ₹2-3 lakh ho sakta hai. Aur agar aap value addition karte hain (dry mushroom, powder, pickle), toh margins 3-4x badh jate hain.
       </p>
+
+      {/* Image 5: Final Products */}
+      <Image 
+        src="/images/kisanguides/mushroom-kheti/final-products.webp" 
+        alt="Fresh and Dried Mushroom Products Ready for Market" 
+        width={800} 
+        height={450} 
+        className="rounded-xl mb-6 shadow-md w-full h-auto object-cover" 
+      />
 
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-red-700">
         Real Risks - Jo Koi Nahi Batata
@@ -386,7 +541,7 @@ export default function MushroomKheti() {
         <div className="border-l-4 border-red-500 pl-4">
           <h3 className="font-bold text-lg">Quality Spawn ki Availability</h3>
           <p className="mt-2">
-            Achha spawn milna mushkil hota hai. Local market mein kharab quality ka spawn milta hai jisse germination rate kam hota hai. DMR Solan ya reputed labs se hi spawn khareedein. Saste spawn ke chakkar mein poori crop kharab ho sakti hai.
+            Achha spawn milna mushkil hota hai. Local market mein kharab quality ka spawn milta hai jisse germination rate kam hota hai. Reputed labs ya government institutes se hi spawn khareedein. Saste spawn ke chakkar mein poori crop kharab ho sakti hai.
           </p>
         </div>
       </div>
@@ -414,7 +569,7 @@ export default function MushroomKheti() {
       </ul>
 
       <p className="mb-4">
-        Best training centers:
+        Reliable training centers:
       </p>
 
       <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -472,7 +627,7 @@ export default function MushroomKheti() {
       </h2>
       
       <p className="mb-4">
-        Mushroom farming unke liye hai jo:
+        Mushroom farming unke liye viable hai jo:
       </p>
       
       <ul className="list-disc pl-6 mb-4 space-y-2">
@@ -495,21 +650,33 @@ export default function MushroomKheti() {
         <li>Technical knowledge seekhne ki ichha nahi hai</li>
       </ul>
 
+      {/* Combined non-repetitive closing paragraph */}
       <p className="mb-6">
-        Agar aap seriously interested hain, toh pehle 100 bags se start karein. Pehle 2-3 cycles mein seekhein, phir expand karein. Direct 500-1000 bags se start mat karein - risk bahut hai.
+        Agar aap seriously interested hain, toh pehle training lein (5-7 din ka course), phir local successful farmers se milein aur unke challenges samjhein. Uske baad chhote scale (100 bags) se start karein, pehle 2-3 cycles mein practical experience gain karein, aur phir gradually expand karein. Subsidy ka fayda zaroor uthayein, par apni planning subsidy ke bina karein - agar mil gayi toh bonus samjhein. Ek aur important point: <Link href="/organic-farming-guide" className="text-blue-600 hover:underline">organic farming</Link> ka angle bhi consider karein kyunki organic mushroom ka market rate 20-30% zyada milta hai.
       </p>
 
-      <p className="mb-6">
-        Subsidy ka fayda zaroor uthayein, par subsidy ke bhi bhi viable hai yeh business. Apni planning subsidy ke bina karein. Agar mil gayi, toh bonus samjho.
-      </p>
-
-      <p className="mb-6">
-        Ek aur important point: <Link href="/organic-farming-guide" className="text-blue-600 hover:underline">organic farming</Link> ka angle bhi consider karein. Organic mushroom ka market rate 20-30% zyada milta hai. Agar aap chemical-free cultivation kar sakte hain, toh premium market target karein.
-      </p>
-
-      <p className="mb-6">
-        Agar aap seriously interested hain, toh pehle apne local successful farmer se milein. Unse baat karein, unke challenges samjhein. Phir training lein. Phir chhote scale par start karein.
-      </p>
+      {/* FAQ Section */}
+      <h2 id="faq" className="text-2xl font-semibold mt-8 mb-3 text-green-800">
+        Frequently Asked Questions (FAQs)
+      </h2>
+      <div className="space-y-4 mb-8">
+        <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">1. Kya mushroom farming se kamre mein smell ya badboo aati hai?</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm">Proper sterilization aur ventilation hone par smell minimal hoti hai. Par agar contamination ho jaye (green mold ya bacteria), toh foul smell aa sakti hai. Spent straw ko time par hata dena chahiye - agar 3-4 din se zyada pada rahe toh decomposition se smell aa sakti hai. Achhi ventilation aur regular cleaning se yeh problem avoid ki ja sakti hai.</p>
+        </div>
+        <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">2. Kya bina AC ke button mushroom ki kheti ho sakti hai?</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm">Technically possible hai par commercially viable nahi. Button mushroom ko 14-18°C constant temperature chahiye. North India ke plains mein garmiyon mein 40-45°C tak temperature hota hai. Cooler ya evaporative cooling se 3-5 degree tak hi kami la sakte hain, jo kaafi nahi hai. Himachal, Uttarakhand jaise pahadi ilaqon mein bina AC ke ho sakta hai, par plains mein AC mandatory hai - jiska electricity bill ₹15,000-25,000 mahina aa sakta hai.</p>
+        </div>
+        <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">3. Pehli flush fail ho jaye ya contamination ho jaye toh kya karein?</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm">Sabse pehle affected bags ko turant isolate karein aur kamre se bahar nikal dein. Baaki bags ko check karein - agar mycelium white aur healthy hai toh doosri flush aa sakti hai. Sterilization dobara karein (formalin spray), ventilation badhayein, aur humidity adjust karein. Pehli flush fail hone par discourage na hon - yeh learning curve ka part hai. Agli batch mein sterilization aur spawning process ko aur careful karein.</p>
+        </div>
+        <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">4. Kya mushroom farming mein insurance ya crop protection scheme hai?</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm">Abhi mushroom farming ke liye dedicated crop insurance scheme limited hai. Kuch states mein horticulture crops ke under coverage mil sakta hai, par contamination ya temperature fluctuation jaise risks generally cover nahi hote. PM Fasal Bima Yojana (PMFBY) mostly field crops ke liye hai. Isliye risk management ke liye proper training, quality spawn, aur gradual scaling hi sabse achha protection hai. Kuch private insurers horticulture ventures ke liye policies offer karte hain - nazdeeki insurance company se inquire karein.</p>
+        </div>
+      </div>
 
       <p className="mb-6 italic text-gray-600">
         Disclaimer: Yeh article general information ke liye hai. Actual costs, subsidies, aur procedures aapke location aur specific circumstances ke hisaab se vary kar sakte hain. Koi bhi financial decision lene se pehle qualified professionals (horticulture officers, agriculture officers) se consult karein. Prices aur guidelines change hote rehte hain, isliye latest information ke liye official sources se verify karein.
