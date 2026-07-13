@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Mushroom Kheti 2026: Complete Guide',
     description: 'Janein mushroom farming kaise karein, NHB subsidy, aur 100-bag unit ka realistic profit.',
-    images: ['/images/kisanguides/mushroom-kheti/hero.webp'],
+    images: ['/images/kisanguides/mushroom-kheti/Mushroomhero.webp'],
   },
 };
 
