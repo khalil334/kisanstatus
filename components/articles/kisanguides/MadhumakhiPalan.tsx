@@ -5,10 +5,10 @@ import type { Metadata } from 'next';
 
 // ── SEO Metadata ──────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: 'Madhumakhi Palan 2026: Shahad Se Kamayein, Khet Ka Yield Badhayein | Complete Guide',
-  description: 'Madhumakhi palan 2026 ka complete guide. Janein bee farming business kaise karein, KVIC beekeeping subsidy, bee box price, aur honey business in India ki puri jankari.',
+  title: 'Madhumakhi Palan: Shahad Se Kamayein, Khet Ka Yield Badhayein | Complete Guide',
+  description: 'Madhumakhi palan ka complete guide. Janein bee farming business kaise karein, KVIC beekeeping subsidy, bee box price, aur honey business in India ki puri jankari.',
   keywords: [
-    'madhumakhi palan 2026',
+    'madhumakhi palan',
     'madhumakhi palan kaise kare',
     'bee farming business',
     'honey business in india',
@@ -18,8 +18,8 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'KisanStatus Team' }],
   openGraph: {
-    title: 'Madhumakhi Palan 2026: Shahad Se Kamayein, Khet Ka Yield Badhayein',
-    description: 'Complete guide to beekeeping in India. Learn about KVIC subsidies, bee box prices, and how to start a profitable honey business in 2026.',
+    title: 'Madhumakhi Palan: Shahad Se Kamayein, Khet Ka Yield Badhayein',
+    description: 'Complete guide to beekeeping in India. Learn about KVIC subsidies, bee box prices, and how to start a profitable honey business.',
     type: 'article',
     locale: 'hi_IN',
     siteName: 'KisanStatus.com',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Madhumakhi Palan 2026: Complete Guide',
+    title: 'Madhumakhi Palan: Complete Guide',
     description: 'Janein bee farming business kaise karein, KVIC beekeeping subsidy, aur honey business in India ki puri jankari.',
     images: ['/images/kisanguides/madhumakhi-palan-hero.webp'],
   },
@@ -56,18 +56,18 @@ const jsonLd = {
     },
     {
       '@type': 'BreadcrumbList',
-      '@id': 'https://kisanstatus.com/articles/madhumakhi-palan-2026/#breadcrumb',
+      '@id': 'https://kisanstatus.com/articles/madhumakhi-palan/#breadcrumb',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kisanstatus.com/' },
         { '@type': 'ListItem', position: 2, name: 'Articles', item: 'https://kisanstatus.com/articles' },
-        { '@type': 'ListItem', position: 3, name: 'Madhumakhi Palan 2026' },
+        { '@type': 'ListItem', position: 3, name: 'Madhumakhi Palan' },
       ],
     },
     {
       '@type': 'Article',
-      '@id': 'https://kisanstatus.com/articles/madhumakhi-palan-2026/#article',
-      headline: 'Madhumakhi Palan 2026: Shahad Se Kamayein, Khet Ka Yield Badhayein - Complete Guide',
-      description: 'Madhumakhi palan 2026 ka complete guide. Janein bee farming business kaise karein, KVIC beekeeping subsidy, bee box price, aur honey business in India ki puri jankari.',
+      '@id': 'https://kisanstatus.com/articles/madhumakhi-palan/#article',
+      headline: 'Madhumakhi Palan: Shahad Se Kamayein, Khet Ka Yield Badhayein - Complete Guide',
+      description: 'Madhumakhi palan ka complete guide. Janein bee farming business kaise karein, KVIC beekeeping subsidy, bee box price, aur honey business in India ki puri jankari.',
       author: {
         '@type': 'Organization',
         name: 'KisanStatus Team',
@@ -82,12 +82,12 @@ const jsonLd = {
       dateModified: '2024-01-15',
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://kisanstatus.com/articles/madhumakhi-palan-2026/',
+        '@id': 'https://kisanstatus.com/articles/madhumakhi-palan/',
       },
     },
     {
       '@type': 'FAQPage',
-      '@id': 'https://kisanstatus.com/articles/madhumakhi-palan-2026/#faq',
+      '@id': 'https://kisanstatus.com/articles/madhumakhi-palan/#faq',
       mainEntity: [
         {
           '@type': 'Question',
@@ -178,7 +178,7 @@ export default function MadhumakhiPalan() {
       />
       
       <h1 className="text-3xl font-bold text-gray-900 mb-4">
-        Madhumakhi Palan 2026: Shahad Se Kamayein, Khet Ka Yield Badhayein - Complete Guide
+        Madhumakhi Palan: Shahad Se Kamayein, Khet Ka Yield Badhayein - Complete Guide
       </h1>
       
       <p className="text-lg mb-6">
@@ -300,7 +300,7 @@ export default function MadhumakhiPalan() {
       </p>
 
       <div className="bg-gray-50 p-4 rounded-lg mb-6">
-        <h3 className="font-bold text-lg mb-3">50-Box Beekeeping Unit Setup (2026 Estimates)</h3>
+        <h3 className="font-bold text-lg mb-3">50-Box Beekeeping Unit Setup (Latest Estimates)</h3>
         <ul className="space-y-2">
           <li className="flex justify-between">
             <span>Bee Boxes (50 colonies with bees):</span>
