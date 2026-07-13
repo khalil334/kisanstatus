@@ -125,7 +125,7 @@ export default function BakriPalanYojanaNLMS() {
       </h2>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Documents ka jhanjhat hai, but zaroori hai - properly arrange karke rakho sab kuch. DPR banane se pehle apni zameen ki quality samajhne ke liye <Link href="/articles/soil-health-card-complete-guide-2026" className="text-blue-600 hover:underline dark:text-blue-400">Soil Health Card</Link> zaroor check kar lein.
+        Documents ka jhanjhat hai, but zaroori hai - properly arrange karke rakho sab kuch. DPR banane se pehle apni zameen ki quality samajhne ke liye <Link href="/SoilHealthCardCompleteGuide2026" className="text-blue-600 hover:underline dark:text-blue-400">Soil Health Card</Link> zaroor check kar lein.
       </p>
 
       <Image 
@@ -371,7 +371,7 @@ export default function BakriPalanYojanaNLMS() {
             Q3. क्या loan भी ले सकते हैं subsidy के साथ?
           </h4>
           <p className="text-gray-700 dark:text-gray-300 text-sm">
-            हां, subsidy 50% है, बाकी 50% के लिए bank से term loan ले सकते हैं. <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400">Kisan Credit Card</Link> ya <span className="font-semibold text-gray-800 dark:text-gray-200">Kisan loan guide</span> se best options check karein.
+            हां, subsidy 50% है, बाकी 50% के लिए bank से term loan ले सकते हैं. <Link href="/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400">Kisan Credit Card</Link> ya <span className="font-semibold text-gray-800 dark:text-gray-200">Kisan loan guide</span> se best options check karein.
           </p>
         </div>
 
@@ -445,7 +445,7 @@ export default function BakriPalanYojanaNLMS() {
       </h2>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Goat farming viable business option hai, NLM subsidy ise aur feasible bana deti hai, patience rakhna padega kyonki process mein time lagta hai. Agar aap goat meat processing ya value addition karna chahte hain toh <Link href="/articles/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400">PMFME Yojana</Link> se 35% tak subsidy mil sakti hai.
+        Goat farming viable business option hai, NLM subsidy ise aur feasible bana deti hai, patience rakhna padega kyonki process mein time lagta hai. Agar aap goat meat processing ya value addition karna chahte hain toh <Link href="/PMFMEYojana" className="text-blue-600 hover:underline dark:text-blue-400">PMFME Yojana</Link> se 35% tak subsidy mil sakti hai.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
@@ -509,7 +509,7 @@ export default function BakriPalanYojanaNLMS() {
             <ul className="space-y-3">
               <li>
                 <Link 
-                  href="/articles/pm-matsya-sampada-yojana-fish-farming" 
+                  href="/PMatsyaSampada" 
                   className="flex items-start gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors group"
                 >
                   <span className="text-blue-600 group-hover:translate-x-1 transition-transform">→</span>
@@ -544,7 +544,7 @@ export default function BakriPalanYojanaNLMS() {
               <span className="font-medium">Drip & Sprinkler Irrigation</span>
             </div>
             <Link 
-              href="/articles/PmKusumYojanaSolarSubsidy2026" 
+              href="/PmKusumYojanaSolarSubsidy2026" 
               className="flex items-center gap-2 bg-white dark:bg-gray-800 p-3 rounded-lg hover:shadow-md transition-shadow text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400"
             >
               <span className="text-purple-600">☀️</span>
