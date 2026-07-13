@@ -167,7 +167,7 @@ export default function MadhumakhiPalan() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Hero Image */}
+      {/* Image 1: Hero Image */}
       <Image 
         src="/images/kisanguides/madhumakhi-palan-hero.webp" 
         alt="Beekeeping Boxes in Mustard Field - Apis Mellifera Colony with KVIC Subsidy" 
@@ -337,6 +337,15 @@ export default function MadhumakhiPalan() {
         </ul>
       </div>
 
+      {/* Image 2: Equipment Tools */}
+      <Image 
+        src="/images/kisanguides/beekeeping-equipment-tools.webp" 
+        alt="Beekeeping Equipment and Tools arranged on wooden table" 
+        width={800} 
+        height={450} 
+        className="rounded-xl mb-6 shadow-md w-full h-auto" 
+      />
+
       <p className="mb-4">
         Yeh initial capital lagta hai. Working capital manage karne ke liye <Link href="/kisan-credit-card-online-apply-2026" className="text-blue-600 hover:underline">Kisan Credit Card (KCC)</Link> ek badhiya vikalp hai, kyunki beekeeping ko officially agriculture activity ke under cover kiya jata hai aur ispar byaj dar kam hoti hai.
       </p>
@@ -382,7 +391,7 @@ export default function MadhumakhiPalan() {
           <li>
             <strong className="text-blue-900">4. PMEGP:</strong>
             <p className="mt-1 text-gray-700">
-              Rural areas mein beekeeping projects par 25-35% subsidy milti hai. Maximum project cost ₹25 lakh hai aur yeh KVIC ke through hi process hota hai.
+              Rural areas mein beekeeping projects par 25-35% subsidy milti hai. Maximum project cost ₹25 lakh hai aur yeh KVIC ke through hi process hota hai. <Link href="/pmegp-yojana" className="text-blue-600 hover:underline">PMEGP ki detailed guide</Link> yahan padhein.
             </p>
           </li>
 
@@ -448,6 +457,15 @@ export default function MadhumakhiPalan() {
           </p>
         </div>
       </div>
+
+      {/* Image 3: Honey Harvesting */}
+      <Image 
+        src="/images/kisanguides/honey-harvesting-process.webp" 
+        alt="Beekeeper extracting golden honey from wooden frames using manual extractor" 
+        width={800} 
+        height={450} 
+        className="rounded-xl mb-6 shadow-md w-full h-auto" 
+      />
 
       <p className="mb-6">
         Migration ek advanced practice hai. Commercial beekeepers apni colonies ko truck par load karke different states le jate hain taaki saal bhar nectar flow bana rahe. Punjab ki sarson khatam hote hi Himachal ke apple belts ya UP ke litchi orchards mein shift hona common hai. Isse production badhti hai, lekin transport ke dauran hives ko proper ventilation na milne se bees suffocate ho sakti hain, isliye raat ke waqt hi travel karein aur mesh screens check karein.
@@ -608,6 +626,15 @@ export default function MadhumakhiPalan() {
         label="National Honey Mission Training Programs Check Karein" 
       />
 
+      {/* Image 4: Colony Inspection */}
+      <Image 
+        src="/images/kisanguides/bee-colony-inspection.webp" 
+        alt="Close-up view of beekeeper inspecting wooden bee frame with queen bee" 
+        width={800} 
+        height={450} 
+        className="rounded-xl mb-6 shadow-md w-full h-auto" 
+      />
+
       <ul className="list-disc pl-6 mb-6 space-y-2">
         <li>
           <strong>Central Apiculture Institute, Darbhanga (Bihar):</strong> Yeh ICAR ke under aata hai aur advanced beekeeping techniques, queen rearing, aur disease management ke liye premier institute hai.
@@ -658,6 +685,15 @@ export default function MadhumakhiPalan() {
           </li>
         </ul>
       </div>
+
+      {/* Image 5: Value Addition Products */}
+      <Image 
+        src="/images/kisanguides/honey-value-addition-products.webp" 
+        alt="Beautifully arranged glass jars of branded packaged honey and natural honeycomb" 
+        width={800} 
+        height={450} 
+        className="rounded-xl mb-6 shadow-md w-full h-auto" 
+      />
 
       <p className="mb-6">
         Propolis aur Royal Jelly mein margins bahut high hain, lekin inki extraction ke liye specialized equipment aur advanced training chahiye. Shuruwat branded honey aur bee wax se karna safe rehta hai. Packaged honey bechne ke liye FSSAI license mandatory hai, jiska basic registration cost ₹5,000-10,000 aata hai aur yeh online aasani se ho jata hai. Is processing setup ke liye <Link href="/pm-fme-yojana" className="text-blue-600 hover:underline">PM FME Yojana</Link> ka support liya ja sakta hai.
