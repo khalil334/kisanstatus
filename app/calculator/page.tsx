@@ -5,8 +5,8 @@ import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '@/lib/site-config';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: `Free PM Kisan Tools 2026 — Status Check, EMI, Insurance & Profit Calculator | ${SITE_NAME}`,
-  description: '7 free kisan utilities — status verification, KCC loan EMI, crop insurance premium, MSP income aur profit/loss analysis. No registration, no charge.',
+  title: `Free PM Kisan Tools 2026 — EMI, MSP & Status Check`,
+  description: '7 free kisan tools: PM Kisan status check, KCC loan EMI, MSP income, aur fasal bima premium calculator. Bina registration ke, bilkul free.',
   alternates: { canonical: `${SITE_URL}/calculator` },
   keywords: [
     'pm kisan calculator',
@@ -25,15 +25,15 @@ export const metadata: Metadata = {
     type: 'website',
     url: `${SITE_URL}/calculator`,
     siteName: SITE_NAME,
-    title: `Free PM Kisan Tools 2026 — Status, EMI, Insurance & Profit Calculator`,
-    description: '7 free kisan utilities — no login, no charge. Bank jaane se pehle hisaab karo.',
+    title: `Free PM Kisan Tools 2026 — EMI, MSP & Status Check`,
+    description: '7 free kisan utilities — koi login nahi, koi charge nahi. Bank jaane se pehle apna hisaab khud karo.',
     locale: 'hi_IN',
     images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: `Free PM Kisan Tools 2026 – ${SITE_NAME}` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Free PM Kisan Tools 2026 — Status, EMI, Insurance & Profit Calculator`,
-    description: '7 free kisan utilities — no login, no charge.',
+    title: `Free PM Kisan Tools 2026 — EMI, MSP & Status Check`,
+    description: '7 free kisan utilities — koi login nahi, koi charge nahi.',
     images: [DEFAULT_OG_IMAGE],
     site: '@kisanstatus',
   },
@@ -46,7 +46,7 @@ const CALCS = [
     emoji: '🔍',
     title: 'PM Kisan Status Check',
     hindi: 'पीएम किसान स्टेटस चेक',
-    desc: 'Aadhaar ya mobile number daalo aur seedha official portal par apna 24vi kist status verify karo. Instant & Free.',
+    desc: 'Aadhaar ya mobile number daalein aur seedha official portal par apna latest kist status verify karein. Bilkul free aur instant.',
     tags: ['Aadhaar Check', 'Mobile Check', 'Instant Redirect'],
     group: 'scheme',
     featured: true,
@@ -58,8 +58,8 @@ const CALCS = [
     emoji: '📆',
     title: 'Kist Status Tracker',
     hindi: 'किस्त स्टेटस ट्रैकर',
-    desc: '24vi kist aayi ya nahi? eKYC, bank seeding, land record check karke 4 sawaal mein exact reason pata karo.',
-    tags: ['24vi Kist', 'eKYC Check', 'Instant Result'],
+    desc: 'Kist aayi ya nahi? eKYC, bank aur land seeding check karke 4 aasaan sawaalon mein exact reason jaanein.',
+    tags: ['Latest Kist', 'eKYC Check', 'Instant Result'],
     group: 'scheme',
     featured: false,
   },
@@ -69,7 +69,7 @@ const CALCS = [
     emoji: '🌾',
     title: 'PM Kisan Calculator',
     hindi: 'पीएम किसान कैलकुलेटर',
-    desc: 'Saalana ₹6,000 — estimate karo kitni kist milengi, total benefit, aur arrears. eKYC check bhi.',
+    desc: 'Saalana ₹6,000 ka total benefit, kitni kist milengi aur arrears ka hisaab lagayein. Free estimator.',
     tags: ['₹6,000/yr', '3 Kist', 'Eligibility'],
     group: 'scheme',
   },
@@ -79,7 +79,7 @@ const CALCS = [
     emoji: '🏦',
     title: 'KCC Loan EMI Calculator',
     hindi: 'केसीसी लोन ईएमआई कैलकुलेटर',
-    desc: 'Kisan Credit Card loan ki monthly EMI, total interest, aur 2% government subsidy calculate karo.',
+    desc: 'Kisan Credit Card (KCC) loan ki monthly EMI, total interest aur 2% government subsidy ka exact hisaab lagayein.',
     tags: ['7% Rate', 'Govt Subsidy', 'Monthly EMI'],
     group: 'credit',
   },
@@ -89,7 +89,7 @@ const CALCS = [
     emoji: '🛡️',
     title: 'Fasal Bima Premium',
     hindi: 'फसल बीमा प्रीमियम',
-    desc: 'PMFBY — Kharif/Rabi fasal ka insurance premium aur maximum claim amount calculate karo.',
+    desc: 'PMFBY ke tahat Kharif aur Rabi fasal ka insurance premium aur maximum claim amount jaanein.',
     tags: ['Kharif + Rabi', 'All Crops', 'Claim Amount'],
     group: 'insurance',
   },
@@ -99,7 +99,7 @@ const CALCS = [
     emoji: '💹',
     title: 'MSP Income Calculator',
     hindi: 'एमएसपी आय कैलकुलेटर',
-    desc: '2025-26 MSP rates par gehun, dhan, cotton, sarson — kisi bhi fasal ki total income calculate karo.',
+    desc: '2025-26 MSP rates par gehun, dhaan, sarson ya kapas — kisi bhi fasal ki total income calculate karein.',
     tags: ['2025-26 Rates', '11 Crops', 'Per Hectare'],
     group: 'data',
   },
@@ -109,7 +109,7 @@ const CALCS = [
     emoji: '📊',
     title: 'Kheti Ka Munafa',
     hindi: 'खेती का मुनाफा',
-    desc: 'Seed, fertilizer, labor, irrigation — sab kharcha daalo aur net profit ya loss instantly pata karo.',
+    desc: 'Beej, khad, mazdoori aur sinchai ka kharcha daal kar fasal ka net profit ya loss turant jaanein.',
     tags: ['Full Season', 'All Costs', 'Net Profit'],
     group: 'data',
   },
@@ -141,9 +141,19 @@ export default function CalculatorIndexPage() {
     })),
   };
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Free Kisan Calculators', item: `${SITE_URL}/calculator` },
+    ],
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <div className="bg-[var(--color-primary)] py-10">
         <div className="container-site text-center max-w-3xl">
@@ -151,10 +161,10 @@ export default function CalculatorIndexPage() {
             🧮 Free Utilities
           </span>
           <h1 className="text-2xl md:text-4xl font-black text-white mb-3">
-            PM Kisan Tools Suite — Status Check, EMI, Insurance, MSP &amp; Profit Analysis
+            Free PM Kisan Tools 2026 — EMI, MSP & Status Check
           </h1>
           <h2 className="text-green-200 text-sm md:text-base font-normal max-w-2xl mx-auto mb-6">
-            कृषि उपकरण — 7 free utilities, koi registration nahi, koi charge nahi. Bank jaane se pehle hisaab karo.
+            7 free kisan utilities — koi registration nahi, koi charge nahi. Bank jaane se pehle apna hisaab khud karo.
           </h2>
           <div className="flex items-center justify-center gap-6 font-mono text-white/90 text-sm border-t border-white/15 pt-5 max-w-md mx-auto">
             <div className="flex flex-col items-center">
@@ -248,14 +258,14 @@ export default function CalculatorIndexPage() {
         </div>
 
         <div className="mt-10 bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6 shadow-sm">
-          <h2 className="font-black text-[var(--color-text)] text-lg mb-4">कृषि Utilities का सही उपयोग</h2>
+          <h2 className="font-black text-[var(--color-text)] text-lg mb-4">In Tools Ka Sahi Upyog</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-[var(--color-text-muted)]">
             <div>
               <p className="font-bold text-[var(--color-text)] mb-2 flex items-center gap-2">
                 <span className="font-mono text-emerald-600 dark:text-emerald-400 text-xs">01</span> 🔍 Status Verification:
               </p>
               <ul className="space-y-1 text-xs">
-                {['Aadhaar number daalo (12 digits)', 'Mobile number daalo (10 digits)', 'Check Now button dabao', 'Seedha official portal par redirect'].map((s) => (
+                {['Aadhaar number daalein (12 digits)', 'Mobile number daalein (10 digits)', 'Check Now button dabayein', 'Seedha official portal par redirect'].map((s) => (
                   <li key={s} className="flex gap-1.5"><span className="text-emerald-600 dark:text-emerald-400 font-mono">✓</span>{s}</li>
                 ))}
               </ul>
@@ -265,7 +275,7 @@ export default function CalculatorIndexPage() {
                 <span className="font-mono text-blue-600 dark:text-blue-400 text-xs">02</span> 🏦 KCC EMI Calculator:
               </p>
               <ul className="space-y-1 text-xs">
-                {['Loan amount enter karo', 'Interest rate (usually 7%) daalo', 'Repayment months chunio', 'Govt subsidy automatically calculate'].map((s) => (
+                {['Loan amount enter karein', 'Interest rate (usually 7%) daalein', 'Repayment months chunein', 'Govt subsidy automatically calculate'].map((s) => (
                   <li key={s} className="flex gap-1.5"><span className="text-blue-600 dark:text-blue-400 font-mono">✓</span>{s}</li>
                 ))}
               </ul>
