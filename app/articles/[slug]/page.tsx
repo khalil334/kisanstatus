@@ -92,7 +92,7 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
 function ArticleLoading() {
   return (
     <div className="container-site py-10" style={{ minHeight: '60vh' }}>
-      <div className="animate-pulse space-y-6 max-w-4xl mx-auto">
+      <div className="animate-pulse space-y-6 max-w-4xl mx-auto px-4">
         {/* Title placeholder */}
         <div className="space-y-3">
           <div className="h-10 bg-gray-200 dark:bg-gray-700 rounded w-3/4" />
@@ -192,20 +192,25 @@ export async function generateMetadata({
   }
   
   const article = ARTICLES_MAP[slug];
-
   if (!article) return { title: 'Article Not Found' };
 
   const url = `${SITE_URL}/articles/${slug}`;
-  const ogImage = article.ogImage
-    ? `${SITE_URL}${article.ogImage}`
-    : DEFAULT_OG_IMAGE;
+  const ogImage = article.ogImage ? `${SITE_URL}${article.ogImage}` : DEFAULT_OG_IMAGE;
   const displayTitle = article.ogTitle || article.title;
+  const category = CATEGORIES[article.category];
 
   return {
-    title: displayTitle,
+    title: displayTitle, // ✅ Layout.tsx ka template ('%s | KisanStatus') automatically apply hoga
     description: article.desc,
+    keywords: article.keywords, // ✅ DYNAMIC KEYWORDS ADDED
     authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
-    alternates: { canonical: url },
+    alternates: { 
+      canonical: url,
+      languages: {
+        'hi-IN': url,
+        'x-default': url,
+      }
+    },
     openGraph: {
       title: displayTitle,
       description: article.desc,
@@ -216,7 +221,7 @@ export async function generateMetadata({
       images: [{ url: ogImage, width: 1200, height: 630, alt: displayTitle }],
       publishedTime: article.publishedTime,
       modifiedTime: article.modifiedTime,
-      section: 'Agriculture & Welfare',
+      section: category ? category.name : 'Agriculture & Welfare', // ✅ DYNAMIC SECTION
     },
     twitter: {
       card: 'summary_large_image',
@@ -241,20 +246,16 @@ export default async function ArticlePage({
   }
   
   const article = ARTICLES_MAP[slug];
-
   if (!article) notFound();
 
   const ArticleComponent = COMPONENTS[article.component];
-
   if (!ArticleComponent) {
     console.error(`[ArticlePage] Missing component: ${article.component} for slug: ${slug}`);
     notFound();
   }
 
   const url = `${SITE_URL}/articles/${slug}`;
-  const ogImage = article.ogImage
-    ? `${SITE_URL}${article.ogImage}`
-    : DEFAULT_OG_IMAGE;
+  const ogImage = article.ogImage ? `${SITE_URL}${article.ogImage}` : DEFAULT_OG_IMAGE;
   const schemas = buildSchemas(article, url, ogImage);
   const rawCat = CATEGORIES[article.category];
   const catName: string = rawCat ? ((rawCat as Record<string, string>).nameHi ?? (rawCat as Record<string, string>).name) : '';
@@ -270,13 +271,13 @@ export default async function ArticlePage({
       ))}
 
       {rawCat && (
-        <div className="container-site pt-6">
+        <div className="container-site pt-6 px-4">
           <Link
             href={`/articles/category/${article.category}`}
             className="inline-flex items-center gap-2 bg-green-100 hover:bg-green-200 text-green-800 dark:bg-green-900/30 dark:text-green-300 dark:hover:bg-green-900/50 text-sm font-bold px-4 py-2 rounded-full transition-colors focus:ring-2 focus:ring-green-500 focus:outline-none"
             aria-label={`View all ${catName} articles`}
           >
-            <span aria-hidden="true"></span>
+            <span aria-hidden="true">📂</span> {/* ✅ UX FIX: Icon wapas add kiya */}
             <span>{catName}</span>
             <span className="text-green-600 dark:text-green-400" aria-hidden="true">→</span>
           </Link>
