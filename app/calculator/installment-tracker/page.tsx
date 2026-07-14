@@ -5,8 +5,8 @@ const DOMAIN = 'https://kisanstatus.com';
 const PAGE_URL = `${DOMAIN}/calculator/installment-tracker`;
 
 export const metadata: Metadata = {
-  title: 'PM Kisan Kist Tracker 2026 — Kist Kyun Ruki Hai Jaano',
-  description: 'PM Kisan ki kist kyun nahi aayi? 4 sawaal mein pata karo — eKYC, bank seeding, land seeding sab check karo. Free tool, koi registration nahi.',
+  title: 'PM Kisan Kist Tracker 2026 — Kist Kyun Ruki Hai?',
+  description: 'PM Kisan ki kist kyun nahi aayi? 4 steps mein jaanein — eKYC, bank seeding, land seeding check karein. Bilkul free tool, bina registration ke.',
   keywords: [
     'pm kisan kist tracker',
     'kist kyun nahi aayi',
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'PM Kisan Kist Tracker 2026 — Kist Kyun Ruki Hai Jaano',
-    description: '4 sawaal mein pata karo kist kyun ruki hai — eKYC, bank seeding, land seeding sab check karo. Free tool.',
+    title: 'PM Kisan Kist Tracker 2026 — Kist Kyun Ruki Hai?',
+    description: 'PM Kisan ki kist kyun nahi aayi? 4 steps mein jaanein — eKYC, bank seeding, land seeding check karein. Bilkul free tool.',
     type: 'website',
     url: PAGE_URL,
     siteName: 'KisanStatus.com',
@@ -32,21 +32,21 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'PM Kisan Kist Tracker 2026',
-    description: 'Kist kyun ruki hai? 4 sawaal mein pata karo. Free tool.',
+    description: 'PM Kisan ki kist kyun nahi aayi? 4 steps mein jaanein — eKYC, bank seeding, land seeding check karein. Free tool.',
     site: '@kisanstatus',
     images: [`${DOMAIN}/og-image.webp`],
   },
 };
 
 export default function Page() {
-  const schema = {
+  const appSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
     name: 'PM Kisan Kist Tracker 2026',
     url: PAGE_URL,
     applicationCategory: 'FinanceApplication',
     operatingSystem: 'Any',
-    description: 'PM Kisan ki kist kyun nahi aayi? 4 sawaal mein pata karo — eKYC, bank seeding, land seeding sab check karo. Free online tool.',
+    description: 'PM Kisan ki kist kyun nahi aayi? 4 steps mein jaanein — eKYC, bank seeding, land seeding check karein. Bilkul free online tool.',
     offers: {
       '@type': 'Offer',
       price: '0',
@@ -59,11 +59,25 @@ export default function Page() {
     },
   };
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: DOMAIN },
+      { '@type': 'ListItem', position: 2, name: 'Calculators', item: `${DOMAIN}/calculator` },
+      { '@type': 'ListItem', position: 3, name: 'PM Kisan Kist Tracker', item: PAGE_URL },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(appSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <InstallmentTrackerCalcPage />
     </>
