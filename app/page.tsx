@@ -1,33 +1,44 @@
 import type { Metadata } from 'next';
 import HomeContent from '@/components/HomeContent';
 import { Suspense } from 'react';
-import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL, DEFAULT_OG_IMAGE } from '@/lib/site-config';
+import { 
+  SITE_URL, 
+  SITE_NAME, 
+  SITE_TAGLINE, 
+  SITE_DESCRIPTION, 
+  AUTHOR_NAME, 
+  AUTHOR_URL, 
+  DEFAULT_OG_IMAGE,
+  GLOBAL_KEYWORDS 
+} from '@/lib/site-config';
 
 export const metadata: Metadata = {
-  title: 'PM Kisan Status Check 2026 — 24vi Kist Coming Soon | ₹2000 Direct Bank Mein',
-  description: 'PM Kisan 24vi kist October 2026 mein aane wali hai — ₹2000 seedha bank account mein. Status verify karo, eKYC complete karo, beneficiary roster dekho. Free guidance Hinglish mein.',
+  // ✅ Homepage ke liye specific, strong title
+  title: `${SITE_NAME}: PM Kisan Status, Farming Guides & Subsidy Info 2026`,
+  description: SITE_DESCRIPTION,
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   alternates: {
-    canonical: `${SITE_URL}/`,
+    canonical: SITE_URL,
     languages: {
-      'hi-IN': `${SITE_URL}/`,
+      'hi-IN': SITE_URL,
+      'x-default': SITE_URL,
     },
   },
+  // ✅ Broadened Keywords for Homepage
   keywords: [
+    ...GLOBAL_KEYWORDS,
     'pm kisan status check 2026',
     'pm kisan 24vi kist',
     'kisan samman nidhi verification',
-    'pm kisan ekyc online',
-    'beneficiary list check',
-    'pm kisan payment status',
-    'kisan yojana 2026',
-    'pm kisan registration',
+    'farming business ideas hindi',
+    'agriculture subsidy india',
+    'kisan loan kaise le',
   ],
   openGraph: {
-    title: 'PM Kisan Status Check 2026 — 24vi Kist Coming Soon',
-    description: '2000 seedha bank account mein — 9.44 Crore+ kisanon ko mil chuki. Apna status abhi verify karo!',
+    title: `${SITE_NAME}: ${SITE_TAGLINE}`,
+    description: SITE_DESCRIPTION,
     type: 'website',
-    url: `${SITE_URL}/`,
+    url: SITE_URL,
     siteName: SITE_NAME,
     locale: 'hi_IN',
     images: [
@@ -35,15 +46,15 @@ export const metadata: Metadata = {
         url: DEFAULT_OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: 'PM Kisan Status Check 2026 - KisanStatus',
+        alt: `${SITE_NAME} - Complete Agriculture & Farming Resource Portal`,
         type: 'image/webp',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'PM Kisan Status Check 2026 — 24vi Kist Coming Soon',
-    description: '₹2000 seedha bank account mein — 9.44 Crore+ kisanon ko mil chuki. Apna status abhi verify karo!',
+    title: `${SITE_NAME}: ${SITE_TAGLINE}`,
+    description: SITE_DESCRIPTION,
     site: '@kisanstatus',
     creator: '@kisanstatus',
     images: [DEFAULT_OG_IMAGE],
@@ -60,7 +71,7 @@ export const metadata: Metadata = {
     },
   },
   metadataBase: new URL(SITE_URL),
-  category: 'Agriculture',
+  category: 'Agriculture & Farming',
 };
 
 export const revalidate = 3600;
@@ -71,7 +82,7 @@ function HomeLoading() {
       {/* ✅ CLS FIX: Use aspect ratio instead of fixed height */}
       <div className="relative aspect-[16/9] md:aspect-[21/9] bg-gradient-to-r from-green-800 to-green-600">
         <div className="container-site h-full flex items-center">
-          <div className="max-w-2xl">
+          <div className="max-w-2xl px-4">
             <div className="h-12 bg-white/20 rounded w-3/4 mb-4 animate-pulse" />
             <div className="h-6 bg-white/20 rounded w-full mb-2 animate-pulse" />
             <div className="h-6 bg-white/20 rounded w-5/6 mb-6 animate-pulse" />
@@ -79,7 +90,7 @@ function HomeLoading() {
           </div>
         </div>
       </div>
-      <div className="container-site py-12">
+      <div className="container-site py-12 px-4">
         <div className="grid md:grid-cols-3 gap-6">
           {[1, 2, 3].map((i) => (
             <div key={i} className="h-64 bg-gray-200 dark:bg-gray-800 rounded-xl animate-pulse" />
@@ -91,34 +102,9 @@ function HomeLoading() {
 }
 
 export default function HomePage() {
-  const websiteSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: SITE_NAME,
-    url: SITE_URL,
-    description: 'PM Kisan Samman Nidhi verification, eKYC guide, beneficiary roster — India ka free PM Kisan resource portal.',
-    inLanguage: 'hi-IN',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: `${SITE_URL}/articles?category=all`,
-      },
-      'query-input': 'required name=search_term_string',
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: SITE_NAME,
-      url: SITE_URL,
-      logo: {
-        '@type': 'ImageObject',
-        url: `${SITE_URL}/logo.webp`,
-      },
-    },
-  };
-
   return (
     <>
+      {/* ✅ Preload critical hero image for LCP optimization */}
       <link
         rel="preload"
         as="image"
@@ -127,11 +113,8 @@ export default function HomePage() {
         fetchPriority="high"
       />
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-      />
-
+      {/* Note: WebSite & Organization JSON-LD schema is already injected globally in app/layout.tsx */}
+      
       <Suspense fallback={<HomeLoading />}>
         <HomeContent />
       </Suspense>
