@@ -5,7 +5,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     title: 'Kisan Loan Kahan Se Milega 2026? KCC, Bank, CSC — Puri Jankari',
     desc: 'Loan chahiye to confusion hota hai — SBI, cooperative, CSC, har jagah process alag. Is guide mein sab kuch hai.',
     ogTitle: 'Kisan Loan Guide 2026 — Complete Jankari Hindi Mein',
-    keywords: ['kisan loan kahan se milega 2026', 'kisan credit card', 'kisan loan 2026', 'SBI kisan loan', 'CSC center loan', 'कृषि ऋण कहाँ से लें', 'किसान लोन 2026'],
+    keywords: ['kisan loan kahan se milega 2026', 'kisan credit card', 'kisan loan 2026', 'SBI kisan loan', 'CSC center loan', 'कृषि ण कहाँ से लें', 'किसान लोन 2026'],
     component: 'KisanRinKahaSeLe2026',
     category: 'loan',
     publishedTime: '2026-01-10T08:00:00+05:30',
@@ -494,7 +494,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     relatedSlugs: ['PmKisanCscRegistrationCharges', 'PmKisanEkycOnline2026', 'PmKisanMasterGuide2026', 'PmKisanRejectedStatusReApplyGuide'],
   },
 
-  // ── NEW 9 LOW-COMPETITION FARMING ARTICLES ─────────────────────
+  // ── NEW 10 LOW-COMPETITION FARMING ARTICLES ─────────────────────
   {
     slug: 'bakri-palan-yojana-nlm-subsidy',
     title: 'Bakri Palan Yojana 2026: NLM Subsidy, Loan Process, aur Real Profit Analysis',
@@ -580,7 +580,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     ogImage: '/images/kisanguides/fish-farming-hero.webp',
     relatedSlugs: ['PmKusumYojanaSolarSubsidy2026', 'KisanCreditCardOnlineApply2026', 'PmKisanMaandhanYojanaPension'],
   },
-  {
+    {
     slug: 'silage-making-business-guide',
     title: 'Silage Making Business 2026: Makka ko Pack Karke Lakhon Kamayein - Real Numbers ke Saath',
     desc: 'Silage business se mahine ka ₹50,000+ kamayein. 100-bag unit ka complete budget, SMAM subsidy, aur real profit calculation.',
