@@ -13,10 +13,8 @@ import ArticlesClient from './ArticlesClient';
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  // ✅ Rule 5: Title optimized to ~60 characters, primary keyword first
-  title: `Kisan Guides 2026 — ${ARTICLES.length}+ Verified PM Kisan Resources`,
-  // ✅ Rule 5: Description optimized to ~155 characters, natural Hinglish
-  description: `${ARTICLES.length}+ verified guides on PM Kisan, farming subsidies, loans, crop insurance & profitable businesses like bakri palan. Simple Hinglish explanations.`,
+  title: `Kisan Guides 2026 — ${ARTICLES.length}+ Resources | ${SITE_NAME}`,
+  description: `${ARTICLES.length}+ verified guides on PM Kisan, farming subsidies, loans & crop insurance. Simple Hinglish explanations for Indian farmers.`,
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   alternates: { 
     canonical: `${SITE_URL}/articles`,
@@ -64,7 +62,6 @@ export const metadata: Metadata = {
 };
 
 export default function ArticlesPage() {
-  // ✅ Rule 9: Enhanced ItemList Schema for better Google indexing
   const collectionSchema = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
@@ -89,12 +86,11 @@ export default function ArticlesPage() {
           url: `${SITE_URL}/articles/${a.slug}`,
           name: a.title,
           description: a.desc,
-        }
+        },
       })),
     },
   };
 
-  // ✅ Rule 9: BreadcrumbList Schema added for this top-level page
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',

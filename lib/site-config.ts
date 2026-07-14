@@ -5,7 +5,7 @@
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://kisanstatus.com';
 export const SITE_NAME = 'KisanStatus';
 export const SITE_TAGLINE = 'PM Kisan, Krishi Yojana & Farming Guides in Hindi';
-export const SITE_DESCRIPTION = 'KisanStatus provides verified, step-by-step guides for PM Kisan Samman Nidhi, crop insurance, farming subsidies, and agricultural schemes in simple Hinglish.';
+export const SITE_DESCRIPTION = 'PM Kisan guides, farming subsidies, loans & crop insurance in Hindi. Verified step-by-step guides for government schemes & agricultural business.';
 
 export const AUTHOR_NAME = 'KisanStatus Team';
 export const AUTHOR_URL = `${SITE_URL}/about`;
@@ -33,7 +33,7 @@ export const GLOBAL_KEYWORDS = [
 ];
 
 export const DISCLAIMER_TEXT =
-  'KisanStatus.com ek independent information portal hai — Government of India ya kisi official portal ka affiliated platform nahi hai. Yahan di gayi jankari educational purpose ke liye hai. Kisi bhi sarkari kaam ke liye official portal pmkisan.gov.in ya helpline 155261 use karein.';
+  'KisanStatus.com ek independent information portal hai — Government of India ya kisi official portal ka affiliated platform nahi hai. Yahan di gayi jankari educational purpose ke liye hai. Kisi bhi official karyavaahi, enrollment, ya payment ke liye hamesha official portals visit karein.';
 
 export const OFFICIAL_PORTALS = {
   pmkisan: 'https://pmkisan.gov.in',
