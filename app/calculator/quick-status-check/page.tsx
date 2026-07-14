@@ -5,8 +5,8 @@ const DOMAIN = 'https://kisanstatus.com';
 const PAGE_URL = `${DOMAIN}/calculator/quick-status-check`;
 
 export const metadata: Metadata = {
-  title: 'PM Kisan Status Check 2026 — Aadhaar ya Mobile Se Turant Check Karo',
-  description: 'Apna PM Kisan status abhi check karo — bas Aadhaar number, mobile number ya registration number daalo. Seedha official portal par redirect hoga. Free hai, koi login nahi chahiye.',
+  title: 'PM Kisan Status Check 2026 — Aadhaar ya Mobile Number',
+  description: 'PM Kisan status check karein Aadhaar, mobile ya registration number se. Seedha official portal par redirect. Bilkul free, bina login ke.',
   keywords: [
     'pm kisan status check',
     'pm kisan aadhaar se check',
@@ -18,8 +18,8 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'PM Kisan Status Check 2026 — Aadhaar ya Mobile Se Turant Check Karo',
-    description: 'Aadhaar ya mobile number daalo aur apna PM Kisan status turant check karo. Free tool — koi registration nahi.',
+    title: 'PM Kisan Status Check 2026 — Aadhaar ya Mobile Number',
+    description: 'PM Kisan status check karein Aadhaar, mobile ya registration number se. Seedha official portal par redirect. Bilkul free tool.',
     type: 'website',
     url: PAGE_URL,
     siteName: 'KisanStatus.com',
@@ -29,19 +29,19 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'PM Kisan Status Check 2026',
-    description: 'Aadhaar ya mobile number se apna PM Kisan status turant check karo.',
+    description: 'PM Kisan status check karein Aadhaar, mobile ya registration number se. Bilkul free tool.',
     site: '@kisanstatus',
     images: [`${DOMAIN}/og-image.webp`],
   },
 };
 
 export default function Page() {
-  const schema = {
+  const appSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
     name: 'PM Kisan Status Check Tool',
     url: PAGE_URL,
-    description: 'PM Kisan ka apna status check karo — Aadhaar, mobile ya registration number se. Free online tool, koi login nahi chahiye.',
+    description: 'PM Kisan ka apna status check karein — Aadhaar, mobile ya registration number se. Free online tool, bina login ke.',
     applicationCategory: 'UtilityApplication',
     operatingSystem: 'Any',
     offers: {
@@ -56,11 +56,25 @@ export default function Page() {
     },
   };
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: DOMAIN },
+      { '@type': 'ListItem', position: 2, name: 'Calculators', item: `${DOMAIN}/calculator` },
+      { '@type': 'ListItem', position: 3, name: 'PM Kisan Status Check', item: PAGE_URL },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(appSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <QuickStatusChecker />
     </>
