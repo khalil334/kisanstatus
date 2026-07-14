@@ -161,7 +161,7 @@ const COMPONENTS: Record<string, React.ComponentType<any>> = {
   PmKisanVillageWiseListPdfDownload:          dynamic(() => import('@/components/articles/PmKisanVillageWiseListPdfDownload'),          { loading: ArticleLoading, ssr: true }),
   PmKisanMobileNumberChangeUpdate:            dynamic(() => import('@/components/articles/PmKisanMobileNumberChangeUpdate'),            { loading: ArticleLoading, ssr: true }),
 
-  // ── NEW 9 LOW-COMPETITION FARMING ARTICLES ─────────────────────
+  // ── NEW 9 LOW-COMPETITION FARMING ARTICLES (kisanguides) ─────────────────────
   BakriPalanYojana:                           dynamic(() => import('@/components/articles/kisanguides/BakriPalanYojana'),               { loading: ArticleLoading, ssr: true }),
   MushroomKheti:                              dynamic(() => import('@/components/articles/kisanguides/MushroomKheti'),                  { loading: ArticleLoading, ssr: true }),
   MadhumakhiPalan:                            dynamic(() => import('@/components/articles/kisanguides/MadhumakhiPalan'),                { loading: ArticleLoading, ssr: true }),
@@ -276,7 +276,7 @@ export default async function ArticlePage({
             className="inline-flex items-center gap-2 bg-green-100 hover:bg-green-200 text-green-800 dark:bg-green-900/30 dark:text-green-300 dark:hover:bg-green-900/50 text-sm font-bold px-4 py-2 rounded-full transition-colors focus:ring-2 focus:ring-green-500 focus:outline-none"
             aria-label={`View all ${catName} articles`}
           >
-            <span aria-hidden="true">📂</span>
+            <span aria-hidden="true"></span>
             <span>{catName}</span>
             <span className="text-green-600 dark:text-green-400" aria-hidden="true">→</span>
           </Link>
