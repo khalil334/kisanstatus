@@ -5,7 +5,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     title: 'Kisan Loan Kahan Se Milega 2026? KCC, Bank, CSC — Puri Jankari',
     desc: 'Loan chahiye to confusion hota hai — SBI, cooperative, CSC, har jagah process alag. Is guide mein sab kuch hai.',
     ogTitle: 'Kisan Loan Guide 2026 — Complete Jankari Hindi Mein',
-    keywords: ['kisan loan kahan se milega 2026', 'kisan credit card', 'kisan loan 2026', 'SBI kisan loan', 'CSC center loan', 'कृषि ण कहाँ से लें', 'किसान लोन 2026'],
+    keywords: ['kisan loan kahan se milega 2026', 'kisan credit card', 'kisan loan 2026', 'SBI kisan loan', 'CSC center loan', 'कृषि ऋण कहाँ से लें', 'किसान लोन 2026'],
     component: 'KisanRinKahaSeLe2026',
     category: 'loan',
     publishedTime: '2026-01-10T08:00:00+05:30',
@@ -494,7 +494,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     relatedSlugs: ['PmKisanCscRegistrationCharges', 'PmKisanEkycOnline2026', 'PmKisanMasterGuide2026', 'PmKisanRejectedStatusReApplyGuide'],
   },
 
-  // ── NEW 10 LOW-COMPETITION FARMING ARTICLES ─────────────────────
+  // ── NEW 9 LOW-COMPETITION FARMING ARTICLES ─────────────────────
   {
     slug: 'bakri-palan-yojana-nlm-subsidy',
     title: 'Bakri Palan Yojana 2026: NLM Subsidy, Loan Process, aur Real Profit Analysis',
@@ -579,26 +579,6 @@ export const ARTICLES: readonly ArticleMeta[] = [
     schemes: ['pmmsy', 'pm-kisan'],
     ogImage: '/images/kisanguides/fish-farming-hero.webp',
     relatedSlugs: ['PmKusumYojanaSolarSubsidy2026', 'KisanCreditCardOnlineApply2026', 'PmKisanMaandhanYojanaPension'],
-  },
-  {
-    slug: 'pm-kisan-rejected-status-fix',
-    title: 'PM Kisan Status Rejected Ya Pending Kyun Aata Hai? Turant Theek Karne Ka Complete Guide',
-    desc: '7 main reasons kyun status reject hota hai - land record mismatch, eKYC fail, bank linking. Step-by-step fix + helpline numbers.',
-    ogTitle: 'PM Kisan Rejected Status Fix — Complete Troubleshooting Guide',
-    keywords: [
-      'pm kisan rejected status fix', 'pm kisan pending status kyun', 'pm kisan land record mismatch',
-      'pm kisan ekyc fail kaise fix karein', 'pm kisan bank account linking', 'pm kisan status check kaise karein',
-      'pm kisan rejected kaise theek karein', 'pm kisan helpline number', 'pm kisan status rejected reason',
-      'pm kisan payment nahi aa raha', 'pm kisan status fix guide', 'pm kisan troubleshooting',
-    ],
-    component: 'PMKisanRejected',
-    category: 'status-check',
-    publishedTime: '2026-07-11T08:00:00+05:30',
-    modifiedTime: '2026-07-11T08:00:00+05:30',
-    readingTime: 14,
-    schemes: ['pm-kisan'],
-    ogImage: '/images/pm-kisan-help/pm-kisan-rejected/hero.jpg',
-    relatedSlugs: ['PmKisanRejectedStatusReApplyGuide', 'PmKisanMasterGuide2026', 'PmKisanPaymentFailedFix2026', 'PmKisanCorrectionForm2026'],
   },
   {
     slug: 'silage-making-business-guide',
