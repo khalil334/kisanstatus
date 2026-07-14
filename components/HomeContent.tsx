@@ -7,32 +7,6 @@ import { ARTICLES, getLatestArticles, CATEGORIES } from '@/lib/articles-data';
 
 const TOP_ARTICLES_LIMIT = 3;
 
-// Schema.org structured data for SEO
-const ORGANIZATION_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'KisanStatus',
-  url: 'https://kisanstatus.com',
-  logo: 'https://kisanstatus.com/logo.svg',
-  description: 'India ka #1 PM Kisan Samman Nidhi portal — status check, kist updates, aur kisan guides',
-  sameAs: [
-    'https://twitter.com/kisanstatus',
-    'https://facebook.com/kisanstatus',
-  ],
-};
-
-const WEBSITE_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: 'KisanStatus',
-  url: 'https://kisanstatus.com',
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: 'https://kisanstatus.com/search?q={search_term_string}',
-    'query-input': 'required name=search_term_string',
-  },
-};
-
 function ArticleImage({ image, emoji, title }: { image: string; emoji: string; title: string }) {
   const [error, setError] = useState(false);
   const [loaded, setLoaded] = useState(false);
@@ -86,11 +60,7 @@ function ArticleCard({ article, showNewBadge = false }: { article: typeof ARTICL
         {article.title}
       </Link>
       <div className="relative overflow-hidden">
-        <ArticleImage
-          image={article.ogImage || ''}
-          emoji={emoji}
-          title={article.title}
-        />
+        <ArticleImage image={article.ogImage || ''} emoji={emoji} title={article.title} />
         {showNewBadge && (
           <div className="absolute top-4 right-4 z-30">
             <span className="relative inline-flex items-center gap-1.5 bg-gradient-to-r from-green-500 to-emerald-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
@@ -141,21 +111,12 @@ export default function HomeContent() {
     setIsMounted(true);
   }, []);
 
+  if (!isMounted) return null;
+
   return (
     <main className="min-h-screen bg-white dark:bg-gray-900">
-      {/* JSON-LD Schema Markup for SEO */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(ORGANIZATION_SCHEMA) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBSITE_SCHEMA) }}
-      />
-
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-white via-green-50/30 to-white dark:from-gray-900 dark:via-gray-900 dark:to-gray-900 py-20 md:py-28 overflow-hidden" aria-labelledby="hero-heading">
-        {/* Subtle background pattern */}
         <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.05]" style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2310b981' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
         }} aria-hidden="true" />
@@ -178,7 +139,6 @@ export default function HomeContent() {
               <Link
                 href="/articles/PmKisan24viKist2026"
                 className="group inline-flex items-center gap-2.5 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 shadow-xl shadow-green-600/30 hover:shadow-2xl hover:shadow-green-600/40"
-                aria-label="PM Kisan 24vi Kist ka status check karein"
               >
                 <span className="text-xl" aria-hidden="true">📅</span>
                 <span>24vi Kist Status</span>
@@ -189,7 +149,6 @@ export default function HomeContent() {
               <Link
                 href="/articles"
                 className="inline-flex items-center gap-2.5 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-900 dark:text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 border-2 border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 shadow-lg hover:shadow-xl"
-                aria-label="Sabhi articles dekhein"
               >
                 <span className="text-xl" aria-hidden="true">📚</span>
                 <span>Sabhi Articles</span>
@@ -197,11 +156,10 @@ export default function HomeContent() {
             </div>
           </div>
 
-          {/* Hero Image — ✅ OPTIMIZED FOR LCP & CLS */}
+          {/* Hero Image */}
           <div className="relative max-w-5xl mx-auto">
             <div className="absolute -inset-4 bg-gradient-to-r from-green-500/20 to-emerald-500/20 dark:from-green-600/20 dark:to-emerald-600/20 rounded-3xl blur-2xl" aria-hidden="true" />
             <figure className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/5 dark:ring-white/10">
-              {/* ✅ CLS FIX: Aspect ratio container with fill */}
               <div className="relative w-full" style={{ aspectRatio: '2/1' }}>
                 <Image
                   src="/hero-wheat-field.webp"
@@ -217,15 +175,13 @@ export default function HomeContent() {
                   decoding="async"
                 />
               </div>
-              <figcaption className="sr-only">
-                PM Kisan Samman Nidhi ke labharthi kisan gehu ki fasal kaat rahe hain
-              </figcaption>
+              <figcaption className="sr-only">PM Kisan Samman Nidhi ke labharthi kisan gehu ki fasal kaat rahe hain</figcaption>
             </figure>
           </div>
         </div>
       </section>
 
-      {/* Stats Section — ✅ CLS FIX: Reserve space with Tailwind classes */}
+      {/* Stats Section */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800/50 dark:to-gray-900" aria-labelledby="stats-heading">
         <h2 id="stats-heading" className="sr-only">PM Kisan Yojana ke aankde</h2>
         <div className="container-site mx-auto px-4">
@@ -306,7 +262,6 @@ export default function HomeContent() {
             <Link
               href="/calculator"
               className="group inline-flex items-center gap-2.5 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 shadow-xl shadow-blue-600/30 hover:shadow-2xl hover:shadow-blue-600/40"
-              aria-label="Sabhi calculators dekhein"
             >
               <span className="text-xl" aria-hidden="true">🧮</span>
               <span>Sab Calculators Kholo</span>
@@ -318,7 +273,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* Featured Images — ✅ CLS FIX: Explicit aspect ratio */}
+      {/* Featured Images */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800/50 dark:to-gray-900" aria-labelledby="featured-heading">
         <div className="container-site mx-auto px-4">
           <div className="text-center mb-14">
@@ -397,7 +352,6 @@ export default function HomeContent() {
             <Link
               href="/articles"
               className="group inline-flex items-center gap-2.5 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 shadow-xl shadow-green-600/30 hover:shadow-2xl hover:shadow-green-600/40"
-              aria-label={`Sabhi ${allArticles.length} articles dekhein`}
             >
               <span className="text-xl" aria-hidden="true">📚</span>
               <span>Sabhi {allArticles.length} Articles Dekho</span>
@@ -422,9 +376,9 @@ export default function HomeContent() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-5 max-w-6xl mx-auto">
               {[
                 { href: '/articles/PmKisan24viKist2026', icon: '📊', title: 'Status Check', desc: 'Kist aayi ya nahi', color: 'from-blue-500 to-cyan-500' },
-                { href: '/articles/KisanCreditCardOnlineApply2026', icon: '', title: 'KCC Apply', desc: '₹5 Lakh Loan', color: 'from-green-500 to-emerald-500' },
+                { href: '/articles/KisanCreditCardOnlineApply2026', icon: '💳', title: 'KCC Apply', desc: '₹5 Lakh Loan', color: 'from-green-500 to-emerald-500' },
                 { href: '/articles/PmKisanBeneficiaryList2026', icon: '📋', title: 'Beneficiary List', desc: 'Naam check karo', color: 'from-red-500 to-pink-500' },
-                { href: '/articles/soil-health-card-complete-guide-2026', icon: '', title: 'Soil Health Card', desc: 'Mitti test karo', color: 'from-purple-500 to-indigo-500' },
+                { href: '/articles/soil-health-card-complete-guide-2026', icon: '🧪', title: 'Soil Health Card', desc: 'Mitti test karo', color: 'from-purple-500 to-indigo-500' },
               ].map((link, i) => (
                 <Link
                   key={i}
