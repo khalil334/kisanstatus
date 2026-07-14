@@ -1,24 +1,51 @@
 /**
  * /terms-of-service — KisanStatus.com
- * Legal Service Conditions & User Agreement
+ * Legal Service Conditions & User Agreement (Optimized for Hinglish & SEO)
  */
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
 export const metadata: Metadata = {
-  title: 'Terms of Use – KisanStatus.com Service Conditions',
-  description:
-    'Terms of use for KisanStatus.com — Rules and guidelines for using our agrarian welfare information platform.',
-  authors: [{ name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' }],
-  alternates: { canonical: 'https://kisanstatus.com/terms-of-service' },
-  robots: { index: true, follow: false },
+  title: `Terms of Service – ${SITE_NAME} | Upyog Ki Shartein`,
+  description: `KisanStatus.com ki Terms of Service. Hamari website use karne se pehle yeh shartein, privacy policy aur legal notice zaroor padhein.`,
+  authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
+  alternates: { canonical: `${SITE_URL}/terms-of-service` },
+  robots: { index: true, follow: true },
+  openGraph: {
+    title: `Terms of Service – ${SITE_NAME} | Upyog Ki Shartein`,
+    description: `Hamari website use karne se pehle yeh shartein, privacy policy aur legal notice zaroor padhein.`,
+    type: 'website',
+    url: `${SITE_URL}/terms-of-service`,
+    siteName: SITE_NAME,
+    locale: 'hi_IN',
+  },
+  twitter: {
+    card: 'summary',
+    title: `Terms of Service – ${SITE_NAME}`,
+    description: `KisanStatus.com ki Terms of Service. Hamari website use karne se pehle yeh shartein zaroor padhein.`,
+  },
 };
 
-const lastUpdated = '7 June 2026';
+const lastUpdated = '15 July 2026';
 
 export default function TermsPage() {
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Terms of Service', item: `${SITE_URL}/terms-of-service` },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site">
           <nav className="text-green-200 text-sm mb-2" aria-label="Breadcrumb">
@@ -26,7 +53,7 @@ export default function TermsPage() {
             <span className="mx-2" aria-hidden="true">/</span>
             <span className="text-white font-bold">Terms of Use</span>
           </nav>
-          <h1 className="text-2xl md:text-3xl font-bold text-white">Terms of Use</h1>
+          <h1 className="text-2xl md:text-3xl font-bold text-white">Terms of Use (Upyog Ki Shartein)</h1>
           <p className="text-green-200 text-sm mt-1">Last updated: {lastUpdated}</p>
         </div>
       </div>
@@ -35,38 +62,37 @@ export default function TermsPage() {
         <div className="max-w-3xl mx-auto space-y-6">
 
           <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-300 dark:border-amber-800 rounded-xl text-sm text-amber-900 dark:text-amber-200">
-            <strong>⚠️ Zaruri Suchna:</strong> KisanStatus.com ek independent informational platform hai.
-            Yeh Government of India ya kisi bhi agrarian welfare scheme se affiliated nahi hai.
-            Official kaam ke liye{' '}
+            <strong>⚠️ Zaruri Suchna:</strong> {SITE_NAME} ek independent informational platform hai. 
+            Yeh Bharat Sarkar ya kisi bhi krishi yojana se affiliated nahi hai. 
+            Official kaam ke liye hamesha{' '}
             <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer" className="underline font-semibold focus:outline-none focus:ring-2 focus:ring-amber-500 rounded">
               pmkisan.gov.in ↗
             </a>{' '}
-            use karein.
+            ka hi upyog karein.
           </div>
 
-          <section className="card">
-            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">1. Acceptance of Terms</h2>
+          <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
+            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">1. Sharton Ki Swikriti (Acceptance of Terms)</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-              By accessing and using <strong>KisanStatus.com</strong> ("Platform", "we", "us", "our"),
-              you accept and agree to be bound by these Terms of Use. If you do not agree to
-              these conditions, please do not use our platform. These terms apply to all visitors and users
-              of the platform.
+              <strong>{SITE_NAME}</strong> ("Platform", "hum", "hamara") ko access karke aur upyog karke, aap in Terms of Use ko 
+              poore tarike se swikaar karte hain aur inse bandhne ke liye sahmat hote hain. Agar aap in sharton se sahmat nahi hain, 
+              toh kripya hamare platform ka upyog na karein. Yeh shartein platform ke sabhi visitors aur users par lagu hoti hain.
             </p>
           </section>
 
-          <section className="card">
-            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">2. Description of Service</h2>
+          <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
+            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">2. Hamari Sevayein (Description of Service)</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-3">
-              KisanStatus.com provides <strong>free, informational content</strong> about the
-              agrarian welfare scheme for Indian cultivators. Our services include:
+              {SITE_NAME} Indian kisanon ke liye krishi kalyan yojanaon ke baare mein <strong>muft aur informational content</strong> pradaan karta hai. 
+              Hamari sevao mein shamil hain:
             </p>
             <ul className="text-sm text-[var(--color-text-muted)] space-y-2">
               {[
-                'Guides on how to check cultivator benefit status on the official portal',
-                'Information about tranche dates and payment amounts (estimated/expected)',
-                'Step-by-step digital verification and enrollment guides',
-                'State-wise beneficiary roster information',
-                'Articles on agrarian welfare related problems and solutions',
+                'Official sarkari portal par status check karne ke step-by-step guides',
+                'Kist (tranche) ki dates aur payment amount ki jankari (anumanit/expected)',
+                'Digital verification (eKYC) aur naye registration ki puri jankari',
+                'State-wise beneficiary list dekhne ka tarika',
+                'Kisanon ki aam samasyaon aur unke hal se judi jankari',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2">
                   <span className="text-[var(--color-primary)] mt-0.5" aria-hidden="true">→</span>
@@ -76,56 +102,55 @@ export default function TermsPage() {
             </ul>
           </section>
 
-          <section className="card">
-            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">3. Accuracy of Content</h2>
+          <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
+            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">3. Jankari Ki Shuddhta (Accuracy of Content)</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-3">
-              We make every effort to provide accurate and up-to-date content. However:
+              Hum har sambhav prayas karte hain ki yahan di gayi jankari sahi aur updated rahe. Lekin:
             </p>
             <ul className="text-sm text-[var(--color-text-muted)] space-y-2">
               <li className="flex items-start gap-2">
                 <span className="text-red-500 mt-0.5" aria-hidden="true">•</span>
-                Tranche dates marked as "Expected" or "Not Confirmed" are estimates based on past patterns — they are NOT official government announcements.
+                "Expected" ya "Not Confirmed" ke roop mein chihnit kist dates keval pichle patterns par aadharit anuman hain — yeh koi official sarkari ghoshna nahi hain.
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-red-500 mt-0.5" aria-hidden="true">•</span>
-                We do not guarantee the accuracy, completeness, or timeliness of any content.
+                Hum kisi bhi content ki shuddhta, poornata, ya samay-sarita ki koi guarantee nahi dete.
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-red-500 mt-0.5" aria-hidden="true">•</span>
-                Always verify important decisions with the official agrarian welfare portal at pmkisan.gov.in.
+                Kisi bhi mahatvapooran nirnay se pehle hamesha official sarkari portal pmkisan.gov.in par jankari ki pushti karein.
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-red-500 mt-0.5" aria-hidden="true">•</span>
-                We are not responsible for any losses or problems resulting from reliance on our content.
+                Hamare content par bharosa karne se hone wale kisi bhi nuksan ya samasya ke liye hum jimmedar nahi hain.
               </li>
             </ul>
           </section>
 
-          <section className="card">
-            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">4. Not a Government Platform</h2>
+          <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
+            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">4. Yeh Koi Sarkari Website Nahi Hai</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-              <strong>KisanStatus.com is NOT an official government platform.</strong> We are not
-              affiliated with, endorsed by, or connected to the Government of India, the Ministry
-              of Agriculture & Farmers Welfare, or any agrarian welfare scheme in any
-              official capacity. We do not collect your biometric credential number, bank account, or any
-              personal government data. For official services, always use{' '}
+              <strong>{SITE_NAME} koi official sarkari platform nahi hai.</strong> Hum Bharat Sarkar, Krishi aur Kisan Kalyan Mantralaya, 
+              ya kisi bhi krishi yojana se kisi bhi sarkari kshamata mein affiliated, endorsed ya connected nahi hain. 
+              Hum aapka Aadhaar number, bank account, ya koi bhi personal sarkari data collect nahi karte. 
+              Official sevao ke liye hamesha{' '}
               <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">
                 pmkisan.gov.in ↗
-              </a>
-              .
+              </a>{' '}
+              ka hi upyog karein.
             </p>
           </section>
 
-          <section className="card">
-            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">5. User Responsibilities</h2>
-            <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-3">By using our platform, you agree to:</p>
+          <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
+            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">5. User Ki Jimmedariyan (User Responsibilities)</h2>
+            <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-3">Hamare platform ka upyog karke, aap sahmat hote hain ki:</p>
             <ul className="text-sm text-[var(--color-text-muted)] space-y-2">
               {[
-                'Use the platform for lawful purposes only',
-                'Not misuse or attempt to harm the platform or its services',
-                'Not copy or redistribute our content without permission',
-                'Verify all important agrarian welfare content from official sources',
-                'Not rely solely on our platform for official government decisions',
+                'Platform ka upyog keval kanooni (lawful) uddeshyon ke liye karenge',
+                'Platform ya iski sevao ka durupyog nahi karenge ya nuksan pahunchane ki koshish nahi karenge',
+                'Hamari anumati ke bina hamare content ko copy ya redistribute nahi karenge',
+                'Sabhi mahatvapooran krishi jankari ki pushti official srot se karenge',
+                'Kisi bhi official sarkari nirnay ke liye keval hamare platform par nirbhar nahi rahenge',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2">
                   <span className="text-[var(--color-primary)] mt-0.5" aria-hidden="true">✓</span>
@@ -135,85 +160,103 @@ export default function TermsPage() {
             </ul>
           </section>
 
-          <section className="card">
-            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">6. Intellectual Property</h2>
+          <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
+            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">6. Copyright aur Intellectual Property</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-              All original content on KisanStatus.com — including articles, guides, and platform
-              design — is the property of KisanStatus.com and is protected by copyright law.
-              You may not reproduce, distribute, or republish our content without prior written
-              permission. Linking to our platform is permitted and encouraged.
+              {SITE_NAME} par maujood sabhi original content — jismein articles, guides, aur platform design shamil hain — 
+              {SITE_NAME} ki sampatti hai aur copyright kanoon dwara surakshit hai. 
+              Pichhlikhit anumati ke bina aap hamare content ko reproduce, distribute, ya republish nahi kar sakte. 
+              Hamare platform ko link karna anumodit aur utsahit hai.
             </p>
           </section>
 
-          <section className="card">
-            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">7. Advertising</h2>
+          <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
+            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">7. Vigyaapan (Advertising)</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-              KisanStatus.com may display advertisements through Google AdSense and other
-              advertising networks. These ads help us maintain and improve the platform for free.
-              Advertisements are clearly separated from editorial content. We do not endorse
-              products or services advertised on our platform. For information about how ads use
-              your data, see our{' '}
-              <Link href="/privacy-policy" className="text-[var(--color-primary)] underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">Data Protection Notice</Link>.
+              {SITE_NAME} Google AdSense aur anya advertising networks ke madhyam se vigyaapan (ads) pradarshit kar sakta hai. 
+              Yeh ads humein is platform ko muft mein banaye rakhne aur behtar banane mein madad karte hain. 
+              Vigyaapan editorial content se spasht roop se alag hote hain. Hum hamare platform par vigyapit kisi bhi 
+              product ya service ka samarthan nahi karte. Ads aapke data ka kaise upyog karte hain, iski jankari ke liye 
+              hamari{' '}
+              <Link href="/privacy-policy" className="text-[var(--color-primary)] underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">
+                Data Protection Notice (Privacy Policy)
+              </Link>{' '}
+              dekhein.
             </p>
           </section>
 
-          <section className="card">
-            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">8. Third-Party Links</h2>
+          <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
+            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">8. Bahari Links (Third-Party Links)</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-              Our platform contains links to external websites, including the official government
-              portal pmkisan.gov.in. These links are provided for convenience. We are not
-              responsible for the content, accuracy, or privacy practices of any third-party
-              websites. Visiting external links is at your own risk.
+              Hamare platform par bahari websites ke links shamil ho sakte hain, jismein official sarkari portal 
+              pmkisan.gov.in bhi shamil hai. Yeh links keval aapki suvidha ke liye hain. Hum kisi bhi third-party 
+              website ki content, shuddhta, ya privacy practices ke liye jimmedar nahi hain. Bahari links par 
+              jaana aapke apne jokhim par hoga.
             </p>
           </section>
 
-          <section className="card">
-            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">9. Limitation of Liability</h2>
+          <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
+            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">9. Jimmedari Se Mukti (Limitation of Liability)</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-              KisanStatus.com and its team shall not be liable for any direct,
-              indirect, incidental, or consequential damages arising from your use of the platform,
-              including reliance on any content provided. Our total liability to you for any
-              claim shall not exceed zero, as our services are provided free of charge.
+              {SITE_NAME} aur iski team platform ke upyog, ya yahan pradan ki gayi kisi bhi jankari par bharosa 
+              karne se utpann hone wale kisi bhi pratyaksh, apratyaksh, aakasmik, ya parinamik nuksan ke liye 
+              jimmedar nahi hogi. Hamari sevayein muft mein pradan ki jaati hain, isliye kisi bhi daave ke liye 
+              hamari kul jimmedari shunya (zero) tak simit hogi.
             </p>
           </section>
 
-          <section className="card">
-            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">10. Changes to Terms</h2>
+          <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
+            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">10. Sharton Mein Badlav (Changes to Terms)</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-              We reserve the right to update these Terms of Use at any time. Changes will
-              be posted on this page with an updated date. Continued use of the platform after any
-              changes constitutes your acceptance of the new terms.
+              Hum in Terms of Use ko kabhi bhi update karne ka adhikar rakhte hain. Badlav ek updated date ke 
+              saath is page par post kiye jayenge. Kisi bhi badlav ke baad platform ka lagatar upyog karna, 
+              nayi sharton ko aapki swikriti mana jayega.
             </p>
           </section>
 
-          <section className="card">
-            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">11. Governing Law</h2>
+          <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
+            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">11. Lagu Hone Wala Kanoon (Governing Law)</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-              These Terms of Use are governed by the laws of India. Any disputes shall be
-              subject to the jurisdiction of courts in India.
+              In Terms of Use par Bharat ke kanoon lagu honge. Kisi bhi vivad par Bharat ke nyayalayon ka 
+              adhikar kshetra (jurisdiction) hoga.
             </p>
           </section>
 
-          <section className="card">
-            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">12. Contact</h2>
-            <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-              Questions about these terms? Contact us:
+          <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
+            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">12. Sampark (Contact)</h2>
+            <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-3">
+              In sharton ke baare mein koi sawal? Humse sampark karein:
             </p>
-            <div className="mt-3 text-sm text-[var(--color-text-muted)] space-y-1">
+            <div className="text-sm text-[var(--color-text-muted)] space-y-2">
               <p>📧 Email: <a href="mailto:kisanstatus.support@gmail.com" className="text-[var(--color-primary)] underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">kisanstatus.support@gmail.com</a></p>
-              <p>🌐 Platform: <a href="https://kisanstatus.com" className="text-[var(--color-primary)] underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">kisanstatus.com</a></p>
+              <p>🌐 Platform: <a href={SITE_URL} className="text-[var(--color-primary)] underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">{SITE_URL}</a></p>
               <p>👤 Team: <Link href="/about" className="text-[var(--color-primary)] underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">KisanStatus Team</Link></p>
             </div>
           </section>
 
           <div className="flex flex-wrap gap-3 pt-2">
-            <Link href="/privacy-policy" className="btn-secondary text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">Data Protection Notice →</Link>
-            <Link href="/disclaimer" className="btn-secondary text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">Legal Notice →</Link>
-            <Link href="/contact" className="btn-secondary text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">Contact Us →</Link>
+            <Link 
+              href="/privacy-policy" 
+              className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--color-card)] border border-[var(--color-border)] text-[var(--color-text)] text-sm font-bold rounded-xl hover:border-green-400 dark:hover:border-green-600 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500"
+            >
+              Data Protection Notice →
+            </Link>
+            <Link 
+              href="/disclaimer" 
+              className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--color-card)] border border-[var(--color-border)] text-[var(--color-text)] text-sm font-bold rounded-xl hover:border-green-400 dark:hover:border-green-600 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500"
+            >
+              Legal Notice →
+            </Link>
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--color-card)] border border-[var(--color-border)] text-[var(--color-text)] text-sm font-bold rounded-xl hover:border-green-400 dark:hover:border-green-600 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500"
+            >
+              Contact Us →
+            </Link>
           </div>
 
-          <p className="text-xs text-[var(--color-text-muted)] text-center">
-            These Terms of Use were last updated on {lastUpdated}.
+          <p className="text-xs text-[var(--color-text-muted)] text-center pt-4">
+            Yeh Terms of Use aakhiri baar {lastUpdated} ko update kiye gaye the.
           </p>
 
         </div>
