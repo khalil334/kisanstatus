@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useMemo, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
-import type { ArticleMeta } from '@/lib/articles-data';
+import type { ArticleMeta, CategorySlug } from '@/lib/articles-data';
 import { CATEGORIES } from '@/lib/articles-data';
 
 const NEW_ARTICLES_LIMIT = 3;
@@ -33,11 +33,11 @@ function ArticleImage({ image, emoji, title, priority = false }: { image: string
         </>
       ) : (
         <div className="h-full w-full flex items-center justify-center" role="img" aria-label={title}>
-          <span className="text-5xl" aria-hidden="true">{emoji}</span>
+          <span className="text-5xl select-none" aria-hidden="true">{emoji}</span>
         </div>
       )}
       <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent z-10 pointer-events-none" aria-hidden="true" />
-      <span className="absolute bottom-2 left-3 text-xl drop-shadow z-20" aria-hidden="true">{emoji}</span>
+      <span className="absolute bottom-2 left-3 text-xl drop-shadow-md z-20 select-none" aria-hidden="true">{emoji}</span>
     </div>
   );
 }
@@ -60,25 +60,25 @@ function ArticleCard({ article, showNewBadge = false, priority = false }: { arti
       <div className="relative">
         <ArticleImage image={article.ogImage || ''} emoji={emoji} title={article.title} priority={priority} />
         {showNewBadge && (
-          <span className="absolute top-2 right-2 bg-green-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full shadow z-20">
+          <span className="absolute top-2 right-2 bg-green-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full shadow-md z-20">
             NEW
           </span>
         )}
       </div>
       <div className="p-4 flex flex-col flex-1">
         {categoryInfo && (
-          <span className="text-[10px] font-bold px-2 py-0.5 rounded-full self-start bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">
+          <span className="text-[10px] font-bold px-2 py-0.5 rounded-full self-start bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 uppercase tracking-wide">
             {categoryName}
           </span>
         )}
-        <h3 className="font-black text-[var(--color-text)] text-sm leading-snug group-hover:text-green-700 dark:group-hover:text-green-400 transition-colors mt-2 mb-1">
+        <h3 className="font-black text-[var(--color-text)] text-sm leading-snug group-hover:text-green-700 dark:group-hover:text-green-400 transition-colors mt-2 mb-1 line-clamp-2">
           {article.title}
         </h3>
         <p className="text-xs text-[var(--color-text-muted)] leading-relaxed line-clamp-2 flex-1">{article.desc}</p>
-        <div className="flex items-center justify-between mt-3 pt-2 border-t border-[var(--color-border)]">
-          <span className="text-[11px] text-[var(--color-text-muted)]">✍️ KisanStatus Team</span>
-          <span className="text-xs font-bold text-green-700 dark:text-green-400 group-hover:translate-x-1 transition-transform inline-block">
-            Padhein →
+        <div className="flex items-center justify-between mt-3 pt-3 border-t border-[var(--color-border)]">
+          <span className="text-[11px] text-[var(--color-text-muted)] font-medium">✍️ KisanStatus Team</span>
+          <span className="text-xs font-bold text-green-700 dark:text-green-400 group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+            Padhein <span aria-hidden="true">→</span>
           </span>
         </div>
       </div>
@@ -90,7 +90,7 @@ function ArticlesContent({ articles }: { articles: readonly ArticleMeta[] }) {
   const searchParams = useSearchParams();
   const activeCategory = searchParams.get('category') || 'all';
 
-  const { latestArticles, remainingArticles, categoryCounts } = useMemo(() => {
+  const { latestArticles, remainingArticles, categoryCounts, activeCategoryName } = useMemo(() => {
     const filtered = activeCategory === 'all'
       ? [...articles]
       : articles.filter(a => a.category === activeCategory);
@@ -106,7 +106,10 @@ function ArticlesContent({ articles }: { articles: readonly ArticleMeta[] }) {
     const counts: Record<string, number> = {};
     articles.forEach(a => { counts[a.category] = (counts[a.category] || 0) + 1; });
 
-    return { latestArticles: latest, remainingArticles: remaining, categoryCounts: counts };
+    const catInfo = activeCategory !== 'all' ? (CATEGORIES[activeCategory as CategorySlug] as { name: string; nameHi: string }) : null;
+    const activeName = catInfo ? catInfo.nameHi : 'Sab Resources';
+
+    return { latestArticles: latest, remainingArticles: remaining, categoryCounts: counts, activeCategoryName: activeName };
   }, [articles, activeCategory]);
 
   return (
@@ -148,15 +151,15 @@ function ArticlesContent({ articles }: { articles: readonly ArticleMeta[] }) {
 
       {latestArticles.length === 0 && remainingArticles.length === 0 && (
         <div className="container-site text-center py-12">
-          <div className="text-6xl mb-4">🔍</div>
-          <p className="text-[var(--color-text-muted)] text-lg mb-4">Is category mein koi resource nahi mila.</p>
+          <div className="text-6xl mb-4" aria-hidden="true">🔍</div>
+          <p className="text-[var(--color-text-muted)] text-lg mb-4">Is category mein abhi koi resource nahi mila.</p>
           <Link href="/articles" className="text-green-700 dark:text-green-400 font-bold hover:underline inline-flex items-center gap-2">
             ← Sab Resources Dekho
           </Link>
         </div>
       )}
 
-      {latestArticles.length > 0 && (
+      {latestArticles.length > 0 && activeCategory === 'all' && (
         <section className="mb-12" aria-labelledby="new-heading">
           <div className="flex items-center gap-3 mb-5">
             <span className="text-xl" aria-hidden="true">✨</span>
@@ -178,7 +181,7 @@ function ArticlesContent({ articles }: { articles: readonly ArticleMeta[] }) {
           <div className="flex items-center gap-3 mb-5">
             <span className="text-xl" aria-hidden="true">📋</span>
             <h2 id="all-heading" className="text-lg font-black text-[var(--color-text)]">
-              {activeCategory === 'all' ? 'Sab Resources' : `${(CATEGORIES[activeCategory as keyof typeof CATEGORIES] as { name: string } | undefined)?.name || ''} Guides`}
+              {activeCategoryName}
             </h2>
             <span className="bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 text-xs font-bold px-2 py-0.5 rounded-full">
               {remainingArticles.length} guides
@@ -219,15 +222,15 @@ export default function ArticlesClient({ articles }: { articles: readonly Articl
   return (
     <main className="min-h-screen bg-[var(--color-bg)]">
       <section className="py-10 md:py-14 bg-[var(--color-primary)]" aria-labelledby="hero-heading">
-        <div className="container-site text-center">
-          <span className="inline-block bg-white/10 border border-white/20 text-green-300 text-xs font-bold px-4 py-2 rounded-full mb-4 uppercase tracking-wider">
+        <div className="container-site text-center px-4">
+          <span className="inline-block bg-white/10 border border-white/20 text-green-300 text-xs font-bold px-4 py-2 rounded-full mb-4 uppercase tracking-wider backdrop-blur-sm">
             📚 Kisan Resources Hub
           </span>
-          <h1 id="hero-heading" className="text-2xl md:text-4xl font-black text-white mb-3">
+          <h1 id="hero-heading" className="text-2xl md:text-4xl font-black text-white mb-3 leading-tight">
             PM Kisan Guides & Resources 2026
           </h1>
-          <p className="text-green-200 text-sm md:text-base max-w-xl mx-auto mb-5">
-            {articles.length} free guides — status check, payment fix, crop insurance, soil health, mandi bhav — sab Hinglish mein
+          <p className="text-green-200 text-sm md:text-base max-w-xl mx-auto mb-5 leading-relaxed">
+            {articles.length}+ free verified guides — status check, payment fix, crop insurance, soil health, mandi bhav — sab simple Hinglish mein.
           </p>
           <a
             href="https://pmkisan.gov.in"
@@ -235,17 +238,17 @@ export default function ArticlesClient({ articles }: { articles: readonly Articl
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 bg-white/15 hover:bg-white/25 border border-white/30 text-white text-xs font-bold px-3 py-1.5 rounded-full transition-colors backdrop-blur-sm focus:ring-2 focus:ring-white focus:outline-none"
           >
-            🏛️ pmkisan.gov.in ↗
+            🏛️ pmkisan.gov.in <span aria-hidden="true">↗</span>
           </a>
           <div className="mt-4">
-            <Link href="/" className="inline-flex items-center gap-2 text-green-300 hover:text-white text-sm font-bold transition-colors focus:ring-2 focus:ring-green-300 focus:outline-none rounded">
-              ← Home Page
+            <Link href="/" className="inline-flex items-center gap-2 text-green-300 hover:text-white text-sm font-bold transition-colors focus:ring-2 focus:ring-green-300 focus:outline-none rounded px-2 py-1">
+              <span aria-hidden="true">←</span> Home Page
             </Link>
           </div>
         </div>
       </section>
 
-      <div className="container-site py-10">
+      <div className="container-site py-10 px-4">
         <Suspense fallback={<ArticlesLoading />}>
           <ArticlesContent articles={articles} />
         </Suspense>
@@ -254,7 +257,7 @@ export default function ArticlesClient({ articles }: { articles: readonly Articl
             href="/"
             className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-black px-8 py-3.5 rounded-xl text-sm transition-all hover:scale-105 shadow-lg focus:ring-2 focus:ring-green-300 focus:outline-none"
           >
-            🏠 Home Page
+            <span aria-hidden="true">🏠</span> Home Page
           </Link>
         </div>
       </div>
