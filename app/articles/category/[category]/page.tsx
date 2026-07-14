@@ -14,25 +14,25 @@ const CATEGORY_DATA: Record<CategorySlug, {
 }> = {
   'status-check': {
     title: 'PM Kisan Status Check & Verification Guides 2026',
-    description: 'PM Kisan kist status check, beneficiary verification, FTO status, installment history — sab guides yahan hain.',
+    description: 'PM Kisan status check, beneficiary list verification, aur FTO generated ka matlab jaanein. 2026 ki latest, verified step-by-step guides.',
     emoji: '📊',
     keywords: ['pm kisan status check', 'beneficiary verification', 'installment status 2026', 'FTO generated', 'kist status'],
   },
   'loan': {
-    title: 'Kisan Credit & Loan Guides 2026 — KCC, Tractor, Personal Loan',
-    description: 'Kisan Credit Card (KCC), tractor loan, personal loan — 4% interest mein ₹5 lakh tak loan kaise lein.',
+    title: 'Kisan Credit & Loan Guides 2026 — KCC, Tractor Loan',
+    description: 'Kisan Credit Card (KCC), tractor loan, aur 4% interest par personal loan kaise lein. 2026 ki complete application process aur eligibility guides.',
     emoji: '💰',
     keywords: ['kisan credit card', 'KCC loan 2026', 'tractor loan', 'kisan personal loan', '4% interest loan'],
   },
   'farming': {
-    title: 'Modern Farming & Schemes Guides 2026 — Soil Health, Nano DAP, AgriStack',
-    description: 'Soil Health Card, Nano DAP, PMFBY crop insurance, AgriStack — modern kheti ke liye complete guides.',
+    title: 'Modern Farming & Schemes Guides 2026 — Soil Health',
+    description: 'Soil Health Card, Nano DAP, PMFBY crop insurance aur AgriStack ki puri jankari. Modern kheti aur sarkari yojanaon ke liye verified Hindi guides.',
     emoji: '🌱',
     keywords: ['soil health card', 'nano DAP 2026', 'PMFBY crop insurance', 'AgriStack', 'modern farming'],
   },
   'mandi': {
-    title: 'Mandi Bhav & Market Rates 2026 — Daily Sabzi & Fruit Prices',
-    description: 'Aaj ka mandi bhav — sabzi aur fruit ke daily updated wholesale rates. City-wise bhav jaano.',
+    title: 'Mandi Bhav & Market Rates 2026 — Daily Sabzi Prices',
+    description: 'Aaj ka mandi bhav aur daily updated wholesale rates. Apne shehar ke sabzi, anaj aur fruit ke aaj ke bhav aur market trends yahan check karein.',
     emoji: '📈',
     keywords: ['mandi bhav today', 'sabzi bhav', 'fruit rates 2026', 'wholesale prices', 'aaj ka bhav'],
   },
@@ -100,14 +100,15 @@ export default async function CategoryPage({
   }
 
   const categoryArticles = getArticlesByCategory(category as CategorySlug);
+  const url = `${SITE_URL}/articles/category/${category}`;
 
-  // Schema.org structured data
-  const categorySchema = {
+  // ✅ Schema.org: CollectionPage + ItemList
+  const collectionSchema = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
     name: categoryData.title,
     description: categoryData.description,
-    url: `${SITE_URL}/articles/category/${category}`,
+    url: url,
     inLanguage: 'hi-IN',
     isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: SITE_URL },
     numberOfItems: categoryArticles.length,
@@ -122,11 +123,26 @@ export default async function CategoryPage({
     },
   };
 
+  // ✅ Schema.org: BreadcrumbList (Rule 9 compliance)
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Articles', item: `${SITE_URL}/articles` },
+      { '@type': 'ListItem', position: 3, name: categoryData.title, item: url },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(categorySchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* Category Hero */}
@@ -143,13 +159,13 @@ export default async function CategoryPage({
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <span className="inline-flex items-center gap-1.5 bg-white/20 border border-white/30 text-white text-xs font-bold px-3 py-1.5 rounded-full backdrop-blur-sm">
-              📚 {categoryArticles.length} Guides
+              📚 {categoryArticles.length} Verified Guides
             </span>
             <Link
               href="/articles"
               className="inline-flex items-center gap-1.5 bg-white/15 hover:bg-white/25 border border-white/30 text-white text-xs font-bold px-3 py-1.5 rounded-full backdrop-blur-sm transition-colors"
             >
-              ← Sab Articles
+              ← Sabhi Kisan Guides Dekhein
             </Link>
           </div>
         </div>
@@ -185,18 +201,18 @@ export default async function CategoryPage({
       <div className="container-site mx-auto py-10">
         {categoryArticles.length === 0 ? (
           <div className="text-center py-16">
-            <div className="text-6xl mb-4">🔍</div>
+            <div className="text-6xl mb-4" aria-hidden="true">🔍</div>
             <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-              Is category mein abhi koi article nahi hai
+              Is category mein abhi koi guide available nahi hai
             </h2>
-            <p className="text-gray-600 dark:text-gray-400 mb-6">
-              Jaldi hi yahan guides add ki jayengi
+            <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-md mx-auto">
+              Hum jaldi hi yahan naye updates aur helpful articles add karenge. Tab tak aap hamare anya verified guides check kar sakte hain.
             </p>
             <Link
               href="/articles"
               className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-6 py-3 rounded-xl transition-all"
             >
-              ← Sab Articles Dekho
+              ← Sabhi Articles Dekhein
             </Link>
           </div>
         ) : (
