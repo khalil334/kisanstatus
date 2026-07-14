@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  color-scheme: light;
   --color-primary: #16A34A;
   --color-primary-dark: #15803D;
   --color-primary-light: #BBF7D0;
@@ -41,25 +42,25 @@
   --z-tooltip: 700;
 }
 
-/* ✅ FIX: Simplified dark mode — removed duplicate media query */
 .dark {
-  --color-bg: #0F1A0F;
-  --color-bg-alt: #1A2E1A;
-  --color-card: #1E3A1E;
-  --color-border: #2D4A2D;
-  --color-text: #E8F5E8;
-  --color-text-muted: #A8C8A8;
+  color-scheme: dark;
+  --color-bg: #050D05;
+  --color-bg-alt: #0F1F0F;
+  --color-card: #162E16;
+  --color-border: #2A4A2A;
+  --color-text: #F0FDF4;
+  --color-text-muted: #C8E6C9;
 }
 
-/* ✅ FIX: System preference fallback — only if no .dark or .light class */
 @media (prefers-color-scheme: dark) {
   :root:not(.light):not(.dark) {
-    --color-bg: #0F1A0F;
-    --color-bg-alt: #1A2E1A;
-    --color-card: #1E3A1E;
-    --color-border: #2D4A2D;
-    --color-text: #E8F5E8;
-    --color-text-muted: #A8C8A8;
+    color-scheme: dark;
+    --color-bg: #050D05;
+    --color-bg-alt: #0F1F0F;
+    --color-card: #162E16;
+    --color-border: #2A4A2A;
+    --color-text: #F0FDF4;
+    --color-text-muted: #C8E6C9;
   }
 }
 
@@ -74,7 +75,6 @@
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
     scroll-padding-top: 80px;
-    /* ✅ PERFORMANCE: Prevent layout shift from scrollbar */
     scrollbar-gutter: stable;
   }
 
@@ -88,7 +88,6 @@
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
     transition: background-color var(--transition-normal) ease, color var(--transition-normal) ease;
-    /* ✅ PERFORMANCE: Contain paint for better performance */
     contain: style;
   }
 
@@ -140,27 +139,23 @@
     background: var(--color-primary);
   }
 
-  /* ✅ FIX: Images with explicit dimensions to prevent CLS */
   img, svg {
     display: block;
     max-width: 100%;
     height: auto;
   }
 
-  /* ✅ NEW: Prevent layout shift from images without dimensions */
   img:not([width]):not([height]) {
-    aspect-ratio: 16/9; /* Default fallback - adjust per use case */
-    background-color: var(--color-border); /* Placeholder color while loading */
+    aspect-ratio: 16/9;
+    background-color: var(--color-border);
   }
 
-  /* ✅ NEW: Reserve space for hero/banner images */
   .hero-image,
   img[loading="lazy"] {
     background-color: var(--color-border);
     min-height: 200px;
   }
 
-  /* ✅ NEW: Better image loading states */
   img {
     background-color: var(--color-border);
     transition: opacity 0.3s ease;
@@ -178,6 +173,10 @@
 
   a:hover {
     color: var(--color-primary);
+  }
+
+  .dark a:hover {
+    color: #4ADE80;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -213,7 +212,6 @@
     max-width: var(--max-w-site);
     margin-inline: auto;
     padding-inline: 1rem;
-    /* ✅ PERFORMANCE: Contain layout for better performance */
     contain: layout style;
   }
 
@@ -300,6 +298,16 @@
     background-color: var(--color-bg-alt);
   }
 
+  .dark .btn-secondary {
+    color: #86EFAC;
+    border-color: #86EFAC;
+  }
+
+  .dark .btn-secondary:hover {
+    background-color: rgba(134, 239, 172, 0.1);
+    color: #BBF7D0;
+  }
+
   .section-title {
     font-family: inherit;
     font-size: clamp(1.25rem, 3vw, 1.875rem);
@@ -320,12 +328,23 @@
     border: 1px solid #FDE68A;
   }
 
+  .dark .badge-accent {
+    background-color: #422006;
+    color: #FDE68A;
+    border-color: #78350F;
+  }
+
   .news-box {
     background-color: var(--color-bg-alt);
     border: 1px solid var(--color-border);
     border-left: 4px solid var(--color-primary);
     border-radius: var(--radius-md);
     padding: 1rem 1.25rem;
+  }
+
+  .dark .news-box {
+    background-color: #0F1F0F;
+    border-color: #2A4A2A;
   }
 
   .data-table {
@@ -364,6 +383,18 @@
     border-bottom: 1px solid var(--color-border);
   }
 
+  .dark .data-table tbody tr:nth-child(even) {
+    background-color: #0F1F0F;
+  }
+
+  .dark .data-table tbody tr:hover {
+    background-color: rgba(74, 222, 128, 0.15);
+  }
+
+  .dark .data-table td {
+    border-bottom-color: #2A4A2A;
+  }
+
   .feature-card {
     background: var(--color-card);
     border: 1.5px solid var(--color-border);
@@ -382,15 +413,17 @@
     box-shadow: var(--shadow-lg);
   }
 
-  /* ✅ PERFORMANCE: GPU-accelerated shimmer animation */
   .loading-skeleton {
     background: linear-gradient(90deg, var(--color-border) 0%, var(--color-bg-alt) 50%, var(--color-border) 100%);
     background-size: 200% 100%;
     animation: loading-shimmer 1.5s infinite;
     border-radius: var(--radius-md);
-    /* GPU acceleration */
     will-change: background-position;
     transform: translateZ(0);
+  }
+
+  .dark .loading-skeleton {
+    background: linear-gradient(90deg, #162E16 0%, #2A4A2A 50%, #162E16 100%);
   }
 
   .loading-skeleton-header {
@@ -412,7 +445,6 @@
     justify-content: center;
   }
 
-  /* ✅ PERFORMANCE: GPU-accelerated spinner */
   .loading-spinner {
     width: 48px;
     height: 48px;
@@ -420,7 +452,6 @@
     border-top-color: var(--color-primary);
     border-radius: 50%;
     animation: spin 0.8s linear infinite;
-    /* GPU acceleration */
     will-change: transform;
     transform: translateZ(0);
   }
@@ -460,6 +491,14 @@
   .breadcrumb a:hover {
     color: var(--color-primary-dark);
     text-decoration: underline;
+  }
+
+  .dark .breadcrumb a {
+    color: #4ADE80;
+  }
+
+  .dark .breadcrumb a:hover {
+    color: #86EFAC;
   }
 
   .breadcrumb-separator {
@@ -503,6 +542,23 @@
   .pagination-button:disabled {
     opacity: 0.5;
     cursor: not-allowed;
+  }
+
+  .dark .pagination-button {
+    background: #162E16;
+    color: #F0FDF4;
+    border-color: #2A4A2A;
+  }
+
+  .dark .pagination-button:hover:not(:disabled) {
+    border-color: #4ADE80;
+    color: #4ADE80;
+  }
+
+  .dark .pagination-button.active {
+    background: #16A34A;
+    color: #050D05;
+    border-color: #16A34A;
   }
 
   .mobile-menu {
@@ -563,6 +619,16 @@
     width: 20px;
     height: 20px;
   }
+
+  .dark .theme-toggle {
+    background: #0F1F0F;
+    border-color: #2A4A2A;
+    color: #F0FDF4;
+  }
+
+  .dark .theme-toggle:hover {
+    background: #162E16;
+  }
 }
 
 @layer utilities {
@@ -582,8 +648,16 @@
     background: linear-gradient(to right, rgba(15, 30, 15, 0.75) 0%, rgba(15, 30, 15, 0.45) 55%, rgba(15, 30, 15, 0.1) 100%);
   }
 
+  .dark .hero-overlay {
+    background: linear-gradient(to right, rgba(5, 13, 5, 0.9) 0%, rgba(5, 13, 5, 0.7) 55%, rgba(5, 13, 5, 0.4) 100%);
+  }
+
   .bg-green-warm-gradient {
     background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 50%, #FFFBF0 100%);
+  }
+
+  .dark .bg-green-warm-gradient {
+    background: linear-gradient(135deg, #050D05 0%, #0F1F0F 50%, #162E16 100%);
   }
 
   .stat-number {
@@ -604,6 +678,10 @@
     justify-content: center;
     font-size: 1.4rem;
     flex-shrink: 0;
+  }
+
+  .dark .icon-circle {
+    background: linear-gradient(135deg, #162E16, #2A4A2A);
   }
 
   .article-card {
@@ -644,6 +722,21 @@
     color: var(--color-text-muted);
   }
 
+  .dark .search-input {
+    background: #0F1F0F;
+    color: #F0FDF4;
+    border-color: #2A4A2A;
+  }
+
+  .dark .search-input::placeholder {
+    color: #86A886;
+  }
+
+  .dark .search-input:focus {
+    border-color: #4ADE80;
+    box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.2);
+  }
+
   .sticky-cta {
     position: fixed;
     bottom: 1.25rem;
@@ -670,6 +763,16 @@
     box-shadow: 0 6px 24px rgba(22, 163, 74, 0.5);
   }
 
+  .dark .sticky-cta {
+    background: #16A34A;
+    box-shadow: 0 4px 20px rgba(22, 163, 74, 0.3);
+  }
+
+  .dark .sticky-cta:hover {
+    background: #22C55E;
+    box-shadow: 0 6px 24px rgba(34, 197, 94, 0.4);
+  }
+
   .timeline-connector {
     position: absolute;
     top: 20px;
@@ -684,19 +787,16 @@
   .slide-up { animation: slideUp var(--transition-normal) ease; }
   .scale-in { animation: scaleIn var(--transition-normal) ease; }
 
-  /* ✅ NEW: Font loading optimization to prevent CLS */
   .font-poppins {
     font-family: var(--font-poppins), system-ui, -apple-system, sans-serif;
     font-display: swap;
   }
 
-  /* ✅ NEW: Prevent CLS from dynamic content */
   .reserve-space {
     min-height: 200px;
     contain: layout style;
   }
 
-  /* ✅ NEW: Image placeholder styles */
   .img-placeholder {
     background: linear-gradient(90deg, var(--color-border) 0%, var(--color-bg-alt) 50%, var(--color-border) 100%);
     background-size: 200% 100%;
@@ -704,7 +804,6 @@
   }
 }
 
-/* ✅ PERFORMANCE: GPU-accelerated keyframes */
 @keyframes loading-shimmer { 
   0% { background-position: 200% 0; } 
   100% { background-position: -200% 0; } 
