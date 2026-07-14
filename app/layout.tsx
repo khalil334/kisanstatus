@@ -34,19 +34,18 @@ export const viewport: Viewport = {
   initialScale: 1,
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: '#16A34A' },
-    { media: '(prefers-color-scheme: dark)', color: '#14532d' },
+    { media: '(prefers-color-scheme: dark)', color: '#050D05' },
   ],
 };
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  // ✅ DYNAMIC TITLE: Har page ke title ke aage " | KisanStatus" lagayega
   title: {
     default: `${SITE_NAME} — ${SITE_TAGLINE}`,
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
-  keywords: GLOBAL_KEYWORDS, // ✅ GLOBAL KEYWORDS ADDED
+  keywords: GLOBAL_KEYWORDS,
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   creator: AUTHOR_NAME,
   publisher: SITE_NAME,
@@ -109,52 +108,23 @@ export default function RootLayout({
   return (
     <html lang="hi-IN" suppressHydrationWarning className={poppins.variable}>
       <head>
-        {/* ✅ PRECONNECT: Sirf essential third-party resources */}
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.google.com" />
         <link rel="dns-prefetch" href="https://vercel.live" />
-
-        {/* ✅ HERO IMAGE PRELOAD - LCP ke liye critical */}
-        <link
-          rel="preload"
-          as="image"
-          href="/hero-wheat-field.webp"
-          type="image/webp"
-          fetchPriority="high"
-        />
-
-        {/* Favicon & Manifest */}
+        <link rel="preload" as="image" href="/hero-wheat-field.webp" type="image/webp" fetchPriority="high" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
         <link rel="manifest" href="/site.webmanifest" />
-
-        {/* ✅ CRITICAL CSS INLINE - Render blocking reduce karne ke liye */}
-        <style
-          dangerouslySetInnerHTML={{
-            __html: `
-              body {
-                margin: 0;
-                font-family: var(--font-poppins, system-ui, -apple-system, sans-serif);
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
-              }
-              .min-h-screen { min-height: 100vh; }
-              .flex { display: flex; }
-              .flex-col { flex-direction: column; }
-              .flex-1 { flex: 1 1 0%; }
-              
-              @keyframes pulse {
-                0%, 100% { opacity: 1; }
-                50% { opacity: 0.5; }
-              }
-              .animate-pulse {
-                animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-              }
-            `,
-          }}
-        />
-
-        {/* ✅ CONSOLIDATED JSON-LD Schema Markup */}
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            body {
+              margin: 0;
+              font-family: var(--font-poppins, system-ui, -apple-system, sans-serif);
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+            }
+          `,
+        }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -209,31 +179,24 @@ export default function RootLayout({
           }}
         />
       </head>
-
-      <body className="min-h-screen flex flex-col bg-surface text-text-primary antialiased font-sans">
+      <body className="min-h-screen flex flex-col antialiased bg-[var(--color-bg)] text-[var(--color-text)] transition-colors duration-200">
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-green-600 focus:text-white focus:rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[var(--color-primary)] focus:text-white focus:rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
         >
           Skip to main content
         </a>
-
         <LanguageProvider>
           <Header />
-          
           <main id="main-content" className="flex-1 scroll-smooth">
             {children}
           </main>
-          
           <Footer />
         </LanguageProvider>
-
-        {/* ✅ GA4: afterInteractive */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"
         />
-
         <Script
           id="ga4-init"
           strategy="afterInteractive"
@@ -250,8 +213,6 @@ export default function RootLayout({
             `,
           }}
         />
-
-        {/* ✅ Vercel Analytics — Production only */}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
