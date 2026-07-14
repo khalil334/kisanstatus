@@ -3,11 +3,24 @@ import Link from 'next/link';
 import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
 export const metadata: Metadata = {
-  title: `Contact & Support — ${SITE_NAME} | Sampark Karein`,
-  description: `${SITE_NAME} se sampark karein. Website feedback, content correction ya sawaal ke liye email karein — kisanstatus.support@gmail.com`,
+  title: `Contact Us — ${SITE_NAME} | Sampark Karein & Support`,
+  description: `KisanStatus se sampark karein. Website feedback, content correction, ya kisi bhi sawaal ke liye humein email karein. Hum 24-48 ghante mein reply karte hain.`,
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   alternates: { canonical: `${SITE_URL}/contact` },
-  robots: { index: true, follow: false },
+  robots: { index: true, follow: true },
+  openGraph: {
+    title: `Contact Us — ${SITE_NAME} | Sampark Karein`,
+    description: `KisanStatus se sampark karein. Website feedback, content correction, ya kisi bhi sawaal ke liye humein email karein.`,
+    type: 'website',
+    url: `${SITE_URL}/contact`,
+    siteName: SITE_NAME,
+    locale: 'hi_IN',
+  },
+  twitter: {
+    card: 'summary',
+    title: `Contact Us — ${SITE_NAME}`,
+    description: `KisanStatus se sampark karein. Website feedback, content correction, ya kisi bhi sawaal ke liye humein email karein.`,
+  },
 };
 
 const OFFICIAL_CONTACTS = [
@@ -18,18 +31,31 @@ const OFFICIAL_CONTACTS = [
 ];
 
 const HELP_ITEMS = [
-  { icon: '✅', text: 'Website content mein galti milne par', canHelp: true },
-  { icon: '✅', text: 'Naye article ka suggestion', canHelp: true },
-  { icon: '✅', text: 'Technical feedback ya bug report', canHelp: true },
-  { icon: '✅', text: 'Collaboration ya partnership', canHelp: true },
-  { icon: '❌', text: 'PM Kisan payment problems (official helpline call karo)', canHelp: false },
-  { icon: '❌', text: 'Aadhaar/bank account update (Agriculture office jao)', canHelp: false },
+  { icon: '✅', text: 'Website content mein koi galti ya sudhaar suggest karna ho', canHelp: true },
+  { icon: '✅', text: 'Naye article ya topic ka suggestion dena ho', canHelp: true },
+  { icon: '✅', text: 'Website se juda technical feedback ya bug report karna ho', canHelp: true },
+  { icon: '✅', text: 'Collaboration ya partnership ke liye baat karni ho', canHelp: true },
+  { icon: '❌', text: 'PM Kisan payment ya account se judi samasyayein (iske liye official helpline par call karein)', canHelp: false },
+  { icon: '❌', text: 'Aadhaar ya bank account update karna ho (iske liye nazdeeki Agriculture office ya CSC centre jaayein)', canHelp: false },
 ];
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Contact & Support', item: `${SITE_URL}/contact` },
+  ],
+};
 
 export default function ContactPage() {
   return (
     <>
-      {/* Header */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
       <div className="bg-[var(--color-primary)] py-10">
         <div className="container-site max-w-3xl">
           <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center" aria-label="Breadcrumb">
@@ -40,30 +66,34 @@ export default function ContactPage() {
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-2">
             Contact & Support
           </h1>
-          <p className="text-green-200 text-sm">Sawaal? Feedback? Hum yahan hain.</p>
+          <p className="text-green-200 text-sm">Koi sawaal, feedback ya suggestion hai? Hum aapki madad ke liye yahan hain.</p>
         </div>
       </div>
 
       <div className="container-site max-w-3xl py-10">
 
-        {/* Notice */}
         <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-300 dark:border-amber-700 rounded-xl mb-8 text-sm text-amber-900 dark:text-amber-300">
-          <strong>⚠️ Zaruri Suchna:</strong> {SITE_NAME} ek informational portal hai, Government se affiliated nahi hai.
-          PM Kisan payment ya official problems ke liye seedha{' '}
+          <strong>⚠️ Zaruri Suchna:</strong> {SITE_NAME} ek independent informational portal hai aur kisi sarkari vibhag se affiliated nahi hai.
+          PM Kisan payment, status ya kisi bhi official kaam ke liye seedha{' '}
           <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer" className="underline font-bold hover:text-amber-700 dark:hover:text-amber-200">pmkisan.gov.in ↗</a>{' '}
-          ya helpline <strong>155261</strong> use karein.
+          ya helpline <strong>155261</strong> ka hi upyog karein.
         </div>
 
-        {/* Email + Team Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          {/* Email */}
           <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
             <h2 className="text-lg font-black text-[var(--color-text)] mb-3 flex items-center gap-2">
               <span aria-hidden="true">📧</span> Email Karein
             </h2>
             <p className="text-sm text-[var(--color-text-muted)] mb-4 leading-relaxed">
-              Website feedback, content correction, ya collaboration ke liye email karein.
-              Hum 24–48 ghante mein reply karte hain.
+              Website feedback, content correction, ya collaboration ke liye humein email karein. 
+              Hum aamtaur par 24–48 ghante ke andar reply karne ki koshish karte hain.
+            </p>
+            <p className="text-sm text-[var(--color-text-muted)] mb-4 leading-relaxed">
+              Agar aapko kisi specific topic par jankari chahiye, toh pehle hamare{' '}
+              <Link href="/articles" className="text-[var(--color-primary)] font-bold underline hover:text-green-700 dark:hover:text-green-400">
+                Verified Guides Section
+              </Link>{' '}
+              ko zaroor check karein.
             </p>
             <a
               href="mailto:kisanstatus.support@gmail.com"
@@ -73,7 +103,6 @@ export default function ContactPage() {
             </a>
           </div>
 
-          {/* Team */}
           <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
             <h2 className="text-lg font-black text-[var(--color-text)] mb-3 flex items-center gap-2">
               <span aria-hidden="true">👨‍🌾</span> Hamari Team
@@ -96,13 +125,12 @@ export default function ContactPage() {
           </div>
         </div>
 
-        {/* Official Helpline */}
         <section className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-2xl p-6 mb-8">
           <h2 className="text-lg font-black text-[var(--color-text)] mb-4 flex items-center gap-2">
             <span aria-hidden="true">🏛️</span> PM Kisan Official Helpline
           </h2>
           <p className="text-sm text-[var(--color-text-muted)] mb-4">
-            Payment, status, enrollment ya koi bhi sarkari kaam ke liye seedha official se sampark karein:
+            Payment, status, enrollment ya kisi bhi sarkari kaam ke liye seedha official sources se hi sampark karein:
           </p>
           <div className="space-y-3">
             {OFFICIAL_CONTACTS.map((item) => (
@@ -123,7 +151,6 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* What We Help With */}
         <section className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
           <h2 className="text-lg font-black text-[var(--color-text)] mb-4">Hum Kis Mein Help Kar Sakte Hain?</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
