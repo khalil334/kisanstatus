@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
-import { useState } from 'react';
 
 // ── SEO Metadata ──────────────────────────────────────────────
 export const metadata: Metadata = {
@@ -25,7 +24,7 @@ export const metadata: Metadata = {
     siteName: 'KisanStatus.com',
     images: [
       {
-        url: '/images/kisanguides/mushroom-kheti/Mushroomhero.webp',
+        url: '/images/kisanguides/Mushroomhero.webp',
         width: 1200,
         height: 630,
         alt: 'Oyster Mushroom Farming Setup in Dark Room',
@@ -36,11 +35,11 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Mushroom Kheti 2026: Complete Guide',
     description: 'Janein mushroom farming kaise karein, NHB subsidy, aur 100-bag unit ka realistic profit.',
-    images: ['/images/kisanguides/mushroom-kheti/Mushroomhero.webp'],
+    images: ['/images/kisanguides/Mushroomhero.webp'],
   },
 };
 
-// ─ Schema Markup (JSON-LD) ───────────────────────────────────
+// ── Schema Markup (JSON-LD) ───────────────────────────────────
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -126,75 +125,7 @@ const jsonLd = {
   ],
 };
 
-// FAQ Item Component
-interface FAQItemProps {
-  question: string;
-  answer: string;
-  isOpen: boolean;
-  onToggle: () => void;
-}
-
-const FAQItem: React.FC<FAQItemProps> = ({ question, answer, isOpen, onToggle }) => {
-  return (
-    <div className="border border-gray-200 dark:border-gray-700 rounded-lg mb-3 overflow-hidden bg-white dark:bg-gray-800 shadow-sm">
-      <button
-        onClick={onToggle}
-        className="w-full px-5 py-4 text-left flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-500"
-        aria-expanded={isOpen}
-      >
-        <span className="font-semibold text-gray-900 dark:text-gray-100 pr-8">
-          {question}
-        </span>
-        <svg
-          className={`w-5 h-5 text-green-600 dark:text-green-400 transform transition-transform duration-300 flex-shrink-0 ${
-            isOpen ? 'rotate-180' : ''
-          }`}
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-        </svg>
-      </button>
-      <div
-        className={`overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-        }`}
-      >
-        <div className="px-5 pb-4 pt-2 text-gray-700 dark:text-gray-300 text-sm leading-relaxed border-t border-gray-100 dark:border-gray-700">
-          {answer}
-        </div>
-      </div>
-    </div>
-  );
-};
-
 export default function MushroomKheti() {
-  const [openFAQ, setOpenFAQ] = useState<number | null>(null);
-
-  const faqs = [
-    {
-      question: 'Kya mushroom farming se kamre mein smell ya badboo aati hai?',
-      answer: 'Proper sterilization aur ventilation hone par smell minimal hoti hai. Par agar contamination ho jaye (green mold ya bacteria), toh foul smell aa sakti hai. Spent straw ko time par hata dena chahiye - agar 3-4 din se zyada pada rahe toh decomposition se smell aa sakti hai. Achhi ventilation aur regular cleaning se yeh problem avoid ki ja sakti hai.',
-    },
-    {
-      question: 'Kya bina AC ke button mushroom ki kheti ho sakti hai?',
-      answer: 'Technically possible hai par commercially viable nahi. Button mushroom ko 14-18°C constant temperature chahiye. North India ke plains mein garmiyon mein 40-45°C tak temperature hota hai. Cooler ya evaporative cooling se 3-5 degree tak hi kami la sakte hain, jo kaafi nahi hai. Himachal, Uttarakhand jaise pahadi ilaqon mein bina AC ke ho sakta hai, par plains mein AC mandatory hai - jiska electricity bill ₹15,000-25,000 mahina aa sakta hai.',
-    },
-    {
-      question: 'Pehli flush fail ho jaye ya contamination ho jaye toh kya karein?',
-      answer: 'Sabse pehle affected bags ko turant isolate karein aur kamre se bahar nikal dein. Baaki bags ko check karein - agar mycelium white aur healthy hai toh doosri flush aa sakti hai. Sterilization dobara karein (formalin spray), ventilation badhayein, aur humidity adjust karein. Pehli flush fail hone par discourage na hon - yeh learning curve ka part hai. Agli batch mein sterilization aur spawning process ko aur careful karein.',
-    },
-    {
-      question: 'Kya mushroom farming mein insurance ya crop protection scheme hai?',
-      answer: 'Abhi mushroom farming ke liye dedicated crop insurance scheme limited hai. Kuch states mein horticulture crops ke under coverage mil sakta hai, par contamination ya temperature fluctuation jaise risks generally cover nahi hote. PM Fasal Bima Yojana (PMFBY) mostly field crops ke liye hai. Isliye risk management ke liye proper training, quality spawn, aur gradual scaling hi sabse achha protection hai. Kuch private insurers horticulture ventures ke liye policies offer karte hain - nazdeeki insurance company se inquire karein.',
-    },
-  ];
-
-  const toggleFAQ = (index: number) => {
-    setOpenFAQ(openFAQ === index ? null : index);
-  };
-
   return (
     <article className="max-w-3xl mx-auto px-4 py-8 text-gray-800 leading-relaxed">
       {/* Schema Injection */}
@@ -205,7 +136,7 @@ export default function MushroomKheti() {
 
       {/* Image 1: Hero Image */}
       <Image 
-        src="/images/kisanguides/mushroom-kheti/Mushroomhero.webp" 
+        src="/images/kisanguides/Mushroomhero.webp" 
         alt="Oyster Mushroom Farming Setup in Dark Room - NHB Subsidy Guide" 
         width={1200} 
         height={630} 
@@ -227,7 +158,7 @@ export default function MushroomKheti() {
 
       {/* Image 2: Mushroom Varieties */}
       <Image 
-        src="/images/kisanguides/mushroom-kheti/varieties-comparison.webp" 
+        src="/images/kisanguides/varieties-comparison.webp" 
         alt="Different Mushroom Varieties - Oyster, Button, Milky Comparison" 
         width={800} 
         height={450} 
@@ -312,7 +243,7 @@ export default function MushroomKheti() {
 
       {/* Image 3: Setup Process */}
       <Image 
-        src="/images/kisanguides/mushroom-kheti/setup-process.webp" 
+        src="/images/kisanguides/setup-process.webp" 
         alt="Mushroom Farming Setup Process - Bag Filling and Spawning" 
         width={800} 
         height={450} 
@@ -430,7 +361,7 @@ export default function MushroomKheti() {
 
       {/* Image 4: Harvesting */}
       <Image 
-        src="/images/kisanguides/mushroom-kheti/harvesting-mushroom.webp" 
+        src="/images/kisanguides/harvesting-mushroom.webp" 
         alt="Fresh Oyster Mushroom Harvesting from Growing Bags" 
         width={800} 
         height={450} 
@@ -570,7 +501,7 @@ export default function MushroomKheti() {
 
       {/* Image 5: Final Products */}
       <Image 
-        src="/images/kisanguides/mushroom-kheti/final-products.webp" 
+        src="/images/kisanguides/final-products.webp" 
         alt="Fresh and Dried Mushroom Products Ready for Market" 
         width={800} 
         height={450} 
@@ -702,7 +633,7 @@ export default function MushroomKheti() {
       <ul className="list-disc pl-6 mb-4 space-y-2">
         <li>Kam jagah (100-200 sq ft) available hai</li>
         <li>Daily 3-4 hours de sakte hain (monitoring zaroori hai)</li>
-        <li>₹50,000-1 lakh initial investment kar sakte hain</li>
+        <li>50,000-1 lakh initial investment kar sakte hain</li>
         <li>Technical details seekhne ki ichha hai</li>
         <li>Urban ya semi-urban area mein hain (market access achha hai)</li>
         <li>Women entrepreneurs (yeh business women ke liye bahut suitable hai)</li>
@@ -724,20 +655,27 @@ export default function MushroomKheti() {
         Agar aap seriously interested hain, toh pehle training lein (5-7 din ka course), phir local successful farmers se milein aur unke challenges samjhein. Uske baad chhote scale (100 bags) se start karein, pehle 2-3 cycles mein practical experience gain karein, aur phir gradually expand karein. Subsidy ka fayda zaroor uthayein, par apni planning subsidy ke bina karein - agar mil gayi toh bonus samjhein. Ek aur important point: <Link href="/organic-farming-guide" className="text-blue-600 hover:underline">organic farming</Link> ka angle bhi consider karein kyunki organic mushroom ka market rate 20-30% zyada milta hai.
       </p>
 
-      {/* FAQ Section - Professional Accordion */}
+      {/* FAQ Section */}
       <h2 id="faq" className="text-2xl font-semibold mt-8 mb-3 text-green-800">
         Frequently Asked Questions (FAQs)
       </h2>
-      <div className="mb-8">
-        {faqs.map((faq, index) => (
-          <FAQItem
-            key={index}
-            question={faq.question}
-            answer={faq.answer}
-            isOpen={openFAQ === index}
-            onToggle={() => toggleFAQ(index)}
-          />
-        ))}
+      <div className="space-y-4 mb-8">
+        <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">1. Kya mushroom farming se kamre mein smell ya badboo aati hai?</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm">Proper sterilization aur ventilation hone par smell minimal hoti hai. Par agar contamination ho jaye (green mold ya bacteria), toh foul smell aa sakti hai. Spent straw ko time par hata dena chahiye - agar 3-4 din se zyada pada rahe toh decomposition se smell aa sakti hai. Achhi ventilation aur regular cleaning se yeh problem avoid ki ja sakti hai.</p>
+        </div>
+        <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">2. Kya bina AC ke button mushroom ki kheti ho sakti hai?</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm">Technically possible hai par commercially viable nahi. Button mushroom ko 14-18°C constant temperature chahiye. North India ke plains mein garmiyon mein 40-45°C tak temperature hota hai. Cooler ya evaporative cooling se 3-5 degree tak hi kami la sakte hain, jo kaafi nahi hai. Himachal, Uttarakhand jaise pahadi ilaqon mein bina AC ke ho sakta hai, par plains mein AC mandatory hai - jiska electricity bill ₹15,000-25,000 mahina aa sakta hai.</p>
+        </div>
+        <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">3. Pehli flush fail ho jaye ya contamination ho jaye toh kya karein?</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm">Sabse pehle affected bags ko turant isolate karein aur kamre se bahar nikal dein. Baaki bags ko check karein - agar mycelium white aur healthy hai toh doosri flush aa sakti hai. Sterilization dobara karein (formalin spray), ventilation badhayein, aur humidity adjust karein. Pehli flush fail hone par discourage na hon - yeh learning curve ka part hai. Agli batch mein sterilization aur spawning process ko aur careful karein.</p>
+        </div>
+        <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">4. Kya mushroom farming mein insurance ya crop protection scheme hai?</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm">Abhi mushroom farming ke liye dedicated crop insurance scheme limited hai. Kuch states mein horticulture crops ke under coverage mil sakta hai, par contamination ya temperature fluctuation jaise risks generally cover nahi hote. PM Fasal Bima Yojana (PMFBY) mostly field crops ke liye hai. Isliye risk management ke liye proper training, quality spawn, aur gradual scaling hi sabse achha protection hai. Kuch private insurers horticulture ventures ke liye policies offer karte hain - nazdeeki insurance company se inquire karein.</p>
+        </div>
       </div>
 
       <p className="mb-6 italic text-gray-600">
