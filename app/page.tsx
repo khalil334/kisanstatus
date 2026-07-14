@@ -13,7 +13,7 @@ import {
 } from '@/lib/site-config';
 
 export const metadata: Metadata = {
-  title: `PM Kisan Status, Farming Guides & Subsidy Info 2026 | ${SITE_NAME}`,
+  title: `PM Kisan Status & Farming Guides 2026 | ${SITE_NAME}`,
   description: SITE_DESCRIPTION,
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   alternates: {
