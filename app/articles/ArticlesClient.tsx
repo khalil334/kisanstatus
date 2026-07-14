@@ -45,7 +45,7 @@ function ArticleImage({ image, emoji, title, priority = false }: { image: string
 function ArticleCard({ article, showNewBadge = false, priority = false }: { article: ArticleMeta; showNewBadge?: boolean; priority?: boolean }) {
   const categoryInfo = CATEGORIES[article.category] as { name: string; nameHi: string; icon: string } | undefined;
   const emoji = categoryInfo?.icon || '📄';
-  const categoryName = categoryInfo?.nameHi || categoryInfo?.name || 'Article';
+  const categoryName = categoryInfo?.nameHi || categoryInfo?.name || 'Guide';
 
   return (
     <Link
@@ -78,7 +78,7 @@ function ArticleCard({ article, showNewBadge = false, priority = false }: { arti
         <div className="flex items-center justify-between mt-3 pt-3 border-t border-[var(--color-border)]">
           <span className="text-[11px] text-[var(--color-text-muted)] font-medium">✍️ KisanStatus Team</span>
           <span className="text-xs font-bold text-green-700 dark:text-green-400 group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
-            Padhein <span aria-hidden="true">→</span>
+            Poora Padhein <span aria-hidden="true">→</span>
           </span>
         </div>
       </div>
@@ -107,7 +107,7 @@ function ArticlesContent({ articles }: { articles: readonly ArticleMeta[] }) {
     articles.forEach(a => { counts[a.category] = (counts[a.category] || 0) + 1; });
 
     const catInfo = activeCategory !== 'all' ? (CATEGORIES[activeCategory as CategorySlug] as { name: string; nameHi: string }) : null;
-    const activeName = catInfo ? catInfo.nameHi : 'Sab Resources';
+    const activeName = catInfo ? catInfo.nameHi : 'Sabhi Verified Guides';
 
     return { latestArticles: latest, remainingArticles: remaining, categoryCounts: counts, activeCategoryName: activeName };
   }, [articles, activeCategory]);
@@ -125,7 +125,7 @@ function ArticlesContent({ articles }: { articles: readonly ArticleMeta[] }) {
             }`}
             aria-current={activeCategory === 'all' ? 'page' : undefined}
           >
-            📚 Sab Dekho ({articles.length})
+            📚 Sabhi Guides ({articles.length})
           </Link>
           {Object.entries(CATEGORIES).map(([slug, cat]) => {
             const count = categoryCounts[slug] || 0;
@@ -152,9 +152,9 @@ function ArticlesContent({ articles }: { articles: readonly ArticleMeta[] }) {
       {latestArticles.length === 0 && remainingArticles.length === 0 && (
         <div className="container-site text-center py-12">
           <div className="text-6xl mb-4" aria-hidden="true">🔍</div>
-          <p className="text-[var(--color-text-muted)] text-lg mb-4">Is category mein abhi koi resource nahi mila.</p>
+          <p className="text-[var(--color-text-muted)] text-lg mb-4">Is category mein abhi koi guide available nahi hai.</p>
           <Link href="/articles" className="text-green-700 dark:text-green-400 font-bold hover:underline inline-flex items-center gap-2">
-            ← Sab Resources Dekho
+            ← Sabhi Guides Dekhein
           </Link>
         </div>
       )}
@@ -163,7 +163,7 @@ function ArticlesContent({ articles }: { articles: readonly ArticleMeta[] }) {
         <section className="mb-12" aria-labelledby="new-heading">
           <div className="flex items-center gap-3 mb-5">
             <span className="text-xl" aria-hidden="true">✨</span>
-            <h2 id="new-heading" className="text-lg font-black text-[var(--color-text)]">Naye Articles</h2>
+            <h2 id="new-heading" className="text-lg font-black text-[var(--color-text)]">Naye aur Latest Updates</h2>
             <span className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-xs font-bold px-2 py-0.5 rounded-full">
               {latestArticles.length} latest
             </span>
@@ -227,10 +227,10 @@ export default function ArticlesClient({ articles }: { articles: readonly Articl
             📚 Kisan Resources Hub
           </span>
           <h1 id="hero-heading" className="text-2xl md:text-4xl font-black text-white mb-3 leading-tight">
-            PM Kisan Guides & Resources 2026
+            PM Kisan aur Krishi Yojanaon ki Verified Guides (2026)
           </h1>
           <p className="text-green-200 text-sm md:text-base max-w-xl mx-auto mb-5 leading-relaxed">
-            {articles.length}+ free verified guides — status check, payment fix, crop insurance, soil health, mandi bhav — sab simple Hinglish mein.
+            {articles.length}+ free aur verified guides — jaise status check, payment fix, crop insurance, soil health, aur mandi bhav. Sabhi jankari bilkul saral Hinglish mein, step-by-step.
           </p>
           <a
             href="https://pmkisan.gov.in"
@@ -238,7 +238,7 @@ export default function ArticlesClient({ articles }: { articles: readonly Articl
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 bg-white/15 hover:bg-white/25 border border-white/30 text-white text-xs font-bold px-3 py-1.5 rounded-full transition-colors backdrop-blur-sm focus:ring-2 focus:ring-white focus:outline-none"
           >
-            🏛️ pmkisan.gov.in <span aria-hidden="true">↗</span>
+            🏛️ Official PM Kisan Portal <span aria-hidden="true">↗</span>
           </a>
           <div className="mt-4">
             <Link href="/" className="inline-flex items-center gap-2 text-green-300 hover:text-white text-sm font-bold transition-colors focus:ring-2 focus:ring-green-300 focus:outline-none rounded px-2 py-1">
