@@ -202,7 +202,8 @@ export async function generateMetadata({
   return {
     title: displayTitle, // ✅ Layout.tsx ka template ('%s | KisanStatus') automatically apply hoga
     description: article.desc,
-    keywords: article.keywords, // ✅ DYNAMIC KEYWORDS ADDED
+    // ✅ FIXED: Spread operator (...) use karke readonly array ko mutable array mein convert kiya
+    keywords: [...article.keywords], 
     authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
     alternates: { 
       canonical: url,
@@ -277,7 +278,7 @@ export default async function ArticlePage({
             className="inline-flex items-center gap-2 bg-green-100 hover:bg-green-200 text-green-800 dark:bg-green-900/30 dark:text-green-300 dark:hover:bg-green-900/50 text-sm font-bold px-4 py-2 rounded-full transition-colors focus:ring-2 focus:ring-green-500 focus:outline-none"
             aria-label={`View all ${catName} articles`}
           >
-            <span aria-hidden="true">📂</span> {/* ✅ UX FIX: Icon wapas add kiya */}
+            <span aria-hidden="true">📂</span>
             <span>{catName}</span>
             <span className="text-green-600 dark:text-green-400" aria-hidden="true">→</span>
           </Link>
