@@ -7,6 +7,18 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { GA_MEASUREMENT_ID } from '@/lib/gtag';
 import { LanguageProvider } from '@/lib/LanguageContext';
+import { 
+  SITE_URL, 
+  SITE_NAME, 
+  SITE_TAGLINE, 
+  SITE_DESCRIPTION, 
+  AUTHOR_NAME, 
+  AUTHOR_URL, 
+  DEFAULT_OG_IMAGE, 
+  LOGO_URL, 
+  SUPPORT_EMAIL,
+  GLOBAL_KEYWORDS 
+} from '@/lib/site-config';
 
 const poppins = Poppins({
   subsets: ['latin', 'devanagari'],
@@ -16,10 +28,6 @@ const poppins = Poppins({
   fallback: ['system-ui', 'sans-serif'],
   preload: true,
 });
-
-const SITE_URL = 'https://kisanstatus.com';
-const SITE_NAME = 'KisanStatus';
-const AUTHOR = 'KisanStatus Team';
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -32,13 +40,17 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: 'PM Kisan Samman Nidhi Status Check 2026 — KisanStatus',
-  description:
-    'PM Kisan Samman Nidhi 24vi kist October 2026 mein aane wali hai — ₹2000 seedha bank account mein. Status check karo, eKYC complete karo, beneficiary roster dekho. 100% free guidance Hinglish mein.',
-  authors: [{ name: AUTHOR, url: `${SITE_URL}/about` }],
-  creator: AUTHOR,
+  // ✅ DYNAMIC TITLE: Har page ke title ke aage " | KisanStatus" lagayega
+  title: {
+    default: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: SITE_DESCRIPTION,
+  keywords: GLOBAL_KEYWORDS, // ✅ GLOBAL KEYWORDS ADDED
+  authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
+  creator: AUTHOR_NAME,
   publisher: SITE_NAME,
-  category: 'Agriculture',
+  category: 'Agriculture & Farming',
   alternates: {
     canonical: SITE_URL,
     languages: {
@@ -51,14 +63,14 @@ export const metadata: Metadata = {
     locale: 'hi_IN',
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: 'PM Kisan Samman Nidhi Status Check 2026 — KisanStatus',
-    description: 'PM Kisan Samman Nidhi 24vi kist October 2026 mein aane wali hai — ₹2000 seedha bank account mein.',
+    title: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    description: SITE_DESCRIPTION,
     images: [
       {
-        url: '/og-image.webp',
+        url: DEFAULT_OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: 'KisanStatus - PM Kisan Samman Nidhi Portal 2026',
+        alt: `${SITE_NAME} - Indian Agriculture & Farming Guides`,
         type: 'image/webp',
       },
     ],
@@ -67,9 +79,9 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@kisanstatus',
     creator: '@kisanstatus',
-    title: 'PM Kisan Samman Nidhi Status Check 2026 — KisanStatus',
-    description: 'PM Kisan Samman Nidhi 24vi kist October 2026 mein aane wali hai — ₹2000 seedha bank account mein.',
-    images: ['/og-image.webp'],
+    title: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    description: SITE_DESCRIPTION,
+    images: [DEFAULT_OG_IMAGE],
   },
   robots: {
     index: true,
@@ -111,15 +123,6 @@ export default function RootLayout({
           fetchPriority="high"
         />
 
-        {/* ✅ FONT PRELOAD - Critical fonts pehle load hongi */}
-        <link
-          rel="preload"
-          as="font"
-          type="font/woff2"
-          href={`${poppins.style.fontFamily}`}
-          crossOrigin="anonymous"
-        />
-
         {/* Favicon & Manifest */}
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
@@ -129,7 +132,6 @@ export default function RootLayout({
         <style
           dangerouslySetInnerHTML={{
             __html: `
-              /* Critical above-the-fold styles */
               body {
                 margin: 0;
                 font-family: var(--font-poppins, system-ui, -apple-system, sans-serif);
@@ -141,14 +143,6 @@ export default function RootLayout({
               .flex-col { flex-direction: column; }
               .flex-1 { flex: 1 1 0%; }
               
-              /* Prevent CLS for hero image */
-              .hero-image-container {
-                aspect-ratio: 2/1;
-                width: 100%;
-                position: relative;
-              }
-              
-              /* Loading skeleton */
               @keyframes pulse {
                 0%, 100% { opacity: 1; }
                 50% { opacity: 0.5; }
@@ -170,7 +164,7 @@ export default function RootLayout({
                 '@type': 'WebSite',
                 name: SITE_NAME,
                 url: SITE_URL,
-                description: 'PM Kisan Samman Nidhi verification, eKYC guide, beneficiary roster — India ka free PM Kisan resource portal.',
+                description: SITE_DESCRIPTION,
                 inLanguage: 'hi-IN',
                 potentialAction: {
                   '@type': 'SearchAction',
@@ -188,26 +182,27 @@ export default function RootLayout({
                 url: SITE_URL,
                 logo: {
                   '@type': 'ImageObject',
-                  url: `${SITE_URL}/logo.webp`,
+                  url: LOGO_URL,
                   width: 512,
                   height: 512,
                 },
                 foundingDate: '2024',
-                description: 'Free PM Kisan Samman Nidhi resource portal for Indian cultivators.',
+                description: SITE_DESCRIPTION,
                 contactPoint: {
                   '@type': 'ContactPoint',
-                  email: 'kisanstatus.support@gmail.com',
+                  email: SUPPORT_EMAIL,
                   contactType: 'customer support',
                   availableLanguage: ['Hindi', 'English'],
                   areaServed: 'IN',
                 },
                 founder: {
                   '@type': 'Organization',
-                  name: AUTHOR,
-                  url: `${SITE_URL}/about`,
+                  name: AUTHOR_NAME,
+                  url: AUTHOR_URL,
                 },
                 sameAs: [
                   'https://www.facebook.com/profile.php?id=61590430994270',
+                  'https://twitter.com/kisanstatus',
                 ],
               },
             ]),
@@ -233,7 +228,7 @@ export default function RootLayout({
           <Footer />
         </LanguageProvider>
 
-        {/* ✅ GA4: afterInteractive - Page interactive hone ke baad */}
+        {/* ✅ GA4: afterInteractive */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"
