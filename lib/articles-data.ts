@@ -570,7 +570,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-11T08:00:00+05:30',
     readingTime: 18,
     schemes: ['nlm', 'pm-kisan'],
-    ogImage: '/images/kisanguides/bakri-palan-hero.webp',
+    ogImage: '/images/kisanguides/bakri-palan-nlm-subsidy.webp', // ✅ FIXED
     relatedSlugs: ['PmKusumYojanaSolarSubsidy2026', 'KisanCreditCardOnlineApply2026', 'PmKisanMaandhanYojanaPension', 'PmfbyCropInsurance2026'],
   },
   {
@@ -591,7 +591,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-11T08:00:00+05:30',
     readingTime: 16,
     schemes: ['nhb', 'pm-fme'],
-    ogImage: '/images/kisanguides/hero.webp',
+    ogImage: '/images/kisanguides/harvesting-mushroom.webp', // ✅ FIXED
     relatedSlugs: ['PmKusumYojanaSolarSubsidy2026', 'KisanCreditCardOnlineApply2026', 'PmKisanMaandhanYojanaPension'],
   },
   {
@@ -654,7 +654,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-11T08:00:00+05:30',
     readingTime: 16,
     schemes: ['smam', 'aif', 'pm-fme'],
-    ogImage: '/images/kisanguides/silage-making-hero.webp',
+    ogImage: '/images/kisanguides/silage-hero.webp', // ✅ FIXED
     relatedSlugs: ['PmKusumYojanaSolarSubsidy2026', 'KisanCreditCardOnlineApply2026', 'PmKisanMaandhanYojanaPension'],
   },
   {
