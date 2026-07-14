@@ -1,16 +1,146 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
+import type { Metadata } from 'next';
+
+// ── SEO Metadata ──────────────────────────────────────────────
+export const metadata: Metadata = {
+  title: 'PM Matsya Sampada Yojana 2026: Machli Palan par 60% Subsidy, Biofloc Technology',
+  description: 'PM Matsya Sampada Yojana ka complete guide. Janein fish farming subsidy kaise lein, biofloc technology, pond setup, aur real profit calculation.',
+  keywords: [
+    'pm matsya sampada yojana',
+    'fish farming subsidy',
+    'matsya sampada benefits',
+    'biofloc technology',
+    'fish pond setup',
+    'aquaculture business'
+  ],
+  authors: [{ name: 'KisanStatus Team' }],
+  openGraph: {
+    title: 'PM Matsya Sampada Yojana 2026: Machli Palan par 60% Subsidy, Biofloc Technology',
+    description: 'PM Matsya Sampada Yojana ka complete guide. Janein fish farming subsidy kaise lein, biofloc technology, pond setup, aur real profit calculation.',
+    type: 'article',
+    locale: 'hi_IN',
+    siteName: 'KisanStatus.com',
+    images: [
+      {
+        url: '/images/kisanguides/fish-farming-hero.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Fish Pond with Rohu and Catla - PM Matsya Sampada Yojana Subsidy Guide',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PM Matsya Sampada Yojana 2026: Complete Guide',
+    description: 'Janein fish farming subsidy kaise lein, biofloc technology, aur pond setup ki ground reality.',
+    images: ['/images/kisanguides/fish-farming-hero.webp'],
+  },
+};
+
+// ── Schema Markup (JSON-LD) ───────────────────────────────────
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': 'https://kisanstatus.com/#organization',
+      name: 'KisanStatus.com',
+      url: 'https://kisanstatus.com',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://kisanstatus.com/logo.webp',
+      },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': 'https://kisanstatus.com/articles/pm-matsya-sampada/#breadcrumb',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kisanstatus.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Articles', item: 'https://kisanstatus.com/articles' },
+        { '@type': 'ListItem', position: 3, name: 'PM Matsya Sampada' },
+      ],
+    },
+    {
+      '@type': 'Article',
+      '@id': 'https://kisanstatus.com/articles/pm-matsya-sampada/#article',
+      headline: 'PM Matsya Sampada Yojana 2026: Machli Palan par 60% Subsidy, Biofloc Technology',
+      description: 'PM Matsya Sampada Yojana ka complete guide. Janein fish farming subsidy kaise lein, biofloc technology, pond setup, aur real profit calculation.',
+      author: {
+        '@type': 'Organization',
+        name: 'KisanStatus Team',
+        url: 'https://kisanstatus.com/about',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'KisanStatus.com',
+        logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.webp' },
+      },
+      datePublished: '2026-01-15',
+      dateModified: '2026-07-14',
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': 'https://kisanstatus.com/articles/pm-matsya-sampada/',
+      },
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': 'https://kisanstatus.com/articles/pm-matsya-sampada/#faq',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Kya kiraye ki zameen par fish farming karne par subsidy milti hai?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Haan, lekin rent agreement kam se kam 7-10 saal ka hona chahiye. Subsidy ke liye aapka pond construction ya setup apni ownership mein hona chahiye. Rent par sirf operational costs cover hote hain.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Kya biofloc technology mein electricity ka kharcha bahut zyada hai?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Haan, biofloc mein aerators 24x7 chalne padte hain. Ek 10-tank setup ka monthly electricity bill ₹3,000 - ₹5,000 tak aa sakta hai. Solar panels lagane se yeh cost kam ki ja sakti hai.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Pehli baar fish farming karne wale ke liye kaunsi technology best hai?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Traditional pond farming sabse best hai beginners ke liye. Isme risk kam hai, technical complexity kam hai, aur PMMSY subsidy bhi ispar zyada milti hai (40-60%).',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Kya fish farming mein insurance available hai?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Kuch states mein PM Fasal Bima Yojana ke under fisheries ko cover kiya ja raha hai. Natural calamities, disease outbreak, aur flood ke liye insurance available hai. Apne zila ke fisheries office se pata karein.',
+          },
+        },
+      ],
+    },
+  ],
+};
 
 export default function PMatsyaSampada() {
   return (
     <article className="max-w-3xl mx-auto px-4 py-8 text-gray-800 leading-relaxed">
+      {/* Schema Injection */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <Image 
-        src="/images/fish-farming/pm-matsya/hero.jpg" 
+        src="/images/kisanguides/fish-farming-hero.webp" 
         alt="Fish Pond with Rohu and Catla - PM Matsya Sampada Yojana Subsidy Guide" 
-        width={800} 
-        height={450} 
-        className="rounded-xl mb-6 shadow-md" 
+        width={1200} 
+        height={630} 
+        priority
+        className="rounded-xl mb-6 shadow-md w-full h-auto object-cover" 
       />
       
       <h1 className="text-3xl font-bold text-gray-900 mb-4">
@@ -18,39 +148,35 @@ export default function PMatsyaSampada() {
       </h1>
       
       <p className="text-lg mb-4 italic">
-        Andhra Pradesh ke West Godavari district mein ek 45 saal ka kisan mila. Uske paas 2 acre zameen thi jo neechi thi - paani bhara rehta tha. Kheti nahi hoti thi. 2021 mein usne PM Matsya Sampada Yojana ke under 4 ponds banwaye. Aaj saal ka ₹15-18 lakh ka turnover hai.
+        Fish farming mein ek common pattern dekha jata hai: pehle saal mein oxygen management ya disease control mein galtiyan hoti hain, jisse lagbhag 20-30% tak crop loss ho sakta hai. Par experience ke saath, doosre-teesre saal tak returns stabilize ho jate hain aur profit consistent hone lagta hai.
       </p>
       
       <p className="mb-6">
-        "Bhai, pehle saal mein 2 ponds mein oxygen kam ho gaya, 30% machliyan mar gayi. ₹80,000 ka loss hua. Par doosre saal se sab control mein aa gaya. Ab saal ka ₹6-7 lakh net profit hota hai," usne bataya.
-      </p>
-      
-      <p className="mb-6">
-        Yeh hai fish farming ki asliyat - paani ki quality, oxygen level, feed management - sab critical hai. Ek galti poori crop khatam kar sakti hai. Par jab sab sahi chala, toh returns bahut achhe hain. Sarkar ki PM Matsya Sampada Yojana (PMMSY) isko aur bhi viable bana deti hai 40-60% subsidy ke saath.
+        Machli palan mein paani ki quality, oxygen level, aur feed management seedha aapke profit se juda hai. Ek chhoti si chook poori crop khatam kar sakti hai. Lekin jab management sahi hota hai, toh returns kaafi achhe milte hain. Isme sarkar ki PM Matsya Sampada Yojana (PMMSY) 40-60% tak ki subsidy dekar is business ko aur bhi viable bana deti hai.
       </p>
 
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
-        Fish Farming Kyun? India Ka Fisheries Sector Boom Par Hai
+        Aquaculture Kyun? India Ka Fisheries Sector Boom Par Hai
       </h2>
       
       <p className="mb-4">
-        India duniya mein machli production mein teesre number par hai. Par domestic consumption abhi bhi demand se kam hai. Per capita fish consumption India mein sirf 5-6 kg/year hai, jabki global average 20 kg hai. Matlab abhi bhi bahut growth potential hai.
+        India duniya mein machli production mein teesre number par hai. Par domestic consumption abhi bhi demand se kam hai. Per capita fish consumption India mein sirf 5-6 kg/year hai, jabki global average 20 kg hai. Matlab isme abhi bhi kaafi growth potential hai.
       </p>
       
       <p className="mb-4">
-        Export ki baat karein toh India saal ka ₹50,000+ crore ka seafood export karta hai. Shrimp (jhinga) sabse zyada export hota hai - USA, Europe, Japan mein. Par domestic market bhi tez grow kar raha hai - urban areas mein log ab protein-rich diet par focus kar rahe hain.
+        Export ki baat karein toh India saal ka ₹50,000+ crore ka seafood export karta hai, jisme shrimp (jhinga) sabse zyada hota hai. Domestic market bhi tez grow kar raha hai kyunki urban areas mein log ab protein-rich diet par zyada focus kar rahe hain.
       </p>
 
       <p className="mb-6">
-        Ek aur advantage - fish farming ko agriculture activity mana jata hai, isliye ispar income tax nahi lagta (agar individual farmer hain). Yeh ek bada financial benefit hai.
+        Ek aur bada fayda yeh hai ki machli palan ko agriculture activity mana jata hai, isliye individual farmers par isse hone wali income par income tax nahi lagta.
       </p>
 
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
-        Kaunsi Machli Paalein? Traditional Ponds vs Biofloc vs RAS - Reality Check
+        Kaunsi Technology Chunein? Traditional Ponds vs Biofloc vs RAS
       </h2>
       
       <p className="mb-4">
-        Fish farming mein 3 main technologies hain. Har ek ki apni cost, complexity, aur returns hain. Naye farmers aksar confuse ho jaate hain ki kaunsa choose karein.
+        Aquaculture mein mukhya roop se 3 technologies use hoti hain. Har ek ki apni cost, complexity, aur returns hain, jisse naye farmers aksar confuse ho jaate hain.
       </p>
 
       <div className="overflow-x-auto mb-6">
@@ -91,12 +217,21 @@ export default function PMatsyaSampada() {
       </div>
 
       <p className="mb-4">
-        Central Institute of Freshwater Aquaculture (CIFA), Bhubaneswar ke scientists ke mutabiq, agar aap pehli baar shuru kar rahe hain toh traditional pond se start lein. Isme risk kam hai, technical complexity kam hai, aur PMMSY subsidy bhi ispar zyada milti hai.
+        Central Institute of Freshwater Aquaculture (CIFA), Bhubaneswar ke scientists ke mutabiq, agar aap pehli baar shuru kar rahe hain toh traditional pond se shuruat karna behtar rehta hai. Isme risk kam hai, technical complexity kam hai, aur PMMSY subsidy bhi ispar zyada milti hai.
       </p>
 
       <p className="mb-6">
         Biofloc technology tab choose karein jab aapke paas zameen kam hai par investment capacity zyada hai. Urban areas mein yeh popular ho rahi hai kyunki kam space mein zyada production hota hai. Par isme electricity cost zyada hai (aerators 24x7 chalte hain), aur technical knowledge zaroori hai.
       </p>
+
+      {/* Image 2: Fish Varieties */}
+      <Image 
+        src="/images/kisanguides/fish-varieties.webp" 
+        alt="Different Fish Species - Rohu, Catla, Mrigal for Fish Farming" 
+        width={800} 
+        height={450} 
+        className="rounded-xl mb-6 shadow-md w-full h-auto object-cover" 
+      />
 
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
         Kitna Paisa Lagega? 1 Acre Pond ka Realistic Budget
@@ -104,6 +239,10 @@ export default function PMatsyaSampada() {
       
       <p className="mb-4">
         Yeh ek 1 acre traditional pond ka budget hai, jisme IMC (Indian Major Carps - Rohu, Catla, Mrigal) pale jayengi.
+      </p>
+
+      <p className="mb-4 text-sm text-gray-600 italic">
+        Note: Neeche diye gaye numbers estimated ranges hain. Yeh aapke local material rates, inflation, aur field conditions ke hisaab se badal sakte hain.
       </p>
 
       <div className="bg-gray-50 p-4 rounded-lg mb-6">
@@ -229,6 +368,15 @@ export default function PMatsyaSampada() {
         label="PMMSY Official Portal - Apply Karein" 
       />
 
+      {/* Image 3: Application Process */}
+      <Image 
+        src="/images/kisanguides/fish-farming-application.webp" 
+        alt="Entrepreneur Applying for Fish Farming Loan and Subsidy" 
+        width={800} 
+        height={450} 
+        className="rounded-xl mb-6 shadow-md w-full h-auto object-cover" 
+      />
+
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
         Step-by-Step Process: Traditional Pond Mein Machli Kaise Paalein?
       </h2>
@@ -275,7 +423,7 @@ export default function PMatsyaSampada() {
       </div>
 
       <p className="mb-6">
-        Ek important baat - composite fish culture (IMC) mein 3 species ek saath pale jati hain kyunki inki feeding habits alag hain. Catla surface feeder hai, Rohu column feeder, Mrigal bottom feeder. Isse pond ki saari space utilize hoti hai aur production maximize hota hai.
+        Composite fish culture (IMC) mein 3 species ek saath paalne ka fayda yeh hai ki inki feeding habits alag hoti hain. Catla surface feeder hai, Rohu column feeder, aur Mrigal bottom feeder. Isse pond ki saari space utilize hoti hai aur production naturally maximize hota hai.
       </p>
 
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
@@ -284,6 +432,10 @@ export default function PMatsyaSampada() {
       
       <p className="mb-4">
         Yeh calculation 1 acre traditional pond ke liye hai, jisme IMC (Rohu, Catla, Mrigal) pale jati hain.
+      </p>
+
+      <p className="mb-4 text-sm text-gray-600 italic">
+        Note: Yeh figures average estimates hain. Actual production, market rates, aur expenses aapke management aur local conditions par depend karte hain.
       </p>
 
       <div className="overflow-x-auto mb-6">
@@ -357,19 +509,28 @@ export default function PMatsyaSampada() {
         Agar aap high-value fish paalte hain (jaise Pangasius, Tilapia, ya Ornamental fish), toh margins 2-3x zyada ho sakte hain. Par inki market access aur technical knowledge bhi zyada chahiye.
       </p>
 
+      {/* Image 4: Packaged Fish Products */}
+      <Image 
+        src="/images/kisanguides/fish-products-market.webp" 
+        alt="Fresh and Processed Fish Products Ready for Market Sale" 
+        width={800} 
+        height={450} 
+        className="rounded-xl mb-6 shadow-md w-full h-auto object-cover" 
+      />
+
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-red-700">
         Real Risks - Jo Koi Nahi Batata
       </h2>
       
       <p className="mb-4">
-        Fish farming sunne mein simple lagti hai, par risks bahut hain. Yeh woh cheezein hain jo aapko pata honi chahiye:
+        Machli palan shuru mein aasaan lagta hai, par isme risks kaafi hain. In baaton ka dhyan rakhna zaroori hai:
       </p>
 
       <div className="space-y-4 mb-6">
         <div className="border-l-4 border-red-500 pl-4">
           <h3 className="font-bold text-lg">Disease Outbreak (Sabse Bada Risk)</h3>
           <p className="mt-2">
-            Bacterial infections (Aeromonas, Vibrio), fungal infections, aur parasitic infections poori crop khatam kar sakte hain. 2022 mein Andhra Pradesh mein shrimp farms mein White Spot Syndrome se 40-50% crop loss hua tha. Biosecurity measures zaroori hain - pond disinfection, healthy fingerlings, aur water quality management.
+            Bacterial infections, fungal infections, aur parasitic infections poori crop khatam kar sakte hain. Kuch saalon mein disease outbreaks se significant crop losses hue hain. Biosecurity measures zaroori hain - pond disinfection, healthy fingerlings, aur water quality management.
           </p>
         </div>
 
@@ -383,21 +544,21 @@ export default function PMatsyaSampada() {
         <div className="border-l-4 border-red-500 pl-4">
           <h3 className="font-bold text-lg">Flood aur Drought</h3>
           <p className="mt-2">
-            Heavy rain mein pond overflow ho sakta hai - machliyan bah nikalti hain. Ya phir drought mein paani kam ho jata hai - oxygen aur temperature problems aati hain. 2023 mein Assam mein floods se kai fish farms khatam ho gaye the. Location selection aur pond design bahut zaroori hai.
+            Heavy rain mein pond overflow ho sakta hai - machliyan bah nikalti hain. Ya phir drought mein paani kam ho jata hai - oxygen aur temperature problems aati hain. Kuch saalon mein baadh (floods) se kai fish farms ko nuksan hua hai. Location selection aur pond design bahut zaroori hai.
           </p>
         </div>
 
         <div className="border-l-4 border-red-500 pl-4">
           <h3 className="font-bold text-lg">Feed Cost Volatility</h3>
           <p className="mt-2">
-            Fish feed ka cost total expense ka 60-70% hota hai. Agar soyabean ya fish meal ke prices badh gaye, toh feed mehnga ho jata hai. 2022 mein feed prices 30-40% badh gaye the. Apna feed mill lagana ek option hai, par usme bhi investment lagti hai.
+            Fish feed ka cost total expense ka 60-70% hota hai. Agar soyabean ya fish meal ke prices badh gaye, toh feed mehnga ho jata hai. Kuch saalon mein feed prices mein significant badhotri hui hai. Apna feed mill lagana ek option hai, par usme bhi investment lagti hai.
           </p>
         </div>
 
         <div className="border-l-4 border-red-500 pl-4">
           <h3 className="font-bold text-lg">Market Price Fluctuation</h3>
           <p className="mt-2">
-            Festival season (Durga Puja, Diwali) mein rates achhe milte hain. Par off-season mein rates 20-30% gir jate hain. Agar aapke paas cold storage nahi hai, toh forced sale karni padti hai. <Link href="/pm-kisan-sampada-yojana" className="text-blue-600 hover:underline">PM Kisan Sampada Yojana</Link> ke under cold storage par subsidy milti hai.
+            Festival season (Durga Puja, Diwali) mein rates achhe milte hain. Par off-season mein rates lagbhag 20-30% gir jate hain. Agar aapke paas cold storage nahi hai, toh forced sale karni padti hai. <Link href="/pm-kisan-sampada-yojana" className="text-blue-600 hover:underline">PM Kisan Sampada Yojana</Link> ke under cold storage par subsidy milti hai.
           </p>
         </div>
 
@@ -414,7 +575,7 @@ export default function PMatsyaSampada() {
       </h2>
       
       <p className="mb-4">
-        Fish farming mein technical knowledge bahut zaroori hai. Bina training ke aap water quality management, disease diagnosis, aur feeding techniques nahi seekh payenge. Result? Pehle hi cycle mein loss.
+        Machli palan mein technical knowledge bahut zaroori hai. Bina proper training ke water quality management, disease diagnosis, aur feeding techniques seekhna mushkil hota hai, jisse pehle hi cycle mein nuksan ho sakta hai.
       </p>
 
       <p className="mb-4">
@@ -490,12 +651,21 @@ export default function PMatsyaSampada() {
         Integrated farming se aap multiple income streams create kar sakte hain. Ek acre pond + poultry + vegetables se saal ka ₹8-10 lakh tak ho sakta hai.
       </p>
 
+      {/* Image 5: Documents Checklist */}
+      <Image 
+        src="/images/kisanguides/fish-farming-documents.webp" 
+        alt="Fish Farming Application Documents - Aadhaar, PAN, Land Records" 
+        width={800} 
+        height={450} 
+        className="rounded-xl mb-6 shadow-md w-full h-auto object-cover" 
+      />
+
       <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
         Kya Aapke Liye Sahi Hai? Final Decision Framework
       </h2>
       
       <p className="mb-4">
-        Fish farming unke liye hai jo:
+        Yeh business unke liye behtar hai jo:
       </p>
       
       <ul className="list-disc pl-6 mb-4 space-y-2">
@@ -509,7 +679,7 @@ export default function PMatsyaSampada() {
       </ul>
 
       <p className="mb-4">
-        Fish farming unke liye nahi hai jo:
+        Yeh business unke liye nahi hai jo:
       </p>
       
       <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -529,12 +699,35 @@ export default function PMatsyaSampada() {
       </p>
 
       <p className="mb-6">
-        Ek aur important point: <Link href="/fasal-bima-yojana" className="text-blue-600 hover:underline">Fasal Bima Yojana (PMFBY)</Link> ke under ab fisheries ko bhi cover kiya ja raha hai kuch states mein. Apne zila ke fisheries office se pata karein ki aapke area mein insurance available hai ya nahi. Natural calamities mein yeh bahut kaam aata hai.
+        Ek aur point: <Link href="/fasal-bima-yojana" className="text-blue-600 hover:underline">Fasal Bima Yojana (PMFBY)</Link> ke under ab fisheries ko bhi cover kiya ja raha hai kuch states mein. Apne zila ke fisheries office se pata karein ki aapke area mein insurance available hai ya nahi. Natural calamities mein yeh bahut kaam aata hai.
       </p>
 
       <p className="mb-6">
-        Agar aap seriously interested hain, toh pehle apne local successful fish farmer se milein. Unse baat karein, unke challenges samjhein. Phir training lein. Phir chhote scale par start karein. Fish farming ek profitable business hai - agar sahi se kiya jaye, toh life-long income de sakta hai.
+        Agar aap isme serious hain, toh pehle apne ilaake ke kisi experienced machli palak se milein aur unke challenges samjhein. Uske baad training lein aur chhote scale par shuruat karein. Sahi planning aur mehnat se yeh ek sustainable income source ban sakta hai.
       </p>
+
+      {/* FAQ Section */}
+      <h2 id="faq" className="text-2xl font-semibold mt-8 mb-3 text-green-800">
+        Frequently Asked Questions (FAQs)
+      </h2>
+      <div className="space-y-4 mb-8">
+        <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">1. Kya kiraye ki zameen par fish farming karne par subsidy milti hai?</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm">Haan, lekin rent agreement kam se kam 7-10 saal ka hona chahiye. Subsidy ke liye aapka pond construction ya setup apni ownership mein hona chahiye. Rent par sirf operational costs cover hote hain.</p>
+        </div>
+        <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">2. Kya biofloc technology mein electricity ka kharcha bahut zyada hai?</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm">Haan, biofloc mein aerators 24x7 chalne padte hain. Ek 10-tank setup ka monthly electricity bill ₹3,000 - ₹5,000 tak aa sakta hai. Solar panels lagane se yeh cost kam ki ja sakti hai.</p>
+        </div>
+        <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">3. Pehli baar fish farming karne wale ke liye kaunsi technology best hai?</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm">Traditional pond farming sabse best hai beginners ke liye. Isme risk kam hai, technical complexity kam hai, aur PMMSY subsidy bhi ispar zyada milti hai (40-60%).</p>
+        </div>
+        <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">4. Kya fish farming mein insurance available hai?</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm">Kuch states mein PM Fasal Bima Yojana ke under fisheries ko cover kiya ja raha hai. Natural calamities, disease outbreak, aur flood ke liye insurance available hai. Apne zila ke fisheries office se pata karein.</p>
+        </div>
+      </div>
 
       <p className="mb-6 italic text-gray-600">
         Disclaimer: Yeh article general information ke liye hai. Actual costs, subsidies, aur procedures aapke location aur specific circumstances ke hisaab se vary kar sakte hain. Koi bhi financial decision lene se pehle qualified professionals (fisheries officers, aquaculture experts) se consult karein. Prices aur guidelines change hote rehte hain, isliye latest information ke liye official sources se verify karein.
