@@ -1,22 +1,45 @@
-/**
- * /disclaimer — KisanStatus.com
- * Legal Notice & Affiliation Disclaimer — SEO optimized
- */
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { SITE_URL, SITE_NAME } from '@/lib/site-config';
 
 export const metadata: Metadata = {
-  title: 'Legal Disclaimer – KisanStatus.com is NOT an Official Government Portal',
-  description:
-    'Legal notice for KisanStatus.com — This portal is NOT affiliated with the Government of India or any agrarian welfare scheme. For official information, visit pmkisan.gov.in.',
-  authors: [{ name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' }],
-  alternates: { canonical: 'https://kisanstatus.com/disclaimer' },
-  robots: { index: true, follow: false },
+  title: `Legal Disclaimer – ${SITE_NAME} | Unofficial Portal`,
+  description: `${SITE_NAME} ek independent informational portal hai, sarkar se affiliated nahi. Official jankari ke liye hamesha pmkisan.gov.in par hi vishwas karein.`,
+  authors: [{ name: 'KisanStatus Team', url: `${SITE_URL}/about` }],
+  alternates: { canonical: `${SITE_URL}/disclaimer` },
+  robots: { index: true, follow: true },
+  openGraph: {
+    title: `Legal Disclaimer – ${SITE_NAME} | Unofficial Portal`,
+    description: `${SITE_NAME} ek independent informational portal hai, sarkar se affiliated nahi. Official jankari ke liye hamesha pmkisan.gov.in par hi vishwas karein.`,
+    type: 'website',
+    url: `${SITE_URL}/disclaimer`,
+    siteName: SITE_NAME,
+    locale: 'hi_IN',
+  },
+  twitter: {
+    card: 'summary',
+    title: `Legal Disclaimer – ${SITE_NAME}`,
+    description: `${SITE_NAME} ek independent informational portal hai, sarkar se affiliated nahi. Official jankari ke liye hamesha pmkisan.gov.in par hi vishwas karein.`,
+  },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Legal Notice & Disclaimer', item: `${SITE_URL}/disclaimer` },
+  ],
 };
 
 export default function DisclaimerPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
       <div className="bg-amber-600 py-8">
         <div className="container-site">
           <nav className="text-amber-200 text-sm mb-2" aria-label="Breadcrumb">
@@ -25,50 +48,44 @@ export default function DisclaimerPage() {
             <span className="text-white font-bold">Legal Notice</span>
           </nav>
           <h1 className="text-2xl md:text-3xl font-bold text-white">Legal Notice & Disclaimer</h1>
-          <p className="text-amber-100 text-sm mt-1">Important notice about this portal</p>
+          <p className="text-amber-100 text-sm mt-1">Is portal ke upyog se pehle yeh zaroor padhein</p>
         </div>
       </div>
 
       <div className="container-site py-10">
         <div className="max-w-3xl mx-auto space-y-6">
 
-          {/* Big disclaimer alert */}
           <div className="rounded-xl border-2 border-red-400 bg-red-50 dark:bg-red-900/20 dark:border-red-800 p-6 text-center">
             <div className="text-4xl mb-3" aria-hidden="true">⚠️</div>
             <h2 className="text-xl font-bold text-red-800 dark:text-red-300 mb-3">
-              NOT AN OFFICIAL GOVERNMENT PORTAL
+              YEH KOI OFFICIAL SARKARI PORTAL NAHI HAI
             </h2>
             <p className="text-red-900 dark:text-red-200 text-sm leading-relaxed max-w-xl mx-auto">
-              <strong>This website is NOT affiliated with, endorsed by, or connected to
-              the Government of India, Ministry of Agriculture, or any agrarian welfare
-              scheme</strong> in any way.
+              <strong>Yeh website Bharat Sarkar, Krishi Mantralaya, ya kisi bhi kisan hit yojana se affiliated, endorsed ya connected nahi hai.</strong>
             </p>
             <div className="mt-4">
               <a
                 href="https://pmkisan.gov.in"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary !bg-red-700 hover:!bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-500"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-red-700 hover:bg-red-800 text-white text-sm font-bold rounded-xl transition-colors focus:outline-none focus:ring-2 focus:ring-red-500"
               >
-                Visit Official Portal: pmkisan.gov.in ↗
+                Official Portal Dekhein: pmkisan.gov.in ↗
               </a>
             </div>
           </div>
 
-          {/* Purpose */}
-          <section className="card">
-            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">Purpose of This Portal</h2>
+          <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
+            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">Is Portal Ka Uddeshya (Purpose)</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-3">
-              This is an <strong>independent, informational website</strong> created to
-              help Indian cultivators understand how to check their agrarian welfare scheme
-              beneficiary status. We provide:
+              Yeh ek <strong>independent, informational website</strong> hai, jise Indian kisanon ko unki yojanaon ka beneficiary status check karne mein madad karne ke liye banaya gaya hai. Hum pradaan karte hain:
             </p>
             <ul className="text-sm text-[var(--color-text-muted)] space-y-2">
               {[
-                'Easy-to-understand guides for checking status on the official government portal',
-                'Information about tranche dates and payment amounts',
-                'Step-by-step instructions for digital verification',
-                'General eligibility information about cultivator benefit programs',
+                'Sarkari portal par status check karne ke aasaan aur saral guides',
+                'Kist (tranche) ki dates aur payment amount ki jankari',
+                'Digital verification (eKYC) ki step-by-step jankari',
+                'Kisan hit yojanaon ki general eligibility jankari',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2">
                   <span className="text-[var(--color-primary)] mt-0.5" aria-hidden="true">✓</span>
@@ -78,17 +95,16 @@ export default function DisclaimerPage() {
             </ul>
           </section>
 
-          {/* What we are NOT */}
-          <section className="card">
-            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">What This Portal Does NOT Do</h2>
+          <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
+            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">Yeh Portal Kya Nahi Karta</h2>
             <ul className="text-sm text-[var(--color-text-muted)] space-y-2">
               {[
-                'We do NOT check your scheme status directly — all verification is done on pmkisan.gov.in',
-                'We do NOT collect your biometric credential, bank account, or any personal financial details',
-                'We do NOT process, approve, or reject any government applications',
-                'We do NOT transfer or handle any government payments or funds',
-                'We do NOT represent the Government of India in any capacity',
-                'We do NOT guarantee accuracy of all information — always verify on pmkisan.gov.in',
+                'Hum aapka scheme status direct check nahi karte — sabhi verification sirf pmkisan.gov.in par hoti hai.',
+                'Hum aapka Aadhaar, bank account, ya koi bhi personal/financial detail collect nahi karte.',
+                'Hum kisi bhi sarkari application ko process, approve ya reject nahi karte.',
+                'Hum kisi bhi sarkari payment ya fund ko transfer ya handle nahi karte.',
+                'Hum kisi bhi tarah se Bharat Sarkar ka pratinidhitva (represent) nahi karte.',
+                'Hum jankari ki 100% shuddhta ki guarantee nahi dete — hamesha pmkisan.gov.in par verify karein.',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2">
                   <span className="text-red-500 mt-0.5" aria-hidden="true">✗</span>
@@ -98,94 +114,77 @@ export default function DisclaimerPage() {
             </ul>
           </section>
 
-          {/* Accuracy disclaimer */}
-          <section className="card">
-            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">Accuracy of Information</h2>
+          <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
+            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">Jankari Ki Shuddhta (Accuracy)</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-              Hum poori koshish karte hain ki information sahi rahe,
-              lekin we make no warranties or representations about the completeness, accuracy, or
-              reliability of any content on this portal. Government schemes may change
-              without notice. Always verify current information on the official government
-              website <strong>pmkisan.gov.in</strong>.
+              Hum poori koshish karte hain ki yahan di gayi jankari sahi aur updated rahe, lekin hum is portal ki kisi bhi content ki completeness, accuracy, ya reliability ki koi warranty nahi dete. Sarkari yojanaein bina kisi suchna ke badal sakti hain. Hamesha current jankari ke liye official sarkari website <strong>pmkisan.gov.in</strong> ko hi pramanik maanein.
             </p>
           </section>
 
-          {/* External links */}
-          <section className="card">
-            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">External Links</h2>
+          <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
+            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">Bahari Links (External Links)</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-              This portal contains links to external government websites including pmkisan.gov.in.
-              These links are provided for your convenience and information only. We have no control
-              over the content of those sites and accept no responsibility for them.
+              Is portal par pmkisan.gov.in jaisi bahari sarkari websites ke links shamil ho sakte hain. Yeh links keval aapki suvidha aur jankari ke liye hain. Un sites ki content par hamara koi control nahi hai aur hum unke liye koi jimmedari nahi lete.
             </p>
           </section>
 
-          {/* Liability */}
-          <section className="card">
-            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">Limitation of Liability</h2>
+          <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
+            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">Jimmewari Se Mukti (Limitation of Liability)</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-              This website and its operators shall not be liable for any loss, damage, or
-              inconvenience arising from your use of this portal or reliance on information
-              published here. Any action you take based on content from this site is
-              strictly at your own risk. For official assistance, contact the agrarian welfare
-              helpline at <strong>155261</strong>.
+              Is website aur iske operators ko is portal ke upyog ya yahan prakashit jankari par bharosa karne se hone wale kisi bhi nuksan, kshati, ya asuvidha ke liye jimmedar nahi thahraya ja sakta. Is site ki content ke aadhar par liya gaya koi bhi kadam puri tarah se aapke apne jokhim par hoga. Official sahayata ke liye kisan helpline <strong>155261</strong> par sampark karein.
             </p>
           </section>
 
-          {/* Copyright */}
-          <section className="card">
-            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">Copyright Notice</h2>
+          <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
+            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">Copyright Suchna</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-              The original content, design, and code on this portal is copyright © 2026. All rights reserved. Government data,
-              scheme names, and related
-              information belong to the Government of India.
+              Is portal ki original content, design, aur code ka copyright © 2026 hai. Sarvadhikar surakshit. Sarkari data, yojanaon ke naam, aur sambandhit jankari Bharat Sarkar ke svamitva mein hain.
             </p>
           </section>
 
-          {/* Advertising */}
-          <section className="card">
-            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">Advertising</h2>
+          <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
+            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">Vigyaapan (Advertising)</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-              This portal may display third-party advertisements through Google AdSense.
-              These advertisements help us maintain this free informational service.
-              Advertisements do not constitute endorsement of any products or services.
-              We are not responsible for the content of any advertisements displayed on
-              this site.
+              Is portal par Google AdSense ke madhyam se third-party vigyaapan (ads) pradarshit kiye ja sakte hain. Yeh vigyaapan is free informational service ko banaye rakhne mein madad karte hain. Vigyaapan kisi bhi product ya service ka samarthan nahi hain, aur hum in vigyaapanon ki content ke liye jimmedar nahi hain.
             </p>
           </section>
 
-          {/* Contact */}
-          <section className="card">
-            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">Contact</h2>
+          <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
+            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">Sampark (Contact)</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-2">
-              For questions or concerns about this portal:
+              Is portal se juda koi bhi sawaal ya sujhav ke liye humse sampark karein:
             </p>
-            <p className="text-sm">
+            <p className="text-sm mb-3">
               📧{' '}
               <a href="mailto:kisanstatus.support@gmail.com" className="text-[var(--color-primary)] underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">
                 kisanstatus.support@gmail.com
               </a>
             </p>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 text-sm font-bold text-[var(--color-primary)] hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded"
+            >
+              Contact Page Par Jaayein →
+            </Link>
           </section>
 
-          {/* Official links box */}
-          <div className="news-box">
-            <h3 className="font-semibold text-green-800 dark:text-green-300 mb-2">
-              🔗 Official Government Resources
+          <div className="news-box bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-2xl p-6">
+            <h3 className="font-semibold text-green-800 dark:text-green-300 mb-3 text-lg">
+              🔗 Official Sarkari Resources
             </h3>
-            <ul className="text-sm text-green-900 dark:text-green-200 space-y-1">
+            <ul className="text-sm text-green-900 dark:text-green-200 space-y-2">
               <li>
-                <a href="https://pmkisan.gov.in/" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline font-medium focus:outline-none focus:ring-2 focus:ring-green-500 rounded">
-                  Agrarian Welfare Official Portal — pmkisan.gov.in ↗
+                <a href="https://pmkisan.gov.in/" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline font-medium focus:outline-none focus:ring-2 focus:ring-green-500 rounded inline-flex items-center gap-1">
+                  PM Kisan Official Portal — pmkisan.gov.in ↗
                 </a>
               </li>
               <li>
-                <a href="https://pmkisan.gov.in/BeneficiaryStatus.aspx" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline font-medium focus:outline-none focus:ring-2 focus:ring-green-500 rounded">
-                  Beneficiary Verification ↗
+                <a href="https://pmkisan.gov.in/BeneficiaryStatus.aspx" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline font-medium focus:outline-none focus:ring-2 focus:ring-green-500 rounded inline-flex items-center gap-1">
+                  Beneficiary Status Check ↗
                 </a>
               </li>
               <li>
-                <a href="https://agriculture.gov.in/" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline font-medium focus:outline-none focus:ring-2 focus:ring-green-500 rounded">
+                <a href="https://agriculture.gov.in/" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline font-medium focus:outline-none focus:ring-2 focus:ring-green-500 rounded inline-flex items-center gap-1">
                   Ministry of Agriculture & Farmers Welfare ↗
                 </a>
               </li>
