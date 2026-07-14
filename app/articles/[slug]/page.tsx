@@ -88,24 +88,21 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
   return schemas;
 }
 
-// ✅ Loading skeleton with fixed heights to prevent CLS
+// ✅ CLS (Cumulative Layout Shift) rokne ke liye fixed height ke saath loading skeleton
 function ArticleLoading() {
   return (
     <div className="container-site py-10" style={{ minHeight: '60vh' }}>
       <div className="animate-pulse space-y-6 max-w-4xl mx-auto px-4">
-        {/* Title placeholder */}
         <div className="space-y-3">
           <div className="h-10 bg-gray-200 dark:bg-gray-700 rounded w-3/4" />
           <div className="h-10 bg-gray-200 dark:bg-gray-700 rounded w-1/2" />
         </div>
         
-        {/* Meta info placeholder */}
         <div className="flex gap-4">
           <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-24" />
           <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-32" />
         </div>
         
-        {/* Content placeholders */}
         <div className="space-y-4">
           <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-full" />
           <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-full" />
@@ -113,10 +110,8 @@ function ArticleLoading() {
           <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-4/6" />
         </div>
         
-        {/* Image placeholder */}
         <div className="aspect-video bg-gray-200 dark:bg-gray-700 rounded-xl w-full" />
         
-        {/* More content */}
         <div className="space-y-4">
           <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-full" />
           <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-5/6" />
@@ -127,8 +122,8 @@ function ArticleLoading() {
   );
 }
 
-// ✅ TYPE FIX: `any` use kiya taaki different component types kaam karein
-const COMPONENTS: Record<string, React.ComponentType<any>> = {
+// ✅ TYPE FIX: 'any' ki jagah proper type diya gaya hai taaki code robust rahe
+const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> = {
   // ── EXISTING ARTICLES (18) ───────────────────────────────────
   KisanRinKahaSeLe2026:                       dynamic(() => import('@/components/articles/KisanRinKahaSeLe2026'),                       { loading: ArticleLoading, ssr: true }),
   KisanTractorLoan2026:                       dynamic(() => import('@/components/articles/KisanTractorLoan2026'),                       { loading: ArticleLoading, ssr: true }),
@@ -186,7 +181,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   
-  // ✅ REDIRECT: Purana village wise URL → naya merged article
+  // ✅ REDIRECT: Purane URL ko naye merged article par bhejna (404 bachane ke liye)
   if (slug === 'PmKisanBeneficiaryListVillageWise2026') {
     redirect('/articles/PmKisanBeneficiaryList2026');
   }
@@ -200,9 +195,8 @@ export async function generateMetadata({
   const category = CATEGORIES[article.category];
 
   return {
-    title: displayTitle, // ✅ Layout.tsx ka template ('%s | KisanStatus') automatically apply hoga
+    title: displayTitle, // Layout.tsx ka template ('%s | KisanStatus') yahan automatically apply hoga
     description: article.desc,
-    // ✅ FIXED: Spread operator (...) use karke readonly array ko mutable array mein convert kiya
     keywords: [...article.keywords], 
     authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
     alternates: { 
@@ -222,7 +216,7 @@ export async function generateMetadata({
       images: [{ url: ogImage, width: 1200, height: 630, alt: displayTitle }],
       publishedTime: article.publishedTime,
       modifiedTime: article.modifiedTime,
-      section: category ? category.name : 'Agriculture & Welfare', // ✅ DYNAMIC SECTION
+      section: category ? category.name : 'Agriculture & Welfare',
     },
     twitter: {
       card: 'summary_large_image',
@@ -241,7 +235,7 @@ export default async function ArticlePage({
 }) {
   const { slug } = await params;
   
-  // ✅ REDIRECT: Purana village wise URL → naya merged article
+  // ✅ REDIRECT: Purane URL ko naye merged article par bhejna (404 bachane ke liye)
   if (slug === 'PmKisanBeneficiaryListVillageWise2026') {
     redirect('/articles/PmKisanBeneficiaryList2026');
   }
