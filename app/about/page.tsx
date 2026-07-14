@@ -4,13 +4,13 @@ import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config'
 import { ARTICLES } from '@/lib/articles-data';
 
 export const metadata: Metadata = {
-  title: `About Us – ${SITE_NAME} | PM Kisan Verified Guidance Portal`,
-  description: `${SITE_NAME} ek independent portal hai jo Indian kisanon ke liye PM Kisan verification, eKYC, payment fix, enrollment ki verified guidance provide karta hai. Hamare baare mein jaaniye.`,
+  title: `About Us - ${SITE_NAME} | PM Kisan Verified Guidance`,
+  description: `KisanStatus ek independent portal hai jo Indian kisanon ko PM Kisan verification, eKYC, payment fix aur enrollment ki free, verified Hinglish guidance deta hai.`,
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   alternates: { canonical: `${SITE_URL}/about` },
   openGraph: {
-    title: `About Us – ${SITE_NAME}`,
-    description: 'PM Kisan verified guidance dene wali website ke baare mein jaaniye. Independent, free, Hinglish mein.',
+    title: `About Us - ${SITE_NAME} | PM Kisan Verified Guidance`,
+    description: 'PM Kisan verified guidance dene wali independent website ke baare mein jaaniye. Free, trusted, aur saral Hinglish mein.',
     type: 'website',
     url: `${SITE_URL}/about`,
     siteName: SITE_NAME,
@@ -34,6 +34,25 @@ const orgSchema = {
   description: 'PM Kisan beneficiary verification, installment dates, eKYC, payment solutions — India ka trusted independent agrarian welfare portal.',
 };
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: SITE_URL,
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'About Us',
+      item: `${SITE_URL}/about`,
+    },
+  ],
+};
+
 const TOPICS = [
   { icon: '✅', title: 'Beneficiary Verification', desc: 'Status check aur payment history guide' },
   { icon: '📅', title: 'Installment Dates', desc: 'Har tranche ki date aur update' },
@@ -53,7 +72,14 @@ const STATS = [
 export default function AboutPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
 
       {/* Hero */}
       <div className="bg-[var(--color-primary)] py-10">
@@ -66,7 +92,7 @@ export default function AboutPage() {
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-2">
             About {SITE_NAME}
           </h1>
-          <p className="text-green-200 text-sm">Indian Kisanon Ki Awaaz — Verified Agricultural Guidance</p>
+          <p className="text-green-200 text-sm">Bharatiya Kisanon Ki Awaaz — PM Kisan aur Krishi Yojanaon ki Verified Guidance</p>
         </div>
       </div>
 
@@ -84,12 +110,18 @@ export default function AboutPage() {
               Government of India ya kisi sarkari scheme se officially affiliated nahi hai.
             </p>
             <p>
-              Simple mission: Har kisan ko ghar baithe beneficiary verification, installment dates, eKYC process,
-              aur payment issues ka solution aasani se mile — bina kisi agent ya middleman ke.
+              Humara maksad bilkul seedha hai: Har kisan ko ghar baithe PM Kisan beneficiary verification, 
+              installment dates, eKYC process aur payment issues ka asaan aur tested solution mile — 
+              bina kisi agent ya middleman ke chakkar mein pade.
             </p>
             <p>
-              Kai kisanon ke paas sahi resources ka abhav hota hai. Sarkari portals complex hain, English mein hain,
-              ya slow hain. Hum us gap ko bridge karte hain — <strong>simple Hinglish mein, tested solutions ke saath.</strong>
+              Hum jante hain ki kai baar sarkari portals complex ya English mein hote hain, jisse sahi 
+              jankari tak pahunchne mein dikkat hoti hai. Hum isi kami ko pura karte hain — bilkul saral 
+              Hinglish mein, step-by-step aur verified solutions ke saath. Aap hamare{' '}
+              <Link href="/articles" className="text-[var(--color-primary)] font-bold underline hover:text-green-700 dark:hover:text-green-400">
+                verified guides section
+              </Link>{' '}
+              mein jakar apne sawalon ke jawab dhoondh sakte hain.
             </p>
             <p>
               Sari guidance verified official sources — khaaskar <strong>pmkisan.gov.in</strong> — se li jaati hai
