@@ -161,12 +161,11 @@ const COMPONENTS: Record<string, React.ComponentType<any>> = {
   PmKisanVillageWiseListPdfDownload:          dynamic(() => import('@/components/articles/PmKisanVillageWiseListPdfDownload'),          { loading: ArticleLoading, ssr: true }),
   PmKisanMobileNumberChangeUpdate:            dynamic(() => import('@/components/articles/PmKisanMobileNumberChangeUpdate'),            { loading: ArticleLoading, ssr: true }),
 
-  // ── NEW 10 LOW-COMPETITION FARMING ARTICLES ─────────────────────
+  // ── NEW 9 LOW-COMPETITION FARMING ARTICLES ─────────────────────
   BakriPalanYojana:                           dynamic(() => import('@/components/articles/kisanguides/BakriPalanYojana'),               { loading: ArticleLoading, ssr: true }),
   MushroomKheti:                              dynamic(() => import('@/components/articles/kisanguides/MushroomKheti'),                  { loading: ArticleLoading, ssr: true }),
   MadhumakhiPalan:                            dynamic(() => import('@/components/articles/kisanguides/MadhumakhiPalan'),                { loading: ArticleLoading, ssr: true }),
   PMatsyaSampada:                             dynamic(() => import('@/components/articles/kisanguides/PMatsyaSampada'),                 { loading: ArticleLoading, ssr: true }),
-  PMKisanRejected:                            dynamic(() => import('@/components/articles/kisanguides/PMKisanRejected'),                { loading: ArticleLoading, ssr: true }),
   SilageMaking:                               dynamic(() => import('@/components/articles/kisanguides/SilageMaking'),                   { loading: ArticleLoading, ssr: true }),
   PMFMEYojana:                                dynamic(() => import('@/components/articles/kisanguides/PMFMEYojana'),                    { loading: ArticleLoading, ssr: true }),
   CHCPortal:                                  dynamic(() => import('@/components/articles/kisanguides/CHCPortal'),                      { loading: ArticleLoading, ssr: true }),
