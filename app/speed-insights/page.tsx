@@ -1,31 +1,30 @@
-// app/search/page.tsx
+// app/speed-insights/page.tsx
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { SITE_URL, SITE_NAME } from '@/lib/site-config';
 
 export const metadata: Metadata = {
-  title: `Search — ${SITE_NAME}`,
-  description: 'Search feature abhi update ho raha hai. Aapko homepage par redirect kiya ja raha hai.',
+  title: `Redirecting — ${SITE_NAME}`,
+  description: 'Yeh page ab update ho raha hai. Aapko automatically homepage par redirect kiya ja raha hai.',
   robots: { index: false, follow: false },
   alternates: { canonical: SITE_URL },
 };
 
-export default function SearchPage() {
+export default function SpeedInsightsPage() {
   return (
     <>
       <meta httpEquiv="refresh" content="3;url=/" />
       <div className="min-h-screen bg-[var(--color-bg)] flex items-center justify-center px-4 py-12">
         <div className="max-w-md w-full text-center space-y-6">
-          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-green-100 dark:bg-green-900/30 text-4xl mb-2" aria-hidden="true">
-            🔍
+          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-blue-100 dark:bg-blue-900/30 text-4xl mb-2" aria-hidden="true">
+            ⚡
           </div>
           <div className="space-y-3">
             <h1 className="text-2xl md:text-3xl font-black text-[var(--color-text)]">
-              Search Feature Update Ho Raha Hai
+              Homepage Par Redirect Ho Raha Hai
             </h1>
             <p className="text-[var(--color-text-muted)] text-sm md:text-base leading-relaxed">
-              Behtar search experience ke liye hum is feature ko upgrade kar rahe hain. 
-              Aapko 3 second mein Homepage par redirect kar diya jayega.
+              Yeh page ab update ho raha hai. Aapko 3 second mein automatically Homepage par le jaya jayega.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
