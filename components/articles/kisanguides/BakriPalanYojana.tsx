@@ -1,8 +1,42 @@
 'use client';
 
+import { useState } from 'react';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import Image from 'next/image';
 import Link from 'next/link';
+
+function FaqItem({ question, answer }: { question: string; answer: React.ReactNode }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden bg-white dark:bg-gray-800">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full flex items-center justify-between p-4 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-inset"
+        aria-expanded={isOpen}
+      >
+        <span className="font-semibold text-gray-900 dark:text-gray-100 pr-4">{question}</span>
+        <span
+          className={`text-xl text-green-600 dark:text-green-400 transition-transform duration-300 shrink-0 ${
+            isOpen ? 'rotate-45' : ''
+          }`}
+          aria-hidden="true"
+        >
+          +
+        </span>
+      </button>
+      <div
+        className={`transition-all duration-300 ease-in-out overflow-hidden ${
+          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <div className="p-4 pt-0 text-sm text-gray-700 dark:text-gray-300 leading-relaxed border-t border-gray-100 dark:border-gray-700 mt-0">
+          {answer}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function BakriPalanYojanaNLMS() {
   const articleSchema = {
@@ -25,7 +59,7 @@ export default function BakriPalanYojanaNLMS() {
     dateModified: '2026-01-01',
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': 'https://kisanstatus.com/articles/kisanguides/BakriPalanYojana',
+      '@id': 'https://kisanstatus.com/articles/BakriPalanYojana',
     },
   };
 
@@ -75,6 +109,37 @@ export default function BakriPalanYojanaNLMS() {
       },
     ],
   };
+
+  const faqs = [
+    {
+      q: 'Q1. क्या backyard goat farming के लिए भी subsidy मिलती है?',
+      a: 'NLM-EDP में minimum unit size 100 female + 5 male है। छोटे backyard units के लिए अपनी state ki specific animal husbandry schemes check karein.',
+    },
+    {
+      q: 'Q2. Subsidy मिलने में कितना time लगता है?',
+      a: 'SLEC aur CEC approval mein 2-3 mahine lagte hain. Fund release aur bank transfer mein additional time lagta hai. Total 4-6 months realistic hai.',
+    },
+    {
+      q: 'Q3. क्या loan भी ले सकते हैं subsidy के साथ?',
+      a: (
+        <>
+          Haan, subsidy 50% hai, baaki 50% ke liye bank se term loan le sakte hain. Best options ke liye hamari{' '}
+          <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">
+            Kisan Credit Card Online Apply Guide
+          </Link>{' '}
+          check karein.
+        </>
+      ),
+    },
+    {
+      q: 'Q4. क्या मैं पहले से existing farm expand कर सकता हूं?',
+      a: 'NLM-EDP primarily new units ke liye hai. Existing farm expansion ke liye state Animal Husbandry Department se confirm karein.',
+    },
+    {
+      q: 'Q5. Application reject होने पर दोबारा apply कर सकते हैं?',
+      a: 'Haan, rejection ka reason pata karein, corrections karein aur dobara apply karein. Isme koi restriction nahi hai.',
+    },
+  ];
 
   return (
     <>
@@ -256,37 +321,20 @@ export default function BakriPalanYojanaNLMS() {
         </div>
 
         <div className="space-y-4 my-8 not-prose">
-          <div className="flex gap-4 items-start bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
-            <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">1</div>
-            <div>
-              <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">Portal पर Registration</h4>
-              <p className="text-gray-700 dark:text-gray-300 text-sm">nlm.udyamimitra.in पर जाकर register करें। Mobile number और email verify karne ke baad OTP confirmation hoga.</p>
+          {[
+            { no: 1, title: 'Portal पर Registration', desc: 'nlm.udyamimitra.in पर जाकर register करें। Mobile number और email verify karne ke baad OTP confirmation hoga.' },
+            { no: 2, title: 'Application Form भरें', desc: 'Form kholein. Personal, land, aur project details carefully aur sahi information ke saath fill karein.' },
+            { no: 3, title: 'Documents Upload', desc: 'Scanned copies upload karein. File size guidelines follow karein, PDF format preferred hai.' },
+            { no: 4, title: 'Submit और Acknowledgment', desc: 'Submit karein. Acknowledgment number milega, use save kar lein - future tracking ke liye chahiye.' },
+          ].map((step) => (
+            <div key={step.no} className="flex gap-4 items-start bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
+              <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">{step.no}</div>
+              <div>
+                <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">{step.title}</h4>
+                <p className="text-gray-700 dark:text-gray-300 text-sm">{step.desc}</p>
+              </div>
             </div>
-          </div>
-
-          <div className="flex gap-4 items-start bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
-            <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">2</div>
-            <div>
-              <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">Application Form भरें</h4>
-              <p className="text-gray-700 dark:text-gray-300 text-sm">Form kholein. Personal, land, aur project details carefully aur sahi information ke saath fill karein.</p>
-            </div>
-          </div>
-
-          <div className="flex gap-4 items-start bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
-            <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">3</div>
-            <div>
-              <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">Documents Upload</h4>
-              <p className="text-gray-700 dark:text-gray-300 text-sm">Scanned copies upload karein. File size guidelines follow karein, PDF format preferred hai.</p>
-            </div>
-          </div>
-
-          <div className="flex gap-4 items-start bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
-            <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">4</div>
-            <div>
-              <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">Submit और Acknowledgment</h4>
-              <p className="text-gray-700 dark:text-gray-300 text-sm">Submit karein. Acknowledgment number milega, use save kar lein - future tracking ke liye chahiye.</p>
-            </div>
-          </div>
+          ))}
         </div>
 
         <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
@@ -299,22 +347,17 @@ export default function BakriPalanYojanaNLMS() {
 
         <div className="bg-purple-50 dark:bg-purple-900/20 p-6 rounded-lg my-8 border border-purple-200 dark:border-purple-800 not-prose">
           <div className="space-y-3">
-            <div className="flex items-start gap-3">
-              <span className="font-bold text-purple-700 dark:text-purple-300">1.</span>
-              <p className="text-gray-700 dark:text-gray-300 text-sm"><strong>SLEC Approval:</strong> State Level Executive Committee aapki application review karti hai.</p>
-            </div>
-            <div className="flex items-start gap-3">
-              <span className="font-bold text-purple-700 dark:text-purple-300">2.</span>
-              <p className="text-gray-700 dark:text-gray-300 text-sm"><strong>CEC Approval:</strong> Central Executive Committee final approval deti hai.</p>
-            </div>
-            <div className="flex items-start gap-3">
-              <span className="font-bold text-purple-700 dark:text-purple-300">3.</span>
-              <p className="text-gray-700 dark:text-gray-300 text-sm"><strong>SIDBI Fund Release:</strong> SIDBI funds ko lender/bank ko release karta hai.</p>
-            </div>
-            <div className="flex items-start gap-3">
-              <span className="font-bold text-purple-700 dark:text-purple-300">4.</span>
-              <p className="text-gray-700 dark:text-gray-300 text-sm"><strong>Bank Transfer:</strong> Bank subsidy amount ko beneficiary ke account mein transfer karta hai.</p>
-            </div>
+            {[
+              { label: 'SLEC Approval:', text: 'State Level Executive Committee aapki application review karti hai.' },
+              { label: 'CEC Approval:', text: 'Central Executive Committee final approval deti hai.' },
+              { label: 'SIDBI Fund Release:', text: 'SIDBI funds ko lender/bank ko release karta hai.' },
+              { label: 'Bank Transfer:', text: 'Bank subsidy amount ko beneficiary ke account mein transfer karta hai.' },
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-3">
+                <span className="font-bold text-purple-700 dark:text-purple-300">{i + 1}.</span>
+                <p className="text-gray-700 dark:text-gray-300 text-sm"><strong>{item.label}</strong> {item.text}</p>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -328,8 +371,8 @@ export default function BakriPalanYojanaNLMS() {
 
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
           Subsidy mein kya cover hota hai aur kya nahi, ye pehle se samajhna bahut zaroori hai. Goat farming ke saath agar aap{' '}
-          <Link href="/articles/kisanguides/SilageMaking" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">
-            Silage Making
+          <Link href="/articles/SilageMaking" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">
+            Silage Making Guide
           </Link>{' '}
           seekh lete hain, toh feed cost 30-40% tak kam ho jati hai.
         </p>
@@ -381,66 +424,30 @@ export default function BakriPalanYojanaNLMS() {
         </p>
 
         <div className="space-y-3 my-6 not-prose">
-          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
-            <p className="text-sm text-gray-700 dark:text-gray-300">
-              <strong className="text-red-600 dark:text-red-400 block mb-1">Incomplete Documentation:</strong>
-              Ek bhi document missing hai toh application hold par chali jaati hai.
-            </p>
-          </div>
-          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
-            <p className="text-sm text-gray-700 dark:text-gray-300">
-              <strong className="text-red-600 dark:text-red-400 block mb-1">Wrong Portal:</strong>
-              nlm.gov.in par apply karna galat hai. Sahi portal <strong>nlm.udyamimitra.in</strong> hai, ye yaad rakhein.
-            </p>
-          </div>
-          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
-            <p className="text-sm text-gray-700 dark:text-gray-300">
-              <strong className="text-red-600 dark:text-red-400 block mb-1">Unrealistic DPR:</strong>
-              Project report mein unrealistic targets ya galat calculations hona.
-            </p>
-          </div>
-          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
-            <p className="text-sm text-gray-700 dark:text-gray-300">
-              <strong className="text-red-600 dark:text-red-400 block mb-1">Land Issues:</strong>
-              Land documents clear nahi hain ya lease agreement valid nahi hai.
-            </p>
-          </div>
+          {[
+            { title: 'Incomplete Documentation:', text: 'Ek bhi document missing hai toh application hold par chali jaati hai.' },
+            { title: 'Wrong Portal:', text: 'nlm.gov.in par apply karna galat hai. Sahi portal nlm.udyamimitra.in hai, ye yaad rakhein.' },
+            { title: 'Unrealistic DPR:', text: 'Project report mein unrealistic targets ya galat calculations hona.' },
+            { title: 'Land Issues:', text: 'Land documents clear nahi hain ya lease agreement valid nahi hai.' },
+          ].map((item, i) => (
+            <div key={i} className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
+              <p className="text-sm text-gray-700 dark:text-gray-300">
+                <strong className="text-red-600 dark:text-red-400 block mb-1">{item.title}</strong>
+                {item.text}
+              </p>
+            </div>
+          ))}
         </div>
 
+        {/* ✅ EXPANDABLE FAQs */}
         <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
           Frequently Asked Questions (FAQs)
         </h2>
 
-        <div className="space-y-4 my-8 not-prose">
-          <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-            <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Q1. क्या backyard goat farming के लिए भी subsidy मिलती है?</h4>
-            <p className="text-gray-700 dark:text-gray-300 text-sm">NLM-EDP में minimum unit size 100 female + 5 male है। छोटे backyard units के लिए अपनी state ki specific animal husbandry schemes check karein.</p>
-          </div>
-
-          <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-            <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Q2. Subsidy मिलने में कितना time लगता है?</h4>
-            <p className="text-gray-700 dark:text-gray-300 text-sm">SLEC aur CEC approval mein 2-3 mahine lagte hain. Fund release aur bank transfer mein additional time lagta hai. Total 4-6 months realistic hai.</p>
-          </div>
-
-          <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-            <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Q3. क्या loan भी ले सकते हैं subsidy के साथ?</h4>
-            <p className="text-gray-700 dark:text-gray-300 text-sm">Haan, subsidy 50% hai, baaki 50% ke liye bank se term loan le sakte hain. Best options ke liye hamari{' '}
-              <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">
-                Kisan Credit Card Online Apply Guide
-              </Link>{' '}
-              check karein.
-            </p>
-          </div>
-
-          <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-            <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Q4. क्या मैं पहले से existing farm expand कर सकता हूं?</h4>
-            <p className="text-gray-700 dark:text-gray-300 text-sm">NLM-EDP primarily new units ke liye hai. Existing farm expansion ke liye state Animal Husbandry Department se confirm karein.</p>
-          </div>
-
-          <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-            <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Q5. Application reject होने पर दोबारा apply कर सकते हैं?</h4>
-            <p className="text-gray-700 dark:text-gray-300 text-sm">Haan, rejection ka reason pata karein, corrections karein aur dobara apply karein. Isme koi restriction nahi hai.</p>
-          </div>
+        <div className="space-y-3 my-8 not-prose">
+          {faqs.map((faq, index) => (
+            <FaqItem key={index} question={faq.q} answer={faq.a} />
+          ))}
         </div>
 
         <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
@@ -493,21 +500,21 @@ export default function BakriPalanYojanaNLMS() {
 
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
           Goat farming ek viable business option hai, aur NLM subsidy ise aur feasible bana deti hai. Patience rakhna padega kyunki process mein time lagta hai. Agar aap goat meat processing ya value addition karna chahte hain, toh{' '}
-          <Link href="/articles/kisanguides/PMFMEYojana" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">
-            PMFME Yojana
+          <Link href="/articles/PMFMEYojana" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">
+            PMFME Yojana Guide
           </Link>{' '}
           se 35% tak subsidy mil sakti hai.
         </p>
 
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
           Sahi planning karein, documentation prepare karein, aur guidelines follow karein. Goat waste se aap{' '}
-          <Link href="/articles/kisanguides/VerminCompost" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">
-            Vermi Compost
+          <Link href="/articles/VerminCompost" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">
+            Vermi Compost Guide
           </Link>{' '}
           bhi bana sakte hain, jo ek additional income source ban sakta hai.
         </p>
 
-        {/* Related Articles Section - Stylish UI/UX */}
+        {/* Related Articles Section */}
         <div className="mt-12 pt-8 border-t-2 border-gray-200 dark:border-gray-700 not-prose">
           <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6 flex items-center gap-2">
             <span className="text-3xl">📚</span>
@@ -519,7 +526,6 @@ export default function BakriPalanYojanaNLMS() {
           </p>
 
           <div className="grid md:grid-cols-2 gap-6 mb-8">
-            {/* Animal Husbandry Category */}
             <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-6 rounded-xl border-2 border-green-200 dark:border-green-800 hover:shadow-lg transition-shadow">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white text-2xl">🐃</div>
@@ -527,7 +533,7 @@ export default function BakriPalanYojanaNLMS() {
               </div>
               <ul className="space-y-3">
                 <li>
-                  <Link href="/articles/kisanguides/MadhumakhiPalan" className="flex items-start gap-2 text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors group">
+                  <Link href="/articles/MadhumakhiPalan" className="flex items-start gap-2 text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors group">
                     <span className="text-green-600 group-hover:translate-x-1 transition-transform">→</span>
                     <div>
                       <div className="font-semibold">Madhumakhi Palan</div>
@@ -536,7 +542,7 @@ export default function BakriPalanYojanaNLMS() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/articles/kisanguides/MushroomKheti" className="flex items-start gap-2 text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors group">
+                  <Link href="/articles/MushroomKheti" className="flex items-start gap-2 text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors group">
                     <span className="text-green-600 group-hover:translate-x-1 transition-transform">→</span>
                     <div>
                       <div className="font-semibold">Mushroom Kheti</div>
@@ -547,7 +553,6 @@ export default function BakriPalanYojanaNLMS() {
               </ul>
             </div>
 
-            {/* Subsidy Schemes Category */}
             <div className="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 p-6 rounded-xl border-2 border-blue-200 dark:border-blue-800 hover:shadow-lg transition-shadow">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl">💰</div>
@@ -555,7 +560,7 @@ export default function BakriPalanYojanaNLMS() {
               </div>
               <ul className="space-y-3">
                 <li>
-                  <Link href="/articles/kisanguides/PMatsyaSampada" className="flex items-start gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors group">
+                  <Link href="/articles/PMatsyaSampada" className="flex items-start gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors group">
                     <span className="text-blue-600 group-hover:translate-x-1 transition-transform">→</span>
                     <div>
                       <div className="font-semibold">PM Matsya Sampada</div>
@@ -564,7 +569,7 @@ export default function BakriPalanYojanaNLMS() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/articles/kisanguides/CHCPortal" className="flex items-start gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors group">
+                  <Link href="/articles/CHCPortal" className="flex items-start gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors group">
                     <span className="text-blue-600 group-hover:translate-x-1 transition-transform">→</span>
                     <div>
                       <div className="font-semibold">Custom Hiring Centre (CHC)</div>
@@ -576,14 +581,13 @@ export default function BakriPalanYojanaNLMS() {
             </div>
           </div>
 
-          {/* Additional Resources */}
           <div className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 p-6 rounded-xl border-2 border-purple-200 dark:border-purple-800">
             <h4 className="text-lg font-bold text-purple-800 dark:text-purple-300 mb-4 flex items-center gap-2">
               <span className="text-2xl">🌾</span>
               More Farming Resources
             </h4>
             <div className="grid sm:grid-cols-2 gap-3">
-              <Link href="/articles/kisanguides/DripSprinkler" className="flex items-center gap-2 bg-white dark:bg-gray-800 p-3 rounded-lg hover:shadow-md transition-shadow text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400">
+              <Link href="/articles/DripSprinkler" className="flex items-center gap-2 bg-white dark:bg-gray-800 p-3 rounded-lg hover:shadow-md transition-shadow text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400">
                 <span className="text-purple-600">💧</span>
                 <span className="font-medium">Drip & Sprinkler Irrigation</span>
               </Link>
