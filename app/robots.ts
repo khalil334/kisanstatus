@@ -4,7 +4,6 @@ import { SITE_URL } from '@/lib/site-config';
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
-      // ── 1. Standard Rules for All Search Engines (Google, Bing, DuckDuckGo, etc.) ──
       {
         userAgent: '*',
         allow: '/',
@@ -18,8 +17,6 @@ export default function robots(): MetadataRoute.Robots {
           '/*?*tr_uuid=',
         ],
       },
-      
-      // ── 2. Specific Rules for AI Training Bots (Allow crawling but block sensitive/tools) ──
       {
         userAgent: [
           'GPTBot',
@@ -39,15 +36,11 @@ export default function robots(): MetadataRoute.Robots {
           '/*?*tr_uuid=',
         ],
       },
-      
-      // ── 3. Strict Block for Data Scrapers & AI Training Crawlers ──
       {
         userAgent: ['CCBot', 'Google-Extended', 'FacebookBot', 'Applebot-Extended'],
         disallow: '/',
       },
     ],
-    
-    // ✅ DYNAMIC SITEMAP: Uses SITE_URL so it works in both dev and prod
     sitemap: `${SITE_URL}/sitemap.xml`,
   };
 }
