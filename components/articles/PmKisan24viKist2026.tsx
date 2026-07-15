@@ -2,8 +2,12 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
+import { 
+  SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, 
+  AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate 
+} from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
+import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
 const KIST = {
   number: '24',
@@ -34,15 +38,15 @@ const FAQS_DATA = [
   },
   {
     q: '24vi kist kitne rupaye ki hogi?',
-    a: '₹2,000 ki hogi — har kist same amount ki hoti hai. Saal mein 3 kist aati hain, toh total ₹6,000 milte hain saal bhar mein. Koi change nahi hua hai amount mein.',
+    a: '₹2,000 ki hogi — har kist same amount ki hoti hai. Saal mein 3 kist aati hain, toh total ₹6,000 milte hain saal bhar mein. Amount mein koi change nahi hua hai.',
   },
   {
     q: '24vi kist ke liye eKYC zaroori hai ya nahi?',
-    a: 'Haan bilkul — bina eKYC ke koi kist nahi milti. Ye mandatory hai 2024 ke baad se. pmkisan.gov.in par OTP se ghar baithe kar sakte ho, ya CSC center par biometric se. Free hai dono tarike.',
+    a: 'Haan bilkul — bina eKYC ke koi kist nahi milti. Ye 2024 ke baad se mandatory hai. pmkisan.gov.in par OTP se ghar baithe kar sakte ho, ya CSC center par biometric se. Dono tarike bilkul free hain.',
   },
   {
     q: 'Status check karne par kuch nahi dikh raha hai?',
-    a: 'Registration number sahi daalo bhai. Yaad nahi hai toh "Know your registration no." option se Aadhaar ya mobile number se retrieve kar lo. Phir dobara check karo. Agar phir bhi nahi dikha toh CSC jao.',
+    a: 'Registration number sahi daalo. Yaad nahi hai toh "Know your registration no." option se Aadhaar ya mobile number se retrieve kar lo. Phir dobara check karo. Agar phir bhi nahi dikha toh nazdeeki CSC jao.',
   },
   {
     q: 'Kist nahi aayi lekin status "Payment Success" dikh raha hai?',
@@ -66,21 +70,57 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
   const isReleased = KIST.status === 'Released';
   const isConfirmed = KIST.status === 'Confirmed';
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Articles', item: `${SITE_URL}/articles` },
+      { '@type': 'ListItem', position: 3, name: '24vi Kist Guide', item: `${SITE_URL}/articles/${article.slug}` },
+    ],
+  };
+
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: `PM Kisan 24vi Kist Kab Aayegi? ${KIST.expectedDate} Release Date, Status Check Aur Tayyari Ka Pura Guide`,
+    description: article.desc,
+    image: article.ogImage ? `${SITE_URL}${article.ogImage}` : `${SITE_URL}/images/pm-kisan-24vi-kist-og.webp`,
+    author: { '@type': 'Organization', name: AUTHOR_NAME, url: AUTHOR_URL },
+    publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+    datePublished: PUBLISHED,
+    dateModified: MODIFIED,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}/articles/${article.slug}` },
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: FAQS_DATA.map((faq) => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: { '@type': 'Answer', text: faq.a },
+    })),
+  };
+
   return (
     <>
-      {/* Header */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
-          <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
+          <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Home</Link>
-            <span>/</span>
+            <span aria-hidden="true">/</span>
             <Link href="/articles" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Articles</Link>
-            <span>/</span>
+            <span aria-hidden="true">/</span>
             <span className="text-white font-bold">24vi Kist Guide</span>
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Upcoming Kist</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            PM Kisan 24vi Kist Kab Aayegi? October 2026 Release Date, Status Check Aur Tayyari Ka Pura Guide
+            PM Kisan 24vi Kist Kab Aayegi? {KIST.expectedDate} Release Date, Status Check Aur Tayyari Ka Pura Guide
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
@@ -93,15 +133,14 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* Dynamic Status Notice */}
         <div className={`mb-6 border-2 rounded-xl p-4 ${
           isReleased ? 'bg-green-50 dark:bg-green-900/20 border-green-400 dark:border-green-700' :
           isConfirmed ? 'bg-blue-50 dark:bg-blue-900/20 border-blue-400 dark:border-blue-700' :
           'bg-orange-50 dark:bg-orange-900/20 border-orange-400 dark:border-orange-700'
         }`}>
           <div className="flex items-start gap-3">
-            <span className="text-2xl shrink-0">
-              {isReleased ? '✅' : isConfirmed ? '📅' : ''}
+            <span className="text-2xl shrink-0" aria-hidden="true">
+              {isReleased ? '✅' : isConfirmed ? '📅' : '⏳'}
             </span>
             <div>
               <p className={`font-black text-base sm:text-lg leading-snug ${
@@ -133,7 +172,6 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
           </div>
         </div>
 
-        {/* IMAGE 1: Hero (Original Path) */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/pm-kisan-24vi-kist-og.webp'}
@@ -150,7 +188,6 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
           </p>
         </div>
 
-        {/* Quick Summary Cards */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
           {[
             { label: 'Kist', value: KIST.label },
@@ -165,7 +202,6 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
           ))}
         </div>
 
-        {/* Section 1: Date Prediction */}
         <section className="mb-8">
           <SH>24vi Kist Kab Aayegi?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -193,7 +229,6 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
           </IB>
         </section>
 
-        {/* IMAGE 2: Banner (Original Path) */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/pm-kisan-24vi-kist-banner.webp"
@@ -209,7 +244,6 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
           </p>
         </div>
 
-        {/* Section 2: Payment History */}
         <section className="mb-8">
           <SH>Pichhli Kiston Ka Record</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -232,7 +266,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
                   { kist: '22vi', date: '13 Mar 2026', amount: '₹2,000', status: 'Released' },
                   { kist: '21vi', date: 'Nov 2025', amount: '₹2,000', status: 'Released' },
                   { kist: '20vi', date: 'Jul 2025', amount: '₹2,000', status: 'Released' },
-                  { kist: '19vi', date: 'Feb 2025', amount: '2,000', status: 'Released' },
+                  { kist: '19vi', date: 'Feb 2025', amount: '₹2,000', status: 'Released' },
                 ].map((row) => (
                   <tr key={row.kist} className={
                     row.highlight ? 'bg-green-50 dark:bg-green-900/20 font-medium' :
@@ -259,7 +293,6 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
           </p>
         </section>
 
-        {/* Section 3: Eligibility */}
         <section className="mb-8">
           <SH>24vi Kist Ke Liye Eligibility</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -292,7 +325,6 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
           </WB>
         </section>
 
-        {/* IMAGE 3: October 2026 (Original Path) */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/pm-kisan-24vi-kist-october-2026.webp"
@@ -308,7 +340,6 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
           </p>
         </div>
 
-        {/* Section 4: Status Check */}
         <section className="mb-8">
           <SH>Status Kaise Check Karein</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -341,7 +372,6 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
           </div>
         </section>
 
-        {/* Section 5: eKYC */}
         <section className="mb-8">
           <SH>eKYC — Mandatory Hai</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -352,17 +382,17 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
-              <span className="text-2xl block mb-2"></span>
+              <span className="text-2xl block mb-2" aria-hidden="true">📱</span>
               <p className="font-black text-green-800 dark:text-green-300 text-sm mb-1">OTP Based</p>
               <p className="text-xs text-[var(--color-text-muted)]">Portal par Aadhaar daalo, OTP code verify karo. Sabse aasaan tarika — ghar baithe ho jata hai.</p>
             </div>
             <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
-              <span className="text-2xl block mb-2">🖐️</span>
+              <span className="text-2xl block mb-2" aria-hidden="true">🖐️</span>
               <p className="font-black text-blue-800 dark:text-blue-300 text-sm mb-1">Biometric (CSC)</p>
               <p className="text-xs text-[var(--color-text-muted)]">OTP na aaye toh CSC center jao. Fingerprint se verify ho jayega. ₹20-30 lagte hain.</p>
             </div>
             <div className="p-4 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-xl">
-              <span className="text-2xl block mb-2">🤳</span>
+              <span className="text-2xl block mb-2" aria-hidden="true">🤳</span>
               <p className="font-black text-purple-800 dark:text-purple-300 text-sm mb-1">Face Auth</p>
               <p className="text-xs text-[var(--color-text-muted)]">Mobile app se face scan. Dono fail hon toh ye try karo. Latest option hai.</p>
             </div>
@@ -372,7 +402,6 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
           </IB>
         </section>
 
-        {/* Section 6: Troubleshooting */}
         <section className="mb-8">
           <SH>Common Problems + Solutions</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -411,7 +440,6 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
           </div>
         </section>
 
-        {/* IMAGE 4: Payment Success (Original Path) */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/payment-success.webp"
@@ -427,7 +455,6 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
           </p>
         </div>
 
-        {/* FAQ */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Aksar Puche Jane Wale Sawal
@@ -435,7 +462,6 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
           <FAQBlock faqs={FAQS_DATA} caption="24vi Kist FAQ 2026 — Verified Answers" />
         </section>
 
-        {/* Action Conclusion */}
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">October Se Pehle Yeh Karo</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
