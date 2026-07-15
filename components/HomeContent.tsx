@@ -2,36 +2,24 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
 import { ARTICLES, getLatestArticles, CATEGORIES } from '@/lib/articles-data';
 
 const TOP_ARTICLES_LIMIT = 3;
 
 function ArticleImage({ image, emoji, title }: { image: string; emoji: string; title: string }) {
-  const [error, setError] = useState(false);
-  const [loaded, setLoaded] = useState(false);
-
   return (
-    <div
-      className="relative w-full overflow-hidden bg-gray-100 dark:bg-gray-800 shrink-0"
-      style={{ aspectRatio: '16/9' }}
-    >
-      {!error && image ? (
-        <>
-          {!loaded && <div className="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800 animate-pulse z-10" />}
-          <Image
-            src={image}
-            alt={title}
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            quality={85}
-            loading="lazy"
-            decoding="async"
-            className={`object-cover group-hover:scale-110 transition-transform duration-700 ease-out ${loaded ? 'opacity-100' : 'opacity-0'}`}
-            onLoad={() => setLoaded(true)}
-            onError={() => setError(true)}
-          />
-        </>
+    <div className="relative w-full overflow-hidden bg-gray-100 dark:bg-gray-800 shrink-0" style={{ aspectRatio: '16/9' }}>
+      {image ? (
+        <Image
+          src={image}
+          alt={title}
+          fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          quality={80}
+          loading="lazy"
+          decoding="async"
+          className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+        />
       ) : (
         <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-green-50 to-emerald-100 dark:from-gray-800 dark:to-gray-700" role="img" aria-label={title}>
           <span className="text-6xl" aria-hidden="true">{emoji}</span>
@@ -49,13 +37,11 @@ function ArticleCard({ article, showNewBadge = false }: { article: typeof ARTICL
   const categoryName = categoryInfo?.nameHi || categoryInfo?.name || 'Article';
 
   return (
-    <article
-      className={`group relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden flex flex-col no-underline h-full border transition-all duration-500 ease-out ${
-        showNewBadge
-          ? 'border-green-500/50 dark:border-green-600/50 shadow-xl shadow-green-500/10 hover:shadow-2xl hover:shadow-green-500/20'
-          : 'border-gray-200/80 dark:border-gray-700/80 shadow-lg hover:shadow-2xl hover:shadow-gray-900/10 dark:hover:shadow-black/30'
-      } hover:-translate-y-2`}
-    >
+    <article className={`group relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden flex flex-col no-underline h-full border transition-all duration-500 ease-out ${
+      showNewBadge
+        ? 'border-green-500/50 dark:border-green-600/50 shadow-xl shadow-green-500/10 hover:shadow-2xl hover:shadow-green-500/20'
+        : 'border-gray-200/80 dark:border-gray-700/80 shadow-lg hover:shadow-2xl hover:shadow-gray-900/10 dark:hover:shadow-black/30'
+    } hover:-translate-y-2`}>
       <Link href={`/articles/${article.slug}`} className="sr-only" aria-label={`Padhein: ${article.title}`}>
         {article.title}
       </Link>
@@ -86,15 +72,9 @@ function ArticleCard({ article, showNewBadge = false }: { article: typeof ARTICL
         </p>
         <div className="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-700/50">
           <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">✍️ KisanStatus Team</span>
-          <Link
-            href={`/articles/${article.slug}`}
-            className="text-sm font-bold text-green-700 dark:text-green-400 group-hover:translate-x-2 transition-transform duration-300 inline-flex items-center gap-1.5"
-            aria-label={`Padhein: ${article.title}`}
-          >
+          <Link href={`/articles/${article.slug}`} className="text-sm font-bold text-green-700 dark:text-green-400 group-hover:translate-x-2 transition-transform duration-300 inline-flex items-center gap-1.5" aria-label={`Padhein: ${article.title}`}>
             Padhein
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
           </Link>
         </div>
       </div>
@@ -105,13 +85,6 @@ function ArticleCard({ article, showNewBadge = false }: { article: typeof ARTICL
 export default function HomeContent() {
   const latestArticles = getLatestArticles(TOP_ARTICLES_LIMIT);
   const allArticles = ARTICLES;
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  if (!isMounted) return null;
 
   return (
     <main className="min-h-screen bg-white dark:bg-gray-900">
@@ -132,31 +105,23 @@ export default function HomeContent() {
               <span className="block bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">Check 2026</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-10 leading-relaxed max-w-3xl mx-auto">
-              24vi kist October 2026 mein aane wali hai! <span className="font-bold text-gray-900 dark:text-white">₹2,000</span> seedha bank account mein.
+              24vi kist October 2026 mein aane wali hai! <span className="font-bold text-gray-900 dark:text-white">2,000</span> seedha bank account mein.
               Status verify karo, eKYC complete karo — sab kuch <span className="font-bold text-green-700 dark:text-green-400">bilkul free!</span>
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                href="/articles/PmKisan24viKist2026"
-                className="group inline-flex items-center gap-2.5 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 shadow-xl shadow-green-600/30 hover:shadow-2xl hover:shadow-green-600/40"
-              >
+              <Link href="/articles/PmKisan24viKist2026" className="group inline-flex items-center gap-2.5 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 shadow-xl shadow-green-600/30 hover:shadow-2xl hover:shadow-green-600/40">
                 <span className="text-xl" aria-hidden="true">📅</span>
                 <span>24vi Kist Status</span>
-                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
               </Link>
-              <Link
-                href="/articles"
-                className="inline-flex items-center gap-2.5 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-900 dark:text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 border-2 border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 shadow-lg hover:shadow-xl"
-              >
+              <Link href="/articles" className="inline-flex items-center gap-2.5 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-900 dark:text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 border-2 border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 shadow-lg hover:shadow-xl">
                 <span className="text-xl" aria-hidden="true">📚</span>
                 <span>Sabhi Articles</span>
               </Link>
             </div>
           </div>
 
-          {/* Hero Image */}
+          {/* Hero Image - Optimized for LCP */}
           <div className="relative max-w-5xl mx-auto">
             <div className="absolute -inset-4 bg-gradient-to-r from-green-500/20 to-emerald-500/20 dark:from-green-600/20 dark:to-emerald-600/20 rounded-3xl blur-2xl" aria-hidden="true" />
             <figure className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/5 dark:ring-white/10">
@@ -168,7 +133,7 @@ export default function HomeContent() {
                   priority
                   fetchPriority="high"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1024px"
-                  quality={85}
+                  quality={75}
                   placeholder="blur"
                   blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiEycf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xVsgH1fZ//2Q=="
                   className="object-cover"
@@ -189,18 +154,13 @@ export default function HomeContent() {
             {[
               { icon: '👨‍🌾', value: '11 Cr+', label: 'Registered Kisan', color: 'from-green-500 to-emerald-500' },
               { icon: '💰', value: '9.44 Cr+', label: 'Payment Pa Chuke', color: 'from-blue-500 to-cyan-500' },
-              { icon: '📅', value: '₹6,000', label: 'Saalana Benefit', color: 'from-amber-500 to-orange-500' },
-              { icon: '💵', value: '₹2,000', label: 'Har Kist', color: 'from-purple-500 to-pink-500' },
+              { icon: '', value: '₹6,000', label: 'Saalana Benefit', color: 'from-amber-500 to-orange-500' },
+              { icon: '', value: '₹2,000', label: 'Har Kist', color: 'from-purple-500 to-pink-500' },
             ].map((stat, i) => (
-              <div
-                key={i}
-                className="group relative bg-white dark:bg-gray-800 rounded-2xl p-7 text-center border border-gray-200/80 dark:border-gray-700/80 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 overflow-hidden min-h-[200px]"
-              >
+              <div key={i} className="group relative bg-white dark:bg-gray-800 rounded-2xl p-7 text-center border border-gray-200/80 dark:border-gray-700/80 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 overflow-hidden min-h-[200px]">
                 <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${stat.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} aria-hidden="true" />
                 <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-500" aria-hidden="true">{stat.icon}</div>
-                <div className={`text-3xl md:text-4xl font-black bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}>
-                  {stat.value}
-                </div>
+                <div className={`text-3xl md:text-4xl font-black bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}>{stat.value}</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">{stat.label}</div>
               </div>
             ))}
@@ -213,12 +173,10 @@ export default function HomeContent() {
         <div className="container-site mx-auto px-4">
           <div className="text-center mb-14">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-100 to-cyan-100 dark:from-blue-900/40 dark:to-cyan-900/40 text-blue-800 dark:text-blue-300 text-sm font-bold px-5 py-2.5 rounded-full mb-6 shadow-sm border border-blue-200/50 dark:border-blue-700/50">
-              <span className="text-lg" aria-hidden="true">🧮</span>
+              <span className="text-lg" aria-hidden="true"></span>
               <span>Free Tools</span>
             </div>
-            <h2 id="calculator-heading" className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-5 tracking-tight">
-              Kisan Calculator Suite
-            </h2>
+            <h2 id="calculator-heading" className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-5 tracking-tight">Kisan Calculator Suite</h2>
             <p className="text-gray-600 dark:text-gray-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
               PM Kisan benefit, MSP earnings, crop profit, KCC EMI — sab ek jagah, <span className="font-bold text-blue-700 dark:text-blue-400">bilkul free!</span>
             </p>
@@ -232,26 +190,15 @@ export default function HomeContent() {
                 { href: '/calculator/crop-profit', icon: '📊', bg: 'from-green-400 to-emerald-500', title: 'Crop Profit', desc: 'Kharcha vs kamai — shuddh munafa jaano per acre' },
                 { href: '/calculator/kcc-loan-emi', icon: '🏦', bg: 'from-blue-400 to-cyan-500', title: 'KCC Loan EMI', desc: '4% byaj par monthly EMI aur total interest' },
               ].map((calc, i) => (
-                <Link
-                  key={i}
-                  href={calc.href}
-                  className="group relative bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-800/50 rounded-2xl p-6 hover:shadow-2xl transition-all duration-500 border border-gray-200/80 dark:border-gray-700/80 hover:-translate-y-1 overflow-hidden"
-                  aria-label={`${calc.title} calculator kholiye`}
-                >
+                <Link key={i} href={calc.href} className="group relative bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-800/50 rounded-2xl p-6 hover:shadow-2xl transition-all duration-500 border border-gray-200/80 dark:border-gray-700/80 hover:-translate-y-1 overflow-hidden" aria-label={`${calc.title} calculator kholiye`}>
                   <div className={`absolute -top-10 -right-10 w-32 h-32 bg-gradient-to-br ${calc.bg} opacity-0 group-hover:opacity-10 rounded-full blur-2xl transition-opacity duration-500`} aria-hidden="true" />
                   <div className="relative flex items-start gap-4">
-                    <div className={`w-14 h-14 bg-gradient-to-br ${calc.bg} rounded-2xl flex items-center justify-center text-3xl shrink-0 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500`} aria-hidden="true">
-                      {calc.icon}
-                    </div>
+                    <div className={`w-14 h-14 bg-gradient-to-br ${calc.bg} rounded-2xl flex items-center justify-center text-3xl shrink-0 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500`} aria-hidden="true">{calc.icon}</div>
                     <div className="flex-1">
-                      <h3 className="font-bold text-gray-900 dark:text-white text-lg mb-2 group-hover:text-green-700 dark:group-hover:text-green-400 transition-colors duration-300">
-                        {calc.title}
-                      </h3>
+                      <h3 className="font-bold text-gray-900 dark:text-white text-lg mb-2 group-hover:text-green-700 dark:group-hover:text-green-400 transition-colors duration-300">{calc.title}</h3>
                       <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{calc.desc}</p>
                     </div>
-                    <svg className="w-5 h-5 text-gray-400 group-hover:text-green-600 group-hover:translate-x-1 transition-all duration-300 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
+                    <svg className="w-5 h-5 text-gray-400 group-hover:text-green-600 group-hover:translate-x-1 transition-all duration-300 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                   </div>
                 </Link>
               ))}
@@ -259,15 +206,10 @@ export default function HomeContent() {
           </nav>
 
           <div className="text-center mt-12">
-            <Link
-              href="/calculator"
-              className="group inline-flex items-center gap-2.5 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 shadow-xl shadow-blue-600/30 hover:shadow-2xl hover:shadow-blue-600/40"
-            >
+            <Link href="/calculator" className="group inline-flex items-center gap-2.5 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 shadow-xl shadow-blue-600/30 hover:shadow-2xl hover:shadow-blue-600/40">
               <span className="text-xl" aria-hidden="true">🧮</span>
               <span>Sab Calculators Kholo</span>
-              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
+              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </Link>
           </div>
         </div>
@@ -277,28 +219,22 @@ export default function HomeContent() {
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800/50 dark:to-gray-900" aria-labelledby="featured-heading">
         <div className="container-site mx-auto px-4">
           <div className="text-center mb-14">
-            <h2 id="featured-heading" className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-4 tracking-tight">
-              🌾 Bharat Ki Kheti
-            </h2>
+            <h2 id="featured-heading" className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-4 tracking-tight">🌾 Bharat Ki Kheti</h2>
             <p className="text-gray-600 dark:text-gray-300 text-lg">Hamari Pehchaan — Hamari Shaan</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {[
               { src: '/annadata-farmers-group.webp', title: '🌾 Hamare Annadata', desc: 'Bharat ki kheti - duniya ki sabse badi kheti', border: 'border-green-400 dark:border-green-600' },
-              { src: '/digital-farming-tech.webp', title: '🚜 Aadhunik Kheti', desc: 'Technology se badhti kheti ki kamai', border: 'border-blue-400 dark:border-blue-600' },
+              { src: '/digital-farming-tech.webp', title: ' Aadhunik Kheti', desc: 'Technology se badhti kheti ki kamai', border: 'border-blue-400 dark:border-blue-600' },
             ].map((item, i) => (
-              <figure
-                key={i}
-                className={`group relative rounded-3xl overflow-hidden shadow-2xl border-4 ${item.border} hover:shadow-3xl transition-all duration-500 hover:-translate-y-2`}
-                style={{ aspectRatio: '3/2' }}
-              >
+              <figure key={i} className={`group relative rounded-3xl overflow-hidden shadow-2xl border-4 ${item.border} hover:shadow-3xl transition-all duration-500 hover:-translate-y-2`} style={{ aspectRatio: '3/2' }}>
                 <Image
                   src={item.src}
                   alt={item.title}
                   fill
                   loading="lazy"
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  quality={85}
+                  quality={80}
                   className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                   placeholder="blur"
                   blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiEycf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xVsgH1fZ//2Q=="
@@ -324,9 +260,7 @@ export default function HomeContent() {
                 <span className="text-lg" aria-hidden="true">✨</span>
                 <span>Latest Updates</span>
               </div>
-              <h2 id="articles-heading" className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight">
-                Naye Articles
-              </h2>
+              <h2 id="articles-heading" className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight">Naye Articles</h2>
               <p className="text-gray-600 dark:text-gray-400 mt-2 text-lg">Latest guides aur updates</p>
             </div>
             <span className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-bold px-5 py-2.5 rounded-full shadow-lg self-start md:self-auto">
@@ -340,24 +274,15 @@ export default function HomeContent() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
             {latestArticles.map((article, index) => (
-              <ArticleCard
-                key={article.slug}
-                article={article}
-                showNewBadge={index < TOP_ARTICLES_LIMIT}
-              />
+              <ArticleCard key={article.slug} article={article} showNewBadge={index < TOP_ARTICLES_LIMIT} />
             ))}
           </div>
 
           <div className="text-center mt-14">
-            <Link
-              href="/articles"
-              className="group inline-flex items-center gap-2.5 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 shadow-xl shadow-green-600/30 hover:shadow-2xl hover:shadow-green-600/40"
-            >
+            <Link href="/articles" className="group inline-flex items-center gap-2.5 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 shadow-xl shadow-green-600/30 hover:shadow-2xl hover:shadow-green-600/40">
               <span className="text-xl" aria-hidden="true">📚</span>
               <span>Sabhi {allArticles.length} Articles Dekho</span>
-              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
+              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </Link>
           </div>
         </div>
@@ -367,9 +292,7 @@ export default function HomeContent() {
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800/50 dark:to-gray-900" aria-labelledby="quicklinks-heading">
         <div className="container-site mx-auto px-4">
           <div className="text-center mb-14">
-            <h2 id="quicklinks-heading" className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-4 tracking-tight">
-              🤔 Aapki Problem Kya Hai?
-            </h2>
+            <h2 id="quicklinks-heading" className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-4 tracking-tight">🤔 Aapki Problem Kya Hai?</h2>
             <p className="text-gray-600 dark:text-gray-300 text-lg">Turant solution paayein</p>
           </div>
           <nav aria-label="Quick links to popular articles">
@@ -380,12 +303,7 @@ export default function HomeContent() {
                 { href: '/articles/PmKisanBeneficiaryList2026', icon: '📋', title: 'Beneficiary List', desc: 'Naam check karo', color: 'from-red-500 to-pink-500' },
                 { href: '/articles/soil-health-card-complete-guide-2026', icon: '🧪', title: 'Soil Health Card', desc: 'Mitti test karo', color: 'from-purple-500 to-indigo-500' },
               ].map((link, i) => (
-                <Link
-                  key={i}
-                  href={link.href}
-                  className="group relative bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-2xl p-8 text-center hover:shadow-2xl hover:border-transparent transition-all duration-500 hover:-translate-y-2 overflow-hidden"
-                  aria-label={`${link.title}: ${link.desc}`}
-                >
+                <Link key={i} href={link.href} className="group relative bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-2xl p-8 text-center hover:shadow-2xl hover:border-transparent transition-all duration-500 hover:-translate-y-2 overflow-hidden" aria-label={`${link.title}: ${link.desc}`}>
                   <div className={`absolute inset-0 bg-gradient-to-br ${link.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} aria-hidden="true" />
                   <div className="relative">
                     <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br ${link.color} mb-5 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`} aria-hidden="true">
