@@ -4,46 +4,49 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
+import { 
+  SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, 
+  AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate 
+} from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
+import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
 const PUBLISHED = '2026-02-10T08:00:00+05:30';
 const MODIFIED = '2026-07-09T08:00:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide', emoji: '📚' },
-  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '' },
+  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '📅' },
   { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Meaning', emoji: '💳' },
   { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Credit Card Guide', emoji: '💰' },
-  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide', emoji: '' },
+  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Complete Guide', emoji: '🔐' },
   { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav', emoji: '📈' },
 ];
 
-// ✅ LOW COMPETITIVE KEYWORDS ADDED
 const FAQS_DATA = [
   {
-    q: 'Mobile number se pm kisan beneficiary list mein naam kaise check karein?',
+    q: 'Mobile number se PM Kisan beneficiary list mein naam kaise check karein?',
     a: 'Seedha pmkisan.gov.in par jao. Farmers Corner mein "Beneficiary Status" hoga. Wahan Aadhaar ki jagah apna registered mobile number daal do. OTP aayega, verify karo, aur status dikh jayega.',
   },
   {
     q: 'Gaon ki poori list kaise dekhen?',
-    a: 'Dashboard option use karo portal par. State, District, Block, aur phir Village select kar lo. Poori list khul jayegi.',
+    a: 'Dashboard option use karo portal par. State, District, Block, aur phir Village select kar lo. Poori list khul jayegi jise aap PDF mein save kar sakte hain.',
   },
   {
     q: 'PM Kisan list PDF download kaise karein?',
-    a: 'Official portal par village list kholne ke baad browser ka Print option use karo (Ctrl+P) aur "Save as PDF" select karo. Ya neeche diye gaye direct download button use karo.',
+    a: 'Official portal par village list kholne ke baad browser ka Print option use karo (Ctrl+P) aur "Save as PDF" select karo. Ya neeche diye gaye state buttons par click karo.',
   },
   {
-    q: 'PM Kisan list mein naam nahi aaya — ab kya karun bhai?',
-    a: 'Arre ghabrao mat. Pehle check karo ki eKYC hui hai ya nahi. 60% cases mein yahi dikkat hoti hai. Agar eKYC done hai, toh land seeding pending ho sakta hai. Patwari se baat karo. 15-30 din mein naam aa jayega.',
+    q: 'PM Kisan list mein naam nahi aaya — ab kya karun?',
+    a: 'Pehle check karo ki eKYC hui hai ya nahi. 60% cases mein yahi dikkat hoti hai. Agar eKYC done hai, toh land seeding pending ho sakta hai. Patwari se baat karo. 15-30 din mein naam aa jayega.',
   },
   {
     q: 'Naam aane mein kitna time lagta hai?',
-    a: '15 se 30 din. Bas.',
+    a: 'Registration aur verification complete hone ke baad aamtaur par 15 se 30 din lagte hain.',
   },
   {
     q: 'Kya main apne district ki beneficiary list download kar sakta hoon?',
-    a: 'Haan bilkul! Har state/district/block/village ki list publicly available hai. Upar diye gaye state buttons par click karo — 10 second baad PDF download ka option aa jayega.',
+    a: 'Haan bilkul! Har state/district/block/village ki list publicly available hai. Neeche diye gaye state buttons par click karo — 10 second baad official portal par PDF download ka option aa jayega.',
   },
   {
     q: 'PM Kisan village wise list 2026 kaise check karein?',
@@ -51,7 +54,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Kya PM Kisan beneficiary list mein caste ka mention hota hai?',
-    a: 'Nahi, list mein sirf naam, father name, mobile number, aur bank details hote hain. Caste ka column nahi hai.',
+    a: 'Nahi, list mein sirf naam, father name, mobile number, aur bank details hote hain. Caste ka column nahi hota.',
   },
   {
     q: 'Agar mera naam list mein nahi hai toh kya karun?',
@@ -63,47 +66,47 @@ const FAQS_DATA = [
   },
 ];
 
+// ✅ Fixed Emojis for all States & UTs
 const STATES_LIST = [
-  ['🏔️', 'Uttar Pradesh', 'uttar-pradesh'],
-  ['🌊', 'Bihar', 'bihar'],
-  ['🌿', 'Madhya Pradesh', 'madhya-pradesh'],
-  ['️', 'Rajasthan', 'rajasthan'],
-  ['', 'Maharashtra', 'maharashtra'],
-  ['', 'West Bengal', 'west-bengal'],
+  ['🌾', 'Uttar Pradesh', 'uttar-pradesh'],
+  ['🏛️', 'Bihar', 'bihar'],
+  ['🌾', 'Madhya Pradesh', 'madhya-pradesh'],
+  ['🏜️', 'Rajasthan', 'rajasthan'],
+  ['🏙️', 'Maharashtra', 'maharashtra'],
+  ['🌊', 'West Bengal', 'west-bengal'],
   ['🌴', 'Karnataka', 'karnataka'],
-  ['', 'Odisha', 'odisha'],
-  ['', 'Tamil Nadu', 'tamil-nadu'],
-  ['', 'Punjab', 'punjab'],
-  ['', 'Haryana', 'haryana'],
+  ['🛕', 'Odisha', 'odisha'],
+  ['🏛️', 'Tamil Nadu', 'tamil-nadu'],
+  ['🌾', 'Punjab', 'punjab'],
+  ['🚜', 'Haryana', 'haryana'],
   ['🌶️', 'Andhra Pradesh', 'andhra-pradesh'],
-  ['', 'Kerala', 'kerala'],
-  ['🌴', 'Telangana', 'telangana'],
-  ['🌿', 'Gujarat', 'gujarat'],
-  ['', 'Assam', 'assam'],
-  ['', 'Jharkhand', 'jharkhand'],
+  ['🌴', 'Kerala', 'kerala'],
+  ['🏛️', 'Telangana', 'telangana'],
+  ['🏭', 'Gujarat', 'gujarat'],
+  ['🍵', 'Assam', 'assam'],
+  ['⛰️', 'Jharkhand', 'jharkhand'],
   ['🏔️', 'Uttarakhand', 'uttarakhand'],
-  ['', 'Chhattisgarh', 'chhattisgarh'],
-  ['🌊', 'Himachal Pradesh', 'himachal-pradesh'],
-  ['️', 'Jammu & Kashmir', 'jammu-and-kashmir'],
-  ['🌿', 'Goa', 'goa'],
+  ['🌳', 'Chhattisgarh', 'chhattisgarh'],
+  ['🏔️', 'Himachal Pradesh', 'himachal-pradesh'],
+  ['🏔️', 'Jammu & Kashmir', 'jammu-and-kashmir'],
+  ['🏖️', 'Goa', 'goa'],
   ['🏔️', 'Sikkim', 'sikkim'],
-  ['', 'Tripura', 'tripura'],
-  ['🌾', 'Meghalaya', 'meghalaya'],
+  ['🌿', 'Tripura', 'tripura'],
+  ['🌧️', 'Meghalaya', 'meghalaya'],
   ['🌿', 'Manipur', 'manipur'],
-  ['', 'Nagaland', 'nagaland'],
+  ['⛰️', 'Nagaland', 'nagaland'],
   ['🏔️', 'Arunachal Pradesh', 'arunachal-pradesh'],
-  ['', 'Mizoram', 'mizoram'],
-  ['️', 'Delhi', 'delhi'],
-  ['', 'Puducherry', 'puducherry'],
+  ['🌿', 'Mizoram', 'mizoram'],
+  ['🏛️', 'Delhi', 'delhi'],
+  ['🏖️', 'Puducherry', 'puducherry'],
   ['🏝️', 'Andaman & Nicobar', 'andaman-nicobar'],
-  ['️', 'Ladakh', 'ladakh'],
-  ['', 'Lakshadweep', 'lakshadweep'],
-  ['️', 'Chandigarh', 'chandigarh'],
-  ['🌾', 'Dadra & Nagar Haveli', 'dadra-nagar-haveli'],
-  ['️', 'Daman & Diu', 'daman-diu'],
+  ['🏔️', 'Ladakh', 'ladakh'],
+  ['🏝️', 'Lakshadweep', 'lakshadweep'],
+  ['🏙️', 'Chandigarh', 'chandigarh'],
+  ['🌳', 'Dadra & Nagar Haveli', 'dadra-nagar-haveli'],
+  ['🏖️', 'Daman & Diu', 'daman-diu'],
 ] as const;
 
-// ✅ Countdown Modal Component - Sab states ke liye same
 function CountdownModal({ 
   title, 
   message, 
@@ -119,34 +122,24 @@ function CountdownModal({
 }) {
   const [count, setCount] = useState(10);
   const [showDownloadBtn, setShowDownloadBtn] = useState(false);
-  const router = useRouter();
 
   useEffect(() => {
     if (count === 0) {
-      if (showButton) {
-        setShowDownloadBtn(true);
-      } else {
-        // Direct redirect for non-PDF actions
-        if (redirectUrl.startsWith('http')) {
-          window.location.href = redirectUrl;
-        } else {
-          router.push(redirectUrl);
-        }
-      }
+      setShowDownloadBtn(true);
       return;
     }
     const timer = setTimeout(() => setCount(count - 1), 1000);
     return () => clearTimeout(timer);
-  }, [count, redirectUrl, showButton, router]);
+  }, [count]);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4" onClick={onClose}>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4 backdrop-blur-sm" onClick={onClose}>
       <div
         className="w-full max-w-md rounded-2xl bg-white dark:bg-gray-900 p-6 shadow-2xl border-2 border-green-500"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="text-center">
-          <div className="text-5xl mb-3">⏳</div>
+          <div className="text-5xl mb-3" aria-hidden="true">⏳</div>
           <h3 className="text-lg font-black text-gray-800 dark:text-white mb-2">
             {title}
           </h3>
@@ -160,31 +153,33 @@ function CountdownModal({
                 {count}
               </div>
               <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                seconds baad PDF download page par redirect hoga...
+                seconds baad official portal par redirect hoga...
               </p>
             </div>
           ) : (
             <div className="mb-4 space-y-3">
               <div className="bg-green-50 dark:bg-green-900/30 border-2 border-green-500 rounded-lg p-4">
                 <p className="text-sm font-bold text-green-800 dark:text-green-300 mb-2">
-                  ✅ PDF Download Ready Hai!
+                  ✅ Official Portal Ready Hai!
                 </p>
-                <Link
+                <a
                   href={redirectUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-block w-full px-6 py-3 bg-green-600 hover:bg-green-700 text-white text-base font-bold rounded-lg transition-colors animate-pulse"
                 >
-                   Click to Download PDF
-                </Link>
+                  📥 Official Portal Par Jaakar PDF Download Karein
+                </a>
               </div>
               <p className="text-xs text-gray-500 dark:text-gray-400">
-                Upar diye gaye button par click karke official government portal se PDF download karein
+                Upar diye gaye button par click karke official government portal kholein. Wahan State/District/Village select karke list download karein.
               </p>
             </div>
           )}
           
           <div className="bg-blue-50 dark:bg-blue-900/30 rounded-lg p-3 mb-4">
             <p className="text-xs text-blue-800 dark:text-blue-300">
-              📌 Kripya dhairya rakhein. Aapko official PM Kisan portal par le jaaya ja raha hai.
+              📌 Kripya dhairya rakhein. Aapko seedha official PM Kisan portal par le jaaya ja raha hai.
             </p>
           </div>
           <button
@@ -199,9 +194,7 @@ function CountdownModal({
   );
 }
 
-// Main Component
 export default function PmKisanBeneficiaryList2026({ article }: { article: ArticleMeta }) {
-  const router = useRouter();
   const [modal, setModal] = useState<{ 
     title: string; 
     message: string; 
@@ -209,7 +202,39 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
     showButton?: boolean;
   } | null>(null);
 
-  // ✅ PDF Download - Government portal par direct redirect with button
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Articles', item: `${SITE_URL}/articles` },
+      { '@type': 'ListItem', position: 3, name: 'PM Kisan Beneficiary List 2026', item: `${SITE_URL}/articles/${article.slug}` },
+    ],
+  };
+
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: article.title || 'PM Kisan Beneficiary List 2026: Naam Check Karo, Village Wise List Dekho, PDF Download',
+    description: article.desc,
+    image: article.ogImage ? `${SITE_URL}${article.ogImage}` : `${SITE_URL}/images/pm-kisan-beneficiary-status-kisanstatus.webp`,
+    author: { '@type': 'Organization', name: AUTHOR_NAME, url: AUTHOR_URL },
+    publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+    datePublished: PUBLISHED,
+    dateModified: MODIFIED,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}/articles/${article.slug}` },
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: FAQS_DATA.map((faq) => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: { '@type': 'Answer', text: faq.a },
+    })),
+  };
+
   const handleDownloadPDF = () => {
     setModal({
       title: 'Please Wait',
@@ -219,18 +244,21 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
     });
   };
 
-  // ✅ State Click - 10 sec countdown ke baad PDF download button dikhayega
-  const handleStateClick = (stateName: string, slug: string) => {
+  const handleStateClick = (stateName: string) => {
     setModal({
       title: 'Please Wait',
-      message: `${stateName} ki beneficiary list PDF download karne ke liye redirect ho raha hai...`,
-      url: `https://pmkisan.gov.in/BeneficiaryList.aspx?state=${slug}`,
-      showButton: true, // ✅ SAB STATES KE LIYE BUTTON DIKHAYEGA
+      message: `${stateName} ki beneficiary list PDF download karne ke liye official portal par redirect ho raha hai...`,
+      url: 'https://pmkisan.gov.in/BeneficiaryList.aspx', // ✅ Real official website URL
+      showButton: true,
     });
   };
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+
       {modal && (
         <CountdownModal
           title={modal.title}
@@ -243,11 +271,11 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
 
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
-          <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
+          <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Home</Link>
-            <span>/</span>
+            <span aria-hidden="true">/</span>
             <Link href="/articles" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Articles</Link>
-            <span>/</span>
+            <span aria-hidden="true">/</span>
             <span className="text-white font-bold">Beneficiary List</span>
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Complete Beneficiary Guide</span>
@@ -256,8 +284,8 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
-            <span> {fmtDate(PUBLISHED)}</span>
-            <span> Updated: {fmtDate(MODIFIED)}</span>
+            <span>📅 {fmtDate(PUBLISHED)}</span>
+            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
             <span>⏱️ 15 min read</span>
           </div>
         </div>
@@ -265,7 +293,6 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* IMAGE: Hero */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/pm-kisan-beneficiary-status-kisanstatus.webp'}
@@ -282,13 +309,12 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
           </p>
         </div>
 
-        {/* PDF Download Buttons */}
         <div className="my-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
           <button
             onClick={handleDownloadPDF}
-            className="flex items-center justify-center gap-2 p-4 bg-green-600 hover:bg-green-700 text-white font-black rounded-xl transition-all shadow-md hover:shadow-lg"
+            className="flex items-center justify-center gap-2 p-4 bg-green-600 hover:bg-green-700 text-white font-black rounded-xl transition-all shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-green-500"
           >
-            <span className="text-xl"></span>
+            <span className="text-xl" aria-hidden="true">🖨️</span>
             <div className="text-left">
               <p className="text-sm">Is Page Ko PDF Mein Save Karo</p>
               <p className="text-xs opacity-90">Print → Save as PDF</p>
@@ -301,9 +327,9 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
               url: 'https://pmkisan.gov.in/BeneficiaryList.aspx',
               showButton: true,
             })}
-            className="flex items-center justify-center gap-2 p-4 bg-blue-600 hover:bg-blue-700 text-white font-black rounded-xl transition-all shadow-md hover:shadow-lg"
+            className="flex items-center justify-center gap-2 p-4 bg-blue-600 hover:bg-blue-700 text-white font-black rounded-xl transition-all shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
-            <span className="text-xl">📋</span>
+            <span className="text-xl" aria-hidden="true">📋</span>
             <div className="text-left">
               <p className="text-sm">Official List PDF Download</p>
               <p className="text-xs opacity-90">pmkisan.gov.in se download karo</p>
@@ -311,7 +337,6 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
           </button>
         </div>
 
-        {/* Quick Individual Check */}
         <div className="my-6 p-5 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 border-l-[6px] rounded-xl">
           <h2 className="text-base font-black text-green-800 dark:text-green-300 mb-3">2 Minute Mein Apna Naam Check Karo</h2>
           <StepList>
@@ -326,7 +351,6 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
           </IB>
         </div>
 
-        {/* SECTION 1: What is Beneficiary List */}
         <section className="mb-8">
           <SH>PM Kisan Beneficiary List Kya Hoti Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -337,24 +361,23 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl text-center">
-              <span className="text-3xl block mb-2">✅</span>
+              <span className="text-3xl block mb-2" aria-hidden="true">✅</span>
               <p className="font-black text-sm text-green-800 dark:text-green-300">Active</p>
               <p className="text-xs text-[var(--color-text-muted)] mt-1">Naam hai, kist aayegi</p>
             </div>
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl text-center">
-              <span className="text-3xl block mb-2"></span>
+              <span className="text-3xl block mb-2" aria-hidden="true">❌</span>
               <p className="font-black text-sm text-red-800 dark:text-red-300">Rejected</p>
               <p className="text-xs text-[var(--color-text-muted)] mt-1">Problem hai — fix karo</p>
             </div>
             <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl text-center">
-              <span className="text-3xl block mb-2">⏳</span>
+              <span className="text-3xl block mb-2" aria-hidden="true">⏳</span>
               <p className="font-black text-sm text-amber-800 dark:text-amber-300">Pending</p>
               <p className="text-xs text-[var(--color-text-muted)] mt-1">Verification chal rahi hai</p>
             </div>
           </div>
         </section>
 
-        {/* SECTION 2: Village Wise List */}
         <section className="mb-8">
           <SH>🏘️ Village Wise List Kaise Dekhen? (Poore Gaon Ki List)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -369,11 +392,11 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
             <SI n={6}>PDF save: Browser Print → <strong>Save as PDF</strong></SI>
           </StepList>
           <WB>
-            <strong> PDF Download Kaise Karein:</strong>
+            <strong>PDF Download Kaise Karein:</strong>
             <ul className="list-disc list-inside mt-2 space-y-1 text-xs">
               <li><strong>PC/Laptop:</strong> List kholne ke baad <strong>Ctrl+P</strong> dabao → "Save as PDF" select karo → Save button</li>
               <li><strong>Mobile:</strong> Share button → Print → "Save as PDF" → Download</li>
-              <li>Ya upar wala <strong>green button</strong> dabao — turant PDF ban jayegi!</li>
+              <li>Ya upar wala <strong>green button</strong> dabao — turant official portal par PDF ban jayegi!</li>
             </ul>
           </WB>
           <IB>
@@ -381,9 +404,8 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
           </IB>
         </section>
 
-        {/* SECTION 3: 7 Rejection Reasons */}
         <section className="mb-8">
-          <SH> Naam Nahi Hai — 7 Common Reasons + Fix</SH>
+          <SH>Naam Nahi Hai — 7 Common Reasons + Fix</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Rejected dikh raha hai? Ek ek reason check karo — 90% cases mein yehi problems hoti hain:
           </p>
@@ -412,9 +434,8 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
           </div>
         </section>
 
-        {/* SECTION 4: Status Table */}
         <section className="mb-8">
-          <SH> Har Status Ka Matlab</SH>
+          <SH>Har Status Ka Matlab</SH>
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
             <table className="w-full text-sm border-collapse">
               <thead>
@@ -429,7 +450,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
                   ['✅ Active', 'List mein hai — kist aayegi', 'Wait karo'],
                   ['❌ Rejected', 'Application fail — reason check karo', 'Fix karo'],
                   ['⏳ Under Verification', 'State review chal rahi hai', '2-4 hafte wait karo'],
-                  [' Payment Failed', 'Approved hai, payment nahi pahunchi', 'Bank/NPCI fix karo'],
+                  ['⚠️ Payment Failed', 'Approved hai, payment nahi pahunchi', 'Bank/NPCI fix karo'],
                   ['🔄 Pending', 'Registration hua, verification baaki', 'Wait karo'],
                   ['🚫 Deactivated', 'Pehle active tha, issue aaya', 'Block office contact karo'],
                 ].map(([status, meaning, action], i) => (
@@ -444,7 +465,6 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
           </div>
         </section>
 
-        {/* ✅ SECTION 5: State Wise Links - SAB STATES PDF DOWNLOAD KE LIYE */}
         <section className="mb-8">
           <SH>🗺️ State Wise List — Apna State Chunein (37 States & UTs)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -454,21 +474,20 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
             {STATES_LIST.map(([icon, name, slug]) => (
               <button
                 key={slug}
-                onClick={() => handleStateClick(name, slug)}
+                onClick={() => handleStateClick(name)}
                 className="flex items-center gap-2 p-3 bg-[var(--color-card)] border border-green-200 dark:border-green-800 rounded-xl text-green-800 dark:text-green-300 text-xs font-semibold hover:bg-[var(--color-primary)] hover:text-white hover:border-[var(--color-primary)] transition-all focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
               >
-                <span>{icon}</span>{name}
+                <span aria-hidden="true">{icon}</span>{name}
               </button>
             ))}
           </div>
           <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-300 dark:border-blue-700 rounded-lg">
             <p className="text-xs text-blue-800 dark:text-blue-300">
-              <strong>💡 Note:</strong> Har state button par click karne ke baad 10 second ka countdown hoga, phir aapko official government portal par PDF download ka button milega. Wahan se aap apne district/block/village ki list download kar sakte hain.
+              <strong>💡 Note:</strong> Har state button par click karne ke baad 10 second ka countdown hoga, phir aapko official government portal (`pmkisan.gov.in`) par PDF download ka button milega. Wahan se aap apne district/block/village ki list select karke download kar sakte hain.
             </p>
           </div>
         </section>
 
-        {/* SECTION 6: 24vi Kist Preparation */}
         <section className="mb-8">
           <SH>🎯 24vi Kist Ke Liye Tayyar Ho</SH>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
@@ -483,17 +502,17 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
-              { icon: '', title: 'Complete Guide', desc: 'Sab problems ka ek jagah hal', href: '/articles/PmKisanMasterGuide2026', cta: 'Master Guide →' },
-              { icon: '', title: 'FTO Status', desc: 'Paisa kab aayega samjho', href: '/articles/pm-kisan-fto-generated-ka-matlab-kya-hai', cta: 'FTO Guide →' },
+              { icon: '📚', title: 'Complete Guide', desc: 'Sab problems ka ek jagah hal', href: '/articles/PmKisanMasterGuide2026', cta: 'Master Guide →' },
+              { icon: '💳', title: 'FTO Status', desc: 'Paisa kab aayega samjho', href: '/articles/pm-kisan-fto-generated-ka-matlab-kya-hai', cta: 'FTO Guide →' },
               { icon: '📅', title: '24vi Kist Status', desc: 'Expected date + eligibility', href: '/articles/PmKisan24viKist2026', cta: '24vi Guide →' },
-              { icon: '', title: 'eKYC Complete Karo', desc: 'Bina eKYC kist nahi milegi', href: '/articles/PmKisanEkycOnline2026', cta: 'eKYC Guide →' },
+              { icon: '🔐', title: 'eKYC Complete Karo', desc: 'Bina eKYC kist nahi milegi', href: '/articles/PmKisanEkycOnline2026', cta: 'eKYC Guide →' },
             ].map(({ icon, title, desc, href, cta }) => (
               <Link
                 key={href}
                 href={href}
                 className="flex gap-3 p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl hover:border-green-300 dark:hover:border-green-700 hover:shadow-sm transition-all no-underline group focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
               >
-                <span className="text-2xl shrink-0">{icon}</span>
+                <span className="text-2xl shrink-0" aria-hidden="true">{icon}</span>
                 <div>
                   <p className="font-black text-[var(--color-text)] text-sm group-hover:text-[var(--color-primary)] transition-colors">{title}</p>
                   <p className="text-xs text-[var(--color-text-muted)] mt-0.5">{desc}</p>
@@ -504,7 +523,6 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
           </div>
         </section>
 
-        {/* FAQ */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Aksar Puche Jane Wale Sawal
@@ -521,18 +539,18 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
         />
 
         <CalcBanner
-          icon=""
+          icon="📅"
           title="Apni Kist Track Karo"
           desc="Kitni kist aayi, kitni pending — complete history jaano"
-          primaryCta={{ href: '/calculator/installment-tracker', label: ' Tracker Kholo →' }}
-          secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: ' Benefit Calculator' }}
+          primaryCta={{ href: '/calculator/installment-tracker', label: 'Tracker Kholo →' }}
+          secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: '💰 Benefit Calculator' }}
         />
 
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
           { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
-          { href: '/articles/PmKisan24viKist2026', l: ' 24vi Kist' },
+          { href: '/articles/PmKisan24viKist2026', l: '📅 24vi Kist' },
           { href: '/articles/PmKisanEkycOnline2026', l: '🔐 eKYC' },
         ]} />
         <Disclaimer />
