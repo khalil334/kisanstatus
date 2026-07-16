@@ -5,8 +5,8 @@ import type { Metadata } from 'next';
 
 // ── SEO Metadata ──────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: 'Silage Making Business 2026: Maize Silage Plant, SMAM Subsidy & Profit Guide',
-  description: 'Silage making business ka complete guide. Janein maize silage plant kaise lagayein, SMAM subsidy kaise lein, aur silage business mein real profit calculation.',
+  title: 'Silage Business 2026: SMAM Subsidy & Profit',
+  description: 'Silage business ka complete guide. Janein maize silage plant kaise lagayein, SMAM subsidy aur real profit calculation ke baare mein sab kuch janein.',
   keywords: [
     'silage making business',
     'maize silage plant',
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'KisanStatus Team' }],
   openGraph: {
-    title: 'Silage Making Business 2026: Maize Silage Plant, SMAM Subsidy & Profit Guide',
-    description: 'Silage making business ka complete guide. Janein maize silage plant kaise lagayein, SMAM subsidy kaise lein, aur silage business mein real profit calculation.',
+    title: 'Silage Business 2026: SMAM Subsidy & Profit',
+    description: 'Silage business ka complete guide. Janein maize silage plant kaise lagayein, SMAM subsidy aur real profit calculation ke baare mein sab kuch janein.',
     type: 'article',
     locale: 'hi_IN',
     siteName: 'KisanStatus.com',
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Silage Making Business 2026: Complete Guide',
-    description: 'Janein maize silage plant kaise lagayein, SMAM subsidy kaise lein, aur silage business mein real profit calculation.',
+    title: 'Silage Business 2026: SMAM Subsidy & Profit',
+    description: 'Silage business ka complete guide. Janein maize silage plant kaise lagayein, SMAM subsidy aur real profit calculation ke baare mein sab kuch janein.',
     images: ['/images/kisanguides/silage-hero.webp'],
   },
 };
@@ -65,8 +65,8 @@ const jsonLd = {
     {
       '@type': 'Article',
       '@id': 'https://kisanstatus.com/articles/silage-making-business-guide/#article',
-      headline: 'Silage Making Business 2026: Maize Silage Plant, SMAM Subsidy & Profit Guide',
-      description: 'Silage making business ka complete guide. Janein maize silage plant kaise lagayein, SMAM subsidy kaise lein, aur silage business mein real profit calculation.',
+      headline: 'Silage Business 2026: SMAM Subsidy & Profit',
+      description: 'Silage business ka complete guide. Janein maize silage plant kaise lagayein, SMAM subsidy aur real profit calculation ke baare mein sab kuch janein.',
       author: {
         '@type': 'Organization',
         name: 'KisanStatus Team',
