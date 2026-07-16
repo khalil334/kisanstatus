@@ -5,8 +5,8 @@ import type { Metadata } from 'next';
 
 // ── SEO Metadata ──────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: 'Vermi Compost Business 2026: Organic Fertilizer, PKVY Subsidy & Profit Guide',
-  description: 'Vermi compost business ka complete guide. Janein organic fertilizer kaise banayein, PKVY subsidy kaise lein, aur vermi compost business mein real profit calculation.',
+  title: 'Vermi Compost Business 2026: PKVY Subsidy & Profit',
+  description: 'Vermi compost business guide. Janein organic fertilizer kaise banayein, PKVY subsidy lein aur real profit calculation ke baare mein sab kuch.',
   keywords: [
     'vermi compost business',
     'organic fertilizer business',
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'KisanStatus Team' }],
   openGraph: {
-    title: 'Vermi Compost Business 2026: Organic Fertilizer, PKVY Subsidy & Profit Guide',
-    description: 'Vermi compost business ka complete guide. Janein organic fertilizer kaise banayein, PKVY subsidy kaise lein, aur vermi compost business mein real profit calculation.',
+    title: 'Vermi Compost Business 2026: PKVY Subsidy & Profit',
+    description: 'Vermi compost business guide. Janein organic fertilizer kaise banayein, PKVY subsidy lein aur real profit calculation ke baare mein sab kuch.',
     type: 'article',
     locale: 'hi_IN',
     siteName: 'KisanStatus.com',
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Vermi Compost Business 2026: Complete Guide',
-    description: 'Janein organic fertilizer kaise banayein, PKVY subsidy kaise lein, aur vermi compost business mein real profit calculation.',
+    title: 'Vermi Compost Business 2026: PKVY Subsidy & Profit',
+    description: 'Vermi compost business guide. Janein organic fertilizer kaise banayein, PKVY subsidy lein aur real profit calculation ke baare mein sab kuch.',
     images: ['/images/kisanguides/vermi-compost-hero.webp'],
   },
 };
@@ -65,8 +65,8 @@ const jsonLd = {
     {
       '@type': 'Article',
       '@id': 'https://kisanstatus.com/articles/vermi-compost-business-guide/#article',
-      headline: 'Vermi Compost Business 2026: Organic Fertilizer, PKVY Subsidy & Profit Guide',
-      description: 'Vermi compost business ka complete guide. Janein organic fertilizer kaise banayein, PKVY subsidy kaise lein, aur vermi compost business mein real profit calculation.',
+      headline: 'Vermi Compost Business 2026: PKVY Subsidy & Profit',
+      description: 'Vermi compost business guide. Janein organic fertilizer kaise banayein, PKVY subsidy lein aur real profit calculation ke baare mein sab kuch.',
       author: {
         '@type': 'Organization',
         name: 'KisanStatus Team',
