@@ -5,8 +5,8 @@ import type { Metadata } from 'next';
 
 // ── SEO Metadata ──────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: 'Madhumakhi Palan: Shahad Se Kamayein, Khet Ka Yield Badhayein | Complete Guide 2026',
-  description: 'Madhumakhi palan ka practical guide. Janein chhote scale par bee farming kaise shuru karein, KVIC subsidy, bee box price, aur honey business ki ground reality.',
+  title: 'Madhumakhi Palan 2026: Subsidy, Profit & Guide',
+  description: 'Madhumakhi palan ka complete guide. Janein bee farming, KVIC subsidy, bee box price aur honey business ki ground reality.',
   keywords: [
     'madhumakhi palan',
     'chhote scale par bee farming kaise shuru karein',
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'KisanStatus Team' }],
   openGraph: {
-    title: 'Madhumakhi Palan: Shahad Se Kamayein, Khet Ka Yield Badhayein',
-    description: 'Complete guide to beekeeping in India. Learn about KVIC subsidies, bee box prices, and how to start a profitable honey business with real field insights.',
+    title: 'Madhumakhi Palan 2026: Subsidy, Profit & Guide',
+    description: 'Madhumakhi palan ka complete guide. Janein bee farming, KVIC subsidy, bee box price aur honey business ki ground reality.',
     type: 'article',
     locale: 'hi_IN',
     siteName: 'KisanStatus.com',
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Madhumakhi Palan: Complete Practical Guide',
-    description: 'Janein bee farming business kaise karein, KVIC beekeeping subsidy, aur honey business in India ki puri jankari.',
+    title: 'Madhumakhi Palan 2026: Subsidy, Profit & Guide',
+    description: 'Madhumakhi palan ka complete guide. Janein bee farming, KVIC subsidy, bee box price aur honey business ki ground reality.',
     images: ['/images/articles/madhumakhi-palan/hero-banner.webp'],
   },
 };
@@ -65,8 +65,8 @@ const jsonLd = {
     {
       '@type': 'Article',
       '@id': 'https://kisanstatus.com/articles/madhumakhi-palan/#article',
-      headline: 'Madhumakhi Palan: Shahad Se Kamayein, Khet Ka Yield Badhayein - Complete Guide',
-      description: 'Madhumakhi palan ka practical guide. Janein chhote scale par bee farming kaise shuru karein, KVIC subsidy, bee box price, aur honey business ki ground reality.',
+      headline: 'Madhumakhi Palan 2026: Subsidy, Profit & Guide',
+      description: 'Madhumakhi palan ka complete guide. Janein bee farming, KVIC subsidy, bee box price aur honey business ki ground reality.',
       author: {
         '@type': 'Organization',
         name: 'KisanStatus Team',
