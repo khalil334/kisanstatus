@@ -5,8 +5,8 @@ import type { Metadata } from 'next';
 
 // ── SEO Metadata ──────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: 'Mushroom Kheti 2026: Kamre Mein Shuru Karein, Subsidy aur Profit Guide',
-  description: 'Mushroom farming ka complete guide. Janein oyster mushroom kaise ugayein, NHB subsidy, 100-bag unit cost, aur real profit calculation.',
+  title: 'Mushroom Kheti 2026: Subsidy, Profit & Guide',
+  description: 'Mushroom farming guide. Janein oyster mushroom kaise ugayein, NHB subsidy, 100-bag unit cost, aur real profit calculation.',
   keywords: [
     'mushroom kheti',
     'oyster mushroom farming',
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'KisanStatus Team' }],
   openGraph: {
-    title: 'Mushroom Kheti 2026: Kamre Mein Shuru Karein, Subsidy aur Profit Guide',
-    description: 'Mushroom farming ka complete guide. Janein oyster mushroom kaise ugayein, NHB subsidy, 100-bag unit cost, aur real profit calculation.',
+    title: 'Mushroom Kheti 2026: Subsidy, Profit & Guide',
+    description: 'Mushroom farming guide. Janein oyster mushroom kaise ugayein, NHB subsidy, 100-bag unit cost, aur real profit calculation.',
     type: 'article',
     locale: 'hi_IN',
     siteName: 'KisanStatus.com',
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mushroom Kheti 2026: Complete Guide',
-    description: 'Janein mushroom farming kaise karein, NHB subsidy, aur 100-bag unit ka realistic profit.',
+    title: 'Mushroom Kheti 2026: Subsidy, Profit & Guide',
+    description: 'Mushroom farming guide. Janein oyster mushroom kaise ugayein, NHB subsidy, 100-bag unit cost, aur real profit calculation.',
     images: ['/images/kisanguides/Mushroomhero.webp'],
   },
 };
@@ -65,8 +65,8 @@ const jsonLd = {
     {
       '@type': 'Article',
       '@id': 'https://kisanstatus.com/articles/mushroom-kheti/#article',
-      headline: 'Mushroom Kheti 2026: Kamre Mein Shuru Karein, Subsidy aur Profit Guide',
-      description: 'Mushroom farming ka complete guide. Janein oyster mushroom kaise ugayein, NHB subsidy, 100-bag unit cost, aur real profit calculation.',
+      headline: 'Mushroom Kheti 2026: Subsidy, Profit & Guide',
+      description: 'Mushroom farming guide. Janein oyster mushroom kaise ugayein, NHB subsidy, 100-bag unit cost, aur real profit calculation.',
       author: {
         '@type': 'Organization',
         name: 'KisanStatus Team',
