@@ -1,0 +1,27 @@
+name: AI SEO + Link Fixer - Safe Mode
+on:
+  workflow_dispatch:
+
+jobs:
+  ai-fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Deep Audit by Nvidia AI
+        run: |
+          curl "https://integrate.api.nvidia.com/v1/chat/completions" \
+          -H "Authorization: Bearer ${{ secrets.NVIDIA_API_KEY }}" \
+          -H "Content-Type: application/json" \
+          -d '{
+            "model": "meta/llama-3.1-405b-instruct",
+            "messages": [{"role": "user", "content": "You are a senior Next.js + SEO expert. Do a DEEP analysis of this repo. RULES: 1. Do NOT break existing code. 2. Do NOT edit any existing files. 3. Only create NEW files if missing: sitemap.xml, robots.txt. 4. Find all broken links, bad meta tags, missing SEO. 5. Output a report with exact fixes for each file. Be 100% safe. No guessing."}]
+          }' > ai-report.json
+      
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore: AI Deep SEO Audit"
+          title: "AI: Deep SEO + Broken Link Audit Report"
+          body: "AI ne puri website deep analyze ki hai. Sirf report + safe new files. Code review karke merge karein."
+          branch: ai-safe-fixes
