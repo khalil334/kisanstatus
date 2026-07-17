@@ -1,4 +1,3 @@
- { Metadata, Viewport } from 'next';
 import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/next';
 import { Poppins } from 'next/font/google';
