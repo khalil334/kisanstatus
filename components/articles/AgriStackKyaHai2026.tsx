@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock } from '@/components/ArticleShared';
-import ExternalRedirectButton from '@/components/ExternalRedirectButton';
+import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { ArticleMeta } from '@/lib/articles-data';
 
 function fmtDate(dateString: string): string {
@@ -201,15 +201,10 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
             <SI n={8}>Acknowledgement receipt le lo — future reference ke liye bahut kaam aayega.</SI>
           </StepList>
 
-          <div className="my-8">
-            <ExternalRedirectButton 
-              url="https://farmers.gov.in" 
-              label="Official Digital Agriculture Portal Par Jaayein" 
-            />
-            <p className="text-center text-xs text-[var(--color-text-muted)] mt-2">
-              * Button click karne ke 10 second baad official website new tab mein open ho jayegi.
-            </p>
-          </div>
+          <ExternalLinkButton 
+            url="https://farmers.gov.in" 
+            label="Official Digital Agriculture Portal Par Jaayein" 
+          />
 
           <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
             <Image
@@ -350,12 +345,10 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
             </div>
           </div>
 
-          <div className="my-8">
-            <ExternalRedirectButton 
-              url="https://farmers.gov.in" 
-              label="Apna Status Check Karein (Official)" 
-            />
-          </div>
+          <ExternalLinkButton 
+            url="https://farmers.gov.in" 
+            label="Apna Status Check Karein (Official)" 
+          />
         </section>
 
         <section className="mb-8">
