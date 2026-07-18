@@ -6,6 +6,11 @@ const path = require('path');
 const CONFIG = {
   articlesDataPath: path.join(__dirname, '../lib/articles-data.ts'),
   componentsDir: path.join(__dirname, '../components/articles'),
+  // ✅ FIX: add every subfolder that can contain article components here
+  searchDirs: [
+    path.join(__dirname, '../components/articles'),
+    path.join(__dirname, '../components/articles/kisanguides'),
+  ],
   backupEnabled: true,
   dryRun: process.argv.includes('--dry-run'),
 };
@@ -39,10 +44,22 @@ function getGitDates(filePath) {
 
 function createBackup(filePath) {
   if (!CONFIG.backupEnabled) return;
-  
+
   const backupPath = `${filePath}.backup-${Date.now()}`;
   fs.copyFileSync(filePath, backupPath);
   console.log(`💾 Backup created: ${backupPath}`);
+}
+
+// ✅ FIX: searches every folder in CONFIG.searchDirs (.tsx and .ts)
+// instead of only the top-level components/articles folder.
+function findComponentFile(componentName) {
+  for (const dir of CONFIG.searchDirs) {
+    for (const ext of ['.tsx', '.ts']) {
+      const p = `${dir}/${componentName}${ext}`;
+      if (fs.existsSync(p)) return p;
+    }
+  }
+  return null;
 }
 
 function updateArticlesData() {
@@ -71,20 +88,9 @@ function updateArticlesData() {
 
   matches.forEach((match) => {
     const componentName = match[1];
-    
-    // Try multiple possible file paths
-    const possiblePaths = [
-      `${CONFIG.componentsDir}/${componentName}.tsx`,
-      `${CONFIG.componentsDir}/${componentName}.ts`,
-    ];
 
-    let componentFile = null;
-    for (const p of possiblePaths) {
-      if (fs.existsSync(p)) {
-        componentFile = p;
-        break;
-      }
-    }
+    // ✅ FIX: now checks components/articles AND components/articles/kisanguides
+    const componentFile = findComponentFile(componentName);
 
     if (!componentFile) {
       console.log(`❌ ${componentName} - File not found`);
@@ -100,20 +106,20 @@ function updateArticlesData() {
         `(component:\\s*'${componentName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}'[\\s\\S]*?publishedTime:\\s*)'[^']+'`,
         'g'
       );
-      
+
       const modifiedRegex = new RegExp(
         `(component:\\s*'${componentName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}'[\\s\\S]*?modifiedTime:\\s*)'[^']+'`,
         'g'
       );
 
       let updated = false;
-      
+
       // Update publishedTime
       if (publishedRegex.test(content)) {
         content = content.replace(publishedRegex, `$1'${dates.publishedTime}'`);
         updated = true;
       }
-      
+
       // Update modifiedTime
       if (modifiedRegex.test(content)) {
         content = content.replace(modifiedRegex, `$1'${dates.modifiedTime}'`);
@@ -123,6 +129,7 @@ function updateArticlesData() {
       if (updated) {
         updatedCount++;
         console.log(`✅ ${componentName}`);
+        console.log(`   📁 Found at: ${componentFile}`);
         console.log(`   📅 Published: ${dates.publishedTime}`);
         console.log(`   🔄 Modified:  ${dates.modifiedTime}`);
         console.log('');
