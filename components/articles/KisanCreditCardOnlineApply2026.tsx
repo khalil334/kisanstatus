@@ -1,12 +1,9 @@
-'use client';
+// ❌ REMOVED: 'use client' (This should be a Server Component for better SEO and performance)
 
 import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
-
-const PUBLISHED = '2026-01-10T08:00:00+05:30';
-const MODIFIED = '2026-07-04T08:00:00+05:30';
 
 const RELATED = [
   { slug: 'KisanRinKahaSeLe2026', title: 'Kisan Loan Kahan Se Milega', emoji: '🏦' },
@@ -48,7 +45,11 @@ const FAQS_DATA = [
   },
 ];
 
+// ✅ This is now a Server Component. It receives data and renders static HTML for Google.
 export default function KisanCreditCardOnlineApply2026({ article }: { article: ArticleMeta }) {
+  const PUBLISHED = article.publishedTime || '2026-01-10T08:00:00+05:30';
+  const MODIFIED = article.modifiedTime || '2026-07-04T08:00:00+05:30';
+
   return (
     <>
       {/* Header */}
@@ -63,7 +64,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">KCC Loan Guide</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            Kisan Credit Card 2026: 4% Byaj Mein ₹5 Lakh Tak — Bank Wale Jo Nahi Batate Woh Bhi
+            {article.title || 'Kisan Credit Card 2026: 4% Byaj Mein ₹5 Lakh Tak — Bank Wale Jo Nahi Batate Woh Bhi'}
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
@@ -80,7 +81,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/kisan-credit-card-apply-online-hero.webp'}
-            alt="Kisan Credit Card application process 2026 — 4% subsidized interest rate facility for kisans"
+            alt={article.title || 'Kisan Credit Card application process 2026'}
             width={1200}
             height={630}
             className="w-full object-cover"
