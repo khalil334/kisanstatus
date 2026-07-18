@@ -2,15 +2,6 @@ import { MetadataRoute } from 'next';
 import { ARTICLES, CATEGORIES, type CategorySlug } from '@/lib/articles-data';
 import { SITE_URL } from '@/lib/site-config';
 
-const STATE_SLUGS = [
-  'andhra-pradesh', 'arunachal-pradesh', 'assam', 'bihar', 'chhattisgarh', 'goa',
-  'gujarat', 'haryana', 'himachal-pradesh', 'jharkhand', 'karnataka', 'kerala',
-  'madhya-pradesh', 'maharashtra', 'manipur', 'meghalaya', 'mizoram', 'nagaland',
-  'odisha', 'punjab', 'rajasthan', 'sikkim', 'tamil-nadu', 'telangana', 'tripura',
-  'uttar-pradesh', 'uttarakhand', 'west-bengal', 'delhi', 'jammu-kashmir',
-  'ladakh', 'puducherry', 'andaman-nicobar', 'chandigarh', 'dadra-nagar-haveli', 'lakshadweep',
-] as const;
-
 function getArticlePriority(modifiedTime: string): number {
   const daysSinceModified = Math.floor((Date.now() - new Date(modifiedTime).getTime()) / 86400000);
   if (daysSinceModified <= 7) return 0.95;
@@ -44,11 +35,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/calculator/msp-income`,          lastModified: now, changeFrequency: 'weekly',  priority: 0.85 },
     { url: `${SITE_URL}/calculator/crop-profit`,         lastModified: now, changeFrequency: 'weekly',  priority: 0.85 },
     { url: `${SITE_URL}/about`,                          lastModified: now, changeFrequency: 'monthly', priority: 0.60 },
-    { url: `${SITE_URL}/author`,                         lastModified: now, changeFrequency: 'monthly', priority: 0.60 },
+    // REMOVED: /author (it was redirecting to /about, causing the error)
     { url: `${SITE_URL}/contact`,                        lastModified: now, changeFrequency: 'monthly', priority: 0.50 },
     { url: `${SITE_URL}/privacy-policy`,                 lastModified: now, changeFrequency: 'yearly',  priority: 0.40 },
     { url: `${SITE_URL}/disclaimer`,                     lastModified: now, changeFrequency: 'yearly',  priority: 0.40 },
     { url: `${SITE_URL}/terms-of-service`,               lastModified: now, changeFrequency: 'yearly',  priority: 0.40 },
+    // ADDED: The actual final destination URL for beneficiary lists
+    { url: `${SITE_URL}/articles/PmKisanBeneficiaryList2026`, lastModified: now, changeFrequency: 'weekly', priority: 0.85 },
   ];
 
   const categoryPages: MetadataRoute.Sitemap = Object.keys(CATEGORIES).map((category) => ({
@@ -68,17 +61,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
   });
 
-  const statePages: MetadataRoute.Sitemap = STATE_SLUGS.map((slug) => ({
-    url:             `${SITE_URL}/beneficiary-list/${slug}`,
-    lastModified:    now,
-    changeFrequency: 'weekly',
-    priority:        0.80,
-  }));
+  // REMOVED: The statePages loop that was generating 36+ redirecting URLs
 
   return [
     ...staticPages,
     ...categoryPages,
     ...articlePages,
-    ...statePages,
   ];
 }
