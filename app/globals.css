@@ -148,9 +148,15 @@
   img:not([width]):not([height]) {
     aspect-ratio: 16/9;
     background-color: var(--color-border);
+    min-height: 200px;
   }
 
-  .hero-image,
+  .hero-image {
+    background-color: var(--color-border);
+    min-height: 300px;
+    contain: layout style;
+  }
+
   img[loading="lazy"] {
     background-color: var(--color-border);
     min-height: 200px;
@@ -628,6 +634,12 @@
 
   .dark .theme-toggle:hover {
     background: #162E16;
+  }
+
+  /* FIX: Footer CLS fix */
+  footer {
+    min-height: 200px;
+    contain: layout style;
   }
 }
 
