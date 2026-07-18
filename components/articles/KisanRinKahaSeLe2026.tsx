@@ -1,12 +1,19 @@
-'use client';
-
 import Link from 'next/link';
 import Image from 'next/image';
-import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
+import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const PUBLISHED = '2026-01-10T08:00:00+05:30';
 const MODIFIED = '2026-07-04T08:00:00+05:30';
+function fmtDate(dateString: string): string {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('en-IN', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
+}
+
 
 const RELATED = [
   { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply Guide', emoji: '💳' },
@@ -20,7 +27,7 @@ const RELATED = [
 const FAQS_DATA = [
   {
     q: 'KCC aur normal agricultural loan mein kya farak hai?',
-    a: 'Dekho bhai, KCC revolving credit hai — limit set hoti hai ek baar, jab chaaho withdraw karo, jab chaaho wapas karo. Normal term loan ek baar milta hai fixed tenure mein. KCC flexible hai seasonal expenses ke liye, term loan bade investments (tractor, irrigation) ke liye.',
+    a: 'KCC revolving credit hai — limit set hoti hai ek baar, jab chaaho withdraw karo, jab chaaho wapas karo. Normal term loan ek baar milta hai fixed tenure mein. KCC flexible hai seasonal expenses ke liye, term loan bade investments (tractor, irrigation) ke liye.',
   },
   {
     q: 'Bina zameen ke loan mil sakta hai?',
@@ -28,7 +35,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Cooperative bank se loan lu ya SBI/PNB se — kya behtar hai?',
-    a: 'Depends karta hai bhai. Cooperative banks faster hain (5-7 din) kyunki local land records se familiar hote hain. National banks better digital services dete hain — app tracking, online repayment. Interest rate same hai dono jagah. Speed chahiye toh cooperative, tech chahiye toh national.',
+    a: 'Cooperative banks faster hain (5-7 din) kyunki local land records se familiar hote hain. National banks better digital services dete hain — app tracking, online repayment. Interest rate same hai dono jagah. Speed chahiye toh cooperative, tech chahiye toh national.',
   },
   {
     q: 'CSC center par loan apply karne ka charge kitna hai?',
@@ -36,7 +43,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Pichle saal KCC tha lekin renew nahi hua — ab fresh apply karna padega?',
-    a: 'Haan bhai, fresh application deni padegi. Lekin agar pichla repayment clean tha toh new approval fast-track hota hai. Old KCC number dikhao bank manager ko — positive credit history system mein dikhti hai.',
+    a: 'Haan, fresh application deni padegi. Lekin agar pichla repayment clean tha toh new approval fast-track hota hai. Old KCC number dikhao bank manager ko — positive credit history system mein dikhti hai.',
   },
   {
     q: 'Tractor loan ke liye KCC pehle lena zaroori hai?',
@@ -97,13 +104,13 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
         <div className="my-6 p-5 bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-400 dark:border-amber-700 border-l-[6px] rounded-xl">
           <h2 className="text-base font-black text-amber-800 dark:text-amber-300 mb-2">Gaon Mein Jo Dekha Hai</h2>
           <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed mb-2">
-            Bihar ke ek gaon mein. Subah 5 baje. Ek kisan bhai khet jaane se pehle sahukar ke ghar ruk raha tha.
+            Kai kisano ke saath yeh dekha gaya hai — beej ke season mein ₹50,000 udhaar chahiye hota hai aur sahukar 3% monthly byaj maangta hai, saal ka 36%. Bank se 4% saalana mil sakta hai lekin yeh baat aksar pata nahi hoti.
           </p>
           <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed mb-2">
-            ₹50,000 udhaar chahiye beej ke liye. Sahukar ne kaha — 3% monthly byaj. Saal ka 36%. Jab maine usse bataya ki KCC par 4% saalana mil sakta hai toh usse vishwas hi nahi hua. <strong>"Bank wale humein loan thodi dete hain"</strong> — yeh soch bahut common hai bhai.
+            <strong>"Bank wale humein loan thodi dete hain"</strong> — yeh soch bahut common hai aur isi wajah se kai kisan sahukar par dependent reh jaate hain.
           </p>
           <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
-            Sach yeh hai ki dete hain. Bas process pata hona chahiye. Yeh guide usi gap ko fill karti hai.
+            Banks dete hain. Process pata hona chahiye. Yeh guide usi gap ko fill karti hai.
           </p>
         </div>
 
@@ -111,22 +118,22 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
         <section className="mb-8">
           <SH>Kisan Rin Kya Hota Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Specifically kheti ke liye diya jaane wala loan bhai. Personal loan nahi, business loan nahi.
+            Kisan Rin specifically kheti ke liye diya jaane wala loan hai. Personal loan nahi, business loan nahi.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Beej, khaad, dawai, labour, equipment, irrigation — sab cover hota hai. Government subsidized rates par milta hai kyunki agriculture priority sector hai RBI guidelines mein. Banks ko quota fulfill karna hota hai — isliye eligible kisanon ko deny nahi kar sakte bina valid reason ke.
           </p>
 
-          <IB>
-            <strong>Eligibility Simple Hai:</strong> Zameen malik, tenant farmer, sharecropper, SHG member — sab eligible hain. 2 bigha se lekar 50 bigha tak. Size matter nahi karta, verified cultivation matter karta hai.
-          </IB>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            <strong>Eligibility:</strong> Zameen malik, tenant farmer, sharecropper, SHG member — sab eligible hain. 2 bigha se lekar 50 bigha tak. Size matter nahi karta, verified cultivation matter karta hai.
+          </p>
         </section>
 
         {/* Section 2: Four Sources Compared */}
         <section className="mb-8">
           <SH>4 Jagah Se Rin Mil Sakta Hai — Comparison</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Ek hi option nahi hai bhai. Char sources hain — har ek ka apna advantage hai.
+            Ek hi option nahi hai. Char sources hain — har ek ka apna advantage hai.
           </p>
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
             <table className="w-full text-sm border-collapse">
@@ -161,7 +168,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
         <section className="mb-8">
           <SH>Kisan Credit Card — Sabse Pehla Option</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Bank manager se pehla sawaal yehi aayega bhai — <em>"KCC hai?"</em>
+            Bank manager se pehla sawaal yehi aayega — <em>"KCC hai?"</em>
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Nahi hai toh yeh sabse pehle banwao. Revolving credit facility hai — ek baar limit set, jab chaaho use karo. Fasal becho, wapas karo, phir nikalo. Seasonal farming ke liye perfect hai.
@@ -204,7 +211,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
         <section className="mb-8">
           <SH>Bade Kaam Ke Liye — Term Loan</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Tractor, drip irrigation, greenhouse, warehouse — yeh sab KCC se nahi hoga bhai. Term loan chahiye.
+            Tractor, drip irrigation, greenhouse, warehouse — yeh sab KCC se nahi hoga. Term loan chahiye.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Amount zyada, tenure lambi (3-7 saal), collateral required above ₹2 lakh. Process bhi lamba hai — 15-30 din. Par mumkin hai. Maine kai kisanon ko SBI se ₹3-5 lakh drip irrigation ke liye approve hote dekha hai.
@@ -240,7 +247,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
 
           <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-4">CSC Center</h3>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Gaon mein bank nahi hai? CSC hai bhai. Operator trained hota hai, online form submit karta hai. locator.csc.gov.in par nearest center dhundo.
+            Gaon mein bank nahi hai? CSC center available hai. Operator trained hota hai, online form submit karta hai. locator.csc.gov.in par nearest center dhundo.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Service charge ₹20-50 nominal. Zyada maange toh fraud. Same documents chahiye jo bank mein lagte hain.
@@ -286,9 +293,9 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
               </tbody>
             </table>
           </div>
-          <DB>
-            <strong>Fark Dekho:</strong> Sahukar se KCC switch karne par ₹2 lakh par saal mein ₹40,000-1,12,000 bachat. 5 saal mein ₹2-5.6 lakh. Yeh koi chhoti rakam nahi hai bhai — tractor down payment jitni.
-          </DB>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            <strong>Fark Dekho:</strong> Sahukar se KCC switch karne par ₹2 lakh par saal mein ₹40,000-1,12,000 bachat. 5 saal mein ₹2-5.6 lakh. Tractor down payment jitni savings hai.
+          </p>
         </section>
 
         {/* Section 7: Documents */}
@@ -316,9 +323,9 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
               </ul>
             </div>
           </div>
-          <WB>
-            <strong>Sabse Common Rejection:</strong> Naam mismatch bhai. Aadhaar mein "Rajesh Kumar Singh", bank mein "R.K. Singh". Chhoti difference, bada delay. Apply se pehle teeno jagah naam exactly match karwao.
-          </WB>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            <strong>Sabse Common Rejection:</strong> Naam mismatch. Aadhaar mein "Rajesh Kumar Singh", bank mein "R.K. Singh". Chhoti difference, bada delay. Apply se pehle teeno jagah naam exactly match karwao.
+          </p>
         </section>
 
         {/* Section 8: Approval Tips */}
@@ -382,7 +389,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Bottom Line</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Sahukar last resort hai bhai. First resort government-backed credit hona chahiye. Process thoda lamba hai shuru mein — par ek baar KCC mil gaya toh zindagi badal jaati hai.
+            Sahukar last resort hona chahiye. First resort government-backed credit hona chahiye. Process thoda lamba hai shuru mein — par ek baar KCC mil gaya toh zindagi badal jaati hai.
           </p>
           <ol className="space-y-2 text-sm text-green-800 dark:text-green-300 list-decimal list-inside">
             <li>Khatauni update karwao</li>
