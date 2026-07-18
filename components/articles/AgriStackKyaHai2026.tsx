@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
 import { SI, StepList, IB, WB, DB, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock } from '@/components/ArticleShared';
+import ExternalRedirectButton from '@/components/ExternalRedirectButton';
 import type { ArticleMeta } from '@/lib/articles-data';
 
 function fmtDate(dateString: string): string {
@@ -11,36 +11,6 @@ function fmtDate(dateString: string): string {
     month: 'long',
     day: 'numeric',
   });
-}
-
-function ExternalRedirectButton({ url, label }: { url: string; label: string }) {
-  const [countdown, setCountdown] = useState(10);
-  const [redirected, setRedirected] = useState(false);
-
-  useEffect(() => {
-    if (countdown > 0 && !redirected) {
-      const timer = setTimeout(() => setCountdown((prev) => prev - 1), 1000);
-      return () => clearTimeout(timer);
-    } else if (countdown === 0 && !redirected) {
-      setRedirected(true);
-      window.open(url, '_blank', 'noopener,noreferrer');
-    }
-  }, [countdown, redirected, url]);
-
-  return (
-    <a
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-      onClick={(e) => {
-        e.preventDefault();
-        window.open(url, '_blank', 'noopener,noreferrer');
-      }}
-      className="block w-full py-4 px-6 bg-blue-600 hover:bg-blue-700 text-white font-bold text-center rounded-xl transition-all shadow-lg border-2 border-blue-500 hover:border-blue-400"
-    >
-      {redirected ? '✅ Official Website Open Ho Gayi Hai' : `🔗 ${label} (${countdown}s mein redirect hoga)`}
-    </a>
-  );
 }
 
 const PUBLISHED = '2025-01-15T08:00:00+05:30';
