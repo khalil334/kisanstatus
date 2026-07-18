@@ -1,6 +1,3 @@
-// ✅ Main Component is a SERVER COMPONENT for maximum SEO (No 'use client' here)
-// Only interactive parts use 'use client' in separate components
-
 import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock } from '@/components/ArticleShared';
