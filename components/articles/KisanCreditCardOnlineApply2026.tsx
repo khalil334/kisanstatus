@@ -1,9 +1,12 @@
-// ✅ 'use client' has been REMOVED. This is now a Server Component for maximum SEO.
+// ✅ 'use client' HATA DIYA GAYA HAI (SEO ke liye zaroori)
 
 import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
+
+const PUBLISHED = '2026-01-10T08:00:00+05:30';
+const MODIFIED = '2026-07-04T08:00:00+05:30';
 
 const RELATED = [
   { slug: 'KisanRinKahaSeLe2026', title: 'Kisan Loan Kahan Se Milega', emoji: '🏦' },
@@ -46,9 +49,6 @@ const FAQS_DATA = [
 ];
 
 export default function KisanCreditCardOnlineApply2026({ article }: { article: ArticleMeta }) {
-  const PUBLISHED = article.publishedTime || '2026-01-10T08:00:00+05:30';
-  const MODIFIED = article.modifiedTime || '2026-07-04T08:00:00+05:30';
-
   return (
     <>
       {/* Header */}
