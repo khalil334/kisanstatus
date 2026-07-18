@@ -1,4 +1,4 @@
-// ✅ 'use client' HATA DIYA GAYA HAI (SEO ke liye zaroori)
+'use client';
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -63,7 +63,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">KCC Loan Guide</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            {article.ogTitle || 'Kisan Credit Card 2026: 4% Byaj Mein ₹5 Lakh Tak — Bank Wale Jo Nahi Batate Woh Bhi'}
+            Kisan Credit Card 2026: 4% Byaj Mein ₹5 Lakh Tak — Bank Wale Jo Nahi Batate Woh Bhi
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
@@ -80,7 +80,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/kisan-credit-card-apply-online-hero.webp'}
-            alt={article.ogTitle || 'Kisan Credit Card application process 2026'}
+            alt="Kisan Credit Card application process 2026 — 4% subsidized interest rate facility for kisans"
             width={1200}
             height={630}
             className="w-full object-cover"
