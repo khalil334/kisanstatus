@@ -10,11 +10,9 @@ export default function robots(): MetadataRoute.Robots {
         disallow: [
           '/api/',
           '/private/',
-          '/tools/',
           '/admin/',
           '/_next/',
-          '/*?*sub1=',
-          '/*?*tr_uuid=',
+          '/tools/',
         ],
       },
       {
@@ -30,10 +28,8 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: [
           '/api/',
-          '/tools/',
           '/private/',
-          '/*?*sub1=',
-          '/*?*tr_uuid=',
+          '/tools/',
         ],
       },
       {
