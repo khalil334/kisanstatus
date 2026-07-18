@@ -121,7 +121,7 @@ export default function HomeContent() {
             </div>
           </div>
 
-          {/* Hero Image - Optimized for LCP */}
+          {/* ✅ HERO IMAGE - LCP OPTIMIZED */}
           <div className="relative max-w-5xl mx-auto">
             <div className="absolute -inset-4 bg-gradient-to-r from-green-500/20 to-emerald-500/20 dark:from-green-600/20 dark:to-emerald-600/20 rounded-3xl blur-2xl" aria-hidden="true" />
             <figure className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/5 dark:ring-white/10">
@@ -130,14 +130,14 @@ export default function HomeContent() {
                   src="/hero-wheat-field.webp"
                   alt="Bharatiya kisan gehu ke khet mein kaam karte hue - PM Kisan Samman Nidhi yojana ke labharthi"
                   fill
-                  priority
-                  fetchPriority="high"
+                  priority // ✅ Sabse important for LCP
+                  fetchPriority="high" // ✅ Browser ko turant download karne ka signal
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1024px"
-                  quality={75}
+                  quality={85}
                   placeholder="blur"
                   blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiEycf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xVsgH1fZ//2Q=="
                   className="object-cover"
-                  decoding="async"
+                  // ✅ decoding="async" HATA DIYA (LCP image ko sync decode hona chahiye for faster paint)
                 />
               </div>
               <figcaption className="sr-only">PM Kisan Samman Nidhi ke labharthi kisan gehu ki fasal kaat rahe hain</figcaption>
