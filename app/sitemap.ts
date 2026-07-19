@@ -121,8 +121,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly', 
       priority: 0.40,
     },
-    // ❌ HATA DIYA: Duplicate PmKisanBeneficiaryList2026
-    // Ye ARTICLES.map() se already aa jayega
     { 
       url: `${SITE_URL}/search`, 
       lastModified: new Date('2026-07-19'), 
