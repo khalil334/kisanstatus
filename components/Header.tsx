@@ -13,14 +13,14 @@ const navLinks = [
   { href: '/articles/PmKisan24viKist2026', label: '24vi Kist Status' },
   { href: '/articles/PmKisanMasterGuide2026', label: 'Complete Guide' },
   { href: '/calculator', label: 'Calculator' },
-] as const;
+];
 
 const quickLinks = [
   { href: '/articles/PmKisan24viKist2026', label: '24vi Kist Status', emoji: '📆' },
   { href: '/articles/pm-kisan-fto-generated-ka-matlab-kya-hai', label: 'FTO Guide', emoji: '📋' },
   { href: '/articles/soil-health-card-complete-guide-2026', label: 'Soil Health Card', emoji: '🌱' },
   { href: '/articles/KisanCreditCardOnlineApply2026', label: 'KCC Loan', emoji: '💳' },
-] as const;
+];
 
 const CATEGORY_EMOJIS: Record<string, string> = {
   'status-check': '📆',
@@ -85,7 +85,6 @@ function SearchModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
       <div 
         className="absolute inset-0 bg-black/50 backdrop-blur-sm" 
         onClick={onClose}
-        style={{ willChange: 'opacity' }}
       />
       <div className="relative max-w-lg mx-auto mt-20 md:mt-32 px-4">
         <div className="bg-[var(--color-card)] rounded-2xl shadow-2xl overflow-hidden border border-[var(--color-border)]">
@@ -219,7 +218,6 @@ export default function Header() {
   const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    // ✅ PERFORMANCE: Optimized scroll handler with requestAnimationFrame
     let ticking = false;
     let lastScrollY = 0;
     
@@ -291,6 +289,7 @@ export default function Header() {
                 : 'text-[var(--color-text)] hover:text-[var(--color-primary)] hover:bg-[var(--color-bg-alt)]'
             }`}
             aria-current={active ? 'page' : undefined}
+            prefetch={true}
           >
             {link.label}
           </Link>
@@ -308,7 +307,6 @@ export default function Header() {
           className="fixed inset-0 bg-black/50 z-40 lg:hidden"
           onClick={() => setMobileOpen(false)}
           aria-hidden="true"
-          style={{ willChange: 'opacity' }}
         />
       )}
 
@@ -318,10 +316,6 @@ export default function Header() {
           scrolled ? 'shadow-md' : 'shadow-sm'
         }`}
         role="banner"
-        style={{ 
-          minHeight: '64px', // ✅ CLS FIX: Reserve header height
-          contain: 'layout style' // ✅ PERFORMANCE: Prevent layout shift
-        }}
       >
         <div className="container-site flex items-center justify-between h-16">
           <Link href="/" className="shrink-0" aria-label="KisanStatus Home">
@@ -354,9 +348,10 @@ export default function Header() {
             <a
               href="https://pmkisan.gov.in/BeneficiaryStatus.aspx"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
               className="bg-[var(--color-primary)] hover:bg-[var(--color-primary-dark)] text-white text-sm font-bold px-5 py-2.5 rounded-lg transition-colors shadow-sm hover:shadow-md"
               aria-label="Check PM Kisan Status on official website"
+              prefetch={false}
             >
               Check Status ↗
             </a>
@@ -400,10 +395,6 @@ export default function Header() {
             id="mobile-menu"
             className="lg:hidden fixed top-16 right-0 w-80 max-w-[85vw] h-[calc(100vh-4rem)] bg-[var(--color-card)] border-l border-[var(--color-border)] shadow-2xl overflow-y-auto z-50"
             aria-label="Mobile navigation"
-            style={{ 
-              willChange: 'transform', // ✅ PERFORMANCE: GPU acceleration
-              transform: 'translateZ(0)' // ✅ PERFORMANCE: Force GPU layer
-            }}
           >
             <div className="px-4 py-3 bg-[var(--color-bg-alt)] border-b border-[var(--color-border)]">
               <p className="text-xs font-bold text-[var(--color-text-muted)] uppercase mb-2">Quick Links</p>
@@ -451,10 +442,11 @@ export default function Header() {
               <a
                 href="https://pmkisan.gov.in/BeneficiaryStatus.aspx"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
                 onClick={() => setMobileOpen(false)}
                 className="block w-full bg-[var(--color-primary)] hover:bg-[var(--color-primary-dark)] text-white text-center font-bold py-3 rounded-lg transition-colors shadow-sm"
                 aria-label="Check PM Kisan Status on official website"
+                prefetch={false}
               >
                 Check Status on pmkisan.gov.in ↗
               </a>
