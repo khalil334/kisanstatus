@@ -641,6 +641,25 @@
     min-height: 200px;
     contain: layout style;
   }
+
+  /* ✅ FIX: Dark-mode safety net for article body content.
+     Article content (components/articles/*) likely has hardcoded text
+     colors (e.g. text-black, color:#000) that don't respond to dark
+     mode. This forces all article/prose text to follow the theme
+     variable regardless of what color was hardcoded upstream.
+     NOTE: rename ".article-content, .prose, article" below if your
+     actual article wrapper uses a different class name. */
+  .dark .article-content,
+  .dark .prose,
+  .dark article {
+    color: var(--color-text) !important;
+  }
+
+  .dark .article-content *,
+  .dark .prose *,
+  .dark article * {
+    color: inherit;
+  }
 }
 
 @layer utilities {
