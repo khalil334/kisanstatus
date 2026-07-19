@@ -110,7 +110,6 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
       })),
       keywords: article.keywords.join(', '),
       articleSection: category ? (category as Record<string, string>).name : 'Agriculture',
-      wordCount: article.wordCount || 1500,
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['article h1', 'article h2', 'article p'],
