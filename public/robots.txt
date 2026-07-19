@@ -1,28 +1,17 @@
 User-agent: *
-Allow: /
 Disallow: /admin/
 Disallow: /api/
 Disallow: /private/
-Disallow: /.env
-Disallow: /.git
-Disallow: *.json$
-
-# Sitemap
-Sitemap: https://kisanstatus.com/sitemap.xml
-
-# Crawl delay
+Disallow: /*.json$
 Crawl-delay: 1
 
-# Specific rules for search engines
 User-agent: Googlebot
-Allow: /
 Crawl-delay: 0
 
 User-agent: Bingbot
-Allow: /
 Crawl-delay: 1
 
-# Block bad bots
+# Optional: Block SEO crawlers (only if bandwidth issue)
 User-agent: MJ12bot
 Disallow: /
 
@@ -31,3 +20,5 @@ Disallow: /
 
 User-agent: SemrushBot
 Disallow: /
+
+Sitemap: https://kisanstatus.com/sitemap.xml
