@@ -20,7 +20,6 @@ import {
   LOGO_URL,
   LOGO_WIDTH,
   LOGO_HEIGHT,
-  SUPPORT_EMAIL,
 } from '@/lib/site-config';
 
 function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
