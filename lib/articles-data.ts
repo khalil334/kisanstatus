@@ -54,6 +54,22 @@ export interface ArticleMeta {
   relatedSlugs?: readonly string[];
 }
 
+// ═══════════════════════════════════════════════════════════════
+// OG IMAGE PATH STANDARDS (Consistent Pattern)
+// ═══════════════════════════════════════════════════════════════
+// Pattern: /images/articles/{slug}/hero.webp
+// 
+// Rules:
+// 1. ALL images must follow: /images/articles/{slug}/hero.webp
+// 2. NO images in /images/ root (old pattern)
+// 3. NO images in /images/kisanguides/ (old pattern)  
+// 4. Each article MUST have a UNIQUE ogImage
+// 5. Image dimensions: 1200x630px (OG standard)
+// 6. Format: WebP for best compression
+//
+// To validate: Run `npm run validate-images` (see package.json script)
+// ═══════════════════════════════════════════════════════════════
+
 export const ARTICLES: readonly ArticleMeta[] = [
   // ── EXISTING ARTICLES (18) ───────────────────────────────────
   {
@@ -69,7 +85,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     readingTime: 8,
     banks: ['sbi', 'pnb', 'bob', 'cooperative'],
     schemes: ['kcc'],
-    ogImage: '/images/kisan-rin-kaha-se-le-2026.webp',
+    ogImage: '/images/articles/KisanRinKahaSeLe2026/hero.webp',
     relatedSlugs: ['KisanCreditCardOnlineApply2026', 'KisanTractorLoan2026'],
   },
   {
@@ -85,7 +101,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     readingTime: 10,
     banks: ['mahindra-finance', 'tata-capital'],
     schemes: ['nabard-tractor'],
-    ogImage: '/images/articles/kisan-tractor-loan-2026/hero-2.webp',
+    ogImage: '/images/articles/KisanTractorLoan2026/hero.webp',
     relatedSlugs: ['KisanRinKahaSeLe2026', 'KisanCreditCardOnlineApply2026'],
   },
   {
@@ -100,7 +116,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-09T08:00:00+05:30',
     readingTime: 15,
     schemes: ['pm-kisan'],
-    ogImage: '/images/pm-kisan-beneficiary-status-kisanstatus.webp',
+    ogImage: '/images/articles/PmKisanBeneficiaryList2026/hero.webp',
     relatedSlugs: ['PmKisan24viKist2026', 'PmKisanMasterGuide2026'],
   },
   {
@@ -115,7 +131,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-06T08:00:00+05:30',
     readingTime: 8,
     schemes: ['pm-kisan'],
-    ogImage: '/images/articles/pm-kisan-ekyc-online-2026/otp-vs-biometric.webp',
+    ogImage: '/images/articles/PmKisanEkycOnline2026/hero.webp',
     relatedSlugs: ['PmKisanMasterGuide2026', 'PmKisan24viKist2026', 'PmKisanBeneficiaryList2026'],
   },
   {
@@ -130,7 +146,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-06T08:00:00+05:30',
     readingTime: 10,
     schemes: ['pmfby'],
-    ogImage: '/images/articles/pmfby-crop-insurance-2026/hero-image.webp',
+    ogImage: '/images/articles/PmfbyCropInsurance2026/hero.webp',
     relatedSlugs: ['PmKisanMasterGuide2026', 'soil-health-card-complete-guide-2026', 'KisanCreditCardOnlineApply2026'],
   },
   {
@@ -146,7 +162,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     readingTime: 9,
     banks: ['sbi', 'pnb', 'bob', 'cooperative'],
     schemes: ['kcc'],
-    ogImage: '/images/kisan-credit-card-apply-online-hero.webp',
+    ogImage: '/images/articles/KisanCreditCardOnlineApply2026/hero.webp',
     relatedSlugs: ['KisanRinKahaSeLe2026', 'KisanTractorLoan2026'],
   },
   {
@@ -161,7 +177,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 6,
     schemes: ['pm-kisan'],
-    ogImage: '/images/pm-kisan-fto-generated-featured-image-kisanstatus.webp',
+    ogImage: '/images/articles/pm-kisan-fto-generated-ka-matlab-kya-hai/hero.webp',
     relatedSlugs: ['PmKisan24viKist2026', 'PmKisanBeneficiaryList2026'],
   },
   {
@@ -176,7 +192,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 7,
     schemes: ['nano-dap'],
-    ogImage: '/images/nano-dap-500ml-bottle-hero.webp',
+    ogImage: '/images/articles/NanoDap500mlPriceInIndia2026/hero.webp',
     relatedSlugs: ['soil-health-card-complete-guide-2026', 'AgriStackKyaHai2026'],
   },
   {
@@ -191,7 +207,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 6,
     schemes: ['pm-kisan'],
-    ogImage: '/images/pm-kisan-24vi-kist-october-2026.webp',
+    ogImage: '/images/articles/PmKisan24viKist2026/hero.webp',
     relatedSlugs: ['PmKisanBeneficiaryList2026', 'pm-kisan-fto-generated-ka-matlab-kya-hai'],
   },
   {
@@ -206,7 +222,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 10,
     schemes: ['agristack', 'pm-kisan'],
-    ogImage: '/images/articles/agristack-kya-hai/infographic.webp',
+    ogImage: '/images/articles/AgriStackKyaHai2026/hero.webp',
     relatedSlugs: ['NanoDap500mlPriceInIndia2026', 'soil-health-card-complete-guide-2026'],
   },
   {
@@ -221,7 +237,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 15,
     schemes: ['pm-kisan'],
-    ogImage: '/images/articles/pm-kisan-complete-guide/hero.webp',
+    ogImage: '/images/articles/PmKisanMasterGuide2026/hero.webp',
     relatedSlugs: ['PmKisan24viKist2026', 'PmKisanBeneficiaryList2026'],
   },
   {
@@ -250,7 +266,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     publishedTime: '2026-06-30T09:30:00+05:30',
     modifiedTime: '2026-07-04T08:00:00+05:30',
     readingTime: 5,
-    ogImage: '/images/articles/mandi-bhav-today/mandi-fresh-vegetables-mixed.webp',
+    ogImage: '/images/articles/mandi-bhav-today/hero.webp',
   },
   {
     slug: 'PmKisanPaymentFailedFix2026',
@@ -264,7 +280,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-06T08:00:00+05:30',
     readingTime: 9,
     schemes: ['pm-kisan'],
-    ogImage: '/images/articles/pm-kisan-payment-failed-fix-2026/payment-failed-hero.webp',
+    ogImage: '/images/articles/PmKisanPaymentFailedFix2026/hero.webp',
     relatedSlugs: ['pm-kisan-fto-generated-ka-matlab-kya-hai', 'PmKisanMasterGuide2026', 'PmKisan24viKist2026'],
   },
   {
@@ -279,7 +295,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-06T08:00:00+05:30',
     readingTime: 8,
     schemes: ['pm-kisan'],
-    ogImage: '/images/articles/pm-kisan-25vi-kist-2027/hero-25vi-kist.webp',
+    ogImage: '/images/articles/PmKisan25viKist2027/hero.webp',
     relatedSlugs: ['PmKisan24viKist2026', 'PmKisanMasterGuide2026', 'PmKisanEkycOnline2026'],
   },
   {
@@ -294,7 +310,11 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-07T08:00:00+05:30',
     readingTime: 10,
     schemes: ['pm-kisan'],
-    ogImage: '/images/articles/pm-kisan-complete-guide/hero.webp',
+    // ═══════════════════════════════════════════════════════════════
+    // FIXED: Was using duplicate image from PmKisanMasterGuide2026
+    // Now has UNIQUE ogImage per article
+    // ═══════════════════════════════════════════════════════════════
+    ogImage: '/images/articles/pm-kisan-self-registered-status-check/hero.webp',
     relatedSlugs: ['PmKisan24viKist2026', 'PmKisanMasterGuide2026', 'PmKisanBeneficiaryList2026', 'pm-kisan-fto-generated-ka-matlab-kya-hai'],
   },
   {
@@ -319,7 +339,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-08T08:00:00+05:30',
     readingTime: 8,
     schemes: ['pm-kisan'],
-    ogImage: '/images/articles/pm-kisan-correction-form-2026/pm-kisan-correction-hero.webp',
+    ogImage: '/images/articles/PmKisanCorrectionForm2026/hero.webp',
     relatedSlugs: ['PmKisanPaymentFailedFix2026', 'PmKisanMasterGuide2026', 'PmKisanEkycOnline2026', 'PmKisan24viKist2026'],
   },
   {
@@ -348,7 +368,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-08T10:00:00+05:30',
     readingTime: 12,
     schemes: ['pm-kusum'],
-    ogImage: '/images/articles/pm-kusum-yojana-solar-subsidy-2026/solar-pump-hero.webp',
+    ogImage: '/images/articles/PmKusumYojanaSolarSubsidy2026/hero.webp',
     relatedSlugs: ['KisanCreditCardOnlineApply2026', 'KisanTractorLoan2026', 'PmKisanMasterGuide2026', 'soil-health-card-complete-guide-2026'],
   },
 
@@ -372,7 +392,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-10T08:00:00+05:30',
     readingTime: 12,
     schemes: ['pm-kisan'],
-    ogImage: '/images/articles/pm-kisan-land-seeding-form/land-seeding-form-hero.webp',
+    ogImage: '/images/articles/PmKisanLandSeedingForm/hero.webp',
     relatedSlugs: ['PmKisanBeneficiaryList2026', 'PmKisanEkycOnline2026', 'PmKisanMasterGuide2026'],
   },
   {
@@ -393,7 +413,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-10T08:00:00+05:30',
     readingTime: 10,
     schemes: ['pm-kisan'],
-    ogImage: '/images/articles/pm-kisan-face-authentication-ekyc/face-auth-hero.webp',
+    ogImage: '/images/articles/PmKisanFaceAuthenticationEkyc/hero.webp',
     relatedSlugs: ['PmKisanEkycOnline2026', 'PmKisanMasterGuide2026', 'PmKisanPaymentFailedFix2026', 'PmKisanCscRegistrationCharges'],
   },
   {
@@ -413,7 +433,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-10T08:00:00+05:30',
     readingTime: 12,
     schemes: ['pm-kisan'],
-    ogImage: '/images/articles/pm-kisan-voluntary-surrender/surrender-hero.webp',
+    ogImage: '/images/articles/PmKisanVoluntarySurrenderGuide/hero.webp',
     relatedSlugs: ['PmKisanMasterGuide2026', 'PmKisanCorrectionForm2026', 'PmKisanBeneficiaryList2026'],
   },
   {
@@ -432,7 +452,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-10T08:00:00+05:30',
     readingTime: 18,
     schemes: ['pm-kisan'],
-    ogImage: '/images/articles/pm-kisan-state-nodal-officer-list/officer-hero.webp',
+    ogImage: '/images/articles/PmKisanStateNodalOfficerList/hero.webp',
     relatedSlugs: ['PmKisanPaymentFailedFix2026', 'PmKisanMasterGuide2026', 'PmKisanBeneficiaryList2026', 'PmKisanCorrectionForm2026'],
   },
   {
@@ -451,7 +471,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-10T08:00:00+05:30',
     readingTime: 16,
     schemes: ['pm-kisan'],
-    ogImage: '/images/articles/pm-kisan-bank-account-change/bank-change-hero.webp',
+    ogImage: '/images/articles/PmKisanBankAccountChangeProcess/hero.webp',
     relatedSlugs: ['PmKisanPaymentFailedFix2026', 'pm-kisan-fto-generated-ka-matlab-kya-hai', 'PmKisanMasterGuide2026', 'PmKisanEkycOnline2026'],
   },
   {
@@ -470,7 +490,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-10T08:00:00+05:30',
     readingTime: 14,
     schemes: ['pm-kisan'],
-    ogImage: '/images/articles/pm-kisan-csc-registration-charges/csc-registration-hero.webp',
+    ogImage: '/images/articles/PmKisanCscRegistrationCharges/hero.webp',
     relatedSlugs: ['PmKisanEkycOnline2026', 'PmKisanMasterGuide2026', 'PmKisanBankAccountChangeProcess', 'PmKisanStateNodalOfficerList'],
   },
   {
@@ -489,7 +509,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-10T08:00:00+05:30',
     readingTime: 16,
     schemes: ['pm-kisan', 'pm-kmy'],
-    ogImage: '/images/articles/pm-kisan-maandhan-yojana-pension/maandhan-hero.webp',
+    ogImage: '/images/articles/PmKisanMaandhanYojanaPension/hero.webp',
     relatedSlugs: ['PmKisanMasterGuide2026', 'PmKisanBeneficiaryList2026', 'PmKisanEkycOnline2026', 'PmfbyCropInsurance2026'],
   },
   {
@@ -508,7 +528,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-10T08:00:00+05:30',
     readingTime: 17,
     schemes: ['pm-kisan'],
-    ogImage: '/images/articles/pm-kisan-rejected-status-re-apply-guide/rejected-status-hero.webp',
+    ogImage: '/images/articles/PmKisanRejectedStatusReApplyGuide/hero.webp',
     relatedSlugs: ['PmKisanBeneficiaryList2026', 'PmKisanMasterGuide2026', 'PmKisanEkycOnline2026', 'PmKisanCorrectionForm2026'],
   },
   {
@@ -527,7 +547,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-10T08:00:00+05:30',
     readingTime: 15,
     schemes: ['pm-kisan'],
-    ogImage: '/images/articles/pm-kisan-village-wise-list-pdf-download/village-list-hero.webp',
+    ogImage: '/images/articles/PmKisanVillageWiseListPdfDownload/hero.webp',
     relatedSlugs: ['PmKisanBeneficiaryList2026', 'PmKisanRejectedStatusReApplyGuide', 'PmKisanMasterGuide2026', 'PmKisanStateNodalOfficerList'],
   },
   {
@@ -546,7 +566,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-10T08:00:00+05:30',
     readingTime: 15,
     schemes: ['pm-kisan'],
-    ogImage: '/images/articles/pm-kisan-mobile-number-change-update/mobile-change-hero.webp',
+    ogImage: '/images/articles/PmKisanMobileNumberChangeUpdate/hero.webp',
     relatedSlugs: ['PmKisanCscRegistrationCharges', 'PmKisanEkycOnline2026', 'PmKisanMasterGuide2026', 'PmKisanRejectedStatusReApplyGuide'],
   },
 
@@ -570,7 +590,11 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-11T08:00:00+05:30',
     readingTime: 18,
     schemes: ['nlm', 'pm-kisan'],
-    ogImage: '/images/kisanguides/bakri-palan-nlm-subsidy.webp', // ✅ FIXED
+    // ═══════════════════════════════════════════════════════════════
+    // FIXED: Was /images/kisanguides/bakri-palan-nlm-subsidy.webp
+    // Now follows consistent /images/articles/{slug}/hero.webp pattern
+    // ═══════════════════════════════════════════════════════════════
+    ogImage: '/images/articles/bakri-palan-yojana-nlm-subsidy/hero.webp',
     relatedSlugs: ['PmKusumYojanaSolarSubsidy2026', 'KisanCreditCardOnlineApply2026', 'PmKisanMaandhanYojanaPension', 'PmfbyCropInsurance2026'],
   },
   {
@@ -591,7 +615,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-11T08:00:00+05:30',
     readingTime: 16,
     schemes: ['nhb', 'pm-fme'],
-    ogImage: '/images/kisanguides/harvesting-mushroom.webp', // ✅ FIXED
+    ogImage: '/images/articles/mushroom-kheti-nhb-subsidy/hero.webp',
     relatedSlugs: ['PmKusumYojanaSolarSubsidy2026', 'KisanCreditCardOnlineApply2026', 'PmKisanMaandhanYojanaPension'],
   },
   {
@@ -612,7 +636,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-11T08:00:00+05:30',
     readingTime: 17,
     schemes: ['kvic', 'nhb', 'pm-fme'],
-    ogImage: '/images/kisanguides/madhumakhi-palan-hero.webp',
+    ogImage: '/images/articles/madhumakhi-palan-kvic-subsidy/hero.webp',
     relatedSlugs: ['PmKusumYojanaSolarSubsidy2026', 'KisanCreditCardOnlineApply2026', 'PmKisanMaandhanYojanaPension'],
   },
   {
@@ -633,7 +657,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-11T08:00:00+05:30',
     readingTime: 18,
     schemes: ['pmmsy', 'pm-kisan'],
-    ogImage: '/images/kisanguides/fish-farming-hero.webp',
+    ogImage: '/images/articles/pm-matsya-sampada-yojana-fish-farming/hero.webp',
     relatedSlugs: ['PmKusumYojanaSolarSubsidy2026', 'KisanCreditCardOnlineApply2026', 'PmKisanMaandhanYojanaPension'],
   },
   {
@@ -654,7 +678,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-11T08:00:00+05:30',
     readingTime: 16,
     schemes: ['smam', 'aif', 'pm-fme'],
-    ogImage: '/images/kisanguides/silage-hero.webp', // ✅ FIXED
+    ogImage: '/images/articles/silage-making-business-guide/hero.webp',
     relatedSlugs: ['PmKusumYojanaSolarSubsidy2026', 'KisanCreditCardOnlineApply2026', 'PmKisanMaandhanYojanaPension'],
   },
   {
@@ -675,7 +699,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-11T08:00:00+05:30',
     readingTime: 15,
     schemes: ['pm-fme', 'pmegp'],
-    ogImage: '/images/kisanguides/pmfme-hero.webp',
+    ogImage: '/images/articles/pm-fme-yojana-food-processing/hero.webp',
     relatedSlugs: ['PmKusumYojanaSolarSubsidy2026', 'KisanCreditCardOnlineApply2026', 'PmKisanMaandhanYojanaPension'],
   },
   {
@@ -696,7 +720,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-11T08:00:00+05:30',
     readingTime: 17,
     schemes: ['smam', 'pm-kisan'],
-    ogImage: '/images/kisanguides/chc-portal-hero.webp',
+    ogImage: '/images/articles/custom-hiring-centre-chc-portal/hero.webp',
     relatedSlugs: ['PmKusumYojanaSolarSubsidy2026', 'KisanTractorLoan2026', 'KisanCreditCardOnlineApply2026'],
   },
   {
@@ -717,7 +741,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-11T08:00:00+05:30',
     readingTime: 16,
     schemes: ['pkvy', 'pm-fme'],
-    ogImage: '/images/kisanguides/vermi-compost-hero.webp',
+    ogImage: '/images/articles/vermi-compost-business-guide/hero.webp',
     relatedSlugs: ['PmKusumYojanaSolarSubsidy2026', 'KisanCreditCardOnlineApply2026', 'soil-health-card-complete-guide-2026'],
   },
   {
@@ -738,12 +762,14 @@ export const ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-11T08:00:00+05:30',
     readingTime: 15,
     schemes: ['pmksy', 'pm-kusum'],
-    ogImage: '/images/kisanguides/drip-sprinkler-hero.webp',
+    ogImage: '/images/articles/drip-sprinkler-irrigation-subsidy/hero.webp',
     relatedSlugs: ['PmKusumYojanaSolarSubsidy2026', 'KisanCreditCardOnlineApply2026', 'soil-health-card-complete-guide-2026'],
   },
 ] as const;
 
-// ── HELPER FUNCTIONS (Jo tumhare components mang rahe the) ─────────────────────
+// ═══════════════════════════════════════════════════════════════
+// HELPER FUNCTIONS
+// ═══════════════════════════════════════════════════════════════
 
 export const ARTICLES_MAP: Readonly<Record<string, ArticleMeta>> = Object.freeze(
   Object.fromEntries(ARTICLES.map((a) => [a.slug, a]))
@@ -837,4 +863,37 @@ export function getAllStates(): readonly string[] {
   const set = new Set<string>();
   ARTICLES.forEach((a) => a.states?.forEach((s) => set.add(s)));
   return Array.from(set).sort();
+}
+
+// ═══════════════════════════════════════════════════════════════
+// IMAGE VALIDATION HELPER (Run during build or manually)
+// Usage: npx tsx lib/validate-images.ts
+// ═══════════════════════════════════════════════════════════════
+
+export function getAllOgImages(): { slug: string; path: string }[] {
+  return ARTICLES
+    .filter((a) => a.ogImage)
+    .map((a) => ({ slug: a.slug, path: a.ogImage! }));
+}
+
+export function validateOgImagePaths(): { valid: string[]; invalid: string[] } {
+  const valid: string[] = [];
+  const invalid: string[] = [];
+
+  for (const article of ARTICLES) {
+    if (!article.ogImage) {
+      invalid.push(`${article.slug}: MISSING ogImage`);
+      continue;
+    }
+
+    // Check consistent pattern
+    const expectedPattern = `/images/articles/${article.slug}/hero.webp`;
+    if (article.ogImage !== expectedPattern) {
+      invalid.push(`${article.slug}: PATH MISMATCH\n  Expected: ${expectedPattern}\n  Got: ${article.ogImage}`);
+    } else {
+      valid.push(article.slug);
+    }
+  }
+
+  return { valid, invalid };
 }
