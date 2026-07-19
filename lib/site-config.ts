@@ -68,7 +68,7 @@ export const GLOBAL_KEYWORDS = [
   'farmer welfare schemes',
   'soil health card',
   'crop insurance pmfby',
-] as const;
+];
 
 export const SITE_KEYWORDS = [
   'KisanStatus',
