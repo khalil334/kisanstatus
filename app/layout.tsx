@@ -111,6 +111,8 @@ export default function RootLayout({
       <head>
         {/* ✅ Preconnect for faster third-party resource loading */}
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        {/* ✅ FIX: Added preconnect for GA's actual data-collection domain */}
+        <link rel="preconnect" href="https://region1.google-analytics.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.google.com" />
         <link rel="dns-prefetch" href="https://vercel.live" />
         
@@ -191,14 +193,16 @@ export default function RootLayout({
           <Footer />
         </LanguageProvider>
         
-        {/* ✅ Google Analytics (Loaded after interactive to not block LCP) */}
+        {/* ✅ FIX: Google Analytics moved to lazyOnload — loads during browser idle time,
+            after the page is fully interactive, so it no longer contributes to
+            forced reflow / render-blocking during initial load. */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
         <Script
           id="ga4-init"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
