@@ -76,14 +76,23 @@ export type GTagEvent = {
 export const GA_MEASUREMENT_ID: string = 
   process.env.NEXT_PUBLIC_GA_ID ?? 'G-GZLLLGC4VC';
 
-export const isGAEnabled: boolean = 
-  typeof window !== 'undefined' && 
-  typeof window.gtag !== 'undefined' &&
-  GA_MEASUREMENT_ID !== 'G-XXXXXXXXXX' &&
-  process.env.NODE_ENV !== 'test';
+// ✅ FIX: Changed from a `const` (evaluated once, at module-load time) to a
+// function that is evaluated on every call. The GA script now loads with
+// `strategy="lazyOnload"`, so `window.gtag` may not exist yet when this
+// module first runs — a `const` would have frozen `isGAEnabled` at `false`
+// forever, silently disabling all tracking. As a function, every tracking
+// call re-checks whether gtag has become available since.
+export function isGAEnabled(): boolean {
+  return (
+    typeof window !== 'undefined' &&
+    typeof window.gtag !== 'undefined' &&
+    GA_MEASUREMENT_ID !== 'G-XXXXXXXXXX' &&
+    process.env.NODE_ENV !== 'test'
+  );
+}
 
 export function pageview(url: string, title?: string): void {
-  if (!isGAEnabled) return;
+  if (!isGAEnabled()) return;
   try {
     window.gtag?.('config', GA_MEASUREMENT_ID, {
       page_path: url,
@@ -97,7 +106,7 @@ export function pageview(url: string, title?: string): void {
 }
 
 export function gtag({ action, category, label, value }: GTagEvent): void {
-  if (!isGAEnabled) return;
+  if (!isGAEnabled()) return;
   try {
     window.gtag?.('event', action, {
       event_category: category,
@@ -112,7 +121,7 @@ export function gtag({ action, category, label, value }: GTagEvent): void {
 }
 
 export function trackEvent(eventName: GA4Event, params?: GA4EventParams): void {
-  if (!isGAEnabled) return;
+  if (!isGAEnabled()) return;
   try {
     window.gtag?.('event', eventName, params);
   } catch (error) {
