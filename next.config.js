@@ -21,15 +21,12 @@ const nextConfig = {
     ],
   },
 
-  // ⚠️ CONFIRM: resolveAlias below assumes a `src/` folder. If your project
-  // does NOT have a src/ directory (app/, components/, lib/ live at repo
-  // root — which is what your other files suggest), change './src' to '.'
-  // for both entries below, or Turbopack builds will fail to resolve `@/...`
-  // and `~/...` imports.
+  // ✅ FIX: Confirmed no src/ folder exists — app/, components/, lib/ all
+  // live at the project root. Aliases now point to '.' instead of './src'.
   turbopack: {
     resolveAlias: {
-      '@': './src',
-      '~': './src',
+      '@': '.',
+      '~': '.',
     },
   },
 
