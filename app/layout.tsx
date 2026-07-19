@@ -14,10 +14,14 @@ import {
   SITE_DESCRIPTION, 
   AUTHOR_NAME, 
   AUTHOR_URL, 
+  AUTHOR_BIO,
   DEFAULT_OG_IMAGE, 
   LOGO_URL, 
   SUPPORT_EMAIL,
-  GLOBAL_KEYWORDS 
+  HELPLINE,
+  HELPLINE_ALT,
+  GLOBAL_KEYWORDS,
+  SOCIAL_LINKS,
 } from '@/lib/site-config';
 
 const poppins = Poppins({
@@ -73,7 +77,7 @@ export const metadata: Metadata = {
         url: DEFAULT_OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: `${SITE_NAME} - Indian Agriculture & Farming Guides`,
+        alt: `${SITE_NAME} - PM Kisan, Krishi Yojana & Farming Guides in Hindi`,
         type: 'image/webp',
       },
     ],
@@ -151,6 +155,7 @@ export default function RootLayout({
       className={poppins.variable}
     >
       <head>
+        {/* Preconnect to critical domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
@@ -162,11 +167,12 @@ export default function RootLayout({
         
         <link rel="preload" href="/favicon.svg" as="image" type="image/svg+xml" />
         
+        {/* ✅ FIXED: Enhanced Schema Markup with site-config values */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify([
-              // ✅ WebSite Schema
+              // WebSite Schema
               {
                 '@context': 'https://schema.org',
                 '@type': 'WebSite',
@@ -187,7 +193,7 @@ export default function RootLayout({
                   'query-input': 'required name=search_term_string',
                 },
               },
-              // ✅ Organization Schema (KisanStatus Team)
+              // ✅ FIXED: Organization Schema - KisanStatus Team
               {
                 '@context': 'https://schema.org',
                 '@type': 'Organization',
@@ -208,54 +214,60 @@ export default function RootLayout({
                 },
                 foundingDate: '2024',
                 description: SITE_DESCRIPTION,
-                // ✅ ContactPoint with proper hours
-                contactPoint: {
-                  '@type': 'ContactPoint',
-                  '@id': `${SITE_URL}#contact`,
-                  telephone: '+91-155261',
-                  email: SUPPORT_EMAIL,
-                  contactType: 'customer support',
-                  availableLanguage: ['Hindi', 'English'],
-                  areaServed: {
-                    '@type': 'Country',
-                    name: 'India',
+                // ✅ FIXED: Complete ContactPoint with both helplines
+                contactPoint: [
+                  {
+                    '@type': 'ContactPoint',
+                    '@id': `${SITE_URL}#contact-primary`,
+                    telephone: `+91-${HELPLINE}`,
+                    email: SUPPORT_EMAIL,
+                    contactType: 'customer support',
+                    availableLanguage: ['Hindi', 'English'],
+                    areaServed: {
+                      '@type': 'Country',
+                      name: 'India',
+                    },
+                    hoursAvailable: {
+                      '@type': 'OpeningHoursSpecification',
+                      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+                      opens: '09:30',
+                      closes: '18:00',
+                      timeZone: 'Asia/Kolkata',
+                    },
                   },
-                  hoursAvailable: {
-                    '@type': 'OpeningHoursSpecification',
-                    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-                    opens: '09:30',
-                    closes: '18:00',
-                    timeZone: 'Asia/Kolkata',
+                  {
+                    '@type': 'ContactPoint',
+                    '@id': `${SITE_URL}#contact-alt`,
+                    telephone: `+91-${HELPLINE_ALT.replace('011-', '')}`,
+                    contactType: 'technical support',
+                    availableLanguage: ['Hindi', 'English'],
+                    areaServed: {
+                      '@type': 'Country',
+                      name: 'India',
+                    },
                   },
-                },
+                ],
                 // ✅ FIXED: Founder is Organization (KisanStatus Team)
                 founder: {
                   '@type': 'Organization',
                   '@id': `${SITE_URL}#founder`,
-                  name: AUTHOR_NAME,  // "KisanStatus Team"
+                  name: AUTHOR_NAME,
                   url: AUTHOR_URL,
-                  description: 'Agricultural content and support team dedicated to Indian farmers',
-                  // Agar team members dikhane ho toh:
-                  // member: [
-                  //   {
-                  //     '@type': 'Person',
-                  //     name: 'Team Member',
-                  //     jobTitle: 'Agricultural Expert',
-                  //   },
-                  // ],
+                  description: AUTHOR_BIO,
                 },
-                // ✅ Address for Local SEO
+                // ✅ FIXED: Address for Local SEO
                 address: {
                   '@type': 'PostalAddress',
                   addressCountry: 'IN',
                   addressRegion: 'India',
                 },
+                // ✅ FIXED: Social links from site-config
                 sameAs: [
-                  'https://www.facebook.com/profile.php?id=61590430994270',
-                  'https://twitter.com/kisanstatus',
+                  SOCIAL_LINKS.facebook,
+                  SOCIAL_LINKS.twitter,
                 ],
               },
-              // ✅ BreadcrumbList Schema
+              // BreadcrumbList Schema
               {
                 '@context': 'https://schema.org',
                 '@type': 'BreadcrumbList',
@@ -269,7 +281,7 @@ export default function RootLayout({
                   },
                 ],
               },
-              // ✅ WebPage Schema
+              // WebPage Schema
               {
                 '@context': 'https://schema.org',
                 '@type': 'WebPage',
