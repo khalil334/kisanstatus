@@ -8,6 +8,7 @@ import {
   SITE_DESCRIPTION, 
   AUTHOR_NAME, 
   AUTHOR_URL, 
+  AUTHOR_BIO,
   DEFAULT_OG_IMAGE,
   LOGO_URL,
   GLOBAL_KEYWORDS,
@@ -19,15 +20,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: `PM Kisan Status & Farming Guides 2026 | ${SITE_NAME}`,
   description: SITE_DESCRIPTION,
-  keywords: [
-    ...GLOBAL_KEYWORDS,
-    'pm kisan status check 2026',
-    'pm kisan 24vi kist',
-    'kisan samman nidhi verification',
-    'farming business ideas hindi',
-    'agriculture subsidy india',
-    'kisan loan kaise le',
-  ],
+  keywords: GLOBAL_KEYWORDS, // ✅ FIXED: Direct use, spread nahi
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   creator: AUTHOR_NAME,
   publisher: SITE_NAME,
@@ -77,12 +70,12 @@ export const metadata: Metadata = {
     },
   },
   other: {
-    'article:publisher': SITE_URL,
-    'article:author': AUTHOR_URL,
+    'geo.region': 'IN',
+    'geo.placename': 'India',
   },
 };
 
-export const revalidate = 86400;
+export const revalidate = 3600; // ✅ FIXED: 1 hour for fresh content
 
 function HomeLoading() {
   return (
@@ -146,20 +139,21 @@ export default function HomePage() {
             breadcrumb: {
               '@id': `${SITE_URL}#breadcrumb`,
             },
+            // ✅ FIXED: Correct URLs (redirected URLs nahi)
             mainEntity: {
               '@type': 'ItemList',
               itemListElement: [
                 {
                   '@type': 'ListItem',
                   position: 1,
-                  name: 'PM Kisan Status Check',
-                  url: `${SITE_URL}/pm-kisan-status`,
+                  name: 'PM Kisan 24vi Kist Status',
+                  url: `${SITE_URL}/articles/PmKisan24viKist2026`,
                 },
                 {
                   '@type': 'ListItem',
                   position: 2,
                   name: 'PM Kisan eKYC Guide',
-                  url: `${SITE_URL}/pm-kisan-ekyc`,
+                  url: `${SITE_URL}/articles/PmKisanEkycOnline2026`,
                 },
                 {
                   '@type': 'ListItem',
@@ -167,7 +161,46 @@ export default function HomePage() {
                   name: 'Farming Calculators',
                   url: `${SITE_URL}/calculator`,
                 },
+                {
+                  '@type': 'ListItem',
+                  position: 4,
+                  name: 'KCC Loan Apply',
+                  url: `${SITE_URL}/articles/KisanCreditCardOnlineApply2026`,
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 5,
+                  name: 'Tractor Subsidy',
+                  url: `${SITE_URL}/articles/KisanTractorLoan2026`,
+                },
               ],
+            },
+            // ✅ ADDED: SearchAction for site search
+            potentialAction: {
+              '@type': 'SearchAction',
+              target: {
+                '@type': 'EntryPoint',
+                urlTemplate: `${SITE_URL}/search?q={search_term_string}`,
+              },
+              'query-input': 'required name=search_term_string',
+            },
+            // ✅ ADDED: Speakable for voice search
+            speakable: {
+              '@type': 'SpeakableSpecification',
+              cssSelector: ['h1', 'h2', '.hero-description'],
+            },
+            // ✅ ADDED: Publisher info
+            publisher: {
+              '@type': 'Organization',
+              '@id': `${SITE_URL}#organization`,
+              name: SITE_NAME,
+              url: SITE_URL,
+              logo: {
+                '@type': 'ImageObject',
+                url: LOGO_URL,
+                width: 512,
+                height: 512,
+              },
             },
           }),
         }}
