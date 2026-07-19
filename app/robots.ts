@@ -12,16 +12,13 @@ export default function robots(): MetadataRoute.Robots {
           '/api/',
           '/private/',
           '/admin/',
-          // '/_next/',  // ❌ REMOVED: Static assets block nahi karne chahiye
           '/tools/',
-          '/*.json$',      // ✅ ADDED: JSON files block
-          '/*.xml$',       // ✅ ADDED: XML files except sitemap
-          '/search?',      // ✅ ADDED: Search query pages block
+          '/search?',
         ],
-        crawlDelay: 1,       // ✅ ADDED: 1 second delay
+        crawlDelay: 1,
       },
       
-      // ✅ GOOGLE: Special rules
+      // ✅ GOOGLEBOT: With crawl delay
       {
         userAgent: 'Googlebot',
         allow: '/',
@@ -31,6 +28,7 @@ export default function robots(): MetadataRoute.Robots {
           '/admin/',
           '/tools/',
         ],
+        crawlDelay: 1,
       },
       
       // ✅ GOOGLE IMAGE: Image indexing
@@ -58,7 +56,7 @@ export default function robots(): MetadataRoute.Robots {
         crawlDelay: 2,
       },
       
-      // ✅ AI BOTS: Restricted access (content protection)
+      // ✅ AI BOTS: Allow articles for AI visibility
       {
         userAgent: [
           'GPTBot',
@@ -74,14 +72,11 @@ export default function robots(): MetadataRoute.Robots {
           'Applebot',
           'Applebot-Extended',
         ],
-        allow: [
-          '/',  // ✅ Allow for brand visibility
-        ],
+        allow: ['/'],
         disallow: [
           '/api/',
           '/private/',
           '/tools/',
-          '/articles/',  // ✅ ADDED: Protect main content
         ],
       },
       
@@ -89,7 +84,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: [
           'CCBot',
-          'Google-Extended',  // ✅ Kept blocked — AI training data
+          'Google-Extended',
           'Bytespider',
           'Diffbot',
           'AhrefsBot',
@@ -101,9 +96,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: '/',
       },
     ],
-    
-    // ✅ ADDED: Host directive
-    host: 'kisanstatus.com',
     
     // ✅ Sitemap
     sitemap: `${SITE_URL}/sitemap.xml`,
