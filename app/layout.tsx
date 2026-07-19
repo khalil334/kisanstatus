@@ -20,6 +20,7 @@ import {
   GLOBAL_KEYWORDS 
 } from '@/lib/site-config';
 
+// ✅ Next.js automatically handles font fallback and preloading to prevent CLS
 const poppins = Poppins({
   subsets: ['latin', 'devanagari'],
   weight: ['400', '600', '700'],
@@ -108,23 +109,19 @@ export default function RootLayout({
   return (
     <html lang="hi-IN" suppressHydrationWarning className={poppins.variable}>
       <head>
+        {/* ✅ Preconnect for faster third-party resource loading */}
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.google.com" />
         <link rel="dns-prefetch" href="https://vercel.live" />
+        
+        {/* ✅ Preload LCP image (Ensure this file exists in public folder) */}
         <link rel="preload" as="image" href="/hero-wheat-field.webp" type="image/webp" fetchPriority="high" />
+        
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
         <link rel="manifest" href="/site.webmanifest" />
-        <style dangerouslySetInnerHTML={{
-          __html: `
-            body {
-              margin: 0;
-              font-family: var(--font-poppins, system-ui, -apple-system, sans-serif);
-              -webkit-font-smoothing: antialiased;
-              -moz-osx-font-smoothing: grayscale;
-            }
-          `,
-        }} />
+        
+        {/* ✅ Structured Data (JSON-LD) for SEO */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -193,6 +190,8 @@ export default function RootLayout({
           </main>
           <Footer />
         </LanguageProvider>
+        
+        {/* ✅ Google Analytics (Loaded after interactive to not block LCP) */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"
