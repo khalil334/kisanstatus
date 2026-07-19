@@ -14,9 +14,13 @@ import {
   SITE_NAME,
   AUTHOR_NAME,
   AUTHOR_URL,
+  AUTHOR_BIO,
   TWITTER_HANDLE,
   DEFAULT_OG_IMAGE,
   LOGO_URL,
+  LOGO_WIDTH,
+  LOGO_HEIGHT,
+  SUPPORT_EMAIL,
 } from '@/lib/site-config';
 
 function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
@@ -32,7 +36,7 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
     breadcrumbItems.push({
       '@type': 'ListItem' as const,
       position: 3,
-      name: category.name,
+      name: (category as Record<string, string>).nameHi ?? (category as Record<string, string>).name,
       item: `${SITE_URL}/articles/category/${article.category}`,
     });
   }
@@ -48,25 +52,54 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
     {
       '@context': 'https://schema.org',
       '@type': 'Article',
+      '@id': `${url}#article`,
       headline: article.ogTitle || article.title,
       description: article.desc,
-      image: [ogImage],
+      image: {
+        '@type': 'ImageObject',
+        url: ogImage,
+        width: 1200,
+        height: 630,
+        caption: article.ogTitle || article.title,
+      },
       datePublished: article.publishedTime,
       dateModified: article.modifiedTime,
       author: {
+        '@type': 'Organization',
+        '@id': `${SITE_URL}#founder`,
+        name: AUTHOR_NAME,
+        url: AUTHOR_URL,
+        description: AUTHOR_BIO,
+      },
+      creator: {
         '@type': 'Organization',
         name: AUTHOR_NAME,
         url: AUTHOR_URL,
       },
       publisher: {
         '@type': 'Organization',
+        '@id': `${SITE_URL}#organization`,
         name: SITE_NAME,
         url: SITE_URL,
-        logo: { '@type': 'ImageObject', url: LOGO_URL },
+        logo: {
+          '@type': 'ImageObject',
+          '@id': `${SITE_URL}#logo`,
+          url: LOGO_URL,
+          width: LOGO_WIDTH,
+          height: LOGO_HEIGHT,
+        },
       },
-      mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': url,
+      },
       inLanguage: 'hi-IN',
-      isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: SITE_URL },
+      isPartOf: {
+        '@type': 'WebSite',
+        '@id': `${SITE_URL}#website`,
+        name: SITE_NAME,
+        url: SITE_URL,
+      },
       about: article.schemes?.map((s) => ({
         '@type': 'Thing',
         name: s,
@@ -77,11 +110,43 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
         url: `${SITE_URL}/articles/${r.slug}`,
       })),
       keywords: article.keywords.join(', '),
+      articleSection: category ? (category as Record<string, string>).name : 'Agriculture',
+      wordCount: article.wordCount || 1500,
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['article h1', 'article h2', 'article p'],
+      },
     },
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
+      '@id': `${url}#breadcrumb`,
       itemListElement: breadcrumbItems,
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      '@id': `${url}#webpage`,
+      url,
+      name: article.ogTitle || article.title,
+      description: article.desc,
+      inLanguage: 'hi-IN',
+      isPartOf: {
+        '@id': `${SITE_URL}#website`,
+      },
+      about: {
+        '@id': `${SITE_URL}#organization`,
+      },
+      primaryImageOfPage: {
+        '@type': 'ImageObject',
+        url: ogImage,
+      },
+      breadcrumb: {
+        '@id': `${url}#breadcrumb`,
+      },
+      mainEntity: {
+        '@id': `${url}#article`,
+      },
     },
   ];
 
@@ -90,7 +155,7 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
 
 function ArticleLoading() {
   return (
-    <div className="container-site py-10" style={{ minHeight: '60vh' }}>
+    <div className="container-site py-10" style={{ minHeight: '60vh' }} aria-busy="true" aria-label="Article content loading">
       <div className="animate-pulse space-y-6 max-w-4xl mx-auto px-4">
         <div className="space-y-3">
           <div className="h-10 bg-gray-200 dark:bg-gray-700 rounded w-3/4" />
@@ -122,7 +187,6 @@ function ArticleLoading() {
 }
 
 const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> = {
-  // Regular articles
   KisanRinKahaSeLe2026:                       dynamic(() => import('@/components/articles/KisanRinKahaSeLe2026'), { loading: ArticleLoading, ssr: true }),
   KisanTractorLoan2026:                       dynamic(() => import('@/components/articles/KisanTractorLoan2026'), { loading: ArticleLoading, ssr: true }),
   PmKisanBeneficiaryList2026:                 dynamic(() => import('@/components/articles/PmKisanBeneficiaryList2026'), { loading: ArticleLoading, ssr: true }),
@@ -152,7 +216,6 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   PmKisanVillageWiseListPdfDownload:          dynamic(() => import('@/components/articles/PmKisanVillageWiseListPdfDownload'), { loading: ArticleLoading, ssr: true }),
   PmKisanMobileNumberChangeUpdate:            dynamic(() => import('@/components/articles/PmKisanMobileNumberChangeUpdate'), { loading: ArticleLoading, ssr: true }),
   
-  // kisanguides folder ke components - YE FIXED HAIN
   BakriPalanYojana:         dynamic(() => import('@/components/articles/kisanguides/BakriPalanYojana'), { loading: ArticleLoading, ssr: true }),
   MushroomKheti:            dynamic(() => import('@/components/articles/kisanguides/MushroomKheti'), { loading: ArticleLoading, ssr: true }),
   MadhumakhiPalan:          dynamic(() => import('@/components/articles/kisanguides/MadhumakhiPalan'), { loading: ArticleLoading, ssr: true }),
@@ -164,7 +227,7 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   DripSprinkler:            dynamic(() => import('@/components/articles/kisanguides/DripSprinkler'), { loading: ArticleLoading, ssr: true }),
 };
 
-export const revalidate = 3600;
+export const revalidate = 86400;
 
 export async function generateStaticParams() {
   return ARTICLES.map((a) => ({ slug: a.slug }));
@@ -190,16 +253,20 @@ export async function generateMetadata({
   const category = CATEGORIES[article.category];
 
   return {
+    metadataBase: new URL(SITE_URL),
     title: displayTitle,
     description: article.desc,
-    keywords: [...article.keywords],
+    keywords: article.keywords,
     authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
+    creator: AUTHOR_NAME,
+    publisher: SITE_NAME,
+    category: category ? (category as Record<string, string>).name : 'Agriculture & Farming',
     alternates: { 
       canonical: url,
       languages: {
         'hi-IN': url,
         'x-default': url,
-      }
+      },
     },
     openGraph: {
       title: displayTitle,
@@ -208,17 +275,44 @@ export async function generateMetadata({
       url,
       siteName: SITE_NAME,
       locale: 'hi_IN',
-      images: [{ url: ogImage, width: 1200, height: 630, alt: displayTitle }],
+      images: [{ 
+        url: ogImage, 
+        width: 1200, 
+        height: 630, 
+        alt: displayTitle,
+        type: 'image/webp',
+      }],
       publishedTime: article.publishedTime,
       modifiedTime: article.modifiedTime,
-      section: category ? category.name : 'Agriculture & Welfare',
+      section: category ? (category as Record<string, string>).name : 'Agriculture & Welfare',
+      authors: [AUTHOR_NAME],
+      tags: article.keywords.slice(0, 5),
     },
     twitter: {
       card: 'summary_large_image',
       title: displayTitle,
       description: article.desc,
       site: TWITTER_HANDLE,
+      creator: TWITTER_HANDLE,
       images: [ogImage],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      nocache: false,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+    other: {
+      'article:published_time': article.publishedTime,
+      'article:modified_time': article.modifiedTime,
+      'article:section': category ? (category as Record<string, string>).name : 'Agriculture',
+      'article:tag': article.keywords.slice(0, 5).join(','),
     },
   };
 }
@@ -250,7 +344,7 @@ export default async function ArticlePage({
   const catName: string = rawCat ? ((rawCat as Record<string, string>).nameHi ?? (rawCat as Record<string, string>).name) : '';
 
   return (
-    <>
+    <article itemScope itemType="https://schema.org/Article">
       {schemas.map((schema, i) => (
         <script
           key={i}
@@ -260,7 +354,7 @@ export default async function ArticlePage({
       ))}
 
       {rawCat && (
-        <div className="container-site pt-6 px-4">
+        <nav aria-label="Article category breadcrumb" className="container-site pt-6 px-4">
           <Link
             href={`/articles/category/${article.category}`}
             className="inline-flex items-center gap-2 bg-green-100 hover:bg-green-200 text-green-800 dark:bg-green-900/30 dark:text-green-300 dark:hover:bg-green-900/50 text-sm font-bold px-4 py-2 rounded-full transition-colors focus:ring-2 focus:ring-green-500 focus:outline-none"
@@ -270,10 +364,10 @@ export default async function ArticlePage({
             <span>{catName}</span>
             <span className="text-green-600 dark:text-green-400" aria-hidden="true">→</span>
           </Link>
-        </div>
+        </nav>
       )}
 
       <ArticleComponent article={article} />
-    </>
+    </article>
   );
 }
