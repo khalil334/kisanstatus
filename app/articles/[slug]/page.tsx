@@ -254,7 +254,7 @@ export async function generateMetadata({
     metadataBase: new URL(SITE_URL),
     title: displayTitle,
     description: article.desc,
-    keywords: article.keywords,
+    keywords: [...article.keywords] as string[],
     authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
     creator: AUTHOR_NAME,
     publisher: SITE_NAME,
@@ -284,7 +284,7 @@ export async function generateMetadata({
       modifiedTime: article.modifiedTime,
       section: category ? (category as Record<string, string>).name : 'Agriculture & Welfare',
       authors: [AUTHOR_NAME],
-      tags: article.keywords.slice(0, 5),
+      tags: [...article.keywords].slice(0, 5),
     },
     twitter: {
       card: 'summary_large_image',
@@ -310,7 +310,7 @@ export async function generateMetadata({
       'article:published_time': article.publishedTime,
       'article:modified_time': article.modifiedTime,
       'article:section': category ? (category as Record<string, string>).name : 'Agriculture',
-      'article:tag': article.keywords.slice(0, 5).join(','),
+      'article:tag': [...article.keywords].slice(0, 5).join(','),
     },
   };
 }
