@@ -1,11 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // ── Image Optimization ─────────────────────────────────────
+  // ── 🚀 PERFORMANCE FIXES (Sabse important) ─────────────────
+  optimizeFonts: true, // ✅ CLS fix: Fonts ko optimize karo
+  compress: true,      // ✅ Gzip/Brotli compression enable
+  reactStrictMode: true,
+  poweredByHeader: false, // ✅ Security: X-Powered-By header hatao
+  generateEtags: true,    // ✅ Caching: ETags generate karo
+
+  // ── ️ Image Optimization ──────────────────────────────────
   images: {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 31536000,
+    minimumCacheTTL: 31536000, // 1 saal cache
     dangerouslyAllowSVG: false,
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
@@ -17,14 +24,7 @@ const nextConfig = {
     ],
   },
 
-  // ── Core Settings ──────────────────────────────────────────
-  compress: true,
-  reactStrictMode: true,
-  poweredByHeader: false,
-  generateEtags: true,
-
-  // ── Turbopack Configuration (Next.js 16+) ─────────────────
-  // ✅ FIX: Turbopack config add kiya - error fix hoga
+  // ── ⚡ Turbopack Configuration (Next.js 16+) ───────────────
   turbopack: {
     resolveAlias: {
       '@': './src',
@@ -32,8 +32,10 @@ const nextConfig = {
     },
   },
 
-  // ── Performance Optimizations ──────────────────────────────
+  // ── 🎯 Experimental Features ──────────────────────────────
   experimental: {
+    optimizeCss: true, // ✅ FIX: Render-blocking CSS ko inline/defer karo
+    scrollRestoration: true,
     optimizePackageImports: [
       '@/components/ArticleShared',
       '@/components/ArticleSVGs',
@@ -43,10 +45,9 @@ const nextConfig = {
       'recharts',
       'date-fns',
     ],
-    scrollRestoration: true,
   },
 
-  // ── Compiler Options ───────────────────────────────────────
+  // ── 🔧 Compiler Options ───────────────────────────────────
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production' ? {
       exclude: ['error', 'warn'],
@@ -54,14 +55,14 @@ const nextConfig = {
     reactRemoveProperties: true,
   },
 
-  // ── Transpile Packages ─────────────────────────────────────
+  // ── 📦 Transpile Packages ─────────────────────────────────
   transpilePackages: [
     '@radix-ui/react-dialog',
     '@radix-ui/react-dropdown-menu',
     '@radix-ui/react-popover',
   ],
 
-  // ── Redirects ──────────────────────────────────────────────
+  // ── 🔄 Redirects ──────────────────────────────────────────
   async redirects() {
     return [
       // WWW → non-WWW
@@ -122,7 +123,7 @@ const nextConfig = {
     ];
   },
 
-  // ── Security & Performance Headers ─────────────────────────
+  // ──  Security & Performance Headers ──────────────────────
   async headers() {
     return [
       {
