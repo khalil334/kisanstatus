@@ -5,10 +5,11 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ARTICLES, getLatestArticles, CATEGORIES } from '@/lib/articles-data';
+import { SITE_URL, SITE_NAME, getCopyrightYears } from '@/lib/site-config';
 
 const TOP_ARTICLES_LIMIT = 3;
 
-/* ─── SVG Icons (Replace Emojis for Consistent Rendering) ─── */
+/* ─── SVG Icons ─── */
 function IconWallet({ className = 'w-6 h-6' }: { className?: string }) {
   return (
     <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -83,6 +84,22 @@ function IconArrowRight({ className = 'w-5 h-5' }: { className?: string }) {
   );
 }
 
+function IconCheck({ className = 'w-5 h-5' }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+    </svg>
+  );
+}
+
+function IconChevronDown({ className = 'w-5 h-5' }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+    </svg>
+  );
+}
+
 /* ─── Tool Card Data ─── */
 const TOOLS = [
   {
@@ -138,6 +155,30 @@ const TOOLS = [
     iconBg: 'bg-rose-100 dark:bg-rose-800 text-rose-600 dark:text-rose-300',
     title: 'Latest Articles',
     desc: 'PM Kisan updates, farming tips, loan guides — Hindi mein simple bhasha.',
+  },
+];
+
+/* ─── FAQ Data ─── */
+const FAQS = [
+  {
+    question: 'PM Kisan 24vi kist kab aayegi 2026 mein?',
+    answer: 'PM Kisan ki 24vi kist October 2026 mein expected hai. Aap apna status pmkisan.gov.in par check kar sakte hain. Ensure karein ki aapka eKYC complete ho aur bank account linked ho.',
+  },
+  {
+    question: 'PM Kisan status check kaise karein online?',
+    answer: 'PM Kisan status check karne ke liye: 1) pmkisan.gov.in visit karein, 2) "Beneficiary Status" par click karein, 3) Aadhaar number ya mobile number enter karein, 4) OTP verify karein, 5) Status dekhain.',
+  },
+  {
+    question: 'Kisan Credit Card (KCC) ke liye kaise apply karein?',
+    answer: 'KCC apply karne ke liye: 1) Apne bank branch jayein, 2) Application form bharein, 3) Land documents, Aadhaar, PAN submit karein, 4) Bank verification ke baad ₹5 lakh tak loan milega, 5) Interest rate sirf 4% hai.',
+  },
+  {
+    question: 'PM Kisan eKYC kaise complete karein?',
+    answer: 'eKYC complete karne ke liye: 1) pmkisan.gov.in par jayein, 2) "Farmer Corner" mein "eKYC" option select karein, 3) Aadhaar number enter karein, 4) OTP ya biometric se verify karein, 5) Confirmation message ka intezar karein.',
+  },
+  {
+    question: 'Tractor subsidy kaise milegi SMAM yojana mein?',
+    answer: 'SMAM tractor subsidy ke liye: 1) Kisan portal par register karein, 2) Tractor model select karein, 3) 35-50% subsidy milegi, 4) Bina down payment ke loan available, 5) Subsidy seedha dealer ko jayegi.',
   },
 ];
 
@@ -219,6 +260,59 @@ function ArticleCard({ article, showNewBadge = false }: { article: typeof ARTICL
   );
 }
 
+/* ─── FAQ Item Component ─── */
+function FaqItem({ question, answer, index }: { question: string; answer: string; index: number }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className="border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden bg-white dark:bg-gray-800">
+      <button
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors"
+        aria-expanded={isOpen}
+        aria-controls={`faq-answer-${index}`}
+      >
+        <h3 className="font-bold text-gray-900 dark:text-white text-base pr-4">{question}</h3>
+        <IconChevronDown className={`w-5 h-5 text-green-600 dark:text-green-400 shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+      </button>
+      <div
+        id={`faq-answer-${index}`}
+        className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-96' : 'max-h-0'}`}
+        role="region"
+        aria-label={question}
+      >
+        <div className="px-6 pb-6 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+          {answer}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ─── Breadcrumb Component ─── */
+function Breadcrumb() {
+  return (
+    <nav aria-label="Breadcrumb" className="py-3 bg-gray-50 dark:bg-gray-800/50 border-b border-gray-200 dark:border-gray-700">
+      <div className="container-site mx-auto px-4">
+        <ol className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400" itemScope itemType="https://schema.org/BreadcrumbList">
+          <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
+            <Link href="/" className="hover:text-green-600 dark:hover:text-green-400 transition-colors font-medium" itemProp="item">
+              <span itemProp="name">Home</span>
+            </Link>
+            <meta itemProp="position" content="1" />
+          </li>
+          <li aria-hidden="true">/</li>
+          <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
+            <span className="text-gray-700 dark:text-gray-300 font-medium" itemProp="name">PM Kisan Status & Guides</span>
+            <meta itemProp="position" content="2" />
+          </li>
+        </ol>
+      </div>
+    </nav>
+  );
+}
+
 /* ─── Hybrid Homepage ─── */
 export default function HomeContent() {
   const router = useRouter();
@@ -234,10 +328,13 @@ export default function HomeContent() {
   };
 
   return (
-    <main className="min-h-screen bg-white dark:bg-gray-900">
+    <div className="min-h-screen bg-white dark:bg-gray-900" itemScope itemType="https://schema.org/WebPage">
+      
+      {/* Breadcrumb Navigation */}
+      <Breadcrumb />
 
       {/* ═══════════════════════════════════════
-          HERO SECTION
+          HERO SECTION - SEO OPTIMIZED
           ═══════════════════════════════════════ */}
       <section className="relative bg-gradient-to-br from-green-700 via-green-600 to-emerald-700 dark:from-green-900 dark:via-green-800 dark:to-emerald-900 py-16 md:py-24 overflow-hidden" aria-labelledby="hero-heading">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/3" aria-hidden="true" />
@@ -254,29 +351,31 @@ export default function HomeContent() {
               India Ka #1 PM Kisan Portal
             </div>
 
-            {/* Headline — H1 */}
+            {/* H1 - Main Keyword Target */}
             <h1 id="hero-heading" className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1] mb-6 tracking-tight">
-              PM Kisan Status
-              <span className="block text-green-200">Check 2026</span>
+              <span itemProp="headline">PM Kisan Status Check 2026</span>
+              <span className="block text-green-200 text-2xl md:text-4xl lg:text-5xl mt-2">Samman Nidhi Yojana Online</span>
             </h1>
 
-            {/* Subheadline */}
-            <p className="text-lg md:text-xl text-green-100 leading-relaxed mb-8 max-w-2xl mx-auto">
-              24vi kist <span className="font-bold text-white">October 2026</span> mein aane wali hai! 
-              <span className="font-bold text-white"> ₹2,000</span> seedha bank account mein.
-              Status verify karo, eKYC complete karo — sab kuch <span className="font-bold text-white">bilkul free!</span>
+            {/* Subheadline with Keywords */}
+            <p className="text-lg md:text-xl text-green-100 leading-relaxed mb-8 max-w-2xl mx-auto" itemProp="description">
+              <strong className="text-white">PM Kisan Samman Nidhi</strong> ki 
+              <strong className="text-white"> 24vi kist October 2026</strong> mein expected hai! 
+              <strong className="text-white"> ₹2,000</strong> seedha bank account mein.
+              <strong className="text-white"> eKYC</strong> complete karo, 
+              <strong className="text-white"> beneficiary status</strong> verify karo — sab kuch bilkul free!
             </p>
 
-            {/* Search Bar — FIXED: Now Functional */}
-            <form onSubmit={handleSearch} className="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto mb-8">
+            {/* Search Bar */}
+            <form onSubmit={handleSearch} className="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto mb-8" role="search">
               <div className="flex-1 relative">
                 <input 
-                  type="text" 
+                  type="search" 
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Search: PM Kisan, KCC Loan, Tractor Subsidy..." 
+                  placeholder="Search: PM Kisan Status, KCC Loan, Tractor Subsidy..." 
                   className="w-full px-5 py-4 pl-12 rounded-xl border-0 text-gray-900 placeholder-gray-400 text-sm bg-white shadow-xl focus:outline-none focus:ring-2 focus:ring-green-300"
-                  aria-label="Search articles"
+                  aria-label="Search PM Kisan articles and guides"
                 />
                 <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-lg" aria-hidden="true">
                   <IconSearch className="w-5 h-5" />
@@ -301,22 +400,22 @@ export default function HomeContent() {
               </Link>
               <Link href="/articles" className="inline-flex items-center gap-2.5 bg-white/10 hover:bg-white/20 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 border-2 border-white/30">
                 <IconBookOpen className="w-6 h-6" />
-                <span>Sabhi Articles</span>
+                <span>All PM Kisan Guides</span>
               </Link>
             </div>
 
             {/* Trust pills */}
             <div className="flex flex-wrap justify-center gap-3 text-xs text-green-200">
               <span className="px-3 py-1.5 bg-white/10 rounded-full flex items-center gap-1">
-                <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                <IconCheck className="w-3 h-3" />
                 11 Cr+ Registered Kisan
               </span>
               <span className="px-3 py-1.5 bg-white/10 rounded-full flex items-center gap-1">
-                <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                <IconCheck className="w-3 h-3" />
                 50+ Govt Schemes
               </span>
               <span className="px-3 py-1.5 bg-white/10 rounded-full flex items-center gap-1">
-                <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                <IconCheck className="w-3 h-3" />
                 100% Free Tools
               </span>
             </div>
@@ -347,7 +446,7 @@ export default function HomeContent() {
       </section>
 
       {/* ═══════════════════════════════════════
-          TOOL CARDS — FIXED: SVG Icons
+          TOOL CARDS
           ═══════════════════════════════════════ */}
       <section className="py-20 bg-white dark:bg-gray-900" aria-labelledby="tools-heading">
         <div className="container-site mx-auto px-4">
@@ -356,7 +455,7 @@ export default function HomeContent() {
               Explore Kisan Tools
             </h2>
             <p className="text-gray-600 dark:text-gray-400 text-base max-w-xl mx-auto">
-              Har kisan ki zaroorat ke tools — ek jagah, bilkul free
+              Har kisan ki zaroorat ke tools — PM Kisan status, KCC loan, tractor subsidy, EMI calculator sab ek jagah
             </p>
           </div>
 
@@ -398,7 +497,7 @@ export default function HomeContent() {
               Compare Rates Today
             </h2>
             <p className="text-gray-600 dark:text-gray-400 text-sm max-w-lg mx-auto">
-              Quickly compare loan rates and see how they stack up
+              PM Kisan, KCC loan, tractor subsidy — sab rates compare karo aur best deal paao
             </p>
           </div>
 
@@ -523,14 +622,14 @@ export default function HomeContent() {
             <div>
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-100 to-emerald-100 dark:from-green-900/40 dark:to-emerald-900/40 text-green-800 dark:text-green-300 text-sm font-bold px-5 py-2.5 rounded-full mb-5 shadow-sm border border-green-200/50 dark:border-green-700/50">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
                 </svg>
                 <span>Latest Updates</span>
               </div>
               <h2 id="articles-heading" className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white tracking-tight">
-                Naye Articles
+                Naye PM Kisan Articles
               </h2>
-              <p className="text-gray-600 dark:text-gray-400 mt-2 text-lg">Latest guides aur updates</p>
+              <p className="text-gray-600 dark:text-gray-400 mt-2 text-lg">Latest guides aur updates Hindi mein</p>
             </div>
             <span className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-bold px-5 py-2.5 rounded-full shadow-lg self-start md:self-auto">
               <span className="relative flex h-2 w-2">
@@ -558,7 +657,118 @@ export default function HomeContent() {
       </section>
 
       {/* ═══════════════════════════════════════
-          APP DOWNLOAD — FIXED: Coming Soon Badge
+          FAQ SECTION - SEO CRITICAL
+          ═══════════════════════════════════════ */}
+      <section className="py-20 bg-gray-50 dark:bg-gray-800/50" aria-labelledby="faq-heading">
+        <div className="container-site mx-auto px-4 max-w-3xl">
+          <div className="text-center mb-14">
+            <h2 id="faq-heading" className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white mb-4 tracking-tight">
+              PM Kisan FAQs
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 text-lg">
+              Sabse zyada puche jaane wale sawal — PM Kisan status, eKYC, loan, subsidy
+            </p>
+          </div>
+
+          <div className="space-y-4" itemScope itemType="https://schema.org/FAQPage">
+            {FAQS.map((faq, index) => (
+              <div key={index} itemProp="mainEntity" itemScope itemType="https://schema.org/Question">
+                <FaqItem question={faq.question} answer={faq.answer} index={index} />
+                <meta itemProp="name" content={faq.question} />
+                <div itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer" className="hidden">
+                  <div itemProp="text">{faq.answer}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════
+          HOW TO SECTION - FEATURED SNIPPETS
+          ═══════════════════════════════════════ */}
+      <section className="py-20 bg-white dark:bg-gray-900" aria-labelledby="howto-heading">
+        <div className="container-site mx-auto px-4">
+          <div className="text-center mb-14">
+            <h2 id="howto-heading" className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white mb-4 tracking-tight">
+              Step-by-Step Guides
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 text-lg">
+              PM Kisan status check se lekar loan apply tak — easy steps
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {[
+              {
+                title: 'PM Kisan Status Check Kaise Karein',
+                steps: ['pmkisan.gov.in par jayein', 'Beneficiary Status par click karein', 'Aadhaar number enter karein', 'OTP verify karein', 'Status dekhein'],
+                href: '/articles/PmKisan24viKist2026',
+              },
+              {
+                title: 'KCC Loan Apply Kaise Karein',
+                steps: ['Bank branch visit karein', 'Form aur documents submit karein', 'Verification ka intezar karein', 'Approval ke baad loan milega', '₹5 lakh tak, 4% interest'],
+                href: '/articles/KisanCreditCardOnlineApply2026',
+              },
+            ].map((guide, i) => (
+              <div key={i} className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
+                <h3 className="font-bold text-xl text-gray-900 dark:text-white mb-6">{guide.title}</h3>
+                <ol className="space-y-4">
+                  {guide.steps.map((step, j) => (
+                    <li key={j} className="flex items-start gap-3">
+                      <span className="flex items-center justify-center w-8 h-8 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 font-bold text-sm shrink-0">
+                        {j + 1}
+                      </span>
+                      <span className="text-gray-700 dark:text-gray-300 text-sm pt-1.5">{step}</span>
+                    </li>
+                  ))}
+                </ol>
+                <Link href={guide.href} className="mt-6 inline-flex items-center gap-2 text-green-600 dark:text-green-400 font-bold text-sm hover:underline">
+                  Full Guide Padhein <IconArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════
+          QUICK LINKS
+          ═══════════════════════════════════════ */}
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800/50 dark:to-gray-900" aria-labelledby="quicklinks-heading">
+        <div className="container-site mx-auto px-4">
+          <div className="text-center mb-14">
+            <h2 id="quicklinks-heading" className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white mb-4 tracking-tight">
+              Aapki Problem Kya Hai?
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300 text-lg">Turant solution paayein — PM Kisan se jude har sawal ka jawab</p>
+          </div>
+          <nav aria-label="Quick links to popular articles">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-5 max-w-6xl mx-auto">
+              {[
+                { href: '/articles/PmKisan24viKist2026', icon: '📊', title: 'Status Check', desc: 'Kist aayi ya nahi', color: 'from-blue-500 to-cyan-500' },
+                { href: '/articles/KisanCreditCardOnlineApply2026', icon: '💳', title: 'KCC Apply', desc: '₹5 Lakh Loan', color: 'from-green-500 to-emerald-500' },
+                { href: '/articles/PmKisanBeneficiaryList2026', icon: '📋', title: 'Beneficiary List', desc: 'Naam check karo', color: 'from-red-500 to-pink-500' },
+                { href: '/articles/soil-health-card-complete-guide-2026', icon: '🧪', title: 'Soil Health Card', desc: 'Mitti test karo', color: 'from-purple-500 to-indigo-500' },
+              ].map((link, i) => (
+                <Link key={i} href={link.href} className="group relative bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-2xl p-8 text-center hover:shadow-2xl hover:border-transparent transition-all duration-500 hover:-translate-y-2 overflow-hidden" aria-label={`${link.title}: ${link.desc}`}>
+                  <div className={`absolute inset-0 bg-gradient-to-br ${link.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} aria-hidden="true" />
+                  <div className="relative">
+                    <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br ${link.color} mb-5 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`} aria-hidden="true">
+                      <div className="text-4xl">{link.icon}</div>
+                    </div>
+                    <h3 className="font-bold text-gray-900 dark:text-white text-lg mb-2">{link.title}</h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">{link.desc}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </nav>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════
+          APP DOWNLOAD
           ═══════════════════════════════════════ */}
       <section className="py-20 bg-gray-900 dark:bg-black" aria-labelledby="app-heading">
         <div className="container-site mx-auto px-4">
@@ -602,41 +812,6 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════
-          QUICK LINKS
-          ═══════════════════════════════════════ */}
-      <section className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800/50 dark:to-gray-900" aria-labelledby="quicklinks-heading">
-        <div className="container-site mx-auto px-4">
-          <div className="text-center mb-14">
-            <h2 id="quicklinks-heading" className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white mb-4 tracking-tight">
-              Aapki Problem Kya Hai?
-            </h2>
-            <p className="text-gray-600 dark:text-gray-300 text-lg">Turant solution paayein</p>
-          </div>
-          <nav aria-label="Quick links to popular articles">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-5 max-w-6xl mx-auto">
-              {[
-                { href: '/articles/PmKisan24viKist2026', icon: '📊', title: 'Status Check', desc: 'Kist aayi ya nahi', color: 'from-blue-500 to-cyan-500' },
-                { href: '/articles/KisanCreditCardOnlineApply2026', icon: '💳', title: 'KCC Apply', desc: '₹5 Lakh Loan', color: 'from-green-500 to-emerald-500' },
-                { href: '/articles/PmKisanBeneficiaryList2026', icon: '📋', title: 'Beneficiary List', desc: 'Naam check karo', color: 'from-red-500 to-pink-500' },
-                { href: '/articles/soil-health-card-complete-guide-2026', icon: '🧪', title: 'Soil Health Card', desc: 'Mitti test karo', color: 'from-purple-500 to-indigo-500' },
-              ].map((link, i) => (
-                <Link key={i} href={link.href} className="group relative bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-2xl p-8 text-center hover:shadow-2xl hover:border-transparent transition-all duration-500 hover:-translate-y-2 overflow-hidden" aria-label={`${link.title}: ${link.desc}`}>
-                  <div className={`absolute inset-0 bg-gradient-to-br ${link.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} aria-hidden="true" />
-                  <div className="relative">
-                    <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br ${link.color} mb-5 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`} aria-hidden="true">
-                      <div className="text-4xl">{link.icon}</div>
-                    </div>
-                    <h3 className="font-bold text-gray-900 dark:text-white text-lg mb-2">{link.title}</h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">{link.desc}</p>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </nav>
-        </div>
-      </section>
-
-    </main>
+    </div>
   );
 }
