@@ -1,28 +1,41 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  compress: true,
   reactStrictMode: true,
   poweredByHeader: false,
   generateEtags: true,
+  trailingSlash: false, // ✅ ADDED: Consistent URL structure
 
   images: {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 31536000,
-    dangerouslyAllowSVG: false,
-    contentDispositionType: 'attachment',
+    dangerouslyAllowSVG: true, // ✅ FIXED: SVG logos allowed
+    contentDispositionType: 'inline', // ✅ FIXED: Images display inline
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     remotePatterns: [
       {
         protocol: 'https',
         hostname: '**.kisanstatus.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'kisanstatus.com',
+      },
+      // ✅ ADDED: Common external image sources
+      {
+        protocol: 'https',
+        hostname: '**.googleusercontent.com',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.fbcdn.net',
+      },
     ],
+    // ✅ ADDED: Unoptimized images for static export if needed
+    unoptimized: process.env.NODE_ENV === 'development',
   },
 
-  // ✅ FIX: Confirmed no src/ folder exists — app/, components/, lib/ all
-  // live at the project root. Aliases now point to '.' instead of './src'.
   turbopack: {
     resolveAlias: {
       '@': '.',
@@ -33,14 +46,12 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
     scrollRestoration: true,
+    // ✅ FIXED: Removed @/components from optimizePackageImports
     optimizePackageImports: [
-      '@/components/ArticleShared',
-      '@/components/ArticleSVGs',
-      '@/lib',
-      '@/utils',
       'lucide-react',
       'recharts',
       'date-fns',
+      'framer-motion',
     ],
   },
 
@@ -57,10 +68,16 @@ const nextConfig = {
     '@radix-ui/react-popover',
   ],
 
+  // ✅ ADDED: i18n for Hindi/English SEO
+  i18n: {
+    locales: ['hi-IN', 'en-IN'],
+    defaultLocale: 'hi-IN',
+    localeDetection: false,
+  },
+
   async redirects() {
     return [
-      // ✅ FIX: These two were missing — the exact two orphaned old-template
-      // pages found still live and indexed with the old author/design.
+      // Old template pages
       {
         source: '/new-registration',
         destination: '/articles/PmKisanMasterGuide2026',
@@ -71,6 +88,7 @@ const nextConfig = {
         destination: '/articles/PmKisanMasterGuide2026',
         permanent: true,
       },
+      // Kist redirects
       {
         source: '/articles/pm-kisan-23vi-kist-2026-status-check',
         destination: '/articles/PmKisan24viKist2026',
@@ -81,6 +99,7 @@ const nextConfig = {
         destination: '/articles/PmKisan24viKist2026',
         permanent: true,
       },
+      // Master guide redirects
       {
         source: '/articles/pm-kisan-land-seeding-status-check',
         destination: '/articles/PmKisanMasterGuide2026',
@@ -96,6 +115,7 @@ const nextConfig = {
         destination: '/articles/PmKisanMasterGuide2026',
         permanent: true,
       },
+      // Product redirects
       {
         source: '/articles/nano-dap-500ml-price-in-india-2026',
         destination: '/articles/NanoDap500mlPriceInIndia2026',
@@ -106,12 +126,19 @@ const nextConfig = {
         destination: '/articles/PmKisanBeneficiaryList2026',
         permanent: true,
       },
+      // WWW redirect
       {
         source: '/:path*',
-        has: [{ type: 'host', value: 'www.kisanstatus.com' }],
+        has: [
+          {
+            type: 'host',
+            value: 'www.kisanstatus.com',
+          },
+        ],
         destination: 'https://kisanstatus.com/:path*',
         permanent: true,
       },
+      // Calculator redirects
       { 
         source: '/calculator/farming-profit', 
         destination: '/calculator/crop-profit', 
@@ -122,6 +149,7 @@ const nextConfig = {
         destination: '/calculator/kcc-loan-emi', 
         permanent: true 
       },
+      // Short redirects
       { 
         source: '/pm-kisan', 
         destination: '/', 
@@ -137,6 +165,7 @@ const nextConfig = {
         destination: '/articles/KisanRinKahaSeLe2026', 
         permanent: true 
       },
+      // Beneficiary list redirects
       { 
         source: '/beneficiary-list/jammu-and-kashmir', 
         destination: '/articles/PmKisanBeneficiaryList2026', 
@@ -147,6 +176,7 @@ const nextConfig = {
         destination: '/articles/PmKisanBeneficiaryList2026', 
         permanent: true 
       },
+      // Status redirects
       { 
         source: '/pm-kisan-beneficiary-status', 
         destination: '/articles/PmKisan24viKist2026', 
@@ -197,6 +227,7 @@ const nextConfig = {
         destination: '/articles/PmKisan24viKist2026', 
         permanent: true 
       },
+      // Scheme redirects
       { 
         source: '/scheme/agristack', 
         destination: '/articles/AgriStackKyaHai2026', 
@@ -232,6 +263,7 @@ const nextConfig = {
         destination: '/articles/soil-health-card-complete-guide-2026', 
         permanent: true 
       },
+      // Bank redirects
       { 
         source: '/bank/sbi', 
         destination: '/articles/KisanRinKahaSeLe2026', 
@@ -262,6 +294,7 @@ const nextConfig = {
         destination: '/articles/KisanRinKahaSeLe2026', 
         permanent: true 
       },
+      // Spam redirects
       { 
         source: '/vulkan-vegas', 
         destination: '/', 
@@ -297,6 +330,15 @@ const nextConfig = {
           { key: 'X-XSS-Protection', value: '1; mode=block' },
           { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
           { key: 'X-DNS-Prefetch-Control', value: 'on' },
+          // ✅ ADDED: Robots header for crawl control
+          { key: 'X-Robots-Tag', value: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' },
+        ],
+      },
+      // ✅ ADDED: No-cache for dynamic pages
+      {
+        source: '/articles/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400' },
         ],
       },
       {
@@ -312,6 +354,20 @@ const nextConfig = {
         headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
       },
     ];
+  },
+
+  // ✅ ADDED: Webpack config for bundle analysis
+  webpack: (config, { isServer }) => {
+    if (!isServer && process.env.ANALYZE === 'true') {
+      const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+      config.plugins.push(
+        new BundleAnalyzerPlugin({
+          analyzerMode: 'static',
+          openAnalyzer: false,
+        })
+      );
+    }
+    return config;
   },
 };
 
