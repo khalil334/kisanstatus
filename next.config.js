@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  optimizeFonts: true,
   compress: true,
   reactStrictMode: true,
   poweredByHeader: false,
@@ -22,6 +21,11 @@ const nextConfig = {
     ],
   },
 
+  // ⚠️ CONFIRM: resolveAlias below assumes a `src/` folder. If your project
+  // does NOT have a src/ directory (app/, components/, lib/ live at repo
+  // root — which is what your other files suggest), change './src' to '.'
+  // for both entries below, or Turbopack builds will fail to resolve `@/...`
+  // and `~/...` imports.
   turbopack: {
     resolveAlias: {
       '@': './src',
@@ -58,6 +62,18 @@ const nextConfig = {
 
   async redirects() {
     return [
+      // ✅ FIX: These two were missing — the exact two orphaned old-template
+      // pages found still live and indexed with the old author/design.
+      {
+        source: '/new-registration',
+        destination: '/articles/PmKisanMasterGuide2026',
+        permanent: true,
+      },
+      {
+        source: '/articles/pm-kisan-ekyc-online-2026',
+        destination: '/articles/PmKisanMasterGuide2026',
+        permanent: true,
+      },
       {
         source: '/articles/pm-kisan-23vi-kist-2026-status-check',
         destination: '/articles/PmKisan24viKist2026',
