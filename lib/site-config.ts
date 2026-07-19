@@ -1,50 +1,384 @@
-// ── lib/site-config.ts ─────────────────────────────────────
-// Global site constants — single source of truth for domain, branding, contacts, and SEO
-// ⚠️ NEXT_PUBLIC_SITE_URL env var set karo .env.local mein (e.g., http://localhost:3000 or https://kisanstatus.com)
+import type { Metadata, Viewport } from 'next';
+import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/next';
+import { Poppins } from 'next/font/google';
+import './globals.css';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import { GA_MEASUREMENT_ID } from '@/lib/gtag';
+import { LanguageProvider } from '@/lib/LanguageContext';
+import { 
+  SITE_URL, 
+  SITE_NAME, 
+  SITE_TAGLINE, 
+  SITE_DESCRIPTION, 
+  AUTHOR_NAME, 
+  AUTHOR_URL, 
+  AUTHOR_BIO,
+  DEFAULT_OG_IMAGE, 
+  LOGO_URL, 
+  SUPPORT_EMAIL,
+  HELPLINE,
+  HELPLINE_ALT,
+  GLOBAL_KEYWORDS,
+  SOCIAL_LINKS,
+} from '@/lib/site-config';
 
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://kisanstatus.com';
-export const SITE_NAME = 'KisanStatus';
-export const SITE_TAGLINE = 'PM Kisan, Krishi Yojana & Farming Guides in Hindi';
-export const SITE_DESCRIPTION = 'PM Kisan guides, farming subsidies, loans & crop insurance in Hindi. Verified step-by-step guides for government schemes & agricultural business.';
+const poppins = Poppins({
+  subsets: ['latin', 'devanagari'],
+  weight: ['400', '600', '700'],
+  display: 'swap',
+  variable: '--font-poppins',
+  fallback: ['system-ui', 'sans-serif'],
+  preload: true,
+  adjustFontFallback: true,
+});
 
-export const AUTHOR_NAME = 'KisanStatus Team';
-export const AUTHOR_URL = `${SITE_URL}/about`;
-export const AUTHOR_BIO = 'Indian kisanon ko government schemes navigate karne mein help karne wala independent expert team.';
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#16A34A' },
+    { media: '(prefers-color-scheme: dark)', color: '#050D05' },
+  ],
+  colorScheme: 'light dark',
+};
 
-export const TWITTER_HANDLE = '@kisanstatus';
-export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.webp`; // Ensure this file exists in public/ folder (1200x630px recommended)
-export const LOGO_URL = `${SITE_URL}/logo.webp`;
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: SITE_DESCRIPTION,
+  keywords: GLOBAL_KEYWORDS,
+  authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
+  creator: AUTHOR_NAME,
+  publisher: SITE_NAME,
+  category: 'Agriculture & Farming',
+  alternates: {
+    canonical: SITE_URL,
+    languages: {
+      'hi-IN': SITE_URL,
+      'en-IN': `${SITE_URL}/en`,
+      'x-default': SITE_URL,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'hi_IN',
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    title: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    description: SITE_DESCRIPTION,
+    images: [
+      {
+        url: DEFAULT_OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: `${SITE_NAME} - PM Kisan, Krishi Yojana & Farming Guides in Hindi`,
+        type: 'image/webp',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@kisanstatus',
+    creator: '@kisanstatus',
+    title: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    description: SITE_DESCRIPTION,
+    images: [DEFAULT_OG_IMAGE],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GSC_TOKEN ?? 'oGrO0aRNLLhCgHq0Bn-sh3FdgKye7TlbAn2pAk8YdMQ',
+    other: {
+      'msvalidate.01': process.env.NEXT_PUBLIC_BING_TOKEN ?? '',
+      'yandex-verification': process.env.NEXT_PUBLIC_YANDEX_TOKEN ?? '',
+    },
+  },
+  other: {
+    'geo.region': 'IN',
+    'geo.placename': 'India',
+    'geo.position': '20.5937;78.9629',
+    'ICBM': '20.5937, 78.9629',
+    'format-detection': 'telephone=no',
+    'apple-mobile-web-app-capable': 'yes',
+    'apple-mobile-web-app-status-bar-style': 'default',
+    'apple-mobile-web-app-title': SITE_NAME,
+    'application-name': SITE_NAME,
+    'msapplication-TileColor': '#16A34A',
+    'msapplication-config': '/browserconfig.xml',
+    'fb:app_id': process.env.NEXT_PUBLIC_FB_APP_ID ?? '',
+  },
+  manifest: '/site.webmanifest',
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    other: [
+      { rel: 'mask-icon', url: '/safari-pinned-tab.svg', color: '#16A34A' },
+    ],
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: SITE_NAME,
+  },
+};
 
-export const SUPPORT_EMAIL = 'kisanstatus.support@gmail.com';
-export const HELPLINE = '155261';
-export const HELPLINE_ALT = '011-24300606';
-export const OFFICIAL_EMAIL = 'pmkisan-ict@gov.in';
-
-// Global SEO Keywords (Root layout mein use honge)
-export const GLOBAL_KEYWORDS = [
-  'pm kisan status',
-  'pm kisan yojana',
-  'kisan credit card',
-  'krishi yojana hindi',
-  'farming subsidy india',
-  'kisan status check',
-  'organic farming guide',
-  'kisan loan'
-];
-
-export const DISCLAIMER_TEXT =
-  'KisanStatus.com ek independent information portal hai — Government of India ya kisi official portal ka affiliated platform nahi hai. Yahan di gayi jankari educational purpose ke liye hai. Kisi bhi official karyavaahi, enrollment, ya payment ke liye hamesha official portals visit karein.';
-
-export const OFFICIAL_PORTALS = {
-  pmkisan: 'https://pmkisan.gov.in',
-  pmkisanStatus: 'https://pmkisan.gov.in/BeneficiaryStatus.aspx',
-  pmkisanEkyc: 'https://pmkisan.gov.in/eKYC.aspx',
-  soilHealth: 'https://soilhealth.dac.gov.in',
-  pmfby: 'https://pmfby.gov.in',
-  nmsa: 'https://nmsa.dac.gov.in', // Added for soil/organic farming references
-} as const;
-
-export const SOCIAL_LINKS = {
-  facebook: 'https://www.facebook.com/profile.php?id=61590430994270',
-  twitter: 'https://twitter.com/kisanstatus',
-} as const;
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
+  return (
+    <html 
+      lang="hi-IN" 
+      dir="ltr"
+      suppressHydrationWarning 
+      className={poppins.variable}
+    >
+      <head>
+        {/* Preconnect to critical domains */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://region1.google-analytics.com" crossOrigin="anonymous" />
+        
+        <link rel="dns-prefetch" href="https://www.google.com" />
+        <link rel="dns-prefetch" href="https://vercel.live" />
+        <link rel="dns-prefetch" href="https://connect.facebook.net" />
+        
+        <link rel="preload" href="/favicon.svg" as="image" type="image/svg+xml" />
+        
+        {/* ✅ FIXED: Enhanced Schema Markup with site-config values */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([
+              // WebSite Schema
+              {
+                '@context': 'https://schema.org',
+                '@type': 'WebSite',
+                '@id': `${SITE_URL}#website`,
+                name: SITE_NAME,
+                url: SITE_URL,
+                description: SITE_DESCRIPTION,
+                inLanguage: 'hi-IN',
+                publisher: {
+                  '@id': `${SITE_URL}#organization`,
+                },
+                potentialAction: {
+                  '@type': 'SearchAction',
+                  target: {
+                    '@type': 'EntryPoint',
+                    urlTemplate: `${SITE_URL}/search?q={search_term_string}`,
+                  },
+                  'query-input': 'required name=search_term_string',
+                },
+              },
+              // ✅ FIXED: Organization Schema - KisanStatus Team
+              {
+                '@context': 'https://schema.org',
+                '@type': 'Organization',
+                '@id': `${SITE_URL}#organization`,
+                name: SITE_NAME,
+                alternateName: 'Kisan Status',
+                url: SITE_URL,
+                logo: {
+                  '@type': 'ImageObject',
+                  '@id': `${SITE_URL}#logo`,
+                  url: LOGO_URL,
+                  width: 512,
+                  height: 512,
+                  caption: SITE_NAME,
+                },
+                image: {
+                  '@id': `${SITE_URL}#logo`,
+                },
+                foundingDate: '2024',
+                description: SITE_DESCRIPTION,
+                // ✅ FIXED: Complete ContactPoint with both helplines
+                contactPoint: [
+                  {
+                    '@type': 'ContactPoint',
+                    '@id': `${SITE_URL}#contact-primary`,
+                    telephone: `+91-${HELPLINE}`,
+                    email: SUPPORT_EMAIL,
+                    contactType: 'customer support',
+                    availableLanguage: ['Hindi', 'English'],
+                    areaServed: {
+                      '@type': 'Country',
+                      name: 'India',
+                    },
+                    hoursAvailable: {
+                      '@type': 'OpeningHoursSpecification',
+                      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+                      opens: '09:30',
+                      closes: '18:00',
+                      timeZone: 'Asia/Kolkata',
+                    },
+                  },
+                  {
+                    '@type': 'ContactPoint',
+                    '@id': `${SITE_URL}#contact-alt`,
+                    telephone: `+91-${HELPLINE_ALT.replace('011-', '')}`,
+                    contactType: 'technical support',
+                    availableLanguage: ['Hindi', 'English'],
+                    areaServed: {
+                      '@type': 'Country',
+                      name: 'India',
+                    },
+                  },
+                ],
+                // ✅ FIXED: Founder is Organization (KisanStatus Team)
+                founder: {
+                  '@type': 'Organization',
+                  '@id': `${SITE_URL}#founder`,
+                  name: AUTHOR_NAME,
+                  url: AUTHOR_URL,
+                  description: AUTHOR_BIO,
+                },
+                // ✅ FIXED: Address for Local SEO
+                address: {
+                  '@type': 'PostalAddress',
+                  addressCountry: 'IN',
+                  addressRegion: 'India',
+                },
+                // ✅ FIXED: Social links from site-config
+                sameAs: [
+                  SOCIAL_LINKS.facebook,
+                  SOCIAL_LINKS.twitter,
+                ],
+              },
+              // BreadcrumbList Schema
+              {
+                '@context': 'https://schema.org',
+                '@type': 'BreadcrumbList',
+                '@id': `${SITE_URL}#breadcrumb`,
+                itemListElement: [
+                  {
+                    '@type': 'ListItem',
+                    position: 1,
+                    name: 'Home',
+                    item: SITE_URL,
+                  },
+                ],
+              },
+              // WebPage Schema
+              {
+                '@context': 'https://schema.org',
+                '@type': 'WebPage',
+                '@id': `${SITE_URL}#webpage`,
+                url: SITE_URL,
+                name: `${SITE_NAME} — ${SITE_TAGLINE}`,
+                description: SITE_DESCRIPTION,
+                inLanguage: 'hi-IN',
+                isPartOf: {
+                  '@id': `${SITE_URL}#website`,
+                },
+                about: {
+                  '@id': `${SITE_URL}#organization`,
+                },
+                primaryImageOfPage: {
+                  '@id': `${SITE_URL}#logo`,
+                },
+              },
+            ]),
+          }}
+        />
+      </head>
+      
+      <body 
+        className="min-h-screen flex flex-col antialiased bg-[var(--color-bg)] text-[var(--color-text)] transition-colors duration-200"
+        itemScope
+        itemType="https://schema.org/WebPage"
+      >
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[var(--color-primary)] focus:text-white focus:rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
+        >
+          Skip to main content
+        </a>
+        
+        <LanguageProvider>
+          <Header />
+          <main 
+            id="main-content" 
+            className="flex-1 scroll-smooth"
+            role="main"
+          >
+            {children}
+          </main>
+          <Footer />
+        </LanguageProvider>
+        
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+          priority={false}
+        />
+        <Script
+          id="ga4-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_MEASUREMENT_ID}', {
+                page_path: window.location.pathname,
+                send_page_view: true,
+                cookie_flags: 'SameSite=None;Secure',
+                cookie_domain: 'auto',
+                cookie_expires: 63072000,
+                allow_google_signals: true,
+                allow_ad_personalization_signals: false,
+                restricted_data_processing: false,
+                transport_type: 'beacon',
+              });
+            `,
+          }}
+        />
+        
+        {process.env.NEXT_PUBLIC_GTM_ID && (
+          <Script
+            id="gtm-script"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function(w,d,s,l,i){
+                  w[l]=w[l]||[];
+                  w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+                  var f=d.getElementsByTagName(s)[0],
+                  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+                  j.async=true;
+                  j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+                  f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','${process.env.NEXT_PUBLIC_GTM_ID}');
+              `,
+            }}
+          />
+        )}
+        
+        {process.env.NODE_ENV === 'production' && <Analytics />}
+      </body>
+    </html>
+  );
+}
