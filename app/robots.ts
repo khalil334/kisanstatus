@@ -4,7 +4,6 @@ import { SITE_URL } from '@/lib/site-config';
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
-      // ✅ DEFAULT: All bots
       {
         userAgent: '*',
         allow: '/',
@@ -17,8 +16,6 @@ export default function robots(): MetadataRoute.Robots {
         ],
         crawlDelay: 1,
       },
-      
-      // ✅ GOOGLEBOT: With crawl delay
       {
         userAgent: 'Googlebot',
         allow: '/',
@@ -30,8 +27,6 @@ export default function robots(): MetadataRoute.Robots {
         ],
         crawlDelay: 1,
       },
-      
-      // ✅ GOOGLE IMAGE: Image indexing
       {
         userAgent: 'Googlebot-Image',
         allow: [
@@ -42,8 +37,6 @@ export default function robots(): MetadataRoute.Robots {
           '/api/',
         ],
       },
-      
-      // ✅ BING: Special rules
       {
         userAgent: 'Bingbot',
         allow: '/',
@@ -55,8 +48,6 @@ export default function robots(): MetadataRoute.Robots {
         ],
         crawlDelay: 2,
       },
-      
-      // ✅ AI BOTS: Allow articles for AI visibility
       {
         userAgent: [
           'GPTBot',
@@ -79,8 +70,6 @@ export default function robots(): MetadataRoute.Robots {
           '/tools/',
         ],
       },
-      
-      // ✅ BLOCK COMPLETELY: Data scrapers
       {
         userAgent: [
           'CCBot',
@@ -96,8 +85,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: '/',
       },
     ],
-    
-    // ✅ Sitemap
     sitemap: `${SITE_URL}/sitemap.xml`,
   };
 }
