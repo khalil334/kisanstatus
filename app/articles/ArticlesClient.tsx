@@ -3,12 +3,115 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useMemo, Suspense } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
 import type { ArticleMeta, CategorySlug } from '@/lib/articles-data';
 import { CATEGORIES } from '@/lib/articles-data';
 
 const NEW_ARTICLES_LIMIT = 3;
 
+/* ─── SVG Icons (Replace Emojis) ─── */
+function IconBookOpen({ className = 'w-5 h-5' }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+    </svg>
+  );
+}
+
+function IconSparkles({ className = 'w-5 h-5' }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+    </svg>
+  );
+}
+
+function IconClipboard({ className = 'w-5 h-5' }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
+    </svg>
+  );
+}
+
+function IconBuilding({ className = 'w-4 h-4' }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
+    </svg>
+  );
+}
+
+function IconHome({ className = 'w-5 h-5' }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+    </svg>
+  );
+}
+
+function IconArrowLeft({ className = 'w-4 h-4' }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+    </svg>
+  );
+}
+
+function IconArrowRight({ className = 'w-4 h-4' }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+    </svg>
+  );
+}
+
+function IconSearch({ className = 'w-5 h-5' }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+    </svg>
+  );
+}
+
+function IconExternalLink({ className = 'w-3 h-3' }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+    </svg>
+  );
+}
+
+function IconNoResults({ className = 'w-16 h-16' }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 9l6 6m0-6l-6 6" />
+    </svg>
+  );
+}
+
+/* ─── Category Icons Map ─── */
+const CATEGORY_ICONS: Record<string, React.FC<{ className?: string }>> = {
+  'status-check': IconClipboard,
+  'loan': ({ className }) => (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9.75A2.25 2.25 0 0018.75 7.5H5.25A2.25 2.25 0 003 9.75V12m18 0h-6" />
+    </svg>
+  ),
+  'farming': ({ className }) => (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+    </svg>
+  ),
+  'mandi': ({ className }) => (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605" />
+    </svg>
+  ),
+};
+
+/* ─── Article Image Component ─── */
 function ArticleImage({ image, emoji, title, priority = false }: { image: string; emoji: string; title: string; priority?: boolean }) {
   const [error, setError] = useState(false);
   const [loaded, setLoaded] = useState(false);
@@ -42,6 +145,7 @@ function ArticleImage({ image, emoji, title, priority = false }: { image: string
   );
 }
 
+/* ─── Article Card ─── */
 function ArticleCard({ article, showNewBadge = false, priority = false }: { article: ArticleMeta; showNewBadge?: boolean; priority?: boolean }) {
   const categoryInfo = CATEGORIES[article.category] as { name: string; nameHi: string; icon: string } | undefined;
   const emoji = categoryInfo?.icon || '📄';
@@ -76,9 +180,9 @@ function ArticleCard({ article, showNewBadge = false, priority = false }: { arti
         </h3>
         <p className="text-xs text-[var(--color-text-muted)] leading-relaxed line-clamp-2 flex-1">{article.desc}</p>
         <div className="flex items-center justify-between mt-3 pt-3 border-t border-[var(--color-border)]">
-          <span className="text-[11px] text-[var(--color-text-muted)] font-medium">✍️ KisanStatus Team</span>
+          <span className="text-[11px] text-[var(--color-text-muted)] font-medium">KisanStatus Team</span>
           <span className="text-xs font-bold text-green-700 dark:text-green-400 group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
-            Poora Padhein <span aria-hidden="true">→</span>
+            Poora Padhein <IconArrowRight className="w-3 h-3" />
           </span>
         </div>
       </div>
@@ -86,14 +190,28 @@ function ArticleCard({ article, showNewBadge = false, priority = false }: { arti
   );
 }
 
+/* ─── Articles Content ─── */
 function ArticlesContent({ articles }: { articles: readonly ArticleMeta[] }) {
   const searchParams = useSearchParams();
+  const router = useRouter();
   const activeCategory = searchParams.get('category') || 'all';
+  const searchQuery = searchParams.get('search') || '';
+  const [localSearch, setLocalSearch] = useState(searchQuery);
 
   const { latestArticles, remainingArticles, categoryCounts, activeCategoryName } = useMemo(() => {
-    const filtered = activeCategory === 'all'
+    let filtered = activeCategory === 'all'
       ? [...articles]
       : articles.filter(a => a.category === activeCategory);
+
+    // Search filter
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase();
+      filtered = filtered.filter(a =>
+        a.title.toLowerCase().includes(query) ||
+        a.desc.toLowerCase().includes(query) ||
+        a.keywords.some(k => k.toLowerCase().includes(query))
+      );
+    }
 
     const sorted = filtered.sort((a, b) =>
       new Date(b.publishedTime || 0).getTime() - new Date(a.publishedTime || 0).getTime()
@@ -110,59 +228,128 @@ function ArticlesContent({ articles }: { articles: readonly ArticleMeta[] }) {
     const activeName = catInfo ? catInfo.nameHi : 'Sabhi Verified Guides';
 
     return { latestArticles: latest, remainingArticles: remaining, categoryCounts: counts, activeCategoryName: activeName };
-  }, [articles, activeCategory]);
+  }, [articles, activeCategory, searchQuery]);
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    const params = new URLSearchParams(searchParams.toString());
+    if (localSearch.trim()) {
+      params.set('search', localSearch.trim());
+    } else {
+      params.delete('search');
+    }
+    router.push(`/articles?${params.toString()}`);
+  };
 
   return (
     <>
+      {/* Search Bar */}
+      <div className="container-site mb-6">
+        <form onSubmit={handleSearch} className="max-w-xl mx-auto">
+          <div className="relative">
+            <input
+              type="text"
+              value={localSearch}
+              onChange={(e) => setLocalSearch(e.target.value)}
+              placeholder="Search articles: PM Kisan, KCC Loan, Tractor..."
+              className="w-full px-4 py-3 pl-11 rounded-xl border border-[var(--color-border)] bg-[var(--color-card)] text-[var(--color-text)] placeholder-[var(--color-text-muted)] text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+              aria-label="Search articles"
+            />
+            <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[var(--color-text-muted)]">
+              <IconSearch className="w-4 h-4" />
+            </span>
+            {localSearch && (
+              <button
+                type="button"
+                onClick={() => { setLocalSearch(''); router.push('/articles'); }}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
+                aria-label="Clear search"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            )}
+          </div>
+        </form>
+      </div>
+
+      {/* Category Filters */}
       <div className="container-site mb-8">
         <div className="flex flex-wrap justify-center gap-2" role="navigation" aria-label="Article categories">
           <Link
             href="/articles"
-            className={`px-4 py-2 rounded-full text-sm font-bold transition-all focus:outline-none focus:ring-2 focus:ring-green-500 ${
-              activeCategory === 'all'
+            className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-bold transition-all focus:outline-none focus:ring-2 focus:ring-green-500 ${
+              activeCategory === 'all' && !searchQuery
                 ? 'bg-[var(--color-primary)] text-white shadow-lg scale-105'
                 : 'bg-[var(--color-card)] text-[var(--color-text)] hover:bg-[var(--color-bg-alt)] border border-[var(--color-border)]'
             }`}
-            aria-current={activeCategory === 'all' ? 'page' : undefined}
+            aria-current={activeCategory === 'all' && !searchQuery ? 'page' : undefined}
           >
-            📚 Sabhi Guides ({articles.length})
+            <IconBookOpen className="w-4 h-4" />
+            Sabhi Guides ({articles.length})
           </Link>
           {Object.entries(CATEGORIES).map(([slug, cat]) => {
             const count = categoryCounts[slug] || 0;
             if (count === 0) return null;
             const catInfo = cat as { name: string; nameHi: string; icon: string };
+            const CatIcon = CATEGORY_ICONS[slug] || IconClipboard;
             return (
               <Link
                 key={slug}
                 href={`/articles?category=${slug}`}
-                className={`px-4 py-2 rounded-full text-sm font-bold transition-all focus:outline-none focus:ring-2 focus:ring-green-500 ${
+                className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-bold transition-all focus:outline-none focus:ring-2 focus:ring-green-500 ${
                   activeCategory === slug
                     ? 'bg-[var(--color-primary)] text-white shadow-lg scale-105'
                     : 'bg-[var(--color-card)] text-[var(--color-text)] hover:bg-[var(--color-bg-alt)] border border-[var(--color-border)]'
                 }`}
                 aria-current={activeCategory === slug ? 'page' : undefined}
               >
-                {catInfo.icon} {catInfo.name} ({count})
+                <CatIcon className="w-4 h-4" />
+                {catInfo.name} ({count})
               </Link>
             );
           })}
         </div>
       </div>
 
+      {/* Search Results Info */}
+      {searchQuery && (
+        <div className="container-site mb-6">
+          <div className="flex items-center justify-between">
+            <p className="text-sm text-[var(--color-text-muted)]">
+              Search results for: <span className="font-bold text-[var(--color-text)]">"{searchQuery}"</span>
+            </p>
+            <button
+              onClick={() => router.push('/articles')}
+              className="text-sm text-green-700 dark:text-green-400 font-bold hover:underline inline-flex items-center gap-1"
+            >
+              Clear search
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* No Results */}
       {latestArticles.length === 0 && remainingArticles.length === 0 && (
         <div className="container-site text-center py-12">
-          <div className="text-6xl mb-4" aria-hidden="true">🔍</div>
-          <p className="text-[var(--color-text-muted)] text-lg mb-4">Is category mein abhi koi guide available nahi hai.</p>
+          <div className="text-[var(--color-text-muted)] mb-4" aria-hidden="true">
+            <IconNoResults className="w-16 h-16 mx-auto" />
+          </div>
+          <p className="text-[var(--color-text-muted)] text-lg mb-4">
+            {searchQuery ? `No results found for "${searchQuery}"` : 'Is category mein abhi koi guide available nahi hai.'}
+          </p>
           <Link href="/articles" className="text-green-700 dark:text-green-400 font-bold hover:underline inline-flex items-center gap-2">
-            ← Sabhi Guides Dekhein
+            <IconArrowLeft className="w-4 h-4" /> Sabhi Guides Dekhein
           </Link>
         </div>
       )}
 
-      {latestArticles.length > 0 && activeCategory === 'all' && (
+      {/* Latest Articles */}
+      {latestArticles.length > 0 && activeCategory === 'all' && !searchQuery && (
         <section className="mb-12" aria-labelledby="new-heading">
           <div className="flex items-center gap-3 mb-5">
-            <span className="text-xl" aria-hidden="true">✨</span>
+            <IconSparkles className="w-5 h-5 text-green-600 dark:text-green-400" />
             <h2 id="new-heading" className="text-lg font-black text-[var(--color-text)]">Naye aur Latest Updates</h2>
             <span className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-xs font-bold px-2 py-0.5 rounded-full">
               {latestArticles.length} latest
@@ -176,12 +363,13 @@ function ArticlesContent({ articles }: { articles: readonly ArticleMeta[] }) {
         </section>
       )}
 
+      {/* All/Remaining Articles */}
       {remainingArticles.length > 0 && (
         <section aria-labelledby="all-heading">
           <div className="flex items-center gap-3 mb-5">
-            <span className="text-xl" aria-hidden="true">📋</span>
+            <IconClipboard className="w-5 h-5 text-green-600 dark:text-green-400" />
             <h2 id="all-heading" className="text-lg font-black text-[var(--color-text)]">
-              {activeCategoryName}
+              {searchQuery ? 'Search Results' : activeCategoryName}
             </h2>
             <span className="bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 text-xs font-bold px-2 py-0.5 rounded-full">
               {remainingArticles.length} guides
@@ -198,6 +386,7 @@ function ArticlesContent({ articles }: { articles: readonly ArticleMeta[] }) {
   );
 }
 
+/* ─── Loading Skeleton ─── */
 function ArticlesLoading() {
   return (
     <div className="container-site py-12">
@@ -218,13 +407,16 @@ function ArticlesLoading() {
   );
 }
 
+/* ─── Main Component ─── */
 export default function ArticlesClient({ articles }: { articles: readonly ArticleMeta[] }) {
   return (
     <main className="min-h-screen bg-[var(--color-bg)]">
+      {/* Hero Section */}
       <section className="py-10 md:py-14 bg-[var(--color-primary)]" aria-labelledby="hero-heading">
         <div className="container-site text-center px-4">
-          <span className="inline-block bg-white/10 border border-white/20 text-green-300 text-xs font-bold px-4 py-2 rounded-full mb-4 uppercase tracking-wider backdrop-blur-sm">
-            📚 Kisan Resources Hub
+          <span className="inline-flex items-center gap-1.5 bg-white/10 border border-white/20 text-green-300 text-xs font-bold px-4 py-2 rounded-full mb-4 uppercase tracking-wider backdrop-blur-sm">
+            <IconBookOpen className="w-4 h-4" />
+            Kisan Resources Hub
           </span>
           <h1 id="hero-heading" className="text-2xl md:text-4xl font-black text-white mb-3 leading-tight">
             PM Kisan aur Krishi Yojanaon ki Verified Guides (2026)
@@ -238,16 +430,18 @@ export default function ArticlesClient({ articles }: { articles: readonly Articl
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 bg-white/15 hover:bg-white/25 border border-white/30 text-white text-xs font-bold px-3 py-1.5 rounded-full transition-colors backdrop-blur-sm focus:ring-2 focus:ring-white focus:outline-none"
           >
-            🏛️ Official PM Kisan Portal <span aria-hidden="true">↗</span>
+            <IconBuilding className="w-4 h-4" />
+            Official PM Kisan Portal <IconExternalLink className="w-3 h-3" />
           </a>
           <div className="mt-4">
             <Link href="/" className="inline-flex items-center gap-2 text-green-300 hover:text-white text-sm font-bold transition-colors focus:ring-2 focus:ring-green-300 focus:outline-none rounded px-2 py-1">
-              <span aria-hidden="true">←</span> Home Page
+              <IconArrowLeft className="w-4 h-4" /> Home Page
             </Link>
           </div>
         </div>
       </section>
 
+      {/* Content */}
       <div className="container-site py-10 px-4">
         <Suspense fallback={<ArticlesLoading />}>
           <ArticlesContent articles={articles} />
@@ -257,7 +451,7 @@ export default function ArticlesClient({ articles }: { articles: readonly Articl
             href="/"
             className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-black px-8 py-3.5 rounded-xl text-sm transition-all hover:scale-105 shadow-lg focus:ring-2 focus:ring-green-300 focus:outline-none"
           >
-            <span aria-hidden="true">🏠</span> Home Page
+            <IconHome className="w-5 h-5" /> Home Page
           </Link>
         </div>
       </div>
