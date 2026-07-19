@@ -351,7 +351,6 @@ export default function Header() {
               rel="noopener noreferrer nofollow"
               className="bg-[var(--color-primary)] hover:bg-[var(--color-primary-dark)] text-white text-sm font-bold px-5 py-2.5 rounded-lg transition-colors shadow-sm hover:shadow-md"
               aria-label="Check PM Kisan Status on official website"
-              prefetch={false}
             >
               Check Status ↗
             </a>
@@ -446,7 +445,6 @@ export default function Header() {
                 onClick={() => setMobileOpen(false)}
                 className="block w-full bg-[var(--color-primary)] hover:bg-[var(--color-primary-dark)] text-white text-center font-bold py-3 rounded-lg transition-colors shadow-sm"
                 aria-label="Check PM Kisan Status on official website"
-                prefetch={false}
               >
                 Check Status on pmkisan.gov.in ↗
               </a>
