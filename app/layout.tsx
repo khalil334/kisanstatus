@@ -7,21 +7,28 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { GA_MEASUREMENT_ID } from '@/lib/gtag';
 import { LanguageProvider } from '@/lib/LanguageContext';
-import { 
-  SITE_URL, 
-  SITE_NAME, 
-  SITE_TAGLINE, 
-  SITE_DESCRIPTION, 
-  AUTHOR_NAME, 
-  AUTHOR_URL, 
+import {
+  SITE_URL,
+  SITE_NAME,
+  SITE_TAGLINE,
+  SITE_DESCRIPTION,
+  AUTHOR_NAME,
+  AUTHOR_URL,
   AUTHOR_BIO,
-  DEFAULT_OG_IMAGE, 
-  LOGO_URL, 
+  DEFAULT_OG_IMAGE,
+  LOGO_URL,
+  LOGO_WIDTH,
+  LOGO_HEIGHT,
   SUPPORT_EMAIL,
-  HELPLINE,
-  HELPLINE_ALT,
+  HELPLINE_CLEAN,
+  HELPLINE_ALT_CLEAN,
   GLOBAL_KEYWORDS,
   SOCIAL_LINKS,
+  SUPPORT_HOURS,
+  GOOGLE_SITE_VERIFICATION,
+  BING_VERIFICATION,
+  YANDEX_VERIFICATION,
+  GTM_ID,
 } from '@/lib/site-config';
 
 const poppins = Poppins({
@@ -61,7 +68,6 @@ export const metadata: Metadata = {
     canonical: SITE_URL,
     languages: {
       'hi-IN': SITE_URL,
-      'en-IN': `${SITE_URL}/en`,
       'x-default': SITE_URL,
     },
   },
@@ -103,10 +109,10 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: process.env.NEXT_PUBLIC_GSC_TOKEN ?? 'oGrO0aRNLLhCgHq0Bn-sh3FdgKye7TlbAn2pAk8YdMQ',
+    google: GOOGLE_SITE_VERIFICATION,
     other: {
-      'msvalidate.01': process.env.NEXT_PUBLIC_BING_TOKEN ?? '',
-      'yandex-verification': process.env.NEXT_PUBLIC_YANDEX_TOKEN ?? '',
+      'msvalidate.01': BING_VERIFICATION,
+      'yandex-verification': YANDEX_VERIFICATION,
     },
   },
   other: {
@@ -121,7 +127,6 @@ export const metadata: Metadata = {
     'application-name': SITE_NAME,
     'msapplication-TileColor': '#16A34A',
     'msapplication-config': '/browserconfig.xml',
-    'fb:app_id': process.env.NEXT_PUBLIC_FB_APP_ID ?? '',
   },
   manifest: '/site.webmanifest',
   icons: {
@@ -148,31 +153,26 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html 
-      lang="hi-IN" 
+    <html
+      lang="hi-IN"
       dir="ltr"
-      suppressHydrationWarning 
+      suppressHydrationWarning
       className={poppins.variable}
     >
       <head>
-        {/* Preconnect to critical domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://region1.google-analytics.com" crossOrigin="anonymous" />
-        
         <link rel="dns-prefetch" href="https://www.google.com" />
         <link rel="dns-prefetch" href="https://vercel.live" />
         <link rel="dns-prefetch" href="https://connect.facebook.net" />
-        
         <link rel="preload" href="/favicon.svg" as="image" type="image/svg+xml" />
-        
-        {/* ✅ FIXED: Enhanced Schema Markup with site-config values */}
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify([
-              // WebSite Schema
               {
                 '@context': 'https://schema.org',
                 '@type': 'WebSite',
@@ -193,7 +193,6 @@ export default function RootLayout({
                   'query-input': 'required name=search_term_string',
                 },
               },
-              // ✅ FIXED: Organization Schema - KisanStatus Team
               {
                 '@context': 'https://schema.org',
                 '@type': 'Organization',
@@ -205,8 +204,8 @@ export default function RootLayout({
                   '@type': 'ImageObject',
                   '@id': `${SITE_URL}#logo`,
                   url: LOGO_URL,
-                  width: 512,
-                  height: 512,
+                  width: LOGO_WIDTH,
+                  height: LOGO_HEIGHT,
                   caption: SITE_NAME,
                 },
                 image: {
@@ -214,12 +213,11 @@ export default function RootLayout({
                 },
                 foundingDate: '2024',
                 description: SITE_DESCRIPTION,
-                // ✅ FIXED: Complete ContactPoint with both helplines
                 contactPoint: [
                   {
                     '@type': 'ContactPoint',
                     '@id': `${SITE_URL}#contact-primary`,
-                    telephone: `+91-${HELPLINE}`,
+                    telephone: `+91-${HELPLINE_CLEAN}`,
                     email: SUPPORT_EMAIL,
                     contactType: 'customer support',
                     availableLanguage: ['Hindi', 'English'],
@@ -229,16 +227,16 @@ export default function RootLayout({
                     },
                     hoursAvailable: {
                       '@type': 'OpeningHoursSpecification',
-                      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-                      opens: '09:30',
-                      closes: '18:00',
-                      timeZone: 'Asia/Kolkata',
+                      dayOfWeek: SUPPORT_HOURS.days,
+                      opens: SUPPORT_HOURS.open,
+                      closes: SUPPORT_HOURS.close,
+                      timeZone: SUPPORT_HOURS.timezone,
                     },
                   },
                   {
                     '@type': 'ContactPoint',
                     '@id': `${SITE_URL}#contact-alt`,
-                    telephone: `+91-${HELPLINE_ALT.replace('011-', '')}`,
+                    telephone: `+91-${HELPLINE_ALT_CLEAN}`,
                     contactType: 'technical support',
                     availableLanguage: ['Hindi', 'English'],
                     areaServed: {
@@ -247,7 +245,6 @@ export default function RootLayout({
                     },
                   },
                 ],
-                // ✅ FIXED: Founder is Organization (KisanStatus Team)
                 founder: {
                   '@type': 'Organization',
                   '@id': `${SITE_URL}#founder`,
@@ -255,19 +252,16 @@ export default function RootLayout({
                   url: AUTHOR_URL,
                   description: AUTHOR_BIO,
                 },
-                // ✅ FIXED: Address for Local SEO
                 address: {
                   '@type': 'PostalAddress',
                   addressCountry: 'IN',
                   addressRegion: 'India',
                 },
-                // ✅ FIXED: Social links from site-config
                 sameAs: [
                   SOCIAL_LINKS.facebook,
                   SOCIAL_LINKS.twitter,
                 ],
               },
-              // BreadcrumbList Schema
               {
                 '@context': 'https://schema.org',
                 '@type': 'BreadcrumbList',
@@ -281,7 +275,6 @@ export default function RootLayout({
                   },
                 ],
               },
-              // WebPage Schema
               {
                 '@context': 'https://schema.org',
                 '@type': 'WebPage',
@@ -304,8 +297,8 @@ export default function RootLayout({
           }}
         />
       </head>
-      
-      <body 
+
+      <body
         className="min-h-screen flex flex-col antialiased bg-[var(--color-bg)] text-[var(--color-text)] transition-colors duration-200"
         itemScope
         itemType="https://schema.org/WebPage"
@@ -316,11 +309,11 @@ export default function RootLayout({
         >
           Skip to main content
         </a>
-        
+
         <LanguageProvider>
           <Header />
-          <main 
-            id="main-content" 
+          <main
+            id="main-content"
             className="flex-1 scroll-smooth"
             role="main"
           >
@@ -328,7 +321,7 @@ export default function RootLayout({
           </main>
           <Footer />
         </LanguageProvider>
-        
+
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"
@@ -356,8 +349,8 @@ export default function RootLayout({
             `,
           }}
         />
-        
-        {process.env.NEXT_PUBLIC_GTM_ID && (
+
+        {GTM_ID && (
           <Script
             id="gtm-script"
             strategy="afterInteractive"
@@ -371,12 +364,12 @@ export default function RootLayout({
                   j.async=true;
                   j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
                   f.parentNode.insertBefore(j,f);
-                })(window,document,'script','dataLayer','${process.env.NEXT_PUBLIC_GTM_ID}');
+                })(window,document,'script','dataLayer','${GTM_ID}');
               `,
             }}
           />
         )}
-        
+
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
