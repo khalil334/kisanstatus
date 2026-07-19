@@ -1,8 +1,17 @@
 'use client';
 
 import Link from 'next/link';
-import { AUTHOR_NAME } from '@/lib/site-config';
-import { useState, useEffect } from 'react';
+import { 
+  AUTHOR_NAME, 
+  AUTHOR_URL,
+  SITE_NAME,
+  SITE_URL,
+  SUPPORT_EMAIL,
+  HELPLINE,
+  HELPLINE_ALT,
+  SOCIAL_LINKS,
+  getCopyrightYears,
+} from '@/lib/site-config';
 
 const EXTERNAL_ICON = (
   <svg className="w-3 h-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -11,25 +20,20 @@ const EXTERNAL_ICON = (
 );
 
 export default function Footer() {
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+  const currentYear = getCopyrightYears();
 
   return (
     <footer 
       className="bg-[var(--color-text)] text-white py-12"
-      style={{ 
-        minHeight: '400px', // ✅ CLS FIX: Reserve space for footer
-        contain: 'layout style' // ✅ PERFORMANCE: Prevent layout shift
-      }}
+      itemScope
+      itemType="https://schema.org/Organization"
     >
       <div className="container-site">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          {/* Brand Column */}
           <div>
-            <h4 className="font-semibold text-white text-base mb-4">KisanStatus.com</h4>
-            <p className="text-sm text-gray-400 leading-relaxed mb-4">
+            <h4 className="font-semibold text-white text-base mb-4" itemProp="name">{SITE_NAME}</h4>
+            <p className="text-sm text-gray-400 leading-relaxed mb-4" itemProp="description">
               Bharat ke kisaanon ke liye — PM Kisan, eKYC, kist status, aur free agricultural calculators.
             </p>
             <div className="flex items-center gap-2 text-sm text-gray-400">
@@ -39,37 +43,42 @@ export default function Footer() {
                 <Link
                   href="/about"
                   className="text-green-400 hover:text-green-300 hover:underline font-medium focus:outline-none focus:ring-2 focus:ring-green-500 rounded"
+                  itemProp="url"
                 >
-                  {AUTHOR_NAME}
+                  <span itemProp="author">{AUTHOR_NAME}</span>
                 </Link>
               </span>
             </div>
           </div>
 
+          {/* Quick Links */}
           <div>
             <h4 className="font-semibold text-white text-base mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-sm" role="list">
-              {[
-                { href: '/', label: ' Home' },
-                { href: '/about', label: '👤 About Us' },
-                { href: '/disclaimer', label: '⚠️ Disclaimer' },
-                { href: '/privacy-policy', label: ' Privacy Policy' },
-                { href: '/contact', label: '📧 Contact Us' },
-                { href: '/articles', label: ' All Articles' },
-                { href: '/calculator', label: '🧮 Calculators' },
-              ].map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-400 hover:text-green-400 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 rounded inline-block py-0.5"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <nav aria-label="Footer navigation">
+              <ul className="space-y-2 text-sm" role="list">
+                {[
+                  { href: '/', label: '🏠 Home' },
+                  { href: '/about', label: '👤 About Us' },
+                  { href: '/disclaimer', label: '⚠️ Disclaimer' },
+                  { href: '/privacy-policy', label: '🔒 Privacy Policy' },
+                  { href: '/contact', label: '📧 Contact Us' },
+                  { href: '/articles', label: '📚 All Articles' },
+                  { href: '/calculator', label: '🧮 Calculators' },
+                ].map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-gray-400 hover:text-green-400 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 rounded inline-block py-0.5"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
           </div>
 
+          {/* Official Links */}
           <div>
             <h4 className="font-semibold text-white text-base mb-4 flex items-center gap-2">
               <span aria-hidden="true">🏛️</span>
@@ -88,7 +97,7 @@ export default function Footer() {
                   <a
                     href={link.href}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noopener noreferrer nofollow"
                     className="text-gray-400 hover:text-green-400 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 rounded inline-flex items-center gap-1 py-0.5"
                     aria-label={`${link.label} (opens in new tab)`}
                   >
@@ -100,13 +109,14 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Contact Info */}
           <div>
             <h4 className="font-semibold text-white text-base mb-4 flex items-center gap-2">
               <span aria-hidden="true">📞</span>
               Helpline & Support
             </h4>
 
-            <div className="bg-white/10 border border-white/10 rounded-lg p-4 mb-4">
+            <address className="bg-white/10 border border-white/10 rounded-lg p-4 mb-4 not-italic" itemScope itemType="https://schema.org/ContactPoint">
               <h5 className="text-sm font-bold text-green-400 mb-3 flex items-center gap-2">
                 📢 Helpline Jankari
               </h5>
@@ -116,12 +126,25 @@ export default function Footer() {
                   <span>
                     PM Kisan Helpline:{' '}
                     <a
-                      href="tel:155261"
+                      href={`tel:${HELPLINE}`}
                       className="text-white font-bold hover:underline focus:outline-none focus:ring-2 focus:ring-green-500 rounded"
+                      itemProp="telephone"
                     >
-                      155261
+                      {HELPLINE}
                     </a>{' '}
                     (Toll-Free)
+                  </span>
+                </p>
+                <p className="flex items-start gap-2">
+                  <span className="shrink-0 mt-0.5" aria-hidden="true">📞</span>
+                  <span>
+                    Alt Helpline:{' '}
+                    <a
+                      href={`tel:${HELPLINE_ALT.replace(/-/g, '')}`}
+                      className="text-white font-bold hover:underline focus:outline-none focus:ring-2 focus:ring-green-500 rounded"
+                    >
+                      {HELPLINE_ALT}
+                    </a>
                   </span>
                 </p>
                 <p className="flex items-start gap-2">
@@ -129,37 +152,40 @@ export default function Footer() {
                   <span>
                     Email:{' '}
                     <a
-                      href="mailto:kisanstatus.support@gmail.com"
+                      href={`mailto:${SUPPORT_EMAIL}`}
                       className="text-white hover:underline break-all focus:outline-none focus:ring-2 focus:ring-green-500 rounded"
+                      itemProp="email"
                     >
-                      kisanstatus.support@gmail.com
+                      {SUPPORT_EMAIL}
                     </a>
                   </span>
                 </p>
                 <p className="flex items-start gap-2">
                   <span className="shrink-0 mt-0.5" aria-hidden="true">⏰</span>
-                  <span>Time: Mon-Sat 9:30AM - 6:00PM</span>
+                  <span itemProp="hoursAvailable">Mon-Sat 9:30AM - 6:00PM</span>
                 </p>
               </div>
-            </div>
+            </address>
 
             <a
-              href="https://www.facebook.com/profile.php?id=61590430994270"
+              href={SOCIAL_LINKS.facebook}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
               className="block text-center bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-3 rounded-lg transition-colors text-xs focus:outline-none focus:ring-2 focus:ring-blue-400"
               aria-label="Follow KisanStatus on Facebook (opens in new tab)"
+              itemProp="sameAs"
             >
               👍 Facebook Page Par Follow Karein ↗
             </a>
           </div>
         </div>
 
+        {/* Copyright */}
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-center md:text-left">
               <p className="text-sm text-gray-400">
-                © 2026 KisanStatus.com — Built with ❤️ for Indian Farmers
+                © {currentYear} {SITE_NAME} — Built with ❤️ for Indian Farmers
               </p>
               <p className="mt-1 text-xs text-gray-500">
                 By{' '}
