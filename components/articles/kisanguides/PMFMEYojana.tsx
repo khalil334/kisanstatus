@@ -6,25 +6,27 @@ import type { Metadata } from 'next';
 // ── SEO Metadata ──────────────────────────────────────────────
 export const metadata: Metadata = {
   title: 'PM FME Yojana 2026: Chhote Food Business Ke Liye 35% Subsidy Guide',
-  description: 'PM FME Yojana ka complete guide. Janein micro food processing subsidy kaise lein, ODOP benefits, loan process, aur real ground reality.',
+  description: 'PM FME Yojana complete guide. Janein micro food processing subsidy kaise lein, ODOP benefits, loan process, aur real ground reality.',
   keywords: [
     'pm fme yojana',
     'micro food processing subsidy',
     'fme scheme benefits',
     'food business loan',
     'udyam registration',
-    'fssai license'
+    'fssai license',
+    'odop scheme'
   ],
-  authors: [{ name: 'KisanStatus Team' }],
+  authors: [{ name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' }],
   openGraph: {
     title: 'PM FME Yojana 2026: Chhote Food Business Ke Liye 35% Subsidy Guide',
-    description: 'PM FME Yojana ka complete guide. Janein micro food processing subsidy kaise lein, ODOP benefits, loan process, aur real ground reality.',
+    description: 'PM FME Yojana complete guide. Janein micro food processing subsidy kaise lein, ODOP benefits, loan process, aur real ground reality.',
     type: 'article',
     locale: 'hi_IN',
     siteName: 'KisanStatus.com',
+    url: 'https://kisanstatus.com/articles/farming/pm-fme-yojana-food-processing',
     images: [
       {
-        url: '/images/kisanguides/pmfhero.webp',
+        url: 'https://kisanstatus.com/images/kisanguides/pmfhero.webp',
         width: 1200,
         height: 630,
         alt: 'Small Food Processing Unit Making Pickle - PM FME Yojana Subsidy Guide',
@@ -35,7 +37,10 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'PM FME Yojana 2026: Complete Guide',
     description: 'Janein micro food processing subsidy kaise lein, ODOP benefits, aur loan process ki ground reality.',
-    images: ['/images/kisanguides/pmfhero.webp'],
+    images: ['https://kisanstatus.com/images/kisanguides/pmfhero.webp'],
+  },
+  alternates: {
+    canonical: 'https://kisanstatus.com/articles/farming/pm-fme-yojana-food-processing',
   },
 };
 
@@ -55,18 +60,19 @@ const jsonLd = {
     },
     {
       '@type': 'BreadcrumbList',
-      '@id': 'https://kisanstatus.com/articles/pm-fme-yojana/#breadcrumb',
+      '@id': 'https://kisanstatus.com/articles/farming/pm-fme-yojana-food-processing/#breadcrumb',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kisanstatus.com/' },
         { '@type': 'ListItem', position: 2, name: 'Articles', item: 'https://kisanstatus.com/articles' },
-        { '@type': 'ListItem', position: 3, name: 'PM FME Yojana' },
+        { '@type': 'ListItem', position: 3, name: 'Farming', item: 'https://kisanstatus.com/articles/category/farming' },
+        { '@type': 'ListItem', position: 4, name: 'PM FME Yojana' },
       ],
     },
     {
       '@type': 'Article',
-      '@id': 'https://kisanstatus.com/articles/pm-fme-yojana/#article',
+      '@id': 'https://kisanstatus.com/articles/farming/pm-fme-yojana-food-processing/#article',
       headline: 'PM FME Yojana 2026: Chhote Food Business Ke Liye 35% Subsidy Guide',
-      description: 'PM FME Yojana ka complete guide. Janein micro food processing subsidy kaise lein, ODOP benefits, loan process, aur real ground reality.',
+      description: 'PM FME Yojana complete guide. Janein micro food processing subsidy kaise lein, ODOP benefits, loan process, aur real ground reality.',
       author: {
         '@type': 'Organization',
         name: 'KisanStatus Team',
@@ -78,15 +84,15 @@ const jsonLd = {
         logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.webp' },
       },
       datePublished: '2026-01-15',
-      dateModified: '2026-07-14',
+      dateModified: '2026-07-21',
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://kisanstatus.com/articles/pm-fme-yojana/',
+        '@id': 'https://kisanstatus.com/articles/farming/pm-fme-yojana-food-processing/',
       },
     },
     {
       '@type': 'FAQPage',
-      '@id': 'https://kisanstatus.com/articles/pm-fme-yojana/#faq',
+      '@id': 'https://kisanstatus.com/articles/farming/pm-fme-yojana-food-processing/#faq',
       mainEntity: [
         {
           '@type': 'Question',
@@ -127,47 +133,49 @@ const jsonLd = {
 
 export default function PMFMEYojana() {
   return (
-    <article className="max-w-3xl mx-auto px-4 py-8 text-gray-800 leading-relaxed">
+    <article className="max-w-4xl mx-auto px-4 py-8 text-gray-800 dark:text-gray-200 leading-relaxed prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-blue-600 dark:prose-a:text-blue-400">
       {/* Schema Injection */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
+      {/* Image 1: Hero Image (LCP Optimization) */}
       <Image 
         src="/images/kisanguides/pmfhero.webp" 
         alt="Small Food Processing Unit Making Pickle - PM FME Yojana Subsidy Guide" 
         width={1200} 
         height={630} 
         priority
-        className="rounded-xl mb-6 shadow-md w-full h-auto object-cover" 
+        sizes="(max-width: 768px) 100vw, 1200px"
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
       />
       
-      <h1 className="text-3xl font-bold text-gray-900 mb-4">
+      <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100 leading-tight">
         PM FME Yojana 2026: Chhote Food Business Ke Liye 35% Subsidy Guide
       </h1>
       
-      <p className="text-lg mb-4 italic">
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 italic">
         Bharat mein hazaron chhote food businesses (jaise achar, papad, bakery, ya namkeen) sirf isliye local market tak seemit reh jate hain kyunki unke paas proper branding, FSSAI license, ya modern packaging ka budget nahi hota.
       </p>
       
-      <p className="mb-6">
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
         Aksar dekha jata hai ki jab aise micro units ko thoda financial support aur technical guidance milta hai, toh unka turnover 3-4 guna tak badh sakta hai. PM FME (PM Formalisation of Micro food processing Enterprises) Yojana ka maqsad bilkul yahi hai. Yeh scheme specifically un logon ke liye design ki gayi hai jo pehle se chhote level par kaam kar rahe hain, lekin ab apne business ko ek proper brand mein badalna chahte hain. Isme 35% tak ki credit-linked subsidy milti hai, jo ek chhote entrepreneur ke liye game-changer sabit ho sakti hai.
       </p>
 
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         PM FME Kya Hai? Aur Kaun Apply Kar Sakta Hai?
       </h2>
       
-      <p className="mb-4">
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         PM FME Yojana 2020 mein launch hui thi, jiska mukhya uddeshya unregistered micro food processing units ko formal economy mein lana hai. India mein 2.5 crore se zyada aise chhote units hain, lekin unmein se 90% se zyada bina kisi legal registration ya quality certification ke chal rahe hain. Iska seedha asar unki earning par padta hai, kyunki bina FSSAI license ke wo bade retailers ya online platforms par apna product nahi bech sakte.
       </p>
 
-      <p className="mb-6">
-        <strong>Eligibility:</strong> Kaun apply kar sakta hai?
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 font-semibold">
+        Eligibility: Kaun apply kar sakta hai?
       </p>
 
-      <ul className="list-disc pl-6 mb-6 space-y-2">
+      <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-8">
         <li><strong>Individual entrepreneurs:</strong> Jo pehle se food processing ka kaam kar rahe hain.</li>
         <li><strong>SHGs (Self Help Groups):</strong> 4-10 mahilaon ka registered group.</li>
         <li><strong>FPOs (Farmer Producer Organizations):</strong> Kisaanon ka registered collective.</li>
@@ -175,21 +183,21 @@ export default function PMFMEYojana() {
         <li><strong>Existing MSME units:</strong> Jo Udyam registered hain aur food sector mein hain.</li>
       </ul>
 
-      <p className="mb-6">
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
         Ek bahut important condition yeh hai ki aapka business already chal raha hona chahiye. Yeh scheme naya business zero se start karne ke liye nahi hai, balki existing business ko upgrade, formalize, aur expand karne ke liye hai. Agar aapne abhi tak kuch nahi kiya, toh pehle chhote level par shuruat karein, phir is scheme ke liye apply karein.
       </p>
 
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         ODOP: Ek Zila, Ek Utpaad - Iska Kya Matlab Hai?
       </h2>
       
-      <p className="mb-4">
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         PM FME ka sabse unique aur powerful feature hai ODOP (One District One Product) concept. Iske tahat, har district ne ek specific food product choose kiya hai jo wahan traditionally banta hai ya jiske liye wahan ka raw material sabse achha hai.
       </p>
 
-      <div className="bg-gray-50 p-4 rounded-lg mb-6">
-        <h3 className="font-bold text-lg mb-3">Examples of ODOP Products:</h3>
-        <ul className="space-y-2">
+      <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-8 border border-gray-200 dark:border-gray-700 not-prose">
+        <h3 className="font-bold text-lg mb-4 text-gray-900 dark:text-gray-100 border-b border-gray-300 dark:border-gray-600 pb-2">Examples of ODOP Products:</h3>
+        <ul className="space-y-3 text-sm text-gray-700 dark:text-gray-300">
           <li><strong>Bihar:</strong> Makhana (fox nuts) processing</li>
           <li><strong>Madhya Pradesh:</strong> Chana dal, Til (sesame) products</li>
           <li><strong>Rajasthan:</strong> Besan products, Papad</li>
@@ -206,38 +214,39 @@ export default function PMFMEYojana() {
         alt="ODOP Regional Food Products - Makhana, Papad, Pickle Display" 
         width={800} 
         height={450} 
-        className="rounded-xl mb-6 shadow-md w-full h-auto object-cover" 
+        sizes="(max-width: 768px) 100vw, 800px"
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
       />
 
-      <p className="mb-4">
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Agar aap apne district ka ODOP product process karte hain, toh aapko extra benefits milte hain:
       </p>
 
-      <ul className="list-disc pl-6 mb-6 space-y-2">
+      <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-8">
         <li><strong>Branding support:</strong> ₹50,000 tak brand name, logo, aur packaging design ke liye.</li>
         <li><strong>Marketing support:</strong> Exhibitions aur trade fairs mein participate karne ke liye financial help.</li>
         <li><strong>Priority approval:</strong> ODOP products ki applications district level par jaldi process hoti hain.</li>
       </ul>
 
-      <p className="mb-6">
-        Apne district ka ODOP product pata karne ke liye <Link href="/odop-products-list" className="text-blue-600 hover:underline">ODOP products list</Link> check karein, ya apne zila ke District Industries Center (DIC) se pata karein.
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
+        Apne district ka ODOP product pata karne ke liye official <a href="https://pmfme.mofpi.gov.in/odop" className="text-blue-600 hover:underline dark:text-blue-400 font-medium" target="_blank" rel="noopener noreferrer">PM FME ODOP list</a> check karein, ya apne zila ke District Industries Center (DIC) se pata karein.
       </p>
 
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Subsidy Kitni Milti Hai? Realistic Numbers
       </h2>
       
-      <p className="mb-4">
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         PM FME ke under 35% credit-linked subsidy milti hai. "Credit-linked" ka matlab yeh hai ki pehle aapko bank se loan lena padega, aur jab bank loan disburse karega, tab government aapko 35% amount subsidy ke roop mein wapas karegi (jo bank aapke loan principal mein adjust kar dega).
       </p>
 
-      <p className="mb-4 text-sm text-gray-600 italic">
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 text-sm italic">
         Note: Neeche diye gaye numbers estimated ranges hain. Actual project cost aur subsidy amount aapke business model, state policies, aur bank ke hisaab se badal sakti hai.
       </p>
 
-      <div className="bg-blue-50 border border-blue-200 rounded-lg p-5 mb-6">
-        <h3 className="font-bold text-lg mb-3">Subsidy Structure:</h3>
-        <ul className="space-y-2">
+      <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6 mb-8 not-prose">
+        <h3 className="font-bold text-lg mb-4 text-blue-900 dark:text-blue-200 border-b border-blue-200 dark:border-blue-800 pb-2">Subsidy Structure:</h3>
+        <ul className="space-y-3 text-sm text-gray-800 dark:text-gray-200">
           <li className="flex justify-between">
             <span>Subsidy Percentage:</span>
             <span className="font-semibold">35% of project cost</span>
@@ -257,87 +266,87 @@ export default function PMFMEYojana() {
         </ul>
       </div>
 
-      <p className="mb-4">
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         <strong>Example:</strong> Agar aapka total project cost ₹20 lakh hai (machinery, packaging, working capital), toh:
       </p>
 
-      <ul className="list-disc pl-6 mb-6 space-y-2">
+      <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-8">
         <li>Bank se loan liya: ₹20 lakh</li>
         <li>35% subsidy claim ki: ₹7 lakh</li>
         <li>Net loan burden (jo aapko chukana hai): ₹13 lakh</li>
         <li>Effective interest rate kam ho jata hai, jisse EMI manageable rehti hai.</li>
       </ul>
 
-      <p className="mb-6">
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
         Yeh subsidy capital expenditure (machinery, equipment, packaging) aur working capital dono ko cover karti hai. Par zameen ya building ki khareed par yeh subsidy nahi milti.
       </p>
 
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Kis Kis Cheez Par Subsidy Milti Hai?
       </h2>
       
-      <p className="mb-4">
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         PM FME ke under yeh sab expenses cover hote hain:
       </p>
 
-      <div className="overflow-x-auto mb-6">
-        <table className="min-w-full bg-white border border-gray-300">
-          <thead className="bg-green-100">
+      <div className="overflow-x-auto mb-8 not-prose">
+        <table className="min-w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden text-sm">
+          <thead className="bg-green-100 dark:bg-green-900/40">
             <tr>
-              <th className="py-2 px-4 border-b text-left">Expense Category</th>
-              <th className="py-2 px-4 border-b text-left">Examples</th>
-              <th className="py-2 px-4 border-b text-left">Covered?</th>
+              <th className="py-3 px-4 border-b text-left text-green-900 dark:text-green-200">Expense Category</th>
+              <th className="py-3 px-4 border-b text-left text-green-900 dark:text-green-200">Examples</th>
+              <th className="py-3 px-4 border-b text-left text-green-900 dark:text-green-200">Covered?</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td className="py-2 px-4 border-b">Plant & Machinery</td>
-              <td className="py-2 px-4 border-b">Processing machines, packaging machines</td>
-              <td className="py-2 px-4 border-b text-green-600 font-bold">Yes</td>
+          <tbody className="text-gray-700 dark:text-gray-300">
+            <tr className="border-b border-gray-100 dark:border-gray-700">
+              <td className="py-3 px-4 font-medium">Plant & Machinery</td>
+              <td className="py-3 px-4">Processing machines, packaging machines</td>
+              <td className="py-3 px-4 font-bold text-green-600 dark:text-green-400">Yes</td>
+            </tr>
+            <tr className="border-b border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
+              <td className="py-3 px-4 font-medium">Technology Upgradation</td>
+              <td className="py-3 px-4">New equipment, automation</td>
+              <td className="py-3 px-4 font-bold text-green-600 dark:text-green-400">Yes</td>
+            </tr>
+            <tr className="border-b border-gray-100 dark:border-gray-700">
+              <td className="py-3 px-4 font-medium">Packaging</td>
+              <td className="py-3 px-4">Packaging machines, materials</td>
+              <td className="py-3 px-4 font-bold text-green-600 dark:text-green-400">Yes</td>
+            </tr>
+            <tr className="border-b border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
+              <td className="py-3 px-4 font-medium">Working Capital</td>
+              <td className="py-3 px-4">Raw material, labor (up to 6 months)</td>
+              <td className="py-3 px-4 font-bold text-green-600 dark:text-green-400">Yes</td>
+            </tr>
+            <tr className="border-b border-gray-100 dark:border-gray-700">
+              <td className="py-3 px-4 font-medium">Marketing & Branding</td>
+              <td className="py-3 px-4">Logo, website, exhibitions</td>
+              <td className="py-3 px-4 font-bold text-green-600 dark:text-green-400">Yes (ODOP)</td>
+            </tr>
+            <tr className="border-b border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
+              <td className="py-3 px-4 font-medium">FSSAI License</td>
+              <td className="py-3 px-4">Registration fees</td>
+              <td className="py-3 px-4 font-bold text-green-600 dark:text-green-400">Yes</td>
             </tr>
             <tr>
-              <td className="py-2 px-4 border-b">Technology Upgradation</td>
-              <td className="py-2 px-4 border-b">New equipment, automation</td>
-              <td className="py-2 px-4 border-b text-green-600 font-bold">Yes</td>
-            </tr>
-            <tr>
-              <td className="py-2 px-4 border-b">Packaging</td>
-              <td className="py-2 px-4 border-b">Packaging machines, materials</td>
-              <td className="py-2 px-4 border-b text-green-600 font-bold">Yes</td>
-            </tr>
-            <tr>
-              <td className="py-2 px-4 border-b">Working Capital</td>
-              <td className="py-2 px-4 border-b">Raw material, labor (up to 6 months)</td>
-              <td className="py-2 px-4 border-b text-green-600 font-bold">Yes</td>
-            </tr>
-            <tr>
-              <td className="py-2 px-4 border-b">Marketing & Branding</td>
-              <td className="py-2 px-4 border-b">Logo, website, exhibitions</td>
-              <td className="py-2 px-4 border-b text-green-600 font-bold">Yes (ODOP)</td>
-            </tr>
-            <tr>
-              <td className="py-2 px-4 border-b">FSSAI License</td>
-              <td className="py-2 px-4 border-b">Registration fees</td>
-              <td className="py-2 px-4 border-b text-green-600 font-bold">Yes</td>
-            </tr>
-            <tr>
-              <td className="py-2 px-4 border-b">Land/Building Purchase</td>
-              <td className="py-2 px-4 border-b">Zameen ya building khareedna</td>
-              <td className="py-2 px-4 border-b text-red-600 font-bold">No</td>
+              <td className="py-3 px-4 font-medium">Land/Building Purchase</td>
+              <td className="py-3 px-4">Zameen ya building khareedna</td>
+              <td className="py-3 px-4 font-bold text-red-600 dark:text-red-400">No</td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <p className="mb-6">
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
         Ek important point: agar aap rented space mein kaam karte hain, toh rent par subsidy nahi milti. Par usi rented space ki renovation, electrical work, ya plumbing par mil sakti hai, bas rent agreement valid hona chahiye.
       </p>
 
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Application Process: Step-by-Step Ground Reality
       </h2>
       
-      <p className="mb-4">
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         PM FME ke under apply karne ka process thoda detailed hai, lekin agar aap step-by-step follow karein, toh mushkil nahi hai. Poore process mein 4-6 mahine lag sakte hain, isliye patience rakhein.
       </p>
 
@@ -347,68 +356,76 @@ export default function PMFMEYojana() {
         alt="Entrepreneur Applying for PM FME Loan at Bank Branch" 
         width={800} 
         height={450} 
-        className="rounded-xl mb-6 shadow-md w-full h-auto object-cover" 
+        sizes="(max-width: 768px) 100vw, 800px"
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
       />
 
-      <div className="space-y-4 mb-6">
-        <div className="border-l-4 border-green-500 pl-4">
-          <h3 className="font-bold text-lg">Step 1: Udyam Registration Karwayein</h3>
-          <p className="mt-2">
-            Sabse pehle aapka business MSME registered hona chahiye. <Link href="/udyam-registration" className="text-blue-600 hover:underline">Udyam Registration</Link> bilkul free hai aur online ho jata hai. 1 din mein certificate mil jata hai. Yeh PM FME ke liye mandatory hai.
-          </p>
+      <div className="space-y-6 mb-8 not-prose">
+        <div className="flex gap-4">
+          <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
+          <div>
+            <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">Udyam Registration Karwayein</h4>
+            <p className="text-sm text-gray-700 dark:text-gray-300">Sabse pehle aapka business MSME registered hona chahiye. <a href="https://udyamregistration.gov.in/" className="text-blue-600 hover:underline dark:text-blue-400 font-medium" target="_blank" rel="noopener noreferrer">Udyam Registration</a> bilkul free hai aur online ho jata hai. 1 din mein certificate mil jata hai. Yeh PM FME ke liye mandatory hai.</p>
+          </div>
         </div>
 
-        <div className="border-l-4 border-green-500 pl-4">
-          <h3 className="font-bold text-lg">Step 2: FSSAI License Lein</h3>
-          <p className="mt-2">
-            Food business ke liye FSSAI license mandatory hai. <Link href="/fssai-registration" className="text-blue-600 hover:underline">FSSAI registration</Link> ke liye apply karein. Basic registration ₹100 saal ka hai, jabki state license ₹2,000 - ₹7,500 saal ka (turnover ke hisaab se) hota hai. Isme 30-45 din lag sakte hain.
-          </p>
+        <div className="flex gap-4">
+          <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
+          <div>
+            <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">FSSAI License Lein</h4>
+            <p className="text-sm text-gray-700 dark:text-gray-300">Food business ke liye FSSAI license mandatory hai. <a href="https://foscos.fssai.gov.in/" className="text-blue-600 hover:underline dark:text-blue-400 font-medium" target="_blank" rel="noopener noreferrer">FSSAI registration</a> ke liye apply karein. Basic registration ₹100 saal ka hai, jabki state license ₹2,000 - ₹7,500 saal ka (turnover ke hisaab se) hota hai. Isme 30-45 din lag sakte hain.</p>
+          </div>
         </div>
 
-        <div className="border-l-4 border-green-500 pl-4">
-          <h3 className="font-bold text-lg">Step 3: Project Report (DPR) Banwayein</h3>
-          <p className="mt-2">
-            Kisi CA ya registered consultant se Detailed Project Report (DPR) banwayein. Isme hona chahiye:
-          </p>
-          <ul className="list-disc pl-6 mt-2 space-y-1">
-            <li>Business overview aur ODOP alignment</li>
-            <li>Machinery list with cost quotations</li>
-            <li>5-year financial projection</li>
-            <li>Break-even analysis</li>
-          </ul>
-          <p className="mt-2">Cost: ₹5,000 - ₹15,000. Kuch banks khud bhi bana dete hain.</p>
+        <div className="flex gap-4">
+          <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
+          <div>
+            <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">Project Report (DPR) Banwayein</h4>
+            <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">Kisi CA ya registered consultant se Detailed Project Report (DPR) banwayein. Isme hona chahiye:</p>
+            <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300">
+              <li>Business overview aur ODOP alignment</li>
+              <li>Machinery list with cost quotations</li>
+              <li>5-year financial projection</li>
+              <li>Break-even analysis</li>
+            </ul>
+            <p className="text-sm text-gray-700 dark:text-gray-300 mt-2">Cost: ₹5,000 - ₹15,000. Kuch banks khud bhi bana dete hain.</p>
+          </div>
         </div>
 
-        <div className="border-l-4 border-green-500 pl-4">
-          <h3 className="font-bold text-lg">Step 4: Bank Se Loan Apply Karein</h3>
-          <p className="mt-2">
-            Apni nazdeeki bank branch jayein. PM FME ke under loan apply karein. Documents chahiye: Udyam certificate, FSSAI license, DPR, Aadhaar, PAN, bank statements (last 1 year), aur machinery quotations. Loan approval mein 30-60 din lag sakte hain.
-          </p>
+        <div className="flex gap-4">
+          <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">4</div>
+          <div>
+            <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">Bank Se Loan Apply Karein</h4>
+            <p className="text-sm text-gray-700 dark:text-gray-300">Apni nazdeeki bank branch jayein. PM FME ke under loan apply karein. Documents chahiye: Udyam certificate, FSSAI license, DPR, Aadhaar, PAN, bank statements (last 1 year), aur machinery quotations. Loan approval mein 30-60 din lag sakte hain.</p>
+          </div>
         </div>
 
-        <div className="border-l-4 border-green-500 pl-4">
-          <h3 className="font-bold text-lg">Step 5: PM FME Portal Par Register Karein</h3>
-          <p className="mt-2">
-            <Link href="/food-processing-license" className="text-blue-600 hover:underline">PM FME official portal</Link> par jaakar registration karein. Apni details bharein, loan sanction letter upload karein, aur application submit karein.
-          </p>
+        <div className="flex gap-4">
+          <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">5</div>
+          <div>
+            <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">PM FME Portal Par Register Karein</h4>
+            <p className="text-sm text-gray-700 dark:text-gray-300"><a href="https://pmfme.mofpi.gov.in/" className="text-blue-600 hover:underline dark:text-blue-400 font-medium" target="_blank" rel="noopener noreferrer">PM FME official portal</a> par jaakar registration karein. Apni details bharein, loan sanction letter upload karein, aur application submit karein.</p>
+          </div>
         </div>
 
-        <div className="border-l-4 border-green-500 pl-4">
-          <h3 className="font-bold text-lg">Step 6: Verification aur Approval</h3>
-          <p className="mt-2">
-            District Industries Center (DIC) ke officers aapke unit ka physical visit karenge. Wo verify karenge ki business actually chal raha hai ya nahi. Report positive aane par approval milta hai.
-          </p>
+        <div className="flex gap-4">
+          <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">6</div>
+          <div>
+            <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">Verification aur Approval</h4>
+            <p className="text-sm text-gray-700 dark:text-gray-300">District Industries Center (DIC) ke officers aapke unit ka physical visit karenge. Wo verify karenge ki business actually chal raha hai ya nahi. Report positive aane par approval milta hai.</p>
+          </div>
         </div>
 
-        <div className="border-l-4 border-green-500 pl-4">
-          <h3 className="font-bold text-lg">Step 7: Loan Disbursement aur Subsidy Claim</h3>
-          <p className="mt-2">
-            Bank loan disburse karega. Aap machinery khareedenge aur kaam start karenge. Phir bank subsidy amount adjust kar dega - aapko sirf net amount (loan minus subsidy) ki EMI chukani hogi.
-          </p>
+        <div className="flex gap-4">
+          <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">7</div>
+          <div>
+            <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">Loan Disbursement aur Subsidy Claim</h4>
+            <p className="text-sm text-gray-700 dark:text-gray-300">Bank loan disburse karega. Aap machinery khareedenge aur kaam start karenge. Phir bank subsidy amount adjust kar dega - aapko sirf net amount (loan minus subsidy) ki EMI chukani hogi.</p>
+          </div>
         </div>
       </div>
 
-      <p className="mb-6">
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
         Application fee ₹1,000 - ₹2,000 lagti hai (non-refundable). Process ko jaldi complete karne ke liye apne saare documents pehle se ready rakhein.
       </p>
 
@@ -417,33 +434,25 @@ export default function PMFMEYojana() {
         label="PM FME Official Portal - Apply Karein" 
       />
 
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Ground Reality: PM FME Se Business Kaise Transform Hota Hai
       </h2>
       
-      <p className="mb-4">
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Sirf theory nahi, ek typical scenario dekhte hain jo field mein aksar dekha jata hai:
       </p>
 
-      <div className="space-y-4 mb-6">
-        <div className="border-l-4 border-blue-500 pl-4">
-          <h3 className="font-bold text-lg">Scenario 1: Ghar Ka Achar Unit</h3>
-          <p className="mt-2">
-            <strong>Pehle:</strong> Ghar mein achar banta tha, ₹10,000 - ₹15,000 mahina kamai hoti thi. Product simple plastic pouches mein becha jata tha, jiski shelf life kam thi.
-          </p>
-          <p className="mt-2">
-            <strong>PM FME ke baad:</strong> ₹8 lakh ki subsidy mili. Ek chhoti packaging machine li gayi, aur product ko glass jars mein pack kiya gaya. FSSAI license aur ek catchy brand name register kiya gaya. Ab monthly turnover ₹2 - ₹3 lakh tak pahunch gaya hai, aur product local supermarkets mein bhi milta hai.
-          </p>
+      <div className="space-y-4 mb-8 not-prose">
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 shadow-sm">
+          <h4 className="font-bold text-blue-600 dark:text-blue-400 mb-1">Scenario 1: Ghar Ka Achar Unit</h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300 mb-2"><strong>Pehle:</strong> Ghar mein achar banta tha, ₹10,000 - ₹15,000 mahina kamai hoti thi. Product simple plastic pouches mein becha jata tha, jiski shelf life kam thi.</p>
+          <p className="text-sm text-gray-700 dark:text-gray-300"><strong>PM FME ke baad:</strong> ₹8 lakh ki subsidy mili. Ek chhoti packaging machine li gayi, aur product ko glass jars mein pack kiya gaya. FSSAI license aur ek catchy brand name register kiya gaya. Ab monthly turnover ₹2 - ₹3 lakh tak pahunch gaya hai, aur product local supermarkets mein bhi milta hai.</p>
         </div>
 
-        <div className="border-l-4 border-blue-500 pl-4">
-          <h3 className="font-bold text-lg">Scenario 2: SHG Papad Unit</h3>
-          <p className="mt-2">
-            <strong>Pehle:</strong> 5 mahilaon ka group manual rolling karta tha. Production slow thi aur monthly income ₹20,000 - ₹25,000 ke aas-paas thi.
-          </p>
-          <p className="mt-2">
-            <strong>PM FME ke baad:</strong> ₹10 lakh ki subsidy se automatic papad making machine li gayi. Production 5 guna badh gayi. Branded packaging start ki, aur ab monthly turnover ₹1.5 - ₹2 lakh hai.
-          </p>
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 shadow-sm">
+          <h4 className="font-bold text-blue-600 dark:text-blue-400 mb-1">Scenario 2: SHG Papad Unit</h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300 mb-2"><strong>Pehle:</strong> 5 mahilaon ka group manual rolling karta tha. Production slow thi aur monthly income ₹20,000 - ₹25,000 ke aas-paas thi.</p>
+          <p className="text-sm text-gray-700 dark:text-gray-300"><strong>PM FME ke baad:</strong> ₹10 lakh ki subsidy se automatic papad making machine li gayi. Production 5 guna badh gayi. Branded packaging start ki, aur ab monthly turnover ₹1.5 - ₹2 lakh hai.</p>
         </div>
       </div>
 
@@ -453,24 +462,25 @@ export default function PMFMEYojana() {
         alt="Branded Packaged Food Products Ready for Market - PM FME Success" 
         width={800} 
         height={450} 
-        className="rounded-xl mb-6 shadow-md w-full h-auto object-cover" 
+        sizes="(max-width: 768px) 100vw, 800px"
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
       />
 
-      <p className="mb-6">
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
         Yeh examples dikhate hain ki PM FME se waqai business transform ho sakta hai. Par yeh tabhi hota hai jab aap quality maintain karte hain aur marketing par dhyan dete hain. Sirf subsidy lene se business apne aap nahi chalta.
       </p>
 
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Documents Required: Complete Checklist
       </h2>
       
-      <p className="mb-4">
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         PM FME application ke liye yeh documents chahiye:
       </p>
 
-      <div className="bg-gray-50 p-4 rounded-lg mb-6">
-        <h3 className="font-bold text-lg mb-3">Personal Documents:</h3>
-        <ul className="space-y-2">
+      <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-8 border border-gray-200 dark:border-gray-700 not-prose">
+        <h3 className="font-bold text-lg mb-4 text-gray-900 dark:text-gray-100 border-b border-gray-300 dark:border-gray-600 pb-2">Personal Documents:</h3>
+        <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300 mb-6">
           <li>✓ Aadhaar card (all applicants/partners)</li>
           <li>✓ PAN card</li>
           <li>✓ Passport-size photos</li>
@@ -478,8 +488,8 @@ export default function PMFMEYojana() {
           <li>✓ Caste certificate (if SC/ST/OBC)</li>
         </ul>
 
-        <h3 className="font-bold text-lg mb-3 mt-4">Business Documents:</h3>
-        <ul className="space-y-2">
+        <h3 className="font-bold text-lg mb-4 text-gray-900 dark:text-gray-100 border-b border-gray-300 dark:border-gray-600 pb-2">Business Documents:</h3>
+        <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300 mb-6">
           <li>✓ Udyam Registration Certificate</li>
           <li>✓ FSSAI License</li>
           <li>✓ GST Registration (if applicable)</li>
@@ -488,8 +498,8 @@ export default function PMFMEYojana() {
           <li>✓ ITR (last 2 years, if applicable)</li>
         </ul>
 
-        <h3 className="font-bold text-lg mb-3 mt-4">Project Documents:</h3>
-        <ul className="space-y-2">
+        <h3 className="font-bold text-lg mb-4 text-gray-900 dark:text-gray-100 border-b border-gray-300 dark:border-gray-600 pb-2">Project Documents:</h3>
+        <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
           <li>✓ Detailed Project Report (DPR)</li>
           <li>✓ Quotation for machinery/equipment</li>
           <li>✓ Business plan</li>
@@ -504,164 +514,160 @@ export default function PMFMEYojana() {
         alt="PM FME Application Documents - Aadhaar, FSSAI, Udyam Certificate" 
         width={800} 
         height={450} 
-        className="rounded-xl mb-6 shadow-md w-full h-auto object-cover" 
+        sizes="(max-width: 768px) 100vw, 800px"
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
       />
 
-      <p className="mb-6">
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
         Sab documents self-attested hone chahiye. Original documents verification time par dikhane padenge.
       </p>
 
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-red-700">
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Common Mistakes Jo Applicants Karte Hain
       </h2>
       
-      <p className="mb-4">
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Kai applications sirf chhoti chookon ki wajah se reject ho jati hain. In common mistakes se bachein:
       </p>
 
-      <div className="space-y-4 mb-6">
-        <div className="border-l-4 border-red-500 pl-4">
-          <h3 className="font-bold text-lg">1. Business Actually Nahi Chal Raha</h3>
-          <p className="mt-2">
-            PM FME existing business ko upgrade karne ke liye hai. Verification mein officers dekhenge ki unit actually kaam kar rahi hai ya nahi. Fake bills ya dummy units pakde jate hain.
-          </p>
+      <div className="space-y-4 mb-8 not-prose">
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
+          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">1. Business Actually Nahi Chal Raha</h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300">PM FME existing business ko upgrade karne ke liye hai. Verification mein officers dekhenge ki unit actually kaam kar rahi hai ya nahi. Fake bills ya dummy units pakde jate hain.</p>
         </div>
 
-        <div className="border-l-4 border-red-500 pl-4">
-          <h3 className="font-bold text-lg">2. FSSAI License Nahi Hai</h3>
-          <p className="mt-2">
-            Food business ke liye FSSAI mandatory hai. Bina FSSAI ke application seedha reject ho jayegi. Pehle FSSAI lein, phir apply karein.
-          </p>
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
+          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">2. FSSAI License Nahi Hai</h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300">Food business ke liye FSSAI mandatory hai. Bina FSSAI ke application seedha reject ho jayegi. Pehle FSSAI lein, phir apply karein.</p>
         </div>
 
-        <div className="border-l-4 border-red-500 pl-4">
-          <h3 className="font-bold text-lg">3. DPR Weak Ya Unrealistic Hai</h3>
-          <p className="mt-2">
-            Project report mein financial projections realistic hone chahiye. Agar numbers bahut unrealistic hain (jaise 1 mahine mein ₹10 lakh profit dikhana), toh officers doubt karenge. Hamesha professional CA se DPR banwayein.
-          </p>
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
+          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">3. DPR Weak Ya Unrealistic Hai</h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300">Project report mein financial projections realistic hone chahiye. Agar numbers bahut unrealistic hain (jaise 1 mahine mein ₹10 lakh profit dikhana), toh officers doubt karenge. Hamesha professional CA se DPR banwayein.</p>
         </div>
 
-        <div className="border-l-4 border-red-500 pl-4">
-          <h3 className="font-bold text-lg">4. Bank CIBIL Score Kharab Hai</h3>
-          <p className="mt-2">
-            Agar aapka CIBIL score 650 se neeche hai, toh loan approval mushkil hai. Pehle CIBIL check karein, aur agar koi old default hai toh use clear karein.
-          </p>
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
+          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">4. Bank CIBIL Score Kharab Hai</h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300">Agar aapka CIBIL score 650 se neeche hai, toh loan approval mushkil hai. Pehle CIBIL check karein, aur agar koi old default hai toh use clear karein.</p>
         </div>
       </div>
 
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         PM FME vs PMEGP: Kaunsi Scheme Better Hai?
       </h2>
       
-      <p className="mb-4">
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Do similar schemes hain - PM FME aur PMEGP. Dono mein confusion hota hai. Clear karte hain:
       </p>
 
-      <div className="overflow-x-auto mb-6">
-        <table className="min-w-full bg-white border border-gray-300">
-          <thead className="bg-blue-100">
+      <div className="overflow-x-auto mb-8 not-prose">
+        <table className="min-w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden text-sm">
+          <thead className="bg-blue-100 dark:bg-blue-900/40">
             <tr>
-              <th className="py-2 px-4 border-b text-left">Feature</th>
-              <th className="py-2 px-4 border-b text-left">PM FME</th>
-              <th className="py-2 px-4 border-b text-left">PMEGP</th>
+              <th className="py-3 px-4 border-b text-left text-blue-900 dark:text-blue-200">Feature</th>
+              <th className="py-3 px-4 border-b text-left text-blue-900 dark:text-blue-200">PM FME</th>
+              <th className="py-3 px-4 border-b text-left text-blue-900 dark:text-blue-200">PMEGP</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td className="py-2 px-4 border-b">Target</td>
-              <td className="py-2 px-4 border-b">Existing micro food units</td>
-              <td className="py-2 px-4 border-b">New entrepreneurs</td>
+          <tbody className="text-gray-700 dark:text-gray-300">
+            <tr className="border-b border-gray-100 dark:border-gray-700">
+              <td className="py-3 px-4 font-medium">Target</td>
+              <td className="py-3 px-4">Existing micro food units</td>
+              <td className="py-3 px-4">New entrepreneurs</td>
+            </tr>
+            <tr className="border-b border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
+              <td className="py-3 px-4 font-medium">Subsidy %</td>
+              <td className="py-3 px-4">35%</td>
+              <td className="py-3 px-4">25-35%</td>
+            </tr>
+            <tr className="border-b border-gray-100 dark:border-gray-700">
+              <td className="py-3 px-4 font-medium">Max Subsidy</td>
+              <td className="py-3 px-4">₹10 lakh</td>
+              <td className="py-3 px-4">₹7.5 lakh (manufacturing)</td>
+            </tr>
+            <tr className="border-b border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
+              <td className="py-3 px-4 font-medium">Max Project Cost</td>
+              <td className="py-3 px-4">₹28.57 lakh</td>
+              <td className="py-3 px-4">₹25 lakh (manufacturing)</td>
+            </tr>
+            <tr className="border-b border-gray-100 dark:border-gray-700">
+              <td className="py-3 px-4 font-medium">Sector</td>
+              <td className="py-3 px-4">Food processing only</td>
+              <td className="py-3 px-4">Any manufacturing/service</td>
             </tr>
             <tr>
-              <td className="py-2 px-4 border-b">Subsidy %</td>
-              <td className="py-2 px-4 border-b">35%</td>
-              <td className="py-2 px-4 border-b">25-35%</td>
-            </tr>
-            <tr>
-              <td className="py-2 px-4 border-b">Max Subsidy</td>
-              <td className="py-2 px-4 border-b">₹10 lakh</td>
-              <td className="py-2 px-4 border-b">₹7.5 lakh (manufacturing)</td>
-            </tr>
-            <tr>
-              <td className="py-2 px-4 border-b">Max Project Cost</td>
-              <td className="py-2 px-4 border-b">₹28.57 lakh</td>
-              <td className="py-2 px-4 border-b">₹25 lakh (manufacturing)</td>
-            </tr>
-            <tr>
-              <td className="py-2 px-4 border-b">Sector</td>
-              <td className="py-2 px-4 border-b">Food processing only</td>
-              <td className="py-2 px-4 border-b">Any manufacturing/service</td>
-            </tr>
-            <tr>
-              <td className="py-2 px-4 border-b">Existing Business</td>
-              <td className="py-2 px-4 border-b">Required</td>
-              <td className="py-2 px-4 border-b">Not required</td>
+              <td className="py-3 px-4 font-medium">Existing Business</td>
+              <td className="py-3 px-4 font-semibold text-blue-700 dark:text-blue-400">Required</td>
+              <td className="py-3 px-4">Not required</td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <p className="mb-4">
-        <strong>Simple rule:</strong> Agar aapka food business already chal raha hai aur aap usko upgrade karna chahte hain, toh PM FME apply karein. Agar aap naya business start karna chahte hain (food ya non-food), toh <Link href="/pmegp-yojana" className="text-blue-600 hover:underline">PMEGP</Link> apply karein.
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
+        <strong>Simple rule:</strong> Agar aapka food business already chal raha hai aur aap usko upgrade karna chahte hain, toh PM FME apply karein. Agar aap naya business start karna chahte hain (food ya non-food), toh official <a href="https://www.pmegp.in/" className="text-blue-600 hover:underline dark:text-blue-400 font-medium" target="_blank" rel="noopener noreferrer">PMEGP portal</a> par apply karein.
       </p>
 
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Kya Aapke Liye Sahi Hai? Final Decision Framework
       </h2>
       
-      <p className="mb-4">
-        PM FME unke liye hai jo:
-      </p>
-      
-      <ul className="list-disc pl-6 mb-4 space-y-2">
-        <li>Already food processing business chala rahe hain (chahe chhote level par).</li>
-        <li>Business ko formal banana chahte hain (FSSAI, GST, branding).</li>
-        <li>Machinery ya technology upgrade karna chahte hain.</li>
-        <li>₹5 - ₹25 lakh ki investment (loan ke through) kar sakte hain.</li>
-        <li>Long-term vision hai (5+ saal ka plan).</li>
-      </ul>
+      <div className="grid md:grid-cols-2 gap-6 mb-8 not-prose">
+        <div className="bg-green-50 dark:bg-green-900/20 p-5 rounded-lg border border-green-200 dark:border-green-800">
+          <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">✅ Haan, agar:</h3>
+          <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+            <li>• Already food processing business chala rahe hain (chahe chhote level par).</li>
+            <li>• Business ko formal banana chahte hain (FSSAI, GST, branding).</li>
+            <li>• Machinery ya technology upgrade karna chahte hain.</li>
+            <li>• ₹5 - ₹25 lakh ki investment (loan ke through) kar sakte hain.</li>
+            <li>• Long-term vision hai (5+ saal ka plan).</li>
+          </ul>
+        </div>
 
-      <p className="mb-4">
-        PM FME unke liye nahi hai jo:
-      </p>
-      
-      <ul className="list-disc pl-6 mb-6 space-y-2">
-        <li>Abhi tak koi business nahi kiya (pehle PMEGP try karein).</li>
-        <li>Food processing mein interested nahi hain.</li>
-        <li>Loan lene ki capacity ya willingness nahi hai.</li>
-        <li>Quick money chahte hain (process 4-6 months ka hai).</li>
-      </ul>
+        <div className="bg-red-50 dark:bg-red-900/20 p-5 rounded-lg border border-red-200 dark:border-red-800">
+          <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">❌ Nahi, agar:</h3>
+          <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+            <li>• Abhi tak koi business nahi kiya (pehle PMEGP try karein).</li>
+            <li>• Food processing mein interested nahi hain.</li>
+            <li>• Loan lene ki capacity ya willingness nahi hai.</li>
+            <li>• Quick money chahte hain (process 4-6 months ka hai).</li>
+          </ul>
+        </div>
+      </div>
 
-      <p className="mb-6">
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
         <strong>Meri advice:</strong> Pehle apne district ka ODOP product pata karein. Agar aap wahi product process karte hain, toh extra benefits milenge. Phir Udyam registration aur FSSAI lein. Uske baad bank jayein, loan apply karein, aur phir PM FME portal par apply karein. Apne nazdeeki District Industries Center (DIC) ke officers se zaroor consult karein, wo application mein bahut help kar sakte hain.
       </p>
 
       {/* FAQ Section */}
-      <h2 id="faq" className="text-2xl font-semibold mt-8 mb-3 text-green-800">
+      <h2 id="faq" className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Frequently Asked Questions (FAQs)
       </h2>
-      <div className="space-y-4 mb-8">
-        <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">1. Kya rented jagah par kaam karne walon ko PM FME subsidy milti hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm">Haan, lekin shart yeh hai ki rent agreement valid ho. Subsidy kiraye (rent) par nahi milti, lekin agar aap us rented space mein renovation, electrical work, ya machinery installation karte hain, toh un expenses par 35% subsidy claim ki ja sakti hai.</p>
+      <div className="space-y-4 mb-8 not-prose">
+        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">1. Kya rented jagah par kaam karne walon ko PM FME subsidy milti hai?</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Haan, lekin shart yeh hai ki rent agreement valid ho. Subsidy kiraye (rent) par nahi milti, lekin agar aap us rented space mein renovation, electrical work, ya machinery installation karte hain, toh un expenses par 35% subsidy claim ki ja sakti hai.</p>
         </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">2. Agar bank loan reject ho jaye, toh kya PM FME subsidy mil sakti hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm">Nahi. PM FME ek "credit-linked" subsidy scheme hai. Iska matlab hai ki subsidy tabhi release hoti hai jab bank aapka loan approve aur disburse kar deta hai. Bina loan sanction ke subsidy claim nahi ki ja sakti.</p>
+        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">2. Agar bank loan reject ho jaye, toh kya PM FME subsidy mil sakti hai?</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Nahi. PM FME ek "credit-linked" subsidy scheme hai. Iska matlab hai ki subsidy tabhi release hoti hai jab bank aapka loan approve aur disburse kar deta hai. Bina loan sanction ke subsidy claim nahi ki ja sakti.</p>
         </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">3. Kya PM FME mein working capital ke liye alag se collateral (girvi) dena padta hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm">Zyadatar cases mein nahi. PM FME ke under working capital loan CGTMSE (Credit Guarantee Fund Trust for Micro and Small Enterprises) ke cover mein aata hai, jisme ₹2 crore tak ke loan par collateral ki requirement waive ho sakti hai. Lekin final decision bank ki internal credit policy par depend karta hai.</p>
+        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">3. Kya PM FME mein working capital ke liye alag se collateral (girvi) dena padta hai?</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Zyadatar cases mein nahi. PM FME ke under working capital loan CGTMSE (Credit Guarantee Fund Trust for Micro and Small Enterprises) ke cover mein aata hai, jisme ₹2 crore tak ke loan par collateral ki requirement waive ho sakti hai. Lekin final decision bank ki internal credit policy par depend karta hai.</p>
         </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">4. Kya purani machinery ko replace karne par bhi subsidy milti hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm">Haan, PM FME "Technology Upgradation" ko bhi support karti hai. Agar aap purani, inefficient machinery ki jagah nayi, automated, ya food-safe equipment lagate hain, toh uski cost par bhi 35% subsidy claim ki ja sakti hai.</p>
+        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">4. Kya purani machinery ko replace karne par bhi subsidy milti hai?</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Haan, PM FME "Technology Upgradation" ko bhi support karti hai. Agar aap purani, inefficient machinery ki jagah nayi, automated, ya food-safe equipment lagate hain, toh uski cost par bhi 35% subsidy claim ki ja sakti hai.</p>
         </div>
       </div>
 
-      <p className="mb-6 italic text-gray-600">
-        Disclaimer: Yeh article general information ke liye hai. PM FME ki guidelines aur eligibility criteria change ho sakti hain. Latest information ke liye hamesha official website pmfme.mofpi.gov.in ya apne zila ke District Industries Center se confirm karein. Kisi bhi financial decision lene se pehle qualified professionals (CAs, business consultants) se consult karein.
-      </p>
+      <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-lg border-l-4 border-orange-500 not-prose">
+        <p className="text-sm text-gray-700 dark:text-gray-300">
+          <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
+          Yeh article general information ke liye hai. PM FME ki guidelines aur eligibility criteria change ho sakti hain. Latest information ke liye hamesha official website pmfme.mofpi.gov.in ya apne zila ke District Industries Center se confirm karein. Kisi bhi financial decision lene se pehle qualified professionals (CAs, business consultants) se consult karein. Last updated: July 2026.
+        </p>
+      </div>
     </article>
   );
 }
