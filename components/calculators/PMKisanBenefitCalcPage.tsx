@@ -4,6 +4,21 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { InputField, SelectField, ResultRow, fmt, OtherCalcs, CalcHeader, CalcDisclaimer } from './CalcShared';
 
+const SITE_URL = 'https://kisanstatus.com';
+const SITE_NAME = 'KisanStatus';
+const AUTHOR_NAME = 'KisanStatus Team';
+const AUTHOR_URL = `${SITE_URL}/about`;
+const PUBLISHED = '2026-02-25T08:00:00+05:30';
+const MODIFIED = '2026-07-09T08:00:00+05:30';
+
+function fmtDate(iso: string) {
+  return new Date(iso).toLocaleDateString('hi-IN', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
+}
+
 export default function PMKisanBenefitCalcPage() {
   const [years, setYears]       = useState('3');
   const [land, setLand]         = useState('2');
@@ -17,23 +32,36 @@ export default function PMKisanBenefitCalcPage() {
   const arrears= Number(missed) * 2000;
   const eligible = hasEkyc==='yes' && landN>0 && landN<=2;
 
+  // Breadcrumb schema — was missing before
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Calculator', item: `${SITE_URL}/calculator` },
+      { '@type': 'ListItem', position: 3, name: 'PM Kisan Paisa', item: `${SITE_URL}/calculator/pm-kisan-benefit` },
+    ],
+  };
+
+  // aggregateRating removed — fabricated 4.9/2156 rating with no real
+  // reviews behind it. Replaced with real dates + author/publisher.
   const schema = {
     '@context':'https://schema.org',
     '@type':'WebApplication',
     name:'PM Kisan Calculator 2026 — Kitna Paisa Milega Hindi',
-    url:'https://kisanstatus.com/calculator/pm-kisan-benefit',
+    url:`${SITE_URL}/calculator/pm-kisan-benefit`,
     applicationCategory:'FinanceApplication',
     description:'PM Kisan Samman Nidhi se kitna paisa milega — jaano turant. 1 saal, 3 saal, 5 saal — sab calculate karo. Free calculator.',
     offers:{'@type':'Offer',price:'0',priceCurrency:'INR'},
-    aggregateRating:{
-      '@type':'AggregateRating',
-      ratingValue:'4.9',
-      ratingCount:'2156'
-    }
+    author: { '@type': 'Organization', name: AUTHOR_NAME, url: AUTHOR_URL },
+    publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+    datePublished: PUBLISHED,
+    dateModified: MODIFIED,
   };
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(breadcrumbSchema)}}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/>
       
       <CalcHeader
@@ -44,17 +72,25 @@ export default function PMKisanBenefitCalcPage() {
       />
 
       <div className="container-site max-w-2xl py-8">
+
+        {/* Author + updated date — E-E-A-T signal */}
+        <div className="flex flex-wrap gap-3 text-xs text-[var(--color-text-muted)] mb-4">
+          <span>✍️ <Link href="/about" className="underline hover:text-[var(--color-text)]">{AUTHOR_NAME}</Link></span>
+          <span>📅 {fmtDate(PUBLISHED)}</span>
+          <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
+        </div>
+
         {/* Detailed intro - helpful content */}
         <div className="mb-6 p-5 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl text-sm text-[var(--color-text)] leading-relaxed">
-          <p className="font-bold text-green-900 dark:text-green-300 mb-2">🌾 PM Kisan Se Kitna Paisa Milega — Jaano Turant</p>
+          <p className="font-bold text-green-900 dark:text-green-300 mb-2">🌾 PM Kisan Se Kitna Paisa Milega</p>
           <p className="mb-2">
-            <strong>PM Kisan Samman Nidhi</strong> mein har eligible kisan ko <strong>₹6,000 saalana</strong> milte hain — <strong>₹2,000 ki 3 kist</strong> mein. Paisa seedha bank account mein aata hai (DBT).
+            <strong>PM Kisan Samman Nidhi</strong> ke tahat har eligible kisan ko saal mein <strong>₹6,000</strong> milte hain, <strong>₹2,000 ki teen kist</strong> mein — direct bank account mein (DBT ke through).
           </p>
           <p className="mb-2">
-            <strong>Example:</strong> Agar aap 3 saal se enrolled ho aur sab kist aayi hai, to total <strong>₹18,000</strong> mil chuke honge. 5 saal mein <strong>₹30,000</strong> honge!
+            Hisaab lagayen to agar aap 3 saal se enrolled ho aur sab kist time par aayi hain, toh ab tak <strong>₹18,000</strong> mil chuke honge. 5 saal poore ho jayein toh ye figure <strong>₹30,000</strong> tak pahunch jata hai.
           </p>
           <p className="text-xs text-green-700 dark:text-green-300 mt-3">
-            💡 <strong>Tip:</strong> Agar koi kist miss hui hai to arrears mein wapas mil sakti hai — pehle eKYC aur bank seeding complete karo.
+            💡 Koi kist miss ho gayi ho toh ghabrao mat — eKYC aur bank seeding complete karo, arrears mein wapas mil jati hai.
           </p>
         </div>
 
@@ -187,12 +223,12 @@ export default function PMKisanBenefitCalcPage() {
           <h3 className="font-black text-[var(--color-text)] text-sm mb-4">📝 PM Kisan Mein Register Kaise Ho</h3>
           <div className="space-y-3">
             {[
-              {n:1,s:'Nazdiki CSC center jao ya pmkisan.gov.in par online apply karo'},
-              {n:2,s:'Documents do: Aadhaar, bank passbook, land records (khasra), mobile number'},
-              {n:3,s:'Form bharo — naam, pata, bank details, zameen ki details'},
-              {n:4,s:'Verification hogi — 7-14 din mein status check karo'},
-              {n:5,s:'eKYC complete karo — Aadhaar se link karo'},
-              {n:6,s:'Pehli kist 2-3 mahine mein aa jayegi — bank account mein'},
+              {n:1,s:'Nazdiki CSC center jao, ya seedha pmkisan.gov.in par online apply kar do'},
+              {n:2,s:'Documents ready rakho: Aadhaar, bank passbook, land records (khasra), mobile number'},
+              {n:3,s:'Form mein naam, pata, bank details aur zameen ki details bharo'},
+              {n:4,s:'Uske baad verification hoti hai — 7-14 din mein status check karte rehna'},
+              {n:5,s:'Saath mein eKYC bhi complete kar lo — Aadhaar se link karke'},
+              {n:6,s:'Sab sahi raha toh pehli kist 2-3 mahine mein bank account mein aa jati hai'},
             ].map(({n,s})=>(
               <div key={n} className="flex gap-3 items-start">
                 <span className="w-7 h-7 rounded-full bg-green-600 text-white text-xs font-black flex items-center justify-center shrink-0 mt-0.5">{n}</span>
@@ -222,11 +258,11 @@ export default function PMKisanBenefitCalcPage() {
         <div className="mt-6 p-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-xl">
           <p className="font-bold text-yellow-900 dark:text-yellow-300 text-sm mb-2">⚠️ PM Kisan Mein Aksar Yeh Galtiyan Hoti Hain:</p>
           <ul className="space-y-1.5 text-xs text-yellow-800 dark:text-yellow-400">
-            <li>❌ <strong>eKYC nahi karwana</strong> — kist nahi aayegi, arrears mein fas jayenge</li>
-            <li>❌ <strong>Bank account Aadhaar se link nahi</strong> — payment fail hogi</li>
-            <li>❌ <strong>Land records galat</strong> — naam, area match nahi hoga to reject</li>
-            <li>❌ <strong>Mobile number change</strong> — OTP nahi aayega, eKYC nahi hoga</li>
-            <li>❌ <strong>Status check nahi karna</strong> — pata hi nahi chalega kist aayi ya nahi</li>
+            <li>❌ eKYC ko taalna — isse kist rukti hai aur arrears mein fasna padta hai</li>
+            <li>❌ Bank account Aadhaar se link na hona — jiski wajah se payment fail ho jati hai</li>
+            <li>❌ Land records mein galti — naam ya area match na hone par application reject ho jata hai</li>
+            <li>❌ Mobile number badal jana bina update kiye — OTP nahi aata, eKYC atak jati hai</li>
+            <li>❌ Status kabhi check hi na karna — pata hi nahi chalta ki kist aayi ya nahi</li>
           </ul>
         </div>
 
@@ -236,19 +272,19 @@ export default function PMKisanBenefitCalcPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
             <div className="p-3 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
               <p className="font-bold text-green-900 dark:text-green-300 mb-1">⏰ Time Par eKYC Karo</p>
-              <p className="text-green-800 dark:text-green-400">Har kist se pehle eKYC complete karo. Aadhaar se link karo. CSC center ya online — dono free hain</p>
+              <p className="text-green-800 dark:text-green-400">Har kist se pehle eKYC dekh lo, complete nahi hai to kar lo — CSC center aur online, dono free hain</p>
             </div>
             <div className="p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
               <p className="font-bold text-blue-900 dark:text-blue-300 mb-1">🏦 Bank Account Check Karo</p>
-              <p className="text-blue-800 dark:text-blue-400">Bank account Aadhaar se link hona chahiye. Active account hona chahiye. PFMS se check karo</p>
+              <p className="text-blue-800 dark:text-blue-400">Bank account Aadhaar se linked aur active hona chahiye — PFMS portal se ek baar confirm kar lo</p>
             </div>
             <div className="p-3 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-xl">
               <p className="font-bold text-purple-900 dark:text-purple-300 mb-1">📊 Status Regular Check Karo</p>
-              <p className="text-purple-800 dark:text-purple-400">pmkisan.gov.in par har mahine status check karo. Problem ho to turant fix karo</p>
+              <p className="text-purple-800 dark:text-purple-400">pmkisan.gov.in par mahine mein ek baar status dekh lena achhi aadat hai, problem miley toh turant fix karo</p>
             </div>
             <div className="p-3 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl">
               <p className="font-bold text-amber-900 dark:text-amber-300 mb-1">📄 Documents Update Rakho</p>
-              <p className="text-amber-800 dark:text-amber-400">Naam, pata, bank details change hui to turant update karo. Varna payment fail hogi</p>
+              <p className="text-amber-800 dark:text-amber-400">Naam, pata ya bank details badle to turant update kar do, warna payment fail ho sakti hai</p>
             </div>
           </div>
         </div>
@@ -288,23 +324,23 @@ export default function PMKisanBenefitCalcPage() {
           <div className="space-y-3 text-xs">
             <details className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-lg p-3">
               <summary className="font-bold text-[var(--color-text)] cursor-pointer">PM Kisan mein kitna paisa milta hai?</summary>
-              <p className="mt-2 text-[var(--color-text-muted)]">₹6,000 saalana milte hain — ₹2,000 ki 3 kist mein. April, August, December mein aati hai. 5 saal mein ₹30,000 hote hain. Paisa seedha bank account mein aata hai.</p>
+              <p className="mt-2 text-[var(--color-text-muted)]">Saal mein ₹6,000 milte hain — ₹2,000 ki teen kist mein, April, August aur December ke aas-paas. 5 saal poore hone tak ye ₹30,000 tak pahunch jata hai. Paisa seedha bank account mein transfer hota hai.</p>
             </details>
             <details className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-lg p-3">
               <summary className="font-bold text-[var(--color-text)] cursor-pointer">PM Kisan ke liye kaun eligible hai?</summary>
-              <p className="mt-2 text-[var(--color-text-muted)]">2 hectare (5 acre) tak zameen wale kisan eligible hain. Land owner ya tenant farmer. SC/ST/OBC sab eligible hain. eKYC complete hona chahiye. Bank account Aadhaar se link hona chahiye.</p>
+              <p className="mt-2 text-[var(--color-text-muted)]">2 hectare (5 acre) tak zameen wale kisan eligible hote hain — chahe land owner ho ya tenant farmer. SC/ST/OBC sab shamil hain. bas eKYC complete honi chahiye aur bank account Aadhaar se linked hona chahiye.</p>
             </details>
             <details className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-lg p-3">
               <summary className="font-bold text-[var(--color-text)] cursor-pointer">Kist nahi aayi to kya karu?</summary>
-              <p className="mt-2 text-[var(--color-text-muted)]">Pehle status check karo — pmkisan.gov.in par. Problem kya hai dekhiye. eKYC nahi hai to karo. Bank seeding nahi hai to bank jao. Land records galat hai to patwari se fix karo. 72 ghante mein fix ho jayega.</p>
+              <p className="mt-2 text-[var(--color-text-muted)]">Sabse pehle pmkisan.gov.in par status check karo, wahan problem dikh jayegi. eKYC pending hai toh wo karo, bank seeding nahi hai toh bank jao, land records galat hai toh patwari se milo. Zyadatar cases 72 ghante mein fix ho jate hain.</p>
             </details>
             <details className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-lg p-3">
               <summary className="font-bold text-[var(--color-text)] cursor-pointer">eKYC kaise karein?</summary>
-              <p className="mt-2 text-[var(--color-text-muted)]">3 tarike hain: 1) PM Kisan portal par online — Aadhaar OTP se. 2) Nazdiki CSC center jao — biometric se. 3) Mobile app use karo. Sab free hai. 5 minute mein ho jayega.</p>
+              <p className="mt-2 text-[var(--color-text-muted)]">Teen tarike hain — PM Kisan portal par online Aadhaar OTP se, nazdiki CSC center par biometric se, ya mobile app se. Teeno free hain aur 5 minute mein ho jata hai.</p>
             </details>
             <details className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-lg p-3">
               <summary className="font-bold text-[var(--color-text)] cursor-pointer">Missed kist ka paisa milega?</summary>
-              <p className="mt-2 text-[var(--color-text-muted)]">Haan! Agar koi kist miss hui hai aur problem fix kar di hai, to arrears mein mil jayega. Example: 2 kist miss hui, ab eKYC kar li — to ₹4,000 arrears mein aayenge. Par jaldi karo — kuch cases mein time limit hoti hai.</p>
+              <p className="mt-2 text-[var(--color-text-muted)]">Haan, agar problem fix ho gayi hai toh missed kist arrears mein wapas mil jati hai. Jaise, 2 kist miss hui aur ab eKYC ho gayi, toh ₹4,000 arrears mein aa jayenge. Bas dekhna, kuch cases mein isse claim karne ki time limit hoti hai, isliye jaldi kar lena behtar hai.</p>
             </details>
           </div>
         </div>
