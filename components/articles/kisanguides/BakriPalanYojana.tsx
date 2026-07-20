@@ -14,7 +14,6 @@ function FaqItem({ question, answer }: { question: string; answer: React.ReactNo
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex items-center justify-between p-4 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-inset"
         aria-expanded={isOpen}
-        aria-controls={`faq-answer-${question.replace(/\s+/g, '-').toLowerCase()}`}
       >
         <span className="font-semibold text-gray-900 dark:text-gray-100 pr-4 text-sm md:text-base">{question}</span>
         <span
@@ -27,7 +26,6 @@ function FaqItem({ question, answer }: { question: string; answer: React.ReactNo
         </span>
       </button>
       <div
-        id={`faq-answer-${question.replace(/\s+/g, '-').toLowerCase()}`}
         className={`transition-all duration-300 ease-in-out overflow-hidden ${
           isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
         }`}
@@ -40,7 +38,7 @@ function FaqItem({ question, answer }: { question: string; answer: React.ReactNo
   );
 }
 
-export default function BakriPalanYojanaNLMS() {
+export default function BakriPalanYojana() {
   const canonicalUrl = 'https://kisanstatus.com/articles/bakri-palan-yojana-nlm-subsidy';
 
   const articleSchema = {
@@ -48,12 +46,7 @@ export default function BakriPalanYojanaNLMS() {
     '@type': 'Article',
     headline: 'Bakri Palan Yojana 2026: 50% Subsidy Kaise Lein, Ground Reality aur Process',
     description: 'NLM goat farming subsidy ka sach: 50% funding, DPR kaise banaye, vaccination schedule, documents ki list, aur wo galtiyan jo applications reject karwati hain.',
-    image: {
-      '@type': 'ImageObject',
-      url: 'https://kisanstatus.com/images/kisanguides/bakri-palan-nlm-subsidy.webp',
-      width: 800,
-      height: 450,
-    },
+    image: 'https://kisanstatus.com/images/kisanguides/bakri-palan-nlm-subsidy.webp',
     author: {
       '@type': 'Organization',
       name: 'KisanStatus Team',
@@ -106,22 +99,6 @@ export default function BakriPalanYojanaNLMS() {
           text: 'Haan, aur yahi sahi tarika hai. 50% sarkar deti hai, baaki 50% aap KCC ya normal bank loan se arrange karte ho. Subsidy seedhe aapke account mein aati hai, bank ke paas nahi rukti.',
         },
       },
-      {
-        '@type': 'Question',
-        name: 'Kya main bahar ke state se bakriyan mangwa sakta hoon?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Haan, lekin iske liye aapko animal quarantine certificate aur vehicle fitness certificate dikhana padta hai. Bina iske transport illegal maana jata hai aur animals seize ho sakte hain.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Application reject ho gayi, toh kya main dobara apply kar sakta hoon?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Ghabrao mat. Rejection ka reason dekho (usually document ki kami ya DPR mein galti), usse fix karo aur dobara apply karo. Isme koi permanent rok-tok nahi hai.',
-        },
-      },
     ],
   };
 
@@ -168,7 +145,7 @@ export default function BakriPalanYojanaNLMS() {
 
         <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
           <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
-            <strong>Seedhi baat:</strong> Ground level par aksar dekha gaya hai ki NLM subsidy ke applications mein chhoti chhoti galtiyan hoti hain jinki wajah se delay ya rejection ho jata hai. District level officers ke experience ke hisab se, proper documentation aur realistic DPR approval ke liye sabse zaroori hain. Yahan wo sab kuch bataya gaya hai jo actually kaam karta hai.
+            <strong>Ground Reality:</strong> Field reports aur goat farmers ke practical experience ke mutabik, NLM subsidy ke applications mein chhoti chhoti galtiyan hoti hain jinki wajah se delay ya rejection ho jata hai. District level officers ke experience ke hisab se, proper documentation aur realistic DPR approval ke liye sabse zaroori hain.
           </p>
         </div>
 
@@ -189,14 +166,14 @@ export default function BakriPalanYojanaNLMS() {
           2021 mein Department of Animal Husbandry & Dairying (DAHD) ne NLM ko 2.0 version mein upgrade kiya, jiska mukhya uddeshya goat farming ko ek proper commercial business ke roop mein establish karna hai. Latest NLM guidelines ke mutabik, ab proper planning aur documentation par zyada zor diya jata hai.
         </p>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-          Ground level par aksar dekha gaya hai ki bina proper planning aur vaccination schedule ke shuru kiye gaye farms mein mortality rate badhne ka khatra rehta hai. Sarkar approved project cost ka 50% subsidy deti hai (SC/ST aur mahila kisanon ke liye yeh 60% tak ho sakta hai, state guidelines ke anusaar). Yeh paisa DBT ke through seedhe bank account mein aata hai.
+          Ground level par aksar dekha gaya hai ki bina proper planning aur vaccination schedule ke shuru kiye gaye farms mein mortality rate badhne ka khatra rehta hai. Sarkar approved project cost ka 50% subsidy deti hai (SC/ST aur mahila kisanon ke liye yeh 60% tak ho sakta hai, state guidelines ke anusaar).
         </p>
 
         <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
           Kitni Bakriyan Chahiye? (Yahan Sab Confuse Hote Hain)
         </h2>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-          Kai farmers yeh puchte hain ki kam bakriyon se shuruat ki ja sakti hai ya nahi. NLM guidelines ke mutabik, minimum threshold 100 female aur 5 male bakriyan hai. Isse kam unit size ke liye state ki alag schemes dekhni chahiye. Practical experience ke mutabik, minimum unit size ki requirement puri karna approval ke liye zaroori hai.
+          Kai farmers yeh puchte hain ki kam bakriyon se shuruat ki ja sakti hai ya nahi. NLM guidelines ke mutabik, minimum threshold 100 female aur 5 male bakriyan hai. Isse kam unit size ke liye state ki alag schemes dekhni chahiye.
         </p>
 
         <div className="overflow-x-auto my-8 not-prose">
@@ -218,7 +195,7 @@ export default function BakriPalanYojanaNLMS() {
               <tr className="bg-gray-50 dark:bg-gray-700">
                 <td className="border border-gray-300 dark:border-gray-600 p-3 text-gray-700 dark:text-gray-300 font-medium">Madhyam</td>
                 <td className="border border-gray-300 dark:border-gray-600 p-3 text-gray-700 dark:text-gray-300">200-300 + 10-15</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3 text-gray-700 dark:text-gray-300 font-semibold text-green-700 dark:text-green-400">20-30 Lakh tak</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3 text-gray-700 dark:text-gray-300 font-semibold text-green-700 dark:text-green-400">₹20-30 Lakh tak</td>
               </tr>
               <tr className="bg-white dark:bg-gray-800">
                 <td className="border border-gray-300 dark:border-gray-600 p-3 text-gray-700 dark:text-gray-300 font-medium">Bada</td>
@@ -234,13 +211,13 @@ export default function BakriPalanYojanaNLMS() {
           Nasl (Breed) - Yahan Galti Mat Karna
         </h2>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-          Kai commercial goat farmers ke practical experience ke mutabik, alag-alag breeds ki apni khasiyat aur zarooratein hoti hain, jinhe samajhna zaroori hai:
+          Kai commercial goat farmers ke practical experience ke mutabik, alag-alag breeds ki apni khasiyat aur zarooratein hoti hain:
         </p>
         <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-6">
-          <li><strong>Jamunapari:</strong> UP-Bihar side ke liye best hai. Ek bakri 3-4 litre doodh deti hai. Garmiyon mein inhein heat stress ka khatra rehta hai, isliye achhi ventilation zaroori hai.</li>
-          <li><strong>Sirohi:</strong> Rajasthan jaise dry areas mein yeh kam chara aur paani mein bhi achha perform karti hai. Beginners ke liye yeh ek safe option maani jati hai kyunki iski mortality rate kam hoti hai.</li>
-          <li><strong>Beetal:</strong> Punjab-Haryana mein iski maang zyada hai. Maans ka rate achha milta hai, par maintenance thoda costly hai kyunki inhe regular concentrate ki zaroorat hoti hai.</li>
-          <li><strong>Black Bengal:</strong> Chhote area ke liye badhiya hai aur ek baar mein 2-3 bachhe deti hai. Yeh zyada tar humid areas mein hi achha perform karti hai.</li>
+          <li><strong>Jamunapari:</strong> UP-Bihar side ke liye best hai. Ek bakri 3-4 litre doodh deti hai. Garmiyon mein inhein heat stress ka khatra rehta hai.</li>
+          <li><strong>Sirohi:</strong> Rajasthan jaise dry areas mein yeh kam chara aur paani mein bhi achha perform karti hai. Beginners ke liye safe option.</li>
+          <li><strong>Beetal:</strong> Punjab-Haryana mein iski maang zyada hai. Maans ka rate achha milta hai, par maintenance costly hai.</li>
+          <li><strong>Black Bengal:</strong> Chhote area ke liye badhiya hai aur ek baar mein 2-3 bachhe deti hai.</li>
         </ul>
 
         <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
@@ -260,34 +237,31 @@ export default function BakriPalanYojanaNLMS() {
           Bakri khareedna aasaan hai, par unhe sahi khuraak dena sabse bada operational challenge hai. Ek adult bakri ko rozana uske body weight ka 3-4% dry matter chahiye hota hai.
         </p>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-          Agar roz market se mehenga chara khareeda jaye, toh profit margin kam ho sakta hai. Apni zameen par Napier grass, Maize, ya Berseem ugana shuru karein. Ek acre Napier se kaafi had tak chara ki zaroorat puri ki ja sakti hai.
-        </p>
-        <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-          Garmiyon ke liye Silage ya Hay pehle se store karke rakhein. Silage banana seekh kar kai kisan apna mahine ka chara ka kharcha kaafi had tak bacha lete hain.
+          Agar roz market se mehenga chara khareeda jaye, toh profit margin kam ho sakta hai. Apni zameen par Napier grass, Maize, ya Berseem ugana shuru karein.
         </p>
 
         <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
           Documents - Yahan Applications Aksar Fail Hoti Hain
         </h2>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-          District level officers ke experience ke hisab se, applications aksar documents ki chhoti galtiyon ki wajah se reject ho jati hain. Common mistakes mein shamil hain:
+          District level officers ke experience ke hisab se, applications aksar documents ki chhoti galtiyon ki wajah se reject ho jati hain:
         </p>
         <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-6">
-          <li><strong>Zameen ka kagaz:</strong> 5 saal ka registered lease agreement chahiye. Bina registered agreement ke applications aksar reject ho jati hain.</li>
-          <li><strong>Supplier quotations:</strong> Dated aur signed hone chahiye. Officer site visit mein market rate cross-check karta hai.</li>
-          <li><strong>DPR (Detailed Project Report):</strong> Internet se download karke mat bhejo. Apne district ke registered veterinarian se banwana behtar hota hai, kyunki wo local rates aur guidelines ke hisaab se accurate plan taiyar kar sakte hain.</li>
-          <li><strong>Geotagged photos:</strong> GPS location ke saath photos chahiye. Zameen ki 4 side se photos lo, boundary dikhai de.</li>
+          <li><strong>Zameen ka kagaz:</strong> 5 saal ka registered lease agreement chahiye.</li>
+          <li><strong>Supplier quotations:</strong> Dated aur signed hone chahiye.</li>
+          <li><strong>DPR:</strong> Apne district ke registered veterinarian se banwana behtar hota hai.</li>
+          <li><strong>Geotagged photos:</strong> GPS location ke saath photos chahiye.</li>
         </ul>
 
         <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
           <p className="text-sm font-bold text-gray-900 dark:text-gray-100 mb-3">Zaroori Documents Checklist:</p>
           <ol className="list-decimal pl-5 space-y-2 text-sm text-gray-700 dark:text-gray-300">
-            <li>Aadhaar Card aur PAN Card (DBT aur tax compliance ke liye)</li>
+            <li>Aadhaar Card aur PAN Card</li>
             <li>Zameen ka Kagaz: Registry, Khatauni, ya 5 saal ka registered Kiraya agreement</li>
-            <li>Bank Passbook ki copy (IFSC clear hona chahiye) aur ek Cancelled Cheque</li>
-            <li>Supplier ke original Quotations (bakri aur shed banane ke liye, dated aur signed)</li>
-            <li><strong>Detailed Project Report (DPR):</strong> Kisi registered local vet ya approved consultant dwara banaya hua poora plan</li>
-            <li>Farm ki geotagged photos (GPS location ke saath, jo dikhaye ki zameen ready hai)</li>
+            <li>Bank Passbook ki copy aur Cancelled Cheque</li>
+            <li>Supplier ke original Quotations</li>
+            <li><strong>Detailed Project Report (DPR)</strong></li>
+            <li>Farm ki geotagged photos</li>
           </ol>
         </div>
 
@@ -298,42 +272,31 @@ export default function BakriPalanYojanaNLMS() {
           Ek achhe DPR mein ye cheezein clear honi chahiye:
         </p>
         <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-6">
-          <li><strong>Capital Cost:</strong> Shed construction, feeding troughs, water tanks, aur chote equipment ka exact quotation.</li>
-          <li><strong>Recurring Cost:</strong> Pehle 6 mahine ka chara, concentrate, mineral mixture, aur labor ka kharcha.</li>
-          <li><strong>Income Projection:</strong> Conservative rates par maans aur doodh ki bikri ka hisab. 15-20% mortality rate ko include karna zaroori hai, kyunki overly optimistic plans aksar reject ho jate hain.</li>
+          <li><strong>Capital Cost:</strong> Shed construction, feeding troughs, water tanks ka exact quotation.</li>
+          <li><strong>Recurring Cost:</strong> Pehle 6 mahine ka chara, concentrate, mineral mixture, aur labor.</li>
+          <li><strong>Income Projection:</strong> Conservative rates. 15-20% mortality rate ko include karna zaroori hai.</li>
         </ul>
-
-        <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-          Shed Construction - Chhota Par Zaroori Tip
-        </h2>
-        <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-          Shed East-West direction mein banayein taaki dhoop seedhi andar na aaye aur garmi kam lage. Floor thoda sloped hona chahiye taaki mutra bahar nikal jaye.
-        </p>
-        <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-          <strong>Slatted floor (jaali wala farsh):</strong> Shuru mein thoda extra kharcha mangta hai, par lambe samay mein safai, labor, aur bimari ke kharche mein iski bhari bachat hoti hai, jaisa ki kai successful farms mein dekha gaya hai.
-        </p>
 
         <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
           Vaccination - Isme Mazak Nahi
         </h2>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-          Ek bimari ka outbreak pure flock ko khatam kar sakta hai, isliye vaccination schedule ko sakhti se follow karna anivarya hai:
+          Ek bimari ka outbreak pure flock ko khatam kar sakta hai:
         </p>
         <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-6">
           <li><strong>PPR:</strong> Har 6 mahine mein. Sabse zaroori.</li>
-          <li><strong>Enterotoxaemia (ET):</strong> Saal mein ek baar, barish se pehle.</li>
+          <li><strong>Enterotoxaemia (ET):</strong> Saal mein ek baar.</li>
           <li><strong>FMD:</strong> Saal mein do baar.</li>
           <li><strong>Deworming:</strong> Har 3 mahine mein.</li>
         </ul>
 
         <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-5 my-6 not-prose">
-          <h3 className="font-bold text-blue-800 dark:text-blue-300 mb-3 text-sm"> Biosecurity aur Disease Prevention Basics:</h3>
+          <h3 className="font-bold text-blue-800 dark:text-blue-300 mb-3 text-sm">Biosecurity aur Disease Prevention Basics:</h3>
           <ul className="list-disc pl-5 space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>Farm mein entry par foot bath zaroor rakhein</li>
             <li>Naye animals ko 15-30 din alag quarantine karein</li>
             <li>Regular farm cleaning aur disinfection karein</li>
             <li>Dead animals ko proper tarike se dispose karein</li>
-            <li>Visitors ko farm mein limited access dein</li>
           </ul>
         </div>
 
@@ -341,21 +304,21 @@ export default function BakriPalanYojanaNLMS() {
           Ek Saal Ka Realistic Hisab (100+5 Unit)
         </h2>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-          Ground reality kuch aisi hoti hai (approximate market rates ke hisaab se, state-wise variation ho sakta hai):
+          Ground reality kuch aisi hoti hai (state-wise variation ho sakta hai):
         </p>
         <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-6">
-          <li><strong>Initial Investment:</strong> Shed, equipment, aur 105 bakriyan kharidne mein lagbhag ₹15-18 Lakh lagte hain (50% subsidy + 50% loan/apna paisa).</li>
-          <li><strong>Recurring Cost (6 mahine):</strong> Chara, dawai, aur labor ka kharcha lagbhag ₹3-4 Lakh.</li>
-          <li><strong>Income:</strong> Agar 15% natural mortality maan kar bhi chalein, toh 90 bachhe 6-8 mahine ki umar mein bechne par lagbhag ₹6-7 Lakh ki income hoti hai. Doodh alag se ₹1-1.5 Lakh.</li>
-          <li><strong>Net Result:</strong> Pehle saal mein loan ki EMI aur initial cost cover karna thoda tight hota hai, lekin doosre saal se jab apni hi breeding shuru hoti hai, tab profit margin 25-30% tak pahunch sakta hai.</li>
+          <li><strong>Initial Investment:</strong> ₹15-18 Lakh (50% subsidy + 50% loan/apna paisa).</li>
+          <li><strong>Recurring Cost (6 mahine):</strong> ₹3-4 Lakh.</li>
+          <li><strong>Income:</strong> 90 bachhe bechne par ₹6-7 Lakh. Doodh alag se ₹1-1.5 Lakh.</li>
+          <li><strong>Net Result:</strong> Pehle saal tight, doosre saal se profit 25-30%.</li>
         </ul>
 
         <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
           <h3 className="font-bold text-yellow-800 dark:text-yellow-300 mb-2 text-sm">💰 Cash-Flow Planning Before Subsidy Release:</h3>
           <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300">
-            <li>Subsidy aane mein 4-6 mahine lag sakte hain - working capital pehle se arrange karein</li>
-            <li>Pehli 6 mahine ka chara, medicine, aur labor cost pehle se plan karein</li>
-            <li>Emergency fund rakhein (kam se kam 3 mahine ka operating cost)</li>
+            <li>Subsidy aane mein 4-6 mahine lag sakte hain</li>
+            <li>Pehli 6 mahine ka operating cost pehle se plan karein</li>
+            <li>Emergency fund rakhein (kam se kam 3 mahine ka)</li>
             <li>Loan EMI ke liye alternate income source rakhein</li>
           </ul>
         </div>
@@ -364,54 +327,26 @@ export default function BakriPalanYojanaNLMS() {
           Apply Kaise Karein? (Asli Process)
         </h2>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-          Official portal hai: <a href="https://nlm.udyamimitra.in" className="text-blue-600 hover:underline dark:text-blue-400 font-semibold" target="_blank" rel="noopener noreferrer" aria-label="Visit NLM Udyamimitra Portal">nlm.udyamimitra.in</a>
+          Official portal: <a href="https://nlm.udyamimitra.in" className="text-blue-600 hover:underline dark:text-blue-400 font-semibold" target="_blank" rel="noopener noreferrer" aria-label="Visit NLM Udyamimitra Portal">nlm.udyamimitra.in</a>
         </p>
         <ol className="list-decimal pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-6">
           <li>DPR banwao local registered vet se.</li>
           <li>Portal par register karo.</li>
           <li>Documents upload karo (PDF, 2MB se kam).</li>
           <li>Form submit karo aur acknowledgment number ka screenshot lo.</li>
-          <li>3-4 mahine wait karo, uske baad site visit hoga.</li>
-          <li>Approval aane par machinery khareed kar bills submit karo.</li>
+          <li>3-4 mahine wait karo, site visit hoga.</li>
+          <li>Approval aane par bills submit karo.</li>
         </ol>
 
         <div className="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
-          <h3 className="font-bold text-red-800 dark:text-red-300 mb-2 text-sm">⚠️ Common Mistakes During Site Inspection:</h3>
+          <h3 className="font-bold text-red-800 dark:text-red-300 mb-2 text-sm">️ Common Mistakes During Site Inspection:</h3>
           <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300">
             <li>Farm ready nahi hai jab officer aata hai</li>
             <li>Quoted equipment khareeda nahi gaya</li>
             <li>Bakriyon ki actual count quoted se kam hai</li>
-            <li>Shed construction incomplete hai</li>
             <li>Documents original nahi hain</li>
           </ul>
         </div>
-
-        <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-          Paisa Kaise Aata Hai? (Patience Chahiye)
-        </h2>
-        <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-          Paisa do kiston (tranches) mein aata hai:
-        </p>
-        <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-6">
-          <li>Pehli kist (60-70%): Setup shuru hone par.</li>
-          <li>Doosri kist (30-40%): Jab vet verify kare ki farm chal raha hai aur bakriyan zinda hain.</li>
-        </ul>
-        <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-          Total time 4-6 mahine lag sakta hai. Isliye working capital pehle se arrange karna zaroori hai.
-        </p>
-
-        <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-          Subsidy Kis Cheez Par Milti Hai?
-        </h2>
-        <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-          <strong>Milti hai:</strong> Bakri kharidne, shed banane, feeding troughs, aur basic veterinary setup par.
-        </p>
-        <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-          <strong>Nahi milti:</strong> Zameen kharidne, gaadi lene, ya daily chara aur bijli ke bill par. Isliye working capital alag se arrange karna padta hai.
-        </p>
-        <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-          <strong>Pro tip:</strong> <Link href="/articles/silage-making-business-guide" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Silage Making</Link> seekh lo. Chara ka kharcha 30-40% bach jayega.
-        </p>
 
         <Image 
           src="/images/kisanguides/goat-farming-shed-construction.webp"
@@ -423,39 +358,6 @@ export default function BakriPalanYojanaNLMS() {
         />
 
         <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-          Field Mein Applications In Galtiyon Se Reject Hoti Hain
-        </h2>
-        <ul className="list-none space-y-3 my-6 not-prose">
-          <li className="bg-white dark:bg-gray-800 p-4 rounded-xl border-l-4 border-red-500 shadow-sm">
-            <strong className="text-red-600 dark:text-red-400 block mb-1">Adhure ya galat kagaz:</strong>
-            <span className="text-sm text-gray-700 dark:text-gray-300">Ek signature miss, ya lease agreement registered nahi. Officer seedha reject kar sakta hai.</span>
-          </li>
-          <li className="bg-white dark:bg-gray-800 p-4 rounded-xl border-l-4 border-red-500 shadow-sm">
-            <strong className="text-red-600 dark:text-red-400 block mb-1">Fake Quotations:</strong>
-            <span className="text-sm text-gray-700 dark:text-gray-300">Nakli bill banwa ke DPR mein daal diya. Officer site visit mein market rate check karta hai.</span>
-          </li>
-          <li className="bg-white dark:bg-gray-800 p-4 rounded-xl border-l-4 border-red-500 shadow-sm">
-            <strong className="text-red-600 dark:text-red-400 block mb-1">Zameen ka dispute:</strong>
-            <span className="text-sm text-gray-700 dark:text-gray-300">Kiraye ki zameen hai toh 'No Objection' clause clear hona chahiye agreement mein.</span>
-          </li>
-          <li className="bg-white dark:bg-gray-800 p-4 rounded-xl border-l-4 border-red-500 shadow-sm">
-            <strong className="text-red-600 dark:text-red-400 block mb-1">Unrealistic DPR:</strong>
-            <span className="text-sm text-gray-700 dark:text-gray-300">0% mortality aur 100% profit dikhaya. Officers aise plans ko turant reject kar dete hain.</span>
-          </li>
-        </ul>
-
-        <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-5 my-6 not-prose">
-          <h3 className="font-bold text-blue-800 dark:text-blue-300 mb-3 text-sm"> Record Keeping - Bahut Zaroori:</h3>
-          <ul className="list-disc pl-5 space-y-2 text-sm text-gray-700 dark:text-gray-300">
-            <li><strong>Medicine Register:</strong> Har bakri ka vaccination aur treatment record rakhein</li>
-            <li><strong>Breeding Register:</strong> Mating dates, kidding dates, aur bachhon ka record</li>
-            <li><strong>Feed Register:</strong> Rozana chara aur concentrate ka consumption note karein</li>
-            <li><strong>Financial Register:</strong> Income aur expenditure ka proper hisab rakhein</li>
-            <li>Yeh records future loans, insurance claims, aur farm management mein madad karenge</li>
-          </ul>
-        </div>
-
-        <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
           Aksar Puche Jane Wale Sawal
         </h2>
         <div className="space-y-3 my-8 not-prose">
@@ -463,13 +365,6 @@ export default function BakriPalanYojanaNLMS() {
             <FaqItem key={index} question={faq.q} answer={faq.a} />
           ))}
         </div>
-
-        <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-          Madad Ke Liye Kahan Jayein?
-        </h2>
-        <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-          Seedha sarkari office jao. Apne jile ke District Animal Husbandry Officer (DAHO) ka number nikalo. Har state mein alag nodal adhikari hain.
-        </p>
 
         <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-xl my-8 not-prose border border-blue-200 dark:border-blue-800 shadow-sm">
           <h3 className="font-semibold text-blue-800 dark:text-blue-300 mb-4 text-sm uppercase tracking-wide">Official Sarkari Links</h3>
@@ -487,10 +382,6 @@ export default function BakriPalanYojanaNLMS() {
                 dahd.gov.in (Department of Animal Husbandry) ↗
               </a>
             </li>
-            <li>
-              <strong className="block mb-1">Latest NLM Guidelines:</strong>
-              <span className="text-gray-700 dark:text-gray-300">Apply karne se pehle latest NLM guidelines zaroor check karein kyunki rules aur subsidy limits change ho sakte hain.</span>
-            </li>
           </ul>
         </div>
 
@@ -498,10 +389,10 @@ export default function BakriPalanYojanaNLMS() {
           Akhir Mein: Ek Successful Farm Ka Raaz
         </h2>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-          Bakri palan mein paisa tabhi hai jab aap isse business ki tarah treat karo, sirf subsidy lene ka zariya nahi. Documentation strong rakho, vet ki salah lo, aur patience rakho.
+          Bakri palan mein paisa tabhi hai jab aap isse business ki tarah treat karo. Documentation strong rakho, vet ki salah lo, aur patience rakho.
         </p>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-          Agar meat process karke brand banana hai toh <Link href="/articles/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME Yojana</Link> dekho. Aur haan, bakri ka gobar fekna mat - <Link href="/articles/vermi-compost-business-guide" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Vermi Compost</Link> bana ke bech do. Monthly chara aur maintenance ka kharcha nikal jayega.
+          Agar meat process karke brand banana hai toh <Link href="/articles/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME Yojana</Link> dekho. Aur haan, bakri ka gobar fekna mat - <Link href="/articles/vermi-compost-business-guide" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Vermi Compost</Link> bana ke bech do.
         </p>
 
         <div className="mt-12 pt-8 border-t-2 border-gray-200 dark:border-gray-700 not-prose">
@@ -519,15 +410,15 @@ export default function BakriPalanYojanaNLMS() {
                 <span className="text-2xl group-hover:scale-110 transition-transform" aria-hidden="true">🐝</span>
                 <h4 className="font-bold text-gray-900 dark:text-gray-100 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">Madhumakhi Palan</h4>
               </div>
-              <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">KVIC subsidy ke saath shahad ka business kaise shuru karein aur profit maximize karein.</p>
+              <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">KVIC subsidy ke saath shahad ka business kaise shuru karein.</p>
             </Link>
 
             <Link href="/articles/pm-matsya-sampada-yojana-fish-farming" className="group flex flex-col bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-lg transition-all duration-300">
               <div className="flex items-center gap-3 mb-3">
-                <span className="text-2xl group-hover:scale-110 transition-transform" aria-hidden="true">🐟</span>
+                <span className="text-2xl group-hover:scale-110 transition-transform" aria-hidden="true"></span>
                 <h4 className="font-bold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">PM Matsya Sampada</h4>
               </div>
-              <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">Machli palan par 60% tak subsidy aur biofloc technology ki complete jankari.</p>
+              <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">Machli palan par 60% tak subsidy.</p>
             </Link>
 
             <Link href="/articles/drip-sprinkler-irrigation-subsidy" className="group flex flex-col bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-purple-500 dark:hover:border-purple-500 hover:shadow-lg transition-all duration-300">
@@ -535,7 +426,7 @@ export default function BakriPalanYojanaNLMS() {
                 <span className="text-2xl group-hover:scale-110 transition-transform" aria-hidden="true">💧</span>
                 <h4 className="font-bold text-gray-900 dark:text-gray-100 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">Drip Irrigation</h4>
               </div>
-              <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">PMKSY ke tahat 75% tak subsidy lein aur paani bachakar kharcha kam karein.</p>
+              <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">PMKSY ke tahat 75% tak subsidy.</p>
             </Link>
           </div>
         </div>
