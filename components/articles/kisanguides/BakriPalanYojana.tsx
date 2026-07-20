@@ -296,6 +296,15 @@ export default function BakriPalanYojana() {
           </ol>
         </div>
 
+        <Image 
+          src="/images/kisanguides/documents-checklist.webp"
+          alt="NLM Bakri Palan Required Documents Checklist for Subsidy Application"
+          width={800}
+          height={450}
+          sizes="(max-width: 768px) 100vw, 800px"
+          className="rounded-xl shadow-md mb-8 w-full object-cover not-prose"
+        />
+
         <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
           DPR Kaise Banayein? (Sabse Critical Step)
         </h2>
@@ -307,6 +316,15 @@ export default function BakriPalanYojana() {
           <li><strong>Recurring Cost:</strong> Pehle 6 mahine ka hara chara, concentrate feed, mineral mixture, aur labor ka kharcha.</li>
           <li><strong>Income Projection:</strong> Conservative rates use karein. 15-20% mortality rate ko include karna zaroori hai, warna officer aapke plan ko unrealistic maan kar reject kar dega.</li>
         </ul>
+
+        <Image 
+          src="/images/kisanguides/nlm-required-documents.webp"
+          alt="Detailed Project Report DPR and Required Documents for NLM Subsidy Approval"
+          width={800}
+          height={450}
+          sizes="(max-width: 768px) 100vw, 800px"
+          className="rounded-xl shadow-md mb-8 w-full object-cover not-prose"
+        />
 
         <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
           Vaccination Schedule: Isme Mazak Nahi Chalta
@@ -344,6 +362,15 @@ export default function BakriPalanYojana() {
           <li><strong>Net Result:</strong> Pehla saal thoda tight jayega setup cost ki wajah se. Doosre saal se profit margin 25-30% tak stabilize ho jata hai.</li>
         </ul>
 
+        <Image 
+          src="/images/kisanguides/nlm-subsidy-calculation.webp"
+          alt="NLM Bakri Palan Subsidy Calculation and Profit Estimation Chart"
+          width={800}
+          height={450}
+          sizes="(max-width: 768px) 100vw, 800px"
+          className="rounded-xl shadow-md mb-8 w-full object-cover not-prose"
+        />
+
         <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
           <h3 className="font-bold text-yellow-800 dark:text-yellow-300 mb-2 text-sm">💰 Cash-Flow Planning Before Subsidy Release:</h3>
           <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300">
@@ -368,6 +395,15 @@ export default function BakriPalanYojana() {
           <li>Ab 3-4 mahine ka wait hoga. Is dauran district officer ka site visit hoga.</li>
           <li>Approval aane ke baad, aapko bills submit karne honge tabhi paisa release hoga.</li>
         </ol>
+
+        <Image 
+          src="/images/kisanguides/nlm-application-help.webp"
+          alt="Step by Step NLM Application Process Help and Portal Guide"
+          width={800}
+          height={450}
+          sizes="(max-width: 768px) 100vw, 800px"
+          className="rounded-xl shadow-md mb-8 w-full object-cover not-prose"
+        />
 
         <div className="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
           <h3 className="font-bold text-red-800 dark:text-red-300 mb-2 text-sm">🚫 Common Mistakes During Site Inspection:</h3>
