@@ -9,7 +9,7 @@ function FaqItem({ question, answer }: { question: string; answer: React.ReactNo
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden bg-white dark:bg-gray-800 mb-3">
+    <div className="border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden bg-white dark:bg-gray-800 mb-3 shadow-sm hover:shadow-md transition-shadow">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex items-center justify-between p-4 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-inset"
@@ -39,6 +39,9 @@ function FaqItem({ question, answer }: { question: string; answer: React.ReactNo
 }
 
 export default function BakriPalanYojanaNLMS() {
+  // ✅ SEO: Canonical URL ab sahi slug-based structure par point kar rahi hai
+  const canonicalUrl = 'https://kisanstatus.com/articles/bakri-palan-yojana-nlm-subsidy';
+
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -59,7 +62,7 @@ export default function BakriPalanYojanaNLMS() {
     dateModified: '2026-07-21',
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': 'https://kisanstatus.com/articles/farming/bakri-palan-yojana-nlm-subsidy',
+      '@id': canonicalUrl,
     },
   };
 
@@ -124,7 +127,7 @@ export default function BakriPalanYojanaNLMS() {
       a: (
         <>
           Haan, aur yahi sahi tarika hai. 50% sarkar deti hai, baaki 50% aap bank se loan le sakte ho.{' '}
-          <Link href="/articles/loan/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">
+          <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">
             KCC Loan Guide
           </Link>{' '}
           mein process detail mein hai.
@@ -151,9 +154,9 @@ export default function BakriPalanYojanaNLMS() {
           Bakri Palan Yojana 2026: 50% Subsidy Lene Ka Sahi Tarika aur Ground Reality
         </h1>
 
-        <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-blue-600 not-prose">
+        <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
           <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
-            <strong>Agar aapne socha hai ki bas application bhar di aur sarkar ne turant paisa de diya, toh thoda ruk jao.</strong> NLM (National Livestock Mission) ki 50% subsidy bilkul asli hai (SC/ST aur mahilaon ke liye kuch states mein 60% tak), lekin iska paperwork aur ground reality thodi strict hoti hai. Yahan wo sab hai jo aapko actually karna hai, bina kisi beech ke agent ke.
+            <strong>Bhai, seedhi baat hai:</strong> Agar aapne socha hai ki bas application bhar di aur sarkar ne turant paisa de diya, toh thoda ruk jao. NLM (National Livestock Mission) ki 50% subsidy bilkul asli hai (SC/ST aur mahilaon ke liye kuch states mein 60% tak), lekin iska paperwork aur ground reality thodi strict hoti hai. Yahan wo sab hai jo aapko actually karna hai, bina kisi beech ke agent ke.
           </p>
         </div>
 
@@ -162,14 +165,14 @@ export default function BakriPalanYojanaNLMS() {
           alt="Bakri Palan Yojana NLM Subsidy - Goat Farming Scheme India 2026"
           width={800}
           height={450}
-          className="rounded-lg shadow-md mb-8 w-full object-cover"
+          className="rounded-xl shadow-md mb-8 w-full object-cover not-prose"
         />
 
         <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
           NLM 2.0 Asal Mein Kya Hai?
         </h2>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-          National Livestock Mission ko 2021 mein NLM 2.0 ke roop mein extend kiya gaya tha. Iska seedha matlab hai: sarkar chahti hai ki bakri palan ek chhota backyard shauk nahi, balki ek proper commercial business bane. Bharat mein mutton aur cheez (dairy) ki demand lagatar badh rahi hai, aur is gap ko fill karne ke liye structured farming ki zaroorat hai.
+          National Livestock Mission ko 2021 mein NLM 2.0 ke roop mein extend kiya gaya tha. Iska seedha matlab hai: sarkar chahti hai ki bakri palan ek chhota backyard shauk nahi, balki ek proper commercial business bane. Bharat mein mutton aur dairy ki demand lagatar badh rahi hai, aur is gap ko fill karne ke liye structured farming ki zaroorat hai.
         </p>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
           Is scheme ke tahat, sarkar total approved project cost ka 50% subsidy deti hai. Baaki 50% aapko apni jeb se ya bank loan ke through lagana hota hai. Yeh paisa Direct Benefit Transfer (DBT) ke through seedhe aapke bank account mein aata hai, beech mein koi nahi rokta.
@@ -183,7 +186,7 @@ export default function BakriPalanYojanaNLMS() {
         </p>
 
         <div className="overflow-x-auto my-8 not-prose">
-          <table className="w-full border-collapse border border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden text-sm">
+          <table className="w-full border-collapse border border-gray-300 dark:border-gray-600 rounded-xl overflow-hidden text-sm shadow-sm">
             <thead>
               <tr className="bg-gray-100 dark:bg-gray-700">
                 <th className="border border-gray-300 dark:border-gray-600 p-3 text-left text-gray-900 dark:text-gray-100">Unit Size</th>
@@ -193,19 +196,19 @@ export default function BakriPalanYojanaNLMS() {
             </thead>
             <tbody>
               <tr className="bg-white dark:bg-gray-800">
-                <td className="border border-gray-300 dark:border-gray-600 p-3 text-gray-700 dark:text-gray-300">Chhota</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3 text-gray-700 dark:text-gray-300 font-medium">Chhota</td>
                 <td className="border border-gray-300 dark:border-gray-600 p-3 text-gray-700 dark:text-gray-300">100 + 5</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3 text-gray-700 dark:text-gray-300 font-semibold">₹10 Lakh tak</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3 text-gray-700 dark:text-gray-300 font-semibold text-green-700 dark:text-green-400">₹10 Lakh tak</td>
               </tr>
               <tr className="bg-gray-50 dark:bg-gray-700">
-                <td className="border border-gray-300 dark:border-gray-600 p-3 text-gray-700 dark:text-gray-300">Madhyam</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3 text-gray-700 dark:text-gray-300 font-medium">Madhyam</td>
                 <td className="border border-gray-300 dark:border-gray-600 p-3 text-gray-700 dark:text-gray-300">200-300 + 10-15</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3 text-gray-700 dark:text-gray-300 font-semibold">₹20-30 Lakh tak</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3 text-gray-700 dark:text-gray-300 font-semibold text-green-700 dark:text-green-400">₹20-30 Lakh tak</td>
               </tr>
               <tr className="bg-white dark:bg-gray-800">
-                <td className="border border-gray-300 dark:border-gray-600 p-3 text-gray-700 dark:text-gray-300">Bada</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3 text-gray-700 dark:text-gray-300 font-medium">Bada</td>
                 <td className="border border-gray-300 dark:border-gray-600 p-3 text-gray-700 dark:text-gray-300">500 + 25</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3 text-gray-700 dark:text-gray-300 font-semibold">₹50 Lakh tak</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3 text-gray-700 dark:text-gray-300 font-semibold text-green-700 dark:text-green-400">₹50 Lakh tak</td>
               </tr>
             </tbody>
           </table>
@@ -215,7 +218,7 @@ export default function BakriPalanYojanaNLMS() {
           Nasl (Breed) Chunne Mein Galti Mat Karna
         </h2>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-          Nasl chunna sirf kitabon ki baat nahi hai, ye aapki geography aur market demand par depend karta hai. 
+          Nasl chunna sirf kitabon ki baat nahi hai, ye aapki geography aur market demand par depend karta hai. Market mein sasti nasl ke chakkar mein mat padna.
         </p>
         <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-6">
           <li><strong>Jamunapari:</strong> UP/Bihar side ke liye best. Doodh aur maans dono ke liye solid hai. Ek bakri aaram se 3-4 litre doodh deti hai, jisse bachhon ki survival rate badh jati hai.</li>
@@ -241,10 +244,10 @@ export default function BakriPalanYojanaNLMS() {
           Sirf traditional kisan hi nahi, balki SHG, FPO, ya Section 8 company bhi apply kar sakti hai. Lekin sabse zaroori cheez: <strong>Zameen ka kagaz</strong>. Chahe apni ho ya 5 saal ka registered lease agreement. Bina iske application wahin reject ho jayegi. 
         </p>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-          Ek practical tip: Chara ugane ke liye zameen ki quality pata honi chahiye. Isliye pehle se hi apna <Link href="/articles/farming/soil-health-card-complete-guide-2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Soil Health Card</Link> banwa ke rakho. Ye aapke DPR (Project Report) ko strong banata hai aur vet officer ko dikhata hai ki aapne proper planning ki hai.
+          Ek practical tip: Chara ugane ke liye zameen ki quality pata honi chahiye. Isliye pehle se hi apna <Link href="/articles/soil-health-card-complete-guide-2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Soil Health Card</Link> banwa ke rakho. Ye aapke DPR (Project Report) ko strong banata hai aur vet officer ko dikhata hai ki aapne proper planning ki hai.
         </p>
 
-        <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 p-5 my-6 rounded-r-lg not-prose">
+        <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
           <p className="text-sm font-bold text-gray-900 dark:text-gray-100 mb-3">Zaroori Documents Checklist:</p>
           <ol className="list-decimal pl-5 space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>Aadhaar Card aur PAN Card (DBT aur tax compliance ke liye)</li>
@@ -331,7 +334,7 @@ export default function BakriPalanYojanaNLMS() {
           Subsidy bakri kharidne, shed banane, feeding troughs, aur basic veterinary setup par milti hai. Lekin ek baat clear hai: zameen kharidne, gaadi lene, ya daily chara aur bijli ke bill par sarkar ek rupya bhi nahi degi. Isliye apna working capital alag se arrange karna padta hai. 
         </p>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-          Ek practical tip: Chara ka kharcha bachane ke liye <Link href="/articles/farming/silage-making-business-guide" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Silage Making</Link> seekh lo. Isse aapka chara ka kharcha 30-40% tak bach jata hai, jo profit margin ko seedha badhata hai.
+          Ek practical tip: Chara ka kharcha bachane ke liye <Link href="/articles/silage-making-business-guide" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Silage Making</Link> seekh lo. Isse aapka chara ka kharcha 30-40% tak bach jata hai, jo profit margin ko seedha badhata hai.
         </p>
 
         <Image 
@@ -339,7 +342,7 @@ export default function BakriPalanYojanaNLMS() {
           alt="Goat Farming Shed Construction under NLM Subsidy Guidelines"
           width={800}
           height={450}
-          className="rounded-lg shadow-md mb-6 w-full object-cover"
+          className="rounded-xl shadow-md mb-8 w-full object-cover not-prose"
         />
 
         <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
@@ -349,19 +352,19 @@ export default function BakriPalanYojanaNLMS() {
           Ground level par aksar dekha jata hai ki in chhoti si chook ki wajah se applicants ki mahino ki mehnat barbad ho jaati hai aur applications seedha reject list mein chali jaati hain:
         </p>
         <ul className="list-none space-y-3 my-6 not-prose">
-          <li className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
+          <li className="bg-white dark:bg-gray-800 p-4 rounded-xl border-l-4 border-red-500 shadow-sm">
             <strong className="text-red-600 dark:text-red-400 block mb-1">Adhure ya galat kagaz:</strong>
             <span className="text-sm text-gray-700 dark:text-gray-300">Ek signature miss hua, ya lease agreement registered nahi tha. Officer ek bhi chook par seedha reject kar deta hai.</span>
           </li>
-          <li className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
+          <li className="bg-white dark:bg-gray-800 p-4 rounded-xl border-l-4 border-red-500 shadow-sm">
             <strong className="text-red-600 dark:text-red-400 block mb-1">Fake Quotations:</strong>
             <span className="text-sm text-gray-700 dark:text-gray-300">Supplier se nakli bill banwa ke DPR mein daal diya. Vet officer site visit mein market rate cross-check karke pakad leta hai.</span>
           </li>
-          <li className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
+          <li className="bg-white dark:bg-gray-800 p-4 rounded-xl border-l-4 border-red-500 shadow-sm">
             <strong className="text-red-600 dark:text-red-400 block mb-1">Zameen ka dispute:</strong>
             <span className="text-sm text-gray-700 dark:text-gray-300">Kiraye ki zameen hai toh agreement mein 'No Objection' clause clear hona chahiye, warna application atak jayegi.</span>
           </li>
-          <li className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
+          <li className="bg-white dark:bg-gray-800 p-4 rounded-xl border-l-4 border-red-500 shadow-sm">
             <strong className="text-red-600 dark:text-red-400 block mb-1">Unrealistic DPR:</strong>
             <span className="text-sm text-gray-700 dark:text-gray-300">Project report mein 0% mortality aur bahut zyada profit dikhaya gaya ho. Officers aise over-optimistic plans ko turant reject kar dete hain.</span>
           </li>
@@ -383,7 +386,7 @@ export default function BakriPalanYojanaNLMS() {
           Koi confusion ho toh seedha sarkari office se pucho. Galat jagah se puchoge toh galat jawab milega aur scam mein fans sakte ho. Phone pe puchna ho toh apne jile ke District Animal Husbandry Officer (DAHO) office ka number nikalo. Har state mein alag-alag nodal adhikari hain.
         </p>
 
-        <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg my-8 not-prose border border-blue-200 dark:border-blue-800">
+        <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-xl my-8 not-prose border border-blue-200 dark:border-blue-800 shadow-sm">
           <h3 className="font-semibold text-blue-800 dark:text-blue-300 mb-4 text-sm uppercase tracking-wide">Official Sarkari Links</h3>
           <ul className="space-y-4 text-sm">
             <li>
@@ -395,7 +398,7 @@ export default function BakriPalanYojanaNLMS() {
             </li>
             <li>
               <strong className="block mb-1">Guidelines aur updates:</strong>
-              <a href="https://dahd.gov.in" className="text-blue-600 hover:underline dark:text-blue-400 inline-flex items-center gap-1" target="_blank" rel="noopener noreferrer">
+              <a href="https://dahd.gov.in" className="text-blue-600 hover:underline dark:text-blue-400 inline-flex items-center gap-1 font-medium" target="_blank" rel="noopener noreferrer">
                 dahd.gov.in (Department of Animal Husbandry) ↗
               </a>
             </li>
@@ -408,50 +411,48 @@ export default function BakriPalanYojanaNLMS() {
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
           Bakri palan mein paisa tabhi hai jab aap isse ek proper business ki tarah treat karo, na ki sirf ek sarkari subsidy lene ka zariya. Documentation strong rakho aur vet ki salah hamesha lo.
         </p>
-        <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-          Agar aap bakri ka meat process karke apna brand banana chahte ho, toh <Link href="/articles/farming/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME Yojana</Link> dekh sakte ho, jo food processing units par 35% subsidy deti hai. Aur haan, bakri ka gobar fekna mat, usse <Link href="/articles/farming/vermi-compost-business-guide" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Vermi Compost</Link> bana ke bech do. Ye aapke monthly chara aur maintenance ke kharche ko aaram se cover kar deta hai.
+        <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
+          Agar aap bakri ka meat process karke apna brand banana chahte ho, toh <Link href="/articles/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME Yojana</Link> dekh sakte ho, jo food processing units par 35% subsidy deti hai. Aur haan, bakri ka gobar fekna mat, usse <Link href="/articles/vermi-compost-business-guide" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Vermi Compost</Link> bana ke bech do. Ye aapke monthly chara aur maintenance ke kharche ko aaram se cover kar deta hai.
         </p>
 
+        {/* ✅ PREMIUM UI/UX: Related Articles Cards */}
         <div className="mt-12 pt-8 border-t-2 border-gray-200 dark:border-gray-700 not-prose">
-          <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2 flex items-center gap-2">
+            <span className="text-3xl">📚</span>
             Aage Kya Padhein?
           </h3>
           <p className="text-gray-600 dark:text-gray-400 mb-6 text-sm">
-            In guides se aapke farming business ko aur clarity milegi:
+            In verified guides se aapke farming business ko aur clarity milegi:
           </p>
 
-          <ul className="space-y-3 text-sm">
-            <li>
-              <Link href="/articles/farming/madhumakhi-palan-kvic-subsidy" className="flex items-start gap-2 text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors">
-                <span className="text-green-600 mt-1">→</span>
-                <div>
-                  <span className="font-semibold block">Madhumakhi Palan (Beekeeping)</span>
-                  <span className="text-xs text-gray-500 dark:text-gray-400">KVIC subsidy ke saath shahad ka business kaise shuru karein.</span>
-                </div>
-              </Link>
-            </li>
-            <li>
-              <Link href="/articles/farming/pm-matsya-sampada-yojana-fish-farming" className="flex items-start gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                <span className="text-blue-600 mt-1">→</span>
-                <div>
-                  <span className="font-semibold block">PM Matsya Sampada Yojana</span>
-                  <span className="text-xs text-gray-500 dark:text-gray-400">Machli palan par 60% tak subsidy aur biofloc technology ki jankari.</span>
-                </div>
-              </Link>
-            </li>
-            <li>
-              <Link href="/articles/farming/drip-sprinkler-irrigation-subsidy" className="flex items-start gap-2 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
-                <span className="text-purple-600 mt-1">→</span>
-                <div>
-                  <span className="font-semibold block">Drip aur Sprinkler Irrigation</span>
-                  <span className="text-xs text-gray-500 dark:text-gray-400">PMKSY ke tahat 75% tak subsidy lein aur paani bachayein.</span>
-                </div>
-              </Link>
-            </li>
-          </ul>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <Link href="/articles/madhumakhi-palan-kvic-subsidy" className="group flex flex-col bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-green-500 dark:hover:border-green-500 hover:shadow-lg transition-all duration-300">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-2xl group-hover:scale-110 transition-transform">🐝</span>
+                <h4 className="font-bold text-gray-900 dark:text-gray-100 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">Madhumakhi Palan</h4>
+              </div>
+              <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">KVIC subsidy ke saath shahad ka business kaise shuru karein aur profit maximize karein.</p>
+            </Link>
+
+            <Link href="/articles/pm-matsya-sampada-yojana-fish-farming" className="group flex flex-col bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-lg transition-all duration-300">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-2xl group-hover:scale-110 transition-transform">🐟</span>
+                <h4 className="font-bold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">PM Matsya Sampada</h4>
+              </div>
+              <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">Machli palan par 60% tak subsidy aur biofloc technology ki complete jankari.</p>
+            </Link>
+
+            <Link href="/articles/drip-sprinkler-irrigation-subsidy" className="group flex flex-col bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-purple-500 dark:hover:border-purple-500 hover:shadow-lg transition-all duration-300">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-2xl group-hover:scale-110 transition-transform">💧</span>
+                <h4 className="font-bold text-gray-900 dark:text-gray-100 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">Drip Irrigation</h4>
+              </div>
+              <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">PMKSY ke tahat 75% tak subsidy lein aur paani bachakar kharcha kam karein.</p>
+            </Link>
+          </div>
         </div>
 
-        <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-lg border-l-4 border-orange-500 not-prose">
+        <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
           <p className="text-sm text-gray-700 dark:text-gray-300">
             <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
             Yeh article sirf jankari aur guidance ke liye hai. Sarkari scheme ke rules aur subsidy rates samay-samay par badal sakte hain. Apply karne se pehle hamesha latest guidelines ke liye official website check karein. Last updated: July 2026.
