@@ -1,807 +1,510 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 
 export default function CHCPortal() {
   return (
-    <article className="max-w-3xl mx-auto px-4 py-8 text-gray-800 dark:text-gray-200 leading-relaxed">
+    <article className="max-w-4xl mx-auto px-4 py-8 text-gray-800 dark:text-gray-200 leading-relaxed prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-blue-600 dark:prose-a:text-blue-400">
       <Image 
         src="/images/kisanguides/chc-portal-hero.webp" 
         alt="Custom Hiring Centre with Tractor and Farm Implements - SMAM Subsidy Guide 2026" 
         width={800} 
         height={450} 
-        className="rounded-xl mb-6 shadow-md w-full object-cover" 
+        className="rounded-xl mb-8 shadow-md w-full object-cover not-prose" 
       />
       
-      <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4 leading-tight">
-        CHC Business 2026: Tractor Kiraye Par De Kar Paisa Kamayein
+      <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100 leading-tight">
+        CHC Business 2026: Tractor aur Implements Kiraye Par De Kar Paisa Kamayein (Ground Reality)
       </h1>
       
-      <p className="text-lg mb-4 text-gray-700 dark:text-gray-300">
-        Kisaan bhaiyon, suno. Aapke paas tractor hai? Doosre kisaan bhi hain jinke paas nahi hai. Beech mein aap aa jao — paisa banao. Yeh hai CHC ka dhandha.
-      </p>
-      
-      <p className="mb-6 text-gray-700 dark:text-gray-300">
-        85% kisaanon ke paas 2 hectare se kam zameen hai. Tractor khareedna inke bas ki baat nahi. Par kheti toh karni hai. Yahan aapka kaam shuru hota hai.
-      </p>
-
-      <Image 
-        src="/images/kisanguides/pchc-portal-farmer-tractor.webp" 
-        alt="Indian farmer operating tractor at Custom Hiring Centre for rental services" 
-        width={800} 
-        height={450} 
-        className="rounded-xl mb-6 shadow-md w-full object-cover" 
-      />
-
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800 dark:text-green-400">
-        Yeh dhandha hai kya?
-      </h2>
-      
-      <p className="mb-4">
-        Simple si baat hai. Sarkar se subsidy le kar machinery khareedo. Gaon ke kisaanon ko kiraye par do. Rent lo. Paisa kamao.
-      </p>
-      
-      <p className="mb-4">
-        Socho — Uber jaisa. Aapke paas gaadi (tractor) hai. Zarooratmand aapke paas aayega. Aap kiraya loge. Bas.
-      </p>
-
-      <p className="mb-6">
-        Abhi har block mein CHC nahi hai. 20-25% blocks mein hi hai. Scope bahut bacha hai.
-      </p>
-
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800 dark:text-green-400">
-        SMAM: 40-50% sarkari madad
-      </h2>
-      
-      <p className="mb-4">
-        CHC kholne ke liye sarkar 40-50% paisa deti hai. Tractor chhod kar baaki sab implements par.
-      </p>
-
-      <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-5 mb-6">
-        <h3 className="font-bold text-lg mb-3 text-blue-900 dark:text-blue-200">Kitna milega:</h3>
-        <ul className="space-y-2 text-gray-800 dark:text-gray-200">
-          <li className="flex justify-between border-b border-blue-100 dark:border-blue-800 pb-2">
-            <span>Chhote kisaan (2 hectare tak):</span>
-            <span className="font-semibold">50%</span>
-          </li>
-          <li className="flex justify-between border-b border-blue-100 dark:border-blue-800 pb-2">
-            <span>Baaki sab kisaan:</span>
-            <span className="font-semibold">40%</span>
-          </li>
-          <li className="flex justify-between border-b border-blue-100 dark:border-blue-800 pb-2">
-            <span>SC/ST/Mahila kisaan:</span>
-            <span className="font-semibold">50%</span>
-          </li>
-          <li className="flex justify-between border-b border-blue-100 dark:border-blue-800 pb-2">
-            <span>Pahadi states:</span>
-            <span className="font-semibold">50-60%</span>
-          </li>
-          <li className="flex justify-between">
-            <span>Group mein apply (7-10 kisaan):</span>
-            <span className="font-semibold">Jaldi approval</span>
-          </li>
-        </ul>
+      <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-blue-600 not-prose">
+        <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
+          <strong>Seedhi baat:</strong> CHC (Custom Hiring Centre) koi "get-rich-quick" scheme nahi hai. Lekin agar aapke paas tractor hai aur aap isse ek proper business ki tarah manage karte hain, toh yeh gaon ka sabse stable aur profitable dhandha ban sakta hai. Yahan koi hawa mein nahi, sirf ground-level facts aur numbers hain.
+        </p>
       </div>
 
-      <p className="mb-4">
-        Tractor par subsidy nahi milti. Par uske saath lagne wale saare samaan par milti hai — rotavator, happy seeder, laser leveler, sab.
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        Bharat mein 85% se zyada kisaanon ke paas 2 hectare (5 acre) se kam zameen hai. Aise chhote kisaan ke liye ₹8-10 lakh ka naya tractor khareedna namumkin hai, lekin unhe kheti toh karni hi hai. Yahan aapka role aata hai. Aap machinery khareedte hain, aur unhe ghanton ya acre ke hisaab se kiraye par dete hain. Simple "Uber for Tractors" model, lekin gaon ke hisaab se.
       </p>
 
-      <p className="mb-6">
-        Example: ₹30 lakh ki machinery khareedi. 40% subsidy = ₹12 lakh. Aapko sirf ₹18 lakh dene hain. Bada fayda hai.
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
+        Abhi bhi desh ke 70-75% blocks mein proper, registered CHC nahi hai. Scope bahut bada hai, lekin competition bhi badh raha hai. Isliye sirf tractor rakhna kaafi nahi, sahi planning aur management chahiye.
       </p>
 
-      <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-300 dark:border-yellow-700 rounded-lg p-5 mb-6">
-        <h3 className="font-bold text-lg mb-3 text-yellow-800 dark:text-yellow-300">
-          Punjab/Haryana/UP/Delhi wale dhyan dein
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
+        SMAM Subsidy: Sach aur Jhooth
+      </h2>
+      
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        Sub-Mission on Agricultural Mechanization (SMAM) ke tahat sarkar CHC kholne ke liye 40% se 50% tak subsidy deti hai. Lekin yahan ek bahut bada confusion hai jiska fayda local agents uthate hain.
+      </p>
+
+      <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-5 mb-6 not-prose">
+        <h3 className="font-bold text-lg mb-3 text-red-900 dark:text-red-200 flex items-center gap-2">
+          <span>⚠️</span> Sabse Bada Jhooth: "Free Tractor"
         </h3>
-        <p className="mb-2 text-yellow-900 dark:text-yellow-200">
-          Aapke liye alag scheme hai — CRM. Happy Seeder aur straw management samaan par <strong>80% subsidy</strong> milti hai. Yeh SMAM se alag hai. Dono ka fayda ek saath nahi le sakte. CRM wala behtar hai aapke liye.
+        <p className="text-sm text-red-800 dark:text-red-300">
+          Koi bhi scheme aapko <strong>Tractor par subsidy nahi deti</strong>. Subsidy sirf tractor ke peeche lagne wale implements (Rotavator, Happy Seeder, Laser Leveler, etc.) par milti hai. Agar koi agent aapse kehta hai ki "₹50,000 do, free tractor dilwa dunga", toh wo 100% scam hai. Door raho.
         </p>
       </div>
 
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800 dark:text-green-400">
-        Kaunsa samaan khareedna chahiye?
-      </h2>
-      
-      <p className="mb-4">
-        Har jagah demand alag hoti hai. Par kuch cheezein har jagah chalti hain.
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        Subsidy ka asli breakdown kuch aisa hota hai:
       </p>
 
-      <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-4 mb-6">
-        <p className="text-sm text-amber-900 dark:text-amber-200 italic">
-          <strong>Note:</strong> Ye daam sirf andaza hain. Aapke area ke hisaab se upar neeche ho sakte hain. Pehle local market check karo.
-        </p>
-      </div>
-
-      <div className="overflow-x-auto mb-6 rounded-lg border border-gray-200 dark:border-gray-700">
-        <table className="min-w-full bg-white dark:bg-gray-800">
+      <div className="overflow-x-auto mb-8 not-prose">
+        <table className="min-w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden text-sm">
           <thead className="bg-green-100 dark:bg-green-900/40">
             <tr>
-              <th className="py-3 px-4 border-b text-left text-green-900 dark:text-green-200">Samaan</th>
-              <th className="py-3 px-4 border-b text-left text-green-900 dark:text-green-200">Kimat</th>
-              <th className="py-3 px-4 border-b text-left text-green-900 dark:text-green-200">Kiraya</th>
-              <th className="py-3 px-4 border-b text-left text-green-900 dark:text-green-200">Season</th>
-              <th className="py-3 px-4 border-b text-left text-green-900 dark:text-green-200">Paisa wapas</th>
+              <th className="py-3 px-4 border-b text-left text-green-900 dark:text-green-200">Shreni (Category)</th>
+              <th className="py-3 px-4 border-b text-left text-green-900 dark:text-green-200">Subsidy % (Implement par)</th>
+              <th className="py-3 px-4 border-b text-left text-green-900 dark:text-green-200">Max Limit (Approx)</th>
             </tr>
           </thead>
           <tbody className="text-gray-700 dark:text-gray-300">
             <tr className="border-b border-gray-100 dark:border-gray-700">
-              <td className="py-3 px-4">Rotavator</td>
-              <td className="py-3 px-4">₹80K-1.5L</td>
-              <td className="py-3 px-4">₹600-800/acre</td>
+              <td className="py-3 px-4">Chhote/Seemant Kisan (2 hectare tak)</td>
+              <td className="py-3 px-4 font-semibold">50%</td>
+              <td className="py-3 px-4">₹5 Lakh tak</td>
+            </tr>
+            <tr className="border-b border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
+              <td className="py-3 px-4">Baaki sabhi Kisan</td>
+              <td className="py-3 px-4 font-semibold">40%</td>
+              <td className="py-3 px-4">₹5 Lakh tak</td>
+            </tr>
+            <tr className="border-b border-gray-100 dark:border-gray-700">
+              <td className="py-3 px-4">SC/ST/Mahila Kisan</td>
+              <td className="py-3 px-4 font-semibold">50%</td>
+              <td className="py-3 px-4">₹5 Lakh tak</td>
+            </tr>
+            <tr className="border-b border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
+              <td className="py-3 px-4">Pahadi States (J&K, HP, Uttarakhand, NE)</td>
+              <td className="py-3 px-4 font-semibold">50% - 60%</td>
+              <td className="py-3 px-4">₹5 Lakh tak</td>
+            </tr>
+            <tr>
+              <td className="py-3 px-4">Custom Hiring Centre (Group/FPO of 7-11 members)</td>
+              <td className="py-3 px-4 font-semibold">40% - 50%</td>
+              <td className="py-3 px-4">₹10 Lakh tak (Higher limit)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        <strong>Pro Tip:</strong> Agar aap Punjab, Haryana, ya Western UP se hain, toh SMAM ke alawa <strong>CRM (Crop Residue Management)</strong> scheme bhi check karein. Isme Happy Seeder aur Straw Management equipment par 80% tak subsidy milti hai, jo SMAM se kahin behtar hai. Dono schemes ka ek saath fayda nahi le sakte, toh apne hisaab se calculate karo.
+      </p>
+
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
+        Kaunsa Samaan Khareedein? (Regional Demand ke Hisaab Se)
+      </h2>
+      
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        Har ilake ki demand alag hoti hai. Punjab mein Happy Seeder ki bhookh hai, jabki MP ya UP mein Rotavator aur Seed Drill zyada bikte hain. South India mein Paddy Transplanter ka demand year-round rehta hai. Shuruat mein 5-7 high-demand implements se start karein.
+      </p>
+
+      <div className="overflow-x-auto mb-8 not-prose">
+        <table className="min-w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden text-sm">
+          <thead className="bg-blue-100 dark:bg-blue-900/40">
+            <tr>
+              <th className="py-3 px-4 border-b text-left text-blue-900 dark:text-blue-200">Implement</th>
+              <th className="py-3 px-4 border-b text-left text-blue-900 dark:text-blue-200">Andazan Kimat</th>
+              <th className="py-3 px-4 border-b text-left text-blue-900 dark:text-blue-200">Kiraya (Avg)</th>
+              <th className="py-3 px-4 border-b text-left text-blue-900 dark:text-blue-200">Peak Season</th>
+              <th className="py-3 px-4 border-b text-left text-blue-900 dark:text-blue-200">ROI Time</th>
+            </tr>
+          </thead>
+          <tbody className="text-gray-700 dark:text-gray-300">
+            <tr className="border-b border-gray-100 dark:border-gray-700">
+              <td className="py-3 px-4 font-medium">Rotavator (7-8 ft)</td>
+              <td className="py-3 px-4">₹90K - ₹1.4L</td>
+              <td className="py-3 px-4">₹600 - ₹800/acre</td>
               <td className="py-3 px-4">Saal bhar</td>
               <td className="py-3 px-4">6-8 mahine</td>
             </tr>
             <tr className="border-b border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
-              <td className="py-3 px-4">Happy Seeder</td>
-              <td className="py-3 px-4">₹1.2-1.8L</td>
-              <td className="py-3 px-4">₹1,000-1,500/acre</td>
-              <td className="py-3 px-4">Oct-Nov</td>
-              <td className="py-3 px-4">4-6 mahine</td>
+              <td className="py-3 px-4 font-medium">Happy Seeder / Zero Till</td>
+              <td className="py-3 px-4">₹1.2L - ₹1.8L</td>
+              <td className="py-3 px-4">₹1,000 - ₹1,500/acre</td>
+              <td className="py-3 px-4">Oct - Nov</td>
+              <td className="py-3 px-4">4-5 mahine</td>
             </tr>
             <tr className="border-b border-gray-100 dark:border-gray-700">
-              <td className="py-3 px-4">Laser Leveler</td>
-              <td className="py-3 px-4">₹2.5-4L</td>
-              <td className="py-3 px-4">₹800-1,200/acre</td>
+              <td className="py-3 px-4 font-medium">Laser Land Leveler</td>
+              <td className="py-3 px-4">₹2.5L - ₹4.0L</td>
+              <td className="py-3 px-4">₹800 - ₹1,200/acre</td>
               <td className="py-3 px-4">Saal bhar</td>
               <td className="py-3 px-4">8-12 mahine</td>
             </tr>
             <tr className="border-b border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
-              <td className="py-3 px-4">Seed Drill</td>
-              <td className="py-3 px-4">₹60K-1.2L</td>
-              <td className="py-3 px-4">₹400-600/acre</td>
-              <td className="py-3 px-4">Bijai ka time</td>
-              <td className="py-3 px-4">6-10 mahine</td>
+              <td className="py-3 px-4 font-medium">Seed Drill (Pneumatic)</td>
+              <td className="py-3 px-4">₹70K - ₹1.2L</td>
+              <td className="py-3 px-4">₹400 - ₹600/acre</td>
+              <td className="py-3 px-4">Bijai (Jun/Nov)</td>
+              <td className="py-3 px-4">6-9 mahine</td>
             </tr>
             <tr className="border-b border-gray-100 dark:border-gray-700">
-              <td className="py-3 px-4">Boom Sprayer</td>
-              <td className="py-3 px-4">₹1-2L</td>
-              <td className="py-3 px-4">₹500-800/acre</td>
+              <td className="py-3 px-4 font-medium">Boom Sprayer (Tractor mounted)</td>
+              <td className="py-3 px-4">₹1.0L - ₹2.0L</td>
+              <td className="py-3 px-4">₹500 - ₹800/acre</td>
               <td className="py-3 px-4">Saal bhar</td>
               <td className="py-3 px-4">5-8 mahine</td>
             </tr>
             <tr className="border-b border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
-              <td className="py-3 px-4">Reaper/Harvester</td>
-              <td className="py-3 px-4">₹2-3.5L</td>
-              <td className="py-3 px-4">₹1,500-2,500/acre</td>
-              <td className="py-3 px-4">Katne ka time</td>
-              <td className="py-3 px-4">4-6 mahine</td>
-            </tr>
-            <tr className="border-b border-gray-100 dark:border-gray-700">
-              <td className="py-3 px-4">Straw Reaper</td>
-              <td className="py-3 px-4">₹1.5-2.5L</td>
-              <td className="py-3 px-4">₹1,000-1,500/acre</td>
-              <td className="py-3 px-4">Katne ka time</td>
+              <td className="py-3 px-4 font-medium">Straw Reaper / Balers</td>
+              <td className="py-3 px-4">₹1.5L - ₹3.0L</td>
+              <td className="py-3 px-4">₹1,000 - ₹1,800/acre</td>
+              <td className="py-3 px-4">Apr - May (Gehu)</td>
               <td className="py-3 px-4">3-5 mahine</td>
             </tr>
-            <tr className="border-b border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
-              <td className="py-3 px-4">Paddy Transplanter</td>
-              <td className="py-3 px-4">₹1.5-2.5L</td>
-              <td className="py-3 px-4">₹1,200-1,800/acre</td>
-              <td className="py-3 px-4">Kharif</td>
-              <td className="py-3 px-4">4-6 mahine</td>
-            </tr>
             <tr className="border-b border-gray-100 dark:border-gray-700">
-              <td className="py-3 px-4">Mulcher</td>
-              <td className="py-3 px-4">₹80K-1.5L</td>
-              <td className="py-3 px-4">₹600-1,000/acre</td>
-              <td className="py-3 px-4">Saal bhar</td>
-              <td className="py-3 px-4">6-10 mahine</td>
-            </tr>
-            <tr>
-              <td className="py-3 px-4">Potato Planter</td>
-              <td className="py-3 px-4">₹1-2L</td>
-              <td className="py-3 px-4">₹1,500-2,500/acre</td>
-              <td className="py-3 px-4">Aloo ka time</td>
-              <td className="py-3 px-4">3-5 mahine</td>
+              <td className="py-3 px-4 font-medium">Paddy Transplanter (8-row)</td>
+              <td className="py-3 px-4">₹2.0L - ₹3.5L</td>
+              <td className="py-3 px-4">₹1,500 - ₹2,500/acre</td>
+              <td className="py-3 px-4">Jun - Jul</td>
+              <td className="py-3 px-4">4-6 mahine</td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <p className="mb-4">
-        Shuru mein 5-7 samaan se kaam chalao. Jo zyada bikta ho wahi lo. Punjab/Haryana mein happy seeder, laser leveler, straw reaper zyada bikte hain. MP/UP mein seed drill, rotavator, sprayer. South mein paddy transplanter.
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
+        Hamesha apne nazdeeki <strong>Krishi Vigyan Kendra (KVK)</strong> ya District Agriculture Officer se puch kar hi final list banayein. Har state ki "Priority List" alag hoti hai, aur agar aap priority list wala samaan khareedte hain, toh subsidy approval bahut jaldi milta hai.
       </p>
 
-      <p className="mb-6">
-        Apne state ke Agriculture Department ki site ya agrimachinery.nic.in par exact list check karo. Har state mein thoda farq hota hai.
-      </p>
-
-      <Image 
-        src="/images/kisanguides/pchc-portal-implements.webp" 
-        alt="Various agricultural implements - Rotavator, Happy Seeder, Laser Leveler displayed at CHC" 
-        width={800} 
-        height={450} 
-        className="rounded-xl mb-6 shadow-md w-full object-cover" 
-      />
-
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800 dark:text-green-400">
-        Total kharcha kitna aayega?
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
+        Total Investment aur Hidden Costs (Real Hisab)
       </h2>
       
-      <p className="mb-4">
-        Punjab/Haryana jaisa high-demand area maan ke chalte hain. Bijli ka bill kam karne ke liye{' '}
-        <Link href="/articles/PmKusumYojanaSolarSubsidy2026" className="text-blue-600 dark:text-blue-400 hover:underline font-medium">
-          Solar Pump Yojana
-        </Link>{' '}
-        bhi dekh lo.
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        Bahut log sirf machinery ka daam dekhte hain, lekin CHC chalane mein "hidden costs" hote hain jo profit kha jate hain. Ek standard 55 HP Tractor + 6-7 implements ke setup ka realistic hisab dekhein:
       </p>
 
-      <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg mb-6 border border-gray-200 dark:border-gray-700">
-        <h3 className="font-bold text-lg mb-3 text-gray-900 dark:text-gray-100">1 Tractor + 8 Samaan ka hisaab</h3>
-        <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-          <li className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-2">
-            <span>Tractor (55 HP, naya):</span>
-            <span className="font-semibold">₹7-9 lakh</span>
+      <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-8 border border-gray-200 dark:border-gray-700 not-prose">
+        <h3 className="font-bold text-lg mb-4 text-gray-900 dark:text-gray-100 border-b border-gray-300 dark:border-gray-600 pb-2">1 Tractor + 7 Implements Setup (Approx)</h3>
+        <ul className="space-y-3 text-sm text-gray-700 dark:text-gray-300">
+          <li className="flex justify-between">
+            <span>Tractor (55 HP, Naya, with basic implements):</span>
+            <span className="font-semibold">₹7.5 - ₹9.0 Lakh</span>
           </li>
-          <li className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-2">
-            <span>Rotavator (7 feet):</span>
-            <span className="font-semibold">₹1-1.3 lakh</span>
+          <li className="flex justify-between">
+            <span>Additional Implements (Rotavator, Seeder, Leveler, Sprayer, etc.):</span>
+            <span className="font-semibold">₹8.0 - ₹12.0 Lakh</span>
           </li>
-          <li className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-2">
-            <span>Happy Seeder:</span>
-            <span className="font-semibold">₹1.4-1.7 lakh</span>
+          <li className="flex justify-between">
+            <span>Shed / Secure Storage (Construction ya Rent):</span>
+            <span className="font-semibold">₹1.5 - ₹3.0 Lakh</span>
           </li>
-          <li className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-2">
-            <span>Laser Leveler:</span>
-            <span className="font-semibold">₹3-3.8 lakh</span>
+          <li className="flex justify-between">
+            <span>Initial Working Capital (Diesel, Driver advance, Marketing):</span>
+            <span className="font-semibold">₹1.0 - ₹1.5 Lakh</span>
           </li>
-          <li className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-2">
-            <span>Seed Drill:</span>
-            <span className="font-semibold">₹80K-1.1 lakh</span>
+          <li className="flex justify-between border-t border-gray-300 dark:border-gray-600 pt-3 font-bold text-base text-gray-900 dark:text-gray-100">
+            <span>Total Project Cost:</span>
+            <span>₹18.0 - ₹25.5 Lakh</span>
           </li>
-          <li className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-2">
-            <span>Boom Sprayer:</span>
-            <span className="font-semibold">₹1.2-1.8 lakh</span>
+          <li className="flex justify-between text-green-700 dark:text-green-400 font-semibold bg-green-50 dark:bg-green-900/20 p-2 rounded mt-2">
+            <span>Sarkari Subsidy (Approx 40% on implements):</span>
+            <span>- ₹4.0 - ₹6.0 Lakh</span>
           </li>
-          <li className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-2">
-            <span>Straw Reaper:</span>
-            <span className="font-semibold">₹1.8-2.3 lakh</span>
-          </li>
-          <li className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-2">
-            <span>Mulcher:</span>
-            <span className="font-semibold">₹1-1.4 lakh</span>
-          </li>
-          <li className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-2">
-            <span>Aur chhote samaan:</span>
-            <span className="font-semibold">₹50-80K</span>
-          </li>
-          <li className="flex justify-between border-t-2 border-gray-300 dark:border-gray-600 pt-2 font-bold">
-            <span>Total samaan:</span>
-            <span>₹16.7-21.4 lakh</span>
-          </li>
-          <li className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-2">
-            <span>Shed/Storage:</span>
-            <span className="font-semibold">₹1.5-2.5 lakh</span>
-          </li>
-          <li className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-2">
-            <span>6 mahine ka kharcha:</span>
-            <span className="font-semibold">₹2-3 lakh</span>
-          </li>
-          <li className="flex justify-between border-t-2 border-gray-300 dark:border-gray-600 pt-2 font-bold text-lg">
-            <span>Total paisa lagayenge:</span>
-            <span className="text-green-700 dark:text-green-400">₹20.2-26.9 lakh</span>
-          </li>
-          <li className="flex justify-between bg-green-50 dark:bg-green-900/20 p-2 rounded mt-2">
-            <span className="font-semibold">Sarkar degi (40%):</span>
-            <span className="font-semibold text-green-700 dark:text-green-400">₹5-7 lakh</span>
-          </li>
-          <li className="flex justify-between bg-yellow-50 dark:bg-yellow-900/20 p-2 rounded font-bold">
-            <span>Aapko dena padega:</span>
-            <span className="text-yellow-800 dark:text-yellow-300">₹15.2-19.9 lakh</span>
+          <li className="flex justify-between text-yellow-800 dark:text-yellow-300 font-bold text-base bg-yellow-50 dark:bg-yellow-900/20 p-2 rounded mt-1">
+            <span>Aapko Arrange Karna Hai (Loan + Own):</span>
+            <span>₹14.0 - ₹19.5 Lakh</span>
           </li>
         </ul>
       </div>
 
-      <p className="mb-4">
-        Itna paisa ek saath nahi hai? Loan le sakte ho.{' '}
-        <Link href="/articles/KisanTractorLoan2026" className="text-blue-600 dark:text-blue-400 hover:underline font-medium">
-          Tractor Loan Guide
-        </Link>{' '}
-        padho — 7 saal tak ka loan milta hai, 9-11% byaaj.
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        Agar aapke paas itna cash nahi hai, toh bank loan ek achha option hai. Tractor aur implements dono collateral ke taur par kaam aate hain. <Link href="/articles/loan/KisanTractorLoan2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Tractor Loan Guide</Link> mein detail mein bataya gaya hai ki kaise aap 7-8 saal ke liye kam byaaj (9-11%) par loan le sakte hain.
       </p>
 
-      <p className="mb-6">
-        7-10 kisaan milkar group bana ke apply karo. Approval jaldi milta hai. FPO bana ke bhi apply kar sakte ho — unhe priority milti hai.
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
+        <strong>Group Formation Hack:</strong> Agar aap akele apply kar rahe hain, toh process thoda slow ho sakta hai. Agar aap 7-10 kisaanon ko mila kar ek "Group" ya "FPO" banakar apply karte hain, toh sarkar aapki application ko priority deti hai aur subsidy limit bhi thodi zyada hoti hai.
       </p>
 
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800 dark:text-green-400">
-        Apply kaise karein?
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
+        Subsidy Lene Ka Sahi Process (Bina Agent Ke)
       </h2>
       
-      <p className="mb-4">
-        Thoda lamba process hai par seedha hai. Step-by-step follow karo:
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        Process thoda lamba hai (3-6 mahine), lekin agar aap khud track karein toh bilkul seedha hai. Kisi "consultant" ko 10-15% commission dene ki zaroorat nahi hai.
       </p>
 
-      <div className="space-y-4 mb-6">
-        <div className="border-l-4 border-green-500 pl-4 py-1">
-          <h3 className="font-bold text-lg text-gray-900 dark:text-gray-100">Step 1: Kaun ban sakta hai</h3>
-          <p className="mt-2 text-gray-700 dark:text-gray-300">
-            Kisaan hona chahiye. Zameen honi chahiye. Tractor hona chahiye ya khareedne ki taakat. Group mein 7-10 kisaan hone chahiye.
-          </p>
+      <div className="space-y-6 mb-8 not-prose">
+        <div className="flex gap-4">
+          <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
+          <div>
+            <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">District Agriculture Office (DAO) Visit</h4>
+            <p className="text-sm text-gray-700 dark:text-gray-300">Seedha apne zila ke Krishi Vibhag ke office jayein. Wahan se current year ki "Priority List" aur application form lein. Officer se puchen ki is waqt kis implement par approval jaldi mil raha hai.</p>
+          </div>
         </div>
-
-        <div className="border-l-4 border-green-500 pl-4 py-1">
-          <h3 className="font-bold text-lg text-gray-900 dark:text-gray-100">Step 2: Zila office jao</h3>
-          <p className="mt-2 text-gray-700 dark:text-gray-300">
-            Agriculture Officer se milo. Current rules batayenge. Apne state ki site ya agrimachinery.nic.in par details check karo.
-          </p>
+        <div className="flex gap-4">
+          <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
+          <div>
+            <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">Quotations aur DPR Taiyar Karein</h4>
+            <p className="text-sm text-gray-700 dark:text-gray-300">Kam se kam 3 alag-alag authorized dealers se rate quotation lein (dated aur signed). Inke basis par ek simple Detailed Project Report (DPR) banayein jisme bataya ho ki aapka CHC kahan hoga aur kitne kisaanon ko serve karega.</p>
+          </div>
         </div>
-
-        <div className="border-l-4 border-green-500 pl-4 py-1">
-          <h3 className="font-bold text-lg text-gray-900 dark:text-gray-100">Step 3: Form bhariye</h3>
-          <p className="mt-2 text-gray-700 dark:text-gray-300">
-            Online ya offline. Ye kagaz lagenge:
-          </p>
-          <ul className="list-disc pl-6 mt-2 space-y-1 text-gray-700 dark:text-gray-300">
-            <li>Aadhaar, PAN</li>
-            <li>Zameen ka kagaz</li>
-            <li>Bank passbook (last 6 mahine)</li>
-            <li>Jaati praman (agar SC/ST)</li>
-            <li>Tractor RC (agar hai)</li>
-            <li>3 dukaan se quotation</li>
-          </ul>
+        <div className="flex gap-4">
+          <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
+          <div>
+            <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">Online Portal par Registration</h4>
+            <p className="text-sm text-gray-700 dark:text-gray-300">Apne state ke specific agriculture portal ya <a href="https://agrimachinery.nic.in" className="text-blue-600 hover:underline dark:text-blue-400" target="_blank" rel="noopener noreferrer">agrimachinery.nic.in</a> par register karein. Saare documents (Aadhaar, Land Record, Bank Passbook, Caste Certificate if applicable) upload karein.</p>
+          </div>
         </div>
-
-        <div className="border-l-4 border-green-500 pl-4 py-1">
-          <h3 className="font-bold text-lg text-gray-900 dark:text-gray-100">Step 4: Aapki zameen dekhenge</h3>
-          <p className="mt-2 text-gray-700 dark:text-gray-300">
-            Department ke adhikari aayenge. Shed hai, jagah sahi hai, plan theek hai — ye check karenge.
-          </p>
+        <div className="flex gap-4">
+          <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">4</div>
+          <div>
+            <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">Physical Verification</h4>
+            <p className="text-sm text-gray-700 dark:text-gray-300">Application submit karne ke baad, department ka koi na koi officer aapki zameen aur proposed shed ki physical verification karne aayega. Ensure karein ki jagah saaf ho aur boundary dikhai de.</p>
+          </div>
         </div>
-
-        <div className="border-l-4 border-green-500 pl-4 py-1">
-          <h3 className="font-bold text-lg text-gray-900 dark:text-gray-100">Step 5: Paisa milega</h3>
-          <p className="mt-2 text-gray-700 dark:text-gray-300">
-            Haan milne par bank se loan lo. Samaan khareedo. Phir sarkar ka paisa claim karo. Seedhe account mein aayega ya loan mein adjust hoga.
-          </p>
-        </div>
-
-        <div className="border-l-4 border-green-500 pl-4 py-1">
-          <h3 className="font-bold text-lg text-gray-900 dark:text-gray-100">Step 6: Portal par naam likhwao</h3>
-          <p className="mt-2 text-gray-700 dark:text-gray-300">
-            State CHC portal par apna samaan dikhayo. Kisaan online dekh kar book karenge. Bina iske order nahi milenge.
-          </p>
+        <div className="flex gap-4">
+          <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">5</div>
+          <div>
+            <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">Purchase aur Reimbursement</h4>
+            <p className="text-sm text-gray-700 dark:text-gray-300">Approval aane ke baad, aapko machinery khareedni hoti hai aur bill submit karna hota hai. Uske baad subsidy ki raashi seedhe aapke bank account mein DBT ke through aati hai, ya phir aapke loan account mein adjust ho jati hai.</p>
+          </div>
         </div>
       </div>
 
-      <p className="mb-6">
-        Poora kaam 3-6 mahine mein ho jata hai. Koi fees nahi lagti. Sab free hai.
-      </p>
-
-      <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg my-8 border border-blue-200 dark:border-blue-800">
-        <h3 className="font-semibold text-blue-800 dark:text-blue-300 mb-4">
-          Sarkari links:
-        </h3>
-        <ExternalLinkButton 
-          url="https://agrimachinery.nic.in"
-          label="Agriculture Machinery Portal"
-        />
-      </div>
-
-      <Image 
-        src="/images/kisanguides/chc-portal-application.webp" 
-        alt="Farmer filling CHC subsidy application form with documents at agriculture office" 
-        width={800} 
-        height={450} 
-        className="rounded-xl mb-6 shadow-md w-full object-cover" 
-      />
-
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800 dark:text-green-400">
-        Mahine ka kitna banega?
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
+        Monthly Income vs Expense: Ground Reality
       </h2>
       
-      <p className="mb-4">
-        Sabse zaroori sawaal. Ek andaza dekho:
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        Yeh wo hisab hai jo koi brochure mein nahi likhta. Peak season (Oct-Nov aur March-April) mein kamai achhi hoti hai, lekin summer (May-July) mein demand 60-70% gir jati hai. Ek realistic, conservative monthly estimate (peak season mein) kuch aisa dikhta hai:
       </p>
 
-      <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-4 mb-6">
-        <p className="text-sm text-amber-900 dark:text-amber-200 italic">
-          <strong>Note:</strong> Ye sirf andaza hai. Aapke area, season aur competition ke hisaab se alag hoga.
-        </p>
-      </div>
-
-      <div className="overflow-x-auto mb-6 rounded-lg border border-gray-200 dark:border-gray-700">
-        <table className="min-w-full bg-white dark:bg-gray-800">
-          <thead className="bg-blue-100 dark:bg-blue-900/40">
+      <div className="overflow-x-auto mb-8 not-prose">
+        <table className="min-w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden text-sm">
+          <thead className="bg-amber-100 dark:bg-amber-900/40">
             <tr>
-              <th className="py-3 px-4 border-b text-left text-blue-900 dark:text-blue-200">Samaan</th>
-              <th className="py-3 px-4 border-b text-left text-blue-900 dark:text-blue-200">Mahine mein kitni baar</th>
-              <th className="py-3 px-4 border-b text-left text-blue-900 dark:text-blue-200">Rate</th>
-              <th className="py-3 px-4 border-b text-left text-blue-900 dark:text-blue-200">Kamai</th>
+              <th className="py-3 px-4 border-b text-left text-amber-900 dark:text-amber-200">Source</th>
+              <th className="py-3 px-4 border-b text-left text-amber-900 dark:text-amber-200">Monthly Usage</th>
+              <th className="py-3 px-4 border-b text-left text-amber-900 dark:text-amber-200">Gross Income</th>
             </tr>
           </thead>
           <tbody className="text-gray-700 dark:text-gray-300">
             <tr className="border-b border-gray-100 dark:border-gray-700">
-              <td className="py-3 px-4">Tractor</td>
-              <td className="py-3 px-4">150 ghante</td>
-              <td className="py-3 px-4">₹900/ghanta</td>
-              <td className="py-3 px-4">₹1,35,000</td>
+              <td className="py-3 px-4">Tractor (Harrowing/Transport)</td>
+              <td className="py-3 px-4">120 Hours</td>
+              <td className="py-3 px-4">₹1,08,000</td>
             </tr>
             <tr className="border-b border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
               <td className="py-3 px-4">Rotavator</td>
-              <td className="py-3 px-4">60 acre</td>
-              <td className="py-3 px-4">₹700/acre</td>
-              <td className="py-3 px-4">₹42,000</td>
+              <td className="py-3 px-4">50 Acres</td>
+              <td className="py-3 px-4">₹35,000</td>
             </tr>
             <tr className="border-b border-gray-100 dark:border-gray-700">
-              <td className="py-3 px-4">Happy Seeder</td>
-              <td className="py-3 px-4">40 acre</td>
-              <td className="py-3 px-4">₹1,200/acre</td>
-              <td className="py-3 px-4">₹48,000</td>
-            </tr>
-            <tr className="border-b border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
-              <td className="py-3 px-4">Laser Leveler</td>
-              <td className="py-3 px-4">50 acre</td>
-              <td className="py-3 px-4">₹1,000/acre</td>
-              <td className="py-3 px-4">₹50,000</td>
-            </tr>
-            <tr className="border-b border-gray-100 dark:border-gray-700">
-              <td className="py-3 px-4">Boom Sprayer</td>
-              <td className="py-3 px-4">80 acre</td>
-              <td className="py-3 px-4">₹600/acre</td>
-              <td className="py-3 px-4">₹48,000</td>
-            </tr>
-            <tr className="border-b border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
-              <td className="py-3 px-4">Straw Reaper</td>
-              <td className="py-3 px-4">30 acre</td>
-              <td className="py-3 px-4">₹1,200/acre</td>
-              <td className="py-3 px-4">₹36,000</td>
-            </tr>
-            <tr className="border-b border-gray-100 dark:border-gray-700">
-              <td className="py-3 px-4">Baaki samaan</td>
-              <td className="py-3 px-4">Alag-alag</td>
-              <td className="py-3 px-4">-</td>
+              <td className="py-3 px-4">Laser Leveler / Seeder</td>
+              <td className="py-3 px-4">40 Acres</td>
               <td className="py-3 px-4">₹40,000</td>
             </tr>
-            <tr className="bg-green-50 dark:bg-green-900/20">
-              <td className="py-3 px-4 font-bold text-green-800 dark:text-green-300" colSpan={3}>Total mahine ki kamai</td>
-              <td className="py-3 px-4 font-bold text-green-700 dark:text-green-400">₹3,99,000</td>
+            <tr className="border-b border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
+              <td className="py-3 px-4">Sprayer / Reaper</td>
+              <td className="py-3 px-4">30 Acres</td>
+              <td className="py-3 px-4">₹25,000</td>
+            </tr>
+            <tr className="bg-green-50 dark:bg-green-900/20 font-bold">
+              <td className="py-3 px-4 text-green-800 dark:text-green-300" colSpan={2}>Total Gross Monthly Income</td>
+              <td className="py-3 px-4 text-green-700 dark:text-green-400">₹2,08,000</td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <p className="mb-4 font-bold text-gray-900 dark:text-gray-100">
-        Kharcha:
-      </p>
-
-      <ul className="list-disc pl-6 mb-6 space-y-2 text-gray-700 dark:text-gray-300">
-        <li>Diesel: ₹60-80K/mahina</li>
-        <li>Driver (1-2): ₹25-35K</li>
-        <li>Repair: ₹15-25K</li>
-        <li>Bima: ₹3-5K</li>
-        <li>Aur: ₹10-15K</li>
-        <li><strong>Total kharcha: ₹1.13-1.6 lakh</strong></li>
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 font-semibold">Ab isme se kharcha nikalte hain:</p>
+      <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-8">
+        <li><strong>Diesel & Lubricants:</strong> ₹50,000 - ₹70,000 (Sabse bada kharcha)</li>
+        <li><strong>Driver Salary (1-2 drivers):</strong> ₹25,000 - ₹35,000 (Base + Incentive)</li>
+        <li><strong>Repair & Maintenance:</strong> ₹10,000 - ₹15,000 (Belts, blades, grease)</li>
+        <li><strong>Insurance & Misc:</strong> ₹3,000 - ₹5,000</li>
+        <li><strong>Total Monthly Expense:</strong> <span className="font-bold text-red-600 dark:text-red-400">₹88,000 - ₹1,25,000</span></li>
       </ul>
 
-      <p className="mb-4 font-bold text-lg text-gray-900 dark:text-gray-100">
-        Haath mein aayega: ₹2.4-2.85 lakh/mahina
-      </p>
-
-      <p className="mb-6">
-        Ye tab jab poora season chal raha ho. Shuru ke 6 mahine mein ₹1-1.5 lakh hi aayega. Customer banane mein time lagta hai. Doosre saal ₹2-3 lakh tak pahunch jayega.
-      </p>
-
-      <p className="mb-4">
-        Loan EMI bhi hai. ₹15 lakh ka loan, 7 saal, 10% — toh ₹26K/mahina EMI. Phir bhi ₹2 lakh+ bachta hai.
-      </p>
-
-      <p className="mb-6">
-        Season ka farq yaad rakho. Kharif (June-Oct) aur Rabi (Oct-March) mein dhamaal hai. Garmi (April-June) mein 40-50% kam. Pura saal ka hisaab rakhna padega.
-      </p>
-
-      <Image 
-        src="/images/kisanguides/chc-portal-profit.webp" 
-        alt="CHC profit calculation chart showing monthly revenue and expenses breakdown" 
-        width={800} 
-        height={450} 
-        className="rounded-xl mb-6 shadow-md w-full object-cover" 
-      />
-
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-red-700 dark:text-red-400">
-        Problems jo koi nahi batata
-      </h2>
-      
-      <p className="mb-4">
-        Dhandha achha hai par mushkilein hain. Pehle se jaan lo.
-      </p>
-
-      <div className="space-y-4 mb-6">
-        <div className="border-l-4 border-red-500 pl-4 py-1">
-          <h3 className="font-bold text-lg text-gray-900 dark:text-gray-100">Machine kharab ho gayi</h3>
-          <p className="mt-2 text-gray-700 dark:text-gray-300">
-            Sabse badi dikkat. Kharab hui toh kiraya band. Customer doosre CHC par chala jayega. Season mein 100-150 ghante chalti hai — toot-phoot hoti hai. Spare parts aur mechanic pehle se rakh lo. 10-15% repair ke liye alag rakho.
-          </p>
-        </div>
-
-        <div className="border-l-4 border-red-500 pl-4 py-1">
-          <h3 className="font-bold text-lg text-gray-900 dark:text-gray-100">Paisa nahi dete</h3>
-          <p className="mt-2 text-gray-700 dark:text-gray-300">
-            Kisaan udhaar par lete hain. Fasal katne ke baad denge. 2-3 mahine late ho jata hai. Kabhi default bhi. Advance lo ya hissa hissa lo. Cash flow sambhalna mushkil hai.
-          </p>
-        </div>
-
-        <div className="border-l-4 border-red-500 pl-4 py-1">
-          <h3 className="font-bold text-lg text-gray-900 dark:text-gray-100">Driver ka jhagda</h3>
-          <p className="mt-2 text-gray-700 dark:text-gray-300">
-            Achha driver milta nahi. Jo milta hai season mein chhod deta hai — doosra zyada deta hai. Ya nashe mein chalata hai, machine toot ti hai. Training aur nazar rakhna zaroori hai.
-          </p>
-        </div>
-
-        <div className="border-l-4 border-red-500 pl-4 py-1">
-          <h3 className="font-bold text-lg text-gray-900 dark:text-gray-100">Doosra CHC aa gaya</h3>
-          <p className="mt-2 text-gray-700 dark:text-gray-300">
-            Ek hi gaon mein do CHC ho gaye toh rate gir jayenge. 2019 mein Punjab mein yahi hua — 20-30% kam ho gaye. Jagah soch samajh ke chuno.
-          </p>
-        </div>
-
-        <div className="border-l-4 border-red-500 pl-4 py-1">
-          <h3 className="font-bold text-lg text-gray-900 dark:text-gray-100">Mausam ka khel</h3>
-          <p className="mt-2 text-gray-700 dark:text-gray-300">
-            Baadh, sukha, ya achanak baarish — kheti bigad jati hai. Demand achanak band. 2022 mein Punjab mein October mein baarish hui — sabki kamai kam hui.
-          </p>
-        </div>
-
-        <div className="border-l-4 border-red-500 pl-4 py-1">
-          <h3 className="font-bold text-lg text-gray-900 dark:text-gray-100">Loan ka bojh</h3>
-          <p className="mt-2 text-gray-700 dark:text-gray-300">
-            ₹15-20 lakh ka loan hai toh ₹25-35K EMI hai. 2-3 mahine kamai hui toh default ho sakta hai. Apni aukaat se zyada mat uthao.
-          </p>
-        </div>
-      </div>
-
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800 dark:text-green-400">
-        Portal par kaise register honge?
-      </h2>
-      
-      <p className="mb-4">
-        Har state ka alag portal hai. Samaan dikhayo, kisaan online book karega. Bina iske order nahi milenge.
-      </p>
-
-      <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg mb-6 border border-gray-200 dark:border-gray-700">
-        <h3 className="font-bold text-lg mb-3 text-gray-900 dark:text-gray-100">State-wise registration:</h3>
-        <p className="text-sm mb-3 text-gray-700 dark:text-gray-300">
-          Apne state ki Agriculture Department site ya{' '}
-          <a href="https://agrimachinery.nic.in" className="text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">
-            agrimachinery.nic.in
-          </a>{' '}
-          par check karo. Har state ka alag tareeka hai.
+      <div className="bg-blue-50 dark:bg-blue-900/20 p-5 rounded-lg mb-8 border-l-4 border-blue-600 not-prose">
+        <p className="text-gray-800 dark:text-gray-200">
+          <strong>Net Profit (Peak Season):</strong> ₹80,000 se ₹1,20,000 prati mahina. <br/>
+          <span className="text-sm italic">Note: Lean season (garmiyon) mein yeh profit aadha ya usse bhi kam ho jata hai. Isliye saal bhar ka average nikal kar hi loan ki EMI (approx ₹25K-₹30K) plan karein.</span>
         </p>
       </div>
 
-      <p className="mb-4 text-gray-900 dark:text-gray-100 font-semibold">
-        Kaise karein:
-      </p>
-
-      <ol className="list-decimal pl-6 mb-6 space-y-2 text-gray-700 dark:text-gray-300">
-        <li>Portal par jao, "CHC Registration" dhoondo</li>
-        <li>Apna naam, pata, phone daalo</li>
-        <li>Samaan ki details daalo — brand, model, saal, photo</li>
-        <li>Rate card banao — har samaan ka kiraya</li>
-        <li>Calendar set karo — kab available ho</li>
-        <li>Bank account daalo (paisa aane ke liye)</li>
-        <li>Submit karo, verify hone par kaam shuru</li>
-      </ol>
-
-      <p className="mb-6">
-        Ek baar register ho gaye toh kisaan online dekh kar book karenge. Payment bhi online hogi. Udhaar ka jhagda kam hoga.
-      </p>
-
-      <p className="mb-6">
-        Bank loan ke liye bhi yeh registration kaam aati hai. Proof milta hai ki aap sach mein dhandha kar rahe ho.
-      </p>
-
-      <Image 
-        src="/images/kisanguides/chc-portal-registration.webp" 
-        alt="Farmer registering on state CHC portal using computer at agriculture office" 
-        width={800} 
-        height={450} 
-        className="rounded-xl mb-6 shadow-md w-full object-cover" 
-      />
-
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800 dark:text-green-400">
-        Training kahan se lein?
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
+        5 Badi Problems Jo Koi Pehle Nahi Batata
       </h2>
       
-      <p className="mb-4">
-        Bina seekhe mat koodo. Machine jaldi tootegi. Customer bhi naraz hoga.
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        Dhandha profitable hai, lekin isme wo mushkilein hain jo sirf field mein utarne ke baad pata chalti hain:
       </p>
 
-      <ul className="list-disc pl-6 mb-6 space-y-2 text-gray-700 dark:text-gray-300">
-        <li>
-          <strong>State Agriculture Department:</strong> Free training dete hain. 3-7 din ki hoti hai.
-        </li>
-        <li>
-          <strong>CIMAE, Bhopal:</strong> Achhi training. Advanced cheezein sikhte hain.
-        </li>
-        <li>
-          <strong>Company wale:</strong> Mahindra, Sonalika, John Deere — apne dealers se training dete hain.
-        </li>
-        <li>
-          <strong>KVK:</strong> Har district mein hai. CHC management sikhaate hain.
-        </li>
-        <li>
-          <strong>Pehle se CHC chala rahe hain:</strong> Unke paas 5-7 din kaam karo. Sabse behtareen training hai yeh.
-        </li>
-      </ul>
-
-      <p className="mb-6 text-gray-900 dark:text-gray-100 font-semibold">
-        Kya seekhoge:
-      </p>
-
-      <ul className="list-disc pl-6 mb-6 space-y-2 text-gray-700 dark:text-gray-300">
-        <li>Har samaan ka sahi istemal</li>
-        <li>Roz-marra ki safai</li>
-        <li>Chhoti problems ka ilaj</li>
-        <li>Customer se baat-cheet</li>
-        <li>Hisab-kitab rakhna</li>
-        <li>Suraksha ke niyam</li>
-      </ul>
-
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800 dark:text-green-400">
-        Dheere dheere badho
-      </h2>
-      
-      <p className="mb-4">
-        Ek din mein bada mat bano. Step-by-step chalo.
-      </p>
-
-      <div className="space-y-4 mb-6">
-        <div className="border-l-4 border-green-500 pl-4 py-1">
-          <h3 className="font-bold text-lg text-gray-900 dark:text-gray-100">Phase 1: Shuruat (0-6 mahine)</h3>
-          <p className="mt-2 text-gray-700 dark:text-gray-300">
-            Apna tractor + 3-4 samaan. Subsidy ke liye apply karo. 10-15 regular customer banao. Dekho kya bikta hai. Investment: ₹5-8 lakh (subsidy ke baad).
-          </p>
+      <div className="space-y-4 mb-8 not-prose">
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
+          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">1. Driver Ka Jhagda (Sabse Badi Dikkat)</h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300">Achha aur imaandaar driver dhoondhna sone ka anda dhoondhne jaisa hai. Peak season mein drivers gaon chhod kar doosri jagah chale jate hain jahan zyada paisa milta hai. <strong>Solution:</strong> Sirf salary par driver na rakhein. "Base Salary + ₹50 per acre incentive" ka model banayein taaki wo khud zyada kaam karne mein interested rahe.</p>
         </div>
 
-        <div className="border-l-4 border-green-500 pl-4 py-1">
-          <h3 className="font-bold text-lg text-gray-900 dark:text-gray-100">Phase 2: Badhao (6-18 mahine)</h3>
-          <p className="mt-2 text-gray-700 dark:text-gray-300">
-            20-30 customer ho gaye toh aur samaan lo. 1-2 driver rakh lo. Paas ke gaon mein bhi jao. Portal par active raho. Investment: ₹8-12 lakh aur.
-          </p>
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
+          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">2. Udhaari aur Payment Delay</h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300">Gaon mein rishton ki wajah se kisaan kaam karwa kar kehte hain "Fasal katne ke baad dunga". 3-4 mahine baad paisa mangne par jhagda hota hai. <strong>Solution:</strong> Naye customers se 50% advance lo. Sirf purane aur trusted customers ko hi 15 din ka credit do.</p>
         </div>
 
-        <div className="border-l-4 border-green-500 pl-4 py-1">
-          <h3 className="font-bold text-lg text-gray-900 dark:text-gray-100">Phase 3: Dhamaka (18+ mahine)</h3>
-          <p className="mt-2 text-gray-700 dark:text-gray-300">
-            Doosra tractor lo. Bade samaan — combine harvester, paddy transplanter. Multiple driver. Doosri jagah bhi khol lo.{' '}
-            <Link href="/articles/PMFMEYojana" className="text-blue-600 dark:text-blue-400 hover:underline font-medium">
-              PMFME Yojana
-            </Link>{' '}
-            se 35% aur mil sakta hai. Investment: ₹15-25 lakh.
-          </p>
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
+          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">3. Machine Breakdown During Peak</h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300">Jab sabse zyada demand hoti hai (jaise Gehu katne ka time), tabhi belt tootna ya blade kharab hona aam baat hai. Agar machine 2 din kharab rahi, toh customer doosre CHC ke paas chala jayega aur wapas nahi aayega. <strong>Solution:</strong> Hamesha extra belts, blades, aur grease stock mein rakhein. Ek local mechanic se pakka samjhauta kar lein.</p>
+        </div>
+
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
+          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">4. Off-Season Mein Paisa Kaise Aaye?</h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300">May aur June mein kheti ka kaam kam hota hai. Agar aapne sirf kheti par depend rehna hai, toh 4 mahine loss hoga. <strong>Solution:</strong> Off-season mein tractor ko construction material dhone, mitti khodai (earthmoving) ke liye trailer lagakar, ya phir <Link href="/articles/farming/PmKusumYojanaSolarSubsidy2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Solar Pump</Link> installation jaise kaamon mein lagayein.</p>
+        </div>
+
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
+          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">5. Local Competition aur Rate War</h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300">Agar aapke gaon mein pehle se 2-3 CHC hain, aur aap teesra khol rahe hain, toh log aapas mein rate kam karke market kharab kar denge. <strong>Solution:</strong> Jagah chunne se pehle 10-15 km ke radius ka survey karein. Agar demand supply se zyada hai, tabhi enter karein.</p>
         </div>
       </div>
 
-      <Image 
-        src="/images/kisanguides/chc-portal-scale.webp" 
-        alt="CHC business expansion from small to large scale - multiple tractors and implements" 
-        width={800} 
-        height={450} 
-        className="rounded-xl mb-6 shadow-md w-full object-cover" 
-      />
-
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800 dark:text-green-400">
-        Aapke liye sahi hai ya nahi?
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
+        Dheere-Dheere Scale Kaise Karein? (3-Phase Plan)
       </h2>
       
-      <p className="mb-4 text-gray-900 dark:text-gray-100 font-semibold">
-        CHC aapke liye hai agar:
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        Ek din mein bada business nahi banta. Isse step-by-step build karein:
       </p>
-      
-      <ul className="list-disc pl-6 mb-4 space-y-2 text-gray-700 dark:text-gray-300">
-        <li>Kisaan ho, zameen hai</li>
-        <li>Tractor hai ya khareed sakte ho</li>
-        <li>₹15-20 lakh laga sakte ho (subsidy ke baad)</li>
-        <li>Machinery samajhte ho ya seekhna chahte ho</li>
-        <li>Customer se baat kar sakte ho</li>
-        <li>Roz 8-10 ghante de sakte ho</li>
-        <li>Area mein demand hai</li>
-        <li>Dhairy hai — shuruat mein time lagta hai</li>
+
+      <ul className="list-none space-y-4 mb-8 not-prose">
+        <li className="flex gap-4 items-start">
+          <span className="flex-shrink-0 w-8 h-8 bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 rounded-full flex items-center justify-center font-bold text-sm">P1</span>
+          <div>
+            <strong className="block text-gray-900 dark:text-gray-100">Phase 1: Shuruat (Mahine 0-6)</strong>
+            <span className="text-sm text-gray-700 dark:text-gray-300">Apne existing tractor ke saath sirf 3-4 high-demand implements (jaise Rotavator, Seed Drill, Sprayer) se shuru karein. Subsidy ke liye apply karein. Focus sirf 10-15 loyal customers banane par ho. Investment: ₹5-8 Lakh (own + subsidy).</span>
+          </div>
+        </li>
+        <li className="flex gap-4 items-start">
+          <span className="flex-shrink-0 w-8 h-8 bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 rounded-full flex items-center justify-center font-bold text-sm">P2</span>
+          <div>
+            <strong className="block text-gray-900 dark:text-gray-100">Phase 2: Stabilization (Mahine 6-18)</strong>
+            <span className="text-sm text-gray-700 dark:text-gray-300">Jab cash flow stable ho jaye, toh 1-2 aur expensive implements (jaise Laser Leveler ya Happy Seeder) add karein. Ek full-time driver hire karein. Apne CHC ko state ke online portal par register karwa dein taaki online bookings aana shuru hon.</span>
+          </div>
+        </li>
+        <li className="flex gap-4 items-start">
+          <span className="flex-shrink-0 w-8 h-8 bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 rounded-full flex items-center justify-center font-bold text-sm">P3</span>
+          <div>
+            <strong className="block text-gray-900 dark:text-gray-100">Phase 3: Expansion (Mahine 18+)</strong>
+            <span className="text-sm text-gray-700 dark:text-gray-300">Ab aap doosra tractor ya ek bada machine (jaise Combine Harvester ya Paddy Transplanter) add kar sakte hain. Agar aap kisanon ki produce ko process karna chahte hain, toh <Link href="/articles/farming/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME Yojana</Link> ke tahat food processing unit ke liye bhi 35% subsidy le sakte hain.</span>
+          </div>
+        </li>
       </ul>
 
-      <p className="mb-4 text-gray-900 dark:text-gray-100 font-semibold">
-        CHC aapke liye nahi agar:
-      </p>
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
+        Kya Yeh Business Aapke Liye Sahi Hai?
+      </h2>
       
-      <ul className="list-disc pl-6 mb-6 space-y-2 text-gray-700 dark:text-gray-300">
-        <li>Machinery se darte ho</li>
-        <li>Customer handle nahi kar sakte</li>
-        <li>Jaldi paisa chahiye</li>
-        <li>Risk nahi le sakte</li>
-        <li>Non-agricultural area mein ho</li>
-      </ul>
+      <div className="grid md:grid-cols-2 gap-6 mb-8 not-prose">
+        <div className="bg-green-50 dark:bg-green-900/20 p-5 rounded-lg border border-green-200 dark:border-green-800">
+          <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">✅ Haan, agar:</h3>
+          <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+            <li>• Aapke paas khud ki zameen aur tractor hai.</li>
+            <li>• Aap machinery ki basic maintenance khud samajh sakte hain.</li>
+            <li>• Aap gaon ke logon se achha rapport (rishta) bana sakte hain.</li>
+            <li>• Aapke paas shuruat ke 6 mahine chalne ka financial buffer hai.</li>
+            <li>• Aap rozana 8-10 ghante field mein de sakte hain.</li>
+          </ul>
+        </div>
 
-      <p className="mb-6">
-        Pehli category mein ho toh CHC bahut achha dhandha hai. 40-50% sarkari madad mil rahi hai — iska fayda uthao. Par yaad rakho — yeh sofe baithne ka kaam nahi hai. Roz mehnat karni padegi.
-      </p>
+        <div className="bg-red-50 dark:bg-red-900/20 p-5 rounded-lg border border-red-200 dark:border-red-800">
+          <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">❌ Nahi, agar:</h3>
+          <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+            <li>• Aap sochte hain ki yeh "passive income" hai aur aap ghar baithe paisa kamayenge.</li>
+            <li>• Aap machinery ke technical mamlon se bilkul darte hain.</li>
+            <li>• Aapko 2-3 mahine ke andar hi apna paisa wapas chahiye.</li>
+            <li>• Aapke ilake mein pehle se bahut saare CHC hain aur kheti kam hai.</li>
+          </ul>
+        </div>
+      </div>
 
-      <p className="mb-6">
-        <strong>Meri salah:</strong> Pehle apne area ka survey karo. 5-10 CHC wale se baat karo. Unki mushkilein jaano. Phir zila office jao. Uske baad chhote se shuru karo. Confidence aaye toh badho.
-      </p>
-
-      <p className="mb-6">
-        CHC ek achha mauka hai. Sarkar bhi promote kar rahi hai. Sahi se karo toh 2-3 saal mein ₹2-3 lakh mahina aasani se hai. Par mehnat bahut hai — yeh "passive income" nahi hai.
-      </p>
-
-      <p className="mb-6">
-        Sach mein interested ho toh pehle apne nazdeeki Agriculture Department office jao. Wahan officers hain jo guide karenge. Exact tareeka batayenge.
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
+        <strong>Meri aakhri salah:</strong> Bina survey ke chhalaang na lagayein. Apne ilake ke 2-3 purane CHC owners se jaa kar milo. Unse unki sabse badi problem puchho. Uske baad hi apne zila office ka chakkar lagayein. CHC ek bahut achha business model hai, lekin yeh unhi ke liye hai jo mehnat aur dimaag dono lagane ko taiyar hain.
       </p>
 
       {/* Related Articles */}
-      <div className="mt-12 pt-8 border-t-2 border-gray-200 dark:border-gray-700">
+      <div className="mt-12 pt-8 border-t-2 border-gray-200 dark:border-gray-700 not-prose">
         <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6 flex items-center gap-2">
-          <span className="text-3xl">🚜</span>
-          Aur bhi padho
+          <span className="text-3xl">📚</span>
+          Aur Bhi Padhein (Related Guides)
         </h3>
         
         <p className="text-gray-600 dark:text-gray-400 mb-6">
-          In guides se aur fayda hoga:
+          In verified articles se aapke farming business ko aur clarity milegi:
         </p>
 
         <div className="grid sm:grid-cols-2 gap-4">
           <Link 
-            href="/articles/BakriPalanYojana"
-            className="flex items-center gap-3 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-4 rounded-xl border-2 border-green-200 dark:border-green-800 hover:shadow-lg transition-all group"
+            href="/articles/farming/bakri-palan-yojana-nlm-subsidy"
+            className="flex items-start gap-3 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-4 rounded-xl border-2 border-green-200 dark:border-green-800 hover:shadow-lg transition-all group"
           >
-            <span className="text-3xl group-hover:scale-110 transition-transform">🐐</span>
+            <span className="text-2xl group-hover:scale-110 transition-transform">🐐</span>
             <div>
-              <div className="font-semibold text-gray-900 dark:text-gray-100">Bakri Palan Subsidy</div>
-              <div className="text-xs text-gray-600 dark:text-gray-400">50% sarkari madad</div>
+              <div className="font-semibold text-gray-900 dark:text-gray-100">Bakri Palan Subsidy (NLM)</div>
+              <div className="text-xs text-gray-600 dark:text-gray-400">50% sarkari madad aur pura process</div>
             </div>
           </Link>
 
           <Link 
-            href="/articles/PMatsyaSampada" 
-            className="flex items-center gap-3 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 p-4 rounded-xl border-2 border-blue-200 dark:border-blue-800 hover:shadow-lg transition-all group"
+            href="/articles/farming/pm-matsya-sampada-yojana-fish-farming" 
+            className="flex items-start gap-3 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 p-4 rounded-xl border-2 border-blue-200 dark:border-blue-800 hover:shadow-lg transition-all group"
           >
-            <span className="text-3xl group-hover:scale-110 transition-transform">🐟</span>
+            <span className="text-2xl group-hover:scale-110 transition-transform">🐟</span>
             <div>
-              <div className="font-semibold text-gray-900 dark:text-gray-100">Machli Palan Yojana</div>
-              <div className="text-xs text-gray-600 dark:text-gray-400">Fisheries subsidy</div>
+              <div className="font-semibold text-gray-900 dark:text-gray-100">PM Matsya Sampada Yojana</div>
+              <div className="text-xs text-gray-600 dark:text-gray-400">Machli palan par 60% tak subsidy</div>
             </div>
           </Link>
 
           <Link 
-            href="/articles/PmfbyCropInsurance2026"
-            className="flex items-center gap-3 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 p-4 rounded-xl border-2 border-purple-200 dark:border-purple-800 hover:shadow-lg transition-all group"
+            href="/articles/farming/PmfbyCropInsurance2026"
+            className="flex items-start gap-3 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 p-4 rounded-xl border-2 border-purple-200 dark:border-purple-800 hover:shadow-lg transition-all group"
           >
-            <span className="text-3xl group-hover:scale-110 transition-transform">🛡️</span>
+            <span className="text-2xl group-hover:scale-110 transition-transform">🛡️</span>
             <div>
-              <div className="font-semibold text-gray-900 dark:text-gray-100">Fasal Bima Yojana</div>
-              <div className="text-xs text-gray-600 dark:text-gray-400">Fasal ka bima</div>
+              <div className="font-semibold text-gray-900 dark:text-gray-100">PMFBY Fasal Bima Yojana</div>
+              <div className="text-xs text-gray-600 dark:text-gray-400">Fasal kharab hone par pura nuksan cover</div>
             </div>
           </Link>
 
           <Link 
-            href="/articles/PmKisanMaandhanYojanaPension"
-            className="flex items-center gap-3 bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 p-4 rounded-xl border-2 border-orange-200 dark:border-orange-800 hover:shadow-lg transition-all group"
+            href="/articles/farming/PmKisanMaandhanYojanaPension"
+            className="flex items-start gap-3 bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 p-4 rounded-xl border-2 border-orange-200 dark:border-orange-800 hover:shadow-lg transition-all group"
           >
-            <span className="text-3xl group-hover:scale-110 transition-transform">👴</span>
+            <span className="text-2xl group-hover:scale-110 transition-transform">👴</span>
             <div>
-              <div className="font-semibold text-gray-900 dark:text-gray-100">Kisan Pension</div>
-              <div className="text-xs text-gray-600 dark:text-gray-400">₹3000/mahina pension</div>
+              <div className="font-semibold text-gray-900 dark:text-gray-100">Kisan Maandhan Pension</div>
+              <div className="text-xs text-gray-600 dark:text-gray-400">60 saal ki umar ke baad ₹3000/mahina</div>
             </div>
           </Link>
 
           <Link 
-            href="/articles/MushroomKheti"
-            className="flex items-center gap-3 bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-yellow-900/20 dark:to-amber-900/20 p-4 rounded-xl border-2 border-yellow-200 dark:border-yellow-800 hover:shadow-lg transition-all group"
+            href="/articles/farming/mushroom-kheti-nhb-subsidy"
+            className="flex items-start gap-3 bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-yellow-900/20 dark:to-amber-900/20 p-4 rounded-xl border-2 border-yellow-200 dark:border-yellow-800 hover:shadow-lg transition-all group"
           >
-            <span className="text-3xl group-hover:scale-110 transition-transform">🍄</span>
+            <span className="text-2xl group-hover:scale-110 transition-transform">🍄</span>
             <div>
-              <div className="font-semibold text-gray-900 dark:text-gray-100">Mushroom Kheti</div>
-              <div className="text-xs text-gray-600 dark:text-gray-400">Kam jagah mein zyada paisa</div>
+              <div className="font-semibold text-gray-900 dark:text-gray-100">Mushroom (Khumbi) Kheti</div>
+              <div className="text-xs text-gray-600 dark:text-gray-400">Kam jagah mein high profit business</div>
             </div>
           </Link>
         </div>
       </div>
 
-      <p className="mt-8 mb-6 italic text-gray-600 dark:text-gray-400 text-sm bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-        <strong>Note:</strong> Ye sirf jankari hai. Kimat, subsidy aur rules aapke area ke hisaab se alag ho sakte hain. Paisa lagane se pehle zila office ya kisi expert se salah lein. Last updated: July 2026.
-      </p>
+      <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-lg border-l-4 border-orange-500 not-prose">
+        <p className="text-sm text-gray-700 dark:text-gray-300">
+          <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
+          Yeh article sirf jankari aur guidance ke liye hai. Machinery ke daam, subsidy ke pratishat, aur sarkari rules samay-samay par aur state ke hisaab se badal sakte hain. Koi bhi paisa invest karne se pehle apne nazdeeki Krishi Vibhag (Agriculture Department) office se latest guidelines zaroor confirm karein. Last updated: July 2026.
+        </p>
+      </div>
     </article>
   );
 }
