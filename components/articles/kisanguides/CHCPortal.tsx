@@ -217,7 +217,7 @@ export default function CHCPortal() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Agar aapke paas itna cash nahi hai, toh bank loan ek achha option hai. Tractor aur implements dono collateral ke taur par kaam aate hain. <Link href="/articles/loan/KisanTractorLoan2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Tractor Loan Guide</Link> mein detail mein bataya gaya hai ki kaise aap 7-8 saal ke liye kam byaaj (9-11%) par loan le sakte hain.
+        Agar aapke paas itna cash nahi hai, toh bank loan ek achha option hai. Tractor aur implements dono collateral ke taur par kaam aate hain. <Link href="/articles/KisanTractorLoan2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Tractor Loan Guide</Link> mein detail mein bataya gaya hai ki kaise aap 7-8 saal ke liye kam byaaj (9-11%) par loan le sakte hain.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
@@ -358,7 +358,7 @@ export default function CHCPortal() {
 
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
           <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">4. Off-Season Mein Paisa Kaise Aaye?</h4>
-          <p className="text-sm text-gray-700 dark:text-gray-300">May aur June mein kheti ka kaam kam hota hai. Agar aapne sirf kheti par depend rehna hai, toh 4 mahine loss hoga. <strong>Solution:</strong> Off-season mein tractor ko construction material dhone, mitti khodai (earthmoving) ke liye trailer lagakar, ya phir <Link href="/articles/farming/PmKusumYojanaSolarSubsidy2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Solar Pump</Link> installation jaise kaamon mein lagayein.</p>
+          <p className="text-sm text-gray-700 dark:text-gray-300">May aur June mein kheti ka kaam kam hota hai. Agar aapne sirf kheti par depend rehna hai, toh 4 mahine loss hoga. <strong>Solution:</strong> Off-season mein tractor ko construction material dhone, mitti khodai (earthmoving) ke liye trailer lagakar, ya phir <Link href="/articles/PmKusumYojanaSolarSubsidy2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Solar Pump</Link> installation jaise kaamon mein lagayein.</p>
         </div>
 
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
@@ -394,7 +394,7 @@ export default function CHCPortal() {
           <span className="flex-shrink-0 w-8 h-8 bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 rounded-full flex items-center justify-center font-bold text-sm">P3</span>
           <div>
             <strong className="block text-gray-900 dark:text-gray-100">Phase 3: Expansion (Mahine 18+)</strong>
-            <span className="text-sm text-gray-700 dark:text-gray-300">Ab aap doosra tractor ya ek bada machine (jaise Combine Harvester ya Paddy Transplanter) add kar sakte hain. Agar aap kisanon ki produce ko process karna chahte hain, toh <Link href="/articles/farming/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME Yojana</Link> ke tahat food processing unit ke liye bhi 35% subsidy le sakte hain.</span>
+            <span className="text-sm text-gray-700 dark:text-gray-300">Ab aap doosra tractor ya ek bada machine (jaise Combine Harvester ya Paddy Transplanter) add kar sakte hain. Agar aap kisanon ki produce ko process karna chahte hain, toh <Link href="/articles/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME Yojana</Link> ke tahat food processing unit ke liye bhi 35% subsidy le sakte hain.</span>
           </div>
         </li>
       </ul>
@@ -443,7 +443,7 @@ export default function CHCPortal() {
 
         <div className="grid sm:grid-cols-2 gap-4">
           <Link 
-            href="/articles/farming/bakri-palan-yojana-nlm-subsidy"
+            href="/articles/bakri-palan-yojana-nlm-subsidy"
             className="flex items-start gap-3 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-4 rounded-xl border-2 border-green-200 dark:border-green-800 hover:shadow-lg transition-all group"
           >
             <span className="text-2xl group-hover:scale-110 transition-transform">🐐</span>
@@ -454,7 +454,7 @@ export default function CHCPortal() {
           </Link>
 
           <Link 
-            href="/articles/farming/pm-matsya-sampada-yojana-fish-farming" 
+            href="/articles/pm-matsya-sampada-yojana-fish-farming" 
             className="flex items-start gap-3 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 p-4 rounded-xl border-2 border-blue-200 dark:border-blue-800 hover:shadow-lg transition-all group"
           >
             <span className="text-2xl group-hover:scale-110 transition-transform">🐟</span>
@@ -465,7 +465,7 @@ export default function CHCPortal() {
           </Link>
 
           <Link 
-            href="/articles/farming/PmfbyCropInsurance2026"
+            href="/articles/PmfbyCropInsurance2026"
             className="flex items-start gap-3 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 p-4 rounded-xl border-2 border-purple-200 dark:border-purple-800 hover:shadow-lg transition-all group"
           >
             <span className="text-2xl group-hover:scale-110 transition-transform">🛡️</span>
@@ -476,7 +476,7 @@ export default function CHCPortal() {
           </Link>
 
           <Link 
-            href="/articles/farming/PmKisanMaandhanYojanaPension"
+            href="/articles/PmKisanMaandhanYojanaPension"
             className="flex items-start gap-3 bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 p-4 rounded-xl border-2 border-orange-200 dark:border-orange-800 hover:shadow-lg transition-all group"
           >
             <span className="text-2xl group-hover:scale-110 transition-transform">👴</span>
@@ -487,7 +487,7 @@ export default function CHCPortal() {
           </Link>
 
           <Link 
-            href="/articles/farming/mushroom-kheti-nhb-subsidy"
+            href="/articles/mushroom-kheti-nhb-subsidy"
             className="flex items-start gap-3 bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-yellow-900/20 dark:to-amber-900/20 p-4 rounded-xl border-2 border-yellow-200 dark:border-yellow-800 hover:shadow-lg transition-all group"
           >
             <span className="text-2xl group-hover:scale-110 transition-transform">🍄</span>
