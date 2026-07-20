@@ -2,8 +2,11 @@ import { MetadataRoute } from 'next';
 import { ARTICLES, CATEGORIES, type CategorySlug } from '@/lib/articles-data';
 import { SITE_URL } from '@/lib/site-config';
 
+// ✅ Static reference date — har build pe same rahega
+const REFERENCE_DATE = new Date('2026-07-20T00:00:00+05:30');
+
 function getArticlePriority(modifiedTime: string): number {
-  const daysSinceModified = Math.floor((Date.now() - new Date(modifiedTime).getTime()) / 86400000);
+  const daysSinceModified = Math.floor((REFERENCE_DATE.getTime() - new Date(modifiedTime).getTime()) / 86400000);
   if (daysSinceModified <= 1) return 1.0;
   if (daysSinceModified <= 7) return 0.95;
   if (daysSinceModified <= 30) return 0.90;
@@ -22,7 +25,7 @@ function getArticleFrequency(category: string): MetadataRoute.Sitemap[number]['c
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
+  const now = REFERENCE_DATE;  // ✅ Static date
 
   const staticPages: MetadataRoute.Sitemap = [
     { 
