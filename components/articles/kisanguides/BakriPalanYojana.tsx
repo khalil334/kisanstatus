@@ -179,7 +179,7 @@ export default function BakriPalanYojana() {
 
         <Image 
           src="/images/kisanguides/bakri-palan-nlm-subsidy.webp"
-          alt="Bakri Palan Yojana NLM Subsidy - Goat Farming Scheme India 2026 with farmer"
+          alt="NLM Bakri Palan Yojana 2026 - Farmer with goats receiving 50% subsidy under National Livestock Mission"
           width={800}
           height={450}
           priority
@@ -251,6 +251,15 @@ export default function BakriPalanYojana() {
           <li><strong>Black Bengal:</strong> Chhote area ke liye badhiya hai. Yeh ek baar mein 2-3 bachhe deti hai, jisse flock size tezi se badhta hai.</li>
         </ul>
 
+        <Image 
+          src="/images/kisanguides/goat-breeds-comparison.webp"
+          alt="Popular goat breeds for NLM subsidy - Jamunapari, Sirohi, Beetal, and Black Bengal comparison"
+          width={800}
+          height={450}
+          sizes="(max-width: 768px) 100vw, 800px"
+          className="rounded-xl shadow-md mb-8 w-full object-cover not-prose"
+        />
+
         <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
           <h3 className="font-bold text-yellow-800 dark:text-yellow-300 mb-2 text-sm">⚠️ Breed Final Karne Se Pehle Ye 4 Cheezein Check Karein:</h3>
           <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300">
@@ -298,7 +307,7 @@ export default function BakriPalanYojana() {
 
         <Image 
           src="/images/kisanguides/documents-checklist.webp"
-          alt="NLM Bakri Palan Required Documents Checklist for Subsidy Application"
+          alt="NLM subsidy application documents checklist - Aadhaar, land papers, bank details, and DPR requirements"
           width={800}
           height={450}
           sizes="(max-width: 768px) 100vw, 800px"
@@ -318,8 +327,17 @@ export default function BakriPalanYojana() {
         </ul>
 
         <Image 
+          src="/images/kisanguides/goat-farming-shed-construction.webp"
+          alt="NLM approved goat farming shed construction - proper ventilation, drainage and housing design for 100+ goats"
+          width={800}
+          height={450}
+          sizes="(max-width: 768px) 100vw, 800px"
+          className="rounded-xl shadow-md mb-8 w-full object-cover not-prose"
+        />
+
+        <Image 
           src="/images/kisanguides/nlm-required-documents.webp"
-          alt="Detailed Project Report DPR and Required Documents for NLM Subsidy Approval"
+          alt="DPR Detailed Project Report format and required documents for NLM bakri palan subsidy approval"
           width={800}
           height={450}
           sizes="(max-width: 768px) 100vw, 800px"
@@ -332,6 +350,16 @@ export default function BakriPalanYojana() {
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
           Ek chhota sa bimari ka outbreak pure flock ko khatam kar sakta hai. Yeh koi darawani baat nahi, ground reality hai.
         </p>
+        
+        <Image 
+          src="/images/kisanguides/goat-vaccination-schedule.webp"
+          alt="Goat vaccination schedule chart - PPR, ET, FMD vaccines timeline and deworming calendar for NLM farms"
+          width={800}
+          height={450}
+          sizes="(max-width: 768px) 100vw, 800px"
+          className="rounded-xl shadow-md mb-8 w-full object-cover not-prose"
+        />
+
         <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-6">
           <li><strong>PPR (Peste des Petits Ruminants):</strong> Har 6 mahine mein. Sabse zaroori. Sarkari dispansary mein aksar free milti hai.</li>
           <li><strong>Enterotoxaemia (ET):</strong> Saal mein ek baar, lambing se pehle dena behtar hota hai.</li>
@@ -364,7 +392,7 @@ export default function BakriPalanYojana() {
 
         <Image 
           src="/images/kisanguides/nlm-subsidy-calculation.webp"
-          alt="NLM Bakri Palan Subsidy Calculation and Profit Estimation Chart"
+          alt="NLM bakri palan subsidy calculation - 50% subsidy on project cost, ROI and profit estimation breakdown"
           width={800}
           height={450}
           sizes="(max-width: 768px) 100vw, 800px"
@@ -398,7 +426,7 @@ export default function BakriPalanYojana() {
 
         <Image 
           src="/images/kisanguides/nlm-application-help.webp"
-          alt="Step by Step NLM Application Process Help and Portal Guide"
+          alt="NLM Udyamimitra portal application process - step by step online registration and form submission guide"
           width={800}
           height={450}
           sizes="(max-width: 768px) 100vw, 800px"
@@ -406,7 +434,7 @@ export default function BakriPalanYojana() {
         />
 
         <div className="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
-          <h3 className="font-bold text-red-800 dark:text-red-300 mb-2 text-sm">🚫 Common Mistakes During Site Inspection:</h3>
+          <h3 className="font-bold text-red-800 dark:text-red-300 mb-2 text-sm">⚠️ Common Mistakes During Site Inspection:</h3>
           <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300">
             <li>Officer ke aane se pehle farm ya shed puri tarah ready nahi hota.</li>
             <li>Quotation mein jo equipment dikhaya tha, wo actually khareeda nahi gaya.</li>
@@ -414,15 +442,6 @@ export default function BakriPalanYojana() {
             <li>Documents ki original copies farm site par available nahi hain.</li>
           </ul>
         </div>
-
-        <Image 
-          src="/images/kisanguides/goat-farming-shed-construction.webp"
-          alt="Proper Goat Farming Shed Construction under NLM Subsidy Guidelines 2026"
-          width={800}
-          height={450}
-          sizes="(max-width: 768px) 100vw, 800px"
-          className="rounded-xl shadow-md mb-8 w-full object-cover not-prose"
-        />
 
         <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
           Aksar Puche Jane Wale Sawal (FAQs)
