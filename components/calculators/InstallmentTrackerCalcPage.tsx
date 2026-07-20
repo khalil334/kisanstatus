@@ -3,6 +3,22 @@
 import { useState } from 'react';
 import Link from 'next/link';
 
+const SITE_URL = 'https://kisanstatus.com';
+const SITE_NAME = 'KisanStatus';
+const AUTHOR_NAME = 'KisanStatus Team';
+const AUTHOR_URL = `${SITE_URL}/about`;
+
+const PUBLISHED = '2026-02-15T08:00:00+05:30';
+const MODIFIED = '2026-07-09T08:00:00+05:30';
+
+function fmtDate(iso: string) {
+  return new Date(iso).toLocaleDateString('hi-IN', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
+}
+
 const KIST_CONFIG = {
   current: {
     name: '23वीं किस्त',
@@ -18,19 +34,32 @@ const KIST_CONFIG = {
   },
 };
 
+// Breadcrumb schema — matches the pattern used on article pages
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Calculator', item: `${SITE_URL}/calculator` },
+    { '@type': 'ListItem', position: 3, name: 'Installment Tracker', item: `${SITE_URL}/calculator/installment-tracker` },
+  ],
+};
+
+// WebApplication schema — fake aggregateRating removed (no real reviews are
+// collected on this page, so that rating was fabricated and a spam risk).
+// datePublished / dateModified added for freshness signals.
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'WebApplication',
   name: 'PM Kisan Kist Tracker 2026 — Kist Kyun Ruki Hai Jaano',
-  url: 'https://kisanstatus.com/calculator/installment-tracker',
+  url: `${SITE_URL}/calculator/installment-tracker`,
   applicationCategory: 'FinanceApplication',
   description: '4 sawaal mein pata karo ki PM Kisan ki kist kyun ruki hai — eKYC, bank seeding, land seeding check karo. Free tool.',
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.8',
-    ratingCount: '1847',
-  },
+  author: { '@type': 'Organization', name: AUTHOR_NAME, url: AUTHOR_URL },
+  publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+  datePublished: PUBLISHED,
+  dateModified: MODIFIED,
 };
 
 export default function InstallmentTrackerCalcPage() {
@@ -108,15 +137,16 @@ export default function InstallmentTrackerCalcPage() {
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
-          <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
+          <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            <span>/</span>
+            <span aria-hidden="true">/</span>
             <Link href="/calculator" className="hover:text-white transition-colors">Utilities</Link>
-            <span>/</span>
+            <span aria-hidden="true">/</span>
             <span className="text-white font-bold">Kist Tracker</span>
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">
@@ -125,29 +155,30 @@ export default function InstallmentTrackerCalcPage() {
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
             PM Kisan Kist Tracker 2026
           </h1>
-          <p className="text-green-100 text-sm md:text-base max-w-2xl">
+          <p className="text-green-100 text-sm md:text-base max-w-2xl mb-3">
             Kist kyun ruki hai? 4 sawaal mein pata karo — eKYC, bank seeding, land seeding sab check karo
           </p>
+          {/* E-E-A-T signal: author + last updated, matches article pages */}
+          <div className="flex flex-wrap gap-3 text-xs text-green-200">
+            <span>✍️ <Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>
+            <span>📅 {fmtDate(PUBLISHED)}</span>
+            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
+          </div>
         </div>
       </div>
 
       <div className="container-site max-w-2xl py-8">
         {/* Detailed intro */}
         <div className="mb-6 p-5 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl text-sm text-[var(--color-text)] leading-relaxed">
-          <p className="font-bold text-green-900 dark:text-green-300 mb-2">📆 Kist Kyun Nahi Aayi? Jaano Turant</p>
+          <p className="font-bold text-green-900 dark:text-green-300 mb-2">📆 Kist Kyun Nahi Aayi?</p>
           <p className="mb-2">
-            <strong>{KIST_CONFIG.current.name}</strong> {releaseDateStr} ko release ho chuki hai — <strong>{KIST_CONFIG.current.beneficiaries}</strong> kisanon ko {KIST_CONFIG.current.amount} mil chuke hain.
+            <strong>{KIST_CONFIG.current.name}</strong> {releaseDateStr} ko aa chuki hai, {KIST_CONFIG.current.beneficiaries} kisanon ke account mein {KIST_CONFIG.current.amount} pahunch bhi gaye. Agar aapke account mein abhi tak nahi dikh raha, ghabrane wali baat nahi — zyadatar cases mein wajah wahi teen hoti hai jo hum roz suno karte hain.
           </p>
           <p className="mb-2">
-            Agar aapke account mein abhi tak nahi aayi, toh <strong>3 main reasons</strong> ho sakte hain:
+            Sabse zyada log <strong>eKYC</strong> pe atakte hain — Aadhaar OTP verify nahi hua toh paisa ruk jata hai. Doosra number <strong>bank seeding</strong> ka aata hai, matlab Aadhaar aur bank account link nahi. Aur teesra, <strong>land seeding</strong> — zameen ka record abhi tak portal se match nahi hua.
           </p>
-          <ul className="space-y-1 ml-4 mb-3">
-            <li>❌ <strong>eKYC nahi hua</strong> — 90% cases mein yahi problem hoti hai</li>
-            <li>❌ <strong>Bank seeding nahi hui</strong> — Aadhaar bank se link nahi hai</li>
-            <li>❌ <strong>Land seeding problem</strong> — zameen ka record portal se link nahi hua</li>
-          </ul>
           <p className="text-xs text-green-700 dark:text-green-300">
-            💡 <strong>Tip:</strong> Neeche 4 sawaal ka jawab do — turant pata chal jayega ki kist kyun ruki hai aur kaise fix karna hai.
+            💡 Neeche 4 sawaalon ka jawab de do, hum bata denge exact wajah kya hai aur usko fix kaise karna hai.
           </p>
         </div>
 
@@ -324,19 +355,19 @@ export default function InstallmentTrackerCalcPage() {
           <div className="space-y-3 text-sm">
             <div className="p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
               <p className="font-bold text-red-900 dark:text-red-300 text-xs mb-1">❌ eKYC Nahi Hua (90% Cases)</p>
-              <p className="text-xs text-red-800 dark:text-red-400">Sabse common reason. Aadhaar se OTP verify karo — 5 minute mein ho jayega. CSC center ya online — dono free hain.</p>
+              <p className="text-xs text-red-800 dark:text-red-400">Ye sabse zyada dikhne wali wajah hai. Fix simple hai — Aadhaar OTP se verify karo, 5 minute ka kaam hai, aur CSC center ya online dono jagah free milta hai.</p>
             </div>
             <div className="p-3 bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 rounded-xl">
               <p className="font-bold text-orange-900 dark:text-orange-300 text-xs mb-1">🏦 Bank Seeding Nahi Hui</p>
-              <p className="text-xs text-orange-800 dark:text-orange-400">Aadhaar bank account se link nahi hai. Bank jao, Aadhaar seeding karwao. NPCI mapper se bhi ho jayega.</p>
+              <p className="text-xs text-orange-800 dark:text-orange-400">Matlab Aadhaar aapke bank account se abhi link nahi hai. Nazdiki branch mein jaake seeding form bhar do, ya NPCI mapper se bhi try kar sakte ho.</p>
             </div>
             <div className="p-3 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-xl">
               <p className="font-bold text-yellow-900 dark:text-yellow-300 text-xs mb-1">🌾 Land Seeding Problem</p>
-              <p className="text-xs text-yellow-800 dark:text-yellow-400">Zameen ka record portal se link nahi hua. Patwari ya revenue department se baat karo. 7-14 din mein fix ho jayega.</p>
+              <p className="text-xs text-yellow-800 dark:text-yellow-400">Zameen ka record abhi tak portal se match nahi hua — is baare mein patwari ya revenue office se baat karni padegi. Thoda time lagta hai, 7-14 din tak.</p>
             </div>
             <div className="p-3 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-xl">
               <p className="font-bold text-purple-900 dark:text-purple-300 text-xs mb-1">❌ Application Reject</p>
-              <p className="text-xs text-purple-800 dark:text-purple-400">Documents galat, zameen galat, ya duplicate entry. Reason check karo aur fix karo. Re-apply kar sakte ho.</p>
+              <p className="text-xs text-purple-800 dark:text-purple-400">Kabhi galat document, kabhi zameen ka mismatch, kabhi duplicate entry — reason alag alag ho sakti hai. Status page pe exact reason likha hota hai, wahi check karke re-apply karo.</p>
             </div>
           </div>
         </div>
