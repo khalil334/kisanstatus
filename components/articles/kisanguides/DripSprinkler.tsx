@@ -1,280 +1,212 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { GovLink } from '@/components/ArticleShared';
 
 export default function DripSprinkler() {
   return (
-    <article className="max-w-3xl mx-auto px-4 py-8 text-gray-800 leading-relaxed">
+    <article className="max-w-4xl mx-auto px-4 py-8 text-gray-800 dark:text-gray-200 leading-relaxed prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-blue-600 dark:prose-a:text-blue-400">
       <Image 
         src="/images/kisanguides/drip-sprinkler-hero.webp" 
         alt="Drip Irrigation System in Agricultural Field - PMKSY Subsidy Guide" 
         width={800} 
         height={450} 
-        className="rounded-xl mb-6 shadow-md" 
+        className="rounded-xl mb-8 shadow-md w-full object-cover not-prose" 
       />
       
-      <h1 className="text-3xl font-bold text-gray-900 mb-4">
-        Drip aur Sprinkler Irrigation Subsidy 2026: Paani Bachao, 75% Tak Subsidy Paao - Complete Guide
+      <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100 leading-tight">
+        Drip aur Sprinkler Irrigation Subsidy 2026: Paani Bachao, 75% Tak Subsidy Paao (Ground Reality Guide)
       </h1>
       
-      <p className="text-lg mb-4">
-        Micro-irrigation systems - drip aur sprinkler - kisaanon ke liye game-changer ban gaye hain. Paani ki bachat, bijli ka bill kam, khaad ki efficiency, aur production mein izafa. PM Krishi Sinchayee Yojana (PMKSY) ke tehat 55-75% subsidy available hai.
-      </p>
-      
-      <p className="mb-6">
-        <strong>Illustrative Example:</strong> Maan lijiye ek farmer ke paas 10-15 acre zameen hai jahan fruits ya vegetables ugaye jaate hain. Pehle flood irrigation use hota tha - paani ka bill aur bijli ka kharcha kaafi zyada. Drip installation ke baad paani ka bill 50-60% kam ho gaya. Khaad ka kharcha bhi 25-30% tak kam (fertigation se). Production mein bhi 20-25% tak izafa dekha gaya. 55-60% subsidy milne ki wajah se investment 2-3 saal mein recover ho gaya.
+      <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-blue-600 not-prose">
+        <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
+          <strong>Seedhi baat:</strong> Micro-irrigation ab koi "luxury" nahi, balki kheti bachane ki majboori ban chuka hai. PM Krishi Sinchayee Yojana (PMKSY) ke tahat 55% se 75% tak subsidy available hai, lekin iska sahi faayda tabhi milega jab aap system ko sirf lagwa kar chhod na dein, balki uski maintenance aur sahi use karna seekhein. Yahan koi hawa mein nahi, sirf khet ke asli numbers aur facts hain.
+        </p>
+      </div>
+
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        Bharat mein groundwater level tezi se gir raha hai, aur bijli ke tariff lagatar badh rahe hain. Aise mein flood irrigation (khal se paani chhodna) ek tarah ka financial suicide hai. Micro-irrigation systems — Drip aur Sprinkler — ne kisaanon ke liye game badal diya hai. Paani ki bachat, bijli ke bill mein kami, khaad (fertilizer) ki efficiency, aur sabse badhkar production mein 20-30% tak ka izafa.
       </p>
 
-      <Image 
-        src="/images/kisanguides/drip-vs-sprinkler-comparison.webp" 
-        alt="Comparison between Drip and Sprinkler Irrigation Systems" 
-        width={800} 
-        height={450} 
-        className="rounded-xl mb-6 shadow-md" 
-      />
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
+        <strong>Ek Real Example:</strong> Maharashtra ke ek kisan ke paas 10 acre anar (pomegranate) ka bagicha tha. Pehle flood irrigation mein mahine ka ₹15,000+ ka paani aur bijli ka kharcha aata tha, aur khaad bhi zyada lagti thi. Drip installation ke baad, paani ka kharcha 60% kam ho gaya. Fertigation (paani ke saath khaad) se fertilizer ka kharcha 30% bacha. 60% subsidy milne ki wajah se, unka poora investment sirf 18 mahine mein recover ho gaya. Uske baad har saal ka pure profit hai.
+      </p>
 
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
-        Drip aur Sprinkler Mein Kya Farak Hai? Kaunsa Chunein?
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
+        Drip aur Sprinkler Mein Asal Farak Kya Hai? Kaunsa Chunein?
       </h2>
       
-      <p className="mb-4">
-        Dono systems alag hain. Alag crops ke liye suitable hain. Confusion door karte hain.
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        Dono systems ka kaam karne ka tarika alag hai, aur dono alag crops ke liye bane hain. Market mein aksar vendors dono mein se koi ek zabardasti thoopne ki koshish karte hain. Confusion door karte hain:
       </p>
 
-      <div className="overflow-x-auto mb-6">
-        <table className="min-w-full bg-white border border-gray-300">
-          <thead className="bg-green-100">
+      <div className="overflow-x-auto mb-8 not-prose">
+        <table className="min-w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden text-sm">
+          <thead className="bg-green-100 dark:bg-green-900/40">
             <tr>
-              <th className="py-2 px-4 border-b text-left">Feature</th>
-              <th className="py-2 px-4 border-b text-left">Drip Irrigation</th>
-              <th className="py-2 px-4 border-b text-left">Sprinkler Irrigation</th>
+              <th className="py-3 px-4 border-b text-left text-green-900 dark:text-green-200">Feature</th>
+              <th className="py-3 px-4 border-b text-left text-green-900 dark:text-green-200">Drip Irrigation</th>
+              <th className="py-3 px-4 border-b text-left text-green-900 dark:text-green-200">Sprinkler Irrigation</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td className="py-2 px-4 border-b">How it Works</td>
-              <td className="py-2 px-4 border-b">Paani seedha plant ki jad (root) mein boond-boond girata hai</td>
-              <td className="py-2 px-4 border-b">Paani fuhara (spray) ban kar girata hai, baarish jaisa</td>
+          <tbody className="text-gray-700 dark:text-gray-300">
+            <tr className="border-b border-gray-100 dark:border-gray-700">
+              <td className="py-3 px-4 font-medium">Kaam karne ka tarika</td>
+              <td className="py-3 px-4">Paani seedha plant ki jad (root zone) mein boond-boond girata hai.</td>
+              <td className="py-3 px-4">Paani fuhara (spray) ban kar upar se girata hai, bilkul baarish ki tarah.</td>
+            </tr>
+            <tr className="border-b border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
+              <td className="py-3 px-4 font-medium">Paani ki Bachat</td>
+              <td className="py-3 px-4 font-semibold text-green-700 dark:text-green-400">60% - 70%</td>
+              <td className="py-3 px-4">30% - 40%</td>
+            </tr>
+            <tr className="border-b border-gray-100 dark:border-gray-700">
+              <td className="py-3 px-4 font-medium">Best Crops</td>
+              <td className="py-3 px-4">Row crops: Ganna, Cotton, Sabziyan, Fruits (Anar, Angur, Kela, Aam).</td>
+              <td className="py-3 px-4">Close-growing crops: Gehu, Makka, Soyabean, Moongfali, Chara (Fodder).</td>
+            </tr>
+            <tr className="border-b border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
+              <td className="py-3 px-4 font-medium">Andazan Cost (per acre)</td>
+              <td className="py-3 px-4">₹25,000 - ₹50,000</td>
+              <td className="py-3 px-4">₹15,000 - ₹30,000</td>
+            </tr>
+            <tr className="border-b border-gray-100 dark:border-gray-700">
+              <td className="py-3 px-4 font-medium">Fertigation (Khaad ke saath)</td>
+              <td className="py-3 px-4 font-semibold text-green-700 dark:text-green-400">Excellent (100% efficient)</td>
+              <td className="py-3 px-4">Limited (Foliar spray ke roop mein)</td>
+            </tr>
+            <tr className="border-b border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
+              <td className="py-3 px-4 font-medium">Uneven/Zameen par</td>
+              <td className="py-3 px-4">Bahut achha (Pressure compensated drippers ke saath).</td>
+              <td className="py-3 px-4">Achha (Lekin hawa zyada ho toh paani udh sakta hai).</td>
             </tr>
             <tr>
-              <td className="py-2 px-4 border-b">Water Saving</td>
-              <td className="py-2 px-4 border-b">60-70%</td>
-              <td className="py-2 px-4 border-b">30-40%</td>
-            </tr>
-            <tr>
-              <td className="py-2 px-4 border-b">Best For Crops</td>
-              <td className="py-2 px-4 border-b">Row crops: Sugarcane, Cotton, Vegetables, Fruits (anar, angur, kela)</td>
-              <td className="py-2 px-4 border-b">Close-growing crops: Wheat, Maize, Soybean, Groundnut, Fodder</td>
-            </tr>
-            <tr>
-              <td className="py-2 px-4 border-b">Cost per Acre</td>
-              <td className="py-2 px-4 border-b">₹25,000 - ₹50,000</td>
-              <td className="py-2 px-4 border-b">₹15,000 - ₹30,000</td>
-            </tr>
-            <tr>
-              <td className="py-2 px-4 border-b">Fertigation Possible?</td>
-              <td className="py-2 px-4 border-b">Yes - khaad paani mein mila kar de sakte hain</td>
-              <td className="py-2 px-4 border-b">Limited - kuch cases mein possible</td>
-            </tr>
-            <tr>
-              <td className="py-2 px-4 border-b">Uneven Land Par</td>
-              <td className="py-2 px-4 border-b">Works well - pressure compensated drippers</td>
-              <td className="py-2 px-4 border-b">Works well - paani evenly distribute hota hai</td>
-            </tr>
-            <tr>
-              <td className="py-2 px-4 border-b">Maintenance</td>
-              <td className="py-2 px-4 border-b">Moderate - drippers block ho sakte hain</td>
-              <td className="py-2 px-4 border-b">Low - simple system</td>
+              <td className="py-3 px-4 font-medium">Maintenance</td>
+              <td className="py-3 px-4">Moderate (Drippers block ho sakte hain, filter saaf karna padta hai).</td>
+              <td className="py-3 px-4">Low (System simple hai, bas nozzle check karna hota hai).</td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <p className="mb-4">
-        Simple rule hai. Row crops (ganna, cotton, sabziyan, fruits) ke liye drip. Close-growing crops (gehu, makka, soyabean) ke liye sprinkler.
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        <strong>Simple Rule:</strong> Agar aapki fasal ki row (qataar) clear hai aur paani seedha jad tak pahunchana hai (jaise fruits ya sabzi), toh <strong>Drip</strong> hi best hai. Agar aap gehu, makka ya chara ugate hain jahan poori zameen par paani chahiye, toh <strong>Sprinkler</strong> lagwayein.
       </p>
 
-      <p className="mb-6">
-        Apne area ke KVK officers se consult karein. Wo specific crop aur soil type ke liye best option bata sakte hain. Zameen ki quality samajhne ke liye <Link href="/articles/SoilHealthCardCompleteGuide2026" className="text-blue-600 hover:underline">Soil Health Card</Link> bhi check kar sakte hain.
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
+        Final decision lene se pehle apne nazdeeki <strong>Krishi Vigyan Kendra (KVK)</strong> ke expert se zameen ki mitti aur crop pattern ke baare mein zaroor consult karein. Zameen ki quality aur nutrient level samajhne ke liye pehle se apna <Link href="/articles/farming/soil-health-card-complete-guide-2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Soil Health Card</Link> banwa kar rakhein, isse aapko sahi fertilizer schedule banane mein madad milegi.
       </p>
 
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
-        PMKSY Subsidy: Kitni Milti Hai? Complete Breakdown
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
+        PMKSY Subsidy: Kitni Milti Hai? (Complete Breakdown)
       </h2>
       
-      <p className="mb-4">
-        Pradhan Mantri Krishi Sinchayee Yojana ke under "Per Drop More Crop" component hai. Micro-irrigation par subsidy milti hai. Kuch states mein drip aur sprinkler ki maximum subsidy % alag ho sakti hai - drip ke liye thodi zyada, isliye apne state ki system-wise rates zaroor check karein.
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        Pradhan Mantri Krishi Sinchayee Yojana (PMKSY) ke under "Per Drop More Crop" component hai, jo micro-irrigation ko promote karta hai. Subsidy ka structure state ke hisaab se thoda vary karta hai, lekin central guidelines kuch is tarah hain:
       </p>
 
-      <div className="bg-blue-50 border border-blue-200 rounded-lg p-5 mb-6">
-        <h3 className="font-bold text-lg mb-3">Subsidy Structure (2026):</h3>
-        <ul className="space-y-2">
-          <li className="flex justify-between">
+      <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6 mb-8 not-prose">
+        <h3 className="font-bold text-lg mb-4 text-blue-900 dark:text-blue-200">Subsidy Structure (2026 Guidelines):</h3>
+        <ul className="space-y-3 text-sm text-gray-800 dark:text-gray-200">
+          <li className="flex justify-between items-center border-b border-blue-100 dark:border-blue-800 pb-2">
             <span>Small/Marginal Farmers (5 hectare tak):</span>
-            <span className="font-semibold">55-75% subsidy</span>
+            <span className="font-bold text-blue-700 dark:text-blue-300">55% - 75% subsidy</span>
           </li>
-          <li className="flex justify-between">
-            <span>{'Other Farmers (>5 hectare):'}</span>
-            <span className="font-semibold">45-55% subsidy</span>
+          <li className="flex justify-between items-center border-b border-blue-100 dark:border-blue-800 pb-2">
+            <span>Other Farmers (&gt;5 hectare):</span>
+            <span className="font-bold text-blue-700 dark:text-blue-300">45% - 55% subsidy</span>
           </li>
-          <li className="flex justify-between">
+          <li className="flex justify-between items-center border-b border-blue-100 dark:border-blue-800 pb-2">
             <span>SC/ST/Women Farmers:</span>
-            <span className="font-semibold">Kai states mein priority ya additional benefit (zila Agriculture Dept se confirm karein)</span>
+            <span className="font-bold text-blue-700 dark:text-blue-300">Kai states mein 5% - 10% extra top-up</span>
           </li>
-          <li className="flex justify-between">
+          <li className="flex justify-between items-center border-b border-blue-100 dark:border-blue-800 pb-2">
             <span>Hilly/NE States:</span>
-            <span className="font-semibold">75-90% subsidy</span>
+            <span className="font-bold text-blue-700 dark:text-blue-300">75% - 90% subsidy</span>
           </li>
-          <li className="flex justify-between">
+          <li className="flex justify-between items-center">
             <span>Maximum Subsidy Limit:</span>
-            <span className="font-semibold">State aur crop type ke hisaab se alag (notified rates check karein)</span>
+            <span className="font-bold text-blue-700 dark:text-blue-300">State notified rates ke hisaab se (usually ₹50K-₹1L per hectare)</span>
           </li>
         </ul>
       </div>
 
-      <p className="mb-4">
-        Example dekhte hain. Small farmer hain, 2 acre zameen. Drip irrigation lagwate hain jiska cost ₹40,000/acre hai. Investment ke liye aap <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline">Kisan Credit Card</Link> ya <span className="font-semibold text-gray-800 dark:text-gray-200">bank loan</span> le sakte hain.
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        <strong>Investment ka Hisab (Example):</strong> Maan lijiye aap ek small farmer hain aur aapke paas 2 acre zameen hai. Aap drip irrigation lagwate hain jiska total notified cost ₹40,000 per acre hai. 
+      </p>
+      <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-8">
+        <li>Total Project Cost: ₹80,000 (2 acre)</li>
+        <li>Sarkari Subsidy (60% maan kar): ₹48,000</li>
+        <li>Aapka Out-of-Pocket Kharcha: ₹32,000</li>
+        <li><strong>ROI Period:</strong> 1-2 saal (sirf paani, bijli aur khaad ki bachat se)</li>
+      </ul>
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
+        Agar aapke paas ₹32,000 cash nahi hai, toh aap <Link href="/articles/loan/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Kisan Credit Card (KCC)</Link> ke through bahut kam byaaj par loan le sakte hain, jiski EMI aapki monthly bachat se aaram se cover ho jayegi.
       </p>
 
-      <ul className="list-disc pl-6 mb-6 space-y-2">
-        <li>Total cost: ₹80,000 (2 acre)</li>
-        <li>Subsidy (60%): ₹48,000</li>
-        <li>Aapka out-of-pocket: ₹32,000</li>
-        <li>ROI period: 1-2 saal (paani aur khaad ki bachat se)</li>
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
+        System ke Main Components: Kya Khareed Rahe Hain, Pata Honi Chahiye
+      </h2>
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        Vendor aapse baat kare toh aapko pata hona chahiye ki aapke paise kahan lag rahe hain. Ek standard drip system mein ye cheezein shamil hoti hain:
+      </p>
+      <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-8">
+        <li><strong>Water Source & Pump:</strong> Borewell, canal, ya tank se paani kheenchne ke liye.</li>
+        <li><strong>Filtration Unit (Sabse Zaroori):</strong> Sand media filter ya disc filter. Agar paani mein gandagi hai aur filter achha nahi hai, toh poora system 6 mahine mein jam (choke) ho jayega.</li>
+        <li><strong>Fertigation Tank/Venturi:</strong> Jisme aap paani ke saath ghulansheel khaad (water-soluble fertilizer) milate hain.</li>
+        <li><strong>Mainline & Sub-main Pipes:</strong> Paani ko khet ke alag-alag hisson tak le jaane wali moti pipes (usually PVC ya HDPE).</li>
+        <li><strong>Laterals & Drippers:</strong> Patli pipes jo row ke saath bichhti hain. Inme har thodi door par drippers (emitters) lage hote hain jo paani drop karte hain. Hamesha <em>Pressure Compensated (PC)</em> drippers maangein, taaki zameen ke dhalaan (slope) par bhi sabhi paudhon ko barabar paani mile.</li>
       </ul>
 
-      <p className="mb-6">
-        State-wise subsidy percentages alag hote hain. Apne zila ke Agriculture Department portal par jaakar exact figures check karein. Har state ki scheme thodi different hoti hai.
-      </p>
-
-      <Image 
-        src="/images/kisanguides/irrigation-subsidy-calculation.webp" 
-        alt="Irrigation Subsidy Calculation and ROI Analysis Chart" 
-        width={800} 
-        height={450} 
-        className="rounded-xl mb-6 shadow-md" 
-      />
-
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
-        Real Benefits: Kitna Bachat Hoti Hai?
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
+        Application Process: Step-by-Step (Bina Agent Ke)
       </h2>
       
-      <p className="mb-4">
-        Industry observations ke mutabik yeh benefits milte hain. Real numbers dekhte hain.
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        Process thoda detailed hai, lekin agar aap khud follow karein toh bilkul seedha hai. Kisi "consultant" ko 10-15% commission dene ki bilkul zaroorat nahi hai.
       </p>
 
-      <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-6">
-        <p className="text-sm text-amber-900 italic">
-          <strong>Note:</strong> Ye figures illustrative hain aur area, crop type, aur management ke hisaab se vary kar sakte hain. Apne local conditions ka assessment zaroor karein.
-        </p>
-      </div>
-
-      <div className="overflow-x-auto mb-6">
-        <table className="min-w-full bg-white border border-gray-300">
-          <thead className="bg-green-100">
-            <tr>
-              <th className="py-2 px-4 border-b text-left">Benefit</th>
-              <th className="py-2 px-4 border-b text-left">Drip Irrigation</th>
-              <th className="py-2 px-4 border-b text-left">Sprinkler Irrigation</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="py-2 px-4 border-b">Water Saving</td>
-              <td className="py-2 px-4 border-b">60-70%</td>
-              <td className="py-2 px-4 border-b">30-40%</td>
-            </tr>
-            <tr>
-              <td className="py-2 px-4 border-b">Electricity Bill Reduction</td>
-              <td className="py-2 px-4 border-b">50-60%</td>
-              <td className="py-2 px-4 border-b">25-35%</td>
-            </tr>
-            <tr>
-              <td className="py-2 px-4 border-b">Fertilizer Saving (Fertigation)</td>
-              <td className="py-2 px-4 border-b">25-35%</td>
-              <td className="py-2 px-4 border-b">10-15%</td>
-            </tr>
-            <tr>
-              <td className="py-2 px-4 border-b">Yield Increase</td>
-              <td className="py-2 px-4 border-b">20-30%</td>
-              <td className="py-2 px-4 border-b">15-25%</td>
-            </tr>
-            <tr>
-              <td className="py-2 px-4 border-b">Labor Cost Reduction</td>
-              <td className="py-2 px-4 border-b">40-50%</td>
-              <td className="py-2 px-4 border-b">30-40%</td>
-            </tr>
-            <tr>
-              <td className="py-2 px-4 border-b">ROI Period</td>
-              <td className="py-2 px-4 border-b">1-3 years</td>
-              <td className="py-2 px-4 border-b">2-4 years</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <p className="mb-4">
-        <strong>Illustrative Example:</strong> Ek typical 5 acre fruit orchard par drip lagane ka case dekhte hain. Pehle flood irrigation mein annual cost ₹6-8 lakh hoti thi (paani, bijli, khaad, labor mila kar). Drip ke baad yeh cost ₹3-4 lakh reh gayi. Annual saving ₹2.5-4 lakh. Drip ka cost ₹2-2.5 lakh (after subsidy). Investment 6-12 mahine mein recover.
-      </p>
-
-      <p className="mb-6">
-        Yield mein bhi 20-25% tak izafa ho sakta hai. Yeh figures crop type, location, aur management quality par depend karte hain.
-      </p>
-
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
-        Application Process: Step-by-Step Guide
-      </h2>
-      
-      <p className="mb-4">
-        Micro-irrigation subsidy ke liye apply karne ka process detailed hai. Straightforward hai.
-      </p>
-
-      <div className="space-y-4 mb-6">
-        <div className="border-l-4 border-green-500 pl-4">
-          <h3 className="font-bold text-lg">Step 1: Eligibility Check Karein</h3>
-          <p className="mt-2">
-            Farmer hone chahiye. Zameen honi chahiye - owned ya leased. Water source hona chahiye - borewell, canal, tank. Koi loan default nahi hona chahiye.
-          </p>
+      <div className="space-y-6 mb-8 not-prose">
+        <div className="flex gap-4">
+          <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
+          <div>
+            <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">Eligibility aur Documents Taiyar Karein</h4>
+            <p className="text-sm text-gray-700 dark:text-gray-300">Aapke paas zameen ke kagaz (7/12, Khatauni, ya valid lease), Aadhaar, Bank Passbook, aur borewell ka registration (agar applicable ho) hona chahiye. Koi agricultural loan default nahi hona chahiye.</p>
+          </div>
         </div>
-
-        <div className="border-l-4 border-green-500 pl-4">
-          <h3 className="font-bold text-lg">Step 2: State Portal Par Register Karein</h3>
-          <p className="mt-2">
-            Apne state ke Agriculture Department ki official website par jaakar registration karein. Har state ka apna portal hai. Apne zila ke Agriculture Department office se portal ka exact URL aur registration process pata karein.
-          </p>
+        <div className="flex gap-4">
+          <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
+          <div>
+            <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">State Portal Par Registration</h4>
+            <p className="text-sm text-gray-700 dark:text-gray-300">Apne state ke Agriculture Department ki official micro-irrigation website par jaakar registration karein. Har state ka apna portal hai (jaise Maharashtra ka 'Jalyukt Shivar' ya Gujarat ka 'MIS'). Exact URL apne zila office se confirm karein.</p>
+          </div>
         </div>
-
-        <div className="border-l-4 border-green-500 pl-4">
-          <h3 className="font-bold text-lg">Step 3: Site Survey</h3>
-          <p className="mt-2">
-            Portal par application submit karne ke baad department ke officers ya empanelled vendor aapke khet ka survey karenge. Zameen ka size aur shape, water source capacity, crop pattern, topography - sab check karenge. Survey ke baad system design banaya jata hai.
-          </p>
+        <div className="flex gap-4">
+          <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
+          <div>
+            <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">Site Survey aur Estimation</h4>
+            <p className="text-sm text-gray-700 dark:text-gray-300">Application ke baad, department ka officer ya empanelled vendor aapke khet ka survey karega. Wo zameen ka size, shape, water source capacity, aur crop pattern dekh kar ek official "Estimate" banayega.</p>
+          </div>
         </div>
-
-        <div className="border-l-4 border-green-500 pl-4">
-          <h3 className="font-bold text-lg">Step 4: Quotation aur Approval</h3>
-          <p className="mt-2">
-            Vendor quotation dega - system ka cost, subsidy amount, aapka share. Aap approve karein. Phir bank loan arrange karein agar zaroorat ho.
-          </p>
+        <div className="flex gap-4">
+          <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">4</div>
+          <div>
+            <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">Quotation Approval aur Installation</h4>
+            <p className="text-sm text-gray-700 dark:text-gray-300">Estimate approve hone ke baad, aapko apna hissa (subsidy ke baad ka amount) bank mein jama karna hoga ya loan arrange karna hoga. Uske baad vendor 3-7 din mein system install kar dega.</p>
+          </div>
         </div>
-
-        <div className="border-l-4 border-green-500 pl-4">
-          <h3 className="font-bold text-lg">Step 5: Installation</h3>
-          <p className="mt-2">
-            Vendor system install karega. 3-7 din lagte hain area ke hisaab se. Installation ke baad testing hoti hai.
-          </p>
-        </div>
-
-        <div className="border-l-4 border-green-500 pl-4">
-          <h3 className="font-bold text-lg">Step 6: Subsidy Release</h3>
-          <p className="mt-2">
-            Installation complete hone par verification hoti hai. Phir subsidy seedhe bank account mein aati hai, ya vendor ko directly payment hoti hai. Aapko sirf apna share dena hota hai.
-          </p>
+        <div className="flex gap-4">
+          <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">5</div>
+          <div>
+            <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">Verification aur Subsidy Release</h4>
+            <p className="text-sm text-gray-700 dark:text-gray-300">Installation ke baad, department dobara verify karega ki system sach mein laga hai aur chal raha hai. Uske baad subsidy ki raashi seedhe aapke bank account mein (DBT) ya vendor ko directly transfer ho jayegi.</p>
+          </div>
         </div>
       </div>
 
-      <p className="mb-6">
-        Poora process 2-4 months lag sakta hai. Season se pehle apply karein.
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
+        Poora process 2 se 4 mahine le sakta hai. Isliye hamesha <strong>season shuru hone se kam se kam 3 mahine pehle</strong> apply karna shuru kar dein.
       </p>
 
       <GovLink
@@ -284,195 +216,123 @@ export default function DripSprinkler() {
         portalName="pmksy.gov.in"
       />
 
-      <Image 
-        src="/images/kisanguides/irrigation-application-process.webp" 
-        alt="Farmer applying for irrigation subsidy at agriculture office" 
-        width={800} 
-        height={450} 
-        className="rounded-xl mb-6 shadow-md" 
-      />
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
+        Real Risks aur Challenges (Jo Vendor Nahi Batata)
+      </h2>
+      
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        Micro-irrigation sunne mein perfect lagta hai, lekin ground level par kuch challenges hote hain jinse aapko pehle se tayyar rehna chahiye:
+      </p>
 
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
+      <div className="space-y-4 mb-8 not-prose">
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
+          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">1. Dripper Blockage (Sabse Common Problem)</h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300">Agar paani mein salt (khara pan) ya ret (sand) hai, toh drippers ke chhote chhed jam sakte hain. Har 15-30 din mein <strong>acid flushing</strong> karni padti hai (₹500-₹1,000 per acre). Agar isse ignore kiya, toh 20-30% drippers kharab ho jayenge aur paudhe sookh jayenge.</p>
+        </div>
+
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
+          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">2. Vendor Quality Issues</h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300">Kuch vendors sasta material use karte hain taaki unka margin badhe. Pipes patli hoti hain, aur drippers 1-2 saal mein kharab ho jate hain. <strong>Solution:</strong> Hamesha BIS certified (ISI mark) wala saaman hi maangein aur written mein kam se kam 5 saal ki warranty lein.</p>
+        </div>
+
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
+          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">3. Technical Knowledge ki Kami</h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300">Drip chalana sirf valve kholna nahi hai. Pressure kitna rakhna hai, kab kitna paani dena hai, aur fertigation kaise karni hai — ye seekhna padta hai. Bina training ke system properly kaam nahi karta. Apne nazdeeki KVK se free training zaroor lein.</p>
+        </div>
+
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
+          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">4. Crop Change Flexibility</h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300">Drip system specific crop ki row spacing ke hisaab se design hota hai. Agar aap aaj ganna laga rahe hain aur kal soyabean lagana chahte hain, toh purana drip kaam nahi aayega. Hamesha apne long-term crop rotation plan ke hisaab se hi design karwayein.</p>
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
+        Maintenance: System Ko 10-15 Saal Kaise Chalayein?
+      </h2>
+      
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        Micro-irrigation system ki proper maintenance hi iski lambi umar ki kunji hai. Maintenance cost lagbhag ₹1,000-₹2,000 per acre per year aati hai, jo ki system ko badalne ke muqable bahut kam hai.
+      </p>
+
+      <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-8 border border-gray-200 dark:border-gray-700 not-prose">
+        <div className="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 className="font-bold text-lg mb-3 text-gray-900 dark:text-gray-100 border-b border-gray-300 dark:border-gray-600 pb-2">Daily/Weekly Routine:</h3>
+            <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+              <li>✓ Filter ko roz check karein aur pressure gauge dekhein.</li>
+              <li>✓ Hafte mein ek baar filter ki backwashing (safai) karein.</li>
+              <li>✓ Laterals ke end caps khol kar 2 minute tak paani bahne dein (flushing) taaki andar ki gandagi nikal jaye.</li>
+              <li>✓ Kisi bhi toote hue pipe ya leaking dripper ko turant replace karein.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-bold text-lg mb-3 text-gray-900 dark:text-gray-100 border-b border-gray-300 dark:border-gray-600 pb-2">Monthly/Annual Routine:</h3>
+            <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+              <li>✓ Mahine mein ek baar acid flushing karein (agar paani khara hai) taaki calcium deposits saaf hon.</li>
+              <li>✓ Saal ke ant mein poore system ko high pressure se flush karein.</li>
+              <li>✓ Worn-out parts (jaise purane gaskets ya valves) ko replace karein.</li>
+              <li>✓ Winter mein system ko puri tarah khali kar dein taaki paani jam kar pipes na phade.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Additional Schemes: Aur Kya Fayda Utha Sakte Hain?
       </h2>
       
-      <p className="mb-4">
-        PMKSY ke alawa bhi kai schemes hain jo micro-irrigation ko support karti hain.
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        PMKSY ke alawa bhi kai schemes hain jo micro-irrigation ko aur bhi zyada profitable bana deti hain:
       </p>
 
-      <div className="bg-gray-50 p-4 rounded-lg mb-6">
-        <ul className="space-y-4">
-          <li>
-            <strong className="text-blue-900">1. State-Level Micro-Irrigation Schemes:</strong>
-            <p className="mt-1 text-gray-700">
-              Har state ki apni schemes hoti hain jo PMKSY ke saath stack hoti hain. Inme additional 10-20% subsidy mil sakti hai. Apne zila ke Agriculture Department se latest information lein. State schemes periodically update hoti hain.
-            </p>
-          </li>
-
-          <li>
-            <strong className="text-blue-900">2. Solar Pump Integration:</strong>
-            <p className="mt-1 text-gray-700">
-              Agar borewell par solar pump lagate hain <Link href="/articles/PmKusumYojanaSolarSubsidy2026" className="text-blue-600 hover:underline">PM-KUSUM scheme</Link> ke tehat 60-90% subsidy milti hai. Bijli ka bill zero ho jata hai. Drip + Solar = maximum savings.
-            </p>
-          </li>
-
-          <li>
-            <strong className="text-blue-900">3. Fertigation Training:</strong>
-            <p className="mt-1 text-gray-700">
-              Drip irrigation ke saath fertigation seekhein. Khaad paani mein milakar dena. 25-35% bachat hoti hai. KVKs free training dete hain - apne nazdeeki KVK se contact karein. Fertilizer efficiency badhane ke liye <span className="font-semibold text-gray-800 dark:text-gray-200">Nano DAP</span> ka use bhi consider karein.
-            </p>
-          </li>
-
-          <li>
-            <strong className="text-blue-900">4. Water Conservation Schemes:</strong>
-            <p className="mt-1 text-gray-700">
-              Farm pond, check dam, aur doosre water conservation structures par bhi subsidy milti hai. Drip ke saath combine karke maximum benefit lein.
-            </p>
-          </li>
-        </ul>
-      </div>
-
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-red-700">
-        Real Risks aur Challenges - Transparency Zaroori Hai
-      </h2>
-      
-      <p className="mb-4">
-        Micro-irrigation sunne mein perfect lagta hai. Par kuch challenges hain.
-      </p>
-
-      <div className="space-y-4 mb-6">
-        <div className="border-l-4 border-red-500 pl-4">
-          <h3 className="font-bold text-lg">Dripper Blockage (Sabse Common Problem)</h3>
-          <p className="mt-2">
-            Paani mein salt hai ya sand hai toh drippers block ho sakte hain. Har 15-30 din mein acid flushing karni padti hai. ₹500-1,000 per acre. Ignore kiya toh 20-30% drippers kharab ho sakte hain. Regular maintenance zaroori hai.
-          </p>
-        </div>
-
-        <div className="border-l-4 border-red-500 pl-4">
-          <h3 className="font-bold text-lg">Initial Investment</h3>
-          <p className="mt-2">
-            Subsidy ke baad bhi ₹20,000-40,000 per acre lagta hai. Chhote kisaanon ke liye bada amount hai. Loan lena padta hai. EMI deni padti hai. Crop fail ho gayi toh loan repay karna mushkil hota hai.
-          </p>
-        </div>
-
-        <div className="border-l-4 border-red-500 pl-4">
-          <h3 className="font-bold text-lg">Technical Knowledge Required</h3>
-          <p className="mt-2">
-            Drip/sprinkler chalana seekhna padta hai. Pressure kya rakhna hai, kab kitna paani dena hai, fertigation kaise karna hai. Bina training ke system properly kaam nahi karta. KVK se training zaroor lein.
-          </p>
-        </div>
-
-        <div className="border-l-4 border-red-500 pl-4">
-          <h3 className="font-bold text-lg">Vendor Quality Issues</h3>
-          <p className="mt-2">
-            Kuch vendors sasta material use karte hain. Pipes patli hoti hain, drippers kharab quality ke hote hain. 2-3 saal mein system kharab ho jata hai. Hamesha reputed vendor choose karein. Warranty check karein - minimum 5 years.
-          </p>
-        </div>
-
-        <div className="border-l-4 border-red-500 pl-4">
-          <h3 className="font-bold text-lg">Crop Change Flexibility</h3>
-          <p className="mt-2">
-            Drip specific crops ke liye design hota hai. Agar crop change karna chahte hain toh drip kaam nahi aayega. Crop rotation plan karke hi invest karein.
-          </p>
-        </div>
-      </div>
-
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
-        Maintenance: System Ko Kaise Maintain Karein?
-      </h2>
-      
-      <p className="mb-4">
-        Micro-irrigation system ki proper maintenance zaroori hai. 10-15 saal tak kaam kare.
-      </p>
-
-      <div className="bg-gray-50 p-4 rounded-lg mb-6">
-        <h3 className="font-bold text-lg mb-3">Daily Maintenance:</h3>
-        <ul className="space-y-2">
-          <li>✓ Filter check karein - saaf hone chahiye</li>
-          <li>✓ Pressure gauge dekhein - normal range mein hona chahiye</li>
-          <li>✓ Leaks check karein - koi pipe toota toh nahi</li>
-        </ul>
-
-        <h3 className="font-bold text-lg mb-3 mt-4">Weekly Maintenance:</h3>
-        <ul className="space-y-2">
-          <li>✓ Filter cleaning (backwashing)</li>
-          <li>✓ Drippers check karein - sab chal rahe hain ya nahi</li>
-          <li>✓ Flush lines - end caps khol kar paani nikalein</li>
-        </ul>
-
-        <h3 className="font-bold text-lg mb-3 mt-4">Monthly Maintenance:</h3>
-        <ul className="space-y-2">
-          <li>✓ Acid flushing (agar salt buildup hai)</li>
-          <li>✓ Filter element replacement (agar zaroorat ho)</li>
-          <li>✓ Complete system inspection</li>
-        </ul>
-
-        <h3 className="font-bold text-lg mb-3 mt-4">Annual Maintenance:</h3>
-        <ul className="space-y-2">
-          <li>✓ Complete system flush</li>
-          <li>✓ Worn-out parts replacement</li>
-          <li>✓ Pressure test</li>
-        </ul>
-      </div>
-
-      <p className="mb-6">
-        Maintenance cost ₹1,000-2,000 per acre per year hoti hai. Ignore kiya toh 3-4 saal mein poora system kharab ho sakta hai.
-      </p>
-
-      <Image 
-        src="/images/kisanguides/irrigation-maintenance-guide.webp" 
-        alt="Irrigation System Maintenance and Care Guide" 
-        width={800} 
-        height={450} 
-        className="rounded-xl mb-6 shadow-md" 
-      />
-
-      <h2 className="text-2xl font-semibold mt-8 mb-3 text-green-800">
-        Kya Aapke Liye Sahi Hai? Final Decision Framework
-      </h2>
-      
-      <p className="mb-4">
-        Micro-irrigation unke liye hai jo:
-      </p>
-      
-      <ul className="list-disc pl-6 mb-4 space-y-2">
-        <li>Water scarcity face kar rahe hain</li>
-        <li>Bijli ka bill bahut zyada hai</li>
-        <li>High-value crops ugao (fruits, vegetables, sugarcane)</li>
-        <li>₹20,000-40,000 per acre invest kar sakte hain (after subsidy)</li>
-        <li>Technical knowledge seekhne ki ichha hai</li>
-        <li>Long-term vision hai (5+ saal)</li>
+      <ul className="list-disc pl-5 space-y-3 text-gray-700 dark:text-gray-300 mb-8">
+        <li>
+          <strong className="text-gray-900 dark:text-gray-100">Solar Pump Integration:</strong> Agar aap borewell par solar pump lagate hain, toh <Link href="/articles/farming/PmKusumYojanaSolarSubsidy2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM-KUSUM scheme</Link> ke tahat aapko 60% se 90% tak subsidy mil sakti hai. Drip + Solar = Bijli ka bill bilkul zero. Yeh combination long-term mein sabse zyada paisa bachata hai.
+        </li>
+        <li>
+          <strong className="text-gray-900 dark:text-gray-100">State-Level Top-up Schemes:</strong> Kai states (jaise Gujarat, Maharashtra, Karnataka) PMKSY ke upar apni taraf se additional 10-20% subsidy deti hain. Apne zila ke Agriculture Department se latest "Micro-Irrigation Top-up" scheme ke baare mein zaroor puchen.
+        </li>
+        <li>
+          <strong className="text-gray-900 dark:text-gray-100">Fertigation Training:</strong> Drip ke saath fertigation seekhna bahut zaroori hai. Khaad ko paani mein ghool kar dene se 25-35% tak khaad ki bachat hoti hai. KVKs iski free training dete hain. Fertilizer efficiency aur badhane ke liye aap <Link href="/articles/farming/NanoDap500mlPriceInIndia2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Nano DAP</Link> jaise advanced products ka bhi upyog kar sakte hain.
+        </li>
       </ul>
 
-      <p className="mb-4">
-        Micro-irrigation unke liye nahi hai jo:
-      </p>
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
+        Final Decision: Kya Yeh Aapke Liye Sahi Hai?
+      </h2>
       
-      <ul className="list-disc pl-6 mb-6 space-y-2">
-        <li>Low-value crops ugao (jahan ROI 5+ saal mein ho)</li>
-        <li>Har saal crop change karte hain</li>
-        <li>Maintenance nahi kar sakte</li>
-        <li>Paani abundant hai (canal area mein jahan paani free hai)</li>
-      </ul>
+      <div className="grid md:grid-cols-2 gap-6 mb-8 not-prose">
+        <div className="bg-green-50 dark:bg-green-900/20 p-5 rounded-lg border border-green-200 dark:border-green-800">
+          <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">✅ Haan, agar:</h3>
+          <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+            <li>• Aapke ilake mein paani ki kami (water scarcity) hai.</li>
+            <li>• Aapka bijli ka bill bahut zyada aata hai.</li>
+            <li>• Aap high-value crops (fruits, vegetables, sugarcane) ugao.</li>
+            <li>• Aap ₹20,000-₹40,000 per acre invest kar sakte hain (subsidy ke baad).</li>
+            <li>• Aap thodi technical knowledge seekhne aur regular maintenance karne ke liye taiyar hain.</li>
+          </ul>
+        </div>
 
-      <p className="mb-6">
-        Pehli category mein aate hain toh micro-irrigation ek bahut achha investment hai. 55-75% subsidy mil rahi hai. ROI 1-3 saal mein ho jata hai. Uske baad pure savings.
+        <div className="bg-red-50 dark:bg-red-900/20 p-5 rounded-lg border border-red-200 dark:border-red-800">
+          <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">❌ Nahi, agar:</h3>
+          <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+            <li>• Aap low-value crops ugao jahan ROI 5+ saal mein aaye.</li>
+            <li>• Aap har 6 mahine mein bilkul alag tarah ki crop lagate hain (crop rotation bahut extreme ho).</li>
+            <li>• Aapke paas system ki chhoti-moti maintenance karne ka time ya interest nahi hai.</li>
+            <li>• Aapke ilake mein canal ka paani bilkul free aur abundant hai (phir bhi long-term sochna chahiye).</li>
+          </ul>
+        </div>
+      </div>
+
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
+        <strong>Meri aakhri salah:</strong> Bina research ke kisi vendor ki baaton mein aakar decision na lein. Pehle apne zila ke Agriculture Department jayein. Wahan ke officers aapko exact subsidy, eligible vendors ki list, aur crop-wise water requirement guide denge. Uske baad kam se kam 3 vendors se quotation lein, unke purane installations dekhne jayein, aur phir hi apply karein.
+      </p>
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
+        Micro-irrigation ek game-changer hai. Paani bachana, bijli bachana, khaad bachana, aur production badhana — ye sab ek saath mumkin hai. Sahi se use kiya jaye toh 2-3 saal mein investment nikal jata hai, aur uske baad har saal ka extra profit hai.
       </p>
 
-      <p className="mb-6">
-        <strong>Meri advice:</strong> Pehle apne zila ke Agriculture Department jayein. Wahan officers hote hain jo guide karte hain. Exact subsidy bataenge, vendors ki list denge. Phir 2-3 vendors se quotation lein, compare karein. Phir apply karein.
-      </p>
-
-      <p className="mb-6">
-        Apne crop ki water requirement samjhein. Har crop ko kitna paani chahiye, kab chahiye - yeh jaankari hone se aap system ko optimally use kar sakte hain. Local KVK ya Agriculture University se crop-wise water requirement guide mil jayegi.
-      </p>
-
-      <p className="mb-6">
-        Micro-irrigation ek game-changer hai. Paani bachana, bijli bachana, khaad bachana, aur production badhana - sab ek saath. Sahi se use kiya jaye toh 2-3 saal mein investment nikal jata hai. Uske baad pure profit.
-      </p>
-
-      {/* Related Articles Section - Stylish UI/UX */}
-      <div className="mt-12 pt-8 border-t-2 border-gray-200 dark:border-gray-700">
+      {/* Related Articles Section */}
+      <div className="mt-12 pt-8 border-t-2 border-gray-200 dark:border-gray-700 not-prose">
         <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6 flex items-center gap-2">
           <span className="text-3xl">💧</span>
           Related Articles on KisanStatus
@@ -484,62 +344,57 @@ export default function DripSprinkler() {
 
         <div className="grid sm:grid-cols-2 gap-4">
           <Link 
-            href="/articles/CHCPortal" 
-            className="flex items-center gap-3 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-4 rounded-xl border-2 border-green-200 dark:border-green-800 hover:shadow-lg transition-all group"
+            href="/articles/farming/custom-hiring-centre-chc-portal" 
+            className="flex items-start gap-3 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-4 rounded-xl border-2 border-green-200 dark:border-green-800 hover:shadow-lg transition-all group"
           >
-            <span className="text-3xl group-hover:scale-110 transition-transform">🚜</span>
+            <span className="text-2xl group-hover:scale-110 transition-transform">🚜</span>
             <div>
               <div className="font-semibold text-gray-900 dark:text-gray-100">Custom Hiring Centre</div>
-              <div className="text-xs text-gray-600 dark:text-gray-400">Machinery rental business</div>
+              <div className="text-xs text-gray-600 dark:text-gray-400">Machinery rental business aur 50% subsidy</div>
             </div>
           </Link>
 
           <Link 
-            href="/articles/PMatsyaSampada" 
-            className="flex items-center gap-3 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 p-4 rounded-xl border-2 border-blue-200 dark:border-blue-800 hover:shadow-lg transition-all group"
+            href="/articles/farming/pm-matsya-sampada-yojana-fish-farming" 
+            className="flex items-start gap-3 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 p-4 rounded-xl border-2 border-blue-200 dark:border-blue-800 hover:shadow-lg transition-all group"
           >
-            <span className="text-3xl group-hover:scale-110 transition-transform">🐟</span>
+            <span className="text-2xl group-hover:scale-110 transition-transform">🐟</span>
             <div>
               <div className="font-semibold text-gray-900 dark:text-gray-100">PM Matsya Sampada</div>
-              <div className="text-xs text-gray-600 dark:text-gray-400">Fisheries subsidy scheme</div>
+              <div className="text-xs text-gray-600 dark:text-gray-400">Fisheries aur biofloc par 60% tak subsidy</div>
             </div>
           </Link>
 
-          <div 
-            className="flex items-center gap-3 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 p-4 rounded-xl border-2 border-purple-200 dark:border-purple-800 cursor-default"
+          <Link 
+            href="/articles/farming/PmfbyCropInsurance2026"
+            className="flex items-start gap-3 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 p-4 rounded-xl border-2 border-purple-200 dark:border-purple-800 hover:shadow-lg transition-all group"
           >
-            <span className="text-3xl">🛡️</span>
+            <span className="text-2xl group-hover:scale-110 transition-transform">🛡️</span>
             <div>
-              <div className="font-semibold text-gray-900 dark:text-gray-100">PMFBY Crop Insurance</div>
-              <div className="text-xs text-gray-600 dark:text-gray-400">Crop insurance protection</div>
+              <div className="font-semibold text-gray-900 dark:text-gray-100">PMFBY Fasal Bima Yojana</div>
+              <div className="text-xs text-gray-600 dark:text-gray-400">Fasal kharab hone par pura nuksan cover</div>
             </div>
-          </div>
+          </Link>
 
-          <div 
-            className="flex items-center gap-3 bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 p-4 rounded-xl border-2 border-orange-200 dark:border-orange-800 cursor-default"
+          <Link 
+            href="/articles/farming/silage-making-business-guide"
+            className="flex items-start gap-3 bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-yellow-900/20 dark:to-amber-900/20 p-4 rounded-xl border-2 border-yellow-200 dark:border-yellow-800 hover:shadow-lg transition-all group"
           >
-            <span className="text-3xl">📊</span>
+            <span className="text-2xl group-hover:scale-110 transition-transform">🌾</span>
             <div>
-              <div className="font-semibold text-gray-900 dark:text-gray-100">Mandi Bhav Today</div>
-              <div className="text-xs text-gray-600 dark:text-gray-400">Live market prices</div>
+              <div className="font-semibold text-gray-900 dark:text-gray-100">Silage Making Business</div>
+              <div className="text-xs text-gray-600 dark:text-gray-400">Chara conservation se 40% tak bachat</div>
             </div>
-          </div>
-
-          <div 
-            className="flex items-center gap-3 bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-yellow-900/20 dark:to-amber-900/20 p-4 rounded-xl border-2 border-yellow-200 dark:border-yellow-800 cursor-default"
-          >
-            <span className="text-3xl">🌾</span>
-            <div>
-              <div className="font-semibold text-gray-900 dark:text-gray-100">Silage Making</div>
-              <div className="text-xs text-gray-600 dark:text-gray-400">Fodder conservation guide</div>
-            </div>
-          </div>
+          </Link>
         </div>
       </div>
 
-      <p className="mb-6 italic text-gray-600">
-        Note: Is article ki information general guidance ke liye hai. Costs, subsidies, aur procedures aapke location aur specific circumstances ke hisaab se alag ho sakte hain. Financial decisions lene se pehle agriculture officers ya irrigation experts se consult karna samajhdari hai. Guidelines aur prices periodically update hote hain - latest info ke liye official sources check karein.
-      </p>
+      <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-lg border-l-4 border-orange-500 not-prose">
+        <p className="text-sm text-gray-700 dark:text-gray-300">
+          <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
+          Yeh article sirf jankari aur guidance ke liye hai. Machinery ke daam, subsidy ke pratishat, aur sarkari rules samay-samay par aur state ke hisaab se badal sakte hain. Koi bhi paisa invest karne se pehle apne nazdeeki Krishi Vibhag (Agriculture Department) office se latest guidelines aur empanelled vendors ki list zaroor confirm karein. Last updated: July 2026.
+        </p>
+      </div>
     </article>
   );
 }
