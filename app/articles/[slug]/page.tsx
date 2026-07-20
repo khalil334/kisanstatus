@@ -99,10 +99,9 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
         name: SITE_NAME,
         url: SITE_URL,
       },
-      about: article.schemes?.map((s) => ({
-        '@type': 'Thing',
-        name: s,
-      })),
+      about: article.schemes && article.schemes.length > 0
+        ? article.schemes.map((s) => ({ '@type': 'Thing', name: s }))
+        : [{ '@type': 'Thing', name: 'Agriculture' }],
       mentions: related.slice(0, 3).map((r) => ({
         '@type': 'Article',
         name: r.title,
@@ -185,44 +184,44 @@ function ArticleLoading() {
 }
 
 const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> = {
-  KisanRinKahaSeLe2026:                       dynamic(() => import('@/components/articles/KisanRinKahaSeLe2026'), { loading: ArticleLoading, ssr: true }),
-  KisanTractorLoan2026:                       dynamic(() => import('@/components/articles/KisanTractorLoan2026'), { loading: ArticleLoading, ssr: true }),
-  PmKisanBeneficiaryList2026:                 dynamic(() => import('@/components/articles/PmKisanBeneficiaryList2026'), { loading: ArticleLoading, ssr: true }),
-  PmKisanEkycOnline2026:                      dynamic(() => import('@/components/articles/PmKisanEkycOnline2026'), { loading: ArticleLoading, ssr: true }),
-  KisanCreditCardOnlineApply2026:             dynamic(() => import('@/components/articles/KisanCreditCardOnlineApply2026'), { loading: ArticleLoading, ssr: true }),
-  NanoDap500mlPriceInIndia2026:               dynamic(() => import('@/components/articles/NanoDap500mlPriceInIndia2026'), { loading: ArticleLoading, ssr: true }),
-  PmKisan24viKist2026:                        dynamic(() => import('@/components/articles/PmKisan24viKist2026'), { loading: ArticleLoading, ssr: true }),
-  AgriStackKyaHai2026:                        dynamic(() => import('@/components/articles/AgriStackKyaHai2026'), { loading: ArticleLoading, ssr: true }),
-  PmKisanMasterGuide2026:                     dynamic(() => import('@/components/articles/PmKisanMasterGuide2026'), { loading: ArticleLoading, ssr: true }),
-  'pm-kisan-fto-generated-ka-matlab-kya-hai': dynamic(() => import('@/components/articles/pm-kisan-fto-generated-ka-matlab-kya-hai'), { loading: ArticleLoading, ssr: true }),
-  'soil-health-card-complete-guide-2026':     dynamic(() => import('@/components/articles/soil-health-card-complete-guide-2026'), { loading: ArticleLoading, ssr: true }),
-  PmfbyCropInsurance2026:                     dynamic(() => import('@/components/articles/PmfbyCropInsurance2026'), { loading: ArticleLoading, ssr: true }),
-  'mandi-bhav-today':                         dynamic(() => import('@/components/articles/mandi-bhav-today'), { loading: ArticleLoading, ssr: true }),
-  PmKisanPaymentFailedFix2026:                dynamic(() => import('@/components/articles/PmKisanPaymentFailedFix2026'), { loading: ArticleLoading, ssr: true }),
-  PmKisan25viKist2027:                        dynamic(() => import('@/components/articles/PmKisan25viKist2027'), { loading: ArticleLoading, ssr: true }),
-  PmKisanSelfRegisteredStatusCheck:           dynamic(() => import('@/components/articles/PmKisanSelfRegisteredStatusCheck'), { loading: ArticleLoading, ssr: true }),
-  PmKisanCorrectionForm2026:                  dynamic(() => import('@/components/articles/PmKisanCorrectionForm2026'), { loading: ArticleLoading, ssr: true }),
-  PmKusumYojanaSolarSubsidy2026:              dynamic(() => import('@/components/articles/PmKusumYojanaSolarSubsidy2026'), { loading: ArticleLoading, ssr: true }),
-  PmKisanLandSeedingForm:                     dynamic(() => import('@/components/articles/PmKisanLandSeedingForm'), { loading: ArticleLoading, ssr: true }),
-  PmKisanFaceAuthenticationEkyc:              dynamic(() => import('@/components/articles/PmKisanFaceAuthenticationEkyc'), { loading: ArticleLoading, ssr: true }),
-  PmKisanVoluntarySurrenderGuide:             dynamic(() => import('@/components/articles/PmKisanVoluntarySurrenderGuide'), { loading: ArticleLoading, ssr: true }),
-  PmKisanStateNodalOfficerList:               dynamic(() => import('@/components/articles/PmKisanStateNodalOfficerList'), { loading: ArticleLoading, ssr: true }),
-  PmKisanBankAccountChangeProcess:            dynamic(() => import('@/components/articles/PmKisanBankAccountChangeProcess'), { loading: ArticleLoading, ssr: true }),
-  PmKisanCscRegistrationCharges:              dynamic(() => import('@/components/articles/PmKisanCscRegistrationCharges'), { loading: ArticleLoading, ssr: true }),
-  PmKisanMaandhanYojanaPension:               dynamic(() => import('@/components/articles/PmKisanMaandhanYojanaPension'), { loading: ArticleLoading, ssr: true }),
-  PmKisanRejectedStatusReApplyGuide:          dynamic(() => import('@/components/articles/PmKisanRejectedStatusReApplyGuide'), { loading: ArticleLoading, ssr: true }),
-  PmKisanVillageWiseListPdfDownload:          dynamic(() => import('@/components/articles/PmKisanVillageWiseListPdfDownload'), { loading: ArticleLoading, ssr: true }),
-  PmKisanMobileNumberChangeUpdate:            dynamic(() => import('@/components/articles/PmKisanMobileNumberChangeUpdate'), { loading: ArticleLoading, ssr: true }),
+  KisanRinKahaSeLe2026:                       dynamic(() => import('@/components/articles/KisanRinKahaSeLe2026'), { ssr: true }),
+  KisanTractorLoan2026:                       dynamic(() => import('@/components/articles/KisanTractorLoan2026'), { ssr: true }),
+  PmKisanBeneficiaryList2026:                 dynamic(() => import('@/components/articles/PmKisanBeneficiaryList2026'), { ssr: true }),
+  PmKisanEkycOnline2026:                      dynamic(() => import('@/components/articles/PmKisanEkycOnline2026'), { ssr: true }),
+  KisanCreditCardOnlineApply2026:             dynamic(() => import('@/components/articles/KisanCreditCardOnlineApply2026'), { ssr: true }),
+  NanoDap500mlPriceInIndia2026:               dynamic(() => import('@/components/articles/NanoDap500mlPriceInIndia2026'), { ssr: true }),
+  PmKisan24viKist2026:                        dynamic(() => import('@/components/articles/PmKisan24viKist2026'), { ssr: true }),
+  AgriStackKyaHai2026:                        dynamic(() => import('@/components/articles/AgriStackKyaHai2026'), { ssr: true }),
+  PmKisanMasterGuide2026:                     dynamic(() => import('@/components/articles/PmKisanMasterGuide2026'), { ssr: true }),
+  'pm-kisan-fto-generated-ka-matlab-kya-hai': dynamic(() => import('@/components/articles/pm-kisan-fto-generated-ka-matlab-kya-hai'), { ssr: true }),
+  'soil-health-card-complete-guide-2026':     dynamic(() => import('@/components/articles/soil-health-card-complete-guide-2026'), { ssr: true }),
+  PmfbyCropInsurance2026:                     dynamic(() => import('@/components/articles/PmfbyCropInsurance2026'), { ssr: true }),
+  'mandi-bhav-today':                         dynamic(() => import('@/components/articles/mandi-bhav-today'), { ssr: true }),
+  PmKisanPaymentFailedFix2026:                dynamic(() => import('@/components/articles/PmKisanPaymentFailedFix2026'), { ssr: true }),
+  PmKisan25viKist2027:                        dynamic(() => import('@/components/articles/PmKisan25viKist2027'), { ssr: true }),
+  PmKisanSelfRegisteredStatusCheck:           dynamic(() => import('@/components/articles/PmKisanSelfRegisteredStatusCheck'), { ssr: true }),
+  PmKisanCorrectionForm2026:                  dynamic(() => import('@/components/articles/PmKisanCorrectionForm2026'), { ssr: true }),
+  PmKusumYojanaSolarSubsidy2026:              dynamic(() => import('@/components/articles/PmKusumYojanaSolarSubsidy2026'), { ssr: true }),
+  PmKisanLandSeedingForm:                     dynamic(() => import('@/components/articles/PmKisanLandSeedingForm'), { ssr: true }),
+  PmKisanFaceAuthenticationEkyc:              dynamic(() => import('@/components/articles/PmKisanFaceAuthenticationEkyc'), { ssr: true }),
+  PmKisanVoluntarySurrenderGuide:             dynamic(() => import('@/components/articles/PmKisanVoluntarySurrenderGuide'), { ssr: true }),
+  PmKisanStateNodalOfficerList:               dynamic(() => import('@/components/articles/PmKisanStateNodalOfficerList'), { ssr: true }),
+  PmKisanBankAccountChangeProcess:            dynamic(() => import('@/components/articles/PmKisanBankAccountChangeProcess'), { ssr: true }),
+  PmKisanCscRegistrationCharges:              dynamic(() => import('@/components/articles/PmKisanCscRegistrationCharges'), { ssr: true }),
+  PmKisanMaandhanYojanaPension:               dynamic(() => import('@/components/articles/PmKisanMaandhanYojanaPension'), { ssr: true }),
+  PmKisanRejectedStatusReApplyGuide:          dynamic(() => import('@/components/articles/PmKisanRejectedStatusReApplyGuide'), { ssr: true }),
+  PmKisanVillageWiseListPdfDownload:          dynamic(() => import('@/components/articles/PmKisanVillageWiseListPdfDownload'), { ssr: true }),
+  PmKisanMobileNumberChangeUpdate:            dynamic(() => import('@/components/articles/PmKisanMobileNumberChangeUpdate'), { ssr: true }),
   
-  BakriPalanYojana:         dynamic(() => import('@/components/articles/kisanguides/BakriPalanYojana'), { loading: ArticleLoading, ssr: true }),
-  MushroomKheti:            dynamic(() => import('@/components/articles/kisanguides/MushroomKheti'), { loading: ArticleLoading, ssr: true }),
-  MadhumakhiPalan:          dynamic(() => import('@/components/articles/kisanguides/MadhumakhiPalan'), { loading: ArticleLoading, ssr: true }),
-  PMatsyaSampada:           dynamic(() => import('@/components/articles/kisanguides/PMatsyaSampada'), { loading: ArticleLoading, ssr: true }),
-  SilageMaking:             dynamic(() => import('@/components/articles/kisanguides/SilageMaking'), { loading: ArticleLoading, ssr: true }),
-  PMFMEYojana:              dynamic(() => import('@/components/articles/kisanguides/PMFMEYojana'), { loading: ArticleLoading, ssr: true }),
-  CHCPortal:                dynamic(() => import('@/components/articles/kisanguides/CHCPortal'), { loading: ArticleLoading, ssr: true }),
-  VerminCompost:            dynamic(() => import('@/components/articles/kisanguides/VerminCompost'), { loading: ArticleLoading, ssr: true }),
-  DripSprinkler:            dynamic(() => import('@/components/articles/kisanguides/DripSprinkler'), { loading: ArticleLoading, ssr: true }),
+  BakriPalanYojana:         dynamic(() => import('@/components/articles/kisanguides/BakriPalanYojana'), { ssr: true }),
+  MushroomKheti:            dynamic(() => import('@/components/articles/kisanguides/MushroomKheti'), { ssr: true }),
+  MadhumakhiPalan:          dynamic(() => import('@/components/articles/kisanguides/MadhumakhiPalan'), { ssr: true }),
+  PMatsyaSampada:           dynamic(() => import('@/components/articles/kisanguides/PMatsyaSampada'), { ssr: true }),
+  SilageMaking:             dynamic(() => import('@/components/articles/kisanguides/SilageMaking'), { ssr: true }),
+  PMFMEYojana:              dynamic(() => import('@/components/articles/kisanguides/PMFMEYojana'), { ssr: true }),
+  CHCPortal:                dynamic(() => import('@/components/articles/kisanguides/CHCPortal'), { ssr: true }),
+  VerminCompost:            dynamic(() => import('@/components/articles/kisanguides/VerminCompost'), { ssr: true }),
+  DripSprinkler:            dynamic(() => import('@/components/articles/kisanguides/DripSprinkler'), { ssr: true }),
 };
 
 export const revalidate = 86400;
@@ -260,7 +259,7 @@ export async function generateMetadata({
     publisher: SITE_NAME,
     category: category ? (category as Record<string, string>).name : 'Agriculture & Farming',
     alternates: { 
-      canonical: url,
+      canonical: new URL(url),  // ✅ FIX: URL object
       languages: {
         'hi-IN': url,
         'x-default': url,
@@ -297,7 +296,7 @@ export async function generateMetadata({
     robots: {
       index: true,
       follow: true,
-      nocache: false,
+      // ❌ FIX: nocache: false hata diya
       googleBot: {
         index: true,
         follow: true,
@@ -310,7 +309,7 @@ export async function generateMetadata({
       'article:published_time': article.publishedTime,
       'article:modified_time': article.modifiedTime,
       'article:section': category ? (category as Record<string, string>).name : 'Agriculture',
-      'article:tag': [...article.keywords].slice(0, 5).join(','),
+      // ❌ FIX: 'article:tag' hata diya
     },
   };
 }
