@@ -95,7 +95,7 @@ export default function DripSprinkler() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Final decision lene se pehle apne nazdeeki <strong>Krishi Vigyan Kendra (KVK)</strong> ke expert se zameen ki mitti aur crop pattern ke baare mein zaroor consult karein. Zameen ki quality aur nutrient level samajhne ke liye pehle se apna <Link href="/articles/farming/soil-health-card-complete-guide-2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Soil Health Card</Link> banwa kar rakhein, isse aapko sahi fertilizer schedule banane mein madad milegi.
+        Final decision lene se pehle apne nazdeeki <strong>Krishi Vigyan Kendra (KVK)</strong> ke expert se zameen ki mitti aur crop pattern ke baare mein zaroor consult karein. Zameen ki quality aur nutrient level samajhne ke liye pehle se apna <Link href="/articles/soil-health-card-complete-guide-2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Soil Health Card</Link> banwa kar rakhein, isse aapko sahi fertilizer schedule banane mein madad milegi.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
@@ -142,7 +142,7 @@ export default function DripSprinkler() {
         <li><strong>ROI Period:</strong> 1-2 saal (sirf paani, bijli aur khaad ki bachat se)</li>
       </ul>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Agar aapke paas ₹32,000 cash nahi hai, toh aap <Link href="/articles/loan/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Kisan Credit Card (KCC)</Link> ke through bahut kam byaaj par loan le sakte hain, jiski EMI aapki monthly bachat se aaram se cover ho jayegi.
+        Agar aapke paas ₹32,000 cash nahi hai, toh aap <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Kisan Credit Card (KCC)</Link> ke through bahut kam byaaj par loan le sakte hain, jiski EMI aapki monthly bachat se aaram se cover ho jayegi.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
@@ -287,13 +287,13 @@ export default function DripSprinkler() {
 
       <ul className="list-disc pl-5 space-y-3 text-gray-700 dark:text-gray-300 mb-8">
         <li>
-          <strong className="text-gray-900 dark:text-gray-100">Solar Pump Integration:</strong> Agar aap borewell par solar pump lagate hain, toh <Link href="/articles/farming/PmKusumYojanaSolarSubsidy2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM-KUSUM scheme</Link> ke tahat aapko 60% se 90% tak subsidy mil sakti hai. Drip + Solar = Bijli ka bill bilkul zero. Yeh combination long-term mein sabse zyada paisa bachata hai.
+          <strong className="text-gray-900 dark:text-gray-100">Solar Pump Integration:</strong> Agar aap borewell par solar pump lagate hain, toh <Link href="/articles/PmKusumYojanaSolarSubsidy2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM-KUSUM scheme</Link> ke tahat aapko 60% se 90% tak subsidy mil sakti hai. Drip + Solar = Bijli ka bill bilkul zero. Yeh combination long-term mein sabse zyada paisa bachata hai.
         </li>
         <li>
           <strong className="text-gray-900 dark:text-gray-100">State-Level Top-up Schemes:</strong> Kai states (jaise Gujarat, Maharashtra, Karnataka) PMKSY ke upar apni taraf se additional 10-20% subsidy deti hain. Apne zila ke Agriculture Department se latest "Micro-Irrigation Top-up" scheme ke baare mein zaroor puchen.
         </li>
         <li>
-          <strong className="text-gray-900 dark:text-gray-100">Fertigation Training:</strong> Drip ke saath fertigation seekhna bahut zaroori hai. Khaad ko paani mein ghool kar dene se 25-35% tak khaad ki bachat hoti hai. KVKs iski free training dete hain. Fertilizer efficiency aur badhane ke liye aap <Link href="/articles/farming/NanoDap500mlPriceInIndia2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Nano DAP</Link> jaise advanced products ka bhi upyog kar sakte hain.
+          <strong className="text-gray-900 dark:text-gray-100">Fertigation Training:</strong> Drip ke saath fertigation seekhna bahut zaroori hai. Khaad ko paani mein ghool kar dene se 25-35% tak khaad ki bachat hoti hai. KVKs iski free training dete hain. Fertilizer efficiency aur badhane ke liye aap <Link href="/articles/NanoDap500mlPriceInIndia2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Nano DAP</Link> jaise advanced products ka bhi upyog kar sakte hain.
         </li>
       </ul>
 
@@ -344,7 +344,7 @@ export default function DripSprinkler() {
 
         <div className="grid sm:grid-cols-2 gap-4">
           <Link 
-            href="/articles/farming/custom-hiring-centre-chc-portal" 
+            href="/articles/custom-hiring-centre-chc-portal" 
             className="flex items-start gap-3 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-4 rounded-xl border-2 border-green-200 dark:border-green-800 hover:shadow-lg transition-all group"
           >
             <span className="text-2xl group-hover:scale-110 transition-transform">🚜</span>
@@ -355,7 +355,7 @@ export default function DripSprinkler() {
           </Link>
 
           <Link 
-            href="/articles/farming/pm-matsya-sampada-yojana-fish-farming" 
+            href="/articles/pm-matsya-sampada-yojana-fish-farming" 
             className="flex items-start gap-3 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 p-4 rounded-xl border-2 border-blue-200 dark:border-blue-800 hover:shadow-lg transition-all group"
           >
             <span className="text-2xl group-hover:scale-110 transition-transform">🐟</span>
@@ -366,7 +366,7 @@ export default function DripSprinkler() {
           </Link>
 
           <Link 
-            href="/articles/farming/PmfbyCropInsurance2026"
+            href="/articles/PmfbyCropInsurance2026"
             className="flex items-start gap-3 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 p-4 rounded-xl border-2 border-purple-200 dark:border-purple-800 hover:shadow-lg transition-all group"
           >
             <span className="text-2xl group-hover:scale-110 transition-transform">🛡️</span>
@@ -377,7 +377,7 @@ export default function DripSprinkler() {
           </Link>
 
           <Link 
-            href="/articles/farming/silage-making-business-guide"
+            href="/articles/silage-making-business-guide"
             className="flex items-start gap-3 bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-yellow-900/20 dark:to-amber-900/20 p-4 rounded-xl border-2 border-yellow-200 dark:border-yellow-800 hover:shadow-lg transition-all group"
           >
             <span className="text-2xl group-hover:scale-110 transition-transform">🌾</span>
