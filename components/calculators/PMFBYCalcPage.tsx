@@ -4,6 +4,21 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { InputField, SelectField, ResultRow, fmt, OtherCalcs, CalcHeader, CalcDisclaimer } from './CalcShared';
 
+const SITE_URL = 'https://kisanstatus.com';
+const SITE_NAME = 'KisanStatus';
+const AUTHOR_NAME = 'KisanStatus Team';
+const AUTHOR_URL = `${SITE_URL}/about`;
+const PUBLISHED = '2026-03-05T08:00:00+05:30';
+const MODIFIED = '2026-07-09T08:00:00+05:30';
+
+function fmtDate(iso: string) {
+  return new Date(iso).toLocaleDateString('hi-IN', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
+}
+
 const PMFBY_RATES: Record<string, {name:string; kharif:number; rabi:number}> = {
   rice:     {name:'Dhan (Paddy)',    kharif:2.0, rabi:1.5},
   wheat:    {name:'Gehun (Wheat)',   kharif:1.5, rabi:1.5},
@@ -30,23 +45,36 @@ export default function PMFBYCalcPage() {
   const govShare   = totalCover*(rate>2?rate-2:0)/100;
   const farmerPays = premium - govShare;
 
+  // Breadcrumb schema — was missing before
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Calculator', item: `${SITE_URL}/calculator` },
+      { '@type': 'ListItem', position: 3, name: 'Fasal Bima Premium', item: `${SITE_URL}/calculator/pmfby-premium` },
+    ],
+  };
+
+  // aggregateRating removed — fabricated 4.7/987 rating with no real
+  // reviews behind it. Replaced with real dates + author/publisher.
   const schema = {
     '@context':'https://schema.org',
     '@type':'WebApplication',
     name:'PMFBY Premium Calculator 2026 — Fasal Bima Premium Hindi',
-    url:'https://kisanstatus.com/calculator/pmfby-premium',
+    url:`${SITE_URL}/calculator/pmfby-premium`,
     applicationCategory:'FinanceApplication',
     description:'PM Fasal Bima Yojana ka premium calculate karo. Kharif aur Rabi dono ke liye. Government subsidy kitni milegi — jaano turant. Free tool.',
     offers:{'@type':'Offer',price:'0',priceCurrency:'INR'},
-    aggregateRating:{
-      '@type':'AggregateRating',
-      ratingValue:'4.7',
-      ratingCount:'987'
-    }
+    author: { '@type': 'Organization', name: AUTHOR_NAME, url: AUTHOR_URL },
+    publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+    datePublished: PUBLISHED,
+    dateModified: MODIFIED,
   };
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(breadcrumbSchema)}}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/>
       
       <CalcHeader
@@ -58,20 +86,27 @@ export default function PMFBYCalcPage() {
 
       <div className="container-site max-w-2xl py-8">
 
+        {/* Author + updated date — E-E-A-T signal */}
+        <div className="flex flex-wrap gap-3 text-xs text-gray-500 mb-4">
+          <span>✍️ <Link href="/about" className="underline hover:text-gray-700">{AUTHOR_NAME}</Link></span>
+          <span>📅 {fmtDate(PUBLISHED)}</span>
+          <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
+        </div>
+
         {/* Detailed intro - helpful content */}
         <div className="mb-6 p-5 bg-amber-50 border border-amber-200 rounded-xl text-sm text-gray-700 leading-relaxed">
           <p className="font-bold text-amber-900 mb-2">🛡️ Fasal Bima — Kharab Fasal Par Bhi Paisa Milega</p>
           <p className="mb-2">
-            <strong>PMFBY (Pradhan Mantri Fasal Bima Yojana)</strong> mein agar aapki fasal kharab ho jaye — sukha, baadh, keede, toofan — to government aapko <strong>compensation</strong> deti hai.
+            <strong>PMFBY (Pradhan Mantri Fasal Bima Yojana)</strong> ka idea simple hai — sukha, baadh, keede ya toofan se fasal kharab ho jaye, toh government aapko uska compensation deti hai.
           </p>
           <p className="mb-2">
-            Iska premium <strong>bahut kam hai</strong> — sirf <strong>1.5% se 5%</strong> aapko dena hota hai. Baaki sab government bharta hai!
+            Sabse achhi baat iska premium hai — kisan ka hissa sirf <strong>1.5% se 5%</strong> tak hota hai, baaki poora amount government khud bharti hai.
           </p>
           <p className="mb-2">
-            <strong>Example:</strong> Agar ₹50,000 per hectare ka insurance liya hai gehun ke liye (1.5% rate), to aapko sirf <strong>₹750 per hectare</strong> dena padega. Baaki ₹49,250 government bharegi!
+            Ek udaharan lein: gehun ke liye ₹50,000 per hectare ka insurance liya (1.5% rate par), toh aapki jeb se sirf <strong>₹750 per hectare</strong> jayega — baaki ₹49,250 government ka contribution hoga.
           </p>
           <p className="text-xs text-amber-700 mt-3">
-            💡 <strong>Tip:</strong> Agar aapne KCC loan liya hai to fasal bima <strong>compulsory</strong> hai. Loan ke sath hi kat jata hai premium.
+            💡 KCC loan liya hai toh fasal bima automatically compulsory ho jata hai — loan ke saath hi premium kat jata hai.
           </p>
         </div>
 
@@ -159,12 +194,12 @@ export default function PMFBYCalcPage() {
           <h3 className="font-black text-gray-900 text-sm mb-4">⚡ Fasal Kharab Ho Jaye To Claim Kaise Le?</h3>
           <div className="space-y-3">
             {[
-              {n:1,s:'Fasal kharab hone ke 72 ghante ke andar bank ya insurance company ko inform karo'},
-              {n:2,s:'Fasal ki photos aur video lo — proof ke liye. Date aur location dikhni chahiye'},
-              {n:3,s:'PMFBY portal (pmfby.gov.in) ya mobile app par claim file karo'},
-              {n:4,s:'District Agriculture Officer ko written complaint do — receipt lo'},
-              {n:5,s:'Government survey karegi — loss estimate hogi'},
-              {n:6,s:'2-4 hafte mein compensation aapke bank account mein aa jayega'},
+              {n:1,s:'Fasal kharab ho toh der mat karo — 72 ghante ke andar bank ya insurance company ko inform kar do'},
+              {n:2,s:'Fasal ki photos aur video le lo, jisme date aur location clearly dikhe — ye proof ka kaam karega'},
+              {n:3,s:'PMFBY portal (pmfby.gov.in) ya mobile app se claim file kar do'},
+              {n:4,s:'District Agriculture Officer ko bhi written complaint de dena, aur receipt le lena'},
+              {n:5,s:'Uske baad government survey ke through loss ka estimate lagaya jata hai'},
+              {n:6,s:'Sab theek raha toh 2-4 hafte mein compensation bank account mein aa jata hai'},
             ].map(({n,s})=>(
               <div key={n} className="flex gap-3 items-start">
                 <span className="w-7 h-7 rounded-full bg-amber-600 text-white text-xs font-black flex items-center justify-center shrink-0 mt-0.5">{n}</span>
@@ -215,19 +250,19 @@ export default function PMFBYCalcPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
             <div className="p-3 bg-green-50 border border-green-200 rounded-xl">
               <p className="font-bold text-green-900 mb-1">⏰ Time Par Apply Karo</p>
-              <p className="text-green-800">Enrollment period mein hi apply karo — baad mein nahi hoga. Kharif ke liye July tak, Rabi ke liye December tak</p>
+              <p className="text-green-800">Enrollment window nikal gayi toh dobara mauka nahi milta — Kharif ke liye lagbhag July tak, Rabi ke liye December tak</p>
             </div>
             <div className="p-3 bg-blue-50 border border-blue-200 rounded-xl">
               <p className="font-bold text-blue-900 mb-1">📸 Photos Rakho</p>
-              <p className="text-blue-800">Fasal ki photos lo — healthy aur kharab dono. Claim ke time proof chahiye hoga</p>
+              <p className="text-blue-800">Fasal healthy ho tab bhi aur kharab ho tab bhi photos lete rehna — claim ke waqt yahi proof kaam aata hai</p>
             </div>
             <div className="p-3 bg-purple-50 border border-purple-200 rounded-xl">
               <p className="font-bold text-purple-900 mb-1">📱 App Use Karo</p>
-              <p className="text-purple-800">PMFBY mobile app se apply karo — fast hai. Status track kar sakte ho</p>
+              <p className="text-purple-800">PMFBY mobile app se apply karna faster hota hai, aur status bhi wahi se track kar sakte ho</p>
             </div>
             <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl">
               <p className="font-bold text-amber-900 mb-1">🏦 Bank Se Pucho</p>
-              <p className="text-amber-800">Apni bank branch se sum insured pata karo — district wise alag hota hai</p>
+              <p className="text-amber-800">Sum insured district ke hisaab se badalta rahta hai, isliye apni bank branch se ek baar confirm kar lena behtar hai</p>
             </div>
           </div>
         </div>
@@ -236,11 +271,11 @@ export default function PMFBYCalcPage() {
         <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-xl">
           <p className="font-bold text-yellow-900 text-sm mb-2">⚠️ Fasal Bima Mein Aksar Yeh Galtiyan Hoti Hain:</p>
           <ul className="space-y-1.5 text-xs text-yellow-800">
-            <li>❌ <strong>Time par apply nahi karna</strong> — enrollment period miss ho gaya to nahi milega</li>
-            <li>❌ <strong>Photos nahi lena</strong> — claim ke time proof nahi hoga</li>
-            <li>❌ <strong>72 ghante mein inform nahi karna</strong> — claim reject ho sakta hai</li>
-            <li>❌ <strong>Documents nahi rakhna</strong> — policy number, receipt sab sambhal ke rakho</li>
-            <li>❌ <strong>Wrong information dena</strong> — crop area, type galat bataya to claim nahi milega</li>
+            <li>❌ Enrollment period miss kar dena — uske baad us season ke liye apply nahi ho pata</li>
+            <li>❌ Photos na lena — claim ke waqt proof dikhane mein dikkat hoti hai</li>
+            <li>❌ 72 ghante ke andar inform na karna — isse claim reject bhi ho sakta hai</li>
+            <li>❌ Policy number ya receipt sambhal ke na rakhna — zaroorat par dhundna mushkil ho jata hai</li>
+            <li>❌ Crop area ya type galat bata dena — isse bhi claim atak sakta hai</li>
           </ul>
         </div>
 
@@ -279,23 +314,23 @@ export default function PMFBYCalcPage() {
           <div className="space-y-3 text-xs">
             <details className="bg-white border border-gray-200 rounded-lg p-3">
               <summary className="font-bold text-gray-900 cursor-pointer">PMFBY kya hai?</summary>
-              <p className="mt-2 text-gray-700">PMFBY (Pradhan Mantri Fasal Bima Yojana) government ki crop insurance scheme hai. Agar aapki fasal kharab ho jaye — sukha, baadh, keede, toofan — to compensation milta hai. Premium bahut kam hai — 1.5% se 5%. Baaki government bharta hai.</p>
+              <p className="mt-2 text-gray-700">PMFBY, yani Pradhan Mantri Fasal Bima Yojana, government ki crop insurance scheme hai. Sukha, baadh, keede ya toofan se fasal kharab ho jaye toh compensation milta hai, aur kisan ko sirf 1.5% se 5% tak hi premium dena padta hai — baaki government ka hissa hota hai.</p>
             </details>
             <details className="bg-white border border-gray-200 rounded-lg p-3">
               <summary className="font-bold text-gray-900 cursor-pointer">Fasal Bima ka premium kitna hai?</summary>
-              <p className="mt-2 text-gray-700">Kharif crops ke liye 2% (rice, maize, cotton), Rabi crops ke liye 1.5% (gehu, sarson, dal). Commercial crops ke liye 5%. Par government subsidy deti hai — aapko sirf 2% tak dena padta hai.</p>
+              <p className="mt-2 text-gray-700">Kharif crops (rice, maize, cotton) ke liye 2%, Rabi crops (gehun, sarson, dal) ke liye 1.5%, aur commercial crops ke liye 5% tak. Government subsidy ki wajah se aksar kisan ka hissa 2% tak hi rehta hai.</p>
             </details>
             <details className="bg-white border border-gray-200 rounded-lg p-3">
               <summary className="font-bold text-gray-900 cursor-pointer">Claim kaise karein?</summary>
-              <p className="mt-2 text-gray-700">Fasal kharab hone ke 72 ghante ke andar bank ya insurance company ko inform karo. Photos lo, PMFBY app par claim file karo, District Agriculture Officer ko complaint do. 2-4 hafte mein compensation mil jayega.</p>
+              <p className="mt-2 text-gray-700">Fasal kharab hote hi 72 ghante ke andar bank ya insurance company ko batana zaroori hai. Photos lo, PMFBY app par claim file karo, aur District Agriculture Officer ko complaint bhi de do — usually 2-4 hafte mein compensation aa jata hai.</p>
             </details>
             <details className="bg-white border border-gray-200 rounded-lg p-3">
               <summary className="font-bold text-gray-900 cursor-pointer">Kya fasal bima compulsory hai?</summary>
-              <p className="mt-2 text-gray-700">Agar aapne KCC loan liya hai to compulsory hai. Bina loan ke optional hai — par lena chahiye. Sirf ₹500-1000 per hectare mein lakhon ka cover milta hai.</p>
+              <p className="mt-2 text-gray-700">KCC loan liya hai toh haan, compulsory hai. Bina loan ke optional hai, par lena samajhdaari hai — sirf ₹500-1000 per hectare mein lakhon tak ka cover mil jata hai.</p>
             </details>
             <details className="bg-white border border-gray-200 rounded-lg p-3">
               <summary className="font-bold text-gray-900 cursor-pointer">Kitna compensation milta hai?</summary>
-              <p className="mt-2 text-gray-700">Yeh loss par depend karta hai. 25% se zyada loss par full sum insured milta hai. 25% se kam loss par partial compensation. Maximum aapka sum insured amount hai — jo ₹30,000-60,000 per hectare hota hai.</p>
+              <p className="mt-2 text-gray-700">Ye loss ke percentage par depend karta hai — 25% se zyada loss ho toh full sum insured milta hai, kam ho toh usi hisaab se partial. Maximum limit aapke sum insured amount tak hoti hai, jo generally ₹30,000-60,000 per hectare ke aas-paas hota hai.</p>
             </details>
           </div>
         </div>
