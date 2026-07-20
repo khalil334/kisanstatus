@@ -4,6 +4,21 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { InputField, SelectField, ResultRow, fmt, OtherCalcs, CalcHeader, CalcDisclaimer } from './CalcShared';
 
+const SITE_URL = 'https://kisanstatus.com';
+const SITE_NAME = 'KisanStatus';
+const AUTHOR_NAME = 'KisanStatus Team';
+const AUTHOR_URL = `${SITE_URL}/about`;
+const PUBLISHED = '2026-02-20T08:00:00+05:30';
+const MODIFIED = '2026-07-09T08:00:00+05:30';
+
+function fmtDate(iso: string) {
+  return new Date(iso).toLocaleDateString('hi-IN', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
+}
+
 export default function KCCLoanCalcPage() {
   const [amount,  setAmount]  = useState('100000');
   const [rate,    setRate]    = useState('7');
@@ -26,23 +41,37 @@ export default function KCCLoanCalcPage() {
   const subsidy = Number(rate)<=7 ? P*0.02 : 0;
   const effectiveCost = totalPayable - subsidy;
 
+  // Breadcrumb schema — was missing before, matches article pages
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Calculator', item: `${SITE_URL}/calculator` },
+      { '@type': 'ListItem', position: 3, name: 'KCC Loan EMI', item: `${SITE_URL}/calculator/kcc-loan-emi` },
+    ],
+  };
+
+  // aggregateRating removed — it was a fabricated 4.8/1156 rating with no
+  // real reviews backing it, which is a spam risk. Added dates + author
+  // instead for real freshness/E-E-A-T signals.
   const schema = {
     '@context':'https://schema.org',
     '@type':'WebApplication',
     name:'KCC Loan EMI Calculator 2026 — Kisan Credit Card Loan EMI Hindi',
-    url:'https://kisanstatus.com/calculator/kcc-loan-emi',
+    url:`${SITE_URL}/calculator/kcc-loan-emi`,
     applicationCategory:'FinanceApplication',
     description:'Kisan Credit Card loan ki monthly EMI calculate karo. Interest rate, total repayment, government subsidy sab jaano. Free tool, koi registration nahi.',
     offers:{'@type':'Offer',price:'0',priceCurrency:'INR'},
-    aggregateRating:{
-      '@type':'AggregateRating',
-      ratingValue:'4.8',
-      ratingCount:'1156'
-    }
+    author: { '@type': 'Organization', name: AUTHOR_NAME, url: AUTHOR_URL },
+    publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+    datePublished: PUBLISHED,
+    dateModified: MODIFIED,
   };
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(breadcrumbSchema)}}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/>
       
       <CalcHeader
@@ -54,17 +83,24 @@ export default function KCCLoanCalcPage() {
 
       <div className="container-site max-w-2xl py-8">
 
+        {/* Author + updated date — E-E-A-T signal, matches article pages */}
+        <div className="flex flex-wrap gap-3 text-xs text-gray-500 mb-4">
+          <span>✍️ <Link href="/about" className="underline hover:text-gray-700">{AUTHOR_NAME}</Link></span>
+          <span>📅 {fmtDate(PUBLISHED)}</span>
+          <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
+        </div>
+
         {/* Detailed intro - helpful content */}
         <div className="mb-6 p-5 bg-blue-50 border border-blue-200 rounded-xl text-sm text-gray-700 leading-relaxed">
-          <p className="font-bold text-blue-900 mb-2">🏦 Kisan Credit Card Loan — EMI Pehle Se Jaano</p>
+          <p className="font-bold text-blue-900 mb-2">🏦 KCC Loan Lene Se Pehle EMI Jaan Lo</p>
           <p className="mb-2">
-            KCC loan lene se pehle yeh jaan lo — <strong>"Meri monthly EMI kitni hogi?"</strong> ya <strong>"Total kitna interest dena padega?"</strong>
+            Loan lene se pehle sabse pehla sawaal yahi aata hai — <strong>monthly kitna dena padega</strong>, aur <strong>total kitna interest ban jayega</strong>. Neeche calculator mein daal ke turant pata chal jayega.
           </p>
           <p className="mb-2">
-            KCC loan kisanon ke liye sabse sasta loan hai — <strong>₹3 lakh tak bina collateral</strong>, <strong>sirf 7% interest</strong>, aur time par repay karo to <strong>2% subsidy</strong> milta hai. Matlab effective rate sirf <strong>4% ya 5%</strong>!
+            Waise KCC dusre loans se kaafi sasta padta hai — <strong>₹3 lakh tak bina collateral</strong> mil jata hai, interest bhi <strong>7%</strong> se shuru hota hai, aur agar time pe chuka do to <strong>2% ki subsidy</strong> upar se milti hai. Yani effective rate <strong>4-5%</strong> tak neeche aa jata hai — market ke doosre loans se kaafi kam.
           </p>
           <p className="text-xs text-blue-700 mt-3">
-            💡 <strong>Example:</strong> Agar ₹1 lakh ka loan liya 7% par 12 mahine ke liye, to monthly EMI ₹8,653 hogi. Total interest ₹3,842. Par 2% subsidy se ₹2,000 bachenge!
+            💡 Ek example se samjho: ₹1 lakh 7% par 12 mahine ke liye lo to EMI ₹8,653 banti hai, total interest ₹3,842. Par subsidy mil jaye to us mein se ₹2,000 wapas bach jate hain.
           </p>
         </div>
 
@@ -144,12 +180,12 @@ export default function KCCLoanCalcPage() {
           <h3 className="font-black text-gray-900 text-sm mb-4">📋 KCC Loan Kaise Le — Step by Step</h3>
           <div className="space-y-3">
             {[
-              {n:1,s:'Nazdiki bank jao — SBI, PNB, Bank of Baroda, ya cooperative bank. Koi bhi bank jo kisan loan deta ho'},
-              {n:2,s:'KCC application form maango — free milta hai. Ya online apply karo bank ki website se'},
-              {n:3,s:'Documents ready karo: Aadhaar card, PAN card, land records (khasra/khatauni), bank passbook, 2 photo'},
-              {n:4,s:'Form bhar ke submit karo — bank 7-14 din mein verify karega. Field inspection bhi ho sakti hai'},
-              {n:5,s:'Loan approve hone par KCC card milega — ATM card jaisa dikhta hai. Limit turant use kar sakte ho'},
-              {n:6,s:'Jab zaroorat ho paisa nikalo. Fasal bechne ke baad repay karo — 2% subsidy milegi'},
+              {n:1,s:'Nazdiki bank jao — SBI, PNB, Bank of Baroda, ya koi cooperative bank jo kisan loan deta ho'},
+              {n:2,s:'KCC application form maango, ye free milta hai. Chaho to bank ki website se online bhi apply kar sakte ho'},
+              {n:3,s:'Documents pehle se ready rakho: Aadhaar, PAN, land records (khasra/khatauni), bank passbook, 2 photo'},
+              {n:4,s:'Form bhar ke jama karo — bank usually 7-14 din mein verify kar deta hai, kabhi field inspection bhi ho jati hai'},
+              {n:5,s:'Approve hone par ek KCC card milega, dekhne mein ATM card jaisa — limit turant use kar sakte ho'},
+              {n:6,s:'Zaroorat par paisa nikalo, aur fasal bikne ke baad chuka do — tabhi 2% subsidy ka fayda milega'},
             ].map(({n,s})=>(
               <div key={n} className="flex gap-3 items-start">
                 <span className="w-7 h-7 rounded-full bg-blue-600 text-white text-xs font-black flex items-center justify-center shrink-0 mt-0.5">{n}</span>
@@ -179,11 +215,11 @@ export default function KCCLoanCalcPage() {
         <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-xl">
           <p className="font-bold text-yellow-900 text-sm mb-2">⚠️ KCC Loan Mein Aksar Yeh Galtiyan Hoti Hain:</p>
           <ul className="space-y-1.5 text-xs text-yellow-800">
-            <li>❌ <strong>Time par repay nahi karna</strong> — 2% subsidy nahi milegi, interest badh jayega</li>
-            <li>❌ <strong>Zyada loan lena</strong> — zaroorat se zyada mat lo, wapas karna mushkil hoga</li>
-            <li>❌ <strong>Galat purpose batana</strong> — bank verify karta hai, fraud pakda gaya to blacklisting</li>
-            <li>❌ <strong>Documents fake dena</strong> — land records verify hote hain, fraud case ban sakta hai</li>
-            <li>❌ <strong>EMI miss karna</strong> — CIBIL score kharab hoga, future mein loan nahi milega</li>
+            <li>❌ Time par repay nahi karna — isse na sirf subsidy chhoot jati hai, interest bhi badh jata hai</li>
+            <li>❌ Zaroorat se zyada loan le lena — jitna lo utna hi wapas karna aasan rahega</li>
+            <li>❌ Purpose galat bata dena — bank verify karta hai, pakde gaye to blacklist ho sakte ho</li>
+            <li>❌ Land records mein gadbad — ye bhi verify hote hain, fraud case tak ban sakta hai</li>
+            <li>❌ EMI baar baar miss karna — CIBIL kharab hota hai, aage loan milna mushkil ho jata hai</li>
           </ul>
         </div>
 
@@ -193,19 +229,19 @@ export default function KCCLoanCalcPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
             <div className="p-3 bg-green-50 border border-green-200 rounded-xl">
               <p className="font-bold text-green-900 mb-1">💰 Sahi Amount Lo</p>
-              <p className="text-green-800">Zaroorat ke hisaab se lo — na zyada, na kam. ₹1 lakh chahiye to ₹1 lakh lo, ₹3 lakh nahi. Zyada loan = zyada interest</p>
+              <p className="text-green-800">Zaroorat jitna hi lo — ₹1 lakh chahiye to ₹1 lakh lo, poori limit use karne ki zaroorat nahi. Zyada loan matlab zyada interest bhi</p>
             </div>
             <div className="p-3 bg-blue-50 border border-blue-200 rounded-xl">
               <p className="font-bold text-blue-900 mb-1">⏰ Time Par Repay Karo</p>
-              <p className="text-blue-800">Fasal bechne ke baad turant repay karo — 2% subsidy milegi. CIBIL score bhi accha rahega</p>
+              <p className="text-blue-800">Fasal bik jaye toh der mat karo — jaldi chuka doge to subsidy ka fayda bhi milega aur CIBIL bhi accha rahega</p>
             </div>
             <div className="p-3 bg-purple-50 border border-purple-200 rounded-xl">
               <p className="font-bold text-purple-900 mb-1">🏦 Sahi Bank Chuno</p>
-              <p className="text-purple-800">SBI, PNB, BoB mein process fast hai. Cooperative banks mein zyada flexible hote hain. Compare karo</p>
+              <p className="text-purple-800">SBI, PNB, BoB jaise banks mein process fast hota hai, cooperative banks kai baar zyada flexible nikalte hain — dono compare karke dekho</p>
             </div>
             <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl">
               <p className="font-bold text-amber-900 mb-1">📊 Hisab Rakho</p>
-              <p className="text-amber-800">Loan ka paisa kahan use kiya — record rakho. Bank audit kar sakta hai. Receipt sambhal ke rakho</p>
+              <p className="text-amber-800">Loan ka paisa kahan gaya, iska record rakho — bank kabhi audit kar sakta hai, toh receipts sambhal ke rakhna behtar hai</p>
             </div>
           </div>
         </div>
@@ -245,23 +281,23 @@ export default function KCCLoanCalcPage() {
           <div className="space-y-3 text-xs">
             <details className="bg-white border border-gray-200 rounded-lg p-3">
               <summary className="font-bold text-gray-900 cursor-pointer">KCC loan kitne din mein milta hai?</summary>
-              <p className="mt-2 text-gray-700">Agar sab documents theek hain to 7-14 din mein mil jata hai. Kuch banks mein 21 din tak lag sakte hain. Online apply karo to fast hota hai.</p>
+              <p className="mt-2 text-gray-700">Documents sahi hon to 7-14 din mein mil jata hai, kuch banks mein thoda zyada time bhi lag sakta hai — 21 din tak. Online apply karne se generally fast hota hai.</p>
             </details>
             <details className="bg-white border border-gray-200 rounded-lg p-3">
               <summary className="font-bold text-gray-900 cursor-pointer">KCC loan ka interest rate kya hai?</summary>
-              <p className="mt-2 text-gray-700">₹3 lakh tak ke liye 7% saalana hai. Agar time par repay karo to 2% subsidy milta hai — effective rate 4-5% ho jata hai. Yeh sabse sasta loan hai kisanon ke liye.</p>
+              <p className="mt-2 text-gray-700">₹3 lakh tak ke liye 7% saalana rate hai. Time par repay karo to 2% subsidy milti hai, aur effective rate 4-5% tak neeche aa jata hai — kisanon ke liye ye sabse sasta option hai.</p>
             </details>
             <details className="bg-white border border-gray-200 rounded-lg p-3">
               <summary className="font-bold text-gray-900 cursor-pointer">Kya KCC loan bina collateral milta hai?</summary>
-              <p className="mt-2 text-gray-700">Haan! ₹1.6 lakh tak bina kisi collateral ke milta hai. ₹3 lakh tak bhi mil sakta hai agar aapka credit history accha ho. Land documents dikhane padte hain par mortgage nahi karna padta.</p>
+              <p className="mt-2 text-gray-700">Haan, ₹1.6 lakh tak bina collateral ke mil jata hai. Credit history accha ho to ₹3 lakh tak bhi mil sakta hai. Land documents dikhane padte hain, par mortgage nahi karna padta.</p>
             </details>
             <details className="bg-white border border-gray-200 rounded-lg p-3">
               <summary className="font-bold text-gray-900 cursor-pointer">KCC loan wapas nahi kiya to kya hoga?</summary>
-              <p className="mt-2 text-gray-700">Interest badh jayega — 7% se 13-15% ho jayega. 2% subsidy nahi milegi. CIBIL score kharab hoga — future mein loan nahi milega. Bank legal action bhi le sakta hai. Isliye time par repay karo.</p>
+              <p className="mt-2 text-gray-700">Interest 7% se badh ke 13-15% tak ho sakta hai, subsidy bhi nahi milegi. CIBIL score par bhi asar padta hai, jisse aage loan lena mushkil ho jata hai. Extreme cases mein bank legal action bhi le sakta hai — isliye time par chukana hi behtar hai.</p>
             </details>
             <details className="bg-white border border-gray-200 rounded-lg p-3">
               <summary className="font-bold text-gray-900 cursor-pointer">KCC loan kis kaam ke liye use kar sakte hain?</summary>
-              <p className="mt-2 text-gray-700">Kheti ke liye — beej, khad, mazdoori. Equipment khareedne — tractor, pump. Allied activities — dairy, fishery, poultry. Personal kaam — ghar repair, shaadi, education. Par bank ko batana padta hai kis kaam ke liye le rahe ho.</p>
+              <p className="mt-2 text-gray-700">Kheti ke liye — beej, khad, mazdoori; equipment ke liye — tractor, pump; allied activities jaise dairy, fishery, poultry; aur personal zaroorat jaise ghar repair, shaadi, padhai ke liye bhi. Par jis kaam ke liye le rahe ho, wo bank ko batana padta hai.</p>
             </details>
           </div>
         </div>
