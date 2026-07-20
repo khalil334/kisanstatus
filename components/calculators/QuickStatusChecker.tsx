@@ -3,6 +3,21 @@
 import { useState } from 'react';
 import Link from 'next/link';
 
+const SITE_URL = 'https://kisanstatus.com';
+const SITE_NAME = 'KisanStatus';
+const AUTHOR_NAME = 'KisanStatus Team';
+const AUTHOR_URL = `${SITE_URL}/about`;
+const PUBLISHED = '2026-03-10T08:00:00+05:30';
+const MODIFIED = '2026-07-09T08:00:00+05:30';
+
+function fmtDate(iso: string) {
+  return new Date(iso).toLocaleDateString('hi-IN', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
+}
+
 export default function QuickStatusChecker() {
   const [aadhaar, setAadhaar] = useState('');
   const [mobile, setMobile] = useState('');
@@ -13,6 +28,32 @@ export default function QuickStatusChecker() {
 
   const OFFICIAL_URL = 'https://pmkisan.gov.in/BeneficiaryStatus.aspx';
   const FALLBACK_URL = 'https://pmkisan.gov.in';
+
+  // This page previously had no structured data at all — added breadcrumb
+  // + WebApplication schema (with real dates and author, no fabricated
+  // rating) so it matches the pattern used on the other calculator pages.
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'PM Kisan Status Check', item: `${SITE_URL}/status-check` },
+    ],
+  };
+
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'PM Kisan Status Check Tool 2026',
+    url: `${SITE_URL}/status-check`,
+    applicationCategory: 'FinanceApplication',
+    description: 'Aadhaar, mobile ya registration number se PM Kisan beneficiary status seedha official portal par check karo. Free tool.',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' },
+    author: { '@type': 'Organization', name: AUTHOR_NAME, url: AUTHOR_URL },
+    publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+    datePublished: PUBLISHED,
+    dateModified: MODIFIED,
+  };
 
   const handleCheckNow = () => {
     setError('');
@@ -49,6 +90,10 @@ export default function QuickStatusChecker() {
   };
 
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-green-50/30 to-emerald-50/40 py-8 md:py-12">
       <div className="container-site max-w-2xl mx-auto px-4">
 
@@ -72,20 +117,27 @@ export default function QuickStatusChecker() {
           </div>
         </div>
 
+        {/* Author + updated date — E-E-A-T signal, matches other pages */}
+        <div className="flex flex-wrap justify-center gap-3 text-xs text-gray-500 mb-4">
+          <span>✍️ <Link href="/about" className="underline hover:text-gray-700">{AUTHOR_NAME}</Link></span>
+          <span>📅 {fmtDate(PUBLISHED)}</span>
+          <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
+        </div>
+
         {/* Detailed Intro - Helpful Content */}
         <div className="mb-6 p-5 bg-white rounded-2xl border border-gray-200 shadow-sm">
           <h2 className="font-black text-gray-900 text-base mb-3 flex items-center gap-2">
             <span>📖</span> PM Kisan Status Check Kaise Karein?
           </h2>
           <p className="text-sm text-gray-700 leading-relaxed mb-3">
-            <strong>PM Kisan Samman Nidhi</strong> ka status check karna bahut aasan hai. Aap <strong>Aadhaar number</strong>, <strong>mobile number</strong>, ya <strong>registration number</strong> se apni kist ka status dekh sakte ho.
+            Status check karna asal mein kaafi seedha kaam hai — <strong>Aadhaar number</strong>, <strong>mobile number</strong>, ya <strong>registration number</strong>, in mein se koi bhi ek daalo aur apni kist ka status dekh lo.
           </p>
           <p className="text-sm text-gray-700 leading-relaxed mb-3">
-            <strong>24vi kist October 2026</strong> mein aane wali hai — ₹2,000 seedha bank account mein. Agar aapne <strong>eKYC</strong> complete nahi kiya hai to pehle woh karo, warna kist ruk jayegi.
+            <strong>24vi kist October 2026</strong> mein aane wali hai — ₹2,000 seedha bank account mein aayega. Agar <strong>eKYC</strong> abhi tak complete nahi kiya hai toh pehle wahi kar lena, warna kist wahin atak jayegi.
           </p>
           <div className="p-3 bg-green-50 border border-green-200 rounded-xl">
             <p className="text-xs text-green-800 font-bold mb-1">💡 Quick Tip:</p>
-            <p className="text-xs text-green-700">Upar apna Aadhaar number daalo aur "Status Check Karo" button dabao. Aap seedha pmkisan.gov.in par pahunch jaoge — wahan apna real status dekh sakte ho.</p>
+            <p className="text-xs text-green-700">Upar Aadhaar number daal ke "Status Check Karo" dabao — seedha pmkisan.gov.in par pahunch jaoge, wahan apna asli status dikhega.</p>
           </div>
         </div>
 
@@ -210,12 +262,12 @@ export default function QuickStatusChecker() {
           <h3 className="font-black text-gray-900 text-sm mb-4">📋 PM Kisan Status Check Karne Ka Tarika</h3>
           <div className="space-y-3">
             {[
-              {n:1, s:'pmkisan.gov.in kholo (upar button se khul jayega)'},
+              {n:1, s:'pmkisan.gov.in kholo — upar button se seedha khul jayega'},
               {n:2, s:'"Farmers Corner" menu par click karo'},
-              {n:3, s:'"Beneficiary Status" chuniye'},
-              {n:4, s:'Aadhaar number ya mobile number ya bank account number daalo'},
-              {n:5, s:'"Get Data" button dabao'},
-              {n:6, s:'Saari kiston ka status dikh jayega — kab aayi, kitni aayi'},
+              {n:3, s:'"Beneficiary Status" chun lo'},
+              {n:4, s:'Aadhaar, mobile ya bank account number, koi bhi ek daal do'},
+              {n:5, s:'"Get Data" dabao'},
+              {n:6, s:'Saari kiston ka status saamne aa jayega — kab aayi, kitni aayi'},
             ].map(({n, s}) => (
               <div key={n} className="flex gap-3 items-start">
                 <span className="w-7 h-7 rounded-full bg-green-600 text-white text-xs font-black flex items-center justify-center shrink-0 mt-0.5">{n}</span>
@@ -231,19 +283,19 @@ export default function QuickStatusChecker() {
           <div className="space-y-3 text-sm">
             <div className="p-3 bg-red-50 border border-red-200 rounded-xl">
               <p className="font-bold text-red-900 text-xs mb-1">❌ "No Records Found" aata hai</p>
-              <p className="text-xs text-red-800">Matlab aapka naam beneficiary list mein nahi hai. Pehle registration karo ya patwari se land records update karwao.</p>
+              <p className="text-xs text-red-800">Matlab abhi aapka naam beneficiary list mein hai hi nahi — registration karna padega, ya patwari se land records update karwana hoga.</p>
             </div>
             <div className="p-3 bg-orange-50 border border-orange-200 rounded-xl">
               <p className="font-bold text-orange-900 text-xs mb-1">⏳ "FTO Generated" dikh raha hai par paisa nahi aaya</p>
-              <p className="text-xs text-orange-800">Bank tak pahunchne mein 7-10 din lagte hain. Agar 15 din ho gaye to bank jao ya helpline 155261 par call karo.</p>
+              <p className="text-xs text-orange-800">Ghabrao mat, bank tak pahunchne mein aksar 7-10 din lag jaate hain. 15 din se zyada ho jaye toh bank ya helpline 155261 try karo.</p>
             </div>
             <div className="p-3 bg-yellow-50 border border-yellow-200 rounded-xl">
               <p className="font-bold text-yellow-900 text-xs mb-1">🔒 "eKYC Pending" dikh raha hai</p>
-              <p className="text-xs text-yellow-800">eKYC karo turant! CSC center jao ya online Aadhaar OTP se karo. Bina eKYC ke kist nahi aayegi.</p>
+              <p className="text-xs text-yellow-800">Isse turant nipta do — CSC center jao ya Aadhaar OTP se online kar lo. Bina eKYC ke kist nahi aayegi.</p>
             </div>
             <div className="p-3 bg-blue-50 border border-blue-200 rounded-xl">
               <p className="font-bold text-blue-900 text-xs mb-1">🏦 "Bank Account Not Seeded" error</p>
-              <p className="text-xs text-blue-800">Apna bank account PM Kisan se link karo. Bank jao, Aadhaar link karwao, phir PM Kisan portal par update karo.</p>
+              <p className="text-xs text-blue-800">Bank account ko PM Kisan se link karna padega — bank jao, Aadhaar seed karwao, phir portal par update kar do.</p>
             </div>
           </div>
         </div>
@@ -289,23 +341,23 @@ export default function QuickStatusChecker() {
           <div className="space-y-3 text-xs">
             <details className="bg-gray-50 border border-gray-200 rounded-lg p-3">
               <summary className="font-bold text-gray-900 cursor-pointer">PM Kisan status kaise check karein?</summary>
-              <p className="mt-2 text-gray-700">pmkisan.gov.in par jao → "Farmers Corner" → "Beneficiary Status" → Aadhaar ya mobile number daalo → "Get Data" dabao. Saari kiston ka status dikh jayega.</p>
+              <p className="mt-2 text-gray-700">pmkisan.gov.in par jaake "Farmers Corner" se "Beneficiary Status" chuno, Aadhaar ya mobile number daal ke "Get Data" dabao — saari kiston ka status saamne aa jayega.</p>
             </details>
             <details className="bg-gray-50 border border-gray-200 rounded-lg p-3">
               <summary className="font-bold text-gray-900 cursor-pointer">24vi kist kab aayegi?</summary>
-              <p className="mt-2 text-gray-700">24vi kist October 2026 mein aane wali hai — ₹2,000 seedha bank account mein. Pehle eKYC complete karo, warna kist ruk jayegi.</p>
+              <p className="mt-2 text-gray-700">24vi kist October 2026 mein aane ki ummeed hai — ₹2,000 seedha bank account mein. Uske pehle eKYC complete kar lena zaroori hai, warna kist atak jayegi.</p>
             </details>
             <details className="bg-gray-50 border border-gray-200 rounded-lg p-3">
               <summary className="font-bold text-gray-900 cursor-pointer">Status mein "FTO Generated" ka matlab kya hai?</summary>
-              <p className="mt-2 text-gray-700">FTO (Fund Transfer Order) generate ho gaya hai — matlab government ne paisa bhej diya hai. 7-10 din mein bank account mein aa jayega. Agar 15 din ho gaye to bank jao.</p>
+              <p className="mt-2 text-gray-700">FTO yani Fund Transfer Order generate ho chuka hai — matlab government ne paisa bhej diya hai. 7-10 din mein bank account mein pahunch jata hai, 15 din se zyada ho jaye toh bank check karo.</p>
             </details>
             <details className="bg-gray-50 border border-gray-200 rounded-lg p-3">
               <summary className="font-bold text-gray-900 cursor-pointer">Kist kyun ruki hai?</summary>
-              <p className="mt-2 text-gray-700">3 reasons hote hain: 1) eKYC nahi hua, 2) Bank account link nahi hai, 3) Land records galat hain. Pehle status check karo — wahan reason dikhega. Fix karo, kist wapas mil jayegi.</p>
+              <p className="mt-2 text-gray-700">Zyadatar teen reasons hote hain — eKYC nahi hua, bank account link nahi hai, ya land records mein galti hai. Status check karne par exact reason dikh jata hai, usi ko fix karo.</p>
             </details>
             <details className="bg-gray-50 border border-gray-200 rounded-lg p-3">
               <summary className="font-bold text-gray-900 cursor-pointer">PM Kisan helpline number kya hai?</summary>
-              <p className="mt-2 text-gray-700">155261 (toll-free) — Mon-Sat 9:30 AM se 6:00 PM. Email: pmkisan-ict@gov.in. Kisi bhi problem ke liye call karo.</p>
+              <p className="mt-2 text-gray-700">155261 (toll-free), Mon-Sat 9:30 AM se 6:00 PM tak. Email par bhi likh sakte ho — pmkisan-ict@gov.in. Koi bhi problem ho, seedha call kar do.</p>
             </details>
           </div>
         </div>
@@ -316,5 +368,6 @@ export default function QuickStatusChecker() {
         </div>
       </div>
     </div>
+    </>
   );
 }
