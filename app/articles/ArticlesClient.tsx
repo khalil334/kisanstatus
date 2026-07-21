@@ -9,7 +9,7 @@ import { CATEGORIES } from '@/lib/articles-data';
 
 const NEW_ARTICLES_LIMIT = 3;
 
-// ✅ FIX: Proper type that covers both old ArticleMeta and new MaandhanArticleMeta
+// ✅ FIX: Added 'readonly' to string[] to match ArticleMeta's strict typing
 type CombinedArticleMeta = {
   slug: string;
   title: string;
@@ -19,7 +19,7 @@ type CombinedArticleMeta = {
   ogImage?: string;
   published?: string;
   publishedTime?: string;
-  keywords?: string[];
+  keywords?: readonly string[];
 };
 
 /* ─── SVG Icons (Replace Emojis) ─── */
@@ -160,16 +160,12 @@ function ArticleImage({ image, emoji, title, priority = false }: { image: string
 
 /* ─── Article Card ─── */
 function ArticleCard({ article, showNewBadge = false, priority = false }: { article: CombinedArticleMeta; showNewBadge?: boolean; priority?: boolean }) {
-  // ✅ FIX: Safely cast category to keyof typeof CATEGORIES to satisfy TypeScript
   const categoryInfo = CATEGORIES[article.category as keyof typeof CATEGORIES] as { name: string; nameHi: string; icon: string } | undefined;
   const emoji = categoryInfo?.icon || '📄';
   const categoryName = categoryInfo?.nameHi || categoryInfo?.name || 'Guide';
 
-  // ✅ FIX: Dynamically determine the correct href based on category/slug
   const isMaandhan = article.category === 'pension-scheme' || article.slug.includes('maandhan');
   const articleHref = isMaandhan ? `/maandhan/${article.slug}` : `/articles/${article.slug}`;
-
-  // ✅ FIX: Handle both 'desc' and 'description' keys gracefully
   const displayDesc = article.desc || article.description || '';
 
   return (
@@ -224,7 +220,6 @@ function ArticlesContent({ articles }: { articles: readonly CombinedArticleMeta[
       ? [...articles]
       : articles.filter(a => a.category === activeCategory);
 
-    // ✅ FIX: Safe search filter handling missing 'keywords' or 'desc'
     if (searchQuery.trim()) {
       const query = searchQuery.toLowerCase();
       filtered = filtered.filter(a =>
@@ -234,7 +229,6 @@ function ArticlesContent({ articles }: { articles: readonly CombinedArticleMeta[
       );
     }
 
-    // ✅ FIX: Safe date sorting handling both 'publishedTime' and 'published'
     const sorted = filtered.sort((a, b) =>
       new Date(b.publishedTime || b.published || 0).getTime() - new Date(a.publishedTime || a.published || 0).getTime()
     );
@@ -265,7 +259,6 @@ function ArticlesContent({ articles }: { articles: readonly CombinedArticleMeta[
 
   return (
     <>
-      {/* Search Bar */}
       <div className="container-site mb-6">
         <form onSubmit={handleSearch} className="max-w-xl mx-auto">
           <div className="relative">
@@ -296,7 +289,6 @@ function ArticlesContent({ articles }: { articles: readonly CombinedArticleMeta[
         </form>
       </div>
 
-      {/* Category Filters */}
       <div className="container-site mb-8">
         <div className="flex flex-wrap justify-center gap-2" role="navigation" aria-label="Article categories">
           <Link
@@ -335,7 +327,6 @@ function ArticlesContent({ articles }: { articles: readonly CombinedArticleMeta[
         </div>
       </div>
 
-      {/* Search Results Info */}
       {searchQuery && (
         <div className="container-site mb-6">
           <div className="flex items-center justify-between">
@@ -352,7 +343,6 @@ function ArticlesContent({ articles }: { articles: readonly CombinedArticleMeta[
         </div>
       )}
 
-      {/* No Results */}
       {latestArticles.length === 0 && remainingArticles.length === 0 && (
         <div className="container-site text-center py-12">
           <div className="text-[var(--color-text-muted)] mb-4" aria-hidden="true">
@@ -367,7 +357,6 @@ function ArticlesContent({ articles }: { articles: readonly CombinedArticleMeta[
         </div>
       )}
 
-      {/* Latest Articles */}
       {latestArticles.length > 0 && activeCategory === 'all' && !searchQuery && (
         <section className="mb-12" aria-labelledby="new-heading">
           <div className="flex items-center gap-3 mb-5">
@@ -385,7 +374,6 @@ function ArticlesContent({ articles }: { articles: readonly CombinedArticleMeta[
         </section>
       )}
 
-      {/* All/Remaining Articles */}
       {remainingArticles.length > 0 && (
         <section aria-labelledby="all-heading">
           <div className="flex items-center gap-3 mb-5">
@@ -433,7 +421,6 @@ function ArticlesLoading() {
 export default function ArticlesClient({ articles }: { articles: readonly CombinedArticleMeta[] }) {
   return (
     <main className="min-h-screen bg-[var(--color-bg)]">
-      {/* Hero Section */}
       <section className="py-10 md:py-14 bg-[var(--color-primary)]" aria-labelledby="hero-heading">
         <div className="container-site text-center px-4">
           <span className="inline-flex items-center gap-1.5 bg-white/10 border border-white/20 text-green-300 text-xs font-bold px-4 py-2 rounded-full mb-4 uppercase tracking-wider backdrop-blur-sm">
@@ -463,7 +450,6 @@ export default function ArticlesClient({ articles }: { articles: readonly Combin
         </div>
       </section>
 
-      {/* Content */}
       <div className="container-site py-10 px-4">
         <Suspense fallback={<ArticlesLoading />}>
           <ArticlesContent articles={articles} />
