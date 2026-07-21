@@ -12,7 +12,7 @@ const TOP_ARTICLES_LIMIT = 3;
 /* ─── SVG Icons ─── */
 function IconWallet({ className = 'w-6 h-6' }: { className?: string }) {
   return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9.75A2.25 2.25 0 0018.75 7.5H5.25A2.25 2.25 0 003 9.75V12m18 0h-6" />
     </svg>
   );
@@ -20,7 +20,7 @@ function IconWallet({ className = 'w-6 h-6' }: { className?: string }) {
 
 function IconCreditCard({ className = 'w-6 h-6' }: { className?: string }) {
   return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
     </svg>
   );
@@ -28,7 +28,7 @@ function IconCreditCard({ className = 'w-6 h-6' }: { className?: string }) {
 
 function IconTractor({ className = 'w-6 h-6' }: { className?: string }) {
   return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
       <circle cx="7.5" cy="17.25" r="1.5" fill="currentColor" />
       <circle cx="16.5" cy="17.25" r="1.5" fill="currentColor" />
@@ -38,7 +38,7 @@ function IconTractor({ className = 'w-6 h-6' }: { className?: string }) {
 
 function IconCalculator({ className = 'w-6 h-6' }: { className?: string }) {
   return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15.75 15.75l-2.489-2.489m0 0a3.375 3.375 0 10-4.773-4.773 3.375 3.375 0 004.774 4.774zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
     </svg>
   );
@@ -46,7 +46,7 @@ function IconCalculator({ className = 'w-6 h-6' }: { className?: string }) {
 
 function IconSprout({ className = 'w-6 h-6' }: { className?: string }) {
   return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
     </svg>
   );
@@ -54,7 +54,7 @@ function IconSprout({ className = 'w-6 h-6' }: { className?: string }) {
 
 function IconBookOpen({ className = 'w-6 h-6' }: { className?: string }) {
   return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
     </svg>
   );
@@ -62,7 +62,7 @@ function IconBookOpen({ className = 'w-6 h-6' }: { className?: string }) {
 
 function IconSmartphone({ className = 'w-6 h-6' }: { className?: string }) {
   return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
     </svg>
   );
@@ -70,7 +70,7 @@ function IconSmartphone({ className = 'w-6 h-6' }: { className?: string }) {
 
 function IconSearch({ className = 'w-5 h-5' }: { className?: string }) {
   return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
     </svg>
   );
@@ -78,7 +78,7 @@ function IconSearch({ className = 'w-5 h-5' }: { className?: string }) {
 
 function IconArrowRight({ className = 'w-5 h-5' }: { className?: string }) {
   return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
     </svg>
   );
@@ -86,7 +86,7 @@ function IconArrowRight({ className = 'w-5 h-5' }: { className?: string }) {
 
 function IconCheck({ className = 'w-5 h-5' }: { className?: string }) {
   return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
     </svg>
   );
@@ -94,7 +94,7 @@ function IconCheck({ className = 'w-5 h-5' }: { className?: string }) {
 
 function IconChevronDown({ className = 'w-5 h-5' }: { className?: string }) {
   return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
     </svg>
   );
@@ -158,27 +158,27 @@ const TOOLS = [
   },
 ];
 
-/* ─── FAQ Data ─── */
+/* ─── FAQ Data (AEO Optimized: Direct, concise answers for Voice Search) ─── */
 const FAQS = [
   {
     question: 'PM Kisan 24vi kist kab aayegi 2026 mein?',
-    answer: 'PM Kisan ki 24vi kist October 2026 mein expected hai. Aap apna status pmkisan.gov.in par check kar sakte hain. Ensure karein ki aapka eKYC complete ho aur bank account linked ho.',
+    answer: 'PM Kisan ki 24vi kist October 2026 mein aane ki ummeed hai. Beneficiaries ko ₹2,000 seedha unke registered bank account mein Direct Benefit Transfer (DBT) ke through milenge. Apna status pmkisan.gov.in par check karein.',
   },
   {
     question: 'PM Kisan status check kaise karein online?',
-    answer: 'PM Kisan status check karne ke liye: 1) pmkisan.gov.in visit karein, 2) "Beneficiary Status" par click karein, 3) Aadhaar number ya mobile number enter karein, 4) OTP verify karein, 5) Status dekhain.',
+    answer: 'PM Kisan status check karne ke liye: 1) pmkisan.gov.in par jayein, 2) "Beneficiary Status" par click karein, 3) Apna Aadhaar number ya registered mobile number enter karein, 4) OTP verify karein, 5) Apna latest payment status dekhein.',
   },
   {
     question: 'Kisan Credit Card (KCC) ke liye kaise apply karein?',
-    answer: 'KCC apply karne ke liye: 1) Apne bank branch jayein, 2) Application form bharein, 3) Land documents, Aadhaar, PAN submit karein, 4) Bank verification ke baad ₹5 lakh tak loan milega, 5) Interest rate sirf 4% hai.',
+    answer: 'KCC apply karne ke liye apne nazdiki bank branch jayein, application form bharein, aur land documents, Aadhaar, aur PAN card submit karein. Bank verification ke baad aapko ₹5 lakh tak ka loan 4% ki concessional interest rate par mil jayega.',
   },
   {
     question: 'PM Kisan eKYC kaise complete karein?',
-    answer: 'eKYC complete karne ke liye: 1) pmkisan.gov.in par jayein, 2) "Farmer Corner" mein "eKYC" option select karein, 3) Aadhaar number enter karein, 4) OTP ya biometric se verify karein, 5) Confirmation message ka intezar karein.',
+    answer: 'eKYC complete karne ke liye pmkisan.gov.in par jakar "Farmers Corner" mein "eKYC" option select karein. Apna Aadhaar number enter karke OTP ya biometric authentication ke through verify karein. Confirmation SMS aane par eKYC complete ho jati hai.',
   },
   {
     question: 'Tractor subsidy kaise milegi SMAM yojana mein?',
-    answer: 'SMAM tractor subsidy ke liye: 1) Kisan portal par register karein, 2) Tractor model select karein, 3) 35-50% subsidy milegi, 4) Bina down payment ke loan available, 5) Subsidy seedha dealer ko jayegi.',
+    answer: 'SMAM (Sub-Mission on Agricultural Mechanization) ke tahat tractor subsidy ke liye Kisan portal par register karein. Chhote aur seemant kisanon ko 35-50% tak subsidy milti hai, jo seedha dealer ko transfer ho jati hai, jisse bina down payment ke loan lena aasan ho jata hai.',
   },
 ];
 
@@ -239,7 +239,7 @@ function ArticleCard({ article, showNewBadge = false }: { article: typeof ARTICL
       </div>
       <div className="p-6 flex flex-col flex-1">
         <span className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-lg bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/30 dark:to-emerald-900/30 text-green-700 dark:text-green-300 w-fit mb-4 border border-green-200/50 dark:border-green-700/50">
-          <span className="text-base">{emoji}</span>
+          <span className="text-base" aria-hidden="true">{emoji}</span>
           <span>{categoryName}</span>
         </span>
         <h3 className="font-bold text-gray-900 dark:text-white text-lg leading-snug group-hover:text-green-700 dark:group-hover:text-green-400 transition-colors duration-300 mb-3 line-clamp-2">
@@ -334,7 +334,7 @@ export default function HomeContent() {
       <Breadcrumb />
 
       {/* ═══════════════════════════════════════
-          HERO SECTION - SEO OPTIMIZED
+          HERO SECTION - SEO & GEO OPTIMIZED
           ═══════════════════════════════════════ */}
       <section className="relative bg-gradient-to-br from-green-700 via-green-600 to-emerald-700 dark:from-green-900 dark:via-green-800 dark:to-emerald-900 py-16 md:py-24 overflow-hidden" aria-labelledby="hero-heading">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/3" aria-hidden="true" />
@@ -345,23 +345,24 @@ export default function HomeContent() {
 
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm text-white text-xs font-bold px-4 py-2 rounded-full mb-6 border border-white/20">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
               </svg>
               India Ka #1 PM Kisan Portal
             </div>
 
-            {/* H1 - Main Keyword Target */}
+            {/* H1 - Main Keyword Target (GEO: Added "Ministry of Agriculture" entity for AI recognition) */}
             <h1 id="hero-heading" className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1] mb-6 tracking-tight">
               <span itemProp="headline">PM Kisan Status Check 2026</span>
               <span className="block text-green-200 text-2xl md:text-4xl lg:text-5xl mt-2">Samman Nidhi Yojana Online</span>
             </h1>
 
-            {/* Subheadline with Keywords */}
+            {/* Subheadline with Keywords (GEO: Added DBT and Ministry entities) */}
             <p className="text-lg md:text-xl text-green-100 leading-relaxed mb-8 max-w-2xl mx-auto" itemProp="description">
-              <strong className="text-white">PM Kisan Samman Nidhi</strong> ki 
+              <strong className="text-white">PM Kisan Samman Nidhi</strong> (Ministry of Agriculture) ki 
               <strong className="text-white"> 24vi kist October 2026</strong> mein expected hai! 
-              <strong className="text-white"> ₹2,000</strong> seedha bank account mein.
+              <strong className="text-white"> ₹2,000</strong> seedha bank account mein via 
+              <strong className="text-white"> Direct Benefit Transfer (DBT)</strong>.
               <strong className="text-white"> eKYC</strong> complete karo, 
               <strong className="text-white"> beneficiary status</strong> verify karo — sab kuch bilkul free!
             </p>
@@ -392,7 +393,7 @@ export default function HomeContent() {
             {/* CTA Buttons */}
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <Link href="/articles/PmKisan24viKist2026" className="group inline-flex items-center gap-2.5 bg-white text-green-700 font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 shadow-xl">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
                 </svg>
                 <span>24vi Kist Status</span>
@@ -545,7 +546,7 @@ export default function HomeContent() {
       </section>
 
       {/* ═══════════════════════════════════════
-          HERO IMAGE
+          HERO IMAGE (LCP Optimized)
           ═══════════════════════════════════════ */}
       <section className="py-16 bg-white dark:bg-gray-900" aria-labelledby="hero-image-heading">
         <div className="container-site mx-auto px-4">
@@ -558,7 +559,7 @@ export default function HomeContent() {
                   src="/hero-wheat-field.webp"
                   alt="Bharatiya kisan gehu ke khet mein kaam karte hue - PM Kisan Samman Nidhi yojana ke labharthi"
                   fill
-                  priority
+                  priority // ✅ TECHNICAL SEO: LCP (Largest Contentful Paint) optimization
                   fetchPriority="high"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1024px"
                   quality={85}
@@ -594,7 +595,7 @@ export default function HomeContent() {
                   src={item.src}
                   alt={item.title}
                   fill
-                  loading="lazy"
+                  loading="lazy" // ✅ TECHNICAL SEO: Prevents CLS and speeds up initial load
                   sizes="(max-width: 768px) 100vw, 50vw"
                   quality={80}
                   className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
@@ -621,7 +622,7 @@ export default function HomeContent() {
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4">
             <div>
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-100 to-emerald-100 dark:from-green-900/40 dark:to-emerald-900/40 text-green-800 dark:text-green-300 text-sm font-bold px-5 py-2.5 rounded-full mb-5 shadow-sm border border-green-200/50 dark:border-green-700/50">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
                 </svg>
                 <span>Latest Updates</span>
@@ -657,7 +658,7 @@ export default function HomeContent() {
       </section>
 
       {/* ═══════════════════════════════════════
-          FAQ SECTION - SEO CRITICAL
+          FAQ SECTION - AEO & GEO CRITICAL
           ═══════════════════════════════════════ */}
       <section className="py-20 bg-gray-50 dark:bg-gray-800/50" aria-labelledby="faq-heading">
         <div className="container-site mx-auto px-4 max-w-3xl">
@@ -670,6 +671,7 @@ export default function HomeContent() {
             </p>
           </div>
 
+          {/* ✅ AEO/GEO: Enhanced FAQPage Schema for Voice Search & AI Overviews */}
           <div className="space-y-4" itemScope itemType="https://schema.org/FAQPage">
             {FAQS.map((faq, index) => (
               <div key={index} itemProp="mainEntity" itemScope itemType="https://schema.org/Question">
@@ -685,7 +687,7 @@ export default function HomeContent() {
       </section>
 
       {/* ═══════════════════════════════════════
-          HOW TO SECTION - FEATURED SNIPPETS
+          HOW TO SECTION - AEO FEATURED SNIPPETS
           ═══════════════════════════════════════ */}
       <section className="py-20 bg-white dark:bg-gray-900" aria-labelledby="howto-heading">
         <div className="container-site mx-auto px-4">
@@ -711,15 +713,16 @@ export default function HomeContent() {
                 href: '/articles/KisanCreditCardOnlineApply2026',
               },
             ].map((guide, i) => (
-              <div key={i} className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
-                <h3 className="font-bold text-xl text-gray-900 dark:text-white mb-6">{guide.title}</h3>
+              // ✅ AEO: HowTo Schema for Step-by-Step Featured Snippets
+              <div key={i} className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700" itemScope itemType="https://schema.org/HowTo">
+                <h3 className="font-bold text-xl text-gray-900 dark:text-white mb-6" itemProp="name">{guide.title}</h3>
                 <ol className="space-y-4">
                   {guide.steps.map((step, j) => (
-                    <li key={j} className="flex items-start gap-3">
-                      <span className="flex items-center justify-center w-8 h-8 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 font-bold text-sm shrink-0">
+                    <li key={j} className="flex items-start gap-3" itemProp="step" itemScope itemType="https://schema.org/HowToStep">
+                      <span className="flex items-center justify-center w-8 h-8 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 font-bold text-sm shrink-0" itemProp="position">
                         {j + 1}
                       </span>
-                      <span className="text-gray-700 dark:text-gray-300 text-sm pt-1.5">{step}</span>
+                      <span className="text-gray-700 dark:text-gray-300 text-sm pt-1.5" itemProp="text">{step}</span>
                     </li>
                   ))}
                 </ol>
@@ -782,15 +785,15 @@ export default function HomeContent() {
               </p>
               <div className="flex flex-wrap gap-3 justify-center md:justify-start">
                 <div className="relative">
-                  <button disabled className="px-6 py-3 bg-white/10 text-white/50 font-bold rounded-xl text-sm flex items-center gap-2 border border-white/10 cursor-not-allowed">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                  <button disabled className="px-6 py-3 bg-white/10 text-white/50 font-bold rounded-xl text-sm flex items-center gap-2 border border-white/10 cursor-not-allowed" aria-label="App Store download coming soon">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
                     App Store
                   </button>
                   <span className="absolute -top-2 -right-2 bg-yellow-400 text-yellow-900 text-[10px] font-bold px-2 py-0.5 rounded-full">Soon</span>
                 </div>
                 <div className="relative">
-                  <button disabled className="px-6 py-3 bg-white/10 text-white/50 font-bold rounded-xl text-sm flex items-center gap-2 border border-white/10 cursor-not-allowed">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg>
+                  <button disabled className="px-6 py-3 bg-white/10 text-white/50 font-bold rounded-xl text-sm flex items-center gap-2 border border-white/10 cursor-not-allowed" aria-label="Play Store download coming soon">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg>
                     Play Store
                   </button>
                   <span className="absolute -top-2 -right-2 bg-yellow-400 text-yellow-900 text-[10px] font-bold px-2 py-0.5 rounded-full">Soon</span>
@@ -798,7 +801,7 @@ export default function HomeContent() {
               </div>
               <div className="mt-6 flex items-center gap-4 text-sm text-gray-500 justify-center md:justify-start">
                 <span className="flex items-center gap-1">
-                  <svg className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                   4.8 Rating
                 </span>
                 <span>·</span>
