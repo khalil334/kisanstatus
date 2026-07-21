@@ -153,7 +153,7 @@ export default function MadhumakhiPalan() {
           </li>
           <li className="flex justify-between">
             <span>Sugar Feed (emergency feeding for lean months):</span>
-            <span className="font-semibold">₹15,000 - ₹20,000</span>
+            <span className="font-semibold">15,000 - ₹20,000</span>
           </li>
           <li className="flex justify-between">
             <span>Medicines (Varroa mite control, antibiotics):</span>
@@ -166,9 +166,18 @@ export default function MadhumakhiPalan() {
         </ul>
       </div>
 
-      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Is initial capital ko manage karne ke liye <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Kisan Credit Card (KCC)</Link> ek badhiya vikalp hai, kyunki beekeeping ko officially agriculture activity ke under cover kiya jata hai aur ispar byaj dar kam hoti hai. Chhote scale par <Link href="/articles/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME Yojana</Link> ya Mudra loan bhi bina collateral ke support provide kar sakte hain.
-      </p>
+      <div className="grid md:grid-cols-2 gap-4 mb-8 not-prose">
+        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+          <h4 className="font-semibold text-blue-900 dark:text-blue-200 mb-2">💳 Kisan Credit Card (KCC)</h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">Beekeeping ke liye low-interest loan. 4% interest rate with timely repayment.</p>
+          <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 text-sm font-medium">KCC Guide →</Link>
+        </div>
+        <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border border-green-200 dark:border-green-800">
+          <h4 className="font-semibold text-green-900 dark:text-green-200 mb-2"> PM FME Yojana</h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">Food processing unit ke liye 35% subsidy. Honey packaging aur branding ke liye ideal.</p>
+          <Link href="/articles/pm-fme-yojana-food-processing" className="text-green-600 hover:underline dark:text-green-400 text-sm font-medium">PM FME Details →</Link>
+        </div>
+      </div>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Sarkari Subsidy: Process Aur Ground Reality
@@ -280,25 +289,25 @@ export default function MadhumakhiPalan() {
         </ul>
       </div>
 
-      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
+      <h2 id="faq" className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Frequently Asked Questions (Unexpected Realities)
       </h2>
-      <div className="space-y-4 mb-8 not-prose">
+      <div className="grid md:grid-cols-2 gap-4 mb-8 not-prose">
         <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">1. Kya madhumakhi ke kaatne se pehle allergy test karwana zaroori hai?</h3>
           <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Haan, agar aapko pehle se asthma ya kisi insect sting se severe reaction ki history hai, toh doctor se consult karna chahiye. Anaphylactic shock ek real risk hai, bhale hi wo rare ho. Pehli baar hive kholte waqt hamesha kisi experienced saathi ke saath rahein.</p>
         </div>
         <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">2. Agar padosi kisan zabardasti pesticide spray kar de, toh colony bachane ka koi turant upay hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Turant upay mushkil hai, lekin agar advance mein pata chal jaye, toh hive ke entrance ko temporary mesh se band karke 2-3 din ke liye dark, cool jagah par shift kar dena chahiye. Lekin yeh short-term solution hai, long-term mein <Link href="/articles/vermi-compost-business-guide" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">organic farming zones</Link> ke paas hi apiary setup karna safe hai.</p>
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">2. Padosi pesticide spray kare toh?</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Turant upay mushkil hai, lekin agar advance mein pata chal jaye, toh hive ke entrance ko temporary mesh se band karke 2-3 din ke liye dark, cool jagah par shift kar dena chahiye. Long-term mein <Link href="/articles/vermi-compost-business-guide" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">organic farming zones</Link> ke paas hi apiary setup karna safe hai.</p>
         </div>
         <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">3. Kya ghar ki chhat (terrace) par bee box rakhna safe aur practical hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Technically possible hai, lekin practical nahi. Bees ko paas mein paani ka source aur ample flora chahiye hota hai. Terrace par paani ki kami aur padosiyon ki shikayat ka risk hamesha rehta hai. Yeh <strong>chhote scale par bee farming kaise shuru karein</strong> ke liye sahi jagah nahi hai.</p>
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">3. Terrace par bee box rakhna safe hai?</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Technically possible hai, lekin practical nahi. Bees ko paas mein paani ka source aur ample flora chahiye hota hai. Terrace par paani ki kami aur padosiyon ki shikayat ka risk hamesha rehta hai.</p>
         </div>
         <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">4. Purane bee frames ko dobara use karne mein kya risk hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Bahut zyada risk. Purane frames mein American Foulbrood jaisi deadly diseases ke spores saalon tak zinda reh sakte hain. Naye beginner ko hamesha naye, sterilized frames ke saath shuruat karni chahiye, bhale hi cost thodi zyada ho.</p>
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">4. Purane frames reuse karne ka risk?</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Bahut zyada risk. Purane frames mein American Foulbrood jaisi deadly diseases ke spores saalon tak zinda reh sakte hain. Naye beginner ko hamesha naye, sterilized frames ke saath shuruat karni chahiye.</p>
         </div>
       </div>
 
@@ -308,9 +317,12 @@ export default function MadhumakhiPalan() {
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Beekeeping un logon ke liye viable hai jo apne khet ya orchard ke saath-saath daily 1-2 hours hive inspection de sakte hain, aur bees ke stings se ghabrate nahi hain. Yeh business unke liye bilkul nahi hai jo quick returns ki expectation rakhte hain ya heavy pesticide use wale agricultural zones ke beech mein rehte hain.
       </p>
-      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Subsidy ek bonus hai, guarantee nahi. Apna business plan aise banayein jaise subsidy milegi hi nahi. Risk management ke liye, kuch regions mein beekeeping units ke liye bhi insurance options explore kiye ja sakte hain, jaise <Link href="/articles/PmfbyCropInsurance2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM Fasal Bima Yojana (PMFBY)</Link> ke frameworks mein agricultural risk management par charcha hoti hai.
-      </p>
+      
+      <div className="bg-amber-50 dark:bg-amber-900/20 p-5 rounded-lg border border-amber-200 dark:border-amber-800 mb-8 not-prose">
+        <h4 className="font-semibold text-amber-900 dark:text-amber-200 mb-2">🛡️ Risk Management</h4>
+        <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">Subsidy ek bonus hai, guarantee nahi. Apna business plan aise banayein jaise subsidy milegi hi nahi. Risk management ke liye, kuch regions mein beekeeping units ke liye bhi insurance options explore kiye ja sakte hain.</p>
+        <Link href="/articles/PmfbyCropInsurance2026" className="text-amber-700 hover:underline dark:text-amber-400 text-sm font-medium">PM Fasal Bima Yojana (PMFBY) →</Link>
+      </div>
 
       {/* Sources & References */}
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
