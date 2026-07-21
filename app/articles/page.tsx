@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { ARTICLES } from '@/lib/articles-data';
+import { MAANDHAN_ARTICLES } from '@/lib/maandhan-data'; // ✅ ADDED: Maandhan articles import
 import { 
   SITE_URL, 
   SITE_NAME, 
@@ -12,9 +13,12 @@ import ArticlesClient from './ArticlesClient';
 
 export const revalidate = 3600;
 
+// ✅ COMBINE BOTH ARRAYS INTO ONE
+const ALL_ARTICLES = [...ARTICLES, ...MAANDHAN_ARTICLES];
+
 export const metadata: Metadata = {
-  title: `Kisan Guides 2026 — ${ARTICLES.length}+ Resources | ${SITE_NAME}`,
-  description: `${ARTICLES.length}+ verified guides on PM Kisan, farming subsidies, loans & crop insurance. Simple Hinglish explanations for Indian farmers.`,
+  title: `Kisan Guides 2026 — ${ALL_ARTICLES.length}+ Resources | ${SITE_NAME}`,
+  description: `${ALL_ARTICLES.length}+ verified guides on PM Kisan, farming subsidies, loans & crop insurance. Simple Hinglish explanations for Indian farmers.`,
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   alternates: { 
     canonical: `${SITE_URL}/articles`,
@@ -36,9 +40,11 @@ export const metadata: Metadata = {
     'soil health card guide',
     'bakri palan yojana',
     'mushroom kheti guide',
+    'pm kisan maandhan yojana', // ✅ ADDED
+    'kisan pension scheme',     // ✅ ADDED
   ],
   openGraph: {
-    title: `Kisan Guides 2026 — ${ARTICLES.length}+ Verified Resources`,
+    title: `Kisan Guides 2026 — ${ALL_ARTICLES.length}+ Verified Resources`,
     description: 'PM Kisan, farming subsidies, loans, crop insurance, and business guides — sab ek jagah. Simple Hinglish mein.',
     type: 'website',
     url: `${SITE_URL}/articles`,
@@ -48,7 +54,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Kisan Guides 2026 — ${ARTICLES.length}+ Verified Resources`,
+    title: `Kisan Guides 2026 — ${ALL_ARTICLES.length}+ Verified Resources`,
     description: 'PM Kisan, farming subsidies, loans, crop insurance, and business guides — sab ek jagah Hinglish mein.',
     site: '@kisanstatus',
     creator: '@kisanstatus',
@@ -62,10 +68,30 @@ export const metadata: Metadata = {
 };
 
 export default function ArticlesPage() {
+  // ✅ FIX: Schema mein correct URL generate karna (Maandhan articles ke liye /maandhan/ prefix)
+  const schemaArticles = ALL_ARTICLES.map((a, i) => {
+    // Check if it's a maandhan article based on category or slug
+    const isMaandhan = a.category === 'pension-scheme' || a.slug.includes('maandhan');
+    const articleUrl = isMaandhan 
+      ? `${SITE_URL}/maandhan/${a.slug}` 
+      : `${SITE_URL}/articles/${a.slug}`;
+      
+    return {
+      '@type': 'ListItem',
+      position: i + 1,
+      item: {
+        '@type': 'Article',
+        url: articleUrl,
+        name: a.title,
+        description: a.desc || a.description, // Handle both possible key names
+      },
+    };
+  });
+
   const collectionSchema = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: `KisanStatus Guides & Resources 2026 — ${ARTICLES.length}+ Articles`,
+    name: `KisanStatus Guides & Resources 2026 — ${ALL_ARTICLES.length}+ Articles`,
     description: SITE_DESCRIPTION,
     url: `${SITE_URL}/articles`,
     inLanguage: 'hi-IN',
@@ -75,19 +101,10 @@ export default function ArticlesPage() {
       name: SITE_NAME,
       url: SITE_URL,
     },
-    numberOfItems: ARTICLES.length,
+    numberOfItems: ALL_ARTICLES.length, // ✅ UPDATED
     mainEntity: {
       '@type': 'ItemList',
-      itemListElement: ARTICLES.map((a, i) => ({
-        '@type': 'ListItem',
-        position: i + 1,
-        item: {
-          '@type': 'Article',
-          url: `${SITE_URL}/articles/${a.slug}`,
-          name: a.title,
-          description: a.desc,
-        },
-      })),
+      itemListElement: schemaArticles, // ✅ UPDATED
     },
   };
 
@@ -110,7 +127,8 @@ export default function ArticlesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <ArticlesClient articles={ARTICLES} />
+      {/* ✅ PASS COMBINED ARRAY TO CLIENT */}
+      <ArticlesClient articles={ALL_ARTICLES} />
     </>
   );
 }
