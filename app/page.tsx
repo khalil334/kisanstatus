@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: `PM Kisan Status & Farming Guides 2026 | ${SITE_NAME}`,
   description: SITE_DESCRIPTION,
-  keywords: GLOBAL_KEYWORDS, // ✅ FIXED: Direct use, spread nahi
+  keywords: GLOBAL_KEYWORDS,
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   creator: AUTHOR_NAME,
   publisher: SITE_NAME,
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
   },
 };
 
-export const revalidate = 3600; // ✅ FIXED: 1 hour for fresh content
+export const revalidate = 3600;
 
 function HomeLoading() {
   return (
@@ -139,7 +139,6 @@ export default function HomePage() {
             breadcrumb: {
               '@id': `${SITE_URL}#breadcrumb`,
             },
-            // ✅ FIXED: Correct URLs (redirected URLs nahi)
             mainEntity: {
               '@type': 'ItemList',
               itemListElement: [
@@ -173,9 +172,32 @@ export default function HomePage() {
                   name: 'Tractor Subsidy',
                   url: `${SITE_URL}/articles/KisanTractorLoan2026`,
                 },
+                {
+                  '@type': 'ListItem',
+                  position: 6,
+                  name: 'PM Kisan Maandhan Registration 2026',
+                  url: `${SITE_URL}/maandhan/pm-kisan-maandhan-registration-2026`,
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 7,
+                  name: 'PM Kisan Maandhan Eligibility & Documents',
+                  url: `${SITE_URL}/maandhan/pm-kisan-maandhan-eligibility-documents`,
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 8,
+                  name: 'PM Kisan Maandhan Pension Calculator',
+                  url: `${SITE_URL}/maandhan/pm-kisan-maandhan-pension-calculator`,
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 9,
+                  name: 'PM Kisan Maandhan Withdrawal & Refund Rules',
+                  url: `${SITE_URL}/maandhan/pm-kisan-maandhan-withdrawal-refund-rules`,
+                },
               ],
             },
-            // ✅ ADDED: SearchAction for site search
             potentialAction: {
               '@type': 'SearchAction',
               target: {
@@ -184,12 +206,10 @@ export default function HomePage() {
               },
               'query-input': 'required name=search_term_string',
             },
-            // ✅ ADDED: Speakable for voice search
             speakable: {
               '@type': 'SpeakableSpecification',
               cssSelector: ['h1', 'h2', '.hero-description'],
             },
-            // ✅ ADDED: Publisher info
             publisher: {
               '@type': 'Organization',
               '@id': `${SITE_URL}#organization`,
