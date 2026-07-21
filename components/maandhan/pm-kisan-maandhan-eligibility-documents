@@ -1,0 +1,382 @@
+'use client';
+
+import Link from 'next/link';
+import Image from 'next/image';
+import Script from 'next/script';
+import { SI, StepList, IB, WB, DB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
+import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
+
+const PUBLISHED = '2024-01-15T08:00:00+05:30';
+const MODIFIED = '2026-07-21T08:00:00+05:30';
+
+const RELATED_CARDS = [
+  { 
+    slug: 'pm-kisan-maandhan-registration-2026', 
+    title: 'Complete Registration Guide', 
+    desc: 'Step-by-step process to apply online or at a CSC center.',
+    emoji: '📝' 
+  },
+  { 
+    slug: 'pm-kisan-maandhan-pension-calculator', 
+    title: 'Pension Calculator', 
+    desc: 'Calculate exact monthly contribution based on your current age.',
+    emoji: '🧮' 
+  },
+  { 
+    slug: 'pm-kisan-maandhan-withdrawal-refund-rules', 
+    title: 'Withdrawal & Refund Rules', 
+    desc: 'What happens to your money if you exit the scheme early?',
+    emoji: '💸' 
+  },
+];
+
+const FAQS_DATA = [
+  {
+    q: 'Kya 2 hectare se zyada zameen wala kisan Maandhan Yojana ka labh le sakta hai?',
+    a: 'Nahi. Sarkar ke niyam ke mutabik, sirf chhote aur seemant (marginal) kisan jinke paas 2 hectare (lagbhag 5 acre) ya usse kam zameen hai, wo hi is scheme ke liye eligible hain.',
+  },
+  {
+    q: 'Mera naam PM Kisan list mein nahi hai, kya main phir bhi apply kar sakta hoon?',
+    a: 'Maandhan Yojana ka primary requirement hai ki aap PM Kisan Samman Nidhi ke beneficiary hon. Agar aap eligible hain lekin list mein nahi hain, toh pehle PM Kisan mein registration karwayein.',
+  },
+  {
+    q: 'Kya main income tax return file karta hoon, toh kya main eligible hoon?',
+    a: 'Bilkul nahi. Jo kisan income tax pay karta hai, wo is pension scheme ke liye eligible nahi mana jata, chahe uske paas kam zameen hi kyun na ho.',
+  },
+  {
+    q: 'Joint family ki zameen hai, toh eligibility kaise check hogi?',
+    a: 'Agar zameen joint hai, toh aapke hisse (share) ki zameen 2 hectare se kam honi chahiye. Khatauni mein aapka naam alag se hona chahiye ya aapko apna hissa dikhane wala document chahiye.',
+  },
+  {
+    q: 'Bank account mein Aadhaar seeding (NPCI) nahi hai, toh kya form reject hoga?',
+    a: 'Haan, form accept toh ho jayega, lekin pension ya contribution ki transaction fail ho jayegi. CSC jane se pehle bank jakar NPCI linking zaroor karwa lein.',
+  },
+  {
+    q: 'Kya retired government teacher is scheme mein apply kar sakta hai?',
+    a: 'Nahi. Jo vyakti pehle se kisi statutory pension scheme (jaise government pension) ka labh le raha hai, wo Maandhan Yojana mein register nahi ho sakta.',
+  },
+];
+
+export default function PmKisanMaandhanEligibilityDocuments({ article }: { article: MaandhanArticleMeta }) {
+  return (
+    <>
+      <Script id="maandhan-eligibility-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Article",
+              "headline": "PM Kisan Maandhan Eligibility & Documents: Kaun Le Sakta Hai Aur Kya Chahiye?",
+              "description": "PM Kisan Maandhan Yojana ki puri eligibility criteria, excluded categories, aur required documents ki detailed checklist. Form reject hone se bachne ke tips.",
+              "author": { 
+                "@type": "Organization", 
+                "name": "KisanStatus Team", 
+                "url": "https://kisanstatus.com/about" 
+              },
+              "publisher": { 
+                "@type": "Organization", 
+                "name": "KisanStatus", 
+                "logo": { "@type": "ImageObject", "url": "https://kisanstatus.com/logo.png" } 
+              },
+              "datePublished": PUBLISHED,
+              "dateModified": MODIFIED,
+              "mainEntityOfPage": { "@type": "WebPage", "@id": `https://kisanstatus.com/maandhan/${article.slug}` }
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": FAQS_DATA.map(faq => ({
+                "@type": "Question",
+                "name": faq.q,
+                "acceptedAnswer": { "@type": "Answer", "text": faq.a }
+              }))
+            }
+          ]
+        })}
+      </Script>
+
+      <div className="bg-[var(--color-primary)] py-8">
+        <div className="container-site max-w-3xl">
+          <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
+            <Link href="/" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Home</Link>
+            <span>/</span>
+            <Link href="/maandhan" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Maandhan Yojana</Link>
+            <span>/</span>
+            <span className="text-white font-bold">Eligibility & Documents</span>
+          </nav>
+          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Kisan Pension Scheme</span>
+          
+          <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
+            PM Kisan Maandhan Eligibility & Documents: Kaun Le Sakta Hai Aur Kya Chahiye?
+          </h1>
+          
+          <div className="flex flex-wrap gap-3 text-xs text-green-200">
+            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
+            <span>📅 {fmtDate(PUBLISHED)}</span>
+            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
+            <span>⏱️ 14 min read</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="container-site max-w-3xl py-8">
+
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/maandhan/eligibility-documents-hero.webp"
+            alt="Farmer checking land records and documents for PM Kisan Maandhan eligibility"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            style={{ maxHeight: '420px', objectPosition: 'center' }}
+            priority
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            Sahi Documents Aur Eligibility Check Karein — Form Reject Hone Se Bachayein
+          </p>
+        </div>
+
+        <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-r-xl">
+          <p className="text-sm md:text-base text-blue-900 dark:text-blue-100 leading-relaxed font-medium">
+            <strong>Seedha Jawab:</strong> PM Kisan Maandhan Yojana ke liye aapki umar 18 se 40 saal ke beech honi chahiye aur aapke paas 2 hectare (5 acre) ya usse kam zameen honi chahiye. Saath hi, aapka naam PM Kisan Samman Nidhi ki beneficiary list mein hona zaroori hai. Income tax pay karne wale ya retired government employees is scheme ke liye eligible nahi hain.
+          </p>
+        </div>
+
+        <section className="mb-8">
+          <SH>Eligibility Check Kyun Zaroori Hai?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Bahut se kisan bina eligibility check kiye CSC center chale jate hain, form bhar dete hain, aur mahino baad pata chalta hai ki unka application reject ho gaya. Kabhi-kabhi toh sarkar galat claim karne par pehle se mile hue paise wapas (recover) bhi mang sakti hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Isliye, CSC jane ya online apply karne se pehle, ye jaan lena bohot zaroori hai ki aap is <strong>kisan pension scheme</strong> ke liye sach mein eligible hain ya nahi. Neeche di gayi criteria ko dhyan se padhein.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>PM Kisan Maandhan Eligibility Criteria (Kaun Apply Kar Sakta Hai)</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Sarkar ne is scheme ko specifically chhote aur seemant (marginal) kisanon ke liye design kiya hai. Eligible hone ke liye aapko neeche di gayi <strong>teeno shartein</strong> puri karni hongi:
+          </p>
+          <div className="space-y-3 mb-6">
+            <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl flex gap-3">
+              <span className="text-2xl">🎂</span>
+              <div>
+                <p className="font-black text-sm text-green-800 dark:text-green-300 mb-1">1. Umra (Age Limit)</p>
+                <p className="text-xs text-[var(--color-text-muted)]">Aapki umar application ke samay <strong>18 se 40 saal</strong> ke beech honi chahiye. 40 saal se upar ke kisan naya registration nahi kara sakte.</p>
+              </div>
+            </div>
+            <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl flex gap-3">
+              <span className="text-2xl">🌾</span>
+              <div>
+                <p className="font-black text-sm text-blue-800 dark:text-blue-300 mb-1">2. Zameen Ki Seema (Land Holding)</p>
+                <p className="text-xs text-[var(--color-text-muted)]">Aapke paas <strong>2 hectare (lagbhag 5 acre)</strong> ya usse kam cultivable land honi chahiye. Ye record aapki state ke land record (Khatauni/ROR) mein hona chahiye.</p>
+              </div>
+            </div>
+            <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl flex gap-3">
+              <span className="text-2xl">✅</span>
+              <div>
+                <p className="font-black text-sm text-amber-800 dark:text-amber-300 mb-1">3. PM Kisan Beneficiary</p>
+                <p className="text-xs text-[var(--color-text-muted)]">Aapka naam <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-blue-600 dark:text-blue-400 font-medium">PM Kisan Samman Nidhi</Link> ki active beneficiary list mein hona zaroori hai.</p>
+              </div>
+            </div>
+          </div>
+          
+          <IB>
+            <strong>Ground Reality Tip (Joint Land):</strong> Agar zameen joint family (baap, bhai) ke naam par hai, toh sirf aapka hissa (share) 2 hectare se kam hona chahiye. CSC operator aksar puri family ki zameen dekh kar form reject kar deta hai. Isliye pehle Khatauni nikal kar dekhein ki aapka naam alag se hai ya aapke hisse ki zameen kitni hai.
+          </IB>
+        </section>
+
+        <section className="mb-8">
+          <SH>Kaun Bilkul Eligible Nahi Hai? (Excluded Categories)</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Bhale hi aapke paas 2 hectare se kam zameen ho, lekin agar aap in categories mein aate hain, toh sarkar aapki application <strong>reject</strong> kar degi:
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+            {[
+              { title: 'Income Tax Payees', desc: 'Jo kisan income tax return (ITR) file karte hain.' },
+              { title: 'Retired Pensioners', desc: 'Jo pehle se kisi government pension scheme ka labh le rahe hain.' },
+              { title: 'Constitutional Post Holders', desc: 'Maujudah ya purane MP, MLA, Mayor, ya Zila Parishad Chairman.' },
+              { title: 'Registered Professionals', desc: 'Doctor, Engineer, Lawyer, CA jo professional body mein registered hain.' },
+              { title: 'Institutional Landholders', desc: 'Jinki zameen kisi trust, company, ya society ke naam par hai.' },
+              { title: 'APY Beneficiaries', desc: 'Jo pehle se Atal Pension Yojana (APY) mein registered hain.' },
+            ].map(({ title, desc }) => (
+              <div key={title} className="p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
+                <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">❌ {title}</p>
+                <p className="text-xs text-red-700 dark:text-red-400">{desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-8">
+          <SH>Required Documents Checklist (Kagazat Ki List)</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            CSC center par jaane se pehle ye documents apne paas ready rakhein. Har document ke saath ek chhoti si tip di gayi hai taake aapka kaam ek hi baar mein ho jaye.
+          </p>
+          
+          <div className="space-y-4 mb-6">
+            <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
+              <div className="flex items-start gap-3">
+                <span className="text-xl mt-0.5">🪪</span>
+                <div>
+                  <p className="font-black text-sm text-[var(--color-text)] mb-1">Aadhaar Card (Original + Copy)</p>
+                  <p className="text-xs text-[var(--color-text-muted)]">Sabse zaroori document. Dhyan rahe ki aapka <strong>mobile number Aadhaar se link</strong> hona chahiye, warna OTP nahi aayega aur registration adhoora reh jayega.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
+              <div className="flex items-start gap-3">
+                <span className="text-xl mt-0.5">🏦</span>
+                <div>
+                  <p className="font-black text-sm text-[var(--color-text)] mb-1">Bank Passbook (Original + Copy)</p>
+                  <p className="text-xs text-[var(--color-text-muted)]">Account <strong>Aadhaar se NPCI seeded</strong> hona chahiye. Passbook ke pehle page par aapka naam, account number aur IFSC code saaf dikhna chahiye. Joint account avoid karein.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
+              <div className="flex items-start gap-3">
+                <span className="text-xl mt-0.5">📜</span>
+                <div>
+                  <p className="font-black text-sm text-[var(--color-text)] mb-1">Land Record (Khatauni / Khasra / ROR)</p>
+                  <p className="text-xs text-[var(--color-text-muted)]">Ye prove karta hai ki aapke paas 2 hectare se kam zameen hai. Record latest hona chahiye. Agar zameen kiraye (lease) par li hai, toh registered lease deed dikhani padegi.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
+              <div className="flex items-start gap-3">
+                <span className="text-xl mt-0.5">📱</span>
+                <div>
+                  <p className="font-black text-sm text-[var(--color-text)] mb-1">Active Mobile Phone</p>
+                  <p className="text-xs text-[var(--color-text-muted)]">OTP verify karne aur future updates ke liye. Wahi number use karein jo Aadhaar aur PM Kisan mein registered hai.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
+              <div className="flex items-start gap-3">
+                <span className="text-xl mt-0.5">🖼️</span>
+                <div>
+                  <p className="font-black text-sm text-[var(--color-text)] mb-1">Passport Size Photograph</p>
+                  <p className="text-xs text-[var(--color-text-muted)]">Offline form ya CSC record ke liye 2-3 latest passport size photos saath le jayein.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+            <Image
+              src="/images/maandhan/required-documents-checklist.webp"
+              alt="Visual checklist of Aadhaar, bank passbook, and land records for Maandhan Yojana"
+              width={800}
+              height={450}
+              className="w-full object-cover"
+              loading="lazy"
+              sizes="(max-width: 768px) 100vw, 768px"
+            />
+            <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+              Registration Se Pehle Ye Documents Zaroor Check Karein
+            </p>
+          </div>
+        </section>
+
+        <section className="mb-8">
+          <SH>Documents Verify Kaise Karein? (CSC Jane Se Pehle)</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Bahut baar kisan saare kagaz le kar CSC pahunch jata hai, lekin wahan pata chalta hai ki kuch detail mismatch ho rahi hai. Ye 3 cheezein ghar baithe check kar lein:
+          </p>
+          <StepList>
+            <SI n={1}><strong>Naam Match Karein:</strong> Aadhaar, Bank Passbook, aur PM Kisan list mein aapka naam bilkul same (spelling tak) hona chahiye. "Ram Kumar" aur "Ram Kumar Singh" mein farak se form reject ho sakta hai.</SI>
+            <SI n={2}><strong>NPCI Status Check Karein:</strong> UIDAI ki website (myaadhaar.uidai.gov.in) par jakar "Bank Seeding Status" check karein. Wahan "Yes" dikhna chahiye.</SI>
+            <SI n={3}><strong>Zameen Ka Record Update Karein:</strong> Agar aapne haal hi mein zameen kharidi ya virasat (inheritance) mein mili hai, toh pehle Patwari se Khatauni mein naam update karwayein, phir apply karein.</SI>
+          </StepList>
+        </section>
+
+        <section className="mb-8">
+          <SH>Common Document Rejection Reasons & Solutions</SH>
+          <div className="space-y-3">
+            {[
+              { 
+                reason: 'Mobile Number Aadhaar Se Link Nahi Hai', 
+                solution: 'Nazdiki Aadhaar Seva Kendra jakar mobile number link karwayein. Ye 5 minute ka kaam hai, lekin iske bina registration possible nahi hai.' 
+              },
+              { 
+                reason: 'Bank Account Joint Hai Ya Minor Ke Naam Par', 
+                solution: 'Maandhan Yojana ke liye sirf individual (ekle) savings account chahiye. Agar joint hai, toh ek naya individual account khulwa kar uski NPCI seeding karwayein.' 
+              },
+              { 
+                reason: 'Land Record Purana Ya Unclear Hai', 
+                solution: 'Kam se kam pichle 1-2 saal ki updated Khatauni/ROR le kar jayein. Agar record digital portal par available hai, toh uska printout saath le jayein.' 
+              },
+              { 
+                reason: 'PM Kisan List Mein Naam Nahi Hai', 
+                solution: 'Agar aap eligible hain lekin list mein nahi hain, toh pehle <Link href="/articles/PmKisanMasterGuide2026" className="underline text-blue-600 dark:text-blue-400 font-medium">PM Kisan Registration</Link> karwayein. Uske baad hi Maandhan ke liye apply karein.' 
+              },
+            ].map(({ reason, solution }, i) => (
+              <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
+                <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">❌ {reason}</p>
+                <p className="text-xs text-green-700 dark:text-green-400"><strong>✅ Solution:</strong> {solution}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
+            Frequently Asked Questions (FAQs)
+          </h2>
+          <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Maandhan Eligibility & Documents FAQ" />
+        </section>
+
+        <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Seedhi Baat (Bottom Line)</h3>
+          <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
+            Bhai, eligibility aur documents mein chhoti si galti bhi aapki pension rok sakti hai. Isliye CSC jane se pehle apna Aadhaar, Bank, aur Khatauni ek baar achhe se check kar lein. Agar koi doubt ho, toh pehle hamara <Link href="/maandhan/pm-kisan-maandhan-registration-2026" className="underline text-blue-600 dark:text-blue-400 font-medium">Registration Guide</Link> padh lein.
+          </p>
+        </div>
+
+        <GovLink
+          href="https://pmkisan.gov.in"
+          label="PM Kisan Official Portal"
+          guide="Check Eligibility & Status"
+          guideHref="/articles/PmKisanMasterGuide2026"
+          portalName="pmkisan.gov.in"
+        />
+
+        <section className="my-10">
+          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Related Articles</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {RELATED_CARDS.map((card) => (
+              <Link 
+                key={card.slug} 
+                href={`/maandhan/${card.slug}`}
+                className="group block p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:border-green-500 transition-all duration-300"
+              >
+                <div className="text-2xl mb-2">{card.emoji}</div>
+                <h4 className="font-bold text-gray-900 dark:text-white text-sm mb-1 group-hover:text-green-600 transition-colors">
+                  {card.title}
+                </h4>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mb-3 line-clamp-2">
+                  {card.desc}
+                </p>
+                <span className="text-xs font-semibold text-green-600 flex items-center gap-1">
+                  Read More <span className="group-hover:translate-x-1 transition-transform">→</span>
+                </span>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        <AuthorBox modified={MODIFIED} />
+        <BottomNav extraLinks={[
+          { href: '/maandhan/pm-kisan-maandhan-registration-2026', l: '📝 Registration Guide' },
+          { href: '/maandhan/pm-kisan-maandhan-pension-calculator', l: '🧮 Calculator' },
+          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
+        ]} />
+        <Disclaimer />
+      </div>
+    </>
+  );
+}
