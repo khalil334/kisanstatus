@@ -65,7 +65,7 @@ export default function MushroomKheti() {
       
       <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
         <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
-          <strong>Ground Reality:</strong> Field reports aur commercial mushroom farmers ke practical experience ke mutabik, jo log sirf YouTube videos dekhkar bina practical training ke seedha 100-200 bags laga dete hain, wo aksar pehle 1-2 cycles mein contamination ya temperature issues ki wajah se 20-30% crop loss ka saamna karte hain. Lekin jab sterilization aur humidity control ka practical cycle samajh aa jata hai, tabhi is business mein consistent profit nikalna shuru hota hai.
+          <strong>Sach kahoon toh:</strong> Jo log sirf YouTube videos dekhkar bina practical training ke seedha 100-200 bags laga dete hain, wo aksar pehle 1-2 cycles mein contamination ya temperature issues ki wajah se 20-30% crop loss ka saamna karte hain. Lekin jab sterilization aur humidity control ka practical cycle samajh aa jata hai, tabhi is business mein consistent profit nikalna shuru hota hai.
         </p>
       </div>
       
@@ -85,7 +85,7 @@ export default function MushroomKheti() {
 
       <Image 
         src="/images/kisanguides/varieties-comparison.webp" 
-        alt="Different Mushroom Varieties - Oyster, Button, Milky Comparison" 
+        alt="Different Mushroom Varieties - Oyster, Button, Milky, and Shiitake Comparison Chart" 
         width={800} 
         height={450} 
         sizes="(max-width: 768px) 100vw, 800px"
@@ -96,7 +96,7 @@ export default function MushroomKheti() {
         Kaunsi Variety Chunein? Oyster, Button, ya Milky - Reality Check
       </h2>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Naye log aksar desi madhumakhi ki tarah, yahan bhi seedha Button mushroom par jump kar lete hain kyunki market mein iski demand zyada hoti hai. Par Button mushroom ko strict controlled environment (AC, precise humidity control) chahiye, jiska setup aur maintenance kharcha bahut zyada hai.
+        Naye log aksar seedha Button mushroom par jump kar lete hain kyunki market mein iski demand zyada hoti hai. Par Button mushroom ko strict controlled environment (AC, precise humidity control) chahiye, jiska setup aur maintenance kharcha bahut zyada hai.
       </p>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Agar aap pehli baar shuru kar rahe hain, toh Oyster mushroom se start lena behtar rehta hai. Yeh kam temperature variation mein bhi ugg jata hai, iski bimariyan relatively kam hoti hain, aur spawn (beej) aasani se aur saste mein mil jata hai.
@@ -154,7 +154,7 @@ export default function MushroomKheti() {
 
       <Image 
         src="/images/kisanguides/setup-process.webp" 
-        alt="Mushroom Farming Setup Process - Bag Filling and Spawning" 
+        alt="Mushroom Farming Setup Process - Bag Filling, Spawning and Incubation Steps" 
         width={800} 
         height={450} 
         sizes="(max-width: 768px) 100vw, 800px"
@@ -251,35 +251,35 @@ export default function MushroomKheti() {
           <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
           <div>
             <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">Chaff (Bhoosa) ki Preparation</h4>
-            <p className="text-sm text-gray-700 dark:text-gray-300">Paddy straw ko 2-3 inch ke pieces mein kaat lein. Phir isko paani mein 16-18 ghante tak bhigo dein. Iske baad paani nikaal kar straw ko achhi tarah squeeze karein - moisture content 65-70% hona chahiye.</p>
+            <p className="text-sm text-gray-700 dark:text-gray-300">Paddy straw ko 2-3 inch ke pieces mein kaat lein. Phir isko paani mein 16-18 ghante tak bhigo dein. Iske baad paani nikaal kar straw ko achhi tarah squeeze karein - moisture content 65-70% hona chahiye. Yeh step bahut important hai kyunki agar straw zyada geela hua toh contamination ka khatra badh jata hai.</p>
           </div>
         </div>
         <div className="flex gap-4">
           <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
           <div>
             <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">Sterilization (Sabse Important)</h4>
-            <p className="text-sm text-gray-700 dark:text-gray-300">Bhige hue straw ko 60-90 minute tak steam se treat karein. Yeh step contamination ko khatam karta hai. Formalin (2%) aur Bavistin (0.1%) ka solution bhi use hota hai.</p>
+            <p className="text-sm text-gray-700 dark:text-gray-300">Bhige hue straw ko 60-90 minute tak steam se treat karein. Yeh step contamination ko khatam karta hai. Formalin (2%) aur Bavistin (0.1%) ka solution bhi use hota hai. Dhyan rahe, sterilization ke bina aage ka kaam bekar hai - green mold aur bacteria poora kaam kharab kar sakte hain.</p>
           </div>
         </div>
         <div className="flex gap-4">
           <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
           <div>
             <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">Spawning (Beej Dalna)</h4>
-            <p className="text-sm text-gray-700 dark:text-gray-300">Thande hue straw ko polythene bags mein bharein. Har layer mein spawn daalein. Ek bag mein 5-7 kg straw aur 200-250 gram spawn lagta hai. Bags ko tight band kar dein aur unme 10-12 chhed kar dein.</p>
+            <p className="text-sm text-gray-700 dark:text-gray-300">Thande hue straw ko polythene bags mein bharein. Har layer mein spawn daalein. Ek bag mein 5-7 kg straw aur 200-250 gram spawn lagta hai. Bags ko tight band kar dein aur unme 10-12 chhed kar dein taaki air circulation ho sake. Yeh step clean hands aur gloves ke saath karna chahiye.</p>
           </div>
         </div>
         <div className="flex gap-4">
           <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">4</div>
           <div>
             <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">Incubation aur Fruiting</h4>
-            <p className="text-sm text-gray-700 dark:text-gray-300">Bags ko andhere kamre mein shelving par rakhein. Temperature 22-28°C aur humidity 70-80% maintain karein. 18-22 din mein bags white mycelium se bhar jayenge. Uske baad bags ko kholein aur fresh air, light, aur humidity provide karein.</p>
+            <p className="text-sm text-gray-700 dark:text-gray-300">Bags ko andhere kamre mein shelving par rakhein. Temperature 22-28°C aur humidity 70-80% maintain karein. 18-22 din mein bags white mycelium se bhar jayenge. Uske baad bags ko kholein aur fresh air, light, aur humidity provide karein. Pehli flush 25-30 din mein aa jayegi.</p>
           </div>
         </div>
       </div>
 
       <Image 
         src="/images/kisanguides/harvesting-mushroom.webp" 
-        alt="Fresh Oyster Mushroom Harvesting from Growing Bags" 
+        alt="Fresh Oyster Mushroom Harvesting from Growing Bags - Ready for Market" 
         width={800} 
         height={450} 
         sizes="(max-width: 768px) 100vw, 800px"
@@ -359,7 +359,7 @@ export default function MushroomKheti() {
 
       <Image 
         src="/images/kisanguides/packaged-products.webp" 
-        alt="Fresh and Dried Mushroom Products Ready for Market" 
+        alt="Fresh and Dried Mushroom Products Ready for Market - Packaging and Branding" 
         width={800} 
         height={450} 
         sizes="(max-width: 768px) 100vw, 800px"
@@ -396,10 +396,10 @@ export default function MushroomKheti() {
       </div>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Maintenance: System Ko 10-15 Saal Kaise Chalayein?
+        Room aur Equipment Maintenance: Har Cycle Mein Kya Zaroori Hai?
       </h2>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Micro-irrigation system ki tarah, mushroom farming ki proper maintenance hi iski lambi umar ki kunji hai. Maintenance cost lagbhag ₹1,000-₹2,000 per cycle aati hai, jo ki system ko badalne ke muqable bahut kam hai.
+        Mushroom farming mein room aur equipment ki proper maintenance hi contamination-free cycles ki kunji hai. Har cycle ke baad proper sanitization se aap apne setup ko saalon tak use kar sakte hain aur recurring cost ko control mein rakh sakte hain.
       </p>
 
       <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-8 border border-gray-200 dark:border-gray-700 not-prose">
@@ -485,7 +485,7 @@ export default function MushroomKheti() {
       <ul className="list-disc pl-5 space-y-2 mb-8 text-sm text-gray-600 dark:text-gray-400 not-prose">
         <li><strong>National Horticulture Board (NHB):</strong> Official guidelines for mushroom farming subsidies and training.</li>
         <li><strong>Directorate of Mushroom Research (DMR), Solan:</strong> Government of India portal for scheme details and application.</li>
-        <li><strong>Krishi Vigyan Kendra (KVK):</strong> District-level practical training modules and apiculture support.</li>
+        <li><strong>Krishi Vigyan Kendra (KVK):</strong> District-level practical training modules and mushroom cultivation support.</li>
         <li><strong>FSSAI:</strong> Regulatory guidelines for packaged mushroom and food safety licensing.</li>
       </ul>
 
