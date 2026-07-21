@@ -146,14 +146,22 @@ function ArticleImage({ image, emoji, title, priority = false }: { image: string
 }
 
 /* ─── Article Card ─── */
-function ArticleCard({ article, showNewBadge = false, priority = false }: { article: ArticleMeta; showNewBadge?: boolean; priority?: boolean }) {
+// ✅ FIX: Use 'any' for article to safely handle both ArticleMeta and MaandhanArticleMeta
+function ArticleCard({ article, showNewBadge = false, priority = false }: { article: any; showNewBadge?: boolean; priority?: boolean }) {
   const categoryInfo = CATEGORIES[article.category] as { name: string; nameHi: string; icon: string } | undefined;
   const emoji = categoryInfo?.icon || '📄';
   const categoryName = categoryInfo?.nameHi || categoryInfo?.name || 'Guide';
 
+  // ✅ FIX 1: Dynamically determine the correct href based on category/slug
+  const isMaandhan = article.category === 'pension-scheme' || article.slug?.includes('maandhan');
+  const articleHref = isMaandhan ? `/maandhan/${article.slug}` : `/articles/${article.slug}`;
+
+  // ✅ FIX 2: Handle both 'desc' and 'description' keys gracefully
+  const displayDesc = article.desc || article.description || '';
+
   return (
     <Link
-      href={`/articles/${article.slug}`}
+      href={articleHref} // ✅ Use dynamic href here
       className={`bg-[var(--color-card)] rounded-2xl overflow-hidden flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300 no-underline group h-full focus:ring-2 focus:ring-green-500 focus:outline-none ${
         showNewBadge
           ? 'border-2 border-green-200 dark:border-green-700 hover:border-green-400 dark:hover:border-green-600'
@@ -178,7 +186,7 @@ function ArticleCard({ article, showNewBadge = false, priority = false }: { arti
         <h3 className="font-black text-[var(--color-text)] text-sm leading-snug group-hover:text-green-700 dark:group-hover:text-green-400 transition-colors mt-2 mb-1 line-clamp-2">
           {article.title}
         </h3>
-        <p className="text-xs text-[var(--color-text-muted)] leading-relaxed line-clamp-2 flex-1">{article.desc}</p>
+        <p className="text-xs text-[var(--color-text-muted)] leading-relaxed line-clamp-2 flex-1">{displayDesc}</p>
         <div className="flex items-center justify-between mt-3 pt-3 border-t border-[var(--color-border)]">
           <span className="text-[11px] text-[var(--color-text-muted)] font-medium">KisanStatus Team</span>
           <span className="text-xs font-bold text-green-700 dark:text-green-400 group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
@@ -191,7 +199,7 @@ function ArticleCard({ article, showNewBadge = false, priority = false }: { arti
 }
 
 /* ─── Articles Content ─── */
-function ArticlesContent({ articles }: { articles: readonly ArticleMeta[] }) {
+function ArticlesContent({ articles }: { articles: readonly any[] }) {
   const searchParams = useSearchParams();
   const router = useRouter();
   const activeCategory = searchParams.get('category') || 'all';
@@ -203,18 +211,19 @@ function ArticlesContent({ articles }: { articles: readonly ArticleMeta[] }) {
       ? [...articles]
       : articles.filter(a => a.category === activeCategory);
 
-    // Search filter
+    // ✅ FIX 3: Safe search filter handling missing 'keywords' or 'desc'
     if (searchQuery.trim()) {
       const query = searchQuery.toLowerCase();
       filtered = filtered.filter(a =>
-        a.title.toLowerCase().includes(query) ||
-        a.desc.toLowerCase().includes(query) ||
-        a.keywords.some(k => k.toLowerCase().includes(query))
+        (a.title || '').toLowerCase().includes(query) ||
+        (a.desc || a.description || '').toLowerCase().includes(query) ||
+        ((a as any).keywords || []).some((k: string) => k.toLowerCase().includes(query))
       );
     }
 
+    // ✅ FIX 4: Safe date sorting handling both 'publishedTime' and 'published'
     const sorted = filtered.sort((a, b) =>
-      new Date(b.publishedTime || 0).getTime() - new Date(a.publishedTime || 0).getTime()
+      new Date(b.publishedTime || b.published || 0).getTime() - new Date(a.publishedTime || a.published || 0).getTime()
     );
 
     const latest = sorted.slice(0, NEW_ARTICLES_LIMIT);
@@ -408,7 +417,7 @@ function ArticlesLoading() {
 }
 
 /* ─── Main Component ─── */
-export default function ArticlesClient({ articles }: { articles: readonly ArticleMeta[] }) {
+export default function ArticlesClient({ articles }: { articles: readonly any[] }) {
   return (
     <main className="min-h-screen bg-[var(--color-bg)]">
       {/* Hero Section */}
