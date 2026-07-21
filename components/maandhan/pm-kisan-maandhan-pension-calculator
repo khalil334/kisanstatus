@@ -1,0 +1,27 @@
+<div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
+  <table className="w-full text-sm border-collapse">
+    <thead>
+      <tr className="bg-[var(--color-primary)] text-white">
+        <th className="p-3 text-left">Entry Age</th>
+        <th className="p-3 text-left">Monthly Contribution</th>
+        <th className="p-3 text-left">Total (Till 60)</th>
+      </tr>
+    </thead>
+    <tbody>
+      {[
+        ['18 Years', '₹55', '₹27,720'],
+        ['20 Years', '₹60', '₹28,800'],
+        ['25 Years', '₹75', '₹31,500'],
+        ['30 Years', '₹100', '₹36,000'],
+        ['35 Years', '₹140', '₹42,000'],
+        ['40 Years', '₹200', '₹48,000'],
+      ].map(([age, monthly, total], i) => (
+        <tr key={age} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-green-50/40 dark:bg-green-900/10'}>
+          <td className="p-3 border-b border-[var(--color-border)] font-medium text-[var(--color-text)]">{age}</td>
+          <td className="p-3 border-b border-[var(--color-border)] text-[var(--color-text)] font-bold">{monthly}</td>
+          <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{total}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
