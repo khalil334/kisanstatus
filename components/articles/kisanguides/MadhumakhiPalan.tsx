@@ -65,7 +65,7 @@ export default function MadhumakhiPalan() {
       
       <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
         <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
-          <strong>Ground Reality:</strong> Field reports aur beekeepers ke practical experience ke mutabik, jo log sirf YouTube videos dekhkar bina practical training ke seedha 40-50 boxes kharid kar khet mein phenk dete hain, wo aksar pehle saal ke lean period (May-June) mein hi demotivate ho kar chhod dete hain. Lekin agar isse ek proper business ki tarah treat kiya jaye, toh iski "dohri kamai" (shahad + pollination) ise ek highly profitable venture bana deti hai.
+          <strong>Sach kahoon toh:</strong> Jo log sirf YouTube videos dekhkar bina practical training ke seedha 40-50 boxes kharid kar khet mein phenk dete hain, wo aksar pehle saal ke lean period (May-June) mein hi demotivate ho kar chhod dete hain. Lekin agar isse ek proper business ki tarah treat kiya jaye, toh iski "dohri kamai" (shahad + pollination) ise ek highly profitable venture bana deti hai.
         </p>
       </div>
       
@@ -117,12 +117,12 @@ export default function MadhumakhiPalan() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Veterinary experts aur successful beekeepers ka manna hai ki agar serious income chahiye, toh Apis mellifera ke saath jayein. Iski production capacity 2-3 guna zyada hai. Colony khareedte waqt vendor ki credibility check karna behad zaroori hai. Ek healthy, young queen wali colony ka rate market mein ₹3,500-4,500 ke aas-paas hota hai, lekin yeh long term mein behtar production deti hai.
+        Agar serious income chahiye, toh Apis mellifera hi sahi choice hai. Iski production capacity 2-3 guna zyada hai. Colony khareedte waqt vendor ki credibility check karna behad zaroori hai. Ek healthy, young queen wali colony ka rate market mein ₹3,500-4,500 ke aas-paas hota hai, lekin yeh long term mein behtar production deti hai.
       </p>
 
       <Image 
         src="/images/kisanguides/beekeeping-equipment-tools.webp" 
-        alt="Beekeeping Equipment and Tools arranged on wooden table" 
+        alt="Essential Beekeeping Equipment and Tools - Smoker, Veil, Hive Tool, and Protective Gear" 
         width={800} 
         height={450} 
         sizes="(max-width: 768px) 100vw, 800px"
@@ -221,7 +221,7 @@ export default function MadhumakhiPalan() {
 
       <Image 
         src="/images/kisanguides/bee-colony-inspection.webp" 
-        alt="Close-up view of beekeeper inspecting wooden bee frame with queen bee" 
+        alt="Close-up view of beekeeper inspecting wooden bee frame with queen bee and brood pattern" 
         width={800} 
         height={450} 
         sizes="(max-width: 768px) 100vw, 800px"
@@ -243,7 +243,7 @@ export default function MadhumakhiPalan() {
 
       <Image 
         src="/images/kisanguides/honey-harvesting-process.webp" 
-        alt="Beekeeper extracting golden honey from wooden frames using manual extractor" 
+        alt="Beekeeper extracting golden honey from wooden frames using manual extractor machine" 
         width={800} 
         height={450} 
         sizes="(max-width: 768px) 100vw, 800px"
@@ -252,7 +252,7 @@ export default function MadhumakhiPalan() {
 
       <Image 
         src="/images/kisanguides/honey-value-addition-products.webp" 
-        alt="Beautifully arranged glass jars of branded packaged honey and natural honeycomb" 
+        alt="Beautifully arranged glass jars of branded packaged honey and natural honeycomb for retail sale" 
         width={800} 
         height={450} 
         sizes="(max-width: 768px) 100vw, 800px"
@@ -260,7 +260,7 @@ export default function MadhumakhiPalan() {
       />
 
       <div className="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
-        <h3 className="font-bold text-red-800 dark:text-red-300 mb-2 text-sm">⚠️ Common Mistakes During Site Inspection & Management:</h3>
+        <h3 className="font-bold text-red-800 dark:text-red-300 mb-2 text-sm">⚠️ Common Mistakes Jo Naye Beekeepers Karte Hain:</h3>
         <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300">
           <li><strong>Overcrowding:</strong> Ek hi jagah par bahut saare boxes rakh dena, jisse bees mein competition aur disease failne ka khatra badh jata hai.</li>
           <li><strong>Ignoring Varroa Mite:</strong> Yeh sabse common disease hai. Iska regular treatment na karne se poori colony khatam ho sakti hai.</li>
@@ -270,7 +270,7 @@ export default function MadhumakhiPalan() {
       </div>
 
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-5 my-6 not-prose">
-        <h3 className="font-bold text-blue-800 dark:text-blue-300 mb-3 text-sm"> Biosecurity aur Disease Prevention Basics:</h3>
+        <h3 className="font-bold text-blue-800 dark:text-blue-300 mb-3 text-sm">🛡️ Biosecurity aur Disease Prevention Basics:</h3>
         <ul className="list-disc pl-5 space-y-2 text-sm text-gray-700 dark:text-gray-300">
           <li>Farm mein entry par proper hygiene maintain karein.</li>
           <li>Naye colonies ko 15-30 din alag quarantine karein.</li>
