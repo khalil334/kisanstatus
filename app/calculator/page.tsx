@@ -9,17 +9,10 @@ export const metadata: Metadata = {
   description: '7 free kisan tools: PM Kisan status check, KCC loan EMI, MSP income, aur fasal bima premium calculator. Bina registration ke, bilkul free.',
   alternates: { canonical: `${SITE_URL}/calculator` },
   keywords: [
-    'pm kisan calculator',
-    'kcc loan emi calculator',
-    'crop insurance premium calculator',
-    'msp income calculator',
-    'crop profit calculator',
-    'pm kisan status check tool',
-    'kisan credit card emi',
-    'pmfby premium calculator',
-    'free kisan tools',
-    'kheti ka munafa calculator',
-    'fasal bima premium calculator hindi',
+    'pm kisan calculator', 'kcc loan emi calculator', 'crop insurance premium calculator',
+    'msp income calculator', 'crop profit calculator', 'pm kisan status check tool',
+    'kisan credit card emi', 'pmfby premium calculator', 'free kisan tools',
+    'kheti ka munafa calculator', 'fasal bima premium calculator hindi',
   ],
   openGraph: {
     type: 'website',
@@ -39,169 +32,50 @@ export const metadata: Metadata = {
   },
 };
 
-/* ─── SVG Icons (Replace Emojis) ─── */
+/* ─── SVG Icons (Optimized & Lightweight) ─── */
 function IconSearch({ className = 'w-6 h-6' }: { className?: string }) {
-  return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-    </svg>
-  );
+  return <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" /></svg>;
 }
-
 function IconCalendar({ className = 'w-6 h-6' }: { className?: string }) {
-  return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
-    </svg>
-  );
+  return <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>;
 }
-
 function IconWheat({ className = 'w-6 h-6' }: { className?: string }) {
-  return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
-    </svg>
-  );
+  return <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" /></svg>;
 }
-
 function IconBank({ className = 'w-6 h-6' }: { className?: string }) {
-  return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
-    </svg>
-  );
+  return <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" /></svg>;
 }
-
 function IconShield({ className = 'w-6 h-6' }: { className?: string }) {
-  return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
-    </svg>
-  );
+  return <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>;
 }
-
 function IconTrending({ className = 'w-6 h-6' }: { className?: string }) {
-  return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
-    </svg>
-  );
+  return <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" /></svg>;
 }
-
 function IconChart({ className = 'w-6 h-6' }: { className?: string }) {
-  return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
-    </svg>
-  );
+  return <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" /></svg>;
 }
-
 function IconCalculator({ className = 'w-5 h-5' }: { className?: string }) {
-  return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15.75 15.75l-2.489-2.489m0 0a3.375 3.375 0 10-4.773-4.773 3.375 3.375 0 004.774 4.774zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-    </svg>
-  );
+  return <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15.75 15.75l-2.489-2.489m0 0a3.375 3.375 0 10-4.773-4.773 3.375 3.375 0 004.774 4.774zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>;
 }
-
 function IconArrowRight({ className = 'w-4 h-4' }: { className?: string }) {
-  return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-    </svg>
-  );
+  return <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>;
 }
-
 function IconCheck({ className = 'w-3 h-3' }: { className?: string }) {
-  return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.5 12.75l6 6 9-13.5" />
-    </svg>
-  );
+  return <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.5 12.75l6 6 9-13.5" /></svg>;
 }
-
 function IconFire({ className = 'w-3 h-3' }: { className?: string }) {
-  return (
-    <svg className={className} fill="currentColor" viewBox="0 0 20 20">
-      <path fillRule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clipRule="evenodd" />
-    </svg>
-  );
+  return <svg className={className} fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clipRule="evenodd" /></svg>;
 }
 
+/* ─── Static Data (Module Scope for Zero Re-computation) ─── */
 const CALCS = [
-  {
-    href: '/calculator/quick-status-check',
-    index: '00',
-    icon: IconSearch,
-    title: 'PM Kisan Status Check',
-    hindi: 'पीएम किसान स्टेटस चेक',
-    desc: 'Aadhaar ya mobile number daalein aur seedha official portal par apna latest kist status verify karein. Bilkul free aur instant.',
-    tags: ['Aadhaar Check', 'Mobile Check', 'Instant Redirect'],
-    group: 'scheme',
-    featured: true,
-    badge: 'New Tool',
-  },
-  {
-    href: '/calculator/installment-tracker',
-    index: '01',
-    icon: IconCalendar,
-    title: 'Kist Status Tracker',
-    hindi: 'किस्त स्टेटस ट्रैकर',
-    desc: 'Kist aayi ya nahi? eKYC, bank aur land seeding check karke 4 aasaan sawaalon mein exact reason jaanein.',
-    tags: ['Latest Kist', 'eKYC Check', 'Instant Result'],
-    group: 'scheme',
-    featured: false,
-  },
-  {
-    href: '/calculator/pm-kisan-benefit',
-    index: '02',
-    icon: IconWheat,
-    title: 'PM Kisan Calculator',
-    hindi: 'पीएम किसान कैलकुलेटर',
-    desc: 'Saalana ₹6,000 ka total benefit, kitni kist milengi aur arrears ka hisaab lagayein. Free estimator.',
-    tags: ['₹6,000/yr', '3 Kist', 'Eligibility'],
-    group: 'scheme',
-  },
-  {
-    href: '/calculator/kcc-loan-emi',
-    index: '03',
-    icon: IconBank,
-    title: 'KCC Loan EMI Calculator',
-    hindi: 'केसीसी लोन ईएमआई कैलकुलेटर',
-    desc: 'Kisan Credit Card (KCC) loan ki monthly EMI, total interest aur 2% government subsidy ka exact hisaab lagayein.',
-    tags: ['7% Rate', 'Govt Subsidy', 'Monthly EMI'],
-    group: 'credit',
-  },
-  {
-    href: '/calculator/pmfby-premium',
-    index: '04',
-    icon: IconShield,
-    title: 'Fasal Bima Premium',
-    hindi: 'फसल बीमा प्रीमियम',
-    desc: 'PMFBY ke tahat Kharif aur Rabi fasal ka insurance premium aur maximum claim amount jaanein.',
-    tags: ['Kharif + Rabi', 'All Crops', 'Claim Amount'],
-    group: 'insurance',
-  },
-  {
-    href: '/calculator/msp-income',
-    index: '05',
-    icon: IconTrending,
-    title: 'MSP Income Calculator',
-    hindi: 'एमएसपी आय कैलकुलेटर',
-    desc: '2025-26 MSP rates par gehun, dhaan, sarson ya kapas — kisi bhi fasal ki total income calculate karein.',
-    tags: ['2025-26 Rates', '11 Crops', 'Per Hectare'],
-    group: 'data',
-  },
-  {
-    href: '/calculator/crop-profit',
-    index: '06',
-    icon: IconChart,
-    title: 'Kheti Ka Munafa',
-    hindi: 'खेती का मुनाफा',
-    desc: 'Beej, khad, mazdoori aur sinchai ka kharcha daal kar fasal ka net profit ya loss turant jaanein.',
-    tags: ['Full Season', 'All Costs', 'Net Profit'],
-    group: 'data',
-  },
+  { href: '/calculator/quick-status-check', index: '00', icon: IconSearch, title: 'PM Kisan Status Check', hindi: 'पीएम किसान स्टेटस चेक', desc: 'Aadhaar ya mobile number daalein aur seedha official portal par apna latest kist status verify karein. Bilkul free aur instant.', tags: ['Aadhaar Check', 'Mobile Check', 'Instant Redirect'], group: 'scheme', featured: true, badge: 'New Tool' },
+  { href: '/calculator/installment-tracker', index: '01', icon: IconCalendar, title: 'Kist Status Tracker', hindi: 'किस्त स्टेटस ट्रैकर', desc: 'Kist aayi ya nahi? eKYC, bank aur land seeding check karke 4 aasaan sawaalon mein exact reason jaanein.', tags: ['Latest Kist', 'eKYC Check', 'Instant Result'], group: 'scheme', featured: false },
+  { href: '/calculator/pm-kisan-benefit', index: '02', icon: IconWheat, title: 'PM Kisan Calculator', hindi: 'पीएम किसान कैलकुलेटर', desc: 'Saalana ₹6,000 ka total benefit, kitni kist milengi aur arrears ka hisaab lagayein. Free estimator.', tags: ['₹6,000/yr', '3 Kist', 'Eligibility'], group: 'scheme' },
+  { href: '/calculator/kcc-loan-emi', index: '03', icon: IconBank, title: 'KCC Loan EMI Calculator', hindi: 'केसीसी लोन ईएमआई कैलकुलेटर', desc: 'Kisan Credit Card (KCC) loan ki monthly EMI, total interest aur 2% government subsidy ka exact hisaab lagayein.', tags: ['7% Rate', 'Govt Subsidy', 'Monthly EMI'], group: 'credit' },
+  { href: '/calculator/pmfby-premium', index: '04', icon: IconShield, title: 'Fasal Bima Premium', hindi: 'फसल बीमा प्रीमियम', desc: 'PMFBY ke tahat Kharif aur Rabi fasal ka insurance premium aur maximum claim amount jaanein.', tags: ['Kharif + Rabi', 'All Crops', 'Claim Amount'], group: 'insurance' },
+  { href: '/calculator/msp-income', index: '05', icon: IconTrending, title: 'MSP Income Calculator', hindi: 'एमएसपी आय कैलकुलेटर', desc: '2025-26 MSP rates par gehun, dhaan, sarson ya kapas — kisi bhi fasal ki total income calculate karein.', tags: ['2025-26 Rates', '11 Crops', 'Per Hectare'], group: 'data' },
+  { href: '/calculator/crop-profit', index: '06', icon: IconChart, title: 'Kheti Ka Munafa', hindi: 'खेती का मुनाफा', desc: 'Beej, khad, mazdoori aur sinchai ka kharcha daal kar fasal ka net profit ya loss turant jaanein.', tags: ['Full Season', 'All Costs', 'Net Profit'], group: 'data' },
 ];
 
 const GROUP_STYLES: Record<string, { bar: string; chip: string; btn: string; glow: string; icon: string }> = {
@@ -211,33 +85,34 @@ const GROUP_STYLES: Record<string, { bar: string; chip: string; btn: string; glo
   data:      { bar: 'bg-slate-600',   chip: 'text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800',     btn: 'bg-slate-700 hover:bg-slate-800',     glow: 'hover:shadow-slate-100 dark:hover:shadow-slate-900/20',     icon: 'text-slate-600 dark:text-slate-400' },
 };
 
+/* ─── Pre-computed Schemas (Zero Runtime Overhead) ─── */
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: `Free PM Kisan Tools 2026 — ${SITE_NAME}`,
+  description: '7 free kisan utilities — status verification, KCC EMI, crop insurance premium, MSP income, profit/loss analysis.',
+  numberOfItems: CALCS.length,
+  itemListElement: CALCS.map((calc, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: calc.title,
+    description: calc.desc,
+    url: `${SITE_URL}${calc.href}`,
+  })),
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Free Kisan Calculators', item: `${SITE_URL}/calculator` },
+  ],
+};
+
 export default function CalculatorIndexPage() {
   const featured = CALCS.find((c) => c.featured);
   const rest = CALCS.filter((c) => !c.featured);
-
-  const itemListSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    name: `Free PM Kisan Tools 2026 — ${SITE_NAME}`,
-    description: '7 free kisan utilities — status verification, KCC EMI, crop insurance premium, MSP income, profit/loss analysis.',
-    numberOfItems: CALCS.length,
-    itemListElement: CALCS.map((calc, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      name: calc.title,
-      description: calc.desc,
-      url: `${SITE_URL}${calc.href}`,
-    })),
-  };
-
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Free Kisan Calculators', item: `${SITE_URL}/calculator` },
-    ],
-  };
 
   return (
     <>
