@@ -290,7 +290,7 @@ export default function PMatsyaSampada() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Yeh investment lagti hai. Par agar aapke paas Kisan Credit Card (KCC) hai, toh fisheries ke liye bhi loan mil jata hai. KCC ke under ₹3 lakh tak loan milta hai, aur interest rate 4% (timely repayment par) hai.
+        Yeh investment lagti hai. Par agar aapke paas <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Kisan Credit Card (KCC)</Link> hai, toh fisheries ke liye bhi loan mil jata hai. KCC ke under ₹3 lakh tak loan milta hai, aur interest rate 4% (timely repayment par) hai.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
@@ -317,7 +317,7 @@ export default function PMatsyaSampada() {
           </li>
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">3. Cold Storage aur Processing Unit:</strong>
-            Agar aap fish processing unit ya cold storage lagana chahte hain, toh 35-50% subsidy mil sakti hai. PM FME Yojana ke under bhi food processing units par 35% subsidy milti hai.
+            Agar aap fish processing unit ya cold storage lagana chahte hain, toh 35-50% subsidy mil sakti hai. <Link href="/articles/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME Yojana</Link> ke under bhi food processing units par 35% subsidy milti hai.
           </li>
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">4. Feed Mill Setup:</strong>
@@ -657,7 +657,7 @@ export default function PMatsyaSampada() {
       <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-8">
         <li>Pond water se vegetables ugayein (aquaponics)</li>
         <li>
-          Fish waste se vermi compost banayein - ₹15-20/kg milta hai
+          Fish waste se <Link href="/articles/vermi-compost-business-guide" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">vermi compost</Link> banayein - ₹15-20/kg milta hai
         </li>
         <li>Integrated farming - pond ke kinare poultry ya duck farming karein (unke droppings fish food bante hain)</li>
       </ul>
@@ -675,7 +675,7 @@ export default function PMatsyaSampada() {
             💳 Kisan Credit Card (KCC)
           </h4>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Fisheries ke liye low-interest loan. 4% interest rate with timely repayment aur flexible limits.</p>
-          <Link href="/articles/loan/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 text-sm font-medium flex items-center gap-1">
+          <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 text-sm font-medium flex items-center gap-1">
             KCC Guide Padhein <span>→</span>
           </Link>
         </div>
@@ -685,7 +685,7 @@ export default function PMatsyaSampada() {
             🏭 PM FME Yojana
           </h4>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Fish processing aur cold storage units ke liye 35% tak subsidy. Branded packaging ke liye ideal.</p>
-          <Link href="/articles/farming/pm-fme-yojana-food-processing" className="text-green-600 hover:underline dark:text-green-400 text-sm font-medium flex items-center gap-1">
+          <Link href="/articles/pm-fme-yojana-food-processing" className="text-green-600 hover:underline dark:text-green-400 text-sm font-medium flex items-center gap-1">
             PM FME Details Dekhein <span>→</span>
           </Link>
         </div>
@@ -695,7 +695,7 @@ export default function PMatsyaSampada() {
             🛡️ PM Fasal Bima Yojana (PMFBY)
           </h4>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Natural calamities, disease outbreak, aur flood ke liye fisheries insurance coverage.</p>
-          <Link href="/articles/farming/PmfbyCropInsurance2026" className="text-amber-700 hover:underline dark:text-amber-400 text-sm font-medium flex items-center gap-1">
+          <Link href="/articles/PmfbyCropInsurance2026" className="text-amber-700 hover:underline dark:text-amber-400 text-sm font-medium flex items-center gap-1">
             Insurance Guide Padhein <span>→</span>
           </Link>
         </div>
@@ -705,7 +705,7 @@ export default function PMatsyaSampada() {
             ♻️ Vermi Compost Business
           </h4>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Fish waste aur pond sludge ko organic fertilizer mein badal kar extra income generate karein.</p>
-          <Link href="/articles/farming/vermi-compost-business-guide" className="text-purple-600 hover:underline dark:text-purple-400 text-sm font-medium flex items-center gap-1">
+          <Link href="/articles/vermi-compost-business-guide" className="text-purple-600 hover:underline dark:text-purple-400 text-sm font-medium flex items-center gap-1">
             Vermi Compost Guide <span>→</span>
           </Link>
         </div>
@@ -750,7 +750,7 @@ export default function PMatsyaSampada() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Ek aur point: Fasal Bima Yojana (PMFBY) ke under ab fisheries ko bhi cover kiya ja raha hai kuch states mein. Apne zila ke fisheries office se pata karein ki aapke area mein insurance available hai ya nahi. Natural calamities mein yeh bahut kaam aata hai.
+        Ek aur point: <Link href="/articles/PmfbyCropInsurance2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Fasal Bima Yojana (PMFBY)</Link> ke under ab fisheries ko bhi cover kiya ja raha hai kuch states mein. Apne zila ke fisheries office se pata karein ki aapke area mein insurance available hai ya nahi. Natural calamities mein yeh bahut kaam aata hai.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
