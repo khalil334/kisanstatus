@@ -154,16 +154,18 @@ export default function PMatsyaSampada() {
         PM Matsya Sampada Yojana 2026: Machli Palan par 60% Subsidy, Biofloc Technology, aur Real Profit
       </h1>
       
-      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 italic">
-        Fish farming mein ek common pattern dekha jata hai: pehle saal mein oxygen management ya disease control mein galtiyan hoti hain, jisse lagbhag 20-30% tak crop loss ho sakta hai. Par experience ke saath, doosre-teesre saal tak returns stabilize ho jate hain aur profit consistent hone lagta hai.
-      </p>
+      <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
+        <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
+          <strong>Sach kahoon toh:</strong> Machli palan mein pehle saal oxygen management ya disease control mein chhoti galtiyan 20-30% tak crop loss karwa sakti hain. Par experience ke saath, doosre-teesre saal tak returns stabilize ho jate hain aur profit consistent hone lagta hai.
+        </p>
+      </div>
       
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Machli palan mein paani ki quality, oxygen level, aur feed management seedha aapke profit se juda hai. Ek chhoti si chook poori crop khatam kar sakti hai. Lekin jab management sahi hota hai, toh returns kaafi achhe milte hain. Isme sarkar ki PM Matsya Sampada Yojana (PMMSY) 40-60% tak ki subsidy dekar is business ko aur bhi viable bana deti hai.
+        Aquaculture mein paani ki quality, oxygen level, aur feed management seedha aapki jeb se juda hai. Ek chhoti si chook poori crop khatam kar sakti hai. Lekin jab management sahi hota hai, toh returns kaafi achhe milte hain. Isme sarkar ki PM Matsya Sampada Yojana (PMMSY) 40-60% tak ki financial assistance dekar is business ko aur bhi viable bana deti hai.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Aquaculture Kyun? India Ka Fisheries Sector Boom Par Hai
+        Matsya Palan Kyun? India Ka Fisheries Sector Boom Par Hai
       </h2>
       
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
@@ -224,7 +226,7 @@ export default function PMatsyaSampada() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Central Institute of Freshwater Aquaculture (CIFA), Bhubaneswar ke scientists ke mutabiq, agar aap pehli baar shuru kar rahe hain toh traditional pond se shuruat karna behtar rehta hai. Isme risk kam hai, technical complexity kam hai, aur PMMSY subsidy bhi ispar zyada milti hai.
+        CIFA, Bhubaneswar ke experts maante hain ki agar aap pehli baar shuru kar rahe hain toh traditional pond se shuruat karna behtar rehta hai. Isme risk kam hai, technical complexity kam hai, aur PMMSY subsidy bhi ispar zyada milti hai.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
@@ -300,60 +302,95 @@ export default function PMatsyaSampada() {
       </h2>
       
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        PMMSY 2020 mein launch hui thi, 5 saal ke liye (2020-2025). Budget ₹20,000+ crore hai. Yeh scheme fisheries sector ko transform karne ke liye hai.
+        PMMSY 2020 mein launch hui thi, jiska budget ₹20,000+ crore hai. Yeh scheme fisheries sector ko transform karne ke liye design ki gayi hai.
       </p>
 
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6 mb-8 not-prose">
         <ul className="space-y-4 text-sm text-gray-800 dark:text-gray-200">
           <li>
-            <strong className="text-blue-900 dark:text-blue-200 block mb-1">1. New Pond Construction:</strong>
-            General category ko 40% subsidy milti hai (maximum ₹5 lakh per hectare). SC/ST, women, aur North-East states mein 60% subsidy milti hai (maximum ₹7.5 lakh per hectare). Yeh subsidy pond excavation, bund construction, aur drainage system par milti hai.
-            <p className="mt-1 text-xs text-gray-600 dark:text-gray-400 italic">
-              Disclaimer: PMMSY ki guidelines update hoti rehti hain. Latest subsidy % aur eligibility ke liye nazdeeki Fisheries Department office se confirm karein.
-            </p>
+            <strong className="text-blue-900 dark:text-blue-200 block mb-1">1. Naya Talab Nirman (New Pond Construction):</strong>
+            General category ko 40% subsidy milti hai (maximum ₹5 lakh per hectare). SC/ST, mahila kisan, aur North-East states mein yeh limit 60% (₹7.5 lakh per hectare) tak ja sakti hai. Yeh sahayata pond excavation, bund construction, aur drainage system par milti hai.
           </li>
-
           <li>
-            <strong className="text-blue-900 dark:text-blue-200 block mb-1">2. Biofloc/RAS Setup:</strong>
-            Biofloc technology par 60% subsidy milti hai (maximum ₹10 lakh). RAS par bhi 60% subsidy hai (maximum ₹15 lakh). Yeh high-tech systems ke liye hai.
-            <p className="mt-1 text-xs text-gray-600 dark:text-gray-400 italic">
-              Disclaimer: Biofloc/RAS ki subsidy limits change hoti hain. Latest details ke liye official portal check karein.
-            </p>
+            <strong className="text-blue-900 dark:text-blue-200 block mb-1">2. Biofloc aur RAS Setup:</strong>
+            High-tech systems jaise Biofloc par 60% subsidy (max ₹10 lakh) aur RAS par 60% (max ₹15 lakh) mil sakti hai.
           </li>
-
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">3. Cold Storage aur Processing Unit:</strong>
             Agar aap fish processing unit ya cold storage lagana chahte hain, toh 35-50% subsidy mil sakti hai. <Link href="/articles/farming/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME Yojana</Link> ke under bhi food processing units par 35% subsidy milti hai.
-            <p className="mt-1 text-xs text-gray-600 dark:text-gray-400 italic">
-              Disclaimer: Processing unit ki eligibility criteria specific hai. Detailed information ke liye official portal ya nazdeeki Fisheries Department se contact karein.
-            </p>
           </li>
-
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">4. Feed Mill Setup:</strong>
             Fish feed mill lagane par 40-50% subsidy milti hai. Agar aap apna feed banana chahte hain (jo cost 20-30% kam kar deta hai), toh yeh option consider karein. Official <a href="https://agriinfra.dac.gov.in/" className="text-blue-600 hover:underline dark:text-blue-400 font-medium" target="_blank" rel="noopener noreferrer">Agriculture Infrastructure Fund</a> ke under bhi 3% interest subsidy mil sakti hai.
-            <p className="mt-1 text-xs text-gray-600 dark:text-gray-400 italic">
-              Disclaimer: Feed mill ki subsidy limits vary karti hain. Latest details ke liye Fisheries Department se confirm karein.
-            </p>
           </li>
-
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">5. Ornamental Fish Farming:</strong>
             Agar aap decorative/aquarium fish paalna chahte hain, toh 50-60% subsidy milti hai. Isme margin bahut zyada hai (₹50-500 per fish), par market access zaroori hai.
-            <p className="mt-1 text-xs text-gray-600 dark:text-gray-400 italic">
-              Disclaimer: Ornamental fish ki market demand vary karti hai. Apne area mein demand check karein.
-            </p>
           </li>
-
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">6. PMEGP (Prime Minister's Employment Generation Programme):</strong>
             Chhote fish farming units par 25-35% subsidy mil sakti hai (rural areas mein zyada). Maximum project cost ₹25 lakh hai. KVIC ke through apply hota hai. Official <a href="https://www.pmegp.in/" className="text-blue-600 hover:underline dark:text-blue-400 font-medium" target="_blank" rel="noopener noreferrer">PMEGP portal</a> par details check karein.
-            <p className="mt-1 text-xs text-gray-600 dark:text-gray-400 italic">
-              Disclaimer: PMEGP ki guidelines periodically update hoti hain. Latest details ke liye KVIC office se confirm karein.
-            </p>
+          </li>
+        </ul>
+        <p className="mt-4 text-xs text-gray-600 dark:text-gray-400 italic border-t border-blue-200 dark:border-blue-800 pt-3">
+          <strong>Note:</strong> PMMSY aur related schemes ki guidelines aur subsidy limits samay-samay par update hoti rehti hain. Apply karne se pehle apne nazdeeki Fisheries Department office se latest norms zaroor confirm karein.
+        </p>
+      </div>
+
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
+        PMMSY Documents Required
+      </h2>
+      
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        Subsidy application ke liye yeh documents taiyar rakhein:
+      </p>
+
+      <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-8 border border-gray-200 dark:border-gray-700 not-prose">
+        <ul className="space-y-3 text-sm text-gray-700 dark:text-gray-300">
+          <li className="flex items-start gap-3">
+            <span className="text-green-600 dark:text-green-400 font-bold">✓</span>
+            <span><strong>Aadhaar Card aur PAN Card</strong> (self-attested copies)</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="text-green-600 dark:text-green-400 font-bold">✓</span>
+            <span><strong>Zameen ke kagaz</strong> - Registry, Khatauni, ya kam se kam 7-10 saal ka registered lease agreement</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="text-green-600 dark:text-green-400 font-bold">✓</span>
+            <span><strong>Bank passbook</strong> aur ek cancelled cheque (account verification ke liye)</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="text-green-600 dark:text-green-400 font-bold">✓</span>
+            <span><strong>Pond construction ka quotation/estimate</strong> - registered contractor ya engineer se</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="text-green-600 dark:text-green-400 font-bold">✓</span>
+            <span><strong>Fisheries Department se NOC</strong> (No Objection Certificate) - agar aapke state mein zaroori ho</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="text-green-600 dark:text-green-400 font-bold">✓</span>
+            <span><strong>Passport size photographs</strong> (2-4 copies)</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="text-green-600 dark:text-green-400 font-bold">✓</span>
+            <span><strong>Project Report (DPR)</strong> - Detailed Project Report kisi consultant se banwayein</span>
           </li>
         </ul>
       </div>
+
+      {/* Image 3: Documents */}
+      <Image 
+        src="/images/kisanguides/fish-farming-documents.webp" 
+        alt="Fish Farming Application Documents - Aadhaar, PAN, Land Records" 
+        width={800} 
+        height={450} 
+        sizes="(max-width: 768px) 100vw, 800px"
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+      />
+
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
+        Sab documents self-attested hone chahiye. Original documents verification time par dikhane padenge. Application process mein 3-6 mahine lag sakte hain, isliye patience rakhein.
+      </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
         Agar aap PMMSY ke under apply karna chahte hain, toh neeche diya gaya button aapko official portal par le jayega:
@@ -364,7 +401,7 @@ export default function PMatsyaSampada() {
         label="PMMSY Official Portal - Apply Karein" 
       />
 
-      {/* Image 3: Application Process */}
+      {/* Image 4: Application Process */}
       <Image 
         src="/images/kisanguides/fish-farming-application.webp" 
         alt="Entrepreneur Applying for Fish Farming Loan and Subsidy" 
@@ -509,7 +546,7 @@ export default function PMatsyaSampada() {
         Agar aap high-value fish paalte hain (jaise Pangasius, Tilapia, ya Ornamental fish), toh margins 2-3x zyada ho sakte hain. Par inki market access aur technical knowledge bhi zyada chahiye.
       </p>
 
-      {/* Image 4: Packaged Fish Products */}
+      {/* Image 5: Fish Products Market */}
       <Image 
         src="/images/kisanguides/fish-products-market.webp" 
         alt="Fresh and Processed Fish Products Ready for Market Sale" 
@@ -529,33 +566,33 @@ export default function PMatsyaSampada() {
 
       <div className="space-y-4 mb-8 not-prose">
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
-          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">Disease Outbreak (Sabse Bada Risk)</h4>
-          <p className="text-sm text-gray-700 dark:text-gray-300">Bacterial infections, fungal infections, aur parasitic infections poori crop khatam kar sakte hain. Kuch saalon mein disease outbreaks se significant crop losses hue hain. Biosecurity measures zaroori hain - pond disinfection, healthy fingerlings, aur water quality management.</p>
+          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">1. Disease Outbreak (Sabse Bada Khatra)</h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300">Bacterial infections, fungal infections, aur parasitic infections poori crop khatam kar sakte hain. Biosecurity measures zaroori hain - pond disinfection, healthy fingerlings, aur water quality management.</p>
         </div>
 
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
-          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">Oxygen Depletion</h4>
-          <p className="text-sm text-gray-700 dark:text-gray-300">Subah ke time par dissolved oxygen kam ho jata hai. Agar 3 ppm se neeche chala gaya, toh fish suffocate ho kar mar jati hain. Garmiyon mein yeh risk zyada hota hai. Aerators zaroori hain, aur backup power (generator) bhi hona chahiye. Power cut mein 1-2 ghante mein poori crop mar sakti hai.</p>
+          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">2. Oxygen ki Kami (Suffocation Risk)</h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300">Subah ke time par dissolved oxygen kam ho jata hai. Agar 3 ppm se neeche chala gaya, toh fish suffocate ho kar mar jati hain. Garmiyon mein yeh risk zyada hota hai. Aerators zaroori hain, aur backup power (generator) bhi hona chahiye.</p>
         </div>
 
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
-          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">Flood aur Drought</h4>
-          <p className="text-sm text-gray-700 dark:text-gray-300">Heavy rain mein pond overflow ho sakta hai - machliyan bah nikalti hain. Ya phir drought mein paani kam ho jata hai - oxygen aur temperature problems aati hain. Kuch saalon mein baadh (floods) se kai fish farms ko nuksan hua hai. Location selection aur pond design bahut zaroori hai.</p>
+          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">3. Baadh (Flood) aur Sukha (Drought)</h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300">Heavy rain mein pond overflow ho sakta hai - machliyan bah nikalti hain. Ya phir drought mein paani kam ho jata hai. Location selection aur pond design bahut zaroori hai.</p>
         </div>
 
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
-          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">Feed Cost Volatility</h4>
-          <p className="text-sm text-gray-700 dark:text-gray-300">Fish feed ka cost total expense ka 60-70% hota hai. Agar soyabean ya fish meal ke prices badh gaye, toh feed mehnga ho jata hai. Kuch saalon mein feed prices mein significant badhotri hui hai. Apna feed mill lagana ek option hai, par usme bhi investment lagti hai.</p>
+          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">4. Feed ke Daam mein Utaar-Chadhaav</h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300">Fish feed ka cost total expense ka 60-70% hota hai. Agar soyabean ya fish meal ke prices badh gaye, toh feed mehnga ho jata hai. Apna feed mill lagana ek option hai.</p>
         </div>
 
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
-          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">Market Price Fluctuation</h4>
-          <p className="text-sm text-gray-700 dark:text-gray-300">Festival season (Durga Puja, Diwali) mein rates achhe milte hain. Par off-season mein rates lagbhag 20-30% gir jate hain. Agar aapke paas cold storage nahi hai, toh forced sale karni padti hai. <Link href="/articles/farming/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME Yojana</Link> ke under cold storage aur processing par subsidy milti hai.</p>
+          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">5. Market Rate ka Girna</h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300">Festival season (Durga Puja, Diwali) mein rates achhe milte hain. Par off-season mein rates lagbhag 20-30% gir jate hain. Agar aapke paas cold storage nahi hai, toh forced sale karni padti hai.</p>
         </div>
 
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
-          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">Predators aur Theft</h4>
-          <p className="text-sm text-gray-700 dark:text-gray-300">Birds (kingfisher, cormorant), snakes, aur otters machliyan kha jaate hain. Netting zaroori hai. Gaon mein theft bhi hota hai - ek raat mein poora pond khaali ho sakta hai. Fencing aur security zaroori hai.</p>
+          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">6. Shikari Janwar aur Chori</h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300">Birds (kingfisher, cormorant), snakes, aur otters machliyan kha jaate hain. Netting zaroori hai. Gaon mein theft bhi hota hai. Fencing aur security zaroori hai.</p>
         </div>
       </div>
 
@@ -568,19 +605,8 @@ export default function PMatsyaSampada() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        7-15 din ki training lein. Cost ₹3,000-10,000 hoti hai (kuch jagah free bhi milti hai). Training mein aap seekhenge:
+        7-15 din ki training lein. Cost ₹3,000-10,000 hoti hai (kuch jagah free bhi milti hai). Training mein aap seekhenge pond construction, water quality testing, fingerling selection, feed formulation, disease identification, aur harvesting techniques.
       </p>
-
-      <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-8">
-        <li>Pond construction aur design</li>
-        <li>Water quality testing aur management</li>
-        <li>Fingerling selection aur stocking density</li>
-        <li>Feed formulation aur feeding schedule</li>
-        <li>Disease identification aur treatment</li>
-        <li>Harvesting techniques</li>
-        <li>Post-harvest handling</li>
-        <li>Record keeping</li>
-      </ul>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Best training centers:
@@ -639,16 +665,6 @@ export default function PMatsyaSampada() {
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
         Integrated farming se aap multiple income streams create kar sakte hain. Ek acre pond + poultry + vegetables se saal ka ₹8-10 lakh tak ho sakta hai.
       </p>
-
-      {/* Image 5: Documents Checklist */}
-      <Image 
-        src="/images/kisanguides/fish-farming-documents.webp" 
-        alt="Fish Farming Application Documents - Aadhaar, PAN, Land Records" 
-        width={800} 
-        height={450} 
-        sizes="(max-width: 768px) 100vw, 800px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
-      />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Kya Aapke Liye Sahi Hai? Final Decision Framework
