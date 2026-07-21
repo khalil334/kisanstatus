@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { ARTICLES } from '@/lib/articles-data';
-import { MAANDHAN_ARTICLES } from '@/lib/maandhan-data'; // ✅ ADDED: Maandhan articles import
+import { MAANDHAN_ARTICLES } from '@/lib/maandhan-data'; // ✅ ADDED
 import { 
   SITE_URL, 
   SITE_NAME, 
@@ -68,9 +68,8 @@ export const metadata: Metadata = {
 };
 
 export default function ArticlesPage() {
-  // ✅ FIX: Schema mein correct URL generate karna (Maandhan articles ke liye /maandhan/ prefix)
-  const schemaArticles = ALL_ARTICLES.map((a, i) => {
-    // Check if it's a maandhan article based on category or slug
+  // ✅ FIX: Use 'any' for 'a' to safely handle both ArticleMeta (has 'desc') and MaandhanArticleMeta (has 'description')
+  const schemaArticles = ALL_ARTICLES.map((a: any, i) => {
     const isMaandhan = a.category === 'pension-scheme' || a.slug.includes('maandhan');
     const articleUrl = isMaandhan 
       ? `${SITE_URL}/maandhan/${a.slug}` 
@@ -83,7 +82,7 @@ export default function ArticlesPage() {
         '@type': 'Article',
         url: articleUrl,
         name: a.title,
-        description: a.desc || a.description, // Handle both possible key names
+        description: a.desc || a.description || 'KisanStatus verified guide', // ✅ Safe fallback
       },
     };
   });
@@ -101,10 +100,10 @@ export default function ArticlesPage() {
       name: SITE_NAME,
       url: SITE_URL,
     },
-    numberOfItems: ALL_ARTICLES.length, // ✅ UPDATED
+    numberOfItems: ALL_ARTICLES.length,
     mainEntity: {
       '@type': 'ItemList',
-      itemListElement: schemaArticles, // ✅ UPDATED
+      itemListElement: schemaArticles,
     },
   };
 
