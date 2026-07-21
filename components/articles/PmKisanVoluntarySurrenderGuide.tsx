@@ -6,38 +6,38 @@ import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, Bott
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const PUBLISHED = '2026-07-10T08:00:00+05:30';
-const MODIFIED = '2026-07-10T08:00:00+05:30';
+const MODIFIED = '2026-07-22T08:00:00+05:30';
 
 const RELATED = [
-  { slug: 'PmKisanMasterGuide2026', title: 'Master Guide', emoji: '' },
-  { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form', emoji: '' },
+  { slug: 'PmKisanMasterGuide2026', title: 'Master Guide', emoji: '📚' },
+  { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form', emoji: '📝' },
   { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List', emoji: '📋' },
 ];
 
 const FAQS_DATA = [
   {
     q: 'Kaun logon ko surrender karna chahiye?',
-    a: 'Government employees, income tax filers, pensioners, aur wo log jo eligible nahi hain par galti se register ho gaye.',
+    a: 'Government employees, income tax filers, pensioners, aur wo log jo scheme ke liye eligible nahi hain par galti se register ho gaye hain.',
   },
   {
     q: 'Surrender karne ke baad paisa wapas karna padega?',
-    a: 'Nahi, jo paisa mil chuka hai wo wapas nahi karna padta. Bas future ki kist band ho jayegi.',
+    a: 'Agar aap scheme ke liye eligible nahi the, toh sarkar pehle se mile hue paiso ki recovery (vasooli) kar sakti hai. Voluntary surrender karne se future ki kist band ho jati hai aur legal action se bacha ja sakta hai.',
   },
   {
     q: 'Online surrender ho sakta hai?',
-    a: 'Haan, PM Kisan portal ke "Farmers Corner" mein "Self Surrender" ka option hai.',
+    a: 'Haan, PM Kisan portal ke "Farmers Corner" mein "Self Surrender" ka official option available hai.',
   },
   {
     q: 'Agar surrender kar liya toh wapas register kar sakte hain?',
-    a: 'Nahi, ek baar surrender karne ke baad dobara register nahi kar sakte. Isliye soch samajh kar karo.',
+    a: 'Surrender karne ke baad usi Aadhaar ya zameen par dobara register karna mushkil ho sakta hai aur portal par restriction lag sakti hai. Isliye soch samajh kar decision lein.',
   },
   {
     q: 'Surrender karne mein kitna time lagta hai?',
-    a: '15-30 din. BAO verify karta hai, phir list se naam hat jata hai.',
+    a: 'Lagbhag 15-30 din. BAO details verify karta hai, uske baad list se naam hat jata hai.',
   },
   {
     q: 'Kya koi fees lagti hai?',
-    a: 'Nahi, bilkul free hai. CSC se karwana ho to ₹20-30 lag sakte hain.',
+    a: 'Official portal par bilkul free hai. Agar CSC se karwana ho toh nominal ₹20-30 service charge lag sakte hain.',
   },
 ];
 
@@ -60,7 +60,7 @@ export default function PmKisanVoluntarySurrenderGuide({ article }: { article: A
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white">KisanStatus Team</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span> Updated: {fmtDate(MODIFIED)}</span>
+            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
             <span>⏱️ 12 min read</span>
           </div>
         </div>
@@ -91,7 +91,7 @@ export default function PmKisanVoluntarySurrenderGuide({ article }: { article: A
             Kabhi kabhi aisa hota hai ki log galti se register ho jaate hain. Jaise koi government teacher ya pensioner. Baad mein pata chalta hai ki wo eligible nahi the.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Aise mein ghabrane ki zaroorat nahi hai. Sarkar ne <strong>Voluntary Surrender</strong> ka option diya hai. Isse aap apne aap ko scheme se hata sakte ho.
+            Aise mein ghabrane ki zaroorat nahi hai. Sarkar ne <strong>Voluntary Surrender</strong> ka option diya hai. Isse aap apne aap ko scheme se hata sakte hain.
           </p>
           
           <Image
@@ -100,17 +100,18 @@ export default function PmKisanVoluntarySurrenderGuide({ article }: { article: A
             width={800}
             height={450}
             className="w-full rounded-xl my-4"
+            loading="lazy"
           />
 
           <DB>
-            <strong>Field Experience:</strong>
+            <strong>Field Observation:</strong>
             <p className="text-xs text-gray-700 dark:text-gray-300 mt-2">
-              Kai gaonon mein dekha gaya hai ki government employees ne galti se apply kar diya. Kuch ko 2-3 kist bhi mil gayi. Jab unhe pata chala ki wo eligible nahi hain, toh unhone voluntary surrender kiya. Jo paisa mil chuka tha wo wapas nahi karna pada. Bas aage se band ho gaya.
+              Kai baar government employees, pensioners ya income tax filers galti se register ho jate hain. Voluntary surrender karne se unki future kist turant band ho jati hai aur sarkari rules ke tahat unpar hone wali karrawai ya penalty se bacha ja sakta hai.
             </p>
           </DB>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
-            Dhyan rahe, jo paisa pehle mil chuka hai wo wapas nahi karna padta. Bas aage se kist aana band ho jayegi. <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">Beneficiary list</Link> se naam hat jayega.
+            Dhyan rahe, agar aap eligible nahi the toh sarkar pehle se mile hue paiso ki recovery kar sakti hai. Surrender karne se future ki kist aana band ho jayegi aur <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">Beneficiary list</Link> se naam hat jayega.
           </p>
         </section>
 
@@ -181,6 +182,7 @@ export default function PmKisanVoluntarySurrenderGuide({ article }: { article: A
             width={800}
             height={600}
             className="w-full rounded-xl my-6"
+            loading="lazy"
           />
 
           <WB>
@@ -209,7 +211,7 @@ export default function PmKisanVoluntarySurrenderGuide({ article }: { article: A
               <li>Form mein apni details bharein (naam, Aadhaar, mobile, address)</li>
               <li>Reason likhein ki kyun surrender kar rahe hain</li>
               <li>Aadhaar aur ration card ki copy lagayein</li>
-              <li>Patwari se sign karwa kar BAO ko de dein</li>
+              <li>Patwari/Lekhpal se sign karwa kar BAO ko de dein</li>
               <li>Ek receipt milegi, usko sambhal kar rakhein</li>
             </ol>
           </div>
@@ -219,6 +221,7 @@ export default function PmKisanVoluntarySurrenderGuide({ article }: { article: A
             width={800}
             height={600}
             className="w-full rounded-xl my-4"
+            loading="lazy"
           />
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
             15 din ke andar aapka naam list se hat jayega. <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">Beneficiary list</Link> check karke confirm kar lena.
@@ -239,7 +242,7 @@ export default function PmKisanVoluntarySurrenderGuide({ article }: { article: A
               <li>Aadhaar card aur mobile le jao</li>
               <li>CSC wale ko bolo "PM Kisan surrender karna hai"</li>
               <li>Wo portal par login karke form bharega</li>
-              <li>₹20-30 fees lag sakti hai</li>
+              <li>₹20-30 nominal fees lag sakti hai</li>
               <li>10 minute mein ho jayega</li>
               <li>Receipt milegi</li>
             </ul>
@@ -306,12 +309,12 @@ export default function PmKisanVoluntarySurrenderGuide({ article }: { article: A
           <div className="space-y-3">
             <div className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 p-4 rounded-r-xl">
               <p className="text-sm text-amber-800 dark:text-amber-300">
-                <strong>⚠️ Paisa Wapas Nahi:</strong> Jo paisa pehle mil chuka hai wo wapas nahi karna padta. Sirf future ki kist band hogi.
+                <strong>⚠️ Recovery Ka Niyam:</strong> Agar aap eligible nahi the, toh sarkar pehle se disbursed kiye gaye paiso ki recovery kar sakti hai. Surrender karne se sirf future ki kist rukti hai aur legal penalty se bacha ja sakta hai.
               </p>
             </div>
             <div className="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 p-4 rounded-r-xl">
               <p className="text-sm text-red-800 dark:text-red-300">
-                <strong>❌ Ek Baar Ka Decision:</strong> Ek baar surrender karne ke baad dobara register nahi kar sakte. Soch samajh kar karo.
+                <strong>❌ Ek Baar Ka Decision:</strong> Surrender karne ke baad usi Aadhaar/zameen par dobara register karna mushkil ho sakta hai aur portal par restriction lag sakti hai. Soch samajh kar karo.
               </p>
             </div>
             <div className="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 p-4 rounded-r-xl">
@@ -336,8 +339,8 @@ export default function PmKisanVoluntarySurrenderGuide({ article }: { article: A
           <div className="space-y-3">
             {[
               { problem: 'Legal Action', desc: 'Sarkar legal action le sakti hai. Fraud maana jayega.' },
-              { problem: 'Paisa Wapas', desc: 'Jo paisa mila hai wo wapas mang sakte hain.' },
-              { problem: 'Blacklist', desc: 'Future schemes se bahar kar sakte hain.' },
+              { problem: 'Recovery Action', desc: 'Sarkar pehle se mile hue paiso ki vasooli (recovery) kar sakti hai.' },
+              { problem: 'Blacklist', desc: 'Future government schemes se bahar kar sakte hain.' },
               { problem: 'Penalty', desc: 'Fine ya penalty lag sakti hai.' },
             ].map(({ problem, desc }, i) => (
               <div key={i} className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl p-4">
