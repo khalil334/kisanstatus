@@ -58,7 +58,7 @@ export default function DripSprinkler() {
       
       <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
         <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
-          <strong>Ground Reality:</strong> Field reports aur irrigation experts ke practical experience ke mutabik, jo log bina proper planning ke seedha micro-irrigation system lagwa lete hain, wo aksar pehle saal mein hi maintenance issues ka saamna karte hain. Lekin agar sahi design aur installation ho, toh paani ki bachat 60-70% tak ho sakti hai.
+          <strong>Sach kahoon toh:</strong> Jo kisan bina proper planning ke seedha micro-irrigation system lagwa lete hain, wo aksar pehle saal mein hi maintenance issues ka saamna karte hain. Lekin agar sahi design aur installation ho, toh paani ki bachat 60-70% tak ho sakti hai.
         </p>
       </div>
       
@@ -114,7 +114,7 @@ export default function DripSprinkler() {
 
       <Image 
         src="/images/kisanguides/drip-vs-sprinkler-comparison.webp" 
-        alt="Drip vs Sprinkler Irrigation System Comparison" 
+        alt="Drip vs Sprinkler Irrigation System Comparison - Working Mechanism and Cost Analysis" 
         width={800} 
         height={450} 
         sizes="(max-width: 768px) 100vw, 800px"
@@ -176,7 +176,7 @@ export default function DripSprinkler() {
 
       <Image 
         src="/images/kisanguides/irrigation-subsidy-calculation.webp" 
-        alt="Irrigation Subsidy Calculation and Cost Breakdown" 
+        alt="Irrigation Subsidy Calculation and Cost Breakdown - PMKSY Scheme Benefits" 
         width={800} 
         height={450} 
         sizes="(max-width: 768px) 100vw, 800px"
@@ -186,13 +186,35 @@ export default function DripSprinkler() {
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Apply Kaise Karein? (Step-by-Step)
       </h2>
-      <ol className="list-decimal pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-6">
-        <li>Eligibility aur Documents Taiyar Karein.</li>
-        <li>State Portal Par Registration.</li>
-        <li>Site Survey aur Estimation.</li>
-        <li>Quotation Approval aur Installation.</li>
-        <li>Verification aur Subsidy Release.</li>
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        PMKSY micro-irrigation subsidy ke liye apply karna ab online aur offline dono tariko se possible hai. Yeh process thoda technical hai, lekin agar aap step-by-step follow karein toh approval milna aasan hai.
+      </p>
+      <ol className="list-decimal pl-5 space-y-3 text-gray-700 dark:text-gray-300 mb-6">
+        <li>
+          <strong>Eligibility aur Documents Taiyar Karein:</strong> Sabse pehle apne land records (7/12 ya khatauni), Aadhaar card, bank passbook, aur passport size photos ready rakhein. Small/marginal farmer ka certificate bhi chahiye hoga.
+        </li>
+        <li>
+          <strong>State Portal Par Registration:</strong> Apne state ke agriculture department ke official portal par jaakar registration karein. Har state ka alag portal hai - jaise Maharashtra ka MahaDBT, Karnataka ka KUDMS, etc.
+        </li>
+        <li>
+          <strong>Site Survey aur Estimation:</strong> Application submit karne ke baad, agriculture department ka officer aapke khet ka survey karega. Wo soil type, water source, aur crop pattern ke basis par system ka estimation banayega.
+        </li>
+        <li>
+          <strong>Quotation Approval aur Installation:</strong> Department approved vendors se 2-3 quotations lein. Quotation approve hone ke baad hi installation shuru karein. Khud se koi bhi material mat khareedein bina approval ke.
+        </li>
+        <li>
+          <strong>Verification aur Subsidy Release:</strong> Installation complete hone ke baad, officer phir se visit karega verification ke liye. Sab kuch sahi hone par 15-30 din ke andar subsidy amount seedhe aapke bank account mein transfer ho jayega.
+        </li>
       </ol>
+
+      <Image 
+        src="/images/kisanguides/irrigation-application-process.webp" 
+        alt="PMKSY Irrigation Subsidy Application Process - Online Registration and Document Submission Steps" 
+        width={800} 
+        height={450} 
+        sizes="(max-width: 768px) 100vw, 800px"
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+      />
 
       <div className="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
         <h3 className="font-bold text-red-800 dark:text-red-300 mb-2 text-sm">⚠️ Real Risks - Jo Koi Nahi Batata:</h3>
@@ -235,7 +257,7 @@ export default function DripSprinkler() {
 
       <Image 
         src="/images/kisanguides/irrigation-maintenance-guide.webp" 
-        alt="Irrigation System Maintenance Guide and Best Practices" 
+        alt="Irrigation System Maintenance Guide - Filter Cleaning, Flushing and Annual Care Best Practices" 
         width={800} 
         height={450} 
         sizes="(max-width: 768px) 100vw, 800px"
