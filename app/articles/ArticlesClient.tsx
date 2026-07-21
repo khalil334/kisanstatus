@@ -9,6 +9,19 @@ import { CATEGORIES } from '@/lib/articles-data';
 
 const NEW_ARTICLES_LIMIT = 3;
 
+// ✅ FIX: Proper type that covers both old ArticleMeta and new MaandhanArticleMeta
+type CombinedArticleMeta = {
+  slug: string;
+  title: string;
+  desc?: string;
+  description?: string;
+  category: string;
+  ogImage?: string;
+  published?: string;
+  publishedTime?: string;
+  keywords?: string[];
+};
+
 /* ─── SVG Icons (Replace Emojis) ─── */
 function IconBookOpen({ className = 'w-5 h-5' }: { className?: string }) {
   return (
@@ -146,22 +159,22 @@ function ArticleImage({ image, emoji, title, priority = false }: { image: string
 }
 
 /* ─── Article Card ─── */
-// ✅ FIX: Use 'any' for article to safely handle both ArticleMeta and MaandhanArticleMeta
-function ArticleCard({ article, showNewBadge = false, priority = false }: { article: any; showNewBadge?: boolean; priority?: boolean }) {
-  const categoryInfo = CATEGORIES[article.category] as { name: string; nameHi: string; icon: string } | undefined;
+function ArticleCard({ article, showNewBadge = false, priority = false }: { article: CombinedArticleMeta; showNewBadge?: boolean; priority?: boolean }) {
+  // ✅ FIX: Safely cast category to keyof typeof CATEGORIES to satisfy TypeScript
+  const categoryInfo = CATEGORIES[article.category as keyof typeof CATEGORIES] as { name: string; nameHi: string; icon: string } | undefined;
   const emoji = categoryInfo?.icon || '📄';
   const categoryName = categoryInfo?.nameHi || categoryInfo?.name || 'Guide';
 
-  // ✅ FIX 1: Dynamically determine the correct href based on category/slug
-  const isMaandhan = article.category === 'pension-scheme' || article.slug?.includes('maandhan');
+  // ✅ FIX: Dynamically determine the correct href based on category/slug
+  const isMaandhan = article.category === 'pension-scheme' || article.slug.includes('maandhan');
   const articleHref = isMaandhan ? `/maandhan/${article.slug}` : `/articles/${article.slug}`;
 
-  // ✅ FIX 2: Handle both 'desc' and 'description' keys gracefully
+  // ✅ FIX: Handle both 'desc' and 'description' keys gracefully
   const displayDesc = article.desc || article.description || '';
 
   return (
     <Link
-      href={articleHref} // ✅ Use dynamic href here
+      href={articleHref}
       className={`bg-[var(--color-card)] rounded-2xl overflow-hidden flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300 no-underline group h-full focus:ring-2 focus:ring-green-500 focus:outline-none ${
         showNewBadge
           ? 'border-2 border-green-200 dark:border-green-700 hover:border-green-400 dark:hover:border-green-600'
@@ -199,7 +212,7 @@ function ArticleCard({ article, showNewBadge = false, priority = false }: { arti
 }
 
 /* ─── Articles Content ─── */
-function ArticlesContent({ articles }: { articles: readonly any[] }) {
+function ArticlesContent({ articles }: { articles: readonly CombinedArticleMeta[] }) {
   const searchParams = useSearchParams();
   const router = useRouter();
   const activeCategory = searchParams.get('category') || 'all';
@@ -211,17 +224,17 @@ function ArticlesContent({ articles }: { articles: readonly any[] }) {
       ? [...articles]
       : articles.filter(a => a.category === activeCategory);
 
-    // ✅ FIX 3: Safe search filter handling missing 'keywords' or 'desc'
+    // ✅ FIX: Safe search filter handling missing 'keywords' or 'desc'
     if (searchQuery.trim()) {
       const query = searchQuery.toLowerCase();
       filtered = filtered.filter(a =>
         (a.title || '').toLowerCase().includes(query) ||
         (a.desc || a.description || '').toLowerCase().includes(query) ||
-        ((a as any).keywords || []).some((k: string) => k.toLowerCase().includes(query))
+        (a.keywords || []).some((k: string) => k.toLowerCase().includes(query))
       );
     }
 
-    // ✅ FIX 4: Safe date sorting handling both 'publishedTime' and 'published'
+    // ✅ FIX: Safe date sorting handling both 'publishedTime' and 'published'
     const sorted = filtered.sort((a, b) =>
       new Date(b.publishedTime || b.published || 0).getTime() - new Date(a.publishedTime || a.published || 0).getTime()
     );
@@ -417,7 +430,7 @@ function ArticlesLoading() {
 }
 
 /* ─── Main Component ─── */
-export default function ArticlesClient({ articles }: { articles: readonly any[] }) {
+export default function ArticlesClient({ articles }: { articles: readonly CombinedArticleMeta[] }) {
   return (
     <main className="min-h-screen bg-[var(--color-bg)]">
       {/* Hero Section */}
