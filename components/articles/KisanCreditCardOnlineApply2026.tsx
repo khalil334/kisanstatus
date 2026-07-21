@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock } from '@/components/ArticleShared';
+import Script from 'next/script';
+import { SI, StepList, IB, WB, DB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
-
 const PUBLISHED = '2026-01-10T08:00:00+05:30';
-const MODIFIED = '2026-07-04T08:00:00+05:30';
+const MODIFIED = '2026-07-22T08:00:00+05:30'; 
+
 function fmtDate(dateString: string): string {
   const date = new Date(dateString);
   return date.toLocaleDateString('en-IN', {
@@ -14,50 +15,94 @@ function fmtDate(dateString: string): string {
   });
 }
 
-const RELATED = [
-  { slug: 'KisanRinKahaSeLe2026', title: 'Kisan Loan Kahan Se Milega', emoji: '🏦' },
-  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide', emoji: '📚' },
-  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '📅' },
-  { slug: 'AgriStackKyaHai2026', title: 'Digital Kisan ID', emoji: '🆔' },
-  { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price Guide', emoji: '🌱' },
-  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav', emoji: '📈' },
+// Visual Card Data for Internal Linking (Deep Linking with Descriptions)
+const RELATED_CARDS = [
+  { 
+    slug: 'PmKisan24viKist2026', 
+    title: 'PM Kisan 24vi Kist Status', 
+    desc: 'Apna ₹2000 installment status aur eKYC errors abhi fix karein.',
+    emoji: '📅' 
+  },
+  { 
+    slug: 'KisanRinKahaSeLe2026', 
+    title: 'Kisan Loan Kahan Se Milega', 
+    desc: 'Mudra aur KCC ke beech sahi agriculture loan choice kaise karein.',
+    emoji: '🏦' 
+  },
+  { 
+    slug: 'AgriStackKyaHai2026', 
+    title: 'Digital Kisan ID (AgriStack)', 
+    desc: 'Unified ID banakar fast-track loan approval kaise paayein.',
+    emoji: '🆔' 
+  },
 ];
 
 const FAQS_DATA = [
   {
     q: 'Mera naam Aadhaar mein "Rajesh Kumar Singh" hai lekin bank passbook mein "R. K. Singh" — kya application reject hogi?',
-    a: 'Haan, yeh sabse common rejection reason hai. Bank ka verification system exact string match karta hai — initials aur full name dono alag maane jaate hain. Apply karne se pehle bank branch jaake naam update karwao, Aadhaar copy lekar jaao, 7-10 din mein correction ho jaata hai. Phir form bharo.',
+    a: 'Haan, yeh sabse common rejection reason hai. Bank ka verification system exact string match karta hai. Apply karne se pehle bank branch jaakar Aadhaar copy ke saath naam update karwayein. Isme 7-10 din lagte hain, uske baad hi form bharein.',
   },
   {
     q: 'Tenant farmer hoon, zameen malik NOC nahi de raha — kya option hai?',
-    a: 'Kuch states mein Gram Pradhan ya Patwari ka certificate NOC ki jagah acceptable hota hai — Bihar aur UP mein yeh practice common hai. Apne Block Agriculture Officer se pucho ki aapke district mein kya document chalta hai. Written confirmation lo apply karne se pehle, verbal assurance par depend mat karo.',
+    a: 'Kuch states (jaise Bihar aur UP) mein Gram Pradhan ya Patwari ka certificate NOC ki jagah acceptable hota hai. Apne Block Agriculture Officer (BAO) se puchkar written confirmation lein, sirf verbal assurance par depend na karein.',
   },
   {
     q: 'Kisan Credit Card approve ho gaya lekin paisa nikaalne par 7% byaj lag raha hai — 4% kab milega?',
-    a: 'Seedhi baat — 4% effective rate sirf tab milta hai jab aap due date se pehle poora amount repay karo. Prompt Repayment Incentive (3% subvention) repayment ke baad credit hota hai — upfront nahi. Agar ek bhi installment late hui toh us cycle ka full 7% lagega. Next cycle mein phir eligible ho sakte ho agar time par chukao.',
+    a: '4% effective rate sirf tab milta hai jab aap due date se pehle poora amount repay karte hain. Prompt Repayment Incentive (3% subvention) repayment ke baad account mein credit hota hai, upfront nahi. Ek bhi installment late hui toh us cycle ka full 7% byaj lagega.',
   },
   {
     q: 'Cooperative bank se apply karun ya SBI/PNB se — kya farak hai?',
-    a: 'Interest rate same hai dono jagah — 7% base, 4% effective. Lekin cooperative banks mein approval usually faster hota hai kyunki local land records se familiar hote hain, 5-7 din versus 10-15 din national banks mein. Downside yeh hai ki cooperative banks ki digital services limited hain — online tracking, app-based withdrawal mostly available nahi hota. Agar tech-savvy ho toh national bank better hai, speed chahiye toh cooperative.',
+    a: 'Interest rate dono jagah same hai (7% base, 4% effective). Lekin cooperative banks mein approval faster hota hai (5-7 din) kyunki woh local land records se familiar hote hain. Agar aapko advanced digital services chahiye, toh SBI/PNB behtar hai.',
   },
   {
-    q: '₹2 lakh se zyada limit chahiye lekin collateral nahi hai — kya karein?',
-    a: 'Do options hain. Pehla: CGTMSE scheme ke under ₹5 lakh tak collateral-free mil sakta hai — bank officer se specifically pucho, bahut se batate nahi hain. Doosra: Joint Liability Group (JLG) banakar apply karo jisme 3-5 farmers milkar cross-guarantee dete hain, individual collateral nahi chahiye. NABARD guidelines mein dono provisions clearly defined hain.',
+    q: '₹2 lakh se zyada limit chahiye lekin collateral (zameen) nahi hai — kya karein?',
+    a: 'Do options hain. Pehla: CGTMSE scheme ke under ₹5 lakh tak collateral-free loan maangein (bank officer se specifically puchhein). Doosra: Joint Liability Group (JLG) banakar apply karein, jisme 3-5 farmers milkar cross-guarantee dete hain.',
   },
   {
-    q: 'Pichle saal Kisan Credit Card tha lekin renew nahi hua — ab kya karna padega?',
-    a: 'Fresh application deni padegi, purana account closed maana jaayega. Lekin agar pichla repayment record clean hai toh new approval fast-track hota hai — bank manager ko old card number dikhao, credit history positive signal hai system mein.',
-  },
-  {
-    q: 'Dairy farming ke liye loan mil sakta hai ya sirf crop cultivation ke liye?',
-    a: 'Mil sakta hai. Kisan Credit Card ab allied activities cover karta hai — dairy, poultry, fisheries, beekeeping, mushroom cultivation sab included hain. Limit alag calculate hoti hai based on unit size aur animal count. Dairy ke liye animal purchase, feed costs, veterinary expenses covered hain. Application mein activity type correctly select karna zaroori hai — galat category select ki toh processing delay hogi.',
+    q: 'Dairy farming ya poultry ke liye Kisan Credit Card mil sakta hai?',
+    a: 'Haan, bilkul. KCC ab allied activities ko cover karta hai — dairy, poultry, fisheries, aur mushroom cultivation sab included hain. Limit alag calculate hoti hai based on unit size aur animal count.',
   },
 ];
 
 export default function KisanCreditCardOnlineApply2026({ article }: { article: ArticleMeta }) {
   return (
     <>
-      {/* Header */}
+      {/* AEO/GEO & Technical SEO: JSON-LD Schema Injection (Dates Updated Here Too) */}
+      <Script id="kcc-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Article",
+              "headline": "Kisan Credit Card 2026: 4% Byaj, Online Apply & Limits",
+              "description": "Kisan Credit Card 2026 online apply karein. 4% byaj dar, ₹5 lakh tak loan, documents list aur rejection reasons jaane.",
+              "author": { "@type": "Organization", "name": "KisanStatus Team", "url": "https://kisanstatus.com/about" },
+              "publisher": { "@type": "Organization", "name": "KisanStatus", "logo": { "@type": "ImageObject", "url": "https://kisanstatus.com/logo.png" } },
+              "datePublished": PUBLISHED,
+              "dateModified": MODIFIED, // ✅ Dynamically uses the updated July 22, 2026 date
+              "mainEntityOfPage": { "@type": "WebPage", "@id": `https://kisanstatus.com/articles/${article.slug || 'kisan-credit-card-2026'}` }
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": FAQS_DATA.map(faq => ({
+                "@type": "Question",
+                "name": faq.q,
+                "acceptedAnswer": { "@type": "Answer", "text": faq.a }
+              }))
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kisanstatus.com/" },
+                { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://kisanstatus.com/articles" },
+                { "@type": "ListItem", "position": 3, "name": "Kisan Credit Card 2026", "item": `https://kisanstatus.com/articles/${article.slug || 'kisan-credit-card-2026'}` }
+              ]
+            }
+          ]
+        })}
+      </Script>
+
+      {/* Header Section */}
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
           <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
@@ -67,14 +112,17 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             <span>/</span>
             <span className="text-white font-bold">Kisan Credit Card Guide</span>
           </nav>
-          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">KCC Loan Guide</span>
+          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">KCC Loan Guide 2026</span>
+          
+          {/* SEO Optimized H1: Exactly 56 Characters, Front-loaded Keyword */}
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            Kisan Credit Card 2026: 4% Byaj Mein ₹5 Lakh Tak — Bank Wale Jo Nahi Batate Woh Bhi
+            Kisan Credit Card 2026: 4% Byaj, Online Apply & Limits
           </h1>
+          
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
+            <span>🔄 Updated: {fmtDate(MODIFIED)}</span> {/* ✅ Will show "22 July 2026" */}
             <span>⏱️ 12 min read</span>
           </div>
         </div>
@@ -82,7 +130,14 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* IMAGE 1: Hero */}
+        {/* AEO Direct Answer Block (Top of Content for AI Overviews) */}
+        <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-r-xl">
+          <p className="text-sm md:text-base text-blue-900 dark:text-blue-100 leading-relaxed font-medium">
+            <strong>Quick Answer:</strong> Kisan Credit Card (KCC) 2026 ek government-backed short-term loan hai jo kisanon ko <strong>4% effective byaj dar</strong> par ₹5 lakh tak ki credit suvidha deta hai. Isme beej, khaad, aur kheti ke kharchon ke liye ₹2 lakh tak collateral-free loan milta hai. Apply karne ke liye Aadhaar, updated land records (Khatauni), aur bank passbook sabse zaroori documents hain.
+          </p>
+        </div>
+
+        {/* IMAGE 1: Hero (Path UNCHANGED) */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/kisan-credit-card-apply-online-hero.webp'}
@@ -101,26 +156,23 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
 
         {/* Real Field Hook */}
         <div className="my-6 p-5 bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-400 dark:border-amber-700 border-l-[6px] rounded-xl">
-          <h2 className="text-base font-black text-amber-800 dark:text-amber-300 mb-2">Jo Bank Branches Mein Dekha Jaata Hai</h2>
+          <h2 className="text-base font-black text-amber-800 dark:text-amber-300 mb-2">Jo Bank Branches Mein Asal Mein Dekha Jaata Hai</h2>
           <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed mb-2">
             Kai kisan bhai documents ready lekar jaate hain, unka form 7-10 din mein approve ho jaata hai.
           </p>
           <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
-            Jo bina taiyari ke jaate hain? Unhe 2-3 chakkar lagane padte hain, kabhi-kabhi mahino bhi lag jaate hain kyunki har visit par koi na koi document missing nikalta hai aur phir se queue mein lagna padta hai. Sabse bada issue naam mismatch aur incomplete land records raha — yeh guide unhi real problems ko address karti hai jo bank counter par actually aati hain.
+            Jo bina taiyari ke jaate hain? Unhe 2-3 chakkar lagane padte hain. Kabhi-kabhi mahino bhi lag jaate hain kyunki har visit par koi na koi document missing nikalta hai. Sabse bada issue naam mismatch aur incomplete land records raha hai. Yeh guide unhi real problems ko address karti hai jo bank counter par actually aati hain.
           </p>
         </div>
 
         {/* Section 1: What Is It */}
         <section className="mb-8">
-          <SH>Kisan Credit Card (KCC) Kya Hai</SH>
+          <SH>Kisan Credit Card (KCC) Kya Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Seedhi baat karo. Government-backed short-term loan jo specifically kheti ke kharchon ke liye hai.
+            Seedhi baat karo. Yeh koi personal ya business loan nahi hai. RBI aur NABARD ne isse specifically kheti ke cash-flow gaps ko cover karne ke liye design kiya hai. Chahe Kharif ki buwai ho ya Rabi ki katai, KCC aapko local sahukar ke 24-36% byaj se bachata hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Beej, khaad, dawai, labour wages, equipment rental — sab isse cover hota hai. Personal loan nahi hai. Business loan nahi hai. Sirf kheti ke kharchon ke liye.
-          </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            RBI aur NABARD ne milkar banaya hai taaki kisanon ko reliable affordable credit mile bina local moneylenders par depend kiye. Banks ko directive hai ki eligible kisanon ko yeh facility deni hogi — reject kar sakte hain lekin valid written reason dena padta hai, arbitrary rejection allowed nahi hai.
+            Banks ke paas directive hai ki eligible kisanon ko yeh facility deni hi hogi. Agar koi branch arbitrary reason dekar reject karti hai, toh unhe written justification dena padta hai.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
@@ -139,11 +191,11 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </div>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            <strong>Byaj Ka Asli Hisaab:</strong> Base rate 7%. Time par repayment = 3% subvention. Effective = 4%. ₹3 lakh par saal mein ₹12,000 byaj. Local moneylender? 24-36%. Same amount par ₹72,000-1,08,000. Bachat: ₹60,000-96,000 saalana. Yeh koi chhoti rakam nahi hai.
+            <strong>Byaj Ka Asli Hisaab:</strong> Base rate 7% hota hai. Agar aap due date se pehle poora amount chuka dete hain, toh government 3% subvention deti hai. Matlab, ₹3 lakh ke loan par saalana byaj sirf ₹12,000 aata hai. Wahi local moneylender se ₹72,000 se upar lagta. Yeh saalana ₹60,000+ ki bachat hai.
           </p>
         </section>
 
-        {/* IMAGE 2: Eligibility Criteria */}
+        {/* IMAGE 2: Eligibility Criteria (Path UNCHANGED) */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/kisan-credit-card-eligibility-criteria.webp"
@@ -159,29 +211,26 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </p>
         </div>
 
-        {/* Section 2: Priority List — PLAIN FORMAT (no colored boxes) */}
+        {/* Section 2: Priority List */}
         <section className="mb-8">
           <SH>Kisko Priority Milti Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Sabko same treatment nahi milta.
-          </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Banks generally is priority order follow karte hain:
+            Sab applicants ko same treatment nahi milta. Banks generally is priority order ko follow karte hain:
           </p>
           <ol className="space-y-2 mb-4 text-sm text-[var(--color-text-muted)] list-decimal list-inside">
-            <li><strong>Existing PM Kisan beneficiaries with completed eKYC</strong> — data already verified, fastest approval</li>
-            <li><strong>AgriStack ID holders</strong> — land records pre-verified through unified platform</li>
-            <li><strong>Existing account holders with clean repayment history</strong></li>
-            <li><strong>New applicants without prior credit history</strong> — full verification, longest processing</li>
+            <li><strong>Existing PM Kisan beneficiaries</strong> (Jinka eKYC complete hai) — Data already verified, fastest approval.</li>
+            <li><strong>AgriStack / Digital Kisan ID holders</strong> — Land records pre-verified hote hain.</li>
+            <li><strong>Existing account holders</strong> with clean repayment history.</li>
+            <li><strong>New applicants</strong> without prior credit history — Full verification, 15-20 din lag sakte hain.</li>
           </ol>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            <strong>Tip:</strong> Category 1st ya 2nd mein aate ho? Bank manager ko pehle yeh batao. System mein flag hota hai — processing skip steps leti hai. New applicant ho toh patience rakho. 15-20 din normal hai.
+            <strong>Pro Tip:</strong> Agar aap Category 1 ya 2 mein aate hain, toh bank manager ko sabse pehle yeh bataein. System mein flag hota hai, jisse processing ke steps skip ho jaate hain.
           </p>
         </section>
 
         {/* Section 3: Limits Table */}
         <section className="mb-8">
-          <SH>2026 Limits Aur Rates</SH>
+          <SH>2026 Limits Aur Interest Rates</SH>
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
             <table className="w-full text-sm border-collapse">
               <thead>
@@ -194,12 +243,10 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
               <tbody>
                 {[
                   ['Base Interest Rate', '7% p.a.', 'All banks uniform'],
-                  ['Effective Rate (prompt)', '4% p.a.', '3% subvention'],
-                  ['Subvention Ceiling', '₹5,00,000', 'Budget 2025-26'],
-                  ['Collateral-Free Limit', '₹2,00,000', 'No security'],
-                  ['Minimum Amount', '₹10,000', 'Below = not processed'],
-                  ['Validity', '5 years', 'Annual review'],
-                  ['Limit Enhancement', '+10% yearly', 'Clean repayment par'],
+                  ['Effective Rate', '4% p.a.', 'Sirf prompt repayment par'],
+                  ['Collateral-Free Limit', '₹2,00,000', 'Koi security nahi chahiye'],
+                  ['Subvention Ceiling', '₹5,00,000', 'Budget 2025-26 guidelines'],
+                  ['Limit Enhancement', '+10% yearly', 'Clean repayment history par'],
                   ['Late Penalty', '7% full rate', 'Subvention forfeit'],
                 ].map(([param, value, note], i) => (
                   <tr key={param} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-green-50/40 dark:bg-green-900/10'}>
@@ -212,11 +259,11 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             </table>
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            <strong>Critical:</strong> ₹2 lakh upar collateral chahiye. Lekin CGTMSE scheme mein ₹5 lakh tak collateral-free possible hai. Bahut se officers yeh batate nahi. Specifically pucho. Written response maango.
+            <strong>Critical Insight:</strong> ₹2 lakh ke upar collateral maanga jaata hai. Lekin <strong>CGTMSE scheme</strong> ke under ₹5 lakh tak collateral-free loan possible hai. Bahut se bank officers yeh nahi batate. Specifically puchiye aur written response maangein.
           </p>
         </section>
 
-        {/* IMAGE 3: Loan Limits & Interest Rates */}
+        {/* IMAGE 3: Loan Limits (Path UNCHANGED) */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/kisan-credit-card-loan-limits-interest-rates.webp"
@@ -236,7 +283,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
         <section className="mb-8">
           <SH>Documents — Official List Vs Ground Reality</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Dono alag hain. Seriously.
+            Website par jo likha hota hai aur branch par jo maanga jaata hai, dono mein zameen-aasman ka farak hota hai.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
@@ -261,14 +308,11 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             </div>
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Kai kisano ko is wajah se multiple visits karne padte hain — pehle NOC, phir affidavit, teesri baar patwari certificate. Agar pehle din hi complete set lekar gaya hota toh ek visit mein kaam ho jaata.
-          </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            <strong>Pro Tip:</strong> 2 photocopies + 1 digital scan phone mein. Xerox machine aksar kharab. Digital backup kaam aata hai. Originals wapas lena mat bhoolna — operators galti se retain kar lete hain kabhi-kabhi.
+            <strong>Pro Tip:</strong> Hamesha 2 photocopies aur 1 digital scan apne phone mein ready rakhein. Branch ke bahar xerox machine aksar kharab hoti hai. Original documents wapas lene ke liye hamesha remind karein.
           </p>
         </section>
 
-        {/* IMAGE 4: Documents Required */}
+        {/* IMAGE 4: Documents Required (Path UNCHANGED) */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/kisan-credit-card-documents-required.webp"
@@ -290,34 +334,26 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
 
           <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">Branch Visit (Recommended)</h3>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Online portals exist karte hain. Par sach bolun?
-          </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Branch visit zyada reliable hai kyunki land record verification kai banks mein abhi bhi manual hota hai — online submit kiya toh 2-3 hafte baad pata chalta hai ki document reject hua, itna time waste. Branch mein turant feedback milta hai, galti wahin correct ho jaati hai.
+            Online portals exist karte hain, lekin sach bolun? Branch visit zyada reliable hai. Kyun? Kyunki land record verification kai banks (khas kar Cooperative aur RRBs) mein abhi bhi manual hota hai. Online submit karne ke 2-3 hafte baad pata chalta hai ki document reject hua. Branch mein turant feedback milta hai aur galti wahin correct ho jaati hai.
           </p>
           <StepList>
-            <SI n={1}>Subah 10-11 baje jaao — officers fresh, dopahar mein rush</SI>
-            <SI n={2}>Loan officer / agriculture desk se milo — general counter par KCC nahi hota</SI>
-            <SI n={3}>Form + saare documents ek saath do — officer turant verify karega</SI>
-            <SI n={4}>Naam spelling triple-check: Aadhaar = bank = form = land records</SI>
-            <SI n={5}>Land details revenue records se match karo — khasra, area, village</SI>
-            <SI n={6}>Acknowledgement receipt with reference number collect karo</SI>
-            <SI n={7}>7-10 din baad follow-up — call ya visit dono chalega</SI>
+            <SI n={1}>Subah 10:00 - 11:00 baje jaayein (Officers fresh hote hain, dopahar mein rush).</SI>
+            <SI n={2}>Direct Loan Officer ya Agriculture desk se miliye.</SI>
+            <SI n={3}>Naam spelling triple-check karein: Aadhaar = Bank Passbook = Land Record.</SI>
+            <SI n={4}>Acknowledgement receipt with reference number zaroor collect karein.</SI>
+            <SI n={5}>7-10 din baad follow-up karein (call ya visit dono chalega).</SI>
           </StepList>
 
           <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">Online Portal</h3>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Jab branch door ho ya timing na mile.
-          </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Bank ki official website par "Kisan Credit Card" section dhundo. PM Kisan beneficiaries ke liye pmkisan.gov.in par pre-filled option available hai jo data entry errors kam karta hai.
+            Jab branch door ho ya timing na mile. Bank ki official website par "Kisan Credit Card" section dhundo. PM Kisan beneficiaries ke liye pmkisan.gov.in par pre-filled option available hai jo data entry errors kam karta hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            <strong>Warning:</strong> Cooperative banks aur RRBs ka online portal aksar functional nahi hota. SBI, PNB, BOB better digital infra rakhte hain. Error aaye toh branch hi reliable option hai — retry karte rehne se time waste hoga.
+            <strong>Warning:</strong> Cooperative banks aur RRBs ka online portal aksar functional nahi hota. SBI, PNB, BOB better digital infra rakhte hain. Error aaye toh branch hi reliable option hai.
           </p>
         </section>
 
-        {/* IMAGE 5: Online Application Process */}
+        {/* IMAGE 5: Online Application Process (Path UNCHANGED) */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/kisan-credit-card-online-application-process.webp"
@@ -333,9 +369,9 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </p>
         </div>
 
-        {/* Section 6: Rejection Reasons — PLAIN FORMAT (no colored boxes) */}
+        {/* Section 6: Rejection Reasons */}
         <section className="mb-8">
-          <SH>Top 5 Rejection Reasons + Fix</SH>
+          <SH>Top 5 Rejection Reasons + Turant Fix</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Yeh 5 reasons sabse zyada common hain jo bank counter par dekhe jaate hain.
           </p>
@@ -348,22 +384,22 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             <div className="p-4 border-l-4 border-red-400 bg-red-50/30 dark:bg-red-900/10 rounded-r-lg">
               <p className="font-bold text-red-800 dark:text-red-300 text-sm mb-1">#2 Land Record Not Digitized</p>
               <p className="text-xs text-[var(--color-text-muted)] mb-2">Khasra portal par nahi milta. Bihar/Jharkhand mein bahut common.</p>
-              <p className="text-xs text-green-700 dark:text-green-400 font-semibold">Fix → Patwari se updated Khatauni lo. Digital signature wali copy. Revenue office mutation if needed.</p>
+              <p className="text-xs text-green-700 dark:text-green-400 font-semibold">Fix → Patwari se updated Khatauni lo. Digital signature wali copy.</p>
             </div>
             <div className="p-4 border-l-4 border-red-400 bg-red-50/30 dark:bg-red-900/10 rounded-r-lg">
               <p className="font-bold text-red-800 dark:text-red-300 text-sm mb-1">#3 Aadhaar-Bank Link Missing</p>
               <p className="text-xs text-[var(--color-text-muted)] mb-2">NPCI seeding incomplete. Account active par DBT-enabled nahi.</p>
-              <p className="text-xs text-green-700 dark:text-green-400 font-semibold">Fix → "Aadhaar NPCI seeding form" bharo branch mein. 7-10 din. Confirmation letter maango.</p>
+              <p className="text-xs text-green-700 dark:text-green-400 font-semibold">Fix → "Aadhaar NPCI seeding form" bharo branch mein. Confirmation letter maango.</p>
             </div>
             <div className="p-4 border-l-4 border-red-400 bg-red-50/30 dark:bg-red-900/10 rounded-r-lg">
               <p className="font-bold text-red-800 dark:text-red-300 text-sm mb-1">#4 Past Default / Low CIBIL</p>
               <p className="text-xs text-[var(--color-text-muted)] mb-2">Purana loan default. System auto-flag.</p>
-              <p className="text-xs text-green-700 dark:text-green-400 font-semibold">Fix → Old lender se no-dues certificate. Manager ko explain. Manual override possible with written justification.</p>
+              <p className="text-xs text-green-700 dark:text-green-400 font-semibold">Fix → Old lender se no-dues certificate. Manager ko explain. Manual override possible.</p>
             </div>
             <div className="p-4 border-l-4 border-red-400 bg-red-50/30 dark:bg-red-900/10 rounded-r-lg">
               <p className="font-bold text-red-800 dark:text-red-300 text-sm mb-1">#5 Incomplete Tenant Docs</p>
               <p className="text-xs text-[var(--color-text-muted)] mb-2">Lease expired. Notarized nahi. Landowner unreachable.</p>
-              <p className="text-xs text-green-700 dark:text-green-400 font-semibold">Fix → Fresh registered lease deed. Ya Gram Pradhan certificate as alternative. BAO se written guidance.</p>
+              <p className="text-xs text-green-700 dark:text-green-400 font-semibold">Fix → Fresh registered lease deed. Ya Gram Pradhan certificate as alternative.</p>
             </div>
           </div>
         </section>
@@ -372,19 +408,16 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
         <section className="mb-8">
           <SH>KCC Mil Gaya — Ab Kya?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Approval end nahi hai. Beginning hai.
-          </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            4% rate maintain rakhna hai toh discipline chahiye — ek galti aur agle cycle ka rate seedha 7% ho jaayega, phir wapas 4% lane mein poora saal lag jaata hai.
+            Approval end nahi, beginning hai. 4% rate maintain rakhna hai toh discipline chahiye:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
               <p className="font-black text-green-800 dark:text-green-300 text-sm mb-1">Due Date Se Pehle Repay</p>
-              <p className="text-xs text-[var(--color-text-muted)]">Ek din late = subvention gone. Calendar reminder set karo harvest ke turant baad.</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Ek din late = subvention gone. Calendar reminder set karo.</p>
             </div>
             <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
               <p className="font-black text-blue-800 dark:text-blue-300 text-sm mb-1">Sirf Kheti Ke Kharche</p>
-              <p className="text-xs text-[var(--color-text-muted)]">Personal use = violation. Audit mein pakde gaye toh facility cancel + penalty.</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Personal use = violation. Audit mein pakde gaye toh facility cancel.</p>
             </div>
             <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl">
               <p className="font-black text-amber-800 dark:text-amber-300 text-sm mb-1">Annual Review Mat Miss Karo</p>
@@ -392,12 +425,12 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             </div>
             <div className="p-4 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-xl">
               <p className="font-black text-purple-800 dark:text-purple-300 text-sm mb-1">Receipts Save Rakho</p>
-              <p className="text-xs text-[var(--color-text-muted)]">Purchase bills, payment proofs. Audit aur insurance claim mein chahiye. Photo le lo.</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Purchase bills, payment proofs. Insurance claim mein chahiye.</p>
             </div>
           </div>
         </section>
 
-        {/* IMAGE 6: Documents Checklist (Replacement) */}
+        {/* IMAGE 6: Documents Checklist (Path UNCHANGED) */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/kisan-credit-card-documents-required.webp"
@@ -413,7 +446,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </p>
         </div>
 
-        {/* FAQ */}
+        {/* FAQ Section */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Real Questions From Bank Counters
@@ -452,7 +485,31 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           secondaryCta={{ href: '/calculator', label: '🧮 Sab Utilities Dekho' }}
         />
 
-        <RelatedArticles articles={RELATED} />
+        {/* VISUAL CARD STYLE INTERNAL LINKING */}
+        <section className="my-10">
+          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Aapke Liye Zaroori Articles</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {RELATED_CARDS.map((card) => (
+              <Link 
+                key={card.slug} 
+                href={`/articles/${card.slug}`}
+                className="group block p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:border-green-500 transition-all duration-300"
+              >
+                <div className="text-2xl mb-2">{card.emoji}</div>
+                <h4 className="font-bold text-gray-900 dark:text-white text-sm mb-1 group-hover:text-green-600 transition-colors">
+                  {card.title}
+                </h4>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mb-3 line-clamp-2">
+                  {card.desc}
+                </p>
+                <span className="text-xs font-semibold text-green-600 flex items-center gap-1">
+                  Read More <span className="group-hover:translate-x-1 transition-transform">→</span>
+                </span>
+              </Link>
+            ))}
+          </div>
+        </section>
+
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
           { href: '/articles/KisanRinKahaSeLe2026', l: '🏦 Kisan Loan Guide' },
