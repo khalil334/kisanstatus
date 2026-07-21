@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 
 // ── SEO Metadata ──────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: 'Vermi Compost Business 2026: PKVY Subsidy & Real Profit Guide',
+  title: 'Vermi Compost Business 2026: PKVY Subsidy & Profit Guide',
   description: 'Vermi compost business complete guide. Janein organic fertilizer kaise banayein, PKVY subsidy, machinery cost aur real profit calculation ke baare mein sab kuch.',
   keywords: [
     'vermi compost business',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' }],
   openGraph: {
-    title: 'Vermi Compost Business 2026: PKVY Subsidy & Real Profit Guide',
+    title: 'Vermi Compost Business 2026: PKVY Subsidy & Profit Guide',
     description: 'Vermi compost business complete guide. Janein organic fertilizer kaise banayein, PKVY subsidy, machinery cost aur real profit calculation ke baare mein sab kuch.',
     type: 'article',
     locale: 'hi_IN',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Vermi Compost Business 2026: PKVY Subsidy & Real Profit Guide',
+    title: 'Vermi Compost Business 2026: PKVY Subsidy & Profit Guide',
     description: 'Vermi compost business complete guide. Janein organic fertilizer kaise banayein, PKVY subsidy, machinery cost aur real profit calculation ke baare mein sab kuch.',
     images: ['https://kisanstatus.com/images/kisanguides/vermi-compost-hero.webp'],
   },
@@ -70,7 +70,7 @@ const jsonLd = {
     {
       '@type': 'Article',
       '@id': 'https://kisanstatus.com/articles/farming/vermi-compost-business-guide/#article',
-      headline: 'Vermi Compost Business 2026: PKVY Subsidy & Real Profit Guide',
+      headline: 'Vermi Compost Business 2026: PKVY Subsidy & Profit Guide',
       description: 'Vermi compost business complete guide. Janein organic fertilizer kaise banayein, PKVY subsidy, machinery cost aur real profit calculation ke baare mein sab kuch.',
       author: {
         '@type': 'Organization',
@@ -151,19 +151,17 @@ export default function VerminCompost() {
       />
       
       <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100 leading-tight">
-        Vermi Compost Business 2026: Gobar aur Kachre Se Organic Khaad Banakar Mahine Ka ₹40,000+ Kamayein
+        Vermi Compost Business 2026: Gobar Se Organic Khaad Banakar Extra Income Kamayein
       </h1>
       
-      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 italic">
-        Chemical fertilizers ke daam lagatar badhne se kisaanon ki lagat badh rahi hai. Aise mein, apne hi khet ke gobar aur kachre ko khaad mein badalna ek practical aur sasta solution ban gaya hai.
-      </p>
+      <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
+        <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
+          <strong>Sach kahoon toh:</strong> Chemical fertilizers ke daam lagatar badhne se kisaanon ki lagat badh rahi hai. Aise mein, apne hi khet ke gobar aur kachre ko khaad mein badalna ek practical aur sasta solution ban gaya hai.
+        </p>
+      </div>
       
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Pehle saal shayad ye sirf apne khet ke liye banaya jaye, lekin jab quality set ho jati hai, toh ise bechkar ek alag income stream banayi ja sakti hai. Cost ₹5-8 per kg aati hai, aur achhi quality ka rate ₹15-20 per kg mil jata hai.
-      </p>
-
-      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Kachre ko khaad mein badalna aur usse paisa kamana ek proven model hai. Demand badh rahi hai kyunki <Link href="/articles/farming/organic-farming-scheme-guide" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">organic farming</Link> ko sarkar actively promote kar rahi hai.
+        Pehle saal shayad ye sirf apne khet ke liye banaya jaye, lekin jab quality set ho jati hai, toh ise bechkar ek alag income stream banayi ja sakti hai. Cost ₹5 - ₹8 per kg aati hai, aur achhi quality ka rate ₹15 - ₹20 per kg mil jata hai. Kachre ko khaad mein badalna aur usse paisa kamana ek proven model hai, kyunki organic farming ko sarkar actively promote kar rahi hai.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
@@ -183,10 +181,10 @@ export default function VerminCompost() {
       </p>
 
       <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-8">
-        <li><strong>Chemical fertilizer ke daam bahut badh gaye hain:</strong> DAP ₹1,400-1,500/bag aur Urea ₹300-350/bag ke aas-paas hai.</li>
+        <li><strong>Chemical fertilizer ke daam bahut badh gaye hain:</strong> DAP ₹1,400 - ₹1,500/bag aur Urea ₹300 - ₹350/bag ke aas-paas hai.</li>
         <li><strong>Soil health kharab ho rahi hai:</strong> 20-30 saal se sirf chemical use hone se mitti mein organic matter kam ho gaya hai.</li>
         <li><strong>Organic farming ka trend:</strong> Organic products ka market rate 30-50% zyada milta hai.</li>
-        <li><strong>Government push:</strong> <Link href="/articles/farming/soil-health-card-complete-guide-2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Soil Health Card</Link> scheme ke through organic matter badhane par zor diya ja raha hai.</li>
+        <li><strong>Government push:</strong> Soil Health Card scheme ke through organic matter badhane par zor diya ja raha hai.</li>
         <li><strong>Long-term benefit:</strong> Ek baar use karne se soil structure permanently improve hota hai.</li>
       </ul>
 
@@ -216,7 +214,7 @@ export default function VerminCompost() {
           <li><strong>Maintain karo:</strong> Moisture, temperature, aur aeration ka dhyan rakho.</li>
           <li><strong>45-60 din mein compost taiyar:</strong> Earthworms waste ko khaad mein badal dete hain.</li>
           <li><strong>Harvest karo:</strong> Earthworms alag karo, khaad sukhao, sieve karo.</li>
-          <li><strong>Pack karo aur becho:</strong> ₹15-25 per kg rate par.</li>
+          <li><strong>Pack karo aur becho:</strong> ₹15 - ₹25 per kg rate par.</li>
         </ol>
       </div>
 
@@ -225,7 +223,7 @@ export default function VerminCompost() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        <strong>Model 2: Gobar khareed kar banao.</strong> Aap dairy farms se gobar khareedo (₹2-3 per kg), process karo, becho. Margin 40-50% hota hai, par scale bada kar sakte hain.
+        <strong>Model 2: Gobar khareed kar banao.</strong> Aap dairy farms se gobar khareedo (₹2 - ₹3 per kg), process karo, becho. Margin 40-50% hota hai, par scale bada kar sakte hain.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
@@ -277,7 +275,7 @@ export default function VerminCompost() {
           </li>
           <li className="flex justify-between">
             <span>Licenses, Misc:</span>
-            <span className="font-semibold">₹5,000 - ₹10,000</span>
+            <span className="font-semibold">5,000 - ₹10,000</span>
           </li>
           <li className="flex justify-between border-t border-gray-300 dark:border-gray-600 pt-3 font-bold text-base text-gray-900 dark:text-gray-100">
             <span>Total Investment Range:</span>
@@ -286,12 +284,8 @@ export default function VerminCompost() {
         </ul>
       </div>
 
-      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Is investment ko manage karne ke liye <Link href="/articles/loan/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Kisan Credit Card (KCC)</Link> ek badhiya vikalp hai, jisme working capital ke liye limit badhwa sakte hain.
-      </p>
-
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Setup cost ke liye official <a href="https://www.mudra.org.in/" className="text-blue-600 hover:underline dark:text-blue-400 font-medium" target="_blank" rel="noopener noreferrer">Mudra Loan</a> bhi le sakte hain - Shishu category mein ₹50,000 tak, Kishor mein ₹5 lakh tak bina collateral ke mil jata hai.
+        Is investment ko manage karne ke liye Kisan Credit Card (KCC) ek badhiya vikalp hai, jisme working capital ke liye limit badhwa sakte hain. Setup cost ke liye official Mudra Loan bhi le sakte hain - Shishu category mein ₹50,000 tak, Kishor mein ₹5 lakh tak bina collateral ke mil jata hai.
       </p>
 
       {/* Image 3: Packaging */}
@@ -317,35 +311,26 @@ export default function VerminCompost() {
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">1. Paramparagat Krishi Vikas Yojana (PKVY):</strong>
             Yeh scheme organic farming ko promote karti hai. Vermi compost units par 50-75% subsidy milti hai. Maximum subsidy ₹50,000 - ₹1 lakh per unit. FPOs aur SHGs ko priority milti hai.
-            <p className="mt-1 text-xs text-gray-600 dark:text-gray-400 italic">
-              Disclaimer: PKVY ki guidelines state ke hisaab se vary karti hain. Apne zila ke Agriculture Department se latest details confirm karein.
-            </p>
           </li>
 
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">2. Mission Organic Value Chain Development (MOVCDNER):</strong>
             North-East states ke liye special scheme. Vermi compost units par 75-90% subsidy milti hai. Maximum subsidy ₹2 lakh tak.
-            <p className="mt-1 text-xs text-gray-600 dark:text-gray-400 italic">
-              Disclaimer: MOVCDNER sirf North-East states ke liye hai. Latest details ke liye official portal check karein.
-            </p>
           </li>
 
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">3. Soil Health Management Scheme:</strong>
             Organic matter badhane ke liye yeh scheme hai. Vermi compost units par 50% subsidy milti hai. Maximum subsidy ₹25,000 - ₹50,000.
-            <p className="mt-1 text-xs text-gray-600 dark:text-gray-400 italic">
-              Disclaimer: Soil Health Management ki eligibility criteria vary karti hai. Apne zila ke Soil Conservation Office se pata karein.
-            </p>
           </li>
 
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">4. PM FME Yojana:</strong>
-            Agar aap vermi compost ko branded packaging mein bechna chahte hain, toh <Link href="/articles/farming/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME</Link> ke under 35% subsidy mil sakti hai (maximum ₹10 lakh).
-            <p className="mt-1 text-xs text-gray-600 dark:text-gray-400 italic">
-              Disclaimer: PM FME ki eligibility criteria specific hai. Official portal ya Industries Department se confirm karein.
-            </p>
+            Agar aap vermi compost ko branded packaging mein bechna chahte hain, toh PM FME ke under 35% subsidy mil sakti hai (maximum ₹10 lakh).
           </li>
         </ul>
+        <p className="mt-4 text-xs text-gray-600 dark:text-gray-400 italic border-t border-blue-200 dark:border-blue-800 pt-3">
+          <strong>Note:</strong> In schemes ki guidelines state ke hisaab se vary karti hain. Apply karne se pehle apne nazdeeki Agriculture Department se latest norms zaroor confirm karein.
+        </p>
       </div>
 
       <ExternalLinkButton 
@@ -438,7 +423,7 @@ export default function VerminCompost() {
             </tr>
             <tr className="border-b border-gray-100 dark:border-gray-700">
               <td className="py-3 px-4">Labor (pit preparation, maintenance, harvesting):</td>
-              <td className="py-3 px-4">₹2 - ₹3</td>
+              <td className="py-3 px-4">2 - ₹3</td>
             </tr>
             <tr className="border-b border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
               <td className="py-3 px-4">Water, Electricity, Misc:</td>
@@ -454,11 +439,11 @@ export default function VerminCompost() {
             </tr>
             <tr className="bg-red-50 dark:bg-red-900/20">
               <td className="py-3 px-4 font-bold">Total Cost:</td>
-              <td className="py-3 px-4 font-bold text-red-700 dark:text-red-400">₹7 - ₹12</td>
+              <td className="py-3 px-4 font-bold text-red-700 dark:text-red-400">7 - ₹12</td>
             </tr>
             <tr className="border-b border-gray-100 dark:border-gray-700">
               <td className="py-3 px-4">Selling Price:</td>
-              <td className="py-3 px-4">₹15 - ₹25</td>
+              <td className="py-3 px-4">15 - ₹25</td>
             </tr>
             <tr className="bg-green-50 dark:bg-green-900/20">
               <td className="py-3 px-4 font-bold text-green-800 dark:text-green-300">Net Profit per Kg:</td>
@@ -492,22 +477,22 @@ export default function VerminCompost() {
 
       <div className="space-y-4 mb-8 not-prose">
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
-          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">Earthworm Mortality (Sabse Badi Problem)</h4>
-          <p className="text-sm text-gray-700 dark:text-gray-300">Earthworms bahut sensitive hote hain. Temperature 40°C se upar gaya, ya moisture 50% se neeche chala gaya, toh mar jayenge. Pesticide residue wala material daal diya, toh mar jayenge. Ek baar worms mar gaye, toh dobara khareedne padenge (₹200-300 per kg).</p>
+          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">1. Earthworm Mortality (Sabse Badi Problem)</h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300">Earthworms bahut sensitive hote hain. Temperature 40°C se upar gaya, ya moisture 50% se neeche chala gaya, toh mar jayenge. Pesticide residue wala material daal diya, toh mar jayenge. Ek baar worms mar gaye, toh dobara khareedne padenge (₹200 - ₹300 per kg).</p>
         </div>
 
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
-          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">Quality Control</h4>
+          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">2. Quality Control</h4>
           <p className="text-sm text-gray-700 dark:text-gray-300">Agar compost properly decompose nahi hua, ya pH theek nahi hai, toh customers complaint karenge. Lab testing zaroori hai - ₹2,000 - ₹5,000 per sample. Bina testing ke branded product nahi bech sakte.</p>
         </div>
 
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
-          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">Seasonal Demand</h4>
+          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">3. Seasonal Demand</h4>
           <p className="text-sm text-gray-700 dark:text-gray-300">Kharif (June-October) aur Rabi (October-March) mein demand peak par hoti hai. Garmiyon (April-June) mein demand 30-40% kam ho jati hai. Aapko 12 months ka cash flow manage karna padta hai.</p>
         </div>
 
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
-          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">Raw Material Availability</h4>
+          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">4. Raw Material Availability</h4>
           <p className="text-sm text-gray-700 dark:text-gray-300">Gobar ki availability consistent nahi hoti. Sardiyon mein doodh kam hota hai, toh gobar bhi kam. Agar aapne advance mein contract nahi kiya, toh raw material nahi milega.</p>
         </div>
       </div>
@@ -524,7 +509,7 @@ export default function VerminCompost() {
         <li><strong>Local Organic Farmers Par Direct Visit:</strong> Apne area ke 20-30 organic farmers ki list banao. Pehla order discount par do. 60% cases mein quality achhi hui toh order mil jata hai.</li>
         <li><strong>Nursery aur Garden Centers:</strong> Plant nurseries aur landscaping companies se tie-up karo. Wo regular customers hain.</li>
         <li><strong>Urban Terrace Gardeners:</strong> Cities mein terrace gardening ka trend hai. WhatsApp groups join karo. Online becho - Branded packaging mein 5 kg, 10 kg packs becho.</li>
-        <li><strong>FPOs aur Cooperatives:</strong> <Link href="/articles/farming/farmer-producer-organization-guide" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Farmer Producer Organizations</Link> se tie-up karo. Wo apne member farmers ko organic inputs recommend karte hain.</li>
+        <li><strong>FPOs aur Cooperatives:</strong> Farmer Producer Organizations se tie-up karo. Wo apne member farmers ko organic inputs recommend karte hain.</li>
       </ul>
 
       {/* Image 5: Legal & Documents */}
@@ -551,6 +536,41 @@ export default function VerminCompost() {
         <li><strong>Lab Testing:</strong> Har batch ko test karna padega - NPK content, heavy metals, pH. ₹2,000 - ₹5,000 per sample.</li>
         <li><strong>NOC from Local Authorities:</strong> Gram panchayat ya municipal corporation se.</li>
       </ul>
+
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
+        Related Guides & Financial Support
+      </h2>
+      <div className="grid md:grid-cols-2 gap-4 mb-8 not-prose">
+        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800 hover:shadow-md transition-shadow">
+          <h4 className="font-semibold text-blue-900 dark:text-blue-200 mb-2 flex items-center gap-2">
+            💳 Kisan Credit Card (KCC)
+          </h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Working capital aur setup cost ke liye low-interest loan. 4% interest rate with timely repayment.</p>
+          <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 text-sm font-medium flex items-center gap-1">
+            KCC Guide Padhein <span>→</span>
+          </Link>
+        </div>
+        
+        <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border border-green-200 dark:border-green-800 hover:shadow-md transition-shadow">
+          <h4 className="font-semibold text-green-900 dark:text-green-200 mb-2 flex items-center gap-2">
+            🏭 PM FME Yojana
+          </h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Branded packaging aur value addition ke liye 35% tak subsidy. Maximum ₹10 lakh.</p>
+          <Link href="/articles/pm-fme-yojana-food-processing" className="text-green-600 hover:underline dark:text-green-400 text-sm font-medium flex items-center gap-1">
+            PM FME Details Dekhein <span>→</span>
+          </Link>
+        </div>
+
+        <div className="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-lg border border-amber-200 dark:border-amber-800 hover:shadow-md transition-shadow">
+          <h4 className="font-semibold text-amber-900 dark:text-amber-200 mb-2 flex items-center gap-2">
+            ️ PM Fasal Bima Yojana
+          </h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Agricultural business ke liye crop insurance coverage. Natural calamities se protection.</p>
+          <Link href="/articles/PmfbyCropInsurance2026" className="text-amber-700 hover:underline dark:text-amber-400 text-sm font-medium flex items-center gap-1">
+            PMFBY Guide Padhein <span>→</span>
+          </Link>
+        </div>
+      </div>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Kya Aapke Liye Sahi Hai? Final Decision Framework
@@ -595,22 +615,22 @@ export default function VerminCompost() {
       <h2 id="faq" className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Frequently Asked Questions (FAQs)
       </h2>
-      <div className="space-y-4 mb-8 not-prose">
+      <div className="grid md:grid-cols-2 gap-4 mb-8 not-prose">
         <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">1. Kya vermi compost ko chemical fertilizer ke saath mix karke use kar sakte hain?</h3>
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">1. Chemical fertilizer ke saath mix kar sakte hain?</h3>
           <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Haan, shuruat mein aap vermi compost ko chemical fertilizer ke saath 50:50 ratio mein mix karke use kar sakte hain. Isse mitti ko organic matter milta hai aur chemical ka shock bhi kam hota hai. Dheere-dheere chemical ki matra kam karke sirf organic par shift ho sakte hain.</p>
         </div>
         <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">2. Agar galti se earthworms mar jayein, toh poori batch kharab ho jati hai ya bachayi ja sakti hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Agar worms mar bhi jayein, toh organic material phir bhi decompose hota hai, lekin usme vermi compost wali premium quality (microbial activity) nahi aati. Usse aap normal FYM (Farm Yard Manure) ke roop mein bech sakte hain, jiska rate thoda kam (₹5-8/kg) hota hai. Agli batch ke liye naye worms lene padenge.</p>
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">2. Earthworms mar jayein toh batch kharab?</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Agar worms mar bhi jayein, toh organic material phir bhi decompose hota hai, lekin usme vermi compost wali premium quality nahi aati. Usse aap normal FYM ke roop mein bech sakte hain (₹5 - ₹8/kg). Agli batch ke liye naye worms lene padenge.</p>
         </div>
         <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">3. Branded packaging mein bechne ke liye FSSAI zaroori hai ya sirf lab report kaafi hai?</h3>
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">3. Branded packaging ke liye FSSAI zaroori hai?</h3>
           <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Vermi compost ek "fertilizer" hai, "food" nahi, isliye iske liye FSSAI ki zaroorat nahi hoti. Iske liye FCO (Fertilizer Control Order) ke under state agriculture department se registration aur authorized lab se quality testing report kaafi hoti hai.</p>
         </div>
         <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">4. Kya vermi compost ki jagah normal gobar ki khaad (FYM) use nahi ki ja sakti?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Normal gobar ki khaad (FYM) mein bhi nutrients hote hain, lekin vermi compost mein earthworms ki wajah se enzymes aur beneficial microbes ki matra 10-20 guna zyada hoti hai. Yeh mitti ki structure ko FYM ke mukable jaldi aur behtar tarike se improve karti hai, isliye iska market rate aur demand dono zyada hain.</p>
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">4. Normal gobar ki khaad (FYM) use nahi kar sakte?</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Normal gobar ki khaad (FYM) mein bhi nutrients hote hain, lekin vermi compost mein earthworms ki wajah se enzymes aur beneficial microbes ki matra 10-20 guna zyada hoti hai. Yeh mitti ki structure ko FYM ke mukable jaldi aur behtar tarike se improve karti hai.</p>
         </div>
       </div>
 
