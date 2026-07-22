@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Script from 'next/script';
@@ -29,6 +30,82 @@ const RELATED_CARDS = [
     emoji: '💸'
   },
 ];
+
+// Age-wise monthly contribution data (shared by the calculator widget and the reference table below)
+const CONTRIBUTION_DATA: { age: number; monthly: number; total: number }[] = [
+  { age: 18, monthly: 55, total: 27720 }, { age: 19, monthly: 58, total: 28536 },
+  { age: 20, monthly: 60, total: 28800 }, { age: 21, monthly: 62, total: 28428 },
+  { age: 22, monthly: 65, total: 28860 }, { age: 23, monthly: 68, total: 29104 },
+  { age: 24, monthly: 72, total: 30240 }, { age: 25, monthly: 75, total: 31500 },
+  { age: 26, monthly: 80, total: 32640 }, { age: 27, monthly: 85, total: 33660 },
+  { age: 28, monthly: 90, total: 34560 }, { age: 29, monthly: 95, total: 35340 },
+  { age: 30, monthly: 100, total: 36000 }, { age: 31, monthly: 105, total: 36540 },
+  { age: 32, monthly: 110, total: 36960 }, { age: 33, monthly: 120, total: 38880 },
+  { age: 34, monthly: 130, total: 40560 }, { age: 35, monthly: 140, total: 42000 },
+  { age: 36, monthly: 150, total: 43200 }, { age: 37, monthly: 160, total: 44160 },
+  { age: 38, monthly: 170, total: 44880 }, { age: 39, monthly: 180, total: 45360 },
+  { age: 40, monthly: 200, total: 48000 },
+];
+
+function PensionCalculatorWidget() {
+  const [ageInput, setAgeInput] = useState('30');
+  const parsedAge = parseInt(ageInput, 10);
+
+  const result = useMemo(() => {
+    if (!parsedAge || parsedAge < 18 || parsedAge > 40) return null;
+    return CONTRIBUTION_DATA.find((r) => r.age === parsedAge) ?? null;
+  }, [parsedAge]);
+
+  const isOutOfRange = ageInput !== '' && (!parsedAge || parsedAge < 18 || parsedAge > 40);
+
+  return (
+    <div className="my-6 rounded-2xl border-2 border-green-500 bg-green-50 dark:bg-green-900/20 p-5 md:p-6">
+      <h3 className="font-black text-green-800 dark:text-green-300 text-base md:text-lg mb-3">
+        🧮 Apni Umar Daalkar Turant Hisaab Nikaalein
+      </h3>
+      <label htmlFor="pmkmy-age-input" className="block text-xs font-medium text-[var(--color-text-muted)] mb-1">
+        Apni current age (18–40) daalein
+      </label>
+      <input
+        id="pmkmy-age-input"
+        type="number"
+        min={18}
+        max={40}
+        value={ageInput}
+        onChange={(e) => setAgeInput(e.target.value)}
+        className="w-full md:w-40 px-3 py-2 rounded-lg border border-green-400 bg-white dark:bg-gray-800 text-[var(--color-text)] font-bold text-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+        placeholder="Jaise: 30"
+      />
+
+      {result && (
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-4">
+          <div className="bg-white dark:bg-gray-800 rounded-xl p-3 border border-green-200 dark:border-green-800">
+            <p className="text-[10px] uppercase tracking-wide text-[var(--color-text-muted)] mb-1">Har Mahine</p>
+            <p className="text-xl font-black text-[var(--color-text)]">₹{result.monthly}</p>
+          </div>
+          <div className="bg-white dark:bg-gray-800 rounded-xl p-3 border border-green-200 dark:border-green-800">
+            <p className="text-[10px] uppercase tracking-wide text-[var(--color-text-muted)] mb-1">60 Tak Total (Apna Hissa)</p>
+            <p className="text-xl font-black text-[var(--color-text)]">₹{result.total.toLocaleString('en-IN')}</p>
+          </div>
+          <div className="bg-white dark:bg-gray-800 rounded-xl p-3 border border-green-200 dark:border-green-800">
+            <p className="text-[10px] uppercase tracking-wide text-[var(--color-text-muted)] mb-1">60+ Pension</p>
+            <p className="text-xl font-black text-green-700 dark:text-green-400">₹3,000/mo</p>
+          </div>
+        </div>
+      )}
+
+      {isOutOfRange && (
+        <p className="text-xs text-red-600 dark:text-red-400 mt-3">
+          Ye scheme sirf 18 se 40 saal ki age walon ke liye hai. Kripya isi range mein age daalein.
+        </p>
+      )}
+
+      <p className="text-[11px] text-[var(--color-text-muted)] mt-3">
+        Note: Sarkar aapke barabar hissa alag se apni taraf se jama karti hai — upar diya total sirf aapka personal yogdaan hai.
+      </p>
+    </div>
+  );
+}
 
 const FAQS_DATA = [
   {
@@ -158,9 +235,11 @@ export default function PmKisanMaandhanPensionCalculator({ article }: { article:
 
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-r-xl">
           <p className="text-sm md:text-base text-blue-900 dark:text-blue-100 leading-relaxed font-medium">
-            Khet-kheti se retirement ke baad fixed income kaha se aayegi — ye sawal har chhote aur seemant kisan ko kabhi na kabhi pareshan karta hai. PM Kisan Maandhan Yojana (PM-KMY) isi gap ko bharne ke liye bani hai: aap thodi rakam jama karte hain, sarkar utni hi apni taraf se dalti hai, aur poora paisa LIC manage karta hai. Neeche di gayi table mein apni age dekhiye — mahine ka hisaab seedha samajh aa jayega.
+            Khet-kheti se retirement ke baad fixed income kaha se aayegi — ye sawal har chhote aur seemant kisan ko kabhi na kabhi pareshan karta hai. PM Kisan Maandhan Yojana (PM-KMY) isi gap ko bharne ke liye bani hai: aap thodi rakam jama karte hain, sarkar utni hi apni taraf se dalti hai, aur poora paisa LIC manage karta hai. Neeche diye calculator mein apni age daalkar seedha exact rakam dekh lijiye.
           </p>
         </div>
+
+        <PensionCalculatorWidget />
 
         <section className="mb-8">
           <SH>Ye Fund Kaam Kaise Karta Hai?</SH>
@@ -207,20 +286,11 @@ export default function PmKisanMaandhanPensionCalculator({ article }: { article:
                 </tr>
               </thead>
               <tbody>
-                {[
-                  [18, 55, 27720], [19, 58, 28536], [20, 60, 28800],
-                  [21, 62, 28428], [22, 65, 28860], [23, 68, 29104],
-                  [24, 72, 30240], [25, 75, 31500], [26, 80, 32640],
-                  [27, 85, 33660], [28, 90, 34560], [29, 95, 35340],
-                  [30, 100, 36000], [31, 105, 36540], [32, 110, 36960],
-                  [33, 120, 38880], [34, 130, 40560], [35, 140, 42000],
-                  [36, 150, 43200], [37, 160, 44160], [38, 170, 44880],
-                  [39, 180, 45360], [40, 200, 48000],
-                ].map(([age, amount, total], i) => (
-                  <tr key={age} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-green-50/40 dark:bg-green-900/10'}>
-                    <td className="p-3 border-b border-[var(--color-border)] font-medium text-[var(--color-text)]">{age} Years</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-[var(--color-text)] font-bold">₹{amount}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">₹{total.toLocaleString('en-IN')}</td>
+                {CONTRIBUTION_DATA.map((row, i) => (
+                  <tr key={row.age} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-green-50/40 dark:bg-green-900/10'}>
+                    <td className="p-3 border-b border-[var(--color-border)] font-medium text-[var(--color-text)]">{row.age} Years</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-[var(--color-text)] font-bold">₹{row.monthly}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">₹{row.total.toLocaleString('en-IN')}</td>
                   </tr>
                 ))}
               </tbody>
