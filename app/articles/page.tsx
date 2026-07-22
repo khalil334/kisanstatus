@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { ARTICLES } from '@/lib/articles-data';
-import { MAANDHAN_ARTICLES } from '@/lib/maandhan-data'; // ✅ ADDED
+import { MAANDHAN_ARTICLES } from '@/lib/maandhan-data';
 import { 
   SITE_URL, 
   SITE_NAME, 
@@ -13,7 +13,7 @@ import ArticlesClient from './ArticlesClient';
 
 export const revalidate = 3600;
 
-// ✅ COMBINE BOTH ARRAYS INTO ONE
+// ✅ Combine both arrays safely
 const ALL_ARTICLES = [...ARTICLES, ...MAANDHAN_ARTICLES];
 
 export const metadata: Metadata = {
@@ -40,8 +40,8 @@ export const metadata: Metadata = {
     'soil health card guide',
     'bakri palan yojana',
     'mushroom kheti guide',
-    'pm kisan maandhan yojana', // ✅ ADDED
-    'kisan pension scheme',     // ✅ ADDED
+    'pm kisan maandhan yojana',
+    'kisan pension scheme',
   ],
   openGraph: {
     title: `Kisan Guides 2026 — ${ALL_ARTICLES.length}+ Verified Resources`,
@@ -68,12 +68,12 @@ export const metadata: Metadata = {
 };
 
 export default function ArticlesPage() {
-  // ✅ FIX: Use 'any' for 'a' to safely handle both ArticleMeta (has 'desc') and MaandhanArticleMeta (has 'description')
-  const schemaArticles = ALL_ARTICLES.map((a: any, i) => {
-    const isMaandhan = a.category === 'pension-scheme' || a.slug.includes('maandhan');
+  // ✅ Safely generate schema for both article types
+  const schemaArticles = ALL_ARTICLES.map((article: any, i) => {
+    const isMaandhan = article.category === 'pension-scheme' || article.slug.includes('maandhan');
     const articleUrl = isMaandhan 
-      ? `${SITE_URL}/maandhan/${a.slug}` 
-      : `${SITE_URL}/articles/${a.slug}`;
+      ? `${SITE_URL}/maandhan/${article.slug}` 
+      : `${SITE_URL}/articles/${article.slug}`;
       
     return {
       '@type': 'ListItem',
@@ -81,8 +81,8 @@ export default function ArticlesPage() {
       item: {
         '@type': 'Article',
         url: articleUrl,
-        name: a.title,
-        description: a.desc || a.description || 'KisanStatus verified guide', // ✅ Safe fallback
+        name: article.title,
+        description: article.desc || article.description || 'KisanStatus verified guide',
       },
     };
   });
@@ -126,7 +126,6 @@ export default function ArticlesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      {/* ✅ PASS COMBINED ARRAY TO CLIENT */}
       <ArticlesClient articles={ALL_ARTICLES} />
     </>
   );
