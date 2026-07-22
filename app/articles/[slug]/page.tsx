@@ -26,28 +26,28 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
   const category = CATEGORIES[article.category];
   const related = getRelatedArticles(article.slug, 5);
 
-  const breadcrumbItems = [
-    { '@type': 'ListItem' as const, position: 1, name: 'Home', item: SITE_URL },
-    { '@type': 'ListItem' as const, position: 2, name: 'Articles', item: `${SITE_URL}/articles` },
+  const breadcrumbItems: any[] = [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Articles', item: `${SITE_URL}/articles` },
   ];
 
   if (category) {
     breadcrumbItems.push({
-      '@type': 'ListItem' as const,
+      '@type': 'ListItem',
       position: 3,
-      name: (category as Record<string, string>).nameHi ?? (category as Record<string, string>).name,
+      name: (category as any).nameHi ?? (category as any).name,
       item: `${SITE_URL}/articles/category/${article.category}`,
     });
   }
 
   breadcrumbItems.push({
-    '@type': 'ListItem' as const,
+    '@type': 'ListItem',
     position: category ? 4 : 3,
     name: article.ogTitle || article.title,
     item: url,
   });
 
-  const schemas: object[] = [
+  return [
     {
       '@context': 'https://schema.org',
       '@type': 'Article',
@@ -100,15 +100,15 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
         url: SITE_URL,
       },
       about: article.schemes && article.schemes.length > 0
-        ? article.schemes.map((s) => ({ '@type': 'Thing', name: s }))
+        ? article.schemes.map((s: string) => ({ '@type': 'Thing', name: s }))
         : [{ '@type': 'Thing', name: 'Agriculture' }],
-      mentions: related.slice(0, 3).map((r) => ({
+      mentions: related.slice(0, 3).map((r: any) => ({
         '@type': 'Article',
         name: r.title,
         url: `${SITE_URL}/articles/${r.slug}`,
       })),
-      keywords: article.keywords.join(', '),
-      articleSection: category ? (category as Record<string, string>).name : 'Agriculture',
+      keywords: Array.isArray(article.keywords) ? article.keywords.join(', ') : '',
+      articleSection: category ? (category as any).name : 'Agriculture',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['article h1', 'article h2', 'article p'],
@@ -146,8 +146,6 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
       },
     },
   ];
-
-  return schemas;
 }
 
 function ArticleLoading() {
@@ -158,21 +156,17 @@ function ArticleLoading() {
           <div className="h-10 bg-gray-200 dark:bg-gray-700 rounded w-3/4" />
           <div className="h-10 bg-gray-200 dark:bg-gray-700 rounded w-1/2" />
         </div>
-        
         <div className="flex gap-4">
           <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-24" />
           <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-32" />
         </div>
-        
         <div className="space-y-4">
           <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-full" />
           <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-full" />
           <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-5/6" />
           <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-4/6" />
         </div>
-        
         <div className="aspect-video bg-gray-200 dark:bg-gray-700 rounded-xl w-full" />
-        
         <div className="space-y-4">
           <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-full" />
           <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-5/6" />
@@ -184,44 +178,44 @@ function ArticleLoading() {
 }
 
 const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> = {
-  KisanRinKahaSeLe2026:                       dynamic(() => import('@/components/articles/KisanRinKahaSeLe2026'), { ssr: true }),
-  KisanTractorLoan2026:                       dynamic(() => import('@/components/articles/KisanTractorLoan2026'), { ssr: true }),
-  PmKisanBeneficiaryList2026:                 dynamic(() => import('@/components/articles/PmKisanBeneficiaryList2026'), { ssr: true }),
-  PmKisanEkycOnline2026:                      dynamic(() => import('@/components/articles/PmKisanEkycOnline2026'), { ssr: true }),
-  KisanCreditCardOnlineApply2026:             dynamic(() => import('@/components/articles/KisanCreditCardOnlineApply2026'), { ssr: true }),
-  NanoDap500mlPriceInIndia2026:               dynamic(() => import('@/components/articles/NanoDap500mlPriceInIndia2026'), { ssr: true }),
-  PmKisan24viKist2026:                        dynamic(() => import('@/components/articles/PmKisan24viKist2026'), { ssr: true }),
-  AgriStackKyaHai2026:                        dynamic(() => import('@/components/articles/AgriStackKyaHai2026'), { ssr: true }),
-  PmKisanMasterGuide2026:                     dynamic(() => import('@/components/articles/PmKisanMasterGuide2026'), { ssr: true }),
+  KisanRinKahaSeLe2026: dynamic(() => import('@/components/articles/KisanRinKahaSeLe2026'), { ssr: true }),
+  KisanTractorLoan2026: dynamic(() => import('@/components/articles/KisanTractorLoan2026'), { ssr: true }),
+  PmKisanBeneficiaryList2026: dynamic(() => import('@/components/articles/PmKisanBeneficiaryList2026'), { ssr: true }),
+  PmKisanEkycOnline2026: dynamic(() => import('@/components/articles/PmKisanEkycOnline2026'), { ssr: true }),
+  KisanCreditCardOnlineApply2026: dynamic(() => import('@/components/articles/KisanCreditCardOnlineApply2026'), { ssr: true }),
+  NanoDap500mlPriceInIndia2026: dynamic(() => import('@/components/articles/NanoDap500mlPriceInIndia2026'), { ssr: true }),
+  PmKisan24viKist2026: dynamic(() => import('@/components/articles/PmKisan24viKist2026'), { ssr: true }),
+  AgriStackKyaHai2026: dynamic(() => import('@/components/articles/AgriStackKyaHai2026'), { ssr: true }),
+  PmKisanMasterGuide2026: dynamic(() => import('@/components/articles/PmKisanMasterGuide2026'), { ssr: true }),
   'pm-kisan-fto-generated-ka-matlab-kya-hai': dynamic(() => import('@/components/articles/pm-kisan-fto-generated-ka-matlab-kya-hai'), { ssr: true }),
-  'soil-health-card-complete-guide-2026':     dynamic(() => import('@/components/articles/soil-health-card-complete-guide-2026'), { ssr: true }),
-  PmfbyCropInsurance2026:                     dynamic(() => import('@/components/articles/PmfbyCropInsurance2026'), { ssr: true }),
-  'mandi-bhav-today':                         dynamic(() => import('@/components/articles/mandi-bhav-today'), { ssr: true }),
-  PmKisanPaymentFailedFix2026:                dynamic(() => import('@/components/articles/PmKisanPaymentFailedFix2026'), { ssr: true }),
-  PmKisan25viKist2027:                        dynamic(() => import('@/components/articles/PmKisan25viKist2027'), { ssr: true }),
-  PmKisanSelfRegisteredStatusCheck:           dynamic(() => import('@/components/articles/PmKisanSelfRegisteredStatusCheck'), { ssr: true }),
-  PmKisanCorrectionForm2026:                  dynamic(() => import('@/components/articles/PmKisanCorrectionForm2026'), { ssr: true }),
-  PmKusumYojanaSolarSubsidy2026:              dynamic(() => import('@/components/articles/PmKusumYojanaSolarSubsidy2026'), { ssr: true }),
-  PmKisanLandSeedingForm:                     dynamic(() => import('@/components/articles/PmKisanLandSeedingForm'), { ssr: true }),
-  PmKisanFaceAuthenticationEkyc:              dynamic(() => import('@/components/articles/PmKisanFaceAuthenticationEkyc'), { ssr: true }),
-  PmKisanVoluntarySurrenderGuide:             dynamic(() => import('@/components/articles/PmKisanVoluntarySurrenderGuide'), { ssr: true }),
-  PmKisanStateNodalOfficerList:               dynamic(() => import('@/components/articles/PmKisanStateNodalOfficerList'), { ssr: true }),
-  PmKisanBankAccountChangeProcess:            dynamic(() => import('@/components/articles/PmKisanBankAccountChangeProcess'), { ssr: true }),
-  PmKisanCscRegistrationCharges:              dynamic(() => import('@/components/articles/PmKisanCscRegistrationCharges'), { ssr: true }),
-  PmKisanMaandhanYojanaPension:               dynamic(() => import('@/components/articles/PmKisanMaandhanYojanaPension'), { ssr: true }),
-  PmKisanRejectedStatusReApplyGuide:          dynamic(() => import('@/components/articles/PmKisanRejectedStatusReApplyGuide'), { ssr: true }),
-  PmKisanVillageWiseListPdfDownload:          dynamic(() => import('@/components/articles/PmKisanVillageWiseListPdfDownload'), { ssr: true }),
-  PmKisanMobileNumberChangeUpdate:            dynamic(() => import('@/components/articles/PmKisanMobileNumberChangeUpdate'), { ssr: true }),
+  'soil-health-card-complete-guide-2026': dynamic(() => import('@/components/articles/soil-health-card-complete-guide-2026'), { ssr: true }),
+  PmfbyCropInsurance2026: dynamic(() => import('@/components/articles/PmfbyCropInsurance2026'), { ssr: true }),
+  'mandi-bhav-today': dynamic(() => import('@/components/articles/mandi-bhav-today'), { ssr: true }),
+  PmKisanPaymentFailedFix2026: dynamic(() => import('@/components/articles/PmKisanPaymentFailedFix2026'), { ssr: true }),
+  PmKisan25viKist2027: dynamic(() => import('@/components/articles/PmKisan25viKist2027'), { ssr: true }),
+  PmKisanSelfRegisteredStatusCheck: dynamic(() => import('@/components/articles/PmKisanSelfRegisteredStatusCheck'), { ssr: true }),
+  PmKisanCorrectionForm2026: dynamic(() => import('@/components/articles/PmKisanCorrectionForm2026'), { ssr: true }),
+  PmKusumYojanaSolarSubsidy2026: dynamic(() => import('@/components/articles/PmKusumYojanaSolarSubsidy2026'), { ssr: true }),
+  PmKisanLandSeedingForm: dynamic(() => import('@/components/articles/PmKisanLandSeedingForm'), { ssr: true }),
+  PmKisanFaceAuthenticationEkyc: dynamic(() => import('@/components/articles/PmKisanFaceAuthenticationEkyc'), { ssr: true }),
+  PmKisanVoluntarySurrenderGuide: dynamic(() => import('@/components/articles/PmKisanVoluntarySurrenderGuide'), { ssr: true }),
+  PmKisanStateNodalOfficerList: dynamic(() => import('@/components/articles/PmKisanStateNodalOfficerList'), { ssr: true }),
+  PmKisanBankAccountChangeProcess: dynamic(() => import('@/components/articles/PmKisanBankAccountChangeProcess'), { ssr: true }),
+  PmKisanCscRegistrationCharges: dynamic(() => import('@/components/articles/PmKisanCscRegistrationCharges'), { ssr: true }),
+  PmKisanMaandhanYojanaPension: dynamic(() => import('@/components/articles/PmKisanMaandhanYojanaPension'), { ssr: true }),
+  PmKisanRejectedStatusReApplyGuide: dynamic(() => import('@/components/articles/PmKisanRejectedStatusReApplyGuide'), { ssr: true }),
+  PmKisanVillageWiseListPdfDownload: dynamic(() => import('@/components/articles/PmKisanVillageWiseListPdfDownload'), { ssr: true }),
+  PmKisanMobileNumberChangeUpdate: dynamic(() => import('@/components/articles/PmKisanMobileNumberChangeUpdate'), { ssr: true }),
   
-  BakriPalanYojana:         dynamic(() => import('@/components/articles/kisanguides/BakriPalanYojana'), { ssr: true }),
-  MushroomKheti:            dynamic(() => import('@/components/articles/kisanguides/MushroomKheti'), { ssr: true }),
-  MadhumakhiPalan:          dynamic(() => import('@/components/articles/kisanguides/MadhumakhiPalan'), { ssr: true }),
-  PMatsyaSampada:           dynamic(() => import('@/components/articles/kisanguides/PMatsyaSampada'), { ssr: true }),
-  SilageMaking:             dynamic(() => import('@/components/articles/kisanguides/SilageMaking'), { ssr: true }),
-  PMFMEYojana:              dynamic(() => import('@/components/articles/kisanguides/PMFMEYojana'), { ssr: true }),
-  CHCPortal:                dynamic(() => import('@/components/articles/kisanguides/CHCPortal'), { ssr: true }),
-  VerminCompost:            dynamic(() => import('@/components/articles/kisanguides/VerminCompost'), { ssr: true }),
-  DripSprinkler:            dynamic(() => import('@/components/articles/kisanguides/DripSprinkler'), { ssr: true }),
+  BakriPalanYojana: dynamic(() => import('@/components/articles/kisanguides/BakriPalanYojana'), { ssr: true }),
+  MushroomKheti: dynamic(() => import('@/components/articles/kisanguides/MushroomKheti'), { ssr: true }),
+  MadhumakhiPalan: dynamic(() => import('@/components/articles/kisanguides/MadhumakhiPalan'), { ssr: true }),
+  PMatsyaSampada: dynamic(() => import('@/components/articles/kisanguides/PMatsyaSampada'), { ssr: true }),
+  SilageMaking: dynamic(() => import('@/components/articles/kisanguides/SilageMaking'), { ssr: true }),
+  PMFMEYojana: dynamic(() => import('@/components/articles/kisanguides/PMFMEYojana'), { ssr: true }),
+  CHCPortal: dynamic(() => import('@/components/articles/kisanguides/CHCPortal'), { ssr: true }),
+  VerminCompost: dynamic(() => import('@/components/articles/kisanguides/VerminCompost'), { ssr: true }),
+  DripSprinkler: dynamic(() => import('@/components/articles/kisanguides/DripSprinkler'), { ssr: true }),
 };
 
 export const revalidate = 86400;
@@ -253,13 +247,13 @@ export async function generateMetadata({
     metadataBase: new URL(SITE_URL),
     title: displayTitle,
     description: article.desc,
-    keywords: [...article.keywords] as string[],
+    keywords: Array.isArray(article.keywords) ? [...article.keywords] : [],
     authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
     creator: AUTHOR_NAME,
     publisher: SITE_NAME,
-    category: category ? (category as Record<string, string>).name : 'Agriculture & Farming',
+    category: category ? (category as any).name : 'Agriculture & Farming',
     alternates: { 
-      canonical: new URL(url),  // ✅ FIX: URL object
+      canonical: url,
       languages: {
         'hi-IN': url,
         'x-default': url,
@@ -281,9 +275,9 @@ export async function generateMetadata({
       }],
       publishedTime: article.publishedTime,
       modifiedTime: article.modifiedTime,
-      section: category ? (category as Record<string, string>).name : 'Agriculture & Welfare',
+      section: category ? (category as any).name : 'Agriculture & Welfare',
       authors: [AUTHOR_NAME],
-      tags: [...article.keywords].slice(0, 5),
+      tags: Array.isArray(article.keywords) ? [...article.keywords].slice(0, 5) : [],
     },
     twitter: {
       card: 'summary_large_image',
@@ -296,7 +290,6 @@ export async function generateMetadata({
     robots: {
       index: true,
       follow: true,
-      // ❌ FIX: nocache: false hata diya
       googleBot: {
         index: true,
         follow: true,
@@ -308,8 +301,7 @@ export async function generateMetadata({
     other: {
       'article:published_time': article.publishedTime,
       'article:modified_time': article.modifiedTime,
-      'article:section': category ? (category as Record<string, string>).name : 'Agriculture',
-      // ❌ FIX: 'article:tag' hata diya
+      'article:section': category ? (category as any).name : 'Agriculture',
     },
   };
 }
@@ -338,11 +330,11 @@ export default async function ArticlePage({
   const ogImage = article.ogImage ? `${SITE_URL}${article.ogImage}` : DEFAULT_OG_IMAGE;
   const schemas = buildSchemas(article, url, ogImage);
   const rawCat = CATEGORIES[article.category];
-  const catName: string = rawCat ? ((rawCat as Record<string, string>).nameHi ?? (rawCat as Record<string, string>).name) : '';
+  const catName: string = rawCat ? ((rawCat as any).nameHi ?? (rawCat as any).name) : '';
 
   return (
     <article itemScope itemType="https://schema.org/Article">
-      {schemas.map((schema, i) => (
+      {schemas.map((schema: any, i: number) => (
         <script
           key={i}
           type="application/ld+json"
