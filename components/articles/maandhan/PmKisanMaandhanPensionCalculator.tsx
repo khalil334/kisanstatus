@@ -219,7 +219,7 @@ export default function PmKisanMaandhanPensionCalculator({ article }: { article:
 
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src="/images/maandhan/pension-calculator-hero.webp"
+            src="/images/articles/maandhan/pension-calculator-hero.webp"
             alt="Farmer calculating monthly pension contribution with a chart showing age-wise amounts"
             width={1200}
             height={630}
@@ -299,7 +299,7 @@ export default function PmKisanMaandhanPensionCalculator({ article }: { article:
 
           <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
             <Image
-              src="/images/maandhan/contribution-chart-infographic.webp"
+              src="/images/articles/maandhan/contribution-chart-infographic.webp"
               alt="Infographic showing age-wise monthly contribution for PM Kisan Maandhan Yojana"
               width={800}
               height={400}
