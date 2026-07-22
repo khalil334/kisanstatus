@@ -10,54 +10,73 @@ const PUBLISHED = '2026-07-21T08:00:00+05:30';
 const MODIFIED = '2026-07-22T08:00:00+05:30';
 
 const RELATED_CARDS = [
-  { 
-    slug: 'pm-kisan-maandhan-registration-2026', 
-    title: 'Complete Registration Guide', 
+  {
+    slug: 'pm-kisan-maandhan-registration-2026',
+    title: 'Complete Registration Guide',
     desc: 'Step-by-step process to apply online or at a CSC center.',
-    emoji: '📝' 
+    emoji: '📝'
   },
-  { 
-    slug: 'pm-kisan-maandhan-eligibility-documents', 
-    title: 'Eligibility & Documents', 
+  {
+    slug: 'pm-kisan-maandhan-eligibility-documents',
+    title: 'Eligibility & Documents',
     desc: 'Detailed checklist of documents and exact eligibility rules.',
-    emoji: '📄' 
+    emoji: '📄'
   },
-  { 
-    slug: 'pm-kisan-maandhan-withdrawal-refund-rules', 
-    title: 'Withdrawal & Refund Rules', 
+  {
+    slug: 'pm-kisan-maandhan-withdrawal-refund-rules',
+    title: 'Withdrawal & Refund Rules',
     desc: 'What happens to your money if you exit the scheme early?',
-    emoji: '💸' 
+    emoji: '💸'
   },
 ];
 
 const FAQS_DATA = [
   {
-    q: '30 saal ki umar mein join karne par total kitna paisa dena padega?',
-    a: 'Agar aap 30 saal ki umar mein join karte hain, toh aapko har mahine ₹100 dene honge. 60 saal tak (30 saal ya 360 mahine) mein aapka total contribution ₹36,000 hoga.',
+    q: '30 saal ki umar mein judne par 60 tak total kitna dena hoga?',
+    a: '30 saal par entry rate ₹100 per mahina baithti hai. 360 mahino (30 saal) mein aapka apna hissa ₹36,000 ban jata hai, aur itna hi paisa sarkar ki taraf se alag se jama hota hai.',
   },
   {
-    q: 'Kya sarkar sach mein utna hi paisa deti hai jitna kisan deta hai?',
-    a: 'Haan, aur kabhi-kabhi usse zyada bhi. Central aur State government milkar aapke contribution ke barabar ya usse thoda zyada amount aapke pension fund mein daalti hain.',
+    q: 'Sarkar sach mein barabar paisa dalti hai, ya sirf naam ka hai?',
+    a: 'Nahi, ye real hai — isi wajah se scheme ko "co-contributory" kaha jata hai. Kisan jitna dega, Central aur State government milkar utna hi apni taraf se pension fund mein dalte hain, jo LIC ke through invest hota hai.',
   },
   {
-    q: 'Agar main 40 saal ki umar mein join karta hoon, toh kya mujhe ₹3,000 pension milegi?',
-    a: 'Haan, bilkul. 40 saal ki umar mein join karne par monthly contribution ₹200 hoga, lekin 60 saal ki umar puri hone par aapko fixed ₹3,000 mahina hi milega.',
+    q: 'Ek baar rate lock ho jaye to badal sakte hain kya?',
+    a: 'Nahi. Jis age mein enroll karte hain, usi ke hisaab se rate 60 saal tak fix rehta hai — na ghatta hai na badhta hai, mehngai se bhi koi farak nahi padta.',
   },
   {
-    q: 'Kya monthly contribution amount badh sakta hai?',
-    a: 'Nahi. Ek baar jab aapki umar ke hisaab se monthly contribution fix ho jata hai, toh wo 60 saal ki umar tak same rehta hai.',
+    q: 'Beech mein ek installment miss ho jaye to?',
+    a: 'Account inactive ho sakta hai, aur dobara chalu karne ke liye bacha hua paisa penalty ke saath bharna padta hai. Isliye zyadatar log NPCI auto-debit lagwa lete hain taaki ye jhanjhat hi na ho.',
   },
   {
-    q: 'Pension ka paisa kis tarah se calculate hota hai?',
-    a: 'Ye LIC ke pension fund management rules par based hai. Aapka paisa aur sarkar ka paisa milkar ek corpus banata hai, jisse 60 saal ke baad monthly ₹3,000 generate hote hain.',
+    q: 'Saal mein ek baar lump-sum dekar bhi kaam chal sakta hai kya?',
+    a: 'Abhi ke rules mein aisa koi provision nahi hai — payment structure poori tarah monthly cycle par based hai.',
   },
   {
-    q: 'Kya main apna contribution online check kar sakta hoon?',
-    a: 'Haan, PM Kisan Maandhan portal ya mobile app par login karke aap apna total accumulated corpus aur ab tak ki gayi payments dekh sakte hain.',
+    q: '18 saal se chhoti umar mein ya 40 ke baad apply kar sakte hain?',
+    a: 'Nahi, entry sirf 18 se 40 saal ke beech hi allowed hai. Isse bahar ki age walon ke liye ye scheme applicable nahi hoti.',
+  },
+  {
+    q: 'PM Kisan Samman Nidhi aur PM Kisan Maandhan ek hi scheme hai kya?',
+    a: 'Bilkul alag hain. Samman Nidhi mein saal ke ₹6,000 seedha account mein aate hain, jabki Maandhan ek pension scheme hai jisme aap khud paisa jama karte hain aur 60 ke baad monthly pension milti hai. Dono ka fayda saath-saath liya ja sakta hai.',
+  },
+  {
+    q: 'Subscriber ki death ho jaye to pariwar ko kya milta hai?',
+    a: 'Agar death 60 saal se pehle ho jaye, to jeevansaathi is scheme ko wahi se continue kar sakte hain, ya jama ki gayi rakam interest ke saath wapas le sakte hain. 60 ke baad death hone par jeevansaathi ko 50% family pension milti rehti hai.',
+  },
+  {
+    q: 'Registered mobile number ya bank account badalna ho to kya karein?',
+    a: 'Nazdeeki CSC center jaakar ya PM-KMY portal mein login karke apna updated bank account aur mobile number seed karwaya ja sakta hai. Existing auto-debit mandate naye account ke liye dobara set karna padta hai.',
+  },
+  {
+    q: 'Kya mahila kisano ke liye rate ya rules alag hain?',
+    a: 'Nahi, contribution rate poori tarah age par based hai, gender par nahi. Male aur female kisan dono same table follow karte hain aur eligibility criteria bhi samaan rehte hain.',
+  },
+  {
+    q: 'Kya PM-KMY subscriber dusri koi kisan-related scheme bhi le sakta hai?',
+    a: 'Haan, PM-KMY lene se PM Kisan Samman Nidhi ya doosri farmer-welfare schemes ka fayda lena band nahi hota. Ye alag-alag purpose ke liye bani schemes hain aur inhe saath mein liya ja sakta hai, jab tak har scheme ki apni eligibility poori ho.',
   },
 ];
 
-// ✅ YEH LINE SABSE ZARURI HAI: EXPORT DEFAULT
 export default function PmKisanMaandhanPensionCalculator({ article }: { article: MaandhanArticleMeta }) {
   return (
     <>
@@ -67,17 +86,17 @@ export default function PmKisanMaandhanPensionCalculator({ article }: { article:
           "@graph": [
             {
               "@type": "Article",
-              "headline": "PM Kisan Maandhan Pension Calculator: Age Ke Hisaab Se Kitna Contribution Dena Hoga",
-              "description": "PM Kisan Maandhan Yojana ka complete pension calculator guide. Janie apni umar ke hisaab se monthly contribution aur 60 saal ke baad ₹3000 pension ka exact hisaab.",
-              "author": { 
-                "@type": "Organization", 
-                "name": "KisanStatus Team", 
-                "url": "https://kisanstatus.com/about" 
+              "headline": "PM Kisan Maandhan Pension Calculator: Umar Ke Hisaab Se Kitna Jama Karna Hoga",
+              "description": "Apni age ke hisaab se jaanein PM Kisan Maandhan Yojana mein har mahine kitna dena hoga aur 60 ke baad ₹3000 pension kaise milegi — poora hisaab table aur example ke saath.",
+              "author": {
+                "@type": "Organization",
+                "name": "KisanStatus Team",
+                "url": "https://kisanstatus.com/about"
               },
-              "publisher": { 
-                "@type": "Organization", 
-                "name": "KisanStatus", 
-                "logo": { "@type": "ImageObject", "url": "https://kisanstatus.com/logo.png" } 
+              "publisher": {
+                "@type": "Organization",
+                "name": "KisanStatus",
+                "logo": { "@type": "ImageObject", "url": "https://kisanstatus.com/logo.png" }
               },
               "datePublished": PUBLISHED,
               "dateModified": MODIFIED,
@@ -105,16 +124,16 @@ export default function PmKisanMaandhanPensionCalculator({ article }: { article:
             <span className="text-white font-bold">Pension Calculator</span>
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Contribution Guide</span>
-          
+
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            PM Kisan Maandhan Pension Calculator: Age Ke Hisaab Se Kitna Contribution Dena Hoga
+            PM Kisan Maandhan Pension Calculator: Umar Ke Hisaab Se Kitna Jama Karna Hoga
           </h1>
-          
+
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
             <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 10 min read</span>
+            <span>⏱️ 11 min read</span>
           </div>
         </div>
       </div>
@@ -133,59 +152,75 @@ export default function PmKisanMaandhanPensionCalculator({ article }: { article:
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Apni Umar Ke Hisaab Se Exact Contribution Jaanein
+            Apni Umar Daalkar Exact Rakam Jaanein
           </p>
         </div>
 
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-r-xl">
           <p className="text-sm md:text-base text-blue-900 dark:text-blue-100 leading-relaxed font-medium">
-            <strong>Seedha Jawab:</strong> PM Kisan Maandhan mein monthly contribution aapki <strong>entry age</strong> par depend karta hai. 18 saal ki umar mein join karne par sirf ₹55 mahina dena hota hai, jabki 40 saal ki umar mein join karne par ₹200 mahina dena hoga. 60 saal ki umar puri hone par, aapko fixed ₹3,000 mahina pension milegi.
+            Khet-kheti se retirement ke baad fixed income kaha se aayegi — ye sawal har chhote aur seemant kisan ko kabhi na kabhi pareshan karta hai. PM Kisan Maandhan Yojana (PM-KMY) isi gap ko bharne ke liye bani hai: aap thodi rakam jama karte hain, sarkar utni hi apni taraf se dalti hai, aur poora paisa LIC manage karta hai. Neeche di gayi table mein apni age dekhiye — mahine ka hisaab seedha samajh aa jayega.
           </p>
         </div>
 
         <section className="mb-8">
-          <SH>Maandhan Calculator Ka Hissaab Kaise Kaam Karta Hai?</SH>
+          <SH>Ye Fund Kaam Kaise Karta Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Bahut se kisan sochte hain ki "₹55 mahina dekar ₹3,000 kaise mil sakte hain?" Iska jawab simple hai: Ye ek <strong>co-contributory pension scheme</strong> hai.
+            Sabse pehla sawal yahi aata hai — itni chhoti rakam se itni badi pension kaise ban jaati hai? Wajah simple hai: paisa akela nahi jama hota. Kisan jo bhi de, utna (kai age groups mein usse zyada bhi) Central aur State sarkar milkar dalti hain. Dono hisse LIC ke pension fund mein invest hote hain, aur 60 ki age par ek fixed payout shuru ho jata hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Iska matlab hai ki aap jo paisa dete hain, uske barabar paisa Central aur State government milkar aapke pension fund mein daalti hain. Ye dono paise milkar LIC ke paas invest hote hain. Jab aap 60 saal ke hote hain, toh ye fund aapko har mahine ₹3,000 dene ke liye sufficient ho jata hai.
+            Practical baat: jitni jaldi entry hogi, utna kam bharna padega. 27-28 saal ki age mein judne par outflow ₹75 ke aas-paas rehta hai, jabki 40 saal mein wahi target pura karne ke liye ₹200 per mahina dena padta hai — farak seedha double se zyada ka hai.
           </p>
           <WB>
-            <strong>Important Note:</strong> Aapka monthly contribution amount ek baar fix ho jane ke baad <strong>kabhi nahi badhta</strong>. Chahe 10 saal baad mehngai kitni bhi badh jaye, aapko wahi purana amount dena hoga.
+            Ek baar age ke hisaab se rate fix ho gayi, to wo 60 saal tak same rehti hai — na mehngai se badhti hai, na kisi aur wajah se.
           </WB>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
+            Ye model dusri jagah bhi dekha jata hai — jaise EPF mein employer aur employee dono contribute karte hain — lekin PM-KMY ka faayda ye hai ki isme entry barrier bahut kam hai. Formal job na hone par bhi, sirf zameen ka record aur Aadhaar dikhakar koi bhi eligible kisan is structure ka hissa ban sakta hai. Fund ka poora record LIC ke system mein digitally maintain hota hai, isliye subscriber apna status kabhi bhi portal par check kar sakta hai.
+          </p>
         </section>
 
         <section className="mb-8">
-          <SH>Age-Wise Monthly Contribution Chart (2026 Updated)</SH>
+          <SH>Kaun Apply Kar Sakta Hai — Eligibility Ka Chhota Overview</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Neeche di gayi table mein har umar ke liye exact monthly contribution aur 60 saal tak ka total amount diya gaya hai:
+            Calculator use karne se pehle ye confirm kar lena sahi rehta hai ki aap eligible bhi hain ya nahi. PM-KMY sirf un chhote aur seemant kisano ke liye hai jinke naam par (ya pariwar ke kisi member ke naam par) 2 hectare tak cultivable zameen hai. Age 18 se 40 saal ke beech honi chahiye — isse kam ya zyada age walon ka enrollment accept nahi hota.
           </p>
-          
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Ek zaroori shart ye bhi hai ki aap kisi aur formal pension ya social security scheme se already covered na hon — jaise EPFO, ESIC, ya National Pension System (NPS) ka koi government-contribution wala hissa. Income tax payee kisan bhi is scheme ke liye eligible nahi mane jate. Jo kisan pehle se PM Kisan Samman Nidhi ka fayda le rahe hain, unke liye process thoda aasan ho jata hai kyunki unka bahut sa data already system mein hota hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Documents ki baat karein to enrollment ke liye Aadhaar card, bank passbook (jisme IFSC code ho), aur zameen ka record — yaani khatauni ya khasra copy — ye teen cheezein basic taur par chahiye hoti hain. Poori list aur step-by-step apply karne ka tarika alag se <Link href="/maandhan/pm-kisan-maandhan-eligibility-documents" className="underline text-blue-600 dark:text-blue-400 font-medium">eligibility aur documents guide</Link> mein diya gaya hai.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>18 Se 40 Saal Tak — Har Age Ka Poora Hisaab</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Pichle section mein kuch chuni hui ages dikhayi thi. Yahan har single saal (18 se 40 tak) ki rate ek saath di gayi hai, taaki table mein apni exact age dhoondhne ke liye idhar-udhar na jaana pade.
+          </p>
+
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
             <table className="w-full text-sm border-collapse">
               <thead>
                 <tr className="bg-[var(--color-primary)] text-white">
-                  <th className="p-3 text-left">Entry Age</th>
-                  <th className="p-3 text-left">Monthly Contribution</th>
-                  <th className="p-3 text-left">Total (Till 60)</th>
-                  <th className="p-3 text-left">Pension (60+ Age)</th>
+                  <th className="p-3 text-left">Age</th>
+                  <th className="p-3 text-left">Har Mahine</th>
+                  <th className="p-3 text-left">60 Tak Total</th>
                 </tr>
               </thead>
               <tbody>
                 {[
-                  ['18 Years', '₹55', '₹27,720', '₹3,000/mo'],
-                  ['20 Years', '₹60', '₹28,800', '₹3,000/mo'],
-                  ['25 Years', '₹75', '₹31,500', '₹3,000/mo'],
-                  ['30 Years', '₹100', '₹36,000', '₹3,000/mo'],
-                  ['35 Years', '₹140', '₹42,000', '₹3,000/mo'],
-                  ['40 Years', '₹200', '₹48,000', '₹3,000/mo'],
-                ].map(([age, monthly, total, pension], i) => (
+                  [18, 55, 27720], [19, 58, 28536], [20, 60, 28800],
+                  [21, 62, 28428], [22, 65, 28860], [23, 68, 29104],
+                  [24, 72, 30240], [25, 75, 31500], [26, 80, 32640],
+                  [27, 85, 33660], [28, 90, 34560], [29, 95, 35340],
+                  [30, 100, 36000], [31, 105, 36540], [32, 110, 36960],
+                  [33, 120, 38880], [34, 130, 40560], [35, 140, 42000],
+                  [36, 150, 43200], [37, 160, 44160], [38, 170, 44880],
+                  [39, 180, 45360], [40, 200, 48000],
+                ].map(([age, amount, total], i) => (
                   <tr key={age} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-green-50/40 dark:bg-green-900/10'}>
-                    <td className="p-3 border-b border-[var(--color-border)] font-medium text-[var(--color-text)]">{age}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-[var(--color-text)] font-bold">{monthly}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{total}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-green-700 dark:text-green-400 font-bold">{pension}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] font-medium text-[var(--color-text)]">{age} Years</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-[var(--color-text)] font-bold">₹{amount}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">₹{total.toLocaleString('en-IN')}</td>
                   </tr>
                 ))}
               </tbody>
@@ -203,52 +238,119 @@ export default function PmKisanMaandhanPensionCalculator({ article }: { article:
               sizes="(max-width: 768px) 100vw, 768px"
             />
             <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-              Jitni Jaldi Join Karenge, Utna Kam Monthly Paisa Dena Hoga
+              Jitni Jaldi Judenge, Utna Kam Dena Hoga
             </p>
           </div>
 
-          <IB>
-            <strong>Pro Tip:</strong> Agar aapki umar 18-25 saal ke beech hai, toh ye scheme aapke liye sabse zyada faydemand hai. Sirf ₹55-₹75 mahina dekar aap apne budhape ko secure kar sakte hain.
-          </IB>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Har age par 60 ki umar ke baad milne wali pension ek hi rehti hai — ₹3,000 per mahina. Yani entry age chahe kuch bhi ho, final payout same hai; sirf raasta pahunchne mein lagne wali rakam alag-alag hai. Isi wajah se experts hamesha kehte hain ki jitni kam age mein enroll karo, utna faayda milta hai.
+          </p>
         </section>
 
         <section className="mb-8">
-          <SH>Manual Calculation Kaise Karein? (Step-by-Step)</SH>
+          <SH>Khud Se Hisaab Lagana Ho To Ye Steps Try Karein</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Agar aapko table dekhne ke bajaye khud calculate karna hai, toh ye simple formula use karein:
+            Agar upar wali table se bhi kisi ko manual formula samajhna hai — ya scheme kaise structure ki gayi hai ye jaanna hai — to ek 35 saal ki age ka example lekar dekhte hain:
           </p>
           <StepList>
-            <SI n={1}>Apni current umar (age) note karein (Example: 28 saal).</SI>
-            <SI n={2}>60 mein se apni current umar ghata dein (60 - 28 = 32 saal).</SI>
-            <SI n={3}>Ab in 32 saalon ko mahino mein badlein (32 x 12 = 384 mahine).</SI>
-            <SI n={4}>28 saal ki umar ke liye monthly contribution (maan lijiye ₹90) ko 384 se guna (multiply) kar dein.</SI>
-            <SI n={5}>Result: ₹90 x 384 = ₹34,560. Ye aapka total contribution hoga 60 saal tak.</SI>
+            <SI n={1}>Current age note karein — is example mein 35 saal.</SI>
+            <SI n={2}>60 mein se current age ghatayein: 60 − 35 = 25 saal.</SI>
+            <SI n={3}>Saal ko mahino mein badlein: 25 × 12 = 300 mahine.</SI>
+            <SI n={4}>35 saal ke liye tay rate (₹140) ko 300 se multiply karein.</SI>
+            <SI n={5}>Result: ₹140 × 300 = ₹42,000 — 60 saal tak ka total apna hissa, aur sarkar isi ke barabar alag se jama karegi.</SI>
           </StepList>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
+            Isi se samajh aata hai ki 18 aur 40 saal ki entry mein itna farak kyun hai — jitna zyada waqt fund ko milta hai, per-mahina burden utna hi halka rehta hai. Note karne wali baat ye bhi hai ki rate table mein round figures mein nahi, balki actuarial calculation se decide ki gayi hai, isliye kisi age mein rate ka jump doosri age se thoda zyada ya kam lag sakta hai.
+          </p>
         </section>
 
         <section className="mb-8">
-          <SH>Common Confusions Aur Unke Solutions</SH>
-          <div className="space-y-3">
-            {[
-              { 
-                confusion: 'Mera contribution amount har saal badh jayega?', 
-                solution: 'Bilkul nahi. Ek baar jo amount aapki age ke hisaab se fix ho gaya, wo 60 saal tak same rahega.' 
-              },
-              { 
-                confusion: 'Agar main beech mein paisa dena band kar doon toh?', 
-                solution: "Aisa karne par aapka account 'inactive' ho jayega. Penalty ke saath purana paisa jama karke hi account dobara active hoga." 
-              },
-              { 
-                confusion: 'Kya mujhe ₹3,000 ke alawa koi bonus milega?', 
-                solution: 'Nahi, scheme ke tahat fixed ₹3,000 mahina hi milta hai. Lekin agar kisan ki mrityu ho jati hai, toh spouse ko pension ka 50% (₹1,500) family pension ke roop mein milta hai.' 
-              },
-            ].map(({ confusion, solution }, i) => (
-              <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
-                <p className="font-black text-sm text-amber-600 dark:text-amber-400 mb-2">❓ {confusion}</p>
-                <p className="text-xs text-green-700 dark:text-green-400"><strong>✅ Sachai:</strong> {solution}</p>
-              </div>
-            ))}
+          <SH>Kya Ye Yojana Sach Mein Fayde Ka Sauda Hai?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Har scheme ke apne plus-minus hote hain, aur Maandhan bhi isse alag nahi. Decision lene se pehle dono side dekh lena sahi rehta hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-2">
+            <strong className="text-[var(--color-text)]">Fayde ki taraf:</strong> sarkar barabar hissa daalti hai, rate ek baar fix hone ke baad kabhi nahi badhta, aur chhoti age mein shuru karne walon ke liye ye kisi bhi private pension plan se sasta pad jata hai. Ek aur badi baat — enrollment process kaafi simple hai aur isme koi medical test ya complicated paperwork nahi maanga jata.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            <strong className="text-[var(--color-text)]">Dhyan rakhne wali baatein:</strong> beech mein scheme chhodne par nuksan ho sakta hai (interest kam milta hai ya sirf mool wapas milta hai, exit age par depend karta hai), aur agar kisi mahine paisa na ho to penalty lagti hai. Pension amount bhi fix ₹3,000 hi rehta hai — bhavishya mein mehngai badhne par ye badhega ya nahi, iski koi guarantee official documents mein nahi di gayi. Isliye join karne se pehle apni monthly capacity ko lambe samay ke liye confirm kar lena zaroori hai.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Atal Pension Yojana Se Kitna Alag Hai?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Bahut se log Maandhan aur Atal Pension Yojana (APY) ko ek hi samajh lete hain, jabki dono alag target group ke liye bani hain. APY mein pension amount ₹1,000 se ₹5,000 tak choose kiya ja sakta hai, aur wo kisi bhi bank account holder ke liye khula hai — sirf kisano tak limited nahi. PM-KMY khaas taur par un chhote aur seemant kisano ke liye hai jinke paas 2 hectare tak zameen hai, aur ismein pension amount fix ₹3,000 hi rehta hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Jinke paas already koi formal pension ya EPFO/ESIC coverage nahi hai, unke liye PM-KMY zyada relevant hai kyunki iska poora structure hi khet-kisani wale households ko dhyan mein rakhkar banaya gaya hai. Agar aap kisan nahi hain aur flexible pension amount chahte hain, to APY zyada suitable option ho sakta hai — lekin ye do alag schemes hain aur dono ek saath nahi liye ja sakte.
+          </p>
+
+          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-[var(--color-primary)] text-white">
+                  <th className="p-3 text-left">Point</th>
+                  <th className="p-3 text-left">PM-KMY</th>
+                  <th className="p-3 text-left">APY</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['Kiske liye', 'Chhote/seemant kisan (2 hectare tak)', 'Koi bhi bank account holder'],
+                  ['Pension amount', 'Fix ₹3,000/mahina', 'Choose kiya ja sakta hai (₹1,000–₹5,000)'],
+                  ['Entry age', '18–40 saal', '18–40 saal'],
+                  ['Fund manage', 'LIC', 'PFRDA/NPS structure'],
+                ].map(([point, kmy, apy], i) => (
+                  <tr key={point} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-green-50/40 dark:bg-green-900/10'}>
+                    <td className="p-3 border-b border-[var(--color-border)] font-medium text-[var(--color-text)]">{point}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{kmy}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{apy}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Dono schemes ka common point ye hai ki dono hi contributory hain — yani aap khud paisa jama karte hain — lekin PM-KMY mein sarkar ka barabar hissa milta hai, jabki APY mein sarkar ka co-contribution sirf kuch specific purane accounts tak limited raha hai. Isliye jo kisan is category mein aate hain, unke liye PM-KMY zyada faydemand structure maana jata hai.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Subscriber Ki Death Ho Jaye To Pariwar Ka Kya Hoga?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Ye sawal bahut kam poocha jata hai, lekin planning karte waqt sabse zaroori hai. Agar 60 saal poore hone se pehle subscriber ki death ho jaye, to jeevansaathi ke paas do rasta hote hain — ya to wahi account continue karke apne contribution jaari rakhein aur baad mein pension paayein, ya jama hui poori rakam interest ke saath ek saath wapas le lein.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Agar pension shuru ho chuki hai (yani subscriber 60 paar kar chuke the) aur uske baad death hoti hai, to jeevansaathi ko fix pension ka 50% hissa family pension ke roop mein milta rehta hai, jab tak wo khud jeevit hain. Agar jeevansaathi bhi na ho, to poora jama corpus fund mein wapas chala jata hai.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Bank Account Ya Mobile Number Update Karna Ho To?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Kai kisan bank badal lete hain ya purana sim band ho jata hai, jiski wajah se auto-debit fail hone lagta hai. Aise mein registered details update karna zaroori ho jata hai. Iske liye do tarike available hain — nazdeeki Common Service Center (CSC) jaakar naye documents ke saath request de sakte hain, ya PM-KMY ke official portal mein login karke khud update kar sakte hain.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Ek baat yaad rakhein: bank account badalne ke baad purana auto-debit mandate automatically transfer nahi hota, isliye naye account ke liye dobara mandate set karwana padta hai — warna agla installment miss ho sakta hai.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Calculate Karte Waqt Ye Galtiyan Na Karein</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Registration se pehle apna hisaab lagate waqt kuch aam galtiyan bahut log kar dete hain, jo baad mein confusion create karti hain.
+          </p>
+          <StepList>
+            <SI n={1}>Birthday se pehle wali age use kar lena — enrollment ke waqt "nearest birthday age" ka niyam lagta hai, isliye exact last-birthday age hi table mein check karein.</SI>
+            <SI n={2}>Ye sochna ki total jama rakam hi pension ka corpus hai — asal corpus isse double hota hai kyunki sarkar ka hissa alag se judta hai.</SI>
+            <SI n={3}>Auto-debit set na karna aur har mahine manually yaad rakhne par depend karna — ek miss hone se dobara penalty ke saath bharna padta hai.</SI>
+            <SI n={4}>Landholding record update na rakhna — eligibility 2 hectare tak ki zameen se judi hai, isliye khatauni record current honi chahiye.</SI>
+          </StepList>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
+            Ye chaaron galtiyan chhoti lagti hain, lekin inme se koi bhi ek baad mein exit ke waqt ya pension shuru hone ke waqt paisa kam milne ya delay hone ki wajah ban sakti hai. Isliye enrollment se pehle in points ko ek baar khud check kar lena behtar rehta hai, bajaye baad mein CSC operator ke paas baar-baar chakkar lagane ke.
+          </p>
         </section>
 
         <section className="mb-8">
@@ -259,12 +361,12 @@ export default function PmKisanMaandhanPensionCalculator({ article }: { article:
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Seedhi Baat (Bottom Line)</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Aakhri Baat</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Bhai, hisaab bilkul clear hai: jitni jaldi aap is scheme se judenge, aapko utna hi kam monthly paisa dena hoga. 18 saal ki umar mein sirf ₹55 mahina ek bohot chhoti rakam hai, lekin 60 saal ki umar mein ye ₹3,000 mahina aapke liye ek badi rahath ban sakta hai.
+            Hisaab seedha hai: jitni jaldi judenge, utna kam bharna padega. 18 saal ki age mein ₹55 chhoti si rakam lagti hai, lekin yahi faisla 60 ki umar mein ₹3,000 ki pakki income mein badal jata hai. Sirf amount hi nahi, family ke liye continuation aur nominee wali suvidha bhi ise ek balanced choice banati hai.
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
-            Agar aapne abhi tak <Link href="/maandhan/pm-kisan-maandhan-registration-2026" className="underline text-blue-600 dark:text-blue-400 font-medium">registration</Link> nahi karwaya hai, toh aaj hi apne documents check karein aur apply karein.
+            Agar abhi tak <Link href="/maandhan/pm-kisan-maandhan-registration-2026" className="underline text-blue-600 dark:text-blue-400 font-medium">registration</Link> nahi karwaya, to documents ek baar check karke aaj hi apply kar dein.
           </p>
         </div>
 
@@ -280,8 +382,8 @@ export default function PmKisanMaandhanPensionCalculator({ article }: { article:
           <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Related Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {RELATED_CARDS.map((card) => (
-              <Link 
-                key={card.slug} 
+              <Link
+                key={card.slug}
                 href={`/maandhan/${card.slug}`}
                 className="group block p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:border-green-500 transition-all duration-300"
               >
