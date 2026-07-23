@@ -13,7 +13,6 @@ import ArticlesClient from './ArticlesClient';
 
 export const revalidate = 3600;
 
-// ✅ Combine both arrays safely
 const ALL_ARTICLES = [...ARTICLES, ...MAANDHAN_ARTICLES];
 
 export const metadata: Metadata = {
@@ -68,7 +67,6 @@ export const metadata: Metadata = {
 };
 
 export default function ArticlesPage() {
-  // ✅ Safely generate schema for both article types
   const schemaArticles = ALL_ARTICLES.map((article: any, i) => {
     const isMaandhan = article.category === 'pension-scheme' || article.slug.includes('maandhan');
     const articleUrl = isMaandhan 
