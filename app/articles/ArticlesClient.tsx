@@ -2,14 +2,15 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import Script from 'next/script';
 import { useState, useMemo, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import type { ArticleMeta, CategorySlug } from '@/lib/articles-data';
 import { CATEGORIES } from '@/lib/articles-data';
 
 const NEW_ARTICLES_LIMIT = 3;
+const SITE_URL = 'https://kisanstatus.com';
 
-// ✅ FIX: Added 'readonly' to string[] to match ArticleMeta's strict typing
 type CombinedArticleMeta = {
   slug: string;
   title: string;
@@ -419,8 +420,32 @@ function ArticlesLoading() {
 
 /* ─── Main Component ─── */
 export default function ArticlesClient({ articles }: { articles: readonly CombinedArticleMeta[] }) {
+  // ItemList structured data — tells Google this page is a collection of articles,
+  // improves eligibility for rich results (sitelinks, carousel) in search.
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'PM Kisan aur Krishi Yojanaon ki Verified Guides',
+    description: `${articles.length}+ free aur verified guides on PM Kisan status, loans, crop insurance, aur mandi bhav.`,
+    numberOfItems: articles.length,
+    itemListElement: articles.slice(0, 50).map((article, index) => {
+      const isMaandhan = article.category === 'pension-scheme' || article.slug.includes('maandhan');
+      const path = isMaandhan ? `/maandhan/${article.slug}` : `/articles/${article.slug}`;
+      return {
+        '@type': 'ListItem',
+        position: index + 1,
+        url: `${SITE_URL}${path}`,
+        name: article.title,
+      };
+    }),
+  };
+
   return (
     <main className="min-h-screen bg-[var(--color-bg)]">
+      <Script id="articles-itemlist-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(itemListSchema)}
+      </Script>
+
       <section className="py-10 md:py-14 bg-[var(--color-primary)]" aria-labelledby="hero-heading">
         <div className="container-site text-center px-4">
           <span className="inline-flex items-center gap-1.5 bg-white/10 border border-white/20 text-green-300 text-xs font-bold px-4 py-2 rounded-full mb-4 uppercase tracking-wider backdrop-blur-sm">
