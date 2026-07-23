@@ -68,7 +68,7 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
               "@type": "Article",
               "headline": "PM Kisan Maandhan Registration 2026: ₹3000 Pension Apply Process",
               "description": "PM Kisan Maandhan mein register kaise karein — CSC aur online dono tarike, zaroori documents, umar-wise monthly contribution aur ₹3000 pension ki poori jankari.",
-              "image": "https://kisanstatus.com/images/maandhan/registration-hero.webp",
+              "image": "https://kisanstatus.com/images/articles/maandhan/registration-hero.webp",
               "inLanguage": "hi-IN",
               "keywords": "PM Kisan Maandhan Registration, Kisan Pension Scheme, Maandhan Yojana, PM-KMY 2026, CSC Registration, Kisan Maandhan Documents, ₹3000 Pension, PM Kisan Maandhan 2026",
               "articleSection": "Agriculture & Pension Schemes",
@@ -127,7 +127,7 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
 
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src="/images/maandhan/registration-hero.webp"
+            src="/images/articles/maandhan/registration-hero.webp"
             alt="Farmer at CSC center filling pension registration form with operator assistance"
             width={1200}
             height={630}
@@ -221,7 +221,7 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
 
           <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
             <Image
-              src="/images/maandhan/required-documents.webp"
+              src="/images/articles/maandhan/required-documents.webp"
               alt="Aadhaar card, bank passbook, mobile phone and land records arranged for registration"
               width={800}
               height={450}
@@ -257,7 +257,7 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
 
           <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
             <Image
-              src="/images/maandhan/csc-registration-process.webp"
+              src="/images/articles/maandhan/csc-registration-process.webp"
               alt="Farmer submitting documents at CSC counter for pension scheme registration"
               width={800}
               height={450}
@@ -282,7 +282,7 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
 
           <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
             <Image
-              src="/images/maandhan/online-app-registration.webp"
+              src="/images/articles/maandhan/online-app-registration.webp"
               alt="Mobile app interface showing step-by-step online registration process"
               width={800}
               height={450}
@@ -330,7 +330,7 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
 
           <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
             <Image
-              src="/images/maandhan/contribution-table-infographic.webp"
+              src="/images/articles/maandhan/contribution-table-infographic.webp"
               alt="Visual chart showing monthly contribution amounts from age 18 to 40 years"
               width={800}
               height={400}
@@ -409,7 +409,7 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
           
           <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
             <Image
-              src="/images/maandhan/bank-passbook-seeding.webp"
+              src="/images/articles/maandhan/bank-passbook-seeding.webp"
               alt="Bank passbook showing NPCI seeding stamp for direct benefit transfer"
               width={800}
               height={450}
