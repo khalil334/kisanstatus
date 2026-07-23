@@ -1,4 +1,4 @@
- export const CATEGORIES = {
+export const CATEGORIES = {
   'status-check': {
     name: 'Verification & Status',
     nameHi: 'सत्यापन और स्थिति',
@@ -46,6 +46,8 @@ export interface ArticleMeta {
   publishedTime: string;
   modifiedTime: string;
   readingTime?: number;
+  author: string;
+  authorBio?: string;
   states?: readonly string[];
   districts?: readonly string[];
   banks?: readonly string[];
@@ -72,7 +74,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     component: 'KisanRinKahaSeLe2026',
     category: 'loan',
     publishedTime: '2026-01-10T08:00:00+05:30',
-    modifiedTime: '2026-01-10T08:00:00+05:30',  
+    modifiedTime: '2026-01-10T08:00:00+05:30',
     readingTime: 8,
     author: 'KisanStatus Editorial Team',
     authorBio: 'Agricultural content experts with 5+ years experience in government scheme research',
@@ -406,7 +408,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     component: 'PmKisanSelfRegisteredStatusCheck',
     category: 'status-check',
     publishedTime: '2026-01-15T08:00:00+05:30',
-    modifiedTime: '2026-07-07T08:00:00+05:30',  
+    modifiedTime: '2026-07-07T08:00:00+05:30',
     readingTime: 10,
     author: 'KisanStatus Editorial Team',
     authorBio: 'Agricultural content experts with 5+ years experience in government scheme research',
