@@ -46,8 +46,6 @@ export interface ArticleMeta {
   publishedTime: string;
   modifiedTime: string;
   readingTime?: number;
-  author: string;              // ✅ ADDED
-  authorBio?: string;          // ✅ ADDED
   states?: readonly string[];
   districts?: readonly string[];
   banks?: readonly string[];
@@ -74,7 +72,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     component: 'KisanRinKahaSeLe2026',
     category: 'loan',
     publishedTime: '2026-01-10T08:00:00+05:30',
-    modifiedTime: '2026-01-10T08:00:00+05:30',  // ✅ Same as publishedTime
+    modifiedTime: '2026-01-10T08:00:00+05:30',  
     readingTime: 8,
     author: 'KisanStatus Editorial Team',
     authorBio: 'Agricultural content experts with 5+ years experience in government scheme research',
@@ -408,7 +406,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     component: 'PmKisanSelfRegisteredStatusCheck',
     category: 'status-check',
     publishedTime: '2026-01-15T08:00:00+05:30',
-    modifiedTime: '2026-07-07T08:00:00+05:30',  // ✅ Actual edit date
+    modifiedTime: '2026-07-07T08:00:00+05:30',  
     readingTime: 10,
     author: 'KisanStatus Editorial Team',
     authorBio: 'Agricultural content experts with 5+ years experience in government scheme research',
@@ -847,7 +845,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     author: 'KisanStatus Editorial Team',
     authorBio: 'Agricultural content experts with 5+ years experience in government scheme research',
     schemes: ['pm-fme', 'pmegp'],
-    ogImage: '/images/kisanguides/pmfme-hero.webp',
+    ogImage: '/images/kisanguides/pmfhero.webp',
     relatedSlugs: ['PmKusumYojanaSolarSubsidy2026', 'KisanCreditCardOnlineApply2026', 'PmKisanMaandhanYojanaPension'],
   },
   {
