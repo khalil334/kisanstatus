@@ -7,6 +7,7 @@ export type MaandhanArticleMeta = {
   modified: string;
   readTime: string;
   image?: string;
+  ogImage?: string;
 };
 
 export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
@@ -19,6 +20,7 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
     modified: '2026-07-22T08:00:00+05:30',
     readTime: '12 min read',
     image: '/images/articles/maandhan/registration-hero.webp',
+    ogImage: '/images/articles/maandhan/registration-hero.webp',
   },
   {
     slug: 'pm-kisan-maandhan-eligibility-documents',
@@ -29,6 +31,7 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
     modified: '2026-07-22T08:00:00+05:30',
     readTime: '10 min read',
     image: '/images/articles/maandhan/eligibility-check-farmer-documents.webp',
+    ogImage: '/images/articles/maandhan/eligibility-check-farmer-documents.webp',
   },
   {
     slug: 'pm-kisan-maandhan-pension-calculator',
@@ -39,6 +42,7 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
     modified: '2026-07-22T08:00:00+05:30',
     readTime: '8 min read',
     image: '/images/articles/maandhan/pension-calculator-hero.webp',
+    ogImage: '/images/articles/maandhan/pension-calculator-hero.webp',
   },
   {
     slug: 'pm-kisan-maandhan-withdrawal-refund-rules',
