@@ -9,7 +9,7 @@ export const CATEGORIES = {
   },
   'loan': {
     name: 'Credit & Loans',
-    nameHi: 'ऋण और क्रेडिट',
+    nameHi: 'ण और क्रेडिट',
     description: 'KCC loan, farm equipment loan, and bank credit guides',
     descriptionHi: 'केसीसी लोन, कृषि उपकरण ऋण, और बैंक क्रेडिट गाइड',
     icon: '💰',
@@ -46,8 +46,8 @@ export interface ArticleMeta {
   publishedTime: string;
   modifiedTime: string;
   readingTime?: number;
-  author: string;              // ✅ ADDED
-  authorBio?: string;          // ✅ ADDED
+  author: string;
+  authorBio?: string;
   states?: readonly string[];
   districts?: readonly string[];
   banks?: readonly string[];
@@ -74,7 +74,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     component: 'KisanRinKahaSeLe2026',
     category: 'loan',
     publishedTime: '2026-01-10T08:00:00+05:30',
-    modifiedTime: '2026-01-10T08:00:00+05:30',  // ✅ Same as publishedTime
+    modifiedTime: '2026-01-10T08:00:00+05:30',
     readingTime: 8,
     author: 'KisanStatus Editorial Team',
     authorBio: 'Agricultural content experts with 5+ years experience in government scheme research',
@@ -408,7 +408,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     component: 'PmKisanSelfRegisteredStatusCheck',
     category: 'status-check',
     publishedTime: '2026-01-15T08:00:00+05:30',
-    modifiedTime: '2026-07-07T08:00:00+05:30',  // ✅ Actual edit date
+    modifiedTime: '2026-07-07T08:00:00+05:30',
     readingTime: 10,
     author: 'KisanStatus Editorial Team',
     authorBio: 'Agricultural content experts with 5+ years experience in government scheme research',
@@ -727,7 +727,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     author: 'KisanStatus Editorial Team',
     authorBio: 'Agricultural content experts with 5+ years experience in government scheme research',
     schemes: ['nlm', 'pm-kisan'],
-    ogImage: '/images/kisanguides/bakri-palan-nlm-subsidy.webp',
+    ogImage: '/images/articles/kisanguides/bakri-palan-nlm-subsidy.webp',
     relatedSlugs: ['PmKusumYojanaSolarSubsidy2026', 'KisanCreditCardOnlineApply2026', 'PmKisanMaandhanYojanaPension', 'PmfbyCropInsurance2026'],
   },
   {
@@ -751,7 +751,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     author: 'KisanStatus Editorial Team',
     authorBio: 'Agricultural content experts with 5+ years experience in government scheme research',
     schemes: ['nhb', 'pm-fme'],
-    ogImage: '/images/kisanguides/harvesting-mushroom.webp',
+    ogImage: '/images/articles/kisanguides/harvesting-mushroom.webp',
     relatedSlugs: ['PmKusumYojanaSolarSubsidy2026', 'KisanCreditCardOnlineApply2026', 'PmKisanMaandhanYojanaPension'],
   },
   {
@@ -775,7 +775,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     author: 'KisanStatus Editorial Team',
     authorBio: 'Agricultural content experts with 5+ years experience in government scheme research',
     schemes: ['kvic', 'nhb', 'pm-fme'],
-    ogImage: '/images/kisanguides/madhumakhi-palan-hero.webp',
+    ogImage: '/images/articles/kisanguides/madhumakhi-palan-hero.webp',
     relatedSlugs: ['PmKusumYojanaSolarSubsidy2026', 'KisanCreditCardOnlineApply2026', 'PmKisanMaandhanYojanaPension'],
   },
   {
@@ -799,7 +799,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     author: 'KisanStatus Editorial Team',
     authorBio: 'Agricultural content experts with 5+ years experience in government scheme research',
     schemes: ['pmmsy', 'pm-kisan'],
-    ogImage: '/images/kisanguides/fish-farming-hero.webp',
+    ogImage: '/images/articles/kisanguides/fish-farming-hero.webp',
     relatedSlugs: ['PmKusumYojanaSolarSubsidy2026', 'KisanCreditCardOnlineApply2026', 'PmKisanMaandhanYojanaPension'],
   },
   {
@@ -823,7 +823,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     author: 'KisanStatus Editorial Team',
     authorBio: 'Agricultural content experts with 5+ years experience in government scheme research',
     schemes: ['smam', 'aif', 'pm-fme'],
-    ogImage: '/images/kisanguides/silage-hero.webp',
+    ogImage: '/images/articles/kisanguides/silage-hero.webp',
     relatedSlugs: ['PmKusumYojanaSolarSubsidy2026', 'KisanCreditCardOnlineApply2026', 'PmKisanMaandhanYojanaPension'],
   },
   {
@@ -847,7 +847,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     author: 'KisanStatus Editorial Team',
     authorBio: 'Agricultural content experts with 5+ years experience in government scheme research',
     schemes: ['pm-fme', 'pmegp'],
-    ogImage: '/images/kisanguides/pmfme-hero.webp',
+    ogImage: '/images/articles/kisanguides/pmfme-hero.webp',
     relatedSlugs: ['PmKusumYojanaSolarSubsidy2026', 'KisanCreditCardOnlineApply2026', 'PmKisanMaandhanYojanaPension'],
   },
   {
@@ -871,7 +871,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     author: 'KisanStatus Editorial Team',
     authorBio: 'Agricultural content experts with 5+ years experience in government scheme research',
     schemes: ['smam', 'pm-kisan'],
-    ogImage: '/images/kisanguides/chc-portal-hero.webp',
+    ogImage: '/images/articles/kisanguides/chc-portal-hero.webp',
     relatedSlugs: ['PmKusumYojanaSolarSubsidy2026', 'KisanTractorLoan2026', 'KisanCreditCardOnlineApply2026'],
   },
   {
@@ -895,7 +895,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     author: 'KisanStatus Editorial Team',
     authorBio: 'Agricultural content experts with 5+ years experience in government scheme research',
     schemes: ['pkvy', 'pm-fme'],
-    ogImage: '/images/kisanguides/vermi-compost-hero.webp',
+    ogImage: '/images/articles/kisanguides/vermi-compost-hero.webp',
     relatedSlugs: ['PmKusumYojanaSolarSubsidy2026', 'KisanCreditCardOnlineApply2026', 'soil-health-card-complete-guide-2026'],
   },
   {
@@ -919,7 +919,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     author: 'KisanStatus Editorial Team',
     authorBio: 'Agricultural content experts with 5+ years experience in government scheme research',
     schemes: ['pmksy', 'pm-kusum'],
-    ogImage: '/images/kisanguides/drip-sprinkler-hero.webp',
+    ogImage: '/images/articles/kisanguides/drip-sprinkler-hero.webp',
     relatedSlugs: ['PmKusumYojanaSolarSubsidy2026', 'KisanCreditCardOnlineApply2026', 'soil-health-card-complete-guide-2026'],
   },
 ] as const;
