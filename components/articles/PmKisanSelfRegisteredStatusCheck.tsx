@@ -8,6 +8,8 @@ import type { ArticleMeta } from '@/lib/articles-data';
 const PUBLISHED = '2026-03-20T08:00:00+05:30';
 const MODIFIED = '2026-07-06T08:00:00+05:30';
 
+const IMG_BASE = '/images/articles/pm-kisan-self-registered-status-check';
+
 const RELATED = [
   { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '📅' },
   { slug: 'PmKisanMasterGuide2026', title: 'Complete Guide', emoji: '📚' },
@@ -24,7 +26,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Self-registration mein kitna time lagta hai approval mein?',
-    a: 'Normally 7-15 din lagte hain verification mein. Lekin kabhi-kabhi 30-45 din bhi ho jaate hain agar land records match nahi hote ya eKYC pending hai. Status check karte raho — "Pending" dikh raha hai toh wait karo, "Rejected" dikhe toh reason dekho aur fix karo.',
+    a: 'Normally ek-do hafte lagte hain verification mein. Lekin kabhi-kabhi 30-45 din bhi ho jaate hain agar land records match nahi hote ya eKYC pending hai. Status check karte raho — "Pending" dikh raha hai toh wait karo, "Rejected" dikhe toh reason dekho aur fix karo.',
   },
   {
     q: 'Khud registration kiya lekin abhi tak koi payment nahi aayi — kyun?',
@@ -48,9 +50,52 @@ const FAQS_DATA = [
   },
 ];
 
-export default function PmKisanSelfRegisteredStatusCheck({ article }: { article: ArticleMeta }) {
+const HOWTO_STEPS = [
+  { name: 'pmkisan.gov.in kholo', text: 'Mobile ya computer, jo bhi ho — official portal pmkisan.gov.in kholo.' },
+  { name: 'Farmers Corner dhundo', text: 'Homepage par upar "Farmers Corner" section dhundo.' },
+  { name: 'Beneficiary Status par click karo', text: '"Beneficiary Status" option select karo.' },
+  { name: 'Aadhaar option select karo', text: 'Do options milenge — Aadhaar ya Mobile number. Aadhaar select karo, zyada reliable hai.' },
+  { name: 'Aadhaar number type karo', text: '12-digit Aadhaar number bina space ya dash ke type karo.' },
+  { name: 'Captcha bharo aur Get Data dabao', text: 'Screen par diya captcha bharo aur "Get Data" button dabao.' },
+  { name: 'Status dekho', text: 'Registered ho toh naam, gaon, mobile/bank ke last digits, registration date aur status (Active/Pending/Rejected) dikh jayega.' },
+];
+
+const FAQ_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQS_DATA.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: f.a,
+    },
+  })),
+};
+
+const HOWTO_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'PM Kisan Self Registration Status Check Kaise Karein',
+  description: 'pmkisan.gov.in par Aadhaar number se PM Kisan beneficiary status check karne ka step-by-step tarika.',
+  step: HOWTO_STEPS.map((s) => ({
+    '@type': 'HowToStep',
+    name: s.name,
+    text: s.text,
+  })),
+};
+
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(HOWTO_SCHEMA) }}
+      />
       {/* Header */}
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
@@ -79,7 +124,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
         {/* IMAGE 1: Hero */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src={article.ogImage || '/images/articles/pm-kisan-self-registered-status-check.webp'}
+            src={article.ogImage || `${IMG_BASE}/hero.webp`}
             alt="PM Kisan self registration status check — online application tracking guide 2026"
             width={1200}
             height={630}
@@ -108,21 +153,37 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
         <section className="mb-8">
           <SH>Self Registration Kya Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Jab aap khud pmkisan.gov.in par jaake form bharte hain — bina CSC operator ki help ke — usse self-registration kehte hain.
+            Jab aap khud pmkisan.gov.in par jaake form bharte hain — bina CSC operator ki help ke — usse self-registration kehte hain. Yeh option 2019 mein add hua tha jab portal ko farmer-friendly banaya gaya, lekin abhi bhi zyadatar log iske baare mein nahi jaante — isliye CSC pe line lagi rehti hai jabki ghar baithe kaam ho sakta hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Pehle sirf CSC se hota tha. Ab government ne online option de diya hai. Ghar baithe kar sakte ho — mobile ya computer se.
+            Registration khud karne ke baad sabse zyada confusion status check karne mein hoti hai — log sochte hain "maine khud kiya, shayad koi alag reference number ya login chahiye." Aisa kuch nahi hai. System mein CSC registration aur self registration mein koi field-level farak nahi hota — dono Aadhaar-linked entries hain.
           </p>
           <IB>
-            <strong>Fayda:</strong> ₹20-50 bach jaate hain jo CSC wala charge leta hai. <strong>Nuksan:</strong> Agar koi galti ho gayi toh khud correct karna padega — koi help nahi karega.
+            <strong>Fayda:</strong> ₹20-50 bach jaate hain jo CSC wala charge leta hai. <strong>Nuksan:</strong> Agar koi galti ho gayi toh khud correct karna padega — koi help nahi karega. Ek common mistake: naam Aadhaar se hooba-hoo match nahi karna (middle name chhod dena, spelling farak) — isse verification atak jaata hai.
           </IB>
         </section>
+
+        {/* IMAGE 2: Self-registration form screenshot */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src={`${IMG_BASE}/self-registration-form.webp`}
+            alt="PM Kisan self registration online form on pmkisan.gov.in — Farmers Corner new farmer registration"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            New Farmer Registration Form — Farmers Corner Section
+          </p>
+        </div>
 
         {/* Section 2: How to Check Status */}
         <section className="mb-8">
           <SH>Status Check Kaise Karein — Step by Step</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Chahe CSC se karwaya ho, chahe khud kiya ho — status check karne ka tarika same hai.
+            Yeh process bas 2 minute ka hai — login ya password kuch nahi chahiye, sirf Aadhaar number.
           </p>
 
           <StepList>
@@ -131,7 +192,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
             <SI n={3}>"Beneficiary Status" par click karo</SI>
             <SI n={4}>Do options milenge — Aadhaar ya Mobile number. Aadhaar select karo (zyada reliable hai)</SI>
             <SI n={5}>12-digit Aadhaar number type karo — bina space ya dash ke</SI>
-            <SI n={6}>"Get Data" button dabao</SI>
+            <SI n={6}>Captcha bharo aur "Get Data" button dabao</SI>
             <SI n={7}>Agar aap registered ho toh puri details dikh jayengi:</SI>
           </StepList>
 
@@ -149,14 +210,14 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
           </div>
 
           <WB>
-            <strong>Tip:</strong> "Not Found" dikh raha hai? Do baar check karo — Aadhaar sahi type kiya? Agar phir bhi nahi mil raha toh registration hi nahi hua hoga. Dobara apply karo.
+            <strong>Tip:</strong> "Not Found" dikh raha hai? Do baar check karo — Aadhaar sahi type kiya? Agar phir bhi nahi mil raha toh registration hi nahi hua hoga — kabhi-kabhi form submit hote waqt session timeout ho jaata hai aur data save nahi hota, lekin farmer ko lagta hai ho gaya. Dobara apply karo.
           </WB>
         </section>
 
-        {/* IMAGE 2: Status Check Screenshot */}
+        {/* IMAGE 3: Status Check Screenshot */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src="/images/articles/pm-kisan-beneficiary-status-screenshot.webp"
+            src={`${IMG_BASE}/beneficiary-status-result.webp`}
             alt="PM Kisan beneficiary status check result screen — showing active status with payment details"
             width={1200}
             height={630}
@@ -187,7 +248,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
             <div className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 p-4 rounded-r-xl">
               <h3 className="font-black text-amber-800 dark:text-amber-300 text-sm mb-2">⏳ Pending / Under Verification</h3>
               <p className="text-xs text-[var(--color-text-muted)] leading-relaxed mb-2">
-                Matlab application submit ho gayi hai lekin abhi verify nahi hui. Yeh normal hai — 7-15 din lagte hain normally.
+                Matlab application submit ho gayi hai lekin abhi verify nahi hui. Yeh normal hai — usually ek se do hafte ke andar clear ho jaata hai, kyunki verification State Nodal Officer ke through manually hota hai, automated nahi.
               </p>
               <p className="text-xs text-[var(--color-text-muted)]">
                 <strong>Kya karein:</strong> Wait karo. 15 din se zyada ho raha hai toh CSC jaao ya helpline 155261 par call karo.
@@ -243,9 +304,25 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
           </div>
 
           <IB>
-            <strong>Bottom Line:</strong> Status check karne mein koi farak nahi padta. Dono ka same portal par same tarika se check hota hai. Sirf registration process alag hai.
+            <strong>Bottom Line:</strong> Registration process mein farak hai, lekin ek baar registered ho jaane ke baad system dono ko ek jaisa treat karta hai — koi alag category ya priority nahi hoti.
           </IB>
         </section>
+
+        {/* IMAGE 4: Common problems / correction flow */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src={`${IMG_BASE}/edit-aadhaar-details.webp`}
+            alt="PM Kisan Edit Aadhaar Details option — correcting name, mobile number, and bank details after self registration"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            Edit Aadhaar Details — Correction Option for Self-Registered Farmers
+          </p>
+        </div>
 
         {/* Section 5: Common Problems */}
         <section className="mb-8">
@@ -254,23 +331,23 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
             {[
               {
                 problem: 'Status check karne par "Not Found" dikh raha hai',
-                solution: 'Aadhaar number dobara check karo. Agar sahi hai toh matlab registration hi nahi hua. Dobara apply karo pmkisan.gov.in par.',
+                solution: 'Aadhaar number dobara check karo. Agar sahi hai toh matlab registration hi nahi hua — form submit hote waqt error aaya hoga jo notice nahi hua. Aisa bhi ho sakta hai ki internet slow ho aur confirmation page load hone se pehle hi tab band ho jaaye — lagta hai registration ho gaya, lekin backend mein kuch save hi nahi hota. Dobara apply karo pmkisan.gov.in par, aur is baar confirmation message ka screenshot le lo.',
               },
               {
                 problem: 'Naam galat dikh raha hai',
-                solution: 'Registration mein typing mistake ho gayi hogi. "Edit Aadhaar Details" mein jaake correct karo. Aadhaar card se exact match hona chahiye.',
+                solution: 'Registration mein typing mistake ho gayi hogi. "Edit Aadhaar Details" mein jaake correct karo. Aadhaar card se exact match hona chahiye — spelling, spacing, initials sab.',
               },
               {
                 problem: 'Mobile number galat hai',
-                solution: 'Edit option se change kar sakte ho. Purane number par OTP aayega. Agar purana number band hai toh CSC jaana padega.',
+                solution: 'Edit option se change kar sakte ho. Purane number par OTP aayega. Agar purana number band hai toh CSC jaana padega — wahan operator biometric se verify karke update kar dega.',
               },
               {
                 problem: 'Bank account number wrong hai',
-                solution: 'Yeh serious hai — payment galat account mein jaayegi. Turant correct karo. Branch se IFSC code bhi verify karo.',
+                solution: 'Yeh serious hai — payment galat account mein jaayegi. Turant correct karo. Branch se IFSC code bhi verify karo — ek digit galat hone se bhi transfer fail ho jaata hai.',
               },
               {
                 problem: 'Pending dikh raha hai 30 din se zyada',
-                solution: 'Helpline 155261 par call karo. Ya nearest Block Agriculture Office jaao. Woh log manually check karke bata denge ki kahan atka hai.',
+                solution: 'Helpline 155261 par call karo. Ya nearest Block Agriculture Office jaao. Woh log manually check karke bata denge ki kahan atka hai — zyadatar cases mein land seeding ya eKYC hi wajah hoti hai. Maan lijiye khasra number revenue records mein purane naam se register hai (jaise dada ke naam par), jabki PM Kisan form mein current owner ka naam diya gaya hai — aisi mismatch verification ko lambe samay tak atka sakti hai. Aise case mein tehsil/revenue office se naam-transfer (dakhil-kharij) record dikhana padta hai, tabhi status aage badhta hai.',
               },
             ].map(({ problem, solution }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
@@ -337,6 +414,39 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
             </div>
           </div>
         </section>
+
+        {/* Official Source References */}
+        <section className="mb-8">
+          <div className="p-4 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-xl">
+            <p className="text-xs font-bold text-[var(--color-text)] mb-2">📌 Official Source</p>
+            <ul className="text-xs text-[var(--color-text-muted)] space-y-1 list-disc list-inside">
+              <li>
+                Status check ka process — Farmers Corner &gt; Know Your Status, official portal:{' '}
+                <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer" className="underline text-[var(--color-primary)]">pmkisan.gov.in</a>
+              </li>
+              <li>
+                Self-registered farmers ke liye updation/verification page, official portal:{' '}
+                <a href="https://pmkisan.gov.in/SearchSelfRegisterfarmerDetailsnewUpdated.aspx" target="_blank" rel="noopener noreferrer" className="underline text-[var(--color-primary)]">pmkisan.gov.in — Self Registered Farmers Updation</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        {/* IMAGE 5: Helpline / support visual */}
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src={`${IMG_BASE}/helpline-support.webp`}
+            alt="PM Kisan helpline 155261 and grievance support options for self-registered farmers facing status issues"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            Where to Get Help — Helpline, Block Office, CSC, Email
+          </p>
+        </div>
 
         {/* FAQ */}
         <section className="mb-8">
