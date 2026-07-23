@@ -6,7 +6,7 @@ import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, Bott
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const PUBLISHED = '2026-03-20T08:00:00+05:30';
-const MODIFIED = '2026-07-06T08:00:00+05:30';
+const MODIFIED = '2026-07-024T08:00:00+05:30';
 
 const IMG_BASE = '/images/articles/pm-kisan-self-registered-status-check';
 
