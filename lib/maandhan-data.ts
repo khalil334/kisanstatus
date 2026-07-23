@@ -52,5 +52,7 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
     published: '2026-07-21T08:00:00+05:30',
     modified: '2026-07-22T08:00:00+05:30',
     readTime: '9 min read',
+    image: '/images/articles/maandhan/withdrawal-decision-hero.webp',
+    ogImage: '/images/articles/maandhan/withdrawal-decision-hero.webp',
   },
 ];
