@@ -9,7 +9,7 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'Article',
-      '@id': 'https://kisanstatus.com/articles/pm-kisan-maandhan-auto-debit-poora-sach/#article',
+      '@id': 'https://kisanstatus.com/articles/maandhan/pm-kisan-maandhan-auto-debit-poora-sach/#article',
       headline: 'PM Kisan Se Maandhan Ka Paisa Kyun Kat Raha Hai? Auto Debit Ka Poora Sach',
       description: 'PM Kisan ke ₹2000 mein se ₹55-200 kyun kat rahe hain? NACH auto-debit mandate, CSC pe sign kiya gaya form, aur contribution pay karne ka asli process samjhiye.',
       author: { '@type': 'Organization', name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' },
