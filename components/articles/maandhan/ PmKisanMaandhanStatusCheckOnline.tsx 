@@ -58,7 +58,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       </h1>
 
       <p className="text-sm text-gray-500 mb-6 not-prose">
-        <em>Written by KisanStatus Research Team | Last verified: July 24, 2026 | Sources: maandhan.in, PM-KMY Operational Guidelines (DAC&FW), LIC Official Communication</em>
+        <em>Written by KisanStatus Research Team | Last verified: July 24, 2026 | Sources: maandhan.in, PM-KMY Operational Guidelines (DAC&FW, Ministry of Agriculture &amp; Farmers Welfare)</em>
       </p>
 
       <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
@@ -68,7 +68,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-        PM Kisan Maandhan Yojana mein enroll karne ke baad sabse zaroori kaam hai apna progress track karna. Kai kisanon ko yeh pata hi nahi hota ke unka account active hai ya nahi, contribution time par jaa raha hai ya miss ho raha hai, aur unka KPAN card kahan se download hoga. Official portal pmkmy.gov.in (jo ab maandhan.in pe redirect hota hai) pe yeh sab information available hai, lekin interface thoda technical hai. Isliye kai farmers CSC center wale par depend reh jate hain, jabki ghar baithe 5 minute mein hi sab kuch verify ho sakta hai.
+        PM Kisan Maandhan Yojana mein enroll karne ke baad sabse zaroori kaam hai apna progress track karna. Kai kisanon ko yeh pata hi nahi hota ke unka account active hai ya nahi, contribution time par jaa raha hai ya miss ho raha hai, aur unka KPAN card kahan se download hoga. Official portal pmkmy.gov.in aur maandhan.in pe yeh sab information available hai, lekin interface thoda technical hai. Isliye kai farmers CSC center wale par depend reh jate hain, jabki ghar baithe 5 minute mein hi sab kuch verify ho sakta hai.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
@@ -106,7 +106,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-        Agar aapko apna KPAN no. yaad nahi hai, toh ghabraiye mat. Mobile no. se hi aapka poora record aa jata hai. KPAN basically aapka pension account number hai — jaise bank mein account number hota hai. Yeh enrollment complete hone ke 24-48 ghante mein generate hota hai aur aapko SMS ke zariye bata diya jata hai.
+        Agar aapko apna KPAN no. yaad nahi hai, toh ghabraiye mat. Mobile no. se hi aapka poora record aa jata hai. KPAN basically aapka pension account number hai — jaise bank mein account number hota hai. Enrollment complete hone ke baad yeh generate hota hai aur registered mobile number par SMS ke zariye bata diya jata hai.
       </p>
 
       <Image
@@ -145,14 +145,14 @@ export default function PmKisanMaandhanStatusCheckOnline() {
           <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
           <div>
             <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">Mobile Number Ya KPAN Dalein</h4>
-            <p className="text-sm text-gray-700 dark:text-gray-300">Ab aapke saamne ek form aayega. Usme apna registered registered mobile ya KPAN no. daalein. Mobile number zyada aasan rehta hai kyunki KPAN yaad rakhna mushkil hai. Number daalne ke baad Get OTP pe click karein.</p>
+            <p className="text-sm text-gray-700 dark:text-gray-300">Ab aapke saamne ek form aayega. Usme apna registered mobile ya KPAN no. daalein. Mobile number zyada aasan rehta hai kyunki KPAN yaad rakhna mushkil hai. Number daalne ke baad Get OTP pe click karein.</p>
           </div>
         </div>
         <div className="flex gap-4">
           <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">4</div>
           <div>
             <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">OTP Se Verify Karein</h4>
-            <p className="text-sm text-gray-700 dark:text-gray-300">Aapke mobile pe ek 6-digit OTP aayega. Us OTP ko box mein daal kar Verify karein. OTP 2-3 minute mein expire ho jata hai, jaldi daaliye. Agar OTP nahi aata, toh Resend OTP pe click karein. Network issue ho sakta hai — thoda wait karein.</p>
+            <p className="text-sm text-gray-700 dark:text-gray-300">Aapke mobile pe ek 6-digit OTP aayega. Us OTP ko box mein daal kar Verify karein. OTP kuch minuton mein expire ho jata hai, jaldi daaliye. Agar OTP nahi aata, toh Resend OTP pe click karein. Network issue ho sakta hai — thoda wait karein.</p>
           </div>
         </div>
         <div className="flex gap-4">
@@ -221,7 +221,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Agar aapka account status Inactive dikhta hai, toh iska matlab ho sakta hai ke aapka initial verification abhi pending hai. Enrollment ke baad CSC se data LIC ko T+1 basis pe transfer hota hai. Verification mein 7-15 din lag sakte hain. Agar isse zyada ho gaya hai, toh apne CSC center wale se contact karein ya <Link href="/articles/PmKisanStateNodalOfficerList" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">state nodal officer</Link> se baat karein.
+        Agar aapka account status Inactive dikhta hai, toh iska matlab ho sakta hai ke aapka initial verification abhi pending hai. Enrollment ke baad CSC se data LIC ko T+1 basis pe transfer hota hai, uske baad verification process hota hai jismein kuch din lag sakte hain. Agar time zyada ho gaya hai, toh apne CSC center wale se contact karein ya <Link href="/articles/PmKisanStateNodalOfficerList" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">state nodal officer</Link> se baat karein.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
@@ -293,7 +293,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
             <tr className="border-b border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
               <td className="py-3 px-4 font-semibold text-yellow-600">Pending</td>
               <td className="py-3 px-4">Process mein hai, abhi confirm nahi hua</td>
-              <td className="py-3 px-4">24-48 ghante wait karein, phir dekh karein</td>
+              <td className="py-3 px-4">Kuch din wait karein, phir dekh karein</td>
             </tr>
             <tr className="border-b border-gray-100 dark:border-gray-700">
               <td className="py-3 px-4 font-semibold text-red-600">Failed / Bounced</td>
@@ -314,11 +314,11 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Ek baar fail hone se account default nahi hota. LIC demand ko agle payment cycle mein dobara raise karti hai. Payment cycles har mahine 1st, 11th, aur 21st ko hote hain. Lekin lagatar 3 mahine fail ho jaye toh account default status mein chala jata hai.
+        Ek baar fail hone se account default nahi hota. LIC demand ko agle payment cycle mein dobara raise karti hai. Payment cycles har mahine 1st, 11th, aur 21st ko hote hain. Lekin agar payment miss hone ke baad bhi contribution successfully raise nahi hoti aur outstanding rehti hai, toh account default status mein chala jata hai.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Kabhi-kabhi portal slow hota hai aur contribution history update hone mein time lagta hai. Agar aapne payment diya hai aur 3-4 din baad bhi Success nahi dikhta, toh tension mat lo. Hafte bhar wait karein. Uske baad bhi nahi dikhta toh CSC center mein complaint karein ya toll-free helpline 1800-3000-3468 pe call karein.
+        Kabhi-kabhi portal slow hota hai aur contribution history update hone mein time lagta hai. Agar aapne payment diya hai aur kuch din baad bhi Success nahi dikhta, toh tension mat lo. Hafte bhar wait karein. Uske baad bhi nahi dikhta toh CSC center mein complaint karein ya official portal (maandhan.in / pmkmy.gov.in) par diya gaya helpline number use karein.
       </p>
 
       <Image
@@ -341,7 +341,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       <div className="space-y-4 mb-8 not-prose">
         <div className="bg-white dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">OTP nahi aa raha hai</h3>
-          <p className="text-sm text-gray-700 dark:text-gray-300">Pehle check karein ke wohi registered mobile daala hai jo enrollment ke waqt diya tha. Agar number change ho gaya hai, toh purane no. se hi OTP ayega. Network issue ho sakta hai — 2-3 minute wait karein. Resend OTP pe click karein. Agar phir bhi nahi aata, toh thodi der baad try karein. Server busy hota hai peak hours mein (subah 9-11 baje, shaam 5-7 baje).</p>
+          <p className="text-sm text-gray-700 dark:text-gray-300">Pehle check karein ke wohi registered mobile daala hai jo enrollment ke waqt diya tha. Agar number change ho gaya hai, toh purane no. se hi OTP ayega. Network issue ho sakta hai — 2-3 minute wait karein. Resend OTP pe click karein. Agar phir bhi nahi aata, toh thodi der baad try karein. Peak hours mein server thoda busy ho sakta hai.</p>
         </div>
         <div className="bg-white dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Login ho gaya par dashboard blank hai</h3>
@@ -349,11 +349,11 @@ export default function PmKisanMaandhanStatusCheckOnline() {
         </div>
         <div className="bg-white dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Website hi nahi khul rahi — error aa raha hai</h3>
-          <p className="text-sm text-gray-700 dark:text-gray-300">Government portals kabhi-kabhi maintenance mein hote hain. Subah 9-11 baje aur shaam 5-7 baje peak traffic hota hai. Raat 10 baje ke baad ya subah 6-8 baje try karein. Agar 2-3 din se nahi khul rahi, toh ho sakta hai server down ho. Tab CSC center jana hi best option hai.</p>
+          <p className="text-sm text-gray-700 dark:text-gray-300">Government portals kabhi-kabhi maintenance mein hote hain. Din ke peak hours mein traffic zyada hota hai, isliye raat ya subah try karna behtar rehta hai. Agar 2-3 din se nahi khul rahi, toh ho sakta hai server down ho. Tab CSC center jana hi best option hai.</p>
         </div>
         <div className="bg-white dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Mera naam hi nahi aa raha status mein</h3>
-          <p className="text-sm text-gray-700 dark:text-gray-300">Ho sakta hai aapka registration abhi process mein ho. CSC wale ne form toh bhar diya, par government ke server pe abhi upload nahi hua. 7-15 din wait karein. Agar uske baad bhi nahi aata, toh CSC wale se poochhiye ke unhone aapka form successfully submit kiya tha ya nahi. Kabhi-kabhi form reject ho jata hai document issues ya bank account mismatch ki wajah se.</p>
+          <p className="text-sm text-gray-700 dark:text-gray-300">Ho sakta hai aapka registration abhi process mein ho. CSC wale ne form toh bhar diya, par government ke server pe abhi upload nahi hua. Kuch din wait karein. Agar uske baad bhi nahi aata, toh CSC wale se poochhiye ke unhone aapka form successfully submit kiya tha ya nahi. Kabhi-kabhi form reject ho jata hai document issues ya bank account mismatch ki wajah se.</p>
         </div>
       </div>
 
@@ -374,7 +374,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-        CSC center jaane ka ek aur faida — agar aapka KPAN card download nahi ho raha tha, toh CSC wala aapko print kar ke de dega. Kuch CSC centers mein 5-10 rupees charge lagte hain print ke, lekin yeh convenience ke liye theek hai. Saath hi agar aapko koi correction karni hai — jaise mobile number change, bank account update, ya nominee change — toh woh bhi CSC pe hi hoti hai.
+        CSC center jaane ka ek aur faida — agar aapka KPAN card download nahi ho raha tha, toh CSC wala aapko print kar ke de dega. Kuch CSC centers mein print ke charges alag se lagte hain, poochh lein. Saath hi agar aapko koi correction karni hai — jaise mobile number change, bank account update, ya nominee change — toh woh bhi CSC pe hi hoti hai.
       </p>
 
       <div className="bg-blue-50 dark:bg-blue-900/20 p-5 rounded-lg mb-8 border border-blue-200 dark:border-blue-800 not-prose">
@@ -392,11 +392,11 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Kai baar kisan sochte hain ke Registration ho gaya, ab toh bas 60 saal ka intezaar hai. Nahi, aise nahi chalta. Agar aapka share 3 mahine miss ho gaya, toh account default ho jayega. Aur default hone ke baad account dubara activate nahi hota automatically.
+        Kai baar kisan sochte hain ke Registration ho gaya, ab toh bas 60 saal ka intezaar hai. Nahi, aise nahi chalta. Agar aapka share lagatar miss hota rahe, toh account default ho jayega. Aur default hone ke baad account dubara activate nahi hota automatically — aapko khud regularize karwana padta hai.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Official guidelines ke hisaab se, agar 6 mahine tak payment nahi hoti, toh account dormant ho jata hai. Uske baad bhi 3 saal tak aap account regularize kar sakte hain — poora outstanding amount + interest jama karke. Lekin 3 saal ke baad bhi regularize karne ka option rehta hai, bas SMS alerts band ho jate hain.
+        Official guidelines ke hisaab se, agar 6 mahine tak payment nahi hoti, toh account dormant ho jata hai. Uske baad bhi 3 saal tak SMS alerts aate rehte hain aur aap account regularize kar sakte hain — poora outstanding amount + interest jama karke. 3 saal ke baad SMS alerts band ho jate hain, lekin regularize karne ka option tab bhi rehta hai.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
@@ -459,7 +459,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
         <p className="text-sm text-gray-700 dark:text-gray-300">
           <strong className="text-orange-600 dark:text-orange-400 block mb-2">Sources & Disclaimer:</strong>
-          Yeh article PM Kisan Maandhan Yojana ke official operational guidelines (DAC&FW, Ministry of Agriculture & Farmers Welfare), maandhan.in portal, aur LIC official communication par based hai. Portal interface, URLs, aur processes time ke saath badal sakte hain. Hamesha official pmkmy.gov.in ya maandhan.in portal hi use karein. Kisi bhi third-party website pe apna OTP ya password share na karein. Helpline: 1800-3000-3468. Last verified: July 24, 2026.
+          Yeh article PM Kisan Maandhan Yojana ke official operational guidelines (DAC&FW, Ministry of Agriculture & Farmers Welfare) aur maandhan.in / pmkmy.gov.in portal ke data par based hai. Portal interface, URLs, aur processes time ke saath badal sakte hain. Hamesha official pmkmy.gov.in ya maandhan.in portal hi use karein. Kisi bhi third-party website pe apna OTP ya password share na karein. Sahayata ke liye official portal par diya gaya helpline number use karein. Last verified: July 24, 2026.
         </p>
       </div>
     </article>
