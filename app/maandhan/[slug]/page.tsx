@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation';
 import { MAANDHAN_ARTICLES } from '@/lib/maandhan-data';
 
-// Dynamic imports for all Maandhan articles
 import PmKisanMaandhanRegistration2026 from '@/components/articles/maandhan/PmKisanMaandhanRegistration2026';
 import PmKisanMaandhanEligibilityDocuments from '@/components/articles/maandhan/PmKisanMaandhanEligibilityDocuments';
 import PmKisanMaandhanPensionCalculator from '@/components/articles/maandhan/PmKisanMaandhanPensionCalculator';
@@ -9,14 +8,12 @@ import PmKisanMaandhanWithdrawalRefund from '@/components/articles/maandhan/PmKi
 import PmKisanMaandhanAutoDebitPooraSach from '@/components/articles/maandhan/PmKisanMaandhanAutoDebitPooraSach';
 import PmKisanMaandhanStatusCheckOnline from '@/components/articles/maandhan/PmKisanMaandhanStatusCheckOnline';
 
-// Generate static params for all Maandhan articles
 export async function generateStaticParams() {
   return MAANDHAN_ARTICLES.map((article) => ({
     slug: article.slug,
   }));
 }
 
-// SEO Metadata
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const article = MAANDHAN_ARTICLES.find((a) => a.slug === slug);
@@ -29,7 +26,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-// Main Page Component
 export default async function MaandhanArticlePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const article = MAANDHAN_ARTICLES.find((a) => a.slug === slug);
@@ -38,7 +34,6 @@ export default async function MaandhanArticlePage({ params }: { params: Promise<
     notFound();
   }
 
-  // Render correct article based on slug
   switch (slug) {
     case 'pm-kisan-maandhan-registration-2026':
       return <PmKisanMaandhanRegistration2026 article={article} />;
