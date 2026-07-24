@@ -6,8 +6,10 @@ import PmKisanMaandhanRegistration2026 from '@/components/articles/maandhan/PmKi
 import PmKisanMaandhanEligibilityDocuments from '@/components/articles/maandhan/PmKisanMaandhanEligibilityDocuments';
 import PmKisanMaandhanPensionCalculator from '@/components/articles/maandhan/PmKisanMaandhanPensionCalculator';
 import PmKisanMaandhanWithdrawalRefund from '@/components/articles/maandhan/PmKisanMaandhanWithdrawalRefund';
+import PmKisanMaandhanAutoDebitPooraSach from '@/components/articles/maandhan/PmKisanMaandhanAutoDebitPooraSach';
+import PmKisanMaandhanStatusCheckOnline from '@/components/articles/maandhan/PmKisanMaandhanStatusCheckOnline';
 
-// Generate static params for all 4 articles
+// Generate static params for all Maandhan articles
 export async function generateStaticParams() {
   return MAANDHAN_ARTICLES.map((article) => ({
     slug: article.slug,
@@ -46,6 +48,10 @@ export default async function MaandhanArticlePage({ params }: { params: Promise<
       return <PmKisanMaandhanPensionCalculator article={article} />;
     case 'pm-kisan-maandhan-withdrawal-refund-rules':
       return <PmKisanMaandhanWithdrawalRefund article={article} />;
+    case 'pm-kisan-maandhan-auto-debit-poora-sach':
+      return <PmKisanMaandhanAutoDebitPooraSach article={article} />;
+    case 'pm-kisan-maandhan-status-check-online':
+      return <PmKisanMaandhanStatusCheckOnline article={article} />;
     default:
       notFound();
   }
