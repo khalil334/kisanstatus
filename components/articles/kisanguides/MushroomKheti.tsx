@@ -6,13 +6,13 @@ import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Mushroom Kheti 2026: NHB Subsidy, Profit & Complete Guide',
-  description: 'Mushroom (khumbi) farming complete guide. Janein oyster mushroom kaise ugayein, NHB subsidy, 100-bag unit cost, aur real profit calculation.',
-  keywords: ['mushroom kheti', 'oyster mushroom farming', 'mushroom subsidy', 'button mushroom kheti', 'mushroom business', 'khumbi ki kheti'],
+  title: 'Mushroom Kheti 2026: Subsidy, Profit aur Complete Guide',
+  description: 'Chhote kamre mein oyster mushroom kaise ugayein. NHB subsidy process, 100-bag setup cost, aur sachcha profit calculation janein.',
+  keywords: ['mushroom farming in small room at home profit', 'oyster mushroom spawn price in India 2026', 'khumbi ki kheti mein kitna pani lagta hai', 'green mold in mushroom treatment home remedy', 'mushroom business plan 10x10 room'],
   authors: [{ name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' }],
   openGraph: {
-    title: 'Mushroom Kheti 2026: NHB Subsidy, Profit & Complete Guide',
-    description: 'Mushroom farming guide. Janein oyster mushroom kaise ugayein, NHB subsidy, 100-bag unit cost, aur real profit calculation.',
+    title: 'Mushroom Kheti 2026: Subsidy, Profit aur Complete Guide',
+    description: 'Chhote kamre mein oyster mushroom kaise ugayein. NHB subsidy process, 100-bag setup cost, aur sachcha profit calculation janein.',
     type: 'article',
     locale: 'hi_IN',
     siteName: 'KisanStatus.com',
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   twitter: { 
     card: 'summary_large_image', 
-    title: 'Mushroom Kheti 2026: NHB Subsidy, Profit & Complete Guide', 
-    description: 'Mushroom farming guide. Janein oyster mushroom kaise ugayein, NHB subsidy, 100-bag unit cost, aur real profit calculation.', 
+    title: 'Mushroom Kheti 2026: Subsidy, Profit aur Complete Guide', 
+    description: 'Chhote kamre mein oyster mushroom kaise ugayein. NHB subsidy process, 100-bag setup cost, aur sachcha profit calculation janein.', 
     images: ['https://kisanstatus.com/images/kisanguides/Mushroomhero.webp'] 
   },
   alternates: { canonical: 'https://kisanstatus.com/articles/mushroom-kheti-nhb-subsidy' },
@@ -33,12 +33,12 @@ const jsonLd = {
   '@graph': [
     { '@type': 'Organization', '@id': 'https://kisanstatus.com/#organization', name: 'KisanStatus.com', url: 'https://kisanstatus.com', logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.webp', width: 250, height: 60 } },
     { '@type': 'BreadcrumbList', '@id': 'https://kisanstatus.com/articles/mushroom-kheti-nhb-subsidy/#breadcrumb', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kisanstatus.com/' }, { '@type': 'ListItem', position: 2, name: 'Articles', item: 'https://kisanstatus.com/articles' }, { '@type': 'ListItem', position: 3, name: 'Mushroom Kheti', item: 'https://kisanstatus.com/articles/mushroom-kheti-nhb-subsidy' }] },
-    { '@type': 'Article', '@id': 'https://kisanstatus.com/articles/mushroom-kheti-nhb-subsidy/#article', headline: 'Mushroom Kheti 2026: NHB Subsidy, Profit & Complete Guide', description: 'Mushroom farming guide. Janein oyster mushroom kaise ugayein, NHB subsidy, 100-bag unit cost, aur real profit calculation.', author: { '@type': 'Organization', name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' }, publisher: { '@type': 'Organization', name: 'KisanStatus.com', logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.webp' } }, datePublished: '2026-01-15', dateModified: '2026-07-21', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://kisanstatus.com/articles/mushroom-kheti-nhb-subsidy/' } },
+    { '@type': 'Article', '@id': 'https://kisanstatus.com/articles/mushroom-kheti-nhb-subsidy/#article', headline: 'Mushroom Kheti 2026: Subsidy, Profit aur Complete Guide', description: 'Chhote kamre mein oyster mushroom kaise ugayein. NHB subsidy process, 100-bag setup cost, aur sachcha profit calculation janein.', author: { '@type': 'Organization', name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' }, publisher: { '@type': 'Organization', name: 'KisanStatus.com', logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.webp' } }, datePublished: '2026-01-15', dateModified: '2026-07-25', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://kisanstatus.com/articles/mushroom-kheti-nhb-subsidy/' } },
     { '@type': 'FAQPage', '@id': 'https://kisanstatus.com/articles/mushroom-kheti-nhb-subsidy/#faq', mainEntity: [
-        { '@type': 'Question', name: 'Kya mushroom farming se kamre mein smell ya badboo aati hai?', acceptedAnswer: { '@type': 'Answer', text: 'Proper sterilization aur ventilation hone par smell minimal hoti hai. Par agar contamination ho jaye (green mold ya bacteria), toh foul smell aa sakti hai. Spent straw ko time par hata dena chahiye.' } },
-        { '@type': 'Question', name: 'Kya bina AC ke button mushroom ki kheti ho sakti hai?', acceptedAnswer: { '@type': 'Answer', text: 'Technically possible hai par commercially viable nahi. Button mushroom ko 14-18°C constant temperature chahiye. Plains mein AC mandatory hai.' } },
-        { '@type': 'Question', name: 'Pehli flush fail ho jaye ya contamination ho jaye toh kya karein?', acceptedAnswer: { '@type': 'Answer', text: 'Affected bags ko turant isolate karein aur kamre se bahar nikal dein. Sterilization dobara karein aur humidity adjust karein.' } },
-        { '@type': 'Question', name: 'Kya mushroom farming mein insurance ya crop protection scheme hai?', acceptedAnswer: { '@type': 'Answer', text: 'Kuch states mein horticulture crops ke under coverage mil sakta hai, par contamination ya temperature fluctuation jaise risks generally cover nahi hote.' } }
+        { '@type': 'Question', name: 'Kya 10x10 feet ke chhote kamre mein mushroom farming profitable hai?', acceptedAnswer: { '@type': 'Answer', text: 'Haan, 100-150 bags aaram se aa jate hain. Pehle saal seekhne ka hota hai, isliye break-even hona bhi badi baat hai. Doosre saal se direct marketing karke 20-25% net margin nikalna shuru ho jata hai.' } },
+        { '@type': 'Question', name: 'Khumbi ke kamre mein badboo ya smell kyun aati hai?', acceptedAnswer: { '@type': 'Answer', text: 'Agar sterilization sahi se hua ho toh smell minimal hoti hai. Lekin agar straw zyada geela chhod diya ya koi bag kharab ho gaya aur use turant bahar nahi nikala, toh ammonia ya sadan ki badboo aane lagti hai.' } },
+        { '@type': 'Question', name: 'Green mold (hara fungus) dikhe toh turant kya karein?', acceptedAnswer: { '@type': 'Answer', text: 'Us bag ko chupke se kamre se bahar nikal kar jala dein ya gehra gaad dein. Bachaye hue bags ke aas-paas Neem oil (5ml/litre) ya Trichoderma viride spray karein. Bleaching powder se farsh saaf karein.' } },
+        { '@type': 'Question', name: 'Asli mushroom beej (spawn) kahan se aur kitne mein milega?', acceptedAnswer: { '@type': 'Answer', text: '2026 mein certified labs se oyster spawn ka rate ₹180 se ₹250 per kg hai. Hamesha DMR Solan ya state agricultural university ke authorized vendors se hi lein. Local mandi ke anjaam sources se bachein.' } }
       ] 
     }
   ]
@@ -65,22 +65,22 @@ export default function MushroomKheti() {
       
       <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
         <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
-          <strong>Sach kahoon toh:</strong> Jo log sirf YouTube videos dekhkar bina practical training ke seedha 100-200 bags laga dete hain, wo aksar pehle 1-2 cycles mein contamination ya temperature issues ki wajah se 20-30% crop loss ka saamna karte hain. Lekin jab sterilization aur humidity control ka practical cycle samajh aa jata hai, tabhi is business mein consistent profit nikalna shuru hota hai.
+          <strong>Seedhi baat:</strong> YouTube par "zero investment, mahine ke lakhon" wale videos dekhkar bahut se naujawan seedha 200-300 bags laga lete hain. Par 15 din baad jab green mold (hara fungus) puri batch kharab kar deta hai, tab pata chalta hai ki khumbi ugana sirf bags latakane ka naam nahi hai. Yeh ek controlled science hai. Jab aap sterilization aur humidity control ka practical tareeka samajh jate hain, tabhi yeh business ek stable income source ban pata hai.
         </p>
       </div>
       
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Himachal Pradesh ke Solan district ko "Mushroom City of India" kaha jata hai, jahan dashakon se commercial mushroom farming hoti aa rahi hai. Par ab yeh kaam sirf pahadi ilaqon tak seemit nahi raha. Kam jagah, kam investment, par technical samajh behad zaroori hai.
+        Himachal ke Solan ko "Mushroom City" kaha jata hai, lekin ab yeh zaroori nahi ki aap pahadi ilaqe mein hi rahein. Ek saamanaya chhat, storeroom, ya basement bhi ab commercial production ke liye kaafi hai. Shart sirf ek hai: controlled environment. Market mein protein-rich food ki maang tezi se badh rahi hai. Local hotels, hostels, aur health-conscious families regular khareedar ban sakte hain.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Mushroom Farming Kyun? Zameen Nahi, Sirf Controlled Jagah Chahiye
+        Variety Selection: Oyster, Button, ya Milky?
       </h2>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Kheti-baadi mein sabse badi problem zameen ki hoti hai. Par mushroom farming mein aapko sirf ek andhera kamra chahiye jahan temperature 20-30 degree Celsius aur humidity 70-85% maintain ho sake. Chhat, storeroom, basement, ya koi bhi khaali jagah kaam aa sakti hai. Bas 10x10 feet ka kamra bhi shuruwat ke liye kaafi hai.
+        Naye farmers aksar seedha Button (Safed) mushroom par jump kar lete hain kyunki local mandi mein iska rate achha milta hai. Yeh ek badi galti ho sakti hai. Button mushroom ko 14-18°C ka constant temperature chahiye, jiske liye AC ya heavy cooling setup mandatory hai. Bijli ka bill hi aapka shuruati munafa kha jayega.
       </p>
-      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Market demand ki baat karein toh mushroom ka consumption India mein pichle kuch saalon mein tezi se badha hai. Urban areas mein log ab health-conscious ho gaye hain, aur mushroom protein ka achha source mana jata hai. Hotels, restaurants, aur local catering businesses regular buyers ban sakte hain.
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        Pehli baar shuruat kar rahe hain toh Oyster (Dhingri) ya Milky se start lein. Oyster 20-30°C ke beech aaram se ugg jata hai, iski rog pratirodhak shamta achhi hoti hai, aur bej aasani se uplabdh hai.
       </p>
 
       <Image 
@@ -92,26 +92,16 @@ export default function MushroomKheti() {
         className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
       />
 
-      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Kaunsi Variety Chunein? Oyster, Button, ya Milky - Reality Check
-      </h2>
-      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Naye log aksar seedha Button mushroom par jump kar lete hain kyunki market mein iski demand zyada hoti hai. Par Button mushroom ko strict controlled environment (AC, precise humidity control) chahiye, jiska setup aur maintenance kharcha bahut zyada hai.
-      </p>
-      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Agar aap pehli baar shuru kar rahe hain, toh Oyster mushroom se start lena behtar rehta hai. Yeh kam temperature variation mein bhi ugg jata hai, iski bimariyan relatively kam hoti hain, aur spawn (beej) aasani se aur saste mein mil jata hai.
-      </p>
-
       <div className="overflow-x-auto mb-8 not-prose">
         <table className="min-w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden text-sm shadow-sm">
           <caption className="sr-only">Comparison between Mushroom Varieties for farming</caption>
           <thead className="bg-green-100 dark:bg-green-900/40">
             <tr>
               <th scope="col" className="py-3 px-4 border-b text-left text-green-900 dark:text-green-200">Variety</th>
-              <th scope="col" className="py-3 px-4 border-b text-left text-green-900 dark:text-green-200">Temperature</th>
-              <th scope="col" className="py-3 px-4 border-b text-left text-green-900 dark:text-green-200">Cycle Time</th>
-              <th scope="col" className="py-3 px-4 border-b text-left text-green-900 dark:text-green-200">Market Rate</th>
-              <th scope="col" className="py-3 px-4 border-b text-left text-green-900 dark:text-green-200">Difficulty</th>
+              <th scope="col" className="py-3 px-4 border-b text-left text-green-900 dark:text-green-200">Ideal Temp</th>
+              <th scope="col" className="py-3 px-4 border-b text-left text-green-900 dark:text-green-200">Cycle Duration</th>
+              <th scope="col" className="py-3 px-4 border-b text-left text-green-900 dark:text-green-200">Approx Market Rate</th>
+              <th scope="col" className="py-3 px-4 border-b text-left text-green-900 dark:text-green-200">Beginner Friendly</th>
             </tr>
           </thead>
           <tbody className="text-gray-700 dark:text-gray-300">
@@ -119,38 +109,114 @@ export default function MushroomKheti() {
               <td className="py-3 px-4 font-medium">Oyster (Dhingri)</td>
               <td className="py-3 px-4">20-30°C</td>
               <td className="py-3 px-4">35-45 days</td>
-              <td className="py-3 px-4">₹120-200/kg</td>
-              <td className="py-3 px-4 font-semibold text-green-700 dark:text-green-400">Easy - Beginners ke liye</td>
+              <td className="py-3 px-4">₹120 - ₹200/kg</td>
+              <td className="py-3 px-4 font-semibold text-green-700 dark:text-green-400">Highly Recommended</td>
             </tr>
             <tr className="border-b border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
               <td className="py-3 px-4 font-medium">Button (Safed)</td>
-              <td className="py-3 px-4">14-18°C (AC zaroori)</td>
+              <td className="py-3 px-4">14-18°C (AC Mandatory)</td>
               <td className="py-3 px-4">45-60 days</td>
-              <td className="py-3 px-4">₹180-300/kg</td>
-              <td className="py-3 px-4">Hard - Technical knowledge chahiye</td>
+              <td className="py-3 px-4">₹180 - ₹300/kg</td>
+              <td className="py-3 px-4 text-red-600 dark:text-red-400 font-medium">Avoid initially</td>
             </tr>
             <tr className="border-b border-gray-100 dark:border-gray-700">
               <td className="py-3 px-4 font-medium">Milky (Safed Dhingri)</td>
               <td className="py-3 px-4">28-35°C</td>
               <td className="py-3 px-4">40-50 days</td>
-              <td className="py-3 px-4">₹150-220/kg</td>
-              <td className="py-3 px-4">Medium - Garmiyon ke liye</td>
-            </tr>
-            <tr>
-              <td className="py-3 px-4 font-medium">Shiitake</td>
-              <td className="py-3 px-4">15-22°C</td>
-              <td className="py-3 px-4">90-120 days</td>
-              <td className="py-3 px-4">₹400-800/kg</td>
-              <td className="py-3 px-4">Very Hard - Expert level</td>
+              <td className="py-3 px-4">₹150 - ₹220/kg</td>
+              <td className="py-3 px-4 font-semibold text-green-700 dark:text-green-400">Best for Summers</td>
             </tr>
           </tbody>
         </table>
-        <p className="text-xs text-gray-600 dark:text-gray-400 mt-2 italic">Note: Latest NHB guidelines ke anusaar, Oyster aur Milky varieties ko Indian climate ke liye zyada suitable mana jata hai.</p>
+        <p className="text-xs text-gray-600 dark:text-gray-400 mt-2 italic">Note: Latest NHB guidelines ke anusaar, Oyster aur Milky varieties ko Indian plains ke climate ke liye zyada suitable mana jata hai.</p>
+      </div>
+
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
+        100-Bag Unit ka Realistic Budget: Hidden Costs
+      </h2>
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        Commercial level par 100 bags ek manageable starting point hai. Isse aap mahine ka 60-80 kg produce kar sakte hain. Aksar guides sirf raw material ka kharcha batati hain, lekin ground level par kuch hidden costs bhi hote hain.
+      </p>
+
+      <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-8 border border-gray-200 dark:border-gray-700 not-prose">
+        <h3 className="font-bold text-lg mb-4 text-gray-900 dark:text-gray-100 border-b border-gray-300 dark:border-gray-600 pb-2">100-Bag Oyster Unit Setup (2026 Estimates)</h3>
+        <ul className="space-y-3 text-sm text-gray-700 dark:text-gray-300">
+          <li className="flex justify-between">
+            <span>Room Prep (Shelving, insulation, basic ventilation):</span>
+            <span className="font-semibold">₹15,000 - ₹25,000</span>
+          </li>
+          <li className="flex justify-between">
+            <span>Paddy Straw (Bhoosa) - 10 quintal + transport:</span>
+            <span className="font-semibold">₹9,000 - ₹13,000</span>
+          </li>
+          <li className="flex justify-between">
+            <span>Certified Spawn (Beej) - 25 to 30 kg:</span>
+            <span className="font-semibold">₹5,500 - ₹7,500</span>
+          </li>
+          <li className="flex justify-between">
+            <span>UV-treated Polythene bags (100 pieces):</span>
+            <span className="font-semibold">₹1,500 - ₹2,500</span>
+          </li>
+          <li className="flex justify-between">
+            <span>Chemicals (Formalin, Bavistin, Bleaching powder):</span>
+            <span className="font-semibold">₹2,000 - ₹3,000</span>
+          </li>
+          <li className="flex justify-between">
+            <span>Tools (Sprayer, digital thermo-hygrometer, gloves):</span>
+            <span className="font-semibold">₹3,000 - ₹4,500</span>
+          </li>
+          <li className="flex justify-between">
+            <span>Miscellaneous & Contingency (10% buffer):</span>
+            <span className="font-semibold">₹4,000 - ₹6,000</span>
+          </li>
+          <li className="flex justify-between border-t border-gray-300 dark:border-gray-600 pt-3 font-bold text-base text-gray-900 dark:text-gray-100">
+            <span>Total Realistic Investment:</span>
+            <span className="text-green-700 dark:text-green-400">₹40,000 - ₹61,500</span>
+          </li>
+        </ul>
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Krishi anusandhan sansthanon (jaise DMR, Solan) ke general data ke mutabik, India mein total mushroom production ka bada hissa Oyster aur Milky varieties se aata hai kyunki yeh Indian climate ke liye relatively zyada suitable hain.
+        Is capital ko manage karne ke liye <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Kisan Credit Card (KCC)</Link> ek behtareen vikalp hai. Mushroom farming ko officially horticulture activity ke under cover kiya jata hai. Chhote scale par food processing ke liye <Link href="/articles/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME Yojana</Link> se 35% tak ki subsidy claim ki ja sakti hai.
       </p>
+
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
+        Step-by-Step Process: Oyster Mushroom Kaise Ugayein?
+      </h2>
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        Ek chhoti si laparwahi poori batch kharab kar sakti hai. In instructions ko dhyan se follow karein.
+      </p>
+
+      <div className="space-y-6 mb-8 not-prose">
+        <div className="flex gap-4">
+          <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
+          <div>
+            <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">Chaff (Bhoosa) ki Preparation</h4>
+            <p className="text-sm text-gray-700 dark:text-gray-300">Paddy straw ko 2-3 inch ke chhote tukdon mein kaat lein. Ise saaf paani mein 16-18 ghante tak bhigo kar rakhein. Paani nikaal kar straw ko achhi tarah nichod lein. Moisture content 65-70% hona chahiye. Simple test: mutthi mein bhar kar nichodein, paani ki boondein na girein, lekin hath geela mehsoos ho. Zyada geela straw contamination ko invite karta hai.</p>
+          </div>
+        </div>
+        <div className="flex gap-4">
+          <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
+          <div>
+            <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">Sterilization (Sabse Critical Phase)</h4>
+            <p className="text-sm text-gray-700 dark:text-gray-300">Bhige hue straw ko 60-90 minute tak ubalte paani ya steam se treat karein. Yeh harmful bacteria aur mold ke spores ko khatam karta hai. Chemical method mein Formalin (2 ml per litre) aur Bavistin (1 gram per litre) ka solution use hota hai. Dhyan rahe: agar formalin ki smell tez reh gayi, toh aapka beej (spawn) mar jayega. Achhi tarah nichodna zaroori hai.</p>
+          </div>
+        </div>
+        <div className="flex gap-4">
+          <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
+          <div>
+            <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">Spawning (Beej Milana)</h4>
+            <p className="text-sm text-gray-700 dark:text-gray-300">Thande hue straw ko saaf polythene bags mein bharein. Layer method sabse safe hai: 3 inch straw, thoda beej, phir 3 inch straw. Ek standard bag mein 5-7 kg straw aur 200-250 gram spawn lagta hai. Bags ko tight band karke 10-12 jagah sui se chhed kar dein taaki air circulation ho sake. Yeh kaam hamesha saaf hath ya gloves pehen kar hi karein.</p>
+          </div>
+        </div>
+        <div className="flex gap-4">
+          <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">4</div>
+          <div>
+            <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">Incubation aur Fruiting</h4>
+            <p className="text-sm text-gray-700 dark:text-gray-300">Bags ko andhere, shaant kamre mein shelving par rakhein. Temperature 22-28°C aur humidity 70-80% maintain karein. 18-22 din mein bags safed mycelium (jaal) se puri tarah bhar jayenge. Jab ye safed jaal dikhne lage, toh bags ko kholein aur kamre mein subah-shaam paani ka chhidkav (fogging) karein. Direct bag par paani na dalein.</p>
+          </div>
+        </div>
+      </div>
 
       <Image 
         src="/images/kisanguides/setup-process.webp" 
@@ -162,118 +228,30 @@ export default function MushroomKheti() {
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Kitna Paisa Lagega? 100-Bag Unit ka Realistic Budget
+        Disease Management: Green Mold aur Bacterial Blotch
       </h2>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Commercial level par shuru karne ke liye 100 bags ek realistic starting point mana jata hai. 100 bags se aap mahine ka 60-80 kg mushroom produce kar sakte hain (3-4 flushes mein). Dhyan rahe, yeh number field conditions, state, aur vendor ke hisaab se badal sakta hai.
+        Fungi cultivation mein rog tezi se failta hai. Prevention hi best cure hai.
       </p>
-
-      <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-8 border border-gray-200 dark:border-gray-700 not-prose">
-        <h3 className="font-bold text-lg mb-4 text-gray-900 dark:text-gray-100 border-b border-gray-300 dark:border-gray-600 pb-2">100-Bag Oyster Mushroom Unit Setup (Latest Estimates)</h3>
-        <ul className="space-y-3 text-sm text-gray-700 dark:text-gray-300">
-          <li className="flex justify-between">
-            <span>Room Preparation (shelving, insulation, ventilation):</span>
-            <span className="font-semibold">₹15,000 - ₹25,000</span>
-          </li>
-          <li className="flex justify-between">
-            <span>Paddy Straw (bhoosa) - 10 quintal:</span>
-            <span className="font-semibold">₹8,000 - ₹12,000</span>
-          </li>
-          <li className="flex justify-between">
-            <span>Spawn (beej) - 25-30 kg:</span>
-            <span className="font-semibold">₹5,000 - ₹7,500</span>
-          </li>
-          <li className="flex justify-between">
-            <span>Polythene bags (100 pieces):</span>
-            <span className="font-semibold">₹1,500 - ₹2,500</span>
-          </li>
-          <li className="flex justify-between">
-            <span>Formalin, Bavistin, and other chemicals:</span>
-            <span className="font-semibold">₹2,000 - ₹3,000</span>
-          </li>
-          <li className="flex justify-between">
-            <span>Sprayer, thermometer, hygrometer:</span>
-            <span className="font-semibold">₹2,500 - ₹4,000</span>
-          </li>
-          <li className="flex justify-between">
-            <span>Labor (pasting, filling, maintenance - 2 months):</span>
-            <span className="font-semibold">₹8,000 - ₹12,000</span>
-          </li>
-          <li className="flex justify-between border-t border-gray-300 dark:border-gray-600 pt-3 font-bold text-base text-gray-900 dark:text-gray-100">
-            <span>Total Investment Range:</span>
-            <span className="text-green-700 dark:text-green-400">₹42,000 - ₹66,000</span>
-          </li>
-        </ul>
-      </div>
-
-      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Is initial capital ko manage karne ke liye <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Kisan Credit Card (KCC)</Link> ek badhiya vikalp hai, kyunki mushroom farming ko officially agriculture activity ke under cover kiya jata hai aur ispar byaj dar kam hoti hai. Chhote scale par <Link href="/articles/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME Yojana</Link> ya Mudra loan bhi bina collateral ke support provide kar sakte hain.
-      </p>
+      <ul className="list-disc pl-5 space-y-3 mb-8 text-gray-700 dark:text-gray-300">
+        <li><strong>Green Mold (Trichoderma):</strong> Agar bag mein hara chhakka dikhayi de, toh us bag ko turant kamre se bahar nikal kar jala dein ya gehra gaad dein. Bachaye hue bags ke aas-paas <em>Trichoderma viride</em> ka live culture spray karein, jo is harmful fungus ko kha jata hai. Neem oil spray (5ml/litre) bhi ek asardaar upay hai.</li>
+        <li><strong>Bacterial Blotch:</strong> Mushroom ke cap par peele ya bhure dhabbe. Iska karan zyada nami aur hawa ka na rukna hai. Turant watering band karein, exhaust fan chalayein, aur bleaching powder ke halke solution se floor saaf karein.</li>
+      </ul>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Sarkari Subsidy: Process Aur Ground Reality
+        Marketing Strategy: ₹150/kg Kaise Kamayein?
       </h2>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        National Horticulture Board (NHB) aur State Horticulture Departments is sector ko boost dene ke liye active hain. Lekin ek kadwi sachai yeh hai ki subsidy process mein 3-6 mahine lag sakte hain. Mera strong suggestion hai ki apna kaam subsidy ke intezaar mein na rokiye. Pehle apni pocket se setup karein, application daal dein, aur agar aa gayi toh use future expansion ya equipment upgrade mein lagayein.
+        Sabse badi galti jo naye farmers karte hain, wo hai local mandi ke beechwiye (middleman) par depend rehna. Wahan aapko ₹60-80/kg hi milenge. Apna profit margin badhane ke liye ye tareeke apnayen:
       </p>
-
-      <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6 mb-8 not-prose">
-        <ul className="space-y-4 text-sm text-gray-800 dark:text-gray-200">
-          <li>
-            <strong className="text-blue-900 dark:text-blue-200 block mb-1">NHB (National Horticulture Board):</strong>
-            Bade units par project cost ka ek certain percentage subsidy milti hai. Yeh subsidy bank loan lene ke baad back-end par milti hai. Latest guidelines ke liye NHB portal check karein.
-          </li>
-          <li>
-            <strong className="text-blue-900 dark:text-blue-200 block mb-1">PM FME Yojana:</strong>
-            Agar aap mushroom ko process karke bechna chahte hain (dry mushroom, pickle, powder), toh <Link href="/articles/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME Yojana</Link> ke under 35% subsidy mil sakti hai (maximum ₹10 lakh).
-          </li>
-          <li>
-            <strong className="text-blue-900 dark:text-blue-200 block mb-1">State-Level Horticulture Schemes:</strong>
-            Har state ki apni schemes hoti hain. Inme chhote farmers ko 40-50% tak ka financial assistance mil sakta hai. Apne zila ke Horticulture Officer se latest information lein.
-          </li>
-        </ul>
-      </div>
-
-      <ExternalLinkButton 
-        url="https://nhb.gov.in/" 
-        label="NHB Official Portal - Subsidy Guidelines Check Karein" 
-      />
-
-      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Step-by-Step Process: Oyster Mushroom Kaise Ugayein?
-      </h2>
-      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Oyster mushroom ki farming 4 main steps mein hoti hai. Har step critical hai - ek chhoti si galti poori batch kharab kar sakti hai.
-      </p>
-
-      <div className="space-y-6 mb-8 not-prose">
-        <div className="flex gap-4">
-          <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
-          <div>
-            <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">Chaff (Bhoosa) ki Preparation</h4>
-            <p className="text-sm text-gray-700 dark:text-gray-300">Paddy straw ko 2-3 inch ke pieces mein kaat lein. Phir isko paani mein 16-18 ghante tak bhigo dein. Iske baad paani nikaal kar straw ko achhi tarah squeeze karein - moisture content 65-70% hona chahiye. Yeh step bahut important hai kyunki agar straw zyada geela hua toh contamination ka khatra badh jata hai.</p>
-          </div>
+      <div className="grid md:grid-cols-2 gap-4 mb-8 not-prose">
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <h4 className="font-bold text-blue-600 dark:text-blue-400 mb-2">Direct B2B Tie-ups</h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300">Apne shehar ke 4-5 local restaurants, dhabas, ya marriage halls ke manager se mil kar sample dein. Unhe regular supply ka rate ₹120-140/kg offer karein. Wo khushi se khareedenge kyunki unhe fresh produce chahiye hota hai.</p>
         </div>
-        <div className="flex gap-4">
-          <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
-          <div>
-            <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">Sterilization (Sabse Important)</h4>
-            <p className="text-sm text-gray-700 dark:text-gray-300">Bhige hue straw ko 60-90 minute tak steam se treat karein. Yeh step contamination ko khatam karta hai. Formalin (2%) aur Bavistin (0.1%) ka solution bhi use hota hai. Dhyan rahe, sterilization ke bina aage ka kaam bekar hai - green mold aur bacteria poora kaam kharab kar sakte hain.</p>
-          </div>
-        </div>
-        <div className="flex gap-4">
-          <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
-          <div>
-            <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">Spawning (Beej Dalna)</h4>
-            <p className="text-sm text-gray-700 dark:text-gray-300">Thande hue straw ko polythene bags mein bharein. Har layer mein spawn daalein. Ek bag mein 5-7 kg straw aur 200-250 gram spawn lagta hai. Bags ko tight band kar dein aur unme 10-12 chhed kar dein taaki air circulation ho sake. Yeh step clean hands aur gloves ke saath karna chahiye.</p>
-          </div>
-        </div>
-        <div className="flex gap-4">
-          <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">4</div>
-          <div>
-            <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">Incubation aur Fruiting</h4>
-            <p className="text-sm text-gray-700 dark:text-gray-300">Bags ko andhere kamre mein shelving par rakhein. Temperature 22-28°C aur humidity 70-80% maintain karein. 18-22 din mein bags white mycelium se bhar jayenge. Uske baad bags ko kholein aur fresh air, light, aur humidity provide karein. Pehli flush 25-30 din mein aa jayegi.</p>
-          </div>
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <h4 className="font-bold text-blue-600 dark:text-blue-400 mb-2">Value Addition (Drying)</h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300">Agar market mein demand kam hai, toh mushroom ko solar dryer ya ghar par dhoop mein sukhha kar powder bana lein. Dried mushroom ka shelf life 6 mahine tak hoti hai aur rate ₹800-1000/kg tak ja sakta hai.</p>
         </div>
       </div>
 
@@ -290,7 +268,7 @@ export default function MushroomKheti() {
         1 Saal Ka Profit Calculation: Realistic Expectations
       </h2>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Yeh calculation 100-bag unit ke liye hai, jo saal mein 8-10 cycles complete karta hai. Ground reality kuch aisi hoti hai (approximate market rates ke hisaab se, state-wise variation ho sakta hai):
+        Yeh calculation 100-bag unit ke liye hai, jo saal mein 8-10 cycles complete karta hai. Pehla saal seekhne ka saal hota hai. 30-40% bags kharab ho sakte hain. Isliye Year 1 mein break-even hona bhi ek badi jeet hai.
       </p>
 
       <div className="overflow-x-auto mb-8 not-prose">
@@ -310,11 +288,11 @@ export default function MushroomKheti() {
             <tr className="border-b border-gray-100 dark:border-gray-700">
               <td className="py-3 px-4">Mushroom Production</td>
               <td className="py-3 px-4">600-700 kg/year</td>
-              <td className="py-3 px-4">₹150/kg (avg)</td>
+              <td className="py-3 px-4">₹150/kg (avg direct sale)</td>
               <td className="py-3 px-4">₹90,000 - ₹1,05,000</td>
             </tr>
             <tr className="border-b border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
-              <td className="py-3 px-4">Spent Straw (waste as manure)</td>
+              <td className="py-3 px-4">Spent Straw (waste as organic manure)</td>
               <td className="py-3 px-4">1-2 ton</td>
               <td className="py-3 px-4">₹5/kg</td>
               <td className="py-3 px-4">₹5,000 - ₹10,000</td>
@@ -327,123 +305,88 @@ export default function MushroomKheti() {
               <td className="py-3 px-4 font-semibold" colSpan={4}>Expenses (Annual)</td>
             </tr>
             <tr className="border-b border-gray-100 dark:border-gray-700">
-              <td className="py-3 px-4">Raw Material (straw, spawn, chemicals)</td>
+              <td className="py-3 px-4">Raw Material (straw, spawn, chemicals per cycle)</td>
               <td className="py-3 px-4">8-10 cycles</td>
-              <td className="py-3 px-4">₹15,000-20,000/cycle</td>
-              <td className="py-3 px-4">₹1,20,000 - ₹2,00,000</td>
+              <td className="py-3 px-4">₹12,000-15,000/cycle</td>
+              <td className="py-3 px-4">₹96,000 - ₹1,50,000</td>
             </tr>
             <tr className="border-b border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
-              <td className="py-3 px-4">Labor</td>
+              <td className="py-3 px-4">Labor (Self + 1 helper)</td>
               <td className="py-3 px-4">12 months</td>
-              <td className="py-3 px-4">₹5,000-8,000/month</td>
-              <td className="py-3 px-4">₹60,000 - ₹96,000</td>
+              <td className="py-3 px-4">₹4,000-6,000/month</td>
+              <td className="py-3 px-4">₹48,000 - ₹72,000</td>
             </tr>
             <tr className="border-b border-gray-100 dark:border-gray-700">
-              <td className="py-3 px-4">Electricity, Water, Misc</td>
+              <td className="py-3 px-4">Electricity, Water, Packaging</td>
               <td className="py-3 px-4">12 months</td>
-              <td className="py-3 px-4">₹2,000-3,000/month</td>
-              <td className="py-3 px-4">₹24,000 - ₹36,000</td>
+              <td className="py-3 px-4">₹1,500-2,500/month</td>
+              <td className="py-3 px-4">₹18,000 - ₹30,000</td>
             </tr>
             <tr className="bg-red-50 dark:bg-red-900/20">
               <td className="py-3 px-4 font-bold text-red-800 dark:text-red-300" colSpan={3}>Total Expenses</td>
-              <td className="py-3 px-4 font-bold text-red-700 dark:text-red-400">₹2,04,000 - ₹3,32,000</td>
+              <td className="py-3 px-4 font-bold text-red-700 dark:text-red-400">₹1,62,000 - ₹2,52,000</td>
             </tr>
             <tr className="bg-yellow-50 dark:bg-yellow-900/20">
               <td className="py-3 px-4 font-bold text-lg text-yellow-800 dark:text-yellow-300" colSpan={3}>Net Profit (Year 1)</td>
-              <td className="py-3 px-4 font-bold text-lg text-yellow-800 dark:text-yellow-300">Loss ya Break-even</td>
+              <td className="py-3 px-4 font-bold text-lg text-yellow-800 dark:text-yellow-300">Break-even to ₹30,000</td>
             </tr>
           </tbody>
         </table>
-        <p className="text-xs text-gray-600 dark:text-gray-400 mt-2 italic">Note: Pehla saal learning year hota hai. Year 2-3 mein economies of scale se profit margin 25-30% tak pahunch sakta hai.</p>
+        <p className="text-xs text-gray-600 dark:text-gray-400 mt-2 italic">Note: Year 2-3 mein jab aapka process set ho jata hai aur aap waste kam kar lete hain, tab net profit margin 25-35% tak aaram se pahunch sakta hai.</p>
       </div>
 
-      <Image 
-        src="/images/kisanguides/packaged-products.webp" 
-        alt="Fresh and Dried Mushroom Products Ready for Market - Packaging and Branding" 
-        width={800} 
-        height={450} 
-        sizes="(max-width: 768px) 100vw, 800px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
+        Sarkari Subsidy: Process Aur Ground Reality
+      </h2>
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        National Horticulture Board (NHB) aur State Horticulture Departments is sector ko boost dete hain. Lekin ek kadwi sachai yeh hai ki subsidy process mein 3-6 mahine lag sakte hain, aur paperwork thoda complex hota hai. 
+      </p>
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
+        Mera strong suggestion hai: apna kaam subsidy ke intezaar mein na rokiye. Pehle apni pocket se chhota setup karein, bank se loan lein, aur application daal dein. Agar subsidy aa gayi, toh use future expansion mein lagayein. Apne zila ke Horticulture Officer se mil kar latest state-specific scheme ki jankari zaroor lein.
+      </p>
+
+      <ExternalLinkButton 
+        url="https://nhb.gov.in/" 
+        label="NHB Official Portal - Subsidy Guidelines Check Karein" 
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Real Risks - Jo Koi Nahi Batata
+        Related Guides on KisanStatus
       </h2>
-      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Mushroom farming sunne mein simple lagta hai, par ground level par kuch challenges hote hain jinse aapko pehle se tayyar rehna chahiye:
-      </p>
-
-      <div className="space-y-4 mb-8 not-prose">
-        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
-          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">1. Contamination (Sabse Bada Risk)</h4>
-          <p className="text-sm text-gray-700 dark:text-gray-300">Green mold (Trichoderma), black mold, aur bacteria poori batch khatam kar sakte hain. Agar sterilization proper nahi hua, ya kamre mein hygiene maintain nahi hui, toh 50-100% crop loss ho sakta hai.</p>
-        </div>
-
-        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
-          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">2. Temperature aur Humidity Fluctuation</h4>
-          <p className="text-sm text-gray-700 dark:text-gray-300">Mushroom bahut sensitive hota hai. Temperature 2-3 degree bhi upar-neeche hua toh growth ruk jati hai. Humidity kam hui toh mushroom sookh jata hai, zyada hui toh bacteria attack karte hain.</p>
-        </div>
-
-        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
-          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">3. Seasonal Demand</h4>
-          <p className="text-sm text-gray-700 dark:text-gray-300">Kharif (June-October) aur Rabi (October-March) mein demand peak par hoti hai. Garmiyon (April-June) mein demand 30-40% kam ho jati hai. Aapko 12 months ka cash flow manage karna padta hai.</p>
-        </div>
-
-        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
-          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">4. Quality Spawn ki Availability</h4>
-          <p className="text-sm text-gray-700 dark:text-gray-300">Achha spawn milna mushkil hota hai. Local market mein kharab quality ka spawn milta hai jisse germination rate kam hota hai. Hamesha reputed labs ya government institutes se hi spawn khareedein.</p>
-        </div>
+      <div className="grid md:grid-cols-3 gap-4 mb-10 not-prose">
+        <Link href="/articles/KisanCreditCardOnlineApply2026" className="group block p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all shadow-sm">
+          <div className="text-blue-600 dark:text-blue-400 font-bold mb-1 group-hover:underline">KCC Loan 2026</div>
+          <p className="text-xs text-gray-600 dark:text-gray-400">Mushroom farming ke liye kam byaj dar par loan kaise lein aur documents ki list.</p>
+        </Link>
+        <Link href="/articles/pm-fme-yojana-food-processing" className="group block p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all shadow-sm">
+          <div className="text-blue-600 dark:text-blue-400 font-bold mb-1 group-hover:underline">PM FME Yojana</div>
+          <p className="text-xs text-gray-600 dark:text-gray-400">Mushroom drying aur pickle banane ke liye 35% subsidy aur loan process.</p>
+        </Link>
+        <Link href="/articles/tractor-subsidy-scheme" className="group block p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all shadow-sm">
+          <div className="text-blue-600 dark:text-blue-400 font-bold mb-1 group-hover:underline">Tractor Subsidy</div>
+          <p className="text-xs text-gray-600 dark:text-gray-400">Agar aap apni kheti ko next level par le jana chahte hain, toh SMAM yojana details.</p>
+        </Link>
       </div>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Room aur Equipment Maintenance: Har Cycle Mein Kya Zaroori Hai?
-      </h2>
-      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Mushroom farming mein room aur equipment ki proper maintenance hi contamination-free cycles ki kunji hai. Har cycle ke baad proper sanitization se aap apne setup ko saalon tak use kar sakte hain aur recurring cost ko control mein rakh sakte hain.
-      </p>
-
-      <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-8 border border-gray-200 dark:border-gray-700 not-prose">
-        <div className="grid md:grid-cols-2 gap-6">
-          <div>
-            <h3 className="font-bold text-lg mb-3 text-gray-900 dark:text-gray-100 border-b border-gray-300 dark:border-gray-600 pb-2">Daily/Weekly Routine:</h3>
-            <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-              <li>✓ Temperature aur humidity roz check karein.</li>
-              <li>✓ Hafte mein ek baar room ki proper ventilation karein.</li>
-              <li>✓ Spent straw (kharab bags) ko turant room se bahar nikal dein.</li>
-              <li>✓ Kisi bhi contaminated bag ko turant destroy karein.</li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-bold text-lg mb-3 text-gray-900 dark:text-gray-100 border-b border-gray-300 dark:border-gray-600 pb-2">Monthly/Annual Routine:</h3>
-            <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-              <li>✓ Mahine mein ek baar room ko formalin se fumigate karein.</li>
-              <li>✓ Saal ke ant mein poore room ko high pressure se wash karein.</li>
-              <li>✓ Shelving aur tools ko disinfect karein.</li>
-              <li>✓ Winter mein room ko properly seal karein taaki temperature maintain rahe.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Frequently Asked Questions (Unexpected Realities)
+        Frequently Asked Questions
       </h2>
       <div className="space-y-4 mb-8 not-prose">
         <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">1. Kya mushroom farming se kamre mein smell ya badboo aati hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Proper sterilization aur ventilation hone par smell minimal hoti hai. Par agar contamination ho jaye (green mold ya bacteria), toh foul smell aa sakti hai. Spent straw ko time par hata dena chahiye - agar 3-4 din se zyada pada rahe toh decomposition se smell aa sakti hai.</p>
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">1. Kya 10x10 feet ke chhote kamre mein mushroom farming profitable hai?</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Haan, 100-150 bags aaram se aa jate hain. Pehle saal seekhne ka hota hai, isliye break-even hona bhi badi baat hai. Doosre saal se direct marketing karke 20-25% net margin nikalna shuru ho jata hai.</p>
         </div>
         <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">2. Kya bina AC ke button mushroom ki kheti ho sakti hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Technically possible hai par commercially viable nahi. Button mushroom ko 14-18°C constant temperature chahiye. North India ke plains mein garmiyon mein 40-45°C tak temperature hota hai. Cooler ya evaporative cooling se 3-5 degree tak hi kami la sakte hain, jo kaafi nahi hai.</p>
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">2. Khumbi ke kamre mein badboo ya smell kyun aati hai?</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Agar sterilization sahi se hua ho toh smell minimal hoti hai. Lekin agar straw zyada geela chhod diya ya koi bag kharab ho gaya aur use turant bahar nahi nikala, toh ammonia ya sadan ki badboo aane lagti hai.</p>
         </div>
         <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">3. Pehli flush fail ho jaye ya contamination ho jaye toh kya karein?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Sabse pehle affected bags ko turant isolate karein aur kamre se bahar nikal dein. Baaki bags ko check karein - agar mycelium white aur healthy hai toh doosri flush aa sakti hai. Sterilization dobara karein (formalin spray), ventilation badhayein, aur humidity adjust karein.</p>
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">3. Green mold (hara fungus) dikhe toh turant kya karein?</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Us bag ko chupke se kamre se bahar nikal kar jala dein ya gehra gaad dein. Bachaye hue bags ke aas-paas Neem oil (5ml/litre) ya Trichoderma viride spray karein. Bleaching powder se farsh saaf karein.</p>
         </div>
         <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">4. Kya mushroom farming mein insurance ya crop protection scheme hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Abhi mushroom farming ke liye dedicated crop insurance scheme limited hai. Kuch states mein horticulture crops ke under coverage mil sakta hai, par contamination ya temperature fluctuation jaise risks generally cover nahi hote. Risk management ke liye proper training aur gradual scaling hi sabse achha protection hai.</p>
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">4. Asli mushroom beej (spawn) kahan se aur kitne mein milega?</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">2026 mein certified labs se oyster spawn ka rate ₹180 se ₹250 per kg hai. Hamesha DMR Solan ya state agricultural university ke authorized vendors se hi lein. Local mandi ke anjaam sources se bachein.</p>
         </div>
       </div>
 
@@ -457,7 +400,7 @@ export default function MushroomKheti() {
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>• Kam jagah (100-200 sq ft) available hai.</li>
             <li>• Daily 3-4 hours de sakte hain (monitoring zaroori hai).</li>
-            <li>• ₹50,000-1 lakh initial investment kar sakte hain.</li>
+            <li>• ₹40,000-60,000 initial investment kar sakte hain.</li>
             <li>• Technical details seekhne ki ichha hai.</li>
             <li>• Urban ya semi-urban area mein hain (market access achha hai).</li>
           </ul>
@@ -466,7 +409,7 @@ export default function MushroomKheti() {
         <div className="bg-red-50 dark:bg-red-900/20 p-5 rounded-lg border border-red-200 dark:border-red-800">
           <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">❌ Nahi, agar:</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-            <li>• Temperature control nahi kar sakte (AC/coolers afford nahi kar sakte).</li>
+            <li>• Temperature control nahi kar sakte.</li>
             <li>• Daily monitoring nahi kar sakte (yeh 365 din ka kaam hai).</li>
             <li>• Market access nahi hai (door daraz gaon mein mushkil hai).</li>
             <li>• Technical knowledge seekhne ki ichha nahi hai.</li>
@@ -475,24 +418,32 @@ export default function MushroomKheti() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        <strong>Meri aakhri salah:</strong> Bina research ke kisi vendor ki baaton mein aakar decision na lein. Pehle apne nazdeeki Krishi Vigyan Kendra (KVK) jayein. Wahan ke officers aapko exact subsidy, eligible vendors ki list, aur free training ke baare mein guide karenge. Uske baad kam se kam 3 vendors se quotation lein, unke purane installations dekhne jayein, aur phir hi apply karein.
+        <strong>Antim salah:</strong> Bina research ke kisi private vendor ki baaton mein aakar decision na lein jo "lakhon ka profit" ka wada karein. Pehle apne nazdeeki Krishi Vigyan Kendra (KVK) jayein. Wahan ke officers aapko exact subsidy, eligible vendors ki list, aur free practical training ke baare mein guide karenge. Uske baad kam se kam 3 vendors se quotation lein, unke purane installations dekhne jayein, aur phir hi apply karein.
       </p>
 
-      {/* Sources & References */}
+      <Image 
+        src="/images/kisanguides/packaged-products.webp" 
+        alt="Fresh and Dried Mushroom Products Ready for Market - Packaging and Branding" 
+        width={800} 
+        height={450} 
+        sizes="(max-width: 768px) 100vw, 800px"
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+      />
+
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Sources & References
       </h2>
       <ul className="list-disc pl-5 space-y-2 mb-8 text-sm text-gray-600 dark:text-gray-400 not-prose">
-        <li><strong>National Horticulture Board (NHB):</strong> Official guidelines for mushroom farming subsidies and training.</li>
-        <li><strong>Directorate of Mushroom Research (DMR), Solan:</strong> Government of India portal for scheme details and application.</li>
-        <li><strong>Krishi Vigyan Kendra (KVK):</strong> District-level practical training modules and mushroom cultivation support.</li>
-        <li><strong>FSSAI:</strong> Regulatory guidelines for packaged mushroom and food safety licensing.</li>
+        <li><strong>National Horticulture Board (NHB):</strong> Official guidelines for mushroom farming subsidies, training modules, and back-ended capital assistance.</li>
+        <li><strong>Directorate of Mushroom Research (DMR), Solan:</strong> Government of India premier portal for scheme details, spawn quality standards, and application protocols.</li>
+        <li><strong>Krishi Vigyan Kendra (KVK):</strong> District-level practical training modules, hands-on mushroom cultivation support, and local vendor verification.</li>
+        <li><strong>FSSAI:</strong> Regulatory guidelines for packaged mushroom, food safety licensing, and value-added product norms.</li>
       </ul>
 
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
         <p className="text-sm text-gray-700 dark:text-gray-300">
           <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
-          Yeh article general educational purpose ke liye hai. Actual costs, subsidies, aur procedures aapke location, state policies, aur specific circumstances ke hisaab se vary kar sakte hain. Koi bhi financial investment karne se pehle qualified professionals (horticulture officers, NHB officials, ya bank managers) se consult karein. Last updated: July 2026.
+          Yeh article general educational purpose ke liye hai. Actual costs, subsidies, aur procedures aapke location, state policies, aur specific circumstances ke hisaab se vary kar sakte hain. Koi bhi financial investment karne se pehle qualified professionals (horticulture officers, NHB officials, ya bank managers) se consult karein. Last updated: July 25, 2026.
         </p>
       </div>
     </article>
