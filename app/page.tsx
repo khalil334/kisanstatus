@@ -196,6 +196,18 @@ export default function HomePage() {
                   name: 'PM Kisan Maandhan Withdrawal & Refund Rules',
                   url: `${SITE_URL}/maandhan/pm-kisan-maandhan-withdrawal-refund-rules`,
                 },
+                {
+                  '@type': 'ListItem',
+                  position: 10,
+                  name: 'PM Kisan Maandhan Auto Debit Ka Sach',
+                  url: `${SITE_URL}/maandhan/pm-kisan-maandhan-auto-debit-poora-sach`,
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 11,
+                  name: 'PM Kisan Maandhan Status Check Online',
+                  url: `${SITE_URL}/maandhan/pm-kisan-maandhan-status-check-online`,
+                },
               ],
             },
             potentialAction: {
