@@ -3,34 +3,35 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
+import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'Article',
-      '@id': 'https://kisanstatus.com/articles/maandhan/pm-kisan-maandhan-auto-debit-poora-sach/#article',
-      headline: 'PM Kisan Se Maandhan Ka Paisa Kyun Kat Raha Hai? Auto Debit Ka Poora Sach',
-      description: 'PM Kisan ke ₹2000 mein se ₹55-200 kyun kat rahe hain? NACH auto-debit mandate, CSC pe sign kiya gaya form, aur contribution pay karne ka asli process samjhiye.',
-      author: { '@type': 'Organization', name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' },
-      publisher: { '@type': 'Organization', name: 'KisanStatus.com', logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.webp' } },
-      datePublished: '2026-07-24',
-      dateModified: '2026-07-24',
-      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://kisanstatus.com/articles/pm-kisan-maandhan-auto-debit-poora-sach/' }
-    },
-    {
-      '@type': 'FAQPage',
-      '@id': 'https://kisanstatus.com/articles/pm-kisan-maandhan-auto-debit-poora-sach/#faq',
-      mainEntity: [
-        { '@type': 'Question', name: 'PM Kisan ke ₹2000 mein se ₹55 kyun kat gaye?', acceptedAnswer: { '@type': 'Answer', text: 'Jab aap PM Kisan Maandhan Yojana mein register karte hain, toh aapka bank account NACH auto-debit mandate ke liye link ho jata hai. Har baar jab PM Kisan ki kist aati hai, toh usme se aapka monthly share (₹55 se ₹200 tak) automatically kat jata hai.' } },
-        { '@type': 'Question', name: 'Auto-debit band kaise karein PM Kisan Maandhan se?', acceptedAnswer: { '@type': 'Answer', text: 'Apni bank branch jakar NACH mandate cancellation form submit karein, ya net banking/mobile banking ke "Mandates" section se cancel karein. 5-7 din mein process complete ho jata hai. Cancellation ka acknowledgement receipt zaroor lein.' } },
-        { '@type': 'Question', name: 'Kya PM Kisan aur PM Kisan Maandhan alag scheme hain?', acceptedAnswer: { '@type': 'Answer', text: 'Haan, dono bilkul alag hain. PM Kisan Samman Nidhi mein government aapko ₹6000 saal deti hai. PM Kisan Maandhan mein aap khud share dete hain taaki 60 saal ke baad ₹3000 pension mile. Dono ka koi direct link nahi hai, bas ek optional facility hai ke PM Kisan ki kist se aapka Maandhan share kat jaye.' } }
-      ]
-    }
-  ]
-};
+export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article: MaandhanArticleMeta }) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Article',
+        '@id': `https://kisanstatus.com/maandhan/${article.slug}/#article`,
+        headline: article.title,
+        description: article.description,
+        author: { '@type': 'Organization', name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' },
+        publisher: { '@type': 'Organization', name: 'KisanStatus.com', logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.webp' } },
+        datePublished: '2026-07-24',
+        dateModified: '2026-07-25',
+        mainEntityOfPage: { '@type': 'WebPage', '@id': `https://kisanstatus.com/maandhan/${article.slug}/` }
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `https://kisanstatus.com/maandhan/${article.slug}/#faq`,
+        mainEntity: [
+          { '@type': 'Question', name: 'PM Kisan ke ₹2000 mein se ₹55 kyun kat gaye?', acceptedAnswer: { '@type': 'Answer', text: 'Jab aap PM Kisan Maandhan Yojana mein register karte hain, toh aapka bank account NACH auto-debit mandate ke liye link ho jata hai. Har baar jab PM Kisan ki kist aati hai, toh usme se aapka monthly share (₹55 se ₹200 tak) automatically kat jata hai.' } },
+          { '@type': 'Question', name: 'Auto-debit band kaise karein PM Kisan Maandhan se?', acceptedAnswer: { '@type': 'Answer', text: 'Apni bank branch jakar NACH mandate cancellation form submit karein, ya net banking/mobile banking ke "Mandates" section se cancel karein. 5-7 din mein process complete ho jata hai. Cancellation ka acknowledgement receipt zaroor lein.' } },
+          { '@type': 'Question', name: 'Kya PM Kisan aur PM Kisan Maandhan alag scheme hain?', acceptedAnswer: { '@type': 'Answer', text: 'Haan, dono bilkul alag hain. PM Kisan Samman Nidhi mein government aapko ₹6000 saal deti hai. PM Kisan Maandhan mein aap khud share dete hain taaki 60 saal ke baad ₹3000 pension mile. Dono ka koi direct link nahi hai, bas ek optional facility hai ke PM Kisan ki kist se aapka Maandhan share kat jaye.' } }
+        ]
+      }
+    ]
+  };
 
-export default function PmKisanMaandhanAutoDebitPooraSach() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-8 text-gray-800 dark:text-gray-200 leading-relaxed prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-blue-600 dark:prose-a:text-blue-400">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
@@ -38,7 +39,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach() {
       <nav className="text-sm text-gray-500 mb-4 not-prose">
         <Link href="/" className="hover:text-blue-600">Home</Link>
         <span className="mx-2">/</span>
-        <Link href="/articles/maandhan" className="hover:text-blue-600">Maandhan Yojana</Link>
+        <Link href="/maandhan" className="hover:text-blue-600">Maandhan Yojana</Link>
         <span className="mx-2">/</span>
         <span className="text-gray-800 font-medium">Auto Debit Ka Sach</span>
       </nav>
@@ -54,7 +55,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach() {
       />
 
       <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100 leading-tight">
-        PM Kisan Se Maandhan Ka Paisa Kyun Kat Raha Hai? Auto Debit Ka Poora Sach
+        {article.title}
       </h1>
 
       <p className="text-sm text-gray-500 mb-6 not-prose">
@@ -370,11 +371,11 @@ export default function PmKisanMaandhanAutoDebitPooraSach() {
       </h2>
 
       <div className="grid md:grid-cols-2 gap-4 mb-10 not-prose">
-        <Link href="/articles/maandhan/pm-kisan-maandhan-registration-2026" className="group block p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all shadow-sm">
+        <Link href="/maandhan/pm-kisan-maandhan-registration-2026" className="group block p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all shadow-sm">
           <div className="text-blue-600 dark:text-blue-400 font-bold mb-1 group-hover:underline">Registration 2026</div>
           <p className="text-xs text-gray-600 dark:text-gray-400">CSC center, bank branch ya online — 3 tareeke se kaise apply karein. Documents ki puri list.</p>
         </Link>
-        <Link href="/articles/maandhan/pm-kisan-maandhan-withdrawal-refund-rules" className="group block p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all shadow-sm">
+        <Link href="/maandhan/pm-kisan-maandhan-withdrawal-refund-rules" className="group block p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all shadow-sm">
           <div className="text-blue-600 dark:text-blue-400 font-bold mb-1 group-hover:underline">Withdrawal & Refund Rules</div>
           <p className="text-xs text-gray-600 dark:text-gray-400">Scheme chhodne par kitna paisa wapas milega? Family pension ke niyam aur common mistakes.</p>
         </Link>
