@@ -58,7 +58,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach() {
       </h1>
 
       <p className="text-sm text-gray-500 mb-6 not-prose">
-        <em>Written by KisanStatus Research Team | Last verified: July 24, 2026 | Sources: PIB Official Release (Sep 2024), PM-KMY Operational Guidelines (DAC&FW), maandhan.in</em>
+        <em>Written by KisanStatus Research Team | Last verified: July 24, 2026 | Sources: PIB Official Release (Sep 2024), PM-KMY Operational Guidelines (DAC&FW, Ministry of Agriculture &amp; Farmers Welfare), maandhan.in</em>
       </p>
 
       <div className="mb-8 p-5 bg-red-50 dark:bg-red-900/20 rounded-xl border-l-4 border-red-600 not-prose shadow-sm">
@@ -192,7 +192,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach() {
             <tr className="bg-green-50 dark:bg-green-900/20"><td className="py-3 px-4 font-bold">40</td><td className="py-3 px-4 font-bold">₹200</td><td className="py-3 px-4 font-bold">₹200</td><td className="py-3 px-4 font-bold">₹400</td></tr>
           </tbody>
         </table>
-        <p className="text-xs text-gray-600 dark:text-gray-400 mt-2 italic">Source: PIB Official Release, Pradhan Mantri Kisan Maan-Dhan Yojana — Five Successful Years (Sep 2024), DAC&FW Operational Guidelines</p>
+        <p className="text-xs text-gray-600 dark:text-gray-400 mt-2 italic">Source: PM-KMY Operational Guidelines (DAC&FW) — Entry Age-Specific Monthly Contribution Chart; PIB Official Release, Pradhan Mantri Kisan Maan-Dhan Yojana — Five Successful Years (Sep 2024)</p>
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
@@ -250,7 +250,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach() {
 
       <div className="bg-red-50 dark:bg-red-900/20 p-5 rounded-lg mb-8 border border-red-200 dark:border-red-800 not-prose">
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
-          <strong>Default hone se bachne ke liye:</strong> Har hafte apne bank account ka balance check karein. Agar auto-debit fail ho, toh turant CSC center jakar manual payment karein. 3 mahine se zyada gap mat dein. Agar kisi mahine PM Kisan ki kist late aayi, toh manual payment ka option use karein. Toll-free helpline 1800-3000-3468 pe bhi call karke status poochh sakte hain.
+          <strong>Default hone se bachne ke liye:</strong> Har hafte apne bank account ka balance check karein. Agar auto-debit fail ho, toh turant CSC center jakar manual payment karein. 3 mahine se zyada gap mat dein. Agar kisi mahine PM Kisan ki kist late aayi, toh manual payment ka option use karein. Status ya sahayata ke liye maandhan.in par diya gaya official helpline number ya nazdeeki CSC center check karein.
         </p>
       </div>
 
@@ -310,21 +310,21 @@ export default function PmKisanMaandhanAutoDebitPooraSach() {
       </div>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Aksal Confusions Jo Kisanon Ke Mann Mein Rehti Hain
+        Aksar Confusions Jo Kisanon Ke Mann Mein Rehti Hain
       </h2>
 
       <div className="space-y-4 mb-8 not-prose">
         <div className="bg-white dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">"Kya government ne meri marzi ke bagair paisa kat liya?"</h3>
-          <p className="text-sm text-gray-700 dark:text-gray-300">Nahi. Aapne hi enrollment form mein consent di thi. Form ke section 7 mein clearly likha hota hai ke aap authorize kar rahe hain automatic debit ke liye. Agar aapko yaad nahi, toh shayad CSC operator ne theek se explain nahi kiya tha. Lekin legally aapne sign kiya hai, isliye bank debit karne ka haq rakhta hai.</p>
+          <p className="text-sm text-gray-700 dark:text-gray-300">Nahi. Aapne hi enrollment form mein consent di thi. Form mein clearly likha hota hai ke aap authorize kar rahe hain automatic debit ke liye. Agar aapko yaad nahi, toh shayad CSC operator ne theek se explain nahi kiya tha. Lekin legally aapne sign kiya hai, isliye bank debit karne ka haq rakhta hai.</p>
         </div>
         <div className="bg-white dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">"Kya main Maandhan se nikal kar PM Kisan ka pura paisa le sakta hoon?"</h3>
-          <p className="text-sm text-gray-700 dark:text-gray-300">Dono schemes ka koi direct link nahi hai. PM Kisan ka paisa aapko milta hi rahega chahe aap Maandhan mein ho ya na ho. Maandhan se exit karne par sirf aapka deposited amount + savings bank interest wapas milta hai (5 saal ke baad). Government ka matching share wapas nahi milta — woh pension fund mein reh jata hai.</p>
+          <p className="text-sm text-gray-700 dark:text-gray-300">Dono schemes ka koi direct link nahi hai. PM Kisan ka paisa aapko milta hi rahega chahe aap Maandhan mein ho ya na ho. Maandhan se exit karne ke rules aapke joining ke saalon par depend karte hain: 10 saal se pehle exit karne par sirf aapka deposited amount + savings bank interest wapas milta hai. 10 saal ke baad (lekin 60 saal se pehle) exit karne par contribution + accumulated interest milta hai — fund earnings ya savings bank rate, jo bhi zyada ho. Dono cases mein government ka matching share wapas nahi milta — woh pension fund mein hi reh jata hai.</p>
         </div>
         <div className="bg-white dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">"Mera share zyada kyun kat raha hai? Maine toh ₹55 bola tha."</h3>
-          <p className="text-sm text-gray-700 dark:text-gray-300">Share aapki entry age ke hisaab se fix hota hai. 18 saal pe ₹55, 25 pe ₹80, 30 pe ₹105, 40 pe ₹200. Agar zyada kat raha hai, toh ho sakta hai enrollment ke waqt aapki date of birth galt enter hui ho. Date of birth kabhi change nahi hoti, lekin agar genuine mistake hai toh CSC pe correction request daal sakte hain.</p>
+          <p className="text-sm text-gray-700 dark:text-gray-300">Share aapki entry age ke hisaab se fix hota hai. 18 saal pe ₹55, 25 pe ₹80, 30 pe ₹105, 40 pe ₹200. Agar zyada kat raha hai, toh ho sakta hai enrollment ke waqt aapki date of birth galat enter hui ho. Date of birth kabhi change nahi hoti, lekin agar genuine mistake hai toh CSC pe correction request daal sakte hain.</p>
         </div>
         <div className="bg-white dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">"Kya main apna share amount baad mein badal sakta hoon?"</h3>
@@ -358,7 +358,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Har saal aapko LIC ki taraf se ek statement milta hai jismein aapka corpus balance likha hota hai. Agar statement nahi mila, toh toll-free helpline 1800-3000-3468 pe call karke apna KPAN number batayein. Woh aapka balance bata denge.
+        Har contribution jama hone par aapke registered mobile number par SMS confirmation aata hai. Apna balance ya status verify karne ke liye maandhan.in ya pmkmy.gov.in portal par apna KPAN number ya mobile number daal kar login kar sakte hain, ya nazdeeki CSC center se bhi pata kar sakte hain.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
@@ -411,7 +411,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach() {
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
         <p className="text-sm text-gray-700 dark:text-gray-300">
           <strong className="text-orange-600 dark:text-orange-400 block mb-2">Sources & Disclaimer:</strong>
-          Yeh article PM Kisan Maandhan Yojana ke official operational guidelines (DAC&FW, Ministry of Agriculture & Farmers Welfare), PIB official release (September 2024), aur maandhan.in portal ke data par based hai. Contribution amounts, default rules, aur NACH process official documents se verify kiye gaye hain. Actual processes, amounts, aur rules aapke bank, location, aur current government policies ke hisaab se vary kar sakte hain. Koi bhi financial decision lene se pehle official helpline 1800-3000-3468 ya apni bank branch se confirm karein. Last verified: July 24, 2026.
+          Yeh article PM Kisan Maandhan Yojana ke official operational guidelines (DAC&FW, Ministry of Agriculture & Farmers Welfare), PIB official release (September 2024), aur maandhan.in portal ke data par based hai. Contribution amounts, default/dormant rules, aur NACH process official documents se verify kiye gaye hain. Actual processes aur rules aapke bank, location, aur current government policies ke hisaab se vary kar sakte hain. Koi bhi financial decision lene se pehle official maandhan.in / pmkmy.gov.in portal ya apni bank branch se confirm karein. Last verified: July 24, 2026.
         </p>
       </div>
     </article>
