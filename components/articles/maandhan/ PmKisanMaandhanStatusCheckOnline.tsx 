@@ -1,36 +1,37 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import Link from "next/link";
-import ExternalLinkButton from "@/components/ExternalLinkButton";
+import Image from 'next/image';
+import Link from 'next/link';
+import ExternalLinkButton from '@/components/ExternalLinkButton';
+import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Article",
-      "@id": "https://kisanstatus.com/articles/pm-kisan-maandhan-status-check-online/#article",
-      "headline": "PM Kisan Maandhan Status Check Online: Pension Card, Passbook, Contribution History",
-      "description": "PM Kisan Maandhan Yojana mein apna status kaise verify kijiye. Pension card download, passbook check, contribution history aur missed payment ka pura process.",
-      "author": { "@type": "Organization", "name": "KisanStatus Team", "url": "https://kisanstatus.com/about" },
-      "publisher": { "@type": "Organization", "name": "KisanStatus.com", "logo": { "@type": "ImageObject", "url": "https://kisanstatus.com/logo.webp" } },
-      "datePublished": "2026-07-24",
-      "dateModified": "2026-07-24",
-      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://kisanstatus.com/articles/pm-kisan-maandhan-status-check-online/" }
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://kisanstatus.com/articles/pm-kisan-maandhan-status-check-online/#faq",
-      "mainEntity": [
-        { "@type": "Question", "name": "PM Kisan Maandhan status online kaise verify kijiye?", "acceptedAnswer": { "@type": "Answer", "text": "pmkmy.gov.in pe jakar apna mobile no. ya KPAN no. daaliye. OTP aayega, verify kijiye. Dashboard pe aapka status, contribution history, aur pension card sab dikhega." } },
-        { "@type": "Question", "name": "Maandhan pension card kaise download kijiye?", "acceptedAnswer": { "@type": "Answer", "text": "Login karne ke baad Download KPAN Card option pe click kijiye. PDF format mein card download ho jayega. Isko print karke apne paas sambhal kar rakhein." } },
-        { "@type": "Question", "name": "Contribution history mobile se kaise dekhein?", "acceptedAnswer": { "@type": "Answer", "text": "Mobile browser mein pmkmy.gov.in kholein. Login karke Contribution History ya Passbook section mein jayein. Har mahine ka record dikhega." } }
-      ]
-    }
-  ]
-};
+export default function PmKisanMaandhanStatusCheckOnline({ article }: { article: MaandhanArticleMeta }) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Article',
+        '@id': `https://kisanstatus.com/maandhan/${article.slug}/#article`,
+        headline: article.title,
+        description: article.description,
+        author: { '@type': 'Organization', name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' },
+        publisher: { '@type': 'Organization', name: 'KisanStatus.com', logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.webp' } },
+        datePublished: '2026-07-24',
+        dateModified: '2026-07-25',
+        mainEntityOfPage: { '@type': 'WebPage', '@id': `https://kisanstatus.com/maandhan/${article.slug}/` }
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `https://kisanstatus.com/maandhan/${article.slug}/#faq`,
+        mainEntity: [
+          { '@type': 'Question', name: 'PM Kisan Maandhan status online kaise verify kijiye?', acceptedAnswer: { '@type': 'Answer', text: 'pmkmy.gov.in pe jakar apna mobile no. ya KPAN no. daaliye. OTP aayega, verify kijiye. Dashboard pe aapka status, contribution history, aur pension card sab dikhega.' } },
+          { '@type': 'Question', name: 'Maandhan pension card kaise download kijiye?', acceptedAnswer: { '@type': 'Answer', text: 'Login karne ke baad Download KPAN Card option pe click kijiye. PDF format mein card download ho jayega. Isko print karke apne paas sambhal kar rakhein.' } },
+          { '@type': 'Question', name: 'Contribution history mobile se kaise dekhein?', acceptedAnswer: { '@type': 'Answer', text: 'Mobile browser mein pmkmy.gov.in kholein. Login karke Contribution History ya Passbook section mein jayein. Har mahine ka record dikhega.' } }
+        ]
+      }
+    ]
+  };
 
-export default function PmKisanMaandhanStatusCheckOnline() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-8 text-gray-800 dark:text-gray-200 leading-relaxed prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-blue-600 dark:prose-a:text-blue-400">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
@@ -38,7 +39,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       <nav className="text-sm text-gray-500 mb-4 not-prose">
         <Link href="/" className="hover:text-blue-600">Home</Link>
         <span className="mx-2">/</span>
-        <Link href="/articles/maandhan" className="hover:text-blue-600">Maandhan Yojana</Link>
+        <Link href="/maandhan" className="hover:text-blue-600">Maandhan Yojana</Link>
         <span className="mx-2">/</span>
         <span className="text-gray-800 font-medium">Status Check Online</span>
       </nav>
@@ -54,11 +55,11 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       />
 
       <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100 leading-tight">
-        PM Kisan Maandhan Status Check Online: Pension Card, Passbook, Contribution History
+        {article.title}
       </h1>
 
       <p className="text-sm text-gray-500 mb-6 not-prose">
-        <em>Written by KisanStatus Research Team | Last verified: July 24, 2026 | Sources: maandhan.in, PM-KMY Operational Guidelines (DAC&FW, Ministry of Agriculture &amp; Farmers Welfare)</em>
+        <em>Written by KisanStatus Research Team | Last verified: July 25, 2026 | Sources: maandhan.in, PM-KMY Operational Guidelines (DAC&FW, Ministry of Agriculture &amp; Farmers Welfare)</em>
       </p>
 
       <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
@@ -418,11 +419,11 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       </h2>
 
       <div className="grid md:grid-cols-2 gap-4 mb-10 not-prose">
-        <Link href="/articles/maandhan/pm-kisan-maandhan-registration-2026" className="group block p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all shadow-sm">
+        <Link href="/maandhan/pm-kisan-maandhan-registration-2026" className="group block p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all shadow-sm">
           <div className="text-blue-600 dark:text-blue-400 font-bold mb-1 group-hover:underline">Registration 2026</div>
           <p className="text-xs text-gray-600 dark:text-gray-400">CSC center, bank branch ya online — 3 tareeke se kaise apply karein. Documents ki puri list.</p>
         </Link>
-        <Link href="/articles/maandhan/pm-kisan-maandhan-auto-debit-poora-sach" className="group block p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all shadow-sm">
+        <Link href="/maandhan/pm-kisan-maandhan-auto-debit-poora-sach" className="group block p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all shadow-sm">
           <div className="text-blue-600 dark:text-blue-400 font-bold mb-1 group-hover:underline">Auto Debit Ka Sach</div>
           <p className="text-xs text-gray-600 dark:text-gray-400">PM Kisan ke 2000 mein se share kyun kat raha hai? NACH mandate ka poora process.</p>
         </Link>
@@ -459,7 +460,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
         <p className="text-sm text-gray-700 dark:text-gray-300">
           <strong className="text-orange-600 dark:text-orange-400 block mb-2">Sources & Disclaimer:</strong>
-          Yeh article PM Kisan Maandhan Yojana ke official operational guidelines (DAC&FW, Ministry of Agriculture & Farmers Welfare) aur maandhan.in / pmkmy.gov.in portal ke data par based hai. Portal interface, URLs, aur processes time ke saath badal sakte hain. Hamesha official pmkmy.gov.in ya maandhan.in portal hi use karein. Kisi bhi third-party website pe apna OTP ya password share na karein. Sahayata ke liye official portal par diya gaya helpline number use karein. Last verified: July 24, 2026.
+          Yeh article PM Kisan Maandhan Yojana ke official operational guidelines (DAC&FW, Ministry of Agriculture & Farmers Welfare) aur maandhan.in / pmkmy.gov.in portal ke data par based hai. Portal interface, URLs, aur processes time ke saath badal sakte hain. Hamesha official pmkmy.gov.in ya maandhan.in portal hi use karein. Kisi bhi third-party website pe apna OTP ya password share na karein. Sahayata ke liye official portal par diya gaya helpline number use karein. Last verified: July 25, 2026.
         </p>
       </div>
     </article>
