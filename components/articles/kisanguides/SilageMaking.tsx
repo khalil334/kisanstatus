@@ -229,7 +229,7 @@ export default function SilageMaking() {
       </h2>
       
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Medium-scale unit ka budget dekhते hain — jo mahine mein 3,000-4,000 packets (25 kg each) bana sake.
+        Medium-scale unit ka budget dekhte hain — jo mahine mein 3,000-4,000 packets (25 kg each) bana sake.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 text-sm italic">
@@ -279,7 +279,7 @@ export default function SilageMaking() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Is investment ke liye <Link href="/articles/loan/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Kisan Credit Card (KCC)</Link> ek badhiya option hai — working capital ke liye limit badhwa sakte ho.
+        Is investment ke liye <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Kisan Credit Card (KCC)</Link> ek badhiya option hai — working capital ke liye limit badhwa sakte ho.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
