@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Poppins } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
@@ -160,8 +161,6 @@ export default function RootLayout({
       className={poppins.variable}
     >
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://region1.google-analytics.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.google.com" />
@@ -369,7 +368,12 @@ export default function RootLayout({
           />
         )}
 
-        {process.env.NODE_ENV === 'production' && <Analytics />}
+        {process.env.NODE_ENV === 'production' && (
+          <>
+            <Analytics />
+            <SpeedInsights />
+          </>
+        )}
       </body>
     </html>
   );
