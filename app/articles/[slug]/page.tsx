@@ -148,35 +148,6 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
   ];
 }
 
-function ArticleLoading() {
-  return (
-    <div className="container-site py-10" style={{ minHeight: '60vh' }} aria-busy="true" aria-label="Article content loading">
-      <div className="animate-pulse space-y-6 max-w-4xl mx-auto px-4">
-        <div className="space-y-3">
-          <div className="h-10 bg-gray-200 dark:bg-gray-700 rounded w-3/4" />
-          <div className="h-10 bg-gray-200 dark:bg-gray-700 rounded w-1/2" />
-        </div>
-        <div className="flex gap-4">
-          <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-24" />
-          <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-32" />
-        </div>
-        <div className="space-y-4">
-          <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-full" />
-          <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-full" />
-          <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-5/6" />
-          <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-4/6" />
-        </div>
-        <div className="aspect-video bg-gray-200 dark:bg-gray-700 rounded-xl w-full" />
-        <div className="space-y-4">
-          <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-full" />
-          <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-5/6" />
-          <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-full" />
-        </div>
-      </div>
-    </div>
-  );
-}
-
 const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> = {
   KisanRinKahaSeLe2026: dynamic(() => import('@/components/articles/KisanRinKahaSeLe2026'), { ssr: true }),
   KisanTractorLoan2026: dynamic(() => import('@/components/articles/KisanTractorLoan2026'), { ssr: true }),
@@ -206,7 +177,6 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   PmKisanRejectedStatusReApplyGuide: dynamic(() => import('@/components/articles/PmKisanRejectedStatusReApplyGuide'), { ssr: true }),
   PmKisanVillageWiseListPdfDownload: dynamic(() => import('@/components/articles/PmKisanVillageWiseListPdfDownload'), { ssr: true }),
   PmKisanMobileNumberChangeUpdate: dynamic(() => import('@/components/articles/PmKisanMobileNumberChangeUpdate'), { ssr: true }),
-  
   BakriPalanYojana: dynamic(() => import('@/components/articles/kisanguides/BakriPalanYojana'), { ssr: true }),
   MushroomKheti: dynamic(() => import('@/components/articles/kisanguides/MushroomKheti'), { ssr: true }),
   MadhumakhiPalan: dynamic(() => import('@/components/articles/kisanguides/MadhumakhiPalan'), { ssr: true }),
