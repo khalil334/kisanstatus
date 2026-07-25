@@ -11,10 +11,6 @@ const MODIFIED = '2026-07-25T08:00:00+05:30';
 
 const FALLBACK_IMG = '/images/articles/placeholder-fallback.webp';
 
-// Wraps next/image so that if a source file 404s (missing/renamed on the
-// server), the page swaps in a placeholder instead of showing a broken-image
-// icon. This does not replace fixing the actual missing file on the server —
-// it just stops a single bad image from looking broken to visitors.
 function SafeImage({ src, alt, ...rest }: React.ComponentProps<typeof Image>) {
   const [currentSrc, setCurrentSrc] = useState(src);
   return (
@@ -29,9 +25,10 @@ function SafeImage({ src, alt, ...rest }: React.ComponentProps<typeof Image>) {
 
 const RELATED = [
   { slug: 'PmKisanPaymentFailedFix2026', title: 'Payment Failed Fix', emoji: '💸' },
-  { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Status Guide', emoji: '' },
-  { slug: 'PmKisanMasterGuide2026', title: 'Master Guide', emoji: '📚' },
+  { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Status Guide', emoji: '💳' },
+  { slug: 'PmKisanMasterGuide2026', title: 'Master Guide', emoji: '' },
   { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide', emoji: '🔐' },
+  { slug: 'PmKisanBankAccountChangeProcess', title: 'Bank Change', emoji: '🏦' },
 ];
 
 const FAQS_DATA = [
@@ -79,14 +76,16 @@ export default function PmKisanBankAccountChangeProcess({ article }: { article: 
             <span>/</span>
             <Link href="/articles" className="hover:text-white transition-colors">Articles</Link>
             <span>/</span>
+            <Link href="/articles?category=status-check" className="hover:text-white transition-colors">Status Check</Link>
+            <span>/</span>
             <span className="text-white font-bold">Bank Account Change</span>
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Complete Process Guide</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            PM Kisan Bank Account Change Process: Naya Account Kaise Jodein?
+            PM Kisan Bank Change 2026: Naya Account
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white">KisanStatus Team</Link></span>
+            <span>️ <Link href="/about" className="underline hover:text-white">KisanStatus Team</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
             <span> Updated: {fmtDate(MODIFIED)}</span>
             <span>⏱️ 16 min read</span>
@@ -96,7 +95,6 @@ export default function PmKisanBankAccountChangeProcess({ article }: { article: 
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* Hero Image */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <SafeImage
             src="/images/articles/pm-kisan-bank-account-change/bank-change-hero.webp"
@@ -112,7 +110,6 @@ export default function PmKisanBankAccountChangeProcess({ article }: { article: 
           </p>
         </div>
 
-        {/* Introduction */}
         <section className="mb-8">
           <SH>Purana Account Band Ho Gaya? Paisa Kahan Aayega?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -142,7 +139,6 @@ export default function PmKisanBankAccountChangeProcess({ article }: { article: 
           </p>
         </section>
 
-        {/* SECTION 1: Why Change Needed */}
         <section className="mb-8">
           <SH>Bank Account Kyun Change Karna Padta Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -153,7 +149,7 @@ export default function PmKisanBankAccountChangeProcess({ article }: { article: 
               { icon: '🏦', title: 'Account Dormant/Band', desc: 'Do saal tak koi len-den na ho toh bank account ko dormant ya freeze kar deta hai. Jan Dhan account bhi istemal na hone par freeze ho jaata hai.' },
               { icon: '🔄', title: 'IFSC Code Change', desc: 'Branches merge hone se IFSC badal jaata hai, aur purana code portal par kaam karna band kar deta hai.' },
               { icon: '', title: 'Galat Account Link', desc: 'Registration ke waqt kabhi galat account number ya IFSC daal diya jaata hai, ya Current account de diya jaata hai jabki PM Kisan sirf Savings account mein aata hai.' },
-              { icon: '📛', title: 'Naam Mismatch', desc: 'Passbook aur Aadhaar mein naam thoda alag ho toh payment reject ho jaati hai — isko system "Name Mismatch" kehta hai.' },
+              { icon: '', title: 'Naam Mismatch', desc: 'Passbook aur Aadhaar mein naam thoda alag ho toh payment reject ho jaati hai — isko system "Name Mismatch" kehta hai.' },
             ].map(({ icon, title, desc }) => (
               <div key={title} className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl hover:border-green-300 dark:hover:border-green-700 transition-all">
                 <span className="text-2xl block mb-2">{icon}</span>
@@ -164,7 +160,6 @@ export default function PmKisanBankAccountChangeProcess({ article }: { article: 
           </div>
         </section>
 
-        {/* SECTION 2: CSC Process */}
         <section className="mb-8">
           <SH>Method 1: CSC Center Se Bank Change Karo (Sabse Aasan)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -206,7 +201,6 @@ export default function PmKisanBankAccountChangeProcess({ article }: { article: 
           </WB>
         </section>
 
-        {/* SECTION 3: Bank Branch NPCI */}
         <section className="mb-8">
           <SH>Method 2: Bank Branch Mein NPCI Seeding (Bahut Zaroori)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -228,7 +222,7 @@ export default function PmKisanBankAccountChangeProcess({ article }: { article: 
             </ol>
           </div>
           <SafeImage
-            src="/images/articles/pm-kisan-bank-account-change/bank-branch-npci.webp"
+            src="/images/articles/pm-kisan-bank-account-change/bank-passbook-update.webp"
             alt="Farmer filling NPCI seeding form at bank branch"
             width={800}
             height={450}
@@ -239,7 +233,6 @@ export default function PmKisanBankAccountChangeProcess({ article }: { article: 
           </IB>
         </section>
 
-        {/* SECTION 4: BAO Offline Process */}
         <section className="mb-8">
           <SH>Method 3: BAO Office Se Offline Form (Agar CSC Na Ho)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -262,7 +255,6 @@ export default function PmKisanBankAccountChangeProcess({ article }: { article: 
           />
         </section>
 
-        {/* SECTION 5: Documents Checklist */}
         <section className="mb-8">
           <SH>Documents Ki Complete List</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -296,7 +288,6 @@ export default function PmKisanBankAccountChangeProcess({ article }: { article: 
           </div>
         </section>
 
-        {/* SECTION 6: Common Mistakes */}
         <section className="mb-8">
           <SH>Ye Galtiyan Mat Karna (Warna Phir Fail Hoga)</SH>
           <div className="space-y-3">
@@ -330,7 +321,6 @@ export default function PmKisanBankAccountChangeProcess({ article }: { article: 
           </div>
         </section>
 
-        {/* SECTION 7: Timeline */}
         <section className="mb-8">
           <SH>Kitne Din Mein Kaam Hoga?</SH>
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
@@ -364,7 +354,6 @@ export default function PmKisanBankAccountChangeProcess({ article }: { article: 
           </p>
         </section>
 
-        {/* SECTION 8: How to Check Status */}
         <section className="mb-8">
           <SH>Update Hui Ya Nahi? Kaise Check Karein?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -392,7 +381,6 @@ export default function PmKisanBankAccountChangeProcess({ article }: { article: 
           </WB>
         </section>
 
-        {/* SECTION 9: What About Pending Kist */}
         <section className="mb-8">
           <SH>Purani Ruki Hui Kist Ka Kya Hoga?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -406,7 +394,6 @@ export default function PmKisanBankAccountChangeProcess({ article }: { article: 
           </p>
         </section>
 
-        {/* FAQ */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Aksar Puche Jane Wale Sawal
@@ -427,7 +414,8 @@ export default function PmKisanBankAccountChangeProcess({ article }: { article: 
         <BottomNav extraLinks={[
           { href: '/articles/PmKisanPaymentFailedFix2026', l: '💸 Payment Fix' },
           { href: '/articles/pm-kisan-fto-generated-ka-matlab-kya-hai', l: '💳 FTO Status' },
-          { href: '/articles/PmKisanMasterGuide2026', l: ' Master Guide' },
+          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
+          { href: '/articles/PmKisanEkycOnline2026', l: '🔐 eKYC' },
         ]} />
         <Disclaimer />
       </div>
