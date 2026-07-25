@@ -57,6 +57,8 @@ const nextConfig = {
       { source: '/articles/pm-kisan-payment-failed-status-2026', destination: '/articles/PmKisanMasterGuide2026', permanent: true },
       { source: '/articles/nano-dap-500ml-price-in-india-2026', destination: '/articles/NanoDap500mlPriceInIndia2026', permanent: true },
       { source: '/beneficiary-list', destination: '/articles/PmKisanBeneficiaryList2026', permanent: true },
+      // 👇 NEW ADDED — broken /articles/loan/... path now points to the real KCC article
+      { source: '/articles/loan/KisanCreditCardOnlineApply2026', destination: '/articles/KisanCreditCardOnlineApply2026', permanent: true },
       {
         source: '/:path*',
         has: [{ type: 'host', value: 'www.kisanstatus.com' }],
