@@ -1,15 +1,12 @@
-'use client';
-
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ARTICLES, getLatestArticles, CATEGORIES } from '@/lib/articles-data';
-import { SITE_URL, SITE_NAME, getCopyrightYears } from '@/lib/site-config';
+import { SITE_URL, SITE_NAME } from '@/lib/site-config';
+import SearchBar from './SearchBar';
+import FaqItem from './FaqItem';
 
 const TOP_ARTICLES_LIMIT = 3;
 
-/* ─── SVG Icons ─── */
 function IconWallet({ className = 'w-6 h-6' }: { className?: string }) {
   return (
     <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -68,14 +65,6 @@ function IconSmartphone({ className = 'w-6 h-6' }: { className?: string }) {
   );
 }
 
-function IconSearch({ className = 'w-5 h-5' }: { className?: string }) {
-  return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-    </svg>
-  );
-}
-
 function IconArrowRight({ className = 'w-5 h-5' }: { className?: string }) {
   return (
     <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -92,15 +81,6 @@ function IconCheck({ className = 'w-5 h-5' }: { className?: string }) {
   );
 }
 
-function IconChevronDown({ className = 'w-5 h-5' }: { className?: string }) {
-  return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-    </svg>
-  );
-}
-
-/* ─── Tool Card Data ─── */
 const TOOLS = [
   {
     href: '/articles/PmKisan24viKist2026',
@@ -158,7 +138,6 @@ const TOOLS = [
   },
 ];
 
-/* ─── FAQ Data (AEO Optimized: Direct, concise answers for Voice Search) ─── */
 const FAQS = [
   {
     question: 'PM Kisan 24vi kist kab aayegi 2026 mein?',
@@ -182,7 +161,6 @@ const FAQS = [
   },
 ];
 
-/* ─── Article Image Component ─── */
 function ArticleImage({ image, emoji, title }: { image: string; emoji: string; title: string }) {
   return (
     <div className="relative w-full overflow-hidden bg-gray-100 dark:bg-gray-800 shrink-0" style={{ aspectRatio: '16/9' }}>
@@ -208,7 +186,6 @@ function ArticleImage({ image, emoji, title }: { image: string; emoji: string; t
   );
 }
 
-/* ─── Article Card ─── */
 function ArticleCard({ article, showNewBadge = false }: { article: typeof ARTICLES[0]; showNewBadge?: boolean }) {
   const categoryInfo = CATEGORIES[article.category] as { name: string; nameHi: string; icon: string } | undefined;
   const emoji = categoryInfo?.icon || '';
@@ -260,37 +237,6 @@ function ArticleCard({ article, showNewBadge = false }: { article: typeof ARTICL
   );
 }
 
-/* ─── FAQ Item Component ─── */
-function FaqItem({ question, answer, index }: { question: string; answer: string; index: number }) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <div className="border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden bg-white dark:bg-gray-800">
-      <button
-        type="button"
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors"
-        aria-expanded={isOpen}
-        aria-controls={`faq-answer-${index}`}
-      >
-        <h3 className="font-bold text-gray-900 dark:text-white text-base pr-4">{question}</h3>
-        <IconChevronDown className={`w-5 h-5 text-green-600 dark:text-green-400 shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
-      </button>
-      <div
-        id={`faq-answer-${index}`}
-        className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-96' : 'max-h-0'}`}
-        role="region"
-        aria-label={question}
-      >
-        <div className="px-6 pb-6 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-          {answer}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-/* ─── Breadcrumb Component ─── */
 function Breadcrumb() {
   return (
     <nav aria-label="Breadcrumb" className="py-3 bg-gray-50 dark:bg-gray-800/50 border-b border-gray-200 dark:border-gray-700">
@@ -313,28 +259,14 @@ function Breadcrumb() {
   );
 }
 
-/* ─── Hybrid Homepage ─── */
 export default function HomeContent() {
-  const router = useRouter();
-  const [searchQuery, setSearchQuery] = useState('');
   const latestArticles = getLatestArticles(TOP_ARTICLES_LIMIT);
-
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      router.push(`/articles?search=${encodeURIComponent(searchQuery.trim())}`);
-    }
-  };
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900" itemScope itemType="https://schema.org/WebPage">
       
-      {/* Breadcrumb Navigation */}
       <Breadcrumb />
 
-      {/* ═══════════════════════════════════════
-          HERO SECTION - SEO & GEO OPTIMIZED
-          ═══════════════════════════════════════ */}
       <section className="relative bg-gradient-to-br from-green-700 via-green-600 to-emerald-700 dark:from-green-900 dark:via-green-800 dark:to-emerald-900 py-16 md:py-24 overflow-hidden" aria-labelledby="hero-heading">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/3" aria-hidden="true" />
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/3" aria-hidden="true" />
@@ -342,7 +274,6 @@ export default function HomeContent() {
         <div className="container-site mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
 
-            {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm text-white text-xs font-bold px-4 py-2 rounded-full mb-6 border border-white/20">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
@@ -350,13 +281,11 @@ export default function HomeContent() {
               India Ka #1 PM Kisan Portal
             </div>
 
-            {/* H1 - Main Keyword Target (GEO: Added "Ministry of Agriculture" entity for AI recognition) */}
             <h1 id="hero-heading" className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1] mb-6 tracking-tight">
               <span itemProp="headline">PM Kisan Status Check 2026</span>
               <span className="block text-green-200 text-2xl md:text-4xl lg:text-5xl mt-2">Samman Nidhi Yojana Online</span>
             </h1>
 
-            {/* Subheadline with Keywords (GEO: Added DBT and Ministry entities) */}
             <p className="text-lg md:text-xl text-green-100 leading-relaxed mb-8 max-w-2xl mx-auto" itemProp="description">
               <strong className="text-white">PM Kisan Samman Nidhi</strong> (Ministry of Agriculture) ki 
               <strong className="text-white"> 24vi kist October 2026</strong> mein expected hai! 
@@ -366,30 +295,8 @@ export default function HomeContent() {
               <strong className="text-white"> beneficiary status</strong> verify karo — sab kuch bilkul free!
             </p>
 
-            {/* Search Bar */}
-            <form onSubmit={handleSearch} className="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto mb-8" role="search">
-              <div className="flex-1 relative">
-                <input 
-                  type="search" 
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Search: PM Kisan Status, KCC Loan, Tractor Subsidy..." 
-                  className="w-full px-5 py-4 pl-12 rounded-xl border-0 text-gray-900 placeholder-gray-400 text-sm bg-white shadow-xl focus:outline-none focus:ring-2 focus:ring-green-300"
-                  aria-label="Search PM Kisan articles and guides"
-                />
-                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-lg" aria-hidden="true">
-                  <IconSearch className="w-5 h-5" />
-                </span>
-              </div>
-              <button 
-                type="submit" 
-                className="px-8 py-4 bg-yellow-300 hover:bg-yellow-200 text-green-900 font-bold rounded-xl text-sm transition-colors shadow-xl whitespace-nowrap"
-              >
-                Search
-              </button>
-            </form>
+            <SearchBar />
 
-            {/* CTA Buttons */}
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <Link href="/articles/PmKisan24viKist2026" className="group inline-flex items-center gap-2.5 bg-white text-green-700 font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 shadow-xl">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -404,7 +311,6 @@ export default function HomeContent() {
               </Link>
             </div>
 
-            {/* Trust pills */}
             <div className="flex flex-wrap justify-center gap-3 text-xs text-green-200">
               <span className="px-3 py-1.5 bg-white/10 rounded-full flex items-center gap-1">
                 <IconCheck className="w-3 h-3" />
@@ -423,9 +329,6 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════
-          TRUST STATS
-          ═══════════════════════════════════════ */}
       <section className="py-12 bg-gray-50 dark:bg-gray-800/50 border-b border-gray-200 dark:border-gray-700" aria-labelledby="trust-heading">
         <h2 id="trust-heading" className="sr-only">Trust Indicators</h2>
         <div className="container-site mx-auto px-4">
@@ -445,9 +348,6 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════
-          TOOL CARDS
-          ═══════════════════════════════════════ */}
       <section className="py-20 bg-white dark:bg-gray-900" aria-labelledby="tools-heading">
         <div className="container-site mx-auto px-4">
           <div className="text-center mb-14">
@@ -487,9 +387,6 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════
-          RATE COMPARISON
-          ═══════════════════════════════════════ */}
       <section className="py-20 bg-green-50 dark:bg-green-900/10" aria-labelledby="rates-heading">
         <div className="container-site mx-auto px-4">
           <div className="text-center mb-12">
@@ -544,9 +441,6 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════
-          HERO IMAGE (LCP Optimized)
-          ═══════════════════════════════════════ */}
       <section className="py-16 bg-white dark:bg-gray-900" aria-labelledby="hero-image-heading">
         <div className="container-site mx-auto px-4">
           <h2 id="hero-image-heading" className="sr-only">Kisan Hero Image</h2>
@@ -558,7 +452,7 @@ export default function HomeContent() {
                   src="/hero-wheat-field.webp"
                   alt="Bharatiya kisan gehu ke khet mein kaam karte hue - PM Kisan Samman Nidhi yojana ke labharthi"
                   fill
-                  priority // ✅ TECHNICAL SEO: LCP (Largest Contentful Paint) optimization
+                  priority
                   fetchPriority="high"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1024px"
                   quality={85}
@@ -573,9 +467,6 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════
-          FEATURED IMAGES
-          ═══════════════════════════════════════ */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800/50 dark:to-gray-900" aria-labelledby="featured-heading">
         <div className="container-site mx-auto px-4">
           <div className="text-center mb-14">
@@ -594,7 +485,7 @@ export default function HomeContent() {
                   src={item.src}
                   alt={item.title}
                   fill
-                  loading="lazy" // ✅ TECHNICAL SEO: Prevents CLS and speeds up initial load
+                  loading="lazy"
                   sizes="(max-width: 768px) 100vw, 50vw"
                   quality={80}
                   className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
@@ -613,9 +504,6 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════
-          LATEST ARTICLES
-          ═══════════════════════════════════════ */}
       <section className="py-20 bg-white dark:bg-gray-900" aria-labelledby="articles-heading">
         <div className="container-site mx-auto px-4">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4">
@@ -656,9 +544,6 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════
-          FAQ SECTION - AEO & GEO CRITICAL
-          ═══════════════════════════════════════ */}
       <section className="py-20 bg-gray-50 dark:bg-gray-800/50" aria-labelledby="faq-heading">
         <div className="container-site mx-auto px-4 max-w-3xl">
           <div className="text-center mb-14">
@@ -670,7 +555,6 @@ export default function HomeContent() {
             </p>
           </div>
 
-          {/* ✅ AEO/GEO: Enhanced FAQPage Schema for Voice Search & AI Overviews */}
           <div className="space-y-4" itemScope itemType="https://schema.org/FAQPage">
             {FAQS.map((faq, index) => (
               <div key={index} itemProp="mainEntity" itemScope itemType="https://schema.org/Question">
@@ -685,9 +569,6 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════
-          HOW TO SECTION - AEO FEATURED SNIPPETS
-          ═══════════════════════════════════════ */}
       <section className="py-20 bg-white dark:bg-gray-900" aria-labelledby="howto-heading">
         <div className="container-site mx-auto px-4">
           <div className="text-center mb-14">
@@ -712,7 +593,6 @@ export default function HomeContent() {
                 href: '/articles/KisanCreditCardOnlineApply2026',
               },
             ].map((guide, i) => (
-              // ✅ AEO: HowTo Schema for Step-by-Step Featured Snippets
               <div key={i} className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700" itemScope itemType="https://schema.org/HowTo">
                 <h3 className="font-bold text-xl text-gray-900 dark:text-white mb-6" itemProp="name">{guide.title}</h3>
                 <ol className="space-y-4">
@@ -734,9 +614,6 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════
-          QUICK LINKS
-          ═══════════════════════════════════════ */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800/50 dark:to-gray-900" aria-labelledby="quicklinks-heading">
         <div className="container-site mx-auto px-4">
           <div className="text-center mb-14">
@@ -769,9 +646,6 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════
-          APP DOWNLOAD
-          ═══════════════════════════════════════ */}
       <section className="py-20 bg-gray-900 dark:bg-black" aria-labelledby="app-heading">
         <div className="container-site mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-12 max-w-5xl mx-auto">
