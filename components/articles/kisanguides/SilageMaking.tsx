@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 
 // ── SEO Metadata ──────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: 'Silage Making Business 2026: SMAM Subsidy & Real Profit Guide',
+  title: 'Silage Business 2026: SMAM Subsidy & Profit Guide',
   description: 'Packaged green fodder business ka complete guide. Janein maize silage plant kaise lagayein, SMAM subsidy, machinery cost aur real profit calculation ke baare mein sab kuch.',
   keywords: [
     'silage making business',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' }],
   openGraph: {
-    title: 'Silage Making Business 2026: SMAM Subsidy & Real Profit Guide',
+    title: 'Silage Business 2026: SMAM Subsidy & Profit Guide',
     description: 'Packaged green fodder business ka complete guide. Janein maize silage plant kaise lagayein, SMAM subsidy, machinery cost aur real profit calculation ke baare mein sab kuch.',
     type: 'article',
     locale: 'hi_IN',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Silage Making Business 2026: SMAM Subsidy & Real Profit Guide',
+    title: 'Silage Business 2026: SMAM Subsidy & Profit Guide',
     description: 'Packaged green fodder business ka complete guide. Janein maize silage plant kaise lagayein, SMAM subsidy, machinery cost aur real profit calculation ke baare mein sab kuch.',
     images: ['https://kisanstatus.com/images/kisanguides/silage-hero.webp'],
   },
@@ -64,7 +64,7 @@ const jsonLd = {
         { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kisanstatus.com/' },
         { '@type': 'ListItem', position: 2, name: 'Articles', item: 'https://kisanstatus.com/articles' },
         { '@type': 'ListItem', position: 3, name: 'Farming', item: 'https://kisanstatus.com/articles/category/farming' },
-        { '@type': 'ListItem', position: 4, name: 'Silage Making Business' },
+        { '@type': 'ListItem', position: 4, name: 'Silage Making Business', item: 'https://kisanstatus.com/articles/farming/silage-making-business-guide' },
       ],
     },
     {
@@ -72,6 +72,7 @@ const jsonLd = {
       '@id': 'https://kisanstatus.com/articles/farming/silage-making-business-guide/#article',
       headline: 'Silage Making Business 2026: SMAM Subsidy & Real Profit Guide',
       description: 'Packaged green fodder business ka complete guide. Janein maize silage plant kaise lagayein, SMAM subsidy, machinery cost aur real profit calculation ke baare mein sab kuch.',
+      image: 'https://kisanstatus.com/images/kisanguides/silage-hero.webp',
       author: {
         '@type': 'Organization',
         name: 'KisanStatus Team',
@@ -98,7 +99,7 @@ const jsonLd = {
           name: 'Packaged fodder packet kholne ke baad kitne din tak use karna chahiye?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Ek baar fodder ka packet khol diya jaye, toh usko 3-4 din ke andar use kar lena chahiye. Uske baad hawa lagne se fermentation process reverse ho jata hai, fungus lag sakta hai aur quality kharab ho jati hai. Rozana thoda-thoda kaat kar nikalna behtar hota hai.',
+            text: 'Packet khulne ke 3-4 din ke andar use kar lena chahiye. Uske baad hawa lagne se fermentation reverse ho jata hai aur fungus lag sakta hai. Rozana thoda-thoda kaat kar nikalna sahi tarika hai.',
           },
         },
         {
@@ -106,7 +107,7 @@ const jsonLd = {
           name: 'Kya yeh preserved fodder sirf gaay/bhains ke liye hai ya bakri/bhed bhi kha sakti hain?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Haan, bakri, bhed, aur ghode bhi ise kha sakte hain. Maize based fodder mein energy aur protein achha hota hai. Bas quantity adjust karni hoti hai — chhote janwaron ke liye 1-2 kg per day kaafi hota hai, jabki bhains ke liye 8-10 kg lagta hai.',
+            text: 'Bakri, bhed aur ghode bhi khila sakte hain. Bas quantity alag hogi — chhote janwaron ke liye 1-2 kg rozana kaafi hai, bhains ko 8-10 kg tak chahiye.',
           },
         },
         {
@@ -114,7 +115,7 @@ const jsonLd = {
           name: 'Off-season (garmiyon) mein machinery aur staff ka kya karein?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Garmiyon mein packaged fodder ki demand kam hoti hai kyunki hari ghaas available hoti hai. Is time par aap machinery ki thorough servicing aur painting karwa sakte hain. Staff ko hay (sookha chara) making, mineral mixture blending, ya doosre fodder products ki packaging mein engage rakha ja sakta hai taaki fixed cost cover ho sake.',
+            text: 'Garmiyon mein demand girti hai kyunki hari ghaas khud hi available ho jaati hai. Ye time machinery servicing ke liye use karo. Staff ko hay making ya mineral mixture blending jaisa kaam do, taaki fixed cost nikalta rahe.',
           },
         },
         {
@@ -122,7 +123,7 @@ const jsonLd = {
           name: 'Kya packaged fodder banane ke liye koi special training ya license chahiye?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Basic business ke liye Udyam Registration aur GST chahiye. Agar branded animal feed bech rahe hain toh FSSAI license chahiye. Technical training ke liye NDDB, KVK, ya State Animal Husbandry Department ke 3-7 din ke short-term courses karne se fermentation aur quality control achhe se samajh aa jata hai.',
+            text: 'Udyam Registration aur GST basic zaroorat hai. Branded feed bechna ho toh FSSAI license lagega. NDDB ya KVK ke short-term courses se fermentation aur quality control ka practical gyaan mil jata hai.',
           },
         },
       ],
@@ -155,34 +156,34 @@ export default function SilageMaking() {
       </h1>
       
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 italic">
-        Aksar dekha jata hai ki sardiyon (December-February) mein hari ghaas (green fodder) ki bhari kami ho jati hai, jisse dairy farmers pareshan rehte hain aur pashu doodh dena kam kar dete hain. Aise mein silage - anaerobic tarike se preserve kiya gaya hara chara - ek reliable solution ban jata hai.
+        Sardiyon mein (December-February) hari ghaas milna mushkil ho jaata hai. Dairy farmers pareshan hote hain, doodh production gir jata hai. Silage — anaerobic tarike se preserve kiya hara chara — isi gap ko bharta hai.
       </p>
       
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Dairy belts mein silage ki demand tezi se badh rahi hai. Khet mein makka ugakar, usko kaat kar airtight packets mein pack karna aur dairy farmers ko supply karna ek proven business model hai. Isme margin achha hai aur competition abhi bhi relatively kam hai, kyunki silage ki technical processing se zyada tar log anjaan hain.
+        Dairy belts mein iski demand tezi se badh rahi hai. Model simple hai: khet mein makka ugao, kaato, airtight packets mein pack karo, aur dairy farmers ko becho. Margin achha hai, aur zyada log is technical process se abhi bhi anjaan hain — isliye competition kam hai.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Silage (Packaged Green Fodder) Hai Kya? Aur Dairy Farmers Ise Kyun Khareedte Hain?
+        Silage Hai Kya? Dairy Farmers Ise Kyun Khareedte Hain?
       </h2>
       
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Silage koi naya concept nahi hai. Bas hari ghaas (mostly maize/makka) ko bina oxygen ke heavy-duty plastic packets mein seal karke preserve karne ka scientific tarika hai. Jab ghaas ko air-tight seal kiya jata hai, toh natural fermentation hota hai. Lactic acid bacteria grow karte hain, pH level gir kar 4.0 ke aas-paas aa jata hai, aur ghaas kharab hone se bach jati hai.
+        Naya concept nahi hai ye. Hari ghaas — mostly maize — ko bina oxygen ke heavy-duty plastic packets mein seal kar dete hain. Andar natural fermentation shuru hoti hai. Lactic acid bacteria badhte hain, pH 4.0 ke aas-paas aa jata hai, aur ghaas kharab hone se bach jaati hai.
       </p>
       
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Sahi tarike se banaya gaya yeh preserved fodder 6 mahine tak fresh rehta hai aur iski nutrition value (crude protein 7-9%, dry matter 30-35%) maintain rehti hai.
+        Sahi tarike se bana hua fodder 6 mahine tak fresh rehta hai. Nutrition bhi maintain rehti hai — crude protein 7-9%, dry matter 30-35%.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 font-semibold">
-        Dairy farmers silage isliye regular khareedte hain kyunki:
+        Farmers ise regular kyun khareedte hain:
       </p>
 
       <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-8">
-        <li><strong>Sardiyon mein hari ghaas ki shortage:</strong> December se February tak fresh fodder mushkil se milta hai.</li>
-        <li><strong>Consistent nutrition:</strong> Har packet ki quality ek jaisi rehti hai, jisse doodh ki quantity stable rehti hai.</li>
-        <li><strong>Easy storage:</strong> 6 mahine tak kharab nahi hota, bas chhaon mein rakhna hota hai.</li>
-        <li><strong>Labour efficiency:</strong> 25 kg ka chhota packet uthana aur bhains ko khilana aasaan hota hai.</li>
+        <li><strong>Sardiyon mein shortage:</strong> December se February tak fresh fodder milna mushkil hota hai.</li>
+        <li><strong>Consistent nutrition:</strong> Har packet ki quality same rehti hai, doodh ki quantity stable rehti hai.</li>
+        <li><strong>Easy storage:</strong> 6 mahine kharab nahi hota, bas chhaon mein rakh do.</li>
+        <li><strong>Labour efficiency:</strong> 25 kg ka packet uthana aur khilana jhanjhat-free hai.</li>
       </ul>
 
       {/* Image 2: Silage Machinery */}
@@ -196,43 +197,43 @@ export default function SilageMaking() {
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Business Model: Kaise Kaam Karta Hai Yeh?
+        Business Model Kaise Kaam Karta Hai
       </h2>
       
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Is packaged fodder production ka basic flow samajhna zaroori hai:
+        Basic production flow kuch aisa hai:
       </p>
 
       <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-8 border border-gray-200 dark:border-gray-700 not-prose">
         <ol className="list-decimal pl-5 space-y-3 text-sm text-gray-700 dark:text-gray-300">
-          <li><strong>Maize (makka) ki kheti karein</strong> ya kisaanon se contract farming par khareedein.</li>
-          <li><strong>60-70 din mein harvest karein</strong> - jab makka dough stage mein ho (lagbhag 70% moisture content).</li>
-          <li><strong>Chaff cutter se kaatein</strong> - 1-2 inch ke chhote pieces mein.</li>
-          <li><strong>Specialized fodder bags mein bharein</strong> - 25 kg ya 50 kg ke heavy-duty UV-treated plastic bags.</li>
-          <li><strong>Sealing machine se seal karein</strong> - bilkul air-tight, bina kisi oxygen ke.</li>
-          <li><strong>45-60 din ferment hone dein</strong> - thandi chhaon mein stack karke rakhein.</li>
-          <li><strong>Dairy farmers ko supply karein</strong> - market rate ke hisaab se ₹300 - ₹400 per 25 kg packet.</li>
+          <li><strong>Makka ki kheti karein</strong> ya kisaanon se contract farming par khareedein.</li>
+          <li><strong>60-70 din mein harvest karein</strong> — jab makka dough stage mein ho, lagbhag 70% moisture par.</li>
+          <li><strong>Chaff cutter se kaatein</strong> — 1-2 inch ke pieces mein.</li>
+          <li><strong>Fodder bags mein bharein</strong> — 25 kg ya 50 kg ke UV-treated plastic bags.</li>
+          <li><strong>Sealing machine se seal karein</strong> — bilkul air-tight.</li>
+          <li><strong>45-60 din ferment hone dein</strong> — thandi chhaon mein stack karke.</li>
+          <li><strong>Dairy farmers ko supply karein</strong> — ₹300-₹400 per 25 kg packet, market rate ke hisaab se.</li>
         </ol>
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        <strong>Model 1: Apni zameen par makka ugana.</strong> Agar aapke paas 5-10 acre zameen hai, toh khud makka ugakar packaged fodder banayein. Isme margin zyada hai (40-50%), par initial investment aur risk bhi zyada hai.
+        <strong>Model 1 — Apni zameen par makka ugana:</strong> 5-10 acre zameen ho toh khud ugao. Margin zyada milta hai (40-50%), par investment aur risk bhi zyada hai.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        <strong>Model 2: Kisaanon se khareedna.</strong> Aap sirf ek processing unit lagayein. Local kisaanon se hara makka khareedein, preserve karein aur bechein. Isme margin thoda kam hai (20-30%), par risk kam hai aur business ko jaldi scale kiya ja sakta hai.
+        <strong>Model 2 — Kisaanon se khareedna:</strong> Sirf processing unit lagao, local makka khareedo, preserve karo aur becho. Margin kam hai (20-30%), par risk kam hai aur scale karna aasan hai.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Kitna Paisa Lagega? Realistic Budget Breakdown
+        Kitna Paisa Lagega — Realistic Budget
       </h2>
       
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Ek medium-scale unit ka budget banate hain - jo mahine mein lagbhag 3,000 - 4,000 packets (25 kg each) produce kar sake.
+        Medium-scale unit ka budget dekhते hain — jo mahine mein 3,000-4,000 packets (25 kg each) bana sake.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 text-sm italic">
-        Note: Neeche diye gaye numbers estimated ranges hain. Yeh aapke local material rates, inflation, aur field conditions ke hisaab se badal sakte hain.
+        Note: ye numbers estimated ranges hain, local rates aur field conditions ke hisaab se upar-neeche ho sakte hain.
       </p>
 
       <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-8 border border-gray-200 dark:border-gray-700 not-prose">
@@ -248,14 +249,14 @@ export default function SilageMaking() {
           </li>
           <li className="flex justify-between">
             <span>Weighing Scale (100 kg capacity):</span>
-            <span className="font-semibold">8,000 - ₹12,000</span>
+            <span className="font-semibold">₹8,000 - ₹12,000</span>
           </li>
           <li className="flex justify-between">
             <span>Storage Shed (200 sq ft, temporary):</span>
             <span className="font-semibold">₹30,000 - ₹50,000</span>
           </li>
           <li className="flex justify-between">
-            <span>Plastic Bags (initial stock - 5,000 pieces):</span>
+            <span>Plastic Bags (initial stock — 5,000 pieces):</span>
             <span className="font-semibold">₹25,000 - ₹35,000</span>
           </li>
           <li className="flex justify-between">
@@ -278,11 +279,11 @@ export default function SilageMaking() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Is investment ko manage karne ke liye <Link href="/articles/loan/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Kisan Credit Card (KCC)</Link> ek badhiya vikalp hai, jisme working capital ke liye limit badhwa sakte hain.
+        Is investment ke liye <Link href="/articles/loan/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Kisan Credit Card (KCC)</Link> ek badhiya option hai — working capital ke liye limit badhwa sakte ho.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Machinery khareedne ke liye official <a href="https://www.mudra.org.in/" className="text-blue-600 hover:underline dark:text-blue-400 font-medium" target="_blank" rel="noopener noreferrer">Mudra Loan</a> bhi le sakte hain - Tarun category mein ₹10 lakh tak bina collateral ke mil jata hai.
+        Machinery ke liye <a href="https://www.mudra.org.in/" className="text-blue-600 hover:underline dark:text-blue-400 font-medium" target="_blank" rel="noopener noreferrer">Mudra Loan</a> bhi le sakte ho — Tarun category mein ₹10 lakh tak bina collateral ke milta hai.
       </p>
 
       {/* Image 3: Silage Packets */}
@@ -296,44 +297,44 @@ export default function SilageMaking() {
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Sarkari Subsidy: SMAM, AIF, aur PM FME
+        Sarkari Subsidy: SMAM, AIF, PM FME
       </h2>
       
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Sarkari schemes ki baat karein, toh is field mein kai financial benefits ka fayda uthaya ja sakta hai. Har yojana ki apni eligibility criteria hoti hai.
+        Kai schemes hain jinka fayda uthaya ja sakta hai, par har ek ki apni eligibility hai.
       </p>
 
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6 mb-8 not-prose">
         <ul className="space-y-4 text-sm text-gray-800 dark:text-gray-200">
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">1. SMAM (Sub-Mission on Agricultural Mechanization):</strong>
-            Chaff cutter, bag sealing machine, aur doosri machinery par 40-50% subsidy milti hai. General category ko 40%, SC/ST/women ko 50%. Maximum subsidy ₹1 - ₹2 lakh per machine.
+            Chaff cutter aur sealing machine par 40-50% subsidy — general category 40%, SC/ST/women 50%. Ek machine par maximum ₹1-2 lakh.
             <p className="mt-1 text-xs text-gray-600 dark:text-gray-400 italic">
-              Disclaimer: SMAM ki guidelines state ke hisaab se vary karti hain. Apne zila ke Agriculture Department se latest details confirm karein.
+              SMAM ke rules state-wise alag hote hain, apne zila Agriculture Department se latest figures le lena.
             </p>
           </li>
 
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">2. Agriculture Infrastructure Fund (AIF):</strong>
-            Agar aap processing plant, cold storage, ya storage unit lagana chahte hain, toh AIF ke under 3% interest subsidy milti hai 7 saal tak ke liye. Maximum loan ₹2 crore tak hai.
+            Processing plant ya storage unit ke liye 7 saal tak 3% interest subsidy. Maximum loan ₹2 crore.
             <p className="mt-1 text-xs text-gray-600 dark:text-gray-400 italic">
-              Disclaimer: AIF ki eligibility criteria specific hai. Detailed guidelines ke liye nazdeeki bank se pata karein.
+              Eligibility bank-specific hoti hai, nazdeeki bank se poora detail confirm kar lena.
             </p>
           </li>
 
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">3. PM FME Yojana:</strong>
-            Agar aap is preserved fodder ko branded packaging mein bechna chahte hain, toh <Link href="/articles/farming/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME</Link> ke under 35% subsidy mil sakti hai (maximum ₹10 lakh). Yeh micro food processing unit ke liye hai.
+            Branded packaging mein bechna ho toh <Link href="/articles/farming/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME</Link> ke under 35% tak subsidy mil sakti hai, maximum ₹10 lakh. Micro food processing units ke liye hai.
             <p className="mt-1 text-xs text-gray-600 dark:text-gray-400 italic">
-              Disclaimer: PM FME ki eligibility criteria specific hai. Official portal ya Industries Department se confirm karein.
+              Exact criteria official portal ya Industries Department se check karo.
             </p>
           </li>
 
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">4. State-Level Fodder Development Schemes:</strong>
-            Har state ki apni schemes hoti hain. Jaise Haryana mein "Fodder Development Scheme", Rajasthan mein "Mukhyamantri Pashudhan Vikas Yojana". Inme processing units par 30-50% subsidy milti hai.
+            Haryana mein "Fodder Development Scheme", Rajasthan mein "Mukhyamantri Pashudhan Vikas Yojana" — processing units par 30-50% subsidy.
             <p className="mt-1 text-xs text-gray-600 dark:text-gray-400 italic">
-              Disclaimer: State schemes ke details vary karti hain. Apne zila ke Animal Husbandry Department se latest information lein.
+              State ke hisaab se badalta hai, Animal Husbandry Department se latest jaankari lo.
             </p>
           </li>
         </ul>
@@ -345,11 +346,11 @@ export default function SilageMaking() {
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Unit Economics: Ek Packet Mein Kitna Profit Hai?
+        Ek Packet Mein Kitna Profit Hai
       </h2>
       
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Ek 25 kg packaged fodder packet ka cost breakdown dekhte hain. Yeh numbers Model 2 (kisaanon se makka khareed kar) ke liye hain.
+        25 kg packet ka cost breakdown — Model 2 ke hisaab se, yaani kisaanon se makka khareed kar.
       </p>
 
       <div className="overflow-x-auto mb-8 not-prose">
@@ -395,14 +396,14 @@ export default function SilageMaking() {
             </tr>
             <tr className="bg-green-50 dark:bg-green-900/20">
               <td className="py-3 px-4 font-bold text-green-800 dark:text-green-300">Net Profit per Packet:</td>
-              <td className="py-3 px-4 font-bold text-green-700 dark:text-green-400">105 - ₹260</td>
+              <td className="py-3 px-4 font-bold text-green-700 dark:text-green-400">₹105 - ₹260</td>
             </tr>
           </tbody>
         </table>
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Average profit ₹150 - ₹180 per packet maan kar chaliye. Agar aap mahine mein 3,000 packets bechte hain, toh monthly profit ₹4.5 - ₹5.4 lakh, aur saal ka ₹50 - ₹65 lakh ban sakta hai. Shuru ke 6 mahine mein realistically 1,000 - 1,500 packets hi bech paoge, tab bhi monthly profit ₹1.5 - ₹2.7 lakh banta hai.
+        Average profit ₹150-180 per packet maan lo. 3,000 packets mahine mein bechoge toh monthly profit ₹4.5-5.4 lakh, saal ka ₹50-65 lakh ban sakta hai. Shuruaati 6 mahine mein realistically 1,000-1,500 packets hi bikenge, tab bhi monthly ₹1.5-2.7 lakh banta hai — bura nahi hai.
       </p>
 
       {/* Image 4: Dairy Farm Delivery */}
@@ -416,48 +417,48 @@ export default function SilageMaking() {
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Real Risks - Jo Koi Nahi Batata
+        Real Risks — Jo Koi Nahi Batata
       </h2>
       
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Yeh process sunne mein simple lagta hai, par field mein kuch challenges aate hain:
+        Sunne mein simple lagta hai. Field mein kuch cheezein pareshan karti hain.
       </p>
 
       <div className="space-y-4 mb-8 not-prose">
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
-          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">Packet Failure (Sabse Badi Problem)</h4>
-          <p className="text-sm text-gray-700 dark:text-gray-300">Agar sealing properly nahi hui, ya plastic bag mein chhed hai, toh oxygen andar chali jati hai. Preserved fodder kharab ho jata hai - fungus lag jata hai aur smell aati hai. Shuru mein 100 packets mein se 5-10 packets aise fail ho sakte hain. Quality control par sabse zyada dhyan dena padta hai.</p>
+          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">Packet Failure — Sabse Badi Problem</h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300">Sealing thik nahi hui, ya bag mein chhed reh gaya, toh oxygen andar chala jata hai — fungus lagta hai, smell aati hai. Shuru mein 100 mein se 5-10 packets aise fail ho sakte hain. Quality control par sabse zyada dhyan yahi rakhna padta hai.</p>
         </div>
 
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
           <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">Raw Material Price Fluctuation</h4>
-          <p className="text-sm text-gray-700 dark:text-gray-300">Makka ka price season ke hisaab se badalta rehta hai. Baadh ya sukhe mein price 30-50% badh sakta hai. Agar aapne advance mein contract nahi kiya, toh margin compress ho jata hai.</p>
+          <p className="text-sm text-gray-700 dark:text-gray-300">Makka ka rate season ke hisaab se upar-neeche hota rehta hai. Baadh ya sukha aaye toh price 30-50% tak badh sakta hai. Advance contract nahi kiya toh margin ghat jaata hai.</p>
         </div>
 
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
           <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">Seasonal Demand</h4>
-          <p className="text-sm text-gray-700 dark:text-gray-300">Sardiyon mein demand peak par hoti hai (October-March). Garmiyon mein demand 40-50% kam ho jati hai kyunki hari ghaas available hoti hai. Aapko 6 mahine ka cash flow manage karna padta hai.</p>
+          <p className="text-sm text-gray-700 dark:text-gray-300">October-March mein demand peak par rehti hai. Garmiyon mein 40-50% gir jaati hai kyunki hari ghaas khud milne lagti hai. 6 mahine ka cash flow sambhalna aata hai toh hi tikoge.</p>
         </div>
 
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
           <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">Customer Payment Delays</h4>
-          <p className="text-sm text-gray-700 dark:text-gray-300">Dairy farms aksar udhaar par lete hain - 15-30 din ka credit cycle. Agar aapke paas working capital kam hai, toh cash flow problem aa sakti hai. Advance payment ya partial payment ka system shuru se hi rakhein.</p>
+          <p className="text-sm text-gray-700 dark:text-gray-300">Dairy farms aksar udhaar par lete hain — 15-30 din ka credit cycle common hai. Working capital kam ho toh cash flow atak jata hai. Shuru se hi advance ya partial payment ka system rakho.</p>
         </div>
       </div>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Customers Kaise Dhundhein? Marketing Strategy
+        Customers Kaise Dhundhein
       </h2>
       
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Is field mein sabse bada challenge customers dhundhna hai. Kuch proven strategies:
+        Sabse bada challenge yahi hai. Kuch tarike jo kaam karte hain:
       </p>
 
       <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-8">
-        <li><strong>Local Dairy Farms Par Direct Visit:</strong> Apne area ke 20-30 dairy farms ki list banao. Pehla order free sample ke saath start karo. 70% cases mein quality achhi hui toh order mil jata hai.</li>
-        <li><strong>Dairy Cooperatives Se Tie-Up:</strong> Amul, Mother Dairy, Sudha jaise cooperatives ke local collection centers ke managers se baat karo. Wo apne member farmers ko packaged fodder recommend kar sakte hain.</li>
-        <li><strong>WhatsApp Groups:</strong> Gaon ke dairy farmers ke WhatsApp groups mein daily rate update aur availability batao. Photos aur videos share karo.</li>
-        <li><strong>Contract Farming with Dairy Farms:</strong> Bade dairy farms (50+ bhains wale) ke saath annual contract karo. Wo monthly fixed quantity lenge, aapko fixed rate milega.</li>
+        <li><strong>Local Dairy Farms Par Direct Visit:</strong> Apne area ke 20-30 dairy farms ki list banao. Pehla order free sample ke saath do. Quality achhi lagi toh 70% cases mein order mil jata hai.</li>
+        <li><strong>Dairy Cooperatives Se Tie-Up:</strong> Amul, Mother Dairy, Sudha jaise cooperatives ke local collection centers se baat karo — wo member farmers ko recommend kar sakte hain.</li>
+        <li><strong>WhatsApp Groups:</strong> Gaon ke dairy farmer groups mein daily rate aur availability daalte raho, saath photos-videos bhi.</li>
+        <li><strong>Contract Farming with Dairy Farms:</strong> 50+ bhains wale bade farms ke saath annual contract karo — fixed quantity, fixed rate.</li>
       </ul>
 
       {/* Image 5: Legal & Documents */}
@@ -471,57 +472,57 @@ export default function SilageMaking() {
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Legal Requirements: Kya Kya Chahiye?
+        Legal Requirements
       </h2>
       
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Yeh venture legally shuru karne ke liye kuch basic licenses chahiye:
+        Legally shuru karne ke liye ye basic cheezein chahiye:
       </p>
 
       <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-8">
-        <li><strong>Udyam Registration:</strong> Free hai, online ho jata hai. MSME benefits milte hain.</li>
-        <li><strong>GST Registration:</strong> Agar turnover ₹20 lakh se upar hai. Packaged fodder par GST 5% lagta hai.</li>
-        <li><strong>FSSAI License:</strong> Agar aap isse "animal feed" ke roop mein branded packaging mein bech rahe hain, toh FSSAI chahiye. Basic registration ₹100 saal ka hai.</li>
-        <li><strong>NOC from Local Authorities:</strong> Gram panchayat ya municipal corporation se, aur pollution control board se bhi NOC chahiye ho sakta hai.</li>
+        <li><strong>Udyam Registration:</strong> Free hai, online ho jata hai. MSME benefits bhi milte hain.</li>
+        <li><strong>GST Registration:</strong> Turnover ₹20 lakh se upar ho toh zaroori. Packaged fodder par GST 5% hai.</li>
+        <li><strong>FSSAI License:</strong> Branded "animal feed" ke roop mein bech rahe ho toh chahiye. Basic registration ₹100 saal ka hai.</li>
+        <li><strong>NOC from Local Authorities:</strong> Gram panchayat ya municipal corporation se, kabhi-kabhi pollution control board se bhi.</li>
       </ul>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Kya Aapke Liye Sahi Hai? Final Decision Framework
+        Kya Ye Aapke Liye Sahi Hai
       </h2>
       
       <div className="grid md:grid-cols-2 gap-6 mb-8 not-prose">
         <div className="bg-green-50 dark:bg-green-900/20 p-5 rounded-lg border border-green-200 dark:border-green-800">
           <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">✅ Haan, agar:</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-            <li>• Dairy belt mein rehte hain (Haryana, Punjab, Gujarat, UP west, Maharashtra).</li>
-            <li>• 5-10 acre zameen hai (ya kisaanon se contract kar sakte hain).</li>
-            <li>• ₹5 - ₹7 lakh initial investment kar sakte hain.</li>
-            <li>• Marketing skills hain (customers dhundh sakte hain).</li>
-            <li>• Daily 6-8 hours de sakte hain (production + delivery).</li>
+            <li>• Dairy belt mein rehte ho (Haryana, Punjab, Gujarat, UP west, Maharashtra).</li>
+            <li>• 5-10 acre zameen hai, ya contract farming kar sakte ho.</li>
+            <li>• ₹5-7 lakh initial investment ho sakta hai.</li>
+            <li>• Marketing aati hai, customers khud dhundh sakte ho.</li>
+            <li>• Rozana 6-8 ghante de sakte ho, production plus delivery dono.</li>
           </ul>
         </div>
 
         <div className="bg-red-50 dark:bg-red-900/20 p-5 rounded-lg border border-red-200 dark:border-red-800">
           <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">❌ Nahi, agar:</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-            <li>• Non-dairy area mein hain (customers nahi milenge).</li>
-            <li>• Zameen nahi hai aur contract farming nahi kar sakte.</li>
-            <li>• Marketing nahi kar sakte (sirf production karke baith nahi sakte).</li>
-            <li>• Quick money chahte hain (pehle 6 mahine building phase hai).</li>
+            <li>• Non-dairy area mein ho — customers milna mushkil hoga.</li>
+            <li>• Zameen nahi hai aur contract farming bhi option nahi hai.</li>
+            <li>• Marketing se bachte ho — sirf production karke baithna nahi chalega.</li>
+            <li>• Quick returns chahte ho — pehle 6 mahine sirf setup karne mein jaate hain.</li>
           </ul>
         </div>
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Agar aap pehle category mein aate hain, toh chhote scale par start karein. Pehle 6 mahine seekhein, customers banao, process samjho. Phir gradually expand karein. Direct ₹20 lakh invest karke badi machine mat lo - pehle prove karo ki market hai.
+        Pehli category mein aate ho toh chhote scale se shuru karo. Pehle 6 mahine seekho, customers banao, process samjho — fir expand karo. Seedhe ₹20 lakh laga kar badi machine mat lo, pehle market prove karo.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Subsidy ka fayda zaroor uthayein. 40-50% machinery par mil rahi hai. Par yaad rakho - subsidy milna guaranteed nahi hai. Application process mein 3-6 months lag sakte hain. Isliye apni planning subsidy ke bina karein. Agar mil gayi, toh bonus samjho.
+        Subsidy ka fayda zaroor uthao — 40-50% tak machinery par mil rahi hai. Par guaranteed nahi hai. Application process mein 3-6 mahine lag sakte hain, isliye planning subsidy ke bina karo. Mil gayi toh bonus samajh lo.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Agar aap seriously interested hain, toh pehle apne area ke 5-10 dairy farms se baat karein. Unse pata karein ki wo packaged fodder use karte hain ya nahi, kahan se khareedte hain, rate kya hai. Market research karo, phir decision lo.
+        Seriously interested ho toh pehle apne area ke 5-10 dairy farms se baat karo. Puchho — packaged fodder use karte hain ya nahi, kahan se lete hain, rate kya chalta hai. Research pehle, decision baad mein.
       </p>
 
       {/* FAQ Section */}
@@ -531,26 +532,26 @@ export default function SilageMaking() {
       <div className="space-y-4 mb-8 not-prose">
         <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">1. Packaged fodder packet kholne ke baad kitne din tak use karna chahiye?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Ek baar fodder ka packet khol diya jaye, toh usko 3-4 din ke andar use kar lena chahiye. Uske baad hawa lagne se fermentation process reverse ho jata hai, fungus lag sakta hai aur quality kharab ho jati hai. Rozana thoda-thoda kaat kar nikalna behtar hota hai.</p>
+          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Packet khulne ke 3-4 din ke andar use kar lena chahiye. Uske baad hawa lagne se fermentation reverse ho jata hai aur fungus lag sakta hai. Rozana thoda-thoda kaat kar nikalna sahi tarika hai.</p>
         </div>
         <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">2. Kya yeh preserved fodder sirf gaay/bhains ke liye hai ya bakri/bhed bhi kha sakti hain?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Haan, bakri, bhed, aur ghode bhi ise kha sakte hain. Maize based fodder mein energy aur protein achha hota hai. Bas quantity adjust karni hoti hai — chhote janwaron ke liye 1-2 kg per day kaafi hota hai, jabki bhains ke liye 8-10 kg lagta hai.</p>
+          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Bakri, bhed aur ghode bhi khila sakte hain. Bas quantity alag hogi — chhote janwaron ke liye 1-2 kg rozana kaafi hai, bhains ko 8-10 kg tak chahiye.</p>
         </div>
         <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">3. Off-season (garmiyon) mein machinery aur staff ka kya karein?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Garmiyon mein packaged fodder ki demand kam hoti hai kyunki hari ghaas available hoti hai. Is time par aap machinery ki thorough servicing aur painting karwa sakte hain. Staff ko hay (sookha chara) making, mineral mixture blending, ya doosre fodder products ki packaging mein engage rakha ja sakta hai taaki fixed cost cover ho sake.</p>
+          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Garmiyon mein demand girti hai kyunki hari ghaas khud hi available ho jaati hai. Ye time machinery servicing ke liye use karo. Staff ko hay making ya mineral mixture blending jaisa kaam do, taaki fixed cost nikalta rahe.</p>
         </div>
         <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">4. Kya packaged fodder banane ke liye koi special training ya license chahiye?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Basic business ke liye Udyam Registration aur GST chahiye. Agar branded animal feed bech rahe hain toh FSSAI license chahiye. Technical training ke liye NDDB, KVK, ya State Animal Husbandry Department ke 3-7 din ke short-term courses karne se fermentation aur quality control achhe se samajh aa jata hai.</p>
+          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Udyam Registration aur GST basic zaroorat hai. Branded feed bechna ho toh FSSAI license lagega. NDDB ya KVK ke short-term courses se fermentation aur quality control ka practical gyaan mil jata hai.</p>
         </div>
       </div>
 
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-lg border-l-4 border-orange-500 not-prose">
         <p className="text-sm text-gray-700 dark:text-gray-300">
           <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
-          Yeh article general information ke liye hai. Actual costs, subsidies, aur procedures aapke location aur specific circumstances ke hisaab se vary kar sakte hain. Koi bhi financial decision lene se pehle qualified professionals (agriculture officers, CAs) se consult karein. Prices aur guidelines change hote rehte hain, isliye latest information ke liye official sources se verify karein. Last updated: July 2026.
+          Yeh article general information ke liye hai. Actual costs, subsidies, aur procedures location aur circumstances ke hisaab se badal sakte hain. Koi bhi financial decision lene se pehle qualified professionals (agriculture officers, CAs) se consult karein. Latest information ke liye official sources se verify karte rahein. Last updated: July 2026.
         </p>
       </div>
     </article>
