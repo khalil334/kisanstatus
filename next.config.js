@@ -3,6 +3,7 @@ const nextConfig = {
   poweredByHeader: false,
   generateEtags: true,
   trailingSlash: false,
+  compress: true,
 
   images: {
     formats: ['image/avif', 'image/webp'],
@@ -28,7 +29,7 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
     scrollRestoration: true,
-    optimizePackageImports: ['lucide-react', 'recharts', 'date-fns', 'framer-motion'],
+    optimizePackageImports: ['lucide-react', 'recharts', 'date-fns', 'framer-motion', 'react-icons', '@heroicons/react'],
   },
 
   compiler: {
