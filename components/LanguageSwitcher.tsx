@@ -1,25 +1,6 @@
-/**
- * LanguageSwitcher — Dropdown to switch between 8 Indian languages
- * ✅ PRODUCTION READY v2.0
- * ✅ KEYBOARD NAVIGATION
- * ✅ FOCUS MANAGEMENT
- * ✅ ANALYTICS TRACKING
- * ✅ ACCESSIBILITY ENHANCED
- * ✅ MOBILE OPTIMIZED
- * ✅ SMOOTH ANIMATIONS
- * 
- * Features:
- * - Keyboard navigation (Escape, Arrow keys, Enter)
- * - Focus trap when open
- * - Outside click to close
- * - Analytics tracking
- * - Smooth animations
- * - Mobile-friendly touch targets
- * - Screen reader friendly
- */
 'use client';
 
-import { useState, useRef, useEffect, useCallback } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useLang } from '@/lib/LanguageContext';
 import { LANGUAGES } from '@/lib/translations';
 import { trackEvent } from '@/lib/gtag';
@@ -34,7 +15,6 @@ export default function LanguageSwitcher() {
 
   const current = LANGUAGES.find((l) => l.code === lang) ?? LANGUAGES[0];
 
-  // Close on outside click
   useEffect(() => {
     const handler = (e: MouseEvent) => {
       if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
@@ -46,7 +26,6 @@ export default function LanguageSwitcher() {
     return () => document.removeEventListener('mousedown', handler);
   }, []);
 
-  // Focus management when dropdown opens
   useEffect(() => {
     if (open && listboxRef.current) {
       const currentIndex = LANGUAGES.findIndex((l) => l.code === lang);
@@ -54,8 +33,14 @@ export default function LanguageSwitcher() {
     }
   }, [open, lang]);
 
-  // Keyboard navigation
-  const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
+  useEffect(() => {
+    if (open && focusedIndex >= 0 && listboxRef.current) {
+      const buttons = listboxRef.current.querySelectorAll('[role="option"]');
+      buttons[focusedIndex]?.focus();
+    }
+  }, [focusedIndex, open]);
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
     if (!open) {
       if (e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowDown') {
         e.preventDefault();
@@ -71,51 +56,42 @@ export default function LanguageSwitcher() {
         setFocusedIndex(-1);
         buttonRef.current?.focus();
         break;
-
       case 'ArrowDown':
         e.preventDefault();
         setFocusedIndex((prev) => (prev + 1) % LANGUAGES.length);
         break;
-
       case 'ArrowUp':
         e.preventDefault();
         setFocusedIndex((prev) => (prev - 1 + LANGUAGES.length) % LANGUAGES.length);
         break;
-
       case 'Enter':
       case ' ':
         e.preventDefault();
         if (focusedIndex >= 0 && focusedIndex < LANGUAGES.length) {
-          const selectedLang = LANGUAGES[focusedIndex];
-          handleLanguageChange(selectedLang.code);
+          handleLanguageChange(LANGUAGES[focusedIndex].code);
         }
         break;
-
       case 'Home':
         e.preventDefault();
         setFocusedIndex(0);
         break;
-
       case 'End':
         e.preventDefault();
         setFocusedIndex(LANGUAGES.length - 1);
         break;
-
       case 'Tab':
         setOpen(false);
         setFocusedIndex(-1);
         break;
     }
-  }, [open, focusedIndex]);
+  };
 
-  // Handle language change with analytics
-  const handleLanguageChange = useCallback((newLang: string) => {
+  const handleLanguageChange = (newLang: string) => {
     setLang(newLang as any);
     setOpen(false);
     setFocusedIndex(-1);
     buttonRef.current?.focus();
 
-    // Track in analytics
     try {
       const langData = LANGUAGES.find((l) => l.code === newLang);
       trackEvent('select_language', {
@@ -124,25 +100,12 @@ export default function LanguageSwitcher() {
         value: newLang,
       });
     } catch (error) {
-      if (process.env.NODE_ENV === 'development') {
-        console.error('[LanguageSwitcher] Error tracking language change:', error);
-      }
+      // Silent fail in production
     }
-  }, [setLang]);
-
-  // Focus current item when focusedIndex changes
-  useEffect(() => {
-    if (open && focusedIndex >= 0 && listboxRef.current) {
-      const buttons = listboxRef.current.querySelectorAll('[role="option"]');
-      if (buttons[focusedIndex]) {
-        (buttons[focusedIndex] as HTMLElement).focus();
-      }
-    }
-  }, [focusedIndex, open]);
+  };
 
   return (
     <div ref={containerRef} className="relative">
-      {/* Trigger button */}
       <button
         ref={buttonRef}
         onClick={() => setOpen((o) => !o)}
@@ -168,7 +131,6 @@ export default function LanguageSwitcher() {
         </svg>
       </button>
 
-      {/* Dropdown */}
       {open && (
         <div
           ref={listboxRef}
@@ -178,14 +140,12 @@ export default function LanguageSwitcher() {
           className="absolute right-0 top-full mt-2 w-56 bg-white border border-gray-200 rounded-xl shadow-xl z-50 overflow-hidden py-1 animate-in fade-in slide-in-from-top-2 duration-200"
           onKeyDown={handleKeyDown}
         >
-          {/* Header */}
           <div className="px-4 py-2 border-b border-gray-100 bg-gray-50">
             <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
               Select Language
             </p>
           </div>
 
-          {/* Language options */}
           <div className="max-h-[60vh] overflow-y-auto">
             {LANGUAGES.map((l, index) => {
               const isSelected = l.code === lang;
@@ -232,7 +192,6 @@ export default function LanguageSwitcher() {
             })}
           </div>
 
-          {/* Footer */}
           <div className="px-4 py-2 border-t border-gray-100 bg-gray-50">
             <p className="text-xs text-gray-500 text-center">
               🌐 {LANGUAGES.length} languages available
