@@ -1,5 +1,3 @@
-'use client';
-
 import Link from 'next/link';
 import { 
   AUTHOR_NAME, 
@@ -30,7 +28,6 @@ export default function Footer() {
     >
       <div className="container-site">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-          {/* Brand Column */}
           <div>
             <h4 className="font-semibold text-white text-base mb-4" itemProp="name">{SITE_NAME}</h4>
             <p className="text-sm text-gray-400 leading-relaxed mb-4" itemProp="description">
@@ -51,7 +48,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h4 className="font-semibold text-white text-base mb-4">Quick Links</h4>
             <nav aria-label="Footer navigation">
@@ -78,7 +74,6 @@ export default function Footer() {
             </nav>
           </div>
 
-          {/* Official Links */}
           <div>
             <h4 className="font-semibold text-white text-base mb-4 flex items-center gap-2">
               <span aria-hidden="true">🏛️</span>
@@ -109,7 +104,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Info */}
           <div>
             <h4 className="font-semibold text-white text-base mb-4 flex items-center gap-2">
               <span aria-hidden="true">📞</span>
@@ -180,7 +174,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Copyright */}
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-center md:text-left">
