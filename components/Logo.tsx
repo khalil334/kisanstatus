@@ -1,7 +1,4 @@
-'use client';
-
 import Image from 'next/image';
-import { useState } from 'react';
 
 interface LogoProps {
   variant?: 'light' | 'dark';
@@ -9,8 +6,6 @@ interface LogoProps {
 }
 
 export default function Logo({ variant = 'light', size = 'md' }: LogoProps) {
-  const [imageError, setImageError] = useState(false);
-
   const textColor = variant === 'light' ? 'text-white' : 'text-green-800';
   const subColor = variant === 'light' ? 'text-green-200' : 'text-green-600';
 
@@ -28,19 +23,14 @@ export default function Logo({ variant = 'light', size = 'md' }: LogoProps) {
       aria-label="KisanStatus.com - Home"
     >
       <div className="relative shrink-0 group-hover:scale-105 transition-transform duration-200">
-        {imageError ? (
-          <span className="text-3xl" role="img" aria-label="KisanStatus logo">🌾</span>
-        ) : (
-          <Image
-            src="/favicon-64x64.png"
-            alt="KisanStatus.com logo"
-            width={sizes.imgSize}
-            height={sizes.imgSize}
-            priority
-            className={`${sizes.image} object-contain`}
-            onError={() => setImageError(true)}
-          />
-        )}
+        <Image
+          src="/favicon-64x64.png"
+          alt="KisanStatus.com logo"
+          width={sizes.imgSize}
+          height={sizes.imgSize}
+          priority
+          className={`${sizes.image} object-contain`}
+        />
       </div>
 
       <div className="flex flex-col">
