@@ -78,7 +78,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
               },
               datePublished: PUBLISHED,
               dateModified: MODIFIED,
-              mainEntityOfPage: { '@type': 'WebPage', '@id': `https://kisanstatus.com/articles/maandhan/${article.slug}` },
+              mainEntityOfPage: { '@type': 'WebPage', '@id': `https://kisanstatus.com/maandhan/${article.slug}` },
             },
             {
               '@type': 'FAQPage',
@@ -97,7 +97,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
           <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
             <Link href="/" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Home</Link>
             <span>/</span>
-            <Link href="/articles/maandhan" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Maandhan Yojana</Link>
+            <Link href="/maandhan" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Maandhan Yojana</Link>
             <span>/</span>
             <span className="text-white font-bold">Auto Debit Ka Sach</span>
           </nav>
@@ -453,7 +453,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
             {RELATED_CARDS.map((card) => (
               <Link
                 key={card.slug}
-                href={`/articles/maandhan/${card.slug}`}
+                href={`/maandhan/${card.slug}`}
                 className="group block p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:border-green-500 transition-all duration-300"
               >
                 <div className="text-2xl mb-2">{card.emoji}</div>
@@ -473,8 +473,8 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
 
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/maandhan/pm-kisan-maandhan-registration-2026', l: '📝 Registration Guide' },
-          { href: '/articles/maandhan/pm-kisan-maandhan-pension-calculator', l: '🧮 Calculator' },
+          { href: '/maandhan/pm-kisan-maandhan-registration-2026', l: '📝 Registration Guide' },
+          { href: '/maandhan/pm-kisan-maandhan-pension-calculator', l: '🧮 Calculator' },
           { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
         ]} />
         <Disclaimer />
