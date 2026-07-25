@@ -36,7 +36,7 @@ export default function LanguageSwitcher() {
   useEffect(() => {
     if (open && focusedIndex >= 0 && listboxRef.current) {
       const buttons = listboxRef.current.querySelectorAll('[role="option"]');
-      buttons[focusedIndex]?.focus();
+      (buttons[focusedIndex] as HTMLElement)?.focus();
     }
   }, [focusedIndex, open]);
 
