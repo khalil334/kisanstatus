@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -59,7 +59,7 @@ function fuzzySearch(query: string) {
 function SearchModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   const [query, setQuery] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
-  const results = useMemo(() => fuzzySearch(query), [query]);
+  const results = fuzzySearch(query);
 
   useEffect(() => {
     if (isOpen) {
@@ -189,6 +189,8 @@ function ThemeToggle() {
     }
   };
 
+  if (!mounted) return null;
+
   return (
     <button
       onClick={toggle}
@@ -215,7 +217,6 @@ export default function Header() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [shortcutKey, setShortcutKey] = useState<string | null>(null);
   const pathname = usePathname();
-  const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     let ticking = false;
@@ -267,36 +268,10 @@ export default function Header() {
     setMobileOpen(false);
   }, [pathname]);
 
-  const isActive = useCallback(
-    (href: string) => {
-      if (href === '/') return pathname === '/';
-      return pathname?.startsWith(href);
-    },
-    [pathname]
-  );
-
-  const renderedNavLinks = useMemo(
-    () =>
-      navLinks.map((link) => {
-        const active = isActive(link.href);
-        return (
-          <Link
-            key={link.href}
-            href={link.href}
-            className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
-              active 
-                ? 'text-[var(--color-primary)] bg-[var(--color-bg-alt)]' 
-                : 'text-[var(--color-text)] hover:text-[var(--color-primary)] hover:bg-[var(--color-bg-alt)]'
-            }`}
-            aria-current={active ? 'page' : undefined}
-            prefetch={true}
-          >
-            {link.label}
-          </Link>
-        );
-      }),
-    [isActive]
-  );
+  const isActive = (href: string) => {
+    if (href === '/') return pathname === '/';
+    return pathname?.startsWith(href);
+  };
 
   return (
     <>
@@ -311,7 +286,6 @@ export default function Header() {
       )}
 
       <header
-        ref={headerRef}
         className={`bg-[var(--color-card)] border-b border-[var(--color-border)] sticky top-0 z-50 transition-shadow duration-200 ${
           scrolled ? 'shadow-md' : 'shadow-sm'
         }`}
@@ -323,7 +297,24 @@ export default function Header() {
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1 flex-1 justify-center" aria-label="Main navigation">
-            {renderedNavLinks}
+            {navLinks.map((link) => {
+              const active = isActive(link.href);
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
+                    active 
+                      ? 'text-[var(--color-primary)] bg-[var(--color-bg-alt)]' 
+                      : 'text-[var(--color-text)] hover:text-[var(--color-primary)] hover:bg-[var(--color-bg-alt)]'
+                  }`}
+                  aria-current={active ? 'page' : undefined}
+                  prefetch={true}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </nav>
 
           <div className="hidden lg:flex items-center gap-2">
