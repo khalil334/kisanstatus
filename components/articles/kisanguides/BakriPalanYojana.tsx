@@ -252,8 +252,8 @@ export default function BakriPalanYojana() {
         </ul>
 
         <Image 
-          src="/images/kisanguides/goat-breeds-comparison.webp"
-          alt="Popular goat breeds for NLM subsidy - Jamunapari, Sirohi, Beetal, and Black Bengal comparison"
+          src="/images/kisanguides/goat-farming-shed-construction.webp"
+          alt="Goat farming shed and housing setup for different breeds under NLM subsidy"
           width={800}
           height={450}
           sizes="(max-width: 768px) 100vw, 800px"
@@ -333,15 +333,6 @@ export default function BakriPalanYojana() {
           Ek outbreak pura flock saaf kar sakta hai. Darane wali baat nahi, seedhi si sachai hai. Inspection mein vaccination record bhi documents jitna hi dekha jata hai.
         </p>
 
-        <Image 
-          src="/images/kisanguides/goat-vaccination-schedule.webp"
-          alt="Goat vaccination schedule chart - PPR, ET, FMD vaccines timeline and deworming calendar for NLM farms"
-          width={800}
-          height={450}
-          sizes="(max-width: 768px) 100vw, 800px"
-          className="rounded-xl shadow-md mb-8 w-full object-cover not-prose"
-        />
-
         <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-6">
           <li><strong>PPR:</strong> har 6 mahine. Sabse zaroori, sarkari dispansary mein aksar free milti hai.</li>
           <li><strong>Enterotoxaemia:</strong> saal mein ek baar, lambing se pehle.</li>
@@ -365,6 +356,16 @@ export default function BakriPalanYojana() {
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
           State aur mandi rate se numbers thode upar-neeche honge, par rough picture kuch aisa hai:
         </p>
+
+        <Image 
+          src="/images/kisanguides/nlm-subsidy-calculation.webp"
+          alt="NLM bakri palan subsidy calculation - 50% subsidy on project cost, ROI and profit estimation breakdown"
+          width={800}
+          height={450}
+          sizes="(max-width: 768px) 100vw, 800px"
+          className="rounded-xl shadow-md mb-8 w-full object-cover not-prose"
+        />
+
         <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-6">
           <li><strong>Initial Investment:</strong> ₹15-18 Lakh (50% subsidy + baaki loan ya apna paisa)</li>
           <li><strong>Recurring Cost (pehle 6 mahine):</strong> ₹3-4 Lakh</li>
