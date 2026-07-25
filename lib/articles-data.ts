@@ -28,7 +28,7 @@ export const CATEGORIES = {
     nameHi: 'बाजार दरें',
     description: 'Daily vegetable and fruit market rates, wholesale prices',
     descriptionHi: 'दैनिक सब्जी और फल बाजार दरें, थोक कीमतें',
-    icon: '📈',
+    icon: '',
     color: 'yellow',
   },
 } as const;
@@ -59,9 +59,9 @@ export interface ArticleMeta {
 export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'KisanRinKahaSeLe2026',
-    title: 'Kisan Loan Kahan Se Milega 2026? KCC, Bank, CSC — Puri Jankari',
+    title: 'Kisan Loan 2026: KCC, Bank, CSC Guide',
     desc: 'Loan chahiye to confusion hota hai — SBI, cooperative, CSC, har jagah process alag. Is guide mein sab kuch hai.',
-    ogTitle: 'Kisan Loan Guide 2026 — Complete Jankari Hindi Mein',
+    ogTitle: 'Kisan Loan Guide 2026 — Hindi Jankari',
     keywords: [
       'kisan loan kahan se milega 2026',
       'kisan credit card',
@@ -85,9 +85,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'KisanTractorLoan2026',
-    title: 'Tractor Loan Bina Down Payment — Kya Yeh Sach Mein Mil Sakta Hai?',
+    title: 'Tractor Loan 2026: Bina Down Payment?',
     desc: 'Bina down payment ke tractor loan? Mahindra Finance, TATA Capital, aur state banks mein scheme hai.',
-    ogTitle: 'Tractor Loan Bina Down Payment 2026 — Puri Jankari',
+    ogTitle: 'Tractor Loan Bina Down Payment 2026',
     keywords: [
       'tractor loan 2026',
       'tractor finance 2026',
@@ -108,9 +108,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'PmKisanBeneficiaryList2026',
-    title: 'PM Kisan Beneficiary List 2026: Naam Check Karo, Village Wise List Dekho, PDF Download',
+    title: 'PM Kisan Beneficiary List 2026: Check',
     desc: 'Beneficiary list mein naam check karo, gaon ki poori village wise list dekho, PDF download karo. 7 rejection reasons + fix bhi.',
-    ogTitle: 'PM Kisan Beneficiary List 2026 — Complete Guide with Village Wise List',
+    ogTitle: 'PM Kisan Beneficiary List 2026 Guide',
     keywords: [
       'pm kisan beneficiary list 2026',
       'pm kisan village wise roster',
@@ -132,9 +132,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'PmKisanEkycOnline2026',
-    title: 'PM Kisan eKYC Online 2026: Ghar Baithe 2 Minute Mein Complete Karo',
+    title: 'PM Kisan eKYC 2026: 2 Min Mein Karein',
     desc: 'eKYC mandatory hai bina iske kist nahi milegi. OTP ya CSC biometric se free mein karo.',
-    ogTitle: 'PM Kisan eKYC Online 2026 — Free Verification Guide',
+    ogTitle: 'PM Kisan eKYC Online 2026 Guide',
     keywords: [
       'pm kisan ekyc online 2026',
       'pm kisan ekyc kaise kare',
@@ -155,9 +155,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'PmfbyCropInsurance2026',
-    title: 'PMFBY Crop Insurance 2026: Sirf 2% Premium Mein Fasal Suraksha',
+    title: 'PMFBY Crop Insurance 2026: 2% Premium',
     desc: 'Fasal kharab ho toh compensation milega. Kharif 2%, Rabi 1.5% premium. Enrollment deadline mat bhoolo.',
-    ogTitle: 'PMFBY Crop Insurance 2026 — Complete Guide Hindi Mein',
+    ogTitle: 'PMFBY Crop Insurance 2026 Guide',
     keywords: [
       'pmfby crop insurance 2026',
       'fasal bima yojana',
@@ -178,9 +178,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'KisanCreditCardOnlineApply2026',
-    title: 'Kisan Credit Card Online Apply 2026 — ₹5 Lakh Loan, 4% Interest',
+    title: 'Kisan Credit Card 2026: ₹5 Lakh Loan',
     desc: 'KCC hai to ₹5 lakh tak loan mil sakta hai, interest rate sirf 4%.',
-    ogTitle: 'Kisan Credit Card Online Apply — ₹5 Lakh Loan 2026',
+    ogTitle: 'KCC Online Apply — ₹5 Lakh Loan 2026',
     keywords: [
       'kisan credit card online apply 2026',
       'KCC apply online',
@@ -200,9 +200,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai',
-    title: 'FTO Generated Ka Matlab Kya Hai? PM Kisan Status Explained',
+    title: 'FTO Generated Meaning: PM Kisan Status',
     desc: 'FTO Generated, FTO Pending — confused ho? FTO matlab Fund Transfer Order.',
-    ogTitle: 'FTO Generated Matlab — PM Kisan Status Guide',
+    ogTitle: 'FTO Generated Matlab — PM Kisan Guide',
     keywords: [
       'FTO generated meaning',
       'fund transfer order status',
@@ -221,9 +221,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'NanoDap500mlPriceInIndia2026',
-    title: 'Nano DAP 500ml Price India 2026 — IFFCO Rate Aur Kahan Milega',
+    title: 'Nano DAP 500ml Price 2026: IFFCO Rate',
     desc: 'IFFCO Nano DAP 500ml bottle ₹280-320 ke beech hai.',
-    ogTitle: 'Nano DAP 500ml Price 2026 — Kahan Se Khariden?',
+    ogTitle: 'Nano DAP 500ml Price 2026 India',
     keywords: [
       'Nano DAP 500ml price India 2026',
       'IFFCO Nano DAP price',
@@ -242,9 +242,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'PmKisan24viKist2026',
-    title: 'PM Kisan 24vi Kist Kab Aayegi? Date Aur Status Guide 2026',
+    title: 'PM Kisan 24vi Kist 2026: Date & Status',
     desc: '23vi aa gayi, ab 24vi ka wait. October 2026 tak aane ki umeed.',
-    ogTitle: 'PM Kisan 24vi Kist — Kab Aayegi 2026?',
+    ogTitle: 'PM Kisan 24vi Kist — Kab Aayegi?',
     keywords: [
       'pm kisan 24vi kist 2026',
       'next kist date 2026',
@@ -263,9 +263,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'AgriStackKyaHai2026',
-    title: 'AgriStack Kya Hai? Digital Kisan ID Aur PM Kisan Connection',
+    title: 'AgriStack 2026: Digital Kisan ID Guide',
     desc: 'AgriStack digital kisan ID hai. PM Kisan se connected hai.',
-    ogTitle: 'AgriStack Kya Hai — Digital Kisan ID Complete Guide',
+    ogTitle: 'AgriStack Kya Hai — Kisan ID Guide',
     keywords: [
       'AgriStack kya hai',
       'AgriStack 2026',
@@ -285,9 +285,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'PmKisanMasterGuide2026',
-    title: 'PM Kisan Complete Guide 2026 — Sab Problems Ka Ek Saath Hal',
+    title: 'PM Kisan Complete Guide 2026: All Fixes',
     desc: 'Status verify, eKYC, payment fail — sab ek jagah.',
-    ogTitle: 'PM Kisan Complete Guide — Sab Problems Fix',
+    ogTitle: 'PM Kisan Complete Guide — Sab Fix',
     keywords: [
       'pm kisan complete guide 2026',
       'all problems solution',
@@ -306,9 +306,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'soil-health-card-complete-guide-2026',
-    title: 'Soil Health Card 2026 — Mitti Test Karwane Ka Pura Process',
+    title: 'Soil Health Card 2026: Mitti Test Guide',
     desc: 'Mitti test karwao — CSC se form lo, sample do, 15 din mein report.',
-    ogTitle: 'Soil Health Card Complete Guide 2026 — Sab Kuch Jaano',
+    ogTitle: 'Soil Health Card 2026 — Puri Jankari',
     keywords: [
       'soil health card complete guide 2026',
       'soil health card download',
@@ -327,9 +327,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'mandi-bhav-today',
-    title: 'Aaj Ka Mandi Bhav — Sabzi Aur Fruit Rates (Daily Update)',
+    title: 'Aaj Ka Mandi Bhav: Daily Sabzi Rates',
     desc: 'Aloo ₹20-24, pyaaz ₹26-30, tamatar ₹38-45. Daily updated rates.',
-    ogTitle: 'Aaj Ka Mandi Bhav — Live Sabzi Aur Fruit Rates',
+    ogTitle: 'Aaj Ka Mandi Bhav — Live Rates',
     keywords: [
       'aaj ka mandi bhav',
       'mandi bhav today hindi',
@@ -346,9 +346,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'PmKisanPaymentFailedFix2026',
-    title: 'PM Kisan Payment Failed 2026: Bank Mein Paisa Kyun Nahi Aaya? 7 Real Reasons + Turant Fix',
+    title: 'PM Kisan Payment Failed 2026: 7 Fixes',
     desc: 'Payment failed dikh raha hai? Aadhaar seeding, IFSC, dormant account — 7 wajah aur turant fix ka tarika. Arrears bhi milenge.',
-    ogTitle: 'PM Kisan Payment Failed Fix 2026 — Complete Troubleshooting Guide',
+    ogTitle: 'PM Kisan Payment Failed Fix 2026',
     keywords: [
       'pm kisan payment failed',
       'payment fail fix',
@@ -370,9 +370,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'PmKisan25viKist2027',
-    title: 'PM Kisan 25vi Kist 2027: Kab Aayegi, Kitni Milegi, Aur Abhi Se Kya Tayyari Karein',
+    title: 'PM Kisan 25vi Kist 2027: Date & Amount',
     desc: '25vi kist expected Feb-Mar 2027 mein. ₹2,000 confirmed, increase possible. Abhi se eKYC, bank seeding, land records perfect karo.',
-    ogTitle: 'PM Kisan 25vi Kist 2027 — Release Date, Amount & Preparation Guide',
+    ogTitle: 'PM Kisan 25vi Kist 2027 Guide',
     keywords: [
       'pm kisan 25vi kist 2027',
       '25vi kist kab aayegi',
@@ -394,9 +394,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'pm-kisan-self-registered-status-check',
-    title: 'PM Kisan Self Registration Status Check 2026: Ghar Baithe Jaano — Approved Hua Ya Nahi',
+    title: 'PM Kisan Self Reg Status 2026: Check',
     desc: 'Self-registration karke bhool gaye? 7-10 din baad status check karna zaroori hai. Step-by-step guide + common problems + fix.',
-    ogTitle: 'PM Kisan Self Registration Status Check 2026 — Complete Guide',
+    ogTitle: 'PM Kisan Self Registration Status',
     keywords: [
       'pm kisan self registration status check',
       'pm kisan self registered status',
@@ -418,9 +418,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'PmKisanCorrectionForm2026',
-    title: 'PM Kisan Correction Form Kaise Bharein — Naam, Aadhaar, Bank Details Galat Hai To Kya Karein 2026',
+    title: 'PM Kisan Correction Form 2026: Fix Guide',
     desc: 'Naam spelling galat, bank IFSC mismatch, Aadhaar seeding error? PM Kisan correction form bharne ka step-by-step tarika — portal se aur CSC dono. Ruki hui kist wapas milegi.',
-    ogTitle: 'PM Kisan Correction Form 2026 — Naam, Bank, Aadhaar Fix Guide',
+    ogTitle: 'PM Kisan Correction Form 2026 Guide',
     keywords: [
       'pm kisan correction form 2026',
       'pm kisan naam correction online',
@@ -444,9 +444,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'PmKusumYojanaSolarSubsidy2026',
-    title: 'PM Kusum Yojana Solar Pump Subsidy Kaise Milegi — Kisano Ke Liye Complete Guide 2026',
+    title: 'PM Kusum Solar Pump 2026: 60% Subsidy',
     desc: 'Diesel pump band karo, solar pump lagao. 60% subsidy, zero bijli bill, 25 saal free paani. Eligibility, online apply, state-wise process, documents — sab kuch simple bhasha mein.',
-    ogTitle: 'PM Kusum Solar Pump Subsidy 2026 — Complete Kisan Guide',
+    ogTitle: 'PM Kusum Solar Subsidy 2026 Guide',
     keywords: [
       'pm kusum yojana solar pump subsidy',
       'pm kusum yojana online apply 2026',
@@ -468,9 +468,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'PmKisanLandSeedingForm',
-    title: 'PM Kisan Land Seeding Form PDF Download: State Wise Process',
+    title: 'PM Kisan Land Seeding Form 2026: PDF',
     desc: 'Land seeding form download karo — UP, Bihar, MP, Rajasthan ke state wise forms. Khasra-Khatauni details ke saath complete guide.',
-    ogTitle: 'PM Kisan Land Seeding Form PDF Download — State Wise Complete Guide',
+    ogTitle: 'PM Kisan Land Seeding Form PDF',
     keywords: [
       'pm kisan land seeding form pdf download',
       'land seeding form state wise',
@@ -492,9 +492,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'PmKisanFaceAuthenticationEkyc',
-    title: 'PM Kisan Face Authentication eKYC: Bina OTP Ke Ghar Baithe Verification',
+    title: 'PM Kisan Face Auth eKYC: Bina OTP',
     desc: 'OTP nahi aa raha? PM Kisan app se face authentication karke bina OTP ke eKYC complete karo. Step-by-step guide + common errors fix.',
-    ogTitle: 'PM Kisan Face Authentication eKYC — Bina OTP Ke Verification Guide',
+    ogTitle: 'PM Kisan Face Auth eKYC Guide',
     keywords: [
       'pm kisan face authentication kyc',
       'pm kisan app bina otp kyc',
@@ -516,9 +516,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'PmKisanVoluntarySurrenderGuide',
-    title: 'PM Kisan Voluntary Surrender: Galti Se Register Ho Gaye Toh Kaise Hatte?',
+    title: 'PM Kisan Surrender Guide: Kaise Hatte?',
     desc: 'Government employee ya income tax filer ho? Galti se PM Kisan mein register ho gaye toh voluntary surrender kaise karein. Online + offline process.',
-    ogTitle: 'PM Kisan Voluntary Surrender Guide — Galti Sudharne Ka Tarika',
+    ogTitle: 'PM Kisan Voluntary Surrender Guide',
     keywords: [
       'pm kisan voluntary surrender',
       'pm kisan benefit surrender form',
@@ -540,9 +540,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'PmKisanStateNodalOfficerList',
-    title: 'PM Kisan State Nodal Officer Contact List: Shikayat Kahan Karein?',
+    title: 'PM Kisan Nodal Officer List: Contacts',
     desc: '155261 se kaam nahi ban raha? Har state ke nodal officer ka email, phone number aur address. Email template + grievance portal guide.',
-    ogTitle: 'PM Kisan State Nodal Officer Contact List — Direct Complaint Karein',
+    ogTitle: 'PM Kisan Nodal Officer Contact List',
     keywords: [
       'pm kisan state nodal officer list',
       'pm kisan district officer contact',
@@ -564,9 +564,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'PmKisanBankAccountChangeProcess',
-    title: 'PM Kisan Bank Account Change Process: Naya Account Kaise Jodein?',
+    title: 'PM Kisan Bank Change 2026: Naya Account',
     desc: 'Purana account band ho gaya? CSC ya BAO office jakar naya bank account kaise link karein. NPCI seeding + IFSC update ka pura tarika.',
-    ogTitle: 'PM Kisan Bank Account Change — Naya Account Link Karne Ka Pura Tarika',
+    ogTitle: 'PM Kisan Bank Account Change Guide',
     keywords: [
       'pm kisan bank account change kaise kare',
       'pm kisan new bank account link',
@@ -588,9 +588,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'PmKisanCscRegistrationCharges',
-    title: 'PM Kisan CSC Registration Charges: Kitne Paise Lagte Hain, Kaise Karein?',
+    title: 'PM Kisan CSC Charges 2026: Sahi Fees',
     desc: 'CSC wala ₹500 maang raha hai? Sarkari rate sirf ₹25-30 hai. Sahi fees, free online method, aur fraud se bachne ka tarika.',
-    ogTitle: 'PM Kisan CSC Registration Charges — Sahi Fees, Sahi Tarika',
+    ogTitle: 'PM Kisan CSC Registration Charges',
     keywords: [
       'pm kisan csc registration fees',
       'pm kisan csc se kaise kare',
@@ -612,9 +612,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'PmKisanMaandhanYojanaPension',
-    title: 'PM Kisan Maandhan Yojana: 60 Saal Ke Baad ₹3000 Pension Ka Sahi Tarika',
+    title: 'PM Kisan Maandhan 2026: ₹3000 Pension',
     desc: 'Chhote kisanon ke liye pension scheme. 18-40 saal ki umar mein join karo, 60 ke baad ₹3000 har mahine pao. Contribution table + apply process.',
-    ogTitle: 'PM Kisan Maandhan Yojana — Buzurgi Ki Suraksha Pension Guide',
+    ogTitle: 'PM Kisan Maandhan Yojana Guide',
     keywords: [
       'pm kisan maandhan yojana',
       'kisan pension yojana eligibility',
@@ -636,9 +636,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'PmKisanRejectedStatusReApplyGuide',
-    title: 'PM Kisan Rejected Status: Naam List Se Kyun Kata, Dobara Apply Kaise Karein?',
+    title: 'PM Kisan Rejected Status 2026: Reapply',
     desc: 'Status rejected dikh raha hai? 7 main reasons + step-by-step re-application guide. CSC correction form + arrears claim process.',
-    ogTitle: 'PM Kisan Rejected Status Fix — Dobara Apply Karne Ka Pura Tarika',
+    ogTitle: 'PM Kisan Rejected Status Fix Guide',
     keywords: [
       'pm kisan rejected status fix',
       'pm kisan reapply kaise kare',
@@ -660,9 +660,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'PmKisanVillageWiseListPdfDownload',
-    title: 'PM Kisan Village Wise List PDF Download: Gaon Ki Puri List Kaise Nikalein?',
+    title: 'PM Kisan Village List 2026: PDF Download',
     desc: 'Apne gaon ki puri PM Kisan beneficiary list PDF mein download karo. Mobile + PC dono tarika. Excel convert trick + state portals.',
-    ogTitle: 'PM Kisan Village Wise List PDF — Gaon Ka Pura Roster Ek Click Mein',
+    ogTitle: 'PM Kisan Village Wise List PDF',
     keywords: [
       'pm kisan village wise list pdf',
       'pm kisan gaon wise list download',
@@ -684,9 +684,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'PmKisanMobileNumberChangeUpdate',
-    title: 'PM Kisan Mobile Number Change: Purana SIM Band Ho Gaya Toh Naya Number Kaise Jodein?',
+    title: 'PM Kisan Mobile Change 2026: Naya SIM',
     desc: 'Purana SIM band hai aur OTP nahi aa raha? CSC ya BAO office jakar naya mobile number kaise link karein. Online vs offline complete guide.',
-    ogTitle: 'PM Kisan Mobile Number Change — Bina Purane SIM Ke Naya Number Link Karein',
+    ogTitle: 'PM Kisan Mobile Number Change Guide',
     keywords: [
       'pm kisan mobile number change',
       'pm kisan mobile number update',
@@ -708,9 +708,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'bakri-palan-yojana-nlm-subsidy',
-    title: 'Bakri Palan Yojana 2026: NLM Subsidy, Loan Process, aur Real Profit Analysis',
+    title: 'Bakri Palan Yojana 2026: NLM Subsidy',
     desc: 'National Livestock Mission se 50% subsidy, 20 bakri farm ka complete budget, 5-year profit projection, aur real risks jo koi nahi batata.',
-    ogTitle: 'Bakri Palan Yojana 2026 — NLM Subsidy aur Real Profit Guide',
+    ogTitle: 'Bakri Palan Yojana 2026 Guide',
     keywords: [
       'bakri palan yojana 2026',
       'nlm subsidy goat farming',
@@ -732,9 +732,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'mushroom-kheti-nhb-subsidy',
-    title: 'Mushroom (Khumbi) Ki Kheti 2026: Kamre Mein Shuru Karein, Subsidy aur Real Profit Guide',
+    title: 'Mushroom Kheti 2026: NHB Subsidy Guide',
     desc: 'Oyster mushroom farming se mahine ka ₹40,000+ kamayein. 100-bag unit ka complete budget, NHB subsidy, aur step-by-step cultivation process.',
-    ogTitle: 'Mushroom Kheti 2026 — NHB Subsidy aur Real Profit Analysis',
+    ogTitle: 'Mushroom Kheti 2026 — Profit Guide',
     keywords: [
       'mushroom kheti 2026',
       'oyster mushroom farming subsidy',
@@ -756,9 +756,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'madhumakhi-palan-kvic-subsidy',
-    title: 'Madhumakhi Palan 2026: Shahad Se Kamayein, Khet Ka Yield Badhayein - Complete Guide',
+    title: 'Madhumakhi Palan 2026: KVIC Subsidy',
     desc: 'Beekeeping se dohri kamai - shahad + pollination. 50-box unit ka budget, KVIC subsidy 80% tak, aur real profit calculation.',
-    ogTitle: 'Madhumakhi Palan 2026 — KVIC Subsidy aur Real Profit Guide',
+    ogTitle: 'Madhumakhi Palan 2026 Guide',
     keywords: [
       'madhumakhi palan 2026',
       'beekeeping subsidy kvic',
@@ -780,9 +780,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'pm-matsya-sampada-yojana-fish-farming',
-    title: 'PM Matsya Sampada Yojana 2026: Machli Palan par 60% Subsidy, Biofloc Technology, aur Real Profit',
+    title: 'PM Matsya Yojana 2026: 60% Subsidy',
     desc: 'Fish farming par 40-60% subsidy. 1 acre pond ka complete budget, Biofloc vs Traditional, aur 3-year profit projection.',
-    ogTitle: 'PM Matsya Sampada Yojana 2026 — Fish Farming Subsidy Guide',
+    ogTitle: 'PM Matsya Sampada Yojana 2026',
     keywords: [
       'pm matsya sampada yojana 2026',
       'fish farming subsidy 60 percent',
@@ -804,9 +804,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'silage-making-business-guide',
-    title: 'Silage Making Business 2026: Makka ko Pack Karke Lakhon Kamayein - Real Numbers ke Saath',
+    title: 'Silage Business 2026: SMAM Subsidy',
     desc: 'Silage business se mahine ka ₹50,000+ kamayein. 100-bag unit ka complete budget, SMAM subsidy, aur real profit calculation.',
-    ogTitle: 'Silage Making Business 2026 — Complete Guide with Real Numbers',
+    ogTitle: 'Silage Making Business 2026 Guide',
     keywords: [
       'silage making business 2026',
       'silage business profit kitna hota hai',
@@ -828,9 +828,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'pm-fme-yojana-food-processing',
-    title: 'PM FME Yojana 2026: Ghar Ka Chhota Food Business, 35% Subsidy, aur Real Success Stories',
+    title: 'PM FME Yojana 2026: 35% Subsidy',
     desc: 'PM FME se 35% subsidy (max ₹10 lakh). Achar, papad, bakery units ke liye. ODOP benefits, application process, aur documents checklist.',
-    ogTitle: 'PM FME Yojana 2026 — 35% Subsidy for Food Processing Units',
+    ogTitle: 'PM FME Yojana 2026 Food Subsidy',
     keywords: [
       'pm fme yojana 2026',
       'pm fme subsidy 35 percent',
@@ -852,9 +852,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'custom-hiring-centre-chc-portal',
-    title: 'Custom Hiring Centre (CHC) 2026: Apna Tractor Kiraye Par De Kar Mahine Ka ₹50,000+ Kamayein',
+    title: 'Custom Hiring Centre 2026: SMAM Guide',
     desc: 'CHC khol kar machinery rent se kamayein. SMAM subsidy 40-50%, 8 implements ka complete budget, aur real profit calculation.',
-    ogTitle: 'Custom Hiring Centre 2026 — SMAM Subsidy aur Real Profit Guide',
+    ogTitle: 'Custom Hiring Centre 2026 Guide',
     keywords: [
       'custom hiring centre 2026',
       'chc portal registration',
@@ -876,9 +876,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'vermi-compost-business-guide',
-    title: 'Vermin Compost Business 2026: Gobar aur Kachre Se Organic Khaad Banakar Mahine Ka ₹40,000+ Kamayein',
+    title: 'Vermi Compost Business 2026: PKVY Guide',
     desc: 'Vermi compost business se organic fertilizer bechein. PKVY subsidy 50-75%, 10-pit unit ka budget, aur real profit calculation.',
-    ogTitle: 'Vermin Compost Business 2026 — Organic Fertilizer Production Guide',
+    ogTitle: 'Vermi Compost Business 2026 Guide',
     keywords: [
       'vermi compost business 2026',
       'vermi compost kaise banayein',
@@ -900,9 +900,9 @@ export const ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'drip-sprinkler-irrigation-subsidy',
-    title: 'Drip aur Sprinkler Irrigation Subsidy 2026: Paani Bachao, 75% Tak Subsidy Paao - Complete Guide',
+    title: 'Drip Irrigation Subsidy 2026: 75% Off',
     desc: 'Micro-irrigation par 55-75% subsidy. Drip vs Sprinkler comparison, PMKSY application process, aur real savings calculation.',
-    ogTitle: 'Drip Sprinkler Irrigation Subsidy 2026 — PMKSY Complete Guide',
+    ogTitle: 'Drip Sprinkler Subsidy 2026 Guide',
     keywords: [
       'drip irrigation subsidy 2026',
       'sprinkler irrigation subsidy',
