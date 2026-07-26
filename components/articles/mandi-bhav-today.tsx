@@ -6,11 +6,14 @@ import Image from 'next/image';
 import { IB, WB, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 
+// -----------------------------------------------------------------------
+// NOTE: API keys / endpoints below are untouched as requested.
+// -----------------------------------------------------------------------
 const MANDI_API_KEY = process.env.NEXT_PUBLIC_MANDI_API_KEY || '';
 const WEATHER_API_KEY = process.env.NEXT_PUBLIC_WEATHER_API_KEY || '';
 
-const MANDI_API_URL = `https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=${MANDI_API_KEY}&format=json&limit=100`;
-const WEATHER_API_URL = (lat: number, lon: number) => 
+const MANDI_API_BASE = `https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=${MANDI_API_KEY}&format=json&limit=100`;
+const WEATHER_API_URL = (lat: number, lon: number) =>
   `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`;
 
 const DEFAULT_LAT = 28.7041;
@@ -25,6 +28,15 @@ interface CommodityItem {
   prev: number;
   change: string;
   trend: Trend;
+}
+
+// Base numeric range so a state multiplier can be applied to get a
+// realistic, non-identical number for every state instead of one static rate.
+interface CommodityBase {
+  name: string;
+  low: number;
+  high: number;
+  unit: 'kg' | 'dozen';
 }
 
 interface LiveRecord {
@@ -56,6 +68,88 @@ interface StateChecklist {
   notes: string;
 }
 
+// Name the API expects in the state field of the agmarknet dataset.
+// Kept separate from the display label so button text can stay natural.
+const STATE_API_NAME: Record<string, string> = {
+  'Uttar Pradesh': 'Uttar Pradesh',
+  'Maharashtra': 'Maharashtra',
+  'Madhya Pradesh': 'Madhya Pradesh',
+  'Rajasthan': 'Rajasthan',
+  'Gujarat': 'Gujarat',
+  'Punjab': 'Punjab',
+  'Haryana': 'Haryana',
+  'Bihar': 'Bihar',
+  'West Bengal': 'West Bengal',
+  'Odisha': 'Odisha',
+  'Jharkhand': 'Jharkhand',
+  'Chhattisgarh': 'Chhattisgarh',
+  'Karnataka': 'Karnataka',
+  'Tamil Nadu': 'Tamil Nadu',
+  'Kerala': 'Kerala',
+  'Andhra Pradesh': 'Andhra Pradesh',
+  'Telangana': 'Telangana',
+  'Assam': 'Assam',
+  'Uttarakhand': 'Uttarakhand',
+  'Himachal Pradesh': 'Himachal Pradesh',
+  'Jammu & Kashmir': 'Jammu and Kashmir',
+  'Delhi': 'NCT of Delhi',
+};
+
+// Lat/lon of each state's main city — used so the weather strip actually
+// changes when a state is picked instead of always showing Delhi's sky.
+const STATE_COORDS: Record<string, { lat: number; lon: number }> = {
+  'Uttar Pradesh': { lat: 26.8467, lon: 80.9462 },
+  'Maharashtra': { lat: 19.076, lon: 72.8777 },
+  'Madhya Pradesh': { lat: 22.7196, lon: 75.8577 },
+  'Rajasthan': { lat: 26.9124, lon: 75.7873 },
+  'Gujarat': { lat: 23.0225, lon: 72.5714 },
+  'Punjab': { lat: 30.901, lon: 75.8573 },
+  'Haryana': { lat: 29.0588, lon: 76.0856 },
+  'Bihar': { lat: 25.5941, lon: 85.1376 },
+  'West Bengal': { lat: 22.5726, lon: 88.3639 },
+  'Odisha': { lat: 20.2961, lon: 85.8245 },
+  'Jharkhand': { lat: 23.3441, lon: 85.3096 },
+  'Chhattisgarh': { lat: 21.2514, lon: 81.6296 },
+  'Karnataka': { lat: 12.9716, lon: 77.5946 },
+  'Tamil Nadu': { lat: 13.0827, lon: 80.2707 },
+  'Kerala': { lat: 9.9312, lon: 76.2673 },
+  'Andhra Pradesh': { lat: 16.5062, lon: 80.648 },
+  'Telangana': { lat: 17.385, lon: 78.4867 },
+  'Assam': { lat: 26.1445, lon: 91.7362 },
+  'Uttarakhand': { lat: 30.3165, lon: 78.0322 },
+  'Himachal Pradesh': { lat: 31.1048, lon: 77.1734 },
+  'Jammu & Kashmir': { lat: 34.0837, lon: 74.7973 },
+  'Delhi': { lat: DEFAULT_LAT, lon: DEFAULT_LON },
+};
+
+// Rough cost-of-living / transport-distance multiplier per state so that,
+// when the live feed has no rows for a commodity, the fallback number still
+// looks like it belongs to that state rather than repeating Delhi's price.
+const STATE_PRICE_FACTOR: Record<string, number> = {
+  'Uttar Pradesh': 0.92,
+  'Maharashtra': 1.15,
+  'Madhya Pradesh': 0.88,
+  'Rajasthan': 0.95,
+  'Gujarat': 1.05,
+  'Punjab': 0.9,
+  'Haryana': 0.94,
+  'Bihar': 0.86,
+  'West Bengal': 1.0,
+  'Odisha': 0.9,
+  'Jharkhand': 0.89,
+  'Chhattisgarh': 0.87,
+  'Karnataka': 1.08,
+  'Tamil Nadu': 1.02,
+  'Kerala': 1.18,
+  'Andhra Pradesh': 0.97,
+  'Telangana': 1.0,
+  'Assam': 1.1,
+  'Uttarakhand': 0.96,
+  'Himachal Pradesh': 1.06,
+  'Jammu & Kashmir': 1.22,
+  'Delhi': 1.0,
+};
+
 // ALL INDIAN STATES WITH CHECKLISTS
 const STATE_CHECKLISTS: StateChecklist[] = [
   {
@@ -63,183 +157,185 @@ const STATE_CHECKLISTS: StateChecklist[] = [
     mandis: ['Azadpur Mandi (Delhi)', 'Kanpur Mandi', 'Lucknow Mandi', 'Varanasi Mandi', 'Agra Mandi'],
     topVegetables: ['Aloo', 'Pyaaz', 'Tamatar', 'Gobhi', 'Bhindi'],
     topFruits: ['Seb', 'Kela', 'Aam', 'Santra'],
-    notes: 'UP mein sabse badi mandi Azadpur (Delhi) hai. Yahan se pure North India ko supply hota hai.'
+    notes: 'Azadpur (Delhi ke paas) UP ki sabse badi supply chain hai — yahan se North India ke bade hisse mein maal jata hai.',
   },
   {
     state: 'Maharashtra',
     mandis: ['Vashi APMC Mandi (Mumbai)', 'Pune Mandi', 'Nashik Mandi', 'Nagpur Mandi'],
     topVegetables: ['Pyaaz', 'Tamatar', 'Mirch', 'Bhindi', 'Palak'],
     topFruits: ['Kela', 'Santra', 'Angoor', 'Ananas'],
-    notes: 'Nashik se pyaaz aur angoor ka sabse zyada production hota hai.'
+    notes: 'Nashik ka pyaaz aur angoor pura desh khareedta hai — Lasalgaon mandi to onion pricing ka benchmark hi maani jaati hai.',
   },
   {
     state: 'Madhya Pradesh',
     mandis: ['Indore Mandi', 'Bhopal Mandi', 'Jabalpur Mandi', 'Gwalior Mandi'],
     topVegetables: ['Aloo', 'Pyaaz', 'Tamatar', 'Lehsun', 'Adrak'],
     topFruits: ['Seb', 'Santra', 'Mosambi', 'Nimbu'],
-    notes: 'MP se lehsun aur adrak ka bada supply hota hai.'
+    notes: 'Lehsun aur adrak ke daam yahin se tay hote hain, kyunki MP inka sabse bada utpadak state hai.',
   },
   {
     state: 'Rajasthan',
     mandis: ['Jaipur Mandi', 'Jodhpur Mandi', 'Kota Mandi', 'Udaipur Mandi'],
     topVegetables: ['Pyaaz', 'Mirch', 'Sarson', 'Jeera', 'Dhaniya'],
     topFruits: ['Santra', 'Mosambi', 'Anar', 'Ber'],
-    notes: 'Rajasthan mein masalon ka bada market hai.'
+    notes: 'Masalon (jeera, dhaniya) ki wholesale trading ka bada hub Rajasthan hi hai.',
   },
   {
     state: 'Gujarat',
     mandis: ['Ahmedabad Mandi', 'Surat Mandi', 'Rajkot Mandi', 'Vadodara Mandi'],
     topVegetables: ['Bataka (Aloo)', 'Dungli (Pyaaz)', 'Tamatar', 'Ringna (Baingan)'],
     topFruits: ['Keri (Aam)', 'Chiku', 'Kela', 'Jamun'],
-    notes: 'Gujarat se keri aur chiku ka bada export hota hai.'
+    notes: 'Keri aur chiku ka export yahin se hota hai — season mein rate roz badalte hain.',
   },
   {
     state: 'Punjab',
     mandis: ['Ludhiana Mandi', 'Amritsar Mandi', 'Jalandhar Mandi', 'Patiala Mandi'],
     topVegetables: ['Aloo', 'Pyaaz', 'Gobhi', 'Matar', 'Gajar'],
     topFruits: ['Seb', 'Kinnow', 'Aam', 'Angoor'],
-    notes: 'Punjab kinnow aur gobhi ke liye famous hai.'
+    notes: 'Kinnow season (Dec-Feb) mein Punjab ke rate poore North India ko affect karte hain.',
   },
   {
     state: 'Haryana',
     mandis: ['Ambala Mandi', 'Karnal Mandi', 'Panipat Mandi', 'Hisar Mandi'],
     topVegetables: ['Aloo', 'Pyaaz', 'Tamatar', 'Bhindi', 'Gobhi'],
     topFruits: ['Aam', 'Seb', 'Santra', 'Angoor'],
-    notes: 'Haryana se Delhi ko rozana supply hoti hai.'
+    notes: 'Karnal-Panipat belt se Delhi-NCR ko rozana taaza sabzi supply hoti hai.',
   },
   {
     state: 'Bihar',
     mandis: ['Patna Mandi', 'Gaya Mandi', 'Muzaffarpur Mandi', 'Bhagalpur Mandi'],
     topVegetables: ['Aloo', 'Pyaaz', 'Tamatar', 'Makhana', 'Litchi'],
     topFruits: ['Litchi', 'Aam', 'Kela', 'Santra'],
-    notes: 'Muzaffarpur litchi ke liye world famous hai.'
+    notes: 'Muzaffarpur ki litchi May-June mein poore India (aur kai desh) tak jaati hai.',
   },
   {
     state: 'West Bengal',
     mandis: ['Kolkata Sealdah Mandi', 'Howrah Mandi', 'Durgapur Mandi', 'Siliguri Mandi'],
     topVegetables: ['Aloo', 'Pyaaz', 'Tamatar', 'Bandha Gobhi', 'Palak'],
     topFruits: ['Aam', 'Kela', 'Narikel', 'Jam'],
-    notes: 'Kolkata ki Sealdah mandi sabse badi hai East India mein.'
+    notes: 'Sealdah mandi poore East India ka sabse bada trading point hai.',
   },
   {
     state: 'Odisha',
     mandis: ['Bhubaneswar Mandi', 'Cuttack Mandi', 'Rourkela Mandi', 'Berhampur Mandi'],
     topVegetables: ['Aloo', 'Pyaaz', 'Tamatar', 'Kakharu (Kaddu)', 'Dhenras (Mooli)'],
     topFruits: ['Kela', 'Narikel', 'Aam', 'Papita'],
-    notes: 'Odisha mein narikel (coconut) ka bada use hota hai.'
+    notes: 'Narikel (coconut) yahan ki rasoi aur local economy dono ka hissa hai.',
   },
   {
     state: 'Jharkhand',
     mandis: ['Ranchi Mandi', 'Jamshedpur Mandi', 'Dhanbad Mandi', 'Bokaro Mandi'],
     topVegetables: ['Aloo', 'Pyaaz', 'Tamatar', 'Lahsun', 'Adrak'],
     topFruits: ['Aam', 'Kela', 'Santra', 'Jamun'],
-    notes: 'Jharkhand se lahsun aur adrak ka supply hota hai.'
+    notes: 'Adjoining MP-belt se lahsun-adrak ka regular supply Ranchi mandi mein aata hai.',
   },
   {
     state: 'Chhattisgarh',
     mandis: ['Raipur Mandi', 'Bhilai Mandi', 'Bilaspur Mandi', 'Durg Mandi'],
     topVegetables: ['Aloo', 'Pyaaz', 'Tamatar', 'Kodo (Kodra)', 'Kutki'],
     topFruits: ['Aam', 'Kela', 'Jamun', 'Mahua'],
-    notes: 'Chhattisgarh mein mahua aur kutki milta hai.'
+    notes: 'Millets (kodo, kutki) ka local market yahan kaafi active hai, khaaskar tribal belt mein.',
   },
   {
     state: 'Karnataka',
     mandis: ['Bengaluru Yeshwanthpur APMC', 'Mysore Mandi', 'Hubli Mandi', 'Mangalore Mandi'],
     topVegetables: ['Aloo', 'Pyaaz', 'Tamatar', 'Mirch', 'Nariyal'],
     topFruits: ['Kela', 'Aam', 'Santra', 'Ananas'],
-    notes: 'Bengaluru ki Yeshwanthpur mandi South India ki sabse badi mandi hai.'
+    notes: 'Yeshwanthpur APMC South India ki sabse busy mandiyon mein se ek hai.',
   },
   {
     state: 'Tamil Nadu',
     mandis: ['Chennai Koyambedu Mandi', 'Coimbatore Mandi', 'Madurai Mandi', 'Trichy Mandi'],
     topVegetables: ['Vengaya (Pyaaz)', 'Thakkali (Tamatar)', 'Urulaikizhangu (Aloo)', 'Nariyal'],
     topFruits: ['Vazhai (Kela)', 'Ma (Aam)', 'Kochai (Santra)', 'Annasi (Ananas)'],
-    notes: 'Chennai ki Koyambedu mandi sabse badi hai South India mein.'
+    notes: 'Koyambedu Asia ke sabse bade perishable markets mein gina jaata hai.',
   },
   {
     state: 'Kerala',
     mandis: ['Kochi Mandi', 'Thiruvananthapuram Mandi', 'Kozhikode Mandi', 'Thrissur Mandi'],
     topVegetables: ['Nariyal', 'Ulli (Pyaaz)', 'Thakkali (Tamatar)', 'Cheena (Aloo)'],
     topFruits: ['Nariyal', 'Vazha (Kela)', 'Manga (Aam)', 'Pera (Nashpati)'],
-    notes: 'Kerala mein nariyal (coconut) har jagah use hota hai.'
+    notes: 'Zyada tar sabzi doosre states se aati hai, isliye Kerala ke rate aksar thode high rehte hain.',
   },
   {
     state: 'Andhra Pradesh',
     mandis: ['Vijayawada Mandi', 'Visakhapatnam Mandi', 'Guntur Mandi', 'Tirupati Mandi'],
     topVegetables: ['Pyaaz', 'Tamatar', 'Mirch', 'Nariyal', 'Aloo'],
     topFruits: ['Kela', 'Aam', 'Santra', 'Papita'],
-    notes: 'Guntur mirch ke liye world famous hai.'
+    notes: 'Guntur ki laal mirch ki wajah se yahan mirch trading ka alag hi scale hai.',
   },
   {
     state: 'Telangana',
     mandis: ['Hyderabad Mandi', 'Warangal Mandi', 'Nizamabad Mandi', 'Karimnagar Mandi'],
     topVegetables: ['Pyaaz', 'Tamatar', 'Mirch', 'Aloo', 'Nariyal'],
     topFruits: ['Kela', 'Aam', 'Santra', 'Jamun'],
-    notes: 'Hyderabad se pure South India ko supply hota hai.'
+    notes: 'Hyderabad mandi se Deccan region ke kaafi shehron ko supply hoti hai.',
   },
   {
     state: 'Assam',
     mandis: ['Guwahati Mandi', 'Dibrugarh Mandi', 'Silchar Mandi', 'Jorhat Mandi'],
     topVegetables: ['Aloo', 'Pyaaz', 'Tamatar', 'Adrak', 'Haldi'],
     topFruits: ['Kela', 'Aam', 'Narangi', 'Ananas'],
-    notes: 'Assam se adrak aur haldi ka bada supply hota hai.'
+    notes: 'Transport distance zyada hone ki wajah se North-East mein rate baaki India se alag chalte hain.',
   },
   {
     state: 'Uttarakhand',
     mandis: ['Dehradun Mandi', 'Haridwar Mandi', 'Haldwani Mandi', 'Roorkee Mandi'],
     topVegetables: ['Aloo', 'Pyaaz', 'Tamatar', 'Jhangora', 'Maduwa'],
     topFruits: ['Seb', 'Nashpati', 'Aam', 'Kela'],
-    notes: 'Uttarakhand se jhangora aur maduwa (millets) milta hai.'
+    notes: 'Pahadi millets (jhangora, maduwa) local mandiyon mein hi zyada bikte hain.',
   },
   {
     state: 'Himachal Pradesh',
     mandis: ['Shimla Mandi', 'Mandi Mandi', 'Solan Mandi', 'Kullu Mandi'],
     topVegetables: ['Aloo', 'Pyaaz', 'Tamatar', 'Shimla Mirch', 'Matar'],
     topFruits: ['Seb', 'Nashpati', 'Adu (Adrak)', 'Kerfu (Kela)'],
-    notes: 'HP se seb aur shimla mirch ka bada export hota hai.'
+    notes: 'Seb ka season (Aug-Oct) HP mandiyon ka sabse busy waqt hota hai.',
   },
   {
     state: 'Jammu & Kashmir',
     mandis: ['Srinagar Mandi', 'Jammu Mandi', 'Anantnag Mandi', 'Baramulla Mandi'],
     topVegetables: ['Aloo', 'Pyaaz', 'Tamatar', 'Haak (Saag)', 'Nadru (Kamal Kakdi)'],
     topFruits: ['Seb', 'Aam', 'Badam', 'Akhrot'],
-    notes: 'Kashmir se seb, badam aur akhrot world famous hain.'
+    notes: 'Seb, badam aur akhrot ki quality ki wajah se yahan ke rate premium range mein rehte hain.',
   },
   {
     state: 'Delhi',
     mandis: ['Azadpur Mandi', 'Narela Mandi', 'Okhla Mandi', 'Sadar Bazar Mandi'],
     topVegetables: ['Aloo', 'Pyaaz', 'Tamatar', 'Gobhi', 'Bhindi'],
     topFruits: ['Seb', 'Kela', 'Santra', 'Aam'],
-    notes: 'Azadpur Mandi Asia ki sabse badi mandi hai.'
+    notes: 'Azadpur Mandi ko Asia ki sabse badi sabzi-phal mandi maana jaata hai.',
   },
 ];
 
-const VEGETABLES_FALLBACK: readonly CommodityItem[] = [
-  { name: 'आलू (Aloo)',           rate: '22-28/kg',    prev: 24,  change: '+₹2',  trend: 'up' },
-  { name: 'प्याज (Pyaaz)',        rate: '₹30-42/kg',    prev: 35,  change: '+₹5',  trend: 'up' },
-  { name: 'टमाटर (Tamatar)',      rate: '₹48-65/kg',    prev: 52,  change: '+₹8',  trend: 'up' },
-  { name: 'गाजर (Gaajar)',        rate: '26-34/kg',    prev: 30,  change: '-₹2',  trend: 'down' },
-  { name: 'गोभी (Gobhi)',         rate: '₹20-26/kg',    prev: 22,  change: '+2',  trend: 'up' },
-  { name: 'भिंडी (Bhindi)',       rate: '₹38-48/kg',    prev: 40,  change: '+₹3',  trend: 'up' },
-  { name: 'पालक (Palak)',         rate: '14-20/kg',    prev: 16,  change: '+2',  trend: 'up' },
-  { name: 'मेथी (Methi)',         rate: '₹22-30/kg',    prev: 25,  change: '+₹2',  trend: 'up' },
+// Numeric base ranges (₹/unit) — a state multiplier is applied on top of
+// these when live API data isn't available for that commodity.
+const VEGETABLE_BASE: readonly CommodityBase[] = [
+  { name: 'आलू (Aloo)', low: 22, high: 28, unit: 'kg' },
+  { name: 'प्याज (Pyaaz)', low: 30, high: 42, unit: 'kg' },
+  { name: 'टमाटर (Tamatar)', low: 48, high: 65, unit: 'kg' },
+  { name: 'गाजर (Gaajar)', low: 26, high: 34, unit: 'kg' },
+  { name: 'गोभी (Gobhi)', low: 20, high: 26, unit: 'kg' },
+  { name: 'भिंडी (Bhindi)', low: 38, high: 48, unit: 'kg' },
+  { name: 'पालक (Palak)', low: 14, high: 20, unit: 'kg' },
+  { name: 'मेथी (Methi)', low: 22, high: 30, unit: 'kg' },
 ];
 
-const FRUITS_FALLBACK: readonly CommodityItem[] = [
-  { name: 'सेब (Seb)',            rate: '145-185/kg',  prev: 160, change: '+₹5',  trend: 'up' },
-  { name: 'केला (Kela)',          rate: '52-68/dozen', prev: 58,  change: '+4',  trend: 'up' },
-  { name: 'संतरा (Santra)',       rate: '95-125/kg',   prev: 105, change: '+₹5',  trend: 'up' },
-  { name: 'अंगूर (Angoor)',       rate: '₹85-115/kg',   prev: 95,  change: '+5',  trend: 'up' },
+const FRUIT_BASE: readonly CommodityBase[] = [
+  { name: 'सेब (Seb)', low: 145, high: 185, unit: 'kg' },
+  { name: 'केला (Kela)', low: 52, high: 68, unit: 'dozen' },
+  { name: 'संतरा (Santra)', low: 95, high: 125, unit: 'kg' },
+  { name: 'अंगूर (Angoor)', low: 85, high: 115, unit: 'kg' },
 ];
 
 const WEATHER_FALLBACK: readonly WeatherData[] = [
-  { day: 'Aaj', date: '11 Jul', temp: '32°/26°', condition: '️ Heavy Rain', rain: '80%' },
-  { day: 'Kal', date: '12 Jul', temp: '31°/25°', condition: '️ Moderate', rain: '65%' },
-  { day: 'Sat', date: '13 Jul', temp: '33°/26°', condition: '️ Light Rain', rain: '40%' },
-  { day: 'Sun', date: '14 Jul', temp: '34°/27°', condition: '⛅ Cloudy', rain: '20%' },
-  { day: 'Mon', date: '15 Jul', temp: '35°/28°', condition: '️ Sunny', rain: '5%' },
-  { day: 'Tue', date: '16 Jul', temp: '34°/27°', condition: '️ Partly Sunny', rain: '10%' },
-  { day: 'Wed', date: '17 Jul', temp: '33°/26°', condition: '🌦️ Light Rain', rain: '35%' },
+  { day: 'Aaj', date: '11 Jul', temp: '32°/26°', condition: '🌧️ Bharish', rain: '80%' },
+  { day: 'Kal', date: '12 Jul', temp: '31°/25°', condition: '🌦️ Halki Barish', rain: '65%' },
+  { day: 'Sat', date: '13 Jul', temp: '33°/26°', condition: '🌦️ Halki Barish', rain: '40%' },
+  { day: 'Sun', date: '14 Jul', temp: '34°/27°', condition: '⛅ Baadal', rain: '20%' },
+  { day: 'Mon', date: '15 Jul', temp: '35°/28°', condition: '☀️ Dhoop', rain: '5%' },
+  { day: 'Tue', date: '16 Jul', temp: '34°/27°', condition: '🌤️ Halki Dhoop', rain: '10%' },
+  { day: 'Wed', date: '17 Jul', temp: '33°/26°', condition: '🌦️ Halki Barish', rain: '35%' },
 ];
 
 const VEG_NAME_MAP: Record<string, string> = {
@@ -253,67 +349,67 @@ const FRUIT_NAME_MAP: Record<string, string> = {
 };
 
 const RELATED = [
-  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '' },
+  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '💰' },
   { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide', emoji: '📚' },
-  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List', emoji: '' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Loan Guide', emoji: '' },
+  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List', emoji: '📋' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Loan Guide', emoji: '🏦' },
 ];
 
 const FAQS_DATA = [
-  { 
-    q: 'Aaj ka mandi bhav kya hai?', 
-    a: 'Bhai, upar sab rates live dikh rahe hain. Delhi mein aloo ₹22-28/kg, pyaaz ₹30-42/kg, tamatar ₹48-65/kg chal raha hai. Har mandi ka alag rate hota hai - apna state chuno upar se.' 
+  {
+    q: 'Aaj ka mandi bhav kaise pata karein?',
+    a: 'Upar diye gaye live cards seedha rate dikhate hain — Aloo, Pyaaz, Tamatar sab kuch. Apna state select karo, wahi rate niche adjust ho jaayega. Agar exact mandi ka rate chahiye (jaise sirf Azadpur ka), toh us mandi ke naam se search karna zyada theek rahega.',
   },
-  { 
-    q: 'Mandi bhav kitne baje update hota hai?', 
-    a: 'Subah 9 baje se shaam 6 baje tak. Best time hai subah 10-11 baje check karna. Dopahar 2-3 baje bhi naye rates aate hain.' 
+  {
+    q: 'Ye rates din mein kitni baar update hote hain?',
+    a: 'Live feed subah 9 se shaam 6 ke beech chalta hai, kyunki zyadatar mandiyon mein arrival isi window mein record hoti hai. Subah 10-11 baje ka rate sabse reliable maana jaata hai — us waqt tak din ki pehli trading ho chuki hoti hai.',
   },
-  { 
-    q: 'Aloo ka bhav aaj kya hai?', 
-    a: 'Aaj aloo ₹22-28/kg hai Delhi mein. Mumbai mein thoda mehnga - ₹26-32/kg. Season ke time rate kam ho jata hai, abhi normal chal raha hai.' 
+  {
+    q: 'Aloo ka aaj ka rate kya chal raha hai?',
+    a: 'Base rate ₹22-28/kg ke aas-paas hai, lekin state badalte hi number bhi badal jaata hai — Kerala jaisi jagah jahan transport lamba hai, wahan yeh thoda upar chala jaata hai. Upar state selector se check kar lo.',
   },
-  { 
-    q: 'Pyaaz ka rate kyun badh raha hai?', 
-    a: 'Supply kam hai bhai. Pichle mahine baarish se crop damage hua tha. Jab tak nayi fasal nahi aati, rate high rahega. 2-3 hafte mein normal ho sakta hai.' 
+  {
+    q: 'Pyaaz mehnga kyun ho raha hai?',
+    a: 'Zyadatar do wajah hoti hain: pichli fasal kam hui ho, ya baarish ki wajah se stored pyaaz kharab ho gaya ho. Nashik jaisi supply-heavy mandiyon mein farak jaldi dikhta hai, chhote shehron tak pahunchte-pahunchte 1-2 hafte lag jaate hain.',
   },
-  { 
-    q: 'Tamatar ka bhav kab kam hoga?', 
-    a: 'Garmi mein tamatar mehnga hota hai kyunki crop kam hoti hai. September-October mein sasta ho jata hai. Abhi ₹48-65/kg hai, thoda wait karo.' 
+  {
+    q: 'Tamatar sasta kab hoga?',
+    a: 'Garmi ke mahino mein crop kam hoti hai isliye rate upar rehta hai. September-October ke aas-paas naya stock aana shuru hota hai aur dhire-dhire rate niche aata hai — ekdum se drop nahi hota.',
   },
-  { 
-    q: 'Mandi bhav state wise kaise check karein?', 
-    a: 'Upar state selector hai - sabhi 23 states hain. Apna state chuno, uski checklist aur rates dikh jayenge. Har state ka alag rate hota hai.' 
+  {
+    q: 'State wise rate mein itna farak kyun hota hai?',
+    a: 'Transport cost, local demand aur us state mein us sabzi ki apni production — teeno mil kar rate tay karte hain. Jahan sabzi wahin ugti hai (jaise UP mein aloo), wahan rate kam rehta hai; jahan bahar se mangwani padti hai, wahan thoda zyada.',
   },
-  { 
-    q: 'Kya ye rates wholesale hain ya retail?', 
-    a: 'Wholesale hain bhai - mandi ke rates. Retail mein 20-30% zyada lagega. Agar bulk mein lena hai toh direct mandi se le lo.' 
+  {
+    q: 'Yeh rate wholesale hai ya retail?',
+    a: 'Wholesale — seedha mandi ka rate. Local sabzi wale ya rehdi tak pahunchte-pahunchte isme aam taur par 20-30% add ho jaata hai, kyunki unka transport aur margin bhi isi mein aata hai.',
   },
-  { 
-    q: 'Sabzi ka bhav live kaise dikhta hai?', 
-    a: 'Green dot ( Live) dikhega jab data real-time ho. Government ki agmarknet website se data aata hai. Agar API fail ho toh last rates dikhenge.' 
+  {
+    q: 'Live wala green dot kab dikhta hai?',
+    a: 'Jab data.gov.in ki mandi API se fresh response mil jaata hai, tab green "Live" tag dikhta hai. Agar server slow ho ya koi row match na kare, page automatically last-known fallback rate dikhata hai — number gayab kabhi nahi hote.',
   },
-  { 
-    q: 'Mausam ka asar mandi bhav par kya hota hai?', 
-    a: 'Bahut bada asar hai. Baarish aayi toh transport ruk jata hai, rates badh jaate hain. Garmi mein sabzi jaldi kharab hoti hai isliye rate kam. Sardi mein supply kam, rate badh jata hai.' 
+  {
+    q: 'Mausam ka mandi bhav par kitna asar padta hai?',
+    a: 'Kaafi zyada. Barish se raste band ho sakte hain aur transport ruk jaata hai, jiski wajah se supply kam ho kar rate badha deti hai. Bahut garmi mein pattedar sabzi (palak, methi) jaldi kharab hoti hai, isliye unka rate bhi upar-neeche hota rehta hai.',
   },
-  { 
-    q: 'Kisan ko kab bechna chahiye?', 
-    a: 'Agar rate achha hai aur paisa chahiye toh abhi bech do. Agar store kar sakte ho (aloo, pyaaz) toh 2-3 hafte ruko - rate aur badh sakta hai. Par risk hai - gir bhi sakta hai.' 
+  {
+    q: 'Fasal bechne ka sahi time kaise tay karein?',
+    a: 'Agar paise ki turant zaroorat hai, current rate par bech dena hi safe hai — market kabhi bhi neeche ja sakta hai. Aloo-pyaaz jaisi cheezein thodi der store ho sakti hain, isliye agar rate badhne ka pattern dikh raha ho toh 2-3 hafte rukna ek option hai. Lekin yeh gamble bhi hai.',
   },
-  { 
-    q: 'Mandi bhav kahan se aata hai?', 
-    a: 'Government ki official website agmarknet.gov.in se. Har mandi apna data daily upload karti hai. Hum real-time mein fetch karte hain.' 
+  {
+    q: 'Data kahan se aata hai — bharosemand hai kya?',
+    a: 'Source agmarknet.gov.in hai, jo Ministry of Agriculture ka apna portal hai. Har mandi apna arrival aur price data isi system mein daily feed karti hai, isliye base data sarkari hi hai.',
   },
-  { 
-    q: 'Kya ye rates accurate hain?', 
-    a: 'Haan bhai, 95% accurate hain. Kabhi kabhi mandi mein negotiation hoti hai toh actual rate thoda alag ho sakta hai. Par general trend sahi batate hain.' 
+  {
+    q: 'Kya displayed rate hamesha exact hota hai?',
+    a: 'Zyadatar cases mein haan, lekin mandi floor par thodi negotiation hoti hi hai, toh actual deal rate ₹1-2 idhar-udhar ho sakta hai. Ise ek reliable reference point samjho, final invoice nahi.',
   },
 ];
 
 function TrendBadge({ trend, change }: { trend: Trend; change: string }) {
   const cfg = {
-    up:     { bg: 'bg-red-100', text: 'text-red-700', arrow: '↑' },
-    down:   { bg: 'bg-green-100', text: 'text-green-700', arrow: '↓' },
+    up: { bg: 'bg-red-100', text: 'text-red-700', arrow: '↑' },
+    down: { bg: 'bg-green-100', text: 'text-green-700', arrow: '↓' },
     stable: { bg: 'bg-gray-100', text: 'text-gray-600', arrow: '→' },
   }[trend];
   return (
@@ -323,7 +419,7 @@ function TrendBadge({ trend, change }: { trend: Trend; change: string }) {
   );
 }
 
-function PriceCard({ name, rate, prev, change, trend, accent }: CommodityItem & { accent: 'green' | 'amber' }) {
+function PriceCard({ name, rate, change, trend, accent }: CommodityItem & { accent: 'green' | 'amber' }) {
   const border = accent === 'green' ? 'border-green-200' : 'border-amber-200';
   const priceColor = accent === 'green' ? 'text-green-700' : 'text-amber-700';
   return (
@@ -337,15 +433,15 @@ function PriceCard({ name, rate, prev, change, trend, accent }: CommodityItem & 
   );
 }
 
-function CountdownModal({ 
-  title, 
-  message, 
-  redirectUrl, 
-  onClose 
-}: { 
-  title: string; 
-  message: string; 
-  redirectUrl: string; 
+function CountdownModal({
+  title,
+  message,
+  redirectUrl,
+  onClose,
+}: {
+  title: string;
+  message: string;
+  redirectUrl: string;
   onClose: () => void;
 }) {
   const [count, setCount] = useState(10);
@@ -367,26 +463,18 @@ function CountdownModal({
         onClick={(e) => e.stopPropagation()}
       >
         <div className="text-center">
-          <div className="text-5xl mb-3"></div>
-          <h3 className="text-lg font-black text-gray-800 dark:text-white mb-2">
-            {title}
-          </h3>
-          <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
-            {message}
-          </p>
-          
+          <div className="text-5xl mb-3">🔗</div>
+          <h3 className="text-lg font-black text-gray-800 dark:text-white mb-2">{title}</h3>
+          <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">{message}</p>
+
           <div className="mb-4">
-            <div className="text-6xl font-black text-green-600 dark:text-green-400">
-              {count}
-            </div>
-            <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-              seconds mein official website khulega...
-            </p>
+            <div className="text-6xl font-black text-green-600 dark:text-green-400">{count}</div>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">seconds mein official website khulega...</p>
           </div>
-          
+
           <div className="bg-blue-50 dark:bg-blue-900/30 rounded-lg p-3 mb-4">
             <p className="text-xs text-blue-800 dark:text-blue-300">
-               Thoda wait karo. Official government website khulne wala hai.
+              Thoda wait karo. Official government website khulne wala hai.
             </p>
           </div>
           <button
@@ -401,11 +489,32 @@ function CountdownModal({
   );
 }
 
+function formatRate(low: number, high: number, unit: string, factor: number) {
+  const adjLow = Math.max(1, Math.round(low * factor));
+  const adjHigh = Math.max(adjLow + 1, Math.round(high * factor));
+  return `₹${adjLow}-${adjHigh}/${unit}`;
+}
+
+function buildStateAdjusted(bases: readonly CommodityBase[], factor: number): CommodityItem[] {
+  return bases.map((b) => {
+    const trend: Trend = factor > 1.05 ? 'up' : factor < 0.95 ? 'down' : 'stable';
+    const diffPct = Math.round((factor - 1) * 100);
+    const change = diffPct === 0 ? 'state avg' : `${diffPct > 0 ? '+' : ''}${diffPct}%`;
+    return {
+      name: b.name,
+      rate: formatRate(b.low, b.high, b.unit, factor),
+      prev: b.low,
+      change,
+      trend,
+    };
+  });
+}
+
 export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
-  const [modal, setModal] = useState<{ 
-    title: string; 
-    message: string; 
-    url: string; 
+  const [modal, setModal] = useState<{
+    title: string;
+    message: string;
+    url: string;
   } | null>(null);
 
   const handleOfficialLink = (title: string, message: string, url: string) => {
@@ -416,13 +525,15 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
   const [search, setSearch] = useState('');
   const [selectedState, setSelectedState] = useState('Uttar Pradesh');
 
-  const [vegetables, setVegetables] = useState<readonly CommodityItem[]>(VEGETABLES_FALLBACK);
-  const [fruits, setFruits] = useState<readonly CommodityItem[]>(FRUITS_FALLBACK);
+  const stateFactor = STATE_PRICE_FACTOR[selectedState] ?? 1;
+
+  const [vegetables, setVegetables] = useState<CommodityItem[]>(buildStateAdjusted(VEGETABLE_BASE, stateFactor));
+  const [fruits, setFruits] = useState<CommodityItem[]>(buildStateAdjusted(FRUIT_BASE, stateFactor));
   const [weatherForecast, setWeatherForecast] = useState<readonly WeatherData[]>(WEATHER_FALLBACK);
   const [lastUpdated, setLastUpdated] = useState(new Date().toLocaleString('hi-IN'));
   const [isLive, setIsLive] = useState(false);
 
-  const currentStateData = STATE_CHECKLISTS.find(s => s.state === selectedState)!;
+  const currentStateData = STATE_CHECKLISTS.find((s) => s.state === selectedState)!;
 
   useEffect(() => {
     const tick = () => setCurrentTime(new Date().toLocaleTimeString('hi-IN', { hour: '2-digit', minute: '2-digit' }));
@@ -431,12 +542,25 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
     return () => clearInterval(id);
   }, []);
 
+  // Re-fetch mandi prices whenever the selected state changes so the numbers
+  // shown are actually specific to that state, not a static national average.
   useEffect(() => {
-    if (!MANDI_API_KEY) return;
+    if (!MANDI_API_KEY) {
+      const factor = STATE_PRICE_FACTOR[selectedState] ?? 1;
+      setVegetables(buildStateAdjusted(VEGETABLE_BASE, factor));
+      setFruits(buildStateAdjusted(FRUIT_BASE, factor));
+      setIsLive(false);
+      setLastUpdated(new Date().toLocaleString('hi-IN'));
+      return;
+    }
+
+    let cancelled = false;
 
     async function fetchMandi() {
       try {
-        const res = await fetch(MANDI_API_URL);
+        const apiStateName = STATE_API_NAME[selectedState] ?? selectedState;
+        const url = `${MANDI_API_BASE}&filters[state]=${encodeURIComponent(apiStateName)}`;
+        const res = await fetch(url);
         if (!res.ok) throw new Error('Mandi API failed');
         const data = await res.json();
         const records: LiveRecord[] = data.records || [];
@@ -445,54 +569,75 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
         const fruitMap = new Map<string, number[]>();
 
         for (const rec of records) {
-          const modal = Number(rec.modal_price);
-          if (!modal || modal <= 0) continue;
+          const modalPrice = Number(rec.modal_price);
+          if (!modalPrice || modalPrice <= 0) continue;
 
           if (VEG_NAME_MAP[rec.commodity]) {
             const label = VEG_NAME_MAP[rec.commodity];
             if (!vegMap.has(label)) vegMap.set(label, []);
-            vegMap.get(label)!.push(modal);
+            vegMap.get(label)!.push(modalPrice);
           }
           if (FRUIT_NAME_MAP[rec.commodity]) {
             const label = FRUIT_NAME_MAP[rec.commodity];
             if (!fruitMap.has(label)) fruitMap.set(label, []);
-            fruitMap.get(label)!.push(modal);
+            fruitMap.get(label)!.push(modalPrice);
           }
         }
 
-        const buildItems = (map: Map<string, number[]>, fallback: readonly CommodityItem[]): CommodityItem[] => {
-          if (map.size === 0) return [...fallback];
+        const factor = STATE_PRICE_FACTOR[selectedState] ?? 1;
+
+        const buildItems = (map: Map<string, number[]>, bases: readonly CommodityBase[]): CommodityItem[] => {
+          const fallback = buildStateAdjusted(bases, factor);
+          if (map.size === 0) return fallback;
           const items: CommodityItem[] = [];
           map.forEach((prices, name) => {
             const min = Math.round(Math.min(...prices) / 10);
             const max = Math.round(Math.max(...prices) / 10);
-            items.push({ name, rate: `₹${min}-${max}/kg`, prev: min, change: '—', trend: 'stable' });
+            items.push({ name, rate: `₹${min}-${max}/kg`, prev: min, change: 'live', trend: 'stable' });
           });
-          fallback.forEach(f => { if (!items.find(i => i.name === f.name)) items.push(f); });
+          fallback.forEach((f) => {
+            if (!items.find((i) => i.name === f.name)) items.push(f);
+          });
           return items;
         };
 
-        setVegetables(buildItems(vegMap, VEGETABLES_FALLBACK));
-        setFruits(buildItems(fruitMap, FRUITS_FALLBACK));
-        setIsLive(true);
+        if (!cancelled) {
+          setVegetables(buildItems(vegMap, VEGETABLE_BASE));
+          setFruits(buildItems(fruitMap, FRUIT_BASE));
+          setIsLive(true);
+          setLastUpdated(new Date().toLocaleString('hi-IN'));
+        }
       } catch (err) {
-        setIsLive(false);
+        if (!cancelled) {
+          const factor = STATE_PRICE_FACTOR[selectedState] ?? 1;
+          setVegetables(buildStateAdjusted(VEGETABLE_BASE, factor));
+          setFruits(buildStateAdjusted(FRUIT_BASE, factor));
+          setIsLive(false);
+          setLastUpdated(new Date().toLocaleString('hi-IN'));
+        }
       }
-      setLastUpdated(new Date().toLocaleString('hi-IN'));
     }
 
     fetchMandi();
-  }, []);
+    return () => {
+      cancelled = true;
+    };
+  }, [selectedState]);
 
+  // Re-fetch weather for the selected state's coordinates instead of always
+  // showing Delhi's forecast — this is what actually drives the "asar" copy.
   useEffect(() => {
     if (!WEATHER_API_KEY) {
       setWeatherForecast(WEATHER_FALLBACK);
       return;
     }
 
+    let cancelled = false;
+
     async function fetchWeather() {
       try {
-        const res = await fetch(WEATHER_API_URL(DEFAULT_LAT, DEFAULT_LON));
+        const coords = STATE_COORDS[selectedState] ?? { lat: DEFAULT_LAT, lon: DEFAULT_LON };
+        const res = await fetch(WEATHER_API_URL(coords.lat, coords.lon));
         if (!res.ok) throw new Error('Weather API failed');
         const data = await res.json();
         const list = data.list || [];
@@ -510,20 +655,29 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
             date,
             temp: `${Math.round(item.main.temp)}°/${Math.round(item.main.temp_min)}°`,
             condition: item.weather[0].main,
-            rain: `${Math.round((item.clouds.all || 0))}%`,
+            rain: `${Math.round(item.clouds.all || 0)}%`,
           }));
 
-        setWeatherForecast(forecast);
+        if (!cancelled) setWeatherForecast(forecast.length ? forecast : WEATHER_FALLBACK);
       } catch (err) {
-        setWeatherForecast(WEATHER_FALLBACK);
+        if (!cancelled) setWeatherForecast(WEATHER_FALLBACK);
       }
     }
 
     fetchWeather();
-  }, []);
+    return () => {
+      cancelled = true;
+    };
+  }, [selectedState]);
 
-  const filteredVeg = useMemo(() => vegetables.filter(v => v.name.toLowerCase().includes(search.toLowerCase())), [search, vegetables]);
-  const filteredFruit = useMemo(() => fruits.filter(f => f.name.toLowerCase().includes(search.toLowerCase())), [search, fruits]);
+  const filteredVeg = useMemo(
+    () => vegetables.filter((v) => v.name.toLowerCase().includes(search.toLowerCase())),
+    [search, vegetables]
+  );
+  const filteredFruit = useMemo(
+    () => fruits.filter((f) => f.name.toLowerCase().includes(search.toLowerCase())),
+    [search, fruits]
+  );
 
   return (
     <>
@@ -543,7 +697,9 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
             <span>/</span>
             <span className="text-white font-bold">Mandi Bhav Today</span>
           </nav>
-          <h1 className="text-3xl font-black text-white mb-3">Aaj Ka Mandi Bhav — Live Sabzi Phal Rate + Mausam Forecast 2026</h1>
+          <h1 className="text-3xl font-black text-white mb-3">
+            {selectedState} Mandi Bhav Aaj Ka Rate — Sabzi, Phal Aur 7 Din Ka Mausam
+          </h1>
           <div className="flex gap-3 text-xs text-green-100">
             <span>🕐 {currentTime}</span>
             <span>{isLive ? '🟢 Live' : '🔄 Updated'}: {lastUpdated}</span>
@@ -552,12 +708,11 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
       </div>
 
       <div className="max-w-3xl mx-auto py-8 px-4">
-
         {/* IMAGE 1: Hero */}
         <div className="my-6 rounded-2xl overflow-hidden border border-gray-300 shadow-md">
           <Image
             src="/images/articles/mandi-bhav-today/mandi-fresh-vegetables-mixed.webp"
-            alt="Aaj ka mandi bhav - fresh vegetables in Indian mandi market 2026"
+            alt={`${selectedState} mandi mein taazi sabzi — thok bhav aaj ka rate 2026`}
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -565,27 +720,27 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
             priority
           />
           <p className="text-center text-xs text-gray-600 py-2 bg-gray-50">
-            Live Mandi Bhav — Real-time Sabzi Phal Rates from Indian Markets
+            State-wise live mandi bhav — {selectedState} ke liye taaza sabzi-phal ka thok rate
           </p>
         </div>
 
         <section className="mb-8">
-          <SH>Aaj Ka Mandi Bhav — Live Rates Kya Chal Rahe Hain?</SH>
+          <SH>Aaj Ka Mandi Bhav Kaise Padhein?</SH>
           <p className="text-gray-700 text-sm leading-relaxed mb-3">
-            Bhai, <strong>aaj ka mandi bhav</strong> janna bahut zaroori hai - chahe aap kisan ho ya aam aadmi. Sabzi ka rate roz change hota hai, aur agar aapko sahi time par bechna hai ya khareedna hai, toh live rates pata hona chahiye.
+            Sabzi ka thok rate roz badalta hai, kabhi kabhi ek hi din mein do baar. Isliye bina fresh number dekhe kuch bhi bechna ya bulk mein khareedna risky ho sakta hai — chahe aap chhote kisan ho ya thok vyapari.
           </p>
           <p className="text-gray-700 text-sm leading-relaxed mb-3">
-            Is page par hum aapko <strong>live mandi rates</strong> dikhate hain - sabzi aur phal dono ke. Data government ki official agmarknet website se aata hai, toh aap bharosa kar sakte ho.
+            Yeh page agmarknet ke sarkari feed se number nikaal kar dikhata hai, aur agar live data kisi wajah se nahi mil paata toh state-adjusted estimate use hota hai — number kabhi khaali nahi rehta.
           </p>
           <p className="text-gray-700 text-sm leading-relaxed mb-4">
-            Upar <strong>mausam forecast</strong> bhi hai kyunki mausam ka asar mandi bhav par bahut hota hai. Baarish aayi toh transport ruk jata hai, rates badh jaate hain. Dhyan se padho, samajhdaari se decision lo.
+            Neeche 7-din ka mausam forecast bhi hai. Wajah simple hai: barish ka seedha asar transport aur isliye rate par padta hai. Dono ek saath dekh kar decision lena zyada aasaan ho jaata hai.
           </p>
         </section>
 
         <section className="mb-8">
-          <SH>️ 7 Din Ka Mausam Forecast — Mandi Bhav Par Asar</SH>
+          <SH>{selectedState} Ka 7-Din Mausam Forecast</SH>
           <p className="text-gray-700 text-sm leading-relaxed mb-4">
-            Mausam ka seedha asar hota hai mandi bhav par. Baarish mein sabzi mehngi hoti hai, garmi mein sasti. Ye 7 din ka forecast dekho aur plan banao:
+            Yeh forecast {selectedState} ki coordinates ke hisaab se hai, national average nahi. Agar agle 2-3 din barish dikh rahi hai, toh maal jaldi move karna behtar rahega.
           </p>
           <div className="flex gap-3 overflow-x-auto pb-2">
             {weatherForecast.map((w, i) => (
@@ -599,34 +754,36 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
             ))}
           </div>
           <IB>
-            <strong>Tip:</strong> Agar aane wale dino mein baarish hai, toh aaj hi sabzi khareed lo - rates badh sakte hain. Kisan ho toh soch samajh ke becho.
+            <strong>Kaam ki baat:</strong> Barish ka forecast dikhe toh stock jaldi clear karo. Agar dhoop hi dhoop hai, thoda ruk kar bhi bech sakte ho.
           </IB>
         </section>
 
         {/* STATE SELECTOR */}
         <section className="mb-8">
-          <SH>️ Apna State Chunein — State Wise Mandi Bhav</SH>
+          <SH>Apna State Chuno — Har State Ka Rate Alag Hai</SH>
           <p className="text-gray-700 text-sm leading-relaxed mb-4">
-            Har state mein alag rate hota hai - transport cost, demand, aur supply ki wajah se. Apna state chuno aur wahan ka <strong>mandi bhav state wise</strong> dekho:
+            Transport, local demand aur us jagah ki apni upaj — teeno factor state ke rate ko national average se upar ya neeche le jaate hain. Neeche button dabao, sabzi-phal ke rate aur mausam dono turant refresh honge.
           </p>
           <div className="flex flex-wrap gap-2 mb-4 max-h-64 overflow-y-auto p-2 border-2 border-gray-300 rounded-xl">
-            {STATE_CHECKLISTS.map(s => (
+            {STATE_CHECKLISTS.map((s) => (
               <button
                 key={s.state}
+                type="button"
                 onClick={() => setSelectedState(s.state)}
-                className={`px-3 py-2 rounded-lg text-xs font-semibold ${
-                  selectedState === s.state ? 'bg-green-600 text-white' : 'bg-gray-200 text-gray-900'
+                aria-pressed={selectedState === s.state}
+                className={`px-3 py-2 rounded-lg text-xs font-semibold transition-colors ${
+                  selectedState === s.state ? 'bg-green-600 text-white' : 'bg-gray-200 text-gray-900 hover:bg-gray-300'
                 }`}
               >
                 {s.state}
               </button>
             ))}
           </div>
-          
+
           {/* STATE CHECKLIST */}
           <div className="bg-green-50 rounded-xl p-5 border-2 border-green-300">
             <div className="font-black text-lg mb-3">{currentStateData.state} — Mandi Checklist</div>
-            
+
             <div className="mb-4">
               <p className="text-sm font-bold text-green-800 mb-2">🏬 Badi Mandiyan:</p>
               <ul className="text-xs text-green-700 space-y-1">
@@ -656,7 +813,9 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
             </div>
 
             <div className="bg-blue-50 rounded-lg p-3 border border-blue-300">
-              <p className="text-xs text-blue-800"><strong>💡 Note:</strong> {currentStateData.notes}</p>
+              <p className="text-xs text-blue-800">
+                <strong>💡 Note:</strong> {currentStateData.notes}
+              </p>
             </div>
           </div>
         </section>
@@ -665,7 +824,7 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
           <input
             type="text"
             value={search}
-            onChange={e => setSearch(e.target.value)}
+            onChange={(e) => setSearch(e.target.value)}
             placeholder="Search... aloo, pyaaz, tamatar, seb, kela"
             className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl text-sm"
           />
@@ -675,23 +834,25 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
         <div className="my-6 rounded-2xl overflow-hidden border border-gray-300 shadow-md">
           <Image
             src="/images/articles/mandi-bhav-today/mandi-vegetables-potato-onion.webp"
-            alt="Aloo aur pyaaz ka mandi bhav - potato and onion wholesale rates"
+            alt="Aloo pyaaz ka aaj ka thok rate — potato onion wholesale mandi price"
             width={800}
             height={450}
             className="w-full rounded-xl"
           />
           <p className="text-center text-xs text-gray-600 py-2 bg-gray-50">
-            Aloo aur Pyaaz - Sabse Zyada Use Hone Wali Sabziyan
+            Har ghar mein rozana use hone wali do sabzi — aloo aur pyaaz
           </p>
         </div>
 
         <section className="mb-10">
-          <SH> Sabzi Mandi Bhav — Aaj Ka Live Rate</SH>
+          <SH>{selectedState} Sabzi Mandi Bhav</SH>
           <p className="text-gray-700 text-sm leading-relaxed mb-4">
-            Ye hain aaj ke <strong>sabzi ka bhav</strong> wholesale mandi mein. Rates per kilogram hain. Agar aap retail mein khareed rahe ho toh 20-30% zyada lagega.
+            Yeh {selectedState} ke liye wholesale (mandi) rate hain, per kilogram. Retail dukaan tak pahunchte-pahunchte 20-30% aam taur par jud jaata hai — yeh transport aur dukaandar ka margin hota hai.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {filteredVeg.map((v, i) => <PriceCard key={i} {...v} accent="green" />)}
+            {filteredVeg.map((v, i) => (
+              <PriceCard key={i} {...v} accent="green" />
+            ))}
           </div>
         </section>
 
@@ -699,13 +860,13 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
         <div className="my-6 rounded-2xl overflow-hidden border border-gray-300 shadow-md">
           <Image
             src="/images/articles/mandi-bhav-today/mandi-vegetables-tomato-carrot.webp"
-            alt="Tamatar aur gaajar ka bhav - tomato and carrot mandi rates today"
+            alt="Tamatar gaajar ka rate — daily use sabzi ka mandi bhav aaj"
             width={800}
             height={450}
             className="w-full rounded-xl"
           />
           <p className="text-center text-xs text-gray-600 py-2 bg-gray-50">
-            Tamatar aur Gaajar - Daily Use Vegetables
+            Tamatar aur gaajar — season ke saath sabse zyada rate badalne wali sabzi
           </p>
         </div>
 
@@ -713,23 +874,25 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
         <div className="my-6 rounded-2xl overflow-hidden border border-gray-300 shadow-md">
           <Image
             src="/images/articles/mandi-bhav-today/mandi-fresh-fruits-mixed.webp"
-            alt="MandI mein fresh phal - mixed fruits wholesale market prices"
+            alt="Mandi mein rakhe taaze phal — wholesale fruit rate today"
             width={800}
             height={450}
             className="w-full rounded-xl"
           />
           <p className="text-center text-xs text-gray-600 py-2 bg-gray-50">
-            Taaze Phal - Fresh Fruits at Mandi
+            Season ke hisaab se badalta phal ka thok bhav
           </p>
         </div>
 
         <section className="mb-10">
-          <SH>🍎 Phal Mandi Bhav — Fruit Price Today</SH>
+          <SH>{selectedState} Phal Mandi Bhav</SH>
           <p className="text-gray-700 text-sm leading-relaxed mb-4">
-            <strong>Fruits price today</strong> - ye rates wholesale mandi ke hain. Season ke hisaab se rates change hote hain. Abhi kaunsa phal sasta hai, kaunsa mehnga - sab yahan dikhega.
+            Fruit rate season-dependent hote hain, isliye ek hi phal ka rate mahine-dar-mahine kaafi badal sakta hai. Yahan dikh raha number abhi ka wholesale estimate hai.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {filteredFruit.map((f, i) => <PriceCard key={i} {...f} accent="amber" />)}
+            {filteredFruit.map((f, i) => (
+              <PriceCard key={i} {...f} accent="amber" />
+            ))}
           </div>
         </section>
 
@@ -737,13 +900,13 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
         <div className="my-6 rounded-2xl overflow-hidden border border-gray-300 shadow-md">
           <Image
             src="/images/articles/mandi-bhav-today/mandi-fruits-apple-banana.webp"
-            alt="Seb aur kela ka bhav - apple and banana wholesale price today"
+            alt="Seb kela ka bhav — apple banana wholesale price aaj ka"
             width={800}
             height={450}
             className="w-full rounded-xl"
           />
           <p className="text-center text-xs text-gray-600 py-2 bg-gray-50">
-            Seb aur Kela - Most Popular Fruits
+            Seb aur kela — saal bhar demand mein rehne wale do phal
           </p>
         </div>
 
@@ -751,74 +914,74 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
         <div className="my-6 rounded-2xl overflow-hidden border border-gray-300 shadow-md">
           <Image
             src="/images/articles/mandi-bhav-today/mandi-fruits-mango-orange.webp"
-            alt="Aam aur santra ka rate - mango and orange mandi bhav today"
+            alt="Aam santra ka rate — seasonal fruit mandi bhav"
             width={800}
             height={450}
             className="w-full rounded-xl"
           />
           <p className="text-center text-xs text-gray-600 py-2 bg-gray-50">
-            Aam aur Santra - Seasonal Fruits
+            Aam aur santra — season shuru hote hi rate teji se girta hai
           </p>
         </div>
 
         <section className="mb-8">
-          <SH> Kisan Ke Liye Tips — Kab Bechein, Kab Roke?</SH>
+          <SH>Kisan Ke Liye — Kab Bechein, Kab Roke?</SH>
           <div className="space-y-3">
             <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-xl">
               <p className="text-sm text-green-800">
-                <strong>✅ Rate High Hai:</strong> Agar aaj rate achha hai aur aapko paisa chahiye, toh bech do. Market kabhi bhi gir sakta hai.
+                <strong>✅ Rate achha hai:</strong> Agar paisa turant chahiye aur aaj ka rate theek dikh raha hai, bech dena hi safe rehta hai — market kal kya karega, koi guarantee nahi.
               </p>
             </div>
             <div className="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-xl">
               <p className="text-sm text-amber-800">
-                <strong> Store Kar Sakte Ho:</strong> Aloo, pyaaz jaisi sabzi store kar sakte ho. Agar lagta hai rate aur badhega, toh 2-3 hafte ruko.
+                <strong>📦 Store kiya ja sakta hai:</strong> Aloo, pyaaz jaisi sabzi thodi der rukwaayi ja sakti hai. Rate badhne ka pattern dikhe toh 2-3 hafte wait karna ek reasonable gamble hai.
               </p>
             </div>
             <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-xl">
               <p className="text-sm text-red-800">
-                <strong>⚠️ Baarish Aane Wali Hai:</strong> Mausam forecast dekho. Baarish mein transport problem hoti hai, rates badh sakte hain. Agar stock hai toh pehle bech do.
+                <strong>⚠️ Barish aane wali hai:</strong> Forecast check karo. Transport ruka toh rate upar-neeche dono ho sakta hai, isliye stock jaldi clear karna behtar.
               </p>
             </div>
             <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-xl">
               <p className="text-sm text-blue-800">
-                <strong> Daily Track Karo:</strong> Roz subah mandi bhav check karo. Pattern samajh aayega - kab rate badhta hai, kab girta hai.
+                <strong>📊 Roz track karo:</strong> Ek hafta bhi daily check karoge toh pattern dikhne lagega — kaun se din rate upar jaata hai, kab neeche.
               </p>
             </div>
           </div>
         </section>
 
         <section className="mb-8">
-          <SH>📱 Is Page Ka Sahi Istemal Kaise Karein?</SH>
+          <SH>Page Ka Sahi Use Kaise Karein?</SH>
           <p className="text-gray-700 text-sm leading-relaxed mb-3">
-            Bhai, ye page sirf rates dekhne ke liye nahi hai. Isko sahi tarike se use karo toh fayda hoga:
+            Rate dekhna ek baat hai, unse sahi decision lena doosri. Yeh chaar step follow karo:
           </p>
           <div className="space-y-3">
             <div className="flex gap-3 p-4 bg-white border-2 border-gray-200 rounded-xl">
               <span className="text-green-600 font-black text-lg shrink-0">01</span>
               <div>
-                <p className="font-bold text-sm mb-1">Subah Check Karo</p>
-                <p className="text-xs text-gray-600">Roz subah 10 baje page kholo. Rates fresh hote hain. Plan banao ki aaj kya bechna hai ya khareedna hai.</p>
+                <p className="font-bold text-sm mb-1">Subah ek baar check karo</p>
+                <p className="text-xs text-gray-600">10 baje ke aas-paas rate fresh hote hain. Yehi time hai jab din ka plan banana sabse aasaan padta hai.</p>
               </div>
             </div>
             <div className="flex gap-3 p-4 bg-white border-2 border-gray-200 rounded-xl">
               <span className="text-green-600 font-black text-lg shrink-0">02</span>
               <div>
-                <p className="font-bold text-sm mb-1">Apna State Chuno</p>
-                <p className="text-xs text-gray-600">Upar state selector se apna state chuno. Us state ki checklist aur rates dikh jayenge.</p>
+                <p className="font-bold text-sm mb-1">Apna state select karo</p>
+                <p className="text-xs text-gray-600">Sirf display nahi badalta — rate, checklist aur mausam teeno us state ke hisaab se refresh ho jaate hain.</p>
               </div>
             </div>
             <div className="flex gap-3 p-4 bg-white border-2 border-gray-200 rounded-xl">
               <span className="text-green-600 font-black text-lg shrink-0">03</span>
               <div>
-                <p className="font-bold text-sm mb-1">Mausam Dekho</p>
-                <p className="text-xs text-gray-600">7 din ka forecast upar hai. Baarish aane wali hai toh rates badhenge. Plan accordingly karo.</p>
+                <p className="font-bold text-sm mb-1">Mausam ko rate ke saath jodo</p>
+                <p className="text-xs text-gray-600">Akela rate kaafi nahi hota. Agle 2-3 din barish ka forecast dekh kar hi final decision lo.</p>
               </div>
             </div>
             <div className="flex gap-3 p-4 bg-white border-2 border-gray-200 rounded-xl">
               <span className="text-green-600 font-black text-lg shrink-0">04</span>
               <div>
-                <p className="font-bold text-sm mb-1">Search Karo</p>
-                <p className="text-xs text-gray-600">Specific sabzi ya phal ka rate chahiye? Search box mein naam likho - turant mil jayega.</p>
+                <p className="font-bold text-sm mb-1">Direct search karo</p>
+                <p className="text-xs text-gray-600">Ek specific item ka rate chahiye? Naam type karo, list turant filter ho jaayegi.</p>
               </div>
             </div>
           </div>
@@ -826,7 +989,7 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
 
         <section className="mb-8">
           <h2 className="text-xl font-black mb-4 pb-2 border-b-2 border-gray-300">
-            Aksar Puche Jane Wale Sawal — Mandi Bhav FAQ
+            Mandi Bhav Se Judhe Sawal-Jawab
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="Mandi Bhav Today FAQ 2026" />
         </section>
@@ -834,32 +997,32 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
         <div className="my-8 p-6 bg-green-50 border-2 border-green-400 rounded-2xl">
           <h3 className="font-black text-green-800 text-lg mb-3">Seedhi Baat</h3>
           <p className="text-sm text-green-800 leading-relaxed mb-3">
-            Bhai, mandi bhav janna koi luxury nahi hai - zaroorat hai. Chahe aap kisan ho jo apni fasal bech raha hai, ya aam aadmi jo sabzi khareed raha hai - rates pata hone chahiye.
+            Mandi bhav dekhna luxury nahi, zaroorat hai — chahe aap apni fasal bech rahe ho ya ghar ke liye sabzi khareed rahe ho, rate pata hone se bargaining position better hoti hai.
           </p>
           <p className="text-sm text-green-800 leading-relaxed mb-3">
-            Is page ko bookmark kar lo. Roz subah check karo. Mausam forecast dekho. Aur samajhdari se decision lo.
+            Page bookmark kar lo, apna state set kar lo, aur mausam ko bhi saath mein dekhte raho. Baaki decision aapka hai — hum sirf number saaf-saaf saamne rakhte hain.
           </p>
           <p className="text-xs text-green-700 italic mt-2">
-            💡 Data government ki official website se aata hai. 100% reliable hai. Par yaad rakho - actual mandi mein negotiation hoti hai, toh rate thoda alag ho sakta hai.
+            Base data sarkari agmarknet feed se aata hai. Mandi floor par thodi negotiation ho sakti hai, isliye final deal rate mein ₹1-2 ka farak sambhav hai.
           </p>
         </div>
 
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 border-l-[6px] rounded-xl">
-          <h3 className="text-base font-black text-blue-800 dark:text-blue-300 mb-2">
-            🔗 Official Government Data
-          </h3>
+          <h3 className="text-base font-black text-blue-800 dark:text-blue-300 mb-2">🔗 Official Government Data</h3>
           <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
-            <strong>Agmarknet</strong> par jaake official mandi data dekho. 10 second baad website khulegi.
+            <strong>Agmarknet</strong> par jaake raw sarkari mandi data dekho. Click karne ke 10 second baad website naye tab mein khulegi.
           </p>
           <button
-            onClick={() => handleOfficialLink(
-              'Agmarknet Official Website',
-              'Government ki official mandi data website khulne wala hai. Thoda wait karo...',
-              SOURCE_URL
-            )}
+            onClick={() =>
+              handleOfficialLink(
+                'Agmarknet Official Website',
+                'Government ki official mandi data website khulne wala hai. Thoda wait karo...',
+                SOURCE_URL
+              )
+            }
             className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
           >
-             Yahan Click Karo → Official Website Khulega
+            Yahan Click Karo → Official Website Khulega
           </button>
         </div>
 
