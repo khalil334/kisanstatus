@@ -7,7 +7,10 @@ import {
   AUTHOR_NAME, 
   AUTHOR_URL, 
   DEFAULT_OG_IMAGE,
-  SITE_DESCRIPTION 
+  SITE_DESCRIPTION,
+  LOGO_URL,
+  LOGO_WIDTH,
+  LOGO_HEIGHT 
 } from '@/lib/site-config';
 import ArticlesClient from './ArticlesClient';
 
@@ -67,20 +70,55 @@ export const metadata: Metadata = {
 };
 
 export default function ArticlesPage() {
+  const orgPublisher = {
+    '@type': 'Organization',
+    name: SITE_NAME,
+    url: SITE_URL,
+    logo: {
+      '@type': 'ImageObject',
+      url: LOGO_URL,
+      width: LOGO_WIDTH,
+      height: LOGO_HEIGHT,
+    },
+  };
+
+  const toAbsolute = (img?: string) =>
+    !img ? DEFAULT_OG_IMAGE : img.startsWith('http') ? img : `${SITE_URL}${img}`;
+
   const schemaArticles = ALL_ARTICLES.map((article: any, i) => {
     const isMaandhan = article.category === 'pension-scheme' || article.slug.includes('maandhan');
     const articleUrl = isMaandhan 
       ? `${SITE_URL}/maandhan/${article.slug}` 
       : `${SITE_URL}/articles/${article.slug}`;
-      
+
+    const published = article.publishedTime || article.published;
+    const modified = article.modifiedTime || article.modified || published;
+    const authorName = article.author || AUTHOR_NAME;
+
     return {
       '@type': 'ListItem',
       position: i + 1,
       item: {
         '@type': 'Article',
+        '@id': articleUrl,
         url: articleUrl,
         name: article.title,
+        headline: article.title,
         description: article.desc || article.description || 'KisanStatus verified guide',
+        image: toAbsolute(article.ogImage || article.image),
+        inLanguage: 'hi-IN',
+        ...(published ? { datePublished: published } : {}),
+        ...(modified ? { dateModified: modified } : {}),
+        author: {
+          '@type': 'Organization',
+          name: authorName,
+          url: AUTHOR_URL,
+        },
+        publisher: orgPublisher,
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': articleUrl,
+        },
       },
     };
   });
