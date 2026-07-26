@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import { MAANDHAN_ARTICLES } from '@/lib/maandhan-data';
+import { SITE_URL } from '@/lib/site-config';
 
 import PmKisanMaandhanRegistration2026 from '@/components/articles/maandhan/PmKisanMaandhanRegistration2026';
 import PmKisanMaandhanEligibilityDocuments from '@/components/articles/maandhan/PmKisanMaandhanEligibilityDocuments';
@@ -20,9 +21,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   
   if (!article) return { title: 'Not Found' };
 
+  const url = `${SITE_URL}/maandhan/${slug}`;
+
   return {
     title: article.title,
     description: article.description,
+    alternates: {
+      canonical: url,
+      languages: {
+        'hi-IN': url,
+        'x-default': url,
+      },
+    },
   };
 }
 
