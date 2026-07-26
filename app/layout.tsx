@@ -246,7 +246,7 @@ export default function RootLayout({
                   },
                 ],
                 founder: {
-                  '@type': 'Organization',
+                  '@type': 'Person',
                   '@id': `${SITE_URL}#founder`,
                   name: AUTHOR_NAME,
                   url: AUTHOR_URL,
@@ -255,7 +255,6 @@ export default function RootLayout({
                 address: {
                   '@type': 'PostalAddress',
                   addressCountry: 'IN',
-                  addressRegion: 'India',
                 },
                 sameAs: [
                   SOCIAL_LINKS.facebook,
