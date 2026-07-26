@@ -57,6 +57,7 @@ export default function Footer() {
                   { href: '/about', label: '👤 About Us' },
                   { href: '/disclaimer', label: '⚠️ Disclaimer' },
                   { href: '/privacy-policy', label: '🔒 Privacy Policy' },
+                  { href: '/terms-of-service', label: '📜 Terms of Service' },
                   { href: '/contact', label: '📧 Contact Us' },
                   { href: '/articles', label: '📚 All Articles' },
                   { href: '/calculator', label: '🧮 Calculators' },
