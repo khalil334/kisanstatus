@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
+import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL, DEFAULT_OG_IMAGE } from '@/lib/site-config';
 
 export const metadata: Metadata = {
   title: `Contact Us — ${SITE_NAME} | Sampark Karein & Support`,
@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/contact`,
     siteName: SITE_NAME,
     locale: 'hi_IN',
+    images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: `${SITE_NAME} - Contact Us`, type: 'image/webp' }],
   },
   twitter: {
     card: 'summary',
