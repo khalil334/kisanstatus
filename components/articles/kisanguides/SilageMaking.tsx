@@ -413,7 +413,7 @@ export default function SilageMaking() {
 
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">3. PM FME Yojana:</strong>
-            Branded packaging mein bechna ho toh <Link href="/articles/farming/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME</Link> ke antargat 35% tak subsidy mil sakti hai, maximum ₹10 lakh. Micro food processing units ke liye hai.
+            Branded packaging mein bechna ho toh <Link href="/articles/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME</Link> ke antargat 35% tak subsidy mil sakti hai, maximum ₹10 lakh. Micro food processing units ke liye hai.
             <p className="mt-1 text-xs text-gray-600 dark:text-gray-400 italic">
               Exact criteria official portal ya Industries Department se check karo.
             </p>
@@ -685,7 +685,7 @@ export default function SilageMaking() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Related reading: <Link href="/articles/farming/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME Yojana guide</Link> aur <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">KCC online apply karne ka tarika</Link> bhi zaroor padhein, agar aap silage unit ke liye funding plan kar rahe ho.
+        Related reading: <Link href="/articles/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME Yojana guide</Link> aur <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">KCC online apply karne ka tarika</Link> bhi zaroor padhein, agar aap silage unit ke liye funding plan kar rahe ho.
       </p>
 
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-lg border-l-4 border-orange-500 not-prose">
