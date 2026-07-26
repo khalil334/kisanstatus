@@ -111,7 +111,11 @@ export default function Footer() {
               Helpline & Support
             </h4>
 
-            <address className="bg-white/10 border border-white/10 rounded-lg p-4 mb-4 not-italic" itemScope itemType="https://schema.org/ContactPoint">
+            <address className="bg-white/10 border border-white/10 rounded-lg p-4 mb-4 not-italic" itemProp="contactPoint" itemScope itemType="https://schema.org/ContactPoint">
+              <meta itemProp="contactType" content="customer support" />
+              <meta itemProp="areaServed" content="IN" />
+              <meta itemProp="availableLanguage" content="Hindi" />
+              <meta itemProp="availableLanguage" content="English" />
               <h5 className="text-sm font-bold text-green-400 mb-3 flex items-center gap-2">
                 📢 Helpline Jankari
               </h5>
@@ -157,7 +161,17 @@ export default function Footer() {
                 </p>
                 <p className="flex items-start gap-2">
                   <span className="shrink-0 mt-0.5" aria-hidden="true">⏰</span>
-                  <span itemProp="hoursAvailable">Mon-Sat 9:30AM - 6:00PM</span>
+                  <span itemProp="hoursAvailable" itemScope itemType="https://schema.org/OpeningHoursSpecification">
+                    <meta itemProp="dayOfWeek" content="https://schema.org/Monday" />
+                    <meta itemProp="dayOfWeek" content="https://schema.org/Tuesday" />
+                    <meta itemProp="dayOfWeek" content="https://schema.org/Wednesday" />
+                    <meta itemProp="dayOfWeek" content="https://schema.org/Thursday" />
+                    <meta itemProp="dayOfWeek" content="https://schema.org/Friday" />
+                    <meta itemProp="dayOfWeek" content="https://schema.org/Saturday" />
+                    <meta itemProp="opens" content="09:30" />
+                    <meta itemProp="closes" content="18:00" />
+                    <span aria-hidden="true">Mon-Sat 9:30AM - 6:00PM</span>
+                  </span>
                 </p>
               </div>
             </address>
