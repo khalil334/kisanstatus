@@ -410,7 +410,7 @@ export default function PmKisanRejectedStatusReApplyGuide({ article }: { article
             </div>
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
-            Apne state ki specific jankari ke liye <Link href="/beneficiary-list" className="underline text-green-700 dark:text-green-400">state-wise page</Link> par jao.
+            Apne state ki specific jankari ke liye <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">state-wise page</Link> par jao.
           </p>
         </section>
 

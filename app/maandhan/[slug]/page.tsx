@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { MAANDHAN_ARTICLES } from '@/lib/maandhan-data';
-import { SITE_URL } from '@/lib/site-config';
+import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '@/lib/site-config';
 
 import PmKisanMaandhanRegistration2026 from '@/components/articles/maandhan/PmKisanMaandhanRegistration2026';
 import PmKisanMaandhanEligibilityDocuments from '@/components/articles/maandhan/PmKisanMaandhanEligibilityDocuments';
@@ -22,6 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!article) return { title: 'Not Found' };
 
   const url = `${SITE_URL}/maandhan/${slug}`;
+  const ogImage = article.ogImage ? `${SITE_URL}${article.ogImage}` : DEFAULT_OG_IMAGE;
 
   return {
     title: article.title,
@@ -32,6 +33,21 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         'hi-IN': url,
         'x-default': url,
       },
+    },
+    openGraph: {
+      title: article.title,
+      description: article.description,
+      type: 'article',
+      url,
+      siteName: SITE_NAME,
+      locale: 'hi_IN',
+      images: [{
+        url: ogImage,
+        width: 1200,
+        height: 630,
+        alt: article.title,
+        type: 'image/webp',
+      }],
     },
   };
 }
