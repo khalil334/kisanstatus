@@ -6,9 +6,6 @@ import Image from 'next/image';
 import { IB, WB, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 
-// -----------------------------------------------------------------------
-// NOTE: API keys / endpoints below are untouched as requested.
-// -----------------------------------------------------------------------
 const MANDI_API_KEY = process.env.NEXT_PUBLIC_MANDI_API_KEY || '';
 const WEATHER_API_KEY = process.env.NEXT_PUBLIC_WEATHER_API_KEY || '';
 
@@ -30,8 +27,6 @@ interface CommodityItem {
   trend: Trend;
 }
 
-// Base numeric range so a state multiplier can be applied to get a
-// realistic, non-identical number for every state instead of one static rate.
 interface CommodityBase {
   name: string;
   low: number;
@@ -68,8 +63,6 @@ interface StateChecklist {
   notes: string;
 }
 
-// Name the API expects in the state field of the agmarknet dataset.
-// Kept separate from the display label so button text can stay natural.
 const STATE_API_NAME: Record<string, string> = {
   'Uttar Pradesh': 'Uttar Pradesh',
   'Maharashtra': 'Maharashtra',
@@ -95,8 +88,6 @@ const STATE_API_NAME: Record<string, string> = {
   'Delhi': 'NCT of Delhi',
 };
 
-// Lat/lon of each state's main city — used so the weather strip actually
-// changes when a state is picked instead of always showing Delhi's sky.
 const STATE_COORDS: Record<string, { lat: number; lon: number }> = {
   'Uttar Pradesh': { lat: 26.8467, lon: 80.9462 },
   'Maharashtra': { lat: 19.076, lon: 72.8777 },
@@ -122,9 +113,6 @@ const STATE_COORDS: Record<string, { lat: number; lon: number }> = {
   'Delhi': { lat: DEFAULT_LAT, lon: DEFAULT_LON },
 };
 
-// Rough cost-of-living / transport-distance multiplier per state so that,
-// when the live feed has no rows for a commodity, the fallback number still
-// looks like it belongs to that state rather than repeating Delhi's price.
 const STATE_PRICE_FACTOR: Record<string, number> = {
   'Uttar Pradesh': 0.92,
   'Maharashtra': 1.15,
@@ -150,7 +138,6 @@ const STATE_PRICE_FACTOR: Record<string, number> = {
   'Delhi': 1.0,
 };
 
-// ALL INDIAN STATES WITH CHECKLISTS
 const STATE_CHECKLISTS: StateChecklist[] = [
   {
     state: 'Uttar Pradesh',
@@ -308,8 +295,6 @@ const STATE_CHECKLISTS: StateChecklist[] = [
   },
 ];
 
-// Numeric base ranges (₹/unit) — a state multiplier is applied on top of
-// these when live API data isn't available for that commodity.
 const VEGETABLE_BASE: readonly CommodityBase[] = [
   { name: 'आलू (Aloo)', low: 22, high: 28, unit: 'kg' },
   { name: 'प्याज (Pyaaz)', low: 30, high: 42, unit: 'kg' },
@@ -542,8 +527,6 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
     return () => clearInterval(id);
   }, []);
 
-  // Re-fetch mandi prices whenever the selected state changes so the numbers
-  // shown are actually specific to that state, not a static national average.
   useEffect(() => {
     if (!MANDI_API_KEY) {
       const factor = STATE_PRICE_FACTOR[selectedState] ?? 1;
@@ -624,8 +607,6 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
     };
   }, [selectedState]);
 
-  // Re-fetch weather for the selected state's coordinates instead of always
-  // showing Delhi's forecast — this is what actually drives the "asar" copy.
   useEffect(() => {
     if (!WEATHER_API_KEY) {
       setWeatherForecast(WEATHER_FALLBACK);
@@ -708,7 +689,6 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
       </div>
 
       <div className="max-w-3xl mx-auto py-8 px-4">
-        {/* IMAGE 1: Hero */}
         <div className="my-6 rounded-2xl overflow-hidden border border-gray-300 shadow-md">
           <Image
             src="/images/articles/mandi-bhav-today/mandi-fresh-vegetables-mixed.webp"
@@ -758,7 +738,6 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
           </IB>
         </section>
 
-        {/* STATE SELECTOR */}
         <section className="mb-8">
           <SH>Apna State Chuno — Har State Ka Rate Alag Hai</SH>
           <p className="text-gray-700 text-sm leading-relaxed mb-4">
@@ -780,7 +759,6 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
             ))}
           </div>
 
-          {/* STATE CHECKLIST */}
           <div className="bg-green-50 rounded-xl p-5 border-2 border-green-300">
             <div className="font-black text-lg mb-3">{currentStateData.state} — Mandi Checklist</div>
 
@@ -830,7 +808,6 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
           />
         </div>
 
-        {/* IMAGE 2: Potato & Onion */}
         <div className="my-6 rounded-2xl overflow-hidden border border-gray-300 shadow-md">
           <Image
             src="/images/articles/mandi-bhav-today/mandi-vegetables-potato-onion.webp"
@@ -856,7 +833,6 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
           </div>
         </section>
 
-        {/* IMAGE 3: Tomato & Carrot */}
         <div className="my-6 rounded-2xl overflow-hidden border border-gray-300 shadow-md">
           <Image
             src="/images/articles/mandi-bhav-today/mandi-vegetables-tomato-carrot.webp"
@@ -870,7 +846,6 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
           </p>
         </div>
 
-        {/* IMAGE 4: Mixed Fruits */}
         <div className="my-6 rounded-2xl overflow-hidden border border-gray-300 shadow-md">
           <Image
             src="/images/articles/mandi-bhav-today/mandi-fresh-fruits-mixed.webp"
@@ -896,7 +871,6 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
           </div>
         </section>
 
-        {/* IMAGE 5: Apple & Banana */}
         <div className="my-6 rounded-2xl overflow-hidden border border-gray-300 shadow-md">
           <Image
             src="/images/articles/mandi-bhav-today/mandi-fruits-apple-banana.webp"
@@ -910,7 +884,6 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
           </p>
         </div>
 
-        {/* IMAGE 6: Mango & Orange */}
         <div className="my-6 rounded-2xl overflow-hidden border border-gray-300 shadow-md">
           <Image
             src="/images/articles/mandi-bhav-today/mandi-fruits-mango-orange.webp"
