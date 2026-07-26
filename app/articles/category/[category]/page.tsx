@@ -216,7 +216,7 @@ export default async function CategoryPage({
             </Link>
           </div>
         ) : (
-          <ArticlesClient articles={categoryArticles} />
+          <ArticlesClient articles={categoryArticles} showHero={false} />
         )}
       </div>
     </>
