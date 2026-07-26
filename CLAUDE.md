@@ -35,7 +35,19 @@ Ahrefs Site Audit project: **10042735** (target `kisanstatus.com/`, subdomains s
 - Broken image `csc-registration-process.webp`: re-uploaded by owner in commit c85143f (after the 26 Jul crawl) — should clear on next crawl. Known false-positive if re-reported before re-crawl.
 - Branch `fix/orphan-pages-internal-links`: added RELATED entries linking all 10 orphan articles from topically-close hub articles (MasterGuide, 24viKist, BeneficiaryList, CorrectionForm, RejectedStatus, KisanRin, TractorLoan) + terms-of-service added to Footer Quick Links.
 
-## Outstanding
-- Warning: Open Graph URL ≠ canonical (6 pages) + OG tags incomplete (5 pages) — template fix, Step 3.
+## Fixed so far (Warning pass — branch `fix/warning-seo-issues`, PR pending)
+- **OG URL ≠ canonical (6 maandhan pages):** `app/maandhan/[slug]/page.tsx` had no `openGraph` block → inherited homepage `og:url`. Added a per-page `openGraph` (url/title/description/siteName/locale=article/images from `article.ogImage`), mirroring `app/articles/[slug]`. One template edit covers all 6.
+- **OG tags incomplete (5 static pages):** privacy-policy, terms-of-service, disclaimer, about, contact each set `openGraph` WITHOUT `images` → missing `og:image`. Added `images:[{DEFAULT_OG_IMAGE,1200x630,webp}]` to each.
+- **Links to redirect (5) + 3XX inlinks:** repointed internal `<Link>`s to their final URLs — `/beneficiary-list` → `/articles/PmKisanBeneficiaryList2026` (in PmKisanLandSeedingForm, PmKisanRejectedStatusReApplyGuide, PmKisanFaceAuthenticationEkyc, PmKisanMaandhanYojanaPension); `/articles/farming/pm-fme-yojana-food-processing` → `/articles/pm-fme-yojana-food-processing` (SilageMaking, 2 links). NOTE: www/http→https 308s are correct canonical infra — left alone.
+- **Noindex page `/articles/tractor-subsidy-scheme`:** that slug doesn't exist → renders 404 (noindex) at HTTP 200. Root cause was a broken link in `MushroomKheti.tsx`; repointed to real article `/articles/KisanTractorLoan2026` + relabeled card "Tractor Loan 2026".
+- **Title too long (6 maandhan):** shortened `title` values in `lib/maandhan-data.ts` to land 49–57 chars incl. the ` | KisanStatus` layout suffix.
+- **Meta description too long (2):** trimmed `desc` in `lib/articles-data.ts` for PmKisanCorrectionForm2026 (172→126) and PmKusumYojanaSolarSubsidy2026 (178→133).
+
+## Notes for future fixes
+- **Metadata inheritance gotcha:** any App Router template/page that sets `openGraph` must set `og:url` + `images` explicitly, else it inherits the homepage OG from `app/layout.tsx` (`og:url = SITE_URL`, generic og-image). This is what caused both OG warnings.
+- `PMFMEYojana.tsx` still hardcodes `/articles/farming/pm-fme-yojana-food-processing` in its OWN canonical + schema `@id` strings (lines ~26/43/63+). Ahrefs did NOT flag these (they're not `<Link>` anchors); left untouched per scope. Revisit if a future crawl flags a canonical/self-reference issue.
+
+## Still outstanding (NOT in this Warning pass)
 - Notice: schema.org validation errors (65 pages) — Step 4.
-- Minor: title too long (6), links to redirect (5), meta description too long (2), multiple H1 (4).
+- Notice: multiple H1 (4), page/SERP title mismatch (4), one-dofollow-inlink orphans (10), redirect chain (1), H1 missing (1), noindex-follow (1), HTTP→HTTPS (2). Slow page (1) — perf, investigate.
+- Notice: Pages to submit to IndexNow (62) — not a code fix; enable IndexNow in Ahrefs Project Settings.
