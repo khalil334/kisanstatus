@@ -86,7 +86,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'KisanTractorLoan2026',
     title: 'Tractor Loan 2026: Bina Down Payment?',
-    desc: 'Bina down payment ke tractor loan? Mahindra Finance, TATA Capital, aur state banks mein scheme hai.',
+    desc: 'Bina down payment ke tractor loan possible hai? Mahindra Finance, TATA Capital aur state banks ki schemes, eligibility aur apply process — sab yahan.',
     ogTitle: 'Tractor Loan Bina Down Payment 2026',
     keywords: [
       'tractor loan 2026',
@@ -133,7 +133,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'PmKisanEkycOnline2026',
     title: 'PM Kisan eKYC 2026: 2 Min Mein Karein',
-    desc: 'eKYC mandatory hai bina iske kist nahi milegi. OTP ya CSC biometric se free mein karo.',
+    desc: 'eKYC mandatory hai — bina iske PM Kisan kist nahi milegi. OTP ya CSC biometric se free mein 2 minute mein eKYC karne ka step-by-step tarika.',
     ogTitle: 'PM Kisan eKYC Online 2026 Guide',
     keywords: [
       'pm kisan ekyc online 2026',
@@ -179,7 +179,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'KisanCreditCardOnlineApply2026',
     title: 'Kisan Credit Card 2026: ₹5 Lakh Loan',
-    desc: 'KCC hai to ₹5 lakh tak loan mil sakta hai, interest rate sirf 4%.',
+    desc: 'KCC hai to ₹5 lakh tak ka loan sirf 4% interest par mil sakta hai. Online apply process, eligibility aur zaroori documents ki puri jankari yahan.',
     ogTitle: 'KCC Online Apply — ₹5 Lakh Loan 2026',
     keywords: [
       'kisan credit card online apply 2026',
@@ -201,7 +201,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai',
     title: 'FTO Generated Meaning: PM Kisan Status',
-    desc: 'FTO Generated, FTO Pending — confused ho? FTO matlab Fund Transfer Order.',
+    desc: 'FTO Generated aur FTO Pending mein confused ho? FTO matlab Fund Transfer Order — iska matlab, status ke stages aur kist kab aayegi, sab samjhein.',
     ogTitle: 'FTO Generated Matlab — PM Kisan Guide',
     keywords: [
       'FTO generated meaning',
@@ -222,7 +222,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'NanoDap500mlPriceInIndia2026',
     title: 'Nano DAP 500ml Price 2026: IFFCO Rate',
-    desc: 'IFFCO Nano DAP 500ml bottle ₹280-320 ke beech hai.',
+    desc: 'IFFCO Nano DAP 500ml bottle ka price ₹280-320 ke beech hai. Latest rate, normal DAP se comparison aur kaha se sasta milega — puri jankari yahan.',
     ogTitle: 'Nano DAP 500ml Price 2026 India',
     keywords: [
       'Nano DAP 500ml price India 2026',
@@ -243,7 +243,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'PmKisan24viKist2026',
     title: 'PM Kisan 24vi Kist 2026: Date & Status',
-    desc: '23vi aa gayi, ab 24vi ka wait. October 2026 tak aane ki umeed.',
+    desc: '23vi kist aa gayi, ab 24vi ka intezaar. October 2026 tak aane ki umeed hai — release date, beneficiary status check aur latest update yahan dekhein.',
     ogTitle: 'PM Kisan 24vi Kist — Kab Aayegi?',
     keywords: [
       'pm kisan 24vi kist 2026',
@@ -264,7 +264,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'AgriStackKyaHai2026',
     title: 'AgriStack 2026: Digital Kisan ID Guide',
-    desc: 'AgriStack digital kisan ID hai. PM Kisan se connected hai.',
+    desc: 'AgriStack ek digital kisan ID hai jo PM Kisan se connected hai. Iska matlab, fayde, registration process aur eligibility ki puri jankari yahan.',
     ogTitle: 'AgriStack Kya Hai — Kisan ID Guide',
     keywords: [
       'AgriStack kya hai',
@@ -286,7 +286,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'PmKisanMasterGuide2026',
     title: 'PM Kisan Complete Guide 2026: All Fixes',
-    desc: 'Status verify, eKYC, payment fail — sab ek jagah.',
+    desc: 'PM Kisan ka har problem ek jagah — status verify, eKYC process, payment fail fix aur beneficiary list check karne ka complete step-by-step guide.',
     ogTitle: 'PM Kisan Complete Guide — Sab Fix',
     keywords: [
       'pm kisan complete guide 2026',
@@ -307,7 +307,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'soil-health-card-complete-guide-2026',
     title: 'Soil Health Card 2026: Mitti Test Guide',
-    desc: 'Mitti test karwao — CSC se form lo, sample do, 15 din mein report.',
+    desc: 'Mitti test karwao aur sahi khaad chuno — CSC se form lo, sample do aur 15 din mein report pao. Soil Health Card banwane ka complete guide yahan.',
     ogTitle: 'Soil Health Card 2026 — Puri Jankari',
     keywords: [
       'soil health card complete guide 2026',
@@ -328,7 +328,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'mandi-bhav-today',
     title: 'Aaj Ka Mandi Bhav: Daily Sabzi Rates',
-    desc: 'Aloo ₹20-24, pyaaz ₹26-30, tamatar ₹38-45. Daily updated rates.',
+    desc: 'Aaj ka mandi bhav — aloo ₹20-24, pyaaz ₹26-30, tamatar ₹38-45. Sabzi aur anaj ke daily updated rates apne sheher ke hisaab se yahan dekhein.',
     ogTitle: 'Aaj Ka Mandi Bhav — Live Rates',
     keywords: [
       'aaj ka mandi bhav',
