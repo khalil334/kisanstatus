@@ -15,6 +15,9 @@ const RELATED = [
   { slug: 'PmKisanEkycOnline2026', title: 'eKYC Kaise Karein', emoji: '🔐' },
   { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List Check', emoji: '📋' },
   { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Loan Apply', emoji: '💳' },
+  { slug: 'PmKisanMobileNumberChangeUpdate', title: 'Mobile Number Change Guide', emoji: '📱' },
+  { slug: 'PmKisanFaceAuthenticationEkyc', title: 'Face Auth eKYC Guide', emoji: '🤳' },
+  { slug: 'PmKisanLandSeedingForm', title: 'Land Seeding Form', emoji: '🌱' },
 ];
 
 const FAQS_DATA = [
