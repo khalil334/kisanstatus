@@ -23,6 +23,19 @@ Ahrefs Site Audit project: **10042735** (target `kisanstatus.com/`, subdomains s
 ## Fixed so far
 - PR #7 (branch `fix/tier1-critical-seo`): corrected 3 bad `/articles/maandhan/*` links in `PmKisanMaandhanStatusCheckOnline.tsx`; added self-canonical to `app/maandhan/[slug]/page.tsx`.
 
+## Internal-linking pattern (for orphan fixes)
+- Each article body component has a `const RELATED = [...]` array rendered by `RelatedArticles` (`components/ArticleShared.tsx`) as real `<Link href="/articles/<slug>">` anchors — THIS is what creates crawlable internal links.
+- `relatedSlugs` in `lib/articles-data.ts` only feeds JSON-LD `mentions`, NOT visible links — adding there does NOT fix orphan pages.
+- A few components use `RELATED_CARDS` instead of `RELATED` (PmKisanEkycOnline2026, PmKisanPaymentFailedFix2026, PmKisanStateNodalOfficerList) — different shape (has `desc`).
+- Static pages (e.g. terms-of-service) get linked from `components/Footer.tsx` Quick Links.
+
+## Fixed so far
+- PR #7 (branch `fix/tier1-critical-seo`): corrected 3 bad `/articles/maandhan/*` links in `PmKisanMaandhanStatusCheckOnline.tsx`; added self-canonical to `app/maandhan/[slug]/page.tsx`.
+- PR #8: internal links to PM FME Yojana article.
+- Broken image `csc-registration-process.webp`: re-uploaded by owner in commit c85143f (after the 26 Jul crawl) — should clear on next crawl. Known false-positive if re-reported before re-crawl.
+- Branch `fix/orphan-pages-internal-links`: added RELATED entries linking all 10 orphan articles from topically-close hub articles (MasterGuide, 24viKist, BeneficiaryList, CorrectionForm, RejectedStatus, KisanRin, TractorLoan) + terms-of-service added to Footer Quick Links.
+
 ## Outstanding
-- Broken image `public/images/articles/maandhan/csc-registration-process.webp` referenced in `PmKisanMaandhanRegistration2026.tsx` (line ~260) — file missing from repo. Needs the real image, a swap, or removal.
-- 13 orphan pages (indexable, all under `/articles/`) — need internal links added. Editorial decision pending.
+- Warning: Open Graph URL ≠ canonical (6 pages) + OG tags incomplete (5 pages) — template fix, Step 3.
+- Notice: schema.org validation errors (65 pages) — Step 4.
+- Minor: title too long (6), links to redirect (5), meta description too long (2), multiple H1 (4).

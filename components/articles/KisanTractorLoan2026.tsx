@@ -15,6 +15,8 @@ const RELATED = [
 { slug: 'AgriStackKyaHai2026', title: 'AgriStack Kya Hai — Digital Kisan ID', emoji: '🆔' },
 { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP 500ml Price — IFFCO Rate 2026', emoji: '🌱' },
 { slug: 'PmKisan24viKist2026', title: 'PM Kisan 24vi Kist — Kab Aayegi 2026?', emoji: '📅' },
+  { slug: 'custom-hiring-centre-chc-portal', title: 'CHC Machine Rental Portal', emoji: '🚜' },
+  { slug: 'silage-making-business-guide', title: 'Silage Business Guide', emoji: '🌾' },
 ];
 
 const FAQS_DATA = [
