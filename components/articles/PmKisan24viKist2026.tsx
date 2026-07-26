@@ -29,6 +29,8 @@ const RELATED = [
   { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Loan Apply Online', emoji: '💰' },
   { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price Guide', emoji: '🌱' },
   { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav', emoji: '📈' },
+  { slug: 'PmKisan25viKist2027', title: '25vi Kist 2027 Kab Aayegi', emoji: '📅' },
+  { slug: 'pm-kisan-self-registered-status-check', title: 'Self Registration Status', emoji: '✅' },
 ];
 
 const FAQS_DATA = [
