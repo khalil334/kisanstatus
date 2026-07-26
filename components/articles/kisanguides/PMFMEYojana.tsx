@@ -398,7 +398,7 @@ export default function PMFMEYojana() {
           <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">4</div>
           <div>
             <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">Bank Se Loan Apply Karein</h4>
-            <p className="text-sm text-gray-700 dark:text-gray-300">Apni nazdeeki bank branch jayein. PM FME ke under loan apply karein. Documents chahiye: Udyam certificate, FSSAI license, DPR, Aadhaar, PAN, bank statements (last 1 year), aur machinery quotations. Loan approval mein 30-60 din lag sakte hain.</p>
+            <p className="text-sm text-gray-700 dark:text-gray-300">Apni nazdeeki bank branch jayein. PM FME ke under loan apply karein. Documents chahiye: Udyam certificate, FSSAI license, DPR, Aadhaar, PAN, bank statements (last 1 year), aur machinery quotations. Loan approval mein 30-60 din lag sakte hain. Agar aap working capital ke liye kam interest wala loan chahte hain, toh <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Kisan Credit Card (KCC) online apply karne ka tarika</Link> bhi zaroor padhein.</p>
           </div>
         </div>
 
@@ -607,7 +607,7 @@ export default function PMFMEYojana() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        <strong>Simple rule:</strong> Agar aapka food business already chal raha hai aur aap usko upgrade karna chahte hain, toh PM FME apply karein. Agar aap naya business start karna chahte hain (food ya non-food), toh official <a href="https://www.pmegp.in/" className="text-blue-600 hover:underline dark:text-blue-400 font-medium" target="_blank" rel="noopener noreferrer">PMEGP portal</a> par apply karein.
+        <strong>Simple rule:</strong> Agar aapka food business already chal raha hai aur aap usko upgrade karna chahte hain, toh PM FME apply karein. Agar aap naya business start karna chahte hain (food ya non-food), toh official <a href="https://www.pmegp.in/" className="text-blue-600 hover:underline dark:text-blue-400 font-medium" target="_blank" rel="noopener noreferrer">PMEGP portal</a> par apply karein. Food processing ke alawa doosri subsidy-based schemes bhi dekhna chahte hain, toh <Link href="/articles/PmKusumYojanaSolarSubsidy2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM Kusum solar subsidy</Link> aur <Link href="/articles/vermi-compost-business-guide" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">vermi-compost business guide</Link> ise related options hain.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
@@ -661,6 +661,61 @@ export default function PMFMEYojana() {
         <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">4. Kya purani machinery ko replace karne par bhi subsidy milti hai?</h3>
           <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Haan, PM FME "Technology Upgradation" ko bhi support karti hai. Agar aap purani, inefficient machinery ki jagah nayi, automated, ya food-safe equipment lagate hain, toh uski cost par bhi 35% subsidy claim ki ja sakti hai.</p>
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
+        Related Guides & Financial Support
+      </h2>
+      <div className="grid md:grid-cols-2 gap-4 mb-8 not-prose">
+        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800 hover:shadow-md transition-shadow">
+          <h4 className="font-semibold text-blue-900 dark:text-blue-200 mb-2 flex items-center gap-2">
+            💳 Kisan Credit Card (KCC)
+          </h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Working capital aur setup cost ke liye low-interest loan. Timely repayment par sirf 4% effective interest.</p>
+          <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 text-sm font-medium flex items-center gap-1">
+            KCC Online Apply Guide <span>→</span>
+          </Link>
+        </div>
+
+        <div className="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-lg border border-amber-200 dark:border-amber-800 hover:shadow-md transition-shadow">
+          <h4 className="font-semibold text-amber-900 dark:text-amber-200 mb-2 flex items-center gap-2">
+            ☀️ PM Kusum Solar Subsidy
+          </h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Solar pump aur solar plant lagane par bhaari subsidy. Bijli ka kharcha kam karein.</p>
+          <Link href="/articles/PmKusumYojanaSolarSubsidy2026" className="text-amber-700 hover:underline dark:text-amber-400 text-sm font-medium flex items-center gap-1">
+            PM Kusum Details Dekhein <span>→</span>
+          </Link>
+        </div>
+
+        <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border border-green-200 dark:border-green-800 hover:shadow-md transition-shadow">
+          <h4 className="font-semibold text-green-900 dark:text-green-200 mb-2 flex items-center gap-2">
+            🐛 Vermi Compost Business
+          </h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Kam lagat wala organic khaad business. Setup, licensing aur marketing ka poora guide.</p>
+          <Link href="/articles/vermi-compost-business-guide" className="text-green-600 hover:underline dark:text-green-400 text-sm font-medium flex items-center gap-1">
+            Vermi Compost Guide Padhein <span>→</span>
+          </Link>
+        </div>
+
+        <div className="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg border border-purple-200 dark:border-purple-800 hover:shadow-md transition-shadow">
+          <h4 className="font-semibold text-purple-900 dark:text-purple-200 mb-2 flex items-center gap-2">
+            🍄 Mushroom Kheti (NHB Subsidy)
+          </h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Chhoti jagah mein high-value mushroom farming. NHB subsidy aur training ki jankari.</p>
+          <Link href="/articles/mushroom-kheti-nhb-subsidy" className="text-purple-700 hover:underline dark:text-purple-400 text-sm font-medium flex items-center gap-1">
+            Mushroom Kheti Guide <span>→</span>
+          </Link>
+        </div>
+
+        <div className="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-lg border border-rose-200 dark:border-rose-800 hover:shadow-md transition-shadow md:col-span-2">
+          <h4 className="font-semibold text-rose-900 dark:text-rose-200 mb-2 flex items-center gap-2">
+            👵 PM Kisan Maandhan Pension
+          </h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Chhote kisanon ke liye ₹3000 monthly pension scheme. Eligibility aur registration ka process.</p>
+          <Link href="/articles/PmKisanMaandhanYojanaPension" className="text-rose-700 hover:underline dark:text-rose-400 text-sm font-medium flex items-center gap-1">
+            Maandhan Pension Guide Padhein <span>→</span>
+          </Link>
         </div>
       </div>
 
