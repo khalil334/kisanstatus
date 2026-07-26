@@ -111,6 +111,30 @@ const nextConfig = {
         ],
       },
       {
+        source: '/',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=0, s-maxage=86400, stale-while-revalidate=86400' }],
+      },
+      {
+        source: '/about',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=0, s-maxage=86400, stale-while-revalidate=86400' }],
+      },
+      {
+        source: '/contact',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=0, s-maxage=86400, stale-while-revalidate=86400' }],
+      },
+      {
+        source: '/privacy-policy',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=0, s-maxage=86400, stale-while-revalidate=86400' }],
+      },
+      {
+        source: '/disclaimer',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=0, s-maxage=86400, stale-while-revalidate=86400' }],
+      },
+      {
+        source: '/calculator/:path*',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=0, s-maxage=86400, stale-while-revalidate=86400' }],
+      },
+      {
         source: '/search',
         headers: [
           { key: 'X-Robots-Tag', value: 'noindex, nofollow' },
@@ -119,7 +143,7 @@ const nextConfig = {
       {
         source: '/articles/:path*',
         headers: [
-          { key: 'Cache-Control', value: 'public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400' },
+          { key: 'Cache-Control', value: 'public, max-age=0, s-maxage=86400, stale-while-revalidate=86400' },
         ],
       },
       {
