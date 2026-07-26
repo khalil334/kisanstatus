@@ -49,7 +49,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: {
         languages: {
           'hi-IN': SITE_URL,
-          'en-IN': `${SITE_URL}/en`,
         },
       },
     },
