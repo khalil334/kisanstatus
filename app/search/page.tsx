@@ -6,7 +6,7 @@ import { SITE_URL, SITE_NAME } from '@/lib/site-config';
 export const metadata: Metadata = {
   title: `Search — ${SITE_NAME}`,
   description: 'Search feature abhi update ho raha hai. Aapko homepage par redirect kiya ja raha hai.',
-  robots: { index: false, follow: false },
+  robots: { index: false, follow: true },
   alternates: { canonical: SITE_URL },
 };
 
