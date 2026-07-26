@@ -574,7 +574,7 @@ export default function PmKisanMaandhanYojanaPension({ article }: { article: Art
             ))}
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
-            Apne state ke baare mein aur janne ke liye <Link href="/beneficiary-list" className="underline text-green-700 dark:text-green-400">state-wise page</Link> par jao. Wahan local CSC centers ki list milti hai.
+            Apne state ke baare mein aur janne ke liye <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">state-wise page</Link> par jao. Wahan local CSC centers ki list milti hai.
           </p>
         </section>
 

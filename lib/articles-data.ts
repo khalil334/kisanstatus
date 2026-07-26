@@ -420,7 +420,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'PmKisanCorrectionForm2026',
     title: 'PM Kisan Correction Form 2026: Fix Guide',
-    desc: 'Naam spelling galat, bank IFSC mismatch, Aadhaar seeding error? PM Kisan correction form bharne ka step-by-step tarika — portal se aur CSC dono. Ruki hui kist wapas milegi.',
+    desc: 'Naam spelling, IFSC ya Aadhaar seeding error? PM Kisan correction form bharne ka step-by-step tarika — portal aur CSC dono se.',
     ogTitle: 'PM Kisan Correction Form 2026 Guide',
     keywords: [
       'pm kisan correction form 2026',
@@ -446,7 +446,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'PmKusumYojanaSolarSubsidy2026',
     title: 'PM Kusum Solar Pump 2026: 60% Subsidy',
-    desc: 'Diesel pump band karo, solar pump lagao. 60% subsidy, zero bijli bill, 25 saal free paani. Eligibility, online apply, state-wise process, documents — sab kuch simple bhasha mein.',
+    desc: 'Solar pump par 60% subsidy, zero bijli bill, 25 saal free paani. Eligibility, online apply aur state-wise process simple bhasha mein.',
     ogTitle: 'PM Kusum Solar Subsidy 2026 Guide',
     keywords: [
       'pm kusum yojana solar pump subsidy',

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { SITE_URL, SITE_NAME } from '@/lib/site-config';
+import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '@/lib/site-config';
 
 export const metadata: Metadata = {
   title: `Legal Disclaimer – ${SITE_NAME} | Unofficial Portal`,
@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/disclaimer`,
     siteName: SITE_NAME,
     locale: 'hi_IN',
+    images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: `${SITE_NAME} - Legal Disclaimer`, type: 'image/webp' }],
   },
   twitter: {
     card: 'summary',
