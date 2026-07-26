@@ -226,10 +226,11 @@ export default function RootLayout({
                     },
                     hoursAvailable: {
                       '@type': 'OpeningHoursSpecification',
-                      dayOfWeek: SUPPORT_HOURS.days,
+                      dayOfWeek: SUPPORT_HOURS.days.map(
+                        (d) => `https://schema.org/${d}`
+                      ),
                       opens: SUPPORT_HOURS.open,
                       closes: SUPPORT_HOURS.close,
-                      timeZone: SUPPORT_HOURS.timezone,
                     },
                   },
                   {
@@ -245,7 +246,7 @@ export default function RootLayout({
                   },
                 ],
                 founder: {
-                  '@type': 'Organization',
+                  '@type': 'Person',
                   '@id': `${SITE_URL}#founder`,
                   name: AUTHOR_NAME,
                   url: AUTHOR_URL,
@@ -254,7 +255,6 @@ export default function RootLayout({
                 address: {
                   '@type': 'PostalAddress',
                   addressCountry: 'IN',
-                  addressRegion: 'India',
                 },
                 sameAs: [
                   SOCIAL_LINKS.facebook,
