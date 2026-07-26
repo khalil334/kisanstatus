@@ -6,7 +6,18 @@ import { SITE_URL } from '@/lib/site-config';
 const REFERENCE_DATE = new Date('2026-07-20T00:00:00+05:30');
 
 const ALL_ARTICLES = [
-  ...ARTICLES,
+  // Regular articles are served from /articles/<slug>
+  ...ARTICLES.map((a) => ({
+    slug: a.slug,
+    title: a.title,
+    desc: a.desc,
+    category: a.category,
+    publishedTime: a.publishedTime,
+    modifiedTime: a.modifiedTime,
+    ogImage: a.ogImage,
+    path: `/articles/${a.slug}`,
+  })),
+  // Maandhan articles are served from /maandhan/<slug>, NOT /articles/<slug>
   ...MAANDHAN_ARTICLES.map((a) => ({
     slug: a.slug,
     title: a.title,
@@ -15,6 +26,7 @@ const ALL_ARTICLES = [
     publishedTime: a.published,
     modifiedTime: a.modified,
     ogImage: a.ogImage || a.image,
+    path: `/maandhan/${a.slug}`,
   })),
 ];
 
@@ -136,12 +148,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly', 
       priority: 0.40,
     },
-    { 
-      url: `${SITE_URL}/search`, 
-      lastModified: new Date('2026-07-19'), 
-      changeFrequency: 'daily', 
-      priority: 0.70,
-    },
   ];
 
   const categoryPages: MetadataRoute.Sitemap = Object.keys(CATEGORIES).map((category) => {
@@ -166,7 +172,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const modifiedDate = modified ? new Date(modified) : now;
     
     return {
-      url: `${SITE_URL}/articles/${article.slug}`,
+      url: `${SITE_URL}${article.path}`,
       lastModified: modifiedDate,
       changeFrequency: getArticleFrequency(article.category),
       priority: modified ? getArticlePriority(modified) : 0.80,
