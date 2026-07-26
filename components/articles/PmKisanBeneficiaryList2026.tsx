@@ -21,6 +21,8 @@ const RELATED = [
   { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Credit Card Guide', emoji: '💰' },
   { slug: 'PmKisanEkycOnline2026', title: 'eKYC Complete Guide', emoji: '🔐' },
   { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav', emoji: '📈' },
+  { slug: 'PmKisanVillageWiseListPdfDownload', title: 'Village Wise List PDF Download', emoji: '📄' },
+  { slug: 'PmKisanLandSeedingForm', title: 'Land Seeding Form PDF', emoji: '🌱' },
 ];
 
 const FAQS_DATA = [

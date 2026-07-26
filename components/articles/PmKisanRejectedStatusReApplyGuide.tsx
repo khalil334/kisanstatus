@@ -14,6 +14,9 @@ const RELATED = [
   { slug: 'PmKisanMasterGuide2026', title: 'Master Guide', emoji: '📚' },
   { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide', emoji: '🔐' },
   { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form', emoji: '📝' },
+  { slug: 'PmKisanVoluntarySurrenderGuide', title: 'Voluntary Surrender Guide', emoji: '🚪' },
+  { slug: 'pm-kisan-self-registered-status-check', title: 'Self Registration Status Check', emoji: '✅' },
+  { slug: 'PmKisanFaceAuthenticationEkyc', title: 'Face Auth eKYC Guide', emoji: '🤳' },
 ];
 
 const FAQS_DATA = [
