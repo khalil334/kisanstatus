@@ -16,6 +16,10 @@ const RELATED = [
   { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '📅' },
   { slug: 'AgriStackKyaHai2026', title: 'Digital Kisan ID', emoji: '🆔' },
   { slug: 'KisanRinKahaSeLe2026', title: 'Kisan Loan Guide', emoji: '🏦' },
+  { slug: 'PmKisanVoluntarySurrenderGuide', title: 'PM Kisan Surrender Guide', emoji: '🚪' },
+  { slug: 'PmKisanVillageWiseListPdfDownload', title: 'Village Wise List PDF', emoji: '📄' },
+  { slug: 'PmKisanMobileNumberChangeUpdate', title: 'Mobile Number Change', emoji: '📱' },
+  { slug: 'PmKisan25viKist2027', title: '25vi Kist 2027 Update', emoji: '📅' },
 ];
 
 const FAQS_DATA = [
