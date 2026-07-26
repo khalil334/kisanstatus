@@ -226,10 +226,11 @@ export default function RootLayout({
                     },
                     hoursAvailable: {
                       '@type': 'OpeningHoursSpecification',
-                      dayOfWeek: SUPPORT_HOURS.days,
+                      dayOfWeek: SUPPORT_HOURS.days.map(
+                        (d) => `https://schema.org/${d}`
+                      ),
                       opens: SUPPORT_HOURS.open,
                       closes: SUPPORT_HOURS.close,
-                      timeZone: SUPPORT_HOURS.timezone,
                     },
                   },
                   {
