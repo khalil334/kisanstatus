@@ -1,9 +1,22 @@
 import { MetadataRoute } from 'next';
 import { ARTICLES, CATEGORIES, type CategorySlug } from '@/lib/articles-data';
+import { MAANDHAN_ARTICLES } from '@/lib/maandhan-data';
 import { SITE_URL } from '@/lib/site-config';
 
-// ✅ Static reference date — har build pe same rahega
 const REFERENCE_DATE = new Date('2026-07-20T00:00:00+05:30');
+
+const ALL_ARTICLES = [
+  ...ARTICLES,
+  ...MAANDHAN_ARTICLES.map((a) => ({
+    slug: a.slug,
+    title: a.title,
+    desc: a.description,
+    category: a.category,
+    publishedTime: a.published,
+    modifiedTime: a.modified,
+    ogImage: a.ogImage || a.image,
+  })),
+];
 
 function getArticlePriority(modifiedTime: string): number {
   const daysSinceModified = Math.floor((REFERENCE_DATE.getTime() - new Date(modifiedTime).getTime()) / 86400000);
@@ -25,7 +38,7 @@ function getArticleFrequency(category: string): MetadataRoute.Sitemap[number]['c
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = REFERENCE_DATE;  // ✅ Static date
+  const now = REFERENCE_DATE;
 
   const staticPages: MetadataRoute.Sitemap = [
     { 
@@ -133,7 +146,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const categoryPages: MetadataRoute.Sitemap = Object.keys(CATEGORIES).map((category) => {
-    const categoryArticles = ARTICLES.filter(a => a.category === category);
+    const categoryArticles = ALL_ARTICLES.filter(a => a.category === category);
     const latestArticle = categoryArticles.sort((a, b) => 
       new Date(b.modifiedTime || b.publishedTime).getTime() - 
       new Date(a.modifiedTime || a.publishedTime).getTime()
@@ -149,7 +162,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
   });
 
-  const articlePages: MetadataRoute.Sitemap = ARTICLES.map((article) => {
+  const articlePages: MetadataRoute.Sitemap = ALL_ARTICLES.map((article) => {
     const modified = article.modifiedTime || article.publishedTime;
     const modifiedDate = modified ? new Date(modified) : now;
     
