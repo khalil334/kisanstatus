@@ -230,7 +230,7 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
             ))}
           </div>
           <IB>
-            <strong>Form download karne mein dikkat aa rahi hai?</strong> Aap apne local Patwari ya nearest <Link href="/beneficiary-list" className="underline">Block Agriculture Office</Link> se sampark kar sakte hain.
+            <strong>Form download karne mein dikkat aa rahi hai?</strong> Aap apne local Patwari ya nearest <Link href="/articles/PmKisanBeneficiaryList2026" className="underline">Block Agriculture Office</Link> se sampark kar sakte hain.
           </IB>
         </div>
 

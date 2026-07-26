@@ -104,7 +104,7 @@ export default function PmKisanFaceAuthenticationEkyc({ article }: { article: Ar
           />
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Ye feature un kisanon ke liye vardaan hai jinka mobile number Aadhaar se link nahi hai ya jinhe OTP receive nahi ho raha. <Link href="/beneficiary-list" className="underline text-green-700 dark:text-green-400">Beneficiary list</Link> mein naam check karne se pehle ye live face verification zaroor kar lena.
+            Ye feature un kisanon ke liye vardaan hai jinka mobile number Aadhaar se link nahi hai ya jinhe OTP receive nahi ho raha. <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">Beneficiary list</Link> mein naam check karne se pehle ye live face verification zaroor kar lena.
           </p>
 
           <DB>

@@ -13,7 +13,7 @@ export type MaandhanArticleMeta = {
 export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
   {
     slug: 'pm-kisan-maandhan-registration-2026',
-    title: 'PM Kisan Maandhan Yojana Registration 2026: ₹3000 Pension Ke Liye Online Apply Karein',
+    title: 'PM Kisan Maandhan Registration 2026',
     description: 'PM Kisan Maandhan Yojana mein online registration ka complete process, eligibility, aur zaroori documents ki jankari.',
     category: 'pension-scheme',
     published: '2026-07-21T08:00:00+05:30',
@@ -24,7 +24,7 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
   },
   {
     slug: 'pm-kisan-maandhan-eligibility-documents',
-    title: 'PM Kisan Maandhan Eligibility & Documents: Kaun Le Sakta Hai Aur Kya Chahiye?',
+    title: 'PM Kisan Maandhan Eligibility & Documents',
     description: 'Janie kaun se kisan is pension scheme ke liye eligible hain aur registration ke waqt kaun se documents zaroori hain.',
     category: 'pension-scheme',
     published: '2026-07-21T08:00:00+05:30',
@@ -35,7 +35,7 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
   },
   {
     slug: 'pm-kisan-maandhan-pension-calculator',
-    title: 'PM Kisan Maandhan Pension Calculator: Age Ke Hisaab Se Kitna Contribution Dena Hoga',
+    title: 'PM Kisan Maandhan Pension Calculator 2026',
     description: 'Complete pension calculator guide. 18 se 40 saal ki umar ke beech join karne par monthly contribution aur ₹3000 pension ka hisaab.',
     category: 'pension-scheme',
     published: '2026-07-21T08:00:00+05:30',
@@ -46,7 +46,7 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
   },
   {
     slug: 'pm-kisan-maandhan-withdrawal-refund-rules',
-    title: 'PM Kisan Maandhan Withdrawal & Refund Rules: Scheme Chhodne Par Paisa Wapas Milega?',
+    title: 'PM Kisan Maandhan Withdrawal & Refund Rules',
     description: 'PM Kisan Maandhan se exit karne ke rules, pension ka paisa family ko kaise milega, aur contribution refund hone ki puri sachai.',
     category: 'pension-scheme',
     published: '2026-07-21T08:00:00+05:30',
@@ -57,7 +57,7 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
   },
   {
     slug: 'pm-kisan-maandhan-auto-debit-poora-sach',
-    title: 'PM Kisan Se Maandhan Ka Paisa Kyun Kat Raha Hai? Auto Debit Ka Poora Sach',
+    title: 'PM Kisan Maandhan Auto-Debit: Poora Sach',
     description: 'PM Kisan ke ₹2000 mein se ₹55-200 kyun kat rahe hain? NACH auto-debit mandate, CSC pe sign kiya gaya form, aur contribution pay karne ka asli process samjhiye.',
     category: 'pension-scheme',
     published: '2026-07-24T08:00:00+05:30',
@@ -68,7 +68,7 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
   },
   {
     slug: 'pm-kisan-maandhan-status-check-online',
-    title: 'PM Kisan Maandhan Status Check Online: Pension Card, Passbook, Contribution History',
+    title: 'PM Kisan Maandhan Status Check Online',
     description: 'PM Kisan Maandhan Yojana mein apna status kaise verify kijiye. Pension card download, passbook check, contribution history aur missed payment ka pura process.',
     category: 'pension-scheme',
     published: '2026-07-24T08:00:00+05:30',

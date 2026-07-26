@@ -362,9 +362,9 @@ export default function MushroomKheti() {
           <div className="text-blue-600 dark:text-blue-400 font-bold mb-1 group-hover:underline">PM FME Yojana</div>
           <p className="text-xs text-gray-600 dark:text-gray-400">Mushroom drying aur pickle banane ke liye 35% subsidy aur loan process.</p>
         </Link>
-        <Link href="/articles/tractor-subsidy-scheme" className="group block p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all shadow-sm">
-          <div className="text-blue-600 dark:text-blue-400 font-bold mb-1 group-hover:underline">Tractor Subsidy</div>
-          <p className="text-xs text-gray-600 dark:text-gray-400">Agar aap apni kheti ko next level par le jana chahte hain, toh SMAM yojana details.</p>
+        <Link href="/articles/KisanTractorLoan2026" className="group block p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all shadow-sm">
+          <div className="text-blue-600 dark:text-blue-400 font-bold mb-1 group-hover:underline">Tractor Loan 2026</div>
+          <p className="text-xs text-gray-600 dark:text-gray-400">Agar aap apni kheti ko next level par le jana chahte hain, toh tractor loan aur finance ki details.</p>
         </Link>
       </div>
 
