@@ -117,8 +117,13 @@ export default async function CategoryPage({
       itemListElement: categoryArticles.map((a, i) => ({
         '@type': 'ListItem',
         position: i + 1,
-        url: `${SITE_URL}/articles/${a.slug}`,
-        name: a.title,
+        item: {
+          '@type': 'Article',
+          '@id': `${SITE_URL}/articles/${a.slug}`,
+          url: `${SITE_URL}/articles/${a.slug}`,
+          name: a.title,
+          headline: a.title,
+        },
       })),
     },
   };
