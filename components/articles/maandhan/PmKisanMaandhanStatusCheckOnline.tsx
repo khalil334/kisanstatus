@@ -39,7 +39,7 @@ export default function PmKisanMaandhanStatusCheckOnline({ article }: { article:
       <nav className="text-sm text-gray-500 mb-4 not-prose">
         <Link href="/" className="hover:text-blue-600">Home</Link>
         <span className="mx-2">/</span>
-        <Link href="/articles/maandhan" className="hover:text-blue-600">Maandhan Yojana</Link>
+        <Link href="/maandhan" className="hover:text-blue-600">Maandhan Yojana</Link>
         <span className="mx-2">/</span>
         <span className="text-gray-800 font-medium">Status Check Online</span>
       </nav>
@@ -419,11 +419,11 @@ export default function PmKisanMaandhanStatusCheckOnline({ article }: { article:
       </h2>
 
       <div className="grid md:grid-cols-2 gap-4 mb-10 not-prose">
-        <Link href="/articles/maandhan/pm-kisan-maandhan-registration-2026" className="group block p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all shadow-sm">
+        <Link href="/maandhan/pm-kisan-maandhan-registration-2026" className="group block p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all shadow-sm">
           <div className="text-blue-600 dark:text-blue-400 font-bold mb-1 group-hover:underline">Registration 2026</div>
           <p className="text-xs text-gray-600 dark:text-gray-400">CSC center, bank branch ya online — 3 tareeke se kaise apply karein. Documents ki puri list.</p>
         </Link>
-        <Link href="/articles/maandhan/pm-kisan-maandhan-auto-debit-poora-sach" className="group block p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all shadow-sm">
+        <Link href="/maandhan/pm-kisan-maandhan-auto-debit-poora-sach" className="group block p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all shadow-sm">
           <div className="text-blue-600 dark:text-blue-400 font-bold mb-1 group-hover:underline">Auto Debit Ka Sach</div>
           <p className="text-xs text-gray-600 dark:text-gray-400">PM Kisan ke 2000 mein se share kyun kat raha hai? NACH mandate ka poora process.</p>
         </Link>
