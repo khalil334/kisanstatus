@@ -419,7 +419,7 @@ function ArticlesLoading() {
 }
 
 /* ─── Main Component ─── */
-export default function ArticlesClient({ articles }: { articles: readonly CombinedArticleMeta[] }) {
+export default function ArticlesClient({ articles, showHero = true }: { articles: readonly CombinedArticleMeta[]; showHero?: boolean }) {
   // ItemList structured data — tells Google this page is a collection of articles,
   // improves eligibility for rich results (sitelinks, carousel) in search.
   const itemListSchema = {
@@ -446,6 +446,7 @@ export default function ArticlesClient({ articles }: { articles: readonly Combin
         {JSON.stringify(itemListSchema)}
       </Script>
 
+      {showHero && (
       <section className="py-10 md:py-14 bg-[var(--color-primary)]" aria-labelledby="hero-heading">
         <div className="container-site text-center px-4">
           <span className="inline-flex items-center gap-1.5 bg-white/10 border border-white/20 text-green-300 text-xs font-bold px-4 py-2 rounded-full mb-4 uppercase tracking-wider backdrop-blur-sm">
@@ -474,6 +475,7 @@ export default function ArticlesClient({ articles }: { articles: readonly Combin
           </div>
         </div>
       </section>
+      )}
 
       <div className="container-site py-10 px-4">
         <Suspense fallback={<ArticlesLoading />}>
