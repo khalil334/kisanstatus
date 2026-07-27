@@ -110,4 +110,15 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
     image: '/images/articles/maandhan/bank-account-change-hero.webp',
     ogImage: '/images/articles/maandhan/bank-account-change-hero.webp',
   },
+  {
+    slug: 'pmkmy-grievance-complaint-helpline',
+    title: 'PMKMY Grievance & Complaint Helpline',
+    description: 'PM Kisan Maandhan Yojana me shikayat kaise karein? Helpline numbers, online grievance process, CSC complaint, aur common problems ka practical solution.',
+    category: 'pension-scheme',
+    published: '2026-07-28T08:00:00+05:30',
+    modified: '2026-07-28T08:00:00+05:30',
+    readTime: '12 min read',
+    image: '/images/articles/maandhan/grievance-helpline-hero.webp',
+    ogImage: '/images/articles/maandhan/grievance-helpline-hero.webp',
+  },
 ];
