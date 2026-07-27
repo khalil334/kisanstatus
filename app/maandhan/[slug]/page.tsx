@@ -2,7 +2,6 @@ import { notFound } from 'next/navigation';
 import { MAANDHAN_ARTICLES } from '@/lib/maandhan-data';
 import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '@/lib/site-config';
 
-// Original 6 articles
 import PmKisanMaandhanRegistration2026 from '@/components/articles/maandhan/PmKisanMaandhanRegistration2026';
 import PmKisanMaandhanEligibilityDocuments from '@/components/articles/maandhan/PmKisanMaandhanEligibilityDocuments';
 import PmKisanMaandhanPensionCalculator from '@/components/articles/maandhan/PmKisanMaandhanPensionCalculator';
@@ -10,10 +9,9 @@ import PmKisanMaandhanWithdrawalRefund from '@/components/articles/maandhan/PmKi
 import PmKisanMaandhanAutoDebitPooraSach from '@/components/articles/maandhan/PmKisanMaandhanAutoDebitPooraSach';
 import PmKisanMaandhanStatusCheckOnline from '@/components/articles/maandhan/PmKisanMaandhanStatusCheckOnline';
 
-// 3 naye articles (Total 9)
 import KisanPensionCardDownload from '@/components/articles/maandhan/kisan-pension-card-download';
 import FamilyPensionRules from '@/components/articles/maandhan/family-pension-rules';
-import BankAccountChange from '@/components/articles/maandhan/bank-account-change';
+import PmkmyBankAccountChange from '@/components/articles/maandhan/pmkmy-bank-account-change';
 
 export async function generateStaticParams() {
   return MAANDHAN_ARTICLES.map((article) => ({
@@ -67,7 +65,6 @@ export default async function MaandhanArticlePage({ params }: { params: Promise<
   }
 
   switch (slug) {
-    // Original 6 articles
     case 'pm-kisan-maandhan-registration-2026':
       return <PmKisanMaandhanRegistration2026 article={article} />;
     case 'pm-kisan-maandhan-eligibility-documents':
@@ -80,15 +77,12 @@ export default async function MaandhanArticlePage({ params }: { params: Promise<
       return <PmKisanMaandhanAutoDebitPooraSach article={article} />;
     case 'pm-kisan-maandhan-status-check-online':
       return <PmKisanMaandhanStatusCheckOnline article={article} />;
-
-    // 3 naye articles (Total 9)
     case 'pm-kisan-maandhan-pension-card-download':
       return <KisanPensionCardDownload article={article} />;
     case 'family-pension-rules':
       return <FamilyPensionRules article={article} />;
     case 'pmkmy-bank-account-change':
-      return <BankAccountChange article={article} />;
-
+      return <PmkmyBankAccountChange article={article} />;
     default:
       notFound();
   }
