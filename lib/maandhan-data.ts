@@ -1,95 +1,113 @@
-import { notFound } from 'next/navigation';
-import { MAANDHAN_ARTICLES } from '@/lib/maandhan-data';
-import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '@/lib/site-config';
+export type MaandhanArticleMeta = {
+  slug: string;
+  title: string;
+  description: string;
+  category: string;
+  published: string;
+  modified: string;
+  readTime: string;
+  image?: string;
+  ogImage?: string;
+};
 
-// Original 6 articles
-import PmKisanMaandhanRegistration2026 from '@/components/articles/maandhan/PmKisanMaandhanRegistration2026';
-import PmKisanMaandhanEligibilityDocuments from '@/components/articles/maandhan/PmKisanMaandhanEligibilityDocuments';
-import PmKisanMaandhanPensionCalculator from '@/components/articles/maandhan/PmKisanMaandhanPensionCalculator';
-import PmKisanMaandhanWithdrawalRefund from '@/components/articles/maandhan/PmKisanMaandhanWithdrawalRefund';
-import PmKisanMaandhanAutoDebitPooraSach from '@/components/articles/maandhan/PmKisanMaandhanAutoDebitPooraSach';
-import PmKisanMaandhanStatusCheckOnline from '@/components/articles/maandhan/PmKisanMaandhanStatusCheckOnline';
-
-// 3 naye articles (Total 9)
-import KisanPensionCardDownload from '@/components/articles/maandhan/kisan-pension-card-download';
-import FamilyPensionRules from '@/components/articles/maandhan/family-pension-rules';
-import BankAccountChange from '@/components/articles/maandhan/bank-account-change';
-
-export async function generateStaticParams() {
-  return MAANDHAN_ARTICLES.map((article) => ({
-    slug: article.slug,
-  }));
-}
-
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  const article = MAANDHAN_ARTICLES.find((a) => a.slug === slug);
-  
-  if (!article) return { title: 'Not Found' };
-
-  const url = `${SITE_URL}/maandhan/${slug}`;
-  const ogImage = article.ogImage ? `${SITE_URL}${article.ogImage}` : DEFAULT_OG_IMAGE;
-
-  return {
-    title: article.title,
-    description: article.description,
-    alternates: {
-      canonical: url,
-      languages: {
-        'hi-IN': url,
-        'x-default': url,
-      },
-    },
-    openGraph: {
-      title: article.title,
-      description: article.description,
-      type: 'article',
-      url,
-      siteName: SITE_NAME,
-      locale: 'hi_IN',
-      images: [{
-        url: ogImage,
-        width: 1200,
-        height: 630,
-        alt: article.title,
-        type: 'image/webp',
-      }],
-    },
-  };
-}
-
-export default async function MaandhanArticlePage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  const article = MAANDHAN_ARTICLES.find((a) => a.slug === slug);
-
-  if (!article) {
-    notFound();
-  }
-
-  switch (slug) {
-    // Original 6 articles
-    case 'pm-kisan-maandhan-registration-2026':
-      return <PmKisanMaandhanRegistration2026 article={article} />;
-    case 'pm-kisan-maandhan-eligibility-documents':
-      return <PmKisanMaandhanEligibilityDocuments article={article} />;
-    case 'pm-kisan-maandhan-pension-calculator':
-      return <PmKisanMaandhanPensionCalculator article={article} />;
-    case 'pm-kisan-maandhan-withdrawal-refund-rules':
-      return <PmKisanMaandhanWithdrawalRefund article={article} />;
-    case 'pm-kisan-maandhan-auto-debit-poora-sach':
-      return <PmKisanMaandhanAutoDebitPooraSach article={article} />;
-    case 'pm-kisan-maandhan-status-check-online':
-      return <PmKisanMaandhanStatusCheckOnline article={article} />;
-
-    // 3 naye articles (Total 9)
-    case 'pm-kisan-maandhan-pension-card-download':
-      return <KisanPensionCardDownload article={article} />;
-    case 'family-pension-rules':
-      return <FamilyPensionRules article={article} />;
-    case 'pmkmy-bank-account-change': // <-- Yahan slug exact array se match kiya gaya hai
-      return <BankAccountChange article={article} />;
-
-    default:
-      notFound();
-  }
-}
+export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
+  {
+    slug: 'pm-kisan-maandhan-registration-2026',
+    title: 'PM Kisan Maandhan Registration 2026',
+    description: 'PM Kisan Maandhan Yojana mein online registration ka complete process, eligibility, aur zaroori documents ki jankari.',
+    category: 'pension-scheme',
+    published: '2026-07-21T08:00:00+05:30',
+    modified: '2026-07-25T08:00:00+05:30',
+    readTime: '12 min read',
+    image: '/images/articles/maandhan/registration-hero.webp',
+    ogImage: '/images/articles/maandhan/registration-hero.webp',
+  },
+  {
+    slug: 'pm-kisan-maandhan-eligibility-documents',
+    title: 'PM Kisan Maandhan Eligibility & Documents',
+    description: 'Janie kaun se kisan is pension scheme ke liye eligible hain aur registration ke waqt kaun se documents zaroori hain.',
+    category: 'pension-scheme',
+    published: '2026-07-21T08:00:00+05:30',
+    modified: '2026-07-25T08:00:00+05:30',
+    readTime: '10 min read',
+    image: '/images/articles/maandhan/eligibility-check-farmer-documents.webp',
+    ogImage: '/images/articles/maandhan/eligibility-check-farmer-documents.webp',
+  },
+  {
+    slug: 'pm-kisan-maandhan-pension-calculator',
+    title: 'PM Kisan Maandhan Pension Calculator 2026',
+    description: 'Complete pension calculator guide. 18 se 40 saal ki umar ke beech join karne par monthly contribution aur ₹3000 pension ka hisaab.',
+    category: 'pension-scheme',
+    published: '2026-07-21T08:00:00+05:30',
+    modified: '2026-07-25T08:00:00+05:30',
+    readTime: '8 min read',
+    image: '/images/articles/maandhan/pension-calculator-hero.webp',
+    ogImage: '/images/articles/maandhan/pension-calculator-hero.webp',
+  },
+  {
+    slug: 'pm-kisan-maandhan-withdrawal-refund-rules',
+    title: 'PM Kisan Maandhan Withdrawal & Refund Rules',
+    description: 'PM Kisan Maandhan se exit karne ke rules, pension ka paisa family ko kaise milega, aur contribution refund hone ki puri sachai.',
+    category: 'pension-scheme',
+    published: '2026-07-21T08:00:00+05:30',
+    modified: '2026-07-25T08:00:00+05:30',
+    readTime: '9 min read',
+    image: '/images/articles/maandhan/withdrawal-decision-hero.webp',
+    ogImage: '/images/articles/maandhan/withdrawal-decision-hero.webp',
+  },
+  {
+    slug: 'pm-kisan-maandhan-auto-debit-poora-sach',
+    title: 'PM Kisan Maandhan Auto-Debit: Poora Sach',
+    description: 'PM Kisan ke ₹2000 mein se ₹55-200 kyun kat rahe hain? NACH auto-debit mandate, CSC pe sign kiya gaya form, aur contribution pay karne ka asli process samjhiye.',
+    category: 'pension-scheme',
+    published: '2026-07-24T08:00:00+05:30',
+    modified: '2026-07-25T08:00:00+05:30',
+    readTime: '11 min read',
+    image: '/images/articles/maandhan/auto-debit-confusion-hero.webp',
+    ogImage: '/images/articles/maandhan/auto-debit-confusion-hero.webp',
+  },
+  {
+    slug: 'pm-kisan-maandhan-status-check-online',
+    title: 'PM Kisan Maandhan Status Check Online',
+    description: 'PM Kisan Maandhan Yojana mein apna status kaise verify kijiye. Pension card download, passbook check, contribution history aur missed payment ka pura process.',
+    category: 'pension-scheme',
+    published: '2026-07-24T08:00:00+05:30',
+    modified: '2026-07-25T08:00:00+05:30',
+    readTime: '10 min read',
+    image: '/images/articles/maandhan/status-check-portal-hero.webp',
+    ogImage: '/images/articles/maandhan/status-check-portal-hero.webp',
+  },
+  {
+    slug: 'pm-kisan-maandhan-pension-card-download',
+    title: 'PM Kisan Maandhan Pension Card Download',
+    description: 'PMKMY pension card ya acknowledgement slip ghar baithe online kaise download karein. CSC, bank branch, aur common problems ka complete solution.',
+    category: 'pension-scheme',
+    published: '2026-07-25T08:00:00+05:30',
+    modified: '2026-07-28T08:00:00+05:30',
+    readTime: '10 min read',
+    image: '/images/articles/maandhan/pension-card-download-hero.webp',
+    ogImage: '/images/articles/maandhan/pension-card-download-hero.webp',
+  },
+  {
+    slug: 'family-pension-rules',
+    title: 'PM Kisan Maandhan Family Pension Rules',
+    description: 'PMKMY account holder ke dehant ke baad spouse ko pension kaise milegi, nomination rules, aur family pension claim karne ka pura process.',
+    category: 'pension-scheme',
+    published: '2026-07-26T08:00:00+05:30',
+    modified: '2026-07-28T08:00:00+05:30',
+    readTime: '9 min read',
+    image: '/images/articles/maandhan/family-pension-rules-hero.webp',
+    ogImage: '/images/articles/maandhan/family-pension-rules-hero.webp',
+  },
+  {
+    slug: 'pmkmy-bank-account-change',
+    title: 'PMKMY Bank Account Change Process',
+    description: 'PM Kisan Maandhan Yojana me registered bank account kaise badlein ya update karein. Documents, application format, aur common problems ka hal.',
+    category: 'pension-scheme',
+    published: '2026-07-27T08:00:00+05:30',
+    modified: '2026-07-28T08:00:00+05:30',
+    readTime: '11 min read',
+    image: '/images/articles/maandhan/bank-account-change-hero.webp',
+    ogImage: '/images/articles/maandhan/bank-account-change-hero.webp',
+  },
+];
