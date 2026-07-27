@@ -9,6 +9,15 @@ import PmKisanMaandhanWithdrawalRefund from '@/components/articles/maandhan/PmKi
 import PmKisanMaandhanAutoDebitPooraSach from '@/components/articles/maandhan/PmKisanMaandhanAutoDebitPooraSach';
 import PmKisanMaandhanStatusCheckOnline from '@/components/articles/maandhan/PmKisanMaandhanStatusCheckOnline';
 
+// 7 naye articles
+import FamilyPensionRules from '@/components/articles/maandhan/family-pension-rules';
+import BankAccountChange from '@/components/articles/maandhan/bank-account-change';
+import KisanPensionCardDownload from '@/components/articles/maandhan/kisan-pension-card-download';
+import GrievanceComplaintHelpline from '@/components/articles/maandhan/grievance-complaint-helpline';
+import ContributionChartAgeWise2026 from '@/components/articles/maandhan/contribution-chart-age-wise-2026';
+import AutoDebitFailRegularization from '@/components/articles/maandhan/auto-debit-fail-regularization';
+import VsAtalPensionYojana from '@/components/articles/maandhan/vs-atal-pension-yojana';
+
 export async function generateStaticParams() {
   return MAANDHAN_ARTICLES.map((article) => ({
     slug: article.slug,
@@ -73,6 +82,23 @@ export default async function MaandhanArticlePage({ params }: { params: Promise<
       return <PmKisanMaandhanAutoDebitPooraSach article={article} />;
     case 'pm-kisan-maandhan-status-check-online':
       return <PmKisanMaandhanStatusCheckOnline article={article} />;
+
+    // 7 naye articles
+    case 'family-pension-rules':
+      return <FamilyPensionRules article={article} />;
+    case 'bank-account-change':
+      return <BankAccountChange article={article} />;
+    case 'kisan-pension-card-download':
+      return <KisanPensionCardDownload article={article} />;
+    case 'grievance-complaint-helpline':
+      return <GrievanceComplaintHelpline article={article} />;
+    case 'contribution-chart-age-wise-2026':
+      return <ContributionChartAgeWise2026 article={article} />;
+    case 'auto-debit-fail-regularization':
+      return <AutoDebitFailRegularization article={article} />;
+    case 'vs-atal-pension-yojana':
+      return <VsAtalPensionYojana article={article} />;
+
     default:
       notFound();
   }
