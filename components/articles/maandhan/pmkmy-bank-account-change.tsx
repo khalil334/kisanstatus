@@ -37,7 +37,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Bank account change karne ka koi charge hai?',
-    a: 'Government ki taraf se koi charge nahi hai. Lekin agar aap CSC se service le rahe hain, to wo ₹20-50 ki service charge le sakte hain. Bank branch me usually ye service free hoti hai.',
+    a: 'Government ki taraf se koi charge nahi hai. Lekin agar aap CSC se service le rahe hain, to wo ₹20-50 ki standard service charge le sakte hain. Bank branch me usually ye service free hoti hai.',
   },
   {
     q: 'Kya bank account change karne se meri pension amount kam/zyada ho jayegi?',
@@ -53,7 +53,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Kya main online bank account change kar sakta hoon?',
-    a: 'Kuch states me online facility available hai, lekin zyadatar cases me physical verification zaroori hoti hai. Isliye bank branch ya CSC me jaakar application dena behtar hai.',
+    a: 'Kuch states me online facility available hai, lekin zyadatar cases me physical verification zaroori hoti hai. Isliye CSC ya bank branch me jaakar application dena behtar hai.',
   },
   {
     q: 'Bank account change ke baad purane account se paisa katna kab band hoga?',
@@ -76,7 +76,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
               '@type': 'Article',
               headline: 'PM Kisan Maandhan Yojana Me Bank Account Kaise Badlein? (Complete Guide 2026)',
               description: 'PMKMY me registered bank account update ya change karne ka step-by-step process — chahe purana band ho gaya ho, branch shift hui ho, ya IFSC badal gaya ho. Documents, application format, aur common problems ka hal sab yahan milega.',
-              image: 'https://kisanstatus.com/images/articles/maandhan/bank-account-change-hero.webp',
+              image: 'https://kisanstatus.com/images/articles/maandhan/bank-account-change/hero.webp',
               inLanguage: 'hi-IN',
               keywords: 'PMKMY bank account change, PM Kisan Maandhan bank update, PMKMY account details update, bank account change process',
               articleSection: 'Agriculture & Pension Schemes',
@@ -133,9 +133,10 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
 
       <div className="container-site max-w-3xl py-8">
 
+        {/* Image 1: Hero */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src="/images/articles/maandhan/bank-account-change-hero.webp"
+            src="/images/articles/maandhan/bank-account-change/hero.webp"
             alt="PM Kisan Maandhan Yojana me bank account change karne ka process"
             width={1200}
             height={630}
@@ -154,7 +155,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
             Short Answer: PMKMY Bank Account Change Kaise Karein?
           </h2>
           <p className="text-sm md:text-base text-gray-800 dark:text-gray-200 leading-relaxed font-medium">
-            PM Kisan Maandhan Yojana me bank account badalne ke liye aapko apne naye bank branch ya nazdeeki CSC center me jaakar ek written application deni hoti hai, jisme naye account ki details (account number, IFSC, Aadhaar link) aur purane pension card ki copy attach karni hoti hai. Process complete hone me 15-30 din lagte hain.
+            Official PMKMY guidelines ke mutabik, bank account badalne ke liye sabse recommended tarika hai apne nazdeeki CSC center me jaakar application dena (PMKMY number aur Aadhaar ke saath). Alternative ke roop me aap bank branch me bhi ja sakte hain. Process complete hone me 15-30 din lagte hain.
           </p>
         </div>
 
@@ -215,14 +216,11 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
             <SI n={5}><strong>Passport Size Photograph:</strong> 2 recent photographs.</SI>
             <SI n={6}><strong>Mobile Number:</strong> Wahi mobile number jo PMKMY me registered hai (OTP verification ke liye).</SI>
           </StepList>
-        </section>
 
-        <section className="mb-8">
-          <SH>Bank Account Change Karne Ka Step-by-Step Process</SH>
-          
+          {/* Image 2: Documents Checklist */}
           <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
             <Image
-              src="/images/articles/maandhan/documents-checklist.webp"
+              src="/images/articles/maandhan/bank-account-change/documents-checklist.webp"
               alt="PMKMY bank account change ke liye zaroori documents checklist"
               width={1000}
               height={560}
@@ -234,7 +232,11 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
               Documents pehle se ready rakhein taaki process beech me na atke
             </p>
           </div>
+        </section>
 
+        <section className="mb-8">
+          <SH>Bank Account Change Karne Ka Step-by-Step Process</SH>
+          
           <StepList>
             <SI n={1}><strong>Naye Bank Me Active Account Ensure Karein:</strong> Sabse pehle confirm karein ki aapke naye bank account me ye sab hai: Aadhaar linking (mandatory hai), Mobile number linking, Active status aur transactions allow karta ho, aur Valid IFSC code.</SI>
             <SI n={2}><strong>Application Form Likhein:</strong> Ek simple application likhein. Neeche ek sample format diya gaya hai jo aap use kar sakte hain:
@@ -258,48 +260,65 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
                 <p><strong>[Aapka Naam]<br/>[Signature]<br/>[Date]<br/>[Mobile Number]</strong></p>
               </div>
             </SI>
-            <SI n={3}><strong>Bank Branch Ya CSC Center Me Visit Karein:</strong> Application aur documents ke sath aap do jagah ja sakte hain: <strong>Option A (Recommended):</strong> Apne naye bank branch me — Manager directly verification kar sakta hai. <strong>Option B:</strong> Nazdeeki Common Service Centre (CSC) — VLE operator aapki application process karega. <em>Meri Salah:</em> Bank branch me jaana zyada effective hai kyunki wo directly system me update kar sakte hain. CSC wale kabhi-kabhi extra charge maang lete hain.</SI>
-            <SI n={4}><strong>Verification Process:</strong> Bank ya CSC wale ye verification karenge: Aadhaar se biometric verification (fingerprint/iris), Mobile number par OTP bhejkar confirm karenge, Naye bank account ki details cross-check karenge, aur Purana PMKMY account verify karenge.</SI>
-            <SI n={5}><strong>Acknowledgement Slip Lein:</strong> Application submit karne ke baad ek acknowledgement slip zaroor lein jisme ye details hon: Application reference number, Submission date, aur Bank/CSC ka stamp aur signature. Is slip ko safe rakhein — status check karne me kaam aayegi.</SI>
+            <SI n={3}><strong>CSC Center Ya Bank Branch Me Visit Karein:</strong> Official PMKMY guidelines ke mutabik, bank details update karne ke liye sabse standard aur recommended tarika hai apne nazdeeki Common Service Centre (CSC) ya VLE (Village Level Entrepreneur) ke paas jaana. <strong>Option A (Recommended - Official Channel):</strong> Nazdeeki CSC center par jaayein. Apna PMKMY pension account number, Aadhaar card, aur naye bank ki passbook ki copy le jaayein. VLE operator aapki biometric verification karke seedha PMKMY portal par request raise karega. (Note: CSC par standard nominal service charge ₹20-₹50 lag sakta hai, jo ki official hai). <strong>Option B (Alternative):</strong> Agar CSC accessible nahi hai, to aap apne naye bank branch me bhi ja sakte hain, lekin wahan se bhi request ultimately CSC/portal ke through hi process hoti hai, isliye pehle bank manager se confirm karein ki wo PMKMY update directly kar sakte hain ya nahi.</SI>
+            <SI n={4}><strong>Verification Process:</strong> CSC ya Bank wale ye verification karenge: Aadhaar se biometric verification (fingerprint/iris), Mobile number par OTP bhejkar confirm karenge, Naye bank account ki details cross-check karenge, aur Purana PMKMY account verify karenge.</SI>
+            <SI n={5}><strong>Acknowledgement Slip Lein:</strong> Application submit karne ke baad ek acknowledgement slip zaroor lein jisme ye details hon: Application reference number, Submission date, aur CSC/Bank ka stamp aur signature. Is slip ko safe rakhein — status check karne me kaam aayegi.</SI>
             <SI n={6}><strong>Confirmation Ka Wait Karein:</strong> Bank account change process complete hone me time lagta hai: Minimum 7-10 working days, Maximum 30 working days, Average 15-20 din. Confirmation SMS aapke registered mobile par aayega jab account change ho jayega. Samay state aur bank ke hisab se thoda alag ho sakta hai.</SI>
           </StepList>
+
+          {/* Image 3: CSC Visit Process */}
+          <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+            <Image
+              src="/images/articles/maandhan/bank-account-change/csc-visit-process.webp"
+              alt="CSC center par bank account change karne ka process"
+              width={1000}
+              height={560}
+              className="w-full object-cover"
+              loading="lazy"
+              sizes="(max-width: 768px) 100vw, 768px"
+            />
+            <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+              CSC center official recommended channel hai bank details update karne ke liye
+            </p>
+          </div>
         </section>
 
         <section className="mb-8 bg-gray-50 dark:bg-gray-900/50 p-6 rounded-xl">
           <SH>Online Ya Offline — Kaunsa Tarika Behtar Hai?</SH>
           <div className="grid md:grid-cols-2 gap-6 mt-4">
             <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow border border-gray-100 dark:border-gray-700">
-              <h3 className="text-lg font-bold text-blue-600 dark:text-blue-400 mb-3">Offline Process (Recommended)</h3>
+              <h3 className="text-lg font-bold text-green-600 dark:text-green-400 mb-3">Offline via CSC (Official & Recommended)</h3>
               <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-                <li className="flex items-start"><span className="text-green-600 mr-2">✓</span><span>Direct verification hoti hai</span></li>
-                <li className="flex items-start"><span className="text-green-600 mr-2">✓</span><span>Documents physically check hote hain</span></li>
-                <li className="flex items-start"><span className="text-green-600 mr-2">✓</span><span>Instant acknowledgement milta hai</span></li>
-                <li className="flex items-start"><span className="text-green-600 mr-2">✓</span><span>Query turant solve ho jati hai</span></li>
-                <li className="flex items-start"><span className="text-red-600 mr-2">✗</span><span>Bank/CSC jaana padta hai</span></li>
+                <li className="flex items-start"><span className="text-green-600 mr-2">✓</span><span>PMKMY guidelines ka primary official channel hai</span></li>
+                <li className="flex items-start"><span className="text-green-600 mr-2">✓</span><span>VLE seedha portal par biometric verification karke update karta hai</span></li>
+                <li className="flex items-start"><span className="text-green-600 mr-2">✓</span><span>Instant acknowledgement slip mil jati hai</span></li>
+                <li className="flex items-start"><span className="text-green-600 mr-2">✓</span><span>Standard nominal charge (₹20-₹50) hi lagta hai</span></li>
+                <li className="flex items-start"><span className="text-red-600 mr-2">✗</span><span>CSC center tak physical travel karna padta hai</span></li>
               </ul>
             </div>
             <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow border border-gray-100 dark:border-gray-700">
-              <h3 className="text-lg font-bold text-orange-600 dark:text-orange-400 mb-3">Online Process (Limited)</h3>
+              <h3 className="text-lg font-bold text-orange-600 dark:text-orange-400 mb-3">Bank Branch Visit (Alternative)</h3>
               <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-                <li className="flex items-start"><span className="text-green-600 mr-2">✓</span><span>Ghar baithe apply kar sakte hain</span></li>
-                <li className="flex items-start"><span className="text-green-600 mr-2">✓</span><span>Time bachta hai</span></li>
-                <li className="flex items-start"><span className="text-red-600 mr-2">✗</span><span>Har state me available nahi</span></li>
-                <li className="flex items-start"><span className="text-red-600 mr-2">✗</span><span>Technical issues aa sakte hain</span></li>
-                <li className="flex items-start"><span className="text-red-600 mr-2">✗</span><span>Physical verification phir bhi chahiye</span></li>
+                <li className="flex items-start"><span className="text-green-600 mr-2">✓</span><span>Agar CSC door ho, to nearby branch useful ho sakti hai</span></li>
+                <li className="flex items-start"><span className="text-green-600 mr-2">✓</span><span>Bank staff aapki passbook aur Aadhaar cross-check kar sakte hain</span></li>
+                <li className="flex items-start"><span className="text-red-600 mr-2">✗</span><span>Kabhi-kabhi bank staff ke paas PMKMY portal ka direct access nahi hota</span></li>
+                <li className="flex items-start"><span className="text-red-600 mr-2">✗</span><span>Request phir bhi CSC/portal ke through hi forward karni padti hai</span></li>
+                <li className="flex items-start"><span className="text-red-600 mr-2">✗</span><span>Process thoda lamba ya confusing ho sakta hai</span></li>
               </ul>
             </div>
           </div>
           <WB>
-            <strong>Hamari Salah:</strong> Pehli baar bank account change kar rahe hain to offline (bank branch) jaana behtar hai. Ek baar process samajh aa jaye to agle baar online try kar sakte hain.
+            <strong>Hamari Salah:</strong> Official PMKMY process ke mutabik, CSC/VLE ke through hi bank details update karna sabse reliable aur recommended tarika hai. Bank branch sirf tab visit karein jab CSC accessible na ho, aur pehle manager se confirm karein ki wo PMKMY update support karte hain.
           </WB>
         </section>
 
         <section className="mb-8">
           <SH>Bank Account Change Me Aane Wali Common Problems Aur Solutions</SH>
           
+          {/* Image 4: Common Problems Infographic */}
           <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
             <Image
-              src="/images/articles/maandhan/common-problems.webp"
+              src="/images/articles/maandhan/bank-account-change/common-problems.webp"
               alt="PMKMY bank account change me aane wali common problems"
               width={1000}
               height={560}
@@ -322,7 +341,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
             <div className="border border-orange-200 dark:border-orange-800 rounded-lg p-5 bg-orange-50 dark:bg-orange-900/20">
               <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">Problem 2: OTP Nahi Aa Raha</h3>
               <p className="text-sm text-[var(--color-text-muted)] mb-2"><strong>Scenario:</strong> Aapka registered mobile number badal gaya hai, aur naye number par OTP nahi aa raha.</p>
-              <p className="text-sm text-[var(--color-text-muted)]"><strong>Solution:</strong> Pehle mobile number update karwana padega PMKMY portal par. Iske liye bank branch me jaakar mobile number change application dein. Mobile number update hone ke baad hi bank account change kar payenge.</p>
+              <p className="text-sm text-[var(--color-text-muted)]"><strong>Solution:</strong> Pehle mobile number update karwana padega PMKMY portal par. Iske liye CSC ya bank branch me jaakar mobile number change application dein. Mobile number update hone ke baad hi bank account change kar payenge.</p>
             </div>
 
             <div className="border border-yellow-200 dark:border-yellow-800 rounded-lg p-5 bg-yellow-50 dark:bg-yellow-900/20">
@@ -355,7 +374,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
                 <li>Dono account holders ka NOC (No Objection Certificate) chahiye</li>
                 <li>Individual account ki passbook</li>
                 <li>Joint account closure proof (agar close kar rahe hain)</li>
-                <li>Bank manager ko written application</li>
+                <li>CSC ya bank manager ko written application</li>
               </ul>
             </div>
 
@@ -365,7 +384,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
               <ul className="list-disc pl-6 text-sm text-[var(--color-text-muted)] space-y-1">
                 <li>Naye IFSC code aur account number ki updated passbook lein</li>
                 <li>Bank se merger certificate lein (agar available ho)</li>
-                <li>PMKMY portal par update karein ya bank branch me application dein</li>
+                <li>PMKMY portal par update karne ke liye CSC me jaayein ya bank branch me application dein</li>
                 <li>Kuch cases me automatic update bhi ho jata hai — status check karein</li>
               </ul>
             </div>
@@ -382,6 +401,22 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
               </ul>
             </div>
           </div>
+
+          {/* Image 5: Success Confirmation */}
+          <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+            <Image
+              src="/images/articles/maandhan/bank-account-change/success-confirmation.webp"
+              alt="Bank account change successful confirmation SMS aur updated passbook"
+              width={1000}
+              height={560}
+              className="w-full object-cover"
+              loading="lazy"
+              sizes="(max-width: 768px) 100vw, 768px"
+            />
+            <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+              Confirmation SMS aane ke baad hi purana account band karein
+            </p>
+          </div>
         </section>
 
         <section className="mb-8">
@@ -391,12 +426,12 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
           </p>
           <div className="grid md:grid-cols-3 gap-4">
             <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-100 dark:border-blue-800">
-              <h3 className="font-bold text-gray-900 dark:text-gray-100 mb-2">📱 SMS Se</h3>
+              <h3 className="font-bold text-gray-900 dark:text-gray-100 mb-2"> SMS Se</h3>
               <p className="text-xs text-[var(--color-text-muted)]">Registered mobile par SMS aayega jab account change complete hoga. "PMKMY BANK UPDATED" jaisa message milega.</p>
             </div>
             <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border border-green-100 dark:border-green-800">
-              <h3 className="font-bold text-gray-900 dark:text-gray-100 mb-2">🏦 Bank Visit</h3>
-              <p className="text-xs text-[var(--color-text-muted)]">Apne naye bank branch me jaakar puchhein ki PMKMY account update ho gaya hai ya nahi.</p>
+              <h3 className="font-bold text-gray-900 dark:text-gray-100 mb-2"> Bank/CSC Visit</h3>
+              <p className="text-xs text-[var(--color-text-muted)]">Apne nazdeeki CSC ya naye bank branch me jaakar puchhein ki PMKMY account update ho gaya hai ya nahi.</p>
             </div>
             <div className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg border border-yellow-100 dark:border-yellow-800">
               <h3 className="font-bold text-gray-900 dark:text-gray-100 mb-2">💻 Online Portal</h3>
@@ -449,7 +484,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Ek Baat Yaad Rakhein</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Bank account change karna shuru me thoda complicated lag sakta hai, lekin agar aap sahi documents aur process follow karein, to ye bahut aasan hai. Ye ek baar ka process hai, aur uske baad aapki pension life-time naye account me aayegi. Agar aapko koi confusion hai ya process me koi dikkat aa rahi hai, to apne nazdeeki bank branch ya CSC par zaroor jaayein.
+            Bank account change karna shuru me thoda complicated lag sakta hai, lekin agar aap sahi documents aur official CSC process follow karein, to ye bahut aasan hai. Ye ek baar ka process hai, aur uske baad aapki pension life-time naye account me aayegi. Agar aapko koi confusion hai ya process me koi dikkat aa rahi hai, to apne nazdeeki CSC ya bank branch par zaroor jaayein.
           </p>
         </div>
 
