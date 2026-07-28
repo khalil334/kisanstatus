@@ -154,7 +154,7 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
           </p>
           
           <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-r-xl">
-            <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-3">📊 Case Study #1: Savitri Devi (Jhunjhunu, Rajasthan) - Udaharan ke liye</h3>
+            <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-3">📊 Ek Aam Scenario: Bina Card Ke Kya Hota Hai</h3>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-3">
               Udaharan ke taur par, maan lijiye Rajasthan ke Jhunjhunu me Savitri devi ke pati ka 2023 me dehant ho gaya. Scheme ke rules ke mutabiq, spouse ko 50% pension jari rakhne ka adhikar hota hai. Lekin jab wo bank gayi, to manager ne kaha, "pehle husband ka pension proof aur account details dikhao." Savitri devi ke paas kuch nahi tha. Sirf us ek kagaz ki kami ki wajah se unhe 6 mahine ki bhaag-daud karni padi, CSC ke chakkar kaatne pade, aur tab jaakar claim process shuru hua.
             </p>
@@ -164,9 +164,9 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
           </div>
 
           <div className="my-6 p-5 bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500 rounded-r-xl">
-            <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-3">✅ Success Story: Ramesh Chand (Meerut, UP) - Ek Kalpanik Sthiti</h3>
+            <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-3">✅ Doosra Scenario: Card Pehle Se Ready Ho To Kya Hota Hai</h3>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-              Ek kalpanik sthiti lein — maan lijiye Ramesh Chand ne 2020 me pension card download karke laminated karwa liya tha. Jab 2024 me unki tabiyat kharab hui aur wo 60 saal ke ho gaye, to unhone turant bank me card dikhaya aur 15 din ke andar unka pension shuru ho gaya. Unka kehna hai, "Ek kagaz ne mera budhaapa surakshit kar diya."
+              Ek kalpanik sthiti lein — maan lijiye Ramesh Chand ne 2020 me pension card download karke laminated karwa liya tha. Jab 2024 me unki tabiyat kharab hui aur wo 60 saal ke ho gaye, to unhone turant bank me card dikhaya aur 15 din ke andar unka pension shuru ho gaya. Is tarah ek kagaz unke budhaape ko surakshit kar sakta tha.
             </p>
           </div>
 
@@ -418,7 +418,7 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
           { href: '/maandhan/pm-kisan-maandhan-status-check-online', l: '🔍 Status Check' },
-          { href: '/maandhan/pmkmy-bank-account-change', l: '🏦 Bank Change' },
+          { href: '/maandhan/pmkmy-bank-account-change', l: ' Bank Change' },
           { href: '/maandhan/pm-kisan-maandhan-eligibility-documents', l: '📄 Eligibility' },
         ]} />
         <Disclaimer />
