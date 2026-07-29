@@ -13,6 +13,7 @@ import KisanPensionCardDownload from '@/components/articles/maandhan/kisan-pensi
 import FamilyPensionRules from '@/components/articles/maandhan/family-pension-rules';
 import PmkmyBankAccountChange from '@/components/articles/maandhan/pmkmy-bank-account-change';
 import PmkmyGrievanceComplaintHelpline from '@/components/articles/maandhan/pmkmy-grievance-complaint-helpline';
+import AutoDebitFailRegularization from '@/components/articles/maandhan/AutoDebitFailRegularization';
 
 export async function generateStaticParams() {
   return MAANDHAN_ARTICLES.map((article) => ({
@@ -86,6 +87,8 @@ export default async function MaandhanArticlePage({ params }: { params: Promise<
       return <PmkmyBankAccountChange article={article} />;
     case 'pmkmy-grievance-complaint-helpline':
       return <PmkmyGrievanceComplaintHelpline article={article} />;
+    case 'auto-debit-fail-hone-par-regularization-kaise-karein':
+      return <AutoDebitFailRegularization article={article} />;
     default:
       notFound();
   }
