@@ -76,7 +76,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
               '@type': 'Article',
               headline: 'PM Kisan Maandhan Helpline Number 2026 – Verified Contact & Grievance Guide',
               description: 'PM Kisan Maandhan Yojana ka official helpline number 18002676888, 14434. Grievance email scpms@licindia.com. Online complaint process, CSC helpdesk 14599, aur verified contact details.',
-              image: 'https://kisanstatus.com/images/articles/maandhan/grievance-helpline-hero.webp',
+              image: 'https://kisanstatus.com/images/articles/maandhan/pmkmy-grievance-complaint-helpline/grievance-helpline-hero.webp',
               inLanguage: 'hi-IN',
               keywords: 'PMKMY helpline number 18002676888, PM Kisan Maandhan complaint, scpms@licindia.com, grievance redressal online, CSC helpdesk 14599, LIC pension complaint',
               articleSection: 'Agriculture & Pension Schemes',
@@ -139,7 +139,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
 
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src="/images/articles/maandhan/grievance-helpline-hero.webp"
+            src="/images/articles/maandhan/pmkmy-grievance-complaint-helpline/grievance-helpline-hero.webp"
             alt="Farmer calling PMKMY helpline number 18002676888 for pension complaint"
             width={1200}
             height={630}
@@ -157,7 +157,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">✅ VERIFIED OFFICIAL CONTACTS (2026)</h3>
           <div className="space-y-3 text-sm">
             <div className="bg-white dark:bg-gray-800 p-4 rounded-lg">
-              <p className="font-bold text-gray-900 dark:text-white mb-2">📞 Helpline Numbers:</p>
+              <p className="font-bold text-gray-900 dark:text-white mb-2"> Helpline Numbers:</p>
               <ul className="space-y-1 text-[var(--color-text-muted)]">
                 <li><strong>18002676888</strong> (Toll-Free) — PMKMY Official Portal</li>
                 <li><strong>14434</strong> (Toll-Free) — Ministry of Labour & Employment</li>
@@ -166,7 +166,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
               </ul>
             </div>
             <div className="bg-white dark:bg-gray-800 p-4 rounded-lg">
-              <p className="font-bold text-gray-900 dark:text-white mb-2">📧 Official Email Addresses:</p>
+              <p className="font-bold text-gray-900 dark:text-white mb-2"> Official Email Addresses:</p>
               <ul className="space-y-1 text-[var(--color-text-muted)]">
                 <li><strong>scpms@licindia.com</strong> — PMKMY specific grievances</li>
                 <li><strong>co_complaints@licindia.com</strong> — General LIC complaints</li>
@@ -273,7 +273,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
 
           <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
             <Image
-              src="/images/articles/maandhan/online-grievance-portal.webp"
+              src="/images/articles/maandhan/pmkmy-grievance-complaint-helpline/online-grievance-portal.webp"
               alt="PMKMY online grievance portal form with complaint type dropdown"
               width={1000}
               height={560}
@@ -311,7 +311,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
             </div>
 
             <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg border-2 border-red-500">
-              <h4 className="font-bold text-red-900 dark:text-red-300 mb-2"> CSC Helpdesk Tab Na Call Karein Jab:</h4>
+              <h4 className="font-bold text-red-900 dark:text-red-300 mb-2">❌ CSC Helpdesk Tab Na Call Karein Jab:</h4>
               <ul className="text-xs text-[var(--color-text-muted)] space-y-1 list-disc pl-5">
                 <li>Payment issue ho (ye bank/LIC ka matter hai)</li>
                 <li>Pension amount kam mil rahi ho</li>
@@ -323,7 +323,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
 
           <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
             <Image
-              src="/images/articles/maandhan/csc-center-visit.webp"
+              src="/images/articles/maandhan/pmkmy-grievance-complaint-helpline/csc-center-visit.webp"
               alt="Farmer visiting CSC center for PM Kisan Maandhan enrollment correction"
               width={1000}
               height={630}
@@ -399,7 +399,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
 
           <div className="grid md:grid-cols-3 gap-4 mb-6">
             <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-100 dark:border-blue-800">
-              <h3 className="font-bold text-gray-900 dark:text-gray-100 mb-2">📱 Online Portal</h3>
+              <h3 className="font-bold text-gray-900 dark:text-gray-100 mb-2"> Online Portal</h3>
               <p className="text-xs text-[var(--color-text-muted)] mb-2">PMKMY portal par "Track Complaint" section mein reference number daalein.</p>
               <p className="text-xs text-green-700 dark:text-green-300 font-medium">Sabse fast aur reliable</p>
             </div>
@@ -409,7 +409,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
               <p className="text-xs text-amber-700 dark:text-amber-300 font-medium">Lines busy ho sakti hain</p>
             </div>
             <div className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg border border-yellow-100 dark:border-yellow-800">
-              <h3 className="font-bold text-gray-900 dark:text-gray-100 mb-2"> Email Reply</h3>
+              <h3 className="font-bold text-gray-900 dark:text-gray-100 mb-2">📧 Email Reply</h3>
               <p className="text-xs text-[var(--color-text-muted)] mb-2">scpms@licindia.com par reply check karein.</p>
               <p className="text-xs text-blue-700 dark:text-blue-300 font-medium">7-10 working days lag sakte hain</p>
             </div>
@@ -417,7 +417,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
 
           <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
             <Image
-              src="/images/articles/maandhan/grievance-status-tracking.webp"
+              src="/images/articles/maandhan/pmkmy-grievance-complaint-helpline/grievance-status-tracking.webp"
               alt="PMKMY grievance status tracking showing resolved complaint on mobile"
               width={800}
               height={1000}
@@ -535,7 +535,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
         </section>
 
         <div className="my-8 p-6 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-400 dark:border-blue-700 rounded-2xl">
-          <h3 className="font-black text-blue-800 dark:text-blue-300 text-lg mb-2">📝 Article Verification Info</h3>
+          <h3 className="font-black text-blue-800 dark:text-blue-300 text-lg mb-2"> Article Verification Info</h3>
           <p className="text-xs text-[var(--color-text-muted)]">
             <strong>Last Verified:</strong> {fmtDate(MODIFIED)}<br />
             <strong>Sources:</strong> PMKMY Official Portal (pmkmy.gov.in), Ministry of Labour & Employment (maandhan.in), 
@@ -546,7 +546,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
 
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/maandhan/pm-kisan-maandhan-status-check-online', l: '🔍 Status Check' },
+          { href: '/maandhan/pm-kisan-maandhan-status-check-online', l: ' Status Check' },
           { href: '/maandhan/pmkmy-bank-account-change', l: '🏦 Bank Change' },
           { href: '/maandhan/pm-kisan-maandhan-pension-card-download', l: '📄 Pension Card' },
         ]} />
