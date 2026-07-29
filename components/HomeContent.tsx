@@ -250,7 +250,9 @@ function Breadcrumb() {
           </li>
           <li aria-hidden="true">/</li>
           <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
-            <span className="text-gray-700 dark:text-gray-300 font-medium" itemProp="name">PM Kisan Status & Guides</span>
+            <span itemProp="item" content={SITE_URL}>
+              <span className="text-gray-700 dark:text-gray-300 font-medium" itemProp="name">PM Kisan Status & Guides</span>
+            </span>
             <meta itemProp="position" content="2" />
           </li>
         </ol>
