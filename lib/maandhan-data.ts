@@ -121,4 +121,15 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
     image: '/images/articles/maandhan/grievance-helpline-hero.webp',
     ogImage: '/images/articles/maandhan/grievance-helpline-hero.webp',
   },
+  {
+    slug: 'auto-debit-fail-hone-par-regularization-kaise-karein',
+    title: 'Auto Debit Fail Hone Par Regularization Kaise Karein',
+    description: 'Agar aapka EMI ya SIP auto-debit fail ho gaya hai, toh ghabrayein nahi. Janiye ise turant regularize karne ka aasan tarika, bank charges bachane ke upay aur CIBIL score ko safe rakhne ke tips.',
+    category: 'pension-scheme',
+    published: '2026-07-29T08:00:00+05:30',
+    modified: '2026-07-29T08:00:00+05:30',
+    readTime: '10 min read',
+    image: '/images/articles/maandhan/auto-debit-fail-regularization-kaise-kare-1.jpg',
+    ogImage: '/images/articles/maandhan/auto-debit-fail-regularization-kaise-kare-1.jpg',
+  },
 ];
