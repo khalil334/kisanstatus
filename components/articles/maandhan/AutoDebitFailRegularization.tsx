@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Script from 'next/script';
 import { SI, StepList, IB, WB, DB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
+import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
 
 const PUBLISHED = '2026-07-29T08:00:00+05:30';
 const MODIFIED = '2026-07-29T08:00:00+05:30';
@@ -56,7 +57,7 @@ const RELATED_CARDS = [
   },
 ];
 
-export default function AutoDebitFailRegularization() {
+export default function AutoDebitFailRegularization({ article }: { article: MaandhanArticleMeta }) {
   return (
     <>
       <Script id="auto-debit-schema" type="application/ld+json" strategy="afterInteractive">
@@ -67,7 +68,7 @@ export default function AutoDebitFailRegularization() {
               '@type': 'Article',
               headline: 'Auto Debit Fail Hone Par Regularization Kaise Karein: Complete Guide 2026',
               description: 'Agar aapka EMI ya SIP auto-debit fail ho gaya hai, toh ghabrayein nahi. Janiye ise turant regularize karne ka aasan tarika, bank charges bachane ke upay aur CIBIL score ko safe rakhne ke tips.',
-              image: 'https://kisanstatus.com/images/maandhan/auto-debit-fail-regularization-kaise-kare-1.jpg',
+              image: 'https://kisanstatus.com/images/articles/maandhan/auto-debit-fail-regularization-kaise-kare-1.jpg',
               inLanguage: 'hi-IN',
               keywords: 'auto debit fail hone par regularization kaise kare, EMI bounce solution, NACH mandate fail, CIBIL score impact, bank charges waiver',
               articleSection: 'Banking & Finance',
@@ -102,7 +103,6 @@ export default function AutoDebitFailRegularization() {
         })}
       </Script>
 
-      {/* Hero Banner */}
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
           <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center" aria-label="Breadcrumb">
@@ -127,13 +127,11 @@ export default function AutoDebitFailRegularization() {
         </div>
       </div>
 
-      {/* Main Content Container */}
       <div className="container-site max-w-3xl py-8">
         
-        {/* Hero Image */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src="/images/maandhan/auto-debit-fail-regularization-kaise-kare-1.jpg"
+            src="/images/articles/maandhan/auto-debit-fail-regularization-kaise-kare-1.jpg"
             alt="Auto debit fail hone par regularization kaise kare guide"
             width={1200}
             height={630}
@@ -147,7 +145,6 @@ export default function AutoDebitFailRegularization() {
           </p>
         </div>
 
-        {/* Quick Summary Box */}
         <div className="my-6 p-5 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 rounded-xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">✅ AGAR AUTO-DEBIT FAIL HO GAYA HAI, TOH YE 6 STEPS TURANT LEIN</h3>
           <div className="space-y-3 text-sm text-[var(--color-text-muted)]">
@@ -160,7 +157,6 @@ export default function AutoDebitFailRegularization() {
           </div>
         </div>
 
-        {/* Section 1: Reasons */}
         <section className="mb-8">
           <SH>Auto-Debit Fail Hone Ke 5 Aam Karan (Kyun Hota Hai?)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -182,7 +178,6 @@ export default function AutoDebitFailRegularization() {
           </div>
         </section>
 
-        {/* Section 2: Step-by-Step */}
         <section className="mb-8">
           <SH>Auto Debit Fail Hone Par Regularization Kaise Karein (Step-by-Step)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -202,7 +197,6 @@ export default function AutoDebitFailRegularization() {
           </IB>
         </section>
 
-        {/* Section 3: CIBIL Impact */}
         <section className="mb-8">
           <SH>CIBIL Score Par Iska Kya Asar Padta Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -225,7 +219,7 @@ export default function AutoDebitFailRegularization() {
           </div>
 
           <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-5 mb-4">
-            <h4 className="font-bold text-blue-900 dark:text-blue-300 mb-3">📊 Credit Score Impact Timeline</h4>
+            <h4 className="font-bold text-blue-900 dark:text-blue-300 mb-3"> Credit Score Impact Timeline</h4>
             <div className="space-y-3 text-sm">
               <div className="flex items-center gap-3">
                 <div className="w-3 h-3 rounded-full bg-green-500 shrink-0" />
@@ -255,7 +249,6 @@ export default function AutoDebitFailRegularization() {
           </p>
         </section>
 
-        {/* Section 4: Charges Waiver */}
         <section className="mb-8">
           <SH>Bank Bounce Charges Waive (Maaf) Karwane Ke Practical Tips</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -310,7 +303,7 @@ export default function AutoDebitFailRegularization() {
                   </tr>
                   <tr>
                     <td className="py-2 pr-4">NBFCs (Bajaj, Tata Capital)</td>
-                    <td className="py-2 pr-4">₹500 – ₹1,000</td>
+                    <td className="py-2 pr-4">500 – ₹1,000</td>
                     <td className="py-2">₹300 – ₹700</td>
                   </tr>
                 </tbody>
@@ -319,7 +312,6 @@ export default function AutoDebitFailRegularization() {
           </div>
         </section>
 
-        {/* Section 5: RBI Guidelines */}
         <section className="mb-8">
           <SH>RBI Ke Auto-Debit Rules Aur Aapke Rights</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -350,7 +342,6 @@ export default function AutoDebitFailRegularization() {
           </WB>
         </section>
 
-        {/* Section 6: Common Mistakes */}
         <section className="mb-8">
           <SH>Common Mistakes — In Galtiyon Se Bachein</SH>
           <div className="space-y-3">
@@ -378,7 +369,6 @@ export default function AutoDebitFailRegularization() {
           </div>
         </section>
 
-        {/* FAQs Section */}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Aksar Poochhe Jaane Wale Sawal (FAQs)
@@ -386,7 +376,6 @@ export default function AutoDebitFailRegularization() {
           <FAQBlock faqs={FAQS_DATA} caption="Auto Debit Regularization — Sawal Jawab" />
         </section>
 
-        {/* Related Articles */}
         <section className="my-10">
           <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Related Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -411,7 +400,6 @@ export default function AutoDebitFailRegularization() {
           </div>
         </section>
 
-        {/* Verification Info */}
         <div className="my-8 p-6 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-400 dark:border-blue-700 rounded-2xl">
           <h3 className="font-black text-blue-800 dark:text-blue-300 text-lg mb-2">Article Verification Info</h3>
           <p className="text-xs text-[var(--color-text-muted)]">
@@ -421,7 +409,6 @@ export default function AutoDebitFailRegularization() {
           </p>
         </div>
 
-        {/* Footer Components */}
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
           { href: '/maandhan/cibil-score-kaise-badaye', l: '📈 CIBIL Score' },
