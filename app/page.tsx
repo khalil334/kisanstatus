@@ -136,9 +136,6 @@ export default function HomePage() {
               width: 1200,
               height: 630,
             },
-            breadcrumb: {
-              '@id': `${SITE_URL}#breadcrumb`,
-            },
             mainEntity: {
               '@type': 'ItemList',
               itemListElement: [
