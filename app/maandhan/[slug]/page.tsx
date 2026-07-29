@@ -8,7 +8,6 @@ import PmKisanMaandhanPensionCalculator from '@/components/articles/maandhan/PmK
 import PmKisanMaandhanWithdrawalRefund from '@/components/articles/maandhan/PmKisanMaandhanWithdrawalRefund';
 import PmKisanMaandhanAutoDebitPooraSach from '@/components/articles/maandhan/PmKisanMaandhanAutoDebitPooraSach';
 import PmKisanMaandhanStatusCheckOnline from '@/components/articles/maandhan/PmKisanMaandhanStatusCheckOnline';
-
 import KisanPensionCardDownload from '@/components/articles/maandhan/kisan-pension-card-download';
 import FamilyPensionRules from '@/components/articles/maandhan/family-pension-rules';
 import PmkmyBankAccountChange from '@/components/articles/maandhan/pmkmy-bank-account-change';
