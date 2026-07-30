@@ -132,4 +132,15 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
     image: '/images/articles/maandhan/auto-debit-fail-hone-par-regularization-kaise-karein/kisan-emi-tension.webp',
     ogImage: '/images/articles/maandhan/auto-debit-fail-hone-par-regularization-kaise-karein/kisan-emi-tension.webp',
   },
+  {
+    slug: 'pm-kisan-maandhan-age-wise-contribution-chart-2026',
+    title: 'PM Kisan Maandhan Yojana: Age-Wise Monthly Contribution Chart 2026',
+    description: 'PM-KMY mein 18 se 40 saal tak har umar ka exact monthly contribution, government co-contribution, registration process, aur pension rules — official sources se verify karke.',
+    category: 'pension-scheme',
+    published: '2026-07-30T10:00:00+05:30',
+    modified: '2026-07-30T18:00:00+05:30',
+    readTime: '12 min read',
+    image: '/images/articles/maandhan/MaandhanContributionGuide/hero.webp',
+    ogImage: '/images/articles/maandhan/MaandhanContributionGuide/hero.webp',
+  },
 ];
