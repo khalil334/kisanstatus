@@ -14,6 +14,7 @@ import PmkmyBankAccountChange from '@/components/articles/maandhan/pmkmy-bank-ac
 import PmkmyGrievanceComplaintHelpline from '@/components/articles/maandhan/pmkmy-grievance-complaint-helpline';
 import AutoDebitFailRegularization from '@/components/articles/maandhan/AutoDebitFailRegularization';
 import MaandhanContributionGuide from '@/components/articles/maandhan/MaandhanContributionGuide';
+import PmkmyVsApyComparison2026 from '@/components/articles/maandhan/PmkmyVsApyComparison2026';
 
 export async function generateStaticParams() {
   return MAANDHAN_ARTICLES.map((article) => ({
@@ -91,6 +92,8 @@ export default async function MaandhanArticlePage({ params }: { params: Promise<
       return <AutoDebitFailRegularization article={article} />;
     case 'pm-kisan-maandhan-age-wise-contribution-chart-2026':
       return <MaandhanContributionGuide article={article} />;
+    case 'pm-kisan-maandhan-vs-atal-pension-yojana':
+      return <PmkmyVsApyComparison2026 article={article} />;
     default:
       notFound();
   }
