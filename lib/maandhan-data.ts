@@ -96,8 +96,8 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
     published: '2026-07-26T08:00:00+05:30',
     modified: '2026-07-28T08:00:00+05:30',
     readTime: '9 min read',
-    image: '/images/articles/maandhan/family-pension-rules-hero.webp',
-    ogImage: '/images/articles/maandhan/family-pension-rules-hero.webp',
+    image: '/images/articles/maandhan/family-pension-rules/hero.webp',
+    ogImage: '/images/articles/maandhan/family-pension-rules/hero.webp',
   },
   {
     slug: 'pmkmy-bank-account-change',
@@ -107,8 +107,8 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
     published: '2026-07-27T08:00:00+05:30',
     modified: '2026-07-28T08:00:00+05:30',
     readTime: '11 min read',
-    image: '/images/articles/maandhan/bank-account-change-hero.webp',
-    ogImage: '/images/articles/maandhan/bank-account-change-hero.webp',
+    image: '/images/articles/maandhan/bank-account-change/hero.webp',
+    ogImage: '/images/articles/maandhan/bank-account-change/hero.webp',
   },
   {
     slug: 'pmkmy-grievance-complaint-helpline',
@@ -118,8 +118,8 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
     published: '2026-07-28T08:00:00+05:30',
     modified: '2026-07-28T08:00:00+05:30',
     readTime: '12 min read',
-    image: '/images/articles/maandhan/grievance-helpline-hero.webp',
-    ogImage: '/images/articles/maandhan/grievance-helpline-hero.webp',
+    image: '/images/articles/maandhan/pmkmy-grievance-complaint-helpline/pmkmy-grievance-complaint-helpline-hero.webp',
+    ogImage: '/images/articles/maandhan/pmkmy-grievance-complaint-helpline/pmkmy-grievance-complaint-helpline-hero.webp',
   },
   {
     slug: 'auto-debit-fail-hone-par-regularization-kaise-karein',
@@ -129,7 +129,7 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
     published: '2026-07-29T08:00:00+05:30',
     modified: '2026-07-29T08:00:00+05:30',
     readTime: '10 min read',
-    image: '/images/articles/maandhan/auto-debit-fail-regularization-kaise-kare-1.jpg',
-    ogImage: '/images/articles/maandhan/auto-debit-fail-regularization-kaise-kare-1.jpg',
+    image: '/images/articles/maandhan/auto-debit-fail-hone-par-regularization-kaise-karein/kisan-emi-tension.webp',
+    ogImage: '/images/articles/maandhan/auto-debit-fail-hone-par-regularization-kaise-karein/kisan-emi-tension.webp',
   },
 ];
