@@ -143,4 +143,15 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
     image: '/images/articles/maandhan/MaandhanContributionGuide/hero.webp',
     ogImage: '/images/articles/maandhan/MaandhanContributionGuide/hero.webp',
   },
+  {
+    slug: 'pm-kisan-maandhan-vs-atal-pension-yojana',
+    title: 'PM Kisan Maandhan vs Atal Pension Yojana: Kaunsi Scheme Behtar Hai? (2026)',
+    description: 'PMKMY vs APY comparison. Janiye kisan maandhan vs atal pension yojana mein kya farak hai, contribution difference, aur aapke liye kaunsi scheme best hai.',
+    category: 'pension-scheme',
+    published: '2026-07-31T09:00:00+05:30',
+    modified: '2026-07-31T16:30:00+05:30',
+    readTime: '12 min read',
+    image: '/images/articles/maandhan/comparison-guide/hero-comparison.webp',
+    ogImage: '/images/articles/maandhan/comparison-guide/hero-comparison.webp',
+  },
 ];
