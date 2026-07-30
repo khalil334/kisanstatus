@@ -68,7 +68,7 @@ export default function AutoDebitFailRegularization({ article }: { article: Maan
               '@type': 'Article',
               headline: 'Auto Debit Fail Hone Par Regularization Kaise Karein: Complete Guide 2026',
               description: 'Agar aapka EMI ya SIP auto-debit fail ho gaya hai, toh ghabrayein nahi. Janiye ise turant regularize karne ka aasan tarika, bank charges bachane ke upay aur CIBIL score ko safe rakhne ke tips.',
-              image: 'https://kisanstatus.com/images/articles/maandhan/auto-debit-fail-regularization-kaise-kare-1.webp',
+              image: 'https://kisanstatus.com/images/articles/maandhan/kisan-emi-tension.webp',
               inLanguage: 'hi-IN',
               keywords: 'auto debit fail hone par regularization kaise kare, EMI bounce solution, NACH mandate fail, CIBIL score impact, bank charges waiver',
               articleSection: 'Banking & Finance',
@@ -131,7 +131,7 @@ export default function AutoDebitFailRegularization({ article }: { article: Maan
 
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src="/images/articles/maandhan/auto-debit-fail-regularization-kaise-kare-1.webp"
+            src="/images/articles/maandhan/kisan-emi-tension.webp"
             alt="Auto debit fail hone par regularization kaise kare guide"
             width={1200}
             height={630}
