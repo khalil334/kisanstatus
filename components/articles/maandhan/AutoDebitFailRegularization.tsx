@@ -12,27 +12,27 @@ const MODIFIED = '2026-07-29T08:00:00+05:30';
 const FAQS_DATA = [
   {
     q: "Auto debit fail hone par sabse pehle kya karna chahiye?",
-    a: "Sabse pehle ghabrayein nahi. Turant apne bank account mein required balance add karein aur UPI ya Net Banking ke zariye manual EMI/SIP payment kar dein. Iske baad bank ko inform karein taaki wo agle mahine ke liye NACH mandate ko active rakh sakein.",
+    a: "Ghabraiye mat, ye pehle bhi kai logo ke saath ho chuka hai. Sabse pehle apne account mein zaroori balance daal dein aur UPI ya Net Banking se khud payment kar dein. Uske baad bank ko bata dein taaki agle mahine NACH mandate theek se chale.",
   },
   {
     q: "Kya EMI bounce hone se CIBIL score par bura asar padta hai?",
-    a: "Agar aap 30 din ke andar payment regularize kar dete hain, toh CIBIL report par koi negative mark nahi aata. Lekin agar 90 din se zyada deri ho jaye, toh score 50-100 points gir sakta hai aur account NPA (Non-Performing Asset) category mein chala jata hai.",
+    a: "Agar aap 30 din ke andar payment kar dete hain toh CIBIL report par kuch nahi dikhega. Haan, 90 din se zyada deri hui toh score 50-100 points tak gir sakta hai aur account NPA category mein chala jaata hai.",
   },
   {
     q: "Bank ke auto-debit bounce charges kaise waive (maaf) karwayein?",
-    a: "Bank ke customer care par call karke politely request karein ki ye pehli baar hua hai. Agar aapka purana repayment record saaf hai, toh zyadatar banks (jaise SBI, HDFC, ICICI) goodwill ke taur par ₹250-₹500 ke bounce charges waive kar dete hain.",
+    a: "Customer care ko call karke seedha bol dein ki ye pehli baar hua hai. Agar aapka pichla record saaf hai toh SBI, HDFC, ICICI jaise zyadatar banks goodwill mein ₹250-₹500 ke charges maaf kar dete hain.",
   },
   {
     q: "NACH mandate fail hone par kya karein?",
-    a: "Agar mandate expire ho gaya hai, toh nazdiki bank branch jakar naya NACH/ECS mandate form bharein. Aadhaar/PAN ki copy aur cancelled cheque ke saath form submit karne ke 3-5 working days mein auto-debit phir se chalu ho jayega.",
+    a: "Mandate expire ho gaya hai toh apni bank branch jakar naya NACH/ECS form bhar dein. Aadhaar/PAN copy aur cancelled cheque ke saath jama karne ke 3-5 working days baad auto-debit dobara chalu ho jaata hai.",
   },
   {
     q: "Kya ek baar auto-debit fail hone se loan default maan liya jata hai?",
-    a: "Bilkul nahi. Loan default tab mana jata hai jab lagatar 90 din (3 EMI cycles) tak koi payment na ho. Ek do baar ki chook ko turant manual payment se theek karne se aapka loan safe rehta hai.",
+    a: "Nahi, bilkul nahi. Default tab hota hai jab lagatar 90 din (3 EMI cycles) tak koi payment na ho. Ek do baar chook jaane ko turant manual payment se sudhar sakte hain, loan safe rehta hai.",
   },
   {
     q: "SIP auto debit fail hone par mutual fund ka kya hoga?",
-    a: "Us mahine ki SIP units nahi khareedi jayengi. Lekin agle mahine account mein balance hone par SIP apne aap chalu ho jayegi. Dhyan rahe, lagatar 3 baar fail hone par kai AMCs (jaise SBI Mutual Fund, HDFC AMC) SIP ko apne aap band kar dete hain.",
+    a: "Us mahine ki units nahi khareedi jayengi, bas itna hi. Agle mahine balance hote hi SIP apne aap chalu ho jaati hai. Ek baat dhyan rakhein — lagatar 3 baar fail hone par SBI Mutual Fund, HDFC AMC jaisi kai AMCs SIP khud band kar deti hain.",
   },
 ];
 
@@ -128,7 +128,7 @@ export default function AutoDebitFailRegularization({ article }: { article: Maan
       </div>
 
       <div className="container-site max-w-3xl py-8">
-        
+
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/maandhan/auto-debit-fail-regularization-kaise-kare-1.jpg"
@@ -146,29 +146,29 @@ export default function AutoDebitFailRegularization({ article }: { article: Maan
         </div>
 
         <div className="my-6 p-5 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 rounded-xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">✅ AGAR AUTO-DEBIT FAIL HO GAYA HAI, TOH YE 6 STEPS TURANT LEIN</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">✅ AUTO-DEBIT FAIL HO GAYA? YE 6 KAAM ABHI KAR LIJIYE</h3>
           <div className="space-y-3 text-sm text-[var(--color-text-muted)]">
-            <p>1. <strong>SMS/Email Check Karein:</strong> Bank ka message padhein ki failure ka exact reason kya hai (jaise 'Insufficient Funds').</p>
-            <p>2. <strong>Balance Add Karein:</strong> Account mein turant required EMI/SIP amount + thoda extra balance daal dein.</p>
-            <p>3. <strong>Manual Payment Karein:</strong> Usi din UPI, NEFT, ya Net Banking ke zariye khud se payment kar dein.</p>
-            <p>4. <strong>Bank Ko Inform Karein:</strong> Payment ka screenshot ya reference number bank ke customer care ya branch ko bhej dein.</p>
-            <p>5. <strong>Mandate Check Karein:</strong> Agar NACH mandate expire hua hai, toh naya form submit karke use re-activate karwayein.</p>
-            <p>6. <strong>Charges Waive Karein:</strong> Agar bounce charge laga hai, toh politely request karke use maaf karwayein.</p>
+            <p>1. <strong>Pehle SMS/Email Padh Lein:</strong> Bank ka message check karein — usme likha hoga failure ka asli reason (jaise 'Insufficient Funds').</p>
+            <p>2. <strong>Balance Daal Dein:</strong> Account mein EMI/SIP ka amount aur thoda extra balance turant transfer kar dein.</p>
+            <p>3. <strong>Khud Payment Kar Dein:</strong> Usi din UPI, NEFT ya Net Banking se manually payment kar dijiye, bank ke dobara try karne ka intezaar mat kijiye.</p>
+            <p>4. <strong>Bank Ko Bata Dein:</strong> Payment ka screenshot ya reference number customer care ya branch ko forward kar dein.</p>
+            <p>5. <strong>Mandate Check Kar Lein:</strong> NACH mandate expire ho chuka ho toh naya form bharke usse re-activate karwa lein.</p>
+            <p>6. <strong>Charges Maaf Karwayein:</strong> Agar bounce charge laga hai toh politely request karke usse waive karwane ki koshish karein.</p>
           </div>
         </div>
 
         <section className="mb-8">
-          <SH>Auto-Debit Fail Hone Ke 5 Aam Karan (Kyun Hota Hai?)</SH>
+          <SH>Auto-Debit Fail Kyun Hota Hai — 5 Aam Wajahein</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Kisi bhi solution par jaane se pehle, ye samajhna zaroori hai ki aakhir bank ne payment reject kyun ki. Aksar ye koi badi galti nahi, balki ek chhoti si technical ya administrative chook hoti hai. Yahan 5 sabse common reasons hain:
+            Solution dhoondhne se pehle ye samajh lena zaroori hai ki bank ne payment reject kyun kiya. Zyadatar ye koi badi galti nahi hoti, sirf ek chhoti si technical ya administrative chook hoti hai. Ye rahe 5 sabse common reasons:
           </p>
           <div className="space-y-4">
             {[
-              { title: "1. Account Mein Balance Ki Kami (Insufficient Funds)", desc: "Ye 90% cases mein sabse bada reason hota hai. EMI date par agar account mein required paise nahi hain, toh bank ka system automatically transaction reject kar deta hai aur bounce charges lag jate hain." },
-              { title: "2. NACH Mandate Ka Expire Ho Jana", desc: "NACH/ECS mandate aamtaur par 1 se 3 saal ke liye valid hote hain. Agar mandate ki validity khatam ho gayi hai aur aapne use renew nahi karwaya, toh bank ke paas auto-debit karne ka koi legal authorization nahi bachta." },
-              { title: "3. Account Freeze Ya Dormant Status", desc: "Agar aapne lambe samay (6 mahine se zyada) tak apne account mein koi transaction nahi kiya, ya KYC update nahi karwayi, toh bank account ko 'Dormant' ya freeze kar sakta hai. Aise account se koi bhi auto-debit fail ho jata hai." },
-              { title: "4. Bank Ya Server Side Technical Glitch", desc: "Kabhi-kabhi galti aapki bilkul nahi hoti. Bank ka server down hone, RBI ke NACH system mein technical issue, ya network failure ki wajah se bhi successful auto-debit fail dikha sakta hai." },
-              { title: "5. Registered Details Mein Badlav", desc: "Agar aapne haal hi mein apna mobile number, IFSC code, ya loan account number change kiya hai, lekin lender ko update nahi kiya, toh purana auto-debit instruction fail ho jayega." },
+              { title: "1. Account Mein Paise Kam Hona (Insufficient Funds)", desc: "Ye 90% cases mein sabse badi wajah hoti hai. EMI date par account mein required paise na ho toh bank ka system khud transaction reject kar deta hai aur bounce charge lag jaata hai." },
+              { title: "2. NACH Mandate Ki Expiry", desc: "NACH/ECS mandate aam taur par 1 se 3 saal ke liye hi valid hote hain. Validity khatam ho chuki ho aur renew na karwaya ho, toh bank ke paas auto-debit karne ka koi legal authorization hi nahi bachta." },
+              { title: "3. Account Freeze Ya Dormant Ho Jana", desc: "6 mahine se zyada koi transaction na ho, ya KYC update na ho, toh bank account ko 'Dormant' ya freeze kar sakta hai. Aise account se auto-debit hona mushkil hai." },
+              { title: "4. Bank Ya Server Side Ki Technical Dikkat", desc: "Kai baar galti aapki hoti hi nahi. Bank ka server down hona, RBI ke NACH system mein glitch, ya network issue ki wajah se bhi successful auto-debit fail dikh sakta hai." },
+              { title: "5. Registered Details Badal Jana", desc: "Recently mobile number, IFSC code ya loan account number change kiya ho aur lender ko update na kiya ho, toh purana auto-debit instruction fail ho jaata hai." },
             ].map((reason, idx) => (
               <div key={idx} className="bg-gray-50 dark:bg-gray-800/50 border-l-4 border-green-500 rounded-r-lg p-4 hover:shadow-md transition-shadow">
                 <h3 className="font-bold text-gray-900 dark:text-white mb-1">{reason.title}</h3>
@@ -181,39 +181,39 @@ export default function AutoDebitFailRegularization({ article }: { article: Maan
         <section className="mb-8">
           <SH>Auto Debit Fail Hone Par Regularization Kaise Karein (Step-by-Step)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Ghabrayein nahi, ise theek karna utna mushkil nahi hai jitna lagta hai. Bas in practical steps ko follow karein aur apna account jaldi se regular kar lein:
+            Ye jitna mushkil lagta hai utna hai nahi. Bas neeche diye steps follow kar lijiye, account jaldi hi regular ho jayega:
           </p>
 
           <StepList>
-            <SI n={1}><strong>Failure Reason aur SMS Alert Check Karein:</strong> Jaise hi debit fail hota hai, bank ka SMS ya email aata hai. Usme likha hota hai ki transaction kyun reject hua. Agar reason 'Insufficient Funds' hai, toh sabse pehle account mein paise dalein.</SI>
-            <SI n={2}><strong>Turant Manual Payment Kar Dein (Sabse Zaroori):</strong> Auto-debit fail hone par intezaar na karein ki bank dobara try karega. Khud se manual payment kar dein. Aap UPI (sabse tez), Net Banking ('Loan EMI Pay' option), ya nazdiki branch jakar cash/cheque se jama karwa sakte hain.</SI>
-            <SI n={3}><strong>NACH Mandate Ko Dobara Activate Karwayein:</strong> Agar aapka mandate expire ho chuka hai, toh bank ya lender ke nazdiki branch se naya NACH mandate form lein. Aadhaar/PAN ki copy aur cancelled cheque ke saath form submit karne ke 3-5 working days mein auto-debit phir se chalu ho jayega.</SI>
-            <SI n={4}><strong>Bank Ko Written Communication Dein:</strong> Manual payment karne ke baad, bank ko email ya branch mein ek chhoti si application dein ki aapka account regular ho gaya hai. Isse aapke record mein clarity rahegi aur agle auto-debit mein koi system error nahi hoga.</SI>
-            <SI n={5}><strong>Agle Cycle Ke Liye Balance Maintain Karein:</strong> EMI date se kam se kam 2-3 din pehle apne account mein required balance + ₹500 extra maintain karein. SMS alerts on rakhein taaki future mein aisi situation na aaye.</SI>
+            <SI n={1}><strong>SMS Alert Se Reason Pata Karein:</strong> Debit fail hote hi bank ka SMS ya email aa jaata hai, jisme reject hone ki wajah likhi hoti hai. 'Insufficient Funds' likha ho toh sabse pehle account mein paise daal dein.</SI>
+            <SI n={2}><strong>Khud Se Manual Payment Kar Dein (Ye Sabse Zaroori Hai):</strong> Bank dobara try karega ye sochkar intezaar mat kijiye. UPI se sabse tez ho jaata hai, ya Net Banking ke 'Loan EMI Pay' option se, ya branch jaakar cash/cheque se bhi jama karwa sakte hain.</SI>
+            <SI n={3}><strong>NACH Mandate Dobara Activate Karwayein:</strong> Mandate expire ho chuka ho toh bank ya lender ki nazdiki branch se naya NACH mandate form le lein. Aadhaar/PAN copy aur cancelled cheque ke saath jama karne ke 3-5 working days mein auto-debit phir se chalu ho jayega.</SI>
+            <SI n={4}><strong>Bank Ko Likhkar Bhi Bata Dein:</strong> Manual payment karne ke baad bank ko email ya branch mein chhoti si application de dein ki account regular ho gaya hai. Isse record mein clarity aa jaati hai aur agle auto-debit mein system error nahi aata.</SI>
+            <SI n={5}><strong>Agli Baar Ke Liye Balance Pehle Se Rakhein:</strong> EMI date se 2-3 din pehle hi required balance + ₹500 extra maintain kar lein. SMS alerts on rakhein taaki dobara aisi situation na bane.</SI>
           </StepList>
 
           <IB>
-            <strong>Pro Tip:</strong> Manual payment hamesha shaam ke 3-4 baje tak kar dein, taaki wo usi din bank ke system mein reflect ho jaye aur late fee ya extra interest na lage.
+            <strong>Pro Tip:</strong> Manual payment shaam ke 3-4 baje tak kar lein, taaki usi din bank ke system mein reflect ho jaye aur late fee ya extra interest se bach sakein.
           </IB>
         </section>
 
         <section className="mb-8">
-          <SH>CIBIL Score Par Iska Kya Asar Padta Hai?</SH>
+          <SH>CIBIL Score Par Isse Kya Farak Padta Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Har borrower ka sabse bada dar hota hai ki kahin unka credit score kharab na ho jaye. Sach ye hai ki ek baar auto-debit fail hone se aapka CIBIL score turant kharab nahi hota, lekin deri karna nuksan deh ho sakta hai.
+            Har borrower ko yahi dar rehta hai ki credit score kharab na ho jaye. Sach ye hai ki ek baar auto-debit fail hone se CIBIL score turant nahi girta, lekin deri karna nuksaan de sakta hai.
           </p>
 
           <div className="grid md:grid-cols-2 gap-4 mb-6">
             <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border-2 border-green-500">
-              <h4 className="font-bold text-green-900 dark:text-green-300 mb-2 flex items-center gap-2">✅ 30 Din Ke Andar Payment Kiya</h4>
+              <h4 className="font-bold text-green-900 dark:text-green-300 mb-2 flex items-center gap-2">✅ 30 Din Ke Andar Payment Ho Gaya</h4>
               <p className="text-sm text-green-800 dark:text-green-200 leading-relaxed">
-                CIBIL report mein koi negative mark (DPD) nahi aayega. Bank shayad thoda bounce charge le, lekin aapka credit history bilkul safe rahegi.
+                CIBIL report par koi negative mark (DPD) nahi aayega. Bank thoda bounce charge le sakta hai, par credit history bilkul safe rehti hai.
               </p>
             </div>
             <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg border-2 border-red-500">
-              <h4 className="font-bold text-red-900 dark:text-red-300 mb-2 flex items-center gap-2">⚠️ 90 Din Se Zyada Deri Hui</h4>
+              <h4 className="font-bold text-red-900 dark:text-red-300 mb-2 flex items-center gap-2">⚠️ 90 Din Se Zyada Deri Ho Gayi</h4>
               <p className="text-sm text-red-800 dark:text-red-200 leading-relaxed">
-                Aapka CIBIL score 50-100 points tak gir sakta hai. Loan account 'NPA' (Non-Performing Asset) ban sakta hai, jisse future mein home loan ya personal loan milna mushkil ho jayega.
+                CIBIL score 50-100 points tak gir sakta hai. Loan account 'NPA' (Non-Performing Asset) ban sakta hai, jisse aage home loan ya personal loan lena mushkil ho jaata hai.
               </p>
             </div>
           </div>
@@ -245,36 +245,36 @@ export default function AutoDebitFailRegularization({ article }: { article: Maan
           </div>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Agar auto-debit sirf bank ke server down hone ki wajah se fail hua tha, toh aap bank se written proof maang kar CIBIL bureau mein free mein dispute bhi raise kar sakte hain.
+            Agar auto-debit sirf bank ke server down hone ki wajah se fail hua tha, toh bank se written proof lekar CIBIL bureau mein free mein dispute bhi raise kiya ja sakta hai.
           </p>
         </section>
 
         <section className="mb-8">
-          <SH>Bank Bounce Charges Waive (Maaf) Karwane Ke Practical Tips</SH>
+          <SH>Bank Bounce Charges Maaf Karwane Ke Kaam Ke Tips</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Banks aamtaur par ₹250 se lekar ₹750 tak bounce charges vasool karte hain. Lekin inhe maaf (waive) karwana namumkin nahi hai. Ye proven tarika apnayein:
+            Banks aam taur par ₹250 se ₹750 tak bounce charge lete hain. Par inhe maaf karwana namumkin nahi hai — ye tarika try kijiye:
           </p>
 
           <div className="space-y-4 mb-6">
             <div className="flex gap-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4">
               <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">1</div>
               <div>
-                <h4 className="font-bold text-gray-900 dark:text-white mb-1">Customer Care Se Polite Request Karein</h4>
-                <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">Bank ke toll-free number par call karke batayein ki ye pehli baar hua hai aur galti se balance kam reh gaya. Agar aapka purana repayment record accha hai, toh 70-80% cases mein representative charges waive kar deta hai.</p>
+                <h4 className="font-bold text-gray-900 dark:text-white mb-1">Customer Care Ko Politely Request Karein</h4>
+                <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">Bank ke toll-free number par call karke bata dein ki ye pehli baar hua hai aur galti se balance kam reh gaya tha. Repayment record accha ho toh zyadatar cases (70-80%) mein representative charge waive kar deta hai.</p>
               </div>
             </div>
             <div className="flex gap-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4">
               <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">2</div>
               <div>
-                <h4 className="font-bold text-gray-900 dark:text-white mb-1">Branch Manager Ko Written Application Dein</h4>
-                <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">Agar phone par baat na bane, toh branch jakar ek chhoti si written application dein. Apna accha banking history dikhayein aur 'goodwill waiver' ki request karein. Manager ke paas limited amount waive karne ka power hota hai.</p>
+                <h4 className="font-bold text-gray-900 dark:text-white mb-1">Branch Manager Ko Written Application De Dein</h4>
+                <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">Phone par baat na bane toh branch jaakar chhoti si application de dein. Accha banking history dikhayein aur 'goodwill waiver' maangein. Manager ke paas limited amount waive karne ka authority hota hai.</p>
               </div>
             </div>
             <div className="flex gap-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4">
               <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">3</div>
               <div>
-                <h4 className="font-bold text-gray-900 dark:text-white mb-1">RBI Grievance Ka Sahara Lein</h4>
-                <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">Agar bank bina kisi valid reason ke charges nahi hata raha, ya galti bank ki thi (jaise server issue), toh aap RBI ke Complaint Management System (CMS) mein online shikayat darj kar sakte hain.</p>
+                <h4 className="font-bold text-gray-900 dark:text-white mb-1">RBI Grievance Ka Rasta Bhi Hai</h4>
+                <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">Bank bina valid reason ke charge nahi hata raha, ya galti bank ki thi (jaise server issue), toh RBI ke Complaint Management System (CMS) mein online shikayat darj ki ja sakti hai.</p>
               </div>
             </div>
           </div>
@@ -315,55 +315,55 @@ export default function AutoDebitFailRegularization({ article }: { article: Maan
         <section className="mb-8">
           <SH>RBI Ke Auto-Debit Rules Aur Aapke Rights</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Reserve Bank of India (RBI) ne customers ko surakshit rakhne ke liye auto-debit (e-mandate) ke kuch sakht niyam banaye hain. Aapko in baaton ka pata hona zaroori hai taaki aapka shoshan na ho:
+            RBI ne customers ki suraksha ke liye auto-debit (e-mandate) par kuch sakht niyam banaye hain. Inka pata hona zaroori hai taaki koi galat fayda na utha sake:
           </p>
 
           <div className="grid md:grid-cols-2 gap-4 mb-6">
             <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-4 shadow-sm">
               <h4 className="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2">📋 Pre-Debit Notification Zaroori Hai</h4>
-              <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">Bank ko auto-debit katne se kam se kam 24 ghante pehle aapko SMS ya email ke zariye inform karna anivarya (mandatory) hai. Agar notification nahi aaya, toh aap charge dispute kar sakte hain.</p>
+              <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">Auto-debit katne se kam se kam 24 ghante pehle bank ko SMS ya email se inform karna anivarya hai. Notification na aaya ho toh charge dispute kiya ja sakta hai.</p>
             </div>
             <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-4 shadow-sm">
-              <h4 className="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2">⏰ Kuch Banks Deti Hain Grace Period</h4>
-              <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">Kai banks EMI miss hone par 3 se 7 din ka grace period dete hain. Is dauran manual payment karne par late fee nahi lagti. Apne bank se iski pushti zaroor karein.</p>
+              <h4 className="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2">⏰ Kuch Banks Grace Period Bhi Dete Hain</h4>
+              <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">Kai banks EMI miss hone par 3-7 din ka grace period dete hain, jisme manual payment karne par late fee nahi lagti. Apne bank se ye zaroor confirm kar lein.</p>
             </div>
             <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-4 shadow-sm">
               <h4 className="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2">🔒 ₹5,000 Se Zyada Ke Liye AFA</h4>
-              <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">₹5,000 se adhik ke recurring payments ke liye bank ko aapse OTP ya additional approval lena zaroori hai. Bina approval ke auto-debit nahi hoga.</p>
+              <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">₹5,000 se zyada ke recurring payments ke liye bank ko OTP ya additional approval lena zaroori hai. Bina approval auto-debit ho hi nahi sakta.</p>
             </div>
             <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-4 shadow-sm">
-              <h4 className="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2">🛡️ Bank Ki Galti Par Penalty Nahi</h4>
-              <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">Agar aapke account mein paise the lekin bank ke technical issue ki wajah se debit fail hua, toh aap par koi penalty ya bounce charge nahi lagaya ja sakta.</p>
+              <h4 className="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2">🛡️ Bank Ki Galti Ka Khamiyaza Aap Nahi Bharenge</h4>
+              <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">Account mein paise the aur sirf bank ke technical issue ki wajah se debit fail hua, toh koi penalty ya bounce charge nahi lagaya ja sakta.</p>
             </div>
           </div>
 
           <WB>
-            <strong>Important RBI Circular Reference:</strong> RBI ke circular DPSS.CO.PD.No.116/02.14.003/2021-22 ke anusaar, recurring payments ke liye Additional Factor of Authentication (AFA) aur pre-debit notification dono hi compulsory hain. Agar bank in niyamon ka palan nahi karta, toh aap https://cms.rbi.org.in par shikayat darj kar sakte hain.
+            <strong>Important RBI Circular Reference:</strong> RBI ke circular DPSS.CO.PD.No.116/02.14.003/2021-22 ke anusaar, recurring payments ke liye Additional Factor of Authentication (AFA) aur pre-debit notification dono hi compulsory hain. Bank in niyamon ka palan na kare toh https://cms.rbi.org.in par shikayat darj ki ja sakti hai.
           </WB>
         </section>
 
         <section className="mb-8">
-          <SH>Common Mistakes — In Galtiyon Se Bachein</SH>
+          <SH>Common Mistakes — Ye Galtiyan Na Karein</SH>
           <div className="space-y-3">
             <div className="flex items-start bg-red-50 dark:bg-red-900/10 p-3 rounded-lg">
               <span className="text-red-600 mr-3 font-bold text-xl">✗</span>
               <div>
                 <p className="text-sm font-bold text-gray-900 dark:text-white">Bank ke doosre attempt ka intezaar karna</p>
-                <p className="text-xs text-[var(--color-text-muted)]">Bank shayad dobara try na kare, ya karne par double bounce charge lag jaye. Turant manual payment karein.</p>
+                <p className="text-xs text-[var(--color-text-muted)]">Bank dobara try kare hi na, ya kare toh double bounce charge lag sakta hai. Turant manual payment kar dein.</p>
               </div>
             </div>
             <div className="flex items-start bg-red-50 dark:bg-red-900/10 p-3 rounded-lg">
               <span className="text-red-600 mr-3 font-bold text-xl">✗</span>
               <div>
                 <p className="text-sm font-bold text-gray-900 dark:text-white">CIBIL score ki chinta mein payment delay karna</p>
-                <p className="text-xs text-[var(--color-text-muted)]">Jitna deri karenge, utna zyada nuksan hoga. 30 din ke andar payment karne se CIBIL safe rehta hai.</p>
+                <p className="text-xs text-[var(--color-text-muted)]">Jitni deri karenge utna hi nuksaan hoga. 30 din ke andar payment karne se CIBIL safe rehta hai.</p>
               </div>
             </div>
             <div className="flex items-start bg-red-50 dark:bg-red-900/10 p-3 rounded-lg">
               <span className="text-red-600 mr-3 font-bold text-xl">✗</span>
               <div>
                 <p className="text-sm font-bold text-gray-900 dark:text-white">NACH mandate ko ignore karna</p>
-                <p className="text-xs text-[var(--color-text-muted)]">Agar mandate expire ho gaya hai, toh sirf balance dalne se kaam nahi chalega. Naya form bharna hoga.</p>
+                <p className="text-xs text-[var(--color-text-muted)]">Mandate expire ho chuka ho toh sirf balance daalne se kaam nahi chalega, naya form bharna hi padega.</p>
               </div>
             </div>
           </div>
