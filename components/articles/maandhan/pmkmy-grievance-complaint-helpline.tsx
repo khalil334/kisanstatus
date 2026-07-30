@@ -76,7 +76,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
               '@type': 'Article',
               headline: 'PM Kisan Maandhan Helpline Number 2026 – Verified Contact & Grievance Guide',
               description: 'PM Kisan Maandhan Yojana ka official helpline number 18002676888, 14434. Grievance email scpms@licindia.com. Online complaint process, CSC helpdesk 14599, aur verified contact details.',
-              image: 'https://kisanstatus.com/images/articles/maandhan/pmkmy-grievance-complaint-helpline/grievance-helpline-hero.webp',
+              image: 'https://kisanstatus.com/images/articles/maandhan/pmkmy-grievance-complaint-helpline/pmkmy-grievance-complaint-helpline-hero.webp',
               inLanguage: 'hi-IN',
               keywords: 'PMKMY helpline number 18002676888, PM Kisan Maandhan complaint, scpms@licindia.com, grievance redressal online, CSC helpdesk 14599, LIC pension complaint',
               articleSection: 'Agriculture & Pension Schemes',
@@ -139,7 +139,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
 
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src="/images/articles/maandhan/pmkmy-grievance-complaint-helpline/grievance-helpline-hero.webp"
+            src="/images/articles/maandhan/pmkmy-grievance-complaint-helpline/pmkmy-grievance-complaint-helpline-hero.webp"
             alt="Farmer calling PMKMY helpline number 18002676888 for pension complaint"
             width={1200}
             height={630}
@@ -491,6 +491,21 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="PMKMY Helpline & Grievance — Sawal Jawab" />
         </section>
+
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/articles/maandhan/pmkmy-grievance-complaint-helpline/pmkmy-pension-family.webp"
+            alt="Kisan parivar apni PM Kisan Maandhan pension ke saath surakshit bhavishya"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            Aapki mehnat, aapka haq — pension milna hi chahiye
+          </p>
+        </div>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Aakhri Salah</h3>
