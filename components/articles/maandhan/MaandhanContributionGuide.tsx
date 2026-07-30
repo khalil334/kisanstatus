@@ -1,0 +1,494 @@
+'use client';
+
+import Link from 'next/link';
+import Image from 'next/image';
+import Script from 'next/script';
+import { useState } from 'react';
+import { SI, StepList, IB, WB, DB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
+import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
+
+const PUBLISHED = '2026-07-30T10:00:00+05:30';
+const MODIFIED = '2026-07-30T18:00:00+05:30';
+
+const RELATED_CARDS = [
+  {
+    slug: 'pm-kisan-maandhan-registration-2026',
+    title: 'Registration Poora Tarika',
+    desc: 'CSC center par VLE ke saath step-by-step enrollment kaise hota hai, documents list ke saath.',
+    emoji: '📝',
+  },
+  {
+    slug: 'pm-kisan-maandhan-auto-debit-poora-sach',
+    title: 'Auto Debit Ka Sach',
+    desc: 'PM Kisan ki kist se paisa kyun kat raha hai? NACH mandate ka matlab samjhiye.',
+    emoji: '💳',
+  },
+  {
+    slug: 'pm-kisan-maandhan-withdrawal-refund-rules',
+    title: 'Beech Mein Nikalne Ke Niyam',
+    desc: '10 saal se pehle ya baad mein exit karne par kitna paisa wapas milta hai.',
+    emoji: '💸',
+  },
+];
+
+const FAQS_DATA = [
+  {
+    q: '18 saal ke ladke ko PMKMY mein kitna monthly dena padega?',
+    a: '18 saal ki umar mein join karne par monthly contribution sirf ₹55 hota hai. Government bhi ₹55 match karegi. Total ₹110 har mahine pension fund mein jayega. Yeh sabse kam contribution slab hai.',
+  },
+  {
+    q: '40 saal ki umar mein join karun toh monthly kitna katega?',
+    a: '40 saal par monthly contribution ₹200 hota hai (Govt bhi ₹200 degi). Pension amount sabhi ko same ₹3000/month milegi, bas farak itna hai ke 40 saal wale ko sirf 20 saal contribute karna hota hai.',
+  },
+  {
+    q: 'Beech mein scheme chhodi toh paisa wapas milega ya doob jayega?',
+    a: 'Government ka co-contribution pre-mature exit par kabhi wapas nahi milta, woh pension fund mein hi rehta hai. Aapka apna deposited amount + applicable interest wapas mil jata hai. Exact terms apne CSC center ya pmkmy.gov.in se confirm kar lena.',
+  },
+  {
+    q: 'PM Kisan Maandhan ka asli helpline number kaunsa hai?',
+    a: 'Official helpline 1800-3000-3468 hai (Monday se Saturday, 9:30 AM se 6 PM). State-wise numbers ke liye pmkmy.gov.in par "Contact Us" section check karein.',
+  },
+  {
+    q: 'Kaun log is scheme mein join nahi kar sakte?',
+    a: '2 hectare se zyada zameen wale, jo pehle se NPS/EPFO/ESIC mein hain, income tax pay karne wale, sarkari naukri wale, PM-SYM/PM-LVM beneficiaries, aur registered professionals (doctor, engineer, CA, lawyer, architect) eligible nahi hain.',
+  },
+  {
+    q: 'KPAN card download kaise karte hain?',
+    a: 'pmkmy.gov.in par login karein, registered mobile number aur OTP daaliye. Dashboard par KPAN download ka option mil jayega. Enrollment ke 7-10 din baad SMS bhi aa jata hai KPAN ke saath.',
+  },
+];
+
+const CONTRIB_DATA: Record<number, number> = {
+  18: 55, 19: 58, 20: 61, 21: 64, 22: 68, 23: 72, 24: 76, 25: 80,
+  26: 85, 27: 90, 28: 95, 29: 100, 30: 105, 31: 110, 32: 120, 33: 130,
+  34: 140, 35: 150, 36: 160, 37: 170, 38: 180, 39: 190, 40: 200,
+};
+
+function ContributionCalculator() {
+  const [age, setAge] = useState(25);
+  const monthly = CONTRIB_DATA[age];
+  const years = 60 - age;
+  const totalUser = monthly * 12 * years;
+  const breakEven = Math.ceil(totalUser / 36000);
+
+  return (
+    <div className="my-6 p-5 bg-white dark:bg-gray-900 border border-[var(--color-border)] rounded-2xl shadow-sm">
+      <h3 className="text-lg font-black text-[var(--color-text)] mb-4 flex items-center gap-2">🧮 Contribution Calculator</h3>
+      <label className="block text-xs text-[var(--color-text-muted)] mb-2">Enrollment ke waqt aapki umar</label>
+      <input
+        type="range"
+        min={18}
+        max={40}
+        value={age}
+        onChange={(e) => setAge(Number(e.target.value))}
+        className="w-full accent-green-600 mb-1"
+      />
+      <div className="text-center text-3xl font-black text-green-700 dark:text-green-400 my-2">{age} saal</div>
+      <div className="grid grid-cols-2 gap-3 mt-4">
+        <div className="p-3 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl text-center">
+          <div className="text-xs text-[var(--color-text-muted)]">Aapka har mahine</div>
+          <div className="text-xl font-black text-green-800 dark:text-green-300">₹{monthly}</div>
+        </div>
+        <div className="p-3 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl text-center">
+          <div className="text-xs text-[var(--color-text-muted)]">Sarkar ka hissa</div>
+          <div className="text-xl font-black text-green-800 dark:text-green-300">₹{monthly}</div>
+        </div>
+      </div>
+      <div className="mt-3 p-3 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl text-center">
+        <div className="text-xs text-amber-800 dark:text-amber-300">60 saal ke baad har mahine</div>
+        <div className="text-2xl font-black text-amber-900 dark:text-amber-200">₹3,000</div>
+      </div>
+      <div className="mt-4 space-y-2 text-xs text-[var(--color-text-muted)]">
+        <div className="flex justify-between"><span>Contribution period:</span><span className="font-bold text-[var(--color-text)]">{years} saal</span></div>
+        <div className="flex justify-between"><span>Aapka total contribution:</span><span className="font-bold text-[var(--color-text)]">₹{totalUser.toLocaleString('en-IN')}</span></div>
+        <div className="flex justify-between"><span>Sarkar ka total contribution:</span><span className="font-bold text-[var(--color-text)]">₹{totalUser.toLocaleString('en-IN')}</span></div>
+        <div className="flex justify-between border-t border-[var(--color-border)] pt-2 mt-2"><span>Pension se 1 saal mein:</span><span className="font-bold text-green-700">₹36,000</span></div>
+        <div className="flex justify-between"><span>Break-even (approx):</span><span className="font-bold text-red-600">~{breakEven} saal</span></div>
+      </div>
+      <p className="text-[10px] text-[var(--color-text-muted)] mt-3 text-center">Yeh sirf estimate hai. Exact amounts VLE system se nikalti hain.</p>
+    </div>
+  );
+}
+
+export default function MaandhanContributionGuide({ article }: { article: MaandhanArticleMeta }) {
+  return (
+    <>
+      <Script id="maandhan-age-wise-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@graph': [
+            {
+              '@type': 'Article',
+              headline: 'PM Kisan Maandhan Yojana: Age-Wise Monthly Contribution Chart 2026',
+              description: 'PM-KMY mein 18 se 40 saal tak har umar ka exact monthly contribution, government co-contribution, registration process, aur pension rules — official sources se verify karke.',
+              image: 'https://kisanstatus.com/images/articles/maandhan/MaandhanContributionGuide/hero.webp',
+              inLanguage: 'hi-IN',
+              keywords: 'PM Kisan Maandhan Yojana, PMKMY contribution chart, Kisan Maandhan monthly contribution, PMKMY pension',
+              articleSection: 'Agriculture & Pension Schemes',
+              wordCount: 1800,
+              author: {
+                '@type': 'Organization',
+                name: 'KisanStatus Team',
+                url: 'https://kisanstatus.com/about',
+              },
+              publisher: {
+                '@type': 'Organization',
+                name: 'KisanStatus',
+                logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.png' },
+              },
+              datePublished: PUBLISHED,
+              dateModified: MODIFIED,
+              mainEntityOfPage: { '@type': 'WebPage', '@id': `https://kisanstatus.com/maandhan/${article.slug}` },
+            },
+            {
+              '@type': 'FAQPage',
+              mainEntity: FAQS_DATA.map((faq) => ({
+                '@type': 'Question',
+                name: faq.q,
+                acceptedAnswer: { '@type': 'Answer', text: faq.a },
+              })),
+            },
+          ],
+        })}
+      </Script>
+
+      <div className="bg-[var(--color-primary)] py-8">
+        <div className="container-site max-w-3xl">
+          <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
+            <Link href="/" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Home</Link>
+            <span>/</span>
+            <Link href="/maandhan" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Maandhan Yojana</Link>
+            <span>/</span>
+            <span className="text-white font-bold">Contribution Chart</span>
+          </nav>
+          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Kisan Pension Scheme</span>
+
+          <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
+            PM Kisan Maandhan Yojana: Age-Wise Monthly Contribution Chart 2026
+          </h1>
+
+          <div className="flex flex-wrap gap-3 text-xs text-green-200">
+            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
+            <span>📅 {fmtDate(PUBLISHED)}</span>
+            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
+            <span>⏱️ 12 min read</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="container-site max-w-3xl py-8">
+
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/articles/maandhan/MaandhanContributionGuide/hero.webp"
+            alt="PM Kisan Maandhan Yojana contribution chart showing monthly payment by age"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            style={{ maxHeight: '420px', objectPosition: 'center' }}
+            priority
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            Umar kam hone par monthly contribution bhi kam hota hai
+          </p>
+        </div>
+
+        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+          Chhote aur seemant kisanon ke liye PM Kisan Maandhan (PM-KMY) ek solid backup hai. 18 se 40 saal ki umar ke beech join karo, thoda sa monthly jama karo, aur 60 ke baad ₹3000 har mahine pakka. Sarkar bhi aapke har rupee par ek rupee match karti hai.
+        </p>
+
+        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
+          Neeche maine exact age-wise contribution, registration ka asli tarika, aur woh chhote-chhote rules likhe hain jo aksar CSC centers par ignore kar diye jate hain. Saari jankari PIB press release (Sept 2024) aur Ministry of Agriculture ki Operational Guidelines se cross-verify ki gayi hai.
+        </p>
+
+        <section className="mb-8">
+          <SH>Contribution Kitna Hoga? Official Age-Wise Table</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Jitni jaldi join karoge, utna hi halka padega monthly bojh. Yeh table official operational guidelines se li gayi hai, kyunki exact amounts har age ke liye LIC ke actuarial calculations se nikalti hain.
+          </p>
+
+          <div className="overflow-x-auto mb-4">
+            <table className="w-full text-xs border border-[var(--color-border)] rounded-xl overflow-hidden">
+              <thead>
+                <tr className="bg-[var(--color-bg-alt)] text-left">
+                  <th className="p-3 font-black">Entry Age</th>
+                  <th className="p-3 font-black">Aapka Share (₹/month)</th>
+                  <th className="p-3 font-black">Govt Match (₹/month)</th>
+                  <th className="p-3 font-black">Total Fund (₹/month)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-t border-[var(--color-border)] bg-green-50 dark:bg-green-900/10"><td className="p-3 font-bold">18</td><td className="p-3 font-bold text-green-700 dark:text-green-400">₹55</td><td className="p-3">₹55</td><td className="p-3">₹110</td></tr>
+                <tr className="border-t border-[var(--color-border)]"><td className="p-3 font-bold">19</td><td className="p-3 font-bold text-green-700 dark:text-green-400">₹58</td><td className="p-3">₹58</td><td className="p-3">₹116</td></tr>
+                <tr className="border-t border-[var(--color-border)] bg-[var(--color-bg-alt)]"><td className="p-3 font-bold">20</td><td className="p-3 font-bold text-green-700 dark:text-green-400">₹61</td><td className="p-3">₹61</td><td className="p-3">₹122</td></tr>
+                <tr className="border-t border-[var(--color-border)]"><td className="p-3 font-bold">21</td><td className="p-3 font-bold text-green-700 dark:text-green-400">₹64</td><td className="p-3">₹64</td><td className="p-3">₹128</td></tr>
+                <tr className="border-t border-[var(--color-border)] bg-[var(--color-bg-alt)]"><td className="p-3 font-bold">22</td><td className="p-3 font-bold text-green-700 dark:text-green-400">₹68</td><td className="p-3">₹68</td><td className="p-3">₹136</td></tr>
+                <tr className="border-t border-[var(--color-border)]"><td className="p-3 font-bold">23</td><td className="p-3 font-bold text-green-700 dark:text-green-400">₹72</td><td className="p-3">₹72</td><td className="p-3">₹144</td></tr>
+                <tr className="border-t border-[var(--color-border)] bg-[var(--color-bg-alt)]"><td className="p-3 font-bold">24</td><td className="p-3 font-bold text-green-700 dark:text-green-400">₹76</td><td className="p-3">₹76</td><td className="p-3">₹152</td></tr>
+                <tr className="border-t border-[var(--color-border)]"><td className="p-3 font-bold">25</td><td className="p-3 font-bold text-green-700 dark:text-green-400">₹80</td><td className="p-3">₹80</td><td className="p-3">₹160</td></tr>
+                <tr className="border-t border-[var(--color-border)] bg-[var(--color-bg-alt)]"><td className="p-3 font-bold">26</td><td className="p-3 font-bold text-green-700 dark:text-green-400">₹85</td><td className="p-3">₹85</td><td className="p-3">₹170</td></tr>
+                <tr className="border-t border-[var(--color-border)]"><td className="p-3 font-bold">27</td><td className="p-3 font-bold text-green-700 dark:text-green-400">₹90</td><td className="p-3">₹90</td><td className="p-3">₹180</td></tr>
+                <tr className="border-t border-[var(--color-border)] bg-[var(--color-bg-alt)]"><td className="p-3 font-bold">28</td><td className="p-3 font-bold text-green-700 dark:text-green-400">₹95</td><td className="p-3">₹95</td><td className="p-3">₹190</td></tr>
+                <tr className="border-t border-[var(--color-border)]"><td className="p-3 font-bold">29</td><td className="p-3 font-bold text-green-700 dark:text-green-400">₹100</td><td className="p-3">₹100</td><td className="p-3">₹200</td></tr>
+                <tr className="border-t border-[var(--color-border)] bg-[var(--color-bg-alt)]"><td className="p-3 font-bold">30</td><td className="p-3 font-bold text-green-700 dark:text-green-400">₹105</td><td className="p-3">₹105</td><td className="p-3">₹210</td></tr>
+                <tr className="border-t border-[var(--color-border)]"><td className="p-3 font-bold">31</td><td className="p-3 font-bold text-green-700 dark:text-green-400">₹110</td><td className="p-3">₹110</td><td className="p-3">₹220</td></tr>
+                <tr className="border-t border-[var(--color-border)] bg-[var(--color-bg-alt)]"><td className="p-3 font-bold">32</td><td className="p-3 font-bold text-green-700 dark:text-green-400">₹120</td><td className="p-3">₹120</td><td className="p-3">₹240</td></tr>
+                <tr className="border-t border-[var(--color-border)]"><td className="p-3 font-bold">33</td><td className="p-3 font-bold text-green-700 dark:text-green-400">₹130</td><td className="p-3">₹130</td><td className="p-3">₹260</td></tr>
+                <tr className="border-t border-[var(--color-border)] bg-[var(--color-bg-alt)]"><td className="p-3 font-bold">34</td><td className="p-3 font-bold text-green-700 dark:text-green-400">₹140</td><td className="p-3">₹140</td><td className="p-3">₹280</td></tr>
+                <tr className="border-t border-[var(--color-border)]"><td className="p-3 font-bold">35</td><td className="p-3 font-bold text-green-700 dark:text-green-400">₹150</td><td className="p-3">₹150</td><td className="p-3">₹300</td></tr>
+                <tr className="border-t border-[var(--color-border)] bg-[var(--color-bg-alt)]"><td className="p-3 font-bold">36</td><td className="p-3 font-bold text-green-700 dark:text-green-400">₹160</td><td className="p-3">₹160</td><td className="p-3">₹320</td></tr>
+                <tr className="border-t border-[var(--color-border)]"><td className="p-3 font-bold">37</td><td className="p-3 font-bold text-green-700 dark:text-green-400">₹170</td><td className="p-3">₹170</td><td className="p-3">₹340</td></tr>
+                <tr className="border-t border-[var(--color-border)] bg-[var(--color-bg-alt)]"><td className="p-3 font-bold">38</td><td className="p-3 font-bold text-green-700 dark:text-green-400">₹180</td><td className="p-3">₹180</td><td className="p-3">₹360</td></tr>
+                <tr className="border-t border-[var(--color-border)]"><td className="p-3 font-bold">39</td><td className="p-3 font-bold text-green-700 dark:text-green-400">₹190</td><td className="p-3">₹190</td><td className="p-3">₹380</td></tr>
+                <tr className="border-t border-[var(--color-border)] bg-red-50 dark:bg-red-900/10"><td className="p-3 font-bold">40</td><td className="p-3 font-bold text-red-700 dark:text-red-400">₹200</td><td className="p-3 font-bold">₹200</td><td className="p-3 font-bold">₹400</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p className="text-xs text-[var(--color-text-muted)] mb-4">
+            Yeh numbers <a href="https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=2053142" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">PIB Press Release (Sept 2024)</a> aur Agriculture Ministry ki <a href="https://pmkisan.gov.in/Documents/PM-KMY%20-%20Operational%20Guidelines.pdf" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">Operational Guidelines</a> se match karte hain.
+          </p>
+        </section>
+
+        <ContributionCalculator />
+
+        <section className="mb-8">
+          <SH>20 Saal vs 35 Saal — Numbers Bolte Hain</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Kai baar kisan sochte hain, "pension toh same ₹3000 milegi, toh umar se kya farak padta hai?" Farak bada padta hai. Example ke liye, Ramesh (20 saal) aur Suresh (35 saal) dono ko 60 ke baad ₹3000 hi milenge. Lekin Ramesh ka total contribution lagbhag 30 hazar (₹29,280) rahega, jabki Suresh ko lagbhag 45 hazar (₹45,000) dene honge. 
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Dono ko same pension milegi. Bas itna sa farak hai ke jawan ladke ko zyada saal dena padta hai lekin har mahine kam, aur bade umar wale ko kam saal dena hai lekin har mahine zyada. Meri raay mein, agar ghar mein koi 18-20 saal ka jawan kisan hai, toh uska enrollment abhi karwa dena sabse smart financial move hai.
+          </p>
+        </section>
+
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/articles/maandhan/MaandhanContributionGuide/farmer-plan.webp"
+            alt="Kisan apne future aur pension ki planning karte hue"
+            width={1000}
+            height={560}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            Jitni jaldi plan karenge, utna hi halka monthly bojh padega
+          </p>
+        </div>
+
+        <section className="mb-8">
+          <SH>Kaun Join Kar Sakta Hai? Eligibility Aur Exclusions</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Yeh scheme specifically chhote aur seemant kisanon (Small and Marginal Farmers) ke liye design ki gayi hai. Basic rule simple hai: aapke paas 2 hectare (lagbhag 5 acre) ya usse kam cultivable land honi chahiye, aur umar 18 se 40 saal ke beech.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Lekin "2 hectare" wali baat thodi tricky ho sakti hai. Kai baar kisanon ke paas alag-alag jagah chhote plots hote hain ya joint family land hoti hai. Iska exact calculation thoda complex ho sakta hai, isliye apne CSC se land records (khasra/khatauni) dikha kar ek baar confirm kar lena behtar rahega.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Iske alawa, kuchh log bilkul bhi is scheme mein nahi aa sakte. Jaise ki jo log pehle se NPS, EPFO, ya ESIC jaise organized pension schemes mein hain, ya phir income tax pay karte hain. Sarkari naukri wale (chahe woh present hon ya former Ministers, MPs, MLAs, Mayors) aur registered professionals (doctors, engineers, CA, lawyers, architects) bhi is list se bahar hain. Agar aap PM-SYM ya PM-LVM ka pehle se beneficiary hain, toh bhi yeh option available nahi hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Ek achi baat yeh hai ke enrollment ke waqt alag se age proof ya income proof nahi mangte — self-declaration kaafi hota hai, bas Aadhaar aur bank passbook chahiye. Lekin ek senior ki advice maan lena: form bharte waqt sachhi jankari hi dena. Galat details dene se baad mein na sirf application reject hoti hai, balki CSC wale aur aap dono ki pareshani badh jati hai jab claim ka time aata hai.
+          </p>
+        </section>
+
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/articles/maandhan/MaandhanContributionGuide/csc-center.webp"
+            alt="CSC center par VLE farmer se enrollment form bharte hue"
+            width={1000}
+            height={560}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            Enrollment sirf CSC center ya State Nodal Officer ke through hota hai
+          </p>
+        </div>
+
+        <section className="mb-8">
+          <SH>Registration Kaise Hota Hai?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Aapko khud se online form bharna nahi padta. Nazdeeki Common Service Center (CSC) par jayein. VLE (Village Level Entrepreneur) aapka enrollment karega. Saath mein le jana hai: Aadhaar card, bank passbook, aur ek passport size photo. Mobile number Aadhaar se linked hona chahiye kyunki OTP aayega.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            VLE aapka Aadhaar authenticate karega, bank details record karega, aur auto-debit mandate form print karke signature lega. Pehla contribution cash mein dena hota hai. Uske baad system ek unique Kisan Pension Account Number (KPAN) generate karta hai jo mobile par SMS aata hai. 
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            <strong>Ek chhoti si observation:</strong> Maine kai baar dekha hai ke VLE log auto-debit mandate wali baat clearly nahi samjhate. Form sign karne se pehle khud ek baar padh lena. CSC har enrollment ke ₹30 charge karta hai, jo government reimburse karti hai, toh aapko yeh amount nahi dena padta.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>PM Kisan Se Auto-Debit — Optional Hai, Mandatory Nahi</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Ek bahut common sawal: "Kya PM Kisan ki ₹2000 ki kist se Maandhan ka paisa apne aap kat jayega?" Jawab hai: bilkul nahi, jab tak aapne khud allow na kiya ho. Yeh process 100% optional hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Kai kisan yeh samajh kar CSC jate hain ke unka Maandhan automatically PM Kisan se link ho jayega, aur phir unhe surprise hota hai ke iske liye ek alag "enrolment-cum-auto-debit-mandate form" sign karna padta hai. Bina is specific form ke, aapke PM Kisan account se ek rupaya bhi nahi katega. Agar aap chahte hain ke deduction normal bank account se ho, toh koi baat nahi, woh bhi ho jayega.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Agar baad mein aapko lagta hai ke auto-debit band karna hai, toh aapko apni bank branch ja kar NACH mandate cancellation form submit karna hoga. Ek practical tip: yeh cancellation process kabhi-kabhi thoda time le sakta hai (ek do cycle tak lag sakta hai), isliye ise last-minute par mat chhodiye, warna account mein balance na hone ki wajah se late fee lag sakti hai.
+          </p>
+        </section>
+
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/articles/maandhan/MaandhanContributionGuide/bank-debit.webp"
+            alt="Bank account se auto-debit mandate setup"
+            width={1000}
+            height={560}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            Auto-debit optional hai — sirf tabhi lagega jab aap khud form sign karenge
+          </p>
+        </div>
+
+        <section className="mb-8">
+          <SH>Payment Miss Ho Jaye Toh Kya Hoga? Exact Rules</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Maan lijiye aapke account mein balance nahi tha aur 11th ka debit fail ho gaya — aisi situation har kisi ke saath kabhi na kabhi hoti hai. Guidelines ke hisaab se payment cycles har mahine 1st, 11th, aur 21st ko hote hain, aur system thoda flexible hai.
+          </p>
+
+          <div className="space-y-3 mb-4">
+            <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
+              <p className="font-black text-sm text-green-800 dark:text-green-300 mb-1">🟢 Pehle 1 Mahine Tak</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Koi late fee nahi. Sirf due amount jama karke account regular karwa sakte hain. Teen payment cycles tak demand raise hoti hai bina kisi interest ke.</p>
+            </div>
+            
+            <p className="text-xs text-[var(--color-text-muted)] leading-relaxed">
+              <strong>1 mahine ke baad</strong> thoda strict ho jata hai — late fee lagti hai jo savings bank interest rate ke barabar hoti hai. Pehle 12 mahine tak simple interest, uske baad compounding shuru. Yeh woh point hai jahan zyada log confuse hote hain.
+            </p>
+
+            <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
+              <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">🔴 6 Mahine Tak Payment Nahi Hui</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Account "dormant" ho jata hai, lekin 3 saal tak SMS alerts aate rehte hain. Is dauran bhi aap entire outstanding amount + interest jama karke account regular karwa sakte hain — account cancel nahi hota.</p>
+            </div>
+          </div>
+
+          <p className="text-sm text-[var(--color-text-muted)] mb-4">
+            Ek cheez clear kar dun — kai websites par "3 mahine ka grace period" likha milta hai, jo technically sahi nahi hai. Official guidelines ke hisaab se <strong>sirf 1 mahine</strong> tak koi late fee nahi hai. Uske baad interest lagna shuru hota hai. Maine khud kai VLEs ko galat information dete hue dekha hai, isliye hamesha official guidelines ya apne CSC se confirm karein.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Exit Rules — Beech Mein Chhodne Par Kya Milega?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Agar aap scheme beech mein chhodna chahte hain, toh kitna paisa wapas milega — yeh aapke kitne saal contribution diye hain, us par depend karta hai. 
+          </p>
+          <ul className="list-disc list-inside text-sm text-[var(--color-text-muted)] space-y-2 mb-4 ml-2">
+            <li><strong>Government ka co-contribution:</strong> Pre-mature exit par aapko government ka share kabhi wapas nahi milta. Woh amount pension fund mein transfer ho jata hai.</li>
+            <li><strong>Aapka contribution:</strong> Agar subscriber ki death 60 saal se pehle ho jati hai, toh spouse/nominee ko subscriber ka deposited amount + fund interest ya savings bank interest (jo bhi zyada ho) milega.</li>
+          </ul>
+          <p className="text-sm text-[var(--color-text-muted)] mb-4">
+            <strong>Ek limitation acknowledge karun:</strong> Voluntary exit (death ke alawa) par exactly kitna paisa wapas milega — kya 10 saal se pehle aur baad mein alag-alag rule hai — yeh thoda grey area hai. Main confirm nahi kar saka ki exact formula kya hai, isliye apne nazdeeki CSC ya pmkmy.gov.in se ek baar pooch lena behtar rahega. Kuchh websites par alag-alag information milti hai, lekin official source se hi confirm karein.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            60 saal ke baad pension shuru hoti hai — ₹3000 har mahine. Agar subscriber ki death 60 ke baad ho jaye, toh spouse ko ₹1500/month family pension milti hai. Dono (subscriber + spouse) ki death ke baad accumulated corpus pension fund mein chala jata hai — yeh thoda tough rule hai, lekin scheme ka structure aisa hi hai.
+          </p>
+        </section>
+
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/articles/maandhan/MaandhanContributionGuide/kpan-card.webp"
+            alt="Kisan Pension Account Number KPAN card sample"
+            width={1000}
+            height={560}
+            className="w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            KPAN card enrollment ke baad generate hota hai — isse sambhal kar rakhein
+          </p>
+        </div>
+
+        <section className="mb-8">
+          <SH>PMKMY vs Atal Pension Yojana — Farq Kya Hai?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Dono pension schemes hain, lekin target audience alag hai. PM-KMY sirf chhote kisanon ke liye hai jinke paas 2 hectare se kam zameen hai. APY koi bhi Indian citizen join kar sakta hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Main farq yeh hai ke PM-KMY mein government aapka <strong>barabar hissa</strong> deti hai har mahine — poore contribution period tak. APY mein government co-contribution sirf 5 saal tak milti hai aur sirf eligible subscribers ko. PM-KMY mein pension fixed ₹3000 hai, jabki APY mein aap ₹1000 se ₹5000 tak choose kar sakte hain.
+          </p>
+          <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
+            <strong>Meri raay:</strong> APY flexible zaroor hai, lekin agar aap kisan hain aur PM-KMY ke liye eligible hain, toh PM-KMY ka matching contribution zyada attractive hai. 20-25 saal tak government ka equal contribution milna — yeh koi chhoti baat nahi hai. APY tabhi consider karein jab aap PM-KMY ke liye eligible na hon.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Status Kaise Check Karein?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Enrollment ke baad aap apna status pmkmy.gov.in par check kar sakte hain. "Subscriber Status" ya "Know Your Status" option mein apna KPAN number ya registered mobile number daaliye. OTP verify karein — <strong>ek practical tip:</strong> OTP aane mein kabhi-kabhi 1-2 minute lag jata hai, thoda sabar rakhein, baar-baar resend mat karein.
+          </p>
+          <p className="text-sm text-[var(--color-text-muted)]">
+            Helpline number <strong>1800-3000-3468</strong> par Monday se Saturday, 9:30 AM se 6 PM tak call karke bhi status poochh sakte hain. <Link href="/articles/pm-kisan-samman-nidhi-status-check" className="text-green-600 hover:underline font-medium">PM Kisan Samman Nidhi status check</Link> alag portal par hota hai — pmkisan.gov.in use karein, pmkmy.gov.in nahi.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
+            Aksar Poochhe Jaane Wale Sawal
+          </h2>
+          <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Maandhan — Common Sawal" />
+        </section>
+
+        <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Aakhri Baat</h3>
+          <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
+            Dekhiye, budhape ki taiyari aaj se shuru hoti hai — kal par mat chhodiye. ₹55 se ₹200 har mahine — yeh koi badi rakam nahi hai, ek chai-pakode ke kharche se bhi kam. Lekin 60 saal ke baad ₹3000 har mahine aana… yeh woh sahara hai jo aapke bacchon par burden kam karega.
+          </p>
+          <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
+            Agar aap 18-40 saal ke beech hain aur 2 hectare se kam zameen hai, toh sochne ki baat nahi — agle hafte CSC center chale jayein. Bas ek request hai: form sign karte waqt har line padh lena, VLE se clear kar lena. Aapka paisa hai, aapka haq hai. Koi bhi doubt ho toh pehle poochh lena, baad mein pareshani se behtar hai.
+          </p>
+        </div>
+
+        <GovLink
+          href="https://pmkmy.gov.in"
+          label="PM Kisan Maandhan Official Portal"
+          guide="Complete PM Kisan Guide"
+          guideHref="/articles/PmKisanMasterGuide2026"
+          portalName="pmkmy.gov.in"
+        />
+
+        <section className="my-10">
+          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Ye Bhi Padhein</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {RELATED_CARDS.map((card) => (
+              <Link
+                key={card.slug}
+                href={`/maandhan/${card.slug}`}
+                className="group block p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:border-green-500 transition-all duration-300"
+              >
+                <div className="text-2xl mb-2">{card.emoji}</div>
+                <h4 className="font-bold text-gray-900 dark:text-white text-sm mb-1 group-hover:text-green-600 transition-colors">
+                  {card.title}
+                </h4>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mb-3 line-clamp-2">
+                  {card.desc}
+                </p>
+                <span className="text-xs font-semibold text-green-600 flex items-center gap-1">
+                  Read More <span className="group-hover:translate-x-1 transition-transform">→</span>
+                </span>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        <AuthorBox modified={MODIFIED} />
+        <BottomNav extraLinks={[
+          { href: '/maandhan/pm-kisan-maandhan-registration-2026', l: '📝 Registration Guide' },
+          { href: '/maandhan/pm-kisan-maandhan-auto-debit-poora-sach', l: '💳 Auto Debit' },
+          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
+        ]} />
+        <Disclaimer />
+      </div>
+    </>
+  );
+}
