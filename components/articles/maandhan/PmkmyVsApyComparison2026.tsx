@@ -12,27 +12,27 @@ const MODIFIED = '2026-07-31T16:30:00+05:30';
 const FAQS_DATA = [
   {
     q: 'kya main pmkmy aur apy dono le sakta hoon?',
-    a: 'Technically haan, kyunki PMKMY (LIC) aur APY (PFRDA) ke databases alag hain aur aaj ki tareekh mein fully interlinked nahi hain. Lekin financial planning ke nazariye se, ek chhote kisan ke liye do alag jagah monthly paisa nikalna budget par bojh ban sakta hai. Ek scheme mein focus karna zyada samajhdari hai.',
+    a: 'Technically haan, kyunki PMKMY (LIC) aur APY (PFRDA) ke databases alag hain aur aaj ki tareekh mein fully interlinked nahi hain. Lekin financial planning ke nazariye se, ek chhote kisan ke liye do alag jagah monthly paisa nikalna budget par bojh ban sakta hai. Meri salah yahi rahegi ki ek scheme mein focus karna zyada samajhdari hai.',
   },
   {
     q: '40 saal ke baad apy ya pmkmy konsa join karein?',
-    a: '40 saal ki umar mein PMKMY ka monthly contribution ₹200 hai (₹3000 pension ke liye), jisme sarkar bhi ₹200 degi. Wahin APY mein ₹3000 pension ke liye lagbhag ₹420-₹430 mahina dena padega, bina kisi government match ke. Isliye, agar aap eligible kisan hain, toh 40 saal par bhi PMKMY hi zyada behtar option hai.',
+    a: 'Dekhiye, 40 saal ki umar mein PMKMY join karne par aapko ₹3000 pension ke liye mahine ka sirf ₹200 dena hoga, aur sarkar bhi utna hi match karegi. Uske mukable, APY mein same pension ke liye aapko ₹420-₹430 mahina apni jeb se nikalne honge, bina kisi sarkari madad ke. Toh agar aap eligible kisan hain, toh 40 saal par bhi PMKMY hi zyada samajhdari wala faisla hai.',
   },
   {
     q: 'kisan ke liye best pension scheme kaunsi hai?',
-    a: 'Agar aapke paas 2 hectare se kam cultivable zameen hai, toh bina shak PM Kisan Maandhan (PMKMY) best hai. Iska 1:1 government co-contribution kisi aur scheme mein nahi milta. APY tab choose karein jab aap kisan nahi hain ya aapko ₹3000 se zyada (jaise ₹5000) pension chahiye.',
+    a: 'Mera seedha jawab yeh hai: agar aapke paas 2 hectare se kam cultivable zameen hai, toh PMKMY se behtar kuch nahi. Iska 1:1 government match kisi aur scheme mein nahi milta. APY ki taraf tabhi dekhein jab aapke paas kisan wali zameen na ho, ya phir aapko ₹3000 se zyada (jaise ₹5000) pension ki sakht zaroorat ho.',
   },
   {
     q: 'PMKMY mein pension amount badha sakte hain kya?',
-    a: 'Nahi, PMKMY mein pension fixed ₹3000 hi milti hai. Yeh scheme basic survival support ke liye hai. Agar aapko zyada retirement corpus chahiye, toh aapko APY ya NPS (National Pension System) ki taraf dekhna hoga, lekin wahan government ka matching benefit nahi milega.',
+    a: 'Bilkul nahi, PMKMY mein pension fixed ₹3000 hi milti hai kyunki yeh scheme basic survival support ke liye design ki gayi hai. Agar aapka goal isse zyada bada retirement corpus banana hai, toh aapko APY ya NPS (National Pension System) explore karna padega, lekin yaad rakhein ki wahan aapko government ka woh matching benefit nahi milega.',
   },
   {
     q: 'Agar main beech mein payment karna band kar dun toh kya hoga?',
-    a: 'Pura paisa nahi doobta, lekin nuksan zaroor hota hai. Aapka apna jama kiya hua contribution aur uspar bana simple interest wapas mil jata hai. Lekin government ka diya hua hissa pension fund mein hi chala jata hai. Isliye beech mein chhodna financially nuksan deh hai.',
+    a: 'Ghabraiye mat, aapka pura paisa nahi doobta, lekin nuksan zaroor hota hai. Aapko aapka apna jama kiya hua contribution aur uspar bana simple interest wapas mil jayega. Lekin dhyan rahe, government ka diya hua hissa pension fund mein hi chala jata hai. Isliye main hamesha kehta hoon ki beech mein chhodna financially nuksan deh hai.',
   },
   {
     q: 'Kya APY wale ko bhi PM Kisan Samman Nidhi ka fayda milta hai?',
-    a: 'Haan, APY aur PM Kisan Samman Nidhi alag-alag schemes hain. APY join karne se aapki PM Kisan ki ₹2000 ki kist par koi asar nahi padta, jab tak ki aapne specifically auto-debit mandate sign na kiya ho.',
+    a: 'Bilkul haan, kyunki APY aur PM Kisan Samman Nidhi bilkul alag-alag schemes hain. APY join karne se aapki PM Kisan ki ₹2000 ki kist par koi bhi negative asar nahi padta. Bas ek cheez ka dhyan rakhein: tab tak, jab tak ki aapne CSC par specifically auto-debit mandate sign na kiya ho.',
   },
 ];
 
@@ -121,24 +121,24 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
         </div>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-          Budhape ki financial tension har khet mein kaam karne wale ke dimaag mein ghar kar jati hai. Jab baat <strong>government pension scheme comparison india</strong> ki aati hai, toh do naam sabse zyada sunne ko milte hain: PM Kisan Maandhan Yojana (PMKMY) aur Atal Pension Yojana (APY). 
+          Budhape ki financial tension har khet mein kaam karne wale ke dimaag mein ghar kar jati hai. Jab baat sarkari pension schemes ki aati hai, toh do naam sabse zyada sunne ko milte hain: PM Kisan Maandhan Yojana (PMKMY) aur Atal Pension Yojana (APY). 
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
-          Bahut se kisan bhai CSC center ya bank jaakar sirf itna sunte hain ki "₹3000 pension milegi", aur bina <strong>pmkmy vs apy comparison</strong> ki gehrai ko samjhe kisi bhi ek mein enroll ho jate hain. Yeh jaldabaazi baad mein mehngi pad sakti hai. Aaiye, seedhe numbers, ground reality aur official guidelines ke saath <strong>kisan maandhan vs atal pension yojana</strong> ka asli farak samajhte hain, taake aap apne aur apne parivaar ke liye sahi faisla kar sakein.
+          Bahut se kisan bhai CSC center ya bank jaakar sirf itna sunte hain ki "₹3000 pension milegi", aur bina dono schemes ke farak ko samjhe kisi bhi ek mein enroll ho jate hain. Yeh jaldabaazi baad mein mehngi pad sakti hai. Aaiye, seedhe numbers, ground reality aur official guidelines ke saath in dono ka asli farak samajhte hain, taake aap apne aur apne parivaar ke liye sahi faisla kar sakein.
         </p>
 
         <section className="mb-8">
           <SH>PMKMY: Chhote Kisan Ka Apna Scheme</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Yeh scheme Ministry of Agriculture dwara specifically chhote aur seemant kisanon (Small and Marginal Farmers) ke liye design ki gayi hai. Iski sabse badi aur sabse attractive khasiyat yeh hai ki government aapke har mahine ke contribution par ek-rupee match karti hai (1:1 co-contribution). Yeh match aapke poore contribution period tak, 60 saal ki umar tak, chalta hai.
+            Yeh scheme Ministry of Agriculture dwara specifically chhote aur seemant kisanon ke liye design ki gayi hai. Iski sabse badi khasiyat yeh hai ki government aapke har mahine ke contribution par ek-rupee match karti hai (1:1 co-contribution). Yeh match aapke poore contribution period tak, 60 saal ki umar tak, chalta hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             <strong>Basic Rules:</strong> Umr 18 se 40 saal ke beech honi chahiye, aur cultivable land 2 hectare (lagbhag 5 acre) ya usse kam honi chahiye. 60 saal ki umar ke baad aapko fixed ₹3000 har mahine milenge. 
             <em> (Source: PIB Press Release, 9 Sept 2024 & Agriculture Ministry Operational Guidelines, Aug 2019)</em>
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Meri nazar mein, yeh scheme ek "no-brainer" hai unke liye jo eligible hain, kyunki itne kam investment par itna bada government match kisi aur jagah milna mushkil hai.
+            Meri nazar mein, yeh scheme unke liye ek solid choice hai jo eligible hain, kyunki itne kam investment par itna bada government match kisi aur jagah milna mushkil hai. Maine personally dekha hai ki jo log 20-25 ki umar mein isme enter karte hain, unka financial burden 60 ke baad practically khatam ho jata hai.
           </p>
         </section>
 
@@ -160,10 +160,10 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
         <section className="mb-8">
           <SH>APY: Unorganized Sector Ke Liye (Reality Check)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Atal Pension Yojana (APY), PFRDA (Pension Fund Regulatory and Development Authority) dwara chalayi jaane wali scheme hai. Yeh unorganized sector ke har worker ke liye khuli hai, jisme kisan bhi aate hain. Yahan aapko flexibility milti hai: aap ₹1000, ₹2000, ₹3000, ₹4000, ya ₹5000 ka pension slab choose kar sakte hain.
+            Atal Pension Yojana (APY), PFRDA dwara chalayi jaane wali scheme hai. Yeh unorganized sector ke har worker ke liye khuli hai, jisme kisan bhi aate hain. Yahan aapko flexibility milti hai: aap ₹1000, ₹2000, ₹3000, ₹4000, ya ₹5000 ka pension slab choose kar sakte hain.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Lekin ek kadwi sachai yeh hai jo aksar chhupa di jati hai: <strong>atal pension yojana kisan ke liye</strong> tab zyada attractive thi jab government 5 saal tak co-contribution deti thi. Naye subscribers ke liye yeh benefit ab practically available nahi hai. Matlab, ab aapko apni jeb se pura amount jama karna padta hai, bina kisi sarkari madad ke.
+            Lekin ek kadwi sachai yeh hai jo aksar chhupa di jati hai: yeh scheme tab zyada attractive thi jab government 5 saal tak co-contribution deti thi. Naye subscribers ke liye yeh benefit ab practically available nahi hai. Matlab, ab aapko apni jeb se pura amount jama karna padta hai, bina kisi sarkari madad ke.
           </p>
         </section>
 
@@ -189,7 +189,7 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
             </table>
           </div>
           <p className="text-xs text-[var(--color-text-muted)]">
-            Jab hum <strong>pm kisan maandhan pension comparison</strong> karte hain, toh sabse bada <strong>apy vs pmkmy contribution difference</strong> yeh nikal kar aata hai ki PMKMY mein sarkar ka saath lambe samay tak milta hai, jabki APY mein aapko zyada tar apni jeb se hi pura amount jama karna padta hai.
+            In dono ko side-by-side rakh kar dekhein toh ek baat saaf dikhti hai: PMKMY mein sarkar ka saath lambe samay tak milta hai, jabki APY mein aapko zyada tar apni jeb se hi pura amount jama karna padta hai.
           </p>
         </section>
 
@@ -214,7 +214,7 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
           </div>
 
           <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-            <strong>Meri raay:</strong> Agar aap eligible kisan hain, toh <strong>pmkmy better than apy</strong> hai, point blank. 25 saal ki umar mein ₹80 vs ₹210 ka farak chhota lag sakta hai, lekin 35 saal mein yeh hazaron rupaye ka farak ban jata hai, woh bhi bina government help ke. <strong>Farmer pension scheme apy ya maandhan</strong> choose karte waqt yeh long-term math hamesha dhyan mein rakhein.
+            Meri raay: Agar aap eligible kisan hain, toh PMKMY hi behtar option hai. 25 saal ki umar mein ₹80 vs ₹210 ka farak shuru mein chhota lag sakta hai, lekin 35 saal mein yeh hazaron rupaye ka farak ban jata hai, woh bhi bina government help ke. Pension scheme choose karte waqt yeh long-term math hamesha dhyan mein rakhein.
           </p>
         </section>
 
@@ -236,7 +236,7 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
         <section className="mb-8">
           <SH>Kya Aap PMKMY aur APY Dono Ek Saath Le Sakte Hain?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Yeh sawal mujhe bahut log puchte hain: "<strong>pmkmy aur apy dono ek saath le sakte hain kya?</strong>" Ya phir, "<strong>kya main pmkmy aur apy dono le sakta hoon?</strong>"
+            Yeh sawal mujhe bahut log puchte hain: kya main PMKMY aur APY dono ek saath le sakta hoon?
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Technically, haan. Kyunki PMKMY ko LIC manage karti hai aur APY ko PFRDA, inke databases abhi tak puri tarah se interlinked nahi hain. Aap ek CSC par PMKMY ka form bhar sakte hain aur bank mein jaakar APY ka form bhi bhar sakte hain. System aapko rok nahi dega.
@@ -249,7 +249,7 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
         <section className="mb-8">
           <SH>40 Saal Ke Baad Ka Dilemma: Kya Abhi Bhi Late Nahi Hua?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Bahut se kisan 38-40 saal ki umar mein aakar sochte hain ki ab shuru karein ya nahi. Yeh ek common confusion hai: <strong>40 saal ke baad apy ya pmkmy konsa join karein</strong>?
+            Bahut se kisan 38-40 saal ki umar mein aakar sochte hain ki ab shuru karein ya nahi. Yeh ek common confusion hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Aaiye numbers dekhte hain. 40 saal ki umar mein PMKMY join karne par aapko ₹3000 pension ke liye mahine ka sirf ₹200 dena hoga (aur sarkar bhi ₹200 degi). Wahin, APY mein 40 saal ki umar mein ₹3000 pension ke liye aapko lagbhag ₹420 se ₹430 mahina dena padega, aur sarkar ka koi match nahi milega.
@@ -268,7 +268,7 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
             <strong>PMKMY mein:</strong> Agar aap beech mein chhodte hain, toh aapko sirf aapka apna jama kiya hua contribution aur uspar bana simple interest wapas milta hai. Government ka diya hua hissa pension fund mein hi chala jata hai. Yeh rule thoda harsh lag sakta hai, lekin scheme ka maqsad hi retirement tak paisa jama rakhna hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            <strong>APY mein:</strong> Yahan bhi premature exit par aapko corpus (apna + govt ka, agar applicable ho) mil sakta hai, lekin iske liye bhi strict conditions hain aur process thoda lamba ho sakta hai. 
+            <strong>APY mein:</strong> Yahan bhi premature exit par aapko corpus mil sakta hai, lekin iske liye bhi strict conditions hain aur process thoda lamba ho sakta hai. 
           </p>
           <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
             <em>Ek limitation acknowledge karun:</em> Exact exit calculation har individual case par depend karti hai (kitne saal contribution diya, interest rate kya tha). Isliye beech mein nikalne ka sochne se pehle apne nazdeeki CSC ya bank branch se ek baar written mein confirm zaroor kar lein.
@@ -293,14 +293,14 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
         <section className="mb-8">
           <SH>Final Verdict: Kaunsi Scheme Choose Karein?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Seedhi baat, no bakwas. Jab baat <strong>kisan pension yojana konsi sahi hai</strong> ki aati hai, toh jawab aapki profile mein chhupa hai.
+            Jab baat sahi pension scheme choose karne ki aati hai, toh jawab aapki profile mein chhupa hai.
           </p>
           <ul className="list-disc list-inside text-sm text-[var(--color-text-muted)] space-y-2 mb-4 ml-2">
-            <li><strong>PMKMY choose karein agar:</strong> Aapke paas 2 hectare se kam zameen hai, aap kisan hain, aur aap chahte hain ki sarkar aapke har rupaye par rupaya lagaye. Yeh <strong>kisan ke liye best pension scheme</strong> hai.</li>
+            <li><strong>PMKMY choose karein agar:</strong> Aapke paas 2 hectare se kam zameen hai, aap kisan hain, aur aap chahte hain ki sarkar aapke har rupaye par rupaya lagaye. Yeh chhote kisanon ke liye sabse behtar option hai.</li>
             <li><strong>APY choose karein agar:</strong> Aapke paas kisan ki zameen nahi hai (ya 2 hectare se zyada hai), aap unorganized sector worker hain, aur aapko ₹3000 se zyada (jaise ₹5000) pension ki zaroorat hai.</li>
           </ul>
           <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-            Agar aap abhi tak PMKMY mein enroll nahi hue hain, toh <Link href="/maandhan/pm-kisan-maandhan-registration-2026" className="text-green-600 hover:underline font-medium">PMKMY registration ka poora process</Link> hamare doosre article mein detail se samjhaya gaya hai. Wahan se start karein. Agar aapko <strong>pm kisan pension vs apy kaunsi behtar hai</strong> ko lekar ab bhi doubt hai, toh niche comment section mein apna specific case likhein, hum guide karenge.
+            Agar aap abhi tak PMKMY mein enroll nahi hue hain, toh <Link href="/maandhan/pm-kisan-maandhan-registration-2026" className="text-green-600 hover:underline font-medium">PMKMY registration ka poora process</Link> hamare doosre article mein detail se samjhaya gaya hai. Wahan se start karein. Agar aapko dono schemes ko lekar ab bhi doubt hai, toh niche comment section mein apna specific case likhein, hum guide karenge.
           </p>
         </section>
 
@@ -314,7 +314,7 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Aakhri Baat</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Dost, pension scheme koi lottery nahi hai, yeh aapke aaj ke chhote tyag ka kal ka bada sahara hai. <strong>apy 3000 pension vs pmkmy 3000 pension</strong> mein farak sirf numbers ka nahi, balki "government support" ka hai. 
+            Dost, pension scheme koi lottery nahi hai, yeh aapke aaj ke chhote tyag ka kal ka bada sahara hai. Dono schemes mein ₹3000 pension ka farak sirf numbers ka nahi, balki "government support" ka hai. 
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
             Agar aap eligible hain, toh PMKMY se behtar koi deal market mein nahi hai. Jaldi karein, kyunki umar badhne ke saath monthly contribution bhi badhta jayega. Koi doubt ho toh niche comment karein ya apne nazdeeki CSC se baat karein. Aapka budhapa surakshit, toh aapka parivaar surakshit.
