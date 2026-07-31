@@ -111,20 +111,47 @@ export default async function CategoryPage({
     url: url,
     inLanguage: 'hi-IN',
     isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: SITE_URL },
-    numberOfItems: categoryArticles.length,
+    publisher: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
     mainEntity: {
       '@type': 'ItemList',
-      itemListElement: categoryArticles.map((a, i) => ({
-        '@type': 'ListItem',
-        position: i + 1,
-        item: {
-          '@type': 'Article',
-          '@id': `${SITE_URL}/articles/${a.slug}`,
-          url: `${SITE_URL}/articles/${a.slug}`,
-          name: a.title,
-          headline: a.title,
-        },
-      })),
+      numberOfItems: categoryArticles.length,
+      itemListElement: categoryArticles.map((a, i) => {
+        const articleUrl = `${SITE_URL}/articles/${a.slug}`;
+        return {
+          '@type': 'ListItem',
+          position: i + 1,
+          item: {
+            '@type': 'Article',
+            '@id': articleUrl,
+            url: articleUrl,
+            name: a.title,
+            headline: a.title,
+            description: a.desc,
+            inLanguage: 'hi-IN',
+            ...(a.ogImage ? { image: `${SITE_URL}${a.ogImage}` } : {}),
+            ...(a.publishedTime ? { datePublished: a.publishedTime } : {}),
+            ...(a.modifiedTime ? { dateModified: a.modifiedTime } : {}),
+            author: {
+              '@type': 'Organization',
+              name: a.author || AUTHOR_NAME,
+              url: AUTHOR_URL,
+            },
+            publisher: {
+              '@type': 'Organization',
+              name: SITE_NAME,
+              url: SITE_URL,
+            },
+            mainEntityOfPage: {
+              '@type': 'WebPage',
+              '@id': articleUrl,
+            },
+          },
+        };
+      }),
     },
   };
 
