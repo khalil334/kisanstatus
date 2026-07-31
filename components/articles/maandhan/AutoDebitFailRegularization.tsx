@@ -38,19 +38,19 @@ const FAQS_DATA = [
 
 const RELATED_CARDS = [
   {
-    slug: 'cibil-score-kaise-badaye',
-    title: 'CIBIL Score Improve Karein',
-    desc: 'EMI bounce ke baad apne credit score ko wapas 750+ improve karne ke proven aur safe tarike.',
+    href: '/articles/KisanTractorLoan2026',
+    title: 'Tractor Loan aur CIBIL Score',
+    desc: 'EMI bounce CIBIL par kaise asar karta hai, aur tractor loan ke liye kaun sa score chahiye — poori jankari.',
     emoji: '📈',
   },
   {
-    slug: 'pm-kisan-maandhan-yojana',
+    href: '/articles/PmKisanMaandhanYojanaPension',
     title: 'PM Kisan Maandhan Details',
     desc: 'Agar aap kisan hain, toh janien Maandhan pension scheme mein auto-debit kaise set aur manage karein.',
     emoji: '👨‍🌾',
   },
   {
-    slug: 'pmkmy-bank-account-change',
+    href: '/maandhan/pmkmy-bank-account-change',
     title: 'Bank Account Update',
     desc: 'Registered bank account change ya NACH mandate update karne ka complete step-by-step process.',
     emoji: '🏦',
@@ -430,8 +430,8 @@ export default function AutoDebitFailRegularization({ article }: { article: Maan
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {RELATED_CARDS.map((card) => (
               <Link
-                key={card.slug}
-                href={`/maandhan/${card.slug}`}
+                key={card.href}
+                href={card.href}
                 className="group block p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:border-green-500 transition-all duration-300"
               >
                 <div className="text-2xl mb-2">{card.emoji}</div>
@@ -460,8 +460,8 @@ export default function AutoDebitFailRegularization({ article }: { article: Maan
 
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/maandhan/cibil-score-kaise-badaye', l: '📈 CIBIL Score' },
-          { href: '/maandhan/pm-kisan-maandhan-yojana', l: '👨‍🌾 Maandhan Yojana' },
+          { href: '/articles/KisanTractorLoan2026', l: '📈 CIBIL & Tractor Loan' },
+          { href: '/articles/PmKisanMaandhanYojanaPension', l: '👨‍🌾 Maandhan Yojana' },
           { href: '/maandhan/pmkmy-bank-account-change', l: '🏦 Bank Change' },
         ]} />
         <Disclaimer />
