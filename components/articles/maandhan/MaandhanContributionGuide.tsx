@@ -428,7 +428,7 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
             Enrollment ke baad aap apna status pmkmy.gov.in par check kar sakte hain. "Subscriber Status" ya "Know Your Status" option mein apna KPAN number ya registered mobile number daaliye. OTP verify karein — <strong>ek practical tip:</strong> OTP aane mein kabhi-kabhi 1-2 minute lag jata hai, thoda sabar rakhein, baar-baar resend mat karein.
           </p>
           <p className="text-sm text-[var(--color-text-muted)]">
-            Helpline number <strong>1800-3000-3468</strong> par Monday se Saturday, 9:30 AM se 6 PM tak call karke bhi status poochh sakte hain. <Link href="/articles/pm-kisan-samman-nidhi-status-check" className="text-green-600 hover:underline font-medium">PM Kisan Samman Nidhi status check</Link> alag portal par hota hai — pmkisan.gov.in use karein, pmkmy.gov.in nahi.
+            Helpline number <strong>1800-3000-3468</strong> par Monday se Saturday, 9:30 AM se 6 PM tak call karke bhi status poochh sakte hain. <Link href="/articles/PmKisan24viKist2026" className="text-green-600 hover:underline font-medium">PM Kisan Samman Nidhi status check</Link> alag portal par hota hai — pmkisan.gov.in use karein, pmkmy.gov.in nahi.
           </p>
         </section>
 
