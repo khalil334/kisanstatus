@@ -1,4 +1,6 @@
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
+import React from 'react';
 import { MAANDHAN_ARTICLES } from '@/lib/maandhan-data';
 import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '@/lib/site-config';
 
@@ -67,34 +69,52 @@ export default async function MaandhanArticlePage({ params }: { params: Promise<
     notFound();
   }
 
-  switch (slug) {
-    case 'pm-kisan-maandhan-registration-2026':
-      return <PmKisanMaandhanRegistration2026 article={article} />;
-    case 'pm-kisan-maandhan-eligibility-documents':
-      return <PmKisanMaandhanEligibilityDocuments article={article} />;
-    case 'pm-kisan-maandhan-pension-calculator':
-      return <PmKisanMaandhanPensionCalculator article={article} />;
-    case 'pm-kisan-maandhan-withdrawal-refund-rules':
-      return <PmKisanMaandhanWithdrawalRefund article={article} />;
-    case 'pm-kisan-maandhan-auto-debit-poora-sach':
-      return <PmKisanMaandhanAutoDebitPooraSach article={article} />;
-    case 'pm-kisan-maandhan-status-check-online':
-      return <PmKisanMaandhanStatusCheckOnline article={article} />;
-    case 'pm-kisan-maandhan-pension-card-download':
-      return <KisanPensionCardDownload article={article} />;
-    case 'family-pension-rules':
-      return <FamilyPensionRules article={article} />;
-    case 'pmkmy-bank-account-change':
-      return <PmkmyBankAccountChange article={article} />;
-    case 'pmkmy-grievance-complaint-helpline':
-      return <PmkmyGrievanceComplaintHelpline article={article} />;
-    case 'auto-debit-fail-hone-par-regularization-kaise-karein':
-      return <AutoDebitFailRegularization article={article} />;
-    case 'pm-kisan-maandhan-age-wise-contribution-chart-2026':
-      return <MaandhanContributionGuide article={article} />;
-    case 'pm-kisan-maandhan-vs-atal-pension-yojana':
-      return <PmkmyVsApyComparison2026 article={article} />;
-    default:
-      notFound();
-  }
+  const COMPONENTS: Record<string, React.ComponentType<{ article: typeof article }>> = {
+    'pm-kisan-maandhan-registration-2026': PmKisanMaandhanRegistration2026,
+    'pm-kisan-maandhan-eligibility-documents': PmKisanMaandhanEligibilityDocuments,
+    'pm-kisan-maandhan-pension-calculator': PmKisanMaandhanPensionCalculator,
+    'pm-kisan-maandhan-withdrawal-refund-rules': PmKisanMaandhanWithdrawalRefund,
+    'pm-kisan-maandhan-auto-debit-poora-sach': PmKisanMaandhanAutoDebitPooraSach,
+    'pm-kisan-maandhan-status-check-online': PmKisanMaandhanStatusCheckOnline,
+    'pm-kisan-maandhan-pension-card-download': KisanPensionCardDownload,
+    'family-pension-rules': FamilyPensionRules,
+    'pmkmy-bank-account-change': PmkmyBankAccountChange,
+    'pmkmy-grievance-complaint-helpline': PmkmyGrievanceComplaintHelpline,
+    'auto-debit-fail-hone-par-regularization-kaise-karein': AutoDebitFailRegularization,
+    'pm-kisan-maandhan-age-wise-contribution-chart-2026': MaandhanContributionGuide,
+    'pm-kisan-maandhan-vs-atal-pension-yojana': PmkmyVsApyComparison2026,
+  };
+
+  const ArticleComponent = COMPONENTS[slug];
+  if (!ArticleComponent) notFound();
+
+  // Internal linking: every maandhan article links to 6 sibling articles.
+  // Deterministic rotation by article index so link equity spreads across the set.
+  const idx = MAANDHAN_ARTICLES.findIndex((a) => a.slug === slug);
+  const siblings = MAANDHAN_ARTICLES.filter((a) => a.slug !== slug);
+  const related = Array.from({ length: Math.min(6, siblings.length) }, (_, i) => siblings[(idx + i) % siblings.length]);
+
+  return (
+    <>
+      <ArticleComponent article={article} />
+      <section aria-label="Related maandhan articles" className="container-site max-w-3xl mx-auto px-4 pb-10">
+        <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
+          <h2 className="font-black text-[var(--color-text)] mb-4 text-base flex items-center gap-2">
+            <span>🔗</span> Related Articles — Yeh Bhi Padho
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            {related.map((a) => (
+              <Link
+                key={a.slug}
+                href={`/maandhan/${a.slug}`}
+                className="flex items-center gap-3 p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors text-sm font-medium text-[var(--color-text)] no-underline"
+              >
+                <span>{a.title}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  );
 }
