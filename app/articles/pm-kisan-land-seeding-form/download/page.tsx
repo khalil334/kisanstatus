@@ -30,7 +30,7 @@ export default function LandSeedingDownloadPage() {
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
       { '@type': 'ListItem', position: 2, name: 'Articles', item: `${SITE_URL}/articles` },
-      { '@type': 'ListItem', position: 3, name: 'Land Seeding Form Guide', item: `${SITE_URL}/articles/pm-kisan-land-seeding-form-pdf-2026` },
+      { '@type': 'ListItem', position: 3, name: 'Land Seeding Form Guide', item: `${SITE_URL}/articles/PmKisanLandSeedingForm` },
       { '@type': 'ListItem', position: 4, name: pageTitle },
     ],
   };
@@ -50,7 +50,7 @@ export default function LandSeedingDownloadPage() {
               <span aria-hidden="true">/</span>
               <Link href="/articles" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Articles</Link>
               <span aria-hidden="true">/</span>
-              <Link href="/articles/pm-kisan-land-seeding-form-pdf-2026" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Land Seeding Form</Link>
+              <Link href="/articles/PmKisanLandSeedingForm" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Land Seeding Form</Link>
               <span aria-hidden="true">/</span>
               <span className="text-white font-bold">Download</span>
             </nav>
@@ -110,7 +110,7 @@ export default function LandSeedingDownloadPage() {
                 <li>Sahi details bharne ke baad ise apne Block Agriculture Office ya nazdeeki CSC centre mein submit karein.</li>
                 <li>
                   Agar aapka naam PM Kisan beneficiary list mein nahi dikh raha hai ya details galat hain, toh pehle hamari{' '}
-                  <Link href="/articles/pm-kisan-master-guide-2026" className="underline font-bold hover:text-blue-900 dark:hover:text-blue-200">
+                  <Link href="/articles/PmKisanMasterGuide2026" className="underline font-bold hover:text-blue-900 dark:hover:text-blue-200">
                     PM Kisan New Registration & Correction Guide
                   </Link>{' '}
                   zaroor padhein.
@@ -124,25 +124,25 @@ export default function LandSeedingDownloadPage() {
               </h3>
               <div className="grid grid-cols-2 gap-3">
                 <Link
-                  href="/articles/pm-kisan-land-seeding-form-pdf-2026#uttar-pradesh"
+                  href="/articles/PmKisanLandSeedingForm#uttar-pradesh"
                   className="px-4 py-3 bg-gray-100 dark:bg-gray-700 hover:bg-green-100 dark:hover:bg-green-900/30 hover:text-green-800 dark:hover:text-green-300 rounded-lg text-center text-sm font-medium text-gray-800 dark:text-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500"
                 >
                   Uttar Pradesh
                 </Link>
                 <Link
-                  href="/articles/pm-kisan-land-seeding-form-pdf-2026#bihar"
+                  href="/articles/PmKisanLandSeedingForm#bihar"
                   className="px-4 py-3 bg-gray-100 dark:bg-gray-700 hover:bg-green-100 dark:hover:bg-green-900/30 hover:text-green-800 dark:hover:text-green-300 rounded-lg text-center text-sm font-medium text-gray-800 dark:text-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500"
                 >
                   Bihar
                 </Link>
                 <Link
-                  href="/articles/pm-kisan-land-seeding-form-pdf-2026#madhya-pradesh"
+                  href="/articles/PmKisanLandSeedingForm#madhya-pradesh"
                   className="px-4 py-3 bg-gray-100 dark:bg-gray-700 hover:bg-green-100 dark:hover:bg-green-900/30 hover:text-green-800 dark:hover:text-green-300 rounded-lg text-center text-sm font-medium text-gray-800 dark:text-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500"
                 >
                   Madhya Pradesh
                 </Link>
                 <Link
-                  href="/articles/pm-kisan-land-seeding-form-pdf-2026#rajasthan"
+                  href="/articles/PmKisanLandSeedingForm#rajasthan"
                   className="px-4 py-3 bg-gray-100 dark:bg-gray-700 hover:bg-green-100 dark:hover:bg-green-900/30 hover:text-green-800 dark:hover:text-green-300 rounded-lg text-center text-sm font-medium text-gray-800 dark:text-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500"
                 >
                   Rajasthan
@@ -153,7 +153,7 @@ export default function LandSeedingDownloadPage() {
 
           <div className="text-center">
             <Link
-              href="/articles/pm-kisan-land-seeding-form-pdf-2026"
+              href="/articles/PmKisanLandSeedingForm"
               className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-green-500"
             >
               ← Wapas Main Land Seeding Form Guide Par Jaayein
