@@ -148,6 +148,23 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
   ];
 }
 
+// Article components that do NOT render their own <RelatedArticles> block.
+// For these, the page wrapper injects a Related Articles section so every
+// article carries at least 5 contextual internal links (Ahrefs internal-link fix).
+const NEEDS_RELATED_BLOCK = new Set<string>([
+  'CHCPortal',
+  'SilageMaking',
+  'DripSprinkler',
+  'MushroomKheti',
+  'VerminCompost',
+  'MadhumakhiPalan',
+  'PMatsyaSampada',
+  'KisanCreditCardOnlineApply2026',
+  'PmKisanEkycOnline2026',
+  'PmKisanPaymentFailedFix2026',
+  'PmKisanStateNodalOfficerList',
+]);
+
 const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> = {
   KisanRinKahaSeLe2026: dynamic(() => import('@/components/articles/KisanRinKahaSeLe2026'), { ssr: true }),
   KisanTractorLoan2026: dynamic(() => import('@/components/articles/KisanTractorLoan2026'), { ssr: true }),
@@ -301,6 +318,7 @@ export default async function ArticlePage({
   const schemas = buildSchemas(article, url, ogImage);
   const rawCat = CATEGORIES[article.category];
   const catName: string = rawCat ? ((rawCat as any).nameHi ?? (rawCat as any).name) : '';
+  const related = getRelatedArticles(article.slug, 6);
 
   return (
     <article itemScope itemType="https://schema.org/Article">
@@ -327,6 +345,27 @@ export default async function ArticlePage({
       )}
 
       <ArticleComponent article={article} />
+
+      {NEEDS_RELATED_BLOCK.has(article.component) && related.length > 0 && (
+        <section aria-label="Related articles" className="container-site max-w-3xl mx-auto px-4 pb-10">
+          <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
+            <h2 className="font-black text-[var(--color-text)] mb-4 text-base flex items-center gap-2">
+              <span>🔗</span> Related Articles — Yeh Bhi Padho
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              {related.map((r) => (
+                <Link
+                  key={r.slug}
+                  href={`/articles/${r.slug}`}
+                  className="flex items-center gap-3 p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors text-sm font-medium text-[var(--color-text)] no-underline"
+                >
+                  <span>{r.title}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
     </article>
   );
 }
