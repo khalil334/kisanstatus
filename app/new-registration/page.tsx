@@ -234,7 +234,7 @@ export default function NewRegistrationPage() {
               📝 pmkisan.gov.in par Register Karein ↗
             </a>
             <Link
-              href="/articles/pm-kisan-ekyc-online-2026"
+              href="/articles/PmKisanEkycOnline2026"
               className="btn-secondary inline-flex items-center justify-center gap-2 px-6 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-200 font-bold rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500"
             >
               🔐 eKYC Kaise Karein (Guide)
