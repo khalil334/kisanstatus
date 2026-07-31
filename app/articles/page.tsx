@@ -19,7 +19,7 @@ export const revalidate = 3600;
 const ALL_ARTICLES = [...ARTICLES, ...MAANDHAN_ARTICLES];
 
 export const metadata: Metadata = {
-  title: `Kisan Guides 2026 — ${ALL_ARTICLES.length}+ Resources | ${SITE_NAME}`,
+  title: `Kisan Guides 2026 — ${ALL_ARTICLES.length}+ Resources`,
   description: `${ALL_ARTICLES.length}+ verified guides on PM Kisan, farming subsidies, loans & crop insurance. Simple Hinglish explanations for Indian farmers.`,
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   alternates: { 
@@ -136,9 +136,9 @@ export default function ArticlesPage() {
       name: SITE_NAME,
       url: SITE_URL,
     },
-    numberOfItems: ALL_ARTICLES.length,
     mainEntity: {
       '@type': 'ItemList',
+      numberOfItems: ALL_ARTICLES.length,
       itemListElement: schemaArticles,
     },
   };
