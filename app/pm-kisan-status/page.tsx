@@ -218,7 +218,7 @@ export default function PMKisanStatusPage() {
                 Official website par jaakar apne Aadhaar number se OTP-based ya biometric verification complete karein.
               </p>
               <Link
-                href="/articles/pm-kisan-ekyc-online-2026"
+                href="/articles/PmKisanEkycOnline2026"
                 className="inline-flex items-center gap-1 text-sm font-bold text-yellow-900 dark:text-yellow-200 bg-yellow-200 dark:bg-yellow-800 hover:bg-yellow-300 dark:hover:bg-yellow-700 px-4 py-2 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-yellow-500"
               >
                 eKYC Complete Karne Ki Puri Guide Dekhein ↗
@@ -293,7 +293,7 @@ export default function PMKisanStatusPage() {
               {
                 problem: 'Payment status "Pending" dikh raha hai',
                 solution: 'pmkisan.gov.in par jaakar eKYC complete karein aur apne bank account ko Aadhaar se link (seed) karwayein.',
-                link: '/articles/pm-kisan-ekyc-online-2026',
+                link: '/articles/PmKisanEkycOnline2026',
                 linkText: 'eKYC Guide'
               },
               {
@@ -303,7 +303,7 @@ export default function PMKisanStatusPage() {
               {
                 problem: 'Bank account verified nahi hai',
                 solution: 'Apne bank branch mein jaakar confirm karein ki Aadhaar seeding ho gayi hai. Bina seeding ke DBT payment nahi aata.',
-                link: '/articles/pm-kisan-correction-form-2026',
+                link: '/articles/PmKisanCorrectionForm2026',
                 linkText: 'Bank Detail Correction'
               },
               {
@@ -337,21 +337,21 @@ export default function PMKisanStatusPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <Link
-              href="/articles/pm-kisan-24vi-kist-2026"
+              href="/articles/PmKisan24viKist2026"
               className="bg-white dark:bg-gray-800 rounded-2xl p-6 text-center hover:shadow-lg hover:border-green-300 dark:hover:border-green-700 transition-all border border-gray-200 dark:border-gray-700 group"
             >
               <span className="text-4xl mb-3 block">📆</span>
               <p className="font-bold text-sm text-gray-900 dark:text-white group-hover:text-[#14532d] dark:group-hover:text-green-400 transition-colors">24vi Kist Status Update</p>
             </Link>
             <Link
-              href="/articles/pm-kisan-ekyc-online-2026"
+              href="/articles/PmKisanEkycOnline2026"
               className="bg-white dark:bg-gray-800 rounded-2xl p-6 text-center hover:shadow-lg hover:border-green-300 dark:hover:border-green-700 transition-all border border-gray-200 dark:border-gray-700 group"
             >
               <span className="text-4xl mb-3 block">🔐</span>
               <p className="font-bold text-sm text-gray-900 dark:text-white group-hover:text-[#14532d] dark:group-hover:text-green-400 transition-colors">Online eKYC Complete Karein</p>
             </Link>
             <Link
-              href="/articles/pm-kisan-beneficiary-list-2026"
+              href="/articles/PmKisanBeneficiaryList2026"
               className="bg-white dark:bg-gray-800 rounded-2xl p-6 text-center hover:shadow-lg hover:border-green-300 dark:hover:border-green-700 transition-all border border-gray-200 dark:border-gray-700 group"
             >
               <span className="text-4xl mb-3 block">📋</span>

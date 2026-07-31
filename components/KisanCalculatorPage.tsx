@@ -375,7 +375,7 @@ const RELATED_ARTICLES = [
   { href: '/articles/pmfby-crop-insurance-2026', label: '🌱 Crop Protection Guide' },
   { href: '/articles/kisan-tractor-loan-2026', label: '🚜 Farm Equipment Loan' },
   { href: '/articles/pm-kisan-registration-online-2026', label: '📝 Scheme Enrollment' },
-  { href: '/articles/pm-kisan-ekyc-online-2026', label: '🔐 Digital Verification Guide' },
+  { href: '/articles/PmKisanEkycOnline2026', label: '🔐 Digital Verification Guide' },
   { href: '/articles/pm-kisan-payment-failed-status-2026', label: '💸 Payment Fix Guide' },
 ];
 
