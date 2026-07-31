@@ -36,7 +36,7 @@ function DownloadContent() {
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
       { '@type': 'ListItem', position: 2, name: 'Articles', item: `${SITE_URL}/articles` },
-      { '@type': 'ListItem', position: 3, name: 'PM Kisan Beneficiary List Download', item: `${SITE_URL}/articles/pm-kisan-beneficiary-list-2026` },
+      { '@type': 'ListItem', position: 3, name: 'PM Kisan Beneficiary List Download', item: `${SITE_URL}/articles/PmKisanBeneficiaryList2026` },
     ],
   };
 
@@ -118,7 +118,7 @@ function DownloadContent() {
                 <li>Agar aapke paas Aadhaar number ya registered mobile number hai, toh aap 'Beneficiary Status' option se apna naam direct bhi check kar sakte hain.</li>
                 <li>
                   Agar aapka naam list mein nahi mil raha hai ya details galat hain, toh pehle hamari{' '}
-                  <Link href="/articles/pm-kisan-correction-form-2026" className="underline font-bold hover:text-blue-900 dark:hover:text-blue-200">
+                  <Link href="/articles/PmKisanCorrectionForm2026" className="underline font-bold hover:text-blue-900 dark:hover:text-blue-200">
                     Name/Bank Detail Correction Guide
                   </Link>{' '}
                   zaroor padhein.
