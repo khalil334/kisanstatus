@@ -135,7 +135,7 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
   {
     slug: 'pm-kisan-maandhan-age-wise-contribution-chart-2026',
     title: 'PM Kisan Maandhan Yojana: Age-Wise Monthly Contribution Chart 2026',
-    description: 'PM-KMY mein 18 se 40 saal tak har umar ka exact monthly contribution, government co-contribution, registration process, aur pension rules — official sources se verify karke.',
+    description: 'PM-KMY mein 18–40 saal har umar ka exact monthly contribution, government co-contribution aur pension rules — official sources se verified.',
     category: 'pension-scheme',
     published: '2026-07-30T10:00:00+05:30',
     modified: '2026-07-30T18:00:00+05:30',
