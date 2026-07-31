@@ -185,12 +185,12 @@ export default function AuthorPage() {
           <h2 className="text-xl font-bold text-[var(--color-text)] mb-4">📝 KisanStatus Team Ke Top Resources</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
-              { href: '/articles/pm-kisan-24vi-kist-2026', title: '24vi Kist Status Check Guide', icon: '📅' },
-              { href: '/articles/pm-kisan-ekyc-online-2026', title: 'Digital eKYC Verification Guide', icon: '🔐' },
-              { href: '/articles/pm-kisan-beneficiary-list-2026', title: 'Beneficiary List Kaise Dekhein', icon: '📋' },
+              { href: '/articles/PmKisan24viKist2026', title: '24vi Kist Status Check Guide', icon: '📅' },
+              { href: '/articles/PmKisanEkycOnline2026', title: 'Digital eKYC Verification Guide', icon: '🔐' },
+              { href: '/articles/PmKisanBeneficiaryList2026', title: 'Beneficiary List Kaise Dekhein', icon: '📋' },
               { href: '/articles/pm-kisan-payment-failed-fix-2026', title: 'Payment Failed Status — Fix', icon: '💸' },
-              { href: '/articles/pm-kisan-master-guide-2026', title: 'New Enrollment & Master Guide', icon: '📝' },
-              { href: '/articles/pm-kisan-correction-form-2026', title: 'Name/Bank Detail Correction Online', icon: '✏️' },
+              { href: '/articles/PmKisanMasterGuide2026', title: 'New Enrollment & Master Guide', icon: '📝' },
+              { href: '/articles/PmKisanCorrectionForm2026', title: 'Name/Bank Detail Correction Online', icon: '✏️' },
             ].map((art) => (
               <Link
                 key={art.href}

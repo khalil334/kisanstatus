@@ -177,13 +177,13 @@ export default function OfficialLinksPage() {
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Link 
-              href="/articles/pm-kisan-24vi-kist-2026" 
+              href="/articles/PmKisan24viKist2026" 
               className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--color-primary)] text-white text-sm font-bold rounded-xl hover:bg-green-700 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500"
             >
               ✅ 24vi Kist Status
             </Link>
             <Link 
-              href="/articles/pm-kisan-ekyc-online-2026" 
+              href="/articles/PmKisanEkycOnline2026" 
               className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--color-card)] border border-[var(--color-border)] text-[var(--color-text)] text-sm font-bold rounded-xl hover:border-green-400 dark:hover:border-green-600 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500"
             >
               🔐 eKYC Guide
