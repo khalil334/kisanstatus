@@ -120,7 +120,7 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
             {
               '@type': 'Article',
               headline: 'PM Kisan Maandhan Yojana: Age-Wise Monthly Contribution Chart 2026',
-              description: 'PM-KMY mein 18 se 40 saal tak har umar ka exact monthly contribution, government co-contribution, registration process, aur pension rules — official sources se verify karke.',
+              description: 'PM-KMY mein 18–40 saal har umar ka exact monthly contribution, government co-contribution aur pension rules — official sources se verified.',
               image: 'https://kisanstatus.com/images/articles/maandhan/MaandhanContributionGuide/hero.webp',
               inLanguage: 'hi-IN',
               keywords: 'PM Kisan Maandhan Yojana, PMKMY contribution chart, Kisan Maandhan monthly contribution, PMKMY pension',
