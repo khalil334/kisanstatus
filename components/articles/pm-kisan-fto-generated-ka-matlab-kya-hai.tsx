@@ -7,7 +7,7 @@ import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, Bott
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const PUBLISHED = '2026-06-23T08:00:00+05:30';
-const MODIFIED = '2026-07-11T08:00:00+05:30';
+const MODIFIED = '2026-08-02T08:00:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '📅' },
@@ -19,16 +19,18 @@ const RELATED = [
 ];
 
 const FAQS_DATA = [
-  { q: 'FTO Generated ka matlab kya hai?', a: 'Dekho bhai, Fund Transfer Order. Government ne bank ko funds bhejne ka order de diya hai. Paisa confirm hai, bas bank processing baaki hai. 7-15 din mein account mein aayega.' },
-  { q: 'FTO ke baad kitne din mein paisa aata hai?', a: 'SBI/PNB: 8-10 din bhai. HDFC/ICICI: 10-14 din. BOB: 12-15 din. Regional Rural Banks: 15-20 din. Post Office: 15-25 din. 15 din se zyada ho jaye toh bank visit karo.' },
-  { q: 'Credit Release Pending kitne din rehta hai?', a: 'Normally 3-10 din bhai. 15 din se zyada = Aadhaar seeding ya NPCI mapping mein problem. Bank jaa ke dono check karwao.' },
-  { q: '24vi kist kab release hogi?', a: 'October 2026 mein expected hai bhai. September end tak FTO generate hona shuru hoga. eKYC complete walon ka pehle aayega.' },
-  { q: '15 din baad bhi paisa nahi aaya — kya karein?', a: 'Pehle bank jaa ke Aadhaar seeding check. Phir NPCI mapping verify. Account active hai confirm. Phir 155261 call. Last option CSC visit.' },
-  { q: 'Bina eKYC ke FTO generate hota hai?', a: 'Nahi bhai. 2026 mein bina digital verification ke koi kist nahi. Pehle eKYC karo, phir 24vi (Oct 2026) ka wait.' },
-  { q: 'FTO reject kyun hota hai?', a: 'Account band, Aadhaar seeding galat, naam mismatch, IFSC invalid, ya account dormant. Zyadatar cases mein Aadhaar seeding missing hoti hai.' },
-  { q: 'Kya FTO ke baad credit reject ho sakti hai?', a: 'Haan bhai, lekin kam hota hai. Account band ya details galat hone par. Isliye bank details updated rakho.' },
-  { q: 'Post Office account mein kitne din lagte hain?', a: 'Sabse zyada bhai — 15-25 din. Thoda wait karo. 25 din tak wait karo, phir helpline call.' },
-  { q: 'Mobile number change ho gaya toh status kaise check karein?', a: 'OTP nahi milega bhai. CSC jaa ke mobile update karwao pehle. Phir status check karo. Yeh bahut zaroori hai.' },
+  { q: 'FTO ka full form kya hai?', a: 'Fund Transfer Order. Simple si baat hai — government ki taraf se bank ko diya gaya ek order ki "is kisan ko itna paisa transfer karo". Isse zyada kuch nahi.' },
+  { q: 'FTO Generated ka matlab kya hai?', a: 'Order de diya gaya hai. Paisa confirm ho chuka hai, bank abhi process kar raha hai. Aam taur par 7 se 15 din lagte hain account tak pahunchne mein.' },
+  { q: 'FTO processed ka status generated se alag kaise hai?', a: 'Generated matlab order bana. Processed matlab bank ne us order par kaam shuru kar diya hai — yeh ek step aage ka stage hai. Processed dikhne ke baad paisa aana aur bhi jaldi expect kar sakte ho.' },
+  { q: 'FTO ke baad kitne din mein paisa aata hai?', a: 'Depend karta hai bank par. SBI aur PNB mein 8-10 din, HDFC-ICICI jaise private banks mein 10-14, Bank of Baroda 12-15, aur Post Office sabse zyada time leta hai — 15 se 25 din tak.' },
+  { q: 'Land seeding kya hota hai PM Kisan mein?', a: 'Iska matlab hai aapki zameen ka record — khasra/khatauni number — aapke PM Kisan account se digitally link karna. Bina land seeding ke naya registration approve nahi hota.' },
+  { q: 'Land seeding status kaise check karein?', a: 'pmkisan.gov.in par Farmers Corner mein jao, apna registration number ya Aadhaar daalo, aur wahan land seeding ka status alag se dikh jayega — verified ya pending.' },
+  { q: 'CSC registration ki fees kitni hai?', a: 'CSC operator PM Kisan registration ke liye sarkari taur par koi fixed fee nahi charge kar sakta, service free honi chahiye. Kuch centers ₹20-50 tak "seva shulk" mangte hain — yeh unauthorized hai, resist karo agar zyada maange.' },
+  { q: 'PM Kisan transaction failed kyun hota hai?', a: 'Sabse common wajah — bank account inactive ho gaya, Aadhaar seeding missing hai, ya naam mein spelling mismatch hai registration aur bank record ke beech. Bank jaakar in teenon ko verify karwao.' },
+  { q: 'Self registered farmer ka status kaise dekhein?', a: 'Portal par "Status of Self Registered Farmer" option se apna registration number daal kar dekh sakte ho ki application approved hui, pending hai, ya kisi document ki kami hai.' },
+  { q: '24vi kist kab release hogi?', a: 'October 2026 ke aas-paas expect ki ja rahi hai. Jinki eKYC pehle complete hui hai unhe pehle milegi.' },
+  { q: '15 din baad bhi paisa nahi aaya — kya karein?', a: 'Bank jaakar Aadhaar seeding check karo, NPCI mapping verify karo, account active hai ya nahi dekho. Uske baad bhi kuch na ho toh 155261 par call karo, last resort CSC visit.' },
+  { q: 'Bina eKYC ke FTO generate hota hai?', a: '2026 mein nahi. Digital verification zaroori kar di gayi hai — pehle eKYC complete karo, tabhi agli kist ka FTO banega.' },
 ];
 
 function CountdownModal({ 
@@ -128,13 +130,13 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Payment Status Guide</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            FTO Generated Ka Matlab Kya Hai? FTO Ke Baad Paisa Kab Aayega? Complete Guide
+            FTO Full Form, Generated Ka Matlab Aur Land Seeding Status — Sab Kuch Ek Jagah
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
             <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 10 min read</span>
+            <span>⏱️ 12 min read</span>
           </div>
         </div>
       </div>
@@ -158,69 +160,93 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
         </div>
 
         <div className="my-6 p-5 bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-500 dark:border-amber-700 border-l-[6px] rounded-xl">
-          <h2 className="text-base font-black text-amber-800 dark:text-amber-300 mb-2">Status Samajh Nahi Aa Raha?</h2>
+          <h2 className="text-base font-black text-amber-800 dark:text-amber-300 mb-2">Status Dekh Ke Ghabra Gaye?</h2>
           <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed mb-2">
-            <em>"FTO dikh raha hai par paisa nahi aaya. Kya government ne dhokha de diya?"</em>
+            <em>"FTO dikh raha hai par paisa nahi aaya. Ye kya scene hai?"</em>
           </p>
           <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
-            <strong>Nahi bhai! Yeh achhi baat hai.</strong> FTO matlab Fund Transfer Order. Government ne bank ko paisa bhejne ka order de diya hai. Bas bank process kar raha hai. Agar aap bhi <strong>pm kisan fto status check</strong> kar rahe ho, toh ye article aapke liye hai.
+            Relax — yahi normal process hai. Neeche pura samjha diya hai: FTO ka full form kya hai, iska matlab, land seeding kaise check karein, aur paisa kab tak aayega. Sab ek jagah mil jayega.
           </p>
         </div>
+
+        <section className="mb-8">
+          <SH>FTO Ka Full Form Kya Hai?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Chaliye pehle basic se shuru karte hain. FTO ka <strong>full form hai Fund Transfer Order</strong>. Yeh koi complicated cheez nahi — government ki taraf se bank ko diya gaya ek instruction hai, jismein likha hota hai ki kis kisan ko kitna paisa uske account mein daalna hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Jab aap portal par "FTO Generated" dekhte ho, matlab ye order ban chuka hai aur bank ke paas pahunch gaya hai. Ab agla kaam bank ka hai.
+          </p>
+        </section>
 
         <section className="mb-8">
           <SH>FTO Generated Ka Matlab Kya Hai? (FTO Meaning in Hindi)</SH>
           
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Bhai suno, seedha jawab deta hoon. <strong>FTO Generated ka matlab</strong> hai ki government ne bank ko paisa bhejne ka order de diya hai. Isko <strong>Fund Transfer Order</strong> kehte hain.
+            Ek example se samajhte hain. Maan lijiye aapne kisi ko cheque diya. Cheque dena matlab paise ka wada kar diya, order de diya. Ab bank ka kaam hai us cheque ko cash karna. <strong>FTO bhi bilkul yahi hai</strong> — sirf digital form mein.
           </p>
 
           <div className="bg-green-50 dark:bg-green-900/20 border-2 border-green-300 dark:border-green-700 rounded-xl p-5 mb-6">
             <ul className="text-sm text-green-800 dark:text-green-200 space-y-1">
-              <li><strong>FTO Generated</strong> = Government ne order de diya</li>
-              <li><strong>Credit Release Pending</strong> = Bank process kar raha hai</li>
-              <li><strong>Paisa aayega</strong> = 7-15 din mein</li>
+              <li><strong>FTO Generated</strong> — government ne order bhej diya</li>
+              <li><strong>FTO Processed</strong> — bank ne order par kaam shuru kar diya</li>
+              <li><strong>Credit Release Pending</strong> — paisa nikalne ki final stage chal rahi hai</li>
+              <li><strong>Paisa aayega</strong> — usually 7-15 din mein</li>
             </ul>
           </div>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Ek example deta hoon. Maan lo aapne cheque likha. Cheque likhna matlab order de diya. Ab bank ka kaam hai use cash karna. <strong>FTO woh cheque hai bhai</strong>.
-          </p>
-
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Teen steps hain:
+            Process teen hisson mein baant sakte hain:
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
             <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl text-center">
               <span className="text-2xl block mb-2">📝</span>
               <p className="font-black text-blue-800 dark:text-blue-300 text-sm">Step 1</p>
-              <p className="text-xs text-blue-700 dark:text-blue-400 mt-1">Cheque likha (Order ban gaya)</p>
+              <p className="text-xs text-blue-700 dark:text-blue-400 mt-1">Order ban gaya (Generated)</p>
             </div>
             <div className="p-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-xl text-center">
               <span className="text-2xl block mb-2">🏦</span>
               <p className="font-black text-yellow-800 dark:text-yellow-300 text-sm">Step 2</p>
-              <p className="text-xs text-yellow-700 dark:text-yellow-400 mt-1">Bank process kar raha</p>
+              <p className="text-xs text-yellow-700 dark:text-yellow-400 mt-1">Bank process kar raha (Processed)</p>
             </div>
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl text-center">
               <span className="text-2xl block mb-2">💰</span>
               <p className="font-black text-green-800 dark:text-green-300 text-sm">Step 3</p>
-              <p className="text-xs text-green-700 dark:text-green-400 mt-1">Paisa account mein</p>
+              <p className="text-xs text-green-700 dark:text-green-400 mt-1">Paisa account mein aa gaya</p>
             </div>
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Abhi aap step 2 par ho. Bas thoda wait karo. <strong>PM Kisan fund transfer order status</strong> check karte raho.
+            Agar aapka status abhi "Generated" hai, toh aap step 1 se 2 ke beech hain. "Processed" dikhe toh samajh lo bank ne kaam shuru kar diya hai — ab zyada wait nahi karna padega.
           </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Land Seeding Kya Hoti Hai Aur Iska Status Kaise Check Karein?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Ye ek aisa term hai jo naye registration karne walon ko sabse zyada confuse karta hai. <strong>Land seeding</strong> ka matlab hai aapki zameen ke revenue records — khasra number, khatauni — ko aapke PM Kisan account ke saath digitally link karna. Jab tak ye linking nahi hoti, application aage nahi badhti.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            <strong>Land seeding status</strong> check karna ho toh ye steps follow karein:
+          </p>
+          <StepList>
+            <SI n={1}>pmkisan.gov.in par Farmers Corner mein jaayein</SI>
+            <SI n={2}>Registration number ya Aadhaar number daalein</SI>
+            <SI n={3}>Status page par land seeding wala row alag se dikhega — "Seeded" ya "Not Seeded"</SI>
+          </StepList>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4 mb-3">
+            Agar "Not Seeded" dikh raha ho, toh apne raajya ke Patwari, Lekhpal, ya taluk revenue office se sampark karke <strong>land seeding form</strong> jama karna hoga. Ye form usually offline bharna padta hai, kyunki verification zameen ke actual record se karna zaroori hota hai.
+          </p>
+          <IB>
+            Kai kisan bhaiyon ne poocha hai ki <strong>PM Kisan land seeding form</strong> online kahan milega. Abhi tak ye adhiktar states mein tehsil/patwari office se hi process hota hai — online self-service sabhi jagah available nahi hai.
+          </IB>
         </section>
 
         <section className="mb-8">
           <SH>FTO Ke Baad Kitne Din Mein Paisa Aata Hai?</SH>
           
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Bhai, ye sabse common sawal hai — <strong>fto generated ke baad kitne din mein paisa aata hai</strong>? Dekho, ye depend karta hai ki aapka bank kaunsa hai.
-          </p>
-
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Maine kuch banks ka time note kiya hai:
+            Ye sabse zyada poocha jaane wala sawal hai. Sach batayein toh iska ek fixed jawab nahi hai — bank alag alag speed se kaam karte hain.
           </p>
 
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
@@ -251,15 +277,32 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             </table>
           </div>
           <IB>
-            <strong>Meri salah:</strong> SBI/PNB mein 10 din baad bank jao bhai. Chhote banks mein 15-20 din wait karo. <strong>PM Kisan credit release pending</strong> dikh raha hai toh thoda aur wait karo.
+            SBI ya PNB account hai toh 10 din baad follow-up karna theek rahega. Chhote ya regional banks mein 15-20 din tak wait karna normal hai.
           </IB>
+        </section>
+
+        <section className="mb-8">
+          <SH>PM Kisan Transaction Failed Kyun Hota Hai?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Kabhi kabhi FTO ban jaane ke baad bhi transaction fail ho jaata hai. Iske peeche aksar in wajahon mein se koi ek hoti hai:
+          </p>
+          <ul className="list-disc list-inside text-sm text-[var(--color-text-muted)] space-y-2 mb-4">
+            <li>Bank account band ya inactive ho gaya hai</li>
+            <li>Aadhaar seeding bank ke saath nahi hui</li>
+            <li>Naam mein spelling registration aur bank record mein alag hai</li>
+            <li>IFSC code galat register ho gaya tha</li>
+            <li>Account 6 mahine se dormant pada hai</li>
+          </ul>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Sabse pehle bank jaakar Aadhaar seeding aur naam match verify karwayein — kaafi cases yahin resolve ho jaate hain. Fix hone ke baad paisa agli cycle mein aa jaata hai.
+          </p>
         </section>
 
         <section className="mb-8">
           <SH>24vi Kist Kab Aayegi? (PM Kisan 24vi Kist FTO Date)</SH>
           
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            October 2026 mein expected hai. Lekin ye depend karta hai ki aapne eKYC kab ki. <strong>PM Kisan 24vi kist fto date</strong> abhi confirm nahi hui hai, lekin September end tak shuru ho jayegi.
+            October 2026 ke aas-paas expected hai, lekin exact date abhi tak official taur par announce nahi hui. September ke end tak FTO generation shuru hone ki sambhavna hai.
           </p>
 
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
@@ -287,7 +330,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             </table>
           </div>
           <DB>
-            <strong>Ek baat yaad rakhna:</strong> Abhi tak eKYC nahi ki bhai? Toh 24vi nahi milegi. Pehle authentication karo, phir 25vi (Feb 2027) ka wait karo.
+            eKYC abhi tak nahi karwayi hai toh 24vi kist mil paana mushkil hai. Jitni jaldi ho sake authentication complete kar lein, warna agli kist tak wait karna padega.
           </DB>
         </section>
 
@@ -295,23 +338,23 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
           <SH>Mobile Se FTO Status Check Kaise Karein?</SH>
           
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Bhai bahut simple hai. <strong>PM Kisan FTO status check by Aadhaar</strong> karne ke liye ye steps follow karo:
+            Process kaafi seedha hai. Ye steps follow karein:
           </p>
 
           <StepList>
-            <SI n={1}><strong>pmkisan.gov.in</strong> kholo</SI>
-            <SI n={2}>Farmers Corner mein jao → <strong>Beneficiary Status</strong> par click karo</SI>
-            <SI n={3}>Aadhaar number daalo (dhyan se, ek digit bhi galat nahi hona chahiye)</SI>
-            <SI n={4}>OTP verify karo → phir <strong>Get Data</strong> button dabao</SI>
-            <SI n={5}>Table mein <strong>FTO status</strong> dikhega + credit release status bhi</SI>
+            <SI n={1}><strong>pmkisan.gov.in</strong> kholein</SI>
+            <SI n={2}>Farmers Corner mein jaayein → <strong>Beneficiary Status</strong> par click karein</SI>
+            <SI n={3}>Aadhaar number daalein (ek digit bhi galat nahi hona chahiye)</SI>
+            <SI n={4}>OTP verify karein → phir <strong>Get Data</strong> button dabayein</SI>
+            <SI n={5}>Table mein FTO status ke saath credit release status bhi dikhega</SI>
           </StepList>
           
           <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl">
             <p className="text-sm font-bold text-green-800 dark:text-green-300 mb-2">
-              🔍 Abhi FTO Status Check Karo
+              🔍 Abhi FTO Status Check Karein
             </p>
             <p className="text-xs text-green-700 dark:text-green-400 mb-3">
-              Official PM Kisan portal par jakar apna <strong>pm kisan payment status check</strong> karo. 10 second baad portal khulega.
+              Official PM Kisan portal par jaakar apna payment status check karein. 10 second baad portal khulega.
             </p>
             <button
               onClick={() => handleOfficialLink(
@@ -321,71 +364,76 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
               )}
               className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
-              📥 Yahan Click Karo → FTO Status Check Hoga
+              📥 Yahan Click Karein → FTO Status Check Hoga
             </button>
           </div>
 
           <WB>
-            <strong>Kuch common problems:</strong> OTP nahi aa raha = mobile change hua, CSC jao. "Record Not Found" = Aadhaar galat ya enrollment nahi hui. Server down = subah 10-11 baje try karo.
+            Kuch common dikkatein: OTP na aaye toh mobile number CSC se update karwayein. "Record Not Found" ka matlab Aadhaar galat daala gaya ya enrollment hi nahi hui. Server dheera chale toh subah 10-11 baje try karein, tab traffic kam hota hai.
           </WB>
+        </section>
+
+        <section className="mb-8">
+          <SH>Self Registered Farmer Ka Status Kaise Check Karein?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Agar aapne khud portal par jaakar apna registration kiya tha (CSC se nahi), toh uska alag se status check kar sakte hain — <strong>Status of Self Registered Farmer</strong> option se.
+          </p>
+          <StepList>
+            <SI n={1}>pmkisan.gov.in par "Status of Self Registered Farmer" section dhoondein</SI>
+            <SI n={2}>Registration number daalein jo aapko form bharte waqt mila tha</SI>
+            <SI n={3}>Status dikhega — approved, pending verification, ya document ki kami</SI>
+          </StepList>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-3">
+            Kisi document ki kami dikhe toh state ke agriculture department portal se woh upload karna hoga. Approval mein state ke hisaab se 2-6 hafte lag jaate hain.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>CSC Se Registration Karwane Ki Fees Kitni Hai?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Officially, PM Kisan registration ki service CSC (Common Service Centre) par <strong>free honi chahiye</strong> — sarkari guidelines mein koi fixed fee prescribed nahi hai. 
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Practically, kuch CSC operators printing ya "seva shulk" ke naam par ₹20 se ₹50 tak charge kar lete hain, jo unauthorized hai. Agar koi isse zyada maange, toh mana kar sakte hain ya district agriculture office mein complaint darj kara sakte hain.
+          </p>
         </section>
 
         <section className="mb-8">
           <SH>15 Din Ho Gaye Par Paisa Nahi Aaya? (FTO Generated But Money Not Received)</SH>
           
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Bahut logon ko ye problem hoti hai — <strong>FTO generated but money not received</strong>. Tension mat lo bhai. Ye 5 steps follow karo:
+            Ye situation kaafi kisanon ke saath hoti hai. Ghabraane ki zaroorat nahi — in steps se check karte jaayein:
           </p>
 
           <div className="space-y-4">
             <div className="border-l-4 border-red-500 dark:border-red-700 pl-4 py-1">
-              <h3 className="font-black text-[var(--color-text)] text-sm mb-1">Pehle: Aadhaar Seeding Check</h3>
-              <p className="text-xs text-[var(--color-text-muted)]">Bank jao → Counter par bolo "Aadhaar seeding check karo" → Agar "Not Seeded" dikhe toh turant karwao. Zyadatar problems yahi hoti hain.</p>
+              <h3 className="font-black text-[var(--color-text)] text-sm mb-1">Aadhaar Seeding Check Karein</h3>
+              <p className="text-xs text-[var(--color-text-muted)]">Sabse pehle bank jaakar counter par Aadhaar seeding status poochein. Yahi sabse common reason hai jab paisa atak jata hai — "Not Seeded" dikhe toh usi din karwa lein.</p>
             </div>
             <div className="border-l-4 border-orange-500 dark:border-orange-700 pl-4 py-1">
-              <h3 className="font-black text-[var(--color-text)] text-sm mb-1">Doosra: NPCI Mapping</h3>
-              <p className="text-xs text-[var(--color-text-muted)]">Bank manager se bolo: "DBT ke liye NPCI mapping active hai kya?" Thoda mushkil sunne mein hai lekin woh samajh jayenge bhai.</p>
+              <h3 className="font-black text-[var(--color-text)] text-sm mb-1">NPCI Mapping</h3>
+              <p className="text-xs text-[var(--color-text-muted)]">Bank manager se poochein ki DBT ke liye NPCI mapping active hai ya nahi.</p>
             </div>
             <div className="border-l-4 border-yellow-500 dark:border-yellow-700 pl-4 py-1">
-              <h3 className="font-black text-[var(--color-text)] text-sm mb-1">Teesra: Account Active Hai?</h3>
-              <p className="text-xs text-[var(--color-text-muted)]">Agar 6 mahine se transaction nahi hua toh account dormant ho jata hai. ₹100 deposit karo → same day active ho jayega.</p>
+              <h3 className="font-black text-[var(--color-text)] text-sm mb-1">Account Dormant Toh Nahi Ho Gaya?</h3>
+              <p className="text-xs text-[var(--color-text-muted)]">Agar 6 mahine se koi transaction nahi hua, toh bank account apne aap dormant ho jata hai aur credit rukk jaata hai. Isko fix karna aasan hai — sirf ₹100 deposit karo, account usi din wapas active ho jayega.</p>
             </div>
             <div className="border-l-4 border-blue-500 dark:border-blue-700 pl-4 py-1">
-              <h3 className="font-black text-[var(--color-text)] text-sm mb-1">Chautha: Helpline Par Call</h3>
-              <p className="text-xs text-[var(--color-text-muted)]">📞 155261 ya 1800115526 par call karo (subah 9 se shaam 6 baje tak). Aadhaar + enrollment + account number ready rakho bhai.</p>
+              <h3 className="font-black text-[var(--color-text)] text-sm mb-1">Helpline Try Karein</h3>
+              <p className="text-xs text-[var(--color-text-muted)]">📞 155261 ya 1800115526 — subah 9 se shaam 6 baje tak available hai. Call karte waqt Aadhaar number, enrollment number aur bank account number saath rakhein, sawal karte hi maangenge.</p>
             </div>
             <div className="border-l-4 border-green-500 dark:border-green-700 pl-4 py-1">
-              <h3 className="font-black text-[var(--color-text)] text-sm mb-1">Aakhri: CSC Visit</h3>
-              <p className="text-xs text-[var(--color-text-muted)]">CSC operator poora case check karke complaint register karega. 3-5 din mein kaam ho jayega.</p>
+              <h3 className="font-black text-[var(--color-text)] text-sm mb-1">Kuch Na Ho Toh CSC Jaayein</h3>
+              <p className="text-xs text-[var(--color-text-muted)]">Ye last option hai. CSC operator poora case dekh kar complaint register kar dega, aur 3-5 din mein kaam ban jata hai.</p>
             </div>
           </div>
-        </section>
-
-        <section className="mb-8">
-          <SH>PM Kisan Payment Failed After FTO — Kya Karein?</SH>
-          
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Kabhi kabhi <strong>PM Kisan payment failed after FTO</strong> ho jata hai. Iske reasons ye hote hain:
-          </p>
-
-          <ul className="list-disc list-inside text-sm text-[var(--color-text-muted)] space-y-2 mb-4">
-            <li>Account band ho gaya hai</li>
-            <li>Aadhaar seeding missing hai</li>
-            <li>Naam match nahi ho raha</li>
-            <li>IFSC code galat hai</li>
-            <li>Account dormant hai</li>
-          </ul>
-
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Agar aapko ye sab dikkat aa rahi hai toh pehle bank jao aur in cheezon ko fix karwao. Uske baad agle cycle mein paisa aa jayega.
-          </p>
         </section>
 
         <section className="mb-8">
           <SH>State Ke Hisaab Se Time</SH>
           
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Har state mein alag time lagta hai. Maine kuch states ka time note kiya hai:
+            Har raajya ka processing system alag hai, isliye time bhi different lagta hai:
           </p>
 
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
@@ -442,12 +490,12 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Seedhi Baat</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            FTO dikh raha hai = <strong>ghabrao mat bhai</strong>. Paisa confirm hai. 7-15 din wait karo. Uske baad bhi na aaye toh:
+            FTO dikh raha hai toh ghabraane ki koi baat nahi — paisa confirm hai, bas process mein hai. 7-15 din wait karein. Uske baad bhi na aaye toh:
           </p>
           <ol className="space-y-2 text-sm text-green-800 dark:text-green-300 list-decimal list-inside">
-            <li>Bank jaa ke <strong>Aadhaar seeding</strong> check karo</li>
-            <li><strong>NPCI mapping</strong> verify karo</li>
-            <li>Helpline <strong>155261</strong> par call karo</li>
+            <li>Bank jaakar <strong>Aadhaar seeding</strong> aur <strong>land seeding</strong> dono check karein</li>
+            <li><strong>NPCI mapping</strong> verify karein</li>
+            <li>Helpline <strong>155261</strong> par call karein</li>
           </ol>
         </div>
 
@@ -456,7 +504,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             🔗 PM Kisan Official Portal
           </h3>
           <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
-            Apna <strong>FTO status check online</strong> karne ke liye, beneficiary list dekhne ke liye, ya saari jaankari ke liye official portal par jaayein. 10 second baad portal khulega.
+            FTO status, land seeding status, ya beneficiary list — teeno ki jaankari isi ek portal par mil jaayegi. 10 second baad khulega.
           </p>
           <button
             onClick={() => handleOfficialLink(
@@ -466,15 +514,15 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             )}
             className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
           >
-            📥 Yahan Click Karo → PM Kisan Portal Khulega
+            📥 Yahan Click Karein → PM Kisan Portal Khulega
           </button>
         </div>
 
         <CalcBanner
           icon="📅"
-          title="Apni Kist Track Karo"
-          desc="Kitni kist aayi, FTO status kya hai, arrears kitne — sab jaano"
-          primaryCta={{ href: '/calculator/installment-tracker', label: '📅 Tracker Kholo →' }}
+          title="Apni Kist Track Karein"
+          desc="Kitni kist aayi, FTO status kya hai, arrears kitne — sab jaanein"
+          primaryCta={{ href: '/calculator/installment-tracker', label: '📅 Tracker Kholein →' }}
           secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: '💰 Benefit Calculator' }}
         />
 
