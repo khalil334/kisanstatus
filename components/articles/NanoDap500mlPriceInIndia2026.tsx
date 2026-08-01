@@ -6,7 +6,7 @@ import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, Bott
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const PUBLISHED = '2026-06-21T08:00:00+05:30';
-const MODIFIED = '2026-07-04T08:00:00+05:30';
+const MODIFIED = '2026-08-02T08:00:00+05:30';
 
 const RELATED = [
   { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply Guide', emoji: '💳' },
@@ -18,13 +18,13 @@ const RELATED = [
 ];
 
 const FAQS_DATA = [
-  { q: '500ml bottle ki price India mein 2026 kya hai?', a: 'Dekho bhai, lagbhag ₹250-350. Subsidy ke saath ₹200-280 tak mil sakta hai. Exact price authorized dealer ya IFFCO website se confirm karein — state aur season ke hisaab se vary hota hai.' },
-  { q: 'IFFCO liquid DAP aaj ka rate kya hai?', a: 'Authorized dealers par ₹280-320 ke beech hai bhai. Subsidized rate kuch states mein ₹220-270. Latest price IFFCO official website ya nazdeeki Krishi Kendra se check karein.' },
-  { q: '1 acre ke liye foliar dosage kitna hai?', a: 'Label ke anusaar 500ml per acre bhai, 100-150 litre paani mein mila kar 2-3 baar spray. Exact dosage crop type aur KVK recommendations ke hisaab se alag ho sakta hai.' },
-  { q: 'Traditional DAP se kya farak hai?', a: 'Liquid DAP foliar spray hai bhai — nano particles seedha pattiyon se absorb hote hain. Traditional DAP granular soil application hai. Kai experts dono ka combination recommend karte hain — substitute nahi, supplement hai.' },
-  { q: 'Urea ya pesticide ke saath mix kar sakte hain?', a: 'Compatibility test zaroori hai bhai. Chhote area par pehle test karo. Kisi bhi mix ke liye KVK ya IFFCO guidelines follow karna safest hai. Galat mix se effectiveness kam hoti hai ya crop damage ho sakta hai.' },
-  { q: 'Result kitne din mein dikhta hai?', a: 'Spray ke 7-10 din mein initial farak dikhna shuru ho sakta hai bhai. 2-3 sprays ke baad clearer result. Soil condition, mausam, crop type, aur sahi usage par depend karta hai — fixed guarantee nahi.' },
-  { q: 'Online kahan se kharidein?', a: 'IFFCO official website sabse trustworthy hai bhai. Amazon/Flipkart par official sellers check karein. Local Krishi Kendra mein subsidy milne ki sambhavna. Hamesha original packaging QR code scan karke verify karein.' },
+  { q: 'Nano DAP 500ml price India mein 2026 kya hai?', a: 'Lagbhag ₹250-350 ke beech. Subsidy mil jaaye toh ₹200-280 tak bhi aa sakta hai. Exact price ke liye authorized dealer ya IFFCO website confirm karna behtar rahega — state aur season se rate badalta hai.' },
+  { q: 'IFFCO liquid DAP ka aaj ka rate kya chal raha hai?', a: 'Authorized dealers ₹280-320 charge kar rahe hain. Kuch states mein subsidized rate ₹220-270 tak mil jaata hai. Rate roz nahi badalta, par season shuru hote hi update lena samajhdari hai.' },
+  { q: '1 acre ke liye foliar spray ka dosage kitna hota hai?', a: 'Label ke mutabik 500ml per acre — 100-150 litre paani mein ghol kar 2-3 baar spray. Crop ke hisaab se KVK dosage thoda change bhi karwa sakta hai.' },
+  { q: 'Traditional DAP se ye kaise alag hai?', a: 'Liquid DAP ek foliar spray hai — nano particles seedhe pattiyon se absorb hote hain. Traditional DAP zameen mein daala jaata hai. Dono ko ek doosre ka replacement nahi, saathi samjhein — kai experts inka combination hi suggest karte hain.' },
+  { q: 'Urea ya pesticide ke saath mix karna theek hai?', a: 'Pehle compatibility test kar lena zaroori hai — chhote patch par try karke dekhein. Kisi bhi mix se pehle KVK ya IFFCO guideline padh lena safe rahega, warna crop damage ka risk rehta hai.' },
+  { q: 'Result kitne din mein dikhna shuru hota hai?', a: '7-10 din mein kuch farak nazar aa sakta hai. Do-teen sprays ke baad tasveer clearer hoti hai. Soil, mausam aur crop type par bhi kaafi kuch depend karta hai, isliye fixed timeline nahi de sakte.' },
+  { q: 'Online kahan se kharidna safe hai?', a: 'IFFCO ki official website sabse reliable option hai. Amazon-Flipkart par sirf verified seller se lein. Local Krishi Kendra mein subsidy milne ke chances bhi rehte hain — original packaging ka QR code zaroor check karein.' },
 ];
 
 const howToSchema = {
@@ -59,7 +59,7 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Fertilizer Price Guide</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            IFFCO Liquid DAP 500ml Price 2026: Rate, Dosage Chart, Aur Woh Baatein Jo Dealer Nahi Batata
+            Nano DAP 500ml Price 2026: Rate, Dosage Chart, Aur Woh Baatein Jo Dealer Nahi Batata
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
@@ -85,7 +85,7 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            IFFCO Liquid DAP 500ml — Approximate Price Range June 2026
+            IFFCO Liquid DAP 500ml — Approximate Price Range 2026
           </p>
         </div>
 
@@ -93,27 +93,27 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
         <div className="my-6 p-5 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-xl">
           <h2 className="text-base font-black text-green-800 dark:text-green-300 mb-2">Quick Answer</h2>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
-            <strong>Price:</strong> ₹250-350 (subsidy ke saath ₹200-280). <strong>Dosage:</strong> 500ml per acre, 100-150L paani mein, 2-3 sprays. <strong>Note:</strong> Exact price aur dosage authorized dealer ya KVK se confirm karein bhai — yeh estimated reference hai.
+            <strong>Nano DAP 500 ml price:</strong> ₹250-350 (subsidy ke saath ₹200-280). Agar aap <strong>nano dap ka rate</strong> ya <strong>nano dap online price</strong> dhoondh rahe hain, toh dono jagah yahi range milega. <strong>Dosage:</strong> 500ml per acre, 100-150L paani mein, 2-3 sprays. Exact price aur dosage authorized dealer ya KVK se hi confirm karein — yahan diye figures ek estimated reference hain.
           </p>
         </div>
 
         {/* Section 1: What Is It */}
         <section className="mb-8">
-          <SH>Yeh Product Kya Hai?</SH>
+          <SH>Nano DAP Kya Hai — Simple Bhasha Mein</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Dekho bhai, IFFCO ka advanced liquid fertilizer hai. Nano-scale particles jo foliar spray se seedha pattiyon se absorb hote hain. Traditional DAP mitti mein jaata hai, yeh hawa se patti tak.
+            IFFCO ne jo ye liquid fertilizer banaya hai, uska poora naam hi keh raha hai ki iska size normal DAP se bahut chhota hai. Nano-scale particles hone ki wajah se ye foliar spray ke through seedhe pattiyon se absorb ho jaate hain. Simple DAP mitti mein daala jaata hai, ye hawa ke raaste patti tak pahunchta hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Important: Yeh traditional DAP ka <strong>substitute nahi, supplement hai.</strong> IFFCO aur agriculture experts dono ka combination recommend karte hain. Results har khet mein alag hote hain — soil, paani, fasal type, aur sahi usage par depend karta hai.
+            Ek baat clear kar dein: ye traditional DAP ka <strong>replacement nahi, saathi</strong> hai. Khud IFFCO aur agriculture experts dono ye combination hi recommend karte hain, akela nahi. Har khet ka result soil, paani, fasal aur usage ke tareeke par nirbhar karta hai.
           </p>
           <IB>
-            <strong>Honest Disclaimer:</strong> Koi fixed yield guarantee nahi hai bhai. Yeh guide estimated prices aur general dosage batati hai. Apne local KVK ki advice hamesha priority rakhein.
+            <strong>Saaf baat:</strong> Fixed yield ka koi wada nahi kiya ja sakta. Ye guide estimated prices aur general dosage ka reference deti hai — final decision apne local KVK se salah lekar hi lein.
           </IB>
         </section>
 
         {/* Section 2: Price 2026 */}
         <section className="mb-8">
-          <SH>500ml Bottle Price — 2026 Estimated Range</SH>
+          <SH>Nano DAP Price 500 ml — 2026 Ka Estimated Range</SH>
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
             <table className="w-full text-sm border-collapse">
               <thead>
@@ -140,7 +140,7 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
             </table>
           </div>
           <WB>
-            <strong>Note:</strong> Yeh June 2026 ki estimated values hain bhai. Actual price state, dealer, subsidy policy, aur season ke hisaab se badalta rehta hai.
+            <strong>Note:</strong> Ye 2026 ki estimated values hain. Actual price state, dealer, subsidy policy aur season ke hisaab se ghatta-badhta rehta hai.
           </WB>
         </section>
 
@@ -164,7 +164,7 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
         <section className="mb-8">
           <SH>State-wise Price Reference</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Haryana, Punjab, UP, Maharashtra, Gujarat mein demand zyada hai bhai = better availability. Eastern states mein supply chain slower hai.
+            Haryana, Punjab, UP, Maharashtra aur Gujarat mein demand zyada hai, isliye availability bhi wahan behtar rehti hai. Eastern states mein supply chain thoda dheera chalta hai, toh rate aur stock dono mein farak dikh sakta hai.
           </p>
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
             <table className="w-full text-sm border-collapse">
@@ -215,20 +215,20 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            State-wise Price Comparison — June 2026 Reference
+            State-wise Price Comparison — 2026 Reference
           </p>
         </div>
 
         {/* Section 4: Price Factors */}
         <section className="mb-8">
-          <SH>Price Kyun Badalti Hai?</SH>
+          <SH>Price Kyun Badalti Rehti Hai?</SH>
           <div className="space-y-3">
             {[
-              { title: 'State Subsidies', desc: 'Har state ka structure alag hai bhai. Kuch direct subsidy dete hain.' },
-              { title: 'Dealer Commission', desc: 'Retailer apna margin add karta hai. Wholesale mein sasta.' },
-              { title: 'Season Demand', desc: 'Sowing season mein demand spike = price up.' },
-              { title: 'Online vs Offline', desc: 'E-commerce par kabhi discount, local shop fixed price.' },
-              { title: 'Original vs Duplicate', desc: 'IFFCO original thoda mehnga hai bhai — quality verified. Sasta = risk.' },
+              { title: 'State Subsidies', desc: 'Har state ka apna structure hai — kuch seedha subsidy dete hain, kuch nahi.' },
+              { title: 'Dealer Commission', desc: 'Retailer apna margin jodta hai, isliye wholesale rate hamesha sasta padta hai.' },
+              { title: 'Season Demand', desc: 'Sowing season shuru hote hi demand ek dum badh jaati hai aur rate bhi.' },
+              { title: 'Online vs Offline', desc: 'E-commerce par kabhi kabhi discount mil jaata hai, local dukaan par usually fixed rate.' },
+              { title: 'Original vs Duplicate', desc: 'IFFCO ka asli product thoda mehnga zaroor hai, par quality guaranteed hai. Bohot sasta mila toh saavdhan rahein.' },
             ].map(({ title, desc }) => (
               <div key={title} className="border-l-4 border-green-400 dark:border-green-600 pl-4 py-1">
                 <p className="font-bold text-[var(--color-text)] text-sm">{title}</p>
@@ -242,16 +242,16 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
         <section className="mb-8">
           <SH>Foliar Spray Ke Sambhavit Fayde</SH>
           <DB>
-            <strong>Reminder:</strong> In benefits ka asar fasal, soil, paani, aur sahi usage par depend karta hai bhai. Har khet mein result alag. Fixed guarantee nahi.
+            <strong>Reminder:</strong> Har khet ka mizaaj alag hota hai — soil type, paani ki availability aur spray karne ka tareeka, teeno mil kar result decide karte hain. Isliye ek jaisa outcome sabko milega, aisa maan kar mat chaliye.
           </DB>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
             {[
-              { title: 'Kam Quantity, Zyada Kaam', desc: '500ml vs 50kg traditional DAP per acre. Transport cost kam.' },
-              { title: 'Tezi Se Absorption', desc: 'Nano particles foliar spray se jaldi absorb.' },
-              { title: 'Yield Mein Sambhavit Sudhar', desc: 'Kuch kisanon ne improvement report ki — guaranteed nahi.' },
-              { title: 'Soil Health Par Kam Asar', desc: 'Kam quantity = pH par comparatively less impact.' },
-              { title: 'Cost Effective Ho Sakta Hai', desc: '₹300 bottle vs ₹1,500 DAP bag per acre comparison.' },
-              { title: 'Lower Environmental Risk', desc: 'Kam quantity = groundwater runoff risk comparatively low.' },
+              { title: 'Kam Quantity, Zyada Kaam', desc: '500ml vs 50kg traditional DAP per acre — transport ka bojh bhi kam.' },
+              { title: 'Tezi Se Absorption', desc: 'Nano particles hone ki wajah se foliar spray jaldi absorb hoti hai.' },
+              { title: 'Yield Mein Sambhavit Sudhar', desc: 'Kuch kisanon ne improvement report ki hai, par ye guaranteed nahi hai.' },
+              { title: 'Soil Health Par Kam Asar', desc: 'Chhoti quantity ka matlab soil pH par kam farak padta hai.' },
+              { title: 'Cost Effective Ho Sakta Hai', desc: '₹300 ki bottle vs ₹1,500 ka DAP bag — per acre comparison mein.' },
+              { title: 'Lower Environmental Risk', desc: 'Kam quantity use hone se groundwater runoff ka risk bhi dusron ke muqable kam rehta hai.' },
             ].map(({ title, desc }) => (
               <div key={title} className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
                 <p className="font-bold text-[var(--color-text)] text-sm mb-1">{title}</p>
@@ -281,7 +281,7 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
         <section className="mb-8">
           <SH>Crop-wise Dosage Chart — Per Acre</SH>
           <WB>
-            <strong>Important:</strong> General reference only bhai. Exact dosage IFFCO label aur local KVK se confirm karein. Overdose se crop damage ho sakta hai.
+            <strong>Important:</strong> Ye general reference hai. Exact dosage IFFCO label aur local KVK se hi confirm karein — overdose se crop damage bhi ho sakta hai.
           </WB>
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
             <table className="w-full text-sm border-collapse">
@@ -334,23 +334,23 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
 
         {/* Section 7: How To Apply */}
         <section className="mb-8">
-          <SH>Apply Kaise Karein — Step by Step</SH>
+          <SH>Nano DAP Spray Karne Ka Sahi Tarika — Step by Step</SH>
           <StepList>
-            <SI n={1}>500ml product ko 100-150L paani mein mix karo bhai. 15L pump mein 50-75ml</SI>
-            <SI n={2}>Bottle achhe se shake karo — nano particles evenly mix hone chahiye</SI>
-            <SI n={3}>Subah ya shaam spray karo — dopahar ki garmi mein avoid karo</SI>
-            <SI n={4}>Pattiyon ke dono taraf spray — upar + neeche</SI>
-            <SI n={5}>4-6 ghante dry weather chahiye spray ke baad</SI>
-            <SI n={6}>Pesticide mix se pehle compatibility test karo chhote area par</SI>
+            <SI n={1}>500ml product ko 100-150L paani mein mix karein. 15L pump ke hisaab se 50-75ml lein</SI>
+            <SI n={2}>Bottle ko achhe se shake karein taaki nano particles evenly ghul jaayein</SI>
+            <SI n={3}>Subah ya shaam spray karein, dopahar ki garmi mein avoid karein</SI>
+            <SI n={4}>Pattiyon ke dono taraf spray karein — upar aur neeche dono</SI>
+            <SI n={5}>Spray ke baad 4-6 ghante tak mausam dry rehna zaroori hai</SI>
+            <SI n={6}>Kisi bhi pesticide ke saath mix karne se pehle chhote patch par test kar lein</SI>
           </StepList>
           <IB>
-            <strong>Tip:</strong> Fine spray nozzle use karo bhai — absorption behtar hoti hai. Coarse droplets waste hote hain.
+            <strong>Tip:</strong> Fine spray nozzle use karein — absorption behtar hoti hai. Coarse droplets zyadatar waste ho jaate hain.
           </IB>
         </section>
 
         {/* Section 8: Comparison */}
         <section className="mb-8">
-          <SH>Liquid Vs Traditional DAP — Sachai</SH>
+          <SH>Liquid Vs Traditional DAP — Asliyat</SH>
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
             <table className="w-full text-sm border-collapse">
               <thead>
@@ -380,7 +380,7 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
             </table>
           </div>
           <DB>
-            <strong>Sachai:</strong> Liquid DAP traditional DAP ka replacement nahi hai bhai. Dono ka sahi combination best results deta hai. Sirf liquid par depend mat karo.
+            <strong>Asliyat ye hai:</strong> Liquid DAP traditional DAP ki jagah nahi le sakta. Dono ka sahi combination hi best result deta hai — sirf liquid par bharosa mat karein.
           </DB>
         </section>
 
@@ -403,12 +403,15 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
         {/* Section 9: Where To Buy */}
         <section className="mb-8">
           <SH>Kahan Se Kharidein — Trusted Sources</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Kai kisan bhai poochte hain ki <strong>nano dap kahan milega</strong> ya <strong>iffco nano dap online kaise kharidein</strong>. Neeche diye sources mein se koi bhi try kar sakte hain:
+          </p>
           <div className="space-y-3">
             {[
-              { src: 'IFFCO Official Website', note: 'Sabse trustworthy hai bhai. Original product guarantee.' },
-              { src: 'Amazon / Flipkart', note: 'Official seller check karo. Ratings padho.' },
-              { src: 'Krishi Kendra / State Portals', note: 'Govt authorized. Subsidy possible.' },
-              { src: 'Local Authorized Dealer', note: 'Most kisan prefer offline. Receipt lo.' },
+              { src: 'IFFCO Official Website', note: 'Sabse trustworthy source — original product ki guarantee milti hai.' },
+              { src: 'Amazon / Flipkart', note: 'Sirf official seller se lein, ratings zaroor padhein.' },
+              { src: 'Krishi Kendra / State Portals', note: 'Government authorized hai, subsidy milne ke chances rehte hain.' },
+              { src: 'Local Authorized Dealer', note: 'Zyadatar kisan offline lena prefer karte hain — receipt zaroor le lein.' },
             ].map(({ src, note }) => (
               <div key={src} className="flex gap-3 p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
                 <span className="text-green-600 dark:text-green-400 font-bold shrink-0">✓</span>
@@ -420,7 +423,7 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
             ))}
           </div>
           <WB>
-            <strong>Fraud Alert:</strong> Original packaging par QR code scan karo bhai. Bohot sasta = suspicious. Fertilizer ke liye loan chahiye toh <Link href="/articles/KisanCreditCardOnlineApply2026" className="underline font-bold">KCC guide</Link> padho.
+            <strong>Fraud Alert:</strong> Original packaging ka QR code hamesha scan karein. Bohot sasta rate dikhe toh saavdhan rahein. Fertilizer ke liye loan chahiye toh <Link href="/articles/KisanCreditCardOnlineApply2026" className="underline font-bold">KCC guide</Link> padh lein.
           </WB>
         </section>
 
@@ -445,12 +448,12 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
           <SH>6 Galtiyan Jo Avoid Karni Chahiye</SH>
           <div className="space-y-2">
             {[
-              'Zyada quantity = crop jal sakta hai bhai. Label follow karo.',
-              'Dopahar mein spray = pattiyan jal sakti hain. Subah/shaam best.',
-              'Sirf 1 spray = insufficient. 2-3 sprays recommended.',
-              'Expired product = effectiveness zero. Manufacturing date check.',
-              'Galat paani ratio = dilution issue. Measure karo, andaza mat.',
-              'Baarish se pehle spray = wash-off. 4-6h dry window zaroori.',
+              'Zyada quantity daalna — crop jal sakta hai, label ka ratio follow karein.',
+              'Dopahar mein spray karna — pattiyan jal sakti hain, subah ya shaam best rehta hai.',
+              'Sirf ek baar spray karna — 2-3 sprays ke bina result adhoora rehta hai.',
+              'Expired product use karna — manufacturing date check karna na bhoolein.',
+              'Paani ka ratio andaaze se lena — measure karke hi dilute karein.',
+              'Baarish se theek pehle spray karna — 4-6 ghante ka dry window zaroori hai, warna wash-off ho jaata hai.',
             ].map((mistake) => (
               <div key={mistake} className="flex gap-2 p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg">
                 <span className="text-red-600 dark:text-red-400 font-bold shrink-0">✗</span>
@@ -465,21 +468,21 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Aksar Puche Jane Wale Sawal
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="Liquid DAP FAQ 2026 — Verified Answers" />
+          <FAQBlock faqs={FAQS_DATA} caption="Nano DAP FAQ 2026 — Verified Answers" />
         </section>
 
         {/* Conclusion */}
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Bottom Line</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Liquid DAP convenient option hai bhai — kam quantity, easy application. Lekin akela kaam nahi karta. Sahi beej, samay par paani, aur balanced nutrition zaroori hai.
+            Nano DAP ek convenient option hai — kam quantity, aasan application. Par ye akela sab kuch nahi kar sakta. Sahi beej, samay par paani aur balanced nutrition — inke bina koi bhi fertilizer poora asar nahi dikhayega.
           </p>
           <ol className="space-y-2 text-sm text-green-800 dark:text-green-300 list-decimal list-inside">
-            <li>Pehle chhote area par test karo</li>
-            <li>KVK se dosage confirm karo</li>
-            <li>Authorized dealer se hi kharido</li>
-            <li>Traditional DAP band mat karo — combine karo</li>
-            <li>QR code verify karo har purchase par</li>
+            <li>Pehle chhote area par test karein</li>
+            <li>KVK se dosage confirm karein</li>
+            <li>Authorized dealer se hi kharidein</li>
+            <li>Traditional DAP band na karein — combine karein</li>
+            <li>Har purchase par QR code verify karein</li>
           </ol>
         </div>
 
