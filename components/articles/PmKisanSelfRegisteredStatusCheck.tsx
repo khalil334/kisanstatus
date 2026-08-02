@@ -158,6 +158,9 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Registration khud karne ke baad sabse zyada confusion status check karne mein hoti hai — log sochte hain "maine khud kiya, shayad koi alag reference number ya login chahiye." Aisa kuch nahi hai. System mein CSC registration aur self registration mein koi field-level farak nahi hota — dono Aadhaar-linked entries hain.
           </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Waise portal par ek dedicated option bhi hai — Farmers Corner mein <strong>"Status of Self Registered Farmer"</strong> naam se. Wahan Aadhaar daal ke sirf apni application ka verification status dekh sakte ho — approve hui ya abhi patwari ke paas atki hai. Beneficiary Status se pehle yeh wala check karna better hai agar registration naya-naya kiya hai.
+          </p>
           <IB>
             <strong>Fayda:</strong> ₹20-50 bach jaate hain jo CSC wala charge leta hai. <strong>Nuksan:</strong> Agar koi galti ho gayi toh khud correct karna padega — koi help nahi karega. Ek common mistake: naam Aadhaar se hooba-hoo match nahi karna (middle name chhod dena, spelling farak) — isse verification atak jaata hai.
           </IB>
@@ -425,7 +428,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
                 <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer" className="underline text-[var(--color-primary)]">pmkisan.gov.in</a>
               </li>
               <li>
-                Self-registered farmers ke liye updation/verification page, official portal:{' '}
+                Status of Self Registered Farmer — updation/verification page, official portal:{' '}
                 <a href="https://pmkisan.gov.in/SearchSelfRegisterfarmerDetailsnewUpdated.aspx" target="_blank" rel="noopener noreferrer" className="underline text-[var(--color-primary)]">pmkisan.gov.in — Self Registered Farmers Updation</a>
               </li>
             </ul>
