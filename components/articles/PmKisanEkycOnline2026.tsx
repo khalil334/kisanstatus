@@ -6,11 +6,9 @@ import Script from 'next/script';
 import { SI, StepList, IB, WB, DB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 
-// ✅ UPDATED DATES: Modified date set to today (July 22, 2026) for strong E-E-A-T signal
 const PUBLISHED = '2026-03-15T08:00:00+05:30';
-const MODIFIED = '2026-07-22T08:00:00+05:30';
+const MODIFIED = '2026-08-02T08:00:00+05:30';
 
-// Visual Card Data for Internal Linking (Deep Linking with Descriptions)
 const RELATED_CARDS = [
   { 
     slug: 'PmKisan24viKist2026', 
@@ -65,20 +63,31 @@ const FAQS_DATA = [
     q: 'Kya main apne pitaji ke liye unke phone se eKYC kar sakta hoon?',
     a: 'Haan, agar unka mobile number unke Aadhaar se linked hai, toh aap unke phone par OTP mangwa kar eKYC complete kar sakte hain. Lekin bank account beneficiary ke naam par hi hona chahiye.',
   },
+  {
+    q: 'OTP based eKYC aur biometric eKYC mein kya farak hai?',
+    a: 'OTP based eKYC ghar baithe, phone se hota hai — bas Aadhaar se linked mobile chahiye. Biometric CSC jaakar fingerprint se hota hai, un logon ke liye jinka mobile number Aadhaar se link nahi hai ya unke paas smartphone nahi hai. Dono equally valid hain, result same hota hai.',
+  },
+  {
+    q: 'eKYC ek baar ho gayi, kya har saal dobara karni padegi?',
+    a: 'Nahi, ek baar successful ho gayi toh normally dobara nahi karni padti. System sirf tab dobara maangta hai jab aapne mobile number, naam, ya bank account mein koi badlaav kiya ho — routine mein har saal repeat karne ki zaroorat nahi.',
+  },
+  {
+    q: 'CSC par eKYC ke liye internet ya smartphone chahiye kya?',
+    a: 'Nahi, ye CSC operator ki responsibility hai. Aapko sirf Aadhaar card le jaana hai — operator apne system aur biometric machine se kaam kar dega. Aapke paas smartphone ya internet na ho, tab bhi ho jaayegi.',
+  },
 ];
 
 export default function PmKisanEkycOnline2026({ article }: { article: ArticleMeta }) {
   return (
     <>
-      {/* AEO/GEO & Technical SEO: JSON-LD Schema Injection (Rich Snippets) */}
       <Script id="pmkisan-ekyc-schema" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@graph": [
             {
               "@type": "Article",
-              "headline": "PM Kisan eKYC 2026: OTP, Biometric aur Face Auth Puri Jankari",
-              "description": "PM Kisan eKYC 2026 online karein. OTP, CSC biometric ya face authentication se 2 minute mein verify karein. Error codes ka solution aur free process jaane.",
+              "headline": "PM Kisan eKYC 2026: OTP Based eKYC, Biometric aur Face Auth Puri Jankari",
+              "description": "PM Kisan eKYC 2026 online karein. OTP based eKYC, CSC biometric ya face authentication se 2 minute mein verify karein. Error codes ka solution aur free process jaane.",
               "author": { "@type": "Organization", "name": "KisanStatus Team", "url": "https://kisanstatus.com/about" },
               "publisher": { "@type": "Organization", "name": "KisanStatus", "logo": { "@type": "ImageObject", "url": "https://kisanstatus.com/logo.png" } },
               "datePublished": PUBLISHED,
@@ -105,7 +114,6 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
         })}
       </Script>
 
-      {/* Header Section */}
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
           <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
@@ -117,9 +125,8 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">🔐 eKYC Verification</span>
           
-          {/* SEO Optimized H1: Front-loaded Keyword, High CTR */}
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            PM Kisan eKYC 2026: OTP, Biometric aur Face Auth Puri Jankari
+            PM Kisan eKYC 2026: OTP Based eKYC, Biometric aur Face Auth Puri Jankari
           </h1>
           
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
@@ -133,14 +140,12 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* AEO Direct Answer Block (Top of Content for AI Overviews) */}
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-r-xl">
           <p className="text-sm md:text-base text-blue-900 dark:text-blue-100 leading-relaxed font-medium">
-            <strong>Seedha Jawab:</strong> PM Kisan eKYC 2026 ab 100% mandatory hai. Ise aap ghar baithe <strong>pmkisan.gov.in</strong> par Aadhaar OTP se, PM Kisan App par Face Authentication se, ya nazdeeki CSC centre par free biometric (fingerprint) se complete kar sakte hain. Bina iske aapka agla ₹2000 ka installment seedha block ho jayega.
+            <strong>Seedha Jawab:</strong> PM Kisan eKYC 2026 ab 100% mandatory hai. Ise aap ghar baithe <strong>pmkisan.gov.in</strong> par OTP based eKYC se, PM Kisan App par Face Authentication se, ya nazdeeki CSC centre par free biometric (fingerprint) se complete kar sakte hain. Bina iske aapka agla ₹2000 ka installment seedha block ho jayega.
           </p>
         </div>
 
-        {/* IMAGE 1: OTP vs Biometric Comparison (Path UNCHANGED) */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/articles/pm-kisan-ekyc-online-2026/otp-vs-biometric.webp'}
@@ -157,7 +162,6 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
           </p>
         </div>
 
-        {/* Urgency Hook: Real Ground Reality */}
         <div className="my-6 p-5 bg-red-50 dark:bg-red-900/20 border-2 border-red-400 dark:border-red-700 border-l-[6px] rounded-xl">
           <h2 className="text-base font-black text-red-800 dark:text-red-300 mb-2">⚠️ Bina eKYC Ke Kist Ruk Jayegi (Ground Reality)</h2>
           <p className="text-sm text-red-900 dark:text-red-200 leading-relaxed mb-3">
@@ -189,7 +193,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
               <p className="font-black text-green-800 dark:text-green-300 text-sm mb-1">1. Mobile Linking</p>
-              <p className="text-xs text-[var(--color-text-muted)]">Aadhaar card mein wahi mobile number registered hona chahiye jo abhi aapke paas hai aur chal raha hai.</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Aadhaar card mein wahi mobile number registered hona chahiye jo abhi aapke paas hai aur chal raha hai. Number badal gaya ho toh pehle nazdeeki Aadhaar Seva Kendra jaakar update karwa lein, tabhi OTP based tarika kaam karega.</p>
             </div>
             <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
               <p className="font-black text-blue-800 dark:text-blue-300 text-sm mb-1">2. Naam ka Match</p>
@@ -203,9 +207,9 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
         </section>
 
         <section className="mb-8">
-          <SH>Tarika 1: OTP Se eKYC (Sabse Fast aur Ghar Baithe)</SH>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Agar aapka mobile number Aadhaar card se pehle se linked hai, toh yeh tarika sabse best, surakshit aur tezi se kaam karne wala hai. Aapko kahin jaane ki zaroorat nahi.
+          <SH>Tarika 1: OTP Based eKYC (Sabse Fast aur Ghar Baithe)</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Jab log <strong>"otp based ekyc"</strong> search karte hain, unka matlab yahi tarika hota hai — sirf Aadhaar-linked mobile se ghar baithe verification. Agar aapka mobile number Aadhaar card se pehle se linked hai, toh yeh sabse best, surakshit aur tezi se kaam karne wala option hai. Kahin jaane ki zaroorat nahi.
           </p>
           <StepList>
             <SI n={1}>Apne phone ya computer par official portal <strong>pmkisan.gov.in</strong> kholo.</SI>
@@ -219,7 +223,6 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
           </WB>
         </section>
 
-        {/* IMAGE 2: CSC Biometric Process (Path UNCHANGED) */}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-ekyc-online-2026/csc-biometric-process.webp"
@@ -267,6 +270,36 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
             <strong>Note:</strong> Face authentication ke liye bhi aapka mobile number Aadhaar se linked hona zaroori hai, lekin yeh OTP ke mukable zyada fast aur reliable hai, khaaskar un kisanon ke liye jinke haath kaam karne ki wajah se fingerprint clear nahi aata.
           </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>OTP Based Ya Biometric — Konsa Tarika Chunein?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Teeno tarike government ki nazar mein barabar valid hain — koi ek "asli" ya "behtar" nahi hai, sirf situation ke hisaab se sahi option badalta hai.
+          </p>
+          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-[var(--color-primary)] text-white">
+                  <th className="p-3 text-left">Aapki Sthiti</th>
+                  <th className="p-3 text-left">Best Tarika</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['Mobile Aadhaar se linked hai, smartphone bhi hai', 'OTP Based eKYC (sabse fast)'],
+                  ['Mobile linked nahi hai ya number band ho gaya', 'CSC Biometric'],
+                  ['Smartphone hai lekin OTP baar-baar fail ho raha hai', 'Face Authentication (App)'],
+                  ['Umar zyada hai, fingerprint ghisa hua hai', 'Face Authentication ya CSC operator se madad'],
+                ].map(([situation, method], i) => (
+                  <tr key={situation} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text)]">{situation}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs font-bold text-green-700 dark:text-green-400">{method}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </section>
 
         <section className="mb-8">
@@ -341,7 +374,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
             </div>
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl text-center">
               <p className="font-black text-red-800 dark:text-red-300 text-sm">❌ eKYC: NO</p>
-              <p className="text-xs text-[var(--color-text-muted)] mt-1">Ruko mat, turant upar diye tarike se complete karo.</p>
+              <p className="text-xs text-[var(--color-text-muted)] mt-1">Ruko mat, upar diye tarike se abhi complete karo.</p>
             </div>
           </div>
         </section>
@@ -376,7 +409,6 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
           secondaryCta={{ href: '/calculator', label: '🧮 Sab Utilities' }}
         />
 
-        {/* VISUAL CARD STYLE INTERNAL LINKING (Replaces plain text links) */}
         <section className="my-10">
           <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Aapke Liye Zaroori Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
