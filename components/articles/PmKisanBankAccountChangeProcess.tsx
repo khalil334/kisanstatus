@@ -76,7 +76,7 @@ export default function PmKisanBankAccountChangeProcess({ article }: { article: 
             <span>/</span>
             <Link href="/articles" className="hover:text-white transition-colors">Articles</Link>
             <span>/</span>
-            <Link href="/articles?category=status-check" className="hover:text-white transition-colors">Status Check</Link>
+            <Link href="/articles/category/status-check" className="hover:text-white transition-colors">Status Check</Link>
             <span>/</span>
             <span className="text-white font-bold">Bank Account Change</span>
           </nav>
