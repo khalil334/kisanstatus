@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Mushroom Kheti 2026: Subsidy, Profit aur Complete Guide',
   description: 'Chhote kamre mein oyster mushroom kaise ugayein. NHB subsidy process, 100-bag setup cost, aur sachcha profit calculation janein.',
-  keywords: ['mushroom farming in small room at home profit', 'oyster mushroom spawn price in India 2026', 'khumbi ki kheti mein kitna pani lagta hai', 'green mold in mushroom treatment home remedy', 'mushroom business plan 10x10 room'],
+  keywords: ['mushroom farming in small room at home profit', 'oyster mushroom spawn price in India 2026', 'khumbi ki kheti mein kitna pani lagta hai', 'green mold in mushroom treatment home remedy', 'mushroom business plan 10x10 room', 'nhb mushroom subsidy'],
   authors: [{ name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' }],
   openGraph: {
     title: 'Mushroom Kheti 2026: Subsidy, Profit aur Complete Guide',
@@ -33,12 +33,13 @@ const jsonLd = {
   '@graph': [
     { '@type': 'Organization', '@id': 'https://kisanstatus.com/#organization', name: 'KisanStatus.com', url: 'https://kisanstatus.com', logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.webp', width: 250, height: 60 } },
     { '@type': 'BreadcrumbList', '@id': 'https://kisanstatus.com/articles/mushroom-kheti-nhb-subsidy/#breadcrumb', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kisanstatus.com/' }, { '@type': 'ListItem', position: 2, name: 'Articles', item: 'https://kisanstatus.com/articles' }, { '@type': 'ListItem', position: 3, name: 'Mushroom Kheti', item: 'https://kisanstatus.com/articles/mushroom-kheti-nhb-subsidy' }] },
-    { '@type': 'Article', '@id': 'https://kisanstatus.com/articles/mushroom-kheti-nhb-subsidy/#article', headline: 'Mushroom Kheti 2026: Subsidy, Profit aur Complete Guide', description: 'Chhote kamre mein oyster mushroom kaise ugayein. NHB subsidy process, 100-bag setup cost, aur sachcha profit calculation janein.', author: { '@type': 'Organization', name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' }, publisher: { '@type': 'Organization', name: 'KisanStatus.com', logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.webp' } }, datePublished: '2026-01-15', dateModified: '2026-07-25', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://kisanstatus.com/articles/mushroom-kheti-nhb-subsidy/' } },
+    { '@type': 'Article', '@id': 'https://kisanstatus.com/articles/mushroom-kheti-nhb-subsidy/#article', headline: 'Mushroom Kheti 2026: Subsidy, Profit aur Complete Guide', description: 'Chhote kamre mein oyster mushroom kaise ugayein. NHB subsidy process, 100-bag setup cost, aur sachcha profit calculation janein.', author: { '@type': 'Organization', name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' }, publisher: { '@type': 'Organization', name: 'KisanStatus.com', logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.webp' } }, datePublished: '2026-01-15', dateModified: '2026-08-02', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://kisanstatus.com/articles/mushroom-kheti-nhb-subsidy/' } },
     { '@type': 'FAQPage', '@id': 'https://kisanstatus.com/articles/mushroom-kheti-nhb-subsidy/#faq', mainEntity: [
         { '@type': 'Question', name: 'Kya 10x10 feet ke chhote kamre mein mushroom farming profitable hai?', acceptedAnswer: { '@type': 'Answer', text: 'Haan, 100-150 bags aaram se aa jate hain. Pehle saal seekhne ka hota hai, isliye break-even hona bhi badi baat hai. Doosre saal se direct marketing karke 20-25% net margin nikalna shuru ho jata hai.' } },
         { '@type': 'Question', name: 'Khumbi ke kamre mein badboo ya smell kyun aati hai?', acceptedAnswer: { '@type': 'Answer', text: 'Agar sterilization sahi se hua ho toh smell minimal hoti hai. Lekin agar straw zyada geela chhod diya ya koi bag kharab ho gaya aur use turant bahar nahi nikala, toh ammonia ya sadan ki badboo aane lagti hai.' } },
         { '@type': 'Question', name: 'Green mold (hara fungus) dikhe toh turant kya karein?', acceptedAnswer: { '@type': 'Answer', text: 'Us bag ko chupke se kamre se bahar nikal kar jala dein ya gehra gaad dein. Bachaye hue bags ke aas-paas Neem oil (5ml/litre) ya Trichoderma viride spray karein. Bleaching powder se farsh saaf karein.' } },
-        { '@type': 'Question', name: 'Asli mushroom beej (spawn) kahan se aur kitne mein milega?', acceptedAnswer: { '@type': 'Answer', text: '2026 mein certified labs se oyster spawn ka rate ₹180 se ₹250 per kg hai. Hamesha DMR Solan ya state agricultural university ke authorized vendors se hi lein. Local mandi ke anjaam sources se bachein.' } }
+        { '@type': 'Question', name: 'Asli mushroom beej (spawn) kahan se aur kitne mein milega?', acceptedAnswer: { '@type': 'Answer', text: '2026 mein certified labs se oyster spawn ka rate ₹180 se ₹250 per kg hai. Hamesha DMR Solan ya state agricultural university ke authorized vendors se hi lein. Local mandi ke anjaam sources se bachein.' } },
+        { '@type': 'Question', name: 'NHB mushroom subsidy kitni milti hai aur kaise apply karein?', acceptedAnswer: { '@type': 'Answer', text: 'NHB back-ended capital subsidy deta hai, jiska percentage state aur unit size ke hisaab se badalta hai — zyadatar general category ke liye 40% ke aas-paas rehta hai. Apply apne zila Horticulture Office se ya NHB ke online portal se hota hai, project report ke saath.' } }
       ] 
     }
   ]
@@ -60,7 +61,7 @@ export default function MushroomKheti() {
       />
       
       <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100 leading-tight">
-        Mushroom (Khumbi) Ki Kheti 2026: Kamre Mein Shuru Karein, Subsidy aur Real Profit Guide
+        Mushroom (Khumbi) Ki Kheti 2026: Kamre Mein Shuru Karein, NHB Subsidy aur Real Profit Guide
       </h1>
       
       <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
@@ -336,10 +337,13 @@ export default function MushroomKheti() {
       </div>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Sarkari Subsidy: Process Aur Ground Reality
+        NHB Mushroom Subsidy: Process Aur Ground Reality
       </h2>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        National Horticulture Board (NHB) aur State Horticulture Departments is sector ko boost dete hain. Lekin ek kadwi sachai yeh hai ki subsidy process mein 3-6 mahine lag sakte hain, aur paperwork thoda complex hota hai. 
+        National Horticulture Board (NHB) aur State Horticulture Departments is sector ko boost dete hain. NHB ki subsidy back-ended capital investment scheme ke through aati hai — matlab pehle aap poora unit lagate hain, phir claim karte hain, tab paisa milta hai. General category kisano ke liye ye zyadatar 40% ke aas-paas rehta hai, SC/ST aur North-East ke liye percentage thoda zyada ho sakta hai state guidelines ke hisaab se.
+      </p>
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        Ek kadwi sachai yeh hai ki subsidy process mein 3-6 mahine lag sakte hain, aur paperwork thoda complex hota hai.
       </p>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
         Mera strong suggestion hai: apna kaam subsidy ke intezaar mein na rokiye. Pehle apni pocket se chhota setup karein, bank se loan lein, aur application daal dein. Agar subsidy aa gayi, toh use future expansion mein lagayein. Apne zila ke Horticulture Officer se mil kar latest state-specific scheme ki jankari zaroor lein.
@@ -387,6 +391,10 @@ export default function MushroomKheti() {
         <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">4. Asli mushroom beej (spawn) kahan se aur kitne mein milega?</h3>
           <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">2026 mein certified labs se oyster spawn ka rate ₹180 se ₹250 per kg hai. Hamesha DMR Solan ya state agricultural university ke authorized vendors se hi lein. Local mandi ke anjaam sources se bachein.</p>
+        </div>
+        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">5. NHB mushroom subsidy kitni milti hai aur kaise apply karein?</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">NHB back-ended capital subsidy deta hai, jiska percentage state aur unit size ke hisaab se badalta hai — zyadatar general category ke liye 40% ke aas-paas rehta hai. Apply apne zila Horticulture Office se ya NHB ke online portal se hota hai, project report ke saath.</p>
         </div>
       </div>
 
@@ -443,7 +451,7 @@ export default function MushroomKheti() {
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
         <p className="text-sm text-gray-700 dark:text-gray-300">
           <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
-          Yeh article general educational purpose ke liye hai. Actual costs, subsidies, aur procedures aapke location, state policies, aur specific circumstances ke hisaab se vary kar sakte hain. Koi bhi financial investment karne se pehle qualified professionals (horticulture officers, NHB officials, ya bank managers) se consult karein. Last updated: July 25, 2026.
+          Yeh article general educational purpose ke liye hai. Actual costs, subsidies, aur procedures aapke location, state policies, aur specific circumstances ke hisaab se vary kar sakte hain. Koi bhi financial investment karne se pehle qualified professionals (horticulture officers, NHB officials, ya bank managers) se consult karein. Last updated: August 2026.
         </p>
       </div>
     </article>
