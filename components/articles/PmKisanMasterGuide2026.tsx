@@ -374,7 +374,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
               { reason: 'eKYC Pending', fix: 'Turant eKYC karo - portal ya CSC se, dono mein se koi bhi' },
               { reason: 'Bank Account Aadhaar Se Linked Nahi', fix: 'Bank branch jao - NPCI seeding form bharo - 7 din mein ho jayega' },
               { reason: 'Naam Mismatch (Aadhaar ≠ Bank)', fix: 'Bank mein jaake naam Aadhaar jaisa karwao - exact match hona chahiye' },
-              { reason: 'Land Record Issue', fix: 'Khatauni update karwao patwari se - phir dobara apply karo' },
+              { reason: 'Land Record Issue', fix: 'Pehle portal par land seeding status dekho - pending hai toh Khatauni update karwao patwari se, phir dobara apply karo' },
               { reason: 'Account Dormant', fix: 'Bank jao - account activate karo, phir check karo' },
             ].map(({ reason, fix }) => (
               <div key={reason} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
