@@ -17,6 +17,10 @@ const RELATED = [
 
 const FAQS_DATA = [
   {
+    q: 'CSC registration fees kitni hai?',
+    a: 'New registration ke liye ₹25 se ₹30, aur eKYC ke liye ₹15 se ₹20. Yeh maximum rates hain — CSC operator isse kam le sakta hai, zyada nahi. ₹50 ya ₹100 maangna sarkari niyam ke khilaf hai.',
+  },
+  {
     q: 'CSC wala PM Kisan ke liye kitne paise leta hai?',
     a: 'Sarkari niyam ke mutabiq eKYC aur registration ke liye ₹15 se ₹30 tak. Usse zyada maange toh complaint karo.',
   },
@@ -101,6 +105,9 @@ export default function PmKisanCscRegistrationCharges({ article }: { article: Ar
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Sarkar ne PM Kisan ke liye CSC charges fix kiye hain. Usse ek rupya bhi zyada lena illegal hai. Lekin gaon mein bahut log anjaan hote hain aur extra paise de dete hain. Aaj main aapko bataunga ki asli rate kya hai, aur agar koi zyada maange toh kaise complaint karein.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Seedha jawab pehle de deta hoon, kyunki sabse zyada yahi poocha jata hai — <strong>CSC registration fees kitni hai</strong>? New registration ke ₹25 se ₹30, aur eKYC ka ₹15 se ₹20. Bas itna. Neeche poora rate chart bhi diya hai taaki aap counter par confident rahein.
           </p>
           
           <Image
