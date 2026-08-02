@@ -22,6 +22,9 @@ const FAQS_DATA = [
   { q: 'FTO ka full form kya hai?', a: 'Fund Transfer Order. Simple si baat hai — government ki taraf se bank ko diya gaya ek order ki "is kisan ko itna paisa transfer karo". Isse zyada kuch nahi.' },
   { q: 'FTO Generated ka matlab kya hai?', a: 'Order de diya gaya hai. Paisa confirm ho chuka hai, bank abhi process kar raha hai. Aam taur par 7 se 15 din lagte hain account tak pahunchne mein.' },
   { q: 'FTO processed ka status generated se alag kaise hai?', a: 'Generated matlab order bana. Processed matlab bank ne us order par kaam shuru kar diya hai — yeh ek step aage ka stage hai. Processed dikhne ke baad paisa aana aur bhi jaldi expect kar sakte ho.' },
+  { q: 'FTO means in PM Kisan — asal mein kya hota hai?', a: 'FTO ka matlab Fund Transfer Order hai. PM Kisan mein yeh government ki taraf se bank ko bheja gaya digital aadesh hai ki is kisan ke account mein kist ka paisa daal do. Yeh koi document nahi jo aapko download karna pade — sirf ek internal status hai jo portal par dikhta hai.' },
+  { q: 'FTO will be generated meaning in Hindi kya hai?', a: 'Iska seedha matlab hai "order banaya jayega" — yaani abhi bana nahi hai. Yeh future tense ka status hai, to samajh lo aap list mein ho lekin aapki kist ka order abhi queue mein hai. Kuch din baad yahi status "FTO Generated" ban jata hai.' },
+  { q: '"FTO is generated and payment confirmation is pending" dikh raha hai, kya karein?', a: 'Kuch karne ki zaroorat nahi. Iska matlab order ban gaya hai aur bank se credit hone ki confirmation portal tak wapas aane ka intezaar hai. Paisa process mein hai. Bas Aadhaar seeding aur bank account active hone ki ek baar tasalli kar lein, phir wait karein.' },
   { q: 'FTO ke baad kitne din mein paisa aata hai?', a: 'Depend karta hai bank par. SBI aur PNB mein 8-10 din, HDFC-ICICI jaise private banks mein 10-14, Bank of Baroda 12-15, aur Post Office sabse zyada time leta hai — 15 se 25 din tak.' },
   { q: 'Land seeding kya hota hai PM Kisan mein?', a: 'Iska matlab hai aapki zameen ka record — khasra/khatauni number — aapke PM Kisan account se digitally link karna. Bina land seeding ke naya registration approve nahi hota.' },
   { q: 'Land seeding status kaise check karein?', a: 'pmkisan.gov.in par Farmers Corner mein jao, apna registration number ya Aadhaar daalo, aur wahan land seeding ka status alag se dikh jayega — verified ya pending.' },
@@ -188,12 +191,17 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
 
           <div className="bg-green-50 dark:bg-green-900/20 border-2 border-green-300 dark:border-green-700 rounded-xl p-5 mb-6">
             <ul className="text-sm text-green-800 dark:text-green-200 space-y-1">
+              <li><strong>FTO will be generated</strong> — order abhi bana hi nahi, list mein naam chadhne ka intezaar hai</li>
               <li><strong>FTO Generated</strong> — government ne order bhej diya</li>
               <li><strong>FTO Processed</strong> — bank ne order par kaam shuru kar diya</li>
               <li><strong>Credit Release Pending</strong> — paisa nikalne ki final stage chal rahi hai</li>
               <li><strong>Paisa aayega</strong> — usually 7-15 din mein</li>
             </ul>
           </div>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Ek baat clear kar deta hoon kyunki isi par sabse zyada confusion hoti hai. Log poochte hain <strong>FTO means in PM Kisan</strong> kya hota hai — matlab wahi Fund Transfer Order, government se bank ko bheja gaya paisa transfer karne ka aadesh. Aur <strong>FTO will be generated meaning in Hindi</strong> samjhein toh iska seedha tarjuma hai &ldquo;order banaya jayega&rdquo; — yaani abhi bana nahi hai. Ye future tense wala status hai, isliye ghabrane ki baat nahi, bas aapka number aane ka wait hai.
+          </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Process teen hisson mein baant sakte hain:
@@ -218,6 +226,25 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
             Agar aapka status abhi "Generated" hai, toh aap step 1 se 2 ke beech hain. "Processed" dikhe toh samajh lo bank ne kaam shuru kar diya hai — ab zyada wait nahi karna padega.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>&ldquo;FTO is Generated and Payment Confirmation is Pending&rdquo; — Iska Matlab?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Portal par jab poora message aata hai — <strong>&ldquo;FTO is generated and payment confirmation is pending&rdquo;</strong> — toh log sabse zyada isi par ghabrate hain. Lamba English message dekhkar lagta hai kuch reject ho gaya. Aisa kuch nahi hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Is line ke do hisse hain, dono alag baat keh rahe hain:
+          </p>
+          <div className="bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-300 dark:border-blue-700 rounded-xl p-5 mb-4">
+            <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-2">
+              <li><strong>&ldquo;FTO is generated&rdquo;</strong> — accha hissa. Aapka order ban chuka hai, government ne apna kaam kar diya.</li>
+              <li><strong>&ldquo;Payment confirmation is pending&rdquo;</strong> — bank ki taraf se credit hone ki confirmation abhi portal tak wapas nahi aayi.</li>
+            </ul>
+          </div>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Toh short mein — paisa line mein lag chuka hai, sirf confirmation ka message atka hai. Yahi status kai kisano ko kist release hone ke baad hafton dikhta rehta hai aur phir chup-chaap paisa aa jata hai. Bas apni Aadhaar seeding aur bank account active hai ya nahi, ek baar check kar lein.
           </p>
         </section>
 
