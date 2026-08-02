@@ -873,7 +873,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     authorBio: 'Agricultural content experts with 5+ years experience in government scheme research',
     schemes: ['smam', 'pm-kisan'],
     ogImage: '/images/kisanguides/chc-portal-hero.webp',
-    relatedSlugs: ['PmKusumYojanaSolarSubsidy2026', 'KisanTractorLoan2026', 'KisanCreditCardOnlineApply2026', 'silage-making-business-guide', 'PmKisanMaandhanYojanaPension'],
+    relatedSlugs: ['PmKusumYojanaSolarSubsidy2026', 'KisanTractorLoan2026', 'KisanCreditCardOnlineApply2026', 'silage-making-business-guide', 'drip-sprinkler-irrigation-subsidy'],
   },
   {
     slug: 'vermi-compost-business-guide',
@@ -897,7 +897,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     authorBio: 'Agricultural content experts with 5+ years experience in government scheme research',
     schemes: ['pkvy', 'pm-fme'],
     ogImage: '/images/kisanguides/vermi-compost-hero.webp',
-    relatedSlugs: ['PmKusumYojanaSolarSubsidy2026', 'KisanCreditCardOnlineApply2026', 'soil-health-card-complete-guide-2026', 'NanoDap500mlPriceInIndia2026', 'pm-fme-yojana-food-processing'],
+    relatedSlugs: ['PmKusumYojanaSolarSubsidy2026', 'KisanCreditCardOnlineApply2026', 'soil-health-card-complete-guide-2026', 'drip-sprinkler-irrigation-subsidy', 'pm-fme-yojana-food-processing'],
   },
   {
     slug: 'drip-sprinkler-irrigation-subsidy',

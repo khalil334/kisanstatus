@@ -61,6 +61,7 @@ export default function Footer() {
                   { href: '/contact', label: '📧 Contact Us' },
                   { href: '/articles', label: '📚 All Articles' },
                   { href: '/calculator', label: '🧮 Calculators' },
+                  { href: '/calculator/quick-status-check', label: '⚡ Quick Status Check' },
                 ].map((link) => (
                   <li key={link.href}>
                     <Link
