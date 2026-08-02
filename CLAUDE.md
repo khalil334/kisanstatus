@@ -65,7 +65,11 @@
   `/articles/PmKisan24viKist2026`; link the destination directly to avoid a hop.
 
 ## Still open (not yet done)
-- One "slow page" (Warning) — needs perf profiling (deferred 2026-08-02).
+- "Slow page" Warning (4 pages at 2026-08-02 02:57 crawl: /calculator/installment-tracker,
+  /maandhan/pm-kisan-maandhan-pension-card-download, /articles/mushroom-kheti-nhb-subsidy,
+  /articles/PmKisanMobileNumberChangeUpdate). All are large 'use client' components (25-35KB,
+  7-8 images); images all exist on disk. Real fix = server-component refactor / lazy sections —
+  invasive, deferred again 2026-08-02.
 - IndexNow (70 pages at 2026-08-02) — submission action in Ahrefs UI, not a repo change.
 - `pm kisan transaction failed reason` keyword ranks on `/articles/pm-kisan-payment-failed-status-2026`, which 308s to MasterGuide (next.config.js:55). Owner deferred choosing a landing page — keyword NOT added anywhere (2026-08-02).
 - (og-image.webp + logo.png now EXIST in public/ — fixed via PR #22; the two 404 items above are resolved.)
@@ -89,6 +93,19 @@
 - **Two ranking URLs are redirects**: `pm-kisan-payment-failed-status-2026` and
   `pm-kisan-land-seeding-status-check` both 308 to other pages (next.config.js) but still hold rankings.
   Check next.config.js redirects before adding keywords to the "ranking" page.
+
+## Fixes applied 2026-08-02 (session 2, pushed direct to main, d9cf024)
+- **Re-verified Tier 1 (Warnings) against 02:57 crawl**: 3XX redirect (3) = pure domain
+  canonicalization (http/www hops), links dataset shows ZERO internal links pointing at
+  redirect URLs — nothing to fix in repo. Confirms earlier do-not-fix verdict.
+- **Keyword coverage top-up** (fresh organic_keywords pull, still 13 kws / 6 URLs):
+  - `status of self registered farmer` (vol 250, pos #33) — PmKisanSelfRegisteredStatusCheck.tsx
+    had zero exact-phrase coverage; added a natural para about the portal's dedicated
+    "Status of Self Registered Farmer" option + relabeled the official-source list item.
+  - `land seeding status` (pos #1 via /articles/pm-kisan-land-seeding-status-check which 308s
+    to MasterGuide2026) — MasterGuide had zero mention; worked the phrase into the
+    Land Record Issue fix text.
+  - All other 11 kws verified present verbatim in their ranking components — no change.
 
 ## Confirmed false positives / do-not-fix
 - 3XX redirect (3), HTTP→HTTPS redirect (2), redirect chain (1) — correct canonicalization to `https://kisanstatus.com/`; the 2-hop `http://www.` chain is a Vercel artifact.
