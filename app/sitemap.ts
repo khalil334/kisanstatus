@@ -71,6 +71,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
     { 
+      url: `${SITE_URL}/maandhan`, 
+      lastModified: new Date('2026-07-19'), 
+      changeFrequency: 'weekly', 
+      priority: 0.90,
+    },
+    { 
       url: `${SITE_URL}/calculator`, 
       lastModified: new Date('2026-07-15'), 
       changeFrequency: 'weekly', 
