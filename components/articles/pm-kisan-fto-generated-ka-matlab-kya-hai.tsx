@@ -34,6 +34,7 @@ const FAQS_DATA = [
   { q: '24vi kist kab release hogi?', a: 'October 2026 ke aas-paas expect ki ja rahi hai. Jinki eKYC pehle complete hui hai unhe pehle milegi.' },
   { q: '15 din baad bhi paisa nahi aaya — kya karein?', a: 'Bank jaakar Aadhaar seeding check karo, NPCI mapping verify karo, account active hai ya nahi dekho. Uske baad bhi kuch na ho toh 155261 par call karo, last resort CSC visit.' },
   { q: 'Bina eKYC ke FTO generate hota hai?', a: '2026 mein nahi. Digital verification zaroori kar di gayi hai — pehle eKYC complete karo, tabhi agli kist ka FTO banega.' },
+  { q: 'FTO ka koi number hota hai kya jo main note kar sakoon?', a: 'Aapko dene ke liye koi alag "FTO number" nahi milta — ye ek backend reference hai jo bank aur government ke system ke beech chalta hai. Jab paisa aa jata hai, tab aapke passbook ya statement mein jo UTR/reference number dikhta hai, wahi asli proof hai ki transaction ho chuka.' },
 ];
 
 function CountdownModal({ 
@@ -139,7 +140,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
             <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 12 min read</span>
+            <span>⏱️ 13 min read</span>
           </div>
         </div>
       </div>
@@ -200,7 +201,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
           </div>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Ek baat clear kar deta hoon kyunki isi par sabse zyada confusion hoti hai. Log poochte hain <strong>FTO means in PM Kisan</strong> kya hota hai — matlab wahi Fund Transfer Order, government se bank ko bheja gaya paisa transfer karne ka aadesh. Aur <strong>FTO will be generated meaning in Hindi</strong> samjhein toh iska seedha tarjuma hai &ldquo;order banaya jayega&rdquo; — yaani abhi bana nahi hai. Ye future tense wala status hai, isliye ghabrane ki baat nahi, bas aapka number aane ka wait hai.
+            Ek baat clear kar deta hoon kyunki isi par sabse zyada confusion hoti hai. Log poochte hain <strong>FTO means in PM Kisan</strong> kya hota hai — matlab wahi Fund Transfer Order, government se bank ko bheja gaya paisa transfer karne ka aadesh. Aur <strong>FTO will be generated meaning in Hindi</strong> samjhein toh iska seedha tarjuma hai &ldquo;order banaya jayega&rdquo; — yaani abhi bana nahi hai. Ye future tense wala status hai, koi problem wali baat nahi, bas aapka number aane ka wait hai.
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -226,6 +227,16 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
             Agar aapka status abhi "Generated" hai, toh aap step 1 se 2 ke beech hain. "Processed" dikhe toh samajh lo bank ne kaam shuru kar diya hai — ab zyada wait nahi karna padega.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>FTO Number Aur Transaction Ka Matlab Kya Hota Hai?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Ek confusion aur bahut logon ko hoti hai — "mera FTO number kya hai, kahan dekhoon?" Seedha jawab: aapke liye alag se dene layak koi FTO number nahi hota. Ye ek internal reference hai jo sirf government ke system aur bank ke beech chalta hai, kisan ko individually allot nahi hota jaise Aadhaar ya PAN number hota hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Jab bhi log <strong>FTO transaction</strong> ka matlab poochte hain, unka ishara asal mein us poore process se hota hai jismein government ek batch mein sabhi eligible kisano ke liye ek saath order bhejti hai. Aapke liye asli proof tab milta hai jab paisa account mein aa jaata hai — passbook ya bank statement mein jo UTR ya reference number dikhta hai, wahi aapki transaction ka number hai, FTO ka nahi.
           </p>
         </section>
 
@@ -321,7 +332,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             <li>Account 6 mahine se dormant pada hai</li>
           </ul>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Sabse pehle bank jaakar Aadhaar seeding aur naam match verify karwayein — kaafi cases yahin resolve ho jaate hain. Fix hone ke baad paisa agli cycle mein aa jaata hai.
+            Sabse pehle bank jaakar Aadhaar seeding aur naam match verify karwayein — zyadatar cases yahin resolve ho jaate hain. Fix hone ke baad paisa agli cycle mein aa jaata hai.
           </p>
         </section>
 
@@ -429,7 +440,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
           <SH>15 Din Ho Gaye Par Paisa Nahi Aaya? (FTO Generated But Money Not Received)</SH>
           
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Ye situation kaafi kisanon ke saath hoti hai. Ghabraane ki zaroorat nahi — in steps se check karte jaayein:
+            Ye situation bahut se kisanon ke saath hoti hai. Ghabraane ki zaroorat nahi — in steps se check karte jaayein:
           </p>
 
           <div className="space-y-4">
@@ -452,6 +463,31 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             <div className="border-l-4 border-green-500 dark:border-green-700 pl-4 py-1">
               <h3 className="font-black text-[var(--color-text)] text-sm mb-1">Kuch Na Ho Toh CSC Jaayein</h3>
               <p className="text-xs text-[var(--color-text-muted)]">Ye last option hai. CSC operator poora case dekh kar complaint register kar dega, aur 3-5 din mein kaam ban jata hai.</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="mb-8">
+          <SH>30 Din Ho Gaye Aur Ab Bhi Kuch Nahi Hua? Yahan Se Ab Escalate Karo</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            15 din wale steps try kar liye, helpline bhi call kar liya, phir bhi 30 din nikal gaye aur paisa nahi aaya? Ab ye normal delay nahi hai — kahin na kahin FTO reject ya return ho chuka hoga. Yahan se approach thoda formal ho jaana chahiye:
+          </p>
+          <div className="space-y-4">
+            <div className="border-l-4 border-red-600 dark:border-red-700 pl-4 py-1">
+              <h3 className="font-black text-[var(--color-text)] text-sm mb-1">Sabse Pehle: FTO Reject Toh Nahi Hua?</h3>
+              <p className="text-xs text-[var(--color-text-muted)]">Status page par dhyan se padhein — kahin "Rejected" ya "Returned by Bank" toh nahi likha hai. Ye do alfaaz asaani se miss ho jaate hain kyunki baaki text almost same lagta hai. Agar likha hai, toh samajh lijiye bank ne kisi galti ki wajah se paisa wapas bhej diya — aur ye apne aap dobara nahi jayega, koi na koi action lena hi padega.</p>
+            </div>
+            <div className="border-l-4 border-orange-600 dark:border-orange-700 pl-4 py-1">
+              <h3 className="font-black text-[var(--color-text)] text-sm mb-1">Correction Form Bharein</h3>
+              <p className="text-xs text-[var(--color-text-muted)]">Reject wajah galat naam ya IFSC hai toh Farmer Corner mein correction form milega — theek karke dobara submit karein.</p>
+            </div>
+            <div className="border-l-4 border-yellow-600 dark:border-yellow-700 pl-4 py-1">
+              <h3 className="font-black text-[var(--color-text)] text-sm mb-1">Likhit Grievance Darj Karein</h3>
+              <p className="text-xs text-[var(--color-text-muted)]">pmkisan.gov.in par "Grievance" section hai. Registration number aur problem likh kar submit karein — ek ticket number milega jise baad mein track kar sakte hain.</p>
+            </div>
+            <div className="border-l-4 border-green-600 dark:border-green-700 pl-4 py-1">
+              <h3 className="font-black text-[var(--color-text)] text-sm mb-1">District Nodal Officer Se Milein</h3>
+              <p className="text-xs text-[var(--color-text-muted)]">Ye sabse effective step hai 30 din ke baad. Har district mein PM Kisan ke liye ek nodal officer hota hai — Block Agriculture Office se unka contact number le kar seedhe unse baat karein.</p>
             </div>
           </div>
         </section>
@@ -523,6 +559,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             <li>Bank jaakar <strong>Aadhaar seeding</strong> aur <strong>land seeding</strong> dono check karein</li>
             <li><strong>NPCI mapping</strong> verify karein</li>
             <li>Helpline <strong>155261</strong> par call karein</li>
+            <li>30 din se zyada ho jaaye toh <strong>grievance darj</strong> karein ya district nodal officer se milein</li>
           </ol>
         </div>
 
