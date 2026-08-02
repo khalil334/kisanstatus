@@ -64,6 +64,14 @@
 - **Some redirect sources are still linked internally.** `/pm-kisan-status` 308s to
   `/articles/PmKisan24viKist2026`; link the destination directly to avoid a hop.
 
+## Fixes applied 2026-08-02 (branch `fix/audit-serp-title-alignment-indexnow`)
+- **Page & SERP title mismatch (2 of 4 pages)** — adopted Google's rewritten phrasing into `ogTitle`
+  in `lib/articles-data.ts`: `pm-kisan-self-registered-status-check` -> "PM Kisan Self Registration Status Check 2026",
+  `PmKisanLandSeedingForm` -> "PM Kisan Land Seeding Form PDF Download". The other 2 (FTO #9, CSC #10)
+  rank well; Google's rewrite is cosmetic — intentionally left alone.
+- **IndexNow setup** — key file `public/f0fc593cc28d48e1b99cf386068fffe7.txt` + `scripts/submit-indexnow.js`
+  (+ `scripts/indexnow-payload.json`, all 70 crawled URLs). Run the script once after deploy; re-run on new content.
+
 ## Still open (not yet done)
 - "Slow page" Warning (4 pages at 2026-08-02 02:57 crawl: /calculator/installment-tracker,
   /maandhan/pm-kisan-maandhan-pension-card-download, /articles/mushroom-kheti-nhb-subsidy,
