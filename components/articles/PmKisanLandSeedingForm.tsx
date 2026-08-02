@@ -7,7 +7,7 @@ import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, Bott
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const PUBLISHED = '2026-07-10T08:00:00+05:30';
-const MODIFIED = '2026-07-10T08:00:00+05:30';
+const MODIFIED = '2026-08-02T08:00:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisanBeneficiaryList2026', title: 'PM Kisan Beneficiary List', emoji: '' },
@@ -32,6 +32,14 @@ const FAQS_DATA = [
   {
     q: 'Paise lagenge kya?',
     a: 'Form toh free hai bhai. Par CSC wale ₹20-50 le sakte hain apni mehnat ke. Agar koi ₹200-500 maang raha hai toh wo loot raha hai. Mana kar do aur dusre center jao.',
+  },
+  {
+    q: 'Land seeding status online kaise pata chalega?',
+    a: 'pmkisan.gov.in par Farmers Corner mein "Beneficiary Status" option hai — apna registration number ya Aadhaar daal kar dekh lo. Wahan land seeding ka row alag se dikhega, "Seeded" ya "Not Seeded" likha hoga.',
+  },
+  {
+    q: 'Land seeding online apply karne ki koi last date hai kya?',
+    a: 'Nahi, ismein koi fixed last date nahi hoti. Jab bhi status "Pending" dikhe, tabhi form jama karwa sakte ho — jitni jaldi karoge, agli kist utni jaldi milne ke chances rahenge.',
   },
 ];
 
@@ -179,7 +187,7 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Complete Form Guide</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            PM Kisan Land Seeding Form PDF Download 2026: State Wise Form, Khasra-Khatauni Process
+            PM Kisan Land Seeding Status Check Aur Form PDF Download 2026: State Wise Guide
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white">KisanStatus Team</Link></span>
@@ -208,13 +216,88 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
           </p>
         </div>
 
+        {/* SECTION 1: Real Story */}
+        <section className="mb-8">
+          <SH>Land Seeding Kya Hai? Real Problem Kya Hai?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Dekhiye, maan lo ek kisan ne PM Kisan yojana ke liye apply kiya. eKYC ho gaya, bank account bhi link ho gaya. Par kai mahine guzarne ke baad bhi paisa nahi aaya.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Jab status check kiya, toh likha tha — <strong>"Land Seeding Pending"</strong>.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Aise mein kisan pareshan ho jaate hain. Patwari ke chakkar kaat-te hain, BAO office jaate hain, par har jagah se alag form maanga jaata hai. Samajh nahi aata ki kaunsa form bharna hai.
+          </p>
+          
+          <Image
+            src="/images/articles/pm-kisan-land-seeding-form/land-seeding-problem.webp"
+            alt="PM Kisan land seeding pending status confusion — farmer unsure which state form to submit"
+            width={800}
+            height={450}
+            className="w-full rounded-xl mb-4"
+          />
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Isi problem ko solve karne ke liye humne yeh guide banaya hai. Yahan aapko har state ka land seeding form, status check karne ka tarika aur step-by-step process mil jayega. Agar aap bhi beneficiary list mein apna naam dhundh rahe hain aur land seeding pending dikh raha hai, toh yeh article end tak padhein.
+          </p>
+        </section>
+
+        {/* SECTION 1B: Status Check — NEW */}
+        <section className="mb-8">
+          <SH>Land Seeding Status Online Kaise Check Karein?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Form bharne se pehle ye zaroor pata karo ki abhi status kya hai — kahin aisa na ho ki jo pehle se ho chuka hai, wahi dobara bhar do. Do jagah check kar sakte ho:
+          </p>
+
+          <h3 className="font-black text-[var(--color-text)] text-base mb-2 mt-4">1. PM Kisan Portal Par</h3>
+          <StepList>
+            <SI n={1}><strong>pmkisan.gov.in</strong> kholein</SI>
+            <SI n={2}>Farmers Corner mein <strong>Beneficiary Status</strong> par click karein</SI>
+            <SI n={3}>Registration number ya Aadhaar number daalein, OTP verify karein</SI>
+            <SI n={4}>Status table mein land seeding ka row dhoondein — "Seeded" ya "Not Seeded" likha milega</SI>
+          </StepList>
+
+          <h3 className="font-black text-[var(--color-text)] text-base mb-2 mt-6">2. State Ke Bhulekh Portal Par (Land Record Seeding Status)</h3>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Kabhi kabhi PM Kisan portal par "Seeded" dikhata hai, par actual record galat link hota hai — naam ya khasra number mismatch ki wajah se. Isliye apne state ke Bhulekh portal (jaise UP ke liye upbhulekh.gov.in, Rajasthan ke liye apnakhata.raj.nic.in) par jaakar apna khasra-khatauni nikaal kar khud verify kar lena zyada safe rehta hai.
+          </p>
+
+          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-[var(--color-primary)] text-white">
+                  <th className="p-3 text-left">Status Dikhta Hai</th>
+                  <th className="p-3 text-left">Matlab Kya Hai</th>
+                  <th className="p-3 text-left">Kya Karein</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['Seeded', 'Zameen ka record sahi se link ho chuka hai', 'Kuch nahi, aage ki kist ka wait karein'],
+                  ['Not Seeded', 'Record abhi link nahi hua', 'Neeche diya form bharein'],
+                  ['Pending Verification', 'Form jama ho gaya, Patwari check kar raha hai', '15-30 din wait karein'],
+                ].map(([status, meaning, action], i) => (
+                  <tr key={status} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
+                    <td className="p-3 border-b border-[var(--color-border)] font-bold text-xs text-[var(--color-text)]">{status}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{meaning}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{action}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <IB>
+            Status "Not Seeded" dikhe tabhi form bharna zaroori hai — agar pehle se "Seeded" ho, toh dobara form jama karne ki zaroorat nahi.
+          </IB>
+        </section>
+
         {/* PDF Download Section */}
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 border-l-[6px] rounded-xl">
           <h2 className="text-base font-black text-blue-800 dark:text-blue-300 mb-3">
             📥 State Wise Land Seeding Form - Official Links
           </h2>
           <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
-            Apne state ka form download karne ke liye niche diye gaye button par click karein. 10 second countdown ke baad download page khulega.
+            Status "Not Seeded" dikha? Apne state ka form download karne ke liye niche diye gaye button par click karein. 10 second countdown ke baad download page khulega.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 max-h-96 overflow-y-auto">
             {STATE_LINKS.map((state) => (
@@ -233,32 +316,6 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
             <strong>Form download karne mein dikkat aa rahi hai?</strong> Aap apne local Patwari ya nearest <Link href="/articles/PmKisanBeneficiaryList2026" className="underline">Block Agriculture Office</Link> se sampark kar sakte hain.
           </IB>
         </div>
-
-        {/* SECTION 1: Real Story */}
-        <section className="mb-8">
-          <SH>Land Seeding Kya Hai? Real Problem Kya Hai?</SH>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Dekhiye, maan lo ek kisan ne PM Kisan yojana ke liye apply kiya. eKYC ho gaya, bank account bhi link ho gaya. Par kai mahine guzarne ke baad bhi paisa nahi aaya.
-          </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Jab status check kiya, toh likha tha — <strong>"Land Seeding Pending"</strong>.
-          </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Aise mein kisan pareshan ho jaate hain. Patwari ke chakkar kaat-te hain, BAO office jaate hain, par har jagah se alag form maanga jaata hai. Samajh nahi aata ki kaunsa form bharna hai.
-          </p>
-          
-          <Image
-            src="/images/articles/pm-kisan-land-seeding-form/land-seeding-problem.webp"
-            alt="Farmer confused about land seeding form and process"
-            width={800}
-            height={450}
-            className="w-full rounded-xl mb-4"
-          />
-
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Isi problem ko solve karne ke liye humne yeh guide banaya hai. Yahan aapko har state ka land seeding form, khasra khatauni details aur step-by-step process mil jayega. Agar aap bhi beneficiary list mein apna naam dhundh rahe hain aur land seeding pending dikh raha hai, toh yeh article end tak padhein.
-          </p>
-        </section>
 
         {/* SECTION 2: What is Land Seeding */}
         <section className="mb-8">
@@ -293,6 +350,9 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
           <SH>State Wise Land Seeding Form Details</SH>
           
           <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">🏔️ Uttar Pradesh</h3>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            UP mein sabse zyada kisan online hi kaam nipta lete hain — upbhulekh portal kaafi seedha aur accessible hai, isliye Patwari ke paas jaane ki zaroorat kam hi padti hai.
+          </p>
           <div className="bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl p-5 mb-6">
             <p className="text-sm text-green-800 dark:text-green-300 mb-3">
               <strong>Form Ka Naam:</strong> UP PM Kisan Land Seeding Form 2026
@@ -325,6 +385,9 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
           />
 
           <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">🌊 Bihar</h3>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Bihar mein process thoda dheema hai, khaaskar monsoon mein — nadiyon ke aas-paas ke ilakon mein Circle Officer records verify karne mein zyada waqt lagate hain. Isliye jitni jaldi ho sake apply kar dein.
+          </p>
           <div className="bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 rounded-xl p-5 mb-6">
             <p className="text-sm text-blue-800 dark:text-blue-300 mb-3">
               <strong>Form Ka Naam:</strong> Bihar PM Kisan Land Seeding Application
@@ -343,6 +406,9 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
           </div>
 
           <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">🌿 Madhya Pradesh</h3>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            MP ka system in charon states mein sabse zyada digital-friendly hai — Khasra number daalte hi baaki details khud-ba-khud fill ho jaati hain, manual entry ki galti ki gunjaish kam rehti hai.
+          </p>
           <div className="bg-purple-50 dark:bg-purple-900/20 border-2 border-purple-500 dark:border-purple-700 rounded-xl p-5 mb-6">
             <p className="text-sm text-purple-800 dark:text-purple-300 mb-3">
               <strong>Form Ka Naam:</strong> MP Land Seeding Form (Bhu-Abhilekh)
@@ -361,16 +427,19 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
           <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">☀️ Rajasthan</h3>
           <div className="bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-500 dark:border-amber-700 rounded-xl p-5 mb-6">
             <p className="text-sm text-amber-800 dark:text-amber-300 mb-3">
-              <strong>Form Ka Naam:</strong> Rajasthan PM Kisan Land Seeding Form
+              <strong>Form Ka Naam:</strong> Rajasthan PM Kisan Land Seeding Form (PDF)
             </p>
             <p className="text-sm text-amber-800 dark:text-amber-300 mb-3">
               <strong>Kahan Se Milega:</strong>
             </p>
             <ul className="list-disc list-inside text-xs text-amber-800 dark:text-amber-300 space-y-1">
-              <li><Link href="https://apnakhata.raj.nic.in" className="underline">apnakhata.raj.nic.in</Link></li>
+              <li><Link href="https://apnakhata.raj.nic.in" className="underline">apnakhata.raj.nic.in</Link> — yahin se PDF bhi mil jaata hai</li>
               <li>E-Mitra center</li>
               <li>Tehsil office</li>
             </ul>
+            <p className="text-xs text-amber-800 dark:text-amber-300 mt-3">
+              Rajasthan ke kisan bhai zyada tar Apna Khata portal se hi PDF download karte hain, kyunki wahan Jamabandi ki nakal bhi saath mein mil jaati hai.
+            </p>
           </div>
         </section>
 
@@ -390,7 +459,7 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
 
           <Image
             src="/images/articles/pm-kisan-land-seeding-form/land-seeding-form-filled-sample.webp"
-            alt="Filled land seeding form sample with all fields"
+            alt="PM Kisan land seeding form filled sample — khasra khatauni and bank details example"
             width={800}
             height={600}
             className="w-full rounded-xl my-6"
@@ -414,8 +483,9 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
             {[
               { problem: 'Khasra number galat likh diya', solution: 'Khatauni ko dhyan se check karein aur Patwari se sahi number verify karwa lein.' },
               { problem: 'Naam mein mismatch hai', solution: 'Aadhaar card aur Khatauni mein naam bilkul ek jaisa hona chahiye, zaroorat padne par correction karwa lein.' },
-              { problem: 'Patwari sign karne mein aanaakaani kar rahe hain', solution: 'Aise mein aap Tehsil office ya Revenue Inspector se sampark karke shikayat darj kar sakte hain.' },
+              { problem: 'Patwari sign karne mein aanaakaani kar rahe hain', solution: 'Aise mein Tehsil office ya Revenue Inspector ke paas jaakar shikayat darj kar sakte hain.' },
               { problem: 'Form reject ho gaya', solution: 'BAO se rejection ka kaaran jaanein, galti sudhaar kar dobara submit karein.' },
+              { problem: 'Status "Seeded" dikha raha hai par paisa phir bhi nahi aaya', solution: 'Ho sakta hai land seeding aur payment ke beech koi aur rukawat ho — Aadhaar seeding ya bank details bhi check karwa lein.' },
             ].map(({ problem, solution }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
                 <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">❌ {problem}</p>
@@ -454,6 +524,13 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
             </table>
           </div>
         </section>
+
+        <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Seedhi Baat</h3>
+          <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
+            Land seeding koi bada technical kaam nahi hai — bas kaagaz sahi honi chahiye aur Khasra number Khatauni se match karna chahiye. Pehle status check karein, "Not Seeded" dikhe tabhi form bharein, aur Patwari ka sign lagwana kabhi mat bhoolein. Ek baar record link ho jaaye, toh dobara ye jhanjhat nahi hoti.
+          </p>
+        </div>
 
         {/* FAQ */}
         <section className="mb-8">
