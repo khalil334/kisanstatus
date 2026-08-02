@@ -397,7 +397,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     slug: 'pm-kisan-self-registered-status-check',
     title: 'PM Kisan Self Reg Status 2026: Check',
     desc: 'Self-registration karke bhool gaye? 7-10 din baad status check karna zaroori hai. Step-by-step guide + common problems + fix.',
-    ogTitle: 'PM Kisan Self Registration Status',
+    ogTitle: 'PM Kisan Self Registration Status Check 2026',
     keywords: [
       'pm kisan self registration status check',
       'pm kisan self registered status',
@@ -471,7 +471,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     slug: 'PmKisanLandSeedingForm',
     title: 'PM Kisan Land Seeding Form 2026: PDF',
     desc: 'Land seeding form download karo — UP, Bihar, MP, Rajasthan ke state wise forms. Khasra-Khatauni details ke saath complete guide.',
-    ogTitle: 'PM Kisan Land Seeding Form PDF',
+    ogTitle: 'PM Kisan Land Seeding Form PDF Download',
     keywords: [
       'pm kisan land seeding form pdf download',
       'land seeding form state wise',
