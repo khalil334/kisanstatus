@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { MAANDHAN_ARTICLES } from '@/lib/maandhan-data';
-import { SITE_URL } from '@/lib/site-config';
+import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '@/lib/site-config';
 
 export const metadata: Metadata = {
   title: 'PM Kisan Maandhan Yojana — Complete Guide',
@@ -13,9 +13,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: `${SITE_URL}/maandhan`,
+    siteName: SITE_NAME,
+    locale: 'hi_IN',
     title: 'PM Kisan Maandhan Yojana — Complete Guide',
     description:
       'PM Kisan Maandhan Yojana ki poori jaankari Hindi mein — pension scheme eligibility, contribution chart, registration process aur sabhi guides ek jagah.',
+    images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: 'PM Kisan Maandhan Yojana Complete Guide' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PM Kisan Maandhan Yojana — Complete Guide',
+    description:
+      'PM Kisan Maandhan Yojana ki poori jaankari Hindi mein — pension scheme, contribution chart aur sabhi guides ek jagah.',
   },
 };
 
