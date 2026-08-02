@@ -65,12 +65,30 @@
   `/articles/PmKisan24viKist2026`; link the destination directly to avoid a hop.
 
 ## Still open (not yet done)
-- "Page has only one dofollow incoming internal link" (2 indexable + 4 non-indexable at 2026-07-31) — needs contextual internal links.
-- One "slow page" (Warning) — needs perf profiling.
-- **`DEFAULT_OG_IMAGE` = `/og-image.webp` is 404** — file absent from `public/`. Affects 19 non-article pages (home, /articles, 8 calculators, /about, /contact, /privacy-policy, /disclaimer, /terms-of-service, 4 category pages). Needs a 1200x630 asset created. Deferred by owner (article-only scope).
-- **`LOGO_URL` = `/logo.png` is 404** — only `logo.svg` exists. Used in JSON-LD `publisher.logo` on `app/page.tsx`, `app/layout.tsx`, `app/articles/page.tsx`, `app/articles/[slug]/page.tsx`. Deferred.
-- Meta description too long (1 indexable page) — trim to 110–160 chars.
-- IndexNow (69 pages) — submission action in Ahrefs UI, not a repo change.
+- One "slow page" (Warning) — needs perf profiling (deferred 2026-08-02).
+- IndexNow (70 pages at 2026-08-02) — submission action in Ahrefs UI, not a repo change.
+- `pm kisan transaction failed reason` keyword ranks on `/articles/pm-kisan-payment-failed-status-2026`, which 308s to MasterGuide (next.config.js:55). Owner deferred choosing a landing page — keyword NOT added anywhere (2026-08-02).
+- (og-image.webp + logo.png now EXIST in public/ — fixed via PR #22; the two 404 items above are resolved.)
+
+## Fixes applied 2026-08-02 (branch `feat/keywords-and-audit-notices`, push-only — owner merges)
+- **Organic keyword gaps** (Ahrefs organic_keywords, 13 kws total on the site, 6 were missing from source):
+  FTO article got a new "payment confirmation is pending" section + "FTO will be generated" stage +
+  3 FAQs (covers 4 kws incl. the 900-vol one at #9). CSC charges article got lead-in para + FAQ for
+  "csc registration fees kitni hai". All phrases verbatim from Ahrefs; rates from the page's own table.
+- **/maandhan not in sitemap** — added to staticPages in app/sitemap.ts.
+- **/maandhan OG incomplete** — added og:image (DEFAULT_OG_IMAGE), siteName, locale, twitter card.
+- **only-one-dofollow-inlink** on `/articles?category=status-check` — the single inlink was a breadcrumb
+  in PmKisanBankAccountChangeProcess.tsx; repointed to canonical `/articles/category/status-check`
+  (strengthening the query-param URL would have been wrong). After recrawl this issue should vanish
+  because the query-param URL drops out of the link graph entirely.
+
+## Gotchas learned 2026-08-02
+- **Only 13 organic keywords exist site-wide** (6 URLs). "Add organic keywords to all articles" is
+  impossible without inventing keywords — 35 of 41 articles have zero organic kws. Any wider keyword
+  work = new Keywords Explorer research, a separate task.
+- **Two ranking URLs are redirects**: `pm-kisan-payment-failed-status-2026` and
+  `pm-kisan-land-seeding-status-check` both 308 to other pages (next.config.js) but still hold rankings.
+  Check next.config.js redirects before adding keywords to the "ranking" page.
 
 ## Confirmed false positives / do-not-fix
 - 3XX redirect (3), HTTP→HTTPS redirect (2), redirect chain (1) — correct canonicalization to `https://kisanstatus.com/`; the 2-hop `http://www.` chain is a Vercel artifact.
