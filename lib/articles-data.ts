@@ -218,7 +218,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai',
     title: 'FTO Generated Meaning: PM Kisan Status',
     desc: 'FTO Generated aur FTO Pending mein confused ho? FTO matlab Fund Transfer Order — iska matlab, status ke stages aur kist kab aayegi, sab samjhein.',
-    ogTitle: 'FTO Generated Matlab — PM Kisan Guide',
+    ogTitle: 'FTO Generated Matlab — PM Kisan Status Guide',
     keywords: [
       'FTO generated meaning',
       'fund transfer order status',
@@ -607,7 +607,7 @@ export const ARTICLES: readonly ArticleMeta[] = [
     slug: 'PmKisanCscRegistrationCharges',
     title: 'PM Kisan CSC Charges 2026: Sahi Fees',
     desc: 'CSC wala ₹500 maang raha hai? Sarkari rate sirf ₹25-30 hai. Sahi fees, free online method, aur fraud se bachne ka tarika.',
-    ogTitle: 'PM Kisan CSC Registration Charges',
+    ogTitle: 'PM Kisan CSC Charges — Sahi Fees, Sahi Tarika',
     keywords: [
       'pm kisan csc registration fees',
       'pm kisan csc se kaise kare',
