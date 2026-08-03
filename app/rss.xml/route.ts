@@ -1,5 +1,6 @@
 import { ARTICLES } from '@/lib/articles-data';
 import { MAANDHAN_ARTICLES } from '@/lib/maandhan-data';
+import { LIVE_RAJYA_YOJANA_ARTICLES } from '@/lib/rajya-yojana-data';
 import {
   SITE_URL,
   SITE_NAME,
@@ -48,6 +49,16 @@ const FEED_ITEMS: FeedItem[] = [
     published: a.published,
     modified: a.modified || a.published,
     image: a.ogImage || a.image,
+  })),
+  // Only status:'live' state articles — 'planned' slugs are not published yet.
+  ...LIVE_RAJYA_YOJANA_ARTICLES.map((a) => ({
+    title: a.title,
+    description: a.description,
+    path: `/rajya-yojana/${a.slug}`,
+    category: 'state-scheme',
+    published: a.published,
+    modified: a.modified || a.published,
+    image: a.ogImage,
   })),
 ].sort(
   (a, b) => new Date(b.modified).getTime() - new Date(a.modified).getTime()
