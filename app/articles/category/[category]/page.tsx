@@ -5,7 +5,7 @@ import { ARTICLES, CATEGORIES, getArticlesByCategory, type CategorySlug } from '
 import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL, DEFAULT_OG_IMAGE } from '@/lib/site-config';
 import ArticlesClient from '../../ArticlesClient';
 
-// ✅ Sirf 4 valid categories (jo articles-data.ts mein hain)
+// ✅ Sirf valid categories (jo articles-data.ts ke CATEGORIES mein hain)
 const CATEGORY_DATA: Record<CategorySlug, {
   title: string;
   description: string;
@@ -35,6 +35,18 @@ const CATEGORY_DATA: Record<CategorySlug, {
     description: 'Aaj ka mandi bhav aur daily updated wholesale rates. Apne shehar ke sabzi, anaj aur fruit ke aaj ke bhav aur market trends yahan check karein.',
     emoji: '📈',
     keywords: ['mandi bhav today', 'sabzi bhav', 'fruit rates 2026', 'wholesale prices', 'aaj ka bhav'],
+  },
+  'pashupalan': {
+    title: 'Pashupalan & Matsya Palan Subsidy Guides 2026 — Bakri, Machli',
+    description: 'Bakri palan, madhumakhi palan, machli palan aur silage business ki subsidy, loan aur profit ki puri jankari. NLM, KVIC aur PM Matsya Sampada Yojana ki verified guides.',
+    emoji: '🐄',
+    keywords: ['bakri palan yojana', 'madhumakhi palan subsidy', 'machli palan loan', 'PM Matsya Sampada Yojana', 'silage business'],
+  },
+  'agri-business': {
+    title: 'Agri Business & Subsidy Guides 2026 — Mushroom, Vermicompost',
+    description: 'Mushroom kheti, vermi compost, food processing, custom hiring centre aur drip irrigation subsidy kaise milegi. NHB, PM-FME aur CHC portal ki step-by-step guides.',
+    emoji: '🏭',
+    keywords: ['mushroom kheti subsidy', 'vermi compost business', 'PM FME yojana', 'custom hiring centre', 'drip irrigation subsidy'],
   },
 };
 
