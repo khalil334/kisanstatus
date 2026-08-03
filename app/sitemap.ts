@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import { ARTICLES, CATEGORIES, type CategorySlug } from '@/lib/articles-data';
 import { MAANDHAN_ARTICLES } from '@/lib/maandhan-data';
+import { LIVE_RAJYA_YOJANA_ARTICLES } from '@/lib/rajya-yojana-data';
 import { SITE_URL } from '@/lib/site-config';
 
 const REFERENCE_DATE = new Date('2026-07-20T00:00:00+05:30');
@@ -27,6 +28,18 @@ const ALL_ARTICLES = [
     modifiedTime: a.modified,
     ogImage: a.ogImage || a.image,
     path: `/maandhan/${a.slug}`,
+  })),
+  // State scheme articles are served from /rajya-yojana/<slug>.
+  // Only status:'live' entries appear — 'planned' slugs 404 on purpose.
+  ...LIVE_RAJYA_YOJANA_ARTICLES.map((a) => ({
+    slug: a.slug,
+    title: a.title,
+    desc: a.description,
+    category: 'farming',
+    publishedTime: a.published,
+    modifiedTime: a.modified,
+    ogImage: a.ogImage,
+    path: `/rajya-yojana/${a.slug}`,
   })),
 ];
 
@@ -76,6 +89,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly', 
       priority: 0.90,
     },
+    ...(LIVE_RAJYA_YOJANA_ARTICLES.length > 0
+      ? [{
+          url: `${SITE_URL}/rajya-yojana`,
+          lastModified: now,
+          changeFrequency: 'weekly' as const,
+          priority: 0.90,
+        }]
+      : []),
     { 
       url: `${SITE_URL}/calculator`, 
       lastModified: new Date('2026-07-15'), 
