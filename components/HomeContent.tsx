@@ -262,9 +262,7 @@ function Breadcrumb() {
 }
 
 export default function HomeContent() {
-  const sortedArticles = getArticlesByFreshness();
-  const latestArticles = sortedArticles.slice(0, TOP_ARTICLES_LIMIT);
-  const olderArticles = sortedArticles.slice(TOP_ARTICLES_LIMIT);
+  const latestArticles = getArticlesByFreshness().slice(0, TOP_ARTICLES_LIMIT);
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900" itemScope itemType="https://schema.org/WebPage">
@@ -537,19 +535,6 @@ export default function HomeContent() {
               <ArticleCard key={article.slug} article={article} showNewBadge />
             ))}
           </div>
-
-          {olderArticles.length > 0 && (
-            <div className="mt-14">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
-                Aur Articles
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-                {olderArticles.map((article) => (
-                  <ArticleCard key={article.slug} article={article} />
-                ))}
-              </div>
-            </div>
-          )}
 
           <div className="text-center mt-14">
             <Link href="/articles" className="group inline-flex items-center gap-2.5 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 shadow-xl shadow-green-600/30 hover:shadow-2xl hover:shadow-green-600/40">
