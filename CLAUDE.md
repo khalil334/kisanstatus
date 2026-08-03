@@ -171,6 +171,19 @@ So Tier 1 targeted defects verified on the LIVE site that Site Audit does not de
   `package-lock.json` does NOT break deploys. Lower priority than it first appears — still worth
   fixing someday, but it is not an outage risk.
 
+## Fixes applied 2026-08-03 — category title/meta length (branch `fix/audit-category-title-meta-length`, push-only — owner merges)
+- **Title too long (2) + Meta description too long (2)** — same two pages, both the categories added in
+  `feat/add-two-categories`: `/articles/category/pashupalan` and `/articles/category/agri-business`.
+  Their `CATEGORY_DATA` entries were written without length-checking against the root layout's
+  `template: '%s | KisanStatus'` suffix (`app/layout.tsx`), which adds **14 chars** to every raw title.
+  - `pashupalan`: title 75->59 (dropped `— Bakri, Machli`), meta 167->149 (dropped `business`, 2nd `verified`).
+  - `agri-business`: title 74->58 (dropped `, Vermicompost`), meta 161->139 (dropped `custom hiring centre`).
+  Every dropped phrase already exists in that entry's `keywords[]` and/or the body copy, so no keyword
+  coverage was lost. Only `title`/`description` changed — `slug`, `href`, `keywords`, `emoji` untouched.
+- **Rule for future category additions**: raw title must be **<= 46 chars** (46 + 14 suffix = 60).
+  Ahrefs' real flag threshold is ~70 rendered, not 60 — the other four categories render 62-65 and were
+  NOT flagged, so they were deliberately left alone ("don't touch unrelated issues").
+
 ## Confirmed false positives / do-not-fix
 - 3XX redirect (3), HTTP→HTTPS redirect (2), redirect chain (1) — correct canonicalization to `https://kisanstatus.com/`; the 2-hop `http://www.` chain is a Vercel artifact.
 - Noindex page (3), Noindex follow page (3) — non-indexable pages, intentional per owner.
