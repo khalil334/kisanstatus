@@ -937,10 +937,19 @@ export function getArticlesByCategory(category: CategorySlug): readonly ArticleM
   return ARTICLES.filter((a) => a.category === category);
 }
 
+function freshnessTime(a: ArticleMeta): number {
+  const published = new Date(a.publishedTime).getTime();
+  const modified = a.modifiedTime ? new Date(a.modifiedTime).getTime() : 0;
+  return Math.max(published, modified);
+}
+
+/** All articles sorted newest-first by published OR last-updated date. */
+export function getArticlesByFreshness(): readonly ArticleMeta[] {
+  return [...ARTICLES].sort((a, b) => freshnessTime(b) - freshnessTime(a));
+}
+
 export function getLatestArticles(limit: number = 5): readonly ArticleMeta[] {
-  return [...ARTICLES]
-    .sort((a, b) => new Date(b.publishedTime).getTime() - new Date(a.publishedTime).getTime())
-    .slice(0, limit);
+  return getArticlesByFreshness().slice(0, limit);
 }
 
 export function getArticlesByKeyword(keyword: string): readonly ArticleMeta[] {
