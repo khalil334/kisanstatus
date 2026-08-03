@@ -1,50 +1,21 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import ExternalLinkButton from '@/components/ui/ExternalLinkButton';
 import InfoBox from '@/components/ui/InfoBox';
 import SchemeTable from '@/components/ui/SchemeTable';
-
-const IMG_BASE = '/images/articles/rajya-yojana/annadata-sukhibhava-status-check-2026';
-
-function Fig({ src, alt, caption }: { src: string; alt: string; caption?: string }) {
-  return (
-    <figure className="my-8">
-      <Image
-        src={`${IMG_BASE}/${src}`}
-        alt={alt}
-        width={1200}
-        height={675}
-        className="w-full rounded-xl shadow-md"
-        loading="lazy"
-      />
-      {caption && (
-        <figcaption className="mt-2 text-center text-sm text-gray-500">
-          {caption}
-        </figcaption>
-      )}
-    </figure>
-  );
-}
 
 export default function AnnadataSukhibhavaStatusCheck2026() {
   return (
     <article className="prose prose-lg max-w-4xl mx-auto">
 
       <InfoBox type="update" date="4 August 2026">
-        <strong>Latest Update:</strong> Andhra Pradesh sarkar ne 20 June 2026 ko Annadata Sukhibhava ka pehla installment (₹7,000: ₹5,000 State + ₹2,000 PM Kisan) jaari kar diya hai [[15]]. Agla bhugtan October 2026 mein aane ki umeed hai. Apna <strong>annadata sukhibhava status check</strong> karne ke liye neeche diye gaye official steps follow karein.
+        <strong>Latest Update:</strong> Andhra Pradesh sarkar ne 20 June 2026 ko Annadata Sukhibhava ka pehla installment (₹7,000: ₹5,000 State + ₹2,000 PM Kisan) jaari kar diya hai. Agla bhugtan October 2026 mein aane ki umeed hai. Apna <strong>annadata sukhibhava status check</strong> karne ke liye neeche diye gaye official steps follow karein.
       </InfoBox>
 
       <h1>Annadata Sukhibhava Status Check 2026: Payment, Eligibility aur Beneficiary List</h1>
 
       <p>
-        Andhra Pradesh ke kisan bhaiyon ke liye ek bahut badi khushkhabri hai. Pehle jis scheme ko hum <em>YSR Rythu Bharosa</em> ke naam se jaante the, ab uska naya naam <strong>Annadata Sukhibhava</strong> rakha gaya hai [[8]]. Agar aap jaanna chahte hain ki aapka paisa kab aayega ya aapka naam list mein hai ya nahi, toh sahi jagah aaye hain. Is article mein hum detail mein samjhenge ki kaise aap apna <strong>annadata sukhibhava status check</strong> kar sakte hain, kaun eligible hai, aur PM Kisan se ye scheme kaise alag hai.
+        Andhra Pradesh ke kisan bhaiyon ke liye ek bahut badi khushkhabri hai. Pehle jis scheme ko hum <em>YSR Rythu Bharosa</em> ke naam se jaante the, ab uska naya naam <strong>Annadata Sukhibhava</strong> rakha gaya hai. Agar aap jaanna chahte hain ki aapka paisa kab aayega ya aapka naam list mein hai ya nahi, toh sahi jagah aaye hain. Is article mein hum detail mein samjhenge ki kaise aap apna <strong>annadata sukhibhava status check</strong> kar sakte hain, kaun eligible hai, aur PM Kisan se ye scheme kaise alag hai.
       </p>
-
-      <Fig
-        src="hero-annadata-sukhibhava.webp"
-        alt="Andhra Pradesh ka kisan dhan ke khet mein muskurate hue"
-        caption="Annadata Sukhibhava scheme AP ke kisanon ko saalana ₹20,000 tak ki financial support deti hai"
-      />
 
       <ExternalLinkButton
         href="https://annadathasukhibhava.ap.gov.in"
@@ -54,11 +25,11 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
       <h2>Annadata Sukhibhava Yojana Kya Hai?</h2>
 
       <p>
-        Annadata Sukhibhava (jiska matlab hai "May the Farmer Prosper") Andhra Pradesh sarkar ki flagship financial assistance scheme hai [[9]]. Iska mukhya uddeshya kisanon ko beej, khaad, aur kheti ke dusre kharchon ke liye direct bank transfer ke zariye madad dena hai.
+        Annadata Sukhibhava (jiska matlab hai "May the Farmer Prosper") Andhra Pradesh sarkar ki flagship financial assistance scheme hai. Iska mukhya uddeshya kisanon ko beej, khaad, aur kheti ke dusre kharchon ke liye direct bank transfer ke zariye madad dena hai.
       </p>
 
       <p>
-        Is scheme ke tahat, ek eligible kisan parivar ko saalana <strong>₹20,000</strong> tak ki financial support milti hai [[17]]. Ye raashi do hisson mein aati hai:
+        Is scheme ke tahat, ek eligible kisan parivar ko saalana <strong>₹20,000</strong> tak ki financial support milti hai. Ye raashi do hisson mein aati hai:
       </p>
 
       <SchemeTable>
@@ -85,19 +56,13 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
       </SchemeTable>
 
       <p>
-        Haal hi mein, 20 June 2026 ko CM N. Chandrababu Naidu ne 2026-27 ke pehle installment ke roop mein ₹3,125 crore jaari kiye, jisme har beneficiary ko ₹7,000 (₹5,000 State + ₹2,000 Central) mile [[3]].
+        Haal hi mein, 20 June 2026 ko CM N. Chandrababu Naidu ne 2026-27 ke pehle installment ke roop mein ₹3,125 crore jaari kiye, jisme har beneficiary ko ₹7,000 (₹5,000 State + ₹2,000 Central) mile.
       </p>
 
       <h2>Sabse Bada Fark: Tenant Farmers aur CCRC Card Holders</h2>
 
-      <Fig
-        src="ccrc-card-tenant-farmer.webp"
-        alt="Crop Cultivator Rights Card (CCRC) aur Tenant Farmer ka graphic representation"
-        caption="CCRC Card holders ko bhi Annadata Sukhibhava ka pura labh milta hai, jo PM Kisan mein nahi milta"
-      />
-
       <p>
-        Yahan hum ek bohot important point par baat karenge jo is scheme ko PM Kisan se bilkul alag banata hai. PM Kisan Samman Nidhi mein sirf <em>zameen ke malik</em> (landowners) hi eligible hote hain. Lekin Annadata Sukhibhava mein <strong>Tenant Farmers (Bataidar)</strong> aur <strong>CCRC (Crop Cultivator Rights Card)</strong> holders ko bhi pura financial support milta hai [[2]].
+        Yahan hum ek bohot important point par baat karenge jo is scheme ko PM Kisan se bilkul alag banata hai. PM Kisan Samman Nidhi mein sirf <em>zameen ke malik</em> (landowners) hi eligible hote hain. Lekin Annadata Sukhibhava mein <strong>Tenant Farmers (Bataidar)</strong> aur <strong>CCRC (Crop Cultivator Rights Card)</strong> holders ko bhi pura financial support milta hai.
       </p>
 
       <p>
@@ -168,19 +133,13 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         Apna <strong>annadata sukhibhava payment status</strong> check karna bahut aasan hai. Neeche diye gaye steps ko follow karein:
       </p>
 
-      <Fig
-        src="annadata-portal-screenshot.webp"
-        alt="Annadatha Sukhibhava official portal ka 'Know Your Status' page screenshot"
-        caption="Official portal par 'Know Your Status' option ka upyog karein"
-      />
-
       <ol>
-        <li>Sabse pehle official website <code>annadathasukhibhava.ap.gov.in</code> par jaayein [[14]].</li>
+        <li>Sabse pehle official website <code>annadathasukhibhava.ap.gov.in</code> par jaayein.</li>
         <li>Homepage par "<strong>Know Your Status</strong>" ya "<strong>Beneficiary Status</strong>" ke option par click karein.</li>
         <li>Financial Year select karein (Example: 2026-27).</li>
         <li>Apna <strong>Aadhaar Number</strong> ya <strong>Application ID</strong> enter karein.</li>
         <li>Screen par dikh raha CAPTCHA code enter karein aur "Verify" ya "Search" par click karein.</li>
-        <li>Ab aapke saamne ek detail page khulega jisme aapka naam, gaon, district, aur <strong>अन्नदाता सुखीभव status</strong> (Payment Successful, Pending, ya Rejected) dikhayi dega [[16]].</li>
+        <li>Ab aapke saamne ek detail page khulega jisme aapka naam, gaon, district, aur <strong>अन्नदाता सुखीभव status</strong> (Payment Successful, Pending, ya Rejected) dikhayi dega.</li>
       </ol>
 
       <ExternalLinkButton
@@ -202,12 +161,6 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
       </ol>
 
       <h2>Payment Nahi Aayi? Common Problems aur Solutions</h2>
-
-      <Fig
-        src="bank-sms-credit-ap.webp"
-        alt="Mobile phone par bank credit SMS aur passbook entry"
-        caption="DBT credit hamesha 'AP GOVT DBT' ya 'PM KISAN' ke naam se aata hai"
-      />
 
       <p>
         Kai baar kisanon ko complaint milti hai ki unka naam list mein toh hai, lekin paisa nahi aaya. Iske kuch common reasons aur unke solutions yahan hain:
@@ -234,12 +187,6 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
       </p>
 
       <h2>PM Kisan vs Annadata Sukhibhava: Comparison</h2>
-
-      <Fig
-        src="pm-kisan-vs-annadata.webp"
-        alt="PM Kisan aur Annadata Sukhibhava ke beech antar dikhata hua comparison chart"
-        caption="Dono schemes mein eligibility aur amount ka clear antar"
-      />
 
       <p>
         Bahut se log confuse ho jaate hain ki ye dono schemes ek hi hain ya alag. Neeche diya gaya table aapko sab clear kar dega:
@@ -316,12 +263,6 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
 
       <h2>Helpline aur Support</h2>
 
-      <Fig
-        src="ap-farmer-helpline.webp"
-        alt="Andhra Pradesh Kisan Call Center aur Helpline numbers"
-        caption="Kisi bhi dikkat ke liye AP Kisan Call Center se sampark karein"
-      />
-
       <p>
         Agar aapko online status check karne mein, naam correct karwane mein, ya payment se judi koi pareshani aa rahi hai, toh aap in official madhyamon se sampark kar sakte hain:
       </p>
@@ -335,7 +276,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
 
       <h3>Kya YSR Rythu Bharosa aur Annadata Sukhibhava ek hi scheme hai?</h3>
       <p>
-        Haan, Andhra Pradesh sarkar ne YSR Rythu Bharosa scheme ko officially rename karke "Annadata Sukhibhava" kar diya hai. Benefits aur eligibility lagbhag same hain, bas naam aur kuch administrative processes update hue hain [[8]].
+        Haan, Andhra Pradesh sarkar ne YSR Rythu Bharosa scheme ko officially rename karke "Annadata Sukhibhava" kar diya hai. Benefits aur eligibility lagbhag same hain, bas naam aur kuch administrative processes update hue hain.
       </p>
 
       <h3>Agar mere paas zameen nahi hai, kya main apply kar sakta hoon?</h3>

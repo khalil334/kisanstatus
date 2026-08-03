@@ -1,30 +1,7 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import ExternalLinkButton from '@/components/ui/ExternalLinkButton';
 import InfoBox from '@/components/ui/InfoBox';
 import SchemeTable from '@/components/ui/SchemeTable';
-
-const IMG_BASE = '/images/articles/rajya-yojana/rythu-bharosa-status-check-2026';
-
-function Fig({ src, alt, caption }: { src: string; alt: string; caption?: string }) {
-  return (
-    <figure className="my-8">
-      <Image
-        src={`${IMG_BASE}/${src}`}
-        alt={alt}
-        width={1200}
-        height={675}
-        className="w-full rounded-xl shadow-md"
-        loading="lazy"
-      />
-      {caption && (
-        <figcaption className="mt-2 text-center text-sm text-gray-500">
-          {caption}
-        </figcaption>
-      )}
-    </figure>
-  );
-}
 
 export default function RythuBharosaStatusCheck2026() {
   return (
@@ -43,12 +20,6 @@ export default function RythuBharosaStatusCheck2026() {
       <p>
         Is comprehensive guide mein hum aapko batayenge ki kaise aap apna <strong>rythu bharosa status check</strong> kar sakte hain, <strong>rythu bharosa per acre amount</strong> kitna hai, aur <strong>rythu bharosa phase wise payment</strong> system kaise kaam karta hai taaki aap befikr ho kar apni kheti par dhyan de sakein.
       </p>
-
-      <Fig
-        src="hero-rythu-bharosa-telangana.webp"
-        alt="Telangana ke kisan khet mein fasal ki dekhbhal karte hue, Rythu Bharosa scheme ke tahat"
-        caption="Rythu Bharosa scheme Telangana ke kisanon ko unki zameen ke acreage ke hisaab se direct support deti hai"
-      />
 
       <ExternalLinkButton
         href="https://rytubharosa.cgg.gov.in"
@@ -115,12 +86,6 @@ export default function RythuBharosaStatusCheck2026() {
         Isliye, agar aapka <strong>rythu bharosa payment status</strong> "Processing" dikhata hai, toh iska matlab ye nahi ki paisa nahi aayega. Bas aapka phase abhi aana baaki hai.
       </p>
 
-      <Fig
-        src="phase-wise-payment-graphic.webp"
-        alt="Rythu Bharosa phase wise payment process ka flowchart"
-        caption="Payment district-wise verification aur bank seeding ke aadhar par alag-alag phases mein release hoti hai"
-      />
-
       <h2>Rythu Bharosa Status Check Kaise Karein? (Step-by-Step)</h2>
 
       <p>
@@ -154,12 +119,6 @@ export default function RythuBharosaStatusCheck2026() {
         <li>"Get List" par click karein.</li>
         <li>Ek PDF ya table generate hoga jisme aapke gaon ke sabhi beneficiaries ke naam, account numbers (masked), aur amount likha hoga. Apna naam dhundhein.</li>
       </ol>
-
-      <Fig
-        src="dharani-portal-rythu-bharosa.webp"
-        alt="Dharani portal aur Rythu Bharosa status check ka screenshot"
-        caption="Zameen ke records Dharani portal se seedha Rythu Bharosa database se match hote hain"
-      />
 
       <h2>Rythu Bandhu vs Rythu Bharosa: Kya Fark Hai?</h2>
 
@@ -225,12 +184,6 @@ export default function RythuBharosaStatusCheck2026() {
       <p>
         <strong>Solution:</strong> Agar zameen par koi court case ya parivarik vivad (family dispute) hai, toh Dharani portal par us par "Disputed" ka tag lag jata hai. Aise cases mein payment tab tak roki jaati hai jab tak vivad khatam nahi ho jata.
       </p>
-
-      <Fig
-        src="bank-account-seeding-rythu-bharosa.webp"
-        alt="Bank passbook aur Aadhaar seeding ka graphic"
-        caption="DBT success ke liye bank account ka Aadhaar se linked hona anivarya hai"
-      />
 
       <h2>Kya Aap Dusre State Se Hain?</h2>
 
