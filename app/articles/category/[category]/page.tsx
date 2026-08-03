@@ -37,14 +37,14 @@ const CATEGORY_DATA: Record<CategorySlug, {
     keywords: ['mandi bhav today', 'sabzi bhav', 'fruit rates 2026', 'wholesale prices', 'aaj ka bhav'],
   },
   'pashupalan': {
-    title: 'Pashupalan & Matsya Palan Subsidy Guides 2026 — Bakri, Machli',
-    description: 'Bakri palan, madhumakhi palan, machli palan aur silage business ki subsidy, loan aur profit ki puri jankari. NLM, KVIC aur PM Matsya Sampada Yojana ki verified guides.',
+    title: 'Pashupalan & Matsya Palan Subsidy Guides 2026',
+    description: 'Bakri palan, madhumakhi palan, machli palan aur silage ki subsidy, loan aur profit ki puri jankari. NLM, KVIC aur PM Matsya Sampada Yojana ki guides.',
     emoji: '🐄',
     keywords: ['bakri palan yojana', 'madhumakhi palan subsidy', 'machli palan loan', 'PM Matsya Sampada Yojana', 'silage business'],
   },
   'agri-business': {
-    title: 'Agri Business & Subsidy Guides 2026 — Mushroom, Vermicompost',
-    description: 'Mushroom kheti, vermi compost, food processing, custom hiring centre aur drip irrigation subsidy kaise milegi. NHB, PM-FME aur CHC portal ki step-by-step guides.',
+    title: 'Agri Business Subsidy Guides 2026 — Mushroom',
+    description: 'Mushroom kheti, vermi compost, food processing aur drip irrigation subsidy kaise milegi. NHB, PM-FME aur CHC portal ki step-by-step guides.',
     emoji: '🏭',
     keywords: ['mushroom kheti subsidy', 'vermi compost business', 'PM FME yojana', 'custom hiring centre', 'drip irrigation subsidy'],
   },
