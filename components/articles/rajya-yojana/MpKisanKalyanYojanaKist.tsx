@@ -1,30 +1,7 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import ExternalLinkButton from '@/components/ui/ExternalLinkButton';
 import InfoBox from '@/components/ui/InfoBox';
 import SchemeTable from '@/components/ui/SchemeTable';
-
-const IMG_BASE = '/images/articles/rajya-yojana/mp-kisan-kalyan-yojana-kist-status';
-
-function Fig({ src, alt, caption }: { src: string; alt: string; caption?: string }) {
-  return (
-    <figure className="my-8">
-      <Image
-        src={`${IMG_BASE}/${src}`}
-        alt={alt}
-        width={1200}
-        height={675}
-        className="w-full rounded-xl shadow-md"
-        loading="lazy"
-      />
-      {caption && (
-        <figcaption className="mt-2 text-center text-sm text-gray-500">
-          {caption}
-        </figcaption>
-      )}
-    </figure>
-  );
-}
 
 export default function MPCMKisanKalyanYojanaKistStatus() {
   return (
@@ -43,12 +20,6 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
       <p>
         Is article mein hum bilkul clear aur verified jaankari denge. Hum guess nahi karenge, balki seedha <strong>saara portal kisan kalyan status</strong> aur official guidelines ke aadhar par batayenge ki aapko kitna paisa milna chahiye, eligibility kya hai, aur agar paisa nahi aaya toh aapko kya karna chahiye.
       </p>
-
-      <Fig
-        src="hero-mp-kisan-kalyan.webp"
-        alt="Madhya Pradesh ke kisan khet mein fasal ki dekhbhal karte hue"
-        caption="MP CM Kisan Kalyan Yojana state ke registered kisanon ko extra financial support deti hai"
-      />
 
       <ExternalLinkButton
         href="https://saara.mp.gov.in"
@@ -102,12 +73,6 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         Agar aap jaanna chahte hain ki aapka paisa kab aayega ya aapka naam <strong>kisan kalyan yojana beneficiary list mp</strong> mein hai ya nahi, toh niche diye gaye steps ko dhyan se follow karein. Ye process 100% online aur free hai.
       </p>
 
-      <Fig
-        src="saara-portal-screenshot.webp"
-        alt="SAARA MP Govt portal ka Kisan Kalyan Yojana status check page"
-        caption="SAARA portal par apna status check karte samay apna Registered Mobile Number ya Aadhaar taiyar rakhein"
-      />
-
       <ol>
         <li>Apne mobile ya computer ke browser mein <code>saara.mp.gov.in</code> kholein.</li>
         <li>Homepage par "Farmer Services" ya "Kisan Kalyan Yojana" ka option dhundhein.</li>
@@ -160,12 +125,6 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         <li>Professionals (Doctors, Engineers, Lawyers, CAs) jo registered hain.</li>
       </ul>
 
-      <Fig
-        src="mp-farmland-records.webp"
-        alt="MP ke Bhulekh ya land record documents ki tasveer"
-        caption="Apne land records (Khasra/Khatauni) mein naam sahi hone ki pushti karein"
-      />
-
       <h2>Agar Payment Nahi Aayi Toh Kya Karein? (Troubleshooting)</h2>
 
       <p>
@@ -186,12 +145,6 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
       <p>
         Agar PFMS mein "Payment Failed" dikh raha hai, toh iska matlab hai ki bank ne paisa wapas bhej diya hai (shayad account band hone ya naam mismatch ki wajah se). Aise mein apne block ke Agriculture Development Officer (ADO) ya Patwari se milkar apne bank details update karwayein.
       </p>
-
-      <Fig
-        src="bank-fail-reason-sms.webp"
-        alt="Bank failure SMS aur PFMS failed status ka screenshot"
-        caption="Payment fail hone par SMS mein 'R-01' ya 'Invalid Account' jaise codes aa sakte hain"
-      />
 
       <h2>MP Kisan Kalyan Yojana Beneficiary List Kaise Dekhein?</h2>
 

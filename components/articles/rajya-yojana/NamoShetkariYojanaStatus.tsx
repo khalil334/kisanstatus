@@ -1,30 +1,7 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import ExternalLinkButton from '@/components/ui/ExternalLinkButton';
 import InfoBox from '@/components/ui/InfoBox';
 import SchemeTable from '@/components/ui/SchemeTable';
-
-const IMG_BASE = '/images/articles/rajya-yojana/namo-shetkari-yojana-status-check-2026';
-
-function Fig({ src, alt, caption }: { src: string; alt: string; caption?: string }) {
-  return (
-    <figure className="my-8">
-      <Image
-        src={`${IMG_BASE}/${src}`}
-        alt={alt}
-        width={1200}
-        height={675}
-        className="w-full rounded-xl shadow-md"
-        loading="lazy"
-      />
-      {caption && (
-        <figcaption className="mt-2 text-center text-sm text-gray-500">
-          {caption}
-        </figcaption>
-      )}
-    </figure>
-  );
-}
 
 export default function NamoShetkariYojanaStatusCheck2026() {
   return (
@@ -43,12 +20,6 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       <p>
         Is detailed guide mein hum step-by-step batayenge ki kaise aap apna <strong>namo shetkari yojana status check</strong> kar sakte hain, <strong>namo shetkari hapta kadhi milel</strong> ( installment kab milega), aur agar aapka naam list se kat gaya hai toh uski wajah kya ho sakti hai.
       </p>
-
-      <Fig
-        src="hero-namo-shetkari-maharashtra.webp"
-        alt="Maharashtra ke kisan khet mein fasal ki dekhbhal karte hue"
-        caption="Namo Shetkari Yojana Maharashtra ke chhote aur simant kisanon ko extra financial support deti hai"
-      />
 
       <ExternalLinkButton
         href="https://nsmny.mahait.org"
@@ -136,12 +107,6 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         Apna <strong>namo shetkari yojana status check</strong> karna bahut aasan hai. Niche diye gaye steps ko follow karein:
       </p>
 
-      <Fig
-        src="nsmny-portal-screenshot.webp"
-        alt="Namo Shetkari Mahasanman Nidhi official portal ka status check page"
-        caption="Official portal par apna Aadhaar number daal kar status check karein"
-      />
-
       <ol>
         <li>Apne browser mein official website <code>nsmny.mahait.org</code> kholein.</li>
         <li>Homepage par "Beneficiary Status" ya "अपनी स्थिति जांचें" ke option par click karein.</li>
@@ -170,12 +135,6 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       </ol>
 
       <h2>PM Kisan Aaya, Namo Shetkari Nahi Aaya: Iski Wajah Kya Ho Sakti Hai?</h2>
-
-      <Fig
-        src="pm-kisan-vs-namo-shetkari-comparison.webp"
-        alt="PM Kisan aur Namo Shetkari ke beech antar dikhata hua graphic"
-        caption="Dono schemes alag-alag departments dwara handle ki jaati hain, isliye payment dates alag ho sakti hain"
-      />
 
       <p>
         Ye ek bahut common problem hai. Kai kisan report karte hain ki unhe <strong>pm kisan aaya namo shetkari nahi aaya</strong>. Iske kuch mukhya karan ho sakte hain:
@@ -208,12 +167,6 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       </ul>
 
       <h2>Agar Payment Fail Ho Jaye Toh Kya Karein?</h2>
-
-      <Fig
-        src="bank-failure-sms-namo-shetkari.webp"
-        alt="Bank failure SMS aur PFMS failed status ka screenshot"
-        caption="Payment fail hone par bank se NPCI seeding status zaroor check karein"
-      />
 
       <ol>
         <li><strong>PFMS Portal Check Karein:</strong> <code>pfms.nic.in</code> par jaakar "Know Your Payments" mein apna bank account number aur IFSC code daalein. Yahan pata chalega ki paisa fail kyun hua.</li>
