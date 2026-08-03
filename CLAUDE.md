@@ -122,3 +122,22 @@
   links (fixed in PR #19). Re-check after the next crawl; only treat as intentional if the URLs are real pages.
 - Page & SERP titles do not match (4) — Google rewriting titles; source `<title>`s are correct.
 - Pages to submit to IndexNow (67) — submission action, not a repo change.
+
+## Category taxonomy (branch `feat/add-two-categories`)
+- `CATEGORIES` in `lib/articles-data.ts` is the **single source of truth**. Adding a slug there
+  automatically produces `/articles/category/<slug>`, a sitemap entry (`app/sitemap.ts` maps
+  `Object.keys(CATEGORIES)`), and an `/articles` filter chip.
+- Three places must stay in sync when adding a category:
+  1. `lib/articles-data.ts` → `CATEGORIES` (drives everything)
+  2. `app/articles/category/[category]/page.tsx` → `CATEGORY_DATA` — typed `Record<CategorySlug, …>`,
+     so a missing key is a **compile error**. Holds the per-category SEO title/description/keywords.
+  3. `app/articles/ArticlesClient.tsx` → `CATEGORY_ICONS` — untyped `Record<string, …>`, a missing
+     key silently falls back to the article's `icon` emoji. Not fatal, but add it.
+- Added `pashupalan` (Pashupalan & Matsya Palan) and `agri-business` (Agri Business & Subsidy) to
+  split the overloaded 15-article `farming` bucket. Moved 4 livestock/fishery articles and 5
+  agri-business/subsidy articles out of `farming`; `farming` now holds 6 pure scheme guides.
+- **Only the `category` metadata field was changed — no `slug` and no `href` was touched**, so every
+  `/articles/<slug>` URL is unchanged. Verify with:
+  `git diff -U0 | grep -E "^[+-].*(slug:|href)" | wc -l` → must be 0.
+- `pension-scheme` (13 articles in `lib/maandhan-data.ts`) is deliberately NOT in `CATEGORIES` — it
+  has no category page and is special-cased via `isMaandhan` checks. Don't "fix" this without a plan.
