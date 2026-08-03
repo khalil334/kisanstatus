@@ -1,5 +1,6 @@
 import { ARTICLES, CATEGORIES, type CategorySlug } from '@/lib/articles-data';
 import { MAANDHAN_ARTICLES } from '@/lib/maandhan-data';
+import { LIVE_RAJYA_YOJANA_ARTICLES } from '@/lib/rajya-yojana-data';
 import {
   SITE_URL,
   SITE_NAME,
@@ -41,6 +42,18 @@ export async function GET(): Promise<Response> {
   const maandhanLines = MAANDHAN_ARTICLES.map(
     (a) => `- [${a.title}](${SITE_URL}/maandhan/${a.slug}): ${a.description}`
   ).join('\n');
+
+  const rajyaBlock =
+    LIVE_RAJYA_YOJANA_ARTICLES.length > 0
+      ? `## State Schemes — Rajya Kisan Yojana (राज्य किसान योजना)
+
+> State-level farmer income-support schemes — status check, eligibility and official portals.
+
+${LIVE_RAJYA_YOJANA_ARTICLES.map(
+  (a) => `- [${a.title}](${SITE_URL}/rajya-yojana/${a.slug}): ${a.description}`
+).join('\n')}
+`
+      : '';
 
   const body = `# ${SITE_NAME}
 
@@ -91,6 +104,7 @@ ${categoryBlocks}
 
 ${maandhanLines}
 
+${rajyaBlock}
 ## Calculators
 
 - [PM Kisan Benefit Calculator](${SITE_URL}/calculator/pm-kisan-benefit): Estimate PM Kisan instalment entitlement.

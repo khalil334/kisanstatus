@@ -1,0 +1,277 @@
+/**
+ * State (rajya) kisan yojana cluster — 10-article plan.
+ * Served from /rajya-yojana/<slug> (NOT /articles/<slug>).
+ *
+ * IMPORTANT — `status` field:
+ *   'planned' = body component doesn't exist yet. Excluded from sitemap, RSS,
+ *               llms.txt and the listing page; the URL returns a real 404.
+ *   'live'    = component exists and is wired into app/rajya-yojana/[slug]/page.tsx
+ *               COMPONENTS map. Only then does it enter sitemap/RSS/listing.
+ *
+ * Never flip a slug to 'live' before its component is registered — a 200 page
+ * with no <h1> is a soft-404 and Ahrefs Site Audit will flag it.
+ *
+ * Amounts, installment numbers and dates are deliberately NOT stored here.
+ * Verify them against the official state portal while writing each article.
+ */
+
+export type RajyaArticleStatus = 'planned' | 'live';
+
+export type RajyaYojanaArticleMeta = {
+  slug: string;
+  /** Target keyword for this page. Exactly one per article — no overlap. */
+  mainKeyword: string;
+  /** Supporting keywords for H2/H3 and body. Do not force into the title. */
+  readonly secondaryKeywords: readonly string[];
+  title: string;
+  description: string;
+  ogTitle: string;
+  /** Component name registered in app/rajya-yojana/[slug]/page.tsx */
+  component: string;
+  /** Indian state this scheme belongs to; 'ALL' for the hub page. */
+  state: string;
+  /** Official portal for the scheme, if any. Empty string = central/none. */
+  officialPortal: string;
+  status: RajyaArticleStatus;
+  published: string;
+  modified: string;
+  readTime: string;
+  ogImage?: string;
+  /** Existing kisanstatus articles this page should link to. */
+  readonly relatedPaths: readonly string[];
+};
+
+export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
+  {
+    slug: 'rajasthan-kisan-samman-nidhi-9000',
+    mainKeyword: 'rajasthan kisan samman nidhi 9000',
+    secondaryKeywords: [
+      'rajasthan kisan samman nidhi status check',
+      'rajasthan kisan nidhi badhi',
+      'rajasthan kisan samman nidhi kist',
+      'mukhyamantri kisan samman nidhi rajasthan',
+    ],
+    title: 'Rajasthan Kisan Samman Nidhi 2026',
+    description:
+      'Rajasthan Kisan Samman Nidhi ki badhi hui raqam, eligibility, status check ka process aur kist ki jaankari — official notification ke saath.',
+    ogTitle: 'Rajasthan Kisan Samman Nidhi — Nayi Raqam Aur Status',
+    component: 'RajasthanKisanSammanNidhi',
+    state: 'Rajasthan',
+    officialPortal: '',
+    status: 'planned',
+    published: '',
+    modified: '',
+    readTime: '10 min read',
+    relatedPaths: ['/articles/PmKisanMasterGuide2026', '/articles/PmKisan24viKist2026'],
+  },
+  {
+    slug: 'annadata-sukhibhava-status-check-2026',
+    mainKeyword: 'annadata sukhibhava status check',
+    secondaryKeywords: [
+      'annadata sukhibhava payment status',
+      'annadata sukhibhava eligibility',
+      'annadata sukhibhava beneficiary list',
+      'ysr rythu bharosa new name',
+      'annadata sukhibhava installment date',
+    ],
+    title: 'Annadata Sukhibhava Status Check 2026',
+    description:
+      'Andhra Pradesh Annadata Sukhibhava scheme ka status check, eligibility, tenant farmer CCRC rules aur payment ki poori jaankari.',
+    ogTitle: 'Annadata Sukhibhava Status Check — AP Kisan Yojana',
+    component: 'AnnadataSukhibhavaStatusCheck',
+    state: 'Andhra Pradesh',
+    officialPortal: 'https://annadathasukhibhava.ap.gov.in',
+    status: 'planned',
+    published: '',
+    modified: '',
+    readTime: '11 min read',
+    relatedPaths: ['/articles/PmKisanMasterGuide2026', '/articles/PmKisanBeneficiaryList2026'],
+  },
+  {
+    slug: 'mp-kisan-kalyan-yojana-kist-status',
+    mainKeyword: 'cm kisan kalyan yojana kist kab aayegi',
+    secondaryKeywords: [
+      'mp kisan kalyan yojana status check',
+      'saara portal kisan kalyan status',
+      'kisan kalyan yojana beneficiary list mp',
+      'mp kisan kalyan yojana amount',
+    ],
+    title: 'MP Kisan Kalyan Yojana Kist Status',
+    description:
+      'Madhya Pradesh CM Kisan Kalyan Yojana ki kist kab aayegi, SAARA portal se status check aur beneficiary list dekhne ka process.',
+    ogTitle: 'MP Kisan Kalyan Yojana — Kist Aur Status Check',
+    component: 'MpKisanKalyanYojanaKist',
+    state: 'Madhya Pradesh',
+    officialPortal: 'https://saara.mp.gov.in',
+    status: 'planned',
+    published: '',
+    modified: '',
+    readTime: '10 min read',
+    relatedPaths: ['/articles/PmKisan24viKist2026', '/articles/PmKisanPaymentFailedFix2026'],
+  },
+  {
+    slug: 'namo-shetkari-yojana-status-check-2026',
+    mainKeyword: 'namo shetkari yojana status check',
+    secondaryKeywords: [
+      'namo shetkari hapta kadhi milel',
+      'namo shetkari beneficiary list',
+      'namo shetkari yojana registration',
+      'pm kisan aaya namo shetkari nahi aaya',
+      'नमो शेतकरी महासन्मान निधी',
+    ],
+    title: 'Namo Shetkari Yojana Status Check 2026',
+    description:
+      'Maharashtra Namo Shetkari Mahasanman Nidhi ka status check, hapta ki jaankari, aur PM Kisan aane ke baad bhi paisa na aane ki wajah.',
+    ogTitle: 'Namo Shetkari Yojana — Status Aur Hapta Check',
+    component: 'NamoShetkariYojanaStatus',
+    state: 'Maharashtra',
+    officialPortal: 'https://nsmny.mahait.org',
+    status: 'planned',
+    published: '',
+    modified: '',
+    readTime: '11 min read',
+    relatedPaths: ['/articles/PmKisanPaymentFailedFix2026', '/articles/PmKisanBeneficiaryList2026'],
+  },
+  {
+    slug: 'rythu-bharosa-status-check-2026',
+    mainKeyword: 'rythu bharosa status check',
+    secondaryKeywords: [
+      'rythu bandhu list',
+      'rythu bharosa payment status',
+      'rythu bharosa per acre amount',
+      'rythu bharosa phase wise payment',
+      'rythu bandhu vs rythu bharosa',
+    ],
+    title: 'Rythu Bharosa Status Check 2026',
+    description:
+      'Telangana Rythu Bharosa ka status check, per-acre raqam, phase-wise payment ka system aur Rythu Bandhu se farak.',
+    ogTitle: 'Rythu Bharosa Status Check — Telangana Kisan Yojana',
+    component: 'RythuBharosaStatusCheck',
+    state: 'Telangana',
+    officialPortal: '',
+    status: 'planned',
+    published: '',
+    modified: '',
+    readTime: '11 min read',
+    relatedPaths: ['/articles/PmKisanMasterGuide2026', '/articles/PmKisanBeneficiaryList2026'],
+  },
+  {
+    slug: 'krishak-bandhu-status-check-2026',
+    mainKeyword: 'krishak bandhu status check',
+    secondaryKeywords: [
+      'krishak bandhu verification list',
+      'krishak bandhu voter id se status',
+      'krishak bandhu death benefit',
+      'krishak bandhu payment date',
+      'কৃষক বন্ধু status',
+    ],
+    title: 'Krishak Bandhu Status Check 2026',
+    description:
+      'West Bengal Krishak Bandhu ka status Voter ID se kaise check karein, verification list, death benefit aur payment ki jaankari.',
+    ogTitle: 'Krishak Bandhu Status Check — Voter ID Se',
+    component: 'KrishakBandhuStatusCheck',
+    state: 'West Bengal',
+    officialPortal: 'https://krishakbandhu.wb.gov.in',
+    status: 'planned',
+    published: '',
+    modified: '',
+    readTime: '10 min read',
+    relatedPaths: ['/articles/PmKisanMasterGuide2026', '/articles/PmKisanCorrectionForm2026'],
+  },
+  {
+    slug: 'odisha-cm-kisan-status-check-2026',
+    mainKeyword: 'cm kisan odisha status check',
+    secondaryKeywords: [
+      'kalia list',
+      'cm kisan beneficiary list odisha',
+      'kalia yojana new name',
+      'cm kisan odisha landless farmer benefit',
+      'cmkisan odisha gov in status',
+    ],
+    title: 'Odisha CM Kisan Status Check 2026',
+    description:
+      'Odisha CM Kisan (purani KALIA) ka status check, beneficiary list, aur landless kisan mazdooron ke liye milne wale benefit ki jaankari.',
+    ogTitle: 'Odisha CM Kisan Status Check — KALIA Ka Naya Naam',
+    component: 'OdishaCmKisanStatusCheck',
+    state: 'Odisha',
+    officialPortal: 'https://cmkisan.odisha.gov.in',
+    status: 'planned',
+    published: '',
+    modified: '',
+    readTime: '10 min read',
+    relatedPaths: ['/articles/PmKisanMasterGuide2026', '/articles/PmKisanBeneficiaryList2026'],
+  },
+  {
+    slug: 'pm-kisan-pati-patni-dono-ko-milega',
+    mainKeyword: 'pati patni dono ko pm kisan milega ya nahi',
+    secondaryKeywords: [
+      'pm kisan family rules',
+      'ek parivar mein kitne logo ko pm kisan',
+      'pm kisan exclusion list',
+      'pm kisan kaun eligible nahi hai',
+      'pm kisan galat paisa wapas kaise karein',
+    ],
+    title: 'Pati Patni Dono Ko PM Kisan Milega?',
+    description:
+      'PM Kisan mein ek parivar ka rule, pati-patni dono ko paisa milta hai ya nahi, poori exclusion list aur galat mila paisa wapas karne ka process.',
+    ogTitle: 'Pati Patni Dono Ko PM Kisan? — Family Rule',
+    component: 'PmKisanPatiPatniRule',
+    state: 'ALL',
+    officialPortal: 'https://pmkisan.gov.in',
+    status: 'planned',
+    published: '',
+    modified: '',
+    readTime: '9 min read',
+    relatedPaths: [
+      '/articles/PmKisanVoluntarySurrenderGuide',
+      '/articles/PmKisanRejectedStatusReApplyGuide',
+    ],
+  },
+  {
+    slug: 'state-kisan-yojana-list-all-states-2026',
+    mainKeyword: 'state kisan yojana list',
+    secondaryKeywords: [
+      'kis state mein kitna paisa milta hai kisan ko',
+      'pm kisan plus state scheme',
+      'rajya kisan samman nidhi list',
+      'state wise farmer scheme amount',
+    ],
+    title: 'State Kisan Yojana List 2026 — Sabhi Rajya',
+    description:
+      'Har state ki kisan income-support yojana ek jagah — scheme ka naam, raqam, official portal aur status check link ke saath.',
+    ogTitle: 'State Kisan Yojana List — Kis Rajya Mein Kitna',
+    component: 'StateKisanYojanaHub',
+    state: 'ALL',
+    officialPortal: '',
+    status: 'planned',
+    published: '',
+    modified: '',
+    readTime: '12 min read',
+    relatedPaths: ['/articles/PmKisanMasterGuide2026'],
+  },
+];
+
+/** Only these enter sitemap / RSS / llms.txt / listing. */
+export const LIVE_RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] =
+  RAJYA_YOJANA_ARTICLES.filter((a) => a.status === 'live');
+
+export function getRajyaYojanaArticle(slug: string): RajyaYojanaArticleMeta | undefined {
+  return RAJYA_YOJANA_ARTICLES.find((a) => a.slug === slug);
+}
+
+/**
+ * Article #10 of the plan is NOT a new page — it's an update discipline for the
+ * existing central instalment tracker. Kept here so the plan stays traceable in code.
+ */
+export const INSTALMENT_TRACKER_PAGE = {
+  path: '/articles/PmKisan24viKist2026',
+  mainKeyword: 'pm kisan 24vi kist kab aayegi',
+  secondaryKeywords: [
+    'pm kisan 24vi kist status check',
+    'pm kisan kist list 2026',
+    'pm kisan next installment date',
+  ],
+  note:
+    'Naya article na banayein. Kist release hone ke din hi "Latest Update" box update karein, ' +
+    'release se pehle sirf "expected" likhein, aur us din is cluster ke state articles ko link karein.',
+} as const;
