@@ -210,3 +210,18 @@ So Tier 1 targeted defects verified on the LIVE site that Site Audit does not de
   `git diff -U0 | grep -E "^[+-].*(slug:|href)" | wc -l` → must be 0.
 - `pension-scheme` (13 articles in `lib/maandhan-data.ts`) is deliberately NOT in `CATEGORIES` — it
   has no category page and is special-cased via `isMaandhan` checks. Don't "fix" this without a plan.
+
+## Content-planning gotcha (learned 2026-08-03, the hard way)
+- **NEVER infer article coverage from slugs in `lib/articles-data.ts`.** A content plan built that way
+  proposed 5 articles that were already live and more thorough than the proposal
+  (`AgriStackKyaHai2026` already has full registration + state-wise sections; `PmfbyCropInsurance2026`
+  already covers claims; `KisanCreditCardOnlineApply2026` already covers the 4% / 2026 limits;
+  `PmKisanPaymentFailedFix2026` is already a 7-reason diagnostic; `PmKusumYojanaSolarSubsidy2026`
+  already has state-wise links). Slugs are terse; the bodies are broad.
+- **Correct method:** `curl https://kisanstatus.com/sitemap.xml` → grep `<loc>` (72 URLs) → fetch each
+  candidate URL → `grep -oE '<h[123][^>]*>[^<]{3,110}'` to read actual section headings. Only then
+  decide what's missing. Repo slugs are a starting index, not the content map.
+- **Content gap as of 2026-08-03:** central-scheme coverage is saturated (~30 PM Kisan + 13 Maandhan
+  articles). ZERO state income-support scheme coverage (Annadata Sukhibhava AP, Rythu Bharosa TS,
+  Namo Shetkari MH, CM Kisan Kalyan MP, Kisan Samman Nidhi RJ, Krishak Bandhu WB, CM Kisan OD).
+  That's the real gap — see `CONTENT-PLAN.md`.
