@@ -148,6 +148,29 @@ So Tier 1 targeted defects verified on the LIVE site that Site Audit does not de
   `pages_filter_id` and fields `["url","title","serp_title"]` returns both titles side by side —
   use it instead of guessing what Google rewrote.
 
+## Fixes applied 2026-08-03 (Tier 2 + 3, pushed direct to main, 3898101)
+- **SERP-title mismatch (2 of 4 pages)** — pulled real `title` vs `serp_title` via `export_many`.
+  `pm-kisan-fto-generated-ka-matlab-kya-hai` ogTitle -> "FTO Generated Matlab — PM Kisan Status Guide";
+  `PmKisanCscRegistrationCharges` ogTitle -> "PM Kisan CSC Charges — Sahi Fees, Sahi Tarika".
+  The other 2 (`pm-kisan-self-registered-status-check`, `PmKisanLandSeedingForm`) differ ONLY by
+  Google swapping `|` for `-` — not fixable, permanently leave alone.
+- **`/llms.txt` was 404** — added `app/llms.txt/route.ts` (llmstxt.org convention), generated from
+  ARTICLES + MAANDHAN_ARTICLES + CATEGORIES so it can't drift. Includes the not-a-government-site
+  disclaimer, the authoritative gov.in portal list, and a date-sensitivity warning for kist numbers.
+- **AhrefsBot unblocked** in `app/robots.ts` (+ added `AhrefsSiteAudit`); it was in the blocked group
+  alongside CCBot/SemrushBot, which sabotages our own Site Audit + backlink data. Other scrapers
+  stay blocked; GPTBot/ClaudeBot/PerplexityBot allow rules untouched.
+
+## Gotchas learned 2026-08-03 (session 2)
+- **`FAQBlock` in `components/ArticleShared.tsx` emits FAQPage JSON-LD itself** (line ~262). So
+  `grep -L FAQPage components/articles/*` returns 22 "missing" files that are actually fine.
+  Never treat that grep as an FAQ-schema gap — check whether the component renders `<FAQBlock>`.
+- **`/rss.xml` serves 50 items = 37 ARTICLES + 13 MAANDHAN_ARTICLES.** If the count looks low,
+  count `^    slug:` in both data files before suspecting the feed.
+- **Vercel `buildCommand` is `npm run build`, NOT `npm ci`** (see vercel.json), so the out-of-sync
+  `package-lock.json` does NOT break deploys. Lower priority than it first appears — still worth
+  fixing someday, but it is not an outage risk.
+
 ## Confirmed false positives / do-not-fix
 - 3XX redirect (3), HTTP→HTTPS redirect (2), redirect chain (1) — correct canonicalization to `https://kisanstatus.com/`; the 2-hop `http://www.` chain is a Vercel artifact.
 - Noindex page (3), Noindex follow page (3) — non-indexable pages, intentional per owner.
