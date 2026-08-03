@@ -245,3 +245,38 @@ So Tier 1 targeted defects verified on the LIVE site that Site Audit does not de
   `/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega` (this cluster's path, not /articles/).
 - NOT typechecked/built locally — npm registry was firewall-blocked this session. Verify with
   `npm ci && npx tsc --noEmit && npm run build` before merging.
+
+## Build was broken by that cluster — fixed 2026-08-03 (PR #34, `fix/rajya-yojana-build`)
+The stubs PR above shipped unverified ("NOT typechecked/built locally"). It broke the Vercel build,
+so `/rajya-yojana/*` never went live. Two independent blockers:
+
+1. **Missing `components/ui/` entirely.** Four bodies (Annadata, MpKisanKalyan, NamoShetkari,
+   RythuBharosa) import `@/components/ui/{ExternalLinkButton,InfoBox,SchemeTable}`. None existed —
+   there was no `components/ui/` dir. The real button is `components/ExternalLinkButton.tsx` and it
+   takes `url`, while these bodies pass `href`. Created all three:
+   - `components/ui/InfoBox.tsx` — variants `info|tip|warning|update` + optional `date` prop.
+   - `components/ui/SchemeTable.tsx` — scroll wrapper; children are bare `<tr>/<th>/<td>`, first row
+     is the header row (styled via `[&_th]` selectors, no `thead` needed).
+   - `components/ui/ExternalLinkButton.tsx` — re-export accepting `href` OR `url`.
+2. **`package-lock.json` out of sync with `package.json`** (`@next/bundle-analyzer` missing from lock,
+   `sharp` 0.33.5 vs locked 0.34.5) → `npm ci` failed before compiling. Regenerated.
+
+Also removed 18 `<Fig>` refs to `.webp` files absent from `public/images/articles/rajya-yojana/`
+(same disease as the Rajasthan article above — the dir does not exist at all), and stripped leaked
+`[[n]]` citation markers from the prose of 5 bodies.
+
+### Gotchas for next time
+- **`npm run build` runs `scripts/update-article-dates.js` first**, which REWRITES
+  `lib/articles-data.ts` (all `publishedTime`/`modifiedTime` → git/file mtimes) and leaves
+  `lib/articles-data.ts.backup-<ts>` files. Always `git restore lib/articles-data.ts` + `rm` the
+  backups before committing, or you'll sweep 74 unrelated date changes into your diff.
+- **Turbopack (the default `next build`) crashes in this sandbox** on `app/globals.css` PostCSS with
+  a bogus `ECONNREFUSED` / "node process exited". Not a repo bug. Build with `next build --webpack`.
+- `NODE_OPTIONS` carries a platform crash-guard hook that confuses Next's worker spawning — run
+  builds under `env -u NODE_OPTIONS`.
+- Building needs firewall access to `registry.npmjs.org`, `fonts.googleapis.com`, `fonts.gstatic.com`
+  (next/font fetches Poppins at build time).
+- **Verification that actually catches the soft-404 shape**: after a build, grep the prerendered HTML
+  in `.next/server/app/rajya-yojana/*.html` for exactly one `<h1>` and a real `<title>`. Don't try to
+  `curl` a locally started `next start` — loopback to a self-started port is not reachable here.
+- Still open: 5 of the 9 rajya-yojana articles are short stubs, and the 18 article images don't exist.
