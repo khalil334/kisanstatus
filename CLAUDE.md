@@ -225,3 +225,23 @@ So Tier 1 targeted defects verified on the LIVE site that Site Audit does not de
   articles). ZERO state income-support scheme coverage (Annadata Sukhibhava AP, Rythu Bharosa TS,
   Namo Shetkari MH, CM Kisan Kalyan MP, Kisan Samman Nidhi RJ, Krishak Bandhu WB, CM Kisan OD).
   That's the real gap — see `CONTENT-PLAN.md`.
+
+## Rajya-yojana cluster shipped 2026-08-03 (branch `content/rajya-yojana-9-article-stubs`)
+- Created the 8 missing body components in `components/articles/rajya-yojana/` as **short stubs**
+  (h1 from metadata + 2 lines + official-portal link + hub backlink). Marked `STUB` in a header comment.
+  Owner will expand each with verified figures/dates later.
+- Registered all 9 components in the `COMPONENTS` map of `app/rajya-yojana/[slug]/page.tsx` and flipped
+  all 9 `status: 'planned'` -> `'live'` in `lib/rajya-yojana-data.ts` (with `published`/`modified` set).
+  This also un-404s `/rajya-yojana` (the hub `notFound()`s while 0 are live) and puts all 9 into
+  sitemap / RSS / llms.txt.
+- Fixed the pre-existing Rajasthan article (was never registered, so its URL 404'd):
+  `component` was `RajasthanKisanSammanNidhi` but the file is `RajasthanKisanSammanNidhi9000.tsx`.
+- Rajasthan article also referenced 4 images under `public/images/articles/rajya-yojna/...` that do
+  NOT exist on disk (and the dir name is misspelled vs the slug). Removed the 4 `<Fig>` calls + the
+  `Fig` helper/`next/image` import rather than shipping 404 images; JSON-LD `image` now points at the
+  real `/og-image.webp` and `logo.webp` -> `logo.png` (only `.png`/`.svg` exist).
+- Also repointed 2 kebab-case hrefs in that article: `/articles/pm-kisan-24vi-kist-2026` ->
+  `/articles/PmKisan24viKist2026`, and `/articles/pm-kisan-pati-patni-dono-ko-milega` ->
+  `/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega` (this cluster's path, not /articles/).
+- NOT typechecked/built locally — npm registry was firewall-blocked this session. Verify with
+  `npm ci && npx tsc --noEmit && npm run build` before merging.
