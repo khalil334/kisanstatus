@@ -60,6 +60,7 @@ export default function Footer() {
                   { href: '/terms-of-service', label: '📜 Terms of Service' },
                   { href: '/contact', label: '📧 Contact Us' },
                   { href: '/articles', label: '📚 All Articles' },
+                  { href: '/rajya-yojana', label: '🏛️ Rajya Yojana' },
                   { href: '/calculator', label: '🧮 Calculators' },
                   { href: '/calculator/quick-status-check', label: '⚡ Quick Status Check' },
                 ].map((link) => (

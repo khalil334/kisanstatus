@@ -6,10 +6,12 @@ import { usePathname } from 'next/navigation';
 import LanguageSwitcher from './LanguageSwitcher';
 import Logo from './Logo';
 import { ARTICLES } from '@/lib/articles-data';
+import { LIVE_RAJYA_YOJANA_ARTICLES } from '@/lib/rajya-yojana-data';
 
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/articles', label: 'Articles' },
+  { href: '/rajya-yojana', label: 'Rajya Yojana' },
   { href: '/articles/PmKisan24viKist2026', label: '24vi Kist Status' },
   { href: '/articles/PmKisanMasterGuide2026', label: 'Complete Guide' },
   { href: '/calculator', label: 'Calculator' },
@@ -27,12 +29,49 @@ const CATEGORY_EMOJIS: Record<string, string> = {
   'loan': '💳',
   'farming': '🌱',
   'mandi': '🏪',
+  'rajya-yojana': '🏛️',
 };
+
+/**
+ * Search index = central /articles plus the rajya-yojana cluster (served from
+ * /rajya-yojana/<slug>). Each entry carries its own `href` so the result links
+ * never assume the /articles/ prefix.
+ */
+type SearchEntry = {
+  slug: string;
+  href: string;
+  title: string;
+  desc: string;
+  keywords: readonly string[];
+  category: string;
+  date: string;
+};
+
+const SEARCH_INDEX: readonly SearchEntry[] = [
+  ...ARTICLES.map((a) => ({
+    slug: a.slug,
+    href: `/articles/${a.slug}`,
+    title: a.title,
+    desc: a.desc,
+    keywords: a.keywords,
+    category: a.category,
+    date: a.publishedTime || '',
+  })),
+  ...LIVE_RAJYA_YOJANA_ARTICLES.map((a) => ({
+    slug: a.slug,
+    href: `/rajya-yojana/${a.slug}`,
+    title: a.title,
+    desc: a.description,
+    keywords: [a.mainKeyword, ...a.secondaryKeywords],
+    category: 'rajya-yojana',
+    date: a.published || '',
+  })),
+];
 
 function fuzzySearch(query: string) {
   if (!query.trim()) return [];
   const q = query.toLowerCase().trim();
-  return ARTICLES.filter(
+  return SEARCH_INDEX.filter(
     (item) =>
       item.title.toLowerCase().includes(q) ||
       item.desc.toLowerCase().includes(q) ||
@@ -43,13 +82,14 @@ function fuzzySearch(query: string) {
       const aExact = a.title.toLowerCase().includes(q) ? 0 : 1;
       const bExact = b.title.toLowerCase().includes(q) ? 0 : 1;
       if (aExact !== bExact) return aExact - bExact;
-      const dateA = new Date(a.publishedTime || 0).getTime();
-      const dateB = new Date(b.publishedTime || 0).getTime();
+      const dateA = new Date(a.date || 0).getTime();
+      const dateB = new Date(b.date || 0).getTime();
       return dateB - dateA;
     })
     .slice(0, 6)
     .map((a) => ({
       slug: a.slug,
+      href: a.href,
       title: a.title,
       emoji: CATEGORY_EMOJIS[a.category] || '📄',
       category: a.category,
@@ -125,8 +165,8 @@ function SearchModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
 
             {results.map((item) => (
               <Link
-                key={item.slug}
-                href={`/articles/${item.slug}`}
+                key={item.href}
+                href={item.href}
                 onClick={onClose}
                 className="flex items-center gap-3 px-4 py-3 hover:bg-[var(--color-bg-alt)] transition-colors border-b border-[var(--color-border)] last:border-0 group"
               >
@@ -144,7 +184,7 @@ function SearchModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
 
           <div className="px-4 py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)] flex items-center justify-between">
             <span className="text-[10px] text-[var(--color-text-muted)]">
-              {query.trim() ? `${results.length} results` : `${ARTICLES.length} articles available`}
+              {query.trim() ? `${results.length} results` : `${SEARCH_INDEX.length} articles available`}
             </span>
             <Link href="/articles" onClick={onClose} className="text-[10px] text-[var(--color-primary)] font-bold hover:underline">
               View All Articles →

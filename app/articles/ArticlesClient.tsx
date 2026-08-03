@@ -21,6 +21,14 @@ type CombinedArticleMeta = {
   published?: string;
   publishedTime?: string;
   keywords?: readonly string[];
+  /**
+   * Explicit URL for clusters that do NOT live under /articles/<slug>
+   * (e.g. the rajya-yojana cluster at /rajya-yojana/<slug>). When absent the
+   * legacy /articles vs /maandhan inference below is used.
+   */
+  href?: string;
+  /** Badge label for categories that are not in CATEGORIES (no category page). */
+  categoryLabel?: string;
 };
 
 /* ─── SVG Icons (Replace Emojis) ─── */
@@ -174,10 +182,12 @@ function ArticleImage({ image, emoji, title, priority = false }: { image: string
 function ArticleCard({ article, showNewBadge = false, priority = false }: { article: CombinedArticleMeta; showNewBadge?: boolean; priority?: boolean }) {
   const categoryInfo = CATEGORIES[article.category as keyof typeof CATEGORIES] as { name: string; nameHi: string; icon: string } | undefined;
   const emoji = categoryInfo?.icon || '📄';
-  const categoryName = categoryInfo?.nameHi || categoryInfo?.name || 'Guide';
+  const categoryName = categoryInfo?.nameHi || categoryInfo?.name || article.categoryLabel || 'Guide';
+  const showCategoryBadge = Boolean(categoryInfo || article.categoryLabel);
 
   const isMaandhan = article.category === 'pension-scheme' || article.slug.includes('maandhan');
-  const articleHref = isMaandhan ? `/maandhan/${article.slug}` : `/articles/${article.slug}`;
+  const articleHref =
+    article.href ?? (isMaandhan ? `/maandhan/${article.slug}` : `/articles/${article.slug}`);
   const displayDesc = article.desc || article.description || '';
 
   return (
@@ -199,7 +209,7 @@ function ArticleCard({ article, showNewBadge = false, priority = false }: { arti
         )}
       </div>
       <div className="p-4 flex flex-col flex-1">
-        {categoryInfo && (
+        {showCategoryBadge && (
           <span className="text-[10px] font-bold px-2 py-0.5 rounded-full self-start bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 uppercase tracking-wide">
             {categoryName}
           </span>
@@ -252,8 +262,12 @@ function ArticlesContent({ articles }: { articles: readonly CombinedArticleMeta[
     const counts: Record<string, number> = {};
     articles.forEach(a => { counts[a.category] = (counts[a.category] || 0) + 1; });
 
-    const catInfo = activeCategory !== 'all' ? (CATEGORIES[activeCategory as CategorySlug] as { name: string; nameHi: string }) : null;
-    const activeName = catInfo ? catInfo.nameHi : 'Sabhi Verified Guides';
+    const catInfo = activeCategory !== 'all' ? (CATEGORIES[activeCategory as CategorySlug] as { name: string; nameHi: string } | undefined) : null;
+    const activeName = catInfo
+      ? catInfo.nameHi
+      : activeCategory === 'rajya-yojana'
+        ? 'Rajya (State) Kisan Yojana Guides'
+        : 'Sabhi Verified Guides';
 
     return { latestArticles: latest, remainingArticles: remaining, categoryCounts: counts, activeCategoryName: activeName };
   }, [articles, activeCategory, searchQuery]);
@@ -336,6 +350,22 @@ function ArticlesContent({ articles }: { articles: readonly CombinedArticleMeta[
               </Link>
             );
           })}
+          {/* rajya-yojana has no entry in CATEGORIES (no /articles/category page),
+              so its chip is rendered explicitly. */}
+          {(categoryCounts['rajya-yojana'] || 0) > 0 && (
+            <Link
+              href="/articles?category=rajya-yojana"
+              className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-bold transition-all focus:outline-none focus:ring-2 focus:ring-green-500 ${
+                activeCategory === 'rajya-yojana'
+                  ? 'bg-[var(--color-primary)] text-white shadow-lg scale-105'
+                  : 'bg-[var(--color-card)] text-[var(--color-text)] hover:bg-[var(--color-bg-alt)] border border-[var(--color-border)]'
+              }`}
+              aria-current={activeCategory === 'rajya-yojana' ? 'page' : undefined}
+            >
+              <IconBuilding className="w-4 h-4" />
+              Rajya Yojana ({categoryCounts['rajya-yojana']})
+            </Link>
+          )}
         </div>
       </div>
 
@@ -441,7 +471,8 @@ export default function ArticlesClient({ articles, showHero = true }: { articles
     numberOfItems: articles.length,
     itemListElement: articles.slice(0, 50).map((article, index) => {
       const isMaandhan = article.category === 'pension-scheme' || article.slug.includes('maandhan');
-      const path = isMaandhan ? `/maandhan/${article.slug}` : `/articles/${article.slug}`;
+      const path =
+        article.href ?? (isMaandhan ? `/maandhan/${article.slug}` : `/articles/${article.slug}`);
       return {
         '@type': 'ListItem',
         position: index + 1,
