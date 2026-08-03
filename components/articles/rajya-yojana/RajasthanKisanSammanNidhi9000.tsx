@@ -4,7 +4,6 @@ import { useState } from 'react';
 import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 
-
 function FaqItem({ question, answer }: { question: string; answer: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
 
