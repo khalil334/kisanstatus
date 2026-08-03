@@ -30,6 +30,7 @@ import {
   BING_VERIFICATION,
   YANDEX_VERIFICATION,
   GTM_ID,
+  RSS_URL,
 } from '@/lib/site-config';
 
 const poppins = Poppins({
@@ -69,6 +70,9 @@ export const metadata: Metadata = {
     languages: {
       'hi-IN': SITE_URL,
       'x-default': SITE_URL,
+    },
+    types: {
+      'application/rss+xml': [{ url: RSS_URL, title: `${SITE_NAME} — Latest Guides` }],
     },
   },
   openGraph: {
