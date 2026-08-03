@@ -123,6 +123,17 @@ const CATEGORY_ICONS: Record<string, React.FC<{ className?: string }>> = {
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605" />
     </svg>
   ),
+  'pashupalan': ({ className }) => (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 21c-3.314 0-6-2.239-6-5 0-1.657.895-3.132 2.29-4.062C7.49 11.16 7 10.135 7 9V5.5L9.5 7h5L17 5.5V9c0 1.135-.49 2.16-1.29 2.938C17.105 12.868 18 14.343 18 16c0 2.761-2.686 5-6 5z" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 16h.01M14 16h.01" />
+    </svg>
+  ),
+  'agri-business': ({ className }) => (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 21V9l6 3V9l6 3V8.25A1.25 1.25 0 0116.25 7h1.5A1.25 1.25 0 0119 8.25V21M3 21h18M7 21v-3.5h3V21" />
+    </svg>
+  ),
 };
 
 /* ─── Article Image Component ─── */
