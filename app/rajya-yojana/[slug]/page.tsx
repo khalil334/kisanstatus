@@ -7,6 +7,15 @@ import {
   type RajyaYojanaArticleMeta,
 } from '@/lib/rajya-yojana-data';
 import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '@/lib/site-config';
+import RajasthanKisanSammanNidhi9000 from '@/components/articles/rajya-yojana/RajasthanKisanSammanNidhi9000';
+import AnnadataSukhibhavaStatusCheck from '@/components/articles/rajya-yojana/AnnadataSukhibhavaStatusCheck';
+import MpKisanKalyanYojanaKist from '@/components/articles/rajya-yojana/MpKisanKalyanYojanaKist';
+import NamoShetkariYojanaStatus from '@/components/articles/rajya-yojana/NamoShetkariYojanaStatus';
+import RythuBharosaStatusCheck from '@/components/articles/rajya-yojana/RythuBharosaStatusCheck';
+import KrishakBandhuStatusCheck from '@/components/articles/rajya-yojana/KrishakBandhuStatusCheck';
+import OdishaCmKisanStatusCheck from '@/components/articles/rajya-yojana/OdishaCmKisanStatusCheck';
+import PmKisanPatiPatniRule from '@/components/articles/rajya-yojana/PmKisanPatiPatniRule';
+import StateKisanYojanaHub from '@/components/articles/rajya-yojana/StateKisanYojanaHub';
 
 /**
  * Register a body component here the same moment you set its `status: 'live'`
@@ -20,7 +29,17 @@ import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '@/lib/site-config';
  *     { ssr: true }
  *   ),
  */
-const COMPONENTS: Record<string, React.ComponentType<{ article: RajyaYojanaArticleMeta }>> = {};
+const COMPONENTS: Record<string, React.ComponentType<{ article: RajyaYojanaArticleMeta }>> = {
+  RajasthanKisanSammanNidhi9000,
+  AnnadataSukhibhavaStatusCheck,
+  MpKisanKalyanYojanaKist,
+  NamoShetkariYojanaStatus,
+  RythuBharosaStatusCheck,
+  KrishakBandhuStatusCheck,
+  OdishaCmKisanStatusCheck,
+  PmKisanPatiPatniRule,
+  StateKisanYojanaHub,
+};
 
 export async function generateStaticParams() {
   return LIVE_RAJYA_YOJANA_ARTICLES.map((article) => ({ slug: article.slug }));

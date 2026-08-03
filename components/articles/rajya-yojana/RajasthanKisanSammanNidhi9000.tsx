@@ -2,31 +2,8 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 
-const IMG_BASE = '/images/articles/rajya-yojna/rajasthan-kisan-samman-nidhi-9000';
-
-function Fig({ src, alt, caption }: { src: string; alt: string; caption?: string }) {
-  return (
-    <figure className="my-8 not-prose">
-      <Image
-        src={`${IMG_BASE}/${src}`}
-        alt={alt}
-        width={800}
-        height={450}
-        sizes="(max-width: 768px) 100vw, 800px"
-        className="w-full rounded-xl shadow-md object-cover"
-        loading="lazy"
-      />
-      {caption && (
-        <figcaption className="mt-2 text-center text-sm text-gray-500 dark:text-gray-400">
-          {caption}
-        </figcaption>
-      )}
-    </figure>
-  );
-}
 
 function FaqItem({ question, answer }: { question: string; answer: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -69,13 +46,13 @@ export default function RajasthanKisanSammanNidhi9000() {
     '@type': 'Article',
     headline: 'Rajasthan Kisan Samman Nidhi: ₹9,000 Kaise Milte Hain aur ₹12,000 Wale Prastaav Ka Sach',
     description: 'Rajasthan Mukhyamantri Kisan Samman Nidhi ki eligibility, 6vi kist ka status, aur ₹12,000 ki badhotri abhi tak confirm hui hai ya nahi — sab detail mein.',
-    image: 'https://kisanstatus.com' + IMG_BASE + '/hero-rajasthan-kisan.webp',
+    image: 'https://kisanstatus.com/og-image.webp',
     author: { '@type': 'Organization', name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' },
     publisher: {
       '@type': 'Organization',
       name: 'KisanStatus.com',
       url: 'https://kisanstatus.com',
-      logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.webp', width: 250, height: 60 },
+      logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.png', width: 250, height: 60 },
     },
     datePublished: '2024-06-01',
     dateModified: '2026-08-03',
@@ -136,12 +113,6 @@ export default function RajasthanKisanSammanNidhi9000() {
         <p>
           Confusion wahan shuru hoti hai jahan log ₹12,000 wale number ke peeche bhaagte hain — jo abhi tak sirf ek ghoshna hai, khaate mein aane wali raashi nahi. Neeche dono baatein saaf-saaf alag karke rakhi hain: kya pakka hai, aur kya sirf umeed.
         </p>
-
-        <Fig
-          src="hero-rajasthan-kisan.webp"
-          alt="Rajasthan ka kisan sarson ke khet mein - Kisan Samman Nidhi beneficiary"
-          caption="PM Kisan ke upar Rajasthan sarkar ka extra support"
-        />
 
         <h2>Scheme Kaam Kaise Karti Hai</h2>
 
@@ -227,7 +198,7 @@ export default function RajasthanKisanSammanNidhi9000() {
 
         <h3>Pati-Patni Dono Le Sakte Hain?</h3>
         <p>
-          Nahi. Ek family — pati, patni, aur unmarried bachche — mein sirf ek hi vyakti eligible hota hai. Dono ne register karwa liya to ek registration cancel hoga, aur jitna extra le liya wo wapas bhi karna pad sakta hai. Detail mein <Link href="/articles/pm-kisan-pati-patni-dono-ko-milega">is article</Link> mein padho.
+          Nahi. Ek family — pati, patni, aur unmarried bachche — mein sirf ek hi vyakti eligible hota hai. Dono ne register karwa liya to ek registration cancel hoga, aur jitna extra le liya wo wapas bhi karna pad sakta hai. Detail mein <Link href="/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega">is article</Link> mein padho.
         </p>
 
         <h2>6vi Kist — Ruki Kyun Hai</h2>
@@ -247,12 +218,6 @@ export default function RajasthanKisanSammanNidhi9000() {
         <p>Do tareeke hain, dono free hain, dono online hote hain.</p>
 
         <h3>Jan Soochna Portal</h3>
-
-        <Fig
-          src="jan-soochna-status-screenshot.webp"
-          alt="Jan Soochna Rajasthan portal par Mukhyamantri Kisan Samman Nidhi status check page"
-          caption="Jan Soochna portal ka status check page (illustrative)"
-        />
 
         <ol>
           <li><code>jansoochna.rajasthan.gov.in</code> kholo</li>
@@ -276,12 +241,6 @@ export default function RajasthanKisanSammanNidhi9000() {
 
         <h2>Paisa Nahi Aaya — Ab Kya</h2>
 
-        <Fig
-          src="bank-passbook-dbt-credit.webp"
-          alt="Bank passbook mein Rajasthan Govt DBT Kisan credit entry aur phone SMS alert"
-          caption="DBT entry 'Rajasthan Govt DBT Kisan' naam se passbook mein dikhti hai"
-        />
-
         <p>
           Sabse pehle bank statement khud check karo — SMS kabhi-kabhi miss ho jaata hai lekin paisa phir bhi aa chuka hota hai. "NEFT", "DBT" ya "Rajasthan Govt" naam ki entry dhundo.
         </p>
@@ -299,12 +258,6 @@ export default function RajasthanKisanSammanNidhi9000() {
         </p>
 
         <h2>PM Kisan vs Rajasthan Wali Scheme — Kya Fark Hai</h2>
-
-        <Fig
-          src="pm-kisan-status-rajasthan.webp"
-          alt="PM-KISAN beneficiary status page Rajasthan - Payment Successful"
-          caption="Dono schemes ka status alag-alag portal par dikhta hai"
-        />
 
         <div className="overflow-x-auto my-8 not-prose">
           <table className="w-full border-collapse border border-gray-300 dark:border-gray-600 rounded-xl overflow-hidden text-sm shadow-sm">
@@ -412,7 +365,7 @@ export default function RajasthanKisanSammanNidhi9000() {
         <div className="mt-12 pt-8 border-t-2 border-gray-200 dark:border-gray-700 not-prose">
           <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">Aage Kya Padhein?</h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <Link href="/articles/pm-kisan-24vi-kist-2026" className="group flex flex-col bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-green-500 hover:shadow-lg transition-all">
+            <Link href="/articles/PmKisan24viKist2026" className="group flex flex-col bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-green-500 hover:shadow-lg transition-all">
               <h4 className="font-bold text-gray-900 dark:text-gray-100 group-hover:text-green-600 transition-colors mb-1">PM Kisan 24vi Kist</h4>
               <p className="text-xs text-gray-600 dark:text-gray-400">Next installment kab aayegi.</p>
             </Link>
@@ -420,7 +373,7 @@ export default function RajasthanKisanSammanNidhi9000() {
               <h4 className="font-bold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 transition-colors mb-1">State Kisan Yojana List</h4>
               <p className="text-xs text-gray-600 dark:text-gray-400">Sab states ka comparison ek jagah.</p>
             </Link>
-            <Link href="/articles/pm-kisan-pati-patni-dono-ko-milega" className="group flex flex-col bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-purple-500 hover:shadow-lg transition-all">
+            <Link href="/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega" className="group flex flex-col bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-purple-500 hover:shadow-lg transition-all">
               <h4 className="font-bold text-gray-900 dark:text-gray-100 group-hover:text-purple-600 transition-colors mb-1">Pati-Patni Dono Ko Milega?</h4>
               <p className="text-xs text-gray-600 dark:text-gray-400">PM Kisan ka family rule samjho.</p>
             </Link>
