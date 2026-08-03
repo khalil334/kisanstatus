@@ -115,6 +115,39 @@
     Land Record Issue fix text.
   - All other 11 kws verified present verbatim in their ranking components — no change.
 
+## Fixes applied 2026-08-03 (Tier 1, pushed direct to main, 0e9549b)
+Crawl 2026-08-02 16:57 = health 100/100, 314 pages, 0 broken, 0 Critical. Only 5 of 173
+issue-types have any affected pages, and only ONE is indexable (SERP-title mismatch, 4 pages).
+So Tier 1 targeted defects verified on the LIVE site that Site Audit does not detect at all:
+- **`/browserconfig.xml` was 404** while `app/layout.tsx` declared `msapplication-config`.
+  Created `public/browserconfig.xml`; tiles point only at assets that exist on disk.
+- **`/rss.xml` was 404** while `lib/site-config.ts` exported `RSS_URL` (dead config, long-standing).
+  Added `app/rss.xml/route.ts` merging ARTICLES + MAANDHAN_ARTICLES (normalising the two field
+  shapes like `app/sitemap.ts` does), sorted by `modified` desc, served `noindex, follow`.
+- Added `alternates.types` in `app/layout.tsx` for RSS autodiscovery.
+- **Deleted `public/robots.txt`** — it was DEAD, not authoritative (see gotcha below).
+
+## Gotchas learned 2026-08-03
+- **`public/robots.txt` did NOT override `app/robots.ts`** on this Vercel deployment — the
+  opposite of the usual Next.js expectation. Proof: live `/robots.txt` contains
+  `Disallow: /search?` (only in robots.ts) and lacks `Crawl-delay: 0` (only in the static file).
+  So the AI-crawler allow rules (GPTBot/ClaudeBot/PerplexityBot/Applebot) were live all along.
+  Don't "fix" this as a critical AEO bug — verify with `curl` before concluding.
+- **`npm run build` runs `update-dates` first**, which rewrites `publishedTime`/`modifiedTime`
+  on ~37 articles in `lib/articles-data.ts` and drops a `.backup-<ts>` file. When building only
+  to typecheck, use `npx next build` / `npx tsc --noEmit` and `git checkout -- lib/articles-data.ts`
+  afterwards, or you'll commit unintended date churn.
+- **`package-lock.json` is out of sync with `package.json`** (pre-existing, NOT introduced here):
+  `@next/bundle-analyzer@16.2.7` missing from the lock, and `sharp` drifts (package.json 0.33.5
+  vs lock 0.34.5). `npm ci` therefore FAILS — a real risk if Vercel uses `npm ci`. Install with
+  `npm install --no-save --no-package-lock` to avoid touching the lock. Owner not yet asked to fix.
+- **`next/font` needs `fonts.googleapis.com` AND `fonts.gstatic.com`** allowlisted for a full
+  `next build` in the sandbox; without gstatic the build fails on font files even though the CSS
+  resolves. `npx tsc --noEmit` is the reliable local gate.
+- **SERP-title data is fetchable**: `export_many` dataset=`pages` with the issue's
+  `pages_filter_id` and fields `["url","title","serp_title"]` returns both titles side by side —
+  use it instead of guessing what Google rewrote.
+
 ## Confirmed false positives / do-not-fix
 - 3XX redirect (3), HTTP→HTTPS redirect (2), redirect chain (1) — correct canonicalization to `https://kisanstatus.com/`; the 2-hop `http://www.` chain is a Vercel artifact.
 - Noindex page (3), Noindex follow page (3) — non-indexable pages, intentional per owner.
