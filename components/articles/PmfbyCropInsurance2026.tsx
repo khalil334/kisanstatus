@@ -7,7 +7,7 @@ import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, Bott
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const PUBLISHED = '2026-04-01T08:00:00+05:30';
-const MODIFIED = '2026-07-11T08:00:00+05:30';
+const MODIFIED = '2026-08-02T08:00:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide', emoji: '📚' },
@@ -21,7 +21,7 @@ const RELATED = [
 const FAQS_DATA = [
   {
     q: 'PMFBY enrollment kaise karein?',
-    a: 'Loanee farmers ka automatic ho jata hai bank se. Non-loanee ko pmfby.in par jana padega ya CSC se form bharna padega. 31 July se pehle karo kharif ke liye.',
+    a: 'Loanee farmers ka automatic ho jata hai bank se. Non-loanee ko pmfby.gov.in par jana padega ya CSC se form bharna padega. 31 July se pehle karo kharif ke liye.',
   },
   {
     q: 'Premium kitna dena padta hai?',
@@ -49,7 +49,19 @@ const FAQS_DATA = [
   },
   {
     q: 'Online status kaise check karein?',
-    a: 'pmfby.in par jao → Application Status → Aadhaar ya registration number daalo. Pura track kar sakte ho.',
+    a: 'pmfby.gov.in par jao → Application Status → Aadhaar ya registration number daalo. Pura track kar sakte ho.',
+  },
+  {
+    q: 'PMFBY ka helpline number kya hai?',
+    a: 'Toll-free number 14447 hai, subah 9 se shaam 6 baje tak available. State ke hisaab se alag helpline bhi ho sakti hai, jo pmfby.gov.in par "Contact Us" section mein mil jaati hai.',
+  },
+  {
+    q: 'Survey number ya khasra number galat register ho gaya, kya karein?',
+    a: 'CSC ya bank branch mein jaakar correction request karein, sahi Khatauni ki copy saath le jaayein. Galat survey number ki wajah se claim ke waqt problem aa sakti hai, isliye enrollment ke turant baad status verify kar lena chahiye.',
+  },
+  {
+    q: 'PMFBY app se enrollment ho sakta hai kya?',
+    a: 'Haan, "Crop Insurance" mobile app (Play Store) se bhi apply kar sakte hain — process portal jaisa hi hai, bas screen chhoti hoti hai. Weak network wale areas mein website zyada reliable rehti hai.',
   },
 ];
 
@@ -150,7 +162,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">🛡️ PMFBY Guide 2026</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            PMFBY Crop Insurance 2026: Kisan Fasal Bima Yojana Se Sirf 2% Premium Mein Fasal Suraksha
+            PMFBY Crop Insurance Status Check 2026: Kisan Fasal Bima Yojana Se Sirf 2% Premium Mein Fasal Suraksha
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
@@ -185,7 +197,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
             Poora saal mehnat. Beej, khaad, mazdoori — lakho kharch. Phir ek toofan, ek sukha — sab khatam.
           </p>
           <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
-            PMFBY isi dar ko khatam karta hai. ₹1 lakh ki fasal ka premium? Sirf ₹2,000. Baaki sarkar deti hai. Miss mat karo yeh deal bhai.
+            PMFBY isi dar ko khatam karta hai. ₹1 lakh ki fasal ka premium sirf ₹2,000 padta hai, baaki sarkar deti hai. Ek scheme hai jo miss karne layak nahi.
           </p>
         </div>
 
@@ -208,11 +220,11 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
           <SH>PMFBY Kya Hai? (PM Kisan Fasal Bima Yojana Meaning)</SH>
           
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Bhai, <strong>PMFBY ka matlab</strong> hai Pradhan Mantri Fasal Bima Yojana. 2016 se chal rahi hai. Sukha, baadh, toofan, keede — kisi bhi wajah se fasal kharab ho toh paisa milta hai. Seedha bank account mein.
+            PMFBY ka poora naam hai Pradhan Mantri Fasal Bima Yojana, jo 2016 se chal rahi hai. Sukha, baadh, toofan ya keede-makode — kisi bhi karan se fasal barbaad ho jaaye, iska muawza seedha bank account mein aata hai.
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Ye scheme un kisanon ke liye hai jo <strong>kisan fasal Bima Yojana online apply</strong> karna chahte hain. Bahut simple process hai.
+            Jo kisan online apply karna chahte hain, unke liye process kaafi seedha rakha gaya hai — CSC ya portal, dono raaste khule hain.
           </p>
 
           <div className="grid grid-cols-3 gap-3 mb-4">
@@ -238,7 +250,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
           <SH>Kya Kya Cover Hota Hai?</SH>
           
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Dekho bhai, PMFBY mein bahut kuch cover hota hai. Par kuch cheezein nahi hoti. Ye dhyan se padhna:
+            PMFBY ke daayre mein bahut kuch aata hai, lekin kuch cheezein isse bahar bhi rakhi gayi hain. Dono list neeche di hai:
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -271,10 +283,10 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
             <strong>Loanee farmers:</strong> Bank automatic karta hai. Aapko kuch nahi karna.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            <strong>Non-loanee:</strong> Khud karna padega. <strong>PMFBY online apply karne ka tarika</strong> bahut simple hai:
+            <strong>Non-loanee:</strong> Khud registration karna padega. Process itna simple hai:
           </p>
           <StepList>
-            <SI n={1}>pmfby.in ya CSC jao</SI>
+            <SI n={1}>pmfby.gov.in ya CSC jao</SI>
             <SI n={2}>Form bharo — land + crop details</SI>
             <SI n={3}>Documents do — Aadhaar, Khatauni, Passbook</SI>
             <SI n={4}>Premium pay karo</SI>
@@ -286,7 +298,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
               🔍 Abhi Enroll Karo
             </p>
             <p className="text-xs text-green-700 dark:text-green-400 mb-3">
-              Official PMFBY portal par jakar apna <strong>PMFBY enrollment online</strong> karo. 10 second baad portal khulega.
+              Official PMFBY portal par jakar apna enrollment complete karo. 10 second baad portal khulega.
             </p>
             <button
               onClick={() => handleOfficialLink(
@@ -301,7 +313,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
           </div>
 
           <DB>
-            <strong>Deadline:</strong> Kharif = July 31. Rabi = Dec 31. Miss mat karna bhai!
+            <strong>Deadline:</strong> Kharif ke liye 31 July, Rabi ke liye 31 December. Ye date nikal gayi toh us season ka cover nahi milega.
           </DB>
         </section>
 
@@ -321,10 +333,26 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
         </div>
 
         <section className="mb-8">
+          <SH>PMFBY Crop Insurance Status Check Kaise Karein?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Enrollment ho gaya lekin confirm nahi hai ki system mein register hua ya nahi? Status check karna 2 minute ka kaam hai:
+          </p>
+          <StepList>
+            <SI n={1}><strong>pmfby.gov.in</strong> par jaayein aur "Application Status" section dhoondein</SI>
+            <SI n={2}>Apna Aadhaar number ya registration number daalein</SI>
+            <SI n={3}>State, district aur season select karein</SI>
+            <SI n={4}>Status table mein policy number, premium paid, aur coverage amount dikhega</SI>
+          </StepList>
+          <WB>
+            Status "Not Found" dikhe toh iska matlab enrollment complete nahi hua tha ya bank ne data submit hi nahi kiya — apni branch se turant confirm karwayein, deadline nikalne se pehle.
+          </WB>
+        </section>
+
+        <section className="mb-8">
           <SH>PMFBY Claim Kaise Milega? (Step by Step)</SH>
           
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Fasal kharab ho gayi? Tension mat lo. Ye karo turant:
+            Fasal kharab ho gayi toh ghabraane ki zaroorat nahi — ye steps turant follow karein:
           </p>
           <StepList>
             <SI n={1}><strong>48 ghante mein</strong> insurance company ko batao</SI>
@@ -334,7 +362,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
             <SI n={5}>Verification ke baad paisa <strong>seedha account</strong> mein</SI>
           </StepList>
           <DB>
-            <strong>Sabse Important:</strong> 48 ghante! Isse zyada delay hua toh claim reject. Photos + certificate + written complaint — teeno ready rakho.
+            <strong>Sabse Important:</strong> 48 ghante ki khidki chhoti hai. Isse zyada delay hua toh claim automatically reject ho jaata hai. Photos, loss certificate, aur written complaint — teeno pehle se taiyar rakhein.
           </DB>
         </section>
 
@@ -354,10 +382,10 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
         </div>
 
         <section className="mb-8">
-          <SH>PMFBY Premium Calculation Kaise Karein?</SH>
+          <SH>Premium Ka Hisaab Khud Kaise Lagayein?</SH>
           
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Bhai, premium calculate karna bahut simple hai. <strong>PMFBY premium calculator</strong> use karo ya khud calculate karo:
+            Calculation ka formula seedha hai — crop type ke hisaab se fixed percentage, jo neeche table mein hai:
           </p>
 
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
@@ -387,15 +415,15 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
           </div>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Baaki sab sarkar subsidy mein deti hai. Aapko bas itna hi dena hai.
+            Yaad rakhein ye sirf farmer ka hissa hai — actual premium isse kaafi zyada hota hai, jiska bada hissa central aur state government milkar cover karti hain.
           </p>
         </section>
 
         <section className="mb-8">
-          <SH>PMFBY Documents List</SH>
+          <SH>Enrollment Ke Liye Documents Ki List</SH>
           
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Enrollment ke liye ye documents ready rakho:
+            In cheezon ko pehle se jama karke rakhein, taaki portal ya CSC par baar-baar chakkar na lagana pade:
           </p>
 
           <ul className="list-disc list-inside text-sm text-[var(--color-text-muted)] space-y-2 mb-4">
@@ -408,7 +436,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
           </ul>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Tenant farmers ko landowner ka NOC ya lease agreement bhi chahiye.
+            Zameen kiraye par li hui ho toh landowner ka NOC ya lease agreement bhi saath rakhein — tenant farmers bhi is scheme mein cover hote hain.
           </p>
         </section>
 
@@ -422,7 +450,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Seedhi Baat</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
-            Dekho bhai, kheti mein risk toh hai hi. Mausam ka bharosa nahi. PMFBY ek chhoti si premium mein yeh risk hata deta hai. Ignore karne ka koi reason nahi. Deadline se pehle karo, receipt sambhalo, aur agar loss ho toh 48 ghante mein report karo. Itna hi karna hai.
+            Kheti mein mausam ka koi bharosa nahi hota, aur PMFBY isi anishchitta ke against ek sasta cover hai. Deadline se pehle enroll karein, receipt sambhal ke rakhein, aur nuksan ho toh 48 ghante ke andar report karna na bhoolein — bas itna dhyan rakhne se ye scheme apna kaam poora kar degi.
           </p>
         </div>
 
@@ -431,7 +459,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
             🔗 PMFBY Official Portal
           </h3>
           <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
-            <strong>PMFBY enrollment online</strong> karne ke liye, <strong>PMFBY status check</strong> karne ke liye, ya claim submit karne ke liye official portal par jaayein. 10 second baad portal khulega.
+            Enrollment, status check, ya claim submission — teeno ka kaam isi ek portal se ho jaata hai. 10 second baad khulega.
           </p>
           <button
             onClick={() => handleOfficialLink(
