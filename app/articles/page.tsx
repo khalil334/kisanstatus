@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { ARTICLES } from '@/lib/articles-data';
 import { MAANDHAN_ARTICLES } from '@/lib/maandhan-data';
+import { LIVE_RAJYA_YOJANA_ARTICLES } from '@/lib/rajya-yojana-data';
 import { 
   SITE_URL, 
   SITE_NAME, 
@@ -16,7 +17,25 @@ import ArticlesClient from './ArticlesClient';
 
 export const revalidate = 3600;
 
-const ALL_ARTICLES = [...ARTICLES, ...MAANDHAN_ARTICLES];
+/**
+ * The rajya-yojana cluster is served from /rajya-yojana/<slug>, not /articles/<slug>,
+ * and its `category` ('rajya-yojana') is deliberately NOT in CATEGORIES (no category
+ * page). So each entry carries an explicit `href` + `categoryLabel` and the listing
+ * uses those instead of inferring a path from the slug.
+ */
+const RAJYA_LISTING_ARTICLES = LIVE_RAJYA_YOJANA_ARTICLES.map((a) => ({
+  slug: a.slug,
+  title: a.title,
+  description: a.description,
+  category: 'rajya-yojana',
+  categoryLabel: 'Rajya Yojana',
+  href: `/rajya-yojana/${a.slug}`,
+  ogImage: a.ogImage,
+  published: a.published,
+  keywords: [a.mainKeyword, ...a.secondaryKeywords] as readonly string[],
+}));
+
+const ALL_ARTICLES = [...ARTICLES, ...MAANDHAN_ARTICLES, ...RAJYA_LISTING_ARTICLES];
 
 export const metadata: Metadata = {
   title: `Kisan Guides 2026 — ${ALL_ARTICLES.length}+ Resources`,
@@ -87,9 +106,9 @@ export default function ArticlesPage() {
 
   const schemaArticles = ALL_ARTICLES.map((article: any, i) => {
     const isMaandhan = article.category === 'pension-scheme' || article.slug.includes('maandhan');
-    const articleUrl = isMaandhan 
-      ? `${SITE_URL}/maandhan/${article.slug}` 
-      : `${SITE_URL}/articles/${article.slug}`;
+    const articlePath =
+      article.href ?? (isMaandhan ? `/maandhan/${article.slug}` : `/articles/${article.slug}`);
+    const articleUrl = `${SITE_URL}${articlePath}`;
 
     const published = article.publishedTime || article.published;
     const modified = article.modifiedTime || article.modified || published;

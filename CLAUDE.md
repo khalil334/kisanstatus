@@ -280,3 +280,32 @@ Also removed 18 `<Fig>` refs to `.webp` files absent from `public/images/article
   in `.next/server/app/rajya-yojana/*.html` for exactly one `<h1>` and a real `<title>`. Don't try to
   `curl` a locally started `next start` — loopback to a self-started port is not reachable here.
 - Still open: 5 of the 9 rajya-yojana articles are short stubs, and the 18 article images don't exist.
+
+## Rajya-yojana articles invisible on-site — fixed 2026-08-03 (branch `fix/rajya-yojana-not-listed`)
+The 9 `/rajya-yojana/*` pages were **live and correct** (verified with curl: hub 200 with 9 cards,
+each article 200 with a real `<h1>` + full body, 10 URLs in sitemap.xml). The bug was that nothing
+in the site's own UI linked to them, so they were effectively invisible:
+- `/articles` listing loaded only `ARTICLES` + `MAANDHAN_ARTICLES` — the cluster was never in the array.
+- Header nav, header search index and footer Quick Links had zero `/rajya-yojana` entries.
+Root cause of the shape: listing/search code **inferred** each URL from the slug
+(`/articles/<slug>` vs `/maandhan/<slug>`), and this cluster lives at `/rajya-yojana/<slug>`.
+Fix (link layer only — no slug, URL, data or component change):
+- `CombinedArticleMeta` gained optional `href` + `categoryLabel`; every path build in
+  `app/articles/page.tsx` (JSON-LD) and `ArticlesClient.tsx` (card + ItemList) now prefers `href`
+  and only falls back to the maandhan/articles inference.
+- `app/articles/page.tsx` maps `LIVE_RAJYA_YOJANA_ARTICLES` into the listing with
+  `category: 'rajya-yojana'`, an explicit `href`, and keywords from `mainKeyword`+`secondaryKeywords`.
+- `rajya-yojana` is deliberately NOT added to `CATEGORIES` (it has no `/articles/category/` page), so
+  its filter chip is rendered explicitly and the card badge falls back to `categoryLabel`.
+- Header: `Rajya Yojana` nav item + a new `SEARCH_INDEX` (ARTICLES + LIVE_RAJYA_YOJANA_ARTICLES) where
+  each entry carries its own `href`. Footer: `/rajya-yojana` in Quick Links.
+Verified: `npx tsc --noEmit` clean, `env -u NODE_OPTIONS npx next build --webpack` succeeded,
+`.next/server/app/articles.html` contains all 9 `/rajya-yojana/<slug>` hrefs, the `Rajya Yojana (9)`
+chip, and `numberOfItems: 59` (37 + 13 + 9).
+
+### Gotcha
+- **A page being live is not the same as being reachable.** Ahrefs Site Audit crawls the sitemap, so
+  sitemap-only pages report as fine while having zero internal inlinks. When someone says "articles
+  show nahi ho rahe", curl the URL first — if it 200s, the bug is in the listing/nav layer.
+- **Any new cluster on its own path segment must set an explicit `href`.** Slug-based path inference
+  in `ArticlesClient`/`app/articles/page.tsx` silently points new clusters at `/articles/<slug>`.
