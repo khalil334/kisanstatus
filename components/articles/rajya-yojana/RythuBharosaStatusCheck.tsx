@@ -61,6 +61,10 @@ const FAQS_DATA = [
     q: 'Agar maine zameen bech di hai, toh kya mujhe paisa milega?',
     a: 'Nahi. Payment us vyakti ko jaati hai jiska naam Dharani portal par current owner ke roop mein darj hai. Bechne ke baad aapka naam list se hata diya jaata hai.',
   },
+  {
+    q: 'Zameen do alag mandals mein hai, status kaise dekhein?',
+    a: 'Har survey number apne mandal ke record se process hota hai. Aadhaar se search karne par dono parcels ki entries dikhni chahiye. Agar ek parcel missing hai, toh us mandal ke MRO office mein alag se check karwayein — dono payments alag-alag phase mein aa sakti hain.',
+  },
 ];
 
 export default function RythuBharosaStatusCheck2026() {
