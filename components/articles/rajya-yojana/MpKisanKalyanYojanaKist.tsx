@@ -68,17 +68,22 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
     <article className="prose prose-lg max-w-4xl mx-auto">
 
       <InfoBox type="update" date="4 August 2026">
-        <strong>Latest Update:</strong> MP CM Kisan Kalyan Yojana ki agli kist ki date abhi official taur par SAARA portal par announce nahi hui hai. Pichhli kist mein ₹1,000 ki raashi di gayi thi. Kripya kisi bhi "confirmed date" ke WhatsApp forward par bharosa na karein. Jab tak SAARA portal par notification na dikhe, tab tak "expected" hi maanein.
+        <strong>Latest Update:</strong> Agli kist ki date SAARA portal par abhi announce nahi hui hai.
+        Pichhli kist ₹1,000 ki thi. WhatsApp par ghoom rahi "confirmed date" ka koi aadhaar nahi hai —
+        jab tak portal par notification na dikhe, use "expected" hi maanein.
       </InfoBox>
 
       <h1>MP CM Kisan Kalyan Yojana Kist Kab Aayegi: Status Check, Amount aur SAARA Portal Guide</h1>
 
       <p>
-        Madhya Pradesh ke kisanon ke liye <strong>cm kisan kalyan yojana kist kab aayegi</strong>, ye aaj ke samay ka sabse zyada search kiya jaane wala sawal hai. Rajya sarkar ne PM Kisan Samman Nidhi ke saath milkar kisanon ko extra financial support dene ka vaada kiya tha, lekin internet par kai tarah ki afwaahen (rumors) phaili hui hain.
+        <strong>CM Kisan Kalyan Yojana kist kab aayegi</strong> — MP ke kisan yahi poochhte hain, aur
+        jawab dene wali aadhi websites afwaah chhaap deti hain. Amount par bhi wahi haal: kahin ₹4,000
+        likha hai, kahin ₹6,000.
       </p>
 
       <p>
-        Is article mein hum bilkul clear aur verified jaankari denge. Hum guess nahi karenge, balki seedha <strong>saara portal kisan kalyan status</strong> aur official guidelines ke aadhar par batayenge ki aapko kitna paisa milna chahiye, eligibility kya hai, aur agar paisa nahi aaya toh aapko kya karna chahiye.
+        Neeche jo bhi likha hai wo SAARA portal aur official guidelines se hai. Kitna paisa banta hai,
+        kaun eligible hai, aur na aane par kahan jaana hai — teen cheezein, sidhi baat.
       </p>
 
       <Fig
@@ -95,18 +100,23 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         label="Official Portal — SAARA MP Govt"
       />
 
-      <h2>MP Kisan Kalyan Yojana Kya Hai aur Amount Kitna Hai?</h2>
+      <h2>Scheme Kaam Kaise Karti Hai, Aur Kitna Paisa Banta Hai</h2>
 
       <p>
-        Madhya Pradesh CM Kisan Kalyan Yojana ek state-sponsored scheme hai jo PM Kisan Samman Nidhi ke beneficiaries ko target karti hai. Iska mukhya uddeshya kisanon ko kheti ke badhte huye kharchon (beej, khaad, irrigation) mein thodi raahat dena hai.
+        Ye MP sarkar ki apni scheme hai, lekin iski list PM Kisan se banti hai — beej, khaad aur
+        sinchai ke kharche mein thodi raahat dene ke liye.
       </p>
 
       <p>
-        <strong>Amount ko lekar bohot confusion hai.</strong> Internet par ₹2,000, ₹4,000, aur yahan tak ki ₹6,000 ke bhi dawe kiye jaate hain. Lekin official SAARA portal aur pichhle vitthiya varsh (financial year) ke records ke mutabik, Madhya Pradesh sarkar ne PM Kisan ke ₹6,000 ke upar <strong>extra ₹1,000 saalana</strong> (ek baar mein ya do kiston mein) dene ka pravadhan kiya tha. 
+        Amount par confusion asli hai. Internet par ₹2,000, ₹4,000, ₹6,000 — sab likha mil jaata hai.
+        SAARA portal aur pichhle vitthiya varsh ke records kehte hain: PM Kisan ke ₹6,000 ke upar
+        <strong> ₹1,000 saalana</strong>, ek ya do kiston mein.
       </p>
 
       <InfoBox type="warning">
-        <strong>Satark Rahein:</strong> Kai websites par likha hai ki MP sarkar ₹4,000 ya ₹6,000 de rahi hai. Ye purani ya galat jaankari ho sakti hai. Hamesha apna <strong>mp kisan kalyan yojana status check</strong> sirf official SAARA portal se karein. Hum yahan sirf verified data dete hain.
+        <strong>Satark Rahein:</strong> ₹4,000 ya ₹6,000 wale dawe purane ya galat hain. Gazette
+        notification aaye bina koi badha hua amount maan lena bekaar hai. Status sirf SAARA portal
+        se dekhein.
       </InfoBox>
 
       <SchemeTable>
@@ -136,10 +146,11 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         </tr>
       </SchemeTable>
 
-      <h2>MP Kisan Kalyan Yojana Status Check Kaise Karein? (SAARA Portal)</h2>
+      <h2>SAARA Portal Par Apna Status Kaise Dekhein</h2>
 
       <p>
-        Agar aap jaanna chahte hain ki aapka paisa kab aayega ya aapka naam <strong>kisan kalyan yojana beneficiary list mp</strong> mein hai ya nahi, toh niche diye gaye steps ko dhyan se follow karein. Ye process 100% online aur free hai.
+        Poora kaam online hai aur free hai. Aadhaar number ya registered mobile paas rakhein — OTP
+        usi number par aayega:
       </p>
 
       <Fig
@@ -168,10 +179,11 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         caption="Kist ka timing aksar rabi katai aur kharif buwai ke kharche ke aas-paas rakha jaata hai"
       />
 
-      <h2>CM Kisan Kalyan Yojana Kist Kab Aayegi? (Expected Timeline)</h2>
+      <h2>Kist Ka Waqt — Pichhle Teen Saal Ka Pattern</h2>
 
       <p>
-        Is sawal ka seedha jawab dena mushkil hai kyunki state sarkar kisi fixed national calendar ko follow nahi karti. Lekin pichhle 3 saalon ke pattern ko dekha jaye toh:
+        Fixed date koi nahi hai; state sarkar national calendar se nahi chalti. Lekin teen saal ka
+        pattern itna batata hai:
       </p>
 
       <ul>
@@ -180,13 +192,14 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
       </ul>
 
       <p>
-        Agar aapke account mein PM Kisan ki kist aa gayi hai lekin state ki kist nahi aayi, toh ghabrayein nahi. Dono ka release cycle alag hota hai. State treasury se fund release hone mein kabhi-kabhi 15 se 30 din ka samay lag jata hai.
+        PM Kisan aa gaya aur state ka nahi aaya — ye normal hai. Dono ka release cycle alag hai, aur
+        state treasury se fund nikalne mein 15 se 30 din lag jaate hain.
       </p>
 
-      <h2>Eligibility: Kaun Le Sakta Hai Ye Labh?</h2>
+      <h2>Kaun Eligible Hai, Kaun Nahi</h2>
 
       <p>
-        Is scheme ka seedha connection PM Kisan Samman Nidhi se hai. Isliye, eligibility criteria bhi lagbhag wahi hai, lekin kuch state-specific rules bhi hain:
+        Jad PM Kisan hi hai, isliye shartein lagbhag wahi hain — kuch state ke apne rules ke saath:
       </p>
 
       <h3>Mandatory Conditions:</h3>
@@ -206,10 +219,11 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         <li>Professionals (Doctors, Engineers, Lawyers, CAs) jo registered hain.</li>
       </ul>
 
-      <h2>Agar Payment Nahi Aayi Toh Kya Karein? (Troubleshooting)</h2>
+      <h2>"Payment Successful" Dikha, Paisa Nahi Aaya — Ab Kya</h2>
 
       <p>
-        Kai baar <strong>mp kisan kalyan yojana status check</strong> karne par "Payment Successful" dikhata hai, lekin bank account mein paisa nahi hota. Ya phir status "Rejected" aa jata hai. Aise mein ye steps follow karein:
+        Ye aam shikayat hai: portal par status green hai, passbook khaali. Ya phir seedha "Rejected"
+        aa jaata hai. Teen jagah check karni hoti hai, isi order mein:
       </p>
 
       <Fig
@@ -220,7 +234,9 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
 
       <h3>1. Bank Account aur NPCI Mapping Check Karein</h3>
       <p>
-        Sabse common reason ye hota hai ki bank account DBT (Direct Benefit Transfer) ke liye enabled nahi hai. Apne bank branch jaakar puchein ki "Kya mera account NPCI mapper mein Aadhaar ke saath linked hai?" Agar nahi, toh turant link karwayein.
+        Zyadatar cases yahin nikalte hain — account DBT ke liye enabled hi nahi hota. Branch mein
+        jaakar bas itna poochhein: "mera account NPCI mapper mein Aadhaar se linked hai ya nahi?" Na ho
+        to wahin link karwa lein.
       </p>
 
       <h3>2. PFMS Portal Par Track Karein</h3>
@@ -239,10 +255,11 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         caption="Payment Failed dikhe to Janpad Panchayat ya Tehsil office mein ADO/Patwari se details update karwao"
       />
 
-      <h2>MP Kisan Kalyan Yojana Beneficiary List Kaise Dekhein?</h2>
+      <h2>Beneficiary List Mein Naam Dhoondhna</h2>
 
       <p>
-        Agar aapko lagta hai ki aap eligible hain lekin aapka naam list mein nahi hai, toh aap <strong>kisan kalyan yojana beneficiary list mp</strong> check kar sakte hain:
+        Khud eligible lagte hain par paisa nahi aaya — pehle list mein naam hai ya nahi, ye dekh lein.
+        <strong> Kisan kalyan yojana beneficiary list MP</strong> portal se hi nikalti hai:
       </p>
 
       <ol>
@@ -253,13 +270,14 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
       </ol>
 
       <p>
-        Agar aapka naam nahi hai, lekin aap PM Kisan mein hain, toh ye ek technical glitch ho sakta hai. Apne nearest Common Service Centre (CSC) ya Gram Panchayat se data sync karwane ke liye kahein.
+        PM Kisan mein naam hai par is list mein nahi — aksar ye data sync ka glitch hota hai. Nazdeeki
+        CSC ya Gram Panchayat se sync karwane ko kahein.
       </p>
 
-      <h2>PM Kisan vs MP CM Kisan Kalyan: Main Antar</h2>
+      <h2>PM Kisan Aur MP Ki Scheme — Do Alag Cheezein</h2>
 
       <p>
-        Bahut se kisan bhai dono schemes ko ek hi samajh lete hain, jabki inme clear antar hai:
+        Dono ek hi lagti hain, hain nahi. Fark yahan saaf hai:
       </p>
 
       <SchemeTable>
@@ -295,10 +313,11 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         </tr>
       </SchemeTable>
 
-      <h2>Kya Aap Dusre State Se Hain?</h2>
+      <h2>MP Se Bahar Ke Kisan Yahan Dekhein</h2>
 
       <p>
-        Agar aap Madhya Pradesh ke nivaasi nahi hain, toh ye scheme aap par laagu nahi hoti. Lekin chinta na karein, humne India ke doosre mukhya rajyon ki kisan yojanaon par bhi detail se likha hai. Apne state ki jaankari ke liye in links par jaayein:
+        MP ka domicile nahi hai to ye scheme aap par laagu nahi hoti. Amount har rajya mein alag hai —
+        kahin PM Kisan se dugna, kahin MP jitna hi. Apne rajya ka aankda yahan dekhein:
       </p>
 
       <ul>
@@ -320,7 +339,7 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
       </ul>
 
       <p>
-        Sabhi state schemes ka ek saath overview dekhne ke liye:
+        Sabhi rajyon ka amount aur portal ek saath:
       </p>
 
       <ul>
