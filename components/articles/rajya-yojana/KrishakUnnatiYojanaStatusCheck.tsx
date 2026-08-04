@@ -353,42 +353,20 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
 
       <FAQBlock faqs={FAQS_DATA} caption="Krishak Unnati Yojana FAQ 2026" />
 
-      <h2>Related Articles</h2>
-      <ul>
-        <li>
-          <Link href="/articles/PmKisan24viKist2026">
-            PM Kisan 24vi Kist 2026 — Next Installment Date aur Status
-          </Link>
-        </li>
-        <li>
-          <Link href="/articles/PmKisanMasterGuide2026">
-            PM Kisan Master Guide 2026 — registration se payment tak poora process
-          </Link>
-        </li>
-        <li>
-          <Link href="/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega">
-            Pati-patni dono ko PM Kisan milega ya nahi — family rule
-          </Link>
-        </li>
-      </ul>
-
-      <h2>Aakhri Baat</h2>
-
-      <p>
-        Krishak Unnati Yojana mein status ka matlab portal ki ek screen nahi — teen record ka
-        aapas mein milna hai: samiti ki kharidi entry, sarkar ki release, aur bank ka credit.
-        Teeno ko usi kram mein check karein to wajah hamesha pakad mein aa jaati hai. Aur
-        Kharif 2026 se jo naya raasta khula hai, usme sabse pehla kadam kagzi nahi, digital
-        hai — AgriStack registration aur crop survey ki sahi entry. Ye do kaam waqt par kar
-        liye to aane wale season ka intezaar aadha aasaan ho jaayega.
-      </p>
-
       <InfoBox type="tip">
-        <strong>Surakshit Rahein:</strong> Antar rashi dilwane, naam judwane ya "file aage
+        <strong>Fraud se bachein:</strong> Antar rashi dilwane, naam judwane ya "file aage
         badhwane" ke naam par koi bhi paisa maange to dena nahi hai — ye scheme poori tarah
         free hai. Aisi maang ki shikayat apne kshetra ke khadya vibhag karyalay ya jila
         collector office mein karein.
       </InfoBox>
+
+      <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
+        <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
+          <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
+          Ye article sirf madad ke liye hai. Final decision ke liye official portal ya krishi office se sampark karein.
+        </p>
+      </div>
+
     </article>
   );
 }

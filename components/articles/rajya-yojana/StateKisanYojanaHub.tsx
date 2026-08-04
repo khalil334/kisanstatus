@@ -492,25 +492,17 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
 
       <FAQBlock faqs={FAQS_DATA} caption="MP CM Kisan Kalyan Yojana FAQ 2026" />
 
-      <h2>Related Articles</h2>
-      <ul>
-        <li>
-          <Link href="/articles/PmKisan24viKist2026">
-            PM Kisan 24vi Kist 2026 — Next Installment Date aur Status
-          </Link>
-        </li>
-        <li>
-          <Link href="/articles/pm-kisan-pati-patni-dono-ko-milega">
-            Pati-Patni Dono Ko PM Kisan Milega Ya Nahi? (Family Rules Explained)
-          </Link>
-        </li>
-      </ul>
-
       <InfoBox type="tip">
-        <strong>Surakshit Rahein:</strong> Koi bhi sarkari yojana registration ya status theek karne
-        ke naam par aapse paise nahi maangti. Koi "fees" maange to wo fraud hai — turant 1064
-        (Kisan Call Center) par shikayat darj karein.
+        <strong>Fraud se bachein:</strong> Koi bhi sarkari yojana registration ya status theek karne
+        ke naam par aapse paise nahi maangti. Koi "fees" maange to wo fraud hai — shikayat apne Janpad Panchayat ya krishi vibhag karyalay mein darj karein.
       </InfoBox>
+
+      <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
+        <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
+          <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
+          Ye article sirf madad ke liye hai. Final decision ke liye official portal ya krishi office se sampark karein.
+        </p>
+      </div>
 
     </article>
   );

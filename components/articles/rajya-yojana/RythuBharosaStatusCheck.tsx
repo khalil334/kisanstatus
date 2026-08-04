@@ -410,23 +410,16 @@ export default function RythuBharosaStatusCheck2026() {
 
       <FAQBlock faqs={FAQS_DATA} caption="Rythu Bharosa FAQ 2026" />
 
-      <h2>Related Articles</h2>
-      <ul>
-        <li>
-          <Link href="/articles/PmKisan24viKist2026">
-            PM Kisan 24vi Kist 2026 — Next Installment Date aur Status
-          </Link>
-        </li>
-        <li>
-          <Link href="/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega">
-            Ek parivar mein pati-patni dono ko PM Kisan milta hai ya nahi — family rule
-          </Link>
-        </li>
-      </ul>
-
       <InfoBox type="tip">
-        <strong>Surakshit Rahein:</strong> Rythu Bharosa registration ya status theek karne ke liye koi bhi sarkari officer ya agent aapse paise nahi maangta. Ye scheme 100% free hai. Agar koi "commission" maange, toh turant MRO office ya 1800-425-0888 (Telangana Kisan Call Center) par shikayat karein.
+        <strong>Fraud se bachein:</strong> Rythu Bharosa registration ya status theek karne ke liye koi bhi sarkari officer ya agent aapse paise nahi maangta. Ye scheme 100% free hai. Agar koi "commission" maange, toh turant MRO office ya 1800-425-0888 (Telangana Kisan Call Center) par shikayat karein.
       </InfoBox>
+
+      <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
+        <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
+          <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
+          Ye article sirf madad ke liye hai. Final decision ke liye official portal ya krishi office se sampark karein.
+        </p>
+      </div>
 
     </article>
   );
