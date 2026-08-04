@@ -101,10 +101,10 @@ export default function PmKisanCscRegistrationCharges({ article }: { article: Ar
         <section className="mb-8">
           <SH>₹500 Maang Rahe Hain? Ruko, Pehle Ye Padho</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Bhai, ek baar mere paas ek kisan bhai ka message aaya — "CSC wale ne PM Kisan registration ke ₹500 maange hain, kya doon?" Maine turant bola — ruko, ye galat hai.
+            "CSC wale ne PM Kisan registration ke ₹500 maange hain, kya doon?" — ye sawaal aam hai, aur jawab hai: itna dena galat hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Sarkar ne PM Kisan ke liye CSC charges fix kiye hain. Usse ek rupya bhi zyada lena illegal hai. Lekin gaon mein bahut log anjaan hote hain aur extra paise de dete hain. Aaj main aapko bataunga ki asli rate kya hai, aur agar koi zyada maange toh kaise complaint karein.
+            Sarkar ne PM Kisan ke liye CSC charges fix kiye hain. Usse ek rupya bhi zyada lena illegal hai. Lekin bahut log anjaan hote hain aur extra paise de dete hain. Neeche asli rate diya hai, aur ye bhi ki zyada maange jaane par complaint kaise karein.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Seedha jawab pehle de deta hoon, kyunki sabse zyada yahi poocha jata hai — <strong>CSC registration fees kitni hai</strong>? New registration ke ₹25 se ₹30, aur eKYC ka ₹15 se ₹20. Bas itna. Neeche poora rate chart bhi diya hai taaki aap counter par confident rahein.
@@ -126,7 +126,7 @@ export default function PmKisanCscRegistrationCharges({ article }: { article: Ar
           </DB>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
-            Is article mein humne clear kar diya hai ki kaunsa kaam kitne ka hai, kaise free mein ghar baithe karein, aur agar koi zyada paise maange toh kaise complaint karein. End tak padho, paise bachenge aur kaam bhi banega.
+            Neeche saaf-saaf diya hai ki kaunsa kaam kitne ka hai, kaise free mein ghar baithe karein, aur agar koi zyada paise maange toh kaise complaint karein. End tak padho, paise bachenge aur kaam bhi banega.
           </p>
         </section>
 
