@@ -353,3 +353,48 @@ chip, and `numberOfItems: 59` (37 + 13 + 9).
   `lib/articles-data.ts` and leaves `lib/articles-data.ts.backup-<ts>` files behind.
   Revert that file and delete the backups before committing, or unrelated date churn
   lands in the commit.
+
+## Soft-404 shells were indexable — fixed 2026-08-04 (branch `fix/soft-404-noindex-metadata`)
+Crawl 2026-08-04 19:06 = health 100/100, 358 pages, 0 broken, 0 Critical. Only 6 of 173 issue-types
+had any affected pages, and 5 were confirmed do-not-fix (see the false-positive list). Chasing the
+6th (H1 missing, 1 page) surfaced a **site-wide template defect Ahrefs only sampled once**:
+
+**Every unknown slug on all four dynamic routes returned HTTP 200 + `robots: index, follow` + zero
+`<h1>`** — an indexable soft-404. Live proof before the fix:
+| URL | code | robots | h1 |
+|---|---|---|---|
+| `/articles/zzz-does-not-exist-xyz` | 200 | `index, follow` | 0 |
+| `/maandhan/zzz-nope-xyz` | 200 | `index, follow` | — |
+| `/rajya-yojana/zzz-nope-xyz` | 200 | `index, follow` | — |
+| `/articles/category/zzz-nope-xyz` | 200 | `index, follow` | — |
+| `/zzz-nope-xyz` (top-level control) | **404** | **noindex** | ok |
+
+**Root cause:** each `generateMetadata` returned a bare `{ title: 'Not Found' }` for an unknown slug.
+The body then calls `notFound()`, but **the route's own `generateMetadata` still wins over
+`app/not-found.tsx`'s `robots: {index:false}`** — so the 404 shell shipped as indexable. The
+top-level 404 was fine precisely because it has no competing `generateMetadata`.
+
+**Fix:** added `robots: { index: false, follow: true }` to the unknown-slug return in all four:
+`app/articles/[slug]/page.tsx`, `app/maandhan/[slug]/page.tsx`,
+`app/rajya-yojana/[slug]/page.tsx`, `app/articles/category/[category]/page.tsx`.
+Nothing else touched — no titles, no redirects, no data.
+
+Verified: `npx tsc --noEmit` clean; `env -u NODE_OPTIONS npx next build --webpack` succeeded; all real
+article/maandhan/rajya-yojana/category prerenders still carry `index, follow` + exactly one `<h1>`
+(checked in `.next/server/app/**`), so no live page was deindexed.
+
+### Gotchas
+- **`generateMetadata` beats `app/not-found.tsx` for `robots`.** Returning a title-only object from a
+  dynamic route's `generateMetadata` silently makes that route's 404 shell indexable. Any new dynamic
+  route MUST return `robots: { index: false, follow: true }` on its not-found branch.
+- **A `notFound()` call does NOT guarantee a noindex response.** Check the rendered `<meta name="robots">`,
+  not the presence of `notFound()`.
+- **`npx next start` on a local port is NOT reachable in this sandbox** (curl gets code 000 even though
+  the server logs "Ready"). Verify prerendered HTML in `.next/server/app/**` instead; that's the gate.
+- **Ahrefs under-reports this class of bug.** It flagged exactly ONE soft-404 URL (as "H1 tag missing or
+  empty" + "Noindex follow page") because that was the only bad slug still linked at crawl time. The
+  template was broken for *every* unknown slug on 4 routes. When you see a single H1-missing notice,
+  probe the route with a junk slug before calling it a one-page issue.
+- The 4 ghost `/articles/pm-kisan-pati-patni-dono-ko-milega` inlinks that caused the flagged URL were
+  ALREADY fixed in commit `2434209` (#46) — repo has zero `/articles/` refs and the 4 live source pages
+  return 0 hits. The 2026-08-04 crawl predates that deploy. Nothing extra to fix there.
