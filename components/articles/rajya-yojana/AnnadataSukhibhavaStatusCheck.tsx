@@ -1,7 +1,43 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import ExternalLinkButton from '@/components/ui/ExternalLinkButton';
 import InfoBox from '@/components/ui/InfoBox';
 import SchemeTable from '@/components/ui/SchemeTable';
+
+const IMG_BASE = '/images/articles/rajya-yojna/annadata-sukhibhava-status-check-2026';
+
+function Fig({
+  src,
+  alt,
+  caption,
+  width = 1200,
+  height = 800,
+  priority = false,
+}: {
+  src: string;
+  alt: string;
+  caption: string;
+  width?: number;
+  height?: number;
+  priority?: boolean;
+}) {
+  return (
+    <figure className="my-8 not-prose rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow-sm">
+      <Image
+        src={`${IMG_BASE}/${src}`}
+        alt={alt}
+        width={width}
+        height={height}
+        className="w-full h-auto object-cover"
+        sizes="(max-width: 768px) 100vw, 768px"
+        priority={priority}
+      />
+      <figcaption className="text-center text-xs text-gray-600 dark:text-gray-400 py-2 px-3 bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+        {caption}
+      </figcaption>
+    </figure>
+  );
+}
 
 export default function AnnadataSukhibhavaStatusCheck2026() {
   return (
@@ -16,6 +52,15 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
       <p>
         Andhra Pradesh ke kisan bhaiyon ke liye ek bahut badi khushkhabri hai. Pehle jis scheme ko hum <em>YSR Rythu Bharosa</em> ke naam se jaante the, ab uska naya naam <strong>Annadata Sukhibhava</strong> rakha gaya hai. Agar aap jaanna chahte hain ki aapka paisa kab aayega ya aapka naam list mein hai ya nahi, toh sahi jagah aaye hain. Is article mein hum detail mein samjhenge ki kaise aap apna <strong>annadata sukhibhava status check</strong> kar sakte hain, kaun eligible hai, aur PM Kisan se ye scheme kaise alag hai.
       </p>
+
+      <Fig
+        src="hero.webp"
+        alt="Andhra Pradesh ka kisan apne dhaan ke khet mein mobile par Annadata Sukhibhava status dekh raha hai"
+        caption="Annadata Sukhibhava — Andhra Pradesh ke kisanon ke liye state ka ₹5,000 aur PM Kisan ka ₹2,000"
+        width={1200}
+        height={675}
+        priority
+      />
 
       <ExternalLinkButton
         href="https://annadathasukhibhava.ap.gov.in"
@@ -68,6 +113,12 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
       <p>
         Andhra Pradesh mein hazaron aise kisan hain jo apni zameen nahi rakhte, balki doosron ki zameen lease par lekar kheti karte hain. Agar aapke paas valid CCRC card hai, toh aap is scheme ke liye poore tarah se eligible hain. Ye ek bahut badi raahat hai un kisanon ke liye jo saalon se zameen ke malik na hone ki wajah se central schemes se vanchit reh jaate the.
       </p>
+
+      <Fig
+        src="tenant-farmer-ccrc.webp"
+        alt="Andhra Pradesh mein bataidar kisan dusre ki zameen par dhaan ki ropai kar raha hai — CCRC card holders bhi eligible hain"
+        caption="Bataidar aur CCRC card holders bhi eligible hain — yahi PM Kisan se sabse bada fark hai"
+      />
 
       <h2>Annadata Sukhibhava Eligibility Criteria</h2>
 
@@ -133,6 +184,12 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         Apna <strong>annadata sukhibhava payment status</strong> check karna bahut aasan hai. Neeche diye gaye steps ko follow karein:
       </p>
 
+      <Fig
+        src="documents-checklist.webp"
+        alt="Annadata Sukhibhava status check ke liye zaroori documents — bank passbook, Aadhaar card, CCRC card aur mobile"
+        caption="Status check se pehle yeh saath rakho — Aadhaar, bank passbook, CCRC card aur registered mobile"
+      />
+
       <ol>
         <li>Sabse pehle official website <code>annadathasukhibhava.ap.gov.in</code> par jaayein.</li>
         <li>Homepage par "<strong>Know Your Status</strong>" ya "<strong>Beneficiary Status</strong>" ke option par click karein.</li>
@@ -165,6 +222,12 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
       <p>
         Kai baar kisanon ko complaint milti hai ki unka naam list mein toh hai, lekin paisa nahi aaya. Iske kuch common reasons aur unke solutions yahan hain:
       </p>
+
+      <Fig
+        src="dbt-bank-account.webp"
+        alt="Kisan bank branch mein passbook lekar DBT aur NPCI Aadhaar mapping check karwa raha hai"
+        caption="Naam list mein hai par paisa nahi aaya — pehla check bank branch mein NPCI mapping ka"
+      />
 
       <h3>1. Bank Account DBT Enabled Nahi Hai</h3>
       <p>
@@ -271,6 +334,12 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         <li><strong>District Agriculture Officer (DAO):</strong> Apne district ke DAO office mein personal visit karein.</li>
         <li><strong>Gram Sachivalayam:</strong> Apne nearest Village Secretariat mein Agriculture Assistant se milen.</li>
       </ul>
+
+      <Fig
+        src="village-secretariat-help.webp"
+        alt="Gram Sachivalayam mein village volunteer kisan ki Annadata Sukhibhava status check aur correction mein madad kar rahi hai"
+        caption="Online na ho paaye to Gram Sachivalayam mein Agriculture Assistant free madad karta hai"
+      />
 
       <h2>FAQs — Annadata Sukhibhava</h2>
 
