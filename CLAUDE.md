@@ -327,3 +327,29 @@ chip, and `numberOfItems: 59` (37 + 13 + 9).
 - Verified: `npx tsc --noEmit` clean, `env -u NODE_OPTIONS npx next build --webpack` succeeded, and
   each of the 4 prerendered `.next/server/app/rajya-yojana/<slug>.html` has exactly one `<h1>` plus
   its hero ref.
+
+## Content work 2026-08-04 (pushed straight to `main`)
+- **Thin rajya-yojana stubs expanded** — the two remaining 230-word STUB bodies:
+  - `pm-kisan-pati-patni-dono-ko-milega` → ~2,060 words + new
+    `tools/PmKisanFamilyChecker.tsx` (family unit → valid claims / annual amount /
+    refund risk / next steps). Covers family-as-beneficiary rule, partition cases,
+    family-level exclusion list, voluntary surrender + refund flow. Article + FAQPage JSON-LD.
+  - `state-kisan-yojana-list-all-states-2026` → ~2,000 words + new
+    `tools/StateYojanaFinder.tsx` (per-state central+state annual maths: flat /
+    per-acre with cap+floor / cultivator-vs-landless tracks, portal + deep link).
+    Hub table links all seven state detail articles.
+- **No new figures invented.** Every ₹ amount in the hub + finder mirrors the
+  matching state article (AP ₹14,000; MH ₹6,000; RJ ₹3,000 confirmed; MP ₹1,000
+  verified; TG ₹10,000/acre cap 5; WB ₹10,000/acre floor ₹4,000; OD ₹4,000
+  cultivator / ₹12,500 landless). PM Kisan flat ₹6,000 (3 × ₹2,000).
+- All 9 rajya-yojana articles are now 1,850+ words; no stubs left in that cluster.
+
+## Gotchas learned 2026-08-04
+- **`npm run build` (Turbopack) fails in this sandbox** on `app/globals.css`
+  (`PostCssTransformedAsset::process` → spawned worker can't connect back). It fails on a
+  clean HEAD too, so it is NOT a code defect. Use `npx next build --webpack` to verify —
+  that completes and prerenders all `/rajya-yojana/[slug]` pages.
+- **`npm run build` runs `scripts/update-article-dates.js` first**, which rewrites
+  `lib/articles-data.ts` and leaves `lib/articles-data.ts.backup-<ts>` files behind.
+  Revert that file and delete the backups before committing, or unrelated date churn
+  lands in the commit.
