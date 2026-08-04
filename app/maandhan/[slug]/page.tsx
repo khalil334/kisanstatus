@@ -28,7 +28,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const article = MAANDHAN_ARTICLES.find((a) => a.slug === slug);
   
-  if (!article) return { title: 'Not Found' };
+  // Unknown slug: the body calls notFound(), but this metadata overrides
+  // app/not-found.tsx's noindex, leaving the soft-404 shell indexable.
+  if (!article) {
+    return { title: 'Not Found', robots: { index: false, follow: true } };
+  }
 
   const url = `${SITE_URL}/maandhan/${slug}`;
   const ogImage = article.ogImage ? `${SITE_URL}${article.ogImage}` : DEFAULT_OG_IMAGE;
