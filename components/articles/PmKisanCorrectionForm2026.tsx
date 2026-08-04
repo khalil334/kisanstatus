@@ -85,10 +85,10 @@ export default function PmKisanCorrectionForm2026({ article }: { article: Articl
           Haan, bilkul wahi. Naam mein spelling mistake, bank account number galat, IFSC code mismatch, Aadhaar seeding error... ye sab chhoti chhoti cheezein lagti hain lekin inki wajah se <strong>poori kist ruk jaati hai</strong>.
         </p>
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-          Mere ek kisan bhai Ramesh (Bihar se) ne bataya tha — unka naam portal par "RAMESH KUMAR" tha lekin bank mein "RAMESH KUAMR" likha tha. Bas ek letter ka difference! Aur unki <strong>3 mahine ki kist atak gayi thi</strong>.
+          Sabse aam case naam ki spelling ka hota hai: portal par "RAMESH KUMAR" aur bank mein "RAMESH KUAMR" — bas ek letter ka fark, aur kist atak jaati hai.
         </p>
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
-          Aisa sirf Ramesh ke saath nahi, hazaron kisanon ke saath hota hai har saal. Lekin tension mat lo. Aaj main tumhe bataunga ki <strong>PM Kisan correction form kaise bharein</strong> — step-by-step, bilkul simple tarike se. Chahe naam ki spelling online theek karni ho, bank account update karna ho, ya phir Aadhaar seeding error fix karna ho... sab kuch cover karenge.
+          Ye dikkat hazaron kisanon ke saath hoti hai har saal. Aage ka process yahan diya hai — isme tumhe bataunga ki <strong>PM Kisan correction form kaise bharein</strong> — step-by-step, bilkul simple tarike se. Chahe naam ki spelling online theek karni ho, bank account update karna ho, ya phir Aadhaar seeding error fix karna ho... sab kuch cover karenge.
         </p>
 
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
@@ -239,7 +239,7 @@ export default function PmKisanCorrectionForm2026({ article }: { article: Articl
             Sabse bada sawal — correction ke baad kitne din mein paisa aayega? Jab details verify ho jayengi, agli scheduled kist mein paisa aa jayega. Agar beech mein kist release hui thi aur tumhari miss ho gayi thi, toh arrears ke roop mein 15-30 din mein extra amount credit hoga.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Aur haan, ruki hui kist ka kya? Tension mat lo. Jab details fix ho jayengi, toh pichhli saari pending kistein ek saath aa jayengi. Koi paisa nahi dooba.
+            Aur ruki hui kist ka kya? Jab details fix ho jayengi, toh pichhli saari pending kistein ek saath aa jayengi. Koi paisa nahi dooba.
           </p>
         </section>
 

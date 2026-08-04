@@ -170,10 +170,10 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
           Har mahine ₹4,000-6,000 tel mein phoonk dete hain. Kabhi kabhi diesel mehnga ho jata hai, kabhi pump kharab. Bijli walo ka bhi yahi haal — bill aata hai toh paseena chhoot jata hai. Aur load shedding alag tension.
         </p>
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-          Mere gaon ke Ram Singh kaka ne 2024 mein <strong>pm kusum yojana solar pump subsidy</strong> se 3HP pump lagwaya. Pehle wo saal ka ₹55,000 diesel pe udate the. Ab? Zero. Ek rupaya nahi. Wo kehte hain "beta, 5 saal pehle kyun nahi lagwaya."
+          Solar pump lagwane ke baad diesel ka kharcha khatam ho jaata hai — yahi is scheme ka asli faayda hai. Kitni bachat hogi, wo aapke pump size aur pehle ke diesel kharche par depend karta hai.
         </p>
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
-          Aaj main wahi sab kuch samjhaunga jo kisi agent ya CSC wale ko puchne par bhi clear jawab nahi milta. Eligibility, real cost, state-wise process, rejection se bachne ke tarike — sab kuch. Seedhi baat, no bakwaas.
+          Neeche eligibility, real cost, state-wise process aur rejection se bachne ke tarike diye hain.
         </p>
 
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
