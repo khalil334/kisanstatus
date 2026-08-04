@@ -45,31 +45,31 @@ function Fig({
 const FAQS_DATA = [
   {
     q: 'Krishak Bandhu ka status Voter ID se kyun check karna padta hai?',
-    a: 'Baaki state schemes Aadhaar ko primary key banati hain, lekin Krishak Bandhu ke record mein pehchaan ka mukhya zariya Voter ID (EPIC number) hai. Portal par Aadhaar, mobile aur acknowledgement ID ke option bhi rehte hain, magar EPIC search sabse bharosemand nateeja deta hai. Number bilkul card jaisa likhein — teen angrezi akshar phir saat ank, beech mein space nahi.',
+    a: 'West Bengal ne is yojana ke record ki buniyaad EPIC number par rakhi hai — wahi jo aapke Voter card par chhapa hota hai. Portal par mobile ya acknowledgement ID se bhi dhoondh sakte hain, magar EPIC daalne par result sabse saaf milta hai. Card dekh kar hi likhein: teen angrezi akshar, phir saat ank, bina space ke.',
   },
   {
     q: '"Account valid" likha hai, phir bhi paisa nahi aaya. Kya karun?',
-    a: 'Account valid ka matlab paisa aa gaya nahi hai — iska matlab sirf ye hai ki bank ne aapka account number aur naam sahi maan liya hai. Agla qadam treasury ke haath mein hai. Yahan bank ke chakkar lagane ka fayda nahi; release ke baad ek hafta sabr karein aur passbook update karwaate rahein.',
+    a: 'Is status ka matlab itna hi hai ki bank ne aapki details verify kar di hain — credit hona abhi baaki hai. File ab treasury ki qataar mein hai, is stage par branch jaane se kuch nahi badlega. Release ki khabar ke baad hafta bhar ruk kar passbook entry karwa lein.',
   },
   {
     q: 'Padosi ko paisa mil gaya, mujhe nahi — kya mera naam kat gaya?',
-    a: 'Zaroori nahi. PM Kisan central DBT switch se chalta hai, is liye wahan paisa lagbhag ek saath girta hai. Krishak Bandhu ka paisa district treasury ke raste jaata hai — state release ka aadesh deta hai aur har zile ki treasury apni raftaar se file processe karti hai. Ek zile mein aaj, doosre mein teen din baad — ye dhaancha hai, kharaabi nahi.',
+    a: 'Zaroori nahi. Yahan disbursal zila-war hota hai: state aadesh jaari karta hai aur phir har district treasury apni file apni raftaar se nikaalti hai. Isliye padosi gaon (ya padosi zile) mein credit pehle dikhna bilkul aam baat hai. Aapka naam list mein hai to bas kuch din ka farq hai, katne wali baat nahi.',
   },
   {
     q: 'Ek acre se kam zameen hai, kya kuch milega?',
-    a: 'Haan. Hisaab per-acre chalta hai lekin neeche ek floor aur upar ek ceiling dono lage hain. Ek acre se kam par grant pro-rata banta hai magar nyoontam raqam se neeche nahi jaata, aur bahut zyada zameen par bhi upar ki limit paar nahi hota. Is liye do padosi kisanon ki raqam alag ho sakti hai aur dono hi sahi ho sakte hain.',
+    a: 'Haan, milega. Chhoti jot par raqam pro-rata ghatti hai, lekin ek minimum ke neeche kabhi nahi jaati — scheme ka jhukav chhote kisan ki taraf hi hai. Isi tarah bahut badi jot par bhi ek upper cap laga hai. To aapke aur kisi aur ke amount mein farq dikhe to ghabraane ki zaroorat nahi.',
   },
   {
     q: 'Bhagchasi (sharecropper) hoon, meri zameen nahi hai — main eligible hoon?',
-    a: 'Bhagchasi is scheme mein aate hain, bas unka record panchayat/department ke paas recorded hona chahiye. Aur jinke paas apni zameen bilkul nahi hai, unke liye landless khetmajur wala alag track hai — uska enrolment camp ke zariye hota hai aur portal par section bhi alag rehta hai.',
+    a: 'Ji haan, bhagchasi cover hote hain — shart sirf itni hai ki aapki kheti ka record panchayat ya agriculture department ke paas darj ho. Bina record ke claim aage nahi badhta, is liye pehla kaam apna naam register karwana hai. Landless khetmajur ke liye enrolment ka intezaam camps ke through alag se hota hai.',
   },
   {
     q: 'Death benefit kis-kis ko milta hai?',
-    a: 'Death benefit ka dhaancha income support se ulta hai: usmein zameen ka area maayne nahi rakhta, lekin registered kisan ki umar mrityu ke waqt 18 se 60 ke beech honi chahiye. Grant ek hi baar legal heir ya nominee ko milta hai. Claim ki samay-seema hoti hai, is liye kagaz jamaa hote hi block agriculture office mein form de dein — ideal kagaz ka intezaar na karein.',
+    a: 'Ye raqam registered kisan ke legal heir ya nominee ko milti hai, aur sirf ek baar. Shart umar ki hai — mrityu ke waqt kisan 18 se 60 ke beech ho; zameen kitni thi, is component mein iska koi role nahi. Claim der se karne par time-barred hone ka khatra rehta hai, to jitne kagaz haath mein hain unhi ke saath block office mein form daal dein.',
   },
   {
     q: 'Naam list mein hai lekin paisa nahi aaya — kahan jaana chahiye?',
-    a: 'Ye ek chhota sa test hai. Naam list mein hai to dikkat payment side par hai (bank account dormant, NPCI mapping, ya treasury queue) — bank branch dekhein. Naam hi nahi hai to dikkat eligibility ya land record side par hai — block agriculture office ya BL&LRO office jaayein. Rejected likha ho to kaaran sirf block office ki file par remark mein dikhta hai.',
+    a: 'List aapko sahi darwaaza batati hai. Naam maujood hai magar credit nahi aaya — mamla bank ya treasury ka hai, branch mein poochhein. Naam sire se gayab hai — mamla eligibility ya khatian ka hai, block agriculture office ya BL&LRO jaayein. Rejection ka asli kaaran sirf block office ki file ke remark mein likha milta hai.',
   },
 ];
 
@@ -177,6 +177,12 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
           karte waqt EPIC number sabse bharosemand option rehta hai.
         </p>
 
+        <Fig
+          src="epic-status-check-phone.webp"
+          alt="Kisan apne phone par Voter ID (EPIC) number se Krishak Bandhu status check kar raha hai"
+          caption="EPIC number card se milaa kar hi bharein — ek ank ki galti par record nahi milta"
+        />
+
         <ol>
           <li>
             Official portal <code>krishakbandhu.wb.gov.in</code> kholein. Kisi bhi
@@ -274,6 +280,12 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
           bank ki line mein lagne se kuch hasil nahi hota.
         </p>
 
+        <Fig
+          src="bank-passbook-update.webp"
+          alt="Rural bank branch mein kisan passbook update karwa raha hai"
+          caption="Release ke baad hafte bhar mein passbook update karwaayein — SMS na aana aam baat hai"
+        />
+
         <h2>Beneficiary List Mein Apna Naam Kaise Dekhein</h2>
 
         <p>
@@ -308,6 +320,12 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
           ki jaane wali wajah hai. Iska hal BL&amp;LRO office mein mutation karwana hai, portal
           par kuch bharna nahi.
         </p>
+
+        <Fig
+          src="blro-land-record-office.webp"
+          alt="BL&LRO office mein kisan khatian ke kagaz officer ke saath milaa raha hai"
+          caption="Khatian ka har badlaav — kharid, batwara, virasat — BL&LRO office se hi durust hota hai"
+        />
 
         <h3>Bank account dormant ho gaya</h3>
         <p>
@@ -370,6 +388,12 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
           Sahi darwaaza chunna aadha kaam kar deta hai. Galat jagah jaane se sirf din barbaad
           hota hai.
         </p>
+
+        <Fig
+          src="duare-sarkar-camp.webp"
+          alt="Duare Sarkar jaise sarkari camp mein gaon ke log form jama kar rahe hain"
+          caption="Naya registration ya sudhaar — duare sarkar camp ya block agriculture office sabse seedha raasta hai"
+        />
 
         <SchemeTable>
           <tr>
