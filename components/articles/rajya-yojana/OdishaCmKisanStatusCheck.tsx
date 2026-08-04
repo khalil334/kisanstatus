@@ -4,6 +4,7 @@ import type { RajyaYojanaArticleMeta } from '@/lib/rajya-yojana-data';
 import ExternalLinkButton from '@/components/ui/ExternalLinkButton';
 import InfoBox from '@/components/ui/InfoBox';
 import SchemeTable from '@/components/ui/SchemeTable';
+import { FAQBlock } from '@/components/ArticleShared';
 import OdishaCmKisanChecker from '@/components/articles/rajya-yojana/tools/OdishaCmKisanChecker';
 
 const IMG_BASE = '/images/articles/rajya-yojna/odisha-cm-kisan-status-check-2026';
@@ -40,6 +41,37 @@ function Fig({
     </figure>
   );
 }
+
+const FAQS_DATA = [
+  {
+    q: 'KALIA band ho gayi hai, kya iska matlab mera paisa bhi band ho gaya?',
+    a: 'Nahi. KALIA ki jagah CM Kisan aayi hai, lekin scheme ka core kaam wahi hai. Purana enrolment aap ka claim khatam nahi karta. Sirf do cheezein badli hain: status ab cmkisan.odisha.gov.in par dekhna hoga, aur beneficiary base dobara verify hua hai — is liye kuch purane naam hate aur kuch naye jude.',
+  },
+  {
+    q: 'Mere paas zameen nahi hai, phir bhi CM Kisan mil sakta hai?',
+    a: 'Haan. CM Kisan mein bhoomiheen krishi parivaar ke liye alag landless track hai. Ismein paisa kheti ke input ke liye nahi, balki bakri palan, murgi palan, dairy ya machhli jaise allied kaam ke liye milta hai — aur tranche teen hote hain, cultivator track ke do ke muqable.',
+  },
+  {
+    q: 'Meri zameen bahut kam hai, phir bhi naam list mein nahi aaya. Kyun?',
+    a: 'Ye scheme means-tested hai — sirf zameen dekh kar faisla nahi hota. Ghar ka koi sadasya income tax bharta ho, sarkari naukri ya pension par ho, ya registered professional (doctor, vakil, CA, engineer) ho, to poora parivaar exclusion mein aa jaata hai. Exclusion parivaar-level par lagti hai, sirf form bharne wale par nahi.',
+  },
+  {
+    q: 'Status mein naam hai lekin paisa nahi aaya — sabse pehle kya check karun?',
+    a: 'Status page ki teen lines alag-alag padhein: application stage, bank account mapping aur e-KYC. Sabse aam wajah pending e-KYC hoti hai, uske baad Aadhaar ka NPCI mapper se link na hona. Bank mein Aadhaar ki photocopy dena kaafi nahi — branch se saaf poochein ki NPCI seeding hui hai ya nahi.',
+  },
+  {
+    q: 'Beneficiary list mein naam kis list mein dhoondhna chahiye?',
+    a: 'Cultivator aur landless ki list alag-alag hoti hain. Bhoomiheen parivaar cultivator list mein nahi milega aur zameen wala kisan landless list mein nahi. Pehle apna track pakka karein, phir portal ke list section mein zila, block aur gram panchayat chun kar sahi category ki list kholein.',
+  },
+  {
+    q: 'CM Kisan lene se PM Kisan band ho jaayega?',
+    a: 'Nahi hoga. Ye do bilkul alag budget se chalne wale programme hain, aur ek ka payment doosre ko rok nahi sakta — Odisha mein lakhon kisan dono ka paisa saath lete hain. Dhyan sirf ceiling par rakhein: PM Kisan mein zameen ki upper limit nahi hoti, jabki CM Kisan ka cultivator track chhoti jotdaari tak seemit hai. Is liye PM Kisan aana aur CM Kisan na aana ek aam sthiti hai, koi rejection nahi.',
+  },
+  {
+    q: 'Ghar ke do log alag-alag form bhar dein to kya hota hai?',
+    a: 'Verification mein duplicate pakda jaata hai aur dono ki file ruk jaati hai, jab tak ek dawa withdraw na ho. Ek ghar se ek hi dawa rakhein.',
+  },
+];
 
 export default function OdishaCmKisanStatusCheck({
   article,
@@ -312,10 +344,12 @@ export default function OdishaCmKisanStatusCheck({
         </p>
 
         <p>
-          Isliye kisi bhi pakki tareekh wale message par bharosa karne se behtar hai ki release
-          ki khabar aane par khud portal par status dekh lein. Aur agar status mein e-KYC aur
-          bank mapping dono theek dikh rahi hain, to kuch din ka sabr hi kaafi hota hai — bank
-          ke chakkar lagane ki zaroorat nahi padti.
+          Odisha mein ek baat khaas hai: release state ke haath mein hoti hai, is liye ek hi
+          tranche zile ke hisaab se alag-alag raftaar se pahunchta hai. Padosi ke account mein
+          paisa aa gaya aur aapke mein nahi — ye apne aap mein kisi gadbad ka saboot nahi hai.
+          Pakki tareekh batane wale forward par plan banane ke bajaye, apne record ki teen
+          lines (stage, bank mapping, e-KYC) durust rakhein; wahi tay karti hain ki release ke
+          din aapki file uthegi ya nahi.
         </p>
 
         <h2>Kahan Jaana Hai Jab Kuch Atak Jaaye</h2>
@@ -369,6 +403,61 @@ export default function OdishaCmKisanStatusCheck({
           <li>
             Kisi bhi &ldquo;agent&rdquo; ko paisa dekar list mein naam chadhaane ka wada mat
             maaniye — enrolment aur verification dono sarkari raste se hi hote hain.
+          </li>
+        </ul>
+
+        <h2>Odisha Se Bahar Ke Kisan Yahan Dekhein</h2>
+
+        <p>
+          Odisha ka domicile nahi hai to CM Kisan aap par laagu nahi hoti — lekin landless
+          track jaisa intezaam har rajya mein nahi milta, aur raqam bhi har jagah alag hai.
+          Apne rajya ka hisaab yahan dekhein:
+        </p>
+
+        <ul>
+          <li>
+            <Link href="/rajya-yojana/krishak-bandhu-status-check-2026">
+              West Bengal Krishak Bandhu — Voter ID se status aur death benefit
+            </Link>
+          </li>
+          <li>
+            <Link href="/rajya-yojana/annadata-sukhibhava-status-check-2026">
+              Andhra Pradesh Annadata Sukhibhava — bataidar kisan bhi cover hote hain
+            </Link>
+          </li>
+          <li>
+            <Link href="/rajya-yojana/rythu-bharosa-status-check-2026">
+              Telangana Rythu Bharosa — per-acre raqam ka hisaab
+            </Link>
+          </li>
+          <li>
+            <Link href="/rajya-yojana/state-kisan-yojana-list-all-states-2026">
+              Sabhi rajyon ka amount aur portal ek saath — comparison table
+            </Link>
+          </li>
+        </ul>
+
+        <h2>CM Kisan Odisha — Aksar Poochhe Jaane Wale Sawaal</h2>
+
+        <FAQBlock faqs={FAQS_DATA} caption="Odisha CM Kisan status aur eligibility FAQ 2026" />
+
+        <h2>Related Articles</h2>
+
+        <ul>
+          <li>
+            <Link href="/articles/PmKisanBeneficiaryList2026">
+              PM Kisan Beneficiary List 2026 — gaon ki list mein apna naam dekhein
+            </Link>
+          </li>
+          <li>
+            <Link href="/articles/PmKisanMasterGuide2026">
+              PM Kisan Master Guide 2026 — registration se payment tak poora process
+            </Link>
+          </li>
+          <li>
+            <Link href="/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega">
+              Pati-patni dono ko PM Kisan milega ya nahi? Family rule
+            </Link>
           </li>
         </ul>
 
