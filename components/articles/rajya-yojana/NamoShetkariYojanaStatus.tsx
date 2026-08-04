@@ -61,6 +61,14 @@ const FAQS_DATA = [
     q: 'Agar main Maharashtra se bahar shift ho gaya hoon, toh kya mujhe paisa milega?',
     a: 'Nahi. Domicile Maharashtra ka hona zaroori shart hai. Shift hone ke baad us din se eligibility khatam maani jaati hai.',
   },
+  {
+    q: 'Zameen joint naam par hai (bhai-behen ya pita ke saath), kisko paisa milega?',
+    a: 'Jo sadasya PM Kisan mein registered hai, paisa usi ke account mein aayega. Joint 7/12 mein har hissedaar apna alag PM Kisan registration karwa sakta hai agar uska hissa record mein alag darj hai. Bina batwara ke ek hi registration chalta hai.',
+  },
+  {
+    q: 'Hapta aadha aaya, ₹3,000 ki jagah kam amount dikha, aisa kyun?',
+    a: 'Namo Shetkari ka hapta fixed ₹3,000 hota hai, kam nahi aata. Agar kam amount dikha hai toh wo kisi aur scheme ki entry hai. Passbook mein transaction ka naam dekhein — NSMNY wali entry hamesha poori ₹3,000 ki hoti hai.',
+  },
 ];
 
 export default function NamoShetkariYojanaStatusCheck2026() {
@@ -84,7 +92,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
 
       <p>
         Do sawaal har baar wahi hote hain: paisa kab aayega, aur list mein naam hai ya
-        nahi. Neeche dono ka jawab hai — status dekhne ka tareeka, hapte ka waqt, aur naam
+        nahi. Neeche dono ka jawab hai: status dekhne ka tareeka, hapte ka waqt, aur naam
         kat jaane ki asli wajahein.
       </p>
 
@@ -109,7 +117,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       </p>
 
       <p>
-        Matlab Maharashtra ke ek eligible kisan ke haath saal bhar mein ₹12,000 aate hain —
+        Matlab Maharashtra ke ek eligible kisan ke haath saal bhar mein ₹12,000 aate hain:
         ₹6,000 central se aur ₹6,000 state se. Ye raqam beej, khaad aur diesel jaise
         kharchon ke waqt kaam aati hai.
       </p>
@@ -148,13 +156,23 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       </p>
 
       <p>
-        PM Kisan ki beneficiary list mein naam hai aur domicile Maharashtra ka hai — bas
-        itne se aap eligible ho jaate hain. Paisa seedha bank account mein aata hai.
+        PM Kisan ki list mein naam hai aur domicile Maharashtra ka hai? Bas itne se aap
+        eligible ho jaate hain. Paisa seedha bank account mein aata hai.
       </p>
 
       <p>
         Iska doosra pehlu bhi samajh lein: PM Kisan hi is scheme ki jad hai. e-KYC pending
         ho ya bank account mismatch ho, to state ka hapta bhi wahi ruk jaata hai.
+      </p>
+
+      <p>
+        Ek aur baat jo auto-enrollment ke saath aati hai: aap kuch "select" nahi kar sakte.
+        Kai kisan taluka office jaakar poochhte hain ki Namo Shetkari ka form kahan milega.
+        Aisa koi form hai hi nahi. Agar PM Kisan mein ho, toh andar ho; nahi ho, toh pehle PM
+        Kisan mein registration karwana padega (wo CSC centre se ya <code>pmkisan.gov.in</code>
+        par khud hota hai), aur uske approve hone ke baad state ki list mein naam apne aap
+        aa jaata hai. Beech ka koi shortcut nahi hai, aur jo agent shortcut ka dawa kare wo
+        paisa banane ke liye keh raha hai.
       </p>
 
       <Fig
@@ -168,7 +186,9 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       <p>
         <strong>Namo shetkari hapta kadhi milel</strong> — ye sawaal sabse zyada poochha jaata
         hai. Maharashtra sarkar aam taur par PM Kisan ki kist ke kuch hafte baad apni kist
-        release karti hai.
+        release karti hai. Iski wajah technical hai: state pehle central ki disbursement file
+        ka intezaar karti hai, taaki wahi verified data use ho aur double-checking na karni
+        pade. Isliye PM Kisan ka aana ek tarah ka signal hai ki ab state ka hapta paas hai.
       </p>
 
       <SchemeTable>
@@ -228,11 +248,19 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       </p>
 
       <ol>
-        <li>Official portal ke "Reports" ya "Beneficiary List" section mein jaayein.</li>
+        <li>Portal ke "Reports" section mein jaayein.</li>
         <li>Apna Zila (District), Taluka, aur Gram Panchayat select karein.</li>
         <li>"Search" ya "Download PDF" par click karein.</li>
-        <li>List mein apna naam ya apne parivar ke kisi sadasya ka naam search karein.</li>
+        <li>PDF mein naam Marathi mein bhi ho sakte hain. Apna naam na mile toh pita ke naam ya masked Aadhaar digits se milayen.</li>
       </ol>
+
+      <p>
+        List gram panchayat ke notice board par bhi lagti hai, khaas kar kist release ke
+        aas-paas. Agar internet ki dikkat hai toh talathi office mein bhi yahi list milti
+        hai. Talathi ke paas gaon ke 7/12 records bhi hote hain, isliye naam missing hone
+        par wahi sabse pehla aur sabse kaam ka stop hai: ek hi jagah par list bhi dikh
+        jaati hai aur land record ki galti bhi pakdi jaati hai.
+      </p>
 
       <h2>PM Kisan Aa Gaya, Namo Shetkari Nahi Aaya — Ye Kyun Hota Hai</h2>
 
@@ -273,6 +301,23 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         <li>Aapne PM Kisan se voluntarily surrender kar diya ho.</li>
       </ul>
 
+      <h2>Passbook Mein Entry Kaise Pehchanein</h2>
+
+      <p>
+        Ek chhoti si cheez jo bahut confusion bachati hai: dono schemes ka paisa ek hi
+        account mein aata hai, lekin entries alag naam se aati hain. PM Kisan ki entry mein
+        "PMKISAN" ka reference hota hai. Namo Shetkari ki entry state treasury se aati hai
+        aur usme "NSMNY" ya Mahait/treasury ka code dikhta hai. Amount se bhi farak saaf
+        hai: central wali ₹2,000 hoti hai, state wali ₹3,000.
+      </p>
+
+      <p>
+        Isliye jab koi kahe "paisa aa gaya", toh pehle entry dekh lein kaun si aayi hai.
+        Aadhi shikayatein sirf is galatfehmi ki hoti hain ki ₹2,000 aane ko log poori
+        payment samajh lete hain, jabki state ke ₹3,000 abhi pipeline mein hote hain.
+        Mobile banking ya SMS alert mein bhi yahi codes dikhte hain.
+      </p>
+
       <h2>Payment Fail Ho Gayi — Ab Kya</h2>
 
       <ol>
@@ -295,32 +340,51 @@ export default function NamoShetkariYojanaStatusCheck2026() {
 
       <ul>
         <li><strong>Maharashtra Ka Nivasi:</strong> Applicant ka permanent residence Maharashtra mein hona chahiye.</li>
-        <li><strong>PM Kisan Beneficiary:</strong> Aapka naam PM Kisan ki active beneficiary list mein hona chahiye.</li>
+        <li><strong>PM Kisan Mein Active:</strong> Central scheme mein aapka record chalu halat mein hona chahiye, hold ya rejected nahi.</li>
         <li><strong>Landholding:</strong> Aapke paas cultivable land honi chahiye (7/12 Utara mein naam hona chahiye).</li>
         <li><strong>e-KYC Complete:</strong> Aadhaar seeding aur mobile linking complete honi chahiye.</li>
       </ul>
 
+      <h2>7/12 Utara — Maharashtra Ka Sabse Zaroori Kagaz</h2>
+
+      <p>
+        Is scheme mein baar-baar 7/12 Utara (saat-baara) ka zikr aata hai, isliye do minute
+        ismein laga lein. 7/12 Maharashtra ka land record document hai: form 7 mein malik ka
+        naam aur rights hote hain, form 12 mein fasal ka record. Namo Shetkari aur PM Kisan
+        dono ke liye aapka naam isi document mein hona chahiye.
+      </p>
+
+      <p>
+        Ab ye record online hai. <code>bhulekh.mahabhumi.gov.in</code> par district, taluka
+        aur gaon chun kar apna survey number daalne se digital 7/12 dikh jaata hai. Do
+        cheezein check karein: naam ki spelling Aadhaar se milti hai ya nahi, aur zameen ka
+        type "sheti" (agricultural) likha hai ya nahi. Naam mein farak ho toh talathi ke
+        paas correction application deni hoti hai. Ye chhota sa kaam aage ki saari
+        payments ko atakne se bacha leta hai, kyunki har season verification isi record se
+        hota hai.
+      </p>
+
       <h2>Dusre Rajya Se Hain?</h2>
 
       <p>
-        Maharashtra ke bahar rehte hain to ye scheme aap par laagu nahi hoti — lekin aapke
+        Maharashtra ke bahar rehte hain to ye scheme aap par laagu nahi hoti, lekin aapke
         rajya ka apna intezaam ho sakta hai. In rajyon ka hisaab humne alag likha hai:
       </p>
 
       <ul>
         <li>
           <Link href="/rajya-yojana/rajasthan-kisan-samman-nidhi-9000">
-            Rajasthan Kisan Samman Nidhi 9000: Status aur Badhotri Update
+            Rajasthan wale kisanon ke liye ₹9,000 wali Kisan Samman Nidhi ka pura hisaab
           </Link>
         </li>
         <li>
           <Link href="/rajya-yojana/annadata-sukhibhava-status-check-2026">
-            Annadata Sukhibhava (Andhra Pradesh) — Tenant Farmers ke liye bhi
+            Andhra Pradesh ki Annadata Sukhibhava, jahan bataidar bhi cover hote hain
           </Link>
         </li>
         <li>
           <Link href="/rajya-yojana/mp-kisan-kalyan-yojana-kist-status">
-            MP CM Kisan Kalyan Yojana — Latest Kist Update
+            Madhya Pradesh ki CM Kisan Kalyan Yojana ka kist update
           </Link>
         </li>
       </ul>
@@ -332,7 +396,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       <ul>
         <li>
           <Link href="/rajya-yojana/state-kisan-yojana-list-all-states-2026">
-            State Kisan Yojana List — Sabhi States Ka Comparison Table
+            Har rajya ki kisan yojana ka side-by-side comparison
           </Link>
         </li>
       </ul>
@@ -350,7 +414,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         </li>
         <li>
           <Link href="/articles/pm-kisan-pati-patni-dono-ko-milega">
-            Pati-Patni Dono Ko PM Kisan Milega Ya Nahi? (Family Rules Explained)
+            Ghar mein pati aur patni dono kisan hain? PM Kisan ka family rule yahan padhein
           </Link>
         </li>
       </ul>
