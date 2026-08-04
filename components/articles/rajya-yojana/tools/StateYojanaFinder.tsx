@@ -32,7 +32,8 @@ type Scheme = {
   /** flat: annual state amount. */
   flat?: number;
   /** perAcre: rate, floor, and max billable acres. */
-  perAcre?: { rate: number; floor: number; capAcres: number; seasons: number };
+  /** `capAcres` omitted = koi acre cap nahi (sirf cultivable-land shart lagti hai). */
+  perAcre?: { rate: number; floor: number; capAcres?: number; seasons: number };
   /** track: cultivator vs landless annual amounts + acre ceiling. */
   track?: { cultivator: number; landless: number; ceilingAcres: number };
   note: string;
@@ -72,8 +73,8 @@ const SCHEMES: Scheme[] = [
     slug: 'mp-kisan-kalyan-yojana-kist-status',
     portal: 'saara.mp.gov.in',
     kind: 'flat',
-    flat: 1000,
-    note: 'Verified state top-up ₹1,000 saalana hai. Internet par ghoom rahe ₹4,000 / ₹6,000 wale dawe official record se match nahi karte.',
+    flat: 6000,
+    note: 'State top-up ₹6,000 saalana hai — teen kiston mein ₹2,000-₹2,000. Scheme ₹4,000 se shuru hui thi, baad mein badhaya gaya; ₹4,000 wala figure purana hai.',
   },
   {
     state: 'Telangana',
@@ -81,8 +82,8 @@ const SCHEMES: Scheme[] = [
     slug: 'rythu-bharosa-status-check-2026',
     portal: 'rythubharosa.telangana.gov.in',
     kind: 'perAcre',
-    perAcre: { rate: 10000, floor: 0, capAcres: 5, seasons: 2 },
-    note: 'Har acre par ₹10,000 saalana — ₹5,000 Kharif aur ₹5,000 Rabi. 5 acre se aage ka area count nahi hota.',
+    perAcre: { rate: 12000, floor: 0, seasons: 2 },
+    note: 'Har acre par ₹12,000 saalana — ₹6,000 Kharif aur ₹6,000 Rabi. Paisa sirf cultivable land par banta hai; real estate layout aur parti zameen shamil nahi.',
   },
   {
     state: 'West Bengal',
@@ -155,11 +156,11 @@ export default function StateYojanaFinder() {
           landless ? 'Zameen ke bina ye scheme lagu nahi hoti' : 'Area bharne par calculate hoga',
         ]);
       } else {
-        const billable = Math.min(acres, capAcres);
+        const billable = capAcres ? Math.min(acres, capAcres) : acres;
         stateAmount = Math.max(floor, Math.round((billable * rate) / 100) * 100);
         rows.push(['Counted area', `${billable.toFixed(2)} acre`]);
         rows.push(['State ka hissa', rupee(stateAmount)]);
-        if (acres > capAcres) {
+        if (capAcres && acres > capAcres) {
           rows.push(['Cap', `${capAcres} acre se aage ka area count nahi hota`]);
         }
       }
