@@ -320,7 +320,7 @@ export default function RythuBharosaStatusCheck2026() {
       <h2>Related Articles</h2>
       <ul>
         <li>
-          <Link href="/articles/pm-kisan-24vi-kist-2026">
+          <Link href="/articles/PmKisan24viKist2026">
             PM Kisan 24vi Kist 2026 — Next Installment Date aur Status
           </Link>
         </li>
