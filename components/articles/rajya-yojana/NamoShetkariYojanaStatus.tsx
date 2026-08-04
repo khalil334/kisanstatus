@@ -47,7 +47,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Namo Shetkari hapta kadhi milel?',
-    a: 'Aam taur par ye hapta PM Kisan ki kist aane ke 2-4 hafton baad release hota hai. Agla installment August-September 2026 ke beech expected hai.',
+    a: 'Pattern ye raha hai ki state ka hapta PM Kisan ki kist aane ke kuch hafton baad release hota hai — kyunki list PM Kisan ke verified data se banti hai. ⚠️ Agle hapte ki koi date officially announce nahi hui hai; GR (Government Resolution) nikalne ke baad hi tareekh pakki hoti hai.',
   },
   {
     q: 'Mera naam beneficiary list mein nahi hai, kya karein?',
@@ -76,7 +76,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
     <article className="prose prose-lg max-w-4xl mx-auto">
 
       <InfoBox type="update" date="4 August 2026">
-        <strong>Latest Update:</strong> Agle hapte ki release prakriya shuru ho chuki hai.
+        <strong>Latest Update:</strong> ⚠️ Agle hapte ki koi official release date announce nahi hui hai.
         Maharashtra sarkar ne saaf kiya hai ki PM Kisan mein eligible kisanon ko alag se apply
         nahi karna hai. Paisa nahi aaya hai to neeche diye tareeke se apna{' '}
         <strong>namo shetkari yojana status check</strong> kar lein.
@@ -194,18 +194,18 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       <SchemeTable>
         <tr>
           <th>Installment</th>
-          <th>Expected Period</th>
+          <th>Period</th>
           <th>Status</th>
         </tr>
         <tr>
           <td>1st Installment</td>
           <td>March - April 2026</td>
-          <td>✅ Released</td>
+          <td>Released</td>
         </tr>
         <tr>
           <td>2nd Installment</td>
-          <td>August - September 2026</td>
-          <td>⏳ Processing / Expected</td>
+          <td>⚠️ Date announce nahi hui</td>
+          <td>Pending</td>
         </tr>
       </SchemeTable>
 
@@ -406,23 +406,16 @@ export default function NamoShetkariYojanaStatusCheck2026() {
 
       <FAQBlock faqs={FAQS_DATA} caption="Namo Shetkari Mahasanman Nidhi FAQ 2026" />
 
-      <h2>Related Articles</h2>
-      <ul>
-        <li>
-          <Link href="/articles/PmKisan24viKist2026">
-            PM Kisan 24vi Kist 2026 — Next Installment Date aur Status
-          </Link>
-        </li>
-        <li>
-          <Link href="/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega">
-            Ghar mein pati aur patni dono kisan hain? PM Kisan ka family rule yahan padhein
-          </Link>
-        </li>
-      </ul>
-
       <InfoBox type="tip">
-        <strong>Surakshit Rahein:</strong> Is scheme mein bharne ke liye koi form hi nahi hai, is liye "registration karwa dunga" ya "hapta jaldi nikalwa dunga" kehne wala har aadmi jhooth bol raha hai. Status dekhna, e-KYC aur 7/12 correction — sab sarkari raste se free hote hain. Aisi demand par 1800-233-0880 (Maharashtra Kisan Call Center) par shikayat darj karwaayein.
+        <strong>Fraud se bachein:</strong> Is scheme mein bharne ke liye koi form hi nahi hai, is liye "registration karwa dunga" ya "hapta jaldi nikalwa dunga" kehne wala har aadmi jhooth bol raha hai. Status dekhna, e-KYC aur 7/12 correction — sab sarkari raste se free hote hain. Aisi demand par apne Taluka Krishi Adhikari (TAO) office mein ya Maharashtra ke Anti-Corruption Bureau ki helpline <strong>1064</strong> par shikayat darj karwaayein.
       </InfoBox>
+
+      <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
+        <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
+          <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
+          Ye article sirf madad ke liye hai. Final decision ke liye official portal ya krishi office se sampark karein.
+        </p>
+      </div>
 
     </article>
   );
