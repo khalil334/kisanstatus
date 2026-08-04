@@ -413,7 +413,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
           </Link>
         </li>
         <li>
-          <Link href="/articles/pm-kisan-pati-patni-dono-ko-milega">
+          <Link href="/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega">
             Ghar mein pati aur patni dono kisan hain? PM Kisan ka family rule yahan padhein
           </Link>
         </li>
