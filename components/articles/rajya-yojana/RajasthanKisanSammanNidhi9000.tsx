@@ -1,9 +1,7 @@
-'use client';
-
-import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
+import { FAQBlock } from '@/components/ArticleShared';
 
 const IMG_BASE = '/images/articles/rajya-yojna/rajasthan-kisan-samman-nidhi-9000';
 
@@ -40,60 +38,7 @@ function Fig({
   );
 }
 
-function FaqItem({ question, answer }: { question: string; answer: React.ReactNode }) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <div className="border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden bg-white dark:bg-gray-800 mb-3 shadow-sm hover:shadow-md transition-shadow">
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between p-4 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-inset"
-        aria-expanded={isOpen}
-      >
-        <span className="font-semibold text-gray-900 dark:text-gray-100 pr-4 text-sm md:text-base">{question}</span>
-        <span
-          className={`text-xl text-green-600 dark:text-green-400 transition-transform duration-300 shrink-0 ${
-            isOpen ? 'rotate-45' : ''
-          }`}
-          aria-hidden="true"
-        >
-          +
-        </span>
-      </button>
-      <div
-        className={`transition-all duration-300 ease-in-out overflow-hidden ${
-          isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
-        }`}
-      >
-        <div className="p-4 pt-0 text-sm text-gray-700 dark:text-gray-300 leading-relaxed border-t border-gray-100 dark:border-gray-700">
-          {answer}
-        </div>
-      </div>
-    </div>
-  );
-}
-
 export default function RajasthanKisanSammanNidhi9000() {
-  const canonicalUrl = 'https://kisanstatus.com/rajya-yojana/rajasthan-kisan-samman-nidhi-9000';
-
-  const articleSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: 'Rajasthan Kisan Samman Nidhi: ₹9,000 Kaise Milte Hain aur ₹12,000 Wale Prastaav Ka Sach',
-    description: 'Rajasthan Mukhyamantri Kisan Samman Nidhi ki eligibility, 6vi kist ka status, aur ₹12,000 ki badhotri abhi tak confirm hui hai ya nahi — sab detail mein.',
-    image: `https://kisanstatus.com${IMG_BASE}/hero.webp`,
-    author: { '@type': 'Organization', name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' },
-    publisher: {
-      '@type': 'Organization',
-      name: 'KisanStatus.com',
-      url: 'https://kisanstatus.com',
-      logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.png', width: 250, height: 60 },
-    },
-    datePublished: '2024-06-01',
-    dateModified: '2026-08-03',
-    mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
-  };
-
   const faqs = [
     {
       q: 'Kya ₹12,000 ki badhotri confirm ho chuki hai?',
@@ -113,11 +58,7 @@ export default function RajasthanKisanSammanNidhi9000() {
     },
     {
       q: 'Mobile number badal gaya, OTP nahi aa raha, ab kya?',
-      a: (
-        <>
-          Pehle Aadhaar mein number update karwao, uske baad PM Kisan portal par. State wali list mein khud-ba-khud reflect ho jaayega — bas thoda time lagta hai, ek din mein umeed mat rakhna.
-        </>
-      ),
+      a: 'Pehle Aadhaar mein number update karwao, uske baad PM Kisan portal par. State wali list mein khud-ba-khud reflect ho jaayega — bas thoda time lagta hai, ek din mein umeed mat rakhna.',
     },
     {
       q: 'Dusre state mein reh kar Rajasthan wala fayda le sakte hain?',
@@ -127,8 +68,6 @@ export default function RajasthanKisanSammanNidhi9000() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-
       <article className="max-w-4xl mx-auto px-4 py-8 prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-blue-600 dark:prose-a:text-blue-400">
 
         <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
@@ -407,11 +346,7 @@ export default function RajasthanKisanSammanNidhi9000() {
         </ul>
 
         <h2>FAQs</h2>
-        <div className="space-y-3 my-8 not-prose">
-          {faqs.map((faq, index) => (
-            <FaqItem key={index} question={faq.q} answer={faq.a} />
-          ))}
-        </div>
+        <FAQBlock faqs={faqs} caption="Rajasthan Kisan Samman Nidhi FAQ 2026" />
 
         <h2>Aakhri Baat</h2>
 
