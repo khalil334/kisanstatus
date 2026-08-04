@@ -157,6 +157,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
     published: '2026-08-03T09:00:00+05:30',
     modified: '2026-08-03T09:00:00+05:30',
     readTime: '11 min read',
+    ogImage: '/images/articles/rajya-yojna/rythu-bharosa-status-check-2026/hero.webp',
     relatedPaths: ['/articles/PmKisanMasterGuide2026', '/articles/PmKisanBeneficiaryList2026'],
   },
   {

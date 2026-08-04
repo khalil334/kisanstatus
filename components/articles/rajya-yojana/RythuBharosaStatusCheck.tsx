@@ -1,7 +1,43 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import ExternalLinkButton from '@/components/ui/ExternalLinkButton';
 import InfoBox from '@/components/ui/InfoBox';
 import SchemeTable from '@/components/ui/SchemeTable';
+
+const IMG_BASE = '/images/articles/rajya-yojna/rythu-bharosa-status-check-2026';
+
+function Fig({
+  src,
+  alt,
+  caption,
+  width = 1200,
+  height = 800,
+  priority = false,
+}: {
+  src: string;
+  alt: string;
+  caption: string;
+  width?: number;
+  height?: number;
+  priority?: boolean;
+}) {
+  return (
+    <figure className="my-8 not-prose rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow-sm">
+      <Image
+        src={`${IMG_BASE}/${src}`}
+        alt={alt}
+        width={width}
+        height={height}
+        className="w-full h-auto object-cover"
+        sizes="(max-width: 768px) 100vw, 768px"
+        priority={priority}
+      />
+      <figcaption className="text-center text-xs text-gray-600 dark:text-gray-400 py-2 px-3 bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+        {caption}
+      </figcaption>
+    </figure>
+  );
+}
 
 export default function RythuBharosaStatusCheck2026() {
   return (
@@ -20,6 +56,15 @@ export default function RythuBharosaStatusCheck2026() {
       <p>
         Is comprehensive guide mein hum aapko batayenge ki kaise aap apna <strong>rythu bharosa status check</strong> kar sakte hain, <strong>rythu bharosa per acre amount</strong> kitna hai, aur <strong>rythu bharosa phase wise payment</strong> system kaise kaam karta hai taaki aap befikr ho kar apni kheti par dhyan de sakein.
       </p>
+
+      <Fig
+        src="hero.webp"
+        alt="Telangana ka rythu apne dhaan ke khet mein mobile par Rythu Bharosa payment status dekh raha hai"
+        caption="Rythu Bharosa — Telangana mein per acre ke hisaab se seedha bank account mein madad"
+        width={1200}
+        height={675}
+        priority
+      />
 
       <ExternalLinkButton
         href="https://rytubharosa.cgg.gov.in"
@@ -67,6 +112,12 @@ export default function RythuBharosaStatusCheck2026() {
         <strong>Dhyan Dein:</strong> Agar aapke paas 5 acre se zyada zameen hai, toh bhi aapko sirf 5 acre tak ka hi benefit (₹25,000 per season) milega. Ye limit sarkar ne chhote aur simant kisanon ko zyada se zyada fayda pahunchane ke liye lagayi hai.
       </InfoBox>
 
+      <Fig
+        src="paddy-per-acre-farming.webp"
+        alt="Telangana ka kisan dhaan ke khet mein pani chhod raha hai — Rythu Bharosa per acre ke hisaab se milta hai"
+        caption="Raqam per acre tay hoti hai — zyada zameen, zyada madad; isi liye har kisan ka amount alag hota hai"
+      />
+
       <h2>Rythu Bharosa Phase Wise Payment: Paisa "Late" Kyun Lagta Hai?</h2>
 
       <p>
@@ -91,6 +142,12 @@ export default function RythuBharosaStatusCheck2026() {
       <p>
         Apna status check karna bahut aasan hai. Telangana sarkar ne iske liye ek dedicated aur user-friendly portal banaya hai. Niche diye gaye steps ko follow karein:
       </p>
+
+      <Fig
+        src="dharani-land-record.webp"
+        alt="Kisan Mandal Revenue Office mein adhikari ke saath computer par Dharani portal ka land record dekh raha hai"
+        caption="Rythu Bharosa ka data Dharani portal se aata hai — record galat hoga to status bhi galat dikhega"
+      />
 
       <ol>
         <li>Apne mobile ya computer ke browser mein official website <code>rytubharosa.cgg.gov.in</code> kholein.</li>
@@ -170,6 +227,12 @@ export default function RythuBharosaStatusCheck2026() {
         <strong>Solution:</strong> Rythu Bharosa ka data seedha Dharani portal se aata hai. Agar aapne haal hi mein zameen khareedi hai ya virasat (inheritance) mein mili hai, lekin Dharani par mutation (namantaran) nahi hua, toh paisa purane malik ke account mein jaane ki koshish karega ya fail ho jayega. Turant MRO (Mandal Revenue Officer) office jaakar Dharani update karwayein.
       </p>
 
+      <Fig
+        src="bank-aadhaar-seeding.webp"
+        alt="Kisan bank branch mein passbook lekar account active karwane aur Aadhaar NPCI seeding check karwane aaya hai"
+        caption="Dormant account aur missing Aadhaar seeding — do sabse aam wajah jinse payment fail hoti hai"
+      />
+
       <h3>2. Bank Account Dormant Ya Band Hai</h3>
       <p>
         <strong>Solution:</strong> Agar aapka bank account lambey samay se use nahi hua hai, toh wo "Dormant" ho sakta hai. Bank jaakar account ko "Active" karwayein aur DBT (Direct Benefit Transfer) enable karwayein.
@@ -184,6 +247,12 @@ export default function RythuBharosaStatusCheck2026() {
       <p>
         <strong>Solution:</strong> Agar zameen par koi court case ya parivarik vivad (family dispute) hai, toh Dharani portal par us par "Disputed" ka tag lag jata hai. Aise cases mein payment tab tak roki jaati hai jab tak vivad khatam nahi ho jata.
       </p>
+
+      <Fig
+        src="mandal-revenue-office.webp"
+        alt="Kisan Mandal Revenue Office ke bahar line mein khade hain mutation aur Dharani correction ke liye"
+        caption="Mutation, disputed tag ya naam ki galti — yeh sirf MRO office mein hi theek hota hai"
+      />
 
       <h2>Kya Aap Dusre State Se Hain?</h2>
 
