@@ -3,6 +3,7 @@ import Image from 'next/image';
 import ExternalLinkButton from '@/components/ui/ExternalLinkButton';
 import InfoBox from '@/components/ui/InfoBox';
 import SchemeTable from '@/components/ui/SchemeTable';
+import { FAQBlock } from '@/components/ArticleShared';
 
 const IMG_BASE = '/images/articles/rajya-yojna/annadata-sukhibhava-status-check-2026';
 
@@ -38,6 +39,29 @@ function Fig({
     </figure>
   );
 }
+
+const FAQS_DATA = [
+  {
+    q: 'Kya YSR Rythu Bharosa aur Annadata Sukhibhava ek hi scheme hai?',
+    a: 'Haan. Andhra Pradesh sarkar ne YSR Rythu Bharosa ko officially rename karke "Annadata Sukhibhava" kar diya hai. Benefits aur eligibility lagbhag same hain — naam aur kuch administrative processes update hue hain.',
+  },
+  {
+    q: 'Agar mere paas zameen nahi hai, kya main apply kar sakta hoon?',
+    a: 'Haan. Tenant farmer hain aur valid CCRC (Crop Cultivator Rights Card) hai toh aap eligible hain. Yahi is scheme ka sabse bada fark hai — dusre states mein bataidar aksar bahar reh jaate hain.',
+  },
+  {
+    q: 'Payment status mein "Pending" dikh raha hai, kya karein?',
+    a: '"Pending" ka matlab verification chal raha hai, ya payment file ho chuki hai lekin bank tak nahi pahunchi. 7-10 din intezaar karein. Phir bhi na aaye toh bank se NPCI mapping check karwayein.',
+  },
+  {
+    q: 'Kya mujhe alag se PM Kisan ke liye apply karna padega?',
+    a: 'Aapka data state database mein hai toh sarkar PM Kisan ke liye bhi consider karti hai. Lekin apna PM Kisan status alag se pmkisan.gov.in par zaroor check kar lein — dono ke records alag chalte hain.',
+  },
+  {
+    q: 'Agar main government employee hoon, kya mujhe ye paisa milega?',
+    a: 'Nahi. Aap ya parivaar ka koi sadasya government sector mein regular employment par hai toh aap exclusion criteria mein aate hain, aur aaya hua paisa wapas karna pad sakta hai.',
+  },
+];
 
 export default function AnnadataSukhibhavaStatusCheck2026() {
   return (
@@ -341,32 +365,9 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         caption="Online na ho paaye to Gram Sachivalayam mein Agriculture Assistant free madad karta hai"
       />
 
-      <h2>FAQs — Annadata Sukhibhava</h2>
+      <h2>Annadata Sukhibhava — Aksar Poochhe Jaane Wale Sawaal</h2>
 
-      <h3>Kya YSR Rythu Bharosa aur Annadata Sukhibhava ek hi scheme hai?</h3>
-      <p>
-        Haan, Andhra Pradesh sarkar ne YSR Rythu Bharosa scheme ko officially rename karke "Annadata Sukhibhava" kar diya hai. Benefits aur eligibility lagbhag same hain, bas naam aur kuch administrative processes update hue hain.
-      </p>
-
-      <h3>Agar mere paas zameen nahi hai, kya main apply kar sakta hoon?</h3>
-      <p>
-        Haan, agar aap tenant farmer hain aur aapke paas valid <strong>CCRC (Crop Cultivator Rights Card)</strong> hai, toh aap is scheme ke liye eligible hain. Ye is scheme ka sabse bada advantage hai.
-      </p>
-
-      <h3>Payment status mein "Pending" dikh raha hai, kya karein?</h3>
-      <p>
-        "Pending" ka matlab hai ki aapka verification process chal raha hai ya payment file ho chuki hai lekin abhi bank tak nahi pahunchi. 7-10 din intezaar karein. Agar fir bhi na aaye, toh apne bank se NPCI mapping check karwayein.
-      </p>
-
-      <h3>Kya mujhe alag se PM Kisan ke liye apply karna padega?</h3>
-      <p>
-        Nahi, agar aap Annadata Sukhibhava ke liye eligible hain aur aapka data state database mein hai, toh sarkar aapko PM Kisan ke liye bhi automatically consider karti hai. Lekin apna PM Kisan status alag se <code>pmkisan.gov.in</code> par zaroor check kar lein.
-      </p>
-
-      <h3>Agar main government employee hoon, kya mujhe ye paisa milega?</h3>
-      <p>
-        Nahi. Agar aap ya aapke parivar ka koi sadasya government sector mein regular employment par hai, toh aap is scheme ke exclusion criteria mein aate hain aur aapko paisa wapas karna pad sakta hai.
-      </p>
+      <FAQBlock faqs={FAQS_DATA} caption="Annadata Sukhibhava FAQ 2026" />
 
       <h2>Related Articles</h2>
       <ul>

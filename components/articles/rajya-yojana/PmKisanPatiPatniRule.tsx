@@ -5,6 +5,46 @@ import ExternalLinkButton from '@/components/ui/ExternalLinkButton';
 import InfoBox from '@/components/ui/InfoBox';
 import SchemeTable from '@/components/ui/SchemeTable';
 import PmKisanFamilyChecker from '@/components/articles/rajya-yojana/tools/PmKisanFamilyChecker';
+import { FAQBlock } from '@/components/ArticleShared';
+
+const FAQS_DATA = [
+  {
+    q: 'Pati aur patni dono ko PM Kisan ka paisa milta hai?',
+    a: 'Nahi. PM Kisan mein beneficiary "family" hai — pati, patni aur naabaalig bachche milkar ek unit. Ek unit ko saal mein ek hi grant milta hai. Dono ke naam par registration ho jaaye to verification par duplicate pakda jaata hai aur extra naam par gaya paisa recover kiya jaata hai.',
+  },
+  {
+    q: 'Baalig bete ko alag se PM Kisan mil sakta hai?',
+    a: 'Haan, lekin sirf tab jab batwaare ke baad zameen revenue record mein uske naam par darj ho chuki ho. Alag ration card ya shaadi ho jaana kaafi nahi hai — mutation ke bina wo abhi bhi wahi ek parivaar mana jaata hai.',
+  },
+  {
+    q: 'Galat mila PM Kisan ka paisa kaise wapas karein?',
+    a: 'PM Kisan portal ke "Voluntary Surrender of PM-KISAN Benefit" option se apna naam khud hataayein, aur portal par bane refund challan se paisa jama karein. Notice ka intezaar karne se recovery bank account se bhi ho sakti hai.',
+  },
+  {
+    q: 'Patni ke naam par alag zameen hai, phir bhi nahi milega?',
+    a: 'Nahi milega — dono ke naam par alag khata hone se bhi parivaar do nahi ho jaata. Shaadi ke baad pati-patni scheme ki definition mein ek unit hain, chahe zameen alag alag khaton mein ho. Ek naam chunna hi hoga.',
+  },
+  {
+    q: 'Talaq ho gaya hai, to kya dono ka alag ban jaayega?',
+    a: 'Kaanooni taur par alag ho jaane ke baad dono apne apne family unit hain, aur agar dono ke naam par apni zameen record mein hai to dono ka claim ban sakta hai. Yahan zaroori ye hai ki record mein zameen aur naam saaf ho — kachcha samjhauta kaafi nahi hota.',
+  },
+  {
+    q: 'Patni ke naam par kist aa rahi thi, wo guzar gayi. Ab?',
+    a: 'Us naam ki kist aage nahi aayegi. Sahi raasta ye hai ki pehle zameen ka mutation waaris ke naam par karaya jaaye, uske baad usi naam par naya registration ho. Purane naam par aaya paisa lene ki koshish karna recovery ka case banata hai.',
+  },
+  {
+    q: 'Naabaalig bete ke naam par zameen hai, uska alag ban sakta hai?',
+    a: 'Nahi. 18 saal se kam umar ke bachche usi parivaar mein ginte hain, chahe record mein unke naam par zameen ho. Baalig hone aur batwaara hone — dono ke baad hi baat aage badhti hai.',
+  },
+  {
+    q: 'Do naam par paisa aa raha hai aur kuch nahi hua, to shayad theek hai?',
+    a: 'Kist aana verification poori hone ka proof nahi hai. Kai case mein duplicate do-teen saal baad pakda gaya aur poora amount ek saath recover hua. Jitni der ruk kar theek karenge, refund utna bada banega.',
+  },
+  {
+    q: 'Batai (tenant) par kheti karte hain, milta hai?',
+    a: 'PM Kisan landholding par aadharit hai, is liye batai par kheti karne wale is scheme mein nahi aate. Kuch rajya apni scheme mein tenant farmer ko shamil karte hain — jaise Andhra Pradesh ka CCRC-based system. Apne rajya ki scheme /rajya-yojana par di gayi rajya kisan yojana list mein dekh lein.',
+  },
+];
 
 const IMG_BASE = '/images/articles/rajya-yojna/pm-kisan-pati-patni-dono-ko-milega';
 
@@ -42,81 +82,9 @@ function Fig({
 }
 
 export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojanaArticleMeta }) {
-  const canonicalUrl = 'https://kisanstatus.com/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega';
-
-  const articleSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline:
-      'Pati Patni Dono Ko PM Kisan Milega? Family Rule, Exclusion List Aur Paisa Wapas Karne Ka Process',
-    description: article.description,
-    image: `https://kisanstatus.com${IMG_BASE}/hero.webp`,
-    author: {
-      '@type': 'Organization',
-      name: 'KisanStatus Team',
-      url: 'https://kisanstatus.com/about',
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'KisanStatus.com',
-      url: 'https://kisanstatus.com',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://kisanstatus.com/logo.png',
-        width: 250,
-        height: 60,
-      },
-    },
-    datePublished: article.published,
-    dateModified: article.modified,
-    inLanguage: 'hi-IN',
-    mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
-  };
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Pati aur patni dono ko PM Kisan ka paisa milta hai?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text:
-            'Nahi. PM Kisan mein beneficiary "family" hai — pati, patni aur naabaalig bachche milkar ek unit. Ek unit ko saal mein ek hi grant milta hai. Dono ke naam par registration ho jaaye to verification par duplicate pakda jaata hai aur extra naam par gaya paisa recover kiya jaata hai.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Baalig bete ko alag se PM Kisan mil sakta hai?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text:
-            'Haan, lekin sirf tab jab batwaare ke baad zameen revenue record mein uske naam par darj ho chuki ho. Alag ration card ya shaadi ho jaana kaafi nahi hai — mutation ke bina wo abhi bhi wahi ek parivaar mana jaata hai.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Galat mila PM Kisan ka paisa kaise wapas karein?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text:
-            'PM Kisan portal ke "Voluntary Surrender of PM-KISAN Benefit" option se apna naam khud hataayein, aur portal par bane refund challan se paisa jama karein. Notice ka intezaar karne se recovery bank account se bhi ho sakti hai.',
-        },
-      },
-    ],
-  };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
 
       <article className="max-w-3xl mx-auto px-4 py-8 prose prose-lg dark:prose-invert prose-headings:font-bold prose-a:text-blue-600 dark:prose-a:text-blue-400">
         <h1 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
@@ -369,48 +337,11 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
 
         <h2>Wo Sawaal Jo Har Roz Poochhe Jaate Hain</h2>
 
-        <h3>Patni ke naam par alag zameen hai, phir bhi nahi milega?</h3>
-        <p>
-          Nahi milega — dono ke naam par alag khata hone se bhi parivaar do nahi ho jaata.
-          Shaadi ke baad pati-patni scheme ki definition mein ek unit hain, chahe zameen alag
-          alag khaton mein ho. Ek naam chunna hi hoga.
-        </p>
+        <FAQBlock faqs={FAQS_DATA} caption="PM Kisan pati-patni rule — ground-level sawaal jawab" />
 
-        <h3>Talaq ho gaya hai, to kya dono ka alag ban jaayega?</h3>
         <p>
-          Kaanooni taur par alag ho jaane ke baad dono apne apne family unit hain, aur agar
-          dono ke naam par apni zameen record mein hai to dono ka claim ban sakta hai. Yahan
-          zaroori ye hai ki record mein zameen aur naam saaf ho — kachcha samjhauta kaafi nahi
-          hota.
-        </p>
-
-        <h3>Patni ke naam par kist aa rahi thi, wo guzar gayi. Ab?</h3>
-        <p>
-          Us naam ki kist aage nahi aayegi. Sahi raasta ye hai ki pehle zameen ka mutation
-          waaris ke naam par karaya jaaye, uske baad usi naam par naya registration ho. Purane
-          naam par aaya paisa lene ki koshish karna recovery ka case banata hai.
-        </p>
-
-        <h3>Naabaalig bete ke naam par zameen hai, uska alag ban sakta hai?</h3>
-        <p>
-          Nahi. 18 saal se kam umar ke bachche usi parivaar mein ginte hain, chahe record mein
-          unke naam par zameen ho. Baalig hone aur batwaara hone — dono ke baad hi baat aage
-          badhti hai.
-        </p>
-
-        <h3>Do naam par paisa aa raha hai aur kuch nahi hua, to shayad theek hai?</h3>
-        <p>
-          Kist aana verification poori hone ka proof nahi hai. Kai case mein duplicate do-teen
-          saal baad pakda gaya aur poora amount ek saath recover hua. Jitni der ruk kar theek
-          karenge, refund utna bada banega.
-        </p>
-
-        <h3>Batai (tenant) par kheti karte hain, milta hai?</h3>
-        <p>
-          PM Kisan landholding par aadharit hai, is liye batai par kheti karne wale is scheme
-          mein nahi aate. Kuch rajya apni scheme mein tenant farmer ko shamil karte hain —
-          jaise Andhra Pradesh ka CCRC-based system. Apne rajya ki scheme{' '}
-          <Link href="/rajya-yojana">rajya kisan yojana list</Link> mein dekh lein.
+          Apne rajya ki scheme mein bataidar kisan ko jagah milti hai ya nahi, ye{' '}
+          <Link href="/rajya-yojana">rajya kisan yojana list</Link> mein dekh sakte hain.
         </p>
 
         <h2>Chhoti Aadatein Jo Recovery Se Bacha Leti Hain</h2>
