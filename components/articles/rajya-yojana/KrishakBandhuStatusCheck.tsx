@@ -495,37 +495,6 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
 
         <FAQBlock faqs={FAQS_DATA} caption="Krishak Bandhu status, slab aur death benefit FAQ 2026" />
 
-        <h2>Related Articles</h2>
-
-        <ul>
-          <li>
-            <Link href="/articles/PmKisanCorrectionForm2026">
-              PM Kisan Correction Form 2026 — naam aur spelling mismatch theek karein
-            </Link>
-          </li>
-          <li>
-            <Link href="/articles/PmKisanMasterGuide2026">
-              PM Kisan Master Guide 2026 — registration se payment tak poora process
-            </Link>
-          </li>
-          <li>
-            <Link href="/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega">
-              Pati-patni dono ko PM Kisan milega ya nahi? Family rule
-            </Link>
-          </li>
-        </ul>
-
-        <h2>Aakhri Baat</h2>
-
-        <p>
-          Krishak Bandhu mein paisa ruknay ki wajah lagbhag hamesha kagaz hoti hai, kismat nahi.
-          Land record, bank account aur naam ki spelling — ye teen cheezein durust hon to
-          scheme apne aap chalti rehti hai. Aur jab kuch atak jaaye, to portal ka status shabd
-          padh kar aap khud tay kar sakte hain ki block office jaana hai, BL&amp;LRO jaana hai,
-          ya bank. Sabse aakhri baat: koi bhi jaankari paisa maangne wale &ldquo;agent&rdquo; se
-          confirm na karein — official portal aur block office, bas yeh do hi asli source hain.
-        </p>
-
         {article.officialPortal && (
           <p>
             Official portal:{' '}
@@ -538,6 +507,14 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
         <p>
           <Link href="/rajya-yojana">← Sabhi rajya ki kisan yojana</Link>
         </p>
+
+      <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
+        <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
+          <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
+          Ye article sirf madad ke liye hai. Final decision ke liye official portal ya krishi office se sampark karein.
+        </p>
+      </div>
+
       </article>
     </>
   );

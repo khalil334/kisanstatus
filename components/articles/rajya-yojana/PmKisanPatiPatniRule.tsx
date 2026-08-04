@@ -400,23 +400,6 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
           </li>
         </ul>
 
-        <h2>Aakhri Baat</h2>
-
-        <p>
-          PM Kisan ka family rule complicated nahi hai, bas ulta hai us soch se jo aam taur
-          par hoti hai. Ginti aadmi ki nahi, parivaar ki hoti hai — is liye pati-patni ka
-          double claim kabhi valid nahi banta, aur baalig bete ka claim sirf tab banta hai
-          jab kaagaz par zameen bant chuki ho. Exclusion bhi isi hisaab se poore parivaar
-          par lagti hai, ek vyakti par nahi.
-        </p>
-
-        <p>
-          Agar aapke yahan do registration chal rahe hain, to sabse samajhdari wala kadam
-          aaj hi ek ko surrender karna aur us par gaya paisa wapas karna hai. Aur agar ek hi
-          hai, to dhyan sirf teen cheezon par rakhein — e-KYC, land seeding aur bank ki NPCI
-          mapping. Yeh teen theek hon, to kist apne aap aati rehti hai.
-        </p>
-
         {article.officialPortal && (
           <p>
             Official portal:{' '}
@@ -429,6 +412,14 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
         <p>
           <Link href="/rajya-yojana">← Sabhi rajya ki kisan yojana</Link>
         </p>
+
+      <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
+        <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
+          <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
+          Ye article sirf madad ke liye hai. Final decision ke liye official portal ya krishi office se sampark karein.
+        </p>
+      </div>
+
       </article>
     </>
   );

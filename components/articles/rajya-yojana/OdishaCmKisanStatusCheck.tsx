@@ -466,37 +466,6 @@ export default function OdishaCmKisanStatusCheck({
 
         <FAQBlock faqs={FAQS_DATA} caption="Odisha CM Kisan status aur eligibility FAQ 2026" />
 
-        <h2>Related Articles</h2>
-
-        <ul>
-          <li>
-            <Link href="/articles/PmKisanBeneficiaryList2026">
-              PM Kisan Beneficiary List 2026 — gaon ki list mein apna naam dekhein
-            </Link>
-          </li>
-          <li>
-            <Link href="/articles/PmKisanMasterGuide2026">
-              PM Kisan Master Guide 2026 — registration se payment tak poora process
-            </Link>
-          </li>
-          <li>
-            <Link href="/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega">
-              Pati-patni dono ko PM Kisan milega ya nahi? Family rule
-            </Link>
-          </li>
-        </ul>
-
-        <h2>Aakhri Baat</h2>
-
-        <p>
-          CM Kisan mein sabse zyada nuksan naam ke confusion se hota hai — log KALIA
-          dhoondte rehte hain aur naye portal par apna record dekhte hi nahi. Isse aage jo
-          bhi atakta hai, wo lagbhag hamesha teen cheezon mein se ek hota hai: e-KYC, bank
-          ki NPCI seeding, ya land record. Ye teen durust hon to sab apne aap chalta hai.
-          Aur jab status samajh mein na aaye, to portal ka page khol kar block agriculture
-          office jaana sabse tez raasta hai — kisi bicholiye ke paas jaane se nahi.
-        </p>
-
         {article.officialPortal && (
           <p>
             Official portal:{' '}
@@ -509,6 +478,14 @@ export default function OdishaCmKisanStatusCheck({
         <p>
           <Link href="/rajya-yojana">← Sabhi rajya ki kisan yojana</Link>
         </p>
+
+      <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
+        <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
+          <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
+          Ye article sirf madad ke liye hai. Final decision ke liye official portal ya krishi office se sampark karein.
+        </p>
+      </div>
+
       </article>
     </>
   );
