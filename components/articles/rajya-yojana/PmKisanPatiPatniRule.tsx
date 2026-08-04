@@ -10,34 +10,34 @@ import { FAQBlock } from '@/components/ArticleShared';
 const FAQS_DATA = [
   {
     q: 'Pati aur patni dono ko PM Kisan ka paisa milta hai?',
-    a: 'Nahi. PM Kisan mein beneficiary "family" hai — pati, patni aur naabaalig bachche milkar ek unit. Ek unit ko saal mein ek hi grant milta hai. Dono ke naam par registration ho jaaye to verification par duplicate pakda jaata hai aur extra naam par gaya paisa recover kiya jaata hai.',
+    a: 'Nahi. PM Kisan mein beneficiary "family" hai — pati, patni aur naabaalig bachche milkar ek unit. Ek unit ko saal mein ek hi grant milta hai. Dono taraf se registration ho jaaye to verification par duplicate pakda jaata hai aur extra wala paisa recover kiya jaata hai.',
   },
   {
     q: 'Baalig bete ko alag se PM Kisan mil sakta hai?',
-    a: 'Haan, lekin sirf tab jab batwaare ke baad zameen revenue record mein uske naam par darj ho chuki ho. Alag ration card ya shaadi ho jaana kaafi nahi hai — mutation ke bina wo abhi bhi wahi ek parivaar mana jaata hai.',
+    a: 'Haan, lekin sirf tab jab batwaare ke baad zameen revenue record mein uski entry ho chuki ho. Naya ration card ya shaadi ho jaana kaafi nahi hai — mutation ke bina wo abhi bhi wahi ek parivaar mana jaata hai.',
   },
   {
     q: 'Galat mila PM Kisan ka paisa kaise wapas karein?',
-    a: 'PM Kisan portal ke "Voluntary Surrender of PM-KISAN Benefit" option se apna naam khud hataayein, aur portal par bane refund challan se paisa jama karein. Notice ka intezaar karne se recovery bank account se bhi ho sakti hai.',
+    a: 'PM Kisan portal ke "Voluntary Surrender of PM-KISAN Benefit" option se registration khud hataayein, aur portal par bane refund challan se paisa jama karein. Notice ka intezaar karne se recovery bank account se bhi ho sakti hai.',
   },
   {
-    q: 'Patni ke naam par alag zameen hai, phir bhi nahi milega?',
-    a: 'Nahi milega — dono ke naam par alag khata hone se bhi parivaar do nahi ho jaata. Shaadi ke baad pati-patni scheme ki definition mein ek unit hain, chahe zameen alag alag khaton mein ho. Ek naam chunna hi hoga.',
+    q: 'Patni ki apni zameen hai, phir bhi nahi milega?',
+    a: 'Nahi milega — dono ke khate juda hone se bhi parivaar do nahi ho jaata. Shaadi ke baad pati-patni scheme ki definition mein ek unit hain, chahe zameen kisi bhi khate mein ho. Ek hi registration chunna hoga.',
   },
   {
     q: 'Talaq ho gaya hai, to kya dono ka alag ban jaayega?',
-    a: 'Kaanooni taur par alag ho jaane ke baad dono apne apne family unit hain, aur agar dono ke naam par apni zameen record mein hai to dono ka claim ban sakta hai. Yahan zaroori ye hai ki record mein zameen aur naam saaf ho — kachcha samjhauta kaafi nahi hota.',
+    a: 'Kaanooni taur par judai ho jaane ke baad dono apne apne family unit hain, aur agar dono ki apni-apni zameen record mein darj hai to dono ka claim ban sakta hai. Yahan zaroori ye hai ki record saaf ho — kachcha samjhauta kaafi nahi hota.',
   },
   {
-    q: 'Patni ke naam par kist aa rahi thi, wo guzar gayi. Ab?',
-    a: 'Us naam ki kist aage nahi aayegi. Sahi raasta ye hai ki pehle zameen ka mutation waaris ke naam par karaya jaaye, uske baad usi naam par naya registration ho. Purane naam par aaya paisa lene ki koshish karna recovery ka case banata hai.',
+    q: 'Patni ki kist aa rahi thi, wo guzar gayi. Ab?',
+    a: 'Wo registration aage nahi chalega. Sahi raasta ye hai ki pehle zameen ka mutation waaris tak pahunchaya jaaye, uske baad usi vyakti ka naya registration ho. Purani entry par aaya paisa lene ki koshish recovery ka case banati hai.',
   },
   {
-    q: 'Naabaalig bete ke naam par zameen hai, uska alag ban sakta hai?',
-    a: 'Nahi. 18 saal se kam umar ke bachche usi parivaar mein ginte hain, chahe record mein unke naam par zameen ho. Baalig hone aur batwaara hone — dono ke baad hi baat aage badhti hai.',
+    q: 'Naabaalig bete ki apni zameen hai, uska alag ban sakta hai?',
+    a: 'Nahi. 18 saal se kam umar ke bachche usi parivaar mein ginte hain, chahe record mein zameen unki ho. Baalig hone aur batwaara hone — dono ke baad hi baat aage badhti hai.',
   },
   {
-    q: 'Do naam par paisa aa raha hai aur kuch nahi hua, to shayad theek hai?',
+    q: 'Do registration par paisa aa raha hai aur kuch nahi hua, to shayad theek hai?',
     a: 'Kist aana verification poori hone ka proof nahi hai. Kai case mein duplicate do-teen saal baad pakda gaya aur poora amount ek saath recover hua. Jitni der ruk kar theek karenge, refund utna bada banega.',
   },
   {
@@ -99,19 +99,19 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
         />
 
         <p>
-          Gaon mein ye baat aam hai: &ldquo;padosi ke ghar do naam chal rahe hain, humare ghar
-          ek hi kyun?&rdquo; Kisi ne CSC wale se bharwa liya, kisi ne khud portal par form
-          daal diya, aur kuch mahine tak dono khaton mein do-do hazaar aata bhi raha. Phir
-          achanak ek din ek naam ka status badal gaya, doosre par recovery ka message aa gaya.
-          Ye kisi clerk ki galti nahi thi. Ye scheme ka wo rule tha jo shuru se likha hua hai,
-          bas padha kam gaya.
+          Gaon mein ye sawaal aam hai: &ldquo;padosi ke yahan do registration chal rahe hain,
+          humare yahan ek hi kyun?&rdquo; Kisi ne CSC wale se form bharwa liya, kisi ne khud
+          portal par apply kar diya, aur kuch mahine tak dono khaton mein do-do hazaar aata
+          bhi raha. Phir achanak ek din pehla status badal gaya aur doosre par recovery ka
+          message aa gaya. Ye kisi clerk ki galti nahi thi — ye scheme ka wo rule tha jo
+          shuru se likha hua hai, bas padha kam gaya.
         </p>
 
         <InfoBox type="info">
           PM Kisan ka beneficiary <strong>&ldquo;family&rdquo;</strong> hai — pati, patni aur
           naabaalig bachche (18 saal se kam) milkar ek unit. Is poore unit ko saal mein ek hi
-          ₹6,000 milta hai, teen ₹2,000 ki kist mein. Zameen kam ho ya zyada, do naam par
-          paisa dono haalat mein nahi banta.
+          ₹6,000 milta hai, teen ₹2,000 ki kist mein. Zameen kam ho ya zyada, do jagah se
+          paisa kisi bhi haalat mein nahi banta.
         </InfoBox>
 
         <h2>Rule Ek Line Mein: Ginti Aadmi Ki Nahi, Ghar Ki Hoti Hai</h2>
@@ -119,54 +119,69 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
         <p>
           Bahut si sarkari schemes vyakti ko unit maankar chalti hain — jitne log eligible,
           utne benefit. PM Kisan ka dhaancha ulta hai. Yahan pehle ye dekha jaata hai ki
-          landholding kis <em>parivaar</em> ki hai, aur us parivaar ke andar se ek hi naam par
-          grant nikalta hai. Isi wajah se pati-patni ka sawaal itni baar aata hai, kyunki dono
-          ke naam par zameen bhi ho sakti hai, dono ke Aadhaar bhi alag hain, dono ke bank
-          account bhi alag hain. Technically do registration ban jaate hain. Scheme ki nazar
-          mein wo phir bhi ek hi dawa hai.
+          landholding kis <em>parivaar</em> ki hai, aur us parivaar ke andar se ek hi grant
+          nikalta hai.
         </p>
+
+        <p>
+          Isi wajah se pati-patni ka sawaal itni baar uthta hai. Zameen dono ki apni-apni ho
+          sakti hai, Aadhaar juda hain, bank account bhi juda hain — technically do
+          registration ban jaate hain. Scheme ki nazar mein wo phir bhi ek hi dawa hai.
+        </p>
+
+        <Fig
+          src="family-documents-check.webp"
+          alt="Kisan parivaar ghar mein bank passbook, Aadhaar card aur zameen ke kagaz milaa kar dekh raha hai"
+          caption="Registration se pehle teeno kagaz — land record, Aadhaar aur passbook — ek saath milaa lein"
+        />
 
         <p>
           Aur ek baat jo log der se samajhte hain — zameen ka area raqam par asar nahi daalta.
           Do bigha ho ya bees, saal bhar ka grant ₹6,000 hi rehta hai. Isliye &ldquo;humari
-          zameen zyada hai, to humein dugna milna chahiye&rdquo; wali soch se koi doosra naam
+          zameen zyada hai, to humein dugna milna chahiye&rdquo; wali soch se doosra claim
           justify nahi hota.
         </p>
 
         <PmKisanFamilyChecker />
 
-        <h2>Wo Case Jismein Ghar Se Do Naam Sach Mein Ban Jaate Hain</h2>
+        <h2>Wo Case Jismein Ek Parivaar Se Do Claim Sach Mein Ban Jaate Hain</h2>
 
         <p>
-          Ab us baat par aayein jo padosi ke ghar dikhti hai. Do naam kabhi-kabhi bilkul sahi
-          hote hain, lekin uski wajah pati-patni nahi hoti — <strong>batwaara</strong> hoti
-          hai.
+          Ab us baat par aayein jo padosi ke yahan dikhti hai. Do registration kabhi-kabhi
+          bilkul sahi hote hain, lekin uski wajah pati-patni nahi hoti —{' '}
+          <strong>batwaara</strong> hoti hai.
         </p>
 
         <p>
-          Maan lijiye ghar mein pita ke naam par das bigha zameen thi. Baalig bete ko char
-          bigha alag karke revenue record mein uske naam par mutation ho gaya. Ab kaagaz par do
-          khatedar hain, do alag landholding hain, aur scheme ki definition ke hisaab se do
-          alag family unit. Aise mein pita ka bhi grant banta hai aur bete ka bhi. Ek hi
-          chulhe par khana banta hoga, phir bhi ye duplicate nahi hai.
+          Maan lijiye pita ke paas das bigha zameen thi. Baalig bete ko char bigha de kar
+          revenue record mein mutation ho gaya. Ab kaagaz par do khatedar hain, do juda
+          landholding hain, aur scheme ki definition ke hisaab se do family unit. Aise mein
+          pita ka bhi grant banta hai aur bete ka bhi — ek hi chulhe par khana banta hoga,
+          phir bhi ye duplicate nahi hai.
         </p>
 
+        <Fig
+          src="tehsil-mutation-office.webp"
+          alt="Buzurg kisan dampati tehsil office mein patwari ke saamne zameen ke record dekh rahe hain"
+          caption="Batwaara tabhi maana jaata hai jab tehsil ke revenue record mein mutation ho jaaye"
+        />
+
         <p>
-          Lekin yahan galti karne ki gunjaish poori hai. Log samajhte hain ki alag ration card
-          bana lene se, ya bete ki shaadi ho jaane se, ya panchayat se &ldquo;alag
+          Lekin yahan galti karne ki gunjaish poori hai. Log samajhte hain ki naya ration card
+          banwa lene se, ya bete ki shaadi ho jaane se, ya panchayat se &ldquo;alag
           parivaar&rdquo; ka certificate le aane se batwaara ho gaya. Nahi hua. Jab tak tehsil
-          ke record mein zameen bete ke naam par transfer nahi hoti, tab tak wahi ek unit hai —
-          aur doosra registration verification par gir jaata hai.
+          ke record mein zameen bete tak transfer nahi hoti, tab tak wahi ek unit hai — aur
+          doosra registration verification par gir jaata hai.
         </p>
 
         <SchemeTable>
           <tr>
             <th>Ghar ki situation</th>
-            <th>Kitne naam ban sakte hain</th>
+            <th>Kitne claim ban sakte hain</th>
             <th>Kyun</th>
           </tr>
           <tr>
-            <td>Pati aur patni, zameen dono ke naam par</td>
+            <td>Pati aur patni, zameen dono ki apni-apni</td>
             <td>Ek</td>
             <td>Dono ek hi family unit hain</td>
           </tr>
@@ -178,17 +193,17 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
           <tr>
             <td>Baalig beta, batwaara ho chuka, mutation record mein</td>
             <td>Do</td>
-            <td>Alag khatedar, alag family unit</td>
+            <td>Juda khatedar, juda family unit</td>
           </tr>
           <tr>
-            <td>Baalig beta, zameen abhi pita ke naam par</td>
+            <td>Baalig beta, zameen abhi pita ke paas</td>
             <td>Ek</td>
             <td>Landholding ab bhi ek hi parivaar ki hai</td>
           </tr>
           <tr>
-            <td>Vidhwa maa, zameen virasat mein uske naam par</td>
-            <td>Apna alag</td>
-            <td>Wo khud ek separate unit hai</td>
+            <td>Vidhwa maa, zameen virasat mein mili</td>
+            <td>Apna khud ka</td>
+            <td>Wo ab ek separate unit hai</td>
           </tr>
         </SchemeTable>
 
@@ -196,8 +211,8 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
 
         <p>
           Family rule ka doosra pehlu ye hai ki exclusion bhi parivaar par lagti hai. Matlab
-          agar ghar ka koi ek sadasya in categories mein aata hai, to us ghar ka koi bhi member
-          PM Kisan nahi le sakta — chahe form kisi aur ke naam par ho.
+          agar koi ek sadasya in categories mein aata hai, to us ghar ka koi bhi member PM
+          Kisan nahi le sakta — chahe form kisi aur ne bhara ho.
         </p>
 
         <ul>
@@ -225,40 +240,40 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
         </ul>
 
         <InfoBox type="warning">
-          Sabse zyada recovery notices isi rule se aate hain. Ghar mein beta sarkari naukri
-          mein lag gaya, ya ek saal income tax bhar diya gaya — aur pita ke naam par kist aati
-          rahi. Verification jab data cross-check karta hai, to poora ghar ineligible nikalta
+          Sabse zyada recovery notices isi rule se aate hain. Beta sarkari naukri mein lag
+          gaya, ya ek saal income tax bhar diya gaya — aur pita ki kist aati rahi.
+          Verification jab data cross-check karta hai, to poora parivaar ineligible nikalta
           hai aur ab tak ka paisa wapas maanga jaata hai.
         </InfoBox>
 
-        <h2>Do Naam Par Paisa Aa Gaya Hai — Ab Kya Karein</h2>
+        <h2>Dono Taraf Paisa Aa Gaya Hai — Ab Kya Karein</h2>
 
         <p>
-          Agar aapko padhte hue lag raha hai ki aapke ghar mein yahi hua hai, to sabse behtar
+          Agar aapko padhte hue lag raha hai ki aapke saath yahi hua hai, to sabse behtar
           raasta notice ka intezaar karna nahi hai. Khud aage badhkar theek karna sasta bhi
           padta hai aur jaldi bhi khatam hota hai.
         </p>
 
         <ol>
           <li>
-            <strong>Pehle tay karein kis naam par claim rakhna hai.</strong> Aam taur par usi
-            naam par rakhein jiske land record, Aadhaar aur bank account teeno mein naam ek
-            jaisa likha ho. Spelling ka farak baad mein sabse zyada dikkat deta hai.
+            <strong>Pehle tay karein kaunsa registration rakhna hai.</strong> Aam taur par
+            wahi rakhein jiske land record, Aadhaar aur bank account — teeno mein spelling ek
+            jaisi likhi ho. Ye farak baad mein sabse zyada dikkat deta hai.
           </li>
           <li>
-            <strong>Doosre naam ko portal se surrender karein.</strong> PM Kisan portal par
-            &ldquo;Voluntary Surrender of PM-KISAN Benefit&rdquo; ka option hai. Wahan Aadhaar
-            aur registration number se login karke naam hataya ja sakta hai.
+            <strong>Doosre registration ko portal se surrender karein.</strong> PM Kisan
+            portal par &ldquo;Voluntary Surrender of PM-KISAN Benefit&rdquo; ka option hai.
+            Wahan Aadhaar aur registration number se login karke entry hatayi ja sakti hai.
           </li>
           <li>
-            <strong>Refund ka hisaab lagayein.</strong> Jitni kist us naam par aa chuki hai,
+            <strong>Refund ka hisaab lagayein.</strong> Jitni kist us taraf aa chuki hai,
             wahi wapas karni hoti hai — poora amount, kist ke hisaab se. Portal par refund ka
             challan ban jaata hai; usse jama karke receipt sambhaal lein.
           </li>
           <li>
-            <strong>Bache hue naam ki e-KYC dobara verify karein.</strong> Surrender ke baad
-            kabhi-kabhi active record ka status refresh hota hai. e-KYC, land seeding aur bank
-            mapping — teeno par &ldquo;Yes&rdquo; dikhna chahiye.
+            <strong>Bache hue registration ki e-KYC dobara verify karein.</strong> Surrender
+            ke baad kabhi-kabhi active record ka status refresh hota hai. e-KYC, land seeding
+            aur bank mapping — teeno par &ldquo;Yes&rdquo; dikhna chahiye.
           </li>
         </ol>
 
@@ -279,14 +294,20 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
           zyada kaam ka rahega.
         </p>
 
-        <h2>Ek Naam Chunna Hai — Kis Ke Naam Par Rakhein</h2>
+        <h2>Ek Hi Claim Banta Hai — Kiska Rakhein</h2>
 
         <p>
-          Jab ghar se ek hi claim banta hai, to sawaal ye reh jaata hai ki naam kis ka rakhein.
-          Yahan koi kaanooni majboori nahi hai — pati ho ya patni, dono chal jaata hai. Faisla
-          practical aadhaar par karna chahiye, kyunki aage ki poori DBT chain usi naam se bandhi
-          rehti hai.
+          Jab parivaar se ek hi claim banta hai, to sawaal ye reh jaata hai ki registration
+          kis ka rakhein. Yahan koi kaanooni majboori nahi hai — pati ho ya patni, koi bhi
+          chal jaata hai. Faisla practical aadhaar par karna chahiye, kyunki aage ki poori
+          DBT chain usi vyakti se bandhi rehti hai.
         </p>
+
+        <Fig
+          src="status-check-phone.webp"
+          alt="Kisan khet mein khada hokar phone par PM Kisan payment status check kar raha hai"
+          caption="Registration jiska bhi ho, status check aur OTP usi ke mobile number par aayenge"
+        />
 
         <SchemeTable>
           <tr>
@@ -294,26 +315,26 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
             <th>Kyun maayne rakhti hai</th>
           </tr>
           <tr>
-            <td>Land record mein naam kis ka darj hai</td>
-            <td>Land seeding usi naam par match hoti hai; farak hone par kist hold rehti hai</td>
+            <td>Land record mein kaun darj hai</td>
+            <td>Land seeding usi se match hoti hai; farak hone par kist hold rehti hai</td>
           </tr>
           <tr>
             <td>Aadhaar mein spelling kaisi hai</td>
-            <td>e-KYC aur record ka naam alag ho to authentication fail hota hai</td>
+            <td>e-KYC aur record ki spelling match na ho to authentication fail hota hai</td>
           </tr>
           <tr>
             <td>Bank account NPCI mapper mein seeded hai ya nahi</td>
             <td>Bina seeding DBT return ho jaati hai, chahe status active dikhe</td>
           </tr>
           <tr>
-            <td>Mobile number kis ke naam par active hai</td>
+            <td>Mobile number kiske paas active hai</td>
             <td>OTP aur payment SMS usi number par aate hain — badalna baad mein jhanjhat hai</td>
           </tr>
         </SchemeTable>
 
         <p>
-          Ek chhoti si salah: jis naam par teeno kaagaz — land record, Aadhaar aur bank — ek
-          jaise likhe hon, wahi naam chunein. Naam badalna baad mein sabse dheema kaam hai,
+          Ek chhoti si salah: jiske teeno kaagaz — land record, Aadhaar aur bank — ek jaise
+          likhe hon, usi ko chunein. Spelling correction baad mein sabse dheema kaam hai,
           kyunki wo tehsil aur bank dono jagah karana padta hai.
         </p>
 
@@ -328,11 +349,14 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
 
         <p>
           Verification mein aam taur par teen cheezein match ki jaati hain — ek hi khasra ya
-          khata number do file mein hai kya, ek hi ghar ke do Aadhaar par kist ja rahi hai kya,
-          aur income tax ya sarkari salary ka data us ghar ke kisi Aadhaar se match ho raha hai
-          kya. Teeno mein se koi ek hit ho jaaye, to file hold ho jaati hai. Isi liye kai baar
-          saal-do saal chalne ke baad achanak paisa rukta hai — us waqt naya rule nahi lagta,
-          bas purana record cross-check hota hai.
+          khata number do file mein hai kya, ek hi parivaar ke do Aadhaar par kist ja rahi
+          hai kya, aur income tax ya sarkari salary ka data kisi member ke Aadhaar se match
+          ho raha hai kya. Teeno mein se koi ek hit ho jaaye, to file hold ho jaati hai.
+        </p>
+
+        <p>
+          Isi liye kai baar saal-do saal chalne ke baad achanak paisa rukta hai — us waqt
+          naya rule nahi lagta, bas purana record cross-check hota hai.
         </p>
 
         <h2>Wo Sawaal Jo Har Roz Poochhe Jaate Hain</h2>
@@ -348,8 +372,8 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
 
         <ul>
           <li>
-            Ghar mein sirf ek hi naam par registration rakhein, aur uska registration number
-            likh kar rakhein — poochhne par yahi kaam aata hai.
+            Parivaar mein sirf ek registration rakhein, aur uska number likh kar sambhaal
+            lein — poochhne par yahi kaam aata hai.
           </li>
           <li>
             Naukri, pension ya income tax jaisi koi badlav ho, to us saal apna status khud
@@ -360,29 +384,29 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
             Kist ka intezaar na karein.
           </li>
           <li>
-            Aadhaar aur bank dono mein ek hi mobile number rakhein, warna OTP aur SMS alag
-            jagah jaayenge.
+            Aadhaar aur bank dono mein ek hi mobile number rakhein, warna OTP aur SMS
+            idhar-udhar jaayenge.
           </li>
           <li>
-            Kisi bhi &ldquo;agent&rdquo; ke is dawe par bharosa mat karein ki wo ghar ke do
-            naam chalwa dega. Wo paisa lekar wahi form bharega jo verification par girega, aur
-            refund aapko bharna padega.
+            Kisi bhi &ldquo;agent&rdquo; ke is dawe par bharosa mat karein ki wo ek parivaar
+            ke do registration chalwa dega. Wo paisa lekar wahi form bharega jo verification
+            par girega, aur refund aapko bharna padega.
           </li>
         </ul>
 
         <h2>Aakhri Baat</h2>
 
         <p>
-          PM Kisan ka family rule complicated nahi hai, bas ulta hai us soch se jo aam taur par
-          hoti hai. Ginti aadmi ki nahi, ghar ki hoti hai — is liye pati-patni dono ka naam
-          kabhi valid nahi banta, aur baalig bete ka naam sirf tab banta hai jab kaagaz par
-          zameen bant chuki ho. Exclusion bhi isi hisaab se poore ghar par lagti hai, ek
-          vyakti par nahi.
+          PM Kisan ka family rule complicated nahi hai, bas ulta hai us soch se jo aam taur
+          par hoti hai. Ginti aadmi ki nahi, parivaar ki hoti hai — is liye pati-patni ka
+          double claim kabhi valid nahi banta, aur baalig bete ka claim sirf tab banta hai
+          jab kaagaz par zameen bant chuki ho. Exclusion bhi isi hisaab se poore parivaar
+          par lagti hai, ek vyakti par nahi.
         </p>
 
         <p>
-          Agar aapke ghar mein do naam chal rahe hain, to sabse samajhdari wala kadam aaj hi
-          ek naam surrender karna aur us par gaya paisa wapas karna hai. Aur agar ek hi naam
+          Agar aapke yahan do registration chal rahe hain, to sabse samajhdari wala kadam
+          aaj hi ek ko surrender karna aur us par gaya paisa wapas karna hai. Aur agar ek hi
           hai, to dhyan sirf teen cheezon par rakhein — e-KYC, land seeding aur bank ki NPCI
           mapping. Yeh teen theek hon, to kist apne aap aati rehti hai.
         </p>
