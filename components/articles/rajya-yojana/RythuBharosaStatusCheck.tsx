@@ -68,17 +68,23 @@ export default function RythuBharosaStatusCheck2026() {
     <article className="prose prose-lg max-w-4xl mx-auto">
 
       <InfoBox type="update" date="4 August 2026">
-        <strong>Latest Update:</strong> Telangana sarkar ne Rythu Bharosa ki nayi kist ki prakriya shuru kar di hai. Payment ab 'phase-wise' aur acreage (zameen ke maap) ke hisaab se release ho rahi hai. Isliye agar aapke padosi ko paisa mil gaya hai aur aapko nahi, toh ghabrayein nahi — ye normal process hai. Apna <strong>rythu bharosa status check</strong> niche diye gaye official steps se karein.
+        <strong>Latest Update:</strong> Nayi kist ki prakriya shuru ho chuki hai. Release phase-wise aur
+        acreage ke hisaab se ho raha hai — isliye padosi ko paisa mil jaana aur aapko na milna abhi
+        normal hai. Status dekhne ka tareeka neeche hai.
       </InfoBox>
 
       <h1>Rythu Bharosa Status Check 2026: Payment, Per Acre Amount aur Phase-Wise List Guide</h1>
 
       <p>
-        Telangana ke kisanon ke liye <strong>Rythu Bharosa</strong> (pehle Rythu Bandhu ke naam se jaani jaati thi) ek jeevan-rekha ke samaan hai. Ye scheme kisanon ko kheti ki shuruat mein hi beej, khaad aur anya input costs ke liye direct financial support provide karti hai. Lekin har saal kiston ke release ke dauran sabse bada sawal yahi uthta hai ki paisa kab aayega aur kaise pata karein ki hamara naam <strong>rythu bandhu list</strong> mein shamil hai ya nahi.
+        Telangana mein <strong>Rythu Bharosa</strong> — purana naam Rythu Bandhu — season shuru hone se
+        pehle hi kisan ke haath mein paisa de deti hai, taaki beej aur khaad ke liye sahukar ke paas na
+        jaana pade.
       </p>
 
       <p>
-        Is comprehensive guide mein hum aapko batayenge ki kaise aap apna <strong>rythu bharosa status check</strong> kar sakte hain, <strong>rythu bharosa per acre amount</strong> kitna hai, aur <strong>rythu bharosa phase wise payment</strong> system kaise kaam karta hai taaki aap befikr ho kar apni kheti par dhyan de sakein.
+        Do cheezein is scheme ko baaki state schemes se alag banati hain: raqam per acre tay hoti hai,
+        aur release ek saath nahi, phase mein hota hai. Dono ka asar seedha aapke status par padta hai —
+        neeche wahi samjhaya hai.
       </p>
 
       <Fig
@@ -95,14 +101,17 @@ export default function RythuBharosaStatusCheck2026() {
         label="Official Portal — Rythu Bharosa Telangana"
       />
 
-      <h2>Rythu Bharosa Kya Hai aur Per Acre Amount Kitna Hai?</h2>
+      <h2>Per Acre Ke Hisaab Se Paisa — Ganit Kya Hai</h2>
 
       <p>
-        Rythu Bharosa (Rythu Bandhu) Telangana sarkar ki flagship investment support scheme hai. Iska mukhya uddeshya kisanon ko kharif aur rabi mausam mein kheti ke liye zaroori inputs khareedne mein madad karna hai, taaki unhe sahukaron se karz na lena pade.
+        Baaki schemes ki tarah yahan har kisan ko ek jaisa amount nahi milta. Hisaab zameen ke maap se
+        lagta hai: har acre cultivable land par ₹10,000 saalana — ₹5,000 Kharif mein aur ₹5,000 Rabi
+        mein.
       </p>
 
       <p>
-        Sabse important baat ye hai ki is scheme mein paisa fixed nahi hota, balki ye <strong>rythu bharosa per acre amount</strong> ke hisaab se calculate hota hai. Telangana sarkar ne har acre cultivable land ke liye ₹10,000 saalana (₹5,000 Kharif + ₹5,000 Rabi) nirdharit kiye hain. 
+        Do acre wale kisan ko season mein ₹10,000 milega, ek acre wale ko ₹5,000. Isi wajah se gaon
+        mein har aadmi ka amount alag dikhta hai.
       </p>
 
       <SchemeTable>
@@ -142,14 +151,16 @@ export default function RythuBharosaStatusCheck2026() {
         caption="Raqam per acre tay hoti hai — zyada zameen, zyada madad; isi liye har kisan ka amount alag hota hai"
       />
 
-      <h2>Rythu Bharosa Phase Wise Payment: Paisa "Late" Kyun Lagta Hai?</h2>
+      <h2>Padosi Ko Mil Gaya, Mujhe Nahi — Phase System Samjhein</h2>
 
       <p>
-        Kai baar kisan shikayat karte hain ki unka paisa "late" aa raha hai, jabki unke gaon ke doosre kisanon ko mil gaya hai. Iska jawab <strong>rythu bharosa phase wise payment</strong> system mein chhupa hai.
+        Ye shikayat sabse zyada aati hai, aur iski wajah koi galti nahi — <strong>phase wise
+        payment</strong> hai.
       </p>
 
       <p>
-        Telangana sarkar ek saath pure state ko paisa release nahi karti. Payment ko alag-alag phases mein baanta jata hai based on:
+        Poore state ko ek din mein paisa nahi jaata. Kis mandal ka number pehle aayega, ye teen
+        cheezon par tay hota hai:
       </p>
       <ul>
         <li><strong>District aur Mandal-wise verification:</strong> Pehle un districts ko priority di jaati hai jahan land records (Dharani portal) 100% updated hain.</li>
@@ -158,13 +169,15 @@ export default function RythuBharosaStatusCheck2026() {
       </ul>
 
       <p>
-        Isliye, agar aapka <strong>rythu bharosa payment status</strong> "Processing" dikhata hai, toh iska matlab ye nahi ki paisa nahi aayega. Bas aapka phase abhi aana baaki hai.
+        Matlab "Processing" dikhne ka arth paisa atak jaana nahi hai. Aapke mandal ka phase aana baaki
+        hai, bas.
       </p>
 
-      <h2>Rythu Bharosa Status Check Kaise Karein? (Step-by-Step)</h2>
+      <h2>Apna Status Kaise Dekhein</h2>
 
       <p>
-        Apna status check karna bahut aasan hai. Telangana sarkar ne iske liye ek dedicated aur user-friendly portal banaya hai. Niche diye gaye steps ko follow karein:
+        Portal par do minute ka kaam hai. Aadhaar number saath rakhein — account number se bhi hota
+        hai, par Aadhaar zyada reliable nikalta hai:
       </p>
 
       <Fig
@@ -187,10 +200,11 @@ export default function RythuBharosaStatusCheck2026() {
         label="Check Status on Official Rythu Bharosa Portal"
       />
 
-      <h2>Rythu Bandhu List Kaise Dekhein? (Village Wise)</h2>
+      <h2>Gaon Ki List Mein Naam Dhoondhna</h2>
 
       <p>
-        Agar aapko lagta hai ki aapka naam list mein miss ho gaya hai, toh aap apne gaon ki <strong>rythu bandhu list</strong> check kar sakte hain. Ye list gaon ke notice board par bhi lagayi jaati hai, lekin online dekhna zyada aasan hai.
+        Lagta hai naam chhoot gaya hai — to gaon ki poori list dekh lein. Notice board par bhi lagti
+        hai, par portal se PDF nikaal lena aasan padta hai:
       </p>
 
       <ol>
@@ -201,10 +215,11 @@ export default function RythuBharosaStatusCheck2026() {
         <li>Ek PDF ya table generate hoga jisme aapke gaon ke sabhi beneficiaries ke naam, account numbers (masked), aur amount likha hoga. Apna naam dhundhein.</li>
       </ol>
 
-      <h2>Rythu Bandhu vs Rythu Bharosa: Kya Fark Hai?</h2>
+      <h2>Rythu Bandhu Se Rythu Bharosa — Kya Badla</h2>
 
       <p>
-        Bahut se log aaj bhi purane naam se is scheme ko jaante hain. <strong>Rythu bandhu vs rythu bharosa</strong> mein koi bada functional fark nahi hai, bas naam aur kuch administrative improvements kiye gaye hain.
+        Gaon mein aaj bhi purana naam hi chalta hai. Kaam karne ka tareeka wahi hai; naam badla hai aur
+        kuch administrative cheezein sudhri hain:
       </p>
 
       <SchemeTable>
@@ -240,10 +255,11 @@ export default function RythuBharosaStatusCheck2026() {
         </tr>
       </SchemeTable>
 
-      <h2>Payment Nahi Aayi? Common Problems aur Solutions</h2>
+      <h2>Phase Aa Gaya Par Paisa Nahi — Chaar Wajahein</h2>
 
       <p>
-        Agar aapne <strong>rythu bharosa status check</strong> kiya aur paisa nahi mila, toh niche diye gaye common reasons ko check karein:
+        Status dekh liya, phase bhi nikal gaya, phir bhi account khaali hai. Aise cases mein inme se
+        koi ek wajah nikalti hai:
       </p>
 
       <h3>1. Dharani Portal Mein Naam Update Nahi Hai</h3>
@@ -278,10 +294,11 @@ export default function RythuBharosaStatusCheck2026() {
         caption="Mutation, disputed tag ya naam ki galti — yeh sirf MRO office mein hi theek hota hai"
       />
 
-      <h2>Kya Aap Dusre State Se Hain?</h2>
+      <h2>Telangana Se Bahar Ke Kisan Yahan Dekhein</h2>
 
       <p>
-        Agar aap Telangana ke nivaasi nahi hain, toh ye scheme aap par laagu nahi hoti. Lekin humne India ke doosre mukhya rajyon ki kisan yojanaon par bhi detail se likha hai. Apne state ki jaankari ke liye in links par jaayein:
+        Per-acre wala hisaab Telangana ki khaas baat hai — baaki rajyon mein amount fixed hota hai,
+        chahe zameen kitni bhi ho. Apne rajya ka tareeka yahan hai:
       </p>
 
       <ul>
@@ -303,7 +320,7 @@ export default function RythuBharosaStatusCheck2026() {
       </ul>
 
       <p>
-        Sabhi state schemes ka ek saath overview dekhne ke liye:
+        Kis rajya mein kitna milta hai, ek nazar mein:
       </p>
 
       <ul>
