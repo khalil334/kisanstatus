@@ -79,7 +79,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
       </p>
 
       <p>
-        Is scheme ki khaas baat aage aati hai. Bataidar kisan bhi isme aate hain, jo PM Kisan mein
+        Is scheme ki khaas baat aage aati hai. Yahan bataidar (tenant farmer) ko bhi jagah mili hai, jo PM Kisan mein
         nahi aate. Pehle status dekhne ka tareeka aur eligibility, phir wahi fark.
       </p>
 
