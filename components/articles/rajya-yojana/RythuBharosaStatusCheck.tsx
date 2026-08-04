@@ -161,7 +161,7 @@ export default function RythuBharosaStatusCheck2026() {
       <Fig
         src="paddy-per-acre-farming.webp"
         alt="Telangana ka kisan dhaan ke khet mein pani chhod raha hai — Rythu Bharosa per acre ke hisaab se milta hai"
-        caption="Raqam per acre tay hoti hai — zyada zameen, zyada madad; isi liye har kisan ka amount alag hota hai"
+        caption="Zameen jitni zyada, madad utni badi — isi liye har kisan ke account mein alag raqam aati hai"
       />
 
       <h2>Padosi Ko Mil Gaya, Mujhe Nahi — Phase System Samjhein</h2>
