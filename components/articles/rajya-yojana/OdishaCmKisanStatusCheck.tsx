@@ -46,42 +46,9 @@ export default function OdishaCmKisanStatusCheck({
 }: {
   article: RajyaYojanaArticleMeta;
 }) {
-  const canonicalUrl = 'https://kisanstatus.com/rajya-yojana/odisha-cm-kisan-status-check-2026';
-
-  const articleSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: 'Odisha CM Kisan Status Check: KALIA Se CM Kisan Tak, Landless Benefit Aur List',
-    description: article.description,
-    image: `https://kisanstatus.com${IMG_BASE}/hero.webp`,
-    author: {
-      '@type': 'Organization',
-      name: 'KisanStatus Team',
-      url: 'https://kisanstatus.com/about',
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'KisanStatus.com',
-      url: 'https://kisanstatus.com',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://kisanstatus.com/logo.png',
-        width: 250,
-        height: 60,
-      },
-    },
-    datePublished: article.published,
-    dateModified: article.modified,
-    inLanguage: 'hi-IN',
-    mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
-  };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
 
       <article className="max-w-3xl mx-auto px-4 py-8 prose prose-lg dark:prose-invert prose-headings:font-bold prose-a:text-blue-600 dark:prose-a:text-blue-400">
         <h1 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">

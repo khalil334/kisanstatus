@@ -3,6 +3,7 @@ import Image from 'next/image';
 import ExternalLinkButton from '@/components/ui/ExternalLinkButton';
 import InfoBox from '@/components/ui/InfoBox';
 import SchemeTable from '@/components/ui/SchemeTable';
+import { FAQBlock } from '@/components/ArticleShared';
 
 const IMG_BASE = '/images/articles/rajya-yojna/rythu-bharosa-status-check-2026';
 
@@ -38,6 +39,29 @@ function Fig({
     </figure>
   );
 }
+
+const FAQS_DATA = [
+  {
+    q: 'Kya mujhe Rythu Bharosa ke liye alag se apply karna padega?',
+    a: 'Nahi. Dharani portal par aapka naam land owner ke roop mein registered hai toh aap automatically eligible hain. Sarkar khud data utha kar payment bhejti hai.',
+  },
+  {
+    q: 'Rythu Bharosa per acre amount kitna hai?',
+    a: 'Har acre ke liye saal mein ₹10,000 milte hain, jo do kiston (₹5,000 Kharif aur ₹5,000 Rabi) mein baante jaate hain.',
+  },
+  {
+    q: 'Mera status "Sanctioned" hai lekin paisa nahi aaya, kya karein?',
+    a: '"Sanctioned" ka matlab hai sarkar ne paisa manzoor kar liya, lekin bank tak dispatch nahi hua. 3-5 kaam ke din intezaar karein. Phir bhi na aaye toh bank se NPCI seeding check karwayein.',
+  },
+  {
+    q: 'Kya tenant farmers (bataidar) ko Rythu Bharosa milta hai?',
+    a: 'Filhal nahi. Ye scheme zameen ke malikon aur Podu (tribal) rights holders ke liye hai. Bataidar kisanon ke liye sarkar alag se kuch credit guarantee schemes chalati hai.',
+  },
+  {
+    q: 'Agar maine zameen bech di hai, toh kya mujhe paisa milega?',
+    a: 'Nahi. Payment us vyakti ko jaati hai jiska naam Dharani portal par current owner ke roop mein darj hai. Bechne ke baad aapka naam list se hata diya jaata hai.',
+  },
+];
 
 export default function RythuBharosaStatusCheck2026() {
   return (
@@ -290,32 +314,9 @@ export default function RythuBharosaStatusCheck2026() {
         </li>
       </ul>
 
-      <h2>FAQs — Rythu Bharosa</h2>
+      <h2>Rythu Bharosa — Aksar Poochhe Jaane Wale Sawaal</h2>
 
-      <h3>1. Kya mujhe Rythu Bharosa ke liye alag se apply karna padega?</h3>
-      <p>
-        Nahi. Agar aapka naam Dharani portal par land owner ke roop mein registered hai, toh aap automatically eligible hain. Sarkar khud se data utha kar payment bhejti hai.
-      </p>
-
-      <h3>2. Rythu Bharosa per acre amount kitna hai?</h3>
-      <p>
-        Har acre ke liye saal mein ₹10,000 milte hain, jo do kiston (₹5,000 Kharif aur ₹5,000 Rabi) mein baante jaate hain.
-      </p>
-
-      <h3>3. Mera status "Sanctioned" hai lekin paisa nahi aaya, kya karein?</h3>
-      <p>
-        "Sanctioned" ka matlab hai ki sarkar ne paisa manzoor kar liya hai, lekin abhi bank tak dispatch nahi hua hai. 3-5 kaam ke din intezaar karein. Agar fir bhi na aaye, toh apne bank se NPCI seeding check karwayein.
-      </p>
-
-      <h3>4. Kya tenant farmers (bataidar) ko Rythu Bharosa milta hai?</h3>
-      <p>
-        Nahi, filhal ye scheme sirf zameen ke malikon (land owners) aur Podu (tribal) rights holders ke liye hai. Tenant farmers ko iska direct benefit nahi milta, halanki sarkar unke liye alag se kuch credit guarantee schemes chala rahi hai.
-      </p>
-
-      <h3>5. Agar maine zameen bech di hai, toh kya mujhe paisa milega?</h3>
-      <p>
-        Nahi. Payment us vyakti ko milti hai jiska naam Dharani portal par current owner ke roop mein registered hai. Bechne ke baad aapka naam list se hata diya jayega.
-      </p>
+      <FAQBlock faqs={FAQS_DATA} caption="Rythu Bharosa FAQ 2026" />
 
       <h2>Related Articles</h2>
       <ul>
