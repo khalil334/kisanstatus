@@ -1,7 +1,43 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import ExternalLinkButton from '@/components/ui/ExternalLinkButton';
 import InfoBox from '@/components/ui/InfoBox';
 import SchemeTable from '@/components/ui/SchemeTable';
+
+const IMG_BASE = '/images/articles/rajya-yojna/mp-kisan-kalyan-yojana-kist-status';
+
+function Fig({
+  src,
+  alt,
+  caption,
+  width = 1200,
+  height = 800,
+  priority = false,
+}: {
+  src: string;
+  alt: string;
+  caption: string;
+  width?: number;
+  height?: number;
+  priority?: boolean;
+}) {
+  return (
+    <figure className="my-8 not-prose rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow-sm">
+      <Image
+        src={`${IMG_BASE}/${src}`}
+        alt={alt}
+        width={width}
+        height={height}
+        className="w-full h-auto object-cover"
+        sizes="(max-width: 768px) 100vw, 768px"
+        priority={priority}
+      />
+      <figcaption className="text-center text-xs text-gray-600 dark:text-gray-400 py-2 px-3 bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+        {caption}
+      </figcaption>
+    </figure>
+  );
+}
 
 export default function MPCMKisanKalyanYojanaKistStatus() {
   return (
@@ -20,6 +56,15 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
       <p>
         Is article mein hum bilkul clear aur verified jaankari denge. Hum guess nahi karenge, balki seedha <strong>saara portal kisan kalyan status</strong> aur official guidelines ke aadhar par batayenge ki aapko kitna paisa milna chahiye, eligibility kya hai, aur agar paisa nahi aaya toh aapko kya karna chahiye.
       </p>
+
+      <Fig
+        src="hero.webp"
+        alt="Madhya Pradesh ka kisan gehun ke khet mein mobile par CM Kisan Kalyan Yojana ki kist ka status dekh raha hai"
+        caption="MP CM Kisan Kalyan Yojana — PM Kisan ke saath state ki alag kist, SAARA portal par status milta hai"
+        width={1200}
+        height={675}
+        priority
+      />
 
       <ExternalLinkButton
         href="https://saara.mp.gov.in"
@@ -73,6 +118,12 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         Agar aap jaanna chahte hain ki aapka paisa kab aayega ya aapka naam <strong>kisan kalyan yojana beneficiary list mp</strong> mein hai ya nahi, toh niche diye gaye steps ko dhyan se follow karein. Ye process 100% online aur free hai.
       </p>
 
+      <Fig
+        src="saara-portal-status-check.webp"
+        alt="CSC kiosk par operator kisan ko SAARA portal par Kisan Kalyan Yojana ka status check karke dikha raha hai"
+        caption="SAARA portal mobile par bhi khulta hai — na khule to CSC ya kiosk par free check ho jaata hai"
+      />
+
       <ol>
         <li>Apne mobile ya computer ke browser mein <code>saara.mp.gov.in</code> kholein.</li>
         <li>Homepage par "Farmer Services" ya "Kisan Kalyan Yojana" ka option dhundhein.</li>
@@ -85,6 +136,12 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
       <ExternalLinkButton
         href="https://saara.mp.gov.in"
         label="Check Status on SAARA Portal"
+      />
+
+      <Fig
+        src="wheat-harvest-mp.webp"
+        alt="Madhya Pradesh mein gehun ki katai ke baad kisan tractor trolley mein fasal load kar rahe hain"
+        caption="Kist ka timing aksar rabi katai aur kharif buwai ke kharche ke aas-paas rakha jaata hai"
       />
 
       <h2>CM Kisan Kalyan Yojana Kist Kab Aayegi? (Expected Timeline)</h2>
@@ -131,6 +188,12 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         Kai baar <strong>mp kisan kalyan yojana status check</strong> karne par "Payment Successful" dikhata hai, lekin bank account mein paisa nahi hota. Ya phir status "Rejected" aa jata hai. Aise mein ye steps follow karein:
       </p>
 
+      <Fig
+        src="bank-npci-mapping.webp"
+        alt="Kisan bank branch mein passbook dikhakar DBT aur NPCI Aadhaar mapping check karwa raha hai"
+        caption="\"Payment Successful\" par paisa nahi aaya — sabse pehle bank mein NPCI mapping check karwao"
+      />
+
       <h3>1. Bank Account aur NPCI Mapping Check Karein</h3>
       <p>
         Sabse common reason ye hota hai ki bank account DBT (Direct Benefit Transfer) ke liye enabled nahi hai. Apne bank branch jaakar puchein ki "Kya mera account NPCI mapper mein Aadhaar ke saath linked hai?" Agar nahi, toh turant link karwayein.
@@ -145,6 +208,12 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
       <p>
         Agar PFMS mein "Payment Failed" dikh raha hai, toh iska matlab hai ki bank ne paisa wapas bhej diya hai (shayad account band hone ya naam mismatch ki wajah se). Aise mein apne block ke Agriculture Development Officer (ADO) ya Patwari se milkar apne bank details update karwayein.
       </p>
+
+      <Fig
+        src="janpad-panchayat-office.webp"
+        alt="Kisan Janpad Panchayat office ke counter par apni bank details aur record update karwane ke liye khade hain"
+        caption="Payment Failed dikhe to Janpad Panchayat ya Tehsil office mein ADO/Patwari se details update karwao"
+      />
 
       <h2>MP Kisan Kalyan Yojana Beneficiary List Kaise Dekhein?</h2>
 
