@@ -68,17 +68,24 @@ export default function NamoShetkariYojanaStatusCheck2026() {
     <article className="prose prose-lg max-w-4xl mx-auto">
 
       <InfoBox type="update" date="4 August 2026">
-        <strong>Latest Update:</strong> Namo Shetkari Yojana ka agla hapta (installment) release hone ki prakriya shuru ho chuki hai. Maharashtra sarkar ne clear kiya hai ki jo kisan PM Kisan mein eligible hain, unhe alag se apply karne ki zaroorat nahi hai. Agar aapka paisa nahi aaya hai, toh niche diye gaye steps se apna <strong>namo shetkari yojana status check</strong> karein.
+        <strong>Latest Update:</strong> Agle hapte ki release prakriya shuru ho chuki hai.
+        Maharashtra sarkar ne saaf kiya hai ki PM Kisan mein eligible kisanon ko alag se apply
+        nahi karna hai. Paisa nahi aaya hai to neeche diye tareeke se apna{' '}
+        <strong>namo shetkari yojana status check</strong> kar lein.
       </InfoBox>
 
       <h1>Namo Shetkari Yojana Status Check 2026: Hapta, Beneficiary List aur Registration Guide</h1>
 
       <p>
-        Maharashtra ke kisanon ke liye ek bahut badi raahat ki scheme hai <strong>नमो शेतकरी महासन्मान निधी</strong> (Namo Shetkari Mahasanman Nidhi). Is scheme ka mukhya uddeshya PM Kisan Samman Nidhi ke beneficiaries ko state ki taraf se extra financial support dena hai. Lekin kai kisanon ke dimaag mein ye sawal ghoom raha hai ki unka paisa kab aayega aur kaise pata karein ki unka naam list mein hai ya nahi.
+        Maharashtra mein PM Kisan ke beneficiaries ko state apni taraf se ek alag
+        hapta deti hai — <strong>नमो शेतकरी महासन्मान निधी</strong> (Namo Shetkari
+        Mahasanman Nidhi).
       </p>
 
       <p>
-        Is detailed guide mein hum step-by-step batayenge ki kaise aap apna <strong>namo shetkari yojana status check</strong> kar sakte hain, <strong>namo shetkari hapta kadhi milel</strong> ( installment kab milega), aur agar aapka naam list se kat gaya hai toh uski wajah kya ho sakti hai.
+        Do sawaal har baar wahi hote hain: paisa kab aayega, aur list mein naam hai ya
+        nahi. Neeche dono ka jawab hai — status dekhne ka tareeka, hapte ka waqt, aur naam
+        kat jaane ki asli wajahein.
       </p>
 
       <Fig
@@ -95,14 +102,16 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         label="Official Portal — Namo Shetkari Mahasanman Nidhi"
       />
 
-      <h2>Namo Shetkari Yojana Kya Hai aur Isme Kitna Paisa Milta Hai?</h2>
+      <h2>Scheme Kaam Kaise Karti Hai, Aur Kitna Paisa Banta Hai</h2>
 
       <p>
         Namo Shetkari Mahasanman Nidhi Maharashtra sarkar ki ek flagship scheme hai. Iska seedha connection PM Kisan Samman Nidhi se hai. Agar aap PM Kisan ke eligible beneficiary hain, toh Maharashtra sarkar aapko har saal extra ₹6,000 deti hai. Ye raashi do kiston (installments) mein ₹3,000-₹3,000 karke di jaati hai.
       </p>
 
       <p>
-        Iska matlab ye hua ki ek Maharashtra ke eligible kisan ko saal mein total ₹12,000 (₹6,000 Central + ₹6,000 State) milte hain. Ye scheme kisanon ko beej, khaad, aur kheti ke dusre zaroori kharchon ko poora karne mein madad karti hai.
+        Matlab Maharashtra ke ek eligible kisan ke haath saal bhar mein ₹12,000 aate hain —
+        ₹6,000 central se aur ₹6,000 state se. Ye raqam beej, khaad aur diesel jaise
+        kharchon ke waqt kaam aati hai.
       </p>
 
       <SchemeTable>
@@ -139,7 +148,13 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       </p>
 
       <p>
-        Agar aapka naam PM Kisan ki beneficiary list mein hai aur aap Maharashtra ke sthayi nivasi hain, toh aap automatically is scheme ke liye eligible ho jaate hain. Sarkar aapke bank account mein seedha paisa bhej deti hai. Lekin agar aapka PM Kisan status mein koi dikkat hai (jaise e-KYC pending ya bank account mismatch), toh state scheme ka paisa bhi ruk jayega.
+        PM Kisan ki beneficiary list mein naam hai aur domicile Maharashtra ka hai — bas
+        itne se aap eligible ho jaate hain. Paisa seedha bank account mein aata hai.
+      </p>
+
+      <p>
+        Iska doosra pehlu bhi samajh lein: PM Kisan hi is scheme ki jad hai. e-KYC pending
+        ho ya bank account mismatch ho, to state ka hapta bhi wahi ruk jaata hai.
       </p>
 
       <Fig
@@ -148,10 +163,12 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         caption="Vidarbha se Konkan tak — hapta buwai aur katai ke kharche ke waqt sabse zyada kaam aata hai"
       />
 
-      <h2>Namo Shetkari Hapta Kadhi Milel? (Expected Installment Dates)</h2>
+      <h2>Namo Shetkari Hapta Kadhi Milel — Kist Ka Waqt</h2>
 
       <p>
-        Kisanon ke liye sabse important sawal ye hai ki <strong>namo shetkari hapta kadhi milel</strong>. Maharashtra sarkar aam taur par PM Kisan ki kist aane ke kuch hafton baad apni kist release karti hai. 
+        <strong>Namo shetkari hapta kadhi milel</strong> — ye sawaal sabse zyada poochha jaata
+        hai. Maharashtra sarkar aam taur par PM Kisan ki kist ke kuch hafte baad apni kist
+        release karti hai.
       </p>
 
       <SchemeTable>
@@ -176,10 +193,10 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         <strong>Note:</strong> Kabhi-kabhi treasury se fund release hone mein thoda samay lag jata hai. Agar PM Kisan aa gaya hai lekin Namo Shetkari nahi aaya, toh 15-20 din ka intezaar karna normal hai.
       </InfoBox>
 
-      <h2>Namo Shetkari Yojana Status Check Kaise Karein? (Step-by-Step)</h2>
+      <h2>Apna Status Kaise Dekhein</h2>
 
       <p>
-        Apna <strong>namo shetkari yojana status check</strong> karna bahut aasan hai. Niche diye gaye steps ko follow karein:
+        Portal par status dekhne mein do minute lagte hain. Aadhaar number paas rakhein:
       </p>
 
       <Fig
@@ -202,10 +219,12 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         label="Check Status on Official NSMNY Portal"
       />
 
-      <h2>Namo Shetkari Beneficiary List Kaise Dekhein?</h2>
+      <h2>Beneficiary List Mein Naam Dhoondhna</h2>
 
       <p>
-        Agar aap jaanna chahte hain ki aapke gaon ya taluke mein kin-kin kisanon ko is scheme ka labh mil raha hai, toh aap <strong>namo shetkari beneficiary list</strong> bhi dekh sakte hain.
+        Poore gaon ya taluke ka hisaab dekhna ho — kis-kis ka naam bana hai — to{' '}
+        <strong>namo shetkari beneficiary list</strong> portal par khud download ki jaa sakti
+        hai:
       </p>
 
       <ol>
@@ -215,10 +234,11 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         <li>List mein apna naam ya apne parivar ke kisi sadasya ka naam search karein.</li>
       </ol>
 
-      <h2>PM Kisan Aaya, Namo Shetkari Nahi Aaya: Iski Wajah Kya Ho Sakti Hai?</h2>
+      <h2>PM Kisan Aa Gaya, Namo Shetkari Nahi Aaya — Ye Kyun Hota Hai</h2>
 
       <p>
-        Ye ek bahut common problem hai. Kai kisan report karte hain ki unhe <strong>pm kisan aaya namo shetkari nahi aaya</strong>. Iske kuch mukhya karan ho sakte hain:
+        Ye sabse aam shikayat hai — <strong>pm kisan aaya namo shetkari nahi aaya</strong>. Chaar
+        wajahein hain jinme se koi ek nikalti hai:
       </p>
 
       <Fig
@@ -253,7 +273,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         <li>Aapne PM Kisan se voluntarily surrender kar diya ho.</li>
       </ul>
 
-      <h2>Agar Payment Fail Ho Jaye Toh Kya Karein?</h2>
+      <h2>Payment Fail Ho Gayi — Ab Kya</h2>
 
       <ol>
         <li><strong>PFMS Portal Check Karein:</strong> <code>pfms.nic.in</code> par jaakar "Know Your Payments" mein apna bank account number aur IFSC code daalein. Yahan pata chalega ki paisa fail kyun hua.</li>
@@ -267,7 +287,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         caption="Bank theek ho phir bhi paisa na aaye to gram panchayat ya taluka krishi office se re-verify karwao"
       />
 
-      <h2>Eligibility: Kaun Le Sakta Hai Ye Labh?</h2>
+      <h2>Eligible Kaun Hai</h2>
 
       <p>
         Is scheme ka labh uthane ke liye aapko niche di gayi sharton ko poora karna hoga:
@@ -280,10 +300,11 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         <li><strong>e-KYC Complete:</strong> Aadhaar seeding aur mobile linking complete honi chahiye.</li>
       </ul>
 
-      <h2>Kya Aap Dusre State Se Hain?</h2>
+      <h2>Dusre Rajya Se Hain?</h2>
 
       <p>
-        Agar aap Maharashtra ke nivaasi nahi hain, toh ye scheme aap par laagu nahi hoti. Lekin chinta na karein, humne India ke doosre mukhya rajyon ki kisan yojanaon par bhi detail se likha hai. Apne state ki jaankari ke liye in links par jaayein:
+        Maharashtra ke bahar rehte hain to ye scheme aap par laagu nahi hoti — lekin aapke
+        rajya ka apna intezaam ho sakta hai. In rajyon ka hisaab humne alag likha hai:
       </p>
 
       <ul>
