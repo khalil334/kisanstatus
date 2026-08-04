@@ -4,6 +4,7 @@ import type { RajyaYojanaArticleMeta } from '@/lib/rajya-yojana-data';
 import ExternalLinkButton from '@/components/ui/ExternalLinkButton';
 import InfoBox from '@/components/ui/InfoBox';
 import SchemeTable from '@/components/ui/SchemeTable';
+import { FAQBlock } from '@/components/ArticleShared';
 import KrishakBandhuChecker from '@/components/articles/rajya-yojana/tools/KrishakBandhuChecker';
 
 const IMG_BASE = '/images/articles/rajya-yojna/krishak-bandhu-status-check-2026';
@@ -40,6 +41,37 @@ function Fig({
     </figure>
   );
 }
+
+const FAQS_DATA = [
+  {
+    q: 'Krishak Bandhu ka status Voter ID se kyun check karna padta hai?',
+    a: 'Baaki state schemes Aadhaar ko primary key banati hain, lekin Krishak Bandhu ke record mein pehchaan ka mukhya zariya Voter ID (EPIC number) hai. Portal par Aadhaar, mobile aur acknowledgement ID ke option bhi rehte hain, magar EPIC search sabse bharosemand nateeja deta hai. Number bilkul card jaisa likhein — teen angrezi akshar phir saat ank, beech mein space nahi.',
+  },
+  {
+    q: '"Account valid" likha hai, phir bhi paisa nahi aaya. Kya karun?',
+    a: 'Account valid ka matlab paisa aa gaya nahi hai — iska matlab sirf ye hai ki bank ne aapka account number aur naam sahi maan liya hai. Agla qadam treasury ke haath mein hai. Yahan bank ke chakkar lagane ka fayda nahi; release ke baad ek hafta sabr karein aur passbook update karwaate rahein.',
+  },
+  {
+    q: 'Padosi ko paisa mil gaya, mujhe nahi — kya mera naam kat gaya?',
+    a: 'Zaroori nahi. PM Kisan central DBT switch se chalta hai, is liye wahan paisa lagbhag ek saath girta hai. Krishak Bandhu ka paisa district treasury ke raste jaata hai — state release ka aadesh deta hai aur har zile ki treasury apni raftaar se file processe karti hai. Ek zile mein aaj, doosre mein teen din baad — ye dhaancha hai, kharaabi nahi.',
+  },
+  {
+    q: 'Ek acre se kam zameen hai, kya kuch milega?',
+    a: 'Haan. Hisaab per-acre chalta hai lekin neeche ek floor aur upar ek ceiling dono lage hain. Ek acre se kam par grant pro-rata banta hai magar nyoontam raqam se neeche nahi jaata, aur bahut zyada zameen par bhi upar ki limit paar nahi hota. Is liye do padosi kisanon ki raqam alag ho sakti hai aur dono hi sahi ho sakte hain.',
+  },
+  {
+    q: 'Bhagchasi (sharecropper) hoon, meri zameen nahi hai — main eligible hoon?',
+    a: 'Bhagchasi is scheme mein aate hain, bas unka record panchayat/department ke paas recorded hona chahiye. Aur jinke paas apni zameen bilkul nahi hai, unke liye landless khetmajur wala alag track hai — uska enrolment camp ke zariye hota hai aur portal par section bhi alag rehta hai.',
+  },
+  {
+    q: 'Death benefit kis-kis ko milta hai?',
+    a: 'Death benefit ka dhaancha income support se ulta hai: usmein zameen ka area maayne nahi rakhta, lekin registered kisan ki umar mrityu ke waqt 18 se 60 ke beech honi chahiye. Grant ek hi baar legal heir ya nominee ko milta hai. Claim ki samay-seema hoti hai, is liye kagaz jamaa hote hi block agriculture office mein form de dein — ideal kagaz ka intezaar na karein.',
+  },
+  {
+    q: 'Naam list mein hai lekin paisa nahi aaya — kahan jaana chahiye?',
+    a: 'Ye ek chhota sa test hai. Naam list mein hai to dikkat payment side par hai (bank account dormant, NPCI mapping, ya treasury queue) — bank branch dekhein. Naam hi nahi hai to dikkat eligibility ya land record side par hai — block agriculture office ya BL&LRO office jaayein. Rejected likha ho to kaaran sirf block office ki file par remark mein dikhta hai.',
+  },
+];
 
 export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYojanaArticleMeta }) {
 
@@ -252,7 +284,7 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
 
         <ol>
           <li>Portal ke reports ya beneficiary list wale section mein jaayein.</li>
-          <li>Apna zila, block aur gram panchayat chunein.</li>
+          <li>Zila, block aur gram panchayat — teeno dropdown apne hisaab se set karein.</li>
           <li>Financial year aur season (Kharif ya Rabi) select karein.</li>
           <li>
             List generate karein — kai bar ye PDF ke roop mein aati hai. Naam ke saath area ka
@@ -390,8 +422,9 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
             yahi sabse kaam ka kagaz hota hai.
           </li>
           <li>
-            Bank aur Aadhaar dono mein ek hi mobile number rakhein, warna SMS kabhi kisi ek par
-            hi jaayega.
+            Bank ke record aur Voter ID/Aadhaar — dono jagah ek hi chaalu mobile number rakhein,
+            warna credit ka SMS kisi purane number par chala jaayega aur aapko pata hi nahi
+            chalega.
           </li>
           <li>
             Zameen ka koi bhi lena-den hone ke turant baad mutation karwaayein, kist ke season
@@ -400,6 +433,61 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
           <li>
             Season shuru hone se pehle ek baar khaali passbook entry karwa lein, taaki account
             dormant na pade.
+          </li>
+        </ul>
+
+        <h2>Bengal Se Bahar Ke Kisan Yahan Dekhein</h2>
+
+        <p>
+          West Bengal ka nivasi nahi hain to Krishak Bandhu aap par laagu nahi hoti — aur Voter
+          ID wali pehchaan ka tareeka bhi kisi doosre rajya mein nahi milta. Apne rajya ka
+          hisaab yahan padhein:
+        </p>
+
+        <ul>
+          <li>
+            <Link href="/rajya-yojana/odisha-cm-kisan-status-check-2026">
+              Odisha CM Kisan — KALIA ka naya roop aur bhoomiheen parivaar ka benefit
+            </Link>
+          </li>
+          <li>
+            <Link href="/rajya-yojana/annadata-sukhibhava-status-check-2026">
+              Andhra Pradesh Annadata Sukhibhava — bataidar kisan bhi cover hote hain
+            </Link>
+          </li>
+          <li>
+            <Link href="/rajya-yojana/mp-kisan-kalyan-yojana-kist-status">
+              Madhya Pradesh CM Kisan Kalyan Yojana — kist aur SAARA portal status
+            </Link>
+          </li>
+          <li>
+            <Link href="/rajya-yojana/state-kisan-yojana-list-all-states-2026">
+              Sabhi rajyon ka amount aur portal ek saath — comparison table
+            </Link>
+          </li>
+        </ul>
+
+        <h2>Krishak Bandhu — Aksar Poochhe Jaane Wale Sawaal</h2>
+
+        <FAQBlock faqs={FAQS_DATA} caption="Krishak Bandhu status, slab aur death benefit FAQ 2026" />
+
+        <h2>Related Articles</h2>
+
+        <ul>
+          <li>
+            <Link href="/articles/PmKisanCorrectionForm2026">
+              PM Kisan Correction Form 2026 — naam aur spelling mismatch theek karein
+            </Link>
+          </li>
+          <li>
+            <Link href="/articles/PmKisanMasterGuide2026">
+              PM Kisan Master Guide 2026 — registration se payment tak poora process
+            </Link>
+          </li>
+          <li>
+            <Link href="/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega">
+              Pati-patni dono ko PM Kisan milega ya nahi? Family rule
+            </Link>
           </li>
         </ul>
 
