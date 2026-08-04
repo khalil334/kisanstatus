@@ -210,10 +210,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             Sach bataun toh official date abhi tak announce nahi hui hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Par pichhle 2 saal ka pattern dekh ke clear picture mil rahi hai. Government har 4 mahine mein kist release karti hai. 23vi kist 20 June 2026 ko aayi thi. Is hisaab se <strong>October 2026 mein 24vi kist aane ki poori umeed hai.</strong>
-          </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Maine pichhle 6 mahine se PM Kisan ke updates track kiye hain — koi delay nahi hua hai ab tak. Toh tension mat lo, October mein aa jayegi.
+            Pichhla pattern itna hai: kist aam taur par 4 mahine ke antar par aati hai, aur 23vi kist 20 June 2026 ko aayi thi. Is hisaab se agli kist October 2026 ke aas-paas pad sakti hai, lekin <strong>⚠️ Proposed — ye sirf pattern se nikala anumaan hai, official notification nahi.</strong> Jab tak pmkisan.gov.in par notification na aaye, koi tareekh pakki na maanein.
           </p>
 
           <div className="bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 rounded-xl p-4 mb-4">
@@ -380,7 +377,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             Seedhi baat — bina eKYC ke koi kist nahi milegi. Period.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Maine khud 50+ kisanon se baat ki hai — sabko yahi problem aati hai. Agar abhi tak nahi ki toh October se pehle complete kar lo. Teen tarike hain:
+            Ye problem sabse aam hai. Agar abhi tak eKYC nahi ki to agli kist se pehle complete kar lein. Teen tarike hain:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
@@ -407,7 +404,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
         <section className="mb-8">
           <SH>Common Problems + Solutions</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Ye problems maine khud dekhi hain pichhle 2 saal mein. Har problem ka solution hai — tension mat lo.
+            Ye sabse aam problems hain, aur har ek ka seedha solution hai.
           </p>
           <div className="space-y-3">
             {[
@@ -465,9 +462,9 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">October Se Pehle Yeh Karo</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Agli Kist Se Pehle Yeh Karo</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            24vi kist October mein expected hai. Tab tak yeh 3 cheezein pakki kar lo — warna kist ruk jayegi:
+            Kist ki date announce ho ya na ho, yeh 3 cheezein pehle se pakki kar lein — inme kami rehne par kist rukti hai:
           </p>
           <ol className="space-y-2 text-sm text-green-800 dark:text-green-300 list-decimal list-inside">
             <li>eKYC complete karo (agar pending hai)</li>

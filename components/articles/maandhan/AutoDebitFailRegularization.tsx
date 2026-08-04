@@ -12,7 +12,7 @@ const MODIFIED = '2026-07-29T08:00:00+05:30';
 const FAQS_DATA = [
   {
     q: "Auto debit fail hone par sabse pehle kya karna chahiye?",
-    a: "Sabse pehle toh deep breath lo — ye koi duniya khatam hone wali baat nahi hai, roz hazaron logo ke saath hota hai. Bas account mein paisa daalo aur UPI ya net banking se khud payment kar do. Baad mein bank ko bata dena taaki agli baar mandate se hi chal jaye.",
+    a: "Ye aam dikkat hai, roz hazaron logo ke saath hota hai. Bas account mein paisa daalo aur UPI ya net banking se khud payment kar do. Baad mein bank ko bata dena taaki agli baar mandate se hi chal jaye.",
   },
   {
     q: "Kya EMI bounce hone se CIBIL score par bura asar padta hai?",
