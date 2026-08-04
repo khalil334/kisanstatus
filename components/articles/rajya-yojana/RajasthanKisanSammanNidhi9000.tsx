@@ -2,7 +2,43 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
+
+const IMG_BASE = '/images/articles/rajya-yojna/rajasthan-kisan-samman-nidhi-9000';
+
+function Fig({
+  src,
+  alt,
+  caption,
+  width = 1200,
+  height = 800,
+  priority = false,
+}: {
+  src: string;
+  alt: string;
+  caption: string;
+  width?: number;
+  height?: number;
+  priority?: boolean;
+}) {
+  return (
+    <figure className="my-8 not-prose rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow-sm">
+      <Image
+        src={`${IMG_BASE}/${src}`}
+        alt={alt}
+        width={width}
+        height={height}
+        className="w-full h-auto object-cover"
+        sizes="(max-width: 768px) 100vw, 768px"
+        priority={priority}
+      />
+      <figcaption className="text-center text-xs text-gray-600 dark:text-gray-400 py-2 px-3 bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+        {caption}
+      </figcaption>
+    </figure>
+  );
+}
 
 function FaqItem({ question, answer }: { question: string; answer: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,7 +81,7 @@ export default function RajasthanKisanSammanNidhi9000() {
     '@type': 'Article',
     headline: 'Rajasthan Kisan Samman Nidhi: ₹9,000 Kaise Milte Hain aur ₹12,000 Wale Prastaav Ka Sach',
     description: 'Rajasthan Mukhyamantri Kisan Samman Nidhi ki eligibility, 6vi kist ka status, aur ₹12,000 ki badhotri abhi tak confirm hui hai ya nahi — sab detail mein.',
-    image: 'https://kisanstatus.com/og-image.webp',
+    image: `https://kisanstatus.com${IMG_BASE}/hero.webp`,
     author: { '@type': 'Organization', name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' },
     publisher: {
       '@type': 'Organization',
@@ -104,6 +140,15 @@ export default function RajasthanKisanSammanNidhi9000() {
         <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
           Rajasthan Kisan Samman Nidhi: ₹9,000 Kaise Milte Hain aur ₹12,000 Wale Prastaav Ka Sach
         </h1>
+
+        <Fig
+          src="hero.webp"
+          alt="Rajasthan ka kisan apne khet mein mobile par Kisan Samman Nidhi ka status dekh raha hai"
+          caption="Rajasthan Kisan Samman Nidhi — PM Kisan ke ₹6,000 ke saath state ka ₹3,000, total ₹9,000 saalana"
+          width={1200}
+          height={675}
+          priority
+        />
 
         <p>
           PM Kisan ke upar Rajasthan sarkar apna alag se ₹3,000 saalana deti hai. Jod ke ₹9,000 banta hai. Itna toh clear hai.
@@ -216,6 +261,12 @@ export default function RajasthanKisanSammanNidhi9000() {
 
         <p>Do tareeke hain, dono free hain, dono online hote hain.</p>
 
+        <Fig
+          src="status-check-phone.webp"
+          alt="Kisan mobile par Jan Soochna portal kholkar Kisan Samman Nidhi ka payment status check kar raha hai"
+          caption="Status check bilkul free hai — Jan Soochna portal mobile par bhi khul jaata hai"
+        />
+
         <h3>Jan Soochna Portal</h3>
 
         <ol>
@@ -248,6 +299,12 @@ export default function RajasthanKisanSammanNidhi9000() {
           Kuch nahi mila to PFMS portal par dispatch status dekho. Wahan "Successful" dikhe aur bank mein na aaya ho, to branch jaakar NPCI mapping check karwao — zyadatar yahi wajah nikalti hai.
         </p>
 
+        <Fig
+          src="bank-visit.webp"
+          alt="Kisan bank branch mein passbook lekar DBT payment aur NPCI mapping check karwa raha hai"
+          caption="Portal par \"Successful\" dikhe par paisa na aaya ho — bank branch mein NPCI mapping check karwao"
+        />
+
         <p>
           Fir bhi kuch samajh na aaye to helpline try karo — Toll Free <strong>1064</strong>, WhatsApp <strong>9413502834</strong>. (Ye numbers publicly listed hain; call se pehle ek baar portal par bhi confirm kar lo, kyunki helpline numbers samay samay par badalte rehte hain.)
         </p>
@@ -255,6 +312,12 @@ export default function RajasthanKisanSammanNidhi9000() {
         <p>
           Aur agar online sab sahi dikh raha hai fir bhi paisa nahi aa raha — seedhe Patwari ya Tehsildar ke paas chale jao. Kai baar land record ka koi purana jhanjhat hota hai jo sirf ground level par hi sulajhta hai.
         </p>
+
+        <Fig
+          src="patwari-office.webp"
+          alt="Do kisan gaon ke patwari office mein land record aur jamabandi ki entry verify karwa rahe hain"
+          caption="Land record ka jhanjhat sirf Patwari ya Tehsil office mein hi theek hota hai"
+        />
 
         <h2>PM Kisan vs Rajasthan Wali Scheme — Kya Fark Hai</h2>
 
@@ -319,6 +382,12 @@ export default function RajasthanKisanSammanNidhi9000() {
           <li>Land Records — Jamabandi ya Khatauni</li>
           <li>Mobile Number, Aadhaar se linked (OTP ke liye)</li>
         </ul>
+
+        <Fig
+          src="documents-checklist.webp"
+          alt="Rajasthan Kisan Samman Nidhi ke liye zaroori documents — bank passbook, Aadhaar, Jan Aadhaar aur land record"
+          caption="Status check ya correction ke waqt yeh kagaz saath rakho — passbook, Aadhaar, Jan Aadhaar aur jamabandi"
+        />
 
         <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
