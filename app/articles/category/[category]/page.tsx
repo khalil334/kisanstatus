@@ -65,8 +65,13 @@ export async function generateMetadata({
   const categoryData = CATEGORY_DATA[category as CategorySlug];
   const categoryInfo = CATEGORIES[category as CategorySlug];
 
+  // Unknown category: the body calls notFound(), but this metadata overrides
+  // app/not-found.tsx's noindex, leaving the soft-404 shell indexable.
   if (!categoryData || !categoryInfo) {
-    return { title: 'Category Not Found' };
+    return {
+      title: 'Category Not Found',
+      robots: { index: false, follow: true },
+    };
   }
 
   const url = `${SITE_URL}/articles/category/${category}`;
