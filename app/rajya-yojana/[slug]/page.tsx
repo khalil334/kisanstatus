@@ -27,6 +27,7 @@ import KrishakBandhuStatusCheck from '@/components/articles/rajya-yojana/Krishak
 import OdishaCmKisanStatusCheck from '@/components/articles/rajya-yojana/OdishaCmKisanStatusCheck';
 import PmKisanPatiPatniRule from '@/components/articles/rajya-yojana/PmKisanPatiPatniRule';
 import StateKisanYojanaHub from '@/components/articles/rajya-yojana/StateKisanYojanaHub';
+import KrishakUnnatiYojanaStatusCheck from '@/components/articles/rajya-yojana/KrishakUnnatiYojanaStatusCheck';
 
 /**
  * Register a body component here the same moment you set its `status: 'live'`
@@ -50,6 +51,7 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: RajyaYojanaArtic
   OdishaCmKisanStatusCheck,
   PmKisanPatiPatniRule,
   StateKisanYojanaHub,
+  KrishakUnnatiYojanaStatusCheck,
 };
 
 /**

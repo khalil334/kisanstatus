@@ -258,6 +258,29 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
     ogImage: '/images/articles/rajya-yojna/state-kisan-yojana-list-all-states-2026/hero.webp',
     relatedPaths: ['/articles/PmKisanMasterGuide2026'],
   },
+  {
+    slug: 'krishak-unnati-yojana-status-check-2026',
+    mainKeyword: 'krishak unnati yojana status check',
+    secondaryKeywords: [
+      'krishak unnati yojana payment status',
+      'krishak unnati yojana antar rashi',
+      'cg dhan bonus 3100 status',
+      'krishak unnati yojana 15000 per acre',
+    ],
+    title: 'Krishak Unnati Yojana Status Check 2026',
+    description:
+      'Chhattisgarh Krishak Unnati Yojana ki antar rashi ka status, ₹3,100 prati quintal ka hisaab, ekmusht payment aur Kharif 2026 se naya ₹15,000 prati acre component — poori jaankari.',
+    ogTitle: 'Krishak Unnati Yojana — Antar Rashi Aur Naya ₹15,000 Component',
+    component: 'KrishakUnnatiYojanaStatusCheck',
+    state: 'Chhattisgarh',
+    officialPortal: 'https://khadya.cg.nic.in',
+    status: 'live',
+    published: '2026-08-04T21:30:00+05:30',
+    modified: '2026-08-04T21:30:00+05:30',
+    readTime: '11 min read',
+    ogImage: '/images/articles/rajya-yojna/krishak-unnati-yojana-status-check-2026/hero.webp',
+    relatedPaths: ['/articles/PmKisanMasterGuide2026', '/articles/PmKisan24viKist2026'],
+  },
 ];
 
 /** Only these enter sitemap / RSS / llms.txt / listing. */
