@@ -223,7 +223,15 @@ export async function generateMetadata({
   }
   
   const article = ARTICLES_MAP[slug];
-  if (!article) return { title: 'Article Not Found' };
+  // Unknown slug: the page body calls notFound(), but this metadata still wins over
+  // app/not-found.tsx's own metadata. Without an explicit noindex the soft-404 shell is
+  // served as indexable (Ahrefs flags it as "H1 tag missing or empty" + "Noindex follow page").
+  if (!article) {
+    return {
+      title: 'Article Not Found',
+      robots: { index: false, follow: true },
+    };
+  }
 
   const url = `${SITE_URL}/articles/${slug}`;
   const ogImage = article.ogImage ? `${SITE_URL}${article.ogImage}` : DEFAULT_OG_IMAGE;
