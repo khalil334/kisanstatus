@@ -43,7 +43,7 @@ function Fig({
 const FAQS_DATA = [
   {
     q: 'Kya mujhe Namo Shetkari ke liye alag se registration karna padega?',
-    a: 'Nahi. Agar aap PM Kisan mein registered hain aur Maharashtra ke nivasi hain, toh aap automatically eligible hain. Alag se koi registration ya form bharne ki zaroorat nahi hai.',
+    a: 'Is scheme ka apna koi application form hi nahi hai — beneficiary list PM Kisan ke Maharashtra wale database se uthai jaati hai. Is liye aapka kaam do jagah hai: PM Kisan mein record chaalu rakhein aur 7/12 Utara mein apna naam durust rakhein. Portal par "registration" ka wada karne wali site private hai, official nahi.',
   },
   {
     q: 'Namo Shetkari hapta kadhi milel?',
@@ -54,12 +54,12 @@ const FAQS_DATA = [
     a: 'Pehle check karein ki aap PM Kisan mein eligible hain ya nahi. Agar PM Kisan mein hain, toh apne taluka krishi adhikari (TAL) se sampark karein aur apna 7/12 Utara aur Aadhaar details verify karwayein.',
   },
   {
-    q: 'Kya main apna status mobile se check kar sakta hoon?',
-    a: 'Haan. Official portal nsmny.mahait.org mobile par khulta hai. Registered mobile number par aaye OTP ke zariye kabhi bhi status dekh sakte hain.',
+    q: 'nsmny.mahait.org phone par nahi khul raha — doosra raasta kya hai?',
+    a: 'Hapte ke release ke dinon mein portal par load bahut badh jaata hai, is liye page atakna aam baat hai. Do raaste hain: kuch ghante baad raat mein try karein, ya CSC/Mahaonline kendra par free check karwa lein. Talathi office mein bhi gaon ki list rehti hai, aur kist ke aas-paas wahi list gram panchayat ke notice board par lag jaati hai.',
   },
   {
-    q: 'Agar main Maharashtra se bahar shift ho gaya hoon, toh kya mujhe paisa milega?',
-    a: 'Nahi. Domicile Maharashtra ka hona zaroori shart hai. Shift hone ke baad us din se eligibility khatam maani jaati hai.',
+    q: 'Maharashtra chhod diya hai, lekin zameen wahin hai — hapta aayega?',
+    a: 'Namo Shetkari Maharashtra ke apne budget se milta hai aur iske liye rehna Maharashtra mein hona zaroori hai, is liye rajya chhodne par ye hapta ruk jaata hai — chahe khet wahin ho. PM Kisan par iska koi asar nahi hota; wo central scheme hai aur naye rajya mein bhi chalti rehti hai.',
   },
   {
     q: 'Zameen joint naam par hai (bhai-behen ya pita ke saath), kisko paisa milega?',
@@ -249,8 +249,8 @@ export default function NamoShetkariYojanaStatusCheck2026() {
 
       <ol>
         <li>Portal ke "Reports" section mein jaayein.</li>
-        <li>Apna Zila (District), Taluka, aur Gram Panchayat select karein.</li>
-        <li>"Search" ya "Download PDF" par click karein.</li>
+        <li>Zila chunein, phir Taluka, phir apna gaon — teeno ek ke baad ek load hote hain.</li>
+        <li>Report kholein; ye PDF ke roop mein download hoti hai.</li>
         <li>PDF mein naam Marathi mein bhi ho sakte hain. Apna naam na mile toh pita ke naam ya masked Aadhaar digits se milayen.</li>
       </ol>
 
@@ -339,10 +339,11 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       </p>
 
       <ul>
-        <li><strong>Maharashtra Ka Nivasi:</strong> Applicant ka permanent residence Maharashtra mein hona chahiye.</li>
-        <li><strong>PM Kisan Mein Active:</strong> Central scheme mein aapka record chalu halat mein hona chahiye, hold ya rejected nahi.</li>
-        <li><strong>Landholding:</strong> Aapke paas cultivable land honi chahiye (7/12 Utara mein naam hona chahiye).</li>
-        <li><strong>e-KYC Complete:</strong> Aadhaar seeding aur mobile linking complete honi chahiye.</li>
+        <li><strong>Rehna Maharashtra mein:</strong> Permanent residence Maharashtra ka ho — sirf khet Maharashtra mein hona kaafi nahi hai.</li>
+        <li><strong>PM Kisan ki file chaalu:</strong> Central record hold ya rejected na ho; wahan atakte hi state ka hapta bhi ruk jaata hai.</li>
+        <li><strong>7/12 Utara mein naam:</strong> Cultivable land ka record aapke naam par ho, aur zameen ka type "sheti" darj ho.</li>
+        <li><strong>Naam ki spelling milti ho:</strong> Aadhaar, bank aur 7/12 — teeno mein ek hi spelling. Marathi/English ka farak bhi verification atka deta hai.</li>
+        <li><strong>e-KYC poori:</strong> Aadhaar seeding aur mobile linking dono complete hon.</li>
       </ul>
 
       <h2>7/12 Utara — Maharashtra Ka Sabse Zaroori Kagaz</h2>
@@ -420,7 +421,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       </ul>
 
       <InfoBox type="tip">
-        <strong>Surakshit Rahein:</strong> Koi bhi sarkari yojana registration ya status theek karne ke naam par aapse paise nahi maangti. Namo Shetkari Yojana 100% free hai. Agar koi aapse "fees" maange, toh wo fraud hai. Turant 1800-233-0880 (Maharashtra Kisan Call Center) par shikayat darj karein.
+        <strong>Surakshit Rahein:</strong> Is scheme mein bharne ke liye koi form hi nahi hai, is liye "registration karwa dunga" ya "hapta jaldi nikalwa dunga" kehne wala har aadmi jhooth bol raha hai. Status dekhna, e-KYC aur 7/12 correction — sab sarkari raste se free hote hain. Aisi demand par 1800-233-0880 (Maharashtra Kisan Call Center) par shikayat darj karwaayein.
       </InfoBox>
 
     </article>
