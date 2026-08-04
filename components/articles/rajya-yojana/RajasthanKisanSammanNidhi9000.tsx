@@ -302,7 +302,7 @@ export default function RajasthanKisanSammanNidhi9000() {
         <Fig
           src="bank-visit.webp"
           alt="Kisan bank branch mein passbook lekar DBT payment aur NPCI mapping check karwa raha hai"
-          caption="Portal par \"Successful\" dikhe par paisa na aaya ho — bank branch mein NPCI mapping check karwao"
+          caption={'Portal par "Successful" dikhe par paisa na aaya ho — bank branch mein NPCI mapping check karwao'}
         />
 
         <p>
