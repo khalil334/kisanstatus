@@ -55,7 +55,7 @@ const FAQS_DATA = [
   },
   {
     q: 'nsmny.mahait.org phone par nahi khul raha — doosra raasta kya hai?',
-    a: 'Hapte ke release ke dinon mein portal par load bahut badh jaata hai, is liye page atakna aam baat hai. Do raaste hain: kuch ghante baad raat mein try karein, ya CSC/Mahaonline kendra par free check karwa lein. Talathi office mein bhi gaon ki list rehti hai, aur kist ke aas-paas wahi list gram panchayat ke notice board par lag jaati hai.',
+    a: 'Hapte ke release ke dinon mein portal par load bahut badh jaata hai, is liye page atakna aam baat hai. Do raaste hain: kuch ghante baad raat mein try karein, ya CSC/Mahaonline kendra par free check karwa lein. Offline dekhna ho to talathi office chale jaayein — gaon ki poori suchi wahan har waqt maujood rehti hai.',
   },
   {
     q: 'Maharashtra chhod diya hai, lekin zameen wahin hai — hapta aayega?',
