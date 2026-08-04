@@ -255,7 +255,12 @@ function ArticlesContent({ articles }: { articles: readonly CombinedArticleMeta[
       new Date(b.publishedTime || b.published || 0).getTime() - new Date(a.publishedTime || a.published || 0).getTime()
     );
 
-    const latest = sorted.slice(0, NEW_ARTICLES_LIMIT);
+    // The "Naye aur Latest Updates" section only renders on the unfiltered view
+    // (category === 'all' and no search). Only carve the top-N out of `remaining`
+    // in that case — otherwise the newest articles silently disappear from
+    // category/search views.
+    const showLatestSection = activeCategory === 'all' && !searchQuery.trim();
+    const latest = showLatestSection ? sorted.slice(0, NEW_ARTICLES_LIMIT) : [];
     const latestSlugs = new Set(latest.map(a => a.slug));
     const remaining = sorted.filter(a => !latestSlugs.has(a.slug));
 
