@@ -415,7 +415,7 @@ export default function RythuBharosaStatusCheck2026() {
           </Link>
         </li>
         <li>
-          <Link href="/articles/pm-kisan-pati-patni-dono-ko-milega">
+          <Link href="/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega">
             Ek parivar mein pati-patni dono ko PM Kisan milta hai ya nahi — family rule
           </Link>
         </li>
