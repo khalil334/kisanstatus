@@ -45,7 +45,7 @@ function Fig({
 const FAQS_DATA = [
   {
     q: 'KALIA band ho gayi hai, kya iska matlab mera paisa bhi band ho gaya?',
-    a: 'Nahi. KALIA ki jagah CM Kisan aayi hai, lekin scheme ka core kaam wahi hai. Purana enrolment aap ka claim khatam nahi karta. Sirf do cheezein badli hain: status ab cmkisan.odisha.gov.in par dekhna hoga, aur beneficiary base dobara verify hua hai — is liye kuch purane record hate aur kuch naye jude.',
+    a: 'Nahi. KALIA ki jagah CM Kisan aayi hai, lekin scheme ka core kaam wahi hai. Aapka purana KALIA registration bekar nahi hua. Sirf do cheezein badli hain: status ab cmkisan.odisha.gov.in par dekhna hoga, aur beneficiary base dobara verify hua hai — is liye kuch purane record hate aur kuch naye jude.',
   },
   {
     q: 'Mere paas zameen nahi hai, phir bhi CM Kisan mil sakta hai?',
@@ -57,7 +57,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Status mein naam hai lekin paisa nahi aaya — sabse pehle kya check karun?',
-    a: 'Status page ki teen lines alag-alag padhein: application stage, bank account mapping aur e-KYC. Sabse aam wajah pending e-KYC hoti hai, uske baad Aadhaar ka NPCI mapper se link na hona. Bank mein Aadhaar ki photocopy dena kaafi nahi — branch se saaf poochein ki NPCI seeding hui hai ya nahi.',
+    a: 'Result screen teen alag baatein batati hai — aavedan kahan tak pahuncha, bank ki mapping, aur e-KYC. Atakne ki sabse badi wajah pending e-KYC nikalti hai; doosre number par Aadhaar ka NPCI mapper se link na hona. Bank mein Aadhaar ki photocopy dena kaafi nahi — branch se saaf poochein ki NPCI seeding hui hai ya nahi.',
   },
   {
     q: 'Beneficiary list mein apna record kahan dhoondhna chahiye?',
@@ -259,6 +259,12 @@ export default function OdishaCmKisanStatusCheck({
           <li>Category chunein — cultivator ya landless. Ye do suchi juda hoti hain.</li>
           <li>Apna naam aur category dono verify karein.</li>
         </ol>
+
+        <Fig
+          src="panchayat-beneficiary-list.webp"
+          alt="Gram panchayat notice board par lagi beneficiary list dekhte hue gaon ke log"
+          caption="Zila → block → gram panchayat — suchi mein naam ke saath apni category bhi milaa lein"
+        />
 
         <p>
           Yahan ek chhoti si baat kaam ki hai: kai log galat jagah dhoondte rehte hain.
