@@ -74,7 +74,13 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
       <h1>Annadata Sukhibhava Status Check 2026: Payment, Eligibility aur Beneficiary List</h1>
 
       <p>
-        Andhra Pradesh ke kisan bhaiyon ke liye ek bahut badi khushkhabri hai. Pehle jis scheme ko hum <em>YSR Rythu Bharosa</em> ke naam se jaante the, ab uska naya naam <strong>Annadata Sukhibhava</strong> rakha gaya hai. Agar aap jaanna chahte hain ki aapka paisa kab aayega ya aapka naam list mein hai ya nahi, toh sahi jagah aaye hain. Is article mein hum detail mein samjhenge ki kaise aap apna <strong>annadata sukhibhava status check</strong> kar sakte hain, kaun eligible hai, aur PM Kisan se ye scheme kaise alag hai.
+        Andhra Pradesh mein jis scheme ko log <em>YSR Rythu Bharosa</em> kehte the, wo ab
+        <strong> Annadata Sukhibhava</strong> hai. Naam badla hai, paisa nahi rukka.
+      </p>
+
+      <p>
+        Is scheme ki khaas baat aage aati hai — bataidar kisan bhi isme aate hain, jo PM Kisan mein
+        nahi aate. Pehle status dekhne ka tareeka aur eligibility, phir wahi fark.
       </p>
 
       <Fig
@@ -91,14 +97,15 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         label="Official Portal — Annadatha Sukhibhava AP"
       />
 
-      <h2>Annadata Sukhibhava Yojana Kya Hai?</h2>
+      <h2>Kitna Paisa, Kahan Se Aata Hai</h2>
 
       <p>
-        Annadata Sukhibhava (jiska matlab hai "May the Farmer Prosper") Andhra Pradesh sarkar ki flagship financial assistance scheme hai. Iska mukhya uddeshya kisanon ko beej, khaad, aur kheti ke dusre kharchon ke liye direct bank transfer ke zariye madad dena hai.
+        Naam ka matlab hai "annadata sukhi rahe". Paisa seedha bank account mein aata hai — beej, khaad
+        aur season ke baaki kharchon ke liye.
       </p>
 
       <p>
-        Is scheme ke tahat, ek eligible kisan parivar ko saalana <strong>₹20,000</strong> tak ki financial support milti hai. Ye raashi do hisson mein aati hai:
+        Ek eligible parivar ke haath saal bhar mein ₹20,000 tak aate hain, do alag jagah se:
       </p>
 
       <SchemeTable>
@@ -128,14 +135,17 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         Haal hi mein, 20 June 2026 ko CM N. Chandrababu Naidu ne 2026-27 ke pehle installment ke roop mein ₹3,125 crore jaari kiye, jisme har beneficiary ko ₹7,000 (₹5,000 State + ₹2,000 Central) mile.
       </p>
 
-      <h2>Sabse Bada Fark: Tenant Farmers aur CCRC Card Holders</h2>
+      <h2>Bataidar Kisan Bhi Isme Aate Hain</h2>
 
       <p>
-        Yahan hum ek bohot important point par baat karenge jo is scheme ko PM Kisan se bilkul alag banata hai. PM Kisan Samman Nidhi mein sirf <em>zameen ke malik</em> (landowners) hi eligible hote hain. Lekin Annadata Sukhibhava mein <strong>Tenant Farmers (Bataidar)</strong> aur <strong>CCRC (Crop Cultivator Rights Card)</strong> holders ko bhi pura financial support milta hai.
+        PM Kisan mein sirf zameen ke malik aate hain. Yahan <strong>bataidar</strong> (tenant farmer) aur
+        CCRC — Crop Cultivator Rights Card — wale kisan ko bhi poora support milta hai.
       </p>
 
       <p>
-        Andhra Pradesh mein hazaron aise kisan hain jo apni zameen nahi rakhte, balki doosron ki zameen lease par lekar kheti karte hain. Agar aapke paas valid CCRC card hai, toh aap is scheme ke liye poore tarah se eligible hain. Ye ek bahut badi raahat hai un kisanon ke liye jo saalon se zameen ke malik na hone ki wajah se central schemes se vanchit reh jaate the.
+        AP mein hazaron kisan doosron ki zameen lease par lekar kheti karte hain. Saalon tak wo central
+        schemes se bahar rehte the, sirf isliye ki khata unke naam nahi tha. Valid CCRC card hai to
+        aap is scheme mein poore eligible hain.
       </p>
 
       <Fig
@@ -144,10 +154,10 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         caption="Bataidar aur CCRC card holders bhi eligible hain — yahi PM Kisan se sabse bada fark hai"
       />
 
-      <h2>Annadata Sukhibhava Eligibility Criteria</h2>
+      <h2>Kaun Eligible Hai</h2>
 
       <p>
-        Is yojana ka labh uthane ke liye aapko kuch basic sharton ko poora karna hoga. Dhyan se padhein ki kya aap <strong>annadata sukhibhava eligibility</strong> ke maapdand par khare utarte hain:
+        Chaar basic shartein hain. Chaaron poori honi chahiye — ek bhi chhooti to payment ruk jaati hai:
       </p>
 
       <ul>
@@ -165,10 +175,11 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         <li>Retired pensioners jinki monthly pension ₹10,000 se zyada hai.</li>
       </ul>
 
-      <h2>Annadata Sukhibhava Installment Date aur Payment Status 2026</h2>
+      <h2>Kist Kab Aati Hai — Season Ka Hisaab</h2>
 
       <p>
-        Kisanon ke dimaag mein sabse bada sawal yahi hota hai ki <strong>annadata sukhibhava installment date</strong> kya hai. Andhra Pradesh sarkar aam taur par kheti ke seasons (Kharif, Rabi, Summer) ke hisaab se payment release karti hai.
+        AP sarkar kist ko kheti ke season se joddti hai — Kharif, Rabi aur Summer. Isliye teen kist
+        banti hain, aur unka waqt buwai ke aas-paas rakha jaata hai:
       </p>
 
       <SchemeTable>
@@ -202,10 +213,11 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         <strong>Note:</strong> Kabhi-kabhi state aur central government ki payment alag-alag dates par aati hai. Agar aapko sirf ₹2,000 ya ₹5,000 hi mila hai, toh ghabrayein nahi. Dono components alag-alag transaction IDs ke saath aate hain.
       </InfoBox>
 
-      <h2>Annadata Sukhibhava Status Check Kaise Karein? (Step-by-Step)</h2>
+      <h2>Apna Status Kaise Dekhein</h2>
 
       <p>
-        Apna <strong>annadata sukhibhava payment status</strong> check karna bahut aasan hai. Neeche diye gaye steps ko follow karein:
+        Aadhaar number ya Application ID paas rakhein, aur financial year sahi select karein — galat
+        year par purana record dikh jaata hai:
       </p>
 
       <Fig
@@ -215,7 +227,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
       />
 
       <ol>
-        <li>Sabse pehle official website <code>annadathasukhibhava.ap.gov.in</code> par jaayein.</li>
+        <li>Official website <code>annadathasukhibhava.ap.gov.in</code> kholein.</li>
         <li>Homepage par "<strong>Know Your Status</strong>" ya "<strong>Beneficiary Status</strong>" ke option par click karein.</li>
         <li>Financial Year select karein (Example: 2026-27).</li>
         <li>Apna <strong>Aadhaar Number</strong> ya <strong>Application ID</strong> enter karein.</li>
@@ -228,10 +240,11 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         label="Check Status Now — Official AP Portal"
       />
 
-      <h2>Annadata Sukhibhava Beneficiary List Kaise Dekhein?</h2>
+      <h2>Beneficiary List Mein Naam Dhoondhna</h2>
 
       <p>
-        Agar aap jaanna chahte hain ki aapke gaon ya district mein kin-kin kisanon ko is scheme ka labh mil raha hai, toh aap <strong>annadata sukhibhava beneficiary list</strong> bhi dekh sakte hain.
+        District aur mandal chunkar poori list PDF mein nikal aati hai. Ctrl+F se apna naam dhoondh
+        lein:
       </p>
 
       <ol>
@@ -241,10 +254,11 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         <li>Aapke gaon ki puri list download ya view ho jayegi. Yahan aap apna naam ya apne parivar ke kisi sadasya ka naam search kar sakte hain.</li>
       </ol>
 
-      <h2>Payment Nahi Aayi? Common Problems aur Solutions</h2>
+      <h2>List Mein Naam Hai Par Paisa Nahi Aaya</h2>
 
       <p>
-        Kai baar kisanon ko complaint milti hai ki unka naam list mein toh hai, lekin paisa nahi aaya. Iske kuch common reasons aur unke solutions yahan hain:
+        Ye alag samasya hai aur iski wajah aksar scheme mein nahi, bank ya Aadhaar ke record mein hoti
+        hai. Chaar cheezein check karni hoti hain:
       </p>
 
       <Fig
@@ -273,10 +287,10 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         <strong>Solution:</strong> Tenant farmers ke liye CCRC card ka valid hona zaroori hai. Agar card expire ho gaya hai, toh apne local Agriculture Officer (AO) se contact karke renewal karwayein.
       </p>
 
-      <h2>PM Kisan vs Annadata Sukhibhava: Comparison</h2>
+      <h2>PM Kisan Aur Annadata Sukhibhava — Saath Rakhkar Dekhein</h2>
 
       <p>
-        Bahut se log confuse ho jaate hain ki ye dono schemes ek hi hain ya alag. Neeche diya gaya table aapko sab clear kar dega:
+        Dono ek saath milte hain, isliye log ise ek hi scheme samajh lete hain. Fark yahan saaf hai:
       </p>
 
       <SchemeTable>
@@ -312,10 +326,11 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         </tr>
       </SchemeTable>
 
-      <h2>Kya Aap Dusre State Se Hain?</h2>
+      <h2>AP Se Bahar Ke Kisan Yahan Dekhein</h2>
 
       <p>
-        Agar aap Andhra Pradesh se nahi hain, lekin is article tak pahunch gaye hain, toh chinta ki koi baat nahi. Humne India ke har major state ki kisan yojanaon par detail guides taiyar ki hain. Apne state ka article padhne ke liye neeche diye links use karein:
+        Bataidar wala niyam sirf AP mein hai — baaki rajyon mein khata malik ke naam hona zaroori
+        rehta hai. Apne rajya ka niyam yahan dekh lein:
       </p>
 
       <ul>
@@ -337,7 +352,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
       </ul>
 
       <p>
-        Ya phir sabhi state schemes ka ek saath overview dekhne ke liye:
+        Ek jagah saare rajyon ka hisaab:
       </p>
 
       <ul>
@@ -348,10 +363,11 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         </li>
       </ul>
 
-      <h2>Helpline aur Support</h2>
+      <h2>Kahan Shikayat Karein</h2>
 
       <p>
-        Agar aapko online status check karne mein, naam correct karwane mein, ya payment se judi koi pareshani aa rahi hai, toh aap in official madhyamon se sampark kar sakte hain:
+        Online status nahi khul raha, naam sudharwana hai, ya payment atki hai — teen official raste
+        hain:
       </p>
       <ul>
         <li><strong>AP Kisan Call Center (Toll Free):</strong> 1800-425-0066</li>
