@@ -68,7 +68,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
     <article className="prose prose-lg max-w-4xl mx-auto">
 
       <InfoBox type="update" date="4 August 2026">
-        <strong>Latest Update:</strong> Andhra Pradesh sarkar ne 20 June 2026 ko Annadata Sukhibhava ka pehla installment (₹7,000: ₹5,000 State + ₹2,000 PM Kisan) jaari kar diya hai. Agla bhugtan October 2026 mein aane ki umeed hai. Apna <strong>annadata sukhibhava status check</strong> karne ke liye neeche diye gaye official steps follow karein.
+        <strong>Latest Update:</strong> Andhra Pradesh sarkar ne 20 June 2026 ko Annadata Sukhibhava ka pehla installment (₹7,000: ₹5,000 State + ₹2,000 PM Kisan) jaari kar diya hai. ⚠️ Agle installment ki koi date officially announce nahi hui hai. Apna <strong>annadata sukhibhava status check</strong> karne ke liye neeche diye gaye official steps follow karein.
       </InfoBox>
 
       <h1>Annadata Sukhibhava Status Check 2026: Payment, Eligibility aur Beneficiary List</h1>
@@ -235,26 +235,26 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         <tr>
           <th>Installment</th>
           <th>Season</th>
-          <th>Expected Release</th>
+          <th>Release Date</th>
           <th>Status</th>
         </tr>
         <tr>
           <td>1st Installment</td>
           <td>Kharif 2026-27</td>
           <td>20 June 2026</td>
-          <td>✅ Released (₹7,000)</td>
+          <td>Released (₹7,000)</td>
         </tr>
         <tr>
           <td>2nd Installment</td>
           <td>Rabi 2026-27</td>
-          <td>October 2026</td>
-          <td>⏳ Expected</td>
+          <td>⚠️ Announce nahi hui</td>
+          <td>Pending</td>
         </tr>
         <tr>
           <td>3rd Installment</td>
           <td>Summer 2026-27</td>
-          <td>February 2027</td>
-          <td>⏳ Expected</td>
+          <td>⚠️ Announce nahi hui</td>
+          <td>Pending</td>
         </tr>
       </SchemeTable>
 
@@ -453,7 +453,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         hain:
       </p>
       <ul>
-        <li><strong>AP Kisan Call Center (Toll Free):</strong> 1800-425-0066</li>
+        <li><strong>Official portal:</strong> <code>annadathasukhibhava.ap.gov.in</code> — helpline number portal ke &ldquo;Contact&rdquo; section mein diya hota hai; wahi se lein, kyunki numbers samay samay par badalte hain.</li>
         <li><strong>District Agriculture Officer (DAO):</strong> Apne district ke DAO office mein personal visit karein.</li>
         <li><strong>Gram Sachivalayam:</strong> Apne nearest Village Secretariat mein Agriculture Assistant se milen.</li>
       </ul>
@@ -468,23 +468,16 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
 
       <FAQBlock faqs={FAQS_DATA} caption="Annadata Sukhibhava FAQ 2026" />
 
-      <h2>Related Articles</h2>
-      <ul>
-        <li>
-          <Link href="/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega">
-            Pati-Patni Dono Ko PM Kisan Milega Ya Nahi? (Family Rules Explained)
-          </Link>
-        </li>
-        <li>
-          <Link href="/articles/PmKisan24viKist2026">
-            PM Kisan 24vi Kist 2026 — Next Installment Date aur Status
-          </Link>
-        </li>
-      </ul>
-
       <InfoBox type="tip">
-        <strong>Surakshit Rahein:</strong> Koi bhi aapse "status theek karne" ya "naam list mein dalwane" ke naam par paisa nahi maangta. Ye scheme 100% free hai. Agar koi agent paise maange, toh turant 1064 ya local police ko inform karein.
+        <strong>Fraud se bachein:</strong> Koi bhi aapse "status theek karne" ya "naam list mein dalwane" ke naam par paisa nahi maangta. Ye scheme 100% free hai. Agar koi agent paise maange, toh Andhra Pradesh Anti-Corruption Bureau ki helpline <strong>1064</strong> par ya local police ko shikayat karein.
       </InfoBox>
+
+      <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
+        <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
+          <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
+          Ye article sirf madad ke liye hai. Final decision ke liye official portal ya krishi office se sampark karein.
+        </p>
+      </div>
 
     </article>
   );
