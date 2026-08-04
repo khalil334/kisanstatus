@@ -58,7 +58,7 @@ export default function CHCPortal() {
       
       <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
         <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
-          <strong>Sach kahoon toh:</strong> Maine khud dekha hai ki jo log bina proper market research ke seedha 5-10 lakh ka equipment kharid lete hain, wo aksar pehle saal mein hi struggle karte hain. Lekin agar sahi planning, location selection aur driver management ho, toh Custom Hiring Centre (CHC) ek highly profitable, long-term business ban sakta hai.
+          <strong>Dhyan rakhein:</strong> Bina proper market research seedha 5-10 lakh ka equipment kharidne par pehle saal mein dikkat aana aam hai. Lekin agar sahi planning, location selection aur driver management ho, toh Custom Hiring Centre (CHC) ek highly profitable, long-term business ban sakta hai.
         </p>
       </div>
       

@@ -226,7 +226,7 @@ export default function PmKisanMaandhanYojanaPension({ article }: { article: Art
           </DB>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
-            Is article mein hum puri detail mein samjhenge ki ye scheme kya hai, kaun join kar sakta hai, kitna paisa lagta hai, aur kaise apply karna hai. <Link href="/articles/PmKisanMasterGuide2026" className="underline text-green-700 dark:text-green-400">PM Kisan Samman Nidhi</Link> se ye alag scheme hai, isliye dhyan se padho.
+            Neeche detail mein diya hai ki ye scheme kya hai, kaun join kar sakta hai, kitna paisa lagta hai, aur kaise apply karna hai. <Link href="/articles/PmKisanMasterGuide2026" className="underline text-green-700 dark:text-green-400">PM Kisan Samman Nidhi</Link> se ye alag scheme hai, isliye dhyan se padho.
           </p>
         </section>
 
