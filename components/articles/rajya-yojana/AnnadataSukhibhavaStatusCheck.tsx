@@ -471,7 +471,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
       <h2>Related Articles</h2>
       <ul>
         <li>
-          <Link href="/articles/pm-kisan-pati-patni-dono-ko-milega">
+          <Link href="/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega">
             Pati-Patni Dono Ko PM Kisan Milega Ya Nahi? (Family Rules Explained)
           </Link>
         </li>
