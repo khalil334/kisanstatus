@@ -77,8 +77,8 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
 
       <InfoBox type="update" date="4 August 2026">
         <strong>Latest Update:</strong> Agli kist ki date SAARA portal par abhi announce nahi hui hai.
-        Har kist ₹2,000 ki hoti hai. WhatsApp par ghoom rahi "confirmed date" ka koi aadhaar nahi hai.
-        Jab tak portal par notification na dikhe, use "expected" hi maanein.
+        Har kist ₹2,000 ki hoti hai. ⚠️ WhatsApp par ghoom rahi "confirmed date" ka koi aadhaar nahi hai —
+        jab tak SAARA portal par notification na dikhe, koi bhi tareekh pakki na maanein.
       </InfoBox>
 
       <h1>
@@ -420,8 +420,8 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         </tr>
         <tr>
           <td>Helpline</td>
-          <td>155261</td>
-          <td>MP Kisan Call Center (Toll-Free)</td>
+          <td>155261 (PM Kisan helpline)</td>
+          <td>MP CM Helpline 181</td>
         </tr>
       </SchemeTable>
 
@@ -465,27 +465,22 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
 
       <FAQBlock faqs={FAQS_DATA} caption="MP CM Kisan Kalyan Yojana FAQ 2026" />
 
-      <h2>Related Articles</h2>
-      <ul>
-        <li>
-          <Link href="/articles/PmKisan24viKist2026">
-            PM Kisan 24vi Kist 2026 — Next Installment Date aur Status
-          </Link>
-        </li>
-        <li>
-          <Link href="/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega">
-            Pati-Patni Dono Ko PM Kisan Milega Ya Nahi? (Family Rules Explained)
-          </Link>
-        </li>
-      </ul>
+
 
       <InfoBox type="tip">
-        <strong>Surakshit Rahein:</strong> SAARA par status dekhna, e-KYC karna aur bank
+        <strong>Fraud se bachein:</strong> SAARA par status dekhna, e-KYC karna aur bank
         details update karwana — teeno kaam bilkul free hain. Kist "jaldi nikalwane" ya list
         mein entry "chadhwane" ke liye koi paisa maange, to wo fraud hai: ye dono kaam sirf
-        Patwari, ADO aur portal ke raste hote hain. Aisi demand par 1064 (MP Kisan Call
-        Center) par shikayat darj karwaayein.
+        Patwari, ADO aur portal ke raste hote hain. Aisi demand par MP CM Helpline
+        <strong> 181</strong> par shikayat darj karwaayein.
       </InfoBox>
+
+      <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
+        <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
+          <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
+          Ye article sirf madad ke liye hai. Final decision ke liye official portal ya krishi office se sampark karein.
+        </p>
+      </div>
 
     </article>
   );
