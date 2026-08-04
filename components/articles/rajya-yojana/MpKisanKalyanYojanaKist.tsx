@@ -61,6 +61,14 @@ const FAQS_DATA = [
     q: 'Agar main MP se bahar shift ho gaya hoon, toh kya mujhe paisa milega?',
     a: 'Nahi. Madhya Pradesh ka domicile hona zaroori shart hai. Shift hone ke baad us din se eligibility khatam maani jaati hai.',
   },
+  {
+    q: 'Girdawari mein fasal galat darj ho gayi hai, kist par asar padega kya?',
+    a: 'Kist par seedha asar aam taur par nahi padta, lekin record galat rehna aage bima aur muavze mein dikkat karta hai. MP Kisan App se aapatti (objection) darj karein ya Patwari se sudharwayein. Season khatam hone se pehle correction karwana aasan rehta hai.',
+  },
+  {
+    q: 'Pichhli kist mili thi, is baar nahi aayi. Naam kat gaya kya?',
+    a: 'Zaroori nahi. Pehle SAARA par status dekhein. Agar wahan "eligible" dikh raha hai toh sirf release ka intezaar hai. "Not eligible" ya record gayab dikhe tab Janpad Panchayat mein poochhein — aksar e-KYC expire hone ya land record update ki wajah se temporary hold hota hai, jo document theek karte hi hat jaata hai.',
+  },
 ];
 
 export default function MPCMKisanKalyanYojanaKistStatus() {
@@ -69,8 +77,8 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
 
       <InfoBox type="update" date="4 August 2026">
         <strong>Latest Update:</strong> Agli kist ki date SAARA portal par abhi announce nahi hui hai.
-        Pichhli kist ₹1,000 ki thi. WhatsApp par ghoom rahi "confirmed date" ka koi aadhaar nahi hai —
-        jab tak portal par notification na dikhe, use "expected" hi maanein.
+        Pichhli kist ₹1,000 ki thi. WhatsApp par ghoom rahi "confirmed date" ka koi aadhaar nahi hai.
+        Jab tak portal par notification na dikhe, use "expected" hi maanein.
       </InfoBox>
 
       <h1>MP CM Kisan Kalyan Yojana Kist Kab Aayegi: Status Check, Amount aur SAARA Portal Guide</h1>
@@ -83,7 +91,7 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
 
       <p>
         Neeche jo bhi likha hai wo SAARA portal aur official guidelines se hai. Kitna paisa banta hai,
-        kaun eligible hai, aur na aane par kahan jaana hai — teen cheezein, sidhi baat.
+        kaun eligible hai, aur na aane par kahan jaana hai. Teen cheezein, sidhi baat.
       </p>
 
       <Fig
@@ -100,17 +108,26 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         label="Official Portal — SAARA MP Govt"
       />
 
-      <h2>Scheme Kaam Kaise Karti Hai, Aur Kitna Paisa Banta Hai</h2>
+      <h2>Ye Scheme Kahan Se Aayi, Aur Kitna Paisa Banta Hai</h2>
 
       <p>
-        Ye MP sarkar ki apni scheme hai, lekin iski list PM Kisan se banti hai — beej, khaad aur
-        sinchai ke kharche mein thodi raahat dene ke liye.
+        Ye MP sarkar ki apni scheme hai, lekin iski list PM Kisan se banti hai. Maqsad wahi hai:
+        beej, khaad aur sinchai ke kharche mein thodi raahat.
       </p>
 
       <p>
-        Amount par confusion asli hai. Internet par ₹2,000, ₹4,000, ₹6,000 — sab likha mil jaata hai.
-        SAARA portal aur pichhle vitthiya varsh ke records kehte hain: PM Kisan ke ₹6,000 ke upar
-        <strong> ₹1,000 saalana</strong>, ek ya do kiston mein.
+        Scheme September 2020 mein shuru hui thi, tab CM ne elaan kiya tha ki PM Kisan ke har
+        beneficiary ko state apni taraf se top-up degi. Shuruaat mein amount ₹4,000 saalana tha,
+        baad mein badha kar ₹6,000 karne ka elaan bhi hua. Yahi purane elaan aaj tak internet par
+        ghoomte hain aur confusion ki jad hain. Lekin elaan aur actual disbursement do alag
+        cheezein hain: budget allocation ke hisaab se kiston ka amount badalta raha hai.
+      </p>
+
+      <p>
+        Amount par confusion isliye asli hai. Internet par ₹2,000, ₹4,000, ₹6,000 — sab likha mil
+        jaata hai. SAARA portal aur pichhle vitthiya varsh ke records kehte hain: PM Kisan ke
+        ₹6,000 ke upar <strong> ₹1,000 saalana</strong>, ek ya do kiston mein. Aapke apne account
+        ka sach jaanna ho toh passbook aur SAARA dashboard, bas yahi do jagah dekhein.
       </p>
 
       <InfoBox type="warning">
@@ -146,10 +163,22 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         </tr>
       </SchemeTable>
 
+      <h2>SAARA Portal Kya Hai — Aur Wahi Kyun</h2>
+
+      <p>
+        SAARA (Smart Application for Revenue Administration) MP sarkar ka revenue department wala
+        system hai. Isi mein girdawari (fasal ka record), land records aur kisan schemes ka data
+        ek saath chalta hai. CM Kisan Kalyan ka status isi liye SAARA par dikhta hai, kisi alag
+        yojana portal par nahi. Ye jaanna kaam ka hai kyunki aapki kist ka connection seedha
+        girdawari se hai: jis season mein aapki zameen par fasal darj nahi hoti, us season ki
+        state kist atak sakti hai, chahe PM Kisan aata rahe. Girdawari har season Patwari karta
+        hai, aur SAARA app se kisan khud bhi apni fasal darj kar sakta hai.
+      </p>
+
       <h2>SAARA Portal Par Apna Status Kaise Dekhein</h2>
 
       <p>
-        Poora kaam online hai aur free hai. Aadhaar number ya registered mobile paas rakhein — OTP
+        Poora kaam online hai aur free hai. Aadhaar number ya registered mobile paas rakhein, OTP
         usi number par aayega:
       </p>
 
@@ -179,11 +208,11 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         caption="Kist ka timing aksar rabi katai aur kharif buwai ke kharche ke aas-paas rakha jaata hai"
       />
 
-      <h2>Kist Ka Waqt — Pichhle Teen Saal Ka Pattern</h2>
+      <h2>Kist Ka Waqt — Pichhle Saalon Ka Pattern</h2>
 
       <p>
-        Fixed date koi nahi hai; state sarkar national calendar se nahi chalti. Lekin teen saal ka
-        pattern itna batata hai:
+        Fixed date koi nahi hai; state sarkar national calendar se nahi chalti. Lekin pichhle
+        saalon ka pattern itna batata hai:
       </p>
 
       <ul>
@@ -192,20 +221,29 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
       </ul>
 
       <p>
-        PM Kisan aa gaya aur state ka nahi aaya — ye normal hai. Dono ka release cycle alag hai, aur
+        Release aksar kisi event ke saath hota hai. MP mein kist ka paisa CM ke haathon ek
+        program mein single click se transfer hota hai, aur us din lakhs of accounts mein ek
+        saath credit aata hai. Iska matlab ye bhi hai ki jab tak aisa program schedule nahi
+        hota, kist ka intezaar chalta rehta hai. Newspaper mein "CM ne transfer kiya" wali
+        khabar dikhe aur aapke account mein kuch na aaye, tab pareshan hona banta hai; us se
+        pehle ki har date afwaah hai.
+      </p>
+
+      <p>
+        PM Kisan aa gaya aur state ka nahi aaya? Ye normal hai. Dono ka release cycle alag hai, aur
         state treasury se fund nikalne mein 15 se 30 din lag jaate hain.
       </p>
 
       <h2>Kaun Eligible Hai, Kaun Nahi</h2>
 
       <p>
-        Jad PM Kisan hi hai, isliye shartein lagbhag wahi hain — kuch state ke apne rules ke saath:
+        Jad PM Kisan hi hai, isliye shartein lagbhag wahi hain, kuch state ke apne rules ke saath:
       </p>
 
       <h3>Mandatory Conditions:</h3>
       <ul>
         <li><strong>MP Ka Nivasi:</strong> Applicant ka permanent residence Madhya Pradesh mein hona chahiye.</li>
-        <li><strong>PM Kisan Beneficiary:</strong> Aapka naam PM Kisan ki active beneficiary list mein hona chahiye.</li>
+        <li><strong>PM Kisan Mein Active:</strong> Central scheme mein aapka record chalu haalat mein hona chahiye.</li>
         <li><strong>Landholding:</strong> Aapke paas cultivable land honi chahiye (record of rights mein naam hona chahiye).</li>
         <li><strong>e-KYC:</strong> Aadhaar seeding aur mobile linking complete honi chahiye.</li>
       </ul>
@@ -234,7 +272,7 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
 
       <h3>1. Bank Account aur NPCI Mapping Check Karein</h3>
       <p>
-        Zyadatar cases yahin nikalte hain — account DBT ke liye enabled hi nahi hota. Branch mein
+        Zyadatar cases yahin nikalte hain: account DBT ke liye enabled hi nahi hota. Branch mein
         jaakar bas itna poochhein: "mera account NPCI mapper mein Aadhaar se linked hai ya nahi?" Na ho
         to wahin link karwa lein.
       </p>
@@ -258,7 +296,7 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
       <h2>Beneficiary List Mein Naam Dhoondhna</h2>
 
       <p>
-        Khud eligible lagte hain par paisa nahi aaya — pehle list mein naam hai ya nahi, ye dekh lein.
+        Khud eligible lagte hain par paisa nahi aaya? Pehle list mein naam hai ya nahi, ye dekh lein.
         <strong> Kisan kalyan yojana beneficiary list MP</strong> portal se hi nikalti hai:
       </p>
 
@@ -270,8 +308,26 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
       </ol>
 
       <p>
-        PM Kisan mein naam hai par is list mein nahi — aksar ye data sync ka glitch hota hai. Nazdeeki
+        PM Kisan mein naam hai par is list mein nahi? Aksar ye data sync ka glitch hota hai. Nazdeeki
         CSC ya Gram Panchayat se sync karwane ko kahein.
+      </p>
+
+      <h2>Girdawari — Wo Kadam Jo MP Ke Kisan Bhool Jaate Hain</h2>
+
+      <p>
+        Baaki states mein aisa koi season-wise requirement nahi hai, isliye bahar se aaye logon ko
+        ye cheez pata hi nahi hoti. MP mein har season (Kharif aur Rabi) mein girdawari hoti hai,
+        yaani record banta hai ki kis khet mein kya boya gaya. Patwari ye record banata hai, lekin
+        galti ya der dono common hain.
+      </p>
+
+      <p>
+        Kisan khud bhi <strong>MP Kisan App</strong> se apni girdawari darj kar sakta hai. Khet
+        par khade hokar app kholein, fasal select karein, photo khinchein aur submit kar dein. GPS
+        se location verify hoti hai. Ye 10 minute ka kaam do fayde deta hai: state kist ka data
+        clean rehta hai, aur fasal bima ya muavze ke waqt bhi wahi record kaam aata hai. Agar
+        aapki kist bina wajah atki lag rahi hai aur bank sab theek keh raha hai, toh girdawari
+        record zaroor check karwayein — ye wo kona hai jahan koi nahi dekhta.
       </p>
 
       <h2>PM Kisan Aur MP Ki Scheme — Do Alag Cheezein</h2>
