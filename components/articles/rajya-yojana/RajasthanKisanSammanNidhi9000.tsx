@@ -104,6 +104,15 @@ export default function RajasthanKisanSammanNidhi9000() {
         </p>
 
         <p>
+          Lekin &ldquo;automatic&rdquo; ka matlab &ldquo;bina shart&rdquo; nahi hai. Rajasthan mein ek extra layer hai jo dusre
+          rajyon mein nahi milti — Jan Aadhaar. State ka har DBT payment Jan Aadhaar-linked bank
+          account se hokar jaata hai, aur yahi baat is scheme ko PM Kisan se alag banati hai. PM Kisan
+          ka paisa seedha Aadhaar-NPCI raste se aata hai; state ka ₹1,000 Jan Aadhaar family record se
+          match hone ke baad hi release hota hai. Isi ek farak se sabse zyada payment atakte hain, aur
+          isi wajah se aapko PM Kisan mil sakta hai jabki state wala na mile.
+        </p>
+
+        <p>
           Center se ₹6,000 aate hain (₹2,000 ki teen kiste). Rajasthan apni taraf se ₹3,000 aur jodta hai (₹1,000 ki teen kiste). Total mila ke saal bhar mein ₹9,000, chhah alag payments mein.
         </p>
 
@@ -140,6 +149,63 @@ export default function RajasthanKisanSammanNidhi9000() {
           url="https://jansoochna.rajasthan.gov.in"
           label="Official Portal — Jan Soochna Rajasthan"
         />
+
+        <h2>Scheme Ka Safar — ₹2,000 Se ₹3,000 Tak</h2>
+
+        <p>
+          Aaj jo ₹3,000 milte hain, wo shuru se ₹3,000 nahi the. Ye baat samajhna zaroori hai, kyunki
+          purane articles aur purane YouTube videos aaj bhi purani raqam bata rahe hain — aur wahi
+          confusion ka ek bada source hai.
+        </p>
+
+        <p>
+          Budget 2024-25 mein Rajasthan sarkar ne pehli baar ailaan kiya ki PM Kisan ke ₹6,000 ke
+          upar state apni taraf se <strong>₹2,000 saalana</strong> dega. Scheme zameen par 30 June 2024
+          ko Tonk se launch hui. Uske agle saal, Budget 2025-26 mein, ye state hissa
+          <strong>₹2,000 se badhakar ₹3,000</strong> kar diya gaya — aur tabhi se total ₹9,000 ka aankda
+          bana. Matlab ₹9,000 wala figure khud ek badhotri ka nateeja hai, shuruaati raqam nahi.
+        </p>
+
+        <div className="overflow-x-auto my-8 not-prose">
+          <table className="w-full border-collapse border border-gray-300 dark:border-gray-600 rounded-xl overflow-hidden text-sm shadow-sm">
+            <thead>
+              <tr className="bg-gray-100 dark:bg-gray-700">
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left">Kab</th>
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left">Kya hua</th>
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left">State ka hissa</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="bg-white dark:bg-gray-800">
+                <td className="border border-gray-300 dark:border-gray-600 p-3">Budget 2024-25</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">Scheme ka ailaan</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">₹2,000 saalana</td>
+              </tr>
+              <tr className="bg-gray-50 dark:bg-gray-700">
+                <td className="border border-gray-300 dark:border-gray-600 p-3">30 June 2024</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">Tonk se launch</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">₹2,000 saalana</td>
+              </tr>
+              <tr className="bg-white dark:bg-gray-800">
+                <td className="border border-gray-300 dark:border-gray-600 p-3">Budget 2025-26</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">Badhotri — total ₹9,000 bana</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">₹3,000 saalana</td>
+              </tr>
+              <tr className="bg-gray-50 dark:bg-gray-700">
+                <td className="border border-gray-300 dark:border-gray-600 p-3">18 October 2025</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">Nadbai, Bharatpur se kist — 71.8 lakh kisan, ₹718 crore</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">₹1,000 per kisan</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Ye aakhri line dhyan se padhein: ek kist mein 71.8 lakh kisan aur ₹718 crore. Isse do baatein
+          pata chalti hain — ek, scheme ka scale bahut bada hai; do, itne bade beneficiary base ko verify
+          karne mein waqt lagta hai, aur yahi wajah hai ki kist ki tareekh aage-peeche hoti rehti hai.
+          Ye kisi ek kisan ki file ka issue nahi, poore system ka size hai.
+        </p>
 
         <h2>₹12,000 Ka Sach — Announcement Aur Notification Mein Fark Hai</h2>
 
@@ -196,6 +262,46 @@ export default function RajasthanKisanSammanNidhi9000() {
           </p>
         </div>
 
+        <h2>Jan Aadhaar — Rajasthan Ka Asli Gatekeeper</h2>
+
+        <p>
+          Dusre rajyon ke kisan sirf Aadhaar aur bank ki chinta karte hain. Rajasthan mein ek teesri
+          cheez hai jo utni hi zaroori hai, aur zyadatar log ise halke mein lete hain.
+        </p>
+
+        <p>
+          Jan Aadhaar Rajasthan ka family identity system hai — 10-ank ka family ID aur har sadasya ka
+          11-ank ka member ID. Ye Bhamashah card ki jagah April 2020 mein aaya, aur aaj state ki
+          lagbhag poori aabaadi isme cover hai. Iske bina state ki koi bhi badi scheme nahi chalti —
+          ration, pension, scholarship, health cover, aur haan, ye kisan wali kist bhi.
+        </p>
+
+        <p>
+          Ek baat jo kaagaz par likhi hai lekin log kam jaante hain: Jan Aadhaar mein ghar ka
+          <strong>mukhiya aurat hoti hai</strong> — 18 saal se upar ki mahila. Agar ghar mein aisi koi
+          mahila nahi hai, tab 21 saal se upar ka purush mukhiya banta hai. Iska seedha asar aap par ye
+          padta hai: kist us bank account mein jaa sakti hai jo mukhiya ke naam par mapped hai, jabki
+          zameen kisi aur sadasya ke naam par ho. Ghar mein ye baat pehle se saaf kar lena behtar hai,
+          warna &ldquo;paisa aaya hi nahi&rdquo; wali shikayat asal mein &ldquo;paisa kisi aur ke khaate mein gaya&rdquo;
+          nikalti hai.
+        </p>
+
+        <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-5 my-6 not-prose">
+          <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
+            <strong>Teen jagah, ek naam:</strong> aapka naam Aadhaar mein, Jan Aadhaar mein, aur
+            jamabandi mein — teeno mein ek jaisa hona chahiye. Ek jagah &ldquo;Rameshwar&rdquo; aur dusri jagah
+            &ldquo;Rameshwar Lal&rdquo; likha ho, to system ise do alag aadmi maan leta hai. Ye Rajasthan mein
+            rejection ki sabse aam technical wajah hai, aur sabse aasani se pehle se theek ki ja sakti hai.
+          </p>
+        </div>
+
+        <p>
+          Naya sadasya jodna ho — shaadi, janm, ya koi chhoot gaya ho — to
+          <code>janaadhaar.rajasthan.gov.in</code> par family ID se login karke OTP verify karein, phir
+          &ldquo;Add Member&rdquo; se naya Aadhaar number jodein. Navjaat bachche ka Aadhaar na ho to birth
+          certificate lekar nazdeeki e-Mitra kiosk jaana padta hai.
+        </p>
+
         <h2>Status Kaise Check Karein</h2>
 
         <p>Do tareeke hain, dono free hain, dono online hote hain.</p>
@@ -250,6 +356,31 @@ export default function RajasthanKisanSammanNidhi9000() {
 
         <p>
           Aur agar online sab sahi dikh raha hai fir bhi paisa nahi aa raha — seedhe Patwari ya Tehsildar ke paas chale jao. Kai baar land record ka koi purana jhanjhat hota hai jo sirf ground level par hi sulajhta hai.
+        </p>
+
+        <h3>Patwari Ke Paas Jaane Se Pehle Ye Kaam Ghar Baithe Ho Jaata Hai</h3>
+
+        <p>
+          Tehsil ke chakkar lagane se pehle apna land record khud padh lena samajhdari hai — Rajasthan
+          mein ye bilkul free hai. <code>apnakhata.rajasthan.gov.in</code> (jise e-Dharti bhi kehte hain)
+          kholein, apna zila chunein, phir tehsil aur gaon, aur khata number, khasra number ya malik ke
+          naam se apni jamabandi nikaal lein.
+        </p>
+
+        <p>
+          Isse aap khud dekh sakte hain ki dikkat kahan hai: naam ki spelling galat hai, area kam-zyada
+          dikh raha hai, ya virasat ke baad naam abhi tak purane malik ka hi chal raha hai. Yahi teen
+          cheezein zyadatar rejection ke peeche hoti hain. Jab aap Patwari ke paas jaate hain to seedha
+          bata sakte hain ki kya theek karana hai — ye poori baat ek chakkar mein khatam kara deta hai.
+        </p>
+
+        <p>
+          Online dekhna free hai, lekin agar kisi kaam ke liye <strong>certified copy</strong> chahiye to
+          wo e-Mitra se milti hai — lagbhag ₹10 per page. Portal se print nikaal kar reference ke liye
+          rakh sakte hain, magar office mein certified copy hi chalti hai. Mutation (naam badalne) ki
+          arzi bhi isi portal se lagti hai; Rajasthan ka apna record batata hai ki mutation case average
+          taur par lagbhag 24 din mein nipat jaate hain — matlab kist ka intezaar karne se behtar hai ki
+          season se pehle hi arzi laga dein.
         </p>
 
         <Fig
@@ -310,6 +441,22 @@ export default function RajasthanKisanSammanNidhi9000() {
 
         <p>
           <strong>"Amount kam ya zyada aaya"</strong> — kabhi purani kist ka arrear naye payment ke saath jud jaata hai. Jan Soochna portal ki transaction history mein poora hisaab mil jaayega.
+        </p>
+
+        <p>
+          <strong>&quot;Ghar mein do logon ke naam zameen hai, kist ek ko hi aayi&quot;</strong> &mdash; ye galti
+          nahi hai. Ek parivaar se ek hi benefit banta hai, aur Jan Aadhaar family record hi tay karta
+          hai ki &ldquo;parivaar&rdquo; kaun hai. Zameen batwaare ke baad bhi agar Jan Aadhaar mein sab ek hi
+          family ID mein hain, to system ek hi ghar ginta hai. Alag benefit chahiye to pehle Jan Aadhaar
+          mein parivaar alag hona chahiye — aur wo tabhi hota hai jab waqai alag ghar ho, kaagaz par
+          dikhawe se nahi.
+        </p>
+
+        <p>
+          <strong>&quot;OTP us mobile par aa raha hai jo ab mera nahi hai&quot;</strong> &mdash; Rajasthan mein ye
+          do jagah theek karna padta hai, ek jagah nahi. Pehle Aadhaar mein number update karayein, phir
+          Jan Aadhaar ke record mein. Sirf ek jagah badalne se status page khulta rahega magar state ka
+          verification purane number par hi atka rahega.
         </p>
 
         <h2>Documents Jo Kaam Aa Sakte Hain</h2>
