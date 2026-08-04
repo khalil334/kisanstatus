@@ -42,11 +42,11 @@ export default function RajasthanKisanSammanNidhi9000() {
   const faqs = [
     {
       q: 'Kya ₹12,000 ki badhotri confirm ho chuki hai?',
-      a: 'Nahi. CM Bhajanlal Sharma ne prastaav rakha hai ki state apna hissa double kar de, lekin gazette notification abhi nahi aaya. Jab tak wo nahi aata, kagaz par ye sirf ek idea hai — paisa ₹9,000 wale hisaab se hi maano.',
+      a: '⚠️ Ye abhi sirf ghoshna hai, official notification nahi aaya. Jab tak Finance ya Agriculture Department ka gazette notification na aaye, paisa ₹9,000 wale hisaab se hi maano.',
     },
     {
       q: '6vi kist kab tak aa jaani chahiye?',
-      a: 'Koi fix date nahi hai abhi. April mein release honi thi, verification mein atak gayi. August tak aane ki baat chal rahi hai lekin ye estimate hai, promise nahi. Sabse accurate cheez apna Aadhaar number Jan Soochna portal par daal ke dekh lena hai.',
+      a: 'Officially koi date announce nahi hui hai. Kisi bhi tareekh ka andaaza lagana bekaar hai — WhatsApp par ghoom rahi dates par bharosa na karein. Sahi jaankari ek hi jagah milegi: apna Aadhaar number Jan Soochna portal par daal kar khud status dekh lein.',
     },
     {
       q: 'Registration alag se karna padega kya?',
@@ -72,7 +72,7 @@ export default function RajasthanKisanSammanNidhi9000() {
 
         <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
           <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
-            <strong>Status (4 August 2026):</strong> 6vi kist abhi bhi pending hai. April mein aani thi, verification mein phas gayi. Neeche jitni bhi dates likhi hain, wo estimate hain — koi bhi WhatsApp forward maankar mat chaliye.
+            <strong>Status (4 August 2026):</strong> 6vi kist abhi pending hai — April 2026 mein aani thi, verification mein atak gayi. ⚠️ Nayi release date officially announce nahi hui hai; kisi bhi WhatsApp forward wali tareekh par bharosa na karein.
           </p>
         </div>
 
@@ -210,7 +210,7 @@ export default function RajasthanKisanSammanNidhi9000() {
         <h2>₹12,000 Ka Sach — Announcement Aur Notification Mein Fark Hai</h2>
 
         <p>
-          CM Bhajanlal Sharma ne prastaav rakha hai ki state apna ₹3,000 wala hissa badhakar ₹6,000 kar de — jisse total ₹12,000 tak pahunch jaaye. News mein khoob chal raha hai, isme koi shak nahi.
+          CM Bhajanlal Sharma ne prastaav rakha hai ki state apna ₹3,000 wala hissa badhakar ₹6,000 kar de — jisse total ₹12,000 tak pahunch jaaye. ⚠️ Ye abhi sirf ghoshna hai, official notification nahi aaya.
         </p>
 
         <p>
@@ -351,7 +351,7 @@ export default function RajasthanKisanSammanNidhi9000() {
         />
 
         <p>
-          Fir bhi kuch samajh na aaye to helpline try karo — Toll Free <strong>1064</strong>, WhatsApp <strong>9413502834</strong>. (Ye numbers publicly listed hain; call se pehle ek baar portal par bhi confirm kar lo, kyunki helpline numbers samay samay par badalte rehte hain.)
+          Fir bhi kuch samajh na aaye to apne District Agriculture Office ya Gram Panchayat ke e-Mitra kiosk par jaakar case dikhaayein — status ka screenshot aur passbook saath rakhein. Helpline number portal par samay samay par badalte rehte hain, is liye number seedha Jan Soochna portal ke &ldquo;Contact&rdquo; section se hi lein.
         </p>
 
         <p>
@@ -477,7 +477,7 @@ export default function RajasthanKisanSammanNidhi9000() {
 
         <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
-            <strong>Ek baat saaf sun lo:</strong> ye scheme poori tarah free aur automatic hai. Koi agent "registration karwane" ke naam par paisa maange, to samajh jao wo fraud hai. Report karo, paisa mat do.
+            <strong>Fraud se bachein:</strong> ye scheme poori tarah free aur automatic hai. Koi agent "registration karwane" ke naam par paisa maange, to wo fraud hai. Paisa mat do — Rajasthan Anti-Corruption Bureau ki helpline <strong>1064</strong> par shikayat darj karwaayein.
           </p>
         </div>
 
@@ -495,7 +495,7 @@ export default function RajasthanKisanSammanNidhi9000() {
         <h2>FAQs</h2>
         <FAQBlock faqs={faqs} caption="Rajasthan Kisan Samman Nidhi FAQ 2026" />
 
-        <h2>Aakhri Baat</h2>
+        <h2>Kist Ko Lekar Realistic Kaise Rahein</h2>
 
         <p>
           ₹9,000 saal bhar mein koi bahut badi raashi nahi lagti, lekin beej-khaad-diesel ke badhte kharche mein har kist kaam aati hai. Iska zyada faayda tabhi hoga jab aap timeline ko lekar realistic raho — jo confirm hai usi par plan karo, jo announcement hai usko bonus samjho.
@@ -508,12 +508,12 @@ export default function RajasthanKisanSammanNidhi9000() {
         <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
             <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
-            Ye article sirf jankari ke liye hai. Kist dates, badhotri, aur eligibility rules samay samay par badal sakte hain. Apply ya status check se pehle Jan Soochna portal ya apne District Agriculture office se current status zaroor confirm kar lein. Last updated: August 2026.
+            Ye article sirf madad ke liye hai. Final decision ke liye official portal ya krishi office se sampark karein.
           </p>
         </div>
 
         <div className="mt-12 pt-8 border-t-2 border-gray-200 dark:border-gray-700 not-prose">
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">Aage Kya Padhein?</h3>
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">Isse Judi Zaroori Jaankari</h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <Link href="/articles/PmKisan24viKist2026" className="group flex flex-col bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-green-500 hover:shadow-lg transition-all">
               <h4 className="font-bold text-gray-900 dark:text-gray-100 group-hover:text-green-600 transition-colors mb-1">PM Kisan 24vi Kist</h4>
