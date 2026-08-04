@@ -181,6 +181,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
     published: '2026-08-03T09:00:00+05:30',
     modified: '2026-08-03T09:00:00+05:30',
     readTime: '10 min read',
+    ogImage: '/images/articles/rajya-yojna/krishak-bandhu-status-check-2026/hero.webp',
     relatedPaths: ['/articles/PmKisanMasterGuide2026', '/articles/PmKisanCorrectionForm2026'],
   },
   {
@@ -204,6 +205,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
     published: '2026-08-03T09:00:00+05:30',
     modified: '2026-08-03T09:00:00+05:30',
     readTime: '10 min read',
+    ogImage: '/images/articles/rajya-yojna/odisha-cm-kisan-status-check-2026/hero.webp',
     relatedPaths: ['/articles/PmKisanMasterGuide2026', '/articles/PmKisanBeneficiaryList2026'],
   },
   {
@@ -227,6 +229,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
     published: '2026-08-03T09:00:00+05:30',
     modified: '2026-08-03T09:00:00+05:30',
     readTime: '9 min read',
+    ogImage: '/images/articles/rajya-yojna/pm-kisan-pati-patni-dono-ko-milega/hero.webp',
     relatedPaths: [
       '/articles/PmKisanVoluntarySurrenderGuide',
       '/articles/PmKisanRejectedStatusReApplyGuide',
@@ -252,6 +255,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
     published: '2026-08-03T09:00:00+05:30',
     modified: '2026-08-03T09:00:00+05:30',
     readTime: '12 min read',
+    ogImage: '/images/articles/rajya-yojna/state-kisan-yojana-list-all-states-2026/hero.webp',
     relatedPaths: ['/articles/PmKisanMasterGuide2026'],
   },
 ];
