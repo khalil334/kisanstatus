@@ -185,7 +185,7 @@ export default function PmKisanRejectedStatusReApplyGuide({ article }: { article
             Bhai, subah utha, mobile nikala, PM Kisan ka status check kiya. Likha aa raha hai — <strong>"Rejected"</strong>. Dil dhak se ho gaya. 3-4 mahine ki kist ka paisa atak gaya. Dimag mein sawal aane lagte hain: "Meri galti kahan thi? Ab kya hoga? Paisa doob gaya kya?"
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Sabse pehle toh saans lo. <strong>PM Kisan rejected status</strong> hona koi badi baat nahi hai. Har mahine lakhon kisanon ka status reject hota hai aur agle mahine fix ho kar wapas active ho jata hai. Bas aapko ye pata hona chahiye ki galti kahan thi aur use kaise theek karna hai.
+            <strong>PM Kisan rejected status</strong> aana aam baat hai. Har mahine lakhon kisanon ka status reject hota hai aur agle mahine fix ho kar wapas active ho jata hai. Bas aapko ye pata hona chahiye ki galti kahan thi aur use kaise theek karna hai.
           </p>
           
           <Image
@@ -204,7 +204,7 @@ export default function PmKisanRejectedStatusReApplyGuide({ article }: { article
           </DB>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
-            Is article mein hum ek ek karke sabhi rejection reasons ko kholenge aur batayenge ki <strong>pm kisan dobara apply kaise karein</strong> ka sahi tarika kya hai. <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">Beneficiary list</Link> check karne se pehle ye guide zaroor padh lena.
+            Neeche har rejection reason alag-alag diya hai, aur saath mein ye bhi ki <strong>pm kisan dobara apply kaise karein</strong> ka sahi tarika kya hai. <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">Beneficiary list</Link> check karne se pehle ye guide zaroor padh lena.
           </p>
         </section>
 

@@ -366,7 +366,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
           <SH>Soil Health Card Ka Fayda — Actual Numbers</SH>
           
           <p className="text-sm text-gray-700 leading-relaxed mb-4">
-            Maine khud dekha hai ki soil test karne wale farmers ka production badh jaata hai. Ye numbers dekho:
+            Soil test ke baad sahi khaad daalne se production par asar padta hai. Ye numbers dekhein:
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">

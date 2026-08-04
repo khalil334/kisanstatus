@@ -426,7 +426,7 @@ export default function MushroomKheti() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        <strong>Antim salah:</strong> Bina research ke kisi private vendor ki baaton mein aakar decision na lein jo "lakhon ka profit" ka wada karein. Pehle apne nazdeeki Krishi Vigyan Kendra (KVK) jayein. Wahan ke officers aapko exact subsidy, eligible vendors ki list, aur free practical training ke baare mein guide karenge. Uske baad kam se kam 3 vendors se quotation lein, unke purane installations dekhne jayein, aur phir hi apply karein.
+        <strong>Dhyan rakhein:</strong> Bina research ke kisi private vendor ki baaton mein aakar decision na lein jo "lakhon ka profit" ka wada karein. Pehle apne nazdeeki Krishi Vigyan Kendra (KVK) jayein. Wahan ke officers aapko exact subsidy, eligible vendors ki list, aur free practical training ke baare mein guide karenge. Uske baad kam se kam 3 vendors se quotation lein, unke purane installations dekhne jayein, aur phir hi apply karein.
       </p>
 
       <Image 

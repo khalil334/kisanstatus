@@ -87,7 +87,7 @@ export default function PmKisanFaceAuthenticationEkyc({ article }: { article: Ar
 
         {/* Introduction */}
         <section className="mb-8">
-          <SH>OTP Nahi Aa Raha? Tension Mat Lo</SH>
+          <SH>OTP Nahi Aa Raha To Kya Karein</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Roz mere paas aise messages aate hain — "Bhaiya OTP hi nahi aa raha, kya karein?" Mobile number purana ho gaya hai, ya network sahi nahi chal raha. Aise mein <Link href="/articles/PmKisanEkycOnline2026" className="underline text-green-700 dark:text-green-400">normal eKYC</Link> ruk jaati hai aur kist aane mein dikkat hoti hai.
           </p>
