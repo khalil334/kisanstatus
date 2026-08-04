@@ -43,11 +43,11 @@ function Fig({
 const FAQS_DATA = [
   {
     q: 'Kya YSR Rythu Bharosa aur Annadata Sukhibhava ek hi scheme hai?',
-    a: 'Haan. Andhra Pradesh sarkar ne YSR Rythu Bharosa ko officially rename karke "Annadata Sukhibhava" kar diya hai. Benefits aur eligibility lagbhag same hain — naam aur kuch administrative processes update hue hain.',
+    a: 'Haan. Andhra Pradesh sarkar ne YSR Rythu Bharosa ko officially rename karke "Annadata Sukhibhava" kar diya hai. Benefits aur eligibility lagbhag same hain, bas naam aur kuch administrative processes update hue hain.',
   },
   {
     q: 'Agar mere paas zameen nahi hai, kya main apply kar sakta hoon?',
-    a: 'Haan. Tenant farmer hain aur valid CCRC (Crop Cultivator Rights Card) hai toh aap eligible hain. Yahi is scheme ka sabse bada fark hai — dusre states mein bataidar aksar bahar reh jaate hain.',
+    a: 'Haan. Tenant farmer hain aur valid CCRC (Crop Cultivator Rights Card) hai toh aap eligible hain. Yahi is scheme ka sabse bada fark hai. Dusre states mein bataidar aksar bahar reh jaate hain.',
   },
   {
     q: 'Payment status mein "Pending" dikh raha hai, kya karein?',
@@ -55,7 +55,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Kya mujhe alag se PM Kisan ke liye apply karna padega?',
-    a: 'Aapka data state database mein hai toh sarkar PM Kisan ke liye bhi consider karti hai. Lekin apna PM Kisan status alag se pmkisan.gov.in par zaroor check kar lein — dono ke records alag chalte hain.',
+    a: 'Aapka data state database mein hai toh sarkar PM Kisan ke liye bhi consider karti hai. Lekin apna PM Kisan status alag se pmkisan.gov.in par zaroor check kar lein, kyunki dono ke records alag chalte hain.',
   },
   {
     q: 'Agar main government employee hoon, kya mujhe ye paisa milega?',
@@ -79,7 +79,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
       </p>
 
       <p>
-        Is scheme ki khaas baat aage aati hai — bataidar kisan bhi isme aate hain, jo PM Kisan mein
+        Is scheme ki khaas baat aage aati hai. Bataidar kisan bhi isme aate hain, jo PM Kisan mein
         nahi aate. Pehle status dekhne ka tareeka aur eligibility, phir wahi fark.
       </p>
 
@@ -97,11 +97,30 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         label="Official Portal — Annadatha Sukhibhava AP"
       />
 
+      <h2>Rythu Bharosa Se Annadata Sukhibhava Tak — Naam Kyun Badla</h2>
+
+      <p>
+        Thoda background samajh lein, kyunki isi confusion mein bahut log galat portal par status
+        dhoondhte reh jaate hain. 2019 mein jab YSR sarkar aayi thi, tab scheme ka naam tha
+        <em> YSR Rythu Bharosa</em> aur portal tha <code>ysrrythubharosa.ap.gov.in</code>. 2024 mein
+        sarkar badli, aur nayi TDP-led coalition sarkar ne scheme ko continue rakha lekin naam badal
+        kar <strong>Annadata Sukhibhava</strong> kar diya. Amount bhi badha: pehle state ka hissa
+        ₹7,500 tha, ab combined package ₹20,000 tak pahunch gaya hai.
+      </p>
+
+      <p>
+        Iska practical matlab ye hai: agar aap purane Rythu Bharosa mein registered the, toh aapka
+        data naye system mein migrate ho chuka hai. Aapko naye siray se apply karne ki zaroorat
+        nahi. Lekin status ab naye portal <code>annadathasukhibhava.ap.gov.in</code> par hi milega.
+        Purana portal ya toh redirect karega ya purana data dikhayega, jisse log ghabra jaate hain
+        ki unka naam kat gaya. Naam kata nahi hai, sirf ghar badla hai.
+      </p>
+
       <h2>Kitna Paisa, Kahan Se Aata Hai</h2>
 
       <p>
-        Naam ka matlab hai "annadata sukhi rahe". Paisa seedha bank account mein aata hai — beej, khaad
-        aur season ke baaki kharchon ke liye.
+        Naam ka matlab hai "annadata sukhi rahe". Paisa seedha bank account mein aata hai, taaki
+        beej, khaad aur season ke baaki kharche waqt par ho sakein.
       </p>
 
       <p>
@@ -139,13 +158,35 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
 
       <p>
         PM Kisan mein sirf zameen ke malik aate hain. Yahan <strong>bataidar</strong> (tenant farmer) aur
-        CCRC — Crop Cultivator Rights Card — wale kisan ko bhi poora support milta hai.
+        CCRC (Crop Cultivator Rights Card) wale kisan ko bhi poora support milta hai.
       </p>
 
       <p>
         AP mein hazaron kisan doosron ki zameen lease par lekar kheti karte hain. Saalon tak wo central
         schemes se bahar rehte the, sirf isliye ki khata unke naam nahi tha. Valid CCRC card hai to
         aap is scheme mein poore eligible hain.
+      </p>
+
+      <h3>CCRC Card Nahi Hai? Aise Banega</h3>
+
+      <p>
+        CCRC ka poora naam hai Crop Cultivator Rights Card, jo AP Land Licensed Cultivators Act ke
+        under banta hai. Ye card har saal renew hota hai kyunki lease agreements season-wise hote
+        hain. Banwane ka process:
+      </p>
+
+      <ol>
+        <li>Apne <strong>Gram Sachivalayam</strong> (Village Secretariat) jaayein aur Village Agriculture Assistant (VAA) se milein.</li>
+        <li>Zameen ke malik ke saath ek simple consent form bharna hota hai. Malik ki zameen ka khata number aur aapka Aadhaar chahiye.</li>
+        <li>VAA field verification karta hai ki aap actually us zameen par kheti kar rahe hain.</li>
+        <li>Verification ke baad card issue hota hai, jo us crop year ke liye valid rehta hai.</li>
+      </ol>
+
+      <p>
+        Ek zaroori baat jo bahut kisan miss karte hain: CCRC banwane se zameen ke malik ka haq
+        bilkul kamzor nahi hota. Act mein saaf likha hai ki ye card sirf kheti karne ka certificate
+        hai, ownership ka koi claim nahi banata. Isliye maalik ko convince karna asaan hai. Fir bhi
+        koi maalik mana kare, toh VAA ke through baat karwane se aksar raasta nikal aata hai.
       </p>
 
       <Fig
@@ -157,7 +198,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
       <h2>Kaun Eligible Hai</h2>
 
       <p>
-        Chaar basic shartein hain. Chaaron poori honi chahiye — ek bhi chhooti to payment ruk jaati hai:
+        Chaar basic shartein hain. Chaaron poori honi chahiye, ek bhi chhooti to payment ruk jaati hai:
       </p>
 
       <ul>
@@ -175,10 +216,18 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         <li>Retired pensioners jinki monthly pension ₹10,000 se zyada hai.</li>
       </ul>
 
+      <p>
+        Exclusion parivar ke level par lagta hai, sirf applicant par nahi. Maan lijiye aap kheti
+        karte hain lekin aapki patni government school mein teacher hai. Aap dono ek hi parivar
+        (husband, wife, minor children) mein aate hain, isliye aap exclusion mein aa jayenge. Kai
+        kisanon ko ye baat tab pata chalti hai jab do-teen kist aane ke baad recovery notice aata
+        hai. Isliye pehle hi check kar lena behtar hai.
+      </p>
+
       <h2>Kist Kab Aati Hai — Season Ka Hisaab</h2>
 
       <p>
-        AP sarkar kist ko kheti ke season se joddti hai — Kharif, Rabi aur Summer. Isliye teen kist
+        AP sarkar kist ko kheti ke season se jodti hai: Kharif, Rabi aur Summer. Isliye teen kist
         banti hain, aur unka waqt buwai ke aas-paas rakha jaata hai:
       </p>
 
@@ -216,8 +265,8 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
       <h2>Apna Status Kaise Dekhein</h2>
 
       <p>
-        Aadhaar number ya Application ID paas rakhein, aur financial year sahi select karein — galat
-        year par purana record dikh jaata hai:
+        Aadhaar number ya Application ID paas rakhein, aur financial year sahi select karein. Galat
+        year select hua to purana record dikh jaata hai:
       </p>
 
       <Fig
@@ -248,11 +297,45 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
       </p>
 
       <ol>
-        <li>Official portal ke "Reports" ya "Beneficiary List" section mein jaayein.</li>
+        <li>Portal par login kiye bina hi "Reports" section khulta hai. Wahan "Beneficiary List" chunein.</li>
         <li>Apna District, Mandal, aur Panchayat select karein.</li>
         <li>"Search" par click karein.</li>
-        <li>Aapke gaon ki puri list download ya view ho jayegi. Yahan aap apna naam ya apne parivar ke kisi sadasya ka naam search kar sakte hain.</li>
+        <li>Aapke gaon ki puri list khul jayegi ya PDF mein download hogi. Ctrl+F (mobile par browser ka "Find in page") se apna naam ya parivar ke kisi sadasya ka naam dhoondh lein.</li>
       </ol>
+
+      <p>
+        List Telugu mein bhi ho sakti hai. Agar naam Telugu script mein dhoondhna mushkil lag raha
+        hai, toh Aadhaar number ke aakhri 4 digits se search karein. Zyada tar lists mein masked
+        Aadhaar (XXXX-XXXX-1234 format) hota hai, aur wahi sabse bharosemand tareeka hai apni entry
+        pakadne ka.
+      </p>
+
+      <h2>Status "Rejected" Dikhaye Toh Kya Karein</h2>
+
+      <p>
+        Pending aur Rejected mein bada fark hai. Pending ka matlab file process mein hai, intezaar
+        kaafi hai. Rejected ka matlab system ne aapka record verify karke actively mana kar diya
+        hai, aur bina action ke ye apne aap theek nahi hoga. Rejected ke teen sabse common reasons:
+      </p>
+
+      <ul>
+        <li>
+          <strong>Land record mismatch:</strong> Webland (AP ka online land records system) mein
+          aapki zameen ka data scheme database se match nahi kar raha. Aksar aisa tab hota hai jab
+          zameen ka mutation (naam transfer) recently hua ho. Solution: apne Tahsildar office se
+          Webland record update karwayein, phir Gram Sachivalayam mein re-verification request dein.
+        </li>
+        <li>
+          <strong>Duplicate Aadhaar entry:</strong> Ek hi Aadhaar do jagah registered hai, jaise
+          purane Rythu Bharosa data aur naye CCRC registration dono mein. System dono ko dekh kar
+          duplicate flag laga deta hai. Solution: VAA se milkar purani entry cancel karwayein.
+        </li>
+        <li>
+          <strong>Exclusion criteria hit:</strong> Income tax record ya employment data ke against
+          match aaya hai. Agar ye galat hai (jaise aapke naam ka koi aur ITR file karta hai), toh
+          DAO office mein grievance file karke documents ke saath appeal kar sakte hain.
+        </li>
+      </ul>
 
       <h2>List Mein Naam Hai Par Paisa Nahi Aaya</h2>
 
@@ -329,7 +412,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
       <h2>AP Se Bahar Ke Kisan Yahan Dekhein</h2>
 
       <p>
-        Bataidar wala niyam sirf AP mein hai — baaki rajyon mein khata malik ke naam hona zaroori
+        Bataidar wala niyam sirf AP mein hai. Baaki rajyon mein khata malik ke naam hona zaroori
         rehta hai. Apne rajya ka niyam yahan dekh lein:
       </p>
 
@@ -366,7 +449,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
       <h2>Kahan Shikayat Karein</h2>
 
       <p>
-        Online status nahi khul raha, naam sudharwana hai, ya payment atki hai — teen official raste
+        Online status nahi khul raha, naam sudharwana hai, ya payment atki hai? Teen official raste
         hain:
       </p>
       <ul>
