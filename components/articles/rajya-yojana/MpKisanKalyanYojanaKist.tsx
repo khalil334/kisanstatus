@@ -47,7 +47,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Is state top-up ka amount kitna hai?',
-    a: 'Official records aur SAARA portal ke mutabik ye raqam ₹1,000 saalana rahi hai. Internet par chal rahi ₹4,000 ya ₹6,000 ki afwaahon par dhyan na dein jab tak gazette notification na aa jaye.',
+    a: 'State top-up ₹6,000 saalana hai, teen kiston mein ₹2,000-₹2,000. Scheme 2020 mein ₹4,000 se shuru hui thi, baad mein ise ₹6,000 kar diya gaya. PM Kisan ke ₹6,000 ke saath jodkar MP ke kisan ko total ₹12,000 saalana milta hai.',
   },
   {
     q: 'Meri kist "Rejected" dikha rahi hai, kya karein?',
@@ -77,7 +77,7 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
 
       <InfoBox type="update" date="4 August 2026">
         <strong>Latest Update:</strong> Agli kist ki date SAARA portal par abhi announce nahi hui hai.
-        Pichhli kist ₹1,000 ki thi. WhatsApp par ghoom rahi "confirmed date" ka koi aadhaar nahi hai.
+        Har kist ₹2,000 ki hoti hai. WhatsApp par ghoom rahi "confirmed date" ka koi aadhaar nahi hai.
         Jab tak portal par notification na dikhe, use "expected" hi maanein.
       </InfoBox>
 
@@ -89,7 +89,8 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
       <p>
         <strong>CM Kisan Kalyan Yojana kist kab aayegi</strong> — MP ke kisan yahi poochhte
         hain, aur jawab dene wali aadhi websites afwaah chhaap deti hain. Amount par bhi
-        wahi haal: kahin ₹4,000 likha hai, kahin ₹6,000.
+        wahi haal: kahin purana ₹4,000 likha hai, kahin ₹2,000 ki ek kist ko hi saal ka
+        total bata diya jaata hai.
       </p>
 
       <p>
@@ -122,26 +123,26 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
       <p>
         Scheme September 2020 mein shuru hui thi, tab CM ne elaan kiya tha ki PM Kisan ke
         har beneficiary ko state apni taraf se top-up degi. Shuruaat mein amount ₹4,000
-        saalana tha, baad mein badha kar ₹6,000 karne ka elaan bhi hua.
+        saalana tha (do kiston mein ₹2,000-₹2,000), baad mein ise badha kar ₹6,000 kar diya
+        gaya — teen kiston mein ₹2,000 har baar.
       </p>
 
       <p>
-        Yahi purane elaan aaj tak internet par ghoomte hain aur confusion ki jad hain. Lekin
-        elaan aur actual disbursement do alag cheezein hain: budget allocation ke hisaab se
-        kiston ka amount badalta raha hai.
+        Yahi purana ₹4,000 ka figure aaj tak internet par ghoomta hai aur confusion ki jad hai.
+        Ek galti aur aam hai: log ₹2,000 ki ek kist ko hi saal ka poora amount samajh lete hain.
       </p>
 
       <p>
-        Internet par ₹2,000, ₹4,000, ₹6,000 — sab likha mil jaata hai. SAARA portal aur
-        pichhle vitthiya varsh ke records kehte hain: PM Kisan ke ₹6,000 ke upar{' '}
-        <strong>₹1,000 saalana</strong>, ek ya do kiston mein. Aapke apne account ka sach
-        jaanna ho toh passbook aur SAARA dashboard, bas yahi do jagah dekhein.
+        Seedha hisaab ye hai: PM Kisan ke ₹6,000 ke upar state ka{' '}
+        <strong>₹6,000 saalana</strong>, teen kiston mein. Yaani MP ke eligible kisan ko
+        milaakar <strong>₹12,000 saalana</strong>. Aapke apne account ka sach jaanna ho toh
+        passbook aur SAARA dashboard, bas yahi do jagah dekhein.
       </p>
 
       <InfoBox type="warning">
-        <strong>Satark Rahein:</strong> ₹4,000 ya ₹6,000 wale dawe purane ya galat hain. Gazette
-        notification aaye bina koi badha hua amount maan lena bekaar hai. Status sirf SAARA portal
-        se dekhein.
+        <strong>Satark Rahein:</strong> ₹4,000 wala figure purana hai — wo scheme ke shuruaati
+        saalon ka amount tha. Aur kist late hone par koi "jaldi nikalwane" ka dawa kare toh wo
+        fraud hai. Status sirf SAARA portal se dekhein.
       </InfoBox>
 
       <SchemeTable>
@@ -159,13 +160,13 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         </tr>
         <tr>
           <td>MP CM Kisan Kalyan Yojana</td>
-          <td>₹1,000 (Verified)</td>
+          <td>₹6,000</td>
           <td>MP State Govt</td>
-          <td>Usually 1-2 Installments</td>
+          <td>3 Installments (₹2,000 each)</td>
         </tr>
         <tr>
           <td><strong>Total Expected</strong></td>
-          <td><strong>₹7,000</strong></td>
+          <td><strong>₹12,000</strong></td>
           <td><strong>Combined</strong></td>
           <td><strong>Varies</strong></td>
         </tr>
@@ -405,7 +406,7 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         <tr>
           <td>Varshik Raashi</td>
           <td>₹6,000</td>
-          <td>₹1,000 (Verified State Top-up)</td>
+          <td>₹6,000 (State Top-up)</td>
         </tr>
         <tr>
           <td>Portal</td>
