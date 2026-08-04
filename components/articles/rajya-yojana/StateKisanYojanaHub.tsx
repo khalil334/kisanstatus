@@ -135,7 +135,7 @@ export default function StateKisanYojanaHub({ article }: { article: RajyaYojanaA
           <tr>
             <td>Telangana</td>
             <td>Rythu Bharosa</td>
-            <td>₹10,000 per acre (5 acre tak)</td>
+            <td>₹12,000 per acre (cultivable land)</td>
             <td>
               <Link href="/rajya-yojana/rythu-bharosa-status-check-2026">Status check guide</Link>
             </td>
@@ -183,7 +183,7 @@ export default function StateKisanYojanaHub({ article }: { article: RajyaYojanaA
           <tr>
             <td>Madhya Pradesh</td>
             <td>CM Kisan Kalyan Yojana</td>
-            <td>₹1,000 verified (total ₹7,000)</td>
+            <td>₹6,000 (total ₹12,000)</td>
             <td>
               <Link href="/rajya-yojana/mp-kisan-kalyan-yojana-kist-status">
                 Status check guide

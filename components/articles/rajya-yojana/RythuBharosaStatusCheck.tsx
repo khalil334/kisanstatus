@@ -47,7 +47,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Rythu Bharosa per acre amount kitna hai?',
-    a: 'Har acre ke liye saal mein ₹10,000 milte hain, jo do kiston (₹5,000 Kharif aur ₹5,000 Rabi) mein baante jaate hain.',
+    a: 'Har acre ke liye saal mein ₹12,000 milte hain, jo do kiston (₹6,000 Kharif aur ₹6,000 Rabi) mein baante jaate hain.',
   },
   {
     q: 'Mera status "Sanctioned" hai lekin paisa nahi aaya, kya karein?',
@@ -109,12 +109,12 @@ export default function RythuBharosaStatusCheck2026() {
 
       <p>
         Baaki schemes ki tarah yahan har kisan ko ek jaisa amount nahi milta. Hisaab zameen ke maap se
-        lagta hai: har acre cultivable land par ₹10,000 saalana, yaani ₹5,000 Kharif mein aur ₹5,000
+        lagta hai: har acre cultivable land par ₹12,000 saalana, yaani ₹6,000 Kharif mein aur ₹6,000
         Rabi mein.
       </p>
 
       <p>
-        Do acre wale kisan ko season mein ₹10,000 milega, ek acre wale ko ₹5,000. Isi wajah se gaon
+        Do acre wale kisan ko season mein ₹12,000 milega, ek acre wale ko ₹6,000. Isi wajah se gaon
         mein har aadmi ka amount alag dikhta hai.
       </p>
 
@@ -122,7 +122,7 @@ export default function RythuBharosaStatusCheck2026() {
         Guntas ka hisaab bhi samajh lein, kyunki Telangana mein zameen aksar acre-gunta mein boli
         jaati hai. Ek acre mein 40 guntas hote hain. Portal par land extent decimal mein dikhta hai:
         maan lijiye aapke paas 2 acre 20 guntas hai, toh system 2.5 acre padhega aur season ka
-        ₹12,500 banega. Agar aapko lagta hai ki amount kam aaya hai, toh sabse pehle apna land
+        ₹15,000 banega. Agar aapko lagta hai ki amount kam aaya hai, toh sabse pehle apna land
         extent Dharani ke record se milayen. Aksar "kam paisa aaya" ki shikayat asal mein guntas ke
         galat record ki hoti hai.
       </p>
@@ -138,7 +138,7 @@ export default function RythuBharosaStatusCheck2026() {
         </tr>
         <tr>
           <td>Benefit Per Acre</td>
-          <td>₹10,000 per year (₹5,000 per season)</td>
+          <td>₹12,000 per year (₹6,000 per season)</td>
         </tr>
         <tr>
           <td>Payment Mode</td>
@@ -149,13 +149,16 @@ export default function RythuBharosaStatusCheck2026() {
           <td>All land-owning farmers in Telangana (including tribal farmers with Podu rights)</td>
         </tr>
         <tr>
-          <td>Maximum Limit</td>
-          <td>Up to 5 acres per farmer family (as per recent policy updates)</td>
+          <td>Land Eligibility</td>
+          <td>Cultivable (arable) land only — real estate layouts, industrial aur non-cultivable plots bahar</td>
         </tr>
       </SchemeTable>
 
       <InfoBox type="info">
-        <strong>Dhyan Dein:</strong> Agar aapke paas 5 acre se zyada zameen hai, toh bhi aapko sirf 5 acre tak ka hi benefit (₹25,000 per season) milega. Ye limit sarkar ne chhote aur simant kisanon ko zyada se zyada fayda pahunchane ke liye lagayi hai.
+        <strong>Dhyan Dein:</strong> Paisa sirf us zameen par banta hai jo actually kheti ke
+        kaam mein hai. Satellite mapping aur Bhu Bharati record se ye verify hota hai — real
+        estate layout, industrial plot ya barson se parti padi zameen is scheme se bahar hai.
+        Isliye pattadar passbook mein zameen hone ka matlab automatic payment nahi hai.
       </InfoBox>
 
       <Fig
@@ -232,10 +235,10 @@ export default function RythuBharosaStatusCheck2026() {
 
       <p>
         Gaon mein aaj bhi purana naam hi chalta hai. Kaam karne ka tareeka wahi hai; naam badla hai aur
-        kuch administrative cheezein sudhri hain. Sabse badi tabdeeli 5 acre ki cap hai. Rythu Bandhu
-        ke zamane mein badi zameen walon ko lakhon rupaye tak mil jaate the, jis par kaafi aalochana
-        hui thi. Ab family ke level par 5 acre ki seema hai, jisse budget ka bada hissa chhote kisanon
-        tak pahunchta hai:
+        kuch administrative cheezein sudhri hain. Do badi tabdeeliyan hain: amount ₹10,000 se
+        badhkar ₹12,000 per acre saalana ho gaya, aur eligibility ab sirf cultivable zameen tak
+        seemit hai. Rythu Bandhu ke zamane mein real estate layout aur parti zameen par bhi paisa
+        chala jaata tha, jis par kaafi aalochana hui thi:
       </p>
 
       <SchemeTable>
@@ -251,13 +254,13 @@ export default function RythuBharosaStatusCheck2026() {
         </tr>
         <tr>
           <td>Amount Per Acre</td>
-          <td>₹10,000/year</td>
           <td>₹10,000/year (₹5,000/season)</td>
+          <td>₹12,000/year (₹6,000/season)</td>
         </tr>
         <tr>
-          <td>Land Limit</td>
-          <td>No strict upper limit initially</td>
-          <td>Capped at 5 acres per family for equitable distribution</td>
+          <td>Land Eligibility</td>
+          <td>Pattadar passbook ke aadhaar par, kheti ho ya na ho</td>
+          <td>Sirf cultivable land — satellite mapping se verify</td>
         </tr>
         <tr>
           <td>Tribal Farmers</td>
