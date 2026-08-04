@@ -6,6 +6,7 @@ import {
   getRajyaYojanaArticle,
   type RajyaYojanaArticleMeta,
 } from '@/lib/rajya-yojana-data';
+import { getArticleBySlug } from '@/lib/articles-data';
 import {
   SITE_URL,
   SITE_NAME,
@@ -278,15 +279,21 @@ export default async function RajyaYojanaArticlePage({
               <span>📄</span> PM Kisan Guides
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-              {article.relatedPaths.map((path) => (
-                <Link
-                  key={path}
-                  href={path}
-                  className="flex items-center gap-3 p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors text-sm font-medium text-[var(--color-text)] no-underline"
-                >
-                  <span>{path.split('/').pop()}</span>
-                </Link>
-              ))}
+              {article.relatedPaths.map((path) => {
+                // Anchor text must be the real article title, not the raw slug
+                // (`/articles/PmKisanMasterGuide2026` -> "PM Kisan Master Guide 2026 ...").
+                const slug = path.split('/').pop() ?? '';
+                const label = getArticleBySlug(slug)?.title ?? slug;
+                return (
+                  <Link
+                    key={path}
+                    href={path}
+                    className="flex items-center gap-3 p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors text-sm font-medium text-[var(--color-text)] no-underline"
+                  >
+                    <span>{label}</span>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </section>
