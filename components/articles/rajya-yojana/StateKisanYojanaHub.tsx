@@ -4,6 +4,22 @@ import type { RajyaYojanaArticleMeta } from '@/lib/rajya-yojana-data';
 import InfoBox from '@/components/ui/InfoBox';
 import SchemeTable from '@/components/ui/SchemeTable';
 import StateYojanaFinder from '@/components/articles/rajya-yojana/tools/StateYojanaFinder';
+import { FAQBlock } from '@/components/ArticleShared';
+
+const FAQS_DATA = [
+  {
+    q: 'Kya har rajya PM Kisan ke upar apna paisa deta hai?',
+    a: 'Nahi. Sirf kuch rajyon ne apni alag income-support scheme banayi hai — jaise Maharashtra, Rajasthan, Madhya Pradesh, Andhra Pradesh, Telangana, West Bengal aur Odisha. Baaki rajyon mein saal bhar ka hisaab sirf PM Kisan ke ₹6,000 se banta hai.',
+  },
+  {
+    q: 'State scheme lene se PM Kisan band ho jaata hai?',
+    a: 'Nahi. Dono alag sarkar ki alag scheme hain aur ek doosre ko cancel nahi karti. Kai rajyon mein state scheme ki eligibility hi PM Kisan record se uthai jaati hai.',
+  },
+  {
+    q: 'PM Kisan aa gaya lekin state ka paisa nahi aaya, kya karein?',
+    a: 'Ye aam baat hai — dono ki payment cycle aur verification alag hoti hai. State ka status uske apne portal par dekhein, aur e-KYC, land record aur bank ki NPCI seeding teeno check karein. Zyadatar case in teen mein se ek par atakta hai.',
+  },
+];
 
 const IMG_BASE = '/images/articles/rajya-yojna/state-kisan-yojana-list-all-states-2026';
 
@@ -41,82 +57,9 @@ function Fig({
 }
 
 export default function StateKisanYojanaHub({ article }: { article: RajyaYojanaArticleMeta }) {
-  const canonicalUrl =
-    'https://kisanstatus.com/rajya-yojana/state-kisan-yojana-list-all-states-2026';
-
-  const articleSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline:
-      'State Kisan Yojana List 2026 — Kis Rajya Mein Kitna Paisa, Kaun Si Scheme Aur Kahan Status Dekhein',
-    description: article.description,
-    image: `https://kisanstatus.com${IMG_BASE}/hero.webp`,
-    author: {
-      '@type': 'Organization',
-      name: 'KisanStatus Team',
-      url: 'https://kisanstatus.com/about',
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'KisanStatus.com',
-      url: 'https://kisanstatus.com',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://kisanstatus.com/logo.png',
-        width: 250,
-        height: 60,
-      },
-    },
-    datePublished: article.published,
-    dateModified: article.modified,
-    inLanguage: 'hi-IN',
-    mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
-  };
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Kya har rajya PM Kisan ke upar apna paisa deta hai?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text:
-            'Nahi. Sirf kuch rajyon ne apni alag income-support scheme banayi hai — jaise Maharashtra, Rajasthan, Madhya Pradesh, Andhra Pradesh, Telangana, West Bengal aur Odisha. Baaki rajyon mein saal bhar ka hisaab sirf PM Kisan ke ₹6,000 se banta hai.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'State scheme lene se PM Kisan band ho jaata hai?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text:
-            'Nahi. Dono alag sarkar ki alag scheme hain aur ek doosre ko cancel nahi karti. Kai rajyon mein state scheme ki eligibility hi PM Kisan record se uthai jaati hai.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'PM Kisan aa gaya lekin state ka paisa nahi aaya, kya karein?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text:
-            'Ye aam baat hai — dono ki payment cycle aur verification alag hoti hai. State ka status uske apne portal par dekhein, aur e-KYC, land record aur bank ki NPCI seeding teeno check karein. Zyadatar case in teen mein se ek par atakta hai.',
-        },
-      },
-    ],
-  };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
 
       <article className="max-w-3xl mx-auto px-4 py-8 prose prose-lg dark:prose-invert prose-headings:font-bold prose-a:text-blue-600 dark:prose-a:text-blue-400">
         <h1 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
@@ -487,6 +430,10 @@ export default function StateKisanYojanaHub({ article }: { article: RajyaYojanaA
             private site par aapka record nahi hota, sirf jaankari hoti hai.
           </li>
         </ul>
+
+        <h2>List Ke Baare Mein Aksar Poochhe Jaane Wale Sawaal</h2>
+
+        <FAQBlock faqs={FAQS_DATA} caption="State kisan yojana list — FAQ 2026" />
 
         <h2>Aakhri Baat</h2>
 

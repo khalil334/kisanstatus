@@ -3,6 +3,7 @@ import Image from 'next/image';
 import ExternalLinkButton from '@/components/ui/ExternalLinkButton';
 import InfoBox from '@/components/ui/InfoBox';
 import SchemeTable from '@/components/ui/SchemeTable';
+import { FAQBlock } from '@/components/ArticleShared';
 
 const IMG_BASE = '/images/articles/rajya-yojna/mp-kisan-kalyan-yojana-kist-status';
 
@@ -38,6 +39,29 @@ function Fig({
     </figure>
   );
 }
+
+const FAQS_DATA = [
+  {
+    q: 'Kya mujhe iske liye alag se application deni padegi?',
+    a: 'Nahi. PM Kisan ke registered beneficiary hain aur MP ke nivaasi hain, toh sarkar aapko automatically is scheme mein shamil kar leti hai. Alag se form bharne ki zaroorat nahi hoti.',
+  },
+  {
+    q: 'MP Kisan Kalyan Yojana ka amount kitna hai?',
+    a: 'Official records aur SAARA portal ke mutabik ye raqam ₹1,000 saalana rahi hai. Internet par chal rahi ₹4,000 ya ₹6,000 ki afwaahon par dhyan na dein jab tak gazette notification na aa jaye.',
+  },
+  {
+    q: 'Meri kist "Rejected" dikha rahi hai, kya karein?',
+    a: 'Rejection ki sabse badi wajah bank account ka DBT se na juda hona ya Aadhaar mein naam ka mismatch hai. Bank mein jaakar NPCI Seeding status check karwayein, aur zaroorat pade toh Patwari se land record mein naam sudharwayein.',
+  },
+  {
+    q: 'Kya main apna status mobile se check kar sakta hoon?',
+    a: 'Haan. SAARA portal mobile par khulta hai. Registered mobile number par aaye OTP ke zariye kabhi bhi status dekh sakte hain.',
+  },
+  {
+    q: 'Agar main MP se bahar shift ho gaya hoon, toh kya mujhe paisa milega?',
+    a: 'Nahi. Madhya Pradesh ka domicile hona zaroori shart hai. Shift hone ke baad us din se eligibility khatam maani jaati hai.',
+  },
+];
 
 export default function MPCMKisanKalyanYojanaKistStatus() {
   return (
@@ -307,32 +331,9 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         </li>
       </ul>
 
-      <h2>FAQs — MP CM Kisan Kalyan Yojana</h2>
+      <h2>MP Kisan Kalyan — Aksar Poochhe Jaane Wale Sawaal</h2>
 
-      <h3>1. Kya mujhe iske liye alag se application deni padegi?</h3>
-      <p>
-        Nahi. Agar aap PM Kisan Samman Nidhi ke registered beneficiary hain aur aap MP ke nivaasi hain, toh sarkar aapko automatically is scheme mein shamil kar leti hai. Alag se form bharne ki zaroorat nahi hoti.
-      </p>
-
-      <h3>2. MP Kisan Kalyan Yojana ka amount kitna hai?</h3>
-      <p>
-        Official records aur SAARA portal ke mutabik, ye amount ₹1,000 saalana raha hai. Internet par chal rahi ₹4,000 ya ₹6,000 ki afwaahon par dhyan na dein jab tak official gazette notification na aa jaye.
-      </p>
-
-      <h3>3. Meri kist "Rejected" dikha rahi hai, kya karein?</h3>
-      <p>
-        Rejection ka sabse bada karan bank account ka DBT se na juda hona ya Aadhaar mein naam ka mismatch hona hai. Apne bank mein jaakar "NPCI Seeding" status check karein aur agar zaroori ho toh Patwari se land record mein naam sudharne ko kahein.
-      </p>
-
-      <h3>4. Kya main apna status mobile se check kar sakta hoon?</h3>
-      <p>
-        Haan, bilkul. SAARA portal mobile-friendly hai. Aap apne registered mobile number par aaye OTP ke zariye kabhi bhi, kahin bhi apna status check kar sakte hain.
-      </p>
-
-      <h3>5. Agar main MP se bahar shift ho gaya hoon, toh kya mujhe paisa milega?</h3>
-      <p>
-        Nahi. Ye scheme sirf Madhya Pradesh ke sthayi nivaasiyon (permanent residents) ke liye hai. Agar aapka domicile badal gaya hai, toh aap is scheme ke eligible nahi rahenge.
-      </p>
+      <FAQBlock faqs={FAQS_DATA} caption="MP CM Kisan Kalyan Yojana FAQ 2026" />
 
       <h2>Related Articles</h2>
       <ul>

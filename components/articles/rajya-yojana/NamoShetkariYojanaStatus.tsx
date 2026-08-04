@@ -3,6 +3,7 @@ import Image from 'next/image';
 import ExternalLinkButton from '@/components/ui/ExternalLinkButton';
 import InfoBox from '@/components/ui/InfoBox';
 import SchemeTable from '@/components/ui/SchemeTable';
+import { FAQBlock } from '@/components/ArticleShared';
 
 const IMG_BASE = '/images/articles/rajya-yojna/namo-shetkari-yojana-status-check-2026';
 
@@ -38,6 +39,29 @@ function Fig({
     </figure>
   );
 }
+
+const FAQS_DATA = [
+  {
+    q: 'Kya mujhe Namo Shetkari ke liye alag se registration karna padega?',
+    a: 'Nahi. Agar aap PM Kisan mein registered hain aur Maharashtra ke nivasi hain, toh aap automatically eligible hain. Alag se koi registration ya form bharne ki zaroorat nahi hai.',
+  },
+  {
+    q: 'Namo Shetkari hapta kadhi milel?',
+    a: 'Aam taur par ye hapta PM Kisan ki kist aane ke 2-4 hafton baad release hota hai. Agla installment August-September 2026 ke beech expected hai.',
+  },
+  {
+    q: 'Mera naam beneficiary list mein nahi hai, kya karein?',
+    a: 'Pehle check karein ki aap PM Kisan mein eligible hain ya nahi. Agar PM Kisan mein hain, toh apne taluka krishi adhikari (TAL) se sampark karein aur apna 7/12 Utara aur Aadhaar details verify karwayein.',
+  },
+  {
+    q: 'Kya main apna status mobile se check kar sakta hoon?',
+    a: 'Haan. Official portal nsmny.mahait.org mobile par khulta hai. Registered mobile number par aaye OTP ke zariye kabhi bhi status dekh sakte hain.',
+  },
+  {
+    q: 'Agar main Maharashtra se bahar shift ho gaya hoon, toh kya mujhe paisa milega?',
+    a: 'Nahi. Domicile Maharashtra ka hona zaroori shart hai. Shift hone ke baad us din se eligibility khatam maani jaati hai.',
+  },
+];
 
 export default function NamoShetkariYojanaStatusCheck2026() {
   return (
@@ -292,32 +316,9 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         </li>
       </ul>
 
-      <h2>FAQs — Namo Shetkari Yojana</h2>
+      <h2>Namo Shetkari — Aksar Poochhe Jaane Wale Sawaal</h2>
 
-      <h3>1. Kya mujhe Namo Shetkari ke liye alag se registration karna padega?</h3>
-      <p>
-        Nahi. Agar aap PM Kisan mein registered hain aur Maharashtra ke nivasi hain, toh aap automatically eligible hain. Alag se koi registration ya form bharne ki zaroorat nahi hai.
-      </p>
-
-      <h3>2. Namo Shetkari hapta kadhi milel?</h3>
-      <p>
-        Aam taur par ye hapta PM Kisan ki kist aane ke 2-4 hafton baad release hota hai. Agla installment August-September 2026 ke beech expected hai.
-      </p>
-
-      <h3>3. Mera naam beneficiary list mein nahi hai, kya karein?</h3>
-      <p>
-        Pehle check karein ki aap PM Kisan mein eligible hain ya nahi. Agar PM Kisan mein hain, toh apne taluka krishi adhikari (TAL) se sampark karein aur apna 7/12 Utara aur Aadhaar details verify karwayein.
-      </p>
-
-      <h3>4. Kya main apna status mobile se check kar sakta hoon?</h3>
-      <p>
-        Haan, bilkul. Official portal <code>nsmny.mahait.org</code> mobile-friendly hai. Aap apne registered mobile number par aaye OTP ke zariye kabhi bhi apna status check kar sakte hain.
-      </p>
-
-      <h3>5. Agar main Maharashtra se bahar shift ho gaya hoon, toh kya mujhe paisa milega?</h3>
-      <p>
-        Nahi. Ye scheme sirf Maharashtra ke sthayi nivaasiyon (permanent residents) ke liye hai. Agar aapka domicile badal gaya hai, toh aap is scheme ke eligible nahi rahenge.
-      </p>
+      <FAQBlock faqs={FAQS_DATA} caption="Namo Shetkari Mahasanman Nidhi FAQ 2026" />
 
       <h2>Related Articles</h2>
       <ul>
