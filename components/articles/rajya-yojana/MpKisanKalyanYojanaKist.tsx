@@ -43,7 +43,7 @@ function Fig({
 const FAQS_DATA = [
   {
     q: 'Kya mujhe iske liye alag se application deni padegi?',
-    a: 'Nahi. PM Kisan ke registered beneficiary hain aur MP ke nivaasi hain, toh sarkar aapko automatically is scheme mein shamil kar leti hai. Alag se form bharne ki zaroorat nahi hoti.',
+    a: 'Alag form ka koi provision hi nahi hai. Is scheme ki list seedhi PM Kisan ke MP wale record se banti hai, is liye aapka kaam sirf itna hai ki PM Kisan mein aapka record chalu ho aur girdawari mein aapki fasal darj ho. Ye do cheezein theek hain to naam apne aap list mein aa jaata hai.',
   },
   {
     q: 'MP Kisan Kalyan Yojana ka amount kitna hai?',
@@ -54,12 +54,12 @@ const FAQS_DATA = [
     a: 'Rejection ki sabse badi wajah bank account ka DBT se na juda hona ya Aadhaar mein naam ka mismatch hai. Bank mein jaakar NPCI Seeding status check karwayein, aur zaroorat pade toh Patwari se land record mein naam sudharwayein.',
   },
   {
-    q: 'Kya main apna status mobile se check kar sakta hoon?',
-    a: 'Haan. SAARA portal mobile par khulta hai. Registered mobile number par aaye OTP ke zariye kabhi bhi status dekh sakte hain.',
+    q: 'SAARA portal phone par khulta hai ya CSC jaana padega?',
+    a: 'Haan, saara.mp.gov.in phone ke browser mein bhi chal jaata hai — OTP usi number par aayega jo PM Kisan/state database mein chadha hai. Purana number chadha ho aur OTP na aaye to portal par zor lagane ke bajaye seedha CSC ya kiosk par jaayein; wahan free check ho jaata hai aur number update ka raasta bhi wahin se milta hai.',
   },
   {
-    q: 'Agar main MP se bahar shift ho gaya hoon, toh kya mujhe paisa milega?',
-    a: 'Nahi. Madhya Pradesh ka domicile hona zaroori shart hai. Shift hone ke baad us din se eligibility khatam maani jaati hai.',
+    q: 'MP chhod kar doosre rajya mein bas gaya hoon — top-up milta rahega?',
+    a: 'State top-up MP ke apne budget se aata hai, is liye MP ka permanent residence chhodne ke baad ye kist band ho jaati hai. Dhyan dein ki PM Kisan par iska koi asar nahi padta — wo central scheme hai aur aapke naye rajya mein bhi chalti rehti hai. Naye rajya ka apna top-up hai ya nahi, wo alag se dekhna hoga.',
   },
   {
     q: 'Girdawari mein fasal galat darj ho gayi hai, kist par asar padega kya?',
@@ -242,10 +242,11 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
 
       <h3>Mandatory Conditions:</h3>
       <ul>
-        <li><strong>MP Ka Nivasi:</strong> Applicant ka permanent residence Madhya Pradesh mein hona chahiye.</li>
-        <li><strong>PM Kisan Mein Active:</strong> Central scheme mein aapka record chalu haalat mein hona chahiye.</li>
-        <li><strong>Landholding:</strong> Aapke paas cultivable land honi chahiye (record of rights mein naam hona chahiye).</li>
-        <li><strong>e-KYC:</strong> Aadhaar seeding aur mobile linking complete honi chahiye.</li>
+        <li><strong>MP domicile:</strong> Permanent residence Madhya Pradesh ka ho — kheti MP mein aur rehna kisi doosre rajya mein, is combination par top-up nahi banta.</li>
+        <li><strong>PM Kisan record chaalu:</strong> Central scheme mein aapki file active ho; wahan hold lagte hi state ki kist bhi ruk jaati hai.</li>
+        <li><strong>Zameen RoR mein aapke naam:</strong> Cultivable land ka record of rights aapke naam par darj ho, sirf kabza kaafi nahi.</li>
+        <li><strong>Girdawari mein fasal darj:</strong> Jis season ki fasal SAARA mein darj nahi, us season ki state kist atak sakti hai — ye MP ki apni extra shart hai.</li>
+        <li><strong>e-KYC poori:</strong> Aadhaar seeding aur mobile linking dono complete hon.</li>
       </ul>
 
       <h3>Exclusion List (Kaun Nahi Le Sakta):</h3>
@@ -301,10 +302,10 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
       </p>
 
       <ol>
-        <li>SAARA portal par "Reports" ya "Beneficiary List" section mein jaayein.</li>
-        <li>Apna <strong>Zila (District)</strong>, <strong>Janpad (Block)</strong>, aur <strong>Gram Panchayat</strong> select karein.</li>
-        <li>"Search" ya "Download PDF" par click karein.</li>
-        <li>List mein apna naam ya pitaji/pati ka naam search karein (Ctrl+F ka upyog karein).</li>
+        <li>SAARA portal par "Reports" ya "Beneficiary List" section kholein.</li>
+        <li>Zila, Janpad aur Gram Panchayat — teeno dropdown apne gaon ke hisaab se bharein.</li>
+        <li>List generate karein; MP mein ye aksar PDF ke roop mein utarti hai.</li>
+        <li>PDF mein apna naam khud dhoondhein — computer par Ctrl+F, phone ke PDF app mein search icon. Naam ki spelling RoR wali rakhein, kyunki list wahi se banti hai.</li>
       </ol>
 
       <p>
@@ -372,8 +373,9 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
       <h2>MP Se Bahar Ke Kisan Yahan Dekhein</h2>
 
       <p>
-        MP ka domicile nahi hai to ye scheme aap par laagu nahi hoti. Amount har rajya mein alag hai —
-        kahin PM Kisan se dugna, kahin MP jitna hi. Apne rajya ka aankda yahan dekhein:
+        MP ke bahar rehte hain to ye top-up aap par laagu nahi hota, aur girdawari-based shart bhi
+        sirf MP mein hai. Kai rajyon ka top-up MP se kai guna bada hai, kuch mein bilkul nahi hai —
+        apne rajya ka asli aankda yahan dekhein:
       </p>
 
       <ul>
@@ -425,7 +427,7 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
       </ul>
 
       <InfoBox type="tip">
-        <strong>Surakshit Rahein:</strong> Koi bhi sarkari yojana registration ya status theek karne ke naam par aapse paise nahi maangti. Agar koi aapse "fees" maange, toh wo fraud hai. Turant 1064 (Kisan Call Center) par shikayat darj karein.
+        <strong>Surakshit Rahein:</strong> SAARA par status dekhna, e-KYC karna aur bank details update karwana — teeno kaam bilkul free hain. Kist "jaldi nikalwane" ya list mein naam "chadhwane" ke naam par koi paisa maange, to wo fraud hai: ye dono kaam sirf Patwari, ADO aur portal ke raste hote hain. Aisi demand par 1064 (MP Kisan Call Center) par shikayat darj karwaayein.
       </InfoBox>
 
     </article>
