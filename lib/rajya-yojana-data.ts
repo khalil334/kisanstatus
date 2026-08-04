@@ -109,6 +109,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
     published: '2026-08-03T09:00:00+05:30',
     modified: '2026-08-03T09:00:00+05:30',
     readTime: '10 min read',
+    ogImage: '/images/articles/rajya-yojna/mp-kisan-kalyan-yojana-kist-status/hero.webp',
     relatedPaths: ['/articles/PmKisan24viKist2026', '/articles/PmKisanPaymentFailedFix2026'],
   },
   {
