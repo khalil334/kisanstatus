@@ -351,7 +351,7 @@ export default function RajasthanKisanSammanNidhi9000() {
         />
 
         <p>
-          Fir bhi kuch samajh na aaye to apne District Agriculture Office ya Gram Panchayat ke e-Mitra kiosk par jaakar case dikhaayein — status ka screenshot aur passbook saath rakhein. Helpline number portal par samay samay par badalte rehte hain, is liye number seedha Jan Soochna portal ke &ldquo;Contact&rdquo; section se hi lein.
+          Fir bhi kuch samajh na aaye to Jan Soochna portal ki helpline <strong>1800-180-6127</strong> par call karein (ye number portal ke homepage par hi likha hai). Ya apne District Agriculture Office ya e-Mitra kiosk par jaakar case dikhaayein — status ka screenshot aur passbook saath rakhein.
         </p>
 
         <p>
