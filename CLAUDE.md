@@ -398,3 +398,50 @@ article/maandhan/rajya-yojana/category prerenders still carry `index, follow` + 
 - The 4 ghost `/articles/pm-kisan-pati-patni-dono-ko-milega` inlinks that caused the flagged URL were
   ALREADY fixed in commit `2434209` (#46) — repo has zero `/articles/` refs and the 4 live source pages
   return 0 hits. The 2026-08-04 crawl predates that deploy. Nothing extra to fix there.
+
+## Fixes applied 2026-08-04 — rajya-yojana scheme amounts (PR #61, branch `fix/rajya-yojana-scheme-amounts`, push-only — owner merges)
+Content audit of the 9 `/rajya-yojana/*` articles (asked: AI-uniform? duplicate? safe to index?).
+**Duplication + AI-uniformity came back CLEAN** — highest pairwise 6-gram containment 6.6%, zero
+sentences repeated across 3+ articles, 2,200-3,928 words each, no AI-tell phrases, H2 order differs
+per article with state-specific sections (Girdawari/Jan Aadhaar/7-12 Utara/EPIC/guntas/CCRC/KALIA).
+Technical SEO clean too (canonical, hreflang, 3-node JSON-LD, titles 45-56, all images resolve on disk).
+So the only real defects were **factual**:
+- **MP CM Kisan Kalyan amount** — documented as ₹1,000/yr (total ₹7,000). Actual: **₹6,000/yr, 3 × ₹2,000**
+  (started at ₹4,000 in 2020, raised to ₹6,000), total ₹12,000 with PM Kisan. Worse, the article's warning
+  box told readers the ₹4,000/₹6,000 figures were "purane ya galat" — actively arguing against the truth.
+  Fixed in 6 places incl. both comparison tables.
+- **Rythu Bharosa rate** — documented as ₹10,000/acre/yr (₹5,000/season). Actual since the 26 Jan 2025
+  relaunch: **₹12,000/acre/yr (₹6,000/season)** per three telangana.gov.in district portals. Recomputed
+  the gunta worked example (2.5 acre → ₹15,000/season).
+- **Removed an invented "5 acre cap"** (+ its ₹25,000/season ceiling) from the Rythu article. No official
+  source supports an acre cap; the real restriction is **cultivable land only** (satellite mapping /
+  Bhu Bharati), which IS the actual change from Rythu Bandhu. Fixed the prose that framed the cap as
+  the headline change.
+- **StateKisanYojanaHub table + StateYojanaFinder calculator** carried both wrong rates — a farmer
+  entering their land got a wrong payout. `capAcres` is now optional (Telangana none; WB floor logic
+  untouched).
+- **Related-link anchor text** in `app/rajya-yojana/[slug]/page.tsx` rendered `path.split('/').pop()`
+  (`PmKisanMasterGuide2026`); now resolves the real title via `getArticleBySlug` with slug fallback.
+- `modified` bumped ONLY on the 3 edited articles.
+
+## Gotchas learned 2026-08-04
+- **Correct values for this cluster** (use these, don't re-derive): MP Kisan Kalyan = ₹6,000/yr state
+  (3 × ₹2,000), total ₹12,000. Rythu Bharosa = ₹12,000/acre/yr (₹6,000 × 2 seasons), no acre cap,
+  cultivable land only, paddy bonus ₹500/quintal separate. Rajasthan MKSN = ₹3,000/yr state (total
+  ₹9,000); the ₹12,000 figure is announcement-only and must stay labelled as such.
+- **Audit the warning/InfoBox copy, not just tables.** The MP article's worst defect was a confident
+  debunk of a TRUE fact — a bare wrong number is less damaging than telling farmers the truth is a rumour.
+- **A fabricated constraint grows a narrative.** The invented 5-acre cap had spread into `capAcres` in
+  the calculator, a comparison-table row, an InfoBox, and the "sabse badi tabdeeli" prose. When removing
+  an unsourced number, grep it across `components/articles/**/tools/` and the hub page too.
+- **Article-level number fixes MUST be grepped against `tools/`.** Four rajya-yojana articles embed
+  interactive calculators that recompute amounts from hardcoded rates; fixing prose alone leaves the
+  tool lying to the user.
+- **Don't stagger `published` dates to look less machine-generated.** `git log --diff-filter=A` showed
+  all 9 articles landed in ONE commit — inventing distinct publish dates would be fabrication. Bump
+  `modified` only where content actually changed.
+- **Duplication must be measured on extracted text, not raw .tsx.** Comparing files directly inflates
+  similarity via shared imports/classNames. Extract JSX text nodes + long string literals first, then
+  6-gram shingles + containment. Near-duplicate territory starts ~40-50% containment; this cluster is at 6.6%.
+- **`npm install --no-save --no-package-lock`** works (needs registry.npmjs.org allowlisted); `npm ci`
+  still fails on the out-of-sync lock. `npx tsc --noEmit` is the gate — it passed without touching dates.
