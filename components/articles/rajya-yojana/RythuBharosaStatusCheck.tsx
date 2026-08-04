@@ -69,22 +69,22 @@ export default function RythuBharosaStatusCheck2026() {
 
       <InfoBox type="update" date="4 August 2026">
         <strong>Latest Update:</strong> Nayi kist ki prakriya shuru ho chuki hai. Release phase-wise aur
-        acreage ke hisaab se ho raha hai — isliye padosi ko paisa mil jaana aur aapko na milna abhi
+        acreage ke hisaab se ho raha hai. Isliye padosi ko paisa mil jaana aur aapko na milna abhi
         normal hai. Status dekhne ka tareeka neeche hai.
       </InfoBox>
 
       <h1>Rythu Bharosa Status Check 2026: Payment, Per Acre Amount aur Phase-Wise List Guide</h1>
 
       <p>
-        Telangana mein <strong>Rythu Bharosa</strong> — purana naam Rythu Bandhu — season shuru hone se
+        Telangana mein <strong>Rythu Bharosa</strong> (purana naam Rythu Bandhu) season shuru hone se
         pehle hi kisan ke haath mein paisa de deti hai, taaki beej aur khaad ke liye sahukar ke paas na
         jaana pade.
       </p>
 
       <p>
         Do cheezein is scheme ko baaki state schemes se alag banati hain: raqam per acre tay hoti hai,
-        aur release ek saath nahi, phase mein hota hai. Dono ka asar seedha aapke status par padta hai —
-        neeche wahi samjhaya hai.
+        aur release ek saath nahi, phase mein hota hai. Dono ka asar seedha aapke status par padta hai.
+        Neeche wahi samjhaya hai.
       </p>
 
       <Fig
@@ -105,13 +105,22 @@ export default function RythuBharosaStatusCheck2026() {
 
       <p>
         Baaki schemes ki tarah yahan har kisan ko ek jaisa amount nahi milta. Hisaab zameen ke maap se
-        lagta hai: har acre cultivable land par ₹10,000 saalana — ₹5,000 Kharif mein aur ₹5,000 Rabi
-        mein.
+        lagta hai: har acre cultivable land par ₹10,000 saalana, yaani ₹5,000 Kharif mein aur ₹5,000
+        Rabi mein.
       </p>
 
       <p>
         Do acre wale kisan ko season mein ₹10,000 milega, ek acre wale ko ₹5,000. Isi wajah se gaon
         mein har aadmi ka amount alag dikhta hai.
+      </p>
+
+      <p>
+        Guntas ka hisaab bhi samajh lein, kyunki Telangana mein zameen aksar acre-gunta mein boli
+        jaati hai. Ek acre mein 40 guntas hote hain. Portal par land extent decimal mein dikhta hai:
+        maan lijiye aapke paas 2 acre 20 guntas hai, toh system 2.5 acre padhega aur season ka
+        ₹12,500 banega. Agar aapko lagta hai ki amount kam aaya hai, toh sabse pehle apna land
+        extent Dharani ke record se milayen. Aksar "kam paisa aaya" ki shikayat asal mein guntas ke
+        galat record ki hoti hai.
       </p>
 
       <SchemeTable>
@@ -154,8 +163,8 @@ export default function RythuBharosaStatusCheck2026() {
       <h2>Padosi Ko Mil Gaya, Mujhe Nahi — Phase System Samjhein</h2>
 
       <p>
-        Ye shikayat sabse zyada aati hai, aur iski wajah koi galti nahi — <strong>phase wise
-        payment</strong> hai.
+        Ye shikayat sabse zyada aati hai, aur iski wajah koi galti nahi hai. Wajah hai <strong>phase
+        wise payment</strong>.
       </p>
 
       <p>
@@ -176,7 +185,7 @@ export default function RythuBharosaStatusCheck2026() {
       <h2>Apna Status Kaise Dekhein</h2>
 
       <p>
-        Portal par do minute ka kaam hai. Aadhaar number saath rakhein — account number se bhi hota
+        Portal par do minute ka kaam hai. Aadhaar number saath rakhein. Account number se bhi hota
         hai, par Aadhaar zyada reliable nikalta hai:
       </p>
 
@@ -203,7 +212,7 @@ export default function RythuBharosaStatusCheck2026() {
       <h2>Gaon Ki List Mein Naam Dhoondhna</h2>
 
       <p>
-        Lagta hai naam chhoot gaya hai — to gaon ki poori list dekh lein. Notice board par bhi lagti
+        Lagta hai naam chhoot gaya hai? To gaon ki poori list dekh lein. Notice board par bhi lagti
         hai, par portal se PDF nikaal lena aasan padta hai:
       </p>
 
@@ -219,7 +228,10 @@ export default function RythuBharosaStatusCheck2026() {
 
       <p>
         Gaon mein aaj bhi purana naam hi chalta hai. Kaam karne ka tareeka wahi hai; naam badla hai aur
-        kuch administrative cheezein sudhri hain:
+        kuch administrative cheezein sudhri hain. Sabse badi tabdeeli 5 acre ki cap hai. Rythu Bandhu
+        ke zamane mein badi zameen walon ko lakhon rupaye tak mil jaate the, jis par kaafi aalochana
+        hui thi. Ab family ke level par 5 acre ki seema hai, jisse budget ka bada hissa chhote kisanon
+        tak pahunchta hai:
       </p>
 
       <SchemeTable>
@@ -288,33 +300,89 @@ export default function RythuBharosaStatusCheck2026() {
         <strong>Solution:</strong> Agar zameen par koi court case ya parivarik vivad (family dispute) hai, toh Dharani portal par us par "Disputed" ka tag lag jata hai. Aise cases mein payment tab tak roki jaati hai jab tak vivad khatam nahi ho jata.
       </p>
 
+      <h2>Virasat Ki Zameen — Sabse Zyada Atakne Wala Case</h2>
+
+      <p>
+        Ek scenario itna common hai ki alag se likhna zaroori hai. Pita ka dehant ho gaya, zameen
+        ab bete-betiyon ke naam aani hai, lekin Dharani par mutation abhi purane naam par hi hai.
+        Aise mein Rythu Bharosa ka paisa purane record ke hisaab se process hota hai aur dehant ke
+        baad account freeze hone se payment fail ho jaati hai.
+      </p>
+
+      <p>
+        Iska rasta succession mutation hai. Dharani portal par "Succession" module se online
+        application hoti hai. Chahiye hota hai: death certificate, family member certificate
+        (Meeseva se banta hai), sabhi legal heirs ke Aadhaar, aur agar koi heir apna hissa chhod
+        raha hai toh registered relinquishment deed. MRO verification ke baad naye pattadar
+        passbooks bante hain. Process mein aam taur par 3 se 6 hafte lagte hain. Jab tak mutation
+        complete nahi hota, us zameen ki Rythu Bharosa payment rukegi — isliye is kaam ko season
+        shuru hone se pehle nipta lena sabse samajhdari ka kadam hai.
+      </p>
+
       <Fig
         src="mandal-revenue-office.webp"
         alt="Kisan Mandal Revenue Office ke bahar line mein khade hain mutation aur Dharani correction ke liye"
         caption="Mutation, disputed tag ya naam ki galti — yeh sirf MRO office mein hi theek hota hai"
       />
 
+      <h2>Rythu Bharosa Aur PM Kisan — Dono Ek Saath Milte Hain</h2>
+
+      <p>
+        Kai kisan sochte hain ki state scheme mili toh central wali cut jayegi. Aisa nahi hai.
+        Rythu Bharosa aur PM Kisan bilkul alag-alag systems hain aur dono ka paisa ek hi account
+        mein aa sakta hai. Farq itna hai ki PM Kisan mein amount fixed ₹6,000 saalana hai (zameen
+        chahe kitni bhi ho), jabki Rythu Bharosa per acre chalti hai.
+      </p>
+
+      <p>
+        Lekin dono ke records alag chalte hain, aur yahi se dikkat aati hai. Dharani mein aapka
+        record perfect ho sakta hai aur phir bhi PM Kisan mein e-KYC pending hone se central wali
+        kist ruk sakti hai — ya iska ulta. Isliye season mein ek baar dono status alag-alag check
+        kar lein: Rythu Bharosa portal par state wali, aur <code>pmkisan.gov.in</code> par central
+        wali. Passbook mein entry dekhte waqt bhi dhyan rakhein: Rythu Bharosa ki entry mein
+        "RYTHU" ya treasury ka reference hota hai, jabki PM Kisan ki entry "PMKISAN" naam se aati
+        hai. Isse turant pata chal jaata hai ki kaun sa paisa aaya aur kaun sa atka hai.
+      </p>
+
+      <h2>Status Check Se Pehle Ye Teen Cheezein Saath Rakhein</h2>
+
+      <ul>
+        <li>
+          <strong>Pattadar Passbook:</strong> Ismein aapka khata number aur land extent likha hota
+          hai. Portal ka data isi se milana hai.
+        </li>
+        <li>
+          <strong>Aadhaar Card:</strong> Status search Aadhaar se hi sabse sahi baithti hai. Number
+          yaad ho toh bhi card saath rakhein, kyunki spelling milani pad sakti hai.
+        </li>
+        <li>
+          <strong>Bank Passbook (updated):</strong> Payment aayi ya nahi, iska final proof passbook
+          ki entry hai. Portal par "Disbursed" aur account mein credit ke beech 2-3 din ka gap
+          normal hai.
+        </li>
+      </ul>
+
       <h2>Telangana Se Bahar Ke Kisan Yahan Dekhein</h2>
 
       <p>
-        Per-acre wala hisaab Telangana ki khaas baat hai — baaki rajyon mein amount fixed hota hai,
+        Per-acre wala hisaab Telangana ki khaas baat hai. Baaki rajyon mein amount fixed hota hai,
         chahe zameen kitni bhi ho. Apne rajya ka tareeka yahan hai:
       </p>
 
       <ul>
         <li>
           <Link href="/rajya-yojana/annadata-sukhibhava-status-check-2026">
-            Annadata Sukhibhava (Andhra Pradesh) — Tenant Farmers ke liye bhi
+            Annadata Sukhibhava — padosi state AP ka scheme, jahan bataidar bhi cover hote hain
           </Link>
         </li>
         <li>
           <Link href="/rajya-yojana/rajasthan-kisan-samman-nidhi-9000">
-            Rajasthan Kisan Samman Nidhi 9000: Status aur Badhotri Update
+            Rajasthan mein ₹9,000 wali Kisan Samman Nidhi ka status
           </Link>
         </li>
         <li>
           <Link href="/rajya-yojana/namo-shetkari-yojana-status-check-2026">
-            Namo Shetkari Mahasanman Nidhi (Maharashtra)
+            Maharashtra ki Namo Shetkari Mahasanman Nidhi
           </Link>
         </li>
       </ul>
@@ -326,7 +394,7 @@ export default function RythuBharosaStatusCheck2026() {
       <ul>
         <li>
           <Link href="/rajya-yojana/state-kisan-yojana-list-all-states-2026">
-            State Kisan Yojana List — Sabhi States Ka Comparison Table
+            Har state ki kisan yojana ka comparison ek hi table mein
           </Link>
         </li>
       </ul>
@@ -344,7 +412,7 @@ export default function RythuBharosaStatusCheck2026() {
         </li>
         <li>
           <Link href="/articles/pm-kisan-pati-patni-dono-ko-milega">
-            Pati-Patni Dono Ko PM Kisan Milega Ya Nahi? (Family Rules Explained)
+            Ek parivar mein pati-patni dono ko PM Kisan milta hai ya nahi — family rule
           </Link>
         </li>
       </ul>
