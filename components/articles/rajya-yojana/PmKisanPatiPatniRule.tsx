@@ -340,6 +340,12 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
 
         <h2>Kaise Pakda Jaata Hai — Data Ab Aapas Mein Juda Hua Hai</h2>
 
+        <Fig
+          src="aadhaar-ekyc-couple.webp"
+          alt="Pati-patni gaon ke kiosk par Aadhaar biometric e-KYC karwa rahe hain"
+          caption="Aadhaar e-KYC ke baad har beneficiary unique identity se juda hai — duplicate registration ab data mein hi pakda jaata hai"
+        />
+
         <p>
           Pehle log soch lete the ki alag bank account aur alag mobile number rakhne se do
           registration pakde nahi jaayenge. Ab wo daur khatam ho gaya. Aadhaar e-KYC anivaarya
