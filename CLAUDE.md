@@ -309,3 +309,21 @@ chip, and `numberOfItems: 59` (37 + 13 + 9).
   show nahi ho rahe", curl the URL first — if it 200s, the bug is in the listing/nav layer.
 - **Any new cluster on its own path segment must set an explicit `href`.** Slug-based path inference
   in `ArticlesClient`/`app/articles/page.tsx` silently points new clusters at `/articles/<slug>`.
+
+## rajya-yojna image weight + missing heroes — 2026-08-04 (branch `fix/rajya-yojna-image-weight-and-missing-heroes`)
+- **Budget: every image under `public/images/articles/rajya-yojna/` must be WebP ≤ 80 KB.** 19 of 25
+  existing files were over (worst: 266 KB). Fixed by re-encoding at reduced quality with dimensions
+  preserved (1200x675 hero / 1200x800 body). 16 fit on quality alone (q 50-78); three
+  high-detail crop photos (wheat-harvest-mp, vidarbha-cotton-farmer, paddy-per-acre-farming) needed a
+  0.7-1.0px Gaussian pre-blur before q46-56 would fit — noise is what blows up WebP size.
+- **The 4 stub articles had zero images.** Added one generated realistic 1200x675 `hero.webp` each
+  (krishak-bandhu, odisha-cm-kisan, pm-kisan-pati-patni, state-kisan-yojana-list), wired the same
+  `Fig` helper + `next/image` the live bodies use, and set `ogImage` in `lib/rajya-yojana-data.ts`.
+  The 5 live articles had NO broken refs — every referenced file existed on disk.
+- **Build on `main` was broken** by PRs #37-#41: `caption="... \"quoted\" ..."` — backslash-escaped
+  quotes are not valid inside a JSX string attribute (TS1127 / "Expected '</'"). Two files
+  (MpKisanKalyanYojanaKist, RajasthanKisanSammanNidhi9000). Fixed to `caption={'... "quoted" ...'}`.
+  **Never use `\"` in a JSX attribute — switch to a braced JS string.**
+- Verified: `npx tsc --noEmit` clean, `env -u NODE_OPTIONS npx next build --webpack` succeeded, and
+  each of the 4 prerendered `.next/server/app/rajya-yojana/<slug>.html` has exactly one `<h1>` plus
+  its hero ref.

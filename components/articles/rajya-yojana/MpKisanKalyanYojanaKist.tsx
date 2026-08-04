@@ -191,7 +191,7 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
       <Fig
         src="bank-npci-mapping.webp"
         alt="Kisan bank branch mein passbook dikhakar DBT aur NPCI Aadhaar mapping check karwa raha hai"
-        caption="\"Payment Successful\" par paisa nahi aaya — sabse pehle bank mein NPCI mapping check karwao"
+        caption={'"Payment Successful" par paisa nahi aaya — sabse pehle bank mein NPCI mapping check karwao'}
       />
 
       <h3>1. Bank Account aur NPCI Mapping Check Karein</h3>
