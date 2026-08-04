@@ -1,7 +1,43 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import ExternalLinkButton from '@/components/ui/ExternalLinkButton';
 import InfoBox from '@/components/ui/InfoBox';
 import SchemeTable from '@/components/ui/SchemeTable';
+
+const IMG_BASE = '/images/articles/rajya-yojna/namo-shetkari-yojana-status-check-2026';
+
+function Fig({
+  src,
+  alt,
+  caption,
+  width = 1200,
+  height = 800,
+  priority = false,
+}: {
+  src: string;
+  alt: string;
+  caption: string;
+  width?: number;
+  height?: number;
+  priority?: boolean;
+}) {
+  return (
+    <figure className="my-8 not-prose rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow-sm">
+      <Image
+        src={`${IMG_BASE}/${src}`}
+        alt={alt}
+        width={width}
+        height={height}
+        className="w-full h-auto object-cover"
+        sizes="(max-width: 768px) 100vw, 768px"
+        priority={priority}
+      />
+      <figcaption className="text-center text-xs text-gray-600 dark:text-gray-400 py-2 px-3 bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+        {caption}
+      </figcaption>
+    </figure>
+  );
+}
 
 export default function NamoShetkariYojanaStatusCheck2026() {
   return (
@@ -20,6 +56,15 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       <p>
         Is detailed guide mein hum step-by-step batayenge ki kaise aap apna <strong>namo shetkari yojana status check</strong> kar sakte hain, <strong>namo shetkari hapta kadhi milel</strong> ( installment kab milega), aur agar aapka naam list se kat gaya hai toh uski wajah kya ho sakti hai.
       </p>
+
+      <Fig
+        src="hero.webp"
+        alt="Maharashtra ka shetkari apne ganne ke khet mein mobile par Namo Shetkari hapta ka status dekh raha hai"
+        caption="Namo Shetkari Mahasanman Nidhi — PM Kisan ke saath Maharashtra ka apna alag hapta"
+        width={1200}
+        height={675}
+        priority
+      />
 
       <ExternalLinkButton
         href="https://nsmny.mahait.org"
@@ -73,6 +118,12 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         Agar aapka naam PM Kisan ki beneficiary list mein hai aur aap Maharashtra ke sthayi nivasi hain, toh aap automatically is scheme ke liye eligible ho jaate hain. Sarkar aapke bank account mein seedha paisa bhej deti hai. Lekin agar aapka PM Kisan status mein koi dikkat hai (jaise e-KYC pending ya bank account mismatch), toh state scheme ka paisa bhi ruk jayega.
       </p>
 
+      <Fig
+        src="vidarbha-cotton-farmer.webp"
+        alt="Vidarbha ke kapas ke khet mein mahila shetkari kapas chun rahi hai — Namo Shetkari ki madad kheti ke kharche mein"
+        caption="Vidarbha se Konkan tak — hapta buwai aur katai ke kharche ke waqt sabse zyada kaam aata hai"
+      />
+
       <h2>Namo Shetkari Hapta Kadhi Milel? (Expected Installment Dates)</h2>
 
       <p>
@@ -107,6 +158,12 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         Apna <strong>namo shetkari yojana status check</strong> karna bahut aasan hai. Niche diye gaye steps ko follow karein:
       </p>
 
+      <Fig
+        src="status-check-csc.webp"
+        alt="CSC centre par operator shetkari ko Namo Shetkari portal par beneficiary status check karke dikha raha hai"
+        caption="Portal mobile par bhi khulta hai — na khule to CSC ya Mahaonline centre par free check karwao"
+      />
+
       <ol>
         <li>Apne browser mein official website <code>nsmny.mahait.org</code> kholein.</li>
         <li>Homepage par "Beneficiary Status" ya "अपनी स्थिति जांचें" ke option par click karein.</li>
@@ -139,6 +196,12 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       <p>
         Ye ek bahut common problem hai. Kai kisan report karte hain ki unhe <strong>pm kisan aaya namo shetkari nahi aaya</strong>. Iske kuch mukhya karan ho sakte hain:
       </p>
+
+      <Fig
+        src="bank-dbt-check.webp"
+        alt="Shetkari cooperative bank mein passbook lekar Aadhaar seeding aur DBT activation confirm karwa raha hai"
+        caption="PM Kisan aaya par Namo Shetkari nahi — pehla shak DBT aur NPCI seeding par jaata hai"
+      />
 
       <h3>1. Bank Account DBT Enabled Nahi Hai</h3>
       <p>
@@ -173,6 +236,12 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         <li><strong>Bank Branch Jaayein:</strong> Apne bank manager se milen aur "Aadhaar Seeding" aur "DBT Activation" confirm karein.</li>
         <li><strong>Taluka Agriculture Office (TAL) Se Sampark Karein:</strong> Agar bank sab theek hai, toh apne taluka ke krishi adhikari se milen. Wo aapka data portal par re-verify karwa sakte hain.</li>
       </ol>
+
+      <Fig
+        src="gram-panchayat-help.webp"
+        alt="Shetkari gram panchayat office ke bahar krishi adhikari se Namo Shetkari payment fail hone ki baat kar rahe hain"
+        caption="Bank theek ho phir bhi paisa na aaye to gram panchayat ya taluka krishi office se re-verify karwao"
+      />
 
       <h2>Eligibility: Kaun Le Sakta Hai Ye Labh?</h2>
 
