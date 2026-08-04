@@ -13,7 +13,7 @@ const FAQS_DATA = [
   },
   {
     q: 'State scheme lene se PM Kisan band ho jaata hai?',
-    a: 'Nahi. Dono alag sarkar ki alag scheme hain aur ek doosre ko cancel nahi karti. Kai rajyon mein state scheme ki eligibility hi PM Kisan record se uthai jaati hai.',
+    a: 'Nahi. Ek central sarkar ki scheme hai, doosri rajya sarkar ki — dono ek doosre ko cancel nahi kartin. Balki kai rajya to apni eligibility hi PM Kisan record se uthate hain.',
   },
   {
     q: 'PM Kisan aa gaya lekin state ka paisa nahi aaya, kya karein?',
@@ -80,8 +80,14 @@ export default function StateKisanYojanaHub({ article }: { article: RajyaYojanaA
           se shuru hota hai jahan rajya sarkar apni jeb se kuch aur jodti hai. Kuch rajya
           jodte hain, kuch nahi jodte. Aur jo jodte hain, unka tareeka bhi ek jaisa nahi hai —
           kisi mein flat raqam hai, kisi mein per-acre, aur kahin bhoomiheen parivaar ke liye
-          alag track.
+          ek alag track.
         </p>
+
+        <Fig
+          src="india-farm-fields.webp"
+          alt="Do alag rajyon ke khet — dhaan aur gehun — ek hi frame mein"
+          caption="Kheti ka season aur scheme ka design — dono rajya ke hisaab se badalte hain"
+        />
 
         <InfoBox type="info">
           Do cheezein alag rakhna zaroori hai — <strong>central</strong> ka PM Kisan aur{' '}
@@ -269,9 +275,9 @@ export default function StateKisanYojanaHub({ article }: { article: RajyaYojanaA
         <p>
           Isi liye per-acre wali scheme aam taur par season ke saath chalti hai — Kharif ke
           aas-paas ek hissa, Rabi ke aas-paas doosra. Flat top-up wali scheme kabhi PM Kisan ki
-          kist ke saath jodkar release hoti hai, kabhi alag se. Aur do-track wali scheme mein
-          bhoomiheen parivaar ke tranche cultivator se alag chalte hain, kyunki dono ka kaam aur
-          zaroorat ka waqt alag hai.
+          kist ke saath jodkar release hoti hai, kabhi apne schedule par. Aur do-track design
+          mein bhoomiheen parivaar ke tranche cultivator se hat kar chalte hain, kyunki dono ke
+          kaam aur zaroorat ka waqt ek jaisa nahi hota.
         </p>
 
         <InfoBox type="tip">
@@ -337,12 +343,24 @@ export default function StateKisanYojanaHub({ article }: { article: RajyaYojanaA
           </li>
         </ol>
 
+        <Fig
+          src="csc-ekyc-biometric.webp"
+          alt="CSC kiosk par biometric machine se kisan ki e-KYC ho rahi hai"
+          caption="Pending e-KYC ka sabse tez hal — nazdeeki CSC par biometric verification"
+        />
+
         <p>
           Ye teen theek hon aur phir bhi paisa na aaye, to agla padaav office hai — per-acre
           wale rajyon mein tehsil ya revenue office (land record ki wajah se), aur flat wale
           rajyon mein block agriculture office. Bicholiye ke paas jaane se koi file aage nahi
           badhti.
         </p>
+
+        <Fig
+          src="tehsil-revenue-office.webp"
+          alt="Tehsil office ke bahar kisan apni file ke saath baithe hain"
+          caption="Land record ki dikkat portal se nahi, tehsil ya revenue office se hi sudharti hai"
+        />
 
         <h2>Ek Rajya Se Doosre Rajya Jaane Par Kya Hota Hai</h2>
 
@@ -371,6 +389,12 @@ export default function StateKisanYojanaHub({ article }: { article: RajyaYojanaA
           Rajya badalne se form badal jaata hai, lekin maangi jaane wali cheezein lagbhag wahi
           rehti hain. In paanch ko pehle se ready rakhna aadha kaam khatam kar deta hai.
         </p>
+
+        <Fig
+          src="documents-checklist.webp"
+          alt="Registration ke liye zaroori kagaz — Aadhaar, passbook, land record aur phone"
+          caption="Paanch kaagaz pehle se tayaar rakhein — form kisi bhi rajya ka ho, maang yahi rehti hai"
+        />
 
         <SchemeTable>
           <tr>
