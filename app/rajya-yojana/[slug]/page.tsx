@@ -6,7 +6,17 @@ import {
   getRajyaYojanaArticle,
   type RajyaYojanaArticleMeta,
 } from '@/lib/rajya-yojana-data';
-import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '@/lib/site-config';
+import {
+  SITE_URL,
+  SITE_NAME,
+  DEFAULT_OG_IMAGE,
+  AUTHOR_NAME,
+  AUTHOR_URL,
+  AUTHOR_BIO,
+  LOGO_URL,
+  LOGO_WIDTH,
+  LOGO_HEIGHT,
+} from '@/lib/site-config';
 import RajasthanKisanSammanNidhi9000 from '@/components/articles/rajya-yojana/RajasthanKisanSammanNidhi9000';
 import AnnadataSukhibhavaStatusCheck from '@/components/articles/rajya-yojana/AnnadataSukhibhavaStatusCheck';
 import MpKisanKalyanYojanaKist from '@/components/articles/rajya-yojana/MpKisanKalyanYojanaKist';
@@ -40,6 +50,130 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: RajyaYojanaArtic
   PmKisanPatiPatniRule,
   StateKisanYojanaHub,
 };
+
+/**
+ * Same 3-node graph the /articles/[slug] route emits (Article + BreadcrumbList +
+ * WebPage), mapped onto the rajya-yojana field names (`published`/`modified`/
+ * `ogImage`, `mainKeyword`/`secondaryKeywords`, `state`). Every value comes from
+ * lib/rajya-yojana-data.ts — nothing is invented here.
+ */
+function buildSchemas(
+  article: RajyaYojanaArticleMeta,
+  url: string,
+  ogImage: string,
+  related: readonly RajyaYojanaArticleMeta[]
+) {
+  const headline = article.ogTitle || article.title;
+  const datePublished = article.published || undefined;
+  const dateModified = article.modified || article.published || undefined;
+
+  const publisher = {
+    '@type': 'Organization',
+    '@id': `${SITE_URL}#organization`,
+    name: SITE_NAME,
+    url: SITE_URL,
+    logo: {
+      '@type': 'ImageObject',
+      '@id': `${SITE_URL}#logo`,
+      url: LOGO_URL,
+      width: LOGO_WIDTH,
+      height: LOGO_HEIGHT,
+    },
+  };
+
+  return [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      '@id': `${url}#article`,
+      headline,
+      description: article.description,
+      image: {
+        '@type': 'ImageObject',
+        url: ogImage,
+        width: 1200,
+        height: 630,
+        caption: headline,
+      },
+      datePublished,
+      dateModified,
+      author: {
+        '@type': 'Organization',
+        '@id': `${SITE_URL}#founder`,
+        name: AUTHOR_NAME,
+        url: AUTHOR_URL,
+        description: AUTHOR_BIO,
+      },
+      creator: {
+        '@type': 'Organization',
+        name: AUTHOR_NAME,
+        url: AUTHOR_URL,
+      },
+      publisher,
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': url,
+      },
+      inLanguage: 'hi-IN',
+      isPartOf: {
+        '@type': 'WebSite',
+        '@id': `${SITE_URL}#website`,
+        name: SITE_NAME,
+        url: SITE_URL,
+      },
+      about:
+        article.state && article.state !== 'ALL'
+          ? [
+              { '@type': 'Thing', name: article.mainKeyword },
+              { '@type': 'AdministrativeArea', name: article.state },
+            ]
+          : [{ '@type': 'Thing', name: article.mainKeyword }],
+      mentions: related.slice(0, 3).map((r) => ({
+        '@type': 'Article',
+        name: r.title,
+        url: `${SITE_URL}/rajya-yojana/${r.slug}`,
+      })),
+      keywords: [article.mainKeyword, ...article.secondaryKeywords].join(', '),
+      articleSection: 'Rajya Yojana',
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['article h1', 'article h2', 'article p'],
+      },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      '@id': `${url}#breadcrumb`,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Rajya Yojana',
+          item: `${SITE_URL}/rajya-yojana`,
+        },
+        { '@type': 'ListItem', position: 3, name: headline, item: url },
+      ],
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      '@id': `${url}#webpage`,
+      url,
+      name: headline,
+      description: article.description,
+      inLanguage: 'hi-IN',
+      isPartOf: { '@id': `${SITE_URL}#website` },
+      about: { '@id': `${SITE_URL}#organization` },
+      primaryImageOfPage: {
+        '@type': 'ImageObject',
+        url: ogImage,
+      },
+      breadcrumb: { '@id': `${url}#breadcrumb` },
+      mainEntity: { '@id': `${url}#article` },
+    },
+  ];
+}
 
 export async function generateStaticParams() {
   return LIVE_RAJYA_YOJANA_ARTICLES.map((article) => ({ slug: article.slug }));
@@ -114,8 +248,20 @@ export default async function RajyaYojanaArticlePage({
     (_, i) => siblings[(idx + i) % siblings.length]
   );
 
+  const url = `${SITE_URL}/rajya-yojana/${slug}`;
+  const ogImage = article.ogImage ? `${SITE_URL}${article.ogImage}` : DEFAULT_OG_IMAGE;
+  const schemas = buildSchemas(article, url, ogImage, related);
+
   return (
     <>
+      {schemas.map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
+
       <ArticleComponent article={article} />
 
       {article.relatedPaths.length > 0 && (
