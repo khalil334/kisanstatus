@@ -183,7 +183,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const article = getRajyaYojanaArticle(slug);
 
-  if (!article || article.status !== 'live') return { title: 'Not Found' };
+  // Unknown or not-yet-live slug: the body calls notFound(), but this metadata overrides
+  // app/not-found.tsx's noindex, leaving the soft-404 shell indexable.
+  if (!article || article.status !== 'live') {
+    return { title: 'Not Found', robots: { index: false, follow: true } };
+  }
 
   const url = `${SITE_URL}/rajya-yojana/${slug}`;
   const ogImage = article.ogImage ? `${SITE_URL}${article.ogImage}` : DEFAULT_OG_IMAGE;
