@@ -35,6 +35,8 @@ const FAQS_DATA = [
   { q: '15 din baad bhi paisa nahi aaya — kya karein?', a: 'Bank jaakar Aadhaar seeding check karo, NPCI mapping verify karo, account active hai ya nahi dekho. Uske baad bhi kuch na ho toh 155261 par call karo, last resort CSC visit.' },
   { q: 'Bina eKYC ke FTO generate hota hai?', a: '2026 mein nahi. Digital verification zaroori kar di gayi hai — pehle eKYC complete karo, tabhi agli kist ka FTO banega.' },
   { q: 'FTO ka koi number hota hai kya jo main note kar sakoon?', a: 'Aapko dene ke liye koi alag "FTO number" nahi milta — ye ek backend reference hai jo bank aur government ke system ke beech chalta hai. Jab paisa aa jata hai, tab aapke passbook ya statement mein jo UTR/reference number dikhta hai, wahi asli proof hai ki transaction ho chuka.' },
+  { q: 'Bank statement mein "MB FTO" transaction ka matlab kya hai?', a: 'MB FTO ka matlab bhi Fund Transfer Order wala credit hi hai — bank apne system mein PM Kisan ki kist ko is naam se dikhata hai. Ye aapki kist ka hi paisa hai, koi alag transaction nahi.' },
+  { q: 'Reason for failed transaction in FTO kya hota hai?', a: 'FTO banne ke baad bhi transaction fail ho sakta hai — sabse common reasons: bank account band/inactive, Aadhaar-NPCI seeding missing, ya naam ka mismatch. Bank jaakar ye teeno cheezein verify karwao, agli batch mein payment dobara try hota hai.' },
 ];
 
 function CountdownModal({ 
@@ -237,6 +239,9 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
             Jab bhi log <strong>FTO transaction</strong> ka matlab poochte hain, unka ishara asal mein us poore process se hota hai jismein government ek batch mein sabhi eligible kisano ke liye ek saath order bhejti hai. Aapke liye asli proof tab milta hai jab paisa account mein aa jaata hai — passbook ya bank statement mein jo UTR ya reference number dikhta hai, wahi aapki transaction ka number hai, FTO ka nahi.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-3">
+            Kuch kisano ke bank statement mein <strong>&ldquo;MB FTO&rdquo; transaction</strong> likha dikhta hai — iska matlab bhi wahi Fund Transfer Order wala credit hai. Bank apne system mein PM Kisan ki kist ko is naam se dikhate hain, ghabrane ki koi baat nahi; ye aapki kist ka hi paisa hai.
           </p>
         </section>
 
