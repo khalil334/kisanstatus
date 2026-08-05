@@ -334,6 +334,22 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
         <SH>❓ FAQ — Aksar Puche Jaane Wale Sawal</SH>
         <FAQBlock faqs={FAQS_DATA} />
 
+        <SH>📚 Sources</SH>
+        <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
+          <li>
+            Free Press Journal — Nashik onion MAPP ₹1,580 order, May 2026.{' '}
+            <a href="https://www.freepressjournal.in/pune/nashik-onion-gets-mapp-support-1580-per-quintal-rate-effective" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">freepressjournal.in</a>
+          </li>
+          <li>
+            Free Press Journal (via DataMap) — Nashik farmers shun NAFED as open market hits ₹2,628, June 2026.{' '}
+            <a href="https://datamap.co.in/news/nashik-farmers-shun-nafed-onion-procurement-as-open-market-prices-75ee6d91-322f-4061-b601-200909dce0a3" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">datamap.co.in</a>
+          </li>
+          <li>
+            Agmarknet — daily mandi rates, Govt of India.{' '}
+            <a href="https://agmarknet.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">agmarknet.gov.in</a>
+          </li>
+        </ul>
+
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[
