@@ -137,7 +137,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'gehu-ka-bhav-msp-vs-mandi',
     title: 'Gehu Ka Bhav 2026: MSP vs Mandi Rate',
-    desc: 'Gehu MSP par bechein ya open market mein? Seasonal trend, storage tips aur kab bechna sahi hai. Puri guide jald aa rahi hai.',
+    desc: 'Gehu MSP ₹2,585 par bechein ya mandi mein? Seasonal price pattern, rok kar bechne ka ganit, storage tips aur bechne se pehle ke 4 sawaal — poora decision framework.',
     ogTitle: 'Gehu Ka Bhav 2026 — MSP vs Mandi Rate, Kab Bechein',
     keywords: [
       'gehu ka bhav 2026',
@@ -148,7 +148,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     category: 'mandi',
     publishedTime: '2026-08-05T08:00:00+05:30',
     modifiedTime: '2026-08-05T08:00:00+05:30',
-    readingTime: 6,
+    readingTime: 10,
     author: 'KisanStatus Editorial Team',
     authorBio: 'Agricultural content experts with 5+ years experience in government scheme research',
     relatedSlugs: ['msp-list-2026-27', 'mandi-bhav-today', 'enam-registration-kaise-kare'],
