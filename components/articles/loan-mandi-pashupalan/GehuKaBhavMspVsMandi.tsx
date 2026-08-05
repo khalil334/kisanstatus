@@ -79,7 +79,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
             <span>📅 {fmtDate(article.publishedTime)}</span>
-            <span>🔄 Updated: {fmtDate(article.modifiedTime)}</span>
+            <span>🔄 Last Updated: 5 August 2026</span>
             <span>⏱️ 10 min read</span>
           </div>
         </div>
@@ -97,6 +97,16 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
             priority
           />
         </div>
+
+        <DB>
+          <strong>TL;DR — seedha faisla:</strong>
+          <ul className="list-disc pl-5 mt-2 space-y-1">
+            <li>Gehu ka MSP RMS 2026-27 mein <strong>₹2,585/quintal</strong> hai (pichhle saal se ₹160 zyada). State bonus alag: MP +₹40 = ₹2,625, Rajasthan +₹150 = ₹2,735, UP mein koi bonus nahi.</li>
+            <li>Mandi ka rate MSP se <strong>neeche</strong> chal raha hai → sarkari kendra. <strong>Upar</strong> hai aur maal saaf-sookha hai → mandi/eNAM.</li>
+            <li>Sharbati/lokwan jaisi premium variety sarkari kendra par dena apna premium chhodna hai — wahan sab ek rate par taula jaata hai.</li>
+            <li>Rokne ka faisla ganit se: 6 mahine ka storage kharcha + loss ≈ ₹150/qtl paar ho toh hi jeet. <strong>Aaj ka rate agmarknet.gov.in par check karo.</strong></li>
+          </ul>
+        </DB>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           April aata hai aur wahi teen raaste saamne khade ho jaate hain — sarkari kendra, mandi ki boli, ya
@@ -269,8 +279,18 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
           <SI n={2}><strong>Slot/token:</strong> registration ke baad kharid kendra aur date ka slot milta hai. Bina slot ke maal le jaakar khada rehna padta hai.</SI>
           <SI n={3}><strong>Quality prep:</strong> gehu saaf karo, sukha lo — FAQ standards (nami, tuta dana, kachra) par jaanch hoti hai.</SI>
           <SI n={4}><strong>Taul aur payment:</strong> electronic taul ke baad payment seedha bank account mein aati hai. Receipt sambhaal kar rakho.</SI>
-          <SI n={5}><strong>State bonus check karo:</strong> kuch states MSP ke upar apna bonus dete hain (jaise MP ka ₹40 per quintal — total ₹2,625). Yeh automatic milta hai, par pata hona chahiye taaki payment short aaye toh pakad sako.</SI>
+          <SI n={5}><strong>State bonus check karo:</strong> 2026-27 season mein MP ne ₹40 per quintal bonus diya (total ₹2,625) aur Rajasthan ne ₹150 (total ₹2,735); UP mein koi bonus nahi tha (KisanPortal/TheTractorHub ki season reports). Yeh automatic milta hai, par pata hona chahiye taaki payment short aaye toh pakad sako.</SI>
         </StepList>
+
+        <IB>
+          <strong>System kitna asli hai — MP ka is season ka record:</strong> Rabi 2026-27 mein Madhya Pradesh mein{' '}
+          <strong>19.04 lakh kisano</strong> ne wheat procurement ke liye registration kiya (pichhle saal se 3.60 lakh
+          zyada), 3,171 kharid kendra chale, aur seedha Aadhaar-linked bank account mein payment gayi. Slot booking ki
+          last date 30 April 2026 thi (
+          <a href="https://thetractorhub.in/msp-on-wheat-2026/" target="_blank" rel="noopener noreferrer" className="underline font-bold">source: TheTractorHub season report</a>).
+          Matlab: e-Uparjan jaisa registration system ab exception nahi, rule hai — window ke andar registration hi
+          poora khel hai.
+        </IB>
         <WB>
           Registration window season se pehle khulti hai aur deadline sakht hoti hai — jaise Gujarat mein
           registration February mein hota hai aur kharid March-May mein. Window nikal gayi toh us season MSP
@@ -302,6 +322,11 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
           aapki mandi eNAM se judi hai, toh online bidding ka fayda lena bhi seekho:{' '}
           <Link href="/articles/enam-registration-kaise-kare" className="underline font-bold">eNAM Registration
           Guide</Link>.
+        </p>
+
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          <strong>Abhi check karo:</strong> aaj ka mandi rate <a href="https://agmarknet.gov.in" target="_blank" rel="noopener noreferrer" className="underline font-bold">agmarknet.gov.in</a> par,
+          aur apne state ke procurement portal par registration window ki date — deadline sakht hoti hai.
         </p>
 
         <FAQBlock faqs={FAQS_DATA} />
