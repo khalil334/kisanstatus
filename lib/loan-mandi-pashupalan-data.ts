@@ -3,6 +3,7 @@ import type { ArticleMeta } from './articles-data';
 export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'dairy-farm-loan-without-collateral',
+    ogImage: '/images/articles/loan-mandi-pashupalan/dairy-farm-loan-without-collateral/dairy-farm-subah-ka-kaam.webp',
     title: 'Dairy Farm Loan Bina Collateral 2026',
     desc: 'Zameen girvi rakhe bina dairy farm loan — Mudra se ₹20 lakh tak, PMEGP mein 15-35% subsidy, CGTMSE guarantee cover. EMI table, DPR ke heads, documents aur reject hone ki asli wajahein.',
     ogTitle: 'Dairy Farm Loan Bina Collateral 2026 — Mudra, PMEGP, CGTMSE',
@@ -28,6 +29,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'sbi-dairy-loan-interest-rate',
+    ogImage: '/images/articles/loan-mandi-pashupalan/sbi-dairy-loan-interest-rate/dairy-shed-mein-subah-ka-doodh.webp',
     title: 'SBI Dairy Loan Interest Rate 2026',
     desc: 'SBI dairy loan ka rate MCLR + spread se banta hai — koi fixed number nahi. KCC vs term loan ka fark, interest subvention, Scale of Finance, EMI table aur branch checklist.',
     ogTitle: 'SBI Kisan Dairy Loan 2026 — Rate, EMI, Apply',
@@ -54,6 +56,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'jansamarth-portal-loan-apply',
+    ogImage: '/images/articles/loan-mandi-pashupalan/jansamarth-portal-loan-apply/portal-par-form-bharna.webp',
     title: 'JanSamarth Portal 2026: Loan Apply',
     desc: 'Ek portal par sabhi sarkari loan — KCC, Mudra, education, agri-infra. Eligibility check se application track tak, jansamarth.in ka poora step-by-step process.',
     ogTitle: 'JanSamarth Portal Loan Apply 2026 Guide',
@@ -74,6 +77,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'enam-registration-kaise-kare',
+    ogImage: '/images/articles/loan-mandi-pashupalan/enam-registration-kaise-kare/mandi-mein-anaj-ki-dheri.webp',
     title: 'eNAM Registration 2026: Kaise Karein',
     desc: 'eNAM par free farmer registration karke fasal online mandi mein bechein — 3 documents, step-by-step process, inter-state bidding, app guide, aam problems ke fix aur seedha bank payment.',
     ogTitle: 'eNAM Registration Kaise Kare 2026 Guide',
@@ -118,6 +122,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'mandi-bhav-app-comparison',
+    ogImage: '/images/articles/loan-mandi-pashupalan/mandi-bhav-app-comparison/kisan-mandi-mein-phone-par-bhav.webp',
     title: 'Best Mandi Bhav Apps 2026: Top 7',
     desc: 'eNAM, AgMarknet, Kisan Suvidha ya private apps — kaunsa mandi bhav app sahi rate deta hai? Sarkari vs private comparison, modal price ka matlab aur bina app ke raaste.',
     ogTitle: 'Best Mandi Bhav Apps 2026 — Top 7 Comparison',
@@ -138,6 +143,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'gehu-ka-bhav-msp-vs-mandi',
+    ogImage: '/images/articles/loan-mandi-pashupalan/gehu-ka-bhav-msp-vs-mandi/gehu-katai-ke-waqt-khet-mein.webp',
     title: 'Gehu Ka Bhav 2026: MSP vs Mandi Rate',
     desc: 'Gehu MSP ₹2,585 par bechein ya mandi mein? Seasonal price pattern, rok kar bechne ka ganit, storage tips aur bechne se pehle ke 4 sawaal — poora decision framework.',
     ogTitle: 'Gehu Ka Bhav 2026 — MSP vs Mandi Rate, Kab Bechein',
@@ -157,6 +163,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'sabzi-bhav-guide-pyaz-aloo-tamatar',
+    ogImage: '/images/articles/loan-mandi-pashupalan/sabzi-bhav-guide-pyaz-aloo-tamatar/subah-ki-sabzi-mandi.webp',
     title: 'Pyaz-Aloo-Tamatar Bhav Guide 2026',
     desc: 'Pyaz, aloo, tamatar kab bechein? Teeno ka seasonal price cycle, aloo cold storage ka break-even hisaab, NAFED buffer stock ka asar aur 5 galtiyan jo munafa kha jaati hain.',
     ogTitle: 'Pyaz-Aloo-Tamatar Kab Bechein — Price Cycle & Storage Guide',
@@ -199,6 +206,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'bihar-pashupalan-loan-yojana',
+    ogImage: '/images/articles/loan-mandi-pashupalan/bihar-pashupalan-loan-yojana/bhains-ke-saath-kisan-bihar.webp',
     title: 'Bihar Pashupalan Loan Yojana 2026',
     desc: 'Samagra Gavya Vikas Yojana — SC/ST ko 75%, General ko 50% subsidy tak. Eligibility, documents, dairy.bihar.gov.in par apply ka poora process aur 7 common galtiyan.',
     ogTitle: 'Bihar Pashupalan Loan Yojana 2026 — 50-75% Subsidy',
