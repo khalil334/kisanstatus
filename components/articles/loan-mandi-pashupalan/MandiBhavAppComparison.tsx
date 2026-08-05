@@ -339,8 +339,8 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
         <SH>📚 Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
-            eNAM — National Agriculture Market.{' '}
-            <a href="https://enam.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">enam.gov.in</a>
+            eNAM — National Agriculture Market, official portal (registration, mandis aur commodities).{' '}
+            <a href="https://enam.gov.in/web/" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">enam.gov.in/web — official eNAM portal</a>
           </li>
           <li>
             eNAM National Dashboard, Ministry of Agriculture — live registered farmers, mandis on eNAM aur total traded value.{' '}

@@ -379,8 +379,8 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
             <a href="https://khagaria.kvk4.in/success-stories.php" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">khagaria.kvk4.in</a>
           </li>
           <li>
-            Department of Animal Husbandry & Dairying, Govt of India.{' '}
-            <a href="https://dahd.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">dahd.gov.in</a>
+            Department of Animal Husbandry &amp; Dairying — National Livestock Mission (NLM) scheme page: sub-missions, activities aur operational guidelines.{' '}
+            <a href="https://dahd.gov.in/schemes/programmes/national_livestock_mission" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">dahd.gov.in — National Livestock Mission (NLM)</a>
           </li>
         </ul>
 
