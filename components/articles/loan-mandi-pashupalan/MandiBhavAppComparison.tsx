@@ -105,6 +105,10 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
           </ul>
         </DB>
 
+        <p className="text-sm text-[var(--color-text)] mb-6">
+          <strong>Last Updated: 5 August 2026</strong>
+        </p>
+
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           Play Store par &ldquo;mandi bhav&rdquo; likho toh sau apps nikal aate hain — har ek ka dawa &ldquo;sabse accurate rate.&rdquo;
           Sach yeh hai ki inme se zyada tar apps ka data ek hi jagah se aata hai: sarkari mandi records. Fark sirf is
@@ -181,11 +185,12 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
           </table>
         </div>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Yeh koi chhota network nahi hai — Ministry of Agriculture ke record ke mutabik eNAM par{' '}
-          <strong>1.77 crore se zyada kisan</strong> registered hain aur December 2023 tak platform par{' '}
-          <strong>₹31.9 lakh crore</strong> ka vyapar ho chuka tha (
-          <a href="https://www.mynation.com/amp/india-news/bridging-the-gap-between-rural-farmers-and-markets-through-enam-kisan-rail-seva-and-krishi-udan-yojana-iwh-s98win" target="_blank" rel="noopener noreferrer" className="underline font-bold">source: MyNation / Ministry of Agriculture data</a>).
-          Yaani jis data par private apps apna dhandha chalate hain, uska asli ghar yahi sarkari system hai.
+          Yeh koi chhota network nahi hai — eNAM ke official national dashboard ke mutabik platform par{' '}
+          <strong>73.50 lakh se zyada kisan</strong> registered hain, <strong>471 mandis</strong> online trade kar
+          rahi hain aur ab tak <strong>₹36,275 crore</strong> ki traded value record ho chuki hai (
+          <a href="https://enam.gov.in/NAMV2/dashboard/statewise.html" target="_blank" rel="noopener noreferrer" className="underline font-bold">source: eNAM National Dashboard, Ministry of Agriculture</a>).
+          Yeh aankde live dashboard par roz update hote hain. Yaani jis data par private apps apna dhandha chalate
+          hain, uska asli ghar yahi sarkari system hai.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Sarkari apps ki taakat data ka bharosa hai, kamzori interface aur speed. Kabhi-kabhi app dheema chalega,
@@ -338,8 +343,12 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
             <a href="https://enam.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">enam.gov.in</a>
           </li>
           <li>
-            MyNation / Ministry of Agriculture data — eNAM 1.77 crore farmers, ₹31.9 lakh crore trade.{' '}
-            <a href="https://www.mynation.com/amp/india-news/bridging-the-gap-between-rural-farmers-and-markets-through-enam-kisan-rail-seva-and-krishi-udan-yojana-iwh-s98win" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">mynation.com</a>
+            eNAM National Dashboard, Ministry of Agriculture — live registered farmers, mandis on eNAM aur total traded value.{' '}
+            <a href="https://enam.gov.in/NAMV2/dashboard/statewise.html" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">enam.gov.in — National Dashboard (state-wise)</a>
+          </li>
+          <li>
+            eNAM — official trading details / notifications page.{' '}
+            <a href="https://agri.enam.gov.in/trading-details" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">agri.enam.gov.in — Trading Details</a>
           </li>
           <li>
             Agmarknet — daily mandi rates, Govt of India.{' '}

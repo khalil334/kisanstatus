@@ -105,6 +105,10 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
           </ul>
         </DB>
 
+        <p className="text-sm text-[var(--color-text)] mb-6">
+          <strong>Last Updated: 5 August 2026</strong>
+        </p>
+
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           Pyaz, aloo aur tamatar — teeno ka ek hi dard hai: jab kisan ke paas maal hota hai tab bhav nahi hota,
           aur jab bhav hota hai tab maal nahi bachta. Yeh koi kismat ka khel nahi hai — teeno sabziyon ka apna
