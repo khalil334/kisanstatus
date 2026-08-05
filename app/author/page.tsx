@@ -188,7 +188,7 @@ export default function AuthorPage() {
               { href: '/articles/PmKisan24viKist2026', title: '24vi Kist Status Check Guide', icon: '📅' },
               { href: '/articles/PmKisanEkycOnline2026', title: 'Digital eKYC Verification Guide', icon: '🔐' },
               { href: '/articles/PmKisanBeneficiaryList2026', title: 'Beneficiary List Kaise Dekhein', icon: '📋' },
-              { href: '/articles/pm-kisan-payment-failed-fix-2026', title: 'Payment Failed Status — Fix', icon: '💸' },
+              { href: '/articles/PmKisanPaymentFailedFix2026', title: 'Payment Failed Status — Fix', icon: '💸' },
               { href: '/articles/PmKisanMasterGuide2026', title: 'New Enrollment & Master Guide', icon: '📝' },
               { href: '/articles/PmKisanCorrectionForm2026', title: 'Name/Bank Detail Correction Online', icon: '✏️' },
             ].map((art) => (

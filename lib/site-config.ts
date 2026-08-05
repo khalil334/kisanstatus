@@ -117,8 +117,10 @@ export const APP_BACKGROUND_COLOR = '#ffffff';
 export const MAIN_NAVIGATION = [
   { name: 'Home', href: '/', priority: 1.0 },
   { name: 'PM Kisan Status', href: '/pm-kisan-status', priority: 0.9 },
-  { name: 'eKYC Guide', href: '/pm-kisan-ekyc', priority: 0.9 },
-  { name: 'Registration', href: '/pm-kisan-registration', priority: 0.9 },
+  // FIX(SEO): '/pm-kisan-ekyc' and '/pm-kisan-registration' were 404s — no such
+  // routes exist in app/. Pointed at the real published articles instead.
+  { name: 'eKYC Guide', href: '/articles/PmKisanEkycOnline2026', priority: 0.9 },
+  { name: 'Registration', href: '/articles/PmKisanMasterGuide2026', priority: 0.9 },
   { name: 'Calculators', href: '/calculator', priority: 0.8 },
   { name: 'Articles', href: '/articles', priority: 0.8 },
   { name: 'About Us', href: '/about', priority: 0.6 },
