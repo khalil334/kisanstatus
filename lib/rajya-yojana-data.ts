@@ -156,6 +156,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
     slug: 'krishak-bandhu-status-check-2026',
     mainKeyword: 'krishak bandhu status check',
     secondaryKeywords: [
+      'krishak bandhu status check voter id',
       'krishak bandhu verification list',
       'krishak bandhu voter id se status',
       'krishak bandhu death benefit',
@@ -171,7 +172,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
     officialPortal: 'https://krishakbandhu.wb.gov.in',
     status: 'live',
     published: '2026-08-03T09:00:00+05:30',
-    modified: '2026-08-03T09:00:00+05:30',
+    modified: '2026-08-05T21:00:00+05:30',
     readTime: '10 min read',
     ogImage: '/images/articles/rajya-yojna/krishak-bandhu-status-check-2026/hero.webp',
     relatedPaths: ['/articles/PmKisanMasterGuide2026', '/articles/PmKisanCorrectionForm2026'],
