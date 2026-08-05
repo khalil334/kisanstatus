@@ -3,7 +3,6 @@ import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
 
-// ── SEO Metadata ──────────────────────────────────────────────
 export const metadata: Metadata = {
   title: 'PM Matsya Sampada Yojana 2026: 60% Subsidy & Complete Guide',
   description: 'PM Matsya Sampada Yojana complete guide. Janein fish farming subsidy, biofloc technology, pond setup aur real profit calculation ke baare mein.',
@@ -43,7 +42,6 @@ export const metadata: Metadata = {
   },
 };
 
-// ── Schema Markup (JSON-LD) ───────────────────────────────────
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -133,13 +131,13 @@ const jsonLd = {
 export default function PMatsyaSampada() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-8 text-gray-800 dark:text-gray-200 leading-relaxed prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-blue-600 dark:prose-a:text-blue-400">
-      {/* Schema Injection */}
+      {}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Image 1: Hero Image (LCP Optimization) */}
+      {}
       <Image 
         src="/images/kisanguides/fish-farming-hero.webp" 
         alt="Fish Pond with Rohu and Catla - PM Matsya Sampada Yojana Subsidy Guide" 
@@ -233,7 +231,7 @@ export default function PMatsyaSampada() {
         Biofloc technology tab choose karein jab aapke paas zameen kam hai par investment capacity zyada hai. Urban areas mein yeh popular ho rahi hai kyunki kam space mein zyada production hota hai. Par isme electricity cost zyada hai (aerators 24x7 chalte hain), aur technical knowledge zaroori hai.
       </p>
 
-      {/* Image 2: Fish Varieties */}
+      {}
       <Image 
         src="/images/kisanguides/fish-varieties.webp" 
         alt="Different Fish Species - Rohu, Catla, Mrigal for Fish Farming" 
@@ -378,7 +376,7 @@ export default function PMatsyaSampada() {
         </ul>
       </div>
 
-      {/* Image 3: Documents */}
+      {}
       <Image 
         src="/images/kisanguides/fish-farming-documents.webp" 
         alt="Fish Farming Application Documents - Aadhaar, PAN, Land Records" 
@@ -401,7 +399,7 @@ export default function PMatsyaSampada() {
         label="PMMSY Official Portal - Apply Karein" 
       />
 
-      {/* Image 4: Application Process */}
+      {}
       <Image 
         src="/images/kisanguides/fish-farming-application.webp" 
         alt="Entrepreneur Applying for Fish Farming Loan and Subsidy" 
@@ -546,7 +544,7 @@ export default function PMatsyaSampada() {
         Agar aap high-value fish paalte hain (jaise Pangasius, Tilapia, ya Ornamental fish), toh margins 2-3x zyada ho sakte hain. Par inki market access aur technical knowledge bhi zyada chahiye.
       </p>
 
-      {/* Image 5: Fish Products Market */}
+      {}
       <Image 
         src="/images/kisanguides/fish-products-market.webp" 
         alt="Fresh and Processed Fish Products Ready for Market Sale" 
@@ -757,7 +755,7 @@ export default function PMatsyaSampada() {
         Agar aap isme serious hain, toh pehle apne ilaake ke kisi experienced machli palak se milein aur unke challenges samjhein. Uske baad training lein aur chhote scale par shuruat karein. Sahi planning aur mehnat se yeh ek sustainable income source ban sakta hai.
       </p>
 
-      {/* FAQ Section */}
+      {}
       <h2 id="faq" className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Frequently Asked Questions (FAQs)
       </h2>

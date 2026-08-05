@@ -8,11 +8,9 @@ import Script from 'next/script';
 import { SI, StepList, IB, WB, DB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 
-// ✅ UPDATED DATES: Modified date set to today (July 22, 2026) for strong E-E-A-T signal
 const PUBLISHED = '2026-07-10T08:00:00+05:30';
 const MODIFIED = '2026-07-22T08:00:00+05:30';
 
-// Visual Card Data for Internal Linking (Deep Linking with Descriptions)
 const RELATED_CARDS = [
   { 
     slug: 'PmKisanEkycOnline2026', 
@@ -69,7 +67,6 @@ const FAQS_DATA = [
   },
 ];
 
-// Countdown Modal Component
 function CountdownModal({ 
   title, 
   message, 
@@ -153,7 +150,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
 
   return (
     <>
-      {/* AEO/GEO & Technical SEO: JSON-LD Schema Injection */}
+      {}
       <Script id="pmkisan-mobile-schema" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify({
           "@context": "https://schema.org",
@@ -208,7 +205,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Complete Update Guide</span>
           
-          {/* SEO Optimized H1: Front-loaded, High CTR */}
+          {}
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
             PM Kisan Mobile Number Change 2026: Naya Number Kaise Jodein
           </h1>
@@ -224,14 +221,14 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* AEO Direct Answer Block (Top of Content for AI Overviews) */}
+        {}
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-r-xl">
           <p className="text-sm md:text-base text-blue-900 dark:text-blue-100 leading-relaxed font-medium">
             <strong>Seedha Jawab:</strong> Agar aapka purana SIM band ho gaya hai, toh <strong>PM Kisan mobile number change</strong> online nahi ho sakta. Aapko apne nazdiki CSC (Common Service Centre) jaakar biometric verification ke through naya number link karwana hoga. Iska sarkari charge sirf ₹20-₹30 hai aur process 24-48 ghante mein complete ho jata hai.
           </p>
         </div>
 
-        {/* Hero Image (Path UNCHANGED) */}
+        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-mobile-number-change-update/mobile-change-hero.webp"
@@ -247,7 +244,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           </p>
         </div>
 
-        {/* Introduction: Real Ground Reality */}
+        {}
         <section className="mb-8">
           <SH>Purana SIM Band, OTP Nahi Aa Raha — Ab Kya Karein?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -276,7 +273,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           </DB>
         </section>
 
-        {/* SECTION 1: The Core Problem */}
+        {}
         <section className="mb-8">
           <SH>Online Edit Option Kyun Kaam Nahi Kar Raha? (The Trap)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -312,7 +309,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           />
         </section>
 
-        {/* SECTION 2: CSC Method */}
+        {}
         <section className="mb-8">
           <SH>Method 1: CSC Center Se Karo (Sabse Fast Aur Aasan)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -374,7 +371,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           </div>
         </section>
 
-        {/* SECTION 3: BAO Offline Method */}
+        {}
         <section className="mb-8">
           <SH>Method 2: Block Agriculture Office (BAO) Se Offline Form</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -426,7 +423,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           </div>
         </section>
 
-        {/* SECTION 4: Crucial Distinction (High Value Add) */}
+        {}
         <section className="mb-8">
           <SH>Ek Bahut Badi Confusion: Bank Number vs PM Kisan Number</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -447,7 +444,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           </p>
         </section>
 
-        {/* SECTION 5: Documents Checklist */}
+        {}
         <section className="mb-8">
           <SH>Documents Ki List (Jo Hamesha Sath Rakhein)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -469,7 +466,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           </div>
         </section>
 
-        {/* SECTION 6: Common Mistakes */}
+        {}
         <section className="mb-8">
           <SH>Ye Galtiyan Mat Karna (Warna Phir Chakkar Katne Padenge)</SH>
           <div className="space-y-3">
@@ -499,7 +496,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           </div>
         </section>
 
-        {/* SECTION 7: Timeline & Verification */}
+        {}
         <section className="mb-8">
           <SH>Update Hui Ya Nahi? Kaise Check Karein? (100% Test)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -554,7 +551,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           </div>
         </section>
 
-        {/* SECTION 8: Does it affect Kist? */}
+        {}
         <section className="mb-8">
           <SH>Kya Mobile Number Change Karne Se Kist Rukegi?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -572,7 +569,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           </p>
         </section>
 
-        {/* FAQ */}
+        {}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Aksar Puche Jane Wale Sawal (FAQs)
@@ -588,7 +585,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           portalName="pmkisan.gov.in"
         />
 
-        {/* VISUAL CARD STYLE INTERNAL LINKING */}
+        {}
         <section className="my-10">
           <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Aapke Liye Zaroori Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

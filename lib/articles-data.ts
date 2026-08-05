@@ -959,7 +959,6 @@ function freshnessTime(a: ArticleMeta): number {
   return Math.max(published, modified);
 }
 
-/** All articles sorted newest-first by published OR last-updated date. */
 export function getArticlesByFreshness(): readonly ArticleMeta[] {
   return [...ARTICLES].sort((a, b) => freshnessTime(b) - freshnessTime(a));
 }

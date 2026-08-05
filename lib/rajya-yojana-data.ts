@@ -1,43 +1,21 @@
-/**
- * State (rajya) kisan yojana cluster — 10-article plan.
- * Served from /rajya-yojana/<slug> (NOT /articles/<slug>).
- *
- * IMPORTANT — `status` field:
- *   'planned' = body component doesn't exist yet. Excluded from sitemap, RSS,
- *               llms.txt and the listing page; the URL returns a real 404.
- *   'live'    = component exists and is wired into app/rajya-yojana/[slug]/page.tsx
- *               COMPONENTS map. Only then does it enter sitemap/RSS/listing.
- *
- * Never flip a slug to 'live' before its component is registered — a 200 page
- * with no <h1> is a soft-404 and Ahrefs Site Audit will flag it.
- *
- * Amounts, installment numbers and dates are deliberately NOT stored here.
- * Verify them against the official state portal while writing each article.
- */
 
 export type RajyaArticleStatus = 'planned' | 'live';
 
 export type RajyaYojanaArticleMeta = {
   slug: string;
-  /** Target keyword for this page. Exactly one per article — no overlap. */
   mainKeyword: string;
-  /** Supporting keywords for H2/H3 and body. Do not force into the title. */
   readonly secondaryKeywords: readonly string[];
   title: string;
   description: string;
   ogTitle: string;
-  /** Component name registered in app/rajya-yojana/[slug]/page.tsx */
   component: string;
-  /** Indian state this scheme belongs to; 'ALL' for the hub page. */
   state: string;
-  /** Official portal for the scheme, if any. Empty string = central/none. */
   officialPortal: string;
   status: RajyaArticleStatus;
   published: string;
   modified: string;
   readTime: string;
   ogImage?: string;
-  /** Existing kisanstatus articles this page should link to. */
   readonly relatedPaths: readonly string[];
 };
 
@@ -283,7 +261,6 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
   },
 ];
 
-/** Only these enter sitemap / RSS / llms.txt / listing. */
 export const LIVE_RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] =
   RAJYA_YOJANA_ARTICLES.filter((a) => a.status === 'live');
 
@@ -291,10 +268,6 @@ export function getRajyaYojanaArticle(slug: string): RajyaYojanaArticleMeta | un
   return RAJYA_YOJANA_ARTICLES.find((a) => a.slug === slug);
 }
 
-/**
- * Article #10 of the plan is NOT a new page — it's an update discipline for the
- * existing central instalment tracker. Kept here so the plan stays traceable in code.
- */
 export const INSTALMENT_TRACKER_PAGE = {
   path: '/articles/PmKisan24viKist2026',
   mainKeyword: 'pm kisan 24vi kist kab aayegi',

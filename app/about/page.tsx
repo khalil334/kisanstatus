@@ -82,7 +82,7 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      {/* Hero */}
+      {}
       <div className="bg-[var(--color-primary)] py-10">
         <div className="container-site max-w-3xl">
           <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center" aria-label="Breadcrumb">
@@ -99,7 +99,7 @@ export default function AboutPage() {
 
       <div className="container-site max-w-3xl py-10">
 
-        {/* What Is KisanStatus */}
+        {}
         <section className="mb-8 bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             🌾 {SITE_NAME} Kya Hai?
@@ -141,7 +141,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Topics We Cover */}
+        {}
         <section className="mb-8 bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             📋 Hum Kya Cover Karte Hain
@@ -159,7 +159,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Stats */}
+        {}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
           {STATS.map((stat) => (
             <div key={stat.label} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl text-center py-5 px-3">
@@ -170,7 +170,7 @@ export default function AboutPage() {
           ))}
         </div>
 
-        {/* Quick Links */}
+        {}
         <section className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-2xl p-6 mb-8">
           <h2 className="text-lg font-black text-[var(--color-text)] mb-4">🔗 Useful Links</h2>
           <div className="flex flex-wrap gap-3">
@@ -195,7 +195,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Disclaimer */}
+        {}
         <div className="p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl text-xs text-[var(--color-text-muted)] leading-relaxed">
           <p className="font-bold text-[var(--color-text)] mb-2">⚠️ Disclaimer</p>
           <p className="mb-2">

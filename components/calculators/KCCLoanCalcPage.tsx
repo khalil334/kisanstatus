@@ -41,7 +41,6 @@ export default function KCCLoanCalcPage() {
   const subsidy = Number(rate)<=7 ? P*0.02 : 0;
   const effectiveCost = totalPayable - subsidy;
 
-  // Breadcrumb schema — was missing before, matches article pages
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -52,9 +51,6 @@ export default function KCCLoanCalcPage() {
     ],
   };
 
-  // aggregateRating removed — it was a fabricated 4.8/1156 rating with no
-  // real reviews backing it, which is a spam risk. Added dates + author
-  // instead for real freshness/E-E-A-T signals.
   const schema = {
     '@context':'https://schema.org',
     '@type':'WebApplication',
@@ -83,14 +79,14 @@ export default function KCCLoanCalcPage() {
 
       <div className="container-site max-w-2xl py-8">
 
-        {/* Author + updated date — E-E-A-T signal, matches article pages */}
+        {}
         <div className="flex flex-wrap gap-3 text-xs text-gray-500 mb-4">
           <span>✍️ <Link href="/about" className="underline hover:text-gray-700">{AUTHOR_NAME}</Link></span>
           <span>📅 {fmtDate(PUBLISHED)}</span>
           <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
         </div>
 
-        {/* Detailed intro - helpful content */}
+        {}
         <div className="mb-6 p-5 bg-blue-50 border border-blue-200 rounded-xl text-sm text-gray-700 leading-relaxed">
           <p className="font-bold text-blue-900 mb-2">🏦 KCC Loan Lene Se Pehle EMI Jaan Lo</p>
           <p className="mb-2">
@@ -151,7 +147,7 @@ export default function KCCLoanCalcPage() {
                 </>
               )}
               
-              {/* Explanation */}
+              {}
               <div className="mt-4 p-3 bg-white rounded-xl text-xs text-gray-700">
                 <p className="font-bold mb-1">📖 Iska Matlab Kya Hai?</p>
                 <p>Aapne ₹{fmt(P)} ka loan liya {rate}% interest par {months} mahine ke liye. Har mahine ₹{fmt(emi)} dena hoga. Total ₹{fmt(totalInterest)} interest dena padega. Par agar time par repay kiya to ₹{fmt(subsidy)} ki subsidy milegi — effective cost sirf ₹{fmt(effectiveCost)} hogi.</p>
@@ -159,7 +155,7 @@ export default function KCCLoanCalcPage() {
             </div>
           )}
 
-          {/* Quick facts */}
+          {}
           <div className="mt-5 grid grid-cols-2 gap-2">
             {[
               {t:'₹3 Lakh',d:'Maximum loan limit'},
@@ -175,7 +171,7 @@ export default function KCCLoanCalcPage() {
           </div>
         </div>
 
-        {/* How to apply - detailed guide */}
+        {}
         <div className="mt-6 bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
           <h3 className="font-black text-gray-900 text-sm mb-4">📋 KCC Loan Kaise Le — Step by Step</h3>
           <div className="space-y-3">
@@ -211,7 +207,7 @@ export default function KCCLoanCalcPage() {
           </Link>
         </div>
 
-        {/* Common mistakes */}
+        {}
         <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-xl">
           <p className="font-bold text-yellow-900 text-sm mb-2">⚠️ KCC Loan Mein Aksar Yeh Galtiyan Hoti Hain:</p>
           <ul className="space-y-1.5 text-xs text-yellow-800">
@@ -223,7 +219,7 @@ export default function KCCLoanCalcPage() {
           </ul>
         </div>
 
-        {/* Tips */}
+        {}
         <div className="mt-6">
           <h3 className="font-black text-gray-900 text-sm mb-3">💡 KCC Loan Se Maximum Fayda Kaise Uthao</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
@@ -250,7 +246,7 @@ export default function KCCLoanCalcPage() {
         
         <OtherCalcs current="/calculator/kcc-loan-emi" />
 
-        {/* Related articles */}
+        {}
         <div className="mt-6 p-5 bg-blue-50 border border-blue-200 rounded-xl">
           <p className="font-bold text-blue-900 text-sm mb-3">📖 KCC Loan Se Related Guides</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -275,7 +271,7 @@ export default function KCCLoanCalcPage() {
           </div>
         </div>
 
-        {/* FAQ section */}
+        {}
         <div className="mt-6 p-5 bg-gray-50 border border-gray-200 rounded-xl">
           <p className="font-bold text-gray-900 text-sm mb-3">❓ KCC Loan Ke Baare Mein Aksar Sawaal</p>
           <div className="space-y-3 text-xs">

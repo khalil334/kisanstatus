@@ -2,23 +2,6 @@
 
 import { useMemo, useState } from 'react';
 
-/**
- * PM Kisan family-unit checker.
- *
- * Encodes the scheme's own definition of a beneficiary: the unit is the
- * *family* (husband + wife + minor children), not the individual. So:
- *   - Two adults of the SAME family cannot both draw the ₹6,000 a year.
- *   - A separated landholding held by an adult son is its own family unit.
- *   - Exclusion categories (income-tax payer, serving/retired government
- *     servant above the pay bracket, registered professional, institutional
- *     landholder, constitutional post holder) apply at family level.
- *   - Amount is flat ₹6,000 a year in three ₹2,000 instalments; land area
- *     does not change it.
- *
- * Everything runs in the browser. This is a reading aid — the PM Kisan
- * portal record and the tehsil land record decide the real outcome.
- */
-
 type Applicant = 'one' | 'both' | 'son';
 
 const EXCLUSIONS: [string, string][] = [
@@ -115,7 +98,6 @@ export default function PmKisanFamilyChecker() {
       };
     }
 
-    // applicant === 'one'
     if (landInName === 'no') {
       return {
         tone: 'warn' as const,

@@ -3,24 +3,6 @@
 import { useMemo, useState } from 'react';
 import Link from 'next/link';
 
-/**
- * State kisan yojana finder.
- *
- * Only states whose scheme we have already researched in a dedicated article
- * are listed with amounts, and every amount here matches that article — no
- * invented figures. States without a top-up scheme of their own are handled by
- * the fallback branch, which says so plainly instead of guessing.
- *
- * `stateAnnual` semantics differ by scheme design, so each row carries its own
- * calculator kind:
- *   - 'flat'     : fixed annual state top-up, land area irrelevant.
- *   - 'perAcre'  : per-acre grant with a floor and/or capped acreage.
- *   - 'track'    : two separate household tracks (cultivator vs landless).
- *
- * PM Kisan itself is a flat ₹6,000 a year (3 × ₹2,000) wherever the farmer is
- * eligible, so it is added on top unless the user says they don't get it.
- */
-
 const PM_KISAN_ANNUAL = 6000;
 
 type Scheme = {
@@ -29,12 +11,8 @@ type Scheme = {
   slug: string;
   portal: string;
   kind: 'flat' | 'perAcre' | 'track';
-  /** flat: annual state amount. */
   flat?: number;
-  /** perAcre: rate, floor, and max billable acres. */
-  /** `capAcres` omitted = koi acre cap nahi (sirf cultivable-land shart lagti hai). */
   perAcre?: { rate: number; floor: number; capAcres?: number; seasons: number };
-  /** track: cultivator vs landless annual amounts + acre ceiling. */
   track?: { cultivator: number; landless: number; ceilingAcres: number };
   note: string;
 };

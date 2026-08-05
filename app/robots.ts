@@ -70,7 +70,6 @@ export default function robots(): MetadataRoute.Robots {
           '/tools/',
         ],
       },
-      // SEO tools we actively use to audit this site — must be allowed to crawl.
       {
         userAgent: ['AhrefsBot', 'AhrefsSiteAudit'],
         allow: '/',

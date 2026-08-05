@@ -1,10 +1,3 @@
-/**
- * PM Kisan Status Check Page
- * Green theme consistent design
- * JSON-LD schema for SEO
- * Updated kist table with realistic data
- * Internal linking structure
- */
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';

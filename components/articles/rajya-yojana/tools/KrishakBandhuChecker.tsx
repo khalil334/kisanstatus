@@ -2,21 +2,6 @@
 
 import { useMemo, useState } from 'react';
 
-/**
- * Krishak Bandhu eligibility + document checker.
- *
- * Rules encoded here come from the West Bengal Department of Agriculture's
- * published scheme structure (Krishak Bandhu "Natun"):
- *   - Assured income: ₹10,000 per acre per year, minimum ₹4,000, paid in two
- *     equal instalments (Kharif + Rabi). Landholding above 1 acre does not
- *     raise the grant beyond ₹10,000.
- *   - Age band 18–60 for the Death Benefit component (₹2,00,000 one-time).
- *   - Bhumihin (landless) khetmajur track: flat ₹4,000 a year, ₹2,000 + ₹2,000.
- *
- * Nothing is submitted anywhere — the whole calculation runs in the browser.
- * The portal remains the only authority on an individual's actual status.
- */
-
 type FarmerType = 'owner' | 'bhagchasi' | 'bhumihin';
 
 const DOCS_COMMON = [
@@ -53,7 +38,6 @@ export default function KrishakBandhuChecker() {
   const [resident, setResident] = useState(true);
   const [submitted, setSubmitted] = useState(false);
 
-  // 1 bigha (West Bengal / standard) = 0.3306 acre.
   const acres = useMemo(() => {
     const v = parseFloat(landRaw);
     if (!Number.isFinite(v) || v <= 0) return 0;
@@ -99,7 +83,6 @@ export default function KrishakBandhuChecker() {
       };
     }
 
-    // ₹10,000 per acre, floor ₹4,000, ceiling ₹10,000.
     const raw = acres * 10000;
     const annual = Math.min(10000, Math.max(4000, Math.round(raw / 100) * 100));
 

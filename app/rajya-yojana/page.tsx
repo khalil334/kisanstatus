@@ -31,7 +31,6 @@ export const metadata: Metadata = {
 };
 
 export default function RajyaYojanaListingPage() {
-  // Hub is empty until the first article ships — don't expose a thin page.
   if (LIVE_RAJYA_YOJANA_ARTICLES.length === 0) notFound();
 
   return (

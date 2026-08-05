@@ -51,7 +51,6 @@ const FAQS_DATA = [
   },
 ];
 
-// Countdown Button Component
 function CountdownButton({ 
   href, 
   label, 
@@ -122,7 +121,6 @@ function CountdownButton({
   );
 }
 
-// External Link Card with Countdown
 function ExternalLinkCard({
   title,
   description,
@@ -184,7 +182,7 @@ export default function PmKisanMaandhanYojanaPension({ article }: { article: Art
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* Hero Image */}
+        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-maandhan-yojana-pension/maandhan-hero.webp"
@@ -200,7 +198,7 @@ export default function PmKisanMaandhanYojanaPension({ article }: { article: Art
           </p>
         </div>
 
-        {/* Introduction */}
+        {}
         <section className="mb-8">
           <SH>60 Saal Ke Baad Kheti Kaun Karega?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -230,7 +228,7 @@ export default function PmKisanMaandhanYojanaPension({ article }: { article: Art
           </p>
         </section>
 
-        {/* SECTION 1: What is PM-KMY */}
+        {}
         <section className="mb-8">
           <SH>PM Kisan Maandhan Yojana Aakhir Hai Kya?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -251,7 +249,7 @@ export default function PmKisanMaandhanYojanaPension({ article }: { article: Art
           </p>
         </section>
 
-        {/* SECTION 2: Eligibility */}
+        {}
         <section className="mb-8">
           <SH>Kaun Join Kar Sakta Hai? (Eligibility Criteria)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -297,7 +295,7 @@ export default function PmKisanMaandhanYojanaPension({ article }: { article: Art
           </IB>
         </section>
 
-        {/* SECTION 3: Contribution Table */}
+        {}
         <section className="mb-8">
           <SH>Har Mahine Kitna Paisa Dena Padta Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -348,7 +346,7 @@ export default function PmKisanMaandhanYojanaPension({ article }: { article: Art
           />
         </section>
 
-        {/* SECTION 4: How to Apply */}
+        {}
         <section className="mb-8">
           <SH>Apply Kaise Karein? (3 Tareeke)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -384,7 +382,7 @@ export default function PmKisanMaandhanYojanaPension({ article }: { article: Art
           />
         </section>
 
-        {/* SECTION 5: Documents */}
+        {}
         <section className="mb-8">
           <SH>Documents Ki List</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -407,7 +405,7 @@ export default function PmKisanMaandhanYojanaPension({ article }: { article: Art
           </div>
         </section>
 
-        {/* SECTION 6: Benefits Breakdown */}
+        {}
         <section className="mb-8">
           <SH>60 Saal Ke Baad Kya Milega? (Full Calculation)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -448,7 +446,7 @@ export default function PmKisanMaandhanYojanaPension({ article }: { article: Art
           </p>
         </section>
 
-        {/* SECTION 7: What If Death */}
+        {}
         <section className="mb-8">
           <SH>Agar 60 Saal Se Pehle Maut Ho Jaye Toh?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -480,7 +478,7 @@ export default function PmKisanMaandhanYojanaPension({ article }: { article: Art
           />
         </section>
 
-        {/* SECTION 8: Common Problems */}
+        {}
         <section className="mb-8">
           <SH>Common Problems Aur Solutions</SH>
           <div className="space-y-3">
@@ -514,7 +512,7 @@ export default function PmKisanMaandhanYojanaPension({ article }: { article: Art
           </div>
         </section>
 
-        {/* SECTION 9: Comparison */}
+        {}
         <section className="mb-8">
           <SH>PM Kisan Samman Nidhi Se Kya Farq Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -552,7 +550,7 @@ export default function PmKisanMaandhanYojanaPension({ article }: { article: Art
           </IB>
         </section>
 
-        {/* SECTION 10: State Wise */}
+        {}
         <section className="mb-8">
           <SH>State Wise Implementation</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -578,7 +576,7 @@ export default function PmKisanMaandhanYojanaPension({ article }: { article: Art
           </p>
         </section>
 
-        {/* SECTION 11: Practical Limitations */}
+        {}
         <section className="mb-8">
           <SH>Real Challenges Jo Samajhna Zaroori Hain</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -606,7 +604,7 @@ export default function PmKisanMaandhanYojanaPension({ article }: { article: Art
           </div>
         </section>
 
-        {/* SECTION 12: Common Confusions */}
+        {}
         <section className="mb-8">
           <SH>Kuch Galat Fahmiyan Jo Door Karni Zaroori Hain</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -620,7 +618,7 @@ export default function PmKisanMaandhanYojanaPension({ article }: { article: Art
           </p>
         </section>
 
-        {/* External Links Section with Countdown Buttons */}
+        {}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Official Links aur Resources
@@ -653,7 +651,7 @@ export default function PmKisanMaandhanYojanaPension({ article }: { article: Art
           </div>
         </section>
 
-        {/* FAQ */}
+        {}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Aksar Puche Jane Wale Sawal

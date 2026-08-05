@@ -19,7 +19,6 @@ export default function CategoryFilter({ activeCategory }: { activeCategory: Cat
       </Link>
       
       {Object.entries(CATEGORIES).map(([slug, cat]) => {
-        // Safe type casting to access nameHi and icon if they exist in your data
         const catInfo = cat as { name: string; nameHi?: string; icon?: string };
         const displayName = catInfo.nameHi || catInfo.name;
         const icon = catInfo.icon || '📄';

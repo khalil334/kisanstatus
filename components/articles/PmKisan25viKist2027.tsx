@@ -74,7 +74,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* IMAGE 1: Hero */}
+        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/articles/pm-kisan-25vi-kist-2027/hero-25vi-kist.webp'}
@@ -146,7 +146,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           </p>
         </section>
 
-        {/* IMAGE 2: Timeline Chart */}
+        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-25vi-kist-2027/installment-timeline-chart.webp"
@@ -194,7 +194,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           </StepList>
         </section>
 
-        {/* IMAGE 3: eKYC Checklist */}
+        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-25vi-kist-2027/ekyc-checklist.webp"
@@ -249,7 +249,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           <FAQBlock faqs={FAQS_DATA} caption="PM Kisan 25vi Kist 2027 — FAQ" />
         </section>
 
-        {/* IMAGE 4: Payment Notification */}
+        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-25vi-kist-2027/payment-credited-notification.webp"

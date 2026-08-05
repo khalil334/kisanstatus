@@ -3,7 +3,6 @@ import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
 
-// ── SEO Metadata ──────────────────────────────────────────────
 export const metadata: Metadata = {
   title: 'Vermi Compost Business 2026: PKVY Subsidy & Profit Guide',
   description: 'Vermi compost business complete guide. Janein organic fertilizer kaise banayein, PKVY subsidy, machinery cost aur real profit calculation ke baare mein sab kuch.',
@@ -43,7 +42,6 @@ export const metadata: Metadata = {
   },
 };
 
-// ── Schema Markup (JSON-LD) ───────────────────────────────────
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -133,13 +131,13 @@ const jsonLd = {
 export default function VerminCompost() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-8 text-gray-800 dark:text-gray-200 leading-relaxed prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-blue-600 dark:prose-a:text-blue-400">
-      {/* Schema Injection */}
+      {}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Image 1: Hero Image (LCP Optimization) */}
+      {}
       <Image 
         src="/images/kisanguides/vermi-compost-hero.webp" 
         alt="Vermi Compost Pit with Earthworms - Organic Fertilizer Business Guide" 
@@ -188,7 +186,7 @@ export default function VerminCompost() {
         <li><strong>Long-term benefit:</strong> Ek baar use karne se soil structure permanently improve hota hai.</li>
       </ul>
 
-      {/* Image 2: Vermi Compost Pits */}
+      {}
       <Image 
         src="/images/kisanguides/vermi-compost-pits.webp" 
         alt="Well-organized Vermi Compost Pits in a Shaded Area" 
@@ -288,7 +286,7 @@ export default function VerminCompost() {
         Is investment ko manage karne ke liye Kisan Credit Card (KCC) ek badhiya vikalp hai, jisme working capital ke liye limit badhwa sakte hain. Setup cost ke liye official Mudra Loan bhi le sakte hain - Shishu category mein ₹50,000 tak, Kishor mein ₹5 lakh tak bina collateral ke mil jata hai.
       </p>
 
-      {/* Image 3: Packaging */}
+      {}
       <Image 
         src="/images/kisanguides/vermi-compost-packaging.webp" 
         alt="Branded Vermi Compost Bags Ready for Market Sale" 
@@ -457,7 +455,7 @@ export default function VerminCompost() {
         Average profit ₹10 - ₹12 per kg maan kar chaliye. Agar aap mahine mein 2 ton (2,000 kg) bechte hain, toh monthly profit ₹20,000 - ₹24,000, aur saal ka ₹2.4 - ₹2.9 lakh ban sakta hai.
       </p>
 
-      {/* Image 4: Market Delivery */}
+      {}
       <Image 
         src="/images/kisanguides/vermi-compost-market.webp" 
         alt="Vermi Compost Being Delivered to Local Farmers and Nurseries" 
@@ -512,7 +510,7 @@ export default function VerminCompost() {
         <li><strong>FPOs aur Cooperatives:</strong> Farmer Producer Organizations se tie-up karo. Wo apne member farmers ko organic inputs recommend karte hain.</li>
       </ul>
 
-      {/* Image 5: Legal & Documents */}
+      {}
       <Image 
         src="/images/kisanguides/vermi-compost-docs.webp" 
         alt="Vermi Compost Business Legal Documents and Lab Testing Reports" 
@@ -611,7 +609,7 @@ export default function VerminCompost() {
         Agar aap seriously interested hain, toh pehle apne area ke 5-10 organic farmers se baat karein. Unse pata karein ki wo vermi compost use karte hain ya nahi, kahan se khareedte hain, rate kya hai. Market research karo, phir decision lo.
       </p>
 
-      {/* FAQ Section */}
+      {}
       <h2 id="faq" className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Frequently Asked Questions (FAQs)
       </h2>

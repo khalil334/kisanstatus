@@ -29,9 +29,6 @@ export default function QuickStatusChecker() {
   const OFFICIAL_URL = 'https://pmkisan.gov.in/BeneficiaryStatus.aspx';
   const FALLBACK_URL = 'https://pmkisan.gov.in';
 
-  // This page previously had no structured data at all — added breadcrumb
-  // + WebApplication schema (with real dates and author, no fabricated
-  // rating) so it matches the pattern used on the other calculator pages.
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -97,7 +94,7 @@ export default function QuickStatusChecker() {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-green-50/30 to-emerald-50/40 py-8 md:py-12">
       <div className="container-site max-w-2xl mx-auto px-4">
 
-        {/* Hero Section */}
+        {}
         <div className="relative text-center mb-8 rounded-3xl p-8 md:p-10 overflow-hidden shadow-2xl shadow-green-900/20">
           <div className="absolute inset-0 bg-gradient-to-br from-green-800 via-emerald-700 to-teal-800" />
           <div className="absolute inset-0 opacity-30" style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(255,255,255,0.15) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 40%)' }} />
@@ -117,14 +114,14 @@ export default function QuickStatusChecker() {
           </div>
         </div>
 
-        {/* Author + updated date — E-E-A-T signal, matches other pages */}
+        {}
         <div className="flex flex-wrap justify-center gap-3 text-xs text-gray-500 mb-4">
           <span>✍️ <Link href="/about" className="underline hover:text-gray-700">{AUTHOR_NAME}</Link></span>
           <span>📅 {fmtDate(PUBLISHED)}</span>
           <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
         </div>
 
-        {/* Detailed Intro - Helpful Content */}
+        {}
         <div className="mb-6 p-5 bg-white rounded-2xl border border-gray-200 shadow-sm">
           <h2 className="font-black text-gray-900 text-base mb-3 flex items-center gap-2">
             <span>📖</span> PM Kisan Status Check Kaise Karein?
@@ -141,7 +138,7 @@ export default function QuickStatusChecker() {
           </div>
         </div>
 
-        {/* Main Tool Card */}
+        {}
         <div className="bg-white/80 backdrop-blur-xl rounded-2xl shadow-xl shadow-gray-200/50 border border-white/60 p-6 md:p-8">
 
           {redirectFailed && (
@@ -238,7 +235,7 @@ export default function QuickStatusChecker() {
           )}
         </div>
 
-        {/* Info Cards */}
+        {}
         <div className="grid grid-cols-3 gap-3 mt-6">
           <div className="bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200 p-4 rounded-xl text-center">
             <span className="text-xl block mb-1">💰</span>
@@ -257,7 +254,7 @@ export default function QuickStatusChecker() {
           </div>
         </div>
 
-        {/* Step by Step Guide - Helpful Content */}
+        {}
         <div className="mt-6 bg-white rounded-2xl border border-gray-200 shadow-sm p-5">
           <h3 className="font-black text-gray-900 text-sm mb-4">📋 PM Kisan Status Check Karne Ka Tarika</h3>
           <div className="space-y-3">
@@ -277,7 +274,7 @@ export default function QuickStatusChecker() {
           </div>
         </div>
 
-        {/* Common Problems - Helpful Content */}
+        {}
         <div className="mt-6 bg-white rounded-2xl border border-gray-200 shadow-sm p-5">
           <h3 className="font-black text-gray-900 text-sm mb-4">⚠️ Status Check Mein Common Problems</h3>
           <div className="space-y-3 text-sm">
@@ -300,7 +297,7 @@ export default function QuickStatusChecker() {
           </div>
         </div>
 
-        {/* Related Guides */}
+        {}
         <div className="mt-6 bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
           <div className="flex items-center justify-between mb-3">
             <h3 className="font-bold text-gray-900 text-sm">📚 Problem Aaye Toh Yeh Padhein:</h3>
@@ -335,7 +332,7 @@ export default function QuickStatusChecker() {
           </div>
         </div>
 
-        {/* FAQ Section - Helpful Content */}
+        {}
         <div className="mt-6 bg-white rounded-2xl border border-gray-200 shadow-sm p-5">
           <h3 className="font-black text-gray-900 text-sm mb-4">❓ PM Kisan Status Ke Baare Mein Sawaal</h3>
           <div className="space-y-3 text-xs">
@@ -362,7 +359,7 @@ export default function QuickStatusChecker() {
           </div>
         </div>
 
-        {/* Disclaimer */}
+        {}
         <div className="mt-5 p-3 bg-amber-50/80 border border-amber-200/60 rounded-xl text-[11px] text-amber-800 text-center leading-relaxed">
           ⚠️ Yeh tool aapko seedha <strong>pmkisan.gov.in</strong> par le jayega. Real status sirf official website par hi dikhega. KisanStatus.com ek independent portal hai — government se affiliated nahi hai.
         </div>

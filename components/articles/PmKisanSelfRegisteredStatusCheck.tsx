@@ -96,7 +96,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(HOWTO_SCHEMA) }}
       />
-      {/* Header */}
+      {}
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
           <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
@@ -121,7 +121,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* IMAGE 1: Hero */}
+        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || `${IMG_BASE}/hero.webp`}
@@ -138,7 +138,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
           </p>
         </div>
 
-        {/* Real Hook */}
+        {}
         <div className="my-6 p-5 bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-400 dark:border-amber-700 border-l-[6px] rounded-xl">
           <h2 className="text-base font-black text-amber-800 dark:text-amber-300 mb-2">Seedhi Baat</h2>
           <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed mb-2">
@@ -149,7 +149,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
           </p>
         </div>
 
-        {/* Section 1: What Is Self Registration */}
+        {}
         <section className="mb-8">
           <SH>Self Registration Kya Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -166,7 +166,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
           </IB>
         </section>
 
-        {/* IMAGE 2: Self-registration form screenshot */}
+        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={`${IMG_BASE}/self-registration-form.webp`}
@@ -182,7 +182,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
           </p>
         </div>
 
-        {/* Section 2: How to Check Status */}
+        {}
         <section className="mb-8">
           <SH>Status Check Kaise Karein — Step by Step</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -217,7 +217,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
           </WB>
         </section>
 
-        {/* IMAGE 3: Status Check Screenshot */}
+        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={`${IMG_BASE}/beneficiary-status-result.webp`}
@@ -233,7 +233,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
           </p>
         </div>
 
-        {/* Section 3: Understanding Status */}
+        {}
         <section className="mb-8">
           <SH>Status Ka Matlab Kya Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -270,7 +270,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
           </div>
         </section>
 
-        {/* Section 4: Self vs CSC Registration */}
+        {}
         <section className="mb-8">
           <SH>Self Registration vs CSC — Kya Farak Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -311,7 +311,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
           </IB>
         </section>
 
-        {/* IMAGE 4: Common problems / correction flow */}
+        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={`${IMG_BASE}/edit-aadhaar-details.webp`}
@@ -327,7 +327,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
           </p>
         </div>
 
-        {/* Section 5: Common Problems */}
+        {}
         <section className="mb-8">
           <SH>5 Common Problems + Solutions</SH>
           <div className="space-y-3">
@@ -361,7 +361,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
           </div>
         </section>
 
-        {/* Section 6: After Registration */}
+        {}
         <section className="mb-8">
           <SH>Registration Ke Baad Kya Karein?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -391,7 +391,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
           </div>
         </section>
 
-        {/* Section 7: Helpline */}
+        {}
         <section className="mb-8">
           <SH>Help Kahan Se Le?</SH>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -418,7 +418,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
           </div>
         </section>
 
-        {/* Official Source References */}
+        {}
         <section className="mb-8">
           <div className="p-4 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-xl">
             <p className="text-xs font-bold text-[var(--color-text)] mb-2">📌 Official Source</p>
@@ -435,7 +435,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
           </div>
         </section>
 
-        {/* IMAGE 5: Helpline / support visual */}
+        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={`${IMG_BASE}/helpline-support.webp`}
@@ -451,7 +451,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
           </p>
         </div>
 
-        {/* FAQ */}
+        {}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Aksar Puche Jane Wale Sawal
@@ -459,7 +459,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
           <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Self Registration Status FAQ 2026 — Real Answers" />
         </section>
 
-        {/* Conclusion */}
+        {}
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Bottom Line</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">

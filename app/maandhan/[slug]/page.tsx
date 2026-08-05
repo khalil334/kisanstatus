@@ -28,8 +28,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const article = MAANDHAN_ARTICLES.find((a) => a.slug === slug);
   
-  // Unknown slug: the body calls notFound(), but this metadata overrides
-  // app/not-found.tsx's noindex, leaving the soft-404 shell indexable.
   if (!article) {
     return { title: 'Not Found', robots: { index: false, follow: true } };
   }
@@ -92,8 +90,6 @@ export default async function MaandhanArticlePage({ params }: { params: Promise<
   const ArticleComponent = COMPONENTS[slug];
   if (!ArticleComponent) notFound();
 
-  // Internal linking: every maandhan article links to 6 sibling articles.
-  // Deterministic rotation by article index so link equity spreads across the set.
   const idx = MAANDHAN_ARTICLES.findIndex((a) => a.slug === slug);
   const siblings = MAANDHAN_ARTICLES.filter((a) => a.slug !== slug);
   const related = Array.from({ length: Math.min(6, siblings.length) }, (_, i) => siblings[(idx + i) % siblings.length]);
