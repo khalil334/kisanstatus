@@ -297,7 +297,7 @@ export default function PmKisanMaandhanYojanaPension({ article }: { article: Art
 
         {}
         <section className="mb-8">
-          <SH>Har Mahine Kitna Paisa Dena Padta Hai?</SH>
+          <SH>Har Mahine Kitna Paisa Dena Padta Hai? (Mandhan Chart)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Ye sabse important sawal hai. Contribution aapki umra par depend karta hai. Jitni jaldi join karoge, utna kam paisa lagega aur utni zyada pension milegi.
           </p>
