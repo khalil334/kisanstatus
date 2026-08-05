@@ -75,7 +75,7 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
             <span>📅 {fmtDate(article.publishedTime)}</span>
-            <span>🔄 Updated: {fmtDate(article.modifiedTime)}</span>
+            <span>🔄 Last Updated: 5 August 2026</span>
             <span>⏱️ 10 min read</span>
           </div>
         </div>
@@ -93,6 +93,17 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
             priority
           />
         </div>
+
+        <DB>
+          <strong>TL;DR — seedha faisla:</strong>
+          <ul className="list-disc pl-5 mt-2 space-y-1">
+            <li>Phone mein sirf <strong>2 apps</strong> chahiye: ek sarkari (eNAM app ya AgMarknet) + ek jo aapki local mandiyan cover kare. Baaki uninstall.</li>
+            <li>Sab apps ka rate ek hi jagah se aata hai — <strong>sarkari mandi records</strong>. Accuracy ka sawaal hi galat hai; sawaal speed aur coverage ka hai.</li>
+            <li><strong>Modal price</strong> dekho, max nahi — aur 7-10 din ka trend, ek din ka number nahi.</li>
+            <li>Bina smartphone: <strong>Kisan Call Centre 1800-180-1551</strong> — free call, apni bhasha mein bhav.</li>
+            <li><strong>Abhi check karo:</strong> <a href="https://enam.gov.in" target="_blank" rel="noopener noreferrer" className="underline font-bold">enam.gov.in</a> par apni mandi integrated hai ya nahi.</li>
+          </ul>
+        </DB>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           Play Store par &ldquo;mandi bhav&rdquo; likho toh sau apps nikal aate hain — har ek ka dawa &ldquo;sabse accurate rate.&rdquo;
@@ -169,6 +180,13 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
             </tbody>
           </table>
         </div>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Yeh koi chhota network nahi hai — Ministry of Agriculture ke record ke mutabik eNAM par{' '}
+          <strong>1.77 crore se zyada kisan</strong> registered hain aur December 2023 tak platform par{' '}
+          <strong>₹31.9 lakh crore</strong> ka vyapar ho chuka tha (
+          <a href="https://www.mynation.com/amp/india-news/bridging-the-gap-between-rural-farmers-and-markets-through-enam-kisan-rail-seva-and-krishi-udan-yojana-iwh-s98win" target="_blank" rel="noopener noreferrer" className="underline font-bold">source: MyNation / Ministry of Agriculture data</a>).
+          Yaani jis data par private apps apna dhandha chalate hain, uska asli ghar yahi sarkari system hai.
+        </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Sarkari apps ki taakat data ka bharosa hai, kamzori interface aur speed. Kabhi-kabhi app dheema chalega,
           design purana lagega — lekin number wahi hai jo mandi ke record mein hai. Aur inme na ads ka shor hai, na
@@ -255,6 +273,15 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
           aur number one ho.
         </p>
 
+        <SH>⚠️ Aam Galtiyan — Jo App Users Se Roz Hoti Hain</SH>
+        <StepList>
+          <SI n={1}><strong>Max price ko apna rate maan lena:</strong> app mein sabse bada number dekh kar mandi jaana aur wahan modal ke aas-paas boli sun kar "app jhooth bolta hai" kehna. App theek tha — aapne galat column padha.</SI>
+          <SI n={2}><strong>WhatsApp forward par trolley bhar lena:</strong> "falana mandi mein aaj itna rate" wala forward aksar purana ya kisi aur grade ka hota hai. Bina AgMarknet/eNAM ya aadhati se confirm kiye 50 km trolley le jaana seedha diesel ka nuksan hai.</SI>
+          <SI n={3}><strong>Kal ke reported rate ko aaj ki guarantee samajhna:</strong> app ka number pichhle session ka hai. Aaj ki aavak zyada hui toh boli neeche khulegi — isliye bade sauda se pehle phone karke aaj ki boli poochna kabhi mat chhodo.</SI>
+          <SI n={4}><strong>Unverified APK install karna:</strong> Play Store ke bahar se "mandi bhav" app download karna phone aur bank dono ke liye khatra hai. Sirf official store se, aur bewajah contacts/SMS permission maangne wale apps se door raho.</SI>
+          <SI n={5}><strong>Das apps rakh kar kisi ka bhi trend na dekhna:</strong> notifications ka shor data nahi hota. Ek source roz dekhna das sources kabhi-kabhi dekhne se hamesha behtar hai.</SI>
+        </StepList>
+
         <SH>🎯 Toh Karna Kya Hai — Seedha Jawab</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Phone mein do cheezein rakho: <strong>ek sarkari source</strong> (eNAM app ya AgMarknet — bharose ke liye)
@@ -282,7 +309,8 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
         <DB>
           <strong>Ek aadat jo paisa banati hai:</strong> apni fasal ke season mein roz 2 minute nikal kar apni mandi
           ka modal price ek copy mein likho. Do hafte mein aapko woh pattern dikhne lagega jo kisi app ka
-          notification nahi dikhata — aur bechne ka time aap khud pakad loge.
+          notification nahi dikhata — aur bechne ka time aap khud pakad loge. <strong>Aaj se shuru karo — abhi
+          agmarknet.gov.in par apni mandi ka aaj ka modal price check karo.</strong>
         </DB>
 
         <GovLink
