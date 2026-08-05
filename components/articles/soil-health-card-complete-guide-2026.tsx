@@ -159,7 +159,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
 
         <div className="my-6 rounded-2xl overflow-hidden border border-gray-300 shadow-md">
           <Image
-            src={article.ogImage || '/images/articles/soil-health-card-complete-guide-2026/soil-test-farmer-field.webp'}
+            src={article.ogImage || '/images/articles/soil-health-card-complete-guide-2026/hero.webp'}
             alt="Soil health card test — state wise free soil testing guide 2026"
             width={1200}
             height={630}
