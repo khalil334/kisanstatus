@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 
@@ -81,6 +82,18 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
       </div>
 
       <div className="container-site max-w-3xl py-8">
+        <div className="my-2 mb-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/articles/loan-mandi-pashupalan/mandi-bhav-app-comparison/kisan-mandi-mein-phone-par-bhav.webp"
+            alt="Kisan mandi mein khade hokar phone par aaj ka mandi bhav check karta hua"
+            width={1200}
+            height={669}
+            className="w-full h-auto object-cover"
+            sizes="(max-width: 768px) 100vw, 768px"
+            priority
+          />
+        </div>
+
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           Play Store par &ldquo;mandi bhav&rdquo; likho toh sau apps nikal aate hain — har ek ka dawa &ldquo;sabse accurate rate.&rdquo;
           Sach yeh hai ki inme se zyada tar apps ka data ek hi jagah se aata hai: sarkari mandi records. Fark sirf is
@@ -88,9 +101,9 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
-          Is guide mein hum categories mein baant kar dekhenge — sarkari apps, private apps aur bina-app wale raaste —
-          taaki aap do minute mein tay kar sako ki aapke phone mein kaunsa app rehna chahiye aur kaunsa sirf jagah
-          gher raha hai.
+          Neeche humne apps ko teen dher mein baanta hai — sarkari apps, private apps, aur bina-app wale raaste.
+          Padhne ke baad aap do minute mein tay kar loge ki aapke phone mein kaunsa app rehna chahiye aur kaunsa
+          sirf jagah gher raha hai.
         </p>
 
         <SH>🧠 Pehle Yeh Samjho — Rate Aata Kahan Se Hai</SH>
@@ -111,6 +124,16 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
           data wahi sarkari record hai. Bada sauda karne se pehle apni mandi mein phone karke confirm karna aaj bhi
           sabse smart move hai.
         </IB>
+
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/mandi-bhav-app-comparison/mandi-bhav-app-screen-haath-mein.webp"
+          alt="Haath mein phone, mandi bhav app par fasal ke rate ki list"
+          width={1200}
+          height={669}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
+        />
 
         <SH>🏛️ Sarkari Apps — Base Yahi Rakho</SH>
         <div className="overflow-x-auto my-4">
@@ -152,6 +175,16 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
           aapka data bechne ka dhandha.
         </p>
 
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/mandi-bhav-app-comparison/csc-center-agmarknet-portal.webp"
+          alt="CSC center par laptop se AgMarknet jaisa sarkari portal khula hua"
+          width={1200}
+          height={669}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
+        />
+
         <SH>📱 Private Apps — Sahulat Zyada, Parakh Ke Saath Use Karo</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Private mandi bhav apps (Bijak, Krishi Network, IFFCO Kisan jaise agri apps, aur dher saare chhote
@@ -174,6 +207,16 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
           lo, rate sirf bharosemand source se.
         </WB>
 
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/mandi-bhav-app-comparison/mandi-mein-aavak-tractor-trolley.webp"
+          alt="Mandi gate par anaj se bhari tractor trolley ki line — aavak ka nazara"
+          width={1200}
+          height={669}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
+        />
+
         <SH>📈 App Ka Number Padhna Seekho — 3 Cheezein Jo Kaam Ki Hain</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           App install karna aasan hai — asli hunar us data ko padhna hai. Teen aadatein bana lo:
@@ -184,6 +227,16 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
           <SI n={3}><strong>2-3 mandiyon ka fark dekho:</strong> apni mandi ke saath 50-100 km ke daayre ki 2 badi mandiyan bhi track karo. Fark agar transport ke kharche se zyada hai toh doosri mandi le jaana ya eNAM ke through wahan ke buyers tak pahunchna faydemand hai.</SI>
         </StepList>
 
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/mandi-bhav-app-comparison/aadhati-se-rate-confirm.webp"
+          alt="Kisan mandi mein aadhati se aaj ke rate ki baat karta hua"
+          width={1200}
+          height={669}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
+        />
+
         <SH>📵 Bina App Ke — Yeh Raaste Bhi Kaam Karte Hain</SH>
         <StepList>
           <SI n={1}><strong>Kisan Call Centre — 1800-180-1551:</strong> free call, apni bhasha mein fasal aur mandi ka bhav pucho.</SI>
@@ -191,7 +244,7 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
           <SI n={3}><strong>SMS advisory (mKisan):</strong> registered kisano ko fasal aur ilaake ke hisaab se SMS aate hain — data kharch zero.</SI>
         </StepList>
 
-        <SH>🗺️ Ilaake Ke Hisaab Se Bhi Sochो — Har App Har Belt Mein Barabar Nahi</SH>
+        <SH>🗺️ Ilaake Ke Hisaab Se Bhi Socho — Har App Har Belt Mein Barabar Nahi</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Ek baat jo comparison articles aksar chhod dete hain — apps ki coverage <strong>region-wise bahut
           alag</strong> hoti hai. Jo app UP-Bihar ke anaaj belt mein har mandi dikhata hai, wahi Maharashtra ki
@@ -215,6 +268,16 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
           aur <Link href="/articles/sabzi-bhav-guide-pyaz-aloo-tamatar" className="underline font-bold">Pyaz-Aloo-Tamatar
           Bhav Guide</Link>.
         </p>
+
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/mandi-bhav-app-comparison/roz-ka-bhav-copy-mein.webp"
+          alt="Kisan roz ka mandi bhav copy mein likhta hua — trend pakadne ki aadat"
+          width={1200}
+          height={669}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
+        />
 
         <DB>
           <strong>Ek aadat jo paisa banati hai:</strong> apni fasal ke season mein roz 2 minute nikal kar apni mandi
