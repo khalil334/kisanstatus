@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 
@@ -81,6 +82,18 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
       </div>
 
       <div className="container-site max-w-3xl py-8">
+        <div className="my-2 mb-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/articles/loan-mandi-pashupalan/sabzi-bhav-guide-pyaz-aloo-tamatar/subah-ki-sabzi-mandi.webp"
+            alt="Subah ki sabzi mandi — pyaz, aloo, tamatar ke crate aur boriyaan"
+            width={1200}
+            height={669}
+            className="w-full h-auto object-cover"
+            sizes="(max-width: 768px) 100vw, 768px"
+            priority
+          />
+        </div>
+
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           Pyaz, aloo aur tamatar — teeno ka ek hi dard hai: jab kisan ke paas maal hota hai tab bhav nahi hota,
           aur jab bhav hota hai tab maal nahi bachta. Yeh koi kismat ka khel nahi hai — teeno sabziyon ka apna
@@ -89,7 +102,7 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
-          Is guide mein teeno crops ka cycle alag-alag samjhaya hai — kab supply zyada hoti hai, kab gap aata
+          Neeche teeno crops ka cycle alag-alag samjhaya hai — kab supply zyada hoti hai, kab gap aata
           hai, cold storage ka hisaab kab banta hai aur kab nahi, aur NAFED ka buffer stock aapki planning ko
           kaise badalta hai. Sab MSP se bahar ki cheezein hain, isliye yahan bhav ka gyan hi asli hathiyar hai.
         </p>
@@ -102,6 +115,15 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
         </IB>
 
         <SH>🧅 Pyaz — Do Fasal, Ek Gap, Aur Wahi Kahani Har Saal</SH>
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/sabzi-bhav-guide-pyaz-aloo-tamatar/pyaz-ki-khudai-khet-mein.webp"
+          alt="Khet mein pyaz ki khudai — boriyon mein bharti hui fasal"
+          width={900}
+          height={502}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
+        />
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Pyaz ki kahani samajhne ke liye bas do fasal yaad rakho. <strong>Rabi pyaz</strong> (March-May mein
           harvest) — saal ke total production ka sabse bada hissa, aur yahi woh pyaz hai jo 4-6 mahine store ho
@@ -172,6 +194,15 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
         </p>
 
         <SH>🥔 Aloo — Cold Storage Ka Khel, Par Hisaab Ke Saath</SH>
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/sabzi-bhav-guide-pyaz-aloo-tamatar/aloo-cold-storage-ke-andar.webp"
+          alt="Aloo cold storage ke andar — boriyon ke oonche stack"
+          width={1200}
+          height={669}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
+        />
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Aloo ki main fasal January-March mein nikalti hai (UP-Agra belt, West Bengal, Bihar, Punjab). Harvest
           ke waqt mandi mein itna maal hota hai ki bhav zameen par hota hai. Aloo ki khoobi yeh hai ki yeh
@@ -194,6 +225,15 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
         </p>
 
         <SH>🍅 Tamatar — Store Nahi Hota, Isliye Game Alag Hai</SH>
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/sabzi-bhav-guide-pyaz-aloo-tamatar/tamatar-crate-mein-tayyar.webp"
+          alt="Crate mein taiyar pakka tamatar — mandi le jaane ke liye"
+          width={1200}
+          height={669}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
+        />
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Tamatar teeno mein sabse alag hai — <strong>yeh store hota hi nahi</strong>. Na kisan ke level par, na
           practically cold storage mein. Iska matlab: "hold karke bechna" wali poori strategy tamatar mein zero
@@ -216,6 +256,15 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
         </DB>
 
         <SH>📊 Roz Ka Bhav Check Karna — 5 Minute Ki Aadat</SH>
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/sabzi-bhav-guide-pyaz-aloo-tamatar/mandi-jaane-se-pehle-bhav-check.webp"
+          alt="Mandi jaane se pehle kisan phone par bhav check karta hua"
+          width={1200}
+          height={669}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
+        />
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Cycle samajhna aadhi baat hai — doosri aadhi baat hai apni mandi ka asli rate roz dekhna. Sarkari source
           Agmarknet (agmarknet.gov.in) par desh bhar ki mandiyon ke daily rates milte hain, aur eNAM app par
@@ -237,6 +286,15 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
         </p>
 
         <SH>⚠️ 5 Galtiyan Jo Sabzi Kisan Ka Munafa Kha Jaati Hain</SH>
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/sabzi-bhav-guide-pyaz-aloo-tamatar/sabzi-mandi-mein-boli.webp"
+          alt="Sabzi mandi mein boli — buyers crate ke aas-paas"
+          width={1200}
+          height={669}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
+        />
         <StepList>
           <SI n={1}><strong>Harvest ke din hi poora maal bech dena</strong> — wahi din hota hai jab mandi mein supply sabse zyada aur bhav sabse kam hota hai. Jo store ho sakta hai (rabi pyaz, aloo), uska plan pehle se banao.</SI>
           <SI n={2}><strong>Poora stock ek hi baar bechna</strong> — 2-3 lot mein becho. Peak pakadne ki koshish mein poora maal late karne se average bigad jaata hai; lot mein bechne se risk bant jaata hai.</SI>
