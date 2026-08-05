@@ -233,6 +233,32 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           Online Apply</Link> guide dekho.
         </p>
 
+        <SH>💔 Mortality Aur Vaccination — Jo Numbers Mein Nahi Dikhta</SH>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Har DPR mein mortality ka ek chhota sa percentage likha hota hai, par asli farm par yeh number
+          discipline se banta hai. Ranikhet (Newcastle), Gumboro aur fowl pox ka vaccination schedule din ke
+          hisaab se fix hota hai — chooza aane ke pehle hafte se hi. Apne area ke veterinary doctor se poora
+          schedule likhwa lo aur calendar par chipka do; ek missed dose poore batch ka risk hai. Naye batch se
+          pehle shed ki poori safai-disinfection aur kam se kam ek hafte ka gap (downtime) — yeh aadat hi
+          purane aur naye farmer ka fark hai.
+        </p>
+
+        <SH>🏗️ Shed Aur Setup — Jahan Paisa Sahi Lagana Hai</SH>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Naye log aksar paisa galat jagah lagate hain — chamakdaar gate aur pakki boundary par, jabki murgi ko
+          chahiye <strong>hawa, sookha farsh aur sahi temperature</strong>. Shed ki disha east-west rakho taaki
+          seedhi dhoop andar na aaye, chhat par heat-reflective sheet ya chhappar ki doosri parat garmi se
+          bachati hai, aur side curtains sardiyon mein brooding ka kharcha ghatate hain. Deep litter system
+          (bhusi/dhaan ki bhusi ka farsh) chhote-medium units ke liye sasta aur practical hai — bas litter
+          sookha rehna chahiye, gila litter bimari ka ghar hai.
+        </p>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Doosri baat — <strong>pani</strong>. Murgi feed se zyada pani peeti hai, aur garmi mein paani ka
+          intezam fail hua toh mortality seedha upar jaati hai. Bore/well ka backup, tanki ki capacity aur
+          nipple drinkers ka layout project plan mein pehle din se rakho. DPR mein bhi yeh detail dikhna
+          chahiye — appraisal karne wala bhi samajh jaata hai ki plan zameen se juda hai ya internet se utha hai.
+        </p>
+
         <SH>⚠️ 5 Galtiyan Jo Application Aur Farm Dono Dubati Hain</SH>
         <StepList>
           <SI n={1}><strong>Subsidy ko advance samajhna</strong> — pehle financing, phir subsidy. Ulta socha toh project shuru hi nahi hoga.</SI>
