@@ -175,7 +175,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'murgi-palan-loan-nlm-subsidy',
     title: 'Murgi Palan Loan 2026: NLM 50% Subsidy',
-    desc: 'NLM se poultry farm par 50% tak subsidy — layer vs broiler cost, loan process aur apply steps. Puri guide jald aa rahi hai.',
+    desc: 'NLM se poultry farm par 50% subsidy, ₹25 lakh tak — back-ended subsidy ka sach, layer vs broiler, udyamimitra portal se apply ka poora process aur 5 common galtiyan.',
     ogTitle: 'Murgi Palan Loan & Subsidy 2026 — NLM se 50% Tak',
     keywords: [
       'murgi palan loan 2026',
@@ -187,7 +187,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     category: 'pashupalan',
     publishedTime: '2026-08-05T08:00:00+05:30',
     modifiedTime: '2026-08-05T08:00:00+05:30',
-    readingTime: 6,
+    readingTime: 11,
     author: 'KisanStatus Editorial Team',
     authorBio: 'Agricultural content experts with 5+ years experience in government scheme research',
     schemes: ['nlm'],
