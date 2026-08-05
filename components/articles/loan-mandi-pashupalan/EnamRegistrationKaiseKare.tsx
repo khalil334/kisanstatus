@@ -105,7 +105,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
         </DB>
 
         <p className="text-sm text-[var(--color-text)] mb-6">
-          <strong>Last Updated: 5 August 2026</strong>
+          <strong>Last Updated: 6 August 2026</strong>
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
