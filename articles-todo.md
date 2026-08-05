@@ -4,13 +4,13 @@ Rules: Real sourced kisan stories only (PIB/NABARD/state dept/verified news + li
 
 ## Pending
 
-7. MspList202627.tsx — MSP List 2026-27
 8. MurgiPalanLoanNlmSubsidy.tsx — Murgi Palan Loan NLM Subsidy
 9. RashtriyaGokulMissionSubsidy.tsx — Rashtriya Gokul Mission Subsidy
 10. SabziBhavGuidePyazAlooTamatar.tsx — Sabzi Bhav Guide (Pyaz, Aloo, Tamatar)
 11. SbiDairyLoanInterestRate.tsx — SBI Dairy Loan Interest Rate
 
 ## Done
+- MspList202627.tsx — merged. TL;DR box, Aam Galtiyan (naam mismatch, window miss, agent-bharosa, DBT account, nami), CTAs, Last Updated 5 Aug 2026. Sources: CCEA/PIB 1 Oct 2025 (Rabi) + 13 May 2026 (Kharif), cacp.dacnet.nic.in.
 - MandiBhavAppComparison.tsx — merged. TL;DR, Aam Galtiyan, sourced eNAM scale (1.77cr farmers, ₹31.9L cr — MyNation/Min. of Agriculture link), KCC helpline 1800-180-1551, Last Updated 5 Aug 2026.
 - JansamarthPortalLoanApply.tsx — merged earlier (76ef1d7).
 - GehuKaBhavMspVsMandi.tsx — merged earlier (330f132).
