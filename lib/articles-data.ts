@@ -1,4 +1,4 @@
-import { NEW_ARTICLES } from './new-articles-data';
+import { LOAN_MANDI_PASHUPALAN_ARTICLES } from './loan-mandi-pashupalan-data';
 
 export const CATEGORIES = {
   'status-check': {
@@ -943,7 +943,7 @@ const CORE_ARTICLES: readonly ArticleMeta[] = [
   },
 ] as const;
 
-export const ARTICLES: readonly ArticleMeta[] = [...CORE_ARTICLES, ...NEW_ARTICLES];
+export const ARTICLES: readonly ArticleMeta[] = [...CORE_ARTICLES, ...LOAN_MANDI_PASHUPALAN_ARTICLES];
 
 export const ARTICLES_MAP: Readonly<Record<string, ArticleMeta>> = Object.freeze(
   Object.fromEntries(ARTICLES.map((a) => [a.slug, a]))
