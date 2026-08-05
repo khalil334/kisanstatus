@@ -103,6 +103,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     title: 'MSP List 2026-27: Rabi & Kharif',
     desc: 'MSP list 2026-27 ki poori table — gehu ₹2,585, dhan ₹2,441, chana ₹5,875 aur baaki faslon ke rate, pichhle saal se comparison ke saath. Rate kaise banta hai aur MSP par bechne ka process bhi.',
     ogTitle: 'MSP List 2026-27 — Rabi & Kharif Puri List',
+    ogImage: '/images/articles/loan-mandi-pashupalan/msp-list-2026-27/sarkari-kharid-kendra-par-kisan.webp',
     keywords: [
       'msp list 2026 27',
       'gehu msp 2026',
