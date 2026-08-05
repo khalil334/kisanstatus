@@ -9,7 +9,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 const PUBLISHED = '2026-07-10T08:00:00+05:30';
 const MODIFIED = '2026-07-25T08:00:00+05:30';
 
-const FALLBACK_IMG = '/images/articles/placeholder-fallback.webp';
+const FALLBACK_IMG = '/images/articles/pm-kisan-bank-account-change/bank-change-hero.webp';
 
 function SafeImage({ src, alt, ...rest }: React.ComponentProps<typeof Image>) {
   const [currentSrc, setCurrentSrc] = useState(src);
