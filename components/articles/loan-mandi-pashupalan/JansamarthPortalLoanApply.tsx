@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 
@@ -81,6 +82,18 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
       </div>
 
       <div className="container-site max-w-3xl py-8">
+        <div className="my-2 mb-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/articles/loan-mandi-pashupalan/jansamarth-portal-loan-apply/portal-par-form-bharna.webp"
+            alt="Ghar baithe laptop par JanSamarth jaise portal par loan application bharta hua aavedak"
+            width={1200}
+            height={670}
+            className="w-full h-auto object-cover"
+            sizes="(max-width: 768px) 100vw, 768px"
+            priority
+          />
+        </div>
+
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           Sarkari loan ka purana tareeka sab jaante hain — branch ke chakkar, har baar naya kagaz, aur mahino ka
           intezar. JanSamarth portal isi jhanjhat ko khatam karne ke liye banaya gaya: Bharat sarkar ka ek platform
@@ -113,6 +126,15 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
           hai. Milte-julte naam wali fake websites aur &ldquo;guaranteed loan&rdquo; wale WhatsApp message se door raho. Sarkari
           portal kabhi advance fee nahi maangta.
         </IB>
+
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/jansamarth-portal-loan-apply/kisan-aur-vyapari-categories.webp"
+          alt="Kisan se lekar chhote vyapari tak — JanSamarth ki alag-alag loan categories inhi ke liye hain"
+          width={1000}
+          height={558}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
 
         <SH>📂 Kaunse Loan Milte Hain — Chaar Categories</SH>
         <div className="overflow-x-auto my-4">
@@ -155,6 +177,15 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
           campaigns bhi chalte hain.
         </p>
 
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/jansamarth-portal-loan-apply/apply-se-pehle-taiyari.webp"
+          alt="Apply se pehle ki taiyari — Aadhaar, bank passbook aur OTP wala mobile paas rakho"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
+
         <SH>🧾 Apply Se Pehle — Teen Cheezein Taiyar Karo</SH>
         <StepList>
           <SI n={1}><strong>Aadhaar-mobile link:</strong> poora process OTP par chalta hai, aur OTP sirf Aadhaar se linked number par aata hai. Number band ho gaya hai ya badal gaya hai toh pehle Aadhaar centre par update karwao — yeh sabse common atkaav hai.</SI>
@@ -167,6 +198,15 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
           naam par zameen hai — kyunki eligibility zameen ke digital record se nikalti hai. Batai/lease par kheti
           karne walon ko portal par dikkat aa sakti hai; unke liye branch ka offline raasta abhi bhi khula hai.
         </DB>
+
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/jansamarth-portal-loan-apply/otp-verify-mobile-par.webp"
+          alt="Mobile par OTP daal kar verify karta kisan — registration ka pehla step"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
 
         <SH>💻 Step-by-Step: JanSamarth Se Loan Apply</SH>
         <StepList>
@@ -198,6 +238,15 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
           Matlab: portal ki speed aapki taiyari par depend karti hai.
         </p>
 
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/jansamarth-portal-loan-apply/status-check-bank-ke-bahar.webp"
+          alt="Bank ke bahar mobile par application status check karta aavedak"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
+
         <SH>📊 Application Track Kaise Karein — Aur Kab Awaaz Uthayein</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Submit karne ke baad portal par login karke <strong>“My Applications”</strong> section mein har
@@ -217,6 +266,15 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
           <SI n={4}><strong>Galat income/details bharna</strong> — eligibility mein aage nikal jaoge, par verification mein file wahin rukegi aur record kharab alag hoga.</SI>
           <SI n={5}><strong>Sirf portal par atke rehna</strong> — kisi wajah se online flow fail ho raha hai toh branch ka offline raasta hamesha khula hai. Portal ek sahulat hai, shart nahi.</SI>
         </StepList>
+
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/jansamarth-portal-loan-apply/branch-ya-online-faisla.webp"
+          alt="Branch jaayein ya online apply karein — KCC ke liye dono raaste khule hain"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
 
         <SH>🏦 KCC Ke Liye JanSamarth vs Branch — Kya Chunein</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
