@@ -95,22 +95,22 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
         </div>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-          Mandi mein fasal le jao, aur wahi 4-5 vyapari milkar rate tay kar dein — yeh problem har kisan ne dekhi hai.
-          eNAM (National Agriculture Market) isi ka jawab hai: ek online mandi jahan aapki fasal par doosre
-          district aur doosre state ke buyers bhi bid karte hain.
+          Mandi ka purana scene sabko pata hai — fasal utaari, aur wahi chaar-paanch vyapari aapas mein dekh kar
+          rate tay. Na competition, na chaara. eNAM isi ganth ko kholta hai: aapki fasal wahi mandi mein padi
+          rehti hai, par boli online hoti hai, aur usme doosre zile-doosre state ke buyers bhi utarte hain.
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
-          Achhi baat yeh hai ki registration free hai aur sirf 3 documents chahiye. Neeche poora raasta khola hai —
-          farmer registration se lekar gate entry, boli aur payment tak — saath mein woh dikkatein bhi jo pehli
-          baar bechne walon ko aati hain.
+          Registration ka kharcha zero, kagaz sirf teen. Is guide mein registration se le kar gate entry, boli
+          aur payment tak ka poora rasta hai — aur woh atakne wali jagahein bhi jo pehli baar walon ko pareshan
+          karti hain.
         </p>
 
-        <SH>🌾 eNAM Kya Hai — 30 Second Mein</SH>
+        <SH>eNAM Hai Kya Cheez</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          eNAM ek pan-India electronic trading portal hai jo desh bhar ki APMC mandiyon ko online jodta hai.
-          Sarkar ne ise 2016 mein launch kiya tha aur ab 1,000+ mandiyan isse judi hui hain. Matlab: aap apni
-          local mandi mein fasal le jate ho, lekin bidding online hoti hai — buyers kahin se bhi bid kar sakte hain.
+          Ek sarkari online trading portal, 2016 se chal raha hai, jisse ab 1,000 se zyada APMC mandiyan judi
+          hain. Kaam karne ka tareeqa simple hai — fasal aap apni hi mandi le jaate ho, bas boli kagaz-kalam ki
+          jagah online lagti hai, aur bid karne wala Jaipur mein bhi baitha ho sakta hai, Indore mein bhi.
         </p>
 
         <IB>
@@ -127,7 +127,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>📄 Documents — Sirf 3 Cheezein Chahiye</SH>
+        <SH>Teen Kagaz — Bas</SH>
         <div className="overflow-x-auto my-4">
           <table className="w-full text-sm border-collapse">
             <thead>
@@ -167,7 +167,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>📝 Online Registration — Step by Step</SH>
+        <SH>Registration Aise Hoga</SH>
         <StepList>
           <SI n={1}>
             <strong>enam.gov.in kholo</strong> aur homepage par <strong>"Registration"</strong> link par click karo.
@@ -216,7 +216,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>🚜 Fasal Bechne Ka Process — Gate Entry Se Payment Tak</SH>
+        <SH>Bechne Ka Din — Gate Se Payment Tak</SH>
         <StepList>
           <SI n={1}>
             <strong>Gate Entry:</strong> Fasal mandi le jao. Gate par entry hoti hai aur aapko lot number milta hai.
@@ -238,7 +238,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
           </SI>
         </StepList>
 
-        <SH>🌽 Kaun Si Fasal Bech Sakte Hain — Aur Kis Par Sabse Zyada Fayda</SH>
+        <SH>Kaun Si Fasal Par Kitna Fayda</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           eNAM par 200+ commodities notified hain — anaaj (gehu, dhaan, makka, bajra), dalein (chana, arhar,
           moong, masoor), tilhan (sarson, soyabean, moongfali), masale (jeera, dhania, haldi, mirch), aur kai
@@ -266,7 +266,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>📱 eNAM Mobile App — Jeb Mein Mandi</SH>
+        <SH>App Wala Rasta — Zyada Tar Logon Ke Liye Yahi Sahi</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Portal ke alawa eNAM ka official mobile app (Play Store par “eNAM” — publisher: Small Farmers
           Agribusiness Consortium) bhi hai, aur sach kahein toh zyada tar kisano ke liye app hi asaan rasta hai.
@@ -290,7 +290,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>🗺️ Inter-Mandi Aur Inter-State Trade — Asli Fayda Yahan Hai</SH>
+        <SH>Asli Fayda Kahan Hai — Inter-Mandi Aur Inter-State</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           eNAM ke teen level hote hain, aur yeh samajhna zaroori hai kyunki fayda level ke saath badhta hai.
           Pehla — <strong>intra-mandi</strong>: aapki apni mandi ke vyapari online bid karte hain; transparency
@@ -313,7 +313,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
           buyer mila toh maal wahan pahunchana padega” — nahi padta.
         </WB>
 
-        <SH>🔧 Aam Problems Aur Unke Fix</SH>
+        <SH>Jahan Log Atakte Hain — Aur Nikalne Ka Rasta</SH>
         <StepList>
           <SI n={1}><strong>OTP nahi aa raha:</strong> network check karo, 2-3 minute ruko, phir resend. Number Aadhaar se linked ho toh process smooth rehta hai. Baar-baar fail ho toh mandi help desk se registration karwa lo — wahi sabse tez rasta hai.</SI>
           <SI n={2}><strong>Bank detail galat bhar gayi:</strong> login karke profile mein bank details update karo ya help desk par passbook le jao. Payment atakne ki sabse badi wajah galat IFSC/account number hi hai — do baar check karke bharo.</SI>
@@ -322,7 +322,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
           <SI n={5}><strong>Payment nahi aayi:</strong> trade ID le kar mandi help desk ya helpline 1800 270 0224 par baat karo. Zyada tar cases mein wajah bank detail ki galti ya account inactive hona hota hai.</SI>
         </StepList>
 
-        <SH>⚖️ eNAM vs Normal Mandi — Fark Kya Hai</SH>
+        <SH>Purani Mandi Banaam eNAM</SH>
         <div className="overflow-x-auto my-4">
           <table className="w-full text-sm border-collapse">
             <thead>
@@ -369,7 +369,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
           </p>
         </div>
 
-        <SH>❓ FAQ — Aapke Sawaal</SH>
+        <SH>Aapke Sawaal</SH>
         <FAQBlock faqs={FAQS_DATA} />
 
         <RelatedArticles articles={RELATED} />
