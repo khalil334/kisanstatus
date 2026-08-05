@@ -95,30 +95,29 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
         </div>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-          Bihar mein dairy shuru karne ka sabse bada roda paisa hai — 2 bhains ki chhoti unit bhi lakhon ka kaam hai.
-          Yahi wajah hai ki Samagra Gavya Vikas Yojana par har saal itni bheed hoti hai: Bihar sarkar ka Gavya Vikas
-          Nideshalay dairy unit lagane par category ke hisaab se 50% se 75% tak subsidy deta hai. Matlab project ka
-          aadha ya usse zyada hissa aapko wapas nahi karna padta.
+          Do bhains. Sirf do bhains ki unit bhi aaj Bihar mein lakhon ka kaam hai — pashu, shed, chara, bima sab
+          jod lo. Isi liye Samagra Gavya Vikas Yojana ka naam har us aadmi ne suna hai jo dairy shuru karna chahta
+          hai. Gavya Vikas Nideshalay category ke hisaab se project cost ka 50 se 75 pratishat tak subsidy deta
+          hai — jo hissa subsidy mein aa gaya, woh wapas nahi karna.
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
-          Lekin yahi scheme har saal hazaron logon ki application reject bhi karti hai — adhoore kagaz, galat unit
-          selection, ya window nikal jaane ki wajah se. Is guide mein poora process khol kar rakha hai: kaun apply
-          kar sakta hai, kitne pashu ki unit chunni chahiye, subsidy ka asli ganit kya hai, aur woh galtiyan jo file
-          atkati hain.
+          Par ek kadwi baat bhi sun lo. Isi scheme mein har saal hazaron files reject hoti hain. Wajah koi badi
+          nahi hoti — kabhi kagaz adhoora, kabhi naam ki spelling alag, kabhi window hi nikal gayi. Neeche wahi sab
+          likha hai jo form bharne se pehle pata hona chahiye tha: eligibility, unit ka chunaav, subsidy ka asli
+          hisaab, aur file atakne ki asli wajahein.
         </p>
 
-        <SH>🐃 Yojana Kya Hai — Ek Line Mein Nahi, Theek Se Samjho</SH>
+        <SH>Pehle Yeh Samjho Ki Scheme Deti Kya Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Samagra Gavya Vikas Yojana Bihar sarkar ki dairy promotion scheme hai. Iska mota structure yeh hai: aap
-          doodh dene wale pashu (gaay ya bhains) ki ek unit ka project banate ho, sarkar us project cost ka ek tay
-          percentage subsidy ke roop mein deti hai, aur baaki hissa aap apne paise ya bank loan se lagate ho.
+          Seedha structure: aap gaay ya bhains ki ek unit ka project banate ho. Sarkar us project cost ka ek tay
+          hissa subsidy mein deti hai. Baaki aapka — apni jeb se ya bank loan se. Bas itna hi hai poora khel.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Do baatein shuru mein hi saaf kar lo. Pehli — yeh &ldquo;free paisa&rdquo; scheme nahi hai; subsidy sirf project ke ek
-          hisse par milti hai, baaki aapki zimmedari hai. Doosri — yeh demand par milne wali cheez nahi hai; application
-          window limited hoti hai, seats limited hoti hain, aur selection verification ke baad hota hai. Jo log in
-          dono baaton ko samajh kar utarte hain, unki file aage jaati hai.
+          Ab woh do galat-fehmiyan jo sabse zyada logon ko doobati hain. &ldquo;Sarkar poora paisa de rahi hai&rdquo; — nahi
+          de rahi; subsidy sirf ek hisse par hai, baaki byaj samet chukana hai ya apna lagana hai. Aur &ldquo;jab man
+          kiya apply kar denge&rdquo; — nahi kar paoge; window saal mein thode din khulti hai, seats ginti ki hoti hain,
+          aur selection verification ke baad hota hai. Yeh dono baatein pachne ke baad hi aage padho.
         </p>
 
         <IB>
@@ -137,10 +136,10 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>💰 Subsidy Ka Ganit — Category Aur Unit Size Ka Khel</SH>
+        <SH>Kitna Milega? Category Aur Unit Size Dekho</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Subsidy ek flat number nahi hai. Do cheezein milkar tay karti hain ki aapko kitna milega — aapki category
-          aur unit ka size. Mota pattern yeh rehta hai:
+          Yahan flat rate jaisa kuch nahi hai. Aapki jati category kya hai aur kitne pashu ki unit lagai — in dono
+          se number banta hai. Aam taur par tasveer aisi rehti hai:
         </p>
         <div className="overflow-x-auto my-4">
           <table className="w-full text-sm border-collapse">
@@ -182,16 +181,14 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
         </WB>
 
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Ek practical baat jo notification nahi batata: subsidy percentage zyada hone ka matlab competition bhi zyada.
-          2-4 pashu wali units par sabse zyada applications aati hain. Agar aapke paas jagah, chara ka intezam aur
-          thoda anubhav hai, toh beech ki unit par file lagana kabhi-kabhi behtar strategy hoti hai — seats ke hisaab
-          se selection ka chance sudhar jata hai.
+          Aur ek baat jo aapko koi notification nahi batayega. Jahan subsidy percentage sabse zyada, wahan bheed
+          bhi sabse zyada — 2-4 pashu ki units par applications ka dher lagta hai. Jagah hai, chara ka jugad hai,
+          thoda haath baitha hua hai? Toh beech ke size par file lagane ka bhi soch lo. Kam bheed, behtar chance.
         </p>
 
-        <SH>✅ Eligibility — Kaun Apply Kar Sakta Hai</SH>
+        <SH>Apply Kaun Kar Sakta Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Har saal ki notification mein thodi-bahut shartein badalti hain, lekin core eligibility ka dhaancha yeh
-          rehta hai:
+          Shartein har saal thodi idhar-udhar hoti hain, dhaancha nahi badalta:
         </p>
         <StepList>
           <SI n={1}><strong>Bihar ka sthai niwasi</strong> — niwas praman patra lagega. Doosre state ke log is scheme mein apply nahi kar sakte.</SI>
@@ -211,10 +208,10 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>📄 Documents Checklist — File Isi Par Rukti Hai</SH>
+        <SH>Kagaz — Jahan 90% Files Rukti Hain</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Rejection ka sabse bada karan koi complicated cheez nahi — adhoore ya mismatched documents hain. Yeh
-          checklist application se pehle poori karo:
+          Rejection ki wajah shayad hi kabhi koi badi cheez hoti hai. Zyada tar toh yahi — ek document kam tha,
+          ya do jagah naam alag likha tha. Form kholne se pehle yeh sab ikattha kar lo:
         </p>
         <StepList>
           <SI n={1}><strong>Aadhaar card</strong> — naam ki spelling bank passbook se match honi chahiye. Mismatch hai toh pehle theek karwao.</SI>
@@ -227,9 +224,9 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
         </StepList>
 
         <DB>
-          <strong>Sabse common galti:</strong> bank account mein naam &ldquo;Md. Salim&rdquo; hai aur Aadhaar mein &ldquo;Mohammad
-          Salim&rdquo; — aur file verification mein atak gayi. Apply karne se pehle teeno jagah (Aadhaar, bank, jati
-          praman) naam ka milaan kar lo. Yeh 10 minute ka kaam mahino ka delay bacha deta hai.
+          Bank passbook mein &ldquo;Md. Salim&rdquo;, Aadhaar mein &ldquo;Mohammad Salim&rdquo; — bas, file verification mein atak
+          gayi. Aisa har saal na jaane kitne logon ke saath hota hai. Aadhaar, bank aur jati praman — teeno mein
+          naam milao, pehle. Das minute lagte hain. Na milao toh mahine jaate hain.
         </DB>
 
         <Image
@@ -241,7 +238,7 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>💻 Apply Kaise Karein — Step by Step</SH>
+        <SH>Ab Apply Karne Ka Tareeka</SH>
         <StepList>
           <SI n={1}><strong>Notification ka wait karo</strong> — application window saal bhar nahi khuli rehti. dairy.bihar.gov.in aur akhbaar ke vigyapan par nazar rakho. Window aam taur par kuch hafton ki hoti hai.</SI>
           <SI n={2}><strong>Portal par registration karo</strong> — apna Aadhaar, mobile number aur basic details bharo, OTP verify karo.</SI>
@@ -268,11 +265,11 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>🏦 Loan Wala Hissa — Bank Ka Role</SH>
+        <SH>Baaki Paisa Kahan Se — Bank Ki Kahani</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Subsidy ke baad jo hissa bachta hai, uske liye do raaste hain — apna paisa ya bank loan. Agar bank loan le
-          rahe ho toh yeh samajh lo: bank aapke project ko apne standards par alag se jaanchega. Scheme mein selection
-          ho jana bank sanction ki guarantee nahi hai.
+          Subsidy ke baad jo bacha, woh ya apni jeb se aayega ya bank se. Bank wala rasta chuna toh ek baat gaanth
+          baandh lo — scheme mein select ho jana alag cheez hai, bank ka loan pass hona bilkul alag. Bank apne
+          tarike se file jaanchega, aur mana bhi kar sakta hai.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Bank ke liye aapko DPR (project report) chahiye hogi — pashu ki cost, chara, doodh production ka anumaan,
@@ -296,17 +293,17 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>📊 Kamai Ka Andaza — Hawa Mein Nahi, Zameen Par</SH>
+        <SH>Kamai Kitni Hogi? YouTube Wale Number Bhool Jao</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Internet par &ldquo;2 bhains se ₹50,000 mahina&rdquo; jaise dave khoob milte hain. Zameeni ganit thoda alag hota hai.
-          Doodh ka production pashu ki nasl, chara aur season par depend karta hai, aur usme se chara-dawai-labour ka
-          kharcha kaat kar hi asli kamai bachti hai. Bhains byane ke baad hi doodh deti hai, aur dry period mein
-          kharcha chalta rehta hai par aamdani nahi hoti.
+          &ldquo;2 bhains, ₹50,000 mahina&rdquo; — aise thumbnail aapne bhi dekhe honge. Sach yeh hai ki doodh nasl, chara
+          aur season se banta hai, aur kamai usme se kharcha kaatne ke baad bachti hai. Aur ek cheez jo video wale
+          nahi batate: bhains byane ke baad hi doodh deti hai. Dry period mein chara bhi chalega, dawai bhi — bas
+          doodh nahi aayega, aur paisa bhi nahi.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Isliye project banate waqt do pashu ho toh unka byane ka time aage-peeche rakho, taaki doodh ka flow saal
-          bhar bana rahe. Aur pehle saal ki kamai ko conservative rakho — jo log pehle saal se hi poori EMI ka bojh
-          maan kar chalte hain, wahi bina tension ke nikal paate hain.
+          Iska ilaj planning mein hai. Do pashu lo toh dono ka byana aage-peeche rakhwa lo — saal bhar doodh ka
+          silsila bana rehta hai. Aur pehle saal ki kamai ka andaza jaan-boojh kar kam rakho. EMI ka bojh maan kar
+          chalne wala hi aaram se nikalta hai; sapne gin kar chalne wala beech mein phansta hai.
         </p>
 
         <IB>
@@ -315,7 +312,7 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
           pehle apne gaon ki samiti se baat kar lo.
         </IB>
 
-        <SH>⚠️ 7 Galtiyan Jo File Atkati Hain</SH>
+        <SH>Saat Galtiyan — Inhi Se Files Girti Hain</SH>
         <StepList>
           <SI n={1}><strong>Window miss kar dena</strong> — notification dekh kar &ldquo;baad mein karenge&rdquo; sochna. Window band, saal gaya.</SI>
           <SI n={2}><strong>Naam ka mismatch</strong> — Aadhaar, bank aur jati praman mein alag-alag spelling.</SI>
@@ -326,19 +323,18 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
           <SI n={7}><strong>Bima skip karna</strong> — premium bacha liya, pashu ki maut hui, poora ganit khatam. Bima ko kharcha nahi, suraksha samjho.</SI>
         </StepList>
 
-        <SH>🔗 NLM Aur Doosri Schemes Se Compare Karo</SH>
+        <SH>Ruko — Kahin Doosri Scheme Behtar Toh Nahi?</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Bihar Pashupalan Loan Yojana sirf gaay-bhains ki dairy ke liye hai. Agar aapka interest bakri, murgi ya
-          bhed palan mein hai, toh National Livestock Mission (NLM) ka rasta dekho — usme 50% capital subsidy ka
-          alag structure hai. Murgi palan ke liye humne alag guide likhi hai:{' '}
+          Yeh yojana sirf gaay-bhains ki dairy ke liye hai. Man murgi ya bakri palan ka hai? Toh National Livestock
+          Mission (NLM) dekho — wahan 50% capital subsidy ka apna alag system chalta hai; poora process{' '}
           <Link href="/articles/murgi-palan-loan-nlm-subsidy" className="underline font-bold">Murgi Palan Loan NLM
-          Subsidy</Link>. Aur desi nasl sudhaar mein interest hai toh{' '}
+          Subsidy</Link> wali guide mein hai. Desi nasl ke kaam mein interest hai toh{' '}
           <Link href="/articles/rashtriya-gokul-mission-subsidy" className="underline font-bold">Rashtriya Gokul
-          Mission</Link> padho.
+          Mission</Link> padh lo.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Ek hi zameen, ek hi aadmi — par sahi scheme chunne se subsidy ka fark lakhon mein ho sakta hai. Isliye
-          pehle teeno options ka current notification padho, phir file lagao.
+          Zameen wahi, aadmi wahi — par scheme badalne se subsidy ka fark lakhon ka ho jata hai. Teeno ke taaza
+          notification padho, tab file lagao. Jaldi ka kaam shaitan ka.
         </p>
 
         <FAQBlock faqs={FAQS_DATA} />
