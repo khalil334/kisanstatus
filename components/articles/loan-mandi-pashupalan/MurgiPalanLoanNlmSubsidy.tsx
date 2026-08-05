@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 
@@ -81,6 +82,18 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
       </div>
 
       <div className="container-site max-w-3xl py-8">
+        <div className="my-2 mb-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/articles/loan-mandi-pashupalan/murgi-palan-loan-nlm-subsidy/murgi-farm-mein-subah-ka-round.webp"
+            alt="Broiler shed mein subah ka round lagata hua murgi palak — NLM subsidy isi business ke liye hai"
+            width={1200}
+            height={670}
+            className="w-full h-auto object-cover"
+            sizes="(max-width: 768px) 100vw, 768px"
+            priority
+          />
+        </div>
+
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           Murgi palan un ginti ke dhandhon mein hai jahan chhoti zameen par bhi structured business khada ho sakta
           hai — aur sarkar iske liye apni sabse badi livestock scheme se paisa de rahi hai. National Livestock
@@ -149,6 +162,15 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           <SI n={4}><strong>KYC poora:</strong> Aadhaar, PAN, address proof, bank details — sab matched aur updated.</SI>
         </StepList>
 
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/murgi-palan-loan-nlm-subsidy/layer-vs-broiler-farm.webp"
+          alt="Layer farm mein ande ki tray — layer ya broiler, pehla bada business faisla"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
+
         <SH>🥚 Layer vs Broiler — Pehla Bada Faisla</SH>
         <div className="overflow-x-auto my-4">
           <table className="w-full text-sm border-collapse">
@@ -195,6 +217,15 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           apna setup karna ek samajhdaar raasta hai.
         </p>
 
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/murgi-palan-loan-nlm-subsidy/udyamimitra-portal-laptop-par.webp"
+          alt="Laptop par udyamimitra portal se NLM-EDP application bharta hua aavedak"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
+
         <SH>💻 Apply Kaise Karein — udyamimitra Portal</SH>
         <StepList>
           <SI n={1}><strong>Project report (DPR) banao:</strong> unit ka type, capacity, cost breakdown, income projection, repayment plan. DPR jitni realistic, file utni mazboot. Hawai numbers wali DPR verification mein pakdi jaati hai.</SI>
@@ -218,6 +249,15 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           &ldquo;guaranteed approval&rdquo; wale agent se door raho. Application free hai aur khud ho jaati hai.
         </WB>
 
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/murgi-palan-loan-nlm-subsidy/feed-ki-boriyan-aur-kharcha.webp"
+          alt="Feed ki boriyon se daana nikalta hua worker — poultry mein 60-70% kharcha feed ka hota hai"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
+
         <SH>🧮 Kharche Ka Sach — Feed Hi Asli Game Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Poultry ke chalu kharche ka 60-70% sirf feed hota hai. Iska matlab: aapke munafe ka faisla shed ki
@@ -233,6 +273,15 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           Online Apply</Link> guide dekho.
         </p>
 
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/murgi-palan-loan-nlm-subsidy/chooza-vaccination-ka-kaam.webp"
+          alt="Chooze ko vaccination dete hue haath — mortality control ka sabse zaroori kaam"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
+
         <SH>💔 Mortality Aur Vaccination — Jo Numbers Mein Nahi Dikhta</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Har DPR mein mortality ka ek chhota sa percentage likha hota hai, par asli farm par yeh number
@@ -242,6 +291,15 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           pehle shed ki poori safai-disinfection aur kam se kam ek hafte ka gap (downtime) — yeh aadat hi
           purane aur naye farmer ka fark hai.
         </p>
+
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/murgi-palan-loan-nlm-subsidy/naya-shed-nirman-kaam.webp"
+          alt="Naye poultry shed ka nirman — setup mein paisa sahi jagah lagana zaroori hai"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
 
         <SH>🏗️ Shed Aur Setup — Jahan Paisa Sahi Lagana Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
