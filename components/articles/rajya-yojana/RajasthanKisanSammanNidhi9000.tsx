@@ -72,7 +72,7 @@ export default function RajasthanKisanSammanNidhi9000() {
 
         <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
           <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
-            <strong>Status (4 August 2026):</strong> 6vi kist abhi pending hai — April 2026 mein aani thi, verification mein atak gayi. ⚠️ Nayi release date officially announce nahi hui hai; kisi bhi WhatsApp forward wali tareekh par bharosa na karein.
+            <strong>Status (4 August 2026):</strong> 6vi kist abhi pending hai. ⚠️ Next kist date officially announce nahi hua. Jan Soochna portal check karte rahein — kisi bhi WhatsApp forward wali tareekh par bharosa na karein.
           </p>
         </div>
 
@@ -253,7 +253,7 @@ export default function RajasthanKisanSammanNidhi9000() {
         <h2>6vi Kist — Ruki Kyun Hai</h2>
 
         <p>
-          Pehli paanch kiste time par aa chuki hain, koi issue nahi hua. 6vi wali April 2026 mein aani thi — verification aur data-matching mein atak gayi. Officially koi naya date announce nahi hua hai.
+          Pehli paanch kiste time par aa chuki hain, koi issue nahi hua. 6vi kist verification aur data-matching mein atki hai. Next kist date officially announce nahi hua. Jan Soochna portal check karte rahein.
         </p>
 
         <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-5 my-6 not-prose">
