@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { SI, StepList, IB, WB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
+import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const RELATED = [
@@ -75,7 +75,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
             <span>📅 {fmtDate(article.publishedTime)}</span>
-            <span>🔄 Updated: {fmtDate(article.modifiedTime)}</span>
+            <span>🔄 Last Updated: 5 August 2026</span>
             <span>⏱️ 9 min read</span>
           </div>
         </div>
@@ -94,6 +94,16 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
           />
         </div>
 
+        <DB>
+          <strong>TL;DR — 30 second mein:</strong>
+          <ul className="list-disc pl-5 mt-2 space-y-1">
+            <li>eNAM registration <strong>bilkul free</strong> — enam.gov.in par ya mandi ke help desk par; documents sirf 3 (Aadhaar, bank passbook, mobile).</li>
+            <li>Fasal apni hi mandi le jaani hai — sirf <strong>boli online</strong> hoti hai; zyada buyers, behtar rate, payment seedha bank mein.</li>
+            <li>1,400+ mandiyan judi hain; 11 Feb 2024 tak <strong>1.77 crore+ kisan</strong> registered (Ministry of Agriculture ke figures).</li>
+            <li>Sabse zyada fayda anaaj-dalein-tilhan-masale walon ko — grading standardised hai. <strong>Abhi enam.gov.in par check karo</strong> ki aapki mandi judi hai ya nahi.</li>
+          </ul>
+        </DB>
+
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           Mandi ka purana scene sabko pata hai — fasal utaari, aur wahi chaar-paanch vyapari aapas mein dekh kar
           rate tay. Na competition, na chaara. eNAM isi ganth ko kholta hai: aapki fasal wahi mandi mein padi
@@ -108,8 +118,10 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
 
         <SH>eNAM Hai Kya Cheez</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Ek sarkari online trading portal, 2016 se chal raha hai, jisse ab 1,000 se zyada APMC mandiyan judi
-          hain. Kaam karne ka tareeqa simple hai — fasal aap apni hi mandi le jaate ho, bas boli kagaz-kalam ki
+          Ek sarkari online trading portal — PM Modi ne 14 April 2016 ko pilot launch kiya tha — jisse ab 1,400 se
+          zyada APMC mandiyan judi hain. 11 February 2024 tak 1.77 crore se zyada kisan aur 2.53 lakh se zyada
+          trader register ho chuke the, aur December 2023 tak platform par ₹31.9 lakh crore ka trade ho chuka tha
+          (Ministry of Agriculture ke aankde, MyNation ki report ke according). Kaam karne ka tareeqa simple hai — fasal aap apni hi mandi le jaate ho, bas boli kagaz-kalam ki
           jagah online lagti hai, aur bid karne wala Jaipur mein bhi baitha ho sakta hai, Indore mein bhi.
         </p>
 
@@ -290,6 +302,16 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
+        <IB>
+          <strong>Asli misaal, record ke saath:</strong> Andhra Pradesh ke Kurnool district ki <strong>Adoni mandi</strong>
+          — March 2017 se eNAM par — desh ki pehli mandi bani jisko platform par <strong>1 crore bids</strong> mile
+          (11.34 lakh lots par, 20 Jan 2023 tak; average 9 bids per lot). Wahan assaying lab, price display boards
+          aur eNAM-integrated weighing machines lagi hain — tulai ka data seedha portal par jaata hai, haath ki
+          gadbad ka chance khatam. Poori kahani eNAM ke official blog par hai:{' '}
+          <a href="https://enam.gov.in/web/blog" target="_blank" rel="noopener noreferrer" className="underline font-bold">enam.gov.in/web/blog</a>.
+          Matlab: jahan mandi ne system theek lagaya, wahan competition sach mein hota hai.
+        </IB>
+
         <SH>Asli Fayda Kahan Hai — Inter-Mandi Aur Inter-State</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           eNAM ke teen level hote hain, aur yeh samajhna zaroori hai kyunki fayda level ke saath badhta hai.
@@ -297,6 +319,14 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
           badhti hai par buyers wahi purane. Doosra — <strong>inter-mandi</strong>: aapke state ki doosri
           mandiyon ke licensed buyers bhi bid kar sakte hain. Teesra — <strong>inter-state</strong>: doosre
           states ke buyers bhi. Jitna bada pool, utna behtar rate milne ka chance.
+        </p>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Ab ek seedhi baat, jo koi brochure nahi batayega — inter-state trade abhi bhi bahut chhota hai. Financial
+          Express ki April 2025 report ke according FY25 mein inter-state eNAM trade sirf ₹21 crore ka tha (FY24 ke
+          ₹42 crore se aadha), jabki state ke andar inter-mandi trade ₹1,769 crore aur total turnover ₹80,262 crore
+          raha (<a href="https://www.financialexpress.com/policy/economy-enam-remains-local-inter-state-trade-minimal-halves-in-fy25-3817271/" target="_blank" rel="noopener noreferrer" className="underline font-bold">source: Financial Express</a>).
+          Matlab door ke state ka buyer milna abhi exception hai, rule nahi — asli fayda apni mandi mein transparent
+          bidding aur seedha bank payment ka hai. Expectations wahi rakho.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Practical baat: har mandi mein teeno levels active nahi hote — yeh state government ke integration
@@ -365,7 +395,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
             Ek baar register ho gaye toh har season online bidding ka fayda — zyada buyers, behtar rate,
-            aur payment seedha bank mein.
+            aur payment seedha bank mein. <strong>Abhi enam.gov.in par apni mandi ki list check karo.</strong>
           </p>
         </div>
 
