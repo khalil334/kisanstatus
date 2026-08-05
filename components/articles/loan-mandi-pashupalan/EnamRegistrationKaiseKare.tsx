@@ -42,6 +42,18 @@ const FAQS_DATA = [
     q: 'eNAM aur normal mandi mein kya fark hai?',
     a: 'Normal mandi mein sirf wahan maujood vyapari bid karte hain. eNAM par online bidding hoti hai — dusre district, dusre state ke buyers bhi bid kar sakte hain. Zyada buyers = behtar rate. Payment bhi seedha bank mein, cash ka jhanjhat nahi.',
   },
+  {
+    q: 'Kya FPO bhi eNAM par bech sakta hai?',
+    a: 'Haan — eNAM par FPO/FPC ka alag registration module hai. FPO apne members ki upaj aggregate karke collection centre se hi trade kar sakta hai, har kisan ko mandi jaane ki zaroorat nahi. Chhote kisano ke liye FPO ke through bechna aksar behtar deal hota hai — volume zyada, bargaining power zyada.',
+  },
+  {
+    q: 'Bid pasand na aaye toh kya fasal wapas la sakte hain?',
+    a: 'Haan. Sabse oonchi bid aapko dikhai jaati hai — accept karna aapki marzi hai. Rate pasand nahi toh mana kar do; fasal aapki hai, aap wapas le ja sakte ho ya agle din phir lot lagwa sakte ho. Koi penalty nahi hai. Bas yeh dekho ki roz ke transport ka kharcha na badh jaye.',
+  },
+  {
+    q: 'eNAM helpline number kya hai?',
+    a: 'Toll-free helpline 1800 270 0224 hai. Iske alawa har integrated mandi mein eNAM help desk / Mandi Analyst hota hai jo registration se lekar trade tak har step mein free madad karta hai. Email support enam.helpdesk@gmail.com par bhi hai.',
+  },
 ];
 
 export default function EnamRegistrationKaiseKare({ article }: { article: ArticleMeta }) {
@@ -183,6 +195,72 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
             <strong>Weighment + Payment:</strong> Bid accept hui toh tulai hoti hai aur payment seedha aapke
             bank account mein aa jati hai — zyada tar 1-2 working days mein.
           </SI>
+        </StepList>
+
+        <SH>🌽 Kaun Si Fasal Bech Sakte Hain — Aur Kis Par Sabse Zyada Fayda</SH>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          eNAM par 200+ commodities notified hain — anaaj (gehu, dhaan, makka, bajra), dalein (chana, arhar,
+          moong, masoor), tilhan (sarson, soyabean, moongfali), masale (jeera, dhania, haldi, mirch), aur kai
+          fal-sabziyan bhi. Aapki mandi mein kaun si commodities trade hoti hain, yeh mandi ke hisaab se alag
+          hai — help desk se list mil jaati hai.
+        </p>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Ek practical pattern samajh lo — <strong>jitni standardised fasal, utna zyada eNAM ka fayda</strong>.
+          Gehu, chana, sarson, jeera jaisi fasal ki grading saaf-saaf ho jaati hai, isliye door ke buyers
+          report dekh kar bharose se bid karte hain aur competition asli hota hai. Tamatar jaisi jaldi kharab
+          hone wali sabzi mein door ka buyer kam interest leta hai — wahan local hi khareedta hai. Matlab:
+          anaaj-dalein-tilhan-masale walo ke liye eNAM registration lagbhag zaroori hai; sabzi walo ke liye
+          bhi useful hai, par expectations realistic rakho. MSP wali fasalon ka hisaab{' '}
+          <Link href="/articles/msp-list-2026-27" className="underline font-bold">MSP List 2026-27</Link> aur{' '}
+          <Link href="/articles/gehu-ka-bhav-msp-vs-mandi" className="underline font-bold">Gehu: MSP vs Mandi</Link>{' '}
+          guides mein detail se hai.
+        </p>
+
+        <SH>📱 eNAM Mobile App — Jeb Mein Mandi</SH>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Portal ke alawa eNAM ka official mobile app (Play Store par “eNAM” — publisher: Small Farmers
+          Agribusiness Consortium) bhi hai, aur sach kahein toh zyada tar kisano ke liye app hi asaan rasta hai.
+          App se registration ho jaata hai, apne lot ka status dikhta hai, bidding ki progress live milti hai,
+          aur payment ka update bhi. Hindi samet kai bhashayein support hoti hain.
+        </p>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          App ka ek aur kaam ka feature — <strong>nearby mandiyon ke rates</strong>. Fasal le jaane se pehle
+          2-3 mandiyon ka bhav compare karna 5 minute ka kaam hai, aur kai baar 40-50 km door wali mandi ka
+          rate transport nikaal kar bhi behtar baithta hai. Rates check karne ke aur bhi tareeqe humne{' '}
+          <Link href="/articles/mandi-bhav-app-comparison" className="underline font-bold">Mandi Bhav Apps
+          Comparison</Link> mein detail se likhe hain.
+        </p>
+
+        <SH>🗺️ Inter-Mandi Aur Inter-State Trade — Asli Fayda Yahan Hai</SH>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          eNAM ke teen level hote hain, aur yeh samajhna zaroori hai kyunki fayda level ke saath badhta hai.
+          Pehla — <strong>intra-mandi</strong>: aapki apni mandi ke vyapari online bid karte hain; transparency
+          badhti hai par buyers wahi purane. Doosra — <strong>inter-mandi</strong>: aapke state ki doosri
+          mandiyon ke licensed buyers bhi bid kar sakte hain. Teesra — <strong>inter-state</strong>: doosre
+          states ke buyers bhi. Jitna bada pool, utna behtar rate milne ka chance.
+        </p>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Practical baat: har mandi mein teeno levels active nahi hote — yeh state government ke integration
+          par depend karta hai. Apni mandi ke help desk se seedha pucho: <em>“yahan inter-mandi/inter-state
+          trade chalu hai ya nahi?”</em> Agar chalu hai, toh assaying (quality report) ka role aur bada ho
+          jaata hai — door ka buyer aapki fasal aankh se nahi dekh sakta, woh report dekh kar hi bid karta
+          hai. Isliye saaf-suthri, achhi grade ki upaj ka seedha matlab hai zyada door tak ke buyers aur
+          behtar bids.
+        </p>
+        <WB>
+          Logistics ka dhyan raho — inter-state deal mein fasal ki delivery ka intezam buyer aur mandi ke
+          system se hota hai, lekin tulai aur handover aapki mandi mein hi hota hai. Aapko apni fasal kahin
+          aur nahi le jaani — bas mandi tak. Yeh galatfehmi kai kisano ko rokti hai ki “doosre state ka
+          buyer mila toh maal wahan pahunchana padega” — nahi padta.
+        </WB>
+
+        <SH>🔧 Aam Problems Aur Unke Fix</SH>
+        <StepList>
+          <SI n={1}><strong>OTP nahi aa raha:</strong> network check karo, 2-3 minute ruko, phir resend. Number Aadhaar se linked ho toh process smooth rehta hai. Baar-baar fail ho toh mandi help desk se registration karwa lo — wahi sabse tez rasta hai.</SI>
+          <SI n={2}><strong>Bank detail galat bhar gayi:</strong> login karke profile mein bank details update karo ya help desk par passbook le jao. Payment atakne ki sabse badi wajah galat IFSC/account number hi hai — do baar check karke bharo.</SI>
+          <SI n={3}><strong>Mandi verify nahi kar rahi:</strong> registration ke baad record aapki chuni hui APMC ke paas jaata hai. 2-3 din se zyada latke toh mandi office mein Mandi Analyst se milo — aam taur par usi din verify ho jaata hai.</SI>
+          <SI n={4}><strong>Assaying report se sehmat nahi:</strong> sample ke saamne dobara jaanch ki request kar sakte ho. Moisture zyada nikle toh fasal ko aur sukha kar agle din lot lagana behtar hai — gili upaj par bid hamesha kam aati hai.</SI>
+          <SI n={5}><strong>Payment nahi aayi:</strong> trade ID le kar mandi help desk ya helpline 1800 270 0224 par baat karo. Zyada tar cases mein wajah bank detail ki galti ya account inactive hona hota hai.</SI>
         </StepList>
 
         <SH>⚖️ eNAM vs Normal Mandi — Fark Kya Hai</SH>
