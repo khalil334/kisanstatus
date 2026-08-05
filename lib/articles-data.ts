@@ -431,6 +431,7 @@ const CORE_ARTICLES: readonly ArticleMeta[] = [
     ogTitle: 'PM Kisan Self Registration Status Check 2026',
     keywords: [
       'pm kisan self registration status check',
+      'pmkisan self registration status',
       'pm kisan self registered status',
       'pm kisan registration approval check',
       'self registration pending',
@@ -440,7 +441,7 @@ const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'PmKisanSelfRegisteredStatusCheck',
     category: 'status-check',
     publishedTime: '2026-01-15T08:00:00+05:30',
-    modifiedTime: '2026-07-07T08:00:00+05:30',
+    modifiedTime: '2026-08-05T08:00:00+05:30',
     readingTime: 10,
     author: 'KisanStatus Editorial Team',
     authorBio: 'Agricultural content experts with 5+ years experience in government scheme research',
