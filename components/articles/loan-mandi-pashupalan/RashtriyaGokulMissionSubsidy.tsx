@@ -75,7 +75,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
             <span>📅 {fmtDate(article.publishedTime)}</span>
-            <span>🔄 Updated: {fmtDate(article.modifiedTime)}</span>
+            <span>🔄 Last Updated: 5 August 2026</span>
             <span>⏱️ 11 min read</span>
           </div>
         </div>
@@ -93,6 +93,17 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
             priority
           />
         </div>
+
+        <DB>
+          <strong>TL;DR — kisan ke kaam ki 4 baatein:</strong>
+          <ul className="list-disc pl-5 mt-2 space-y-1">
+            <li><strong>Muft AI</strong> darwaze par (NAIP) — koi form nahi, MAITRI technician ya pashu chikitsalay se sampark.</li>
+            <li><strong>IVF pregnancy par ₹5,000</strong> subsidy + HGM IVF bachhiya ke loan par <strong>3% interest subvention</strong> (March 2025 revision).</li>
+            <li><strong>Sex-sorted semen par 50% tak subsidy</strong> — 90%+ chance bachhiya ka.</li>
+            <li>Bada plan? <strong>Breed Multiplication Farm par 50%, ₹2 crore tak</strong> — apply eoi.nddb.coop par.</li>
+            <li><strong>Abhi check karo:</strong> dahd.gov.in par scheme page aur apne district pashupalan office ka number.</li>
+          </ul>
+        </DB>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           Rashtriya Gokul Mission (RGM) ka naam suna sabne hai, par zyada tar kisan yeh nahi jaante ki isme unke
@@ -114,9 +125,10 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
           December 2014 se chal rahi yeh scheme Ministry of Fisheries, Animal Husbandry &amp; Dairying ke under
           desi gay-bhains ki <strong>nasl sudhaarne</strong> ka national mission hai. Maqsad simple hai — Gir,
           Sahiwal, Tharparkar, Red Sindhi jaisi desi breeds ko bachana, unki doodh dene ki capacity badhana, aur
-          behtar genetics har kisan ke pashu tak pahunchana. 2025 mein Cabinet ne iska revised outlay
-          <strong> ₹3,400 crore</strong> (2021-26 cycle) approve kiya — matlab scheme ko aur paisa aur do naye
-          components mile.
+          behtar genetics har kisan ke pashu tak pahunchana. <strong>19 March 2025</strong> ko Cabinet ne iska revised outlay
+          <strong> ₹3,400 crore</strong> (2021-26 cycle, ₹1,000 crore extra) approve kiya — matlab scheme ko aur paisa aur do naye
+          components mile (
+          <a href="https://visionias.in/current-affairs/news-today/2025-03-20/schemes-in-news/cabinet-approved-revised-rashtriya-gokul-mission" target="_blank" rel="noopener noreferrer" className="underline font-bold">source: Cabinet decision, 19 March 2025</a>).
         </p>
         <IB>
           Ek baat pehle hi saaf kar lo: RGM <strong>pashu kharidne ki scheme nahi hai</strong>. Yeh nasl sudhaar
@@ -315,8 +327,11 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
 
         <SH>🌾 Desi Nasl Ka Economics — Yeh Scheme Kyon Matter Karti Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Number khud bolte hain — RGM aur AI network ke chalte 10 saal mein desh ka doodh production 63% badha
-          hai, aur per-animal productivity 26% se zyada. Kisan ke level par iska matlab: wahi chara, wahi mehnat,
+          Number khud bolte hain — sarkari record ke mutabik 10 saal mein desh ka doodh production <strong>63.55%</strong> badha,
+          per capita availability 307 gram/din (2013-14) se <strong>471 gram/din</strong> (2023-24) hui, aur productivity
+          26.34% badhi. NAIP ke under <strong>8.39 crore pashu</strong> cover hue aur <strong>5.21 crore kisan</strong> muft AI
+          ka fayda le chuke hain; 22 IVF labs se 2,541 high genetic merit calves paida ho chuke hain (Cabinet/PIB data,
+          March 2025). Kisan ke level par iska matlab: wahi chara, wahi mehnat,
           par zyada doodh. Ek gay jo 4 litre deti thi, uski agli peedhi sahi genetics se 8-10 litre tak ja sakti
           hai.
         </p>
