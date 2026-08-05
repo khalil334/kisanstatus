@@ -84,7 +84,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
       <div className="container-site max-w-3xl py-8">
         <div className="my-2 mb-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src="/images/articles/loan-mandi-pashupalan/rashtriya-gokul-mission-subsidy/desi-gaay-ke-saath-kisan.webp"
+            src="/images/articles/loan-mandi-pashupalan/rashtriya-gokul-mission-subsidy/desi-gaay.webp"
             alt="Desi Gir gaay ke saath kisan — Rashtriya Gokul Mission desi naslon ko badhane ki scheme hai"
             width={1200}
             height={670}
@@ -142,7 +142,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
         </IB>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/rashtriya-gokul-mission-subsidy/ai-technician-ka-daura.webp"
+          src="/images/articles/loan-mandi-pashupalan/rashtriya-gokul-mission-subsidy/ai-technician.webp"
           alt="Gaon mein AI technician ka daura — darwaze par muft artificial insemination RGM ka hissa hai"
           width={1200}
           height={670}
@@ -188,7 +188,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
         </p>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/rashtriya-gokul-mission-subsidy/bachhiya-ke-saath-gaay.webp"
+          src="/images/articles/loan-mandi-pashupalan/rashtriya-gokul-mission-subsidy/gaay-bachhiya.webp"
           alt="Nayi bachhiya ke saath desi gaay — sex-sorted semen se bachhiya hone ke chances 90% tak"
           width={1200}
           height={670}
@@ -215,7 +215,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
         </WB>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/rashtriya-gokul-mission-subsidy/pashu-aspatal-mein-jaanch.webp"
+          src="/images/articles/loan-mandi-pashupalan/rashtriya-gokul-mission-subsidy/pashu-jaanch.webp"
           alt="Pashu chikitsak gaay ki jaanch karte hue — IVF process veterinary team ke through hota hai"
           width={1200}
           height={670}
@@ -244,7 +244,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
         </p>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/rashtriya-gokul-mission-subsidy/bade-farm-ka-nirman.webp"
+          src="/images/articles/loan-mandi-pashupalan/rashtriya-gokul-mission-subsidy/farm-nirman.webp"
           alt="Bade cattle shed ka nirman — Breed Multiplication Farm mein ₹2 crore tak ki subsidy"
           width={1200}
           height={670}
@@ -321,7 +321,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
         />
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/rashtriya-gokul-mission-subsidy/doodh-ka-record-copy-mein.webp"
+          src="/images/articles/loan-mandi-pashupalan/rashtriya-gokul-mission-subsidy/doodh-record.webp"
           alt="Doodh ka record register mein likhta hua kisan — desi nasl ka economics samajhne ke liye records zaroori"
           width={1200}
           height={670}

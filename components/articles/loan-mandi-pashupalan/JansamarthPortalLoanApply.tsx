@@ -84,7 +84,7 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
       <div className="container-site max-w-3xl py-8">
         <div className="my-2 mb-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src="/images/articles/loan-mandi-pashupalan/jansamarth-portal-loan-apply/portal-par-form-bharna.webp"
+            src="/images/articles/loan-mandi-pashupalan/jansamarth-portal-loan-apply/form-bharna.webp"
             alt="Ghar baithe laptop par JanSamarth jaise portal par loan application bharta hua aavedak"
             width={1200}
             height={670}
@@ -142,7 +142,7 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
         </IB>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/jansamarth-portal-loan-apply/kisan-aur-vyapari-categories.webp"
+          src="/images/articles/loan-mandi-pashupalan/jansamarth-portal-loan-apply/categories.webp"
           alt="Kisan se lekar chhote vyapari tak — JanSamarth ki alag-alag loan categories inhi ke liye hain"
           width={1000}
           height={558}
@@ -203,7 +203,7 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
         </IB>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/jansamarth-portal-loan-apply/apply-se-pehle-taiyari.webp"
+          src="/images/articles/loan-mandi-pashupalan/jansamarth-portal-loan-apply/taiyari.webp"
           alt="Apply se pehle ki taiyari — Aadhaar, bank passbook aur OTP wala mobile paas rakho"
           width={1200}
           height={670}
@@ -225,7 +225,7 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
         </DB>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/jansamarth-portal-loan-apply/otp-verify-mobile-par.webp"
+          src="/images/articles/loan-mandi-pashupalan/jansamarth-portal-loan-apply/otp-verify.webp"
           alt="Mobile par OTP daal kar verify karta kisan — registration ka pehla step"
           width={1200}
           height={670}
@@ -264,7 +264,7 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
         </p>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/jansamarth-portal-loan-apply/status-check-bank-ke-bahar.webp"
+          src="/images/articles/loan-mandi-pashupalan/jansamarth-portal-loan-apply/status-check.webp"
           alt="Bank ke bahar mobile par application status check karta aavedak"
           width={1200}
           height={670}
@@ -293,7 +293,7 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
         </StepList>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/jansamarth-portal-loan-apply/branch-ya-online-faisla.webp"
+          src="/images/articles/loan-mandi-pashupalan/jansamarth-portal-loan-apply/branch-ya-online.webp"
           alt="Branch jaayein ya online apply karein — KCC ke liye dono raaste khule hain"
           width={1200}
           height={670}
