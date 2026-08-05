@@ -4,9 +4,6 @@ Rules: Real sourced kisan stories only (PIB/NABARD/state dept/verified news + li
 
 ## Pending
 
-4. GehuKaBhavMspVsMandi.tsx — Gehu Ka Bhav MSP vs Mandi
-5. JansamarthPortalLoanApply.tsx — JanSamarth Portal Loan Apply
-6. MandiBhavAppComparison.tsx — Mandi Bhav App Comparison
 7. MspList202627.tsx — MSP List 2026-27
 8. MurgiPalanLoanNlmSubsidy.tsx — Murgi Palan Loan NLM Subsidy
 9. RashtriyaGokulMissionSubsidy.tsx — Rashtriya Gokul Mission Subsidy
@@ -14,6 +11,9 @@ Rules: Real sourced kisan stories only (PIB/NABARD/state dept/verified news + li
 11. SbiDairyLoanInterestRate.tsx — SBI Dairy Loan Interest Rate
 
 ## Done
+- MandiBhavAppComparison.tsx — merged. TL;DR, Aam Galtiyan, sourced eNAM scale (1.77cr farmers, ₹31.9L cr — MyNation/Min. of Agriculture link), KCC helpline 1800-180-1551, Last Updated 5 Aug 2026.
+- JansamarthPortalLoanApply.tsx — merged earlier (76ef1d7).
+- GehuKaBhavMspVsMandi.tsx — merged earlier (330f132).
 - EnamRegistrationKaiseKare.tsx — merged (e3bffc4…). Sources: MyNation/Min. of Agriculture (1.77cr farmers, ₹31.9L cr trade), eNAM blog (Adoni 1cr bids), Financial Express Apr-2025 (inter-state ₹21cr FY25).
 - DairyFarmLoanWithoutCollateral.tsx — merged (635407…). Story: Ram Lakhan, Deoria/Lakhimpur Kheri, PMEGP ₹10L 2024, 5-8 qtl doodh/day, net ₹15-30K/mo — IndiaTimes/UP govt link.
 - BiharPashupalanLoanYojana.tsx — merged to main (commit b1adab6…). Sources: The Daily Jagran (2025 window, 6321 applications, unit costs ₹1.74L/₹3.90L/₹15.34L/₹20.22L, 40% slab badi units), COMFED helpline 1800 345 6681.
