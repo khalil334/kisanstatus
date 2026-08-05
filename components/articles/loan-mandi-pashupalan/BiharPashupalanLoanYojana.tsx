@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 
@@ -81,11 +82,23 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
       </div>
 
       <div className="container-site max-w-3xl py-8">
+        <div className="my-2 mb-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/articles/loan-mandi-pashupalan/bihar-pashupalan-loan-yojana/bhains-ke-saath-kisan-bihar.webp"
+            alt="Bihar ke gaon mein kisan apni bhainson ke saath — pashupalan loan yojana ka asli maidan"
+            width={1200}
+            height={670}
+            className="w-full h-auto object-cover"
+            sizes="(max-width: 768px) 100vw, 768px"
+            priority
+          />
+        </div>
+
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           Bihar mein dairy shuru karne ka sabse bada roda paisa hai — 2 bhains ki chhoti unit bhi lakhon ka kaam hai.
-          Samagra Gavya Vikas Yojana isi problem ka jawab hai: Bihar sarkar ka Gavya Vikas Nideshalay dairy unit
-          lagane par category ke hisaab se 50% se 75% tak subsidy deta hai. Yaani project ka aadha ya usse zyada
-          hissa aapko wapas nahi karna padta.
+          Yahi wajah hai ki Samagra Gavya Vikas Yojana par har saal itni bheed hoti hai: Bihar sarkar ka Gavya Vikas
+          Nideshalay dairy unit lagane par category ke hisaab se 50% se 75% tak subsidy deta hai. Matlab project ka
+          aadha ya usse zyada hissa aapko wapas nahi karna padta.
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
@@ -114,6 +127,15 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
           <strong>dairy.bihar.gov.in</strong> hi dekho — WhatsApp par ghoomne wale &ldquo;form&rdquo; aur agent ke bharose mat raho.
           Farmer registration aur application bilkul free hoti hai.
         </IB>
+
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/bihar-pashupalan-loan-yojana/chhoti-dairy-unit-shed.webp"
+          alt="Chhoti dairy unit ka shed — 2-4 pashu se shuruaat karna samajhdaari hai"
+          width={1000}
+          height={558}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
 
         <SH>💰 Subsidy Ka Ganit — Category Aur Unit Size Ka Khel</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
@@ -180,6 +202,15 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
           <SI n={6}><strong>Training / anubhav</strong> — kuch units ke liye dairy training certificate ya anubhav ko priority milti hai. Agar aapke district mein Gavya Vikas ki training hoti hai, toh karwa lena file ko mazboot karta hai.</SI>
         </StepList>
 
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/bihar-pashupalan-loan-yojana/documents-checklist-kagaz.webp"
+          alt="Application ke liye documents — Aadhaar, bank passbook, photo aur zameen ke kagaz"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
+
         <SH>📄 Documents Checklist — File Isi Par Rukti Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Rejection ka sabse bada karan koi complicated cheez nahi — adhoore ya mismatched documents hain. Yeh
@@ -201,6 +232,15 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
           praman) naam ka milaan kar lo. Yeh 10 minute ka kaam mahino ka delay bacha deta hai.
         </DB>
 
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/bihar-pashupalan-loan-yojana/dairy-portal-online-form.webp"
+          alt="Online application — portal par form bharta hua aavedak"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
+
         <SH>💻 Apply Kaise Karein — Step by Step</SH>
         <StepList>
           <SI n={1}><strong>Notification ka wait karo</strong> — application window saal bhar nahi khuli rehti. dairy.bihar.gov.in aur akhbaar ke vigyapan par nazar rakho. Window aam taur par kuch hafton ki hoti hai.</SI>
@@ -217,6 +257,15 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
           label="Gavya Vikas Nideshalay, Bihar — Official Portal"
           guide="Portal Kholo"
           portalName="dairy.bihar.gov.in"
+        />
+
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/bihar-pashupalan-loan-yojana/bank-mein-loan-ki-baat.webp"
+          alt="Bank branch mein loan ke baare mein baat-cheet karta kisan"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
         />
 
         <SH>🏦 Loan Wala Hissa — Bank Ka Role</SH>
@@ -237,6 +286,15 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
           working capital hai, kyunki us par interest subvention milta hai. Unit ki capital cost scheme + term loan
           se, aur chalane ka kharcha KCC se — yeh combination sabse tikau hai.
         </p>
+
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/bihar-pashupalan-loan-yojana/doodh-collection-center-par.webp"
+          alt="Doodh collection center par doodh dete hue kisan — asli kamai yahi se shuru hoti hai"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
 
         <SH>📊 Kamai Ka Andaza — Hawa Mein Nahi, Zameen Par</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
