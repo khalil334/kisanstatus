@@ -129,7 +129,7 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* Image 1: Hero Image */}
+        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/maandhan/family-pension-rules/hero.webp"
@@ -165,7 +165,7 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
             Lekin agar contributor 60 saal ki umar tak pahunchne se pehle hi is duniya ko alvida keh dete hain, to rules do alag scenarios mein divide ho jate hain. In dono ke beech ka antar samajhna bahut zaroori hai.
           </p>
 
-          {/* Image 2: Process Flowchart */}
+          {}
           <div className="my-6 rounded-xl overflow-hidden border border-[var(--color-border)] shadow-sm">
             <Image
               src="/images/articles/maandhan/family-pension-rules/process-flowchart.webp"
@@ -250,7 +250,7 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
             Official guidelines seedhi hain, lekin ground level par patience aur paperwork discipline ki zaroorat hoti hai. Neeche di gayi checklist ko follow karein:
           </p>
 
-          {/* Image 3: PMKMY Portal Screenshot */}
+          {}
           <div className="my-6 rounded-xl overflow-hidden border border-[var(--color-border)] shadow-sm">
             <Image
               src="/images/articles/maandhan/family-pension-rules/portal-screenshot.webp"
@@ -291,7 +291,7 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
         <section className="mb-8">
           <SH>Top 5 Galtiyan Jo Claim Reject Karwa Sakti Hain (Aur Bachav)</SH>
           
-          {/* Image 4: Claim Form Screenshot */}
+          {}
           <div className="my-6 rounded-xl overflow-hidden border border-[var(--color-border)] shadow-sm">
             <Image
               src="/images/articles/maandhan/family-pension-rules/claim-form.webp"
@@ -367,7 +367,7 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
           </div>
         </section>
 
-        {/* Image 5: Nomination Update Process */}
+        {}
         <section className="mb-8">
           <SH>Nomination Kaise Update Karein? (Step-by-Step)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">

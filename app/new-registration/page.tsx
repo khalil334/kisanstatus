@@ -1,8 +1,3 @@
-/**
- * PM Kisan New Registration Page
- * Complete guide: How to apply/enroll for PM Kisan Samman Nidhi
- * Official enrollment link: https://pmkisan.gov.in/NewFarmerRegistration.aspx
- */
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';

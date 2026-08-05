@@ -12,7 +12,6 @@ import {
   RSS_URL,
 } from '@/lib/site-config';
 
-// Revalidate once a day — article metadata only changes on deploy.
 export const revalidate = 86400;
 
 type FeedItem = {
@@ -25,12 +24,6 @@ type FeedItem = {
   image?: string;
 };
 
-/**
- * Both data files describe articles with DIFFERENT field names:
- *   lib/articles-data.ts  -> desc / publishedTime / modifiedTime / ogImage
- *   lib/maandhan-data.ts  -> description / published / modified / image+ogImage
- * Normalise to one shape, exactly like app/sitemap.ts does.
- */
 const FEED_ITEMS: FeedItem[] = [
   ...ARTICLES.map((a) => ({
     title: a.title,
@@ -50,7 +43,6 @@ const FEED_ITEMS: FeedItem[] = [
     modified: a.modified || a.published,
     image: a.ogImage || a.image,
   })),
-  // Only status:'live' state articles — 'planned' slugs are not published yet.
   ...LIVE_RAJYA_YOJANA_ARTICLES.map((a) => ({
     title: a.title,
     description: a.description,

@@ -51,7 +51,7 @@ export default function CropProfitCalcPage() {
 
       <div className="container-site max-w-2xl py-8">
 
-        {/* Detailed intro - helpful content */}
+        {}
         <div className="mb-6 p-5 bg-purple-50 border border-purple-200 rounded-xl text-sm text-gray-700 leading-relaxed">
           <p className="font-bold text-purple-900 mb-2">📊 Kheti Mein Kitna Profit Hua — Jaano Turant</p>
           <p className="mb-2">
@@ -68,7 +68,7 @@ export default function CropProfitCalcPage() {
         <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
           <h2 className="font-black text-gray-900 text-base mb-5">🧮 Apna Hisaab Bharo</h2>
 
-          {/* Revenue section */}
+          {}
           <div className="mb-5 p-4 bg-green-50 border border-green-200 rounded-xl">
             <p className="font-bold text-green-800 text-xs mb-3 uppercase tracking-wide">💰 Amdani (Revenue)</p>
             <InputField 
@@ -97,7 +97,7 @@ export default function CropProfitCalcPage() {
             />
           </div>
 
-          {/* Cost section */}
+          {}
           <div className="mb-5 p-4 bg-red-50 border border-red-200 rounded-xl">
             <p className="font-bold text-red-800 text-xs mb-3 uppercase tracking-wide">💸 Kharcha (Cost per Hectare)</p>
             <InputField label="🌱 Beej ka kharcha (₹)" value={seed} onChange={setSeed} min={0} placeholder="2000" hint="Certified seeds mehenge hote hain par yield zyada"/>
@@ -107,7 +107,7 @@ export default function CropProfitCalcPage() {
             <InputField label="🚜 Doosra kharcha (₹)" value={other} onChange={setOther} min={0} placeholder="1000" hint="Transport, godown rent, mandi commission"/>
           </div>
 
-          {/* Results */}
+          {}
           {revenue>0 && (
             <div className={`mt-4 border-2 rounded-2xl p-5 ${isProfit?'bg-green-50 border-green-300':'bg-red-50 border-red-300'}`}>
               <p className={`text-xs font-bold uppercase tracking-wide mb-3 ${isProfit?'text-green-700':'text-red-700'}`}>
@@ -151,7 +151,7 @@ export default function CropProfitCalcPage() {
             </div>
           )}
 
-          {/* Detailed tips - helpful content */}
+          {}
           <div className="mt-6">
             <h3 className="font-black text-gray-900 text-sm mb-3">💡 Kheti Mein Munafa Badhane Ke Tarike</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
@@ -182,7 +182,7 @@ export default function CropProfitCalcPage() {
             </div>
           </div>
 
-          {/* Common mistakes */}
+          {}
           <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-xl">
             <p className="font-bold text-yellow-900 text-sm mb-2">⚠️ Kisan Aksar Yeh Galtiyan Karte Hain:</p>
             <ul className="space-y-1.5 text-xs text-yellow-800">
@@ -199,7 +199,7 @@ export default function CropProfitCalcPage() {
         
         <OtherCalcs current="/calculator/crop-profit" />
 
-        {/* Related articles - helpful content */}
+        {}
         <div className="mt-6 p-5 bg-green-50 border border-green-200 rounded-xl">
           <p className="font-bold text-green-900 text-sm mb-3">📖 Yeh Bhi Padhein — Kheti Mein Madad Milegi</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -224,7 +224,7 @@ export default function CropProfitCalcPage() {
           </div>
         </div>
 
-        {/* FAQ section - helpful content */}
+        {}
         <div className="mt-6 p-5 bg-gray-50 border border-gray-200 rounded-xl">
           <p className="font-bold text-gray-900 text-sm mb-3">❓ Aksar Puche Jaane Wale Sawaal</p>
           <div className="space-y-3 text-xs">

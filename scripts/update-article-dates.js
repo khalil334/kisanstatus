@@ -2,11 +2,9 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-// 🎯 Configuration
 const CONFIG = {
   articlesDataPath: path.join(__dirname, '../lib/articles-data.ts'),
   componentsDir: path.join(__dirname, '../components/articles'),
-  // ✅ FIX: add every subfolder that can contain article components here
   searchDirs: [
     path.join(__dirname, '../components/articles'),
     path.join(__dirname, '../components/articles/kisanguides'),
@@ -17,13 +15,11 @@ const CONFIG = {
 
 function getGitDates(filePath) {
   try {
-    // First commit (creation date)
     const firstCommit = execSync(
       `git log --diff-filter=A --follow --format=%aI -- "${filePath}" | tail -1`,
       { encoding: 'utf-8', stdio: ['pipe', 'pipe', 'ignore'] }
     ).trim();
 
-    // Last commit (modification date)
     const lastCommit = execSync(
       `git log -1 --format=%aI -- "${filePath}"`,
       { encoding: 'utf-8', stdio: ['pipe', 'pipe', 'ignore'] }
@@ -50,8 +46,6 @@ function createBackup(filePath) {
   console.log(`💾 Backup created: ${backupPath}`);
 }
 
-// ✅ FIX: searches every folder in CONFIG.searchDirs (.tsx and .ts)
-// instead of only the top-level components/articles folder.
 function findComponentFile(componentName) {
   for (const dir of CONFIG.searchDirs) {
     for (const ext of ['.tsx', '.ts']) {
@@ -68,7 +62,6 @@ function updateArticlesData() {
     process.exit(1);
   }
 
-  // Create backup before updating
   createBackup(CONFIG.articlesDataPath);
 
   let content = fs.readFileSync(CONFIG.articlesDataPath, 'utf-8');
@@ -76,7 +69,6 @@ function updateArticlesData() {
   let updatedCount = 0;
   let skippedCount = 0;
 
-  // Find all component entries
   const componentPattern = /component:\s*'([^']+)'/g;
   const matches = [...content.matchAll(componentPattern)];
 
@@ -89,7 +81,6 @@ function updateArticlesData() {
   matches.forEach((match) => {
     const componentName = match[1];
 
-    // ✅ FIX: now checks components/articles AND components/articles/kisanguides
     const componentFile = findComponentFile(componentName);
 
     if (!componentFile) {
@@ -101,7 +92,6 @@ function updateArticlesData() {
     try {
       const dates = getGitDates(componentFile);
 
-      // More robust regex - handles both orders
       const publishedRegex = new RegExp(
         `(component:\\s*'${componentName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}'[\\s\\S]*?publishedTime:\\s*)'[^']+'`,
         'g'
@@ -114,13 +104,11 @@ function updateArticlesData() {
 
       let updated = false;
 
-      // Update publishedTime
       if (publishedRegex.test(content)) {
         content = content.replace(publishedRegex, `$1'${dates.publishedTime}'`);
         updated = true;
       }
 
-      // Update modifiedTime
       if (modifiedRegex.test(content)) {
         content = content.replace(modifiedRegex, `$1'${dates.modifiedTime}'`);
         updated = true;
@@ -143,7 +131,6 @@ function updateArticlesData() {
     }
   });
 
-  // Write changes
   if (!CONFIG.dryRun && content !== originalContent) {
     fs.writeFileSync(CONFIG.articlesDataPath, content, 'utf-8');
     console.log(`\n🎉 Updated ${updatedCount} articles successfully!`);
@@ -156,5 +143,4 @@ function updateArticlesData() {
   console.log(`📊 Summary: ${updatedCount} updated, ${skippedCount} skipped`);
 }
 
-// Run
 updateArticlesData();

@@ -5,9 +5,7 @@ const DOMAIN = 'https://kisanstatus.com';
 const PAGE_URL = `${DOMAIN}/calculator/crop-profit`;
 
 export const metadata: Metadata = {
-  // ✅ Rule 5: Title optimized to ~55 characters, primary keyword first
   title: 'Kheti Ka Munafa Calculator 2026 — Fasal Profit Loss',
-  // ✅ Rule 5: Description optimized to ~154 characters, natural Hinglish, click-worthy
   description: 'Kheti mein kitna profit ya loss hua, jaano turant. Beej, khad, mazdoori aur sinchai ka kharcha dalo aur net munafa nikalo. Free per hectare calculator.',
   keywords: [
     'kheti ka munafa calculator',
@@ -40,7 +38,6 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  // ✅ Rule 9: WebApplication Schema for the calculator tool
   const appSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',

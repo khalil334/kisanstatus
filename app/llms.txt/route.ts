@@ -13,16 +13,8 @@ import {
   OFFICIAL_PORTALS,
 } from '@/lib/site-config';
 
-// Article metadata only changes on deploy.
 export const revalidate = 86400;
 
-/**
- * llms.txt — a plain-text map of the site for LLMs and AI answer engines.
- * Spec: https://llmstxt.org/
- *
- * Generated from the same source of truth as the sitemap (ARTICLES +
- * MAANDHAN_ARTICLES + CATEGORIES) so it can never drift out of date.
- */
 export async function GET(): Promise<Response> {
   const categoryBlocks = (Object.keys(CATEGORIES) as CategorySlug[])
     .map((slug) => {

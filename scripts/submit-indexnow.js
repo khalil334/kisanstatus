@@ -1,6 +1,3 @@
-// Submit crawled URLs to IndexNow (Bing/Yandex/etc. shared endpoint).
-// Run AFTER the key file (public/<key>.txt) is deployed and live:
-//   node scripts/submit-indexnow.js
 const payload = require('./indexnow-payload.json');
 fetch('https://api.indexnow.org/indexnow', {
   method: 'POST',

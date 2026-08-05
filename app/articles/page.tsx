@@ -17,12 +17,6 @@ import ArticlesClient from './ArticlesClient';
 
 export const revalidate = 3600;
 
-/**
- * The rajya-yojana cluster is served from /rajya-yojana/<slug>, not /articles/<slug>,
- * and its `category` ('rajya-yojana') is deliberately NOT in CATEGORIES (no category
- * page). So each entry carries an explicit `href` + `categoryLabel` and the listing
- * uses those instead of inferring a path from the slug.
- */
 const RAJYA_LISTING_ARTICLES = LIVE_RAJYA_YOJANA_ARTICLES.map((a) => ({
   slug: a.slug,
   title: a.title,

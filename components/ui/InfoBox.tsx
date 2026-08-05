@@ -25,14 +25,6 @@ const STYLES: Record<InfoBoxType, { wrap: string; icon: string; label: string }>
   },
 };
 
-/**
- * Callout box used by article bodies.
- *
- *   <InfoBox type="update" date="4 August 2026">…</InfoBox>
- *
- * `date` is optional and only rendered when supplied (used by `type="update"`
- * to show when the update was published).
- */
 export default function InfoBox({
   type = 'info',
   date,

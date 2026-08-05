@@ -1,4 +1,3 @@
-// app/search/page.tsx
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { SITE_URL, SITE_NAME } from '@/lib/site-config';

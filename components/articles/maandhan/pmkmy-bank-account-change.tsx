@@ -133,7 +133,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* Image 1: Hero */}
+        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/maandhan/bank-account-change/hero.webp"
@@ -217,7 +217,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
             <SI n={6}><strong>Mobile Number:</strong> Wahi mobile number jo PMKMY me registered hai (OTP verification ke liye).</SI>
           </StepList>
 
-          {/* Image 2: Documents Checklist */}
+          {}
           <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
             <Image
               src="/images/articles/maandhan/bank-account-change/documents-checklist.webp"
@@ -266,7 +266,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
             <SI n={6}><strong>Confirmation Ka Wait Karein:</strong> Bank account change process complete hone me time lagta hai: Minimum 7-10 working days, Maximum 30 working days, Average 15-20 din. Confirmation SMS aapke registered mobile par aayega jab account change ho jayega. Samay state aur bank ke hisab se thoda alag ho sakta hai.</SI>
           </StepList>
 
-          {/* Image 3: CSC Visit Process */}
+          {}
           <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
             <Image
               src="/images/articles/maandhan/bank-account-change/csc-visit-process.webp"
@@ -315,7 +315,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
         <section className="mb-8">
           <SH>Bank Account Change Me Aane Wali Common Problems Aur Solutions</SH>
           
-          {/* Image 4: Common Problems Infographic */}
+          {}
           <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
             <Image
               src="/images/articles/maandhan/bank-account-change/common-problems.webp"
@@ -402,7 +402,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
             </div>
           </div>
 
-          {/* Image 5: Success Confirmation */}
+          {}
           <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
             <Image
               src="/images/articles/maandhan/bank-account-change/success-confirmation.webp"

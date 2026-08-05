@@ -1,7 +1,3 @@
-/**
- * /privacy-policy — KisanStatus.com
- * Data Protection & Privacy Notice — Legal compliance page
- */
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL, DEFAULT_OG_IMAGE } from '@/lib/site-config';

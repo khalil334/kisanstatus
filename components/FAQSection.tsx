@@ -27,7 +27,7 @@ export default function FAQSection({
   return (
     <section className="py-12 md:py-16 bg-gradient-to-b from-gray-50 to-[var(--color-card)] dark:from-gray-900/50 dark:to-[var(--color-card)]" aria-labelledby="faq-heading">
       <div className="container-site">
-        {/* Header */}
+        {}
         <div className="text-center mb-10">
           <span className="inline-block bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">
             ❓ Common Questions
@@ -40,7 +40,7 @@ export default function FAQSection({
           </p>
         </div>
 
-        {/* FAQ Accordion */}
+        {}
         <div className="max-w-4xl mx-auto">
           <div className="space-y-3">
             {faqs.map((faq, i) => {
@@ -112,7 +112,7 @@ export default function FAQSection({
             })}
           </div>
 
-          {/* Helpline info */}
+          {}
           <div className="mt-8 p-5 md:p-6 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/10 border-2 border-green-200 dark:border-green-800 rounded-2xl">
             <div className="flex items-start gap-3">
               <span className="text-3xl shrink-0" aria-hidden="true">📞</span>

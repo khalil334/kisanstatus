@@ -69,7 +69,7 @@ export default function PmKisanFaceAuthenticationEkyc({ article }: { article: Ar
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* Hero Image */}
+        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-face-authentication-ekyc/face-auth-hero.webp"
@@ -85,7 +85,7 @@ export default function PmKisanFaceAuthenticationEkyc({ article }: { article: Ar
           </p>
         </div>
 
-        {/* Introduction */}
+        {}
         <section className="mb-8">
           <SH>OTP Nahi Aa Raha To Kya Karein</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -115,7 +115,7 @@ export default function PmKisanFaceAuthenticationEkyc({ article }: { article: Ar
           </DB>
         </section>
 
-        {/* SECTION 1: What is Face Authentication */}
+        {}
         <section className="mb-8">
           <SH>Face Authentication Kya Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -135,7 +135,7 @@ export default function PmKisanFaceAuthenticationEkyc({ article }: { article: Ar
           </p>
         </section>
 
-        {/* SECTION 2: Who Should Use */}
+        {}
         <section className="mb-8">
           <SH>Kaun Logon Ko Use Karna Chahiye?</SH>
           <div className="bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 rounded-xl p-5 mb-6">
@@ -159,7 +159,7 @@ export default function PmKisanFaceAuthenticationEkyc({ article }: { article: Ar
           />
         </section>
 
-        {/* SECTION 3: Step by Step */}
+        {}
         <section className="mb-8">
           <SH>Step-by-Step: Face Authentication Kaise Karein?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -210,7 +210,7 @@ export default function PmKisanFaceAuthenticationEkyc({ article }: { article: Ar
           />
         </section>
 
-        {/* SECTION 4: Common Errors */}
+        {}
         <section className="mb-8">
           <SH>Common Errors Aur Unka Fix</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -256,7 +256,7 @@ export default function PmKisanFaceAuthenticationEkyc({ article }: { article: Ar
           </p>
         </section>
 
-        {/* SECTION 5: CSC Option */}
+        {}
         <section className="mb-8">
           <SH>CSC Center Se Bhi Karwa Sakte Ho</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -286,7 +286,7 @@ export default function PmKisanFaceAuthenticationEkyc({ article }: { article: Ar
           </IB>
         </section>
 
-        {/* SECTION 6: Benefits */}
+        {}
         <section className="mb-8">
           <SH>Face Authentication Ke Fayde</SH>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
@@ -307,7 +307,7 @@ export default function PmKisanFaceAuthenticationEkyc({ article }: { article: Ar
           </div>
         </section>
 
-        {/* SECTION 7: After Authentication */}
+        {}
         <section className="mb-8">
           <SH>Authentication Ke Baad Kya Karein?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -338,7 +338,7 @@ export default function PmKisanFaceAuthenticationEkyc({ article }: { article: Ar
           />
         </section>
 
-        {/* SECTION 8: State Wise Availability */}
+        {}
         <section className="mb-8">
           <SH>Kya Har State Mein Available Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -372,7 +372,7 @@ export default function PmKisanFaceAuthenticationEkyc({ article }: { article: Ar
           </div>
         </section>
 
-        {/* SECTION 9: Troubleshooting */}
+        {}
         <section className="mb-8">
           <SH>Advanced Troubleshooting</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -403,7 +403,7 @@ export default function PmKisanFaceAuthenticationEkyc({ article }: { article: Ar
           </div>
         </section>
 
-        {/* FAQ */}
+        {}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Aksar Puche Jane Wale Sawal

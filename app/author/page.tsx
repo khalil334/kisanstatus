@@ -1,15 +1,9 @@
-/**
- * Author Page — KisanStatus Team | KisanStatus.com
- * Optimized for natural Hinglish, unique content, and strict SEO rules.
- */
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { SITE_URL, SITE_NAME } from '@/lib/site-config';
 
 export const metadata: Metadata = {
-  // ✅ Rule 5: Title optimized to ~55 characters, primary keyword first
   title: 'KisanStatus Team — Verified Agriculture Experts 2026',
-  // ✅ Rule 5: Description optimized to ~153 characters, natural Hinglish
   description: 'KisanStatus Team ek group of agricultural experts hai jo Indian kisanon ko PM Kisan aur sarkari yojanaon ki verified, step-by-step guidance dete hain.',
   authors: [{ name: 'KisanStatus Team', url: `${SITE_URL}/about` }],
   alternates: { canonical: `${SITE_URL}/author` },
@@ -88,7 +82,7 @@ export default function AuthorPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      {/* Hero */}
+      {}
       <div className="bg-[var(--color-primary)] py-10">
         <div className="container-site">
           <nav className="text-green-200 text-sm mb-2" aria-label="Breadcrumb">
@@ -105,7 +99,7 @@ export default function AuthorPage() {
 
       <div className="container-site py-10 max-w-3xl mx-auto">
 
-        {/* Team card */}
+        {}
         <div className="card mb-8 border-[var(--color-border)] rounded-2xl p-6 bg-[var(--color-card)]">
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
             <div className="shrink-0">
@@ -139,7 +133,7 @@ export default function AuthorPage() {
             </div>
           </div>
 
-          {/* Team Bio */}
+          {}
           <div className="mt-6 pt-6 border-t border-[var(--color-border)] space-y-3 text-sm text-[var(--color-text-muted)] leading-relaxed">
             <p>
               <strong>KisanStatus Team</strong> ek dedicated group of agricultural experts aur rural development specialists ki hai, jo Indian annadataon ke haq mein kaam karte hain. 
@@ -156,7 +150,7 @@ export default function AuthorPage() {
             </p>
           </div>
 
-          {/* Trust Stats */}
+          {}
           <div className="mt-6 pt-6 border-t border-[var(--color-border)]">
             <h3 className="font-bold text-[var(--color-text)] text-base mb-3">🏆 Hamari Achievements</h3>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -180,7 +174,7 @@ export default function AuthorPage() {
           </div>
         </div>
 
-        {/* Articles by team */}
+        {}
         <div className="card mb-6 rounded-2xl p-6 bg-[var(--color-card)] border border-[var(--color-border)]">
           <h2 className="text-xl font-bold text-[var(--color-text)] mb-4">📝 KisanStatus Team Ke Top Resources</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -204,7 +198,7 @@ export default function AuthorPage() {
           </div>
         </div>
 
-        {/* CTA */}
+        {}
         <div className="card bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800 rounded-2xl p-6">
           <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">📞 Sampark Karein</h2>
           <p className="text-sm text-[var(--color-text-muted)] mb-4">

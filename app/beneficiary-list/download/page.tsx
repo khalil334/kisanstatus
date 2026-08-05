@@ -13,7 +13,6 @@ function DownloadContent() {
 
   const redirectUrl = searchParams.get('redirect') || 'https://pmkisan.gov.in/BeneficiaryList.aspx';
 
-  // Auto countdown for better UX
   useEffect(() => {
     if (countdown > 0) {
       const timer = setTimeout(() => setCountdown(countdown - 1), 1000);
@@ -29,7 +28,6 @@ function DownloadContent() {
     }, 500);
   };
 
-  // ✅ Rule 9: BreadcrumbList Schema for this specific download page
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',

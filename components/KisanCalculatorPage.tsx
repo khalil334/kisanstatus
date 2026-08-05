@@ -1,17 +1,10 @@
-/**
- * KisanCalculatorPage.tsx — Multi-tab agricultural utilities suite
- * 5 calculators: Welfare Benefit, Credit Facility EMI, Crop Protection Premium, Procurement Rate Income, Yield Profit
- * 'use client' — all interactive
- */
 'use client';
 
 import { useState } from 'react';
 import Link from 'next/link';
 
-// ── Types ──────────────────────────────────────────────────────────────────
 type CalcId = 'pmkisan' | 'kcc' | 'pmfby' | 'msp' | 'profit';
 
-// ── Procurement Rate Data 2025-26 (CCEA approved) ────────────────────────
 const MSP_RATES: Record<string, { name: string; msp: number; unit: string }> = {
   wheat:      { name: 'Gehun (Wheat)',          msp: 2550,  unit: 'per quintal' },
   rice:       { name: 'Dhan (Paddy/Rice)',       msp: 2400,  unit: 'per quintal' },
@@ -27,7 +20,6 @@ const MSP_RATES: Record<string, { name: string; msp: number; unit: string }> = {
   moong:      { name: 'Moong (Green Gram)',      msp: 8900,  unit: 'per quintal' },
 };
 
-// ── Crop Protection Premium Rates (approx) ───────────────────────────────
 const PMFBY_RATES: Record<string, { name: string; kharifRate: number; rabiRate: number }> = {
   rice:      { name: 'Dhan (Paddy)',   kharifRate: 2.0, rabiRate: 1.5 },
   wheat:     { name: 'Gehun',         kharifRate: 1.5, rabiRate: 1.5 },
@@ -37,10 +29,6 @@ const PMFBY_RATES: Record<string, { name: string; kharifRate: number; rabiRate: 
   maize:     { name: 'Makka',         kharifRate: 2.0, rabiRate: 1.5 },
   other:     { name: 'Other Crops',   kharifRate: 2.0, rabiRate: 1.5 },
 };
-
-// ─────────────────────────────────────────────────────────────────────────────
-// Sub-components — reusable form elements
-// ─────────────────────────────────────────────────────────────────────────────
 
 function InputField({ label, value, onChange, type = 'number', min, placeholder, hint }: {
   label: string; value: string | number; onChange: (v: string) => void;
@@ -104,14 +92,10 @@ function ResultRow({ label, value, bold }: { label: string; value: string; bold?
   );
 }
 
-// Indian currency formatter with en-IN locale
 function fmt(n: number) {
   return '₹' + Math.round(n).toLocaleString('en-IN');
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// 1. Agrarian Welfare Benefit Estimator
-// ─────────────────────────────────────────────────────────────────────────────
 function PMKisanCalc() {
   const [years, setYears] = useState('3');
   const [land, setLand] = useState('2');
@@ -159,9 +143,6 @@ function PMKisanCalc() {
   );
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// 2. Credit Facility EMI Calculator
-// ─────────────────────────────────────────────────────────────────────────────
 function KCCLoanCalc() {
   const [amount, setAmount] = useState('100000');
   const [rate, setRate] = useState('7');
@@ -185,7 +166,6 @@ function KCCLoanCalc() {
     totalInterest = 0;
   }
 
-  // 2% interest subvention for credit facility
   const govSubsidy = Number(rate) <= 7 ? P * 0.02 : 0;
 
   return (
@@ -211,9 +191,6 @@ function KCCLoanCalc() {
   );
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// 3. Crop Protection Premium Calculator
-// ─────────────────────────────────────────────────────────────────────────────
 function PMFBYCalc() {
   const [crop, setCrop] = useState('rice');
   const [season, setSeason] = useState('kharif');
@@ -253,9 +230,6 @@ function PMFBYCalc() {
   );
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// 4. Procurement Rate Income Calculator
-// ─────────────────────────────────────────────────────────────────────────────
 function MSPCalc() {
   const [crop, setCrop] = useState('wheat');
   const [quantity, setQuantity] = useState('10');
@@ -264,7 +238,6 @@ function MSPCalc() {
   const cropData = MSP_RATES[crop];
   const qty = Number(quantity) || 0;
 
-  // Convert to quintals
   let qtyInQuintal = qty;
   if (unit === 'kg') qtyInQuintal = qty / 100;
   if (unit === 'ton') qtyInQuintal = qty * 10;
@@ -315,9 +288,6 @@ function MSPCalc() {
   );
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// 5. Yield Profit/Loss Analyzer
-// ─────────────────────────────────────────────────────────────────────────────
 function CropProfitCalc() {
   const [landHa, setLandHa] = useState('1');
   const [sellingPrice, setSellingPrice] = useState('2000');
@@ -365,13 +335,6 @@ function CropProfitCalc() {
   );
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Related articles links — varied SEO labels
-// ─────────────────────────────────────────────────────────────────────────────
-// FIX(SEO): every kebab-case href below was a 404 — the real article slugs are
-// PascalCase in lib/articles-data.ts. Two links ('Tranche History', 'Scheme
-// Enrollment') had no matching article at all and now point at the master guide;
-// swap them once dedicated articles exist.
 const RELATED_ARTICLES = [
   { href: '/articles/PmKisan24viKist2026', label: '📅 24vi Tranche Verification' },
   { href: '/articles/PmKisanMasterGuide2026', label: '📊 Tranche History' },
@@ -383,9 +346,6 @@ const RELATED_ARTICLES = [
   { href: '/articles/PmKisanPaymentFailedFix2026', label: '💸 Payment Fix Guide' },
 ];
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Calculator tab config — varied titles for SEO
-// ─────────────────────────────────────────────────────────────────────────────
 const CALCS: { id: CalcId; emoji: string; title: string; shortTitle: string; color: string; component: React.ComponentType }[] = [
   { id: 'pmkisan', emoji: '🌾', title: 'Welfare Benefit Estimator',  shortTitle: 'Benefit',    color: 'green',  component: PMKisanCalc  },
   { id: 'kcc',     emoji: '🏦', title: 'Credit Facility EMI',        shortTitle: 'Credit',     color: 'blue',   component: KCCLoanCalc  },
@@ -403,9 +363,6 @@ const TAB_COLORS: Record<string, string> = {
 };
 const TAB_INACTIVE = 'bg-white text-gray-600 border-gray-200 hover:bg-gray-50';
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Main export
-// ─────────────────────────────────────────────────────────────────────────────
 export default function KisanCalculatorPage() {
   const [activeCalc, setActiveCalc] = useState<CalcId>('pmkisan');
   const active = CALCS.find(c => c.id === activeCalc)!;
@@ -414,7 +371,7 @@ export default function KisanCalculatorPage() {
   return (
     <main className="min-h-screen bg-gray-50">
 
-      {/* Hero section */}
+      {}
       <section className="bg-gradient-to-br from-green-800 via-green-700 to-green-600 text-white py-12 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-green-200 text-xs font-bold px-4 py-2 rounded-full mb-4">
@@ -432,7 +389,7 @@ export default function KisanCalculatorPage() {
         </div>
       </section>
 
-      {/* Sticky calculator tabs */}
+      {}
       <div className="sticky top-0 z-20 bg-white shadow-sm border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4 py-3">
           <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-hide">
@@ -452,11 +409,11 @@ export default function KisanCalculatorPage() {
         </div>
       </div>
 
-      {/* Active calculator content */}
+      {}
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
-          {/* Calculator card */}
+          {}
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
               <div className="flex items-center gap-3 mb-6">
@@ -470,9 +427,9 @@ export default function KisanCalculatorPage() {
             </div>
           </div>
 
-          {/* Sidebar */}
+          {}
           <div className="space-y-4">
-            {/* Quick switch */}
+            {}
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
               <h3 className="font-bold text-gray-700 text-sm mb-3">🧮 Doosre Utilities</h3>
               <div className="space-y-2">
@@ -489,7 +446,7 @@ export default function KisanCalculatorPage() {
               </div>
             </div>
 
-            {/* Related articles */}
+            {}
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
               <h3 className="font-bold text-gray-700 text-sm mb-3">📚 Related Guides</h3>
               <div className="space-y-2">
@@ -505,7 +462,7 @@ export default function KisanCalculatorPage() {
               </div>
             </div>
 
-            {/* Official portal link */}
+            {}
             <div className="bg-green-50 border border-green-200 rounded-2xl p-5">
               <p className="text-xs font-bold text-green-800 mb-2">🌐 Official Portal</p>
               <a
@@ -521,7 +478,7 @@ export default function KisanCalculatorPage() {
           </div>
         </div>
 
-        {/* All utilities quick access */}
+        {}
         <div className="mt-10">
           <h2 className="text-xl font-black text-gray-800 mb-4">Saare Utilities</h2>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
@@ -540,7 +497,7 @@ export default function KisanCalculatorPage() {
           </div>
         </div>
 
-        {/* Legal disclaimer */}
+        {}
         <div className="mt-8 p-4 bg-gray-100 rounded-2xl text-xs text-gray-500">
           <strong>⚠️ Disclaimer:</strong> Yeh utilities sirf estimate ke liye hain. Actual amounts government rules, bank policies aur local conditions ke hisaab se alag ho sakte hain. Financial decisions lene se pehle apne bank, CSC center ya agriculture officer se confirm karein.
         </div>

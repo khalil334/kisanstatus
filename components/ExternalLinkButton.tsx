@@ -22,7 +22,6 @@ export default function ExternalLinkButton({ url, label, className = '' }: Exter
     if (countdown === null) return;
 
     if (countdown === 0) {
-      // Secure redirect: _blank aur noopener/noreferrer ke saath
       window.open(url, '_blank', 'noopener,noreferrer');
       setIsRedirecting(false);
       setCountdown(null);
