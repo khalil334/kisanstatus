@@ -196,7 +196,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'bihar-pashupalan-loan-yojana',
     title: 'Bihar Pashupalan Loan Yojana 2026',
-    desc: 'Samagra Gavya Vikas Yojana — SC/ST ko 75%, General ko 50% subsidy, ₹2-10 lakh tak. Apply process jald aa raha hai.',
+    desc: 'Samagra Gavya Vikas Yojana — SC/ST ko 75%, General ko 50% subsidy tak. Eligibility, documents, dairy.bihar.gov.in par apply ka poora process aur 7 common galtiyan.',
     ogTitle: 'Bihar Pashupalan Loan Yojana 2026 — 50-75% Subsidy',
     keywords: [
       'bihar pashupalan loan yojana 2026',
@@ -207,7 +207,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     category: 'pashupalan',
     publishedTime: '2026-08-05T08:00:00+05:30',
     modifiedTime: '2026-08-05T08:00:00+05:30',
-    readingTime: 6,
+    readingTime: 11,
     author: 'KisanStatus Editorial Team',
     authorBio: 'Agricultural content experts with 5+ years experience in government scheme research',
     states: ['bihar'],
