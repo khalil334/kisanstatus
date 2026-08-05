@@ -198,6 +198,17 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
           Matlab: portal ki speed aapki taiyari par depend karti hai.
         </p>
 
+        <SH>📊 Application Track Kaise Karein — Aur Kab Awaaz Uthayein</SH>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Submit karne ke baad portal par login karke <strong>“My Applications”</strong> section mein har
+          application ka live status dikhta hai — pending, under review, sanctioned, ya query raised. Query
+          aayi ho toh usi waqt jawab do; file wahin ruki rehti hai jab tak aap document ya jaankari nahi dete.
+          Status hafte bhar se ek hi jagah atka ho toh chuppi mat saadho — pehle portal ki helpline/grievance
+          section mein complaint daalo, aur saath mein us bank ki branch mein jaakar application number ke
+          saath baat karo jise application gayi hai. Application number, screenshot aur date — yeh teen
+          cheezein har baat-cheet mein saath rakho; follow-up wahi kisan jeet-ta hai jiske paas record hota hai.
+        </p>
+
         <SH>⚠️ In Galtiyon Se Bacho</SH>
         <StepList>
           <SI n={1}><strong>Agent ke bharose sab chhod dena</strong> — OTP aur login aapka hai, kisi ko mat do. Fraud ka sabse bada raasta yahi hai.</SI>
