@@ -55,7 +55,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'jansamarth-portal-loan-apply',
     title: 'JanSamarth Portal 2026: Loan Apply',
-    desc: 'Ek portal par sabhi sarkari loan — KCC, Mudra, education, agri-infra. JanSamarth se apply karne ki step-by-step guide jald aa rahi hai.',
+    desc: 'Ek portal par sabhi sarkari loan — KCC, Mudra, education, agri-infra. Eligibility check se application track tak, jansamarth.in ka poora step-by-step process.',
     ogTitle: 'JanSamarth Portal Loan Apply 2026 Guide',
     keywords: [
       'jansamarth portal loan apply 2026',
@@ -66,7 +66,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     category: 'loan',
     publishedTime: '2026-08-05T08:00:00+05:30',
     modifiedTime: '2026-08-05T08:00:00+05:30',
-    readingTime: 6,
+    readingTime: 10,
     author: 'KisanStatus Editorial Team',
     authorBio: 'Agricultural content experts with 5+ years experience in government scheme research',
     schemes: ['kcc', 'mudra'],
