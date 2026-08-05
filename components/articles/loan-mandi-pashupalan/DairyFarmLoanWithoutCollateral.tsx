@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 
@@ -134,6 +135,18 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
       </div>
 
       <div className="container-site max-w-3xl py-8">
+        <div className="my-2 mb-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/articles/loan-mandi-pashupalan/dairy-farm-loan-without-collateral/dairy-farm-subah-ka-kaam.webp"
+            alt="Subah ke waqt dairy farm par chara dalta kisan — bina zameen girvi rakhe bhi yeh shuruaat mumkin hai"
+            width={1200}
+            height={670}
+            className="w-full h-auto object-cover"
+            sizes="(max-width: 768px) 100vw, 768px"
+            priority
+          />
+        </div>
+
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           Dairy farm khol ne ka mann bahut logon ka hota hai. Ruk wahan jaate hain jab branch manager kehta hai —
           &ldquo;zameen ke kagaz laao, security lagegi.&rdquo; Jiske naam par zameen nahi hai, ya jiske hisse ka batwara
@@ -145,6 +158,15 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
           maangne ki zaroorat nahi padti — kyunki risk cover karne ke liye sarkari guarantee already maujood hai. Is guide
           mein wahi teen raaste, unki asli limit, kharcha, aur woh chhoti-chhoti wajahein jinse file atak jati hai.
         </p>
+
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/dairy-farm-loan-without-collateral/bank-manager-se-baat.webp"
+          alt="Branch mein bank manager se loan ki baat karta kisan"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
 
         <SH>🎯 Sabse Pehle: Collateral aur Guarantee Ka Fark</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
@@ -188,6 +210,15 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
             </tbody>
           </table>
         </div>
+
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/dairy-farm-loan-without-collateral/mudra-portal-mobile-par.webp"
+          alt="Mobile par loan portal dekhta hua aavedak — Mudra apply karne ka raasta online bhi hai"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
 
         <SH>1️⃣ Mudra Loan — Sabse Seedha Raasta</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
@@ -299,6 +330,15 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
           number nahi tha.
         </WB>
 
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/dairy-farm-loan-without-collateral/paanch-pashu-ka-shed.webp"
+          alt="Paanch pashu ki dairy unit ka shed andar se — project cost isi par banti hai"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
+
         <SH>💰 Project Cost Ka Asli Hisaab — 5 Pashu Ka Unit</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Neeche ek illustrative structure hai — asli rate aapke ilaake, breed aur construction cost se badlega. Iska
@@ -343,6 +383,15 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
           aur pehle mahine chara kharidne ke paise nahi bache. Bank se udhaar lena mushkil, aur doodh abhi shuru nahi
           hua. Kam se kam 3 mahine ka chara kharch DPR mein zaroor jodwao.
         </DB>
+
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/dairy-farm-loan-without-collateral/chara-kharcha-ka-hisaab.webp"
+          alt="Chara aur kharche ka hisaab likhtaa kisan — EMI se pehle yeh ganit zaroori hai"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
 
         <SH>🧮 EMI Ka Andaza</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
@@ -392,6 +441,15 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
           jata hai — ₹10 lakh 7 saal mein lene par byaj hi ₹4 lakh se upar chala jata hai. Do, EMI tab hi sahi hai jab
           mahine ka doodh income usse kam se kam do guna ho, warna dry period mein hi kist bigadne lagti hai.
         </p>
+
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/dairy-farm-loan-without-collateral/documents-ki-taiyari.webp"
+          alt="Branch jaane se pehle documents ki taiyari — ID, passbook, photo aur quotation"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
 
         <SH>📄 Documents — Branch Jaane Se Pehle</SH>
         <StepList>
