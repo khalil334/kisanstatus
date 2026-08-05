@@ -368,15 +368,19 @@ function CropProfitCalc() {
 // ─────────────────────────────────────────────────────────────────────────────
 // Related articles links — varied SEO labels
 // ─────────────────────────────────────────────────────────────────────────────
+// FIX(SEO): every kebab-case href below was a 404 — the real article slugs are
+// PascalCase in lib/articles-data.ts. Two links ('Tranche History', 'Scheme
+// Enrollment') had no matching article at all and now point at the master guide;
+// swap them once dedicated articles exist.
 const RELATED_ARTICLES = [
-  { href: '/articles/pm-kisan-21vi-installment-status-check', label: '📅 21vi Tranche Verification' },
-  { href: '/articles/pm-kisan-installment-history-check-online', label: '📊 Tranche History' },
-  { href: '/articles/kisan-rin-kaha-se-le-2026', label: '💰 Credit Facility Guide' },
-  { href: '/articles/pmfby-crop-insurance-2026', label: '🌱 Crop Protection Guide' },
-  { href: '/articles/kisan-tractor-loan-2026', label: '🚜 Farm Equipment Loan' },
-  { href: '/articles/pm-kisan-registration-online-2026', label: '📝 Scheme Enrollment' },
+  { href: '/articles/PmKisan24viKist2026', label: '📅 24vi Tranche Verification' },
+  { href: '/articles/PmKisanMasterGuide2026', label: '📊 Tranche History' },
+  { href: '/articles/KisanRinKahaSeLe2026', label: '💰 Credit Facility Guide' },
+  { href: '/articles/PmfbyCropInsurance2026', label: '🌱 Crop Protection Guide' },
+  { href: '/articles/KisanTractorLoan2026', label: '🚜 Farm Equipment Loan' },
+  { href: '/articles/PmKisanMasterGuide2026', label: '📝 Scheme Enrollment' },
   { href: '/articles/PmKisanEkycOnline2026', label: '🔐 Digital Verification Guide' },
-  { href: '/articles/pm-kisan-payment-failed-status-2026', label: '💸 Payment Fix Guide' },
+  { href: '/articles/PmKisanPaymentFailedFix2026', label: '💸 Payment Fix Guide' },
 ];
 
 // ─────────────────────────────────────────────────────────────────────────────
