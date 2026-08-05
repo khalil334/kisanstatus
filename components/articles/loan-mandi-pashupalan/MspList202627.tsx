@@ -112,7 +112,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
             <span>📅 {fmtDate(article.publishedTime)}</span>
-            <span>🔄 Updated: {fmtDate(article.modifiedTime)}</span>
+            <span>🔄 Last Updated: 5 August 2026</span>
             <span>⏱️ 11 min read</span>
           </div>
         </div>
@@ -130,6 +130,17 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
             priority
           />
         </div>
+
+        <DB>
+          <strong>TL;DR — seedha kaam ki baat:</strong>
+          <ul className="list-disc pl-5 mt-2 space-y-1">
+            <li>Gehu <strong>₹2,585</strong>, dhan (common) <strong>₹2,441</strong>, chana <strong>₹5,875</strong>, sarson <strong>₹6,200</strong> per quintal — poori Rabi + Kharif table neeche.</li>
+            <li>Sabse badi badhotri tilhan mein: sunflower <strong>+₹622</strong>, nigerseed +₹515, til +₹500.</li>
+            <li>MSP par bechne ke liye <strong>state portal par registration + token</strong> zaroori — window miss ki toh season gaya.</li>
+            <li>Sabse zyada paisa <strong>nami (moisture)</strong> mein katta hai — bechne se pehle 1-2 din dhoop mein sukhao.</li>
+            <li><strong>Abhi check karo:</strong> apne state ka procurement portal (UP: fcs.up.gov.in, MP: mpeuparjan.nic.in) — registration window.</li>
+          </ul>
+        </DB>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           Fasal katne ke baad sabse pehla sawal yahi hota hai — is baar sarkari rate kya hai? MSP ka number
@@ -468,6 +479,15 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           </div>
         </div>
 
+        <SH>⚠️ Aam Galtiyan — Jo Registration Aur Kharid Mein Files Rukwati Hain</SH>
+        <StepList>
+          <SI n={1}><strong>Naam ka mismatch:</strong> Aadhaar mein "Ram Kumar", khatauni mein "Ramkumar", bank mein "R. Kumar" — aur registration atak gaya. Portal par form bharne se pehle teeno kagaz saamne rakh kar naam ki spelling milao. Hazaron files isi ek wajah se rukti hain.</SI>
+          <SI n={2}><strong>Registration window miss karna:</strong> window sowing ke baad khulti hai aur kharid shuru hone se pehle band ho jati hai. "Katai ke baad dekhenge" wali soch season kha jati hai — abhi apne state portal par dates check karo.</SI>
+          <SI n={3}><strong>Agent ke bharose sab chhod dena:</strong> CSC ya agent se form bharwana theek hai, lekin apna registration number aur token ki tareekh khud likh kar rakho. Agent ka phone band hua toh aapke paas kuch proof hona chahiye.</SI>
+          <SI n={4}><strong>Bank account inactive ya bina-Aadhaar-linked hona:</strong> payment DBT se aati hai — account dormant hua ya NPCI mapping nahi hai toh paisa latak jata hai. Bechne se pehle branch se confirm karo.</SI>
+          <SI n={5}><strong>Geeli fasal le jaana:</strong> moisture limit (gehu ~12%, dhan ~17%) paar hui toh cut ya reject. Kaante par pahunch kar rona free hai, pehle sukhana sasta hai.</SI>
+        </StepList>
+
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Bottom Line</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
@@ -477,7 +497,8 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
             MSP ko floor samjho, target nahi. Bechne se pehle mandi ka rate check karo, procurement portal par
-            registration time se karwa lo, aur nami ka dhyan rakho — sabse zyada paisa wahin katta hai.
+            registration time se karwa lo, aur nami ka dhyan rakho — sabse zyada paisa wahin katta hai.{' '}
+            <strong>Abhi apne state ke procurement portal par jao aur registration status check karo.</strong>
           </p>
         </div>
 
