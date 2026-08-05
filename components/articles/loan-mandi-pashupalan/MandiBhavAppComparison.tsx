@@ -84,7 +84,7 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
       <div className="container-site max-w-3xl py-8">
         <div className="my-2 mb-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src="/images/articles/loan-mandi-pashupalan/mandi-bhav-app-comparison/kisan-mandi-mein-phone-par-bhav.webp"
+            src="/images/articles/loan-mandi-pashupalan/mandi-bhav-app-comparison/phone-bhav.webp"
             alt="Kisan mandi mein khade hokar phone par aaj ka mandi bhav check karta hua"
             width={1200}
             height={669}
@@ -141,7 +141,7 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
         </IB>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/mandi-bhav-app-comparison/mandi-bhav-app-screen-haath-mein.webp"
+          src="/images/articles/loan-mandi-pashupalan/mandi-bhav-app-comparison/app-screen.webp"
           alt="Haath mein phone, mandi bhav app par fasal ke rate ki list"
           width={1200}
           height={669}
@@ -199,7 +199,7 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
         </p>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/mandi-bhav-app-comparison/csc-center-agmarknet-portal.webp"
+          src="/images/articles/loan-mandi-pashupalan/mandi-bhav-app-comparison/agmarknet.webp"
           alt="CSC center par laptop se AgMarknet jaisa sarkari portal khula hua"
           width={1200}
           height={669}
@@ -231,7 +231,7 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
         </WB>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/mandi-bhav-app-comparison/mandi-mein-aavak-tractor-trolley.webp"
+          src="/images/articles/loan-mandi-pashupalan/mandi-bhav-app-comparison/mandi-aavak.webp"
           alt="Mandi gate par anaj se bhari tractor trolley ki line — aavak ka nazara"
           width={1200}
           height={669}
@@ -251,7 +251,7 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
         </StepList>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/mandi-bhav-app-comparison/aadhati-se-rate-confirm.webp"
+          src="/images/articles/loan-mandi-pashupalan/mandi-bhav-app-comparison/rate-confirm.webp"
           alt="Kisan mandi mein aadhati se aaj ke rate ki baat karta hua"
           width={1200}
           height={669}
@@ -302,7 +302,7 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
         </p>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/mandi-bhav-app-comparison/roz-ka-bhav-copy-mein.webp"
+          src="/images/articles/loan-mandi-pashupalan/mandi-bhav-app-comparison/bhav-copy.webp"
           alt="Kisan roz ka mandi bhav copy mein likhta hua — trend pakadne ki aadat"
           width={1200}
           height={669}

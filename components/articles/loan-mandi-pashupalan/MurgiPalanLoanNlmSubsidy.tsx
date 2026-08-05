@@ -84,7 +84,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
       <div className="container-site max-w-3xl py-8">
         <div className="my-2 mb-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src="/images/articles/loan-mandi-pashupalan/murgi-palan-loan-nlm-subsidy/murgi-farm-mein-subah-ka-round.webp"
+            src="/images/articles/loan-mandi-pashupalan/murgi-palan-loan-nlm-subsidy/murgi-farm.webp"
             alt="Broiler shed mein subah ka round lagata hua murgi palak — NLM subsidy isi business ke liye hai"
             width={1200}
             height={670}
@@ -178,7 +178,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
         </StepList>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/murgi-palan-loan-nlm-subsidy/layer-vs-broiler-farm.webp"
+          src="/images/articles/loan-mandi-pashupalan/murgi-palan-loan-nlm-subsidy/layer-broiler.webp"
           alt="Layer farm mein ande ki tray — layer ya broiler, pehla bada business faisla"
           width={1200}
           height={670}
@@ -233,7 +233,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
         </p>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/murgi-palan-loan-nlm-subsidy/udyamimitra-portal-laptop-par.webp"
+          src="/images/articles/loan-mandi-pashupalan/murgi-palan-loan-nlm-subsidy/udyamimitra.webp"
           alt="Laptop par udyamimitra portal se NLM-EDP application bharta hua aavedak"
           width={1200}
           height={670}
@@ -265,7 +265,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
         </WB>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/murgi-palan-loan-nlm-subsidy/feed-ki-boriyan-aur-kharcha.webp"
+          src="/images/articles/loan-mandi-pashupalan/murgi-palan-loan-nlm-subsidy/feed-kharcha.webp"
           alt="Feed ki boriyon se daana nikalta hua worker — poultry mein 60-70% kharcha feed ka hota hai"
           width={1200}
           height={670}
@@ -289,7 +289,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
         </p>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/murgi-palan-loan-nlm-subsidy/chooza-vaccination-ka-kaam.webp"
+          src="/images/articles/loan-mandi-pashupalan/murgi-palan-loan-nlm-subsidy/vaccination.webp"
           alt="Chooze ko vaccination dete hue haath — mortality control ka sabse zaroori kaam"
           width={1200}
           height={670}
@@ -308,7 +308,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
         </p>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/murgi-palan-loan-nlm-subsidy/naya-shed-nirman-kaam.webp"
+          src="/images/articles/loan-mandi-pashupalan/murgi-palan-loan-nlm-subsidy/shed-nirman.webp"
           alt="Naye poultry shed ka nirman — setup mein paisa sahi jagah lagana zaroori hai"
           width={1200}
           height={670}

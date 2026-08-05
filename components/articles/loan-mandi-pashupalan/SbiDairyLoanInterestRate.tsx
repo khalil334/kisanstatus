@@ -88,7 +88,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
       <div className="container-site max-w-3xl py-8">
         <div className="my-2 mb-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src="/images/articles/loan-mandi-pashupalan/sbi-dairy-loan-interest-rate/dairy-shed-mein-subah-ka-doodh.webp"
+            src="/images/articles/loan-mandi-pashupalan/sbi-dairy-loan-interest-rate/subah-doodh.webp"
             alt="Subah ke waqt dairy shed mein bhains ka doodh nikalta hua kisan — dairy loan isi kaam ko badhane ke liye hai"
             width={1200}
             height={670}
@@ -144,7 +144,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
         </IB>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/sbi-dairy-loan-interest-rate/branch-mein-rate-ki-baat.webp"
+          src="/images/articles/loan-mandi-pashupalan/sbi-dairy-loan-interest-rate/rate-baat.webp"
           alt="Bank branch mein officer ke saath rate aur spread ki baat karta hua kisan"
           width={1200}
           height={670}
@@ -199,7 +199,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
         </p>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/sbi-dairy-loan-interest-rate/chara-aur-pashu-ka-kharcha.webp"
+          src="/images/articles/loan-mandi-pashupalan/sbi-dairy-loan-interest-rate/chara-kharcha.webp"
           alt="Bhainson ko chara daalta hua kisan — roz ka kharcha KCC se, capital cost term loan se"
           width={1200}
           height={670}
@@ -247,7 +247,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
         </WB>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/sbi-dairy-loan-interest-rate/emi-ka-hisaab-copy-mein.webp"
+          src="/images/articles/loan-mandi-pashupalan/sbi-dairy-loan-interest-rate/emi-hisaab.webp"
           alt="Copy mein EMI ka hisaab lagata hua kisan — rate ka fark EMI mein kitna bada hota hai"
           width={1200}
           height={670}
@@ -317,7 +317,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
         </p>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/sbi-dairy-loan-interest-rate/documents-ki-taiyari-ghar-par.webp"
+          src="/images/articles/loan-mandi-pashupalan/sbi-dairy-loan-interest-rate/documents.webp"
           alt="Ghar par documents ki file taiyar karta hua parivar — branch jaane se pehle ki taiyari"
           width={1200}
           height={670}
@@ -356,7 +356,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
         </StepList>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/sbi-dairy-loan-interest-rate/bank-ke-bahar-pashu-loan.webp"
+          src="/images/articles/loan-mandi-pashupalan/sbi-dairy-loan-interest-rate/pashu-loan.webp"
           alt="Documents ki file le kar bank branch pahuncha kisan — apply ka pehla kadam"
           width={1200}
           height={670}
