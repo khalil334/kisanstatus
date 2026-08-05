@@ -189,6 +189,18 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         koi maalik mana kare, toh VAA ke through baat karwane se aksar raasta nikal aata hai.
       </p>
 
+      <h3>CCRC Card Online Check — &ldquo;ccrc.ap.gov.in login&rdquo; Dhoondhne Walon Ke Liye</h3>
+
+      <p>
+        Bahut kisan Google par <strong>ccrc ap gov in</strong> ya <strong>ccrc cards ap gov in login</strong>{' '}
+        search karte hain. Saaf baat: CCRC card ka koi alag public login portal kisano ke liye nahi
+        chalta — card ka record AP government ke internal system mein VAA (Village Agriculture
+        Assistant) ke paas hota hai. Apne CCRC card ka status ya renewal check karna ho toh sabse
+        bharosemand raasta hai apne <strong>Gram Sachivalayam</strong> jaakar VAA se poochhna, ya
+        Rythu Seva Kendra par apna Aadhaar number dekar record nikalwana. Kisi bhi third-party
+        website par login details daalne se bachein.
+      </p>
+
       <Fig
         src="tenant-farmer-ccrc.webp"
         alt="Andhra Pradesh mein bataidar kisan dusre ki zameen par dhaan ki ropai kar raha hai — CCRC card holders bhi eligible hain"
