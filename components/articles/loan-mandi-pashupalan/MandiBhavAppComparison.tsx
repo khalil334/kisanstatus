@@ -46,6 +46,14 @@ const FAQS_DATA = [
     q: 'Ek hi app kaafi hai ya do-teen rakhne chahiye?',
     a: 'Do kaafi hain — ek sarkari (eNAM ya AgMarknet data ke liye) aur ek jo aapke ilaake ki mandiyon ko achha cover karta ho. Zyada apps rakhne se data nahi badhta, sirf notification ka shor badhta hai.',
   },
+  {
+    q: 'Aavak (arrival) ka rate se kya rishta hai?',
+    a: 'Seedha ulta rishta — jis din mandi mein aavak zyada, us din rate par dabav. AgMarknet aur eNAM dono aavak ka data bhi dikhate hain. Agar aapke ilaake ki mandiyon mein aavak lagatar badh rahi hai toh agle kuch din rate girne ka chance zyada hai — aisi halat mein jo bech sakte ho, jaldi bechna behtar hota hai.',
+  },
+  {
+    q: 'Price alert kaise set karein taaki sahi time par pata chale?',
+    a: 'Kuch private apps mein fasal + mandi select karke rate alert ka option hota hai — rate aapke set kiye number ke paas pahunchte hi notification aata hai. Jin apps mein yeh nahi hai, wahan roz ek fixed time (jaise shaam ko boli ke baad) app kholne ki aadat bana lo. Alert ka asli fayda tab hai jab aapne pehle se apna target rate likh rakha ho.',
+  },
 ];
 
 export default function MandiBhavAppComparison({ article }: { article: ArticleMeta }) {
@@ -166,12 +174,33 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
           lo, rate sirf bharosemand source se.
         </WB>
 
+        <SH>📈 App Ka Number Padhna Seekho — 3 Cheezein Jo Kaam Ki Hain</SH>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          App install karna aasan hai — asli hunar us data ko padhna hai. Teen aadatein bana lo:
+        </p>
+        <StepList>
+          <SI n={1}><strong>Modal price dekho, max nahi:</strong> max price sirf sabse achhi lot ka hota hai — usse umeed bandhna nirasha deta hai. Aapki asli benchmark modal price hai; quality achhi hai toh modal se thoda upar, kamzor hai toh thoda neeche maan kar chalo.</SI>
+          <SI n={2}><strong>Trend dekho, ek din ka number nahi:</strong> 7-10 din ka rate ek saath dekho. Lagatar chadhta rate aur girti aavak — ruk sakte ho. Girta rate aur badhti aavak — der mat karo. Ek din ka uchhaal aksar kisi ek badi kharid ka natija hota hai, trend nahi.</SI>
+          <SI n={3}><strong>2-3 mandiyon ka fark dekho:</strong> apni mandi ke saath 50-100 km ke daayre ki 2 badi mandiyan bhi track karo. Fark agar transport ke kharche se zyada hai toh doosri mandi le jaana ya eNAM ke through wahan ke buyers tak pahunchna faydemand hai.</SI>
+        </StepList>
+
         <SH>📵 Bina App Ke — Yeh Raaste Bhi Kaam Karte Hain</SH>
         <StepList>
           <SI n={1}><strong>Kisan Call Centre — 1800-180-1551:</strong> free call, apni bhasha mein fasal aur mandi ka bhav pucho.</SI>
           <SI n={2}><strong>Aadhati ka phone number:</strong> sabse fresh rate aaj bhi mandi ke andar se hi milta hai. Do-teen aadhatiyon se baat karo taaki ek ki batayi price par nirbhar na raho.</SI>
           <SI n={3}><strong>SMS advisory (mKisan):</strong> registered kisano ko fasal aur ilaake ke hisaab se SMS aate hain — data kharch zero.</SI>
         </StepList>
+
+        <SH>🗺️ Ilaake Ke Hisaab Se Bhi Sochो — Har App Har Belt Mein Barabar Nahi</SH>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Ek baat jo comparison articles aksar chhod dete hain — apps ki coverage <strong>region-wise bahut
+          alag</strong> hoti hai. Jo app UP-Bihar ke anaaj belt mein har mandi dikhata hai, wahi Maharashtra ki
+          onion mandiyon mein adhoora ho sakta hai. Kuch apps ka focus specific fasal par hai (sabzi-phal ke
+          trading platforms), kuch ka specific states par. Isliye kisi bhi list ya review ko aankh band karke
+          mat maano — install karo, apni fasal + apni 2-3 mandiyan dhundho, hafte bhar parakho, phir faisla
+          karo. Jo app aapke ilaake mein khara utre, wahi aapke liye “best app” hai — chahe reviews mein koi
+          aur number one ho.
+        </p>
 
         <SH>🎯 Toh Karna Kya Hai — Seedha Jawab</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
