@@ -32,7 +32,6 @@ export const metadata: Metadata = {
   },
 };
 
-/* ─── SVG Icons (Optimized & Lightweight) ─── */
 function IconSearch({ className = 'w-6 h-6' }: { className?: string }) {
   return <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" /></svg>;
 }
@@ -67,7 +66,6 @@ function IconFire({ className = 'w-3 h-3' }: { className?: string }) {
   return <svg className={className} fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clipRule="evenodd" /></svg>;
 }
 
-/* ─── Static Data (Module Scope for Zero Re-computation) ─── */
 const CALCS = [
   { href: '/calculator/quick-status-check', index: '00', icon: IconSearch, title: 'PM Kisan Status Check', hindi: 'पीएम किसान स्टेटस चेक', desc: 'Aadhaar ya mobile number daalein aur seedha official portal par apna latest kist status verify karein. Bilkul free aur instant.', tags: ['Aadhaar Check', 'Mobile Check', 'Instant Redirect'], group: 'scheme', featured: true, badge: 'New Tool' },
   { href: '/calculator/installment-tracker', index: '01', icon: IconCalendar, title: 'Kist Status Tracker', hindi: 'किस्त स्टेटस ट्रैकर', desc: 'Kist aayi ya nahi? eKYC, bank aur land seeding check karke 4 aasaan sawaalon mein exact reason jaanein.', tags: ['Latest Kist', 'eKYC Check', 'Instant Result'], group: 'scheme', featured: false },
@@ -85,7 +83,6 @@ const GROUP_STYLES: Record<string, { bar: string; chip: string; btn: string; glo
   data:      { bar: 'bg-slate-600',   chip: 'text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800',     btn: 'bg-slate-700 hover:bg-slate-800',     glow: 'hover:shadow-slate-100 dark:hover:shadow-slate-900/20',     icon: 'text-slate-600 dark:text-slate-400' },
 };
 
-/* ─── Pre-computed Schemas (Zero Runtime Overhead) ─── */
 const itemListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',

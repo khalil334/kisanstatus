@@ -68,7 +68,6 @@ const FAQS_DATA = [
   },
 ];
 
-// ✅ Fixed Emojis for all States & UTs
 const STATES_LIST = [
   ['🌾', 'Uttar Pradesh', 'uttar-pradesh'],
   ['🏛️', 'Bihar', 'bihar'],
@@ -250,7 +249,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
     setModal({
       title: 'Please Wait',
       message: `${stateName} ki beneficiary list PDF download karne ke liye official portal par redirect ho raha hai...`,
-      url: 'https://pmkisan.gov.in/BeneficiaryList.aspx', // ✅ Real official website URL
+      url: 'https://pmkisan.gov.in/BeneficiaryList.aspx',
       showButton: true,
     });
   };

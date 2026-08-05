@@ -2,24 +2,6 @@
 
 import { useMemo, useState } from 'react';
 
-/**
- * CM Kisan (Odisha) eligibility + document checker.
- *
- * Rules encoded here follow the scheme structure published by Odisha's
- * Department of Agriculture & Farmers' Empowerment for CM Kisan (the scheme
- * that replaced KALIA):
- *   - Small / marginal cultivators (up to 5 acres): ₹4,000 a year in two
- *     equal ₹2,000 tranches, tied to Kharif and Rabi.
- *   - Landless agricultural households: ₹12,500 a year for allied livelihood
- *     activity, released in three tranches.
- *   - Holdings above 5 acres, income-tax payers, government servants and
- *     registered professionals sit in the exclusion list.
- *   - Aadhaar e-KYC + NPCI-mapped bank account are hard prerequisites for DBT.
- *
- * Everything runs client-side. This is a reading aid, not an application form —
- * the portal record decides the real outcome.
- */
-
 type Household = 'cultivator' | 'landless';
 
 const DOCS_COMMON = [

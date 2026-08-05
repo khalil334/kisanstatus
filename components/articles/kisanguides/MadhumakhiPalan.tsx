@@ -324,7 +324,7 @@ export default function MadhumakhiPalan() {
         <Link href="/articles/PmfbyCropInsurance2026" className="text-amber-700 hover:underline dark:text-amber-400 text-sm font-medium">PM Fasal Bima Yojana (PMFBY) →</Link>
       </div>
 
-      {/* Sources & References */}
+      {}
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Sources & References
       </h2>

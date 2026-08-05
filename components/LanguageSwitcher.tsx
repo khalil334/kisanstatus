@@ -100,7 +100,6 @@ export default function LanguageSwitcher() {
         value: newLang,
       });
     } catch (error) {
-      // Silent fail in production
     }
   };
 

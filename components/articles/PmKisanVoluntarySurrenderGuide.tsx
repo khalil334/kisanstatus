@@ -68,7 +68,7 @@ export default function PmKisanVoluntarySurrenderGuide({ article }: { article: A
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* Hero Image */}
+        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-voluntary-surrender/surrender-hero.webp"
@@ -84,7 +84,7 @@ export default function PmKisanVoluntarySurrenderGuide({ article }: { article: A
           </p>
         </div>
 
-        {/* Introduction */}
+        {}
         <section className="mb-8">
           <SH>Galti Ho Gayi? Koi Baat Nahi</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -115,7 +115,7 @@ export default function PmKisanVoluntarySurrenderGuide({ article }: { article: A
           </p>
         </section>
 
-        {/* SECTION 1: Who Should Surrender */}
+        {}
         <section className="mb-8">
           <SH>Kaun Logon Ko Surrender Karna Chahiye?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -142,7 +142,7 @@ export default function PmKisanVoluntarySurrenderGuide({ article }: { article: A
           </IB>
         </section>
 
-        {/* SECTION 2: Online Process */}
+        {}
         <section className="mb-8">
           <SH>Online Surrender Kaise Karein?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -196,7 +196,7 @@ export default function PmKisanVoluntarySurrenderGuide({ article }: { article: A
           </WB>
         </section>
 
-        {/* SECTION 3: Offline Process */}
+        {}
         <section className="mb-8">
           <SH>Offline Process (Patwari/BAO)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -228,7 +228,7 @@ export default function PmKisanVoluntarySurrenderGuide({ article }: { article: A
           </p>
         </section>
 
-        {/* SECTION 4: CSC Option */}
+        {}
         <section className="mb-8">
           <SH>CSC Center Se Bhi Karwa Sakte Ho</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -249,7 +249,7 @@ export default function PmKisanVoluntarySurrenderGuide({ article }: { article: A
           </div>
         </section>
 
-        {/* SECTION 5: Documents Required */}
+        {}
         <section className="mb-8">
           <SH>Documents Ki List</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -272,7 +272,7 @@ export default function PmKisanVoluntarySurrenderGuide({ article }: { article: A
           </div>
         </section>
 
-        {/* SECTION 6: Timeline */}
+        {}
         <section className="mb-8">
           <SH>Surrender Ke Baad Kya Hota Hai?</SH>
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
@@ -303,7 +303,7 @@ export default function PmKisanVoluntarySurrenderGuide({ article }: { article: A
           </div>
         </section>
 
-        {/* SECTION 7: Important Points */}
+        {}
         <section className="mb-8">
           <SH>Zaroori Baatein Jo Yaad Rakhein</SH>
           <div className="space-y-3">
@@ -330,7 +330,7 @@ export default function PmKisanVoluntarySurrenderGuide({ article }: { article: A
           </div>
         </section>
 
-        {/* SECTION 8: What If Not Surrendered */}
+        {}
         <section className="mb-8">
           <SH>Agar Surrender Nahi Kiya Toh?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -354,7 +354,7 @@ export default function PmKisanVoluntarySurrenderGuide({ article }: { article: A
           </p>
         </section>
 
-        {/* FAQ */}
+        {}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Aksar Puche Jane Wale Sawal

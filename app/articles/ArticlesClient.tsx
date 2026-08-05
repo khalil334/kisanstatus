@@ -21,17 +21,10 @@ type CombinedArticleMeta = {
   published?: string;
   publishedTime?: string;
   keywords?: readonly string[];
-  /**
-   * Explicit URL for clusters that do NOT live under /articles/<slug>
-   * (e.g. the rajya-yojana cluster at /rajya-yojana/<slug>). When absent the
-   * legacy /articles vs /maandhan inference below is used.
-   */
   href?: string;
-  /** Badge label for categories that are not in CATEGORIES (no category page). */
   categoryLabel?: string;
 };
 
-/* ─── SVG Icons (Replace Emojis) ─── */
 function IconBookOpen({ className = 'w-5 h-5' }: { className?: string }) {
   return (
     <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -113,7 +106,6 @@ function IconNoResults({ className = 'w-16 h-16' }: { className?: string }) {
   );
 }
 
-/* ─── Category Icons Map ─── */
 const CATEGORY_ICONS: Record<string, React.FC<{ className?: string }>> = {
   'status-check': IconClipboard,
   'loan': ({ className }) => (
@@ -144,7 +136,6 @@ const CATEGORY_ICONS: Record<string, React.FC<{ className?: string }>> = {
   ),
 };
 
-/* ─── Article Image Component ─── */
 function ArticleImage({ image, emoji, title, priority = false }: { image: string; emoji: string; title: string; priority?: boolean }) {
   const [error, setError] = useState(false);
   const [loaded, setLoaded] = useState(false);
@@ -178,7 +169,6 @@ function ArticleImage({ image, emoji, title, priority = false }: { image: string
   );
 }
 
-/* ─── Article Card ─── */
 function ArticleCard({ article, showNewBadge = false, priority = false }: { article: CombinedArticleMeta; showNewBadge?: boolean; priority?: boolean }) {
   const categoryInfo = CATEGORIES[article.category as keyof typeof CATEGORIES] as { name: string; nameHi: string; icon: string } | undefined;
   const emoji = categoryInfo?.icon || '📄';
@@ -229,7 +219,6 @@ function ArticleCard({ article, showNewBadge = false, priority = false }: { arti
   );
 }
 
-/* ─── Articles Content ─── */
 function ArticlesContent({ articles }: { articles: readonly CombinedArticleMeta[] }) {
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -255,10 +244,6 @@ function ArticlesContent({ articles }: { articles: readonly CombinedArticleMeta[
       new Date(b.publishedTime || b.published || 0).getTime() - new Date(a.publishedTime || a.published || 0).getTime()
     );
 
-    // The "Naye aur Latest Updates" section only renders on the unfiltered view
-    // (category === 'all' and no search). Only carve the top-N out of `remaining`
-    // in that case — otherwise the newest articles silently disappear from
-    // category/search views.
     const showLatestSection = activeCategory === 'all' && !searchQuery.trim();
     const latest = showLatestSection ? sorted.slice(0, NEW_ARTICLES_LIMIT) : [];
     const latestSlugs = new Set(latest.map(a => a.slug));
@@ -355,8 +340,7 @@ function ArticlesContent({ articles }: { articles: readonly CombinedArticleMeta[
               </Link>
             );
           })}
-          {/* rajya-yojana has no entry in CATEGORIES (no /articles/category page),
-              so its chip is rendered explicitly. */}
+          {}
           {(categoryCounts['rajya-yojana'] || 0) > 0 && (
             <Link
               href="/articles?category=rajya-yojana"
@@ -443,7 +427,6 @@ function ArticlesContent({ articles }: { articles: readonly CombinedArticleMeta[
   );
 }
 
-/* ─── Loading Skeleton ─── */
 function ArticlesLoading() {
   return (
     <div className="container-site py-12">
@@ -464,10 +447,7 @@ function ArticlesLoading() {
   );
 }
 
-/* ─── Main Component ─── */
 export default function ArticlesClient({ articles, showHero = true }: { articles: readonly CombinedArticleMeta[]; showHero?: boolean }) {
-  // ItemList structured data — tells Google this page is a collection of articles,
-  // improves eligibility for rich results (sitelinks, carousel) in search.
   const itemListSchema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',

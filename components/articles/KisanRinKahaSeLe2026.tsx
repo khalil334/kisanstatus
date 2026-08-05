@@ -14,7 +14,6 @@ function fmtDate(dateString: string): string {
   });
 }
 
-
 const RELATED = [
   { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply Guide', emoji: '💳' },
   { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide', emoji: '📚' },
@@ -60,7 +59,7 @@ const FAQS_DATA = [
 export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta }) {
   return (
     <>
-      {/* Header */}
+      {}
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
           <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
@@ -85,7 +84,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* IMAGE: Hero — Only image (PATH UNCHANGED) */}
+        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/kisan-rin-kaha-se-le-2026.webp'}
@@ -102,7 +101,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
           </p>
         </div>
 
-        {/* Field Hook */}
+        {}
         <div className="my-6 p-5 bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-400 dark:border-amber-700 border-l-[6px] rounded-xl">
           <h2 className="text-base font-black text-amber-800 dark:text-amber-300 mb-2">Gaon Mein Jo Dekha Hai</h2>
           <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed mb-2">
@@ -116,7 +115,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
           </p>
         </div>
 
-        {/* Section 1: What Is Agricultural Credit */}
+        {}
         <section className="mb-8">
           <SH>Kisan Rin Kya Hota Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -131,7 +130,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
           </p>
         </section>
 
-        {/* Section 2: Four Sources Compared */}
+        {}
         <section className="mb-8">
           <SH>4 Jagah Se Rin Mil Sakta Hai — Comparison</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -166,7 +165,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
           </div>
         </section>
 
-        {/* Section 3: KCC Deep Dive */}
+        {}
         <section className="mb-8">
           <SH>Kisan Credit Card — Sabse Pehla Option</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -209,7 +208,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
           </WB>
         </section>
 
-        {/* Section 4: Term Loans */}
+        {}
         <section className="mb-8">
           <SH>Bade Kaam Ke Liye — Term Loan</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -243,7 +242,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
           </IB>
         </section>
 
-        {/* Section 5: CSC & Cooperative */}
+        {}
         <section className="mb-8">
           <SH>CSC Aur Cooperative — Jab Bank Door Ho</SH>
 
@@ -264,7 +263,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
           </p>
         </section>
 
-        {/* Section 6: Interest Comparison */}
+        {}
         <section className="mb-8">
           <SH>Sahukar Vs Sarkari Scheme — Asli Farak</SH>
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
@@ -300,7 +299,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
           </p>
         </section>
 
-        {/* Section 7: Documents */}
+        {}
         <section className="mb-8">
           <SH>Documents — Sab Ready Rakho</SH>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
@@ -330,7 +329,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
           </p>
         </section>
 
-        {/* Section 8: Approval Tips */}
+        {}
         <section className="mb-8">
           <SH>Fast Approval Ke 6 Tarike</SH>
           <div className="space-y-3">
@@ -379,7 +378,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
           </div>
         </section>
 
-        {/* FAQ */}
+        {}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Real Sawal — Seedhe Jawaab
@@ -387,7 +386,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
           <FAQBlock faqs={FAQS_DATA} caption="Kisan Loan FAQ 2026 — Ground-Level Verified Answers" />
         </section>
 
-        {/* Conclusion */}
+        {}
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Bottom Line</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">

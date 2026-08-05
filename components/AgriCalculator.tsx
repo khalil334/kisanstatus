@@ -1,15 +1,9 @@
 'use client';
-/**
- * AgriCalculator.tsx — Multi-tab agricultural utilities
- * 6 calculators ek jagah — PM Kisan benefit, MSP earnings, crop profit, loan EMI, fertilizer cost, irrigation cost
- * KisanStatus Team — 2026
- */
 import { useState } from 'react';
 import { InputField, SelectField, ResultRow, fmt } from './calculators/CalcShared';
 
 type Tab = 'pmkisan' | 'msp' | 'profit' | 'emi' | 'fertilizer' | 'irrigation';
 
-// 2025-26 MSP rates — CCEA approved. dfpd.gov.in se verified.
 const MSP: Record<string, { name: string; msp: number; unit: string }> = {
   wheat:       { name: 'Gehun (Wheat)',          msp: 2550,  unit: 'quintal' },
   paddy:       { name: 'Dhan (Paddy)',            msp: 2400,  unit: 'quintal' },
@@ -30,7 +24,6 @@ const MSP: Record<string, { name: string; msp: number; unit: string }> = {
   sugarcane:   { name: 'Ganna (Sugarcane)',       msp: 380,   unit: 'quintal' },
 };
 
-// Tab 1: PM Kisan benefit estimator
 function PmKisanCalc() {
   const [land, setLand] = useState('2');
   const [reg, setReg] = useState('yes');
@@ -75,7 +68,6 @@ function PmKisanCalc() {
   );
 }
 
-// Tab 2: MSP income analyzer
 function MspCalc() {
   const [crop, setCrop] = useState('wheat');
   const [qty, setQty] = useState('20');
@@ -122,7 +114,6 @@ function MspCalc() {
   );
 }
 
-// Tab 3: Yield profit/loss analyzer
 function ProfitCalc() {
   const [area, setArea]     = useState('1');
   const [yield_, setYield]  = useState('25');
@@ -167,7 +158,6 @@ function ProfitCalc() {
   );
 }
 
-// Tab 4: KCC EMI calculator
 function EmiCalc() {
   const [amount, setAmount] = useState('100000');
   const [rate, setRate]     = useState('7');
@@ -181,7 +171,6 @@ function EmiCalc() {
   const totalPay = emi * N;
   const totalInt = totalPay - P;
 
-  // Loan types — varied names for SEO
   const loanTypes: Record<string, string> = {
     kcc: 'Kisan Credit Card (KCC) — 7% (Subsidized)',
     term: 'Agriculture Term Loan — 9-11%',
@@ -215,7 +204,6 @@ function EmiCalc() {
   );
 }
 
-// Tab 5: Fertilizer cost analyzer
 function FertCalc() {
   const [area, setArea]   = useState('1');
   const [crop, setCrop]   = useState('wheat');
@@ -223,7 +211,6 @@ function FertCalc() {
   const [dap, setDap]     = useState('0');
   const [mop, setMop]     = useState('0');
 
-  // NPK recommendations per acre — crop-wise
   const recs: Record<string, { n: number; p: number; k: number }> = {
     wheat:    { n: 120, p: 60, k: 40 },
     paddy:    { n: 120, p: 60, k: 60 },
@@ -237,7 +224,6 @@ function FertCalc() {
   const rec = recs[crop] || recs.wheat;
   const areaNum = Number(area);
 
-  // Nutrient content calculation — Urea 46% N, DAP 18% N + 46% P, MOP 60% K
   const nFromUrea = Number(urea) * 0.46;
   const nFromDap  = Number(dap) * 0.18;
   const pFromDap  = Number(dap) * 0.46;
@@ -247,7 +233,6 @@ function FertCalc() {
   const totalP = pFromDap / areaNum;
   const totalK = kFromMop / areaNum;
 
-  // Current subsidized prices — 2025-26
   const ureaPrice = 266;
   const dapPrice  = 1350;
   const mopPrice  = 1700;
@@ -291,7 +276,6 @@ function FertCalc() {
   );
 }
 
-// Tab 6: Irrigation cost analyzer
 function IrrigationCalc() {
   const [area, setArea]     = useState('1');
   const [method, setMethod] = useState('flood');
@@ -299,13 +283,11 @@ function IrrigationCalc() {
   const [water, setWater]   = useState('600');
   const [rate, setRate]     = useState('8');
 
-  // Crop water requirements — mm per season
   const waterReq: Record<string, number> = {
     wheat: 450, paddy: 1200, maize: 500, cotton: 700,
     sugarcane: 2000, mustard: 300, vegetables: 400,
   };
 
-  // Irrigation method efficiency — higher is better
   const methodEff: Record<string, { eff: number; label: string; save: number }> = {
     flood:  { eff: 0.45, label: 'Flood Irrigation', save: 0 },
     furrow: { eff: 0.55, label: 'Furrow Irrigation', save: 18 },
@@ -354,11 +336,9 @@ function IrrigationCalc() {
   );
 }
 
-// Main component — tab switcher for all 6 calculators
 export default function AgriCalculator() {
   const [tab, setTab] = useState<Tab>('pmkisan');
 
-  // Tab configuration — varied labels for SEO
   const tabs: { id: Tab; label: string; emoji: string; desc: string }[] = [
     { id: 'pmkisan',    label: 'PM Kisan',         emoji: '🌾', desc: 'Labh Calculator' },
     { id: 'msp',        label: 'MSP Rate',         emoji: '💰', desc: 'Fasal Income'    },
@@ -384,7 +364,7 @@ export default function AgriCalculator() {
         </div>
 
         <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-3xl shadow-lg overflow-hidden">
-          {/* Tab navigation — 6 calculators */}
+          {}
           <div className="grid grid-cols-3 md:grid-cols-6 border-b border-[var(--color-border)] bg-[var(--color-bg-alt)]">
             {tabs.map(t => (
               <button key={t.id} onClick={() => setTab(t.id)}
@@ -400,7 +380,7 @@ export default function AgriCalculator() {
             ))}
           </div>
 
-          {/* Active calculator content */}
+          {}
           <div className="p-5 md:p-8">
             <div className="flex items-center gap-2 mb-6">
               <span className="text-2xl">{tabs.find(t => t.id === tab)?.emoji}</span>
@@ -418,7 +398,7 @@ export default function AgriCalculator() {
             {tab === 'irrigation' && <IrrigationCalc />}
           </div>
 
-          {/* Footer note */}
+          {}
           <div className="bg-green-50 dark:bg-green-900/20 border-t border-green-100 dark:border-green-800 px-6 py-3 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-[var(--color-text-muted)]">
             <span>✍️ By KisanStatus Team | KisanStatus.com</span>
             <span>⚠️ Yeh tools sirf estimate dete hain bhai — final figures official sources se verify karein</span>

@@ -6,11 +6,9 @@ import Script from 'next/script';
 import { SI, StepList, IB, WB, DB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 
-// ✅ UPDATED DATES: Modified date set to today (July 22, 2026) for strong E-E-A-T signal
 const PUBLISHED = '2026-07-06T08:00:00+05:30';
 const MODIFIED = '2026-07-22T08:00:00+05:30';
 
-// Visual Card Data for Internal Linking (Deep Linking with Descriptions)
 const RELATED_CARDS = [
   { 
     slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', 
@@ -74,7 +72,7 @@ const FAQS_DATA = [
 export default function PmKisanPaymentFailedFix2026({ article }: { article: ArticleMeta }) {
   return (
     <>
-      {/* AEO/GEO & Technical SEO: JSON-LD Schema Injection */}
+      {}
       <Script id="pmkisan-payment-failed-schema" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify({
           "@context": "https://schema.org",
@@ -120,7 +118,7 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">💸 Payment Troubleshooting</span>
           
-          {/* SEO Optimized H1: Exactly 54 Characters, Front-loaded Keyword */}
+          {}
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
             PM Kisan Payment Failed 2026: 7 Reasons & Quick Fix
           </h1>
@@ -136,14 +134,14 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* AEO Direct Answer Block (Top of Content for AI Overviews) */}
+        {}
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-r-xl">
           <p className="text-sm md:text-base text-blue-900 dark:text-blue-100 leading-relaxed font-medium">
             <strong>Seedha Jawab:</strong> PM Kisan payment failed hone ka sabse bada karan <strong>Aadhaar NPCI seeding</strong> ka na hona, galat IFSC code, ya dormant bank account hai. Paisa gaya nahi hai, bas bank tak pahunchne se pehle atak gaya hai. Apni branch jaakar "DBT Seeding" karwayein ya portal par bank details correct karein. Pending kistein problem fix hone ke baad mil jaayengi.
           </p>
         </div>
 
-        {/* IMAGE 1: Hero (Path UNCHANGED) */}
+        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/articles/pm-kisan-payment-failed-fix-2026/payment-failed-hero.webp'}
@@ -183,7 +181,7 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
           </p>
         </section>
 
-        {/* IMAGE 2: Failure Reasons Infographic (Path UNCHANGED) */}
+        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-payment-failed-fix-2026/failure-reasons-infographic.webp"
@@ -269,7 +267,7 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
           </StepList>
         </section>
 
-        {/* IMAGE 3: Bank Visit Checklist (Path UNCHANGED) */}
+        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-payment-failed-fix-2026/bank-visit-checklist.webp"
@@ -350,7 +348,7 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
           </div>
         </section>
 
-        {/* IMAGE 4: Success After Fix (Path UNCHANGED) */}
+        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-payment-failed-fix-2026/payment-success-after-fix.webp"
@@ -458,7 +456,7 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
           secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: '💰 Benefit Calculator' }}
         />
 
-        {/* VISUAL CARD STYLE INTERNAL LINKING (Replaces plain text links) */}
+        {}
         <section className="my-10">
           <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Aapke Liye Zaroori Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

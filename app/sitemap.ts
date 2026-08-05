@@ -4,13 +4,9 @@ import { MAANDHAN_ARTICLES } from '@/lib/maandhan-data';
 import { LIVE_RAJYA_YOJANA_ARTICLES } from '@/lib/rajya-yojana-data';
 import { SITE_URL } from '@/lib/site-config';
 
-// FIX(SEO): this used to be a hardcoded date, so every lastModified that fell
-// back to it froze in the past and <lastmod> went stale on each deploy.
-// Now it moves with the build.
 const REFERENCE_DATE = new Date();
 
 const ALL_ARTICLES = [
-  // Regular articles are served from /articles/<slug>
   ...ARTICLES.map((a) => ({
     slug: a.slug,
     title: a.title,
@@ -21,7 +17,6 @@ const ALL_ARTICLES = [
     ogImage: a.ogImage,
     path: `/articles/${a.slug}`,
   })),
-  // Maandhan articles are served from /maandhan/<slug>, NOT /articles/<slug>
   ...MAANDHAN_ARTICLES.map((a) => ({
     slug: a.slug,
     title: a.title,
@@ -32,8 +27,6 @@ const ALL_ARTICLES = [
     ogImage: a.ogImage || a.image,
     path: `/maandhan/${a.slug}`,
   })),
-  // State scheme articles are served from /rajya-yojana/<slug>.
-  // Only status:'live' entries appear — 'planned' slugs 404 on purpose.
   ...LIVE_RAJYA_YOJANA_ARTICLES.map((a) => ({
     slug: a.slug,
     title: a.title,
@@ -148,9 +141,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly', 
       priority: 0.85,
     },
-    // FIX(SEO): /author and /official-links now 308-redirect to /about and
-    // /contact (see vercel.json redirects) — redirected URLs must not be listed
-    // in the sitemap, so they were removed here.
     { 
       url: `${SITE_URL}/about`, 
       lastModified: new Date('2026-06-15'), 

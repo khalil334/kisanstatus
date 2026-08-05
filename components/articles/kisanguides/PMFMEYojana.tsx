@@ -3,7 +3,6 @@ import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
 
-// ── SEO Metadata ──────────────────────────────────────────────
 export const metadata: Metadata = {
   title: 'PM FME Yojana 2026: Chhote Food Business Ke Liye 35% Subsidy Guide',
   description: 'PM FME Yojana complete guide. Janein micro food processing subsidy kaise lein, ODOP benefits, loan process, aur real ground reality.',
@@ -44,7 +43,6 @@ export const metadata: Metadata = {
   },
 };
 
-// ── Schema Markup (JSON-LD) ───────────────────────────────────
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -134,13 +132,13 @@ const jsonLd = {
 export default function PMFMEYojana() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-8 text-gray-800 dark:text-gray-200 leading-relaxed prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-blue-600 dark:prose-a:text-blue-400">
-      {/* Schema Injection */}
+      {}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Image 1: Hero Image (LCP Optimization) */}
+      {}
       <Image 
         src="/images/kisanguides/pmfhero.webp" 
         alt="Small Food Processing Unit Making Pickle - PM FME Yojana Subsidy Guide" 
@@ -210,7 +208,7 @@ export default function PMFMEYojana() {
         </ul>
       </div>
 
-      {/* Image 2: ODOP Products */}
+      {}
       <Image 
         src="/images/kisanguides/odop-products.webp" 
         alt="ODOP Regional Food Products - Makhana, Papad, Pickle Display" 
@@ -352,7 +350,7 @@ export default function PMFMEYojana() {
         PM FME ke under apply karne ka process thoda detailed hai, lekin agar aap step-by-step follow karein, toh mushkil nahi hai. Poore process mein 4-6 mahine lag sakte hain, isliye patience rakhein.
       </p>
 
-      {/* Image 3: Application Process */}
+      {}
       <Image 
         src="/images/kisanguides/application-process.webp" 
         alt="Entrepreneur Applying for PM FME Loan at Bank Branch" 
@@ -458,7 +456,7 @@ export default function PMFMEYojana() {
         </div>
       </div>
 
-      {/* Image 4: Packaged Products */}
+      {}
       <Image 
         src="/images/kisanguides/packaged-products.webp" 
         alt="Branded Packaged Food Products Ready for Market - PM FME Success" 
@@ -510,7 +508,7 @@ export default function PMFMEYojana() {
         </ul>
       </div>
 
-      {/* Image 5: Documents Checklist */}
+      {}
       <Image 
         src="/images/kisanguides/documents-checklist.webp" 
         alt="PM FME Application Documents - Aadhaar, FSSAI, Udyam Certificate" 
@@ -641,7 +639,7 @@ export default function PMFMEYojana() {
         <strong>Meri advice:</strong> Pehle apne district ka ODOP product pata karein. Agar aap wahi product process karte hain, toh extra benefits milenge. Phir Udyam registration aur FSSAI lein. Uske baad bank jayein, loan apply karein, aur phir PM FME portal par apply karein. Apne nazdeeki District Industries Center (DIC) ke officers se zaroor consult karein, wo application mein bahut help kar sakte hain.
       </p>
 
-      {/* FAQ Section */}
+      {}
       <h2 id="faq" className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Frequently Asked Questions (FAQs)
       </h2>

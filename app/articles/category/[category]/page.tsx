@@ -5,7 +5,6 @@ import { ARTICLES, CATEGORIES, getArticlesByCategory, type CategorySlug } from '
 import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL, DEFAULT_OG_IMAGE } from '@/lib/site-config';
 import ArticlesClient from '../../ArticlesClient';
 
-// ✅ Sirf valid categories (jo articles-data.ts ke CATEGORIES mein hain)
 const CATEGORY_DATA: Record<CategorySlug, {
   title: string;
   description: string;
@@ -65,8 +64,6 @@ export async function generateMetadata({
   const categoryData = CATEGORY_DATA[category as CategorySlug];
   const categoryInfo = CATEGORIES[category as CategorySlug];
 
-  // Unknown category: the body calls notFound(), but this metadata overrides
-  // app/not-found.tsx's noindex, leaving the soft-404 shell indexable.
   if (!categoryData || !categoryInfo) {
     return {
       title: 'Category Not Found',
@@ -119,7 +116,6 @@ export default async function CategoryPage({
   const categoryArticles = getArticlesByCategory(category as CategorySlug);
   const url = `${SITE_URL}/articles/category/${category}`;
 
-  // ✅ Schema.org: CollectionPage + ItemList
   const collectionSchema = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
@@ -172,7 +168,6 @@ export default async function CategoryPage({
     },
   };
 
-  // ✅ Schema.org: BreadcrumbList (Rule 9 compliance)
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -194,7 +189,7 @@ export default async function CategoryPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      {/* Category Hero */}
+      {}
       <section className="bg-gradient-to-r from-green-800 to-green-600 py-12 md:py-16">
         <div className="container-site mx-auto px-4 text-center">
           <div className="text-5xl md:text-6xl mb-4" aria-hidden="true">
@@ -220,7 +215,7 @@ export default async function CategoryPage({
         </div>
       </section>
 
-      {/* Category Navigation */}
+      {}
       <section className="py-6 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
         <div className="container-site mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-2">
@@ -246,7 +241,7 @@ export default async function CategoryPage({
         </div>
       </section>
 
-      {/* Articles List */}
+      {}
       <div className="container-site mx-auto py-10">
         {categoryArticles.length === 0 ? (
           <div className="text-center py-16">
