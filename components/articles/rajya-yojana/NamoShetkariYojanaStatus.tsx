@@ -214,12 +214,12 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       </InfoBox>
 
       <p>
-        Kai kisan <strong>namo shetkari 9 instalment</strong> (9va hapta) search karte hain —
-        scheme 2023 se chal rahi hai aur har saal do-teen kist milti hain, isliye ginti ab aage
-        badh chuki hai. Agla hapta kab aayega iski official date sirf portal aur sarkari
-        announcement se confirm hoti hai; jab bhi nayi kist release hoti hai, wo PM Kisan ki
-        latest kist ke kuch hafte baad hi aati hai. Status check ka tareeka har kist ke liye
-        same rehta hai — neeche wale steps follow karein.
+        <strong>9va hapta</strong> (9th instalment) kab aayega — yeh sawaal aajkal sabse zyada
+        poochha ja raha hai. Scheme 2023 se chal rahi hai, har saal do-teen kist aati hain, toh
+        ginti ab aage badh chuki hai. Official date sirf portal aur sarkari announcement se
+        confirm hoti hai — aur pichhla pattern yahi raha hai ki nayi kist PM Kisan ki latest
+        kist ke kuch hafte baad aati hai. Status check ka tareeka har kist ke liye same rehta
+        hai — neeche wale steps follow karein.
       </p>
 
       <h2>Apna Status Kaise Dekhein</h2>

@@ -191,9 +191,9 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
       <h2>SAARA Portal Par Apna Status Kaise Dekhein (MP Saara Payment Status)</h2>
 
       <p>
-        Jo log <strong>MP Saara payment status</strong> ya <strong>CM kisan beneficiary status MP Saara</strong>{' '}
-        search karte hain, unke liye yahi process hai. Poora kaam online hai aur free hai. Aadhaar
-        number ya registered mobile paas rakhein, OTP usi number par aayega:
+        <strong>MP Saara payment status</strong> ho ya <strong>CM Kisan beneficiary status</strong> —
+        dono isi SAARA portal par dikhte hain. Poora kaam online hai, bilkul free, kisi kiosk ki
+        zaroorat nahi. Aadhaar number ya registered mobile paas rakhein, OTP usi number par aayega:
       </p>
 
       <Fig

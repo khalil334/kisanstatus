@@ -317,12 +317,12 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
           </DB>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-3">
-            Jo log <strong>crop insurance last date 2026</strong> ya <strong>PMFBY last date extended 2026</strong>{' '}
-            search kar rahe hain — dhyan rahe ki kuch states mein sarkar season ke hisaab se enrollment
-            window aage badha deti hai, lekin extension ki official confirmation sirf{' '}
-            <strong>pmfby.gov.in</strong> ya aapke state agriculture department ki notification se hoti hai.
-            Kisi WhatsApp forward par bharosa na karein; standard deadline 31 July (Kharif) / 31 December
-            (Rabi) maan kar pehle hi enroll kar lena sabse safe hai.
+            Ek baat aur — <strong>last date extend</strong> hone ki afwaahein har season udti hain. Sach
+            yeh hai ki kuch states mein sarkar kabhi-kabhi enrollment window aage badha deti hai, lekin
+            iski official confirmation sirf <strong>pmfby.gov.in</strong> ya aapke state agriculture
+            department ki notification se hoti hai. WhatsApp forward par bharosa karke date nikal jaane
+            se behtar hai standard deadline — 31 July (Kharif) / 31 December (Rabi) — maan kar pehle hi
+            enroll kar lena.
           </p>
         </section>
 
