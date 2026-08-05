@@ -75,7 +75,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
             <span>📅 {fmtDate(article.publishedTime)}</span>
-            <span>🔄 Updated: {fmtDate(article.modifiedTime)}</span>
+            <span>🔄 Last Updated: 5 August 2026</span>
             <span>⏱️ 11 min read</span>
           </div>
         </div>
@@ -93,6 +93,17 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
             priority
           />
         </div>
+
+        <DB>
+          <strong>TL;DR — seedha faisla:</strong>
+          <ul className="list-disc pl-5 mt-2 space-y-1">
+            <li>NLM-EDP mein poultry project par <strong>50% capital subsidy, ₹25 lakh tak</strong> — parent farm, hatchery, brooder unit.</li>
+            <li>Subsidy <strong>back-ended</strong> hai: pehle apna margin + bank loan, subsidy verification ke baad. Advance nahi milti.</li>
+            <li>Apply online: <strong>nlm.udyamimitra.in</strong> — DPR, KYC, zameen ke kagaz, training certificate, bank sanction chahiye.</li>
+            <li>Chalu kharche ka 60-70% <strong>feed</strong> hai — munafe ka faisla shed nahi, feed conversion karta hai.</li>
+            <li><strong>Abhi check karo:</strong> nlm.udyamimitra.in par current guidelines aur application window.</li>
+          </ul>
+        </DB>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           Murgi palan un ginti ke dhandhon mein hai jahan chhoti zameen par bhi structured business khada ho sakta
@@ -325,6 +336,22 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           <SI n={4}><strong>Market ka plan na hona</strong> — ande/meat kahan bikega, kis rate par, kaun uthayega — yeh unit lagane se pehle tay karo, baad mein nahi.</SI>
           <SI n={5}><strong>Capacity se bada unit</strong> — pehli baar mein hi sabse bada project lene ka lalach. Chhota shuru karo, seekho, phir badhao — scheme baad mein bhi rahegi.</SI>
         </StepList>
+
+        <SH>🌱 Zameen Se Ek Misaal — Khagaria (Bihar) Ke Dayanand Singh</SH>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Yeh dhandha chhoti zameen par bhi khada hota hai — iska documented example KVK Khagaria (Bihar) ke
+          record mein hai. Parbatta gaon ke <strong>Dayanand Singh</strong> ke paas sirf 1 acre zameen thi. 500
+          chooze se shuruaat ki, phir KVK se training lekar 2,000 Vencobb chicks ka brick-walled poultry house
+          banaya. KVK ki report ke mutabik ab woh saal mein 10 batches se lagbhag <strong>28,500 kg chicken</strong>{' '}
+          produce karte hain, <strong>₹2.4-3 lakh saalana net income</strong> kamate hain, do logon ko full-time
+          rozgar diya hai — aur poultry litter ko khaad bana kar sabzi se ₹60-70 hazaar alag se. Unka apna quote:
+          &ldquo;Murgi khad apnayen, khet bachayen.&rdquo; (
+          <a href="https://khagaria.kvk4.in/success-stories.php" target="_blank" rel="noopener noreferrer" className="underline font-bold">source: KVK Khagaria success stories</a>)
+        </p>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Is story ka sabak wahi hai jo upar likha hai — training pehle, phir scale. 500 se 2,000 tak ka safar
+          KVK ke guidance ke saath hua, ek jhatke mein nahi.
+        </p>
 
         <SH>🐐 Bakri Ya Machhli Mein Bhi Interest Hai?</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
