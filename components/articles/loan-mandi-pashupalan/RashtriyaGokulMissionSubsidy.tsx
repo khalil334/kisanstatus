@@ -354,6 +354,22 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
         <SH>❓ FAQ — Aksar Puche Jaane Wale Sawal</SH>
         <FAQBlock faqs={FAQS_DATA} />
 
+        <SH>📚 Sources</SH>
+        <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
+          <li>
+            Rashtriya Gokul Mission — official page, Dept of Animal Husbandry & Dairying.{' '}
+            <a href="https://dahd.gov.in/schemes/programmes/rashtriya-gokul-mission" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">dahd.gov.in</a>
+          </li>
+          <li>
+            Cabinet decision, 19 March 2025 — revised RGM ₹3,400 crore (Vision IAS summary of PIB release).{' '}
+            <a href="https://visionias.in/current-affairs/news-today/2025-03-20/schemes-in-news/cabinet-approved-revised-rashtriya-gokul-mission" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">visionias.in</a>
+          </li>
+          <li>
+            NDDB — Breed Multiplication Farm EOI portal.{' '}
+            <a href="https://eoi.nddb.coop" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">eoi.nddb.coop</a>
+          </li>
+        </ul>
+
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[

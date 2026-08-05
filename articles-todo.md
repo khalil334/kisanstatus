@@ -2,6 +2,8 @@
 
 **STATUS: ALL 11 ARTICLES DONE ✅**
 
+Update (5 Aug 2026, later pass): "📚 Sources" section with clickable links added to all 11 articles (MspList202627 already had one; 10 others added). Every story/claim source ab article ke end mein linked list mein bhi hai.
+
 Rules: Real sourced kisan stories only (PIB/NABARD/state dept/verified news + link). "Last Updated: 5 August 2026" top par. TL;DR box, comparison tables, Aam Galtiyan, Sawaal-Jawaab (5 real questions), CTAs, high-intent keywords. No image suggestions (existing Image tags KEEP as-is). No API/setup instructions. Har article ka alag flow. Direct merge to main after each fix, then delete from this list.
 
 ## Pending

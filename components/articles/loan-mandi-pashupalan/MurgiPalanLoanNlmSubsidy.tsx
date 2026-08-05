@@ -364,6 +364,22 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
 
         <FAQBlock faqs={FAQS_DATA} />
 
+        <SH>📚 Sources</SH>
+        <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
+          <li>
+            NLM Entrepreneurship — Udyamimitra portal, scheme guidelines.{' '}
+            <a href="https://nlm.udyamimitra.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">nlm.udyamimitra.in</a>
+          </li>
+          <li>
+            KVK Khagaria (Bihar) — documented poultry success story, Dayanand Singh, Parbatta.{' '}
+            <a href="https://khagaria.kvk4.in/success-stories.php" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">khagaria.kvk4.in</a>
+          </li>
+          <li>
+            Department of Animal Husbandry & Dairying, Govt of India.{' '}
+            <a href="https://dahd.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">dahd.gov.in</a>
+          </li>
+        </ul>
+
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[

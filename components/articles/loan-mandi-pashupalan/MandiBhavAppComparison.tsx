@@ -331,6 +331,22 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
 
         <FAQBlock faqs={FAQS_DATA} />
 
+        <SH>📚 Sources</SH>
+        <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
+          <li>
+            eNAM — National Agriculture Market.{' '}
+            <a href="https://enam.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">enam.gov.in</a>
+          </li>
+          <li>
+            MyNation / Ministry of Agriculture data — eNAM 1.77 crore farmers, ₹31.9 lakh crore trade.{' '}
+            <a href="https://www.mynation.com/amp/india-news/bridging-the-gap-between-rural-farmers-and-markets-through-enam-kisan-rail-seva-and-krishi-udan-yojana-iwh-s98win" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">mynation.com</a>
+          </li>
+          <li>
+            Agmarknet — daily mandi rates, Govt of India.{' '}
+            <a href="https://agmarknet.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">agmarknet.gov.in</a>
+          </li>
+        </ul>
+
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[
