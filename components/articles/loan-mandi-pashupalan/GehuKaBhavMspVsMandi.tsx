@@ -99,18 +99,19 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
         </div>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-          Har saal April mein wahi sawaal: gehu MSP par sarkari kendra mein dein, ya mandi ki khuli boli mein bechein,
-          ya rok kar rakhein? Galat jawab ka matlab seedha nuksan hai — aur sahi jawab har saal, har kisan ke liye
-          alag hota hai.
+          April aata hai aur wahi teen raaste saamne khade ho jaate hain — sarkari kendra, mandi ki boli, ya
+          ghar ka godaam. Har saal jawab badal jaata hai. Pichhle saal jisne roka usne kamaya, us se pichhle
+          saal jisne roka woh pachhtaya. Formula ratta maar ke kaam nahi chalta.
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
-          Neeche hum faisla karne ka poora tareeka samjhenge — MSP ka asli matlab, mandi rate ka seasonal pattern,
-          storage ka ganit, aur woh 4 sawaal jo bechne se pehle khud se poochne chahiye. Number sirf official wale
-          use kiye hain; boli ka rate roz badalta hai, woh aap apni mandi se confirm kar lena.
+          Toh yahan formula nahi, faisla karne ka tareeka likha hai — MSP asal mein kya cheez hai, rate ka
+          saal-bhar ka chakkar kaise ghoomta hai, rokne ka hisaab kagaz par kaise banta hai, aur woh chaar
+          sawaal jo trolley bharne se pehle khud se pooch lene chahiye. Numbers sirf official liye hain; boli
+          ka rate roz ka roz apni mandi se dekhna.
         </p>
 
-        <SH>🌾 MSP Ka Asli Matlab — Floor, Ceiling Nahi</SH>
+        <SH>MSP Jaal Hai, Chhat Nahi</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Rabi Marketing Season 2026-27 ke liye gehu ka MSP <strong>₹2,585 per quintal</strong> hai — pichhle saal ke
           ₹2,425 se ₹160 zyada. Yeh woh rate hai jis par sarkar apne kharid kendra par aapka gehu (FAQ quality ka)
@@ -139,9 +140,9 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
           loading="lazy"
         />
 
-        <SH>📅 Mandi Rate Ka Seasonal Pattern — Samajh Lo, Ratna Nahi</SH>
+        <SH>Rate Ka Saal-Bhar Ka Chakkar</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Gehu ke bhav ka saal aam taur par is tarah chalta hai:
+          Gehu ka bhav saal mein aise ghoomta hai — aam taur par:
         </p>
         <div className="overflow-x-auto my-4">
           <table className="w-full text-sm border-collapse">
@@ -193,11 +194,11 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
           loading="lazy"
         />
 
-        <SH>🧮 Rok Kar Bechne Ka Ganit — Kagaz Par Karo</SH>
+        <SH>&ldquo;Rok Lo, Rate Badhega&rdquo; — Aadhi Salah Hai Yeh</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          &ldquo;Rok lo, baad mein rate badhega&rdquo; — yeh salah aadhi hai. Poora ganit yeh hai: baad ka rate sirf tab fayda
-          hai jab woh <strong>storage ke kharche + nuksan + paise ki lagat</strong> se zyada badhe. Kagaz par yeh
-          columns banao:
+          Poori salah aise banti hai: baad ka rate tabhi fayda hai jab woh <strong>storage ka kharcha, nuksan
+          aur paise ki lagat</strong> — teeno ko paar kar jaye. Warna sirf mehnat badhti hai, kamai nahi. Kagaz
+          lo aur yeh columns banao:
         </p>
         <StepList>
           <SI n={1}><strong>Storage ka kharcha:</strong> ghar par rakha toh bori, dawai, dekh-rekh; warehouse mein rakha toh kiraya. Jo bhi hai, per quintal per mahina likho.</SI>
@@ -221,7 +222,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
           loading="lazy"
         />
 
-        <SH>🤔 Bechne Se Pehle 4 Sawaal</SH>
+        <SH>Trolley Bharne Se Pehle — Chaar Sawaal</SH>
         <StepList>
           <SI n={1}><strong>Aaj mandi ka rate MSP se upar hai ya neeche?</strong> Neeche hai → MSP registration karke sarkari kendra ka rasta pakdo. Upar hai → agla sawaal.</SI>
           <SI n={2}><strong>Meri quality kaisi hai?</strong> Saaf, sookha, premium variety → open market mein behtar boli milegi. Nami/kachra wala maal → pehle saaf-sukha karo, warna dono jagah cut lagega.</SI>
@@ -235,7 +236,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
           liye). Isse aap na poore girte rate mein fanste ho, na poora fayda chhodte ho.
         </DB>
 
-        <SH>🌾 Premium Variety Ka Alag Hisaab — Sharbati Wale Dhyan Dein</SH>
+        <SH>Sharbati-Lokwan Walon Ka Hisaab Alag Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           MSP vs mandi ka faisla variety ke hisaab se bilkul palat jaata hai. General/dara gehu — jiski quality
           FAQ standard ke aas-paas hai — uske liye MSP ka jaal sabse zyada matter karta hai. Lekin{' '}
@@ -262,7 +263,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
           loading="lazy"
         />
 
-        <SH>🏛️ MSP Par Bechna Ho Toh — Process</SH>
+        <SH>Sarkari Kendra Ka Rasta Chuna? Toh Process Yeh Hai</SH>
         <StepList>
           <SI n={1}><strong>Registration:</strong> apne state ke procurement portal par (UP, MP, Rajasthan, Bihar — sab ke apne portal hain) season se pehle registration karo. Aadhaar, bank details, zameen ke record lagenge.</SI>
           <SI n={2}><strong>Slot/token:</strong> registration ke baad kharid kendra aur date ka slot milta hai. Bina slot ke maal le jaakar khada rehna padta hai.</SI>
@@ -293,9 +294,9 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
           loading="lazy"
         />
 
-        <SH>📊 Daily Rate Kahan Dekhein</SH>
+        <SH>Roz Ka Rate Kahan Se Dekhein</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Faisla trend se hota hai, ek din ke rate se nahi. Apni mandi ka modal price roz dekho — hamari{' '}
+          Ek din ka rate kuch nahi batata; trend batata hai. Apni mandi ka modal price roz dekho — hamari{' '}
           <Link href="/articles/mandi-bhav-today" className="underline font-bold">Aaj Ka Mandi Bhav</Link> page se ya{' '}
           <Link href="/articles/mandi-bhav-app-comparison" className="underline font-bold">in apps</Link> se. Aur agar
           aapki mandi eNAM se judi hai, toh online bidding ka fayda lena bhi seekho:{' '}
