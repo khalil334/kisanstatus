@@ -1,12 +1,14 @@
 # Kisanstatus — loan-mandi-pashupalan rewrite tracker
 
+**STATUS: ALL 11 ARTICLES DONE ✅**
+
 Rules: Real sourced kisan stories only (PIB/NABARD/state dept/verified news + link). "Last Updated: 5 August 2026" top par. TL;DR box, comparison tables, Aam Galtiyan, Sawaal-Jawaab (5 real questions), CTAs, high-intent keywords. No image suggestions (existing Image tags KEEP as-is). No API/setup instructions. Har article ka alag flow. Direct merge to main after each fix, then delete from this list.
 
 ## Pending
 
-11. SbiDairyLoanInterestRate.tsx — SBI Dairy Loan Interest Rate
 
 ## Done
+- SbiDairyLoanInterestRate.tsx — merged. TL;DR, sourced Kupwara J&K story (Shaheena Begum SHG→FPO 330 members, ₹18.23cr/6284 KCC loans — kupwara.nic.in link), Last Updated 5 Aug 2026.
 - SabziBhavGuidePyazAlooTamatar.tsx — merged. TL;DR, sourced Nashik 2026 case (May ₹800-1000 crash + MAPP ₹1,580 — FPJ; June recovery ₹2,628 Lasalgaon, NAFED shun — FPJ/datamap), Last Updated 5 Aug 2026.
 - RashtriyaGokulMissionSubsidy.tsx — merged. TL;DR, sourced Cabinet 19-Mar-2025 data (₹3,400cr, 63.55% milk growth, 8.39cr animals NAIP, 5.21cr farmers, 22 IVF labs/2541 calves), Last Updated 5 Aug 2026.
 - MurgiPalanLoanNlmSubsidy.tsx — merged. TL;DR, sourced KVK Khagaria story (Dayanand Singh, Parbatta — 2000 Vencobb, 28,500 kg/yr, ₹2.4-3L net, khagaria.kvk4.in link), Last Updated 5 Aug 2026.
