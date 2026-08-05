@@ -15,10 +15,16 @@ build/
 
 # Environment files — NEVER commit these
 .env
+.env.*
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+# Dot-less variants — 'env.local' slipped past the .env.local rule and got
+# committed once (see SEO-AUDIT.md). Keep these patterns.
+env.local
+env.*.local
+!.env.example
 
 # Vercel
 .vercel
