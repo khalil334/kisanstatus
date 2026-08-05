@@ -200,6 +200,7 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   CHCPortal: dynamic(() => import('@/components/articles/kisanguides/CHCPortal'), { ssr: true }),
   VerminCompost: dynamic(() => import('@/components/articles/kisanguides/VerminCompost'), { ssr: true }),
   DripSprinkler: dynamic(() => import('@/components/articles/kisanguides/DripSprinkler'), { ssr: true }),
+  ArticleStub: dynamic(() => import('@/components/articles/ArticleStub'), { ssr: true }),
 };
 
 export const revalidate = 86400;
