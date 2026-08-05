@@ -128,7 +128,7 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
             <span>📅 {fmtDate(article.publishedTime)}</span>
-            <span>🔄 Updated: {fmtDate(article.modifiedTime)}</span>
+            <span>🔄 Last Updated: 5 August 2026</span>
             <span>⏱️ 11 min read</span>
           </div>
         </div>
@@ -147,9 +147,20 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
           />
         </div>
 
+        <DB>
+          <strong>TL;DR — seedha faisla:</strong>
+          <ul className="list-disc pl-5 mt-2 space-y-1">
+            <li><strong>Mudra (₹20 lakh tak)</strong> — kisi bhi slab par bank collateral maang hi nahi sakta; paisa jaldi chahiye toh yahi route.</li>
+            <li><strong>PMEGP</strong> — 15-35% margin money subsidy (wapas nahi karni); process 2-3 mahine ka, par gaon ki mahila/SC/ST ko 35% ka faayda sabse bada.</li>
+            <li><strong>CGTMSE</strong> — loan nahi, guarantee cover; ₹20 lakh se bade project ke liye bank ke normal term loan ke peeche lagta hai.</li>
+            <li>DPR mein working capital jodna mat bhoolna — files girne ki sabse aam wajah yahi hai. <strong>Abhi jansamarth.in par apni eligibility check karo.</strong></li>
+          </ul>
+        </DB>
+
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           &ldquo;Zameen ke kagaz laao, security lagegi.&rdquo; Branch manager ki yeh ek line har saal hazaron dairy ke
-          sapne wahin rok deti hai. Zameen naam par nahi hai? Batwara abhi hua nahi? Toh kya loan ka darwaza band?
+          sapne wahin rok deti hai. Maine branch mein khud dekha hai — aadmi poori taiyari se aaya, par zameen naam
+          par nahi thi, aur baat wahin khatam. Batwara abhi hua nahi? Toh kya loan ka darwaza band?
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
@@ -267,6 +278,15 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
           guideHref="/articles/jansamarth-portal-loan-apply"
           portalName="udyamimitra.in"
         />
+
+        <IB>
+          <strong>Asli misaal, kagaz ke saath:</strong> UP ke Lakhimpur Kheri district ke Deoria gaon ke Ram Lakhan ne
+          2024 mein District Industries Centre ke through <strong>PMEGP ke neeche ₹10 lakh ka loan</strong> lekar dairy
+          unit lagai. UP sarkar ki bataayi report ke according unit ab roz 5-8 quintal doodh local market mein deti
+          hai, teen gaon walon ko rozgaar mila, aur kharcha kaat kar mahine ka net ₹15,000-30,000 bach raha hai (
+          <a href="https://www.indiatimes.com/news/pmegp-fuels-rural-entrepreneurship-in-up/articleshow/131650843.html" target="_blank" rel="noopener noreferrer" className="underline font-bold">source: IndiaTimes / UP govt</a>).
+          Number bade nahi hain — par asli hain. Isi liye plan believable banao, thumbnail wala nahi.
+        </IB>
 
         <SH>Raasta 2: PMEGP — Yahan Subsidy Ka Tadka Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
@@ -467,7 +487,8 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
           </SI>
           <SI n={4}>
             <strong>Project report (DPR)</strong> — pashu ki ginti, doodh ka realistic rate, chara kharch, EMI plan.
-            Zyada bada sapna likhne se file strong nahi hoti, believable numbers se hoti hai.
+            Zyada bada sapna likhne se file strong nahi hoti, believable numbers se hoti hai. Hazaron files isi
+          wajah se rukti hain ki DPR mein doodh ka rate phulaya hua tha.
           </SI>
           <SI n={5}>
             <strong>Jagah ka proof</strong> — apni zameen ke kagaz, ya registered lease/rent agreement. Yeh pledge ke
@@ -538,6 +559,12 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
             sabse samajhdaari ka kaam hai.
           </p>
         </div>
+
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          <strong>Abhi official portal par check karo</strong> — Mudra ke liye udyamimitra.in, sab schemes ek saath
+          dekhne ke liye <a href="https://www.jansamarth.in" target="_blank" rel="noopener noreferrer" className="underline font-bold">jansamarth.in</a>,
+          aur PMEGP ke liye kviconline.gov.in. Rate aur slab wahi final hain jo portal aur branch bataye.
+        </p>
 
         <SH>Aapke Sawaal</SH>
         <FAQBlock faqs={FAQS_DATA} />
