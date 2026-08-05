@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 
@@ -85,6 +86,18 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
       </div>
 
       <div className="container-site max-w-3xl py-8">
+        <div className="my-2 mb-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/articles/loan-mandi-pashupalan/gehu-ka-bhav-msp-vs-mandi/gehu-katai-ke-waqt-khet-mein.webp"
+            alt="Katai ke waqt gehu ke khet mein kisan dana parakhta hua"
+            width={1200}
+            height={669}
+            className="w-full h-auto object-cover"
+            sizes="(max-width: 768px) 100vw, 768px"
+            priority
+          />
+        </div>
+
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           Har saal April mein wahi sawaal: gehu MSP par sarkari kendra mein dein, ya mandi ki khuli boli mein bechein,
           ya rok kar rakhein? Galat jawab ka matlab seedha nuksan hai — aur sahi jawab har saal, har kisan ke liye
@@ -92,9 +105,9 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
-          Is guide mein hum faisle ka framework denge — MSP ka asli matlab, mandi rate ka seasonal pattern, storage
-          ka ganit, aur woh 4 sawaal jo bechne se pehle khud se poochne chahiye. Number wahi use karenge jo official
-          hain; boli ka rate roz badalta hai, isliye usse aap apni mandi se confirm karoge.
+          Neeche hum faisla karne ka poora tareeka samjhenge — MSP ka asli matlab, mandi rate ka seasonal pattern,
+          storage ka ganit, aur woh 4 sawaal jo bechne se pehle khud se poochne chahiye. Number sirf official wale
+          use kiye hain; boli ka rate roz badalta hai, woh aap apni mandi se confirm kar lena.
         </p>
 
         <SH>🌾 MSP Ka Asli Matlab — Floor, Ceiling Nahi</SH>
@@ -115,6 +128,16 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
           <Link href="/articles/msp-list-2026-27" className="underline font-bold">MSP List 2026-27</Link>. Yahan hum
           sirf gehu ke faisle par focus karenge.
         </IB>
+
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/gehu-ka-bhav-msp-vs-mandi/sarkari-kharid-kendra-tulai.webp"
+          alt="Sarkari kharid kendra par gehu ki boriyon ki tulai"
+          width={1000}
+          height={558}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
+        />
 
         <SH>📅 Mandi Rate Ka Seasonal Pattern — Samajh Lo, Ratna Nahi</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
@@ -160,6 +183,16 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
           starting point banao, aur us saal ka asli trend apni mandi ke daily rate se pakdo.
         </WB>
 
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/gehu-ka-bhav-msp-vs-mandi/mandi-mein-gehu-ki-boli.webp"
+          alt="Mandi mein gehu ke dher par khuli boli — vyapari aur kisan"
+          width={1200}
+          height={669}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
+        />
+
         <SH>🧮 Rok Kar Bechne Ka Ganit — Kagaz Par Karo</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           &ldquo;Rok lo, baad mein rate badhega&rdquo; — yeh salah aadhi hai. Poora ganit yeh hai: baad ka rate sirf tab fayda
@@ -177,6 +210,16 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
           raha hai, toh rok kar bechna tabhi jeet hai jab rate ₹150 se zyada badhe. Isse kam ki badhat par aap mehnat
           karke bhi wahi ke wahi ho.
         </p>
+
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/gehu-ka-bhav-msp-vs-mandi/ghar-par-gehu-bhandaran-sahi-tarika.webp"
+          alt="Ghar par gehu ka sahi bhandaran — pallet par rakhi boriyaan"
+          width={1200}
+          height={669}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
+        />
 
         <SH>🤔 Bechne Se Pehle 4 Sawaal</SH>
         <StepList>
@@ -209,6 +252,16 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
           rate par hi girta hai. Grading ki thodi mehnat yahan sabse zyada return deti hai.
         </p>
 
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/gehu-ka-bhav-msp-vs-mandi/gehu-quality-nami-jaanch.webp"
+          alt="Kharid kendra par gehu ki nami aur quality ki jaanch"
+          width={1200}
+          height={669}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
+        />
+
         <SH>🏛️ MSP Par Bechna Ho Toh — Process</SH>
         <StepList>
           <SI n={1}><strong>Registration:</strong> apne state ke procurement portal par (UP, MP, Rajasthan, Bihar — sab ke apne portal hain) season se pehle registration karo. Aadhaar, bank details, zameen ke record lagenge.</SI>
@@ -228,6 +281,16 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
           label="AgMarknet — Mandi-wise Daily Rates"
           guide="Portal Kholo"
           portalName="agmarknet.gov.in"
+        />
+
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/gehu-ka-bhav-msp-vs-mandi/kharid-ke-baad-parchi-payment.webp"
+          alt="Tulai ke baad kisan ko parchi — payment seedha bank account mein"
+          width={1200}
+          height={669}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
         />
 
         <SH>📊 Daily Rate Kahan Dekhein</SH>
