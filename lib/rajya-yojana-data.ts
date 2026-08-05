@@ -167,6 +167,8 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
     mainKeyword: 'cm kisan odisha status check',
     secondaryKeywords: [
       'kalia list',
+      'odisha cm kisan status check',
+      'cm kisan portal odisha status check 2026 list village wise',
       'cm kisan beneficiary list odisha',
       'kalia yojana new name',
       'cm kisan odisha landless farmer benefit',
@@ -181,7 +183,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
     officialPortal: 'https://cmkisan.odisha.gov.in',
     status: 'live',
     published: '2026-08-03T09:00:00+05:30',
-    modified: '2026-08-03T09:00:00+05:30',
+    modified: '2026-08-05T09:00:00+05:30',
     readTime: '10 min read',
     ogImage: '/images/articles/rajya-yojna/odisha-cm-kisan-status-check-2026/hero.webp',
     relatedPaths: ['/articles/PmKisanMasterGuide2026', '/articles/PmKisanBeneficiaryList2026'],
