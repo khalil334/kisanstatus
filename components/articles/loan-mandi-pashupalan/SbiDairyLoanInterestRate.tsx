@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 
@@ -85,6 +86,18 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
       </div>
 
       <div className="container-site max-w-3xl py-8">
+        <div className="my-2 mb-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/articles/loan-mandi-pashupalan/sbi-dairy-loan-interest-rate/dairy-shed-mein-subah-ka-doodh.webp"
+            alt="Subah ke waqt dairy shed mein bhains ka doodh nikalta hua kisan — dairy loan isi kaam ko badhane ke liye hai"
+            width={1200}
+            height={670}
+            className="w-full h-auto object-cover"
+            sizes="(max-width: 768px) 100vw, 768px"
+            priority
+          />
+        </div>
+
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           &ldquo;SBI dairy loan interest rate&rdquo; search karo toh dus website dus alag number bata deti hain — koi 7.5%,
           koi 10%, koi 11.25%. Sach yeh hai ki inme se koi bhi aapka rate nahi hai. SBI ke paas dairy ke naam ka koi
@@ -114,6 +127,15 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
           raha hai, aur reset kab hoga?&rdquo;</strong> Yeh teen jawab sanction letter mein likhe hone chahiye. Sirf &ldquo;9%
           lagega&rdquo; sun kar aage badhna galti hai — MCLR badla toh aapki EMI bhi badlegi.
         </IB>
+
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/sbi-dairy-loan-interest-rate/branch-mein-rate-ki-baat.webp"
+          alt="Bank branch mein officer ke saath rate aur spread ki baat karta hua kisan"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
 
         <SH>🔀 KCC (Allied) vs Term Loan — Dono Ka Kaam Alag</SH>
         <div className="overflow-x-auto my-4">
@@ -161,6 +183,15 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
           aisa nahi hota, wahan poori EMI chalti rehti hai. Isliye roz ka kharcha KCC se chalao, term loan se nahi.
         </p>
 
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/sbi-dairy-loan-interest-rate/chara-aur-pashu-ka-kharcha.webp"
+          alt="Bhainson ko chara daalta hua kisan — roz ka kharcha KCC se, capital cost term loan se"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
+
         <SH>💸 Interest Subvention — Effective Rate Ka Asli Khel</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Animal husbandry, dairy aur fisheries ke KCC par sarkar Modified Interest Subvention Scheme (MISS) ke through
@@ -199,6 +230,15 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
           sanction letter mein margin ka column zaroor dekh lo — kai baar bade project par bank apni policy ke hisaab
           se contribution maangta hai.
         </WB>
+
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/sbi-dairy-loan-interest-rate/emi-ka-hisaab-copy-mein.webp"
+          alt="Copy mein EMI ka hisaab lagata hua kisan — rate ka fark EMI mein kitna bada hota hai"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
 
         <SH>🧮 EMI Ka Andaza — Do Rate, Do Tasveer</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
@@ -261,6 +301,15 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
           repayment ki mehnat karni chahiye.
         </p>
 
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/sbi-dairy-loan-interest-rate/documents-ki-taiyari-ghar-par.webp"
+          alt="Ghar par documents ki file taiyar karta hua parivar — branch jaane se pehle ki taiyari"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
+
         <SH>📄 Documents — Branch Jaane Se Pehle Ki Checklist</SH>
         <StepList>
           <SI n={1}>
@@ -290,6 +339,15 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
             scheme mein subsidy slab isse upar jata hai.
           </SI>
         </StepList>
+
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/sbi-dairy-loan-interest-rate/bank-ke-bahar-pashu-loan.webp"
+          alt="Documents ki file le kar bank branch pahuncha kisan — apply ka pehla kadam"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
 
         <SH>🏦 Apply Ka Process — Step by Step</SH>
         <StepList>
