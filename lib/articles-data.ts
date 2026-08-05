@@ -178,6 +178,9 @@ const CORE_ARTICLES: readonly ArticleMeta[] = [
     ogTitle: 'PMFBY Crop Insurance 2026 Guide',
     keywords: [
       'pmfby crop insurance 2026',
+      'pmfby last date 2026',
+      'pmfby last date extended 2026',
+      'crop insurance last date 2026',
       'fasal bima yojana',
       'crop insurance claim',
       'pmfby enrollment',
@@ -186,7 +189,7 @@ const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'PmfbyCropInsurance2026',
     category: 'farming',
     publishedTime: '2026-04-01T08:00:00+05:30',
-    modifiedTime: '2026-04-01T08:00:00+05:30',
+    modifiedTime: '2026-08-05T08:00:00+05:30',
     readingTime: 10,
     author: 'KisanStatus Editorial Team',
     authorBio: 'Agricultural content experts with 5+ years experience in government scheme research',
