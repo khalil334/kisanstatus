@@ -79,7 +79,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
             <span>📅 {fmtDate(article.publishedTime)}</span>
-            <span>🔄 Updated: {fmtDate(article.modifiedTime)}</span>
+            <span>🔄 Last Updated: 5 August 2026</span>
             <span>⏱️ 11 min read</span>
           </div>
         </div>
@@ -97,6 +97,17 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
             priority
           />
         </div>
+
+        <DB>
+          <strong>TL;DR — seedha faisla:</strong>
+          <ul className="list-disc pl-5 mt-2 space-y-1">
+            <li>SBI ke paas &ldquo;dairy loan&rdquo; naam ka fixed-rate product nahi hai — rate = <strong>MCLR + spread</strong>, branch aur profile ke hisaab se banta hai.</li>
+            <li>Roz ka kharcha <strong>KCC (Animal Husbandry)</strong> se — subvention + prompt repayment se effective rate ~4% tak. Pashu/shed kharid <strong>term loan</strong> se.</li>
+            <li>Budget 2025-26 mein subvention KCC limit <strong>₹3 lakh → ₹5 lakh</strong> hui (AH/dairy ka sub-limit alag).</li>
+            <li>Loan amount aapki district ke <strong>Scale of Finance</strong> se tay hota hai — internet ke &ldquo;per animal&rdquo; number par DPR mat banao.</li>
+            <li><strong>Abhi karo:</strong> branch se likhit mein poocho — kaunsa MCLR, kitna spread, reset kab.</li>
+          </ul>
+        </DB>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           &ldquo;SBI dairy loan interest rate&rdquo; search karo toh dus website dus alag number bata deti hain — koi 7.5%,
@@ -386,6 +397,18 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
           guideHref="/articles/KisanCreditCardOnlineApply2026"
           portalName="sbi.co.in"
         />
+
+        <SH>🌱 Zameen Ki Misaal — KCC Se Dairy Kaise Khadi Hoti Hai</SH>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          KCC-AH ka asar sirf theory nahi hai. Kupwara (J&amp;K) district administration ke documented record mein
+          Ramhall ke Harduna gaon ki <strong>Shaheena Begum</strong> ki kahani hai — 2016 mein 30 mahilaon ka group,
+          70 litre roz ka milk collection. Animal Husbandry department ki training, July 2019 mein special{' '}
+          <strong>KCC Mela</strong> aur jaldi loan sanction ke baad group NABARD ke saath FPO bana — aaj 330 registered
+          members aur 10 quintal doodh ka production. District mein ek saal ke andar dairy sector mein{' '}
+          <strong>6,284 kisano ko ₹18.23 crore ke KCC loan</strong> release hue (
+          <a href="https://kupwara.nic.in/achievements/success-story-dairy-farming/" target="_blank" rel="noopener noreferrer" className="underline font-bold">source: District Kupwara, Govt of J&amp;K — official success story</a>).
+          Sabak: sahi finance structure (KCC working capital ke liye) chhote unit ko bhi scale de deta hai.
+        </p>
 
         <SH>⚠️ Yeh Chaar Galtiyan Sabse Zyada Nuksan Karti Hain</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
