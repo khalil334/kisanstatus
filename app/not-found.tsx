@@ -35,7 +35,7 @@ export default function NotFound() {
           </p>
         </div>
 
-        {/* Search Box */}
+        {}
         <div className="max-w-md mx-auto">
           <form action="/search" method="GET" className="relative">
             <input
@@ -57,7 +57,7 @@ export default function NotFound() {
           </form>
         </div>
 
-        {/* Popular Articles */}
+        {}
         <div className="space-y-4">
           <h2 className="text-lg font-bold text-[var(--color-text)]">Popular Articles</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -74,7 +74,7 @@ export default function NotFound() {
           </div>
         </div>
 
-        {/* Action Buttons */}
+        {}
         <div className="flex flex-col sm:flex-row gap-3 justify-center pt-4">
           <Link
             href="/"

@@ -1,7 +1,3 @@
-/**
- * Official Government Links Page — KisanStatus.com
- * Verified central administration resources collection for cultivators
- */
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';

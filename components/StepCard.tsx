@@ -1,9 +1,3 @@
-/**
- * StepCard.tsx — KisanStatus.com
- * Mobile-first step layout component
- * Replaces 4-col grid steps with vertical numbered cards
- * Works perfectly on all screen sizes
- */
 
 import React from 'react';
 
@@ -15,9 +9,7 @@ interface Step {
 
 interface StepCardListProps {
   steps: Step[];
-  /** Color theme: 'green' | 'blue' | 'amber' | 'purple' | 'red' */
   color?: 'green' | 'blue' | 'amber' | 'purple' | 'red';
-  /** Compact mode for simple steps */
   compact?: boolean;
 }
 
@@ -37,7 +29,7 @@ export function StepCardList({ steps, color = 'green', compact = false }: StepCa
     <ol className="relative space-y-0 pl-0 list-none my-5">
       {steps.map((step, i) => (
         <li key={i} className="relative flex gap-4">
-          {/* Left: number + connector line */}
+          {}
           <div className="flex flex-col items-center">
             <div className={`flex-shrink-0 w-9 h-9 rounded-full ${c.ring} text-white flex items-center justify-center font-bold text-sm shadow-sm z-10`}>
               {step.icon ?? (i + 1)}
@@ -47,7 +39,7 @@ export function StepCardList({ steps, color = 'green', compact = false }: StepCa
             )}
           </div>
 
-          {/* Right: content card */}
+          {}
           <div className={`flex-1 mb-4 ${compact ? 'pb-0' : ''}`}>
             <div className={`${c.light} ${c.border} border rounded-xl px-4 ${compact ? 'py-2.5' : 'py-3'}`}>
               {step.icon && !compact && (
@@ -68,7 +60,6 @@ export function StepCardList({ steps, color = 'green', compact = false }: StepCa
   );
 }
 
-/** Simple Quick Summary row — replaces 4-col grid on mobile */
 interface QuickSummaryItem {
   icon: string;
   label: string;

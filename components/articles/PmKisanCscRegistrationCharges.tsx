@@ -81,7 +81,7 @@ export default function PmKisanCscRegistrationCharges({ article }: { article: Ar
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* Hero Image */}
+        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-csc-registration-charges/csc-registration-hero.webp"
@@ -97,7 +97,7 @@ export default function PmKisanCscRegistrationCharges({ article }: { article: Ar
           </p>
         </div>
 
-        {/* Introduction */}
+        {}
         <section className="mb-8">
           <SH>₹500 Maang Rahe Hain? Ruko, Pehle Ye Padho</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -130,7 +130,7 @@ export default function PmKisanCscRegistrationCharges({ article }: { article: Ar
           </p>
         </section>
 
-        {/* SECTION 1: Official Rates */}
+        {}
         <section className="mb-8">
           <SH>Sarkari Rate Kya Hai? (Official Fee Structure)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -167,7 +167,7 @@ export default function PmKisanCscRegistrationCharges({ article }: { article: Ar
           </IB>
         </section>
 
-        {/* SECTION 2: Free Online Method */}
+        {}
         <section className="mb-8">
           <SH>Ghar Baithe FREE Mein Kaise Karein? (Bina CSC Gaye)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -203,7 +203,7 @@ export default function PmKisanCscRegistrationCharges({ article }: { article: Ar
           </WB>
         </section>
 
-        {/* SECTION 3: CSC Process Steps */}
+        {}
         <section className="mb-8">
           <SH>CSC Center Par Kya Hota Hai? (Andar Ki Kahani)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -232,7 +232,7 @@ export default function PmKisanCscRegistrationCharges({ article }: { article: Ar
           </p>
         </section>
 
-        {/* SECTION 4: Fraud Alert */}
+        {}
         <section className="mb-8">
           <SH>⚠️ CSC Fraud Se Kaise Bachen? (Red Flags)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -269,7 +269,7 @@ export default function PmKisanCscRegistrationCharges({ article }: { article: Ar
           </div>
         </section>
 
-        {/* SECTION 5: How to Complaint */}
+        {}
         <section className="mb-8">
           <SH>Agar Zyada Paise Le Toh Complaint Kaise Karein?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -296,7 +296,7 @@ export default function PmKisanCscRegistrationCharges({ article }: { article: Ar
           </IB>
         </section>
 
-        {/* SECTION 6: Documents Checklist */}
+        {}
         <section className="mb-8">
           <SH>CSC Jane Se Pehle Ye Documents Ready Rakho</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -319,7 +319,7 @@ export default function PmKisanCscRegistrationCharges({ article }: { article: Ar
           </div>
         </section>
 
-        {/* SECTION 7: Timeline */}
+        {}
         <section className="mb-8">
           <SH>CSC Se Kaam Hone Ke Baad Kya Hota Hai?</SH>
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
@@ -352,7 +352,7 @@ export default function PmKisanCscRegistrationCharges({ article }: { article: Ar
           </p>
         </section>
 
-        {/* SECTION 8: State Variations */}
+        {}
         <section className="mb-8">
           <SH>Kya Har State Mein Same Rate Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -368,7 +368,7 @@ export default function PmKisanCscRegistrationCharges({ article }: { article: Ar
           </div>
         </section>
 
-        {/* FAQ */}
+        {}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Aksar Puche Jane Wale Sawal

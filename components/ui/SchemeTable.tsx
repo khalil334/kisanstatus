@@ -1,11 +1,5 @@
 import React from 'react';
 
-/**
- * Horizontally-scrollable wrapper for the plain `<tr>/<th>/<td>` markup that
- * article bodies write inline. Children are the rows; the first row is
- * expected to be the header row (`<th>` cells) and is styled as such via CSS
- * selectors, so callers don't need to wrap anything in `<thead>`/`<tbody>`.
- */
 export default function SchemeTable({ children }: { children: React.ReactNode }) {
   return (
     <div className="my-6 -mx-4 sm:mx-0 overflow-x-auto">

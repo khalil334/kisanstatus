@@ -29,18 +29,6 @@ import PmKisanPatiPatniRule from '@/components/articles/rajya-yojana/PmKisanPati
 import StateKisanYojanaHub from '@/components/articles/rajya-yojana/StateKisanYojanaHub';
 import KrishakUnnatiYojanaStatusCheck from '@/components/articles/rajya-yojana/KrishakUnnatiYojanaStatusCheck';
 
-/**
- * Register a body component here the same moment you set its `status: 'live'`
- * in lib/rajya-yojana-data.ts. A slug that is 'live' without an entry here —
- * or an entry here while still 'planned' — renders a 200 page with no <h1>,
- * which Ahrefs Site Audit reports as a soft-404. Keep the two in sync.
- *
- * Example:
- *   RajasthanKisanSammanNidhi: dynamic(
- *     () => import('@/components/articles/rajya-yojana/RajasthanKisanSammanNidhi'),
- *     { ssr: true }
- *   ),
- */
 const COMPONENTS: Record<string, React.ComponentType<{ article: RajyaYojanaArticleMeta }>> = {
   RajasthanKisanSammanNidhi9000,
   AnnadataSukhibhavaStatusCheck,
@@ -54,12 +42,6 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: RajyaYojanaArtic
   KrishakUnnatiYojanaStatusCheck,
 };
 
-/**
- * Same 3-node graph the /articles/[slug] route emits (Article + BreadcrumbList +
- * WebPage), mapped onto the rajya-yojana field names (`published`/`modified`/
- * `ogImage`, `mainKeyword`/`secondaryKeywords`, `state`). Every value comes from
- * lib/rajya-yojana-data.ts — nothing is invented here.
- */
 function buildSchemas(
   article: RajyaYojanaArticleMeta,
   url: string,
@@ -186,8 +168,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const article = getRajyaYojanaArticle(slug);
 
-  // Unknown or not-yet-live slug: the body calls notFound(), but this metadata overrides
-  // app/not-found.tsx's noindex, leaving the soft-404 shell indexable.
   if (!article || article.status !== 'live') {
     return { title: 'Not Found', robots: { index: false, follow: true } };
   }
@@ -242,7 +222,6 @@ export default async function RajyaYojanaArticlePage({
   const { slug } = await params;
   const article = getRajyaYojanaArticle(slug);
 
-  // 'planned' articles must 404 until their component ships.
   if (!article || article.status !== 'live') notFound();
 
   const ArticleComponent = COMPONENTS[article.component];
@@ -282,8 +261,6 @@ export default async function RajyaYojanaArticlePage({
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               {article.relatedPaths.map((path) => {
-                // Anchor text must be the real article title, not the raw slug
-                // (`/articles/PmKisanMasterGuide2026` -> "PM Kisan Master Guide 2026 ...").
                 const slug = path.split('/').pop() ?? '';
                 const label = getArticleBySlug(slug)?.title ?? slug;
                 return (

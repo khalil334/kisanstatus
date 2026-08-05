@@ -32,11 +32,6 @@ const CATEGORY_EMOJIS: Record<string, string> = {
   'rajya-yojana': '🏛️',
 };
 
-/**
- * Search index = central /articles plus the rajya-yojana cluster (served from
- * /rajya-yojana/<slug>). Each entry carries its own `href` so the result links
- * never assume the /articles/ prefix.
- */
 type SearchEntry = {
   slug: string;
   href: string;

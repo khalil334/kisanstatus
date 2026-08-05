@@ -148,9 +148,6 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
   ];
 }
 
-// Article components that do NOT render their own <RelatedArticles> block.
-// For these, the page wrapper injects a Related Articles section so every
-// article carries at least 5 contextual internal links (Ahrefs internal-link fix).
 const NEEDS_RELATED_BLOCK = new Set<string>([
   'CHCPortal',
   'SilageMaking',
@@ -223,9 +220,6 @@ export async function generateMetadata({
   }
   
   const article = ARTICLES_MAP[slug];
-  // Unknown slug: the page body calls notFound(), but this metadata still wins over
-  // app/not-found.tsx's own metadata. Without an explicit noindex the soft-404 shell is
-  // served as indexable (Ahrefs flags it as "H1 tag missing or empty" + "Noindex follow page").
   if (!article) {
     return {
       title: 'Article Not Found',

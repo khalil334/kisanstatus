@@ -15,7 +15,6 @@ const RELATED = [
   { slug: 'PmKisanMasterGuide2026', title: 'Master Guide', emoji: '' },
 ];
 
-// FIXED FAQs - Human Style
 const FAQS_DATA = [
   {
     q: 'Bhai form kahan se milega?',
@@ -43,9 +42,7 @@ const FAQS_DATA = [
   },
 ];
 
-// ALL 37 States and UTs with Official Bhulekh/Land Record Portals
 const STATE_LINKS = [
-  // Major States
   { name: 'Uttar Pradesh', url: 'https://upbhulekh.gov.in', slug: 'uttar-pradesh' },
   { name: 'Bihar', url: 'https://biharbhumi.bihar.gov.in', slug: 'bihar' },
   { name: 'Madhya Pradesh', url: 'https://bhu-abhilekh.nic.in', slug: 'madhya-pradesh' },
@@ -69,7 +66,6 @@ const STATE_LINKS = [
   { name: 'Kerala', url: 'https://erevenue.kerala.gov.in', slug: 'kerala' },
   { name: 'Goa', url: 'https://dlss.goa.gov.in', slug: 'goa' },
   
-  // North East States
   { name: 'Tripura', url: 'https://landrecords.tripura.gov.in', slug: 'tripura' },
   { name: 'Manipur', url: 'https://landrecords.manipur.gov.in', slug: 'manipur' },
   { name: 'Meghalaya', url: 'https://landrecords.meghalaya.gov.in', slug: 'meghalaya' },
@@ -78,7 +74,6 @@ const STATE_LINKS = [
   { name: 'Mizoram', url: 'https://landrecords.mizoram.gov.in', slug: 'mizoram' },
   { name: 'Sikkim', url: 'https://landrecords.sikkim.gov.in', slug: 'sikkim' },
   
-  // Union Territories
   { name: 'Delhi', url: 'https://dlrc.delhi.gov.in', slug: 'delhi' },
   { name: 'Puducherry', url: 'https://revenue.py.gov.in', slug: 'puducherry' },
   { name: 'Chandigarh', url: 'https://chandigarhrevenue.gov.in', slug: 'chandigarh' },
@@ -200,7 +195,7 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* Hero Image */}
+        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-land-seeding-form/land-seeding-form-hero.webp"
@@ -216,7 +211,7 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
           </p>
         </div>
 
-        {/* SECTION 1: Real Story */}
+        {}
         <section className="mb-8">
           <SH>Land Seeding Kya Hai? Real Problem Kya Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -242,7 +237,7 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
           </p>
         </section>
 
-        {/* SECTION 1B: Status Check — NEW */}
+        {}
         <section className="mb-8">
           <SH>Land Seeding Status Online Kaise Check Karein?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -291,7 +286,7 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
           </IB>
         </section>
 
-        {/* PDF Download Section */}
+        {}
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 border-l-[6px] rounded-xl">
           <h2 className="text-base font-black text-blue-800 dark:text-blue-300 mb-3">
             📥 State Wise Land Seeding Form - Official Links
@@ -317,7 +312,7 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
           </IB>
         </div>
 
-        {/* SECTION 2: What is Land Seeding */}
+        {}
         <section className="mb-8">
           <SH>Land Seeding Form Kyun Zaroori Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -345,7 +340,7 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
           </div>
         </section>
 
-        {/* SECTION 3: State Wise Forms */}
+        {}
         <section className="mb-8">
           <SH>State Wise Land Seeding Form Details</SH>
           
@@ -443,7 +438,7 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
           </div>
         </section>
 
-        {/* SECTION 4: Step by Step Process */}
+        {}
         <section className="mb-8">
           <SH>Land Seeding Form Kaise Bharein? Step-by-Step</SH>
           <StepList>
@@ -476,7 +471,7 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
           </WB>
         </section>
 
-        {/* SECTION 5: Common Problems */}
+        {}
         <section className="mb-8">
           <SH>Common Problems + Solutions</SH>
           <div className="space-y-3">
@@ -495,7 +490,7 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
           </div>
         </section>
 
-        {/* SECTION 6: Timeline */}
+        {}
         <section className="mb-8">
           <SH>Land Seeding Mein Kitna Time Lagta Hai?</SH>
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
@@ -532,7 +527,7 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
           </p>
         </div>
 
-        {/* FAQ */}
+        {}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Aksar Puche Jane Wale Sawal

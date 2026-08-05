@@ -3,7 +3,6 @@ import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
 
-// ── SEO Metadata ──────────────────────────────────────────────
 export const metadata: Metadata = {
   title: 'Silage Business Guide 2026: SMAM Subsidy & Profit',
   description: 'Silage banane ka business kaise shuru karein — chara storage tarika, chaff cutter cost, SMAM subsidy aur real profit calculation, sab kuch is guide mein.',
@@ -47,9 +46,6 @@ export const metadata: Metadata = {
   },
 };
 
-// ── Schema Markup (JSON-LD) ───────────────────────────────────
-// image/logo use ImageObject with width+height, and inLanguage is set —
-// these were the fields most likely to trip a schema.org validator.
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -177,13 +173,13 @@ const jsonLd = {
 export default function SilageMaking() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-8 text-gray-800 dark:text-gray-200 leading-relaxed prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-blue-600 dark:prose-a:text-blue-400">
-      {/* Schema Injection */}
+      {}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Image 1: Hero Image (LCP Optimization) */}
+      {}
       <Image 
         src="/images/kisanguides/silage-hero.webp" 
         alt="Silage Packets Stacked Near Dairy Farm - Agri Business Guide 2026" 
@@ -229,7 +225,7 @@ export default function SilageMaking() {
         <li><strong>Mehnat kam lagti hai:</strong> 25 kg ka packet uthana aur khilana jhanjhat-free hai — roz khet mein jaakar ghaas kaatne ki zarurat nahi.</li>
       </ul>
 
-      {/* Image 2: Silage Machinery */}
+      {}
       <Image 
         src="/images/kisanguides/silage-machinery.webp" 
         alt="Chaff Cutter and Silage Bag Sealing Machine in Action" 
@@ -329,7 +325,7 @@ export default function SilageMaking() {
         Machinery ke liye <a href="https://www.mudra.org.in/" className="text-blue-600 hover:underline dark:text-blue-400 font-medium" target="_blank" rel="noopener noreferrer">Mudra Loan</a> bhi le sakte ho — Tarun category mein ₹10 lakh tak bina collateral ke milta hai.
       </p>
 
-      {/* Image 3: Silage Packets */}
+      {}
       <Image 
         src="/images/kisanguides/silage-packets.webp" 
         alt="Stacked Silage Bags Ready for Dairy Farm Distribution" 
@@ -495,7 +491,7 @@ export default function SilageMaking() {
         Average munafa ₹150-180 per packet maan lo. 3,000 packets mahine mein bechoge toh monthly profit ₹4.5-5.4 lakh, saal ka ₹50-65 lakh ban sakta hai. Shuruaati 6 mahine mein realistically 1,000-1,500 packets hi bikenge, tab bhi monthly ₹1.5-2.7 lakh banta hai — bura nahi hai.
       </p>
 
-      {/* Image 4: Dairy Farm Delivery */}
+      {}
       <Image 
         src="/images/kisanguides/silage-dairy-farm.webp" 
         alt="Silage Delivery to Local Dairy Farm - Business Execution" 
@@ -585,7 +581,7 @@ export default function SilageMaking() {
         <li><strong>Contract Farming with Dairy Farms:</strong> 50+ bhains wale bade farms ke saath annual contract karo — fixed matra, fixed rate.</li>
       </ul>
 
-      {/* Image 5: Legal & Documents */}
+      {}
       <Image 
         src="/images/kisanguides/silage-documents.webp" 
         alt="Silage Business Legal Documents and Licenses Checklist" 
@@ -649,7 +645,7 @@ export default function SilageMaking() {
         Seriously interested ho toh pehle apne area ke 5-10 dairy farms se baat karo. Puchho — packaged fodder use karte hain ya nahi, kahan se lete hain, rate kya chalta hai. Research pehle, faisla baad mein.
       </p>
 
-      {/* FAQ Section */}
+      {}
       <h2 id="faq" className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Frequently Asked Questions (FAQs)
       </h2>

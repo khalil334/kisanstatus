@@ -1,7 +1,3 @@
-/**
- * /terms-of-service — KisanStatus.com
- * Legal Service Conditions & User Agreement (Optimized for Hinglish & SEO)
- */
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL, DEFAULT_OG_IMAGE } from '@/lib/site-config';

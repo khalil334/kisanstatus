@@ -16,14 +16,12 @@ export default function LandSeedingDownloadPage() {
     setIsRedirecting(true);
     setTimeout(() => {
       window.open(redirectUrl, '_blank', 'noopener,noreferrer');
-      setIsRedirecting(false); // Reset state after opening
+      setIsRedirecting(false);
     }, 500);
   };
 
   const pageTitle = `${state} PM Kisan Land Seeding Form PDF Download (2026)`;
 
-  // ✅ Schema.org: BreadcrumbList (Rule 9 compliance)
-  // Note: Current page 'item' omitted to prevent client-side hydration mismatch
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',

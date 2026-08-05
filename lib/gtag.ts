@@ -76,12 +76,6 @@ export type GTagEvent = {
 export const GA_MEASUREMENT_ID: string = 
   process.env.NEXT_PUBLIC_GA_ID ?? 'G-GZLLLGC4VC';
 
-// ✅ FIX: Changed from a `const` (evaluated once, at module-load time) to a
-// function that is evaluated on every call. The GA script now loads with
-// `strategy="lazyOnload"`, so `window.gtag` may not exist yet when this
-// module first runs — a `const` would have frozen `isGAEnabled` at `false`
-// forever, silently disabling all tracking. As a function, every tracking
-// call re-checks whether gtag has become available since.
 export function isGAEnabled(): boolean {
   return (
     typeof window !== 'undefined' &&

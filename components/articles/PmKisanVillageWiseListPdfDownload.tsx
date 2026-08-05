@@ -1,6 +1,5 @@
 'use client';
 
-// CHANGE 1: Added useMemo, useCallback, and memo to imports for performance optimization.
 import { useState, useEffect, useCallback, useMemo, memo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -52,8 +51,6 @@ const FAQS_DATA = [
   },
 ];
 
-// CHANGE 2: Wrapped CountdownButton in React.memo to prevent unnecessary re-renders 
-// when the parent component re-renders (e.g., when typing in the search bar).
 const CountdownButton = memo(function CountdownButton({ 
   title,
   description,
@@ -69,30 +66,21 @@ const CountdownButton = memo(function CountdownButton({
 }) {
   const [count, setCount] = useState<number | null>(null);
   
-  // CHANGE 3: Added state to hold the window reference to bypass popup blockers.
   const [popupRef, setPopupRef] = useState<Window | null>(null);
 
-  // CHANGE 4: Memoized click handler. 
-  // Opens a blank window synchronously on user gesture to secure user activation, 
-  // preventing modern browsers from blocking the popup later in the useEffect.
   const handleClick = useCallback(() => {
     const newPopup = window.open('', '_blank', 'noopener,noreferrer');
     setPopupRef(newPopup);
     setCount(10);
   }, []);
 
-  // CHANGE 5: Replaced the incorrect useState initializer (which was mistakenly used as an effect) 
-  // with a proper useEffect hook. This fixes the critical bug where the timer logic was never 
-  // re-evaluating and cleanup functions were ignored.
   useEffect(() => {
     if (count === null) return;
 
     if (count === 0) {
-      // Navigates the pre-opened window only once when countdown reaches 0.
       if (popupRef && !popupRef.closed) {
         popupRef.location.href = url;
       } else {
-        // Fallback if popup was blocked by an aggressive extension or closed by user
         window.open(url, '_blank', 'noopener,noreferrer');
       }
       setCount(null);
@@ -104,11 +92,9 @@ const CountdownButton = memo(function CountdownButton({
       setCount((prev) => (prev !== null ? prev - 1 : null));
     }, 1000);
 
-    // CHANGE 6: Proper cleanup to prevent memory leaks and clear timeout on unmount.
     return () => clearTimeout(timer);
   }, [count, url, popupRef]);
 
-  // CHANGE 7: Memoized cancel handler with proper cleanup to close orphaned blank tabs.
   const handleCancel = useCallback(() => {
     if (popupRef && !popupRef.closed) {
       popupRef.close();
@@ -134,13 +120,11 @@ const CountdownButton = memo(function CountdownButton({
         <button
           onClick={handleClick}
           className={`w-full px-6 py-4 ${bgColor} text-white text-sm font-bold rounded-xl transition-all shadow-lg hover:shadow-xl transform hover:scale-[1.02] active:scale-[0.98]`}
-          // CHANGE 8: Added accessibility label for screen readers.
           aria-label={`${buttonText}. Opens in 10 seconds after clicking.`}
         >
           {buttonText}
         </button>
       ) : (
-        // CHANGE 9: Added role and aria-live so screen readers announce the countdown updates.
         <div className="text-center py-4" role="status" aria-live="polite">
           <div className={`text-6xl font-black ${variant === 'green' ? 'text-green-600 dark:text-green-400' : 'text-blue-600 dark:text-blue-400'} mb-3 animate-pulse`}>
             {count}
@@ -185,8 +169,6 @@ const STATE_PORTALS = [
 export default function PmKisanVillageWiseListPdfDownload({ article }: { article: ArticleMeta }) {
   const [portalSearch, setPortalSearch] = useState('');
   
-  // CHANGE 10: Memoized the filtered array to avoid recalculating on every render 
-  // when unrelated state (like the countdown timer) changes.
   const filteredPortals = useMemo(() => 
     STATE_PORTALS.filter(p => 
       p.state.toLowerCase().includes(portalSearch.toLowerCase()) ||

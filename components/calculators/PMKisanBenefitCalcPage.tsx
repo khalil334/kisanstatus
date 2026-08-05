@@ -32,7 +32,6 @@ export default function PMKisanBenefitCalcPage() {
   const arrears= Number(missed) * 2000;
   const eligible = hasEkyc==='yes' && landN>0 && landN<=2;
 
-  // Breadcrumb schema — was missing before
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -43,8 +42,6 @@ export default function PMKisanBenefitCalcPage() {
     ],
   };
 
-  // aggregateRating removed — fabricated 4.9/2156 rating with no real
-  // reviews behind it. Replaced with real dates + author/publisher.
   const schema = {
     '@context':'https://schema.org',
     '@type':'WebApplication',
@@ -73,14 +70,14 @@ export default function PMKisanBenefitCalcPage() {
 
       <div className="container-site max-w-2xl py-8">
 
-        {/* Author + updated date — E-E-A-T signal */}
+        {}
         <div className="flex flex-wrap gap-3 text-xs text-[var(--color-text-muted)] mb-4">
           <span>✍️ <Link href="/about" className="underline hover:text-[var(--color-text)]">{AUTHOR_NAME}</Link></span>
           <span>📅 {fmtDate(PUBLISHED)}</span>
           <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
         </div>
 
-        {/* Detailed intro - helpful content */}
+        {}
         <div className="mb-6 p-5 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl text-sm text-[var(--color-text)] leading-relaxed">
           <p className="font-bold text-green-900 dark:text-green-300 mb-2">🌾 PM Kisan Se Kitna Paisa Milega</p>
           <p className="mb-2">
@@ -164,7 +161,7 @@ export default function PMKisanBenefitCalcPage() {
           )}
         </div>
 
-        {/* Quick facts */}
+        {}
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
           {[
             {icon:'💰',title:'₹6,000 Saalana',desc:'₹2,000 ki 3 kist — DBT se seedha bank mein'},
@@ -179,7 +176,7 @@ export default function PMKisanBenefitCalcPage() {
           ))}
         </div>
 
-        {/* Year-by-year breakdown */}
+        {}
         <div className="mt-6 bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-5 shadow-sm">
           <h3 className="font-black text-[var(--color-text)] text-sm mb-4">📊 Saal-War Breakdown</h3>
           <div className="overflow-x-auto">
@@ -218,7 +215,7 @@ export default function PMKisanBenefitCalcPage() {
           </div>
         </div>
 
-        {/* How to enroll */}
+        {}
         <div className="mt-6 bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-5 shadow-sm">
           <h3 className="font-black text-[var(--color-text)] text-sm mb-4">📝 PM Kisan Mein Register Kaise Ho</h3>
           <div className="space-y-3">
@@ -254,7 +251,7 @@ export default function PMKisanBenefitCalcPage() {
           </Link>
         </div>
 
-        {/* Common mistakes */}
+        {}
         <div className="mt-6 p-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-xl">
           <p className="font-bold text-yellow-900 dark:text-yellow-300 text-sm mb-2">⚠️ PM Kisan Mein Aksar Yeh Galtiyan Hoti Hain:</p>
           <ul className="space-y-1.5 text-xs text-yellow-800 dark:text-yellow-400">
@@ -266,7 +263,7 @@ export default function PMKisanBenefitCalcPage() {
           </ul>
         </div>
 
-        {/* Tips */}
+        {}
         <div className="mt-6">
           <h3 className="font-black text-[var(--color-text)] text-sm mb-3">💡 PM Kisan Se Maximum Fayda Kaise Uthao</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
@@ -293,7 +290,7 @@ export default function PMKisanBenefitCalcPage() {
         
         <OtherCalcs current="/calculator/pm-kisan-benefit" />
 
-        {/* Related articles */}
+        {}
         <div className="mt-6 p-5 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
           <p className="font-bold text-green-900 dark:text-green-300 text-sm mb-3">📖 PM Kisan Se Related Guides</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -318,7 +315,7 @@ export default function PMKisanBenefitCalcPage() {
           </div>
         </div>
 
-        {/* FAQ section */}
+        {}
         <div className="mt-6 p-5 bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-xl">
           <p className="font-bold text-[var(--color-text)] text-sm mb-3">❓ PM Kisan Ke Baare Mein Aksar Sawaal</p>
           <div className="space-y-3 text-xs">

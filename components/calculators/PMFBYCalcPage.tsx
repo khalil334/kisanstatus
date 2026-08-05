@@ -45,7 +45,6 @@ export default function PMFBYCalcPage() {
   const govShare   = totalCover*(rate>2?rate-2:0)/100;
   const farmerPays = premium - govShare;
 
-  // Breadcrumb schema — was missing before
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -56,8 +55,6 @@ export default function PMFBYCalcPage() {
     ],
   };
 
-  // aggregateRating removed — fabricated 4.7/987 rating with no real
-  // reviews behind it. Replaced with real dates + author/publisher.
   const schema = {
     '@context':'https://schema.org',
     '@type':'WebApplication',
@@ -86,14 +83,14 @@ export default function PMFBYCalcPage() {
 
       <div className="container-site max-w-2xl py-8">
 
-        {/* Author + updated date — E-E-A-T signal */}
+        {}
         <div className="flex flex-wrap gap-3 text-xs text-gray-500 mb-4">
           <span>✍️ <Link href="/about" className="underline hover:text-gray-700">{AUTHOR_NAME}</Link></span>
           <span>📅 {fmtDate(PUBLISHED)}</span>
           <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
         </div>
 
-        {/* Detailed intro - helpful content */}
+        {}
         <div className="mb-6 p-5 bg-amber-50 border border-amber-200 rounded-xl text-sm text-gray-700 leading-relaxed">
           <p className="font-bold text-amber-900 mb-2">🛡️ Fasal Bima — Kharab Fasal Par Bhi Paisa Milega</p>
           <p className="mb-2">
@@ -163,7 +160,7 @@ export default function PMFBYCalcPage() {
             </div>
           )}
 
-          {/* Premium rates table */}
+          {}
           <div className="mt-5">
             <p className="font-bold text-gray-900 text-xs mb-3">📋 Sabhi Fasal Ka Premium Rate</p>
             <div className="overflow-x-auto rounded-xl border border-gray-200">
@@ -189,7 +186,7 @@ export default function PMFBYCalcPage() {
           </div>
         </div>
 
-        {/* How to claim */}
+        {}
         <div className="mt-6 bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
           <h3 className="font-black text-gray-900 text-sm mb-4">⚡ Fasal Kharab Ho Jaye To Claim Kaise Le?</h3>
           <div className="space-y-3">
@@ -221,7 +218,7 @@ export default function PMFBYCalcPage() {
           </div>
         </div>
 
-        {/* Eligibility */}
+        {}
         <div className="mt-6 bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
           <h3 className="font-black text-gray-900 text-sm mb-3">✅ Kaun Fasal Bima Le Sakta Hai?</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
@@ -244,7 +241,7 @@ export default function PMFBYCalcPage() {
           </Link>
         </div>
 
-        {/* Tips */}
+        {}
         <div className="mt-6">
           <h3 className="font-black text-gray-900 text-sm mb-3">💡 Fasal Bima Se Maximum Fayda Kaise Uthao</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
@@ -267,7 +264,7 @@ export default function PMFBYCalcPage() {
           </div>
         </div>
 
-        {/* Common mistakes */}
+        {}
         <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-xl">
           <p className="font-bold text-yellow-900 text-sm mb-2">⚠️ Fasal Bima Mein Aksar Yeh Galtiyan Hoti Hain:</p>
           <ul className="space-y-1.5 text-xs text-yellow-800">
@@ -283,7 +280,7 @@ export default function PMFBYCalcPage() {
         
         <OtherCalcs current="/calculator/pmfby-premium" />
 
-        {/* Related articles */}
+        {}
         <div className="mt-6 p-5 bg-amber-50 border border-amber-200 rounded-xl">
           <p className="font-bold text-amber-900 text-sm mb-3">📖 Fasal Bima Se Related Guides</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -308,7 +305,7 @@ export default function PMFBYCalcPage() {
           </div>
         </div>
 
-        {/* FAQ section */}
+        {}
         <div className="mt-6 p-5 bg-gray-50 border border-gray-200 rounded-xl">
           <p className="font-bold text-gray-900 text-sm mb-3">❓ Fasal Bima Ke Baare Mein Aksar Sawaal</p>
           <div className="space-y-3 text-xs">

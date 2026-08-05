@@ -7,11 +7,9 @@ import Script from 'next/script';
 import { SI, StepList, IB, WB, DB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 
-// ✅ UPDATED DATES: Modified date set to today (July 22, 2026) for strong E-E-A-T signal
 const PUBLISHED = '2026-07-10T08:00:00+05:30';
 const MODIFIED = '2026-07-22T08:00:00+05:30';
 
-// Visual Card Data for Internal Linking (Deep Linking with Descriptions)
 const RELATED_CARDS = [
   { 
     slug: 'PmKisanPaymentFailedFix2026', 
@@ -33,8 +31,6 @@ const RELATED_CARDS = [
   },
 ];
 
-// ✅ FACTUAL CORRECTION: Replaced placeholder/unverified state-specific emails with official central contacts 
-// and a direct link to the official Nodal Officers list to ensure 100% accuracy.
 const ALL_REGIONS = [
   'Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh', 'Goa', 'Gujarat', 'Haryana', 
   'Himachal Pradesh', 'Jharkhand', 'Karnataka', 'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Manipur', 
@@ -156,7 +152,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
 
   return (
     <>
-      {/* AEO/GEO & Technical SEO: JSON-LD Schema Injection */}
+      {}
       <Script id="nodal-officer-schema" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify({
           "@context": "https://schema.org",
@@ -211,7 +207,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">PM Kisan Shikayat Contact List 2026</span>
           
-          {/* SEO Optimized H1: Exactly 56 Characters */}
+          {}
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
             PM Kisan State Nodal Officer List 2026: Email & Phone No
           </h1>
@@ -227,7 +223,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
 
       <div className="container-site max-w-3xl py-8">
 
-        {/* AEO Direct Answer Block */}
+        {}
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-r-xl">
           <p className="text-sm md:text-base text-blue-900 dark:text-blue-100 leading-relaxed font-medium">
             <strong>Seedha Jawab:</strong> PM Kisan State Nodal Officer har state ke Agriculture Department mein appointed ek senior official hote hain jo kisanon ki unresolved shikayaton (jaise payment fail, name mismatch) ko solve karte hain. Agar 155261 helpline se madad nahi milti, toh aap direct apne state ke Nodal Officer ko email kar sakte hain. Neeche 2026 ki updated contact guidelines aur complaint escalate karne ka poora tarika diya gaya hai.
@@ -532,7 +528,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
           portalName="pmkisan.gov.in"
         />
 
-        {/* VISUAL CARD STYLE INTERNAL LINKING */}
+        {}
         <section className="my-10">
           <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Aapke Liye Zaroori Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

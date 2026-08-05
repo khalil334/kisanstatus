@@ -31,7 +31,6 @@ const RELATED_CARDS = [
   },
 ];
 
-// Age-wise monthly contribution data (shared by the calculator widget and the reference table below)
 const CONTRIBUTION_DATA: { age: number; monthly: number; total: number }[] = [
   { age: 18, monthly: 55, total: 27720 }, { age: 19, monthly: 58, total: 28536 },
   { age: 20, monthly: 60, total: 28800 }, { age: 21, monthly: 62, total: 28428 },
