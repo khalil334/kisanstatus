@@ -213,6 +213,15 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         <strong>Note:</strong> Kabhi-kabhi treasury se fund release hone mein thoda samay lag jata hai. Agar PM Kisan aa gaya hai lekin Namo Shetkari nahi aaya, toh 15-20 din ka intezaar karna normal hai.
       </InfoBox>
 
+      <p>
+        Kai kisan <strong>namo shetkari 9 instalment</strong> (9va hapta) search karte hain —
+        scheme 2023 se chal rahi hai aur har saal do-teen kist milti hain, isliye ginti ab aage
+        badh chuki hai. Agla hapta kab aayega iski official date sirf portal aur sarkari
+        announcement se confirm hoti hai; jab bhi nayi kist release hoti hai, wo PM Kisan ki
+        latest kist ke kuch hafte baad hi aati hai. Status check ka tareeka har kist ke liye
+        same rehta hai — neeche wale steps follow karein.
+      </p>
+
       <h2>Apna Status Kaise Dekhein</h2>
 
       <p>
@@ -239,12 +248,12 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         label="Check Status on Official NSMNY Portal"
       />
 
-      <h2>Beneficiary List Mein Naam Dhoondhna</h2>
+      <h2>Beneficiary List 2026 PDF Mein Naam Dhoondhna</h2>
 
       <p>
         Poore gaon ya taluke ka hisaab dekhna ho — kis-kis ka naam bana hai — to{' '}
-        <strong>namo shetkari beneficiary list</strong> portal par khud download ki jaa sakti
-        hai:
+        <strong>namo shetkari yojana beneficiary list 2026 PDF</strong> portal par khud download
+        ki jaa sakti hai:
       </p>
 
       <ol>
