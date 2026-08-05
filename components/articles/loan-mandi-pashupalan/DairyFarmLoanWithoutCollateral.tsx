@@ -157,6 +157,10 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
           </ul>
         </DB>
 
+        <p className="text-sm text-[var(--color-text)] mb-6">
+          <strong>Last Updated: 5 August 2026</strong>
+        </p>
+
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           &ldquo;Zameen ke kagaz laao, security lagegi.&rdquo; Branch manager ki yeh ek line har saal hazaron dairy ke
           sapne wahin rok deti hai. Maine branch mein khud dekha hai — aadmi poori taiyari se aaya, par zameen naam

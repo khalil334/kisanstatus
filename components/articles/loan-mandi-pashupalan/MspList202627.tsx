@@ -142,6 +142,10 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           </ul>
         </DB>
 
+        <p className="text-sm text-[var(--color-text)] mb-6">
+          <strong>Last Updated: 5 August 2026</strong>
+        </p>
+
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           Fasal katne ke baad sabse pehla sawal yahi hota hai — is baar sarkari rate kya hai? MSP ka number
           pata ho toh mandi mein vyapari ke saamne aapki position mazboot hoti hai. Pata na ho toh jo rate

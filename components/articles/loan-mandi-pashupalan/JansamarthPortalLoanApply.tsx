@@ -104,6 +104,10 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
           </ul>
         </DB>
 
+        <p className="text-sm text-[var(--color-text)] mb-6">
+          <strong>Last Updated: 5 August 2026</strong>
+        </p>
+
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           Sarkari loan ka purana tareeka sab jaante hain — branch ke chakkar, har baar naya kagaz, aur mahino ka
           intezar. JanSamarth portal isi jhanjhat ko khatam karne ke liye banaya gaya: Bharat sarkar ka ek platform

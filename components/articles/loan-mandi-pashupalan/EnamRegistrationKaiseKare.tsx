@@ -104,6 +104,10 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
           </ul>
         </DB>
 
+        <p className="text-sm text-[var(--color-text)] mb-6">
+          <strong>Last Updated: 5 August 2026</strong>
+        </p>
+
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           Mandi ka purana scene sabko pata hai — fasal utaari, aur wahi chaar-paanch vyapari aapas mein dekh kar
           rate tay. Na competition, na chaara. eNAM isi ganth ko kholta hai: aapki fasal wahi mandi mein padi
