@@ -245,7 +245,7 @@ export default function OdishaCmKisanStatusCheck({
           label="CM Kisan portal par apna status dekhein"
         />
 
-        <h2>Beneficiary List Mein Naam Dhoondhna</h2>
+        <h2>Beneficiary List Mein Naam Dhoondhna (Village Wise List 2026)</h2>
 
         <p>
           Agar status search khaali aata hai, to district aur panchayat wise suchi dekhna
@@ -270,6 +270,14 @@ export default function OdishaCmKisanStatusCheck({
           Yahan ek chhoti si baat kaam ki hai: kai log galat jagah dhoondte rehte hain.
           Bhoomiheen parivaar cultivator wali suchi mein nahi milega, aur zameen wala kisan
           landless wali mein nahi. Pehle apna track pakka karein, phir dekhna shuru karein.
+        </p>
+
+        <p>
+          Jo log <strong>CM Kisan portal Odisha status check 2026 list village wise</strong> dhoondhte
+          hain, unke liye yahi raasta hai — portal par alag se “village list” naam ka button nahi
+          hota; zila → block → gram panchayat select karne par aapke gaon ke sabhi beneficiaries ki
+          suchi khul jaati hai. Wahi village wise list hai, use panchayat office ke notice board par
+          bhi lagaya jaata hai.
         </p>
 
         <h2>Paisa Na Aane Ki Sabse Aam Wajahein</h2>
