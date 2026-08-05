@@ -109,6 +109,10 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
           </ul>
         </DB>
 
+        <p className="text-sm text-[var(--color-text)] mb-6">
+          <strong>Last Updated: 5 August 2026</strong>
+        </p>
+
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           &ldquo;SBI dairy loan interest rate&rdquo; search karo toh dus website dus alag number bata deti hain — koi 7.5%,
           koi 10%, koi 11.25%. Sach yeh hai ki inme se koi bhi aapka rate nahi hai. SBI ke paas dairy ke naam ka koi
@@ -454,8 +458,9 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
             <a href="https://kupwara.nic.in/achievements/success-story-dairy-farming/" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">kupwara.nic.in</a>
           </li>
           <li>
-            Dept of Financial Services — KCC for Animal Husbandry & Fisheries SOP, 24 Sep 2021.{' '}
-            <a href="https://taxguru.in/finance/kcc-animal-husbandry-dairying-fisheries.html" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">taxguru.in</a>
+            Dept of Animal Husbandry &amp; Dairying — &ldquo;Guidelines/SoP for exclusive Kisan Credit Cards (KCC) for
+            Animal Husbandry, Dairying and Fisheries farmers&rdquo; (official PDF, 08.10.2021), Kisan Credit Cards division page.{' '}
+            <a href="https://www.dahd.gov.in/index.php/en/division/kcc" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">dahd.gov.in — Kisan Credit Cards (KCC guidelines &amp; SoP)</a>
           </li>
         </ul>
 
