@@ -2,7 +2,7 @@ import type { ArticleMeta } from './articles-data';
 
 // 11 new articles from the low-competition content plan (Aug 2026).
 // Separate from the core list in articles-data.ts; categories are shared.
-export const NEW_ARTICLES: readonly ArticleMeta[] = [
+export const LOW_COMPETITION_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'dairy-farm-loan-without-collateral',
     title: 'Dairy Farm Loan Bina Collateral 2026',
