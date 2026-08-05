@@ -50,6 +50,14 @@ const FAQS_DATA = [
     q: 'Rate ka daily update kahan dekhein?',
     a: 'Apni mandi ka reported rate eNAM/AgMarknet data se dekho — hamari Aaj Ka Mandi Bhav page aur Best Mandi Bhav Apps guide isi ke liye hai. Bade sauda se pehle mandi mein phone karke us din ki boli confirm kar lo.',
   },
+  {
+    q: 'Kya state apna bonus bhi deta hai MSP ke upar?',
+    a: 'Kuch states dete hain — jaise Madhya Pradesh ne 2026-27 season mein ₹40 per quintal ka state bonus diya, jisse kisan ko total ₹2,625 mila. Yeh har saal aur har state mein alag hota hai. Apne state ke procurement portal ya kharid kendra se current season ka bonus zaroor pucho — yeh seedha extra paisa hai.',
+  },
+  {
+    q: 'Premium variety (sharbati/lokwan) ka kya karein — MSP mein dena to ghata hai?',
+    a: 'Bilkul — sharbati, lokwan jaisi premium varieties open market mein MSP se kaafi upar bikti hain; unhe sarkari kendra par general rate mein dena apna hi nuksan hai. Premium maal ke liye buyers alag hote hain (flour mills, traders, seed companies) — wahan seedha ya eNAM ke through pahuncho. MSP wala rasta general/FAQ quality ke maal ke liye rakho.',
+  },
 ];
 
 export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta }) {
@@ -184,13 +192,36 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
           liye). Isse aap na poore girte rate mein fanste ho, na poora fayda chhodte ho.
         </DB>
 
+        <SH>🌾 Premium Variety Ka Alag Hisaab — Sharbati Wale Dhyan Dein</SH>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          MSP vs mandi ka faisla variety ke hisaab se bilkul palat jaata hai. General/dara gehu — jiski quality
+          FAQ standard ke aas-paas hai — uske liye MSP ka jaal sabse zyada matter karta hai. Lekin{' '}
+          <strong>sharbati, lokwan, bansi jaisi premium varieties</strong> ka open market rate aam taur par MSP
+          se kaafi upar chalta hai — sharbati toh kai baar MSP se ₹1,000-2,000 upar bikta hai. Aisi variety
+          sarkari kendra par dena apne premium ko muft mein chhodna hai, kyunki wahan variety ka koi extra
+          nahi milta — sab ek hi rate par taula jaata hai.
+        </p>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Premium maal ke liye buyers bhi alag hote hain — flour mills, branded atta companies, seed producers
+          aur bade traders. Inke saath seedha sauda ya eNAM ki online bidding behtar rate nikalti hai, kyunki
+          door ke buyers assaying report mein variety aur quality dekh kar bid karte hain. Aur ek baat —
+          premium variety saaf-suthri, graded halat mein hi apna premium paati hai; mila-jula maal general
+          rate par hi girta hai. Grading ki thodi mehnat yahan sabse zyada return deti hai.
+        </p>
+
         <SH>🏛️ MSP Par Bechna Ho Toh — Process</SH>
         <StepList>
           <SI n={1}><strong>Registration:</strong> apne state ke procurement portal par (UP, MP, Rajasthan, Bihar — sab ke apne portal hain) season se pehle registration karo. Aadhaar, bank details, zameen ke record lagenge.</SI>
           <SI n={2}><strong>Slot/token:</strong> registration ke baad kharid kendra aur date ka slot milta hai. Bina slot ke maal le jaakar khada rehna padta hai.</SI>
           <SI n={3}><strong>Quality prep:</strong> gehu saaf karo, sukha lo — FAQ standards (nami, tuta dana, kachra) par jaanch hoti hai.</SI>
           <SI n={4}><strong>Taul aur payment:</strong> electronic taul ke baad payment seedha bank account mein aati hai. Receipt sambhaal kar rakho.</SI>
+          <SI n={5}><strong>State bonus check karo:</strong> kuch states MSP ke upar apna bonus dete hain (jaise MP ka ₹40 per quintal — total ₹2,625). Yeh automatic milta hai, par pata hona chahiye taaki payment short aaye toh pakad sako.</SI>
         </StepList>
+        <WB>
+          Registration window season se pehle khulti hai aur deadline sakht hoti hai — jaise Gujarat mein
+          registration February mein hota hai aur kharid March-May mein. Window nikal gayi toh us season MSP
+          ka rasta band. Apne state ke portal par January-February se nazar rakhna shuru kar do.
+        </WB>
 
         <GovLink
           href="https://agmarknet.gov.in"
