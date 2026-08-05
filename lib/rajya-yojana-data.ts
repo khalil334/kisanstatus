@@ -269,7 +269,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
     ],
     title: 'Krishak Unnati Yojana Status Check 2026',
     description:
-      'Chhattisgarh Krishak Unnati Yojana ki antar rashi ka status, ₹3,100 prati quintal ka hisaab, ekmusht payment aur Kharif 2026 se naya ₹15,000 prati acre component — poori jaankari.',
+      'Chhattisgarh Krishak Unnati Yojana antar rashi ka status, ₹3,100 prati quintal ka hisaab, ekmusht payment aur Kharif 2026 se naya ₹15,000 prati acre component.',
     ogTitle: 'Krishak Unnati Yojana — Antar Rashi Aur Naya ₹15,000 Component',
     component: 'KrishakUnnatiYojanaStatusCheck',
     state: 'Chhattisgarh',

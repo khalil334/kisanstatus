@@ -148,20 +148,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly', 
       priority: 0.85,
     },
-    // FIX(SEO): /author and /official-links are indexable pages (canonical set,
-    // robots index:true) that were missing from the sitemap entirely.
-    {
-      url: `${SITE_URL}/author`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.60,
-    },
-    {
-      url: `${SITE_URL}/official-links`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.70,
-    },
+    // FIX(SEO): /author and /official-links now 308-redirect to /about and
+    // /contact (see vercel.json redirects) — redirected URLs must not be listed
+    // in the sitemap, so they were removed here.
     { 
       url: `${SITE_URL}/about`, 
       lastModified: new Date('2026-06-15'), 
