@@ -1,13 +1,115 @@
 'use client';
 
 import Link from 'next/link';
-import { IB, AuthorBox, BottomNav, Disclaimer, fmtDate } from '@/components/ArticleShared';
+import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
-import { CATEGORIES } from '@/lib/articles-data';
+
+const RELATED = [
+  { slug: 'sbi-dairy-loan-interest-rate', title: 'SBI Dairy Loan Interest Rate', emoji: '🏦' },
+  { slug: 'bihar-pashupalan-loan-yojana', title: 'Bihar Pashupalan Loan Yojana', emoji: '🐃' },
+  { slug: 'murgi-palan-loan-nlm-subsidy', title: 'Murgi Palan Loan & NLM Subsidy', emoji: '🐔' },
+  { slug: 'rashtriya-gokul-mission-subsidy', title: 'Rashtriya Gokul Mission Subsidy', emoji: '🐄' },
+  { slug: 'jansamarth-portal-loan-apply', title: 'JanSamarth Portal Loan Apply', emoji: '💻' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply', emoji: '💳' },
+];
+
+const FAQS_DATA = [
+  {
+    q: 'Kya sach mein bina zameen girvi rakhe dairy loan mil jata hai?',
+    a: 'Haan, lekin sirf ek limit tak. Mudra ke chaaron category (Shishu se Tarun Plus tak, ₹20 lakh) mein bank collateral nahi maang sakta — guarantee cover CGFMU deta hai. Isse upar ka loan bhi bina property ho sakta hai agar bank use CGTMSE guarantee ke neeche daal de. Zameen ke kagaz phir bhi maange ja sakte hain, par pledge ke liye nahi — sirf ye dikhane ke liye ki shed kahan banega.',
+  },
+  {
+    q: 'Mere paas apni zameen hi nahi hai, kirae ki jagah par shed banaunga. Loan milega?',
+    a: 'Mil sakta hai. Bank ko jagah ka legal control chahiye hota hai, ownership zaroori nahi — 5-7 saal ka registered rent/lease agreement zyada tar cases mein chal jata hai, kyunki loan tenure usse chhota hota hai. Lease loan period se chhota hua toh objection pakka aayega, isliye agreement banwate waqt hi tenure lamba rakhwa lo.',
+  },
+  {
+    q: 'CIBIL score kitna hona chahiye?',
+    a: 'Government scheme mein koi official cut-off likha nahi hai, par branch practice mein 700 ke aas-paas ka score aasani se nikal jata hai. Asli dikkat score kam hone se zyada active default se hoti hai — purana loan NPA chal raha ho, ya kisi ka guarantor bane ho jiska loan bigad gaya ho, toh file wahin ruk jati hai. Apply se pehle free CIBIL report nikaal kar purane settled loans ka "closed" status check kar lena.',
+  },
+  {
+    q: 'Mudra, PMEGP aur CGTMSE — teeno ek saath le sakta hoon?',
+    a: 'Nahi. Ek hi project par Mudra aur PMEGP dono nahi milte, kyunki dono ka funding source alag hai aur double subsidy allowed nahi. CGTMSE alag cheez hai — woh loan nahi, guarantee hai, jo bank aapke normal term loan ke peeche laga deta hai. Practical combination: PMEGP (subsidy ke liye) ya Mudra (speed ke liye) + CGTMSE cover, aur uske saath working capital ke liye KCC.',
+  },
+  {
+    q: 'Subsidy paisa kab aur kaise milta hai?',
+    a: 'Zyada tar dairy subsidy back-ended hoti hai — pehle poora loan sanction hota hai, kharch hota hai, unit chalu hoti hai, phir subsidy ka amount aata hai. PMEGP mein margin money 3 saal ke lock-in ke saath ek alag account mein rakha jata hai; unit theek chali toh loan mein adjust ho jata hai. Matlab: subsidy se EMI kam hoti hai, upfront cash hath mein nahi aata.',
+  },
+  {
+    q: '2 gaay ke chhote unit ke liye kaunsa route sahi hai?',
+    a: 'Mudra Shishu ya Kishore. ₹50,000 tak Shishu, uske upar Kishore — dono mein documentation halka hai aur DPR bhi 2-3 page ka chal jata hai. Itne chhote unit ke liye PMEGP file banwana time waste hai, kyunki us process mein DPR, EDP training aur committee approval sab lagta hai.',
+  },
+  {
+    q: 'NABARD DEDS band ho gayi hai kya?',
+    a: 'DEDS ka structure abhi bhi documented hai — 25% general, 33.33% SC/ST back-ended subsidy — par iski funding saal-dar-saal intermittent rahi hai, aur kai branch officers batate hain ki naye application par subsidy sanction available nahi tha. Isliye DEDS ko plan ka base na banao. Apni district ke NABARD office ya financing bank se likhit confirm karo ki is saal window khuli hai ya nahi, phir aage badho.',
+  },
+  {
+    q: 'Loan ke liye kitni gaay ka project banwana chahiye?',
+    a: 'Woh aapke doodh bechne ke intezaam par depend karta hai, gaay ki ginti par nahi. Agar gaon mein cooperative ya dairy collection centre hai jo roz uthata hai, toh 8-10 pashu ka unit sambhal jata hai. Sirf local grahak par depend ho toh 4-5 se shuru karo — warna doodh bachega, khali paisa chara mein jayega. Bank bhi yahi dekhta hai ki milk kahan bikega.',
+  },
+  {
+    q: 'Application reject ho gayi toh dobara kab apply kar sakta hoon?',
+    a: 'Koi fixed waiting period nahi hai, lekin usi branch mein wahi file dobara daalna bekar hai. Pehle likhit reason lo — bank ko rejection ka reason batana padta hai. Aam wajahein: DPR mein doodh ka rate zyada dikha diya, chara ka kharcha kam dikha diya, ya repayment capacity match nahi hui. Numbers theek karke 1-2 mahine baad dobara file karo, chahe usi bank mein ya doosri branch mein.',
+  },
+  {
+    q: 'Interest subvention aur subsidy — dono ek hi cheez hai?',
+    a: 'Nahi. Subsidy project cost ka ek hissa maaf karti hai (jaise PMEGP margin money). Interest subvention loan ka amount kam nahi karti, sirf byaj ka bojh ghatati hai — AHIDF mein 3% tak interest subvention milta hai bade dairy processing projects par. Chhote farm ke liye subsidy zyada matter karti hai, bade processing unit ke liye subvention.',
+  },
+];
+
+type Route = {
+  name: string;
+  limit: string;
+  collateral: string;
+  subsidy: string;
+  fit: string;
+};
+
+const ROUTES: Route[] = [
+  {
+    name: 'Mudra (PMMY)',
+    limit: '₹20 lakh tak (Tarun Plus)',
+    collateral: 'Zero — CGFMU cover',
+    subsidy: 'Koi capital subsidy nahi',
+    fit: 'Chhota-madhyam unit, jaldi paisa chahiye',
+  },
+  {
+    name: 'PMEGP',
+    limit: '₹50 lakh tak project (manufacturing)',
+    collateral: '₹10 lakh tak zero',
+    subsidy: '15%–35% margin money',
+    fit: 'Naya unit, subsidy ke liye intezaar kar sakte ho',
+  },
+  {
+    name: 'CGTMSE-backed bank loan',
+    limit: '₹10 crore tak cover',
+    collateral: 'Guarantee se replace',
+    subsidy: 'Nahi — sirf guarantee',
+    fit: 'Bada farm, bank normal term loan de raha hai',
+  },
+  {
+    name: 'Stand-Up India',
+    limit: '₹10 lakh – ₹1 crore',
+    collateral: 'CGTMSE ke through',
+    subsidy: 'Nahi',
+    fit: 'SC/ST ya mahila, pehla greenfield unit',
+  },
+];
+
+const MUDRA_SLABS = [
+  { cat: 'Shishu', range: 'Up to ₹50,000', use: '1-2 pashu, chara ka intezaam' },
+  { cat: 'Kishore', range: '₹50,001 – ₹5 lakh', use: '3-6 pashu + chhota shed' },
+  { cat: 'Tarun', range: '₹5 lakh – ₹10 lakh', use: '8-10 pashu, pucca shed, chaff cutter' },
+  { cat: 'Tarun Plus', range: '₹10 lakh – ₹20 lakh', use: 'Expansion — sirf un logon ke liye jinhone pehla Tarun loan chuka diya' },
+];
+
+const PMEGP_ROWS = [
+  { who: 'General', area: 'Shahar', sub: '15%', own: '10%' },
+  { who: 'General', area: 'Gaon', sub: '25%', own: '10%' },
+  { who: 'SC/ST/OBC/Minority/Mahila/Ex-servicemen/Divyang', area: 'Shahar', sub: '25%', own: '5%' },
+  { who: 'SC/ST/OBC/Minority/Mahila/Ex-servicemen/Divyang', area: 'Gaon', sub: '35%', own: '5%' },
+];
 
 export default function DairyFarmLoanWithoutCollateral({ article }: { article: ArticleMeta }) {
-  const category = CATEGORIES[article.category];
-
   return (
     <>
       <div className="bg-[var(--color-primary)] py-8">
@@ -17,40 +119,376 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
             <span>/</span>
             <Link href="/articles" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Articles</Link>
             <span>/</span>
-            <span className="text-white font-bold">{article.title}</span>
+            <span className="text-white font-bold">Dairy Farm Loan Bina Collateral</span>
           </nav>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            {article.title}
+            Dairy Farm Loan Bina Collateral 2026: Zameen Girvi Rakhe Bina ₹20 Lakh Tak Kaise Milega
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
             <span>📅 {fmtDate(article.publishedTime)}</span>
             <span>🔄 Updated: {fmtDate(article.modifiedTime)}</span>
+            <span>⏱️ 11 min read</span>
           </div>
         </div>
       </div>
 
       <div className="container-site max-w-3xl py-8">
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-          {article.desc}
+          Dairy farm khol ne ka mann bahut logon ka hota hai. Ruk wahan jaate hain jab branch manager kehta hai —
+          &ldquo;zameen ke kagaz laao, security lagegi.&rdquo; Jiske naam par zameen nahi hai, ya jiske hisse ka batwara
+          ghar mein hua nahi hai, uske liye baat wahin khatam ho jati hai.
+        </p>
+
+        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
+          Lekin niyam ke hisaab se baat wahan khatam nahi honi chahiye. Teen aise raaste hain jinme bank ko property
+          maangne ki zaroorat nahi padti — kyunki risk cover karne ke liye sarkari guarantee already maujood hai. Is guide
+          mein wahi teen raaste, unki asli limit, kharcha, aur woh chhoti-chhoti wajahein jinse file atak jati hai.
+        </p>
+
+        <SH>🎯 Sabse Pehle: Collateral aur Guarantee Ka Fark</SH>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Collateral matlab aapki koi cheez — zameen, makaan, FD — jo bank ke paas girvi rehti hai. Guarantee ka matlab
+          alag hai: koi teesra bank ko yeh bharosa deta hai ki loan doob gaya toh nuksan ka bada hissa woh bhar dega.
+          Dairy loan mein yeh teesra sarkari trust hota hai — chhote loan par CGFMU, bade par CGTMSE.
+        </p>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Yahi baat samajh lene se branch mein baat karna aasan ho jata hai. Aap security dene se mana nahi kar rahe —
+          aap keh rahe ho ki is scheme mein security ki jagah guarantee cover lagta hai. Officer ko yeh bhasha samajh
+          aati hai.
         </p>
 
         <IB>
-          Yeh guide abhi update ho rahi hai — puri step-by-step jankari, tables aur FAQ jald hi
-          yahan milenge. Tab tak {category ? (
-            <Link href={`/articles/category/${article.category}`} className="underline font-bold">
-              {category.name}
-            </Link>
-          ) : (
-            <Link href="/articles" className="underline font-bold">Articles</Link>
-          )}{' '}
-          ke baaki articles dekh sakte hain.
+          <strong>Ek line mein:</strong> pashu khud loan ka hypothecated asset ban jate hain. Yani jo gaay-bhains aap
+          loan se kharidoge, wahi bank ki security hain — zameen ki zaroorat isi liye khatam ho jati hai.
         </IB>
 
+        <SH>🛣️ Teen Raaste — Ek Nazar Mein</SH>
+        <div className="overflow-x-auto my-4">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="bg-[var(--color-bg-alt)]">
+                <th className="border border-[var(--color-border)] p-3 text-left font-black">Route</th>
+                <th className="border border-[var(--color-border)] p-3 text-left font-black">Limit</th>
+                <th className="border border-[var(--color-border)] p-3 text-left font-black">Collateral</th>
+                <th className="border border-[var(--color-border)] p-3 text-left font-black">Subsidy</th>
+                <th className="border border-[var(--color-border)] p-3 text-left font-black">Kiske Liye Sahi</th>
+              </tr>
+            </thead>
+            <tbody>
+              {ROUTES.map((r, i) => (
+                <tr key={r.name} className={i % 2 === 1 ? 'bg-[var(--color-bg-alt)]' : ''}>
+                  <td className="border border-[var(--color-border)] p-3 font-semibold">{r.name}</td>
+                  <td className="border border-[var(--color-border)] p-3">{r.limit}</td>
+                  <td className="border border-[var(--color-border)] p-3">{r.collateral}</td>
+                  <td className="border border-[var(--color-border)] p-3">{r.subsidy}</td>
+                  <td className="border border-[var(--color-border)] p-3">{r.fit}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <SH>1️⃣ Mudra Loan — Sabse Seedha Raasta</SH>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Pradhan Mantri Mudra Yojana ke neeche dairy, pashupalan aur allied activities finance hoti hain. Iski sabse
+          badi baat: kisi bhi category mein bank collateral nahi maang sakta. Budget 2024-25 mein isme ek naya slab
+          jodha gaya — <strong>Tarun Plus</strong> — jisse upar ki limit ₹10 lakh se ₹20 lakh ho gayi.
+        </p>
+
+        <div className="overflow-x-auto my-4">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="bg-[var(--color-bg-alt)]">
+                <th className="border border-[var(--color-border)] p-3 text-left font-black">Category</th>
+                <th className="border border-[var(--color-border)] p-3 text-left font-black">Amount</th>
+                <th className="border border-[var(--color-border)] p-3 text-left font-black">Dairy Mein Kis Kaam Ke Liye</th>
+              </tr>
+            </thead>
+            <tbody>
+              {MUDRA_SLABS.map((s, i) => (
+                <tr key={s.cat} className={i % 2 === 1 ? 'bg-[var(--color-bg-alt)]' : ''}>
+                  <td className="border border-[var(--color-border)] p-3 font-semibold">{s.cat}</td>
+                  <td className="border border-[var(--color-border)] p-3">{s.range}</td>
+                  <td className="border border-[var(--color-border)] p-3">{s.use}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <WB>
+          Tarun Plus har naye applicant ke liye nahi hai. Yeh un logon ke liye banaya gaya hai jinhone pehle Tarun
+          category ka loan liya aur poora chuka diya. Pehli baar apply kar rahe ho toh aapki practical ceiling ₹10 lakh
+          hai — DPR usi hisaab se banwao, warna file wapas aayegi.
+        </WB>
+
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Public sector bank ke through Mudra par byaj aam taur par 9%–12% ke beech rehta hai. NBFC se lo toh yeh
+          kaafi upar chala jata hai, kabhi 18% tak. Rate har bank apna tay karta hai, isliye do-teen branch se likhit
+          rate le kar compare karna sabse asaan bachat hai — ek percent ka fark 5 saal mein hazaaron ka hota hai.
+        </p>
+
+        <GovLink
+          href="https://www.udyamimitra.in/"
+          label="Udyamimitra Par Mudra Application Daalo"
+          guide="Portal Kholo"
+          guideHref="/articles/jansamarth-portal-loan-apply"
+          portalName="udyamimitra.in"
+        />
+
+        <SH>2️⃣ PMEGP — Jahan Subsidy Milti Hai</SH>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          PMEGP KVIC chalata hai. Isme bank loan deta hai aur sarkar us project cost ka 15% se 35% hissa margin money
+          subsidy ke roop mein bhar deti hai — yeh paisa wapas nahi karna padta. Project limit manufacturing type
+          activity par ₹50 lakh tak aur service type par ₹20 lakh tak hai. Dairy unit isme eligible hai.
+        </p>
+
+        <div className="overflow-x-auto my-4">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="bg-[var(--color-bg-alt)]">
+                <th className="border border-[var(--color-border)] p-3 text-left font-black">Applicant</th>
+                <th className="border border-[var(--color-border)] p-3 text-left font-black">Area</th>
+                <th className="border border-[var(--color-border)] p-3 text-left font-black">Subsidy</th>
+                <th className="border border-[var(--color-border)] p-3 text-left font-black">Apna Paisa</th>
+              </tr>
+            </thead>
+            <tbody>
+              {PMEGP_ROWS.map((r, i) => (
+                <tr key={`${r.who}-${r.area}`} className={i % 2 === 1 ? 'bg-[var(--color-bg-alt)]' : ''}>
+                  <td className="border border-[var(--color-border)] p-3 font-semibold">{r.who}</td>
+                  <td className="border border-[var(--color-border)] p-3">{r.area}</td>
+                  <td className="border border-[var(--color-border)] p-3">{r.sub}</td>
+                  <td className="border border-[var(--color-border)] p-3">{r.own}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Ginti karke dekhiye. Gaon mein rehne wali ek mahila applicant ka ₹8 lakh ka dairy project hai. 35% yaani
+          ₹2.8 lakh subsidy, 5% yaani ₹40,000 apni jeb se, aur bacha ₹4.8 lakh bank loan — EMI sirf isi hisse par
+          banegi. Yahi project General category ke shahar wale applicant ka hota toh subsidy sirf ₹1.2 lakh milti.
+          Category aur area, dono milkar aapki EMI tay karte hain.
+        </p>
+
+        <IB>
+          Subsidy ka paisa seedha hath mein nahi aata. Woh ek alag account mein 3 saal ke lock-in ke saath rakha jata
+          hai. Unit theek se chali toh teen saal baad loan mein adjust ho jata hai. Beech mein unit band kar di, toh
+          subsidy wapas le li jati hai.
+        </IB>
+
+        <SH>3️⃣ CGTMSE — Jab Loan Bada Ho</SH>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          CGTMSE koi loan scheme nahi hai, aur isi wajah se log confuse hote hain. Yeh ek credit guarantee trust hai
+          (MSME Ministry + SIDBI). Bank aapko normal term loan deta hai aur us loan ko CGTMSE cover ke neeche daal deta
+          hai. Nuksan hua toh trust bank ko bada hissa bhar deta hai — isliye bank property maangna chhod deta hai.
+        </p>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          1 April 2025 ke updated scheme document ke baad iski cover ceiling ₹10 crore tak hai, guarantee coverage
+          loan amount ka lagbhag 75%–85% (micro enterprise aur SC/ST applicant ko upar wala slab milta hai), aur annual
+          guarantee fee 0.37%–1.35% ke range mein. Yeh fee borrower se hi li jati hai, isliye apne total cost mein
+          isko jodna mat bhoolna.
+        </p>
+
+        <WB>
+          CGTMSE cover lene ke liye Udyam registration chahiye hota hai. Udyam free hai aur online 15 minute ka kaam
+          hai — bank jaane se pehle nikaal lo. Bahut si files sirf isliye latakti hain ki applicant ke paas Udyam
+          number nahi tha.
+        </WB>
+
+        <SH>💰 Project Cost Ka Asli Hisaab — 5 Pashu Ka Unit</SH>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Neeche ek illustrative structure hai — asli rate aapke ilaake, breed aur construction cost se badlega. Iska
+          maqsad sirf yeh dikhana hai ki bank aapki DPR mein kaunse head dekhta hai. Apne local rate bhar kar hi
+          final DPR banwana.
+        </p>
+        <div className="overflow-x-auto my-4">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="bg-[var(--color-bg-alt)]">
+                <th className="border border-[var(--color-border)] p-3 text-left font-black">Head</th>
+                <th className="border border-[var(--color-border)] p-3 text-left font-black">Kya Isme Aata Hai</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-[var(--color-border)] p-3 font-semibold">Pashu kharid</td>
+                <td className="border border-[var(--color-border)] p-3">Breed, doodh ki capacity, transport aur insurance premium</td>
+              </tr>
+              <tr className="bg-[var(--color-bg-alt)]">
+                <td className="border border-[var(--color-border)] p-3 font-semibold">Shed</td>
+                <td className="border border-[var(--color-border)] p-3">Per pashu floor area, chhat, farsh ka slope, naali, paani ka intezaam</td>
+              </tr>
+              <tr>
+                <td className="border border-[var(--color-border)] p-3 font-semibold">Equipment</td>
+                <td className="border border-[var(--color-border)] p-3">Chaff cutter, doodh ke bartan, milking machine (agar le rahe ho), cooling</td>
+              </tr>
+              <tr className="bg-[var(--color-bg-alt)]">
+                <td className="border border-[var(--color-border)] p-3 font-semibold">Working capital</td>
+                <td className="border border-[var(--color-border)] p-3">Shuru ke 2-3 mahine ka chara, dawai, bijli, labour</td>
+              </tr>
+              <tr>
+                <td className="border border-[var(--color-border)] p-3 font-semibold">Contingency</td>
+                <td className="border border-[var(--color-border)] p-3">Bimari, ek pashu ka dry period, rate girne ka buffer</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <DB>
+          <strong>Sabse aam galti:</strong> working capital DPR mein daala hi nahi jata. Pashu aa gaye, shed ban gaya,
+          aur pehle mahine chara kharidne ke paise nahi bache. Bank se udhaar lena mushkil, aur doodh abhi shuru nahi
+          hua. Kam se kam 3 mahine ka chara kharch DPR mein zaroor jodwao.
+        </DB>
+
+        <SH>🧮 EMI Ka Andaza</SH>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Neeche 11% annual rate par nikale gaye example figures hain — sirf samajhne ke liye. Aapka bank ka rate isse
+          kam ya zyada ho sakta hai, aur usi hisaab se EMI badal jayegi.
+        </p>
+        <div className="overflow-x-auto my-4">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="bg-[var(--color-bg-alt)]">
+                <th className="border border-[var(--color-border)] p-3 text-left font-black">Loan</th>
+                <th className="border border-[var(--color-border)] p-3 text-left font-black">Tenure</th>
+                <th className="border border-[var(--color-border)] p-3 text-left font-black">EMI (approx)</th>
+                <th className="border border-[var(--color-border)] p-3 text-left font-black">Total Byaj (approx)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-[var(--color-border)] p-3 font-semibold">₹2,00,000</td>
+                <td className="border border-[var(--color-border)] p-3">3 saal</td>
+                <td className="border border-[var(--color-border)] p-3">₹6,548</td>
+                <td className="border border-[var(--color-border)] p-3">₹35,719</td>
+              </tr>
+              <tr className="bg-[var(--color-bg-alt)]">
+                <td className="border border-[var(--color-border)] p-3 font-semibold">₹5,00,000</td>
+                <td className="border border-[var(--color-border)] p-3">5 saal</td>
+                <td className="border border-[var(--color-border)] p-3">₹10,871</td>
+                <td className="border border-[var(--color-border)] p-3">₹1,52,273</td>
+              </tr>
+              <tr>
+                <td className="border border-[var(--color-border)] p-3 font-semibold">₹8,00,000</td>
+                <td className="border border-[var(--color-border)] p-3">5 saal</td>
+                <td className="border border-[var(--color-border)] p-3">₹17,394</td>
+                <td className="border border-[var(--color-border)] p-3">₹2,43,636</td>
+              </tr>
+              <tr className="bg-[var(--color-bg-alt)]">
+                <td className="border border-[var(--color-border)] p-3 font-semibold">₹10,00,000</td>
+                <td className="border border-[var(--color-border)] p-3">7 saal</td>
+                <td className="border border-[var(--color-border)] p-3">₹17,122</td>
+                <td className="border border-[var(--color-border)] p-3">₹4,38,285</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Do baatein is table se saaf hain. Ek, tenure lamba karne se EMI halki hoti hai par total byaj kaafi badh
+          jata hai — ₹10 lakh 7 saal mein lene par byaj hi ₹4 lakh se upar chala jata hai. Do, EMI tab hi sahi hai jab
+          mahine ka doodh income usse kam se kam do guna ho, warna dry period mein hi kist bigadne lagti hai.
+        </p>
+
+        <SH>📄 Documents — Branch Jaane Se Pehle</SH>
+        <StepList>
+          <SI n={1}>
+            <strong>Aadhaar aur PAN</strong> — naam ki spelling dono mein same honi chahiye. Halka fark bhi verification
+            mein rukawat banta hai.
+          </SI>
+          <SI n={2}>
+            <strong>Bank statement, 6-12 mahine ka</strong> — usi account ka jo regular chalta hai. Khali account
+            repayment capacity nahi dikhata.
+          </SI>
+          <SI n={3}>
+            <strong>Udyam registration certificate</strong> — free, online. CGTMSE cover aur MSME benefit ke liye zaroori.
+          </SI>
+          <SI n={4}>
+            <strong>Project report (DPR)</strong> — pashu ki ginti, doodh ka realistic rate, chara kharch, EMI plan.
+            Zyada bada sapna likhne se file strong nahi hoti, believable numbers se hoti hai.
+          </SI>
+          <SI n={5}>
+            <strong>Jagah ka proof</strong> — apni zameen ke kagaz, ya registered lease/rent agreement. Yeh pledge ke
+            liye nahi, sirf site dikhane ke liye.
+          </SI>
+          <SI n={6}>
+            <strong>Category certificate</strong> — SC/ST/OBC ya mahila applicant ho toh PMEGP mein subsidy slab isi se
+            upar jata hai. Na dena apna nuksan hai.
+          </SI>
+          <SI n={7}>
+            <strong>Doodh bikri ka koi proof</strong> — cooperative membership, collection centre ki parchi, ya buyer
+            se likhit intent. Yeh optional hai, par file ko sabse zyada isse madad milti hai.
+          </SI>
+        </StepList>
+
+        <SH>💻 Online Kahan Apply Hoga</SH>
+        <StepList>
+          <SI n={1}>
+            <strong>Mudra ke liye:</strong> udyamimitra.in par register karke Mudra application bharo, category (Shishu
+            /Kishore/Tarun) select karo aur documents upload kar do.
+          </SI>
+          <SI n={2}>
+            <strong>Sabhi scheme ek jagah dekhne ke liye:</strong> jansamarth.in par apni eligibility check karo — yeh
+            portal aapko batata hai ki kaunsi scheme aap par lag sakti hai.
+          </SI>
+          <SI n={3}>
+            <strong>PMEGP ke liye:</strong> kviconline.gov.in ka PMEGP e-portal. Application fee zero hai. Form ke baad
+            district level committee aur bank branch, dono ke paas file jati hai.
+          </SI>
+          <SI n={4}>
+            <strong>Application ID sambhal kar rakho</strong> aur 10-15 din baad branch mein khud jaake status pucho.
+            Online status kaafi baar update late hota hai, jabki file branch mein padi hoti hai.
+          </SI>
+        </StepList>
+
+        <GovLink
+          href="https://www.kviconline.gov.in/pmegpeportal/pmegphome/index.jsp"
+          label="PMEGP e-Portal Par Apply Karo"
+          guide="PMEGP Portal"
+          guideHref="/articles/murgi-palan-loan-nlm-subsidy"
+          portalName="kviconline.gov.in"
+        />
+
+        <SH>⚠️ Woh Wajahein Jinse File Reject Hoti Hai</SH>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Rejection ki wajah aksar bahut chhoti hoti hai, aur applicant ko pata bhi nahi chalta. Pehli: DPR mein doodh
+          ka rate market se upar likha hua. Bank ka officer local rate janta hai — ek nazar mein file ka bharosa toot
+          jata hai. Doosri: chara aur labour ka kharcha itna kam dikhana ki profit unrealistic lage.
+        </p>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Teesri wajah credit history hai. Purana koi loan default mein chal raha ho, ya aap kisi ke guarantor ho jiska
+          loan bigad gaya — dono cases file rok dete hain. Chauthi: subsidy ka galat samajh. Kai log yeh sochkar aate
+          hain ki subsidy pehle cash milegi aur usse apna hissa bharenge. Aisa nahi hota, aur baat khul jane par
+          margin money hi arrange nahi hoti.
+        </p>
+
+        <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Kaunsa Route Chuno — Seedha Jawab</h3>
+          <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
+            Chhota unit hai (2-6 pashu) aur paisa jaldi chahiye → <strong>Mudra</strong>. Naya unit hai, subsidy ke liye
+            2-3 mahine ka process bardaasht kar sakte ho, aur SC/ST/OBC ya mahila applicant ho → <strong>PMEGP</strong>,
+            kyunki gaon mein 35% subsidy sabse bada faayda hai.
+          </p>
+          <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
+            ₹20 lakh se bada project hai aur bank normal term loan de raha hai → <strong>CGTMSE</strong> cover ki baat
+            karo. SC/ST ya mahila ho aur greenfield project hai → <strong>Stand-Up India</strong> bhi puchho. Working
+            capital ke liye alag se <Link href="/articles/KisanCreditCardOnlineApply2026" className="underline font-bold">KCC</Link> le lena
+            sabse samajhdaari ka kaam hai.
+          </p>
+        </div>
+
+        <SH>❓ FAQ — Aapke Sawaal</SH>
+        <FAQBlock faqs={FAQS_DATA} />
+
+        <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[
-          { href: '/articles', l: '📚 Sabhi Articles' },
-          { href: `/articles/category/${article.category}`, l: `📂 ${category?.name ?? 'Category'}` },
+          { href: '/articles/sbi-dairy-loan-interest-rate', l: '🏦 SBI Dairy Loan Rate' },
+          { href: '/articles/bihar-pashupalan-loan-yojana', l: '🐃 Bihar Pashupalan Loan' },
+          { href: '/articles/category/loan', l: '📂 Loan Guides' },
         ]} />
         <Disclaimer />
       </div>
