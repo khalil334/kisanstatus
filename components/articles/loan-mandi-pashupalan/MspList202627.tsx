@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 
@@ -118,6 +119,18 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
       </div>
 
       <div className="container-site max-w-3xl py-8">
+        <div className="my-2 mb-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/articles/loan-mandi-pashupalan/msp-list-2026-27/sarkari-kharid-kendra-par-kisan.webp"
+            alt="Sarkari kharid kendra par gehu ki dheri ke paas khada kisan"
+            width={1200}
+            height={670}
+            className="w-full h-auto object-cover"
+            sizes="(max-width: 768px) 100vw, 768px"
+            priority
+          />
+        </div>
+
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           Fasal katne ke baad sabse pehla sawal yahi hota hai — is baar sarkari rate kya hai? MSP ka number
           pata ho toh mandi mein vyapari ke saamne aapki position mazboot hoti hai. Pata na ho toh jo rate
@@ -175,6 +188,16 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           </p>
         </div>
 
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/msp-list-2026-27/gehu-ki-pakki-baali-khet-mein.webp"
+          alt="Katai ke waqt gehu ki pakki baali kisan ke haath mein"
+          width={1000}
+          height={558}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
+        />
+
         <SH>☀️ Kharif MSP 2026-27 — Dhan, Kapas, Dalhan, Tilhan</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Kharif ki bo-ai monsoon ke saath June-July mein hoti hai. 14 faslon ke rate declare hote hain, lekin
@@ -210,6 +233,16 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
             Kharif 2026-27 ke liye anumanit payout ₹2.60 lakh crore aur procurement target 824.41 lakh metric tonne.
           </p>
         </div>
+
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/msp-list-2026-27/dhan-ki-katai-kharif-season.webp"
+          alt="Kharif season mein dhan ki katai karte kisan"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
+        />
 
         <SH>📈 Is Baar Kahan Sabse Zyada Fayda Hua</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
@@ -267,6 +300,16 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           PSS activate karna padta hai, aur wo tab hota hai jab market rate MSP se neeche gir jaye.
         </WB>
 
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/msp-list-2026-27/kharid-kendra-par-boriyon-ki-tulai.webp"
+          alt="Kharid kendra par gehu ki boriyon ki tulai"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
+        />
+
         <SH>🏪 MSP Par Bechna Hai Toh Kya Karna Padega</SH>
         <StepList>
           <SI n={1}>
@@ -307,6 +350,16 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           guide="PIB Par Jao"
           guideHref="/articles/mandi-bhav-today"
           portalName="pib.gov.in"
+        />
+
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/msp-list-2026-27/mandi-mein-gehu-ki-dheri-boli.webp"
+          alt="Mandi mein gehu ki dheri par boli — vyapari aur kisan"
+          width={1000}
+          height={558}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
         />
 
         <SH>⚖️ MSP Par Bechein Ya Mandi Mein — Faisla Kaise Karein</SH>
@@ -372,6 +425,16 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           </Link>{' '}
           likha hai.
         </p>
+
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/msp-list-2026-27/msp-ka-hisaab-copy-mein.webp"
+          alt="Kisan copy mein MSP aur mandi rate ka hisaab likhta hua"
+          width={1000}
+          height={558}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
+        />
 
         <SH>❌ Char Galat Baatein Jo Aksar Suni Jati Hain</SH>
         <div className="space-y-3 my-4">
