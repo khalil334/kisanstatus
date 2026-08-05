@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { SI, StepList, IB, WB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 
@@ -81,6 +82,18 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
       </div>
 
       <div className="container-site max-w-3xl py-8">
+        <div className="my-2 mb-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/articles/loan-mandi-pashupalan/enam-registration-kaise-kare/mandi-mein-anaj-ki-dheri.webp"
+            alt="Mandi mein anaj ki dheri aur vyapari — eNAM se yahi boli online ho jaati hai"
+            width={1200}
+            height={670}
+            className="w-full h-auto object-cover"
+            sizes="(max-width: 768px) 100vw, 768px"
+            priority
+          />
+        </div>
+
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           Mandi mein fasal le jao, aur wahi 4-5 vyapari milkar rate tay kar dein — yeh problem har kisan ne dekhi hai.
           eNAM (National Agriculture Market) isi ka jawab hai: ek online mandi jahan aapki fasal par doosre
@@ -88,8 +101,9 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
-          Is guide mein hum step-by-step dekhenge: eNAM par farmer registration kaise hota hai, kaunse
-          documents chahiye, aur fasal bechne se payment tak ka poora process.
+          Achhi baat yeh hai ki registration free hai aur sirf 3 documents chahiye. Neeche poora raasta khola hai —
+          farmer registration se lekar gate entry, boli aur payment tak — saath mein woh dikkatein bhi jo pehli
+          baar bechne walon ko aati hain.
         </p>
 
         <SH>🌾 eNAM Kya Hai — 30 Second Mein</SH>
@@ -103,6 +117,15 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
           <strong>Fayda seedha:</strong> Zyada buyers → competition → behtar rate. Aur payment seedha bank
           account mein — cash ka, udhaar ka koi chakkar nahi.
         </IB>
+
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/enam-registration-kaise-kare/teen-zaroori-documents.webp"
+          alt="eNAM registration ke teen documents — Aadhaar, bank passbook aur zameen ke kagaz"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
 
         <SH>📄 Documents — Sirf 3 Cheezein Chahiye</SH>
         <div className="overflow-x-auto my-4">
@@ -134,6 +157,15 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
           Kuch states mein zameen ke records (khasra/khatauni) bhi mange ja sakte hain. Apni mandi ke eNAM
           help desk se confirm kar lena — state ke hisaab se thoda fark hota hai.
         </WB>
+
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/enam-registration-kaise-kare/enam-registration-csc-par.webp"
+          alt="CSC par eNAM registration form bharta hua kisan"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
 
         <SH>📝 Online Registration — Step by Step</SH>
         <StepList>
@@ -174,6 +206,15 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
           help desk hota hai jahan staff free mein registration kar deta hai. eNAM mobile app se bhi
           registration ho jata hai.
         </IB>
+
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/enam-registration-kaise-kare/gate-entry-par-tulai.webp"
+          alt="Mandi gate entry par fasal ki tulai — yahin se eNAM lot banta hai"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
 
         <SH>🚜 Fasal Bechne Ka Process — Gate Entry Se Payment Tak</SH>
         <StepList>
@@ -216,6 +257,15 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
           guides mein detail se hai.
         </p>
 
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/enam-registration-kaise-kare/enam-app-khet-se-bhav.webp"
+          alt="Khet ke kinare mobile par bhav check karta kisan — eNAM app se mandi jeb mein"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
+
         <SH>📱 eNAM Mobile App — Jeb Mein Mandi</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Portal ke alawa eNAM ka official mobile app (Play Store par “eNAM” — publisher: Small Farmers
@@ -230,6 +280,15 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
           <Link href="/articles/mandi-bhav-app-comparison" className="underline font-bold">Mandi Bhav Apps
           Comparison</Link> mein detail se likhe hain.
         </p>
+
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/enam-registration-kaise-kare/inter-state-trade-loading.webp"
+          alt="Mandi se doosre state ke buyer ke liye truck loading — inter-state trade ka asli fayda"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
 
         <SH>🗺️ Inter-Mandi Aur Inter-State Trade — Asli Fayda Yahan Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
