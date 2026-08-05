@@ -313,8 +313,17 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
           </div>
 
           <DB>
-            <strong>Deadline:</strong> Kharif ke liye 31 July, Rabi ke liye 31 December. Ye date nikal gayi toh us season ka cover nahi milega.
+            <strong>PMFBY Last Date 2026:</strong> Kharif ke liye 31 July, Rabi ke liye 31 December. Ye date nikal gayi toh us season ka cover nahi milega.
           </DB>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-3">
+            Jo log <strong>crop insurance last date 2026</strong> ya <strong>PMFBY last date extended 2026</strong>{' '}
+            search kar rahe hain — dhyan rahe ki kuch states mein sarkar season ke hisaab se enrollment
+            window aage badha deti hai, lekin extension ki official confirmation sirf{' '}
+            <strong>pmfby.gov.in</strong> ya aapke state agriculture department ki notification se hoti hai.
+            Kisi WhatsApp forward par bharosa na karein; standard deadline 31 July (Kharif) / 31 December
+            (Rabi) maan kar pehle hi enroll kar lena sabse safe hai.
+          </p>
         </section>
 
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
