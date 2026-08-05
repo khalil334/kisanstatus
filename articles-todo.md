@@ -4,10 +4,10 @@ Rules: Real sourced kisan stories only (PIB/NABARD/state dept/verified news + li
 
 ## Pending
 
-10. SabziBhavGuidePyazAlooTamatar.tsx — Sabzi Bhav Guide (Pyaz, Aloo, Tamatar)
 11. SbiDairyLoanInterestRate.tsx — SBI Dairy Loan Interest Rate
 
 ## Done
+- SabziBhavGuidePyazAlooTamatar.tsx — merged. TL;DR, sourced Nashik 2026 case (May ₹800-1000 crash + MAPP ₹1,580 — FPJ; June recovery ₹2,628 Lasalgaon, NAFED shun — FPJ/datamap), Last Updated 5 Aug 2026.
 - RashtriyaGokulMissionSubsidy.tsx — merged. TL;DR, sourced Cabinet 19-Mar-2025 data (₹3,400cr, 63.55% milk growth, 8.39cr animals NAIP, 5.21cr farmers, 22 IVF labs/2541 calves), Last Updated 5 Aug 2026.
 - MurgiPalanLoanNlmSubsidy.tsx — merged. TL;DR, sourced KVK Khagaria story (Dayanand Singh, Parbatta — 2000 Vencobb, 28,500 kg/yr, ₹2.4-3L net, khagaria.kvk4.in link), Last Updated 5 Aug 2026.
 - MspList202627.tsx — merged. TL;DR box, Aam Galtiyan (naam mismatch, window miss, agent-bharosa, DBT account, nami), CTAs, Last Updated 5 Aug 2026. Sources: CCEA/PIB 1 Oct 2025 (Rabi) + 13 May 2026 (Kharif), cacp.dacnet.nic.in.
