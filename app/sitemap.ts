@@ -4,7 +4,10 @@ import { MAANDHAN_ARTICLES } from '@/lib/maandhan-data';
 import { LIVE_RAJYA_YOJANA_ARTICLES } from '@/lib/rajya-yojana-data';
 import { SITE_URL } from '@/lib/site-config';
 
-const REFERENCE_DATE = new Date('2026-07-20T00:00:00+05:30');
+// FIX(SEO): this used to be a hardcoded date, so every lastModified that fell
+// back to it froze in the past and <lastmod> went stale on each deploy.
+// Now it moves with the build.
+const REFERENCE_DATE = new Date();
 
 const ALL_ARTICLES = [
   // Regular articles are served from /articles/<slug>
@@ -144,6 +147,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date('2026-07-15'), 
       changeFrequency: 'weekly', 
       priority: 0.85,
+    },
+    // FIX(SEO): /author and /official-links are indexable pages (canonical set,
+    // robots index:true) that were missing from the sitemap entirely.
+    {
+      url: `${SITE_URL}/author`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.60,
+    },
+    {
+      url: `${SITE_URL}/official-links`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.70,
     },
     { 
       url: `${SITE_URL}/about`, 
