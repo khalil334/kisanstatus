@@ -117,7 +117,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'mandi-bhav-app-comparison',
     title: 'Best Mandi Bhav Apps 2026: Top 7',
-    desc: 'eNAM, Bijak, Kisan Suvidha, AgMarknet — kaunsa app sabse sahi mandi rate deta hai? Comparison jald aa raha hai.',
+    desc: 'eNAM, AgMarknet, Kisan Suvidha ya private apps — kaunsa mandi bhav app sahi rate deta hai? Sarkari vs private comparison, modal price ka matlab aur bina app ke raaste.',
     ogTitle: 'Best Mandi Bhav Apps 2026 — Top 7 Comparison',
     keywords: [
       'mandi bhav app 2026',
@@ -129,7 +129,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     category: 'mandi',
     publishedTime: '2026-08-05T08:00:00+05:30',
     modifiedTime: '2026-08-05T08:00:00+05:30',
-    readingTime: 6,
+    readingTime: 10,
     author: 'KisanStatus Editorial Team',
     authorBio: 'Agricultural content experts with 5+ years experience in government scheme research',
     relatedSlugs: ['mandi-bhav-today', 'enam-registration-kaise-kare', 'msp-list-2026-27'],
