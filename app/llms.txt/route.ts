@@ -90,7 +90,6 @@ Editorial team: ${AUTHOR_NAME}. Contact: ${SUPPORT_EMAIL}.
 - ${SITE_URL}/articles — all guides, filterable by category
 - ${SITE_URL}/maandhan — PM Kisan Maandhan pension scheme hub
 - ${SITE_URL}/calculator — free calculators (benefit, KCC EMI, PMFBY premium, MSP income, crop profit, instalment tracker, quick status check)
-- ${SITE_URL}/official-links — verified government portal directory
 - ${SITE_URL}/about — who runs this site
 - ${SITE_URL}/contact — contact and grievance help
 - ${SITE_URL}/disclaimer — independence and accuracy disclaimer
