@@ -169,7 +169,7 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
 
         <KrishakBandhuChecker />
 
-        <h2>Voter ID Se Status Check Karne Ka Tareeka</h2>
+        <h2>Krishak Bandhu Status Check Voter ID Se — Poora Tareeka</h2>
 
         <p>
           Baaki state schemes Aadhaar ko primary key banati hain, lekin Krishak Bandhu ki
