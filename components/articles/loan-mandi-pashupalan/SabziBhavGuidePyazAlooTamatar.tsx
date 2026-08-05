@@ -75,7 +75,7 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
             <span>📅 {fmtDate(article.publishedTime)}</span>
-            <span>🔄 Updated: {fmtDate(article.modifiedTime)}</span>
+            <span>🔄 Last Updated: 5 August 2026</span>
             <span>⏱️ 11 min read</span>
           </div>
         </div>
@@ -93,6 +93,17 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
             priority
           />
         </div>
+
+        <DB>
+          <strong>TL;DR — seedha faisla:</strong>
+          <ul className="list-disc pl-5 mt-2 space-y-1">
+            <li>Pyaz-aloo-tamatar par <strong>MSP nahi hota</strong> — bhav pura demand-supply ka khel hai, timing hi hathiyar hai.</li>
+            <li>Sirf <strong>rabi pyaz aur aloo store</strong> hote hain — tamatar mein hold ki strategy hai hi nahi, wahan planting ki timing hi game hai.</li>
+            <li>Pyaz ka aam pattern: <strong>Aug-Oct supply gap</strong> mein bhav sabse tez — par NAFED/NCCF buffer ise dabata hai, poora stock hold mat karo.</li>
+            <li>Hold ka hisaab kagaz par: storage + transport + byaj se zyada bhav badhe <strong>tabhi</strong> jeet hai.</li>
+            <li><strong>Abhi check karo:</strong> agmarknet.gov.in par apni mandi ka aaj ka rate.</li>
+          </ul>
+        </DB>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           Pyaz, aloo aur tamatar — teeno ka ek hi dard hai: jab kisan ke paas maal hota hai tab bhav nahi hota,
@@ -254,6 +265,23 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
           processing companies se contract (fixed rate — boom nahi, par crash bhi nahi), aur nazdeeki sheher ki
           retail/direct supply jahan mandi se behtar rate milta hai.
         </DB>
+
+        <SH>📰 2026 Ka Asli Scene — Nashik Se Seedha Sabak</SH>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Yeh cycle kitaabi baat nahi hai — 2026 ka rabi season khud dekho. May 2026 mein rabi harvest ke flood
+          mein Nashik belt ki mandiyon mein average pyaz ₹800-1,000 per quintal tak gira, aur Nandgaon APMC ke
+          bahar kisano ne pyaz phenk kar protest kiya. Sarkar ko 26 May se Nashik district ke liye ₹1,580 ka
+          Minimum Assured Procurement Price (MAPP) lana pada (
+          <a href="https://www.freepressjournal.in/pune/nashik-onion-gets-mapp-support-1580-per-quintal-rate-effective" target="_blank" rel="noopener noreferrer" className="underline font-bold">source: Free Press Journal, May 2026</a>).
+        </p>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Aur phir wahi hua jo har saal hota hai — mahine bhar mein hi open market sudhra: June ke aakhir tak
+          Lasalgaon jaisi mandiyon mein rate chadh kar ₹2,628 per quintal tak pahunch gaya, aur kisan NAFED ke
+          kharid kendra chhod kar wapas khule bazaar mein bechne lage (
+          <a href="https://datamap.co.in/news/nashik-farmers-shun-nafed-onion-procurement-as-open-market-prices-75ee6d91-322f-4061-b601-200909dce0a3" target="_blank" rel="noopener noreferrer" className="underline font-bold">source: Free Press Journal, June 2026</a>).
+          Sabak seedha hai: harvest ke din ki bheed mein poora maal bechna sabse mehnga faisla hai — jo hafte-do
+          hafte ka bhi sabr rakh saka, uska average behtar nikla.
+        </p>
 
         <SH>📊 Roz Ka Bhav Check Karna — 5 Minute Ki Aadat</SH>
         <Image
