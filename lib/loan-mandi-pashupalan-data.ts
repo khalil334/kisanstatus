@@ -5,8 +5,8 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     slug: 'dairy-farm-loan-without-collateral',
     ogImage: '/images/articles/loan-mandi-pashupalan/dairy-farm-loan-without-collateral/dairy-subah.webp',
     title: 'Dairy Farm Loan Bina Collateral 2026',
-    desc: 'Zameen girvi rakhe bina dairy farm loan — Mudra se ₹20 lakh tak, PMEGP mein 15-35% subsidy, CGTMSE guarantee cover. EMI table, DPR ke heads, documents aur reject hone ki asli wajahein.',
-    ogTitle: 'Dairy Farm Loan Bina Collateral 2026 — Mudra, PMEGP, CGTMSE',
+    desc: 'Zameen girvi rakhe bina dairy farm loan — Mudra se ₹20 lakh tak, PMEGP mein 15-35% subsidy, CGTMSE cover. EMI table, documents aur reject ki wajahein.',
+    ogTitle: 'Dairy Farm Loan Bina Collateral — Mudra 2026',
     keywords: [
       'dairy farm loan without collateral 2026',
       'mudra loan dairy farming',
@@ -31,7 +31,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     slug: 'sbi-dairy-loan-interest-rate',
     ogImage: '/images/articles/loan-mandi-pashupalan/sbi-dairy-loan-interest-rate/subah-doodh.webp',
     title: 'SBI Dairy Loan Interest Rate 2026',
-    desc: 'SBI dairy loan ka rate MCLR + spread se banta hai — koi fixed number nahi. KCC vs term loan ka fark, interest subvention, Scale of Finance, EMI table aur branch checklist.',
+    desc: 'SBI dairy loan ka rate MCLR + spread se banta hai — koi fixed number nahi. KCC vs term loan ka fark, interest subvention, EMI table aur checklist.',
     ogTitle: 'SBI Kisan Dairy Loan 2026 — Rate, EMI, Apply',
     keywords: [
       'sbi dairy loan interest rate 2026',
@@ -79,7 +79,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     slug: 'enam-registration-kaise-kare',
     ogImage: '/images/articles/loan-mandi-pashupalan/enam-registration-kaise-kare/anaj-dheri.webp',
     title: 'eNAM Registration 2026: Kaise Karein',
-    desc: 'eNAM par free farmer registration karke fasal online mandi mein bechein — 3 documents, step-by-step process, inter-state bidding, app guide, aam problems ke fix aur seedha bank payment.',
+    desc: 'eNAM par free registration karke fasal online mandi mein bechein — 3 documents, step-by-step process, inter-state bidding aur bank payment.',
     ogTitle: 'eNAM Registration Kaise Kare 2026 Guide',
     keywords: [
       'enam registration kaise kare 2026',
@@ -101,7 +101,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'msp-list-2026-27',
     title: 'MSP List 2026-27: Rabi & Kharif',
-    desc: 'MSP list 2026-27 ki poori table — gehu ₹2,585, dhan ₹2,441, chana ₹5,875 aur baaki faslon ke rate, pichhle saal se comparison ke saath. Rate kaise banta hai aur MSP par bechne ka process bhi.',
+    desc: 'MSP list 2026-27 ki poori table — gehu ₹2,585, dhan ₹2,441, chana ₹5,875 aur baaki faslon ke rate, pichhle saal se comparison ke saath.',
     ogTitle: 'MSP List 2026-27 — Rabi & Kharif Puri List',
     ogImage: '/images/articles/loan-mandi-pashupalan/msp-list-2026-27/kharid-kendra.webp',
     keywords: [
@@ -125,7 +125,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     slug: 'mandi-bhav-app-comparison',
     ogImage: '/images/articles/loan-mandi-pashupalan/mandi-bhav-app-comparison/phone-bhav.webp',
     title: 'Best Mandi Bhav Apps 2026: Top 7',
-    desc: 'eNAM, AgMarknet, Kisan Suvidha ya private apps — kaunsa mandi bhav app sahi rate deta hai? Sarkari vs private comparison, modal price ka matlab aur bina app ke raaste.',
+    desc: 'eNAM, AgMarknet, Kisan Suvidha ya private apps — kaunsa mandi bhav app sahi rate deta hai? Sarkari vs private comparison aur modal price ka matlab.',
     ogTitle: 'Best Mandi Bhav Apps 2026 — Top 7 Comparison',
     keywords: [
       'mandi bhav app 2026',
@@ -146,7 +146,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     slug: 'gehu-ka-bhav-msp-vs-mandi',
     ogImage: '/images/articles/loan-mandi-pashupalan/gehu-ka-bhav-msp-vs-mandi/gehu-katai.webp',
     title: 'Gehu Ka Bhav 2026: MSP vs Mandi Rate',
-    desc: 'Gehu MSP ₹2,585 par bechein ya mandi mein? Seasonal price pattern, rok kar bechne ka ganit, storage tips aur bechne se pehle ke 4 sawaal — poora decision framework.',
+    desc: 'Gehu MSP ₹2,585 par bechein ya mandi mein? Seasonal price pattern, rok kar bechne ka ganit, storage tips aur poora decision framework.',
     ogTitle: 'Gehu Ka Bhav 2026 — MSP vs Mandi Rate, Kab Bechein',
     keywords: [
       'gehu ka bhav 2026',
@@ -166,8 +166,8 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     slug: 'sabzi-bhav-guide-pyaz-aloo-tamatar',
     ogImage: '/images/articles/loan-mandi-pashupalan/sabzi-bhav-guide-pyaz-aloo-tamatar/sabzi-mandi.webp',
     title: 'Pyaz-Aloo-Tamatar Bhav Guide 2026',
-    desc: 'Pyaz, aloo, tamatar kab bechein? Teeno ka seasonal price cycle, aloo cold storage ka break-even hisaab, NAFED buffer stock ka asar aur 5 galtiyan jo munafa kha jaati hain.',
-    ogTitle: 'Pyaz-Aloo-Tamatar Kab Bechein — Price Cycle & Storage Guide',
+    desc: 'Pyaz, aloo, tamatar kab bechein? Teeno ka seasonal price cycle, aloo cold storage ka break-even hisaab aur NAFED buffer stock ka asar.',
+    ogTitle: 'Pyaz, Aloo, Tamatar Kab Bechein — Bhav Cycle',
     keywords: [
       'pyaz ka bhav kab badhega',
       'aloo mandi rate',
@@ -188,7 +188,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     slug: 'murgi-palan-loan-nlm-subsidy',
     ogImage: '/images/articles/loan-mandi-pashupalan/murgi-palan-loan-nlm-subsidy/murgi-farm.webp',
     title: 'Murgi Palan Loan 2026: NLM 50% Subsidy',
-    desc: 'NLM se poultry farm par 50% subsidy, ₹25 lakh tak — back-ended subsidy ka sach, layer vs broiler, udyamimitra portal se apply ka poora process aur 5 common galtiyan.',
+    desc: 'NLM se poultry farm par 50% subsidy, ₹25 lakh tak — back-ended subsidy ka sach, layer vs broiler aur udyamimitra portal se apply ka process.',
     ogTitle: 'Murgi Palan Loan & Subsidy 2026 — NLM se 50% Tak',
     keywords: [
       'murgi palan loan 2026',
@@ -210,7 +210,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     slug: 'bihar-pashupalan-loan-yojana',
     ogImage: '/images/articles/loan-mandi-pashupalan/bihar-pashupalan-loan-yojana/kisan-bhains.webp',
     title: 'Bihar Pashupalan Loan Yojana 2026',
-    desc: 'Samagra Gavya Vikas Yojana — SC/ST ko 75%, General ko 50% subsidy tak. Eligibility, documents, dairy.bihar.gov.in par apply ka poora process aur 7 common galtiyan.',
+    desc: 'Samagra Gavya Vikas Yojana — SC/ST ko 75%, General ko 50% subsidy tak. Eligibility, documents aur dairy.bihar.gov.in par apply ka process.',
     ogTitle: 'Bihar Pashupalan Loan Yojana 2026 — 50-75% Subsidy',
     keywords: [
       'bihar pashupalan loan yojana 2026',
@@ -231,8 +231,8 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     slug: 'rashtriya-gokul-mission-subsidy',
     ogImage: '/images/articles/loan-mandi-pashupalan/rashtriya-gokul-mission-subsidy/desi-gaay.webp',
     title: 'Rashtriya Gokul Mission 2026: Subsidy',
-    desc: 'RGM se kisan ko kya milta hai — IVF pregnancy par ₹5,000, sex-sorted semen par 50% subsidy, muft AI, aur Breed Multiplication Farm par ₹2 crore tak. Poora process aur 4 galatfehmiyan.',
-    ogTitle: 'Rashtriya Gokul Mission 2026 — IVF ₹5,000, Semen 50%, Farm ₹2 Cr',
+    desc: 'RGM se kisan ko kya milta hai — IVF pregnancy par ₹5,000, sex-sorted semen par 50% subsidy, muft AI aur Breed Multiplication Farm par ₹2 crore tak.',
+    ogTitle: 'Rashtriya Gokul Mission — IVF ₹5,000 Subsidy',
     keywords: [
       'rashtriya gokul mission 2026',
       'desi gay palan subsidy',
