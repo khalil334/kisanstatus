@@ -93,7 +93,7 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
         <div className="my-6 p-5 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-xl">
           <h2 className="text-base font-black text-green-800 dark:text-green-300 mb-2">Quick Answer</h2>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
-            <strong>Nano DAP 500 ml price:</strong> ₹250-350 (subsidy ke saath ₹200-280). Agar aap <strong>nano dap ka rate</strong> ya <strong>nano dap online price</strong> dhoondh rahe hain, toh dono jagah yahi range milega. <strong>Dosage:</strong> 500ml per acre, 100-150L paani mein, 2-3 sprays. Exact price aur dosage authorized dealer ya KVK se hi confirm karein — yahan diye figures ek estimated reference hain.
+            <strong>Nano DAP 500 ml price:</strong> ₹250-350 (subsidy ke saath ₹200-280). Agar aap <strong>nano dap price 500 ml</strong>, <strong>nano dap ka rate</strong> ya <strong>nano dap online price</strong> dhoondh rahe hain, toh sab jagah yahi range milega. <strong>Dosage:</strong> 500ml per acre, 100-150L paani mein, 2-3 sprays. Exact price aur dosage authorized dealer ya KVK se hi confirm karein — yahan diye figures ek estimated reference hain.
           </p>
         </div>
 
