@@ -105,6 +105,10 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
           </ul>
         </DB>
 
+        <p className="text-sm text-[var(--color-text)] mb-6">
+          <strong>Last Updated: 5 August 2026</strong>
+        </p>
+
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           Rashtriya Gokul Mission (RGM) ka naam suna sabne hai, par zyada tar kisan yeh nahi jaante ki isme unke
           liye asal mein kya rakha hai. Kuch log samajhte hain ki yeh gay kharidne ki subsidy hai — nahi hai. Kuch
@@ -128,7 +132,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
           behtar genetics har kisan ke pashu tak pahunchana. <strong>19 March 2025</strong> ko Cabinet ne iska revised outlay
           <strong> ₹3,400 crore</strong> (2021-26 cycle, ₹1,000 crore extra) approve kiya — matlab scheme ko aur paisa aur do naye
           components mile (
-          <a href="https://visionias.in/current-affairs/news-today/2025-03-20/schemes-in-news/cabinet-approved-revised-rashtriya-gokul-mission" target="_blank" rel="noopener noreferrer" className="underline font-bold">source: Cabinet decision, 19 March 2025</a>).
+          <a href="https://ddnews.gov.in/en/cabinet-approves-implementation-of-revised-rashtriya-gokul-mission-with-enhanced-allocation-for-2024-25-and-2025-26/" target="_blank" rel="noopener noreferrer" className="underline font-bold">source: Cabinet decision, 19 March 2025 — DD News, Govt of India</a>).
         </p>
         <IB>
           Ek baat pehle hi saaf kar lo: RGM <strong>pashu kharidne ki scheme nahi hai</strong>. Yeh nasl sudhaar
@@ -361,8 +365,8 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
             <a href="https://dahd.gov.in/schemes/programmes/rashtriya-gokul-mission" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">dahd.gov.in</a>
           </li>
           <li>
-            Cabinet decision, 19 March 2025 — revised RGM ₹3,400 crore (Vision IAS summary of PIB release).{' '}
-            <a href="https://visionias.in/current-affairs/news-today/2025-03-20/schemes-in-news/cabinet-approved-revised-rashtriya-gokul-mission" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">visionias.in</a>
+            Cabinet decision, 19 March 2025 — Revised Rashtriya Gokul Mission, total outlay ₹3,400 crore (official Govt of India release).{' '}
+            <a href="https://ddnews.gov.in/en/cabinet-approves-implementation-of-revised-rashtriya-gokul-mission-with-enhanced-allocation-for-2024-25-and-2025-26/" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">ddnews.gov.in — Cabinet approves implementation of revised Rashtriya Gokul Mission</a>
           </li>
           <li>
             NDDB — Breed Multiplication Farm EOI portal.{' '}

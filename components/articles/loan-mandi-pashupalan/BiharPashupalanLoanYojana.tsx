@@ -84,6 +84,10 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
           </ul>
         </DB>
 
+        <p className="text-sm text-[var(--color-text)] mb-6">
+          <strong>Last Updated: 5 August 2026</strong>
+        </p>
+
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           Do bhains. Sirf do bhains ki unit bhi aaj Bihar mein lakhon ka kaam hai — pashu, shed, chara, bima sab
           jod lo. Isi liye Samagra Gavya Vikas Yojana ka naam har us aadmi ne suna hai jo dairy shuru karna chahta

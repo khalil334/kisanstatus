@@ -108,6 +108,10 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
           </ul>
         </DB>
 
+        <p className="text-sm text-[var(--color-text)] mb-6">
+          <strong>Last Updated: 5 August 2026</strong>
+        </p>
+
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           April aata hai aur wahi teen raaste saamne khade ho jaate hain — sarkari kendra, mandi ki boli, ya
           ghar ka godaam. Har saal jawab badal jaata hai. Pichhle saal jisne roka usne kamaya, us se pichhle

@@ -105,6 +105,10 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           </ul>
         </DB>
 
+        <p className="text-sm text-[var(--color-text)] mb-6">
+          <strong>Last Updated: 5 August 2026</strong>
+        </p>
+
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           Murgi palan un ginti ke dhandhon mein hai jahan chhoti zameen par bhi structured business khada ho sakta
           hai — aur sarkar iske liye apni sabse badi livestock scheme se paisa de rahi hai. National Livestock
