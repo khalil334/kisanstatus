@@ -652,6 +652,8 @@ const CORE_ARTICLES: readonly ArticleMeta[] = [
     ogTitle: 'PM Kisan Maandhan Yojana Guide',
     keywords: [
       'pm kisan maandhan yojana',
+      'kisan pension',
+      'mandhan chart',
       'kisan pension yojana eligibility',
       'pm kmy pension apply',
       'pm kisan pension 3000',
@@ -661,7 +663,7 @@ const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'PmKisanMaandhanYojanaPension',
     category: 'farming',
     publishedTime: '2026-07-10T08:00:00+05:30',
-    modifiedTime: '2026-07-10T08:00:00+05:30',
+    modifiedTime: '2026-08-05T08:00:00+05:30',
     readingTime: 16,
     author: 'KisanStatus Editorial Team',
     authorBio: 'Agricultural content experts with 5+ years experience in government scheme research',
