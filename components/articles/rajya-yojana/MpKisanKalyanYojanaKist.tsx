@@ -188,11 +188,12 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         SAARA app se kisan khud bhi apni fasal darj kar sakta hai.
       </p>
 
-      <h2>SAARA Portal Par Apna Status Kaise Dekhein</h2>
+      <h2>SAARA Portal Par Apna Status Kaise Dekhein (MP Saara Payment Status)</h2>
 
       <p>
-        Poora kaam online hai aur free hai. Aadhaar number ya registered mobile paas rakhein, OTP
-        usi number par aayega:
+        Jo log <strong>MP Saara payment status</strong> ya <strong>CM kisan beneficiary status MP Saara</strong>{' '}
+        search karte hain, unke liye yahi process hai. Poora kaam online hai aur free hai. Aadhaar
+        number ya registered mobile paas rakhein, OTP usi number par aayega:
       </p>
 
       <Fig

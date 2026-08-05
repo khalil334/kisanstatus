@@ -74,6 +74,11 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
     slug: 'mp-kisan-kalyan-yojana-kist-status',
     mainKeyword: 'cm kisan kalyan yojana kist kab aayegi',
     secondaryKeywords: [
+      'mp kisan kalyan yojana status',
+      'kisan kalyan yojana mp status',
+      'mp saara payment status',
+      'cm kisan beneficiary status mp saara',
+      'cm saara',
       'mp kisan kalyan yojana status check',
       'saara portal kisan kalyan status',
       'kisan kalyan yojana beneficiary list mp',
