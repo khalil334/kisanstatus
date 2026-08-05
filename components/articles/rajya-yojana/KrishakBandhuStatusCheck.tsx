@@ -495,15 +495,6 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
 
         <FAQBlock faqs={FAQS_DATA} caption="Krishak Bandhu status, slab aur death benefit FAQ 2026" />
 
-        {article.officialPortal && (
-          <p>
-            Official portal:{' '}
-            <a href={article.officialPortal} rel="nofollow noopener" target="_blank">
-              {article.officialPortal.replace('https://', '')}
-            </a>
-          </p>
-        )}
-
         <p>
           <Link href="/rajya-yojana">← Sabhi rajya ki kisan yojana</Link>
         </p>
