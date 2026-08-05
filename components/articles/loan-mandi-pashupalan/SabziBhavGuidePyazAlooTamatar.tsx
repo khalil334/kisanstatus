@@ -84,7 +84,7 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
       <div className="container-site max-w-3xl py-8">
         <div className="my-2 mb-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src="/images/articles/loan-mandi-pashupalan/sabzi-bhav-guide-pyaz-aloo-tamatar/subah-ki-sabzi-mandi.webp"
+            src="/images/articles/loan-mandi-pashupalan/sabzi-bhav-guide-pyaz-aloo-tamatar/sabzi-mandi.webp"
             alt="Subah ki sabzi mandi — pyaz, aloo, tamatar ke crate aur boriyaan"
             width={1200}
             height={669}
@@ -131,7 +131,7 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
 
         <SH>🧅 Pyaz — Do Fasal, Ek Gap, Aur Wahi Kahani Har Saal</SH>
         <Image
-          src="/images/articles/loan-mandi-pashupalan/sabzi-bhav-guide-pyaz-aloo-tamatar/pyaz-ki-khudai-khet-mein.webp"
+          src="/images/articles/loan-mandi-pashupalan/sabzi-bhav-guide-pyaz-aloo-tamatar/pyaz-khudai.webp"
           alt="Khet mein pyaz ki khudai — boriyon mein bharti hui fasal"
           width={900}
           height={502}
@@ -210,7 +210,7 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
 
         <SH>🥔 Aloo — Cold Storage Ka Khel, Par Hisaab Ke Saath</SH>
         <Image
-          src="/images/articles/loan-mandi-pashupalan/sabzi-bhav-guide-pyaz-aloo-tamatar/aloo-cold-storage-ke-andar.webp"
+          src="/images/articles/loan-mandi-pashupalan/sabzi-bhav-guide-pyaz-aloo-tamatar/cold-storage.webp"
           alt="Aloo cold storage ke andar — boriyon ke oonche stack"
           width={1200}
           height={669}
@@ -241,7 +241,7 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
 
         <SH>🍅 Tamatar — Store Nahi Hota, Isliye Game Alag Hai</SH>
         <Image
-          src="/images/articles/loan-mandi-pashupalan/sabzi-bhav-guide-pyaz-aloo-tamatar/tamatar-crate-mein-tayyar.webp"
+          src="/images/articles/loan-mandi-pashupalan/sabzi-bhav-guide-pyaz-aloo-tamatar/tamatar-crate.webp"
           alt="Crate mein taiyar pakka tamatar — mandi le jaane ke liye"
           width={1200}
           height={669}
@@ -289,7 +289,7 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
 
         <SH>📊 Roz Ka Bhav Check Karna — 5 Minute Ki Aadat</SH>
         <Image
-          src="/images/articles/loan-mandi-pashupalan/sabzi-bhav-guide-pyaz-aloo-tamatar/mandi-jaane-se-pehle-bhav-check.webp"
+          src="/images/articles/loan-mandi-pashupalan/sabzi-bhav-guide-pyaz-aloo-tamatar/bhav-check.webp"
           alt="Mandi jaane se pehle kisan phone par bhav check karta hua"
           width={1200}
           height={669}
@@ -319,7 +319,7 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
 
         <SH>⚠️ 5 Galtiyan Jo Sabzi Kisan Ka Munafa Kha Jaati Hain</SH>
         <Image
-          src="/images/articles/loan-mandi-pashupalan/sabzi-bhav-guide-pyaz-aloo-tamatar/sabzi-mandi-mein-boli.webp"
+          src="/images/articles/loan-mandi-pashupalan/sabzi-bhav-guide-pyaz-aloo-tamatar/sabzi-boli.webp"
           alt="Sabzi mandi mein boli — buyers crate ke aas-paas"
           width={1200}
           height={669}
