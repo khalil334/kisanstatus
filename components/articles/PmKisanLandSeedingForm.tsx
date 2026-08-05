@@ -433,7 +433,7 @@ export default function PmKisanLandSeedingFormPdf2026({ article }: { article: Ar
               <li>Tehsil office</li>
             </ul>
             <p className="text-xs text-amber-800 dark:text-amber-300 mt-3">
-              Rajasthan ke kisan bhai zyada tar Apna Khata portal se hi PDF download karte hain, kyunki wahan Jamabandi ki nakal bhi saath mein mil jaati hai.
+              Jo kisan <strong>PM Kisan land seeding form Rajasthan PDF</strong> dhoondh rahe hain — zyada tar Apna Khata portal se hi PDF download karte hain, kyunki wahan Jamabandi ki nakal bhi saath mein mil jaati hai. E-Mitra center par bhi yahi form bhara jaata hai.
             </p>
           </div>
         </section>
