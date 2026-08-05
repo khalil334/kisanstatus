@@ -75,7 +75,7 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
             <span>📅 {fmtDate(article.publishedTime)}</span>
-            <span>🔄 Updated: {fmtDate(article.modifiedTime)}</span>
+            <span>🔄 Last Updated: 5 August 2026</span>
             <span>⏱️ 10 min read</span>
           </div>
         </div>
@@ -93,6 +93,16 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
             priority
           />
         </div>
+
+        <DB>
+          <strong>TL;DR — seedha faisla:</strong>
+          <ul className="list-disc pl-5 mt-2 space-y-1">
+            <li>JanSamarth (jansamarth.in) sarkar ka <strong>free</strong> portal hai — KCC, Mudra, education/livelihood schemes ki eligibility ek jagah check hoti hai; loan bank hi deta hai.</li>
+            <li>Apply se pehle 3 cheezein: <strong>Aadhaar-mobile link, Farmer ID (AgriStack), bank details + PAN</strong>. Inke bina file aage nahi badhti.</li>
+            <li>KCC limit Budget 2025 se <strong>₹5 lakh</strong> tak, effective interest timely repayment par ~4% (7% base − 3% bonus).</li>
+            <li>Advance fee maangne wala har aadmi thag hai — portal par koi fee nahi. <strong>Abhi jansamarth.in par eligibility check karo.</strong></li>
+          </ul>
+        </DB>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           Sarkari loan ka purana tareeka sab jaante hain — branch ke chakkar, har baar naya kagaz, aur mahino ka
@@ -174,8 +184,19 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
           Kisan ke liye asli kaam ki category pehli wali hai. KCC ka digital flow ab AgriStack ke saath juda hua hai —
           yaani aapki Farmer ID aur zameen ka record system khud utha leta hai, kagaz ka dher nahi lagta. Isi wajah se
           KCC ke liye JanSamarth ab sabse tez raasta ban gaya hai — kai states mein iske liye special camps aur
-          campaigns bhi chalte hain.
+          campaigns bhi chalte hain. 2023 mein Department of Fisheries ne KCC-Fisheries scheme ko bhi JanSamarth par
+          integrate kar diya — yaani dairy, poultry, machli palan wale bhi isi portal se KCC ke liye apply kar
+          sakte hain, 7% lending rate par (2% interest subvention + timely repayment par 3% extra incentive ke saath).
         </p>
+
+        <IB>
+          <strong>Zameen naam par nahi hai? Ek asli pilot chal raha hai:</strong> Financial Express ki May 2025 report
+          ke according NABARD aur SBI ne Andhra Pradesh (Krishna, West/East Godavari) aur Odisha (Cuttack, Puri) mein
+          RBI ke digital rupee (CBDC) se <strong>batai/tenant kisano ko KCC ka fayda</strong> dene ka pilot chalaya —
+          FY25 ke ant tak Odisha mein 501 tenant kisano ko ₹2.73 crore aur Andhra mein 218 kisano ko ₹1.86 crore
+          sanction hua (<a href="https://www.financialexpress.com/policy/economy-digital-currency-comes-to-farmers-aid-3845051/" target="_blank" rel="noopener noreferrer" className="underline font-bold">source: Financial Express</a>).
+          Abhi yeh pilot hai, sab jagah nahi — par disha saaf hai: landless kisano ke liye bhi rasta ban raha hai.
+        </IB>
 
         <Image
           src="/images/articles/loan-mandi-pashupalan/jansamarth-portal-loan-apply/apply-se-pehle-taiyari.webp"
@@ -295,6 +316,12 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
           repayment kahan se aayegi. Scheme aur subsidy ka fayda tabhi hai jab project khud chalne laayak ho —
           warna sasta loan bhi bojh ban jata hai.
         </WB>
+
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          <strong>Abhi official portal par check karo:</strong>{' '}
+          <a href="https://www.jansamarth.in" target="_blank" rel="noopener noreferrer" className="underline font-bold">jansamarth.in</a>{' '}
+          — eligibility check free hai, 10 minute lagte hain, aur koi advance fee nahi.
+        </p>
 
         <FAQBlock faqs={FAQS_DATA} />
 
