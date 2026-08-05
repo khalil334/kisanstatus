@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 
@@ -81,6 +82,18 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
       </div>
 
       <div className="container-site max-w-3xl py-8">
+        <div className="my-2 mb-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/articles/loan-mandi-pashupalan/rashtriya-gokul-mission-subsidy/desi-gaay-ke-saath-kisan.webp"
+            alt="Desi Gir gaay ke saath kisan — Rashtriya Gokul Mission desi naslon ko badhane ki scheme hai"
+            width={1200}
+            height={670}
+            className="w-full h-auto object-cover"
+            sizes="(max-width: 768px) 100vw, 768px"
+            priority
+          />
+        </div>
+
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           Rashtriya Gokul Mission (RGM) ka naam suna sabne hai, par zyada tar kisan yeh nahi jaante ki isme unke
           liye asal mein kya rakha hai. Kuch log samajhte hain ki yeh gay kharidne ki subsidy hai — nahi hai. Kuch
@@ -111,6 +124,15 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
           <Link href="/articles/bihar-pashupalan-loan-yojana" className="underline font-bold">Bihar Pashupalan
           Loan Yojana</Link> — ya bank ka dairy loan.
         </IB>
+
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/rashtriya-gokul-mission-subsidy/ai-technician-ka-daura.webp"
+          alt="Gaon mein AI technician ka daura — darwaze par muft artificial insemination RGM ka hissa hai"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
 
         <SH>💰 Kisan Ko Seedha Kya Milta Hai — 3 Cheezein</SH>
         <div className="overflow-x-auto my-4">
@@ -149,6 +171,15 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
           bhi subsidy. Yahi RGM ka asli economics hai.
         </p>
 
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/rashtriya-gokul-mission-subsidy/bachhiya-ke-saath-gaay.webp"
+          alt="Nayi bachhiya ke saath desi gaay — sex-sorted semen se bachhiya hone ke chances 90% tak"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
+
         <SH>🧬 Sex-Sorted Semen — Bachhiya Ki Guarantee Jaisi Cheez</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Normal AI mein 50-50 hota hai — bachhda bhi ho sakta hai, bachhiya bhi. Dairy kisan ke liye bachhda
@@ -166,6 +197,15 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
           baar AI karani pad sakti hai. Yeh technology ki limitation hai, technician ki galti nahi. Budget mein
           1-2 repeat doses ka margin rakh kar chalo.
         </WB>
+
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/rashtriya-gokul-mission-subsidy/pashu-aspatal-mein-jaanch.webp"
+          alt="Pashu chikitsak gaay ki jaanch karte hue — IVF process veterinary team ke through hota hai"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
 
         <SH>🔬 IVF Se ₹5,000 — Kaise Kaam Karta Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
@@ -186,6 +226,15 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
           union, bank ya financial institution se ho sakta hai. Matlab sarkar chahti hai ki achhi genetics wale
           janwar kisano tak pahunchein — chahe paida karke, chahe kharid ke.
         </p>
+
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/rashtriya-gokul-mission-subsidy/bade-farm-ka-nirman.webp"
+          alt="Bade cattle shed ka nirman — Breed Multiplication Farm mein ₹2 crore tak ki subsidy"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
 
         <SH>🏗️ Breed Multiplication Farm — ₹2 Crore Tak Ka Bada Game</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
@@ -253,6 +302,15 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
           label="Rashtriya Gokul Mission — Official Page"
           guide="Portal Kholo"
           portalName="dahd.gov.in"
+        />
+
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/rashtriya-gokul-mission-subsidy/doodh-ka-record-copy-mein.webp"
+          alt="Doodh ka record register mein likhta hua kisan — desi nasl ka economics samajhne ke liye records zaroori"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
         />
 
         <SH>🌾 Desi Nasl Ka Economics — Yeh Scheme Kyon Matter Karti Hai</SH>
