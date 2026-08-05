@@ -569,6 +569,26 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
         <SH>Aapke Sawaal</SH>
         <FAQBlock faqs={FAQS_DATA} />
 
+        <SH>📚 Sources</SH>
+        <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
+          <li>
+            PMEGP e-portal — Khadi and Village Industries Commission (KVIC).{' '}
+            <a href="https://www.kviconline.gov.in/pmegpeportal/pmegphome/index.jsp" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">kviconline.gov.in</a>
+          </li>
+          <li>
+            IndiaTimes — PMEGP rural entrepreneurship in UP (Lakhimpur Kheri dairy case).{' '}
+            <a href="https://www.indiatimes.com/news/pmegp-fuels-rural-entrepreneurship-in-up/articleshow/131650843.html" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">indiatimes.com</a>
+          </li>
+          <li>
+            JanSamarth — Govt of India unified loan portal.{' '}
+            <a href="https://www.jansamarth.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">jansamarth.in</a>
+          </li>
+          <li>
+            Udyamimitra — SIDBI enterprise loan portal.{' '}
+            <a href="https://www.udyamimitra.in/" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">udyamimitra.in</a>
+          </li>
+        </ul>
+
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[

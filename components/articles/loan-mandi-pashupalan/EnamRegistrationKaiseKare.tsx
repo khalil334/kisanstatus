@@ -402,6 +402,18 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
         <SH>Aapke Sawaal</SH>
         <FAQBlock faqs={FAQS_DATA} />
 
+        <SH>📚 Sources</SH>
+        <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
+          <li>
+            eNAM — National Agriculture Market official portal & blog (Adoni mandi case).{' '}
+            <a href="https://enam.gov.in/web/" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">enam.gov.in</a>
+          </li>
+          <li>
+            Financial Express — eNAM inter-state trade reality, FY25 analysis.{' '}
+            <a href="https://www.financialexpress.com/policy/economy-enam-remains-local-inter-state-trade-minimal-halves-in-fy25-3817271/" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">financialexpress.com</a>
+          </li>
+        </ul>
+
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[
