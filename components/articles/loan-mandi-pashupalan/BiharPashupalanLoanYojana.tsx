@@ -342,6 +342,18 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
 
         <FAQBlock faqs={FAQS_DATA} />
 
+        <SH>📚 Sources</SH>
+        <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
+          <li>
+            Samagra Gavya Vikas Yojana — official portal, Directorate of Dairy Development, Bihar.{' '}
+            <a href="https://dairy.bihar.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">dairy.bihar.gov.in</a>
+          </li>
+          <li>
+            The Daily Jagran — Bihar govt 75% dairy subsidy, 2025 application window report.{' '}
+            <a href="https://www.thedailyjagran.com/bihar/bihar-govt-offers-up-to-75-subsidy-for-setting-up-dairy-units-online-applications-open-till-july-25-10251803" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">thedailyjagran.com</a>
+          </li>
+        </ul>
+
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[

@@ -443,6 +443,22 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
         <SH>❓ FAQ — Aapke Sawaal</SH>
         <FAQBlock faqs={FAQS_DATA} />
 
+        <SH>📚 Sources</SH>
+        <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
+          <li>
+            SBI — Agriculture & Rural banking, official product pages.{' '}
+            <a href="https://sbi.co.in/web/agri-rural/agriculture-banking" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">sbi.co.in</a>
+          </li>
+          <li>
+            District Kupwara, Govt of J&K — official dairy/KCC success story (Shaheena Begum FPO).{' '}
+            <a href="https://kupwara.nic.in/achievements/success-story-dairy-farming/" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">kupwara.nic.in</a>
+          </li>
+          <li>
+            Dept of Financial Services — KCC for Animal Husbandry & Fisheries SOP, 24 Sep 2021.{' '}
+            <a href="https://taxguru.in/finance/kcc-animal-husbandry-dairying-fisheries.html" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">taxguru.in</a>
+          </li>
+        </ul>
+
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[

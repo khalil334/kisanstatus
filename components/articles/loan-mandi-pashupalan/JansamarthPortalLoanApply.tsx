@@ -325,6 +325,18 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
 
         <FAQBlock faqs={FAQS_DATA} />
 
+        <SH>📚 Sources</SH>
+        <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
+          <li>
+            JanSamarth — Govt of India unified credit portal.{' '}
+            <a href="https://www.jansamarth.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">jansamarth.in</a>
+          </li>
+          <li>
+            Financial Express — NABARD-SBI CBDC pilot for tenant farmers.{' '}
+            <a href="https://www.financialexpress.com/policy/economy-digital-currency-comes-to-farmers-aid-3845051/" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">financialexpress.com</a>
+          </li>
+        </ul>
+
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[

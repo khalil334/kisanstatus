@@ -331,6 +331,22 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
 
         <FAQBlock faqs={FAQS_DATA} />
 
+        <SH>📚 Sources</SH>
+        <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
+          <li>
+            Agmarknet — daily mandi rates, Govt of India.{' '}
+            <a href="https://agmarknet.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">agmarknet.gov.in</a>
+          </li>
+          <li>
+            RMS 2026-27 wheat MSP ₹2,585 & state bonus coverage.{' '}
+            <a href="https://thetractorhub.in/msp-on-wheat-2026/" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">thetractorhub.in</a>
+          </li>
+          <li>
+            CCEA Rabi MSP press release — PIB.{' '}
+            <a href="https://pib.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">pib.gov.in</a>
+          </li>
+        </ul>
+
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[
