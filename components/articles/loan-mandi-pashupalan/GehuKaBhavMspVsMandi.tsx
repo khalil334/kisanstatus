@@ -88,7 +88,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
       <div className="container-site max-w-3xl py-8">
         <div className="my-2 mb-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src="/images/articles/loan-mandi-pashupalan/gehu-ka-bhav-msp-vs-mandi/gehu-katai-ke-waqt-khet-mein.webp"
+            src="/images/articles/loan-mandi-pashupalan/gehu-ka-bhav-msp-vs-mandi/gehu-katai.webp"
             alt="Katai ke waqt gehu ke khet mein kisan dana parakhta hua"
             width={1200}
             height={669}
@@ -145,7 +145,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
         </IB>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/gehu-ka-bhav-msp-vs-mandi/sarkari-kharid-kendra-tulai.webp"
+          src="/images/articles/loan-mandi-pashupalan/gehu-ka-bhav-msp-vs-mandi/kendra-tulai.webp"
           alt="Sarkari kharid kendra par gehu ki boriyon ki tulai"
           width={1000}
           height={558}
@@ -199,7 +199,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
         </WB>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/gehu-ka-bhav-msp-vs-mandi/mandi-mein-gehu-ki-boli.webp"
+          src="/images/articles/loan-mandi-pashupalan/gehu-ka-bhav-msp-vs-mandi/gehu-boli.webp"
           alt="Mandi mein gehu ke dher par khuli boli — vyapari aur kisan"
           width={1200}
           height={669}
@@ -227,7 +227,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
         </p>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/gehu-ka-bhav-msp-vs-mandi/ghar-par-gehu-bhandaran-sahi-tarika.webp"
+          src="/images/articles/loan-mandi-pashupalan/gehu-ka-bhav-msp-vs-mandi/gehu-bhandaran.webp"
           alt="Ghar par gehu ka sahi bhandaran — pallet par rakhi boriyaan"
           width={1200}
           height={669}
@@ -268,7 +268,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
         </p>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/gehu-ka-bhav-msp-vs-mandi/gehu-quality-nami-jaanch.webp"
+          src="/images/articles/loan-mandi-pashupalan/gehu-ka-bhav-msp-vs-mandi/nami-jaanch.webp"
           alt="Kharid kendra par gehu ki nami aur quality ki jaanch"
           width={1200}
           height={669}
@@ -309,7 +309,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
         />
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/gehu-ka-bhav-msp-vs-mandi/kharid-ke-baad-parchi-payment.webp"
+          src="/images/articles/loan-mandi-pashupalan/gehu-ka-bhav-msp-vs-mandi/parchi-payment.webp"
           alt="Tulai ke baad kisan ko parchi — payment seedha bank account mein"
           width={1200}
           height={669}

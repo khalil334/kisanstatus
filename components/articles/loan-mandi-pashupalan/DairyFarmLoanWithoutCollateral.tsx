@@ -137,7 +137,7 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
       <div className="container-site max-w-3xl py-8">
         <div className="my-2 mb-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src="/images/articles/loan-mandi-pashupalan/dairy-farm-loan-without-collateral/dairy-farm-subah-ka-kaam.webp"
+            src="/images/articles/loan-mandi-pashupalan/dairy-farm-loan-without-collateral/dairy-subah.webp"
             alt="Subah ke waqt dairy farm par chara dalta kisan — bina zameen girvi rakhe bhi yeh shuruaat mumkin hai"
             width={1200}
             height={670}
@@ -174,7 +174,7 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
         </p>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/dairy-farm-loan-without-collateral/bank-manager-se-baat.webp"
+          src="/images/articles/loan-mandi-pashupalan/dairy-farm-loan-without-collateral/bank-baat.webp"
           alt="Branch mein bank manager se loan ki baat karta kisan"
           width={1200}
           height={670}
@@ -226,7 +226,7 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
         </div>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/dairy-farm-loan-without-collateral/mudra-portal-mobile-par.webp"
+          src="/images/articles/loan-mandi-pashupalan/dairy-farm-loan-without-collateral/mudra-portal.webp"
           alt="Mobile par loan portal dekhta hua aavedak — Mudra apply karne ka raasta online bhi hai"
           width={1200}
           height={670}
@@ -356,7 +356,7 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
         </WB>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/dairy-farm-loan-without-collateral/paanch-pashu-ka-shed.webp"
+          src="/images/articles/loan-mandi-pashupalan/dairy-farm-loan-without-collateral/pashu-shed.webp"
           alt="Paanch pashu ki dairy unit ka shed andar se — project cost isi par banti hai"
           width={1200}
           height={670}
@@ -410,7 +410,7 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
         </DB>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/dairy-farm-loan-without-collateral/chara-kharcha-ka-hisaab.webp"
+          src="/images/articles/loan-mandi-pashupalan/dairy-farm-loan-without-collateral/chara-kharcha.webp"
           alt="Chara aur kharche ka hisaab likhtaa kisan — EMI se pehle yeh ganit zaroori hai"
           width={1200}
           height={670}
@@ -468,7 +468,7 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
         </p>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/dairy-farm-loan-without-collateral/documents-ki-taiyari.webp"
+          src="/images/articles/loan-mandi-pashupalan/dairy-farm-loan-without-collateral/documents.webp"
           alt="Branch jaane se pehle documents ki taiyari — ID, passbook, photo aur quotation"
           width={1200}
           height={670}

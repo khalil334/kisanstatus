@@ -121,7 +121,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
       <div className="container-site max-w-3xl py-8">
         <div className="my-2 mb-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src="/images/articles/loan-mandi-pashupalan/msp-list-2026-27/sarkari-kharid-kendra-par-kisan.webp"
+            src="/images/articles/loan-mandi-pashupalan/msp-list-2026-27/kharid-kendra.webp"
             alt="Sarkari kharid kendra par gehu ki dheri ke paas khada kisan"
             width={1200}
             height={670}
@@ -204,7 +204,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
         </div>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/msp-list-2026-27/gehu-ki-pakki-baali-khet-mein.webp"
+          src="/images/articles/loan-mandi-pashupalan/msp-list-2026-27/gehu-baali.webp"
           alt="Katai ke waqt gehu ki pakki baali kisan ke haath mein"
           width={1000}
           height={558}
@@ -250,7 +250,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
         </div>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/msp-list-2026-27/dhan-ki-katai-kharif-season.webp"
+          src="/images/articles/loan-mandi-pashupalan/msp-list-2026-27/dhan-katai.webp"
           alt="Kharif season mein dhan ki katai karte kisan"
           width={1200}
           height={670}
@@ -316,7 +316,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
         </WB>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/msp-list-2026-27/kharid-kendra-par-boriyon-ki-tulai.webp"
+          src="/images/articles/loan-mandi-pashupalan/msp-list-2026-27/boriyon-tulai.webp"
           alt="Kharid kendra par gehu ki boriyon ki tulai"
           width={1200}
           height={670}
@@ -368,7 +368,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
         />
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/msp-list-2026-27/mandi-mein-gehu-ki-dheri-boli.webp"
+          src="/images/articles/loan-mandi-pashupalan/msp-list-2026-27/gehu-dheri.webp"
           alt="Mandi mein gehu ki dheri par boli — vyapari aur kisan"
           width={1000}
           height={558}
@@ -442,7 +442,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
         </p>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/msp-list-2026-27/msp-ka-hisaab-copy-mein.webp"
+          src="/images/articles/loan-mandi-pashupalan/msp-list-2026-27/msp-hisaab.webp"
           alt="Kisan copy mein MSP aur mandi rate ka hisaab likhta hua"
           width={1000}
           height={558}

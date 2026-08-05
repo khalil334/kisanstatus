@@ -64,7 +64,7 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
       <div className="container-site max-w-3xl py-8">
         <div className="my-2 mb-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src="/images/articles/loan-mandi-pashupalan/bihar-pashupalan-loan-yojana/bhains-ke-saath-kisan-bihar.webp"
+            src="/images/articles/loan-mandi-pashupalan/bihar-pashupalan-loan-yojana/kisan-bhains.webp"
             alt="Bihar ke gaon mein kisan apni bhainson ke saath — pashupalan loan yojana ka asli maidan"
             width={1200}
             height={670}
@@ -125,7 +125,7 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
         </IB>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/bihar-pashupalan-loan-yojana/chhoti-dairy-unit-shed.webp"
+          src="/images/articles/loan-mandi-pashupalan/bihar-pashupalan-loan-yojana/dairy-shed.webp"
           alt="Chhoti dairy unit ka shed — 2-4 pashu se shuruaat karna samajhdaari hai"
           width={1000}
           height={558}
@@ -203,7 +203,7 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
         </StepList>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/bihar-pashupalan-loan-yojana/documents-checklist-kagaz.webp"
+          src="/images/articles/loan-mandi-pashupalan/bihar-pashupalan-loan-yojana/documents.webp"
           alt="Application ke liye documents — Aadhaar, bank passbook, photo aur zameen ke kagaz"
           width={1200}
           height={670}
@@ -233,7 +233,7 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
         </DB>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/bihar-pashupalan-loan-yojana/dairy-portal-online-form.webp"
+          src="/images/articles/loan-mandi-pashupalan/bihar-pashupalan-loan-yojana/online-form.webp"
           alt="Online application — portal par form bharta hua aavedak"
           width={1200}
           height={670}
@@ -260,7 +260,7 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
         />
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/bihar-pashupalan-loan-yojana/bank-mein-loan-ki-baat.webp"
+          src="/images/articles/loan-mandi-pashupalan/bihar-pashupalan-loan-yojana/bank-loan-baat.webp"
           alt="Bank branch mein loan ke baare mein baat-cheet karta kisan"
           width={1200}
           height={670}
@@ -289,7 +289,7 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
         </p>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/bihar-pashupalan-loan-yojana/doodh-collection-center-par.webp"
+          src="/images/articles/loan-mandi-pashupalan/bihar-pashupalan-loan-yojana/doodh-center.webp"
           alt="Doodh collection center par doodh dete hue kisan — asli kamai yahi se shuru hoti hai"
           width={1200}
           height={670}

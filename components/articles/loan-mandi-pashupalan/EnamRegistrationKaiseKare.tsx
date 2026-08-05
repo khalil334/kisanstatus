@@ -84,7 +84,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
       <div className="container-site max-w-3xl py-8">
         <div className="my-2 mb-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
-            src="/images/articles/loan-mandi-pashupalan/enam-registration-kaise-kare/mandi-mein-anaj-ki-dheri.webp"
+            src="/images/articles/loan-mandi-pashupalan/enam-registration-kaise-kare/anaj-dheri.webp"
             alt="Mandi mein anaj ki dheri aur vyapari — eNAM se yahi boli online ho jaati hai"
             width={1200}
             height={670}
@@ -135,7 +135,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
         </IB>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/enam-registration-kaise-kare/teen-zaroori-documents.webp"
+          src="/images/articles/loan-mandi-pashupalan/enam-registration-kaise-kare/documents.webp"
           alt="eNAM registration ke teen documents — Aadhaar, bank passbook aur zameen ke kagaz"
           width={1200}
           height={670}
@@ -175,7 +175,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
         </WB>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/enam-registration-kaise-kare/enam-registration-csc-par.webp"
+          src="/images/articles/loan-mandi-pashupalan/enam-registration-kaise-kare/csc-registration.webp"
           alt="CSC par eNAM registration form bharta hua kisan"
           width={1200}
           height={670}
@@ -224,7 +224,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
         </IB>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/enam-registration-kaise-kare/gate-entry-par-tulai.webp"
+          src="/images/articles/loan-mandi-pashupalan/enam-registration-kaise-kare/gate-tulai.webp"
           alt="Mandi gate entry par fasal ki tulai — yahin se eNAM lot banta hai"
           width={1200}
           height={670}
@@ -274,7 +274,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
         </p>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/enam-registration-kaise-kare/enam-app-khet-se-bhav.webp"
+          src="/images/articles/loan-mandi-pashupalan/enam-registration-kaise-kare/enam-app.webp"
           alt="Khet ke kinare mobile par bhav check karta kisan — eNAM app se mandi jeb mein"
           width={1200}
           height={670}
@@ -298,7 +298,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
         </p>
 
         <Image
-          src="/images/articles/loan-mandi-pashupalan/enam-registration-kaise-kare/inter-state-trade-loading.webp"
+          src="/images/articles/loan-mandi-pashupalan/enam-registration-kaise-kare/trade-loading.webp"
           alt="Mandi se doosre state ke buyer ke liye truck loading — inter-state trade ka asli fayda"
           width={1200}
           height={670}
