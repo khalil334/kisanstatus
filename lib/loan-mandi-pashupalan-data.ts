@@ -228,6 +228,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'rashtriya-gokul-mission-subsidy',
+    ogImage: '/images/articles/loan-mandi-pashupalan/rashtriya-gokul-mission-subsidy/desi-gaay-ke-saath-kisan.webp',
     title: 'Rashtriya Gokul Mission 2026: Subsidy',
     desc: 'RGM se kisan ko kya milta hai — IVF pregnancy par ₹5,000, sex-sorted semen par 50% subsidy, muft AI, aur Breed Multiplication Farm par ₹2 crore tak. Poora process aur 4 galatfehmiyan.',
     ogTitle: 'Rashtriya Gokul Mission 2026 — IVF ₹5,000, Semen 50%, Farm ₹2 Cr',
