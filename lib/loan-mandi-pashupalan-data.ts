@@ -1,6 +1,6 @@
 import type { ArticleMeta } from './articles-data';
 
-export const NEW_ARTICLES: readonly ArticleMeta[] = [
+export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'dairy-farm-loan-without-collateral',
     title: 'Dairy Farm Loan Bina Collateral 2026',
