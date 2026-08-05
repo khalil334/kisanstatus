@@ -369,8 +369,12 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
             <a href="https://ddnews.gov.in/en/cabinet-approves-implementation-of-revised-rashtriya-gokul-mission-with-enhanced-allocation-for-2024-25-and-2025-26/" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">ddnews.gov.in — Cabinet approves implementation of revised Rashtriya Gokul Mission</a>
           </li>
           <li>
-            NDDB — Breed Multiplication Farm EOI portal.{' '}
-            <a href="https://eoi.nddb.coop" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">eoi.nddb.coop</a>
+            NDDB — Breed Multiplication Farm scheme: EOI document, qualification criteria aur subsidy details (RGM ke tahat).{' '}
+            <a href="https://www.nddb.coop/information/establishment-of-breed-multiplication-farms" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">nddb.coop — Establishment of Breed Multiplication Farms</a>
+          </li>
+          <li>
+            NDDB — Breed Multiplication Farm online EOI submission portal (application yahin jama hoti hai).{' '}
+            <a href="https://eoi.nddb.coop" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">eoi.nddb.coop — EOI submission portal</a>
           </li>
         </ul>
 
