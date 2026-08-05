@@ -148,15 +148,14 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
         </div>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-          Dairy farm khol ne ka mann bahut logon ka hota hai. Ruk wahan jaate hain jab branch manager kehta hai —
-          &ldquo;zameen ke kagaz laao, security lagegi.&rdquo; Jiske naam par zameen nahi hai, ya jiske hisse ka batwara
-          ghar mein hua nahi hai, uske liye baat wahin khatam ho jati hai.
+          &ldquo;Zameen ke kagaz laao, security lagegi.&rdquo; Branch manager ki yeh ek line har saal hazaron dairy ke
+          sapne wahin rok deti hai. Zameen naam par nahi hai? Batwara abhi hua nahi? Toh kya loan ka darwaza band?
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
-          Lekin niyam ke hisaab se baat wahan khatam nahi honi chahiye. Teen aise raaste hain jinme bank ko property
-          maangne ki zaroorat nahi padti — kyunki risk cover karne ke liye sarkari guarantee already maujood hai. Is guide
-          mein wahi teen raaste, unki asli limit, kharcha, aur woh chhoti-chhoti wajahein jinse file atak jati hai.
+          Nahi. Niyam ki kitab mein teen aise raaste hain jahan bank property maang hi nahi sakta — kyunki uska
+          risk pehle se ek sarkari guarantee cover kar rahi hoti hai. Aage inhi teen raaston ki baat hai: kitna
+          milta hai, kya kharcha lagta hai, aur file kin chhoti-chhoti wajahon se girti hai.
         </p>
 
         <Image
@@ -168,16 +167,16 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>🎯 Sabse Pehle: Collateral aur Guarantee Ka Fark</SH>
+        <SH>Collateral Aur Guarantee — Fark Samjhe Bina Branch Mat Jao</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Collateral matlab aapki koi cheez — zameen, makaan, FD — jo bank ke paas girvi rehti hai. Guarantee ka matlab
-          alag hai: koi teesra bank ko yeh bharosa deta hai ki loan doob gaya toh nuksan ka bada hissa woh bhar dega.
-          Dairy loan mein yeh teesra sarkari trust hota hai — chhote loan par CGFMU, bade par CGTMSE.
+          Collateral yaani aapki apni cheez girvi — zameen, makaan, FD. Guarantee bilkul doosri cheez hai: ek teesra
+          paksh bank se kehta hai ki loan dooba toh nuksan ka bada hissa main bharunga. Dairy ke case mein yeh
+          teesra paksh sarkari trust hai — chhote loan pe CGFMU, bade pe CGTMSE.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Yahi baat samajh lene se branch mein baat karna aasan ho jata hai. Aap security dene se mana nahi kar rahe —
-          aap keh rahe ho ki is scheme mein security ki jagah guarantee cover lagta hai. Officer ko yeh bhasha samajh
-          aati hai.
+          Isko samajhne ka faayda seedha branch ki table par milta hai. Aap officer se yeh nahi keh rahe ki
+          &ldquo;security nahi dunga&rdquo; — aap keh rahe ho ki is scheme mein security ki jagah guarantee cover lagta
+          hai. Pehli baat jhagda lagti hai, doosri baat niyam. Officer niyam ki bhasha samajhta hai.
         </p>
 
         <IB>
@@ -185,7 +184,7 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
           loan se kharidoge, wahi bank ki security hain — zameen ki zaroorat isi liye khatam ho jati hai.
         </IB>
 
-        <SH>🛣️ Teen Raaste — Ek Nazar Mein</SH>
+        <SH>Teen Raaste, Ek Table</SH>
         <div className="overflow-x-auto my-4">
           <table className="w-full text-sm border-collapse">
             <thead>
@@ -220,11 +219,11 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>1️⃣ Mudra Loan — Sabse Seedha Raasta</SH>
+        <SH>Raasta 1: Mudra — Jahan Se Zyada Tar Log Shuru Karte Hain</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Pradhan Mantri Mudra Yojana ke neeche dairy, pashupalan aur allied activities finance hoti hain. Iski sabse
-          badi baat: kisi bhi category mein bank collateral nahi maang sakta. Budget 2024-25 mein isme ek naya slab
-          jodha gaya — <strong>Tarun Plus</strong> — jisse upar ki limit ₹10 lakh se ₹20 lakh ho gayi.
+          Dairy aur pashupalan Mudra Yojana ke andar finance hote hain, aur iska sabse bada point ek hi hai —
+          collateral maangna bank ke bas mein hi nahi hai, kisi bhi slab par. Budget 2024-25 se ek naya slab bhi
+          juda, <strong>Tarun Plus</strong>, jisne upar ki limit ₹10 lakh se kheench kar ₹20 lakh kar di.
         </p>
 
         <div className="overflow-x-auto my-4">
@@ -255,9 +254,10 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
         </WB>
 
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Public sector bank ke through Mudra par byaj aam taur par 9%–12% ke beech rehta hai. NBFC se lo toh yeh
-          kaafi upar chala jata hai, kabhi 18% tak. Rate har bank apna tay karta hai, isliye do-teen branch se likhit
-          rate le kar compare karna sabse asaan bachat hai — ek percent ka fark 5 saal mein hazaaron ka hota hai.
+          Byaj kitna? Sarkari bank se lo toh aam taur par 9 se 12 pratishat. NBFC se lo toh 18 tak bhi pahunch
+          jata hai — haan, itna fark hota hai. Rate har bank apna rakhta hai. Do-teen branch ghoom kar likhit rate
+          le lo aur compare karo; ek pratishat ka fark paanch saal mein hazaaron rupaye banata hai. Itni mehnat
+          ka itna paisa aur kahan milega.
         </p>
 
         <GovLink
@@ -268,11 +268,11 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
           portalName="udyamimitra.in"
         />
 
-        <SH>2️⃣ PMEGP — Jahan Subsidy Milti Hai</SH>
+        <SH>Raasta 2: PMEGP — Yahan Subsidy Ka Tadka Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          PMEGP KVIC chalata hai. Isme bank loan deta hai aur sarkar us project cost ka 15% se 35% hissa margin money
-          subsidy ke roop mein bhar deti hai — yeh paisa wapas nahi karna padta. Project limit manufacturing type
-          activity par ₹50 lakh tak aur service type par ₹20 lakh tak hai. Dairy unit isme eligible hai.
+          PMEGP ko KVIC chalata hai, aur iski khaas baat woh margin money subsidy hai jo wapas nahi karni padti —
+          project cost ka 15 se 35 pratishat sarkar bhar deti hai. Limit? Manufacturing type kaam par ₹50 lakh
+          tak, service type par ₹20 lakh tak. Dairy unit fit baithti hai.
         </p>
 
         <div className="overflow-x-auto my-4">
@@ -311,11 +311,12 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
           subsidy wapas le li jati hai.
         </IB>
 
-        <SH>3️⃣ CGTMSE — Jab Loan Bada Ho</SH>
+        <SH>Raasta 3: CGTMSE — Bade Project Ka Rasta</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          CGTMSE koi loan scheme nahi hai, aur isi wajah se log confuse hote hain. Yeh ek credit guarantee trust hai
-          (MSME Ministry + SIDBI). Bank aapko normal term loan deta hai aur us loan ko CGTMSE cover ke neeche daal deta
-          hai. Nuksan hua toh trust bank ko bada hissa bhar deta hai — isliye bank property maangna chhod deta hai.
+          Pehli baat: CGTMSE koi loan scheme nahi hai. Log yahi samajh kar branch mein &ldquo;CGTMSE loan&rdquo; maangte
+          hain aur officer sar khujata hai. Yeh ek credit guarantee trust hai (MSME Ministry + SIDBI ka). Hota yeh
+          hai ki bank aapko apna normal term loan deta hai aur usko CGTMSE ke cover mein daal deta hai — loan dooba
+          toh trust bank ka bada nuksan bhar dega. Bank ka dar khatam, toh property ki maang bhi khatam.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           1 April 2025 ke updated scheme document ke baad iski cover ceiling ₹10 crore tak hai, guarantee coverage
@@ -339,11 +340,11 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>💰 Project Cost Ka Asli Hisaab — 5 Pashu Ka Unit</SH>
+        <SH>Paanch Pashu Ki Unit — DPR Mein Kya-Kya Jayega</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Neeche ek illustrative structure hai — asli rate aapke ilaake, breed aur construction cost se badlega. Iska
-          maqsad sirf yeh dikhana hai ki bank aapki DPR mein kaunse head dekhta hai. Apne local rate bhar kar hi
-          final DPR banwana.
+          Neeche jo structure hai woh samajhne ke liye hai, copy karne ke liye nahi — asli rate aapke ilaake,
+          breed aur mistri ke bhav se tay honge. Maqsad itna hai ki pata rahe bank DPR kholte hi kin cheezon par
+          nazar daalta hai.
         </p>
         <div className="overflow-x-auto my-4">
           <table className="w-full text-sm border-collapse">
@@ -393,10 +394,10 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>🧮 EMI Ka Andaza</SH>
+        <SH>EMI Kitni Banegi — Kagaz Par Dekho</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Neeche 11% annual rate par nikale gaye example figures hain — sirf samajhne ke liye. Aapka bank ka rate isse
-          kam ya zyada ho sakta hai, aur usi hisaab se EMI badal jayegi.
+          Yeh figures 11% saalana rate par nikale hain, sirf andaza banane ke liye — aapke bank ka rate alag hoga
+          toh EMI bhi alag banegi:
         </p>
         <div className="overflow-x-auto my-4">
           <table className="w-full text-sm border-collapse">
@@ -451,7 +452,7 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>📄 Documents — Branch Jaane Se Pehle</SH>
+        <SH>Branch Jaane Se Pehle Yeh Sab Jama Karo</SH>
         <StepList>
           <SI n={1}>
             <strong>Aadhaar aur PAN</strong> — naam ki spelling dono mein same honi chahiye. Halka fark bhi verification
@@ -482,7 +483,7 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
           </SI>
         </StepList>
 
-        <SH>💻 Online Kahan Apply Hoga</SH>
+        <SH>Online Apply Kahan Hota Hai</SH>
         <StepList>
           <SI n={1}>
             <strong>Mudra ke liye:</strong> udyamimitra.in par register karke Mudra application bharo, category (Shishu
@@ -510,11 +511,11 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
           portalName="kviconline.gov.in"
         />
 
-        <SH>⚠️ Woh Wajahein Jinse File Reject Hoti Hai</SH>
+        <SH>File Kyun Girti Hai — Chaar Asli Wajahein</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Rejection ki wajah aksar bahut chhoti hoti hai, aur applicant ko pata bhi nahi chalta. Pehli: DPR mein doodh
-          ka rate market se upar likha hua. Bank ka officer local rate janta hai — ek nazar mein file ka bharosa toot
-          jata hai. Doosri: chara aur labour ka kharcha itna kam dikhana ki profit unrealistic lage.
+          Aksar applicant ko pata bhi nahi chalta ki file kyun ruki. Sabse aam wajah? DPR mein doodh ka rate market
+          se upar likh dena. Officer local rate janta hai — usko dikha nahi ki number phulaya gaya hai, aur poori
+          file ka bharosa gaya. Isi tarah chara-labour ka kharcha itna kam dikhana ki profit sapna lage — wahi asar.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Teesri wajah credit history hai. Purana koi loan default mein chal raha ho, ya aap kisi ke guarantor ho jiska
@@ -538,7 +539,7 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
           </p>
         </div>
 
-        <SH>❓ FAQ — Aapke Sawaal</SH>
+        <SH>Aapke Sawaal</SH>
         <FAQBlock faqs={FAQS_DATA} />
 
         <RelatedArticles articles={RELATED} />
