@@ -99,7 +99,7 @@ export default function LanguageSwitcher() {
         event_label: langData?.label || newLang,
         value: newLang,
       });
-    } catch (error) {
+    } catch {
     }
   };
 

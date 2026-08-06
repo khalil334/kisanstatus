@@ -19,4 +19,19 @@ export default [
   ...next,
   ...nextCoreWebVitals,
   ...nextTypescript,
+  {
+    rules: {
+      // Hinglish-prose site: unescaped quotes/apostrophes in JSX text are
+      // intentional copy, and React/Next escapes output anyway. The rule was
+      // 948 errors of pure noise drowning real bugs.
+      'react/no-unescaped-entities': 'off',
+    },
+  },
+  {
+    // Node scripts + config files are CommonJS by design.
+    files: ['scripts/**/*.js', 'next.config.js', 'postcss.config.js'],
+    rules: {
+      '@typescript-eslint/no-require-imports': 'off',
+    },
+  },
 ];

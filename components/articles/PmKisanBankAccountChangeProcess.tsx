@@ -4,7 +4,6 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
-import type { ArticleMeta } from '@/lib/articles-data';
 
 const PUBLISHED = '2026-07-10T08:00:00+05:30';
 const MODIFIED = '2026-07-25T08:00:00+05:30';
@@ -66,7 +65,7 @@ const FAQS_DATA = [
   },
 ];
 
-export default function PmKisanBankAccountChangeProcess({ article }: { article: ArticleMeta }) {
+export default function PmKisanBankAccountChangeProcess() {
   return (
     <>
       <div className="bg-[var(--color-primary)] py-8">

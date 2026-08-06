@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
-import { SITE_URL, SITE_NAME } from '@/lib/site-config';
+import { SITE_URL } from '@/lib/site-config';
 
 export default function LandSeedingDownloadPage() {
   const searchParams = useSearchParams();

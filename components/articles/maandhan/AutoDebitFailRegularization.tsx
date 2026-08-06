@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Script from 'next/script';
-import { SI, StepList, IB, WB, DB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
-import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
+import { SI, StepList, IB, WB, SH, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 
 const PUBLISHED = '2026-07-29T08:00:00+05:30';
 const MODIFIED = '2026-07-29T08:00:00+05:30';
@@ -55,7 +54,7 @@ const RELATED_CARDS = [
   },
 ];
 
-export default function AutoDebitFailRegularization({ article }: { article: MaandhanArticleMeta }) {
+export default function AutoDebitFailRegularization() {
   return (
     <>
       <Script id="auto-debit-schema" type="application/ld+json" strategy="afterInteractive">

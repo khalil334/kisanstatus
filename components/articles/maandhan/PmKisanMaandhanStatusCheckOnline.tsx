@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import ExternalLinkButton from "@/components/ExternalLinkButton";
-import type { MaandhanArticleMeta } from "@/lib/maandhan-data";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -29,7 +28,7 @@ const jsonLd = {
   ]
 };
 
-export default function PmKisanMaandhanStatusCheckOnline({ article }: { article: MaandhanArticleMeta }) {
+export default function PmKisanMaandhanStatusCheckOnline() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-8 text-gray-800 dark:text-gray-200 leading-relaxed prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-blue-600 dark:prose-a:text-blue-400">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />

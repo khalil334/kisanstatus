@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
