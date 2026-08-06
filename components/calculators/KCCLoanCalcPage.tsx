@@ -154,7 +154,7 @@ export default function KCCLoanCalcPage() {
               {}
               <div className="mt-4 p-3 bg-white rounded-xl text-xs text-gray-700">
                 <p className="font-bold mb-1">📖 Iska Matlab Kya Hai?</p>
-                <p>Aapne ₹{fmt(P)} ka loan liya {rate}% interest par {months} mahine ke liye. Har mahine ₹{fmt(emi)} dena hoga. Total ₹{fmt(totalInterest)} interest dena padega. Par agar time par repay kiya to ₹{fmt(subsidy)} ki subsidy milegi — effective cost sirf ₹{fmt(effectiveCost)} hogi.</p>
+                <p>Aapne {fmt(P)} ka loan liya {rate}% interest par {months} mahine ke liye. Har mahine {fmt(emi)} dena hoga. Total {fmt(totalInterest)} interest dena padega. Par agar time par repay kiya to {fmt(subsidy)} ki subsidy milegi — effective cost sirf {fmt(effectiveCost)} hogi.</p>
               </div>
             </div>
           )}
