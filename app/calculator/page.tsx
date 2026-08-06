@@ -5,7 +5,7 @@ import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '@/lib/site-config';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: `Free PM Kisan Tools 2026 — EMI, MSP & Status Check`,
+  title: `Free PM Kisan Tools 2026 — EMI & MSP`,
   description: '7 free kisan tools: PM Kisan status check, KCC loan EMI, MSP income, aur fasal bima premium calculator. Bina registration ke, bilkul free.',
   alternates: { canonical: `${SITE_URL}/calculator` },
   keywords: [
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
     type: 'website',
     url: `${SITE_URL}/calculator`,
     siteName: SITE_NAME,
-    title: `Free PM Kisan Tools 2026 — EMI, MSP & Status Check`,
+    title: `Free PM Kisan Tools 2026 — EMI & MSP`,
     description: '7 free kisan utilities — koi login nahi, koi charge nahi. Bank jaane se pehle apna hisaab khud karo.',
     locale: 'hi_IN',
     images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: `Free PM Kisan Tools 2026 – ${SITE_NAME}` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Free PM Kisan Tools 2026 — EMI, MSP & Status Check`,
+    title: `Free PM Kisan Tools 2026 — EMI & MSP`,
     description: '7 free kisan utilities — koi login nahi, koi charge nahi.',
     images: [DEFAULT_OG_IMAGE],
     site: '@kisanstatus',
@@ -123,7 +123,7 @@ export default function CalculatorIndexPage() {
             Free Utilities
           </span>
           <h1 className="text-2xl md:text-4xl font-black text-white mb-3">
-            Free PM Kisan Tools 2026 — EMI, MSP & Status Check
+            Free PM Kisan Tools 2026 — EMI & MSP
           </h1>
           <h2 className="text-green-200 text-sm md:text-base font-normal max-w-2xl mx-auto mb-6">
             7 free kisan utilities — koi registration nahi, koi charge nahi. Bank jaane se pehle apna hisaab khud karo.

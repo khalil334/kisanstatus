@@ -5,7 +5,7 @@ const DOMAIN = 'https://kisanstatus.com';
 const PAGE_URL = `${DOMAIN}/calculator/crop-profit`;
 
 export const metadata: Metadata = {
-  title: 'Kheti Ka Munafa Calculator 2026 — Fasal Profit Loss',
+  title: 'Kheti Ka Munafa Calculator 2026',
   description: 'Kheti mein kitna profit ya loss hua, jaano turant. Beej, khad, mazdoori aur sinchai ka kharcha dalo aur net munafa nikalo. Free per hectare calculator.',
   keywords: [
     'kheti ka munafa calculator',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Kheti Ka Munafa Calculator 2026 — Fasal Profit Loss',
+    title: 'Kheti Ka Munafa Calculator 2026',
     description: 'Kheti mein kitna profit ya loss hua, jaano turant. Beej, khad, mazdoori aur sinchai ka kharcha dalo aur net munafa nikalo. Free online tool.',
     type: 'website',
     url: PAGE_URL,
