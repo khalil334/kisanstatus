@@ -3,7 +3,8 @@ import Link from 'next/link';
 import { SITE_URL, SITE_NAME } from '@/lib/site-config';
 
 export const metadata: Metadata = {
-  title: `Search — ${SITE_NAME}`,
+  // layout.tsx applies the `%s | KisanStatus` template — no inline brand here.
+  title: `Search`,
   description: 'Search feature abhi update ho raha hai. Aapko homepage par redirect kiya ja raha hai.',
   robots: { index: false, follow: true },
   alternates: { canonical: SITE_URL },

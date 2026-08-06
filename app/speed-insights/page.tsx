@@ -3,7 +3,8 @@ import Link from 'next/link';
 import { SITE_URL, SITE_NAME } from '@/lib/site-config';
 
 export const metadata: Metadata = {
-  title: `Redirecting — ${SITE_NAME}`,
+  // layout.tsx applies the `%s | KisanStatus` template — no inline brand here.
+  title: `Redirecting`,
   description: 'Yeh page ab update ho raha hai. Aapko automatically homepage par redirect kiya ja raha hai.',
   robots: { index: false, follow: false },
   alternates: { canonical: SITE_URL },
