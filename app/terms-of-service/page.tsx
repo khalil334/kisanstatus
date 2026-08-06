@@ -3,7 +3,8 @@ import Link from 'next/link';
 import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL, DEFAULT_OG_IMAGE } from '@/lib/site-config';
 
 export const metadata: Metadata = {
-  title: `Terms of Service – ${SITE_NAME} | Upyog Ki Shartein`,
+  // layout.tsx applies the `%s | KisanStatus` template — no inline brand here.
+  title: `Terms of Use – Upyog Ki Shartein`,
   description: `KisanStatus.com ki Terms of Service. Hamari website use karne se pehle yeh shartein, privacy policy aur legal notice zaroor padhein.`,
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   alternates: { canonical: `${SITE_URL}/terms-of-service` },

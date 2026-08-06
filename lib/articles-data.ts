@@ -208,6 +208,10 @@ const CORE_ARTICLES: readonly ArticleMeta[] = [
     title: 'Kisan Credit Card 2026: ₹5 Lakh Loan',
     desc: 'KCC hai to ₹5 lakh tak ka loan sirf 4% interest par mil sakta hai. Online apply process, eligibility aur zaroori documents ki puri jankari yahan.',
     ogTitle: 'KCC Online Apply — ₹5 Lakh Loan 2026',
+    // SERP title must share its leading keyword with the on-page <h1>
+    // ("Kisan Credit Card 2026: 4% Byaj, Online Apply & Limits"), otherwise
+    // Google discards <title> and rewrites the SERP heading itself.
+    seoTitle: 'Kisan Credit Card 2026: 4% Byaj Online Apply',
     keywords: [
       'kisan credit card online apply 2026',
       'KCC apply online',
