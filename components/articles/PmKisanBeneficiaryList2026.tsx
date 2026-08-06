@@ -1,12 +1,13 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { 
   SI, StepList, IB, WB, SH, GovLink, RelatedArticles, 
   AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate 
 } from '@/components/ArticleShared';
+import CountdownModal from '@/components/CountdownModal';
 import type { ArticleMeta } from '@/lib/articles-data';
 import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
@@ -107,91 +108,6 @@ const STATES_LIST = [
   ['🏖️', 'Daman & Diu', 'daman-diu'],
 ] as const;
 
-function CountdownModal({ 
-  title, 
-  message, 
-  redirectUrl, 
-  onClose
-}: { 
-  title: string; 
-  message: string; 
-  redirectUrl: string; 
-  onClose: () => void;
-}) {
-  const [count, setCount] = useState(10);
-  const [showDownloadBtn, setShowDownloadBtn] = useState(false);
-
-  useEffect(() => {
-    if (count === 0) {
-      setShowDownloadBtn(true);
-      return;
-    }
-    const timer = setTimeout(() => setCount(count - 1), 1000);
-    return () => clearTimeout(timer);
-  }, [count]);
-
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4 backdrop-blur-sm" onClick={onClose}>
-      <div
-        className="w-full max-w-md rounded-2xl bg-white dark:bg-gray-900 p-6 shadow-2xl border-2 border-green-500"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <div className="text-center">
-          <div className="text-5xl mb-3" aria-hidden="true">⏳</div>
-          <h3 className="text-lg font-black text-gray-800 dark:text-white mb-2">
-            {title}
-          </h3>
-          <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
-            {message}
-          </p>
-          
-          {!showDownloadBtn ? (
-            <div className="mb-4">
-              <div className="text-6xl font-black text-green-600 dark:text-green-400">
-                {count}
-              </div>
-              <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                seconds baad official portal par redirect hoga...
-              </p>
-            </div>
-          ) : (
-            <div className="mb-4 space-y-3">
-              <div className="bg-green-50 dark:bg-green-900/30 border-2 border-green-500 rounded-lg p-4">
-                <p className="text-sm font-bold text-green-800 dark:text-green-300 mb-2">
-                  ✅ Official Portal Ready Hai!
-                </p>
-                <a
-                  href={redirectUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block w-full px-6 py-3 bg-green-600 hover:bg-green-700 text-white text-base font-bold rounded-lg transition-colors animate-pulse"
-                >
-                  📥 Official Portal Par Jaakar PDF Download Karein
-                </a>
-              </div>
-              <p className="text-xs text-gray-500 dark:text-gray-400">
-                Upar diye gaye button par click karke official government portal kholein. Wahan State/District/Village select karke list download karein.
-              </p>
-            </div>
-          )}
-          
-          <div className="bg-blue-50 dark:bg-blue-900/30 rounded-lg p-3 mb-4">
-            <p className="text-xs text-blue-800 dark:text-blue-300">
-              📌 Kripya dhairya rakhein. Aapko seedha official PM Kisan portal par le jaaya ja raha hai.
-            </p>
-          </div>
-          <button
-            onClick={onClose}
-            className="w-full px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-800 dark:text-white text-sm font-bold rounded-lg transition-colors"
-          >
-            Cancel
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 export default function PmKisanBeneficiaryList2026({ article }: { article: ArticleMeta }) {
   const [modal, setModal] = useState<{ 
     title: string; 
@@ -260,6 +176,28 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
           message={modal.message}
           redirectUrl={modal.url}
           onClose={() => setModal(null)}
+          countdownNote="seconds baad official portal par redirect hoga..."
+          infoNote="📌 Kripya dhairya rakhein. Aapko seedha official PM Kisan portal par le jaaya ja raha hai."
+          readyContent={
+            <>
+              <div className="bg-green-50 dark:bg-green-900/30 border-2 border-green-500 rounded-lg p-4">
+                <p className="text-sm font-bold text-green-800 dark:text-green-300 mb-2">
+                  ✅ Official Portal Ready Hai!
+                </p>
+                <a
+                  href={modal.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block w-full px-6 py-3 bg-green-600 hover:bg-green-700 text-white text-base font-bold rounded-lg transition-colors animate-pulse"
+                >
+                  📥 Official Portal Par Jaakar PDF Download Karein
+                </a>
+              </div>
+              <p className="text-xs text-gray-500 dark:text-gray-400">
+                Upar diye gaye button par click karke official government portal kholein. Wahan State/District/Village select karke list download karein.
+              </p>
+            </>
+          }
         />
       )}
 
