@@ -2,10 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { 
-  SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, 
+  SI, StepList, IB, WB, SH, GovLink, RelatedArticles, 
   AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate 
 } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
@@ -112,14 +111,12 @@ function CountdownModal({
   title, 
   message, 
   redirectUrl, 
-  onClose,
-  showButton = false 
+  onClose
 }: { 
   title: string; 
   message: string; 
   redirectUrl: string; 
   onClose: () => void;
-  showButton?: boolean;
 }) {
   const [count, setCount] = useState(10);
   const [showDownloadBtn, setShowDownloadBtn] = useState(false);
@@ -200,7 +197,6 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
     title: string; 
     message: string; 
     url: string; 
-    showButton?: boolean;
   } | null>(null);
 
   const breadcrumbSchema = {
@@ -241,7 +237,6 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
       title: 'Please Wait',
       message: 'PM Kisan Beneficiary List PDF download karne ke liye thoda intezaar karein...',
       url: 'https://pmkisan.gov.in/BeneficiaryList.aspx',
-      showButton: true,
     });
   };
 
@@ -250,7 +245,6 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
       title: 'Please Wait',
       message: `${stateName} ki beneficiary list PDF download karne ke liye official portal par redirect ho raha hai...`,
       url: 'https://pmkisan.gov.in/BeneficiaryList.aspx',
-      showButton: true,
     });
   };
 
@@ -265,7 +259,6 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
           title={modal.title}
           message={modal.message}
           redirectUrl={modal.url}
-          showButton={modal.showButton}
           onClose={() => setModal(null)}
         />
       )}
@@ -326,7 +319,6 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
               title: 'Please Wait',
               message: 'Official PM Kisan portal se list download karne ke liye thoda intezaar karein...',
               url: 'https://pmkisan.gov.in/BeneficiaryList.aspx',
-              showButton: true,
             })}
             className="flex items-center justify-center gap-2 p-4 bg-blue-600 hover:bg-blue-700 text-white font-black rounded-xl transition-all shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           >

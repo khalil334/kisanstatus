@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Script from 'next/script';
 import { useState, useMemo, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
-import type { ArticleMeta, CategorySlug } from '@/lib/articles-data';
+import type { CategorySlug } from '@/lib/articles-data';
 import { CATEGORIES } from '@/lib/articles-data';
 
 const NEW_ARTICLES_LIMIT = 3;

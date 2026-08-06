@@ -4,7 +4,6 @@ import { useState, useEffect, useCallback, useMemo, memo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
-import type { ArticleMeta } from '@/lib/articles-data';
 
 const PUBLISHED = '2026-07-10T08:00:00+05:30';
 const MODIFIED = '2026-07-22T08:00:00+05:30';
@@ -159,7 +158,7 @@ const STATE_PORTALS = [
   { state: 'West Bengal', portal: 'banglarbhumi.gov.in', url: 'https://banglarbhumi.gov.in', note: 'Banglar Bhumi WB portal.' },
 ];
 
-export default function PmKisanVillageWiseListPdfDownload({ article }: { article: ArticleMeta }) {
+export default function PmKisanVillageWiseListPdfDownload() {
   const [portalSearch, setPortalSearch] = useState('');
   
   const filteredPortals = useMemo(() => 

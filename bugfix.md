@@ -100,7 +100,9 @@ The mount effect reads localStorage and immediately calls three setStates, causi
 
 ---
 
-## BUG 6 — Lint debt: 984 errors mean `npm run lint` can't gate anything
+## BUG 6 — ✅ FIXED (2026-08-06) — Lint debt: 984 errors mean `npm run lint` can't gate anything
+
+> **Resolution:** `react/no-unescaped-entities` turned off in `eslint.config.mjs` (Hinglish prose; React escapes output). `no-require-imports` disabled for `scripts/**/*.js` + `next.config.js` + `postcss.config.js` via an override (files stay `.js`). All 96 unused vars/imports removed (incl. dead `showButton` prop plumbing in `PmKisanBeneficiaryList2026` and an unused `router` in `PmKisanMobileNumberChangeUpdate`; `app/error.tsx` now logs the required `error` prop). 984 → ~28 problems; the remaining errors are the real hook issues tracked as BUG 4/5 plus 16 `no-explicit-any` (out of scope here). `tsc --noEmit` still clean.
 
 **Severity:** Tooling (Low), but it hides real bugs like BUG 1
 

@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import ExternalLinkButton from '@/components/ui/ExternalLinkButton';
 import InfoBox from '@/components/ui/InfoBox';
 import SchemeTable from '@/components/ui/SchemeTable';
 import { FAQBlock } from '@/components/ArticleShared';

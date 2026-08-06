@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { Suspense } from 'react';
-import { SITE_URL, SITE_NAME } from '@/lib/site-config';
+import { SITE_URL } from '@/lib/site-config';
 
 function DownloadContent() {
   const searchParams = useSearchParams();

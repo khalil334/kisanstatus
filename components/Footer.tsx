@@ -1,9 +1,7 @@
 import Link from 'next/link';
 import { 
   AUTHOR_NAME, 
-  AUTHOR_URL,
   SITE_NAME,
-  SITE_URL,
   SUPPORT_EMAIL,
   HELPLINE,
   HELPLINE_ALT,

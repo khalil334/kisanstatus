@@ -3,8 +3,7 @@
 import { useEffect, useState, useMemo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { IB, WB, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock } from '@/components/ArticleShared';
-import type { ArticleMeta } from '@/lib/articles-data';
+import { IB, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock } from '@/components/ArticleShared';
 
 const MANDI_API_KEY = process.env.NEXT_PUBLIC_MANDI_API_KEY || '';
 const WEATHER_API_KEY = process.env.NEXT_PUBLIC_WEATHER_API_KEY || '';
@@ -495,7 +494,7 @@ function buildStateAdjusted(bases: readonly CommodityBase[], factor: number): Co
   });
 }
 
-export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
+export default function MandiBhavToday() {
   const [modal, setModal] = useState<{
     title: string;
     message: string;
@@ -590,7 +589,7 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
           setIsLive(true);
           setLastUpdated(new Date().toLocaleString('hi-IN'));
         }
-      } catch (err) {
+      } catch {
         if (!cancelled) {
           const factor = STATE_PRICE_FACTOR[selectedState] ?? 1;
           setVegetables(buildStateAdjusted(VEGETABLE_BASE, factor));
@@ -640,7 +639,7 @@ export default function MandiBhavToday({ article }: { article: ArticleMeta }) {
           }));
 
         if (!cancelled) setWeatherForecast(forecast.length ? forecast : WEATHER_FALLBACK);
-      } catch (err) {
+      } catch {
         if (!cancelled) setWeatherForecast(WEATHER_FALLBACK);
       }
     }

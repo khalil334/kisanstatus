@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import { SITE_URL, AUTHOR_NAME, AUTHOR_BIO, DISCLAIMER_TEXT, HELPLINE } from '@/lib/site-config';
+import { AUTHOR_NAME, AUTHOR_BIO, DISCLAIMER_TEXT } from '@/lib/site-config';
 
 export function fmtDate(iso: string) {
   return new Date(iso).toLocaleDateString('hi-IN', {
