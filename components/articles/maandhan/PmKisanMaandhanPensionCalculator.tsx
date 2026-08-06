@@ -33,16 +33,16 @@ const RELATED_CARDS = [
 
 const CONTRIBUTION_DATA: { age: number; monthly: number; total: number }[] = [
   { age: 18, monthly: 55, total: 27720 }, { age: 19, monthly: 58, total: 28536 },
-  { age: 20, monthly: 60, total: 28800 }, { age: 21, monthly: 62, total: 28428 },
-  { age: 22, monthly: 65, total: 28860 }, { age: 23, monthly: 68, total: 29104 },
-  { age: 24, monthly: 72, total: 30240 }, { age: 25, monthly: 75, total: 31500 },
-  { age: 26, monthly: 80, total: 32640 }, { age: 27, monthly: 85, total: 33660 },
-  { age: 28, monthly: 90, total: 34560 }, { age: 29, monthly: 95, total: 35340 },
-  { age: 30, monthly: 100, total: 36000 }, { age: 31, monthly: 105, total: 36540 },
-  { age: 32, monthly: 110, total: 36960 }, { age: 33, monthly: 120, total: 38880 },
-  { age: 34, monthly: 130, total: 40560 }, { age: 35, monthly: 140, total: 42000 },
-  { age: 36, monthly: 150, total: 43200 }, { age: 37, monthly: 160, total: 44160 },
-  { age: 38, monthly: 170, total: 44880 }, { age: 39, monthly: 180, total: 45360 },
+  { age: 20, monthly: 61, total: 29280 }, { age: 21, monthly: 64, total: 29952 },
+  { age: 22, monthly: 68, total: 31008 }, { age: 23, monthly: 72, total: 31968 },
+  { age: 24, monthly: 76, total: 32832 }, { age: 25, monthly: 80, total: 33600 },
+  { age: 26, monthly: 85, total: 34680 }, { age: 27, monthly: 90, total: 35640 },
+  { age: 28, monthly: 95, total: 36480 }, { age: 29, monthly: 100, total: 37200 },
+  { age: 30, monthly: 105, total: 37800 }, { age: 31, monthly: 110, total: 38280 },
+  { age: 32, monthly: 120, total: 40320 }, { age: 33, monthly: 130, total: 42120 },
+  { age: 34, monthly: 140, total: 43680 }, { age: 35, monthly: 150, total: 45000 },
+  { age: 36, monthly: 160, total: 46080 }, { age: 37, monthly: 170, total: 46920 },
+  { age: 38, monthly: 180, total: 47520 }, { age: 39, monthly: 190, total: 47880 },
   { age: 40, monthly: 200, total: 48000 },
 ];
 
@@ -109,7 +109,7 @@ function PensionCalculatorWidget() {
 const FAQS_DATA = [
   {
     q: '30 saal ki umar mein judne par 60 tak total kitna dena hoga?',
-    a: '30 saal par entry rate ₹100 per mahina baithti hai. 360 mahino (30 saal) mein aapka apna hissa ₹36,000 ban jata hai, aur itna hi paisa sarkar ki taraf se alag se jama hota hai.',
+    a: '30 saal par entry rate ₹105 per mahina baithti hai. 360 mahino (30 saal) mein aapka apna hissa ₹37,800 ban jata hai, aur itna hi paisa sarkar ki taraf se alag se jama hota hai.',
   },
   {
     q: 'Sarkar sach mein barabar paisa dalti hai, ya sirf naam ka hai?',
@@ -246,7 +246,7 @@ export default function PmKisanMaandhanPensionCalculator({ article }: { article:
             Sabse pehla sawal yahi aata hai — itni chhoti rakam se itni badi pension kaise ban jaati hai? Wajah simple hai: paisa akela nahi jama hota. Kisan jo bhi de, utna (kai age groups mein usse zyada bhi) Central aur State sarkar milkar dalti hain. Dono hisse LIC ke pension fund mein invest hote hain, aur 60 ki age par ek fixed payout shuru ho jata hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Practical baat: jitni jaldi entry hogi, utna kam bharna padega. 27-28 saal ki age mein judne par outflow ₹75 ke aas-paas rehta hai, jabki 40 saal mein wahi target pura karne ke liye ₹200 per mahina dena padta hai — farak seedha double se zyada ka hai.
+            Practical baat: jitni jaldi entry hogi, utna kam bharna padega. 25 saal ki age mein judne par outflow ₹80 per mahina rehta hai, jabki 40 saal mein wahi target pura karne ke liye ₹200 per mahina dena padta hai — farak seedha double se zyada ka hai.
           </p>
           <WB>
             Ek baar age ke hisaab se rate fix ho gayi, to wo 60 saal tak same rehti hai — na mehngai se badhti hai, na kisi aur wajah se.
@@ -325,8 +325,8 @@ export default function PmKisanMaandhanPensionCalculator({ article }: { article:
             <SI n={1}>Current age note karein — is example mein 35 saal.</SI>
             <SI n={2}>60 mein se current age ghatayein: 60 − 35 = 25 saal.</SI>
             <SI n={3}>Saal ko mahino mein badlein: 25 × 12 = 300 mahine.</SI>
-            <SI n={4}>35 saal ke liye tay rate (₹140) ko 300 se multiply karein.</SI>
-            <SI n={5}>Result: ₹140 × 300 = ₹42,000 — 60 saal tak ka total apna hissa, aur sarkar isi ke barabar alag se jama karegi.</SI>
+            <SI n={4}>35 saal ke liye tay rate (₹150) ko 300 se multiply karein.</SI>
+            <SI n={5}>Result: ₹150 × 300 = ₹45,000 — 60 saal tak ka total apna hissa, aur sarkar isi ke barabar alag se jama karegi.</SI>
           </StepList>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
             Isi se samajh aata hai ki 18 aur 40 saal ki entry mein itna farak kyun hai — jitna zyada waqt fund ko milta hai, per-mahina burden utna hi halka rehta hai. Note karne wali baat ye bhi hai ki rate table mein round figures mein nahi, balki actuarial calculation se decide ki gayi hai, isliye kisi age mein rate ka jump doosri age se thoda zyada ya kam lag sakta hai.
