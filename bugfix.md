@@ -62,7 +62,9 @@ Note: commit `d04cb0a` fixed this class of bug on `/contact`, `/privacy-policy`,
 
 ---
 
-## BUG 3 — 14 titles exceed the ~60-char SERP budget (truncated in Google)
+## BUG 3 — ✅ FIXED (2026-08-06) — 14 titles exceed the ~60-char SERP budget (truncated in Google)
+
+> **Resolution:** all 14 pre-suffix titles trimmed to ≤ 48 chars (full title ≤ ~60 with `| KisanStatus`). Calculator + category pages: trimmed in their `metadata` exports (og titles kept in sync). `bihar-pashupalan-loan-yojana` + `gehu-ka-bhav-msp-vs-mandi`: added a short `seoTitle` in `lib/loan-mandi-pashupalan-data.ts` (route resolves `seoTitle || ogTitle || title`). Maandhan auto-debit article: `title` trimmed to 43 ch in `lib/maandhan-data.ts`. `/about` was fixed by BUG 2. Slugs untouched. `node scripts/check-title-h1.js` passes (71 pairs, no double-branding).
 
 **Severity:** SEO (Low–Medium) — live, measured after HTML-entity decoding
 

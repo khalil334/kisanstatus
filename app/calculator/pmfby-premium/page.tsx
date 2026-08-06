@@ -5,7 +5,7 @@ const DOMAIN = 'https://kisanstatus.com';
 const PAGE_URL = `${DOMAIN}/calculator/pmfby-premium`;
 
 export const metadata: Metadata = {
-  title: 'Fasal Bima Premium Calculator 2026 — PMFBY Premium',
+  title: 'Fasal Bima Premium Calculator 2026',
   description: 'PM Fasal Bima Yojana (PMFBY) ka premium calculate karein. Kharif aur Rabi dono ke liye government subsidy aur net premium jaanein. Bilkul free tool.',
   keywords: [
     'fasal bima premium calculator',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Fasal Bima Premium Calculator 2026 — PMFBY Premium',
+    title: 'Fasal Bima Premium Calculator 2026',
     description: 'PM Fasal Bima Yojana (PMFBY) ka premium calculate karein. Kharif aur Rabi dono ke liye government subsidy aur net premium jaanein. Free tool.',
     type: 'website',
     url: PAGE_URL,
