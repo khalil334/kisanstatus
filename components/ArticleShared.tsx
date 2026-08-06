@@ -1,7 +1,5 @@
-'use client';
-
 import Link from 'next/link';
-import React, { memo, useMemo } from 'react';
+import React from 'react';
 import { SITE_URL, AUTHOR_NAME, AUTHOR_BIO, DISCLAIMER_TEXT, HELPLINE } from '@/lib/site-config';
 
 export function fmtDate(iso: string) {
@@ -12,7 +10,7 @@ export function fmtDate(iso: string) {
   });
 }
 
-export const SI = memo(function SI({ n, children }: { n: number; children: React.ReactNode }) {
+export function SI({ n, children }: { n: number; children: React.ReactNode }) {
   return (
     <li className="flex gap-3 items-stretch list-none mb-2">
       <div className="flex flex-col items-center shrink-0 w-9">
@@ -26,45 +24,45 @@ export const SI = memo(function SI({ n, children }: { n: number; children: React
       </div>
     </li>
   );
-});
+}
 
 export function StepList({ children }: { children: React.ReactNode }) {
   return <ol className="space-y-0 my-4">{children}</ol>;
 }
 
-export const IB = memo(function IB({ children }: { children: React.ReactNode }) {
+export function IB({ children }: { children: React.ReactNode }) {
   return (
     <div className="my-4 p-4 bg-green-50 dark:bg-green-900/20 border-l-4 border-green-600 dark:border-green-500 rounded-r-xl text-sm text-[var(--color-text)] leading-relaxed">
       {children}
     </div>
   );
-});
+}
 
-export const WB = memo(function WB({ children }: { children: React.ReactNode }) {
+export function WB({ children }: { children: React.ReactNode }) {
   return (
     <div className="my-4 p-4 bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 rounded-r-xl text-sm text-[var(--color-text)] leading-relaxed">
       {children}
     </div>
   );
-});
+}
 
-export const DB = memo(function DB({ children }: { children: React.ReactNode }) {
+export function DB({ children }: { children: React.ReactNode }) {
   return (
     <div className="my-4 p-4 bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 rounded-r-xl text-sm text-[var(--color-text)] leading-relaxed">
       {children}
     </div>
   );
-});
+}
 
-export const SH = memo(function SH({ children }: { children: React.ReactNode }) {
+export function SH({ children }: { children: React.ReactNode }) {
   return (
     <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)] flex items-center gap-2">
       {children}
     </h2>
   );
-});
+}
 
-export const GovLink = memo(function GovLink({
+export function GovLink({
   href,
   label,
   guide,
@@ -112,9 +110,9 @@ export const GovLink = memo(function GovLink({
       </div>
     </div>
   );
-});
+}
 
-export const RelatedArticles = memo(function RelatedArticles({
+export function RelatedArticles({
   articles,
 }: {
   articles: { slug: string; title: string; emoji?: string }[];
@@ -146,10 +144,10 @@ export const RelatedArticles = memo(function RelatedArticles({
       </div>
     </div>
   );
-});
+}
 
-export const AuthorBox = memo(function AuthorBox({ modified }: { modified: string }) {
-  const formattedDate = useMemo(() => fmtDate(modified), [modified]);
+export function AuthorBox({ modified }: { modified: string }) {
+  const formattedDate = fmtDate(modified);
 
   return (
     <div className="flex items-start gap-4 p-5 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/10 border border-[var(--color-border)] rounded-2xl my-8">
@@ -173,7 +171,7 @@ export const AuthorBox = memo(function AuthorBox({ modified }: { modified: strin
       </div>
     </div>
   );
-});
+}
 
 const DEFAULT_NAV_LINKS = [
   { href: '/', l: '🏠 Home' },
@@ -181,12 +179,12 @@ const DEFAULT_NAV_LINKS = [
   { href: '/about', l: '👤 About' },
 ];
 
-export const BottomNav = memo(function BottomNav({
+export function BottomNav({
   extraLinks = [],
 }: {
   extraLinks?: { href: string; l: string }[];
 }) {
-  const links = useMemo(() => [...DEFAULT_NAV_LINKS, ...extraLinks], [extraLinks]);
+  const links = [...DEFAULT_NAV_LINKS, ...extraLinks];
 
   return (
     <div className="pt-6 border-t border-[var(--color-border)] mt-8">
@@ -206,17 +204,17 @@ export const BottomNav = memo(function BottomNav({
       </div>
     </div>
   );
-});
+}
 
-export const Disclaimer = memo(function Disclaimer() {
+export function Disclaimer() {
   return (
     <div className="mt-6 p-4 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-xl text-xs text-[var(--color-text-muted)] leading-relaxed">
       <strong>⚠️ Disclaimer:</strong> {DISCLAIMER_TEXT}
     </div>
   );
-});
+}
 
-export const CalcBanner = memo(function CalcBanner({
+export function CalcBanner({
   title = 'Kist Ruki Hai? Pata Karo Kyun',
   desc = 'eKYC, bank seeding, land seeding check karo — 4 sawaal mein exact reason.',
   primaryCta = { href: '/calculator/installment-tracker', label: '📆 Kist Tracker Kholo →' },
@@ -250,16 +248,16 @@ export const CalcBanner = memo(function CalcBanner({
       </div>
     </div>
   );
-});
+}
 
-export const FAQBlock = memo(function FAQBlock({
+export function FAQBlock({
   faqs,
   caption,
 }: {
   faqs: { q: string; a: string }[];
   caption?: string;
 }) {
-  const faqSchema = useMemo(() => ({
+  const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: faqs.map((f) => ({
@@ -267,7 +265,7 @@ export const FAQBlock = memo(function FAQBlock({
       name: f.q,
       acceptedAnswer: { '@type': 'Answer', text: f.a },
     })),
-  }), [faqs]);
+  };
 
   if (faqs.length === 0) return null;
 
@@ -300,4 +298,4 @@ export const FAQBlock = memo(function FAQBlock({
       </div>
     </section>
   );
-});
+}

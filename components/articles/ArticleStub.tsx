@@ -1,5 +1,3 @@
-'use client';
-
 import Link from 'next/link';
 import { IB, AuthorBox, BottomNav, Disclaimer, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
