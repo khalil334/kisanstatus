@@ -1,9 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
+import CountdownModal from '@/components/CountdownModal';
 
 const PUBLISHED = '2026-07-10T08:00:00+05:30';
 const MODIFIED = '2026-08-02T08:00:00+05:30';
@@ -83,51 +84,28 @@ const STATE_LINKS = [
   { name: 'Ladakh', url: 'https://ladakh.gov.in', slug: 'ladakh' },
 ];
 
-function CountdownModal({ stateName, url, slug, onClose }: { stateName: string; url: string; slug: string; onClose: () => void }) {
-  const [count, setCount] = useState(10);
-  const [showButton, setShowButton] = useState(false);
-
-  useEffect(() => {
-    if (count === 0) {
-      setShowButton(true);
-      return;
-    }
-    const timer = setTimeout(() => setCount(count - 1), 1000);
-    return () => clearTimeout(timer);
-  }, [count]);
+export default function PmKisanLandSeedingFormPdf2026() {
+  const [modal, setModal] = useState<{ stateName: string; url: string; slug: string } | null>(null);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4" onClick={onClose}>
-      <div
-        className="w-full max-w-sm rounded-2xl bg-white dark:bg-gray-900 p-6 shadow-2xl border-2 border-blue-500"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <div className="text-center">
-          <div className="text-5xl mb-3">⏳</div>
-          <h3 className="text-lg font-black text-gray-800 dark:text-white mb-2">
-            Please Wait
-          </h3>
-          <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
-            {stateName} land seeding form download karne ke liye thoda intezaar karein...
-          </p>
-          
-          {!showButton ? (
-            <div className="mb-4">
-              <div className="text-6xl font-black text-blue-600 dark:text-blue-400">
-                {count}
-              </div>
-              <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                seconds baad download link milega
-              </p>
-            </div>
-          ) : (
-            <div className="mb-4 space-y-3">
+    <>
+      {modal && (
+        <CountdownModal
+          title="Please Wait"
+          message={`${modal.stateName} land seeding form download karne ke liye thoda intezaar karein...`}
+          redirectUrl=""
+          onClose={() => setModal(null)}
+          borderColorClass="border-blue-500"
+          countdownNote="seconds baad download link milega"
+          infoNote={`📌 ${modal.stateName} bhulekh portal se aap land seeding form, khasra khatauni details aur PM Kisan se judi saari jaankari le sakte hain.`}
+          readyContent={
+            <>
               <div className="bg-green-50 dark:bg-green-900/30 border-2 border-green-500 rounded-lg p-4">
                 <p className="text-sm font-bold text-green-800 dark:text-green-300 mb-2">
-                  ✅ {stateName} Land Seeding Form Ready Hai!
+                  ✅ {modal.stateName} Land Seeding Form Ready Hai!
                 </p>
                 <Link
-                  href={`/articles/pm-kisan-land-seeding-form/download?state=${slug}&redirect=${encodeURIComponent(url)}`}
+                  href={`/articles/pm-kisan-land-seeding-form/download?state=${modal.slug}&redirect=${encodeURIComponent(modal.url)}`}
                   className="inline-block w-full px-6 py-3 bg-green-600 hover:bg-green-700 text-white text-base font-bold rounded-lg transition-colors animate-pulse"
                 >
                   📥 Click to Download PDF
@@ -136,37 +114,8 @@ function CountdownModal({ stateName, url, slug, onClose }: { stateName: string; 
               <p className="text-xs text-gray-500 dark:text-gray-400">
                 Upar diye gaye button par click karein
               </p>
-            </div>
-          )}
-          
-          <div className="bg-blue-50 dark:bg-blue-900/30 rounded-lg p-3 mb-4">
-            <p className="text-xs text-blue-800 dark:text-blue-300">
-              📌 {stateName} bhulekh portal se aap land seeding form, khasra khatauni details aur PM Kisan se judi saari jaankari le sakte hain.
-            </p>
-          </div>
-          <button
-            onClick={onClose}
-            className="w-full px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-800 dark:text-white text-sm font-bold rounded-lg transition-colors"
-          >
-            Cancel
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export default function PmKisanLandSeedingFormPdf2026() {
-  const [modal, setModal] = useState<{ stateName: string; url: string; slug: string } | null>(null);
-
-  return (
-    <>
-      {modal && (
-        <CountdownModal
-          stateName={modal.stateName}
-          url={modal.url}
-          slug={modal.slug}
-          onClose={() => setModal(null)}
+            </>
+          }
         />
       )}
 
