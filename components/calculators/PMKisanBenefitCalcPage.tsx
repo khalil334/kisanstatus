@@ -151,7 +151,7 @@ export default function PMKisanBenefitCalcPage() {
               
               <div className="mt-3 p-3 bg-white dark:bg-gray-800 rounded-xl text-xs text-[var(--color-text)]">
                 <p className="font-bold mb-1">📖 Iska Matlab:</p>
-                <p>Aap {y} saal se PM Kisan mein ho. Har saal ₹6,000 milte hain (₹2,000 ki 3 kist). Total {totalI} kist aa chuki hain ya aayengi. Kul ₹{fmt(total)} mile hain. Agar {missed} kist miss hui thi to arrears mein ₹{fmt(arrears)} milenge. Total ₹{fmt(total + arrears)} milenge.</p>
+                <p>Aap {y} saal se PM Kisan mein ho. Har saal ₹6,000 milte hain (₹2,000 ki 3 kist). Total {totalI} kist aa chuki hain ya aayengi. Kul {fmt(total)} mile hain. Agar {missed} kist miss hui thi to arrears mein {fmt(arrears)} milenge. Total {fmt(total + arrears)} milenge.</p>
               </div>
 
               <div className="mt-3 pt-3 border-t border-green-200 dark:border-green-800 text-xs text-green-700 dark:text-green-300">
@@ -203,12 +203,12 @@ export default function PMKisanBenefitCalcPage() {
                 {y > 5 && (
                   <tr className="bg-gray-100 dark:bg-gray-700">
                     <td className="p-2 font-medium text-center" colSpan={4}>... aur {y-5} saal aur</td>
-                    <td className="p-2 text-right font-bold text-green-700">₹{fmt((y-5)*6000)}</td>
+                    <td className="p-2 text-right font-bold text-green-700">{fmt((y-5)*6000)}</td>
                   </tr>
                 )}
                 <tr className="bg-green-100 dark:bg-green-900/30 font-bold">
                   <td className="p-2" colSpan={4}>Kul {y} Saal</td>
-                  <td className="p-2 text-right text-green-800 dark:text-green-300">₹{fmt(y*6000)}</td>
+                  <td className="p-2 text-right text-green-800 dark:text-green-300">{fmt(y*6000)}</td>
                 </tr>
               </tbody>
             </table>
