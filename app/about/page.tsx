@@ -4,7 +4,7 @@ import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL, DEFAULT_OG_IMAGE } from '
 import { ARTICLES } from '@/lib/articles-data';
 
 export const metadata: Metadata = {
-  title: `About Us - ${SITE_NAME} | PM Kisan Verified Guidance`,
+  title: 'About Us - PM Kisan Verified Guidance',
   description: `KisanStatus ek independent portal hai jo Indian kisanon ko PM Kisan verification, eKYC, payment fix aur enrollment ki free, verified Hinglish guidance deta hai.`,
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   alternates: { canonical: `${SITE_URL}/about` },
