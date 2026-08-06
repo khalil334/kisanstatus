@@ -18,7 +18,9 @@ import {
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: `PM Kisan Status & Farming Guides 2026 | ${SITE_NAME}`,
+  // Kept short and aligned with the on-page H1 ("PM Kisan Status Check 2026")
+  // so Google stops substituting another page's title in the SERP.
+  title: `PM Kisan Status Check 2026 | ${SITE_NAME}`,
   description: SITE_DESCRIPTION,
   keywords: GLOBAL_KEYWORDS,
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
