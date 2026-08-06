@@ -4,7 +4,6 @@ import { Suspense } from 'react';
 import { 
   SITE_URL, 
   SITE_NAME, 
-  SITE_TAGLINE, 
   SITE_DESCRIPTION, 
   AUTHOR_NAME, 
   AUTHOR_URL, 
@@ -16,11 +15,15 @@ import {
   HELPLINE,
 } from '@/lib/site-config';
 
+// Single canonical title for the homepage. It must stay aligned with the on-page
+// H1 ("PM Kisan Status Check 2026") AND with og:title/twitter:title below —
+// when those three disagree Google discards <title> and substitutes its own SERP
+// title (Ahrefs "Page and SERP titles do not match"). Change all three or none.
+const HOME_TITLE = `PM Kisan Status Check 2026 | ${SITE_NAME}`;
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  // Kept short and aligned with the on-page H1 ("PM Kisan Status Check 2026")
-  // so Google stops substituting another page's title in the SERP.
-  title: `PM Kisan Status Check 2026 | ${SITE_NAME}`,
+  title: HOME_TITLE,
   description: SITE_DESCRIPTION,
   keywords: GLOBAL_KEYWORDS,
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
@@ -39,7 +42,7 @@ export const metadata: Metadata = {
     locale: 'hi_IN',
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: `${SITE_NAME}: ${SITE_TAGLINE}`,
+    title: HOME_TITLE,
     description: SITE_DESCRIPTION,
     images: [
       {
@@ -55,7 +58,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@kisanstatus',
     creator: '@kisanstatus',
-    title: `${SITE_NAME}: ${SITE_TAGLINE}`,
+    title: HOME_TITLE,
     description: SITE_DESCRIPTION,
     images: [DEFAULT_OG_IMAGE],
   },
