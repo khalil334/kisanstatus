@@ -310,10 +310,10 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
               </thead>
               <tbody>
                 {[
-                  ['18 Years', '₹55', '₹13,200'],
-                  ['25 Years', '₹75', '₹27,000'],
-                  ['30 Years', '₹100', '₹36,000'],
-                  ['35 Years', '₹140', '₹42,000'],
+                  ['18 Years', '₹55', '₹27,720'],
+                  ['25 Years', '₹80', '₹33,600'],
+                  ['30 Years', '₹105', '₹37,800'],
+                  ['35 Years', '₹150', '₹45,000'],
                   ['40 Years', '₹200', '₹48,000'],
                 ].map(([age, monthly, total], i) => (
                   <tr key={age} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-green-50/40 dark:bg-green-900/10'}>
