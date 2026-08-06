@@ -54,6 +54,8 @@ const nextConfig = {
       { source: '/articles/pm-kisan-rejected-list-2026', destination: '/articles/PmKisanMasterGuide2026', permanent: true },
       { source: '/articles/pm-kisan-payment-failed-status-2026', destination: '/articles/PmKisanMasterGuide2026', permanent: true },
       { source: '/articles/nano-dap-500ml-price-in-india-2026', destination: '/articles/NanoDap500mlPriceInIndia2026', permanent: true },
+      { source: '/articles/kisan-tractor-loan-2026', destination: '/articles/KisanTractorLoan2026', permanent: true },
+      { source: '/articles/pm-kisan-mobile-number-change', destination: '/articles/PmKisanMobileNumberChangeUpdate', permanent: true },
       { source: '/beneficiary-list', destination: '/articles/PmKisanBeneficiaryList2026', permanent: true },
       { source: '/articles/loan/KisanCreditCardOnlineApply2026', destination: '/articles/KisanCreditCardOnlineApply2026', permanent: true },
       { source: '/articles/farming/pm-fme-yojana-food-processing', destination: '/articles/pm-fme-yojana-food-processing', permanent: true },
