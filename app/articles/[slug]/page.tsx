@@ -241,11 +241,14 @@ export async function generateMetadata({
 
   const url = `${SITE_URL}/articles/${slug}`;
   const ogImage = article.ogImage ? `${SITE_URL}${article.ogImage}` : DEFAULT_OG_IMAGE;
-  const displayTitle = article.ogTitle || article.title;
-  // SEO <title> is intentionally separate from the OG/social title: Google was
-  // rewriting several pages because the OG title ran long (>60 chars with the
-  // brand suffix). `seoTitle` opts a page into a shorter, SERP-safe title.
-  const seoTitle = article.seoTitle || displayTitle;
+  // One canonical title per page. Google treats <title>, og:title and the on-page
+  // <h1> as competing signals: when they disagree it discards <title> and
+  // substitutes its own SERP title (Ahrefs "Page and SERP titles do not match").
+  // So the SEO title is the single source of truth and og/twitter inherit it —
+  // do NOT reintroduce a separate ogTitle for the <title>/og:title pair.
+  // `article.ogTitle` is kept only as a legacy fallback when no seoTitle is set.
+  const seoTitle = article.seoTitle || article.ogTitle || article.title;
+  const displayTitle = seoTitle;
   const category = CATEGORIES[article.category];
 
   return {
