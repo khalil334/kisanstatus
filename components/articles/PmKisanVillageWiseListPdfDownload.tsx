@@ -64,44 +64,27 @@ const CountdownButton = memo(function CountdownButton({
   buttonText: string;
   variant?: 'green' | 'blue';
 }) {
+  // count: null = idle, 1..10 = counting down, 0 = countdown finished (link ready)
   const [count, setCount] = useState<number | null>(null);
-  
-  const [popupRef, setPopupRef] = useState<Window | null>(null);
+  const ready = count === 0;
 
   const handleClick = useCallback(() => {
-    const newPopup = window.open('', '_blank', 'noopener,noreferrer');
-    setPopupRef(newPopup);
     setCount(10);
   }, []);
 
   useEffect(() => {
-    if (count === null) return;
-
-    if (count === 0) {
-      if (popupRef && !popupRef.closed) {
-        popupRef.location.href = url;
-      } else {
-        window.open(url, '_blank', 'noopener,noreferrer');
-      }
-      setCount(null);
-      setPopupRef(null);
-      return;
-    }
+    if (count === null || count === 0) return;
 
     const timer = setTimeout(() => {
-      setCount((prev) => (prev !== null ? prev - 1 : null));
+      setCount((prev) => (prev !== null && prev > 0 ? prev - 1 : prev));
     }, 1000);
 
     return () => clearTimeout(timer);
-  }, [count, url, popupRef]);
+  }, [count]);
 
   const handleCancel = useCallback(() => {
-    if (popupRef && !popupRef.closed) {
-      popupRef.close();
-    }
     setCount(null);
-    setPopupRef(null);
-  }, [popupRef]);
+  }, []);
 
   const bgColor = variant === 'green' 
     ? 'bg-green-600 hover:bg-green-700' 
@@ -116,11 +99,21 @@ const CountdownButton = memo(function CountdownButton({
         {description}
       </p>
       
-      {count === null ? (
+      {ready ? (
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`block text-center w-full px-6 py-4 ${bgColor} text-white text-sm font-bold rounded-xl transition-all shadow-lg hover:shadow-xl transform hover:scale-[1.02] active:scale-[0.98]`}
+          aria-label={`${buttonText}. Opens the official portal in a new tab.`}
+        >
+          ✅ Portal taiyar hai — yahan tap karke kholein
+        </a>
+      ) : count === null ? (
         <button
           onClick={handleClick}
           className={`w-full px-6 py-4 ${bgColor} text-white text-sm font-bold rounded-xl transition-all shadow-lg hover:shadow-xl transform hover:scale-[1.02] active:scale-[0.98]`}
-          aria-label={`${buttonText}. Opens in 10 seconds after clicking.`}
+          aria-label={`${buttonText}. Link ready in 10 seconds after clicking.`}
         >
           {buttonText}
         </button>
