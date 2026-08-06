@@ -58,6 +58,12 @@ export interface ArticleMeta {
   title: string;
   desc: string;
   ogTitle: string;
+  /**
+   * Optional SERP-facing <title>. Set this when `ogTitle` is too long for
+   * search results (target: <= ~60 chars INCLUDING the " | KisanStatus"
+   * suffix, i.e. <= 46 chars here). When unset, `ogTitle` is used.
+   */
+  seoTitle?: string;
   readonly keywords: readonly string[];
   component: string;
   category: CategorySlug;
@@ -224,6 +230,7 @@ const CORE_ARTICLES: readonly ArticleMeta[] = [
     title: 'FTO Ka Full Form & FTO Generated Meaning',
     desc: 'FTO ka full form Fund Transfer Order hai. FTO generated, FTO processed, "FTO will be generated" — har status ka matlab, aur kist kab aayegi, sab samjhein.',
     ogTitle: 'FTO Ka Full Form — FTO Generated/Processed Meaning',
+    seoTitle: 'FTO Full Form & FTO Generated Ka Matlab',
     keywords: [
       'FTO ka full form',
       'FTO full form in hindi',
@@ -429,6 +436,7 @@ const CORE_ARTICLES: readonly ArticleMeta[] = [
     title: 'PM Kisan Self Reg Status 2026: Check',
     desc: 'Self-registration karke bhool gaye? 7-10 din baad status check karna zaroori hai. Step-by-step guide + common problems + fix.',
     ogTitle: 'PM Kisan Self Registration Status Check 2026',
+    seoTitle: 'PM Kisan Self Registration Status 2026',
     keywords: [
       'pm kisan self registration status check',
       'pmkisan self registration status',
@@ -504,6 +512,7 @@ const CORE_ARTICLES: readonly ArticleMeta[] = [
     title: 'PM Kisan Land Seeding Form 2026: PDF',
     desc: 'Land seeding form download karo — UP, Bihar, MP, Rajasthan ke state wise forms. Khasra-Khatauni details ke saath complete guide.',
     ogTitle: 'PM Kisan Land Seeding Form PDF Download',
+    seoTitle: 'PM Kisan Land Seeding Form PDF 2026',
     keywords: [
       'pm kisan land seeding form',
       'pm kisan land seeding form pdf download',
@@ -627,6 +636,7 @@ const CORE_ARTICLES: readonly ArticleMeta[] = [
     title: 'PM Kisan CSC Charges 2026: Sahi Fees',
     desc: 'CSC wala ₹500 maang raha hai? Sarkari rate sirf ₹25-30 hai. Sahi fees, free online method, aur fraud se bachne ka tarika.',
     ogTitle: 'PM Kisan CSC Charges — Sahi Fees, Sahi Tarika',
+    seoTitle: 'PM Kisan CSC Registration Charges 2026',
     keywords: [
       'pm kisan csc registration fees',
       'pm kisan csc se kaise kare',
