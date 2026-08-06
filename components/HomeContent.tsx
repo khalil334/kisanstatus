@@ -284,7 +284,7 @@ export default function HomeContent() {
             </div>
 
             <h1 id="hero-heading" className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1] mb-6 tracking-tight">
-              <span itemProp="headline">PM Kisan Status Check 2026</span>
+              <span itemProp="headline">PM Kisan Status Check 2026</span>{' '}
               <span className="block text-green-200 text-2xl md:text-4xl lg:text-5xl mt-2">Samman Nidhi Yojana Online</span>
             </h1>
 
