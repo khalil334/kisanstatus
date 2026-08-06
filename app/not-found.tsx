@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '404 - Page Nahi Mila | KisanStatus.com',
+  title: '404 - Page Nahi Mila',
   description: 'Ye page exist nahi karta. Homepage ya latest articles dekhein.',
   robots: {
     index: false,
