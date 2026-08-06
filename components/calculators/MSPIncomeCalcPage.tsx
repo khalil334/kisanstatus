@@ -154,7 +154,7 @@ export default function MSPIncomeCalcPage() {
               
               <div className="mt-3 p-3 bg-white rounded-xl text-xs text-gray-700">
                 <p className="font-bold mb-1">📖 Iska Matlab:</p>
-                <p>Aapke paas {qtl.toFixed(2)} quintal {cropData.name} hai. MSP rate ₹{cropData.msp}/quintal hai. Total income ₹{fmt(income)} hogi. Agar {landN} hectare zameen hai to per hectare ₹{fmt(perHectare)} milega.</p>
+                <p>Aapke paas {qtl.toFixed(2)} quintal {cropData.name} hai. MSP rate ₹{cropData.msp}/quintal hai. Total income {fmt(income)} hogi. Agar {landN} hectare zameen hai to per hectare {fmt(perHectare)} milega.</p>
               </div>
 
               <div className="mt-3 pt-3 border-t border-orange-200 text-xs text-orange-700">

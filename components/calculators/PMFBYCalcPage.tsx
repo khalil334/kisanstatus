@@ -155,7 +155,7 @@ export default function PMFBYCalcPage() {
 
               <div className="mt-3 p-3 bg-white rounded-xl text-xs text-gray-700">
                 <p className="font-bold mb-1">📖 Iska Matlab:</p>
-                <p>Aapne {cropData.name} ka insurance liya ₹{fmt(totalCover)} ka. Total premium ₹{fmt(premium)} hai. Par government ₹{fmt(govShare)} subsidy deti hai. Aapko sirf ₹{fmt(Math.max(0,farmerPays))} dena padega. Agar fasal kharab hui to ₹{fmt(totalCover)} tak claim mil sakta hai.</p>
+                <p>Aapne {cropData.name} ka insurance liya {fmt(totalCover)} ka. Total premium {fmt(premium)} hai. Par government {fmt(govShare)} subsidy deti hai. Aapko sirf {fmt(Math.max(0,farmerPays))} dena padega. Agar fasal kharab hui to {fmt(totalCover)} tak claim mil sakta hai.</p>
               </div>
             </div>
           )}
