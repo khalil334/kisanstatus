@@ -242,11 +242,15 @@ export async function generateMetadata({
   const url = `${SITE_URL}/articles/${slug}`;
   const ogImage = article.ogImage ? `${SITE_URL}${article.ogImage}` : DEFAULT_OG_IMAGE;
   const displayTitle = article.ogTitle || article.title;
+  // SEO <title> is intentionally separate from the OG/social title: Google was
+  // rewriting several pages because the OG title ran long (>60 chars with the
+  // brand suffix). `seoTitle` opts a page into a shorter, SERP-safe title.
+  const seoTitle = article.seoTitle || displayTitle;
   const category = CATEGORIES[article.category];
 
   return {
     metadataBase: new URL(SITE_URL),
-    title: displayTitle,
+    title: seoTitle,
     description: article.desc,
     keywords: Array.isArray(article.keywords) ? [...article.keywords] : [],
     authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
