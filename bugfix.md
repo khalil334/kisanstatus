@@ -114,7 +114,9 @@ Breakdown: 948 × `react/no-unescaped-entities` (unescaped `"`/`'` in JSX prose)
 
 ---
 
-## BUG 7 — Deprecated `middleware.ts` convention (Next.js 16)
+## BUG 7 — ✅ FIXED (2026-08-06) — Deprecated `middleware.ts` convention (Next.js 16)
+
+> **Resolution:** renamed `middleware.ts` → `proxy.ts` and the export `middleware` → `proxy` per the Next 16 migration guide. Zero logic change — spam-param stripping, 302 redirect, and the `config.matcher` are identical. `next build` no longer prints the deprecation warning and still registers the proxy (`ƒ Proxy`).
 
 **Severity:** Forward-compat (Low) — build prints: `⚠ The "middleware" file convention is deprecated. Please use "proxy" instead.`
 
