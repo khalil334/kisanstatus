@@ -314,10 +314,10 @@ export default function PmKisanMaandhanYojanaPension({ article }: { article: Art
               <tbody>
                 {[
                   ['18 saal', '₹55', '₹55', '₹110'],
-                  ['25 saal', '₹100', '₹100', '₹200'],
-                  ['30 saal', '₹130', '₹130', '₹260'],
-                  ['35 saal', '₹165', '₹165', '₹330'],
-                  ['40 saal', '200', '₹200', '₹400'],
+                  ['25 saal', '₹80', '₹80', '₹160'],
+                  ['30 saal', '₹105', '₹105', '₹210'],
+                  ['35 saal', '₹150', '₹150', '₹300'],
+                  ['40 saal', '₹200', '₹200', '₹400'],
                 ].map(([age, farmer, govt, total], i) => (
                   <tr key={age} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
                     <td className="p-3 border-b border-[var(--color-border)] font-medium text-xs text-[var(--color-text)]">{age}</td>
@@ -333,7 +333,7 @@ export default function PmKisanMaandhanYojanaPension({ article }: { article: Art
           <WB>
             <strong>Example Se Samjho:</strong>
             <p className="text-xs text-[var(--color-text-muted)] mt-2">
-              Agar aapne 25 saal ki umar mein join kiya, toh aapko har mahine ₹100 dena hai. Sarkar bhi ₹100 dalegi. 35 saal tak (60 saal ki umar tak) aap total ₹42,000 jama karoge. Lekin 60 ke baad aapko har mahine ₹3000 milenge. 14 mahine mein hi aapka jama kiya hua paisa wapas aa jayega. Uske baad jo bhi milega wo pure profit hai.
+              Agar aapne 25 saal ki umar mein join kiya, toh aapko har mahine ₹80 dena hai. Sarkar bhi ₹80 dalegi. 35 saal tak (60 saal ki umar tak) aap total ₹33,600 jama karoge. Lekin 60 ke baad aapko har mahine ₹3000 milenge. Lagbhag 12 mahine mein hi aapka jama kiya hua paisa wapas aa jayega. Uske baad jo bhi milega wo pure profit hai.
             </p>
           </WB>
 
@@ -424,10 +424,10 @@ export default function PmKisanMaandhanYojanaPension({ article }: { article: Art
               </thead>
               <tbody>
                 {[
-                  ['18 saal', '₹55', '₹27,720', '₹3,000', '9 mahine'],
-                  ['25 saal', '₹100', '₹42,000', '₹3,000', '14 mahine'],
-                  ['30 saal', '₹130', '₹46,800', '₹3,000', '16 mahine'],
-                  ['35 saal', '₹165', '₹49,500', '3,000', '17 mahine'],
+                  ['18 saal', '₹55', '₹27,720', '₹3,000', '10 mahine'],
+                  ['25 saal', '₹80', '₹33,600', '₹3,000', '12 mahine'],
+                  ['30 saal', '₹105', '₹37,800', '₹3,000', '13 mahine'],
+                  ['35 saal', '₹150', '₹45,000', '₹3,000', '15 mahine'],
                   ['40 saal', '₹200', '₹48,000', '₹3,000', '16 mahine'],
                 ].map(([age, monthly, total, pension, breakeven], i) => (
                   <tr key={age} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
