@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { ARTICLES, getArticlesByFreshness, CATEGORIES } from '@/lib/articles-data';
-import { SITE_URL, SITE_NAME } from '@/lib/site-config';
+import { SITE_URL } from '@/lib/site-config';
 import SearchBar from './SearchBar';
 import FaqItem from './FaqItem';
 

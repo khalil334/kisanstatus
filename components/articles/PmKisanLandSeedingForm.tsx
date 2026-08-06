@@ -3,8 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
-import type { ArticleMeta } from '@/lib/articles-data';
+import { SI, StepList, IB, WB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 
 const PUBLISHED = '2026-07-10T08:00:00+05:30';
 const MODIFIED = '2026-08-02T08:00:00+05:30';
@@ -157,7 +156,7 @@ function CountdownModal({ stateName, url, slug, onClose }: { stateName: string; 
   );
 }
 
-export default function PmKisanLandSeedingFormPdf2026({ article }: { article: ArticleMeta }) {
+export default function PmKisanLandSeedingFormPdf2026() {
   const [modal, setModal] = useState<{ stateName: string; url: string; slug: string } | null>(null);
 
   return (

@@ -137,7 +137,6 @@ function CountdownModal({
 }
 
 export default function PmKisanMobileNumberChangeUpdate({ article }: { article: ArticleMeta }) {
-  const router = useRouter();
   const [modal, setModal] = useState<{ 
     title: string; 
     message: string; 

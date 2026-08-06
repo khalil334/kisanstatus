@@ -280,7 +280,7 @@ function IrrigationCalc() {
   const [area, setArea]     = useState('1');
   const [method, setMethod] = useState('flood');
   const [crop, setCrop]     = useState('wheat');
-  const [water, setWater]   = useState('600');
+  const [water] = useState('600');
   const [rate, setRate]     = useState('8');
 
   const waterReq: Record<string, number> = {
