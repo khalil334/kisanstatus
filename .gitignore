@@ -33,6 +33,9 @@ env.*.local
 *.tsbuildinfo
 next-env.d.ts
 
+# Backups written by scripts/update-article-dates.js on every `npm run build`
+*.backup-*
+
 # OS files
 .DS_Store
 Thumbs.db

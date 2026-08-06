@@ -38,7 +38,11 @@ export default function KCCLoanCalcPage() {
     emi=P/N; totalPayable=P; totalInterest=0;
   }
 
-  const subsidy = Number(rate)<=7 ? P*0.02 : 0;
+  // 2% interest subvention is per annum on the principal, so it scales with the
+  // loan tenure — and it is capped by the interest actually payable.
+  const subsidy = Number(rate)<=7
+    ? Math.min(P*0.02*(N/12), totalInterest)
+    : 0;
   const effectiveCost = totalPayable - subsidy;
 
   const breadcrumbSchema = {
@@ -96,7 +100,7 @@ export default function KCCLoanCalcPage() {
             Waise KCC dusre loans se kaafi sasta padta hai — <strong>₹3 lakh tak bina collateral</strong> mil jata hai, interest bhi <strong>7%</strong> se shuru hota hai, aur agar time pe chuka do to <strong>2% ki subsidy</strong> upar se milti hai. Yani effective rate <strong>4-5%</strong> tak neeche aa jata hai — market ke doosre loans se kaafi kam.
           </p>
           <p className="text-xs text-blue-700 mt-3">
-            💡 Ek example se samjho: ₹1 lakh 7% par 12 mahine ke liye lo to EMI ₹8,653 banti hai, total interest ₹3,842. Par subsidy mil jaye to us mein se ₹2,000 wapas bach jate hain.
+            💡 Ek example se samjho: ₹1 lakh 7% par 12 mahine ke liye lo to EMI ₹8,653 banti hai, total interest ₹3,832. Par subsidy mil jaye to us mein se ₹2,000 wapas bach jate hain.
           </p>
         </div>
 
