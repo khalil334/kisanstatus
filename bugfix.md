@@ -92,7 +92,9 @@ It works today (the `[count]` dep re-arms the timer) but it re-renders every sec
 
 ---
 
-## BUG 5 — `lib/LanguageContext.tsx`: synchronous setState in mount effect (hydration flicker)
+## BUG 5 — ✅ FIXED (2026-08-06) — `lib/LanguageContext.tsx`: synchronous setState in mount effect (hydration flicker)
+
+> **Resolution:** replaced the two `useState` + mount-effect combo with `useSyncExternalStore` backed by a small module-level language store. Server snapshot renders `DEFAULT_LANG` / `isLoaded=false`; the client snapshot lazily resolves `getStoredLanguage() || getBrowserLanguage()` — no setState in effects, no double render. The remaining effect only syncs `document.documentElement.lang/dir`. `setLang` now writes to the store (`setClientLang`) + localStorage as before; public API of `useLang()` unchanged. Lint 28 → 27 problems; `tsc --noEmit` and `next build` both pass.
 
 **Severity:** Code quality (Low) — `react-hooks/set-state-in-effect` at line 92
 
