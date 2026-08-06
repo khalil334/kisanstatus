@@ -74,7 +74,7 @@ function CountdownButton({
   useEffect(() => {
     if (countdown !== null && countdown > 0) {
       const timer = setTimeout(() => {
-        setCountdown(countdown - 1);
+        setCountdown((c) => (c !== null ? c - 1 : null));
       }, 1000);
       return () => clearTimeout(timer);
     } else if (countdown === 0) {
