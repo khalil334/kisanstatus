@@ -18,19 +18,19 @@ const CATEGORY_DATA: Record<CategorySlug, {
     keywords: ['pm kisan status check', 'beneficiary verification', 'installment status 2026', 'FTO generated', 'kist status'],
   },
   'loan': {
-    title: 'Kisan Credit & Loan Guides 2026 — KCC, Tractor Loan',
+    title: 'Kisan Credit & Loan Guides 2026 — KCC',
     description: 'Kisan Credit Card (KCC), tractor loan, aur 4% interest par personal loan kaise lein. 2026 ki complete application process aur eligibility guides.',
     emoji: '💰',
     keywords: ['kisan credit card', 'KCC loan 2026', 'tractor loan', 'kisan personal loan', '4% interest loan'],
   },
   'farming': {
-    title: 'Modern Farming & Schemes Guides 2026 — Soil Health',
+    title: 'Modern Farming & Schemes Guides 2026',
     description: 'Soil Health Card, Nano DAP, PMFBY crop insurance aur AgriStack ki puri jankari. Modern kheti aur sarkari yojanaon ke liye verified Hindi guides.',
     emoji: '🌱',
     keywords: ['soil health card', 'nano DAP 2026', 'PMFBY crop insurance', 'AgriStack', 'modern farming'],
   },
   'mandi': {
-    title: 'Mandi Bhav & Market Rates 2026 — Daily Sabzi Prices',
+    title: 'Mandi Bhav & Market Rates 2026',
     description: 'Aaj ka mandi bhav aur daily updated wholesale rates. Apne shehar ke sabzi, anaj aur fruit ke aaj ke bhav aur market trends yahan check karein.',
     emoji: '📈',
     keywords: ['mandi bhav today', 'sabzi bhav', 'fruit rates 2026', 'wholesale prices', 'aaj ka bhav'],
