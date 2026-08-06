@@ -5,7 +5,7 @@ const DOMAIN = 'https://kisanstatus.com';
 const PAGE_URL = `${DOMAIN}/calculator/msp-income`;
 
 export const metadata: Metadata = {
-  title: 'MSP Income Calculator 2026 — Fasal Ka MSP Rate Hindi',
+  title: 'MSP Income Calculator 2026 — Fasal MSP Rate',
   description: 'MSP rate par fasal bechne par kitna paisa milega, jaano turant. Gehun, dhaan, sarson, kapas ka MSP 2025-26 check karein. Bilkul free calculator.',
   keywords: [
     'msp income calculator',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'MSP Income Calculator 2026 — Fasal Ka MSP Rate Hindi',
+    title: 'MSP Income Calculator 2026 — Fasal MSP Rate',
     description: 'MSP rate par fasal bechne par kitna paisa milega, jaano turant. Gehun, dhaan, sarson, kapas ka MSP 2025-26 check karein. Free calculator.',
     type: 'website',
     url: PAGE_URL,

@@ -5,7 +5,7 @@ const DOMAIN = 'https://kisanstatus.com';
 const PAGE_URL = `${DOMAIN}/calculator/kcc-loan-emi`;
 
 export const metadata: Metadata = {
-  title: 'KCC Loan EMI Calculator 2026 — Kisan Credit Card EMI',
+  title: 'KCC Loan EMI Calculator 2026',
   description: 'Kisan Credit Card (KCC) loan ki monthly EMI, interest aur subsidy calculate karein. Bilkul free tool, bina registration ke.',
   keywords: [
     'kcc loan emi calculator',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'KCC Loan EMI Calculator 2026 — Kisan Credit Card EMI',
+    title: 'KCC Loan EMI Calculator 2026',
     description: 'Kisan Credit Card (KCC) loan ki monthly EMI, interest aur subsidy calculate karein. Bilkul free tool.',
     type: 'website',
     url: PAGE_URL,

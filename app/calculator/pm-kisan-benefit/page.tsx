@@ -5,7 +5,7 @@ const DOMAIN = 'https://kisanstatus.com';
 const PAGE_URL = `${DOMAIN}/calculator/pm-kisan-benefit`;
 
 export const metadata: Metadata = {
-  title: 'PM Kisan Benefit Calculator 2026 — Kitna Paisa Milega',
+  title: 'PM Kisan Benefit Calculator 2026',
   description: 'PM Kisan Samman Nidhi se kitna paisa milega, jaano turant. 1, 3 ya 5 saal ka total benefit calculate karein. ₹6,000 saalana. Bilkul free tool.',
   keywords: [
     'pm kisan calculator',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'PM Kisan Benefit Calculator 2026 — Kitna Paisa Milega',
+    title: 'PM Kisan Benefit Calculator 2026',
     description: 'PM Kisan Samman Nidhi se kitna paisa milega, jaano turant. 1, 3 ya 5 saal ka total benefit calculate karein. Bilkul free tool.',
     type: 'website',
     url: PAGE_URL,

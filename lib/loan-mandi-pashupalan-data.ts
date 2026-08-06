@@ -144,6 +144,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'gehu-ka-bhav-msp-vs-mandi',
+    seoTitle: 'Gehu Ka Bhav 2026 — MSP vs Mandi Rate',
     ogImage: '/images/articles/loan-mandi-pashupalan/gehu-ka-bhav-msp-vs-mandi/gehu-katai.webp',
     title: 'Gehu Ka Bhav 2026: MSP vs Mandi Rate',
     desc: 'Gehu MSP ₹2,585 par bechein ya mandi mein? Seasonal price pattern, rok kar bechne ka ganit, storage tips aur poora decision framework.',
@@ -208,6 +209,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'bihar-pashupalan-loan-yojana',
+    seoTitle: 'Bihar Pashupalan Loan Yojana 2026: Subsidy',
     ogImage: '/images/articles/loan-mandi-pashupalan/bihar-pashupalan-loan-yojana/kisan-bhains.webp',
     title: 'Bihar Pashupalan Loan Yojana 2026',
     desc: 'Samagra Gavya Vikas Yojana — SC/ST ko 75%, General ko 50% subsidy tak. Eligibility, documents aur dairy.bihar.gov.in par apply ka process.',
