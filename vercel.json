@@ -18,47 +18,27 @@
     },
     {
       "source": "/pm-kisan-21vi-installment-status-check",
-      "destination": "/articles/pm-kisan-21vi-installment-status-check",
-      "permanent": true
-    },
-    {
-      "source": "/pm-kisan-kyc-csc",
-      "destination": "/articles/pm-kisan-ekyc-online-2026",
-      "permanent": true
-    },
-    {
-      "source": "/pm-kisan-beneficiary-status",
-      "destination": "/articles/pm-kisan-23vi-kist-2026-status-check",
-      "permanent": true
-    },
-    {
-      "source": "/pm-kisan-beneficiary-list",
-      "destination": "/beneficiary-list",
+      "destination": "/articles/PmKisan24viKist2026",
       "permanent": true
     },
     {
       "source": "/articles/pm-kisan-24vi-kist-2026",
-      "destination": "/articles/pm-kisan-24vi-kist",
+      "destination": "/articles/PmKisan24viKist2026",
       "permanent": true
     },
     {
       "source": "/articles/agri-stack-kya-hai-2026",
-      "destination": "/articles/agristack-kya-hai",
+      "destination": "/articles/AgriStackKyaHai2026",
       "permanent": true
     },
     {
       "source": "/articles/pm-kisan-mobile-number-change-2026",
-      "destination": "/articles/pm-kisan-mobile-number-change",
+      "destination": "/articles/PmKisanMobileNumberChangeUpdate",
       "permanent": true
     },
     {
       "source": "/author",
       "destination": "/about",
-      "permanent": true
-    },
-    {
-      "source": "/beneficiary-list/daman-diu",
-      "destination": "/beneficiary-list/dadra-nagar-haveli",
       "permanent": true
     },
     {
