@@ -5,7 +5,7 @@
 **Method:** live crawl of every sitemap URL → extracted `<title>`, `<h1>`, `<h2>`, Next.js RSC payload prose, JSON-LD; plus static analysis of `components/articles/**/*.tsx` (7-gram / 12-gram overlap, heading-set Jaccard, FAQ-question dedupe, prose word counts, AI-phrase tells).
 **Nothing in this file is estimated.** Every number below came out of that scan. Where a number could not be measured, it is marked `—`.
 
-**Status: nothing fixed yet. This is the plan only.** No content was edited in this commit.
+**Status: in progress.** Fixed so far (removed from this plan): Issue #1 (StateKisanYojanaHub rewrite — 7-gram overlap vs MP article now 0.032, was 0.263) and Issue #9 (all 4 duplicate FAQ questions were in that same file — now 0).
 
 ---
 
@@ -13,7 +13,6 @@
 
 | # | Issue | Severity | Affected | Type of fix |
 |---|-------|----------|----------|-------------|
-| 1 | `state-kisan-yojana-list-all-states-2026` serves a near-verbatim copy of the MP Kisan Kalyan article (wrong H1, wrong body, wrong topic) | **Critical** | 1 page (+1 partner page diluted) | Rewrite 1 file |
 | 2 | 58 pages where `<title>` and `<h1>` don't match | **Warning** | 58 pages | Template/data fix, mostly `lib/*-data.ts` |
 | 3 | 11 articles under 1,100 prose words; thinnest is 772 | **Warning** | 11 pages | Per-article depth pass |
 | 4 | 8 PM-Kisan process articles share an identical section skeleton (heading-set Jaccard = 1.00) | **Warning** | 8 pages | Restructure, not rewrite |
@@ -21,7 +20,6 @@
 | 6 | 46 of 72 articles have no `Sources` section (repo's own rule says every article should) | **Notice** | 46 pages | Add sourced citations |
 | 7 | 10 articles have zero FAQ entries in the component (9 kisanguides + 1 maandhan); 2 pages ship no `FAQPage` schema | **Notice** | 10 pages | Add real FAQs |
 | 8 | 1,515 em-dashes across 72 articles (~21/article) — the strongest machine-written signal on the site | **Notice** | 72 pages | Mechanical + editorial pass |
-| 9 | 4 FAQ questions duplicated across article pairs | **Notice** | 8 pages | Reword or consolidate |
 
 **What is NOT broken** (checked, came back clean — do not "fix" these):
 - 0 duplicate `<title>` tags across 94 pages.
@@ -31,39 +29,6 @@
 - `robots.txt` is deliberate and correct (AI crawlers allowed, scrapers blocked, `/tools/` disallowed).
 - Only 1 duplicate `<h1>` across the whole site — and it is issue #1 below, not a separate problem.
 - Body-text overlap between article pairs is otherwise very low: only **2** of 2,556 article pairs exceed 5% 7-gram overlap. The site is *not* broadly spun content.
-
----
-
-## 1. CRITICAL — `state-kisan-yojana-list-all-states-2026` is serving the MP article
-
-**This is the one genuine duplicate-content bug on the site.**
-
-- File: `components/articles/rajya-yojana/StateKisanYojanaHub.tsx`
-- Route: `/rajya-yojana/state-kisan-yojana-list-all-states-2026`
-- Registered in `lib/rajya-yojana-data.ts:234` as slug `state-kisan-yojana-list-all-states-2026`, `component: 'StateKisanYojanaHub'`
-
-**Evidence:**
-- The exported component inside `StateKisanYojanaHub.tsx` is literally named `MPCMKisanKalyanYojanaKistStatus` (line 82).
-- Rendered `<h1>` on the live URL: `MP CM Kisan Kalyan Yojana Kist Kab Aayegi: Status Check, Amount aur SAARA Portal Guide` — identical to `/rajya-yojana/mp-kisan-kalyan-yojana-kist-status`. It is the **only** duplicated H1 on the entire site.
-- `<title>` says `State Kisan Yojana List 2026 — Sabhi Rajya | KisanStatus`, so title and body describe two different topics. Google sees title/H1 conflict *and* body duplication at once.
-- 7-gram overlap between the two files: **0.263** (525 shared 7-grams). Next-highest pair on the whole site is 0.053 — a 5× outlier.
-- 15 whole paragraphs are byte-identical, including MP-specific ones that make no sense on a national hub page: `SAARA Portal Kya Hai — Aur Wahi Kyun`, `Girdawari — Wo Kadam Jo MP Ke Kisan Bhool Jaate Hain`, `MP Se Bahar Ke Kisan Yahan Dekhein`.
-- The two files differ by only 475 diff lines out of ~500 — i.e. the hub was created by copying the MP file and lightly editing FAQ strings.
-
-**Impact:** the hub page is the natural ranking target for "state kisan yojana list" / "sabhi rajya kisan yojana" queries. Today it cannot rank for that, and it actively competes with the MP page on MP terms — so both pages lose.
-
-**Fix (rewrite `StateKisanYojanaHub.tsx` from scratch):**
-1. Rename the exported component to `StateKisanYojanaHub`.
-2. New H1 aligned to the title, e.g. `State Kisan Yojana List 2026: Sabhi Rajya Ka Amount, Portal Aur Status Link Ek Jagah`.
-3. Body = a genuine national hub, not a state guide:
-   - One comparison table: State | Scheme name | Annual amount | Instalments | Official portal | our guide link. Source every amount from the state's own portal or a PIB/state-cabinet release; **any state whose current amount cannot be verified gets an explicit "portal par confirm karein" cell, not a guessed number.**
-   - Short 2–3 sentence block per state that already has a dedicated article on this site (MP, Rajasthan, Maharashtra/Namo Shetkari, AP/Annadata Sukhibhava, Telangana/Rythu Bharosa, WB/Krishak Bandhu, Odisha/CM-KISAN, Chhattisgarh/Krishak Unnati) with a link out to that article — hub-and-spoke, no duplicated depth.
-   - A "how state top-ups stack on top of PM Kisan" explainer — this is the hub's unique value and exists nowhere else on the site.
-   - FAQs written specifically for the multi-state question set (which state pays most, do I get both central + state, what happens if I move state, why my state has no scheme).
-4. Delete every MP-only section from this file (SAARA, girdawari, MP domicile, MP helpline).
-5. Verify no remaining paragraph is shared with `MpKisanKalyanYojanaKist.tsx` — re-run the 7-gram check and require overlap **< 0.05**.
-
-**Do not touch** `MpKisanKalyanYojanaKist.tsx` — it is the correct, original article. Only the hub is wrong.
 
 ---
 
@@ -208,24 +173,11 @@ Repeated section headings worth de-duplicating while you're in there: `Aksar Puc
 
 ---
 
-## 9. NOTICE — 4 FAQ questions duplicated across articles
-
-Out of 485 total FAQ questions site-wide, only 4 are duplicated — this is a small, precise fix:
-
-1. `Pichhli kist mili thi, is baar nahi aayi. Naam kat gaya kya?`
-2. `Meri kist "rejected" dikha rahi hai, kya karein?`
-3. `Kya mujhe iske liye alag se application deni padegi?`
-4. `Girdawari mein fasal galat darj ho gayi hai, kist par asar padega kya?`
-
-All 4 pairs involve `StateKisanYojanaHub` ↔ `MpKisanKalyanYojanaKist`, so **fixing #1 resolves this issue too.** Re-verify after the hub rewrite; no separate work expected.
-
----
-
 ## Execution order
 
 | Wave | Work | Files touched | Why first |
 |---|---|---|---|
-| **1** | Issue #1 — rewrite `StateKisanYojanaHub.tsx` | 1 | Only true duplicate-content bug; also clears #9 |
+| **1** | ~~Issue #1 — rewrite `StateKisanYojanaHub.tsx`~~ **DONE** (also cleared #9) | 1 | Only true duplicate-content bug; also clears #9 |
 | **2** | Issue #2 — title/H1 alignment | 4 data files (+1 check script) | Highest page-count-per-edit ratio; zero prose risk |
 | **3** | Issue #5 — componentise boilerplate | `ArticleShared.tsx` + ~15 articles | Removes most of the 536 repeated blocks in one structural change |
 | **4** | Issue #3 + #7 — 11 thin articles, FAQs added in the same commits | 11 | Real writing; slowest per page |

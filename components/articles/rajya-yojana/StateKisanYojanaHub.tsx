@@ -5,7 +5,7 @@ import InfoBox from '@/components/ui/InfoBox';
 import SchemeTable from '@/components/ui/SchemeTable';
 import { FAQBlock } from '@/components/ArticleShared';
 
-const IMG_BASE = '/images/articles/rajya-yojna/mp-kisan-kalyan-yojana-kist-status';
+const IMG_BASE = '/images/articles/rajya-yojna/state-kisan-yojana-list-all-states-2026';
 
 function Fig({
   src,
@@ -42,465 +42,369 @@ function Fig({
 
 const FAQS_DATA = [
   {
-    q: 'Kya mujhe iske liye alag se application deni padegi?',
-    a: 'Nahi. Agar PM Kisan mein registered hain aur MP ke nivaasi hain, sarkar khud hi is scheme mein daal deti hai. Koi alag form nahi bharna padta.',
+    q: 'Kya PM Kisan aur state ki yojana dono ek saath milti hain?',
+    a: 'Haan, zyadatar states mein dono milti hain. PM Kisan central sarkar deti hai aur state yojana us ke upar alag se aati hai. Dono ke portal alag hain, kist ki dates alag hain, aur ek ka status doosre par asar nahi daalta. Sirf itna dhyan rakhein ki kuch states apni list PM Kisan ke data se hi banati hain, isliye PM Kisan ka record active rehna zaroori hai.',
   },
   {
-    q: 'MP Kisan Kalyan Yojana ka amount kitna hai?',
-    a: 'Abhi ₹6,000 saalana hai, teen kiston mein. 2020 mein ye ₹4,000 se shuru hui thi, 2023 mein badhi. Internet par ₹4,000 wala purana figure ab bhi ghoom raha hai — us par mat jaayein.',
+    q: 'Kis state mein kisan ko sabse zyada paisa milta hai?',
+    a: 'Fixed amount wali schemes mein Andhra Pradesh ki Annadata Sukhibhava sabse aage hai, jahan PM Kisan milakar saal ka ₹20,000 tak banta hai. Lekin Telangana ka hisaab per acre hai, isliye zyada zameen wale kisan ko wahan isse bhi zyada mil sakta hai. Seedha comparison mushkil hai kyunki har state ka model alag hai.',
   },
   {
-    q: 'Meri kist "Rejected" dikha rahi hai, kya karein?',
-    a: 'Zyadatar case mein bank account DBT se juda nahi hota, ya Aadhaar mein naam thoda alag likha hota hai. Bank jaakar NPCI seeding check karwayein. Zaroorat pade to Patwari se land record mein naam theek karwayein.',
+    q: 'Main ek state se doosre state shift ho gaya hoon, kya purani state ki kist milti rahegi?',
+    a: 'Nahi. Har state yojana mein us state ka nivasi hona zaroori shart hai. Shift hone par purani state ki eligibility khatam ho jaati hai. Nayi state mein wahan ki scheme ke niyam ke hisaab se alag se register hona padta hai, aur zameen bhi usi state mein honi chahiye.',
   },
   {
-    q: 'Kya main apna status mobile se check kar sakta hoon?',
-    a: 'Haan, SAARA portal mobile par bhi khulta hai. OTP registered number par aata hai.',
+    q: 'Mere state ki koi kisan yojana kyun nahi hai?',
+    a: 'Har state apna budget dekh kar faisla karti hai. Kuch states cash transfer ki jagah bijli subsidy, karz maafi ya fasal bonus jaise doosre raaste chunti hain. Aapke state ka naam is list mein na ho to iska matlab ye nahi ki koi madad nahi milti, bas seedha income-support model nahi hai. Apne krishi vibhag ke portal par current schemes zaroor dekh lein.',
   },
   {
-    q: 'Agar main MP se bahar shift ho gaya hoon, toh kya mujhe paisa milega?',
-    a: 'Nahi. MP ka domicile zaroori shart hai — shift hone ke baad eligibility khatam ho jaati hai.',
+    q: 'State yojana ke liye kya alag se application deni padti hai?',
+    a: 'Ye state par depend karta hai. MP aur Maharashtra jaise states PM Kisan ke data se khud hi list bana lete hain, wahan kuch nahi karna padta. West Bengal aur Odisha jaise states mein apna alag registration hai. Neeche har state ke block mein ye baat alag se likhi hai.',
   },
   {
-    q: 'Girdawari mein fasal galat darj ho gayi hai, kist par asar padega kya?',
-    a: 'Seedha asar aam taur par nahi padta, par galat record aage bima aur muavze mein pareshaan karta hai. MP Kisan App se objection darj karein ya Patwari se milein — season khatam hone se pehle theek karwana aasan rehta hai.',
+    q: 'PM Kisan aata hai lekin state ki kist nahi aayi, kya karein?',
+    a: 'Dono alag systems hain, isliye ye normal hai. Pehle apni state ke portal par status dekhein. Aksar wajah e-KYC pending hona, bank account NPCI se seed na hona, ya state ke land record mein naam ka farak hoti hai. Status mein kuch samajh na aaye to apne block ke krishi karyalay ya panchayat mein poochhein.',
   },
   {
-    q: 'Pichhli kist mili thi, is baar nahi aayi. Naam kat gaya kya?',
-    a: 'Zaroori nahi. SAARA par status dekhein — "eligible" dikhe to bas release ka intezaar hai. "Not eligible" ya record gayab ho, tab Janpad Panchayat mein poochhein. Aksar wajah e-KYC expire hona ya land record update na hona hoti hai, document theek karte hi hal ho jaata hai.',
+    q: 'Kya bataidar (tenant farmer) ko bhi state yojana ka paisa milta hai?',
+    a: 'Zyadatar states mein nahi, kyunki list land record se banti hai. Andhra Pradesh iska exception hai, jahan Annadata Sukhibhava mein registered tenant farmers bhi aate hain. West Bengal mein bhagchasi ka record panchayat ke paas ho to Krishak Bandhu mil sakta hai. Baaki states mein zameen apne naam par honi chahiye.',
   },
   {
-    q: 'Kya is kist par income tax lagta hai?',
-    a: 'Ye agricultural income support ke roop mein aati hai, isliye zyadatar chhote-marginal kisan ke liye taxable nahi maani jaati. Waise bhi jo already ITR file karte hain wo scheme se bahar hain. Apne specific case ke liye CA se hi poochh lein, ye general jaankari hai.',
-  },
-  {
-    q: 'Ek hi parivaar mein do log alag PM Kisan record par hain, dono ko milega?',
-    a: 'Agar genuinely alag zameen, alag khaton mein register hain, aur family definition (pati-patni + nabaalig bachche = ek unit) todi nahi ja rahi, to mil sakta hai. Duplicate family record pakda gaya to dono ki kist rukti hai, aur recovery bhi ho sakti hai.',
+    q: 'Chhattisgarh ki Krishak Unnati Yojana is list se alag kaise hai?',
+    a: 'Wahan paisa saal ke fixed amount ki jagah dhan ki kharidi se juda hai. Kisan ne kitna dhan becha, us par antar rashi milti hai. Kharif 2026 se dhan chhod kar doosri fasal lagane par per acre input sahayata ka naya raasta bhi khula hai. Isliye wahan ka amount har kisan ke liye alag banta hai.',
   },
 ];
 
-export default function MPCMKisanKalyanYojanaKistStatus() {
+const STATE_SCHEMES = [
+  {
+    state: 'Madhya Pradesh',
+    scheme: 'CM Kisan Kalyan Yojana',
+    amount: '₹6,000 / saal (3 × ₹2,000)',
+    portal: 'saara.mp.gov.in',
+    guide: '/rajya-yojana/mp-kisan-kalyan-yojana-kist-status',
+  },
+  {
+    state: 'Rajasthan',
+    scheme: 'Mukhyamantri Kisan Samman Nidhi',
+    amount: '₹3,000 / saal (3 × ₹1,000)',
+    portal: 'rajsahakar.rajasthan.gov.in',
+    guide: '/rajya-yojana/rajasthan-kisan-samman-nidhi-9000',
+  },
+  {
+    state: 'Maharashtra',
+    scheme: 'Namo Shetkari Mahasanman Nidhi',
+    amount: '₹6,000 / saal (2 × ₹3,000)',
+    portal: 'nsmny.mahait.org',
+    guide: '/rajya-yojana/namo-shetkari-yojana-status-check-2026',
+  },
+  {
+    state: 'Andhra Pradesh',
+    scheme: 'Annadata Sukhibhava',
+    amount: '₹20,000 tak / saal (PM Kisan milakar)',
+    portal: 'annadathasukhibhava.ap.gov.in',
+    guide: '/rajya-yojana/annadata-sukhibhava-status-check-2026',
+  },
+  {
+    state: 'Telangana',
+    scheme: 'Rythu Bharosa',
+    amount: '₹12,000 / acre / saal (per acre hisaab)',
+    portal: 'rytubharosa.cgg.gov.in',
+    guide: '/rajya-yojana/rythu-bharosa-status-check-2026',
+  },
+  {
+    state: 'West Bengal',
+    scheme: 'Krishak Bandhu',
+    amount: '₹4,000 se ₹10,000 / saal (zameen par slab)',
+    portal: 'krishakbandhu.wb.gov.in',
+    guide: '/rajya-yojana/krishak-bandhu-status-check-2026',
+  },
+  {
+    state: 'Odisha',
+    scheme: 'CM Kisan Yojana',
+    amount: '₹4,000 / saal (landless ke liye ₹12,500)',
+    portal: 'cmkisan.odisha.gov.in',
+    guide: '/rajya-yojana/odisha-cm-kisan-status-check-2026',
+  },
+  {
+    state: 'Chhattisgarh',
+    scheme: 'Krishak Unnati Yojana',
+    amount: 'Dhan kharidi par antar rashi (fixed nahi)',
+    portal: 'khadya.cg.nic.in',
+    guide: '/rajya-yojana/krishak-unnati-yojana-status-check-2026',
+  },
+];
+
+export default function StateKisanYojanaHub() {
   return (
     <article className="prose prose-lg max-w-4xl mx-auto">
 
-      <InfoBox type="update" date="4 August 2026">
-        <strong>Latest Update:</strong> Agli kist ki date SAARA portal par abhi announce nahi hui.
-        Pichhli kist ₹2,000 ki thi. WhatsApp par ghoom rahi "confirmed date" ka koi aadhaar nahi hai —
-        jab tak portal khud na dikhaye, use expected hi maanein.
+      <InfoBox type="update" date="6 August 2026">
+        <strong>Latest Update:</strong> Neeche diye amounts har state ke official portal aur
+        hamare state-wise guides se milaye gaye hain. Jis state ka current amount portal se
+        confirm nahi ho paya, wahan saaf likha hai ki portal par confirm karein. Koi bhi figure
+        WhatsApp forward se nahi liya gaya.
       </InfoBox>
 
-      <h1>MP CM Kisan Kalyan Yojana Kist Kab Aayegi: Status Check, Amount aur SAARA Portal Guide</h1>
+      <h1>State Kisan Yojana List 2026: Sabhi Rajya Ka Amount, Portal Aur Status Link Ek Jagah</h1>
 
       <p>
-        Kist kab aayegi — yahi ek sawaal MP ke kisan ghar-ghar poochhte hain. Aur jawab dene wali
-        aadhi websites afwaah chhaap deti hain. Amount ka bhi wahi haal hai: kahin purana ₹4,000
-        likha milta hai, jabki current amount ₹6,000 hai.
+        PM Kisan ka ₹6,000 to poore desh mein ek jaisa hai. Asli farak state ki apni yojana se
+        padta hai. Rajasthan ka kisan saal mein ₹9,000 tak pahunchta hai, Maharashtra ka ₹12,000,
+        aur Andhra Pradesh ka ₹20,000 tak. Wahi kaam karne wale do kisanon ki income-support mein
+        itna antar sirf is baat se aata hai ki unki zameen kis state mein hai.
       </p>
 
       <p>
-        Neeche jo hai wo SAARA portal aur official records se liya gaya hai. Kitna paisa banta hai,
-        kaun eligible hai, kist ka pattern kaisa rehta hai — sab ek jagah.
+        Ye page usi antar ko ek jagah rakhta hai: kis state mein kaunsi scheme chal rahi hai,
+        kitna paisa banta hai, official portal kaunsa hai, aur status check ka seedha raasta kya
+        hai. Har state ke liye hamara detail guide alag se maujood hai, jiska link table mein hai.
       </p>
 
       <Fig
         src="hero.webp"
-        alt="Madhya Pradesh ka kisan gehun ke khet mein mobile par CM Kisan Kalyan Yojana ki kist ka status dekh raha hai"
-        caption="MP CM Kisan Kalyan Yojana — PM Kisan ke saath state ki alag kist, SAARA portal par status milta hai"
+        alt="Bharat ke alag alag rajyon ke kisan apne khet mein, har state ki apni kisan yojana ka comparison"
+        caption="Har state ki apni income-support yojana, apna portal aur apna hisaab hai"
         width={1200}
         height={675}
         priority
       />
 
-      <ExternalLinkButton
-        href="https://saara.mp.gov.in"
-        label="Official Portal — SAARA MP Govt"
-      />
-
-      <h2>Ye Scheme Kahan Se Aayi, Aur Kitna Paisa Banta Hai</h2>
+      <h2>Sabhi States Ka Comparison Table</h2>
 
       <p>
-        Ye MP sarkar ki apni scheme hai, lekin list PM Kisan se banti hai. Maqsad seedha hai — beej,
-        khaad aur sinchai ke kharche mein thodi raahat.
+        Pehle poori tasveer dekh lein. Amount wale column mein wahi likha hai jo state ke apne
+        portal ya cabinet notification se confirm hai. Detail har state ke guide mein hai.
       </p>
 
-      <p>
-        Scheme September 2020 mein shuru hui. Tab CM ne elaan kiya tha ki har PM Kisan beneficiary
-        ko state apni taraf se top-up degi. Shuruaati amount ₹4,000 tha. 2023 mein cabinet ne isse
-        badhakar ₹6,000 kar diya — ye badhotri ek official cabinet decision se hui, sirf bhaashan
-        se nahi. Isi wajah se kai purani websites aaj bhi ₹4,000 dikhati hain, jinhe update hi nahi
-        kiya gaya.
-      </p>
-
-      <p>
-        SAARA portal aur pichhle vitthiya varsh ke installment records — jismein 14vi-15vi kist
-        July 2026 mein saath release hui — dono confirm karte hain ki current amount ₹6,000 saalana
-        hai, teen kiston mein, ₹2,000 har kist. Apne account ka sach jaanna ho to bas do jagah
-        dekhein: passbook aur SAARA dashboard.
-      </p>
+      <SchemeTable>
+        <tr>
+          <th>State</th>
+          <th>Scheme</th>
+          <th>Amount</th>
+          <th>Official Portal</th>
+          <th>Hamara Guide</th>
+        </tr>
+        {STATE_SCHEMES.map((s) => (
+          <tr key={s.state}>
+            <td><strong>{s.state}</strong></td>
+            <td>{s.scheme}</td>
+            <td>{s.amount}</td>
+            <td><code>{s.portal}</code></td>
+            <td>
+              <Link href={s.guide}>Status guide</Link>
+            </td>
+          </tr>
+        ))}
+      </SchemeTable>
 
       <InfoBox type="warning">
-        <strong>Satark Rahein:</strong> ₹4,000 wale dawe outdated hain, 2023 se pehle ka amount tha.
-        ₹10,000 total (PM Kisan + state) likha mile to wo bhi purana hisaab hai — current total
-        ₹12,000 hai. Status hamesha SAARA portal se hi confirm karein.
+        <strong>Dhyan rakhein:</strong> State schemes ke amounts cabinet decisions se badalte
+        rehte hain, aur internet par purane figures saalon tak ghoomte hain. Payment se pehle
+        apne state ke official portal par current amount ek baar zaroor dekh lein.
       </InfoBox>
 
-      <SchemeTable>
-        <tr>
-          <th>Yojana</th>
-          <th>Annual Amount</th>
-          <th>Source</th>
-          <th>Frequency</th>
-        </tr>
-        <tr>
-          <td>PM Kisan Samman Nidhi</td>
-          <td>₹6,000</td>
-          <td>Central Govt</td>
-          <td>3 Installments (₹2,000 each)</td>
-        </tr>
-        <tr>
-          <td>MP CM Kisan Kalyan Yojana</td>
-          <td>₹6,000 (Verified)</td>
-          <td>MP State Govt</td>
-          <td>3 Installments (₹2,000 each)</td>
-        </tr>
-        <tr>
-          <td><strong>Total Expected</strong></td>
-          <td><strong>₹12,000</strong></td>
-          <td><strong>Combined</strong></td>
-          <td><strong>Varies</strong></td>
-        </tr>
-      </SchemeTable>
-
-      <h2>SAARA Portal Kya Hai — Aur Wahi Kyun</h2>
+      <h2>State Ka Paisa PM Kisan Ke Upar Kaise Judta Hai</h2>
 
       <p>
-        SAARA (Smart Application for Revenue Administration) MP ke revenue department ka system hai.
-        Girdawari, land records aur kisan schemes ka data isi ek jagah chalta hai. Status isi liye
-        SAARA par dikhta hai, kisi alag yojana portal par nahi.
+        Is poore system ko samajhne ki chaabi ek hi hai: state yojana PM Kisan ki jagah nahi
+        leti, us ke upar judti hai. Central sarkar apna ₹6,000 teen kiston mein bhejti hai.
+        State apna hissa alag schedule par, alag treasury se, aur aksar alag portal ke record
+        se bhejti hai.
       </p>
 
       <p>
-        Ye baat samajhna zaroori hai kyunki kist ka connection seedha girdawari se hai. Jis season
-        aapki zameen par fasal darj nahi hoti, us season state ki kist atak sakti hai — chahe PM
-        Kisan aata rahe. Girdawari har season Patwari karta hai, aur SAARA app se kisan khud bhi
-        apni fasal darj kar sakta hai.
-      </p>
-
-      <h2>SAARA Portal Par Apna Status Kaise Dekhein</h2>
-
-      <p>
-        Poora kaam online hai aur free hai. Aadhaar number ya registered mobile paas rakhein, OTP
-        usi par aayega.
-      </p>
-
-      <Fig
-        src="saara-portal-status-check.webp"
-        alt="CSC kiosk par operator kisan ko SAARA portal par Kisan Kalyan Yojana ka status check karke dikha raha hai"
-        caption="SAARA portal mobile par bhi khulta hai — na khule to CSC ya kiosk par free check ho jaata hai"
-      />
-
-      <ol>
-        <li>Mobile ya computer ke browser mein <code>saara.mp.gov.in</code> kholein.</li>
-        <li>Homepage par "Farmer Services" ya "Kisan Kalyan Yojana" dhundhein.</li>
-        <li>"Beneficiary Status" ya "Kist Status" par click karein.</li>
-        <li><strong>Aadhaar Number</strong> ya <strong>Registered Mobile Number</strong> daalein.</li>
-        <li>OTP verify karein — wo usi number par aayega jo PM Kisan/State database mein hai.</li>
-        <li>Dashboard par "Payment Status", "Pending Amount", aur "Bank Account Details" dikh jaayenge.</li>
-      </ol>
-
-      <ExternalLinkButton
-        href="https://saara.mp.gov.in"
-        label="Check Status on SAARA Portal"
-      />
-
-      <Fig
-        src="wheat-harvest-mp.webp"
-        alt="Madhya Pradesh mein gehun ki katai ke baad kisan tractor trolley mein fasal load kar rahe hain"
-        caption="Kist ka timing aksar rabi katai aur kharif buwai ke kharche ke aas-paas rakha jaata hai"
-      />
-
-      <h2>Kist Ka Waqt — Pichhle Saalon Ka Pattern</h2>
-
-      <p>
-        Fixed date koi nahi hai. State sarkar national calendar se nahi chalti. Pattern ye batata
-        hai: pehli kist aam taur par PM Kisan ki kist ke 1-2 mahine baad release hoti hai, aur baaki
-        kisten saal bhar mein phaili rehti hain — kabhi do kisten ek saath bhi aati hain, jaise
-        July 2026 mein 14vi-15vi kist saath aayi.
+        Isi wajah se teen baatein hamesha yaad rakhne layak hain. Pehli, dono ki kist kabhi ek
+        saath nahi aati; 15 se 30 din ka farak aam hai. Doosri, ek ruk jaaye to doosri apne aap
+        nahi rukti; dono ke apne alag kaaran hote hain. Teesri, kai states apni beneficiary list
+        PM Kisan ke data se hi banati hain, isliye PM Kisan ka e-KYC expire hona state ki kist
+        bhi rok sakta hai.
       </p>
 
       <p>
-        Release aksar kisi event ke saath hota hai. CM ke haathon ek program mein single click se
-        transfer hota hai, aur us din lakhs of accounts mein ek saath paisa credit hota hai. Matlab
-        jab tak aisa program schedule nahi hota, intezaar chalta rehta hai. Newspaper mein "CM ne
-        transfer kiya" ki khabar dikhe aur aapke account mein kuch na aaye — us se pehle koi bhi
-        date sirf afwaah hai.
+        Jod ka hisaab har state mein alag banta hai. MP aur Maharashtra apna ₹6,000 milakar
+        kisan ko total ₹12,000 tak pahunchate hain. Rajasthan ₹3,000 jodkar ₹9,000 tak. Andhra
+        Pradesh ka combined figure ₹20,000 tak jaata hai. Telangana aur Chhattisgarh fixed
+        amount ke bajaye zameen ya fasal se juda model chalate hain, isliye wahan ka total har
+        kisan ke liye alag hota hai.
       </p>
 
-      <p>PM Kisan aa gaya aur state ka nahi aaya? Ye normal hai. Alag release cycle, alag treasury process — 15 se 30 din ka farak aam baat hai.</p>
+      <h2>Har State Ka Short Hisaab</h2>
 
-      <h3>Saal Bhar Ka Rough Calendar</h3>
-
+      <h3>Madhya Pradesh — CM Kisan Kalyan Yojana</h3>
       <p>
-        Kiston ki exact date kabhi fix nahi hoti, lekin pichhle kai saalon ka data ek saath dekhein
-        to ek loose pattern nazar aata hai. Ye guarantee nahi hai, sirf itna samajhne ke liye hai
-        ki kist der se aa rahi hai ya abhi season hi nahi aaya.
+        PM Kisan ke barabar ₹6,000 saalana, teen kiston mein. List PM Kisan ke data se banti
+        hai, alag application nahi deni padti. Status SAARA portal par milta hai aur girdawari
+        ka record yahan khaas maayne rakhta hai. Poora tareeka{' '}
+        <Link href="/rajya-yojana/mp-kisan-kalyan-yojana-kist-status">MP wale guide</Link> mein hai.
       </p>
 
+      <h3>Rajasthan — Mukhyamantri Kisan Samman Nidhi</h3>
       <p>
-        Kharif ki girdawari poori hone ke baad, Oct-Dec ke aas-paas pehla window khulta hai — kai
-        saal pehli kist yahin aayi hai. Naya vitthiya varsh shuru hone par, Jan-Mar mein, budget
-        allocation ka asar dikhta hai aur ye rabi katai se pehle ka waqt doosri kist ke liye common
-        raha hai. Fir Jun-Aug mein, jab kharif buwai ka kharcha sabse zyada hota hai, state teesri
-        kist ya pending kisten ek saath release karti hai — jaisa July 2026 mein hua.
+        State apni taraf se ₹3,000 saalana jodta hai, jisse total ₹9,000 banta hai. Yahan ka
+        gatekeeper Jan Aadhaar hai; uske bina kist atakti hai. ₹12,000 wale prastav ki asliyat
+        samet poora hisaab{' '}
+        <Link href="/rajya-yojana/rajasthan-kisan-samman-nidhi-9000">Rajasthan guide</Link> mein
+        likha hai.
       </p>
 
+      <h3>Maharashtra — Namo Shetkari Mahasanman Nidhi</h3>
       <p>
-        Kist is window ke aas-paas nahi aayi to iska matlab "rok di gayi" nahi hota. Pehle SAARA
-        par status dekhein, uske baad hi pareshaan hon.
+        PM Kisan ke eligible kisan ko state ₹6,000 aur deti hai, do kiston mein ₹3,000 karke.
+        Alag se apply nahi karna padta. 7/12 utara yahan ka sabse zaroori kagaz hai. Status ka
+        raasta{' '}
+        <Link href="/rajya-yojana/namo-shetkari-yojana-status-check-2026">Namo Shetkari guide</Link>{' '}
+        mein dekhein.
       </p>
 
-      <h2>Kaun Eligible Hai, Kaun Nahi</h2>
-
-      <p>Jad PM Kisan hi hai, isliye shartein lagbhag wahi hain — kuch state ke apne add-on ke saath.</p>
-
-      <h3>Mandatory Conditions:</h3>
-      <ul>
-        <li><strong>MP Ka Nivasi:</strong> Permanent residence Madhya Pradesh mein hona chahiye.</li>
-        <li><strong>PM Kisan Mein Active:</strong> Central scheme mein record chalu haalat mein ho.</li>
-        <li><strong>Landholding:</strong> Cultivable land honi chahiye, record of rights mein naam ho.</li>
-        <li><strong>e-KYC:</strong> Aadhaar seeding aur mobile linking complete ho — bina iske kist nahi aati, status "Approved" hi kyun na dikhe.</li>
-      </ul>
-
-      <h3>Exclusion List:</h3>
-      <ul>
-        <li>Institutional landholders — Trusts, Mandirs, Societies.</li>
-        <li>Wo parivar jisme koi member government employee ho (Group A, B, C, D).</li>
-        <li>Retired pensioners jinki monthly pension ₹10,000 se adhik ho.</li>
-        <li>Jinhone pichhle vitthiya varsh mein Income Tax return file kiya ho.</li>
-        <li>Practising professionals — doctor, engineer, lawyer, CA.</li>
-      </ul>
-
-      <h2>Registration Se Pehle Ye Kaagaz Tayaar Rakhein</h2>
-
+      <h3>Andhra Pradesh — Annadata Sukhibhava</h3>
       <p>
-        Zyadatar kisan is scheme mein automatic map ho jaate hain. Lekin naye landholder ya wo log
-        jinka record kabhi verify nahi hua, unke liye paanch cheezein pehle se ready rakhna kaam
-        aasan kar deta hai.
+        Fixed-amount schemes mein sabse bada package: PM Kisan milakar saal ka ₹20,000 tak.
+        Iski sabse alag baat ye hai ki registered bataidar kisan bhi cover hote hain, jo baaki
+        states mein nahi hota. Kist ka season-wise hisaab{' '}
+        <Link href="/rajya-yojana/annadata-sukhibhava-status-check-2026">AP guide</Link> mein hai.
       </p>
 
-      <SchemeTable>
-        <tr>
-          <th>Kaagaz</th>
-          <th>Kis kaam aata hai</th>
-        </tr>
-        <tr>
-          <td>Aadhaar card</td>
-          <td>e-KYC aur DBT dono isi par tikte hain</td>
-        </tr>
-        <tr>
-          <td>Land record — Khasra / Khatauni</td>
-          <td>Kis naam par aur kitni zameen, yahi se eligibility tay hoti hai</td>
-        </tr>
-        <tr>
-          <td>Bank passbook (NPCI-seeded account)</td>
-          <td>Bina seeding payment bank se wapas chali jaati hai</td>
-        </tr>
-        <tr>
-          <td>Aadhaar se linked chalu mobile number</td>
-          <td>OTP aur payment SMS yahin pahunchte hain</td>
-        </tr>
-        <tr>
-          <td>PM Kisan registration number</td>
-          <td>State ka record isi se cross-verify hota hai</td>
-        </tr>
-      </SchemeTable>
-
+      <h3>Telangana — Rythu Bharosa</h3>
       <p>
-        Chhoti si baat, par waqt bahut bachaati hai — land record, Aadhaar aur bank, teeno jagah
-        naam ki spelling ek jaisi rakhein. Naam ka farak baad mein sudharna sabse dheema kaam hai,
-        kyunki wo tehsil aur bank dono jagah alag se karana padta hai.
+        Yahan hisaab per acre chalta hai: har acre cultivable land par ₹12,000 saalana, aadha
+        Kharif mein aur aadha Rabi mein. Do acre wale ko chaar acre wale se aadha milta hai,
+        isliye gaon mein har account ka amount alag dikhta hai. Guntas ka hisaab aur phase
+        system{' '}
+        <Link href="/rajya-yojana/rythu-bharosa-status-check-2026">Rythu Bharosa guide</Link> mein
+        samjhaya hai.
       </p>
 
-      <h2>"Payment Successful" Dikha, Paisa Nahi Aaya — Ab Kya</h2>
-
+      <h3>West Bengal — Krishak Bandhu</h3>
       <p>
-        Ye shikayat aam hai. Portal par status green hai, passbook khaali — ya seedha "Rejected"
-        aa jaata hai. Teen jagah check karni hoti hai, isi order mein.
+        Zameen ke slab par ₹4,000 se ₹10,000 saalana, do kiston mein. Pehchaan ka mukhya zariya
+        Aadhaar nahi, Voter ID (EPIC) hai. Saath mein ₹2 lakh ka death benefit bhi judta hai.
+        Slab ka logic aur EPIC se status check ka tareeka{' '}
+        <Link href="/rajya-yojana/krishak-bandhu-status-check-2026">Krishak Bandhu guide</Link>{' '}
+        mein hai.
+      </p>
+
+      <h3>Odisha — CM Kisan Yojana</h3>
+      <p>
+        KALIA ki jagah aayi scheme. Chhote aur seemant kisan ko ₹4,000 saalana, aur landless
+        agricultural households ke liye alag track par ₹12,500. Do alag tracks ka farak samajhna
+        yahan sabse zaroori hai, jo{' '}
+        <Link href="/rajya-yojana/odisha-cm-kisan-status-check-2026">Odisha guide</Link> mein
+        khula hai.
+      </p>
+
+      <h3>Chhattisgarh — Krishak Unnati Yojana</h3>
+      <p>
+        Ye is list ki sabse alag scheme hai. Fixed saalana amount nahi milta; paisa dhan ki
+        sarkari kharidi se juda hai aur antar rashi ke roop mein aata hai. Kharif 2026 se dhan
+        ki jagah doosri fasal lagane par per acre input sahayata ka naya component bhi juda hai.
+        Hisaab{' '}
+        <Link href="/rajya-yojana/krishak-unnati-yojana-status-check-2026">Krishak Unnati guide</Link>{' '}
+        mein hai.
       </p>
 
       <Fig
-        src="bank-npci-mapping.webp"
-        alt="Kisan bank branch mein passbook dikhakar DBT aur NPCI Aadhaar mapping check karwa raha hai"
-        caption={'"Payment Successful" par paisa nahi aaya — sabse pehle bank mein NPCI mapping check karwao'}
+        src="india-farm-fields.webp"
+        alt="Bharat ke alag rajyon ke khet, har state mein kisan yojana ka alag model"
+        caption="Ek jaisi zameen, alag state, alag paisa. Model ka farak samajhna zaroori hai"
       />
 
-      <h3>1. Bank Account aur NPCI Mapping</h3>
-      <p>
-        Zyadatar cases yahin nikalte hain — account DBT ke liye enabled hi nahi hota. Branch mein
-        jaakar bas itna poochhein: "mera account NPCI mapper mein Aadhaar se linked hai ya nahi?"
-        Na ho to wahin link karwa lein, active hone mein 7-10 din lagte hain.
-      </p>
-
-      <h3>2. PFMS Portal Par Track Karein</h3>
-      <p>
-        SAARA ke alawa <code>pfms.nic.in</code> par jaakar "Know Your Payments" mein bank account
-        number aur IFSC daal kar dekh sakte hain — paisa bank tak pahuncha ya beech mein fail hua.
-      </p>
-
-      <h3>3. Janpad Panchayat ya Tehsil</h3>
-      <p>
-        PFMS mein "Payment Failed" dikhe to iska matlab bank ne paisa wapas bhej diya — account band
-        hone ya naam mismatch ki wajah se. Block ke ADO ya Patwari se milkar bank details update
-        karwayein.
-      </p>
-
-      <Fig
-        src="janpad-panchayat-office.webp"
-        alt="Kisan Janpad Panchayat office ke counter par apni bank details aur record update karwane ke liye khade hain"
-        caption="Payment Failed dikhe to Janpad Panchayat ya Tehsil office mein ADO/Patwari se details update karwao"
-      />
-
-      <h2>Sab Kuch Theek Hai Phir Bhi Paisa Nahi Aaya</h2>
+      <h2>Aapka State List Mein Nahi Hai?</h2>
 
       <p>
-        Bank, PFMS aur girdawari — teeno theek dikh rahe hain, aur phir bhi kai mahine se kist
-        nahi aayi. Ab sirf wait karne se kaam nahi chalega.
+        Uttar Pradesh, Bihar, Punjab, Haryana jaise kai bade states mein abhi PM Kisan jaisi
+        alag state-level income-support scheme nahi chal rahi. Iska matlab ye nahi ki wahan
+        kisan ke liye kuch nahi hai. Ye states doosre raaste se madad dete hain: kahin bijli
+        subsidy, kahin fasal bonus, kahin karz maafi ke rounds.
       </p>
 
       <p>
-        Pehle SAARA portal ki grievance window mein online complaint darj karein — isi se ek
-        complaint ID milti hai. Fir CM Helpline 181 par usi ID ke saath call karein, ye seedha
-        department ko forward karta hai. Wahan se bhi hal na nikle to zile ke Deputy Director
-        Agriculture (DDA) office mein likhit shikayat jama karein, complaint ID ki copy ke saath.
+        Aise mein do kaam karein. Pehla, PM Kisan ka apna record durust rakhein, kyunki wahi
+        base hai. Doosra, apne state ke krishi vibhag ke portal par current schemes ka page
+        dekhte rahein, kyunki naye elections aur naye budget ke saath nayi schemes aati rehti
+        hain. Jab bhi koi state nayi income-support yojana shuru karegi, hum is page ko update
+        kar denge.
+      </p>
+
+      <h2>Status Check Se Pehle Ye Teen Cheezein Har State Mein Common Hain</h2>
+
+      <p>
+        Portal chahe koi bhi ho, atakne ki wajahein lagbhag wahi rehti hain. Bank account NPCI
+        se seeded hona chahiye, warna payment bank se wapas chali jaati hai. Aadhaar, bank aur
+        land record mein naam ki spelling ek jaisi honi chahiye. Aur e-KYC current honi chahiye,
+        kyunki expire hone par status green dikhte hue bhi paisa nahi aata.
       </p>
 
       <p>
-        Complaint ID sambhal kar rakhein. Dobara follow-up karte waqt yahi sabse pehla sawaal
-        poocha jaata hai, aur bina ID ke shikayat trace karna mushkil ho jaata hai.
+        In teeno mein se koi bhi problem ho to pehle use theek karayein, uske baad hi kist ka
+        intezaar karein. Ye kaam CSC, bank branch aur tehsil se ho jaate hain aur ek baar theek
+        hone par saalon chalte hain.
       </p>
 
-      <h2>Beneficiary List Mein Naam Dhoondhna</h2>
-
-      <p>
-        Khud eligible lagte hain par paisa nahi aaya? Pehle list mein naam hai ya nahi, ye dekh
-        lein.
-      </p>
-
-      <ol>
-        <li>SAARA portal par "Reports" ya "Beneficiary List" section mein jaayein.</li>
-        <li><strong>Zila</strong>, <strong>Janpad</strong>, aur <strong>Gram Panchayat</strong> select karein.</li>
-        <li>"Search" ya "Download PDF" par click karein.</li>
-        <li>List mein apna naam ya pitaji/pati ka naam search karein (Ctrl+F se jaldi mil jaata hai).</li>
-      </ol>
-
-      <p>
-        PM Kisan mein naam hai par is list mein nahi? Aksar ye data sync ka glitch hota hai —
-        nazdeeki CSC ya Gram Panchayat se sync karwane ko kahein.
-      </p>
-
-      <h2>Girdawari — Wo Kadam Jo MP Ke Kisan Bhool Jaate Hain</h2>
-
-      <p>
-        Baaki states mein aisa koi season-wise requirement nahi hai, isliye bahar se aaye logon ko
-        ye cheez pata hi nahi hoti. MP mein har season — Kharif aur Rabi — girdawari hoti hai, yaani
-        record banta hai ki kis khet mein kya boya gaya. Patwari ye record banata hai, aur galti ya
-        der dono common hain.
-      </p>
-
-      <p>
-        Kisan khud bhi MP Kisan App se apni girdawari darj kar sakta hai. Khet par khade hokar app
-        kholein, fasal select karein, photo khinchein aur submit kar dein — GPS se location verify
-        ho jaati hai. Das minute ka kaam, do fayde: state kist ka data clean rehta hai, aur fasal
-        bima ya muavze ke waqt bhi wahi record kaam aata hai.
-      </p>
-
-      <p>Kist bina wajah atki lag rahi hai aur bank sab theek keh raha hai? Girdawari record check karwayein — ye wo kona hai jahan koi nahi dekhta.</p>
-
-      <h2>PM Kisan Aur MP Ki Scheme — Do Alag Cheezein</h2>
-
-      <p>Dono ek hi lagti hain, hain nahi. Fark saaf hai:</p>
-
-      <SchemeTable>
-        <tr>
-          <th>Parameter</th>
-          <th>PM Kisan Samman Nidhi</th>
-          <th>MP CM Kisan Kalyan Yojana</th>
-        </tr>
-        <tr>
-          <td>Laagu Karne Wali Sarkar</td>
-          <td>Bharat Sarkar (Central)</td>
-          <td>Madhya Pradesh Sarkar (State)</td>
-        </tr>
-        <tr>
-          <td>Varshik Raashi</td>
-          <td>₹6,000</td>
-          <td>₹6,000 (Verified State Top-up)</td>
-        </tr>
-        <tr>
-          <td>Portal</td>
-          <td>pmkisan.gov.in</td>
-          <td>saara.mp.gov.in</td>
-        </tr>
-        <tr>
-          <td>Application</td>
-          <td>CSC ya Self-Registration</td>
-          <td>Auto-mapped (PM Kisan data se)</td>
-        </tr>
-        <tr>
-          <td>Helpline</td>
-          <td>155261</td>
-          <td>CM Helpline 181 / Krishi Vibhag 0755-2551717</td>
-        </tr>
-      </SchemeTable>
-
-      <h2>MP Se Bahar Ke Kisan Yahan Dekhein</h2>
-
-      <p>
-        MP ka domicile nahi hai to ye scheme laagu nahi hoti. Amount har rajya mein alag hai — kahin
-        PM Kisan se dugna, kahin MP jitna hi. Apne rajya ka aankda yahan dekhein:
-      </p>
+      <h2>Sources</h2>
 
       <ul>
         <li>
-          <Link href="/rajya-yojana/rajasthan-kisan-samman-nidhi-9000">
-            Rajasthan Kisan Samman Nidhi 9000: Status aur Badhotri Update
-          </Link>
+          <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer">
+            PM Kisan Samman Nidhi — official portal (Central)
+          </a>
         </li>
         <li>
-          <Link href="/rajya-yojana/annadata-sukhibhava-status-check-2026">
-            Annadata Sukhibhava (Andhra Pradesh) — Tenant Farmers ke liye bhi
-          </Link>
+          <a href="https://saara.mp.gov.in" target="_blank" rel="noopener noreferrer">
+            SAARA Portal — MP CM Kisan Kalyan Yojana
+          </a>
         </li>
         <li>
-          <Link href="/rajya-yojana/namo-shetkari-yojana-status-check-2026">
-            Namo Shetkari Mahasanman Nidhi (Maharashtra)
-          </Link>
+          <a href="https://rajsahakar.rajasthan.gov.in/citizen/cmkisanstatus" target="_blank" rel="noopener noreferrer">
+            Raj Sahakar — Rajasthan CM Kisan status check
+          </a>
+        </li>
+        <li>
+          <a href="https://nsmny.mahait.org" target="_blank" rel="noopener noreferrer">
+            Namo Shetkari Mahasanman Nidhi — Maharashtra official portal
+          </a>
+        </li>
+        <li>
+          <a href="https://annadathasukhibhava.ap.gov.in" target="_blank" rel="noopener noreferrer">
+            Annadata Sukhibhava — Andhra Pradesh official portal
+          </a>
+        </li>
+        <li>
+          <a href="https://rytubharosa.cgg.gov.in" target="_blank" rel="noopener noreferrer">
+            Rythu Bharosa — Telangana official portal
+          </a>
+        </li>
+        <li>
+          <a href="https://krishakbandhu.wb.gov.in" target="_blank" rel="noopener noreferrer">
+            Krishak Bandhu — West Bengal official portal
+          </a>
+        </li>
+        <li>
+          <a href="https://cmkisan.odisha.gov.in" target="_blank" rel="noopener noreferrer">
+            CM Kisan Yojana — Odisha official portal
+          </a>
+        </li>
+        <li>
+          <a href="https://khadya.cg.nic.in" target="_blank" rel="noopener noreferrer">
+            Khadya Vibhag Chhattisgarh — Krishak Unnati Yojana
+          </a>
         </li>
       </ul>
 
-      <p>Sabhi rajyon ka amount aur portal ek saath:</p>
+      <h2>State Kisan Yojana — Aksar Poochhe Jaane Wale Sawaal</h2>
 
-      <ul>
-        <li>
-          <Link href="/rajya-yojana/state-kisan-yojana-list-all-states-2026">
-            State Kisan Yojana List — Sabhi States Ka Comparison Table
-          </Link>
-        </li>
-      </ul>
-
-      <h2>MP Kisan Kalyan — Aksar Poochhe Jaane Wale Sawaal</h2>
-
-      <FAQBlock faqs={FAQS_DATA} caption="MP CM Kisan Kalyan Yojana FAQ 2026" />
+      <FAQBlock faqs={FAQS_DATA} caption="State-wise kisan yojana comparison FAQ 2026" />
 
       <InfoBox type="tip">
-        <strong>Fraud se bachein:</strong> Koi bhi sarkari yojana registration ya status theek karne
-        ke naam par aapse paise nahi maangti. Koi "fees" maange to wo fraud hai — shikayat apne Janpad Panchayat ya krishi vibhag karyalay mein darj karein.
+        <strong>Fraud se bachein:</strong> Koi bhi sarkari yojana registration ya status theek
+        karne ke naam par paise nahi maangti. Koi "fees" maange to wo fraud hai. Shikayat apne
+        state ke krishi vibhag ya panchayat karyalay mein darj karein.
       </InfoBox>
 
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
           <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
-          Ye article sirf madad ke liye hai. Final decision ke liye official portal ya krishi office se sampark karein.
+          Amounts aur niyam har state ke cabinet decisions se badal sakte hain. Final jaankari
+          ke liye apne state ke official portal ya krishi karyalay se confirm karein.
         </p>
       </div>
 
