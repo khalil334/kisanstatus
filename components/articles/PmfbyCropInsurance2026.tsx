@@ -1,9 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
+import CountdownModal from '@/components/CountdownModal';
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const PUBLISHED = '2026-04-01T08:00:00+05:30';
@@ -65,70 +66,6 @@ const FAQS_DATA = [
   },
 ];
 
-function CountdownModal({ 
-  title, 
-  message, 
-  redirectUrl, 
-  onClose 
-}: { 
-  title: string; 
-  message: string; 
-  redirectUrl: string; 
-  onClose: () => void;
-}) {
-  const [count, setCount] = useState(10);
-
-  useEffect(() => {
-    if (count === 0) {
-      window.open(redirectUrl, '_blank', 'noopener,noreferrer');
-      onClose();
-      return;
-    }
-    const timer = setTimeout(() => setCount(count - 1), 1000);
-    return () => clearTimeout(timer);
-  }, [count, redirectUrl, onClose]);
-
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4" onClick={onClose}>
-      <div
-        className="w-full max-w-sm rounded-2xl bg-white dark:bg-gray-900 p-6 shadow-2xl border-2 border-green-500"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <div className="text-center">
-          <div className="text-5xl mb-3">⏳</div>
-          <h3 className="text-lg font-black text-gray-800 dark:text-white mb-2">
-            {title}
-          </h3>
-          <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
-            {message}
-          </p>
-          
-          <div className="mb-4">
-            <div className="text-6xl font-black text-green-600 dark:text-green-400">
-              {count}
-            </div>
-            <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-              seconds mein official portal khulega...
-            </p>
-          </div>
-          
-          <div className="bg-blue-50 dark:bg-blue-900/30 rounded-lg p-3 mb-4">
-            <p className="text-xs text-blue-800 dark:text-blue-300">
-              📌 Thoda wait karo. Official PMFBY portal khulne wala hai.
-            </p>
-          </div>
-          <button
-            onClick={onClose}
-            className="w-full px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-800 dark:text-white text-sm font-bold rounded-lg transition-colors"
-          >
-            Cancel
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 export default function PmfbyCropInsurance2026({ article }: { article: ArticleMeta }) {
   const [modal, setModal] = useState<{ 
     title: string; 
@@ -148,6 +85,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
           message={modal.message}
           redirectUrl={modal.url}
           onClose={() => setModal(null)}
+          infoNote="📌 Thoda wait karo. Official PMFBY portal khulne wala hai."
         />
       )}
 
