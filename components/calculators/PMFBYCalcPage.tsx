@@ -41,9 +41,10 @@ export default function PMFBYCalcPage() {
   const insured    = Number(sumInsured)||0;
   const areaHa     = Number(area)||1;
   const totalCover = insured * areaHa;
-  const premium    = (totalCover * rate)/100;
-  const govShare   = totalCover*(rate>2?rate-2:0)/100;
-  const farmerPays = premium - govShare;
+  // Under PMFBY the listed rate IS the farmer's share (capped % of sum insured).
+  // Government pays the remainder of the actuarial premium, which varies by
+  // district notification — it cannot be computed from the rate alone.
+  const farmerPays = (totalCover * rate)/100;
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
@@ -100,7 +101,7 @@ export default function PMFBYCalcPage() {
             Sabse achhi baat iska premium hai — kisan ka hissa sirf <strong>1.5% se 5%</strong> tak hota hai, baaki poora amount government khud bharti hai.
           </p>
           <p className="mb-2">
-            Ek udaharan lein: gehun ke liye ₹50,000 per hectare ka insurance liya (1.5% rate par), toh aapki jeb se sirf <strong>₹750 per hectare</strong> jayega — baaki ₹49,250 government ka contribution hoga.
+            Ek udaharan lein: gehun ke liye ₹50,000 per hectare ka insurance liya (1.5% rate par), toh aapki jeb se sirf <strong>₹750 per hectare</strong> jayega — actual premium isse kahin zyada hota hai, aur us baaki hisse ko government bharti hai.
           </p>
           <p className="text-xs text-amber-700 mt-3">
             💡 KCC loan liya hai toh fasal bima automatically compulsory ho jata hai — loan ke saath hi premium kat jata hai.
@@ -143,9 +144,8 @@ export default function PMFBYCalcPage() {
               </p>
               <ResultRow label="Premium Rate (Aapka Share)" value={`${rate}%`} />
               <ResultRow label="Total Coverage Amount" value={fmt(totalCover)} />
-              <ResultRow label="Total Premium" value={fmt(premium)} />
-              <ResultRow label="🎁 Government Subsidy" value={`-${fmt(govShare)}`} />
-              <ResultRow label="Aap Kitna Denge" value={fmt(Math.max(0,farmerPays))} bold highlight />
+              <ResultRow label="Aap Kitna Denge (Aapka Premium)" value={fmt(Math.max(0,farmerPays))} bold highlight />
+              <p className="text-[11px] text-amber-700 mt-2">🎁 Actual premium isse zyada hota hai — baaki hissa government bharti hai (amount district notification par depend karta hai)</p>
               
               <div className="mt-3 pt-3 border-t border-amber-200">
                 <p className="text-xs text-amber-800">
@@ -155,7 +155,7 @@ export default function PMFBYCalcPage() {
 
               <div className="mt-3 p-3 bg-white rounded-xl text-xs text-gray-700">
                 <p className="font-bold mb-1">📖 Iska Matlab:</p>
-                <p>Aapne {cropData.name} ka insurance liya {fmt(totalCover)} ka. Total premium {fmt(premium)} hai. Par government {fmt(govShare)} subsidy deti hai. Aapko sirf {fmt(Math.max(0,farmerPays))} dena padega. Agar fasal kharab hui to {fmt(totalCover)} tak claim mil sakta hai.</p>
+                <p>Aapne {cropData.name} ka insurance liya {fmt(totalCover)} ka. Aapka share {rate}% hai, yani aapko sirf {fmt(Math.max(0,farmerPays))} dena padega — baaki premium government bharti hai. Agar fasal kharab hui to {fmt(totalCover)} tak claim mil sakta hai.</p>
               </div>
             </div>
           )}
