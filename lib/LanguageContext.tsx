@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useState, useEffect, useCallback, useMemo } from 'react';
+import { createContext, useContext, useEffect, useCallback, useMemo, useSyncExternalStore } from 'react';
 import type { LangCode } from './translations';
 import t from './translations';
 import { trackEvent } from './gtag';
@@ -80,24 +80,48 @@ function updateDocumentLang(lang: LangCode): void {
   }
 }
 
+// --- external language store (hydration-safe, no setState-in-effect) ---
+// The server always renders DEFAULT_LANG; on the client React swaps to the
+// stored/browser language right after hydration via useSyncExternalStore.
+let clientLang: LangCode | null = null;
+const langListeners = new Set<() => void>();
+
+function subscribeLang(listener: () => void): () => void {
+  langListeners.add(listener);
+  return () => langListeners.delete(listener);
+}
+
+function getClientLang(): LangCode {
+  if (clientLang === null) {
+    clientLang = getStoredLanguage() || getBrowserLanguage() || DEFAULT_LANG;
+  }
+  return clientLang;
+}
+
+function getServerLang(): LangCode {
+  return DEFAULT_LANG;
+}
+
+function setClientLang(lang: LangCode): void {
+  clientLang = lang;
+  langListeners.forEach((listener) => listener());
+}
+
+const subscribeNoop = () => () => {};
+
 export function LanguageProvider({ children }: LanguageProviderProps) {
-  const [lang, setLangState] = useState<LangCode>(DEFAULT_LANG);
-  const [isLoaded, setIsLoaded] = useState(false);
+  const lang = useSyncExternalStore(subscribeLang, getClientLang, getServerLang);
+  // false during SSR/hydration, true on the client — same semantics as before.
+  const isLoaded = useSyncExternalStore(subscribeNoop, () => true, () => false);
 
   useEffect(() => {
-    const storedLang = getStoredLanguage();
-    const browserLang = getBrowserLanguage();
-    const initialLang = storedLang || browserLang || DEFAULT_LANG;
-    
-    setLangState(initialLang);
-    updateDocumentLang(initialLang);
-    setIsLoaded(true);
-  }, []);
+    updateDocumentLang(lang);
+  }, [lang]);
 
   const setLang = useCallback((newLang: LangCode) => {
     if (!SUPPORTED_LANGS.includes(newLang)) return;
 
-    setLangState(newLang);
+    setClientLang(newLang);
     setStoredLanguage(newLang);
     updateDocumentLang(newLang);
     
