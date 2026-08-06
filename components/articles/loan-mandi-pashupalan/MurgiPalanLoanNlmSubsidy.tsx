@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
+import { SI, StepList, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const RELATED = [

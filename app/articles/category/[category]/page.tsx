@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { ARTICLES, CATEGORIES, getArticlesByCategory, type CategorySlug } from '@/lib/articles-data';
+import { CATEGORIES, getArticlesByCategory, type CategorySlug } from '@/lib/articles-data';
 import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL, DEFAULT_OG_IMAGE } from '@/lib/site-config';
 import ArticlesClient from '../../ArticlesClient';
 

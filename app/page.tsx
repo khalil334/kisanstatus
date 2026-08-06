@@ -7,12 +7,9 @@ import {
   SITE_DESCRIPTION, 
   AUTHOR_NAME, 
   AUTHOR_URL, 
-  AUTHOR_BIO,
   DEFAULT_OG_IMAGE,
   LOGO_URL,
   GLOBAL_KEYWORDS,
-  SUPPORT_EMAIL,
-  HELPLINE,
 } from '@/lib/site-config';
 
 // Single canonical title for the homepage. It must stay aligned with the on-page

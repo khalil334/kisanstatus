@@ -29,7 +29,7 @@ function getGitDates(filePath) {
       publishedTime: firstCommit || new Date().toISOString(),
       modifiedTime: lastCommit || new Date().toISOString(),
     };
-  } catch (error) {
+  } catch {
     console.log(`⚠️  Git dates not found for ${filePath}, using current date`);
     return {
       publishedTime: new Date().toISOString(),

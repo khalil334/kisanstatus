@@ -3,8 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
-import type { ArticleMeta } from '@/lib/articles-data';
+import { SI, StepList, WB, DB, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 
 const PUBLISHED = '2026-07-10T08:00:00+05:30';
 const MODIFIED = '2026-07-11T08:00:00+05:30';
@@ -118,7 +117,7 @@ function CountdownModal({
   );
 }
 
-export default function PmKisanRejectedStatusReApplyGuide({ article }: { article: ArticleMeta }) {
+export default function PmKisanRejectedStatusReApplyGuide() {
   const [modal, setModal] = useState<{ 
     title: string; 
     message: string; 

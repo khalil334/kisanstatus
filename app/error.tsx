@@ -9,6 +9,8 @@ export default function Error({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
+  // Surface the error for debugging; Next.js requires the prop in this signature.
+  console.error(error);
   return (
     <div className="min-h-[60vh] flex items-center justify-center px-4 py-12">
       <div className="max-w-md w-full bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 p-8 text-center space-y-4">

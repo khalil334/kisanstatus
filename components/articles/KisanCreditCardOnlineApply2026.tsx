@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Script from 'next/script';
-import { SI, StepList, IB, WB, DB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock } from '@/components/ArticleShared';
+import { SI, StepList, SH, GovLink, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 const PUBLISHED = '2026-01-10T08:00:00+05:30';
 const MODIFIED = '2026-07-22T08:00:00+05:30'; 
