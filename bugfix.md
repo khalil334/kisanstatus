@@ -42,7 +42,9 @@ Per the HTML spec, when `noopener` is in the features string, `window.open()` re
 
 ---
 
-## BUG 2 — Double-branded `<title>` on `/about` and the 404 page
+## BUG 2 — ✅ FIXED (2026-08-06) — Double-branded `<title>` on `/about` and the 404 page
+
+> **Resolution:** removed the inner brand from both local titles. `/about` → `About Us - PM Kisan Verified Guidance` (layout template appends `| KisanStatus`; now 48+13=~44+15 chars, under 60). 404 → `404 - Page Nahi Mila`. OpenGraph titles untouched (the `%s | KisanStatus` template applies only to `<title>`).
 
 **Severity:** SEO (Medium) — live, verified in rendered HTML
 
