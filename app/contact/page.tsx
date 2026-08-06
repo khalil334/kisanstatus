@@ -3,7 +3,9 @@ import Link from 'next/link';
 import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL, DEFAULT_OG_IMAGE } from '@/lib/site-config';
 
 export const metadata: Metadata = {
-  title: `Contact Us — ${SITE_NAME} | Sampark Karein & Support`,
+  // layout.tsx applies the `%s | KisanStatus` template, so the brand must NOT
+  // be repeated here (was rendering "… | KisanStatus | KisanStatus").
+  title: `Contact & Support — Sampark Karein`,
   description: `KisanStatus se sampark karein. Website feedback, content correction, ya kisi bhi sawaal ke liye humein email karein. Hum 24-48 ghante mein reply karte hain.`,
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   alternates: { canonical: `${SITE_URL}/contact` },

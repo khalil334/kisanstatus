@@ -3,7 +3,8 @@ import Link from 'next/link';
 import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL, DEFAULT_OG_IMAGE } from '@/lib/site-config';
 
 export const metadata: Metadata = {
-  title: `Privacy Policy – ${SITE_NAME} | Data Protection Notice`,
+  // layout.tsx applies the `%s | KisanStatus` template — no inline brand here.
+  title: `Privacy Policy – Data Protection Notice`,
   description: `${SITE_NAME} ki Privacy Policy. Hum aapka data kaise collect, use aur secure karte hain, iski puri jankari yahan padhein. Bilkul safe aur transparent.`,
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   alternates: { canonical: `${SITE_URL}/privacy-policy` },

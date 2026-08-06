@@ -8,6 +8,7 @@
   "start": "next start",
   "lint": "next lint",
   "update-dates": "node scripts/update-article-dates.js",
+  "check:titles": "node scripts/check-title-h1.js",
   "analyze": "ANALYZE=true next build"
 },
 "dependencies": {
