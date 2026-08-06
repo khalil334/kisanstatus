@@ -19,7 +19,9 @@
 
 ---
 
-## BUG 1 — Popup pre-open trick is dead code: `window.open('', …, 'noopener')` always returns `null`
+## BUG 1 — ✅ FIXED (2026-08-06) — Popup pre-open trick is dead code: `window.open('', …, 'noopener')` always returns `null`
+
+> **Resolution:** dropped the pre-open + `noopener` combination (option b). The countdown now ends by rendering a real `<a target="_blank" rel="noopener noreferrer">` button the user taps — popup-blocker-proof, same pattern as `ExternalLinkButton`. Cancel still works. Both hook lint errors on this component (`set-state-in-effect`, `immutability`) are gone.
 
 **File:** `components/articles/PmKisanVillageWiseListPdfDownload.tsx` (lines ~71–88)
 **Severity:** Functional bug (High)
