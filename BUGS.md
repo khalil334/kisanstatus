@@ -7,7 +7,7 @@ with alt text; JSON-LD is valid. The items below are what's actually broken or r
 
 ---
 
-**Fix status:** 9 of 12 fixed. Each fix lands as its own commit on `main`; this file is updated after every fix.
+**Fix status:** 10 of 12 fixed. Each fix lands as its own commit on `main`; this file is updated after every fix.
 
 ---
 
@@ -55,10 +55,11 @@ with alt text; JSON-LD is valid. The items below are what's actually broken or r
 - **Fix:** derive priority from `modifiedTime` only (fixed tiers), or accept static priorities; don't couple them to build timestamps.
 - **Fixed (2026-08-07):** `REFERENCE_DATE` is now derived from the **content** — the newest `modifiedTime`/`publishedTime` across all articles — instead of `new Date()`, and the no-date fallback (`FALLBACK_DATE`) points at the same value rather than the build clock. The freshness tiers themselves are unchanged; they're just anchored to content. Confirmed the bug was real first: the pre-fix build put the build date in 7 places in the sitemap. Verified: same **94** URLs (`<loc>` set diffed identical), `tsc --noEmit` clean, `next build` succeeds, a clean rebuild is now **byte-identical**, and a build with the system clock moved **60 days forward** produces the same sitemap (before the fix that build would have demoted every article a tier) — no URL changed. Note: the priority spread shifts (49 pages at 1.0 vs 27) because the anchor is the newest article rather than "today"; same URLs, and the values no longer claim freshness the content doesn't have. PR #104, commit `ea26d9b`.
 
-### 7. No `Content-Security-Policy` header
+### 7. ~~No `Content-Security-Policy` header~~ ✅ FIXED 2026-08-07 (Report-Only phase)
 - **Where:** `vercel.json` headers block (has HSTS, nosniff, XFO, Permissions-Policy — but no CSP)
 - **What:** the site inlines JSON-LD, loads GTM/GA and calls two external APIs from the client; without CSP any XSS or compromised third-party script has free rein.
 - **Fix:** add a CSP header (start with `Content-Security-Policy-Report-Only` to tune; allow `www.googletagmanager.com`, `region1.google-analytics.com`, `api.data.gov.in`, `api.openweathermap.org`, then enforce). Also note `X-XSS-Protection` is deprecated and can be removed.
+- **Fixed (2026-08-07):** added a `Content-Security-Policy-Report-Only` header to the global headers block in `vercel.json`, built from what the site actually loads: `script-src 'self' 'unsafe-inline' https://www.googletagmanager.com` (`'unsafe-inline'` is required — GA4/GTM init and JSON-LD are inline scripts), `connect-src` allowing GA4 regional endpoints (`*.google-analytics.com`, `*.analytics.google.com`), GTM, `api.data.gov.in`, `api.openweathermap.org` and `vitals.vercel-insights.com` (Speed Insights), `img-src 'self' data: https:` (GA pixels + `next/image` remote patterns), plus hardening directives (`object-src 'none'`, `base-uri 'self'`, `form-action 'self'`, `frame-ancestors 'self'`, `upgrade-insecure-requests`). Also removed the deprecated `X-XSS-Protection` header. **Report-Only on purpose:** watch the browser console / CSP reports for violations for a week or two, then flip the key to `Content-Security-Policy` to enforce. No redirects touched (the `headers`-only rule from BUG-2 holds), no URL changed. Verified: `vercel.json` parses, `tsc --noEmit` clean, `next build` succeeds.
 
 ### 8. Client-exposed API keys via `NEXT_PUBLIC_*`
 - **Where:** `components/articles/mandi-bhav-today.tsx:9-14` — `NEXT_PUBLIC_MANDI_API_KEY` (api.data.gov.in) and `NEXT_PUBLIC_WEATHER_API_KEY` (OpenWeatherMap) are interpolated into client-side fetch URLs.
