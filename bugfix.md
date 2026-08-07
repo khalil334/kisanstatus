@@ -79,7 +79,9 @@ Note: commit `d04cb0a` fixed this class of bug on `/contact`, `/privacy-policy`,
 
 ---
 
-## BUG 4 — Countdown-redirect logic copy-pasted into 11+ article components, all with the same stale-closure smell
+## BUG 4 — ✅ FIXED (2026-08-06) — Countdown-redirect logic copy-pasted into 11+ article components, all with the same stale-closure smell
+
+> **Resolution:** extracted one shared `components/CountdownModal.tsx` (interval + functional updater `setCount(c => c - 1)`, no setState-in-effect re-arm) and deleted all 11 inline `CountdownModal` copies. Per-file texts/emoji/border preserved via props (`icon`, `countdownNote`, `infoNote`, `cancelLabel`, `borderColorClass`); the two show-a-button variants (`PmKisanBeneficiaryList2026`, `PmKisanLandSeedingForm`) use the `readyContent` prop to render their real download link at 0 — popup-blocker-proof. Internal-route redirects (Mobile Number Change) handled via `router.push`. `PmKisanMaandhanYojanaPension`'s inline `CountdownButton` kept but switched to a functional updater. The BUG 1 variant was already fixed separately. All 11 countdown `set-state-in-effect` lint errors are gone; `tsc --noEmit` clean.
 
 **Severity:** Code quality / maintenance (Medium)
 
