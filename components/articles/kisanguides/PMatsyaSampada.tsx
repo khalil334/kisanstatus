@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     type: 'article',
     locale: 'hi_IN',
     siteName: 'KisanStatus.com',
-    url: 'https://kisanstatus.com/articles/farming/pm-matsya-sampada-yojana-fish-farming',
+    url: 'https://kisanstatus.com/articles/pm-matsya-sampada-yojana-fish-farming',
     images: [
       {
         url: 'https://kisanstatus.com/images/kisanguides/fish-farming-hero.webp',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     images: ['https://kisanstatus.com/images/kisanguides/fish-farming-hero.webp'],
   },
   alternates: {
-    canonical: 'https://kisanstatus.com/articles/farming/pm-matsya-sampada-yojana-fish-farming',
+    canonical: 'https://kisanstatus.com/articles/pm-matsya-sampada-yojana-fish-farming',
   },
 };
 
@@ -57,7 +57,7 @@ const jsonLd = {
     },
     {
       '@type': 'BreadcrumbList',
-      '@id': 'https://kisanstatus.com/articles/farming/pm-matsya-sampada-yojana-fish-farming/#breadcrumb',
+      '@id': 'https://kisanstatus.com/articles/pm-matsya-sampada-yojana-fish-farming/#breadcrumb',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kisanstatus.com/' },
         { '@type': 'ListItem', position: 2, name: 'Articles', item: 'https://kisanstatus.com/articles' },
@@ -67,7 +67,7 @@ const jsonLd = {
     },
     {
       '@type': 'Article',
-      '@id': 'https://kisanstatus.com/articles/farming/pm-matsya-sampada-yojana-fish-farming/#article',
+      '@id': 'https://kisanstatus.com/articles/pm-matsya-sampada-yojana-fish-farming/#article',
       headline: 'PM Matsya Sampada Yojana 2026: 60% Subsidy & Complete Guide',
       description: 'PM Matsya Sampada Yojana complete guide. Janein fish farming subsidy, biofloc technology, pond setup aur real profit calculation ke baare mein.',
       author: {
@@ -81,15 +81,15 @@ const jsonLd = {
         logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.webp' },
       },
       datePublished: '2026-01-15',
-      dateModified: '2026-07-21',
+      dateModified: '2026-08-07',
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://kisanstatus.com/articles/farming/pm-matsya-sampada-yojana-fish-farming/',
+        '@id': 'https://kisanstatus.com/articles/pm-matsya-sampada-yojana-fish-farming/',
       },
     },
     {
       '@type': 'FAQPage',
-      '@id': 'https://kisanstatus.com/articles/farming/pm-matsya-sampada-yojana-fish-farming/#faq',
+      '@id': 'https://kisanstatus.com/articles/pm-matsya-sampada-yojana-fish-farming/#faq',
       mainEntity: [
         {
           '@type': 'Question',
