@@ -6,9 +6,20 @@ Ahrefs data is user ne skip karwaya — ye findings repo + live-site verificatio
 
 ---
 
+## STATUS BOARD
+
+| Bug | Status | Fixed on | PR |
+|---|---|---|---|
+| BUG-1 | ✅ FIXED & MERGED | 2026-08-07 | `fix/bug1-jsonld-farming-urls` |
+| BUG-2 | ⏳ pending | — | — |
+| BUG-3 | ⏳ pending | — | — |
+| BUG-4 | ⏳ pending | — | — |
+
+---
+
 ## CONFIRMED BUGS
 
-### BUG-1 (High): 4 kisanguides articles mein galat self-URLs (`/articles/farming/<slug>` — ye route exist hi nahi karta)
+### ✅ BUG-1 (High) — FIXED 2026-08-07: 4 kisanguides articles mein galat self-URLs (`/articles/farming/<slug>` — ye route exist hi nahi karta)
 
 Files:
 - `components/articles/kisanguides/PMatsyaSampada.tsx`
@@ -29,6 +40,16 @@ kisi aur URL ko point karta hai).
 Fix: In 4 files mein har `https://kisanstatus.com/articles/farming/<slug>` ko
 `https://kisanstatus.com/articles/<slug>` se replace karo (JSON-LD + metadata block, total ~24 occurrences).
 Type: per-file find/replace, low risk.
+
+**FIX APPLIED (2026-08-07)** — branch `fix/bug1-jsonld-farming-urls`:
+- 4 files mein 25 `articles/farming/<slug>` → `articles/<slug>` (JSON-LD `@id`,
+  breadcrumb `item`, `mainEntityOfPage`, `#faq`, OG `url`, `alternates.canonical`).
+- **Redirects added** (`next.config.js`) — purane indexed `/articles/farming/*` URLs
+  ke liye 301: `pm-matsya-sampada-yojana-fish-farming`, `silage-making-business-guide`,
+  `vermi-compost-business-guide` (`pm-fme-yojana-food-processing` ka redirect pehle se tha).
+  So Google ke paas jo bhi `/articles/farming/*` URL index hai, wo 301 se sahi page pe jaayega.
+- `dateModified` (4 components) aur `modifiedTime` (`lib/articles-data.ts`, 4 slugs) → `2026-08-07`.
+- **Content untouched**: article ka koi word/section remove nahi kiya, live page URL/slug same hai.
 
 ### BUG-2 (High): Maandhan status-check article ka JSON-LD galat route pe point karta hai
 

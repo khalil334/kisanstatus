@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     type: 'article',
     locale: 'hi_IN',
     siteName: 'KisanStatus.com',
-    url: 'https://kisanstatus.com/articles/farming/vermi-compost-business-guide',
+    url: 'https://kisanstatus.com/articles/vermi-compost-business-guide',
     images: [
       {
         url: 'https://kisanstatus.com/images/kisanguides/vermi-compost-hero.webp',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     images: ['https://kisanstatus.com/images/kisanguides/vermi-compost-hero.webp'],
   },
   alternates: {
-    canonical: 'https://kisanstatus.com/articles/farming/vermi-compost-business-guide',
+    canonical: 'https://kisanstatus.com/articles/vermi-compost-business-guide',
   },
 };
 
@@ -57,7 +57,7 @@ const jsonLd = {
     },
     {
       '@type': 'BreadcrumbList',
-      '@id': 'https://kisanstatus.com/articles/farming/vermi-compost-business-guide/#breadcrumb',
+      '@id': 'https://kisanstatus.com/articles/vermi-compost-business-guide/#breadcrumb',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kisanstatus.com/' },
         { '@type': 'ListItem', position: 2, name: 'Articles', item: 'https://kisanstatus.com/articles' },
@@ -67,7 +67,7 @@ const jsonLd = {
     },
     {
       '@type': 'Article',
-      '@id': 'https://kisanstatus.com/articles/farming/vermi-compost-business-guide/#article',
+      '@id': 'https://kisanstatus.com/articles/vermi-compost-business-guide/#article',
       headline: 'Vermi Compost Business 2026: PKVY Subsidy & Profit Guide',
       description: 'Vermi compost business complete guide. Janein organic fertilizer kaise banayein, PKVY subsidy, machinery cost aur real profit calculation ke baare mein sab kuch.',
       author: {
@@ -81,15 +81,15 @@ const jsonLd = {
         logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.webp' },
       },
       datePublished: '2026-01-15',
-      dateModified: '2026-07-21',
+      dateModified: '2026-08-07',
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://kisanstatus.com/articles/farming/vermi-compost-business-guide/',
+        '@id': 'https://kisanstatus.com/articles/vermi-compost-business-guide/',
       },
     },
     {
       '@type': 'FAQPage',
-      '@id': 'https://kisanstatus.com/articles/farming/vermi-compost-business-guide/#faq',
+      '@id': 'https://kisanstatus.com/articles/vermi-compost-business-guide/#faq',
       mainEntity: [
         {
           '@type': 'Question',

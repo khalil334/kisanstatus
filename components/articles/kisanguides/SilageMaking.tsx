@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     type: 'article',
     locale: 'hi_IN',
     siteName: 'KisanStatus.com',
-    url: 'https://kisanstatus.com/articles/farming/silage-making-business-guide',
+    url: 'https://kisanstatus.com/articles/silage-making-business-guide',
     images: [
       {
         url: 'https://kisanstatus.com/images/kisanguides/silage-hero.webp',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     images: ['https://kisanstatus.com/images/kisanguides/silage-hero.webp'],
   },
   alternates: {
-    canonical: 'https://kisanstatus.com/articles/farming/silage-making-business-guide',
+    canonical: 'https://kisanstatus.com/articles/silage-making-business-guide',
   },
 };
 
@@ -63,17 +63,17 @@ const jsonLd = {
     },
     {
       '@type': 'BreadcrumbList',
-      '@id': 'https://kisanstatus.com/articles/farming/silage-making-business-guide/#breadcrumb',
+      '@id': 'https://kisanstatus.com/articles/silage-making-business-guide/#breadcrumb',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kisanstatus.com/' },
         { '@type': 'ListItem', position: 2, name: 'Articles', item: 'https://kisanstatus.com/articles' },
         { '@type': 'ListItem', position: 3, name: 'Farming', item: 'https://kisanstatus.com/articles/category/farming' },
-        { '@type': 'ListItem', position: 4, name: 'Silage Making Business', item: 'https://kisanstatus.com/articles/farming/silage-making-business-guide' },
+        { '@type': 'ListItem', position: 4, name: 'Silage Making Business', item: 'https://kisanstatus.com/articles/silage-making-business-guide' },
       ],
     },
     {
       '@type': 'Article',
-      '@id': 'https://kisanstatus.com/articles/farming/silage-making-business-guide/#article',
+      '@id': 'https://kisanstatus.com/articles/silage-making-business-guide/#article',
       headline: 'Silage Business 2026: SMAM Subsidy & Real Profit Guide',
       description: 'Silage banane ka business kaise shuru karein — chara storage tarika, chaff cutter cost, SMAM subsidy aur real profit calculation, sab kuch is guide mein.',
       image: {
@@ -99,15 +99,15 @@ const jsonLd = {
         },
       },
       datePublished: '2026-01-15',
-      dateModified: '2026-07-25',
+      dateModified: '2026-08-07',
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://kisanstatus.com/articles/farming/silage-making-business-guide/',
+        '@id': 'https://kisanstatus.com/articles/silage-making-business-guide/',
       },
     },
     {
       '@type': 'FAQPage',
-      '@id': 'https://kisanstatus.com/articles/farming/silage-making-business-guide/#faq',
+      '@id': 'https://kisanstatus.com/articles/silage-making-business-guide/#faq',
       mainEntity: [
         {
           '@type': 'Question',
