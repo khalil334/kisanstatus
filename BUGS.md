@@ -7,7 +7,7 @@ with alt text; JSON-LD is valid. The items below are what's actually broken or r
 
 ---
 
-**Fix status:** 4 of 12 fixed. Each fix lands as its own commit on `main`; this file is updated after every fix.
+**Fix status:** 5 of 12 fixed. Each fix lands as its own commit on `main`; this file is updated after every fix.
 
 ---
 
@@ -80,9 +80,10 @@ with alt text; JSON-LD is valid. The items below are what's actually broken or r
 - **What:** runs on every `npm run build`; if git history is unavailable (shallow clone — Vercel clones shallow by default) it silently stamps `publishedTime`/`modifiedTime` with the current date, i.e. fabricated freshness signals in Article JSON-LD and the sitemap.
 - **Fix:** fail loudly (or skip the update) when git log returns empty, instead of defaulting to `new Date()`.
 
-### 12. `robots.txt` blocks `/tools/` for all bots, but no `/tools` routes exist
+### 12. ~~`robots.txt` blocks `/tools/` for all bots, but no `/tools` routes exist~~ ✅ FIXED 2026-08-07
 - **Where:** `app/robots.ts` output
 - **What:** cosmetic inconsistency — disallowing a path that 404s. Either drop the rule or leave documented.
+- **Fixed (2026-08-07):** dropped the rule — `'/tools/'` removed from the `disallow` list in all **5** user-agent groups (`*`, `Googlebot`, `Bingbot`, the AI-crawler group, `AhrefsBot`/`AhrefsSiteAudit`). Confirmed first that no `/tools` route exists: `app/` has no `tools` segment, and the only `tools` references in the repo are an internal component folder (`components/articles/rajya-yojana/tools/`, never a URL) and an external `tools.google.com` href in the privacy policy. Verified by diffing the generated `.next/server/app/robots.txt.body` — `/tools/` is gone and everything else is byte-identical (all other disallows, `Crawl-delay` values, Googlebot-Image allows, the AI-bot blocklist, the `Sitemap:` line). `tsc --noEmit` clean, `next build` succeeds — no URL changed. PR #102, commit `1c43975`.
 
 ---
 
