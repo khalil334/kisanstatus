@@ -4,8 +4,6 @@ import { MAANDHAN_ARTICLES } from '@/lib/maandhan-data';
 import { LIVE_RAJYA_YOJANA_ARTICLES } from '@/lib/rajya-yojana-data';
 import { SITE_URL } from '@/lib/site-config';
 
-const REFERENCE_DATE = new Date();
-
 const ALL_ARTICLES = [
   ...ARTICLES.map((a) => ({
     slug: a.slug,
@@ -39,6 +37,28 @@ const ALL_ARTICLES = [
   })),
 ];
 
+/**
+ * Freshness is measured against the newest article in the dataset, NOT against
+ * the build clock. Deriving it from `new Date()` at module scope meant every
+ * deploy silently reshuffled priorities and stamped `lastmod` with the build
+ * date, so the sitemap claimed freshness that the content never had.
+ *
+ * Using a content-derived reference keeps the relative tiers below working as
+ * designed while making the whole sitemap deterministic: rebuilding without
+ * changing content now produces a byte-identical sitemap.
+ */
+const REFERENCE_DATE = new Date(
+  Math.max(
+    ...ALL_ARTICLES.map((a) => {
+      const t = new Date(a.modifiedTime || a.publishedTime).getTime();
+      return Number.isFinite(t) ? t : 0;
+    }),
+  ),
+);
+
+/** Deterministic fallback for entries with no usable date of their own. */
+const FALLBACK_DATE = REFERENCE_DATE;
+
 function getArticlePriority(modifiedTime: string): number {
   const daysSinceModified = Math.floor((REFERENCE_DATE.getTime() - new Date(modifiedTime).getTime()) / 86400000);
   if (daysSinceModified <= 1) return 1.0;
@@ -59,7 +79,7 @@ function getArticleFrequency(category: string): MetadataRoute.Sitemap[number]['c
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = REFERENCE_DATE;
+  const now = FALLBACK_DATE;
 
   const staticPages: MetadataRoute.Sitemap = [
     { 
