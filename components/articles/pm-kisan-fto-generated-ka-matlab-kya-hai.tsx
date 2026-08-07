@@ -74,7 +74,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Payment Status Guide</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            FTO Full Form, Generated Ka Matlab Aur Land Seeding Status — Sab Kuch Ek Jagah
+            FTO Full Form Aur FTO Generated Ka Matlab — PM Kisan Guide
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
