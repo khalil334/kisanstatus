@@ -21,15 +21,16 @@ export default function ExternalLinkButton({ url, label, className = '' }: Exter
   useEffect(() => {
     if (countdown === null) return;
 
-    if (countdown === 0) {
-      window.open(url, '_blank', 'noopener,noreferrer');
-      setIsRedirecting(false);
-      setCountdown(null);
-      return;
-    }
-
+    // Both the tick and the final redirect happen inside the timer callback, so
+    // the effect body never calls setState synchronously (react-hooks/set-state-in-effect).
     const timer = setTimeout(() => {
-      setCountdown((prev) => (prev !== null ? prev - 1 : null));
+      if (countdown <= 1) {
+        window.open(url, '_blank', 'noopener,noreferrer');
+        setIsRedirecting(false);
+        setCountdown(null);
+      } else {
+        setCountdown(countdown - 1);
+      }
     }, 1000);
 
     return () => clearTimeout(timer);

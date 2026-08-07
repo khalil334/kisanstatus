@@ -72,16 +72,21 @@ function CountdownButton({
   };
 
   useEffect(() => {
-    if (countdown !== null && countdown > 0) {
-      const timer = setTimeout(() => {
-        setCountdown((c) => (c !== null ? c - 1 : null));
-      }, 1000);
-      return () => clearTimeout(timer);
-    } else if (countdown === 0) {
-      window.open(href, '_blank', 'noopener,noreferrer');
-      setCountdown(null);
-      setIsRedirecting(false);
-    }
+    if (countdown === null) return;
+
+    // Both the tick and the final redirect happen inside the timer callback, so
+    // the effect body never calls setState synchronously (react-hooks/set-state-in-effect).
+    const timer = setTimeout(() => {
+      if (countdown <= 1) {
+        window.open(href, '_blank', 'noopener,noreferrer');
+        setCountdown(null);
+        setIsRedirecting(false);
+      } else {
+        setCountdown(countdown - 1);
+      }
+    }, 1000);
+
+    return () => clearTimeout(timer);
   }, [countdown, href]);
 
   const buttonColors = {
