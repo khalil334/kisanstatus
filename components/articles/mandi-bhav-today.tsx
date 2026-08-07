@@ -55,6 +55,14 @@ interface WeatherData {
   rain: string;
 }
 
+/** One 3-hourly entry of the OpenWeatherMap `/data/2.5/forecast` response. */
+interface ForecastEntry {
+  dt: number;
+  main: { temp: number; temp_min: number };
+  weather: { main: string }[];
+  clouds?: { all?: number };
+}
+
 interface StateChecklist {
   state: string;
   mandis: string[];
@@ -565,22 +573,22 @@ export default function MandiBhavToday() {
         const res = await fetch(WEATHER_API_URL(coords.lat, coords.lon));
         if (!res.ok) throw new Error('Weather API failed');
         const data = await res.json();
-        const list = data.list || [];
+        const list: ForecastEntry[] = (data as { list?: ForecastEntry[] }).list || [];
 
-        const weatherMap: Record<string, any> = {};
-        list.slice(0, 40).forEach((item: any) => {
+        const weatherMap: Record<string, ForecastEntry> = {};
+        list.slice(0, 40).forEach((item) => {
           const date = new Date(item.dt * 1000).toLocaleDateString('en-IN', { day: '2-digit', month: 'short' });
           if (!weatherMap[date]) weatherMap[date] = item;
         });
 
         const forecast: WeatherData[] = Object.entries(weatherMap)
           .slice(0, 7)
-          .map(([date, item]: [string, any]) => ({
+          .map(([date, item]) => ({
             day: new Date(item.dt * 1000).toLocaleDateString('en-IN', { weekday: 'short' }),
             date,
             temp: `${Math.round(item.main.temp)}°/${Math.round(item.main.temp_min)}°`,
             condition: item.weather[0].main,
-            rain: `${Math.round(item.clouds.all || 0)}%`,
+            rain: `${Math.round(item.clouds?.all || 0)}%`,
           }));
 
         if (!cancelled) setWeatherForecast(forecast.length ? forecast : WEATHER_FALLBACK);
