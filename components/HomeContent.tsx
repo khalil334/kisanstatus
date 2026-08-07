@@ -295,6 +295,10 @@ export default function HomeContent() {
               <strong className="text-white"> Direct Benefit Transfer (DBT)</strong>.
               <strong className="text-white"> eKYC</strong> complete karo, 
               <strong className="text-white"> beneficiary status</strong> verify karo — sab kuch bilkul free!
+              {' '}Payment status mein FTO dikh raha hai?{' '}
+              <Link href="/articles/pm-kisan-fto-generated-ka-matlab-kya-hai" className="underline font-bold text-white hover:text-green-200">
+                FTO full form aur FTO generated ka matlab yahan samjhein
+              </Link>.
             </p>
 
             <SearchBar />
