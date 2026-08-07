@@ -72,7 +72,7 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
     description: 'PM Kisan Maandhan Yojana mein apna status kaise verify kijiye. Pension card download, passbook check, contribution history aur missed payment ka pura process.',
     category: 'pension-scheme',
     published: '2026-07-24T08:00:00+05:30',
-    modified: '2026-07-25T08:00:00+05:30',
+    modified: '2026-08-07T00:00:00+05:30',
     readTime: '10 min read',
     image: '/images/articles/maandhan/status-check-portal-hero.webp',
     ogImage: '/images/articles/maandhan/status-check-portal-hero.webp',

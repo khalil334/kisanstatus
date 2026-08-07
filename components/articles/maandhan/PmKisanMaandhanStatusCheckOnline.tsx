@@ -7,18 +7,18 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Article",
-      "@id": "https://kisanstatus.com/articles/pm-kisan-maandhan-status-check-online/#article",
+      "@id": "https://kisanstatus.com/maandhan/pm-kisan-maandhan-status-check-online/#article",
       "headline": "PM Kisan Maandhan Status Check Online: Pension Card, Passbook, Contribution History",
       "description": "PM Kisan Maandhan Yojana mein apna status kaise verify kijiye. Pension card download, passbook check, contribution history aur missed payment ka pura process.",
       "author": { "@type": "Organization", "name": "KisanStatus Team", "url": "https://kisanstatus.com/about" },
       "publisher": { "@type": "Organization", "name": "KisanStatus.com", "logo": { "@type": "ImageObject", "url": "https://kisanstatus.com/logo.webp" } },
       "datePublished": "2026-07-24",
-      "dateModified": "2026-07-24",
-      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://kisanstatus.com/articles/pm-kisan-maandhan-status-check-online/" }
+      "dateModified": "2026-08-07",
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://kisanstatus.com/maandhan/pm-kisan-maandhan-status-check-online/" }
     },
     {
       "@type": "FAQPage",
-      "@id": "https://kisanstatus.com/articles/pm-kisan-maandhan-status-check-online/#faq",
+      "@id": "https://kisanstatus.com/maandhan/pm-kisan-maandhan-status-check-online/#faq",
       "mainEntity": [
         { "@type": "Question", "name": "PM Kisan Maandhan status online kaise verify kijiye?", "acceptedAnswer": { "@type": "Answer", "text": "pmkmy.gov.in pe jakar apna mobile no. ya KPAN no. daaliye. OTP aayega, verify kijiye. Dashboard pe aapka status, contribution history, aur pension card sab dikhega." } },
         { "@type": "Question", "name": "Maandhan pension card kaise download kijiye?", "acceptedAnswer": { "@type": "Answer", "text": "Login karne ke baad Download KPAN Card option pe click kijiye. PDF format mein card download ho jayega. Isko print karke apne paas sambhal kar rakhein." } },
