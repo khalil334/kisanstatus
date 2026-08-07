@@ -13,7 +13,8 @@ Ahrefs data is user ne skip karwaya — ye findings repo + live-site verificatio
 | BUG-1 | ✅ FIXED & MERGED | 2026-08-07 | `fix/bug1-jsonld-farming-urls` |
 | BUG-2 | ✅ FIXED & MERGED | 2026-08-07 | `fix/bug2-maandhan-jsonld-url` |
 | BUG-3 | ✅ FIXED & MERGED | 2026-08-07 | `fix/bug3-dead-metadata-note` |
-| BUG-4 | ⏳ pending | — | — |
+| BUG-4 | ✅ FIXED & MERGED | 2026-08-07 | `fix/bug4-soft-404` |
+| BUG-5 (new) | 🔍 found 2026-08-07, awaiting go-ahead | — | — |
 
 ---
 
@@ -96,7 +97,7 @@ Risk: zero — code render hota hi nahi.
   render output identical — isliye article ka `dateModified` deliberately bump NAHI kiya
   (jab reader ko kuch naya nahi mila to freshness date badalna galat signal hota hai).
 
-### BUG-4 (Low): Galat-route article URL soft-404 deta hai (HTTP 200 + "Article Not Found")
+### ✅ BUG-4 (Low) — FIXED 2026-08-07: Galat-route article URL soft-404 deta hai (HTTP 200 + "Article Not Found")
 
 Problem: e.g. `https://kisanstatus.com/articles/pm-kisan-maandhan-status-check-online`
 HTTP 200 return karta hai "Article Not Found" title + `noindex` ke saath. `notFound()` call
@@ -105,6 +106,26 @@ Impact chhota hai (noindex laga hai), par crawlers ke liye 404 status zyada saaf
 
 Fix (optional): `app/articles/[slug]/page.tsx` ke `generateMetadata` mein unknown slug par
 bhi `notFound()` throw karo taaki real 404 status mile.
+
+**FIX APPLIED (2026-08-07)** — branch `fix/bug4-soft-404`:
+- `app/articles/[slug]/page.tsx` → `generateMetadata()`: unknown slug par ab
+  `notFound()` throw hota hai (pehle `{ title: 'Article Not Found', noindex }`
+  return karta tha jo HTTP 200 deta tha). Page component pehle se `notFound()`
+  call karta tha — ab status aur body dono consistent hain: real **404** +
+  `app/not-found.tsx` ka proper 404 page (jo already noindex hai).
+- Note: `/articles/pm-kisan-maandhan-status-check-online` ab 404 nahi, **301** deta hai
+  — BUG-2 mein uska redirect add ho chuka hai.
+- Koi content/word/URL change nahi; 4 lines changed.
+
+### 🔍 BUG-5 (Low, NEW — found 2026-08-07, NOT fixed yet, owner ki permission chahiye)
+
+Wahi soft-404 pattern do aur dynamic routes mein bhi hai:
+- `app/maandhan/[slug]/page.tsx:32` — `return { title: 'Not Found', noindex }`
+- `app/rajya-yojana/[slug]/page.tsx:172` — `return { title: 'Not Found', noindex }`
+
+Dono ke page components `notFound()` call karte hain, par `generateMetadata` ka
+fallback HTTP 200 bhej deta hai. Fix BUG-4 jaisa hi one-line hai. Ye fixplan ke
+original scope mein nahi tha, isliye chheda nahi — bolo to agla PR isi ka bana dun.
 
 ---
 
