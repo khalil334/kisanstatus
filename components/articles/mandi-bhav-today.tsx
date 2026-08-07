@@ -6,10 +6,12 @@ import Image from 'next/image';
 import { IB, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock } from '@/components/ArticleShared';
 import CountdownModal from '@/components/CountdownModal';
 
-const MANDI_API_KEY = process.env.NEXT_PUBLIC_MANDI_API_KEY || '';
 const WEATHER_API_KEY = process.env.NEXT_PUBLIC_WEATHER_API_KEY || '';
 
-const MANDI_API_BASE = `https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=${MANDI_API_KEY}&format=json&limit=100`;
+// Mandi rates go through our own server-side route (`app/api/mandi/route.ts`) so the
+// data.gov.in key stays on the server instead of shipping in the client bundle (BUG-8).
+// The route answers 503 when no key is configured, which is the old "no key" path.
+const MANDI_PROXY_URL = (state: string) => `/api/mandi?state=${encodeURIComponent(state)}`;
 const WEATHER_API_URL = (lat: number, lon: number) =>
   `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`;
 
@@ -494,20 +496,19 @@ export default function MandiBhavToday() {
   }, []);
 
   useEffect(() => {
-    // No key configured: nothing to fetch. The rendered lists already fall back to the
-    // state-adjusted static data, and isLive/lastUpdated keep their initial values.
-    if (!MANDI_API_KEY) return;
-
+    // Whether a key exists is now a server-side fact, so we always ask the proxy; a 503
+    // means "not configured" and lands in the catch below, where the rendered lists fall
+    // back to the state-adjusted static data exactly as before.
     let cancelled = false;
 
     async function fetchMandi() {
       try {
         const apiStateName = STATE_API_NAME[selectedState] ?? selectedState;
-        const url = `${MANDI_API_BASE}&filters[state]=${encodeURIComponent(apiStateName)}`;
-        const res = await fetch(url);
+        const res = await fetch(MANDI_PROXY_URL(apiStateName));
         if (!res.ok) throw new Error('Mandi API failed');
         const data = await res.json();
         const records: LiveRecord[] = data.records || [];
+        if (records.length === 0) throw new Error('No live mandi records');
 
         const vegMap = new Map<string, number[]>();
         const fruitMap = new Map<string, number[]>();
