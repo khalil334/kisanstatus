@@ -12,7 +12,7 @@ const CATEGORY_DATA: Record<CategorySlug, {
   keywords: string[];
 }> = {
   'status-check': {
-    title: 'PM Kisan Status Check & Verification Guides 2026',
+    title: 'PM Kisan Status Check & Verification 2026',
     description: 'PM Kisan status check, beneficiary list verification, aur FTO generated ka matlab jaanein. 2026 ki latest, verified step-by-step guides.',
     emoji: '📊',
     keywords: ['pm kisan status check', 'beneficiary verification', 'installment status 2026', 'FTO generated', 'kist status'],
