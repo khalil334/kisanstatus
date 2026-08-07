@@ -7,7 +7,9 @@ with alt text; JSON-LD is valid. The items below are what's actually broken or r
 
 ---
 
-**Fix status:** 10 of 12 fixed. Each fix lands as its own commit on `main`; this file is updated after every fix.
+**Fix status:** 10 of 12 fixed; BUG-4 partially fixed (all `no-explicit-any` cleared, 7 `set-state-in-effect` errors remain). Each fix lands as its own commit on `main`; this file is updated after every fix.
+
+**Last updated:** 2026-08-07
 
 ---
 
@@ -42,6 +44,10 @@ with alt text; JSON-LD is valid. The items below are what's actually broken or r
 - **Where:** run `npx eslint .` — 16× `@typescript-eslint/no-explicit-any` (mostly `app/articles/[slug]/page.tsx` schema builders, `components/articles/mandi-bhav-today.tsx`), 8× `react-hooks/set-state-in-effect` (`components/Header.tsx`, `components/articles/mandi-bhav-today.tsx`, `LanguageSwitcher.tsx`, `ExternalLinkButton.tsx`, `PmKisanMaandhanYojanaPension.tsx`, `app/articles/page.tsx`), 1 warning in `eslint.config.mjs`.
 - **What:** `npm run lint` fails, so lint can't gate CI; the `set-state-in-effect` cases cause avoidable cascading re-renders on high-traffic pages (Header runs on every page).
 - **Fix:** type the JSON-LD builders (`Record<string, unknown>` or schema-dts), compute initial state instead of setting it in effects (use lazy `useState` initializers / `useMemo`), then wire `npm run lint` into CI.
+- **Progress (2026-08-07):** re-ran `npx eslint .` against `main` to get the real state rather than trusting this file — the actual remaining count was **12 errors + 1 warning**, not the originally-audited split. `no-explicit-any` is now **fully cleared**:
+  - **Part 1** (PR #110, commit `c232ad4`): the 16 `no-explicit-any` errors in the article pages / schema builders.
+  - **Part 2** (PR #111, commit `3ff4eb6`): the last **4** `no-explicit-any` errors, which were in components, not article pages — `components/LanguageSwitcher.tsx` (`handleLanguageChange` now takes `LangCode` instead of `string`, so the `setLang(newLang as any)` cast is gone; both call sites already passed `LANGUAGES[].code`) and `components/articles/mandi-bhav-today.tsx` (new `ForecastEntry` interface for the OpenWeatherMap `/data/2.5/forecast` entries, used for the `weatherMap` record, the `forEach` param and the typed `data.list` access; `clouds` is optional in the API so the rain calc uses `item.clouds?.all`). Types only — verified `tsc --noEmit` clean, `eslint` `no-explicit-any` count **0** (was 4), `next build` succeeds with **103** prerendered routes (unchanged), **no URL changed**.
+- **Still open:** the **7** `react-hooks/set-state-in-effect` errors — `components/Header.tsx` (4), `components/articles/mandi-bhav-today.tsx` (2), `components/ExternalLinkButton.tsx` (1), `components/articles/PmKisanMaandhanYojanaPension.tsx` (1) — plus the 1 `import/no-anonymous-default-export` warning in `eslint.config.mjs`, and wiring `npm run lint` into CI.
 
 ### 5. ~~`/speed-insights` — noindex meta-refresh page shipped as a route~~ ✅ FIXED 2026-08-07
 - **Where:** `app/speed-insights/page.tsx`
