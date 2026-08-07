@@ -7,7 +7,7 @@ with alt text; JSON-LD is valid. The items below are what's actually broken or r
 
 ---
 
-**Fix status:** 10 of 12 fixed; BUG-4 partially fixed (all `no-explicit-any` cleared, 7 `set-state-in-effect` errors remain). Each fix lands as its own commit on `main`; this file is updated after every fix.
+**Fix status:** 11 of 12 fixed. Only **BUG-8** (client-exposed `NEXT_PUBLIC_*` API keys) remains. Each fix lands as its own commit on `main`; this file is updated after every fix.
 
 **Last updated:** 2026-08-07
 
@@ -40,14 +40,23 @@ with alt text; JSON-LD is valid. The items below are what's actually broken or r
 
 ## 🟠 Medium
 
-### 4. ESLint: 24 errors on `main`
+### 4. ~~ESLint: 24 errors on `main`~~ ✅ FIXED 2026-08-07
 - **Where:** run `npx eslint .` — 16× `@typescript-eslint/no-explicit-any` (mostly `app/articles/[slug]/page.tsx` schema builders, `components/articles/mandi-bhav-today.tsx`), 8× `react-hooks/set-state-in-effect` (`components/Header.tsx`, `components/articles/mandi-bhav-today.tsx`, `LanguageSwitcher.tsx`, `ExternalLinkButton.tsx`, `PmKisanMaandhanYojanaPension.tsx`, `app/articles/page.tsx`), 1 warning in `eslint.config.mjs`.
 - **What:** `npm run lint` fails, so lint can't gate CI; the `set-state-in-effect` cases cause avoidable cascading re-renders on high-traffic pages (Header runs on every page).
 - **Fix:** type the JSON-LD builders (`Record<string, unknown>` or schema-dts), compute initial state instead of setting it in effects (use lazy `useState` initializers / `useMemo`), then wire `npm run lint` into CI.
 - **Progress (2026-08-07):** re-ran `npx eslint .` against `main` to get the real state rather than trusting this file — the actual remaining count was **12 errors + 1 warning**, not the originally-audited split. `no-explicit-any` is now **fully cleared**:
   - **Part 1** (PR #110, commit `c232ad4`): the 16 `no-explicit-any` errors in the article pages / schema builders.
   - **Part 2** (PR #111, commit `3ff4eb6`): the last **4** `no-explicit-any` errors, which were in components, not article pages — `components/LanguageSwitcher.tsx` (`handleLanguageChange` now takes `LangCode` instead of `string`, so the `setLang(newLang as any)` cast is gone; both call sites already passed `LANGUAGES[].code`) and `components/articles/mandi-bhav-today.tsx` (new `ForecastEntry` interface for the OpenWeatherMap `/data/2.5/forecast` entries, used for the `weatherMap` record, the `forEach` param and the typed `data.list` access; `clouds` is optional in the API so the rain calc uses `item.clouds?.all`). Types only — verified `tsc --noEmit` clean, `eslint` `no-explicit-any` count **0** (was 4), `next build` succeeds with **103** prerendered routes (unchanged), **no URL changed**.
-- **Still open:** the **7** `react-hooks/set-state-in-effect` errors — `components/Header.tsx` (4), `components/articles/mandi-bhav-today.tsx` (2), `components/ExternalLinkButton.tsx` (1), `components/articles/PmKisanMaandhanYojanaPension.tsx` (1) — plus the 1 `import/no-anonymous-default-export` warning in `eslint.config.mjs`, and wiring `npm run lint` into CI.
+  - **Part 3** (PR #113, commit `7b639e4`): all **7** remaining `react-hooks/set-state-in-effect` errors plus the last warning. `npm run lint` now exits **0 with 0 errors and 0 warnings**.
+    - `ExternalLinkButton.tsx` and `PmKisanMaandhanYojanaPension.tsx`: the countdown tick **and** the final `window.open` moved inside the `setTimeout` callback, so the effect body never calls `setState` synchronously. Countdown timing unchanged.
+    - `Header.tsx` → `SearchModal`: the modal is now only *mounted* while open, so the query resets on unmount instead of via `setQuery('')` in an effect; the focus timeout is also cleared on cleanup (it leaked before).
+    - `Header.tsx` → `ThemeToggle`: `isDark` + `mounted` now come from `useSyncExternalStore` over a small module-level store, mirroring the existing pattern in `lib/LanguageContext.tsx`. The effect only syncs the `<html>` class — an external system, which is what effects are for.
+    - `Header.tsx` → shortcut hint / mobile menu: the Ctrl/⌘+K hint is read through `useSyncExternalStore`; the mobile menu is derived from the pathname it was opened on, so navigation closes it and the `setMobileOpen(false)`-on-pathname effect is gone entirely.
+    - `mandi-bhav-today.tsx`: live API results now live in nullable state (`liveVegetables` / `liveFruits` / `liveWeather`) and the state-adjusted static data is **derived** via `useMemo`, so the no-key and fetch-failure paths no longer push fallbacks through `setState` in an effect. Rendered output identical.
+    - `eslint.config.mjs`: the config is named before export, clearing the `import/no-anonymous-default-export` warning.
+  - Verified across all three parts: `npm run lint` **0 errors / 0 warnings** (was 12 errors + 1 warning when re-measured), `tsc --noEmit` clean, `next build` succeeds with **103** prerendered routes (unchanged), **no URL changed**. Beyond the lint rule this also removes the cascading re-renders the audit flagged on high-traffic pages (`Header` runs on every page).
+- **Follow-up (not a bug):** lint is now green, so `npm run lint` can finally be wired into CI as a gate — that step is still to do.
+- **Needs a manual browser check after deploy** (interactive client behaviour a build can't prove): the header dark/light toggle incl. reload persistence, the search modal (Ctrl/⌘+K, Esc, backdrop click, query clearing on reopen), the mobile menu open/close and closing on navigation, the countdown buttons on `/articles/pm-kisan-maandhan-yojana-pension`, and the `/articles/mandi-bhav-today` price + weather tables with and without API keys set.
 
 ### 5. ~~`/speed-insights` — noindex meta-refresh page shipped as a route~~ ✅ FIXED 2026-08-07
 - **Where:** `app/speed-insights/page.tsx`
