@@ -94,14 +94,12 @@ const nextConfig = {
       { source: '/bank/cooperative', destination: '/articles/KisanRinKahaSeLe2026', permanent: true },
       { source: '/bank/tata-capital', destination: '/articles/KisanRinKahaSeLe2026', permanent: true },
       { source: '/bank/mahindra-finance', destination: '/articles/KisanRinKahaSeLe2026', permanent: true },
-    ];
-  },
-      { source: '/bank/mahindra-finance', destination: '/articles/KisanRinKahaSeLe2026', permanent: true },
       { source: '/articles/pm-kisan-24vi-kist', destination: '/articles/PmKisan24viKist2026', permanent: true },
       { source: '/articles/pm-kisan-ekyc-kaise-karein', destination: '/articles/PmKisanEkycOnline2026', permanent: true },
       { source: '/articles/pm-kisan-status-check-2026', destination: '/articles/PmKisan24viKist2026', permanent: true },
     ];
   },
+
   async headers() {
     return [
       {
