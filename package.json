@@ -9,6 +9,8 @@
   "lint": "eslint .",
   "update-dates": "node scripts/update-article-dates.js",
   "check:titles": "node scripts/check-title-h1.js",
+  "indexnow:build": "node scripts/build-indexnow-payload.js",
+  "indexnow:submit": "node scripts/build-indexnow-payload.js && node scripts/submit-indexnow.js",
   "analyze": "ANALYZE=true next build"
 },
 "dependencies": {
