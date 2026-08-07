@@ -59,6 +59,9 @@ const nextConfig = {
       { source: '/beneficiary-list', destination: '/articles/PmKisanBeneficiaryList2026', permanent: true },
       { source: '/articles/loan/KisanCreditCardOnlineApply2026', destination: '/articles/KisanCreditCardOnlineApply2026', permanent: true },
       { source: '/articles/farming/pm-fme-yojana-food-processing', destination: '/articles/pm-fme-yojana-food-processing', permanent: true },
+      { source: '/articles/farming/pm-matsya-sampada-yojana-fish-farming', destination: '/articles/pm-matsya-sampada-yojana-fish-farming', permanent: true },
+      { source: '/articles/farming/silage-making-business-guide', destination: '/articles/silage-making-business-guide', permanent: true },
+      { source: '/articles/farming/vermi-compost-business-guide', destination: '/articles/vermi-compost-business-guide', permanent: true },
       {
         source: '/:path*',
         has: [{ type: 'host', value: 'www.kisanstatus.com' }],
