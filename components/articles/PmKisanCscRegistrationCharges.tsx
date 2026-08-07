@@ -65,7 +65,7 @@ export default function PmKisanCscRegistrationCharges() {
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Fees & Process Guide</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            PM Kisan CSC Registration Charges 2026: Kitne Paise Lagte Hain, Kaise Karein?
+            PM Kisan CSC Registration Charges: Sahi Fees, Kaise Karein?
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white">KisanStatus Team</Link></span>

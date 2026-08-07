@@ -234,7 +234,7 @@ const CORE_ARTICLES: readonly ArticleMeta[] = [
     title: 'FTO Ka Full Form & FTO Generated Meaning',
     desc: 'FTO ka full form Fund Transfer Order hai. FTO generated, FTO processed, "FTO will be generated" — har status ka matlab, aur kist kab aayegi, sab samjhein.',
     ogTitle: 'FTO Ka Full Form — FTO Generated/Processed Meaning',
-    seoTitle: 'FTO Generated Ka Matlab? PM Kisan FTO Guide',
+    seoTitle: 'FTO Generated Ka Matlab — PM Kisan FTO Guide',
     keywords: [
       'FTO ka full form',
       'FTO full form in hindi',
