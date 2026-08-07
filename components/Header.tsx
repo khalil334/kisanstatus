@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useSyncExternalStore } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -96,15 +96,17 @@ function SearchModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
   const inputRef = useRef<HTMLInputElement>(null);
   const results = fuzzySearch(query);
 
+  // The parent only mounts this component while the modal is open, so the query
+  // resets on unmount — no setQuery('') in the effect body
+  // (react-hooks/set-state-in-effect).
   useEffect(() => {
-    if (isOpen) {
-      setTimeout(() => inputRef.current?.focus(), 100);
-      document.body.style.overflow = 'hidden';
-    } else {
+    if (!isOpen) return;
+    const focusTimer = setTimeout(() => inputRef.current?.focus(), 100);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      clearTimeout(focusTimer);
       document.body.style.overflow = '';
-      setQuery('');
-    }
-    return () => { document.body.style.overflow = ''; };
+    };
   }, [isOpen]);
 
   useEffect(() => {
@@ -191,23 +193,74 @@ function SearchModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
   );
 }
 
-function ThemeToggle() {
-  const [isDark, setIsDark] = useState(false);
-  const [mounted, setMounted] = useState(false);
+// --- external theme store (hydration-safe, no setState-in-effect) ---
+// The server can't know the visitor's theme, so it renders nothing; on the client
+// React reads localStorage / prefers-color-scheme right after hydration via
+// useSyncExternalStore, exactly like lib/LanguageContext.tsx does for language.
+let clientIsDark: boolean | null = null;
+const themeListeners = new Set<() => void>();
 
-  useEffect(() => {
-    setMounted(true);
+function subscribeTheme(listener: () => void): () => void {
+  themeListeners.add(listener);
+  return () => themeListeners.delete(listener);
+}
+
+function getClientIsDark(): boolean {
+  if (clientIsDark === null) {
     const stored = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    if (stored === 'dark' || (!stored && prefersDark)) {
-      document.documentElement.classList.add('dark');
-      setIsDark(true);
+    clientIsDark = stored === 'dark' || (!stored && prefersDark);
+  }
+  return clientIsDark;
+}
+
+function getServerIsDark(): boolean {
+  return false;
+}
+
+function setClientIsDark(next: boolean): void {
+  clientIsDark = next;
+  themeListeners.forEach((listener) => listener());
+}
+
+const subscribeThemeNoop = () => () => {};
+
+// --- Ctrl/⌘+K hint (hydration-safe, no setState-in-effect) ---
+// Desktop-only, and only knowable on the client, so the server renders no hint.
+const subscribeShortcutNoop = () => () => {};
+
+function getClientShortcutKey(): string | null {
+  const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+  const isSmallScreen = window.innerWidth < 768;
+  if (isTouchDevice || isSmallScreen) return null;
+  const isMac = navigator.platform?.toUpperCase().includes('MAC') ||
+                navigator.userAgent?.toUpperCase().includes('MAC');
+  return isMac ? '⌘K' : 'Ctrl+K';
+}
+
+function getServerShortcutKey(): string | null {
+  return null;
+}
+
+function ThemeToggle() {
+  const isDark = useSyncExternalStore(subscribeTheme, getClientIsDark, getServerIsDark);
+  // false during SSR/hydration, true on the client — same semantics as the old
+  // `mounted` state, without setting state in an effect.
+  const mounted = useSyncExternalStore(subscribeThemeNoop, () => true, () => false);
+
+  // Apply the resolved theme to <html>. This only touches the DOM (an external
+  // system), which is what effects are for — no setState here.
+  useEffect(() => {
+    const stored = localStorage.getItem('theme');
+    const html = document.documentElement;
+    if (stored === 'dark' || (!stored && isDark)) {
+      html.classList.remove('light');
+      html.classList.add('dark');
     } else if (stored === 'light') {
-      document.documentElement.classList.add('light');
-      setIsDark(false);
+      html.classList.remove('dark');
+      html.classList.add('light');
     }
-  }, []);
+  }, [isDark]);
 
   const toggle = () => {
     const html = document.documentElement;
@@ -215,12 +268,12 @@ function ThemeToggle() {
       html.classList.remove('dark');
       html.classList.add('light');
       localStorage.setItem('theme', 'light');
-      setIsDark(false);
+      setClientIsDark(false);
     } else {
       html.classList.remove('light');
       html.classList.add('dark');
       localStorage.setItem('theme', 'dark');
-      setIsDark(true);
+      setClientIsDark(true);
     }
   };
 
@@ -247,11 +300,15 @@ function ThemeToggle() {
 }
 
 export default function Header() {
-  const [mobileOpen, setMobileOpen] = useState(false);
+  // The mobile menu is derived from the route it was opened on, so navigating to a
+  // new page closes it automatically without a setState-in-effect.
+  const [menuOpenedOn, setMenuOpenedOn] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
-  const [shortcutKey, setShortcutKey] = useState<string | null>(null);
   const pathname = usePathname();
+  const mobileOpen = menuOpenedOn !== null && menuOpenedOn === pathname;
+  const setMobileOpen = (open: boolean) => setMenuOpenedOn(open ? pathname : null);
+  const shortcutKey = useSyncExternalStore(subscribeShortcutNoop, getClientShortcutKey, getServerShortcutKey);
 
   useEffect(() => {
     let ticking = false;
@@ -278,16 +335,6 @@ export default function Header() {
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('keydown', handleKeyDown);
 
-    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-    const isSmallScreen = window.innerWidth < 768;
-    const isMobile = isTouchDevice || isSmallScreen;
-
-    if (!isMobile) {
-      const isMac = navigator.platform?.toUpperCase().includes('MAC') || 
-                    navigator.userAgent?.toUpperCase().includes('MAC');
-      setShortcutKey(isMac ? '⌘K' : 'Ctrl+K');
-    }
-
     return () => {
       window.removeEventListener('scroll', onScroll);
       window.removeEventListener('keydown', handleKeyDown);
@@ -299,10 +346,6 @@ export default function Header() {
     return () => { document.body.style.overflow = ''; };
   }, [mobileOpen]);
 
-  useEffect(() => {
-    setMobileOpen(false);
-  }, [pathname]);
-
   const isActive = (href: string) => {
     if (href === '/') return pathname === '/';
     return pathname?.startsWith(href);
@@ -310,7 +353,7 @@ export default function Header() {
 
   return (
     <>
-      <SearchModal isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
+      {searchOpen && <SearchModal isOpen onClose={() => setSearchOpen(false)} />}
 
       {mobileOpen && (
         <div 
