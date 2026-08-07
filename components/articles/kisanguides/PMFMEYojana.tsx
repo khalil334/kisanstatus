@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: 'article',
     locale: 'hi_IN',
     siteName: 'KisanStatus.com',
-    url: 'https://kisanstatus.com/articles/farming/pm-fme-yojana-food-processing',
+    url: 'https://kisanstatus.com/articles/pm-fme-yojana-food-processing',
     images: [
       {
         url: 'https://kisanstatus.com/images/kisanguides/pmfhero.webp',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     images: ['https://kisanstatus.com/images/kisanguides/pmfhero.webp'],
   },
   alternates: {
-    canonical: 'https://kisanstatus.com/articles/farming/pm-fme-yojana-food-processing',
+    canonical: 'https://kisanstatus.com/articles/pm-fme-yojana-food-processing',
   },
 };
 
@@ -58,7 +58,7 @@ const jsonLd = {
     },
     {
       '@type': 'BreadcrumbList',
-      '@id': 'https://kisanstatus.com/articles/farming/pm-fme-yojana-food-processing/#breadcrumb',
+      '@id': 'https://kisanstatus.com/articles/pm-fme-yojana-food-processing/#breadcrumb',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kisanstatus.com/' },
         { '@type': 'ListItem', position: 2, name: 'Articles', item: 'https://kisanstatus.com/articles' },
@@ -68,7 +68,7 @@ const jsonLd = {
     },
     {
       '@type': 'Article',
-      '@id': 'https://kisanstatus.com/articles/farming/pm-fme-yojana-food-processing/#article',
+      '@id': 'https://kisanstatus.com/articles/pm-fme-yojana-food-processing/#article',
       headline: 'PM FME Yojana 2026: Chhote Food Business Ke Liye 35% Subsidy Guide',
       description: 'PM FME Yojana complete guide. Janein micro food processing subsidy kaise lein, ODOP benefits, loan process, aur real ground reality.',
       author: {
@@ -82,15 +82,15 @@ const jsonLd = {
         logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.webp' },
       },
       datePublished: '2026-01-15',
-      dateModified: '2026-07-21',
+      dateModified: '2026-08-07',
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://kisanstatus.com/articles/farming/pm-fme-yojana-food-processing/',
+        '@id': 'https://kisanstatus.com/articles/pm-fme-yojana-food-processing/',
       },
     },
     {
       '@type': 'FAQPage',
-      '@id': 'https://kisanstatus.com/articles/farming/pm-fme-yojana-food-processing/#faq',
+      '@id': 'https://kisanstatus.com/articles/pm-fme-yojana-food-processing/#faq',
       mainEntity: [
         {
           '@type': 'Question',
