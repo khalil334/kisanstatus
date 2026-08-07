@@ -11,7 +11,6 @@ export default function robots(): MetadataRoute.Robots {
           '/api/',
           '/private/',
           '/admin/',
-          '/tools/',
           '/search?',
         ],
         crawlDelay: 1,
@@ -23,7 +22,6 @@ export default function robots(): MetadataRoute.Robots {
           '/api/',
           '/private/',
           '/admin/',
-          '/tools/',
         ],
         crawlDelay: 1,
       },
@@ -44,7 +42,6 @@ export default function robots(): MetadataRoute.Robots {
           '/api/',
           '/private/',
           '/admin/',
-          '/tools/',
         ],
         crawlDelay: 2,
       },
@@ -67,13 +64,12 @@ export default function robots(): MetadataRoute.Robots {
         disallow: [
           '/api/',
           '/private/',
-          '/tools/',
         ],
       },
       {
         userAgent: ['AhrefsBot', 'AhrefsSiteAudit'],
         allow: '/',
-        disallow: ['/api/', '/private/', '/admin/', '/tools/'],
+        disallow: ['/api/', '/private/', '/admin/'],
       },
       {
         userAgent: [
