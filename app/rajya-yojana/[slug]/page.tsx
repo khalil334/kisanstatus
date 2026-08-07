@@ -168,8 +168,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const article = getRajyaYojanaArticle(slug);
 
+  // Unknown slug => real HTTP 404 (app/not-found.tsx), not a 200 "Not Found" soft-404.
+  // The page component below already calls notFound(); returning fallback metadata here
+  // made the response 200, so status and body disagreed. (Ref: fixplan.md BUG-5)
   if (!article || article.status !== 'live') {
-    return { title: 'Not Found', robots: { index: false, follow: true } };
+    notFound();
   }
 
   const url = `${SITE_URL}/rajya-yojana/${slug}`;
