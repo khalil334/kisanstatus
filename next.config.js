@@ -43,8 +43,18 @@ const nextConfig = {
     '@radix-ui/react-popover',
   ],
 
+  // NOTE: redirects live here and ONLY here. Do not add a `redirects` block to
+  // vercel.json — Vercel platform redirects run BEFORE Next.js ones, so a rule
+  // there silently overrides this file and creates split-brain config (BUG-2).
   async redirects() {
     return [
+      // Host normalization: apex is canonical.
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'kisanstatus.vercel.app' }],
+        destination: 'https://kisanstatus.com/:path*',
+        permanent: true,
+      },
       { source: '/en', destination: '/', permanent: true },
       { source: '/new-registration', destination: '/articles/PmKisanMasterGuide2026', permanent: true },
       { source: '/articles/pm-kisan-ekyc-online-2026', destination: '/articles/PmKisanMasterGuide2026', permanent: true },
@@ -56,6 +66,12 @@ const nextConfig = {
       { source: '/articles/nano-dap-500ml-price-in-india-2026', destination: '/articles/NanoDap500mlPriceInIndia2026', permanent: true },
       { source: '/articles/kisan-tractor-loan-2026', destination: '/articles/KisanTractorLoan2026', permanent: true },
       { source: '/articles/pm-kisan-mobile-number-change', destination: '/articles/PmKisanMobileNumberChangeUpdate', permanent: true },
+      { source: '/articles/pm-kisan-mobile-number-change-2026', destination: '/articles/PmKisanMobileNumberChangeUpdate', permanent: true },
+      { source: '/pm-kisan-21vi-installment-status-check', destination: '/articles/PmKisan24viKist2026', permanent: true },
+      { source: '/articles/pm-kisan-24vi-kist-2026', destination: '/articles/PmKisan24viKist2026', permanent: true },
+      { source: '/articles/agri-stack-kya-hai-2026', destination: '/articles/AgriStackKyaHai2026', permanent: true },
+      { source: '/author', destination: '/about', permanent: true },
+      { source: '/official-links', destination: '/contact', permanent: true },
       { source: '/beneficiary-list', destination: '/articles/PmKisanBeneficiaryList2026', permanent: true },
       { source: '/articles/loan/KisanCreditCardOnlineApply2026', destination: '/articles/KisanCreditCardOnlineApply2026', permanent: true },
       { source: '/articles/farming/pm-fme-yojana-food-processing', destination: '/articles/pm-fme-yojana-food-processing', permanent: true },
@@ -83,7 +99,11 @@ const nextConfig = {
       { source: '/pm-kisan-beneficiary-status', destination: '/articles/PmKisan24viKist2026', permanent: true },
       { source: '/pm-kisan-beneficiary-list', destination: '/articles/PmKisanBeneficiaryList2026', permanent: true },
       { source: '/pm-kisan-kyc-csc', destination: '/articles/PmKisanMasterGuide2026', permanent: true },
-      { source: '/pm-kisan-status', destination: '/articles/PmKisan24viKist2026', permanent: true },
+      // Canonical destination for /pm-kisan-status: the live site has been
+      // sending this to the quick-status-check calculator (the vercel.json rule
+      // won before it was consolidated here). Keep that target so no live URL
+      // behaviour changes.
+      { source: '/pm-kisan-status', destination: '/calculator/quick-status-check', permanent: true },
       { source: '/kisan-status', destination: '/articles/PmKisan24viKist2026', permanent: true },
       { source: '/scheme/agristack', destination: '/articles/AgriStackKyaHai2026', permanent: true },
       { source: '/scheme/kcc', destination: '/articles/KisanCreditCardOnlineApply2026', permanent: true },
