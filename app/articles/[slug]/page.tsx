@@ -232,11 +232,11 @@ export async function generateMetadata({
   }
   
   const article = ARTICLES_MAP[slug];
+  // Unknown slug => real HTTP 404 (app/not-found.tsx), not a 200 "Article Not Found"
+  // soft-404. Returning fallback metadata here made Google see a 200 page; the page
+  // component below already calls notFound(), so this keeps status + body consistent.
   if (!article) {
-    return {
-      title: 'Article Not Found',
-      robots: { index: false, follow: true },
-    };
+    notFound();
   }
 
   const url = `${SITE_URL}/articles/${slug}`;
