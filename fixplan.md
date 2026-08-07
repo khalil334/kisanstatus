@@ -12,7 +12,7 @@ Ahrefs data is user ne skip karwaya — ye findings repo + live-site verificatio
 |---|---|---|---|
 | BUG-1 | ✅ FIXED & MERGED | 2026-08-07 | `fix/bug1-jsonld-farming-urls` |
 | BUG-2 | ✅ FIXED & MERGED | 2026-08-07 | `fix/bug2-maandhan-jsonld-url` |
-| BUG-3 | ⏳ pending | — | — |
+| BUG-3 | ✅ FIXED & MERGED | 2026-08-07 | `fix/bug3-dead-metadata-note` |
 | BUG-4 | ⏳ pending | — | — |
 
 ---
@@ -71,7 +71,7 @@ Fix: Teeno URLs mein `/articles/` → `/maandhan/` karo. Single file, 3 lines.
 - `dateModified` → `2026-08-07`; `lib/maandhan-data.ts` ka `modified` bhi bump kiya.
 - **Content untouched**: koi word/section remove nahi, live URL same.
 
-### BUG-3 (Medium): 8 kisanguides files mein dead `export const metadata` (Next.js ignore karta hai)
+### ✅ BUG-3 (Medium) — FIXED 2026-08-07: 8 kisanguides files mein dead `export const metadata` (Next.js ignore karta hai)
 
 Files: `components/articles/kisanguides/{CHCPortal, DripSprinkler, MadhumakhiPalan, MushroomKheti, PMatsyaSampada, PMFMEYojana, SilageMaking, VerminCompost}.tsx`
 
@@ -83,6 +83,18 @@ mein isi block ke andar galat `articles/farming/` canonicals baithe hain (BUG-1)
 
 Fix: Dead metadata blocks delete karo (ya kam se kam BUG-1 fix ke saath URLs sahi karo).
 Risk: zero — code render hota hi nahi.
+
+**FIX APPLIED (2026-08-07)** — branch `fix/bug3-dead-metadata-note`:
+- Approach: **delete nahi kiya** (owner instruction: kuch remove na karo). Iske bajaye
+  har 8 files ke `export const metadata` ke upar ek clear DEAD-CODE warning comment
+  add kiya — jisme likha hai ki live metadata `app/articles/[slug]/page.tsx` ke
+  `generateMetadata()` + `lib/articles-data.ts` se aati hai, aur yahan edit karne se
+  live pe kuch nahi badlega.
+- Iska asal risk (mislead future edits) khatam ho gaya, aur zero code remove hua.
+- URLs wala hissa BUG-1 mein pehle hi theek ho chuka hai (sab 8 canonicals verified sahi).
+- **Zero deletions** (`git diff`: 56 insertions, 0 deletions). Comment-only change hai,
+  render output identical — isliye article ka `dateModified` deliberately bump NAHI kiya
+  (jab reader ko kuch naya nahi mila to freshness date badalna galat signal hota hai).
 
 ### BUG-4 (Low): Galat-route article URL soft-404 deta hai (HTTP 200 + "Article Not Found")
 
