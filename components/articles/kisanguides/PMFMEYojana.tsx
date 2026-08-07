@@ -3,6 +3,13 @@ import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
 
+// ⚠️ DEAD CODE — Next.js is metadata export ko ignore karta hai.
+// `export const metadata` sirf app/**/page.tsx ya layout.tsx mein kaam karta hai;
+// ye ek client-imported article component hai, isliye ye block render HI nahi hota.
+// Live <title>/description/canonical/OG `app/articles/[slug]/page.tsx` ke
+// generateMetadata() se aate hain, jo lib/articles-data.ts padhta hai.
+// >>> Title/description/canonical badalna hai to lib/articles-data.ts edit karo. <<<
+// Yahan edit karne se live page pe KUCHH nahi badlega. (Ref: fixplan.md BUG-3)
 export const metadata: Metadata = {
   title: 'PM FME Yojana 2026: Chhote Food Business Ke Liye 35% Subsidy Guide',
   description: 'PM FME Yojana complete guide. Janein micro food processing subsidy kaise lein, ODOP benefits, loan process, aur real ground reality.',
