@@ -7,7 +7,7 @@ with alt text; JSON-LD is valid. The items below are what's actually broken or r
 
 ---
 
-**Fix status:** 6 of 12 fixed. Each fix lands as its own commit on `main`; this file is updated after every fix.
+**Fix status:** 7 of 12 fixed. Each fix lands as its own commit on `main`; this file is updated after every fix.
 
 ---
 
@@ -43,10 +43,11 @@ with alt text; JSON-LD is valid. The items below are what's actually broken or r
 - **What:** `npm run lint` fails, so lint can't gate CI; the `set-state-in-effect` cases cause avoidable cascading re-renders on high-traffic pages (Header runs on every page).
 - **Fix:** type the JSON-LD builders (`Record<string, unknown>` or schema-dts), compute initial state instead of setting it in effects (use lazy `useState` initializers / `useMemo`), then wire `npm run lint` into CI.
 
-### 5. `/speed-insights` — noindex meta-refresh page shipped as a route
+### 5. ~~`/speed-insights` — noindex meta-refresh page shipped as a route~~ ✅ FIXED 2026-08-07
 - **Where:** `app/speed-insights/page.tsx`
 - **What:** a placeholder "Redirecting…" page using `<meta httpEquiv="refresh" content="3;url=/">` inside the body. It's `noindex`, returns 200, and isn't in the sitemap — it's crawlable-but-dead weight, and meta-refresh inside `<body>` is invalid placement (Next puts arbitrary tags where they render).
 - **Fix:** replace with a proper redirect entry (`next.config.js`: `{ source: '/speed-insights', destination: '/', permanent: true }`) and delete the page.
+- **Fixed (2026-08-07):** deleted `app/speed-insights/page.tsx` and added `{ source: '/speed-insights', destination: '/', permanent: true }` to the consolidated `redirects()` in `next.config.js` (the single home for redirects per BUG-2). Also removed the page from `scripts/check-title-h1.js` BRAND_ROUTES so the checker doesn't reference a deleted file. The `@vercel/speed-insights` analytics component in `app/layout.tsx` is unrelated and untouched. The page was noindex and not in the sitemap, so no indexed URL changed; visitors hitting `/speed-insights` now get a proper 308 to `/` instead of a 3-second meta-refresh page. Verified: `tsc --noEmit` clean, `next build` succeeds, `/speed-insights` no longer in the prerendered routes.
 
 ### 6. ~~Sitemap `REFERENCE_DATE = new Date()` at module scope~~ ✅ FIXED 2026-08-07
 - **Where:** `app/sitemap.ts:7`
