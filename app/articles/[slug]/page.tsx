@@ -26,7 +26,7 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
   const category = CATEGORIES[article.category];
   const related = getRelatedArticles(article.slug, 5);
 
-  const breadcrumbItems: any[] = [
+  const breadcrumbItems: Array<Record<string, unknown>> = [
     { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
     { '@type': 'ListItem', position: 2, name: 'Articles', item: `${SITE_URL}/articles` },
   ];
@@ -35,7 +35,7 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
     breadcrumbItems.push({
       '@type': 'ListItem',
       position: 3,
-      name: (category as any).nameHi ?? (category as any).name,
+      name: category.nameHi,
       item: `${SITE_URL}/articles/category/${article.category}`,
     });
   }
@@ -102,13 +102,13 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
       about: article.schemes && article.schemes.length > 0
         ? article.schemes.map((s: string) => ({ '@type': 'Thing', name: s }))
         : [{ '@type': 'Thing', name: 'Agriculture' }],
-      mentions: related.slice(0, 3).map((r: any) => ({
+      mentions: related.slice(0, 3).map((r) => ({
         '@type': 'Article',
         name: r.title,
         url: `${SITE_URL}/articles/${r.slug}`,
       })),
       keywords: Array.isArray(article.keywords) ? article.keywords.join(', ') : '',
-      articleSection: category ? (category as any).name : 'Agriculture',
+      articleSection: category ? category.name : 'Agriculture',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['article h1', 'article h2', 'article p'],
@@ -259,7 +259,7 @@ export async function generateMetadata({
     authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
     creator: AUTHOR_NAME,
     publisher: SITE_NAME,
-    category: category ? (category as any).name : 'Agriculture & Farming',
+    category: category ? category.name : 'Agriculture & Farming',
     alternates: { 
       canonical: url,
       languages: {
@@ -283,7 +283,7 @@ export async function generateMetadata({
       }],
       publishedTime: article.publishedTime,
       modifiedTime: article.modifiedTime,
-      section: category ? (category as any).name : 'Agriculture & Welfare',
+      section: category ? category.name : 'Agriculture & Welfare',
       authors: [AUTHOR_NAME],
       tags: Array.isArray(article.keywords) ? [...article.keywords].slice(0, 5) : [],
     },
@@ -309,7 +309,7 @@ export async function generateMetadata({
     other: {
       'article:published_time': article.publishedTime,
       'article:modified_time': article.modifiedTime,
-      'article:section': category ? (category as any).name : 'Agriculture',
+      'article:section': category ? category.name : 'Agriculture',
     },
   };
 }
@@ -338,12 +338,12 @@ export default async function ArticlePage({
   const ogImage = article.ogImage ? `${SITE_URL}${article.ogImage}` : DEFAULT_OG_IMAGE;
   const schemas = buildSchemas(article, url, ogImage);
   const rawCat = CATEGORIES[article.category];
-  const catName: string = rawCat ? ((rawCat as any).nameHi ?? (rawCat as any).name) : '';
+  const catName: string = rawCat ? rawCat.nameHi : '';
   const related = getRelatedArticles(article.slug, 6);
 
   return (
     <article itemScope itemType="https://schema.org/Article">
-      {schemas.map((schema: any, i: number) => (
+      {schemas.map((schema, i) => (
         <script
           key={i}
           type="application/ld+json"
