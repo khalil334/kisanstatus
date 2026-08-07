@@ -7,7 +7,7 @@ with alt text; JSON-LD is valid. The items below are what's actually broken or r
 
 ---
 
-**Fix status:** 7 of 12 fixed. Each fix lands as its own commit on `main`; this file is updated after every fix.
+**Fix status:** 8 of 12 fixed. Each fix lands as its own commit on `main`; this file is updated after every fix.
 
 ---
 
@@ -72,10 +72,11 @@ with alt text; JSON-LD is valid. The items below are what's actually broken or r
 - **What:** `<link rel="dns-prefetch" href="https://www.google.com">` on every page, but nothing on the page fetches from `www.google.com` (the only google.com href is a privacy-policy link). Harmless but pointless — remove.
 - **Fixed (2026-08-07):** the `dns-prefetch` link is deleted from `app/layout.tsx`. Re-confirmed before removing that the only `www.google.com` reference in the codebase is the user-clicked `google.com/settings/ads` href in `app/privacy-policy/page.tsx` — a click target, not a page-load fetch, so the hint could never pay off. The two genuine `preconnect` hints (`www.googletagmanager.com`, `region1.google-analytics.com`) are untouched. Verified: `tsc --noEmit` clean, `next build` succeeds, all routes still prerender — no URL changed. PR #100, commit `d6c0a63`.
 
-### 10. Two page titles exceed ~65 chars (SERP truncation)
+### 10. ~~Two page titles exceed ~65 chars (SERP truncation)~~ ✅ FIXED 2026-08-07
 - **Where (live):** `/articles/category/status-check` (66) and `/articles/murgi-palan-loan-nlm-subsidy` (66)
 - **Sources:** category title template in `app/articles/category/[category]/page.tsx` and the murgi-palan entry in `lib/loan-mandi-pashupalan-data.ts`.
 - **Fix:** trim both to ≤ 60 chars. (Repo has `npm run check:titles` — consider running it in CI.)
+- **Fixed (2026-08-07):** trimmed both titles, keeping the primary keywords intact: status-check category `'PM Kisan Status Check & Verification Guides 2026'` → `'PM Kisan Status Check & Verification 2026'` (final title with brand suffix now 55 chars, was 62), and the murgi-palan `ogTitle` `'Murgi Palan Loan & Subsidy 2026 — NLM se 50% Tak'` → `'Murgi Palan Loan 2026 — NLM se 50% Subsidy'` (final 53 chars, was 62). Only the `<title>`/OG title changed — URLs, H1s, descriptions untouched. Verified: `npm run check:titles` passes (71 pairs), `tsc --noEmit` clean, `next build` succeeds, rendered `<title>` on both pages ≤ 60 chars.
 
 ### 11. `scripts/update-article-dates.js` falls back to "now" on missing git history
 - **Where:** `scripts/update-article-dates.js` `getGitDates()` catch/empty branches
