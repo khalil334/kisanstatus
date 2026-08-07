@@ -5,7 +5,9 @@ import next from 'eslint-config-next';
 import nextCoreWebVitals from 'eslint-config-next/core-web-vitals';
 import nextTypescript from 'eslint-config-next/typescript';
 
-export default [
+// Named before exporting so ESLint's own import/no-anonymous-default-export
+// rule is satisfied (it was the last remaining lint warning).
+const config = [
   {
     ignores: [
       '.next/**',
@@ -35,3 +37,5 @@ export default [
     },
   },
 ];
+
+export default config;
