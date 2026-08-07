@@ -464,9 +464,23 @@ export default function MandiBhavToday() {
 
   const stateFactor = STATE_PRICE_FACTOR[selectedState] ?? 1;
 
-  const [vegetables, setVegetables] = useState<CommodityItem[]>(buildStateAdjusted(VEGETABLE_BASE, stateFactor));
-  const [fruits, setFruits] = useState<CommodityItem[]>(buildStateAdjusted(FRUIT_BASE, stateFactor));
-  const [weatherForecast, setWeatherForecast] = useState<readonly WeatherData[]>(WEATHER_FALLBACK);
+  // Live API results only; `null` means "nothing fetched yet / fetch failed", in which
+  // case the rendered lists fall back to the state-adjusted static data below. Keeping
+  // the fallback derived instead of pushed into state is what removes the
+  // setState-in-effect calls (react-hooks/set-state-in-effect).
+  const [liveVegetables, setLiveVegetables] = useState<CommodityItem[] | null>(null);
+  const [liveFruits, setLiveFruits] = useState<CommodityItem[] | null>(null);
+  const [liveWeather, setLiveWeather] = useState<readonly WeatherData[] | null>(null);
+
+  const vegetables = useMemo(
+    () => liveVegetables ?? buildStateAdjusted(VEGETABLE_BASE, stateFactor),
+    [liveVegetables, stateFactor],
+  );
+  const fruits = useMemo(
+    () => liveFruits ?? buildStateAdjusted(FRUIT_BASE, stateFactor),
+    [liveFruits, stateFactor],
+  );
+  const weatherForecast = liveWeather ?? WEATHER_FALLBACK;
   const [lastUpdated, setLastUpdated] = useState(new Date().toLocaleString('hi-IN'));
   const [isLive, setIsLive] = useState(false);
 
@@ -480,14 +494,9 @@ export default function MandiBhavToday() {
   }, []);
 
   useEffect(() => {
-    if (!MANDI_API_KEY) {
-      const factor = STATE_PRICE_FACTOR[selectedState] ?? 1;
-      setVegetables(buildStateAdjusted(VEGETABLE_BASE, factor));
-      setFruits(buildStateAdjusted(FRUIT_BASE, factor));
-      setIsLive(false);
-      setLastUpdated(new Date().toLocaleString('hi-IN'));
-      return;
-    }
+    // No key configured: nothing to fetch. The rendered lists already fall back to the
+    // state-adjusted static data, and isLive/lastUpdated keep their initial values.
+    if (!MANDI_API_KEY) return;
 
     let cancelled = false;
 
@@ -537,16 +546,16 @@ export default function MandiBhavToday() {
         };
 
         if (!cancelled) {
-          setVegetables(buildItems(vegMap, VEGETABLE_BASE));
-          setFruits(buildItems(fruitMap, FRUIT_BASE));
+          setLiveVegetables(buildItems(vegMap, VEGETABLE_BASE));
+          setLiveFruits(buildItems(fruitMap, FRUIT_BASE));
           setIsLive(true);
           setLastUpdated(new Date().toLocaleString('hi-IN'));
         }
       } catch {
         if (!cancelled) {
-          const factor = STATE_PRICE_FACTOR[selectedState] ?? 1;
-          setVegetables(buildStateAdjusted(VEGETABLE_BASE, factor));
-          setFruits(buildStateAdjusted(FRUIT_BASE, factor));
+          // Drop back to the derived static fallback for this state.
+          setLiveVegetables(null);
+          setLiveFruits(null);
           setIsLive(false);
           setLastUpdated(new Date().toLocaleString('hi-IN'));
         }
@@ -560,10 +569,8 @@ export default function MandiBhavToday() {
   }, [selectedState]);
 
   useEffect(() => {
-    if (!WEATHER_API_KEY) {
-      setWeatherForecast(WEATHER_FALLBACK);
-      return;
-    }
+    // No key configured: the rendered forecast already falls back to WEATHER_FALLBACK.
+    if (!WEATHER_API_KEY) return;
 
     let cancelled = false;
 
@@ -591,9 +598,9 @@ export default function MandiBhavToday() {
             rain: `${Math.round(item.clouds?.all || 0)}%`,
           }));
 
-        if (!cancelled) setWeatherForecast(forecast.length ? forecast : WEATHER_FALLBACK);
+        if (!cancelled) setLiveWeather(forecast.length ? forecast : null);
       } catch {
-        if (!cancelled) setWeatherForecast(WEATHER_FALLBACK);
+        if (!cancelled) setLiveWeather(null);
       }
     }
 
