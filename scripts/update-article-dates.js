@@ -25,16 +25,20 @@ function getGitDates(filePath) {
       { encoding: 'utf-8', stdio: ['pipe', 'pipe', 'ignore'] }
     ).trim();
 
+    // BUG-11: never fabricate dates. If git history is unavailable (e.g. a
+    // shallow clone — Vercel clones shallow by default), return null so the
+    // caller SKIPS the article and the existing dates in articles-data.ts are
+    // kept, instead of stamping "now" into JSON-LD/sitemap freshness signals.
+    if (!firstCommit || !lastCommit) {
+      return null;
+    }
+
     return {
-      publishedTime: firstCommit || new Date().toISOString(),
-      modifiedTime: lastCommit || new Date().toISOString(),
+      publishedTime: firstCommit,
+      modifiedTime: lastCommit,
     };
   } catch {
-    console.log(`⚠️  Git dates not found for ${filePath}, using current date`);
-    return {
-      publishedTime: new Date().toISOString(),
-      modifiedTime: new Date().toISOString(),
-    };
+    return null;
   }
 }
 
@@ -68,6 +72,7 @@ function updateArticlesData() {
   const originalContent = content;
   let updatedCount = 0;
   let skippedCount = 0;
+  let noGitCount = 0;
 
   const componentPattern = /component:\s*'([^']+)'/g;
   const matches = [...content.matchAll(componentPattern)];
@@ -91,6 +96,13 @@ function updateArticlesData() {
 
     try {
       const dates = getGitDates(componentFile);
+
+      if (!dates) {
+        console.log(`⚠️  ${componentName} - No git history for ${componentFile}; keeping existing dates (shallow clone?)`);
+        noGitCount++;
+        skippedCount++;
+        return;
+      }
 
       const publishedRegex = new RegExp(
         `(component:\\s*'${componentName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}'[\\s\\S]*?publishedTime:\\s*)'[^']+'`,
@@ -141,6 +153,12 @@ function updateArticlesData() {
   }
 
   console.log(`📊 Summary: ${updatedCount} updated, ${skippedCount} skipped`);
+
+  // BUG-11: if git history was missing for every article, the clone is almost
+  // certainly shallow — say so loudly instead of silently doing nothing.
+  if (matches.length > 0 && noGitCount === matches.length) {
+    console.log('\n⚠️  Git history unavailable for ALL articles (shallow clone?). Dates were NOT updated — existing values kept.');
+  }
 }
 
 updateArticlesData();
