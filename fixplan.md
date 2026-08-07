@@ -11,7 +11,7 @@ Ahrefs data is user ne skip karwaya — ye findings repo + live-site verificatio
 | Bug | Status | Fixed on | PR |
 |---|---|---|---|
 | BUG-1 | ✅ FIXED & MERGED | 2026-08-07 | `fix/bug1-jsonld-farming-urls` |
-| BUG-2 | ⏳ pending | — | — |
+| BUG-2 | ✅ FIXED & MERGED | 2026-08-07 | `fix/bug2-maandhan-jsonld-url` |
 | BUG-3 | ⏳ pending | — | — |
 | BUG-4 | ⏳ pending | — | — |
 
@@ -51,7 +51,7 @@ Type: per-file find/replace, low risk.
 - `dateModified` (4 components) aur `modifiedTime` (`lib/articles-data.ts`, 4 slugs) → `2026-08-07`.
 - **Content untouched**: article ka koi word/section remove nahi kiya, live page URL/slug same hai.
 
-### BUG-2 (High): Maandhan status-check article ka JSON-LD galat route pe point karta hai
+### ✅ BUG-2 (High) — FIXED 2026-08-07: Maandhan status-check article ka JSON-LD galat route pe point karta hai
 
 File: `components/articles/maandhan/PmKisanMaandhanStatusCheckOnline.tsx` (lines 10, 17, 21)
 
@@ -61,6 +61,15 @@ par, lekin JSON-LD `@id` / `mainEntityOfPage` point karte hain
 "Article Not Found" soft-404 page hai (HTTP 200 + noindex, live verify kiya).
 
 Fix: Teeno URLs mein `/articles/` → `/maandhan/` karo. Single file, 3 lines.
+
+**FIX APPLIED (2026-08-07)** — branch `fix/bug2-maandhan-jsonld-url`:
+- `PmKisanMaandhanStatusCheckOnline.tsx`: 3 JSON-LD URLs (`#article` `@id`,
+  `mainEntityOfPage`, `#faq` `@id`) `/articles/` → `/maandhan/`.
+- **Redirect added** (`next.config.js`): `/articles/pm-kisan-maandhan-status-check-online`
+  → `/maandhan/pm-kisan-maandhan-status-check-online` (301). Pehle ye URL soft-404 tha;
+  ab jo bhi indexed/linked hai wo sahi page pe pahunchega.
+- `dateModified` → `2026-08-07`; `lib/maandhan-data.ts` ka `modified` bhi bump kiya.
+- **Content untouched**: koi word/section remove nahi, live URL same.
 
 ### BUG-3 (Medium): 8 kisanguides files mein dead `export const metadata` (Next.js ignore karta hai)
 
