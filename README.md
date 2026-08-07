@@ -37,15 +37,18 @@ kisanstatus/
 │   ├── disclaimer/
 │   └── sitemap.ts
 ├── components/
-│   ├── articles/                 # 28 articles
-│   │   └── kisanguides/          # 9 guide articles
+│   ├── articles/                 # 29 core article components
+│   │   ├── kisanguides/          # 9 guide articles
+│   │   ├── loan-mandi-pashupalan/ # 11 loan / mandi / pashupalan articles
+│   │   ├── maandhan/             # 13 Maandhan pension articles
+│   │   └── rajya-yojana/         # 10 state-scheme articles (+ tools/)
 │   ├── Header.tsx
 │   └── Footer.tsx
 ├── lib/
 └── public/
 ```
 
-> ⚠️ Note: Adjust the structure above to match your actual folders — update this section after any redesign so it never goes stale again.
+> ℹ️ Article counts are data-driven: `/articles` lists everything registered in `lib/articles-data.ts`, `lib/loan-mandi-pashupalan-data.ts`, `lib/maandhan-data.ts` and `lib/rajya-yojana-data.ts` (currently 73 live articles). Update this section after any redesign so it never goes stale.
 
 ## 🚀 Local Development
 
