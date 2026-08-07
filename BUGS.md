@@ -7,7 +7,7 @@ with alt text; JSON-LD is valid. The items below are what's actually broken or r
 
 ---
 
-**Fix status:** 8 of 12 fixed. Each fix lands as its own commit on `main`; this file is updated after every fix.
+**Fix status:** 9 of 12 fixed. Each fix lands as its own commit on `main`; this file is updated after every fix.
 
 ---
 
@@ -78,10 +78,11 @@ with alt text; JSON-LD is valid. The items below are what's actually broken or r
 - **Fix:** trim both to ≤ 60 chars. (Repo has `npm run check:titles` — consider running it in CI.)
 - **Fixed (2026-08-07):** trimmed both titles, keeping the primary keywords intact: status-check category `'PM Kisan Status Check & Verification Guides 2026'` → `'PM Kisan Status Check & Verification 2026'` (final title with brand suffix now 55 chars, was 62), and the murgi-palan `ogTitle` `'Murgi Palan Loan & Subsidy 2026 — NLM se 50% Tak'` → `'Murgi Palan Loan 2026 — NLM se 50% Subsidy'` (final 53 chars, was 62). Only the `<title>`/OG title changed — URLs, H1s, descriptions untouched. Verified: `npm run check:titles` passes (71 pairs), `tsc --noEmit` clean, `next build` succeeds, rendered `<title>` on both pages ≤ 60 chars.
 
-### 11. `scripts/update-article-dates.js` falls back to "now" on missing git history
+### 11. ~~`scripts/update-article-dates.js` falls back to "now" on missing git history~~ ✅ FIXED 2026-08-07
 - **Where:** `scripts/update-article-dates.js` `getGitDates()` catch/empty branches
 - **What:** runs on every `npm run build`; if git history is unavailable (shallow clone — Vercel clones shallow by default) it silently stamps `publishedTime`/`modifiedTime` with the current date, i.e. fabricated freshness signals in Article JSON-LD and the sitemap.
 - **Fix:** fail loudly (or skip the update) when git log returns empty, instead of defaulting to `new Date()`.
+- **Fixed (2026-08-07):** `getGitDates()` now returns `null` when `git log` yields no dates (empty output or throw) instead of `new Date()`; the caller then **skips that article and keeps the existing dates** in `articles-data.ts` — no fabricated freshness ever lands in JSON-LD or the sitemap. If history is missing for ALL articles (the shallow-clone signature), the script prints a loud end-of-run warning naming the likely cause. Verified: normal run still updates all 37 articles from git history; in a repo with no usable history the run updates 0, keeps every existing date, and prints the warning. `tsc --noEmit` clean, `next build` succeeds — no URL changed.
 
 ### 12. ~~`robots.txt` blocks `/tools/` for all bots, but no `/tools` routes exist~~ ✅ FIXED 2026-08-07
 - **Where:** `app/robots.ts` output
