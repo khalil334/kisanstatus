@@ -104,6 +104,8 @@ const nextConfig = {
       // won before it was consolidated here). Keep that target so no live URL
       // behaviour changes.
       { source: '/pm-kisan-status', destination: '/calculator/quick-status-check', permanent: true },
+      // BUG-5: /speed-insights was a noindex meta-refresh placeholder page; now a real redirect.
+      { source: '/speed-insights', destination: '/', permanent: true },
       { source: '/kisan-status', destination: '/articles/PmKisan24viKist2026', permanent: true },
       { source: '/scheme/agristack', destination: '/articles/AgriStackKyaHai2026', permanent: true },
       { source: '/scheme/kcc', destination: '/articles/KisanCreditCardOnlineApply2026', permanent: true },

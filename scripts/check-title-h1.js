@@ -39,7 +39,6 @@ const BRAND_ROUTES = [
   'app/disclaimer/page.tsx',
   'app/terms-of-service/page.tsx',
   'app/search/page.tsx',
-  'app/speed-insights/page.tsx',
 ];
 const MIN_WORD_LEN = 3;
 const WINDOW = 6;
