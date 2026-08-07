@@ -7,7 +7,7 @@ with alt text; JSON-LD is valid. The items below are what's actually broken or r
 
 ---
 
-**Fix status:** 1 of 12 fixed. Each fix lands as its own commit on `main`; this file is updated after every fix.
+**Fix status:** 2 of 12 fixed. Each fix lands as its own commit on `main`; this file is updated after every fix.
 
 ---
 
@@ -19,10 +19,11 @@ with alt text; JSON-LD is valid. The items below are what's actually broken or r
 - **Fix:** upgrade to `next@16.3.0` (latest patched): `npm install next@16.3.0 eslint-config-next@16.3.0 @next/bundle-analyzer@16.3.0`, then run the build to confirm. Also run `npm audit fix` for the transitive `brace-expansion`, `js-yaml`, `postcss`, `sharp` advisories.
 - **Fixed (2026-08-07):** `next` 16.2.7 → **16.3.0**, `eslint-config-next` + `@next/bundle-analyzer` → **16.3.0** (all pinned exactly, as before), `sharp` ^0.33.5 → **^0.35.3** (libvips CVE-2026-33327/33328/35590/35591), plus `npm audit fix` for the transitive `brace-expansion` / `js-yaml` / `postcss` advisories. `npm audit` now reports **0 vulnerabilities** (was 9 high). Verified: `tsc --noEmit` clean, `next build` succeeds, all routes still prerender — no URL changed.
 
-### 2. Conflicting redirects for `/pm-kisan-status` (Vercel wins, Next.js config is dead code)
+### 2. ~~Conflicting redirects for `/pm-kisan-status` (Vercel wins, Next.js config is dead code)~~ ✅ FIXED 2026-08-07
 - **Where:** `vercel.json:50` → `/calculator/quick-status-check`; `next.config.js:82` → `/articles/PmKisan24viKist2026`
 - **What:** the same source path redirects to two different destinations. Vercel platform redirects run before Next.js ones, so the live site sends users to the calculator, and the `next.config.js` entry silently never runs. Same double-definition pattern for `/author` and `/official-links` (defined only in `vercel.json` while their page components still exist — see #3). Split-brain redirect config is how future edits go wrong.
 - **Fix:** keep redirects in ONE place (recommend `next.config.js`), delete the duplicates from `vercel.json`, and pick one canonical destination for `/pm-kisan-status`.
+- **Fixed (2026-08-07):** the whole `redirects` array is removed from `vercel.json` (its `headers` block is untouched); every rule now lives only in `next.config.js`, with a comment warning against re-adding redirects to `vercel.json`. Rules that existed only in `vercel.json` were **moved, not dropped** — `kisanstatus.vercel.app` host normalization, `/pm-kisan-21vi-installment-status-check`, `/articles/pm-kisan-24vi-kist-2026`, `/articles/agri-stack-kya-hai-2026`, `/articles/pm-kisan-mobile-number-change-2026`, `/author` → `/about`, `/official-links` → `/contact`. `/pm-kisan-status` keeps the destination the live site actually served (`/calculator/quick-status-check`), and the conflicting `/articles/PmKisan24viKist2026` duplicate is deleted — **no live URL behaviour changed**. Verified: 54 rules, no duplicate sources, `next build` succeeds.
 
 ### 3. Five orphaned page components that can never render (dead code + confusing signals)
 - **Where:**
