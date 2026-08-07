@@ -7,7 +7,7 @@ with alt text; JSON-LD is valid. The items below are what's actually broken or r
 
 ---
 
-**Fix status:** 2 of 12 fixed. Each fix lands as its own commit on `main`; this file is updated after every fix.
+**Fix status:** 3 of 12 fixed. Each fix lands as its own commit on `main`; this file is updated after every fix.
 
 ---
 
@@ -25,7 +25,7 @@ with alt text; JSON-LD is valid. The items below are what's actually broken or r
 - **Fix:** keep redirects in ONE place (recommend `next.config.js`), delete the duplicates from `vercel.json`, and pick one canonical destination for `/pm-kisan-status`.
 - **Fixed (2026-08-07):** the whole `redirects` array is removed from `vercel.json` (its `headers` block is untouched); every rule now lives only in `next.config.js`, with a comment warning against re-adding redirects to `vercel.json`. Rules that existed only in `vercel.json` were **moved, not dropped** — `kisanstatus.vercel.app` host normalization, `/pm-kisan-21vi-installment-status-check`, `/articles/pm-kisan-24vi-kist-2026`, `/articles/agri-stack-kya-hai-2026`, `/articles/pm-kisan-mobile-number-change-2026`, `/author` → `/about`, `/official-links` → `/contact`. `/pm-kisan-status` keeps the destination the live site actually served (`/calculator/quick-status-check`), and the conflicting `/articles/PmKisan24viKist2026` duplicate is deleted — **no live URL behaviour changed**. Verified: 54 rules, no duplicate sources, `next build` succeeds.
 
-### 3. Five orphaned page components that can never render (dead code + confusing signals)
+### 3. ~~Five orphaned page components that can never render (dead code + confusing signals)~~ ✅ FIXED 2026-08-07
 - **Where:**
   - `app/pm-kisan-status/page.tsx` — but `/pm-kisan-status` 308-redirects to `/calculator/quick-status-check`
   - `app/new-registration/page.tsx` — redirects to `/articles/PmKisanMasterGuide2026` (`next.config.js:49`)
@@ -34,6 +34,7 @@ with alt text; JSON-LD is valid. The items below are what's actually broken or r
   - `app/beneficiary-list/download/page.tsx` (+ `layout.tsx`) — redirects to `/articles/PmKisanBeneficiaryList2026` (`next.config.js:75`, the `(?!PmKisanBeneficiaryList2026)` negative lookahead matches `download`)
 - **What:** these full page components are built and shipped on every deploy but are unreachable — a redirect always fires first. They still cost build time/bundle and mislead anyone editing them expecting a live effect.
 - **Fix:** delete the page components (or remove the redirects if the pages are meant to be live — decide per page).
+- **Fixed (2026-08-07):** deleted all six unreachable files — `app/pm-kisan-status/page.tsx`, `app/new-registration/page.tsx`, `app/official-links/page.tsx`, `app/author/page.tsx`, `app/beneficiary-list/download/{page,layout}.tsx`. The redirects were **kept** (they are the live behaviour), so **no URL changed**: every one of these paths still 308s to the same destination as before. Checked first that nothing links to them — no `href` in any component, not in the sitemap, not in the IndexNow payload; the only references were their own self-canonicals. Verified: `tsc --noEmit` clean, `next build` succeeds, prerendered routes 109 → 104 (exactly the 5 dead pages gone).
 
 ## 🟠 Medium
 
