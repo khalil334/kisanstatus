@@ -7,7 +7,7 @@ with alt text; JSON-LD is valid. The items below are what's actually broken or r
 
 ---
 
-**Fix status:** 3 of 12 fixed. Each fix lands as its own commit on `main`; this file is updated after every fix.
+**Fix status:** 4 of 12 fixed. Each fix lands as its own commit on `main`; this file is updated after every fix.
 
 ---
 
@@ -65,9 +65,10 @@ with alt text; JSON-LD is valid. The items below are what's actually broken or r
 
 ## 🟡 Low
 
-### 9. `dnsimple`-style dead weight: unused `dns-prefetch` to `www.google.com`
+### 9. ~~`dnsimple`-style dead weight: unused `dns-prefetch` to `www.google.com`~~ ✅ FIXED 2026-08-07
 - **Where:** `app/layout.tsx:160`
 - **What:** `<link rel="dns-prefetch" href="https://www.google.com">` on every page, but nothing on the page fetches from `www.google.com` (the only google.com href is a privacy-policy link). Harmless but pointless — remove.
+- **Fixed (2026-08-07):** the `dns-prefetch` link is deleted from `app/layout.tsx`. Re-confirmed before removing that the only `www.google.com` reference in the codebase is the user-clicked `google.com/settings/ads` href in `app/privacy-policy/page.tsx` — a click target, not a page-load fetch, so the hint could never pay off. The two genuine `preconnect` hints (`www.googletagmanager.com`, `region1.google-analytics.com`) are untouched. Verified: `tsc --noEmit` clean, `next build` succeeds, all routes still prerender — no URL changed. PR #100, commit `d6c0a63`.
 
 ### 10. Two page titles exceed ~65 chars (SERP truncation)
 - **Where (live):** `/articles/category/status-check` (66) and `/articles/murgi-palan-loan-nlm-subsidy` (66)
