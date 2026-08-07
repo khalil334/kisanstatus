@@ -6,17 +6,13 @@ import Image from 'next/image';
 import { IB, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock } from '@/components/ArticleShared';
 import CountdownModal from '@/components/CountdownModal';
 
-const WEATHER_API_KEY = process.env.NEXT_PUBLIC_WEATHER_API_KEY || '';
-
-// Mandi rates go through our own server-side route (`app/api/mandi/route.ts`) so the
-// data.gov.in key stays on the server instead of shipping in the client bundle (BUG-8).
-// The route answers 503 when no key is configured, which is the old "no key" path.
+// Both external feeds go through our own server-side routes so the data.gov.in and
+// OpenWeatherMap keys stay on the server instead of shipping in the client bundle
+// (BUG-8). Each route answers 503 when no key is configured, which is the old
+// "no key" path — the component then renders its static fallback.
 const MANDI_PROXY_URL = (state: string) => `/api/mandi?state=${encodeURIComponent(state)}`;
-const WEATHER_API_URL = (lat: number, lon: number) =>
-  `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`;
+const WEATHER_PROXY_URL = (state: string) => `/api/weather?state=${encodeURIComponent(state)}`;
 
-const DEFAULT_LAT = 28.7041;
-const DEFAULT_LON = 77.1025;
 const SOURCE_URL = 'https://agmarknet.gov.in';
 
 type Trend = 'up' | 'down' | 'stable';
@@ -96,31 +92,6 @@ const STATE_API_NAME: Record<string, string> = {
   'Himachal Pradesh': 'Himachal Pradesh',
   'Jammu & Kashmir': 'Jammu and Kashmir',
   'Delhi': 'NCT of Delhi',
-};
-
-const STATE_COORDS: Record<string, { lat: number; lon: number }> = {
-  'Uttar Pradesh': { lat: 26.8467, lon: 80.9462 },
-  'Maharashtra': { lat: 19.076, lon: 72.8777 },
-  'Madhya Pradesh': { lat: 22.7196, lon: 75.8577 },
-  'Rajasthan': { lat: 26.9124, lon: 75.7873 },
-  'Gujarat': { lat: 23.0225, lon: 72.5714 },
-  'Punjab': { lat: 30.901, lon: 75.8573 },
-  'Haryana': { lat: 29.0588, lon: 76.0856 },
-  'Bihar': { lat: 25.5941, lon: 85.1376 },
-  'West Bengal': { lat: 22.5726, lon: 88.3639 },
-  'Odisha': { lat: 20.2961, lon: 85.8245 },
-  'Jharkhand': { lat: 23.3441, lon: 85.3096 },
-  'Chhattisgarh': { lat: 21.2514, lon: 81.6296 },
-  'Karnataka': { lat: 12.9716, lon: 77.5946 },
-  'Tamil Nadu': { lat: 13.0827, lon: 80.2707 },
-  'Kerala': { lat: 9.9312, lon: 76.2673 },
-  'Andhra Pradesh': { lat: 16.5062, lon: 80.648 },
-  'Telangana': { lat: 17.385, lon: 78.4867 },
-  'Assam': { lat: 26.1445, lon: 91.7362 },
-  'Uttarakhand': { lat: 30.3165, lon: 78.0322 },
-  'Himachal Pradesh': { lat: 31.1048, lon: 77.1734 },
-  'Jammu & Kashmir': { lat: 34.0837, lon: 74.7973 },
-  'Delhi': { lat: DEFAULT_LAT, lon: DEFAULT_LON },
 };
 
 const STATE_PRICE_FACTOR: Record<string, number> = {
@@ -570,15 +541,14 @@ export default function MandiBhavToday() {
   }, [selectedState]);
 
   useEffect(() => {
-    // No key configured: the rendered forecast already falls back to WEATHER_FALLBACK.
-    if (!WEATHER_API_KEY) return;
-
+    // Whether a key exists is now a server-side fact, so we always ask the proxy; a 503
+    // ("not configured") lands in the catch below and the rendered forecast falls back
+    // to WEATHER_FALLBACK exactly as before.
     let cancelled = false;
 
     async function fetchWeather() {
       try {
-        const coords = STATE_COORDS[selectedState] ?? { lat: DEFAULT_LAT, lon: DEFAULT_LON };
-        const res = await fetch(WEATHER_API_URL(coords.lat, coords.lon));
+        const res = await fetch(WEATHER_PROXY_URL(selectedState));
         if (!res.ok) throw new Error('Weather API failed');
         const data = await res.json();
         const list: ForecastEntry[] = (data as { list?: ForecastEntry[] }).list || [];
