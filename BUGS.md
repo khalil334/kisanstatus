@@ -7,12 +7,17 @@ with alt text; JSON-LD is valid. The items below are what's actually broken or r
 
 ---
 
+**Fix status:** 1 of 12 fixed. Each fix lands as its own commit on `main`; this file is updated after every fix.
+
+---
+
 ## 🔴 High
 
-### 1. `next` has 9 known high-severity vulnerabilities (npm audit)
+### 1. ~~`next` has 9 known high-severity vulnerabilities (npm audit)~~ ✅ FIXED 2026-08-07
 - **Where:** `package.json` → `next@16.2.7`
 - **What:** `npm audit` flags high-severity advisories against the installed Next.js range, including cache confusion (GHSA-68g3-v927-f742), SSRF in rewrites (GHSA-p9j2-gv94-2wf4), DoS in the Image Optimization API via SVGs (GHSA-q8wf-6r8g-63ch), and unauthenticated disclosure of Server Function endpoints (GHSA-955p-x3mx-jcvp). This site uses App Router + `next/image` heavily, so several of these apply.
 - **Fix:** upgrade to `next@16.3.0` (latest patched): `npm install next@16.3.0 eslint-config-next@16.3.0 @next/bundle-analyzer@16.3.0`, then run the build to confirm. Also run `npm audit fix` for the transitive `brace-expansion`, `js-yaml`, `postcss`, `sharp` advisories.
+- **Fixed (2026-08-07):** `next` 16.2.7 → **16.3.0**, `eslint-config-next` + `@next/bundle-analyzer` → **16.3.0** (all pinned exactly, as before), `sharp` ^0.33.5 → **^0.35.3** (libvips CVE-2026-33327/33328/35590/35591), plus `npm audit fix` for the transitive `brace-expansion` / `js-yaml` / `postcss` advisories. `npm audit` now reports **0 vulnerabilities** (was 9 high). Verified: `tsc --noEmit` clean, `next build` succeeds, all routes still prerender — no URL changed.
 
 ### 2. Conflicting redirects for `/pm-kisan-status` (Vercel wins, Next.js config is dead code)
 - **Where:** `vercel.json:50` → `/calculator/quick-status-check`; `next.config.js:82` → `/articles/PmKisan24viKist2026`
