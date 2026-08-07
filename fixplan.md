@@ -14,7 +14,7 @@ Ahrefs data is user ne skip karwaya — ye findings repo + live-site verificatio
 | BUG-2 | ✅ FIXED & MERGED | 2026-08-07 | `fix/bug2-maandhan-jsonld-url` |
 | BUG-3 | ✅ FIXED & MERGED | 2026-08-07 | `fix/bug3-dead-metadata-note` |
 | BUG-4 | ✅ FIXED & MERGED | 2026-08-07 | `fix/bug4-soft-404` |
-| BUG-5 (new) | 🔍 found 2026-08-07, awaiting go-ahead | — | — |
+| BUG-5 (new) | ✅ FIXED & MERGED | 2026-08-07 | `fix/bug5-soft-404-maandhan-rajya` |
 
 ---
 
@@ -117,15 +117,40 @@ bhi `notFound()` throw karo taaki real 404 status mile.
   — BUG-2 mein uska redirect add ho chuka hai.
 - Koi content/word/URL change nahi; 4 lines changed.
 
-### 🔍 BUG-5 (Low, NEW — found 2026-08-07, NOT fixed yet, owner ki permission chahiye)
+### ✅ BUG-5 (Low, NEW) — FIXED 2026-08-07
 
 Wahi soft-404 pattern do aur dynamic routes mein bhi hai:
 - `app/maandhan/[slug]/page.tsx:32` — `return { title: 'Not Found', noindex }`
 - `app/rajya-yojana/[slug]/page.tsx:172` — `return { title: 'Not Found', noindex }`
 
 Dono ke page components `notFound()` call karte hain, par `generateMetadata` ka
-fallback HTTP 200 bhej deta hai. Fix BUG-4 jaisa hi one-line hai. Ye fixplan ke
-original scope mein nahi tha, isliye chheda nahi — bolo to agla PR isi ka bana dun.
+fallback HTTP 200 bhej deta hai. Fix BUG-4 jaisa hi one-line hai.
+
+**FIX APPLIED (2026-08-07)** — branch `fix/bug5-soft-404-maandhan-rajya` (owner ne
+go-ahead diya):
+- Dono routes ke `generateMetadata()` mein fallback metadata return ki jagah
+  `notFound()` — ab real **404** + `app/not-found.tsx` (jo already noindex hai).
+- `notFound` dono files mein pehle se import tha; page components pehle se `notFound()`
+  call karte the — sirf metadata layer inconsistent thi.
+- Safety check: `lib/rajya-yojana-data.ts` ke saare 10 articles `status: 'live'` hain,
+  aur sab `MAANDHAN_ARTICLES` slugs valid hain — isliye koi live page galti se 404
+  nahi hoga; sirf genuinely unknown slugs affect hote hain.
+- Koi content/word/URL/date change nahi (4 insertions + 1 deletion per file, jisme 3
+  lines comment hain).
+
+---
+
+## SAB BUGS CLEAR — 2026-08-07
+
+BUG-1 se BUG-5 tak sab fix + merge ho gaye. Constraints jo poore respect kiye gaye:
+- **Koi live page URL / slug change nahi** — sirf HTML ke andar chhupe JSON-LD/OG/canonical
+  strings theek kiye.
+- **Har URL string change ke saath 301 redirect** — total 4 naye redirects
+  (`/articles/farming/*` ke 3 + `/articles/pm-kisan-maandhan-status-check-online` ka 1).
+- **Article ka ek bhi word remove nahi** — BUG-3 mein delete ki jagah warning comment.
+
+Agla kaam (code nahi, ops): deploy → browser verify → GSC re-index → Ahrefs re-crawl
+(neeche RE-CHECK LIST).
 
 ---
 
@@ -180,3 +205,20 @@ Watch-list (duplicate nahi, par same cluster — monitor for cannibalization):
 - https://kisanstatus.com/maandhan/pm-kisan-maandhan-status-check-online
 - Google Rich Results Test in 5 URLs par
 - Ahrefs Site Audit re-crawl trigger karo (project 10042735)
+
+### Naye checks (BUG-1..BUG-5 fixes ke baad, 2026-08-07)
+
+- **301 redirect test** — in URLs par 301 aana chahiye (200 ya 404 nahi):
+  - `https://kisanstatus.com/articles/farming/silage-making-business-guide`
+  - `https://kisanstatus.com/articles/farming/pm-matsya-sampada-yojana-fish-farming`
+  - `https://kisanstatus.com/articles/farming/vermi-compost-business-guide`
+  - `https://kisanstatus.com/articles/farming/pm-fme-yojana-food-processing`
+  - `https://kisanstatus.com/articles/pm-kisan-maandhan-status-check-online`
+- **404 status test** — in fake URLs par real 404 aana chahiye (pehle 200 aata tha):
+  - `https://kisanstatus.com/articles/aisa-koi-page-nahi`
+  - `https://kisanstatus.com/maandhan/aisa-koi-page-nahi`
+  - `https://kisanstatus.com/rajya-yojana/aisa-koi-page-nahi`
+- **Live pages 200 hi rahe** (BUG-5 regression check) — spot-check ek maandhan +
+  ek rajya-yojana article.
+- **GSC**: in 5 fixed URLs ka re-index request bhejo; "Soft 404" report bhi dekho.
+- Ahrefs Site Audit re-crawl (project 10042735) — fixes ke baad hi trigger karo.
