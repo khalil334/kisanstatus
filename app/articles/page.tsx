@@ -29,7 +29,28 @@ const RAJYA_LISTING_ARTICLES = LIVE_RAJYA_YOJANA_ARTICLES.map((a) => ({
   keywords: [a.mainKeyword, ...a.secondaryKeywords] as readonly string[],
 }));
 
-const ALL_ARTICLES = [...ARTICLES, ...MAANDHAN_ARTICLES, ...RAJYA_LISTING_ARTICLES];
+/**
+ * Normalised shape across the three article sources (core, maandhan, rajya
+ * listing) — they use slightly different field names for date/description.
+ */
+type ListingArticle = {
+  slug: string;
+  title: string;
+  category: string;
+  desc?: string;
+  description?: string;
+  href?: string;
+  ogImage?: string;
+  image?: string;
+  publishedTime?: string;
+  published?: string;
+  modifiedTime?: string;
+  modified?: string;
+  author?: string;
+  keywords?: readonly string[];
+};
+
+const ALL_ARTICLES: readonly ListingArticle[] = [...ARTICLES, ...MAANDHAN_ARTICLES, ...RAJYA_LISTING_ARTICLES];
 
 export const metadata: Metadata = {
   title: `Kisan Guides 2026 — ${ALL_ARTICLES.length}+ Resources`,
@@ -98,7 +119,7 @@ export default function ArticlesPage() {
   const toAbsolute = (img?: string) =>
     !img ? DEFAULT_OG_IMAGE : img.startsWith('http') ? img : `${SITE_URL}${img}`;
 
-  const schemaArticles = ALL_ARTICLES.map((article: any, i) => {
+  const schemaArticles = ALL_ARTICLES.map((article, i) => {
     const isMaandhan = article.category === 'pension-scheme' || article.slug.includes('maandhan');
     const articlePath =
       article.href ?? (isMaandhan ? `/maandhan/${article.slug}` : `/articles/${article.slug}`);
