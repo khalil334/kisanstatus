@@ -7,7 +7,7 @@ with alt text; JSON-LD is valid. The items below are what's actually broken or r
 
 ---
 
-**Fix status:** 5 of 12 fixed. Each fix lands as its own commit on `main`; this file is updated after every fix.
+**Fix status:** 6 of 12 fixed. Each fix lands as its own commit on `main`; this file is updated after every fix.
 
 ---
 
@@ -48,10 +48,11 @@ with alt text; JSON-LD is valid. The items below are what's actually broken or r
 - **What:** a placeholder "Redirecting…" page using `<meta httpEquiv="refresh" content="3;url=/">` inside the body. It's `noindex`, returns 200, and isn't in the sitemap — it's crawlable-but-dead weight, and meta-refresh inside `<body>` is invalid placement (Next puts arbitrary tags where they render).
 - **Fix:** replace with a proper redirect entry (`next.config.js`: `{ source: '/speed-insights', destination: '/', permanent: true }`) and delete the page.
 
-### 6. Sitemap `REFERENCE_DATE = new Date()` at module scope
+### 6. ~~Sitemap `REFERENCE_DATE = new Date()` at module scope~~ ✅ FIXED 2026-08-07
 - **Where:** `app/sitemap.ts:7`
 - **What:** `REFERENCE_DATE` is evaluated at build time, and article `priority` is derived from "days since modified" relative to it. Every deploy silently reshuffles priorities, and if deploys are infrequent the "fresh" buckets go stale — the sitemap claims `changeFrequency: daily` on pages whose lastmod never moves. Priority/changefreq are mostly ignored by Google, but the inconsistent lastmod-vs-priority signal is self-inflicted noise.
 - **Fix:** derive priority from `modifiedTime` only (fixed tiers), or accept static priorities; don't couple them to build timestamps.
+- **Fixed (2026-08-07):** `REFERENCE_DATE` is now derived from the **content** — the newest `modifiedTime`/`publishedTime` across all articles — instead of `new Date()`, and the no-date fallback (`FALLBACK_DATE`) points at the same value rather than the build clock. The freshness tiers themselves are unchanged; they're just anchored to content. Confirmed the bug was real first: the pre-fix build put the build date in 7 places in the sitemap. Verified: same **94** URLs (`<loc>` set diffed identical), `tsc --noEmit` clean, `next build` succeeds, a clean rebuild is now **byte-identical**, and a build with the system clock moved **60 days forward** produces the same sitemap (before the fix that build would have demoted every article a tier) — no URL changed. Note: the priority spread shifts (49 pages at 1.0 vs 27) because the anchor is the newest article rather than "today"; same URLs, and the values no longer claim freshness the content doesn't have. PR #104, commit `ea26d9b`.
 
 ### 7. No `Content-Security-Policy` header
 - **Where:** `vercel.json` headers block (has HSTS, nosniff, XFO, Permissions-Policy — but no CSP)
