@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { useLang } from '@/lib/LanguageContext';
-import { LANGUAGES } from '@/lib/translations';
+import { LANGUAGES, type LangCode } from '@/lib/translations';
 import { trackEvent } from '@/lib/gtag';
 
 export default function LanguageSwitcher() {
@@ -86,8 +86,8 @@ export default function LanguageSwitcher() {
     }
   };
 
-  const handleLanguageChange = (newLang: string) => {
-    setLang(newLang as any);
+  const handleLanguageChange = (newLang: LangCode) => {
+    setLang(newLang);
     setOpen(false);
     setFocusedIndex(-1);
     buttonRef.current?.focus();
