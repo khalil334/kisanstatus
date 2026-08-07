@@ -1,52 +1,71 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { SITE_URL } from '@/lib/site-config';
+import SearchBar from '@/components/SearchBar';
 
 export const metadata: Metadata = {
   // layout.tsx applies the `%s | KisanStatus` template — no inline brand here.
   title: `Search`,
-  description: 'Search feature abhi update ho raha hai. Aapko homepage par redirect kiya ja raha hai.',
+  description: 'PM Kisan, KCC loan, subsidy aur mandi bhav guides search karein. 70+ verified Hinglish guides ek jagah.',
   robots: { index: false, follow: true },
   alternates: { canonical: SITE_URL },
 };
 
+const POPULAR_SEARCHES = [
+  { label: 'PM Kisan Status', query: 'pm kisan status' },
+  { label: 'eKYC', query: 'ekyc' },
+  { label: 'KCC Loan', query: 'kcc loan' },
+  { label: 'Beneficiary List', query: 'beneficiary list' },
+  { label: 'Tractor Subsidy', query: 'tractor' },
+  { label: 'Mandi Bhav', query: 'mandi bhav' },
+];
+
 export default function SearchPage() {
   return (
-    <>
-      <meta httpEquiv="refresh" content="3;url=/" />
-      <div className="min-h-screen bg-[var(--color-bg)] flex items-center justify-center px-4 py-12">
-        <div className="max-w-md w-full text-center space-y-6">
-          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-green-100 dark:bg-green-900/30 text-4xl mb-2" aria-hidden="true">
-            🔍
-          </div>
-          <div className="space-y-3">
-            <h1 className="text-2xl md:text-3xl font-black text-[var(--color-text)]">
-              Search Feature Update Ho Raha Hai
-            </h1>
-            <p className="text-[var(--color-text-muted)] text-sm md:text-base leading-relaxed">
-              Behtar search experience ke liye hum is feature ko upgrade kar rahe hain. 
-              Aapko 3 second mein Homepage par redirect kar diya jayega.
-            </p>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
-            <Link
-              href="/"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[var(--color-primary)] text-white font-bold rounded-xl hover:bg-green-700 transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500"
-            >
-              🏠 Abhi Home Page Par Jaayein
-            </Link>
-            <Link
-              href="/articles"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[var(--color-card)] border border-[var(--color-border)] text-[var(--color-text)] font-bold rounded-xl hover:border-green-400 dark:hover:border-green-600 transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500"
-            >
-              📚 Sabhi Guides Dekhein
-            </Link>
-          </div>
-          <p className="text-xs text-[var(--color-text-muted)] pt-4">
-            Agar automatic redirect nahi hota, toh kripya upar diye gaye buttons ka upyog karein.
+    <div className="min-h-screen bg-[var(--color-bg)]">
+      <div className="bg-[var(--color-primary)] py-12">
+        <div className="container-site max-w-3xl text-center">
+          <h1 className="text-2xl md:text-3xl font-black text-white mb-3">
+            🔍 Guides Search Karein
+          </h1>
+          <p className="text-green-200 text-sm mb-8">
+            PM Kisan, loans, subsidy aur mandi bhav — apna sawal search karein
           </p>
+          <SearchBar />
         </div>
       </div>
-    </>
+
+      <div className="container-site max-w-3xl py-10">
+        <h2 className="text-sm font-bold text-[var(--color-text-muted)] uppercase tracking-wide mb-4">
+          Popular Searches
+        </h2>
+        <div className="flex flex-wrap gap-2 mb-10">
+          {POPULAR_SEARCHES.map((item) => (
+            <Link
+              key={item.query}
+              href={`/articles?search=${encodeURIComponent(item.query)}`}
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-bold bg-[var(--color-card)] text-[var(--color-text)] border border-[var(--color-border)] hover:border-green-400 dark:hover:border-green-600 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500"
+            >
+              🔍 {item.label}
+            </Link>
+          ))}
+        </div>
+
+        <div className="flex flex-col sm:flex-row gap-3">
+          <Link
+            href="/articles"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[var(--color-primary)] text-white font-bold rounded-xl hover:bg-green-700 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500"
+          >
+            📚 Sabhi Guides Dekhein
+          </Link>
+          <Link
+            href="/calculator"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[var(--color-card)] border border-[var(--color-border)] text-[var(--color-text)] font-bold rounded-xl hover:border-green-400 dark:hover:border-green-600 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500"
+          >
+            🧮 Free Calculators
+          </Link>
+        </div>
+      </div>
+    </div>
   );
 }
