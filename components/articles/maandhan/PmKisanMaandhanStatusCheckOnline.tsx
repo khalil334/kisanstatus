@@ -13,7 +13,7 @@ const jsonLd = {
       "author": { "@type": "Organization", "name": "KisanStatus Team", "url": "https://kisanstatus.com/about" },
       "publisher": { "@type": "Organization", "name": "KisanStatus.com", "logo": { "@type": "ImageObject", "url": "https://kisanstatus.com/logo.webp" } },
       "datePublished": "2026-07-24",
-      "dateModified": "2026-08-07",
+      "dateModified": "2026-08-08",
       "mainEntityOfPage": { "@type": "WebPage", "@id": "https://kisanstatus.com/maandhan/pm-kisan-maandhan-status-check-online/" }
     },
     {
@@ -56,7 +56,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       </h1>
 
       <p className="text-sm text-gray-500 mb-6 not-prose">
-        <em>Written by KisanStatus Research Team | Last verified: July 24, 2026 | Sources: maandhan.in, PM-KMY Operational Guidelines (DAC&FW, Ministry of Agriculture &amp; Farmers Welfare)</em>
+        <em>Written by KisanStatus Research Team | Last updated: August 8, 2026 | Sources: maandhan.in, PM-KMY Operational Guidelines (DAC&FW, Ministry of Agriculture &amp; Farmers Welfare)</em>
       </p>
 
       <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
@@ -312,7 +312,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Ek baar fail hone se account default nahi hota. LIC demand ko agle payment cycle mein dobara raise karti hai. Payment cycles har mahine 1st, 11th, aur 21st ko hote hain. Lekin agar payment miss hone ke baad bhi contribution successfully raise nahi hoti aur outstanding rehti hai, toh account default status mein chala jata hai.
+        Ek baar fail hone se account default nahi hota. LIC demand ko agle payment cycle mein dobara raise karti hai. Payment cycles har mahine 1st, 11th, aur 21st ko hote hain. Lekin agar payment miss hone ke baad bhi contribution successfully raise nahi hoti aur outstanding rehti hai, toh account default status mein chala jata hai. Auto-debit baar-baar fail ho raha hai aur account regularize karna hai, toh iska poora process alag guide mein step-by-step likha hai: <Link href="/maandhan/auto-debit-fail-hone-par-regularization-kaise-karein" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Auto-Debit Fail Hone Par Regularization Kaise Karein</Link>.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
@@ -382,6 +382,30 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       </div>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
+        Complaint Kahan Karein? (Escalation Ka Sahi Order)
+      </h2>
+
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        Status galat dikh raha hai, payment diya par record nahi aaya, ya KPAN card mein galti hai — aisi situation mein idhar-udhar bhatakne ke bajaye is order mein escalate karein:
+      </p>
+
+      <div className="space-y-3 mb-6 not-prose">
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <p className="text-sm text-gray-700 dark:text-gray-300"><strong>Step 1 — CSC center (jahan se enroll kiya tha):</strong> Enrollment aur payment ka pehla record wahi hota hai. Receipt/transaction ID saath le jayein. Zyada tar dikkat yahi solve ho jati hai.</p>
+        </div>
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <p className="text-sm text-gray-700 dark:text-gray-300"><strong>Step 2 — Official helpline / portal grievance:</strong> maandhan.in ke Contact Us section mein current helpline number aur grievance ka rasta diya hota hai — number time ke saath badal sakta hai, isliye hamesha portal se hi lein. Complaint karte waqt KPAN number, registered mobile aur problem ki date zaroor batayein.</p>
+        </div>
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <p className="text-sm text-gray-700 dark:text-gray-300"><strong>Step 3 — LIC branch:</strong> Pension fund LIC manage karti hai. Contribution jama hone ke baad bhi record mein na dikhe, toh nazdeeki LIC office mein KPAN aur payment proof ke saath written complaint dein aur acknowledgement lein.</p>
+        </div>
+      </div>
+
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
+        Har step par ek cheez common hai: <strong>proof sambhal kar rakhein</strong> — payment receipt, SMS, screenshot. Bina proof ke complaint sirf zubaani reh jati hai; proof ke saath usko track karna aur resolve karwana dono aasan ho jata hai.
+      </p>
+
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Har 3 Mahine Mein Status Check Karna Kyun Zaroori Hai
       </h2>
 
@@ -447,6 +471,10 @@ export default function PmKisanMaandhanStatusCheckOnline() {
         <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">Contribution history mobile se kaise dekhein?</h3>
           <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Mobile browser mein pmkmy.gov.in kholein. Login karke Contribution History ya Passbook section mein jayein. Har mahine ka record dikhega — success, failed, ya pending.</p>
+        </div>
+        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">Payment diya tha par history mein nahi dikh raha — kya karein?</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Ek hafta wait karein — record update hone mein time lagta hai. Uske baad bhi na dikhe toh receipt lekar usi CSC center jayein jahan payment kiya tha, aur wahan se solve na ho toh upar bataye escalation order (CSC → portal grievance → LIC branch) follow karein. Payment ka proof kabhi delete na karein.</p>
         </div>
         <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">Portal nahi khul raha toh kya karein?</h3>

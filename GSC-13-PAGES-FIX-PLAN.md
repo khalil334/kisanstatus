@@ -179,7 +179,8 @@ thoda kam hai; ranking ke liye kaafi accurate):
 | 3 | §A.1 KCC invented-case remediation | policy risk, live hai — content add nahi, correction hai | ✅ done (`b12415a`) |
 | 4 | §A.5 DripSprinkler (1,064) | thinnest article + paisa-decision page | ✅ done (`5d90006`) |
 | 5 | §B.2 Maandhan Registration (2,198) | exit rules/family pension = high-demand gap | ✅ done |
-| 6 | Baaki (B.3, A.4, A.2, A.3, B.1) | depth + differentiation pass, length nahi | ⬜ pending |
+| 6 | §B.3 Maandhan Status Check (2,403) | dashboard-reading + escalation gap | ✅ done |
+| 7 | Baaki (A.4, A.2, A.3, B.1) | depth + differentiation pass, length nahi | ⬜ pending |
 
 ---
 
@@ -404,8 +405,19 @@ fake `wordCount: 1200` schema field remove. Images/paths unchanged. `tsc` + `esl
 
 ---
 
-### B.3 `/maandhan/pm-kisan-maandhan-status-check-online`
+### B.3 `/maandhan/pm-kisan-maandhan-status-check-online` — ✅ DONE
 File: `components/articles/maandhan/PmKisanMaandhanStatusCheckOnline.tsx`
+
+**Kya hua:** Page pehle se strong tha (login methods, dashboard-column table, contribution-history
+status table, passbook/KPAN download, portal failure modes sab covered the). Gap sirf escalation
+ka tha — naya "Complaint Kahan Karein" section add hua (CSC → maandhan.in Contact Us grievance →
+LIC branch, proof-sambhalo rule ke saath; helpline number hard-code nahi kiya kyunki badalta hai —
+portal se lene ko kaha). Auto-debit fail wale paragraph se existing
+`auto-debit-fail-hone-par-regularization-kaise-karein` article ko contextual link kiya (§4.4
+discovery). Ek naya sourced-behaviour FAQ ("payment diya par history mein nahi dikh raha") add.
+Dates real change par update. Images/paths unchanged. `tsc` + `eslint` clean.
+
+**Original plan (reference):**
 
 **Add:**
 - Login methods: KPAN vs mobile number, OTP failure modes.
