@@ -178,7 +178,7 @@ thoda kam hai; ranking ke liye kaafi accurate):
 | 2 | §C category intros (loan, pashupalan, agri-business) | same discovery logic, ek shared template edit | ✅ done (`dcba0aa`) |
 | 3 | §A.1 KCC invented-case remediation | policy risk, live hai — content add nahi, correction hai | ✅ done (`b12415a`) |
 | 4 | §A.5 DripSprinkler (1,064) | thinnest article + paisa-decision page | ✅ done (`5d90006`) |
-| 5 | §B.2 Maandhan Registration (2,198) | exit rules/family pension = high-demand gap | ⬜ next |
+| 5 | §B.2 Maandhan Registration (2,198) | exit rules/family pension = high-demand gap | ✅ done |
 | 6 | Baaki (B.3, A.4, A.2, A.3, B.1) | depth + differentiation pass, length nahi | ⬜ pending |
 
 ---
@@ -371,8 +371,20 @@ File: `components/articles/maandhan/kisan-pension-card-download.tsx`
 
 ---
 
-### B.2 `/maandhan/pm-kisan-maandhan-registration-2026`
+### B.2 `/maandhan/pm-kisan-maandhan-registration-2026` — ✅ DONE
 File: `components/articles/maandhan/PmKisanMaandhanRegistration2026.tsx` — **2,198 prose words.**
+
+**Kya hua:** Exit rules & family pension table add (PIB Sept 2024 release + maandhan.in sourced —
+10-saal-se-pehle vs baad exit, 60-se-pehle/baad death, govt matching share kabhi wapas nahi);
+PM-KISAN kist se auto-contribution section (optional consent, auto-debit-fail guide link);
+lifetime contribution math worked example (₹55×12×42 = ₹27,720, inputs cited);
+eligibility self-check me 01.08.2019 land-records cut-off + NPS/EPFO/ESIC/income-tax exclusions;
+intro me LIC fund management + 23.38 lakh enrollment (PIB) sourced; online steps ko generic
+"PM Kisan Maandhan App" se hata kar maandhan.in self-enrollment flow (KPAN note karna) kiya,
+portal-flow-badalta-rehta-hai honesty note ke saath; FAQs humanize + exit/auto-debit FAQs sourced;
+fake `wordCount: 1200` schema field remove. Images/paths unchanged. `tsc` + `eslint` clean.
+
+**Original plan (reference):**
 
 **Add:**
 - Contribution chart ka context: entry age wise monthly contribution (exact slabs
