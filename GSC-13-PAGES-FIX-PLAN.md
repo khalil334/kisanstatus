@@ -181,7 +181,8 @@ thoda kam hai; ranking ke liye kaafi accurate):
 | 5 | §B.2 Maandhan Registration (2,198) | exit rules/family pension = high-demand gap | ✅ done |
 | 6 | §B.3 Maandhan Status Check (2,403) | dashboard-reading + escalation gap | ✅ done |
 | 7 | §A.4 Village Wise List (2,490) | list-vs-status-vs-dashboard differentiation | ✅ done |
-| 8 | Baaki (A.2, A.3, B.1) | depth + differentiation pass, length nahi | ⬜ pending |
+| 8 | §A.2 eKYC Online (3,725) | eKYC-vs-NPCI differentiator | ✅ done |
+| 9 | Baaki (A.3, B.1) | depth + differentiation pass, length nahi | ⬜ pending |
 
 ---
 
@@ -217,10 +218,24 @@ agriwelfare.gov.in KCC saturation drive PIB release.
 
 ---
 
-### A.2 `/articles/PmKisanEkycOnline2026`
+### A.2 `/articles/PmKisanEkycOnline2026` — ✅ DONE
 File: `components/articles/PmKisanEkycOnline2026.tsx`
 
 **Problem:** FAQ-heavy, body prose thin, error-code coverage superficial.
+
+**Kya hua:** Plan ka "sabse valuable differentiator" add hua — naya **eKYC vs NPCI/DBT seeding**
+section (3-row comparison table: kya verify hota hai / kahan hota hai / fail hone par kya
+dikhta hai; ek-account-hi-seeded-ho-sakta-hai rule; bank = agla checkpoint). Naya escalation
+section (helpline 155261 / 011-24300606 → portal grievance → state nodal officer guide link).
+Unverifiable claims cleanup: "24 se 48 ghante server sync" ka fixed number hataya ("kuch din"
++ CSC re-verify), fabricated first-person "Maine personally kai cases mein action karwaya hai"
+remove (§1.2 violation), "Verified Ground-Level Answers" caption ka jhootha verified claim
+hataya. eKYC-vs-NPCI FAQ add. Teeno methods + failure modes + error table + special situations
+pehle se covered the — unhe nahi chheda. Shape A dated portal walkthrough skip (portal is
+session me verify nahi ho sakta — invent nahi kiya). Images unchanged. Date updated.
+`tsc` + `eslint` clean.
+
+**Original plan (reference):**
 
 **Add:**
 - Opening: definition se nahi — us situation se jisme reader aata hai (kist ruki hui hai,
