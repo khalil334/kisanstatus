@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { SI, StepList, IB, WB, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 
 const PUBLISHED = '2026-07-10T08:00:00+05:30';
-const MODIFIED = '2026-07-22T08:00:00+05:30';
+const MODIFIED = '2026-08-08T21:45:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List Guide', emoji: '📋' },
@@ -27,6 +27,10 @@ const FAQS_DATA = [
   {
     q: 'Sabke naam dikh rahe hain par mera nahi. Paisa milega ya nahi?',
     a: 'Pehle individual status check karein pmkisan.gov.in par. Zyadatar cases mein eKYC pending hoti hai, ya Patwari ne land verification nahi kiya. CSC jakar jaldi eKYC karwa lein.',
+  },
+  {
+    q: 'Naam list mein hai par paisa nahi aaya — iska kya matlab?',
+    a: 'List mein naam hona sirf pehla step hai — iska matlab aap eligible beneficiary ho. Paisa tabhi aata hai jab us kist ka FTO (Fund Transfer Order) generate ho kar process ho jaye. Apne status mein FTO ka stage dekhen — FTO generated ka matlab payment pipeline mein hai. Detail hamari FTO guide mein hai.',
   },
   {
     q: 'Gram Pradhan keh rahe hain unke paas purani list hai, kya unse le lun?',
@@ -233,6 +237,27 @@ export default function PmKisanVillageWiseListPdfDownload() {
         </section>
 
         <section className="mb-8">
+          <SH>Pehle Confusion Clear Karein: List vs Status vs Village Dashboard</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            pmkisan.gov.in par teen alag-alag tools hain aur log inhe aapas mein mila dete hain. Galat tool kholne par lagta hai "mera data nahi mil raha" — jabki aap galat jagah dekh rahe hote hain:
+          </p>
+          <div className="space-y-3">
+            <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
+              <p className="font-black text-sm text-[var(--color-text)] mb-1">1. Beneficiary List (ye page isi ke baare mein hai)</p>
+              <p className="text-xs text-[var(--color-text-muted)]">State → District → Block → Village chun kar poore gaon ke beneficiaries ki list. Kaam: dekhna ki gaon mein kaun-kaun scheme mein hai. Ye ye NAHI batati ki kis kist ka paisa kab aaya.</p>
+            </div>
+            <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
+              <p className="font-black text-sm text-[var(--color-text)] mb-1">2. Beneficiary Status / Know Your Status (individual)</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Registration number se sirf APNA record — eKYC status, land seeding, bank seeding, aur har kist ka payment stage (FTO). "Mera paisa kyun nahi aaya" ka jawab yahan milta hai, list mein nahi.</p>
+            </div>
+            <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
+              <p className="font-black text-sm text-[var(--color-text)] mb-1">3. Village Dashboard</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Gaon-level ka summary view — kitne farmers registered, kitne eKYC-complete, kitne paid. Numbers/aggregate ke liye hai; naam-wise poori list chahiye toh Beneficiary List hi use karein.</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="mb-8">
           <SH>Official Portal Se PDF Kaise Download Karein? (PC/Laptop)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Computer ya laptop par ye kaam sabse aasan hai. Neeche diye steps carefully follow karein:
@@ -395,6 +420,20 @@ export default function PmKisanVillageWiseListPdfDownload() {
               Agar manual copy-paste mein dikkat aa rahi hai, toh ilovepdf.com par "PDF to Excel" tool use karein. Note: If the PDF is scanned instead of text-based, OCR may be required before converting it into Excel. Dhyan rahe ki PDF mein personal data (jaise poora Aadhaar number) na ho.
             </p>
           </WB>
+        </section>
+
+        <section className="mb-8">
+          <SH>Naam List Mein Hai, Par Paisa Nahi Aaya?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Ye sabse common confusion hai. List mein naam hona = aap beneficiary ho. Paisa aana = us kist ka <strong>FTO (Fund Transfer Order)</strong> generate aur process hona — ye do alag cheezein hain. Kist ka paisa states/banks ke through FTO ke zariye hi transfer hota hai, isliye naam hone ke bawajood payment ruk sakti hai agar:
+          </p>
+          <ul className="list-disc list-inside text-xs text-[var(--color-text-muted)] leading-relaxed mb-3 space-y-1">
+            <li>eKYC ya bank/NPCI seeding pending hai (FTO bana hi nahi)</li>
+            <li>FTO generate hua par bank level par payment fail ho gayi (account band, IFSC change, naam mismatch)</li>
+          </ul>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Apna exact stage individual status mein dekhein, aur FTO statuses ka matlab + payment fail hone par kya karna hai — in dono ke liye alag guides hain: <Link href="/articles/pm-kisan-fto-generated-ka-matlab-kya-hai" className="underline text-blue-600 dark:text-blue-400 font-medium">FTO Generated Ka Matlab</Link> aur <Link href="/articles/PmKisanPaymentFailedFix2026" className="underline text-blue-600 dark:text-blue-400 font-medium">Payment Failed Fix Guide</Link>.
+          </p>
         </section>
 
         <section className="mb-8">
