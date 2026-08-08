@@ -46,34 +46,10 @@ export default function PMFBYCalcPage() {
   // district notification — it cannot be computed from the rate alone.
   const farmerPays = (totalCover * rate)/100;
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Calculator', item: `${SITE_URL}/calculator` },
-      { '@type': 'ListItem', position: 3, name: 'Fasal Bima Premium', item: `${SITE_URL}/calculator/pmfby-premium` },
-    ],
-  };
 
-  const schema = {
-    '@context':'https://schema.org',
-    '@type':'WebApplication',
-    name:'PMFBY Premium Calculator 2026 — Fasal Bima Premium Hindi',
-    url:`${SITE_URL}/calculator/pmfby-premium`,
-    applicationCategory:'FinanceApplication',
-    description:'PM Fasal Bima Yojana ka premium calculate karo. Kharif aur Rabi dono ke liye. Government subsidy kitni milegi — jaano turant. Free tool.',
-    offers:{'@type':'Offer',price:'0',priceCurrency:'INR'},
-    author: { '@type': 'Organization', name: AUTHOR_NAME, url: AUTHOR_URL },
-    publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
-    datePublished: PUBLISHED,
-    dateModified: MODIFIED,
-  };
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(breadcrumbSchema)}}/>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/>
       
       <CalcHeader
         emoji="🛡️"
