@@ -116,7 +116,9 @@ export const APP_BACKGROUND_COLOR = '#ffffff';
 
 export const MAIN_NAVIGATION = [
   { name: 'Home', href: '/', priority: 1.0 },
-  { name: 'PM Kisan Status', href: '/pm-kisan-status', priority: 0.9 },
+  // BUG-2: /pm-kisan-status has no app route; it 308-redirects (next.config.js)
+  // to /calculator/quick-status-check. Link straight to the target — no redirect hop.
+  { name: 'PM Kisan Status', href: '/calculator/quick-status-check', priority: 0.9 },
   { name: 'eKYC Guide', href: '/articles/PmKisanEkycOnline2026', priority: 0.9 },
   { name: 'Registration', href: '/articles/PmKisanMasterGuide2026', priority: 0.9 },
   { name: 'Calculators', href: '/calculator', priority: 0.8 },
