@@ -13,7 +13,6 @@ export default function robots(): MetadataRoute.Robots {
           '/admin/',
           '/search?',
         ],
-        crawlDelay: 1,
       },
       {
         userAgent: 'Googlebot',
@@ -23,7 +22,6 @@ export default function robots(): MetadataRoute.Robots {
           '/private/',
           '/admin/',
         ],
-        crawlDelay: 1,
       },
       {
         userAgent: 'Googlebot-Image',
@@ -43,7 +41,6 @@ export default function robots(): MetadataRoute.Robots {
           '/private/',
           '/admin/',
         ],
-        crawlDelay: 2,
       },
       {
         userAgent: [

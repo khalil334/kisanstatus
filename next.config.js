@@ -56,6 +56,10 @@ const nextConfig = {
         permanent: true,
       },
       { source: '/en', destination: '/', permanent: true },
+      // Moved from app/articles/[slug]/page.tsx: in-page redirect() never ran
+      // (root loading.tsx streams a 200 shell first) and the slug is not in
+      // generateStaticParams, so with dynamicParams=false it would 404.
+      { source: '/articles/PmKisanBeneficiaryListVillageWise2026', destination: '/articles/PmKisanBeneficiaryList2026', permanent: true },
       { source: '/new-registration', destination: '/articles/PmKisanMasterGuide2026', permanent: true },
       { source: '/articles/pm-kisan-ekyc-online-2026', destination: '/articles/PmKisanMasterGuide2026', permanent: true },
       { source: '/articles/pm-kisan-23vi-kist-2026-status-check', destination: '/articles/PmKisan24viKist2026', permanent: true },

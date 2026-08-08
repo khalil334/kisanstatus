@@ -24,6 +24,10 @@ export async function generateStaticParams() {
   }));
 }
 
+// Unknown slugs 404 at the router level (root loading.tsx otherwise streams a
+// 200 shell before notFound() can set the status — GSC Soft 404).
+export const dynamicParams = false;
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const article = MAANDHAN_ARTICLES.find((a) => a.slug === slug);
