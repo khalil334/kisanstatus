@@ -54,48 +54,6 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'Organization',
-      '@id': 'https://kisanstatus.com/#organization',
-      name: 'KisanStatus.com',
-      url: 'https://kisanstatus.com',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://kisanstatus.com/logo.webp',
-      },
-    },
-    {
-      '@type': 'BreadcrumbList',
-      '@id': 'https://kisanstatus.com/articles/pm-fme-yojana-food-processing/#breadcrumb',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kisanstatus.com/' },
-        { '@type': 'ListItem', position: 2, name: 'Articles', item: 'https://kisanstatus.com/articles' },
-        { '@type': 'ListItem', position: 3, name: 'Farming', item: 'https://kisanstatus.com/articles/category/farming' },
-        { '@type': 'ListItem', position: 4, name: 'PM FME Yojana' },
-      ],
-    },
-    {
-      '@type': 'Article',
-      '@id': 'https://kisanstatus.com/articles/pm-fme-yojana-food-processing/#article',
-      headline: 'PM FME Yojana 2026: Chhote Food Business Ke Liye 35% Subsidy Guide',
-      description: 'PM FME Yojana complete guide. Janein micro food processing subsidy kaise lein, ODOP benefits, loan process, aur real ground reality.',
-      author: {
-        '@type': 'Organization',
-        name: 'KisanStatus Team',
-        url: 'https://kisanstatus.com/about',
-      },
-      publisher: {
-        '@type': 'Organization',
-        name: 'KisanStatus.com',
-        logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.webp' },
-      },
-      datePublished: '2026-01-15',
-      dateModified: '2026-08-07',
-      mainEntityOfPage: {
-        '@type': 'WebPage',
-        '@id': 'https://kisanstatus.com/articles/pm-fme-yojana-food-processing/',
-      },
-    },
-    {
       '@type': 'FAQPage',
       '@id': 'https://kisanstatus.com/articles/pm-fme-yojana-food-processing/#faq',
       mainEntity: [

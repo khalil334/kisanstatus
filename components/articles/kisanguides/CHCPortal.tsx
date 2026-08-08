@@ -32,19 +32,10 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://kisanstatus.com/articles/custom-hiring-centre-chc-portal' },
 };
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    { '@type': 'Organization', '@id': 'https://kisanstatus.com/#organization', name: 'KisanStatus.com', url: 'https://kisanstatus.com', logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.webp', width: 250, height: 60 } },
-    { '@type': 'BreadcrumbList', '@id': 'https://kisanstatus.com/articles/custom-hiring-centre-chc-portal/#breadcrumb', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kisanstatus.com/' }, { '@type': 'ListItem', position: 2, name: 'Articles', item: 'https://kisanstatus.com/articles' }, { '@type': 'ListItem', position: 3, name: 'CHC Portal', item: 'https://kisanstatus.com/articles/custom-hiring-centre-chc-portal' }] },
-    { '@type': 'Article', '@id': 'https://kisanstatus.com/articles/custom-hiring-centre-chc-portal/#article', headline: 'Custom Hiring Centre (CHC) 2026: Tractor Rental Business Guide', description: 'CHC portal guide. Janein tractor aur farm implements kiraye par dekar paisa kaise kamayein.', author: { '@type': 'Organization', name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' }, publisher: { '@type': 'Organization', name: 'KisanStatus.com', logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.webp' } }, datePublished: '2026-01-15', dateModified: '2026-07-21', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://kisanstatus.com/articles/custom-hiring-centre-chc-portal/' } }
-  ]
-};
 
 export default function CHCPortal() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-8 text-gray-800 dark:text-gray-200 leading-relaxed prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-blue-600 dark:prose-a:text-blue-400">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       
       <Image 
         src="/images/kisanguides/chc-portal-hero.webp" 
