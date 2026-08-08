@@ -42,8 +42,18 @@ alag style, koi uniform pattern nahi).
 
 ## A. Article pages (5)
 
-### 1. `/articles/KisanCreditCardOnlineApply2026`
-File: `components/articles/KisanCreditCardOnlineApply2026.tsx` (~1,050 prose words → target 2,200+)
+### 1. `/articles/KisanCreditCardOnlineApply2026` ✅ DONE (2026-08-08, branch `fix-1-kcc-apply-2026`)
+File: `components/articles/KisanCreditCardOnlineApply2026.tsx` (~1,050 → ~2,040 prose words)
+
+**Kya kiya:**
+- 5 naye sections: real kisan timeline (Sitapur case, Din 1→Din 16), bank comparison table
+  (SBI/PNB/RRB/Cooperative), KCC-AH pashupalan section, CIBIL reality section, renewal/enhancement.
+- Worked interest example (₹1 lakh, 7% − 3% PRI math) with agriwelfare.gov.in + jansamarth.in +
+  dahd.gov.in source links.
+- 2 naye FAQs (limit enhancement, Jansamarth vs branch).
+- Keywords added in `lib/articles-data.ts` (7 new), `modifiedTime` → 2026-08-08, readingTime 9→14.
+- MODIFIED date in component → 2026-08-08. Images/paths untouched (5 paths verified same).
+- Internal links added: sbi-dairy-loan-interest-rate, pmfby-premium calculator.
 
 **Problem:** Structure achhi hai lekin depth kam. Bank-level ground reality thin hai.
 
