@@ -963,7 +963,7 @@ const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'drip-sprinkler-irrigation-subsidy',
     title: 'Drip Sprinkler Subsidy: PDMC ke 55% / 45% Niyam',
-    desc: 'Micro-irrigation subsidy ka asli structure — PDMC ke tahat small/marginal kisan ko 55% aur baaki ko 45% assistance, unit cost norms, NE/Himalayan 25% higher cost, state top-up aur poora application process.',
+    desc: 'PDMC micro-irrigation subsidy ka asli structure — small/marginal kisan ko 55%, baaki ko 45% assistance, unit cost norms, state top-up aur application process.',
     ogTitle: 'Drip Sprinkler Subsidy: Asli PDMC Rates',
     keywords: [
       'drip irrigation subsidy',
