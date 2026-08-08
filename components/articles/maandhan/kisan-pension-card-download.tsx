@@ -39,7 +39,11 @@ const FAQS_DATA = [
   },
   {
     q: 'Download kiye hue PDF me naam ki spelling galat hai — ab kya karun?',
-    a: 'Chhoti spelling mistakes (jaise "Ram" ki jagah "Raam") aksar ignore ho jaati hain aur kaam chal jata hai. Lekin agar poora naam hi galat hai ya date of birth wrong hai, to aapko CSC ya bank me jaakar correction form bharna padega. Isme 30 se 45 din lag sakte hain, isliye deri na karein.',
+    a: 'Chhoti spelling mistakes (jaise "Ram" ki jagah "Raam") aksar ignore ho jaati hain aur kaam chal jata hai. Lekin agar poora naam hi galat hai ya date of birth wrong hai, to CSC ya apni bank branch me jaakar correction request karni padegi — isme kitna time lagega ye branch/CSC ke process par depend karta hai, koi fixed SLA publish nahi hai. Isliye deri na karein aur receiving/acknowledgement zaroor lein.',
+  },
+  {
+    q: 'PMKMY ka pension card aur APY (Atal Pension Yojana) ka PRAN card ek hi cheez hai kya?',
+    a: 'Nahi — ye do alag schemes ke do alag documents hain. PM Kisan Maandhan (PMKMY) kisano ki pension scheme hai jiska account number KPAN kehlata hai aur record maandhan.in/CSC system me hota hai. APY ek alag pension scheme hai jo NPS architecture par chalti hai — uska number PRAN hota hai aur uske statements NSDL/protean system se nikalte hain. Agar bank me aapke paas dono hain, to statement nikalwate waqt scheme ka naam saaf boliye, warna galat scheme ka document mil jayega.',
   },
   {
     q: '60 saal ke baad pension lene ke liye alag se apply karna padega kya?',
@@ -66,7 +70,6 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
               inLanguage: 'hi-IN',
               keywords: 'PM Kisan Maandhan Pension Card Download, KPAN card online, PMKMY acknowledgement slip, pension card kaise nikale',
               articleSection: 'Agriculture & Pension Schemes',
-              wordCount: 2200,
               author: {
                 '@type': 'Organization',
                 name: 'KisanStatus Team',
@@ -137,7 +140,7 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
 
         <div className="my-6 p-5 bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 rounded-r-xl">
           <p className="text-sm md:text-base text-red-900 dark:text-red-100 leading-relaxed font-medium">
-            <strong>Seedhi baat:</strong> Maan lijiye ek kisan hain Bulandshahr ke paas ek chhote se gaon mein — unki umar 59 saal hai, 4 bigha zameen hai, aur pichle 5 saal se wo har mahine apne bank account se 100 rupaye auto-cut karwa rahe hain. Lekin jab unhone apne bete ko dikhane ke liye apna pension proof mangwaya, to pata chala ki unke paas koi printed document hi nahi tha. Bas ek purana SMS tha jo 2021 me aaya tha. Ab wo darre hue hain ki 60 saal ke baad unka paisa kaise milega. Aise hazaron kisan bhai-behen hain jinke paas koi solid, official document nahi hai.
+            <strong>Seedhi baat:</strong> Is scheme me enrollment ke waqt bas ek acknowledgement slip milti hai — aur zyadatar cases me wo CSC par hi print hoti hai. Saalon tak contribution auto-debit se katta rehta hai, lekin haath me koi document nahi hota. Phir jab proof ki zaroorat padti hai — status verify karna ho, bank me sawal puchna ho, ya 60 ke baad pension claim karni ho — tab pata chalta hai ki na slip hai, na KPAN number yaad hai. Yehi is guide ka kaam hai: bina purani slip ke apna pension record (KPAN samet) wapas kaise nikalein.
           </p>
         </div>
 
@@ -152,24 +155,21 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
           </p>
           
           <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-r-xl">
-            <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-3">📊 Ek Aam Scenario: Bina Card Ke Kya Hota Hai</h3>
+            <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-3">📄 Scheme Ke Documented Rules — Jinke Liye Ye Kagaz Chahiye Hoga</h3>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-3">
-              Udaharan ke taur par, maan lijiye Rajasthan ke Jhunjhunu me Savitri devi ke pati ka 2023 me dehant ho gaya. Scheme ke rules ke mutabiq, spouse ko 50% pension jari rakhne ka adhikar hota hai. Lekin jab wo bank gayi, to manager ne kaha, "pehle husband ka pension proof aur account details dikhao." Savitri devi ke paas kuch nahi tha. Sirf us ek kagaz ki kami ki wajah se unhe 6 mahine ki bhaag-daud karni padi, CSC ke chakkar kaatne pade, aur tab jaakar claim process shuru hua.
+              Ye sirf "sambhal ke rakho" wali general salah nahi hai — scheme ke apne rules (
+              <a href="https://maandhan.in" target="_blank" rel="noopener noreferrer nofollow" className="underline text-green-700 dark:text-green-400">maandhan.in</a>
+              ) me teen aisi situations documented hain jahan aapka pension record identify karna zaroori hota hai:
             </p>
-            <p className="text-sm font-medium text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-800 p-3 rounded">
-              <strong>Lesson:</strong> Agar unke paas pehle se pension card hota, to 6 mahine ki pareshani bach jaati aur unhe turant 1500 rupaye mahina milna shuru ho jaata.
-            </p>
-          </div>
-
-          <div className="my-6 p-5 bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500 rounded-r-xl">
-            <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-3">✅ Doosra Scenario: Card Pehle Se Ready Ho To Kya Hota Hai</h3>
-            <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-              Ek kalpanik sthiti lein — maan lijiye Ramesh Chand ne 2020 me pension card download karke laminated karwa liya tha. Jab 2024 me unki tabiyat kharab hui aur wo 60 saal ke ho gaye, to unhone turant bank me card dikhaya aur 15 din ke andar unka pension shuru ho gaya. Is tarah ek kagaz unke budhaape ko surakshit kar sakta tha.
-            </p>
+            <ul className="list-disc list-inside text-sm text-[var(--color-text-muted)] space-y-2">
+              <li><strong>60 saal par pension claim:</strong> pension automatic shuru nahi hoti — claim karna padta hai, aur uske liye aapka pension account identify hona chahiye.</li>
+              <li><strong>Family pension:</strong> subscriber ke dehant par spouse ko 50% family pension ka provision hai — lekin claim tabhi aage badhta hai jab subscriber ka pension account trace ho. Bina KPAN/record ke parivaar ko pehle account dhoondhna padta hai, phir claim hota hai.</li>
+              <li><strong>Beech me exit:</strong> scheme chhodne par jama rakam ke settlement ke rules alag-alag hain (kab chhoda uspar depend) — settlement ke liye bhi account number chahiye.</li>
+            </ul>
           </div>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Isliye main hamesha kehta hoon — ye document download karke ek surakshit jagah sambhaal ke rakhiye. Ek digital copy apne phone me, aur ek physical printout ghar ke zaroori kagzaat wali file me.
+            Isliye ye document download karke ek surakshit jagah sambhaal ke rakhiye — ek digital copy apne phone me, aur ek physical printout ghar ke zaroori kagzaat wali file me. Aur sabse zaroori: <strong>apna KPAN number parivaar ke kisi bharosemand sadasya ko bhi note karwa dijiye</strong>, kyunki family pension claim karne wala aap nahi, wo honge.
           </p>
         </section>
 
@@ -269,7 +269,7 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
           </div>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Ek baat ka poora dhyan rakhein — CSC wala aapse ₹20 se ₹50 tak charge kar sakta hai, jo ki printing aur internet ka normal charge hai. Lekin agar wo aapse ₹200 ya ₹300 maange "processing fee" ya "urgent charge" ke naam par, to samajh jaaiye kuch gadbad hai. Sarkar ne ye service free ya nominal charge par rakhne ka spasht nirdesh diya hai.
+            Paise ki baat: CSC services ka rate card har center par display hona zaroori hai — print/search jaisi service ka charge wahi se confirm karein aur receipt lein. Agar operator "processing fee" ya "urgent charge" ke naam par rate card se alag moti rakam maange, to uski CSC ID note karke CSC ke official grievance channel (digitalseva portal) par shikayat kar sakte hain, ya dusre center chale jaiye.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Dusri jagah — aap apni bank branch par bhi ja sakte hain jahan se aapka auto-debit hota hai. Bank wale aapki pension details apne core banking system me dekh sakte hain aur ek printout nikaal ke de sakte hain. Lekin har chhoti branch me ye facility nahi hoti, isliye jaane se pehle phone par manager se puch lein.
@@ -277,9 +277,59 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
         </section>
 
         <section className="mb-8">
+          <SH>Slip Kho Gayi, KPAN Yaad Nahi — Record Wapas Kaise Nikale?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Ye is page ka sabse important hissa hai, kyunki zyadatar log yahi phanste hain: enrollment 2019-20 me CSC par hua tha, slip wahin chhoot gayi ya kho gayi, aur KPAN (Kisan Pension Account Number) kahin note nahi hai. Ghabraiye mat — KPAN recover karne ke teen raste hain, aasaan se mushkil ke order me:
+          </p>
+          <StepList>
+            <SI n={1}><strong>Aadhaar se portal search:</strong> Upar wale online process me KPAN ki jagah Aadhaar number se bhi search hota hai. Aadhaar + registered mobile OTP se record khul jaye to usi PDF me aapka KPAN likha hoga — problem wahi solve.</SI>
+            <SI n={2}><strong>Bank statement se suraag:</strong> Jis account se har mahine contribution auto-debit hota hai, uski statement/passbook entry me debit ka narration dekhiye — usme scheme ka reference hota hai. Ye khud KPAN nahi hai, lekin bank isi se aapka enrollment record trace kar sakta hai.</SI>
+            <SI n={3}><strong>CSC par Aadhaar biometric se:</strong> Jis CSC se enrollment hua tha (ya koi bhi CSC), wahan operator Aadhaar biometric verify karke scheme ke system me aapka record search kar sakta hai. Apna Aadhaar aur wahi registered mobile le jaiye.</SI>
+          </StepList>
+          <IB>
+            Record mil jaye to sabse pehle KPAN ko teen jagah likh lijiye — phone ke notes me, ghar ki kagzaat wali file me, aur parivaar ke kisi sadasya ke paas. Dobara ye section padhne ki naubat nahi aani chahiye.
+          </IB>
+        </section>
+
+        <section className="mb-8">
+          <SH>PMKMY Card vs APY (PRAN) Card — Ye Confusion Mehnga Padta Hai</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Bank branches me ye mix-up aam hai, kyunki dono pension schemes hain aur dono me auto-debit hota hai. Lekin dono ke systems bilkul alag hain:
+          </p>
+          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-[var(--color-primary)] text-white">
+                  <th className="p-3 text-left"></th>
+                  <th className="p-3 text-left">PM Kisan Maandhan (PMKMY)</th>
+                  <th className="p-3 text-left">Atal Pension Yojana (APY)</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['Kiske liye', 'Chhote/seemant kisan (18-40 saal entry)', 'Koi bhi eligible citizen, mainly unorganised sector'],
+                  ['Account number', 'KPAN (Kisan Pension Account Number)', 'PRAN (Permanent Retirement Account Number)'],
+                  ['Record kahan', 'maandhan.in / CSC system (LIC fund manager)', 'NPS architecture — NSDL/protean system'],
+                  ['Document kahan se', 'Is guide wala process (portal/CSC/bank)', 'Bank ya NSDL/protean se APY statement'],
+                ].map(([label, pmkmy, apy], i) => (
+                  <tr key={label} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
+                    <td className="p-3 border-b border-[var(--color-border)] font-medium text-xs text-[var(--color-text)]">{label}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{pmkmy}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{apy}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Practical matlab: bank me jaakar sirf "pension card chahiye" boliye to staff APY ka PRAN statement pakda sakta hai — aur wo document PMKMY claim me kaam nahi aayega. Hamesha scheme ka poora naam boliye: <strong>"PM Kisan Maandhan Yojana ka pension record"</strong>. Agar dono schemes me ho, to dono ke documents alag-alag nikalwaiye.
+          </p>
+        </section>
+
+        <section className="mb-8">
           <SH>Yahan Log Aksar Galti Karte Hain — Aap Mat Kijiye</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Pichle 8 saal me maine saikdon kisano ko ye process karte dekha hai. Kuch galtiyan baar-baar hoti hain jo process ko mahino ke liye rok deti hain. Ye rahi wo specific list:
+            Kuch galtiyan is process me baar-baar dohraayi jaati hain aur inhi ki wajah se kaam mahino ke liye atak jata hai. Ye rahi specific list:
           </p>
 
           <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
@@ -327,7 +377,7 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
             Ye sabse common aur frustrating problem hai. 2019-20 me jab scheme shuru hui, to kai CSC walon ne jaldi-baazi me form bhare, aur galti se apna khud ka number ya kisi aur ka number daal diya. Ab kisan ko OTP hi nahi mil raha, aur wo bechaara hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Iska ek hi solid solution hai — aapko apni nazdeeki bank branch jaana hoga jahan aapka pension account linked hai. Wahan ek chhoti si application likhni hoti hai ki "mera registered mobile number update kiya jaye." Sath me Aadhaar ki copy aur naye number ka proof lagana hota hai. Bank wale verify karke update kar dete hain — isme 7 se 15 din lag sakte hain.
+            Iska ek hi solid solution hai — aapko apni nazdeeki bank branch jaana hoga jahan aapka pension account linked hai. Wahan ek chhoti si application likhni hoti hai ki "mera registered mobile number update kiya jaye." Sath me Aadhaar ki copy aur naye number ka proof lagana hota hai. Bank verify karke update kar deta hai — kitne din lagenge iska koi fixed publish SLA nahi hai, isliye application ki receiving zaroor lein aur usi se follow-up karein.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Ek aur rasta — aap scheme ke toll-free number par call karke bhi guidance le sakte hain. Lekin dhyan rahe, call par wo aapka mobile number update nahi karenge (security reasons ki wajah se), sirf bataenge ki aapko kis form ke sath kahan jaana hai. Physical verification zaroori hoti hai fraud rokne ke liye.
