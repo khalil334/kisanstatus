@@ -70,44 +70,11 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
   const isReleased = KIST.status === 'Released';
   const isConfirmed = KIST.status === 'Confirmed';
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Articles', item: `${SITE_URL}/articles` },
-      { '@type': 'ListItem', position: 3, name: '24vi Kist Guide', item: `${SITE_URL}/articles/${article.slug}` },
-    ],
-  };
 
-  const articleSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: `PM Kisan 24vi Kist Kab Aayegi? ${KIST.expectedDate} Release Date, Status Check Aur Tayyari Ka Pura Guide`,
-    description: article.desc,
-    image: article.ogImage ? `${SITE_URL}${article.ogImage}` : `${SITE_URL}/images/pm-kisan-24vi-kist-og.webp`,
-    author: { '@type': 'Organization', name: AUTHOR_NAME, url: AUTHOR_URL },
-    publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
-    datePublished: PUBLISHED,
-    dateModified: MODIFIED,
-    mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}/articles/${article.slug}` },
-  };
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: FAQS_DATA.map((faq) => ({
-      '@type': 'Question',
-      name: faq.q,
-      acceptedAnswer: { '@type': 'Answer', text: faq.a },
-    })),
-  };
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">

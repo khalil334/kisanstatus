@@ -41,35 +41,6 @@ function FaqItem({ question, answer }: { question: string; answer: React.ReactNo
 export default function BakriPalanYojana() {
   const canonicalUrl = 'https://kisanstatus.com/articles/bakri-palan-yojana-nlm-subsidy';
 
-  const articleSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: 'Bakri Palan Yojana 2026: 50% NLM Subsidy Lene Ka Sahi Tarika aur Complete Guide',
-    description: 'Bakri Palan Yojana 2026 mein 50% NLM subsidy kaise lein? Janiye DPR banane ka sahi tarika, documents ki list, aur wo chhupi hui galtiyan jo application reject karwati hain.',
-    image: 'https://kisanstatus.com/images/kisanguides/bakri-palan-nlm-subsidy.webp',
-    author: {
-      '@type': 'Organization',
-      name: 'KisanStatus Team',
-      url: 'https://kisanstatus.com/about',
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'KisanStatus.com',
-      url: 'https://kisanstatus.com',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://kisanstatus.com/logo.webp',
-        width: 250,
-        height: 60,
-      },
-    },
-    datePublished: '2024-01-01',
-    dateModified: '2026-08-02',
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': canonicalUrl,
-    },
-  };
 
   const faqSchema = {
     '@context': 'https://schema.org',
@@ -175,7 +146,6 @@ export default function BakriPalanYojana() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <article className="max-w-4xl mx-auto px-4 py-8 prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-blue-600 dark:prose-a:text-blue-400">
