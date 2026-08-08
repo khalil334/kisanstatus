@@ -58,18 +58,6 @@ const HOWTO_STEPS = [
   { name: 'Status dekho', text: 'Registered ho toh naam, gaon, mobile/bank ke last digits, registration date aur status (Active/Pending/Rejected) dikh jayega.' },
 ];
 
-const FAQ_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: FAQS_DATA.map((f) => ({
-    '@type': 'Question',
-    name: f.q,
-    acceptedAnswer: {
-      '@type': 'Answer',
-      text: f.a,
-    },
-  })),
-};
 
 const HOWTO_SCHEMA = {
   '@context': 'https://schema.org',
@@ -86,10 +74,6 @@ const HOWTO_SCHEMA = {
 export default function PmKisanSelfRegisteredStatusCheck({ article }: { article: ArticleMeta }) {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(HOWTO_SCHEMA) }}
