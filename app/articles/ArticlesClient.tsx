@@ -356,6 +356,39 @@ function ArticlesContent({ articles }: { articles: readonly CombinedArticleMeta[
             </Link>
           )}
         </div>
+
+        {/*
+          The pills above are client-side filters (`/articles?category=X`) — great
+          UX, but they are not the canonical, indexable category pages, so those
+          pages received zero internal links and GSC parked all six under
+          "Discovered - currently not indexed". This row links the canonical
+          `/articles/category/X` URLs so they are crawlable from the hub.
+          Keep both: the pills stay instant, these give crawlers a real path.
+        */}
+        <nav
+          className="mt-5 pt-4 border-t border-[var(--color-border)] text-center"
+          aria-label="Category pages"
+        >
+          <p className="text-xs font-bold uppercase tracking-wide text-[var(--color-text-muted)] mb-2">
+            Category ke poore guides
+          </p>
+          <ul className="flex flex-wrap justify-center gap-x-4 gap-y-1.5">
+            {Object.entries(CATEGORIES).map(([slug, cat]) => {
+              if ((categoryCounts[slug] || 0) === 0) return null;
+              const catInfo = cat as { name: string; nameHi: string; icon: string };
+              return (
+                <li key={slug}>
+                  <Link
+                    href={`/articles/category/${slug}`}
+                    className="text-sm font-semibold text-green-700 dark:text-green-400 hover:underline focus:outline-none focus:ring-2 focus:ring-green-500 rounded"
+                  >
+                    {catInfo.name}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
       </div>
 
       {searchQuery && (
