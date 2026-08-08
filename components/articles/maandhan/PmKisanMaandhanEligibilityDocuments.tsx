@@ -5,7 +5,7 @@ import { SI, StepList, IB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlo
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
 
 const PUBLISHED = '2026-07-22T08:00:00+05:30';
-const MODIFIED = '2026-07-23T08:00:00+05:30';
+const MODIFIED = '2026-08-08T09:00:00+05:30';
 
 const RELATED_CARDS = [
   {
@@ -207,29 +207,13 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
         </div>
 
         <section className="mb-8">
-          <SH>Har Mahine Kitna Jama Karna Padta Hai?</SH>
+          <SH>Eligibility Clear? Ab Kharcha Jaan Lein</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Teeno shart poori hone ke baad agla sawal yahi aata hai — jama kitna karna hoga. Contribution fix nahi hai, umar par depend karta hai: jitni jaldi join karenge, utne zyada saal contribution karne ko milenge, isliye mahine ka hissa utna hi chhota rahega.
+            Shartein poori hone ke baad aapka monthly contribution sirf aapki aaj ki umar tay karti hai — 18 saal walon ka ₹55 aur 40 saal walon ka ₹200. Har umar ka exact official figure reference chart mein hai:
           </p>
-          <div className="overflow-x-auto mb-4">
-            <table className="w-full text-xs border border-[var(--color-border)] rounded-xl overflow-hidden">
-              <thead>
-                <tr className="bg-[var(--color-bg-alt)] text-left">
-                  <th className="p-2 font-black">Join Karne Ki Umar</th>
-                  <th className="p-2 font-black">Mahine Ka Contribution</th>
-                  <th className="p-2 font-black">60 Saal Tak Bharna Hoga</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-t border-[var(--color-border)]"><td className="p-2">18 saal</td><td className="p-2">₹55</td><td className="p-2">42 saal</td></tr>
-                <tr className="border-t border-[var(--color-border)]"><td className="p-2">29 saal</td><td className="p-2">₹100</td><td className="p-2">31 saal</td></tr>
-                <tr className="border-t border-[var(--color-border)]"><td className="p-2">40 saal</td><td className="p-2">₹200</td><td className="p-2">20 saal</td></tr>
-              </tbody>
-            </table>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <Link href="/maandhan/pm-kisan-maandhan-age-wise-contribution-chart-2026" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">📊 Age-Wise Contribution Chart Dekhen →</Link>
           </div>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            60 saal poore hone par ₹3,000 mahina pension shuru ho jaati hai, jo LIC ke through manage ki jaati hai. Agar bich mein subscriber ka dehant ho jaye toh pati ya patni ko is pension ka aadha hissa family pension ke roop mein milta rehta hai — ye suvidha sirf spouse tak simit hai, doosre parivar walon ke liye nahi.
-          </p>
         </section>
 
         <section className="mb-8">

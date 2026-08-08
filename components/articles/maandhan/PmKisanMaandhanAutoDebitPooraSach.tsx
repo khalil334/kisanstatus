@@ -5,7 +5,7 @@ import { SI, StepList, IB, WB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FA
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
 
 const PUBLISHED = '2026-07-24T08:00:00+05:30';
-const MODIFIED = '2026-07-24T08:00:00+05:30';
+const MODIFIED = '2026-08-08T09:00:00+05:30';
 
 const RELATED_CARDS = [
   {
@@ -212,40 +212,13 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
         </section>
 
         <section className="mb-8">
-          <SH>Kitna Paisa Kat Ta Hai? Official Age-Wise Contribution Chart</SH>
+          <SH>Kitna Katna Chahiye — Verify Karein</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Har kisan ka monthly share alag hota hai. Yeh aapki entry age par depend karta hai. Jitni kam umar pe join karenge, utna kam dena hoga. Government bhi utna hi match karegi. Yeh table PIB ke official release (September 2024) aur DAC&amp;FW operational guidelines se li gayi hai.
+            Aapke account se jo amount kat raha hai wo aapki entry age par fix hua tha — ₹55 (18 saal) se ₹200 (40 saal) tak. Har ek umar ka exact figure, government match ke saath, reference chart mein dekhein aur apni passbook entry se milayein:
           </p>
-
-          <div className="overflow-x-auto mb-4">
-            <table className="w-full text-xs border border-[var(--color-border)] rounded-xl overflow-hidden">
-              <thead>
-                <tr className="bg-[var(--color-bg-alt)] text-left">
-                  <th className="p-2 font-black">Entry Age</th>
-                  <th className="p-2 font-black">Aapka Share (₹/month)</th>
-                  <th className="p-2 font-black">Govt Match (₹/month)</th>
-                  <th className="p-2 font-black">Total Fund Mein (₹/month)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-t border-[var(--color-border)]"><td className="p-2">18</td><td className="p-2 font-bold">₹55</td><td className="p-2">₹55</td><td className="p-2">₹110</td></tr>
-                <tr className="border-t border-[var(--color-border)] bg-[var(--color-bg-alt)]"><td className="p-2">20</td><td className="p-2 font-bold">₹61</td><td className="p-2">₹61</td><td className="p-2">₹122</td></tr>
-                <tr className="border-t border-[var(--color-border)]"><td className="p-2">22</td><td className="p-2 font-bold">₹68</td><td className="p-2">₹68</td><td className="p-2">₹136</td></tr>
-                <tr className="border-t border-[var(--color-border)] bg-[var(--color-bg-alt)]"><td className="p-2">25</td><td className="p-2 font-bold">₹80</td><td className="p-2">₹80</td><td className="p-2">₹160</td></tr>
-                <tr className="border-t border-[var(--color-border)]"><td className="p-2">28</td><td className="p-2 font-bold">₹95</td><td className="p-2">₹95</td><td className="p-2">₹190</td></tr>
-                <tr className="border-t border-[var(--color-border)] bg-[var(--color-bg-alt)]"><td className="p-2">30</td><td className="p-2 font-bold">₹105</td><td className="p-2">₹105</td><td className="p-2">₹210</td></tr>
-                <tr className="border-t border-[var(--color-border)]"><td className="p-2">35</td><td className="p-2 font-bold">₹150</td><td className="p-2">₹150</td><td className="p-2">₹300</td></tr>
-                <tr className="border-t border-[var(--color-border)] bg-green-50 dark:bg-green-900/20"><td className="p-2 font-bold">40</td><td className="p-2 font-bold">₹200</td><td className="p-2 font-bold">₹200</td><td className="p-2 font-bold">₹400</td></tr>
-              </tbody>
-            </table>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <Link href="/maandhan/pm-kisan-maandhan-age-wise-contribution-chart-2026" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">📊 Age-Wise Contribution Chart (18–40) →</Link>
           </div>
-
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Toh agar aap 25 saal ke hain aur aapka share ₹80 hai, toh PM Kisan ki ₹2000 ki kist mein se sirf ₹80 katenge. Baaki ₹1920 aapke account mein rahenge.
-          </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Lekin kai baar unhe lagta hai ke pura ₹2000 khatam ho gaya, jabki asal mein sirf ₹80 kata hai. Isliye passbook dhyan se padhein. Agar aapko lagta hai ke zyada kat raha hai, toh ho sakta hai aapki umar galt enter hui ho CSC pe. Date of birth kabhi change nahi hoti, lekin agar galti se galat daal di gayi ho toh aapka share alag calculate hoga. Iske liye CSC pe correction request daalni padti hai.
-          </p>
         </section>
 
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
