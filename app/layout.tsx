@@ -117,9 +117,9 @@ export const metadata: Metadata = {
     'geo.position': '20.5937;78.9629',
     'ICBM': '20.5937, 78.9629',
     'format-detection': 'telephone=no',
-    'apple-mobile-web-app-capable': 'yes',
-    'apple-mobile-web-app-status-bar-style': 'default',
-    'apple-mobile-web-app-title': SITE_NAME,
+    // apple-mobile-web-app-* entries removed — metadata.appleWebApp below is
+    // the canonical Next.js API and already emits them; keeping both caused
+    // duplicate tags in <head> (FIX-5 in fix.md).
     'application-name': SITE_NAME,
     'msapplication-TileColor': '#16A34A',
     'msapplication-config': '/browserconfig.xml',
