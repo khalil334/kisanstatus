@@ -34,29 +34,7 @@ const KIST_CONFIG = {
   },
 };
 
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-    { '@type': 'ListItem', position: 2, name: 'Calculator', item: `${SITE_URL}/calculator` },
-    { '@type': 'ListItem', position: 3, name: 'Installment Tracker', item: `${SITE_URL}/calculator/installment-tracker` },
-  ],
-};
 
-const schema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebApplication',
-  name: 'PM Kisan Kist Tracker 2026 — Kist Kyun Ruki Hai Jaano',
-  url: `${SITE_URL}/calculator/installment-tracker`,
-  applicationCategory: 'FinanceApplication',
-  description: '4 sawaal mein pata karo ki PM Kisan ki kist kyun ruki hai — eKYC, bank seeding, land seeding check karo. Free tool.',
-  offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' },
-  author: { '@type': 'Organization', name: AUTHOR_NAME, url: AUTHOR_URL },
-  publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
-  datePublished: PUBLISHED,
-  dateModified: MODIFIED,
-};
 
 export default function InstallmentTrackerCalcPage() {
   const [ekyc, setEkyc] = useState('unknown');
@@ -133,8 +111,6 @@ export default function InstallmentTrackerCalcPage() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">

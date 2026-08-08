@@ -51,34 +51,10 @@ export default function MSPIncomeCalcPage() {
   const income = qtl * cropData.msp;
   const perHectare = unit==='hectare' ? income/qtyN : income/landN;
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Calculator', item: `${SITE_URL}/calculator` },
-      { '@type': 'ListItem', position: 3, name: 'MSP Income', item: `${SITE_URL}/calculator/msp-income` },
-    ],
-  };
 
-  const schema = {
-    '@context':'https://schema.org',
-    '@type':'WebApplication',
-    name:'MSP Income Calculator 2026 — Fasal Ka MSP Rate Hindi',
-    url:`${SITE_URL}/calculator/msp-income`,
-    applicationCategory:'FinanceApplication',
-    description:'MSP rate par fasal bechne se kitna paisa milega — jaano turant. Gehun, dhaan, sarson, kapas — sabhi fasalon ka MSP 2025-26. Free calculator.',
-    offers:{'@type':'Offer',price:'0',priceCurrency:'INR'},
-    author: { '@type': 'Organization', name: AUTHOR_NAME, url: AUTHOR_URL },
-    publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
-    datePublished: PUBLISHED,
-    dateModified: MODIFIED,
-  };
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(breadcrumbSchema)}}/>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/>
       
       <CalcHeader
         emoji="💹"

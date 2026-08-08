@@ -10,7 +10,7 @@
 │       schemas code mein hain lekin HTML mein render nahi ho rahe.           │
 │     → Impact: Google rich snippets nahi dikhayega maandhan pages ke liye  │
 │                                                                             │
-│  2. Calculator Pages — Duplicate Schemas                                    │
+│  2. ✅ FIXED — Calculator Pages — Duplicate Schemas                                    │
 │     → Location: /calculator/quick-status-check (aur shayad sab calculator) │
 │     → Problem: 2× WebApplication + 2× BreadcrumbList schemas               │
 │     → Impact: Search engines confused ho sakte hain                         │
@@ -60,3 +60,13 @@
   PmKisanMaandhanRegistration2026 + PmKisanMaandhanPensionCalculator (FAQBlock
   already emits it) — exactly 1× FAQPage per page now.
   Verified in production build: Article + FAQPage now present in static HTML.
+
+- 2026-08-08 — Bug #2 FIXED (branch fix/bug2-calculator-duplicate-schemas):
+  Root cause: schemas were emitted twice — once by the server `page.tsx` of each
+  calculator route AND once by the client component it renders
+  (QuickStatusChecker, KCCLoanCalcPage, MSPIncomeCalcPage, PMFBYCalcPage,
+  PMKisanBenefitCalcPage, CropProfitCalcPage, InstallmentTrackerCalcPage).
+  Fix: removed the duplicate JSON-LD `<script>` blocks + schema objects from all
+  7 client components; the server page.tsx schemas are the single source of truth.
+  Verified in production build: every calculator page now has exactly
+  1× WebApplication + 1× BreadcrumbList in static HTML.
