@@ -5,7 +5,7 @@ import { SI, StepList, IB, WB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FA
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
 
 const PUBLISHED = '2024-01-15T08:00:00+05:30';
-const MODIFIED = '2026-07-21T08:00:00+05:30';
+const MODIFIED = '2026-08-08T09:00:00+05:30';
 
 const RELATED_CARDS = [
   { 
@@ -170,66 +170,22 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
         </section>
 
         <section className="mb-8">
-          <SH>Kaun Apply Kar Sakta Hai? (Eligibility Criteria)</SH>
+          <SH>Pehle 30 Second Ka Self-Check</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Ye scheme har kisan ke liye nahi hai — kuch sakht sharten hain taaki fayda unhi tak pahunche jinhe sach mein zaroorat hai.
+            CSC jaane se pehle teen baatein khud confirm karein: (1) umar 18–40 ke beech hai, (2) zameen 2 hectare se kam hai, (3) naam PM Kisan list mein hai. Teeno haan hain to hi aage badhein — full checklist, exclusions aur joint-family zameen wale case ki detail alag guide mein hai:
           </p>
-          <div className="space-y-3">
-            <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-              <p className="font-black text-sm text-green-600 dark:text-green-400 mb-1">✅ Umra (Age)</p>
-              <p className="text-xs text-[var(--color-text-muted)]">Aapki umar 18 se 40 saal ke beech honi chahiye.</p>
-            </div>
-            <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-              <p className="font-black text-sm text-green-600 dark:text-green-400 mb-1">✅ Zameen Ki Seema</p>
-              <p className="text-xs text-[var(--color-text-muted)]">Aapke paas 2 hectare (lagbhag 5 acre) ya usse kam zameen honi chahiye.</p>
-            </div>
-            <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-              <p className="font-black text-sm text-green-600 dark:text-green-400 mb-1">✅ PM Kisan Beneficiary</p>
-              <p className="text-xs text-[var(--color-text-muted)]">Aapka naam <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-blue-600 dark:text-blue-400 font-medium">PM Kisan ki suchi</Link> mein hona zaroori hai.</p>
-            </div>
-            <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
-              <p className="font-black text-sm text-red-600 dark:text-red-400 mb-1">❌ Kaun Apply Nahi Kar Sakta?</p>
-              <p className="text-xs text-[var(--color-text-muted)]">Jo kisan pehle se kisi aur pension scheme ka labh le raha hai, wo isme register nahi ho sakta.</p>
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <Link href="/maandhan/pm-kisan-maandhan-eligibility-documents" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">✅ Poora Eligibility Self-Check + Exclusion List →</Link>
           </div>
-          
-          <IB>
-            <strong>CSC Ground Reality:</strong> Joint family ki zameen par apply karne aane wale kisan aksar ek galti karte hain. Agar zameen baap ya family head ke naam hai, toh system unki umar check karega — aapki nahi. Baap ki umar 40 paar hai toh application seedha reject ho jayega. Isliye Khatauni mein apna hissa alag karwana pehla kaam hona chahiye.
-          </IB>
         </section>
 
         <section className="mb-8">
-          <SH>Registration Ke Liye Kaun Se Documents Chahiye?</SH>
+          <SH>Bag Mein Kya Rakhna Hai</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Chaar cheezein saath rakhein toh CSC ya online, kahin bhi baar-baar chakkar nahi lagana padega:
+            Sirf chaar cheezein: Aadhaar (mobile linked), Aadhaar-seeded bank passbook, mobile phone aur Khatauni. Kaunsa document kis step pe lagega aur seeding kaise verify karein — wo document-wise guide mein hai:
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
-            {[
-              { doc: 'Aadhaar Card', note: 'Mobile number link hona zaroori hai.' },
-              { doc: 'Bank Passbook', note: 'Aadhaar seeding (NPCI) honi chahiye.' },
-              { doc: 'Mobile Phone', note: 'OTP verify karne ke liye.' },
-              { doc: 'Land Record (Khatauni)', note: 'Zameen ke size ka proof.' },
-            ].map(({ doc, note }) => (
-              <div key={doc} className="p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-                <p className="font-black text-sm text-[var(--color-text)] mb-1">📄 {doc}</p>
-                <p className="text-xs text-[var(--color-text-muted)]">{note}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
-            <Image
-              src="/images/articles/maandhan/required-documents.webp"
-              alt="Aadhaar card, bank passbook, mobile phone and land records arranged for registration"
-              width={800}
-              height={450}
-              className="w-full object-cover"
-              loading="lazy"
-              sizes="(max-width: 768px) 100vw, 768px"
-            />
-            <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-              Registration Ke Liye Zaroori Documents
-            </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <Link href="/maandhan/pm-kisan-maandhan-eligibility-documents" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">📄 Document-Wise Taiyari Ki Guide →</Link>
           </div>
         </section>
 
@@ -295,94 +251,24 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
         </section>
 
         <section className="mb-8">
-          <SH>Monthly Contribution: Umar Ke Hisaab Se</SH>
+          <SH>Kitna Dena Hoga? (Sirf Aapki Umar Par Depend)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Simple hisab hai — jitni jaldi judenge, utna kam dena padega. Neeche age-wise contribution table hai.
+            Registration ke waqt operator jo amount bataye, use khud verify kar sakte hain — 18 saal pe ₹55/mahina se lekar 40 saal pe ₹200/mahina tak. Har single age ka official figure aur total-till-60 ka hisaab in do pages par hai:
           </p>
-          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
-            <table className="w-full text-sm border-collapse">
-              <thead>
-                <tr className="bg-[var(--color-primary)] text-white">
-                  <th className="p-3 text-left">Entry Age</th>
-                  <th className="p-3 text-left">Monthly Contribution</th>
-                  <th className="p-3 text-left">Total (Till 60)</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  ['18 Years', '₹55', '₹27,720'],
-                  ['25 Years', '₹80', '₹33,600'],
-                  ['30 Years', '₹105', '₹37,800'],
-                  ['35 Years', '₹150', '₹45,000'],
-                  ['40 Years', '₹200', '₹48,000'],
-                ].map(([age, monthly, total], i) => (
-                  <tr key={age} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-green-50/40 dark:bg-green-900/10'}>
-                    <td className="p-3 border-b border-[var(--color-border)] font-medium text-[var(--color-text)]">{age}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-[var(--color-text)] font-bold">{monthly}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{total}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <Link href="/maandhan/pm-kisan-maandhan-age-wise-contribution-chart-2026" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">📊 Age-Wise Chart (Har Umar Ka Figure) →</Link>
+            <Link href="/maandhan/pm-kisan-maandhan-pension-calculator" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">🧮 Pension Calculator Guide →</Link>
           </div>
-
-          <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
-            <Image
-              src="/images/articles/maandhan/contribution-table-infographic.webp"
-              alt="Visual chart showing monthly contribution amounts from age 18 to 40 years"
-              width={800}
-              height={400}
-              className="w-full object-cover"
-              loading="lazy"
-              sizes="(max-width: 768px) 100vw, 768px"
-            />
-            <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-              Age-wise Contribution Breakdown
-            </p>
-          </div>
-
-          <p className="text-[var(--color-text-muted)] text-xs leading-relaxed mb-4">
-            Apni exact contribution jaanne ke liye hamara <Link href="/maandhan/pm-kisan-maandhan-pension-calculator" className="underline text-blue-600 dark:text-blue-400 font-medium">Pension Calculator</Link> try karein.
-          </p>
         </section>
 
         <section className="mb-8">
-          <SH>Maandhan vs APY: Kya Aapki Pension Scheme Sahi Hai?</SH>
+          <SH>Register Karne Se Pehle Ek Aakhri Sawal</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            APY aur Maandhan mein confusion aam baat hai. Dono pension dete hain, lekin banawat alag hai.
+            Agar aap soch rahe hain ki Maandhan lein ya Atal Pension Yojana — register karne se PEHLE comparison padh lein, kyunki ek waqt mein ek hi pension scheme active reh sakti hai:
           </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Maandhan khaas taur par chhote aur seemant kisanon ke liye hai, jahan central aur state government dono paisa daalte hain. APY sabke liye khula hai, lekin usme kisanon ke liye koi extra state subsidy nahi milti. Isliye PM Kisan beneficiary ho toh Maandhan zyada faydemand rehta hai.
-          </p>
-          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
-            <table className="w-full text-sm border-collapse">
-              <thead>
-                <tr className="bg-[var(--color-primary)] text-white">
-                  <th className="p-3 text-left">Feature</th>
-                  <th className="p-3 text-left">Maandhan Yojana</th>
-                  <th className="p-3 text-left">Atal Pension Yojana (APY)</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  ['Target Group', 'Only Kisans', 'All Citizens'],
-                  ['Max Land Limit', '2 Hectare', 'No Limit'],
-                  ['Monthly Contribution', '₹55 - ₹200', 'Varies by Age & Pension Slab'],
-                  ['Pension Amount', 'Fixed ₹3,000', '₹1,000 - ₹5,000'],
-                  ['Additional Benefits', 'State Govt. Subsidy (for eligible)', 'No Extra Subsidy'],
-                ].map(([feature, maandhan, apy], i) => (
-                  <tr key={feature} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-green-50/40 dark:bg-green-900/10'}>
-                    <td className="p-3 border-b border-[var(--color-border)] font-medium text-[var(--color-text)]">{feature}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-[var(--color-text)] font-bold">{maandhan}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{apy}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <Link href="/maandhan/pm-kisan-maandhan-vs-atal-pension-yojana" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">⚖️ PMKMY vs APY: Kaunsi Behtar Hai? →</Link>
           </div>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            <strong>Ek Zaroori Baat:</strong> Galti se dono schemes mein register ho gaye toh registration cancel ho jayega. Apply karne se pehle ek baar check zaroor kar lein.
-          </p>
         </section>
 
         <section className="mb-8">
