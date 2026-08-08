@@ -1,8 +1,26 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import { HINDI_ARTICLES, HINDI_ARTICLES_MAP } from '@/lib/hindi-articles-data';
+import { HINDI_ARTICLES, HINDI_ARTICLES_MAP, type HindiArticle } from '@/lib/hindi-articles-data';
 import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '@/lib/site-config';
+
+const COMPONENTS: Record<string, React.ComponentType<{ article: HindiArticle }>> = {
+  PmKisan25viKistKabAayegi: dynamic(() => import('@/components/articles/hindi-yojana/PmKisan25viKistKabAayegi'), { ssr: true }),
+  PmKisanStatusCheckMobileNumberSe: dynamic(() => import('@/components/articles/hindi-yojana/PmKisanStatusCheckMobileNumberSe'), { ssr: true }),
+  KisanKarjMafiList2027: dynamic(() => import('@/components/articles/hindi-yojana/KisanKarjMafiList2027'), { ssr: true }),
+  PmKisanHelplineNumberComplaint: dynamic(() => import('@/components/articles/hindi-yojana/PmKisanHelplineNumberComplaint'), { ssr: true }),
+  MukhyamantriKisanKalyanYojanaMp: dynamic(() => import('@/components/articles/hindi-yojana/MukhyamantriKisanKalyanYojanaMp'), { ssr: true }),
+  PmKisanNewRegistration2027: dynamic(() => import('@/components/articles/hindi-yojana/PmKisanNewRegistration2027'), { ssr: true }),
+  FarmerIdCardKaiseBanaye2027: dynamic(() => import('@/components/articles/hindi-yojana/FarmerIdCardKaiseBanaye2027'), { ssr: true }),
+  TractorSubsidy2027StateWiseList: dynamic(() => import('@/components/articles/hindi-yojana/TractorSubsidy2027StateWiseList'), { ssr: true }),
+  GehuKaRateAajMspVsMandiBhav: dynamic(() => import('@/components/articles/hindi-yojana/GehuKaRateAajMspVsMandiBhav'), { ssr: true }),
+  PmKisanEkycMobileSeKaiseKare: dynamic(() => import('@/components/articles/hindi-yojana/PmKisanEkycMobileSeKaiseKare'), { ssr: true }),
+  NpciAadhaarSeedingDbtPayment: dynamic(() => import('@/components/articles/hindi-yojana/NpciAadhaarSeedingDbtPayment'), { ssr: true }),
+  PmKisanPaymentStoppedByStateFix: dynamic(() => import('@/components/articles/hindi-yojana/PmKisanPaymentStoppedByStateFix'), { ssr: true }),
+  PmKisanRecoveryNoticePaisaWapas: dynamic(() => import('@/components/articles/hindi-yojana/PmKisanRecoveryNoticePaisaWapas'), { ssr: true }),
+  KccLimitKaiseBadhaye3Se5Lakh: dynamic(() => import('@/components/articles/hindi-yojana/KccLimitKaiseBadhaye3Se5Lakh'), { ssr: true }),
+};
 
 export const revalidate = 86400;
 
@@ -58,6 +76,9 @@ export default async function HindiArticlePage({
   const article = HINDI_ARTICLES_MAP[slug];
   if (!article) notFound();
 
+  const ArticleBody = COMPONENTS[article.component];
+  if (!ArticleBody) notFound();
+
   const url = `${SITE_URL}/articles/hindi/${slug}`;
 
   const schema = {
@@ -93,9 +114,7 @@ export default async function HindiArticlePage({
           {article.author} · अपडेटेड: {new Date(article.modifiedTime).toLocaleDateString('hi-IN')}
         </p>
         <div className="prose prose-lg max-w-none">
-          {article.content.split('\n\n').map((para, i) => (
-            <p key={i}>{para}</p>
-          ))}
+          <ArticleBody article={article} />
         </div>
       </article>
     </main>
