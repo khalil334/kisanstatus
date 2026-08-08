@@ -4,7 +4,7 @@
 │                                                                             │
 │  🔴 CRITICAL BUGS                                                           │
 │                                                                             │
-│  1. Maandhan Article Pages — Schemas Missing                               │
+│  1. ✅ FIXED — Maandhan Article Pages — Schemas Missing                               │
 │     → Location: /maandhan/[slug] pages (live site)                        │
 │     → Problem: Sirf FAQPage schema hai. Article, WebPage, BreadcrumbList  │
 │       schemas code mein hain lekin HTML mein render nahi ho rahe.           │
@@ -40,9 +40,23 @@
 │  6. Article Schema Count Excessive                                          │
 │     → 7 schemas per article page bahut zyada hain. Ideal: 3-4 max           │
 │                                                                             │
-│  7. Maandhan Schema Build Code Exists But Not Rendering                     │
+│  7. ✅ FIXED — Maandhan Schema Build Code Exists But Not Rendering                     │
 │     → app/maandhan/[slug]/page.tsx mein schemas build hain lekin            │
 │       dangerouslySetInnerHTML mein JSON.stringify ke baad HTML mein        │
 │       nahi aa rahe — possible RSC payload issue ya build bug               │
 │                                                                             │
 └─────────────────────────────────────────────────────────────────────────────┘
+
+## Fix Log
+
+- 2026-08-08 — Bug #1 + #7 FIXED (branch fix/bug1-maandhan-schemas-ssr):
+  Root cause: maandhan article components rendered JSON-LD via `next/script`
+  with `strategy="afterInteractive"` — Next.js injects such scripts client-side
+  after hydration and never puts the JSON payload in the server HTML, so Google
+  saw only the FAQPage schema (rendered separately by FAQBlock via plain <script>).
+  Fix: converted all 12 maandhan components to plain
+  `<script type="application/ld+json" dangerouslySetInnerHTML>` (server-rendered).
+  Also removed the duplicate FAQPage from the @graph in
+  PmKisanMaandhanRegistration2026 + PmKisanMaandhanPensionCalculator (FAQBlock
+  already emits it) — exactly 1× FAQPage per page now.
+  Verified in production build: Article + FAQPage now present in static HTML.
