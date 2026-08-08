@@ -9,7 +9,24 @@ root cause, exact file, exact fix, aur verify command likhi hai.
 
 ---
 
-## ✅ Status update — 2026-08-08 (PR #123 merged)
+## ✅ Status update — 2026-08-08 (live-verified after PR #123 / #124)
+
+**Live re-verification 2026-08-08** — FIX-1, FIX-4, FIX-5 sab **live pe confirmed working**:
+
+```
+/maandhan/koi-galat-slug                        404 ✅
+/articles/koi-galat-slug                        404 ✅
+/rajya-yojana/koi-galat-slug                    404 ✅
+/articles/category/koi-galat-cat                404 ✅
+/articles/PmKisanBeneficiaryListVillageWise2026 308 -> /articles/PmKisanBeneficiaryList2026 ✅
+sitemap priority: 1×1.0, 4×0.9, 3×0.8, 75×0.7, 6×0.6, 2×0.5, 3×0.3 ✅
+robots.txt crawl-delay lines: 0 ✅
+<head> apple-mobile-web-app-*: har tag exactly 1× ✅
+```
+
+> Note: `curl | grep -c apple-mobile-web-app` 2 dikhata hai — dusra hit RSC flight
+> payload (`<script>self.__next_f...`) se aata hai, `<head>` se nahi. `<head>` saaf hai.
+> Isliye ye false positive hai, FIX-5 ka regression **nahi**.
 
 | Fix | Status | Kahan |
 |---|---|---|
@@ -17,7 +34,9 @@ root cause, exact file, exact fix, aur verify command likhi hai.
 | FIX-4 (sitemap priority + crawlDelay) | ✅ **DONE** — merged in PR #123 | Role-based priority (built sitemap: 1×1.0, 4×0.9, 3×0.8, 75×0.7, 6×0.6, 2×0.5, 3×0.3); `crawlDelay` removed from `app/robots.ts` |
 | FIX-5 (duplicate apple meta tags) | ✅ **DONE** — merged in PR #123 | `metadata.other` se teeno `apple-mobile-web-app-*` entries removed |
 | FIX-3 (`.vercel.app` redirect error) | ⏳ **OWNER ACTION** — code nahi, Vercel dashboard | Settings → Domains ya Deployment Protection (neeche §3) |
-| FIX-2 (13 × 404 triage) | ⏳ **BLOCKED** — GSC CSV export chahiye | GSC → Page indexing → "Not found (404)" → EXPORT (neeche §2) |
+| FIX-2 partial (legacy path redirects) | ✅ **DONE** — `fix/legacy-404-redirects` | `next.config.js`: `/sitemap_index.xml`→`/sitemap.xml`, `/feed`→`/rss.xml`, `/index.html`→`/` |
+| FIX-2 rest (13 × 404 triage) | ⏳ **BLOCKED** — GSC CSV export chahiye | GSC → Page indexing → "Not found (404)" → EXPORT (neeche §2) |
+| FIX-4c (`changeFrequency` honesty) | ⛔ **WON'T FIX** — deliberate | Google `changefreq` largely ignore karta hai; 59 URLs ko `weekly`→`monthly` karne ka koi measurable SEO benefit nahi. Noise, isliye chhod diya. |
 
 Verification pre-merge: `tsc --noEmit` clean, `eslint` clean, `next build --webpack`
 success (94 sitemap URLs). **Deploy ke baad** neeche wali "Deploy ke baad — checklist"
@@ -222,13 +241,19 @@ export mein URL list nahi hai, isliye ye issue **abhi actionable nahi** hai.
 Ye paths live pe 404 dete hain (legacy/bot patterns, inme se kuch GSC ke 13 mein ho
 sakte hain):
 
-| Path | Status | Kya karna chahiye |
-|---|---|---|
-| `/sitemap_index.xml` | 404 | Yoast-style path. Redirect → `/sitemap.xml` |
-| `/feed` | 404 | WordPress-style. Redirect → `/rss.xml` |
-| `/index.html` | 404 | Redirect → `/` |
-| `/amp` | 404 | Chhod do (koi AMP version nahi hai) |
-| `/ARTICLES` | 404 | Case-sensitivity. Chhod do ya lowercase redirect |
+| Path | Status (pre-fix) | Kya kiya | Kyun |
+|---|---|---|---|
+| `/sitemap_index.xml` | 404 | ✅ **301 → `/sitemap.xml`** | Yoast-style path; bots ise guess karte hain, target live 200 |
+| `/feed` | 404 | ✅ **301 → `/rss.xml`** | WordPress-style; `/rss.xml` live 200. `/feed/` already 308→`/feed`, ab chain resolve ho jayegi |
+| `/index.html` | 404 | ✅ **301 → `/`** | Classic legacy entry point |
+| `/amp` | 404 | ⛔ **404 hi rakha** | Koi AMP version nahi hai — kahan bhejein? Guess karna galat hoga |
+| `/ARTICLES` | 404 | ⛔ **404 hi rakha** | Case-insensitive redirects poore site pe lagane padte, side-effects zyada |
+| `/rss`, `/atom.xml`, `/wp-sitemap.xml`, `/sitemap.xml.gz` | 404 | ⛔ **404 hi rakha** | 2026-08-08 pe probe kiye; koi evidence nahi ki GSC ke 13 mein hain |
+| `/category/<x>`, `/article/<slug>` | 404 | ⛔ **404 hi rakha** | Sahi paths `/articles/category/<x>` aur `/articles/<slug>` hain, par ye legacy shapes kabhi live the iska koi proof nahi |
+
+> **Rule jo follow kiya:** sirf un paths ko redirect kiya jinka **ek hi obvious modern
+> equivalent** hai aur jiska target live 200 verify hua. Baaki ke liye target guess
+> karna = fabrication, isliye 404 hi chhoda — 404 dena bhi ek valid, sahi jawab hai.
 
 Achhi khabar: **sitemap ke 94 URLs mein se koi bhi 404 nahi** hai, aur repo ke 67
 internal `href`s mein se bhi koi 404 nahi. Toh ye 404s **site ke andar se nahi** aa rahe
@@ -244,9 +269,20 @@ GSC → Page indexing → **"Not found (404)"** row par tap → detail page → 
    "Validate fix" mark kar do (ye normal hai, bug nahi)
 3. **Galti se toota** → asli route/data fix
 
-### Verify
+### Verify (ab jo 3 redirects add hue)
 
-CSV milne ke baad har URL ka before/after status compare karenge.
+```bash
+for u in /sitemap_index.xml /feed /index.html; do
+  echo "$u -> $(curl -s -o /dev/null -w '%{http_code} %{redirect_url}' https://kisanstatus.com$u)"
+done
+# teeno 308 aane chahiye, sahi target ke saath
+
+# aur /feed/ ki chain ek hop se resolve ho
+curl -sL -o /dev/null -w '%{url_effective}\n' https://kisanstatus.com/feed/
+# https://kisanstatus.com/rss.xml aana chahiye
+```
+
+Baaki 13 URLs ke liye: CSV milne ke baad har URL ka before/after status compare karenge.
 
 ---
 
@@ -511,6 +547,15 @@ isko alag se dekh sakte hain.
 | **4** | FIX-4: sitemap priority + `crawlDelay` hatao | `app/sitemap.ts`, `app/robots.ts` | ~45 min | 2–4 hafte |
 | **5** | FIX-2: 404 URLs triage | — | CSV ke baad | 1–2 hafte |
 
+### Ab kya bacha hai (2026-08-08 ke baad)
+
+| Kaam | Kaun karega | Kaise |
+|---|---|---|
+| FIX-3 — `.vercel.app` 403 | **owner (Vercel dashboard)** | Settings → Deployment Protection off for production, **ya** Settings → Domains mein `kisanstatus.vercel.app` ka permanent redirect → `kisanstatus.com`. Code touch nahi hoga. |
+| FIX-2 — 13 × 404 ki asli list | **owner (GSC export)** | GSC → Page indexing → "Not found (404)" → EXPORT → CSV share karo |
+
+Code side pe **kuch nahi bacha** — sab merge ho chuka hai.
+
 **Kyun ye order:** FIX-1 sabse zyada pages theek karta hai (9 confirmed + galat
 canonicals) aur template-level hai — ek fix, chaar route families. FIX-3 code touch nahi
 karta. FIX-5 2 minute ka hai. FIX-4 ka asar dheere aata hai. FIX-2 aapke CSV pe atka hai.
@@ -530,6 +575,12 @@ karta. FIX-5 2 minute ka hai. FIX-4 ka asar dheere aata hai. FIX-2 aapke CSV pe 
 **Redirect hona chahiye:**
 - `https://kisanstatus.com/articles/PmKisanBeneficiaryListVillageWise2026`
   → `PmKisanBeneficiaryList2026` par land kare, URL bar mein naya URL dikhe
+
+**Naye legacy redirects (FIX-2 partial) — ye 308 hone chahiye:**
+- `https://kisanstatus.com/sitemap_index.xml` → `/sitemap.xml` (XML dikhna chahiye)
+- `https://kisanstatus.com/feed` → `/rss.xml` (RSS dikhna chahiye)
+- `https://kisanstatus.com/index.html` → `/` (homepage)
+- `https://kisanstatus.com/feed/` → chain ke baad `/rss.xml` pe land kare
 
 **Regression check — ye normal chalne chahiye (FIX-1 ne kuch toda nahi):**
 - `https://kisanstatus.com/articles/PmKisan24viKist2026`
