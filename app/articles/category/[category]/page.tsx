@@ -5,6 +5,146 @@ import { CATEGORIES, getArticlesByCategory, type CategorySlug } from '@/lib/arti
 import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL, DEFAULT_OG_IMAGE } from '@/lib/site-config';
 import ArticlesClient from '../../ArticlesClient';
 
+/**
+ * Per-category intro block (fix plan §C) — navigation value, not word count:
+ * tells the reader which article fits which situation. Only categories that
+ * have one render it; structure intentionally differs per category so the
+ * three intros don't read like one template.
+ */
+function CategoryIntro({ category }: { category: CategorySlug }) {
+  if (category === 'loan') {
+    return (
+      <section className="container-site mx-auto px-4 pt-8">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+            Kisan loan — kahan se shuru karein?
+          </h2>
+          <p className="text-gray-700 dark:text-gray-300 mb-3">
+            “Loan chahiye” ek sawal nahi, teen alag sawal hote hain — aur teeno ka rasta alag hai:
+          </p>
+          <ul className="space-y-2 text-gray-700 dark:text-gray-300 mb-3">
+            <li>
+              <strong>Kheti ke seasonal kharche</strong> (beej, khaad, diesel) ke liye sabse sasta
+              rasta{' '}
+              <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-green-700 dark:text-green-400 underline font-semibold">
+                Kisan Credit Card (KCC)
+              </Link>{' '}
+              hai — interest subvention ke saath short-term credit.
+            </li>
+            <li>
+              <strong>Machinery kharidni hai</strong> (tractor, implements) to wo alag term-loan
+              category hai — process aur margin{' '}
+              <Link href="/articles/KisanTractorLoan2026" className="text-green-700 dark:text-green-400 underline font-semibold">
+                tractor loan guide
+              </Link>{' '}
+              me hai.
+            </li>
+            <li>
+              <strong>Pata nahi kaunsa loan fit hai?</strong> Pehle{' '}
+              <Link href="/articles/KisanRinKahaSeLe2026" className="text-green-700 dark:text-green-400 underline font-semibold">
+                kisan rin kahan se lein
+              </Link>{' '}
+              wala overview padhein — usme bank, cooperative aur Jansamarth portal ke raaste
+              compare kiye gaye hain.
+            </li>
+          </ul>
+          <p className="text-gray-600 dark:text-gray-400 text-sm">
+            Ek hi cheez har jagah lagti hai: zameen ke kaagaz + KYC pehle taiyar rakhein — zyada
+            applications isi par atakti hain.
+          </p>
+        </div>
+      </section>
+    );
+  }
+
+  if (category === 'pashupalan') {
+    return (
+      <section className="container-site mx-auto px-4 pt-8">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+            Pashupalan me kaunsa business, kaunsi scheme?
+          </h2>
+          <p className="text-gray-700 dark:text-gray-300 mb-3">
+            Yahan ki guides alag-alag livestock business cover karti hain, aur har ek ke peeche
+            alag government scheme hai — isliye pehle apna business chunein, phir scheme:
+          </p>
+          <div className="grid sm:grid-cols-2 gap-3 mb-3">
+            <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800">
+              <p className="font-semibold text-gray-900 dark:text-white mb-1">Kam zameen, kam investment</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                <Link href="/articles/bakri-palan-yojana-nlm-subsidy" className="text-green-700 dark:text-green-400 underline">Bakri palan (NLM subsidy)</Link>{' '}
+                ya{' '}
+                <Link href="/articles/madhumakhi-palan-kvic-subsidy" className="text-green-700 dark:text-green-400 underline">madhumakhi palan (KVIC)</Link>{' '}
+                se shuru karein.
+              </p>
+            </div>
+            <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800">
+              <p className="font-semibold text-gray-900 dark:text-white mb-1">Paani ka source hai</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                <Link href="/articles/pm-matsya-sampada-yojana-fish-farming" className="text-green-700 dark:text-green-400 underline">Machli palan (PMMSY)</Link>{' '}
+                dekhein — pond-based unit ki subsidy structure alag hai.
+              </p>
+            </div>
+            <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 sm:col-span-2">
+              <p className="font-semibold text-gray-900 dark:text-white mb-1">Pehle se dairy/pashu hain</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Chara business ka rasta{' '}
+                <Link href="/articles/silage-making-business-guide" className="text-green-700 dark:text-green-400 underline">silage making guide</Link>{' '}
+                me hai — existing dairy belt me demand ready milti hai.
+              </p>
+            </div>
+          </div>
+          <p className="text-gray-600 dark:text-gray-400 text-sm">
+            Subsidy percentages scheme aur state ke hisaab se badalti hain — exact figures har
+            guide me official source ke saath diye gaye hain.
+          </p>
+        </div>
+      </section>
+    );
+  }
+
+  if (category === 'agri-business') {
+    return (
+      <section className="container-site mx-auto px-4 pt-8">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+            Kheti se aage — agri business ka naksha
+          </h2>
+          <p className="text-gray-700 dark:text-gray-300 mb-3">
+            In guides me teen tarah ke raaste hain, aur teeno ka support ecosystem alag hai:
+          </p>
+          <ol className="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300 mb-3">
+            <li>
+              <strong>Production business:</strong>{' '}
+              <Link href="/articles/mushroom-kheti-nhb-subsidy" className="text-green-700 dark:text-green-400 underline">mushroom kheti (NHB)</Link>{' '}
+              aur{' '}
+              <Link href="/articles/vermi-compost-business-guide" className="text-green-700 dark:text-green-400 underline">vermi compost</Link>{' '}
+              — kam zameen par unit lagakar produce bechna.
+            </li>
+            <li>
+              <strong>Processing business:</strong>{' '}
+              <Link href="/articles/pm-fme-yojana-food-processing" className="text-green-700 dark:text-green-400 underline">PM-FME food processing</Link>{' '}
+              — apni ya doosron ki upaj ko process karke value add karna.
+            </li>
+            <li>
+              <strong>Service business:</strong>{' '}
+              <Link href="/articles/custom-hiring-centre-chc-portal" className="text-green-700 dark:text-green-400 underline">Custom Hiring Centre (CHC)</Link>{' '}
+              — machinery rent par dena; aur khet ke paani ka kharcha ghatane ke liye{' '}
+              <Link href="/articles/drip-sprinkler-irrigation-subsidy" className="text-green-700 dark:text-green-400 underline">drip/sprinkler subsidy</Link>.
+            </li>
+          </ol>
+          <p className="text-gray-600 dark:text-gray-400 text-sm">
+            Har guide me investment ka scale aur subsidy ka structure us scheme ke official portal
+            se diya gaya hai — andaaze ke numbers par plan mat banaiye.
+          </p>
+        </div>
+      </section>
+    );
+  }
+
+  return null;
+}
+
 const CATEGORY_DATA: Record<CategorySlug, {
   title: string;
   description: string;
@@ -245,6 +385,8 @@ export default async function CategoryPage({
           </div>
         </div>
       </section>
+
+      <CategoryIntro category={category as CategorySlug} />
 
       {}
       <div className="container-site mx-auto py-10">
