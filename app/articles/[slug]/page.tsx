@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { notFound, redirect } from 'next/navigation';
+import { notFound } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import {
@@ -220,17 +220,19 @@ export async function generateStaticParams() {
   return ARTICLES.map((a) => ({ slug: a.slug }));
 }
 
+// Unknown slugs must 404 at the router level, before the root loading.tsx
+// streams a 200 shell (which made notFound() below unable to set the status
+// code — GSC saw these as Soft 404s). All valid slugs come from
+// generateStaticParams, so nothing legitimate is blocked.
+export const dynamicParams = false;
+
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  
-  if (slug === 'PmKisanBeneficiaryListVillageWise2026') {
-    redirect('/articles/PmKisanBeneficiaryList2026');
-  }
-  
+
   const article = ARTICLES_MAP[slug];
   // Unknown slug => real HTTP 404 (app/not-found.tsx), not a 200 "Article Not Found"
   // soft-404. Returning fallback metadata here made Google see a 200 page; the page
@@ -320,11 +322,7 @@ export default async function ArticlePage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  
-  if (slug === 'PmKisanBeneficiaryListVillageWise2026') {
-    redirect('/articles/PmKisanBeneficiaryList2026');
-  }
-  
+
   const article = ARTICLES_MAP[slug];
   if (!article) notFound();
 
