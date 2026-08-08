@@ -9,6 +9,22 @@ root cause, exact file, exact fix, aur verify command likhi hai.
 
 ---
 
+## ✅ Status update — 2026-08-08 (PR #123 merged)
+
+| Fix | Status | Kahan |
+|---|---|---|
+| FIX-1 (Soft 404 + VillageWise redirect) | ✅ **DONE** — merged in PR #123 | `dynamicParams = false` chaaron routes mein; redirect `next.config.js` mein move; in-page `redirect()` dono copies removed |
+| FIX-4 (sitemap priority + crawlDelay) | ✅ **DONE** — merged in PR #123 | Role-based priority (built sitemap: 1×1.0, 4×0.9, 3×0.8, 75×0.7, 6×0.6, 2×0.5, 3×0.3); `crawlDelay` removed from `app/robots.ts` |
+| FIX-5 (duplicate apple meta tags) | ✅ **DONE** — merged in PR #123 | `metadata.other` se teeno `apple-mobile-web-app-*` entries removed |
+| FIX-3 (`.vercel.app` redirect error) | ⏳ **OWNER ACTION** — code nahi, Vercel dashboard | Settings → Domains ya Deployment Protection (neeche §3) |
+| FIX-2 (13 × 404 triage) | ⏳ **BLOCKED** — GSC CSV export chahiye | GSC → Page indexing → "Not found (404)" → EXPORT (neeche §2) |
+
+Verification pre-merge: `tsc --noEmit` clean, `eslint` clean, `next build --webpack`
+success (94 sitemap URLs). **Deploy ke baad** neeche wali "Deploy ke baad — checklist"
+zaroor follow karo (browser re-checks + GSC re-crawl/validate).
+
+---
+
 ## 0. Current state (GSC ke numbers)
 
 Property: `kisanstatus.com` · Last update: 2026-08-05
