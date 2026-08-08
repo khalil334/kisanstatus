@@ -3,7 +3,6 @@
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import Script from 'next/script';
 import { SI, StepList, WB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
 
@@ -156,8 +155,9 @@ const FAQS_DATA = [
 export default function PmKisanMaandhanPensionCalculator({ article }: { article: MaandhanArticleMeta }) {
   return (
     <>
-      <Script id="maandhan-calculator-schema" type="application/ld+json" strategy="afterInteractive">
-        {JSON.stringify({
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@graph": [
             {
@@ -177,18 +177,10 @@ export default function PmKisanMaandhanPensionCalculator({ article }: { article:
               "datePublished": PUBLISHED,
               "dateModified": MODIFIED,
               "mainEntityOfPage": { "@type": "WebPage", "@id": `https://kisanstatus.com/maandhan/${article.slug}` }
-            },
-            {
-              "@type": "FAQPage",
-              "mainEntity": FAQS_DATA.map(faq => ({
-                "@type": "Question",
-                "name": faq.q,
-                "acceptedAnswer": { "@type": "Answer", "text": faq.a }
-              }))
             }
           ]
-        })}
-      </Script>
+        }) }}
+      />
 
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">

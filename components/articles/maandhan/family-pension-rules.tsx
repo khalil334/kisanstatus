@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import Script from 'next/script';
 import { SI, StepList, WB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
 
@@ -62,8 +61,9 @@ const FAQS_DATA = [
 export default function FamilyPensionRules({ article }: { article: MaandhanArticleMeta }) {
   return (
     <>
-      <Script id="maandhan-family-pension-schema" type="application/ld+json" strategy="afterInteractive">
-        {JSON.stringify({
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
           '@context': 'https://schema.org',
           '@graph': [
             {
@@ -98,8 +98,8 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
               })),
             },
           ],
-        })}
-      </Script>
+        }) }}
+      />
 
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
