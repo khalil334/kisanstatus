@@ -1,47 +1,48 @@
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│  🐛 BUGS — KisanStatus.com (status as of 2026-08-08)                        │
+│  🐛 DEEP ANALYSIS BUGS — KisanStatus.com                                   │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                             │
-│  1. ✅ NO CODE CHANGE NEEDED — Sitemap priorities all 1.0 on LIVE site      │
-│     → app/sitemap.ts already uses role-based tiers (1.0/0.9/0.8/0.7/       │
-│       0.6/0.3). Live site is a stale deploy — redeploy to fix.             │
+│  🔴 CRITICAL BUGS                                                           │
 │                                                                             │
-│  2. ✅ NO CODE CHANGE NEEDED — Sitemap lastModified same for ALL articles   │
-│     → lib data already has varied per-article modified dates (Aug 6–8).    │
-│       Live site is a stale deploy — redeploy to fix.                       │
+│  1. Maandhan Article Pages — Schemas Missing                               │
+│     → Location: /maandhan/[slug] pages (live site)                        │
+│     → Problem: Sirf FAQPage schema hai. Article, WebPage, BreadcrumbList  │
+│       schemas code mein hain lekin HTML mein render nahi ho rahe.           │
+│     → Impact: Google rich snippets nahi dikhayega maandhan pages ke liye  │
 │                                                                             │
-│  3. ✅ FIXED — Search page broken (placeholder only)                        │
-│     → app/search/page.tsx now renders real results for ?q= via             │
-│       app/search/SearchResults.tsx (searches articles + maandhan +         │
-│       rajya-yojana data).                                                   │
+│  2. Calculator Pages — Duplicate Schemas                                    │
+│     → Location: /calculator/quick-status-check (aur shayad sab calculator) │
+│     → Problem: 2× WebApplication + 2× BreadcrumbList schemas               │
+│     → Impact: Search engines confused ho sakte hain                         │
 │                                                                             │
-│  4. ✅ FIXED — Maandhan articles missing from Header search                 │
-│     → components/Header.tsx SEARCH_INDEX now includes all 14               │
-│       MAANDHAN_ARTICLES entries.                                            │
-│                                                                             │
-│  5. ✅ FIXED — Missing WebSite schema on homepage                           │
-│     → app/page.tsx now emits a WebSite node (@id ${SITE_URL}#website)      │
-│       that the existing WebPage isPartOf reference points at.              │
-│                                                                             │
-│  6. ❌ NOT A BUG — OG image path "pmfhero.webp"                             │
-│     → public/images/kisanguides/pmfhero.webp EXISTS; there is no           │
-│       pmfme-hero.webp. Renaming would break the OG image. No change.       │
-│                                                                             │
-│  7. ✅ NO CODE CHANGE NEEDED — Copyright "© 2024-2026KisanStatus"           │
-│     → components/Footer.tsx renders `© {years} {SITE_NAME}` with a         │
-│       space. Live site is a stale deploy — redeploy to fix.                │
-│                                                                             │
-│  8. ✅ NO CODE CHANGE NEEDED — /search URL in sitemap                       │
-│     → app/sitemap.ts does not include /search. Live site is a stale        │
-│       deploy — redeploy to fix.                                            │
-│                                                                             │
-│  9. ✅ FIXED — SearchAction schema points to broken /search page           │
-│     → /search?q= now works (bug #3), and SearchAction moved from the       │
-│       WebPage node to the new WebSite node where Google reads it.          │
+│  3. Article Pages — Excessive Duplicate Schemas                             │
+│     → Location: /articles/[slug] pages                                       │
+│     → Problem: 5× Article, 3× WebPage, 2× BreadcrumbList, 2× FAQPage       │
+│     → Impact: Schema bloat, Google ignore kar sakta hai excess schemas      │
 │                                                                             │
 ├─────────────────────────────────────────────────────────────────────────────┤
-│  Verified with: tsc --noEmit ✓, eslint ✓, next build ✓ (2026-08-08)        │
-│  Remaining action: trigger a fresh production deploy so bugs 1/2/7/8       │
-│  clear on the live site, then re-check in browser:                         │
-│    /sitemap.xml · /search?q=pm+kisan · homepage JSON-LD · footer ©         │
+│  🟡 MEDIUM BUGS                                                             │
+│                                                                             │
+│  4. X-Frame-Options Mismatch                                                │
+│     → Location: next.config.js vs Live Headers                              │
+│     → Problem: Config mein 'DENY' hai, lekin live site 'SAMEORIGIN' bhej   │
+│       raha hai (Vercel ya koi middleware override kar raha hai)             │
+│                                                                             │
+│  5. Title / H1 Mismatch (SERP Rewrite Risk)                                 │
+│     → Location: /articles/PmKisan24viKist2026, /rajya-yojana/*              │
+│     → Problem: Title: "PM Kisan 24vi Kist — Kab Aayegi? | KisanStatus"     │
+│       H1: "PM Kisan 24vi Kist Kab Aayegi? October 2026 Release Date..."     │
+│     → Impact: Google title ko ignore karke apna SERP title banayega         │
+│                                                                             │
+├─────────────────────────────────────────────────────────────────────────────┤
+│  🟢 LOW / SUGGESTIONS                                                       │
+│                                                                             │
+│  6. Article Schema Count Excessive                                          │
+│     → 7 schemas per article page bahut zyada hain. Ideal: 3-4 max           │
+│                                                                             │
+│  7. Maandhan Schema Build Code Exists But Not Rendering                     │
+│     → app/maandhan/[slug]/page.tsx mein schemas build hain lekin            │
+│       dangerouslySetInnerHTML mein JSON.stringify ke baad HTML mein        │
+│       nahi aa rahe — possible RSC payload issue ya build bug               │
+│                                                                             │
 └─────────────────────────────────────────────────────────────────────────────┘
