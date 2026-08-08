@@ -170,6 +170,10 @@
   Verified: production build, 13/13 pages have exactly 1× BreadcrumbList.
 - 2026-08-08 — Chota issue #2: no code change needed — already resolved by
   Bug #4 (next.config.js aligned to SAMEORIGIN). Stale note cleared.
+- 2026-08-08 — Chota issue #2 follow-up (branch fix/vercel-xfo-single-source):
+  Removed the X-Frame-Options block from vercel.json entirely —
+  next.config.js is now the single source of truth (SAMEORIGIN, consistent
+  with CSP frame-ancestors 'self'). No more edge override / duplicate header.
 - 2026-08-08 — Chota issue #3: confirmed intentional; check-title-h1.js
   passes 71/71. No change.
 
