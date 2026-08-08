@@ -110,7 +110,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     { 
       url: `${SITE_URL}/maandhan`, 
-      lastModified: new Date('2026-07-19'), 
+      // Hub rewritten (overview + guided path + FAQ) — real content change.
+      lastModified: new Date('2026-08-08'), 
       changeFrequency: 'weekly', 
       priority: 0.90,
     },
