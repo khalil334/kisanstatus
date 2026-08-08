@@ -7,6 +7,7 @@ import LanguageSwitcher from './LanguageSwitcher';
 import Logo from './Logo';
 import { ARTICLES } from '@/lib/articles-data';
 import { LIVE_RAJYA_YOJANA_ARTICLES } from '@/lib/rajya-yojana-data';
+import { MAANDHAN_ARTICLES } from '@/lib/maandhan-data';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -30,6 +31,7 @@ const CATEGORY_EMOJIS: Record<string, string> = {
   'farming': '🌱',
   'mandi': '🏪',
   'rajya-yojana': '🏛️',
+  'pension-scheme': '👴',
 };
 
 type SearchEntry = {
@@ -59,6 +61,16 @@ const SEARCH_INDEX: readonly SearchEntry[] = [
     desc: a.description,
     keywords: [a.mainKeyword, ...a.secondaryKeywords],
     category: 'rajya-yojana',
+    date: a.published || '',
+  })),
+  ...MAANDHAN_ARTICLES.map((a) => ({
+    slug: a.slug,
+    href: `/maandhan/${a.slug}`,
+    title: a.title,
+    desc: a.description,
+    // maandhan-data has no keywords field; title/desc/category still match.
+    keywords: ['maandhan', 'pension'] as readonly string[],
+    category: a.category,
     date: a.published || '',
   })),
 ];
