@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Script from 'next/script';
-import { SI, StepList, IB, WB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
+import { SI, StepList, WB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
+import { EXTERNAL_LINK_PROPS } from '@/lib/site-config';
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
 
 const PUBLISHED = '2024-01-15T08:00:00+05:30';
-const MODIFIED = '2026-08-08T09:00:00+05:30';
+const MODIFIED = '2026-08-08T21:45:00+05:30';
 
 const RELATED_CARDS = [
   { 
@@ -31,27 +32,31 @@ const RELATED_CARDS = [
 const FAQS_DATA = [
   {
     q: 'Maandhan Yojana mein apply karne ke liye umar kitni honi chahiye?',
-    a: '18 se 40 saal — bas yahi window hai. Ek din bhi 40 cross kar liya toh system application accept nahi karega, isliye deri mat karein.',
+    a: 'Entry window 18 se 40 saal hai — scheme guidelines (maandhan.in) mein yahi likha hai. 40 paar hone ke baad enrollment nahi hota. Ek aur practical baat: jitni kam umar par judenge, monthly contribution utna kam banta hai — 18 par ₹55, 40 par ₹200.',
   },
   {
-    q: 'Kya Maandhan aur Atal Pension Yojana (APY) dono ek saath chal sakti hain?',
-    a: 'Nahi, ye possible nahi hai. Niyam saaf hai — ek waqt mein sirf ek hi pension scheme active reh sakti hai, ya toh APY ya Maandhan.',
+    q: 'Beech mein scheme chhod dein toh paisa doob jayega?',
+    a: 'Nahi doobta, lekin poora bhi nahi milta. 10 saal se pehle exit par sirf aapka apna contribution savings-bank interest ke saath wapas milta hai. 10 saal ke baad (par 60 se pehle) exit par apna contribution plus fund ka actually earned interest ya savings rate — jo zyada ho. Sarkar ka matching share kisi bhi haal mein wapas nahi milta, wo pension fund mein hi rehta hai. Detail hamari withdrawal rules guide mein hai.',
   },
   {
     q: 'Registration ke liye bank account zaroori hai?',
-    a: 'Haan, aur ye sabse important step hai. Bank account Aadhaar se seeded (NPCI link) hona chahiye, tabhi monthly paisa katega aur pension seedha aayegi.',
+    a: 'Haan. Account Aadhaar se seeded (NPCI-linked) hona chahiye — contribution isi account se auto-debit hota hai aur 60 ke baad pension bhi isi mein aati hai.',
   },
   {
     q: 'Agar kisan ki mrityu ho jaye toh pension kisko milegi?',
-    a: 'Spouse ko option milta hai continue karne ka — chahe pension shuru hone se pehle dehant ho ya baad mein. Wo aage ka contribution dekar apna pension le sakte hain.',
+    a: 'Do alag situations hain. Pension shuru hone se pehle (60 se pehle) dehant ho jaye — spouse ke paas do raste hain: bacha hua contribution dekar scheme continue karein, ya jama contribution interest ke saath lekar exit karein. Spouse na ho toh ye paisa nominee ko jaata hai. 60 ke baad dehant ho — spouse ko ₹1,500/mahina (50%) family pension milti hai. Ye family pension sirf spouse ke liye hai. (Source: PIB, Sept 2024 release.)',
   },
   {
     q: 'CSC center par registration karwane mein kitna kharcha aata hai?',
-    a: 'Registration khud free hai. Bas pehla monthly contribution dena hota hai — ₹55 se ₹200 ke beech, umar ke hisaab se. Isse zyada koi maange toh samajh jayein kuch gadbad hai.',
+    a: 'Registration free hai — dena sirf pehla monthly contribution hota hai (₹55–₹200, umar ke hisaab se). Alag se "processing fee" maangna galat hai; aisa ho toh CSC helpline 1800-3000-3468 par shikayat karein.',
   },
   {
-    q: 'Kya pension direct bank account mein aata hai?',
-    a: '60 saal poore hote hi ₹3,000 har mahine seedha aapke linked bank account mein DBT ke zariye pahunch jate hain.',
+    q: 'Kya PM Kisan ki ₹2,000 wali kist se Maandhan ka contribution kat sakta hai?',
+    a: 'Haan, ye official option hai — PM-KISAN beneficiary apni samman nidhi se contribution auto-debit karwane ki consent de sakta hai. Ye poori tarah optional hai; bina aapke likhit consent ke kist se paisa nahi kat sakta.',
+  },
+  {
+    q: 'Kya pension direct bank account mein aati hai?',
+    a: '60 poore hote hi ₹3,000 har mahine DBT ke zariye usi Aadhaar-seeded account mein aati hai jo enrollment ke waqt diya tha.',
   },
 ];
 
@@ -70,7 +75,6 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
               "inLanguage": "hi-IN",
               "keywords": "PM Kisan Maandhan Registration, Kisan Pension Scheme, Maandhan Yojana, PM-KMY 2026, CSC Registration, Kisan Maandhan Documents, ₹3000 Pension, PM Kisan Maandhan 2026",
               "articleSection": "Agriculture & Pension Schemes",
-              "wordCount": 1200,
               "author": { 
                 "@type": "Organization", 
                 "name": "KisanStatus Team", 
@@ -141,7 +145,7 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
 
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-r-xl">
           <p className="text-sm md:text-base text-blue-900 dark:text-blue-100 leading-relaxed font-medium">
-            <strong>Seedha Jawab:</strong> Umar 18-40 saal, zameen 2 hectare se kam — bas itni si eligibility chahiye. Nazdiki CSC center jayein ya online portal se apply karein. Shuruwat ₹55 mahina se hoti hai, aur 60 ke baad ₹3,000 mahina pension milti hai.
+            <strong>Seedha Jawab:</strong> Umar 18–40 saal, kheti ki zameen 2 hectare tak, aur naam state land records mein (01.08.2019 ki cut-off ke hisaab se) — ye teen conditions puri hain toh CSC center ya maandhan.in portal se enroll ho sakte hain. Contribution umar ke hisaab se ₹55–₹200 mahina; 60 ke baad ₹3,000 mahina assured pension. Scheme ka fund LIC manage karti hai aur sarkar aapke har rupaye par utna hi rupaya khud daalti hai.
           </p>
         </div>
 
@@ -151,7 +155,10 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
             Kheti mein mehnat toh sabko pata hai. Lekin jab umar dhalne lagti hai aur sharir pehle jaisa saath nahi deta, tab income ka zariya bhi kamzor pad jata hai. Isi wajah se sarkar ne chhote aur seemant kisanon ke liye ye pension scheme laayi.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Khaas baat ye hai ki jeb se bohot kam kharch hota hai — baaki hissa central aur state government milkar bharti hai. Natija seedha hai: 60 ke baad har mahine ₹3,000 fixed pension khaate mein. Eligibility aur documents ki poori detail hamari <Link href="/maandhan/pm-kisan-maandhan-eligibility-documents" className="underline text-blue-600 dark:text-blue-400 font-medium">alag guide</Link> mein mil jayegi.
+            Iska official naam Pradhan Mantri Kisan Maandhan Yojana (PM-KMY) hai — 12 September 2019 ko launch hui, voluntary aur contributory pension scheme. Mechanism simple hai: aap har mahine ek fixed amount pension fund mein daalte hain, <strong>Central Government exactly utna hi amount apni taraf se match karti hai</strong>, aur fund ko LIC (Life Insurance Corporation) manage karti hai. 60 ke baad ₹3,000 mahina assured pension. Ye saari baatein <a href="https://pib.gov.in/PressReleasePage.aspx?PRID=2053142" {...EXTERNAL_LINK_PROPS} className="underline text-blue-600 dark:text-blue-400">PIB ke September 2024 release</a> aur <a href="https://maandhan.in" {...EXTERNAL_LINK_PROPS} className="underline text-blue-600 dark:text-blue-400">maandhan.in</a> par documented hain. Eligibility aur documents ki poori detail hamari <Link href="/maandhan/pm-kisan-maandhan-eligibility-documents" className="underline text-blue-600 dark:text-blue-400 font-medium">alag guide</Link> mein mil jayegi.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Scale ka andaza: PIB ke usi release ke mutabik August 2024 tak <strong>23.38 lakh kisan</strong> is scheme mein enroll ho chuke the — sabse zyada Bihar (3.4 lakh+) aur Jharkhand (2.5 lakh+) se. Yani scheme chal rahi hai, naye enrollment ho rahe hain.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl text-center">
@@ -172,7 +179,7 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
         <section className="mb-8">
           <SH>Pehle 30 Second Ka Self-Check</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            CSC jaane se pehle teen baatein khud confirm karein: (1) umar 18–40 ke beech hai, (2) zameen 2 hectare se kam hai, (3) naam PM Kisan list mein hai. Teeno haan hain to hi aage badhein — full checklist, exclusions aur joint-family zameen wale case ki detail alag guide mein hai:
+            CSC jaane se pehle chaar baatein khud confirm karein: (1) umar 18–40 ke beech hai, (2) kheti ki zameen 2 hectare tak hai, (3) aapka naam state/UT ke land records mein <strong>01.08.2019 ki cut-off date</strong> ke hisaab se darj hai — ye scheme ki official condition hai, sirf zameen hona kaafi nahi, aur (4) aap income tax payer nahi hain aur NPS / EPFO / ESIC jaise kisi statutory pension scheme ke member nahi hain — ye sab exclusion list mein hain aur enrollment ke waqt nahi, verification ke waqt pakde jaate hain. Full checklist, exclusions aur joint-family zameen wale case ki detail alag guide mein hai:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Link href="/maandhan/pm-kisan-maandhan-eligibility-documents" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">✅ Poora Eligibility Self-Check + Exclusion List →</Link>
@@ -224,14 +231,17 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
             </p>
           </div>
 
-          <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">Tarika 2: Online Portal / App Se</h3>
+          <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">Tarika 2: maandhan.in Se Self-Enrollment</h3>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Official portal <a href="https://maandhan.in" {...EXTERNAL_LINK_PROPS} className="underline text-blue-600 dark:text-blue-400 font-medium">maandhan.in</a> par self-enrollment ka option hai. Ek honest note: portal ka exact screen flow time ke saath update hota rehta hai, isliye neeche ka sequence broad steps hain — button ke naam thode alag dikh sakte hain.
+          </p>
           <StepList>
-            <SI n={1}>Google Play Store se "PM Kisan Maandhan App" download karein.</SI>
-            <SI n={2}>App khol kar "New Registration" par click karein. App nahi mile toh pmkisan.gov.in par jayein.</SI>
-            <SI n={3}>Aadhaar number daalein aur OTP verify karein. OTP nahi aa raha toh mobile number pehle link karein.</SI>
-            <SI n={4}>Zameen ki details (Khasra/Khatauni number) aur bank account ki jankari bharein.</SI>
-            <SI n={5}>Monthly contribution select karke UPI se payment karein.</SI>
-            <SI n={6}>Form submit karein — confirmation SMS aayega, isko save kar lein.</SI>
+            <SI n={1}>maandhan.in kholein aur Self Enrollment / Login option chunein.</SI>
+            <SI n={2}>Aadhaar-linked mobile number daalein aur OTP verify karein. OTP nahi aa raha toh pehle Aadhaar mein mobile update karwana padega — ye portal par nahi hota, Aadhaar Seva Kendra par hota hai.</SI>
+            <SI n={3}>Scheme list mein se PM-KMY (Kisan Maandhan) select karein.</SI>
+            <SI n={4}>Personal details, zameen ki details (Khasra/Khatauni) aur Aadhaar-seeded bank account ki jankari bharein.</SI>
+            <SI n={5}>Auto-debit mandate confirm karein — aage ke saare contribution isi account se har mahine khud katenge.</SI>
+            <SI n={6}>Enrollment complete hone par confirmation aata hai — Kisan Pension Account Number (KPAN) note karke save kar lein, aage status check aur card download isi se hoga.</SI>
           </StepList>
 
           <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
@@ -253,12 +263,67 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
         <section className="mb-8">
           <SH>Kitna Dena Hoga? (Sirf Aapki Umar Par Depend)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Registration ke waqt operator jo amount bataye, use khud verify kar sakte hain — 18 saal pe ₹55/mahina se lekar 40 saal pe ₹200/mahina tak. Har single age ka official figure aur total-till-60 ka hisaab in do pages par hai:
+            Slab entry age se fix hota hai: 18 saal par ₹55/mahina, 40 saal par ₹200/mahina — aur sarkar har mahine utna hi apni taraf se daalti hai. Ek simple hisaab (official slab ke inputs se, khud calculate kiya gaya): 18 saal ki umar mein judne wala kisan 60 tak ₹55 × 12 mahine × 42 saal = <strong>₹27,720</strong> apni jeb se daalta hai — aur 60 ke baad pension ke pehle hi saal mein ₹36,000 milte hain. 40 par judne wala ₹200 × 12 × 20 = ₹48,000 daalta hai. Isi liye jaldi judna sasta padta hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Registration ke waqt operator jo amount bataye, use khud verify kar sakte hain. Har single age ka official figure aur total-till-60 ka hisaab in do pages par hai:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Link href="/maandhan/pm-kisan-maandhan-age-wise-contribution-chart-2026" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">📊 Age-Wise Chart (Har Umar Ka Figure) →</Link>
             <Link href="/maandhan/pm-kisan-maandhan-pension-calculator" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">🧮 Pension Calculator Guide →</Link>
           </div>
+        </section>
+
+        <section className="mb-8">
+          <SH>PM Kisan Ki Kist Se Auto-Contribution Ka Option</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Agar aap PM-KISAN (₹6,000 saalana) ke beneficiary hain, toh scheme ek suvidha deti hai: Maandhan ka monthly contribution seedha aapki PM-KISAN samman nidhi se auto-debit ho sakta hai — jeb se alag paisa nikalne ki zaroorat nahi. Do baatein saaf samajh lein:
+          </p>
+          <ul className="list-disc list-inside text-sm text-[var(--color-text-muted)] leading-relaxed mb-4 space-y-2">
+            <li>Ye <strong>100% optional</strong> hai — enrollment ke waqt (ya baad mein) iska alag consent form bharna hota hai. Bina aapki likhit sahmati ke PM-KISAN ki kist se ek rupaya nahi kat sakta.</li>
+            <li>Consent dene ke baad contribution kist aane par adjust hota hai — beech mein kist ruk jaye (eKYC pending, land seeding issue) toh contribution bhi affect ho sakta hai, isliye kist ka status regular check karte rahein.</li>
+          </ul>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Auto-debit fail hone par kya hota hai aur regularize kaise karein — iska alag detailed guide hai: <Link href="/maandhan/auto-debit-fail-hone-par-regularization-kaise-karein" className="underline text-blue-600 dark:text-blue-400 font-medium">Auto-Debit Fail Regularization Guide</Link>.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Beech Mein Chhodna Pade Toh? (Exit &amp; Family Pension Rules)</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Register karne se pehle ye jaanna zaroori hai ki paisa nikalne ke rules kya hain — kyunki ye 20–42 saal ka commitment hai. Scheme ke exit provisions (source: <a href="https://pib.gov.in/PressReleasePage.aspx?PRID=2053142" {...EXTERNAL_LINK_PROPS} className="underline text-blue-600 dark:text-blue-400">PIB release</a> + <a href="https://maandhan.in" {...EXTERNAL_LINK_PROPS} className="underline text-blue-600 dark:text-blue-400">maandhan.in</a> scheme details):
+          </p>
+          <div className="overflow-x-auto mb-4">
+            <table className="w-full text-sm border border-[var(--color-border)] rounded-xl overflow-hidden">
+              <thead>
+                <tr className="bg-[var(--color-bg-alt)] text-left">
+                  <th className="p-3 font-black text-[var(--color-text)]">Situation</th>
+                  <th className="p-3 font-black text-[var(--color-text)]">Kya milta hai</th>
+                </tr>
+              </thead>
+              <tbody className="text-[var(--color-text-muted)]">
+                <tr className="border-t border-[var(--color-border)]">
+                  <td className="p-3 font-semibold">10 saal se pehle exit</td>
+                  <td className="p-3">Sirf aapka apna contribution + savings-bank rate ka interest</td>
+                </tr>
+                <tr className="border-t border-[var(--color-border)] bg-[var(--color-bg-alt)]">
+                  <td className="p-3 font-semibold">10 saal baad, 60 se pehle exit</td>
+                  <td className="p-3">Apna contribution + fund ka actually earned interest ya savings rate (jo zyada ho)</td>
+                </tr>
+                <tr className="border-t border-[var(--color-border)]">
+                  <td className="p-3 font-semibold">60 se pehle dehant</td>
+                  <td className="p-3">Spouse scheme continue kar sakta hai (bacha contribution dekar) ya contribution + interest lekar exit. Spouse na ho toh nominee ko</td>
+                </tr>
+                <tr className="border-t border-[var(--color-border)] bg-[var(--color-bg-alt)]">
+                  <td className="p-3 font-semibold">60 ke baad dehant</td>
+                  <td className="p-3">Spouse ko ₹1,500/mahina (50%) family pension — sirf spouse ke liye. Dono ke baad corpus pension fund mein wapas</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <WB>
+            <strong>Sabse zaroori line:</strong> Sarkar ka matching contribution kisi bhi exit mein aapko wapas nahi milta — wo pension fund mein hi rehta hai. Wapas sirf aapka apna daala hua paisa (+ interest) aata hai. Poori detail: <Link href="/maandhan/pm-kisan-maandhan-withdrawal-refund-rules" className="underline font-medium">Withdrawal &amp; Refund Rules Guide</Link>.
+          </WB>
         </section>
 
         <section className="mb-8">
@@ -339,7 +404,7 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Seedhi Baat</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
-            Umar 40 se kam hai aur zameen 2 hectare ke andar hai, toh soch-vichar mein zyada waqt mat lagayein. Jitni deri karenge, umar utni badhegi aur monthly contribution bhi. Documents ready karein aur is hafte hi apply kar lein.
+            Umar 40 se kam hai, zameen 2 hectare ke andar hai aur naam land records mein hai — toh deri ka seedha nuksan hai: har birthday ke saath monthly slab badh jaata hai (18 par ₹55, 40 par ₹200). Pehle exit rules upar wali table se samajh lein, phir documents lekar CSC jayein ya maandhan.in se khud enroll karein. Aur ek scheme ka niyam yaad rakhein: NPS/EPFO/ESIC member ya income tax payer hain toh ye scheme aapke liye nahi hai — galat enrollment baad mein reject hota hai.
           </p>
         </div>
 
