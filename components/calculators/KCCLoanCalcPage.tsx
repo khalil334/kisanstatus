@@ -45,34 +45,10 @@ export default function KCCLoanCalcPage() {
     : 0;
   const effectiveCost = totalPayable - subsidy;
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Calculator', item: `${SITE_URL}/calculator` },
-      { '@type': 'ListItem', position: 3, name: 'KCC Loan EMI', item: `${SITE_URL}/calculator/kcc-loan-emi` },
-    ],
-  };
 
-  const schema = {
-    '@context':'https://schema.org',
-    '@type':'WebApplication',
-    name:'KCC Loan EMI Calculator 2026 — Kisan Credit Card Loan EMI Hindi',
-    url:`${SITE_URL}/calculator/kcc-loan-emi`,
-    applicationCategory:'FinanceApplication',
-    description:'Kisan Credit Card loan ki monthly EMI calculate karo. Interest rate, total repayment, government subsidy sab jaano. Free tool, koi registration nahi.',
-    offers:{'@type':'Offer',price:'0',priceCurrency:'INR'},
-    author: { '@type': 'Organization', name: AUTHOR_NAME, url: AUTHOR_URL },
-    publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
-    datePublished: PUBLISHED,
-    dateModified: MODIFIED,
-  };
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(breadcrumbSchema)}}/>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/>
       
       <CalcHeader
         emoji="🏦"

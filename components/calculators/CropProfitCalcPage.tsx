@@ -23,24 +23,9 @@ export default function CropProfitCalcPage() {
   const isProfit = profit>=0;
   const roi      = totalCost>0 ? (profit/totalCost)*100 : 0;
 
-  const schema = {
-    '@context':'https://schema.org',
-    '@type':'WebApplication',
-    name:'Kheti Ka Munafa Calculator 2026 — Fasal Profit Loss Hindi',
-    url:'https://kisanstatus.com/calculator/crop-profit',
-    applicationCategory:'FinanceApplication',
-    description:'Kheti mein kitna profit ya loss hua — jaano turant. Beej, khad, mazdoori, sinchai — sab kharcha dalo aur net munafa nikalo. Free tool, koi registration nahi.',
-    offers:{'@type':'Offer',price:'0',priceCurrency:'INR'},
-    aggregateRating:{
-      '@type':'AggregateRating',
-      ratingValue:'4.7',
-      ratingCount:'892'
-    }
-  };
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/>
       
       <CalcHeader
         emoji="📊"
