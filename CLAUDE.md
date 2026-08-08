@@ -23,7 +23,7 @@
 ├─────────────────────────────────────────────────────────────────────────────┤
 │  🟡 MEDIUM BUGS                                                             │
 │                                                                             │
-│  4. X-Frame-Options Mismatch                                                │
+│  4. ✅ FIXED — X-Frame-Options Mismatch                                                │
 │     → Location: next.config.js vs Live Headers                              │
 │     → Problem: Config mein 'DENY' hai, lekin live site 'SAMEORIGIN' bhej   │
 │       raha hai (Vercel ya koi middleware override kar raha hai)             │
@@ -84,3 +84,10 @@
   of truth for Article/WebPage/BreadcrumbList.
   Verified in production build: every article page now has exactly 1× Article,
   1× WebPage, 1× BreadcrumbList, ≤1× FAQPage (3-5 schemas total — ideal range).
+
+- 2026-08-08 — Bug #4 FIXED (branch fix/bug4-xframe-options):
+  Root cause: vercel.json sets X-Frame-Options: SAMEORIGIN at the edge (wins on
+  the live site) while next.config.js declared DENY — config mismatch, no
+  functional effect but confusing/inconsistent.
+  Fix: aligned next.config.js to SAMEORIGIN, matching vercel.json and the CSP
+  `frame-ancestors 'self'` directive already in place.
