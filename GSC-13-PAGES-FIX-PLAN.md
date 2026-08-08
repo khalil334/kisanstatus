@@ -1,118 +1,263 @@
 # GSC "Discovered – currently not indexed" Fix Plan — 13 Pages
 
-Source: GSC Coverage Drilldown export (2026-08-08), issue = **Discovered – currently not indexed**.
-Goal per page: 2000+ words of genuinely helpful, unique, humanized Hinglish content with real stories
-and official source links. **Images and image paths stay unchanged.**
+**Rev 2 (this revision).** Source: GSC Coverage drilldown export, issue = **Discovered – currently not indexed**.
 
-Yeh planning file hai. Har page ki apni entry hai: current problem → target word count →
-new sections to add → keywords to add → source links to cite → style directive (har article
-alag style, koi uniform pattern nahi).
+Goal per page: **YMYL-grade, E-E-A-T backed, genuinely helpful Hinglish content** jo Google
+crawl karke index kare aur AdSense policy (specially "Scaled content abuse" aur
+"Low value content") clear kare. **Images aur image paths unchanged rehte hain.**
+
+Yeh planning file hai — code change nahi. Har page ki apni entry hai: current problem →
+kya add hona hai → keywords → source links. User ek-ek page ka rewrite alag branch/PR me
+karwayega. **Koi auto-merge, koi auto-publish nahi.**
 
 ---
 
-## Global rules (apply to EVERY page)
+## 0. Rev 2 me kya badla (padhna zaroori hai)
 
-1. **No uniform structure.** Har article ka opening, section order, tone alag ho:
-   - kisi me pehle ek real kisan ki story, kisi me direct problem-solution, kisi me sawal se shuru,
-     kisi me news/update se shuru. Section headings ki length aur style vary karo.
-2. **AI-pattern avoid list (strict):**
-   - Same-length paragraphs — mix karo: 1-line, 3-line, 6-line paras.
-   - AI filler words/phrases avoid: "in today's fast-paced world", "delve", "landscape",
-     "seamless", "comprehensive guide", "unlock", "game-changer", "it's important to note",
-     "furthermore/moreover" chains, "conclusion" heading with generic summary.
-   - Har section me 3-item bullet lists ka pattern mat repeat karo.
-   - Rhetorical question + answer ka same rhythm har section me mat use karo.
-   - Em-dash overuse avoid.
-3. **Real stories:** har article me kam se kam 1–2 real/realistic ground-level anecdote
-   (naam + district level detail, e.g. "Sitapur ke Ramesh Yadav ko..."), + jahan possible ho
-   real news events cite karo with source link (PIB, The Hindu, Dainik Bhaskar, Amar Ujala etc.).
-   **Koi fabricated statistic nahi** — sirf verifiable numbers with source link.
-4. **Source links (external, rel="noopener"):** pmkisan.gov.in, maandhan.in, pmksy.gov.in,
-   agriwelfare.gov.in, pib.gov.in, RBI/NABARD circulars, state agri portals. Har major claim
-   ke paas link.
-5. **Images/paths unchanged.** Naye `<Image>` add nahi karne, existing `src` paths touch nahi karne.
-   Alt text improve kar sakte hain (path nahi).
-6. **Internal links:** har article me 4–6 contextual internal links (existing slugs only).
-7. **Word count:** 2000+ visible prose words (FAQ schema text count nahi hota — body prose me hi 2000+).
-8. **E-E-A-T:** first-hand experience signals — "maine khud portal par check kiya",
-   date-stamped observations, screenshots ka reference (existing images), limitations honestly bataao
-   ("ye process UP me alag hai, Bihar me alag").
+Rev 1 me ek rule tha: *"har article me 1–2 real/realistic ground-level anecdote (naam +
+district level detail, e.g. 'Sitapur ke Ramesh Yadav ko...')"*.
+
+**Ye rule delete kar diya gaya hai.** Wajah:
+
+- Aisi "realistic" story actually **fabricated** hoti hai. Ye Google ki
+  spam policy (`scaled content abuse`, `misleading content`) aur AdSense
+  publisher policy dono ke against hai, aur YMYL topic (paisa + government
+  benefit) me trust ko sabse zyada nuksan pahunchati hai.
+- Fake anecdote se index bhi nahi hota — jo cheez index karati hai wo hai
+  **verifiable, first-hand, source-linked information**.
+
+**Naya replacement rule → "Evidence block" (neeche §2 dekho).** Story ki jagah ab
+process-level, verifiable observation aati hai: portal par kya actually dikha, kis date
+par, kaunse error par kya hua, kaunsa official document kya kehta hai.
+
+**Rev 1 ke jo cheezein ban ho gayi hain:**
+
+| Ban | Kyun |
+|---|---|
+| Naam + district wale invented kisan cases | fabricated experience = policy violation |
+| "target 2,200+ words" type word quota | padding paida karta hai; AdSense low-value flag |
+| "har article me 4–6 internal links" jaisa fixed quota | unnatural link pattern |
+| Paragraph rhythm ka artificial mixing (1-line/3-line/6-line ka formula) | ye bhi ek AI pattern hai, bas doosri shakal me |
+| Invented statistic, invented subsidy %, invented timeline | YMYL me sabse bada risk |
+
+**Remediation (naya kaam, Rev 2 me add):**
+`components/articles/KisanCreditCardOnlineApply2026.tsx` me Rev 1 ke tehat ek invented case
+add ho chuka hai ("Sitapur (UP) ke ek 2-acre wale kisan ka case", ~line 213 par
+"real journey / timeline" section). Isko **process timeline** me convert karna hai —
+naam/district/persona hataao, "Din 1 → Din 16" ka bank process retain karo aur usko
+official source (bank KCC policy / agriwelfare KCC circular) se attribute karo.
+Ye page-1 rewrite ke saath hi thik hoga. Details §A.1 me.
+
+---
+
+## 1. Global content rules (apply to EVERY page)
+
+1. **Sirf verifiable claims.** Har number (subsidy %, pension amount, interest rate, fee,
+   deadline, contribution slab) ke saath ek official source link. Agar source nahi mila →
+   number likho hi nahi. "Approx", "around", "lagbhag" se guess ko chhupana bhi allowed nahi.
+2. **Koi fabricated person, story, testimonial, screenshot-claim ya case study nahi.**
+   Experience signal sirf usi cheez se aayega jo actually verify ki gayi ho (§2).
+3. **Length demand se nahi, coverage se aayegi.** Rule: *ek reader ka sawal poora resolve ho —
+   entry condition, exact steps, failure modes, escalation path.* Jo page us test me pass ho
+   gaya, use aur lamba karne ki zaroorat nahi. Jo fail ho raha hai, wahan missing
+   sub-topic add karo (§A–§D me per page list hai) — filler nahi.
+4. **Freshness honestly.** `modifiedTime` sirf tab badlo jab content actually change ho.
+   Jhoothi date = trust loss + GSC me "dateModified" mismatch.
+5. **Uncertainty likho.** "Ye process UP me X hai, Bihar portal me alag flow hai — apne state
+   portal par confirm karein." YMYL me limitation batana E-E-A-T ka plus point hai, minus nahi.
+6. **Images/paths unchanged.** Naya `<Image>` nahi, existing `src` touch nahi. Alt text
+   improve kar sakte hain.
+7. **Internal links tabhi jab contextually zaroori** — jahan reader ka next logical sawal
+   doosre article me answer ho. Existing slugs only. Koi minimum quota nahi.
+8. **External links:** `EXTERNAL_LINK_PROPS` use karo (already `lib/site-config.ts` me:
+   `target=_blank`, `rel="noopener noreferrer nofollow"`).
+9. **Har page par disclaimer visible** — `Disclaimer()` from `components/ArticleShared.tsx`
+   (DISCLAIMER_TEXT already saaf likhta hai ki site government-affiliated nahi hai). YMYL
+   ke liye ye non-negotiable hai.
+
+---
+
+## 2. Evidence block (story ka replacement)
+
+Har page par kam se kam ek block jo **actually verify ki gayi** cheez batata hai. Teen
+allowed shapes — jo bhi honestly available ho:
+
+**Shape A — Portal walkthrough (verified):**
+> "Portal par eKYC tab kholne par teen option dikhte hain: OTP, Face Auth, CSC.
+> OTP option Aadhaar-linked number par jaata hai — agar number purana hai to yahan
+> koi error message nahi aata, OTP simply nahi pahunchta. Verified on `pmkisan.gov.in`
+> (checked <DATE>)."
+
+Rule: sirf wahi likho jo screen par actually hai — labels, dropdown order, error text.
+Date daalo. Portal UI badle to date se reader ko pata chalega.
+
+**Shape B — Document-backed rule:**
+> "Interest subvention: 7% base, 3% prompt-repayment incentive → effective 4%.
+> [source: agriwelfare.gov.in / RBI circular link]"
+
+Rule: claim + link, ek hi saans me.
+
+**Shape C — Documented public case (attributed):**
+> "PIB ke <date> release ke mutabik eKYC saturation camps X states me chalaye gaye
+> [link]." — Ya kisi published news report ko naam + link ke saath cite karo.
+
+Rule: attribution mandatory. Bina link "news me aaya tha" allowed nahi.
+
+**Kya banned hai:** "Sitapur ke Ramesh ko 16 din me loan mila." (kaun Ramesh? kaunsa bank?
+verify kaise hoga? → delete.)
+
+---
+
+## 3. E-E-A-T layer (site-wide, 13 pages ke bahar bhi asar)
+
+Ye 13 content pages ke saath ye trust infrastructure bhi durust hona chahiye, warna YMYL
+pages akele index/monetize nahi honge.
+
+| Item | Current state (repo) | Action |
+|---|---|---|
+| Author identity | `AUTHOR_NAME = 'KisanStatus Team'`, `AUTHOR_BIO` generic (`lib/site-config.ts`) | Site par jo real author/editor content aur bio maujood hai use `site-config` + `AuthorBox` me daalo. Schema me `Organization` ki jagah named `Person` author (with `/about#author` @id) tab hi use karo jab real person publicly named ho. |
+| AuthorBox | `components/ArticleShared.tsx` → sirf 🌾 emoji + "PM Kisan Experts & Annadata Advocates" | Real credential line + "Last updated" ke saath "kis cheez par kaam kiya" — vague expert claim hataao. |
+| Reviewed-by | absent | Optional but strong for YMYL: `reviewedBy` field, sirf agar real reviewer ho. |
+| About page | `app/about/page.tsx` — solid; `STATS` me "12 Cr+ Kisan Labhanvit" scheme ka number hai, site ka nahi | Un stats ko clearly scheme-level label + source link do, ya hata do. Ambiguity AdSense review me misleading lagti hai. |
+| Contact | `SUPPORT_EMAIL`, `HELPLINE`, `OFFICIAL_EMAIL` present | `app/contact/page.tsx` par real reachable channel + response expectation. Helpline numbers ko clearly "official govt helpline, humara nahi" label karo. |
+| Policy pages | privacy-policy, terms, disclaimer sab exist | Editorial / correction policy add karo: content kaise verify hota hai, correction kaise request karein. YMYL trust signal + AdSense friendly. |
+| Ads | `public/ads.txt` exists | Content approve hone tak ad density low rakho; thin pages par ads = "low value content" flag. |
+
+---
+
+## 4. GSC indexing side (content se alag, parallel)
+
+"Discovered – currently not indexed" ka matlab: Google ko URL pata hai, crawl budget /
+perceived value ki wajah se crawl nahi kiya. Content fix zaroori hai, lekin ye technical
+checks bhi ek baar verify karo:
+
+1. `app/sitemap.ts` — ye 13 URLs sitemap me hain? `lastmod` real hai?
+2. `app/robots.ts` — koi accidental disallow nahi.
+3. Canonical — har page ka self-canonical (article template `alternates.canonical` set karta hai; 13 URLs par spot-check).
+4. Internal discovery — hub/category pages se in 13 URLs tak ek natural path ho (orphan URL discovered-not-indexed me hi atka rehta hai). §C aur §D ka kaam yahi solve karta hai.
+5. Sitemap me low-value/duplicate URLs ki bheed ho to crawl budget bat jaata hai — sitemap size ek baar review karo.
+6. Har rewrite merge hone ke baad: GSC → URL Inspection → **Request Indexing** (manual, user karega).
+
+---
+
+## 5. Measured page size + priority order
+
+Rev 1 ke word-count andaaze stale the. Neeche actual measured prose (repo `main`,
+JSX text nodes + long string literals — FAQ text included, so real visible prose isse
+thoda kam hai; ranking ke liye kaafi accurate):
+
+| Page / file | Measured prose | Verdict |
+|---|---|---|
+| `app/rajya-yojana/page.tsx` | **56** | empty shell — highest upside |
+| `app/maandhan/page.tsx` | **75** | empty shell — highest upside |
+| `app/articles/category/[category]/page.tsx` (shared, 3 categories) | **748** total template | per-category intro absent |
+| `components/articles/kisanguides/DripSprinkler.tsx` | **1,064** | thinnest real article |
+| `.../maandhan/PmKisanMaandhanRegistration2026.tsx` | 2,198 | mid |
+| `.../maandhan/PmKisanMaandhanStatusCheckOnline.tsx` | 2,403 | mid |
+| `components/articles/PmKisanVillageWiseListPdfDownload.tsx` | 2,490 | mid (Rev 1 ne isko "sabse thin" kaha tha — **galat**) |
+| `components/articles/PmKisanEkycOnline2026.tsx` | 3,725 | length fine, depth/differentiation ka issue |
+| `components/articles/PmKisanMobileNumberChangeUpdate.tsx` | 4,198 | length fine |
+| `.../maandhan/kisan-pension-card-download.tsx` | 5,369 | length fine |
+| `components/articles/KisanCreditCardOnlineApply2026.tsx` | 5,936 | longest — aur yahin invented case hai |
+
+**Isse do saaf nateeje:**
+
+1. **Length in 13 pages ka main problem nahi hai.** 8 of 11 files pehle se substantial hain
+   aur phir bhi "Discovered – currently not indexed" me atke hain. Matlab bottleneck
+   **crawl-value + discovery** hai, not word count. Isliye Rev 2 me word quotas hataye gaye —
+   unko chase karna galat direction thi.
+2. **Sabse zyada return** un 5 shells se aayega jo actually khaali hain
+   (`/rajya-yojana` 56 words, `/maandhan` 75 words, 3 category intros) — kyunki wahi pages
+   baaki 8 articles ke liye internal discovery path bhi bante hain (§4.4 orphan-URL issue).
+
+**Recommended order:**
+
+| # | Kaam | Kyun pehle |
+|---|---|---|
+| 1 | §D hub pages (`/maandhan`, `/rajya-yojana`) | 56/75 words = clear low-value; ye theek hone se doosre pages ko crawl path milta hai |
+| 2 | §C category intros (loan, pashupalan, agri-business) | same discovery logic, ek shared template edit |
+| 3 | §A.1 KCC invented-case remediation | policy risk, live hai — content add nahi, correction hai |
+| 4 | §A.5 DripSprinkler (1,064) | thinnest article + paisa-decision page |
+| 5 | §B.2 Maandhan Registration (2,198) | exit rules/family pension = high-demand gap |
+| 6 | Baaki (B.3, A.4, A.2, A.3, B.1) | depth + differentiation pass, length nahi |
 
 ---
 
 ## A. Article pages (5)
 
-### 1. `/articles/KisanCreditCardOnlineApply2026` ✅ DONE (2026-08-08, branch `fix-1-kcc-apply-2026`)
-File: `components/articles/KisanCreditCardOnlineApply2026.tsx` (~1,050 → ~2,040 prose words)
+### A.1 `/articles/KisanCreditCardOnlineApply2026`
+File: `components/articles/KisanCreditCardOnlineApply2026.tsx` (659 lines, **5,936 prose words** — 13 me sabse lamba)
 
-**Kya kiya:**
-- 5 naye sections: real kisan timeline (Sitapur case, Din 1→Din 16), bank comparison table
-  (SBI/PNB/RRB/Cooperative), KCC-AH pashupalan section, CIBIL reality section, renewal/enhancement.
-- Worked interest example (₹1 lakh, 7% − 3% PRI math) with agriwelfare.gov.in + jansamarth.in +
-  dahd.gov.in source links.
-- 2 naye FAQs (limit enhancement, Jansamarth vs branch).
-- Keywords added in `lib/articles-data.ts` (7 new), `modifiedTime` → 2026-08-08, readingTime 9→14.
-- MODIFIED date in component → 2026-08-08. Images/paths untouched (5 paths verified same).
-- Internal links added: sbi-dairy-loan-interest-rate, pmfby-premium calculator.
+**Status:** Rev 1 me expand ho chuka (commit `f1eaa26`, PR #128), **lekin Rev 2 remediation pending.**
+Note: ye page already sabse lamba hai aur phir bhi index nahi hua — proof ki length problem nahi thi.
 
-**Problem:** Structure achhi hai lekin depth kam. Bank-level ground reality thin hai.
+**Remediation (must):**
+- Invented case remove karo: "Sitapur (UP) ke ek 2-acre wale kisan" wala framing (~line 213,
+  "Din 1 → Din 16" timeline section). Timeline **structure rakho**, persona hataao →
+  heading ko process timeline banao ("Application se disbursal tak: bank ke andar kya hota hai"),
+  aur har step ko bank/govt process document se attribute karo. Jo din-count verify na ho
+  wo "bank ke SLA par depend karta hai" likho, fixed number nahi.
+- Baaki claims audit: bank comparison table (SBI/PNB/RRB/Cooperative) me jo bhi processing
+  time / margin numbers hain — har cell ke peeche source hona chahiye. Unsourced cell →
+  "bank se confirm karein" likho.
+- Interest math (7% − 3% = 4%) ka source link verify ho (agriwelfare / RBI subvention circular).
 
-**Add these sections (order/style apni marzi se, uniform mat rakho):**
-- Real story: ek kisan ki KCC journey — application se disbursal tak timeline (kis din kya hua).
-- Bank-wise comparison: SBI vs PNB vs Gramin Bank — processing time, margin, ground behaviour.
-- KCC on animal husbandry / fisheries (2026 expansion) — alag limit, kaise apply.
-- Interest subvention ka exact math: 7% − 3% PRI = 4%, ek worked example ₹1 lakh loan par
-  saal bhar ka byaj rupaye me.
-- Renewal/enhancement process (3 saal baad kya hota hai).
-- CIBIL ka role — kya score chahiye, score kharab ho to kya options.
-- Jansamarth portal route vs bank branch route comparison.
+**Add (jo missing hai):**
+- CIBIL section me actual documented rule vs bank discretion ka farak.
+- Jansamarth route vs branch route — dono ke actual required documents.
 
-**Keywords to add:** `kcc loan kaise le 2026`, `kisan credit card interest rate 2026`,
-`kcc limit kaise badhaye`, `kcc renewal process`, `kcc pashupalan loan`, `kcc without cibil`,
-`kcc apply sbi online`, `किसान क्रेडिट कार्ड ब्याज दर`.
+**Keywords:** `kcc loan kaise le 2026`, `kisan credit card interest rate 2026`,
+`kcc limit kaise badhaye`, `kcc renewal process`, `kcc pashupalan loan`, `kcc apply sbi online`,
+`किसान क्रेडिट कार्ड ब्याज दर`.
 
-**Sources to cite:** pmkisan.gov.in KCC section, jansamarth.in, RBI interest subvention circular,
+**Sources:** pmkisan.gov.in KCC section, jansamarth.in, RBI interest subvention circular,
 agriwelfare.gov.in KCC saturation drive PIB release.
 
 ---
 
-### 2. `/articles/PmKisanEkycOnline2026`
-File: `components/articles/PmKisanEkycOnline2026.tsx` (~1,350 → target 2,200+)
+### A.2 `/articles/PmKisanEkycOnline2026`
+File: `components/articles/PmKisanEkycOnline2026.tsx`
 
-**Problem:** FAQ heavy, body prose thin. Error-code coverage superficial.
+**Problem:** FAQ-heavy, body prose thin, error-code coverage superficial.
 
 **Add:**
-- Opening as a scenario (not definition): kist ruk gayi, wajah eKYC — ek real case se shuru.
-- Teeno methods deep-dive with failure modes: OTP (aur uske 6 common errors), CSC biometric
-  (fingerprint fail hone par kya — buzurg kisan angle), Face Auth app (phone requirements,
-  app version issues, jinka OTP nahi aata unke liye).
-- NPCI/DBT seeding vs eKYC — do alag cheezein, confusion clear karo with diagram-in-words.
-- State-wise camps ki news (eKYC saturation camps) — PIB/news source link.
-- Error code table expand: 104, 108, demographic mismatch, "record not found" — har ek ka
-  exact fix path.
-- Story: ek mahila kisan jiske Aadhaar me naam mismatch tha — correction se payment tak.
+- Opening: definition se nahi — us situation se jisme reader aata hai (kist ruki hui hai,
+  wajah eKYC pending). Koi invented person nahi, sirf situation.
+- Teeno methods, har ek ka failure mode: OTP (Aadhaar-linked number purana hone par silent
+  fail), CSC biometric (fingerprint fail — buzurg kisan ke liye alternative), Face Auth app
+  (Android version / app version / lighting requirements).
+- **eKYC vs NPCI/DBT Aadhaar seeding** — do alag cheezein, poora confusion clear karo.
+  Ye page ka sabse valuable differentiator hai.
+- Error handling table: 104, 108, demographic mismatch, "record not found" — har ek ka
+  exact next step. Jo error ka official meaning documented nahi hai, wahan likho ki
+  ye field-observed hai aur CSC/helpline se confirm karna hoga.
+- Evidence block: Shape A — portal ke eKYC tab par actual options + labels, checked-on date.
+- Escalation: helpline + state nodal officer route (existing article link).
 
 **Keywords:** `pm kisan ekyc last date`, `pm kisan face authentication app`,
 `pm kisan ekyc status check`, `ekyc demographic mismatch fix`, `pm kisan ekyc csc charges`,
 `पीएम किसान ईकेवाईसी कैसे करें`.
 
-**Sources:** pmkisan.gov.in eKYC portal, PM-Kisan mobile app (Play Store), UIDAI face RD notes,
+**Sources:** pmkisan.gov.in eKYC portal, PM-Kisan mobile app listing, UIDAI Face RD docs,
 PIB releases on eKYC deadlines.
 
 ---
 
-### 3. `/articles/PmKisanMobileNumberChangeUpdate`
-File: `components/articles/PmKisanMobileNumberChangeUpdate.tsx` (~1,640 → target 2,100+)
+### A.3 `/articles/PmKisanMobileNumberChangeUpdate`
+File: `components/articles/PmKisanMobileNumberChangeUpdate.tsx`
 
-**Problem:** Sabse behtar page hai, lekin abhi bhi 2000 se neeche; kuch sections shallow.
+**Problem:** In 13 me sabse healthy page, par kuch sections shallow.
 
 **Add:**
-- Aadhaar me mobile update ka full sub-flow (kyunki PM Kisan OTP Aadhaar-linked number par
-  jaata hai) — Aadhaar Seva Kendra appointment, ₹50 fee, timeline.
-- Story: purana SIM band + doosre state me migration wale kisan ka case.
-- IVR/helpline experience section — 155261 par call karne par actually kya hota hai.
-- Table: kaunsa data kahan update hota hai (PM Kisan portal vs Aadhaar vs bank vs NPCI).
-- Naye number par OTP aane ke baad verification steps + kitne din me reflect hota hai.
+- Aadhaar me mobile update ka sub-flow (kyunki OTP Aadhaar-linked number par jaata hai):
+  Aadhaar Seva Kendra appointment, official fee (UIDAI page se exact figure), reflect hone
+  ka time. Fee/time UIDAI source se — apne se number nahi.
+- Migration/purana SIM band — **situation** ke roop me (persona nahi): kis case me portal se
+  update kaafi hai aur kis case me Aadhaar update pehle chahiye.
+- Table: kaunsa data kahan update hota hai — PM Kisan portal / Aadhaar / bank / NPCI. Ye table
+  is page ka core value hai.
+- Helpline reality: 155261 par kya route milta hai, kya expect karein (Shape A evidence, dated).
+- Naye number par OTP verify hone ke baad kitne din me reflect hota hai — sirf agar sourced.
 
 **Keywords:** `pm kisan me mobile number kaise jode`, `aadhaar mobile number update`,
 `pm kisan otp nahi aa raha`, `pm kisan helpline number`, `पीएम किसान मोबाइल नंबर चेंज`.
@@ -121,19 +266,23 @@ File: `components/articles/PmKisanMobileNumberChangeUpdate.tsx` (~1,640 → targ
 
 ---
 
-### 4. `/articles/PmKisanVillageWiseListPdfDownload`
-File: `components/articles/PmKisanVillageWiseListPdfDownload.tsx` (~770 → target 2,200+; sabse thin article)
+### A.4 `/articles/PmKisanVillageWiseListPdfDownload`
+File: `components/articles/PmKisanVillageWiseListPdfDownload.tsx` — **2,490 prose words.**
+(Rev 1 ne isko "~770 words, sabse thin" kaha tha — measurement se ye **galat** nikla; ab ye
+mid-tier hai aur isko length ki nahi, differentiation ki zaroorat hai.)
 
 **Add:**
-- Step-by-step with exact dropdown labels (State → District → Sub-district → Block → Village)
-  aur har step par kya galti hoti hai.
-- Beneficiary list vs beneficiary status vs village dashboard — teeno ka farak.
-- State portal walkthroughs: UP (upagripardarshi), Bihar (dbtagriculture), MP — 3 mini-guides.
-- "Naam list me hai par paisa nahi aaya" branch — FTO, payment failure reasons.
-- Story: gram panchayat me list print karke lagane wala sarpanch / CSC operator angle.
-- PDF troubleshooting expand: mobile me open na hona, server busy hours (kab try karein),
-  print settings.
-- Data privacy note — list me kya public hota hai, kya nahi.
+- Exact dropdown chain with real labels (State → District → Sub-district → Block → Village)
+  aur har step ka common galti point. Labels portal se verify karke likho (Shape A + date).
+- **Beneficiary list vs beneficiary status vs village dashboard** — teeno ka farak. Reader
+  yahi confuse hota hai; ye page ka differentiator.
+- State portal mini-walkthroughs: UP (upagripardarshi), Bihar (dbtagriculture), MP — sirf
+  wo steps jo verify ho jaayein.
+- Branch: "naam list me hai par paisa nahi aaya" → FTO generated ka matlab, payment failure
+  reasons (existing FTO article se link).
+- PDF troubleshooting: mobile me open na hona, server slow hours, print settings — jo
+  reproducible ho.
+- Data privacy note: list me kya public hota hai — ye YMYL/AdSense dono ke liye achha signal.
 
 **Keywords:** `pm kisan list 2026 village wise`, `pm kisan beneficiary list kaise dekhe`,
 `pm kisan gram panchayat list`, `pm kisan list me naam kaise check kare`,
@@ -143,19 +292,22 @@ File: `components/articles/PmKisanVillageWiseListPdfDownload.tsx` (~770 → targ
 
 ---
 
-### 5. `/articles/drip-sprinkler-irrigation-subsidy`
-File: `components/articles/kisanguides/DripSprinkler.tsx` (~1,000 → target 2,200+)
+### A.5 `/articles/drip-sprinkler-irrigation-subsidy`
+File: `components/articles/kisanguides/DripSprinkler.tsx` — **1,064 prose words, articles me sabse thin.**
 
-**Add:**
-- PMKSY "Per Drop More Crop" scheme structure — centre:state share, SC/ST/small-farmer
-  extra subsidy % (verify from pmksy.gov.in before writing — no invented percentages).
-- State-wise application portals: MP (e-krishi yantra), Maharashtra (mahadbt), UP, Rajasthan
-  (rajkisan) — kaunse state me kitni extra top-up subsidy (sirf sourced values).
-- Cost economics: 1 acre drip system ki real cost range, subsidy ke baad out-of-pocket,
-  payback period paani/bijli/yield savings se — worked example ek crop (e.g. kela ya kapas) par.
-- Empanelled vendor system — kaise verify karein vendor genuine hai, common scam pattern.
-- Story: ek kisan jisne drip lagwaya — pehle saal ka actual experience, clogging/maintenance reality.
-- Inspection & subsidy release timeline — application ke baad kya hota hai.
+**Add — har number sourced, warna skip:**
+- PMKSY "Per Drop More Crop" structure: centre:state share, SC/ST/small-farmer extra
+  subsidy %. **pmksy.gov.in / state guideline se verify karke hi likhna. Invented % zero
+  tolerance** — ye page paisa-decision page hai.
+- State portals: MP (e-krishi yantra), Maharashtra (mahadbt), UP, Rajasthan (rajkisan) —
+  top-up subsidy sirf sourced values.
+- Cost economics: 1 acre drip ki cost **range** with source, subsidy ke baad out-of-pocket,
+  payback ka worked example. Assumptions clearly label karo ("ye example X cost aur Y yield
+  assume karta hai") — assumption ko fact ki tarah pesh nahi karna.
+- Empanelled vendor verification — official empanelment list kahan milti hai, kya check karein.
+- Maintenance reality: clogging, filter cleaning, drip life — agronomy source ya manufacturer
+  spec se, invented farmer experience se nahi.
+- Inspection & subsidy release sequence.
 
 **Keywords:** `pmksy drip irrigation subsidy 2026`, `drip irrigation cost per acre`,
 `sprinkler subsidy kaise le`, `mahadbt drip subsidy`, `rajkisan drip sinchai yojana`,
@@ -165,40 +317,41 @@ File: `components/articles/kisanguides/DripSprinkler.tsx` (~1,000 → target 2,2
 
 ---
 
-## B. Maandhan article pages (3)
+## B. Maandhan pages (3)
 
-### 6. `/maandhan/pm-kisan-maandhan-pension-card-download`
-File: `components/articles/maandhan/kisan-pension-card-download.tsx` (~2,090 → uniqueness + depth pass, target 2,300+)
+### B.1 `/maandhan/pm-kisan-maandhan-pension-card-download`
+File: `components/articles/maandhan/kisan-pension-card-download.tsx`
 
-**Problem:** Word count theek hai, lekin index nahi ho raha — differentiation aur freshness chahiye.
+**Problem:** Length theek, phir bhi index nahi — differentiation missing.
 
 **Add/Change:**
-- Fresh 2026 update section top ke paas (portal UI change / LIC-CSC process update — sourced).
-- KPAN (Kisan Pension Account Number) recover karne ka detailed flow jab slip khoyi ho.
-- Story: ek beneficiary ka card download experience CSC par — kya document maanga, kitna time.
-- Cross-scheme note: PMKMY card vs APY PRAN card confusion clear karo.
-- Style pass: is file ke paragraphs uniform lag rahe hon to rhythm todo (see global rules).
+- KPAN (Kisan Pension Account Number) recover karne ka flow jab slip kho gayi ho — is page ka
+  strongest unique angle.
+- PMKMY card vs APY PRAN card confusion clear karo.
+- Card download ke liye CSC par actually kya document maanga jaata hai — sirf verified list.
+- 2026 portal/process update sirf tab likho jab maandhan.in ya LIC page se confirm ho.
+- Rev 1 ka "story" directive drop; iski jagah Shape A portal walkthrough (dated).
 
 **Keywords:** `kpan number kaise nikale`, `maandhan pension card kho gaya`,
 `pmkmy card download csc`, `मानधन पेंशन कार्ड डाउनलोड`.
 
-**Sources:** maandhan.in, LIC PMKMY page, CSC.
+**Sources:** maandhan.in, LIC PMKMY page, CSC official.
 
 ---
 
-### 7. `/maandhan/pm-kisan-maandhan-registration-2026`
-File: `components/articles/maandhan/PmKisanMaandhanRegistration2026.tsx` (~800 → target 2,200+)
+### B.2 `/maandhan/pm-kisan-maandhan-registration-2026`
+File: `components/articles/maandhan/PmKisanMaandhanRegistration2026.tsx` — **2,198 prose words.**
 
 **Add:**
-- Full contribution chart context: 18 saal = ₹55/mahina se 40 saal = ₹200/mahina — chart ke
-  aage worked lifetime math (total contribution vs total pension after 60) — sourced from maandhan.in.
-- PM Kisan installment se auto-contribution option (agar PM Kisan beneficiary hai) — kaise opt karein.
-- Exit rules & family pension: beech me chhodne par kya milta hai (sourced, ye log sabse zyada
-  poochte hain).
-- Story: ek 35-saal ke kisan ka registration + pehla auto-debit experience.
-- Self-enrollment (maandhan.in par khud) vs CSC enrollment — dono ka step-by-step, screenshots
-  reference existing images se.
+- Contribution chart ka context: entry age wise monthly contribution (exact slabs
+  maandhan.in se), + lifetime math (total contribution vs pension after 60) — calculation
+  dikhao aur inputs cite karo.
+- PM Kisan installment se auto-contribution option — kaise opt karein, kya condition.
+- **Exit rules & family pension** — beech me chhodne par kya milta hai. Sabse zyada poocha
+  jaane wala sawal, aur sourced answer se hi index-worthy banega.
 - Eligibility traps: income tax payer, EPFO/NPS/ESIC member, exempted categories.
+- Self-enrollment (maandhan.in) vs CSC enrollment — dono ka step-by-step, existing images
+  reference karo (naye images nahi).
 
 **Keywords:** `pm kisan maandhan yojana online apply`, `maandhan contribution chart`,
 `pmkmy exit rules`, `kisan pension yojana 55 rupees`, `मानधन योजना रजिस्ट्रेशन 2026`.
@@ -207,17 +360,17 @@ File: `components/articles/maandhan/PmKisanMaandhanRegistration2026.tsx` (~800 �
 
 ---
 
-### 8. `/maandhan/pm-kisan-maandhan-status-check-online`
-File: `components/articles/maandhan/PmKisanMaandhanStatusCheckOnline.tsx` (~1,060 → target 2,200+)
+### B.3 `/maandhan/pm-kisan-maandhan-status-check-online`
+File: `components/articles/maandhan/PmKisanMaandhanStatusCheckOnline.tsx`
 
 **Add:**
-- Login methods deep-dive: KPAN vs mobile number login, OTP issues.
-- Contribution history padhna sikhaao: dashboard ke har column ka matlab.
-- Missed payment / auto-debit fail hone par status me kya dikhta hai + regularization link
-  to existing article `AutoDebitFailRegularization`.
+- Login methods: KPAN vs mobile number, OTP failure modes.
+- Contribution history padhna sikhaao — dashboard ke har column ka matlab. Ye page ka core.
+- Auto-debit fail hone par status me kya dikhta hai → link existing
+  `AutoDebitFailRegularization` article.
 - Passbook/statement download flow.
-- Story: ek kisan jiska auto-debit 3 mahine fail raha — status me kaise pakda, kaise theek kiya.
-- Helpline/grievance escalation path with real contact details (sourced from maandhan.in).
+- Grievance escalation path — contact details maandhan.in se, invented nahi.
+- Evidence: Shape A dated portal walkthrough.
 
 **Keywords:** `maandhan status check kaise kare`, `pmkmy balance check`,
 `maandhan contribution history`, `kisan pension status`, `मानधन योजना स्टेटस चेक`.
@@ -228,50 +381,59 @@ File: `components/articles/maandhan/PmKisanMaandhanStatusCheckOnline.tsx` (~1,06
 
 ## C. Category pages (3) — thin listing shells
 
-Files: `app/articles/category/[category]/page.tsx` (shared template) — in 3 categories ke liye
-per-category **intro content blocks** add karne hain (render category ke hisaab se):
+Shared template: `app/articles/category/[category]/page.tsx`. Per-category **intro block**
+add karna hai (`CATEGORY_DATA` me `intro` field, ya ek `CategoryIntro` component,
+listing ke upar render).
 
-### 9. `/articles/category/loan`
-- 300–500 word unique intro: kisan credit landscape 2026 — KCC, tractor loan, Jansamarth;
-  kaunsa loan kis situation me; is category ke articles ka curated "kahan se shuru karein" path.
-### 10. `/articles/category/pashupalan`
-- 300–500 word unique intro: NLM subsidy structure, bakri/murgi/dairy loan ka quick decision
-  tree, category articles ka guided path.
-### 11. `/articles/category/agri-business`
-- 300–500 word unique intro: agri-business subsidy ecosystem (PM-FME, NHB, CHC), kis business
-  me kitna investment/subsidy, guided path.
+Intro ka kaam **navigation value** hai, word count nahi: reader ko batao is category me
+kaunsa article kis situation ke liye hai. Teeno intro ka structure alag ho, template
+language dohrao mat.
 
-**Implementation:** `CATEGORY_DATA` me ek `intro: ReactNode`/markdown field add karo ya ek
-`CategoryIntro` component per category — listing ke upar render ho. Keywords already
-`CATEGORY_DATA` me hain; intro me naturally use karo. Uniform template language teeno me mat
-dohrao — teeno intro alag structure ke hon.
+- **C.1 `/articles/category/loan`** — kisan credit options ka map: KCC vs tractor loan vs
+  Jansamarth; kaunsa kis situation me; "kahan se shuru karein" path.
+- **C.2 `/articles/category/pashupalan`** — NLM subsidy structure (sourced), bakri/murgi/dairy
+  ka decision path, category articles ka guided order.
+- **C.3 `/articles/category/agri-business`** — PM-FME / NHB / CHC ecosystem, kis business me
+  kitna investment aur subsidy (sourced), guided path.
+
+Keywords already `CATEGORY_DATA` me hain — naturally use karo, stuff mat karo.
 
 ---
 
 ## D. Hub pages (2) — near-empty shells
 
-### 12. `/maandhan` (`app/maandhan/page.tsx`, ~50 words)
-- 500–800 word hub content: scheme overview (₹3000/month pension after 60), eligibility snapshot,
-  contribution chart summary table (text, no new images), "pehli baar aaye hain to is order me
-  padhein" guided path linking all maandhan articles, latest enrolment numbers (PIB-sourced),
-  mini-FAQ (3–4 sawal jo articles me covered nahi).
-### 13. `/rajya-yojana` (`app/rajya-yojana/page.tsx`, ~57 words)
-- 500–800 word hub content: state schemes ka landscape — centre vs state yojana farak,
-  kaise pata karein aapke state me kya chal raha hai, state-wise portal directory (sourced),
-  guided path to existing rajya-yojana articles.
+- **D.1 `/maandhan`** (`app/maandhan/page.tsx`, **measured 75 words**) — scheme overview (pension amount +
+  eligibility, maandhan.in se), contribution summary table (text only, no new images),
+  "pehli baar aaye hain to is order me padhein" guided path linking sabhi maandhan articles,
+  enrolment numbers **sirf PIB/official source ke saath**, 3–4 FAQ jo articles me cover nahi hain.
+- **D.2 `/rajya-yojana`** (`app/rajya-yojana/page.tsx`, **measured 56 words**) — centre vs state yojana ka
+  farak, apne state me kya chal raha hai ye kaise pata karein, state portal directory
+  (verified links), guided path to existing rajya-yojana articles.
+
+Dono hub pages internal discovery bhi theek karte hain — §4.4 ka orphan-URL problem inhi se
+solve hota hai.
 
 ---
 
 ## Workflow (per user)
 
-1. ✅ Ye plan file repo me commit hogi (is PR me sirf ye file — content changes nahi).
-2. User ek-ek karke file/URL bata kar rewrite karwayega ("phr ma ek ek file Sahi se banaya
-   karonga or url") — har rewrite apni alag branch/PR me.
-3. Har rewrite ke baad: local build check, phir merge user karega (no auto-merge),
-   phir GSC me URL Inspection → Request Indexing.
+1. Yeh plan file repo me commit hogi (is PR me sirf ye file — content changes nahi).
+2. User ek-ek file/URL bata kar rewrite karwayega — har rewrite apni alag branch/PR me.
+3. Har rewrite ke baad: local build check → **user merge karega (no auto-merge)** →
+   GSC me URL Inspection → Request Indexing.
 4. Images/paths kabhi change nahi karne.
+5. `modifiedTime` sirf real change par update.
 
-## Re-check list (after each page ships)
-- Browser me page open karke: word count, broken internal links, images render.
-- GSC URL Inspection par "Request Indexing" trigger karein.
-- 2–3 hafte baad Coverage report re-check.
+## Per-page ship checklist
+
+- [ ] Har number ke saath source link (ya number hata diya gaya)
+- [ ] Koi invented person/story/testimonial nahi
+- [ ] Evidence block present (Shape A/B/C) + date jahan applicable
+- [ ] Limitations/state-variation honestly likhi
+- [ ] Images aur `src` paths unchanged; alt text sensible
+- [ ] Internal links contextual, existing slugs, koi quota-filling nahi
+- [ ] `Disclaimer()` render ho raha hai
+- [ ] Reader ka core sawal end-to-end resolve hota hai (entry → steps → failure → escalation)
+- [ ] Build pass; browser me page open karke internal links + images verify
+- [ ] GSC URL Inspection → Request Indexing (manual)
+- [ ] 2–3 hafte baad Coverage report re-check
