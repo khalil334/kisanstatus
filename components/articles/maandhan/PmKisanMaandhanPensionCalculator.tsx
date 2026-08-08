@@ -8,7 +8,7 @@ import { SI, StepList, WB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlo
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
 
 const PUBLISHED = '2026-07-21T08:00:00+05:30';
-const MODIFIED = '2026-07-22T08:00:00+05:30';
+const MODIFIED = '2026-08-08T09:00:00+05:30';
 
 const RELATED_CARDS = [
   {
@@ -257,16 +257,13 @@ export default function PmKisanMaandhanPensionCalculator({ article }: { article:
         </section>
 
         <section className="mb-8">
-          <SH>Kaun Apply Kar Sakta Hai — Eligibility Ka Chhota Overview</SH>
+          <SH>Hisaab Se Pehle: Kya Aap Join Kar Sakte Hain?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Calculator use karne se pehle ye confirm kar lena sahi rehta hai ki aap eligible bhi hain ya nahi. PM-KMY sirf un chhote aur seemant kisano ke liye hai jinke naam par (ya pariwar ke kisi member ke naam par) 2 hectare tak cultivable zameen hai. Age 18 se 40 saal ke beech honi chahiye — isse kam ya zyada age walon ka enrollment accept nahi hota.
+            Calculator tabhi kaam ka hai jab aap scheme join kar sakte hon — entry window 18–40 saal ki hai aur zameen 2 hectare tak. Poori shartein aur documents alag checklist mein:
           </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Ek zaroori shart ye bhi hai ki aap kisi aur formal pension ya social security scheme se already covered na hon — jaise EPFO, ESIC, ya National Pension System (NPS) ka koi government-contribution wala hissa. Income tax payee kisan bhi is scheme ke liye eligible nahi mane jate. Jo kisan pehle se PM Kisan Samman Nidhi ka fayda le rahe hain, unke liye process thoda aasan ho jata hai kyunki unka bahut sa data already system mein hota hai.
-          </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Documents ki baat karein to enrollment ke liye Aadhaar card, bank passbook (jisme IFSC code ho), aur zameen ka record — yaani khatauni ya khasra copy — ye teen cheezein basic taur par chahiye hoti hain. Poori list aur step-by-step apply karne ka tarika alag se <Link href="/maandhan/pm-kisan-maandhan-eligibility-documents" className="underline text-blue-600 dark:text-blue-400 font-medium">eligibility aur documents guide</Link> mein diya gaya hai.
-          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <Link href="/maandhan/pm-kisan-maandhan-eligibility-documents" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">📋 Eligibility Checklist Kholein →</Link>
+          </div>
         </section>
 
         <section className="mb-8">
@@ -347,63 +344,34 @@ export default function PmKisanMaandhanPensionCalculator({ article }: { article:
         </section>
 
         <section className="mb-8">
-          <SH>Atal Pension Yojana Se Kitna Alag Hai?</SH>
+          <SH>APY Ke Numbers Se Compare Karein</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Bahut se log Maandhan aur Atal Pension Yojana (APY) ko ek hi samajh lete hain, jabki dono alag target group ke liye bani hain. APY mein pension amount ₹1,000 se ₹5,000 tak choose kiya ja sakta hai, aur wo kisi bhi bank account holder ke liye khula hai — sirf kisano tak limited nahi. PM-KMY khaas taur par un chhote aur seemant kisano ke liye hai jinke paas 2 hectare tak zameen hai, aur ismein pension amount fix ₹3,000 hi rehta hai.
+            Same ₹3000 pension ke liye APY mein aapko apni jeb se lagbhag dugna dena padta hai kyunki wahan government match nahi hai — dono ke numbers side-by-side comparison article mein hain:
           </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Jinke paas already koi formal pension ya EPFO/ESIC coverage nahi hai, unke liye PM-KMY zyada relevant hai kyunki iska poora structure hi khet-kisani wale households ko dhyan mein rakhkar banaya gaya hai. Agar aap kisan nahi hain aur flexible pension amount chahte hain, to APY zyada suitable option ho sakta hai — lekin ye do alag schemes hain aur dono ek saath nahi liye ja sakte.
-          </p>
-
-          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
-            <table className="w-full text-sm border-collapse">
-              <thead>
-                <tr className="bg-[var(--color-primary)] text-white">
-                  <th className="p-3 text-left">Point</th>
-                  <th className="p-3 text-left">PM-KMY</th>
-                  <th className="p-3 text-left">APY</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  ['Kiske liye', 'Chhote/seemant kisan (2 hectare tak)', 'Koi bhi bank account holder'],
-                  ['Pension amount', 'Fix ₹3,000/mahina', 'Choose kiya ja sakta hai (₹1,000–₹5,000)'],
-                  ['Entry age', '18–40 saal', '18–40 saal'],
-                  ['Fund manage', 'LIC', 'PFRDA/NPS structure'],
-                ].map(([point, kmy, apy], i) => (
-                  <tr key={point} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-green-50/40 dark:bg-green-900/10'}>
-                    <td className="p-3 border-b border-[var(--color-border)] font-medium text-[var(--color-text)]">{point}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{kmy}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{apy}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <Link href="/maandhan/pm-kisan-maandhan-vs-atal-pension-yojana" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">⚖️ PMKMY vs APY Scorecard →</Link>
           </div>
-
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Dono schemes ka common point ye hai ki dono hi contributory hain — yani aap khud paisa jama karte hain — lekin PM-KMY mein sarkar ka barabar hissa milta hai, jabki APY mein sarkar ka co-contribution sirf kuch specific purane accounts tak limited raha hai. Isliye jo kisan is category mein aate hain, unke liye PM-KMY zyada faydemand structure maana jata hai.
-          </p>
         </section>
 
         <section className="mb-8">
-          <SH>Subscriber Ki Death Ho Jaye To Pariwar Ka Kya Hoga?</SH>
+          <SH>Pariwar Ka Hisaab Alag Hai</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Ye sawal bahut kam poocha jata hai, lekin planning karte waqt sabse zaroori hai. Agar 60 saal poore hone se pehle subscriber ki death ho jaye, to jeevansaathi ke paas do rasta hote hain — ya to wahi account continue karke apne contribution jaari rakhein aur baad mein pension paayein, ya jama hui poori rakam interest ke saath ek saath wapas le lein.
+            Death ke baad spouse ke paas kya options hain — scheme continue karna, corpus lena ya ₹1,500 family pension — iska pura ganit family pension rules wale article mein worked examples ke saath hai:
           </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Agar pension shuru ho chuki hai (yani subscriber 60 paar kar chuke the) aur uske baad death hoti hai, to jeevansaathi ko fix pension ka 50% hissa family pension ke roop mein milta rehta hai, jab tak wo khud jeevit hain. Agar jeevansaathi bhi na ho, to poora jama corpus fund mein wapas chala jata hai.
-          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <Link href="/maandhan/family-pension-rules" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">👨‍👩‍👧 Family Pension Rules & Claim Process →</Link>
+          </div>
         </section>
 
         <section className="mb-8">
-          <SH>Bank Account Ya Mobile Number Update Karna Ho To?</SH>
+          <SH>Details Update Karni Hon To</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Kai kisan bank badal lete hain ya purana sim band ho jata hai, jiski wajah se auto-debit fail hone lagta hai. Aise mein registered details update karna zaroori ho jata hai. Iske liye do tarike available hain — nazdeeki Common Service Center (CSC) jaakar naye documents ke saath request de sakte hain, ya PM-KMY ke official portal mein login karke khud update kar sakte hain.
+            Contribution jis account se kat raha hai use badalna ho, ya registered mobile number update karna ho — dono ke step-by-step process alag guides mein hain:
           </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Ek baat yaad rakhein: bank account badalne ke baad purana auto-debit mandate automatically transfer nahi hota, isliye naye account ke liye dobara mandate set karwana padta hai — warna agla installment miss ho sakta hai.
-          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <Link href="/maandhan/pmkmy-bank-account-change" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">🏦 Bank Account Change Process →</Link>
+            <Link href="/maandhan/pmkmy-grievance-complaint-helpline" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">📞 Helpline & Grievance Guide →</Link>
+          </div>
         </section>
 
         <section className="mb-8">
