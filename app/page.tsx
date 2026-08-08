@@ -115,6 +115,34 @@ function HomeLoading() {
 export default function HomePage() {
   return (
     <>
+      {/* WebSite schema: defines the `#website` node WebPage's isPartOf points at,
+          and carries the sitelinks-searchbox SearchAction (Google reads it from
+          WebSite, not WebPage). /search?q= renders real results (app/search). */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            '@id': `${SITE_URL}#website`,
+            url: SITE_URL,
+            name: SITE_NAME,
+            description: SITE_DESCRIPTION,
+            inLanguage: 'hi-IN',
+            publisher: {
+              '@id': `${SITE_URL}#organization`,
+            },
+            potentialAction: {
+              '@type': 'SearchAction',
+              target: {
+                '@type': 'EntryPoint',
+                urlTemplate: `${SITE_URL}/search?q={search_term_string}`,
+              },
+              'query-input': 'required name=search_term_string',
+            },
+          }),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -208,14 +236,6 @@ export default function HomePage() {
                   url: `${SITE_URL}/maandhan/pm-kisan-maandhan-status-check-online`,
                 },
               ],
-            },
-            potentialAction: {
-              '@type': 'SearchAction',
-              target: {
-                '@type': 'EntryPoint',
-                urlTemplate: `${SITE_URL}/search?q={search_term_string}`,
-              },
-              'query-input': 'required name=search_term_string',
             },
             speakable: {
               '@type': 'SpeakableSpecification',
