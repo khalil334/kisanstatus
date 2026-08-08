@@ -56,6 +56,13 @@ const nextConfig = {
         permanent: true,
       },
       { source: '/en', destination: '/', permanent: true },
+      // FIX-2 (fix.md): legacy CMS-shaped paths that Googlebot / feed readers
+      // guess and that GSC reports under "Not found (404)". Each target was
+      // verified live at 200 on 2026-08-08. Only paths with an unambiguous
+      // modern equivalent are redirected; the rest stay 404 on purpose.
+      { source: '/sitemap_index.xml', destination: '/sitemap.xml', permanent: true },
+      { source: '/feed', destination: '/rss.xml', permanent: true },
+      { source: '/index.html', destination: '/', permanent: true },
       // Moved from app/articles/[slug]/page.tsx: in-page redirect() never ran
       // (root loading.tsx streams a 200 shell first) and the slug is not in
       // generateStaticParams, so with dynamicParams=false it would 404.
