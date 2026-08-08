@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Script from 'next/script';
 import { SI, StepList, WB, DB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
+import { EXTERNAL_LINK_PROPS } from '@/lib/site-config';
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const PUBLISHED = '2026-03-15T08:00:00+05:30';
@@ -270,7 +271,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
             <SI n={5}>Match successful hote hi eKYC complete ho jayegi.</SI>
           </StepList>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            <strong>Note:</strong> Face authentication ke liye bhi aapka mobile number Aadhaar se linked hona zaroori hai, lekin yeh OTP ke mukable zyada fast aur reliable hai, khaaskar un kisanon ke liye jinke haath kaam karne ki wajah se fingerprint clear nahi aata.
+            <strong>Note:</strong> Face authentication UIDAI ki <a href="https://uidai.gov.in" {...EXTERNAL_LINK_PROPS} className="underline">Aadhaar FaceRD service</a> par chalta hai — app pehli baar use karne par FaceRD install karne ko keh sakti hai, ye normal hai. Ye tarika un kisanon ke liye sabse kaam ka hai jinke haath kaam karne ki wajah se fingerprint clear nahi aata.
           </p>
         </section>
 
@@ -433,7 +434,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Puche Jane Wale Sawal (FAQs)
+            eKYC Ke Baare Mein Jo Sawal Baar-Baar Aate Hain
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="PM Kisan eKYC FAQ 2026" />
         </section>

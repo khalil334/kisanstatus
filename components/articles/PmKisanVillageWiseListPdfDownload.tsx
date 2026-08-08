@@ -500,7 +500,7 @@ export default function PmKisanVillageWiseListPdfDownload() {
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Frequently Asked Questions
+            Village List Se Jude Common Sawal
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Beneficiary Roster PDF Download FAQ 2026" />
         </section>

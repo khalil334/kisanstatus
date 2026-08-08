@@ -104,7 +104,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-        Agar aapko apna KPAN no. yaad nahi hai, toh ghabraiye mat. Mobile no. se hi aapka poora record aa jata hai. KPAN basically aapka pension account number hai — jaise bank mein account number hota hai. Enrollment complete hone ke baad yeh generate hota hai aur registered mobile number par SMS ke zariye bata diya jata hai.
+        KPAN yaad nahi? Koi baat nahi — mobile number se hi aapka poora record aa jata hai. KPAN basically aapka pension account number hai — jaise bank mein account number hota hai. Enrollment complete hone ke baad yeh generate hota hai aur registered mobile number par SMS ke zariye bata diya jata hai.
       </p>
 
       <Image
@@ -308,7 +308,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Agar aapko Failed ya Bounced dikhta hai, toh ghabraiye mat. Lekin delay mat karein. Turant apne CSC center jayein aur manual payment jama karwayein.
+        Failed ya Bounced dikhe to panic wali baat nahi hai — lekin delay bhi mat karein. Turant apne CSC center jayein aur manual payment jama karwayein.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
@@ -394,7 +394,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
           <p className="text-sm text-gray-700 dark:text-gray-300"><strong>Step 1 — CSC center (jahan se enroll kiya tha):</strong> Enrollment aur payment ka pehla record wahi hota hai. Receipt/transaction ID saath le jayein. Zyada tar dikkat yahi solve ho jati hai.</p>
         </div>
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-          <p className="text-sm text-gray-700 dark:text-gray-300"><strong>Step 2 — Official helpline / portal grievance:</strong> maandhan.in ke Contact Us section mein current helpline number aur grievance ka rasta diya hota hai — number time ke saath badal sakta hai, isliye hamesha portal se hi lein. Complaint karte waqt KPAN number, registered mobile aur problem ki date zaroor batayein.</p>
+          <p className="text-sm text-gray-700 dark:text-gray-300"><strong>Step 2 — Official helpline / portal grievance:</strong> <a href="https://maandhan.in" target="_blank" rel="noopener noreferrer nofollow" className="text-blue-600 hover:underline dark:text-blue-400">maandhan.in</a> ke Contact Us section mein current helpline number aur grievance ka rasta diya hota hai — number time ke saath badal sakta hai, isliye hamesha portal se hi lein. Complaint karte waqt KPAN number, registered mobile aur problem ki date zaroor batayein.</p>
         </div>
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
           <p className="text-sm text-gray-700 dark:text-gray-300"><strong>Step 3 — LIC branch:</strong> Pension fund LIC manage karti hai. Contribution jama hone ke baad bhi record mein na dikhe, toh nazdeeki LIC office mein KPAN aur payment proof ke saath written complaint dein aur acknowledgement lein.</p>
@@ -456,7 +456,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Aksar Puche Jane Wale Sawal
+        Kisanon Ke Asli Sawal, Seedhe Jawab
       </h2>
 
       <div className="space-y-4 mb-8 not-prose">

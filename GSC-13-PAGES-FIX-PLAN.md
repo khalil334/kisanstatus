@@ -557,3 +557,29 @@ solve hota hai.
 - [ ] Build pass; browser me page open karke internal links + images verify
 - [ ] GSC URL Inspection → Request Indexing (manual)
 - [ ] 2–3 hafte baad Coverage report re-check
+
+---
+
+## 6. Rev 3 — Uniformity/humanization recheck (2026-08-08)
+
+Saare 8 article files ka statistical recheck hua (n-gram overlap, sentence/paragraph
+length variance, stock-phrase scan, word count, link count).
+
+**Verified clean (no action needed):**
+- Word count: sab 8 articles 2000+ prose words (2,058–3,751 measured).
+- Cross-article duplicate phrasing: zero 5-grams shared by 4+ articles.
+- Sentence-length variance natural (sd 8.4–15.2); paragraph sizes mixed (6–107 words) —
+  koi AI-uniform rhythm nahi.
+- Fabricated stories/numbers: Rev 2 cleanup holds; spot-checks clean.
+
+**Issues found & fixed (this rev):**
+
+| Issue | Files | Fix |
+|---|---|---|
+| CSC rate-card block word-for-word duplicated (13 identical 6-grams) | `PmKisanMobileNumberChangeUpdate.tsx`, `maandhan/kisan-pension-card-download.tsx` | Teeno instances (FAQ + 2 body paras) ko alag natural phrasing me rewrite — same guidance, unique wording |
+| FAQ heading identical across 3 articles ("Aksar Puche Jane Wale Sawal") + 1 generic English ("Frequently Asked Questions") | eKYC, Mobile, MaandhanStatus, VillageList | Har article ko unique heading |
+| Zero clickable external source link | `maandhan/PmKisanMaandhanStatusCheckOnline.tsx` | maandhan.in link (grievance section) |
+| Face Auth section unsourced | `PmKisanEkycOnline2026.tsx` | UIDAI FaceRD attribution + uidai.gov.in link (`EXTERNAL_LINK_PROPS`) |
+| Stock AI phrases ("ghabraiye mat" ×2, "Is guide mein humne…" intro) | MaandhanStatus, Mobile | Natural rewording |
+
+Images/paths unchanged. Koi naya claim/number add nahi hua. `tsc --noEmit` + `eslint` clean.
