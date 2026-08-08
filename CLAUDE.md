@@ -136,27 +136,40 @@
 │  ✅ Title/H1 aligned on 7/9 pages                                           │
 │                                                                             │
 ├─────────────────────────────────────────────────────────────────────────────┤
-│  ⚠️ 3 CHOTE ISSUES BAHI HAIN                                                │
+│  ⚠️ 3 CHOTE ISSUES — SAB RESOLVED                                           │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                             │
-│  1. Maandhan pages mein BreadcrumbList schema NAHI hai                      │
-│     → app/maandhan/[slug]/page.tsx mein code hi nahi hai                    │
-│     → Article aur Rajya Yojana pages mein hai, Maandhan mein missing        │
+│  1. ✅ FIXED — Maandhan pages mein BreadcrumbList schema NAHI tha           │
+│     → app/maandhan/[slug]/page.tsx ab centrally BreadcrumbList emit         │
+│       karta hai (Home → Maandhan Yojana → article), same pattern jaise      │
+│       /articles aur /rajya-yojana routes. Verified in production build:     │
+│       13/13 maandhan pages mein exactly 1× BreadcrumbList in static HTML.   │
 │                                                                             │
-│  2. X-Frame-Options: vercel.json override kar raha hai                      │
-│     → next.config.js mein 'DENY' hai                                        │
-│     → vercel.json mein 'SAMEORIGIN' hai ← ye jeet raha hai                  │
-│     → Fix: vercel.json mein 'SAMEORIGIN' ko 'DENY' karo ya hata do         │
+│  2. ✅ RESOLVED (stale note) — X-Frame-Options mismatch Bug #4 mein hi      │
+│     fix ho chuka: next.config.js ab SAMEORIGIN hai, vercel.json se match,   │
+│     aur CSP frame-ancestors 'self' ke saath consistent. Koi override        │
+│     conflict nahi bacha.                                                    │
 │                                                                             │
-│  3. Title/H1 mismatch (2 pages) — intentional ho sakta hai                  │
-│     → /articles/PmKisanMasterGuide2026                                      │
-│       Title: "PM Kisan Complete Guide — Sab Fix"                            │
-│       H1:    "PM Kisan Complete Guide 2026: Registration Se Lekar..."       │
-│     → /rajya-yojana/rajasthan-kisan-samman-nidhi-9000                       │
-│       Title: "Rajasthan Kisan Samman Nidhi 2026"                            │
-│       H1:    "Rajasthan Kisan Samman Nidhi: ₹9,000 Kaise Milte Hain..."     │
-│     → Agar intentional hai (seoTitle vs title alag rakha hai) toh theek     │
-│       hai, warna align karne ka socho                                       │
+│  3. ✅ INTENTIONAL (no change) — Title/H1 mismatch (2 pages)                │
+│     → /articles/PmKisanMasterGuide2026 aur                                  │
+│       /rajya-yojana/rajasthan-kisan-samman-nidhi-9000                       │
+│     → Dono pairs leading window mein same keywords share karte hain;        │
+│       guard script (scripts/check-title-h1.js) 71/71 pairs pass karta hai.  │
+│       Short <title> deliberately SERP ke liye rakha gaya hai (seoTitle      │
+│       pattern). No SERP-rewrite risk — koi change nahi kiya.                │
 │                                                                             │
 └─────────────────────────────────────────────────────────────────────────────┘
+
+## Fix Log (chote issues)
+
+- 2026-08-08 — Chota issue #1 FIXED (branch fix/maandhan-breadcrumb-schema):
+  Added central BreadcrumbList JSON-LD to app/maandhan/[slug]/page.tsx
+  (server-rendered <script type="application/ld+json">), mirroring the
+  /articles and /rajya-yojana routes. Maandhan components continue to emit
+  Article/FAQPage only — no duplicates introduced.
+  Verified: production build, 13/13 pages have exactly 1× BreadcrumbList.
+- 2026-08-08 — Chota issue #2: no code change needed — already resolved by
+  Bug #4 (next.config.js aligned to SAMEORIGIN). Stale note cleared.
+- 2026-08-08 — Chota issue #3: confirmed intentional; check-title-h1.js
+  passes 71/71. No change.
 
