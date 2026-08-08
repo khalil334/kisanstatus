@@ -104,10 +104,11 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: GOOGLE_SITE_VERIFICATION,
+    // BUG-4: tokens come from env only; omit empty ones so no blank meta tags render.
+    ...(GOOGLE_SITE_VERIFICATION ? { google: GOOGLE_SITE_VERIFICATION } : {}),
     other: {
-      'msvalidate.01': BING_VERIFICATION,
-      'yandex-verification': YANDEX_VERIFICATION,
+      ...(BING_VERIFICATION ? { 'msvalidate.01': BING_VERIFICATION } : {}),
+      ...(YANDEX_VERIFICATION ? { 'yandex-verification': YANDEX_VERIFICATION } : {}),
     },
   },
   other: {
@@ -183,32 +184,37 @@ export default function RootLayout({
           <Footer />
         </LanguageProvider>
 
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-          strategy="afterInteractive"
-        />
-        <Script
-          id="ga4-init"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${GA_MEASUREMENT_ID}', {
-                page_path: window.location.pathname,
-                send_page_view: true,
-                cookie_flags: 'SameSite=None;Secure',
-                cookie_domain: 'auto',
-                cookie_expires: 63072000,
-                allow_google_signals: true,
-                allow_ad_personalization_signals: false,
-                restricted_data_processing: false,
-                transport_type: 'beacon',
-              });
-            `,
-          }}
-        />
+        {/* BUG-4: only load GA when NEXT_PUBLIC_GA_ID is set — no hardcoded ID. */}
+        {GA_MEASUREMENT_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script
+              id="ga4-init"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${GA_MEASUREMENT_ID}', {
+                    page_path: window.location.pathname,
+                    send_page_view: true,
+                    cookie_flags: 'SameSite=None;Secure',
+                    cookie_domain: 'auto',
+                    cookie_expires: 63072000,
+                    allow_google_signals: true,
+                    allow_ad_personalization_signals: false,
+                    restricted_data_processing: false,
+                    transport_type: 'beacon',
+                  });
+                `,
+              }}
+            />
+          </>
+        )}
 
         {GTM_ID && (
           <Script
