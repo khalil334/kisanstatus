@@ -1,12 +1,7 @@
-
-#	Bug	Severity	File	Status
-1	Maandhan slug page repo mein corrupt	🔴 Critical	`app/maandhan/[slug]/page.tsx`	✅ Not reproducible — file valid hai (imports, metadata, component map sab theek)
-2	`/pm-kisan-status` route missing	🔴 Critical	`lib/site-config.ts` / `app/pm-kisan-status/`	✅ Fixed — nav link ab seedha `/calculator/quick-status-check` (redirect hop khatam)
-3	Calculator icons empty	🔴 Critical	`app/calculator/page.tsx`	✅ Not reproducible — saare 7 icons ke SVG paths maujood hain
-4	Hardcoded GA/GSC tokens	🔴 Critical	`lib/gtag.ts`, `lib/site-config.ts`	✅ Fixed — env-var only (`NEXT_PUBLIC_GA_ID` / `NEXT_PUBLIC_GSC_TOKEN`); hardcoded fallbacks removed, GA script sirf tab load hota hai jab ID set ho
-5	Category soft-404	🟡 Moderate	`app/articles/category/[category]/page.tsx`	✅ Fixed in PR #117
-6	`not-found.tsx` missing/broken	🟡 Moderate	`app/not-found.tsx`	✅ Not reproducible — file maujood aur functional hai
-7	Copyright year static	🟡 Moderate	`lib/site-config.ts`	✅ Not reproducible — `getCopyrightYears()` dynamic hai (`new Date().getFullYear()`)
-8	Missing TypeScript generics	🟡 Moderate	`Header.tsx`, `calculator/page.tsx`	✅ Not reproducible — `useState<...>` / `useRef<HTMLInputElement>` typed hain; calculator page server component hai
-9	Maandhan missing `generateStaticParams`	🟡 Moderate	`app/maandhan/[slug]/page.tsx`	✅ Not reproducible — line 21 par maujood hai
-10	Footer spacing	🟢 Minor	`components/Footer.tsx`	✅ Not reproducible — koi concrete spacing defect nahi mila
+#	Bug	File	Kya Problem Hai	
+1	Maandhan slug page corrupt	`app/maandhan/[slug]/page.tsx`	File repo mein cut off hai — `> = {` se shuru hoti hai, `slug` module level pe use ho raha hai bina define kiye. Deployed site pe chal raha hai, repo mein nahi — mismatch hai	
+2	Calculator icons empty	`app/calculator/page.tsx`	Sab icons `return <></>;` kar rahe hain — koi SVG/icon nahi hai. Live `/calculator` pe sirf footer dikh raha hai, cards nahi	
+3	TypeScript generics missing	`components/Header.tsx`	`Record` ka type param missing — `Record<string, string>` hona chahiye	
+4	TypeScript generics missing	`app/calculator/page.tsx`	`Record` ka type param missing — `Record<GroupKey, GroupStyle>` hona chahiye	
+5	`not-found.tsx` missing/broken	`app/not-found.tsx`	GitHub se fetch nahi ho rahi. Live site pe invalid URL pe sirf footer dikh raha hai, 404 UI nahi	
+6	Footer spacing	`components/Footer.tsx`	Live site pe `© 2024-2026KisanStatus` — space nahi hai year aur name ke beech	
