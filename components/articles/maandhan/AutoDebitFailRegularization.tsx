@@ -88,14 +88,6 @@ export default function AutoDebitFailRegularization() {
                 cssSelector: ['.hero-title', '.hero-description']
               }
             },
-            {
-              '@type': 'FAQPage',
-              mainEntity: FAQS_DATA.map((faq) => ({
-                '@type': 'Question',
-                name: faq.q,
-                acceptedAnswer: { '@type': 'Answer', text: faq.a },
-              })),
-            },
           ],
         }) }}
       />

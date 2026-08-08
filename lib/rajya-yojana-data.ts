@@ -29,7 +29,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
       'rajasthan kisan samman nidhi kist',
       'mukhyamantri kisan samman nidhi rajasthan',
     ],
-    title: 'Rajasthan Kisan Samman Nidhi 2026',
+    title: 'Rajasthan Kisan Samman Nidhi: ₹9,000 Kaise Milte Hain',
     description:
       'Rajasthan Kisan Samman Nidhi ki badhi hui raqam, eligibility, status check ka process aur kist ki jaankari — official notification ke saath.',
     ogTitle: 'Rajasthan Kisan Samman Nidhi — Nayi Raqam Aur Status',

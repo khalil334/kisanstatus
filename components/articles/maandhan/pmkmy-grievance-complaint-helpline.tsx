@@ -97,14 +97,6 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
                 cssSelector: ['.hero-title', '.hero-description']
               }
             },
-            {
-              '@type': 'FAQPage',
-              mainEntity: FAQS_DATA.map((faq) => ({
-                '@type': 'Question',
-                name: faq.q,
-                acceptedAnswer: { '@type': 'Answer', text: faq.a },
-              })),
-            },
           ],
         }) }}
       />

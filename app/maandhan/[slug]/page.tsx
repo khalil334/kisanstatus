@@ -97,12 +97,28 @@ export default async function MaandhanArticlePage({ params }: { params: Promise<
   const ArticleComponent = COMPONENTS[slug];
   if (!ArticleComponent) notFound();
 
+  const pageUrl = `${SITE_URL}/maandhan/${slug}`;
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    '@id': `${pageUrl}#breadcrumb`,
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'PM Kisan Maandhan Yojana', item: `${SITE_URL}/maandhan` },
+      { '@type': 'ListItem', position: 3, name: article.title, item: pageUrl },
+    ],
+  };
+
   const idx = MAANDHAN_ARTICLES.findIndex((a) => a.slug === slug);
   const siblings = MAANDHAN_ARTICLES.filter((a) => a.slug !== slug);
   const related = Array.from({ length: Math.min(6, siblings.length) }, (_, i) => siblings[(idx + i) % siblings.length]);
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <ArticleComponent article={article} />
       <section aria-label="Related maandhan articles" className="container-site max-w-3xl mx-auto px-4 pb-10">
         <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">

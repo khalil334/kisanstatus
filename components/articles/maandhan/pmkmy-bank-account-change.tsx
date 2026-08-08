@@ -93,14 +93,6 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
               dateModified: MODIFIED,
               mainEntityOfPage: { '@type': 'WebPage', '@id': `https://kisanstatus.com/maandhan/${article.slug}` },
             },
-            {
-              '@type': 'FAQPage',
-              mainEntity: FAQS_DATA.map((faq) => ({
-                '@type': 'Question',
-                name: faq.q,
-                acceptedAnswer: { '@type': 'Answer', text: faq.a },
-              })),
-            },
           ],
         }) }}
       />
