@@ -18,15 +18,15 @@
 
 | # | Article | Slug | Priority | Status |
 |---|---------|------|----------|--------|
-| 1 | पीएम किसान हेल्पलाइन + शिकायत गाइड | pm-kisan-helpline-shikayat-kaise-kare | 🔴 High | ⬜ Pending |
-| 2 | पीएम किसान स्टेटस चेक मोबाइल नंबर से | pm-kisan-status-check-mobile-number-se | 🔴 High | ⬜ Pending |
-| 3 | फार्मर आईडी कार्ड कैसे बनाएं (AgriStack) | farmer-id-card-kaise-banaye | 🔴 High | ⬜ Pending |
-| 4 | किसान कर्ज माफी लिस्ट — राज्यवार | kisan-karj-mafi-list-rajyawar | 🟡 Medium | ⬜ Pending |
-| 5 | मुख्यमंत्री किसान कल्याण योजना MP ₹12000 | mp-kisan-kalyan-yojana-12000 | 🟡 Medium | ⬜ Pending |
-| 6 | पीएम किसान नई रजिस्ट्रेशन गाइड | pm-kisan-nayi-registration-kaise-kare | 🟡 Medium | ⬜ Pending |
-| 7 | ट्रैक्टर सब्सिडी राज्यवार लिस्ट | tractor-subsidy-rajyawar-list | 🟡 Medium | ⬜ Pending |
-| 8 | गेहूं का रेट — MSP vs मंडी भाव | gehu-ka-rate-msp-vs-mandi-devanagari | 🟢 Later | ⬜ Pending |
-| 9 | पीएम किसान eKYC मोबाइल से (Devanagari) | pm-kisan-ekyc-mobile-se-devanagari | 🟢 Later | ⬜ Pending |
+| 1 | पीएम किसान हेल्पलाइन + शिकायत गाइड | pm-kisan-helpline-shikayat-kaise-kare | 🔴 High | ✅ Done (hindi/helpline-shikayat) |
+| 2 | पीएम किसान स्टेटस चेक मोबाइल नंबर से | pm-kisan-status-check-mobile-number-se | 🔴 High | ✅ Done (hindi/status-check-mobile-se) |
+| 3 | फार्मर आईडी कार्ड कैसे बनाएं (AgriStack) | farmer-id-card-kaise-banaye | 🔴 High | ✅ Done (hindi/farmer-id-kaise-banaye) |
+| 4 | किसान कर्ज माफी लिस्ट — राज्यवार | kisan-karj-mafi-list-rajyawar | 🟡 Medium | ✅ Done (hindi/karj-mafi-list) |
+| 5 | मुख्यमंत्री किसान कल्याण योजना MP ₹12000 | mp-kisan-kalyan-yojana-12000 | 🟡 Medium | ✅ Done (hindi/mp-kisan-kalyan-yojana) |
+| 6 | पीएम किसान नई रजिस्ट्रेशन गाइड | pm-kisan-nayi-registration-kaise-kare | 🟡 Medium | ✅ Done (hindi/nayi-registration) |
+| 7 | ट्रैक्टर सब्सिडी राज्यवार लिस्ट | tractor-subsidy-rajyawar-list | 🟡 Medium | ✅ Done (hindi/tractor-subsidy) |
+| 8 | गेहूं का रेट — MSP vs मंडी भाव | gehu-ka-rate-msp-vs-mandi-devanagari | 🟢 Later | ✅ Done (hindi/gehu-ka-rate-aaj) |
+| 9 | पीएम किसान eKYC मोबाइल से (Devanagari) | pm-kisan-ekyc-mobile-se-devanagari | 🟢 Later | ✅ Done (hindi/ekyc-mobile-se) |
 | 10 | नमो शेतकरी योजना Maharashtra ₹12000 | namo-shetkari-yojana-maharashtra | 🟢 Later | ⬜ Pending |
 
 *Priority logic: High = kam competition + turant likha ja sakta hai (sab facts verifiable). Medium = research chahiye. Later = existing Hinglish article se overlap hai, dhyan se differentiate karna hoga.*
