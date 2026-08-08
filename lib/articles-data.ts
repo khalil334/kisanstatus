@@ -295,6 +295,11 @@ const CORE_ARTICLES: readonly ArticleMeta[] = [
     title: 'PM Kisan 24vi Kist 2026: Date & Status',
     desc: '23vi kist aa gayi, ab 24vi ka intezaar. October 2026 tak aane ki umeed hai — release date, beneficiary status check aur latest update yahan dekhein.',
     ogTitle: 'PM Kisan 24vi Kist — Kab Aayegi?',
+    // SERP title must share its leading phrase with the on-page <h1>
+    // ("PM Kisan 24vi Kist Kab Aayegi? October 2026 Release Date..."), otherwise
+    // Google discards <title> and rewrites the SERP heading itself (Bug #5).
+    // Keep "October 2026" in sync with KIST.expectedDate in the component.
+    seoTitle: 'PM Kisan 24vi Kist Kab Aayegi? October 2026 Date',
     keywords: [
       'pm kisan 24vi kist 2026',
       'next kist date 2026',
