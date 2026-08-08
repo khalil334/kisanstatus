@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
-import { SH, IB, WB, DB, StepList, SI, FAQBlock, RelatedArticles } from '@/components/ArticleShared';
+import { SH, IB, WB, DB, StepList, SI, GovLink, CalcBanner, FAQBlock, RelatedArticles } from '@/components/ArticleShared';
 
 const FAQS = [
   {
@@ -31,6 +31,26 @@ const FAQS = [
     q: 'eKYC के बाद किस्त कितने दिन में आ जाती है?',
     a: 'eKYC कोई payment trigger नहीं है — यह सिर्फ शर्त पूरी करता है। पैसा तभी आता है जब सरकार किस्त release करती है। हां, eKYC अधूरी रही तो release होने पर भी आपका भुगतान रुक जाएगा।',
   },
+  {
+    q: 'हर साल eKYC दोबारा करानी पड़ती है?',
+    a: 'एक बार दर्ज हो जाने पर बार-बार कराने की जरूरत नहीं रहती — status में YES टिका रहता है। दोबारा जरूरत तब पड़ सकती है जब आधार में कोई बड़ा बदलाव हो या record में गड़बड़ी पकड़ी जाए। इसलिए किस्त से पहले एक नजर status पर डाल लेना काफी है।',
+  },
+  {
+    q: 'Face Auth में चेहरा scan हो ही नहीं रहा, क्या करूं?',
+    a: 'रोशनी और camera दोनों देखिए। सामने से आती रोशनी में, चश्मा-टोपी हटाकर, phone को आंखों की सीधाई पर रखें और हिलने से बचें। बुजुर्गों में कम रोशनी सबसे बड़ी वजह होती है। दो-तीन कोशिशों में भी न बने तो OTP वाला रास्ता या CSC का biometric बेहतर है।',
+  },
+  {
+    q: 'CSC वाला eKYC के ₹200-300 मांग रहा है — देना पड़ेगा?',
+    a: 'नहीं, इतना नहीं। CSC पर biometric सेवा की तय सरकारी फीस होती है जो मामूली है; उससे ज्यादा मांगना वसूली है। Phone से OTP या Face Auth वाला रास्ता पूरी तरह मुफ्त है — पहले वही कोशिश कीजिए, CSC तभी जाइए जब आधार में नंबर linked न हो।',
+  },
+  {
+    q: 'eKYC YES है फिर भी किस्त नहीं आई — क्यों?',
+    a: 'eKYC तीन शर्तों में से एक है। बाकी दो — बैंक खाते की आधार seeding और जमीन के record की seeding — भी YES होनी चाहिए। इनमें कोई NO है तो भुगतान वहीं रुकेगा। Status page पर तीनों field एक साथ दिखते हैं, वहीं मिला लीजिए।',
+  },
+  {
+    q: 'आधार में नंबर update कराने के बाद कितनी देर में eKYC हो पाएगी?',
+    a: 'नंबर update होने में कुछ दिन लगते हैं, और जब तक वह चालू न हो, आधार OTP नहीं आएगा। जल्दी हो तो इंतजार की जगह CSC पर fingerprint से eKYC करा लें — और नंबर update होने के बाद आगे के काम घर बैठे होने लगेंगे।',
+  },
 ];
 
 const RELATED = [
@@ -39,6 +59,10 @@ const RELATED = [
   { slug: 'hindi/status-check-mobile-se', title: 'मोबाइल से स्टेटस चेक', emoji: '📱' },
   { slug: 'PmKisanMobileNumberChangeUpdate', title: 'Mobile Number Update Guide', emoji: '☎️' },
 ];
+
+function H3({ children }: { children: React.ReactNode }) {
+  return <h3 className="text-base font-bold text-[var(--color-text)] mt-6 mb-2">{children}</h3>;
+}
 
 export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: HindiArticle }) {
   return (
@@ -50,6 +74,13 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
         हो जाती है। दस मिनट का काम है — बशर्ते एक शर्त पूरी हो: आपका mobile number आधार से जुड़ा हो। यही
         एक बात है जिस पर पूरा खेल टिका है। जुड़ा है, तो नीचे के steps में से कोई भी रास्ता पकड़िए। नहीं जुड़ा,
         तो सीधे इस लेख के आखिरी हिस्से पर जाइए — वहां उसका इलाज लिखा है।
+      </p>
+
+      <p>
+        नीचे तीनों रास्ते अलग-अलग लिखे हैं — OTP वाला, चेहरे से पहचान वाला, और उंगलियों के निशान वाला — और
+        साथ में यह भी कि किसे कौन सा चुनना चाहिए। बीच में उन error messages का मतलब भी है जिन पर लोग सबसे
+        ज्यादा अटकते हैं, क्योंकि आधी परेशानी यही होती है कि screen पर अंग्रेजी में कुछ लिखा आया और समझ नहीं
+        आया कि अब आगे क्या।
       </p>
 
       <IB>
@@ -78,6 +109,19 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
         यही काम पहली बार में हो जाता है। और OTP की validity कुछ ही मिनट की होती है — आते ही भर दें।
       </DB>
 
+      <H3>पहली बार में न हो तो — तीन बातें जांच लें</H3>
+      <p>
+        OTP वाला रास्ता सबसे आसान है, फिर भी कुछ लोग यहीं रुक जाते हैं। लगभग हमेशा वजह इन तीन में से एक
+        होती है। पहली, आधार number टाइप करने में एक अंक की गलती — 12 अंक धीरे-धीरे दोबारा मिलाइए। दूसरी,
+        mobile OTP आ गया पर आधार OTP का इंतजार करते रह गए — ये दो अलग OTP हैं, दोनों भरने होते हैं। तीसरी,
+        OTP की मियाद निकल गई — नया मंगाइए और आते ही भर दीजिए।
+      </p>
+      <p>
+        एक और छोटी बात: कई लोग आधार OTP वाला हिस्सा देखकर घबरा जाते हैं कि आधार का पासवर्ड मांगा जा रहा है।
+        ऐसा कुछ नहीं है — यह वही OTP है जो UIDAI आपके आधार से जुड़े नंबर पर भेजता है, और वह आपके ही phone पर
+        आता है। किसी को बताने की जरूरत नहीं, खुद भर दीजिए।
+      </p>
+
       <SH>रास्ता 2 — PM-KISAN app में Face Authentication</SH>
       <p>
         जिनके आधार में नंबर तो linked है पर OTP का झंझट नहीं चाहिए — या घर के बुजुर्ग की eKYC करनी है —
@@ -88,12 +132,106 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
         Screen-दर-screen विवरण{' '}
         <Link href="/articles/PmKisanFaceAuthenticationEkyc">Face Auth guide</Link> में है।
       </p>
+      <p>
+        चेहरा scan करते वक्त तीन बातें ध्यान रखिए, वरना app बार-बार मना करता रहेगा। रोशनी सामने से आनी चाहिए,
+        पीछे से नहीं — खिड़की की तरफ मुंह करके बैठिए। चश्मा, टोपी या मास्क हटा दीजिए। और phone को आंखों की
+        सीधाई पर स्थिर रखिए, नीचे से ऊपर की तरफ नहीं। इतना कर लेने पर आम तौर पर पहली या दूसरी कोशिश में
+        पहचान हो जाती है।
+      </p>
 
       <WB>
         Play Store पर मिलते-जुलते नाम के नकली app भी तैरते रहते हैं। Install से पहले publisher जरूर देखें —
         असली app का प्रकाशक Government of India / कृषि मंत्रालय है। कोई भी app जो eKYC के बदले पैसे या
         बैंक details मांगे, सीधा uninstall करें।
       </WB>
+
+      <SH>रास्ता 3 — CSC पर उंगलियों के निशान से</SH>
+      <p>
+        जब आधार में नंबर जुड़ा ही न हो, या बुजुर्ग का चेहरा app पहचान न पाए, तो यह रास्ता बचता है और सबसे
+        पक्का बैठता है। नजदीकी CSC (Common Service Centre) पर आधार कार्ड ले जाइए; वहां fingerprint scanner
+        पर अंगूठा रखवाकर eKYC दर्ज कर दी जाती है। काम मिनटों का है, और इसमें OTP की जरूरत नहीं पड़ती — इसीलिए
+        जिनका पुराना नंबर बंद हो चुका है, उनके लिए यही सबसे तेज रास्ता है।
+      </p>
+      <p>
+        दो सावधानियां। पहली, वहां भी सेवा की तय फीस मामूली होती है — मनमानी रकम मांगी जाए तो सवाल कीजिए।
+        दूसरी, काम होने के बाद वहीं status खुलवाकर eKYC: YES अपनी आंखों से देख लीजिए। "हो गया" सुनकर लौट
+        आना और बाद में पता चलना कि दर्ज नहीं हुआ — यह शिकायत बहुत आम है।
+      </p>
+
+      <H3>कौन सा रास्ता आपके लिए सही है</H3>
+      <div className="overflow-x-auto my-4">
+        <table className="w-full text-sm border-collapse">
+          <thead>
+            <tr className="bg-[var(--color-bg-alt)]">
+              <th className="border border-[var(--color-border)] p-2 text-left">आपकी स्थिति</th>
+              <th className="border border-[var(--color-border)] p-2 text-left">सही रास्ता</th>
+              <th className="border border-[var(--color-border)] p-2 text-left">क्यों</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="border border-[var(--color-border)] p-2 font-semibold">आधार से नंबर जुड़ा है, smartphone है</td>
+              <td className="border border-[var(--color-border)] p-2">Portal पर OTP</td>
+              <td className="border border-[var(--color-border)] p-2">सबसे तेज, मुफ्त, घर बैठे</td>
+            </tr>
+            <tr>
+              <td className="border border-[var(--color-border)] p-2 font-semibold">घर के बुजुर्ग की करानी है</td>
+              <td className="border border-[var(--color-border)] p-2">App में Face Auth</td>
+              <td className="border border-[var(--color-border)] p-2">एक ही phone से कई लोगों की हो जाती है</td>
+            </tr>
+            <tr>
+              <td className="border border-[var(--color-border)] p-2 font-semibold">आधार वाला नंबर बंद हो चुका है</td>
+              <td className="border border-[var(--color-border)] p-2">CSC पर biometric</td>
+              <td className="border border-[var(--color-border)] p-2">OTP की जरूरत ही नहीं पड़ती</td>
+            </tr>
+            <tr>
+              <td className="border border-[var(--color-border)] p-2 font-semibold">keypad वाला phone है</td>
+              <td className="border border-[var(--color-border)] p-2">किसी के smartphone से OTP, या CSC</td>
+              <td className="border border-[var(--color-border)] p-2">OTP आपके ही नंबर पर आएगा</td>
+            </tr>
+            <tr>
+              <td className="border border-[var(--color-border)] p-2 font-semibold">उंगलियों के निशान घिस चुके हैं</td>
+              <td className="border border-[var(--color-border)] p-2">पहले Face Auth, फिर OTP</td>
+              <td className="border border-[var(--color-border)] p-2">खेती-मजदूरी में यह आम बात है</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <GovLink
+        href="https://pmkisan.gov.in"
+        label="PM Kisan Portal — e-KYC"
+        guide="pmkisan.gov.in खोलें"
+        portalName="pmkisan.gov.in"
+      />
+
+      <SH>Screen पर आया error — किसका क्या मतलब</SH>
+      <p>
+        eKYC करते वक्त जो lines दिखती हैं, उनका मतलब समझ लेने से आधी उलझन खत्म हो जाती है। सबसे आम चार ये
+        हैं:
+      </p>
+      <StepList>
+        <SI n={1}>
+          <strong>Invalid Aadhaar / Aadhaar not valid</strong> — नंबर टाइप करने में गलती है। 12 अंक फिर से
+          मिलाइए, बीच में space न छोड़िए।
+        </SI>
+        <SI n={2}>
+          <strong>Record not found with given Aadhaar</strong> — इस आधार से योजना का कोई record नहीं जुड़ा।
+          पहले <Link href="/articles/hindi/status-check-mobile-se">status</Link> देखकर पक्का कीजिए कि आप
+          registered हैं या नहीं; न हों तो{' '}
+          <Link href="/articles/hindi/nayi-registration">नई registration</Link> पहला कदम है।
+        </SI>
+        <SI n={3}>
+          <strong>Mobile number not matching</strong> — जो नंबर आप डाल रहे हैं, वह आधार से जुड़ा नहीं है।
+          यहीं से आगे का हिस्सा आपके काम का है (नीचे पढ़िए)।
+        </SI>
+        <SI n={4}>
+          <strong>eKYC is already done</strong> — काम पहले ही पूरा है, दोबारा करने की जरूरत नहीं। Status
+          में YES देख लीजिए, बस।
+        </SI>
+      </StepList>
+
+      <CalcBanner />
 
       <SH>और अगर आधार में mobile number linked ही नहीं है?</SH>
       <p>
@@ -109,6 +247,53 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
         <Link href="/articles/PmKisanMobileNumberChangeUpdate">number update guide</Link> में है। वरना
         status check और शिकायत, दोनों में आगे दिक्कत आएगी।
       </p>
+      <p>
+        यहां एक बात साफ रखिए — आधार में नंबर जुड़ा होना और PM Kisan record में वही नंबर दर्ज होना, दो अलग
+        बातें हैं। पहली से आधार OTP आता है, दूसरी से portal का OTP और सूचनाएं। दोनों जगह चालू नंबर हो, तभी
+        आगे का हर काम — status देखना, शिकायत दर्ज करना, किस्त की जानकारी — बिना अड़चन चलता है। इसलिए एक बार
+        बैठकर दोनों जगह एक ही नंबर करा लेना सबसे अच्छा सौदा है।
+      </p>
+
+      <SH>eKYC है क्या, और सरकार इसे क्यों मांगती है</SH>
+      <p>
+        बहुत लोग इसे एक और सरकारी झंझट समझते हैं, इसलिए टालते रहते हैं। असल बात सीधी है: eKYC का मतलब है
+        आधार के जरिए यह पक्का करना कि जिस नाम पर पैसा जा रहा है, वह व्यक्ति वाकई वही है। कागज पर नाम मिलाने
+        के बजाय व्यवस्था सीधे आधार से मिलान कर लेती है — इसीलिए इसे electronic KYC कहा जाता है।
+      </p>
+      <p>
+        फायदा किसान का ही है। एक ही परिवार से कई नाम, मर चुके व्यक्ति के नाम पर चलती किस्तें, या किसी और के
+        खाते में जाता पैसा — ये गड़बड़ियां इसी मिलान से पकड़ी जाती हैं। जब सूची साफ होती है, तो असली किसान का
+        भुगतान बिना अड़चन निकलता है। इसलिए इसे रुकावट न मानिए; यह वही ताला है जो आपके हिस्से की रकम किसी और
+        के हाथ नहीं जाने देता।
+      </p>
+
+      <H3>eKYC, DBT और seeding — तीन अलग चीजें, एक ही उलझन</H3>
+      <p>
+        गांव में ये तीनों शब्द एक-दूसरे की जगह बोल दिए जाते हैं, और यहीं से गलतफहमी शुरू होती है। संक्षेप में
+        फर्क समझ लीजिए। <strong>eKYC</strong> आपकी पहचान का मिलान है — आधार से। <strong>आधार-बैंक seeding</strong>{' '}
+        आपके खाते को आधार से जोड़कर DBT के लिए तैयार करना है, और वह काम बैंक शाखा में होता है।{' '}
+        <strong>Land seeding</strong> जमीन के record का योजना से जुड़ना है, जो तहसील से जुड़ा मामला है।
+      </p>
+      <p>
+        तीनों अलग-अलग दफ्तरों के काम हैं, और तीनों का YES होना जरूरी है। इसलिए eKYC हो जाने पर यह मान लेना
+        कि अब सब पूरा है, गलत है। पूरा नक्शा{' '}
+        <Link href="/articles/hindi/npci-aadhaar-seeding">NPCI आधार सीडिंग guide</Link> में देखिए — वहां
+        खाते वाला हिस्सा विस्तार से लिखा है।
+      </p>
+
+      <SH>बुजुर्गों और महिलाओं के लिए — व्यावहारिक बातें</SH>
+      <p>
+        गांव में सबसे ज्यादा अटकाव इन्हीं दो हिस्सों में दिखता है, और वजह तकनीकी नहीं, व्यावहारिक होती है।
+        बुजुर्गों के मामले में अक्सर उंगलियों के निशान साफ नहीं पढ़े जाते और आधार वाला नंबर बेटे या रिश्तेदार
+        का दर्ज होता है। ऐसे में सबसे कारगर तरीका app का Face Auth है — घर बैठे, बिना लाइन में लगे, और एक ही
+        phone से घर के दो-तीन लोगों का काम एक बैठक में।
+      </p>
+      <p>
+        महिलाओं के मामले में सबसे आम अड़चन नाम की है — शादी के बाद आधार में नाम या पता बदला, पर बैंक खाते या
+        जमीन के record में पुराना ही चल रहा है। eKYC तो हो जाती है, पर मिलान आगे अटकता है। इसलिए eKYC के साथ
+        ही यह भी देख लीजिए कि आधार, passbook और खतौनी — तीनों में नाम की spelling एक जैसी है या नहीं। फर्क
+        मिले तो सुधार की प्रक्रिया शुरू कर दीजिए, वरना हर किस्त पर वही सवाल खड़ा होगा।
+      </p>
 
       <SH>काम पूरा हुआ या नहीं — आखिरी जांच</SH>
       <p>
@@ -118,9 +303,52 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
         दिख गया तो यह अध्याय बंद; अब ध्यान बाकी दो चीजों पर दें — बैंक की आधार seeding और जमीन का record।
         किस्त इन्हीं तीन पहियों पर चलती है।
       </p>
+      <p>
+        और एक आदत डाल लीजिए जो आगे बहुत बचाएगी: जिस दिन eKYC पूरी हो, उस दिन का status वाला screenshot रख
+        लीजिए और तारीख डायरी में लिख लीजिए। कभी record में गड़बड़ी दिखे या किसी दफ्तर में सवाल उठे, तो यही
+        सबूत सबसे तेज काम करता है। कागज संभालना गांव में सबसे सस्ता बीमा है।
+      </p>
+      <p>
+        अगर YES न दिखे तो घबराइए नहीं — एक-दो दिन और देखिए, क्योंकि दर्ज होने में समय लगता है। उसके बाद भी
+        NO ही रहे तो मान लीजिए कि प्रक्रिया अधूरी रह गई। दोबारा उसी रास्ते से कोशिश कीजिए, और तीसरी बार भी
+        न बने तो CSC पर biometric से करा लीजिए। इस एक field पर अटके रहने से बाकी दोनों काम भी रुके रहते हैं,
+        इसलिए इसे लटकाना सबसे महंगा पड़ता है।
+      </p>
+
+      <SH>ठगी से बचने के लिए चार पक्की बातें</SH>
+      <p>
+        eKYC के नाम पर ठगी का धंधा इसीलिए चलता है कि लोग जल्दी में होते हैं और डरे हुए भी — "किस्त रुक
+        जाएगी" वाला डर। ये चार बातें याद रख लीजिए, फिर कोई फंसा नहीं सकता:
+      </p>
+      <StepList>
+        <SI n={1}>
+          <strong>OTP किसी को नहीं</strong> — न फोन पर, न सामने बैठे व्यक्ति को। eKYC आपके phone पर आए OTP
+          से आप खुद करते हैं। जो OTP मांगे, वह मदद नहीं कर रहा।
+        </SI>
+        <SI n={2}>
+          <strong>कोई link नहीं</strong> — SMS या WhatsApp में आए किसी link से eKYC नहीं होती। सिर्फ
+          pmkisan.gov.in और official app, बस दो जगह।
+        </SI>
+        <SI n={3}>
+          <strong>बैंक details का eKYC से कोई लेना-देना नहीं</strong> — इसमें खाता संख्या, ATM PIN या CVV की
+          जरूरत ही नहीं पड़ती। मांगे जाने का मतलब सीधा ठगी है।
+        </SI>
+        <SI n={4}>
+          <strong>"जल्दी करा दूंगा" का लालच नहीं</strong> — eKYC में जल्दी-देर का कोई खेल नहीं है; दर्ज होते
+          ही YES दिख जाता है। पैसे लेकर तेज कराने का दावा झूठ है।
+        </SI>
+      </StepList>
+      <p>
+        और अगर किसी ने पहले से पैसे ले लिए हैं या OTP लेकर गड़बड़ की है, तो चुप न रहिए — शिकायत का पूरा रास्ता{' '}
+        <Link href="/articles/hindi/helpline-shikayat">हेल्पलाइन और शिकायत guide</Link> में है। जितनी जल्दी
+        दर्ज होगी, उतनी गुंजाइश बनेगी।
+      </p>
 
       <SH>अक्सर पूछे जाने वाले सवाल</SH>
-      <FAQBlock faqs={FAQS} />
+      <FAQBlock
+        faqs={FAQS}
+        caption="OTP, Face Auth, CSC फीस और error messages से जुड़े सबसे आम सवाल — एक जगह।"
+      />
 
       <p className="text-xs text-[var(--color-text-muted)] italic">
         Source: प्रक्रिया{' '}
