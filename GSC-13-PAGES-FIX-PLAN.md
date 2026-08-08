@@ -183,7 +183,7 @@ thoda kam hai; ranking ke liye kaafi accurate):
 | 7 | §A.4 Village Wise List (2,490) | list-vs-status-vs-dashboard differentiation | ✅ done |
 | 8 | §A.2 eKYC Online (3,725) | eKYC-vs-NPCI differentiator | ✅ done |
 | 9 | §A.3 Mobile Number Change (4,198) | Aadhaar sub-flow + kahan-kya-update table + helpline reality | ✅ done |
-| 10 | §B.1 Pension Card Download | KPAN recovery + PMKMY-vs-APY differentiation | ⬜ pending |
+| 10 | §B.1 Pension Card Download | KPAN recovery + PMKMY-vs-APY differentiation | ✅ done |
 
 ---
 
@@ -398,8 +398,26 @@ sakta — Turbopack ka PostCSS worker clean `main` par bhi fail hota hai; CI/Ver
 
 ## B. Maandhan pages (3)
 
-### B.1 `/maandhan/pm-kisan-maandhan-pension-card-download`
+### B.1 `/maandhan/pm-kisan-maandhan-pension-card-download` — ✅ DONE
 File: `components/articles/maandhan/kisan-pension-card-download.tsx`
+
+**Kya hua:** Dono planned differentiators add hue. (1) **KPAN recovery flow** — naya section
+"Slip Kho Gayi, KPAN Yaad Nahi" with 3 recovery routes (Aadhaar+OTP portal search → bank
+statement narration se trace → CSC Aadhaar-biometric search), aasaan-se-mushkil order me.
+(2) **PMKMY vs APY/PRAN confusion** — 4-row comparison table (kiske liye / account number /
+record kahan / document kahan se) + "scheme ka poora naam bolo" practical rule + matching FAQ.
+Intro ki fabricated "Bulandshahr ke kisan" story → process-level opening (enrollment slip CSC
+par hi chhoot jaati hai). "Savitri devi (Jhunjhunu)" + "Ramesh Chand" invented scenarios →
+scheme ke documented rules block (60-par-claim, spouse 50% family pension, exit settlement —
+maandhan.in attributed). Fake first-person ("pichle 8 saal me maine saikdon kisano ko...")
+remove. Unsourced numbers cleanup: ₹20-50 CSC charge (→ rate card + receipt + digitalseva
+grievance), bank update 7-15 din & correction 30-45 din (→ "fixed SLA publish nahi, receiving
+lo"), fake `wordCount: 2200` schema field remove. 2026 portal-process claims invent nahi kiye
+(portal is session me verify nahi ho sakta tha). CSC-par-kya-document section me sirf Aadhaar +
+registered mobile hi kaha gaya (verified minimum). Images/paths unchanged. Date updated.
+`tsc` + `eslint` clean.
+
+**Original plan (reference):**
 
 **Problem:** Length theek, phir bhi index nahi — differentiation missing.
 
