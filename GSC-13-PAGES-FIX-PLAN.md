@@ -182,7 +182,8 @@ thoda kam hai; ranking ke liye kaafi accurate):
 | 6 | §B.3 Maandhan Status Check (2,403) | dashboard-reading + escalation gap | ✅ done |
 | 7 | §A.4 Village Wise List (2,490) | list-vs-status-vs-dashboard differentiation | ✅ done |
 | 8 | §A.2 eKYC Online (3,725) | eKYC-vs-NPCI differentiator | ✅ done |
-| 9 | Baaki (A.3, B.1) | depth + differentiation pass, length nahi | ⬜ pending |
+| 9 | §A.3 Mobile Number Change (4,198) | Aadhaar sub-flow + kahan-kya-update table + helpline reality | ✅ done |
+| 10 | §B.1 Pension Card Download | KPAN recovery + PMKMY-vs-APY differentiation | ⬜ pending |
 
 ---
 
@@ -260,8 +261,25 @@ PIB releases on eKYC deadlines.
 
 ---
 
-### A.3 `/articles/PmKisanMobileNumberChangeUpdate`
+### A.3 `/articles/PmKisanMobileNumberChangeUpdate` — ✅ DONE
 File: `components/articles/PmKisanMobileNumberChangeUpdate.tsx`
+
+**Kya hua:** Plan ke chaaron gaps covered. (1) **Aadhaar mobile update sub-flow** add — UIDAI ne
+online mobile update band kar rakha hai (biometric zaroori), Aadhaar Seva Kendra appointment
+flow, ₹50 UIDAI-notified fee, 14-digit URN tracking, reflect hone me kuch hafte (UIDAI/press
+coverage sourced). (2) **Kaunsa-number-kahan table** add — PM Kisan portal / Aadhaar / bank /
+NPCI mapping, har row me kis kaam ke liye + kaise update hota hai; "jis system ka OTP chahiye
+usi me update karo" rule. (3) **Helpline reality section** — number hard-code nahi kiya
+(badalta hai), pmkisan.gov.in Contact Us se lene ko kaha; kya expect karein/kya nahi (phone
+par number update nahi hota). (4) Migration/dead-SIM situation as situation (persona nahi).
+Cleanup (§1): fabricated "Gorakhpur ke Suresh ji" story → process-level explanation (OTP
+routing + SIM recycling security angle); unsourced numbers hataye — ₹20-30 CSC rate (→ rate
+card + receipt + digitalseva grievance), 24-48hr sync (→ "kuch din, fixed SLA publish nahi"),
+BAO 15-30 din, Day 2-5 sync table (→ stage-based, bina fixed days), 1800-300-8380, "100%
+Test" / "Verified Answers" claims. FAQs correspondingly fixed. Images/paths unchanged. Date
+updated. `tsc` + `eslint` clean.
+
+**Original plan (reference):**
 
 **Problem:** In 13 me sabse healthy page, par kuch sections shallow.
 
