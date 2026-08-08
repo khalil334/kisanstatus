@@ -29,28 +29,7 @@ export default function QuickStatusChecker() {
   const OFFICIAL_URL = 'https://pmkisan.gov.in/BeneficiaryStatus.aspx';
   const FALLBACK_URL = 'https://pmkisan.gov.in';
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-      { '@type': 'ListItem', position: 2, name: 'PM Kisan Status Check', item: `${SITE_URL}/status-check` },
-    ],
-  };
 
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebApplication',
-    name: 'PM Kisan Status Check Tool 2026',
-    url: `${SITE_URL}/status-check`,
-    applicationCategory: 'FinanceApplication',
-    description: 'Aadhaar, mobile ya registration number se PM Kisan beneficiary status seedha official portal par check karo. Free tool.',
-    offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' },
-    author: { '@type': 'Organization', name: AUTHOR_NAME, url: AUTHOR_URL },
-    publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
-    datePublished: PUBLISHED,
-    dateModified: MODIFIED,
-  };
 
   const handleCheckNow = () => {
     setError('');
@@ -88,8 +67,6 @@ export default function QuickStatusChecker() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-green-50/30 to-emerald-50/40 py-8 md:py-12">
       <div className="container-site max-w-2xl mx-auto px-4">

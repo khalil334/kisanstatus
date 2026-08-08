@@ -32,34 +32,10 @@ export default function PMKisanBenefitCalcPage() {
   const arrears= Number(missed) * 2000;
   const eligible = hasEkyc==='yes' && landN>0 && landN<=2;
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Calculator', item: `${SITE_URL}/calculator` },
-      { '@type': 'ListItem', position: 3, name: 'PM Kisan Paisa', item: `${SITE_URL}/calculator/pm-kisan-benefit` },
-    ],
-  };
 
-  const schema = {
-    '@context':'https://schema.org',
-    '@type':'WebApplication',
-    name:'PM Kisan Calculator 2026 — Kitna Paisa Milega Hindi',
-    url:`${SITE_URL}/calculator/pm-kisan-benefit`,
-    applicationCategory:'FinanceApplication',
-    description:'PM Kisan Samman Nidhi se kitna paisa milega — jaano turant. 1 saal, 3 saal, 5 saal — sab calculate karo. Free calculator.',
-    offers:{'@type':'Offer',price:'0',priceCurrency:'INR'},
-    author: { '@type': 'Organization', name: AUTHOR_NAME, url: AUTHOR_URL },
-    publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
-    datePublished: PUBLISHED,
-    dateModified: MODIFIED,
-  };
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(breadcrumbSchema)}}/>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/>
       
       <CalcHeader
         emoji="🌾"
