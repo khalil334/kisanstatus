@@ -176,6 +176,17 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     author: 'KisanStatus Editorial Team',
     component: 'KccLimitKaiseBadhaye3Se5Lakh',
   },
+  {
+    slug: 'namo-shetkari-yojana',
+    titleHi: 'नमो शेतकरी योजना — ₹12000 कैसे मिलेंगे?',
+    desc: 'नमो शेतकरी महासन्मान निधि Maharashtra — पात्रता, किस्त status चेक और किस्त न आए तो क्या करें।',
+    keywords: ['नमो शेतकरी योजना', 'namo shetkari yojana status', 'namo shetkari mahasanman nidhi', 'नमो शेतकरी महासन्मान निधी'],
+    category: 'farming',
+    publishedTime: '2027-02-20T09:00:00+05:30',
+    modifiedTime: '2027-02-20T09:00:00+05:30',
+    author: 'KisanStatus Editorial Team',
+    component: 'NamoShetkariYojanaMaharashtra',
+  },
 ] as const;
 
 export const HINDI_ARTICLES_MAP: Record<string, HindiArticle> = Object.fromEntries(

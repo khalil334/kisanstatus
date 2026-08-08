@@ -27,7 +27,7 @@
 | 7 | ट्रैक्टर सब्सिडी राज्यवार लिस्ट | tractor-subsidy-rajyawar-list | 🟡 Medium | ✅ Done (hindi/tractor-subsidy) |
 | 8 | गेहूं का रेट — MSP vs मंडी भाव | gehu-ka-rate-msp-vs-mandi-devanagari | 🟢 Later | ✅ Done (hindi/gehu-ka-rate-aaj) |
 | 9 | पीएम किसान eKYC मोबाइल से (Devanagari) | pm-kisan-ekyc-mobile-se-devanagari | 🟢 Later | ✅ Done (hindi/ekyc-mobile-se) |
-| 10 | नमो शेतकरी योजना Maharashtra ₹12000 | namo-shetkari-yojana-maharashtra | 🟢 Later | ⬜ Pending |
+| 10 | नमो शेतकरी योजना Maharashtra ₹12000 | namo-shetkari-yojana-maharashtra | 🟢 Later | ✅ Done (hindi/namo-shetkari-yojana) |
 
 *Priority logic: High = kam competition + turant likha ja sakta hai (sab facts verifiable). Medium = research chahiye. Later = existing Hinglish article se overlap hai, dhyan se differentiate karna hoga.*
 

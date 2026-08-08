@@ -30,6 +30,7 @@ const FAQS = [
 ];
 
 const RELATED = [
+  { slug: 'hindi/namo-shetkari-yojana', title: 'नमो शेतकरी योजना Maharashtra', emoji: '🌾' },
   { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide', emoji: '📚' },
   { slug: 'PmKisanEkycOnline2026', title: 'eKYC Online Guide', emoji: '🔐' },
   { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List Guide', emoji: '📋' },
