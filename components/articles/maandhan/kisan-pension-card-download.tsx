@@ -269,7 +269,7 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
           </div>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Paise ki baat: CSC services ka rate card har center par display hona zaroori hai — print/search jaisi service ka charge wahi se confirm karein aur receipt lein. Agar operator "processing fee" ya "urgent charge" ke naam par rate card se alag moti rakam maange, to uski CSC ID note karke CSC ke official grievance channel (digitalseva portal) par shikayat kar sakte hain, ya dusre center chale jaiye.
+            Charge kitna lagega? Iska seedha jawab center ki deewar par laga hua rate card hai — CSC rules ke hisaab se har center ko apne charges wahan display karne hote hain. Print ya search jaisi chhoti service ka daam wahin se confirm karein, aur kaam hone par receipt lena mat bhooliye. "Processing fee" ya "urgent charge" jaise naam sun kar samajh jaiye ki kuch gadbad hai — aisi koi official fee hoti hi nahi. Us halat me center ki CSC ID likh lein aur digitalseva portal ke grievance section me complaint daal dein; jab tak jawab aaye, paas ke kisi doosre center se kaam karwa lein.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Dusri jagah — aap apni bank branch par bhi ja sakte hain jahan se aapka auto-debit hota hai. Bank wale aapki pension details apne core banking system me dekh sakte hain aur ek printout nikaal ke de sakte hain. Lekin har chhoti branch me ye facility nahi hoti, isliye jaane se pehle phone par manager se puch lein.
