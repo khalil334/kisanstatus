@@ -17,8 +17,8 @@ export interface HindiArticle {
   publishedTime: string;
   modifiedTime: string;
   author: string;
-  /** Article body — plain paragraphs separated by \n\n. STUB for now. */
-  content: string;
+  /** Component file name in components/articles/hindi-yojana/ */
+  component: string;
 }
 
 export const HINDI_ARTICLES: readonly HindiArticle[] = [
@@ -31,7 +31,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     publishedTime: '2027-02-15T09:00:00+05:30',
     modifiedTime: '2027-02-15T09:00:00+05:30',
     author: 'KisanStatus Editorial Team',
-    content: 'पीएम किसान 25वीं किस्त फरवरी-मार्च 2027 में आने की उम्मीद है।',
+    component: 'PmKisan25viKistKabAayegi',
   },
   {
     slug: 'pm-kisan-status-check-mobile-number-se',
@@ -42,7 +42,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     publishedTime: '2027-02-15T09:00:00+05:30',
     modifiedTime: '2027-02-15T09:00:00+05:30',
     author: 'KisanStatus Editorial Team',
-    content: 'मोबाइल नंबर से पीएम किसान स्टेटस चेक करने का पूरा तरीका यहाँ जानें।',
+    component: 'PmKisanStatusCheckMobileNumberSe',
   },
   {
     slug: 'kisan-karj-mafi-list-2027',
@@ -53,7 +53,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     publishedTime: '2027-02-15T09:00:00+05:30',
     modifiedTime: '2027-02-15T09:00:00+05:30',
     author: 'KisanStatus Editorial Team',
-    content: 'किसान कर्ज माफी 2027 की राज्यवार लिस्ट और आवेदन प्रक्रिया यहाँ देखें।',
+    component: 'KisanKarjMafiList2027',
   },
   {
     slug: 'pm-kisan-helpline-number-complaint',
@@ -64,7 +64,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     publishedTime: '2027-02-15T09:00:00+05:30',
     modifiedTime: '2027-02-15T09:00:00+05:30',
     author: 'KisanStatus Editorial Team',
-    content: 'पीएम किसान हेल्पलाइन नंबर और शिकायत दर्ज करने का तरीका यहाँ जानें।',
+    component: 'PmKisanHelplineNumberComplaint',
   },
   {
     slug: 'mukhyamantri-kisan-kalyan-yojana-mp-12000',
@@ -75,7 +75,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     publishedTime: '2027-02-15T09:00:00+05:30',
     modifiedTime: '2027-02-15T09:00:00+05:30',
     author: 'KisanStatus Editorial Team',
-    content: 'MP के किसानों को PM Kisan + राज्य योजना से ₹12000 सालाना मिलते हैं।',
+    component: 'MukhyamantriKisanKalyanYojanaMp',
   },
   {
     slug: 'pm-kisan-new-registration-2027',
@@ -86,7 +86,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     publishedTime: '2027-02-15T09:00:00+05:30',
     modifiedTime: '2027-02-15T09:00:00+05:30',
     author: 'KisanStatus Editorial Team',
-    content: 'पीएम किसान में नया रजिस्ट्रेशन करने की पूरी प्रक्रिया स्टेप-बाय-स्टेप यहाँ है।',
+    component: 'PmKisanNewRegistration2027',
   },
   {
     slug: 'farmer-id-card-kaise-banaye-2027',
@@ -97,7 +97,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     publishedTime: '2027-02-15T09:00:00+05:30',
     modifiedTime: '2027-02-15T09:00:00+05:30',
     author: 'KisanStatus Editorial Team',
-    content: 'फार्मर आईडी अब PM Kisan के लिए जरूरी है — बनाने का तरीका जानें।',
+    component: 'FarmerIdCardKaiseBanaye2027',
   },
   {
     slug: 'tractor-subsidy-2027-state-wise-list',
@@ -108,7 +108,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     publishedTime: '2027-02-15T09:00:00+05:30',
     modifiedTime: '2027-02-15T09:00:00+05:30',
     author: 'KisanStatus Editorial Team',
-    content: 'ट्रैक्टर पर 50% तक सब्सिडी — हर राज्य की योजना की जानकारी यहाँ।',
+    component: 'TractorSubsidy2027StateWiseList',
   },
   {
     slug: 'gehu-ka-rate-aaj-msp-vs-mandi-bhav',
@@ -119,7 +119,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     publishedTime: '2027-02-15T09:00:00+05:30',
     modifiedTime: '2027-02-15T09:00:00+05:30',
     author: 'KisanStatus Editorial Team',
-    content: 'गेहूं का आज का मंडी भाव और MSP की राज्यवार तुलना यहाँ देखें।',
+    component: 'GehuKaRateAajMspVsMandiBhav',
   },
   {
     slug: 'pm-kisan-ekyc-mobile-se-kaise-kare',
@@ -130,7 +130,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     publishedTime: '2027-02-15T09:00:00+05:30',
     modifiedTime: '2027-02-15T09:00:00+05:30',
     author: 'KisanStatus Editorial Team',
-    content: 'मोबाइल से पीएम किसान eKYC करने के दोनों तरीके — OTP और Face App।',
+    component: 'PmKisanEkycMobileSeKaiseKare',
   },
   {
     slug: 'npci-aadhaar-seeding-dbt-payment',
@@ -141,7 +141,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     publishedTime: '2027-02-15T09:00:00+05:30',
     modifiedTime: '2027-02-15T09:00:00+05:30',
     author: 'KisanStatus Editorial Team',
-    content: 'PM Kisan पेमेंट फेल होने का सबसे बड़ा कारण NPCI सीडिंग है।',
+    component: 'NpciAadhaarSeedingDbtPayment',
   },
   {
     slug: 'pm-kisan-payment-stopped-by-state-fix',
@@ -152,7 +152,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     publishedTime: '2027-02-15T09:00:00+05:30',
     modifiedTime: '2027-02-15T09:00:00+05:30',
     author: 'KisanStatus Editorial Team',
-    content: 'Payment Stopped by State एरर का मतलब और उसे ठीक करने का तरीका।',
+    component: 'PmKisanPaymentStoppedByStateFix',
   },
   {
     slug: 'pm-kisan-recovery-notice-paisa-wapas',
@@ -163,7 +163,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     publishedTime: '2027-02-15T09:00:00+05:30',
     modifiedTime: '2027-02-15T09:00:00+05:30',
     author: 'KisanStatus Editorial Team',
-    content: 'रिकवरी नोटिस मिलने पर घबराएं नहीं — पैसा वापस करने की प्रक्रिया जानें।',
+    component: 'PmKisanRecoveryNoticePaisaWapas',
   },
   {
     slug: 'kcc-limit-kaise-badhaye-3-se-5-lakh',
@@ -174,7 +174,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     publishedTime: '2027-02-15T09:00:00+05:30',
     modifiedTime: '2027-02-15T09:00:00+05:30',
     author: 'KisanStatus Editorial Team',
-    content: 'KCC की लिमिट ₹3 लाख से ₹5 लाख तक बढ़ाने का पूरा तरीका।',
+    component: 'KccLimitKaiseBadhaye3Se5Lakh',
   },
 ] as const;
 
