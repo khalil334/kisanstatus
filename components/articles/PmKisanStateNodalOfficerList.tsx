@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import Script from 'next/script';
 import { SI, StepList, WB, DB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import CountdownModal from '@/components/CountdownModal';
 import type { ArticleMeta } from '@/lib/articles-data';
@@ -90,40 +89,6 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
   return (
     <>
       {}
-      <Script id="nodal-officer-schema" type="application/ld+json" strategy="afterInteractive">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@graph": [
-            {
-              "@type": "Article",
-              "headline": "PM Kisan State Nodal Officer List 2026: Email & Phone No",
-              "description": "PM Kisan State Nodal Officer List 2026: Har state ke nodal officer ki email ID aur phone number yahan se paayein. Shikayat ka sahi tarika aur templates dekhein.",
-              "author": { "@type": "Organization", "name": "KisanStatus Team", "url": "https://kisanstatus.com/about" },
-              "publisher": { "@type": "Organization", "name": "KisanStatus", "logo": { "@type": "ImageObject", "url": "https://kisanstatus.com/logo.png" } },
-              "datePublished": PUBLISHED,
-              "dateModified": MODIFIED,
-              "mainEntityOfPage": { "@type": "WebPage", "@id": `https://kisanstatus.com/articles/${article.slug || 'pm-kisan-state-nodal-officer-list-2026'}` }
-            },
-            {
-              "@type": "FAQPage",
-              "mainEntity": FAQS_DATA.map(faq => ({
-                "@type": "Question",
-                "name": faq.q,
-                "acceptedAnswer": { "@type": "Answer", "text": faq.a }
-              }))
-            },
-            {
-              "@type": "BreadcrumbList",
-              "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kisanstatus.com/" },
-                { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://kisanstatus.com/articles" },
-                { "@type": "ListItem", "position": 3, "name": "Nodal Officer List", "item": `https://kisanstatus.com/articles/${article.slug || 'pm-kisan-state-nodal-officer-list-2026'}` }
-              ]
-            }
-          ]
-        })}
-      </Script>
-
       {modal && (
         <CountdownModal
           title={modal.title}

@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import Script from 'next/script';
 import { SI, StepList, SH, GovLink, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 const PUBLISHED = '2026-01-10T08:00:00+05:30';
@@ -75,40 +74,6 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
   return (
     <>
       {}
-      <Script id="kcc-schema" type="application/ld+json" strategy="afterInteractive">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@graph": [
-            {
-              "@type": "Article",
-              "headline": "Kisan Credit Card 2026: 4% Byaj, Online Apply & Limits",
-              "description": "Kisan Credit Card 2026 online apply karein. 4% byaj dar, ₹5 lakh tak loan, documents list aur rejection reasons jaane.",
-              "author": { "@type": "Organization", "name": "KisanStatus Team", "url": "https://kisanstatus.com/about" },
-              "publisher": { "@type": "Organization", "name": "KisanStatus", "logo": { "@type": "ImageObject", "url": "https://kisanstatus.com/logo.png" } },
-              "datePublished": PUBLISHED,
-              "dateModified": MODIFIED,
-              "mainEntityOfPage": { "@type": "WebPage", "@id": `https://kisanstatus.com/articles/${article.slug || 'kisan-credit-card-2026'}` }
-            },
-            {
-              "@type": "FAQPage",
-              "mainEntity": FAQS_DATA.map(faq => ({
-                "@type": "Question",
-                "name": faq.q,
-                "acceptedAnswer": { "@type": "Answer", "text": faq.a }
-              }))
-            },
-            {
-              "@type": "BreadcrumbList",
-              "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kisanstatus.com/" },
-                { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://kisanstatus.com/articles" },
-                { "@type": "ListItem", "position": 3, "name": "Kisan Credit Card 2026", "item": `https://kisanstatus.com/articles/${article.slug || 'kisan-credit-card-2026'}` }
-              ]
-            }
-          ]
-        })}
-      </Script>
-
       {}
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">

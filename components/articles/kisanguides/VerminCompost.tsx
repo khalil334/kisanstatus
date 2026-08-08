@@ -53,48 +53,6 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'Organization',
-      '@id': 'https://kisanstatus.com/#organization',
-      name: 'KisanStatus.com',
-      url: 'https://kisanstatus.com',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://kisanstatus.com/logo.webp',
-      },
-    },
-    {
-      '@type': 'BreadcrumbList',
-      '@id': 'https://kisanstatus.com/articles/vermi-compost-business-guide/#breadcrumb',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kisanstatus.com/' },
-        { '@type': 'ListItem', position: 2, name: 'Articles', item: 'https://kisanstatus.com/articles' },
-        { '@type': 'ListItem', position: 3, name: 'Farming', item: 'https://kisanstatus.com/articles/category/farming' },
-        { '@type': 'ListItem', position: 4, name: 'Vermi Compost Business' },
-      ],
-    },
-    {
-      '@type': 'Article',
-      '@id': 'https://kisanstatus.com/articles/vermi-compost-business-guide/#article',
-      headline: 'Vermi Compost Business 2026: PKVY Subsidy & Profit Guide',
-      description: 'Vermi compost business complete guide. Janein organic fertilizer kaise banayein, PKVY subsidy, machinery cost aur real profit calculation ke baare mein sab kuch.',
-      author: {
-        '@type': 'Organization',
-        name: 'KisanStatus Team',
-        url: 'https://kisanstatus.com/about',
-      },
-      publisher: {
-        '@type': 'Organization',
-        name: 'KisanStatus.com',
-        logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.webp' },
-      },
-      datePublished: '2026-01-15',
-      dateModified: '2026-08-07',
-      mainEntityOfPage: {
-        '@type': 'WebPage',
-        '@id': 'https://kisanstatus.com/articles/vermi-compost-business-guide/',
-      },
-    },
-    {
       '@type': 'FAQPage',
       '@id': 'https://kisanstatus.com/articles/vermi-compost-business-guide/#faq',
       mainEntity: [

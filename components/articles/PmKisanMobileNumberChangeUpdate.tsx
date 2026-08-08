@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import Script from 'next/script';
 import { SI, StepList, IB, WB, DB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 import CountdownModal from '@/components/CountdownModal';
@@ -81,40 +80,6 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
   return (
     <>
       {}
-      <Script id="pmkisan-mobile-schema" type="application/ld+json" strategy="afterInteractive">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@graph": [
-            {
-              "@type": "Article",
-              "headline": "PM Kisan Mobile Number Change 2026: Naya Number Kaise Jodein",
-              "description": "PM Kisan mobile number change karein bina purane SIM ke. CSC se naya number link karne ka sahi tarika, sarkari charges aur step-by-step guide yahan padhein.",
-              "author": { "@type": "Organization", "name": "KisanStatus Team", "url": "https://kisanstatus.com/about" },
-              "publisher": { "@type": "Organization", "name": "KisanStatus", "logo": { "@type": "ImageObject", "url": "https://kisanstatus.com/logo.png" } },
-              "datePublished": PUBLISHED,
-              "dateModified": MODIFIED,
-              "mainEntityOfPage": { "@type": "WebPage", "@id": `https://kisanstatus.com/articles/${article.slug || 'pm-kisan-mobile-number-change-2026'}` }
-            },
-            {
-              "@type": "FAQPage",
-              "mainEntity": FAQS_DATA.map(faq => ({
-                "@type": "Question",
-                "name": faq.q,
-                "acceptedAnswer": { "@type": "Answer", "text": faq.a }
-              }))
-            },
-            {
-              "@type": "BreadcrumbList",
-              "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kisanstatus.com/" },
-                { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://kisanstatus.com/articles" },
-                { "@type": "ListItem", "position": 3, "name": "Mobile Number Change", "item": `https://kisanstatus.com/articles/${article.slug || 'pm-kisan-mobile-number-change-2026'}` }
-              ]
-            }
-          ]
-        })}
-      </Script>
-
       {modal && (
         <CountdownModal
           title={modal.title}

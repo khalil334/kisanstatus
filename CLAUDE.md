@@ -15,7 +15,7 @@
 │     → Problem: 2× WebApplication + 2× BreadcrumbList schemas               │
 │     → Impact: Search engines confused ho sakte hain                         │
 │                                                                             │
-│  3. Article Pages — Excessive Duplicate Schemas                             │
+│  3. ✅ FIXED — Article Pages — Excessive Duplicate Schemas                             │
 │     → Location: /articles/[slug] pages                                       │
 │     → Problem: 5× Article, 3× WebPage, 2× BreadcrumbList, 2× FAQPage       │
 │     → Impact: Schema bloat, Google ignore kar sakta hai excess schemas      │
@@ -37,7 +37,7 @@
 ├─────────────────────────────────────────────────────────────────────────────┤
 │  🟢 LOW / SUGGESTIONS                                                       │
 │                                                                             │
-│  6. Article Schema Count Excessive                                          │
+│  6. ✅ FIXED — Article Schema Count Excessive                                          │
 │     → 7 schemas per article page bahut zyada hain. Ideal: 3-4 max           │
 │                                                                             │
 │  7. ✅ FIXED — Maandhan Schema Build Code Exists But Not Rendering                     │
@@ -70,3 +70,17 @@
   7 client components; the server page.tsx schemas are the single source of truth.
   Verified in production build: every calculator page now has exactly
   1× WebApplication + 1× BreadcrumbList in static HTML.
+
+- 2026-08-08 — Bug #3 + #6 FIXED (branch fix/bug3-article-schema-bloat):
+  Root cause: app/articles/[slug]/page.tsx centrally emits Article + WebPage +
+  BreadcrumbList for every article, but 18 article components ALSO emitted their
+  own Article/BreadcrumbList/Organization/FAQPage schemas (some via next/script
+  @graph, some via plain <script>, some via @graph in kisanguides) → up to
+  5× Article, 3× WebPage, 2× BreadcrumbList, 2× FAQPage per page.
+  Fix: removed all duplicate Article/WebPage/BreadcrumbList/Organization schemas
+  from the 18 components. Kept exactly one FAQPage (from FAQBlock or the
+  component's own @graph where there is no FAQBlock) and unique HowTo schemas.
+  Central buildSchemas() in app/articles/[slug]/page.tsx is the single source
+  of truth for Article/WebPage/BreadcrumbList.
+  Verified in production build: every article page now has exactly 1× Article,
+  1× WebPage, 1× BreadcrumbList, ≤1× FAQPage (3-5 schemas total — ideal range).
