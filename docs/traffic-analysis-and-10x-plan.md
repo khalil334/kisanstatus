@@ -120,7 +120,7 @@ Har article likhne ke baad yahan status update karein (⬜ → ✍️ In progres
 | 5 | मुख्यमंत्री किसान कल्याण योजना MP ₹12000 | ⬜ Not started |
 | 6 | पीएम किसान नई रजिस्ट्रेशन | ⬜ Not started |
 | 7 | फार्मर आईडी कार्ड (AgriStack) | ⬜ Not started |
-| 8 | ट्रैक्टर सब्सिडी राज्यवार | ⬜ Not started |
+| 8 | ट्रैक्टर सब्सिडी राज्यवार | ✅ Live |
 | 9 | गेहूं का रेट आज — MSP vs मंडी भाव | ⬜ Not started |
 | 10 | eKYC मोबाइल से (OTP + Face App) | ⬜ Not started |
 | 11 | NPCI आधार सीडिंग गाइड | ⬜ Not started |
