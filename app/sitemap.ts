@@ -59,13 +59,22 @@ const REFERENCE_DATE = new Date(
 /** Deterministic fallback for entries with no usable date of their own. */
 const FALLBACK_DATE = REFERENCE_DATE;
 
-function getArticlePriority(modifiedTime: string): number {
-  const daysSinceModified = Math.floor((REFERENCE_DATE.getTime() - new Date(modifiedTime).getTime()) / 86400000);
-  if (daysSinceModified <= 1) return 1.0;
-  if (daysSinceModified <= 7) return 0.95;
-  if (daysSinceModified <= 30) return 0.90;
-  if (daysSinceModified <= 90) return 0.85;
-  return 0.80;
+/**
+ * Priority reflects a page's ROLE, not its recency. The old recency-based
+ * tiers put 39/94 URLs at priority 1.0 after any bulk date bump, collapsing
+ * the signal (GSC "Discovered - currently not indexed", FIX-4 in fix.md).
+ * Recency is already conveyed by <lastmod>; priority now ranks page types:
+ * homepage 1.0 > hubs 0.9 > cornerstone articles 0.8 > normal articles 0.7 >
+ * category pages 0.6 > legal/static 0.3.
+ */
+const CORNERSTONE_SLUGS = new Set([
+  'PmKisanMasterGuide2026',
+  'PmKisan24viKist2026',
+  'PmKisanBeneficiaryList2026',
+]);
+
+function getArticlePriority(slug: string): number {
+  return CORNERSTONE_SLUGS.has(slug) ? 0.8 : 0.7;
 }
 
 function getArticleFrequency(category: string): MetadataRoute.Sitemap[number]['changeFrequency'] {
@@ -97,7 +106,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${SITE_URL}/articles`, 
       lastModified: new Date('2026-07-19'), 
       changeFrequency: 'daily', 
-      priority: 0.95,
+      priority: 0.90,
     },
     { 
       url: `${SITE_URL}/maandhan`, 
@@ -117,55 +126,55 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${SITE_URL}/calculator`, 
       lastModified: new Date('2026-07-15'), 
       changeFrequency: 'weekly', 
-      priority: 0.85,
+      priority: 0.90,
     },
     { 
       url: `${SITE_URL}/calculator/quick-status-check`, 
       lastModified: new Date('2026-07-15'), 
       changeFrequency: 'weekly', 
-      priority: 0.90,
+      priority: 0.70,
     },
     { 
       url: `${SITE_URL}/calculator/installment-tracker`, 
       lastModified: new Date('2026-07-15'), 
       changeFrequency: 'weekly', 
-      priority: 0.90,
+      priority: 0.70,
     },
     { 
       url: `${SITE_URL}/calculator/pm-kisan-benefit`, 
       lastModified: new Date('2026-07-15'), 
       changeFrequency: 'weekly', 
-      priority: 0.85,
+      priority: 0.70,
     },
     { 
       url: `${SITE_URL}/calculator/kcc-loan-emi`, 
       lastModified: new Date('2026-07-15'), 
       changeFrequency: 'weekly', 
-      priority: 0.85,
+      priority: 0.70,
     },
     { 
       url: `${SITE_URL}/calculator/pmfby-premium`, 
       lastModified: new Date('2026-07-15'), 
       changeFrequency: 'weekly', 
-      priority: 0.85,
+      priority: 0.70,
     },
     { 
       url: `${SITE_URL}/calculator/msp-income`, 
       lastModified: new Date('2026-07-15'), 
       changeFrequency: 'weekly', 
-      priority: 0.85,
+      priority: 0.70,
     },
     { 
       url: `${SITE_URL}/calculator/crop-profit`, 
       lastModified: new Date('2026-07-15'), 
       changeFrequency: 'weekly', 
-      priority: 0.85,
+      priority: 0.70,
     },
     { 
       url: `${SITE_URL}/about`, 
       lastModified: new Date('2026-06-15'), 
       changeFrequency: 'monthly', 
-      priority: 0.60,
+      priority: 0.50,
     },
     { 
       url: `${SITE_URL}/contact`, 
@@ -177,19 +186,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${SITE_URL}/privacy-policy`, 
       lastModified: new Date('2026-06-01'), 
       changeFrequency: 'yearly', 
-      priority: 0.40,
+      priority: 0.30,
     },
     { 
       url: `${SITE_URL}/disclaimer`, 
       lastModified: new Date('2026-06-01'), 
       changeFrequency: 'yearly', 
-      priority: 0.40,
+      priority: 0.30,
     },
     { 
       url: `${SITE_URL}/terms-of-service`, 
       lastModified: new Date('2026-06-01'), 
       changeFrequency: 'yearly', 
-      priority: 0.40,
+      priority: 0.30,
     },
   ];
 
@@ -206,7 +215,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         ? new Date(latestArticle.modifiedTime || latestArticle.publishedTime) 
         : now,
       changeFrequency: 'weekly',
-      priority: 0.85,
+      priority: 0.60,
     };
   });
 
@@ -218,7 +227,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${SITE_URL}${article.path}`,
       lastModified: modifiedDate,
       changeFrequency: getArticleFrequency(article.category),
-      priority: modified ? getArticlePriority(modified) : 0.80,
+      priority: getArticlePriority(article.slug),
       images: article.ogImage ? [`${SITE_URL}${article.ogImage}`] : undefined,
     };
   });
