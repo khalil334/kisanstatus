@@ -101,8 +101,26 @@ export default async function MaandhanArticlePage({ params }: { params: Promise<
   const siblings = MAANDHAN_ARTICLES.filter((a) => a.slug !== slug);
   const related = Array.from({ length: Math.min(6, siblings.length) }, (_, i) => siblings[(idx + i) % siblings.length]);
 
+  // BreadcrumbList JSON-LD — emitted centrally here (like /articles and
+  // /rajya-yojana routes); maandhan components emit Article/FAQPage only.
+  const url = `${SITE_URL}/maandhan/${slug}`;
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    '@id': `${url}#breadcrumb`,
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Maandhan Yojana', item: `${SITE_URL}/maandhan` },
+      { '@type': 'ListItem', position: 3, name: article.title, item: url },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <ArticleComponent article={article} />
       <section aria-label="Related maandhan articles" className="container-site max-w-3xl mx-auto px-4 pb-10">
         <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
