@@ -43,7 +43,7 @@ const FAQS_DATA = [
   },
   {
     q: 'CSC wala pm kisan mobile update ke kitne paise lega?',
-    a: 'CSC services ka rate card har center par display hona zaroori hai — service lene se pehle wahi rate card dekh lo, aur kaam ke baad receipt zaroor lo. Receipt par amount likha hota hai. Agar operator rate card se zyada maang raha hai to us center ki CSC ID note karke CSC ke official grievance channel (digitalseva portal) par shikayat kar sakte ho.',
+    a: 'Fixed rakam batana galat hoga kyunki charge service aur state ke hisaab se alag hota hai — sahi jawab center par laga rate card hai, jo display karna CSC rules me zaroori hai. Kaam se pehle rate card dekho, kaam ke baad receipt lo (amount us par likha hota hai). Operator rate card se zyada maange to CSC ID note karke digitalseva portal par grievance daal do.',
   },
   {
     q: 'Mobile number change karne ke baad OTP aane mein kitna time lagta hai?',
@@ -188,7 +188,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
             Bina OTP ke na <Link href="/articles/PmKisanEkycOnline2026" className="underline text-green-700 dark:text-green-400">eKYC</Link> ho rahi hai, na status check ho raha hai, aur na hi koi update. Aisa lagta hai jaise sarkari daftar ke chakkar lagane padenge. Lekin ruko, bade chakkar nahi lagane padenge. 
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Is guide mein humne pura tarika bataya hai ki <strong>pm kisan registered mobile number update</strong> kaise karein, wo bhi bina kisi badi pareshani ke. Online trap se bachna kaise hai, CSC par kitne paise dene chahiye, aur update successful hone ka 100% test — sab kuch detail mein.
+            Neeche pura tarika likha hai ki <strong>pm kisan registered mobile number update</strong> kaise hota hai — online trap se kaise bachein, CSC par charge kaise confirm karein, aur update ke baad khud kaise check karein ki naya number sach mein system me chadh gaya.
           </p>
           
           <Image
@@ -281,7 +281,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           <WB>
             <strong>Paise Ki Baat:</strong>
             <p className="text-xs text-[var(--color-text-muted)] mt-2">
-              CSC services ka rate card har center par display hona zaroori hai — service lene se pehle rate card dekho aur kaam ke baad <strong>receipt zaroor lo</strong> (us par amount aur transaction ID dono hote hain). Agar operator rate card se alag ya bahut zyada charge maang raha hai, to behes mat karo — uski CSC ID note karo aur CSC ke official grievance channel (digitalseva portal) par complaint karo, ya dusre center chale jao.
+              Kitne paise lagenge? Har CSC center ko apna rate card display karna hota hai — kaam se pehle usi se charge confirm karo aur kaam ke baad <strong>receipt zaroor lo</strong> (us par amount aur transaction ID dono hote hain). Operator rate card se alag ya bahut zyada maang raha hai to behes karne ki zaroorat nahi — uski CSC ID note karo, digitalseva portal par complaint daalo, aur kaam kisi doosre center se karwa lo.
             </p>
           </WB>
 
@@ -567,7 +567,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
         {}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Puche Jane Wale Sawal (FAQs)
+            Mobile Number Update Se Jude Sawal-Jawab
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Mobile Number Change — Aksar Puchhe Jaane Wale Sawal" />
         </section>
