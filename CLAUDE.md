@@ -109,3 +109,54 @@
   their H1 (scripts/check-title-h1.js: 71 pairs checked, all aligned).
   Verified in production build: rendered <title> now matches the H1 lead on
   both pages.
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  ✅ VERIFIED FIXES — Sab Theek Hai                                          │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  ✅ Calculator schemas — 7/7 pages, 1x each (no duplicates)                 │
+│  ✅ Article schemas — 4 scripts, 1x each (was 5+ duplicates)                │
+│  ✅ Maandhan Article schema — present (was missing)                         │
+│  ✅ Maandhan WebPage schema — present (was missing)                         │
+│  ✅ Maandhan FAQPage schema — present                                       │
+│  ✅ Sitemap priorities — mixed correctly                                    │
+│  ✅ Sitemap lastModified — individual dates                                 │
+│  ✅ /search removed from sitemap                                            │
+│  ✅ WebSite + SearchAction schemas on homepage                              │
+│  ✅ Search page real content                                                │
+│  ✅ Maandhan in Header search index                                         │
+│  ✅ Footer copyright space                                                  │
+│  ✅ OG images loading correctly (200 OK)                                    │
+│  ✅ All pages 200 OK, 404s working correctly                                │
+│  ✅ No mixed content (http:// on https page)                                │
+│  ✅ Meta descriptions on all checked pages                                  │
+│  ✅ HTML sizes reasonable (< 300KB)                                         │
+│  ✅ noindex on 404 page                                                     │
+│  ✅ HSTS, X-Content-Type-Options, Referrer-Policy headers correct           │
+│  ✅ Title/H1 aligned on 7/9 pages                                           │
+│                                                                             │
+├─────────────────────────────────────────────────────────────────────────────┤
+│  ⚠️ 3 CHOTE ISSUES BAHI HAIN                                                │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  1. Maandhan pages mein BreadcrumbList schema NAHI hai                      │
+│     → app/maandhan/[slug]/page.tsx mein code hi nahi hai                    │
+│     → Article aur Rajya Yojana pages mein hai, Maandhan mein missing        │
+│                                                                             │
+│  2. X-Frame-Options: vercel.json override kar raha hai                      │
+│     → next.config.js mein 'DENY' hai                                        │
+│     → vercel.json mein 'SAMEORIGIN' hai ← ye jeet raha hai                  │
+│     → Fix: vercel.json mein 'SAMEORIGIN' ko 'DENY' karo ya hata do         │
+│                                                                             │
+│  3. Title/H1 mismatch (2 pages) — intentional ho sakta hai                  │
+│     → /articles/PmKisanMasterGuide2026                                      │
+│       Title: "PM Kisan Complete Guide — Sab Fix"                            │
+│       H1:    "PM Kisan Complete Guide 2026: Registration Se Lekar..."       │
+│     → /rajya-yojana/rajasthan-kisan-samman-nidhi-9000                       │
+│       Title: "Rajasthan Kisan Samman Nidhi 2026"                            │
+│       H1:    "Rajasthan Kisan Samman Nidhi: ₹9,000 Kaise Milte Hain..."     │
+│     → Agar intentional hai (seoTitle vs title alag rakha hai) toh theek     │
+│       hai, warna align karne ka socho                                       │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
