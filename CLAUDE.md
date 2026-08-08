@@ -28,7 +28,7 @@
 │     → Problem: Config mein 'DENY' hai, lekin live site 'SAMEORIGIN' bhej   │
 │       raha hai (Vercel ya koi middleware override kar raha hai)             │
 │                                                                             │
-│  5. Title / H1 Mismatch (SERP Rewrite Risk)                                 │
+│  5. ✅ FIXED — Title / H1 Mismatch (SERP Rewrite Risk)                                 │
 │     → Location: /articles/PmKisan24viKist2026, /rajya-yojana/*              │
 │     → Problem: Title: "PM Kisan 24vi Kist — Kab Aayegi? | KisanStatus"     │
 │       H1: "PM Kisan 24vi Kist Kab Aayegi? October 2026 Release Date..."     │
@@ -91,3 +91,21 @@
   functional effect but confusing/inconsistent.
   Fix: aligned next.config.js to SAMEORIGIN, matching vercel.json and the CSP
   `frame-ancestors 'self'` directive already in place.
+
+- 2026-08-08 — Bug #5 FIXED (branch fix/bug5-title-h1-mismatch):
+  Root cause: two pages had a <title> whose leading phrase disagreed with the
+  on-page <h1>, triggering Google SERP title rewrites (Ahrefs "Page and SERP
+  titles do not match"):
+  1. /articles/PmKisan24viKist2026 — title "PM Kisan 24vi Kist — Kab Aayegi?"
+     vs H1 "PM Kisan 24vi Kist Kab Aayegi? October 2026 Release Date...".
+     Fix: added seoTitle 'PM Kisan 24vi Kist Kab Aayegi? October 2026 Date'
+     in lib/articles-data.ts (the page's <title>/og:title already prefer
+     seoTitle). Keep "October 2026" in sync with KIST.expectedDate.
+  2. /rajya-yojana/mp-kisan-kalyan-yojana-kist-status — title "MP Kisan
+     Kalyan Yojana Kist Status" vs H1 "MP CM Kisan Kalyan Yojana Kist Kab
+     Aayegi: ...". Fix: aligned title to 'MP CM Kisan Kalyan Yojana Kist Kab
+     Aayegi' in lib/rajya-yojana-data.ts.
+  All other article + rajya-yojana pages already lead with the same phrase as
+  their H1 (scripts/check-title-h1.js: 71 pairs checked, all aligned).
+  Verified in production build: rendered <title> now matches the H1 lead on
+  both pages.
