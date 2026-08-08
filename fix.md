@@ -35,7 +35,8 @@ robots.txt crawl-delay lines: 0 ✅
 | FIX-5 (duplicate apple meta tags) | ✅ **DONE** — merged in PR #123 | `metadata.other` se teeno `apple-mobile-web-app-*` entries removed |
 | FIX-3 (`.vercel.app` redirect error) | ⏳ **OWNER ACTION** — code nahi, Vercel dashboard | Settings → Domains ya Deployment Protection (neeche §3) |
 | FIX-2 partial (legacy path redirects) | ✅ **DONE** — `fix/legacy-404-redirects` | `next.config.js`: `/sitemap_index.xml`→`/sitemap.xml`, `/feed`→`/rss.xml`, `/index.html`→`/` |
-| FIX-2 rest (13 × 404 triage) | ⏳ **BLOCKED** — GSC CSV export chahiye | GSC → Page indexing → "Not found (404)" → EXPORT (neeche §2) |
+| FIX-2 rest (13 × 404 triage) | ✅ **NO CODE WORK NEEDED** — CSV mil gaya, saare 13 already 308 redirect hote hain (neeche §2) | Sirf GSC mein VALIDATE FIX dabana hai |
+| FIX-4 root cause (category pages ko 0 internal links) | ✅ **DONE** — `fix/orphan-internal-links` | `app/articles/ArticlesClient.tsx`: hub pe canonical `/articles/category/X` links ka row add kiya |
 | FIX-4c (`changeFrequency` honesty) | ⛔ **WON'T FIX** — deliberate | Google `changefreq` largely ignore karta hai; 59 URLs ko `weekly`→`monthly` karne ka koi measurable SEO benefit nahi. Noise, isliye chhod diya. |
 
 Verification pre-merge: `tsc --noEmit` clean, `eslint` clean, `next build --webpack`
@@ -231,10 +232,25 @@ curl -s https://kisanstatus.com/sitemap.xml | grep -o '<loc>[^<]*' | sed 's/<loc
 
 **Severity:** Critical · **Effort:** medium · **Blocker: URL list chahiye**
 
-### Status
+### Status — ✅ RESOLVED (2026-08-08, CSV se verify hua)
 
-GSC keh raha hai 13 URLs 404 dete hain aur validation **Failed** ho gayi. Summary
-export mein URL list nahi hai, isliye ye issue **abhi actionable nahi** hai.
+GSC ka "Not found (404)" drilldown CSV mil gaya. **Saare 13 URLs ab live pe `308`
+redirect hote hain** — `next.config.js` ke redirects pehle se maujood hain. GSC ka data
+`2026-07-06` / `2026-07-08` ka tha, us waqt ye 404 the; ab nahi. **Koi code change nahi
+chahiye** — sirf GSC mein VALIDATE FIX.
+
+| GSC URL (last crawled) | Live ab | Redirect target |
+|---|---|---|
+| `/en` (07-08) | 308 | `/` |
+| `/scheme/pm-kisan` (07-06) | 308 | `/articles/PmKisanMasterGuide2026` |
+| `/scheme/pmfby` | 308 | `/articles/PmfbyCropInsurance2026` |
+| `/scheme/agristack` | 308 | `/articles/AgriStackKyaHai2026` |
+| `/scheme/soil-health-card` | 308 | `/articles/soil-health-card-complete-guide-2026` |
+| `/scheme/nano-dap` | 308 | `/articles/NanoDap500mlPriceInIndia2026` |
+| `/scheme/nabard-tractor` | 308 | `/articles/KisanTractorLoan2026` |
+| `/bank/sbi`, `/bank/pnb`, `/bank/bob`, `/bank/cooperative`, `/bank/tata-capital`, `/bank/mahindra-finance` | 308 | `/articles/KisanRinKahaSeLe2026` |
+
+### Purana status (historical)
 
 ### Jo humne khud confirm kiya
 
@@ -399,6 +415,56 @@ ignore karta hai**, par:
 **Fix:** `app/robots.ts` ke `Googlebot` block se `crawlDelay: 1` hatao. `*` aur
 `Bingbot` se bhi hata sakte hain (Bing ise GSC-jaisi settings se manage karta hai).
 
+### 4d. 🔴 Asli root cause — category pages ko **zero internal links** milte the
+
+2026-08-08: GSC ka "Discovered - currently not indexed" drilldown CSV (20 URLs) mila.
+Sab 20 live pe **200** hain aur sitemap mein hain — koi technical block nahi. Par
+inbound internal links ginne par asli wajah mili.
+
+`app/articles/ArticlesClient.tsx` ke category filter pills **query-param** URLs pe
+point karte the:
+
+```tsx
+href={`/articles?category=${slug}`}     // client-side filter, NOT the canonical page
+```
+
+Jabki canonical indexable pages `/articles/category/<slug>` hain. Nateeja — hub page
+un chhe category pages ko **ek bhi link nahi deta tha**. Live confirm:
+
+```
+$ curl -s https://kisanstatus.com/articles | grep -o 'href="/articles/category/[a-z-]*"' | sort -u
+(khaali — zero links)
+```
+
+Google ne unhe sirf sitemap se "discover" kiya, par site pe koi raasta na hone se crawl
+karne ki priority nahi di. Ye **poore GSC bucket ka sabse asli, fixable hissa** hai.
+
+**Fix:** pills ko waise hi rakha (UX na toote — instant filter useful hai) aur uske
+neeche canonical `/articles/category/X` links ka ek chhota row add kiya. Ab crawler ko
+real path milta hai aur reader ko dono options.
+
+#### ⚠️ False alarm — jo orphan lag rahe the, orphan nahi the
+
+Pehli ginti mein `PmKisanMobileNumberChangeUpdate`, `PmKisanVillageWiseListPdfDownload`
+aur `/terms-of-service` "0 inbound links" dikhe. **Wo grep ki galti thi** — ye pages
+`relatedSlugs` / `RELATED` arrays se link hote hain (path se nahi, slug se), aur footer se.
+Live verify:
+
+```
+/articles/PmKisanMasterGuide2026    -> dono slugs ko link karta hai ✅
+/articles/PmKisanBeneficiaryList2026 -> VillageWiseListPdf ✅
+/articles/PmKisanCorrectionForm2026  -> MobileNumberChange ✅
+/articles/PmKisanEkycOnline2026      -> MobileNumberChange ✅
+homepage footer                      -> /terms-of-service ✅
+```
+
+**Inke liye koi fix nahi kiya** — already properly linked hain. Sabaq: internal-link
+count grep se nahi, **live rendered HTML** se verify karo.
+
+> Note: `relatedSlugs` sirf tab render hote hain jab referring article ka `component`
+> `app/articles/[slug]/page.tsx` ke `NEEDS_RELATED_BLOCK` set mein ho. Isliye data mein
+> link hona kaafi nahi — rendered output check karna zaroori hai.
+
 ### 4c. `changeFrequency` ki honesty
 
 ```
@@ -552,9 +618,10 @@ isko alag se dekh sakte hain.
 | Kaam | Kaun karega | Kaise |
 |---|---|---|
 | FIX-3 — `.vercel.app` 403 | **owner (Vercel dashboard)** | Settings → Deployment Protection off for production, **ya** Settings → Domains mein `kisanstatus.vercel.app` ka permanent redirect → `kisanstatus.com`. Code touch nahi hoga. |
-| FIX-2 — 13 × 404 ki asli list | **owner (GSC export)** | GSC → Page indexing → "Not found (404)" → EXPORT → CSV share karo |
 
-Code side pe **kuch nahi bacha** — sab merge ho chuka hai.
+Code side pe **kuch nahi bacha** — FIX-1, FIX-2 (dono hisse), FIX-4 (priority + crawlDelay
++ category links), FIX-5 sab merge ho chuke hain. Sirf FIX-3 (Vercel setting) aur GSC
+mein validate/re-crawl dabana baaki hai.
 
 **Kyun ye order:** FIX-1 sabse zyada pages theek karta hai (9 confirmed + galat
 canonicals) aur template-level hai — ek fix, chaar route families. FIX-3 code touch nahi
@@ -581,6 +648,19 @@ karta. FIX-5 2 minute ka hai. FIX-4 ka asar dheere aata hai. FIX-2 aapke CSV pe 
 - `https://kisanstatus.com/feed` → `/rss.xml` (RSS dikhna chahiye)
 - `https://kisanstatus.com/index.html` → `/` (homepage)
 - `https://kisanstatus.com/feed/` → chain ke baad `/rss.xml` pe land kare
+
+**Category page links (FIX-4d) — hub pe canonical links dikhne chahiye:**
+- `https://kisanstatus.com/articles` — filter pills ke neeche "Category ke poore guides"
+  row dikhe, aur uske links `/articles/category/<slug>` pe jaayein (query-param pe nahi)
+- Har category page khud khule: `/articles/category/loan`, `/articles/category/pashupalan`,
+  `/articles/category/agri-business`, `/articles/category/mandi`,
+  `/articles/category/farming`, `/articles/category/status-check`
+- Purane filter pills bhi **waise hi kaam karein** (instant filter, page reload nahi)
+
+```bash
+curl -s https://kisanstatus.com/articles | grep -o 'href="/articles/category/[a-z-]*"' | sort -u
+# 6 canonical category links aane chahiye (pehle khaali tha)
+```
 
 **Regression check — ye normal chalne chahiye (FIX-1 ne kuch toda nahi):**
 - `https://kisanstatus.com/articles/PmKisan24viKist2026`
