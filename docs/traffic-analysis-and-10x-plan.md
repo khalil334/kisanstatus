@@ -86,3 +86,46 @@ Aapka eKYC article Hinglish mein hai. Devanagari version banao jisme PM Kisan Fa
 - Month 6: 10x realistic hai agar upar ke structural fixes bhi hue
 
 *Note: Exact search volumes verify karne ke liye Ahrefs/GSC data chahiye — upar ki prioritisation query patterns aur competition observation par based hai.*
+
+---
+
+## Part 4: Bonus — 4 Aur Under-Served Article Ideas (Letaido follow-up analysis)
+
+Ye 4 ideas upar wale 10 ke complement hain — sab "problem + fix" queries jahan official site jawab nahi deta aur competition thin hai:
+
+### 11. NPCI आधार सीडिंग कैसे करें — DBT पेमेंट के लिए (Step-by-Step + Form)
+PM Kisan payment failure ka #1 reason NPCI/DBT seeding hai. Ye guide har DBT scheme (Ladli Behna, ration subsidy) pe apply hota hai — cross-scheme evergreen traffic. Queries: "npci aadhaar seeding online", "dbt enable kaise kare", "aadhaar bank link status check".
+
+### 12. PM Kisan Status में "Payment Stopped by State" का मतलब + Fix
+Error-message queries ka intent 100% informational hota hai aur official portal kuch explain nahi karta. High desperation, low competition. Isi pattern par baaki status errors bhi cover karo (FTO generated but no payment, Rft Signed, etc. — kuch already covered hain, unse internal link karo).
+
+### 13. PM Kisan Recovery Notice आया है? पैसा वापस कैसे करें (Ineligible Farmers Guide)
+Lakho farmers ko recovery notices mile hain (income tax payers, govt employees). High-anxiety query, zero good Hindi/Hinglish content. Queries: "pm kisan recovery notice", "pm kisan paisa wapas kaise kare".
+
+### 14. KCC लिमिट कैसे बढ़ाएं — ₹3 लाख से ₹5 लाख (Interest Subvention)
+Loan cluster expand karta hai + commercial intent = better ad RPM. Existing KCC article se internal link. Queries: "kcc limit kaise badhaye", "kcc renewal process", "kcc interest rate".
+
+---
+
+## Status Tracker
+
+Har article likhne ke baad yahan status update karein (⬜ → ✍️ In progress → ✅ Live).
+
+| # | Article | Status |
+|---|---|---|
+| 1 | पीएम किसान 25वीं किस्त कब आएगी | ⬜ Not started |
+| 2 | स्टेटस चेक मोबाइल नंबर से | ⬜ Not started |
+| 3 | किसान कर्ज माफी लिस्ट (state-wise) | ⬜ Not started |
+| 4 | हेल्पलाइन नंबर + शिकायत गाइड | ⬜ Not started |
+| 5 | मुख्यमंत्री किसान कल्याण योजना MP ₹12000 | ⬜ Not started |
+| 6 | पीएम किसान नई रजिस्ट्रेशन | ⬜ Not started |
+| 7 | फार्मर आईडी कार्ड (AgriStack) | ⬜ Not started |
+| 8 | ट्रैक्टर सब्सिडी राज्यवार | ⬜ Not started |
+| 9 | गेहूं का रेट आज — MSP vs मंडी भाव | ⬜ Not started |
+| 10 | eKYC मोबाइल से (OTP + Face App) | ⬜ Not started |
+| 11 | NPCI आधार सीडिंग गाइड | ⬜ Not started |
+| 12 | "Payment Stopped by State" fix | ⬜ Not started |
+| 13 | Recovery Notice गाइड | ⬜ Not started |
+| 14 | KCC लिमिट ₹3→₹5 लाख | ⬜ Not started |
+
+**Suggested writing order:** 1 (25वीं किस्त — release se pehle mature hona chahiye) → 7 (Farmer ID — trending) → 11 (NPCI — evergreen) → 2 → 4 → 12 → baaki.
