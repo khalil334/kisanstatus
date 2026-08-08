@@ -13,7 +13,7 @@ farmer-useful + traffic keywords, no invented facts/numbers.
 | 1 | PmKisanStatusCheckMobileNumberSe | **done** — 2084 words, 11 H2 + 5 H3, 2 tables, 12 FAQ, CalcBanner, long-tail keywords added |
 | 2 | PmKisan25viKistKabAayegi | **done** — 2046 words, 7 H2 + 6 H3, 1 table (काम vs समय), pre-kist checklist, eligibility section, 11 FAQ, no fake dates |
 | 3 | PmKisanEkycMobileSeKaiseKare | **done** — 2046 words, 10 H2 + 3 H3, rasta-comparison table, error-message decoder, thagi checklist, 12 FAQ |
-| 4 | PmKisanPaymentStoppedByStateFix | pending |
+| 4 | PmKisanPaymentStoppedByStateFix | **done** — 2081 words, 10 H2 + 4 H3, status-message comparison table, dakiya analogy, 3-sawaal self-triage, tehsil documents checklist, galat-flag + dohra-aavedan deep dive, state-wise offices, 12 FAQ |
 | 5 | PmKisanNewRegistration2027 | pending |
 | 6 | NpciAadhaarSeedingDbtPayment | pending |
 | 7 | PmKisanRecoveryNoticePaisaWapas | pending |
