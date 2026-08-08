@@ -8,7 +8,7 @@ import { SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
 
 const PUBLISHED = '2026-07-30T10:00:00+05:30';
-const MODIFIED = '2026-07-30T18:00:00+05:30';
+const MODIFIED = '2026-08-08T09:00:00+05:30';
 
 const RELATED_CARDS = [
   {
@@ -279,19 +279,13 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
         </div>
 
         <section className="mb-8">
-          <SH>Kaun Join Kar Sakta Hai? Eligibility Aur Exclusions</SH>
+          <SH>Eligibility Sirf Ek Nazar Mein</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Yeh scheme specifically chhote aur seemant kisanon (Small and Marginal Farmers) ke liye design ki gayi hai. Basic rule simple hai: aapke paas 2 hectare (lagbhag 5 acre) ya usse kam cultivable land honi chahiye, aur umar 18 se 40 saal ke beech.
+            Ye page sirf numbers ke liye hai — 18–40 saal entry, 2 hectare tak zameen, PM Kisan beneficiary hona zaroori. Shartein detail mein, exclusion list aur documents ke saath, alag guide mein hain:
           </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Lekin "2 hectare" wali baat thodi tricky ho sakti hai. Kai baar kisanon ke paas alag-alag jagah chhote plots hote hain ya joint family land hoti hai. Iska exact calculation thoda complex ho sakta hai, isliye apne CSC se land records (khasra/khatauni) dikha kar ek baar confirm kar lena behtar rahega.
-          </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Iske alawa, kuchh log bilkul bhi is scheme mein nahi aa sakte. Jaise ki jo log pehle se NPS, EPFO, ya ESIC jaise organized pension schemes mein hain, ya phir income tax pay karte hain. Sarkari naukri wale (chahe woh present hon ya former Ministers, MPs, MLAs, Mayors) aur registered professionals (doctors, engineers, CA, lawyers, architects) bhi is list se bahar hain. Agar aap PM-SYM ya PM-LVM ka pehle se beneficiary hain, toh bhi yeh option available nahi hai.
-          </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Ek achi baat yeh hai ke enrollment ke waqt alag se age proof ya income proof nahi mangte — self-declaration kaafi hota hai, bas Aadhaar aur bank passbook chahiye. Lekin ek senior ki advice maan lena: form bharte waqt sachhi jankari hi dena. Galat details dene se baad mein na sirf application reject hoti hai, balki CSC wale aur aap dono ki pareshani badh jati hai jab claim ka time aata hai.
-          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <Link href="/maandhan/pm-kisan-maandhan-eligibility-documents" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">📋 Eligibility & Documents Ki Poori Checklist →</Link>
+          </div>
         </section>
 
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
@@ -310,16 +304,13 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
         </div>
 
         <section className="mb-8">
-          <SH>Registration Kaise Hota Hai?</SH>
+          <SH>Register Karna Ho To</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Aapko khud se online form bharna nahi padta. Nazdeeki Common Service Center (CSC) par jayein. VLE (Village Level Entrepreneur) aapka enrollment karega. Saath mein le jana hai: Aadhaar card, bank passbook, aur ek passport size photo. Mobile number Aadhaar se linked hona chahiye kyunki OTP aayega.
+            Contribution amount confirm karne ke baad agla kadam registration hai — CSC aur online app dono ke step-by-step screenshots wali guide alag se maujood hai:
           </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            VLE aapka Aadhaar authenticate karega, bank details record karega, aur auto-debit mandate form print karke signature lega. Pehla contribution cash mein dena hota hai. Uske baad system ek unique Kisan Pension Account Number (KPAN) generate karta hai jo mobile par SMS aata hai. 
-          </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            <strong>Ek chhoti si observation:</strong> Maine kai baar dekha hai ke VLE log auto-debit mandate wali baat clearly nahi samjhate. Form sign karne se pehle khud ek baar padh lena. CSC har enrollment ke ₹30 charge karta hai, jo government reimburse karti hai, toh aapko yeh amount nahi dena padta.
-          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <Link href="/maandhan/pm-kisan-maandhan-registration-2026" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">📝 Registration Ka Step-by-Step Process →</Link>
+          </div>
         </section>
 
         <section className="mb-8">
@@ -378,20 +369,13 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
         </section>
 
         <section className="mb-8">
-          <SH>Exit Rules — Beech Mein Chhodne Par Kya Milega?</SH>
+          <SH>Beech Mein Chhodne Ka Hisaab</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Agar aap scheme beech mein chhodna chahte hain, toh kitna paisa wapas milega — yeh aapke kitne saal contribution diye hain, us par depend karta hai. 
+            Scheme chhodne par kitna refund milega, ye aapki exit ki timing par depend karta hai — teen alag halaat ke exact rules scenario-wise guide mein diye hain:
           </p>
-          <ul className="list-disc list-inside text-sm text-[var(--color-text-muted)] space-y-2 mb-4 ml-2">
-            <li><strong>Government ka co-contribution:</strong> Pre-mature exit par aapko government ka share kabhi wapas nahi milta. Woh amount pension fund mein transfer ho jata hai.</li>
-            <li><strong>Aapka contribution:</strong> Agar subscriber ki death 60 saal se pehle ho jati hai, toh spouse/nominee ko subscriber ka deposited amount + fund interest ya savings bank interest (jo bhi zyada ho) milega.</li>
-          </ul>
-          <p className="text-sm text-[var(--color-text-muted)] mb-4">
-            <strong>Ek limitation acknowledge karun:</strong> Voluntary exit (death ke alawa) par exactly kitna paisa wapas milega — kya 10 saal se pehle aur baad mein alag-alag rule hai — yeh thoda grey area hai. Main confirm nahi kar saka ki exact formula kya hai, isliye apne nazdeeki CSC ya pmkmy.gov.in se ek baar pooch lena behtar rahega. Kuchh websites par alag-alag information milti hai, lekin official source se hi confirm karein.
-          </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            60 saal ke baad pension shuru hoti hai — ₹3000 har mahine. Agar subscriber ki death 60 ke baad ho jaye, toh spouse ko ₹1500/month family pension milti hai. Dono (subscriber + spouse) ki death ke baad accumulated corpus pension fund mein chala jata hai — yeh thoda tough rule hai, lekin scheme ka structure aisa hi hai.
-          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <Link href="/maandhan/pm-kisan-maandhan-withdrawal-refund-rules" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">💸 Withdrawal & Refund Ke Exact Rules →</Link>
+          </div>
         </section>
 
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
@@ -410,26 +394,23 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
         </div>
 
         <section className="mb-8">
-          <SH>PMKMY vs Atal Pension Yojana — Farq Kya Hai?</SH>
+          <SH>APY Se Compare Karna Ho To</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Dono pension schemes hain, lekin target audience alag hai. PM-KMY sirf chhote kisanon ke liye hai jinke paas 2 hectare se kam zameen hai. APY koi bhi Indian citizen join kar sakta hai.
+            Dono schemes ₹3000 pension deti hain lekin contribution aur government match bilkul alag hai — head-to-head scorecard alag article mein hai:
           </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Main farq yeh hai ke PM-KMY mein government aapka <strong>barabar hissa</strong> deti hai har mahine — poore contribution period tak. APY mein government co-contribution sirf 5 saal tak milti hai aur sirf eligible subscribers ko. PM-KMY mein pension fixed ₹3000 hai, jabki APY mein aap ₹1000 se ₹5000 tak choose kar sakte hain.
-          </p>
-          <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-            <strong>Meri raay:</strong> APY flexible zaroor hai, lekin agar aap kisan hain aur PM-KMY ke liye eligible hain, toh PM-KMY ka matching contribution zyada attractive hai. 20-25 saal tak government ka equal contribution milna — yeh koi chhoti baat nahi hai. APY tabhi consider karein jab aap PM-KMY ke liye eligible na hon.
-          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <Link href="/maandhan/pm-kisan-maandhan-vs-atal-pension-yojana" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">⚖️ PMKMY vs APY: Full Comparison →</Link>
+          </div>
         </section>
 
         <section className="mb-8">
-          <SH>Status Kaise Check Karein?</SH>
+          <SH>Contribution Jama Ho Raha Hai Ya Nahi?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Enrollment ke baad aap apna status pmkmy.gov.in par check kar sakte hain. "Subscriber Status" ya "Know Your Status" option mein apna KPAN number ya registered mobile number daaliye. OTP verify karein — <strong>ek practical tip:</strong> OTP aane mein kabhi-kabhi 1-2 minute lag jata hai, thoda sabar rakhein, baar-baar resend mat karein.
+            Table se amount confirm karne ke baad ye bhi verify karein ki paisa har mahine sach mein kat raha hai — status, passbook aur contribution history check karne ka process yahan hai:
           </p>
-          <p className="text-sm text-[var(--color-text-muted)]">
-            Helpline number <strong>1800-3000-3468</strong> par Monday se Saturday, 9:30 AM se 6 PM tak call karke bhi status poochh sakte hain. <Link href="/articles/PmKisan24viKist2026" className="text-green-600 hover:underline font-medium">PM Kisan Samman Nidhi status check</Link> alag portal par hota hai — pmkisan.gov.in use karein, pmkmy.gov.in nahi.
-          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <Link href="/maandhan/pm-kisan-maandhan-status-check-online" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">🔍 Status Check Karne Ka Tarika →</Link>
+          </div>
         </section>
 
         <section className="mb-8">
