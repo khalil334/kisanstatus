@@ -180,7 +180,8 @@ thoda kam hai; ranking ke liye kaafi accurate):
 | 4 | §A.5 DripSprinkler (1,064) | thinnest article + paisa-decision page | ✅ done (`5d90006`) |
 | 5 | §B.2 Maandhan Registration (2,198) | exit rules/family pension = high-demand gap | ✅ done |
 | 6 | §B.3 Maandhan Status Check (2,403) | dashboard-reading + escalation gap | ✅ done |
-| 7 | Baaki (A.4, A.2, A.3, B.1) | depth + differentiation pass, length nahi | ⬜ pending |
+| 7 | §A.4 Village Wise List (2,490) | list-vs-status-vs-dashboard differentiation | ✅ done |
+| 8 | Baaki (A.2, A.3, B.1) | depth + differentiation pass, length nahi | ⬜ pending |
 
 ---
 
@@ -267,10 +268,22 @@ File: `components/articles/PmKisanMobileNumberChangeUpdate.tsx`
 
 ---
 
-### A.4 `/articles/PmKisanVillageWiseListPdfDownload`
+### A.4 `/articles/PmKisanVillageWiseListPdfDownload` — ✅ DONE
 File: `components/articles/PmKisanVillageWiseListPdfDownload.tsx` — **2,490 prose words.**
 (Rev 1 ne isko "~770 words, sabse thin" kaha tha — measurement se ye **galat** nikla; ab ye
-mid-tier hai aur isko length ki nahi, differentiation ki zaroorat hai.)
+mid-tier hai aur isko length ki nahi, differentiation ki zaroorat thi.)
+
+**Kya hua:** Plan ka core differentiator add hua — naya "List vs Status vs Village Dashboard"
+section (teeno tools ka farak, kaunsa kis sawal ke liye). Naya "naam list mein hai par paisa
+nahi aaya" branch section: list-membership vs FTO-payment pipeline ka farak, do failure paths
+(eKYC/seeding pending = FTO bana nahi; FTO ke baad bank-level fail), existing FTO guide
+(`pm-kisan-fto-generated-ka-matlab-kya-hai`) + Payment Failed Fix guide contextual links.
+Matching FAQ add. Dropdown-chain steps, state portal table, PDF troubleshooting, privacy
+warning pehle se the — unhe nahi chheda. Unverified portal-UI claims add nahi kiye (Shape A
+walkthrough skip — portal access is session me verify nahi ho sakta tha, invent nahi karna tha).
+Images/paths unchanged. Date updated. `tsc` + `eslint` clean.
+
+**Original plan (reference):**
 
 **Add:**
 - Exact dropdown chain with real labels (State → District → Sub-district → Block → Village)
