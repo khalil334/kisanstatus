@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import Script from 'next/script';
 import { useState } from 'react';
 import { SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
@@ -113,8 +112,9 @@ function ContributionCalculator() {
 export default function MaandhanContributionGuide({ article }: { article: MaandhanArticleMeta }) {
   return (
     <>
-      <Script id="maandhan-age-wise-schema" type="application/ld+json" strategy="afterInteractive">
-        {JSON.stringify({
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
           '@context': 'https://schema.org',
           '@graph': [
             {
@@ -149,8 +149,8 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
               })),
             },
           ],
-        })}
-      </Script>
+        }) }}
+      />
 
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
