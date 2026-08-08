@@ -4,7 +4,7 @@ import Script from 'next/script';
 import { SI, StepList, SH, GovLink, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 const PUBLISHED = '2026-01-10T08:00:00+05:30';
-const MODIFIED = '2026-07-22T08:00:00+05:30'; 
+const MODIFIED = '2026-08-08T08:00:00+05:30'; 
 
 function fmtDate(dateString: string): string {
   const date = new Date(dateString);
@@ -60,6 +60,14 @@ const FAQS_DATA = [
   {
     q: 'Dairy farming ya poultry ke liye Kisan Credit Card mil sakta hai?',
     a: 'Haan, bilkul. KCC ab allied activities ko cover karta hai — dairy, poultry, fisheries, aur mushroom cultivation sab included hain. Limit alag calculate hoti hai based on unit size aur animal count.',
+  },
+  {
+    q: 'KCC 5 saal ke liye milta hai — beech mein limit badhwa sakte hain kya?',
+    a: 'Haan. Card 5 saal valid hota hai lekin har saal annual review hota hai. Clean repayment history par bank khud 10% ke aaspaas enhancement de deta hai. Agar aapne nayi zameen li hai ya crop pattern change kiya hai, toh review ke time updated land record lekar jaao — limit re-assess hoti hai.',
+  },
+  {
+    q: 'Jansamarth portal se KCC apply karna better hai ya seedha bank jaana?',
+    a: 'Jansamarth (jansamarth.in) ek single window hai jahan se application aapke chune hue bank tak pahunchti hai. Documents clean hain toh online theek hai. Lekin land record ya naam mismatch jaisa koi bhi issue hai toh branch route lo — wahan galti counter par hi pakdi jaati hai, portal par hafton baad reject hokar aati hai.',
   },
 ];
 
@@ -191,6 +199,136 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             <strong>Byaj Ka Asli Hisaab:</strong> Base rate 7% hota hai. Agar aap due date se pehle poora amount chuka dete hain, toh government 3% subvention deti hai. Matlab, ₹3 lakh ke loan par saalana byaj sirf ₹12,000 aata hai. Wahi local moneylender se ₹72,000 se upar lagta. Yeh saalana ₹60,000+ ki bachat hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Ek chhota example aur. Maan lijiye aapne ₹1 lakh nikala aur 11 mahine baad poora chuka diya. Bank pehle 7% ke hisaab se byaj calculate karega — lagbhag ₹6,400. Repayment time par hone ki wajah se 3% Prompt Repayment Incentive (PRI) wapas aapke account mein credit hoga — lagbhag ₹2,750. Net kharcha: ₹3,650 ke aaspaas, yaani effectively 4%. Dhyan rahe: PRI <em>baad mein refund</em> hota hai, upfront discount nahi. Isliye statement mein pehle 7% dikhe toh ghabraiye mat. Interest subvention scheme ki official details ke liye{' '}
+            <a href="https://www.agriwelfare.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline font-medium">Ministry of Agriculture (agriwelfare.gov.in)</a>{' '}aur RBI ke Modified Interest Subvention Scheme circulars dekhein.
+          </p>
+        </section>
+
+        {}
+        <section className="mb-8">
+          <SH>Ek Kisan Ki Asli Timeline — Application Se Paisa Milne Tak</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Process ko samajhne ka sabse aasan tarika hai ek real journey dekhna. Yeh timeline waisi hi hai jaisi hazaron kisanon ki hoti hai — Sitapur (UP) ke ek 2-acre wale kisan ka case lete hain, jinhe Kharif ki buwai ke liye ₹1.5 lakh chahiye tha.
+          </p>
+          <div className="space-y-3 mb-4">
+            <div className="flex gap-3 text-sm">
+              <span className="font-black text-green-700 dark:text-green-400 whitespace-nowrap">Din 1</span>
+              <p className="text-[var(--color-text-muted)]">Gramin bank branch gaye. Loan officer ne bataya ki Khatauni 4 saal purani hai — pehle tehsil se fresh copy lao.</p>
+            </div>
+            <div className="flex gap-3 text-sm">
+              <span className="font-black text-green-700 dark:text-green-400 whitespace-nowrap">Din 2–6</span>
+              <p className="text-[var(--color-text-muted)]">UP ke bhulekh portal se online Khatauni nikali (yahan CSC ne madad ki), lekin usme pita ji ka naam tha — mutation abhi update nahi hua tha. Lekhpal se milkar varasat ka record confirm karwaya.</p>
+            </div>
+            <div className="flex gap-3 text-sm">
+              <span className="font-black text-green-700 dark:text-green-400 whitespace-nowrap">Din 7</span>
+              <p className="text-[var(--color-text-muted)]">Poore documents ke saath dobara branch. Form bhara, officer ne PM Kisan beneficiary status check kiya (eKYC done tha — is wajah se verification fast hua). Acknowledgement receipt mili.</p>
+            </div>
+            <div className="flex gap-3 text-sm">
+              <span className="font-black text-green-700 dark:text-green-400 whitespace-nowrap">Din 8–14</span>
+              <p className="text-[var(--color-text-muted)]">Field verification — bank ka agent gaon aaya, plot dekha, 2 gawah ke sign liye. Yeh step skip nahi hota, chahe documents kitne bhi perfect hon.</p>
+            </div>
+            <div className="flex gap-3 text-sm">
+              <span className="font-black text-green-700 dark:text-green-400 whitespace-nowrap">Din 16</span>
+              <p className="text-[var(--color-text-muted)]">Sanction letter. Limit ₹1.62 lakh approve hui (scale of finance ke hisaab se — dhaan + gehu rotation par per-acre limit district committee tay karti hai). Card aur passbook ek hafte baad mile.</p>
+            </div>
+          </div>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Total: <strong>karib 3 hafte</strong>, jisme aadha time documents theek karne mein gaya. Seedha sabak — bank jaane se <em>pehle</em> Khatauni fresh karwa lo, toh yahi kaam 10 din mein ho jaata hai.
+          </p>
+        </section>
+
+        {}
+        <section className="mb-8">
+          <SH>SBI vs PNB vs Gramin Bank vs Cooperative — Kahan Se Lein?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Interest rate sab jagah same hai — 7% base, prompt repayment par 4% effective. Farak service, speed aur ground behaviour mein hai.
+          </p>
+          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-[var(--color-primary)] text-white">
+                  <th className="p-3 text-left">Bank Type</th>
+                  <th className="p-3 text-left">Strength</th>
+                  <th className="p-3 text-left">Dhyan Rakhein</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['SBI', 'YONO Krishi se online apply, ATM-cum-KCC card, sabse zyada branches', 'Rush zyada — subah jaayein; documents perfect hone par hi fast'],
+                  ['PNB / BOB', 'Digital process theek, processing generally smooth', 'Chhoti branches mein agriculture desk ek hi officer ke paas hota hai'],
+                  ['Gramin Bank (RRB)', 'Local land records se familiar, kisan-friendly staff', 'Online portal aksar kaam nahi karta — branch hi jaana padega'],
+                  ['Cooperative Bank', 'Approval fastest (5–7 din common), society-level pehchaan kaam aati hai', 'Cash withdrawal network chhota; digital services limited'],
+                ].map(([bank, plus, minus], i) => (
+                  <tr key={bank} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-green-50/40 dark:bg-green-900/10'}>
+                    <td className="p-3 border-b border-[var(--color-border)] font-bold text-[var(--color-text)]">{bank}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{plus}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{minus}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Ek practical rule: <strong>jahan aapka savings account pehle se hai aur PM Kisan ki kist aati hai, wahin se KCC lo.</strong> Us bank ke paas aapki transaction history hai, NPCI seeding done hai — verification ka aadha kaam pehle se ho chuka hai. Naye bank mein jaane par sab kuch zero se shuru hota hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Doosra rasta hai <a href="https://www.jansamarth.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline font-medium">Jansamarth portal</a> — government ka single-window loan portal jahan KCC samet kai schemes ek jagah hain. Aap eligibility check karke apni pasand ka bank chun sakte hain, application digitally us bank tak jaati hai. Kaam karta hai, lekin yaad rakhein: final verification aur sanction phir bhi branch level par hi hota hai, toh document problem hone par aapko bulaya jaayega hi.
+          </p>
+        </section>
+
+        {}
+        <section className="mb-8">
+          <SH>Dairy, Machli, Murgi — Pashupalan Wala KCC Alag Kaise Hai?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            2019 se KCC sirf fasal tak seemit nahi raha — Animal Husbandry aur Fisheries walon ke liye bhi khula hai. Lekin teen baatein alag hain, jo log aksar nahi jaante:
+          </p>
+          <ul className="space-y-2 mb-4 text-sm text-[var(--color-text-muted)] list-disc list-inside">
+            <li><strong>Zameen zaroori nahi.</strong> Dairy ke liye janwar hone ka proof (pashu bima, vet certificate, ya society membership) kaafi ho sakta hai. Bhoomiheen pashupalak bhi eligible hain.</li>
+            <li><strong>Limit unit ke hisaab se banti hai</strong> — kitni bhains/gaay hain, unka daily kharcha (chara, dawai) per animal calculate hota hai. Machli palan mein pond area basis par.</li>
+            <li><strong>Sirf allied activity wale KCC par</strong> subvention wali working-capital limit crop KCC se alag treat hoti hai — dono activities hain toh combined card banwao, alag-alag nahi.</li>
+          </ul>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Branch par "KCC-AH" (Animal Husbandry) bolke baat shuru karein — kai baar counter staff ko lagta hai KCC matlab sirf kheti, aur woh galat form thama dete hain. Scheme details{' '}
+            <a href="https://dahd.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline font-medium">Department of Animal Husbandry (dahd.gov.in)</a> par verified hain. Dairy loan ke deeper comparison ke liye hamari{' '}
+            <Link href="/articles/sbi-dairy-loan-interest-rate" className="text-green-700 dark:text-green-400 underline font-medium">SBI dairy loan guide</Link> padhein.
+          </p>
+        </section>
+
+        {}
+        <section className="mb-8">
+          <SH>CIBIL Score Ka Sach — Kitna Matter Karta Hai?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Chhota sawal, lamba jawab.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            KCC priority sector lending hai, isliye banks CIBIL ko personal loan jitni sakhti se nahi dekhte. ₹2 lakh tak ke collateral-free KCC mein zyada tar banks score ko decisive factor nahi banate — land record aur repayment capacity dekhi jaati hai. Lekin teen situations mein CIBIL bite karta hai:
+          </p>
+          <ol className="space-y-2 mb-4 text-sm text-[var(--color-text-muted)] list-decimal list-inside">
+            <li><strong>Active default</strong> kisi bhi loan par — system auto-flag karega, manager ka manual override chahiye hoga.</li>
+            <li><strong>Written-off ya settled account</strong> purane record mein — no-dues certificate ke bina aage badhna mushkil.</li>
+            <li><strong>₹2 lakh se badi limit</strong> — yahan credit history ka weight badh jaata hai.</li>
+          </ol>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Score kharab hai toh bhi raste hain: pehle chhoti limit (₹50,000–₹1 lakh) lekar 2 season clean repayment karo — enhancement ke time wahi history aapka sabse bada document ban jaati hai. Ya Joint Liability Group (JLG) route lo jisme group guarantee individual score ki kami cover karti hai.
+          </p>
+        </section>
+
+        {}
+        <section className="mb-8">
+          <SH>3 Saal Baad Kya Hota Hai — Renewal Aur Limit Enhancement</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            KCC 5 saal ke liye sanction hota hai, lekin yeh "set and forget" nahi hai. Har saal ek review hota hai, aur standard practice ke hisaab se limit mein saalana lagbhag 10% ki badhotri built-in hoti hai (cost of cultivation badhne ke hisaab se). Practically iska matlab:
+          </p>
+          <ul className="space-y-2 mb-4 text-sm text-[var(--color-text-muted)] list-disc list-inside">
+            <li>Pehle saal ₹1.5 lakh ki limit 5th saal tak ₹2 lakh ke aaspaas pahunch sakti hai — bina naye application ke, bas review clear hota rahe.</li>
+            <li>Review miss kiya (bank bulaye aur aap na jaao) toh limit freeze — withdrawal ruk jaata hai.</li>
+            <li>5 saal poore hone par renewal hota hai — fresh land record aur ek simple form. Purane card ki repayment history yahan aapki sabse badi taakat hai.</li>
+            <li>Crop pattern badla hai (jaise sabzi se ganna) toh review ke time batao — scale of finance alag hai, limit upar ja sakti hai.</li>
+          </ul>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Ek aur cheez jo KCC ke saath free aati hai lekin log bhool jaate hain — <strong>PMFBY crop insurance ka aasan access</strong>. KCC holder ka premium bank khud debit kar sakta hai, alag se bhaag-daud nahi. Premium kitna banega, hamare <Link href="/calculator/pmfby-premium" className="text-green-700 dark:text-green-400 underline font-medium">PMFBY premium calculator</Link> se check karein.
           </p>
         </section>
 
