@@ -7,7 +7,7 @@ import { Disclaimer } from '@/components/ArticleShared';
 export const metadata: Metadata = {
   title: 'PM Kisan Maandhan Yojana — Complete Guide',
   description:
-    'PM Kisan Maandhan Yojana (PM-KMY) ki poori jaankari Hindi mein — ₹3000 pension ka pura hisaab, contribution chart, eligibility, registration aur sabhi guides ek jagah.',
+    'PM Kisan Maandhan Yojana (PM-KMY) ki poori jaankari Hindi mein — ₹3000 pension ka hisaab, contribution chart, eligibility, registration aur sabhi guides.',
   alternates: {
     canonical: `${SITE_URL}/maandhan`,
   },
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     locale: 'hi_IN',
     title: 'PM Kisan Maandhan Yojana — Complete Guide',
     description:
-      'PM Kisan Maandhan Yojana (PM-KMY) ki poori jaankari Hindi mein — ₹3000 pension ka pura hisaab, contribution chart, eligibility, registration aur sabhi guides ek jagah.',
+      'PM Kisan Maandhan Yojana (PM-KMY) ki poori jaankari Hindi mein — ₹3000 pension ka hisaab, contribution chart, eligibility, registration aur sabhi guides.',
     images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: 'PM Kisan Maandhan Yojana Complete Guide' }],
   },
   twitter: {

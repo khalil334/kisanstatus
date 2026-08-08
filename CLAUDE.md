@@ -46,3 +46,9 @@
   both pages (keyword cannibalization, monitor-only; FTO article pos 5,
   homepage pos 6). If it persists, strengthen internal linking from the
   homepage to the FTO article with exact-match anchors.
+- 2026-08-08: "Meta description too long" fixed for /articles/drip-sprinkler-irrigation-subsidy
+  (lib/articles-data.ts desc, 204->158 chars) and /maandhan (app/maandhan/page.tsx metadata +
+  openGraph description, 178->153 chars). Budget: <=160 chars.
+- 2026-08-08: "Slow page" (22.4s on /rajya-yojana/state-kisan-yojana-list-all-states-2026) is a
+  false positive — page is SSG (generateStaticParams, dynamicParams=false), HTML 21.5KB, Vercel
+  edge. Transient crawl anomaly; expect it to clear on re-crawl.
