@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { Suspense } from 'react';
 import { SITE_URL } from '@/lib/site-config';
 import SearchBar from '@/components/SearchBar';
+import SearchResults from './SearchResults';
 
 export const metadata: Metadata = {
   // layout.tsx applies the `%s | KisanStatus` template — no inline brand here.
@@ -36,6 +38,11 @@ export default function SearchPage() {
       </div>
 
       <div className="container-site max-w-3xl py-10">
+        {/* Renders results for ?q= — the URL the homepage SearchAction schema advertises. */}
+        <Suspense fallback={null}>
+          <SearchResults />
+        </Suspense>
+
         <h2 className="text-sm font-bold text-[var(--color-text-muted)] uppercase tracking-wide mb-4">
           Popular Searches
         </h2>
