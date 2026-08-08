@@ -113,19 +113,19 @@ Har article likhne ke baad yahan status update karein (⬜ → ✍️ In progres
 
 | # | Article | Status |
 |---|---|---|
-| 1 | पीएम किसान 25वीं किस्त कब आएगी | ⬜ Not started |
-| 2 | स्टेटस चेक मोबाइल नंबर से | ⬜ Not started |
-| 3 | किसान कर्ज माफी लिस्ट (state-wise) | ⬜ Not started |
-| 4 | हेल्पलाइन नंबर + शिकायत गाइड | ⬜ Not started |
-| 5 | मुख्यमंत्री किसान कल्याण योजना MP ₹12000 | ⬜ Not started |
-| 6 | पीएम किसान नई रजिस्ट्रेशन | ⬜ Not started |
-| 7 | फार्मर आईडी कार्ड (AgriStack) | ⬜ Not started |
+| 1 | पीएम किसान 25वीं किस्त कब आएगी | ✅ Live |
+| 2 | स्टेटस चेक मोबाइल नंबर से | ✅ Live |
+| 3 | किसान कर्ज माफी लिस्ट (state-wise) | ✅ Live |
+| 4 | हेल्पलाइन नंबर + शिकायत गाइड | ✅ Live |
+| 5 | मुख्यमंत्री किसान कल्याण योजना MP ₹12000 | ✅ Live |
+| 6 | पीएम किसान नई रजिस्ट्रेशन | ✅ Live |
+| 7 | फार्मर आईडी कार्ड (AgriStack) | ✅ Live |
 | 8 | ट्रैक्टर सब्सिडी राज्यवार | ✅ Live |
-| 9 | गेहूं का रेट आज — MSP vs मंडी भाव | ⬜ Not started |
-| 10 | eKYC मोबाइल से (OTP + Face App) | ⬜ Not started |
-| 11 | NPCI आधार सीडिंग गाइड | ⬜ Not started |
-| 12 | "Payment Stopped by State" fix | ⬜ Not started |
-| 13 | Recovery Notice गाइड | ⬜ Not started |
-| 14 | KCC लिमिट ₹3→₹5 लाख | ⬜ Not started |
+| 9 | गेहूं का रेट आज — MSP vs मंडी भाव | ✅ Live |
+| 10 | eKYC मोबाइल से (OTP + Face App) | ✅ Live |
+| 11 | NPCI आधार सीडिंग गाइड | ✅ Live |
+| 12 | "Payment Stopped by State" fix | ✅ Live |
+| 13 | Recovery Notice गाइड | ✅ Live |
+| 14 | KCC लिमिट ₹3→₹5 लाख | ✅ Live |
 
 **Suggested writing order:** 1 (25वीं किस्त — release se pehle mature hona chahiye) → 7 (Farmer ID — trending) → 11 (NPCI — evergreen) → 2 → 4 → 12 → baaki.
