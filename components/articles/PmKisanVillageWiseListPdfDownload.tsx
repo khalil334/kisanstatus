@@ -506,12 +506,12 @@ export default function PmKisanVillageWiseListPdfDownload() {
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Seedhi Baat</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">List Nikal Li — Ab Iska Sahi Istemaal</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            PM Kisan ka ye roster ek powerful tool hai. Isse aap apne gaon ka audit khud kar sakte hain. Transparency badhti hai, fraud pakde jaate hain, aur asli kisanon ko unka haq milta hai.
+            Do cheezein alag-alag yaad rakhna: list mein naam hona = scheme mein registered hona; paisa aana = FTO + bank pipeline ka alag process. Naam hai par kist nahi aa rahi, toh upar wala "naam hai par paisa nahi aaya" section aapke case ka hai — list baar-baar download karne se kuch nahi hoga.
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
-            Aaj hi apne gaon ki ye list save karein aur apne Gram Pradhan ya Patwari ko bhi bhejein.
+            Aur ye list public document hai — apne gaon ke un buzurg kisano ke naam bhi check kar dena jinke paas smartphone nahi hai. Do minute ka kaam hai, kisi ki ruki hui kist ka pata chal sakta hai.
           </p>
         </div>
 

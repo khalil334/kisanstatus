@@ -144,7 +144,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
 
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-r-xl">
           <p className="text-sm md:text-base text-blue-900 dark:text-blue-100 leading-relaxed font-medium">
-            <strong>Seedha Jawab:</strong> PM Kisan eKYC 2026 ab 100% mandatory hai. Ise aap ghar baithe <strong>pmkisan.gov.in</strong> par OTP based eKYC se, PM Kisan App par Face Authentication se, ya nazdeeki CSC centre par free biometric (fingerprint) se complete kar sakte hain. Bina iske aapka agla ₹2000 ka installment seedha block ho jayega.
+            <strong>Ek line mein:</strong> PM Kisan eKYC mandatory hai aur iske teen raste hain — ghar baithe <strong>pmkisan.gov.in</strong> par OTP se (Aadhaar-linked number chahiye), PM Kisan App par Face Authentication se, ya nazdeeki CSC par biometric se. eKYC pending rahe toh kist rukti hai, isliye jo method aapke case mein chalega (neeche failure modes samet bataya hai) wahi pehle try karein.
           </p>
         </div>
 
@@ -439,9 +439,9 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Seedhi Baat (Bottom Line)</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Jaane Se Pehle: Apna Rasta Chun Lo</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Aaj hi kar lo bhai. Kal ka wait mat karo. Phone se 2 minute lagte hain. Phone na ho toh CSC free hai. Bahana mat banao — yeh ₹6000 saalana aapka haq hai, bas ek baar verify karna hai taake sarkar ka system aapko rok na sake. Agar koi dikkat aaye, toh upar diye gaye error fixes ko dhyan se padhein.
+            Aadhaar mein aapka current mobile number linked hai? Toh OTP method 2 minute ka kaam hai — abhi kar lo. Number purana hai? Toh OTP ke chakkar mein time mat gawao: seedha Face Authentication app try karo, ya CSC par biometric karwa lo. Aur agar error aa raha hai (104, 108, demographic mismatch), toh upar wali error table mein aapke error ka exact agla kadam likha hai — wahi follow karo, andaaze se dobara-dobara try karne se kuch nahi badalta.
           </p>
         </div>
 

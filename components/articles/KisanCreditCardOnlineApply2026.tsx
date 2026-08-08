@@ -39,7 +39,7 @@ const RELATED_CARDS = [
 const FAQS_DATA = [
   {
     q: 'Mera naam Aadhaar mein "Rajesh Kumar Singh" hai lekin bank passbook mein "R. K. Singh" — kya application reject hogi?',
-    a: 'Haan, yeh sabse common rejection reason hai. Bank ka verification system exact string match karta hai. Apply karne se pehle bank branch jaakar Aadhaar copy ke saath naam update karwayein. Isme 7-10 din lagte hain, uske baad hi form bharein.',
+    a: 'Haan, yeh sabse common rejection reason hai. Bank ka verification system exact string match karta hai. Apply karne se pehle bank branch jaakar Aadhaar copy ke saath naam update karwayein — update reflect hone ka time bank par depend karta hai, isliye receiving lekar confirm hone ke baad hi KCC form bharein.',
   },
   {
     q: 'Tenant farmer hoon, zameen malik NOC nahi de raha — kya option hai?',
@@ -51,7 +51,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Cooperative bank se apply karun ya SBI/PNB se — kya farak hai?',
-    a: 'Interest rate dono jagah same hai (7% base, 4% effective). Lekin cooperative banks mein approval faster hota hai (5-7 din) kyunki woh local land records se familiar hote hain. Agar aapko advanced digital services chahiye, toh SBI/PNB behtar hai.',
+    a: 'Interest subvention ka structure dono jagah same hai (7% base, prompt repayment par 4% effective). Farak service ka hai: cooperative banks aksar local land records se familiar hote hain isliye verification wahan aasaan pad sakta hai, jabki SBI/PNB jaise banks digital services (net banking, Jansamarth integration) mein aage hain. Approval kitne din mein hoga iska koi fixed sarkari SLA nahi — branch se hi poochein.',
   },
   {
     q: '₹2 lakh se zyada limit chahiye lekin collateral (zameen) nahi hai — kya karein?',
@@ -63,7 +63,7 @@ const FAQS_DATA = [
   },
   {
     q: 'KCC 5 saal ke liye milta hai — beech mein limit badhwa sakte hain kya?',
-    a: 'Haan. Card 5 saal valid hota hai lekin har saal annual review hota hai. Clean repayment history par bank khud 10% ke aaspaas enhancement de deta hai. Agar aapne nayi zameen li hai ya crop pattern change kiya hai, toh review ke time updated land record lekar jaao — limit re-assess hoti hai.',
+    a: 'Haan. Card 5 saal valid hota hai lekin har saal annual review hota hai, jisme bank clean repayment history par limit enhance kar sakta hai — kitni, ye bank ki credit policy par depend karta hai. Agar aapne nayi zameen li hai ya crop pattern change kiya hai, toh review ke time updated land record lekar jaao — limit re-assess hoti hai.',
   },
   {
     q: 'Jansamarth portal se KCC apply karna better hai ya seedha bank jaana?',
@@ -588,21 +588,20 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Real Questions From Bank Counters
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="Kisan Credit Card FAQ 2026 — Ground-Level Verified Answers" />
+          <FAQBlock faqs={FAQS_DATA} caption="Kisan Credit Card 2026 — Bank Counter Wale Sawal" />
         </section>
 
         {}
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Bottom Line</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Buwai Se Pehle Ka Roadmap</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Kharif June-July mein. Kisan Credit Card chahiye toh May-June mein apply karo. Last minute = planting miss.
+            KCC ka poora fayda tabhi hai jab limit buwai se <em>pehle</em> sanction ho — Kharif ke liye June-July se pehle, Rabi ke liye October se pehle apply karna samajhdari hai, kyunki process mein bank ke andar ke kai steps hote hain.
           </p>
           <ol className="space-y-2 text-sm text-green-800 dark:text-green-300 list-decimal list-inside">
             <li>Documents ready karo (checklist upar hai)</li>
-            <li>Naam matching confirm karo teeno jagah</li>
-            <li>Branch jaao subah 10-11 baje</li>
-            <li>Receipt + reference number lo</li>
-            <li>7-10 din baad follow-up</li>
+            <li>Naam matching confirm karo teeno jagah (Aadhaar / land record / bank)</li>
+            <li>Branch jaakar form + receipt lekar reference number note karo</li>
+            <li>Receipt ke reference number se follow-up karo — "ho jayega" par mat chhodo</li>
           </ol>
         </div>
 

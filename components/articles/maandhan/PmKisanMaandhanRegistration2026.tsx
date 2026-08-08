@@ -145,7 +145,7 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
 
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-r-xl">
           <p className="text-sm md:text-base text-blue-900 dark:text-blue-100 leading-relaxed font-medium">
-            <strong>Seedha Jawab:</strong> Umar 18–40 saal, kheti ki zameen 2 hectare tak, aur naam state land records mein (01.08.2019 ki cut-off ke hisaab se) — ye teen conditions puri hain toh CSC center ya maandhan.in portal se enroll ho sakte hain. Contribution umar ke hisaab se ₹55–₹200 mahina; 60 ke baad ₹3,000 mahina assured pension. Scheme ka fund LIC manage karti hai aur sarkar aapke har rupaye par utna hi rupaya khud daalti hai.
+            <strong>30 second ka self-check:</strong> Umar 18–40 saal, kheti ki zameen 2 hectare tak, aur naam state land records mein (01.08.2019 ki cut-off ke hisaab se) — ye teen conditions puri hain toh CSC center ya maandhan.in portal se enroll ho sakte hain. Contribution umar ke hisaab se ₹55–₹200 mahina; 60 ke baad ₹3,000 mahina assured pension. Scheme ka fund LIC manage karti hai aur sarkar aapke har rupaye par utna hi rupaya khud daalti hai.
           </p>
         </div>
 
@@ -402,7 +402,7 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Seedhi Baat</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Enroll Karne Se Pehle Ka Hisaab</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
             Umar 40 se kam hai, zameen 2 hectare ke andar hai aur naam land records mein hai — toh deri ka seedha nuksan hai: har birthday ke saath monthly slab badh jaata hai (18 par ₹55, 40 par ₹200). Pehle exit rules upar wali table se samajh lein, phir documents lekar CSC jayein ya maandhan.in se khud enroll karein. Aur ek scheme ka niyam yaad rakhein: NPS/EPFO/ESIC member ya income tax payer hain toh ye scheme aapke liye nahi hai — galat enrollment baad mein reject hota hai.
           </p>

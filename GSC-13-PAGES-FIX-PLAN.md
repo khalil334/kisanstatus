@@ -184,6 +184,7 @@ thoda kam hai; ranking ke liye kaafi accurate):
 | 8 | §A.2 eKYC Online (3,725) | eKYC-vs-NPCI differentiator | ✅ done |
 | 9 | §A.3 Mobile Number Change (4,198) | Aadhaar sub-flow + kahan-kya-update table + helpline reality | ✅ done |
 | 10 | §B.1 Pension Card Download | KPAN recovery + PMKMY-vs-APY differentiation | ✅ done |
+| 11 | De-uniformization pass (5 done articles) | "Seedha Jawab"/"Seedhi Baat/Bottom Line" identical closers ek hi template the — AI-pattern; har article ka closer ab apne content se nikla unique wrap-up. Saath mein bache hue unsourced numbers (KCC 7-10 din, coop 5-7 din, 10% enhancement) fix | ✅ done |
 
 ---
 

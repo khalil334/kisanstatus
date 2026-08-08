@@ -61,7 +61,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
 
       <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
         <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
-          <strong>Seedhi baat:</strong> Registration kar liya, CSC wale ne kaha ke ho gaya sab. Lekin ab pata kaise chalega ke aapka naam sach mein list mein aaya hai ya nahi? Pension card kaise milega? Kitna contribution jama hua hai? Yeh guide un farmers ke liye hai jo apna status ghar baithe mobile se dekh karna chahte hain.
+          <strong>Kis situation ke liye hai ye guide:</strong> Registration kar liya, CSC wale ne kaha ke ho gaya sab. Lekin ab pata kaise chalega ke aapka naam sach mein list mein aaya hai ya nahi? Pension card kaise milega? Kitna contribution jama hua hai? Yeh guide un farmers ke liye hai jo apna status ghar baithe mobile se dekh karna chahte hain.
         </p>
       </div>
 
