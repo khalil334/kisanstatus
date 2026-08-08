@@ -163,12 +163,12 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
 
         {}
         <div className="my-6 p-5 bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-400 dark:border-amber-700 border-l-[6px] rounded-xl">
-          <h2 className="text-base font-black text-amber-800 dark:text-amber-300 mb-2">Jo Bank Branches Mein Asal Mein Dekha Jaata Hai</h2>
+          <h2 className="text-base font-black text-amber-800 dark:text-amber-300 mb-2">Approval Ki Speed Documents Par Tikti Hai</h2>
           <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed mb-2">
-            Kai kisan bhai documents ready lekar jaate hain, unka form 7-10 din mein approve ho jaata hai.
+            Complete documents ke saath application seedha process me jaati hai — exact din bank ke internal process par depend karte hain, isliye is guide me koi fixed “itne din me approval” ka vaada nahi hai.
           </p>
           <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
-            Jo bina taiyari ke jaate hain? Unhe 2-3 chakkar lagane padte hain. Kabhi-kabhi mahino bhi lag jaate hain kyunki har visit par koi na koi document missing nikalta hai. Sabse bada issue naam mismatch aur incomplete land records raha hai. Yeh guide unhi real problems ko address karti hai jo bank counter par actually aati hain.
+            Lekin incomplete documents ka matlab pakka delay hai: har visit par koi na koi kami nikalti hai aur chakkar badhte jaate hain. Do sabse common atkav — Aadhaar/bank/land record me naam ka mismatch, aur purana ya un-updated land record. Yeh guide inhi problems ko pehle se solve karne par focus karti hai.
           </p>
         </div>
 
@@ -208,34 +208,34 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
 
         {}
         <section className="mb-8">
-          <SH>Ek Kisan Ki Asli Timeline — Application Se Paisa Milne Tak</SH>
+          <SH>Application Se Disbursal Tak — Bank Ke Andar Kya Hota Hai</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Process ko samajhne ka sabse aasan tarika hai ek real journey dekhna. Yeh timeline waisi hi hai jaisi hazaron kisanon ki hoti hai — Sitapur (UP) ke ek 2-acre wale kisan ka case lete hain, jinhe Kharif ki buwai ke liye ₹1.5 lakh chahiye tha.
+            KCC application har bank me lagbhag ek hi process se guzarti hai. Neeche wo stages hain jo application ke baad bank ke andar chalte hain — in stages ka structure banks ke KCC application flow aur government ke KCC saturation drive guidelines par based hai. Har stage me kitne din lagenge, ye aapke bank aur documents ki taiyari par depend karta hai — koi fixed guarantee nahi hoti.
           </p>
           <div className="space-y-3 mb-4">
             <div className="flex gap-3 text-sm">
-              <span className="font-black text-green-700 dark:text-green-400 whitespace-nowrap">Din 1</span>
-              <p className="text-[var(--color-text-muted)]">Gramin bank branch gaye. Loan officer ne bataya ki Khatauni 4 saal purani hai — pehle tehsil se fresh copy lao.</p>
+              <span className="font-black text-green-700 dark:text-green-400 whitespace-nowrap">Stage 1</span>
+              <p className="text-[var(--color-text-muted)]"><strong>Document check.</strong> Branch par sabse pehle land record (Khatauni/Khasra ya state ka equivalent) check hota hai. Sabse common atkav yahi hai: record purana hai, ya mutation update nahi hua (zameen abhi bhi pita/dada ke naam par hai). Aisi halat me bank pehle fresh record maangta hai — isliye apply karne se <em>pehle</em> apne state ke bhulekh portal ya tehsil se record update karwa lena sabse zyada time bachata hai.</p>
             </div>
             <div className="flex gap-3 text-sm">
-              <span className="font-black text-green-700 dark:text-green-400 whitespace-nowrap">Din 2–6</span>
-              <p className="text-[var(--color-text-muted)]">UP ke bhulekh portal se online Khatauni nikali (yahan CSC ne madad ki), lekin usme pita ji ka naam tha — mutation abhi update nahi hua tha. Lekhpal se milkar varasat ka record confirm karwaya.</p>
+              <span className="font-black text-green-700 dark:text-green-400 whitespace-nowrap">Stage 2</span>
+              <p className="text-[var(--color-text-muted)]"><strong>Application + verification.</strong> Form ke saath bank PM Kisan beneficiary status aur KYC verify karta hai — agar aapka PM Kisan eKYC pehle se complete hai to ye step aasaan ho jaata hai. Acknowledgement receipt zaroor lein; follow-up isi se hota hai.</p>
             </div>
             <div className="flex gap-3 text-sm">
-              <span className="font-black text-green-700 dark:text-green-400 whitespace-nowrap">Din 7</span>
-              <p className="text-[var(--color-text-muted)]">Poore documents ke saath dobara branch. Form bhara, officer ne PM Kisan beneficiary status check kiya (eKYC done tha — is wajah se verification fast hua). Acknowledgement receipt mili.</p>
+              <span className="font-black text-green-700 dark:text-green-400 whitespace-nowrap">Stage 3</span>
+              <p className="text-[var(--color-text-muted)]"><strong>Field verification.</strong> Bank ka staff/agent plot ka physical verification karta hai. Ye step normally skip nahi hota, chahe documents kitne bhi complete hon.</p>
             </div>
             <div className="flex gap-3 text-sm">
-              <span className="font-black text-green-700 dark:text-green-400 whitespace-nowrap">Din 8–14</span>
-              <p className="text-[var(--color-text-muted)]">Field verification — bank ka agent gaon aaya, plot dekha, 2 gawah ke sign liye. Yeh step skip nahi hota, chahe documents kitne bhi perfect hon.</p>
+              <span className="font-black text-green-700 dark:text-green-400 whitespace-nowrap">Stage 4</span>
+              <p className="text-[var(--color-text-muted)]"><strong>Limit sanction.</strong> Limit “scale of finance” se nikalti hai — har district ki technical committee crop-wise per-acre limit tay karti hai, isliye same 2 acre par alag district me alag limit ban sakti hai. Sanction ke baad card aur passbook issue hote hain.</p>
             </div>
             <div className="flex gap-3 text-sm">
-              <span className="font-black text-green-700 dark:text-green-400 whitespace-nowrap">Din 16</span>
-              <p className="text-[var(--color-text-muted)]">Sanction letter. Limit ₹1.62 lakh approve hui (scale of finance ke hisaab se — dhaan + gehu rotation par per-acre limit district committee tay karti hai). Card aur passbook ek hafte baad mile.</p>
+              <span className="font-black text-green-700 dark:text-green-400 whitespace-nowrap">Stage 5</span>
+              <p className="text-[var(--color-text-muted)]"><strong>Disbursal.</strong> Approved limit KCC account me available ho jaati hai — zaroorat ke hisaab se nikaliye, byaj sirf nikale hue amount par lagta hai.</p>
             </div>
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Total: <strong>karib 3 hafte</strong>, jisme aadha time documents theek karne mein gaya. Seedha sabak — bank jaane se <em>pehle</em> Khatauni fresh karwa lo, toh yahi kaam 10 din mein ho jaata hai.
+            Seedha sabak: total time ka sabse bada hissa aksar Stage 1 me jaata hai. Land record pehle se fresh ho to baaki process bank ke internal SLA par chalta hai — exact din apne branch se poochhein, aur acknowledgement number ke saath follow-up karein.
           </p>
         </section>
 
@@ -259,7 +259,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
                   ['SBI', 'YONO Krishi se online apply, ATM-cum-KCC card, sabse zyada branches', 'Rush zyada — subah jaayein; documents perfect hone par hi fast'],
                   ['PNB / BOB', 'Digital process theek, processing generally smooth', 'Chhoti branches mein agriculture desk ek hi officer ke paas hota hai'],
                   ['Gramin Bank (RRB)', 'Local land records se familiar, kisan-friendly staff', 'Online portal aksar kaam nahi karta — branch hi jaana padega'],
-                  ['Cooperative Bank', 'Approval fastest (5–7 din common), society-level pehchaan kaam aati hai', 'Cash withdrawal network chhota; digital services limited'],
+                  ['Cooperative Bank', 'Society-level pehchaan kaam aati hai — local verification aasaan; processing time apni society/branch se confirm karein', 'Cash withdrawal network chhota; digital services limited'],
                 ].map(([bank, plus, minus], i) => (
                   <tr key={bank} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-green-50/40 dark:bg-green-900/10'}>
                     <td className="p-3 border-b border-[var(--color-border)] font-bold text-[var(--color-text)]">{bank}</td>
