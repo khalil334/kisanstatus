@@ -5,7 +5,7 @@ import { SI, StepList, IB, WB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FA
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
 
 const PUBLISHED = '2026-07-25T08:00:00+05:30';
-const MODIFIED = '2026-07-28T08:00:00+05:30';
+const MODIFIED = '2026-08-08T09:00:00+05:30';
 
 const RELATED_CARDS = [
   {
@@ -174,31 +174,14 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
         </section>
 
         <section className="mb-8">
-          <SH>Kya Aap PM Kisan Maandhan Yojana Ke Liye Eligible Hain?</SH>
+          <SH>Card Sirf Registered Kisanon Ka Banta Hai</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Pension card download karne se pehle ye confirm kar lein ki aap scheme ke liye eligible hain ya nahi. Neeche di gayi conditions check karein:
+            Agar aap abhi scheme mein registered nahi hain to pehle wo step poora karein — card download registration ke baad hi possible hai. Eligibility aur registration dono ki alag guides yahan hain:
           </p>
-          <div className="overflow-x-auto mb-4">
-            <table className="w-full text-xs border border-[var(--color-border)] rounded-xl overflow-hidden">
-              <thead>
-                <tr className="bg-[var(--color-bg-alt)] text-left">
-                  <th className="p-2 font-black">Condition</th>
-                  <th className="p-2 font-black">Requirement</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-t border-[var(--color-border)]"><td className="p-2 font-bold">Age</td><td className="p-2">18 se 40 saal ke beech (enrollment ke samay)</td></tr>
-                <tr className="border-t border-[var(--color-border)] bg-[var(--color-bg-alt)]"><td className="p-2 font-bold">Land Holding</td><td className="p-2">2 hectare (5 acre) se kam jameen</td></tr>
-                <tr className="border-t border-[var(--color-border)]"><td className="p-2 font-bold">Occupation</td><td className="p-2">Kheti karna zaroori hai</td></tr>
-                <tr className="border-t border-[var(--color-border)] bg-[var(--color-bg-alt)]"><td className="p-2 font-bold">Bank Account</td><td className="p-2">Active bank account with Aadhaar linking</td></tr>
-                <tr className="border-t border-[var(--color-border)]"><td className="p-2 font-bold">Not Beneficiary Of</td><td className="p-2">EPFO, ESIC, NPS (government schemes)</td></tr>
-                <tr className="border-t border-[var(--color-border)] bg-[var(--color-bg-alt)]"><td className="p-2 font-bold">Income Tax</td><td className="p-2">Income tax return file nahi karna chahiye</td></tr>
-              </tbody>
-            </table>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <Link href="/maandhan/pm-kisan-maandhan-eligibility-documents" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">✅ Kya Main Eligible Hoon? →</Link>
+            <Link href="/maandhan/pm-kisan-maandhan-registration-2026" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">📝 Registration Kaise Karein →</Link>
           </div>
-          <IB>
-            Note: Agar aap inme se kisi bhi condition ko fulfill nahi karte, to aapka pension card toh ban jayega lekin 60 saal ke baad pension reject ho sakta hai.
-          </IB>
         </section>
 
         <section className="mb-8">
