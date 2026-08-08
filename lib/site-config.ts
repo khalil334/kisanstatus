@@ -104,7 +104,9 @@ export const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID || '';
 export const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || '';
 export const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FB_PIXEL_ID || '';
 
-export const GOOGLE_SITE_VERIFICATION = process.env.NEXT_PUBLIC_GSC_TOKEN || 'oGrO0aRNLLhCgHq0Bn-sh3FdgKye7TlbAn2pAk8YdMQ';
+// BUG-4: no hardcoded fallback token. Set NEXT_PUBLIC_GSC_TOKEN in the
+// environment (Vercel project settings) or GSC verification meta is omitted.
+export const GOOGLE_SITE_VERIFICATION = process.env.NEXT_PUBLIC_GSC_TOKEN || '';
 export const BING_VERIFICATION = process.env.NEXT_PUBLIC_BING_TOKEN || '';
 export const YANDEX_VERIFICATION = process.env.NEXT_PUBLIC_YANDEX_TOKEN || '';
 

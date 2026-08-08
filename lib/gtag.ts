@@ -73,14 +73,15 @@ export type GTagEvent = {
   value?: string | number;
 };
 
-export const GA_MEASUREMENT_ID: string = 
-  process.env.NEXT_PUBLIC_GA_ID ?? 'G-GZLLLGC4VC';
+// BUG-4: no hardcoded fallback ID. Set NEXT_PUBLIC_GA_ID in the environment
+// (Vercel project settings); without it GA is simply disabled.
+export const GA_MEASUREMENT_ID: string = process.env.NEXT_PUBLIC_GA_ID ?? '';
 
 export function isGAEnabled(): boolean {
   return (
     typeof window !== 'undefined' &&
     typeof window.gtag !== 'undefined' &&
-    GA_MEASUREMENT_ID !== 'G-XXXXXXXXXX' &&
+    GA_MEASUREMENT_ID !== '' &&
     process.env.NODE_ENV !== 'test'
   );
 }
