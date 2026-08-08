@@ -64,11 +64,12 @@ export async function generateMetadata({
   const categoryData = CATEGORY_DATA[category as CategorySlug];
   const categoryInfo = CATEGORIES[category as CategorySlug];
 
+  // Unknown category => real HTTP 404 (app/not-found.tsx), not a 200 "Category Not
+  // Found" soft-404. Returning fallback metadata here made the response 200 while
+  // the page body rendered the 404 UI — status and body disagreed. Same pattern as
+  // the maandhan slug page fix.
   if (!categoryData || !categoryInfo) {
-    return {
-      title: 'Category Not Found',
-      robots: { index: false, follow: true },
-    };
+    notFound();
   }
 
   const url = `${SITE_URL}/articles/category/${category}`;
