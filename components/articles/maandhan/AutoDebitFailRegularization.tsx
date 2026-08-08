@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import Script from 'next/script';
 import { SI, StepList, IB, WB, SH, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 
 const PUBLISHED = '2026-07-29T08:00:00+05:30';
@@ -57,8 +56,9 @@ const RELATED_CARDS = [
 export default function AutoDebitFailRegularization() {
   return (
     <>
-      <Script id="auto-debit-schema" type="application/ld+json" strategy="afterInteractive">
-        {JSON.stringify({
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
           '@context': 'https://schema.org',
           '@graph': [
             {
@@ -97,8 +97,8 @@ export default function AutoDebitFailRegularization() {
               })),
             },
           ],
-        })}
-      </Script>
+        }) }}
+      />
 
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
