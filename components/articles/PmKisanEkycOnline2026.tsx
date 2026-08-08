@@ -5,7 +5,7 @@ import { SI, StepList, WB, DB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, Ca
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const PUBLISHED = '2026-03-15T08:00:00+05:30';
-const MODIFIED = '2026-08-02T08:00:00+05:30';
+const MODIFIED = '2026-08-08T21:45:00+05:30';
 
 const RELATED_CARDS = [
   { 
@@ -51,7 +51,11 @@ const FAQS_DATA = [
   },
   {
     q: 'eKYC karne ke baad bhi "eKYC: NO" dikh raha hai, kya karein?',
-    a: 'Server sync mein 24 se 48 ghante lag sakte hain. Agar 3 din baad bhi "NO" dikh raha hai, toh ho sakta hai aapka bank account NPCI (Aadhaar seeding) se link na ho. Pehle bank jaakar NPCI seeding confirm karein.',
+    a: 'Server sync mein time lag sakta hai — kuch din wait karein. Uske baad bhi "NO" dikhe toh CSC par dobara verify karwayein aur receipt sambhal kar rakhein. Dhyan rahe: eKYC aur bank ki NPCI seeding do alag cheezein hain — eKYC YES hone ke baad bhi paisa tabhi aata hai jab NPCI seeding bhi ho.',
+  },
+  {
+    q: 'eKYC aur NPCI (Aadhaar seeding) mein kya farak hai?',
+    a: 'eKYC aapki pehchaan verify karti hai — ki aap wahi kisan hain. NPCI seeding aapke bank account ko Aadhaar se DBT ke liye jodti hai — ki paisa kis account mein jayega. Dono alag jagah hote hain: eKYC PM Kisan portal/CSC par, NPCI seeding aapke bank branch par. Kist ke liye DONO complete hone chahiye.',
   },
   {
     q: 'Error Code 104 ya 108 aa raha hai, iska matlab kya hai?',
@@ -249,7 +253,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
             <SI n={5}>Scan successful hote hi confirmation message aayega. Transaction ki chhoti si receipt zaroor le lo.</SI>
           </StepList>
           <DB>
-            <strong>Chetawani (Warning):</strong> Yeh service sarkar ki taraf se bilkul FREE (shulk mukt) hai. Koi bhi operator ₹10, ₹20 ya ₹50 maange, toh woh galat hai. Seedha 1800-1214-060 (CSC Helpline) par call karke us operator ki complaint karo. Fake charging report karne par unka license suspend ho sakta hai. Maine personally kai cases mein action karwaya hai.
+            <strong>Chetawani (Warning):</strong> Yeh service sarkar ki taraf se bilkul FREE (shulk mukt) hai. Koi bhi operator ₹10, ₹20 ya ₹50 maange, toh woh galat hai. Seedha 1800-1214-060 (CSC Helpline) par call karke us operator ki complaint karo. Complaint karte waqt CSC centre ka naam/location aur date batayein — tabhi action possible hota hai.
           </DB>
         </section>
 
@@ -267,6 +271,44 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
           </StepList>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
             <strong>Note:</strong> Face authentication ke liye bhi aapka mobile number Aadhaar se linked hona zaroori hai, lekin yeh OTP ke mukable zyada fast aur reliable hai, khaaskar un kisanon ke liye jinke haath kaam karne ki wajah se fingerprint clear nahi aata.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>eKYC vs NPCI Seeding — Do Alag Cheezein (Sabse Bada Confusion)</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Bahut se kisan eKYC karwa kar sochte hain ki ab kaam khatam — aur phir bhi kist nahi aati. Wajah: <strong>eKYC aur NPCI/DBT seeding do bilkul alag requirements hain</strong>, aur kist ke liye dono zaroori hain. Farak yaad rakhne ka aasaan tarika:
+          </p>
+          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-[var(--color-primary)] text-white">
+                  <th className="p-3 text-left"></th>
+                  <th className="p-3 text-left">eKYC</th>
+                  <th className="p-3 text-left">NPCI / DBT Seeding</th>
+                </tr>
+              </thead>
+              <tbody className="text-xs text-[var(--color-text)]">
+                <tr className="bg-[var(--color-card)]">
+                  <td className="p-3 border-b border-[var(--color-border)] font-bold">Kya verify hota hai</td>
+                  <td className="p-3 border-b border-[var(--color-border)]">Aapki pehchaan — "paisa lene wala wahi kisan hai"</td>
+                  <td className="p-3 border-b border-[var(--color-border)]">Aapka bank account — "paisa kis account mein jayega"</td>
+                </tr>
+                <tr className="bg-[var(--color-bg-alt)]">
+                  <td className="p-3 border-b border-[var(--color-border)] font-bold">Kahan hota hai</td>
+                  <td className="p-3 border-b border-[var(--color-border)]">pmkisan.gov.in / PM Kisan app / CSC</td>
+                  <td className="p-3 border-b border-[var(--color-border)]">Aapki bank branch (ya India Post Payments Bank)</td>
+                </tr>
+                <tr className="bg-[var(--color-card)]">
+                  <td className="p-3 border-b border-[var(--color-border)] font-bold">Fail hone par kya dikhta hai</td>
+                  <td className="p-3 border-b border-[var(--color-border)]">Status mein "eKYC: NO"</td>
+                  <td className="p-3 border-b border-[var(--color-border)]">eKYC YES, phir bhi payment fail / "Aadhaar not seeded" type reason</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Matlab: eKYC YES ho gayi aur phir bhi paisa nahi aa raha, toh agla checkpoint bank hai — branch jaakar bolein "mera account NPCI/DBT ke liye Aadhaar se seed karwana hai". Ek account hi Aadhaar se DBT-seeded ho sakta hai; naya account khulwaya hai toh seeding wahan shift karwani padti hai.
           </p>
         </section>
 
@@ -338,7 +380,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
               { err: 'Demographic Mismatch (Naam ka farak)', fix: 'Aadhaar aur PM Kisan portal par naam EXACT same hona chahiye. "Kumar" likha hai ya nahi, ek space ka farak bhi reject karta hai. Pehle naam sudharo.' },
               { err: 'Server Down / Page Nahi Khulta', fix: 'Yeh aapki galti nahi hai. Din ke 11 baje se 4 baje tak server par load sabse zyada hota hai. Subah 6:00 AM se 8:00 AM best time hai try karne ka.' },
               { err: 'Invalid Aadhaar Number', fix: 'Dobara check karein ki aapne 12 digit sahi dale hain. Kabhi-kabhi space ya typing mistake ho jati hai.' },
-              { err: 'eKYC Done, Par Status "NO" Dikha Raha Hai', fix: 'Server sync mein 24 se 48 ghante lag sakte hain. Agar 3 din baad bhi "NO" hai, toh apne bank jaakar "NPCI Seeding" check karwayein. Bina NPCI ke paisa nahi aayega.' },
+              { err: 'eKYC Done, Par Status "NO" Dikha Raha Hai', fix: 'Server sync mein time lagta hai — kuch din wait karein. Phir bhi "NO" ho toh CSC receipt ke saath dobara verify karwayein. Aur yaad rakhein: eKYC YES hone par bhi paisa NPCI seeding ke bina nahi aata — wo bank ka alag kaam hai (upar wala section padhein).' },
             ].map(({ err, fix }) => (
               <div key={err} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl overflow-hidden shadow-sm">
                 <div className="bg-red-50 dark:bg-red-900/20 border-b border-red-100 dark:border-red-800 px-4 py-2.5">
@@ -378,10 +420,22 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
         </section>
 
         <section className="mb-8">
+          <SH>Sab Try Kar Liya, Phir Bhi Nahi Ho Rahi? (Escalation)</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            OTP fail, CSC par bhi issue, error samajh nahi aa raha — toh is order mein aage badhein:
+          </p>
+          <StepList>
+            <SI n={1}>PM Kisan helpline <strong>155261</strong> ya <strong>011-24300606</strong> par call karke apna Aadhaar/registration number dekar issue register karwayein aur complaint/ticket number note karein.</SI>
+            <SI n={2}>pmkisan.gov.in ke Grievance section mein online complaint file karein — wahan status bhi track hota hai.</SI>
+            <SI n={3}>Phir bhi hal na nikle toh apne state ke nodal officer se contact karein — state-wise list aur process hamari <Link href="/articles/PmKisanStateNodalOfficerList" className="underline text-blue-600 dark:text-blue-400 font-medium">Nodal Officer Guide</Link> mein hai.</SI>
+          </StepList>
+        </section>
+
+        <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Aksar Puche Jane Wale Sawal (FAQs)
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="PM Kisan eKYC FAQ 2026 — Verified Ground-Level Answers" />
+          <FAQBlock faqs={FAQS_DATA} caption="PM Kisan eKYC FAQ 2026" />
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
