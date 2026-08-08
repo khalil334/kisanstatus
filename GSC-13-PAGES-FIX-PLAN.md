@@ -172,14 +172,14 @@ thoda kam hai; ranking ke liye kaafi accurate):
 
 **Recommended order:**
 
-| # | Kaam | Kyun pehle |
-|---|---|---|
-| 1 | §D hub pages (`/maandhan`, `/rajya-yojana`) | 56/75 words = clear low-value; ye theek hone se doosre pages ko crawl path milta hai |
-| 2 | §C category intros (loan, pashupalan, agri-business) | same discovery logic, ek shared template edit |
-| 3 | §A.1 KCC invented-case remediation | policy risk, live hai — content add nahi, correction hai |
-| 4 | §A.5 DripSprinkler (1,064) | thinnest article + paisa-decision page |
-| 5 | §B.2 Maandhan Registration (2,198) | exit rules/family pension = high-demand gap |
-| 6 | Baaki (B.3, A.4, A.2, A.3, B.1) | depth + differentiation pass, length nahi |
+| # | Kaam | Kyun pehle | Status |
+|---|---|---|---|
+| 1 | §D hub pages (`/maandhan`, `/rajya-yojana`) | 56/75 words = clear low-value; ye theek hone se doosre pages ko crawl path milta hai | ✅ done (`f53ffcd`, `8590556`) |
+| 2 | §C category intros (loan, pashupalan, agri-business) | same discovery logic, ek shared template edit | ✅ done (`dcba0aa`) |
+| 3 | §A.1 KCC invented-case remediation | policy risk, live hai — content add nahi, correction hai | ✅ done (`b12415a`) |
+| 4 | §A.5 DripSprinkler (1,064) | thinnest article + paisa-decision page | ✅ done (`5d90006`) |
+| 5 | §B.2 Maandhan Registration (2,198) | exit rules/family pension = high-demand gap | ⬜ next |
+| 6 | Baaki (B.3, A.4, A.2, A.3, B.1) | depth + differentiation pass, length nahi | ⬜ pending |
 
 ---
 
@@ -292,8 +292,40 @@ mid-tier hai aur isko length ki nahi, differentiation ki zaroorat hai.)
 
 ---
 
-### A.5 `/articles/drip-sprinkler-irrigation-subsidy`
+### A.5 `/articles/drip-sprinkler-irrigation-subsidy` — ✅ DONE (`5d90006`)
 File: `components/articles/kisanguides/DripSprinkler.tsx` — **1,064 prose words, articles me sabse thin.**
+
+**Kya hua (commit `5d90006`):** ye page length ka case nahi nikla — **claim-accuracy** ka nikla.
+13 unsourced numeric claims mile, sab hataye ya source-linked kiye gaye.
+
+Corrections:
+- `75% Tak Subsidy` headline aur card title `Drip Irrigation Subsidy 2026: 75% Off`
+  → asli PDMC rates: **55% small & marginal, 45% other farmers** (DA&FW statement, Feb 2024).
+- Invented slabs (`55-75%`, `45-55%`, `hilly/NE 75-90%`) → official structure:
+  55/45 of **indicative unit cost**, NE & Himalayan states ko **25% higher unit cost**,
+  low-penetration states ko **15% higher**. Saaf likha gaya ki percentage nahi badalta — unit cost badalta hai.
+- Invented per-acre cost table (₹25k-50k drip / ₹15k-30k sprinkler) aur `60% maan kar` +
+  `ROI 1-2 saal` wala worked example hataya → 5-step calculation method jisme reader
+  apne state ki notified unit cost daale.
+- `15-30 din me subsidy transfer` SLA hataya (unsourced).
+- PM-KUSUM `60% se 90%` → Component B: **30% central CFA** (special areas 50%), state share
+  typically ≥30%, farmer share 10-40%, benchmark ya tender cost jo kam ho.
+- `khaad ki 25-35% bachat` aur fixed `har 15-30 din acid flushing` hataya → manufacturer manual.
+- Paani bachat ab AICRP-type field studies se attributed (30-70% saving, 26-45% yield increase).
+
+Add (sourced):
+- PDMC 2022-23 se **RKVY/PM-RKVY** ke tahat — isi wajah se purane articles/forms conflict karte hain.
+- 5 hectare per-beneficiary cap; usi zameen par dobara 7 saal baad.
+- State top-up khud verify karne ka tarika (cost norms list + top-up order + empanelled vendor list).
+- MIF under NABARD, interest subvention 2% (Union Cabinet, Oct 2024); 102.56 lakh ha to 22 Jul 2025.
+- Explicit "is page ki limitations" block (§1.5).
+- Shared `<Disclaimer />` (§1.9) + `EXTERNAL_LINK_PROPS` (§1.8).
+
+Images aur paanch `src` paths unchanged; sirf alt text improve hua.
+Verified: `tsc --noEmit` clean, `eslint` clean. (`next build` is environment me nahi chal
+sakta — Turbopack ka PostCSS worker clean `main` par bhi fail hota hai; CI/Vercel par verify karein.)
+
+**Original plan (reference):**
 
 **Add — har number sourced, warna skip:**
 - PMKSY "Per Drop More Crop" structure: centre:state share, SC/ST/small-farmer extra
