@@ -115,38 +115,8 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
     url: string; 
   } | null>(null);
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Articles', item: `${SITE_URL}/articles` },
-      { '@type': 'ListItem', position: 3, name: 'PM Kisan Beneficiary List 2026', item: `${SITE_URL}/articles/${article.slug}` },
-    ],
-  };
 
-  const articleSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: article.title || 'PM Kisan Beneficiary List 2026: Naam Check Karo, Village Wise List Dekho, PDF Download',
-    description: article.desc,
-    image: article.ogImage ? `${SITE_URL}${article.ogImage}` : `${SITE_URL}/images/pm-kisan-beneficiary-status-kisanstatus.webp`,
-    author: { '@type': 'Organization', name: AUTHOR_NAME, url: AUTHOR_URL },
-    publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
-    datePublished: PUBLISHED,
-    dateModified: MODIFIED,
-    mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}/articles/${article.slug}` },
-  };
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: FAQS_DATA.map((faq) => ({
-      '@type': 'Question',
-      name: faq.q,
-      acceptedAnswer: { '@type': 'Answer', text: faq.a },
-    })),
-  };
 
   const handleDownloadPDF = () => {
     setModal({
@@ -166,9 +136,6 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {modal && (
         <CountdownModal

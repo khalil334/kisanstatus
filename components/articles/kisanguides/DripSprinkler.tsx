@@ -34,19 +34,10 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://kisanstatus.com/articles/drip-sprinkler-irrigation-subsidy' },
 };
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    { '@type': 'Organization', '@id': 'https://kisanstatus.com/#organization', name: 'KisanStatus.com', url: 'https://kisanstatus.com', logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.webp', width: 250, height: 60 } },
-    { '@type': 'BreadcrumbList', '@id': 'https://kisanstatus.com/articles/drip-sprinkler-irrigation-subsidy/#breadcrumb', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kisanstatus.com/' }, { '@type': 'ListItem', position: 2, name: 'Articles', item: 'https://kisanstatus.com/articles' }, { '@type': 'ListItem', position: 3, name: 'Drip Sprinkler Irrigation', item: 'https://kisanstatus.com/articles/drip-sprinkler-irrigation-subsidy' }] },
-    { '@type': 'Article', '@id': 'https://kisanstatus.com/articles/drip-sprinkler-irrigation-subsidy/#article', headline: 'Drip aur Sprinkler Subsidy: PDMC ke 55% / 45% Niyam Aur Poora Process', description: 'Micro-irrigation subsidy ka asli structure — PDMC assistance rates, unit cost norms, state top-up aur application process.', author: { '@type': 'Organization', name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' }, publisher: { '@type': 'Organization', name: 'KisanStatus.com', logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.webp' } }, datePublished: '2026-01-15', dateModified: '2026-08-08', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://kisanstatus.com/articles/drip-sprinkler-irrigation-subsidy/' } }
-  ]
-};
 
 export default function DripSprinkler() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-8 text-gray-800 dark:text-gray-200 leading-relaxed prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-blue-600 dark:prose-a:text-blue-400">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <Image
         src="/images/kisanguides/drip-sprinkler-hero.webp"
