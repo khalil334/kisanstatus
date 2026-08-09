@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
 const FAQS = [
@@ -48,6 +49,24 @@ const RELATED = [
 ];
 
 // Local components — self-contained file, no shared imports.
+function Figure({ src, alt, caption }: { src: string; alt: string; caption: string }) {
+  return (
+    <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+      <Image
+        src={src}
+        alt={alt}
+        width={1200}
+        height={675}
+        className="w-full object-cover"
+        sizes="(max-width: 768px) 100vw, 768px"
+      />
+      <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+        {caption}
+      </figcaption>
+    </figure>
+  );
+}
+
 function SH({ children }: { children: React.ReactNode }) {
   return (
     <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
@@ -167,6 +186,12 @@ export default function KisanKarjMafiList2027({ article }: { article: HindiArtic
         कई तो आधार details चुराने के लिए बनी हैं। पैसे मांगने वाला हर agent fraud है।
       </DB>
 
+      <Figure
+        src="/images/articles/hindi-yojna/karj-mafi-list/karj-mafi-hero.webp"
+        alt="लोन के कागज़ देखता किसान"
+        caption="कर्ज माफी की खबर पर भरोसा सिर्फ सरकारी स्रोत से करें"
+      />
+
       <SH>पहले basics — कर्ज माफी कैसे काम करती है?</SH>
       <p>
         Loan waiver केंद्र की नहीं, <strong>राज्य सरकार की</strong> scheme होती है। राज्य घोषणा करता है,
@@ -182,6 +207,12 @@ export default function KisanKarjMafiList2027({ article }: { article: HindiArtic
         <strong>घोषणा ≠ पैसा</strong>। घोषणा के बाद GR (शासनादेश) आता है, फिर budget, फिर list — इसमें
         महीनों लगते हैं।
       </p>
+
+      <Figure
+        src="/images/articles/hindi-yojna/karj-mafi-list/state-list.webp"
+        alt="राज्यवार कर्ज माफी की स्थिति का नक्शा"
+        caption="कर्ज माफी राज्य सरकार की scheme है — हर राज्य की स्थिति अलग है"
+      />
 
       <SH>राज्यवार स्थिति — जो verified है</SH>
       <p>
@@ -265,6 +296,12 @@ export default function KisanKarjMafiList2027({ article }: { article: HindiArtic
         फैसले बच जाते हैं।
       </p>
 
+      <Figure
+        src="/images/articles/hindi-yojna/karj-mafi-list/bank-loan-desk.webp"
+        alt="बैंक शाखा में अधिकारी से बात करता किसान"
+        caption="सबसे पक्की पुष्टि आपकी अपनी बैंक शाखा से मिलती है"
+      />
+
       <SH>अपना नाम check करने का सही तरीका</SH>
       <p>जब आपके राज्य की list official तौर पर जारी हो, तब यह करें:</p>
       <StepList>
@@ -311,6 +348,12 @@ export default function KisanKarjMafiList2027({ article }: { article: HindiArtic
           पुराना नंबर दर्ज है तो बुलावा किसी और के phone पर जाएगा।
         </SI>
       </StepList>
+
+      <Figure
+        src="/images/articles/hindi-yojna/karj-mafi-list/biometric-verify.webp"
+        alt="Biometric सत्यापन के लिए fingerprint scanner पर अंगूठा लगाता किसान"
+        caption="सत्यापन वाले दिन आधार और biometric दोनों लगते हैं"
+      />
 
       <SH>Biometric सत्यापन वाले दिन क्या होता है — पूरा नक्शा</SH>
       <p>
