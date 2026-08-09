@@ -114,7 +114,7 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
         दिनों में DBT — यह क्रम पहचान लेंगे तो अफवाहों से बचे रहेंगे।
       </p>
 
-      <SH>PM Kisan और नमो शेतकरी — एक नजर में फर्क</SH>
+      <SH>PM Kisan बनाम नमो शेतकरी — फर्क की सीधी तालिका</SH>
       <p>
         दोनों किस्तें एक ही खाते में आती हैं, इसलिए उलझन स्वाभाविक है। यह तालिका सामने रख लीजिए —
         आगे कभी confusion नहीं होगा:
