@@ -9,7 +9,7 @@ const FAQS = [
   },
   {
     q: 'OTP नहीं आ रहा, क्या करूं?',
-    a: 'पहले network check करें और 2-3 मिनट रुकें। फिर भी न आए तो हो सकता है आपका पुराना नंबर registered हो। SIM बंद हो चुका है तो पहले नंबर update कराना पड़ेगा — इसका तरीका हमारी mobile number change guide में है।',
+    a: 'पहले network check करें और 2-3 मिनट रुकें। फिर भी न आए तो हो सकता है आपका पुराना नंबर registered हो। SIM बंद हो चुका है तो पहले नंबर update कराना पड़ेगा — नंबर बदलवाने का पूरा तरीका अलग page पर step-by-step समझाया है।',
   },
   {
     q: 'Registration number भूल गया हूं, कहां मिलेगा?',
@@ -144,8 +144,8 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
       <WB>
         OTP उसी नंबर पर आएगा जो PM Kisan record में registered है। अगर वो SIM बंद हो चुका है, तो पहले नंबर
         बदलवाना पड़ेगा — पूरा तरीका{' '}
-        <Link href="/articles/PmKisanMobileNumberChangeUpdate">mobile number update guide</Link> में step-by-step
-        दिया है।
+        <Link href="/articles/PmKisanMobileNumberChangeUpdate">इस page पर step-by-step समझाया</Link>{' '}
+        है।
       </WB>
       <p>
         एक सलाह जो आगे बहुत बचाएगी: registration number मिलते ही उसका screenshot ले लें और phone के notes
@@ -288,7 +288,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
         यह अकेला काम है जो पूरी तरह आपके हाथ में है और घर बैठे हो जाता है। Portal पर OTP वाली eKYC खुद कर
         सकते हैं; उंगलियों के निशान से करानी हो तो नजदीकी CSC केंद्र पर होती है, और official app में face
         authentication का रास्ता भी है। पूरा तरीका{' '}
-        <Link href="/articles/hindi/ekyc-mobile-se">phone से eKYC करने वाली guide</Link> में है। जितनी जल्दी
+        <Link href="/articles/hindi/ekyc-mobile-se">यहां detail में पढ़ सकते हैं</Link>। जितनी जल्दी
         यह YES होगा, उतनी जल्दी बाकी प्रक्रिया आगे बढ़ेगी।
       </p>
 
@@ -330,7 +330,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
         </SI>
         <SI n={3}>
           <strong>Registered SIM बंद हो चुका है</strong> — यहां शिकायत काम नहीं आएगी; पहले नंबर update
-          कराना होगा। <Link href="/articles/PmKisanMobileNumberChangeUpdate">यह guide</Link> देखें।
+          कराना होगा — पूरा तरीका <Link href="/articles/PmKisanMobileNumberChangeUpdate">यहां है</Link>।
         </SI>
       </StepList>
 
@@ -359,8 +359,8 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
         ठगी का सबसे आम रास्ता यही है। किसी को भी अपना OTP, आधार OTP, बैंक का PIN या खाते की details मत
         बताइए — न phone पर, न किसी लिंक में। योजना का कोई अधिकारी status दिखाने के लिए OTP नहीं मांगता, और
         किस्त &quot;जल्दी दिलाने&quot; के नाम पर पैसे मांगने वाला हर व्यक्ति ठग है। शिकायत का सही रास्ता
-        portal की grievance और हेल्पलाइन <strong>155261</strong> है — पूरा तरीका{' '}
-        <Link href="/articles/hindi/helpline-shikayat">शिकायत guide</Link> में लिखा है।
+        portal की grievance और हेल्पलाइन <strong>155261</strong> है — शिकायत दर्ज करने की पूरी प्रक्रिया{' '}
+        <Link href="/articles/hindi/helpline-shikayat">इस page पर समझाई</Link> है।
       </DB>
 
       <SH>Status देखने के तीन रास्ते — कौन कब चुनें</SH>
@@ -423,17 +423,17 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
         eKYC अपने आप हो जाती है। जो field NO दिखा रहा है, उस पर काम कीजिए; बाकी portal पर छोड़ दीजिए।
       </p>
 
-      <SH>अक्सर पूछे जाने वाले सवाल</SH>
+      <SH>Status check पर सबसे ज्यादा आने वाले सवाल</SH>
       <FAQBlock
         faqs={FAQS}
         caption="किसानों के सबसे ज्यादा पूछे गए सवाल — status, OTP, registration number और NO वाले field से जुड़े।"
       />
 
       <p className="text-xs text-[var(--color-text-muted)] italic">
-        Source: process{' '}
-        <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer">pmkisan.gov.in</a> (Ministry
-        of Agriculture &amp; Farmers Welfare) के Know Your Status flow पर आधारित है। Portal का layout समय-समय
-        पर बदलता रहता है — options के नाम थोड़े अलग दिख सकते हैं। Last verified:{' '}
+        यह पूरा तरीका{' '}
+        <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer">pmkisan.gov.in</a> (कृषि एवं
+        किसान कल्याण मंत्रालय) के Know Your Status flow से लिया गया है। Portal का layout समय-समय पर बदलता
+        रहता है — options के नाम थोड़े अलग दिख सकते हैं। आखिरी बार जांचा गया:{' '}
         {new Date(article.modifiedTime).toLocaleDateString('hi-IN')}.
       </p>
 
