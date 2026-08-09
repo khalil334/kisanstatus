@@ -97,8 +97,8 @@ export default function MukhyamantriKisanKalyanYojanaMp({ article }: { article: 
       </StepList>
       <p>
         यानी checklist छोटी है। PM Kisan में नाम + पटवारी verification + eKYC = राज्य की किस्त का रास्ता
-        साफ। PM Kisan की eligibility पूरी detail में{' '}
-        <Link href="/articles/PmKisanMasterGuide2026">Master Guide</Link> में लिखी है।
+        साफ। PM Kisan की eligibility का पूरा नक्शा{' '}
+        <Link href="/articles/PmKisanMasterGuide2026">Master Guide पर खुलेगा</Link>।
       </p>
 
       <SH>आवेदन कैसे होता है?</SH>
@@ -151,8 +151,8 @@ export default function MukhyamantriKisanKalyanYojanaMp({ article }: { article: 
         </table>
       </div>
       <p>
-        Saara portal पर आधार नंबर या PM Kisan ID से अपनी entry ढूंढ सकते हैं। Village-wise list निकालने का
-        पूरा तरीका <Link href="/articles/PmKisanBeneficiaryList2026">beneficiary list guide</Link> में है।
+        Saara portal पर आधार नंबर या PM Kisan ID से अपनी entry ढूंढ सकते हैं। Village-wise list कैसे निकालते हैं, यह{' '}
+        <Link href="/articles/PmKisanBeneficiaryList2026">अलग से समझाया है</Link>।
       </p>
 
       <GovLink
@@ -222,16 +222,16 @@ export default function MukhyamantriKisanKalyanYojanaMp({ article }: { article: 
         ऐसे में आपकी तरफ से कोई गलती नहीं होती; इंतजार ही इलाज है। घबराकर बिचौलियों के पास मत जाइए।
       </p>
 
-      <SH>अक्सर पूछे जाने वाले सवाल</SH>
+      <SH>जानकारी के काम की बातें — सवालों में</SH>
       <FAQBlock faqs={FAQS} />
 
       <p className="text-xs text-[var(--color-text-muted)] italic">
-        Sources: योजना की जानकारी MP शासन की घोषणाओं (राशि ₹4,000 से बढ़ाकर ₹6,000 — CM का सार्वजनिक बयान,
-        IANS coverage) और{' '}
-        <a href="https://saara.mp.gov.in" target="_blank" rel="noopener noreferrer">saara.mp.gov.in</a> /{' '}
-        <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer">pmkisan.gov.in</a> के
-        process पर आधारित है। किस्तों का schedule सरकार के हाथ में है — exact dates official घोषणा से ही
-        confirm करें। Last verified: {new Date(article.modifiedTime).toLocaleDateString('hi-IN')}.
+        यह सब कहां से पता चला — योजना की जानकारी MP शासन की घोषणाओं (राशि ₹4,000 से बढ़ाकर ₹6,000 —
+        CM का सार्वजनिक बयान, IANS coverage) से ली गई है, और process{' '}
+        <a href="https://saara.mp.gov.in" target="_blank" rel="noopener noreferrer">saara.mp.gov.in</a> तथा{' '}
+        <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer">pmkisan.gov.in</a> से मिलाया
+        गया है ({new Date(article.modifiedTime).toLocaleDateString('hi-IN')} तक)। किस्तों का schedule सरकार के
+        हाथ में है — exact dates official घोषणा से ही confirm करें।
       </p>
 
       <RelatedArticles articles={RELATED} />
