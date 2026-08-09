@@ -129,8 +129,8 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
         <strong>PM-KISAN GoI</strong> app (प्रकाशक: Government of India) डालिए, beneficiary की details से
         login कीजिए, और Face Auth का विकल्प चुनकर camera के सामने चेहरा scan करवाइए। App दूसरे किसानों की
         eKYC कराने की सुविधा भी देता है — यानी आपके phone से पड़ोस के 10 बुजुर्गों का काम भी निपट सकता है।
-        Screen-दर-screen विवरण{' '}
-        <Link href="/articles/PmKisanFaceAuthenticationEkyc">Face Auth guide</Link> में है।
+        Screen-दर-screen विवरण के लिए{' '}
+        <Link href="/articles/PmKisanFaceAuthenticationEkyc">Face Auth वाला लेख</Link> खोल लें।
       </p>
       <p>
         चेहरा scan करते वक्त तीन बातें ध्यान रखिए, वरना app बार-बार मना करता रहेगा। रोशनी सामने से आनी चाहिए,
@@ -243,8 +243,8 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
         appointment बुक होती है) — उसके बाद हर सरकारी OTP वाला काम घर बैठे होगा, सिर्फ यह योजना नहीं।
       </p>
       <p>
-        नंबर बदल गया हो तो portal के record में भी नया नंबर डलवाना समझदारी है — तरीका{' '}
-        <Link href="/articles/PmKisanMobileNumberChangeUpdate">number update guide</Link> में है। वरना
+        नंबर बदल गया हो तो portal के record में भी नया नंबर डलवाना समझदारी है — कैसे, यह{' '}
+        <Link href="/articles/PmKisanMobileNumberChangeUpdate">इस page पर समझाया है</Link>। वरना
         status check और शिकायत, दोनों में आगे दिक्कत आएगी।
       </p>
       <p>
@@ -276,9 +276,8 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
       </p>
       <p>
         तीनों अलग-अलग दफ्तरों के काम हैं, और तीनों का YES होना जरूरी है। इसलिए eKYC हो जाने पर यह मान लेना
-        कि अब सब पूरा है, गलत है। पूरा नक्शा{' '}
-        <Link href="/articles/hindi/npci-aadhaar-seeding">NPCI आधार सीडिंग guide</Link> में देखिए — वहां
-        खाते वाला हिस्सा विस्तार से लिखा है।
+        कि अब सब पूरा है, गलत है। खाते वाला हिस्सा विस्तार से{' '}
+        <Link href="/articles/hindi/npci-aadhaar-seeding">NPCI आधार सीडिंग वाले लेख</Link> में पढ़ सकते हैं।
       </p>
 
       <SH>बुजुर्गों और महिलाओं के लिए — व्यावहारिक बातें</SH>
@@ -339,24 +338,24 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
         </SI>
       </StepList>
       <p>
-        और अगर किसी ने पहले से पैसे ले लिए हैं या OTP लेकर गड़बड़ की है, तो चुप न रहिए — शिकायत का पूरा रास्ता{' '}
-        <Link href="/articles/hindi/helpline-shikayat">हेल्पलाइन और शिकायत guide</Link> में है। जितनी जल्दी
+        और अगर किसी ने पहले से पैसे ले लिए हैं या OTP लेकर गड़बड़ की है, तो चुप न रहिए — शिकायत कैसे और कहां दर्ज होती है, यह{' '}
+        <Link href="/articles/hindi/helpline-shikayat">हेल्पलाइन वाले page पर खुलेगा</Link>। जितनी जल्दी
         दर्ज होगी, उतनी गुंजाइश बनेगी।
       </p>
 
-      <SH>अक्सर पूछे जाने वाले सवाल</SH>
+      <SH>OTP, Face Auth, फीस — जो बार-बार पूछा जाता है</SH>
       <FAQBlock
         faqs={FAQS}
-        caption="OTP, Face Auth, CSC फीस और error messages से जुड़े सबसे आम सवाल — एक जगह।"
+        caption="eKYC के रास्ते में आने वाली आम उलझनें — एक जगह।"
       />
 
       <p className="text-xs text-[var(--color-text-muted)] italic">
-        Source: प्रक्रिया{' '}
+        पूरी प्रक्रिया हमने{' '}
         <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer">pmkisan.gov.in</a> के
-        e-KYC flow और PM-KISAN GoI app पर आधारित; आधार में number update की जानकारी{' '}
-        <a href="https://uidai.gov.in" target="_blank" rel="noopener noreferrer">uidai.gov.in</a> से। Portal
-        के option-नाम समय-समय पर बदलते हैं। Last verified:{' '}
-        {new Date(article.modifiedTime).toLocaleDateString('hi-IN')}.
+        e-KYC flow और PM-KISAN GoI app से मिलाकर लिखी है; आधार में number update की जानकारी{' '}
+        <a href="https://uidai.gov.in" target="_blank" rel="noopener noreferrer">uidai.gov.in</a> से है।
+        Portal के option-नाम समय-समय पर बदलते हैं (आखिरी मिलान:{' '}
+        {new Date(article.modifiedTime).toLocaleDateString('hi-IN')})।
       </p>
 
       <RelatedArticles articles={RELATED} />
