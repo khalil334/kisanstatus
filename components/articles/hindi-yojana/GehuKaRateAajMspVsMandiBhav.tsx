@@ -119,7 +119,7 @@ export default function GehuKaRateAajMspVsMandiBhav({ article }: { article: Hind
         Rabi Marketing Season 2026-27 के लिए गेहूं का न्यूनतम समर्थन मूल्य केंद्र सरकार ने{' '}
         <strong>₹2,585 प्रति क्विंटल</strong> तय किया है। यह वह दर है जिस पर सरकारी एजेंसियां registered
         किसानों से खरीद करती हैं। कुछ राज्य अपनी ओर से bonus जोड़ते हैं — MP ने इस season ₹40 प्रति
-        क्विंटल का bonus दिया, मतलब वहां के किसान को ₹2,625 मिले। आपके राज्य में bonus है या नहीं, यह
+        क्विंटल का bonus दिया, यानी वहां के किसान को ₹2,625 मिले। आपके राज्य में bonus है या नहीं, यह
         राज्य की खरीद-घोषणा में लिखा होता है — मंडी की अफवाह पर नहीं, अधिसूचना पर भरोसा करें।
       </p>
 
@@ -180,7 +180,7 @@ export default function GehuKaRateAajMspVsMandiBhav({ article }: { article: Hind
       <p>
         गांव के व्यापारी को माल देना आसान-से-आसान रास्ता है — गाड़ी का भाड़ा नहीं, लाइन नहीं। लेकिन यही
         आसानी उसकी कीमत है: भाव की तुलना करने का मौका आप छोड़ देते हैं। कम से कम एक बार phone से
-        मंडी का modal price जरूर देख लें, तभी पता चलेगा कि व्यापारी का &quot;अच्छा भाव&quot; असल में कितना
+        मंडी का modal price जरूर देख लें, तभी पता चलेगा कि व्यापारी का &quot;अच्छा भाव&quot; वास्तव में कितना
         अच्छा है।
       </p>
 
@@ -272,7 +272,7 @@ export default function GehuKaRateAajMspVsMandiBhav({ article }: { article: Hind
       </p>
       <p>
         Registration करते समय दो गलतियां बार-बार दिखती हैं। पहली — बैंक खाता वह डाल देना जो चालू नहीं है
-        या जिसकी NPCI seeding दूसरे खाते में है; भुगतान वहीं अटकता है। दूसरी — जमीन के record में नाम की
+        या जिसकी NPCI seeding दूसरे खाते में है; भुगतान वहां ही अटकता है। दूसरी — जमीन के record में नाम की
         spelling आधार से अलग होना; सत्यापन में यही फंसता है। दोनों की जांच registration से पहले 10 मिनट
         का काम है, बाद में सुधारना हफ्तों का।
       </p>
@@ -303,7 +303,7 @@ export default function GehuKaRateAajMspVsMandiBhav({ article }: { article: Hind
       <H2>UP का mobile procurement — खरीद केंद्र खुद गांव आया</H2>
       <p>
         एक नया प्रयोग जानने लायक है। RMS 2025-26 में UP ने पहली बार <strong>mobile procurement
-        centers</strong> चलाए — खरीद की गाड़ी खुद गांवों तक गई। नतीजा: करीब दो लाख किसानों ने
+        centers</strong> चलाए — खरीद की गाड़ी खुद गांवों तक गई। परिणाम: करीब दो लाख किसानों ने
         10.27 लाख टन से ज्यादा गेहूं सरकारी एजेंसियों को बेचा — पिछले साल से ज्यादा — और करीब
         ₹2,508 करोड़ सीधे खातों में गया। खरीद केंद्र सुबह 8 से रात 8 बजे तक, छुट्टियों में भी चले (
         <a href="https://www.nationpress.com/national/wheat-procurement-in-up-surpasses-1027-lakh-tonnes" target="_blank" rel="noopener noreferrer">

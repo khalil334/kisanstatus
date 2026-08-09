@@ -219,7 +219,7 @@ export default function MukhyamantriKisanKalyanYojanaMp({ article }: { article: 
       <Tip warn>
         जहां ज्यादातर cases अटकते हैं — <strong>पटवारी verification</strong>। Form भर गया, महीनों से
         &quot;verification pending&quot;। ऐसे में portal refresh करते रहने से कुछ नहीं होगा; अपने हल्का के
-        पटवारी या तहसील कार्यालय जाकर मिलिए। Records की physical जांच वहीं होती है।
+        पटवारी या तहसील कार्यालय जाकर मिलिए। Records की physical जांच वहां पर ही होती है।
       </Tip>
 
       <Hd>Status check — दो portal, दो काम</Hd>
