@@ -23,3 +23,36 @@ token ke lye card do
 7. **Intro aur ending har article mein unique ho** — direct question, bold statement, real scenario, ya caution note se shuru karo. Ending mein kahi summary, kahi checklist, kahi next steps.
 
 Output: Har article ko same TSX component format mein wapas do. Koi fact, date, amount, ya official source link change mat karna.
+
+---
+
+## Progress log — Rule 3 (structure variety) + Rule 7 (unique endings)
+
+Word counts (Rule 1) sabhi 15 articles me already 2500+ hain — PR #166–#173 me expand ho chuka.
+Rule 2 (banned phrases) bhi limits ke andar hai. Isliye ab kaam Rule 3 + Rule 7 par hai:
+har article ka FAQ presentation aur ending alag banana. Facts/dates/amounts/source links
+kabhi change nahi kiye jate.
+
+FAQ presentation ke liye `FAQBlock` me optional `variant` prop hai (`accordion` = default,
+`inline` = bold Q + answer paragraph, `cards` = tip-card grid). FAQPage JSON-LD teeno
+variants me identical rehta hai — SEO par koi asar nahi.
+
+| # | Article | FAQ variant | Ending | Status |
+|---|---------|-------------|--------|--------|
+| 1 | PmKisanHelplineNumberComplaint | inline | "फोन उठाने से पहले" 6-line पर्ची checklist | ✅ done |
+| 2 | MukhyamantriKisanKalyanYojanaMp | cards | summary paragraph | ⬜ todo |
+| 3 | TractorSubsidy2027StateWiseList | accordion | (already unique) + table add | ⬜ todo |
+| 4 | KccLimitKaiseBadhaye3Se5Lakh | accordion | branch checklist + table add | ⬜ todo |
+| 5 | FarmerIdCardKaiseBanaye2027 | inline | table add | ⬜ todo |
+| 6 | KisanKarjMafiList2027 | accordion | (already unique) + table add | ⬜ todo |
+| 7 | NamoShetkariYojanaMaharashtra | cards | (already unique) | ⬜ todo |
+| 8 | NpciAadhaarSeedingDbtPayment | accordion | vary ending | ⬜ todo |
+| 9 | PmKisan25viKistKabAayegi | accordion | (already unique) | ⬜ todo |
+| 10 | PmKisanEkycMobileSeKaiseKare | inline | vary ending | ⬜ todo |
+| 11 | PmKisanNewRegistration2027 | cards | vary ending | ⬜ todo |
+| 12 | PmKisanPaymentStoppedByStateFix | accordion | vary ending | ⬜ todo |
+| 13 | PmKisanRecoveryNoticePaisaWapas | inline | vary ending | ⬜ todo |
+| 14 | PmKisanStatusCheckMobileNumberSe | accordion | vary ending | ⬜ todo |
+| 15 | GehuKaRateAajMspVsMandiBhav | cards | vary ending | ⬜ todo |
+
+Workflow: ek article fix → `npx tsc --noEmit` + `npx eslint` pass → commit + push direct to main → yeh table update → next article.

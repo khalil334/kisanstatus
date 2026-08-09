@@ -253,9 +253,17 @@ export function CalcBanner({
 export function FAQBlock({
   faqs,
   caption,
+  variant = 'accordion',
 }: {
   faqs: { q: string; a: string }[];
   caption?: string;
+  /**
+   * Presentation only — the FAQPage JSON-LD is identical across variants.
+   * 'accordion' (default) keeps the original <details> list.
+   * 'inline'  renders bold Q + answer paragraph, no click needed.
+   * 'cards'   renders a tip-card grid.
+   */
+  variant?: 'accordion' | 'inline' | 'cards';
 }) {
   const faqSchema = {
     '@context': 'https://schema.org',
@@ -269,15 +277,58 @@ export function FAQBlock({
 
   if (faqs.length === 0) return null;
 
+  const schemaTag = (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+    />
+  );
+
+  const captionTag = caption ? (
+    <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">{caption}</p>
+  ) : null;
+
+  if (variant === 'inline') {
+    return (
+      <section className="mb-8">
+        {schemaTag}
+        {captionTag}
+        <div className="space-y-4">
+          {faqs.map(({ q, a }) => (
+            <div key={q}>
+              <p className="font-semibold text-[var(--color-text)] text-sm mb-1">{q}</p>
+              <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">{a}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    );
+  }
+
+  if (variant === 'cards') {
+    return (
+      <section className="mb-8">
+        {schemaTag}
+        {captionTag}
+        <div className="grid gap-3 sm:grid-cols-2">
+          {faqs.map(({ q, a }) => (
+            <div
+              key={q}
+              className="border border-[var(--color-border)] rounded-xl p-4 bg-[var(--color-bg-alt)]"
+            >
+              <p className="font-semibold text-[var(--color-text)] text-sm mb-2">{q}</p>
+              <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">{a}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="mb-8">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      {caption && (
-        <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">{caption}</p>
-      )}
+      {schemaTag}
+      {captionTag}
       <div className="space-y-3">
         {faqs.map(({ q, a }) => (
           <details
