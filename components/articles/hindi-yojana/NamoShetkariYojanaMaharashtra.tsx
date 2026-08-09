@@ -164,7 +164,7 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
       <Hd>योजना क्या है — और MP वाले model से रिश्ता</Hd>
       <p>
         2023-24 के महाराष्ट्र budget में घोषित यह योजना उसी formula पर चलती है जो मध्य प्रदेश ने{' '}
-        <Link href="/articles/hindi/mp-kisan-kalyan-yojana">किसान कल्याण योजना</Link> से शुरू किया था —
+        <Link href="/articles/hi/mp-kisan-kalyan-yojana">किसान कल्याण योजना</Link> से शुरू किया था —
         केंद्र की PM Kisan के ऊपर राज्य अपनी तरफ से बराबर की रकम जोड़ दे। हासिल यह हुआ कि महाराष्ट्र के किसान परिवार
         को सालाना <strong>₹12,000</strong> मिलते हैं — ₹6,000 केंद्र से, ₹6,000 राज्य से।
       </p>
@@ -313,12 +313,12 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
       <ol className="my-4 space-y-3 pl-5 list-decimal text-sm leading-relaxed">
         <li>
           <strong>eKYC अधूरी</strong> — rejection की पहली वजह यही निकलती है। मोबाइल से OTP या Face App से पूरी
-          करें — पूरा तरीका <Link href="/articles/hindi/ekyc-mobile-se">यहां खुलेगा</Link>।
+          करें — पूरा तरीका <Link href="/articles/hi/ekyc-mobile-se">यहां खुलेगा</Link>।
         </li>
         <li>
           <strong>बैंक खाता आधार से linked नहीं / DBT off</strong> — यह NPCI seeding का मामला है, branch
           जाकर form भरना पड़ता है। Seeding का पूरा खेल{' '}
-          <Link href="/articles/hindi/npci-aadhaar-seeding">इस page पर समझाया है</Link>।
+          <Link href="/articles/hi/npci-aadhaar-seeding">इस page पर समझाया है</Link>।
         </li>
         <li>
           <strong>Land record verification pending</strong> — तलाठी/कृषि सहायक के स्तर पर अटका होता है;
@@ -326,7 +326,7 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
         </li>
         <li>
           <strong>PM Kisan में ही registration अधूरा</strong> — तो पहले वहां का status देखें (
-          <Link href="/articles/hindi/status-check-mobile-se">mobile number से status check</Link>) और वह
+          <Link href="/articles/hi/status-check-mobile-se">mobile number से status check</Link>) और वह
           ठीक कराएं।
         </li>
       </ol>
@@ -351,7 +351,7 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
         पहले PM Kisan में registration (अब Farmer ID के साथ), eKYC और बैंक seeding पूरी कीजिए। जिस
         महीने आप PM Kisan के verified beneficiary बने, उसके बाद की राज्य किस्त से आपका नाम नमो शेतकरी
         में भी गिना जाने लगता है। Registration कदम-दर-कदम कैसे होता है, यह{' '}
-        <Link href="/articles/hindi/nayi-registration">नई रजिस्ट्रेशन वाले लेख</Link> में देख लें।
+        <Link href="/articles/hi/nayi-registration">नई रजिस्ट्रेशन वाले लेख</Link> में देख लें।
       </p>
 
       <Hd>कागज़ात की तैयारी — हाथ में क्या-क्या हो</Hd>
@@ -453,10 +453,10 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
       <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
         <h3 className="font-black text-[var(--color-text)] mb-3 text-base">🔗 आगे पढ़ने लायक</h3>
         <ul className="list-disc pl-5 space-y-1.5 text-sm">
-          <li><Link href="/articles/hindi/mp-kisan-kalyan-yojana">🌾 MP किसान कल्याण योजना ₹12000</Link></li>
+          <li><Link href="/articles/hi/mp-kisan-kalyan-yojana">🌾 MP किसान कल्याण योजना ₹12000</Link></li>
           <li><Link href="/articles/PmKisanMasterGuide2026">📚 PM Kisan Master Guide</Link></li>
           <li><Link href="/articles/PmKisanEkycOnline2026">🔐 eKYC Online Guide</Link></li>
-          <li><Link href="/articles/hindi/npci-aadhaar-seeding">🏦 NPCI आधार सीडिंग</Link></li>
+          <li><Link href="/articles/hi/npci-aadhaar-seeding">🏦 NPCI आधार सीडिंग</Link></li>
         </ul>
       </div>
     </>

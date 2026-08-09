@@ -363,11 +363,11 @@ export default function GehuKaRateAajMspVsMandiBhav({ article }: { article: Hind
         सरकारी खरीद का भुगतान आधार-linked खाते में DBT से आता है। खाता dormant हो या NPCI mapper में
         seeding active न हो, तो तौल हो जाने के बाद भी पैसा लटक जाता है — यह जांच बेचने से{' '}
         <em>पहले</em> कर लें; seeding का पूरा तरीका{' '}
-        <Link href="/articles/hindi/npci-aadhaar-seeding">यहां लिखा है</Link>। रोज के भाव
+        <Link href="/articles/hi/npci-aadhaar-seeding">यहां लिखा है</Link>। रोज के भाव
         की नब्ज पकड़नी हो तो{' '}
         <Link href="/articles/mandi-bhav-today">mandi bhav page</Link> देखते रहें। और अगर बिक्री का पैसा
         अगली फसल की तैयारी में लगना है, तो{' '}
-        <Link href="/articles/hindi/kcc-limit-kaise-badhaye">KCC limit</Link> की समीक्षा भी इसी समय करवा
+        <Link href="/articles/hi/kcc-limit-kaise-badhaye">KCC limit</Link> की समीक्षा भी इसी समय करवा
         लें — बिक्री की रसीदें आमदनी का पक्का सबूत हैं।
       </p>
 
@@ -492,10 +492,10 @@ export default function GehuKaRateAajMspVsMandiBhav({ article }: { article: Hind
             <Link href="/articles/mandi-bhav-today">📈 Mandi Bhav Today</Link>
           </li>
           <li>
-            <Link href="/articles/hindi/npci-aadhaar-seeding">🏦 NPCI आधार सीडिंग</Link>
+            <Link href="/articles/hi/npci-aadhaar-seeding">🏦 NPCI आधार सीडिंग</Link>
           </li>
           <li>
-            <Link href="/articles/hindi/kcc-limit-kaise-badhaye">💳 KCC लिमिट कैसे बढ़ाएं</Link>
+            <Link href="/articles/hi/kcc-limit-kaise-badhaye">💳 KCC लिमिट कैसे बढ़ाएं</Link>
           </li>
           <li>
             <Link href="/articles/KisanRinKahaSeLe2026">🏦 Kisan Rin — कहां से लें</Link>
