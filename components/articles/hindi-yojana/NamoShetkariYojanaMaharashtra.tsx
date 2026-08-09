@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
 // Self-contained article — कोई shared component import नहीं (Rule 2)।
@@ -62,6 +63,24 @@ const FAQ_SCHEMA = {
 };
 
 // Local building blocks — इसी file में, कहीं से import नहीं।
+function Figure({ src, alt, caption }: { src: string; alt: string; caption: string }) {
+  return (
+    <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+      <Image
+        src={src}
+        alt={alt}
+        width={1200}
+        height={675}
+        className="w-full object-cover"
+        sizes="(max-width: 768px) 100vw, 768px"
+      />
+      <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+        {caption}
+      </figcaption>
+    </figure>
+  );
+}
+
 function Hd({ children }: { children: React.ReactNode }) {
   return (
     <h2 className="text-xl font-black text-[var(--color-text)] mt-8 mb-3 pb-2 border-b-2 border-orange-200 dark:border-orange-900">
@@ -135,6 +154,12 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
         <a href="https://nsmny.mahait.org" target="_blank" rel="noopener noreferrer">nsmny.mahait.org</a>{' '}
         पर।
       </Note>
+
+      <Figure
+        src="/images/articles/hindi-yojna/namo-shetkari/shetkari-field.webp"
+        alt="महाराष्ट्र का किसान अपने खेत में"
+        caption="नमो शेतकरी — महाराष्ट्र के किसान को PM Kisan के ऊपर ₹6,000 और"
+      />
 
       <Hd>योजना क्या है — और MP वाले model से रिश्ता</Hd>
       <p>
@@ -244,6 +269,11 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
       </Note>
 
       <Hd>Status check — step by step</Hd>
+      <Figure
+        src="/images/articles/hindi-yojna/namo-shetkari/status-portal.webp"
+        alt="नमो शेतकरी योजना का beneficiary status page"
+        caption="Status देखने के लिए registration नंबर या mobile नंबर काफी है"
+      />
       <ol className="my-4 space-y-2 pl-5 list-decimal text-sm leading-relaxed">
         <li>
           <a href="https://nsmny.mahait.org" target="_blank" rel="noopener noreferrer">nsmny.mahait.org</a>{' '}
@@ -384,6 +414,11 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
       </ol>
 
       <Hd>किस्त गिनने का सही तरीका — passbook से पहचान</Hd>
+      <Figure
+        src="/images/articles/hindi-yojna/namo-shetkari/passbook-entry.webp"
+        alt="Passbook में DBT की entry दिखाते हाथ"
+        caption="केंद्र और राज्य की किस्तें passbook में अलग-अलग entry से पहचानें"
+      />
       <p>
         एक व्यावहारिक उलझन जो हर सीजन सामने आती है — खाते में ₹2,000 आए, पर किसके? PM Kisan के या नमो
         शेतकरी के? दोनों की रकम एक जैसी, खाता एक ही। पहचान के तीन सुराग: पहला — passbook/statement की
