@@ -33,8 +33,8 @@ Batch size: 2 articles per commit, pushed directly to main.
 - [x] PmKisanHelplineNumberComplaint.tsx — इसीलिए→इसी कारण, वही→उसी (batch 5)
 - [x] PmKisanNewRegistration2027.tsx — इसीलिए→इसलिए ही (batch 6)
 - [x] PmKisanPaymentStoppedByStateFix.tsx — यानी→सीधे शब्दों में, इसीलिए→इस कारण, वही→यही, मतलब→अर्थ, जैसे→सरीखे (batch 6)
-- [ ] PmKisanRecoveryNoticePaisaWapas.tsx
-- [ ] PmKisanStatusCheckMobileNumberSe.tsx
+- [x] PmKisanRecoveryNoticePaisaWapas.tsx — यानी→अर्थात्, इसीलिए→इसी वजह से (batch 7)
+- [x] PmKisanStatusCheckMobileNumberSe.tsx — मतलब→अर्थ/तात्पर्य, यानी→तात्पर्य यह कि, किस्त वाले दिनों→भुगतान वाले दिनों, वही→वैसा, जैसे→जिस तरह (batch 7)
 - [ ] TractorSubsidy2027StateWiseList.tsx
 
 Note: "वही" counts in the brief include "वहीं" (locative, natural Hindi) — only bare "वही" instances are replaced. "जैसे" used as "जैसे कि / जैसा" in natural comparisons is left when replacement would break meaning.
