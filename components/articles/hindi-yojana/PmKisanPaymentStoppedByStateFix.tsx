@@ -6,7 +6,7 @@ import type { HindiArticle } from '@/lib/hindi-articles-data';
 
 const FAQS = [
   {
-    q: 'क्या यह message आने का मतलब है कि मैं योजना से बाहर हो गया?',
+    q: 'क्या यह message आने का अर्थ है कि मैं योजना से बाहर हो गया?',
     a: 'नहीं। इसका अर्थ है कि आपकी उस किस्त का भुगतान राज्य स्तर पर verification में रोका गया है — record से नाम कटना अलग बात है। गड़बड़ी सुधरते ही रुका हुआ पैसा आने की व्यवस्था है।',
   },
   {
@@ -125,7 +125,7 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
       <p>
         योजना में पैसा केंद्र सरकार भेजती है, पर लाभार्थियों की जांच-पड़ताल राज्य सरकार के जिम्मे है। हर किस्त
         से पहले राज्य अपने record से मिलान करता है। इस मिलान में आपके आवेदन में कोई खटका मिला — तो राज्य
-        ने आपकी उस किस्त का भुगतान रोक दिया। यानी: <em>पैसा release हुआ था, पर आपके नाम की मंजूरी राज्य
+        ने आपकी उस किस्त का भुगतान रोक दिया। सीधे शब्दों में: <em>पैसा release हुआ था, पर आपके नाम की मंजूरी राज्य
         स्तर पर अटक गई</em>। यह अस्थायी रोक है, स्थायी निष्कासन नहीं।
       </p>
       <p>
@@ -179,7 +179,7 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
       </div>
       <p>
         ध्यान दीजिए — आखिरी दो में जमीन-आसमान का फर्क है। &ldquo;Failed&rdquo; में पैसा चलकर लौटा है (गड़बड़ी बैंक की
-        तरफ), जबकि &ldquo;stopped by state&rdquo; में पैसा चला ही नहीं (गड़बड़ी राज्य की जांच में)। इसीलिए &ldquo;stopped&rdquo;
+        तरफ), जबकि &ldquo;stopped by state&rdquo; में पैसा चला ही नहीं (गड़बड़ी राज्य की जांच में)। इस कारण &ldquo;stopped&rdquo;
         वालों का बैंक के दस चक्कर लगाना अक्सर बेकार जाता है — दरवाजा ही गलत है।
       </p>
 
@@ -260,7 +260,7 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
       <Rx step="2" title="Online शिकायत + query number">
         <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer">pmkisan.gov.in</a> के
         Farmers Corner में Help Desk/Grievance का विकल्प है, आधार number से query register होती है। जो
-        query number मिले, उसे कागज पर लिखकर रखिए — आगे की हर बातचीत में वही आपकी पहचान है। साथ
+        query number मिले, उसे कागज पर लिखकर रखिए — आगे की हर बातचीत में यही आपकी पहचान है। साथ
         में helpline <strong>155261</strong> पर भी बात कर लें। पूरा तरीका{' '}
         <Link href="/articles/hindi/helpline-shikayat">शिकायत guide</Link> में लिखा है।
       </Rx>
@@ -319,7 +319,7 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
       <Sub>मामला 1: अपात्रता का flag गलत लगा है</Sub>
       <p>
         योजना के नियम में income tax भरने वाले, सरकारी सेवा में रहे लोग (चतुर्थ श्रेणी/multi-tasking staff
-        को छोड़कर), ₹10,000 से ऊपर pension पाने वाले retired कर्मचारी, और doctor-वकील-CA जैसे registered
+        को छोड़कर), ₹10,000 से ऊपर pension पाने वाले retired कर्मचारी, और doctor-वकील-CA सरीखे registered
         professional लाभ के दायरे से बाहर हैं। जांच में कभी-कभी यह flag गलत आदमी पर लग जाता है — हमनाम
         व्यक्ति tax भरता हो, या आपने किसी एक साल return भरा हो और बाद में बंद कर दिया हो।
       </p>
