@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
 // Self-contained article — कोई shared component import नहीं (Rule 2)।
@@ -68,6 +69,24 @@ const FAQ_SCHEMA = {
 const cell = 'border border-[var(--color-border)] px-3 py-2';
 const cellHead = 'border border-[var(--color-border)] px-3 py-2 text-left';
 
+function Figure({ src, alt, caption }: { src: string; alt: string; caption: string }) {
+  return (
+    <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+      <Image
+        src={src}
+        alt={alt}
+        width={1200}
+        height={675}
+        className="w-full object-cover"
+        sizes="(max-width: 768px) 100vw, 768px"
+      />
+      <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+        {caption}
+      </figcaption>
+    </figure>
+  );
+}
+
 function H2({ children }: { children: React.ReactNode }) {
   return (
     <h2 className="text-xl font-black text-[var(--color-text)] mt-8 mb-4 pb-2 border-b-2 border-[var(--color-border)]">
@@ -105,6 +124,12 @@ export default function GehuKaRateAajMspVsMandiBhav({ article }: { article: Hind
         MSP केंद्र पर है, खुले बाजार में, या फिलहाल रोककर रखना ही समझदारी है।
       </p>
 
+      <Figure
+        src="/images/articles/hindi-yojna/gehu-ka-rate/mandi-wheat.webp"
+        alt="मंडी में गेहूं की आवक — ढेर और बोरियां"
+        caption="आवक बढ़ते ही भाव दबता है — मंडी का पुराना नियम"
+      />
+
       <H2>MSP आखिर तय कैसे होता है — दो मिनट की समझ</H2>
       <p>
         न्यूनतम समर्थन मूल्य कोई हवा में उछाला हुआ आंकड़ा नहीं है। कृषि लागत एवं मूल्य आयोग (CACP) हर
@@ -129,6 +154,11 @@ export default function GehuKaRateAajMspVsMandiBhav({ article }: { article: Hind
       </Box>
 
       <H2>तीन रास्ते, तीन हिसाब — MSP केंद्र, खुली मंडी, गांव का व्यापारी</H2>
+      <Figure
+        src="/images/articles/hindi-yojna/gehu-ka-rate/teen-raste.webp"
+        alt="MSP केंद्र, खुली मंडी और गांव के व्यापारी — तीन विकल्पों का diagram"
+        caption="तीनों रास्तों का हिसाब अलग है — तुलना करके ही फैसला लें"
+      />
       <p>
         गेहूं बेचने के व्यवहार में तीन ही रास्ते हैं, और तीनों का गणित अलग है। नीचे की तुलना पढ़कर अपनी
         स्थिति पर लगाइए:
@@ -185,6 +215,11 @@ export default function GehuKaRateAajMspVsMandiBhav({ article }: { article: Hind
       </p>
 
       <H2>अपनी मंडी का आज का भाव — 5 मिनट में</H2>
+      <Figure
+        src="/images/articles/hindi-yojna/gehu-ka-rate/rate-on-phone.webp"
+        alt="खेत में mobile पर मंडी भाव देखता किसान"
+        caption="भाव बेचने से 4-5 दिन पहले से देखना शुरू करें — रुझान हफ्ते भर की चाल से दिखता है"
+      />
       <p>
         <strong>पहला काम:</strong>{' '}
         <a href="https://agmarknet.gov.in" target="_blank" rel="noopener noreferrer">agmarknet.gov.in</a>{' '}
@@ -278,6 +313,11 @@ export default function GehuKaRateAajMspVsMandiBhav({ article }: { article: Hind
       </p>
 
       <H2>बिक्री के दिन साथ क्या ले जाएं</H2>
+      <Figure
+        src="/images/articles/hindi-yojna/gehu-ka-rate/tol-kanta.webp"
+        alt="खरीद केंद्र पर इलेक्ट्रॉनिक कांटे पर गेहूं की तौल"
+        caption="तौल-पर्ची और लिखित सौदा — दोनों आपका हक हैं"
+      />
       <p>
         MSP केंद्र पर जा रहे हैं तो — registration की पर्ची/SMS और slot का प्रमाण, आधार card,
         बैंक passbook की copy, और जमीन के record की copy। खुली मंडी जा रहे हैं तो कागज कम लगते हैं,
