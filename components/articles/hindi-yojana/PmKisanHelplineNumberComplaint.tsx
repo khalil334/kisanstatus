@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
 // यह article जानबूझकर self-contained है — कोई shared component import नहीं।
@@ -97,6 +98,24 @@ function Box({ tone, children }: { tone: 'info' | 'warn' | 'danger'; children: R
   );
 }
 
+function Figure({ src, alt, caption }: { src: string; alt: string; caption: string }) {
+  return (
+    <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+      <Image
+        src={src}
+        alt={alt}
+        width={1200}
+        height={675}
+        className="w-full object-cover"
+        sizes="(max-width: 768px) 100vw, 768px"
+      />
+      <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+        {caption}
+      </figcaption>
+    </figure>
+  );
+}
+
 function Head2({ children }: { children: React.ReactNode }) {
   return (
     <h2 className="text-xl font-black text-[var(--color-text)] mt-8 mb-4 pb-2 border-b-2 border-[var(--color-border)]">
@@ -133,6 +152,12 @@ export default function PmKisanHelplineNumberComplaint({ article }: { article: H
         <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer">pmkisan.gov.in</a> →
         Farmers Corner → Help Desk
       </Box>
+
+      <Figure
+        src="/images/articles/hindi-yojna/helpline-shikayat/farmer-on-call.webp"
+        alt="हेल्पलाइन पर बात करता किसान"
+        caption="सही नंबर और तैयारी के साथ call करें — आधा काम वहीं हो जाता है"
+      />
 
       <Head2>सीढ़ी पर चढ़ने से पहले — आपकी दिक्कत क्या है?</Head2>
       <p>
@@ -301,6 +326,12 @@ export default function PmKisanHelplineNumberComplaint({ article }: { article: H
         </p>
       </Rung>
 
+      <Figure
+        src="/images/articles/hindi-yojna/helpline-shikayat/complaint-ladder.webp"
+        alt="शिकायत की चार-स्टेप सीढ़ी — हेल्पलाइन, portal, जिला अधिकारी, email"
+        caption="पहला डंडा आजमाइए, बात न बने तो अगले पर चढ़िए"
+      />
+
       <Head2>असली case — कैसे एक payment failed शिकायत solve हुई</Head2>
       <p>
         राजस्थान के एक किसान का case लीजिए, जो हमारे एक reader ने share किया था। तीन किस्तें आईं, चौथी बंद।
@@ -376,6 +407,12 @@ export default function PmKisanHelplineNumberComplaint({ article }: { article: H
         मांगता।
       </p>
 
+      <Figure
+        src="/images/articles/hindi-yojna/helpline-shikayat/grievance-portal.webp"
+        alt="Online grievance form का page"
+        caption="Portal की online query का फायदा — लिखित record बन जाता है"
+      />
+
       <Head2>Query का status कैसे track करें?</Head2>
       <p>
         जिस page से query register की थी, उसी page पर <strong>Know the Query Status</strong> का option है। अपना
@@ -416,6 +453,12 @@ export default function PmKisanHelplineNumberComplaint({ article }: { article: H
           </div>
         ))}
       </div>
+
+      <Figure
+        src="/images/articles/hindi-yojna/helpline-shikayat/call-notes.webp"
+        alt="Call से पहले नोटबुक में जानकारी लिखता हाथ"
+        caption="Registration number और दिक्कत पहले से लिख लें — call छोटी और कामयाब रहेगी"
+      />
 
       <Head2>फोन उठाने से पहले — यह पर्ची भर लीजिए</Head2>
       <p>
