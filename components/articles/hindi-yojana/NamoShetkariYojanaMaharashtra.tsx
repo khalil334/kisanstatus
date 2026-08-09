@@ -185,12 +185,12 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
       <StepList>
         <SI n={1}>
           <strong>eKYC अधूरी</strong> — rejection का सबसे बड़ा कारण। मोबाइल से OTP या Face App से पूरी
-          करें — तरीका <Link href="/articles/hindi/ekyc-mobile-se">eKYC guide</Link> में है।
+          करें — पूरा तरीका <Link href="/articles/hindi/ekyc-mobile-se">यहां खुलेगा</Link>।
         </SI>
         <SI n={2}>
           <strong>बैंक खाता आधार से linked नहीं / DBT off</strong> — यह NPCI seeding का मामला है, branch
-          जाकर form भरना पड़ता है। पूरा process{' '}
-          <Link href="/articles/hindi/npci-aadhaar-seeding">NPCI आधार सीडिंग guide</Link> में।
+          जाकर form भरना पड़ता है। Seeding का पूरा खेल{' '}
+          <Link href="/articles/hindi/npci-aadhaar-seeding">इस page पर समझाया है</Link>।
         </SI>
         <SI n={3}>
           <strong>Land record verification pending</strong> — तलाठी/कृषि सहायक के स्तर पर अटका होता है;
@@ -226,9 +226,8 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
         अलग से "नमो शेतकरी का form" ढूंढने मत जाइए — ऐसा कोई अलग आवेदन है ही नहीं। रास्ता एक ही है:
         पहले PM Kisan में registration (अब Farmer ID के साथ), eKYC और बैंक seeding पूरी कीजिए। जिस
         महीने आप PM Kisan के verified beneficiary बने, उसके बाद की राज्य किस्त से आपका नाम नमो शेतकरी
-        में भी गिना जाने लगता है। Registration का पूरा तरीका{' '}
-        <Link href="/articles/hindi/nayi-registration">नई रजिस्ट्रेशन guide</Link> में step-by-step लिखा
-        है।
+        में भी गिना जाने लगता है। Registration कदम-दर-कदम कैसे होता है, यह{' '}
+        <Link href="/articles/hindi/nayi-registration">नई रजिस्ट्रेशन वाले लेख</Link> में देख लें।
       </p>
 
       <SH>साल भर की आदत — 10 मिनट, तीन काम</SH>
