@@ -117,6 +117,40 @@ export default function KisanKarjMafiList2027({ article }: { article: HindiArtic
         देखिए, source देखिए, तब भरोसा कीजिए।
       </WB>
 
+      <SH>एक सच्ची timeline — महाराष्ट्र की फुले कर्जमुक्ती में क्या-क्या हुआ था</SH>
+      <p>
+        घोषणा और पैसे के बीच की दूरी समझनी हो तो पिछली बार का record देख लीजिए। दिसंबर 2019 में
+        महाराष्ट्र सरकार ने महात्मा ज्योतिराव फुले शेतकरी कर्जमुक्ती योजना घोषित की — ₹2 लाख तक के
+        crop loans, cut-off 30 September 2019। इसके लिए एक dedicated portal बना (
+        <a href="https://mjpsky.maharashtra.gov.in/" target="_blank" rel="noopener noreferrer">
+          mjpsky.maharashtra.gov.in
+        </a>
+        ), और पहली beneficiary list <strong>24 February 2020</strong> को आई, दूसरी 28 February को।
+        यानी घोषणा से पहली list तक ही करीब ढाई महीने। उसके बाद आधार सत्यापन का दौर चला — किसान
+        को खुद CSC या बैंक जाकर अंगूठा लगाना पड़ता था, तभी रकम loan account में जाती थी।
+      </p>
+      <p>
+        उस scheme से तीन सबक आज भी काम के हैं। पहला — <strong>list किस्तों में आती है</strong>; पहली
+        list में नाम न दिखे तो घबराने की जरूरत नहीं, अगली lists का इंतजार और बैंक से पूछताछ दोनों
+        साथ चलाइए। दूसरा — application का कोई लंबा form नहीं था; process paperless थी और आधार ही
+        मुख्य पहचान था। जिसका आधार loan account से जुड़ा नहीं था, वही सबसे ज्यादा अटका। तीसरा —
+        सत्यापन के बिना पैसा नहीं आया, चाहे नाम list में हो। नई scheme का ढांचा भी लगभग यही रहने
+        की उम्मीद है, इसलिए तैयारी वही तीन काम हैं जो नीचे लिखे हैं।
+      </p>
+
+      <SH>2008 की देशव्यापी माफी — इतिहास से एक जरूरी page</SH>
+      <p>
+        जो लोग कहते हैं &quot;केंद्र सरकार सबका कर्ज माफ करेगी&quot;, उन्हें यह जानना चाहिए कि केंद्र ने ऐसा
+        सिर्फ एक बार किया है — 2008 की Agricultural Debt Waiver and Debt Relief Scheme (ADWDRS)।
+        उसमें छोटे और सीमांत किसानों (2 हेक्टेयर तक) का पूरा eligible बकाया माफ हुआ था और बड़े
+        किसानों को one-time settlement पर 25% छूट मिली थी। बाद में CAG की audit report में उस
+        scheme की खामियां भी उजागर हुईं — कई eligible किसान छूट गए, कई ineligible को फायदा मिल
+        गया। तभी से हर नई माफी में सत्यापन के पेंच बढ़ते गए हैं। आधार-linking, biometric सत्यापन,
+        bank-record से मिलान — यह सब उसी सबक का नतीजा है। मतलब साफ है: प्रक्रिया धीमी इसलिए है
+        क्योंकि सरकारें गलत हाथों में पैसा जाने से डरती हैं। आपके लिए इसका मतलब — कागज जितने साफ,
+        रास्ता उतना छोटा।
+      </p>
+
       <SH>घोषणा से पैसे तक — रास्ता कितना लंबा है?</SH>
       <p>
         अनुभव के आधार पर यह क्रम समझ लीजिए — बजट/भाषण में घोषणा, फिर cabinet की मंजूरी और GR
@@ -174,6 +208,46 @@ export default function KisanKarjMafiList2027({ article }: { article: HindiArtic
         </SI>
       </StepList>
 
+      <SH>Biometric सत्यापन वाले दिन क्या होता है — पूरा नक्शा</SH>
+      <p>
+        नाम list में आने के बाद का step ज्यादातर articles छोड़ देते हैं, जबकि असली अटकाव वहीं आता
+        है। पिछली schemes के अनुभव से यह क्रम समझ लीजिए। सत्यापन के लिए आपको एक <strong>unique
+        ID</strong> मिलती है (फुले कर्जमुक्ती में यह list के साथ छपती थी)। वह ID और आधार लेकर आप CSC
+        या बैंक branch जाते हैं। Operator आपका अंगूठा machine पर लगवाता है — आधार के record से
+        मिलान होता है। Screen पर आपका loan details दिखता है: कौन सा बैंक, कितना बकाया। आपको
+        confirm करना होता है कि details सही हैं।
+      </p>
+      <p>
+        यहीं दो बातें ध्यान की हैं। पहली — अगर screen पर दिखी रकम आपके हिसाब से गलत है, तो
+        <strong> confirm मत कीजिए</strong>; आपत्ति दर्ज करने का विकल्प होता है, उसका इस्तेमाल करें और
+        बैंक से अपना statement लेकर मिलान करें। एक बार गलत रकम confirm हो गई तो सुधरवाना लंबा
+        काम है। दूसरी — बुजुर्ग किसानों में अंगूठे की लकीरें घिस जाने से biometric fail होना आम है।
+        ऐसे में iris scan (आंख से पहचान) का विकल्प मांगिए, या आधार केंद्र जाकर biometric update
+        करा लीजिए। यह समस्या PM Kisan के eKYC में भी वैसी ही आती है, इसलिए एक बार सुलझा लेंगे
+        तो दो जगह काम आएगा।
+      </p>
+
+      <SH>तीन असली सवाल, तीन सीधे जवाब</SH>
+      <p>
+        <strong>&quot;मैंने loan चुका दिया, अब माफी आ गई — मेरा पैसा वापस मिलेगा?&quot;</strong> — आम तौर पर
+        नहीं। माफी बकाया (outstanding) loans पर लागू होती है। हां, महाराष्ट्र model की तरह कुछ राज्य
+        नियमित चुकाने वालों को अलग incentive देते हैं — वह माफी नहीं, इनाम है, और उसकी अलग list
+        बनती है। अपने राज्य की scheme में ऐसा प्रावधान है या नहीं, GR में देखिए।
+      </p>
+      <p>
+        <strong>&quot;पिता के नाम पर loan था, उनका देहांत हो गया — माफी मिलेगी?&quot;</strong> — मिल सकती है,
+        लेकिन process लंबी है। पहले बैंक में मृत्यु प्रमाणपत्र और वारिस के कागज देकर loan account में
+        legal heir दर्ज कराना होगा। पिछली schemes में मृतक किसानों के मामले सत्यापन में सबसे ज्यादा
+        अटके थे, क्योंकि biometric उनका हो नहीं सकता — वारिस का सत्यापन अलग प्रक्रिया से होता है।
+        बैंक से लिखित में पूछिए कि आपके मामले में क्या करना है।
+      </p>
+      <p>
+        <strong>&quot;Society का कर्ज है, बैंक का नहीं — गिनती में आएगा?&quot;</strong> — ज्यादातर schemes में
+        हां। Cooperative society से लिया crop loan भी district central cooperative bank के record
+        में दर्ज होता है, और तमिलनाडु जैसी कुछ schemes तो सिर्फ cooperative loans के लिए ही हैं।
+        अपनी society के सचिव से अपने खाते का statement निकलवा कर रखिए — वही आपका सबूत है।
+      </p>
+
       <SH>ठगी के तीन नए तरीके — पहचान कर रखिए</SH>
       <p>
         हर माफी की घोषणा के साथ ठगों का season भी शुरू होता है। तीन पैंतरे सबसे आम हैं। पहला —
@@ -227,8 +301,21 @@ export default function KisanKarjMafiList2027({ article }: { article: HindiArtic
       <SH>सवाल-जवाब — जो उलझनें सबसे ज्यादा आती हैं</SH>
       <FAQBlock faqs={FAQS} />
 
+      <SH>चलते-चलते — आज शाम तक का काम</SH>
+      <p>
+        इतना लंबा लेख पढ़ने के बाद काम सिर्फ तीन हैं। बैंक जाकर पूछिए कि loan account से आधार और
+        चालू mobile number दोनों जुड़े हैं या नहीं — नहीं जुड़े तो आज ही जुड़वाइए। अपना ताजा loan
+        statement निकलवाकर घर रखिए। और WhatsApp पर आई किसी भी &quot;list&quot; पर अपना आधार मत
+        डालिए — सच जानना हो तो सीधे अपनी branch जाकर पूछ लीजिए। बस इतना कर लिया तो जब भी
+        आपके राज्य की list आएगी, आप उसमें सबसे तैयार किसानों में होंगे।
+      </p>
+
       <p className="text-xs text-[var(--color-text-muted)] italic">
-        इस लेख की जानकारी कहां से आई — महाराष्ट्र Budget 2026-27 का विश्लेषण (
+        इस लेख की जानकारी कहां से आई — महाराष्ट्र की पिछली फुले कर्जमुक्ती का official portal (
+        <a href="https://mjpsky.maharashtra.gov.in/" target="_blank" rel="noopener noreferrer">
+          mjpsky.maharashtra.gov.in
+        </a>
+        ), महाराष्ट्र Budget 2026-27 का विश्लेषण (
         <a href="https://prsindia.org/budgets/states/maharashtra-budget-analysis-2026-27" target="_blank" rel="noopener noreferrer">
           PRS Legislative Research
         </a>
