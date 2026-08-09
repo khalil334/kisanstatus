@@ -27,6 +27,26 @@ const FAQS = [
     q: 'क्या यह योजना मराठी में ही है? हिंदी वाले किसान का क्या?',
     a: 'Portal मराठी और अंग्रेजी में है, पर process वही है जो ऊपर लिखी है — आधार, mobile OTP, status check। भाषा से हक पर फर्क नहीं पड़ता; महाराष्ट्र का PM Kisan beneficiary होना ही शर्त है।',
   },
+  {
+    q: 'पति-पत्नी दोनों के नाम जमीन है — क्या दोनों को नमो शेतकरी मिलेगी?',
+    a: 'नहीं। PM Kisan की तरह यह भी परिवार-आधारित योजना है — पति, पत्नी और नाबालिग बच्चों को एक इकाई माना जाता है। परिवार में एक ही सदस्य को लाभ मिलता है। दोनों ने ले लिया तो आगे recovery notice आने का जोखिम है।',
+  },
+  {
+    q: 'NSMNY portal पर “eKYC pending” दिख रहा है — eKYC कहां करनी है, NSMNY पर या PM Kisan पर?',
+    a: 'PM Kisan पर। नमो शेतकरी अपना अलग eKYC नहीं कराती — वह PM Kisan का verified record ही पढ़ती है। pmkisan.gov.in पर OTP या Face App से eKYC पूरी करें; कुछ दिन में NSMNY का status भी update हो जाता है।',
+  },
+  {
+    q: 'किस्त किसी पुराने/बंद खाते में चली गई — अब क्या करूं?',
+    a: 'पैसा उस खाते में जाता है जो NPCI mapper में आधार से seeded है — जरूरी नहीं कि वह वही खाता हो जो आपने form में लिखा था। जिस खाते में पैसा चाहिए, उसी की branch में जाकर NPCI seeding form भरें — आखिरी seeded खाता ही active रहता है। बंद खाते में गया पैसा आम तौर पर वापस लौटकर अगली प्रक्रिया में दोबारा भेजा जाता है।',
+  },
+  {
+    q: 'शिकायत कहां करें अगर सब कुछ सही होने पर भी पैसा न आए?',
+    a: 'पहला स्तर — गांव का कृषि सहायक या तलाठी। दूसरा — तालुका कृषि अधिकारी का दफ्तर। PM Kisan वाली किस्त के लिए केंद्रीय helpline (155261) अलग है। शिकायत का नंबर/पावती जरूर लें — बिना रसीद की मौखिक शिकायत का कोई रिकॉर्ड नहीं बनता।',
+  },
+  {
+    q: 'क्या बटाईदार (दूसरे की जमीन जोतने वाला) किसान यह पैसा पा सकता है?',
+    a: 'नहीं — योजना उन्हीं किसानों के लिए है जिनके नाम जमीन का record है, क्योंकि यह PM Kisan के नियमों पर ही चलती है। बटाईदारी का अलग से कोई प्रावधान इस योजना में नहीं है।',
+  },
 ];
 
 const RELATED = [
@@ -67,6 +87,60 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
         यहां हम वही लिखेंगे जो खाते में आता दिखा है: अब तक की किस्तें ₹2,000 × 3 के हिसाब से ₹6,000/साल
         की rhythm पर आई हैं। बढ़ी हुई रकम आपकी किस्त में कब से लागू होगी, यह official घोषणा और portal से
         confirm करें — अफवाह से नहीं।
+      </p>
+
+      <SH>PM Kisan और नमो शेतकरी — एक नजर में फर्क</SH>
+      <p>
+        दोनों किस्तें एक ही खाते में आती हैं, इसलिए उलझन स्वाभाविक है। यह तालिका सामने रख लीजिए —
+        आगे कभी confusion नहीं होगा:
+      </p>
+      <div className="my-4 overflow-x-auto">
+        <table className="w-full text-sm border-collapse">
+          <thead>
+            <tr className="bg-[var(--color-bg-alt)]">
+              <th className="border border-[var(--color-border)] px-3 py-2 text-left">सवाल</th>
+              <th className="border border-[var(--color-border)] px-3 py-2 text-left">PM Kisan</th>
+              <th className="border border-[var(--color-border)] px-3 py-2 text-left">नमो शेतकरी</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="border border-[var(--color-border)] px-3 py-2 font-medium">पैसा किसका?</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">केंद्र सरकार</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">महाराष्ट्र सरकार</td>
+            </tr>
+            <tr>
+              <td className="border border-[var(--color-border)] px-3 py-2 font-medium">रकम</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">₹6,000/साल (₹2,000 × 3)</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">₹6,000/साल (₹2,000 × 3)</td>
+            </tr>
+            <tr>
+              <td className="border border-[var(--color-border)] px-3 py-2 font-medium">आवेदन</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">pmkisan.gov.in पर registration</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">अलग आवेदन नहीं — PM Kisan से अपने आप</td>
+            </tr>
+            <tr>
+              <td className="border border-[var(--color-border)] px-3 py-2 font-medium">Status कहां?</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">pmkisan.gov.in → Know Your Status</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">nsmny.mahait.org → Beneficiary Status</td>
+            </tr>
+            <tr>
+              <td className="border border-[var(--color-border)] px-3 py-2 font-medium">Release कौन तय करता है?</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">केंद्र का कार्यक्रम</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">राज्य का अपना कार्यक्रम</td>
+            </tr>
+            <tr>
+              <td className="border border-[var(--color-border)] px-3 py-2 font-medium">शिकायत कहां?</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">केंद्रीय helpline 155261</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">कृषि सहायक / तालुका कृषि अधिकारी</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        सबसे काम की line तालिका की आखिरी दो हैं — release और शिकायत। PM Kisan की किस्त आ जाने का
+        मतलब यह नहीं कि उसी दिन नमो शेतकरी भी आएगी — दोनों के कार्यक्रम अलग हैं। और शिकायत गलत
+        दरवाजे पर करेंगे तो जवाब में सिर्फ “यह हमारा विषय नहीं” सुनने को मिलेगा।
       </p>
 
       <SH>पात्रता — शर्तें गिनती की हैं</SH>
@@ -129,6 +203,24 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
         </SI>
       </StepList>
 
+      <SH>गांव में घूमती तीन गलतफहमियां — और सच</SH>
+      <p>
+        <strong>गलतफहमी 1: “नमो शेतकरी का अलग form भरना पड़ता है, agent ₹500 में भर देगा।”</strong>{' '}
+        सच — ऐसा कोई form है ही नहीं। जो agent इसके पैसे मांग रहा है, वह आपसे उस काम के पैसे ले रहा
+        है जो होता ही नहीं।
+      </p>
+      <p>
+        <strong>गलतफहमी 2: “PM Kisan की किस्त आ गई, नमो शेतकरी नहीं आई — मेरा नाम कट गया।”</strong>{' '}
+        सच — ज्यादातर मामलों में नाम कटा नहीं होता; राज्य की किस्त अपने अलग कार्यक्रम से release
+        होती है। पहले NSMNY portal पर status देखें, फिर परेशान हों।
+      </p>
+      <p>
+        <strong>गलतफहमी 3: “रकम बढ़कर ₹15,000 हो गई है, इस बार से ज्यादा आएगा।”</strong> सच —
+        बढ़ोतरी की घोषणा हुई है, पर आपकी किस्त में कब से दिखेगी यह official अधिसूचना से ही पक्का
+        होगा। WhatsApp पर घूमते “इस तारीख को ₹3,000 आएंगे” जैसे message का स्रोत पूछें — जवाब नहीं
+        मिलेगा।
+      </p>
+
       <SH>नए किसान के लिए रास्ता</SH>
       <p>
         अलग से "नमो शेतकरी का form" ढूंढने मत जाइए — ऐसा कोई अलग आवेदन है ही नहीं। रास्ता एक ही है:
@@ -138,6 +230,23 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
         <Link href="/articles/hindi/nayi-registration">नई रजिस्ट्रेशन guide</Link> में step-by-step लिखा
         है।
       </p>
+
+      <SH>साल भर की आदत — 10 मिनट, तीन काम</SH>
+      <StepList>
+        <SI n={1}>
+          <strong>हर किस्त के बाद SMS मिलान</strong> — बैंक का credit SMS आया तो रकम नोट करें; नहीं
+          आया तो पहले passbook update कराएं — कई बार पैसा आ चुका होता है, सिर्फ SMS नहीं आता।
+        </SI>
+        <SI n={2}>
+          <strong>साल में दो बार दोनों portal पर status</strong> — बुवाई के पहले और कटाई के बाद। eKYC,
+          seeding या land record का कोई flag दिखे तो उसी हफ्ते निपटाएं — किस्त के दिन लाइनों में
+          खड़े होने से बेहतर है पहले से तैयार रहना।
+        </SI>
+        <SI n={3}>
+          <strong>Mobile number बदले तो तुरंत update</strong> — OTP उसी नंबर पर आता है। पुराना नंबर बंद
+          हो गया तो status देखना तक मुश्किल हो जाता है — फिर CSC के चक्कर ही बचते हैं।
+        </SI>
+      </StepList>
 
       <SH>सीधी बात</SH>
       <p>
