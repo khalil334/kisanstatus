@@ -17,8 +17,8 @@ const FAQS = [
     a: 'Know Your Status page पर ही "Know your registration no." का link है। वहां मोबाइल नंबर या आधार डालकर OTP verify करें — registration number screen पर आ जाएगा। कहीं लिखकर रख लें।',
   },
   {
-    q: 'eKYC में NO दिख रहा है, इसका मतलब?',
-    a: 'मतलब आपकी eKYC pending है और अगली किस्त रुक सकती है। OTP से eKYC portal पर ही हो जाती है, या CSC पर biometric से। यह आपके हाथ का काम है — शिकायत से नहीं, खुद करने से होगा।',
+    q: 'eKYC में NO दिख रहा है, इसका अर्थ?',
+    a: 'अर्थ यह कि आपकी eKYC pending है और अगली किस्त रुक सकती है। OTP से eKYC portal पर ही हो जाती है, या CSC पर biometric से। यह आपके हाथ का काम है — शिकायत से नहीं, खुद करने से होगा।',
   },
   {
     q: 'Status में सब YES है फिर भी पैसा नहीं आया?',
@@ -327,7 +327,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
         </table>
       </div>
       <p>
-        Portal समय-समय पर शब्द बदलता है, हूबहू वही वाक्य न मिले तो घबराएं नहीं — बात लगभग इन्हीं
+        Portal समय-समय पर शब्द बदलता है, हूबहू वैसा वाक्य न मिले तो घबराएं नहीं — बात लगभग इन्हीं
         पांच खानों में आती है।
       </p>
 
@@ -370,7 +370,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
 
       <H3>Aadhaar Bank Seeding पर NO है</H3>
       <p>
-        यानी आपका खाता आधार से जुड़कर DBT के लिए तैयार नहीं है। यह बैंक शाखा का काम है — passbook और
+        तात्पर्य यह कि आपका खाता आधार से जुड़कर DBT के लिए तैयार नहीं है। यह बैंक शाखा का काम है — passbook और
         आधार लेकर जाइए, NPCI seeding/DBT enable करने का form भरवाइए। ध्यान दें: खाते में आधार नंबर दर्ज
         होना और खाता DBT के लिए active होना, दोनों अलग बातें हैं। विस्तार से{' '}
         <Link href="/articles/hindi/npci-aadhaar-seeding">NPCI आधार सीडिंग guide</Link> देखें।
@@ -414,10 +414,10 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
       <ol className="space-y-0 my-4">
         <Step n={1}>
           <strong>Captcha गलत बता रहा है</strong> — page refresh करके नया captcha लें। छोटे-बड़े अक्षर
-          वैसे ही डालें जैसे दिख रहे हैं।
+          वैसे ही डालें जिस तरह दिख रहे हैं।
         </Step>
         <Step n={2}>
-          <strong>Page खुल ही नहीं रहा या अटक रहा है</strong> — किस्त वाले दिनों में भीड़ रहती है। सुबह जल्दी
+          <strong>Page खुल ही नहीं रहा या अटक रहा है</strong> — भुगतान वाले दिनों में भीड़ रहती है। सुबह जल्दी
           या देर रात कोशिश कीजिए, तब portal हल्का चलता है।
         </Step>
         <Step n={3}>
