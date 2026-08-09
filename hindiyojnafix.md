@@ -29,8 +29,8 @@ Batch size: 2 articles per commit, pushed directly to main.
 - [x] NamoShetkariYojanaMaharashtra.tsx — screenshot रख→photo save करें, जैसे→सरीखे/जैसा कि (batch 3)
 - [x] NpciAadhaarSeedingDbtPayment.tsx — जैसे→समान (batch 4)
 - [x] PmKisan25viKistKabAayegi.tsx — किस्त वाले दिन→पैसे आने वाले दिन/भुगतान वाले दिन, निचोड़→मुख्य बात, जैसे→मसलन/सरीखे, मतलब→अर्थ, इसीलिए→इसके चलते (batch 4)
-- [ ] PmKisanEkycMobileSeKaiseKare.tsx
-- [ ] PmKisanHelplineNumberComplaint.tsx
+- [x] PmKisanEkycMobileSeKaiseKare.tsx — screenshot रख→mobile में capture कर, वही→वह स्वयं (batch 5)
+- [x] PmKisanHelplineNumberComplaint.tsx — इसीलिए→इसी कारण, वही→उसी (batch 5)
 - [ ] PmKisanNewRegistration2027.tsx
 - [ ] PmKisanPaymentStoppedByStateFix.tsx
 - [ ] PmKisanRecoveryNoticePaisaWapas.tsx
