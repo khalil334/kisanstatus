@@ -112,6 +112,65 @@ export default function TractorSubsidy2027StateWiseList({ article }: { article: 
         सीधा तरीका भी लिखा है — <em>आवेदन window खुली है या नहीं, यह portal पर जाकर ही confirm करें</em>।
       </p>
 
+      <p>
+        पूरा विवरण नीचे है, पर पहले यह तालिका — किस राज्य में किस portal पर जाना है और चयन कैसे
+        होता है, यह सामने रख लीजिए:
+      </p>
+      <div className="my-4 overflow-x-auto">
+        <table className="w-full text-sm border-collapse">
+          <thead>
+            <tr className="bg-[var(--color-bg-alt)]">
+              <th className="border border-[var(--color-border)] px-3 py-2 text-left">राज्य</th>
+              <th className="border border-[var(--color-border)] px-3 py-2 text-left">कहां आवेदन</th>
+              <th className="border border-[var(--color-border)] px-3 py-2 text-left">चयन कैसे</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="border border-[var(--color-border)] px-3 py-2 font-medium">उत्तर प्रदेश</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">upagriculture.com — “यंत्र पर अनुदान”</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">Token booking — window जल्दी भरती है</td>
+            </tr>
+            <tr>
+              <td className="border border-[var(--color-border)] px-3 py-2 font-medium">बिहार</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">farmech.bih.nic.in (OFMAS)</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">श्रेणीवार स्लैब; CHC पर अलग रास्ता</td>
+            </tr>
+            <tr>
+              <td className="border border-[var(--color-border)] px-3 py-2 font-medium">मध्य प्रदेश</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">dbt.mpdage.org — e-कृषि यंत्र अनुदान</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">Lottery, फिर करीब 10 दिन की खरीद-window</td>
+            </tr>
+            <tr>
+              <td className="border border-[var(--color-border)] px-3 py-2 font-medium">राजस्थान</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">rajkisan.rajasthan.gov.in — जन आधार से login</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">श्रेणीवार स्लैब, सालाना target</td>
+            </tr>
+            <tr>
+              <td className="border border-[var(--color-border)] px-3 py-2 font-medium">महाराष्ट्र</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">mahadbt.maharashtra.gov.in</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">पहले-आओ-पहले-पाओ / lottery mix</td>
+            </tr>
+            <tr>
+              <td className="border border-[var(--color-border)] px-3 py-2 font-medium">हरियाणा</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">agriharyana.gov.in — notification/scheme section</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">Window-based; MFMB registration जरूरी</td>
+            </tr>
+            <tr>
+              <td className="border border-[var(--color-border)] px-3 py-2 font-medium">छत्तीसगढ़</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">CHAMPS system (CG Seed &amp; Agri Dev. Corp.)</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">खरीद + bill जमा करने पर DBT</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        तालिका का तीसरा खाना सबसे ज्यादा काम का है। Lottery वाले राज्य में जल्दी आवेदन करने से कोई
+        बढ़त नहीं मिलती — वहां मायने यह रखता है कि नाम निकलने के बाद की न्यूनतम window में आपके कागज
+        और बजट तैयार हों। Token वाले राज्य में उलटा है — वहां booking खुलने के पहले घंटे ही निर्णायक होते
+        हैं। अपने राज्य का तरीका पहले पहचान लीजिए, फिर तैयारी उसी हिसाब से कीजिए।
+      </p>
+
       <h3 className="text-lg font-bold mt-6 mb-2">उत्तर प्रदेश (UP)</h3>
       <p>
         UP में कृषि यंत्रीकरण योजना के तहत यंत्रों पर अनुदान मिलता है — आवेदन कृषि विभाग के DBT portal

@@ -41,7 +41,7 @@ variants me identical rehta hai — SEO par koi asar nahi.
 |---|---------|-------------|--------|--------|
 | 1 | PmKisanHelplineNumberComplaint | inline | "फोन उठाने से पहले" 6-line पर्ची checklist | ✅ done |
 | 2 | MukhyamantriKisanKalyanYojanaMp | cards | "सब मिलाकर बात इतनी सी है" summary | ✅ done |
-| 3 | TractorSubsidy2027StateWiseList | accordion | (already unique) + table add | ⬜ todo |
+| 3 | TractorSubsidy2027StateWiseList | accordion | (already unique) + state/portal table added | ✅ done |
 | 4 | KccLimitKaiseBadhaye3Se5Lakh | accordion | branch checklist + table add | ⬜ todo |
 | 5 | FarmerIdCardKaiseBanaye2027 | inline | table add | ⬜ todo |
 | 6 | KisanKarjMafiList2027 | accordion | (already unique) + table add | ⬜ todo |
