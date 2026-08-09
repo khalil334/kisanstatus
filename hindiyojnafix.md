@@ -44,7 +44,7 @@ variants me identical rehta hai — SEO par koi asar nahi.
 | 3 | TractorSubsidy2027StateWiseList | accordion | (already unique) + state/portal table added | ✅ done |
 | 4 | KccLimitKaiseBadhaye3Se5Lakh | accordion | "Branch जाने से पहले" 4-step checklist + SOF table added | ✅ done |
 | 5 | FarmerIdCardKaiseBanaye2027 | inline | "आगे का रास्ता" 3-task next-steps close + खसरा/खतौनी/रजिस्ट्री table | ✅ done |
-| 6 | KisanKarjMafiList2027 | accordion | (already unique) + table add | ⬜ todo |
+| 6 | KisanKarjMafiList2027 | accordion | (already unique — "चलते-चलते") + loan-type eligibility table | ✅ done |
 | 7 | NamoShetkariYojanaMaharashtra | cards | (already unique) | ⬜ todo |
 | 8 | NpciAadhaarSeedingDbtPayment | accordion | vary ending | ⬜ todo |
 | 9 | PmKisan25viKistKabAayegi | accordion | (already unique) | ⬜ todo |

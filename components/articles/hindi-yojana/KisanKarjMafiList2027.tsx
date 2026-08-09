@@ -267,6 +267,44 @@ export default function KisanKarjMafiList2027({ article }: { article: HindiArtic
         loans, dairy-poultry के business loans, gold loan (चाहे खेती के नाम पर लिया हो), और साहूकार
         से लिया उधार — क्योंकि उसका कोई बैंक record ही नहीं।
       </p>
+      <div className="my-4 overflow-x-auto">
+        <table className="w-full text-sm border-collapse">
+          <thead>
+            <tr className="bg-[var(--color-bg-alt)]">
+              <th className="border border-[var(--color-border)] px-3 py-2 text-left">कर्ज का प्रकार</th>
+              <th className="border border-[var(--color-border)] px-3 py-2 text-left">माफी में?</th>
+              <th className="border border-[var(--color-border)] px-3 py-2 text-left">वजह</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="border border-[var(--color-border)] px-3 py-2 font-medium">Short-term crop loan (KCC / cooperative society)</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">आमतौर पर हां</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">फसल के लिए लिया साल भर का कर्ज — हर माफी का मुख्य दायरा</td>
+            </tr>
+            <tr>
+              <td className="border border-[var(--color-border)] px-3 py-2 font-medium">Tractor / machinery term loan</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">नहीं</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">यह crop loan नहीं, term loan है</td>
+            </tr>
+            <tr>
+              <td className="border border-[var(--color-border)] px-3 py-2 font-medium">Dairy / poultry business loan</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">नहीं</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">Allied business की श्रेणी में गिना जाता है</td>
+            </tr>
+            <tr>
+              <td className="border border-[var(--color-border)] px-3 py-2 font-medium">Gold loan (खेती के नाम पर भी)</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">नहीं</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">गिरवी पर आधारित कर्ज, crop loan नहीं</td>
+            </tr>
+            <tr>
+              <td className="border border-[var(--color-border)] px-3 py-2 font-medium">साहूकार से लिया उधार</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">नहीं</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">कोई बैंक record ही नहीं होता</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <p>
         दूसरा आम filter — <strong>तारीख।</strong> घोषणा में हमेशा एक cut-off होती है (जैसे महाराष्ट्र में
         September 2025 तक का बकाया)। उसके बाद लिया गया या overdue हुआ कर्ज गिनती में नहीं आता।
