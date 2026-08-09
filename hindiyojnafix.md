@@ -31,8 +31,8 @@ Batch size: 2 articles per commit, pushed directly to main.
 - [x] PmKisan25viKistKabAayegi.tsx — किस्त वाले दिन→पैसे आने वाले दिन/भुगतान वाले दिन, निचोड़→मुख्य बात, जैसे→मसलन/सरीखे, मतलब→अर्थ, इसीलिए→इसके चलते (batch 4)
 - [x] PmKisanEkycMobileSeKaiseKare.tsx — screenshot रख→mobile में capture कर, वही→वह स्वयं (batch 5)
 - [x] PmKisanHelplineNumberComplaint.tsx — इसीलिए→इसी कारण, वही→उसी (batch 5)
-- [ ] PmKisanNewRegistration2027.tsx
-- [ ] PmKisanPaymentStoppedByStateFix.tsx
+- [x] PmKisanNewRegistration2027.tsx — इसीलिए→इसलिए ही (batch 6)
+- [x] PmKisanPaymentStoppedByStateFix.tsx — यानी→सीधे शब्दों में, इसीलिए→इस कारण, वही→यही, मतलब→अर्थ, जैसे→सरीखे (batch 6)
 - [ ] PmKisanRecoveryNoticePaisaWapas.tsx
 - [ ] PmKisanStatusCheckMobileNumberSe.tsx
 - [ ] TractorSubsidy2027StateWiseList.tsx
