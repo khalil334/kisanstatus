@@ -55,3 +55,4 @@ Output: Har article ko same TSX file format mein wapas do. Koi fact, date, amoun
 - [x] GehuKaRateAajMspVsMandiBhav — done (self-contained, narrative + comparison-tables + season-calendar structure, FAQ striped-table, transitions within budget, ~3070 words)
 - [x] KccLimitKaiseBadhaye3Se5Lakh — done (self-contained, bullet-heavy sections + interview-style प्र./उ. FAQ, transitions within budget, ~2990 words)
 - [x] MukhyamantriKisanKalyanYojanaMp — done (self-contained, timeline-rail release record + themed FAQ groups, transitions within budget, ~2890 words)
+- [x] NamoShetkariYojanaMaharashtra — done (self-contained, comparison-table + chat-bubble FAQ + myth-vs-truth panels, transitions within budget, ~2920 words)
