@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
 // Self-contained article — कोई shared component import नहीं (Rule 2)।
@@ -61,6 +62,24 @@ const FAQ_SCHEMA = {
     acceptedAnswer: { '@type': 'Answer', text: f.a },
   })),
 };
+
+function Figure({ src, alt, caption }: { src: string; alt: string; caption: string }) {
+  return (
+    <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+      <Image
+        src={src}
+        alt={alt}
+        width={1200}
+        height={675}
+        className="w-full object-cover"
+        sizes="(max-width: 768px) 100vw, 768px"
+      />
+      <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+        {caption}
+      </figcaption>
+    </figure>
+  );
+}
 
 function Sec({ children }: { children: React.ReactNode }) {
   return (
@@ -125,6 +144,12 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
         बनाएं, और क्या-क्या लगेगा?</em> बिना घुमाए, seedha process।
       </p>
 
+      <Figure
+        src="/images/articles/hindi-yojna/farmer-id-card/id-card-sample.webp"
+        alt="AgriStack के तहत बनने वाला Farmer ID card का नमूना"
+        caption="Farmer ID — खेती की दुनिया का आधार, एक unique number में पहचान, जमीन और बैंक"
+      />
+
       <Sec>यह आईडी है क्या चीज?</Sec>
       <p>
         केंद्र सरकार के <strong>AgriStack</strong> (Digital Agriculture Mission) के तहत हर राज्य अपनी{' '}
@@ -161,6 +186,11 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
 
       <Sec>पहले यह 5 चीजें तैयार रखिए</Sec>
       <p>List लंबी नहीं है, पर हर चीज का अपना काम है:</p>
+      <Figure
+        src="/images/articles/hindi-yojna/farmer-id-card/documents-ready.webp"
+        alt="आधार कार्ड, बैंक पासबुक, खतौनी और mobile — registration के लिए तैयार documents"
+        caption="Registration से पहले ये documents एक जगह रख लें — आधा काम यहीं हो गया"
+      />
       <Tbl>
         <thead>
           <tr>
@@ -204,6 +234,11 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
         अपने राज्य की Farmer Registry चुनिए (UP के लिए upfr.agristack.gov.in, महाराष्ट्र के लिए
         mhfr.agristack.gov.in)। आगे का process इस table में:
       </p>
+      <Figure
+        src="/images/articles/hindi-yojna/farmer-id-card/agristack-portal.webp"
+        alt="AgriStack Farmer Registry portal का registration page"
+        caption="Portal पर आधार नंबर और OTP से ही खाता बनता है — कोई शुल्क नहीं"
+      />
       <Tbl>
         <thead>
           <tr>
@@ -290,6 +325,11 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
         जरूरत भी नहीं पड़ती। कई राज्यों में गांव-गांव <strong>camp</strong> भी लग रहे हैं जहां पटवारी/कृषि
         विभाग की team मौके पर ही registration करती है — अपने ग्राम पंचायत से पूछते रहिए।
       </p>
+      <Figure
+        src="/images/articles/hindi-yojna/farmer-id-card/csc-registration.webp"
+        alt="CSC केंद्र पर biometric से Farmer ID registration कराता किसान"
+        caption="CSC पर biometric verification से काम हो जाता है — आधार में mobile link न हो तब भी"
+      />
       <Note tone="ok">
         एक अनुभव field से — MP के एक गांव में camp लगा तो जिन किसानों के land record पहले से साफ-सुथरे थे,
         उनकी आईडी उसी हफ्ते बन गई। जिनके record में वरासत दर्ज नहीं थी (जमीन अब भी दादा के नाम), वो महीनों
