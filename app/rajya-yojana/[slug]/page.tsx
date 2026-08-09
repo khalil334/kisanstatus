@@ -18,6 +18,7 @@ import {
   LOGO_WIDTH,
   LOGO_HEIGHT,
 } from '@/lib/site-config';
+import { hinglishAlternates } from '@/lib/hindi-hreflang';
 import RajasthanKisanSammanNidhi9000 from '@/components/articles/rajya-yojana/RajasthanKisanSammanNidhi9000';
 import AnnadataSukhibhavaStatusCheck from '@/components/articles/rajya-yojana/AnnadataSukhibhavaStatusCheck';
 import MpKisanKalyanYojanaKist from '@/components/articles/rajya-yojana/MpKisanKalyanYojanaKist';
@@ -188,10 +189,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     keywords: [article.mainKeyword, ...article.secondaryKeywords],
     alternates: {
       canonical: url,
-      languages: {
+      // Reciprocal hreflang for the state schemes that also have a Devanagari
+      // version under /articles/hi/.
+      languages: hinglishAlternates(`/rajya-yojana/${slug}`, {
         'hi-IN': url,
         'x-default': url,
-      },
+      }),
     },
     openGraph: {
       title: article.ogTitle || article.title,

@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { HINDI_ARTICLES, HINDI_ARTICLES_MAP, type HindiArticle } from '@/lib/hindi-articles-data';
 import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '@/lib/site-config';
+import { hindiAlternates } from '@/lib/hindi-hreflang';
 
 const COMPONENTS: Record<string, React.ComponentType<{ article: HindiArticle }>> = {
   PmKisan25viKistKabAayegi: dynamic(() => import('@/components/articles/hindi-yojana/PmKisan25viKistKabAayegi'), { ssr: true }),
@@ -50,7 +51,12 @@ export async function generateMetadata({
     title: article.titleHi,
     description: article.desc,
     keywords: [...article.keywords],
-    alternates: { canonical: url },
+    // hreflang: pairs this Devanagari page with its indexed Hinglish counterpart
+    // (when one exists) so Google treats them as language variants, not duplicates.
+    alternates: {
+      canonical: url,
+      languages: hindiAlternates(slug),
+    },
     openGraph: {
       title: article.titleHi,
       description: article.desc,
