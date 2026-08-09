@@ -65,7 +65,15 @@ export default function PmKisanRecoveryNoticePaisaWapas({ article }: { article: 
     <>
       <p>
         संसद में दिया गया आंकड़ा है — देश भर में अपात्र लाभार्थियों से <strong>₹416 करोड़ से ज्यादा</strong>{' '}
-        की वसूली हो चुकी है (कृषि राज्य मंत्री का लोकसभा में लिखित उत्तर)। यानी recovery notice कोई
+        की वसूली हो चुकी है (कृषि मंत्री का{' '}
+        <a
+          href="https://timesofindia.indiatimes.com/india/pm-kisan-rs-416cr-recovered-from-ineligible-tillers/articleshow/119503444.cms"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          लोकसभा में लिखित उत्तर
+        </a>
+        )। यानी recovery notice कोई
         इक्का-दुक्का घटना नहीं — यह योजना की सफाई-प्रक्रिया का हिस्सा है, जो income tax, UIDAI और PFMS के
         record मिलाकर चल रही है। अगर आपके पास ऐसा notice आया है, तो घबराने से पहले यह समझ लीजिए कि यह
         आता क्यों है और आपके पास रास्ते क्या हैं।
@@ -196,6 +204,95 @@ export default function PmKisanRecoveryNoticePaisaWapas({ article }: { article: 
         अगली release पर फिर वही चक्र शुरू हो सकता है।
       </p>
 
+      <SH>तीन राज्य, तीन कहानियां — वसूली जमीन पर कैसी दिखती है</SH>
+      <p>
+        Recovery की खबरें अखबारों में आती रहती हैं, पर तीन मामले खास तौर पर पढ़ने लायक हैं — क्योंकि
+        तीनों में सबक अलग है।
+      </p>
+      <p>
+        <strong>पहली कहानी — Bihar, जहां बैंक खाते तक freeze हुए।</strong> राज्य के कृषि विभाग की जांच में{' '}
+        <a
+          href="https://economictimes.indiatimes.com/news/economy/agriculture/over-81000-farmers-deemed-ineligible-for-pm-kisan-scheme-in-bihar/articleshow/103555468.cms"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          81,595 किसान अपात्र पाए गए
+        </a>{' '}
+        — इनमें 45,879 वे थे जो 2020 के बाद income tax भर रहे थे, बाकी 35,716 दूसरी वजहों से। कुल वसूली की
+        रकम करीब ₹81.6 करोड़ बनी, और विभाग ने बैंकों से कहा कि जरूरत पड़े तो ऐसे लाभार्थियों के खाते freeze
+        कर दिए जाएं। खबर छपने तक करीब ₹10.3 करोड़ की वसूली हो भी चुकी थी। सबक साफ है — यह मान लेना कि
+        "कौन पीछे पड़ेगा", अब पुरानी बात है; वसूली का रास्ता सीधे आपके बैंक तक पहुंचता है।
+      </p>
+      <p>
+        <strong>दूसरी कहानी — UP, जहां गिनती लाखों में निकली।</strong> राज्य के कृषि मंत्री ने खुद बताया था कि
+        प्रदेश में चुने गए 2.85 करोड़ लाभार्थियों की जांच में{' '}
+        <a
+          href="https://www.ndtv.com/india-news/pm-kisan-scheme-21-lakh-farmers-selected-in-up-found-ineligible-3324528"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          21 लाख किसान अपात्र मिले
+        </a>{' '}
+        और उनसे मिली रकम वापस ली जाएगी। इनमें बड़ी संख्या उन घरों की थी जहां पति-पत्नी दोनों किस्तें ले रहे
+        थे — यानी वही दोहरी-entry वाली श्रेणी जो ऊपर की सूची में पांचवें नंबर पर है। बहुत से परिवारों को पता
+        भी नहीं था कि नियम "एक परिवार, एक लाभार्थी" कहता है। अनजाने में हुई गलती भी वसूली से नहीं बचाती —
+        हां, आगे का रास्ता (refund या आपत्ति) जरूर आसान रहता है अगर आप खुद कागज लेकर पहुंचें।
+      </p>
+      <p>
+        <strong>तीसरी कहानी — Tamil Nadu, जहां किसान नहीं, ठग पकड़े गए।</strong> Cuddalore और आसपास के जिलों
+        में login credentials चुराकर फर्जी लाभार्थी portal पर चढ़ा दिए गए थे। कृषि मंत्री ने संसद में बताया कि
+        राज्य ने{' '}
+        <a
+          href="https://www.ndtv.com/india-news/centre-says-transferred-rs-38-282-crore-to-farmers-between-april-and-august-2295945"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ₹47 करोड़ वसूल किए, CB-CID ने 10 मामले दर्ज कर 16 आरोपी पकड़े
+        </a>{' '}
+        और 19 संविदा कर्मियों की सेवाएं खत्म की गईं। इस कहानी का सबक अलग है — अगर आपने कभी आवेदन ही नहीं
+        किया और फिर भी recovery का कागज आ गया, तो हो सकता है आपके नाम पर किसी और ने खेल किया हो। ऐसे में
+        पैसा लौटाना नहीं, FIR और कृषि विभाग में लिखित शिकायत पहला कदम है।
+      </p>
+
+      <SH>एक किसान की refund-यात्रा — दिन-ब-दिन</SH>
+      <p>
+        प्रक्रिया किताब में जितनी सीधी दिखती है, जमीन पर उसका समय-चक्र समझना उतना ही जरूरी है। एक आम
+        मामला कुछ ऐसे चलता है:
+      </p>
+      <StepList>
+        <SI n={1}>
+          <strong>दिन 1</strong> — notice मिला। उसी दिन उसकी photo खींचकर रख ली और ब्लॉक कृषि कार्यालय में
+          जाकर वजह की पुष्टि कर ली (हमारे उदाहरण में वजह income tax निकली, जो सही थी)।
+        </SI>
+        <SI n={2}>
+          <strong>दिन 2-3</strong> — portal पर Refund Online खोला, किस्तों का जोड़ notice की रकम से मिलाया।
+          जोड़ बराबर बैठा, online भुगतान किया, receipt का print और photo दोनों रखे।
+        </SI>
+        <SI n={3}>
+          <strong>हफ्ता 2</strong> — Refund Status में entry दिखने लगी। साथ ही voluntary surrender भी दर्ज
+          करवा दिया ताकि अगली release पर नई किस्त आकर नया बकाया न बना दे।
+        </SI>
+        <SI n={4}>
+          <strong>महीना 2</strong> — एक reminder-पत्र आया (record में भुगतान देर से चढ़ा था)। receipt की copy
+          के साथ लिखित जवाब दिया, received-मुहर ली — मामला वहीं बंद।
+        </SI>
+      </StepList>
+      <p>
+        चौथा कदम ध्यान से पढ़िए — भुगतान के <em>बाद</em> भी एक बार कागजी झंझट आ सकता है, और उससे निपटने
+        का एकमात्र हथियार वही receipt है जो दिन 2-3 पर संभाली गई थी। जो लोग receipt नहीं रखते, उनके लिए यही
+        reminder महीनों की भाग-दौड़ बन जाता है।
+      </p>
+
+      <SH>राज्य बदलते ही तरीका बदल जाता है — इसे नजरअंदाज न करें</SH>
+      <p>
+        केंद्र का portal एक है, पर वसूली का जमीनी अमल राज्य करते हैं — और तरीके अलग-अलग हैं। Bihar
+        में बैंकों को आगे करके वसूली हुई; कई राज्यों में तहसील/जिला प्रशासन अलग खाते में जमा करवाता है;
+        कहीं सिर्फ portal का Refund Online ही मान्य है। इसीलिए दो नियम पक्के रखिए: पहला — जो तरीका
+        आपके notice में लिखा है वही आपके लिए अंतिम है, किसी और जिले के रिश्तेदार का अनुभव आप पर लागू नहीं
+        होगा। दूसरा — तरीका चाहे जो हो, भुगतान सरकारी खाते/portal में ही जाएगा — नकद मांगने वाला हर
+        बिचौलिया आपकी जेब का रास्ता खोज रहा है।
+      </p>
+
       <SH>Notice दबा देने की कीमत — टालने वालों के लिए दो शब्द</SH>
       <p>
         कुछ किसान notice पढ़कर सोचते हैं — "अभी तो सिर्फ कागज है, देखा जाएगा।" यह सोच महंगी पड़ती है।
@@ -222,9 +319,9 @@ export default function PmKisanRecoveryNoticePaisaWapas({ article }: { article: 
       </p>
 
       <DB>
-        जमीनी उदाहरण: UP में जांच के दौरान लाखों लाभार्थी अपात्र पाए गए थे — उनमें बड़ी संख्या उन लोगों की
-        थी जो income tax भरते थे और शायद यह जानते भी नहीं थे कि इससे पात्रता चली जाती है। सबक यह कि
-        नियम पढ़े बिना योजना में बने रहना ही जोखिम है — पात्रता की पूरी सूची{' '}
+        ऊपर की UP वाली कहानी का दूसरा पहलू भी याद रखिए — जांच में अपात्र निकले लाखों लोगों में बहुतों को
+        पता ही नहीं था कि income tax भरने से पात्रता चली जाती है। नियम पढ़े बिना योजना में बने रहना ही
+        जोखिम है — पात्रता की पूरी सूची{' '}
         <Link href="/articles/PmKisanMasterGuide2026">Master Guide</Link> में देख लें।
       </DB>
 
@@ -232,8 +329,23 @@ export default function PmKisanRecoveryNoticePaisaWapas({ article }: { article: 
       <FAQBlock faqs={FAQS} />
 
       <p className="text-xs text-[var(--color-text-muted)] italic">
-        वसूली का आंकड़ा (₹416.75 करोड़) कृषि राज्य मंत्री के लोकसभा में दिए लिखित उत्तर (PTI, दिसंबर
-        2025) से लिया गया है, और refund की online प्रक्रिया{' '}
+        वसूली का राष्ट्रीय आंकड़ा (₹416 करोड़+) कृषि मंत्री के लोकसभा में दिए{' '}
+        <a
+          href="https://timesofindia.indiatimes.com/india/pm-kisan-rs-416cr-recovered-from-ineligible-tillers/articleshow/119503444.cms"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          लिखित उत्तर (Times of India)
+        </a>{' '}
+        से, Bihar की वसूली{' '}
+        <a
+          href="https://economictimes.indiatimes.com/news/economy/agriculture/over-81000-farmers-deemed-ineligible-for-pm-kisan-scheme-in-bihar/articleshow/103555468.cms"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Economic Times (PTI)
+        </a>{' '}
+        से, और UP व Tamil Nadu के मामले NDTV की रिपोर्टों से लिए गए हैं। Refund की online प्रक्रिया{' '}
         <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer">pmkisan.gov.in</a> के
         Refund Online flow से। राज्य-स्तरीय वसूली प्रक्रिया अलग हो सकती है — notice में लिखा तरीका ही
         अंतिम है। यह जानकारी {new Date(article.modifiedTime).toLocaleDateString('hi-IN')} तक जांची गई है।
