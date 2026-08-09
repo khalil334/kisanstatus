@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
-import { SH, IB, WB, DB, StepList, SI, CalcBanner, FAQBlock, RelatedArticles } from '@/components/ArticleShared';
+
+// यह article जानबूझकर self-contained है — कोई shared component import नहीं।
+// Structure variant: short bold-heading sections + definition-list FAQ (कोई accordion नहीं)।
 
 const FAQS = [
   {
@@ -9,7 +11,7 @@ const FAQS = [
   },
   {
     q: 'मेरे दो बैंक खाते हैं — पैसा किसमें आएगा?',
-    a: 'उसी में जो NPCI mapper में सबसे बाद में (last seeded) दर्ज हुआ है। आधार कई खातों से link हो सकता है, पर DBT के लिए active mapping एक ही खाते की होती है। कौन सा खाता active है, यह myAadhaar के Bank Seeding Status से दिख जाता है।',
+    a: 'उसी में जो NPCI mapper में आखिर में (last seeded) दर्ज हुआ है। आधार कई खातों से link हो सकता है, पर DBT के लिए active mapping एक ही खाते की होती है। कौन सा खाता active है, यह myAadhaar के Bank Seeding Status से दिख जाता है।',
   },
   {
     q: 'Seeding status "Inactive" दिखा रहा है — क्या करूं?',
@@ -25,11 +27,11 @@ const FAQS = [
   },
   {
     q: 'Post Office / India Post Payments Bank का खाता चलेगा?',
-    a: 'चलेगा — IPPB खाते भी NPCI mapper से जुड़ते हैं और कई किसान उसी में किस्त पाते हैं। शर्त वही है: उस खाते की आधार seeding active होनी चाहिए।',
+    a: 'चलेगा — IPPB खाते भी NPCI mapper से जुड़ते हैं और कई किसान उसी में किस्त पाते हैं। शर्त एक ही है: उस खाते की आधार seeding active होनी चाहिए।',
   },
   {
     q: 'Seeding form जमा कर दिया — कितने दिन में active होगा?',
-    a: 'बैंक-दर-बैंक अलग है। शाखा से request NPCI तक पहुंचने और mapper में दर्ज होने में आम तौर पर कुछ कार्यदिवस लगते हैं। पक्का जवाब वही है जो screen पर दिखे — form जमा करने के हफ्ते भर बाद myAadhaar पर Bank Seeding Status खोलकर खुद देख लें। Active दिखे और बैंक का नाम सही हो, तो काम हो गया।',
+    a: 'बैंक-दर-बैंक अलग है। शाखा से request NPCI तक पहुंचने और mapper में दर्ज होने में आम तौर पर कुछ कार्यदिवस लगते हैं। पक्का जवाब वह है जो screen पर दिखे — form जमा करने के हफ्ते भर बाद myAadhaar पर Bank Seeding Status खोलकर खुद देख लें। Active दिखे और बैंक का नाम सही हो, तो काम हो गया।',
   },
   {
     q: 'बैंक वाले कह रहे हैं "हमारी तरफ से हो गया", पर status अब भी Inactive है?',
@@ -37,7 +39,7 @@ const FAQS = [
   },
   {
     q: 'जिस खाते में seeding है, वह बंद हो गया — अब पैसा कहां जाएगा?',
-    a: 'बंद खाते में transfer fail हो जाता है और किस्त अटक जाती है। जल्दी से किसी चालू खाते में seeding करवाएं — नया खाता seed होते ही mapper में वही active हो जाएगा। Fail हुई किस्त सुधार के बाद के भुगतान-चक्र में process होती है, इसलिए देर न करें।',
+    a: 'बंद खाते में transfer fail हो जाता है और किस्त अटक जाती है। जल्दी से किसी चालू खाते में seeding करवाएं — नया खाता seed होते ही mapper में उसी की entry active हो जाएगी। Fail हुई किस्त सुधार के बाद के भुगतान-चक्र में process होती है, देर न करें।',
   },
   {
     q: 'क्या seeding के लिए कोई fees लगती है?',
@@ -53,16 +55,46 @@ const FAQS = [
   },
 ];
 
-const RELATED = [
-  { slug: 'PmKisanBankAccountChangeProcess', title: 'Bank Account Change Process', emoji: '🏦' },
-  { slug: 'PmKisanPaymentFailedFix2026', title: 'Payment Failed — Fix Guide', emoji: '🛠️' },
-  { slug: 'hindi/payment-stopped-by-state', title: 'Payment Stopped by State', emoji: '⛔' },
-  { slug: 'hindi/status-check-mobile-se', title: 'मोबाइल से स्टेटस चेक', emoji: '📱' },
-];
+const FAQ_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQS.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
+function T2({ children }: { children: React.ReactNode }) {
+  return (
+    <h2 className="text-xl font-black text-[var(--color-text)] mt-8 mb-4 pb-2 border-b-2 border-[var(--color-border)]">
+      {children}
+    </h2>
+  );
+}
+
+function Alert({ tone, children }: { tone: 'good' | 'care' | 'grave'; children: React.ReactNode }) {
+  const cls =
+    tone === 'good'
+      ? 'bg-green-50 dark:bg-green-900/20 border-green-600 dark:border-green-500'
+      : tone === 'care'
+        ? 'bg-amber-50 dark:bg-amber-900/20 border-amber-500'
+        : 'bg-red-50 dark:bg-red-900/20 border-red-500';
+  return (
+    <div className={`my-4 p-4 border-l-4 rounded-r-xl text-sm text-[var(--color-text)] leading-relaxed ${cls}`}>
+      {children}
+    </div>
+  );
+}
 
 export default function NpciAadhaarSeedingDbtPayment({ article }: { article: HindiArticle }) {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
+      />
+
       <p>
         हमारे एक पाठक की कहानी सुनिए। eKYC पूरी, जमीन का record सही, beneficiary list में नाम — फिर भी दो
         किस्तें नहीं आईं। बैंक गए तो बोले "आधार तो linked है।" Portal पर शिकायत की तो जवाब आया — Aadhaar
@@ -70,27 +102,27 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
         सुनने में एक जैसे लगते हैं, होते अलग हैं।
       </p>
       <p>
-        इस लेख में हम यही गांठ खोलेंगे — link और seeding का फर्क, अपना mapping status घर बैठे देखने के
-        दो तरीके (एक बिना internet वाला भी), बैंक में जाकर ठीक-ठीक क्या बोलना है, और वे गलतियां जिनकी वजह से
+        इस लेख में हम यही गांठ खोलेंगे — link और seeding का फर्क, अपना mapping status घर बैठे देखने के दो
+        तरीके (एक बिना internet वाला भी), बैंक में जाकर ठीक-ठीक क्या बोलना है, और वे गलतियां जिनकी वजह से
         form भरने के बाद भी status Inactive रह जाता है। पूरा पढ़ लेंगे तो बैंक के तीन चक्कर बचेंगे, यह हमारा
         अनुभव कहता है।
       </p>
 
-      <SH>पहले यह फर्क समझ लीजिए — बाकी सब आसान है</SH>
+      <T2>पहले यह फर्क समझ लीजिए — बाकी सब आसान है</T2>
       <p>
-        बैंक में आधार link होना KYC की जरूरत है — इससे खाता चलता रहता है। लेकिन सरकारी पैसा (DBT) भेजने
-        वाला system — NPCI का Aadhaar Payment Bridge — बैंक का record नहीं देखता। वह NPCI mapper
-        देखता है: एक central सूची, जिसमें दर्ज होता है कि आपके आधार का DBT-पैसा किस बैंक में जाएगा। आपका
-        आधार चाहे तीन खातों से linked हो, mapper में active entry एक ही होती है — जो खाता{' '}
-        <strong>सबसे बाद में seed</strong> हुआ, वही।
+        बैंक में आधार link होना KYC की जरूरत है — इससे खाता चलता रहता है। लेकिन सरकारी पैसा (DBT) भेजने वाला
+        system — NPCI का Aadhaar Payment Bridge — बैंक का record नहीं देखता। वह NPCI mapper देखता है: एक
+        central सूची, जिसमें दर्ज होता है कि आपके आधार का DBT-पैसा किस बैंक में जाएगा। आपका आधार चाहे तीन
+        खातों से linked हो, mapper में active entry एक ही होती है — जो खाता <strong>आखिर में seed</strong>{' '}
+        हुआ, बस।
       </p>
       <p>
         एक छोटी सी तुलना से बात और साफ हो जाएगी। गांव में आपके नाम के तीन घर हो सकते हैं, पर सरकारी चिट्ठी
-        उसी पते पर आती है जो सरकारी register में लिखा है। बैंक-link तीन घरों जैसा है; NPCI mapper वह
-        register है। चिट्ठी (यानी किस्त) कहां पहुंचेगी, यह register तय करता है — घरों की गिनती नहीं।
+        उसी पते पर आती है जो सरकारी register में लिखा है। बैंक-link तीन घरों की तरह है; NPCI mapper वह
+        register है। चिट्ठी (किस्त) कहां पहुंचेगी, यह register तय करता है — घरों की गिनती नहीं।
       </p>
 
-      <SH>Link vs Seeding — एक नजर में</SH>
+      <T2>Link vs Seeding — एक नजर में</T2>
       <div className="my-4 overflow-x-auto">
         <table className="w-full text-sm border-collapse">
           <thead>
@@ -124,112 +156,98 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
             <tr>
               <td className="border border-[var(--color-border)] px-3 py-2 font-medium">किस्त न आने से रिश्ता</td>
               <td className="border border-[var(--color-border)] px-3 py-2">सीधा नहीं</td>
-              <td className="border border-[var(--color-border)] px-3 py-2">सीधा — Inactive यानी भुगतान fail</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">सीधा — Inactive होते ही भुगतान fail</td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <IB>
-        इसीलिए portal पर payment failure के record में सबसे आम कारणों में एक यही लिखा मिलता है — Aadhaar
-        seeding inactive या खाता बंद। किस्त release होने से पहले यह जांच 5 मिनट की है, और बाद में शिकायत
-        महीनों की।
-      </IB>
+      <Alert tone="good">
+        Portal पर payment failure के record में आम कारणों में एक यही लिखा मिलता है — Aadhaar seeding
+        inactive या खाता बंद। किस्त release होने से पहले यह जांच 5 मिनट की है, और बाद में शिकायत महीनों की।
+      </Alert>
 
-      <SH>मामला कितना बड़ा है — आंकड़ों की गवाही</SH>
+      <T2>मामला कितना बड़ा है — आंकड़ों की गवाही</T2>
       <p>
         यह समस्या कोई इक्का-दुक्का मामला नहीं है। 20 जून 2026 को PM Kisan की 23वीं किस्त में{' '}
         <strong>9.44 करोड़+ किसान परिवारों</strong> को करीब ₹18,880 करोड़ गए — पर खबरों के मुताबिक लाखों
         किसान फिर भी खाली हाथ रहे, और कृषि मंत्रालय के आंकड़ों पर आधारित reports बताती हैं कि कारण बजट नहीं,
-        किसानों के digital records का mismatch होता है — जिसमें NPCI seeding सबसे ऊपर के कारणों में है।
-        सरकार खुद मानती है कि fail हुए transaction के आम कारणों में बैंक द्वारा आधार का mapper से हटाया जाना
+        किसानों के digital records का mismatch होता है — जिसमें NPCI seeding ऊपर के कारणों में है। सरकार
+        खुद मानती है कि fail हुए transaction के आम कारणों में बैंक द्वारा आधार का mapper से हटाया जाना
         (de-seeding), mapping न होना, या खाता बंद होना शामिल है — और सुधार के बाद रुका पैसा अगले
-        भुगतान-चक्र में release होता है। यानी आप अकेले नहीं हैं — पर रास्ता आपको खुद ही पकड़ना होगा, क्योंकि
+        भुगतान-चक्र में release होता है। आप अकेले नहीं हैं — पर रास्ता आपको खुद ही पकड़ना होगा, क्योंकि
         system सिर्फ किस्त रोकता है, घर आकर बताता नहीं।
       </p>
 
-      <SH>Step 1 — अभी कौन सा खाता mapped है, यह देखें</SH>
-      <StepList>
-        <SI n={1}>
-          <a href="https://myaadhaar.uidai.gov.in" target="_blank" rel="noopener noreferrer">
-            myaadhaar.uidai.gov.in
-          </a>{' '}
-          खोलें और login करें (आधार number + OTP — OTP आधार-registered mobile पर आएगा)।
-        </SI>
-        <SI n={2}>अंदर <strong>Bank Seeding Status</strong> का विकल्प चुनें।</SI>
-        <SI n={3}>
-          Screen पर दिखेगा — कौन सा बैंक mapped है, seeding active है या inactive, और किस तारीख से।
-        </SI>
-        <SI n={4}>
-          Internet नहीं है? आधार-registered mobile से <strong>*99*99*1#</strong> dial करके भी यही जानकारी
-          मिल जाती है।
-        </SI>
-      </StepList>
+      <T2>Step 1 — अभी कौन सा खाता mapped है, यह देखें</T2>
       <p>
-        Screen पर जो दिखे, उसे पढ़ने का तरीका सीधा है। बैंक का नाम <strong>वही</strong> है जिस खाते में पैसा
-        चाहिए और status <strong>Active</strong> है — तो seeding की तरफ से रास्ता साफ है; किस्त फिर भी न आए
-        तो वजह कहीं और है (eKYC, जमीन record, या राज्य की जांच)। बैंक का नाम <strong>दूसरा</strong> है — तो
-        पैसा उसी दूसरे बैंक में जा रहा है, अपनी पुरानी passbook निकालकर देखिए। Status{' '}
+        <strong>पहला तरीका (internet वाला):</strong>{' '}
+        <a href="https://myaadhaar.uidai.gov.in" target="_blank" rel="noopener noreferrer">
+          myaadhaar.uidai.gov.in
+        </a>{' '}
+        खोलें और login करें — आधार number + OTP; OTP आधार-registered mobile पर आएगा। अंदर{' '}
+        <strong>Bank Seeding Status</strong> का विकल्प चुनें। Screen पर दिखेगा — कौन सा बैंक mapped है,
+        seeding active है या inactive, और किस तारीख से।
+      </p>
+      <p>
+        <strong>दूसरा तरीका (बिना internet):</strong> आधार-registered mobile से <strong>*99*99*1#</strong>{' '}
+        dial करके भी यही जानकारी मिल जाती है — keypad phone पर भी।
+      </p>
+      <p>
+        Screen पर जो दिखे, उसे पढ़ने का तरीका सीधा है। बैंक का नाम <strong>उसी खाते का</strong> है जिसमें
+        पैसा चाहिए और status <strong>Active</strong> है — तो seeding की तरफ से रास्ता साफ है; किस्त फिर भी
+        न आए तो वजह कहीं और है (eKYC, जमीन record, या राज्य की जांच)। बैंक का नाम <strong>दूसरा</strong> है
+        — तो पैसा उसी दूसरे बैंक में जा रहा है, अपनी पुरानी passbook निकालकर देखिए। Status{' '}
         <strong>Inactive</strong> है या कोई record ही नहीं — तो नीचे Step 2 आपके लिए है।
       </p>
 
-      <DB>
-        NPCI का BASE portal (Bharat Aadhaar Seeding Enabler) mapping history भी दिखाता है — यानी आपका
-        आधार पहले किन-किन बैंकों से mapped रहा। खाता बदलने के बाद पैसा पुराने बैंक में चला जाए, तो यह history
-        गुत्थी सुलझा देती है।
-      </DB>
+      <Alert tone="grave">
+        NPCI का BASE portal (Bharat Aadhaar Seeding Enabler) mapping history भी दिखाता है — आपका आधार पहले
+        किन-किन बैंकों से mapped रहा। खाता बदलने के बाद पैसा पुराने बैंक में चला जाए, तो यह history गुत्थी
+        सुलझा देती है।
+      </Alert>
 
-      <SH>Step 2 — seeding करानी है या ठीक करानी है, तो यह तरीका</SH>
+      <T2>Step 2 — seeding करानी है या ठीक करानी है, तो यह तरीका</T2>
       <p>
-        Seeding की request आपका <strong>बैंक</strong> ही NPCI तक पहुंचाता है — इसलिए मुख्य रास्ता शाखा से
-        होकर जाता है:
+        Seeding की request आपका <strong>बैंक</strong> ही NPCI तक पहुंचाता है — मुख्य रास्ता शाखा से होकर
+        जाता है। उस बैंक की शाखा जाएं जिस खाते में पैसा चाहिए; साथ में आधार card, passbook और
+        आधार-registered mobile। वहां <strong>Aadhaar Seeding / DBT Consent Form</strong> मांगें (कुछ बैंक
+        इसे mandate form कहते हैं) — इसमें लिखित सहमति होती है, बिना consent के बैंक seeding कर ही नहीं
+        सकता। Form भरकर जमा करें और <strong>acknowledgement/reference number जरूर लें</strong>। फिर 3-7
+        कार्यदिवस बाद Step 1 वाला तरीका दोहराकर पक्का करें कि status <strong>Active</strong> हो गया और बैंक
+        का नाम सही है।
       </p>
-      <StepList>
-        <SI n={1}>
-          उस बैंक की शाखा जाएं जिस खाते में पैसा चाहिए। साथ में आधार card, passbook और आधार-registered
-          mobile।
-        </SI>
-        <SI n={2}>
-          <strong>Aadhaar Seeding / DBT Consent Form</strong> मांगें (कुछ बैंक इसे mandate form कहते हैं)।
-          इसमें लिखित सहमति होती है — बिना consent के बैंक seeding कर ही नहीं सकता।
-        </SI>
-        <SI n={3}>Form भरकर जमा करें और <strong>acknowledgement/reference number जरूर लें</strong>।</SI>
-        <SI n={4}>
-          3-7 कार्यदिवस बाद Step 1 वाला तरीका दोहराकर पक्का करें कि status <strong>Active</strong> हो गया
-          और बैंक का नाम वही है।
-        </SI>
-      </StepList>
       <p>
         कई बैंकों में यह काम net-banking या NPCI के BASE portal से online भी हो जाता है — पर हर बैंक में
-        नहीं। शाखा वाला रास्ता हर जगह चलता है, इसलिए वही मुख्य बताया है।
+        नहीं। शाखा वाला रास्ता हर जगह चलता है, उसी को मुख्य बताया है।
       </p>
 
-      <SH>Counter पर ठीक-ठीक क्या बोलें — शब्द तैयार रखिए</SH>
+      <T2>Counter पर ठीक-ठीक क्या बोलें — शब्द तैयार रखिए</T2>
       <p>
         शाखा में आधी लड़ाई शब्दों की है। "आधार link कर दो" कहने पर staff अक्सर KYC-link करके भेज देता है —
-        और mapper में entry हुए बिना किस्त वहीं की वहीं अटकी रहती है। इसलिए counter पर यह कहिए:
+        और mapper में entry हुए बिना किस्त वहीं की वहीं अटकी रहती है। Counter पर यह कहिए:
       </p>
-      <IB>
-        "मुझे इस खाते में <strong>NPCI mapper में आधार seeding</strong> करवानी है, <strong>DBT भुगतान</strong> के
-        लिए। Consent form दे दीजिए, और जमा होने पर acknowledgement number भी।"
-      </IB>
+      <Alert tone="good">
+        "मुझे इस खाते में <strong>NPCI mapper में आधार seeding</strong> करवानी है, <strong>DBT भुगतान</strong>{' '}
+        के लिए। Consent form दे दीजिए, और जमा होने पर acknowledgement number भी।"
+      </Alert>
       <p>
-        इतना कहते ही staff समझ जाता है कि काम KYC का नहीं, mapper का है। Form भरते समय आधार number,
-        खाता number और नाम की spelling तीनों दो बार मिलाइए — form में एक अंक की चूक पूरी request reject
-        करवा देती है। और acknowledgement number इसलिए, कि हफ्ते बाद status न बदले तो आपके पास पूछताछ का
+        इतना कहते ही staff समझ जाता है कि काम KYC का नहीं, mapper का है। Form भरते समय आधार number, खाता
+        number और नाम की spelling तीनों दो बार मिलाइए — form में एक अंक की चूक पूरी request reject करवा
+        देती है। और acknowledgement number की अहमियत यह है कि हफ्ते बाद status न बदले तो आपके पास पूछताछ का
         ठोस सहारा हो — "मैंने कहा था" से बात नहीं बनती, reference number से बनती है।
       </p>
 
-      <WB>
+      <Alert tone="care">
         ध्यान रहे — seeding के नाम पर OTP मांगने वाले phone call ठगी होते हैं। यह काम या तो आप खुद
         myAadhaar/बैंक की app पर करते हैं, या बैंक शाखा में। कोई अनजान व्यक्ति call करके seeding "करवा"
         नहीं सकता। न कोई fees लगती है, न किसी दलाल की जरूरत है।
-      </WB>
+      </Alert>
 
-      <SH>Form भरने के बाद भी Inactive? — ये 4 अड़चनें देखिए</SH>
+      <T2>Form भरने के बाद भी Inactive? — ये 4 अड़चनें देखिए</T2>
       <p>
-        यह हिस्सा उन किसानों के लिए है जो कह रहे हैं — "seeding तो करवा ली थी, फिर भी वही हाल।" अनुभव में
-        चार अड़चनें बार-बार मिलती हैं:
+        यह हिस्सा उन किसानों के लिए है जो कह रहे हैं — "seeding तो करवा ली थी, फिर भी कुछ नहीं बदला।" अनुभव
+        में चार अड़चनें बार-बार मिलती हैं:
       </p>
       <p>
         <strong>1. Request शाखा में ही रह गई।</strong> Staff ने अपने system में entry की, पर NPCI तक
@@ -243,77 +261,104 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
       </p>
       <p>
         <strong>3. खाता ही सोया पड़ा है।</strong> लंबे समय से लेन-देन न हो तो खाता dormant/frozen हो जाता
-        है, और ऐसे खाते पर seeding टिकती नहीं। इलाज — पहले शाखा जाकर खाता re-activate करवाएं (KYC
-        दस्तावेज साथ रखें), फिर consent form भरें।
+        है, और ऐसे खाते पर seeding टिकती नहीं। इलाज — पहले शाखा जाकर खाता re-activate करवाएं (KYC दस्तावेज
+        साथ रखें), फिर consent form भरें।
       </p>
       <p>
-        <strong>4. Seeding दूसरे खाते ने "छीन" ली।</strong> आपने खाता A में seeding करवाई, बाद में किसी
-        काम से (या CSC/बैंक की चूक से) खाता B seed हो गया — mapper में B active हो गया और A अपने आप
-        हट गया। इलाज — Step 1 से देखें कि अभी कौन सा बैंक mapped है, और जिस खाते में पैसा चाहिए उसी में
-        ताजा seeding करवाएं। BASE की mapping history यहां बड़े काम की है।
+        <strong>4. Seeding दूसरे खाते ने "छीन" ली।</strong> आपने खाता A में seeding करवाई, बाद में किसी काम
+        से (या CSC/बैंक की चूक से) खाता B seed हो गया — mapper में B active हो गया और A अपने आप हट गया।
+        इलाज — Step 1 से देखें कि अभी कौन सा बैंक mapped है, और जिस खाते में पैसा चाहिए उसी में ताजा
+        seeding करवाएं। BASE की mapping history यहां बड़े काम की है।
       </p>
 
-      <SH>Status की भाषा पढ़ना सीखिए — तीन आम message</SH>
+      <T2>Status की भाषा पढ़ना सीखिए — आम message</T2>
       <p>
-        Portal के Know Your Status में अंग्रेजी के जो message आते हैं, उनका मतलब पहले से पता हो तो आधी
+        Portal के Know Your Status में अंग्रेजी के जो message आते हैं, उनकी व्याख्या पहले से पता हो तो आधी
         घबराहट खत्म। <strong>&quot;Aadhaar not seeded in NPCI&quot;</strong> — यही इस पूरे लेख का विषय है;
-        सीधे Step 2 पर जाइए। <strong>&quot;Account closed&quot;</strong> — seeded खाता बंद हो चुका है; किसी चालू
-        खाते में नई seeding करानी होगी। <strong>&quot;Name mismatch&quot;</strong> — आधार और बैंक record के नाम अलग
-        हैं; पहले नाम सुधरवाइए, फिर seeding। और <strong>&quot;Payment Initiated&quot;</strong> दिखे तो कुछ मत कीजिए —
-        पैसा रास्ते में है, FTO process होने के बाद भी खाते तक पहुंचने में कुछ कार्यदिवस लगते हैं। 24-48 घंटे
-        बाद status दोबारा देखना और बैंक/NPCI के SMS संभालकर रखना — दो आदतें जो शिकायत के वक्त सबूत बनती हैं।
+        सीधे Step 2 पर जाइए। <strong>&quot;Account closed&quot;</strong> — seeded खाता बंद हो चुका है; किसी
+        चालू खाते में नई seeding करानी होगी। <strong>&quot;Name mismatch&quot;</strong> — आधार और बैंक
+        record के नाम अलग हैं; पहले नाम सुधरवाइए, फिर seeding। और{' '}
+        <strong>&quot;Payment Initiated&quot;</strong> दिखे तो कुछ मत कीजिए — पैसा रास्ते में है, FTO
+        process होने के बाद भी खाते तक पहुंचने में कुछ कार्यदिवस लगते हैं। 24-48 घंटे बाद status दोबारा
+        देखना और बैंक/NPCI के SMS संभालकर रखना — दो आदतें जो शिकायत के वक्त सबूत बनती हैं।
       </p>
 
-      <SH>किस्त के मौसम से पहले की 3-मिनट जांच</SH>
+      <T2>किस्त के मौसम से पहले की 3-मिनट जांच</T2>
       <p>
-        हर बार status देखने का सबसे सस्ता समय वह है जब किस्त <em>आने वाली</em> हो, आ चुकने के बाद नहीं। तीन
-        चीजें मिला लीजिए: myAadhaar पर Bank Seeding Status <strong>Active</strong> हो; mapped बैंक{' '}
-        <strong>वही</strong> हो जिसकी passbook आपके पास है; और वह खाता <strong>चालू</strong> हो — छह महीने
+        Status देखने का सस्ता समय वह है जब किस्त <em>आने वाली</em> हो, आ चुकने के बाद नहीं। तीन चीजें मिला
+        लीजिए: myAadhaar पर Bank Seeding Status <strong>Active</strong> हो; mapped बैंक{' '}
+        <strong>उसी passbook वाला</strong> हो जो आपके पास है; और वह खाता <strong>चालू</strong> हो — छह महीने
         में एक बार भी लेन-देन कर लेने से खाता dormant नहीं होता। यह जांच घर बैठे हो जाती है और ज्यादातर
-        payment-failure वहीं पकड़ में आ जाते हैं।
+        payment-failure यहीं पकड़ में आ जाते हैं।
       </p>
-
       <p>
         और एक मौसमी बात — बैंक merge का दौर चल रहा है। जिन किसानों के खाते ऐसे बैंकों में थे जो किसी बड़े
-        बैंक में मिल गए (जैसे कई ग्रामीण बैंकों का विलय), उनका IFSC और कभी-कभी खाता नंबर तक बदल जाता है।
-        खाता वही रहे तो भी mapper की entry पुराने बैंक code पर अटकी रह सकती है। आपके बैंक का merge हुआ हो,
-        तो बिना इंतजार किए एक बार myAadhaar पर seeding status देख लें — नए बैंक का नाम दिखे तो सब ठीक,
-        पुराना दिखे तो नई शाखा में consent form भरकर ताजा seeding करा लें।
+        बैंक में मिल गए (कई ग्रामीण बैंकों का विलय इसका उदाहरण है), उनका IFSC और कभी-कभी खाता नंबर तक बदल
+        जाता है। खाता न बदले तो भी mapper की entry पुराने बैंक code पर अटकी रह सकती है। आपके बैंक का merge
+        हुआ हो, तो बिना इंतजार किए एक बार myAadhaar पर seeding status देख लें — नए बैंक का नाम दिखे तो सब
+        ठीक, पुराना दिखे तो नई शाखा में consent form भरकर ताजा seeding करा लें।
       </p>
 
-      <CalcBanner />
+      <div className="my-8 p-6 bg-gradient-to-r from-green-800 to-green-600 rounded-2xl text-white text-center">
+        <p className="text-2xl mb-2">📆</p>
+        <p className="font-black text-lg mb-1">Kist Ruki Hai? Pata Karo Kyun</p>
+        <p className="text-green-100 text-sm mb-4">
+          eKYC, bank seeding, land seeding check karo — 4 sawaal mein exact reason.
+        </p>
+        <div className="flex flex-wrap justify-center gap-2.5">
+          <Link
+            href="/calculator/installment-tracker"
+            className="inline-flex items-center gap-2 bg-white text-green-800 font-black px-6 py-3 rounded-xl text-sm hover:bg-green-50 transition-colors"
+          >
+            📆 Kist Tracker Kholo →
+          </Link>
+          <Link
+            href="/calculator"
+            className="inline-flex items-center gap-2 bg-white/15 border border-white/30 text-white font-bold px-6 py-3 rounded-xl text-sm hover:bg-white/25 transition-colors"
+          >
+            🧮 Sab Utilities Dekho
+          </Link>
+        </div>
+      </div>
 
-      <SH>CSC जाएं या बैंक? — सही चुनाव का गणित</SH>
+      <T2>CSC जाएं या बैंक? — सही चुनाव का गणित</T2>
       <p>
-        गांव में आदत CSC जाने की होती है, पर seeding के मामले में यह समझ लीजिए — CSC आपके लिए status
-        देख सकता है, form भरने में मदद कर सकता है, पर mapper में entry आखिरकार आपका <strong>बैंक</strong> ही
-        भेजता है। इसलिए seeding करानी हो तो सीधे उस बैंक की शाखा जाना एक कदम बचाता है। CSC तब काम का
-        है जब आपको सिर्फ जांचना हो कि गड़बड़ कहां है — या जब बैंक दूर हो और पहले यह पक्का करना हो कि चक्कर
-        लगाना बनता भी है या नहीं। एक और बारीकी — बैंक mitra/BC point पर भी कई जगह seeding consent लिया
-        जाता है, पर वहां से acknowledgement नंबर मिलना मुश्किल होता है — और बिना रसीद के follow-up कमजोर
-        पड़ता है। जहां से रसीद मिले, वहीं से काम कराइए।
+        गांव में आदत CSC जाने की होती है, पर seeding के मामले में यह समझ लीजिए — CSC आपके लिए status देख
+        सकता है, form भरने में मदद कर सकता है, पर mapper में entry आखिरकार आपका <strong>बैंक</strong> ही
+        भेजता है। Seeding करानी हो तो सीधे उस बैंक की शाखा जाना एक कदम बचाता है। CSC तब काम का है जब आपको
+        सिर्फ जांचना हो कि गड़बड़ कहां है — या जब बैंक दूर हो और पहले यह पक्का करना हो कि चक्कर लगाना बनता
+        भी है या नहीं। एक और बारीकी — बैंक mitra/BC point पर भी कई जगह seeding consent लिया जाता है, पर
+        वहां से acknowledgement नंबर मिलना मुश्किल होता है — और बिना रसीद के follow-up कमजोर पड़ता है। जहां
+        से रसीद मिले, वहीं से काम कराइए।
       </p>
 
-      <SH>Seeding हो गई — अब आगे क्या?</SH>
+      <T2>Seeding हो गई — अब आगे क्या?</T2>
       <p>
         Mapper में खाता active हो जाने के बाद बची हुई कड़ियां जांच लें। योजना के record में eKYC पूरी हो (
         <Link href="/articles/hindi/ekyc-mobile-se">phone से करने का तरीका</Link>), और अगर पिछला भुगतान
         fail हुआ था तो उसका status देखें — कई राज्यों में सुधार के बाद रुका पैसा अगली किस्त के साथ आ जाता
         है। भुगतान अटकने की बाकी वजहों का पूरा नक्शा{' '}
-        <Link href="/articles/PmKisanPaymentFailedFix2026">इस page पर एक जगह मिलेगा</Link>।
-        और अगर status में "Payment Stopped by State" जैसा message है, तो वह अलग मामला है —{' '}
+        <Link href="/articles/PmKisanPaymentFailedFix2026">इस page पर एक जगह मिलेगा</Link>। और अगर status
+        में "Payment Stopped by State" वाला message है, तो वह अलग मामला है —{' '}
         <Link href="/articles/hindi/payment-stopped-by-state">उसकी guide यहां</Link> है।
       </p>
       <p>
-        एक आखिरी बात, जो अनुभव से कहते हैं — seeding एक बार की चीज नहीं, एक <em>स्थिति</em> है। खाता
-        बदला, बैंक merge हुआ, खाता dormant हुआ — किसी भी घटना से mapping बदल या टूट सकती है। इसलिए साल
-        में दो बार, बुवाई और कटाई की तरह, myAadhaar खोलकर 2 मिनट का status-check कर लेने की आदत बना
-        लीजिए। जितनी मेहनत खेत के कागज संभालने में लगाते हैं, उसका सौवां हिस्सा इस digital कागज पर भी लगा
-        दें — किस्त अटकने की सबसे आम वजह से हमेशा के लिए छुट्टी।
+        एक आखिरी बात, जो अनुभव से कहते हैं — seeding एक बार की चीज नहीं, एक <em>स्थिति</em> है। खाता बदला,
+        बैंक merge हुआ, खाता dormant हुआ — किसी भी घटना से mapping बदल या टूट सकती है। तो साल में दो बार,
+        बुवाई और कटाई की तरह, myAadhaar खोलकर 2 मिनट का status-check कर लेने की आदत बना लीजिए। जितनी मेहनत
+        खेत के कागज संभालने में लगाते हैं, उसका सौवां हिस्सा इस digital कागज पर भी लगा दें — किस्त अटकने की
+        प्रमुख वजह से हमेशा के लिए छुट्टी।
       </p>
 
-      <SH>Seeding पर उठने वाले सवाल — और सीधे जवाब</SH>
-      <FAQBlock faqs={FAQS} />
+      <T2>Seeding पर उठने वाले सवाल — और सीधे जवाब</T2>
+      <dl className="mb-8 divide-y divide-[var(--color-border)] border border-[var(--color-border)] rounded-2xl overflow-hidden">
+        {FAQS.map(({ q, a }) => (
+          <div key={q} className="p-4 bg-[var(--color-card)]">
+            <dt className="font-semibold text-[var(--color-text)] text-sm mb-1.5">❓ {q}</dt>
+            <dd className="text-sm text-[var(--color-text-muted)] leading-relaxed m-0">{a}</dd>
+          </div>
+        ))}
+      </dl>
 
       <p className="text-xs text-[var(--color-text-muted)] italic">
         कहां से क्या लिया — Bank Seeding Status की प्रक्रिया{' '}
@@ -321,9 +366,9 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
         myAadhaar portal से; NPCI mapper और BASE की जानकारी{' '}
         <a href="https://www.npci.org.in" target="_blank" rel="noopener noreferrer">npci.org.in</a> से; DBT
         व्यवस्था{' '}
-        <a href="https://dbtbharat.gov.in" target="_blank" rel="noopener noreferrer">dbtbharat.gov.in</a> से;
-        23वीं किस्त (20 जून 2026, ₹18,880 करोड़ / 9.44 करोड़ परिवार) और record-mismatch वाले आंकड़े कृषि
-        मंत्रालय के हवाले से छपी खबरों (जैसे{' '}
+        <a href="https://dbtbharat.gov.in" target="_blank" rel="noopener noreferrer">dbtbharat.gov.in</a>{' '}
+        से; 23वीं किस्त (20 जून 2026, ₹18,880 करोड़ / 9.44 करोड़ परिवार) और record-mismatch वाले आंकड़े
+        कृषि मंत्रालय के हवाले से छपी खबरों (
         <a
           href="https://www.bhaskarenglish.in/local/uttar-pradesh/news/pm-kisan-24th-installment-benefit-mistakes-delay-farmers-yojana-138397214.html"
           target="_blank"
@@ -331,12 +376,27 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
         >
           Dainik Bhaskar की यह report
         </a>
-        ) से।
-        बैंक-दर-बैंक form का नाम और online सुविधा अलग हो सकती है — आखिरी बार हमने यह सब{' '}
+        ) से। बैंक-दर-बैंक form का नाम और online सुविधा अलग हो सकती है — आखिरी बार हमने यह सब{' '}
         {new Date(article.modifiedTime).toLocaleDateString('hi-IN')} को मिलाया था।
       </p>
 
-      <RelatedArticles articles={RELATED} />
+      <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
+        <h3 className="font-black text-[var(--color-text)] mb-3 text-base">इसी विषय की बाकी कड़ियां</h3>
+        <ul className="list-disc pl-5 space-y-1.5 text-sm">
+          <li>
+            <Link href="/articles/PmKisanBankAccountChangeProcess">🏦 Bank Account Change Process</Link>
+          </li>
+          <li>
+            <Link href="/articles/PmKisanPaymentFailedFix2026">🛠️ Payment Failed — Fix Guide</Link>
+          </li>
+          <li>
+            <Link href="/articles/hindi/payment-stopped-by-state">⛔ Payment Stopped by State</Link>
+          </li>
+          <li>
+            <Link href="/articles/hindi/status-check-mobile-se">📱 मोबाइल से स्टेटस चेक</Link>
+          </li>
+        </ul>
+      </div>
     </>
   );
 }
