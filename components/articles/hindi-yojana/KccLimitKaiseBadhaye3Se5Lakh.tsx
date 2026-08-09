@@ -100,6 +100,48 @@ export default function KccLimitKaiseBadhaye3Se5Lakh({ article }: { article: Hin
         ₹5 लाख "हक" नहीं है — वह अधिकतम दायरा है जिस तक रियायती दर मिल सकती है।
       </IB>
 
+      <SH>यह बदलाव कितना बड़ा है — आंकड़ों की जुबानी</SH>
+      <p>
+        पहले यह समझ लीजिए कि KCC कोई हाशिये की scheme नहीं है — यह देश की खेती का सबसे बड़ा credit
+        pipeline है। दिसंबर 2024 तक KCC के operative loans का आंकड़ा <strong>₹10.05 लाख करोड़</strong> पार
+        कर चुका था, और card holders की संख्या करीब <strong>7.72 करोड़</strong> — यानी लगभग हर दूसरा किसान
+        परिवार। मार्च 2014 में यही रकम ₹4.26 लाख करोड़ थी; दस साल में दोगुने से ज्यादा। जब सरकार ने Budget
+        2025-26 में subvention की सीमा ₹3 लाख से ₹5 लाख की (
+        <a href="https://timesofindia.indiatimes.com/business/india-business/union-budget-2025-kisan-credit-card-loan-limit-increased-to-rs-5-lakh-from-rs-2-lakh/articleshow/117821241.cms" target="_blank" rel="noopener noreferrer">Times of India की budget coverage</a>
+        ), तो घोषणा में साफ कहा गया कि इसका फायदा <strong>7.7 करोड़ किसानों, मछुआरों और dairy किसानों</strong>{' '}
+        तक पहुंचेगा।
+      </p>
+      <p>
+        इन आंकड़ों से आपके लिए एक सीधी बात निकलती है — बैंक की तरफ से KCC देना कोई एहसान नहीं, एक चालू
+        धंधा है, जिसके target हर branch को मिलते हैं। PM Kisan लाभार्थियों के लिए KCC saturation drive भी
+        इसी वजह से चलते हैं। यानी enhancement मांगते समय आप कोई असामान्य demand नहीं कर रहे — आप उस
+        व्यवस्था का इस्तेमाल कर रहे हैं जो आपके लिए ही खड़ी की गई है। बात सिर्फ अपने कागज मजबूत रखने की है।
+      </p>
+
+      <SH>Scale of Finance — limit का गणित एक उदाहरण से</SH>
+      <p>
+        Limit कैसे बनती है, यह एक काल्पनिक (पर तरीके में बिल्कुल असली) हिसाब से देखिए। मान लीजिए किसी किसान
+        के पास 3 एकड़ सिंचित जमीन है और वह साल में गेहूं + धान लेता है। हर जिले की technical committee हर
+        फसल का <em>scale of finance</em> तय करती है — प्रति एकड़ खेती की लागत का मानक। मान लीजिए उसके
+        जिले में दोनों फसलों का जोड़ प्रति एकड़ ₹35,000 बैठता है। तो फसली हिस्सा हुआ 3 × ₹35,000 = ₹1,05,000।
+        इसके ऊपर post-harvest/घरेलू खपत और खेती की संपत्ति के रख-रखाव के नाम पर 10%+20% जुड़ता है, और
+        अगले साल से हर renewal पर करीब 10% की बढ़ोतरी का प्रावधान अलग। इसी जोड़-घटाव से sanctioned limit
+        निकलती है।
+      </p>
+      <p>
+        अब इस गणित को उल्टा पढ़िए — आपकी limit तभी बढ़ेगी जब इस formula में कोई अंक बढ़े। रकबा बढ़ा
+        (नई जमीन, बटाई का पक्का करार), फसल बदली (कम लागत वाली से ज्यादा scale of finance वाली — जैसे
+        सब्जी/गन्ना), या allied activity जुड़ी (dairy, poultry)। सिर्फ "जरूरत है" कहने से अंक नहीं बढ़ते —
+        कागज से बढ़ते हैं। इसीलिए branch जाने से पहले खुद हिसाब लगाकर जाइए कि आपके मामले में कौन सा अंक
+        बढ़ा है; manager से बातचीत तब मिनटों में पटरी पर आ जाती है।
+      </p>
+      <p>
+        एक बारीकी और — अपने जिले का scale of finance पूछना आपका हक है। यह कोई गुप्त दस्तावेज नहीं;
+        District Level Technical Committee इसे हर साल तय करती है और branch के पास इसकी सूची होती है।
+        जिस फसल का SOF ज्यादा है और आप वह उगा भी रहे हैं, पर आपकी limit पुरानी फसल के हिसाब से बनी है —
+        यह enhancement का सबसे साफ, सबसे कम बहस वाला आधार है।
+      </p>
+
       <SH>आपकी limit किन तीन चीजों से बनती है</SH>
       <p>
         बैंक का हिसाब कोई रहस्य नहीं है — तीन गुणा-भाग हैं। पहला, <strong>रकबा × scale of finance</strong>:
@@ -155,6 +197,22 @@ export default function KccLimitKaiseBadhaye3Se5Lakh({ article }: { article: Hin
         कागज — भरा हुआ खाता — खुद बोलता है।
       </p>
 
+      <SH>कब जाएं branch — timing भी एक हथियार है</SH>
+      <p>
+        Enhancement की request साल में कभी भी दी जा सकती है, पर सुनवाई की रफ्तार मौसम से बदलती है।
+        सबसे सही समय आपके card के <strong>annual review/renewal</strong> के आसपास का है — तब आपकी file
+        वैसे भी manager की मेज पर खुलती है, और उसी बैठक में enhancement की बात जोड़ना सबसे कम
+        घर्षण वाला रास्ता है। दूसरा अच्छा मौका फसली सीजन शुरू होने से एक-डेढ़ महीना पहले का है — बैंक
+        तब crop loan के target पूरे करने की मुद्रा में होते हैं। सबसे खराब समय? किस्त-वसूली और closing
+        (जनवरी-मार्च) का दबाव वाला दौर — तब नई assessment की फुर्सत सबसे कम मिलती है।
+      </p>
+      <p>
+        और हां — request हमेशा लिखित में, दो प्रतियों में। एक जमा, एक पर received की मुहर लेकर वापस।
+        मौखिक "देख लेंगे" का कोई follow-up नहीं होता; received-मुहर वाले कागज का होता है। तीस दिन में
+        कोई जवाब न आए तो उसी कागज के हवाले से branch manager से लिखित स्थिति पूछिए — यह क्रम बनाए
+        रखने वाले किसानों के काम सबसे पहले निपटते हैं।
+      </p>
+
       <SH>4% वाली दर बचाए रखने का एक ही नियम</SH>
       <p>
         बढ़ी limit का मजा तभी है जब 3% की Prompt Repayment छूट बची रहे — और वह छूट सिर्फ एक शर्त
@@ -208,7 +266,9 @@ export default function KccLimitKaiseBadhaye3Se5Lakh({ article }: { article: Hin
 
       <p className="text-xs text-[var(--color-text-muted)] italic">
         यह लेख किन चीजों पर टिका है — ब्याज सहायता सीमा ₹3→₹5 लाख की घोषणा Union Budget 2025-26
-        (वित्त मंत्री का बजट भाषण, 1 फरवरी 2025) से है, और KCC योजना का ढांचा RBI/नाबार्ड के
+        (वित्त मंत्री का बजट भाषण, 1 फरवरी 2025;{' '}
+        <a href="https://timesofindia.indiatimes.com/business/india-business/union-budget-2025-kisan-credit-card-loan-limit-increased-to-rs-5-lakh-from-rs-2-lakh/articleshow/117821241.cms" target="_blank" rel="noopener noreferrer">TOI report</a>) से है; KCC के operative loan (₹10.05 लाख करोड़, दिसंबर 2024) और 7.72 करोड़
+        card holders का आंकड़ा सरकारी release पर आधारित coverage से; और KCC योजना का ढांचा RBI/नाबार्ड के
         दिशा-निर्देशों व{' '}
         <a href="https://www.myscheme.gov.in" target="_blank" rel="noopener noreferrer">myscheme.gov.in</a>{' '}
         से। दरें और collateral-free सीमा बैंक-दर-बैंक बदल सकती हैं, इसलिए अंतिम पुष्टि अपनी branch से
