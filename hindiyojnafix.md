@@ -23,8 +23,8 @@ Batch size: 2 articles per commit, pushed directly to main.
 
 - [x] FarmerIdCardKaiseBanaye2027.tsx — मतलब→सीधे शब्दों में/तात्पर्य, यानी→अर्थात्, इसीलिए→इसी वजह से, वही→यही (batch 1)
 - [x] GehuKaRateAajMspVsMandiBhav.tsx — इसीलिए→इस कारण, यानी→मतलब/अर्थात्, मतलब→तात्पर्य/अर्थ (batch 1)
-- [ ] KccLimitKaiseBadhaye3Se5Lakh.tsx
-- [ ] KisanKarjMafiList2027.tsx
+- [x] KccLimitKaiseBadhaye3Se5Lakh.tsx — मतलब→अर्थ/तात्पर्य, वही→यही/वह (batch 2)
+- [x] KisanKarjMafiList2027.tsx — यानी→अर्थात्/मतलब, निचोड़→निष्कर्ष, जैसे→सरीखे/की तरह के (batch 2)
 - [ ] MukhyamantriKisanKalyanYojanaMp.tsx
 - [ ] NamoShetkariYojanaMaharashtra.tsx
 - [ ] NpciAadhaarSeedingDbtPayment.tsx
