@@ -51,3 +51,4 @@ Output: Har article ko same TSX file format mein wapas do. Koi fact, date, amoun
 - [x] PmKisanHelplineNumberComplaint — done (self-contained, escalation-ladder सीढ़ी structure + inline FAQ, transitions within budget, ~2800 words)
 - [x] PmKisanNewRegistration2027 — done (self-contained, journey-milestone पड़ाव structure + accordion FAQ, transitions within budget, ~2800 words)
 - [x] NpciAadhaarSeedingDbtPayment — done (self-contained, bold-heading prose + definition-list FAQ, transitions within budget, ~2850 words)
+- [x] FarmerIdCardKaiseBanaye2027 — done (self-contained, table+text-mix structure + numbered Q&A FAQ, transitions within budget, ~3040 words)
