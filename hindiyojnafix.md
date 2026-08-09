@@ -26,7 +26,7 @@ Output: Har article ko same TSX component format mein wapas do. Koi fact, date, 
 ## Status (round 2 — 2000+ word pass, updated 2026-08-09)
 - [x] NamoShetkariYojanaMaharashtra — 1814 → ~2178 words (PR #161)
 - [x] MukhyamantriKisanKalyanYojanaMp — 1847 → ~2042 words (PR #162)
-- [ ] FarmerIdCardKaiseBanaye2027 — 1875 words
+- [x] FarmerIdCardKaiseBanaye2027 — 1875 → ~2098 words (PR #163)
 - [ ] KisanKarjMafiList2027 — 1883 words
 - [ ] TractorSubsidy2027StateWiseList — 1894 words
 - Baaki 10 articles already 2000+ words ✅
