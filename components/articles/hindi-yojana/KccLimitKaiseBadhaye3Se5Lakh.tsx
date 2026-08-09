@@ -136,6 +136,47 @@ export default function KccLimitKaiseBadhaye3Se5Lakh({ article }: { article: Hin
         बढ़ा है; manager से बातचीत तब मिनटों में पटरी पर आ जाती है।
       </p>
       <p>
+        यही हिसाब खानों में रखकर देखिए — branch में बात करते समय यही क्रम काम आता है:
+      </p>
+      <div className="my-4 overflow-x-auto">
+        <table className="w-full text-sm border-collapse">
+          <thead>
+            <tr className="bg-[var(--color-bg-alt)]">
+              <th className="border border-[var(--color-border)] px-3 py-2 text-left">हिस्सा</th>
+              <th className="border border-[var(--color-border)] px-3 py-2 text-left">कैसे बनता है</th>
+              <th className="border border-[var(--color-border)] px-3 py-2 text-left">इस उदाहरण में</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="border border-[var(--color-border)] px-3 py-2 font-medium">फसली हिस्सा</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">रकबा × scale of finance</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">3 × ₹35,000 = ₹1,05,000</td>
+            </tr>
+            <tr>
+              <td className="border border-[var(--color-border)] px-3 py-2 font-medium">Post-harvest / घरेलू खपत</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">फसली हिस्से पर 10%</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">उसी ₹1,05,000 पर जुड़ता है</td>
+            </tr>
+            <tr>
+              <td className="border border-[var(--color-border)] px-3 py-2 font-medium">संपत्ति का रख-रखाव</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">फसली हिस्से पर 20%</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">खेती की मशीन/सिंचाई के नाम पर</td>
+            </tr>
+            <tr>
+              <td className="border border-[var(--color-border)] px-3 py-2 font-medium">हर renewal पर बढ़ोतरी</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">अच्छे record पर करीब 10% सालाना का प्रावधान</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">अगले साल से लागू</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        तालिका से एक बात साफ हो जाती है — सबसे बड़ा खाना पहला ही है। बाकी दोनों उसी का प्रतिशत हैं,
+        यानी रकबा या SOF बढ़े बिना बाकी सब ज्यों का त्यों रहेगा। इसीलिए enhancement की बात हमेशा पहले
+        खाने पर होनी चाहिए, ना कि “कुल रकम कम लग रही है” पर।
+      </p>
+      <p>
         एक बारीकी और — अपने जिले का scale of finance पूछना आपका हक है। यह कोई गुप्त दस्तावेज नहीं;
         District Level Technical Committee इसे हर साल तय करती है और branch के पास इसकी सूची होती है।
         जिस फसल का SOF ज्यादा है और आप वह उगा भी रहे हैं, पर आपकी limit पुरानी फसल के हिसाब से बनी है —
@@ -252,17 +293,37 @@ export default function KccLimitKaiseBadhaye3Se5Lakh({ article }: { article: Hin
         एक card पर आ जाना आपके पक्ष में है।
       </p>
 
-      <SH>चलते-चलते — आज का एक काम</SH>
-      <p>
-        पूरा लेख एक लाइन में समेटें तो — सरकार ने रियायती दर का दायरा ₹5 लाख तक खोल दिया है; अब
-        उस दायरे में अपनी जगह बनाना आपका काम है। आज के लिए इतना काफी है — अपनी KCC passbook
-        निकालकर दो चीजें देख लीजिए: मौजूदा sanctioned limit कितनी है, और आखिरी renewal कब हुआ।
-        Limit आपकी खेती के असल खर्च से कम लगे, तो खतौनी की ताजी नकल निकलवाने से शुरुआत करिए —
-        बाकी सब कदम ऊपर लिखे क्रम से अपने आप खुलते जाएंगे।
-      </p>
-
       <SH>जो सवाल branch के बाहर खड़े-खड़े पूछे जाते हैं</SH>
       <FAQBlock faqs={FAQS} />
+
+      <SH>Branch जाने से पहले की छोटी सी तैयारी</SH>
+      <p>
+        पूरा लेख एक लाइन में समेटें तो — सरकार ने रियायती दर का दायरा ₹5 लाख तक खोल दिया है; अब
+        उस दायरे में अपनी जगह बनाना आपका काम है। और वह काम खाली हाथ branch पहुंचने से नहीं होता।
+        जाने से पहले ये चार खाने भर लीजिए — मामला एक बैठक में बनने की संभावना कई गुना बढ़ जाती है:
+      </p>
+      <StepList>
+        <SI n={1}>
+          <strong>मौजूदा sanctioned limit और आखिरी renewal की तारीख</strong> — दोनों KCC passbook पर लिखी
+          होती हैं। Renewal खुद से एक साल से ज्यादा पुराना हो, तो बात वहीं से शुरू करिए।
+        </SI>
+        <SI n={2}>
+          <strong>रकबा और मौजूदा फसल</strong> — खतौनी की ताजी नकल साथ हो। जमीन बढ़ी हो या बटाई का
+          करार हो, तो वही सबसे मजबूत दलील है।
+        </SI>
+        <SI n={3}>
+          <strong>अपने जिले का scale of finance</strong> — branch में पूछकर नोट कर लीजिए। आपकी फसल का SOF
+          ज्यादा है पर limit पुरानी फसल पर बनी है — यह सबसे साफ आधार है।
+        </SI>
+        <SI n={4}>
+          <strong>Allied activity का सबूत</strong> — dairy/poultry जोड़ना हो तो पशुओं की संख्या और दूध बिक्री
+          की पर्ची जैसा कोई रिकॉर्ड साथ रखिए — जुबानी बात पर यह हिस्सा नहीं जुड़ता।
+        </SI>
+      </StepList>
+      <p>
+        चारों खाने भरे हुए हों, तो आप manager के सामने “लिमिट बढ़ा दीजिए” नहीं, बल्कि “मेरा SOF × रकबा इतना
+        बनता है, मेरी limit इससे कम है” कह रहे होंगे — और यही दो बातों में फर्क है।
+      </p>
 
       <p className="text-xs text-[var(--color-text-muted)] italic">
         यह लेख किन चीजों पर टिका है — ब्याज सहायता सीमा ₹3→₹5 लाख की घोषणा Union Budget 2025-26
