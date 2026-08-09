@@ -419,7 +419,7 @@ export default function MukhyamantriKisanKalyanYojanaMp({ article }: { article: 
         खाते की जिसमें NPCI आधार seeding है या करानी है; कई बार पुराने dormant खाते में पैसा जाकर फंसा
         रहता है। और <strong>Farmer ID (AgriStack)</strong> — नए registration अब इसी से जुड़े हैं; CSC या
         पटवारी के माध्यम से बनती है, पूरा तरीका{' '}
-        <Link href="/articles/hindi/farmer-id-kaise-banaye">इस page पर अलग से</Link> है।
+        <Link href="/articles/hi/farmer-id-kaise-banaye">इस page पर अलग से</Link> है।
       </p>
       <p>
         यह folder बनाने में एक दिन लगता है, और यही एक दिन आगे के छह महीने के चक्कर बचाता है। CSC पर
@@ -470,7 +470,7 @@ export default function MukhyamantriKisanKalyanYojanaMp({ article }: { article: 
         <h3 className="font-black text-[var(--color-text)] mb-3 text-base">आगे किस page पर क्या मिलेगा</h3>
         <ul className="list-disc pl-5 space-y-1.5 text-sm">
           <li>
-            <Link href="/articles/hindi/namo-shetkari-yojana">🌾 नमो शेतकरी योजना Maharashtra</Link>
+            <Link href="/articles/hi/namo-shetkari-yojana">🌾 नमो शेतकरी योजना Maharashtra</Link>
           </li>
           <li>
             <Link href="/articles/PmKisanMasterGuide2026">📚 PM Kisan Master Guide</Link>

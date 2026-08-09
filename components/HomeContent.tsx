@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { ARTICLES, getArticlesByFreshness, CATEGORIES } from '@/lib/articles-data';
+import { HINDI_ARTICLES } from '@/lib/hindi-articles-data';
 import { SITE_URL } from '@/lib/site-config';
 import SearchBar from './SearchBar';
 import FaqItem from './FaqItem';
@@ -546,6 +547,37 @@ export default function HomeContent() {
               <span>Sabhi Articles Dekho</span>
               <IconArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Hindi (Devanagari) yojana guides — lib/hindi-articles-data.ts */}
+      <section className="py-20 bg-amber-50/60 dark:bg-amber-900/10" aria-labelledby="hindi-articles-heading" lang="hi">
+        <div className="container-site mx-auto px-4">
+          <div className="mb-14">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-100 to-orange-100 dark:from-amber-900/40 dark:to-orange-900/40 text-amber-800 dark:text-amber-300 text-sm font-bold px-5 py-2.5 rounded-full mb-5 shadow-sm border border-amber-200/50 dark:border-amber-700/50">
+              <span aria-hidden="true">अ</span>
+              <span>हिंदी गाइड</span>
+            </div>
+            <h2 id="hindi-articles-heading" className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white tracking-tight">
+              हिंदी में योजना गाइड
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 mt-2 text-lg">पीएम किसान, कर्ज माफी, सब्सिडी और मंडी भाव — आसान हिंदी में</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {HINDI_ARTICLES.map((a) => (
+              <Link
+                key={a.slug}
+                href={`/articles/${a.slug}`}
+                className="group block p-5 bg-white dark:bg-gray-800 border border-amber-200/60 dark:border-gray-700 rounded-2xl hover:border-amber-400 dark:hover:border-amber-500 hover:shadow-lg transition-all duration-300"
+              >
+                <h3 className="font-bold text-gray-900 dark:text-white leading-snug group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors">
+                  {a.titleHi}
+                </h3>
+                <p className="mt-2 text-sm text-gray-600 dark:text-gray-400 line-clamp-2">{a.desc}</p>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

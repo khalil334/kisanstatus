@@ -26,7 +26,9 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: HindiArticle }>>
 export const revalidate = 86400;
 
 export async function generateStaticParams() {
-  return HINDI_ARTICLES.map((a) => ({ slug: a.slug }));
+  // Data slugs carry the `hi/` prefix (e.g. 'hi/pm-kisan-25vi-kist'); the
+  // route param is just the last segment.
+  return HINDI_ARTICLES.map((a) => ({ slug: a.slug.replace(/^hi\//, '') }));
 }
 
 // Unknown slugs => real HTTP 404 (same pattern as app/articles/[slug]).
@@ -38,10 +40,10 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const article = HINDI_ARTICLES_MAP[slug];
+  const article = HINDI_ARTICLES_MAP[`hi/${slug}`];
   if (!article) notFound();
 
-  const url = `${SITE_URL}/articles/hindi/${slug}`;
+  const url = `${SITE_URL}/articles/hi/${slug}`;
 
   return {
     metadataBase: new URL(SITE_URL),
@@ -74,13 +76,13 @@ export default async function HindiArticlePage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const article = HINDI_ARTICLES_MAP[slug];
+  const article = HINDI_ARTICLES_MAP[`hi/${slug}`];
   if (!article) notFound();
 
   const ArticleBody = COMPONENTS[article.component];
   if (!ArticleBody) notFound();
 
-  const url = `${SITE_URL}/articles/hindi/${slug}`;
+  const url = `${SITE_URL}/articles/hi/${slug}`;
 
   const schema = {
     '@context': 'https://schema.org',

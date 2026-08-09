@@ -343,21 +343,21 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
               <td className="border border-[var(--color-border)] p-2 font-semibold">Payment stopped by State</td>
               <td className="border border-[var(--color-border)] p-2">राज्य स्तर की जांच में किस्त रोकी गई है</td>
               <td className="border border-[var(--color-border)] p-2">
-                <Link href="/articles/hindi/payment-stopped-by-state">वजह पकड़ें और सुधार कराएं</Link>
+                <Link href="/articles/hi/payment-stopped-by-state">वजह पकड़ें और सुधार कराएं</Link>
               </td>
             </tr>
             <tr>
               <td className="border border-[var(--color-border)] p-2 font-semibold">eKYC — NO</td>
               <td className="border border-[var(--color-border)] p-2">आधार verification बाकी है</td>
               <td className="border border-[var(--color-border)] p-2">
-                <Link href="/articles/hindi/ekyc-mobile-se">phone से eKYC कर लें</Link>
+                <Link href="/articles/hi/ekyc-mobile-se">phone से eKYC कर लें</Link>
               </td>
             </tr>
             <tr>
               <td className="border border-[var(--color-border)] p-2 font-semibold">Aadhaar Bank Seeding — NO</td>
               <td className="border border-[var(--color-border)] p-2">खाता DBT के लिए तैयार नहीं</td>
               <td className="border border-[var(--color-border)] p-2">
-                <Link href="/articles/hindi/npci-aadhaar-seeding">बैंक में NPCI seeding कराएं</Link>
+                <Link href="/articles/hi/npci-aadhaar-seeding">बैंक में NPCI seeding कराएं</Link>
               </td>
             </tr>
           </tbody>
@@ -401,7 +401,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
         यह अकेला काम है जो पूरी तरह आपके हाथ में है और घर बैठे हो जाता है। Portal पर OTP वाली eKYC खुद कर
         सकते हैं; उंगलियों के निशान से करानी हो तो नजदीकी CSC केंद्र पर होती है, और official app में face
         authentication का रास्ता भी है। पूरा तरीका{' '}
-        <Link href="/articles/hindi/ekyc-mobile-se">यहां detail में पढ़ सकते हैं</Link>। जितनी जल्दी
+        <Link href="/articles/hi/ekyc-mobile-se">यहां detail में पढ़ सकते हैं</Link>। जितनी जल्दी
         यह YES होगा, उतनी जल्दी बाकी प्रक्रिया आगे बढ़ेगी।
       </p>
 
@@ -410,7 +410,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
         तात्पर्य यह कि आपका खाता आधार से जुड़कर DBT के लिए तैयार नहीं है। यह बैंक शाखा का काम है — passbook और
         आधार लेकर जाइए, NPCI seeding/DBT enable करने का form भरवाइए। ध्यान दें: खाते में आधार नंबर दर्ज
         होना और खाता DBT के लिए active होना, दोनों अलग बातें हैं। विस्तार से{' '}
-        <Link href="/articles/hindi/npci-aadhaar-seeding">NPCI आधार सीडिंग guide</Link> देखें।
+        <Link href="/articles/hi/npci-aadhaar-seeding">NPCI आधार सीडिंग guide</Link> देखें।
       </p>
 
       <H3>Land Seeding पर NO है</H3>
@@ -469,7 +469,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
         </Step>
         <Step n={4}>
           <strong>Record ही नहीं मिल रहा</strong> — हो सकता है आवेदन ही पूरा दर्ज न हुआ हो। ऐसे में
-          <Link href="/articles/hindi/nayi-registration"> नई registration की प्रक्रिया</Link> देखिए और
+          <Link href="/articles/hi/nayi-registration"> नई registration की प्रक्रिया</Link> देखिए और
           अपने ब्लॉक के कृषि अधिकारी से आवेदन की स्थिति पूछिए।
         </Step>
       </ol>
@@ -479,7 +479,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
         बताइए — न phone पर, न किसी लिंक में। योजना का कोई अधिकारी status दिखाने के लिए OTP नहीं मांगता, और
         किस्त &quot;जल्दी दिलाने&quot; के नाम पर पैसे मांगने वाला हर व्यक्ति ठग है। शिकायत का सही रास्ता
         portal की grievance और हेल्पलाइन <strong>155261</strong> है — शिकायत दर्ज करने की पूरी प्रक्रिया{' '}
-        <Link href="/articles/hindi/helpline-shikayat">इस page पर समझाई</Link> है।
+        <Link href="/articles/hi/helpline-shikayat">इस page पर समझाई</Link> है।
       </div>
 
       <SH>Status देखने के तीन रास्ते — कौन कब चुनें</SH>
