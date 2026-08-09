@@ -22,6 +22,6 @@ farmer-useful + traffic keywords, no invented facts/numbers.
 | 10 | NamoShetkariYojanaMaharashtra | **done** — ~2100 words, PM Kisan vs Namo Shetkari comparison table, 3-galatfahmi myth-buster section, family-unit + batai + wrong-account + complaint-channel FAQ (11 total), saal-bhar-ki-aadat 3-kaam checklist, no invented dates/amounts |
 | 11 | MukhyamantriKisanKalyanYojanaMp | **done** — ~2040 words, patwari-verification deep dive (3 documents, spelling-mismatch, halka-day tip), exclusion + recovery-risk section, ₹12,000 smart-use section, family-unit/virasat/SMS/refund/land-sale FAQ (11 total), no invented dates |
 | 12 | FarmerIdCardKaiseBanaye2027 | **done** — ~2070 words, 4-atakne-ki-wajah + ilaaj section, ID-ban-jane-ke-baad kya badlega (PMFBY/KCC/subsidy uses + data-update + fraud warning), camp-se-pehle 5-min taiyari, do-jile/mahila/joint-khata/re-apply FAQ (12 total) |
-| 13 | KisanKarjMafiList2027 | pending |
+| 13 | KisanKarjMafiList2027 | **done** — ~2030 words, ghoshna-se-paise-tak timeline section, list-se-pehle 3-kaam prep checklist, 3-naye-thagi-ke-tarike (fake list site / fee agent / fake settlement call + 1930 helpline), naam-aa-gaya-ab-kya + NOC + do-bank FAQ (10 total), no invented dates |
 | 14 | TractorSubsidy2027StateWiseList | pending |
 | 15 | PmKisanHelplineNumberComplaint | pending |
