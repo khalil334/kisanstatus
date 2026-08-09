@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
 // Self-contained article — कोई shared component import नहीं (Rule 2)।
@@ -66,6 +67,24 @@ const FAQ_SCHEMA = {
 };
 
 // Local building blocks — सब इसी file में (Rule 2)।
+function Figure({ src, alt, caption }: { src: string; alt: string; caption: string }) {
+  return (
+    <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+      <Image
+        src={src}
+        alt={alt}
+        width={1200}
+        height={675}
+        className="w-full object-cover"
+        sizes="(max-width: 768px) 100vw, 768px"
+      />
+      <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+        {caption}
+      </figcaption>
+    </figure>
+  );
+}
+
 function T({ children }: { children: React.ReactNode }) {
   return (
     <h2 className="text-xl font-black text-[var(--color-text)] mt-8 mb-4 pb-2 border-b-2 border-[var(--color-border)]">
@@ -147,6 +166,12 @@ export default function PmKisanRecoveryNoticePaisaWapas({ article }: { article: 
         कौन सा हिस्सा आपके काम का है।
       </p>
 
+      <Figure
+        src="/images/articles/hindi-yojna/recovery-notice/notice-letter.webp"
+        alt="किसान के हाथ में सरकारी recovery notice"
+        caption="Notice आया है तो पहले ठंडे दिमाग से पढ़िए — डरने की जरूरत नहीं"
+      />
+
       <T>पहला सवाल — यह notice असली भी है?</T>
       <p>
         वसूली का डर ठगों का चमकदार औजार है, तो पहला काम भुगतान नहीं, <strong>पहचान</strong> है।
@@ -216,6 +241,12 @@ export default function PmKisanRecoveryNoticePaisaWapas({ article }: { article: 
         बनती है, न refund की रकम पक्की होती है। असमंजस में हैं तो पहले वजह — फिर फैसला।
       </p>
 
+      <Figure
+        src="/images/articles/hindi-yojna/recovery-notice/officer-help.webp"
+        alt="किसान कृषि अधिकारी को अपने कागज दिखाते हुए"
+        caption="पात्र हैं तो कागज लेकर आपत्ति दर्ज कराइए — चुप मत बैठिए"
+      />
+
       <T>रास्ता 1 — पात्र हैं तो आपत्ति ऐसे कीजिए</T>
       <p>
         गलत entry के मामले सचमुच होते हैं — नाम-मिलान की चूक, हमनाम व्यक्ति का tax record आपसे जुड़ जाना,
@@ -235,6 +266,11 @@ export default function PmKisanRecoveryNoticePaisaWapas({ article }: { article: 
       </p>
 
       <T>रास्ता 2 — पैसा online लौटाने का तरीका</T>
+      <Figure
+        src="/images/articles/hindi-yojna/recovery-notice/refund-portal.webp"
+        alt="PM Kisan portal पर voluntary surrender / refund का page"
+        caption="Online refund — portal से सीधा, बिना किसी बिचौलिए के"
+      />
       <ol className="my-4 space-y-2 pl-5 list-decimal text-sm leading-relaxed">
         <li>
           <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer">pmkisan.gov.in</a>{' '}
@@ -256,6 +292,12 @@ export default function PmKisanRecoveryNoticePaisaWapas({ article }: { article: 
         पहले कृषि विभाग से मिलान करवाएं, फिर भुगतान करें। एक बार लौटाई रकम का सुधार लंबी प्रक्रिया है —
         सही गिनती पहले कर लेना आसान है।
       </p>
+
+      <Figure
+        src="/images/articles/hindi-yojna/recovery-notice/bank-receipt.webp"
+        alt="बैंक counter पर किसान को मोहर लगी रसीद मिलते हुए"
+        caption="जमा की रसीद संभालकर रखिए — यही आपका सबूत है"
+      />
 
       <T>Refund के बाद के तीन काम — यहीं आधे लोग चूकते हैं</T>
       <p>
