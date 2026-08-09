@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
 // Self-contained article — कोई shared component import नहीं (Rule 2)।
@@ -66,6 +67,24 @@ const FAQ_SCHEMA = {
 };
 
 // Local building blocks — सब इसी file में (Rule 2)।
+function Figure({ src, alt, caption }: { src: string; alt: string; caption: string }) {
+  return (
+    <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+      <Image
+        src={src}
+        alt={alt}
+        width={1200}
+        height={675}
+        className="w-full object-cover"
+        sizes="(max-width: 768px) 100vw, 768px"
+      />
+      <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+        {caption}
+      </figcaption>
+    </figure>
+  );
+}
+
 function Sec({ children }: { children: React.ReactNode }) {
   return (
     <h2 className="text-xl font-black text-[var(--color-text)] mt-8 mb-4 pb-2 border-b-2 border-[var(--color-border)]">
@@ -120,6 +139,12 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
         उतना है नहीं — लेकिन इसे अनदेखा करने की चीज भी नहीं है। आइए बिना घुमाए समझते हैं कि system के अंदर
         हुआ क्या है, आपको करना क्या है, और किस दरवाजे पर जाने से काम बनेगा।
       </p>
+
+      <Figure
+        src="/images/articles/hindi-yojna/payment-stopped/stopped-status.webp"
+        alt="PM Kisan status page पर Payment Stopped by State का message"
+        caption="यही वह line है — डरावनी दिखती है, पर इलाज मौजूद है"
+      />
 
       <Sec>इस line का असली अर्थ</Sec>
       <p>
@@ -182,6 +207,12 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
         तरफ), जबकि &ldquo;stopped by state&rdquo; में पैसा चला ही नहीं (गड़बड़ी राज्य की जांच में)। इस कारण &ldquo;stopped&rdquo;
         वालों का बैंक के दस चक्कर लगाना अक्सर बेकार जाता है — दरवाजा ही गलत है।
       </p>
+
+      <Figure
+        src="/images/articles/hindi-yojna/payment-stopped/land-record.webp"
+        alt="किसान खतौनी और phone पर record मिलाते हुए"
+        caption="रोक की जड़ अक्सर record के मिलान में निकलती है"
+      />
 
       <Sec>रोक की आम वजहें — गिनकर पांच</Sec>
       <ol className="my-4 space-y-3 pl-5 list-decimal text-sm leading-relaxed">
@@ -250,6 +281,11 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
       </div>
 
       <Sec>अब इलाज — नुस्खा तीन कदम का</Sec>
+      <Figure
+        src="/images/articles/hindi-yojna/payment-stopped/fix-flow.webp"
+        alt="रुकी किस्त ठीक करने के तीन कदम का flowchart"
+        caption="कारण → सुधार → verification के बाद किस्त — पूरा रास्ता इन तीन कदमों में"
+      />
       <Rx step="1" title="घर बैठे जांच">
         Status page पर eKYC का column देखें (NO है तो{' '}
         <Link href="/articles/hindi/ekyc-mobile-se">phone से eKYC</Link> कर लें), और myAadhaar पर bank
@@ -380,6 +416,12 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
           </a>
         </div>
       </div>
+
+      <Figure
+        src="/images/articles/hindi-yojna/payment-stopped/krishi-office.webp"
+        alt="किसान कृषि अधिकारी से दफ्तर में बात करते हुए"
+        caption="कागज लेकर सही दफ्तर पहुंचें — आधा काम वहीं बन जाता है"
+      />
 
       <Sec>राज्य-दर-राज्य फर्क — किससे पूछें, कहां जाएं</Sec>
       <p>
