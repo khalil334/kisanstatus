@@ -99,7 +99,7 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
         हमारे एक पाठक की कहानी सुनिए। eKYC पूरी, जमीन का record सही, beneficiary list में नाम — फिर भी दो
         किस्तें नहीं आईं। बैंक गए तो बोले "आधार तो linked है।" Portal पर शिकायत की तो जवाब आया — Aadhaar
         not seeded with NPCI। यहीं पर ज्यादातर किसान उलझते हैं, क्योंकि <em>link</em> और <em>seeding</em>{' '}
-        सुनने में एक जैसे लगते हैं, होते अलग हैं।
+        सुनने में एक समान लगते हैं, होते अलग हैं।
       </p>
       <p>
         इस लेख में हम यही गांठ खोलेंगे — link और seeding का फर्क, अपना mapping status घर बैठे देखने के दो
