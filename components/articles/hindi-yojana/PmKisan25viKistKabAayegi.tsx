@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
 // यह article जानबूझकर self-contained है — कोई shared component import नहीं।
@@ -67,6 +68,24 @@ const FAQ_SCHEMA = {
   })),
 };
 
+function Figure({ src, alt, caption }: { src: string; alt: string; caption: string }) {
+  return (
+    <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+      <Image
+        src={src}
+        alt={alt}
+        width={1200}
+        height={675}
+        className="w-full object-cover"
+        sizes="(max-width: 768px) 100vw, 768px"
+      />
+      <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+        {caption}
+      </figcaption>
+    </figure>
+  );
+}
+
 function H2({ children }: { children: React.ReactNode }) {
   return (
     <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
@@ -117,6 +136,12 @@ export default function PmKisan25viKistKabAayegi({ article }: { article: HindiAr
         कुछ CSC की लाइन में लगे होते हैं।
       </p>
 
+      <Figure
+        src="/images/articles/hindi-yojna/pm-kisan-25vi-kist/kisan-mobile-check.webp"
+        alt="मोबाइल पर PM Kisan किस्त की जानकारी देखता किसान"
+        caption="तारीख का इंतज़ार सबको है — पर असली काम record पूरा रखना है"
+      />
+
       <Note tone="info">
         योजना का बुनियादी गणित बदला नहीं है: पात्र किसान परिवार को साल में ₹6,000, तीन बराबर हिस्सों में, हर हिस्सा
         ₹2,000 — सीधे बैंक खाते में DBT से। यह किस्त उसी सिलसिले की अगली कड़ी होगी।
@@ -163,6 +188,11 @@ export default function PmKisan25viKistKabAayegi({ article }: { article: HindiAr
         अखबारों में एक ही खबर छपती है — लाखों किसानों का भुगतान अटका, वजह पुरानी: अधूरी eKYC, बंद खाता,
         जमीन के record का mismatch। आप उस सूची में न आएं, इसके लिए:
       </p>
+      <Figure
+        src="/images/articles/hindi-yojna/pm-kisan-25vi-kist/ekyc-checklist.webp"
+        alt="eKYC, NPCI seeding और land record — तीन जरूरी जांच का checklist"
+        caption="किस्त से पहले ये तीन जांच YES पर होनी चाहिए"
+      />
       <div className="space-y-3 my-4">
         <div className="border border-[var(--color-border)] rounded-xl p-4 bg-[var(--color-card)]">
           <p className="font-bold text-sm mb-1">1. eKYC की स्थिति देखें</p>
@@ -271,6 +301,11 @@ export default function PmKisan25viKistKabAayegi({ article }: { article: HindiAr
         <Link href="/articles/hindi/status-check-mobile-se">मोबाइल नंबर से स्टेटस चेक</Link> में अलग से लिखा
         है। गांव की पूरी सूची देखनी हो तो Farmers Corner का "Beneficiary List" विकल्प है।
       </p>
+      <Figure
+        src="/images/articles/hindi-yojna/pm-kisan-25vi-kist/status-page.webp"
+        alt="PM Kisan portal का Know Your Status page"
+        caption="Portal के Know Your Status page पर payment history दिखती है"
+      />
       <p>
         एक बारीक बात — status में "FTO is Generated" दिखने का अर्थ है कि भुगतान का order बन चुका है, पर
         बैंक तक पैसा पहुंचने में 2-5 दिन और लग सकते हैं। घबराने की बात नहीं। इस शब्द की पूरी व्याख्या{' '}
@@ -289,6 +324,11 @@ export default function PmKisan25viKistKabAayegi({ article }: { article: HindiAr
         पड़ाव पर खड़ा है। और जिस पड़ाव पर अटका है, इलाज भी उसी जगह का होता है: सूची का मामला हो तो कृषि विभाग,
         खाते का मामला हो तो बैंक।
       </p>
+      <Figure
+        src="/images/articles/hindi-yojna/pm-kisan-25vi-kist/bank-passbook.webp"
+        alt="बैंक passbook में entry जांचता किसान"
+        caption="SMS न आए तो passbook या statement सबसे पक्का सबूत है"
+      />
 
       <Note tone="danger">
         भारी नुकसान यहीं होता है — कोई फोन करके कहता है कि "किस्त निकलवा देंगे, थोड़ा खर्चा लगेगा"।
