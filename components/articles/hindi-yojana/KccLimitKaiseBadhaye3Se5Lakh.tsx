@@ -172,9 +172,9 @@ export default function KccLimitKaiseBadhaye3Se5Lakh({ article }: { article: Hin
         से ऊपर की रकम पर बैंक जमीन गिरवी/जमानत मांग सकता है; यह मांग नियम-सम्मत है, branch से लिखित में
         समझ लें। तीसरी — <strong>अधूरा record</strong>: वरासत दर्ज नहीं, खतौनी पुरानी, बटाई का कोई
         कागज नहीं — इनमें से कुछ भी हो तो पहले वह सुधरवाइए, फिर बैंक जाइए। KCC नया बनवाना हो तो पूरा
-        आवेदन-तरीका <Link href="/articles/KisanCreditCardOnlineApply2026">इस guide</Link> में है, और
-        कर्ज के बाकी विकल्पों की तुलना{' '}
-        <Link href="/articles/KisanRinKahaSeLe2026">Kisan Rin guide</Link> में।
+        आवेदन-तरीका <Link href="/articles/KisanCreditCardOnlineApply2026">इस page पर कदम-दर-कदम लिखा है</Link>, और
+        कर्ज के बाकी विकल्प आपस में कैसे तुलते हैं, यह{' '}
+        <Link href="/articles/KisanRinKahaSeLe2026">यहां देख लें</Link>।
       </p>
 
       <WB>
@@ -203,16 +203,17 @@ export default function KccLimitKaiseBadhaye3Se5Lakh({ article }: { article: Hin
         बाकी सब कदम ऊपर लिखे क्रम से अपने आप खुलते जाएंगे।
       </p>
 
-      <SH>अक्सर पूछे जाने वाले सवाल</SH>
+      <SH>जो सवाल branch के बाहर खड़े-खड़े पूछे जाते हैं</SH>
       <FAQBlock faqs={FAQS} />
 
       <p className="text-xs text-[var(--color-text-muted)] italic">
-        Source: ब्याज सहायता सीमा ₹3→₹5 लाख की घोषणा Union Budget 2025-26 (वित्त मंत्री का बजट भाषण,
-        1 फरवरी 2025); KCC योजना का ढांचा RBI/नाबार्ड के दिशा-निर्देश व{' '}
+        यह लेख किन चीजों पर टिका है — ब्याज सहायता सीमा ₹3→₹5 लाख की घोषणा Union Budget 2025-26
+        (वित्त मंत्री का बजट भाषण, 1 फरवरी 2025) से है, और KCC योजना का ढांचा RBI/नाबार्ड के
+        दिशा-निर्देशों व{' '}
         <a href="https://www.myscheme.gov.in" target="_blank" rel="noopener noreferrer">myscheme.gov.in</a>{' '}
-        पर आधारित। दरें और collateral-free सीमा बैंक-दर-बैंक लागू निर्देशों से बदल सकती हैं — अंतिम पुष्टि
-        अपनी branch से करें। साहूकारी दरों का जिक्र सामान्य ग्रामीण अनुभव पर है, कोई सरकारी आंकड़ा नहीं।
-        Last verified: {new Date(article.modifiedTime).toLocaleDateString('hi-IN')}.
+        से। दरें और collateral-free सीमा बैंक-दर-बैंक बदल सकती हैं, इसलिए अंतिम पुष्टि अपनी branch से
+        करें। साहूकारी दरों का जिक्र सामान्य ग्रामीण अनुभव पर है, कोई सरकारी आंकड़ा नहीं। (जानकारी
+        {new Date(article.modifiedTime).toLocaleDateString('hi-IN')} तक जांची हुई है।)
       </p>
 
       <RelatedArticles articles={RELATED} />
