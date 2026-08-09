@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
 // Self-contained article — कोई shared component import नहीं (Rule 2)।
@@ -89,6 +90,24 @@ const RELEASES = [
   },
 ];
 
+function Figure({ src, alt, caption }: { src: string; alt: string; caption: string }) {
+  return (
+    <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+      <Image
+        src={src}
+        alt={alt}
+        width={1200}
+        height={675}
+        className="w-full object-cover"
+        sizes="(max-width: 768px) 100vw, 768px"
+      />
+      <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+        {caption}
+      </figcaption>
+    </figure>
+  );
+}
+
 function Hd({ children }: { children: React.ReactNode }) {
   return (
     <h2 className="text-xl font-black text-[var(--color-text)] mt-8 mb-4 pb-2 border-b-2 border-[var(--color-border)]">
@@ -142,6 +161,12 @@ export default function MukhyamantriKisanKalyanYojanaMp({ article }: { article: 
         <a href="https://saara.mp.gov.in" target="_blank" rel="noopener noreferrer">saara.mp.gov.in</a> पर
         दिखता है।
       </Tip>
+
+      <Figure
+        src="/images/articles/hindi-yojna/mp-kisan-kalyan/mp-farmer-field.webp"
+        alt="खेत में खड़ा MP का किसान"
+        caption="MP के किसान को केंद्र + राज्य मिलाकर कुल ₹12,000 सालाना मिलते हैं"
+      />
 
       <Hd>योजना की कहानी — ₹4,000 से ₹6,000 तक</Hd>
       <p>
@@ -223,6 +248,11 @@ export default function MukhyamantriKisanKalyanYojanaMp({ article }: { article: 
       </Tip>
 
       <Hd>Status check — दो portal, दो काम</Hd>
+      <Figure
+        src="/images/articles/hindi-yojna/mp-kisan-kalyan/saara-portal.webp"
+        alt="मुख्यमंत्री किसान कल्याण योजना का status check portal"
+        caption="राज्य की किस्त का status saara.mp.gov.in पर दिखता है"
+      />
       <p>यहां लोग बार-बार उलझते हैं, तो सीधा बंटवारा समझ लीजिए:</p>
       <div className="overflow-x-auto my-4">
         <table className="w-full text-sm border-collapse">
@@ -280,6 +310,11 @@ export default function MukhyamantriKisanKalyanYojanaMp({ article }: { article: 
       </div>
 
       <Hd>पटवारी verification — असली दरवाजा, असली रुकावट</Hd>
+      <Figure
+        src="/images/articles/hindi-yojna/mp-kisan-kalyan/patwari-check.webp"
+        alt="पटवारी गांव में किसान के land record का मिलान करते हुए"
+        caption="पटवारी का verification ही इस योजना का असली दरवाजा है"
+      />
       <p>
         इस योजना में जो काम online form नहीं कर सकता, वह पटवारी की कलम करती है। पटवारी के पास
         जाते समय तीन चीजें साथ रखें — <strong>खसरा/खतौनी की नकल</strong> (जिसमें आपका नाम और रकबा
@@ -350,6 +385,11 @@ export default function MukhyamantriKisanKalyanYojanaMp({ article }: { article: 
       </p>
 
       <Hd>पैसा नहीं आया — किस order में जांच करें?</Hd>
+      <Figure
+        src="/images/articles/hindi-yojna/mp-kisan-kalyan/passbook-dbt.webp"
+        alt="बैंक passbook में DBT की entry जांचता किसान"
+        caption="SMS न आए तो passbook की entry सबसे पक्का सबूत है"
+      />
       <p>
         एक MP के किसान का किस्सा सुनिए — PM Kisan की किस्तें time से आ रही थीं, लेकिन राज्य वाली एक साल से
         गायब। सबको लगा portal की गड़बड़ है। तहसील में पता चला कि पटवारी verification में जमीन का रकबा
