@@ -273,6 +273,14 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
         payment-failure वहीं पकड़ में आ जाते हैं।
       </p>
 
+      <p>
+        और एक मौसमी बात — बैंक merge का दौर चल रहा है। जिन किसानों के खाते ऐसे बैंकों में थे जो किसी बड़े
+        बैंक में मिल गए (जैसे कई ग्रामीण बैंकों का विलय), उनका IFSC और कभी-कभी खाता नंबर तक बदल जाता है।
+        खाता वही रहे तो भी mapper की entry पुराने बैंक code पर अटकी रह सकती है। आपके बैंक का merge हुआ हो,
+        तो बिना इंतजार किए एक बार myAadhaar पर seeding status देख लें — नए बैंक का नाम दिखे तो सब ठीक,
+        पुराना दिखे तो नई शाखा में consent form भरकर ताजा seeding करा लें।
+      </p>
+
       <CalcBanner />
 
       <SH>CSC जाएं या बैंक? — सही चुनाव का गणित</SH>
