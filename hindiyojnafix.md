@@ -53,3 +53,4 @@ Output: Har article ko same TSX file format mein wapas do. Koi fact, date, amoun
 - [x] NpciAadhaarSeedingDbtPayment — done (self-contained, bold-heading prose + definition-list FAQ, transitions within budget, ~2850 words)
 - [x] FarmerIdCardKaiseBanaye2027 — done (self-contained, table+text-mix structure + numbered Q&A FAQ, transitions within budget, ~3040 words)
 - [x] GehuKaRateAajMspVsMandiBhav — done (self-contained, narrative + comparison-tables + season-calendar structure, FAQ striped-table, transitions within budget, ~3070 words)
+- [x] KccLimitKaiseBadhaye3Se5Lakh — done (self-contained, bullet-heavy sections + interview-style प्र./उ. FAQ, transitions within budget, ~2990 words)
