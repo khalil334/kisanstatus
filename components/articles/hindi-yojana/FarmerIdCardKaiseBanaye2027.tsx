@@ -83,44 +83,19 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
       <p>
         इन तीनों के मिलान के बाद एक unique <strong>Farmer ID</strong> generate होती है। फायदा साफ है — बार-बार
         कागज जमा करने का झंझट खत्म। Subsidy, बीमा (PMFBY), KCC loan, PM Kisan — हर जगह यही एक आईडी काम
-        करेगी। AgriStack की पूरी background हमने{' '}
-        <Link href="/articles/AgriStackKyaHai2026">AgriStack क्या है</Link> वाले article में detail से समझाई
-        है।
+        करेगी। AgriStack आखिर है क्या बला — यह अलग से{' '}
+        <Link href="/articles/AgriStackKyaHai2026">इस page पर समझाया है</Link>।
       </p>
 
       <SH>पहले यह 5 चीजें तैयार रखिए</SH>
-      <div className="overflow-x-auto my-4">
-        <table className="w-full text-sm border-collapse">
-          <thead>
-            <tr className="bg-[var(--color-bg-alt)]">
-              <th className="border border-[var(--color-border)] p-2 text-left">Document</th>
-              <th className="border border-[var(--color-border)] p-2 text-left">क्यों चाहिए</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="border border-[var(--color-border)] p-2">आधार कार्ड</td>
-              <td className="border border-[var(--color-border)] p-2">पहचान verify करने के लिए — इसी से OTP आएगा</td>
-            </tr>
-            <tr>
-              <td className="border border-[var(--color-border)] p-2">आधार से linked mobile number</td>
-              <td className="border border-[var(--color-border)] p-2">OTP इसी पर आता है — link नहीं है तो पहले कराएं</td>
-            </tr>
-            <tr>
-              <td className="border border-[var(--color-border)] p-2">जमीन के कागज (खसरा/खतौनी)</td>
-              <td className="border border-[var(--color-border)] p-2">Land record मिलान के लिए</td>
-            </tr>
-            <tr>
-              <td className="border border-[var(--color-border)] p-2">बैंक पासबुक</td>
-              <td className="border border-[var(--color-border)] p-2">DBT payment के लिए account details</td>
-            </tr>
-            <tr>
-              <td className="border border-[var(--color-border)] p-2">Passport size photo</td>
-              <td className="border border-[var(--color-border)] p-2">कुछ राज्यों के portal पर मांगी जाती है</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <p>List लंबी नहीं है, पर हर चीज का अपना काम है:</p>
+      <ul className="my-4 space-y-2 text-sm">
+        <li><strong>आधार कार्ड</strong> — पहचान verify करने के लिए; इसी से OTP आएगा।</li>
+        <li><strong>आधार से linked mobile number</strong> — OTP इसी पर आता है। Link नहीं है तो पहले वह काम कराएं।</li>
+        <li><strong>जमीन के कागज (खसरा/खतौनी)</strong> — land record मिलान के लिए, ताजा नकल हो तो और अच्छा।</li>
+        <li><strong>बैंक पासबुक</strong> — DBT payment के लिए account details।</li>
+        <li><strong>Passport size photo</strong> — हर जगह नहीं, पर कुछ राज्यों के portal पर मांगी जाती है।</li>
+      </ul>
       <WB>
         सबसे common अड़चन पहले ही बता दें — <strong>land record में नाम की spelling आधार से अलग होना</strong>।
         &quot;राम कुमार&quot; आधार में और &quot;रामकुमार&quot; खतौनी में — बस, verification अटक गया। Registration
@@ -248,16 +223,16 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
         जिन बड़े-बूढ़ों के नाम जमीन है, उन्हें भी साथ ले जाएं — biometric उन्हीं का लगेगा, आपका नहीं।
       </p>
 
-      <SH>अक्सर पूछे जाने वाले सवाल</SH>
+      <SH>आपके सवाल, सीधे जवाब</SH>
       <FAQBlock faqs={FAQS} />
 
       <p className="text-xs text-[var(--color-text-muted)] italic">
-        Sources: प्रक्रिया{' '}
+        जानकारी का स्रोत: पूरी प्रक्रिया{' '}
         <a href="https://agristack.gov.in" target="_blank" rel="noopener noreferrer">agristack.gov.in</a>{' '}
         (Ministry of Agriculture &amp; Farmers Welfare) और राज्य Farmer Registry portals (जैसे
-        upfr.agristack.gov.in) के registration flow पर आधारित है। राज्य-विशेष rules बदलते रहते हैं — अपने
-        राज्य के portal पर verify करें। Last verified:{' '}
-        {new Date(article.modifiedTime).toLocaleDateString('hi-IN')}.
+        upfr.agristack.gov.in) के registration flow से मिलाकर लिखी गई है। राज्य-विशेष rules बदलते रहते हैं,
+        इसलिए अपने राज्य के portal पर एक बार जरूर मिला लें (आखिरी जांच:{' '}
+        {new Date(article.modifiedTime).toLocaleDateString('hi-IN')})।
       </p>
 
       <RelatedArticles articles={RELATED} />
