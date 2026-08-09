@@ -21,7 +21,7 @@ farmer-useful + traffic keywords, no invented facts/numbers.
 | 9 | GehuKaRateAajMspVsMandiBhav | **done** — ~2050 words, 12 H2, MSP-kaise-tay-hota-hai (CACP) section, 3-raste comparison table (MSP kendra vs mandi vs vyapari), quality-katauti ka ganit, bechu-ya-roku 3-sawaal framework, WDRA godown receipt-loan tip, eNAM section, bikri-din checklist, mandi-bhav CalcBanner, 12 FAQ, no live rates invented |
 | 10 | NamoShetkariYojanaMaharashtra | **done** — ~2100 words, PM Kisan vs Namo Shetkari comparison table, 3-galatfahmi myth-buster section, family-unit + batai + wrong-account + complaint-channel FAQ (11 total), saal-bhar-ki-aadat 3-kaam checklist, no invented dates/amounts |
 | 11 | MukhyamantriKisanKalyanYojanaMp | **done** — ~2040 words, patwari-verification deep dive (3 documents, spelling-mismatch, halka-day tip), exclusion + recovery-risk section, ₹12,000 smart-use section, family-unit/virasat/SMS/refund/land-sale FAQ (11 total), no invented dates |
-| 12 | FarmerIdCardKaiseBanaye2027 | pending |
+| 12 | FarmerIdCardKaiseBanaye2027 | **done** — ~2070 words, 4-atakne-ki-wajah + ilaaj section, ID-ban-jane-ke-baad kya badlega (PMFBY/KCC/subsidy uses + data-update + fraud warning), camp-se-pehle 5-min taiyari, do-jile/mahila/joint-khata/re-apply FAQ (12 total) |
 | 13 | KisanKarjMafiList2027 | pending |
 | 14 | TractorSubsidy2027StateWiseList | pending |
 | 15 | PmKisanHelplineNumberComplaint | pending |
