@@ -204,7 +204,7 @@ export default function PmKisanRecoveryNoticePaisaWapas({ article }: { article: 
       <Panel tone="green">
         और एक बात साफ कर दें — अगर आपकी किस्त सिर्फ <em>रुकी</em> है (eKYC या verification की वजह से),
         तो वह recovery का मामला नहीं है। वसूली सिर्फ उनसे होती है जो नियम से अपात्र निकले। रुकी किस्त वालों
-        के लिए <Link href="/articles/hindi/payment-stopped-by-state">यह guide</Link> है।
+        के लिए <Link href="/articles/hi/payment-stopped-by-state">यह guide</Link> है।
       </Panel>
 
       <T>अब फैसला — आपके सामने तीन रास्ते हैं</T>
@@ -465,7 +465,7 @@ export default function PmKisanRecoveryNoticePaisaWapas({ article }: { article: 
         <ul className="list-disc pl-5 space-y-1.5 text-sm">
           <li><Link href="/articles/PmKisanVoluntarySurrenderGuide">🙏 Voluntary Surrender Guide</Link></li>
           <li><Link href="/articles/PmKisanRejectedStatusReApplyGuide">🔁 Rejected Status — Re-apply</Link></li>
-          <li><Link href="/articles/hindi/helpline-shikayat">📞 हेल्पलाइन और शिकायत</Link></li>
+          <li><Link href="/articles/hi/helpline-shikayat">📞 हेल्पलाइन और शिकायत</Link></li>
           <li><Link href="/articles/PmKisanMasterGuide2026">📚 PM Kisan Master Guide</Link></li>
         </ul>
       </div>
