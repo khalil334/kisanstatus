@@ -31,6 +31,22 @@ const FAQS = [
     q: 'क्या शिकायत करने के पैसे लगते हैं?',
     a: 'बिल्कुल नहीं। न फोन शिकायत के, न online के। अगर कोई आपसे शिकायत दर्ज कराने के पैसे मांगे, तो समझ जाइए वो fraud है। सरकारी शिकायत हमेशा free होती है।',
   },
+  {
+    q: 'क्या CSC से शिकायत दर्ज करा सकते हैं?',
+    a: 'हां, अगर खुद online करना मुश्किल लगे तो नजदीकी CSC (जन सेवा केंद्र) से Help Desk query डलवा सकते हैं। बस reference details अपने पास लिखवाकर जरूर रखें, ताकि status खुद track कर सकें।',
+  },
+  {
+    q: 'एक साथ कितनी शिकायतें डाल सकते हैं?',
+    a: 'एक problem की एक ही query डालें। एक ही बात की कई queries डालने से record उलझता है और जवाब देर से आता है। हां, अगर दो अलग-अलग दिक्कतें हैं — जैसे eKYC भी और payment भी — तो दोनों की अलग query ठीक है।',
+  },
+  {
+    q: 'शिकायत के लिए registered mobile जरूरी है क्या?',
+    a: 'नहीं, आधार नंबर या बैंक अकाउंट नंबर से भी query register हो जाती है। लेकिन registered mobile पास हो तो updates के SMS वहीं आते हैं, इसलिए बेहतर यही है कि वो नंबर चालू रखें।',
+  },
+  {
+    q: 'गांव में network नहीं है, phone भी नहीं लगता — क्या करें?',
+    a: 'ऐसे में block के कृषि विभाग का office सबसे practical रास्ता है — वहां लिखित शिकायत दे सकते हैं। या हफ्ते में जब बाजार/तहसील जाना हो, तब CSC से online query डलवा लें।',
+  },
 ];
 
 const RELATED = [
@@ -211,6 +227,45 @@ export default function PmKisanHelplineNumberComplaint({ article }: { article: H
         अगली किस्त सीधे account में आई — रुकी हुई किस्त भी बाद में process हुई। कुल समय लगा करीब दो महीने।
         सीख यह है कि शिकायत अकेली काफी नहीं — root cause भी ठीक करना पड़ता है। इस पूरे topic पर हमारी{' '}
         <Link href="/articles/PmKisanPaymentFailedFix2026">payment failed fix guide</Link> detail में है।
+      </p>
+
+      <SH>शिकायत लिखते समय ये 4 गलतियां मत कीजिए</SH>
+      <p>
+        Help Desk पर हजारों queries रोज आती हैं। जिनकी शिकायत साफ लिखी होती है, उनका record जल्दी ढूंढा और
+        आगे बढ़ाया जाता है। जिनकी उलझी होती है, वो पीछे छूट जाती हैं। चार गलतियां जो बार-बार दिखती हैं:
+      </p>
+      <StepList>
+        <SI n={1}>
+          <strong>गुस्से वाली लंबी कहानी लिखना।</strong> पढ़ने वाले को आपकी पूरी आपबीती नहीं, तीन चीजें
+          चाहिए — कौन सी किस्त, कब से रुकी, status में क्या लिखा आ रहा है। तीन लाइन काफी हैं।
+        </SI>
+        <SI n={2}>
+          <strong>गलत category चुनना।</strong> Payment की दिक्कत को eKYC category में डाल दिया, तो query
+          गलत desk पर जाएगी और वहां से लौटने में हफ्ते लगेंगे। Category दो बार पढ़कर चुनें।
+        </SI>
+        <SI n={3}>
+          <strong>Details बिना confirm किए लिखना।</strong> आधार के अंक गलत लिख दिए तो record मिलेगा ही
+          नहीं। Submit से पहले एक बार सब मिला लें।
+        </SI>
+        <SI n={4}>
+          <strong>Status में जो दिख रहा है, वो न बताना।</strong> &quot;पैसा नहीं आया&quot; अधूरी बात है।
+          &quot;Status में FTO generated लिखा है लेकिन 3 हफ्ते से payment नहीं&quot; — यह पूरी बात है, और
+          इसका जवाब भी सटीक आता है।
+        </SI>
+      </StepList>
+
+      <SH>सब जगह से जवाब नहीं मिला? CPGRAMS आखिरी रास्ता है</SH>
+      <p>
+        एक और दरवाजा है जिसके बारे में कम किसान जानते हैं — <strong>CPGRAMS</strong>, यानी केंद्र सरकार का
+        अपना grievance portal (<a href="https://pgportal.gov.in" target="_blank" rel="noopener noreferrer">pgportal.gov.in</a>)।
+        यहां दर्ज शिकायत सीधे संबंधित मंत्रालय — यानी कृषि मंत्रालय — तक जाती है, और हर शिकायत का एक
+        registration number मिलता है जिससे status track होता है।
+      </p>
+      <p>
+        इसे पहला नहीं, आखिरी हथियार समझिए। पहले PM Kisan के अपने Help Desk और Nodal Officer वाले रास्ते
+        आजमाएं — वहीं record होता है, वहीं जल्दी solve होता है। लेकिन जब महीनों बाद भी बात न बने, तब CPGRAMS
+        पर पुरानी query का reference देते हुए शिकायत डालें। मंत्रालय स्तर से आई query पर नीचे के office
+        अक्सर तेजी से हिलते हैं — यह जमीनी सच है।
       </p>
 
       <SH>Query का status कैसे track करें?</SH>
