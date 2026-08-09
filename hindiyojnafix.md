@@ -3,3 +3,4 @@ in 15 articles ke lye realistic images banao or in ma add karo kch articles ke l
 images path public/images/articles/hindi-yojna/articlename ma rakho
 
 PmKisan25viKistKabAayegi - done (4 images) 
+PmKisanStatusCheckMobileNumberSe - done (5 images)
