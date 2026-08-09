@@ -408,7 +408,7 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
         <a href="https://www.devdiscourse.com/article/headlines/3848990-agristack-revolution-920-crore-farmer-ids-rolled-out" target="_blank" rel="noopener noreferrer">
           source: संसद में दिया गया आंकड़ा, March 2026
         </a>
-        )। मतलब आपके गांव के आधे से ज्यादा किसानों की ID शायद बन भी चुकी है — और जो बचे हैं, उन्हीं
+        )। सीधे शब्दों में, आपके गांव के आधे से ज्यादा किसानों की ID शायद बन भी चुकी है — और जो बचे हैं, उन्हीं
         तक पहुंचने के लिए camps और CSC का जोर है।
       </p>
       <p>
@@ -439,14 +439,14 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
         दूसरी बात — registry में सिर्फ जमीन वाले पुरुष किसान नहीं आते। सरकारी ऐलान में साफ कहा गया
         है कि महिला किसान, और जिन राज्यों में नियम इजाजत देते हैं वहां tenant/बटाईदार भी इसमें
         शामिल होंगे। जिन किसानों के पास mobile नहीं है, उनके लिए FPO, कृषि सखी और CSC को जिम्मा
-        दिया गया है — यानी &quot;मेरे पास smartphone नहीं&quot; अब बहाना नहीं रहा, रास्ता हर किसी के
+        दिया गया है — अर्थात् &quot;मेरे पास smartphone नहीं&quot; अब बहाना नहीं रहा, रास्ता हर किसी के
         लिए खुला है।
       </p>
 
       <Sec>PM Kisan से इसका क्या रिश्ता है?</Sec>
       <p>
         सीधा रिश्ता। PM Kisan की नई registration में कई राज्यों में अब Farmer ID मांगी जाने लगी है, और
-        आगे यह पूरे DBT system की रीढ़ बनने वाली है। मतलब — जो किसान PM Kisan की{' '}
+        आगे यह पूरे DBT system की रीढ़ बनने वाली है। तात्पर्य — जो किसान PM Kisan की{' '}
         <Link href="/articles/PmKisanMasterGuide2026">किस्त लेते हैं</Link> या{' '}
         <Link href="/articles/KisanCreditCardOnlineApply2026">KCC</Link> बनवाना चाहते हैं, उनके लिए यह आईडी
         आज नहीं तो कल जरूरी होगी ही। जल्दी बनवा लेने में ही फायदा है — बाद में भीड़ और server, दोनों का बोझ
@@ -484,9 +484,9 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
         कुल समय: कई महीने। फर्क किस्मत का नहीं था — तैयारी का था।
       </p>
       <p>
-        इसीलिए यह guide बार-बार एक ही बात पर लौटती है — <strong>असली काम portal से पहले का है</strong>।
+        इसी वजह से यह guide बार-बार एक ही बात पर लौटती है — <strong>असली काम portal से पहले का है</strong>।
         Portal तो सिर्फ आईना है जो आपके record की सच्चाई दिखाता है। Record साफ है तो आईना भी साफ;
-        record में गांठ है तो वही गांठ screen पर दिखेगी।
+        record में गांठ है तो यही गांठ screen पर दिखेगी।
       </p>
 
       <Note tone="warn">
