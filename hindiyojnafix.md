@@ -39,3 +39,9 @@ token ke lye card send karo or 1 article fix karny ke bad osko GitHub py auto me
 7. **Scam warnings, source citations, cross-links har article mein alag style mein likho** — same pattern copy-paste mat karo.
 
 Output: Har article ko same TSX file format mein wapas do. Koi fact, date, amount, ya official link change mat karna.
+
+---
+
+## Progress
+
+- [x] PmKisan25viKistKabAayegi — done (self-contained, no shared components, card-list + emoji-checklist structure, transition words within budget, 2800+ words)
