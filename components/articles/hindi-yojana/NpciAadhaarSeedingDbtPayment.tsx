@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
 // यह article जानबूझकर self-contained है — कोई shared component import नहीं।
@@ -65,6 +66,24 @@ const FAQ_SCHEMA = {
   })),
 };
 
+function Figure({ src, alt, caption }: { src: string; alt: string; caption: string }) {
+  return (
+    <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+      <Image
+        src={src}
+        alt={alt}
+        width={1200}
+        height={675}
+        className="w-full object-cover"
+        sizes="(max-width: 768px) 100vw, 768px"
+      />
+      <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+        {caption}
+      </figcaption>
+    </figure>
+  );
+}
+
 function T2({ children }: { children: React.ReactNode }) {
   return (
     <h2 className="text-xl font-black text-[var(--color-text)] mt-8 mb-4 pb-2 border-b-2 border-[var(--color-border)]">
@@ -121,6 +140,12 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
         उसी पते पर आती है जो सरकारी register में लिखा है। बैंक-link तीन घरों की तरह है; NPCI mapper वह
         register है। चिट्ठी (किस्त) कहां पहुंचेगी, यह register तय करता है — घरों की गिनती नहीं।
       </p>
+
+      <Figure
+        src="/images/articles/hindi-yojna/npci-seeding/seeding-diagram.webp"
+        alt="आधार → NPCI mapper → बैंक खाता — seeding का सीधा diagram"
+        caption="DBT का पैसा उसी खाते में जाता है जो NPCI mapper में आधार से जुड़ा है"
+      />
 
       <T2>Link vs Seeding — एक नजर में</T2>
       <div className="my-4 overflow-x-auto">
@@ -180,6 +205,11 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
       </p>
 
       <T2>Step 1 — अभी कौन सा खाता mapped है, यह देखें</T2>
+      <Figure
+        src="/images/articles/hindi-yojna/npci-seeding/status-active.webp"
+        alt="Mobile पर आधार seeding का Active status"
+        caption="Status Active दिखे तो समझिए DBT का रास्ता साफ है"
+      />
       <p>
         <strong>पहला तरीका (internet वाला):</strong>{' '}
         <a href="https://myaadhaar.uidai.gov.in" target="_blank" rel="noopener noreferrer">
@@ -223,6 +253,11 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
       </p>
 
       <T2>Counter पर ठीक-ठीक क्या बोलें — शब्द तैयार रखिए</T2>
+      <Figure
+        src="/images/articles/hindi-yojna/npci-seeding/bank-counter.webp"
+        alt="बैंक counter पर seeding consent form जमा करता किसान"
+        caption="लिखित consent form से ही seeding होती है — मौखिक कहने से नहीं"
+      />
       <p>
         शाखा में आधी लड़ाई शब्दों की है। "आधार link कर दो" कहने पर staff अक्सर KYC-link करके भेज देता है —
         और mapper में entry हुए बिना किस्त जहां की तहां अटकी रहती है। Counter पर यह कहिए:
@@ -322,6 +357,11 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
       </div>
 
       <T2>CSC जाएं या बैंक? — सही चुनाव का गणित</T2>
+      <Figure
+        src="/images/articles/hindi-yojna/npci-seeding/csc-biometric.webp"
+        alt="CSC पर biometric से आधार verification कराता किसान"
+        caption="CSC पर biometric रास्ता — आधार में mobile link न होने पर भी काम बनता है"
+      />
       <p>
         गांव में आदत CSC जाने की होती है, पर seeding के मामले में यह समझ लीजिए — CSC आपके लिए status देख
         सकता है, form भरने में मदद कर सकता है, पर mapper में entry आखिरकार आपका <strong>बैंक</strong> ही
