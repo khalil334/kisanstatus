@@ -23,10 +23,10 @@ https://github.com/khalil334/kisanstatus/tree/main/components%2Farticles%2Fhindi
 Output: Har article ko same TSX component format mein wapas do. Koi fact, date, amount, ya official source link change mat karna.
 
 ---
-## Status (round 2 — 2000+ word pass, updated 2026-08-09)
+## Status (round 2 — 2000+ word pass, updated 2026-08-09) — ✅ ALL DONE
 - [x] NamoShetkariYojanaMaharashtra — 1814 → ~2178 words (PR #161)
 - [x] MukhyamantriKisanKalyanYojanaMp — 1847 → ~2042 words (PR #162)
 - [x] FarmerIdCardKaiseBanaye2027 — 1875 → ~2098 words (PR #163)
 - [x] KisanKarjMafiList2027 — 1883 → ~2080 words (PR #164)
-- [ ] TractorSubsidy2027StateWiseList — 1894 words
+- [x] TractorSubsidy2027StateWiseList — 1894 → ~2099 words (PR #165)
 - Baaki 10 articles already 2000+ words ✅
