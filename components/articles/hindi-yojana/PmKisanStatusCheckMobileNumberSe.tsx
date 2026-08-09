@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
-import { SH, IB, WB, DB, StepList, SI, GovLink, CalcBanner, FAQBlock, RelatedArticles } from '@/components/ArticleShared';
+
+// Self-contained article — कोई shared component import नहीं।
 
 const FAQS = [
   {
@@ -37,7 +38,7 @@ const FAQS = [
   },
   {
     q: 'गांव के CSC वाले status check करने के ₹50-100 लेते हैं — यह ठीक है?',
-    a: 'Status देखना portal पर मुफ्त है, यह काम आप खुद phone से कर सकते हैं। CSC पर biometric eKYC जैसी सेवाओं की तय सरकारी फीस होती है, लेकिन सिर्फ status दिखाने का कोई शुल्क नहीं बनता। दो मिनट खुद देख लेना सबसे सस्ता है।',
+    a: 'Status देखना portal पर मुफ्त है, यह काम आप खुद phone से कर सकते हैं। CSC पर biometric eKYC जैसी सेवाओं की तय सरकारी फीस होती है, लेकिन सिर्फ status दिखाने का कोई शुल्क नहीं बनता। दो मिनट खुद देख लेना पैसे बचाने का सीधा रास्ता है।',
   },
   {
     q: 'Status में मेरा नाम गलत spelling में दिख रहा है — क्या पैसा रुक जाएगा?',
@@ -60,13 +61,51 @@ const RELATED = [
   { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '📅' },
 ];
 
+const FAQ_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQS.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
+function SH({ children }: { children: React.ReactNode }) {
+  return (
+    <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
+      {children}
+    </h2>
+  );
+}
+
 function H3({ children }: { children: React.ReactNode }) {
   return <h3 className="text-base font-bold text-[var(--color-text)] mt-6 mb-2">{children}</h3>;
+}
+
+function Step({ n, children }: { n: number; children: React.ReactNode }) {
+  return (
+    <li className="flex gap-3 items-stretch list-none mb-2">
+      <div className="flex flex-col items-center shrink-0 w-9">
+        <div className="w-9 h-9 rounded-full bg-[var(--color-primary)] text-white text-sm font-black flex items-center justify-center shadow-md shrink-0">
+          {n}
+        </div>
+        <div className="w-0.5 flex-1 bg-gradient-to-b from-green-300 to-transparent mt-1 min-h-[12px]" />
+      </div>
+      <div className="flex-1 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl px-4 py-3 text-sm text-[var(--color-text)] leading-relaxed shadow-sm mb-1">
+        {children}
+      </div>
+    </li>
+  );
 }
 
 export default function PmKisanStatusCheckMobileNumberSe({ article }: { article: HindiArticle }) {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
+      />
       <p>
         <strong>आपके पास registration number नहीं है, सिर्फ mobile number है — तो क्या स्टेटस चेक हो
         सकता है?</strong>
@@ -74,42 +113,42 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
       <p>
         हो सकता है। और इसी सवाल पर यह पूरी guide है, क्योंकि सच यही है कि ज्यादातर किसानों को अपना
         registration number याद नहीं रहता। CSC वाले ने form भरा था, पर्ची कहीं खो गई, और अब हर किस्त के time
-        वही उलझन। अच्छी बात — portal ने इसका रास्ता रखा है। आपका registered mobile number ही चाबी है: उसी से
+        एक जैसी उलझन। अच्छी बात — portal ने इसका रास्ता रखा है। आपका registered mobile number ही चाबी है: उसी से
         registration number वापस निकलता है, और उसी पर OTP आता है।
       </p>
       <p>
         नीचे पूरा रास्ता है — पहले registration number निकालना, फिर status खोलना, फिर screen पर लिखी
-        अंग्रेजी lines का मतलब, और आखिर में वो हिस्सा जो असल में सबसे काम का है: कौन सा field NO दिख रहा
+        अंग्रेजी lines को पढ़ना, और आखिर में वो हिस्सा जो वाकई काम का है: कौन सा field NO दिख रहा
         है और उस पर आज क्या करना है। बीच में वो गलतियां भी लिखी हैं जिनकी वजह से लोग घंटों अटके रहते हैं।
       </p>
 
-      <IB>
+      <div className="my-4 p-4 bg-green-50 dark:bg-green-900/20 border-l-4 border-green-600 dark:border-green-500 rounded-r-xl text-sm text-[var(--color-text)] leading-relaxed">
         <strong>छोटा जवाब:</strong>{' '}
         <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer">pmkisan.gov.in</a> →{' '}
         <strong>Know Your Status</strong> → registration number न हो तो{' '}
         <strong>Know your registration no.</strong> → mobile number + OTP → registration number मिला → अब
         status देखें। कुल 5 मिनट का काम।
-      </IB>
+      </div>
 
       <SH>शुरू करने से पहले — तीन चीजें पास रखें</SH>
       <p>
         बहुत लोग आधे रास्ते में अटकते हैं क्योंकि कोई एक चीज हाथ में नहीं होती। दो मिनट लगाकर पहले यह तीन
         इकट्ठा कर लें, फिर काम एक ही बैठक में पूरा होगा:
       </p>
-      <StepList>
-        <SI n={1}>
+      <ol className="space-y-0 my-4">
+        <Step n={1}>
           <strong>वह मोबाइल नंबर जो योजना में registered है</strong> — जरूरी नहीं कि यह आपका आज का मुख्य
           नंबर हो। जिस नंबर से form भरा गया था, OTP उसी पर जाएगा। SIM चालू और phone पास में हो।
-        </SI>
-        <SI n={2}>
+        </Step>
+        <Step n={2}>
           <strong>आधार कार्ड</strong> — नंबर याद न हो तो कार्ड सामने रखें। Registration number निकालने का
           दूसरा रास्ता आधार से भी है।
-        </SI>
-        <SI n={3}>
+        </Step>
+        <Step n={3}>
           <strong>बैंक passbook</strong> — status में नाम या खाते से जुड़ी गड़बड़ी दिखे तो तुरंत मिलान कर
           पाएंगे, बाद में दोबारा बैठना नहीं पड़ेगा।
-        </SI>
-      </StepList>
+        </Step>
+      </ol>
       <p>
         और हां — काम phone के साधारण browser (Chrome आदि) में हो जाता है। किसी अलग app या software की
         जरूरत नहीं।
@@ -119,34 +158,34 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
       <p>
         अगर registration number पहले से पता है, तो सीधे अगले section पर जाएं। बाकी लोग यह करें:
       </p>
-      <StepList>
-        <SI n={1}>
+      <ol className="space-y-0 my-4">
+        <Step n={1}>
           Phone के browser में{' '}
           <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer">pmkisan.gov.in</a> खोलें।
           Page थोड़ा नीचे scroll करें — <strong>Farmers Corner</strong> में <strong>Know Your Status</strong>{' '}
           का box दिखेगा।
-        </SI>
-        <SI n={2}>
+        </Step>
+        <Step n={2}>
           उस page पर ऊपर की तरफ <strong>Know your registration no.</strong> का link है। उस पर tap करें।
-        </SI>
-        <SI n={3}>
+        </Step>
+        <Step n={3}>
           दो option मिलेंगे — <strong>Mobile Number</strong> या <strong>Aadhaar Number</strong>। Mobile
           number वाला चुनें, अपना registered नंबर डालें, captcha भरें।
-        </SI>
-        <SI n={4}>
+        </Step>
+        <Step n={4}>
           <strong>Get Mobile OTP</strong> दबाएं। OTP आएगा, उसे डालें।
-        </SI>
-        <SI n={5}>
+        </Step>
+        <Step n={5}>
           Screen पर आपका <strong>registration number</strong> आ जाएगा। इसे डायरी में या phone के notes में
           लिख लें — हर बार यही काम आएगा।
-        </SI>
-      </StepList>
-      <WB>
+        </Step>
+      </ol>
+      <div className="my-4 p-4 bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 rounded-r-xl text-sm text-[var(--color-text)] leading-relaxed">
         OTP उसी नंबर पर आएगा जो PM Kisan record में registered है। अगर वो SIM बंद हो चुका है, तो पहले नंबर
         बदलवाना पड़ेगा — पूरा तरीका{' '}
         <Link href="/articles/PmKisanMobileNumberChangeUpdate">इस page पर step-by-step समझाया</Link>{' '}
         है।
-      </WB>
+      </div>
       <p>
         एक सलाह जो आगे बहुत बचाएगी: registration number मिलते ही उसका screenshot ले लें और phone के notes
         में भी टाइप कर दें। Screenshot gallery साफ करते वक्त डिलीट हो जाते हैं, टाइप किया नंबर टिका रहता
@@ -157,36 +196,53 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
       <p>
         Registration number हाथ में आ गया? बढ़िया। वापस <strong>Know Your Status</strong> page पर आइए।
       </p>
-      <StepList>
-        <SI n={1}>Registration number वाले box में नंबर डालें।</SI>
-        <SI n={2}>Captcha code भरें और <strong>Get OTP</strong> दबाएं।</SI>
-        <SI n={3}>Mobile पर आया OTP डालकर submit करें।</SI>
-        <SI n={4}>बस — आपका पूरा record screen पर है। नाम, राज्य, किस्तों की history, eKYC की स्थिति, सब।</SI>
-      </StepList>
+      <ol className="space-y-0 my-4">
+        <Step n={1}>Registration number वाले box में नंबर डालें।</Step>
+        <Step n={2}>Captcha code भरें और <strong>Get OTP</strong> दबाएं।</Step>
+        <Step n={3}>Mobile पर आया OTP डालकर submit करें।</Step>
+        <Step n={4}>बस — आपका पूरा record screen पर है। नाम, राज्य, किस्तों की history, eKYC की स्थिति, सब।</Step>
+      </ol>
       <p>
         जो page खुलेगा उसमें ऊपर आपकी बुनियादी जानकारी होती है और नीचे किस्तों की सूची। सूची में हर किस्त के
-        सामने उसकी स्थिति लिखी रहती है। सबसे नई entry सबसे काम की है — वहीं से पता चलता है कि इस बार का
+        सामने उसकी स्थिति लिखी रहती है। नई से नई entry ही काम की है — उसी से पता चलता है कि इस बार का
         पैसा किस पड़ाव पर है।
       </p>
 
-      <GovLink
-        href="https://pmkisan.gov.in"
-        label="PM Kisan Portal — Know Your Status"
-        guide="pmkisan.gov.in खोलें"
-        portalName="pmkisan.gov.in"
-      />
+      <div className="my-5 border-2 border-[var(--color-border)] rounded-2xl overflow-hidden bg-[var(--color-card)] shadow-sm">
+        <div className="bg-green-50 dark:bg-green-900/20 border-b border-[var(--color-border)] px-4 py-2.5">
+          <span className="text-green-700 dark:text-green-300 text-xs font-bold">
+            📖 Pehle guide padhi? Ab official site par jao:
+          </span>
+        </div>
+        <div className="p-4 flex flex-col sm:flex-row items-start sm:items-center gap-3 justify-between">
+          <div>
+            <p className="font-bold text-[var(--color-text)] text-sm">PM Kisan Portal — Know Your Status</p>
+            <p className="text-xs text-[var(--color-text-muted)] mt-0.5">
+              Government of India — pmkisan.gov.in
+            </p>
+          </div>
+          <a
+            href="https://pmkisan.gov.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs px-4 py-2 bg-[var(--color-primary)] text-white rounded-lg font-bold hover:bg-[var(--color-primary-dark)] transition-colors shrink-0"
+          >
+            pmkisan.gov.in खोलें ↗
+          </a>
+        </div>
+      </div>
 
-      <SH>Screen पर जो दिख रहा है, उसका मतलब क्या है?</SH>
+      <SH>Screen पर जो दिख रहा है, उसे कैसे पढ़ें?</SH>
       <p>
-        यहीं पर ज्यादातर लोग अटकते हैं। Status खुल गया, अंग्रेजी में चार-पांच lines दिख रही हैं — अब इनका
-        मतलब? एक-एक करके समझते हैं।
+        यहीं पर ज्यादातर लोग अटकते हैं। Status खुल गया, अंग्रेजी में चार-पांच lines दिख रही हैं — अब इनको
+        समझें कैसे? एक-एक करके देखते हैं।
       </p>
       <div className="overflow-x-auto my-4">
         <table className="w-full text-sm border-collapse">
           <thead>
             <tr className="bg-[var(--color-bg-alt)]">
               <th className="border border-[var(--color-border)] p-2 text-left">Field</th>
-              <th className="border border-[var(--color-border)] p-2 text-left">YES का मतलब</th>
+              <th className="border border-[var(--color-border)] p-2 text-left">YES हो तो</th>
               <th className="border border-[var(--color-border)] p-2 text-left">NO हो तो?</th>
             </tr>
           </thead>
@@ -231,7 +287,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
           <thead>
             <tr className="bg-[var(--color-bg-alt)]">
               <th className="border border-[var(--color-border)] p-2 text-left">Screen पर लिखा है</th>
-              <th className="border border-[var(--color-border)] p-2 text-left">आपके लिए मतलब</th>
+              <th className="border border-[var(--color-border)] p-2 text-left">आपके लिए इसका आशय</th>
               <th className="border border-[var(--color-border)] p-2 text-left">अब क्या करें</th>
             </tr>
           </thead>
@@ -271,16 +327,36 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
         </table>
       </div>
       <p>
-        Portal समय-समय पर शब्द बदलता है, इसलिए हूबहू वही वाक्य न मिले तो घबराएं नहीं — मतलब लगभग इन्हीं
-        पांच खानों में आता है।
+        Portal समय-समय पर शब्द बदलता है, हूबहू वही वाक्य न मिले तो घबराएं नहीं — बात लगभग इन्हीं
+        पांच खानों में आती है।
       </p>
 
-      <CalcBanner />
+      <div className="my-8 p-6 bg-gradient-to-r from-green-800 to-green-600 rounded-2xl text-white text-center">
+        <p className="text-2xl mb-2">📆</p>
+        <p className="font-black text-lg mb-1">Kist Ruki Hai? Pata Karo Kyun</p>
+        <p className="text-green-100 text-sm mb-4">
+          eKYC, bank seeding, land seeding check karo — 4 sawaal mein exact reason.
+        </p>
+        <div className="flex flex-wrap justify-center gap-2.5">
+          <Link
+            href="/calculator/installment-tracker"
+            className="inline-flex items-center gap-2 bg-white text-green-800 font-black px-6 py-3 rounded-xl text-sm hover:bg-green-50 transition-colors"
+          >
+            📆 Kist Tracker Kholo →
+          </Link>
+          <Link
+            href="/calculator"
+            className="inline-flex items-center gap-2 bg-white/15 border border-white/30 text-white font-bold px-6 py-3 rounded-xl text-sm hover:bg-white/25 transition-colors"
+          >
+            🧮 Sab Utilities Dekho
+          </Link>
+        </div>
+      </div>
 
       <SH>अब असली काम — NO वाले field पर आज क्या करें</SH>
       <p>
         Status देख लेना आधा काम है। आधा यह है कि जो field NO दिखा, उस पर हाथ रखा जाए। नीचे तीनों का
-        सबसे छोटा रास्ता:
+        छोटे से छोटा रास्ता:
       </p>
 
       <H3>eKYC पर NO है</H3>
@@ -294,7 +370,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
 
       <H3>Aadhaar Bank Seeding पर NO है</H3>
       <p>
-        इसका मतलब आपका खाता आधार से जुड़कर DBT के लिए तैयार नहीं है। यह बैंक शाखा का काम है — passbook और
+        यानी आपका खाता आधार से जुड़कर DBT के लिए तैयार नहीं है। यह बैंक शाखा का काम है — passbook और
         आधार लेकर जाइए, NPCI seeding/DBT enable करने का form भरवाइए। ध्यान दें: खाते में आधार नंबर दर्ज
         होना और खाता DBT के लिए active होना, दोनों अलग बातें हैं। विस्तार से{' '}
         <Link href="/articles/hindi/npci-aadhaar-seeding">NPCI आधार सीडिंग guide</Link> देखें।
@@ -302,90 +378,90 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
 
       <H3>Land Seeding पर NO है</H3>
       <p>
-        यह सबसे धीमा हिस्सा है क्योंकि इसमें जमीन के कागज देखे जाते हैं। खतौनी/जमाबंदी की नकल लेकर तहसील या
+        यह धीमा हिस्सा है क्योंकि इसमें जमीन के कागज देखे जाते हैं। खतौनी/जमाबंदी की नकल लेकर तहसील या
         ब्लॉक के कृषि कार्यालय जाइए और साफ पूछिए कि record में क्या अटका है — नाम दर्ज नहीं, वरासत बाकी है,
         या खाता संख्या मेल नहीं खा रही। जो कमी बताई जाए, उसका कागज पूरा कराइए। यहां जल्दबाजी काम नहीं आती,
         लगातार follow-up आता है।
       </p>
 
-      <IB>
+      <div className="my-4 p-4 bg-green-50 dark:bg-green-900/20 border-l-4 border-green-600 dark:border-green-500 rounded-r-xl text-sm text-[var(--color-text)] leading-relaxed">
         क्रम याद रखिए — <strong>पहले eKYC, फिर bank seeding, फिर land record</strong>। पहले दो जल्दी
         निपटते हैं और अक्सर उतने से ही किस्त चल पड़ती है। तीनों को एक साथ पकड़ने की कोशिश में लोग थक जाते
         हैं और कुछ भी पूरा नहीं होता।
-      </IB>
+      </div>
 
       <SH>OTP नहीं आ रहा — तीन common कारण</SH>
       <p>
-        हमारे पास आने वाले सवालों में यह सबसे ऊपर है। एक किसान भाई ने बताया था — बेटे के phone से check करने
+        हमारे पास आने वाले सवालों में यह टॉप पर है। एक किसान भाई ने बताया था — बेटे के phone से check करने
         बैठे, OTP का इंतजार करते रहे, आया ही नहीं। वजह निकली कि registration में उनका अपना पुराना नंबर था, जो
         recharge न होने से बंद हो चुका था। यह case बहुत आम है। कारण आम तौर पर तीन होते हैं:
       </p>
-      <StepList>
-        <SI n={1}>
+      <ol className="space-y-0 my-4">
+        <Step n={1}>
           <strong>Network/delay</strong> — 2-3 मिनट रुकें, दोबारा try करें। शाम के time server धीमा चलता है।
-        </SI>
-        <SI n={2}>
+        </Step>
+        <Step n={2}>
           <strong>गलत नंबर डाल रहे हैं</strong> — OTP उसी नंबर पर जाता है जो record में है, उस पर नहीं जो आप
           अभी इस्तेमाल कर रहे हैं। दोनों अलग हो सकते हैं।
-        </SI>
-        <SI n={3}>
+        </Step>
+        <Step n={3}>
           <strong>Registered SIM बंद हो चुका है</strong> — यहां शिकायत काम नहीं आएगी; पहले नंबर update
           कराना होगा — पूरा तरीका <Link href="/articles/PmKisanMobileNumberChangeUpdate">यहां है</Link>।
-        </SI>
-      </StepList>
+        </Step>
+      </ol>
 
       <H3>और चार छोटी अड़चनें, जिनका हल दो मिनट का है</H3>
-      <StepList>
-        <SI n={1}>
+      <ol className="space-y-0 my-4">
+        <Step n={1}>
           <strong>Captcha गलत बता रहा है</strong> — page refresh करके नया captcha लें। छोटे-बड़े अक्षर
           वैसे ही डालें जैसे दिख रहे हैं।
-        </SI>
-        <SI n={2}>
+        </Step>
+        <Step n={2}>
           <strong>Page खुल ही नहीं रहा या अटक रहा है</strong> — किस्त वाले दिनों में भीड़ रहती है। सुबह जल्दी
           या देर रात कोशिश कीजिए, तब portal हल्का चलता है।
-        </SI>
-        <SI n={3}>
-          <strong>"Invalid registration number"</strong> — नंबर दोबारा मिलाइए। शक हो तो
+        </Step>
+        <Step n={3}>
+          <strong>&quot;Invalid registration number&quot;</strong> — नंबर दोबारा मिलाइए। शक हो तो
           &quot;Know your registration no.&quot; से फिर निकालें; कहीं आपने पुरानी पर्ची का गलत नंबर न डाल दिया हो।
-        </SI>
-        <SI n={4}>
+        </Step>
+        <Step n={4}>
           <strong>Record ही नहीं मिल रहा</strong> — हो सकता है आवेदन ही पूरा दर्ज न हुआ हो। ऐसे में
           <Link href="/articles/hindi/nayi-registration"> नई registration की प्रक्रिया</Link> देखिए और
           अपने ब्लॉक के कृषि अधिकारी से आवेदन की स्थिति पूछिए।
-        </SI>
-      </StepList>
+        </Step>
+      </ol>
 
-      <DB>
-        ठगी का सबसे आम रास्ता यही है। किसी को भी अपना OTP, आधार OTP, बैंक का PIN या खाते की details मत
+      <div className="my-4 p-4 bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 rounded-r-xl text-sm text-[var(--color-text)] leading-relaxed">
+        ठगी का आम रास्ता यही है। किसी को भी अपना OTP, आधार OTP, बैंक का PIN या खाते की details मत
         बताइए — न phone पर, न किसी लिंक में। योजना का कोई अधिकारी status दिखाने के लिए OTP नहीं मांगता, और
         किस्त &quot;जल्दी दिलाने&quot; के नाम पर पैसे मांगने वाला हर व्यक्ति ठग है। शिकायत का सही रास्ता
         portal की grievance और हेल्पलाइन <strong>155261</strong> है — शिकायत दर्ज करने की पूरी प्रक्रिया{' '}
         <Link href="/articles/hindi/helpline-shikayat">इस page पर समझाई</Link> है।
-      </DB>
+      </div>
 
       <SH>Status देखने के तीन रास्ते — कौन कब चुनें</SH>
       <p>
-        सब लोगों के लिए एक ही तरीका सबसे अच्छा नहीं होता। छोटी तुलना देख लीजिए:
+        हर किसी के लिए एक ही तरीका ठीक नहीं बैठता। छोटी तुलना देख लीजिए:
       </p>
-      <StepList>
-        <SI n={1}>
-          <strong>Portal, अपने phone के browser से</strong> — सबसे भरोसेमंद और मुफ्त। जब registered SIM
+      <ol className="space-y-0 my-4">
+        <Step n={1}>
+          <strong>Portal, अपने phone के browser से</strong> — भरोसेमंद भी, मुफ्त भी। जब registered SIM
           आपके पास है, यही चुनिए। Registration number सुरक्षित रखें, हर बार यही काम आएगा।
-        </SI>
-        <SI n={2}>
+        </Step>
+        <Step n={2}>
           <strong>Official PM-KISAN app</strong> — बार-बार देखने वालों के लिए सुविधाजनक; face
           authentication वाली eKYC भी इसी में होती है। App सिर्फ official store से लीजिए, मिलते-जुलते नाम
           वाले नकली apps से बचिए।
-        </SI>
-        <SI n={3}>
+        </Step>
+        <Step n={3}>
           <strong>CSC केंद्र</strong> — जब phone पर काम न बन रहा हो, या biometric eKYC करानी हो। Status
-          देखना खुद मुफ्त है, इसलिए CSC वहीं ले जाइए जहां असल में उसका काम है।
-        </SI>
-      </StepList>
+          देखना खुद मुफ्त है, CSC वहीं ले जाइए जहां वाकई उसका काम है।
+        </Step>
+      </ol>
 
       <SH>अगर status ठीक है फिर भी पैसा नहीं आया</SH>
       <p>
-        यह स्थिति उलझन भरी लगती है, पर इसका क्रम साफ है। सबसे पहले किस्त की सूची में देखिए कि इस बार की
+        यह स्थिति उलझन भरी लगती है, पर इसका क्रम साफ है। शुरुआत किस्त की सूची से कीजिए — देखिए कि इस बार की
         entry बनी है या नहीं। बनी है और FTO वाला हिस्सा आगे बढ़ चुका है, तो पैसा प्रक्रिया में है — बैंक तक
         पहुंचने में कुछ दिन लगते हैं, और पहुंचते ही खाते का SMS आता है। SMS पर भरोसा न हो तो passbook या
         बैंक की app में entry देख लीजिए; कई बार पैसा आ चुका होता है और message ही नहीं मिलता।
@@ -400,12 +476,12 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
       <SH>घर के बड़े-बुजुर्ग का status देखना हो तो</SH>
       <p>
         गांव में अक्सर यही होता है — खाता पिताजी या दादाजी के नाम है, और देखने बैठता है घर का लड़का। इसमें
-        कोई दिक्कत नहीं, बस दो बातें ध्यान रखिए। पहली, OTP उनके registered नंबर पर जाएगा, इसलिए वह phone
+        कोई दिक्कत नहीं, बस दो बातें ध्यान रखिए। पहली, OTP उनके registered नंबर पर जाएगा, वह phone
         पास में रखिए। दूसरी, उनका registration number एक बार निकाल कर घर की डायरी में लिख दीजिए, ताकि हर
         किस्त पर पूरी प्रक्रिया दोहरानी न पड़े।
       </p>
       <p>
-        जो लोग पढ़ नहीं पाते, उनके लिए सबसे काम की बात यह है कि आप उन्हें पूरी screen न समझाएं — सिर्फ यह
+        जो लोग पढ़ नहीं पाते, उनके लिए काम की बात यह है कि आप उन्हें पूरी screen न समझाएं — सिर्फ यह
         बताएं कि तीन में से कौन सा काम बाकी है और उसके लिए कहां जाना है। eKYC है तो phone से हो जाएगा,
         बैंक seeding है तो शाखा जाना है, जमीन का record है तो तहसील। इतना साफ हो जाए, तो आधी परेशानी खत्म।
       </p>
@@ -416,18 +492,35 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
         जानकारी चाहिए — eligibility, नई registration, exclusion rules — तो उसके लिए हमारी{' '}
         <Link href="/articles/PmKisanMasterGuide2026">Master Guide</Link> बनी हुई है। और अगर सवाल यह है कि
         अगली किस्त कब आएगी, तो <Link href="/articles/PmKisan24viKist2026">किस्त वाला article</Link> पढ़ें।
-        यहां वो सब दोहराने का मतलब नहीं।
+        यहां वो सब दोहराने की जरूरत नहीं।
       </p>
       <p>
         आखिरी सलाह — status हफ्ते में एक बार देखना काफी है। रोज check करने से न किस्त जल्दी आती है, न
         eKYC अपने आप हो जाती है। जो field NO दिखा रहा है, उस पर काम कीजिए; बाकी portal पर छोड़ दीजिए।
       </p>
 
-      <SH>Status check पर सबसे ज्यादा आने वाले सवाल</SH>
-      <FAQBlock
-        faqs={FAQS}
-        caption="किसानों के सबसे ज्यादा पूछे गए सवाल — status, OTP, registration number और NO वाले field से जुड़े।"
-      />
+      <SH>Status check पर बार-बार आने वाले सवाल</SH>
+      <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">
+        किसानों के अक्सर पूछे गए सवाल — status, OTP, registration number और NO वाले field से जुड़े।
+      </p>
+      <div className="space-y-3 mb-8">
+        {FAQS.map(({ q, a }) => (
+          <details
+            key={q}
+            className="border border-[var(--color-border)] rounded-xl overflow-hidden group"
+          >
+            <summary className="p-4 font-semibold text-[var(--color-text)] cursor-pointer bg-[var(--color-bg-alt)] hover:bg-green-50 dark:hover:bg-green-900/20 text-sm flex justify-between items-center gap-3">
+              <span>{q}</span>
+              <span className="text-green-600 dark:text-green-400 text-xl group-open:rotate-45 transition-transform shrink-0">
+                +
+              </span>
+            </summary>
+            <div className="p-4 text-sm text-[var(--color-text-muted)] leading-relaxed border-t border-[var(--color-border)]">
+              {a}
+            </div>
+          </details>
+        ))}
+      </div>
 
       <p className="text-xs text-[var(--color-text-muted)] italic">
         यह पूरा तरीका{' '}
@@ -437,7 +530,23 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
         {new Date(article.modifiedTime).toLocaleDateString('hi-IN')}.
       </p>
 
-      <RelatedArticles articles={RELATED} />
+      <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
+        <h3 className="font-black text-[var(--color-text)] mb-4 text-base flex items-center gap-2">
+          <span>🔗</span> Related Articles — Yeh Bhi Padho
+        </h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+          {RELATED.map((a) => (
+            <Link
+              key={a.slug}
+              href={`/articles/${a.slug}`}
+              className="flex items-center gap-3 p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors text-sm font-medium text-[var(--color-text)] no-underline"
+            >
+              {a.emoji && <span className="text-xl shrink-0">{a.emoji}</span>}
+              <span>{a.title}</span>
+            </Link>
+          ))}
+        </div>
+      </div>
     </>
   );
 }
