@@ -16,3 +16,25 @@ har 2 articles fix karny ke bad auto merge karke file update kardia karo
 9. "guide में" (2 files) → "detail यहाँ है", "पूरा तरीका इस page पर"
 
 Rule: Content length same rakhni hai — koi word delete mat karo, sirf replace karo. Same TSX format mein output do.
+
+---
+## Progress log (agent-maintained)
+Batch size: 2 articles per commit, pushed directly to main.
+
+- [x] FarmerIdCardKaiseBanaye2027.tsx — मतलब→सीधे शब्दों में/तात्पर्य, यानी→अर्थात्, इसीलिए→इसी वजह से, वही→यही (batch 1)
+- [x] GehuKaRateAajMspVsMandiBhav.tsx — इसीलिए→इस कारण, यानी→मतलब/अर्थात्, मतलब→तात्पर्य/अर्थ (batch 1)
+- [ ] KccLimitKaiseBadhaye3Se5Lakh.tsx
+- [ ] KisanKarjMafiList2027.tsx
+- [ ] MukhyamantriKisanKalyanYojanaMp.tsx
+- [ ] NamoShetkariYojanaMaharashtra.tsx
+- [ ] NpciAadhaarSeedingDbtPayment.tsx
+- [ ] PmKisan25viKistKabAayegi.tsx
+- [ ] PmKisanEkycMobileSeKaiseKare.tsx
+- [ ] PmKisanHelplineNumberComplaint.tsx
+- [ ] PmKisanNewRegistration2027.tsx
+- [ ] PmKisanPaymentStoppedByStateFix.tsx
+- [ ] PmKisanRecoveryNoticePaisaWapas.tsx
+- [ ] PmKisanStatusCheckMobileNumberSe.tsx
+- [ ] TractorSubsidy2027StateWiseList.tsx
+
+Note: "वही" counts in the brief include "वहीं" (locative, natural Hindi) — only bare "वही" instances are replaced. "जैसे" used as "जैसे कि / जैसा" in natural comparisons is left when replacement would break meaning.
