@@ -228,15 +228,15 @@ export default function PmKisanRecoveryNoticePaisaWapas({ article }: { article: 
         <Link href="/articles/PmKisanMasterGuide2026">Master Guide</Link> में देख लें।
       </DB>
 
-      <SH>अक्सर पूछे जाने वाले सवाल</SH>
+      <SH>Notice मिलने के बाद उठने वाले सवाल — सीधे जवाब</SH>
       <FAQBlock faqs={FAQS} />
 
       <p className="text-xs text-[var(--color-text-muted)] italic">
-        Source: वसूली का आंकड़ा (₹416.75 करोड़) कृषि राज्य मंत्री के लोकसभा में लिखित उत्तर (PTI, दिसंबर
-        2025) से; refund की online प्रक्रिया{' '}
+        वसूली का आंकड़ा (₹416.75 करोड़) कृषि राज्य मंत्री के लोकसभा में दिए लिखित उत्तर (PTI, दिसंबर
+        2025) से लिया गया है, और refund की online प्रक्रिया{' '}
         <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer">pmkisan.gov.in</a> के
-        Refund Online flow पर आधारित। राज्य-स्तरीय वसूली प्रक्रिया अलग हो सकती है — notice में लिखा तरीका
-        ही अंतिम है। Last verified: {new Date(article.modifiedTime).toLocaleDateString('hi-IN')}.
+        Refund Online flow से। राज्य-स्तरीय वसूली प्रक्रिया अलग हो सकती है — notice में लिखा तरीका ही
+        अंतिम है। यह जानकारी {new Date(article.modifiedTime).toLocaleDateString('hi-IN')} तक जांची गई है।
       </p>
 
       <RelatedArticles articles={RELATED} />
