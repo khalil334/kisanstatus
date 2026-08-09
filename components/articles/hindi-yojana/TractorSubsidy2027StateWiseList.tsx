@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
 // Self-contained article — कोई shared component import नहीं (Rule 2)।
@@ -62,6 +63,24 @@ function H2({ children }: { children: React.ReactNode }) {
   );
 }
 
+function Figure({ src, alt, caption }: { src: string; alt: string; caption: string }) {
+  return (
+    <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+      <Image
+        src={src}
+        alt={alt}
+        width={1200}
+        height={675}
+        className="w-full object-cover"
+        sizes="(max-width: 768px) 100vw, 768px"
+      />
+      <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+        {caption}
+      </figcaption>
+    </figure>
+  );
+}
+
 function StateCard({ name, portal, children }: { name: string; portal: string; children: React.ReactNode }) {
   return (
     <div className="my-4 border border-[var(--color-border)] rounded-xl overflow-hidden bg-[var(--color-card)]">
@@ -103,6 +122,12 @@ export default function TractorSubsidy2027StateWiseList({ article }: { article: 
         हैं। कोई एक &ldquo;PM Tractor Yojana&rdquo; नाम की central scheme नहीं है जो सबको आधे दाम पर ट्रैक्टर दे।
         जो है, वह इससे थोड़ा जटिल — पर काम का — system है। चलिए बिना घुमाए समझते हैं।
       </p>
+
+      <Figure
+        src="/images/articles/hindi-yojna/tractor-subsidy/tractor-kisan-khet.webp"
+        alt="खेत में अपने ट्रैक्टर के पास खड़ा किसान"
+        caption="सब्सिडी असली है — पर कितनी और कैसे, यह राज्य और श्रेणी तय करती है"
+      />
 
       <H2>सब्सिडी का असली ढांचा — दो परतें</H2>
       <p>
@@ -302,6 +327,12 @@ export default function TractorSubsidy2027StateWiseList({ article }: { article: 
       </div>
 
       <H2>आवेदन की process — लगभग हर राज्य में यही ढर्रा</H2>
+
+      <Figure
+        src="/images/articles/hindi-yojna/tractor-subsidy/portal-avedan.webp"
+        alt="कृषि यंत्र अनुदान portal पर online आवेदन form"
+        caption="आवेदन अपने राज्य के portal पर — खुद या CSC से, बिचौलिये से नहीं"
+      />
       <ol className="my-4 space-y-2 pl-5 list-decimal text-sm leading-relaxed">
         <li>
           अपने राज्य के portal पर <strong>किसान registration</strong> करो — आधार, mobile (आधार से
@@ -325,6 +356,12 @@ export default function TractorSubsidy2027StateWiseList({ article }: { article: 
       </ol>
 
       <H2>कागज कौन-कौन से लगेंगे?</H2>
+
+      <Figure
+        src="/images/articles/hindi-yojna/tractor-subsidy/kagaz-checklist.webp"
+        alt="आवेदन के लिए जरूरी कागज — आधार, passbook, जमीन का record"
+        caption="Window छोटी होती है — कागज पहले से scan करके रखिए"
+      />
       <p>
         आधार कार्ड (mobile linked) · खतौनी/जमीन का record · बैंक passbook · passport photo · जाति
         प्रमाण-पत्र (SC/ST स्लैब के लिए) · डीलर का quotation। कुछ राज्य निवास प्रमाण-पत्र भी मांगते
@@ -386,6 +423,12 @@ export default function TractorSubsidy2027StateWiseList({ article }: { article: 
       </p>
 
       <H2>आवेदन से खाते में पैसा आने तक — पूरा सफर कितना लंबा है?</H2>
+
+      <Figure
+        src="/images/articles/hindi-yojna/tractor-subsidy/dbt-passbook.webp"
+        alt="बैंक passbook में DBT से आई सब्सिडी की entry देखता किसान"
+        caption="सब्सिडी डीलर को नहीं — DBT से सीधे आपके खाते में आती है"
+      />
       <p>
         एक realistic scenario से समझिए कि इंतजार किस चीज का कितना होता है। Window खुली और आपने
         पहले ही दिन आवेदन डाल दिया — अच्छी शुरुआत। अब चयन (token/lottery) का इंतजार — यह कुछ
