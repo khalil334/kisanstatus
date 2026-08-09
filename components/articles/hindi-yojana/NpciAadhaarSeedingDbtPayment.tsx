@@ -257,8 +257,8 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
         Mapper में खाता active हो जाने के बाद बची हुई कड़ियां जांच लें। योजना के record में eKYC पूरी हो (
         <Link href="/articles/hindi/ekyc-mobile-se">phone से करने का तरीका</Link>), और अगर पिछला भुगतान
         fail हुआ था तो उसका status देखें — कई राज्यों में सुधार के बाद रुका पैसा अगली किस्त के साथ आ जाता
-        है। भुगतान अटकने की बाकी वजहें और इलाज{' '}
-        <Link href="/articles/PmKisanPaymentFailedFix2026">Payment Failed guide</Link> में एक जगह लिखे हैं।
+        है। भुगतान अटकने की बाकी वजहों का पूरा नक्शा{' '}
+        <Link href="/articles/PmKisanPaymentFailedFix2026">इस page पर एक जगह मिलेगा</Link>।
         और अगर status में "Payment Stopped by State" जैसा message है, तो वह अलग मामला है —{' '}
         <Link href="/articles/hindi/payment-stopped-by-state">उसकी guide यहां</Link> है।
       </p>
@@ -270,18 +270,18 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
         दें — किस्त अटकने की सबसे आम वजह से हमेशा के लिए छुट्टी।
       </p>
 
-      <SH>अक्सर पूछे जाने वाले सवाल</SH>
+      <SH>Seeding पर उठने वाले सवाल — और सीधे जवाब</SH>
       <FAQBlock faqs={FAQS} />
 
       <p className="text-xs text-[var(--color-text-muted)] italic">
-        Source: Bank Seeding Status की प्रक्रिया{' '}
+        कहां से क्या लिया — Bank Seeding Status की प्रक्रिया{' '}
         <a href="https://uidai.gov.in" target="_blank" rel="noopener noreferrer">uidai.gov.in</a> /
-        myAadhaar portal पर आधारित; NPCI mapper और BASE की जानकारी{' '}
+        myAadhaar portal से; NPCI mapper और BASE की जानकारी{' '}
         <a href="https://www.npci.org.in" target="_blank" rel="noopener noreferrer">npci.org.in</a> से; DBT
         व्यवस्था{' '}
-        <a href="https://dbtbharat.gov.in" target="_blank" rel="noopener noreferrer">dbtbharat.gov.in</a>।
-        बैंक-दर-बैंक form का नाम और online सुविधा अलग हो सकती है। Last verified:{' '}
-        {new Date(article.modifiedTime).toLocaleDateString('hi-IN')}.
+        <a href="https://dbtbharat.gov.in" target="_blank" rel="noopener noreferrer">dbtbharat.gov.in</a> से।
+        बैंक-दर-बैंक form का नाम और online सुविधा अलग हो सकती है — आखिरी बार हमने यह सब{' '}
+        {new Date(article.modifiedTime).toLocaleDateString('hi-IN')} को मिलाया था।
       </p>
 
       <RelatedArticles articles={RELATED} />
