@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
 // यह article जानबूझकर self-contained है — कोई shared component import नहीं।
@@ -64,6 +65,24 @@ const FAQ_SCHEMA = {
     acceptedAnswer: { '@type': 'Answer', text: f.a },
   })),
 };
+
+function Figure({ src, alt, caption }: { src: string; alt: string; caption: string }) {
+  return (
+    <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+      <Image
+        src={src}
+        alt={alt}
+        width={1200}
+        height={675}
+        className="w-full object-cover"
+        sizes="(max-width: 768px) 100vw, 768px"
+      />
+      <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+        {caption}
+      </figcaption>
+    </figure>
+  );
+}
 
 function Sec({ children }: { children: React.ReactNode }) {
   return (
@@ -141,6 +160,12 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
         लिखता है कि eKYC सभी beneficiaries के लिए अनिवार्य है। इतना छोटा काम टालने लायक नहीं।
       </Tip>
 
+      <Figure
+        src="/images/articles/hindi-yojna/ekyc-mobile-se/otp-screen.webp"
+        alt="Mobile पर PM Kisan eKYC का OTP verification screen"
+        caption="OTP वाला रास्ता — घर बैठे, बिल्कुल मुफ्त"
+      />
+
       <PathCard badge="A" title="Portal पर OTP से — घर बैठे, मुफ्त">
         <p>
           Phone के browser में{' '}
@@ -174,6 +199,12 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
         phone पर आता है। किसी को बताने की जरूरत नहीं, खुद भर दीजिए।
       </p>
 
+      <Figure
+        src="/images/articles/hindi-yojna/ekyc-mobile-se/face-auth.webp"
+        alt="बुजुर्ग किसान PM-KISAN app में Face Authentication करते हुए"
+        caption="Face Auth — OTP का झंझट नहीं, चेहरा ही पहचान"
+      />
+
       <PathCard badge="B" title="PM-KISAN app में Face Authentication — बुजुर्गों के लिए वरदान">
         <p>
           जिनके आधार में नंबर तो linked है पर OTP का झंझट नहीं चाहिए — या घर के बुजुर्ग की eKYC करनी है —
@@ -197,6 +228,12 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
         असली app का प्रकाशक Government of India / कृषि मंत्रालय है। कोई भी app जो eKYC के बदले पैसे या
         बैंक details मांगे, सीधा uninstall करें।
       </Tip>
+
+      <Figure
+        src="/images/articles/hindi-yojna/ekyc-mobile-se/csc-fingerprint.webp"
+        alt="CSC पर fingerprint scanner से eKYC कराता किसान"
+        caption="OTP न आए तो CSC का biometric रास्ता सबसे भरोसेमंद है"
+      />
 
       <PathCard badge="C" title="CSC पर उंगलियों के निशान से — जब OTP का रास्ता बंद हो">
         <p>
@@ -379,6 +416,11 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
       </p>
 
       <Sec>काम पूरा हुआ या नहीं — आखिरी जांच</Sec>
+      <Figure
+        src="/images/articles/hindi-yojna/ekyc-mobile-se/ekyc-success.webp"
+        alt="Mobile पर eKYC successful का green confirmation"
+        caption="काम तभी पूरा मानें जब status में eKYC के आगे YES दिखे"
+      />
       <p>
         Success message आना और record में दर्ज होना — दोनों में कभी-कभी थोड़ा फासला होता है। अगले दिन एक बार{' '}
         <Link href="/articles/hindi/status-check-mobile-se">status page</Link> खोलकर eKYC: YES देख लें। YES
