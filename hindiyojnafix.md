@@ -4,3 +4,4 @@ images path public/images/articles/hindi-yojna/articlename ma rakho
 
 PmKisan25viKistKabAayegi - done (4 images) 
 PmKisanStatusCheckMobileNumberSe - done (5 images)
+KisanKarjMafiList2027 - done (4 images)
