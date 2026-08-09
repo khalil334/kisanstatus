@@ -233,8 +233,8 @@ export default function PmKisanNewRegistration2027({ article }: { article: Hindi
       </p>
       <p>
         Status check करने के लिए portal पर <strong>Status of Self Registered Farmer</strong> का option है —
-        आधार नंबर डालिए और देखिए आवेदन किस table पर पड़ा है। इसका पूरा breakdown{' '}
-        <Link href="/articles/PmKisanSelfRegisteredStatusCheck">self-registered status guide</Link> में है।
+        आधार नंबर डालिए और देखिए आवेदन किस table पर पड़ा है। Table-दर-table इसका क्या मतलब है, यह{' '}
+        <Link href="/articles/PmKisanSelfRegisteredStatusCheck">अलग लेख में खोलकर समझाया है</Link>।
       </p>
       <p>
         UP के एक किसान का experience बताते हैं — आवेदन May में किया, approval September में आया, पहला पैसा
@@ -262,8 +262,8 @@ export default function PmKisanNewRegistration2027({ article }: { article: Hindi
       <p>
         SMS का इंतजार मत कीजिए — कई बार पैसा आ जाता है और SMS नहीं आता। पक्का तरीका दो हैं:
         passbook entry कराना, या portal पर Know Your Status में payment का record देखना। किस्त कब
-        आती है और उससे पहले क्या-क्या निपटा लेना चाहिए — इसकी पूरी कहानी{' '}
-        <Link href="/articles/hindi/pm-kisan-25vi-kist">अगली किस्त वाली guide</Link> में है।
+        आती है और उससे पहले क्या-क्या निपटा लेना चाहिए — पूरी कहानी के लिए{' '}
+        <Link href="/articles/hindi/pm-kisan-25vi-kist">अगली किस्त वाला लेख</Link> पढ़ लें।
       </p>
 
       <SH>Verification लंबा खिंच जाए तो क्या करें</SH>
@@ -364,15 +364,16 @@ export default function PmKisanNewRegistration2027({ article }: { article: Hindi
         record होता है, उसका काम हर खिड़की पर तेज चलता है।
       </p>
 
-      <SH>अक्सर पूछे जाने वाले सवाल</SH>
+      <SH>Registration के सवाल, सीधे जवाब</SH>
       <FAQBlock faqs={FAQS} />
 
       <p className="text-xs text-[var(--color-text-muted)] italic">
-        Sources: registration flow{' '}
+        Registration flow की जानकारी{' '}
         <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer">pmkisan.gov.in</a> (Ministry
-        of Agriculture &amp; Farmers Welfare) पर आधारित; Farmer ID अनिवार्यता वाले राज्यों की जानकारी सरकारी
-        घोषणाओं की news coverage से। राज्य-स्तरीय rules बदलते रहते हैं — आवेदन से पहले अपने राज्य का ताजा
-        निर्देश देख लें। Last verified: {new Date(article.modifiedTime).toLocaleDateString('hi-IN')}.
+        of Agriculture &amp; Farmers Welfare) के आवेदन-ढांचे से ली गई है; Farmer ID अनिवार्यता वाले राज्यों की
+        जानकारी सरकारी घोषणाओं की news coverage से। राज्य-स्तरीय rules बदलते रहते हैं, इसलिए आवेदन से
+        पहले अपने राज्य का ताजा निर्देश जरूर देख लें — यह लेख{' '}
+        {new Date(article.modifiedTime).toLocaleDateString('hi-IN')} तक की स्थिति पर खरा है।
       </p>
 
       <RelatedArticles articles={RELATED} />
