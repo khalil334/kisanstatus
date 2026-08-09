@@ -33,7 +33,7 @@ const FAQS = [
   },
   {
     q: 'गलत जानकारी भर दी तो?',
-    a: 'Portal पर correction का option है — नाम, बैंक details वगैरह सुधारे जा सकते हैं। हमारी correction form guide में पूरा तरीका है। बेहतर यही है कि submit से पहले आधार और खतौनी से मिलाकर ही भरें।',
+    a: 'Portal पर correction का option है — नाम, बैंक details वगैरह सुधारे जा सकते हैं। पूरा तरीका correction form वाले page पर detail में है। बेहतर यही है कि submit से पहले आधार और खतौनी से मिलाकर ही भरें।',
   },
   {
     q: 'महिला के नाम जमीन है — आवेदन उसी के नाम से होगा?',
@@ -316,7 +316,7 @@ export default function PmKisanNewRegistration2027({ article }: { article: Hindi
       </StepList>
       <p>
         इनमें से पहली तीन आपके हाथ में हैं — यानी आधे से ज्यादा rejection सिर्फ तैयारी से बच जाते हैं।
-        इसीलिए इस guide में Step 1 (documents का मिलान) को इतना लंबा लिखा गया है — वही असली मेहनत है,
+        इसीलिए इस लेख में Step 1 (documents का मिलान) को इतना लंबा लिखा गया है — वही असली मेहनत है,
         form भरना तो दस मिनट का काम है।
       </p>
 
@@ -348,7 +348,7 @@ export default function PmKisanNewRegistration2027({ article }: { article: Hindi
         उतना ही आम है जितना सुनने में मजाक लगता है।
       </p>
 
-      <SH>निचोड़ — पूरा रास्ता एक नजर में</SH>
+      <SH>पूरा रास्ता — शुरू से आखिर तक, छोटे में</SH>
       <p>
         2027 में नई registration का सही क्रम: पहले तीनों record (आधार, खतौनी, बैंक) में नाम एक जैसा
         कराइए → अपने राज्य की registry से Farmer ID बनवाइए → pmkisan.gov.in पर New Farmer
