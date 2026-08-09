@@ -13,3 +13,23 @@ https://github.com/khalil334/kisanstatus/tree/main/components%2Farticles%2Fhindi
 9. **Ending vary करो** — हर article का conclusion अलग हो। कहीं short summary, कहीं actionable checklist, कहीं direct advice, कहीं caution note।
 
 Output: हर article को revise करके same file format (TSX component) में वापस दो। कोई fact, date, amount, या official source link change मत करना — सिर्फ writing style, structure, और repetition fix करना है।
+
+---
+## Status (updated 2026-08-09)
+सभी 15 articles revise हो चुके हैं ✅ (PRs #140s–#159)
+
+- [x] FarmerIdCardKaiseBanaye2027
+- [x] GehuKaRateAajMspVsMandiBhav
+- [x] KccLimitKaiseBadhaye3Se5Lakh
+- [x] KisanKarjMafiList2027
+- [x] MukhyamantriKisanKalyanYojanaMp
+- [x] NamoShetkariYojanaMaharashtra
+- [x] NpciAadhaarSeedingDbtPayment
+- [x] PmKisan25viKistKabAayegi
+- [x] PmKisanEkycMobileSeKaiseKare
+- [x] PmKisanHelplineNumberComplaint
+- [x] PmKisanNewRegistration2027
+- [x] PmKisanPaymentStoppedByStateFix (#158)
+- [x] PmKisanRecoveryNoticePaisaWapas (#159)
+- [x] PmKisanStatusCheckMobileNumberSe (#157)
+- [x] TractorSubsidy2027StateWiseList
