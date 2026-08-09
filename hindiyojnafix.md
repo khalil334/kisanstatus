@@ -46,3 +46,4 @@ Output: Har article ko same TSX file format mein wapas do. Koi fact, date, amoun
 
 - [x] PmKisan25viKistKabAayegi — done (self-contained, no shared components, card-list + emoji-checklist structure, transition words within budget, 2800+ words)
 - [x] PmKisanStatusCheckMobileNumberSe — done (self-contained, numbered-steps + accordion-FAQ structure, transitions within budget, ~2900 words)
+- [x] KisanKarjMafiList2027 — done (self-contained, inline-FAQ + plain-decimal steps, transitions pruned, ~3100 words)
