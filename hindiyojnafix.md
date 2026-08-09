@@ -1,32 +1,25 @@
 https://github.com/khalil334/kisanstatus/tree/main/components%2Farticles%2Fhindi-yojana
-1 article fix karny ke bad wo merge karke ye file update karke phr next article py kam start kia kark
-मेरे KisanStatus.com के hindi-yojana folder के सभी 15 articles को revise करो। नीचे की rules strictly follow करो — facts, dates, amounts, official links बिल्कुल same रखो, सिर्फ style और structure change करो:
+ GitHub.com/khalil334/kisanstatus 
+token ke lye card do
+मेरे KisanStatus.com के hindi-yojana folder के सभी 15 articles को revise करो। नीचे की rules strictly follow करो:
 
-1. **Har article minimum 2000+ mixed words (Hindi+English) hona chahiye** — thin content bilkul nahi. Agar koi article 2000 se kam ho toh usme genuinely useful detail add karo: real examples, state-wise differences, document checklists, timeline scenarios, common mistakes, ya field observations. Filler mat bharto.
+1. **Har article minimum 2000+ mixed words (Hindi+English) hona chahiye** — current word count sab 1200-1800 ke beech hai. Content trim mat karo, **expand karo**. Genuinely useful detail add karo: real farmer examples, state-wise process differences, document checklists, timeline scenarios, common mistakes with solutions, field observations, ya bank/CSC ke real experiences. Filler mat bharto, har line ka reader ke liye value hona chahiye.
 
-2. **Template repetition hatao** — har article ka structure alag ho. Kisi mein table ho, kisi mein nahi. Kisi mein FAQ ho, kisi mein inline Q&A, kisi mein bold tip boxes. Har article ka intro, body flow, aur ending bilkul unique ho.
+2. **Yeh phrases 2 se zyada articles mein bilkul mat use karo** — har article mein alag words chunno:
+   - "एक नजर में" — max 1 article mein
+   - "guide में" / "guide में है" — max 1 article mein  
+   - "किस्त वाले दिन" — sirf PM Kisan wale articles mein, baaki mein mat use karo
+   - "निचोड़" — max 1 article mein
+   - "screenshot रख" / "डायरी में" / "कागज संभाल" — max 1-2 articles mein
 
-3. **FAQ heading har jagah alag ho** — "अक्सर पूछे जाने वाले सवाल" sirf 2-3 articles mein max use karo. Baaki mein "आपके सवाल", "जानकारी", "सामान्य सवाल", "सवाल-जवाब", "मुख्य बातें" jaise alag headings use karo.
+3. **Har article ka structure bilkul alag ho** — kisi mein table ho, kisi mein nahi. Kisi mein FAQ block ho, kisi mein inline bold Q&A, kisi mein tip boxes. Intro, body flow, aur ending har file mein unique ho.
 
-4. **Scam warnings har article mein alag words mein likho** — same 4-point OTP warning copy-paste mat karo. Har topic ke hisaab se customize karo — words, order, examples sab alag hona chahiye.
+4. **Scam warnings har article mein alag tarah se likho** — same 4-point OTP warning copy-paste mat karo. Har topic ke hisaab se words, order, aur examples alag rakho.
 
-5. **Cross-linking kam aur varied karo** — "guide में है" / "हमारी guide में" har 2-3 line mein mat likho. Sirf jab genuinely zaroorat ho tab link karo, aur har baar alag phrase use karo.
+5. **Cross-linking varied karo** — "guide में है" har jagah mat likho. Har baar alag phrase use karo jaise "detail यहाँ है", "पूरा तरीका इस page पर", "और जानकारी यहाँ", "step-by-step यहाँ देखें".
 
-6. **Source citations alag tarah se karo** — "Source: ... Last verified: ..." ka same block har jagah mat rakho. Kahi sources paragraph ke beech mein mention karo, kahi footnote style mein, kahi simple closing line mein.
+6. **Source citations alag tarah se karo** — har article mein different style. Kahi paragraph ke beech mein, kahi footnote, kahi simple closing line.
 
-7. **Intro unique banao** — "रामलाल जी (नाम बदला हुआ)" jaise generic AI fillers hatao. Har article ka opening alag tone mein ho — direct question, bold statement, real scenario, personal observation, ya surprising fact se shuru karo.
-
-8. **Hinglish natural rakhna** — grammar "textbook perfect" mat rakho. Thoda colloquial aur rough hona chahiye, jaise ek real Indian writer likhta hai, lekin readability compromise nahi honi chahiye.
-
-9. **Conclusion har article mein alag ho** — kahi short summary, kahi actionable checklist, kahi direct advice, kahi caution note, kahi "agla kya karein" type next steps.
+7. **Intro aur ending har article mein unique ho** — direct question, bold statement, real scenario, ya caution note se shuru karo. Ending mein kahi summary, kahi checklist, kahi next steps.
 
 Output: Har article ko same TSX component format mein wapas do. Koi fact, date, amount, ya official source link change mat karna.
-
----
-## Status (round 2 — 2000+ word pass, updated 2026-08-09) — ✅ ALL DONE
-- [x] NamoShetkariYojanaMaharashtra — 1814 → ~2178 words (PR #161)
-- [x] MukhyamantriKisanKalyanYojanaMp — 1847 → ~2042 words (PR #162)
-- [x] FarmerIdCardKaiseBanaye2027 — 1875 → ~2098 words (PR #163)
-- [x] KisanKarjMafiList2027 — 1883 → ~2080 words (PR #164)
-- [x] TractorSubsidy2027StateWiseList — 1894 → ~2099 words (PR #165)
-- Baaki 10 articles already 2000+ words ✅
