@@ -16,7 +16,7 @@ farmer-useful + traffic keywords, no invented facts/numbers.
 | 4 | PmKisanPaymentStoppedByStateFix | **done** — 2081 words, 10 H2 + 4 H3, status-message comparison table, dakiya analogy, 3-sawaal self-triage, tehsil documents checklist, galat-flag + dohra-aavedan deep dive, state-wise offices, 12 FAQ |
 | 5 | PmKisanNewRegistration2027 | **done** — 2037 words, 13 H2 + 2 H3, khud-vs-CSC comparison table, 5-sawaal pre-apply checklist, Farmer ID vs registration fark, naam-milan 5-minute method, 6 rejection reasons, verification-pairavi guide, upload bariikiyan, 12 FAQ |
 | 6 | NpciAadhaarSeedingDbtPayment | **done** — 2160 words, 9 H2, link-vs-seeding comparison table, gaon-register analogy, counter-par-kya-bolen script, 4 Inactive-reason deep dive, 3-minute pre-kist check, CalcBanner, 12 FAQ |
-| 7 | PmKisanRecoveryNoticePaisaWapas | pending |
+| 7 | PmKisanRecoveryNoticePaisaWapas | **done** — 2050 words, 10 H2, asli-vs-thagi notice check, 3-raste decision table, objection documents checklist, refund-ke-baad 3 kaam, rakam-milaan warning, taalne-ki-keemat section, 12 FAQ |
 | 8 | KccLimitKaiseBadhaye3Se5Lakh | pending |
 | 9 | GehuKaRateAajMspVsMandiBhav | pending |
 | 10 | NamoShetkariYojanaMaharashtra | pending |
