@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
 // यह article जानबूझकर self-contained है — कोई shared component import नहीं।
@@ -76,6 +77,24 @@ function Milestone({ tag, title, children }: { tag: string; title: string; child
       </h2>
       <div className="space-y-3 text-sm leading-relaxed text-[var(--color-text)]">{children}</div>
     </section>
+  );
+}
+
+function Figure({ src, alt, caption }: { src: string; alt: string; caption: string }) {
+  return (
+    <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+      <Image
+        src={src}
+        alt={alt}
+        width={1200}
+        height={675}
+        className="w-full object-cover"
+        sizes="(max-width: 768px) 100vw, 768px"
+      />
+      <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+        {caption}
+      </figcaption>
+    </figure>
   );
 }
 
@@ -166,6 +185,11 @@ export default function PmKisanNewRegistration2027({ article }: { article: Hindi
       </Milestone>
 
       <Milestone tag="पड़ाव 1" title="Documents की तैयारी">
+        <Figure
+          src="/images/articles/hindi-yojna/new-registration/docs-ready.webp"
+          alt="आधार कार्ड, बैंक passbook और खतौनी — registration से पहले की तैयारी"
+          caption="आवेदन से पहले मेज पर यही चार चीजें — आधार, passbook, खतौनी, phone"
+        />
         <ul className="list-disc pl-5 space-y-1.5">
           <li><strong>आधार कार्ड</strong> — नाम की spelling खतौनी से मिला लें।</li>
           <li><strong>जमीन के कागज</strong> — खसरा/खतौनी, जमीन आपके नाम registered हो।</li>
@@ -191,6 +215,11 @@ export default function PmKisanNewRegistration2027({ article }: { article: Hindi
       </Milestone>
 
       <Milestone tag="पड़ाव 2" title="Online आवेदन, screen-by-screen">
+        <Figure
+          src="/images/articles/hindi-yojna/new-registration/reg-form.webp"
+          alt="pmkisan.gov.in पर New Farmer Registration का form"
+          caption="New Farmer Registration form — आधार, mobile और राज्य से शुरुआत"
+        />
         <ol className="list-decimal pl-6 space-y-2">
           <li>
             <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer">pmkisan.gov.in</a>{' '}
@@ -235,6 +264,11 @@ export default function PmKisanNewRegistration2027({ article }: { article: Hindi
       </div>
 
       <H2x>खुद करें या CSC से — सीधा मुकाबला</H2x>
+      <Figure
+        src="/images/articles/hindi-yojna/new-registration/csc-center.webp"
+        alt="CSC केंद्र पर operator किसान की registration करते हुए"
+        caption="CSC का रास्ता — biometric से eKYC साथ में निपट जाती है"
+      />
       <div className="overflow-x-auto my-4">
         <table className="w-full text-sm border-collapse">
           <thead>
@@ -302,6 +336,11 @@ export default function PmKisanNewRegistration2027({ article }: { article: Hindi
       </div>
 
       <Milestone tag="पड़ाव 3" title="आवेदन के बाद का खेल: verification">
+        <Figure
+          src="/images/articles/hindi-yojna/new-registration/status-pending.webp"
+          alt="PM Kisan portal पर self registered farmer का pending status"
+          caption="Pending for approval — verification के दौरान यही दिखता है, घबराएं नहीं"
+        />
         <p>
           Submit दबाते ही पैसा नहीं आने लगता — यह बात शुरू में ही समझ लें तो निराशा नहीं होगी। आपका आवेदन
           राज्य सरकार के पास जाता है, जहां पटवारी/राजस्व विभाग land record से मिलान करता है। फिर district और
