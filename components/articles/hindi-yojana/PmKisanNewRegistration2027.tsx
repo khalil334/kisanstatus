@@ -172,7 +172,7 @@ export default function PmKisanNewRegistration2027({ article }: { article: Hindi
           MP, Maharashtra, Odisha, Rajasthan, Tamil Nadu, Telangana, UP — इन राज्यों में Farmer ID नए
           beneficiaries के लिए जरूरी हो चुकी है, और बाकी जगह भी यही दिशा है। अपनी राज्य की Farmer Registry
           (agristack.gov.in से) पर आधार + land record + बैंक details से यह आईडी बनती है। पूरा process हमने{' '}
-          <Link href="/articles/hindi/farmer-id-kaise-banaye">फार्मर आईडी कैसे बनाएं</Link> में step-by-step
+          <Link href="/articles/hi/farmer-id-kaise-banaye">फार्मर आईडी कैसे बनाएं</Link> में step-by-step
           लिखा है — पहले वो काम निपटाइए, फिर यहां लौटिए।
         </p>
         <H3x>Farmer ID और PM Kisan registration — दो अलग चीजें हैं</H3x>
@@ -379,7 +379,7 @@ export default function PmKisanNewRegistration2027({ article }: { article: Hindi
         SMS का इंतजार मत कीजिए — कई बार पैसा आ जाता है और SMS नहीं आता। पक्के तरीके दो हैं: passbook entry
         कराना, या portal पर Know Your Status में payment का record देखना। किस्त कब आती है और उससे पहले
         क्या-क्या निपटा लेना चाहिए — पूरी कहानी के लिए{' '}
-        <Link href="/articles/hindi/pm-kisan-25vi-kist">अगली किस्त वाला लेख</Link> पढ़ लें।
+        <Link href="/articles/hi/pm-kisan-25vi-kist">अगली किस्त वाला लेख</Link> पढ़ लें।
       </p>
 
       <H2x>Verification लंबा खिंच जाए तो क्या करें</H2x>

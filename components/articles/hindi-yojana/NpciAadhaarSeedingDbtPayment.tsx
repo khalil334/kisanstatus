@@ -375,12 +375,12 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
       <T2>Seeding हो गई — अब आगे क्या?</T2>
       <p>
         Mapper में खाता active हो जाने के बाद बची हुई कड़ियां जांच लें। योजना के record में eKYC पूरी हो (
-        <Link href="/articles/hindi/ekyc-mobile-se">phone से करने का तरीका</Link>), और अगर पिछला भुगतान
+        <Link href="/articles/hi/ekyc-mobile-se">phone से करने का तरीका</Link>), और अगर पिछला भुगतान
         fail हुआ था तो उसका status देखें — कई राज्यों में सुधार के बाद रुका पैसा अगली किस्त के साथ आ जाता
         है। भुगतान अटकने की बाकी वजहों का पूरा नक्शा{' '}
         <Link href="/articles/PmKisanPaymentFailedFix2026">इस page पर एक जगह मिलेगा</Link>। और अगर status
         में "Payment Stopped by State" वाला message है, तो वह अलग मामला है —{' '}
-        <Link href="/articles/hindi/payment-stopped-by-state">उसकी guide यहां</Link> है।
+        <Link href="/articles/hi/payment-stopped-by-state">उसकी guide यहां</Link> है।
       </p>
       <p>
         एक आखिरी बात, जो अनुभव से कहते हैं — seeding एक बार की चीज नहीं, एक <em>स्थिति</em> है। खाता बदला,
@@ -430,10 +430,10 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
             <Link href="/articles/PmKisanPaymentFailedFix2026">🛠️ Payment Failed — Fix Guide</Link>
           </li>
           <li>
-            <Link href="/articles/hindi/payment-stopped-by-state">⛔ Payment Stopped by State</Link>
+            <Link href="/articles/hi/payment-stopped-by-state">⛔ Payment Stopped by State</Link>
           </li>
           <li>
-            <Link href="/articles/hindi/status-check-mobile-se">📱 मोबाइल से स्टेटस चेक</Link>
+            <Link href="/articles/hi/status-check-mobile-se">📱 मोबाइल से स्टेटस चेक</Link>
           </li>
         </ul>
       </div>
