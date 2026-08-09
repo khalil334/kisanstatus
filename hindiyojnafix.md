@@ -21,3 +21,12 @@ https://github.com/khalil334/kisanstatus/tree/main/components%2Farticles%2Fhindi
 9. **Conclusion har article mein alag ho** — kahi short summary, kahi actionable checklist, kahi direct advice, kahi caution note, kahi "agla kya karein" type next steps.
 
 Output: Har article ko same TSX component format mein wapas do. Koi fact, date, amount, ya official source link change mat karna.
+
+---
+## Status (round 2 — 2000+ word pass, updated 2026-08-09)
+- [x] NamoShetkariYojanaMaharashtra — 1814 → ~2178 words (PR #161)
+- [ ] MukhyamantriKisanKalyanYojanaMp — 1847 words
+- [ ] FarmerIdCardKaiseBanaye2027 — 1875 words
+- [ ] KisanKarjMafiList2027 — 1883 words
+- [ ] TractorSubsidy2027StateWiseList — 1894 words
+- Baaki 10 articles already 2000+ words ✅
