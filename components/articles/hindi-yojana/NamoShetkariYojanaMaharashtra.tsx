@@ -252,7 +252,7 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
         <li><strong>Beneficiary Status</strong> option चुनें।</li>
         <li>Registered mobile number या registration number (जो PM Kisan में दर्ज है) डालें, captcha भरें।</li>
         <li>Mobile पर आए <strong>OTP</strong> से verify करें।</li>
-        <li>Screen पर किस्तों की history, eKYC status और आधार seeding status दिखेगा — screenshot रख लें।</li>
+        <li>Screen पर किस्तों की history, eKYC status और आधार seeding status दिखेगा — photo save कर लें।</li>
       </ol>
 
       <div className="my-5 border-2 border-[var(--color-border)] rounded-2xl overflow-hidden bg-[var(--color-card)] shadow-sm">
@@ -312,7 +312,7 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
       />
       <MythPanel
         myth="“रकम बढ़कर ₹15,000 हो गई है, इस बार से ज्यादा आएगा।”"
-        truth={<>बढ़ोतरी की घोषणा हुई है, पर आपकी किस्त में कब से दिखेगी यह official अधिसूचना से ही पक्का होगा। WhatsApp पर घूमते &ldquo;इस तारीख को ₹3,000 आएंगे&rdquo; जैसे message का स्रोत पूछें — जवाब नहीं मिलेगा।</>}
+        truth={<>बढ़ोतरी की घोषणा हुई है, पर आपकी किस्त में कब से दिखेगी यह official अधिसूचना से ही पक्का होगा। WhatsApp पर घूमते &ldquo;इस तारीख को ₹3,000 आएंगे&rdquo; सरीखे message का स्रोत पूछें — जवाब नहीं मिलेगा।</>}
       />
 
       <Hd>नए किसान के लिए रास्ता</Hd>
@@ -410,7 +410,7 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
         ₹12,000 आपका हक है, किसी की मेहरबानी नहीं।
       </p>
 
-      <Hd>सवाल-जवाब — जैसे WhatsApp पर पूछे जाते हैं</Hd>
+      <Hd>सवाल-जवाब — जैसा कि WhatsApp पर पूछे जाते हैं</Hd>
       {FAQS.map((f) => (
         <Bubble key={f.q} q={f.q} a={f.a} />
       ))}
