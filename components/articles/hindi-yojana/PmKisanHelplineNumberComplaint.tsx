@@ -71,7 +71,7 @@ export default function PmKisanHelplineNumberComplaint({ article }: { article: H
       </p>
 
       <IB>
-        <strong>📞 Official नंबर एक नजर में:</strong> हेल्पलाइन <strong>155261</strong> · लैंडलाइन{' '}
+        <strong>📞 सीधे काम के official नंबर:</strong> हेल्पलाइन <strong>155261</strong> · लैंडलाइन{' '}
         <strong>011-24300606</strong>, <strong>011-23381092</strong> · ईमेल{' '}
         <strong>pmkisan-ict@gov.in</strong> · Online:{' '}
         <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer">pmkisan.gov.in</a> →
@@ -254,6 +254,30 @@ export default function PmKisanHelplineNumberComplaint({ article }: { article: H
         </SI>
       </StepList>
 
+      <SH>आपकी शिकायत ऊपर तक पहुंचती भी है — एक सबूत देखिए</SH>
+      <p>
+        "शिकायत डालने से क्या होगा, कोई पढ़ता थोड़े है" — यह निराशा आम है, पर पूरी सच नहीं। अक्टूबर 2025
+        में केंद्रीय कृषि मंत्री शिवराज सिंह चौहान ने कृषि भवन में खास तौर पर किसानों की शिकायतों की समीक्षा
+        बैठक की — जिसमें PM-Kisan portal की शिकायतें भी एक अलग category थीं।{' '}
+        <a
+          href="https://agritimes.co.in/livestock/anmol-feeds-sets-up-livestock-feed-unit-in-jammu/shivraj-singh-chouhan-reviews-farmers-complaints-sets-strict-timelines/search/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          उस बैठक की रिपोर्ट
+        </a>{' '}
+        के मुताबिक मंत्री ने साफ निर्देश दिया कि <strong>जब तक किसान खुद संतुष्ट न हो, शिकायत बंद न की
+        जाए</strong>, अधिकारी कार्रवाई के बाद किसान से follow-up करें, और धीमी कार्रवाई वाले राज्यों की अलग
+        से पहचान हो। उसी बैठक में यह भी सामने आया कि pesticide की 150 शिकायतों में से 120 पर कार्रवाई
+        हो चुकी थी, 11 मामलों में FIR हुई और 8 कंपनियों के license रद्द हुए।
+      </p>
+      <p>
+        इससे आपके लिए निकलने वाली बात यह है — शिकायत का system निगरानी में है, और record में दर्ज शिकायत
+        ही इस निगरानी में गिनी जाती है। Phone पर हुई बात किसी आंकड़े में नहीं जाती — इसीलिए यह guide बार-बार
+        लिखित query पर जोर देती है। जो शिकायत system में है, वही किसी न किसी समीक्षा बैठक की file तक
+        पहुंचती है।
+      </p>
+
       <SH>सब जगह से जवाब नहीं मिला? CPGRAMS आखिरी रास्ता है</SH>
       <p>
         एक और दरवाजा है जिसके बारे में कम किसान जानते हैं — <strong>CPGRAMS</strong>, यानी केंद्र सरकार का
@@ -268,6 +292,19 @@ export default function PmKisanHelplineNumberComplaint({ article }: { article: H
         अक्सर तेजी से हिलते हैं — यह जमीनी सच है।
       </p>
 
+      <SH>फोन और portal के अलावा — जो नए रास्ते खुले हैं</SH>
+      <p>
+        NIC के मुताबिक PM-Kisan system में अब <strong>24×7 IVRS आधारित helpline</strong> और chatbot
+        integration भी शामिल है (स्रोत:{' '}
+        <a href="https://www.nic.in/project/pm-kisan/" target="_blank" rel="noopener noreferrer">
+          NIC का PM-KISAN project page
+        </a>
+        ) — यानी रात में भी basic status-पूछताछ recorded system से हो सकती है, भले staff से बात कामकाजी
+        घंटों में ही हो। UMANG app के Kisan Suvidha से भी योजना की सेवाएं जुड़ी हैं। इनमें से कोई भी रास्ता
+        आजमाएं — पर पहचान वाली सावधानी हर जगह एक ही है: OTP या bank password कोई भी सरकारी चैनल कभी
+        नहीं मांगता।
+      </p>
+
       <SH>Query का status कैसे track करें?</SH>
       <p>
         जिस page से query register की थी, वहीं <strong>Know the Query Status</strong> का option है। अपना वही
@@ -277,6 +314,28 @@ export default function PmKisanHelplineNumberComplaint({ article }: { article: H
       <p>
         और अगर शिकायत का जवाब आ गया लेकिन समाधान अधूरा है? तो नई query में पुरानी query का reference देकर
         दोबारा लिखें, या ऊपर बताए Nodal Officer वाले रास्ते पर जाएं।
+      </p>
+      <p>
+        एक पैटर्न और समझ लीजिए — status में "resolved" दिखने का मतलब हमेशा यह नहीं कि पैसा आ गया।
+        कई बार इसका मतलब सिर्फ इतना होता है कि आपका record आगे की process में भेज दिया गया — भुगतान अब
+        अगली किस्त release के साथ आएगा। इसलिए "resolved" दिखे तो Beneficiary Status भी साथ में देखें —
+        वहां eligibility और payment दोनों की असली तस्वीर दिखती है। दोनों में तालमेल न हो तो वही बात नई
+        query में लिखकर भेजिए।
+      </p>
+
+      <SH>किस भाषा में बात करें, क्या पूछें — call की तैयारी</SH>
+      <p>
+        Helpline पर हिंदी और अंग्रेजी दोनों में बात हो जाती है — जिस भाषा में आप सहज हैं, उसी में बोलिए।
+        बात शुरू करते ही तीन चीजें बोल दें: नाम, राज्य-जिला, और आधार/registered mobile — इससे सामने वाला
+        आपका record तुरंत खोल लेता है। फिर समस्या एक लाइन में।
+      </p>
+      <p>
+        Call खत्म करने से पहले दो सवाल जरूर पूछिए — पहला, "मेरी तरफ से अब क्या करना है?" (कई बार जवाब
+        होता है कि आपको कुछ नहीं करना, सिर्फ इंतजार है — यह जानना भी राहत है)। दूसरा, "अगर इतने दिन में
+        ठीक न हुआ तो आगे किससे बात करूं?" — इससे आपके पास अगला कदम पहले से तैयार रहता है। और call के
+        तुरंत बाद तारीख, समय और जो बताया गया — तीनों कहीं लिख लीजिए। अगली बार बात करते समय यही छोटा
+        सा note आपकी सबसे बड़ी ताकत होगा — "पिछली बार [तारीख] को यह बताया गया था" कहने वाले की बात
+        टालना मुश्किल होता है।
       </p>
 
       <SH>सामान्य सवाल — helpline और शिकायत पर</SH>
