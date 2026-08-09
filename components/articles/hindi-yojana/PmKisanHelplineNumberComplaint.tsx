@@ -205,8 +205,8 @@ export default function PmKisanHelplineNumberComplaint({ article }: { article: H
       <p>
         मान लीजिए आपने online query डाली, एक महीना हो गया, कुछ नहीं हुआ। Helpline बोलती है &quot;process में
         है&quot;। ऐसे में सीधे अपने राज्य के Nodal Officer के office से संपर्क करना अक्सर काम कर जाता है —
-        क्योंकि आपका record असल में वहीं अटका होता है। पूरी राज्यवार list हमारी{' '}
-        <Link href="/articles/PmKisanStateNodalOfficerList">Nodal Officer guide</Link> में है। साथ में अपने
+        क्योंकि आपका record असल में वहीं अटका होता है। पूरी राज्यवार list{' '}
+        <Link href="/articles/PmKisanStateNodalOfficerList">इस page पर मिलेगी</Link>। साथ में अपने
         block के कृषि अधिकारी (Agriculture Officer) से मिलना भी एक रास्ता है — खासकर land record वाली
         दिक्कतों में।
       </p>
@@ -225,8 +225,8 @@ export default function PmKisanHelplineNumberComplaint({ article }: { article: H
       <p>
         बैंक में seeding form भरा। दो हफ्ते बाद online Help Desk पर query डाली कि record update हो गया है।
         अगली किस्त सीधे account में आई — रुकी हुई किस्त भी बाद में process हुई। कुल समय लगा करीब दो महीने।
-        सीख यह है कि शिकायत अकेली काफी नहीं — root cause भी ठीक करना पड़ता है। इस पूरे topic पर हमारी{' '}
-        <Link href="/articles/PmKisanPaymentFailedFix2026">payment failed fix guide</Link> detail में है।
+        सीख यह है कि शिकायत अकेली काफी नहीं — root cause भी ठीक करना पड़ता है। Payment fail होने की बाकी वजहें और उनके इलाज{' '}
+        <Link href="/articles/PmKisanPaymentFailedFix2026">अलग से detail में लिखे हैं</Link>।
       </p>
 
       <SH>शिकायत लिखते समय ये 4 गलतियां मत कीजिए</SH>
@@ -279,15 +279,15 @@ export default function PmKisanHelplineNumberComplaint({ article }: { article: H
         दोबारा लिखें, या ऊपर बताए Nodal Officer वाले रास्ते पर जाएं।
       </p>
 
-      <SH>अक्सर पूछे जाने वाले सवाल</SH>
+      <SH>सामान्य सवाल — helpline और शिकायत पर</SH>
       <FAQBlock faqs={FAQS} />
 
       <p className="text-xs text-[var(--color-text-muted)] italic">
-        Sources: सभी contact details{' '}
+        एक जरूरी बात — यहां दी गई सभी contact details{' '}
         <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer">pmkisan.gov.in</a> (Ministry
-        of Agriculture &amp; Farmers Welfare, Govt. of India) पर publish की गई official जानकारी पर आधारित हैं।
-        नंबर समय के साथ बदल सकते हैं — call करने से पहले portal पर verify कर लें। Last verified:{' '}
-        {new Date(article.modifiedTime).toLocaleDateString('hi-IN')}.
+        of Agriculture &amp; Farmers Welfare, Govt. of India) की official जानकारी से ली गई हैं, पर नंबर
+        समय के साथ बदल सकते हैं — call करने से पहले portal पर एक नजर जरूर डाल लें (हमने{' '}
+        {new Date(article.modifiedTime).toLocaleDateString('hi-IN')} को मिलाए थे)।
       </p>
 
       <RelatedArticles articles={RELATED} />
