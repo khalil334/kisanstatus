@@ -136,6 +136,18 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
         महीनों की।
       </IB>
 
+      <SH>मामला कितना बड़ा है — आंकड़ों की गवाही</SH>
+      <p>
+        यह समस्या कोई इक्का-दुक्का मामला नहीं है। 20 जून 2026 को PM Kisan की 23वीं किस्त में{' '}
+        <strong>9.44 करोड़+ किसान परिवारों</strong> को करीब ₹18,880 करोड़ गए — पर खबरों के मुताबिक लाखों
+        किसान फिर भी खाली हाथ रहे, और कृषि मंत्रालय के आंकड़ों पर आधारित reports बताती हैं कि कारण बजट नहीं,
+        किसानों के digital records का mismatch होता है — जिसमें NPCI seeding सबसे ऊपर के कारणों में है।
+        सरकार खुद मानती है कि fail हुए transaction के आम कारणों में बैंक द्वारा आधार का mapper से हटाया जाना
+        (de-seeding), mapping न होना, या खाता बंद होना शामिल है — और सुधार के बाद रुका पैसा अगले
+        भुगतान-चक्र में release होता है। यानी आप अकेले नहीं हैं — पर रास्ता आपको खुद ही पकड़ना होगा, क्योंकि
+        system सिर्फ किस्त रोकता है, घर आकर बताता नहीं।
+      </p>
+
       <SH>Step 1 — अभी कौन सा खाता mapped है, यह देखें</SH>
       <StepList>
         <SI n={1}>
@@ -241,6 +253,17 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
         ताजा seeding करवाएं। BASE की mapping history यहां बड़े काम की है।
       </p>
 
+      <SH>Status की भाषा पढ़ना सीखिए — तीन आम message</SH>
+      <p>
+        Portal के Know Your Status में अंग्रेजी के जो message आते हैं, उनका मतलब पहले से पता हो तो आधी
+        घबराहट खत्म। <strong>&quot;Aadhaar not seeded in NPCI&quot;</strong> — यही इस पूरे लेख का विषय है;
+        सीधे Step 2 पर जाइए। <strong>&quot;Account closed&quot;</strong> — seeded खाता बंद हो चुका है; किसी चालू
+        खाते में नई seeding करानी होगी। <strong>&quot;Name mismatch&quot;</strong> — आधार और बैंक record के नाम अलग
+        हैं; पहले नाम सुधरवाइए, फिर seeding। और <strong>&quot;Payment Initiated&quot;</strong> दिखे तो कुछ मत कीजिए —
+        पैसा रास्ते में है, FTO process होने के बाद भी खाते तक पहुंचने में कुछ कार्यदिवस लगते हैं। 24-48 घंटे
+        बाद status दोबारा देखना और बैंक/NPCI के SMS संभालकर रखना — दो आदतें जो शिकायत के वक्त सबूत बनती हैं।
+      </p>
+
       <SH>किस्त के मौसम से पहले की 3-मिनट जांच</SH>
       <p>
         हर बार status देखने का सबसे सस्ता समय वह है जब किस्त <em>आने वाली</em> हो, आ चुकने के बाद नहीं। तीन
@@ -251,6 +274,17 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
       </p>
 
       <CalcBanner />
+
+      <SH>CSC जाएं या बैंक? — सही चुनाव का गणित</SH>
+      <p>
+        गांव में आदत CSC जाने की होती है, पर seeding के मामले में यह समझ लीजिए — CSC आपके लिए status
+        देख सकता है, form भरने में मदद कर सकता है, पर mapper में entry आखिरकार आपका <strong>बैंक</strong> ही
+        भेजता है। इसलिए seeding करानी हो तो सीधे उस बैंक की शाखा जाना एक कदम बचाता है। CSC तब काम का
+        है जब आपको सिर्फ जांचना हो कि गड़बड़ कहां है — या जब बैंक दूर हो और पहले यह पक्का करना हो कि चक्कर
+        लगाना बनता भी है या नहीं। एक और बारीकी — बैंक mitra/BC point पर भी कई जगह seeding consent लिया
+        जाता है, पर वहां से acknowledgement नंबर मिलना मुश्किल होता है — और बिना रसीद के follow-up कमजोर
+        पड़ता है। जहां से रसीद मिले, वहीं से काम कराइए।
+      </p>
 
       <SH>Seeding हो गई — अब आगे क्या?</SH>
       <p>
@@ -279,7 +313,17 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
         myAadhaar portal से; NPCI mapper और BASE की जानकारी{' '}
         <a href="https://www.npci.org.in" target="_blank" rel="noopener noreferrer">npci.org.in</a> से; DBT
         व्यवस्था{' '}
-        <a href="https://dbtbharat.gov.in" target="_blank" rel="noopener noreferrer">dbtbharat.gov.in</a> से।
+        <a href="https://dbtbharat.gov.in" target="_blank" rel="noopener noreferrer">dbtbharat.gov.in</a> से;
+        23वीं किस्त (20 जून 2026, ₹18,880 करोड़ / 9.44 करोड़ परिवार) और record-mismatch वाले आंकड़े कृषि
+        मंत्रालय के हवाले से छपी खबरों (जैसे{' '}
+        <a
+          href="https://www.bhaskarenglish.in/local/uttar-pradesh/news/pm-kisan-24th-installment-benefit-mistakes-delay-farmers-yojana-138397214.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Dainik Bhaskar की यह report
+        </a>
+        ) से।
         बैंक-दर-बैंक form का नाम और online सुविधा अलग हो सकती है — आखिरी बार हमने यह सब{' '}
         {new Date(article.modifiedTime).toLocaleDateString('hi-IN')} को मिलाया था।
       </p>
