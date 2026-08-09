@@ -198,8 +198,8 @@ export default function KisanKarjMafiList2027({ article }: { article: HindiArtic
           बेहतर है।
         </SI>
         <SI n={2}>
-          नया कर्ज लेना हो तो पहले <Link href="/articles/KisanRinKahaSeLe2026">यह guide</Link> पढ़ें — कौन
-          सा loan कहां से, किस दर पर।
+          नया कर्ज लेना हो तो कौन सा loan कहां से और किस दर पर मिलता है, इसका पूरा तुलनात्मक हिसाब{' '}
+          <Link href="/articles/KisanRinKahaSeLe2026">इस page पर देख लें</Link>।
         </SI>
         <SI n={3}>
           याद रखिए — महाराष्ट्र model में नियमित चुकाने वालों को ₹50,000 incentive मिल रहा है। यानी अब
@@ -207,18 +207,18 @@ export default function KisanKarjMafiList2027({ article }: { article: HindiArtic
         </SI>
       </StepList>
 
-      <SH>अक्सर पूछे जाने वाले सवाल</SH>
+      <SH>सवाल-जवाब — जो उलझनें सबसे ज्यादा आती हैं</SH>
       <FAQBlock faqs={FAQS} />
 
       <p className="text-xs text-[var(--color-text-muted)] italic">
-        Sources: महाराष्ट्र Budget 2026-27 analysis (
+        इस लेख की जानकारी कहां से आई — महाराष्ट्र Budget 2026-27 का विश्लेषण (
         <a href="https://prsindia.org/budgets/states/maharashtra-budget-analysis-2026-27" target="_blank" rel="noopener noreferrer">
           PRS Legislative Research
         </a>
-        ), RBI Internal Working Group report on farm loan waivers (2019) की public reporting, एवं राज्य
-        सरकारों की घोषणाओं की news coverage। योजनाओं की शर्तें GR जारी होने पर बदल सकती हैं — अंतिम पुष्टि
-        अपने बैंक और राज्य के कृषि/सहकारिता विभाग से करें। Last verified:{' '}
-        {new Date(article.modifiedTime).toLocaleDateString('hi-IN')}.
+        ), farm loan waivers पर RBI Internal Working Group report (2019) की public reporting, और राज्य
+        सरकारों की घोषणाओं की news coverage। योजनाओं की शर्तें GR जारी होने पर बदल सकती हैं, इसलिए
+        अंतिम पुष्टि अपने बैंक और राज्य के कृषि/सहकारिता विभाग से ही करें — हमने ये तथ्य आखिरी बार{' '}
+        {new Date(article.modifiedTime).toLocaleDateString('hi-IN')} को मिलाए थे।
       </p>
 
       <RelatedArticles articles={RELATED} />
