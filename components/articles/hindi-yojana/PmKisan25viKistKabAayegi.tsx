@@ -17,7 +17,7 @@ const FAQS = [
   },
   {
     q: 'बिना registration number के status कैसे देखें?',
-    a: 'pmkisan.gov.in के "Know Your Status" में registration number चाहिए, लेकिन वहीं "Know your registration no." का विकल्प भी है — आधार या mobile से निकल जाता है। पूरा तरीका हमारी मोबाइल से status जांचने वाली guide में है।',
+    a: 'pmkisan.gov.in के "Know Your Status" में registration number चाहिए, लेकिन वहीं "Know your registration no." का विकल्प भी है — आधार या mobile से निकल जाता है। पूरा तरीका मोबाइल से status जांचने वाले page पर step-by-step दिया है।',
   },
   {
     q: 'गांव की पूरी सूची एक साथ कहां दिखती है?',
@@ -130,7 +130,7 @@ export default function PmKisan25viKistKabAayegi({ article }: { article: HindiAr
         <SI n={1}>
           <strong>eKYC की स्थिति देखें</strong> — portal के "Know Your Status" में eKYC का column YES होना
           चाहिए। NO है तो OTP से (आधार-linked mobile जरूरी) या CSC पर biometric से करवा लें। तरीका{' '}
-          <Link href="/articles/hindi/ekyc-mobile-se">eKYC मोबाइल से</Link> guide में है।
+          <Link href="/articles/hindi/ekyc-mobile-se">eKYC मोबाइल से</Link> वाले लेख में step-by-step है।
         </SI>
         <SI n={2}>
           <strong>बैंक खाते की आधार seeding जांचें</strong> — DBT का पैसा उसी खाते में जाता है जो NPCI mapper
@@ -270,7 +270,7 @@ export default function PmKisan25viKistKabAayegi({ article }: { article: HindiAr
         आवेदन पूरा होगा, उतनी जल्दी आप आगे की किस्तों के दायरे में आएंगे।
       </p>
 
-      <SH>यह पैसा किसे मिलता है, किसे नहीं — एक नजर में</SH>
+      <SH>यह पैसा किसे मिलता है, किसे नहीं — साफ-साफ समझिए</SH>
       <p>
         कई लोग महीनों इंतजार करते रहते हैं, जबकि नियम के हिसाब से वे दायरे में ही नहीं होते। मोटे तौर पर
         योजना खेती करने वाले उस किसान परिवार के लिए है जिसके नाम जमीन का record दर्ज है, और लाभ परिवार में

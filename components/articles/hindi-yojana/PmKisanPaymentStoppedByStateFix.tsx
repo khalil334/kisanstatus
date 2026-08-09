@@ -324,7 +324,7 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
         दरवाजे खुलते हैं — इसलिए टालिए मत।
       </p>
 
-      <SH>निचोड़ — एक नजर में</SH>
+      <SH>आखिर में — पूरी बात का सार</SH>
       <p>
         "Installment payment stopped by state" का मतलब निष्कासन नहीं, राज्य की जांच में लगी अस्थायी रोक
         है। वजह पांच में से कोई एक होती है — नाम mismatch, जमीन record, अपात्रता का flag, अधूरी
