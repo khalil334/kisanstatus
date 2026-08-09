@@ -24,7 +24,7 @@ const FAQS = [
   },
   {
     q: 'माफी के बाद CIBIL score ठीक हो जाता है?',
-    a: 'Loan settle होने से default का दाग हल्का जरूर होता है, लेकिन record में waiver का जिक्र रह सकता है। नया loan लेते समय बैंक पूरी history देखता है। इसलिए हो सके तो नियमित repayment ही best रास्ता है — कई राज्य उसका इनाम भी दे रहे हैं।',
+    a: 'Loan settle होने से default का दाग हल्का जरूर होता है, लेकिन record में waiver का जिक्र रह सकता है। नया loan लेते समय बैंक पूरी history देखता है। इसीलिए हो सके तो नियमित repayment ही best रास्ता है — कई राज्य उसका इनाम भी दे रहे हैं।',
   },
   {
     q: 'नाम list में आ गया — अब मुझे क्या करना होगा?',
@@ -250,7 +250,7 @@ export default function KisanKarjMafiList2027({ article }: { article: HindiArtic
         किसानों को one-time settlement पर 25% छूट मिली थी। बाद में CAG की audit report में उस
         scheme की खामियां भी उजागर हुईं — कई eligible किसान छूट गए, कई ineligible को फायदा मिल
         गया। तभी से हर नई माफी में सत्यापन के पेंच बढ़ते गए हैं। आधार-linking, biometric सत्यापन,
-        bank-record से मिलान — यह सब उसी सबक का नतीजा है। निष्कर्ष साफ है: प्रक्रिया धीमी इस डर से है
+        bank-record से मिलान — यह सब उसी सबक का फल है। निष्कर्ष साफ है: प्रक्रिया धीमी इस डर से है
         कि गलत हाथों में पैसा न चला जाए। आपके लिए सीख — कागज जितने साफ,
         रास्ता उतना छोटा।
       </p>
@@ -435,7 +435,7 @@ export default function KisanKarjMafiList2027({ article }: { article: HindiArtic
           <Link href="/articles/KisanRinKahaSeLe2026">इस page पर देख लें</Link>।
         </SI>
         <SI n={3}>
-          याद रखिए — महाराष्ट्र model में नियमित चुकाने वालों को ₹50,000 incentive मिल रहा है। मतलब अब
+          याद रखिए — महाराष्ट्र model में नियमित चुकाने वालों को ₹50,000 incentive मिल रहा है। अर्थात अब
           discipline का भी इनाम है, सिर्फ default का नहीं।
         </SI>
       </StepList>

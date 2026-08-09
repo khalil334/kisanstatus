@@ -10,12 +10,12 @@ const FAQS = [
     a: 'नहीं। बजट 2025-26 में ब्याज सहायता (Modified Interest Subvention Scheme) की सीमा ₹3 लाख से ₹5 लाख हुई है — अब ₹5 लाख तक के crop loan पर सस्ती दर मिल सकती है। लेकिन आपके card की sanctioned limit बैंक ही बढ़ाता है, वह भी आपकी जमीन, फसल और repayment record देखकर। Branch जाकर enhancement की request करनी पड़ती है।',
   },
   {
-    q: 'ब्याज दर असल में कितनी बैठती है?',
+    q: 'ब्याज दर हकीकत में कितनी बैठती है?',
     a: 'Subvention के दायरे वाले crop loan पर बैंक करीब 7% सालाना लेता है; समय पर चुकाने पर 3% की छूट (Prompt Repayment Incentive) मिलाकर असरदार दर लगभग 4% रह जाती है। सीमा से ऊपर की रकम पर बैंक अपनी सामान्य दर लगाता है।',
   },
   {
     q: 'बिना जमीन गिरवी रखे कितनी रकम मिलती है?',
-    a: 'RBI के निर्देश के तहत collateral-free सीमा तय होती है — उसके ऊपर की रकम पर बैंक जमीन/जमानत मांग सकता है। आपकी branch में मौजूदा collateral-free सीमा कितनी चल रही है, यह वहीं से लिखित में पूछ लें, क्योंकि यह समय-समय पर संशोधित होती है।',
+    a: 'RBI के निर्देश के तहत collateral-free सीमा तय होती है — उसके ऊपर की रकम पर बैंक जमीन/जमानत मांग सकता है। आपकी branch में मौजूदा collateral-free सीमा कितनी चल रही है, यह उधर से ही लिखित में पूछ लें, क्योंकि यह समय-समय पर संशोधित होती है।',
   },
   {
     q: 'Renewal और enhancement में क्या फर्क है?',
@@ -244,7 +244,7 @@ export default function KccLimitKaiseBadhaye3Se5Lakh({ article }: { article: Hin
         </li>
         <li>
           <strong>फसल का ब्योरा</strong> — कौन सी फसलें, कितने रकबे में। Cropping pattern बदला है
-          (गेहूं-धान से सब्जी/बागवानी) तो बताइए — scale of finance वहीं से बढ़ता है।
+          (गेहूं-धान से सब्जी/बागवानी) तो बताइए — scale of finance उधर से ही बढ़ता है।
         </li>
         <li>
           <strong>Repayment का साफ record</strong> — पिछले चक्रों में समय पर जमा-निकासी। यही आपकी बड़ी
@@ -254,7 +254,7 @@ export default function KccLimitKaiseBadhaye3Se5Lakh({ article }: { article: Hin
           <strong>लिखित enhancement आवेदन</strong> — मौखिक बात हवा हो जाती है। आवेदन दीजिए, received
           copy लीजिए।
         </li>
-        <li>Annual review के समय जाना कारगर है — बैंक वैसे भी उस समय limit re-assess करता है।</li>
+        <li>Annual review के समय जाना कारगर है — बैंक यूं भी उस समय limit re-assess करता है।</li>
       </UL>
 
       <Callout kind="field">
@@ -282,7 +282,7 @@ export default function KccLimitKaiseBadhaye3Se5Lakh({ article }: { article: Hin
       <Head2>कब जाएं branch — timing भी एक हथियार है</Head2>
       <UL>
         <li>
-          <strong>बढ़िया समय:</strong> आपके card के annual review/renewal के आसपास — तब आपकी file वैसे भी
+          <strong>बढ़िया समय:</strong> आपके card के annual review/renewal के आसपास — तब आपकी file यूं भी
           manager की मेज पर खुलती है, और उसी बैठक में enhancement की बात जोड़ना कम-से-कम घर्षण वाला
           रास्ता है।
         </li>
@@ -368,14 +368,14 @@ export default function KccLimitKaiseBadhaye3Se5Lakh({ article }: { article: Hin
 
       <Head2>Branch जाने से पहले की छोटी सी तैयारी</Head2>
       <p>
-        पूरा लेख एक लाइन में समेटें तो — सरकार ने रियायती दर का दायरा ₹5 लाख तक खोल दिया है; अब
+        पूरा लेख संक्षेप में समेटें तो — सरकार ने रियायती दर का दायरा ₹5 लाख तक खोल दिया है; अब
         उस दायरे में अपनी जगह बनाना आपका काम है। और वह काम खाली हाथ branch पहुंचने से नहीं होता।
         जाने से पहले ये चार खाने भर लीजिए — मामला एक बैठक में बनने की संभावना कई गुना बढ़ जाती है:
       </p>
       <UL>
         <li>
           <strong>मौजूदा sanctioned limit और आखिरी renewal की तारीख</strong> — दोनों KCC passbook पर लिखी
-          होती हैं। Renewal खुद से एक साल से ज्यादा पुराना हो, तो बात वहीं से शुरू करिए।
+          होती हैं। Renewal खुद से एक साल से ज्यादा पुराना हो, तो बात उधर से ही शुरू करिए।
         </li>
         <li>
           <strong>रकबा और मौजूदा फसल</strong> — खतौनी की ताजी नकल साथ हो। जमीन बढ़ी हो या बटाई का

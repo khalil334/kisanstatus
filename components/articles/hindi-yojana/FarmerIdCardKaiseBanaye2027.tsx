@@ -469,7 +469,7 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
 
       <Sec>Camp में जाने से पहले — 5 मिनट की तैयारी</Sec>
       <p>
-        गांव में camp लगे तो भीड़ में खाली हाथ मत पहुंचिए — आधे लोग वहीं से लौटाए जाते हैं क्योंकि
+        गांव में camp लगे तो भीड़ में खाली हाथ मत पहुंचिए — आधे लोग उसी जगह से लौटाए जाते हैं क्योंकि
         कोई कागज घर छूट गया। जाने से पहले तीन चीजें थैले में डाल लें — आधार card (original), ताजा
         खतौनी की नकल, बैंक passbook — और वह mobile साथ रखें जिसका नंबर आधार से जुड़ा है। घर के
         जिन बड़े-बूढ़ों के नाम जमीन है, उन्हें भी साथ ले जाएं — biometric उन्हीं का लगेगा, आपका नहीं।
@@ -543,7 +543,7 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
         <a href="https://agristack.gov.in" target="_blank" rel="noopener noreferrer">agristack.gov.in</a>{' '}
         (Ministry of Agriculture &amp; Farmers Welfare) और राज्य Farmer Registry portals (upfr.agristack.gov.in
         वगैरह) के registration flow से मिलाकर लिखी गई है। राज्य-विशेष rules बदलते रहते हैं,
-        इसलिए अपने राज्य के portal पर एक बार जरूर मिला लें (आखिरी जांच:{' '}
+        इस वजह से अपने राज्य के portal पर एक बार जरूर मिला लें (आखिरी जांच:{' '}
         {new Date(article.modifiedTime).toLocaleDateString('hi-IN')})।
       </p>
 

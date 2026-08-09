@@ -43,7 +43,7 @@ const FAQS = [
   },
   {
     q: 'शिकायत के लिए registered mobile जरूरी है क्या?',
-    a: 'नहीं, आधार नंबर या बैंक अकाउंट नंबर से भी query register हो जाती है। लेकिन registered mobile पास हो तो updates के SMS वहीं आते हैं, बेहतर यही है कि वो नंबर चालू रखें।',
+    a: 'नहीं, आधार नंबर या बैंक अकाउंट नंबर से भी query register हो जाती है। लेकिन registered mobile पास हो तो updates के SMS उसी नंबर पर आते हैं, बेहतर यही है कि वो नंबर चालू रखें।',
   },
   {
     q: 'गांव में network नहीं है, phone भी नहीं लगता — क्या करें?',
@@ -273,7 +273,7 @@ export default function PmKisanHelplineNumberComplaint({ article }: { article: H
         <p>
           मान लीजिए आपने online query डाली, एक महीना हो गया, कुछ नहीं हुआ। Helpline बोलती है &quot;process
           में है&quot;। ऐसे में सीधे अपने राज्य के Nodal Officer के office से संपर्क करना अक्सर काम कर जाता
-          है — क्योंकि आपका record असल में वहीं अटका होता है। पूरी राज्यवार list{' '}
+          है — क्योंकि आपका record दरअसल उसी दफ्तर में अटका होता है। पूरी राज्यवार list{' '}
           <Link href="/articles/PmKisanStateNodalOfficerList">इस page पर मिलेगी</Link>। साथ में अपने block
           के कृषि अधिकारी (Agriculture Officer) से मिलना भी एक रास्ता है — खासकर land record वाली दिक्कतों
           में।
@@ -295,7 +295,7 @@ export default function PmKisanHelplineNumberComplaint({ article }: { article: H
         </p>
         <p>
           इसे पहला नहीं, आखिरी हथियार समझिए। पहले PM Kisan के अपने Help Desk और Nodal Officer वाले रास्ते
-          आजमाएं — वहीं record होता है, वहीं जल्दी solve होता है। लेकिन जब महीनों बाद भी बात न बने, तब
+          आजमाएं — उधर record होता है, उधर ही जल्दी solve होता है। लेकिन जब महीनों बाद भी बात न बने, तब
           CPGRAMS पर पुरानी query का reference देते हुए शिकायत डालें। मंत्रालय स्तर से आई query पर नीचे के
           office अक्सर तेजी से हिलते हैं — यह जमीनी सच है।
         </p>
@@ -378,7 +378,7 @@ export default function PmKisanHelplineNumberComplaint({ article }: { article: H
 
       <Head2>Query का status कैसे track करें?</Head2>
       <p>
-        जिस page से query register की थी, वहीं <strong>Know the Query Status</strong> का option है। अपना
+        जिस page से query register की थी, उसी page पर <strong>Know the Query Status</strong> का option है। अपना
         आधार / अकाउंट / मोबाइल नंबर डालिए, शिकायत की current स्थिति दिख जाएगी। हफ्ते में एक बार check करना
         काफी है। रोज देखने से जल्दी solve नहीं होगा — यह बात किस्त के status पर भी लागू होती है।
       </p>
@@ -397,7 +397,7 @@ export default function PmKisanHelplineNumberComplaint({ article }: { article: H
       <p>
         Helpline पर हिंदी और अंग्रेजी दोनों में बात हो जाती है — जिस भाषा में आप सहज हैं, उसी में बोलिए।
         बात शुरू करते ही तीन चीजें बोल दें: नाम, राज्य-जिला, और आधार/registered mobile — इससे सामने वाला
-        आपका record तुरंत खोल लेता है। फिर समस्या एक लाइन में।
+        आपका record तुरंत खोल लेता है। फिर समस्या एक ही वाक्य में।
       </p>
       <p>
         Call खत्म करने से पहले दो सवाल जरूर पूछिए — पहला, "मेरी तरफ से अब क्या करना है?" (कई बार जवाब होता
@@ -427,7 +427,7 @@ export default function PmKisanHelplineNumberComplaint({ article }: { article: H
         <li>आधार नंबर / PM Kisan registration नंबर — जो भी portal पर चल रहा है।</li>
         <li>राज्य, जिला, ब्लॉक और गांव का नाम — record इसी से खुलता है।</li>
         <li>
-          समस्या एक लाइन में — “beneficiary status में नाम है, पर पिछली किस्त खाते में नहीं आई” जैसा साफ
+          समस्या एक ही वाक्य में — “beneficiary status में नाम है, पर पिछली किस्त खाते में नहीं आई” जैसा साफ
           वाक्य।
         </li>
         <li>आखिरी किस्त कब आई थी — तारीख या महीना, passbook से देखकर।</li>

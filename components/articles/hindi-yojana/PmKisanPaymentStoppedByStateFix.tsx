@@ -265,7 +265,7 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
         <Link href="/articles/hindi/helpline-shikayat">शिकायत guide</Link> में लिखा है।
       </Rx>
       <Rx step="3" title="ब्लॉक/तहसील — अक्सर निर्णायक">
-        रोक <em>राज्य</em> ने लगाई है, तो ताला भी वहीं खुलेगा। अपने ब्लॉक के कृषि अधिकारी या तहसील में
+        रोक <em>राज्य</em> ने लगाई है, तो ताला भी वहां से ही खुलेगा। अपने ब्लॉक के कृषि अधिकारी या तहसील में
         पटवारी से मिलिए और साफ पूछिए — मेरा आवेदन किस जांच में रुका है? जमीन का मामला हो तो खतौनी की
         नकल साथ ले जाएं। जिले से बात न बने तो{' '}
         <Link href="/articles/PmKisanStateNodalOfficerList">State Nodal Officer</Link> अगली सीढ़ी है।

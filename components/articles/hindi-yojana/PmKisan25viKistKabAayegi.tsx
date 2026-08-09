@@ -101,7 +101,7 @@ export default function PmKisan25viKistKabAayegi({ article }: { article: HindiAr
         dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
       />
       <p>
-        25वीं किस्त की कोई आधिकारिक तारीख अभी घोषित नहीं हुई है — यह पहली लाइन में इसलिए लिख रहे हैं
+        25वीं किस्त की कोई आधिकारिक तारीख अभी घोषित नहीं हुई है — यह पहली लाइन में इसी कारण लिख रहे हैं
         ताकि आपका समय बचे। जो भी website या YouTube channel आपको पक्की date बता रहा है, वह अंदाज़ा
         लगा रहा है — और अंदाज़े पर योजना का पैसा नहीं चलता।
       </p>
@@ -293,7 +293,7 @@ export default function PmKisan25viKistKabAayegi({ article }: { article: HindiAr
       <Note tone="danger">
         भारी नुकसान यहीं होता है — कोई फोन करके कहता है कि "किस्त निकलवा देंगे, थोड़ा खर्चा लगेगा"।
         योजना में किसी बिचौलिये की जरूरत ही नहीं है। न किस्त जल्दी निकलवाई जा सकती है, न किसी शुल्क से रुका
-        भुगतान चालू होता है। जो OTP, आधार नंबर या बैंक details मांगे — बात वहीं खत्म कर दीजिए, और शिकायत
+        भुगतान चालू होता है। जो OTP, आधार नंबर या बैंक details मांगे — बात उसी पल खत्म कर दीजिए, और शिकायत
         का रास्ता <Link href="/articles/hindi/helpline-shikayat">हेल्पलाइन guide</Link> से चुनिए।
       </Note>
 
