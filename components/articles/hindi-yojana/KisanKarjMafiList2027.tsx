@@ -16,7 +16,7 @@ const FAQS = [
   },
   {
     q: 'KCC का loan भी माफ होता है क्या?',
-    a: 'निर्भर करता है scheme की शर्तों पर। ज्यादातर माफी योजनाएं short-term crop loan cover करती हैं — जिनमें KCC से लिया crop loan भी आ सकता है। Tractor loan और dairy loan — यानी term loans — आम तौर पर बाहर रहते हैं। अपनी scheme का GR पढ़ें।',
+    a: 'निर्भर करता है scheme की शर्तों पर। ज्यादातर माफी योजनाएं short-term crop loan cover करती हैं — जिनमें KCC से लिया crop loan भी आ सकता है। Tractor loan और dairy loan — अर्थात् term loans — आम तौर पर बाहर रहते हैं। अपनी scheme का GR पढ़ें।',
   },
   {
     q: 'कोई agent बोल रहा है पैसे देकर नाम डलवा देगा — सच है?',
@@ -178,7 +178,7 @@ export default function KisanKarjMafiList2027({ article }: { article: HindiArtic
       <p>
         Historical context के लिए — देश-स्तर की आखिरी बड़ी माफी 2008 की ADWDRS थी (करीब ₹52,500 करोड़)।
         उसके बाद से सब कुछ राज्यों के हाथ में है। RBI बार-बार कह चुका है कि waivers से credit culture
-        बिगड़ता है, फिर भी चुनावों के आसपास घोषणाएं होती रहती हैं। किसान के लिए मतलब की बात इतनी है:{' '}
+        बिगड़ता है, फिर भी चुनावों के आसपास घोषणाएं होती रहती हैं। किसान के लिए काम की बात इतनी है:{' '}
         <strong>घोषणा ≠ पैसा</strong>। घोषणा के बाद GR (शासनादेश) आता है, फिर budget, फिर list — इसमें
         महीनों लगते हैं।
       </p>
@@ -250,7 +250,7 @@ export default function KisanKarjMafiList2027({ article }: { article: HindiArtic
         किसानों को one-time settlement पर 25% छूट मिली थी। बाद में CAG की audit report में उस
         scheme की खामियां भी उजागर हुईं — कई eligible किसान छूट गए, कई ineligible को फायदा मिल
         गया। तभी से हर नई माफी में सत्यापन के पेंच बढ़ते गए हैं। आधार-linking, biometric सत्यापन,
-        bank-record से मिलान — यह सब उसी सबक का नतीजा है। निचोड़ साफ है: प्रक्रिया धीमी इस डर से है
+        bank-record से मिलान — यह सब उसी सबक का नतीजा है। निष्कर्ष साफ है: प्रक्रिया धीमी इस डर से है
         कि गलत हाथों में पैसा न चला जाए। आपके लिए सीख — कागज जितने साफ,
         रास्ता उतना छोटा।
       </p>
@@ -367,7 +367,7 @@ export default function KisanKarjMafiList2027({ article }: { article: HindiArtic
       <p>
         हर scheme का GR अपनी सीमाएं खुद तय करता है, पर अब तक की लगभग हर माफी में एक pattern रहा
         है। अंदर आता है — <strong>short-term crop loan</strong> (फसल उगाने के लिए लिया साल भर का कर्ज),
-        चाहे वह cooperative society से हो या KCC से। बाहर रहते हैं — tractor/machinery जैसे term
+        चाहे वह cooperative society से हो या KCC से। बाहर रहते हैं — tractor/machinery सरीखे term
         loans, dairy-poultry के business loans, gold loan (चाहे खेती के नाम पर लिया हो), और साहूकार
         से लिया उधार — क्योंकि उसका कोई बैंक record ही नहीं।
       </p>
@@ -427,7 +427,7 @@ export default function KisanKarjMafiList2027({ article }: { article: HindiArtic
       <StepList>
         <SI n={1}>
           कर्ज महंगे साहूकार से है तो पहले उसे <Link href="/articles/KisanCreditCardOnlineApply2026">KCC</Link>{' '}
-          जैसे सस्ते रास्ते में shift करने की सोचें — 4% तक effective interest वाला crop loan हर हाल में
+          की तरह के सस्ते रास्ते में shift करने की सोचें — 4% तक effective interest वाला crop loan हर हाल में
           बेहतर है।
         </SI>
         <SI n={2}>
@@ -435,7 +435,7 @@ export default function KisanKarjMafiList2027({ article }: { article: HindiArtic
           <Link href="/articles/KisanRinKahaSeLe2026">इस page पर देख लें</Link>।
         </SI>
         <SI n={3}>
-          याद रखिए — महाराष्ट्र model में नियमित चुकाने वालों को ₹50,000 incentive मिल रहा है। यानी अब
+          याद रखिए — महाराष्ट्र model में नियमित चुकाने वालों को ₹50,000 incentive मिल रहा है। मतलब अब
           discipline का भी इनाम है, सिर्फ default का नहीं।
         </SI>
       </StepList>
