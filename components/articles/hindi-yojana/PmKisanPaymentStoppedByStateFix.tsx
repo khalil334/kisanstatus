@@ -342,16 +342,16 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
         पर नजर रखिए। नीचे के सवाल-जवाब में वे उलझनें हैं जो किसान सबसे ज्यादा पूछते हैं।
       </p>
 
-      <SH>अक्सर पूछे जाने वाले सवाल</SH>
+      <SH>रुकी किस्त पर किसानों की आम उलझनें — छोटे जवाब</SH>
       <FAQBlock faqs={FAQS} />
 
       <p className="text-xs text-[var(--color-text-muted)] italic">
-        Source: भुगतान/status की प्रक्रिया{' '}
+        भुगतान और status की प्रक्रिया की जानकारी{' '}
         <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer">pmkisan.gov.in</a> (कृषि
-        एवं किसान कल्याण मंत्रालय) पर आधारित; DBT भुगतान का ढांचा{' '}
-        <a href="https://dbtbharat.gov.in" target="_blank" rel="noopener noreferrer">dbtbharat.gov.in</a>।
-        राज्य-स्तरीय verification की प्रक्रिया राज्य-दर-राज्य थोड़ी अलग होती है। Last verified:{' '}
-        {new Date(article.modifiedTime).toLocaleDateString('hi-IN')}.
+        एवं किसान कल्याण मंत्रालय) से ली गई है, और DBT भुगतान के ढांचे के लिए{' '}
+        <a href="https://dbtbharat.gov.in" target="_blank" rel="noopener noreferrer">dbtbharat.gov.in</a> देखा
+        गया। राज्य-स्तरीय verification राज्य-दर-राज्य थोड़ा अलग चलता है — इस page की जानकारी{' '}
+        {new Date(article.modifiedTime).toLocaleDateString('hi-IN')} तक की है।
       </p>
 
       <RelatedArticles articles={RELATED} />
