@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
 // Self-contained article — कोई shared component import नहीं।
@@ -71,6 +72,24 @@ const FAQ_SCHEMA = {
   })),
 };
 
+function Figure({ src, alt, caption }: { src: string; alt: string; caption: string }) {
+  return (
+    <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+      <Image
+        src={src}
+        alt={alt}
+        width={1200}
+        height={675}
+        className="w-full object-cover"
+        sizes="(max-width: 768px) 100vw, 768px"
+      />
+      <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+        {caption}
+      </figcaption>
+    </figure>
+  );
+}
+
 function SH({ children }: { children: React.ReactNode }) {
   return (
     <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
@@ -129,6 +148,12 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
         <strong>Know your registration no.</strong> → mobile number + OTP → registration number मिला → अब
         status देखें। कुल 5 मिनट का काम।
       </div>
+
+      <Figure
+        src="/images/articles/hindi-yojna/status-check-mobile-se/phone-status-check.webp"
+        alt="मोबाइल पर PM Kisan status check करता किसान"
+        caption="पूरा काम phone से ही हो जाता है — CSC जाने की जरूरत नहीं"
+      />
 
       <SH>शुरू करने से पहले — तीन चीजें पास रखें</SH>
       <p>
@@ -192,6 +217,12 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
         है। घर में किसी और के phone पर भी लिख कर रख दें — अगली किस्त के time यही दो मिनट बचेंगे।
       </p>
 
+      <Figure
+        src="/images/articles/hindi-yojna/status-check-mobile-se/know-registration.webp"
+        alt="Know your registration number वाला page — mobile या Aadhaar से नंबर निकालें"
+        caption="Mobile या Aadhaar — दोनों से registration number निकल जाता है"
+      />
+
       <SH>Step 2 — अब स्टेटस देखें</SH>
       <p>
         Registration number हाथ में आ गया? बढ़िया। वापस <strong>Know Your Status</strong> page पर आइए।
@@ -231,6 +262,12 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
           </a>
         </div>
       </div>
+
+      <Figure
+        src="/images/articles/hindi-yojna/status-check-mobile-se/status-fields.webp"
+        alt="Status के तीन मुख्य field — eKYC, bank seeding, land seeding"
+        caption="तीनों field YES हों तभी किस्त आती है — कोई भी NO हो तो पहले उसे ठीक करें"
+      />
 
       <SH>Screen पर जो दिख रहा है, उसे कैसे पढ़ें?</SH>
       <p>
@@ -390,6 +427,12 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
         हैं और कुछ भी पूरा नहीं होता।
       </div>
 
+      <Figure
+        src="/images/articles/hindi-yojna/status-check-mobile-se/otp-screen.webp"
+        alt="Phone पर OTP verification screen"
+        caption="OTP हमेशा registered mobile number पर ही आता है"
+      />
+
       <SH>OTP नहीं आ रहा — तीन common कारण</SH>
       <p>
         हमारे पास आने वाले सवालों में यह टॉप पर है। एक किसान भाई ने बताया था — बेटे के phone से check करने
@@ -472,6 +515,12 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
         लौट जाता है। यहां तक आकर भी बात न बने तो portal की grievance और हेल्पलाइन <strong>155261</strong> पर
         शिकायत दर्ज कराइए और शिकायत संख्या संभालकर रखिए।
       </p>
+
+      <Figure
+        src="/images/articles/hindi-yojna/status-check-mobile-se/csc-center.webp"
+        alt="CSC centre पर operator किसान की मदद करते हुए"
+        caption="Phone से न हो पाए तो नजदीकी CSC पर यही काम हो जाता है"
+      />
 
       <SH>घर के बड़े-बुजुर्ग का status देखना हो तो</SH>
       <p>
