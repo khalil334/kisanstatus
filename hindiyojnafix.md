@@ -1,35 +1,23 @@
 https://github.com/khalil334/kisanstatus/tree/main/components%2Farticles%2Fhindi-yojana
 1 article fix karny ke bad wo merge karke ye file update karke phr next article py kam start kia kark
-मेरे KisanStatus.com के 15 Hindi articles (hindi-yojana folder) में एक ही template pattern बार-बार repeat हो रहा है जिससे content AI-generated / mechanical लगता है। इन सब articles को एक-एक करके revise करो, लेकिन सिर्फ नीचे दी गई rules follow करते हुए — facts, data, और accuracy बिल्कुल same रखनी है:
+मेरे KisanStatus.com के hindi-yojana folder के सभी 15 articles को revise करो। नीचे की rules strictly follow करो — facts, dates, amounts, official links बिल्कुल same रखो, सिर्फ style और structure change करो:
 
-1. **Structure vary करो** — हर article में same pattern (anecdote → table → steps → FAQ → sources) मत रखो। कुछ articles में table हटा दो, कुछ में steps को paragraphs में merge कर दो, कुछ में FAQ को inline Q&A style में लिखो।
-2. **FAQ heading change करो** — हर जगह "अक्सर पूछे जाने वाले सवाल" मत लिखो। कहीं "आपके सवाल", कहीं "जानकारी", कहीं "सवाल-जवाब", कहीं "सामान्य सवाल" use करो।
-3. **Intro anecdotes unique बनाओ** — "रामलाल जी (नाम बदला हुआ)" जैसे generic AI-style fillers हटाओ। हर article का opening अलग tone में हो — कहीं direct question से शुरू करो, कहीं real scenario से, कहीं bold statement से, कहीं personal observation से।
-4. **Scam warnings customize करो** — same 4-point OTP warning ("OTP किसी को नहीं, कोई link नहीं...") हर article में copy-paste मत करो। हर topic के हिसाब से warning को rewrite करो — words, order, और examples अलग रखो।
-5. **Cross-linking कम करो** — हर 2-3 line में "guide में है" या "हमारी guide में" मत लिखो। सिर्फ जब genuinely ज़रूरत हो तब ही link mention करो, और हर बार अलग phrase use करो (जैसे "पूरा तरीका यहाँ है", "detail में यहाँ पढ़ें", "इस page पर समझाया है")।
-6. **Source citations vary करो** — "Source: pmkisan.gov.in ... Last verified: [date]" का same block हर article में मत रखो। कहीं sources को paragraph के बीच में mention करो, कहीं footnote style में, कहीं simple "जानकारी का स्रोत" line में।
-7. **Hinglish mix natural रखो** — grammar बहुत "textbook perfect" नहीं होनी चाहिए। Thoda colloquial, thoda rough, jaise ek real Indian writer likhta hai — lekin readability compromise न हो।
-8. **Tables optional रखो** — comparison table हर article में ज़रूरी नहीं। जहाँ table से clarity बढ़ती है वहीं रखो, बाकी में bullet points या bold headings use करो।
-9. **Ending vary करो** — हर article का conclusion अलग हो। कहीं short summary, कहीं actionable checklist, कहीं direct advice, कहीं caution note।
+1. **Har article minimum 2000+ mixed words (Hindi+English) hona chahiye** — thin content bilkul nahi. Agar koi article 2000 se kam ho toh usme genuinely useful detail add karo: real examples, state-wise differences, document checklists, timeline scenarios, common mistakes, ya field observations. Filler mat bharto.
 
-Output: हर article को revise करके same file format (TSX component) में वापस दो। कोई fact, date, amount, या official source link change मत करना — सिर्फ writing style, structure, और repetition fix करना है।
+2. **Template repetition hatao** — har article ka structure alag ho. Kisi mein table ho, kisi mein nahi. Kisi mein FAQ ho, kisi mein inline Q&A, kisi mein bold tip boxes. Har article ka intro, body flow, aur ending bilkul unique ho.
 
----
-## Status (updated 2026-08-09)
-सभी 15 articles revise हो चुके हैं ✅ (PRs #140s–#159)
+3. **FAQ heading har jagah alag ho** — "अक्सर पूछे जाने वाले सवाल" sirf 2-3 articles mein max use karo. Baaki mein "आपके सवाल", "जानकारी", "सामान्य सवाल", "सवाल-जवाब", "मुख्य बातें" jaise alag headings use karo.
 
-- [x] FarmerIdCardKaiseBanaye2027
-- [x] GehuKaRateAajMspVsMandiBhav
-- [x] KccLimitKaiseBadhaye3Se5Lakh
-- [x] KisanKarjMafiList2027
-- [x] MukhyamantriKisanKalyanYojanaMp
-- [x] NamoShetkariYojanaMaharashtra
-- [x] NpciAadhaarSeedingDbtPayment
-- [x] PmKisan25viKistKabAayegi
-- [x] PmKisanEkycMobileSeKaiseKare
-- [x] PmKisanHelplineNumberComplaint
-- [x] PmKisanNewRegistration2027
-- [x] PmKisanPaymentStoppedByStateFix (#158)
-- [x] PmKisanRecoveryNoticePaisaWapas (#159)
-- [x] PmKisanStatusCheckMobileNumberSe (#157)
-- [x] TractorSubsidy2027StateWiseList
+4. **Scam warnings har article mein alag words mein likho** — same 4-point OTP warning copy-paste mat karo. Har topic ke hisaab se customize karo — words, order, examples sab alag hona chahiye.
+
+5. **Cross-linking kam aur varied karo** — "guide में है" / "हमारी guide में" har 2-3 line mein mat likho. Sirf jab genuinely zaroorat ho tab link karo, aur har baar alag phrase use karo.
+
+6. **Source citations alag tarah se karo** — "Source: ... Last verified: ..." ka same block har jagah mat rakho. Kahi sources paragraph ke beech mein mention karo, kahi footnote style mein, kahi simple closing line mein.
+
+7. **Intro unique banao** — "रामलाल जी (नाम बदला हुआ)" jaise generic AI fillers hatao. Har article ka opening alag tone mein ho — direct question, bold statement, real scenario, personal observation, ya surprising fact se shuru karo.
+
+8. **Hinglish natural rakhna** — grammar "textbook perfect" mat rakho. Thoda colloquial aur rough hona chahiye, jaise ek real Indian writer likhta hai, lekin readability compromise nahi honi chahiye.
+
+9. **Conclusion har article mein alag ho** — kahi short summary, kahi actionable checklist, kahi direct advice, kahi caution note, kahi "agla kya karein" type next steps.
+
+Output: Har article ko same TSX component format mein wapas do. Koi fact, date, amount, ya official source link change mat karna.
