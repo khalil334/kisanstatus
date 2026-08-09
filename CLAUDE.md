@@ -18,7 +18,7 @@ farmer-useful + traffic keywords, no invented facts/numbers.
 | 6 | NpciAadhaarSeedingDbtPayment | **done** — 2160 words, 9 H2, link-vs-seeding comparison table, gaon-register analogy, counter-par-kya-bolen script, 4 Inactive-reason deep dive, 3-minute pre-kist check, CalcBanner, 12 FAQ |
 | 7 | PmKisanRecoveryNoticePaisaWapas | **done** — 2050 words, 10 H2, asli-vs-thagi notice check, 3-raste decision table, objection documents checklist, refund-ke-baad 3 kaam, rakam-milaan warning, taalne-ki-keemat section, 12 FAQ |
 | 8 | KccLimitKaiseBadhaye3Se5Lakh | **done** — 2056 words, 10 H2, subvention-cap vs sanctioned-limit fark, sahukar-vs-KCC byaj tulna, limit-formula 3 cheezein, branch-manager ki nazar section, pashupalan/allied route, 4% dar bachane ka niyam, aaj-ka-ek-kaam closing, 12 FAQ |
-| 9 | GehuKaRateAajMspVsMandiBhav | pending |
+| 9 | GehuKaRateAajMspVsMandiBhav | **done** — ~2050 words, 12 H2, MSP-kaise-tay-hota-hai (CACP) section, 3-raste comparison table (MSP kendra vs mandi vs vyapari), quality-katauti ka ganit, bechu-ya-roku 3-sawaal framework, WDRA godown receipt-loan tip, eNAM section, bikri-din checklist, mandi-bhav CalcBanner, 12 FAQ, no live rates invented |
 | 10 | NamoShetkariYojanaMaharashtra | pending |
 | 11 | MukhyamantriKisanKalyanYojanaMp | pending |
 | 12 | FarmerIdCardKaiseBanaye2027 | pending |
