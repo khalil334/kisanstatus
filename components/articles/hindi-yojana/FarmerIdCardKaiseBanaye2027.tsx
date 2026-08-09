@@ -167,6 +167,34 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
         खरीद-बिक्री का दस्तावेज है — यह अकेला काफी नहीं, क्योंकि जब तक बैनामे के बाद नामांतरण
         कराकर खतौनी में नाम नहीं चढ़ा, सरकारी record की नजर में जमीन पुराने मालिक की है।
       </p>
+      <div className="my-4 overflow-x-auto">
+        <table className="w-full text-sm border-collapse">
+          <thead>
+            <tr className="bg-[var(--color-bg-alt)]">
+              <th className="border border-[var(--color-border)] px-3 py-2 text-left">कागज</th>
+              <th className="border border-[var(--color-border)] px-3 py-2 text-left">यह क्या बताता है</th>
+              <th className="border border-[var(--color-border)] px-3 py-2 text-left">Registration में काम</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="border border-[var(--color-border)] px-3 py-2 font-medium">खसरा नंबर</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">खेत के टुकड़े का पता — जैसे घर का plot नंबर</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">Land details वाले खाने में यही भरना है</td>
+            </tr>
+            <tr>
+              <td className="border border-[var(--color-border)] px-3 py-2 font-medium">खतौनी</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">किस खसरे पर किसका नाम और कितना हिस्सा दर्ज है</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">सबसे ज्यादा काम की — verification इसी से मिलता है</td>
+            </tr>
+            <tr>
+              <td className="border border-[var(--color-border)] px-3 py-2 font-medium">रजिस्ट्री (बैनामा)</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">खरीद-बिक्री का दस्तावेज</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">अकेला काफी नहीं — नामांतरण के बाद खतौनी में नाम चढ़ना जरूरी</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <p>
         ताजा खतौनी निकालने के लिए अब तहसील जाना जरूरी नहीं — ज्यादातर राज्यों के bhulekh portal
         (UP का upbhulekh.gov.in, MP का mpbhulekh.gov.in जैसे) पर खसरा नंबर या नाम से online नकल
@@ -310,13 +338,6 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
         record में गांठ है तो वही गांठ screen पर दिखेगी।
       </p>
 
-      <SH>आगे का रास्ता — तीन काम, इसी हफ्ते</SH>
-      <StepList>
-        <SI n={1}>आज शाम आधार और खतौनी निकालकर नाम की spelling मिला लें — फर्क है तो पहले वह सुधार शुरू करें।</SI>
-        <SI n={2}>सब मिलता है तो अपने राज्य के portal पर account बनाकर registration जमा करें — या अगले camp/CSC का दिन पता करें।</SI>
-        <SI n={3}>Status पर नजर रखें — approve होते ही card download करके print और mobile दोनों में संभाल लें।</SI>
-      </StepList>
-
       <WB>
         एक ठगी जो इस registration के नाम पर चल निकली है — फोन आता है कि &quot;आपकी Farmer ID बननी
         है, आधार नंबर और अभी आया OTP बता दीजिए&quot;। समझ लीजिए — सरकारी व्यवस्था में कोई आपको phone
@@ -326,7 +347,14 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
       </WB>
 
       <SH>आपके सवाल, सीधे जवाब</SH>
-      <FAQBlock faqs={FAQS} />
+      <FAQBlock faqs={FAQS} variant="inline" />
+
+      <SH>आगे का रास्ता — तीन काम, इसी हफ्ते</SH>
+      <StepList>
+        <SI n={1}>आज शाम आधार और खतौनी निकालकर नाम की spelling मिला लें — फर्क है तो पहले वह सुधार शुरू करें।</SI>
+        <SI n={2}>सब मिलता है तो अपने राज्य के portal पर account बनाकर registration जमा करें — या अगले camp/CSC का दिन पता करें।</SI>
+        <SI n={3}>Status पर नजर रखें — approve होते ही card download करके print और mobile दोनों में संभाल लें।</SI>
+      </StepList>
 
       <p className="text-xs text-[var(--color-text-muted)] italic">
         जानकारी का स्रोत: पूरी प्रक्रिया{' '}
