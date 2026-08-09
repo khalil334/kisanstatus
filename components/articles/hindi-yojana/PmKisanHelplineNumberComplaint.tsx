@@ -339,7 +339,28 @@ export default function PmKisanHelplineNumberComplaint({ article }: { article: H
       </p>
 
       <SH>सामान्य सवाल — helpline और शिकायत पर</SH>
-      <FAQBlock faqs={FAQS} />
+      <FAQBlock faqs={FAQS} variant="inline" />
+
+      <SH>फोन उठाने से पहले — यह पर्ची भर लीजिए</SH>
+      <p>
+        शिकायत का नतीजा इस बात पर टिका है कि आपके पास जानकारी तैयार है या नहीं। नीचे की छह लाइनें एक
+        कागज़ पर लिख लें और वही कागज़ हाथ में रखकर call करें या query भरें — बात दोहराने और “बाद में
+        बताइए” सुनने की नौबत नहीं आएगी:
+      </p>
+      <StepList>
+        <SI n={1}>आधार नंबर / PM Kisan registration नंबर — जो भी portal पर चल रहा है।</SI>
+        <SI n={2}>राज्य, जिला, ब्लॉक और गांव का नाम — record इसी से खुलता है।</SI>
+        <SI n={3}>समस्या एक लाइन में — जैसे “beneficiary status में नाम है, पर पिछली किस्त खाते में नहीं आई”।
+        </SI>
+        <SI n={4}>आखिरी किस्त कब आई थी — तारीख या महीना, passbook से देखकर।</SI>
+        <SI n={5}>अब तक क्या-क्या कोशिश की — eKYC, seeding, CSC, पहले की query का reference नंबर।</SI>
+        <SI n={6}>Call/query की तारीख और जवाब — यह खाली छोड़िए, बात के तुरंत बाद भर दीजिए।</SI>
+      </StepList>
+      <p>
+        इसी पर्ची को हर follow-up में आगे बढ़ाते जाएं — तारीख, किससे बात हुई, क्या कहा गया। तीन-चार
+        entries के बाद यह पर्ची ही आपकी सबसे मजबूत दलील बन जाती है, क्योंकि तब आप अंदाज़े से नहीं,
+        record से बात कर रहे होते हैं।
+      </p>
 
       <p className="text-xs text-[var(--color-text-muted)] italic">
         एक जरूरी बात — यहां दी गई सभी contact details{' '}
