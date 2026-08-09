@@ -225,7 +225,7 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
       <T2>Counter पर ठीक-ठीक क्या बोलें — शब्द तैयार रखिए</T2>
       <p>
         शाखा में आधी लड़ाई शब्दों की है। "आधार link कर दो" कहने पर staff अक्सर KYC-link करके भेज देता है —
-        और mapper में entry हुए बिना किस्त वहीं की वहीं अटकी रहती है। Counter पर यह कहिए:
+        और mapper में entry हुए बिना किस्त जहां की तहां अटकी रहती है। Counter पर यह कहिए:
       </p>
       <Alert tone="good">
         "मुझे इस खाते में <strong>NPCI mapper में आधार seeding</strong> करवानी है, <strong>DBT भुगतान</strong>{' '}
@@ -329,7 +329,7 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
         सिर्फ जांचना हो कि गड़बड़ कहां है — या जब बैंक दूर हो और पहले यह पक्का करना हो कि चक्कर लगाना बनता
         भी है या नहीं। एक और बारीकी — बैंक mitra/BC point पर भी कई जगह seeding consent लिया जाता है, पर
         वहां से acknowledgement नंबर मिलना मुश्किल होता है — और बिना रसीद के follow-up कमजोर पड़ता है। जहां
-        से रसीद मिले, वहीं से काम कराइए।
+        से रसीद मिले, उसी से काम कराइए।
       </p>
 
       <T2>Seeding हो गई — अब आगे क्या?</T2>
@@ -346,7 +346,7 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
         एक आखिरी बात, जो अनुभव से कहते हैं — seeding एक बार की चीज नहीं, एक <em>स्थिति</em> है। खाता बदला,
         बैंक merge हुआ, खाता dormant हुआ — किसी भी घटना से mapping बदल या टूट सकती है। तो साल में दो बार,
         बुवाई और कटाई की तरह, myAadhaar खोलकर 2 मिनट का status-check कर लेने की आदत बना लीजिए। जितनी मेहनत
-        खेत के कागज संभालने में लगाते हैं, उसका सौवां हिस्सा इस digital कागज पर भी लगा दें — किस्त अटकने की
+        खेत के दस्तावेज़ संभालने में लगाते हैं, उसका सौवां हिस्सा इस digital कागज पर भी लगा दें — किस्त अटकने की
         प्रमुख वजह से हमेशा के लिए छुट्टी।
       </p>
 

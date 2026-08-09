@@ -45,7 +45,7 @@ const FAQS = [
     a: 'रुक सकता है, क्योंकि आधार, बैंक खाते और आवेदन का नाम मिलान होता है। इसे अनदेखा न करें — correction का रास्ता portal के correction form से या कृषि विभाग/CSC के जरिए है। जितनी जल्दी सुधरेगा, उतना कम इंतजार।',
   },
   {
-    q: 'मैं दूसरे राज्य में मजदूरी करता हूं, वहीं से status देख सकता हूं?',
+    q: 'मैं दूसरे राज्य में मजदूरी करता हूं, वहां बैठे-बैठे status देख सकता हूं?',
     a: 'हां। Portal internet पर है, कहीं से भी खुलेगा — शर्त एक ही है कि registered मोबाइल नंबर वाला SIM आपके पास चालू हो, क्योंकि OTP उसी पर आएगा। घर से बाहर निकलने से पहले वह SIM साथ रखना या नंबर update करा लेना समझदारी है।',
   },
   {
@@ -176,7 +176,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
           <strong>Get Mobile OTP</strong> दबाएं। OTP आएगा, उसे डालें।
         </Step>
         <Step n={5}>
-          Screen पर आपका <strong>registration number</strong> आ जाएगा। इसे डायरी में या phone के notes में
+          Screen पर आपका <strong>registration number</strong> आ जाएगा। इसे कॉपी में या phone के notes में
           लिख लें — हर बार यही काम आएगा।
         </Step>
       </ol>
@@ -273,7 +273,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
       <p>
         सीधी सी बात — पैसा आने के लिए ऊपर की तीनों चीजें YES होनी चाहिए। तीनों YES हैं और FTO भी processed
         है, तो बस बैंक पहुंचने का इंतजार है। FTO वाली पूरी कहानी अलग से{' '}
-        <Link href="/articles/pm-kisan-fto-generated-ka-matlab-kya-hai">FTO generated का मतलब</Link> वाले
+        <Link href="/articles/pm-kisan-fto-generated-ka-matlab-kya-hai">FTO generated का अर्थ</Link> वाले
         article में लिखी है।
       </p>
 
@@ -414,7 +414,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
       <ol className="space-y-0 my-4">
         <Step n={1}>
           <strong>Captcha गलत बता रहा है</strong> — page refresh करके नया captcha लें। छोटे-बड़े अक्षर
-          वैसे ही डालें जिस तरह दिख रहे हैं।
+          उसी तरह डालें जिस तरह दिख रहे हैं।
         </Step>
         <Step n={2}>
           <strong>Page खुल ही नहीं रहा या अटक रहा है</strong> — भुगतान वाले दिनों में भीड़ रहती है। सुबह जल्दी
@@ -455,7 +455,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
         </Step>
         <Step n={3}>
           <strong>CSC केंद्र</strong> — जब phone पर काम न बन रहा हो, या biometric eKYC करानी हो। Status
-          देखना खुद मुफ्त है, CSC वहीं ले जाइए जहां वाकई उसका काम है।
+          देखना खुद मुफ्त है, CSC उधर ले जाइए जहां वाकई उसका काम है।
         </Step>
       </ol>
 
@@ -477,7 +477,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
       <p>
         गांव में अक्सर यही होता है — खाता पिताजी या दादाजी के नाम है, और देखने बैठता है घर का लड़का। इसमें
         कोई दिक्कत नहीं, बस दो बातें ध्यान रखिए। पहली, OTP उनके registered नंबर पर जाएगा, वह phone
-        पास में रखिए। दूसरी, उनका registration number एक बार निकाल कर घर की डायरी में लिख दीजिए, ताकि हर
+        पास में रखिए। दूसरी, उनका registration number एक बार निकाल कर घर की कॉपी में लिख दीजिए, ताकि हर
         किस्त पर पूरी प्रक्रिया दोहरानी न पड़े।
       </p>
       <p>
@@ -501,7 +501,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
 
       <SH>Status check पर बार-बार आने वाले सवाल</SH>
       <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">
-        किसानों के अक्सर पूछे गए सवाल — status, OTP, registration number और NO वाले field से जुड़े।
+        किसानों के आम तौर पर पूछे गए सवाल — status, OTP, registration number और NO वाले field से जुड़े।
       </p>
       <div className="space-y-3 mb-8">
         {FAQS.map(({ q, a }) => (
