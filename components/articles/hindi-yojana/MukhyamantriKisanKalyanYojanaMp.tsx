@@ -30,7 +30,7 @@ const FAQS_PAISA = [
 const FAQS_HAQDARI = [
   {
     q: 'क्या अलग से आवेदन करना पड़ता है?',
-    a: 'नहीं। जो किसान PM Kisan का verified beneficiary है, वही किसान कल्याण योजना का हकदार है। PM Kisan में नाम है और पटवारी verification हो गया, तो राज्य की किस्त अपने आप जुड़ जाती है। अलग form सिर्फ तब जब नया registration हो रहा हो।',
+    a: 'नहीं। जो किसान PM Kisan का verified beneficiary है, वह किसान कल्याण योजना का हकदार है। PM Kisan में नाम है और पटवारी verification हो गया, तो राज्य की किस्त अपने आप जुड़ जाती है। अलग form सिर्फ तब जब नया registration हो रहा हो।',
   },
   {
     q: 'नए किसान को क्या करना चाहिए?',
@@ -146,7 +146,7 @@ export default function MukhyamantriKisanKalyanYojanaMp({ article }: { article: 
       <Hd>योजना की कहानी — ₹4,000 से ₹6,000 तक</Hd>
       <p>
         योजना 2020 में शुरू हुई थी, तब राज्य ₹4,000 सालाना देता था। बाद में सरकार ने रकम बढ़ाकर{' '}
-        <strong>₹6,000</strong> कर दी — यानी अब केंद्र + राज्य मिलाकर पूरे ₹12,000। मौजूदा सरकार भी साफ कह
+        <strong>₹6,000</strong> कर दी — अर्थात् अब केंद्र + राज्य मिलाकर पूरे ₹12,000। मौजूदा सरकार भी साफ कह
         चुकी है कि योजना जारी रहेगी। पैसा किस्तों में आता है (₹2,000 की किस्तें), DBT से सीधे उसी बैंक
         account में जो PM Kisan के record में है।
       </p>
@@ -202,7 +202,7 @@ export default function MukhyamantriKisanKalyanYojanaMp({ article }: { article: 
         और <strong>eKYC पूरी</strong> हो — बिना इसके दोनों योजनाओं का पैसा रुकता है।
       </p>
       <p>
-        मतलब: PM Kisan में नाम + पटवारी verification + eKYC = राज्य की किस्त का रास्ता साफ। PM Kisan की
+        सीधे शब्दों में: PM Kisan में नाम + पटवारी verification + eKYC = राज्य की किस्त का रास्ता साफ। PM Kisan की
         eligibility का पूरा नक्शा{' '}
         <Link href="/articles/PmKisanMasterGuide2026">Master Guide पर खुलेगा</Link>।
       </p>
@@ -371,7 +371,7 @@ export default function MukhyamantriKisanKalyanYojanaMp({ article }: { article: 
 
       <Hd>नए किसान के लिए document checklist — एक ही बार में सब तैयार</Hd>
       <p>
-        चक्कर इसीलिए लगते हैं कि कागज एक-एक करके निकाले जाते हैं। पहली बार registration से
+        चक्कर इसी वजह से लगते हैं कि कागज एक-एक करके निकाले जाते हैं। पहली बार registration से
         पहले ये सब एक folder में रख लीजिए — <strong>आधार card</strong>, उस mobile नंबर के साथ जो आज चालू
         है (नंबर बंद है तो पहला काम आधार केंद्र पर नया नंबर link कराना है — बाकी सब इसी पर टिका है)।{' '}
         <strong>खसरा/खतौनी की ताजा नकल</strong> — MP में यह mpbhulekh.gov.in से online भी निकलती है; नाम की
@@ -405,8 +405,8 @@ export default function MukhyamantriKisanKalyanYojanaMp({ article }: { article: 
         मध्य प्रदेश का गणित समझना मुश्किल नहीं है — केंद्र की PM Kisan से ₹6,000 और राज्य की किसान
         कल्याण योजना से ₹6,000, कुल ₹12,000 सालाना, और राज्य वाले हिस्से के लिए कोई अलग आवेदन
         नहीं। लेकिन इसी सरलता में एक शर्त छिपी है जो हर साल हजारों किसानों को खटकती है — राज्य की किस्त
-        केंद्र के verified database से निकलती है। यानी PM Kisan में eKYC अधूरी, बैंक seeding नहीं, या
-        पटवारी verification अटका — तो दोनों किस्तें रुकेंगी, सिर्फ एक नहीं। इसी तरह, देरी का मतलब नाम
+        केंद्र के verified database से निकलती है। तात्पर्य, PM Kisan में eKYC अधूरी, बैंक seeding नहीं, या
+        पटवारी verification अटका — तो दोनों किस्तें रुकेंगी, सिर्फ एक नहीं। इसी तरह, देरी का अर्थ नाम
         कटना नहीं — राज्य अपनी किस्तें अपने कार्यक्रम से भेजता है, PM Kisan के साथ नहीं।
       </p>
       <p>
