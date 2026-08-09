@@ -1,19 +1,4 @@
 https://github.com/khalil334/kisanstatus/tree/main/components%2Farticles%2Fhindi-yojana
-in 15 articles ke lye realistic images banao or in ma add karo kch articles ke lye 4 images kch ke lye 3 kch ke lye 5 kch ke lye or images ke name short or humanize ho or real images ho screenshot diagram or real images har article ke images generate karny ke bad os article ko yaha done likho or wo auto merge karke phr next article start karo 
-images path public/images/articles/hindi-yojna/articlename ma rakho
-
-PmKisan25viKistKabAayegi - done (4 images) 
-PmKisanStatusCheckMobileNumberSe - done (5 images)
-KisanKarjMafiList2027 - done (4 images)
-PmKisanHelplineNumberComplaint - done (4 images)
-FarmerIdCardKaiseBanaye2027 - done (4 images)
-GehuKaRateAajMspVsMandiBhav - done (4 images)
-KccLimitKaiseBadhaye3Se5Lakh - done (3 images)
-MukhyamantriKisanKalyanYojanaMp - done (4 images)
-NamoShetkariYojanaMaharashtra - done (3 images)
-NpciAadhaarSeedingDbtPayment - done (4 images)
-PmKisanEkycMobileSeKaiseKare - done (4 images)
-PmKisanNewRegistration2027 - done (4 images)
-PmKisanPaymentStoppedByStateFix - done (4 images)
-PmKisanRecoveryNoticePaisaWapas - done (4 images)
-TractorSubsidy2027StateWiseList - done (4 images)
+ Bhai ye articles homepage py live karo homepage py ni show ho rahy or isma kch aise articles ha Jo phly se mere website kisanstatus.com py ha lkn wo hinglish ma ha ye Hindi ma ha to in ka articles hi rakhna ta ke google confused na ho or traffic b asani se ajaye or google ma rank b ho jaye or SEO nuqsan v na ho 
+ 
+URL mein  /hi/  prefix lagao (jaise  kisanstatus.com/hi/pm-kisan-ekyc )
