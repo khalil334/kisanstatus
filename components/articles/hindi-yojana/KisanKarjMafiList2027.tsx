@@ -48,7 +48,17 @@ const RELATED = [
   { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide', emoji: '📚' },
 ];
 
-// Local components — self-contained file, no shared imports.
+const FAQ_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQS.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
+// Local presentational helpers — self-contained file, no shared imports.
 function Figure({ src, alt, caption }: { src: string; alt: string; caption: string }) {
   return (
     <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
@@ -99,81 +109,13 @@ function DB({ children }: { children: React.ReactNode }) {
   );
 }
 
-function StepList({ children }: { children: React.ReactNode }) {
-  return <ol className="my-4 pl-5 space-y-2 list-decimal">{children}</ol>;
-}
-
-function SI({ children }: { n?: number; children: React.ReactNode }) {
-  return <li className="text-sm text-[var(--color-text)] leading-relaxed pl-1">{children}</li>;
-}
-
-function FAQBlock({
-  faqs,
-  caption,
-}: {
-  faqs: { q: string; a: string }[];
-  caption?: string;
-  variant?: string;
-}) {
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map((f) => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
-    })),
-  };
-  return (
-    <section className="mb-8">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      {caption ? (
-        <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">{caption}</p>
-      ) : null}
-      <div className="space-y-4">
-        {faqs.map(({ q, a }) => (
-          <div key={q}>
-            <p className="font-semibold text-[var(--color-text)] text-sm mb-1">{q}</p>
-            <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">{a}</p>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-function RelatedArticles({
-  articles,
-}: {
-  articles: { slug: string; title: string; emoji?: string }[];
-}) {
-  return (
-    <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
-      <h3 className="font-black text-[var(--color-text)] mb-4 text-base flex items-center gap-2">
-        <span>🔗</span> Related Articles — Yeh Bhi Padho
-      </h3>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-        {articles.map((a) => (
-          <Link
-            key={a.slug}
-            href={`/articles/${a.slug}`}
-            className="flex items-center gap-3 p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors text-sm font-medium text-[var(--color-text)] no-underline"
-          >
-            {a.emoji && <span className="text-xl shrink-0">{a.emoji}</span>}
-            <span>{a.title}</span>
-          </Link>
-        ))}
-      </div>
-    </div>
-  );
-}
-
 export default function KisanKarjMafiList2027({ article }: { article: HindiArticle }) {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
+      />
       <p>
         &quot;कर्ज माफ हो गया, लिस्ट आ गई है, अपना नाम देख लो&quot; — यह message आपको भी WhatsApp पर मिला
         होगा। Link पर click किया तो या तो कोई ad-भरी site खुली, या नाम-आधार मांगने वाला form। रुकिए। इस
@@ -304,24 +246,24 @@ export default function KisanKarjMafiList2027({ article }: { article: HindiArtic
 
       <SH>अपना नाम check करने का सही तरीका</SH>
       <p>जब आपके राज्य की list official तौर पर जारी हो, तब यह करें:</p>
-      <StepList>
-        <SI n={1}>
+      <ol className="my-4 pl-5 space-y-2 list-decimal">
+        <li className="text-sm text-[var(--color-text)] leading-relaxed pl-1">
           <strong>राज्य के official portal पर जाएं</strong> — link राज्य सरकार की main site या कृषि विभाग से
           लें। महाराष्ट्र में पिछली scheme की तरह dedicated portal बनने की उम्मीद है।
-        </SI>
-        <SI n={2}>
+        </li>
+        <li className="text-sm text-[var(--color-text)] leading-relaxed pl-1">
           <strong>आधार नंबर या loan account number</strong> डालें — यही दो चीजें record से मिलान के लिए
           इस्तेमाल होती हैं।
-        </SI>
-        <SI n={3}>
+        </li>
+        <li className="text-sm text-[var(--color-text)] leading-relaxed pl-1">
           नाम मिले तो <strong>बैंक branch जाकर confirm करें</strong> — असली settlement बैंक के record में
           दिखता है, portal सिर्फ आईना है।
-        </SI>
-        <SI n={4}>
+        </li>
+        <li className="text-sm text-[var(--color-text)] leading-relaxed pl-1">
           नाम न मिले और आप शर्तें पूरी करते हों, तो बैंक से लिखित में कारण पूछें और राज्य की grievance
           व्यवस्था में शिकायत दर्ज करें।
-        </SI>
-      </StepList>
+        </li>
+      </ol>
       <IB>
         एक field observation — महाराष्ट्र की पिछली फुले कर्जमुक्ती के समय बड़ी तादाद में नाम इस वजह से छूटे थे कि
         loan account आधार से link नहीं था। सीख सीधी है: <strong>अपना आधार बैंक loan account से link करा कर
@@ -333,21 +275,21 @@ export default function KisanKarjMafiList2027({ article }: { article: HindiArtic
         Scheme की घोषणा और list के बीच का समय बर्बाद मत करिए — यही वह window है जब आप अपना
         record ऐसा साफ कर सकते हैं कि नाम छूटने की नौबत ही न आए:
       </p>
-      <StepList>
-        <SI n={1}>
+      <ol className="my-4 pl-5 space-y-2 list-decimal">
+        <li className="text-sm text-[var(--color-text)] leading-relaxed pl-1">
           <strong>Loan account आधार से link कराएं</strong> — branch जाकर पूछें कि आपके crop loan
           account में आधार दर्ज है या नहीं। पिछली schemes में नाम कटने की टॉप वजह यही कमी थी।
-        </SI>
-        <SI n={2}>
+        </li>
+        <li className="text-sm text-[var(--color-text)] leading-relaxed pl-1">
           <strong>Loan statement निकलवाकर रखें</strong> — कितना principal, कितना interest, कब से
           overdue। List आने पर अपनी रकम का मिलान आप खुद कर पाएंगे — गलत रकम चढ़ी हो तो तुरंत
           आपत्ति कर सकेंगे।
-        </SI>
-        <SI n={3}>
+        </li>
+        <li className="text-sm text-[var(--color-text)] leading-relaxed pl-1">
           <strong>मोबाइल नंबर बैंक record में update रखें</strong> — सत्यापन का बुलावा SMS से आता है।
           पुराना नंबर दर्ज है तो बुलावा किसी और के phone पर जाएगा।
-        </SI>
-      </StepList>
+        </li>
+      </ol>
 
       <Figure
         src="/images/articles/hindi-yojna/karj-mafi-list/biometric-verify.webp"
@@ -467,24 +409,34 @@ export default function KisanKarjMafiList2027({ article }: { article: HindiArtic
         Waiver की उम्मीद में EMI रोक देना महंगी से महंगी गलती है, क्योंकि scheme की cut-off date आपके हाथ में
         नहीं। बेहतर रास्ते:
       </p>
-      <StepList>
-        <SI n={1}>
+      <ol className="my-4 pl-5 space-y-2 list-decimal">
+        <li className="text-sm text-[var(--color-text)] leading-relaxed pl-1">
           कर्ज महंगे साहूकार से है तो पहले उसे <Link href="/articles/KisanCreditCardOnlineApply2026">KCC</Link>{' '}
           की तरह के सस्ते रास्ते में shift करने की सोचें — 4% तक effective interest वाला crop loan हर हाल में
           बेहतर है।
-        </SI>
-        <SI n={2}>
+        </li>
+        <li className="text-sm text-[var(--color-text)] leading-relaxed pl-1">
           नया कर्ज लेना हो तो कौन सा loan कहां से और किस दर पर मिलता है, इसका पूरा तुलनात्मक हिसाब{' '}
           <Link href="/articles/KisanRinKahaSeLe2026">इस page पर देख लें</Link>।
-        </SI>
-        <SI n={3}>
+        </li>
+        <li className="text-sm text-[var(--color-text)] leading-relaxed pl-1">
           याद रखिए — महाराष्ट्र model में नियमित चुकाने वालों को ₹50,000 incentive मिल रहा है। अर्थात अब
           discipline का भी इनाम है, सिर्फ default का नहीं।
-        </SI>
-      </StepList>
+        </li>
+      </ol>
 
       <SH>सवाल-जवाब — जो उलझनें बार-बार आती हैं</SH>
-      <FAQBlock faqs={FAQS} />
+      <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">
+        कर्ज माफी पर बार-बार पूछे जाने वाले सवाल।
+      </p>
+      <div className="space-y-4 mb-8">
+        {FAQS.map(({ q, a }) => (
+          <div key={q}>
+            <p className="font-semibold text-[var(--color-text)] text-sm mb-1">{q}</p>
+            <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">{a}</p>
+          </div>
+        ))}
+      </div>
 
       <SH>चलते-चलते — आज शाम तक का काम</SH>
       <p>
@@ -510,7 +462,23 @@ export default function KisanKarjMafiList2027({ article }: { article: HindiArtic
         {new Date(article.modifiedTime).toLocaleDateString('hi-IN')} को मिलाए थे।
       </p>
 
-      <RelatedArticles articles={RELATED} />
+      <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
+        <h3 className="font-black text-[var(--color-text)] mb-4 text-base flex items-center gap-2">
+          <span>🔗</span> Related Articles — Yeh Bhi Padho
+        </h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+          {RELATED.map((a) => (
+            <Link
+              key={a.slug}
+              href={`/articles/${a.slug}`}
+              className="flex items-center gap-3 p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors text-sm font-medium text-[var(--color-text)] no-underline"
+            >
+              {a.emoji && <span className="text-xl shrink-0">{a.emoji}</span>}
+              <span>{a.title}</span>
+            </Link>
+          ))}
+        </div>
+      </div>
     </>
   );
 }
