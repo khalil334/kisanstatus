@@ -1,3 +1,7 @@
 https://github.com/khalil334/kisanstatus/tree/main/components%2Farticles%2Fhindi-yojana
-note ye articles abi index ni ha or in article ka Alag data.ts ha or Alag slug ha to wo b fix karo or ye b
-in ke jese same article hinglish ma already index ha kisanstatus.com website ma to in articles ka link unique or hi banao tha ke SEO ma nuqsan na ho or risk b na ho or duplicate content b na smjy or asani se rank kar jaye
+token ke lye card do sitemap ma b fix karo jaha jaha fix karny ek zarorat ha fix karo or ye abi index ni ha to redirect ke b zarorat ni or homepage par b fix karo homepage py ni show ho rahy
+मेरे lib/hindi-articles-data.ts में 15 Hindi articles हैं। हर article के `slug` field में `hi/` prefix जोड़ो ताकि Hinglish articles से URL differentiate हो — duplicate content risk न हो।
+
+Example: `slug: 'pm-kisan-25vi-kist'` → `slug: 'hi/pm-kisan-25vi-kist'`
+
+बाकी 14 slugs भी इसी pattern से `hi/` prefix जोड़ो। सिर्फ slug field edit करो — बाकी सब unchanged।
