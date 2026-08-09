@@ -12,7 +12,8 @@
 // Rules followed here:
 //  * hreflang must be RECIPROCAL — if A points at B, B must point back at A.
 //    Both routes therefore read this same map (see app/articles/hi/[slug]/page.tsx
-//    and app/articles/[slug]/page.tsx / app/rajya-yojana/[slug]/page.tsx).
+//    and app/articles/[slug]/page.tsx). The /rajya-yojana/ route intentionally
+//    does NOT participate.
 //  * Script is expressed with BCP-47 subtags: `hi` = Hindi in Devanagari,
 //    `hi-Latn` = Hindi in Latin script (Hinglish).
 //  * `x-default` points at the Hinglish version — it is the older, indexed URL
@@ -29,18 +30,20 @@ import { SITE_URL } from '@/lib/site-config';
  * Hindi route slug (WITHOUT the `hi/` prefix) -> site-root-relative path of the
  * equivalent Hinglish article.
  *
+ * Scope: only articles under /articles/. The /rajya-yojana/ state-scheme pages
+ * are deliberately EXCLUDED — they were left as they were, per the site owner.
+ *
  * Verified 1:1 topic pairs only. Deliberately NOT paired, because the Hinglish
- * article covers a different question rather than the same one:
+ * article covers a different question rather than the same one, or lives under
+ * /rajya-yojana/:
  *   status-check-mobile-se, karj-mafi-list, helpline-shikayat, nayi-registration,
  *   farmer-id-kaise-banaye, tractor-subsidy, gehu-ka-rate-aaj,
  *   npci-aadhaar-seeding, payment-stopped-by-state, recovery-notice,
- *   kcc-limit-kaise-badhaye
+ *   kcc-limit-kaise-badhaye, mp-kisan-kalyan-yojana, namo-shetkari-yojana
  */
 export const HINDI_TO_HINGLISH: Readonly<Record<string, string>> = {
   'pm-kisan-25vi-kist': '/articles/PmKisan25viKist2027',
   'ekyc-mobile-se': '/articles/PmKisanEkycOnline2026',
-  'mp-kisan-kalyan-yojana': '/rajya-yojana/mp-kisan-kalyan-yojana-kist-status',
-  'namo-shetkari-yojana': '/rajya-yojana/namo-shetkari-yojana-status-check-2026',
 };
 
 /** Reverse lookup: Hinglish path -> Hindi route slug (without `hi/`). */
