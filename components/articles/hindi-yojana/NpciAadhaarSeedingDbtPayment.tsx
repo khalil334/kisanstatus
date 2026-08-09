@@ -21,7 +21,7 @@ const FAQS = [
   },
   {
     q: 'खाता बदलना है — पुराने की जगह नए खाते में पैसा चाहिए?',
-    a: 'नए बैंक में seeding consent form भरकर NPCI mapper में नया खाता seed करवा दें — आखिरी seeded खाता ही active हो जाता है, पुराना अपने आप हट जाता है। Portal के record में खाता बदलने की अलग प्रक्रिया हमारी bank account change guide में है।',
+    a: 'नए बैंक में seeding consent form भरकर NPCI mapper में नया खाता seed करवा दें — आखिरी seeded खाता ही active हो जाता है, पुराना अपने आप हट जाता है। Portal के record में खाता बदलने की अलग प्रक्रिया है — उसका पूरा ब्योरा bank account change वाले page पर है।',
   },
   {
     q: 'Post Office / India Post Payments Bank का खाता चलेगा?',
@@ -70,7 +70,7 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
         सुनने में एक जैसे लगते हैं, होते अलग हैं।
       </p>
       <p>
-        इस guide में हम यही गांठ खोलेंगे — link और seeding का फर्क, अपना mapping status घर बैठे देखने के
+        इस लेख में हम यही गांठ खोलेंगे — link और seeding का फर्क, अपना mapping status घर बैठे देखने के
         दो तरीके (एक बिना internet वाला भी), बैंक में जाकर ठीक-ठीक क्या बोलना है, और वे गलतियां जिनकी वजह से
         form भरने के बाद भी status Inactive रह जाता है। पूरा पढ़ लेंगे तो बैंक के तीन चक्कर बचेंगे, यह हमारा
         अनुभव कहता है।
