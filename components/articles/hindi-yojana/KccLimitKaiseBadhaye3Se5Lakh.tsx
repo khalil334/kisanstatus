@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
 // Self-contained article — कोई shared component import नहीं (Rule 2)।
@@ -65,6 +66,24 @@ const FAQ_SCHEMA = {
   })),
 };
 
+function Figure({ src, alt, caption }: { src: string; alt: string; caption: string }) {
+  return (
+    <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+      <Image
+        src={src}
+        alt={alt}
+        width={1200}
+        height={675}
+        className="w-full object-cover"
+        sizes="(max-width: 768px) 100vw, 768px"
+      />
+      <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+        {caption}
+      </figcaption>
+    </figure>
+  );
+}
+
 function Head2({ children }: { children: React.ReactNode }) {
   return (
     <h2 className="text-xl font-black text-[var(--color-text)] mt-8 mb-4 pb-2 border-b-2 border-[var(--color-border)]">
@@ -122,6 +141,12 @@ export default function KccLimitKaiseBadhaye3Se5Lakh({ article }: { article: Hin
       <p>
         जो किसान यह फर्क समझकर बात करता है, उसकी request counter पर ही आधी मंजूर हो जाती है।
       </p>
+
+      <Figure
+        src="/images/articles/hindi-yojna/kcc-limit/kcc-card.webp"
+        alt="बैंक का Kisan Credit Card और loan के कागज"
+        caption="घोषणा से limit अपने आप नहीं बढ़ती — बढ़वानी पड़ती है"
+      />
 
       <Head2>पहले गणित समझिए — सीमा बढ़ने से बचत कितनी?</Head2>
       <UL>
@@ -237,6 +262,11 @@ export default function KccLimitKaiseBadhaye3Se5Lakh({ article }: { article: Hin
       </p>
 
       <Head2>Limit बढ़वाने का तरीका — branch में यह लेकर जाइए</Head2>
+      <Figure
+        src="/images/articles/hindi-yojna/kcc-limit/documents-desk.webp"
+        alt="KCC limit बढ़ाने के लिए जरूरी कागज — खतौनी, आधार, passbook और आवेदन"
+        caption="कागज पूरे हों तो आधी लड़ाई पहले ही जीत ली"
+      />
       <UL>
         <li>
           <strong>Updated land record</strong> — खतौनी/खसरा की ताजी नकल। नई जमीन खरीदी/बटाई पर ली है तो
@@ -264,6 +294,11 @@ export default function KccLimitKaiseBadhaye3Se5Lakh({ article }: { article: Hin
       </Callout>
 
       <Head2>Branch manager की नजर से देखिए — तो बात जल्दी बनेगी</Head2>
+      <Figure
+        src="/images/articles/hindi-yojna/kcc-limit/branch-visit.webp"
+        alt="बैंक branch में manager से KCC limit पर बात करता किसान"
+        caption="Manager को चाहिए भरोसा — साफ record और पूरे कागज से बढ़कर कुछ नहीं"
+      />
       <p>
         Manager की मेज पर आपका आवेदन एक सवाल में बदल जाता है — &quot;यह पैसा डूबेगा तो नहीं?&quot; उसके पास आपके
         जवाब के तीन सबूत हो सकते हैं — जमीन का कागज (खेती सचमुच इतनी है), फसल का ब्योरा (खर्च सचमुच
