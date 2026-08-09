@@ -317,9 +317,9 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
         </li>
         <li className="border border-[var(--color-border)] rounded-xl p-4 text-sm leading-relaxed">
           <strong>Record not found with given Aadhaar</strong> — इस आधार से योजना का कोई record नहीं जुड़ा।
-          पहले <Link href="/articles/hindi/status-check-mobile-se">status</Link> देखकर पक्का कीजिए कि आप
+          पहले <Link href="/articles/hi/status-check-mobile-se">status</Link> देखकर पक्का कीजिए कि आप
           registered हैं या नहीं; न हों तो{' '}
-          <Link href="/articles/hindi/nayi-registration">नई registration</Link> पहला कदम है।
+          <Link href="/articles/hi/nayi-registration">नई registration</Link> पहला कदम है।
         </li>
         <li className="border border-[var(--color-border)] rounded-xl p-4 text-sm leading-relaxed">
           <strong>Mobile number not matching</strong> — जो नंबर आप डाल रहे हैं, वह आधार से जुड़ा नहीं है।
@@ -398,7 +398,7 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
       <p>
         तीनों अलग-अलग दफ्तरों के काम हैं, और तीनों का YES होना जरूरी है। eKYC हो जाने पर यह मान लेना कि अब
         सब पूरा है, गलत है। खाते वाला हिस्सा विस्तार से{' '}
-        <Link href="/articles/hindi/npci-aadhaar-seeding">NPCI आधार सीडिंग वाले लेख</Link> में पढ़ सकते हैं।
+        <Link href="/articles/hi/npci-aadhaar-seeding">NPCI आधार सीडिंग वाले लेख</Link> में पढ़ सकते हैं।
       </p>
 
       <Sec>बुजुर्गों और महिलाओं के लिए — व्यावहारिक बातें</Sec>
@@ -423,7 +423,7 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
       />
       <p>
         Success message आना और record में दर्ज होना — दोनों में कभी-कभी थोड़ा फासला होता है। अगले दिन एक बार{' '}
-        <Link href="/articles/hindi/status-check-mobile-se">status page</Link> खोलकर eKYC: YES देख लें। YES
+        <Link href="/articles/hi/status-check-mobile-se">status page</Link> खोलकर eKYC: YES देख लें। YES
         दिख गया तो यह अध्याय बंद; अब ध्यान बाकी दो चीजों पर दें — बैंक की आधार seeding और जमीन का record।
         किस्त इन्हीं तीन पहियों पर चलती है।
       </p>
@@ -465,7 +465,7 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
       <p>
         और अगर किसी ने पहले से पैसे ले लिए हैं या OTP लेकर गड़बड़ की है, तो चुप न रहिए — शिकायत कैसे और कहां
         दर्ज होती है, यह{' '}
-        <Link href="/articles/hindi/helpline-shikayat">हेल्पलाइन वाले page पर खुलेगा</Link>। जितनी जल्दी
+        <Link href="/articles/hi/helpline-shikayat">हेल्पलाइन वाले page पर खुलेगा</Link>। जितनी जल्दी
         दर्ज होगी, उतनी गुंजाइश बनेगी।
       </p>
 
@@ -504,7 +504,7 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
             <Link href="/articles/PmKisanEkycOnline2026">🔐 eKYC Online — पूरी guide</Link>
           </li>
           <li>
-            <Link href="/articles/hindi/status-check-mobile-se">📱 मोबाइल से स्टेटस चेक</Link>
+            <Link href="/articles/hi/status-check-mobile-se">📱 मोबाइल से स्टेटस चेक</Link>
           </li>
           <li>
             <Link href="/articles/PmKisanMobileNumberChangeUpdate">☎️ Mobile Number Update Guide</Link>
