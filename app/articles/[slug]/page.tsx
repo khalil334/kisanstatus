@@ -21,6 +21,7 @@ import {
   LOGO_WIDTH,
   LOGO_HEIGHT,
 } from '@/lib/site-config';
+import { hinglishAlternates } from '@/lib/hindi-hreflang';
 
 function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
   const category = CATEGORIES[article.category];
@@ -262,12 +263,15 @@ export async function generateMetadata({
     creator: AUTHOR_NAME,
     publisher: SITE_NAME,
     category: category ? category.name : 'Agriculture & Farming',
-    alternates: { 
+    alternates: {
       canonical: url,
-      languages: {
+      // Reciprocal hreflang: if this article has a Devanagari Hindi counterpart
+      // under /articles/hi/, point at it (and let it point back). Otherwise keep
+      // the existing self-referencing pair.
+      languages: hinglishAlternates(`/articles/${slug}`, {
         'hi-IN': url,
         'x-default': url,
-      },
+      }),
     },
     openGraph: {
       title: displayTitle,
