@@ -1,61 +1,18 @@
 https://github.com/khalil334/kisanstatus/tree/main/components%2Farticles%2Fhindi-yojana
  GitHub.com/khalil334/kisanstatus 
-token ke lye card send karo or 1 article fix karny ke bad osko GitHub py auto merge karke is file ma os article ko done likho or phr next article start kia karo 
-मेरे KisanStatus.com के hindi-yojana folder के सभी 15 articles को completely rewrite करो। नीचे की rules strictly follow करो:
+token ke lye card send karo
+or phly ye file update karo apny lye 
+har 2 articles fix karny ke bad auto merge karke file update kardia karo
+मेरे hindi-yojana folder के 15 articles में ये 9 AI patterns repeat हो रहे हैं — words trim मत करो, सिर्फ low-competitive synonyms से replace करो:
 
-1. **Real word count 2000+ se kam nahi hona chahiye** — file size ya characters se mat dekho, actual readable Hindi+English words count karo. Har article minimum 2000 words hona chahiye. Agar koi 2000 se kam ho toh genuinely useful detail add karo: real examples, state-wise differences, document checklists, timeline scenarios, common mistakes.
+1. "वही" (27 baar, 12 files) → "उसी", "यही", "यह", "वह", "इसी", "उस" — har file mein alag word chunno
+2. "इसीलिए" (7 baar, 7 files) → "इसी वजह से", "इस कारण", "इसलिए ही", "इसके चलते"
+3. "यानी" (9 baar, 7 files) → "अर्थात्", "भावार्थ", "तात्पर्य", "मतलब", "अर्थ"
+4. "मतलब" (9 baar, 6 files) → "अर्थ", "भाव", "तात्पर्य", "यानी", "सीधे शब्दों में"
+5. "जैसे" (9 baar, 6 files) → "उदाहरणार्थ", "मसलन", "जैसे कि", "उदाहरण के लिए", "जैसा कि"
+6. "screenshot रख" (3 files) → "photo save करें", "mobile में रखें", "capture कर लें"
+7. "निचोड़" (3 files) → "सारांश", "संक्षेप", "निष्कर्ष", "मुख्य बात"
+8. "किस्त वाले दिन" (2 files) → "पैसे आने वाले दिन", "भुगतान वाले दिन"
+9. "guide में" (2 files) → "detail यहाँ है", "पूरा तरीका इस page पर"
 
-2. **Shared components hatao** — har article mein FAQBlock, RelatedArticles, StepList, GovLink jaise shared components mat use karo. Har article ko bilkul independent HTML/JSX likho. Koi bhi reusable component import mat karo — har cheez usi file mein likho.
-
-3. **Har article ka structure bilkul alag ho**:
-   - Koi article FAQ ke bina ho
-   - Koi article sirf paragraphs mein ho (no lists, no tables)
-   - Koi article bullet points mein ho
-   - Koi article numbered steps mein ho
-   - Koi article table + text mix mein ho
-   - Koi article short sections with bold headings mein ho
-   - Koi article long flowing narrative mein ho
-
-4. **Transition words diversify karo** — yeh words har article mein repeat nahi hone chahiye:
-   - "इसलिए/इसीलिए" — max 1-2 per article
-   - "असल में" — sirf 2-3 articles mein total
-   - "मतलब" — max 2 per article
-   - "जैसे/जैसे कि" — max 2 per article
-   - "यानी/यानी कि" — max 2 per article
-   - "मोटे तौर पर" — max 1-2 articles mein
-   - "नतीजा" — max 2 articles mein
-   - "सबसे" superlatives (सबसे आसान, सबसे ज्यादा, सबसे धीमा) — har article mein alag words use karo, same superlatives repeat mat karo
-
-5. **"वही" word minimize karo** — "वही बात", "वही process", "वही तरीका", "वही जांच" — is tarah ke phrases max 1-2 per article. Har jagah "वही" ki jagah alag words use karo.
-
-6. **Opening aur ending har article mein bilkul unique ho**:
-   - Koi direct question se shuru ho
-   - Koi bold statement se
-   - Koi real scenario se
-   - Koi caution note se
-   - Koi personal observation se
-   Ending bhi har article mein alag tarah ki ho — summary, checklist, next steps, ya caution.
-
-7. **Scam warnings, source citations, cross-links har article mein alag style mein likho** — same pattern copy-paste mat karo.
-
-Output: Har article ko same TSX file format mein wapas do. Koi fact, date, amount, ya official link change mat karna.
-
----
-
-## Progress
-
-- [x] PmKisan25viKistKabAayegi — done (self-contained, no shared components, card-list + emoji-checklist structure, transition words within budget, 2800+ words)
-- [x] PmKisanStatusCheckMobileNumberSe — done (self-contained, numbered-steps + accordion-FAQ structure, transitions within budget, ~2900 words)
-- [x] KisanKarjMafiList2027 — done (self-contained, inline-FAQ + plain-decimal steps, transitions pruned, ~3100 words)
-- [x] PmKisanEkycMobileSeKaiseKare — done (self-contained, letter-badge pathway cards + card-grid FAQ, transitions within budget, ~2890 words)
-- [x] PmKisanHelplineNumberComplaint — done (self-contained, escalation-ladder सीढ़ी structure + inline FAQ, transitions within budget, ~2800 words)
-- [x] PmKisanNewRegistration2027 — done (self-contained, journey-milestone पड़ाव structure + accordion FAQ, transitions within budget, ~2800 words)
-- [x] NpciAadhaarSeedingDbtPayment — done (self-contained, bold-heading prose + definition-list FAQ, transitions within budget, ~2850 words)
-- [x] FarmerIdCardKaiseBanaye2027 — done (self-contained, table+text-mix structure + numbered Q&A FAQ, transitions within budget, ~3040 words)
-- [x] GehuKaRateAajMspVsMandiBhav — done (self-contained, narrative + comparison-tables + season-calendar structure, FAQ striped-table, transitions within budget, ~3070 words)
-- [x] KccLimitKaiseBadhaye3Se5Lakh — done (self-contained, bullet-heavy sections + interview-style प्र./उ. FAQ, transitions within budget, ~2990 words)
-- [x] MukhyamantriKisanKalyanYojanaMp — done (self-contained, timeline-rail release record + themed FAQ groups, transitions within budget, ~2890 words)
-- [x] NamoShetkariYojanaMaharashtra — done (self-contained, comparison-table + chat-bubble FAQ + myth-vs-truth panels, transitions within budget, ~2920 words)
-- [x] PmKisanPaymentStoppedByStateFix — done (self-contained, clinic-style symptom→check→treatment flow + Rx step-cards + quote-strip FAQ, transitions within budget, ~3050 words)
-- [x] PmKisanRecoveryNoticePaisaWapas — done (self-contained, decision-tree three-paths + case-file stories + day-by-day timeline + dashed-card FAQ, transitions within budget, ~2990 words)
-- [x] TractorSubsidy2027StateWiseList — done (self-contained, state-card directory + comparison table + local details-accordion FAQ, transitions within budget, ~3020 words)
+Rule: Content length same rakhni hai — koi word delete mat karo, sirf replace karo. Same TSX format mein output do.
