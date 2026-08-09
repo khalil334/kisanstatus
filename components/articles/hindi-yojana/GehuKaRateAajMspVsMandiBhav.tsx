@@ -261,9 +261,9 @@ export default function GehuKaRateAajMspVsMandiBhav({ article }: { article: Hind
       <p>
         सरकारी खरीद का भुगतान आधार-linked खाते में DBT से आता है। खाता dormant हो या NPCI mapper में
         seeding active न हो, तो तौल हो जाने के बाद भी पैसा लटक जाता है — यह जांच बेचने से{' '}
-        <em>पहले</em> कर लें, तरीका{' '}
-        <Link href="/articles/hindi/npci-aadhaar-seeding">NPCI seeding guide</Link> में है। रोज के भाव
-        की नब्ज पकड़नी हो तो हमारा{' '}
+        <em>पहले</em> कर लें; seeding का पूरा तरीका{' '}
+        <Link href="/articles/hindi/npci-aadhaar-seeding">यहां लिखा है</Link>। रोज के भाव
+        की नब्ज पकड़नी हो तो{' '}
         <Link href="/articles/mandi-bhav-today">mandi bhav page</Link> देखते रहें। और अगर बिक्री का पैसा
         अगली फसल की तैयारी में लगना है, तो{' '}
         <Link href="/articles/hindi/kcc-limit-kaise-badhaye">KCC limit</Link> की समीक्षा भी इसी समय करवा
@@ -277,17 +277,17 @@ export default function GehuKaRateAajMspVsMandiBhav({ article }: { article: Hind
         icon="🌾"
       />
 
-      <SH>अक्सर पूछे जाने वाले सवाल</SH>
+      <SH>सवाल-जवाब: भाव, खरीद और भुगतान</SH>
       <FAQBlock faqs={FAQS} />
 
       <p className="text-xs text-[var(--color-text-muted)] italic">
-        Source: गेहूं MSP ₹2,585/क्विंटल (RMS 2026-27) — केंद्र सरकार की घोषणा, राज्य खरीद-अधिसूचनाओं
-        (गुजरात राज्य नागरिक आपूर्ति निगम, जनवरी 2026) में उद्धृत; MP का ₹40 bonus राज्य सरकार की खरीद
-        व्यवस्था से। दैनिक भाव{' '}
+        आंकड़ों का हिसाब: गेहूं MSP ₹2,585/क्विंटल (RMS 2026-27) केंद्र सरकार की घोषणा से है, जो राज्य
+        खरीद-अधिसूचनाओं (जैसे गुजरात राज्य नागरिक आपूर्ति निगम, जनवरी 2026) में भी दर्ज है; MP का ₹40
+        bonus राज्य सरकार की खरीद व्यवस्था से। दैनिक भाव के लिए{' '}
         <a href="https://agmarknet.gov.in" target="_blank" rel="noopener noreferrer">agmarknet.gov.in</a>{' '}
-        और <a href="https://enam.gov.in" target="_blank" rel="noopener noreferrer">enam.gov.in</a> से
-        देखें — यह लेख कोई live rate नहीं बताता। Last verified:{' '}
-        {new Date(article.modifiedTime).toLocaleDateString('hi-IN')}.
+        और <a href="https://enam.gov.in" target="_blank" rel="noopener noreferrer">enam.gov.in</a> ही देखें —
+        यह लेख कोई live rate नहीं बताता। इस लेख की जानकारी आखिरी बार{' '}
+        {new Date(article.modifiedTime).toLocaleDateString('hi-IN')} को जांची गई थी।
       </p>
 
       <RelatedArticles articles={RELATED} />
