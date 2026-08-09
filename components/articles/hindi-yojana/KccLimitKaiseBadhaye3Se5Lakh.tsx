@@ -455,7 +455,7 @@ export default function KccLimitKaiseBadhaye3Se5Lakh({ article }: { article: Hin
             <Link href="/articles/KisanTractorLoan2026">🚜 Tractor Loan Guide</Link>
           </li>
           <li>
-            <Link href="/articles/hindi/karj-mafi-list">📋 कर्ज माफी लिस्ट 2027</Link>
+            <Link href="/articles/hindi/kisan-karj-mafi-list-rajyawar">📋 कर्ज माफी लिस्ट 2027</Link>
           </li>
         </ul>
       </div>

@@ -242,7 +242,7 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
       </p>
       <p>
         <strong>सवाल 1 — status page पर eKYC के आगे क्या लिखा है?</strong> NO लिखा है तो ढूंढना बंद — यही
-        पहली और संभावित वजह है। <Link href="/articles/hindi/ekyc-mobile-se">Phone से eKYC</Link> कर लीजिए,
+        पहली और संभावित वजह है। <Link href="/articles/hindi/pm-kisan-ekyc-mobile-se-kaise-kare">Phone से eKYC</Link> कर लीजिए,
         बाकी सवाल बाद में।
       </p>
       <p>
@@ -288,8 +288,8 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
       />
       <Rx step="1" title="घर बैठे जांच">
         Status page पर eKYC का column देखें (NO है तो{' '}
-        <Link href="/articles/hindi/ekyc-mobile-se">phone से eKYC</Link> कर लें), और myAadhaar पर bank
-        seeding status देखें (<Link href="/articles/hindi/npci-aadhaar-seeding">तरीका यहां</Link>)। आधार और
+        <Link href="/articles/hindi/pm-kisan-ekyc-mobile-se-kaise-kare">phone से eKYC</Link> कर लें), और myAadhaar पर bank
+        seeding status देखें (<Link href="/articles/hindi/npci-aadhaar-seeding-dbt-payment">तरीका यहां</Link>)। आधार और
         passbook आमने-सामने रखकर नाम मिलाएं — फर्क दिखे तो{' '}
         <Link href="/articles/PmKisanCorrectionForm2026">correction form</Link> से सुधार डालें।
       </Rx>
@@ -298,7 +298,7 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
         Farmers Corner में Help Desk/Grievance का विकल्प है, आधार number से query register होती है। जो
         query number मिले, उसे कागज पर लिखकर रखिए — आगे की हर बातचीत में यही आपकी पहचान है। साथ
         में helpline <strong>155261</strong> पर भी बात कर लें। पूरा तरीका{' '}
-        <Link href="/articles/hindi/helpline-shikayat">शिकायत guide</Link> में लिखा है।
+        <Link href="/articles/hindi/pm-kisan-helpline-number-shikayat">शिकायत guide</Link> में लिखा है।
       </Rx>
       <Rx step="3" title="ब्लॉक/तहसील — अक्सर निर्णायक">
         रोक <em>राज्य</em> ने लगाई है, तो ताला भी वहां से ही खुलेगा। अपने ब्लॉक के कृषि अधिकारी या तहसील में
@@ -364,7 +364,7 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
         नहीं हैं तो उसका। फिर ब्लॉक कार्यालय में लिखित आपत्ति दीजिए कि flag गलत लगा है, साथ में proof।
         यह मामला सिर्फ online शिकायत से शायद ही सुलझता है — कागज के साथ आमने-सामने की बात ही काम
         करती है। और अगर flag सही है, तो सच्चाई यह है कि रोक हटेगी नहीं — बल्कि पहले लिया पैसा वापस
-        मांगा जा सकता है (<Link href="/articles/hindi/recovery-notice">recovery notice guide</Link> पढ़ें)।
+        मांगा जा सकता है (<Link href="/articles/hindi/pm-kisan-recovery-notice-paisa-wapas">recovery notice guide</Link> पढ़ें)।
       </p>
       <Sub>मामला 2: एक जमीन, दो आवेदन</Sub>
       <p>
@@ -436,8 +436,8 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
         एक और काम की बात — कई राज्य अपने portal (UP का upagripardarshi या राज्य कृषि विभाग की
         site) पर भी लाभार्थी सूची दिखाते हैं। वहां अपना नाम खोजकर देख लीजिए — राज्य की सूची में नाम
         है पर केंद्र के portal पर रोक है, तो मामला दोनों record के मिलान का है और यही बात grievance में
-        लिखने से सुनवाई तेज होती है। राज्य योजनाओं के लाभ (<Link href="/articles/hindi/namo-shetkari-yojana">Maharashtra की नमो शेतकरी</Link> या{' '}
-        <Link href="/articles/hindi/mp-kisan-kalyan-yojana">MP की किसान कल्याण</Link>) अक्सर PM Kisan की
+        लिखने से सुनवाई तेज होती है। राज्य योजनाओं के लाभ (<Link href="/articles/hindi/namo-shetkari-yojana-12000-kist">Maharashtra की नमो शेतकरी</Link> या{' '}
+        <Link href="/articles/hindi/mukhyamantri-kisan-kalyan-yojana-mp">MP की किसान कल्याण</Link>) अक्सर PM Kisan की
         लिस्ट से जुड़े होते हैं — यहां रोक लगी रही तो वहां का पैसा भी अटक सकता है। एक सुधार से दोनों
         दरवाजे खुलते हैं — टालिए मत।
       </p>
@@ -483,8 +483,8 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
         <h3 className="font-black text-[var(--color-text)] mb-3 text-base">🔗 इस विषय से जुड़े और page</h3>
         <ul className="list-disc pl-5 space-y-1.5 text-sm">
           <li><Link href="/articles/PmKisanCorrectionForm2026">📝 Correction Form Guide</Link></li>
-          <li><Link href="/articles/hindi/helpline-shikayat">📞 हेल्पलाइन और शिकायत</Link></li>
-          <li><Link href="/articles/hindi/npci-aadhaar-seeding">🏦 NPCI आधार सीडिंग</Link></li>
+          <li><Link href="/articles/hindi/pm-kisan-helpline-number-shikayat">📞 हेल्पलाइन और शिकायत</Link></li>
+          <li><Link href="/articles/hindi/npci-aadhaar-seeding-dbt-payment">🏦 NPCI आधार सीडिंग</Link></li>
           <li><Link href="/articles/PmKisanStateNodalOfficerList">🏛️ State Nodal Officer List</Link></li>
         </ul>
       </div>

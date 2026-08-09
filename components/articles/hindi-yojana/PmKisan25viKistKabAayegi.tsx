@@ -199,7 +199,7 @@ export default function PmKisan25viKistKabAayegi({ article }: { article: HindiAr
           <p className="text-sm leading-relaxed">
             Portal के "Know Your Status" में eKYC का column YES होना चाहिए। NO है तो OTP से (आधार-linked
             mobile जरूरी) या CSC पर biometric से करवा लें। तरीका{' '}
-            <Link href="/articles/hindi/ekyc-mobile-se">eKYC मोबाइल से</Link> वाले लेख में step-by-step है।
+            <Link href="/articles/hindi/pm-kisan-ekyc-mobile-se-kaise-kare">eKYC मोबाइल से</Link> वाले लेख में step-by-step है।
           </p>
         </div>
         <div className="border border-[var(--color-border)] rounded-xl p-4 bg-[var(--color-card)]">
@@ -207,7 +207,7 @@ export default function PmKisan25viKistKabAayegi({ article }: { article: HindiAr
           <p className="text-sm leading-relaxed">
             DBT का पैसा उस खाते में जाता है जो NPCI mapper में आधार से जुड़ा हो। खाता बदला है या dormant
             पड़ा है तो पहले यह ठीक कराएं —{' '}
-            <Link href="/articles/hindi/npci-aadhaar-seeding">NPCI सीडिंग guide</Link> देखें।
+            <Link href="/articles/hindi/npci-aadhaar-seeding-dbt-payment">NPCI सीडिंग guide</Link> देखें।
           </p>
         </div>
         <div className="border border-[var(--color-border)] rounded-xl p-4 bg-[var(--color-card)]">
@@ -298,7 +298,7 @@ export default function PmKisan25viKistKabAayegi({ article }: { article: HindiAr
         आसान रास्ता mobile से ही है। Portal पर "Know Your Status" खोलिए, registration number (या "Know
         your registration no." से निकालकर) डालिए, OTP से अंदर जाइए — वहां payment की पूरी history दिखती है।
         Screen-by-screen तरीका हमने{' '}
-        <Link href="/articles/hindi/status-check-mobile-se">मोबाइल नंबर से स्टेटस चेक</Link> में अलग से लिखा
+        <Link href="/articles/hindi/pm-kisan-status-check-mobile-number-se">मोबाइल नंबर से स्टेटस चेक</Link> में अलग से लिखा
         है। गांव की पूरी सूची देखनी हो तो Farmers Corner का "Beneficiary List" विकल्प है।
       </p>
       <Figure
@@ -334,7 +334,7 @@ export default function PmKisan25viKistKabAayegi({ article }: { article: HindiAr
         भारी नुकसान यहीं होता है — कोई फोन करके कहता है कि "किस्त निकलवा देंगे, थोड़ा खर्चा लगेगा"।
         योजना में किसी बिचौलिये की जरूरत ही नहीं है। न किस्त जल्दी निकलवाई जा सकती है, न किसी शुल्क से रुका
         भुगतान चालू होता है। जो OTP, आधार नंबर या बैंक details मांगे — बात उसी पल खत्म कर दीजिए, और शिकायत
-        का रास्ता <Link href="/articles/hindi/helpline-shikayat">हेल्पलाइन guide</Link> से चुनिए।
+        का रास्ता <Link href="/articles/hindi/pm-kisan-helpline-number-shikayat">हेल्पलाइन guide</Link> से चुनिए।
       </Note>
 
       <H3>बैंक का SMS नहीं आया — तो खुद कैसे पक्का करें</H3>
@@ -364,7 +364,7 @@ export default function PmKisan25viKistKabAayegi({ article }: { article: HindiAr
         अपात्रता (income tax भरने वाले, सरकारी कर्मचारी, संस्थागत जमीन): यहां कोई शिकायत काम नहीं करेगी,
         नियम ही यही है। तीसरी — राज्य स्तर पर verification में अटका आवेदन: इसके लिए helpline 155261 या
         अपने कृषि अधिकारी से बात करें। शिकायत दर्ज करने का पूरा तरीका{' '}
-        <Link href="/articles/hindi/helpline-shikayat">हेल्पलाइन guide</Link> में है।
+        <Link href="/articles/hindi/pm-kisan-helpline-number-shikayat">हेल्पलाइन guide</Link> में है।
       </p>
 
       <H3>नया आवेदन करने वालों के लिए</H3>
@@ -372,7 +372,7 @@ export default function PmKisan25viKistKabAayegi({ article }: { article: HindiAr
         अगर आप योजना में अभी शामिल ही नहीं हैं, तो किस्त की तारीख आपके लिए दूसरे नंबर की बात है — पहला काम
         आवेदन और उसका verification है। नाम सूची में तभी आएगा जब जमीन का record और आधार-बैंक की कड़ी जुड़ चुकी
         हो, और यह प्रक्रिया एक-दो दिन की नहीं होती। कदम-दर-कदम रास्ता{' '}
-        <Link href="/articles/hindi/nayi-registration">नई registration guide</Link> में है। जितनी जल्दी
+        <Link href="/articles/hindi/pm-kisan-nayi-registration-kaise-kare">नई registration guide</Link> में है। जितनी जल्दी
         आवेदन पूरा होगा, उतनी जल्दी आप आगे की किस्तों के दायरे में आएंगे।
       </p>
 
@@ -391,7 +391,7 @@ export default function PmKisan25viKistKabAayegi({ article }: { article: HindiAr
       <p>
         और यह समझना जरूरी है कि गलती से पैसा ले लेना बाद में बोझ बन जाता है, क्योंकि अपात्र पाई गई रकम वापस
         मांगी जाती है। अगर ऐसा notice आ चुका हो तो घबराने की जगह{' '}
-        <Link href="/articles/hindi/recovery-notice">recovery notice वाली guide</Link> पढ़िए — वापसी का
+        <Link href="/articles/hindi/pm-kisan-recovery-notice-paisa-wapas">recovery notice वाली guide</Link> पढ़िए — वापसी का
         तरीका वहां लिखा है।
       </p>
 

@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next';
 import { ARTICLES, CATEGORIES, type CategorySlug } from '@/lib/articles-data';
 import { MAANDHAN_ARTICLES } from '@/lib/maandhan-data';
 import { LIVE_RAJYA_YOJANA_ARTICLES } from '@/lib/rajya-yojana-data';
+import { HINDI_ARTICLES } from '@/lib/hindi-articles-data';
 import { SITE_URL } from '@/lib/site-config';
 
 const ALL_ARTICLES = [
@@ -34,6 +35,16 @@ const ALL_ARTICLES = [
     modifiedTime: a.modified,
     ogImage: a.ogImage,
     path: `/rajya-yojana/${a.slug}`,
+  })),
+  ...HINDI_ARTICLES.map((a) => ({
+    slug: a.slug,
+    title: a.titleHi,
+    desc: a.desc,
+    category: a.category,
+    publishedTime: a.publishedTime,
+    modifiedTime: a.modifiedTime,
+    ogImage: undefined as string | undefined,
+    path: `/articles/hindi/${a.slug}`,
   })),
 ];
 
