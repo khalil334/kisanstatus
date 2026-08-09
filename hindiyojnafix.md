@@ -3,38 +3,18 @@ https://github.com/khalil334/kisanstatus/tree/main/components%2Farticles%2Fhindi
 token ke lye card send karo
 or phly ye file update karo apny lye 
 har 2 articles fix karny ke bad auto merge karke file update kardia karo
-मेरे hindi-yojana folder के 15 articles में ये 9 AI patterns repeat हो रहे हैं — words trim मत करो, सिर्फ low-competitive synonyms से replace करो:
+मेरे hindi-yojana folder के 15 articles में ये patterns 2+ files में repeat हो रहे हैं — सिर्फ इन्हें replace करो, words delete मत करो:
 
-1. "वही" (27 baar, 12 files) → "उसी", "यही", "यह", "वह", "इसी", "उस" — har file mein alag word chunno
-2. "इसीलिए" (7 baar, 7 files) → "इसी वजह से", "इस कारण", "इसलिए ही", "इसके चलते"
-3. "यानी" (9 baar, 7 files) → "अर्थात्", "भावार्थ", "तात्पर्य", "मतलब", "अर्थ"
-4. "मतलब" (9 baar, 6 files) → "अर्थ", "भाव", "तात्पर्य", "यानी", "सीधे शब्दों में"
-5. "जैसे" (9 baar, 6 files) → "उदाहरणार्थ", "मसलन", "जैसे कि", "उदाहरण के लिए", "जैसा कि"
-6. "screenshot रख" (3 files) → "photo save करें", "mobile में रखें", "capture कर लें"
-7. "निचोड़" (3 files) → "सारांश", "संक्षेप", "निष्कर्ष", "मुख्य बात"
-8. "किस्त वाले दिन" (2 files) → "पैसे आने वाले दिन", "भुगतान वाले दिन"
-9. "guide में" (2 files) → "detail यहाँ है", "पूरा तरीका इस page पर"
+1. "वही" (18 baar, 11 files) → "उसी", "यही", "इसी", "उस", "यह", "वह" — har file mein alag word
+2. "इसलिए" (4 baar, 4 files) → "इस वजह से", "इस कारण", "इसीलिए", "इसके चलते"
+3. "मतलब" (3 baar, 3 files) → "अर्थ", "भाव", "तात्पर्य", "यानी"
+4. "डायरी में" (3 baar, 2 files) → "रजिस्टर में", "नोटबुक में", "कॉपी में"
+5. "एक लाइन में" (3 baar, 2 files) → "संक्षेप में", "एक शब्द में", "सीधे तौर पर"
+6. "वैसे" (3 baar, 2 files) → "उसी तरह", "उसी प्रकार", "ऐसे ही"
+7. "असल में" (2 baar, 2 files) → "दरअसल", "वास्तव में", "हकीकत में"
+8. "नतीजा" (2 baar, 2 files) → "नतीजतन", "परिणामस्वरूप", "अंत में"
+9. "अक्सर पूछे" (2 baar, 2 files) → "सामान्य सवाल", "आपके सवाल", "मुख्य सवाल"
+10. "processing fee" (2 baar, 2 files) → "शुल्क", "फीस", "प्रोसेसिंग शुल्क"
+11. "कागज संभाल" (2 baar, 2 files) → "दस्तावेज़ रखें", "कागजात संभालें", "रेकॉर्ड सहेजें"
 
 Rule: Content length same rakhni hai — koi word delete mat karo, sirf replace karo. Same TSX format mein output do.
-
----
-## Progress log (agent-maintained)
-Batch size: 2 articles per commit, pushed directly to main.
-
-- [x] FarmerIdCardKaiseBanaye2027.tsx — मतलब→सीधे शब्दों में/तात्पर्य, यानी→अर्थात्, इसीलिए→इसी वजह से, वही→यही (batch 1)
-- [x] GehuKaRateAajMspVsMandiBhav.tsx — इसीलिए→इस कारण, यानी→मतलब/अर्थात्, मतलब→तात्पर्य/अर्थ (batch 1)
-- [x] KccLimitKaiseBadhaye3Se5Lakh.tsx — मतलब→अर्थ/तात्पर्य, वही→यही/वह (batch 2)
-- [x] KisanKarjMafiList2027.tsx — यानी→अर्थात्/मतलब, निचोड़→निष्कर्ष, जैसे→सरीखे/की तरह के (batch 2)
-- [x] MukhyamantriKisanKalyanYojanaMp.tsx — यानी→अर्थात्/तात्पर्य, मतलब→सीधे शब्दों में/अर्थ, इसीलिए→इसी वजह से, वही→वह (batch 3)
-- [x] NamoShetkariYojanaMaharashtra.tsx — screenshot रख→photo save करें, जैसे→सरीखे/जैसा कि (batch 3)
-- [x] NpciAadhaarSeedingDbtPayment.tsx — जैसे→समान (batch 4)
-- [x] PmKisan25viKistKabAayegi.tsx — किस्त वाले दिन→पैसे आने वाले दिन/भुगतान वाले दिन, निचोड़→मुख्य बात, जैसे→मसलन/सरीखे, मतलब→अर्थ, इसीलिए→इसके चलते (batch 4)
-- [x] PmKisanEkycMobileSeKaiseKare.tsx — screenshot रख→mobile में capture कर, वही→वह स्वयं (batch 5)
-- [x] PmKisanHelplineNumberComplaint.tsx — इसीलिए→इसी कारण, वही→उसी (batch 5)
-- [x] PmKisanNewRegistration2027.tsx — इसीलिए→इसलिए ही (batch 6)
-- [x] PmKisanPaymentStoppedByStateFix.tsx — यानी→सीधे शब्दों में, इसीलिए→इस कारण, वही→यही, मतलब→अर्थ, जैसे→सरीखे (batch 6)
-- [x] PmKisanRecoveryNoticePaisaWapas.tsx — यानी→अर्थात्, इसीलिए→इसी वजह से (batch 7)
-- [x] PmKisanStatusCheckMobileNumberSe.tsx — मतलब→अर्थ/तात्पर्य, यानी→तात्पर्य यह कि, किस्त वाले दिनों→भुगतान वाले दिनों, वही→वैसा, जैसे→जिस तरह (batch 7)
-- [x] TractorSubsidy2027StateWiseList.tsx — guide में→पूरा तरीका page पर, निचोड़→सारांश, इसीलिए→इसके चलते (batch 8)
-
-Note: "वही" counts in the brief include "वहीं" (locative, natural Hindi) — only bare "वही" instances are replaced. "जैसे" used as "जैसे कि / जैसा" in natural comparisons is left when replacement would break meaning.
