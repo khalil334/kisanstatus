@@ -58,12 +58,13 @@ export async function generateMetadata({
       locale: 'hi_IN',
       publishedTime: article.publishedTime,
       modifiedTime: article.modifiedTime,
-      images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630 }],
+      images: [{ url: article.ogImage || DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: article.titleHi }],
     },
     twitter: {
       card: 'summary_large_image',
       title: article.titleHi,
       description: article.desc,
+      images: [article.ogImage || DEFAULT_OG_IMAGE],
     },
   };
 }
@@ -90,6 +91,7 @@ export default async function HindiArticlePage({
     description: article.desc,
     datePublished: article.publishedTime,
     dateModified: article.modifiedTime,
+    image: `${SITE_URL}${article.ogImage}`,
     inLanguage: 'hi-IN',
     author: { '@type': 'Organization', name: article.author, url: `${SITE_URL}/about` },
     publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },

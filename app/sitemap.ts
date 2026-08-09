@@ -43,7 +43,7 @@ const ALL_ARTICLES = [
     category: a.category,
     publishedTime: a.publishedTime,
     modifiedTime: a.modifiedTime,
-    ogImage: undefined as string | undefined,
+    ogImage: a.ogImage,
     path: `/articles/hindi/${a.slug}`,
   })),
 ];

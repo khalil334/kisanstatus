@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { ARTICLES, getArticlesByFreshness, CATEGORIES } from '@/lib/articles-data';
+import { HINDI_ARTICLES } from '@/lib/hindi-articles-data';
 import { SITE_URL } from '@/lib/site-config';
 import SearchBar from './SearchBar';
 import FaqItem from './FaqItem';
@@ -546,6 +547,52 @@ export default function HomeContent() {
               <span>Sabhi Articles Dekho</span>
               <IconArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-orange-50/60 dark:bg-orange-900/10" aria-labelledby="hindi-articles-heading">
+        <div className="container-site mx-auto px-4">
+          <div className="mb-14">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-100 to-amber-100 dark:from-orange-900/40 dark:to-amber-900/40 text-orange-800 dark:text-orange-300 text-sm font-bold px-5 py-2.5 rounded-full mb-5 shadow-sm border border-orange-200/50 dark:border-orange-700/50">
+              <IconBookOpen className="w-5 h-5" />
+              <span>हिंदी में पढ़ें</span>
+            </div>
+            <h2 id="hindi-articles-heading" className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white tracking-tight" lang="hi">
+              हिंदी लेख — पीएम किसान और किसान योजनाएं
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 mt-2 text-lg" lang="hi">
+              आसान हिंदी में step-by-step guides — स्टेटस चेक, eKYC, किस्त, सब्सिडी और मंडी भाव
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7" lang="hi">
+            {HINDI_ARTICLES.map((article) => (
+              <Link
+                key={article.slug}
+                href={`/articles/hindi/${article.slug}`}
+                className="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:-translate-y-1"
+              >
+                <div className="relative h-44 overflow-hidden">
+                  <Image
+                    src={article.ogImage}
+                    alt={article.titleHi}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="font-bold text-gray-900 dark:text-white leading-snug group-hover:text-green-700 dark:group-hover:text-green-400 transition-colors">
+                    {article.titleHi}
+                  </h3>
+                  <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-green-700 dark:text-green-400">
+                    पूरा लेख पढ़ें
+                    <IconArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

@@ -19,6 +19,8 @@ export interface HindiArticle {
   author: string;
   /** Component file name in components/articles/hindi-yojana/ */
   component: string;
+  /** OG image path (root-relative, under public/) */
+  ogImage: string;
 }
 
 export const HINDI_ARTICLES: readonly HindiArticle[] = [
@@ -42,6 +44,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     modifiedTime: '2026-08-09T09:00:00+05:30',
     author: 'KisanStatus Editorial Team',
     component: 'PmKisan25viKistKabAayegi',
+    ogImage: '/images/articles/hindi-yojna/pm-kisan-25vi-kist/kisan-mobile-check.webp',
   },
   {
     slug: 'pm-kisan-status-check-mobile-number-se',
@@ -63,6 +66,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     modifiedTime: '2026-08-08T09:00:00+05:30',
     author: 'KisanStatus Editorial Team',
     component: 'PmKisanStatusCheckMobileNumberSe',
+    ogImage: '/images/articles/hindi-yojna/status-check-mobile-se/phone-status-check.webp',
   },
   {
     slug: 'kisan-karj-mafi-list-rajyawar',
@@ -74,6 +78,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     modifiedTime: '2027-02-15T09:00:00+05:30',
     author: 'KisanStatus Editorial Team',
     component: 'KisanKarjMafiList2027',
+    ogImage: '/images/articles/hindi-yojna/karj-mafi-list/karj-mafi-hero.webp',
   },
   {
     slug: 'pm-kisan-helpline-number-shikayat',
@@ -85,6 +90,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     modifiedTime: '2027-02-15T09:00:00+05:30',
     author: 'KisanStatus Editorial Team',
     component: 'PmKisanHelplineNumberComplaint',
+    ogImage: '/images/articles/hindi-yojna/helpline-shikayat/farmer-on-call.webp',
   },
   {
     slug: 'mukhyamantri-kisan-kalyan-yojana-mp',
@@ -96,6 +102,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     modifiedTime: '2027-02-15T09:00:00+05:30',
     author: 'KisanStatus Editorial Team',
     component: 'MukhyamantriKisanKalyanYojanaMp',
+    ogImage: '/images/articles/hindi-yojna/mp-kisan-kalyan/mp-farmer-field.webp',
   },
   {
     slug: 'pm-kisan-nayi-registration-kaise-kare',
@@ -107,6 +114,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     modifiedTime: '2027-02-15T09:00:00+05:30',
     author: 'KisanStatus Editorial Team',
     component: 'PmKisanNewRegistration2027',
+    ogImage: '/images/articles/hindi-yojna/new-registration/docs-ready.webp',
   },
   {
     slug: 'farmer-id-card-kaise-banaye-online',
@@ -118,6 +126,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     modifiedTime: '2027-02-15T09:00:00+05:30',
     author: 'KisanStatus Editorial Team',
     component: 'FarmerIdCardKaiseBanaye2027',
+    ogImage: '/images/articles/hindi-yojna/farmer-id-card/id-card-sample.webp',
   },
   {
     slug: 'tractor-subsidy-yojana-state-wise-list',
@@ -129,6 +138,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     modifiedTime: '2027-02-15T09:00:00+05:30',
     author: 'KisanStatus Editorial Team',
     component: 'TractorSubsidy2027StateWiseList',
+    ogImage: '/images/articles/hindi-yojna/tractor-subsidy/tractor-kisan-khet.webp',
   },
   {
     slug: 'gehu-ka-rate-aaj-msp-mandi-bhav',
@@ -140,6 +150,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     modifiedTime: '2027-02-15T09:00:00+05:30',
     author: 'KisanStatus Editorial Team',
     component: 'GehuKaRateAajMspVsMandiBhav',
+    ogImage: '/images/articles/hindi-yojna/gehu-ka-rate/mandi-wheat.webp',
   },
   {
     slug: 'pm-kisan-ekyc-mobile-se-kaise-kare',
@@ -161,6 +172,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     modifiedTime: '2026-08-10T09:00:00+05:30',
     author: 'KisanStatus Editorial Team',
     component: 'PmKisanEkycMobileSeKaiseKare',
+    ogImage: '/images/articles/hindi-yojna/ekyc-mobile-se/otp-screen.webp',
   },
   {
     slug: 'npci-aadhaar-seeding-dbt-payment',
@@ -172,6 +184,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     modifiedTime: '2027-02-15T09:00:00+05:30',
     author: 'KisanStatus Editorial Team',
     component: 'NpciAadhaarSeedingDbtPayment',
+    ogImage: '/images/articles/hindi-yojna/npci-seeding/seeding-diagram.webp',
   },
   {
     slug: 'pm-kisan-payment-stopped-by-state-fix',
@@ -183,6 +196,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     modifiedTime: '2027-02-15T09:00:00+05:30',
     author: 'KisanStatus Editorial Team',
     component: 'PmKisanPaymentStoppedByStateFix',
+    ogImage: '/images/articles/hindi-yojna/payment-stopped/stopped-status.webp',
   },
   {
     slug: 'pm-kisan-recovery-notice-paisa-wapas',
@@ -194,6 +208,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     modifiedTime: '2027-02-15T09:00:00+05:30',
     author: 'KisanStatus Editorial Team',
     component: 'PmKisanRecoveryNoticePaisaWapas',
+    ogImage: '/images/articles/hindi-yojna/recovery-notice/notice-letter.webp',
   },
   {
     slug: 'kcc-limit-kaise-badhaye-3-se-5-lakh',
@@ -205,6 +220,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     modifiedTime: '2027-02-15T09:00:00+05:30',
     author: 'KisanStatus Editorial Team',
     component: 'KccLimitKaiseBadhaye3Se5Lakh',
+    ogImage: '/images/articles/hindi-yojna/kcc-limit/kcc-card.webp',
   },
   {
     slug: 'namo-shetkari-yojana-12000-kist',
@@ -216,6 +232,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     modifiedTime: '2027-02-20T09:00:00+05:30',
     author: 'KisanStatus Editorial Team',
     component: 'NamoShetkariYojanaMaharashtra',
+    ogImage: '/images/articles/hindi-yojna/namo-shetkari/shetkari-field.webp',
   },
 ] as const;
 
