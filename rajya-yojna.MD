@@ -7,18 +7,21 @@
 
 Update this table after every batch. Status: `todo` → `in-progress` → `done (PR #n / commit)`.
 
-| # | Batch | File | Words (verified 2026-08-10) | Status |
+| # | Batch | File | Words (verified 2026-08-10, after fix) | Status |
 |---|-------|------|------------------------------|--------|
-| 1 | 1 | KrishakUnnatiYojanaStatusCheck.tsx | ~1,300 | todo |
-| 2 | 1 | StateKisanYojanaHub.tsx | ~1,259 | todo |
-| 3 | 1 | PmKisanPatiPatniRule.tsx | ~1,548 | todo |
-| 4 | 2 | MpKisanKalyanYojanaKist.tsx | ~1,725 | todo |
-| 5 | 2 | RythuBharosaStatusCheck.tsx | ~1,727 | todo |
-| 6 | 2 | OdishaCmKisanStatusCheck.tsx | ~1,790 | todo |
-| 7 | 3 | NamoShetkariYojanaStatus.tsx | ~1,846 | todo |
-| 8 | 3 | AnnadataSukhibhavaStatusCheck.tsx | ~1,987 | todo |
-| 9 | 3 | KrishakBandhuStatusCheck.tsx | ~2,103 | todo |
-| 10 | 4 | RajasthanKisanSammanNidhi9000.tsx | ~2,388 (length OK) | todo — Fix 2 only |
+| 1 | 1 | KrishakUnnatiYojanaStatusCheck.tsx | ~2,104 | done (PR #188) |
+| 2 | 1 | StateKisanYojanaHub.tsx | ~2,013 | done (PR #188) |
+| 3 | 1 | PmKisanPatiPatniRule.tsx | ~2,074 | done (PR #188) |
+| 4 | 2 | MpKisanKalyanYojanaKist.tsx | ~2,033 | done (PR #189) |
+| 5 | 2 | RythuBharosaStatusCheck.tsx | ~2,065 | done (PR #189) |
+| 6 | 2 | OdishaCmKisanStatusCheck.tsx | ~2,073 | done (PR #189) |
+| 7 | 3 | NamoShetkariYojanaStatus.tsx | ~2,072 | done (PR #190) |
+| 8 | 3 | AnnadataSukhibhavaStatusCheck.tsx | ~2,130 | done (PR #190) |
+| 9 | 3 | KrishakBandhuStatusCheck.tsx | ~2,074 (length was OK — Fix 2 only) | done (PR #190) |
+| 10 | 4 | RajasthanKisanSammanNidhi9000.tsx | ~2,373 (length OK — Fix 2 only) | done (PR #191) |
+
+All 10 files: `ArticleShared`/`FAQBlock` import removed; FAQ rendered inline (same FAQ data,
+accordion `<details>` markup + FAQPage JSON-LD). Completed 2026-08-10.
 
 Word counts = prose words (JSX tags/imports stripped), measured from source on 2026-08-10.
 Counting method: strip `{…}` expressions, `<…>` tags, and import lines; count remaining
