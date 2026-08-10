@@ -3,7 +3,6 @@ import Image from 'next/image';
 import ExternalLinkButton from '@/components/ui/ExternalLinkButton';
 import InfoBox from '@/components/ui/InfoBox';
 import SchemeTable from '@/components/ui/SchemeTable';
-import { FAQBlock } from '@/components/ArticleShared';
 
 const IMG_BASE = '/images/articles/rajya-yojna/namo-shetkari-yojana-status-check-2026';
 
@@ -374,6 +373,38 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         hota hai.
       </p>
 
+      <h2>Ek Kisan Ki Timeline — Vidarbha Ke Ganesh Ka Case</h2>
+
+      <p>
+        Rule sookhe lagte hain, isliye ek aam case se samajhein. Ganesh ke paas do acre hai,
+        PM Kisan 2019 se aa raha hai. Namo Shetkari shuru hone par usne kuch nahi kiya —
+        aur pehli kist apne aap aa gayi, kyunki list PM Kisan ke data se bani thi. Doosri
+        kist ke waqt problem hui: PM Kisan ki e-KYC expire ho gayi thi. Central wali kist
+        bhi ruki aur state wali bhi — dono ek hi record par khadi hain. CSC par biometric
+        e-KYC karwane ke baad agli release mein dono kistein ek saath aayi — ruki hui
+        raqam scheme ke record mein rehti hai, khatam nahi hoti.
+      </p>
+
+      <p>
+        Iske baad Ganesh ne teen aadatein bana leen, jo har Maharashtra ke kisan ke kaam ki
+        hain: har season se pehle e-KYC ka status dekhna, 7/12 mein naam ki spelling
+        Aadhaar se milana, aur passbook mein dono entries (PMKISAN aur state wali) alag
+        pehchaan kar likhna. In teen kaamon ke baad status check karna sirf tasalli ka
+        kaam reh jaata hai — rukavat aane ki jagah hi nahi bachti.
+      </p>
+
+      <h2>Shikayat Ka Raasta — Kisse Kya Poochhein</h2>
+
+      <p>
+        Kist ruki ho to shikayat ka darwaza problem ke hisaab se chunein. e-KYC aur bank
+        seeding ki dikkat CSC aur bank branch ka kaam hai — wahan portal ki shikayat le
+        jaane ka fayda nahi. 7/12 ke record ki galti talathi ke paas jaati hai. Aur list ya
+        payment se judi baat apne taluka krishi adhikari ke office mein likhit dein —
+        registration number, Aadhaar aur problem ek line mein likh kar, paavti ke saath.
+        PM Kisan side ki dikkat ke liye helpline 155261 alag se hai. Ek hi shikayat sab
+        jagah daalne ke bajaye sahi jagah ek baar daalna hamesha tez kaam karta hai.
+      </p>
+
       <h2>Dusre Rajya Se Hain?</h2>
 
       <p>
@@ -413,7 +444,41 @@ export default function NamoShetkariYojanaStatusCheck2026() {
 
       <h2>Namo Shetkari — Aksar Poochhe Jaane Wale Sawaal</h2>
 
-      <FAQBlock faqs={FAQS_DATA} caption="Namo Shetkari Mahasanman Nidhi FAQ 2026" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: FAQS_DATA.map((f) => ({
+              '@type': 'Question',
+              name: f.q,
+              acceptedAnswer: { '@type': 'Answer', text: f.a },
+            })),
+          }),
+        }}
+      />
+      <section className="mb-8 not-prose">
+        <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">Namo Shetkari Mahasanman Nidhi FAQ 2026</p>
+        <div className="space-y-3">
+          {FAQS_DATA.map(({ q, a }) => (
+            <details
+              key={q}
+              className="border border-[var(--color-border)] rounded-xl overflow-hidden group"
+            >
+              <summary className="p-4 font-semibold text-[var(--color-text)] cursor-pointer bg-[var(--color-bg-alt)] hover:bg-green-50 dark:hover:bg-green-900/20 text-sm flex justify-between items-center gap-3 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">
+                <span>{q}</span>
+                <span className="text-green-600 dark:text-green-400 text-xl group-open:rotate-45 transition-transform shrink-0">
+                  +
+                </span>
+              </summary>
+              <div className="p-4 text-sm text-[var(--color-text-muted)] leading-relaxed border-t border-[var(--color-border)]">
+                {a}
+              </div>
+            </details>
+          ))}
+        </div>
+      </section>
 
       <InfoBox type="tip">
         <strong>Fraud se bachein:</strong> Is scheme mein bharne ke liye koi form hi nahi hai, is liye "registration karwa dunga" ya "hapta jaldi nikalwa dunga" kehne wala har aadmi jhooth bol raha hai. Status dekhna, e-KYC aur 7/12 correction — sab sarkari raste se free hote hain. Aisi demand par apne Taluka Krishi Adhikari (TAO) office mein ya Maharashtra ke Anti-Corruption Bureau ki helpline <strong>1064</strong> par shikayat darj karwaayein.

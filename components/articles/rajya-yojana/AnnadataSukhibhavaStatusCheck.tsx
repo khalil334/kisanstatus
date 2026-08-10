@@ -3,7 +3,6 @@ import Image from 'next/image';
 import ExternalLinkButton from '@/components/ui/ExternalLinkButton';
 import InfoBox from '@/components/ui/InfoBox';
 import SchemeTable from '@/components/ui/SchemeTable';
-import { FAQBlock } from '@/components/ArticleShared';
 
 const IMG_BASE = '/images/articles/rajya-yojna/annadata-sukhibhava-status-check-2026';
 
@@ -458,6 +457,28 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         </li>
       </ul>
 
+      <h2>Season Se Pehle Ka Chhota Audit — Paanch Minute Ka Kaam</h2>
+
+      <p>
+        AP mein scheme ka dhaancha aisa hai ki zyadatar rukavat pehle se dikh jaati hai —
+        bas koi dekhta nahi. Har season shuru hone se pehle ye paanch cheezein milaa lein:
+        zameen wale kisan apna khata number land record se, bataidar apna CCRC card ki
+        validity (wo har saal renew hota hai — purana card season badalte hi bekar ho
+        jaata hai), bank khaate ki Aadhaar seeding, PM Kisan ki e-KYC (kyunki combined
+        ₹20,000 ka central hissa usi par khada hai), aur mobile number jo record mein darj
+        hai. Paanchon durust hon to kist ka intezaar sirf release ki tareekh ka intezaar
+        hai.
+      </p>
+
+      <p>
+        Bataidar kisan ke liye ek extra baat: CCRC renewal ka sahi waqt bawai se pehle ka
+        hai, jab malik ke saath naya season tay hota hai. Season ke beech mein renewal
+        karwana mushkil hota hai kyunki VAA ka field verification fasal khadi hone par hi
+        aasaan hota hai — aur bina valid card ke us season ki kist ka claim nahi banta.
+        Card ke kagaz ki photo phone mein rakh lein; Rythu Seva Kendra par baat karte waqt
+        wahi sabse pehle maanga jaata hai.
+      </p>
+
       <h2>Kahan Shikayat Karein</h2>
 
       <p>
@@ -478,7 +499,41 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
 
       <h2>Annadata Sukhibhava — Aksar Poochhe Jaane Wale Sawaal</h2>
 
-      <FAQBlock faqs={FAQS_DATA} caption="Annadata Sukhibhava FAQ 2026" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: FAQS_DATA.map((f) => ({
+              '@type': 'Question',
+              name: f.q,
+              acceptedAnswer: { '@type': 'Answer', text: f.a },
+            })),
+          }),
+        }}
+      />
+      <section className="mb-8 not-prose">
+        <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">Annadata Sukhibhava FAQ 2026</p>
+        <div className="space-y-3">
+          {FAQS_DATA.map(({ q, a }) => (
+            <details
+              key={q}
+              className="border border-[var(--color-border)] rounded-xl overflow-hidden group"
+            >
+              <summary className="p-4 font-semibold text-[var(--color-text)] cursor-pointer bg-[var(--color-bg-alt)] hover:bg-green-50 dark:hover:bg-green-900/20 text-sm flex justify-between items-center gap-3 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">
+                <span>{q}</span>
+                <span className="text-green-600 dark:text-green-400 text-xl group-open:rotate-45 transition-transform shrink-0">
+                  +
+                </span>
+              </summary>
+              <div className="p-4 text-sm text-[var(--color-text-muted)] leading-relaxed border-t border-[var(--color-border)]">
+                {a}
+              </div>
+            </details>
+          ))}
+        </div>
+      </section>
 
       <InfoBox type="tip">
         <strong>Fraud se bachein:</strong> Koi bhi aapse "status theek karne" ya "naam list mein dalwane" ke naam par paisa nahi maangta. Ye scheme 100% free hai. Agar koi agent paise maange, toh Andhra Pradesh Anti-Corruption Bureau ki helpline <strong>1064</strong> par ya local police ko shikayat karein.
