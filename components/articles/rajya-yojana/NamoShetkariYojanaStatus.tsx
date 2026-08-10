@@ -116,9 +116,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       </p>
 
       <p>
-        Matlab Maharashtra ke ek eligible kisan ke haath saal bhar mein ₹12,000 aate hain:
-        ₹6,000 central se aur ₹6,000 state se. Ye raqam beej, khaad aur diesel jaise
-        kharchon ke waqt kaam aati hai.
+        <strong>Central Aur State — Saal Bhar Ka Jod</strong>
       </p>
 
       <SchemeTable>
@@ -147,6 +145,12 @@ export default function NamoShetkariYojanaStatusCheck2026() {
           <td><strong>Combined</strong></td>
         </tr>
       </SchemeTable>
+
+      <p>
+        Matlab Maharashtra ke ek eligible kisan ke haath saal bhar mein ₹12,000 aate hain:
+        ₹6,000 central se aur ₹6,000 state se. Ye raqam beej, khaad aur diesel jaise
+        kharchon ke waqt kaam aati hai.
+      </p>
 
       <h2>Sabse Badi Khasiyat: Alag Se Apply Nahi Karna Padta</h2>
 
@@ -222,7 +226,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         hai — neeche wale steps follow karein.
       </p>
 
-      <h2>Apna Status Kaise Dekhein</h2>
+      <h2>Status Check Karna</h2>
 
       <p>
         Portal par status dekhna jaldi ho jaayega. Aadhaar number paas rakhein:

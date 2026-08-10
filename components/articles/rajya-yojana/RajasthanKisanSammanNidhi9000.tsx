@@ -501,7 +501,7 @@ export default function RajasthanKisanSammanNidhi9000() {
           <li><Link href="/rajya-yojana/state-kisan-yojana-list-all-states-2026">Sab States Ki List — Ek Table Mein</Link></li>
         </ul>
 
-        <h2>FAQs</h2>
+        <h2>Aksar Poochhe Jaane Wale Sawaal</h2>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

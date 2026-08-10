@@ -395,7 +395,7 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
           par pakda gaya.
         </p>
 
-        <h2>Kuch Aur Sawaal</h2>
+        <h2>Baaki Doubts</h2>
 
         <script
           type="application/ld+json"

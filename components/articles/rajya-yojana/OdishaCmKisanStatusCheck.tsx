@@ -480,12 +480,12 @@ export default function OdishaCmKisanStatusCheck({
           raqam ki sabse aam wajah hai.
         </p>
 
-        <h2>Odisha Se Bahar Ke Kisan Yahan Dekhein</h2>
+        <h2>Kis Rajya Mein Kya Chal Raha Hai</h2>
 
         <p>
-          Odisha ka domicile nahi hai to CM Kisan aap par laagu nahi hoti — lekin landless
+          (Odisha ka domicile nahi hai to CM Kisan aap par laagu nahi hoti — lekin landless
           track jaisa intezaam har rajya mein nahi milta, aur raqam bhi jagah-jagah badalti
-          hai. Baaki jagah kya chal raha hai:
+          hai.)
         </p>
 
         <ul>
