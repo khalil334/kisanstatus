@@ -2,9 +2,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
-// यह article जानबूझकर self-contained है — कोई shared component import नहीं।
-// Structure variant: journey-milestone (पड़ाव) sections + accordion <details> FAQ.
-
 const FAQS = [
   {
     q: 'क्या Farmer ID के बिना नई registration हो जाएगी?',

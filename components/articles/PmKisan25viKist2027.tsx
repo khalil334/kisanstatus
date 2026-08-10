@@ -72,7 +72,6 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
 
       <div className="container-site max-w-3xl py-8">
 
-        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/articles/pm-kisan-25vi-kist-2027/hero-25vi-kist.webp'}
@@ -103,7 +102,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
 
         <section className="mb-8 mt-8">
           <SH>Ab tak ka record — teen confirmed kisten</SH>
-          
+
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             21vi, 22vi, 23vi — yeh teen ho chuki hain. Dates confirm hain, records mein hain.
           </p>
@@ -144,7 +143,6 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           </p>
         </section>
 
-        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-25vi-kist-2027/installment-timeline-chart.webp"
@@ -162,7 +160,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
 
         <section className="mb-8">
           <SH>Paisa badhega ya wahi ₹2,000 rahega?</SH>
-          
+
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             2019 se ₹2,000 chal raha hai. Kabhi nahi badla.
           </p>
@@ -178,7 +176,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
 
         <section className="mb-8">
           <SH>Karne wala kaam — date ka wait mat karo</SH>
-          
+
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Iske baare mein zyada sochne se accha, yeh cheezein abhi kar lo. Yeh wahi wajah hain jo bahut se logon ki kist atak jaati hai:
           </p>
@@ -192,7 +190,6 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           </StepList>
         </section>
 
-        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-25vi-kist-2027/ekyc-checklist.webp"
@@ -210,7 +207,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
 
         <section className="mb-8">
           <SH>Naye farmers — registration kab karein?</SH>
-          
+
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Registration kabhi bhi ho sakta hai. Koi deadline nahi hai.
           </p>
@@ -226,7 +223,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
 
         <section className="mb-8">
           <SH>Rules badalne ki baat — kya sach hai?</SH>
-          
+
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Ek cheez sach mein ho rahi hai — Farmer ID (AgriStack) kai states mein naye registration ke liye zaroori kar diya gaya hai.
           </p>
@@ -247,7 +244,6 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           <FAQBlock faqs={FAQS_DATA} caption="PM Kisan 25vi Kist 2027 — FAQ" />
         </section>
 
-        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-25vi-kist-2027/payment-credited-notification.webp"

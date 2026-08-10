@@ -24,18 +24,17 @@ export default function NotFound() {
         <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-green-100 dark:bg-green-900/30 text-5xl mb-2" aria-hidden="true">
           🌾
         </div>
-        
+
         <div className="space-y-3">
           <h1 className="text-4xl font-black text-[var(--color-text)]">
             404 - Page Nahi Mila
           </h1>
           <p className="text-[var(--color-text-muted)] text-sm md:text-base leading-relaxed max-w-lg mx-auto">
-            Kshama karein, aap jis page ko dhoondh rahe hain, woh shayad move ho gaya hai ya ab exist nahi karta. 
+            Kshama karein, aap jis page ko dhoondh rahe hain, woh shayad move ho gaya hai ya ab exist nahi karta.
             Neeche diye gaye popular articles dekhein ya search karein.
           </p>
         </div>
 
-        {}
         <div className="max-w-md mx-auto">
           <form action="/search" method="GET" className="relative">
             <input
@@ -57,7 +56,6 @@ export default function NotFound() {
           </form>
         </div>
 
-        {}
         <div className="space-y-4">
           <h2 className="text-lg font-bold text-[var(--color-text)]">Popular Articles</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -74,7 +72,6 @@ export default function NotFound() {
           </div>
         </div>
 
-        {}
         <div className="flex flex-col sm:flex-row gap-3 justify-center pt-4">
           <Link
             href="/"

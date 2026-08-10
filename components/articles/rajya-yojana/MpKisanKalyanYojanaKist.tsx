@@ -550,8 +550,6 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         </div>
       </section>
 
-
-
       <InfoBox type="tip">
         <strong>Fraud se bachein:</strong> SAARA par status dekhna, e-KYC karna aur bank
         details update karwana — teeno kaam bilkul free hain. Kist "jaldi nikalwane" ya list

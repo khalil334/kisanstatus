@@ -9,7 +9,6 @@ export default function Error({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
-  // Surface the error for debugging; Next.js requires the prop in this signature.
   console.error(error);
   return (
     <div className="min-h-[60vh] flex items-center justify-center px-4 py-12">
@@ -19,10 +18,10 @@ export default function Error({
           Kuch Galat Ho Gaya!
         </h2>
         <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-          Maaf karein, is page ko load karne mein kuch samasya aa gayi hai. 
+          Maaf karein, is page ko load karne mein kuch samasya aa gayi hai.
           Kripya page ko refresh karein ya kuch der baad dobara koshish karein.
         </p>
-        
+
         <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
           <button
             onClick={reset}

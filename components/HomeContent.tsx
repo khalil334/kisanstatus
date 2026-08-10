@@ -154,7 +154,6 @@ const FAQS = [
   },
 ];
 
-/** Big featured photo card — used by the middle and bottom hero-image sections. */
 function FeaturedImageCard({ src, title, desc, border }: { src: string; title: string; desc: string; border: string }) {
   return (
     <figure className={`group relative rounded-3xl overflow-hidden shadow-2xl border-4 ${border} hover:shadow-3xl transition-all duration-500 hover:-translate-y-2`} style={{ aspectRatio: '3/2' }}>
@@ -284,7 +283,7 @@ export default function HomeContent() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900" itemScope itemType="https://schema.org/WebPage">
-      
+
       <Breadcrumb />
 
       <section className="relative bg-gradient-to-br from-green-700 via-green-600 to-emerald-700 dark:from-green-900 dark:via-green-800 dark:to-emerald-900 py-16 md:py-24 overflow-hidden" aria-labelledby="hero-heading">
@@ -307,11 +306,11 @@ export default function HomeContent() {
             </h1>
 
             <p className="text-lg md:text-xl text-green-100 leading-relaxed mb-8 max-w-2xl mx-auto" itemProp="description">
-              <strong className="text-white">PM Kisan Samman Nidhi</strong> (Ministry of Agriculture) ki 
-              <strong className="text-white"> 24vi kist October 2026</strong> mein expected hai! 
-              <strong className="text-white"> ₹2,000</strong> seedha bank account mein via 
+              <strong className="text-white">PM Kisan Samman Nidhi</strong> (Ministry of Agriculture) ki
+              <strong className="text-white"> 24vi kist October 2026</strong> mein expected hai!
+              <strong className="text-white"> ₹2,000</strong> seedha bank account mein via
               <strong className="text-white"> Direct Benefit Transfer (DBT)</strong>.
-              <strong className="text-white"> eKYC</strong> complete karo, 
+              <strong className="text-white"> eKYC</strong> complete karo,
               <strong className="text-white"> beneficiary status</strong> verify karo — sab kuch bilkul free!
               {' '}Payment status mein FTO dikh raha hai?{' '}
               <Link href="/articles/pm-kisan-fto-generated-ka-matlab-kya-hai" className="underline font-bold text-white hover:text-green-200">
@@ -372,8 +371,6 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* Hero image 1/3 (TOP) — wheat field. The three big photos are spread
-          across the page (top / middle / bottom) instead of stacking together. */}
       <section className="py-16 bg-white dark:bg-gray-900" aria-labelledby="hero-image-heading">
         <div className="container-site mx-auto px-4">
           <h2 id="hero-image-heading" className="sr-only">Kisan Hero Image</h2>
@@ -415,8 +412,8 @@ export default function HomeContent() {
             {TOOLS.map((tool, i) => {
               const Icon = tool.icon;
               return (
-                <Link 
-                  key={i} 
+                <Link
+                  key={i}
                   href={tool.href}
                   className={`group relative ${tool.bg} border-2 ${tool.border} rounded-2xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}
                 >
@@ -452,23 +449,23 @@ export default function HomeContent() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-4xl mx-auto">
             {[
-              { 
-                label: 'KCC Loan', 
-                rate: '4.0%', 
+              {
+                label: 'KCC Loan',
+                rate: '4.0%',
                 sub: 'Interest p.a. · SBI/PNB/BOB',
                 badge: '↓ 2% lower than personal loan',
                 badgeColor: 'text-green-600 dark:text-green-400 bg-green-100 dark:bg-green-900/30'
               },
-              { 
-                label: 'Tractor Loan', 
-                rate: '8.5%', 
+              {
+                label: 'Tractor Loan',
+                rate: '8.5%',
                 sub: 'Interest p.a. · With SMAM Subsidy',
                 badge: '↓ 35% subsidy available',
                 badgeColor: 'text-green-600 dark:text-green-400 bg-green-100 dark:bg-green-900/30'
               },
-              { 
-                label: 'PM Kisan', 
-                rate: '₹2,000', 
+              {
+                label: 'PM Kisan',
+                rate: '₹2,000',
                 sub: 'Per kist · 3 kist yearly',
                 badge: '24vi kist Oct 2026 expected',
                 badgeColor: 'text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/30'
@@ -493,7 +490,6 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* Hero image 2/3 (MIDDLE) — Hamare Annadata */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800/50 dark:to-gray-900" aria-labelledby="featured-heading">
         <div className="container-site mx-auto px-4">
           <div className="text-center mb-14">
@@ -553,7 +549,6 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* Hindi (Devanagari) yojana guides — lib/hindi-articles-data.ts */}
       <section className="py-20 bg-amber-50/60 dark:bg-amber-900/10" aria-labelledby="hindi-articles-heading" lang="hi">
         <div className="container-site mx-auto px-4">
           <div className="mb-14">
@@ -615,7 +610,6 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* Hero image 3/3 (BOTTOM) — Aadhunik Kheti */}
       <section className="py-20 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800/50" aria-labelledby="modern-farming-heading">
         <div className="container-site mx-auto px-4">
           <div className="text-center mb-14">

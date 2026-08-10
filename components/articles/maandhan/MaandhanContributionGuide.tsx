@@ -256,7 +256,7 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
         <section className="mb-8">
           <SH>20 Saal vs 35 Saal — Numbers Bolte Hain</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Kai baar kisan sochte hain, "pension toh same ₹3000 milegi, toh umar se kya farak padta hai?" Farak bada padta hai. Example ke liye, Ramesh (20 saal) aur Suresh (35 saal) dono ko 60 ke baad ₹3000 hi milenge. Lekin Ramesh ka total contribution lagbhag 30 hazar (₹29,280) rahega, jabki Suresh ko lagbhag 45 hazar (₹45,000) dene honge. 
+            Kai baar kisan sochte hain, "pension toh same ₹3000 milegi, toh umar se kya farak padta hai?" Farak bada padta hai. Example ke liye, Ramesh (20 saal) aur Suresh (35 saal) dono ko 60 ke baad ₹3000 hi milenge. Lekin Ramesh ka total contribution lagbhag 30 hazar (₹29,280) rahega, jabki Suresh ko lagbhag 45 hazar (₹45,000) dene honge.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Dono ko same pension milegi. Bas itna sa farak hai ke jawan ladke ko zyada saal dena padta hai lekin har mahine kam, aur bade umar wale ko kam saal dena hai lekin har mahine zyada. Meri raay mein, agar ghar mein koi 18-20 saal ka jawan kisan hai, toh uska enrollment abhi karwa dena sabse smart financial move hai.
@@ -352,7 +352,7 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
               <p className="font-black text-sm text-green-800 dark:text-green-300 mb-1">🟢 Pehle 1 Mahine Tak</p>
               <p className="text-xs text-[var(--color-text-muted)]">Koi late fee nahi. Sirf due amount jama karke account regular karwa sakte hain. Teen payment cycles tak demand raise hoti hai bina kisi interest ke.</p>
             </div>
-            
+
             <p className="text-xs text-[var(--color-text-muted)] leading-relaxed">
               <strong>1 mahine ke baad</strong> thoda strict ho jata hai — late fee lagti hai jo savings bank interest rate ke barabar hoti hai. Pehle 12 mahine tak simple interest, uske baad compounding shuru. Yeh woh point hai jahan zyada log confuse hote hain.
             </p>

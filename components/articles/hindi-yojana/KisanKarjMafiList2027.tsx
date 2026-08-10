@@ -81,7 +81,6 @@ const FAQ_SCHEMA = {
   ],
 };
 
-// Local presentational helpers — self-contained file, no shared imports.
 function Figure({ src, alt, caption }: { src: string; alt: string; caption: string }) {
   return (
     <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">

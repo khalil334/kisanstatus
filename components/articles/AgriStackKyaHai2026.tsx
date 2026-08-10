@@ -201,9 +201,9 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
             <SI n={8}>Acknowledgement receipt le lo — future reference ke liye bahut kaam aayega.</SI>
           </StepList>
 
-          <ExternalLinkButton 
-            url="https://farmers.gov.in" 
-            label="Official Digital Agriculture Portal Par Jaayein" 
+          <ExternalLinkButton
+            url="https://farmers.gov.in"
+            label="Official Digital Agriculture Portal Par Jaayein"
           />
 
           <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
@@ -345,9 +345,9 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
             </div>
           </div>
 
-          <ExternalLinkButton 
-            url="https://farmers.gov.in" 
-            label="Apna Status Check Karein (Official)" 
+          <ExternalLinkButton
+            url="https://farmers.gov.in"
+            label="Apna Status Check Karein (Official)"
           />
         </section>
 

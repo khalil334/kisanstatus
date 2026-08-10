@@ -2,9 +2,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
-// Self-contained article — कोई shared component import नहीं (Rule 2)।
-// Structure variant: राज्यवार card-directory + table + local <details> accordion FAQ (Rule 3)।
-
 const FAQS = [
   {
     q: 'क्या हर किसान को 50% सब्सिडी मिलती है?',
@@ -54,7 +51,6 @@ const FAQ_SCHEMA = {
   })),
 };
 
-// Local building blocks — सब इसी file में (Rule 2)।
 function H2({ children }: { children: React.ReactNode }) {
   return (
     <h2 className="text-xl font-black text-[var(--color-text)] mt-8 mb-4 pb-2 border-b-2 border-[var(--color-border)]">

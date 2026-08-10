@@ -23,10 +23,9 @@ export default function CropProfitCalcPage() {
   const isProfit = profit>=0;
   const roi      = totalCost>0 ? (profit/totalCost)*100 : 0;
 
-
   return (
     <>
-      
+
       <CalcHeader
         emoji="📊"
         title="Kheti Ka Munafa Calculator 2026"
@@ -36,7 +35,6 @@ export default function CropProfitCalcPage() {
 
       <div className="container-site max-w-2xl py-8">
 
-        {}
         <div className="mb-6 p-5 bg-purple-50 border border-purple-200 rounded-xl text-sm text-gray-700 leading-relaxed">
           <p className="font-bold text-purple-900 mb-2">📊 Kheti Mein Kitna Profit Hua — Jaano Turant</p>
           <p className="mb-2">
@@ -53,36 +51,34 @@ export default function CropProfitCalcPage() {
         <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
           <h2 className="font-black text-gray-900 text-base mb-5">🧮 Apna Hisaab Bharo</h2>
 
-          {}
           <div className="mb-5 p-4 bg-green-50 border border-green-200 rounded-xl">
             <p className="font-bold text-green-800 text-xs mb-3 uppercase tracking-wide">💰 Amdani (Revenue)</p>
-            <InputField 
-              label="Zameen ka size (hectare)" 
-              value={land} 
-              onChange={setLand} 
-              min={0} 
-              placeholder="1" 
+            <InputField
+              label="Zameen ka size (hectare)"
+              value={land}
+              onChange={setLand}
+              min={0}
+              placeholder="1"
               hint="1 hectare = 2.47 acre. Agar acre mein hai toh divide karo 2.47 se"
             />
-            <InputField 
-              label="Fasal ka daam (₹ per quintal)" 
-              value={sellPrice} 
-              onChange={setSellPrice} 
-              min={0} 
-              placeholder="2000" 
+            <InputField
+              label="Fasal ka daam (₹ per quintal)"
+              value={sellPrice}
+              onChange={setSellPrice}
+              min={0}
+              placeholder="2000"
               hint="MSP ya mandi rate — jo bhi milega. E-NAM par check karo latest rate"
             />
-            <InputField 
-              label="Kitni fasal hui (quintal per hectare)" 
-              value={yieldQ} 
-              onChange={setYieldQ} 
-              min={0} 
-              placeholder="25" 
+            <InputField
+              label="Kitni fasal hui (quintal per hectare)"
+              value={yieldQ}
+              onChange={setYieldQ}
+              min={0}
+              placeholder="25"
               hint="Pichhle saal kitni hui thi? Wahi base lo. Average nikalo 3 saal ka"
             />
           </div>
 
-          {}
           <div className="mb-5 p-4 bg-red-50 border border-red-200 rounded-xl">
             <p className="font-bold text-red-800 text-xs mb-3 uppercase tracking-wide">💸 Kharcha (Cost per Hectare)</p>
             <InputField label="🌱 Beej ka kharcha (₹)" value={seed} onChange={setSeed} min={0} placeholder="2000" hint="Certified seeds mehenge hote hain par yield zyada"/>
@@ -92,7 +88,6 @@ export default function CropProfitCalcPage() {
             <InputField label="🚜 Doosra kharcha (₹)" value={other} onChange={setOther} min={0} placeholder="1000" hint="Transport, godown rent, mandi commission"/>
           </div>
 
-          {}
           {revenue>0 && (
             <div className={`mt-4 border-2 rounded-2xl p-5 ${isProfit?'bg-green-50 border-green-300':'bg-red-50 border-red-300'}`}>
               <p className={`text-xs font-bold uppercase tracking-wide mb-3 ${isProfit?'text-green-700':'text-red-700'}`}>
@@ -108,7 +103,7 @@ export default function CropProfitCalcPage() {
                 bold
                 highlight
               />
-              
+
               {!isProfit && (
                 <div className="mt-4 p-4 bg-red-100 rounded-xl text-xs text-red-900 space-y-2">
                   <p className="font-bold text-sm">💡 Nuksan Kyun Hua? Yeh Try Karo:</p>
@@ -136,7 +131,6 @@ export default function CropProfitCalcPage() {
             </div>
           )}
 
-          {}
           <div className="mt-6">
             <h3 className="font-black text-gray-900 text-sm mb-3">💡 Kheti Mein Munafa Badhane Ke Tarike</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
@@ -167,7 +161,6 @@ export default function CropProfitCalcPage() {
             </div>
           </div>
 
-          {}
           <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-xl">
             <p className="font-bold text-yellow-900 text-sm mb-2">⚠️ Kisan Aksar Yeh Galtiyan Karte Hain:</p>
             <ul className="space-y-1.5 text-xs text-yellow-800">
@@ -181,10 +174,9 @@ export default function CropProfitCalcPage() {
         </div>
 
         <CalcDisclaimer note="Yeh calculator sirf estimate deta hai. Actual yield, mandi rate aur kharcha aapki zameen, ilake aur mausam par depend karta hai. Final decision lene se pehle apne nazdiki CSC center ya Krishi Vigyan Kendra se salah lo." />
-        
+
         <OtherCalcs current="/calculator/crop-profit" />
 
-        {}
         <div className="mt-6 p-5 bg-green-50 border border-green-200 rounded-xl">
           <p className="font-bold text-green-900 text-sm mb-3">📖 Yeh Bhi Padhein — Kheti Mein Madad Milegi</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -209,7 +201,6 @@ export default function CropProfitCalcPage() {
           </div>
         </div>
 
-        {}
         <div className="mt-6 p-5 bg-gray-50 border border-gray-200 rounded-xl">
           <p className="font-bold text-gray-900 text-sm mb-3">❓ Aksar Puche Jaane Wale Sawaal</p>
           <div className="space-y-3 text-xs">

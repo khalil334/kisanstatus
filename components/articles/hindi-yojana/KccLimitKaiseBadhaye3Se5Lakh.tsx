@@ -2,9 +2,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
-// Self-contained article — कोई shared component import नहीं (Rule 2)।
-// Structure variant: bullet-point-heavy sections + interview-style (प्र./उ.) FAQ (Rule 3)।
-
 const FAQS = [
   {
     q: 'क्या ₹5 लाख की सुविधा अपने आप मिल जाएगी?',

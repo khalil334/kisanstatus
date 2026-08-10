@@ -1,22 +1,4 @@
 #!/usr/bin/env node
-/**
- * check-title-h1.js — guards against the Ahrefs issue
- * "Page and SERP titles do not match".
- *
- * Google treats <title> and the on-page <h1> as competing signals. When they
- * share no keyword, Google discards <title> and writes its own SERP heading.
- *
- * This script pairs every article's effective SERP title (seoTitle || ogTitle
- * || title, from the lib/*-data.ts files) with the <h1> rendered by its
- * component, and fails if a pair shares no meaningful word in the leading
- * 6 words — the window a crawler actually compares.
- *
- * It also fails on double-branded titles, i.e. a route that hardcodes
- * "| KisanStatus" while app/layout.tsx already applies the
- * `%s | KisanStatus` title template.
- *
- * Usage:  node scripts/check-title-h1.js      (exit 1 on any violation)
- */
 const fs = require('fs');
 const path = require('path');
 
@@ -32,7 +14,6 @@ const ROUTES = [
   'app/maandhan/[slug]/page.tsx',
   'app/rajya-yojana/[slug]/page.tsx',
 ];
-// Routes whose <title> must not repeat the brand (layout template adds it).
 const BRAND_ROUTES = [
   'app/contact/page.tsx',
   'app/privacy-policy/page.tsx',
@@ -46,7 +27,6 @@ const WINDOW = 6;
 const read = (p) => fs.readFileSync(path.join(ROOT, p), 'utf8');
 const exists = (p) => fs.existsSync(path.join(ROOT, p));
 
-/** slug -> component identifier, parsed from a dynamic route's COMPONENTS map. */
 function componentMapFromRoute(rel) {
   if (!exists(rel)) return {};
   const m = read(rel).match(/COMPONENTS[^=]*=\s*\{([\s\S]*?)\n {2}\};/);
@@ -60,7 +40,6 @@ function componentMapFromRoute(rel) {
   return map;
 }
 
-/** identifier -> import path, across all dynamic routes. */
 function importMap() {
   const map = {};
   for (const rel of ROUTES) {
@@ -72,7 +51,6 @@ function importMap() {
   return map;
 }
 
-/** basename -> absolute path for every component .tsx */
 function componentFiles(dir, acc = {}) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
     const p = path.join(dir, e.name);
@@ -87,7 +65,7 @@ function firstH1(file) {
   const m = fs.readFileSync(file, 'utf8').match(/<h1[^>]*>([\s\S]*?)<\/h1>/);
   if (!m) return null;
   const text = m[1]
-    .replace(/\{[^}]*\}/g, ' ') // drop JSX expressions — not static text
+    .replace(/\{[^}]*\}/g, ' ')
     .replace(/<[^>]+>/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();

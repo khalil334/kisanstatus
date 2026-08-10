@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface Step {
@@ -29,7 +28,6 @@ export function StepCardList({ steps, color = 'green', compact = false }: StepCa
     <ol className="relative space-y-0 pl-0 list-none my-5">
       {steps.map((step, i) => (
         <li key={i} className="relative flex gap-4">
-          {}
           <div className="flex flex-col items-center">
             <div className={`flex-shrink-0 w-9 h-9 rounded-full ${c.ring} text-white flex items-center justify-center font-bold text-sm shadow-sm z-10`}>
               {step.icon ?? (i + 1)}
@@ -39,7 +37,6 @@ export function StepCardList({ steps, color = 'green', compact = false }: StepCa
             )}
           </div>
 
-          {}
           <div className={`flex-1 mb-4 ${compact ? 'pb-0' : ''}`}>
             <div className={`${c.light} ${c.border} border rounded-xl px-4 ${compact ? 'py-2.5' : 'py-3'}`}>
               {step.icon && !compact && (

@@ -41,7 +41,6 @@ function FaqItem({ question, answer }: { question: string; answer: React.ReactNo
 export default function BakriPalanYojana() {
   const canonicalUrl = 'https://kisanstatus.com/articles/bakri-palan-yojana-nlm-subsidy';
 
-
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -159,7 +158,7 @@ export default function BakriPalanYojana() {
           </p>
         </div>
 
-        <Image 
+        <Image
           src="/images/kisanguides/bakri-palan-nlm-subsidy.webp"
           alt="NLM Bakri Palan Yojana 2026 - Farmer with goats receiving 50% subsidy under National Livestock Mission"
           width={800}
@@ -233,7 +232,7 @@ export default function BakriPalanYojana() {
           <li><strong>Black Bengal:</strong> Chhoti zameen wale ke liye theek. Ek baar mein 2-3 bachhe deti hai, flock jaldi badhta hai.</li>
         </ul>
 
-        <Image 
+        <Image
           src="/images/kisanguides/goat-farming-shed-construction.webp"
           alt="Goat farming shed and housing setup for different breeds under NLM subsidy"
           width={800}
@@ -287,7 +286,7 @@ export default function BakriPalanYojana() {
           </ol>
         </div>
 
-        <Image 
+        <Image
           src="/images/kisanguides/documents-checklist.webp"
           alt="NLM subsidy application documents checklist - Aadhaar, land papers, bank details, and DPR requirements"
           width={800}
@@ -339,7 +338,7 @@ export default function BakriPalanYojana() {
           State aur mandi rate se numbers thode upar-neeche honge, par rough picture kuch aisa hai:
         </p>
 
-        <Image 
+        <Image
           src="/images/kisanguides/nlm-subsidy-calculation.webp"
           alt="NLM bakri palan subsidy calculation - 50% subsidy on project cost, ROI and profit estimation breakdown"
           width={800}
@@ -380,7 +379,7 @@ export default function BakriPalanYojana() {
           <li>Approval ke baad bills submit karo, tabhi paisa aayega.</li>
         </ol>
 
-        <Image 
+        <Image
           src="/images/kisanguides/nlm-application-help.webp"
           alt="NLM Udyamimitra portal application process - step by step online registration and form submission guide"
           width={800}
@@ -413,7 +412,7 @@ export default function BakriPalanYojana() {
           <ul className="space-y-4 text-sm">
             <li>
               <strong className="block mb-1">Apply karne ki jagah:</strong>
-              <ExternalLinkButton 
+              <ExternalLinkButton
                 url="https://nlm.udyamimitra.in"
                 label="NLM Udyamimitra Portal"
               />

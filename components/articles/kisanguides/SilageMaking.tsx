@@ -3,13 +3,6 @@ import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
 
-// ⚠️ DEAD CODE — Next.js is metadata export ko ignore karta hai.
-// `export const metadata` sirf app/**/page.tsx ya layout.tsx mein kaam karta hai;
-// ye ek client-imported article component hai, isliye ye block render HI nahi hota.
-// Live <title>/description/canonical/OG `app/articles/[slug]/page.tsx` ke
-// generateMetadata() se aate hain, jo lib/articles-data.ts padhta hai.
-// >>> Title/description/canonical badalna hai to lib/articles-data.ts edit karo. <<<
-// Yahan edit karne se live page pe KUCHH nahi badlega. (Ref: fixplan.md BUG-3)
 export const metadata: Metadata = {
   title: 'Silage Business Guide 2026: SMAM Subsidy & Profit',
   description: 'Silage banane ka business kaise shuru karein — chara storage tarika, chaff cutter cost, SMAM subsidy aur real profit calculation, sab kuch is guide mein.',
@@ -124,31 +117,29 @@ const jsonLd = {
 export default function SilageMaking() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-8 text-gray-800 dark:text-gray-200 leading-relaxed prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-blue-600 dark:prose-a:text-blue-400">
-      {}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {}
-      <Image 
-        src="/images/kisanguides/silage-hero.webp" 
-        alt="Silage Packets Stacked Near Dairy Farm - Agri Business Guide 2026" 
-        width={1200} 
-        height={630} 
+      <Image
+        src="/images/kisanguides/silage-hero.webp"
+        alt="Silage Packets Stacked Near Dairy Farm - Agri Business Guide 2026"
+        width={1200}
+        height={630}
         priority
         sizes="(max-width: 768px) 100vw, 1200px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose"
       />
-      
+
       <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100 leading-tight">
         Silage Business 2026: Makka Preserve Karke Pashupalakon Ko Bechne Ka Poora Plan
       </h1>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 italic">
         December aate-aate khet khali ho jaate hain aur hari ghaas dhundhna mushkil ho jaata hai. Har saal yehi kahani dohrai jaati hai — pashupalak pareshan, doodh utpadan neeche gir jaata hai. Silage isi samasya ka hal hai: hara chara jo hawa-band karke mahino tak taaza rakha ja sakta hai.
       </p>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
         Model samajhna mushkil nahi hai — makka ugao ya kisaanon se khareedo, kaato, airtight packet mein band karo, aur nazdeeki gaushala ya dairy farm ko becho. Jo log is prakriya ko dhang se seekh lete hain unke liye margin achha hai, kyunki abhi bhi bahut kam log isse waqif hain. Local level par ye ek kam-jaani, kam-lada hua niche hai — aur yahi wajah hai ki naye entrants ke liye jagah bachi hai.
       </p>
@@ -156,11 +147,11 @@ export default function SilageMaking() {
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Silage Hai Kya? Pashupalak Ise Kyun Khareedte Hain?
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Concept naya nahi hai, bas India mein commercial scale par abhi raftaar pakad raha hai. Hari ghaas — zyadatar makka — ko bina oxygen ke heavy-duty plastic packets mein seal kiya jaata hai. Andar natural fermentation shuru hoti hai: lactic acid bacteria badhte hain, pH 4.0 ke aas-paas aa jaata hai, aur ghaas mahino tak sadne se bach jaati hai.
       </p>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Sahi tarike se taiyar kiya gaya chara 6 mahine tak taaza rehta hai, aur poshan bhi barkarar rehta hai — crude protein 7-9%, dry matter 30-35%.
       </p>
@@ -176,20 +167,19 @@ export default function SilageMaking() {
         <li><strong>Mehnat kam lagti hai:</strong> 25 kg ka packet uthana aur khilana jhanjhat-free hai — roz khet mein jaakar ghaas kaatne ki zarurat nahi.</li>
       </ul>
 
-      {}
-      <Image 
-        src="/images/kisanguides/silage-machinery.webp" 
-        alt="Chaff Cutter and Silage Bag Sealing Machine in Action" 
-        width={800} 
-        height={450} 
+      <Image
+        src="/images/kisanguides/silage-machinery.webp"
+        alt="Chaff Cutter and Silage Bag Sealing Machine in Action"
+        width={800}
+        height={450}
         sizes="(max-width: 768px) 100vw, 800px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose"
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Business Model Kaise Kaam Karta Hai
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Utpadan ka basic flow kuch aisa hai:
       </p>
@@ -217,7 +207,7 @@ export default function SilageMaking() {
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Kitna Paisa Lagega — Realistic Budget
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Medium-scale unit ka budget dekhte hain — jo mahine mein 3,000-4,000 packets (25 kg each) bana sake.
       </p>
@@ -276,14 +266,13 @@ export default function SilageMaking() {
         Machinery ke liye <a href="https://www.mudra.org.in/" className="text-blue-600 hover:underline dark:text-blue-400 font-medium" target="_blank" rel="noopener noreferrer">Mudra Loan</a> bhi le sakte ho — Tarun category mein ₹10 lakh tak bina collateral ke milta hai.
       </p>
 
-      {}
-      <Image 
-        src="/images/kisanguides/silage-packets.webp" 
-        alt="Stacked Silage Bags Ready for Dairy Farm Distribution" 
-        width={800} 
-        height={450} 
+      <Image
+        src="/images/kisanguides/silage-packets.webp"
+        alt="Stacked Silage Bags Ready for Dairy Farm Distribution"
+        width={800}
+        height={450}
         sizes="(max-width: 768px) 100vw, 800px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose"
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
@@ -335,7 +324,7 @@ export default function SilageMaking() {
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Sarkari Subsidy: SMAM, AIF, PM FME
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Kai yojnaon ka fayda uthaya ja sakta hai, par har ek ki apni eligibility hai.
       </p>
@@ -376,15 +365,15 @@ export default function SilageMaking() {
         </ul>
       </div>
 
-      <ExternalLinkButton 
-        url="https://nddb.org/" 
-        label="NDDB Official Portal - Dairy Schemes Check Karein" 
+      <ExternalLinkButton
+        url="https://nddb.org/"
+        label="NDDB Official Portal - Dairy Schemes Check Karein"
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Ek Packet Mein Kitna Munafa Hai
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         25 kg packet ka lagat breakdown — Model 2 ke hisaab se, yaani kisaanon se makka khareed kar.
       </p>
@@ -442,20 +431,19 @@ export default function SilageMaking() {
         Average munafa ₹150-180 per packet maan lo. 3,000 packets mahine mein bechoge toh monthly profit ₹4.5-5.4 lakh, saal ka ₹50-65 lakh ban sakta hai. Shuruaati 6 mahine mein realistically 1,000-1,500 packets hi bikenge, tab bhi monthly ₹1.5-2.7 lakh banta hai — bura nahi hai.
       </p>
 
-      {}
-      <Image 
-        src="/images/kisanguides/silage-dairy-farm.webp" 
-        alt="Silage Delivery to Local Dairy Farm - Business Execution" 
-        width={800} 
-        height={450} 
+      <Image
+        src="/images/kisanguides/silage-dairy-farm.webp"
+        alt="Silage Delivery to Local Dairy Farm - Business Execution"
+        width={800}
+        height={450}
         sizes="(max-width: 768px) 100vw, 800px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose"
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Asli Jokhim — Jo Koi Nahi Batata
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Kaagaz par sab kuch seedha lagta hai. Zameen par kuch cheezein hamesha pareshan karti hain.
       </p>
@@ -520,7 +508,7 @@ export default function SilageMaking() {
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Grahak Kaise Dhundhein
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Sabse bada challenge yahi hai. Kuch tarike jo asal mein kaam karte hain:
       </p>
@@ -532,20 +520,19 @@ export default function SilageMaking() {
         <li><strong>Contract Farming with Dairy Farms:</strong> 50+ bhains wale bade farms ke saath annual contract karo — fixed matra, fixed rate.</li>
       </ul>
 
-      {}
-      <Image 
-        src="/images/kisanguides/silage-documents.webp" 
-        alt="Silage Business Legal Documents and Licenses Checklist" 
-        width={800} 
-        height={450} 
+      <Image
+        src="/images/kisanguides/silage-documents.webp"
+        alt="Silage Business Legal Documents and Licenses Checklist"
+        width={800}
+        height={450}
         sizes="(max-width: 768px) 100vw, 800px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose"
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Legal Zaroorat
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Kanooni taur par shuru karne ke liye ye basic cheezein chahiye:
       </p>
@@ -560,7 +547,7 @@ export default function SilageMaking() {
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Kya Ye Aapke Liye Sahi Hai
       </h2>
-      
+
       <div className="grid md:grid-cols-2 gap-6 mb-8 not-prose">
         <div className="bg-green-50 dark:bg-green-900/20 p-5 rounded-lg border border-green-200 dark:border-green-800">
           <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">✅ Haan, agar:</h3>
@@ -596,7 +583,6 @@ export default function SilageMaking() {
         Seriously interested ho toh pehle apne area ke 5-10 dairy farms se baat karo. Puchho — packaged fodder use karte hain ya nahi, kahan se lete hain, rate kya chalta hai. Research pehle, faisla baad mein.
       </p>
 
-      {}
       <h2 id="faq" className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Frequently Asked Questions (FAQs)
       </h2>
