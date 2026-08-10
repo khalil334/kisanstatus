@@ -45,7 +45,7 @@ const ALL_ARTICLES = [
     category: a.category,
     publishedTime: a.publishedTime,
     modifiedTime: a.modifiedTime,
-    ogImage: undefined as string | undefined,
+    ogImage: a.ogImage as string | undefined,
     path: `/articles/${a.slug}`,
   })),
 ];
@@ -119,6 +119,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${SITE_URL}/articles`, 
       lastModified: new Date('2026-07-19'), 
       changeFrequency: 'daily', 
+      priority: 0.90,
+    },
+    {
+      // Hindi (Devanagari) guides hub — lists all HINDI_ARTICLES with images.
+      url: `${SITE_URL}/articles/hi`,
+      lastModified: now,
+      changeFrequency: 'weekly',
       priority: 0.90,
     },
     { 

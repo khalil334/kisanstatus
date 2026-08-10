@@ -604,7 +604,7 @@ export default function HomeContent() {
           </div>
 
           <div className="text-center mt-14">
-            <Link href="/articles" className="group inline-flex items-center gap-2.5 bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 shadow-xl shadow-amber-600/30 hover:shadow-2xl hover:shadow-amber-600/40">
+            <Link href="/articles/hi" className="group inline-flex items-center gap-2.5 bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 shadow-xl shadow-amber-600/30 hover:shadow-2xl hover:shadow-amber-600/40">
               <IconBookOpen className="w-5 h-5" />
               <span>सभी हिंदी गाइड देखें</span>
               <IconArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
