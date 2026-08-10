@@ -146,10 +146,10 @@ export default function StateKisanYojanaHub() {
       <h1>State Kisan Yojana List 2026: Sabhi Rajya Ka Amount, Portal Aur Status Link Ek Jagah</h1>
 
       <p>
-        PM Kisan ka ₹6,000 to poore desh mein ek jaisa hai. Asli farak state ki apni yojana
+        Dekho, PM Kisan ka ₹6,000 to poore desh mein ek jaisa hai. Asli farak state ki apni yojana
         se padta hai. Rajasthan ka kisan saal mein ₹9,000 tak pahunchta hai, Maharashtra ka
         ₹12,000, aur Andhra Pradesh ka ₹20,000 tak. Sochiye — wahi zameen, wahi mehnat, aur
-        income-support mein itna antar sirf is baat se ki khet kis state ki seema mein hai.
+        income-support mein itna antar bas is baat se ki khet kis state ki seema mein hai.
       </p>
 
       <p>
@@ -309,6 +309,13 @@ export default function StateKisanYojanaHub() {
       <h2>Do Kisan, Do State — Hisaab Ka Farak Ek Misaal Se</h2>
 
       <p>
+        Mujhe ek baar do bhaiyon ne message kiya tha — ek MP mein basa tha, doosra border
+        paar Maharashtra mein. Dono ke paas lagbhag barabar zameen, par saal ke ant mein
+        credit ka jod alag nikla. Dono ko laga kisi ek ke saath galti hui hai. Galti nahi
+        thi — bas do states ke do model the.
+      </p>
+
+      <p>
         Model ka farak numbers mein sabse saaf dikhta hai. Maan lijiye do kisan hain, dono ke
         paas teen-teen acre zameen hai. Pehla Madhya Pradesh mein hai: use PM Kisan ka ₹6,000
         aur state ka ₹6,000 — kul ₹12,000 saalana milega, zameen teen acre ho ya paanch,
@@ -417,8 +424,8 @@ export default function StateKisanYojanaHub() {
 
       <p>
         In teeno mein se koi bhi problem ho to pehle use theek karayein, uske baad hi kist ka
-        intezaar karein. Ye kaam CSC, bank branch aur tehsil se ho jaate hain aur ek baar theek
-        hone par saalon chalte hain.
+        intezaar karein. Ye kaam CSC, bank branch aur tehsil se ho jaate hain. Ek baar theek
+        hone par saalon chalte hain, toh der mat karo.
       </p>
 
       <h2>Kist Ka Calendar — Saal Bhar Mein Kab Kya Aata Hai</h2>
