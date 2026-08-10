@@ -87,9 +87,9 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
 
       <p>
         <strong>CM Kisan Kalyan Yojana kist kab aayegi</strong> — MP ke kisan yahi poochhte
-        hain, aur jawab dene wali aadhi websites afwaah chhaap deti hain. Amount par bhi
+        hain. Aur jawab dene wali aadhi websites? Afwaah chhaap deti hain. Amount par bhi
         wahi haal: kahin purana ₹4,000 likha hai, kahin ₹2,000 ki ek kist ko hi saal ka
-        total bata diya jaata hai.
+        total bata diya jaata hai. Pareshan kisan aur confuse ho jaata hai.
       </p>
 
       <p>
@@ -115,8 +115,9 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
       <h2>Ye Scheme Kahan Se Aayi, Aur Kitna Paisa Banta Hai</h2>
 
       <p>
-        Ye MP sarkar ki apni scheme hai, lekin iski list PM Kisan se banti hai. Maqsad wahi hai:
-        beej, khaad aur sinchai ke kharche mein thodi raahat.
+        Ye MP sarkar ki apni scheme hai, lekin iski list PM Kisan se banti hai. Maqsad
+        seedha hai — beej, khaad aur sinchai ke kharche mein thodi raahat. Bade dawe nahi,
+        bas season ke kharch ka sahara.
       </p>
 
       <p>
@@ -235,8 +236,8 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
       <h2>Kist Ka Waqt — Pichhle Saalon Ka Pattern</h2>
 
       <p>
-        Fixed date koi nahi hai; state sarkar national calendar se nahi chalti. Lekin pichhle
-        saalon ka pattern itna batata hai:
+        Fixed date? Koi nahi hai. State sarkar national calendar se nahi chalti. Lekin
+        pichhle saalon ka pattern itna zaroor batata hai:
       </p>
 
       <ul>
@@ -260,8 +261,10 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
       </p>
 
       <p>
-        PM Kisan aa gaya aur state ka nahi aaya? Ye normal hai. Dono ka release cycle apna
-        hai, aur state treasury se fund nikalne mein 15 se 30 din lag jaate hain.
+        PM Kisan aa gaya aur state ka nahi aaya? Ye normal hai. Bilkul normal. Dono ka
+        release cycle apna hai, aur state treasury se fund nikalne mein 15 se 30 din lag
+        jaate hain. Intezaar khalta hai, samajh mein aata hai — par ye deri gadbad ki
+        nishani nahi hai.
       </p>
 
       <h2>Kaun Eligible Hai, Kaun Nahi</h2>
@@ -306,8 +309,9 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
       <h2>"Payment Successful" Dikha, Paisa Nahi Aaya — Ab Kya</h2>
 
       <p>
-        Ye aam shikayat hai: portal par status green hai, passbook khaali. Ya phir seedha "Rejected"
-        aa jaata hai. Teen jagah check karni hoti hai, isi order mein:
+        Ye aam shikayat hai: portal par status green, passbook khaali. Dil toot jaata hai
+        thoda. Ya phir seedha "Rejected" aa jaata hai — bina ye bataye ki kyun. Teen jagah
+        check karni hoti hai, isi order mein:
       </p>
 
       <Fig
@@ -369,10 +373,10 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
       <h2>Girdawari — Wo Kadam Jo MP Ke Kisan Bhool Jaate Hain</h2>
 
       <p>
-        Baaki states mein aisa koi season-wise requirement nahi hai, isliye bahar se aaye logon ko
-        ye cheez pata hi nahi hoti. MP mein har season (Kharif aur Rabi) mein girdawari hoti hai,
-        yaani record banta hai ki kis khet mein kya boya gaya. Patwari ye record banata hai, lekin
-        galti ya der dono common hain.
+        Baaki states mein aisa koi season-wise requirement nahi hai, isliye bahar se aaye
+        logon ko ye cheez pata hi nahi hoti. MP mein har season (Kharif aur Rabi) mein
+        girdawari hoti hai — record banta hai ki kis khet mein kya boya gaya. Patwari ye
+        record banata hai. Lekin patwari bhi insaan hai; galti aur der, dono common hain.
       </p>
 
       <p>
