@@ -1,4 +1,6 @@
 https://github.com/khalil334/kisanstatus/tree/main/components%2Farticles%2Frajya-yojana
+token ke lye card do
+3 articles fix karny ke bad direct merge karke phr next 3 py start kam start karo har 3 articles fix karny ke bad auto merge karke ye file update kardia karo
  मेरे KisanStatus.com के components/articles/rajya-yojana folder के 10 articles को fix करो। 2 problems hain:
 
 ## Problem 1: Word Count 2000+ नहीं है
