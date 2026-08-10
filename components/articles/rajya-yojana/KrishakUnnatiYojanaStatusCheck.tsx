@@ -93,7 +93,7 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
         Antar rashi kab aayegi, kitni banegi, aur agar na aaye to poochhein kis se — yahi
         teen sawaal har season lautkar aate hain. Krishak Unnati Yojana ka dhaancha baaki
         rajyon ki kisan-nidhi schemes se alag hai: yahan paisa zameen ke rakbe par nahi,
-        <strong> samiti mein bechi gayi dhan ki maatra</strong> par banta hai. Isliye status
+        samiti mein bechi gayi dhan ki maatra par banta hai. Isliye status
         samajhne ka tareeka bhi alag hai. Is page par wahi poora raasta hai — kharidi ki
         entry se lekar passbook ke credit tak, aur Kharif 2026 se shuru hue naye ₹15,000
         prati acre wale badlaav tak.
@@ -122,7 +122,7 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
         saath — samiti prati acre <strong>21 quintal tak</strong> hi kharidti hai. Isi wajah se
         do kisanon ki raqam kabhi ek jaisi nahi hoti. "Mere padosi ko itna mila, mujhe kam
         kyun?" — is sawaal ka jawab gusse mein nahi, bechi gayi maatra ke record mein milta
-        hai. Record kholo, hisaab saaf.
+        hai. Record kholo, toh hisaab saaf, bas.
       </p>
 
       <SchemeTable>
@@ -161,6 +161,13 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
         Payment ki file teen kadiyon se hokar chalti hai — samiti, sarkar, phir bank.
         Kaunsi kadi par mamla atka hai, ye dekh lo to aadhe chakkar bach jaate hain,
         aur aadhi jhunjhlahat bhi.
+      </p>
+
+      <p>
+        Ek kisan ne mujhe Mahasamund se apna kissa bataya tha — usne 38 quintal becha tha,
+        par samiti ki entry mein 30 hi darj hua. Uske paas taul parchiyan sambhali hui theen,
+        isliye khadya vibhag mein baat ek hi chakkar mein ban gayi. Parchi na hoti to shikayat
+        zubaani reh jaati.
       </p>
 
       <p>
@@ -445,7 +452,7 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
 
       <h2>Zameen Doosre Rajya Mein Hai?</h2>
 
-      <p>Har rajya apni kisan yojana alag tarah chalata hai.</p>
+      <p>Har rajya apni kisan yojana alag tarah chalata ha. Ye dekh lo:</p>
 
       <ul>
         <li>
