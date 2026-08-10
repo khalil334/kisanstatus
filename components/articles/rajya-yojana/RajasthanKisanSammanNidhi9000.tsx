@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
-import { FAQBlock } from '@/components/ArticleShared';
 
 const IMG_BASE = '/images/articles/rajya-yojna/rajasthan-kisan-samman-nidhi-9000';
 
@@ -493,7 +492,41 @@ export default function RajasthanKisanSammanNidhi9000() {
         </ul>
 
         <h2>FAQs</h2>
-        <FAQBlock faqs={faqs} caption="Rajasthan Kisan Samman Nidhi FAQ 2026" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: faqs.map((f) => ({
+                '@type': 'Question',
+                name: f.q,
+                acceptedAnswer: { '@type': 'Answer', text: f.a },
+              })),
+            }),
+          }}
+        />
+        <section className="mb-8 not-prose">
+          <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">Rajasthan Kisan Samman Nidhi FAQ 2026</p>
+          <div className="space-y-3">
+            {faqs.map(({ q, a }) => (
+              <details
+                key={q}
+                className="border border-[var(--color-border)] rounded-xl overflow-hidden group"
+              >
+                <summary className="p-4 font-semibold text-[var(--color-text)] cursor-pointer bg-[var(--color-bg-alt)] hover:bg-green-50 dark:hover:bg-green-900/20 text-sm flex justify-between items-center gap-3 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">
+                  <span>{q}</span>
+                  <span className="text-green-600 dark:text-green-400 text-xl group-open:rotate-45 transition-transform shrink-0">
+                    +
+                  </span>
+                </summary>
+                <div className="p-4 text-sm text-[var(--color-text-muted)] leading-relaxed border-t border-[var(--color-border)]">
+                  {a}
+                </div>
+              </details>
+            ))}
+          </div>
+        </section>
 
         <h2>Kist Ko Lekar Realistic Kaise Rahein</h2>
 
