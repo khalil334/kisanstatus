@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { ARTICLES } from '@/lib/articles-data';
 import { MAANDHAN_ARTICLES } from '@/lib/maandhan-data';
 import { LIVE_RAJYA_YOJANA_ARTICLES } from '@/lib/rajya-yojana-data';
+import { HINDI_ARTICLES } from '@/lib/hindi-articles-data';
 import { 
   SITE_URL, 
   SITE_NAME, 
@@ -50,7 +51,20 @@ type ListingArticle = {
   keywords?: readonly string[];
 };
 
-const ALL_ARTICLES: readonly ListingArticle[] = [...ARTICLES, ...MAANDHAN_ARTICLES, ...RAJYA_LISTING_ARTICLES];
+const HINDI_LISTING_ARTICLES = HINDI_ARTICLES.map((a) => ({
+  slug: a.slug,
+  title: a.titleHi,
+  desc: a.desc,
+  category: a.category,
+  href: `/articles/${a.slug}`,
+  ogImage: a.ogImage,
+  publishedTime: a.publishedTime,
+  modifiedTime: a.modifiedTime,
+  author: a.author,
+  keywords: a.keywords,
+}));
+
+const ALL_ARTICLES: readonly ListingArticle[] = [...ARTICLES, ...MAANDHAN_ARTICLES, ...RAJYA_LISTING_ARTICLES, ...HINDI_LISTING_ARTICLES];
 
 export const metadata: Metadata = {
   title: `Kisan Guides 2026 — ${ALL_ARTICLES.length}+ Resources`,
