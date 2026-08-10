@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { ARTICLES, getArticlesByFreshness, CATEGORIES } from '@/lib/articles-data';
-import { HINDI_ARTICLES } from '@/lib/hindi-articles-data';
+import { getHindiArticlesByFreshness } from '@/lib/hindi-articles-data';
 import { SITE_URL } from '@/lib/site-config';
 import SearchBar from './SearchBar';
 import FaqItem from './FaqItem';
@@ -565,19 +565,50 @@ export default function HomeContent() {
             <p className="text-gray-600 dark:text-gray-400 mt-2 text-lg">पीएम किसान, कर्ज माफी, सब्सिडी और मंडी भाव — आसान हिंदी में</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {HINDI_ARTICLES.map((a) => (
-              <Link
-                key={a.slug}
-                href={`/articles/${a.slug}`}
-                className="group block p-5 bg-white dark:bg-gray-800 border border-amber-200/60 dark:border-gray-700 rounded-2xl hover:border-amber-400 dark:hover:border-amber-500 hover:shadow-lg transition-all duration-300"
-              >
-                <h3 className="font-bold text-gray-900 dark:text-white leading-snug group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors">
-                  {a.titleHi}
-                </h3>
-                <p className="mt-2 text-sm text-gray-600 dark:text-gray-400 line-clamp-2">{a.desc}</p>
-              </Link>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {getHindiArticlesByFreshness().slice(0, TOP_ARTICLES_LIMIT).map((a) => {
+              const categoryInfo = CATEGORIES[a.category] as { name: string; nameHi: string; icon: string } | undefined;
+              const emoji = categoryInfo?.icon || '';
+              const categoryName = categoryInfo?.nameHi || categoryInfo?.name || 'Guide';
+              return (
+                <article
+                  key={a.slug}
+                  className="group relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden flex flex-col no-underline h-full border border-amber-200/60 dark:border-gray-700 shadow-lg hover:shadow-2xl hover:shadow-amber-900/10 dark:hover:shadow-black/30 hover:border-amber-400 dark:hover:border-amber-500 transition-all duration-500 ease-out hover:-translate-y-2"
+                >
+                  <Link href={`/articles/${a.slug}`} className="sr-only" aria-label={`पढ़ें: ${a.titleHi}`}>
+                    {a.titleHi}
+                  </Link>
+                  <div className="relative overflow-hidden">
+                    <ArticleImage image={a.ogImage || ''} emoji={emoji} title={a.titleHi} />
+                  </div>
+                  <div className="p-6 flex flex-col flex-1">
+                    <span className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-lg bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-900/30 dark:to-orange-900/30 text-amber-700 dark:text-amber-300 w-fit mb-4 border border-amber-200/50 dark:border-amber-700/50">
+                      <span className="text-base" aria-hidden="true">{emoji}</span>
+                      <span>{categoryName}</span>
+                    </span>
+                    <h3 className="font-bold text-gray-900 dark:text-white text-lg leading-snug group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors duration-300 mb-3 line-clamp-2">
+                      {a.titleHi}
+                    </h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-2 flex-1 mb-5">{a.desc}</p>
+                    <div className="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-700/50">
+                      <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">✍️ KisanStatus Team</span>
+                      <Link href={`/articles/${a.slug}`} className="text-sm font-bold text-amber-700 dark:text-amber-400 group-hover:translate-x-2 transition-transform duration-300 inline-flex items-center gap-1.5" aria-label={`पढ़ें: ${a.titleHi}`}>
+                        पढ़ें
+                        <IconArrowRight className="w-4 h-4" />
+                      </Link>
+                    </div>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+
+          <div className="text-center mt-14">
+            <Link href="/articles" className="group inline-flex items-center gap-2.5 bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 shadow-xl shadow-amber-600/30 hover:shadow-2xl hover:shadow-amber-600/40">
+              <IconBookOpen className="w-5 h-5" />
+              <span>सभी हिंदी गाइड देखें</span>
+              <IconArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
         </div>
       </section>
