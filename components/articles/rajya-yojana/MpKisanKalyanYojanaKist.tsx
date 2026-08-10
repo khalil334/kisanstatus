@@ -309,7 +309,7 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
       <h2>"Payment Successful" Dikha, Paisa Nahi Aaya — Ab Kya</h2>
 
       <p>
-        Ye aam shikayat hai: portal par status green, passbook khaali. Dil toot jaata hai
+        Sabse zyada confusion isi baat pe hota hai: portal par status green, passbook khaali. Dil toot jaata hai
         thoda. Ya phir seedha "Rejected" aa jaata hai — bina ye bataye ki kyun. Teen jagah
         check karni hoti hai, isi order mein:
       </p>
@@ -382,7 +382,7 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
       <p>
         Kisan khud bhi <strong>MP Kisan App</strong> se apni girdawari darj kar sakta hai.
         Khet par khade hokar app kholein, fasal select karein, photo khinchein aur submit
-        kar dein. GPS se location verify hoti hai. Ye 10 minute ka kaam do fayde deta hai:
+        kar dein. GPS se location verify hoti hai. Itna time nahi lagta, aur fayde do milte hain:
         state kist ka data clean rehta hai, aur fasal bima ya muavze ke waqt bhi wahi record
         kaam aata hai.
       </p>
@@ -481,7 +481,7 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
       <p>
         MP ke bahar rehte hain to ye top-up aap par laagu nahi hota, aur girdawari-based
         shart bhi sirf MP mein hai. Kai rajyon ka top-up MP se kai guna bada hai, kuch mein
-        bilkul nahi hai — apne rajya ka asli aankda yahan dekhein:
+        bilkul nahi hai — aur states ka hisaab:
       </p>
 
       <ul>
@@ -512,7 +512,7 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         </li>
       </ul>
 
-      <h2>MP Kisan Kalyan — Aksar Poochhe Jaane Wale Sawaal</h2>
+      <h2>MP Kisan Kalyan — Jo Log Aksar Poochhte Hain</h2>
 
       <script
         type="application/ld+json"

@@ -303,7 +303,7 @@ export default function StateKisanYojanaHub() {
       <Fig
         src="india-farm-fields.webp"
         alt="Bharat ke alag rajyon ke khet, har state mein kisan yojana ka alag model"
-        caption="Ek jaisi zameen, alag state, alag paisa. Model ka farak samajhna zaroori hai"
+        caption="Ek jaisi zameen, alag state, alag paisa. Model ka farak note kar lo"
       />
 
       <h2>Do Kisan, Do State — Hisaab Ka Farak Ek Misaal Se</h2>
@@ -424,7 +424,7 @@ export default function StateKisanYojanaHub() {
       <h2>Kist Ka Calendar — Saal Bhar Mein Kab Kya Aata Hai</h2>
 
       <p>
-        Har state ka apna schedule hai, lekin ek mota pattern samajh lena kaam aata hai. PM
+        Har state ka apna schedule hai, lekin ek mota pattern jaan lena kaam aata hai. PM
         Kisan ki teen kistein aam taur par April–July, August–November aur December–March ke
         windows mein aati hain. MP aur Maharashtra jaise states apni kistein inhi ke
         aas-paas, lekin apne alag dinon par bhejte hain — isliye mahine mein do alag credit
@@ -447,8 +447,8 @@ export default function StateKisanYojanaHub() {
 
       <p>
         Portal koi bhi ho, poochhi jaane wali cheezein lagbhag wahi hoti hain. Ek baar ye
-        chaar cheezein ek jagah likh kar rakh lein to har season ka status check do minute
-        ka kaam ban jaata hai: apna registration/application number (har state ka apna
+        chaar cheezein ek jagah likh kar rakh lein to har season ke status check mein
+        itna time nahi lagta: apna registration/application number (har state ka apna
         format hai), Aadhaar number, bank khaate ke aakhri chaar ank, aur wo mobile number
         jo record mein darj hai. West Bengal mein Aadhaar ki jagah Voter ID (EPIC) chalta
         hai — wahan wo number likhein.
@@ -511,7 +511,7 @@ export default function StateKisanYojanaHub() {
         </li>
       </ul>
 
-      <h2>State Kisan Yojana — Aksar Poochhe Jaane Wale Sawaal</h2>
+      <h2>State Kisan Yojana — Common Doubts</h2>
 
       <script
         type="application/ld+json"

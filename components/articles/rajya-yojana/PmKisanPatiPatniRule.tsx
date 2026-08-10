@@ -248,8 +248,8 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
         <h2>Dono Taraf Paisa Aa Gaya Hai — Ab Kya Karein</h2>
 
         <p>
-          Agar aapko padhte hue lag raha hai ki aapke saath yahi hua hai — ghabraiye mat,
-          par ruk bhi mat jaiye. Notice ka intezaar karna sabse mehenga raasta hai. Khud
+          Agar aapko padhte hue lag raha hai ki aapke saath yahi hua hai — hairaan hone ki
+          baat nahi, par ruk bhi mat jaiye. Notice ka intezaar karna sabse mehenga raasta hai. Khud
           aage badhkar theek karna sasta bhi padta hai aur jaldi bhi khatam hota hai.
         </p>
 
@@ -395,7 +395,7 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
           par pakda gaya.
         </p>
 
-        <h2>Wo Sawaal Jo Har Roz Poochhe Jaate Hain</h2>
+        <h2>Kuch Aur Sawaal</h2>
 
         <script
           type="application/ld+json"
