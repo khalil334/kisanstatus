@@ -443,12 +443,9 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
         hota hai.
       </p>
 
-      <h2>Chhattisgarh Se Bahar Ke Kisan Yahan Dekhein</h2>
+      <h2>Zameen Doosre Rajya Mein Hai?</h2>
 
-      <p>
-        Har rajya apni kisan yojana alag tarah chalata hai. Aapki zameen doosre rajya mein
-        hai to — doosre states mein:
-      </p>
+      <p>Har rajya apni kisan yojana alag tarah chalata hai.</p>
 
       <ul>
         <li>
