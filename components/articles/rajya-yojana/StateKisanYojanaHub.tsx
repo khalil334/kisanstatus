@@ -146,10 +146,10 @@ export default function StateKisanYojanaHub() {
       <h1>State Kisan Yojana List 2026: Sabhi Rajya Ka Amount, Portal Aur Status Link Ek Jagah</h1>
 
       <p>
-        PM Kisan ka ₹6,000 to poore desh mein ek jaisa hai. Asli farak state ki apni yojana se
-        padta hai. Rajasthan ka kisan saal mein ₹9,000 tak pahunchta hai, Maharashtra ka ₹12,000,
-        aur Andhra Pradesh ka ₹20,000 tak. Wahi kaam karne wale do kisanon ki income-support mein
-        itna antar sirf is baat se aata hai ki unki zameen kis state mein hai.
+        PM Kisan ka ₹6,000 to poore desh mein ek jaisa hai. Asli farak state ki apni yojana
+        se padta hai. Rajasthan ka kisan saal mein ₹9,000 tak pahunchta hai, Maharashtra ka
+        ₹12,000, aur Andhra Pradesh ka ₹20,000 tak. Sochiye — wahi zameen, wahi mehnat, aur
+        income-support mein itna antar sirf is baat se ki khet kis state ki seema mein hai.
       </p>
 
       <p>
@@ -204,10 +204,10 @@ export default function StateKisanYojanaHub() {
       <h2>State Ka Paisa PM Kisan Ke Upar Kaise Judta Hai</h2>
 
       <p>
-        Is poore system ko samajhne ki chaabi ek hi hai: state yojana PM Kisan ki jagah nahi
-        leti, us ke upar judti hai. Central sarkar apna ₹6,000 teen kiston mein bhejti hai.
-        State apna hissa alag schedule par, alag treasury se, aur aksar alag portal ke record
-        se bhejti hai.
+        Is poore system ko samajhne ki chaabi ek hi hai: state yojana PM Kisan ki jagah
+        nahi leti, us ke upar judti hai. Central sarkar apna ₹6,000 teen kiston mein bhejti
+        hai. State apna hissa alag schedule par, alag treasury se, aur aksar alag portal ke
+        record se bhejti hai. Do alag machinein, ek hi khaata.
       </p>
 
       <p>
@@ -328,8 +328,9 @@ export default function StateKisanYojanaHub() {
       <h2>Application Ka Farak — Kahan Khud Karna Hai, Kahan Apne Aap Hota Hai</h2>
 
       <p>
-        States do tarah se list banati hain, aur ye farak jaanna zaroori hai kyunki isi se
-        tay hota hai ki aapko kuch karna hai ya nahi.
+        Kya aapko form bharna padega? Jawab state par nirbhar hai. States do tarah se list
+        banati hain, aur ye farak jaanna zaroori hai — isi se tay hota hai ki aapko kuch
+        karna hai ya sirf intezaar.
       </p>
 
       <p>
@@ -394,9 +395,9 @@ export default function StateKisanYojanaHub() {
       <h2>Zameen Do States Mein Ho To Kya Hota Hai</h2>
 
       <p>
-        Border ke gaon mein ye sawaal aam hai — kuch zameen ek state mein, kuch doosre mein.
-        PM Kisan ke liye is se farak nahi padta; wo central scheme hai aur parivaar ko ek hi
-        grant deti hai, zameen chahe jahan ho. Lekin state yojana ka niyam alag hai: har
+        Border ke gaon mein ye sawaal aam hai — kuch zameen ek state mein, kuch doosre
+        mein. Kis ka claim kahan banega? PM Kisan ke liye is se farak nahi padta; wo
+        central scheme hai aur parivaar ko ek hi grant deti hai, zameen chahe jahan ho. Lekin state yojana ka niyam alag hai: har
         state sirf apne yahan ki zameen aur apne nivasi ko ginti hai. Matlab MP ki zameen
         par MP ki scheme ka claim banega aur Rajasthan wali zameen us hisaab se Rajasthan
         ke niyam par jaayegi — lekin nivasi to aap ek hi state ke hain, isliye vyavhaar
@@ -407,10 +408,11 @@ export default function StateKisanYojanaHub() {
       <h2>Status Check Se Pehle Ye Teen Cheezein Har State Mein Common Hain</h2>
 
       <p>
-        Portal chahe koi bhi ho, atakne ki wajahein lagbhag wahi rehti hain. Bank account NPCI
-        se seeded hona chahiye, warna payment bank se wapas chali jaati hai. Aadhaar, bank aur
-        land record mein naam ki spelling ek jaisi honi chahiye. Aur e-KYC current honi chahiye,
-        kyunki expire hone par status green dikhte hue bhi paisa nahi aata.
+        Portal chahe koi bhi ho, atakne ki wajahein lagbhag wahi rehti hain. Bank account
+        NPCI se seeded ho — warna payment bank se wapas laut jaati hai. Aadhaar, bank aur
+        land record mein naam ki spelling ek jaisi ho. Aur e-KYC current ho. Ye aakhri wali
+        sabse dhokha deti hai: status green dikhta hai, umeed bandhti hai, aur paisa phir
+        bhi nahi aata.
       </p>
 
       <p>
