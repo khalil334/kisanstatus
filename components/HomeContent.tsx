@@ -162,6 +162,31 @@ const FAQS = [
   },
 ];
 
+/** Big featured photo card — used by the middle and bottom hero-image sections. */
+function FeaturedImageCard({ src, title, desc, border }: { src: string; title: string; desc: string; border: string }) {
+  return (
+    <figure className={`group relative rounded-3xl overflow-hidden shadow-2xl border-4 ${border} hover:shadow-3xl transition-all duration-500 hover:-translate-y-2`} style={{ aspectRatio: '3/2' }}>
+      <Image
+        src={src}
+        alt={title}
+        fill
+        loading="lazy"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 896px"
+        quality={80}
+        className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+        placeholder="blur"
+        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiEycf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xVsgH1fZ//2Q=="
+        decoding="async"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" aria-hidden="true" />
+      <figcaption className="absolute bottom-0 left-0 right-0 p-8">
+        <h3 className="text-white font-black text-2xl mb-2 drop-shadow-lg">{title}</h3>
+        <p className="text-gray-200 text-base drop-shadow-md">{desc}</p>
+      </figcaption>
+    </figure>
+  );
+}
+
 function ArticleImage({ image, emoji, title }: { image: string; emoji: string; title: string }) {
   return (
     <div className="relative w-full overflow-hidden bg-gray-100 dark:bg-gray-800 shrink-0" style={{ aspectRatio: '16/9' }}>
@@ -355,6 +380,34 @@ export default function HomeContent() {
         </div>
       </section>
 
+      {/* Hero image 1/3 (TOP) — wheat field. The three big photos are spread
+          across the page (top / middle / bottom) instead of stacking together. */}
+      <section className="py-16 bg-white dark:bg-gray-900" aria-labelledby="hero-image-heading">
+        <div className="container-site mx-auto px-4">
+          <h2 id="hero-image-heading" className="sr-only">Kisan Hero Image</h2>
+          <div className="relative max-w-5xl mx-auto">
+            <div className="absolute -inset-4 bg-gradient-to-r from-green-500/20 to-emerald-500/20 dark:from-green-600/20 dark:to-emerald-600/20 rounded-3xl blur-2xl" aria-hidden="true" />
+            <figure className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/5 dark:ring-white/10">
+              <div className="relative w-full" style={{ aspectRatio: '2/1' }}>
+                <Image
+                  src="/hero-wheat-field.webp"
+                  alt="Bharatiya kisan gehu ke khet mein kaam karte hue - PM Kisan Samman Nidhi yojana ke labharthi"
+                  fill
+                  priority
+                  fetchPriority="high"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1024px"
+                  quality={85}
+                  placeholder="blur"
+                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiEycf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xVsgH1fZ//2Q=="
+                  className="object-cover"
+                />
+              </div>
+              <figcaption className="sr-only">PM Kisan Samman Nidhi ke labharthi kisan gehu ki fasal kaat rahe hain</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-white dark:bg-gray-900" aria-labelledby="tools-heading">
         <div className="container-site mx-auto px-4">
           <div className="text-center mb-14">
@@ -448,32 +501,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      <section className="py-16 bg-white dark:bg-gray-900" aria-labelledby="hero-image-heading">
-        <div className="container-site mx-auto px-4">
-          <h2 id="hero-image-heading" className="sr-only">Kisan Hero Image</h2>
-          <div className="relative max-w-5xl mx-auto">
-            <div className="absolute -inset-4 bg-gradient-to-r from-green-500/20 to-emerald-500/20 dark:from-green-600/20 dark:to-emerald-600/20 rounded-3xl blur-2xl" aria-hidden="true" />
-            <figure className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/5 dark:ring-white/10">
-              <div className="relative w-full" style={{ aspectRatio: '2/1' }}>
-                <Image
-                  src="/hero-wheat-field.webp"
-                  alt="Bharatiya kisan gehu ke khet mein kaam karte hue - PM Kisan Samman Nidhi yojana ke labharthi"
-                  fill
-                  priority
-                  fetchPriority="high"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1024px"
-                  quality={85}
-                  placeholder="blur"
-                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiEycf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xVsgH1fZ//2Q=="
-                  className="object-cover"
-                />
-              </div>
-              <figcaption className="sr-only">PM Kisan Samman Nidhi ke labharthi kisan gehu ki fasal kaat rahe hain</figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
-
+      {/* Hero image 2/3 (MIDDLE) — Hamare Annadata */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800/50 dark:to-gray-900" aria-labelledby="featured-heading">
         <div className="container-site mx-auto px-4">
           <div className="text-center mb-14">
@@ -482,31 +510,13 @@ export default function HomeContent() {
             </h2>
             <p className="text-gray-600 dark:text-gray-300 text-lg">Hamari Pehchaan — Hamari Shaan</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {[
-              { src: '/annadata-farmers-group.webp', title: 'Hamare Annadata', desc: 'Bharat ki kheti - duniya ki sabse badi kheti', border: 'border-green-400 dark:border-green-600' },
-              { src: '/digital-farming-tech.webp', title: 'Aadhunik Kheti', desc: 'Technology se badhti kheti ki kamai', border: 'border-blue-400 dark:border-blue-600' },
-            ].map((item, i) => (
-              <figure key={i} className={`group relative rounded-3xl overflow-hidden shadow-2xl border-4 ${item.border} hover:shadow-3xl transition-all duration-500 hover:-translate-y-2`} style={{ aspectRatio: '3/2' }}>
-                <Image
-                  src={item.src}
-                  alt={item.title}
-                  fill
-                  loading="lazy"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  quality={80}
-                  className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
-                  placeholder="blur"
-                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiEycf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xVsgH1fZ//2Q=="
-                  decoding="async"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" aria-hidden="true" />
-                <figcaption className="absolute bottom-0 left-0 right-0 p-8">
-                  <h3 className="text-white font-black text-2xl mb-2 drop-shadow-lg">{item.title}</h3>
-                  <p className="text-gray-200 text-base drop-shadow-md">{item.desc}</p>
-                </figcaption>
-              </figure>
-            ))}
+          <div className="max-w-4xl mx-auto">
+            <FeaturedImageCard
+              src="/annadata-farmers-group.webp"
+              title="Hamare Annadata"
+              desc="Bharat ki kheti - duniya ki sabse badi kheti"
+              border="border-green-400 dark:border-green-600"
+            />
           </div>
         </div>
       </section>
@@ -609,6 +619,26 @@ export default function HomeContent() {
               <span>सभी हिंदी गाइड देखें</span>
               <IconArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Hero image 3/3 (BOTTOM) — Aadhunik Kheti */}
+      <section className="py-20 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800/50" aria-labelledby="modern-farming-heading">
+        <div className="container-site mx-auto px-4">
+          <div className="text-center mb-14">
+            <h2 id="modern-farming-heading" className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white mb-4 tracking-tight">
+              Aadhunik Kheti
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300 text-lg">Technology se badhti kheti ki kamai</p>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <FeaturedImageCard
+              src="/digital-farming-tech.webp"
+              title="Aadhunik Kheti"
+              desc="Technology se badhti kheti ki kamai"
+              border="border-blue-400 dark:border-blue-600"
+            />
           </div>
         </div>
       </section>
