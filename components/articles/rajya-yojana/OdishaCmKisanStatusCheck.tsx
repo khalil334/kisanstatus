@@ -168,10 +168,12 @@ export default function OdishaCmKisanStatusCheck({
         </p>
 
         <p>
-          Ek parivaar ne mujhe Balangir se likha tha — unke paas zameen nahi thi, phir bhi
+          Balangir se ek mail inbox mein padi thi, subah-subah. Likhne wale parivaar ke paas
+          zameen nahi thi, phir bhi
           unhone cultivator wala form bhar diya kyunki gaon mein sabne wahi bhara tha. File
           reject hui. Panchayat se landless certificate banwa kar sahi track mein dobara gaye,
-          tab jaakar naam aaya. Track pehle tay karna isi liye zaroori hai.
+          tab jaakar naam aaya. Track pehle tay karna isi liye zaroori hai. Samajh gaye? Achha,
+          aage badhte hain.
         </p>
 
         <Fig
@@ -295,7 +297,8 @@ export default function OdishaCmKisanStatusCheck({
 
         <h3>e-KYC pending pada hai</h3>
         <p>
-          Ye number ek wajah hai. Eligibility poori, naam list mein, phir bhi paisa hold —
+          Ye number ek wajah hai. Ye baat samajhna zaroori hai, kyunki ye samajh lene se aadha
+          kaam wahin ban jaata hai. Eligibility poori, naam list mein, phir bhi paisa hold —
           kyunki Aadhaar authentication adhoora hai. Khijh hoti hai, par hal aasan hai:
           portal se OTP ke zariye, ya nazdeeki CSC center par biometric se poora karaya ja
           sakta hai. Bas thodi der ka kaam hai, aur mahinon ka intezaar bacha leta hai.
@@ -331,7 +334,7 @@ export default function OdishaCmKisanStatusCheck({
         <h2>PM Kisan Aur CM Kisan — Dono Sath Chalte Hain</h2>
 
         <p>
-          Ye sawaal bahut aata hai: CM Kisan lene se PM Kisan band ho jaayega? Nahi, bilkul
+          Arre, ye sawaal bahut aata hai: CM Kisan lene se PM Kisan band ho jaayega? Nahi, bilkul
           nahi — dono apni-apni sarkar ki scheme hain aur ek dusre ko cancel nahi
           karti. Bahut se Odisha ke log dono se paisa lete hain — central wala PM Kisan se,
           state wala CM Kisan se.
@@ -485,7 +488,12 @@ export default function OdishaCmKisanStatusCheck({
           raqam ki sabse aam wajah hai.
         </p>
 
-        <h2>Kis Rajya Mein Kya Chal Raha Hai</h2>
+        <h2>Padosi Rajyon Mein Kya Ho Raha Hai</h2>
+
+        <p>
+          Waise, ye maine aapko bataya tha na — raqam har rajya mein ek jaisi nahi hoti. Apne
+          aas-paas ka haal khud padh lo:
+        </p>
 
         <ul>
           <li>
