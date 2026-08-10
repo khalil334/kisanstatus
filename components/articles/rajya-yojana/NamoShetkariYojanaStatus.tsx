@@ -90,9 +90,9 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       </p>
 
       <p>
-        Do sawaal har baar wahi hote hain. Paisa kab aayega? List mein naam hai ya nahi?
-        Neeche dono ka jawab hai: status dekhne ka tareeka, hapte ka waqt, aur naam kat
-        jaane ki asli wajahein — bina ghumaye, seedhi baat.
+        Dekho, do sawaal har baar wahi hote hain. Paisa kab aayega? List mein naam hai ya nahi?
+        Neeche dono ka jawab hai — status dekhne ka tareeka, hapte ka waqt, aur naam kat
+        jaane ki asli wajahein, bina ghumaye, seedhi baat, jaise koi apna hi samjha raha ho.
       </p>
 
       <Fig
@@ -179,6 +179,13 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         paisa banane ke liye keh raha hai.
       </p>
 
+      <p>
+        Ek shetkari ne mujhe Nashik se likha tha — wo teen baar taluka office gaya "Namo
+        Shetkari ka form" maangne. Teeno baar khaali haath lauta. Baad mein pata chala uska PM
+        Kisan record pehle se approved tha aur pehli kist account mein aa bhi chuki thi; usne
+        passbook update hi nahi karwayi thi.
+      </p>
+
       <Fig
         src="vidarbha-cotton-farmer.webp"
         alt="Vidarbha ke kapas ke khet mein mahila shetkari kapas chun rahi hai — Namo Shetkari ki madad kheti ke kharche mein"
@@ -214,7 +221,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       </SchemeTable>
 
       <InfoBox type="info">
-        <strong>Note:</strong> Kabhi-kabhi treasury se fund release hone mein thoda samay lag jata hai. Agar PM Kisan aa gaya hai lekin Namo Shetkari nahi aaya, toh 15-20 din ka intezaar karna normal hai.
+        <strong>Note:</strong> Kabhi-kabhi treasury se fund release hone mein thoda samay lag jata hai. Agar PM Kisan aa gaya hai lekin Namo Shetkari nahi aaya, toh 15-20 din ka intezaar karna normal hai. Hairaan mat ho, ye deri system ki hai, aapke record ki nahi.
       </InfoBox>
 
       <p>
@@ -241,7 +248,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       <ol>
         <li>Apne browser mein official website <code>nsmny.mahait.org</code> kholein.</li>
         <li>Homepage par "Beneficiary Status" ya "अपनी स्थिति जांचें" ke option par click karein.</li>
-        <li>Apna <strong>Aadhaar Number</strong> enter karein.</li>
+        <li>Apna Aadhaar Number enter karein.</li>
         <li>Screen par dikh raha CAPTCHA code enter karein.</li>
         <li>"Get Status" ya "Search" button par click karein.</li>
         <li>Ab aapke saamne ek detail page khulega jisme aapka naam, gaon, taluka, zila, aur payment status (Released, Pending, ya Failed) dikhayi dega.</li>
@@ -352,11 +359,11 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       </p>
 
       <ul>
-        <li><strong>Rehna Maharashtra mein:</strong> Permanent residence Maharashtra ka ho — sirf khet Maharashtra mein hona kaafi nahi hai.</li>
-        <li><strong>PM Kisan ki file chaalu:</strong> Central record hold ya rejected na ho; wahan atakte hi state ka hapta bhi ruk jaata hai.</li>
-        <li><strong>7/12 Utara mein naam:</strong> Cultivable land ka record aapke naam par ho, aur zameen ka type "sheti" darj ho.</li>
-        <li><strong>Naam ki spelling milti ho:</strong> Aadhaar, bank aur 7/12 — teeno mein ek hi spelling. Marathi/English ka farak bhi verification atka deta hai.</li>
-        <li><strong>e-KYC poori:</strong> Aadhaar seeding aur mobile linking dono complete hon.</li>
+        <li>Rehna Maharashtra mein: permanent residence Maharashtra ka ho — sirf khet Maharashtra mein hona kaafi nahi hai.</li>
+        <li>PM Kisan ki file chaalu: central record hold ya rejected na ho; wahan atakte hi state ka hapta bhi ruk jaata hai.</li>
+        <li>7/12 Utara mein naam: cultivable land ka record aapke naam par ho, aur zameen ka type "sheti" darj ho.</li>
+        <li>Naam ki spelling milti ho: Aadhaar, bank aur 7/12 — teeno mein ek hi spelling. Marathi/English ka farak bhi verification atka deta hai.</li>
+        <li>e-KYC poori: Aadhaar seeding aur mobile linking dono complete hon.</li>
       </ul>
 
       <h2>7/12 Utara — Maharashtra Ka Sabse Zaroori Kagaz</h2>
@@ -413,11 +420,6 @@ export default function NamoShetkariYojanaStatusCheck2026() {
 
       <h2>Dusre Rajya Se Hain?</h2>
 
-      <p>
-        Maharashtra ke bahar rehte hain to ye scheme aap par laagu nahi hoti, lekin aapke
-        rajya ka apna intezaam ho sakta hai. Doosre states mein:
-      </p>
-
       <ul>
         <li>
           <Link href="/rajya-yojana/rajasthan-kisan-samman-nidhi-9000">
@@ -436,10 +438,6 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         </li>
       </ul>
 
-      <p>
-        Sabhi state schemes ka ek saath overview dekhne ke liye:
-      </p>
-
       <ul>
         <li>
           <Link href="/rajya-yojana/state-kisan-yojana-list-all-states-2026">
@@ -447,6 +445,11 @@ export default function NamoShetkariYojanaStatusCheck2026() {
           </Link>
         </li>
       </ul>
+
+      <p>
+        Maharashtra ke bahar rehte hain to ye scheme aap par laagu nahi hoti, lekin aapke
+        rajya ka apna intezaam ho sakta hai — upar wali lists mein dekh lein.
+      </p>
 
       <h2>Namo Shetkari — Aur Kuch Jaanna Hai?</h2>
 

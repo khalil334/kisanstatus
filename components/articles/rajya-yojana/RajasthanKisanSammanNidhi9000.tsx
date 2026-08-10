@@ -89,7 +89,7 @@ export default function RajasthanKisanSammanNidhi9000() {
         />
 
         <p>
-          PM Kisan ke upar Rajasthan sarkar apna alag se ₹3,000 saalana deti hai. Jod ke ₹9,000 banta hai. Itna toh clear hai.
+          PM Kisan ke upar Rajasthan sarkar apna alag se ₹3,000 saalana deti hai. Jod ke ₹9,000 banta hai. Itna toh clear ha, samjho.
         </p>
 
         <p>
@@ -102,8 +102,7 @@ export default function RajasthanKisanSammanNidhi9000() {
         <h2>Scheme Kaam Kaise Karti Hai</h2>
 
         <p>
-          Alag se apply karne ki zaroorat nahi. Jo PM Kisan mein hai, wo yahan bhi hai.
-          Bas. Itna simple.
+          Alag se apply karne ki zaroorat nahi. Jo PM Kisan mein hai, wo yahan bhi hai. Bas itna simple.
         </p>
 
         <p>
@@ -272,8 +271,15 @@ export default function RajasthanKisanSammanNidhi9000() {
 
         <p>
           Dusre rajyon ke kisan sirf Aadhaar aur bank ki chinta karte hain. Rajasthan mein
-          ek teesri cheez hai. Utni hi zaroori. Aur zyadatar log ise halke mein lete hain —
+          ek teesri cheez hai, utni hi zaroori, aur zyadatar log ise halke mein lete hain —
           jab tak kist atak na jaaye.
+        </p>
+
+        <p>
+          Ek kisan ne mujhe Sikar se apni baat batayi thi — uska PM Kisan har baar time par
+          aata tha, par state wala ₹1,000 do kist se gayab. Wajah nikli Jan Aadhaar: shaadi ke
+          baad uska naam purane parivaar ki family ID mein hi chal raha tha. Record alag hote hi
+          agli kist se paisa aana shuru ho gaya.
         </p>
 
         <p>
@@ -492,8 +498,6 @@ export default function RajasthanKisanSammanNidhi9000() {
 
         <h2>Dusre States Mein Kya Chal Raha Hai</h2>
 
-        <p>Rajasthan akela nahi hai — kai states apni kisan schemes chala rahe hain:</p>
-
         <ul>
           <li><Link href="/rajya-yojana/annadata-sukhibhava-status-check-2026">Annadata Sukhibhava (Andhra Pradesh)</Link></li>
           <li><Link href="/rajya-yojana/namo-shetkari-yojana-status-check-2026">Namo Shetkari Mahasanman Nidhi (Maharashtra)</Link></li>
@@ -501,7 +505,7 @@ export default function RajasthanKisanSammanNidhi9000() {
           <li><Link href="/rajya-yojana/state-kisan-yojana-list-all-states-2026">Sab States Ki List — Ek Table Mein</Link></li>
         </ul>
 
-        <h2>Aksar Poochhe Jaane Wale Sawaal</h2>
+        <h2>Kuch Aur Sawaal</h2>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
