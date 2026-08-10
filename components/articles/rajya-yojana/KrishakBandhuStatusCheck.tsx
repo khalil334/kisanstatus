@@ -90,13 +90,13 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
         />
 
         <p>
-          Bengal ke gaon mein kist ke dinon ka ek apna hi mahaul hota hai. Kisi ke phone par
-          SMS aa jaata hai, kisi ke padosi ke account mein paisa dikh jaata hai, aur teesre
-          aadmi ka account waisa hi khaali pada rehta hai. Wahi se sawaal shuru hota hai — mera
-          kyun nahi aaya? Krishak Bandhu mein iska jawab lagbhag hamesha teen jagah chhupa hota
-          hai: aapke land record mein, aapke bank account ki halat mein, ya district treasury ki
-          queue mein. Ye page teeno ko alag-alag khol kar samjhata hai, taaki aap sirf intezaar
-          na karein — asli wajah pakad sakein.
+          Bengal ke gaon mein kist ke dinon ka ek apna hi mahaul hota hai. Kisi ke phone
+          par SMS aa jaata hai. Kisi ke padosi ke account mein paisa dikh jaata hai. Aur
+          teesra aadmi? Uska account waisa hi khaali pada rehta hai. Wahi se sawaal shuru
+          hota hai — mera kyun nahi aaya? Krishak Bandhu mein iska jawab lagbhag hamesha
+          teen jagah chhupa hota hai: aapke land record mein, aapke bank account ki halat
+          mein, ya district treasury ki queue mein. Ye page teeno ko alag-alag khol kar
+          samjhata hai, taaki aap sirf intezaar na karein — asli wajah pakad sakein.
         </p>
 
         <InfoBox type="info">
@@ -108,11 +108,11 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
         <h2>Ye Scheme Asal Mein Do Alag Cheezein Hain</h2>
 
         <p>
-          Log ise ek scheme samajhte hain, lekin Krishak Bandhu ke andar do component hain jo
-          alag-alag chalte hain. Pehla hai <strong>assured income support</strong> — saal mein do
-          baar, Kharif aur Rabi season par, aapke bank account mein seedha paisa. Doosra hai{' '}
-          <strong>death benefit</strong> — registered kisan ki mrityu par uske parivaar ko ek
-          baar milne wali ek-mushht raqam.
+          Log ise ek scheme samajhte hain. Hai do. Krishak Bandhu ke andar do component
+          hain jo alag-alag chalte hain. Pehla hai <strong>assured income support</strong> —
+          saal mein do baar, Kharif aur Rabi season par, aapke bank account mein seedha
+          paisa. Doosra hai <strong>death benefit</strong> — registered kisan ki mrityu par
+          uske parivaar ko ek baar milne wali ek-mushht raqam.
         </p>
 
         <p>
@@ -256,10 +256,11 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
         </SchemeTable>
 
         <p>
-          Ek baat khaas dhyan dein: <strong>account valid</strong> ka matlab paisa aa gaya nahi
-          hai. Iska matlab sirf itna hai ki bank ne aapka account number aur naam sahi maan liya
-          hai. Log yahan atak kar bank ke chakkar lagane lagte hain, jabki asal mein unhein
-          agle release ka intezaar karna hai.
+          Ek baat khaas dhyan dein: <strong>account valid</strong> ka matlab paisa aa gaya
+          nahi hai. Bilkul nahi. Iska matlab sirf itna hai ki bank ne aapka account number
+          aur naam sahi maan liya hai. Log yahan atak kar bank ke chakkar lagane lagte hain
+          — samay bhi jaata hai, kiraya bhi — jabki asal mein unhein sirf agle release ka
+          intezaar karna hai.
         </p>
 
         <h2>Padosi Ko Mil Gaya, Mujhe Nahi — Ye Kyun Hota Hai</h2>
@@ -273,10 +274,10 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
         </p>
 
         <p>
-          Nateeja: ek zile ka kisan aaj paisa dekh leta hai, padosi zile ka kisan teen din baad,
-          aur kisi ka poora hafta lag jaata hai. Ye kharaabi nahi, system ka dhaancha hai. Isi
-          liye release ki khabar aane ke baad pehle hafte mein ghabraana zaroori nahi — us dauran
-          bank ki line mein lagne se kuch hasil nahi hota.
+          Nateeja? Ek zile ka kisan aaj paisa dekh leta hai, padosi zile ka teen din baad,
+          aur kisi ka poora hafta lag jaata hai. Ye kharaabi nahi, system ka dhaancha hai.
+          Isi liye release ki khabar aane ke baad pehle hafte mein ghabraana zaroori nahi —
+          us dauran bank ki line mein lagne se kuch hasil nahi hota, sivaay thakaan ke.
         </p>
 
         <Fig
@@ -314,10 +315,11 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
 
         <h3>Land record mein mutation nahi hua</h3>
         <p>
-          Zameen kharidi ya virasat mein mili, magar khatian mein naam nahi chadha — to scheme
-          ki nazar mein zameen ka malik aap nahi hain. Ye sabse aam aur sabse zyada nazarandaaz
-          ki jaane wali wajah hai. Iska hal BL&amp;LRO office mein mutation karwana hai, portal
-          par kuch bharna nahi.
+          Zameen kharidi ya virasat mein mili, magar khatian mein naam nahi chadha — to
+          scheme ki nazar mein zameen ka malik aap nahi hain. Kadwa lagta hai, par niyam
+          yahi hai. Ye sabse aam aur sabse zyada nazarandaaz ki jaane wali wajah hai. Hal
+          BL&amp;LRO office mein mutation karwana hai; portal par kuch bharne se ye theek
+          nahi hota.
         </p>
 
         <Fig
@@ -425,9 +427,10 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
 
         <p>
           Saal mein do release hote hain — ek Kharif season ke aas-paas aur doosra Rabi ke
-          aas-paas. Practically dekha gaya hai ki dates har saal thodi aage-peeche hoti rehti
-          hain, kyunki verification aur treasury processing ka waqt lagta hai. Isliye kisi bhi
-          &ldquo;pakki tareekh&rdquo; wale WhatsApp forward par bharosa karna theek nahi.
+          aas-paas. Dates? Har saal thodi aage-peeche. Verification aur treasury processing
+          ka waqt lagta hai, aur wo waqt kisi ke haath mein nahi. Isliye kisi bhi &ldquo;pakki
+          tareekh&rdquo; wale WhatsApp forward par bharosa karna theek nahi — wo forward
+          likhne wala bhi andaaza hi laga raha hota hai.
         </p>
 
         <p>
