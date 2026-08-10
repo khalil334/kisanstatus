@@ -85,8 +85,8 @@ export default function RythuBharosaStatusCheck2026() {
       </p>
 
       <p>
-        Do cheezein is scheme ko baaki state schemes se alag banati hain. Raqam per acre
-        tay hoti hai. Aur release ek saath nahi hota — phase mein hota hai. Dono ka asar
+        Samajhne ki baat yeh hai — do cheezein is scheme ko baaki state schemes se alag banati hain. Raqam per acre
+        tay hoti hai. Aur release ek saath nahi hota, phase mein hota hai. Dono ka asar
         seedha aapke status par padta hai, aur dono ko na samajhne se hi aadhi ghabrahat
         paida hoti hai. Neeche wahi samjhaya hai.
       </p>
@@ -177,6 +177,13 @@ export default function RythuBharosaStatusCheck2026() {
       </p>
 
       <p>
+        Ek rythu ne mujhe Warangal se phone karwaya tha — uske gaon ke aadhe logon ko paisa
+        aa gaya tha, uska nahi. Wo MRO office jaane ki taiyari mein tha. Do din baad khud hi
+        credit aa gaya — uska mandal bas agle phase mein tha. Kahin jaane se pehle phase ka
+        intezaar dekh lena chahiye.
+      </p>
+
+      <p>
         Poore state ko ek din mein paisa nahi jaata. Kis mandal ka number pehle aayega, ye teen
         cheezon par tay hota hai:
       </p>
@@ -188,7 +195,7 @@ export default function RythuBharosaStatusCheck2026() {
 
       <p>
         Matlab "Processing" dikhne ka arth paisa atak jaana nahi hai. Aapke mandal ka
-        phase aana baaki hai. Bas itna.
+        phase aana baaki hai, bas itna, toh sabr rakho.
       </p>
 
       <h2>Apna Hisaab Dekho</h2>
@@ -208,7 +215,7 @@ export default function RythuBharosaStatusCheck2026() {
         <li>Apne mobile ya computer ke browser mein official website <code>rytubharosa.cgg.gov.in</code> kholein.</li>
         <li>Homepage par "Rythu Bharosa Status" ya "Beneficiary Status" ke option par click karein.</li>
         <li>Aapke paas do options honge: "Aadhaar Number" ya "Account Number" se search karna. Aadhaar number sabse reliable hai.</li>
-        <li>Apna 12-digit <strong>Aadhaar Number</strong> enter karein.</li>
+        <li>Apna 12-digit Aadhaar Number enter karein.</li>
         <li>Screen par dikh raha CAPTCHA code enter karein aur "Get Details" ya "Submit" par click karein.</li>
         <li>Ek naya page khulega jisme aapka naam, father/husband ka naam, gaon, mandal, district, land extent (acreage), aur current <strong>rythu bharosa payment status</strong> (Sanctioned, Disbursed, ya Pending) dikhayi dega.</li>
       </ol>
@@ -227,7 +234,7 @@ export default function RythuBharosaStatusCheck2026() {
 
       <ol>
         <li>Rythu Bharosa portal par "Reports" ya "Beneficiary List" section mein jaayein.</li>
-        <li>Apna <strong>Zila (District)</strong>, <strong>Mandal</strong>, aur <strong>Panchayat/Village</strong> select karein.</li>
+        <li>Apna Zila (District), Mandal, aur Panchayat/Village select karein.</li>
         <li>Financial Year aur Season (Kharif/Rabi) select karein.</li>
         <li>"Get List" par click karein.</li>
         <li>Ek PDF ya table generate hoga jisme aapke gaon ke sabhi beneficiaries ke naam, account numbers (masked), aur amount likha hoga. Apna naam dhundhein.</li>
@@ -414,6 +421,8 @@ export default function RythuBharosaStatusCheck2026() {
       </p>
 
       <h2>Baaki Rajyon Ka Hisaab</h2>
+
+      <p>Bas links de raha hoon, khud dekh lo kis rajya mein kya hai:</p>
 
       <ul>
         <li>

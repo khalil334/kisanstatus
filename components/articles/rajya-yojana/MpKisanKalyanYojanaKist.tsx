@@ -93,7 +93,7 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
       </p>
 
       <p>
-        Neeche jo bhi likha hai wo SAARA portal aur official guidelines se hai. Kitna paisa
+        Samajhne ki baat yeh hai — neeche jo bhi likha hai wo SAARA portal aur official guidelines se hai. Kitna paisa
         banta hai, kaun eligible hai, aur na aane par kahan jaana hai. Teen cheezein, sidhi
         baat.
       </p>
@@ -213,8 +213,7 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         <li>Homepage par "Farmer Services" ya "Kisan Kalyan Yojana" ka option dhundhein.</li>
         <li>"Beneficiary Status" ya "Kist Status" par click karein.</li>
         <li>
-          Apna <strong>Aadhaar Number</strong> ya <strong>Registered Mobile Number</strong>{' '}
-          enter karein.
+          Apna Aadhaar Number ya Registered Mobile Number enter karein.
         </li>
         <li>
           OTP verify karein (ye usi number par aayega jo PM Kisan/State database mein
@@ -265,9 +264,9 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
       </p>
 
       <p>
-        PM Kisan aa gaya aur state ka nahi aaya? Ye normal hai. Bilkul normal. Dono ka
-        release cycle apna hai, aur state treasury se fund nikalne mein 15 se 30 din lag
-        jaate hain. Intezaar khalta hai, samajh mein aata hai — par ye deri gadbad ki
+        PM Kisan aa gaya aur state ka nahi aaya? Ye normal hai, bilkul normal, dono ka
+        release cycle apna hai aur state treasury se fund nikalne mein 15 se 30 din lag hi
+        jaate hain — toh intezaar khalta hai, samajh mein aata hai, par ye deri gadbad ki
         nishani nahi hai.
       </p>
 
@@ -386,7 +385,7 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
       <p>
         Kisan khud bhi <strong>MP Kisan App</strong> se apni girdawari darj kar sakta hai.
         Khet par khade hokar app kholein, fasal select karein, photo khinchein aur submit
-        kar dein. GPS se location verify hoti hai. Itna time nahi lagta, aur fayde do milte hain:
+        kar dein. GPS se location verify hoti hai. Bas thodi der ka kaam hai, aur fayde do milte hain:
         state kist ka data clean rehta hai, aur fasal bima ya muavze ke waqt bhi wahi record
         kaam aata hai.
       </p>
@@ -433,7 +432,7 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         </tr>
       </SchemeTable>
 
-      <h2>Saal Bhar Ka Routine — MP Ke Kisan Ke Liye Chaar Kaam</h2>
+      <h2>Routine</h2>
 
       <p>
         Is scheme mein application nahi hai, lekin iska matlab ye nahi ki kuch karna hi nahi
@@ -445,6 +444,12 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         <strong>Season ki shuruaat mein girdawari.</strong> Kharif aur Rabi — dono season
         mein apni fasal ki entry confirm karein, chahe patwari ne kar di ho. MP Kisan App
         se khud darj karna sabse pakka raasta hai; upar iska tareeka likha hai.
+      </p>
+
+      <p>
+        Ek kisan ne mujhe Sehore se bataya tha — uska bank, Aadhaar, e-KYC sab perfect tha,
+        phir bhi state kist do season se nahi aayi. Aakhir mein nikli girdawari: patwari ne us
+        season uski fasal darj hi nahi ki thi. App se khud entry karne ke baad agli kist aa gayi.
       </p>
 
       <p>
@@ -485,7 +490,7 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
       <p>
         MP ke bahar rehte hain to ye top-up aap par laagu nahi hota, aur girdawari-based
         shart bhi sirf MP mein hai. Kai rajyon ka top-up MP se kai guna bada hai, kuch mein
-        bilkul nahi hai.
+        bilkul nahi hai. Kis rajya mein kya hai — ye niche wale articles kholte hi samajh aa jaayega:
       </p>
 
       <ul>
