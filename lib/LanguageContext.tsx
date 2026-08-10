@@ -31,20 +31,20 @@ const LangContext = createContext<LangContextType | undefined>(undefined);
 
 function getBrowserLanguage(): LangCode {
   if (typeof window === 'undefined') return DEFAULT_LANG;
-  
+
   try {
     const languages = navigator.languages || [navigator.language];
-    
+
     for (const lang of languages) {
       const langCode = lang.toLowerCase();
       if (langCode.startsWith('en')) return 'en';
       if (langCode.startsWith('hi')) return 'hi';
     }
-    
+
     const primaryLang = languages[0]?.toLowerCase() || '';
     const indianLangs = ['bn', 'ta', 'te', 'mr', 'gu', 'kn', 'ml', 'pa', 'ur'];
     if (indianLangs.some(lang => primaryLang.startsWith(lang))) return 'hi';
-    
+
     return DEFAULT_LANG;
   } catch {
     return DEFAULT_LANG;
@@ -80,9 +80,6 @@ function updateDocumentLang(lang: LangCode): void {
   }
 }
 
-// --- external language store (hydration-safe, no setState-in-effect) ---
-// The server always renders DEFAULT_LANG; on the client React swaps to the
-// stored/browser language right after hydration via useSyncExternalStore.
 let clientLang: LangCode | null = null;
 const langListeners = new Set<() => void>();
 
@@ -111,7 +108,6 @@ const subscribeNoop = () => () => {};
 
 export function LanguageProvider({ children }: LanguageProviderProps) {
   const lang = useSyncExternalStore(subscribeLang, getClientLang, getServerLang);
-  // false during SSR/hydration, true on the client — same semantics as before.
   const isLoaded = useSyncExternalStore(subscribeNoop, () => true, () => false);
 
   useEffect(() => {
@@ -124,7 +120,7 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
     setClientLang(newLang);
     setStoredLanguage(newLang);
     updateDocumentLang(newLang);
-    
+
     try {
       trackEvent('select_language', {
         event_category: 'User Preference',

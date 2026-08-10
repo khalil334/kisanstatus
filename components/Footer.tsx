@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { 
-  AUTHOR_NAME, 
+import {
+  AUTHOR_NAME,
   SITE_NAME,
   SUPPORT_EMAIL,
   HELPLINE,
@@ -19,7 +19,7 @@ export default function Footer() {
   const currentYear = getCopyrightYears();
 
   return (
-    <footer 
+    <footer
       className="bg-[var(--color-text)] text-white py-12"
       itemScope
       itemType="https://schema.org/Organization"

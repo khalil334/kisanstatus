@@ -78,7 +78,6 @@ export default function PmKisanCscRegistrationCharges() {
 
       <div className="container-site max-w-3xl py-8">
 
-        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-csc-registration-charges/csc-registration-hero.webp"
@@ -94,7 +93,6 @@ export default function PmKisanCscRegistrationCharges() {
           </p>
         </div>
 
-        {}
         <section className="mb-8">
           <SH>₹500 Maang Rahe Hain? Ruko, Pehle Ye Padho</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -106,7 +104,7 @@ export default function PmKisanCscRegistrationCharges() {
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Seedha jawab pehle de deta hoon, kyunki sabse zyada yahi poocha jata hai — <strong>CSC registration fees kitni hai</strong>? New registration ke ₹25 se ₹30, aur eKYC ka ₹15 se ₹20. Bas itna. Neeche poora rate chart bhi diya hai taaki aap counter par confident rahein.
           </p>
-          
+
           <Image
             src="/images/articles/pm-kisan-csc-registration-charges/csc-fee-chart.webp"
             alt="Official PM Kisan CSC fee structure chart showing government fixed rates"
@@ -127,7 +125,6 @@ export default function PmKisanCscRegistrationCharges() {
           </p>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Sarkari Rate Kya Hai? (Official Fee Structure)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -164,7 +161,6 @@ export default function PmKisanCscRegistrationCharges() {
           </IB>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Ghar Baithe FREE Mein Kaise Karein? (Bina CSC Gaye)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -200,7 +196,6 @@ export default function PmKisanCscRegistrationCharges() {
           </WB>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>CSC Center Par Kya Hota Hai? (Andar Ki Kahani)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -229,7 +224,6 @@ export default function PmKisanCscRegistrationCharges() {
           </p>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>⚠️ CSC Fraud Se Kaise Bachen? (Red Flags)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -237,24 +231,24 @@ export default function PmKisanCscRegistrationCharges() {
           </p>
           <div className="space-y-3">
             {[
-              { 
-                sign: '100 se zyada maangna', 
+              {
+                sign: '100 se zyada maangna',
                 action: 'Turant mana kar do. Sarkari rate ₹25 hai. Usse zyada dena kanoonan galat hai.',
               },
-              { 
-                sign: 'Bina receipt ke paise lena', 
+              {
+                sign: 'Bina receipt ke paise lena',
                 action: 'Receipt ke bina transaction valid nahi hai. Wo paise kha jayega.',
               },
-              { 
-                sign: 'Aapka phone maangna', 
+              {
+                sign: 'Aapka phone maangna',
                 action: 'Apna phone kisi ko mat do. OTP aapke phone par aayega, usko operator ko bolo. Phone hath mein rakho.',
               },
-              { 
-                sign: '"Kal aana, server down hai" bol kar paise lena', 
+              {
+                sign: '"Kal aana, server down hai" bol kar paise lena',
                 action: 'Ye classic scam hai. Paise wapas mango aur dusre center par jao.',
               },
-              { 
-                sign: 'Aadhaar number ya OTP chupke se note karna', 
+              {
+                sign: 'Aadhaar number ya OTP chupke se note karna',
                 action: 'Ye data theft hai. Turant wahan se nikal jao aur complaint karo.',
               },
             ].map(({ sign, action }, i) => (
@@ -266,7 +260,6 @@ export default function PmKisanCscRegistrationCharges() {
           </div>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Agar Zyada Paise Le Toh Complaint Kaise Karein?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -293,7 +286,6 @@ export default function PmKisanCscRegistrationCharges() {
           </IB>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>CSC Jane Se Pehle Ye Documents Ready Rakho</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -316,7 +308,6 @@ export default function PmKisanCscRegistrationCharges() {
           </div>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>CSC Se Kaam Hone Ke Baad Kya Hota Hai?</SH>
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
@@ -349,7 +340,6 @@ export default function PmKisanCscRegistrationCharges() {
           </p>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Kya Har State Mein Same Rate Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -365,7 +355,6 @@ export default function PmKisanCscRegistrationCharges() {
           </div>
         </section>
 
-        {}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Aksar Puche Jane Wale Sawal

@@ -24,41 +24,41 @@ const RELATED = [
 ];
 
 const FAQS_DATA = [
-  { 
-    q: 'Mobile se PM Kisan mein registration kaise kar sakte hain?', 
-    a: 'Dekho bhai, pehle pmkisan.gov.in kholo apne phone mein. Phir "New Farmer Registration" dhundo. Apna Aadhaar number daalo, OTP aayega usi number par - verify kar do. Ab personal details bharo - naam, mobile, gaon ka address. Zameen ki details mein Khasra number, kitna area hai, kaunsa gaon - ye sab type karo. Bank account number aur IFSC code daalna mat bhoolna. Documents upload karo - Aadhaar, Khatauni, Passbook ki photo. Submit karo aur reference number ka screenshot le lo. CSC center par bhi ho jata hai agar online mein dikkat aaye.' 
+  {
+    q: 'Mobile se PM Kisan mein registration kaise kar sakte hain?',
+    a: 'Dekho bhai, pehle pmkisan.gov.in kholo apne phone mein. Phir "New Farmer Registration" dhundo. Apna Aadhaar number daalo, OTP aayega usi number par - verify kar do. Ab personal details bharo - naam, mobile, gaon ka address. Zameen ki details mein Khasra number, kitna area hai, kaunsa gaon - ye sab type karo. Bank account number aur IFSC code daalna mat bhoolna. Documents upload karo - Aadhaar, Khatauni, Passbook ki photo. Submit karo aur reference number ka screenshot le lo. CSC center par bhi ho jata hai agar online mein dikkat aaye.'
   },
-  { 
-    q: 'eKYC nahi karwai toh kya hoga mere saath?', 
-    a: 'Seedhi baat - payment atak jayegi. 2023 se ye compulsory ho gaya hai. Agar aapne abhi tak nahi ki, toh jaldi karo. pmkisan.gov.in par jao, eKYC section mein, OTP verify karo. Bas 2 minute ka kaam hai. Agar mobile Aadhaar se linked nahi hai, toh CSC center jao - fingerprint scan hoga. Free hai ye process, koi paisa nahi lagta.' 
+  {
+    q: 'eKYC nahi karwai toh kya hoga mere saath?',
+    a: 'Seedhi baat - payment atak jayegi. 2023 se ye compulsory ho gaya hai. Agar aapne abhi tak nahi ki, toh jaldi karo. pmkisan.gov.in par jao, eKYC section mein, OTP verify karo. Bas 2 minute ka kaam hai. Agar mobile Aadhaar se linked nahi hai, toh CSC center jao - fingerprint scan hoga. Free hai ye process, koi paisa nahi lagta.'
   },
-  { 
-    q: 'Bina OTP ke payment status kaise check karu?', 
-    a: 'OTP nahi hai? Koi baat nahi. Beneficiary List wale option mein jao. Apna State select karo, phir District, Block, aur finally Village. Ab list mein apna naam dhundo. Ye tarika OTP ke bina kaam karta hai. Ya phir status check mein seedha Aadhaar number daal do - OTP nahi maangega.' 
+  {
+    q: 'Bina OTP ke payment status kaise check karu?',
+    a: 'OTP nahi hai? Koi baat nahi. Beneficiary List wale option mein jao. Apna State select karo, phir District, Block, aur finally Village. Ab list mein apna naam dhundo. Ye tarika OTP ke bina kaam karta hai. Ya phir status check mein seedha Aadhaar number daal do - OTP nahi maangega.'
   },
-  { 
-    q: 'Naam correction karne ke baad payment kab aayegi?', 
-    a: 'Dekho, naam sudharne ke baad thoda time lagta hai - kareeb 15-20 din. System update hone mein itna time leta hai. Uske baad jo bhi installments pending hain, wo arrears ke roop mein ek saath mil jayenge. Reference number zaroor save rakhna - baad mein tracking ke kaam aata hai.' 
+  {
+    q: 'Naam correction karne ke baad payment kab aayegi?',
+    a: 'Dekho, naam sudharne ke baad thoda time lagta hai - kareeb 15-20 din. System update hone mein itna time leta hai. Uske baad jo bhi installments pending hain, wo arrears ke roop mein ek saath mil jayenge. Reference number zaroor save rakhna - baad mein tracking ke kaam aata hai.'
   },
-  { 
-    q: 'Rejected list mein naam aa gaya, ab kya karu?', 
-    a: 'Ghabrao mat. Pehle portal par reason dekho - kyun reject hua. Land record mein kuch dikkat hai? Khatauni update karwao. eKYC pending hai? Turant complete karo. Documents clear nahi the? Dobara clear scan upload karo. Fix karne ke baad dobara apply kar do. CSC center par jaake help le sakte ho - wo log manually check karke bata denge ki exactly kya problem hai.' 
+  {
+    q: 'Rejected list mein naam aa gaya, ab kya karu?',
+    a: 'Ghabrao mat. Pehle portal par reason dekho - kyun reject hua. Land record mein kuch dikkat hai? Khatauni update karwao. eKYC pending hai? Turant complete karo. Documents clear nahi the? Dobara clear scan upload karo. Fix karne ke baad dobara apply kar do. CSC center par jaake help le sakte ho - wo log manually check karke bata denge ki exactly kya problem hai.'
   },
-  { 
-    q: 'Mobile number change karne ka kitna charge lagta hai?', 
-    a: 'Bilkul free hai bhai! Agar purana number abhi active hai, toh online kar sakte ho. pmkisan.gov.in par jao, Edit Mobile option dhundo, OTP verify karo, naya number daal do. Agar purana number band ho chuka hai, toh CSC center jao - operator update kar dega. Wo log ₹20-30 service charge le sakte hain, lekin official charge zero hai.' 
+  {
+    q: 'Mobile number change karne ka kitna charge lagta hai?',
+    a: 'Bilkul free hai bhai! Agar purana number abhi active hai, toh online kar sakte ho. pmkisan.gov.in par jao, Edit Mobile option dhundo, OTP verify karo, naya number daal do. Agar purana number band ho chuka hai, toh CSC center jao - operator update kar dega. Wo log ₹20-30 service charge le sakte hain, lekin official charge zero hai.'
   },
-  { 
-    q: '24vi kist kab tak aayegi mere account mein?', 
-    a: 'October 2026 mein aani chahiye. Agar aapki eKYC complete hai aur bank account active hai, toh automatic credit ho jayegi - aapko kuch nahi karna. Bas status check karte raho portal par. Agar 15 October tak nahi aayi, toh helpline 155261 par call karo ya CSC center jao.' 
+  {
+    q: '24vi kist kab tak aayegi mere account mein?',
+    a: 'October 2026 mein aani chahiye. Agar aapki eKYC complete hai aur bank account active hai, toh automatic credit ho jayegi - aapko kuch nahi karna. Bas status check karte raho portal par. Agar 15 October tak nahi aayi, toh helpline 155261 par call karo ya CSC center jao.'
   },
 ];
 
 export default function PmKisanMasterGuide2026({ article }: { article: ArticleMeta }) {
-  const [modal, setModal] = useState<{ 
-    title: string; 
-    message: string; 
-    url: string; 
+  const [modal, setModal] = useState<{
+    title: string;
+    message: string;
+    url: string;
   } | null>(null);
 
   const handleOfficialLink = (title: string, message: string, url: string) => {

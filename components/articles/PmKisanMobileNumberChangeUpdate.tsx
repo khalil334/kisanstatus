@@ -11,23 +11,23 @@ const PUBLISHED = '2026-07-10T08:00:00+05:30';
 const MODIFIED = '2026-08-08T08:00:00+05:30';
 
 const RELATED_CARDS = [
-  { 
-    slug: 'PmKisanEkycOnline2026', 
-    title: 'PM Kisan eKYC Complete Guide', 
+  {
+    slug: 'PmKisanEkycOnline2026',
+    title: 'PM Kisan eKYC Complete Guide',
     desc: 'Naya number link karne ke baad eKYC kaise karein, step-by-step jaane.',
-    emoji: '🔐' 
+    emoji: '🔐'
   },
-  { 
-    slug: 'PmKisanCscRegistrationCharges', 
-    title: 'CSC Registration & Charges', 
+  {
+    slug: 'PmKisanCscRegistrationCharges',
+    title: 'CSC Registration & Charges',
     desc: 'CSC par kis service ka kitna sarkari rate hai, puri list dekhein.',
-    emoji: '🏪' 
+    emoji: '🏪'
   },
-  { 
-    slug: 'PmKisanRejectedStatusReApplyGuide', 
-    title: 'Rejected Status Fix Guide', 
+  {
+    slug: 'PmKisanRejectedStatusReApplyGuide',
+    title: 'Rejected Status Fix Guide',
     desc: 'Agar number change ke baad bhi status rejected dikhaye toh kya karein.',
-    emoji: '❌' 
+    emoji: '❌'
   },
 ];
 
@@ -67,10 +67,10 @@ const FAQS_DATA = [
 ];
 
 export default function PmKisanMobileNumberChangeUpdate({ article }: { article: ArticleMeta }) {
-  const [modal, setModal] = useState<{ 
-    title: string; 
-    message: string; 
-    url: string; 
+  const [modal, setModal] = useState<{
+    title: string;
+    message: string;
+    url: string;
   } | null>(null);
 
   const handleOfficialLink = (title: string, message: string, url: string) => {
@@ -79,7 +79,6 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
 
   return (
     <>
-      {}
       {modal && (
         <CountdownModal
           title={modal.title}
@@ -103,12 +102,11 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
             <span className="text-white font-bold">Mobile Number Change</span>
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Complete Update Guide</span>
-          
-          {}
+
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
             PM Kisan Mobile Number Change 2026: Naya Number Kaise Jodein
           </h1>
-          
+
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
@@ -120,14 +118,12 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
 
       <div className="container-site max-w-3xl py-8">
 
-        {}
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-r-xl">
           <p className="text-sm md:text-base text-blue-900 dark:text-blue-100 leading-relaxed font-medium">
             <strong>Seedha Jawab:</strong> Agar aapka purana SIM band ho gaya hai, toh <strong>PM Kisan mobile number change</strong> online nahi ho sakta — OTP purane number par hi jaata hai. Aapko nazdiki CSC (Common Service Centre) jaakar Aadhaar biometric verification ke through naya number link karwana hoga. Database update hone mein kuch din lag sakte hain, isliye receipt sambhal kar rakhein.
           </p>
         </div>
 
-        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-mobile-number-change-update/mobile-change-hero.webp"
@@ -143,19 +139,18 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           </p>
         </div>
 
-        {}
         <section className="mb-8">
           <SH>Purana SIM Band, OTP Nahi Aa Raha — Ab Kya Karein?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Bhai, ye kahani aaj kal har dusre kisan ki zubaan par hai. Pichle saal jo SIM card PM Kisan mein register kiya tha, wo ab band ho chuka hai, balance khatam ho gaya hai, ya phir SIM kho gaya. Ab naya number le liya hai, lekin PM Kisan portal par login karte hi OTP purane number par ja raha hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Bina OTP ke na <Link href="/articles/PmKisanEkycOnline2026" className="underline text-green-700 dark:text-green-400">eKYC</Link> ho rahi hai, na status check ho raha hai, aur na hi koi update. Aisa lagta hai jaise sarkari daftar ke chakkar lagane padenge. Lekin ruko, bade chakkar nahi lagane padenge. 
+            Bina OTP ke na <Link href="/articles/PmKisanEkycOnline2026" className="underline text-green-700 dark:text-green-400">eKYC</Link> ho rahi hai, na status check ho raha hai, aur na hi koi update. Aisa lagta hai jaise sarkari daftar ke chakkar lagane padenge. Lekin ruko, bade chakkar nahi lagane padenge.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Neeche pura tarika likha hai ki <strong>pm kisan registered mobile number update</strong> kaise hota hai — online trap se kaise bachein, CSC par charge kaise confirm karein, aur update ke baad khud kaise check karein ki naya number sach mein system me chadh gaya.
           </p>
-          
+
           <Image
             src="/images/articles/pm-kisan-mobile-number-change-update/otp-issue-screen.webp"
             alt="PM Kisan portal showing OTP sent to old registered mobile number"
@@ -172,7 +167,6 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           </DB>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Online Edit Option Kyun Kaam Nahi Kar Raha? (The Trap)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -208,7 +202,6 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           />
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Method 1: CSC Center Se Karo (Sabse Fast Aur Aasan)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -270,7 +263,6 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           </div>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Method 2: Block Agriculture Office (BAO) Se Offline Form</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -322,7 +314,6 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           </div>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Zaroori Sub-Flow: Aadhaar Mein Bhi Number Update Karna Pad Sakta Hai</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -336,7 +327,6 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           </IB>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Kaunsa Number Kahan Update Hota Hai? (Ye Table Save Kar Lo)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -372,7 +362,6 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           </p>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Helpline Se Kya Expect Karein (Aur Kya Nahi)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -383,7 +372,6 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           </p>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Ek Bahut Badi Confusion: Bank Number vs PM Kisan Number</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -404,7 +392,6 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           </p>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Documents Ki List (Jo Hamesha Sath Rakhein)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -426,26 +413,25 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           </div>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Ye Galtiyan Mat Karna (Warna Phir Chakkar Katne Padenge)</SH>
           <div className="space-y-3">
             {[
-              { 
-                mistake: 'Galat Number Bata Dena', 
-                fix: 'CSC wale se form bharwate time screen par number khud dekho. Ek digit galat hua toh OTP dusre kisi anjaan ke phone par jayega.' 
+              {
+                mistake: 'Galat Number Bata Dena',
+                fix: 'CSC wale se form bharwate time screen par number khud dekho. Ek digit galat hua toh OTP dusre kisi anjaan ke phone par jayega.'
               },
-              { 
-                mistake: 'OTP Kisi Anjaan Ko Bata Dena', 
-                fix: 'OTP sirf CSC wale ko batao jo aapke samne kaam kar raha hai. Phone par koi kahe ki "OTP batao, hum update kar denge", toh wo 100% fraud hai.' 
+              {
+                mistake: 'OTP Kisi Anjaan Ko Bata Dena',
+                fix: 'OTP sirf CSC wale ko batao jo aapke samne kaam kar raha hai. Phone par koi kahe ki "OTP batao, hum update kar denge", toh wo 100% fraud hai.'
               },
-              { 
-                mistake: 'Receipt Na Lena', 
-                fix: 'Bina receipt ke kaam hua hi nahi maana jata. Receipt par Transaction ID hoti hai, jisse aap baad mein track kar sakte ho ki kaam hua ya nahi.' 
+              {
+                mistake: 'Receipt Na Lena',
+                fix: 'Bina receipt ke kaam hua hi nahi maana jata. Receipt par Transaction ID hoti hai, jisse aap baad mein track kar sakte ho ki kaam hua ya nahi.'
               },
-              { 
-                mistake: 'Turant Status Check Karne Chale Jana', 
-                fix: 'Mobile update turant reflect nahi hota — database sync mein kuch din lag sakte hain. Turant check karne par purana number hi dikh sakta hai; ek-do din ruk kar test karo, aur receipt tab tak sambhal kar rakho.' 
+              {
+                mistake: 'Turant Status Check Karne Chale Jana',
+                fix: 'Mobile update turant reflect nahi hota — database sync mein kuch din lag sakte hain. Turant check karne par purana number hi dikh sakta hai; ek-do din ruk kar test karo, aur receipt tab tak sambhal kar rakho.'
               },
             ].map(({ mistake, fix }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
@@ -456,7 +442,6 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           </div>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Update Hui Ya Nahi? Aise Check Karo</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -511,7 +496,6 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           </div>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Kya Mobile Number Change Karne Se Kist Rukegi?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -529,7 +513,6 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           </p>
         </section>
 
-        {}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Mobile Number Update Se Jude Sawal-Jawab
@@ -545,13 +528,12 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           portalName="pmkisan.gov.in"
         />
 
-        {}
         <section className="my-10">
           <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Aapke Liye Zaroori Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {RELATED_CARDS.map((card) => (
-              <Link 
-                key={card.slug} 
+              <Link
+                key={card.slug}
                 href={`/articles/${card.slug}`}
                 className="group block p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:border-green-500 transition-all duration-300"
               >

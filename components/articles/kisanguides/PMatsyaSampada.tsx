@@ -3,13 +3,6 @@ import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
 
-// ⚠️ DEAD CODE — Next.js is metadata export ko ignore karta hai.
-// `export const metadata` sirf app/**/page.tsx ya layout.tsx mein kaam karta hai;
-// ye ek client-imported article component hai, isliye ye block render HI nahi hota.
-// Live <title>/description/canonical/OG `app/articles/[slug]/page.tsx` ke
-// generateMetadata() se aate hain, jo lib/articles-data.ts padhta hai.
-// >>> Title/description/canonical badalna hai to lib/articles-data.ts edit karo. <<<
-// Yahan edit karne se live page pe KUCHH nahi badlega. (Ref: fixplan.md BUG-3)
 export const metadata: Metadata = {
   title: 'PM Matsya Sampada Yojana 2026: 60% Subsidy & Complete Guide',
   description: 'PM Matsya Sampada Yojana complete guide. Janein fish farming subsidy, biofloc technology, pond setup aur real profit calculation ke baare mein.',
@@ -96,33 +89,31 @@ const jsonLd = {
 export default function PMatsyaSampada() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-8 text-gray-800 dark:text-gray-200 leading-relaxed prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-blue-600 dark:prose-a:text-blue-400">
-      {}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {}
-      <Image 
-        src="/images/kisanguides/fish-farming-hero.webp" 
-        alt="Fish Pond with Rohu and Catla - PM Matsya Sampada Yojana Subsidy Guide" 
-        width={1200} 
-        height={630} 
+      <Image
+        src="/images/kisanguides/fish-farming-hero.webp"
+        alt="Fish Pond with Rohu and Catla - PM Matsya Sampada Yojana Subsidy Guide"
+        width={1200}
+        height={630}
         priority
         sizes="(max-width: 768px) 100vw, 1200px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose"
       />
-      
+
       <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100 leading-tight">
         PM Matsya Sampada Yojana 2026: Machli Palan par 60% Subsidy, Biofloc Technology, aur Real Profit
       </h1>
-      
+
       <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
         <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
           <strong>Sach kahoon toh:</strong> Machli palan mein pehle saal oxygen management ya disease control mein chhoti galtiyan 20-30% tak crop loss karwa sakti hain. Par experience ke saath, doosre-teesre saal tak returns stabilize ho jate hain aur profit consistent hone lagta hai.
         </p>
       </div>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
         Aquaculture mein paani ki quality, oxygen level, aur feed management seedha aapki jeb se juda hai. Ek chhoti si chook poori crop khatam kar sakti hai. Lekin jab management sahi hota hai, toh returns kaafi achhe milte hain. Isme sarkar ki PM Matsya Sampada Yojana (PMMSY) 40-60% tak ki financial assistance dekar is business ko aur bhi viable bana deti hai.
       </p>
@@ -130,11 +121,11 @@ export default function PMatsyaSampada() {
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Matsya Palan Kyun? India Ka Fisheries Sector Boom Par Hai
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         India duniya mein machli production mein teesre number par hai. Par domestic consumption abhi bhi demand se kam hai. Per capita fish consumption India mein sirf 5-6 kg/year hai, jabki global average 20 kg hai. Matlab isme abhi bhi kaafi growth potential hai.
       </p>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Export ki baat karein toh India saal ka ₹50,000+ crore ka seafood export karta hai, jisme shrimp (jhinga) sabse zyada hota hai. Domestic market bhi tez grow kar raha hai kyunki urban areas mein log ab protein-rich diet par zyada focus kar rahe hain.
       </p>
@@ -146,7 +137,7 @@ export default function PMatsyaSampada() {
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Kaunsi Technology Chunein? Traditional Ponds vs Biofloc vs RAS
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Aquaculture mein mukhya roop se 3 technologies use hoti hain. Har ek ki apni cost, complexity, aur returns hain, jisse naye farmers aksar confuse ho jaate hain.
       </p>
@@ -196,20 +187,19 @@ export default function PMatsyaSampada() {
         Biofloc technology tab choose karein jab aapke paas zameen kam hai par investment capacity zyada hai. Urban areas mein yeh popular ho rahi hai kyunki kam space mein zyada production hota hai. Par isme electricity cost zyada hai (aerators 24x7 chalte hain), aur technical knowledge zaroori hai.
       </p>
 
-      {}
-      <Image 
-        src="/images/kisanguides/fish-varieties.webp" 
-        alt="Different Fish Species - Rohu, Catla, Mrigal for Fish Farming" 
-        width={800} 
-        height={450} 
+      <Image
+        src="/images/kisanguides/fish-varieties.webp"
+        alt="Different Fish Species - Rohu, Catla, Mrigal for Fish Farming"
+        width={800}
+        height={450}
         sizes="(max-width: 768px) 100vw, 800px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose"
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Kitna Paisa Lagega? 1 Acre Pond ka Realistic Budget
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Yeh ek 1 acre traditional pond ka budget hai, jisme IMC (Indian Major Carps - Rohu, Catla, Mrigal) pale jayengi.
       </p>
@@ -263,7 +253,7 @@ export default function PMatsyaSampada() {
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         PM Matsya Sampada Yojana (PMMSY) Subsidy: Complete Details
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         PMMSY 2020 mein launch hui thi, jiska budget ₹20,000+ crore hai. Yeh scheme fisheries sector ko transform karne ke liye design ki gayi hai.
       </p>
@@ -303,7 +293,7 @@ export default function PMatsyaSampada() {
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         PMMSY Documents Required
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Subsidy application ke liye yeh documents taiyar rakhein:
       </p>
@@ -341,14 +331,13 @@ export default function PMatsyaSampada() {
         </ul>
       </div>
 
-      {}
-      <Image 
-        src="/images/kisanguides/fish-farming-documents.webp" 
-        alt="Fish Farming Application Documents - Aadhaar, PAN, Land Records" 
-        width={800} 
-        height={450} 
+      <Image
+        src="/images/kisanguides/fish-farming-documents.webp"
+        alt="Fish Farming Application Documents - Aadhaar, PAN, Land Records"
+        width={800}
+        height={450}
         sizes="(max-width: 768px) 100vw, 800px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose"
       />
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
@@ -359,25 +348,24 @@ export default function PMatsyaSampada() {
         Agar aap PMMSY ke under apply karna chahte hain, toh neeche diya gaya button aapko official portal par le jayega:
       </p>
 
-      <ExternalLinkButton 
-        url="https://pmmsy.dahd.nic.in/" 
-        label="PMMSY Official Portal - Apply Karein" 
+      <ExternalLinkButton
+        url="https://pmmsy.dahd.nic.in/"
+        label="PMMSY Official Portal - Apply Karein"
       />
 
-      {}
-      <Image 
-        src="/images/kisanguides/fish-farming-application.webp" 
-        alt="Entrepreneur Applying for Fish Farming Loan and Subsidy" 
-        width={800} 
-        height={450} 
+      <Image
+        src="/images/kisanguides/fish-farming-application.webp"
+        alt="Entrepreneur Applying for Fish Farming Loan and Subsidy"
+        width={800}
+        height={450}
         sizes="(max-width: 768px) 100vw, 800px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose"
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Step-by-Step Process: Traditional Pond Mein Machli Kaise Paalein?
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Traditional pond farming mein 5 main steps hote hain. Har step critical hai - ek galti poori crop kharab kar sakti hai.
       </p>
@@ -431,7 +419,7 @@ export default function PMatsyaSampada() {
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         3 Saal Ka Profit Calculation: Real Numbers
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Yeh calculation 1 acre traditional pond ke liye hai, jisme IMC (Rohu, Catla, Mrigal) pale jati hain.
       </p>
@@ -509,20 +497,19 @@ export default function PMatsyaSampada() {
         Agar aap high-value fish paalte hain (jaise Pangasius, Tilapia, ya Ornamental fish), toh margins 2-3x zyada ho sakte hain. Par inki market access aur technical knowledge bhi zyada chahiye.
       </p>
 
-      {}
-      <Image 
-        src="/images/kisanguides/fish-products-market.webp" 
-        alt="Fresh and Processed Fish Products Ready for Market Sale" 
-        width={800} 
-        height={450} 
+      <Image
+        src="/images/kisanguides/fish-products-market.webp"
+        alt="Fresh and Processed Fish Products Ready for Market Sale"
+        width={800}
+        height={450}
         sizes="(max-width: 768px) 100vw, 800px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose"
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Real Risks - Jo Koi Nahi Batata
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Machli palan shuru mein aasaan lagta hai, par isme risks kaafi hain. In baaton ka dhyan rakhna zaroori hai:
       </p>
@@ -562,7 +549,7 @@ export default function PMatsyaSampada() {
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Training Kahan Se Lein? Yeh Skip Mat Karna
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Machli palan mein technical knowledge bahut zaroori hai. Bina proper training ke water quality management, disease diagnosis, aur feeding techniques seekhna mushkil hota hai, jisse pehle hi cycle mein nuksan ho sakta hai.
       </p>
@@ -581,9 +568,9 @@ export default function PMatsyaSampada() {
         </li>
       </ul>
 
-      <ExternalLinkButton 
-        url="https://www.cifa.in/" 
-        label="CIFA Bhubaneswar - Training Programs Check Karein" 
+      <ExternalLinkButton
+        url="https://www.cifa.in/"
+        label="CIFA Bhubaneswar - Training Programs Check Karein"
       />
 
       <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-8">
@@ -608,7 +595,7 @@ export default function PMatsyaSampada() {
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Waste Management: Fish Pond Water Se Kheti Karein
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Fish farming ka ek bada fayda yeh hai ki pond water bahut nutrient-rich hota hai. Isko aap khet mein use kar sakte hain - free fertilizer milta hai.
       </p>
@@ -642,7 +629,7 @@ export default function PMatsyaSampada() {
             KCC Guide Padhein <span>→</span>
           </Link>
         </div>
-        
+
         <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border border-green-200 dark:border-green-800 hover:shadow-md transition-shadow">
           <h4 className="font-semibold text-green-900 dark:text-green-200 mb-2 flex items-center gap-2">
             🏭 PM FME Yojana
@@ -677,7 +664,7 @@ export default function PMatsyaSampada() {
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Kya Aapke Liye Sahi Hai? Final Decision Framework
       </h2>
-      
+
       <div className="grid md:grid-cols-2 gap-6 mb-8 not-prose">
         <div className="bg-green-50 dark:bg-green-900/20 p-5 rounded-lg border border-green-200 dark:border-green-800">
           <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">✅ Haan, agar:</h3>
@@ -720,7 +707,6 @@ export default function PMatsyaSampada() {
         Agar aap isme serious hain, toh pehle apne ilaake ke kisi experienced machli palak se milein aur unke challenges samjhein. Uske baad training lein aur chhote scale par shuruat karein. Sahi planning aur mehnat se yeh ek sustainable income source ban sakta hai.
       </p>
 
-      {}
       <h2 id="faq" className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Frequently Asked Questions (FAQs)
       </h2>

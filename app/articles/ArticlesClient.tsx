@@ -340,7 +340,6 @@ function ArticlesContent({ articles }: { articles: readonly CombinedArticleMeta[
               </Link>
             );
           })}
-          {}
           {(categoryCounts['rajya-yojana'] || 0) > 0 && (
             <Link
               href="/articles?category=rajya-yojana"
@@ -357,14 +356,6 @@ function ArticlesContent({ articles }: { articles: readonly CombinedArticleMeta[
           )}
         </div>
 
-        {/*
-          The pills above are client-side filters (`/articles?category=X`) — great
-          UX, but they are not the canonical, indexable category pages, so those
-          pages received zero internal links and GSC parked all six under
-          "Discovered - currently not indexed". This row links the canonical
-          `/articles/category/X` URLs so they are crawlable from the hub.
-          Keep both: the pills stay instant, these give crawlers a real path.
-        */}
         <nav
           className="mt-5 pt-4 border-t border-[var(--color-border)] text-center"
           aria-label="Category pages"

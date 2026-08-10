@@ -82,7 +82,6 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      {}
       <div className="bg-[var(--color-primary)] py-10">
         <div className="container-site max-w-3xl">
           <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center" aria-label="Breadcrumb">
@@ -99,7 +98,6 @@ export default function AboutPage() {
 
       <div className="container-site max-w-3xl py-10">
 
-        {}
         <section className="mb-8 bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             🌾 {SITE_NAME} Kya Hai?
@@ -111,13 +109,13 @@ export default function AboutPage() {
               Government of India ya kisi sarkari scheme se officially affiliated nahi hai.
             </p>
             <p>
-              Humara maksad bilkul seedha hai: Har kisan ko ghar baithe PM Kisan beneficiary verification, 
-              installment dates, eKYC process aur payment issues ka asaan aur tested solution mile — 
+              Humara maksad bilkul seedha hai: Har kisan ko ghar baithe PM Kisan beneficiary verification,
+              installment dates, eKYC process aur payment issues ka asaan aur tested solution mile —
               bina kisi agent ya middleman ke chakkar mein pade.
             </p>
             <p>
-              Hum jante hain ki kai baar sarkari portals complex ya English mein hote hain, jisse sahi 
-              jankari tak pahunchne mein dikkat hoti hai. Hum isi kami ko pura karte hain — bilkul saral 
+              Hum jante hain ki kai baar sarkari portals complex ya English mein hote hain, jisse sahi
+              jankari tak pahunchne mein dikkat hoti hai. Hum isi kami ko pura karte hain — bilkul saral
               Hinglish mein, step-by-step aur verified solutions ke saath. Aap hamare{' '}
               <Link href="/articles" className="text-[var(--color-primary)] font-bold underline hover:text-green-700 dark:hover:text-green-400">
                 verified guides section
@@ -141,7 +139,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {}
         <section className="mb-8 bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             📋 Hum Kya Cover Karte Hain
@@ -159,7 +156,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
           {STATS.map((stat) => (
             <div key={stat.label} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl text-center py-5 px-3">
@@ -170,7 +166,6 @@ export default function AboutPage() {
           ))}
         </div>
 
-        {}
         <section className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-2xl p-6 mb-8">
           <h2 className="text-lg font-black text-[var(--color-text)] mb-4">🔗 Useful Links</h2>
           <div className="flex flex-wrap gap-3">
@@ -195,7 +190,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {}
         <div className="p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl text-xs text-[var(--color-text-muted)] leading-relaxed">
           <p className="font-bold text-[var(--color-text)] mb-2">⚠️ Disclaimer</p>
           <p className="mb-2">

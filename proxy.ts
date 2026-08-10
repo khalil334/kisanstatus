@@ -12,18 +12,18 @@ const SPAM_PARAMS = [
 export function proxy(request: NextRequest) {
   const url = request.nextUrl.clone()
   let changed = false
-  
+
   SPAM_PARAMS.forEach(param => {
     if (url.searchParams.has(param)) {
       url.searchParams.delete(param)
       changed = true
     }
   })
-  
+
   if (changed) {
     return NextResponse.redirect(url, 302)
   }
-  
+
   return NextResponse.next()
 }
 

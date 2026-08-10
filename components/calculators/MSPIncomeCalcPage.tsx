@@ -51,11 +51,9 @@ export default function MSPIncomeCalcPage() {
   const income = qtl * cropData.msp;
   const perHectare = unit==='hectare' ? income/qtyN : income/landN;
 
-
-
   return (
     <>
-      
+
       <CalcHeader
         emoji="💹"
         title="MSP Income Calculator 2026"
@@ -65,14 +63,12 @@ export default function MSPIncomeCalcPage() {
 
       <div className="container-site max-w-2xl py-8">
 
-        {}
         <div className="flex flex-wrap gap-3 text-xs text-gray-500 mb-4">
           <span>✍️ <Link href="/about" className="underline hover:text-gray-700">{AUTHOR_NAME}</Link></span>
           <span>📅 {fmtDate(PUBLISHED)}</span>
           <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
         </div>
 
-        {}
         <div className="mb-6 p-5 bg-orange-50 border border-orange-200 rounded-xl text-sm text-gray-700 leading-relaxed">
           <p className="font-bold text-orange-900 mb-2">💹 MSP Kya Hai — Fasal Ka Sahi Daam Jaano</p>
           <p className="mb-2">
@@ -127,7 +123,7 @@ export default function MSPIncomeCalcPage() {
               <ResultRow label="Total Fasal (quintal)" value={`${qtl.toFixed(2)} qtl`} />
               <ResultRow label="Per Hectare Income" value={fmt(perHectare)} />
               <ResultRow label="Total MSP Income" value={fmt(income)} bold highlight />
-              
+
               <div className="mt-3 p-3 bg-white rounded-xl text-xs text-gray-700">
                 <p className="font-bold mb-1">📖 Iska Matlab:</p>
                 <p>Aapke paas {qtl.toFixed(2)} quintal {cropData.name} hai. MSP rate ₹{cropData.msp}/quintal hai. Total income {fmt(income)} hogi. Agar {landN} hectare zameen hai to per hectare {fmt(perHectare)} milega.</p>
@@ -139,7 +135,6 @@ export default function MSPIncomeCalcPage() {
             </div>
           )}
 
-          {}
           <div className="mt-5">
             <p className="font-bold text-gray-900 text-xs mb-3">📋 Sabhi Fasal Ka MSP Rate 2025-26</p>
             <div className="overflow-x-auto rounded-xl border border-gray-200">
@@ -165,7 +160,6 @@ export default function MSPIncomeCalcPage() {
           </div>
         </div>
 
-        {}
         <div className="mt-6 bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
           <h3 className="font-black text-gray-900 text-sm mb-4">🏪 MSP Par Fasal Kaise Bechein</h3>
           <div className="space-y-3">
@@ -196,7 +190,6 @@ export default function MSPIncomeCalcPage() {
           </div>
         </div>
 
-        {}
         <div className="mt-6">
           <h3 className="font-black text-gray-900 text-sm mb-3">💡 MSP Se Maximum Fayda Kaise Uthao</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
@@ -219,7 +212,6 @@ export default function MSPIncomeCalcPage() {
           </div>
         </div>
 
-        {}
         <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-xl">
           <p className="font-bold text-yellow-900 text-sm mb-2">⚠️ MSP Mein Aksar Yeh Galtiyan Hoti Hain:</p>
           <ul className="space-y-1.5 text-xs text-yellow-800">
@@ -232,10 +224,9 @@ export default function MSPIncomeCalcPage() {
         </div>
 
         <CalcDisclaimer note="MSP rates 2025-26 ke hain — CCEA ne approve kiye hain. Official confirmation ke liye dfpd.gov.in ya agricoop.nic.in check karo. Actual procurement center par rates aur process confirm karo." />
-        
+
         <OtherCalcs current="/calculator/msp-income" />
 
-        {}
         <div className="mt-6 p-5 bg-orange-50 border border-orange-200 rounded-xl">
           <p className="font-bold text-orange-900 text-sm mb-3">📖 MSP Se Related Guides</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -260,7 +251,6 @@ export default function MSPIncomeCalcPage() {
           </div>
         </div>
 
-        {}
         <div className="mt-6 p-5 bg-gray-50 border border-gray-200 rounded-xl">
           <p className="font-bold text-gray-900 text-sm mb-3">❓ MSP Ke Baare Mein Aksar Sawaal</p>
           <div className="space-y-3 text-xs">

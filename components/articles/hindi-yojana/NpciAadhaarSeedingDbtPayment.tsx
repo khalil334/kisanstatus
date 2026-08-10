@@ -2,9 +2,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
-// यह article जानबूझकर self-contained है — कोई shared component import नहीं।
-// Structure variant: short bold-heading sections + definition-list FAQ (कोई accordion नहीं)।
-
 const FAQS = [
   {
     q: 'आधार बैंक से link है, फिर भी पैसा क्यों नहीं आया?',

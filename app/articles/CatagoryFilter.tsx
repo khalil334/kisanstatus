@@ -17,12 +17,12 @@ export default function CategoryFilter({ activeCategory }: { activeCategory: Cat
       >
         Sabhi Guides
       </Link>
-      
+
       {Object.entries(CATEGORIES).map(([slug, cat]) => {
         const catInfo = cat as { name: string; nameHi?: string; icon?: string };
         const displayName = catInfo.nameHi || catInfo.name;
         const icon = catInfo.icon || '📄';
-        
+
         return (
           <Link
             key={slug}

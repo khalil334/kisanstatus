@@ -2,29 +2,29 @@
 
 import Link from 'next/link';
 
-export function InputField({ 
-  label, 
-  value, 
-  onChange, 
-  type = 'number', 
-  min, 
-  placeholder, 
-  hint, 
+export function InputField({
+  label,
+  value,
+  onChange,
+  type = 'number',
+  min,
+  placeholder,
+  hint,
   id,
   suffix
 }: {
-  label: string; 
-  value: string | number; 
+  label: string;
+  value: string | number;
   onChange: (v: string) => void;
-  type?: string; 
-  min?: number; 
-  placeholder?: string; 
-  hint?: string; 
+  type?: string;
+  min?: number;
+  placeholder?: string;
+  hint?: string;
   id?: string;
   suffix?: string;
 }) {
   const inputId = id || label.toLowerCase().replace(/\s+/g, '-');
-  
+
   return (
     <div className="mb-4">
       <label htmlFor={inputId} className="block text-sm font-bold text-gray-700 mb-1">{label}</label>
@@ -54,7 +54,7 @@ export function SelectField({ label, value, onChange, options, hint, id }: {
   options: { value: string; label: string }[]; hint?: string; id?: string;
 }) {
   const selectId = id || label.toLowerCase().replace(/\s+/g, '-');
-  
+
   return (
     <div className="mb-4">
       <label htmlFor={selectId} className="block text-sm font-bold text-gray-700 mb-1">{label}</label>
@@ -71,9 +71,9 @@ export function SelectField({ label, value, onChange, options, hint, id }: {
   );
 }
 
-export function ResultRow({ label, value, bold, highlight }: { 
-  label: string; 
-  value: string; 
+export function ResultRow({ label, value, bold, highlight }: {
+  label: string;
+  value: string;
   bold?: boolean;
   highlight?: boolean;
 }) {

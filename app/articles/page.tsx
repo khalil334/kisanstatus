@@ -3,16 +3,16 @@ import { ARTICLES } from '@/lib/articles-data';
 import { MAANDHAN_ARTICLES } from '@/lib/maandhan-data';
 import { LIVE_RAJYA_YOJANA_ARTICLES } from '@/lib/rajya-yojana-data';
 import { HINDI_ARTICLES } from '@/lib/hindi-articles-data';
-import { 
-  SITE_URL, 
-  SITE_NAME, 
-  AUTHOR_NAME, 
-  AUTHOR_URL, 
+import {
+  SITE_URL,
+  SITE_NAME,
+  AUTHOR_NAME,
+  AUTHOR_URL,
   DEFAULT_OG_IMAGE,
   SITE_DESCRIPTION,
   LOGO_URL,
   LOGO_WIDTH,
-  LOGO_HEIGHT 
+  LOGO_HEIGHT
 } from '@/lib/site-config';
 import ArticlesClient from './ArticlesClient';
 
@@ -30,10 +30,6 @@ const RAJYA_LISTING_ARTICLES = LIVE_RAJYA_YOJANA_ARTICLES.map((a) => ({
   keywords: [a.mainKeyword, ...a.secondaryKeywords] as readonly string[],
 }));
 
-/**
- * Normalised shape across the three article sources (core, maandhan, rajya
- * listing) — they use slightly different field names for date/description.
- */
 type ListingArticle = {
   slug: string;
   title: string;
@@ -70,7 +66,7 @@ export const metadata: Metadata = {
   title: `Kisan Guides 2026 — ${ALL_ARTICLES.length}+ Resources`,
   description: `${ALL_ARTICLES.length}+ verified guides on PM Kisan, farming subsidies, loans & crop insurance. Simple Hinglish explanations for Indian farmers.`,
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
-  alternates: { 
+  alternates: {
     canonical: `${SITE_URL}/articles`,
     languages: {
       'hi-IN': `${SITE_URL}/articles`,

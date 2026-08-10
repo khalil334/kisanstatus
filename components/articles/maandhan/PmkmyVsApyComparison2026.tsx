@@ -119,7 +119,7 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
         </div>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-          Budhape ki financial tension har khet mein kaam karne wale ke dimaag mein ghar kar jati hai. Jab baat sarkari pension schemes ki aati hai, toh do naam sabse zyada sunne ko milte hain: PM Kisan Maandhan Yojana (PMKMY) aur Atal Pension Yojana (APY). 
+          Budhape ki financial tension har khet mein kaam karne wale ke dimaag mein ghar kar jati hai. Jab baat sarkari pension schemes ki aati hai, toh do naam sabse zyada sunne ko milte hain: PM Kisan Maandhan Yojana (PMKMY) aur Atal Pension Yojana (APY).
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
@@ -132,7 +132,7 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
             Yeh scheme Ministry of Agriculture dwara specifically chhote aur seemant kisanon ke liye design ki gayi hai. Iski sabse badi khasiyat yeh hai ki government aapke har mahine ke contribution par ek-rupee match karti hai (1:1 co-contribution). Yeh match aapke poore contribution period tak, 60 saal ki umar tak, chalta hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            <strong>Basic Rules:</strong> Umr 18 se 40 saal ke beech honi chahiye, aur cultivable land 2 hectare (lagbhag 5 acre) ya usse kam honi chahiye. 60 saal ki umar ke baad aapko fixed ₹3000 har mahine milenge. 
+            <strong>Basic Rules:</strong> Umr 18 se 40 saal ke beech honi chahiye, aur cultivable land 2 hectare (lagbhag 5 acre) ya usse kam honi chahiye. 60 saal ki umar ke baad aapko fixed ₹3000 har mahine milenge.
             <em> (Source: PIB Press Release, 9 Sept 2024 & Agriculture Ministry Operational Guidelines, Aug 2019)</em>
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
@@ -196,14 +196,14 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Aaiye ek concrete example se samajhte hain. Maan lijiye do kisan hain, Ramesh aur Suresh. Dono ki umar 25 saal hai aur dono ko 60 ke baad ₹3000 mahina chahiye.
           </p>
-          
+
           <div className="grid md:grid-cols-2 gap-4 mb-4">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
               <h4 className="font-black text-green-800 dark:text-green-300 mb-2">👨🏾‍🌾 Ramesh (PMKMY choose kiya)</h4>
               <p className="text-xs text-[var(--color-text-muted)] mb-2">Ramesh ke paas 1.5 acre zameen hai. 25 saal ki umar mein uska monthly contribution <strong>₹80</strong> hai. Government bhi ₹80 degi. Total fund mein har mahine ₹160 jayenge. 35 saal tak yeh silsila chala.</p>
               <p className="text-xs font-bold text-green-800 dark:text-green-300">Result: Kam monthly bojh uthakar, government ke bharose ₹3000/month pension pakki.</p>
             </div>
-            
+
             <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
               <h4 className="font-black text-blue-800 dark:text-blue-300 mb-2">👨🏽‍🌾 Suresh (APY choose kiya)</h4>
               <p className="text-xs text-[var(--color-text-muted)] mb-2">Suresh ne APY mein ₹3000 pension ka slab chuna. 25 saal ki umar mein uska monthly contribution lagbhag <strong>₹210</strong> hai. Government ka koi match nahi milega. 35 saal tak yeh amount uski jeb se jayega.</p>
@@ -266,7 +266,7 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
             <strong>PMKMY mein:</strong> Agar aap beech mein chhodte hain, toh aapko sirf aapka apna jama kiya hua contribution aur uspar bana simple interest wapas milta hai. Government ka diya hua hissa pension fund mein hi chala jata hai. Yeh rule thoda harsh lag sakta hai, lekin scheme ka maqsad hi retirement tak paisa jama rakhna hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            <strong>APY mein:</strong> Yahan bhi premature exit par aapko corpus mil sakta hai, lekin iske liye bhi strict conditions hain aur process thoda lamba ho sakta hai. 
+            <strong>APY mein:</strong> Yahan bhi premature exit par aapko corpus mil sakta hai, lekin iske liye bhi strict conditions hain aur process thoda lamba ho sakta hai.
           </p>
           <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
             <em>Ek limitation acknowledge karun:</em> Exact exit calculation har individual case par depend karti hai (kitne saal contribution diya, interest rate kya tha). Isliye beech mein nikalne ka sochne se pehle apne nazdeeki CSC ya bank branch se ek baar written mein confirm zaroor kar lein.
@@ -312,7 +312,7 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Aakhri Baat</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Dost, pension scheme koi lottery nahi hai, yeh aapke aaj ke chhote tyag ka kal ka bada sahara hai. Dono schemes mein ₹3000 pension ka farak sirf numbers ka nahi, balki "government support" ka hai. 
+            Dost, pension scheme koi lottery nahi hai, yeh aapke aaj ke chhote tyag ka kal ka bada sahara hai. Dono schemes mein ₹3000 pension ka farak sirf numbers ka nahi, balki "government support" ka hai.
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
             Agar aap eligible hain, toh PMKMY se behtar koi deal market mein nahi hai. Jaldi karein, kyunki umar badhne ke saath monthly contribution bhi badhta jayega. Koi doubt ho toh niche comment karein ya apne nazdeeki CSC se baat karein. Aapka budhapa surakshit, toh aapka parivaar surakshit.

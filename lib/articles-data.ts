@@ -58,11 +58,6 @@ export interface ArticleMeta {
   title: string;
   desc: string;
   ogTitle: string;
-  /**
-   * Optional SERP-facing <title>. Set this when `ogTitle` is too long for
-   * search results (target: <= ~60 chars INCLUDING the " | KisanStatus"
-   * suffix, i.e. <= 46 chars here). When unset, `ogTitle` is used.
-   */
   seoTitle?: string;
   readonly keywords: readonly string[];
   component: string;
@@ -208,9 +203,6 @@ const CORE_ARTICLES: readonly ArticleMeta[] = [
     title: 'Kisan Credit Card 2026: ₹5 Lakh Loan',
     desc: 'KCC hai to ₹5 lakh tak ka loan sirf 4% interest par mil sakta hai. Online apply process, eligibility aur zaroori documents ki puri jankari yahan.',
     ogTitle: 'KCC Online Apply — ₹5 Lakh Loan 2026',
-    // SERP title must share its leading keyword with the on-page <h1>
-    // ("Kisan Credit Card 2026: 4% Byaj, Online Apply & Limits"), otherwise
-    // Google discards <title> and rewrites the SERP heading itself.
     seoTitle: 'Kisan Credit Card 2026: 4% Byaj Online Apply',
     keywords: [
       'kisan credit card online apply 2026',
@@ -295,10 +287,6 @@ const CORE_ARTICLES: readonly ArticleMeta[] = [
     title: 'PM Kisan 24vi Kist 2026: Date & Status',
     desc: '23vi kist aa gayi, ab 24vi ka intezaar. October 2026 tak aane ki umeed hai — release date, beneficiary status check aur latest update yahan dekhein.',
     ogTitle: 'PM Kisan 24vi Kist — Kab Aayegi?',
-    // SERP title must share its leading phrase with the on-page <h1>
-    // ("PM Kisan 24vi Kist Kab Aayegi? October 2026 Release Date..."), otherwise
-    // Google discards <title> and rewrites the SERP heading itself (Bug #5).
-    // Keep "October 2026" in sync with KIST.expectedDate in the component.
     seoTitle: 'PM Kisan 24vi Kist Kab Aayegi? October 2026 Date',
     keywords: [
       'pm kisan 24vi kist 2026',

@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '@/lib/site-config';
 
 export const metadata: Metadata = {
-  // layout.tsx applies the `%s | KisanStatus` template — no inline brand here.
   title: `Legal Notice & Disclaimer – Unofficial Portal`,
   description: `${SITE_NAME} ek independent informational portal hai, sarkar se affiliated nahi. Official jankari ke liye hamesha pmkisan.gov.in par hi vishwas karein.`,
   authors: [{ name: 'KisanStatus Team', url: `${SITE_URL}/about` }],
