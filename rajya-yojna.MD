@@ -89,3 +89,23 @@ In 10 rajya-yojana articles ko 100% human-like banao. Koi bhi word, sentence, pa
 - Koi fact, date, number, URL, helpline change mat karna
 - Sirf words replace karo, sections reorder karo, aur human touches add karo
 - Content ka volume kam nahi hona chahiye
+
+---
+
+**PROGRESS (auto-updated):**
+
+Done (3/10):
+- [x] AnnadataSukhibhavaStatusCheck.tsx — story format badla (Guntur message style), "Dekho,"→"Sun,", bold ~50% kam, sections reorder (Eligibility→Amount→History, Steps/Problems swap), afterthought + casual touches add kiye
+- [x] KrishakBandhuStatusCheck.tsx — story comment-section style ki, Problems section upar, phir Status steps, phir Amount table; cross-links FAQ ke baad; bold sirf warnings/numbers; "Achha haan, ek aur baat" type asides
+- [x] RajasthanKisanSammanNidhi9000.tsx — story "Sikar se call aayi thi" style, Jan Aadhaar section sabse upar, phir Eligibility/Amount, History beech mein; bold bilkul kam; cross-link intro "Dusre states mein kya scene hai"; "Ek minute," filler
+
+Pending (7/10):
+- [ ] RythuBharosaStatusCheck.tsx — Phase System pehle, phir Steps, Problems upar; story "Warangal ke ek bhai ne phone karke kaha tha"; bold waise hi
+- [ ] NamoShetkariYojanaStatus.tsx — 7/12 Utara pehle, phir Eligibility, phir Amount; story "Ek padosi ne bataya tha"; bold sirf headings
+- [ ] MpKisanKalyanYojanaKist.tsx — story "Sehore ke ek kisan ne WhatsApp pe screenshot bheja tha"
+- [ ] OdishaCmKisanStatusCheck.tsx — story "Ek reader ne mail kiya tha"; cross-link intro change
+- [ ] PmKisanPatiPatniRule.tsx — story "Ek pathak ne likha tha"
+- [ ] StateKisanYojanaHub.tsx — story "Ek baar do bhaiyon ne alag-alag message kiye the"
+- [ ] KrishakUnnatiYojanaStatusCheck.tsx — story "Mandi mein ek kisan ne pucha tha"
+
+Rules follow ho rahe hain: koi word/sentence/table/fact/URL/helpline delete nahi, sirf replace + reorder + human touches.
