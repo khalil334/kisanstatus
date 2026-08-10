@@ -3,13 +3,6 @@ import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
 
-// ⚠️ DEAD CODE — Next.js is metadata export ko ignore karta hai.
-// `export const metadata` sirf app/**/page.tsx ya layout.tsx mein kaam karta hai;
-// ye ek client-imported article component hai, isliye ye block render HI nahi hota.
-// Live <title>/description/canonical/OG `app/articles/[slug]/page.tsx` ke
-// generateMetadata() se aate hain, jo lib/articles-data.ts padhta hai.
-// >>> Title/description/canonical badalna hai to lib/articles-data.ts edit karo. <<<
-// Yahan edit karne se live page pe KUCHH nahi badlega. (Ref: fixplan.md BUG-3)
 export const metadata: Metadata = {
   title: 'Vermi Compost Business 2026: PKVY Subsidy & Profit Guide',
   description: 'Vermi compost business complete guide. Janein organic fertilizer kaise banayein, PKVY subsidy, machinery cost aur real profit calculation ke baare mein sab kuch.',
@@ -96,33 +89,31 @@ const jsonLd = {
 export default function VerminCompost() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-8 text-gray-800 dark:text-gray-200 leading-relaxed prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-blue-600 dark:prose-a:text-blue-400">
-      {}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {}
-      <Image 
-        src="/images/kisanguides/vermi-compost-hero.webp" 
-        alt="Vermi Compost Pit with Earthworms - Organic Fertilizer Business Guide" 
-        width={1200} 
-        height={630} 
+      <Image
+        src="/images/kisanguides/vermi-compost-hero.webp"
+        alt="Vermi Compost Pit with Earthworms - Organic Fertilizer Business Guide"
+        width={1200}
+        height={630}
         priority
         sizes="(max-width: 768px) 100vw, 1200px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose"
       />
-      
+
       <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100 leading-tight">
         Vermi Compost Business 2026: Gobar Se Organic Khaad Banakar Extra Income Kamayein
       </h1>
-      
+
       <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
         <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
           <strong>Sach kahoon toh:</strong> Chemical fertilizers ke daam lagatar badhne se kisaanon ki lagat badh rahi hai. Aise mein, apne hi khet ke gobar aur kachre ko khaad mein badalna ek practical aur sasta solution ban gaya hai.
         </p>
       </div>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
         Pehle saal shayad ye sirf apne khet ke liye banaya jaye, lekin jab quality set ho jati hai, toh ise bechkar ek alag income stream banayi ja sakti hai. Cost ₹5 - ₹8 per kg aati hai, aur achhi quality ka rate ₹15 - ₹20 per kg mil jata hai. Kachre ko khaad mein badalna aur usse paisa kamana ek proven model hai, kyunki organic farming ko sarkar actively promote kar rahi hai.
       </p>
@@ -130,11 +121,11 @@ export default function VerminCompost() {
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Organic Fertilizer Hai Kya? Aur Kisaan Ise Kyun Khareedte Hain?
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Yeh organic fertilizer earthworms (kenchue) ki madad se banta hai. Science simple hai - earthworms organic waste (gobar, sookhe patte, kitchen waste) khaate hain, aur unka waste (castings) bahut nutrient-rich khaad banta hai.
       </p>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Is khaad mein NPK (Nitrogen, Phosphorus, Potassium) ke alawa micronutrients bhi hote hain jo chemical fertilizers mein nahi hote. Soil structure improve hota hai, water retention badhta hai, aur microbial activity increase hoti hai.
       </p>
@@ -151,20 +142,19 @@ export default function VerminCompost() {
         <li><strong>Long-term benefit:</strong> Ek baar use karne se soil structure permanently improve hota hai.</li>
       </ul>
 
-      {}
-      <Image 
-        src="/images/kisanguides/vermi-compost-pits.webp" 
-        alt="Well-organized Vermi Compost Pits in a Shaded Area" 
-        width={800} 
-        height={450} 
+      <Image
+        src="/images/kisanguides/vermi-compost-pits.webp"
+        alt="Well-organized Vermi Compost Pits in a Shaded Area"
+        width={800}
+        height={450}
         sizes="(max-width: 768px) 100vw, 800px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose"
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Kaam Karne Ka Tarika: Business Model
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Is kaam ka basic flow samajhna zaroori hai:
       </p>
@@ -196,7 +186,7 @@ export default function VerminCompost() {
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Kitna Paisa Lagega? Realistic Budget Breakdown
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Ek medium-scale unit ka budget banate hain - jo mahine mein 2-3 ton organic fertilizer produce kar sake.
       </p>
@@ -251,20 +241,19 @@ export default function VerminCompost() {
         Is investment ko manage karne ke liye Kisan Credit Card (KCC) ek badhiya vikalp hai, jisme working capital ke liye limit badhwa sakte hain. Setup cost ke liye official Mudra Loan bhi le sakte hain - Shishu category mein ₹50,000 tak, Kishor mein ₹5 lakh tak bina collateral ke mil jata hai.
       </p>
 
-      {}
-      <Image 
-        src="/images/kisanguides/vermi-compost-packaging.webp" 
-        alt="Branded Vermi Compost Bags Ready for Market Sale" 
-        width={800} 
-        height={450} 
+      <Image
+        src="/images/kisanguides/vermi-compost-packaging.webp"
+        alt="Branded Vermi Compost Bags Ready for Market Sale"
+        width={800}
+        height={450}
         sizes="(max-width: 768px) 100vw, 800px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose"
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Sarkari Subsidy: Organic Farming Schemes
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Sarkari schemes ki baat karein, toh is field mein kai financial benefits ka fayda uthaya ja sakta hai. Har yojana ki apni eligibility criteria hoti hai.
       </p>
@@ -296,15 +285,15 @@ export default function VerminCompost() {
         </p>
       </div>
 
-      <ExternalLinkButton 
-        url="https://pgsindia-ncof.gov.in/" 
-        label="PGS India Portal - Organic Farming Schemes Check Karein" 
+      <ExternalLinkButton
+        url="https://pgsindia-ncof.gov.in/"
+        label="PGS India Portal - Organic Farming Schemes Check Karein"
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Step-by-Step Process: Vermi Compost Kaise Banayein?
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Organic khaad banana ek scientific process hai. Har step important hai - ek chhoti si galti poori batch kharab kar sakti hai.
       </p>
@@ -362,7 +351,7 @@ export default function VerminCompost() {
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Unit Economics: Ek Kg Mein Kitna Profit Hai?
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Ek kg organic fertilizer ka cost breakdown dekhte hain. Yeh numbers Model 2 (gobar khareed kar) ke liye hain.
       </p>
@@ -420,20 +409,19 @@ export default function VerminCompost() {
         Average profit ₹10 - ₹12 per kg maan kar chaliye. Agar aap mahine mein 2 ton (2,000 kg) bechte hain, toh monthly profit ₹20,000 - ₹24,000, aur saal ka ₹2.4 - ₹2.9 lakh ban sakta hai.
       </p>
 
-      {}
-      <Image 
-        src="/images/kisanguides/vermi-compost-market.webp" 
-        alt="Vermi Compost Being Delivered to Local Farmers and Nurseries" 
-        width={800} 
-        height={450} 
+      <Image
+        src="/images/kisanguides/vermi-compost-market.webp"
+        alt="Vermi Compost Being Delivered to Local Farmers and Nurseries"
+        width={800}
+        height={450}
         sizes="(max-width: 768px) 100vw, 800px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose"
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Real Risks - Jo Koi Nahi Batata
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Yeh process sunne mein simple lagta hai, par field mein kuch challenges aate hain:
       </p>
@@ -463,7 +451,7 @@ export default function VerminCompost() {
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Customers Kaise Dhundhein? Marketing Strategy
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Is field mein sabse bada challenge customers dhundhna hai. Kuch proven strategies:
       </p>
@@ -475,20 +463,19 @@ export default function VerminCompost() {
         <li><strong>FPOs aur Cooperatives:</strong> Farmer Producer Organizations se tie-up karo. Wo apne member farmers ko organic inputs recommend karte hain.</li>
       </ul>
 
-      {}
-      <Image 
-        src="/images/kisanguides/vermi-compost-docs.webp" 
-        alt="Vermi Compost Business Legal Documents and Lab Testing Reports" 
-        width={800} 
-        height={450} 
+      <Image
+        src="/images/kisanguides/vermi-compost-docs.webp"
+        alt="Vermi Compost Business Legal Documents and Lab Testing Reports"
+        width={800}
+        height={450}
         sizes="(max-width: 768px) 100vw, 800px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose"
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Legal Requirements: Kya Kya Chahiye?
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Yeh venture legally shuru karne ke liye kuch basic licenses chahiye:
       </p>
@@ -513,7 +500,7 @@ export default function VerminCompost() {
             KCC Guide Padhein <span>→</span>
           </Link>
         </div>
-        
+
         <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border border-green-200 dark:border-green-800 hover:shadow-md transition-shadow">
           <h4 className="font-semibold text-green-900 dark:text-green-200 mb-2 flex items-center gap-2">
             🏭 PM FME Yojana
@@ -538,7 +525,7 @@ export default function VerminCompost() {
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Kya Aapke Liye Sahi Hai? Final Decision Framework
       </h2>
-      
+
       <div className="grid md:grid-cols-2 gap-6 mb-8 not-prose">
         <div className="bg-green-50 dark:bg-green-900/20 p-5 rounded-lg border border-green-200 dark:border-green-800">
           <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">✅ Haan, agar:</h3>
@@ -574,7 +561,6 @@ export default function VerminCompost() {
         Agar aap seriously interested hain, toh pehle apne area ke 5-10 organic farmers se baat karein. Unse pata karein ki wo vermi compost use karte hain ya nahi, kahan se khareedte hain, rate kya hai. Market research karo, phir decision lo.
       </p>
 
-      {}
       <h2 id="faq" className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Frequently Asked Questions (FAQs)
       </h2>

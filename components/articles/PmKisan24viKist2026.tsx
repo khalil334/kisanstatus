@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { 
-  SI, StepList, IB, WB, SH, GovLink, RelatedArticles, 
-  AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate 
+import {
+  SI, StepList, IB, WB, SH, GovLink, RelatedArticles,
+  AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate
 } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
@@ -69,9 +69,6 @@ const FAQS_DATA = [
 export default function PmKisan24viKist2026({ article }: { article: ArticleMeta }) {
   const isReleased = KIST.status === 'Released';
   const isConfirmed = KIST.status === 'Confirmed';
-
-
-
 
   return (
     <>

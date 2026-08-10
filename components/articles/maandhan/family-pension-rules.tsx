@@ -127,7 +127,6 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
 
       <div className="container-site max-w-3xl py-8">
 
-        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/maandhan/family-pension-rules/hero.webp"
@@ -163,7 +162,6 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
             Lekin agar contributor 60 saal ki umar tak pahunchne se pehle hi is duniya ko alvida keh dete hain, to rules do alag scenarios mein divide ho jate hain. In dono ke beech ka antar samajhna bahut zaroori hai.
           </p>
 
-          {}
           <div className="my-6 rounded-xl overflow-hidden border border-[var(--color-border)] shadow-sm">
             <Image
               src="/images/articles/maandhan/family-pension-rules/process-flowchart.webp"
@@ -183,7 +181,7 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-3">
               Yadi enrolled farmer 60 saal ki umar se pehle expire ho jate hain (matlab unhone ₹3,000 monthly payout lena shuru nahi kiya tha), to surviving spouse ke paas <strong>do options</strong> hote hain:
             </p>
-            
+
             <div className="space-y-3 mb-4">
               <div className="p-4 bg-white dark:bg-gray-800 border-l-4 border-green-500 rounded">
                 <p className="font-bold text-sm text-green-700 dark:text-green-400 mb-2">✅ Option 1: Scheme Continue Karein</p>
@@ -191,7 +189,7 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
                   Surviving spouse scheme ko continue kar sakte hain. Is case mein, unhe regular monthly contributions deni hongi jab tak woh 60 saal ki umar tak nahi pahunch jate. 60 saal hone par, unhe ₹3,000 monthly pension milna shuru ho jayegi — bilkul waise hi jaise original subscriber ko milta.
                 </p>
               </div>
-              
+
               <div className="p-4 bg-white dark:bg-gray-800 border-l-4 border-blue-500 rounded">
                 <p className="font-bold text-sm text-blue-700 dark:text-blue-400 mb-2">💰 Option 2: Exit Karein Aur Lump-Sum Le Lein</p>
                 <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
@@ -248,7 +246,6 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
             Official guidelines seedhi hain, lekin ground level par patience aur paperwork discipline ki zaroorat hoti hai. Neeche di gayi checklist ko follow karein:
           </p>
 
-          {}
           <div className="my-6 rounded-xl overflow-hidden border border-[var(--color-border)] shadow-sm">
             <Image
               src="/images/articles/maandhan/family-pension-rules/portal-screenshot.webp"
@@ -270,7 +267,7 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
             <SI n={4}><strong>Supporting Documents Attach Karein:</strong> Death certificate, claimant ka ID proof (Aadhaar), address proof, original PMKMY card/receipt, cancelled cheque/passbook copy, aur marriage certificate. <br/><em>State-wise Variation:</em> Kuch states (jaise UP, Bihar, MP) mein Tehsil se 'Legal Heir Certificate' ya additional affidavit mandatory maang sakte hain. Apne district ke specific rules CSC ya bank se confirm karein.</SI>
             <SI n={5}><strong>Verification aur Disbursement ka Wait Karein:</strong> Bank claim ko LIC of India ko forward karta hai. Verification mein documents ki completeness ke hisaab se 30 din se 6 mahine tak lag sakte hain. Paisa NEFT/RTGS ke through claimant ke account mein aata hai.</SI>
           </StepList>
-          
+
           <WB>
             <strong>Honest Advice:</strong> Bank ya CSC jaate waqt kisi literate parivar ke sadasya ya local advocate ko saath le jayein. Sirf isliye nahi ki process complex hai, balki isliye ki koi aapki baat ko samajh kar unnecessary demands ke khilaf bol sake.
           </WB>
@@ -288,8 +285,7 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
 
         <section className="mb-8">
           <SH>Top 5 Galtiyan Jo Claim Reject Karwa Sakti Hain (Aur Bachav)</SH>
-          
-          {}
+
           <div className="my-6 rounded-xl overflow-hidden border border-[var(--color-border)] shadow-sm">
             <Image
               src="/images/articles/maandhan/family-pension-rules/claim-form.webp"
@@ -365,7 +361,6 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
           </div>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Nomination Kaise Update Karein? (Step-by-Step)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">

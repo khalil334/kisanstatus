@@ -4,13 +4,6 @@ import type { Metadata } from 'next';
 import { Disclaimer } from '@/components/ArticleShared';
 import { EXTERNAL_LINK_PROPS } from '@/lib/site-config';
 
-// ⚠️ DEAD CODE — Next.js is metadata export ko ignore karta hai.
-// `export const metadata` sirf app/**/page.tsx ya layout.tsx mein kaam karta hai;
-// ye ek client-imported article component hai, isliye ye block render HI nahi hota.
-// Live <title>/description/canonical/OG `app/articles/[slug]/page.tsx` ke
-// generateMetadata() se aate hain, jo lib/articles-data.ts padhta hai.
-// >>> Title/description/canonical badalna hai to lib/articles-data.ts edit karo. <<<
-// Yahan edit karne se live page pe KUCHH nahi badlega. (Ref: fixplan.md BUG-3)
 export const metadata: Metadata = {
   title: 'Drip aur Sprinkler Subsidy: PDMC ke 55% / 45% Niyam Aur Poora Process',
   description: 'Micro-irrigation subsidy ka asli structure — PDMC ke tahat small/marginal kisan ko 55% aur baaki kisan ko 45% assistance, unit cost norms, state top-up, application steps aur maintenance reality.',
@@ -33,7 +26,6 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: 'https://kisanstatus.com/articles/drip-sprinkler-irrigation-subsidy' },
 };
-
 
 export default function DripSprinkler() {
   return (

@@ -2,10 +2,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
-// Self-contained article — कोई shared component import नहीं (Rule 2)।
-// Structure variant: table + text mix — steps भी tables में, comparison भी tables में (Rule 3)।
-// FAQ variant: numbered Q&A list (कोई accordion/card नहीं)।
-
 const FAQS = [
   {
     q: 'फार्मर आईडी बनवाने के पैसे लगते हैं?',

@@ -8,23 +8,23 @@ const PUBLISHED = '2026-03-15T08:00:00+05:30';
 const MODIFIED = '2026-08-08T21:45:00+05:30';
 
 const RELATED_CARDS = [
-  { 
-    slug: 'PmKisan24viKist2026', 
-    title: 'PM Kisan 24vi Kist Status', 
+  {
+    slug: 'PmKisan24viKist2026',
+    title: 'PM Kisan 24vi Kist Status',
     desc: 'Apna ₹2000 installment status aur eKYC errors abhi check karein.',
-    emoji: '📅' 
+    emoji: '📅'
   },
-  { 
-    slug: 'PmKisanBeneficiaryList2026', 
-    title: 'PM Kisan Beneficiary List', 
+  {
+    slug: 'PmKisanBeneficiaryList2026',
+    title: 'PM Kisan Beneficiary List',
     desc: 'Apna naam naye list mein dhundhein aur status verify karein.',
-    emoji: '📋' 
+    emoji: '📋'
   },
-  { 
-    slug: 'KisanCreditCardOnlineApply2026', 
-    title: 'Kisan Credit Card (KCC) Guide', 
+  {
+    slug: 'KisanCreditCardOnlineApply2026',
+    title: 'Kisan Credit Card (KCC) Guide',
     desc: '4% byaj dar par ₹5 lakh tak ka agriculture loan kaise lein.',
-    emoji: '💳' 
+    emoji: '💳'
   },
 ];
 
@@ -92,11 +92,11 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
             <span className="text-white font-bold">eKYC Guide</span>
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">🔐 eKYC Verification</span>
-          
+
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
             PM Kisan eKYC 2026: OTP Based eKYC, Biometric aur Face Auth Puri Jankari
           </h1>
-          
+
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
@@ -431,8 +431,8 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
           <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Aapke Liye Zaroori Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {RELATED_CARDS.map((card) => (
-              <Link 
-                key={card.slug} 
+              <Link
+                key={card.slug}
                 href={`/articles/${card.slug}`}
                 className="group block p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:border-green-500 transition-all duration-300"
               >

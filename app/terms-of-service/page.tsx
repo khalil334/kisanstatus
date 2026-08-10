@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL, DEFAULT_OG_IMAGE } from '@/lib/site-config';
 
 export const metadata: Metadata = {
-  // layout.tsx applies the `%s | KisanStatus` template — no inline brand here.
   title: `Terms of Use – Upyog Ki Shartein`,
   description: `KisanStatus.com ki Terms of Service. Hamari website use karne se pehle yeh shartein, privacy policy aur legal notice zaroor padhein.`,
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
@@ -60,8 +59,8 @@ export default function TermsPage() {
         <div className="max-w-3xl mx-auto space-y-6">
 
           <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-300 dark:border-amber-800 rounded-xl text-sm text-amber-900 dark:text-amber-200">
-            <strong>⚠️ Zaruri Suchna:</strong> {SITE_NAME} ek independent informational platform hai. 
-            Yeh Bharat Sarkar ya kisi bhi krishi yojana se affiliated nahi hai. 
+            <strong>⚠️ Zaruri Suchna:</strong> {SITE_NAME} ek independent informational platform hai.
+            Yeh Bharat Sarkar ya kisi bhi krishi yojana se affiliated nahi hai.
             Official kaam ke liye hamesha{' '}
             <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer" className="underline font-semibold focus:outline-none focus:ring-2 focus:ring-amber-500 rounded">
               pmkisan.gov.in ↗
@@ -72,8 +71,8 @@ export default function TermsPage() {
           <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
             <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">1. Sharton Ki Swikriti (Acceptance of Terms)</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-              <strong>{SITE_NAME}</strong> ("Platform", "hum", "hamara") ko access karke aur upyog karke, aap in Terms of Use ko 
-              poore tarike se swikaar karte hain aur inse bandhne ke liye sahmat hote hain. Agar aap in sharton se sahmat nahi hain, 
+              <strong>{SITE_NAME}</strong> ("Platform", "hum", "hamara") ko access karke aur upyog karke, aap in Terms of Use ko
+              poore tarike se swikaar karte hain aur inse bandhne ke liye sahmat hote hain. Agar aap in sharton se sahmat nahi hain,
               toh kripya hamare platform ka upyog na karein. Yeh shartein platform ke sabhi visitors aur users par lagu hoti hain.
             </p>
           </section>
@@ -81,7 +80,7 @@ export default function TermsPage() {
           <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
             <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">2. Hamari Sevayein (Description of Service)</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-3">
-              {SITE_NAME} Indian kisanon ke liye krishi kalyan yojanaon ke baare mein <strong>muft aur informational content</strong> pradaan karta hai. 
+              {SITE_NAME} Indian kisanon ke liye krishi kalyan yojanaon ke baare mein <strong>muft aur informational content</strong> pradaan karta hai.
               Hamari sevao mein shamil hain:
             </p>
             <ul className="text-sm text-[var(--color-text-muted)] space-y-2">
@@ -128,9 +127,9 @@ export default function TermsPage() {
           <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
             <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">4. Yeh Koi Sarkari Website Nahi Hai</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-              <strong>{SITE_NAME} koi official sarkari platform nahi hai.</strong> Hum Bharat Sarkar, Krishi aur Kisan Kalyan Mantralaya, 
-              ya kisi bhi krishi yojana se kisi bhi sarkari kshamata mein affiliated, endorsed ya connected nahi hain. 
-              Hum aapka Aadhaar number, bank account, ya koi bhi personal sarkari data collect nahi karte. 
+              <strong>{SITE_NAME} koi official sarkari platform nahi hai.</strong> Hum Bharat Sarkar, Krishi aur Kisan Kalyan Mantralaya,
+              ya kisi bhi krishi yojana se kisi bhi sarkari kshamata mein affiliated, endorsed ya connected nahi hain.
+              Hum aapka Aadhaar number, bank account, ya koi bhi personal sarkari data collect nahi karte.
               Official sevao ke liye hamesha{' '}
               <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">
                 pmkisan.gov.in ↗
@@ -161,9 +160,9 @@ export default function TermsPage() {
           <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
             <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">6. Copyright aur Intellectual Property</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-              {SITE_NAME} par maujood sabhi original content — jismein articles, guides, aur platform design shamil hain — 
-              {SITE_NAME} ki sampatti hai aur copyright kanoon dwara surakshit hai. 
-              Pichhlikhit anumati ke bina aap hamare content ko reproduce, distribute, ya republish nahi kar sakte. 
+              {SITE_NAME} par maujood sabhi original content — jismein articles, guides, aur platform design shamil hain —
+              {SITE_NAME} ki sampatti hai aur copyright kanoon dwara surakshit hai.
+              Pichhlikhit anumati ke bina aap hamare content ko reproduce, distribute, ya republish nahi kar sakte.
               Hamare platform ko link karna anumodit aur utsahit hai.
             </p>
           </section>
@@ -171,10 +170,10 @@ export default function TermsPage() {
           <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
             <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">7. Vigyaapan (Advertising)</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-              {SITE_NAME} Google AdSense aur anya advertising networks ke madhyam se vigyaapan (ads) pradarshit kar sakta hai. 
-              Yeh ads humein is platform ko muft mein banaye rakhne aur behtar banane mein madad karte hain. 
-              Vigyaapan editorial content se spasht roop se alag hote hain. Hum hamare platform par vigyapit kisi bhi 
-              product ya service ka samarthan nahi karte. Ads aapke data ka kaise upyog karte hain, iski jankari ke liye 
+              {SITE_NAME} Google AdSense aur anya advertising networks ke madhyam se vigyaapan (ads) pradarshit kar sakta hai.
+              Yeh ads humein is platform ko muft mein banaye rakhne aur behtar banane mein madad karte hain.
+              Vigyaapan editorial content se spasht roop se alag hote hain. Hum hamare platform par vigyapit kisi bhi
+              product ya service ka samarthan nahi karte. Ads aapke data ka kaise upyog karte hain, iski jankari ke liye
               hamari{' '}
               <Link href="/privacy-policy" className="text-[var(--color-primary)] underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">
                 Data Protection Notice (Privacy Policy)
@@ -186,9 +185,9 @@ export default function TermsPage() {
           <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
             <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">8. Bahari Links (Third-Party Links)</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-              Hamare platform par bahari websites ke links shamil ho sakte hain, jismein official sarkari portal 
-              pmkisan.gov.in bhi shamil hai. Yeh links keval aapki suvidha ke liye hain. Hum kisi bhi third-party 
-              website ki content, shuddhta, ya privacy practices ke liye jimmedar nahi hain. Bahari links par 
+              Hamare platform par bahari websites ke links shamil ho sakte hain, jismein official sarkari portal
+              pmkisan.gov.in bhi shamil hai. Yeh links keval aapki suvidha ke liye hain. Hum kisi bhi third-party
+              website ki content, shuddhta, ya privacy practices ke liye jimmedar nahi hain. Bahari links par
               jaana aapke apne jokhim par hoga.
             </p>
           </section>
@@ -196,9 +195,9 @@ export default function TermsPage() {
           <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
             <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">9. Jimmedari Se Mukti (Limitation of Liability)</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-              {SITE_NAME} aur iski team platform ke upyog, ya yahan pradan ki gayi kisi bhi jankari par bharosa 
-              karne se utpann hone wale kisi bhi pratyaksh, apratyaksh, aakasmik, ya parinamik nuksan ke liye 
-              jimmedar nahi hogi. Hamari sevayein muft mein pradan ki jaati hain, isliye kisi bhi daave ke liye 
+              {SITE_NAME} aur iski team platform ke upyog, ya yahan pradan ki gayi kisi bhi jankari par bharosa
+              karne se utpann hone wale kisi bhi pratyaksh, apratyaksh, aakasmik, ya parinamik nuksan ke liye
+              jimmedar nahi hogi. Hamari sevayein muft mein pradan ki jaati hain, isliye kisi bhi daave ke liye
               hamari kul jimmedari shunya (zero) tak simit hogi.
             </p>
           </section>
@@ -206,8 +205,8 @@ export default function TermsPage() {
           <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
             <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">10. Sharton Mein Badlav (Changes to Terms)</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-              Hum in Terms of Use ko kabhi bhi update karne ka adhikar rakhte hain. Badlav ek updated date ke 
-              saath is page par post kiye jayenge. Kisi bhi badlav ke baad platform ka lagatar upyog karna, 
+              Hum in Terms of Use ko kabhi bhi update karne ka adhikar rakhte hain. Badlav ek updated date ke
+              saath is page par post kiye jayenge. Kisi bhi badlav ke baad platform ka lagatar upyog karna,
               nayi sharton ko aapki swikriti mana jayega.
             </p>
           </section>
@@ -215,7 +214,7 @@ export default function TermsPage() {
           <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
             <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">11. Lagu Hone Wala Kanoon (Governing Law)</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-              In Terms of Use par Bharat ke kanoon lagu honge. Kisi bhi vivad par Bharat ke nyayalayon ka 
+              In Terms of Use par Bharat ke kanoon lagu honge. Kisi bhi vivad par Bharat ke nyayalayon ka
               adhikar kshetra (jurisdiction) hoga.
             </p>
           </section>
@@ -233,20 +232,20 @@ export default function TermsPage() {
           </section>
 
           <div className="flex flex-wrap gap-3 pt-2">
-            <Link 
-              href="/privacy-policy" 
+            <Link
+              href="/privacy-policy"
               className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--color-card)] border border-[var(--color-border)] text-[var(--color-text)] text-sm font-bold rounded-xl hover:border-green-400 dark:hover:border-green-600 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500"
             >
               Data Protection Notice →
             </Link>
-            <Link 
-              href="/disclaimer" 
+            <Link
+              href="/disclaimer"
               className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--color-card)] border border-[var(--color-border)] text-[var(--color-text)] text-sm font-bold rounded-xl hover:border-green-400 dark:hover:border-green-600 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500"
             >
               Legal Notice →
             </Link>
-            <Link 
-              href="/contact" 
+            <Link
+              href="/contact"
               className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--color-card)] border border-[var(--color-border)] text-[var(--color-text)] text-sm font-bold rounded-xl hover:border-green-400 dark:hover:border-green-600 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500"
             >
               Contact Us →

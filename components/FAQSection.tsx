@@ -13,8 +13,8 @@ interface FAQSectionProps {
   subtitle?: string;
 }
 
-export default function FAQSection({ 
-  faqs, 
+export default function FAQSection({
+  faqs,
   title = "Frequently Asked Questions",
   subtitle = "PM Kisan se jude common sawalon ke jawab"
 }: FAQSectionProps) {
@@ -27,7 +27,6 @@ export default function FAQSection({
   return (
     <section className="py-12 md:py-16 bg-gradient-to-b from-gray-50 to-[var(--color-card)] dark:from-gray-900/50 dark:to-[var(--color-card)]" aria-labelledby="faq-heading">
       <div className="container-site">
-        {}
         <div className="text-center mb-10">
           <span className="inline-block bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">
             ❓ Common Questions
@@ -40,7 +39,6 @@ export default function FAQSection({
           </p>
         </div>
 
-        {}
         <div className="max-w-4xl mx-auto">
           <div className="space-y-3">
             {faqs.map((faq, i) => {
@@ -49,8 +47,8 @@ export default function FAQSection({
                 <div
                   key={i}
                   className={`bg-[var(--color-card)] rounded-xl border-2 transition-all duration-300 overflow-hidden ${
-                    isOpen 
-                      ? 'border-green-400 shadow-lg shadow-green-100 dark:shadow-green-900/20' 
+                    isOpen
+                      ? 'border-green-400 shadow-lg shadow-green-100 dark:shadow-green-900/20'
                       : 'border-[var(--color-border)] hover:border-green-300 dark:hover:border-green-700 hover:shadow-md'
                   }`}
                 >
@@ -62,10 +60,10 @@ export default function FAQSection({
                     id={`faq-question-${i}`}
                   >
                     <div className="flex items-start gap-3 flex-1">
-                      <span 
+                      <span
                         className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-colors ${
-                          isOpen 
-                            ? 'bg-green-500 text-white' 
+                          isOpen
+                            ? 'bg-green-500 text-white'
                             : 'bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300'
                         }`}
                         aria-hidden="true"
@@ -76,7 +74,7 @@ export default function FAQSection({
                         {faq.q}
                       </span>
                     </div>
-                    
+
                     <svg
                       width="24"
                       height="24"
@@ -112,7 +110,6 @@ export default function FAQSection({
             })}
           </div>
 
-          {}
           <div className="mt-8 p-5 md:p-6 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/10 border-2 border-green-200 dark:border-green-800 rounded-2xl">
             <div className="flex items-start gap-3">
               <span className="text-3xl shrink-0" aria-hidden="true">📞</span>

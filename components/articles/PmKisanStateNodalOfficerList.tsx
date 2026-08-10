@@ -11,31 +11,31 @@ const PUBLISHED = '2026-07-10T08:00:00+05:30';
 const MODIFIED = '2026-07-22T08:00:00+05:30';
 
 const RELATED_CARDS = [
-  { 
-    slug: 'PmKisanPaymentFailedFix2026', 
-    title: 'Payment Failed Fix Guide', 
+  {
+    slug: 'PmKisanPaymentFailedFix2026',
+    title: 'Payment Failed Fix Guide',
     desc: 'FTO generate hone ke baad bhi paisa nahi aaya? 7 reasons aur turant fix jaanein.',
-    emoji: '💸' 
+    emoji: '💸'
   },
-  { 
-    slug: 'PmKisanCorrectionForm2026', 
-    title: 'PM Kisan Correction Form', 
+  {
+    slug: 'PmKisanCorrectionForm2026',
+    title: 'PM Kisan Correction Form',
     desc: 'Naam, IFSC ya Aadhaar mein galti sudharne ka offline aur online tarika.',
-    emoji: '📝' 
+    emoji: '📝'
   },
-  { 
-    slug: 'PmKisanBeneficiaryList2026', 
-    title: 'Beneficiary List Check', 
+  {
+    slug: 'PmKisanBeneficiaryList2026',
+    title: 'Beneficiary List Check',
     desc: 'Apna naam state aur district wise nayi list mein kaise dhundhein.',
-    emoji: '📋' 
+    emoji: '📋'
   },
 ];
 
 const ALL_REGIONS = [
-  'Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh', 'Goa', 'Gujarat', 'Haryana', 
-  'Himachal Pradesh', 'Jharkhand', 'Karnataka', 'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Manipur', 
-  'Meghalaya', 'Mizoram', 'Nagaland', 'Odisha', 'Punjab', 'Rajasthan', 'Sikkim', 'Tamil Nadu', 'Telangana', 
-  'Tripura', 'Uttar Pradesh', 'Uttarakhand', 'West Bengal', 'Andaman & Nicobar Islands', 'Chandigarh', 
+  'Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh', 'Goa', 'Gujarat', 'Haryana',
+  'Himachal Pradesh', 'Jharkhand', 'Karnataka', 'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Manipur',
+  'Meghalaya', 'Mizoram', 'Nagaland', 'Odisha', 'Punjab', 'Rajasthan', 'Sikkim', 'Tamil Nadu', 'Telangana',
+  'Tripura', 'Uttar Pradesh', 'Uttarakhand', 'West Bengal', 'Andaman & Nicobar Islands', 'Chandigarh',
   'Dadra & Nagar Haveli and Daman & Diu', 'Delhi', 'Jammu & Kashmir', 'Ladakh', 'Lakshadweep', 'Puducherry'
 ];
 
@@ -76,10 +76,10 @@ const FAQS_DATA = [
 ];
 
 export default function PmKisanStateNodalOfficerList({ article }: { article: ArticleMeta }) {
-  const [modal, setModal] = useState<{ 
-    title: string; 
-    message: string; 
-    url: string; 
+  const [modal, setModal] = useState<{
+    title: string;
+    message: string;
+    url: string;
   } | null>(null);
 
   const handleOfficialLink = (title: string, message: string, url: string) => {
@@ -88,7 +88,6 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
 
   return (
     <>
-      {}
       {modal && (
         <CountdownModal
           title={modal.title}
@@ -109,12 +108,11 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
             <span className="text-white font-bold">Nodal Officers</span>
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">PM Kisan Shikayat Contact List 2026</span>
-          
-          {}
+
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
             PM Kisan State Nodal Officer List 2026: Email & Phone No
           </h1>
-          
+
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
@@ -126,7 +124,6 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
 
       <div className="container-site max-w-3xl py-8">
 
-        {}
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-r-xl">
           <p className="text-sm md:text-base text-blue-900 dark:text-blue-100 leading-relaxed font-medium">
             <strong>Seedha Jawab:</strong> PM Kisan State Nodal Officer har state ke Agriculture Department mein appointed ek senior official hote hain jo kisanon ki unresolved shikayaton (jaise payment fail, name mismatch) ko solve karte hain. Agar 155261 helpline se madad nahi milti, toh aap direct apne state ke Nodal Officer ko email kar sakte hain. Neeche 2026 ki updated contact guidelines aur complaint escalate karne ka poora tarika diya gaya hai.
@@ -156,7 +153,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Jab mahine beet jaate hain aur paisa nahi aata, tab aapko kisi aise insaan ki zaroorat hoti hai jiske paas <strong>actual administrative power</strong> ho. Yahan entry hoti hai <strong>PM Kisan State Nodal Officer</strong> ki. Har state mein ek officer baitha hai jo specifically PM Kisan ki shikayaten dekhta hai aur District Agriculture Officers (DAO) ko order de sakta hai.
           </p>
-          
+
           <Image
             src="/images/articles/pm-kisan-state-nodal-officer-list/officer-contact-list.webp"
             alt="Complete list of PM Kisan state nodal officers with contact details"
@@ -195,7 +192,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Neeche har state aur UT ke liye official contact guidelines hain. Apna state dhundhne ke liye apne browser ke search feature ka use karein (Desktop par Ctrl+F ya mobile browser menu mein 'Find in Page' option).
           </p>
-          
+
           <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl p-4 mb-4">
             <p className="text-xs text-amber-800 dark:text-amber-300">
               <strong>⚠️ Important Notice:</strong> Specific State Nodal Officer ke direct email IDs aur phone numbers frequently update hote hain. Fake ya outdated numbers se bachne ke liye, humne neeche central PM Kisan ICT email aur helpline di hai. Apne state ke exact current officer ka direct contact jaanne ke liye neeche diye gaye official link ka upyog karein.
@@ -254,7 +251,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Bhai, sarkari email box mein roz hazaron emails aati hain. Agar aapki email ka subject clear nahi hua, toh wo spam mein chali jayegi. Hamesha subject mein apna <strong>Registration Number</strong> likhein. Neeche templates hain, apni problem ke hisaab se copy-paste kar lein:
           </p>
-          
+
           <div className="bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 rounded-xl p-5 mb-6">
             <p className="text-sm font-black text-blue-800 dark:text-blue-300 mb-3">
               📧 Template 1: Payment FTO Generated Hai Par Paisa Nahi Aaya
@@ -363,23 +360,23 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
           </p>
           <div className="space-y-3">
             {[
-              { 
-                problem: 'Payment Fail Ho Gayi', 
+              {
+                problem: 'Payment Fail Ho Gayi',
                 desc: 'FTO generated hai lekin paisa account mein nahi aaya. 30 din ho gaye.',
                 priority: 'Turant Karein'
               },
-              { 
-                problem: 'Naam List Se Hat Gaya', 
+              {
+                problem: 'Naam List Se Hat Gaya',
                 desc: 'Pehle active tha, ab achanak list mein naam nahi aa raha (Wrongful Deletion).',
                 priority: 'Turant Karein'
               },
-              { 
-                problem: 'Local Officer Help Nahi Kar Rahe', 
+              {
+                problem: 'Local Officer Help Nahi Kar Rahe',
                 desc: 'BAO ya patwari se baat ki, lekin wo cooperate nahi kar rahe ya paise maang rahe hain.',
                 priority: 'Turant Karein'
               },
-              { 
-                problem: 'Data Correction Nahi Ho Raha', 
+              {
+                problem: 'Data Correction Nahi Ho Raha',
                 desc: 'Naam ya bank details change karne ki application di thi, lekin portal update nahi hua.',
                 priority: 'Jaldi Karein'
               },
@@ -388,8 +385,8 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
                 <div className="flex items-center justify-between mb-2">
                   <p className="font-black text-sm text-[var(--color-text)]">{problem}</p>
                   <span className={`text-xs px-2 py-1 rounded-full ${
-                    priority === 'Turant Karein' 
-                      ? 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300' 
+                    priority === 'Turant Karein'
+                      ? 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300'
                       : 'bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300'
                   }`}>
                     {priority}
@@ -431,13 +428,12 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
           portalName="pmkisan.gov.in"
         />
 
-        {}
         <section className="my-10">
           <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Aapke Liye Zaroori Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {RELATED_CARDS.map((card) => (
-              <Link 
-                key={card.slug} 
+              <Link
+                key={card.slug}
                 href={`/articles/${card.slug}`}
                 className="group block p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:border-green-500 transition-all duration-300"
               >

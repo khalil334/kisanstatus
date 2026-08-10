@@ -1,4 +1,3 @@
-
 export type RajyaArticleStatus = 'planned' | 'live';
 
 export type RajyaYojanaArticleMeta = {
@@ -84,9 +83,6 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
       'kisan kalyan yojana beneficiary list mp',
       'mp kisan kalyan yojana amount',
     ],
-    // Title must share its leading phrase with the on-page <h1>
-    // ("MP CM Kisan Kalyan Yojana Kist Kab Aayegi: ..."), otherwise Google
-    // discards <title> and rewrites the SERP heading itself (Bug #5).
     title: 'MP CM Kisan Kalyan Yojana Kist Kab Aayegi',
     description:
       'Madhya Pradesh CM Kisan Kalyan Yojana ki kist kab aayegi, SAARA portal se status check aur beneficiary list dekhne ka process.',

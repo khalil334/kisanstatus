@@ -7,23 +7,23 @@ const PUBLISHED = '2026-07-06T08:00:00+05:30';
 const MODIFIED = '2026-07-22T08:00:00+05:30';
 
 const RELATED_CARDS = [
-  { 
-    slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', 
-    title: 'FTO Generated Matlab Kya Hai', 
+  {
+    slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai',
+    title: 'FTO Generated Matlab Kya Hai',
     desc: 'FTO aur PFMS ke beech ka farak aur payment kab tak aayegi, jaane.',
-    emoji: '💳' 
+    emoji: '💳'
   },
-  { 
-    slug: 'PmKisanEkycOnline2026', 
-    title: 'PM Kisan eKYC Complete Guide', 
+  {
+    slug: 'PmKisanEkycOnline2026',
+    title: 'PM Kisan eKYC Complete Guide',
     desc: 'Payment fail hone ka ek bada karan eKYC pending hona bhi ho sakta hai.',
-    emoji: '🔐' 
+    emoji: '🔐'
   },
-  { 
-    slug: 'PmKisan24viKist2026', 
-    title: '24vi Kist Status Check', 
+  {
+    slug: 'PmKisan24viKist2026',
+    title: '24vi Kist Status Check',
     desc: 'Apna latest installment status aur error codes abhi verify karein.',
-    emoji: '📅' 
+    emoji: '📅'
   },
 ];
 
@@ -69,7 +69,6 @@ const FAQS_DATA = [
 export default function PmKisanPaymentFailedFix2026({ article }: { article: ArticleMeta }) {
   return (
     <>
-      {}
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
           <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
@@ -80,12 +79,11 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
             <span className="text-white font-bold">Payment Fix Guide</span>
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">💸 Payment Troubleshooting</span>
-          
-          {}
+
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
             PM Kisan Payment Failed 2026: 7 Reasons & Quick Fix
           </h1>
-          
+
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
@@ -97,14 +95,12 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
 
       <div className="container-site max-w-3xl py-8">
 
-        {}
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-r-xl">
           <p className="text-sm md:text-base text-blue-900 dark:text-blue-100 leading-relaxed font-medium">
             <strong>Seedha Jawab:</strong> PM Kisan payment failed hone ka sabse bada karan <strong>Aadhaar NPCI seeding</strong> ka na hona, galat IFSC code, ya dormant bank account hai. Paisa gaya nahi hai, bas bank tak pahunchne se pehle atak gaya hai. Apni branch jaakar "DBT Seeding" karwayein ya portal par bank details correct karein. Pending kistein problem fix hone ke baad mil jaayengi.
           </p>
         </div>
 
-        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/articles/pm-kisan-payment-failed-fix-2026/payment-failed-hero.webp'}
@@ -144,7 +140,6 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
           </p>
         </section>
 
-        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-payment-failed-fix-2026/failure-reasons-infographic.webp"
@@ -230,7 +225,6 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
           </StepList>
         </section>
 
-        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-payment-failed-fix-2026/bank-visit-checklist.webp"
@@ -311,7 +305,6 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
           </div>
         </section>
 
-        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-payment-failed-fix-2026/payment-success-after-fix.webp"
@@ -419,13 +412,12 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
           secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: '💰 Benefit Calculator' }}
         />
 
-        {}
         <section className="my-10">
           <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Aapke Liye Zaroori Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {RELATED_CARDS.map((card) => (
-              <Link 
-                key={card.slug} 
+              <Link
+                key={card.slug}
                 href={`/articles/${card.slug}`}
                 className="group block p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:border-green-500 transition-all duration-300"
               >

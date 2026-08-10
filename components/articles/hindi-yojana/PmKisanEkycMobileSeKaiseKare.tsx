@@ -2,9 +2,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
-// यह article जानबूझकर self-contained है — कोई shared component import नहीं।
-// Structure variant: letter-badge pathway cards + card-grid FAQ.
-
 const FAQS = [
   {
     q: 'क्या phone से यह काम बिल्कुल free है?',

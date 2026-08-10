@@ -3,8 +3,6 @@ import Link from 'next/link';
 import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL, DEFAULT_OG_IMAGE } from '@/lib/site-config';
 
 export const metadata: Metadata = {
-  // layout.tsx applies the `%s | KisanStatus` template, so the brand must NOT
-  // be repeated here (was rendering "… | KisanStatus | KisanStatus").
   title: `Contact & Support — Sampark Karein`,
   description: `KisanStatus se sampark karein. Website feedback, content correction, ya kisi bhi sawaal ke liye humein email karein. Hum 24-48 ghante mein reply karte hain.`,
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
@@ -88,7 +86,7 @@ export default function ContactPage() {
               <span aria-hidden="true">📧</span> Email Karein
             </h2>
             <p className="text-sm text-[var(--color-text-muted)] mb-4 leading-relaxed">
-              Website feedback, content correction, ya collaboration ke liye humein email karein. 
+              Website feedback, content correction, ya collaboration ke liye humein email karein.
               Hum aamtaur par 24–48 ghante ke andar reply karne ki koshish karte hain.
             </p>
             <p className="text-sm text-[var(--color-text-muted)] mb-4 leading-relaxed">

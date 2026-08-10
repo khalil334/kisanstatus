@@ -5,12 +5,6 @@ import { CATEGORIES, getArticlesByCategory, type CategorySlug } from '@/lib/arti
 import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL, DEFAULT_OG_IMAGE } from '@/lib/site-config';
 import ArticlesClient from '../../ArticlesClient';
 
-/**
- * Per-category intro block (fix plan §C) — navigation value, not word count:
- * tells the reader which article fits which situation. Only categories that
- * have one render it; structure intentionally differs per category so the
- * three intros don't read like one template.
- */
 function CategoryIntro({ category }: { category: CategorySlug }) {
   if (category === 'loan') {
     return (
@@ -195,8 +189,6 @@ export async function generateStaticParams() {
   return Object.keys(CATEGORIES).map((category) => ({ category }));
 }
 
-// Unknown categories 404 at the router level (root loading.tsx otherwise
-// streams a 200 shell before notFound() can set the status — GSC Soft 404).
 export const dynamicParams = false;
 
 export async function generateMetadata({
@@ -208,10 +200,6 @@ export async function generateMetadata({
   const categoryData = CATEGORY_DATA[category as CategorySlug];
   const categoryInfo = CATEGORIES[category as CategorySlug];
 
-  // Unknown category => real HTTP 404 (app/not-found.tsx), not a 200 "Category Not
-  // Found" soft-404. Returning fallback metadata here made the response 200 while
-  // the page body rendered the 404 UI — status and body disagreed. Same pattern as
-  // the maandhan slug page fix.
   if (!categoryData || !categoryInfo) {
     notFound();
   }
@@ -334,7 +322,6 @@ export default async function CategoryPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      {}
       <section className="bg-gradient-to-r from-green-800 to-green-600 py-12 md:py-16">
         <div className="container-site mx-auto px-4 text-center">
           <div className="text-5xl md:text-6xl mb-4" aria-hidden="true">
@@ -360,7 +347,6 @@ export default async function CategoryPage({
         </div>
       </section>
 
-      {}
       <section className="py-6 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
         <div className="container-site mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-2">
@@ -388,7 +374,6 @@ export default async function CategoryPage({
 
       <CategoryIntro category={category as CategorySlug} />
 
-      {}
       <div className="container-site mx-auto py-10">
         {categoryArticles.length === 0 ? (
           <div className="text-center py-16">

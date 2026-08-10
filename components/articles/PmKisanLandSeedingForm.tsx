@@ -65,7 +65,7 @@ const STATE_LINKS = [
   { name: 'Jammu & Kashmir', url: 'https://jklandrecords.jk.gov.in', slug: 'jammu-kashmir' },
   { name: 'Kerala', url: 'https://erevenue.kerala.gov.in', slug: 'kerala' },
   { name: 'Goa', url: 'https://dlss.goa.gov.in', slug: 'goa' },
-  
+
   { name: 'Tripura', url: 'https://landrecords.tripura.gov.in', slug: 'tripura' },
   { name: 'Manipur', url: 'https://landrecords.manipur.gov.in', slug: 'manipur' },
   { name: 'Meghalaya', url: 'https://landrecords.meghalaya.gov.in', slug: 'meghalaya' },
@@ -73,7 +73,7 @@ const STATE_LINKS = [
   { name: 'Arunachal Pradesh', url: 'https://landrecords.arunachal.gov.in', slug: 'arunachal-pradesh' },
   { name: 'Mizoram', url: 'https://landrecords.mizoram.gov.in', slug: 'mizoram' },
   { name: 'Sikkim', url: 'https://landrecords.sikkim.gov.in', slug: 'sikkim' },
-  
+
   { name: 'Delhi', url: 'https://dlrc.delhi.gov.in', slug: 'delhi' },
   { name: 'Puducherry', url: 'https://revenue.py.gov.in', slug: 'puducherry' },
   { name: 'Chandigarh', url: 'https://chandigarhrevenue.gov.in', slug: 'chandigarh' },
@@ -143,7 +143,6 @@ export default function PmKisanLandSeedingFormPdf2026() {
 
       <div className="container-site max-w-3xl py-8">
 
-        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-land-seeding-form/land-seeding-form-hero.webp"
@@ -159,7 +158,6 @@ export default function PmKisanLandSeedingFormPdf2026() {
           </p>
         </div>
 
-        {}
         <section className="mb-8">
           <SH>Land Seeding Kya Hai? Real Problem Kya Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -171,7 +169,7 @@ export default function PmKisanLandSeedingFormPdf2026() {
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Aise mein kisan pareshan ho jaate hain. Patwari ke chakkar kaat-te hain, BAO office jaate hain, par har jagah se alag form maanga jaata hai. Samajh nahi aata ki kaunsa form bharna hai.
           </p>
-          
+
           <Image
             src="/images/articles/pm-kisan-land-seeding-form/land-seeding-problem.webp"
             alt="PM Kisan land seeding pending status confusion — farmer unsure which state form to submit"
@@ -185,7 +183,6 @@ export default function PmKisanLandSeedingFormPdf2026() {
           </p>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Land Seeding Status Online Kaise Check Karein?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -234,7 +231,6 @@ export default function PmKisanLandSeedingFormPdf2026() {
           </IB>
         </section>
 
-        {}
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 border-l-[6px] rounded-xl">
           <h2 className="text-base font-black text-blue-800 dark:text-blue-300 mb-3">
             📥 State Wise Land Seeding Form - Official Links
@@ -260,7 +256,6 @@ export default function PmKisanLandSeedingFormPdf2026() {
           </IB>
         </div>
 
-        {}
         <section className="mb-8">
           <SH>Land Seeding Form Kyun Zaroori Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -288,10 +283,9 @@ export default function PmKisanLandSeedingFormPdf2026() {
           </div>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>State Wise Land Seeding Form Details</SH>
-          
+
           <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">🏔️ Uttar Pradesh</h3>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             UP mein sabse zyada kisan online hi kaam nipta lete hain — upbhulekh portal kaafi seedha aur accessible hai, isliye Patwari ke paas jaane ki zaroorat kam hi padti hai.
@@ -386,7 +380,6 @@ export default function PmKisanLandSeedingFormPdf2026() {
           </div>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Land Seeding Form Kaise Bharein? Step-by-Step</SH>
           <StepList>
@@ -419,7 +412,6 @@ export default function PmKisanLandSeedingFormPdf2026() {
           </WB>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Common Problems + Solutions</SH>
           <div className="space-y-3">
@@ -438,7 +430,6 @@ export default function PmKisanLandSeedingFormPdf2026() {
           </div>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Land Seeding Mein Kitna Time Lagta Hai?</SH>
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
@@ -475,7 +466,6 @@ export default function PmKisanLandSeedingFormPdf2026() {
           </p>
         </div>
 
-        {}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Aksar Puche Jane Wale Sawal

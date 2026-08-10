@@ -221,10 +221,6 @@ export async function generateStaticParams() {
   return ARTICLES.map((a) => ({ slug: a.slug }));
 }
 
-// Unknown slugs must 404 at the router level, before the root loading.tsx
-// streams a 200 shell (which made notFound() below unable to set the status
-// code — GSC saw these as Soft 404s). All valid slugs come from
-// generateStaticParams, so nothing legitimate is blocked.
 export const dynamicParams = false;
 
 export async function generateMetadata({
@@ -235,21 +231,12 @@ export async function generateMetadata({
   const { slug } = await params;
 
   const article = ARTICLES_MAP[slug];
-  // Unknown slug => real HTTP 404 (app/not-found.tsx), not a 200 "Article Not Found"
-  // soft-404. Returning fallback metadata here made Google see a 200 page; the page
-  // component below already calls notFound(), so this keeps status + body consistent.
   if (!article) {
     notFound();
   }
 
   const url = `${SITE_URL}/articles/${slug}`;
   const ogImage = article.ogImage ? `${SITE_URL}${article.ogImage}` : DEFAULT_OG_IMAGE;
-  // One canonical title per page. Google treats <title>, og:title and the on-page
-  // <h1> as competing signals: when they disagree it discards <title> and
-  // substitutes its own SERP title (Ahrefs "Page and SERP titles do not match").
-  // So the SEO title is the single source of truth and og/twitter inherit it —
-  // do NOT reintroduce a separate ogTitle for the <title>/og:title pair.
-  // `article.ogTitle` is kept only as a legacy fallback when no seoTitle is set.
   const seoTitle = article.seoTitle || article.ogTitle || article.title;
   const displayTitle = seoTitle;
   const category = CATEGORIES[article.category];
@@ -265,9 +252,6 @@ export async function generateMetadata({
     category: category ? category.name : 'Agriculture & Farming',
     alternates: {
       canonical: url,
-      // Reciprocal hreflang: if this article has a Devanagari Hindi counterpart
-      // under /articles/hi/, point at it (and let it point back). Otherwise keep
-      // the existing self-referencing pair.
       languages: hinglishAlternates(`/articles/${slug}`, {
         'hi-IN': url,
         'x-default': url,
@@ -280,10 +264,10 @@ export async function generateMetadata({
       url,
       siteName: SITE_NAME,
       locale: 'hi_IN',
-      images: [{ 
-        url: ogImage, 
-        width: 1200, 
-        height: 630, 
+      images: [{
+        url: ogImage,
+        width: 1200,
+        height: 630,
         alt: displayTitle,
         type: 'image/webp',
       }],

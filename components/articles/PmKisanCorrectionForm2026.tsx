@@ -251,12 +251,12 @@ export default function PmKisanCorrectionForm2026({ article }: { article: Articl
               <p className="font-black text-amber-800 dark:text-amber-300 text-sm mb-1">⚠️ PM Kisan Mobile Number Update Bhool Jana</p>
               <p className="text-xs text-[var(--color-text-muted)]">Agar purana number band hai aur naya portal par update nahi kiya, toh OTP nahi aayega. Hamesha active number rakho. Purana sim na ho toh mobile number sirf CSC par biometric se hi badla ja sakta hai.</p>
             </div>
-            
+
             <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl">
               <p className="font-black text-amber-800 dark:text-amber-300 text-sm mb-1">⚠️ Naam Correction Ke Liye Sahi Proof Na Hona</p>
               <p className="text-xs text-[var(--color-text-muted)]">Agar naam badla hai toh Gazette notification ya affidavit jaisa koi valid proof zaroori ho sakta hai. Bina proper proof ke portal par naam change approve nahi hoga.</p>
             </div>
-            
+
             <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl">
               <p className="font-black text-amber-800 dark:text-amber-300 text-sm mb-1">⚠️ PM Kisan Gender/DOB Correction Ignore Karna</p>
               <p className="text-xs text-[var(--color-text-muted)]">Agar Aadhaar par DOB alag hai aur portal par alag, toh verification fail ho jayega. Dono jagah same hona chahiye.</p>

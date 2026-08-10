@@ -17,11 +17,11 @@ export default function SearchBar() {
   return (
     <form onSubmit={handleSearch} className="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto mb-8" role="search">
       <div className="flex-1 relative">
-        <input 
-          type="search" 
+        <input
+          type="search"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          placeholder="Search: PM Kisan Status, KCC Loan, Tractor Subsidy..." 
+          placeholder="Search: PM Kisan Status, KCC Loan, Tractor Subsidy..."
           className="w-full px-5 py-4 pl-12 rounded-xl border-0 text-gray-900 placeholder-gray-400 text-sm bg-white shadow-xl focus:outline-none focus:ring-2 focus:ring-green-300"
           aria-label="Search PM Kisan articles and guides"
         />
@@ -31,8 +31,8 @@ export default function SearchBar() {
           </svg>
         </span>
       </div>
-      <button 
-        type="submit" 
+      <button
+        type="submit"
         className="px-8 py-4 bg-yellow-300 hover:bg-yellow-200 text-green-900 font-bold rounded-xl text-sm transition-colors shadow-xl whitespace-nowrap"
       >
         Search

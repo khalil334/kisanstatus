@@ -29,11 +29,6 @@ export const metadata: Metadata = {
   },
 };
 
-/**
- * Guided reading order for first-time visitors. Slugs must exist in
- * MAANDHAN_ARTICLES — build breaks the link silently otherwise, so keep
- * this list in sync when articles are added/renamed.
- */
 const READING_PATH: { slug: string; why: string }[] = [
   { slug: 'pm-kisan-maandhan-eligibility-documents', why: 'Pehle confirm karein ki aap eligible hain — yahin se sab shuru hota hai.' },
   { slug: 'pm-kisan-maandhan-age-wise-contribution-chart-2026', why: 'Apni umar ka exact monthly contribution dekhein.' },
@@ -137,9 +132,9 @@ export default function MaandhanListingPage() {
       <h2 className="text-2xl font-bold mb-3">Sabhi Maandhan guides</h2>
       <div className="grid gap-6 mb-8">
         {MAANDHAN_ARTICLES.map((article) => (
-          <Link 
-            key={article.slug} 
-            href={`/maandhan/${article.slug}`} 
+          <Link
+            key={article.slug}
+            href={`/maandhan/${article.slug}`}
             className="block p-6 border rounded-lg hover:shadow-lg bg-white"
           >
             <h2 className="text-xl font-bold mb-2">{article.title}</h2>

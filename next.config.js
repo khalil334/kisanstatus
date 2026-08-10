@@ -43,12 +43,8 @@ const nextConfig = {
     '@radix-ui/react-popover',
   ],
 
-  // NOTE: redirects live here and ONLY here. Do not add a `redirects` block to
-  // vercel.json — Vercel platform redirects run BEFORE Next.js ones, so a rule
-  // there silently overrides this file and creates split-brain config (BUG-2).
   async redirects() {
     return [
-      // Host normalization: apex is canonical.
       {
         source: '/:path*',
         has: [{ type: 'host', value: 'kisanstatus.vercel.app' }],
@@ -56,16 +52,9 @@ const nextConfig = {
         permanent: true,
       },
       { source: '/en', destination: '/', permanent: true },
-      // FIX-2 (fix.md): legacy CMS-shaped paths that Googlebot / feed readers
-      // guess and that GSC reports under "Not found (404)". Each target was
-      // verified live at 200 on 2026-08-08. Only paths with an unambiguous
-      // modern equivalent are redirected; the rest stay 404 on purpose.
       { source: '/sitemap_index.xml', destination: '/sitemap.xml', permanent: true },
       { source: '/feed', destination: '/rss.xml', permanent: true },
       { source: '/index.html', destination: '/', permanent: true },
-      // Moved from app/articles/[slug]/page.tsx: in-page redirect() never ran
-      // (root loading.tsx streams a 200 shell first) and the slug is not in
-      // generateStaticParams, so with dynamicParams=false it would 404.
       { source: '/articles/PmKisanBeneficiaryListVillageWise2026', destination: '/articles/PmKisanBeneficiaryList2026', permanent: true },
       { source: '/new-registration', destination: '/articles/PmKisanMasterGuide2026', permanent: true },
       { source: '/articles/pm-kisan-ekyc-online-2026', destination: '/articles/PmKisanMasterGuide2026', permanent: true },
@@ -110,12 +99,7 @@ const nextConfig = {
       { source: '/pm-kisan-beneficiary-status', destination: '/articles/PmKisan24viKist2026', permanent: true },
       { source: '/pm-kisan-beneficiary-list', destination: '/articles/PmKisanBeneficiaryList2026', permanent: true },
       { source: '/pm-kisan-kyc-csc', destination: '/articles/PmKisanMasterGuide2026', permanent: true },
-      // Canonical destination for /pm-kisan-status: the live site has been
-      // sending this to the quick-status-check calculator (the vercel.json rule
-      // won before it was consolidated here). Keep that target so no live URL
-      // behaviour changes.
       { source: '/pm-kisan-status', destination: '/calculator/quick-status-check', permanent: true },
-      // BUG-5: /speed-insights was a noindex meta-refresh placeholder page; now a real redirect.
       { source: '/speed-insights', destination: '/', permanent: true },
       { source: '/kisan-status', destination: '/articles/PmKisan24viKist2026', permanent: true },
       { source: '/scheme/agristack', destination: '/articles/AgriStackKyaHai2026', permanent: true },

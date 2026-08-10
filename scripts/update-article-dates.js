@@ -25,10 +25,6 @@ function getGitDates(filePath) {
       { encoding: 'utf-8', stdio: ['pipe', 'pipe', 'ignore'] }
     ).trim();
 
-    // BUG-11: never fabricate dates. If git history is unavailable (e.g. a
-    // shallow clone — Vercel clones shallow by default), return null so the
-    // caller SKIPS the article and the existing dates in articles-data.ts are
-    // kept, instead of stamping "now" into JSON-LD/sitemap freshness signals.
     if (!firstCommit || !lastCommit) {
       return null;
     }
@@ -154,8 +150,6 @@ function updateArticlesData() {
 
   console.log(`📊 Summary: ${updatedCount} updated, ${skippedCount} skipped`);
 
-  // BUG-11: if git history was missing for every article, the clone is almost
-  // certainly shallow — say so loudly instead of silently doing nothing.
   if (matches.length > 0 && noGitCount === matches.length) {
     console.log('\n⚠️  Git history unavailable for ALL articles (shallow clone?). Dates were NOT updated — existing values kept.');
   }

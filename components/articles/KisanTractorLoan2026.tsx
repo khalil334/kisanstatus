@@ -51,7 +51,6 @@ const FAQS_DATA = [
 export default function KisanTractorLoan2026({ article }: { article: ArticleMeta }) {
 return (
  <>
-   {}
    <div className="bg-[var(--color-primary)] py-8">
      <div className="container-site max-w-3xl">
        <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
@@ -76,7 +75,6 @@ return (
 
    <div className="container-site max-w-3xl py-8">
 
-     {}
      <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
        <Image
          src={article.ogImage || '/images/articles/kisan-tractor-loan-2026/hero-banner.webp'}
@@ -93,7 +91,6 @@ return (
        </p>
      </div>
 
-     {}
      <div className="my-6 p-5 bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-400 dark:border-amber-700 border-l-[6px] rounded-xl">
        <h2 className="text-base font-black text-amber-800 dark:text-amber-300 mb-2">Dealer Showroom Mein Jo Hua</h2>
        <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed mb-2">
@@ -107,7 +104,6 @@ return (
        </p>
      </div>
 
-     {}
      <section className="mb-8">
        <SH>Bina Down Payment — Sach Kya Hai?</SH>
        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -152,7 +148,6 @@ return (
        </IB>
      </section>
 
-     {}
      <section className="mb-8">
        <SH>Loan Kaise Kaam Karta Hai — Numbers Samjho</SH>
        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -207,7 +202,6 @@ return (
        <p className="text-xs text-[var(--color-text-muted)]">* Approximate. Actual EMI processing fees aur bank rate par depend karti hai.</p>
      </section>
 
-     {}
      <section className="mb-8">
        <SH>Apply Kaise Karein — Ground Process</SH>
        <StepList>
@@ -225,7 +219,6 @@ return (
        </WB>
      </section>
 
-     {}
      <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
        <Image
          src="/images/articles/kisan-tractor-loan-2026/bank-loan-process.webp"
@@ -241,7 +234,6 @@ return (
        </p>
      </div>
 
-     {}
      <section className="mb-8">
        <SH>Hidden Costs — Jo Dealer Aur Bank Dono Chupate Hain</SH>
        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -274,7 +266,6 @@ return (
        </DB>
      </section>
 
-     {}
      <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
        <Image
          src="/images/articles/kisan-tractor-loan-2026/tractor-approved.webp"
@@ -290,7 +281,6 @@ return (
        </p>
      </div>
 
-     {}
      <section className="mb-8">
        <SH>4 Real Scenarios — Jo Field Mein Hote Hain</SH>
 
@@ -325,7 +315,6 @@ return (
        </div>
      </section>
 
-     {}
      <section className="mb-8">
        <SH>State Subsidy — Portal Se Bank Tak Ka Exact Workflow</SH>
        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -370,7 +359,6 @@ return (
        </div>
      </section>
 
-     {}
      <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
        <Image
          src="/images/articles/kisan-tractor-loan-2026/tractor-finance-guide.webp"
@@ -386,7 +374,6 @@ return (
        </p>
      </div>
 
-     {}
      <section className="mb-8">
        <SH>Fasal Kharab Ho Gayi — EMI Kaise Manage Karein</SH>
        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -427,7 +414,6 @@ return (
        </DB>
      </section>
 
-     {}
      <section className="mb-8">
        <SH>Loan Reject Kyun Hota Hai — 7 Reasons + Fix</SH>
        <div className="space-y-3">
@@ -455,7 +441,6 @@ return (
        </div>
      </section>
 
-     {}
      <section className="mb-8">
        <SH>2026-27 Trends — Tayyar Raho</SH>
        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
@@ -473,7 +458,6 @@ return (
        </IB>
      </section>
 
-     {}
      <section className="mb-8">
        <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
          Real Sawal — Seedhe Jawaab
@@ -481,7 +465,6 @@ return (
        <FAQBlock faqs={FAQS_DATA} caption="Tractor Loan FAQ 2026 — Ground-Level Verified Answers" />
      </section>
 
-     {}
      <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
        <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Bottom Line</h3>
        <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">

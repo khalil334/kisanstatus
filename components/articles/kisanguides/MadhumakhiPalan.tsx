@@ -3,13 +3,6 @@ import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
 
-// ⚠️ DEAD CODE — Next.js is metadata export ko ignore karta hai.
-// `export const metadata` sirf app/**/page.tsx ya layout.tsx mein kaam karta hai;
-// ye ek client-imported article component hai, isliye ye block render HI nahi hota.
-// Live <title>/description/canonical/OG `app/articles/[slug]/page.tsx` ke
-// generateMetadata() se aate hain, jo lib/articles-data.ts padhta hai.
-// >>> Title/description/canonical badalna hai to lib/articles-data.ts edit karo. <<<
-// Yahan edit karne se live page pe KUCHH nahi badlega. (Ref: fixplan.md BUG-3)
 export const metadata: Metadata = {
   title: 'Madhumakhi Palan 2026: KVIC Subsidy, Profit & Complete Guide',
   description: 'Madhumakhi palan (beekeeping) ka complete guide. Janein KVIC subsidy, bee box price, Apis mellifera farming aur honey business ki ground reality aur profit margin.',
@@ -24,11 +17,11 @@ export const metadata: Metadata = {
     url: 'https://kisanstatus.com/articles/madhumakhi-palan-kvic-subsidy',
     images: [{ url: 'https://kisanstatus.com/images/kisanguides/madhumakhi-palan-hero.webp', width: 1200, height: 630, alt: 'Beekeeping Boxes in Mustard Field - Apis Mellifera Colony' }],
   },
-  twitter: { 
-    card: 'summary_large_image', 
-    title: 'Madhumakhi Palan 2026: KVIC Subsidy, Profit & Complete Guide', 
-    description: 'Madhumakhi palan ka complete guide. Janein bee farming, KVIC subsidy, bee box price aur honey business ki ground reality.', 
-    images: ['https://kisanstatus.com/images/kisanguides/madhumakhi-palan-hero.webp'] 
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Madhumakhi Palan 2026: KVIC Subsidy, Profit & Complete Guide',
+    description: 'Madhumakhi palan ka complete guide. Janein bee farming, KVIC subsidy, bee box price aur honey business ki ground reality.',
+    images: ['https://kisanstatus.com/images/kisanguides/madhumakhi-palan-hero.webp']
   },
   alternates: { canonical: 'https://kisanstatus.com/articles/madhumakhi-palan-kvic-subsidy' },
 };
@@ -41,7 +34,7 @@ const jsonLd = {
         { '@type': 'Question', name: 'Agar padosi kisan zabardasti pesticide spray kar de, toh colony bachane ka koi turant upay hai?', acceptedAnswer: { '@type': 'Answer', text: 'Turant upay mushkil hai, lekin agar advance mein pata chal jaye, toh hive ke entrance ko temporary mesh se band karke 2-3 din ke liye dark, cool jagah par shift kar dena chahiye. Lekin yeh short-term solution hai, long-term mein organic zones hi safe hain.' } },
         { '@type': 'Question', name: 'Kya ghar ki chhat (terrace) par bee box rakhna safe aur practical hai?', acceptedAnswer: { '@type': 'Answer', text: 'Technically possible hai, lekin practical nahi. Bees ko paas mein paani ka source aur ample flora chahiye hota hai. Terrace par paani ki kami aur padosiyon ki shikayat ka risk hamesha rehta hai.' } },
         { '@type': 'Question', name: 'Purane bee frames ko dobara use karne mein kya risk hai?', acceptedAnswer: { '@type': 'Answer', text: 'Bahut zyada risk. Purane frames mein American Foulbrood jaisi deadly diseases ke spores saalon tak zinda reh sakte hain. Naye beginner ko hamesha naye, sterilized frames ke saath shuruat karni chahiye.' } }
-      ] 
+      ]
     }
   ]
 };
@@ -50,27 +43,27 @@ export default function MadhumakhiPalan() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-8 text-gray-800 dark:text-gray-200 leading-relaxed prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-blue-600 dark:prose-a:text-blue-400">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      
-      <Image 
-        src="/images/kisanguides/madhumakhi-palan-hero.webp" 
-        alt="Beekeeping Boxes in Mustard Field - Apis Mellifera Colony" 
-        width={1200} 
-        height={630} 
+
+      <Image
+        src="/images/kisanguides/madhumakhi-palan-hero.webp"
+        alt="Beekeeping Boxes in Mustard Field - Apis Mellifera Colony"
+        width={1200}
+        height={630}
         priority
         sizes="(max-width: 768px) 100vw, 1200px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose"
       />
-      
+
       <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100 leading-tight">
         Madhumakhi Palan 2026: Shahad Se Kamayein, Khet Ka Yield Badhayein - Complete Guide
       </h1>
-      
+
       <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
         <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
           <strong>Sach kahoon toh:</strong> Jo log sirf YouTube videos dekhkar bina practical training ke seedha 40-50 boxes kharid kar khet mein phenk dete hain, wo aksar pehle saal ke lean period (May-June) mein hi demotivate ho kar chhod dete hain. Lekin agar isse ek proper business ki tarah treat kiya jaye, toh iski "dohri kamai" (shahad + pollination) ise ek highly profitable venture bana deti hai.
         </p>
       </div>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
         Himachal Pradesh aur Uttarakhand ke apple belts mein toh kisaan khud beekeepers ko paise dekar apne orchards mein colonies rakhwate hain, kyunki unhe pata hai ki bina pollination ke phal ki quality aur quantity dono 30-40% tak gir jati hai. Yeh article aapko KVIC subsidy, breed selection, aur ground-level management ki complete jankari dega.
       </p>
@@ -122,13 +115,13 @@ export default function MadhumakhiPalan() {
         Agar serious income chahiye, toh Apis mellifera hi sahi choice hai. Iski production capacity 2-3 guna zyada hai. Colony khareedte waqt vendor ki credibility check karna behad zaroori hai. Ek healthy, young queen wali colony ka rate market mein ₹3,500-4,500 ke aas-paas hota hai, lekin yeh long term mein behtar production deti hai.
       </p>
 
-      <Image 
-        src="/images/kisanguides/beekeeping-equipment-tools.webp" 
-        alt="Essential Beekeeping Equipment and Tools - Smoker, Veil, Hive Tool, and Protective Gear" 
-        width={800} 
-        height={450} 
+      <Image
+        src="/images/kisanguides/beekeeping-equipment-tools.webp"
+        alt="Essential Beekeeping Equipment and Tools - Smoker, Veil, Hive Tool, and Protective Gear"
+        width={800}
+        height={450}
         sizes="(max-width: 768px) 100vw, 800px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose"
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
@@ -201,9 +194,9 @@ export default function MadhumakhiPalan() {
         </ul>
       </div>
 
-      <ExternalLinkButton 
-        url="https://www.honeymission.com/" 
-        label="National Honey Mission Portal - Apply Karein" 
+      <ExternalLinkButton
+        url="https://www.honeymission.com/"
+        label="National Honey Mission Portal - Apply Karein"
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
@@ -230,13 +223,13 @@ export default function MadhumakhiPalan() {
         <li><strong>October - December (Main Honey Flow):</strong> Eucalyptus, Sunflower, aur Ber ke phoolon ke dauran main honey extraction hota hai. Is time Varroa mite treatment zaroor karein taaki winter colony strong rahe.</li>
       </ul>
 
-      <Image 
-        src="/images/kisanguides/bee-colony-inspection.webp" 
-        alt="Close-up view of beekeeper inspecting wooden bee frame with queen bee and brood pattern" 
-        width={800} 
-        height={450} 
+      <Image
+        src="/images/kisanguides/bee-colony-inspection.webp"
+        alt="Close-up view of beekeeper inspecting wooden bee frame with queen bee and brood pattern"
+        width={800}
+        height={450}
         sizes="(max-width: 768px) 100vw, 800px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose"
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
@@ -246,28 +239,28 @@ export default function MadhumakhiPalan() {
         Sirf production kaafi nahi hai, sahi daam par bechna hi asli game-changer hai. Naye beekeepers aksar yeh galti karte hain ki wo apna saara shahad local traders ko bulk mein saste daam (₹250-300/kg) par bech dete hain, jabki market price uska dugna hota hai.
       </p>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Mera suggestion yeh hoga ki shuru ke 6 mahine local D2C (WhatsApp groups, local societies, farmer markets) par focus karein. Wahan aap aaram se ₹400-600/kg ka rate le sakte hain. "Chunk honey" ya "Honey with Comb" ko glass jars mein pack karke premium price par becha ja sakta hai, kyunki consumers ise 100% pure maante hain. 
+        Mera suggestion yeh hoga ki shuru ke 6 mahine local D2C (WhatsApp groups, local societies, farmer markets) par focus karein. Wahan aap aaram se ₹400-600/kg ka rate le sakte hain. "Chunk honey" ya "Honey with Comb" ko glass jars mein pack karke premium price par becha ja sakta hai, kyunki consumers ise 100% pure maante hain.
       </p>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
         Packaged honey bechne ke liye <strong>honey business mein FSSAI license ki zaroorat</strong> hoti hai, jiska basic registration cost ₹5,000-10,000 aata hai aur yeh online aasani se ho jata hai. Ek achha label design aur NABL certified lab se testing report aapke product ki value ko 3x badha deti hai.
       </p>
 
-      <Image 
-        src="/images/kisanguides/honey-harvesting-process.webp" 
-        alt="Beekeeper extracting golden honey from wooden frames using manual extractor machine" 
-        width={800} 
-        height={450} 
+      <Image
+        src="/images/kisanguides/honey-harvesting-process.webp"
+        alt="Beekeeper extracting golden honey from wooden frames using manual extractor machine"
+        width={800}
+        height={450}
         sizes="(max-width: 768px) 100vw, 800px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose"
       />
 
-      <Image 
-        src="/images/kisanguides/honey-value-addition-products.webp" 
-        alt="Beautifully arranged glass jars of branded packaged honey and natural honeycomb for retail sale" 
-        width={800} 
-        height={450} 
+      <Image
+        src="/images/kisanguides/honey-value-addition-products.webp"
+        alt="Beautifully arranged glass jars of branded packaged honey and natural honeycomb for retail sale"
+        width={800}
+        height={450}
         sizes="(max-width: 768px) 100vw, 800px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose"
       />
 
       <div className="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
@@ -319,14 +312,13 @@ export default function MadhumakhiPalan() {
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Beekeeping un logon ke liye viable hai jo apne khet ya orchard ke saath-saath daily 1-2 hours hive inspection de sakte hain, aur bees ke stings se ghabrate nahi hain. Yeh business unke liye bilkul nahi hai jo quick returns ki expectation rakhte hain ya heavy pesticide use wale agricultural zones ke beech mein rehte hain.
       </p>
-      
+
       <div className="bg-amber-50 dark:bg-amber-900/20 p-5 rounded-lg border border-amber-200 dark:border-amber-800 mb-8 not-prose">
         <h4 className="font-semibold text-amber-900 dark:text-amber-200 mb-2">🛡️ Risk Management</h4>
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">Subsidy ek bonus hai, guarantee nahi. Apna business plan aise banayein jaise subsidy milegi hi nahi. Risk management ke liye, kuch regions mein beekeeping units ke liye bhi insurance options explore kiye ja sakte hain.</p>
         <Link href="/articles/PmfbyCropInsurance2026" className="text-amber-700 hover:underline dark:text-amber-400 text-sm font-medium">PM Fasal Bima Yojana (PMFBY) →</Link>
       </div>
 
-      {}
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Sources & References
       </h2>

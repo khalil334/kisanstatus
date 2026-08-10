@@ -2,8 +2,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
-// Self-contained article — कोई shared component import नहीं।
-
 const FAQS = [
   {
     q: 'क्या सिर्फ मोबाइल नंबर से स्टेटस देख सकते हैं?',

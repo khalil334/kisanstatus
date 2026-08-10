@@ -3,9 +3,9 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { 
-  SI, StepList, IB, WB, SH, GovLink, RelatedArticles, 
-  AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate 
+import {
+  SI, StepList, IB, WB, SH, GovLink, RelatedArticles,
+  AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate
 } from '@/components/ArticleShared';
 import CountdownModal from '@/components/CountdownModal';
 import type { ArticleMeta } from '@/lib/articles-data';
@@ -109,14 +109,11 @@ const STATES_LIST = [
 ] as const;
 
 export default function PmKisanBeneficiaryList2026({ article }: { article: ArticleMeta }) {
-  const [modal, setModal] = useState<{ 
-    title: string; 
-    message: string; 
-    url: string; 
+  const [modal, setModal] = useState<{
+    title: string;
+    message: string;
+    url: string;
   } | null>(null);
-
-
-
 
   const handleDownloadPDF = () => {
     setModal({

@@ -41,10 +41,10 @@ const FAQS_DATA = [
 ];
 
 export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article: ArticleMeta }) {
-  const [modal, setModal] = useState<{ 
-    title: string; 
-    message: string; 
-    url: string; 
+  const [modal, setModal] = useState<{
+    title: string;
+    message: string;
+    url: string;
   } | null>(null);
 
   const handleOfficialLink = (title: string, message: string, url: string) => {
@@ -125,7 +125,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
 
         <section className="mb-8">
           <SH>FTO Generated Ka Matlab Kya Hai? (FTO Meaning in Hindi)</SH>
-          
+
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Ek example se samajhte hain. Maan lijiye aapne kisi ko cheque diya. Cheque dena matlab paise ka wada kar diya, order de diya. Ab bank ka kaam hai us cheque ko cash karna. <strong>FTO bhi bilkul yahi hai</strong> — sirf digital form mein.
           </p>
@@ -225,7 +225,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
 
         <section className="mb-8">
           <SH>FTO Ke Baad Kitne Din Mein Paisa Aata Hai?</SH>
-          
+
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Ye sabse zyada poocha jaane wala sawal hai. Sach batayein toh iska ek fixed jawab nahi hai — bank alag alag speed se kaam karte hain.
           </p>
@@ -281,7 +281,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
 
         <section className="mb-8">
           <SH>24vi Kist Kab Aayegi? (PM Kisan 24vi Kist FTO Date)</SH>
-          
+
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             October 2026 ke aas-paas expected hai, lekin exact date abhi tak official taur par announce nahi hui. September ke end tak FTO generation shuru hone ki sambhavna hai.
           </p>
@@ -317,7 +317,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
 
         <section className="mb-8">
           <SH>Mobile Se FTO Status Check Kaise Karein?</SH>
-          
+
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Process kaafi seedha hai. Ye steps follow karein:
           </p>
@@ -329,7 +329,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             <SI n={4}>OTP verify karein → phir <strong>Get Data</strong> button dabayein</SI>
             <SI n={5}>Table mein FTO status ke saath credit release status bhi dikhega</SI>
           </StepList>
-          
+
           <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl">
             <p className="text-sm font-bold text-green-800 dark:text-green-300 mb-2">
               🔍 Abhi FTO Status Check Karein
@@ -372,7 +372,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
         <section className="mb-8">
           <SH>CSC Se Registration Karwane Ki Fees Kitni Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Officially, PM Kisan registration ki service CSC (Common Service Centre) par <strong>free honi chahiye</strong> — sarkari guidelines mein koi fixed fee prescribed nahi hai. 
+            Officially, PM Kisan registration ki service CSC (Common Service Centre) par <strong>free honi chahiye</strong> — sarkari guidelines mein koi fixed fee prescribed nahi hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
             Practically, kuch CSC operators printing ya "seva shulk" ke naam par ₹20 se ₹50 tak charge kar lete hain, jo unauthorized hai. Agar koi isse zyada maange, toh mana kar sakte hain ya district agriculture office mein complaint darj kara sakte hain.
@@ -381,7 +381,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
 
         <section className="mb-8">
           <SH>15 Din Ho Gaye Par Paisa Nahi Aaya? (FTO Generated But Money Not Received)</SH>
-          
+
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Ye situation bahut se kisanon ke saath hoti hai. Ghabraane ki zaroorat nahi — in steps se check karte jaayein:
           </p>
@@ -437,7 +437,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
 
         <section className="mb-8">
           <SH>State Ke Hisaab Se Time</SH>
-          
+
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Har raajya ka processing system alag hai, isliye time bhi different lagta hai:
           </p>

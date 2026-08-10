@@ -117,7 +117,7 @@ export default function PmKisanBankAccountChangeProcess() {
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Portal par <Link href="/articles/pm-kisan-fto-generated-ka-matlab-kya-hai" className="underline text-green-700 dark:text-green-400">FTO Generated</Link> dikha diya jaata hai, par bank mein "Transaction Rejected" bol dete hain. Yahi se pareshani shuru hoti hai. Ek kaam ki baat: jab bhi CSC ya bank jao, ek chhoti diary mein tareekh, kisse mile aur kya bataya gaya — ye teen cheezein likh lo. Baad mein kisi bhi vivaad mein ye kaafi kaam aata hai.
           </p>
-          
+
           <SafeImage
             src="/images/articles/pm-kisan-bank-account-change/bank-passbook-update.webp"
             alt="Updated bank passbook with new IFSC code"
@@ -291,24 +291,24 @@ export default function PmKisanBankAccountChangeProcess() {
           <SH>Ye Galtiyan Mat Karna (Warna Phir Fail Hoga)</SH>
           <div className="space-y-3">
             {[
-              { 
-                mistake: 'IFSC Code Galat Daal Diya', 
+              {
+                mistake: 'IFSC Code Galat Daal Diya',
                 fix: 'Passbook ke pehle page par jo IFSC likha hai, bas wahi daliye. Internet se search karke mat daliye, kyunki branch ka IFSC alag ho sakta hai.',
               },
-              { 
-                mistake: 'Naam Match Nahi Kar Raha', 
+              {
+                mistake: 'Naam Match Nahi Kar Raha',
                 fix: 'Bank account mein naam bilkul Aadhaar jaisa hona chahiye. "Ram Kumar" aur "Ram Kumar Singh" system mein alag maane jayenge.',
               },
-              { 
-                mistake: 'Joint Account Use Kar Liya', 
+              {
+                mistake: 'Joint Account Use Kar Liya',
                 fix: 'PM Kisan ka paisa sirf single account mein aata hai. Joint account mein payment fail ho sakti hai.',
               },
-              { 
-                mistake: 'NPCI Seeding Bhool Gaye', 
+              {
+                mistake: 'NPCI Seeding Bhool Gaye',
                 fix: 'Portal par account update karne ke baad bank jakar NPCI seeding zaroor karwani chahiye. Warna paisa aayega nahi.',
               },
-              { 
-                mistake: 'Jan Dhan Account Bina Active Kiye Link Kar Diya', 
+              {
+                mistake: 'Jan Dhan Account Bina Active Kiye Link Kar Diya',
                 fix: 'Jan Dhan account zero balance par bhi chalta hai, lekin agar wo dormant ho gaya toh paisa fail. Pehle bank jakar usme ₹100 deposit kariye aur account "Active" karwaiye, phir PM Kisan mein link kariye.',
               },
             ].map(({ mistake, fix }, i) => (

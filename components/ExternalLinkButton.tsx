@@ -21,8 +21,6 @@ export default function ExternalLinkButton({ url, label, className = '' }: Exter
   useEffect(() => {
     if (countdown === null) return;
 
-    // Both the tick and the final redirect happen inside the timer callback, so
-    // the effect body never calls setState synchronously (react-hooks/set-state-in-effect).
     const timer = setTimeout(() => {
       if (countdown <= 1) {
         window.open(url, '_blank', 'noopener,noreferrer');
@@ -63,7 +61,7 @@ export default function ExternalLinkButton({ url, label, className = '' }: Exter
           </>
         )}
       </button>
-      
+
       {isRedirecting && (
         <p className="text-xs text-gray-500 dark:text-gray-400 mt-2 text-center animate-pulse">
           🔒 Aapko secure external website par le jaya ja raha hai. Thoda wait karein...

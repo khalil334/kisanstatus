@@ -2,9 +2,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
-// Self-contained article — कोई shared component import नहीं (Rule 2)।
-// Structure variant: timeline-rail release record + themed FAQ groups (दो हिस्सों में बंटे सवाल) (Rule 3)।
-
 const FAQS_PAISA = [
   {
     q: 'MP में किसान को कुल कितना पैसा मिलता है?',
