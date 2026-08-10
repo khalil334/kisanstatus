@@ -176,6 +176,82 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         </tr>
       </SchemeTable>
 
+      <h2>Kaun Eligible Hai, Kaun Nahi</h2>
+
+      <p>
+        Jad PM Kisan hi hai, isliye shartein lagbhag wahi hain, kuch state ke apne rules ke saath:
+      </p>
+
+      <h3>Mandatory Conditions:</h3>
+      <ul>
+        <li>
+          <strong>MP domicile:</strong> Permanent residence Madhya Pradesh ka ho — kheti MP
+          mein aur rehna kisi doosre rajya mein, is combination par top-up nahi banta.
+        </li>
+        <li>
+          <strong>PM Kisan record chaalu:</strong> Central scheme mein aapki file active ho;
+          wahan hold lagte hi state ki kist bhi ruk jaati hai.
+        </li>
+        <li>
+          <strong>Zameen RoR mein aapke naam:</strong> Cultivable land ka record of rights
+          aapke naam par darj ho, sirf kabza kaafi nahi.
+        </li>
+        <li>
+          <strong>Girdawari mein fasal darj:</strong> Jis season ki fasal SAARA mein darj
+          nahi, us season ki state kist atak sakti hai — ye MP ki apni extra shart hai.
+        </li>
+        <li>
+          <strong>e-KYC poori:</strong> Aadhaar seeding aur mobile linking dono complete
+          hon.
+        </li>
+      </ul>
+
+      <h3>Exclusion List (Kaun Nahi Le Sakta):</h3>
+      <ul>
+        <li>Institutional landholders (Trusts, Mandirs, Societies).</li>
+        <li>Wo parivar jisme koi member government employee (Group A, B, C, D) ho.</li>
+        <li>Retired pensioners jinki monthly pension ₹10,000 se adhik ho.</li>
+        <li>Wo kisan jinhone pichhle vitthiya varsh mein Income Tax return file kiya ho.</li>
+        <li>Professionals (Doctors, Engineers, Lawyers, CAs) jo registered hain.</li>
+      </ul>
+
+      <h2>PM Kisan Aur MP Ki Scheme — Do Juda Cheezein</h2>
+
+      <p>Dono ek hi lagti hain, hain nahi. Fark yahan saaf hai:</p>
+
+      <SchemeTable>
+        <tr>
+          <th>Parameter</th>
+          <th>PM Kisan Samman Nidhi</th>
+          <th>MP CM Kisan Kalyan Yojana</th>
+        </tr>
+        <tr>
+          <td>Laagu Karne Wali Sarkar</td>
+          <td>Bharat Sarkar (Central)</td>
+          <td>Madhya Pradesh Sarkar (State)</td>
+        </tr>
+        <tr>
+          <td>Varshik Raashi</td>
+          <td>₹6,000</td>
+          <td>₹6,000 (State Top-up)</td>
+        </tr>
+        <tr>
+          <td>Portal</td>
+          <td>pmkisan.gov.in</td>
+          <td>saara.mp.gov.in</td>
+        </tr>
+        <tr>
+          <td>Application</td>
+          <td>CSC ya Self-Registration</td>
+          <td>Auto-mapped (PM Kisan data se)</td>
+        </tr>
+        <tr>
+          <td>Helpline</td>
+          <td>155261 (PM Kisan helpline)</td>
+          <td>MP CM Helpline 181</td>
+        </tr>
+      </SchemeTable>
+
       <h2>SAARA Portal Kya Hai — Aur Wahi Kyun</h2>
 
       <p>
@@ -236,6 +312,28 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         caption="Kist ka timing aksar rabi katai aur kharif buwai ke kharche ke aas-paas rakha jaata hai"
       />
 
+      <h2>Gaon Ki List Mein Apna Naam</h2>
+
+      <p>
+        Khud eligible lagte hain par paisa nahi aaya? Pehle list mein naam hai ya nahi, ye
+        dekh lein. Beneficiary list SAARA portal se hi nikalti hai:
+      </p>
+
+      <ol>
+        <li>Portal par "Reports" ya "Beneficiary List" section kholein.</li>
+        <li>Zila, Janpad aur Gram Panchayat — teeno dropdown apne gaon ke hisaab se bharein.</li>
+        <li>List generate karein; MP mein ye aksar PDF ke roop mein utarti hai.</li>
+        <li>
+          PDF mein apna naam khud dhoondhein — computer par Ctrl+F, phone ke PDF app mein
+          search icon. Naam ki spelling RoR wali rakhein, kyunki list wahi se banti hai.
+        </li>
+      </ol>
+
+      <p>
+        PM Kisan mein naam hai par is list mein nahi? Aksar ye data sync ka glitch hota hai. Nazdeeki
+        CSC ya Gram Panchayat se sync karwane ko kahein.
+      </p>
+
       <h2>Kist Ka Waqt — Pichhle Saalon Ka Pattern</h2>
 
       <p>
@@ -270,43 +368,98 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         nishani nahi hai.
       </p>
 
-      <h2>Kaun Eligible Hai, Kaun Nahi</h2>
+      <h2>Girdawari — Wo Kadam Jo MP Ke Kisan Bhool Jaate Hain</h2>
 
       <p>
-        Jad PM Kisan hi hai, isliye shartein lagbhag wahi hain, kuch state ke apne rules ke saath:
+        Baaki states mein aisa koi season-wise requirement nahi hai, isliye bahar se aaye
+        logon ko ye cheez pata hi nahi hoti. MP mein har season (Kharif aur Rabi) mein
+        girdawari hoti hai — record banta hai ki kis khet mein kya boya gaya. Patwari ye
+        record banata hai. Lekin patwari bhi insaan hai; galti aur der, dono common hain.
       </p>
 
-      <h3>Mandatory Conditions:</h3>
-      <ul>
-        <li>
-          <strong>MP domicile:</strong> Permanent residence Madhya Pradesh ka ho — kheti MP
-          mein aur rehna kisi doosre rajya mein, is combination par top-up nahi banta.
-        </li>
-        <li>
-          <strong>PM Kisan record chaalu:</strong> Central scheme mein aapki file active ho;
-          wahan hold lagte hi state ki kist bhi ruk jaati hai.
-        </li>
-        <li>
-          <strong>Zameen RoR mein aapke naam:</strong> Cultivable land ka record of rights
-          aapke naam par darj ho, sirf kabza kaafi nahi.
-        </li>
-        <li>
-          <strong>Girdawari mein fasal darj:</strong> Jis season ki fasal SAARA mein darj
-          nahi, us season ki state kist atak sakti hai — ye MP ki apni extra shart hai.
-        </li>
-        <li>
-          <strong>e-KYC poori:</strong> Aadhaar seeding aur mobile linking dono complete
-          hon.
-        </li>
-      </ul>
+      <p>
+        Kisan khud bhi <strong>MP Kisan App</strong> se apni girdawari darj kar sakta hai.
+        Khet par khade hokar app kholein, fasal select karein, photo khinchein aur submit
+        kar dein. GPS se location verify hoti hai. Bas thodi der ka kaam hai, aur fayde do milte hain:
+        state kist ka data clean rehta hai, aur fasal bima ya muavze ke waqt bhi wahi record
+        kaam aata hai.
+      </p>
 
-      <h3>Exclusion List (Kaun Nahi Le Sakta):</h3>
+      <p>
+        Agar aapki kist bina wajah atki lag rahi hai aur bank sab theek keh raha hai, toh
+        girdawari record zaroor check karwayein — ye wo kona hai jahan koi nahi dekhta.
+      </p>
+
+      <h2>Saal Bhar Ke Chhote Kaam</h2>
+
+      <p>
+        Is scheme mein application nahi hai, lekin iska matlab ye nahi ki kuch karna hi nahi
+        hai. Saal mein chaar chhote kaam hain jo waqt par ho jaayein to kist kabhi nahi
+        atakti.
+      </p>
+
+      <p>
+        <strong>Season ki shuruaat mein girdawari.</strong> Kharif aur Rabi — dono season
+        mein apni fasal ki entry confirm karein, chahe patwari ne kar di ho. MP Kisan App
+        se khud darj karna sabse pakka raasta hai; upar iska tareeka likha hai.
+      </p>
+
+      <p>
+        Sehore ke ek kisan ne WhatsApp pe screenshot bheja tha — bank, Aadhaar, e-KYC sab perfect,
+        phir bhi state kist do season se nahi aayi. Aakhir mein nikli girdawari: patwari ne us
+        season uski fasal darj hi nahi ki thi. App se khud entry karne ke baad agli kist aa gayi.
+        Chhodo, wo purani baat hai — par sabak wahi hai, girdawari khud check karo.
+      </p>
+
+      <p>
+        <strong>PM Kisan ki e-KYC current rakhein.</strong> MP ki list PM Kisan ke data se
+        banti hai, isliye e-KYC expire hone ka nuksan dohra hai — central aur state, dono
+        kist rukti hain. Saal mein ek baar, kisi bhi kist ke aane se pehle, pmkisan.gov.in
+        par apna e-KYC status dekh lein.
+      </p>
+
+      <p>
+        <strong>Bank ka record taaza rakhein.</strong> Khaata band ya dormant na ho, Aadhaar
+        seeding NPCI mein active ho, aur mobile number wahi ho jo aaj chal raha hai. Ye
+        teeno kaam bank branch mein ek hi visit mein ho jaate hain.
+      </p>
+
+      <p>
+        <strong>Har credit ki entry milaayein.</strong> PM Kisan aur state ki kist alag-alag
+        dinon par aati hai, isliye passbook mein dono entries alag pehchaanein. Ek aayi aur
+        doosri nahi — to problem sirf us system mein dhoondhein jiski kist ruki hai; dono
+        ke portal aur helpline alag hain.
+      </p>
+
+      <h2>Baaki States Mein Kitna Milta Hai</h2>
+
+      <p>
+        MP ke bahar rehte hain to ye top-up aap par laagu nahi hota, aur girdawari-based
+        shart bhi sirf MP mein hai. Kai rajyon ka top-up MP se kai guna bada hai, kuch mein
+        bilkul nahi hai. Kis rajya mein kya hai — ye niche wale articles kholte hi samajh aa jaayega:
+      </p>
+
       <ul>
-        <li>Institutional landholders (Trusts, Mandirs, Societies).</li>
-        <li>Wo parivar jisme koi member government employee (Group A, B, C, D) ho.</li>
-        <li>Retired pensioners jinki monthly pension ₹10,000 se adhik ho.</li>
-        <li>Wo kisan jinhone pichhle vitthiya varsh mein Income Tax return file kiya ho.</li>
-        <li>Professionals (Doctors, Engineers, Lawyers, CAs) jo registered hain.</li>
+        <li>
+          <Link href="/rajya-yojana/rajasthan-kisan-samman-nidhi-9000">
+            Rajasthan Kisan Samman Nidhi 9000: Status aur Badhotri Update
+          </Link>
+        </li>
+        <li>
+          <Link href="/rajya-yojana/annadata-sukhibhava-status-check-2026">
+            Annadata Sukhibhava (Andhra Pradesh) — Tenant Farmers ke liye bhi
+          </Link>
+        </li>
+        <li>
+          <Link href="/rajya-yojana/namo-shetkari-yojana-status-check-2026">
+            Namo Shetkari Mahasanman Nidhi (Maharashtra)
+          </Link>
+        </li>
+        <li>
+          <Link href="/rajya-yojana/state-kisan-yojana-list-all-states-2026">
+            State Kisan Yojana List — Sabhi States Ka Comparison Table, amount aur portal ek saath
+          </Link>
+        </li>
       </ul>
 
       <h2>"Payment Successful" Dikha, Paisa Nahi Aaya — Ab Kya</h2>
@@ -351,128 +504,6 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         caption="Payment Failed dikhe to Janpad Panchayat ya Tehsil office mein ADO/Patwari se details update karwao"
       />
 
-      <h2>Gaon Ki List Mein Apna Naam</h2>
-
-      <p>
-        Khud eligible lagte hain par paisa nahi aaya? Pehle list mein naam hai ya nahi, ye
-        dekh lein. Beneficiary list SAARA portal se hi nikalti hai:
-      </p>
-
-      <ol>
-        <li>Portal par "Reports" ya "Beneficiary List" section kholein.</li>
-        <li>Zila, Janpad aur Gram Panchayat — teeno dropdown apne gaon ke hisaab se bharein.</li>
-        <li>List generate karein; MP mein ye aksar PDF ke roop mein utarti hai.</li>
-        <li>
-          PDF mein apna naam khud dhoondhein — computer par Ctrl+F, phone ke PDF app mein
-          search icon. Naam ki spelling RoR wali rakhein, kyunki list wahi se banti hai.
-        </li>
-      </ol>
-
-      <p>
-        PM Kisan mein naam hai par is list mein nahi? Aksar ye data sync ka glitch hota hai. Nazdeeki
-        CSC ya Gram Panchayat se sync karwane ko kahein.
-      </p>
-
-      <h2>Girdawari — Wo Kadam Jo MP Ke Kisan Bhool Jaate Hain</h2>
-
-      <p>
-        Baaki states mein aisa koi season-wise requirement nahi hai, isliye bahar se aaye
-        logon ko ye cheez pata hi nahi hoti. MP mein har season (Kharif aur Rabi) mein
-        girdawari hoti hai — record banta hai ki kis khet mein kya boya gaya. Patwari ye
-        record banata hai. Lekin patwari bhi insaan hai; galti aur der, dono common hain.
-      </p>
-
-      <p>
-        Kisan khud bhi <strong>MP Kisan App</strong> se apni girdawari darj kar sakta hai.
-        Khet par khade hokar app kholein, fasal select karein, photo khinchein aur submit
-        kar dein. GPS se location verify hoti hai. Bas thodi der ka kaam hai, aur fayde do milte hain:
-        state kist ka data clean rehta hai, aur fasal bima ya muavze ke waqt bhi wahi record
-        kaam aata hai.
-      </p>
-
-      <p>
-        Agar aapki kist bina wajah atki lag rahi hai aur bank sab theek keh raha hai, toh
-        girdawari record zaroor check karwayein — ye wo kona hai jahan koi nahi dekhta.
-      </p>
-
-      <h2>PM Kisan Aur MP Ki Scheme — Do Juda Cheezein</h2>
-
-      <p>Dono ek hi lagti hain, hain nahi. Fark yahan saaf hai:</p>
-
-      <SchemeTable>
-        <tr>
-          <th>Parameter</th>
-          <th>PM Kisan Samman Nidhi</th>
-          <th>MP CM Kisan Kalyan Yojana</th>
-        </tr>
-        <tr>
-          <td>Laagu Karne Wali Sarkar</td>
-          <td>Bharat Sarkar (Central)</td>
-          <td>Madhya Pradesh Sarkar (State)</td>
-        </tr>
-        <tr>
-          <td>Varshik Raashi</td>
-          <td>₹6,000</td>
-          <td>₹6,000 (State Top-up)</td>
-        </tr>
-        <tr>
-          <td>Portal</td>
-          <td>pmkisan.gov.in</td>
-          <td>saara.mp.gov.in</td>
-        </tr>
-        <tr>
-          <td>Application</td>
-          <td>CSC ya Self-Registration</td>
-          <td>Auto-mapped (PM Kisan data se)</td>
-        </tr>
-        <tr>
-          <td>Helpline</td>
-          <td>155261 (PM Kisan helpline)</td>
-          <td>MP CM Helpline 181</td>
-        </tr>
-      </SchemeTable>
-
-      <h2>Saal Bhar Ke Chhote Kaam</h2>
-
-      <p>
-        Is scheme mein application nahi hai, lekin iska matlab ye nahi ki kuch karna hi nahi
-        hai. Saal mein chaar chhote kaam hain jo waqt par ho jaayein to kist kabhi nahi
-        atakti.
-      </p>
-
-      <p>
-        <strong>Season ki shuruaat mein girdawari.</strong> Kharif aur Rabi — dono season
-        mein apni fasal ki entry confirm karein, chahe patwari ne kar di ho. MP Kisan App
-        se khud darj karna sabse pakka raasta hai; upar iska tareeka likha hai.
-      </p>
-
-      <p>
-        Sehore ke ek kisan ne WhatsApp pe screenshot bheja tha — bank, Aadhaar, e-KYC sab perfect,
-        phir bhi state kist do season se nahi aayi. Aakhir mein nikli girdawari: patwari ne us
-        season uski fasal darj hi nahi ki thi. App se khud entry karne ke baad agli kist aa gayi.
-        Chhodo, wo purani baat hai — par sabak wahi hai, girdawari khud check karo.
-      </p>
-
-      <p>
-        <strong>PM Kisan ki e-KYC current rakhein.</strong> MP ki list PM Kisan ke data se
-        banti hai, isliye e-KYC expire hone ka nuksan dohra hai — central aur state, dono
-        kist rukti hain. Saal mein ek baar, kisi bhi kist ke aane se pehle, pmkisan.gov.in
-        par apna e-KYC status dekh lein.
-      </p>
-
-      <p>
-        <strong>Bank ka record taaza rakhein.</strong> Khaata band ya dormant na ho, Aadhaar
-        seeding NPCI mein active ho, aur mobile number wahi ho jo aaj chal raha hai. Ye
-        teeno kaam bank branch mein ek hi visit mein ho jaate hain.
-      </p>
-
-      <p>
-        <strong>Har credit ki entry milaayein.</strong> PM Kisan aur state ki kist alag-alag
-        dinon par aati hai, isliye passbook mein dono entries alag pehchaanein. Ek aayi aur
-        doosri nahi — to problem sirf us system mein dhoondhein jiski kist ruki hai; dono
-        ke portal aur helpline alag hain.
-      </p>
-
       <h2>Shikayat Ka Raasta — CM Helpline 181 Ka Sahi Istemaal</h2>
 
       <p>
@@ -485,37 +516,6 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         state ki nahi aayi, bank kehta hai koi credit nahi” — jitna saaf record, utna
         jaldi kaam.
       </p>
-
-      <h2>Baaki States Mein Kitna Milta Hai</h2>
-
-      <p>
-        MP ke bahar rehte hain to ye top-up aap par laagu nahi hota, aur girdawari-based
-        shart bhi sirf MP mein hai. Kai rajyon ka top-up MP se kai guna bada hai, kuch mein
-        bilkul nahi hai. Kis rajya mein kya hai — ye niche wale articles kholte hi samajh aa jaayega:
-      </p>
-
-      <ul>
-        <li>
-          <Link href="/rajya-yojana/rajasthan-kisan-samman-nidhi-9000">
-            Rajasthan Kisan Samman Nidhi 9000: Status aur Badhotri Update
-          </Link>
-        </li>
-        <li>
-          <Link href="/rajya-yojana/annadata-sukhibhava-status-check-2026">
-            Annadata Sukhibhava (Andhra Pradesh) — Tenant Farmers ke liye bhi
-          </Link>
-        </li>
-        <li>
-          <Link href="/rajya-yojana/namo-shetkari-yojana-status-check-2026">
-            Namo Shetkari Mahasanman Nidhi (Maharashtra)
-          </Link>
-        </li>
-        <li>
-          <Link href="/rajya-yojana/state-kisan-yojana-list-all-states-2026">
-            State Kisan Yojana List — Sabhi States Ka Comparison Table, amount aur portal ek saath
-          </Link>
-        </li>
-      </ul>
 
       <h2>MP Kisan Kalyan — Jo Log Aksar Poochhte Hain</h2>
 
