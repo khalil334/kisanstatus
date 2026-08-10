@@ -1,55 +1,33 @@
- https://github.com/khalil334/kisanstatus/tree/main/components%2Farticles%2Frajya-yojana
-har 3 articles fix karny ke bad auto merge karke ye file update kardia karo
-folder के 10 articles को completely humanize करो। ये problems fix करो:
+https://github.com/khalil334/kisanstatus/tree/main/components%2Farticles%2Frajya-yojana
+token ke lye card do 
+In articles ko edit karo. Sirf words/phrases replace karo, koi sentence, paragraph, table, section heading, ya fact delete mat karo. Code mein koi bhi comment nahi hona chahiye — na //, na /* */, na JSX comments, na HTML comments. Koi developer note, koi TODO, koi explanation comment mat likho.
 
-## Problem 1: Word Count 2000+
-9 files अभी भी 2000 से कम हैं — सिर्फ genuinely useful information add करो, fake story मत भरो:
+Yeh cheezein fix karo:
 
-| File | Current | Target |
-|------|---------|--------|
-| KrishakUnnati | 1,407 | 2,000+ |
-| OdishaCmKisan | 1,254 | 2,000+ |
-| StateKisanHub | 1,763 | 2,000+ |
-| PmKisanPatiPatni | 1,691 | 2,000+ |
-| MpKisanKalyan | 1,717 | 2,000+ |
-| KrishakBandhu | 1,784 | 2,100+ |
-| RythuBharosa | 1,815 | 2,000+ |
-| Annadata | 1,802 | 2,000+ |
-| NamoShetkari | 1,925 | 2,000+ |
+1. **Article ka structure alag banao** — Har article ka flow ek jaisa na ho. Kisi mein pehle history do, kisi mein pehle amount table do, kisi mein pehle eligibility do. Kisi mein cross-links end mein rakho, kisi mein beech mein. Kisi mein FAQs section hatao nahi lekin uska naam "Aur Kuch" ya "Baaki Doubts" rakho. Structure ko human-like random banao, algorithmic order mat rakho.
 
-## Problem 2: AI Uniformity हटाओ
-- **Paragraph length vary करो** — कुछ paragraphs 2-3 lines के, कुछ 5-6 lines के, कुछ 8-10 lines के हों। सब same length मत रखो।
-- **Sentence length vary करो** — short sentences (5-8 words) और long sentences (15-25 words) mix करो।
-- **Line starters diversify करो** — हर paragraph अलग word से शुरू हो। "इसलिए", "इसीलिए", "इसका मतलब", "यही वजह" जैसे same transition words repeat मत करो।
-- **Paragraph style vary करो** — कुछ paragraphs direct info दें, कुछ rhetorical question से शुरू हों, कुछ caution note हों, कुछ real example हों।
+2. **Cross-links section ka template todo** — "X Se Bahar Ke Kisan Yahan Dekhein" wala same pattern har article mein mat rakho. Kisi mein seedha bullet points se links do bina kisi intro sentence ke. Kisi mein "Aur bhi states hain:" likh ke seedha links do. Kisi mein cross-links section bilkul hata ke sirf ek line mein "Baaki states ka hisaab main page pe hai" likh do. Har article mein alag style ho.
 
-## Problem 3: Real Stories + Source Links
-- **Fake "रामलाल" जैसे names मत लिखो** — अगर example दो तो real news source से लो (PIB, state government portals, newspaper reports)
-- **Har real claim ke source mention करो** — "महाराष्ट्र सरकार के budget 2026 के अनुसार" या "PIB की 15 मार्च 2026 की release के मुताबिक"
-- **Real helpline numbers, real portal links, real dates** ही use करो — guess मत करो
+3. **Tables ko simplify karo** — Markdown tables waisi hi rakho lekin table ke upar neeche wale same explanation sentences hatao. Table ke upar sirf ek short bold heading rakho, uske neeche seedha table. Table ke baad 2-3 line ka explanation rakho, 8-10 line ka paragraph mat rakho. Comparison tables (jaise PM Kisan vs State scheme) ko kisi article mein hata ke bullet points mein convert kar do.
 
-## Problem 4: Human Voice
-- **Colloquial tone** — जैसे किसान से बात कर रहे हों, textbook नहीं
-- **Imperfections रखो** — थोड़ी grammatical roughness, थोड़ा Hinglish mix
-- **Emotions दिखाओ** — frustration, hope, caution, relief — robotic नहीं
+4. **Bold text ka pattern alag karo** — Har article mein same words bold mat karo. Kisi mein "Eligible" bold karo, kisi mein nahi. Kisi mein "Rejected" bold karo, kisi mein normal rakho. Kisi mein zyada bold karo, kisi mein kam. Har article mein bold words ka pattern bilkul alag hona chahiye.
 
-## Rules:
-- Image paths (`hero.webp`, `status-check-phone.webp` etc.) unchanged रहें
-- Facts, dates, amounts, official links unchanged रहें
-- Same TSX format में output do
-- Words delete मत करो — सिर्फ add और replace करो
+5. **Depth ko vary karo** — Har article mein har possible angle mat cover karo. Kisi article mein death benefit detail mein chhodo, kisi mein sirf 2 line mein mention karo. Kisi mein bank account problems detail mein likho, kisi mein sirf "bank check kar lo" likh ke aage badho. Kisi mein 3 problems list karo, kisi mein 6. Kisi mein "Chhoti Aadatein" section rakho, kisi mein hata do. Human writer har topic ko same depth se nahi likhta.
 
----
+6. **Intro hook unique banao** — Koi do articles ek jaisi line se shuru na hon. Kisi mein direct question se shuru karo ("Paisa kyun nahi aaya?"), kisi mein ek scene se ("Kharif season shuru hone wala hai aur kisan..."), kisi mein seedha fact se ("₹20,000 saal bhar mein milta hai"). Kisi mein thoda casual, kisi mein thoda serious tone rakho.
 
-## Progress Tracker (updated 2026-08-10)
+7. **Section headings alag karo** — "Kaun Eligible Hai", "Status Kaise Dekhein", "Kahan Shikayat Karein" — ye same headings har article mein mat rakho. Kisi mein "Eligibility Check Karo", kisi mein "Kaun Le Sakta Hai", kisi mein "Kon-Kon Aata Hai". Kisi mein "Status Check Karna", kisi mein "Apna Hisaab Dekho". Har heading ka wording alag ho.
 
-Word counts re-verified from source on 2026-08-10 (prose words, JSX/imports stripped) —
-all 10 files were already 2,000+ after PRs #188–191, so this pass focused on
-Problems 2–4 (AI uniformity, no fake names, human voice). No facts/amounts/links/images changed.
+8. **FAQ section ko human banao** — "Aksar Poochhe Jaane Wale Sawaal" / "Common Doubts" / "Kuch Aur Sawaal" — har article mein alag naam ho. Jawab mein har jagah bullet points mat rakho. Kisi mein 2-3 line ke natural paragraphs banao. Kisi mein seedha "Haan" / "Nahi" se jawab shuru karo. Kisi mein thoda detail, kisi mein seedha point.
 
-| Batch | Files | Status |
-|-------|-------|--------|
-| 1 | KrishakUnnati (2,222), OdishaCmKisan (2,134), StateKisanHub (2,383) | done — PR #192 merged |
-| 2 | PmKisanPatiPatni (2,187), MpKisanKalyan (2,104), RythuBharosa (2,133) | done — PR #193 merged |
-| 3 | KrishakBandhu (2,133), Annadata (2,203), NamoShetkari (2,153) — fictional "Ganesh" example removed | done — PR #194 merged |
-| 4 | RajasthanKisanSammanNidhi9000 (2,423) + this tracker update | done — PR #195 |
+9. **"Solution:" word ka pattern alag karo** — Har problem ke neeche "Solution:" bold mein mat rakho. Kisi mein "Kya karna hai:", kisi mein "Ab kya:", kisi mein seedha paragraph mein solution do bina kisi label ke.
+
+10. **Warnings/Notes ka style vary karo** — Kisi mein "⚠️ Savdhaan" emoji rakho, kisi mein "Note:" bold mein rakho, kisi mein seedha bracket mein likh do "(dhyan rahe: ...)".
+
+**IMPORTANT RULES:**
+- Koi content delete mat karna — sirf restructure, replace, ya reorder karna hai
+- Koi fact, date, number, URL, helpline, portal name change mat karna
+- Koi table completely mat hatao, sirf table ke upar neeche ke sentences edit karo
+- Koi section completely mat hatao, sirf heading ya depth change karo
+- Code mein koi bhi comment nahi hona chahiye — na line comments, na block comments, na JSX comments
+- Har article mein alag-alag variations use karo, same replacement har jagah mat lagao
