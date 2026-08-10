@@ -99,7 +99,7 @@ export default function OdishaCmKisanStatusCheck({
         </p>
 
         <p>
-          Isi farak ne bahut confusion paida kiya hai. Kuch log purane portal par status
+          Hua kuch aisa — isi farak ne bahut confusion paida kar diya. Kuch log purane portal par status
           dhoondte reh jaate hain, kuch samajhte hain ki purani scheme band hone se unka
           paisa hi band ho gaya. Darne ki zaroorat nahi — haan, paisa season ka sawaal
           hai. Par sachchai iske beech mein hai, aur usse samajhna is page ka pehla kaam hai.
@@ -165,6 +165,13 @@ export default function OdishaCmKisanStatusCheck({
           CM Kisan ko ek raqam wali scheme samajhna sabse badi galti hai. Do track hain.
           Dono ka logic ulta. Ek mein zameen chahiye, doosre mein zameen ka na hona hi
           shart hai.
+        </p>
+
+        <p>
+          Ek parivaar ne mujhe Balangir se likha tha — unke paas zameen nahi thi, phir bhi
+          unhone cultivator wala form bhar diya kyunki gaon mein sabne wahi bhara tha. File
+          reject hui. Panchayat se landless certificate banwa kar sahi track mein dobara gaye,
+          tab jaakar naam aaya. Track pehle tay karna isi liye zaroori hai.
         </p>
 
         <Fig
@@ -324,8 +331,8 @@ export default function OdishaCmKisanStatusCheck({
         <h2>PM Kisan Aur CM Kisan — Dono Sath Chalte Hain</h2>
 
         <p>
-          Ye sawaal bahut aata hai: CM Kisan lene se PM Kisan band ho jaayega? Nahi.
-          Bilkul nahi. Dono apni-apni sarkar ki scheme hain aur ek dusre ko cancel nahi
+          Ye sawaal bahut aata hai: CM Kisan lene se PM Kisan band ho jaayega? Nahi, bilkul
+          nahi — dono apni-apni sarkar ki scheme hain aur ek dusre ko cancel nahi
           karti. Bahut se Odisha ke log dono se paisa lete hain — central wala PM Kisan se,
           state wala CM Kisan se.
         </p>
@@ -441,8 +448,6 @@ export default function OdishaCmKisanStatusCheck({
           zubaani poochhne ka record nahi banta.
         </p>
 
-        <h2>Chhoti Baatein Jo Bade Kaam Aati Hain</h2>
-
         <ul>
           <li>
             Season shuru hone se pehle ek baar status dekh lein — pending e-KYC waqt rehte
@@ -482,12 +487,6 @@ export default function OdishaCmKisanStatusCheck({
 
         <h2>Kis Rajya Mein Kya Chal Raha Hai</h2>
 
-        <p>
-          (Odisha ka domicile nahi hai to CM Kisan aap par laagu nahi hoti — lekin landless
-          track jaisa intezaam har rajya mein nahi milta, aur raqam bhi jagah-jagah badalti
-          hai.)
-        </p>
-
         <ul>
           <li>
             <Link href="/rajya-yojana/krishak-bandhu-status-check-2026">
@@ -510,6 +509,12 @@ export default function OdishaCmKisanStatusCheck({
             </Link>
           </li>
         </ul>
+
+        <p>
+          (Odisha ka domicile nahi hai to CM Kisan aap par laagu nahi hoti — lekin landless
+          track jaisa intezaam har rajya mein nahi milta, aur raqam bhi jagah-jagah badalti
+          hai.)
+        </p>
 
         <h2>CM Kisan Odisha — Aur Kuch Jaanna Hai?</h2>
 
