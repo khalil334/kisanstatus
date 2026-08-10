@@ -85,10 +85,10 @@ export default function RythuBharosaStatusCheck2026() {
       </p>
 
       <p>
-        Samajhne ki baat yeh hai — do cheezein is scheme ko baaki state schemes se alag banati hain. Raqam per acre
+        Hua ye, do cheezein is scheme ko baaki state schemes se alag banati hain. Raqam per acre
         tay hoti hai. Aur release ek saath nahi hota, phase mein hota hai. Dono ka asar
         seedha aapke status par padta hai, aur dono ko na samajhne se hi aadhi ghabrahat
-        paida hoti hai. Neeche wahi samjhaya hai.
+        paida hoti hai. Neeche wahi samjhaya hai — pehle phase system, phir apna hisaab, phir ganit.
       </p>
 
       <Fig
@@ -104,6 +104,96 @@ export default function RythuBharosaStatusCheck2026() {
         href="https://rytubharosa.cgg.gov.in"
         label="Official Portal — Rythu Bharosa Telangana"
       />
+
+      <h2>Padosi Ko Mil Gaya, Mujhe Nahi — Phase System Samjhein</h2>
+
+      <p>
+        Padosi ke account mein credit, aapke mein sannata — gussa aana laazmi hai. Lekin
+        ruko. Ye shikayat sabse zyada aati hai, aur iski wajah aksar koi galti nahi hoti.
+        Wajah hai <strong>phase wise payment</strong>.
+      </p>
+
+      <p>
+        Warangal ke ek bhai ne phone karke kaha tha — uske gaon ke aadhe logon ko paisa
+        aa gaya tha, uska nahi. Wo MRO office jaane ki taiyari mein tha. Do din baad khud hi
+        credit aa gaya — uska mandal bas agle phase mein tha. Kahin jaane se pehle phase ka
+        intezaar dekh lena chahiye.
+      </p>
+
+      <p>
+        Poore state ko ek din mein paisa nahi jaata. Kis mandal ka number pehle aayega, ye teen
+        cheezon par tay hota hai:
+      </p>
+      <ul>
+        <li><strong>District aur Mandal-wise verification:</strong> Pehle un districts ko priority di jaati hai jahan land records (Dharani portal) 100% updated hain.</li>
+        <li><strong>Account Seeding Status:</strong> Jin kisanon ke bank accounts Aadhaar aur NPCI se pehle se linked hain, unki payment pehle phase mein nikal jaati hai.</li>
+        <li><strong>Podu (Tribal) Land Verification:</strong> Tribal areas mein zameen ke rights verify hone mein thoda extra samay lagta hai, isliye wahan ki payment baad ke phases mein aati hai.</li>
+      </ul>
+
+      <p>
+        Matlab "Processing" dikhne ka arth paisa atak jaana nahi hai. Aapke mandal ka
+        phase aana baaki hai, bas itna, toh fikar chhodo aur thoda ruk jao. Haan, toh wahi — phase ka khel hai.
+      </p>
+
+      <h2>Apna Hisaab Dekho</h2>
+
+      <p>
+        Portal par ye jaldi ho jaayega. Aadhaar number saath rakhein. Account number se bhi hota
+        hai, par Aadhaar zyada reliable nikalta hai:
+      </p>
+
+      <Fig
+        src="dharani-land-record.webp"
+        alt="Kisan Mandal Revenue Office mein adhikari ke saath computer par Dharani portal ka land record dekh raha hai"
+        caption="Rythu Bharosa ka data Dharani portal se aata hai — record galat hoga to status bhi galat dikhega"
+      />
+
+      <ol>
+        <li>Apne mobile ya computer ke browser mein official website <code>rytubharosa.cgg.gov.in</code> kholein.</li>
+        <li>Homepage par "Rythu Bharosa Status" ya "Beneficiary Status" ke option par click karein.</li>
+        <li>Aapke paas do options honge: "Aadhaar Number" ya "Account Number" se search karna. Aadhaar number sabse reliable hai.</li>
+        <li>Apna 12-digit Aadhaar Number enter karein.</li>
+        <li>Screen par dikh raha CAPTCHA code enter karein aur "Get Details" ya "Submit" par click karein.</li>
+        <li>Ek naya page khulega jisme aapka naam, father/husband ka naam, gaon, mandal, district, land extent (acreage), aur current <strong>rythu bharosa payment status</strong> (Sanctioned, Disbursed, ya Pending) dikhayi dega.</li>
+      </ol>
+
+      <ExternalLinkButton
+        href="https://rytubharosa.cgg.gov.in"
+        label="Check Status on Official Rythu Bharosa Portal"
+      />
+
+      <h2>Phase Aa Gaya Par Paisa Nahi — Chaar Wajahein</h2>
+
+      <p>
+        Status dekh liya. Phase bhi nikal gaya. Phir bhi account khaali? Ab baat alag hai —
+        yahan sach mein kuch atka hai. Aise cases mein inme se koi ek wajah nikalti hai:
+      </p>
+
+      <h3>1. Dharani Portal Mein Naam Update Nahi Hai</h3>
+      <p>
+        <strong>Hal:</strong> Rythu Bharosa ka data seedha Dharani portal se aata hai. Agar aapne haal hi mein zameen khareedi hai ya virasat (inheritance) mein mili hai, lekin Dharani par mutation (namantaran) nahi hua, toh paisa purane malik ke account mein jaane ki koshish karega ya fail ho jayega. Turant MRO (Mandal Revenue Officer) office jaakar Dharani update karwayein.
+      </p>
+
+      <Fig
+        src="bank-aadhaar-seeding.webp"
+        alt="Kisan bank branch mein passbook lekar account active karwane aur Aadhaar NPCI seeding check karwane aaya hai"
+        caption="Dormant account aur missing Aadhaar seeding — do sabse aam wajah jinse payment fail hoti hai"
+      />
+
+      <h3>2. Bank Account Dormant Ya Band Hai</h3>
+      <p>
+        Hal: Agar aapka bank account lambey samay se use nahi hua hai, toh wo "Dormant" ho sakta hai. Bank jaakar account ko "Active" karwayein aur DBT (Direct Benefit Transfer) enable karwayein.
+      </p>
+
+      <h3>3. Aadhaar Seeding Missing Hai</h3>
+      <p>
+        <strong>Hal:</strong> Telangana sarkar ab strict DBT follow karti hai. Apne bank branch mein jaakar confirm karein ki aapka account NPCI mapper mein aapke Aadhaar number se linked hai.
+      </p>
+
+      <h3>4. "Disputed Land" Status</h3>
+      <p>
+        Hal: Agar zameen par koi court case ya parivarik vivad (family dispute) hai, toh Dharani portal par us par "Disputed" ka tag lag jata hai. Aise cases mein payment tab tak roki jaati hai jab tak vivad khatam nahi ho jata.
+      </p>
 
       <h2>Per Acre Ke Hisaab Se Paisa — Ganit Kya Hai</h2>
 
@@ -168,78 +258,6 @@ export default function RythuBharosaStatusCheck2026() {
         caption="Zameen jitni zyada, madad utni badi — isi liye har kisan ke account mein alag raqam aati hai"
       />
 
-      <h2>Padosi Ko Mil Gaya, Mujhe Nahi — Phase System Samjhein</h2>
-
-      <p>
-        Padosi ke account mein credit, aapke mein sannata — gussa aana laazmi hai. Lekin
-        ruko. Ye shikayat sabse zyada aati hai, aur iski wajah aksar koi galti nahi hoti.
-        Wajah hai <strong>phase wise payment</strong>.
-      </p>
-
-      <p>
-        Ek rythu ne mujhe Warangal se phone karwaya tha — uske gaon ke aadhe logon ko paisa
-        aa gaya tha, uska nahi. Wo MRO office jaane ki taiyari mein tha. Do din baad khud hi
-        credit aa gaya — uska mandal bas agle phase mein tha. Kahin jaane se pehle phase ka
-        intezaar dekh lena chahiye.
-      </p>
-
-      <p>
-        Poore state ko ek din mein paisa nahi jaata. Kis mandal ka number pehle aayega, ye teen
-        cheezon par tay hota hai:
-      </p>
-      <ul>
-        <li><strong>District aur Mandal-wise verification:</strong> Pehle un districts ko priority di jaati hai jahan land records (Dharani portal) 100% updated hain.</li>
-        <li><strong>Account Seeding Status:</strong> Jin kisanon ke bank accounts Aadhaar aur NPCI se pehle se linked hain, unki payment pehle phase mein nikal jaati hai.</li>
-        <li><strong>Podu (Tribal) Land Verification:</strong> Tribal areas mein zameen ke rights verify hone mein thoda extra samay lagta hai, isliye wahan ki payment baad ke phases mein aati hai.</li>
-      </ul>
-
-      <p>
-        Matlab "Processing" dikhne ka arth paisa atak jaana nahi hai. Aapke mandal ka
-        phase aana baaki hai, bas itna, toh sabr rakho.
-      </p>
-
-      <h2>Apna Hisaab Dekho</h2>
-
-      <p>
-        Portal par ye jaldi ho jaayega. Aadhaar number saath rakhein. Account number se bhi hota
-        hai, par Aadhaar zyada reliable nikalta hai:
-      </p>
-
-      <Fig
-        src="dharani-land-record.webp"
-        alt="Kisan Mandal Revenue Office mein adhikari ke saath computer par Dharani portal ka land record dekh raha hai"
-        caption="Rythu Bharosa ka data Dharani portal se aata hai — record galat hoga to status bhi galat dikhega"
-      />
-
-      <ol>
-        <li>Apne mobile ya computer ke browser mein official website <code>rytubharosa.cgg.gov.in</code> kholein.</li>
-        <li>Homepage par "Rythu Bharosa Status" ya "Beneficiary Status" ke option par click karein.</li>
-        <li>Aapke paas do options honge: "Aadhaar Number" ya "Account Number" se search karna. Aadhaar number sabse reliable hai.</li>
-        <li>Apna 12-digit Aadhaar Number enter karein.</li>
-        <li>Screen par dikh raha CAPTCHA code enter karein aur "Get Details" ya "Submit" par click karein.</li>
-        <li>Ek naya page khulega jisme aapka naam, father/husband ka naam, gaon, mandal, district, land extent (acreage), aur current <strong>rythu bharosa payment status</strong> (Sanctioned, Disbursed, ya Pending) dikhayi dega.</li>
-      </ol>
-
-      <ExternalLinkButton
-        href="https://rytubharosa.cgg.gov.in"
-        label="Check Status on Official Rythu Bharosa Portal"
-      />
-
-      <h2>Gaon Ki List Mein Naam Dhoondhna</h2>
-
-      <p>
-        Lagta hai naam chhoot gaya hai? To gaon ki poori list dekh lein. Notice board par bhi lagti
-        hai, par portal se PDF nikaal lena aasan padta hai:
-      </p>
-
-      <ol>
-        <li>Rythu Bharosa portal par "Reports" ya "Beneficiary List" section mein jaayein.</li>
-        <li>Apna Zila (District), Mandal, aur Panchayat/Village select karein.</li>
-        <li>Financial Year aur Season (Kharif/Rabi) select karein.</li>
-        <li>"Get List" par click karein.</li>
-        <li>Ek PDF ya table generate hoga jisme aapke gaon ke sabhi beneficiaries ke naam, account numbers (masked), aur amount likha hoga. Apna naam dhundhein.</li>
-      </ol>
-
       <h2>Rythu Bandhu Se Rythu Bharosa — Kya Badla</h2>
 
       <p>
@@ -283,43 +301,25 @@ export default function RythuBharosaStatusCheck2026() {
         </tr>
       </SchemeTable>
 
-      <h2>Phase Aa Gaya Par Paisa Nahi — Chaar Wajahein</h2>
+      <h2>Gaon Ki List Mein Naam Dhoondhna</h2>
 
       <p>
-        Status dekh liya. Phase bhi nikal gaya. Phir bhi account khaali? Ab baat alag hai —
-        yahan sach mein kuch atka hai. Aise cases mein inme se koi ek wajah nikalti hai:
+        Lagta hai naam chhoot gaya hai? To gaon ki poori list dekh lein. Notice board par bhi lagti
+        hai, par portal se PDF nikaal lena aasan padta hai:
       </p>
 
-      <h3>1. Dharani Portal Mein Naam Update Nahi Hai</h3>
-      <p>
-        <strong>Hal:</strong> Rythu Bharosa ka data seedha Dharani portal se aata hai. Agar aapne haal hi mein zameen khareedi hai ya virasat (inheritance) mein mili hai, lekin Dharani par mutation (namantaran) nahi hua, toh paisa purane malik ke account mein jaane ki koshish karega ya fail ho jayega. Turant MRO (Mandal Revenue Officer) office jaakar Dharani update karwayein.
-      </p>
-
-      <Fig
-        src="bank-aadhaar-seeding.webp"
-        alt="Kisan bank branch mein passbook lekar account active karwane aur Aadhaar NPCI seeding check karwane aaya hai"
-        caption="Dormant account aur missing Aadhaar seeding — do sabse aam wajah jinse payment fail hoti hai"
-      />
-
-      <h3>2. Bank Account Dormant Ya Band Hai</h3>
-      <p>
-        Hal: Agar aapka bank account lambey samay se use nahi hua hai, toh wo "Dormant" ho sakta hai. Bank jaakar account ko "Active" karwayein aur DBT (Direct Benefit Transfer) enable karwayein.
-      </p>
-
-      <h3>3. Aadhaar Seeding Missing Hai</h3>
-      <p>
-        <strong>Hal:</strong> Telangana sarkar ab strict DBT follow karti hai. Apne bank branch mein jaakar confirm karein ki aapka account NPCI mapper mein aapke Aadhaar number se linked hai.
-      </p>
-
-      <h3>4. "Disputed Land" Status</h3>
-      <p>
-        Hal: Agar zameen par koi court case ya parivarik vivad (family dispute) hai, toh Dharani portal par us par "Disputed" ka tag lag jata hai. Aise cases mein payment tab tak roki jaati hai jab tak vivad khatam nahi ho jata.
-      </p>
+      <ol>
+        <li>Rythu Bharosa portal par "Reports" ya "Beneficiary List" section mein jaayein.</li>
+        <li>Apna Zila (District), Mandal, aur Panchayat/Village select karein.</li>
+        <li>Financial Year aur Season (Kharif/Rabi) select karein.</li>
+        <li>"Get List" par click karein.</li>
+        <li>Ek PDF ya table generate hoga jisme aapke gaon ke sabhi beneficiaries ke naam, account numbers (masked), aur amount likha hoga. Apna naam dhundhein.</li>
+      </ol>
 
       <h2>Virasat Ki Zameen — Sabse Zyada Atakne Wala Case</h2>
 
       <p>
-        Ek scenario itna common hai ki alag se likhna zaroori hai. Pita ka dehant ho gaya.
+        Waise, iske baare mein maine upar seedha nahi bataya, par ek scenario itna common hai ki alag se likhna zaroori hai. Pita ka dehant ho gaya.
         Zameen ab bete-betiyon ke naam aani hai, lekin Dharani par mutation abhi purane
         naam par hi hai. Aise mein Rythu Bharosa ka paisa purane record ke hisaab se
         process hota hai, aur dehant ke baad account freeze hone se payment fail ho jaati
@@ -381,7 +381,7 @@ export default function RythuBharosaStatusCheck2026() {
         Poora jod milaane se pehle sab khaton ke credit gin lein.
       </p>
 
-      <h2>Status Check Se Pehle Ye Teen Cheezein Saath Rakhein</h2>
+      <h2>Routine — Status Check Se Pehle Ye Teen Cheezein Saath Rakhein</h2>
 
       <ul>
         <li>
@@ -422,7 +422,7 @@ export default function RythuBharosaStatusCheck2026() {
 
       <h2>Baaki Rajyon Ka Hisaab</h2>
 
-      <p>Bas links de raha hoon, khud dekh lo kis rajya mein kya hai:</p>
+      <p>Baaki rajyon ka hisaab, khud dekh lo:</p>
 
       <ul>
         <li>
