@@ -49,10 +49,10 @@ const FAQS_DATA = [
 ];
 
 export default function SoilHealthCardCompleteGuide2026({ article }: { article: ArticleMeta }) {
-  const [modal, setModal] = useState<{ 
-    title: string; 
-    message: string; 
-    url: string; 
+  const [modal, setModal] = useState<{
+    title: string;
+    message: string;
+    url: string;
   } | null>(null);
 
   const handleOfficialLink = (title: string, message: string, url: string) => {
@@ -120,7 +120,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
 
         <section className="mb-8">
           <SH>Soil Health Card Kya Hota Hai? (Mitti Test Ka Matlab)</SH>
-          
+
           <p className="text-sm text-gray-700 leading-relaxed mb-4">
             Bhai suno, <strong>soil health card kya hota hai</strong> ye samajhna zaroori hai. Ek simple report card hota jo batata hai aapki zameen kaunsa rich ya poor hai. Jaise school report mein grades hote hain — English A, Math B — usi tarah yahan pH score hota, nitrogen level, phosphorus, potassium.
           </p>
@@ -136,7 +136,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
 
         <section className="mb-8">
           <SH>Soil Health Card Kaise Banwate Hain — General Process</SH>
-          
+
           <p className="text-sm text-gray-700 leading-relaxed mb-4">
             <strong>Soil test free kaise karaye</strong> ye bahut log puchte hain. Process simple hai:
           </p>
@@ -171,7 +171,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
 
         <section className="mb-8">
           <SH>Har State Mein Kaise Apply Karte Hain — State Wise Guide</SH>
-          
+
           <p className="text-sm text-gray-700 leading-relaxed mb-4">
             Har state ka apna process hai. Maine niche kuch important states ka detail likha hai:
           </p>
@@ -251,7 +251,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
 
         <section className="mb-8">
           <SH>Soil Test Report Padna Aur Samajhna</SH>
-          
+
           <p className="text-sm text-gray-700 leading-relaxed mb-4">
             Report mein likha hota "Your soil pH is 6.8, Nitrogen 180 kg/hectare, Phosphorus 25." Ye sab numbers confuse karte hain. Par actually simple hai.
           </p>
@@ -267,7 +267,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
 
         <section className="mb-8">
           <SH>Soil Health Card Status Check Kaise Karein?</SH>
-          
+
           <p className="text-sm text-gray-700 leading-relaxed mb-4">
             Apply karne ke baad <strong>soil health card status check</strong> karna zaroori hai. Ye steps follow karo:
           </p>
@@ -302,7 +302,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
 
         <section className="mb-8">
           <SH>Soil Health Card Ka Fayda — Actual Numbers</SH>
-          
+
           <p className="text-sm text-gray-700 leading-relaxed mb-4">
             Soil test ke baad sahi khaad daalne se production par asar padta hai. Ye numbers dekhein:
           </p>

@@ -54,20 +54,19 @@ const FAQS_DATA = [
   },
 ];
 
-const CountdownButton = memo(function CountdownButton({ 
+const CountdownButton = memo(function CountdownButton({
   title,
   description,
   url,
   buttonText,
   variant = 'blue'
-}: { 
+}: {
   title: string;
   description: string;
   url: string;
   buttonText: string;
   variant?: 'green' | 'blue';
 }) {
-  // count: null = idle, 1..10 = counting down, 0 = countdown finished (link ready)
   const [count, setCount] = useState<number | null>(null);
   const ready = count === 0;
 
@@ -89,8 +88,8 @@ const CountdownButton = memo(function CountdownButton({
     setCount(null);
   }, []);
 
-  const bgColor = variant === 'green' 
-    ? 'bg-green-600 hover:bg-green-700' 
+  const bgColor = variant === 'green'
+    ? 'bg-green-600 hover:bg-green-700'
     : 'bg-blue-600 hover:bg-blue-700';
 
   return (
@@ -101,7 +100,7 @@ const CountdownButton = memo(function CountdownButton({
       <p className="text-sm text-gray-600 dark:text-gray-400 mb-5 leading-relaxed">
         {description}
       </p>
-      
+
       {ready ? (
         <a
           href={url}
@@ -164,9 +163,9 @@ const STATE_PORTALS = [
 
 export default function PmKisanVillageWiseListPdfDownload() {
   const [portalSearch, setPortalSearch] = useState('');
-  
-  const filteredPortals = useMemo(() => 
-    STATE_PORTALS.filter(p => 
+
+  const filteredPortals = useMemo(() =>
+    STATE_PORTALS.filter(p =>
       p.state.toLowerCase().includes(portalSearch.toLowerCase()) ||
       p.portal.toLowerCase().includes(portalSearch.toLowerCase())
     ), [portalSearch]
@@ -216,12 +215,12 @@ export default function PmKisanVillageWiseListPdfDownload() {
         <section className="mb-8">
           <SH>Sirf Apna Naam Nahi, Pura Gaon Dekho Ek Saath</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Zyadatar kisan bas apna individual status check karte hain. Lekin kabhi socha hai ki aapke gaon mein total kitne logon ko PM Kisan mil raha hai? 
+            Zyadatar kisan bas apna individual status check karte hain. Lekin kabhi socha hai ki aapke gaon mein total kitne logon ko PM Kisan mil raha hai?
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Gram Pradhan aur Patwari frequently ye list maangte hain kyunki isse transparency banti hai. Pata chalta hai ki gaon ka kitna paisa aa raha hai, kiska naam reh gaya, aur kiska record galat hai.
           </p>
-          
+
           <Image
             src="/images/articles/pm-kisan-village-wise-list-pdf-download/village-roster-screen.webp"
             alt="PM Kisan village wise roster PDF showing multiple farmer names and account details"
@@ -292,7 +291,7 @@ export default function PmKisanVillageWiseListPdfDownload() {
             <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
               Government website par jakar apne area ka complete information view karein.
             </p>
-            <Link 
+            <Link
               href="https://pmkisan.gov.in/BeneficiaryList.aspx"
               target="_blank"
               rel="noopener noreferrer"
@@ -347,11 +346,11 @@ export default function PmKisanVillageWiseListPdfDownload() {
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             PM Kisan ka central portal kabhi kabhi slow ho jata hai. Aise mein aap apne state ke land record portal par bhi koshish kar sakte hain.
           </p>
-          
+
           <div className="mb-4">
-            <input 
-              type="text" 
-              placeholder="Search state or portal name..." 
+            <input
+              type="text"
+              placeholder="Search state or portal name..."
               value={portalSearch}
               onChange={(e) => setPortalSearch(e.target.value)}
               className="w-full p-3 rounded-xl border border-[var(--color-border)] bg-[var(--color-card)] text-[var(--color-text)] focus:outline-none focus:ring-2 focus:ring-green-500 transition-shadow"
@@ -376,9 +375,9 @@ export default function PmKisanVillageWiseListPdfDownload() {
                     <td className="p-3 text-xs text-blue-600 dark:text-blue-400 font-bold">{portal}</td>
                     <td className="p-3 text-xs text-[var(--color-text-muted)]">{note}</td>
                     <td className="p-3">
-                      <a 
-                        href={url} 
-                        target="_blank" 
+                      <a
+                        href={url}
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-lg transition-colors"
                       >
@@ -440,17 +439,17 @@ export default function PmKisanVillageWiseListPdfDownload() {
           <SH>List Mein Naam Nahi Hai? Ab Kya Karein?</SH>
           <div className="space-y-3">
             {[
-              { 
-                reason: 'Application Reject Ho Gayi', 
+              {
+                reason: 'Application Reject Ho Gayi',
                 fix: <span>Portal par individual status check karo. Agar "Rejected" dikh raha hai, toh <Link href="/articles/PmKisanRejectedStatusReApplyGuide" className="underline font-bold">rejected status guide</Link> padho aur correction karwao.</span>
               },
-              { 
-                reason: 'Land Seeding Pending Hai', 
-                fix: 'Aapka form sarkar tak pahuncha hai, lekin patwari ne zameen verify nahi ki. Patwari ke paas jakar Khasra-Khatauni link karwayein.' 
+              {
+                reason: 'Land Seeding Pending Hai',
+                fix: 'Aapka form sarkar tak pahuncha hai, lekin patwari ne zameen verify nahi ki. Patwari ke paas jakar Khasra-Khatauni link karwayein.'
               },
-              { 
-                reason: 'eKYC Adhuri Hai', 
-                fix: 'Bina eKYC ke naam is list mein nahi aata. Ghar baithe OTP se ya CSC jakar biometric eKYC karwa lein.' 
+              {
+                reason: 'eKYC Adhuri Hai',
+                fix: 'Bina eKYC ke naam is list mein nahi aata. Ghar baithe OTP se ya CSC jakar biometric eKYC karwa lein.'
               },
             ].map(({ reason, fix }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
@@ -465,17 +464,17 @@ export default function PmKisanVillageWiseListPdfDownload() {
           <SH>PDF Download Karte Time Aane Wali Problems</SH>
           <div className="space-y-3">
             {[
-              { 
-                issue: 'Server Down / Website Khul Nahi Rahi', 
-                solution: 'PM Kisan portal par shaam ko 6 baje ke baad load kam hota hai. Subah 10 baje ya dopahar 2 baje try karein.' 
+              {
+                issue: 'Server Down / Website Khul Nahi Rahi',
+                solution: 'PM Kisan portal par shaam ko 6 baje ke baad load kam hota hai. Subah 10 baje ya dopahar 2 baje try karein.'
               },
-              { 
-                issue: 'Gaon Ka Naam Dropdown Mein Nahi Hai', 
-                solution: 'Naye gaon ya chhote hamlet ka naam portal par update nahi hota. Aise mein apne Block agriculture office ko email karein.' 
+              {
+                issue: 'Gaon Ka Naam Dropdown Mein Nahi Hai',
+                solution: 'Naye gaon ya chhote hamlet ka naam portal par update nahi hota. Aise mein apne Block agriculture office ko email karein.'
               },
-              { 
-                issue: 'PDF Blank Aa Rahi Hai', 
-                solution: 'Browser ka cache clear karein ya incognito mode mein try karein.' 
+              {
+                issue: 'PDF Blank Aa Rahi Hai',
+                solution: 'Browser ka cache clear karein ya incognito mode mein try karein.'
               },
             ].map(({ issue, solution }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">

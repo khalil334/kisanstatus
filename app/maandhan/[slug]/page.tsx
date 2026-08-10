@@ -24,17 +24,12 @@ export async function generateStaticParams() {
   }));
 }
 
-// Unknown slugs 404 at the router level (root loading.tsx otherwise streams a
-// 200 shell before notFound() can set the status — GSC Soft 404).
 export const dynamicParams = false;
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const article = MAANDHAN_ARTICLES.find((a) => a.slug === slug);
-  
-  // Unknown slug => real HTTP 404 (app/not-found.tsx), not a 200 "Not Found" soft-404.
-  // The page component below already calls notFound(); returning fallback metadata here
-  // made the response 200, so status and body disagreed. (Ref: fixplan.md BUG-5)
+
   if (!article) {
     notFound();
   }
@@ -101,8 +96,6 @@ export default async function MaandhanArticlePage({ params }: { params: Promise<
   const siblings = MAANDHAN_ARTICLES.filter((a) => a.slug !== slug);
   const related = Array.from({ length: Math.min(6, siblings.length) }, (_, i) => siblings[(idx + i) % siblings.length]);
 
-  // BreadcrumbList JSON-LD — emitted centrally here (like /articles and
-  // /rajya-yojana routes); maandhan components emit Article/FAQPage only.
   const url = `${SITE_URL}/maandhan/${slug}`;
   const breadcrumbSchema = {
     '@context': 'https://schema.org',

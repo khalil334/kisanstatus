@@ -2,9 +2,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
-// Self-contained article — कोई shared component import नहीं (Rule 2)।
-// Structure variant: flowing narrative + comparison tables + season-calendar; FAQ striped-table में (Rule 3)।
-
 const FAQS = [
   {
     q: 'इस season गेहूं का MSP कितना है?',

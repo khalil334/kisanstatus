@@ -67,10 +67,10 @@ const FAQS_DATA = [
 ];
 
 export default function PmfbyCropInsurance2026({ article }: { article: ArticleMeta }) {
-  const [modal, setModal] = useState<{ 
-    title: string; 
-    message: string; 
-    url: string; 
+  const [modal, setModal] = useState<{
+    title: string;
+    message: string;
+    url: string;
   } | null>(null);
 
   const handleOfficialLink = (title: string, message: string, url: string) => {
@@ -156,7 +156,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
 
         <section className="mb-8">
           <SH>PMFBY Kya Hai? (PM Kisan Fasal Bima Yojana Meaning)</SH>
-          
+
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             PMFBY ka poora naam hai Pradhan Mantri Fasal Bima Yojana, jo 2016 se chal rahi hai. Sukha, baadh, toofan ya keede-makode — kisi bhi karan se fasal barbaad ho jaaye, iska muawza seedha bank account mein aata hai.
           </p>
@@ -186,7 +186,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
 
         <section className="mb-8">
           <SH>Kya Kya Cover Hota Hai?</SH>
-          
+
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             PMFBY ke daayre mein bahut kuch aata hai, lekin kuch cheezein isse bahar bhi rakhi gayi hain. Dono list neeche di hai:
           </p>
@@ -216,7 +216,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
 
         <section className="mb-8">
           <SH>PMFBY Enrollment Kaise Karein? (Online + Offline)</SH>
-          
+
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             <strong>Loanee farmers:</strong> Bank automatic karta hai. Aapko kuch nahi karna.
           </p>
@@ -297,7 +297,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
 
         <section className="mb-8">
           <SH>PMFBY Claim Kaise Milega? (Step by Step)</SH>
-          
+
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Fasal kharab ho gayi toh ghabraane ki zaroorat nahi — ye steps turant follow karein:
           </p>
@@ -330,7 +330,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
 
         <section className="mb-8">
           <SH>Premium Ka Hisaab Khud Kaise Lagayein?</SH>
-          
+
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Calculation ka formula seedha hai — crop type ke hisaab se fixed percentage, jo neeche table mein hai:
           </p>
@@ -368,7 +368,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
 
         <section className="mb-8">
           <SH>Enrollment Ke Liye Documents Ki List</SH>
-          
+
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             In cheezon ko pehle se jama karke rakhein, taaki portal ya CSC par baar-baar chakkar na lagana pade:
           </p>

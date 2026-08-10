@@ -34,8 +34,6 @@ export const metadata: Metadata = {
 export default function RajyaYojanaListingPage() {
   if (LIVE_RAJYA_YOJANA_ARTICLES.length === 0) notFound();
 
-  // Portal directory is derived from the same data file the articles use —
-  // only states with a verified officialPortal URL get a row.
   const statePortals = LIVE_RAJYA_YOJANA_ARTICLES.filter(
     (a) => a.state !== 'ALL' && a.officialPortal,
   );

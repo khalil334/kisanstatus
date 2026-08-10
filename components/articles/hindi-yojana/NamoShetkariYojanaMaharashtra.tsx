@@ -2,9 +2,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
-// Self-contained article — कोई shared component import नहीं (Rule 2)।
-// Structure variant: comparison-table centric + chat-bubble सवाल-जवाब + गलतफहमी-बनाम-सच panels (Rule 3)।
-
 const FAQS = [
   {
     q: 'महाराष्ट्र के किसान को कुल कितना पैसा मिलता है?',
@@ -62,7 +59,6 @@ const FAQ_SCHEMA = {
   })),
 };
 
-// Local building blocks — इसी file में, कहीं से import नहीं।
 function Figure({ src, alt, caption }: { src: string; alt: string; caption: string }) {
   return (
     <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">

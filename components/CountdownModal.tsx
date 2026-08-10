@@ -8,36 +8,15 @@ interface CountdownModalProps {
   message: string;
   redirectUrl: string;
   onClose: () => void;
-  /** Countdown length in seconds. Default 10. */
   seconds?: number;
-  /** Emoji shown at the top. Default '⏳'. */
   icon?: string;
-  /** Small line under the big number, e.g. 'seconds mein official portal khulega...' */
   countdownNote?: string;
-  /** Blue info box text, e.g. '📌 Thoda wait karo. Official PM Kisan portal khulne wala hai.' */
   infoNote?: string;
-  /** Cancel button label. Default 'Cancel'. */
   cancelLabel?: string;
-  /** Tailwind border color class for the modal card. Default 'border-green-500'. */
   borderColorClass?: string;
-  /**
-   * When provided, the modal does NOT auto-open the URL at 0 — it renders this
-   * content instead (e.g. a real download <a>/<Link> button the user taps).
-   */
   readyContent?: ReactNode;
 }
 
-/**
- * Shared countdown-redirect modal (BUG 4 fix — replaces the 12 inline copies).
- *
- * Counts down from `seconds`; at 0 either opens `redirectUrl` (external URLs
- * in a new tab, internal routes via router.push) and closes, or — when
- * `readyContent` is given — shows that content so the user taps a real link
- * (popup-blocker-proof, same pattern as ExternalLinkButton).
- *
- * Uses a functional updater on an interval, so there is no stale-closure
- * re-arm and no setState directly inside the effect body.
- */
 export default function CountdownModal({
   title,
   message,

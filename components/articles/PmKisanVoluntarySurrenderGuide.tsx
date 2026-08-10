@@ -65,7 +65,6 @@ export default function PmKisanVoluntarySurrenderGuide() {
 
       <div className="container-site max-w-3xl py-8">
 
-        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-voluntary-surrender/surrender-hero.webp"
@@ -81,7 +80,6 @@ export default function PmKisanVoluntarySurrenderGuide() {
           </p>
         </div>
 
-        {}
         <section className="mb-8">
           <SH>Galti Ho Gayi? Koi Baat Nahi</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -90,7 +88,7 @@ export default function PmKisanVoluntarySurrenderGuide() {
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Aise mein ghabrane ki zaroorat nahi hai. Sarkar ne <strong>Voluntary Surrender</strong> ka option diya hai. Isse aap apne aap ko scheme se hata sakte hain.
           </p>
-          
+
           <Image
             src="/images/articles/pm-kisan-voluntary-surrender/surrender-option-screen.webp"
             alt="Self surrender option on PM Kisan portal"
@@ -112,7 +110,6 @@ export default function PmKisanVoluntarySurrenderGuide() {
           </p>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Kaun Logon Ko Surrender Karna Chahiye?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -139,7 +136,6 @@ export default function PmKisanVoluntarySurrenderGuide() {
           </IB>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Online Surrender Kaise Karein?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -193,7 +189,6 @@ export default function PmKisanVoluntarySurrenderGuide() {
           </WB>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Offline Process (Patwari/BAO)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -225,7 +220,6 @@ export default function PmKisanVoluntarySurrenderGuide() {
           </p>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>CSC Center Se Bhi Karwa Sakte Ho</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -246,7 +240,6 @@ export default function PmKisanVoluntarySurrenderGuide() {
           </div>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Documents Ki List</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -269,7 +262,6 @@ export default function PmKisanVoluntarySurrenderGuide() {
           </div>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Surrender Ke Baad Kya Hota Hai?</SH>
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
@@ -300,7 +292,6 @@ export default function PmKisanVoluntarySurrenderGuide() {
           </div>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Zaroori Baatein Jo Yaad Rakhein</SH>
           <div className="space-y-3">
@@ -327,7 +318,6 @@ export default function PmKisanVoluntarySurrenderGuide() {
           </div>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Agar Surrender Nahi Kiya Toh?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -351,7 +341,6 @@ export default function PmKisanVoluntarySurrenderGuide() {
           </p>
         </section>
 
-        {}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Aksar Puche Jane Wale Sawal

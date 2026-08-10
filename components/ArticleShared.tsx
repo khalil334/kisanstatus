@@ -257,12 +257,6 @@ export function FAQBlock({
 }: {
   faqs: { q: string; a: string }[];
   caption?: string;
-  /**
-   * Presentation only — the FAQPage JSON-LD is identical across variants.
-   * 'accordion' (default) keeps the original <details> list.
-   * 'inline'  renders bold Q + answer paragraph, no click needed.
-   * 'cards'   renders a tip-card grid.
-   */
   variant?: 'accordion' | 'inline' | 'cards';
 }) {
   const faqSchema = {

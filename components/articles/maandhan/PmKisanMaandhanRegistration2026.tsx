@@ -8,23 +8,23 @@ const PUBLISHED = '2024-01-15T08:00:00+05:30';
 const MODIFIED = '2026-08-08T21:45:00+05:30';
 
 const RELATED_CARDS = [
-  { 
-    slug: 'pm-kisan-maandhan-eligibility-documents', 
-    title: 'Eligibility & Documents', 
+  {
+    slug: 'pm-kisan-maandhan-eligibility-documents',
+    title: 'Eligibility & Documents',
     desc: 'Detailed checklist of documents and exact eligibility rules.',
-    emoji: '📄' 
+    emoji: '📄'
   },
-  { 
-    slug: 'pm-kisan-maandhan-pension-calculator', 
-    title: 'Pension Calculator', 
+  {
+    slug: 'pm-kisan-maandhan-pension-calculator',
+    title: 'Pension Calculator',
     desc: 'Calculate exact monthly contribution based on your current age.',
-    emoji: '🧮' 
+    emoji: '🧮'
   },
-  { 
-    slug: 'pm-kisan-maandhan-withdrawal-refund-rules', 
-    title: 'Withdrawal & Refund Rules', 
+  {
+    slug: 'pm-kisan-maandhan-withdrawal-refund-rules',
+    title: 'Withdrawal & Refund Rules',
     desc: 'What happens to your money if you exit the scheme early?',
-    emoji: '💸' 
+    emoji: '💸'
   },
 ];
 
@@ -75,15 +75,15 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
               "inLanguage": "hi-IN",
               "keywords": "PM Kisan Maandhan Registration, Kisan Pension Scheme, Maandhan Yojana, PM-KMY 2026, CSC Registration, Kisan Maandhan Documents, ₹3000 Pension, PM Kisan Maandhan 2026",
               "articleSection": "Agriculture & Pension Schemes",
-              "author": { 
-                "@type": "Organization", 
-                "name": "KisanStatus Team", 
-                "url": "https://kisanstatus.com/about" 
+              "author": {
+                "@type": "Organization",
+                "name": "KisanStatus Team",
+                "url": "https://kisanstatus.com/about"
               },
-              "publisher": { 
-                "@type": "Organization", 
-                "name": "KisanStatus", 
-                "logo": { "@type": "ImageObject", "url": "https://kisanstatus.com/logo.png" } 
+              "publisher": {
+                "@type": "Organization",
+                "name": "KisanStatus",
+                "logo": { "@type": "ImageObject", "url": "https://kisanstatus.com/logo.png" }
               },
               "datePublished": PUBLISHED,
               "dateModified": MODIFIED,
@@ -103,11 +103,11 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
             <span className="text-white font-bold">Registration Guide</span>
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Kisan Pension Scheme</span>
-          
+
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
             PM Kisan Maandhan Registration: ₹3000 Pension Apply Process
           </h1>
-          
+
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
@@ -347,7 +347,7 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
 
         <section className="mb-8">
           <SH>Common Mistakes</SH>
-          
+
           <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
             <Image
               src="/images/articles/maandhan/bank-passbook-seeding.webp"
@@ -365,17 +365,17 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
 
           <div className="space-y-3">
             {[
-              { 
-                mistake: 'Mobile Number Aadhaar Se Link Nahi', 
-                fix: 'Link nahi hoga toh OTP aayega hi nahi. Pehle UIDAI center jakar mobile number update karwa lein.' 
+              {
+                mistake: 'Mobile Number Aadhaar Se Link Nahi',
+                fix: 'Link nahi hoga toh OTP aayega hi nahi. Pehle UIDAI center jakar mobile number update karwa lein.'
               },
-              { 
-                mistake: 'Bank Account NPCI Seeded Nahi', 
-                fix: 'Branch jakar DBT ke liye Aadhaar link karwayein, warna pension transfer ruk sakta hai.' 
+              {
+                mistake: 'Bank Account NPCI Seeded Nahi',
+                fix: 'Branch jakar DBT ke liye Aadhaar link karwayein, warna pension transfer ruk sakta hai.'
               },
-              { 
-                mistake: 'Zameen 2 Hectare Se Zyada', 
-                fix: 'Khatauni pehle check kar lein — limit cross hone par system apply nahi hone dega.' 
+              {
+                mistake: 'Zameen 2 Hectare Se Zyada',
+                fix: 'Khatauni pehle check kar lein — limit cross hone par system apply nahi hone dega.'
               },
             ].map(({ mistake, fix }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
@@ -412,8 +412,8 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
           <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Related Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {RELATED_CARDS.map((card) => (
-              <Link 
-                key={card.slug} 
+              <Link
+                key={card.slug}
                 href={`/maandhan/${card.slug}`}
                 className="group block p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:border-green-500 transition-all duration-300"
               >

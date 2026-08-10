@@ -6,7 +6,6 @@ import SearchBar from '@/components/SearchBar';
 import SearchResults from './SearchResults';
 
 export const metadata: Metadata = {
-  // layout.tsx applies the `%s | KisanStatus` template — no inline brand here.
   title: `Search`,
   description: 'PM Kisan, KCC loan, subsidy aur mandi bhav guides search karein. 70+ verified Hinglish guides ek jagah.',
   robots: { index: false, follow: true },
@@ -38,7 +37,6 @@ export default function SearchPage() {
       </div>
 
       <div className="container-site max-w-3xl py-10">
-        {/* Renders results for ?q= — the URL the homepage SearchAction schema advertises. */}
         <Suspense fallback={null}>
           <SearchResults />
         </Suspense>

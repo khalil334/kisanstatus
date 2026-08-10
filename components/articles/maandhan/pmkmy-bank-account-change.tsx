@@ -131,7 +131,6 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
 
       <div className="container-site max-w-3xl py-8">
 
-        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/maandhan/bank-account-change/hero.webp"
@@ -163,7 +162,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           Achhi baat ye hai ki PMKMY me bank account change bilkul possible hai, aur aapko phir se enrollment nahi karni padti. Purana contribution record, age calculation, aur pension amount — sab kuch same rehta hai. Bas account details update karni hoti hain.
         </p>
-        
+
         <IB>
           <strong>Zaroori Baat:</strong> Bank account change process 15-30 din ka hota hai. Is dauran purane account se auto-debit chalu rahega, isliye purane account me sufficient balance rakhein jab tak confirmation SMS na aa jaye.
         </IB>
@@ -215,7 +214,6 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
             <SI n={6}><strong>Mobile Number:</strong> Wahi mobile number jo PMKMY me registered hai (OTP verification ke liye).</SI>
           </StepList>
 
-          {}
           <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
             <Image
               src="/images/articles/maandhan/bank-account-change/documents-checklist.webp"
@@ -234,7 +232,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
 
         <section className="mb-8">
           <SH>Bank Account Change Karne Ka Step-by-Step Process</SH>
-          
+
           <StepList>
             <SI n={1}><strong>Naye Bank Me Active Account Ensure Karein:</strong> Sabse pehle confirm karein ki aapke naye bank account me ye sab hai: Aadhaar linking (mandatory hai), Mobile number linking, Active status aur transactions allow karta ho, aur Valid IFSC code.</SI>
             <SI n={2}><strong>Application Form Likhein:</strong> Ek simple application likhein. Neeche ek sample format diya gaya hai jo aap use kar sakte hain:
@@ -264,7 +262,6 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
             <SI n={6}><strong>Confirmation Ka Wait Karein:</strong> Bank account change process complete hone me time lagta hai: Minimum 7-10 working days, Maximum 30 working days, Average 15-20 din. Confirmation SMS aapke registered mobile par aayega jab account change ho jayega. Samay state aur bank ke hisab se thoda alag ho sakta hai.</SI>
           </StepList>
 
-          {}
           <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
             <Image
               src="/images/articles/maandhan/bank-account-change/csc-visit-process.webp"
@@ -312,8 +309,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
 
         <section className="mb-8">
           <SH>Bank Account Change Me Aane Wali Common Problems Aur Solutions</SH>
-          
-          {}
+
           <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
             <Image
               src="/images/articles/maandhan/bank-account-change/common-problems.webp"
@@ -400,7 +396,6 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
             </div>
           </div>
 
-          {}
           <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
             <Image
               src="/images/articles/maandhan/bank-account-change/success-confirmation.webp"

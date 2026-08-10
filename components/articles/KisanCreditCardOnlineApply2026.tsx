@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { SI, StepList, SH, GovLink, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 const PUBLISHED = '2026-01-10T08:00:00+05:30';
-const MODIFIED = '2026-08-08T08:00:00+05:30'; 
+const MODIFIED = '2026-08-08T08:00:00+05:30';
 
 function fmtDate(dateString: string): string {
   const date = new Date(dateString);
@@ -15,23 +15,23 @@ function fmtDate(dateString: string): string {
 }
 
 const RELATED_CARDS = [
-  { 
-    slug: 'PmKisan24viKist2026', 
-    title: 'PM Kisan 24vi Kist Status', 
+  {
+    slug: 'PmKisan24viKist2026',
+    title: 'PM Kisan 24vi Kist Status',
     desc: 'Apna ₹2000 installment status aur eKYC errors abhi fix karein.',
-    emoji: '📅' 
+    emoji: '📅'
   },
-  { 
-    slug: 'KisanRinKahaSeLe2026', 
-    title: 'Kisan Loan Kahan Se Milega', 
+  {
+    slug: 'KisanRinKahaSeLe2026',
+    title: 'Kisan Loan Kahan Se Milega',
     desc: 'Mudra aur KCC ke beech sahi agriculture loan choice kaise karein.',
-    emoji: '🏦' 
+    emoji: '🏦'
   },
-  { 
-    slug: 'AgriStackKyaHai2026', 
-    title: 'Digital Kisan ID (AgriStack)', 
+  {
+    slug: 'AgriStackKyaHai2026',
+    title: 'Digital Kisan ID (AgriStack)',
     desc: 'Unified ID banakar fast-track loan approval kaise paayein.',
-    emoji: '🆔' 
+    emoji: '🆔'
   },
 ];
 
@@ -73,8 +73,6 @@ const FAQS_DATA = [
 export default function KisanCreditCardOnlineApply2026({ article }: { article: ArticleMeta }) {
   return (
     <>
-      {}
-      {}
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
           <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
@@ -85,16 +83,15 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             <span className="text-white font-bold">Kisan Credit Card Guide</span>
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">KCC Loan Guide 2026</span>
-          
-          {}
+
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
             Kisan Credit Card 2026: 4% Byaj, Online Apply & Limits
           </h1>
-          
+
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span> {}
+            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
             <span>⏱️ 12 min read</span>
           </div>
         </div>
@@ -102,14 +99,12 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
 
       <div className="container-site max-w-3xl py-8">
 
-        {}
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-r-xl">
           <p className="text-sm md:text-base text-blue-900 dark:text-blue-100 leading-relaxed font-medium">
             <strong>Quick Answer:</strong> Kisan Credit Card (KCC) 2026 ek government-backed short-term loan hai jo kisanon ko <strong>4% effective byaj dar</strong> par ₹5 lakh tak ki credit suvidha deta hai. Isme beej, khaad, aur kheti ke kharchon ke liye ₹2 lakh tak collateral-free loan milta hai. Apply karne ke liye Aadhaar, updated land records (Khatauni), aur bank passbook sabse zaroori documents hain.
           </p>
         </div>
 
-        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/kisan-credit-card-apply-online-hero.webp'}
@@ -126,7 +121,6 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </p>
         </div>
 
-        {}
         <div className="my-6 p-5 bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-400 dark:border-amber-700 border-l-[6px] rounded-xl">
           <h2 className="text-base font-black text-amber-800 dark:text-amber-300 mb-2">Approval Ki Speed Documents Par Tikti Hai</h2>
           <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed mb-2">
@@ -137,7 +131,6 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </p>
         </div>
 
-        {}
         <section className="mb-8">
           <SH>Kisan Credit Card (KCC) Kya Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -171,7 +164,6 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </p>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Application Se Disbursal Tak — Bank Ke Andar Kya Hota Hai</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -204,7 +196,6 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </p>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>SBI vs PNB vs Gramin Bank vs Cooperative — Kahan Se Lein?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -243,7 +234,6 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </p>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Dairy, Machli, Murgi — Pashupalan Wala KCC Alag Kaise Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -261,7 +251,6 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </p>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>CIBIL Score Ka Sach — Kitna Matter Karta Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -280,7 +269,6 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </p>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>3 Saal Baad Kya Hota Hai — Renewal Aur Limit Enhancement</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -297,7 +285,6 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </p>
         </section>
 
-        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/kisan-credit-card-eligibility-criteria.webp"
@@ -313,7 +300,6 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </p>
         </div>
 
-        {}
         <section className="mb-8">
           <SH>Kisko Priority Milti Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -330,7 +316,6 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </p>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>2026 Limits Aur Interest Rates</SH>
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
@@ -365,7 +350,6 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </p>
         </section>
 
-        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/kisan-credit-card-loan-limits-interest-rates.webp"
@@ -381,7 +365,6 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </p>
         </div>
 
-        {}
         <section className="mb-8">
           <SH>Documents — Official List Vs Ground Reality</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -414,7 +397,6 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </p>
         </section>
 
-        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/kisan-credit-card-documents-required.webp"
@@ -430,7 +412,6 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </p>
         </div>
 
-        {}
         <section className="mb-8">
           <SH>Application Kaise Karein</SH>
 
@@ -455,7 +436,6 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </p>
         </section>
 
-        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/kisan-credit-card-online-application-process.webp"
@@ -471,7 +451,6 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </p>
         </div>
 
-        {}
         <section className="mb-8">
           <SH>Top 5 Rejection Reasons + Turant Fix</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -506,7 +485,6 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </div>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>KCC Mil Gaya — Ab Kya?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -532,7 +510,6 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </div>
         </section>
 
-        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/kisan-credit-card-documents-required.webp"
@@ -548,7 +525,6 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </p>
         </div>
 
-        {}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Real Questions From Bank Counters
@@ -556,7 +532,6 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           <FAQBlock faqs={FAQS_DATA} caption="Kisan Credit Card FAQ 2026 — Ground-Level Verified Answers" />
         </section>
 
-        {}
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Bottom Line</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
@@ -587,13 +562,12 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           secondaryCta={{ href: '/calculator', label: '🧮 Sab Utilities Dekho' }}
         />
 
-        {}
         <section className="my-10">
           <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Aapke Liye Zaroori Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {RELATED_CARDS.map((card) => (
-              <Link 
-                key={card.slug} 
+              <Link
+                key={card.slug}
                 href={`/articles/${card.slug}`}
                 className="group block p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:border-green-500 transition-all duration-300"
               >

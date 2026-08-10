@@ -50,12 +50,12 @@ const FAQS_DATA = [
   },
 ];
 
-function CountdownButton({ 
-  href, 
-  label, 
+function CountdownButton({
+  href,
+  label,
   seconds = 5,
-  variant = 'primary' 
-}: { 
+  variant = 'primary'
+}: {
   href: string;
   label: string;
   seconds?: number;
@@ -74,8 +74,6 @@ function CountdownButton({
   useEffect(() => {
     if (countdown === null) return;
 
-    // Both the tick and the final redirect happen inside the timer callback, so
-    // the effect body never calls setState synchronously (react-hooks/set-state-in-effect).
     const timer = setTimeout(() => {
       if (countdown <= 1) {
         window.open(href, '_blank', 'noopener,noreferrer');
@@ -149,9 +147,9 @@ function ExternalLinkCard({
           <p className="text-xs text-[var(--color-text-muted)] leading-relaxed">{description}</p>
         </div>
       </div>
-      <CountdownButton 
-        href={href} 
-        label={buttonText} 
+      <CountdownButton
+        href={href}
+        label={buttonText}
         seconds={5}
         variant={variant}
       />
@@ -186,7 +184,6 @@ export default function PmKisanMaandhanYojanaPension() {
 
       <div className="container-site max-w-3xl py-8">
 
-        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-maandhan-yojana-pension/maandhan-hero.webp"
@@ -202,7 +199,6 @@ export default function PmKisanMaandhanYojanaPension() {
           </p>
         </div>
 
-        {}
         <section className="mb-8">
           <SH>60 Saal Ke Baad Kheti Kaun Karega?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -211,7 +207,7 @@ export default function PmKisanMaandhanYojanaPension() {
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Isi problem ko dekh kar sarkar ne <strong>PM Kisan Maandhan Yojana (PM-KMY)</strong> banayi. Iska seedha matlab hai — "kisan ki buzurgi ka sahara".
           </p>
-          
+
           <Image
             src="/images/articles/pm-kisan-maandhan-yojana-pension/elderly-farmer-field.webp"
             alt="Old farmer working in field worrying about future"
@@ -232,7 +228,6 @@ export default function PmKisanMaandhanYojanaPension() {
           </p>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>PM Kisan Maandhan Yojana Aakhir Hai Kya?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -253,7 +248,6 @@ export default function PmKisanMaandhanYojanaPension() {
           </p>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Kaun Join Kar Sakta Hai? (Eligibility Criteria)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -299,7 +293,6 @@ export default function PmKisanMaandhanYojanaPension() {
           </IB>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Har Mahine Kitna Paisa Dena Padta Hai? (Mandhan Chart)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -350,7 +343,6 @@ export default function PmKisanMaandhanYojanaPension() {
           />
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Apply Kaise Karein? (3 Tareeke)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -386,7 +378,6 @@ export default function PmKisanMaandhanYojanaPension() {
           />
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Documents Ki List</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -409,7 +400,6 @@ export default function PmKisanMaandhanYojanaPension() {
           </div>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>60 Saal Ke Baad Kya Milega? (Full Calculation)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -450,7 +440,6 @@ export default function PmKisanMaandhanYojanaPension() {
           </p>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Agar 60 Saal Se Pehle Maut Ho Jaye Toh?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -482,30 +471,29 @@ export default function PmKisanMaandhanYojanaPension() {
           />
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Common Problems Aur Solutions</SH>
           <div className="space-y-3">
             {[
-              { 
-                problem: 'Monthly contribution auto-debit nahi ho raha', 
-                solution: 'Bank account mein sufficient balance rakho. Agar account band ho gaya toh naya account link karo.' 
+              {
+                problem: 'Monthly contribution auto-debit nahi ho raha',
+                solution: 'Bank account mein sufficient balance rakho. Agar account band ho gaya toh naya account link karo.'
               },
-              { 
-                problem: 'Pension nahi aa rahi 60 ke baad', 
-                solution: 'LIC pension office mein contact karo. Apna enrollment number aur Aadhaar le jao.' 
+              {
+                problem: 'Pension nahi aa rahi 60 ke baad',
+                solution: 'LIC pension office mein contact karo. Apna enrollment number aur Aadhaar le jao.'
               },
-              { 
-                problem: 'Naam ya details galat daal diye', 
-                solution: 'CSC center par jakar correction form bharein. ₹20-30 lagenge.' 
+              {
+                problem: 'Naam ya details galat daal diye',
+                solution: 'CSC center par jakar correction form bharein. ₹20-30 lagenge.'
               },
-              { 
-                problem: '2-3 mahine contribution miss ho gaya', 
-                solution: 'Koi baat nahi. Jab bhi ho sake, missed amount jama kar do. Pension cancel nahi hoti.' 
+              {
+                problem: '2-3 mahine contribution miss ho gaya',
+                solution: 'Koi baat nahi. Jab bhi ho sake, missed amount jama kar do. Pension cancel nahi hoti.'
               },
-              { 
-                problem: 'State change ho gaya (ek state se dusre)', 
-                solution: 'Naye state ke CSC center par jakar transfer karwa lo. Process free hai.' 
+              {
+                problem: 'State change ho gaya (ek state se dusre)',
+                solution: 'Naye state ke CSC center par jakar transfer karwa lo. Process free hai.'
               },
             ].map(({ problem, solution }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
@@ -516,7 +504,6 @@ export default function PmKisanMaandhanYojanaPension() {
           </div>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>PM Kisan Samman Nidhi Se Kya Farq Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -554,7 +541,6 @@ export default function PmKisanMaandhanYojanaPension() {
           </IB>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>State Wise Implementation</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -580,7 +566,6 @@ export default function PmKisanMaandhanYojanaPension() {
           </p>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Real Challenges Jo Samajhna Zaroori Hain</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -608,7 +593,6 @@ export default function PmKisanMaandhanYojanaPension() {
           </div>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Kuch Galat Fahmiyan Jo Door Karni Zaroori Hain</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -622,7 +606,6 @@ export default function PmKisanMaandhanYojanaPension() {
           </p>
         </section>
 
-        {}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Official Links aur Resources
@@ -655,7 +638,6 @@ export default function PmKisanMaandhanYojanaPension() {
           </div>
         </section>
 
-        {}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Aksar Puche Jane Wale Sawal

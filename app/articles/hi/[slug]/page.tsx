@@ -27,12 +27,9 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: HindiArticle }>>
 export const revalidate = 86400;
 
 export async function generateStaticParams() {
-  // Data slugs carry the `hi/` prefix (e.g. 'hi/pm-kisan-25vi-kist'); the
-  // route param is just the last segment.
   return HINDI_ARTICLES.map((a) => ({ slug: a.slug.replace(/^hi\//, '') }));
 }
 
-// Unknown slugs => real HTTP 404 (same pattern as app/articles/[slug]).
 export const dynamicParams = false;
 
 export async function generateMetadata({
@@ -45,7 +42,6 @@ export async function generateMetadata({
   if (!article) notFound();
 
   const url = `${SITE_URL}/articles/hi/${slug}`;
-  // Per-article og:image (falls back to the site default if the data has none).
   const ogImage = article.ogImage
     ? article.ogImage.startsWith('http')
       ? article.ogImage
@@ -54,13 +50,9 @@ export async function generateMetadata({
 
   return {
     metadataBase: new URL(SITE_URL),
-    // seoTitleHi (when set) keeps the SERP <title> ≤ 60 chars incl. the
-    // " | KisanStatus" template suffix; titleHi stays the H1 / og:title.
     title: article.seoTitleHi ?? article.titleHi,
     description: article.desc,
     keywords: [...article.keywords],
-    // hreflang: pairs this Devanagari page with its indexed Hinglish counterpart
-    // (when one exists) so Google treats them as language variants, not duplicates.
     alternates: {
       canonical: url,
       languages: hindiAlternates(slug),

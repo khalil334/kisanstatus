@@ -55,10 +55,10 @@ const FAQS_DATA = [
 ];
 
 export default function PmKisanRejectedStatusReApplyGuide() {
-  const [modal, setModal] = useState<{ 
-    title: string; 
-    message: string; 
-    url: string; 
+  const [modal, setModal] = useState<{
+    title: string;
+    message: string;
+    url: string;
   } | null>(null);
 
   const handleOfficialLink = (title: string, message: string, url: string) => {
@@ -124,7 +124,7 @@ export default function PmKisanRejectedStatusReApplyGuide() {
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             <strong>PM Kisan rejected status</strong> aana aam baat hai. Har mahine lakhon kisanon ka status reject hota hai aur agle mahine fix ho kar wapas active ho jata hai. Bas aapko ye pata hona chahiye ki galti kahan thi aur use kaise theek karna hai.
           </p>
-          
+
           <Image
             src="/images/articles/pm-kisan-rejected-status-re-apply-guide/reason-check.webp"
             alt="Checking reason for PM Kisan rejection on portal"
@@ -177,33 +177,33 @@ export default function PmKisanRejectedStatusReApplyGuide() {
           </p>
           <div className="space-y-3">
             {[
-              { 
-                reason: 'Zameen Ka Record Galat (Sabse Common)', 
-                desc: 'Aapke Aadhaar card par jo naam hai, aur Khatauni (land record) par jo naam hai, dono mein farq hai. "Ram Kumar" aur "Ram Kumar Singh" ko system alag maanta hai.' 
+              {
+                reason: 'Zameen Ka Record Galat (Sabse Common)',
+                desc: 'Aapke Aadhaar card par jo naam hai, aur Khatauni (land record) par jo naam hai, dono mein farq hai. "Ram Kumar" aur "Ram Kumar Singh" ko system alag maanta hai.'
               },
-              { 
-                reason: 'Bank Account Ya IFSC Code Galat', 
-                desc: 'Account number galat daal diya, ya branch merge hone ki wajah se IFSC code badal gaya aur aapne purana code use kiya.' 
+              {
+                reason: 'Bank Account Ya IFSC Code Galat',
+                desc: 'Account number galat daal diya, ya branch merge hone ki wajah se IFSC code badal gaya aur aapne purana code use kiya.'
               },
-              { 
-                reason: 'Aadhaar Se Link Nahi Hai Bank', 
-                desc: 'Aapka bank account Aadhaar se link nahi hai. DBT (Direct Benefit Transfer) ke liye ye link hona 100% zaroori hai.' 
+              {
+                reason: 'Aadhaar Se Link Nahi Hai Bank',
+                desc: 'Aapka bank account Aadhaar se link nahi hai. DBT (Direct Benefit Transfer) ke liye ye link hona 100% zaroori hai.'
               },
-              { 
-                reason: 'Do Baar Form Bhar Diya', 
-                desc: 'Aapne galti se do baar form bhar diya, ya aapke parivar ke do logon ne ek hi zameen par apply kar diya.' 
+              {
+                reason: 'Do Baar Form Bhar Diya',
+                desc: 'Aapne galti se do baar form bhar diya, ya aapke parivar ke do logon ne ek hi zameen par apply kar diya.'
               },
-              { 
-                reason: 'Aap Eligible Hi Nahi Ho', 
-                desc: 'Aap income tax filer nikle, ya aapke parivar mein koi government servant nikal gaya. Ya zameen 2 hectare se zyada nikal aayi.' 
+              {
+                reason: 'Aap Eligible Hi Nahi Ho',
+                desc: 'Aap income tax filer nikle, ya aapke parivar mein koi government servant nikal gaya. Ya zameen 2 hectare se zyada nikal aayi.'
               },
-              { 
-                reason: 'eKYC Adhuri Hai Ya Fail Hui', 
-                desc: 'Aapne eKYC hi nahi kiya, ya OTP time par verify nahi kiya. Bina eKYC ke paisa ruk jata hai aur status reject ho sakta hai.' 
+              {
+                reason: 'eKYC Adhuri Hai Ya Fail Hui',
+                desc: 'Aapne eKYC hi nahi kiya, ya OTP time par verify nahi kiya. Bina eKYC ke paisa ruk jata hai aur status reject ho sakta hai.'
               },
-              { 
-                reason: 'State Verification Mein Delay', 
-                desc: 'Kabhi kabhi galti kisi ki nahi hoti. Bas state ke server par load zyada hota hai aur verification time par nahi ho paati.' 
+              {
+                reason: 'State Verification Mein Delay',
+                desc: 'Kabhi kabhi galti kisi ki nahi hoti. Bas state ke server par load zyada hota hai aur verification time par nahi ho paati.'
               },
             ].map(({ reason, desc }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4 hover:border-red-300 dark:hover:border-red-700 transition-all">
@@ -355,21 +355,21 @@ export default function PmKisanRejectedStatusReApplyGuide() {
           <SH>Dobara Apply Karte Time Ye Galtiyan Mat Karna</SH>
           <div className="space-y-3">
             {[
-              { 
-                mistake: 'Purani Galti Dobara Karna', 
-                fix: 'Agar bank account galat tha, toh naya daalne se pehle bank jakar confirm karo ki wo active hai aur NPCI seeded hai.' 
+              {
+                mistake: 'Purani Galti Dobara Karna',
+                fix: 'Agar bank account galat tha, toh naya daalne se pehle bank jakar confirm karo ki wo active hai aur NPCI seeded hai.'
               },
-              { 
-                mistake: 'Jhoothi Information Dena', 
-                fix: 'Agar aap income tax filer ho, toh chhupane ki koshish mat karo. Pakde jaoge aur penalty lag sakti hai.' 
+              {
+                mistake: 'Jhoothi Information Dena',
+                fix: 'Agar aap income tax filer ho, toh chhupane ki koshish mat karo. Pakde jaoge aur penalty lag sakti hai.'
               },
-              { 
-                mistake: 'Bina Receipt Ke Wapas Aana', 
-                fix: 'CSC wale se acknowledgement slip zaroor lo. Usi par aapka case track hoga.' 
+              {
+                mistake: 'Bina Receipt Ke Wapas Aana',
+                fix: 'CSC wale se acknowledgement slip zaroor lo. Usi par aapka case track hoga.'
               },
-              { 
-                mistake: 'Roz Roz Status Check Karna', 
-                fix: 'Form submit karne ke baad kam se kam 15 din wait karo. Roz check karne se kuch nahi hoga, bas tension badhegi.' 
+              {
+                mistake: 'Roz Roz Status Check Karna',
+                fix: 'Form submit karne ke baad kam se kam 15 din wait karo. Roz check karne se kuch nahi hoga, bas tension badhegi.'
               },
             ].map(({ mistake, fix }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">

@@ -104,8 +104,6 @@ export const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID || '';
 export const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || '';
 export const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FB_PIXEL_ID || '';
 
-// BUG-4: no hardcoded fallback token. Set NEXT_PUBLIC_GSC_TOKEN in the
-// environment (Vercel project settings) or GSC verification meta is omitted.
 export const GOOGLE_SITE_VERIFICATION = process.env.NEXT_PUBLIC_GSC_TOKEN || '';
 export const BING_VERIFICATION = process.env.NEXT_PUBLIC_BING_TOKEN || '';
 export const YANDEX_VERIFICATION = process.env.NEXT_PUBLIC_YANDEX_TOKEN || '';
@@ -118,8 +116,6 @@ export const APP_BACKGROUND_COLOR = '#ffffff';
 
 export const MAIN_NAVIGATION = [
   { name: 'Home', href: '/', priority: 1.0 },
-  // BUG-2: /pm-kisan-status has no app route; it 308-redirects (next.config.js)
-  // to /calculator/quick-status-check. Link straight to the target — no redirect hop.
   { name: 'PM Kisan Status', href: '/calculator/quick-status-check', priority: 0.9 },
   { name: 'eKYC Guide', href: '/articles/PmKisanEkycOnline2026', priority: 0.9 },
   { name: 'Registration', href: '/articles/PmKisanMasterGuide2026', priority: 0.9 },

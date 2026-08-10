@@ -1,29 +1,14 @@
-// ---------------------------------------------------------------------------
-// Hindi (Devanagari) articles — SEPARATE from lib/articles-data.ts.
-// Source plan: docs/traffic-analysis-and-10x-plan.md (14 articles).
-// Content is a SHORT STUB (10–14 words) — replace `content` with the full
-// article text later. Rendered by app/articles/hi/[slug]/page.tsx.
-// ---------------------------------------------------------------------------
-
 export interface HindiArticle {
-  /** URL slug with `hi/` prefix (Roman, lowercase, hyphens) — keeps Hindi
-   *  URLs distinct from Hinglish ones (no duplicate-content risk). */
   slug: string;
-  /** Devanagari title — used as H1 and og:title */
   titleHi: string;
-  /** Optional shorter title for the <title> tag only (SERP). Keep total
-   *  length ≤ 60 chars including the " | KisanStatus" template suffix. */
   seoTitleHi?: string;
-  /** Meta description (Devanagari) */
   desc: string;
   keywords: readonly string[];
   category: 'status-check' | 'loan' | 'farming' | 'mandi' | 'pashupalan' | 'agri-business';
   publishedTime: string;
   modifiedTime: string;
   author: string;
-  /** Component file name in components/articles/hindi-yojana/ */
   component: string;
-  /** Card image for homepage + /articles listing (og:image) */
   ogImage: string;
 }
 
@@ -260,7 +245,6 @@ function hindiFreshnessTime(a: HindiArticle): number {
   return Math.max(published, modified);
 }
 
-/** Newest-first (by published/modified), for the homepage teaser. */
 export function getHindiArticlesByFreshness(): readonly HindiArticle[] {
   return [...HINDI_ARTICLES].sort((a, b) => hindiFreshnessTime(b) - hindiFreshnessTime(a));
 }

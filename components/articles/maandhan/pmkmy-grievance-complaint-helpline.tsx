@@ -551,7 +551,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
           <h3 className="font-black text-blue-800 dark:text-blue-300 text-lg mb-2"> Article Verification Info</h3>
           <p className="text-xs text-[var(--color-text-muted)]">
             <strong>Last Verified:</strong> {fmtDate(MODIFIED)}<br />
-            <strong>Sources:</strong> PMKMY Official Portal (pmkmy.gov.in), Ministry of Labour & Employment (maandhan.in), 
+            <strong>Sources:</strong> PMKMY Official Portal (pmkmy.gov.in), Ministry of Labour & Employment (maandhan.in),
             LIC India Official Website (licindia.in), CSC Portal (csc.gov.in)<br />
             <strong>Author:</strong> KisanStatus Team — Helping farmers with verified information since 2024
           </p>

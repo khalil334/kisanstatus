@@ -45,7 +45,6 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
 
-      {}
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
           <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
@@ -70,7 +69,6 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
 
       <div className="container-site max-w-3xl py-8">
 
-        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/nano-dap-500ml-bottle-hero.webp'}
@@ -87,7 +85,6 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
           </p>
         </div>
 
-        {}
         <div className="my-6 p-5 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-xl">
           <h2 className="text-base font-black text-green-800 dark:text-green-300 mb-2">Quick Answer</h2>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
@@ -95,7 +92,6 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
           </p>
         </div>
 
-        {}
         <section className="mb-8">
           <SH>Nano DAP Kya Hai — Simple Bhasha Mein</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -109,7 +105,6 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
           </IB>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Nano DAP Price 500 ml — 2026 Ka Estimated Range</SH>
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
@@ -142,7 +137,6 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
           </WB>
         </section>
 
-        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/nano-dap-price-banner-2026.webp"
@@ -158,7 +152,6 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
           </p>
         </div>
 
-        {}
         <section className="mb-8">
           <SH>State-wise Price Reference</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -201,7 +194,6 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
           </div>
         </section>
 
-        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/nano-dap-500ml-price-india-2026.webp"
@@ -217,7 +209,6 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
           </p>
         </div>
 
-        {}
         <section className="mb-8">
           <SH>Price Kyun Badalti Rehti Hai?</SH>
           <div className="space-y-3">
@@ -236,7 +227,6 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
           </div>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Foliar Spray Ke Sambhavit Fayde</SH>
           <DB>
@@ -259,7 +249,6 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
           </div>
         </section>
 
-        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/nano-dap-benefits-farmers.webp"
@@ -275,7 +264,6 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
           </p>
         </div>
 
-        {}
         <section className="mb-8">
           <SH>Crop-wise Dosage Chart — Per Acre</SH>
           <WB>
@@ -314,7 +302,6 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
           </div>
         </section>
 
-        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/nano-dap-before-after-comparison.webp"
@@ -330,7 +317,6 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
           </p>
         </div>
 
-        {}
         <section className="mb-8">
           <SH>Nano DAP Spray Karne Ka Sahi Tarika — Step by Step</SH>
           <StepList>
@@ -346,7 +332,6 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
           </IB>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Liquid Vs Traditional DAP — Asliyat</SH>
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
@@ -382,7 +367,6 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
           </DB>
         </section>
 
-        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/nano-dap-vs-traditional-dap-comparison.webp"
@@ -398,7 +382,6 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
           </p>
         </div>
 
-        {}
         <section className="mb-8">
           <SH>Kahan Se Kharidein — Trusted Sources</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -425,7 +408,6 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
           </WB>
         </section>
 
-        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/nano-dap-buy-online-fertilizer.webp"
@@ -441,7 +423,6 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
           </p>
         </div>
 
-        {}
         <section className="mb-8">
           <SH>6 Galtiyan Jo Avoid Karni Chahiye</SH>
           <div className="space-y-2">
@@ -461,7 +442,6 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
           </div>
         </section>
 
-        {}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Aksar Puche Jane Wale Sawal
@@ -469,7 +449,6 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
           <FAQBlock faqs={FAQS_DATA} caption="Nano DAP FAQ 2026 — Verified Answers" />
         </section>
 
-        {}
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Bottom Line</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">

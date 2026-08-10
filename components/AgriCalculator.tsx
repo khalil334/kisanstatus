@@ -364,7 +364,6 @@ export default function AgriCalculator() {
         </div>
 
         <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-3xl shadow-lg overflow-hidden">
-          {}
           <div className="grid grid-cols-3 md:grid-cols-6 border-b border-[var(--color-border)] bg-[var(--color-bg-alt)]">
             {tabs.map(t => (
               <button key={t.id} onClick={() => setTab(t.id)}
@@ -380,7 +379,6 @@ export default function AgriCalculator() {
             ))}
           </div>
 
-          {}
           <div className="p-5 md:p-8">
             <div className="flex items-center gap-2 mb-6">
               <span className="text-2xl">{tabs.find(t => t.id === tab)?.emoji}</span>
@@ -398,7 +396,6 @@ export default function AgriCalculator() {
             {tab === 'irrigation' && <IrrigationCalc />}
           </div>
 
-          {}
           <div className="bg-green-50 dark:bg-green-900/20 border-t border-green-100 dark:border-green-800 px-6 py-3 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-[var(--color-text-muted)]">
             <span>✍️ By KisanStatus Team | KisanStatus.com</span>
             <span>⚠️ Yeh tools sirf estimate dete hain bhai — final figures official sources se verify karein</span>

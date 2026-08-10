@@ -3,13 +3,6 @@ import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
 
-// ⚠️ DEAD CODE — Next.js is metadata export ko ignore karta hai.
-// `export const metadata` sirf app/**/page.tsx ya layout.tsx mein kaam karta hai;
-// ye ek client-imported article component hai, isliye ye block render HI nahi hota.
-// Live <title>/description/canonical/OG `app/articles/[slug]/page.tsx` ke
-// generateMetadata() se aate hain, jo lib/articles-data.ts padhta hai.
-// >>> Title/description/canonical badalna hai to lib/articles-data.ts edit karo. <<<
-// Yahan edit karne se live page pe KUCHH nahi badlega. (Ref: fixplan.md BUG-3)
 export const metadata: Metadata = {
   title: 'Mushroom Kheti 2026: Subsidy, Profit aur Complete Guide',
   description: 'Chhote kamre mein oyster mushroom kaise ugayein. NHB subsidy process, 100-bag setup cost, aur sachcha profit calculation janein.',
@@ -24,11 +17,11 @@ export const metadata: Metadata = {
     url: 'https://kisanstatus.com/articles/mushroom-kheti-nhb-subsidy',
     images: [{ url: 'https://kisanstatus.com/images/kisanguides/Mushroomhero.webp', width: 1200, height: 630, alt: 'Oyster Mushroom Farming Setup in Dark Room' }],
   },
-  twitter: { 
-    card: 'summary_large_image', 
-    title: 'Mushroom Kheti 2026: Subsidy, Profit aur Complete Guide', 
-    description: 'Chhote kamre mein oyster mushroom kaise ugayein. NHB subsidy process, 100-bag setup cost, aur sachcha profit calculation janein.', 
-    images: ['https://kisanstatus.com/images/kisanguides/Mushroomhero.webp'] 
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Mushroom Kheti 2026: Subsidy, Profit aur Complete Guide',
+    description: 'Chhote kamre mein oyster mushroom kaise ugayein. NHB subsidy process, 100-bag setup cost, aur sachcha profit calculation janein.',
+    images: ['https://kisanstatus.com/images/kisanguides/Mushroomhero.webp']
   },
   alternates: { canonical: 'https://kisanstatus.com/articles/mushroom-kheti-nhb-subsidy' },
 };
@@ -42,7 +35,7 @@ const jsonLd = {
         { '@type': 'Question', name: 'Green mold (hara fungus) dikhe toh turant kya karein?', acceptedAnswer: { '@type': 'Answer', text: 'Us bag ko chupke se kamre se bahar nikal kar jala dein ya gehra gaad dein. Bachaye hue bags ke aas-paas Neem oil (5ml/litre) ya Trichoderma viride spray karein. Bleaching powder se farsh saaf karein.' } },
         { '@type': 'Question', name: 'Asli mushroom beej (spawn) kahan se aur kitne mein milega?', acceptedAnswer: { '@type': 'Answer', text: '2026 mein certified labs se oyster spawn ka rate ₹180 se ₹250 per kg hai. Hamesha DMR Solan ya state agricultural university ke authorized vendors se hi lein. Local mandi ke anjaam sources se bachein.' } },
         { '@type': 'Question', name: 'NHB mushroom subsidy kitni milti hai aur kaise apply karein?', acceptedAnswer: { '@type': 'Answer', text: 'NHB back-ended capital subsidy deta hai, jiska percentage state aur unit size ke hisaab se badalta hai — zyadatar general category ke liye 40% ke aas-paas rehta hai. Apply apne zila Horticulture Office se ya NHB ke online portal se hota hai, project report ke saath.' } }
-      ] 
+      ]
     }
   ]
 };
@@ -51,27 +44,27 @@ export default function MushroomKheti() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-8 text-gray-800 dark:text-gray-200 leading-relaxed prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-blue-600 dark:prose-a:text-blue-400">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      
-      <Image 
-        src="/images/kisanguides/Mushroomhero.webp" 
-        alt="Oyster Mushroom Farming Setup in Dark Room" 
-        width={1200} 
-        height={630} 
+
+      <Image
+        src="/images/kisanguides/Mushroomhero.webp"
+        alt="Oyster Mushroom Farming Setup in Dark Room"
+        width={1200}
+        height={630}
         priority
         sizes="(max-width: 768px) 100vw, 1200px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose"
       />
-      
+
       <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100 leading-tight">
         Mushroom (Khumbi) Ki Kheti 2026: Kamre Mein Shuru Karein, NHB Subsidy aur Real Profit Guide
       </h1>
-      
+
       <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
         <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
           <strong>Seedhi baat:</strong> YouTube par "zero investment, mahine ke lakhon" wale videos dekhkar bahut se naujawan seedha 200-300 bags laga lete hain. Par 15 din baad jab green mold (hara fungus) puri batch kharab kar deta hai, tab pata chalta hai ki khumbi ugana sirf bags latakane ka naam nahi hai. Yeh ek controlled science hai. Jab aap sterilization aur humidity control ka practical tareeka samajh jate hain, tabhi yeh business ek stable income source ban pata hai.
         </p>
       </div>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
         Himachal ke Solan ko "Mushroom City" kaha jata hai, lekin ab yeh zaroori nahi ki aap pahadi ilaqe mein hi rahein. Ek saamanaya chhat, storeroom, ya basement bhi ab commercial production ke liye kaafi hai. Shart sirf ek hai: controlled environment. Market mein protein-rich food ki maang tezi se badh rahi hai. Local hotels, hostels, aur health-conscious families regular khareedar ban sakte hain.
       </p>
@@ -86,13 +79,13 @@ export default function MushroomKheti() {
         Pehli baar shuruat kar rahe hain toh Oyster (Dhingri) ya Milky se start lein. Oyster 20-30°C ke beech aaram se ugg jata hai, iski rog pratirodhak shamta achhi hoti hai, aur bej aasani se uplabdh hai.
       </p>
 
-      <Image 
-        src="/images/kisanguides/varieties-comparison.webp" 
-        alt="Different Mushroom Varieties - Oyster, Button, Milky, and Shiitake Comparison Chart" 
-        width={800} 
-        height={450} 
+      <Image
+        src="/images/kisanguides/varieties-comparison.webp"
+        alt="Different Mushroom Varieties - Oyster, Button, Milky, and Shiitake Comparison Chart"
+        width={800}
+        height={450}
         sizes="(max-width: 768px) 100vw, 800px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose"
       />
 
       <div className="overflow-x-auto mb-8 not-prose">
@@ -221,13 +214,13 @@ export default function MushroomKheti() {
         </div>
       </div>
 
-      <Image 
-        src="/images/kisanguides/setup-process.webp" 
-        alt="Mushroom Farming Setup Process - Bag Filling, Spawning and Incubation Steps" 
-        width={800} 
-        height={450} 
+      <Image
+        src="/images/kisanguides/setup-process.webp"
+        alt="Mushroom Farming Setup Process - Bag Filling, Spawning and Incubation Steps"
+        width={800}
+        height={450}
         sizes="(max-width: 768px) 100vw, 800px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose"
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
@@ -258,13 +251,13 @@ export default function MushroomKheti() {
         </div>
       </div>
 
-      <Image 
-        src="/images/kisanguides/harvesting-mushroom.webp" 
-        alt="Fresh Oyster Mushroom Harvesting from Growing Bags - Ready for Market" 
-        width={800} 
-        height={450} 
+      <Image
+        src="/images/kisanguides/harvesting-mushroom.webp"
+        alt="Fresh Oyster Mushroom Harvesting from Growing Bags - Ready for Market"
+        width={800}
+        height={450}
         sizes="(max-width: 768px) 100vw, 800px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose"
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
@@ -351,9 +344,9 @@ export default function MushroomKheti() {
         Mera strong suggestion hai: apna kaam subsidy ke intezaar mein na rokiye. Pehle apni pocket se chhota setup karein, bank se loan lein, aur application daal dein. Agar subsidy aa gayi, toh use future expansion mein lagayein. Apne zila ke Horticulture Officer se mil kar latest state-specific scheme ki jankari zaroor lein.
       </p>
 
-      <ExternalLinkButton 
-        url="https://nhb.gov.in/" 
-        label="NHB Official Portal - Subsidy Guidelines Check Karein" 
+      <ExternalLinkButton
+        url="https://nhb.gov.in/"
+        label="NHB Official Portal - Subsidy Guidelines Check Karein"
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
@@ -403,7 +396,7 @@ export default function MushroomKheti() {
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Final Decision: Kya Yeh Aapke Liye Sahi Hai?
       </h2>
-      
+
       <div className="grid md:grid-cols-2 gap-6 mb-8 not-prose">
         <div className="bg-green-50 dark:bg-green-900/20 p-5 rounded-lg border border-green-200 dark:border-green-800">
           <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">✅ Haan, agar:</h3>
@@ -431,13 +424,13 @@ export default function MushroomKheti() {
         <strong>Dhyan rakhein:</strong> Bina research ke kisi private vendor ki baaton mein aakar decision na lein jo "lakhon ka profit" ka wada karein. Pehle apne nazdeeki Krishi Vigyan Kendra (KVK) jayein. Wahan ke officers aapko exact subsidy, eligible vendors ki list, aur free practical training ke baare mein guide karenge. Uske baad kam se kam 3 vendors se quotation lein, unke purane installations dekhne jayein, aur phir hi apply karein.
       </p>
 
-      <Image 
-        src="/images/kisanguides/packaged-products.webp" 
-        alt="Fresh and Dried Mushroom Products Ready for Market - Packaging and Branding" 
-        width={800} 
-        height={450} 
+      <Image
+        src="/images/kisanguides/packaged-products.webp"
+        alt="Fresh and Dried Mushroom Products Ready for Market - Packaging and Branding"
+        width={800}
+        height={450}
         sizes="(max-width: 768px) 100vw, 800px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose"
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">

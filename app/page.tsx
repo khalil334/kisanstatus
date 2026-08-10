@@ -1,21 +1,17 @@
 import type { Metadata } from 'next';
 import HomeContent from '@/components/HomeContent';
 import { Suspense } from 'react';
-import { 
-  SITE_URL, 
-  SITE_NAME, 
-  SITE_DESCRIPTION, 
-  AUTHOR_NAME, 
-  AUTHOR_URL, 
+import {
+  SITE_URL,
+  SITE_NAME,
+  SITE_DESCRIPTION,
+  AUTHOR_NAME,
+  AUTHOR_URL,
   DEFAULT_OG_IMAGE,
   LOGO_URL,
   GLOBAL_KEYWORDS,
 } from '@/lib/site-config';
 
-// Single canonical title for the homepage. It must stay aligned with the on-page
-// H1 ("PM Kisan Status Check 2026") AND with og:title/twitter:title below —
-// when those three disagree Google discards <title> and substitutes its own SERP
-// title (Ahrefs "Page and SERP titles do not match"). Change all three or none.
 const HOME_TITLE = `PM Kisan Status Check 2026 | ${SITE_NAME}`;
 
 export const metadata: Metadata = {
@@ -81,9 +77,9 @@ export const revalidate = 3600;
 
 function HomeLoading() {
   return (
-    <div 
-      className="min-h-screen bg-[var(--color-bg)]" 
-      aria-busy="true" 
+    <div
+      className="min-h-screen bg-[var(--color-bg)]"
+      aria-busy="true"
       aria-label="Page content loading, please wait"
     >
       <div className="relative aspect-[16/9] md:aspect-[21/9] bg-gradient-to-r from-green-800 to-green-600">
@@ -115,9 +111,6 @@ function HomeLoading() {
 export default function HomePage() {
   return (
     <>
-      {/* WebSite schema: defines the `#website` node WebPage's isPartOf points at,
-          and carries the sitelinks-searchbox SearchAction (Google reads it from
-          WebSite, not WebPage). /search?q= renders real results (app/search). */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

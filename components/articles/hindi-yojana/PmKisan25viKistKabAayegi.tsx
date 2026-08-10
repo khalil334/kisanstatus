@@ -2,8 +2,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
-// यह article जानबूझकर self-contained है — कोई shared component import नहीं।
-
 const FAQS = [
   {
     q: '25वीं किस्त की पक्की तारीख क्या है?',

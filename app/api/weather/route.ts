@@ -1,29 +1,11 @@
 import { NextResponse } from 'next/server';
 
-/**
- * Server-side proxy for the OpenWeatherMap 5-day forecast (BUG-8 part 2).
- *
- * The key used to be read as `NEXT_PUBLIC_WEATHER_API_KEY` inside
- * `components/articles/mandi-bhav-today.tsx`, which is a client component — so it was
- * inlined into the JS bundle and extractable by anyone (OWM bills per call, so that's a
- * real quota/billing exposure). It now lives only here, in a server-only env var
- * (`WEATHER_API_KEY`), and the browser talks to this route instead of calling
- * api.openweathermap.org directly.
- *
- * The route takes a `state` name (not raw lat/lon) so it can't be abused as an open
- * proxy for arbitrary coordinates — coordinates are resolved server-side from the same
- * fixed table the component used. Responses are cached for 30 minutes per state: a
- * 3-hourly forecast doesn't change faster than that, and it keeps OWM quota flat no
- * matter how many visitors hit the page.
- */
-
 const UPSTREAM_BASE = 'https://api.openweathermap.org/data/2.5/forecast';
 const CACHE_SECONDS = 1800;
 const UPSTREAM_TIMEOUT_MS = 8000;
 
-const DEFAULT_COORDS = { lat: 28.7041, lon: 77.1025 }; // Delhi
+const DEFAULT_COORDS = { lat: 28.7041, lon: 77.1025 };
 
-/** Same state → coordinates table the component keys its selector on. */
 const STATE_COORDS: Record<string, { lat: number; lon: number }> = {
   'Uttar Pradesh': { lat: 26.8467, lon: 80.9462 },
   'Maharashtra': { lat: 19.076, lon: 72.8777 },
@@ -49,7 +31,6 @@ const STATE_COORDS: Record<string, { lat: number; lon: number }> = {
   'Delhi': DEFAULT_COORDS,
 };
 
-/** One 3-hourly entry of the OWM `/data/2.5/forecast` response (fields we forward). */
 interface UpstreamEntry {
   dt?: number;
   main?: { temp?: number; temp_min?: number };
@@ -58,12 +39,9 @@ interface UpstreamEntry {
 }
 
 export async function GET(request: Request) {
-  // Server-only. `WEATHER_API_KEY` is preferred; the old public name is accepted as a
-  // fallback so an existing deployment keeps working until the env var is renamed.
   const apiKey = process.env.WEATHER_API_KEY || process.env.NEXT_PUBLIC_WEATHER_API_KEY || '';
 
   if (!apiKey) {
-    // Mirrors the old "no key configured" path: the client renders its static fallback.
     return NextResponse.json(
       { configured: false, list: [] },
       { status: 503, headers: { 'Cache-Control': 'no-store' } },
@@ -97,8 +75,6 @@ export async function GET(request: Request) {
       ? ((data as { list: UpstreamEntry[] }).list)
       : [];
 
-    // Only the fields the component actually reads are forwarded (and only the first 40
-    // 3-hourly slots = 5 days, same window the component used).
     const list = rawList.slice(0, 40).map((item) => ({
       dt: item.dt ?? 0,
       main: { temp: item.main?.temp ?? 0, temp_min: item.main?.temp_min ?? 0 },
