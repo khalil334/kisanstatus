@@ -94,11 +94,15 @@ export default function OdishaCmKisanStatusCheck({
         />
 
         <p>
-          Odisha ke gaon mein aaj bhi log &ldquo;KALIA ka paisa&rdquo; kehte hain, jabki
-          portal, form aur bank ka message sab CM Kisan likh kar aata hai. Isi farak ne bahut
-          confusion paida kiya hai — kuch log purane portal par status dhoondte reh jaate
-          hain, kuch samajhte hain ki purani scheme band hone se unka paisa hi band ho gaya.
-          Sachchai iske beech mein hai, aur usse samajhna is page ka pehla kaam hai.
+          Odisha ke gaon mein aaj bhi log &ldquo;KALIA ka paisa&rdquo; kehte hain. Portal
+          kuch aur kehta hai — form, bank ka message, sab CM Kisan likh kar aata hai.
+        </p>
+
+        <p>
+          Isi farak ne bahut confusion paida kiya hai. Kuch log purane portal par status
+          dhoondte reh jaate hain, kuch samajhte hain ki purani scheme band hone se unka
+          paisa hi band ho gaya. Ghabrahat samajh mein aati hai — paisa season ka sawaal
+          hai. Par sachchai iske beech mein hai, aur usse samajhna is page ka pehla kaam hai.
         </p>
 
         <InfoBox type="info">
@@ -123,7 +127,8 @@ export default function OdishaCmKisanStatusCheck({
           wala pata ab final source nahi hai. Do — beneficiary base dobara verify kiya gaya
           hai, is liye kuch purane naam list se hat gaye aur kuch naye jud gaye. Teen — Aadhaar
           e-KYC aur NPCI-mapped bank account ab dheele rules nahi hain; inke bina payment
-          release hi hold ho jaati hai.
+          release hi hold ho jaati hai. Teeno mein se aakhri wala sabse zyada logon ko
+          pakadta hai.
         </p>
 
         <SchemeTable>
@@ -157,8 +162,9 @@ export default function OdishaCmKisanStatusCheck({
         <h2>Do Track Hain — Pehle Ye Tay Karein Aap Kis Mein Hain</h2>
 
         <p>
-          CM Kisan ko ek raqam wali scheme samajhna sabse badi galti hai. Ismein do track
-          hain, aur dono ka logic ulta hai.
+          CM Kisan ko ek raqam wali scheme samajhna sabse badi galti hai. Do track hain.
+          Dono ka logic ulta. Ek mein zameen chahiye, doosre mein zameen ka na hona hi
+          shart hai.
         </p>
 
         <Fig
@@ -282,9 +288,10 @@ export default function OdishaCmKisanStatusCheck({
 
         <h3>e-KYC pending pada hai</h3>
         <p>
-          Ye number ek wajah hai. Eligibility poori hoti hai, naam list mein hota hai, phir
-          bhi paisa hold rehta hai kyunki Aadhaar authentication adhoora hai. Ise portal se
-          OTP ke zariye, ya nazdeeki CSC center par biometric se poora karaya ja sakta hai.
+          Ye number ek wajah hai. Eligibility poori, naam list mein, phir bhi paisa hold —
+          kyunki Aadhaar authentication adhoora hai. Khijh hoti hai, par hal aasan hai:
+          portal se OTP ke zariye, ya nazdeeki CSC center par biometric se poora karaya ja
+          sakta hai. Das minute ka kaam hai, mahinon ka intezaar bacha leta hai.
         </p>
 
         <h3>Bank account NPCI mapper se juda nahi</h3>
@@ -317,9 +324,10 @@ export default function OdishaCmKisanStatusCheck({
         <h2>PM Kisan Aur CM Kisan — Dono Sath Chalte Hain</h2>
 
         <p>
-          Ye sawaal bahut aata hai: CM Kisan lene se PM Kisan band ho jaayega? Nahi. Dono
-          apni-apni sarkar ki scheme hain aur ek dusre ko cancel nahi karti. Bahut se Odisha
-          ke log dono se paisa lete hain — central wala PM Kisan se, state wala CM Kisan se.
+          Ye sawaal bahut aata hai: CM Kisan lene se PM Kisan band ho jaayega? Nahi.
+          Bilkul nahi. Dono apni-apni sarkar ki scheme hain aur ek dusre ko cancel nahi
+          karti. Bahut se Odisha ke log dono se paisa lete hain — central wala PM Kisan se,
+          state wala CM Kisan se.
         </p>
 
         <p>
@@ -362,10 +370,10 @@ export default function OdishaCmKisanStatusCheck({
         <h2>Kist Ka Waqt — Kya Umeed Rakhein</h2>
 
         <p>
-          Cultivator track ke tranche kheti ke season ke saath chalte hain, matlab saal mein do
-          baar. Landless track ke tranche teen hote hain aur allied kaam ki zaroorat ke hisaab
-          se release kiye jaate hain. Har saal exact tareekh badalti rehti hai, kyunki release
-          se pehle verification aur fund clearance ka apna waqt lagta hai.
+          Cultivator track ke tranche kheti ke season ke saath chalte hain — saal mein do
+          baar. Landless track ke teen hote hain, allied kaam ki zaroorat ke hisaab se.
+          Exact tareekh? Har saal badalti hai. Release se pehle verification aur fund
+          clearance ka apna waqt lagta hai, aur wo waqt kisi calendar mein nahi likha hota.
         </p>
 
         <p>

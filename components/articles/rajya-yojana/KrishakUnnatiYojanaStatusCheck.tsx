@@ -86,13 +86,17 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
       />
 
       <p>
-        Chhattisgarh mein dhan bechna aadha kaam hai. Baaki aadha kaam hai us ke baad ka
-        intezaar — antar rashi kab aayegi, kitni banegi, aur agar na aaye to poochhein kis se.
-        Krishak Unnati Yojana ka dhaancha baaki rajyon ki kisan-nidhi schemes se alag hai:
-        yahan paisa zameen ke rakbe par nahi, <strong>samiti mein bechi gayi dhan ki maatra</strong> par
-        banta hai. Isliye status samajhne ka tareeka bhi alag hai. Is page par wahi poora
-        raasta hai — kharidi ki entry se lekar passbook ke credit tak, aur Kharif 2026 se
-        shuru hue naye ₹15,000 prati acre wale badlaav tak.
+        Chhattisgarh mein dhan bechna aadha kaam hai. Baaki aadha? Intezaar.
+      </p>
+
+      <p>
+        Antar rashi kab aayegi, kitni banegi, aur agar na aaye to poochhein kis se — yahi
+        teen sawaal har season lautkar aate hain. Krishak Unnati Yojana ka dhaancha baaki
+        rajyon ki kisan-nidhi schemes se alag hai: yahan paisa zameen ke rakbe par nahi,
+        <strong> samiti mein bechi gayi dhan ki maatra</strong> par banta hai. Isliye status
+        samajhne ka tareeka bhi alag hai. Is page par wahi poora raasta hai — kharidi ki
+        entry se lekar passbook ke credit tak, aur Kharif 2026 se shuru hue naye ₹15,000
+        prati acre wale badlaav tak.
       </p>
 
       <InfoBox type="update" date="4 August 2026">
@@ -106,17 +110,19 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
 
       <p>
         PM Kisan ya Rythu Bharosa jaise schemes mein raqam fix hoti hai — itne acre, itna
-        paisa. Krishak Unnati Yojana ka ganit doosra hai. Kendra sarkar dhan ka support price
-        tay karti hai, aur Chhattisgarh sarkar ne kisanon se vaada kiya hai ki unke dhan ka
-        daam <strong>₹3,100 prati quintal</strong> tak pahunchega. Support price aur ₹3,100 ke
+        paisa. Yahan ganit doosra hai. Kendra sarkar dhan ka support price tay karti hai,
+        aur Chhattisgarh sarkar ne kisanon se vaada kiya hai ki unke dhan ka daam
+        <strong> ₹3,100 prati quintal</strong> tak pahunchega. Support price aur ₹3,100 ke
         beech ka jo antar hai, wahi antar rashi ke roop mein alag se khaate mein aata hai.
+        Samajh lein to hisaab aasan hai, na samjhein to har saal confusion.
       </p>
 
       <p>
-        Iska seedha matlab: jitna zyada dhan becha, utni badi antar rashi. Lekin ek seema ke
+        Seedha matlab? Jitna zyada dhan becha, utni badi antar rashi. Lekin ek seema ke
         saath — samiti prati acre <strong>21 quintal tak</strong> hi kharidti hai. Isi wajah se
-        do kisanon ki raqam kabhi ek jaisi nahi hoti, aur "mere padosi ko itna mila, mujhe
-        kam kyun" wale sawaal ka jawab aksar bechi gayi maatra ke record mein chhupa hota hai.
+        do kisanon ki raqam kabhi ek jaisi nahi hoti. "Mere padosi ko itna mila, mujhe kam
+        kyun?" — is sawaal ka jawab gusse mein nahi, bechi gayi maatra ke record mein milta
+        hai. Record kholo, hisaab saaf.
       </p>
 
       <SchemeTable>
@@ -151,8 +157,10 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
       <h2>Status Check Ka Sahi Raasta — Teen Kadiyan</h2>
 
       <p>
-        Log seedha bank jaate hain, jabki payment ki file teen kadiyon se hokar chalti hai.
-        Kaunsi kadi par mamla atka hai, ye samajh lein to aadhe chakkar bach jaate hain.
+        Paisa nahi aaya to sabse pehle kahan jaate hain log? Bank. Aur wahi galti hai.
+        Payment ki file teen kadiyon se hokar chalti hai — samiti, sarkar, phir bank.
+        Kaunsi kadi par mamla atka hai, ye samajh lein to aadhe chakkar bach jaate hain,
+        aur aadhi jhunjhlahat bhi.
       </p>
 
       <p>
@@ -173,7 +181,8 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
       <p>
         <strong>Teesri kadi — bank credit.</strong> Release ke baad DBT se paisa khaate mein
         aata hai. Yahan atakne ki wajahein wahi puraani hain: band ya dormant khaata, Aadhaar
-        seeding ka na hona, ya galat account number darj hona.
+        seeding ka na hona, ya galat account number darj hona. Chhoti-chhoti cheezein, par
+        inhi mein paisa mahinon latak jaata hai.
       </p>
 
       <Fig
@@ -206,8 +215,9 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
       <p>
         Antar rashi ka credit passbook mein ek alag entry ke roop mein dikhta hai — dhan
         bechne ke waqt mila support price pehle hi aa chuka hota hai, isliye do alag-alag
-        credit hona bilkul normal hai. Kai kisan support price ki entry dekh kar samajh lete
-        hain ki poora paisa aa gaya, aur antar rashi ka intezaar hi chhod dete hain.
+        credit hona bilkul normal hai. Yahan ek aam chook hoti hai. Kai kisan support price
+        ki entry dekh kar samajh lete hain ki poora paisa aa gaya, aur antar rashi ka
+        intezaar hi chhod dete hain. Baad mein pata chale to afsos hi bachta hai.
       </p>
 
       <Fig
@@ -265,8 +275,9 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
         June 2026 mein cabinet ne scheme ka naya swaroop manzoor kiya. Ab dhan ke saath-saath
         ek doosra raasta bhi khula hai: jo kisan dhan ki jagah <strong>dalhan, tilhan, makka,
         kodo, kutki, ragi ya kapas</strong> lagayega, use <strong>₹15,000 prati acre</strong> ki
-        input sahayata milegi. Sarkar ka maqsad saaf hai — paani ki khapat kam karna aur
-        kisan ki aamdani ko sirf dhan ke bharose se nikaalna.
+        input sahayata milegi. Kyun? Sarkar ka maqsad saaf hai — paani ki khapat kam karna
+        aur kisan ki aamdani ko sirf dhan ke bharose se nikaalna. Dhan mein paani bhi zyada
+        lagta hai aur mandi ka jokhim bhi ek hi fasal par tika rehta hai.
       </p>
 
       <Fig
@@ -278,11 +289,11 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
       <p>
         Is naye faayde ka system bhi naya hai. Ye purani samiti-kharidi wali chain se nahi,
         balki <strong>Integrated Farmer Portal, AgriStack registration aur digital crop
-        survey</strong> se chalega. Matlab teen cheezein pehle se durust honi chahiye: aapka
-        farmer registration, zameen ka record, aur survey mein darj fasal. Fasal boi kuch
-        aur, survey mein darj kuch aur — to claim wahin ruk jaayega. Naye season mein sabse
-        samajhdari ka kaam yahi hai ki bawai ke baad crop survey ki entry apne saamne
-        confirm karwa lein.
+        survey</strong> se chalega. Teen cheezein pehle se durust honi chahiye: farmer
+        registration, zameen ka record, aur survey mein darj fasal. Fasal boi kuch aur,
+        survey mein darj kuch aur — claim wahin ruk jaayega. Ruk kya, banega hi nahi.
+        Naye season mein sabse samajhdari ka kaam yahi hai ki bawai ke baad crop survey ki
+        entry apne saamne confirm karwa lein.
       </p>
 
       <InfoBox type="warning">
@@ -295,12 +306,12 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
       <h2>Antar Rashi Ka Apna Hisaab Kaise Lagayein</h2>
 
       <p>
-        Credit aane se pehle apna anumaanit figure nikaal lena sabse kaam ki aadat hai. Iske
-        liye do numbers chahiye: bechi gayi kul maatra (taul parchiyon ka jod, quintal mein)
-        aur us saal ki prati quintal antar rashi (support price aur ₹3,100 ka farak, jo
-        release ke waqt announcements mein saaf likha hota hai). Dono ka guna kar lein —
-        wahi aapki antar rashi hai. Misaal ke taur par, 40 quintal becha aur antar ₹800
-        prati quintal nikla, to khaate mein ₹32,000 aana chahiye.
+        Credit aane se pehle apna anumaanit figure nikaal lena sabse kaam ki aadat hai.
+        Do numbers chahiye, bas. Ek — bechi gayi kul maatra (taul parchiyon ka jod, quintal
+        mein). Do — us saal ki prati quintal antar rashi (support price aur ₹3,100 ka farak,
+        jo release ke waqt announcements mein saaf likha hota hai). Dono ka guna kar lein —
+        wahi aapki antar rashi hai. Misaal: 40 quintal becha, antar ₹800 prati quintal
+        nikla, to khaate mein ₹32,000 aana chahiye. Na kam, na zyada.
       </p>
 
       <p>
@@ -362,11 +373,11 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
       </p>
 
       <p>
-        <strong>Kharidi ke baad, release se pehle:</strong> ye intezaar ka daur hai, lekin
-        khaali intezaar nahi. Isi beech bank ka kaam nipta lein — khaata active hai ya nahi,
-        Aadhaar seeding hui hai ya nahi, mobile number bank record mein current hai ya nahi.
-        Release ke din ye sab pehle se durust ho to paisa seedha aata hai; release ke baad
-        bhaagdaud shuru karne par hafte nikal jaate hain.
+        <strong>Kharidi ke baad, release se pehle:</strong> intezaar ka daur. Lekin khaali
+        intezaar nahi. Isi beech bank ka kaam nipta lein — khaata active hai ya nahi, Aadhaar
+        seeding hui hai ya nahi, mobile number bank record mein current hai ya nahi. Release
+        ke din ye sab pehle se durust ho to paisa seedha aata hai. Release ke baad bhaagdaud
+        shuru ki to? Hafte nikal jaate hain, aur haath mein sirf token number reh jaata hai.
       </p>
 
       <p>
@@ -380,7 +391,8 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
 
       <p>
         Khadya vibhag ke daftar mein aane wali shikayaton ka bada hissa kuch hi tarah ki
-        galtiyon se banta hai. Inhe pehle se jaan lena aadhi pareshani se bacha leta hai.
+        galtiyon se banta hai. Wahi galtiyan, har saal, naye chehron ke saath. Pehle se
+        jaan lena aadhi pareshani se bacha leta hai.
       </p>
 
       <ul>
@@ -415,10 +427,11 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
       <h2>Shikayat Likhwani Ho To Kaise — Kaam Ka Tareeka</h2>
 
       <p>
-        Zubaani shikayat ka koi record nahi banta, isliye jab bhi baat samiti ya vibhag tak
-        le jaani ho, likhit mein dein aur paavti (receiving) lein. Shikayat mein teen cheezein
-        zaroor likhein: apna kisan code, kharidi ki tareekh aur maatra (parchi ke hisaab se),
-        aur samasya ek line mein — entry kam darj hai, credit nahi aaya, ya raqam kam aayi.
+        Zubaani shikayat ka koi record nahi banta. Kabhi nahi. Isliye jab bhi baat samiti ya
+        vibhag tak le jaani ho, likhit mein dein aur paavti (receiving) lein. Shikayat mein
+        teen cheezein zaroor likhein: apna kisan code, kharidi ki tareekh aur maatra (parchi
+        ke hisaab se), aur samasya ek line mein — entry kam darj hai, credit nahi aaya, ya
+        raqam kam aayi. Lambi kahani likhne ki zaroorat nahi; saaf baat jaldi sunee jaati hai.
       </p>
 
       <p>
