@@ -239,8 +239,8 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
       <h2>Kist Ka Waqt — Pichhle Saalon Ka Pattern</h2>
 
       <p>
-        Fixed date? Koi nahi hai. State sarkar national calendar se nahi chalti. Lekin
-        pichhle saalon ka pattern itna zaroor batata hai:
+        Fixed date? Koi nahi hai. State sarkar national calendar se nahi chalti. Zyada waqt nahi lagta
+        release ke baad, lekin pichhle saalon ka pattern itna zaroor batata hai:
       </p>
 
       <ul>
@@ -313,7 +313,7 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
 
       <p>
         Sabse zyada confusion isi baat pe hota hai: portal par status green, passbook khaali. Dil toot jaata hai
-        thoda. Ya phir seedha "Rejected" aa jaata hai — bina ye bataye ki kyun. Teen jagah
+        thoda. Maine bhi pehle yahi socha tha ki portal galat hai — par nahi, kahani aage hoti hai. Ya phir seedha "Rejected" aa jaata hai — bina ye bataye ki kyun. Teen jagah
         check karni hoti hai, isi order mein:
       </p>
 
@@ -447,9 +447,10 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
       </p>
 
       <p>
-        Ek kisan ne mujhe Sehore se bataya tha — uska bank, Aadhaar, e-KYC sab perfect tha,
+        Sehore ke ek kisan ne WhatsApp pe screenshot bheja tha — bank, Aadhaar, e-KYC sab perfect,
         phir bhi state kist do season se nahi aayi. Aakhir mein nikli girdawari: patwari ne us
         season uski fasal darj hi nahi ki thi. App se khud entry karne ke baad agli kist aa gayi.
+        Chhodo, wo purani baat hai — par sabak wahi hai, girdawari khud check karo.
       </p>
 
       <p>
