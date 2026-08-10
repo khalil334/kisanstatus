@@ -85,9 +85,10 @@ export default function RythuBharosaStatusCheck2026() {
       </p>
 
       <p>
-        Do cheezein is scheme ko baaki state schemes se alag banati hain: raqam per acre tay hoti hai,
-        aur release ek saath nahi, phase mein hota hai. Dono ka asar seedha aapke status par padta hai.
-        Neeche wahi samjhaya hai.
+        Do cheezein is scheme ko baaki state schemes se alag banati hain. Raqam per acre
+        tay hoti hai. Aur release ek saath nahi hota — phase mein hota hai. Dono ka asar
+        seedha aapke status par padta hai, aur dono ko na samajhne se hi aadhi ghabrahat
+        paida hoti hai. Neeche wahi samjhaya hai.
       </p>
 
       <Fig
@@ -113,8 +114,9 @@ export default function RythuBharosaStatusCheck2026() {
       </p>
 
       <p>
-        Do acre wale kisan ko season mein ₹12,000 milega, ek acre wale ko ₹6,000. Isi wajah se gaon
-        mein har aadmi ka amount alag dikhta hai.
+        Do acre wale kisan ko season mein ₹12,000 milega, ek acre wale ko ₹6,000. Isi
+        wajah se gaon mein har aadmi ka amount alag dikhta hai — aur ye farak koi gadbad
+        nahi, scheme ka design hai.
       </p>
 
       <p>
@@ -169,8 +171,9 @@ export default function RythuBharosaStatusCheck2026() {
       <h2>Padosi Ko Mil Gaya, Mujhe Nahi — Phase System Samjhein</h2>
 
       <p>
-        Ye shikayat sabse zyada aati hai, aur iski wajah koi galti nahi hai. Wajah hai <strong>phase
-        wise payment</strong>.
+        Padosi ke account mein credit, aapke mein sannata — gussa aana laazmi hai. Lekin
+        ruko. Ye shikayat sabse zyada aati hai, aur iski wajah aksar koi galti nahi hoti.
+        Wajah hai <strong>phase wise payment</strong>.
       </p>
 
       <p>
@@ -184,8 +187,8 @@ export default function RythuBharosaStatusCheck2026() {
       </ul>
 
       <p>
-        Matlab "Processing" dikhne ka arth paisa atak jaana nahi hai. Aapke mandal ka phase aana baaki
-        hai, bas.
+        Matlab "Processing" dikhne ka arth paisa atak jaana nahi hai. Aapke mandal ka
+        phase aana baaki hai. Bas itna.
       </p>
 
       <h2>Apna Status Kaise Dekhein</h2>
@@ -276,8 +279,8 @@ export default function RythuBharosaStatusCheck2026() {
       <h2>Phase Aa Gaya Par Paisa Nahi — Chaar Wajahein</h2>
 
       <p>
-        Status dekh liya, phase bhi nikal gaya, phir bhi account khaali hai. Aise cases mein inme se
-        koi ek wajah nikalti hai:
+        Status dekh liya. Phase bhi nikal gaya. Phir bhi account khaali? Ab baat alag hai —
+        yahan sach mein kuch atka hai. Aise cases mein inme se koi ek wajah nikalti hai:
       </p>
 
       <h3>1. Dharani Portal Mein Naam Update Nahi Hai</h3>
@@ -309,10 +312,11 @@ export default function RythuBharosaStatusCheck2026() {
       <h2>Virasat Ki Zameen — Sabse Zyada Atakne Wala Case</h2>
 
       <p>
-        Ek scenario itna common hai ki alag se likhna zaroori hai. Pita ka dehant ho gaya, zameen
-        ab bete-betiyon ke naam aani hai, lekin Dharani par mutation abhi purane naam par hi hai.
-        Aise mein Rythu Bharosa ka paisa purane record ke hisaab se process hota hai aur dehant ke
-        baad account freeze hone se payment fail ho jaati hai.
+        Ek scenario itna common hai ki alag se likhna zaroori hai. Pita ka dehant ho gaya.
+        Zameen ab bete-betiyon ke naam aani hai, lekin Dharani par mutation abhi purane
+        naam par hi hai. Aise mein Rythu Bharosa ka paisa purane record ke hisaab se
+        process hota hai, aur dehant ke baad account freeze hone se payment fail ho jaati
+        hai. Ghar pehle hi dukh mein hai, upar se ye jhamela.
       </p>
 
       <p>

@@ -117,9 +117,9 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
 
         <p>
           Bahut si sarkari schemes vyakti ko unit maankar chalti hain — jitne log eligible,
-          utne benefit. PM Kisan ka dhaancha ulta hai. Yahan pehle ye dekha jaata hai ki
-          landholding kis <em>parivaar</em> ki hai, aur us parivaar ke andar se ek hi grant
-          nikalta hai.
+          utne benefit. PM Kisan ka dhaancha ulta hai. Ulta, aur isi liye confusing. Yahan
+          pehle ye dekha jaata hai ki landholding kis <em>parivaar</em> ki hai, aur us
+          parivaar ke andar se ek hi grant nikalta hai. Bas.
         </p>
 
         <p>
@@ -146,9 +146,9 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
         <h2>Wo Case Jismein Ek Parivaar Se Do Claim Sach Mein Ban Jaate Hain</h2>
 
         <p>
-          Ab us baat par aayein jo padosi ke yahan dikhti hai. Do registration kabhi-kabhi
-          bilkul sahi hote hain, lekin uski wajah pati-patni nahi hoti —{' '}
-          <strong>batwaara</strong> hoti hai.
+          To phir padosi ke yahan do registration kaise chal rahe hain? Achha sawaal hai.
+          Do registration kabhi-kabhi bilkul sahi hote hain, lekin uski wajah pati-patni
+          nahi hoti — <strong>batwaara</strong> hoti hai.
         </p>
 
         <p>
@@ -248,9 +248,9 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
         <h2>Dono Taraf Paisa Aa Gaya Hai — Ab Kya Karein</h2>
 
         <p>
-          Agar aapko padhte hue lag raha hai ki aapke saath yahi hua hai, to sabse behtar
-          raasta notice ka intezaar karna nahi hai. Khud aage badhkar theek karna sasta bhi
-          padta hai aur jaldi bhi khatam hota hai.
+          Agar aapko padhte hue lag raha hai ki aapke saath yahi hua hai — ghabraiye mat,
+          par ruk bhi mat jaiye. Notice ka intezaar karna sabse mehenga raasta hai. Khud
+          aage badhkar theek karna sasta bhi padta hai aur jaldi bhi khatam hota hai.
         </p>
 
         <ol>
@@ -376,9 +376,10 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
 
         <p>
           Pehle log soch lete the ki alag bank account aur alag mobile number rakhne se do
-          registration pakde nahi jaayenge. Ab wo daur khatam ho gaya. Aadhaar e-KYC anivaarya
-          hone ke baad har beneficiary ek unique identity se juda hai, land record digitize ho
-          chuke hain, aur payment Aadhaar-linked NPCI mapper se hoti hai.
+          registration pakde nahi jaayenge. Wo daur gaya. Aadhaar e-KYC anivaarya hone ke
+          baad har beneficiary ek unique identity se juda hai, land record digitize ho chuke
+          hain, aur payment Aadhaar-linked NPCI mapper se hoti hai. System ko ab aankh nahi,
+          data chahiye — aur data jhooth nahi bolta.
         </p>
 
         <p>
@@ -389,8 +390,9 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
         </p>
 
         <p>
-          Isi liye kai baar saal-do saal chalne ke baad achanak paisa rukta hai — us waqt
-          naya rule nahi lagta, bas purana record cross-check hota hai.
+          Isi liye kai baar saal-do saal chalne ke baad achanak paisa rukta hai. Us waqt
+          naya rule nahi lagta — bas purana record cross-check hota hai. Der se pakda gaya,
+          par pakda gaya.
         </p>
 
         <h2>Wo Sawaal Jo Har Roz Poochhe Jaate Hain</h2>
