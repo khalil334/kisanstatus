@@ -3,7 +3,6 @@ import Image from 'next/image';
 import ExternalLinkButton from '@/components/ui/ExternalLinkButton';
 import InfoBox from '@/components/ui/InfoBox';
 import SchemeTable from '@/components/ui/SchemeTable';
-import { FAQBlock } from '@/components/ArticleShared';
 
 const IMG_BASE = '/images/articles/rajya-yojna/rythu-bharosa-status-check-2026';
 
@@ -351,6 +350,26 @@ export default function RythuBharosaStatusCheck2026() {
         hai. Isse turant pata chal jaata hai ki kaun sa paisa aaya aur kaun sa atka hai.
       </p>
 
+      <h2>Guntas Ka Hisaab — Apni Raqam Khud Nikaalein</h2>
+
+      <p>
+        Telangana mein zameen acre aur guntas mein boli jaati hai — ek acre mein 40 guntas.
+        Scheme ka hisaab bhi isi par chalta hai, isliye apna anumaanit figure nikaalna aasan
+        hai. Pattadar passbook mein likha extent lein — maan lijiye 2 acre 20 guntas, yaani
+        2.5 acre. Saal ka ₹12,000 prati acre matlab ₹30,000, aur ek season (Kharif ya Rabi)
+        ka credit iska aadha — ₹15,000. Credit is hisaab se kam aaye to pehla shak extent
+        par karein: Dharani mein darj rakba passbook se milaayein, kyunki payment Dharani
+        ke record par banti hai, aapki yaaddasht par nahi.
+      </p>
+
+      <p>
+        Do baatein is hisaab mein aksar bhool hoti hain. Pehli — payment sirf un khaton par
+        banti hai jo Dharani mein saaf hain; disputed ya prohibited list wali zameen ka
+        hissa apne aap kat jaata hai. Doosri — alag-alag gaon mein zameen ke tukde hon to
+        har khata alag process hota hai, aur alag dinon par alag credit aa sakte hain.
+        Poora jod milaane se pehle sab khaton ke credit gin lein.
+      </p>
+
       <h2>Status Check Se Pehle Ye Teen Cheezein Saath Rakhein</h2>
 
       <ul>
@@ -368,6 +387,27 @@ export default function RythuBharosaStatusCheck2026() {
           normal hai.
         </li>
       </ul>
+
+      <h2>Naye Kisan Ka Pehla Season — Kis Kram Mein Kya Karein</h2>
+
+      <p>
+        Zameen abhi naam par aayi hai — kharidi ya virasat se — to Rythu Bharosa ka safar
+        Dharani se shuru hota hai, portal se nahi. Kram ye hai: pehle registration ya
+        succession ke zariye Dharani mein apna naam pattadar ke roop mein darj karwaayein
+        aur nayi pattadar passbook lein. Phir bank mein Aadhaar seeding confirm karein —
+        payment NPCI mapper se hoti hai, sirf khaata khula hona kaafi nahi. Iske baad kuch
+        karna nahi hai; list Dharani ke record se banti hai aur naya khata agle season ke
+        phase mein apne aap ginti mein aa jaata hai.
+      </p>
+
+      <p>
+        Pehle season mein sabse aam galti intezaar ki disha galat hona hai — log portal
+        par apna naam dhoondhte rehte hain jabki asli rukavat Dharani ke record ya bank
+        seeding mein hoti hai. Passbook mil gayi, seeding ho gayi, phir bhi do season tak
+        kuch na aaye — tab MRO office mein apne khate ki sthiti likhit mein poochhein.
+        Wahan ke record mein hi dikhega ki khata kis phase mein hai ya kis wajah se ruka
+        hai.
+      </p>
 
       <h2>Telangana Se Bahar Ke Kisan Yahan Dekhein</h2>
 
@@ -408,7 +448,41 @@ export default function RythuBharosaStatusCheck2026() {
 
       <h2>Rythu Bharosa — Aksar Poochhe Jaane Wale Sawaal</h2>
 
-      <FAQBlock faqs={FAQS_DATA} caption="Rythu Bharosa FAQ 2026" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: FAQS_DATA.map((f) => ({
+              '@type': 'Question',
+              name: f.q,
+              acceptedAnswer: { '@type': 'Answer', text: f.a },
+            })),
+          }),
+        }}
+      />
+      <section className="mb-8 not-prose">
+        <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">Rythu Bharosa FAQ 2026</p>
+        <div className="space-y-3">
+          {FAQS_DATA.map(({ q, a }) => (
+            <details
+              key={q}
+              className="border border-[var(--color-border)] rounded-xl overflow-hidden group"
+            >
+              <summary className="p-4 font-semibold text-[var(--color-text)] cursor-pointer bg-[var(--color-bg-alt)] hover:bg-green-50 dark:hover:bg-green-900/20 text-sm flex justify-between items-center gap-3 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">
+                <span>{q}</span>
+                <span className="text-green-600 dark:text-green-400 text-xl group-open:rotate-45 transition-transform shrink-0">
+                  +
+                </span>
+              </summary>
+              <div className="p-4 text-sm text-[var(--color-text-muted)] leading-relaxed border-t border-[var(--color-border)]">
+                {a}
+              </div>
+            </details>
+          ))}
+        </div>
+      </section>
 
       <InfoBox type="tip">
         <strong>Fraud se bachein:</strong> Rythu Bharosa registration ya status theek karne ke liye koi bhi sarkari officer ya agent aapse paise nahi maangta. Ye scheme 100% free hai. Agar koi "commission" maange, toh turant MRO office ya 1800-425-0888 (Telangana Kisan Call Center) par shikayat karein.
