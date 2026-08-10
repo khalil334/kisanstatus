@@ -153,7 +153,7 @@ export default function RythuBharosaStatusCheck2026() {
         <li>Homepage par "Rythu Bharosa Status" ya "Beneficiary Status" ke option par click karein.</li>
         <li>Aapke paas do options honge: "Aadhaar Number" ya "Account Number" se search karna. Aadhaar number sabse reliable hai.</li>
         <li>Apna 12-digit Aadhaar Number enter karein.</li>
-        <li>Screen par dikh raha CAPTCHA code enter karein aur "Get Details" ya "Submit" par click karein.</li>
+        <li>CAPTCHA jaisa dikh raha hai waisa bhar dein, phir "Get Details" ya "Submit" par click karein.</li>
         <li>Ek naya page khulega jisme aapka naam, father/husband ka naam, gaon, mandal, district, land extent (acreage), aur current <strong>rythu bharosa payment status</strong> (Sanctioned, Disbursed, ya Pending) dikhayi dega.</li>
       </ol>
 
