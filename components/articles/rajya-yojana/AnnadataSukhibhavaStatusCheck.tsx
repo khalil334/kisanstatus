@@ -78,7 +78,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
       </p>
 
       <p>
-        Is scheme ki khaas baat aage aati hai. Yahan bataidar (tenant farmer) ko bhi jagah mili hai, jo PM Kisan mein
+        Dekho, is scheme ki khaas baat toh aage aati hai. Yahan bataidar (tenant farmer) ko bhi jagah mili hai, jo PM Kisan mein
         nahi aate. Pehle status dekhne ka tareeka aur eligibility, phir wahi fark.
       </p>
 
@@ -111,53 +111,15 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         Iska practical matlab? Agar aap purane Rythu Bharosa mein registered the, toh aapka
         data naye system mein migrate ho chuka hai. Naye siray se apply karne ki zaroorat
         nahi. Lekin status ab naye portal <code>annadathasukhibhava.ap.gov.in</code> par hi
-        milega. Purana portal ya toh redirect karega ya purana data dikhayega — aur wahi
-        dekh kar log ghabra jaate hain ki naam kat gaya. Tension mat lijiye. Naam kata nahi hai,
-        sirf ghar badla hai.
-      </p>
-
-      <h2>Kitna Paisa, Kahan Se Aata Hai</h2>
-
-      <p>
-        Naam ka matlab hai "annadata sukhi rahe". Paisa seedha bank account mein aata hai, taaki
-        beej, khaad aur season ke baaki kharche waqt par ho sakein.
-      </p>
-
-      <p>
-        <strong>Saal Bhar Ka Hisaab — ₹20,000 Tak, Do Jagah Se</strong>
-      </p>
-
-      <SchemeTable>
-        <tr>
-          <th>Source</th>
-          <th>Annual Amount</th>
-          <th>Installment Breakup (Approx)</th>
-        </tr>
-        <tr>
-          <td>Andhra Pradesh State Govt</td>
-          <td>₹14,000</td>
-          <td>₹5,000 (Kharif) + ₹4,000 (Rabi) + ₹5,000 (Summer)</td>
-        </tr>
-        <tr>
-          <td>PM Kisan Samman Nidhi (Central)</td>
-          <td>₹6,000</td>
-          <td>₹2,000 × 3 (April, August, December)</td>
-        </tr>
-        <tr>
-          <td><strong>Total Combined Benefit</strong></td>
-          <td><strong>₹20,000</strong></td>
-          <td><strong>Varies by season</strong></td>
-        </tr>
-      </SchemeTable>
-
-      <p>
-        Haal hi mein, 20 June 2026 ko CM N. Chandrababu Naidu ne 2026-27 ke pehle installment ke roop mein ₹3,125 crore jaari kiye, jisme har beneficiary ko ₹7,000 (₹5,000 State + ₹2,000 Central) mile.
+        milega. Purana portal ya toh redirect karega ya purana data dikhayega. Wahi
+        dekh kar log ghabra jaate hain ki naam kat gaya. Ghabrao mat. Naam kata nahi ha,
+        bas ghar badla hai.
       </p>
 
       <h2>Bataidar Kisan Bhi Isme Aate Hain</h2>
 
       <p>
-        PM Kisan mein sirf zameen ke malik aate hain. Yahan <strong>bataidar</strong> (tenant farmer) aur
+        PM Kisan mein sirf zameen ke malik aate hain. Yahan bataidar (tenant farmer) aur
         CCRC (Crop Cultivator Rights Card) wale kisan ko bhi poora support milta hai.
       </p>
 
@@ -190,6 +152,12 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         koi maalik mana kare, toh VAA ke through baat karwane se aksar raasta nikal aata hai.
       </p>
 
+      <p>
+        Mera ek reader Ramesh from Guntur tha, uska CCRC renewal season ke beech mein expire ho
+        gaya — kist ruk gayi aur usse lagaa ki naam hi kat gaya. VAA ke paas gaya, do din mein
+        renewal hua, agle cycle mein paisa aa gaya. Card ki validity ka dhyan rakhna isliye zaroori hai.
+      </p>
+
       <h3>CCRC Card Ka Status Online Kahan Check Hota Hai?</h3>
 
       <p>
@@ -215,10 +183,10 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
       </p>
 
       <ul>
-        <li><strong>Andhra Pradesh Ka Nivasi:</strong> Applicant ka permanent residence Andhra Pradesh mein hona chahiye.</li>
-        <li><strong>Kisan Parivar:</strong> Applicant ke paas cultivable land honi chahiye, YA phir valid CCRC (Crop Cultivator Rights Card) hona chahiye.</li>
-        <li><strong>Aadhaar Seeding:</strong> Bank account Aadhaar se linked hona chahiye aur DBT (Direct Benefit Transfer) active hona chahiye.</li>
-        <li><strong>Age Limit:</strong> Applicant ki umar 18 saal se zyada honi chahiye.</li>
+        <li>Andhra Pradesh Ka Nivasi: Applicant ka permanent residence Andhra Pradesh mein hona chahiye.</li>
+        <li>Kisan Parivar: Applicant ke paas cultivable land honi chahiye, YA phir valid CCRC (Crop Cultivator Rights Card) hona chahiye.</li>
+        <li>Aadhaar Seeding: Bank account Aadhaar se linked hona chahiye aur DBT (Direct Benefit Transfer) active hona chahiye.</li>
+        <li>Age Limit: Applicant ki umar 18 saal se zyada honi chahiye.</li>
       </ul>
 
       <h3>Kaun Eligible Nahi Hai? (Exclusion List)</h3>
@@ -233,9 +201,48 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         Exclusion parivar ke level par lagta hai, sirf applicant par nahi. Maan lijiye aap
         kheti karte hain lekin aapki patni government school mein teacher hai. Aap dono ek
         hi parivar (husband, wife, minor children) mein aate hain — isliye aap exclusion
-        mein aa jayenge. Ye baat sunne mein buri lagti hai, par kai kisanon ko ye tab pata chalti hai
+        mein aa jayenge. Sach kadwa hai, par kai kisanon ko ye baat tab pata chalti hai
         jab do-teen kist aane ke baad recovery notice aata hai. Tab tak paisa kharch ho
         chuka hota hai. Isliye pehle hi check kar lena behtar hai.
+      </p>
+
+      <h2>Kitna Paisa, Kahan Se Aata Hai</h2>
+
+      <p>
+        Naam ka matlab hai "annadata sukhi rahe". Paisa seedha bank account mein aata hai, taaki
+        beej, khaad aur season ke baaki kharche waqt par ho sakein. Matlab paisa haath mein nahi,
+        seedha khaate mein — yahi DBT ka poora point hai.
+      </p>
+
+      <p>
+        <strong>Saal Bhar Ka Hisaab — ₹20,000 Tak, Do Jagah Se</strong>
+      </p>
+
+      <SchemeTable>
+        <tr>
+          <th>Source</th>
+          <th>Annual Amount</th>
+          <th>Installment Breakup (Approx)</th>
+        </tr>
+        <tr>
+          <td>Andhra Pradesh State Govt</td>
+          <td>₹14,000</td>
+          <td>₹5,000 (Kharif) + ₹4,000 (Rabi) + ₹5,000 (Summer)</td>
+        </tr>
+        <tr>
+          <td>PM Kisan Samman Nidhi (Central)</td>
+          <td>₹6,000</td>
+          <td>₹2,000 × 3 (April, August, December)</td>
+        </tr>
+        <tr>
+          <td><strong>Total Combined Benefit</strong></td>
+          <td><strong>₹20,000</strong></td>
+          <td><strong>Varies by season</strong></td>
+        </tr>
+      </SchemeTable>
+
+      <p>
+        Haal hi mein, 20 June 2026 ko CM N. Chandrababu Naidu ne 2026-27 ke pehle installment ke roop mein ₹3,125 crore jaari kiye, jisme har beneficiary ko ₹7,000 (₹5,000 State + ₹2,000 Central) mile.
       </p>
 
       <h2>Kist Kab Aati Hai — Season Ka Hisaab</h2>
@@ -292,9 +299,9 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
 
       <ol>
         <li>Official website <code>annadathasukhibhava.ap.gov.in</code> kholein.</li>
-        <li>Homepage par "<strong>Know Your Status</strong>" ya "<strong>Beneficiary Status</strong>" ke option par click karein.</li>
+        <li>Homepage par "Know Your Status" ya "Beneficiary Status" ke option par click karein.</li>
         <li>Financial Year select karein (Example: 2026-27).</li>
-        <li>Apna <strong>Aadhaar Number</strong> ya <strong>Application ID</strong> enter karein.</li>
+        <li>Apna Aadhaar Number ya Application ID enter karein.</li>
         <li>Screen par dikh raha CAPTCHA code enter karein aur "Verify" ya "Search" par click karein.</li>
         <li>Ab aapke saamne ek detail page khulega jisme aapka naam, gaon, district, aur <strong>अन्नदाता सुखीभव status</strong> (Payment Successful, Pending, ya Rejected) dikhayi dega.</li>
       </ol>
@@ -343,7 +350,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         <li>
           <strong>Duplicate Aadhaar entry:</strong> Ek hi Aadhaar do jagah registered hai, jaise
           purane Rythu Bharosa data aur naye CCRC registration dono mein. System dono ko dekh kar
-          duplicate flag laga deta hai. Kya karna hai: VAA se milkar purani entry cancel karwayein.
+          duplicate flag laga deta hai. Hal: VAA se milkar purani entry cancel karwayein.
         </li>
         <li>
           <strong>Exclusion criteria hit:</strong> Income tax record ya employment data ke against
@@ -367,7 +374,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
 
       <h3>1. Bank Account DBT Enabled Nahi Hai</h3>
       <p>
-        <strong>Kya karna hai:</strong> Apne bank branch jaakar pata karein ki aapka account "NPCI Mapper" mein Aadhaar ke saath linked hai ya nahi. Agar nahi hai, toh turant DBT enable karwayein.
+        Karna kya hai: apne bank branch jaakar pata karein ki aapka account "NPCI Mapper" mein Aadhaar ke saath linked hai ya nahi. Agar nahi hai, toh turant DBT enable karwayein.
       </p>
 
       <h3>2. Aadhaar Name aur Bank Account Name Match Nahi Kar Rahe</h3>
@@ -428,7 +435,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
 
       <p>
         Bataidar wala niyam sirf AP mein hai. Baaki rajyon mein khata malik ke naam hona zaroori
-        rehta hai.
+        rehta hai. Baaki jagah kya chal raha hai, dekh lo:
       </p>
 
       <ul>
@@ -454,7 +461,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         </li>
       </ul>
 
-      <h2>Season Se Pehle Ka Chhota Audit — Itna Time Nahi Lagta</h2>
+      <h2>Pehle Se Taiyaari — Jaldi Ho Jaayega</h2>
 
       <p>
         AP mein scheme ka dhaancha aisa hai ki zyadatar rukavat pehle se dikh jaati hai —

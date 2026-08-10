@@ -117,7 +117,7 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
         </p>
 
         <p>
-          Farak dekh lo, kyunki dono ke rules ek jaise nahi hain. Income support
+          Farak dekh lo, samjho, kyunki dono ke rules ek jaise nahi hain. Income support
           zameen ke area par nirbhar karta hai aur umar se koi lena-dena nahi rakhta. Death
           benefit ka poora dhaancha ulta hai — usmein umar ki ek band hai (18 se 60 saal) aur
           zameen ka area maayne nahi rakhta. Ek hi kisan pehle component mein ho sakta hai aur
@@ -182,6 +182,13 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
           alt="Kisan apne phone par Voter ID (EPIC) number se Krishak Bandhu status check kar raha hai"
           caption="EPIC number card se milaa kar hi bharein — ek ank ki galti par record nahi milta"
         />
+
+        <p>
+          Ek baar ek kisan ne mujhe message kiya, uska EPIC number mein &lsquo;O&rsquo; ki jagah
+          &lsquo;0&rsquo; tha — portal bar-bar &ldquo;no record found&rdquo; dikha raha tha aur
+          wo samajh baitha ki naam kat gaya. Card se milaa kar dobara bhara, record turant khul
+          gaya. Bas itni si baat thi.
+        </p>
 
         <ol>
           <li>
@@ -278,7 +285,7 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
           Nateeja? Ek zile ka kisan aaj paisa dekh leta hai, padosi zile ka teen din baad,
           aur kisi ka poora hafta lag jaata hai. Ye kharaabi nahi, system ka dhaancha hai.
           Isi liye release ki khabar aane ke baad pehle hafte mein ghabraana zaroori nahi —
-          us dauran bank ki line mein lagne se kuch hasil nahi hota, sivaay thakaan ke.
+          us dauran bank ki line mein lagne se kuch hasil nahi hota. Sivaay thakaan ke.
         </p>
 
         <Fig
@@ -310,6 +317,23 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
           account, NPCI mapping, ya treasury queue). Naam hi nahi hai — matlab dikkat
           eligibility ya land record side par hai. Ye ek chhota sa test hai jo aapko sahi
           darwaaze tak pahuncha deta hai.
+        </p>
+
+        <h2>Kist Ka Time Kaisa Rehta Hai</h2>
+
+        <p>
+          Saal mein do release hote hain — ek Kharif season ke aas-paas aur doosra Rabi ke
+          aas-paas. Dates? Har saal thodi aage-peeche. Verification aur treasury processing
+          ka waqt lagta hai, aur wo waqt kisi ke haath mein nahi. Isliye kisi bhi &ldquo;pakki
+          tareekh&rdquo; wale WhatsApp forward par bharosa karna theek nahi — wo forward
+          likhne wala bhi andaaza hi laga raha hota hai.
+        </p>
+
+        <p>
+          Behtar aadat ye hai: release ki khabar aane par apna status khud check karein, aur agar
+          account valid dikh raha hai to hafta bhar sabr karein. Isi dauran passbook update
+          karwaate rahein — kai baar paisa aa jaata hai aur SMS aata hi nahi, khaas kar jab bank
+          mein purana mobile number chadha ho.
         </p>
 
         <h2>Paisa Ruk Jaane Ki Aam Wajahein</h2>
@@ -424,24 +448,7 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
           </tr>
         </SchemeTable>
 
-        <h2>Kist Ka Time Kaisa Rehta Hai</h2>
-
-        <p>
-          Saal mein do release hote hain — ek Kharif season ke aas-paas aur doosra Rabi ke
-          aas-paas. Dates? Har saal thodi aage-peeche. Verification aur treasury processing
-          ka waqt lagta hai, aur wo waqt kisi ke haath mein nahi. Isliye kisi bhi &ldquo;pakki
-          tareekh&rdquo; wale WhatsApp forward par bharosa karna theek nahi — wo forward
-          likhne wala bhi andaaza hi laga raha hota hai.
-        </p>
-
-        <p>
-          Behtar aadat ye hai: release ki khabar aane par apna status khud check karein, aur agar
-          account valid dikh raha hai to hafta bhar sabr karein. Isi dauran passbook update
-          karwaate rahein — kai baar paisa aa jaata hai aur SMS aata hi nahi, khaas kar jab bank
-          mein purana mobile number chadha ho.
-        </p>
-
-        <h2>Chhoti Aadatein Jo Har Saal Bachaati Hain</h2>
+        <h2>Kaam Ki Aadatein</h2>
 
         <ul>
           <li>
@@ -464,6 +471,8 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
         </ul>
 
         <h2>Bengal Ke Bahar</h2>
+
+        <p>Aur states ka hisaab niche hai:</p>
 
         <ul>
           <li>
