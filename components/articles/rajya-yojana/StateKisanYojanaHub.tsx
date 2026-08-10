@@ -201,31 +201,6 @@ export default function StateKisanYojanaHub() {
         apne state ke official portal par current amount ek baar zaroor dekh lein.
       </InfoBox>
 
-      <h2>State Ka Paisa PM Kisan Ke Upar Kaise Judta Hai</h2>
-
-      <p>
-        Is poore system ko samajhne ki chaabi ek hi hai: state yojana PM Kisan ki jagah
-        nahi leti, us ke upar judti hai. Central sarkar apna ₹6,000 teen kiston mein bhejti
-        hai. State apna hissa alag schedule par, alag treasury se, aur aksar alag portal ke
-        record se bhejti hai. Do alag machinein, ek hi khaata.
-      </p>
-
-      <p>
-        Isi wajah se teen baatein hamesha yaad rakhne layak hain. Pehli, dono ki kist kabhi ek
-        saath nahi aati; 15 se 30 din ka farak aam hai. Doosri, ek ruk jaaye to doosri apne aap
-        nahi rukti; dono ke apne alag kaaran hote hain. Teesri, kai states apni beneficiary list
-        PM Kisan ke data se hi banati hain, isliye PM Kisan ka e-KYC expire hona state ki kist
-        bhi rok sakta hai.
-      </p>
-
-      <p>
-        Jod ka hisaab har state mein alag banta hai. MP aur Maharashtra apna ₹6,000 milakar
-        kisan ko total ₹12,000 tak pahunchate hain. Rajasthan ₹3,000 jodkar ₹9,000 tak. Andhra
-        Pradesh ka combined figure ₹20,000 tak jaata hai. Telangana aur Chhattisgarh fixed
-        amount ke bajaye zameen ya fasal se juda model chalate hain, isliye wahan ka total har
-        kisan ke liye alag hota hai.
-      </p>
-
       <h2>Har State Ka Short Hisaab</h2>
 
       <h3>Madhya Pradesh — CM Kisan Kalyan Yojana</h3>
@@ -306,31 +281,29 @@ export default function StateKisanYojanaHub() {
         caption="Ek jaisi zameen, alag state, alag paisa. Model ka farak note kar lo"
       />
 
-      <h2>Do Kisan, Do State — Hisaab Ka Farak Ek Misaal Se</h2>
+      <h2>State Ka Paisa PM Kisan Ke Upar Kaise Judta Hai</h2>
 
       <p>
-        Do bhai, do alag message, aur dono ke sawaal ka jawab ek hi tha. Ek MP mein basa tha,
-        doosra border
-        paar Maharashtra mein. Dono ke paas lagbhag barabar zameen, par saal ke ant mein
-        credit ka jod alag nikla. Dono ko laga kisi ek ke saath galti hui hai. Galti nahi
-        thi — bas do states ke do model the. Rehne do, wo baat alag hai; hisaab dekhiye.
+        Is poore system ko samajhne ki chaabi ek hi hai: state yojana PM Kisan ki jagah
+        nahi leti, us ke upar judti hai. Central sarkar apna ₹6,000 teen kiston mein bhejti
+        hai. State apna hissa alag schedule par, alag treasury se, aur aksar alag portal ke
+        record se bhejti hai. Do alag machinein, ek hi khaata.
       </p>
 
       <p>
-        Model ka farak numbers mein sabse saaf dikhta hai. Maan lijiye do kisan hain, dono ke
-        paas teen-teen acre zameen hai. Pehla Madhya Pradesh mein hai: use PM Kisan ka ₹6,000
-        aur state ka ₹6,000 — kul ₹12,000 saalana milega, zameen teen acre ho ya paanch,
-        raqam wahi rahegi. Doosra Telangana mein hai: wahan hisaab per acre hai, isliye teen
-        acre par ₹36,000 saalana banta hai — lekin ek acre wale padosi ko sirf ₹12,000.
+        Isi wajah se teen baatein hamesha yaad rakhne layak hain. Pehli, dono ki kist kabhi ek
+        saath nahi aati; 15 se 30 din ka farak aam hai. Doosri, ek ruk jaaye to doosri apne aap
+        nahi rukti; dono ke apne alag kaaran hote hain. Teesri, kai states apni beneficiary list
+        PM Kisan ke data se hi banati hain, isliye PM Kisan ka e-KYC expire hona state ki kist
+        bhi rok sakta hai.
       </p>
 
       <p>
-        Ab teesra kisan jodein — Chhattisgarh ka, jo dhan bechta hai. Uski raqam na fixed hai
-        na per acre; wo is par nirbhar hai ki samiti mein kitne quintal dhan darj hua. Achhi
-        fasal ke saal zyada, kam kharidi ke saal kam. Teeno kisan barabar mehnat karte hain,
-        lekin teeno ka “status check” bilkul alag cheez hai — pehle ko sirf kist ki date
-        dekhni hai, doosre ko apna land record, aur teesre ko kharidi ki entry. Isi liye is
-        page par har state ka guide alag hai; ek hi formula sab par nahi chalta.
+        Jod ka hisaab har state mein alag banta hai. MP aur Maharashtra apna ₹6,000 milakar
+        kisan ko total ₹12,000 tak pahunchate hain. Rajasthan ₹3,000 jodkar ₹9,000 tak. Andhra
+        Pradesh ka combined figure ₹20,000 tak jaata hai. Telangana aur Chhattisgarh fixed
+        amount ke bajaye zameen ya fasal se juda model chalate hain, isliye wahan ka total har
+        kisan ke liye alag hota hai.
       </p>
 
       <h2>Application Ka Farak — Kahan Khud Karna Hai, Kahan Apne Aap Hota Hai</h2>
@@ -364,6 +337,55 @@ export default function StateKisanYojanaHub() {
         hai.
       </p>
 
+      <h2>Kist Ka Calendar — Saal Bhar Mein Kab Kya Aata Hai</h2>
+
+      <p>
+        Har state ka apna schedule hai, lekin ek mota pattern jaan lena kaam aata hai. PM
+        Kisan ki teen kistein aam taur par April–July, August–November aur December–March ke
+        windows mein aati hain. MP aur Maharashtra jaise states apni kistein inhi ke
+        aas-paas, lekin apne alag dinon par bhejte hain — isliye mahine mein do alag credit
+        dikhna bilkul normal hai. Telangana ka per-acre model Kharif aur Rabi ke season se
+        juda hai, to wahan saal mein do bade credit aate hain. Aur Chhattisgarh ki antar
+        rashi ka time dhan kharidi ke season ke baad ka hai — kist ka nahi, release ka
+        intezaar hota hai.
+      </p>
+
+      <p>
+        Iska practical matlab: apne state ke pichle saal ke credit ki dates passbook se
+        nikaal kar likh lein. Agla saal lagbhag usi pattern par chalega, aur “kist late
+        hai ya meri file atki hai” ka farak aap khud pehchaan lenge — poore gaon mein kisi
+        ko nahi aayi to wo late release hai, sirf aapko nahi aayi to wo aapki file ka
+        mamla hai. Dono ka ilaaj alag hai: pehle mein intezaar, doosre mein bank ya portal
+        ki jaanch.
+      </p>
+
+      <h2>Do Kisan, Do State — Hisaab Ka Farak Ek Misaal Se</h2>
+
+      <p>
+        Do bhai, do alag message, aur dono ke sawaal ka jawab ek hi tha. Ek MP mein basa tha,
+        doosra border
+        paar Maharashtra mein. Dono ke paas lagbhag barabar zameen, par saal ke ant mein
+        credit ka jod alag nikla. Dono ko laga kisi ek ke saath galti hui hai. Galti nahi
+        thi — bas do states ke do model the. Rehne do, wo baat alag hai; hisaab dekhiye.
+      </p>
+
+      <p>
+        Model ka farak numbers mein sabse saaf dikhta hai. Maan lijiye do kisan hain, dono ke
+        paas teen-teen acre zameen hai. Pehla Madhya Pradesh mein hai: use PM Kisan ka ₹6,000
+        aur state ka ₹6,000 — kul ₹12,000 saalana milega, zameen teen acre ho ya paanch,
+        raqam wahi rahegi. Doosra Telangana mein hai: wahan hisaab per acre hai, isliye teen
+        acre par ₹36,000 saalana banta hai — lekin ek acre wale padosi ko sirf ₹12,000.
+      </p>
+
+      <p>
+        Ab teesra kisan jodein — Chhattisgarh ka, jo dhan bechta hai. Uski raqam na fixed hai
+        na per acre; wo is par nirbhar hai ki samiti mein kitne quintal dhan darj hua. Achhi
+        fasal ke saal zyada, kam kharidi ke saal kam. Teeno kisan barabar mehnat karte hain,
+        lekin teeno ka “status check” bilkul alag cheez hai — pehle ko sirf kist ki date
+        dekhni hai, doosre ko apna land record, aur teesre ko kharidi ki entry. Isi liye is
+        page par har state ka guide alag hai; ek hi formula sab par nahi chalta.
+      </p>
+
       <h2>Naye Kisan Ke Liye Pehla Kadam — State Koi Bhi Ho</h2>
 
       <p>
@@ -381,6 +403,41 @@ export default function StateKisanYojanaHub() {
         Aadhaar ki spelling, bank khaate ka naam, aur land record ka naam. Teeno ek jaise
         hue to aage ka safar bina rukavat ka rehta hai; ek bhi alag hua to kisi na kisi
         kist par file atkegi.
+      </p>
+
+      <h2>Status Check Se Pehle Ye Teen Cheezein Har State Mein Common Hain</h2>
+
+      <p>
+        Portal chahe koi bhi ho, atakne ki wajahein lagbhag wahi rehti hain. Bank account
+        NPCI se seeded ho — warna payment bank se wapas laut jaati hai. Aadhaar, bank aur
+        land record mein naam ki spelling ek jaisi ho. Aur e-KYC current ho. Ye aakhri wali
+        sabse dhokha deti hai: status green dikhta hai, umeed bandhti hai, aur paisa phir
+        bhi nahi aata.
+      </p>
+
+      <p>
+        In teeno mein se koi bhi problem ho to pehle use theek karayein, uske baad hi kist ka
+        intezaar karein. Ulta mat karna — log yahi ulta karte hain, maine dekha hai — pehle intezaar,
+        baad mein sudhaar. Ye kaam CSC, bank branch aur tehsil se ho jaate hain. Ek baar theek
+        hone par saalon chalte hain, toh der mat karo.
+      </p>
+
+      <h2>Chaar Cheezein Jo Haath Ke Paas Rehni Chahiye</h2>
+
+      <p>
+        Portal koi bhi ho, poochhi jaane wali cheezein lagbhag wahi hoti hain. Ek baar ye
+        chaar cheezein ek jagah likh kar rakh lein to har season ke status check mein
+        itna time nahi lagta: apna registration/application number (har state ka apna
+        format hai), Aadhaar number, bank khaate ke aakhri chaar ank, aur wo mobile number
+        jo record mein darj hai. West Bengal mein Aadhaar ki jagah Voter ID (EPIC) chalta
+        hai — wahan wo number likhein.
+      </p>
+
+      <p>
+        Aur ek aadat jo har state mein kaam aati hai: status check ka screenshot le lein,
+        khaas kar jab status mein koi problem dikhe. Baad mein CSC ya krishi karyalay mein
+        baat karte waqt “us din portal ye dikha raha tha” ka saboot yahi screenshot hota
+        hai. Portal ka data update hota rehta hai, aur purani screen dobara nahi milti.
       </p>
 
       <h2>Aapka State List Mein Nahi Hai?</h2>
@@ -411,63 +468,6 @@ export default function StateKisanYojanaHub() {
         ke niyam par jaayegi — lekin nivasi to aap ek hi state ke hain, isliye vyavhaar
         mein aam taur par ek hi state ki yojana milti hai. Aise case mein apne dono taraf
         ke patwari se record saaf karwa lena hi sabse pehla kadam hai.
-      </p>
-
-      <h2>Status Check Se Pehle Ye Teen Cheezein Har State Mein Common Hain</h2>
-
-      <p>
-        Portal chahe koi bhi ho, atakne ki wajahein lagbhag wahi rehti hain. Bank account
-        NPCI se seeded ho — warna payment bank se wapas laut jaati hai. Aadhaar, bank aur
-        land record mein naam ki spelling ek jaisi ho. Aur e-KYC current ho. Ye aakhri wali
-        sabse dhokha deti hai: status green dikhta hai, umeed bandhti hai, aur paisa phir
-        bhi nahi aata.
-      </p>
-
-      <p>
-        In teeno mein se koi bhi problem ho to pehle use theek karayein, uske baad hi kist ka
-        intezaar karein. Ulta mat karna — log yahi ulta karte hain, maine dekha hai — pehle intezaar,
-        baad mein sudhaar. Ye kaam CSC, bank branch aur tehsil se ho jaate hain. Ek baar theek
-        hone par saalon chalte hain, toh der mat karo.
-      </p>
-
-      <h2>Kist Ka Calendar — Saal Bhar Mein Kab Kya Aata Hai</h2>
-
-      <p>
-        Har state ka apna schedule hai, lekin ek mota pattern jaan lena kaam aata hai. PM
-        Kisan ki teen kistein aam taur par April–July, August–November aur December–March ke
-        windows mein aati hain. MP aur Maharashtra jaise states apni kistein inhi ke
-        aas-paas, lekin apne alag dinon par bhejte hain — isliye mahine mein do alag credit
-        dikhna bilkul normal hai. Telangana ka per-acre model Kharif aur Rabi ke season se
-        juda hai, to wahan saal mein do bade credit aate hain. Aur Chhattisgarh ki antar
-        rashi ka time dhan kharidi ke season ke baad ka hai — kist ka nahi, release ka
-        intezaar hota hai.
-      </p>
-
-      <p>
-        Iska practical matlab: apne state ke pichle saal ke credit ki dates passbook se
-        nikaal kar likh lein. Agla saal lagbhag usi pattern par chalega, aur “kist late
-        hai ya meri file atki hai” ka farak aap khud pehchaan lenge — poore gaon mein kisi
-        ko nahi aayi to wo late release hai, sirf aapko nahi aayi to wo aapki file ka
-        mamla hai. Dono ka ilaaj alag hai: pehle mein intezaar, doosre mein bank ya portal
-        ki jaanch.
-      </p>
-
-      <h2>Chaar Cheezein Jo Haath Ke Paas Rehni Chahiye</h2>
-
-      <p>
-        Portal koi bhi ho, poochhi jaane wali cheezein lagbhag wahi hoti hain. Ek baar ye
-        chaar cheezein ek jagah likh kar rakh lein to har season ke status check mein
-        itna time nahi lagta: apna registration/application number (har state ka apna
-        format hai), Aadhaar number, bank khaate ke aakhri chaar ank, aur wo mobile number
-        jo record mein darj hai. West Bengal mein Aadhaar ki jagah Voter ID (EPIC) chalta
-        hai — wahan wo number likhein.
-      </p>
-
-      <p>
-        Aur ek aadat jo har state mein kaam aati hai: status check ka screenshot le lein,
-        khaas kar jab status mein koi problem dikhe. Baad mein CSC ya krishi karyalay mein
-        baat karte waqt “us din portal ye dikha raha tha” ka saboot yahi screenshot hota
-        hai. Portal ka data update hota rehta hai, aur purani screen dobara nahi milti.
       </p>
 
       <h2>Sources</h2>

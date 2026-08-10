@@ -106,6 +106,112 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
         sahayata. Dono ka hisaab is article mein alag-alag samjhaya gaya hai.
       </InfoBox>
 
+      <h2>Season Ki Poori Timeline — Ek Kisan Ki Nazar Se</h2>
+
+      <p>
+        Scheme ko kagaz par samajhna ek baat hai, season ke hisaab se jeena doosri. Neeche
+        wahi kram hai jis kram mein ek aam kisan ka saal chalta hai — kaunsa kaam kis mausam
+        mein aata hai aur kis kadam par laaparwahi baad mein bhaari padti hai.
+      </p>
+
+      <p>
+        <strong>Bawai se pehle:</strong> kisan panjiyan ki jaanch. Naya khaata kharida ho,
+        batwaara hua ho, ya pichle saal koi entry galat rahi ho — sudhaar ka sahi waqt yahi
+        hai. Season shuru hone ke baad panjiyan mein badlav karwana lambi line ka kaam ban
+        jaata hai, aur kharidi ke waqt tak galti reh gayi to uska asar seedha antar rashi
+        par padta hai.
+      </p>
+
+      <p>
+        <strong>Kharidi ke dauraan:</strong> token, taul, parchi — teeno ka record apne paas.
+        Samiti par bheed ke dinon mein entry ki galti sabse zyada hoti hai. Taul ke turant
+        baad parchi ki maatra apni aankhon se milaayein; ghar aakar milaane par galti pakdi
+        bhi jaaye to saabit karna mushkil ho jaata hai. Ek hi season mein kai baar dhan
+        bechne wale kisan har trip ki parchi alag sambhaalein — antar rashi kul maatra par
+        banti hai, aur ek parchi kho jaana seedha nuksan hai.
+      </p>
+
+      <p>
+        <strong>Kharidi ke baad, release se pehle:</strong> intezaar ka daur. Lekin khaali
+        intezaar nahi. Isi beech bank ka kaam nipta lein — khaata active hai ya nahi, Aadhaar
+        seeding hui hai ya nahi, mobile number bank record mein current hai ya nahi. Release
+        ke din ye sab pehle se durust ho to paisa seedha aata hai. Release ke baad bhaagdaud
+        shuru ki to? Hafte nikal jaate hain, aur haath mein sirf token number reh jaata hai.
+      </p>
+
+      <p>
+        <strong>Release ke baad:</strong> passbook ya statement mein credit ki jaanch, aur
+        raqam ka apna hisaab. Bechi gayi kul maatra aapko pata hai, prati quintal ka antar
+        sarkar ne bata diya hai — dono ko guna karke apna anumaanit figure nikaal lein.
+        Credit us se kam aaye to farak ki wajah dhoondhne ka aadhaar yahi hisaab banta hai.
+      </p>
+
+      <h2>Kharif 2026 Se Naya Roop — ₹15,000 Prati Acre Ka Matlab</h2>
+
+      <p>
+        June 2026 mein cabinet ne scheme ka naya swaroop manzoor kiya. Ab dhan ke saath-saath
+        ek doosra raasta bhi khula hai: jo kisan dhan ki jagah <strong>dalhan, tilhan, makka,
+        kodo, kutki, ragi ya kapas</strong> lagayega, use <strong>₹15,000 prati acre</strong> ki
+        input sahayata milegi. Kyun? Sarkar ka maqsad saaf hai — paani ki khapat kam karna
+        aur kisan ki aamdani ko sirf dhan ke bharose se nikaalna. Dhan mein paani bhi zyada
+        lagta hai aur mandi ka jokhim bhi ek hi fasal par tika rehta hai.
+      </p>
+
+      <Fig
+        src="ragi-millet-crop.webp"
+        alt="Kisan apne khet mein ragi ki hari fasal ki baaliyan jaanch raha hai"
+        caption="Kodo, kutki, ragi jaise millets ab ₹15,000 prati acre wale naye component mein aate hain"
+      />
+
+      <p>
+        Is naye faayde ka system bhi naya hai. Ye purani samiti-kharidi wali chain se nahi,
+        balki <strong>Integrated Farmer Portal, AgriStack registration aur digital crop
+        survey</strong> se chalega. Teen cheezein pehle se durust honi chahiye: farmer
+        registration, zameen ka record, aur survey mein darj fasal. Fasal boi kuch aur,
+        survey mein darj kuch aur — claim wahin ruk jaayega. Ruk kya, banega hi nahi.
+        Naye season mein sabse samajhdari ka kaam yahi hai ki bawai ke baad crop survey ki
+        entry apne saamne confirm karwa lein.
+      </p>
+
+      <InfoBox type="warning">
+        Antar rashi wala component aur ₹15,000 wala component do alag cheezein hain. Dono ka
+        paisa, process aur record alag chalega. Kisi agent ke ye kehne par ki "dono ek saath
+        dilwa denge, kharcha lagega" — samajh jaayein ki baat galat hai. Scheme mein kahin
+        koi fees nahi lagti.
+      </InfoBox>
+
+      <h2>Kagaz Jo Har Season Kaam Aate Hain</h2>
+
+      <p>
+        Ek cheez reh gayi — in kagzon ki photo phone mein bhi rakh lijiye. Aap soch rahe
+        honge ki original hi kaafi hai; hai, par mandi mein original nikaalna hamesha aasan
+        nahi hota. Aur bas, yehi tha.
+      </p>
+
+      <Fig
+        src="kisan-documents.webp"
+        alt="Mez par rakhe kisan ke kagzaat — zameen ka record, passbook aur notebook"
+        caption="Kisan code, taul parchi, passbook — teen kagaz jo har shikayat mein sabse pehle maange jaate hain"
+      />
+
+      <ul>
+        <li>
+          <strong>Kisan panjiyan / kisan code</strong> — kharidi aur payment dono isi se
+          judte hain. Number kahin likh kar rakhein.
+        </li>
+        <li>
+          <strong>Token aur taul parchi</strong> — bechi gayi maatra ka ekmatra saboot.
+        </li>
+        <li>
+          <strong>Aadhaar-linked bank passbook</strong> — DBT isi khaate mein aayega; seeding
+          bank jaakar ek baar zaroor confirm karein.
+        </li>
+        <li>
+          <strong>Zameen ka record (B1/khasra)</strong> — naye ₹15,000 wale component mein
+          AgriStack registration ke liye zaroori.
+        </li>
+      </ul>
+
       <h2>Ye Scheme Baaki Kisan Yojanaon Se Alag Kyun Hai</h2>
 
       <p>
@@ -153,6 +259,47 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
         alt="Chhattisgarh ke dhan kharidi kendra par bori mein bhara dhan aur taul ke intezaar mein khade kisan"
         caption="Antar rashi ka poora hisaab samiti ki kharidi entry se shuru hota hai"
       />
+
+      <h2>Antar Rashi Ka Apna Hisaab Kaise Lagayein</h2>
+
+      <p>
+        Credit aane se pehle apna anumaanit figure nikaal lena sabse kaam ki aadat hai.
+        Do numbers chahiye, bas. Ek — bechi gayi kul maatra (taul parchiyon ka jod, quintal
+        mein). Do — us saal ki prati quintal antar rashi (support price aur ₹3,100 ka farak,
+        jo release ke waqt announcements mein saaf likha hota hai). Dono ka guna kar lein —
+        wahi aapki antar rashi hai. Misaal: 40 quintal becha, antar ₹800 prati quintal
+        nikla, to khaate mein ₹32,000 aana chahiye. Na kam, na zyada.
+      </p>
+
+      <p>
+        Credit is hisaab se kam aaye to farak do hi jagah ho sakta hai — ya kharidi ki
+        entry mein maatra kam darj hai (samiti ka mamla), ya bank side mein koi katauti hui
+        hai (passbook ki debit entries dekhein). Farak jahan ka hai, shikayat wahin le
+        jaayein; galat darwaze par khada hona hi sabse zyada waqt kha jaata hai.
+      </p>
+
+      <h2>Passbook Mein Credit Kaise Pehchanein</h2>
+
+      <p>
+        Antar rashi ka credit passbook mein ek alag entry ke roop mein dikhta hai — dhan
+        bechne ke waqt mila support price pehle hi aa chuka hota hai, isliye do alag-alag
+        credit hona bilkul normal hai. Yahan ek aam chook hoti hai. Kai kisan support price
+        ki entry dekh kar samajh lete hain ki poora paisa aa gaya, aur antar rashi ka
+        intezaar hi chhod dete hain. Baad mein pata chale to afsos hi bachta hai.
+      </p>
+
+      <Fig
+        src="bank-passbook-entry.webp"
+        alt="Kisan bank counter par apni passbook ki entries check kar raha hai"
+        caption="Support price aur antar rashi — passbook mein do alag credit entries banti hain"
+      />
+
+      <p>
+        Passbook update karwate waqt entry ki date bhi dekhein. Release ke baad bhi alag-alag
+        banks mein credit 3-5 kaam ke din aage-peechhe ho sakta hai. SMS na aana koi nishani
+        nahi hai — kai baar credit aa jaata hai aur SMS aata hi nahi, kyunki mobile number
+        bank record mein purana darj hota hai.
+      </p>
 
       <h2>Status Check Ka Sahi Raasta — Teen Kadiyan</h2>
 
@@ -218,29 +365,6 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
         inke shikayat sirf zubaani reh jaati hai.
       </InfoBox>
 
-      <h2>Passbook Mein Credit Kaise Pehchanein</h2>
-
-      <p>
-        Antar rashi ka credit passbook mein ek alag entry ke roop mein dikhta hai — dhan
-        bechne ke waqt mila support price pehle hi aa chuka hota hai, isliye do alag-alag
-        credit hona bilkul normal hai. Yahan ek aam chook hoti hai. Kai kisan support price
-        ki entry dekh kar samajh lete hain ki poora paisa aa gaya, aur antar rashi ka
-        intezaar hi chhod dete hain. Baad mein pata chale to afsos hi bachta hai.
-      </p>
-
-      <Fig
-        src="bank-passbook-entry.webp"
-        alt="Kisan bank counter par apni passbook ki entries check kar raha hai"
-        caption="Support price aur antar rashi — passbook mein do alag credit entries banti hain"
-      />
-
-      <p>
-        Passbook update karwate waqt entry ki date bhi dekhein. Release ke baad bhi alag-alag
-        banks mein credit 3-5 kaam ke din aage-peechhe ho sakta hai. SMS na aana koi nishani
-        nahi hai — kai baar credit aa jaata hai aur SMS aata hi nahi, kyunki mobile number
-        bank record mein purana darj hota hai.
-      </p>
-
       <h2>Paisa Na Aane Ki Aam Wajahein — Aur Kiska Darwaza Khatkhatayein</h2>
 
       <SchemeTable>
@@ -276,130 +400,6 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
         alt="Gaon ki sahkari samiti ke daftar mein kisan clerk se apni kharidi entry ke baare mein baat kar rahe hain"
         caption="Kharidi record ka sudhaar samiti ke level par hi hota hai — bank wahan kuch nahi kar sakta"
       />
-
-      <h2>Kharif 2026 Se Naya Roop — ₹15,000 Prati Acre Ka Matlab</h2>
-
-      <p>
-        June 2026 mein cabinet ne scheme ka naya swaroop manzoor kiya. Ab dhan ke saath-saath
-        ek doosra raasta bhi khula hai: jo kisan dhan ki jagah <strong>dalhan, tilhan, makka,
-        kodo, kutki, ragi ya kapas</strong> lagayega, use <strong>₹15,000 prati acre</strong> ki
-        input sahayata milegi. Kyun? Sarkar ka maqsad saaf hai — paani ki khapat kam karna
-        aur kisan ki aamdani ko sirf dhan ke bharose se nikaalna. Dhan mein paani bhi zyada
-        lagta hai aur mandi ka jokhim bhi ek hi fasal par tika rehta hai.
-      </p>
-
-      <Fig
-        src="ragi-millet-crop.webp"
-        alt="Kisan apne khet mein ragi ki hari fasal ki baaliyan jaanch raha hai"
-        caption="Kodo, kutki, ragi jaise millets ab ₹15,000 prati acre wale naye component mein aate hain"
-      />
-
-      <p>
-        Is naye faayde ka system bhi naya hai. Ye purani samiti-kharidi wali chain se nahi,
-        balki <strong>Integrated Farmer Portal, AgriStack registration aur digital crop
-        survey</strong> se chalega. Teen cheezein pehle se durust honi chahiye: farmer
-        registration, zameen ka record, aur survey mein darj fasal. Fasal boi kuch aur,
-        survey mein darj kuch aur — claim wahin ruk jaayega. Ruk kya, banega hi nahi.
-        Naye season mein sabse samajhdari ka kaam yahi hai ki bawai ke baad crop survey ki
-        entry apne saamne confirm karwa lein.
-      </p>
-
-      <InfoBox type="warning">
-        Antar rashi wala component aur ₹15,000 wala component do alag cheezein hain. Dono ka
-        paisa, process aur record alag chalega. Kisi agent ke ye kehne par ki "dono ek saath
-        dilwa denge, kharcha lagega" — samajh jaayein ki baat galat hai. Scheme mein kahin
-        koi fees nahi lagti.
-      </InfoBox>
-
-      <h2>Antar Rashi Ka Apna Hisaab Kaise Lagayein</h2>
-
-      <p>
-        Credit aane se pehle apna anumaanit figure nikaal lena sabse kaam ki aadat hai.
-        Do numbers chahiye, bas. Ek — bechi gayi kul maatra (taul parchiyon ka jod, quintal
-        mein). Do — us saal ki prati quintal antar rashi (support price aur ₹3,100 ka farak,
-        jo release ke waqt announcements mein saaf likha hota hai). Dono ka guna kar lein —
-        wahi aapki antar rashi hai. Misaal: 40 quintal becha, antar ₹800 prati quintal
-        nikla, to khaate mein ₹32,000 aana chahiye. Na kam, na zyada.
-      </p>
-
-      <p>
-        Credit is hisaab se kam aaye to farak do hi jagah ho sakta hai — ya kharidi ki
-        entry mein maatra kam darj hai (samiti ka mamla), ya bank side mein koi katauti hui
-        hai (passbook ki debit entries dekhein). Farak jahan ka hai, shikayat wahin le
-        jaayein; galat darwaze par khada hona hi sabse zyada waqt kha jaata hai.
-      </p>
-
-      <h2>Kagaz Jo Har Season Kaam Aate Hain</h2>
-
-      <p>
-        Ek cheez reh gayi — in kagzon ki photo phone mein bhi rakh lijiye. Aap soch rahe
-        honge ki original hi kaafi hai; hai, par mandi mein original nikaalna hamesha aasan
-        nahi hota. Aur bas, yehi tha.
-      </p>
-
-      <Fig
-        src="kisan-documents.webp"
-        alt="Mez par rakhe kisan ke kagzaat — zameen ka record, passbook aur notebook"
-        caption="Kisan code, taul parchi, passbook — teen kagaz jo har shikayat mein sabse pehle maange jaate hain"
-      />
-
-      <ul>
-        <li>
-          <strong>Kisan panjiyan / kisan code</strong> — kharidi aur payment dono isi se
-          judte hain. Number kahin likh kar rakhein.
-        </li>
-        <li>
-          <strong>Token aur taul parchi</strong> — bechi gayi maatra ka ekmatra saboot.
-        </li>
-        <li>
-          <strong>Aadhaar-linked bank passbook</strong> — DBT isi khaate mein aayega; seeding
-          bank jaakar ek baar zaroor confirm karein.
-        </li>
-        <li>
-          <strong>Zameen ka record (B1/khasra)</strong> — naye ₹15,000 wale component mein
-          AgriStack registration ke liye zaroori.
-        </li>
-      </ul>
-
-      <h2>Season Ki Poori Timeline — Ek Kisan Ki Nazar Se</h2>
-
-      <p>
-        Scheme ko kagaz par samajhna ek baat hai, season ke hisaab se jeena doosri. Neeche
-        wahi kram hai jis kram mein ek aam kisan ka saal chalta hai — kaunsa kaam kis mausam
-        mein aata hai aur kis kadam par laaparwahi baad mein bhaari padti hai.
-      </p>
-
-      <p>
-        <strong>Bawai se pehle:</strong> kisan panjiyan ki jaanch. Naya khaata kharida ho,
-        batwaara hua ho, ya pichle saal koi entry galat rahi ho — sudhaar ka sahi waqt yahi
-        hai. Season shuru hone ke baad panjiyan mein badlav karwana lambi line ka kaam ban
-        jaata hai, aur kharidi ke waqt tak galti reh gayi to uska asar seedha antar rashi
-        par padta hai.
-      </p>
-
-      <p>
-        <strong>Kharidi ke dauraan:</strong> token, taul, parchi — teeno ka record apne paas.
-        Samiti par bheed ke dinon mein entry ki galti sabse zyada hoti hai. Taul ke turant
-        baad parchi ki maatra apni aankhon se milaayein; ghar aakar milaane par galti pakdi
-        bhi jaaye to saabit karna mushkil ho jaata hai. Ek hi season mein kai baar dhan
-        bechne wale kisan har trip ki parchi alag sambhaalein — antar rashi kul maatra par
-        banti hai, aur ek parchi kho jaana seedha nuksan hai.
-      </p>
-
-      <p>
-        <strong>Kharidi ke baad, release se pehle:</strong> intezaar ka daur. Lekin khaali
-        intezaar nahi. Isi beech bank ka kaam nipta lein — khaata active hai ya nahi, Aadhaar
-        seeding hui hai ya nahi, mobile number bank record mein current hai ya nahi. Release
-        ke din ye sab pehle se durust ho to paisa seedha aata hai. Release ke baad bhaagdaud
-        shuru ki to? Hafte nikal jaate hain, aur haath mein sirf token number reh jaata hai.
-      </p>
-
-      <p>
-        <strong>Release ke baad:</strong> passbook ya statement mein credit ki jaanch, aur
-        raqam ka apna hisaab. Bechi gayi kul maatra aapko pata hai, prati quintal ka antar
-        sarkar ne bata diya hai — dono ko guna karke apna anumaanit figure nikaal lein.
-        Credit us se kam aaye to farak ki wajah dhoondhne ka aadhaar yahi hisaab banta hai.
-      </p>
 
       <h2>Aam Galtiyan Jo Har Season Dohraayi Jaati Hain</h2>
 
