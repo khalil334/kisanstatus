@@ -116,7 +116,7 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
         <h2>Rule Ek Line Mein: Ginti Aadmi Ki Nahi, Ghar Ki Hoti Hai</h2>
 
         <p>
-          Bahut si sarkari schemes vyakti ko unit maankar chalti hain — jitne log eligible,
+          Dekho, baat yeh hai — bahut si sarkari schemes vyakti ko unit maankar chalti hain: jitne log eligible,
           utne benefit. PM Kisan ka dhaancha ulta hai. Ulta, aur isi liye confusing. Yahan
           pehle ye dekha jaata hai ki landholding kis <em>parivaar</em> ki hai, aur us
           parivaar ke andar se ek hi grant nikalta hai. Bas.
@@ -149,6 +149,13 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
           To phir padosi ke yahan do registration kaise chal rahe hain? Achha sawaal hai.
           Do registration kabhi-kabhi bilkul sahi hote hain, lekin uski wajah pati-patni
           nahi hoti — <strong>batwaara</strong> hoti hai.
+        </p>
+
+        <p>
+          Ek pathak ne mujhe likha tha — usne aur uski patni ne alag-alag CSC se form
+          bharwa liya tha, do saal tak dono khaton mein kist aati rahi. Phir ek din patni
+          wale registration par recovery notice aa gaya — chaar kist ka poora paisa wapas.
+          Usne kaha hota to pehle hi ek surrender kar dete. Yahi is page ka maqsad hai.
         </p>
 
         <p>
@@ -496,7 +503,7 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
           iske ulte dawe karte hain — unse door rahein.
         </p>
 
-        <h2>Chhoti Aadatein Jo Recovery Se Bacha Leti Hain</h2>
+        <h2>Har Season Yeh Karein</h2>
 
         <ul>
           <li>
