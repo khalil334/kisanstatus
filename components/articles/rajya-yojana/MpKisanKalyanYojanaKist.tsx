@@ -3,7 +3,6 @@ import Image from 'next/image';
 import ExternalLinkButton from '@/components/ui/ExternalLinkButton';
 import InfoBox from '@/components/ui/InfoBox';
 import SchemeTable from '@/components/ui/SchemeTable';
-import { FAQBlock } from '@/components/ArticleShared';
 
 const IMG_BASE = '/images/articles/rajya-yojna/mp-kisan-kalyan-yojana-kist-status';
 
@@ -426,6 +425,53 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         </tr>
       </SchemeTable>
 
+      <h2>Saal Bhar Ka Routine — MP Ke Kisan Ke Liye Chaar Kaam</h2>
+
+      <p>
+        Is scheme mein application nahi hai, lekin iska matlab ye nahi ki kuch karna hi nahi
+        hai. Saal mein chaar chhote kaam hain jo waqt par ho jaayein to kist kabhi nahi
+        atakti.
+      </p>
+
+      <p>
+        <strong>Season ki shuruaat mein girdawari.</strong> Kharif aur Rabi — dono season
+        mein apni fasal ki entry confirm karein, chahe patwari ne kar di ho. MP Kisan App
+        se khud darj karna sabse pakka raasta hai; upar iska tareeka likha hai.
+      </p>
+
+      <p>
+        <strong>PM Kisan ki e-KYC current rakhein.</strong> MP ki list PM Kisan ke data se
+        banti hai, isliye e-KYC expire hone ka nuksan dohra hai — central aur state, dono
+        kist rukti hain. Saal mein ek baar, kisi bhi kist ke aane se pehle, pmkisan.gov.in
+        par apna e-KYC status dekh lein.
+      </p>
+
+      <p>
+        <strong>Bank ka record taaza rakhein.</strong> Khaata band ya dormant na ho, Aadhaar
+        seeding NPCI mein active ho, aur mobile number wahi ho jo aaj chal raha hai. Ye
+        teeno kaam bank branch mein ek hi visit mein ho jaate hain.
+      </p>
+
+      <p>
+        <strong>Har credit ki entry milaayein.</strong> PM Kisan aur state ki kist alag-alag
+        dinon par aati hai, isliye passbook mein dono entries alag pehchaanein. Ek aayi aur
+        doosri nahi — to problem sirf us system mein dhoondhein jiski kist ruki hai; dono
+        ke portal aur helpline alag hain.
+      </p>
+
+      <h2>Shikayat Ka Raasta — CM Helpline 181 Ka Sahi Istemaal</h2>
+
+      <p>
+        SAARA ya bank se baat na bane to MP ke paas ek kaam ka hathiyaar hai — CM Helpline
+        181. Call karne se pehle teen cheezein saamne rakhein: apna PM Kisan registration
+        number, Aadhaar, aur samasya ek line mein. Complaint number jo mile use likh kar
+        rakhein; follow-up isi number se hota hai aur har complaint ka jawab dena vibhag ki
+        zimmedari hai. Ek hi baat ka dhyan rakhein — complaint mein wahi likhwaayein jo
+        sach mein problem hai. “Paisa nahi aaya” se behtar hai “PM Kisan ki kist aayi,
+        state ki nahi aayi, bank kehta hai koi credit nahi” — jitna saaf record, utna
+        jaldi kaam.
+      </p>
+
       <h2>MP Se Bahar Ke Kisan Yahan Dekhein</h2>
 
       <p>
@@ -464,7 +510,41 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
 
       <h2>MP Kisan Kalyan — Aksar Poochhe Jaane Wale Sawaal</h2>
 
-      <FAQBlock faqs={FAQS_DATA} caption="MP CM Kisan Kalyan Yojana FAQ 2026" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: FAQS_DATA.map((f) => ({
+              '@type': 'Question',
+              name: f.q,
+              acceptedAnswer: { '@type': 'Answer', text: f.a },
+            })),
+          }),
+        }}
+      />
+      <section className="mb-8 not-prose">
+        <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">MP CM Kisan Kalyan Yojana FAQ 2026</p>
+        <div className="space-y-3">
+          {FAQS_DATA.map(({ q, a }) => (
+            <details
+              key={q}
+              className="border border-[var(--color-border)] rounded-xl overflow-hidden group"
+            >
+              <summary className="p-4 font-semibold text-[var(--color-text)] cursor-pointer bg-[var(--color-bg-alt)] hover:bg-green-50 dark:hover:bg-green-900/20 text-sm flex justify-between items-center gap-3 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">
+                <span>{q}</span>
+                <span className="text-green-600 dark:text-green-400 text-xl group-open:rotate-45 transition-transform shrink-0">
+                  +
+                </span>
+              </summary>
+              <div className="p-4 text-sm text-[var(--color-text-muted)] leading-relaxed border-t border-[var(--color-border)]">
+                {a}
+              </div>
+            </details>
+          ))}
+        </div>
+      </section>
 
 
 
