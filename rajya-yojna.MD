@@ -1,4 +1,6 @@
- folder के 10 articles को completely humanize करो। ये problems fix करो:
+ https://github.com/khalil334/kisanstatus/tree/main/components%2Farticles%2Frajya-yojana
+har 3 articles fix karny ke bad auto merge karke ye file update kardia karo
+folder के 10 articles को completely humanize करो। ये problems fix करो:
 
 ## Problem 1: Word Count 2000+
 9 files अभी भी 2000 से कम हैं — सिर्फ genuinely useful information add करो, fake story मत भरो:
