@@ -108,11 +108,12 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
       </p>
 
       <p>
-        Iska practical matlab ye hai: agar aap purane Rythu Bharosa mein registered the, toh aapka
-        data naye system mein migrate ho chuka hai. Aapko naye siray se apply karne ki zaroorat
-        nahi. Lekin status ab naye portal <code>annadathasukhibhava.ap.gov.in</code> par hi milega.
-        Purana portal ya toh redirect karega ya purana data dikhayega, jisse log ghabra jaate hain
-        ki unka naam kat gaya. Naam kata nahi hai, sirf ghar badla hai.
+        Iska practical matlab? Agar aap purane Rythu Bharosa mein registered the, toh aapka
+        data naye system mein migrate ho chuka hai. Naye siray se apply karne ki zaroorat
+        nahi. Lekin status ab naye portal <code>annadathasukhibhava.ap.gov.in</code> par hi
+        milega. Purana portal ya toh redirect karega ya purana data dikhayega — aur wahi
+        dekh kar log ghabra jaate hain ki naam kat gaya. Ghabraiye mat. Naam kata nahi hai,
+        sirf ghar badla hai.
       </p>
 
       <h2>Kitna Paisa, Kahan Se Aata Hai</h2>
@@ -161,8 +162,9 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
       </p>
 
       <p>
-        AP mein hazaron kisan doosron ki zameen lease par lekar kheti karte hain. Saalon tak wo central
-        schemes se bahar rehte the, sirf isliye ki khata unke naam nahi tha. Valid CCRC card hai to
+        AP mein hazaron kisan doosron ki zameen lease par lekar kheti karte hain. Mehnat
+        unki, fasal unki — par saalon tak wo central schemes se bahar rehte the, sirf
+        isliye ki khata unke naam nahi tha. Ab tasveer badli hai. Valid CCRC card hai to
         aap is scheme mein poore eligible hain.
       </p>
 
@@ -228,18 +230,20 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
       </ul>
 
       <p>
-        Exclusion parivar ke level par lagta hai, sirf applicant par nahi. Maan lijiye aap kheti
-        karte hain lekin aapki patni government school mein teacher hai. Aap dono ek hi parivar
-        (husband, wife, minor children) mein aate hain, isliye aap exclusion mein aa jayenge. Kai
-        kisanon ko ye baat tab pata chalti hai jab do-teen kist aane ke baad recovery notice aata
-        hai. Isliye pehle hi check kar lena behtar hai.
+        Exclusion parivar ke level par lagta hai, sirf applicant par nahi. Maan lijiye aap
+        kheti karte hain lekin aapki patni government school mein teacher hai. Aap dono ek
+        hi parivar (husband, wife, minor children) mein aate hain — isliye aap exclusion
+        mein aa jayenge. Kadwa sach ye hai ki kai kisanon ko ye baat tab pata chalti hai
+        jab do-teen kist aane ke baad recovery notice aata hai. Tab tak paisa kharch ho
+        chuka hota hai. Isliye pehle hi check kar lena behtar hai.
       </p>
 
       <h2>Kist Kab Aati Hai — Season Ka Hisaab</h2>
 
       <p>
-        AP sarkar kist ko kheti ke season se jodti hai: Kharif, Rabi aur Summer. Isliye teen kist
-        banti hain, aur unka waqt buwai ke aas-paas rakha jaata hai:
+        Kist ka calendar kya hai? AP sarkar kist ko kheti ke season se jodti hai — Kharif,
+        Rabi aur Summer. Teen season, teen kist, aur unka waqt buwai ke aas-paas rakha
+        jaata hai:
       </p>
 
       <SchemeTable>
