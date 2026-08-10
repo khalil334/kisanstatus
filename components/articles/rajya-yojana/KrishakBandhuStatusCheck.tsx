@@ -463,13 +463,7 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
           </li>
         </ul>
 
-        <h2>Bengal Se Bahar Ke Kisan Yahan Dekhein</h2>
-
-        <p>
-          West Bengal ka nivasi nahi hain to Krishak Bandhu aap par laagu nahi hoti — aur Voter
-          ID wali pehchaan ka tareeka bhi kisi doosre rajya mein nahi milta. Apne rajya ka
-          hisaab — doosre states mein:
-        </p>
+        <h2>Bengal Ke Bahar</h2>
 
         <ul>
           <li>
@@ -493,6 +487,11 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
             </Link>
           </li>
         </ul>
+
+        <p>
+          West Bengal ka nivasi nahi hain to Krishak Bandhu aap par laagu nahi hoti, aur Voter
+          ID wali pehchaan ka tareeka bhi kisi doosre rajya mein nahi milta.
+        </p>
 
         <h2>Krishak Bandhu — Common Doubts</h2>
 

@@ -124,7 +124,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
       </p>
 
       <p>
-        Ek eligible parivar ke haath saal bhar mein ₹20,000 tak aate hain, do alag jagah se:
+        <strong>Saal Bhar Ka Hisaab — ₹20,000 Tak, Do Jagah Se</strong>
       </p>
 
       <SchemeTable>
@@ -208,7 +208,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         caption="Bataidar aur CCRC card holders bhi eligible hain — yahi PM Kisan se sabse bada fark hai"
       />
 
-      <h2>Kaun Eligible Hai</h2>
+      <h2>Kon-Kon Aata Hai</h2>
 
       <p>
         Chaar basic shartein hain. Chaaron poori honi chahiye, ek bhi chhooti to payment ruk jaati hai:
@@ -337,13 +337,13 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         <li>
           <strong>Land record mismatch:</strong> Webland (AP ka online land records system) mein
           aapki zameen ka data scheme database se match nahi kar raha. Aksar aisa tab hota hai jab
-          zameen ka mutation (naam transfer) recently hua ho. Solution: apne Tahsildar office se
+          zameen ka mutation (naam transfer) recently hua ho. Aise case mein apne Tahsildar office se
           Webland record update karwayein, phir Gram Sachivalayam mein re-verification request dein.
         </li>
         <li>
           <strong>Duplicate Aadhaar entry:</strong> Ek hi Aadhaar do jagah registered hai, jaise
           purane Rythu Bharosa data aur naye CCRC registration dono mein. System dono ko dekh kar
-          duplicate flag laga deta hai. Solution: VAA se milkar purani entry cancel karwayein.
+          duplicate flag laga deta hai. Kya karna hai: VAA se milkar purani entry cancel karwayein.
         </li>
         <li>
           <strong>Exclusion criteria hit:</strong> Income tax record ya employment data ke against
@@ -367,22 +367,22 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
 
       <h3>1. Bank Account DBT Enabled Nahi Hai</h3>
       <p>
-        <strong>Solution:</strong> Apne bank branch jaakar pata karein ki aapka account "NPCI Mapper" mein Aadhaar ke saath linked hai ya nahi. Agar nahi hai, toh turant DBT enable karwayein.
+        <strong>Kya karna hai:</strong> Apne bank branch jaakar pata karein ki aapka account "NPCI Mapper" mein Aadhaar ke saath linked hai ya nahi. Agar nahi hai, toh turant DBT enable karwayein.
       </p>
 
       <h3>2. Aadhaar Name aur Bank Account Name Match Nahi Kar Rahe</h3>
       <p>
-        <strong>Solution:</strong> Agar Aadhaar mein "Ram Kumar" hai aur bank account mein "Ram Kumar Singh", toh payment fail ho sakti hai. Bank mein naam correction karwayein ya Aadhaar mein update karwayein.
+        Agar Aadhaar mein "Ram Kumar" hai aur bank account mein "Ram Kumar Singh", toh payment fail ho sakti hai. Bank mein naam correction karwayein ya Aadhaar mein update karwayein.
       </p>
 
       <h3>3. Mobile Number Change Ho Gaya Hai</h3>
       <p>
-        Solution: OTP na aane ki wajah se aap status check nahi kar pa rahe honge. Pehle Aadhaar center jaakar mobile number update karein, phir portal par try karein.
+        <strong>Ab kya:</strong> OTP na aane ki wajah se aap status check nahi kar pa rahe honge. Pehle Aadhaar center jaakar mobile number update karein, phir portal par try karein.
       </p>
 
       <h3>4. CCRC Card Expired Ya Invalid Hai</h3>
       <p>
-        Solution: Tenant farmers ke liye CCRC card ka valid hona zaroori hai. Agar card expire ho gaya hai, toh apne local Agriculture Officer (AO) se contact karke renewal karwayein.
+        Tenant farmers ke liye CCRC card ka valid hona zaroori hai. Agar card expire ho gaya hai, toh apne local Agriculture Officer (AO) se contact karke renewal karwayein.
       </p>
 
       <h2>PM Kisan Aur Annadata Sukhibhava — Saath Rakhkar Dekhein</h2>
@@ -424,11 +424,11 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         </tr>
       </SchemeTable>
 
-      <h2>AP Se Bahar Ke Kisan Yahan Dekhein</h2>
+      <h2>Aur Bhi States Hain</h2>
 
       <p>
         Bataidar wala niyam sirf AP mein hai. Baaki rajyon mein khata malik ke naam hona zaroori
-        rehta hai. Aur states ka hisaab:
+        rehta hai.
       </p>
 
       <ul>
@@ -447,16 +447,9 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
             MP CM Kisan Kalyan Yojana — Latest Kist Update
           </Link>
         </li>
-      </ul>
-
-      <p>
-        Ek jagah saare rajyon ka hisaab:
-      </p>
-
-      <ul>
         <li>
           <Link href="/rajya-yojana/state-kisan-yojana-list-all-states-2026">
-            State Kisan Yojana List — Sabhi States Ka Comparison Table
+            State Kisan Yojana List — Sabhi States Ka Comparison Table, ek jagah saare rajyon ka hisaab
           </Link>
         </li>
       </ul>
@@ -483,7 +476,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         wahi sabse pehle maanga jaata hai.
       </p>
 
-      <h2>Kahan Shikayat Karein</h2>
+      <h2>Shikayat Kahan Likhwayein</h2>
 
       <p>
         Online status nahi khul raha, naam sudharwana hai, ya payment atki hai? Teen official raste
