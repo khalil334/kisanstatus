@@ -120,7 +120,7 @@ export default function RythuBharosaStatusCheck2026() {
       </p>
 
       <p>
-        Guntas ka hisaab bhi samajh lein, kyunki Telangana mein zameen aksar acre-gunta mein boli
+        Guntas ka hisaab bhi note kar lein, kyunki Telangana mein zameen aksar acre-gunta mein boli
         jaati hai. Ek acre mein 40 guntas hote hain. Portal par land extent decimal mein dikhta hai:
         maan lijiye aapke paas 2 acre 20 guntas hai, toh system 2.5 acre padhega aur season ka
         ₹15,000 banega. Agar aapko lagta hai ki amount kam aaya hai, toh sabse pehle apna land
@@ -194,7 +194,7 @@ export default function RythuBharosaStatusCheck2026() {
       <h2>Apna Status Kaise Dekhein</h2>
 
       <p>
-        Portal par do minute ka kaam hai. Aadhaar number saath rakhein. Account number se bhi hota
+        Portal par ye jaldi ho jaayega. Aadhaar number saath rakhein. Account number se bhi hota
         hai, par Aadhaar zyada reliable nikalta hai:
       </p>
 
@@ -285,7 +285,7 @@ export default function RythuBharosaStatusCheck2026() {
 
       <h3>1. Dharani Portal Mein Naam Update Nahi Hai</h3>
       <p>
-        <strong>Solution:</strong> Rythu Bharosa ka data seedha Dharani portal se aata hai. Agar aapne haal hi mein zameen khareedi hai ya virasat (inheritance) mein mili hai, lekin Dharani par mutation (namantaran) nahi hua, toh paisa purane malik ke account mein jaane ki koshish karega ya fail ho jayega. Turant MRO (Mandal Revenue Officer) office jaakar Dharani update karwayein.
+        <strong>Hal:</strong> Rythu Bharosa ka data seedha Dharani portal se aata hai. Agar aapne haal hi mein zameen khareedi hai ya virasat (inheritance) mein mili hai, lekin Dharani par mutation (namantaran) nahi hua, toh paisa purane malik ke account mein jaane ki koshish karega ya fail ho jayega. Turant MRO (Mandal Revenue Officer) office jaakar Dharani update karwayein.
       </p>
 
       <Fig
@@ -296,17 +296,17 @@ export default function RythuBharosaStatusCheck2026() {
 
       <h3>2. Bank Account Dormant Ya Band Hai</h3>
       <p>
-        <strong>Solution:</strong> Agar aapka bank account lambey samay se use nahi hua hai, toh wo "Dormant" ho sakta hai. Bank jaakar account ko "Active" karwayein aur DBT (Direct Benefit Transfer) enable karwayein.
+        Hal: Agar aapka bank account lambey samay se use nahi hua hai, toh wo "Dormant" ho sakta hai. Bank jaakar account ko "Active" karwayein aur DBT (Direct Benefit Transfer) enable karwayein.
       </p>
 
       <h3>3. Aadhaar Seeding Missing Hai</h3>
       <p>
-        <strong>Solution:</strong> Telangana sarkar ab strict DBT follow karti hai. Apne bank branch mein jaakar confirm karein ki aapka account NPCI mapper mein aapke Aadhaar number se linked hai.
+        <strong>Hal:</strong> Telangana sarkar ab strict DBT follow karti hai. Apne bank branch mein jaakar confirm karein ki aapka account NPCI mapper mein aapke Aadhaar number se linked hai.
       </p>
 
       <h3>4. "Disputed Land" Status</h3>
       <p>
-        <strong>Solution:</strong> Agar zameen par koi court case ya parivarik vivad (family dispute) hai, toh Dharani portal par us par "Disputed" ka tag lag jata hai. Aise cases mein payment tab tak roki jaati hai jab tak vivad khatam nahi ho jata.
+        Hal: Agar zameen par koi court case ya parivarik vivad (family dispute) hai, toh Dharani portal par us par "Disputed" ka tag lag jata hai. Aise cases mein payment tab tak roki jaati hai jab tak vivad khatam nahi ho jata.
       </p>
 
       <h2>Virasat Ki Zameen — Sabse Zyada Atakne Wala Case</h2>
@@ -417,7 +417,7 @@ export default function RythuBharosaStatusCheck2026() {
 
       <p>
         Per-acre wala hisaab Telangana ki khaas baat hai. Baaki rajyon mein amount fixed hota hai,
-        chahe zameen kitni bhi ho. Apne rajya ka tareeka yahan hai:
+        chahe zameen kitni bhi ho. Baaki jagah kya chal raha hai:
       </p>
 
       <ul>
@@ -450,7 +450,7 @@ export default function RythuBharosaStatusCheck2026() {
         </li>
       </ul>
 
-      <h2>Rythu Bharosa — Aksar Poochhe Jaane Wale Sawaal</h2>
+      <h2>Rythu Bharosa — Jo Log Aksar Poochhte Hain</h2>
 
       <script
         type="application/ld+json"

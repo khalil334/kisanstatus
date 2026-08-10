@@ -161,7 +161,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       </p>
 
       <p>
-        Iska doosra pehlu bhi samajh lein: PM Kisan hi is scheme ki jad hai. e-KYC pending
+        Iska doosra pehlu bhi note kar lein: PM Kisan hi is scheme ki jad hai. e-KYC pending
         ho ya bank account mismatch ho, to state ka hapta bhi wahi ruk jaata hai.
       </p>
 
@@ -225,7 +225,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       <h2>Apna Status Kaise Dekhein</h2>
 
       <p>
-        Portal par status dekhne mein do minute lagte hain. Aadhaar number paas rakhein:
+        Portal par status dekhna jaldi ho jaayega. Aadhaar number paas rakhein:
       </p>
 
       <Fig
@@ -274,7 +274,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       <h2>PM Kisan Aa Gaya, Namo Shetkari Nahi Aaya — Ye Kyun Hota Hai</h2>
 
       <p>
-        Ye sabse aam shikayat hai — <strong>pm kisan aaya namo shetkari nahi aaya</strong>. Chaar
+        Aksar log yahi kehte hain — <strong>pm kisan aaya namo shetkari nahi aaya</strong>. Chaar
         wajahein hain jinme se koi ek nikalti hai:
       </p>
 
@@ -411,7 +411,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
 
       <p>
         Maharashtra ke bahar rehte hain to ye scheme aap par laagu nahi hoti, lekin aapke
-        rajya ka apna intezaam ho sakta hai. In rajyon ka hisaab humne alag likha hai:
+        rajya ka apna intezaam ho sakta hai. Doosre states mein:
       </p>
 
       <ul>
@@ -444,7 +444,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         </li>
       </ul>
 
-      <h2>Namo Shetkari — Aksar Poochhe Jaane Wale Sawaal</h2>
+      <h2>Namo Shetkari — Aur Kuch Jaanna Hai?</h2>
 
       <script
         type="application/ld+json"

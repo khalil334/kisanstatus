@@ -101,7 +101,7 @@ export default function OdishaCmKisanStatusCheck({
         <p>
           Isi farak ne bahut confusion paida kiya hai. Kuch log purane portal par status
           dhoondte reh jaate hain, kuch samajhte hain ki purani scheme band hone se unka
-          paisa hi band ho gaya. Ghabrahat samajh mein aati hai — paisa season ka sawaal
+          paisa hi band ho gaya. Darne ki zaroorat nahi — haan, paisa season ka sawaal
           hai. Par sachchai iske beech mein hai, aur usse samajhna is page ka pehla kaam hai.
         </p>
 
@@ -189,7 +189,7 @@ export default function OdishaCmKisanStatusCheck({
         </p>
 
         <p>
-          Neeche diya tool isi logic par chalta hai — aap apni category, zameen aur ghar ki
+          Ye tool isi logic par chalta hai — aap apni category, zameen aur ghar ki
           detail bharenge, aur wo bata dega ki aap kahan aate hain, saal bhar mein kitna
           banega, ek tranche mein kitna, aur aapke case mein kaun kaun se kagaz lagenge.
         </p>
@@ -291,7 +291,7 @@ export default function OdishaCmKisanStatusCheck({
           Ye number ek wajah hai. Eligibility poori, naam list mein, phir bhi paisa hold —
           kyunki Aadhaar authentication adhoora hai. Khijh hoti hai, par hal aasan hai:
           portal se OTP ke zariye, ya nazdeeki CSC center par biometric se poora karaya ja
-          sakta hai. Das minute ka kaam hai, mahinon ka intezaar bacha leta hai.
+          sakta hai. Bas thodi der ka kaam hai, aur mahinon ka intezaar bacha leta hai.
         </p>
 
         <h3>Bank account NPCI mapper se juda nahi</h3>
@@ -485,7 +485,7 @@ export default function OdishaCmKisanStatusCheck({
         <p>
           Odisha ka domicile nahi hai to CM Kisan aap par laagu nahi hoti — lekin landless
           track jaisa intezaam har rajya mein nahi milta, aur raqam bhi jagah-jagah badalti
-          hai. Apne rajya ka hisaab yahan dekhein:
+          hai. Baaki jagah kya chal raha hai:
         </p>
 
         <ul>
@@ -511,7 +511,7 @@ export default function OdishaCmKisanStatusCheck({
           </li>
         </ul>
 
-        <h2>CM Kisan Odisha — Aksar Poochhe Jaane Wale Sawaal</h2>
+        <h2>CM Kisan Odisha — Aur Kuch Jaanna Hai?</h2>
 
         <script
           type="application/ld+json"

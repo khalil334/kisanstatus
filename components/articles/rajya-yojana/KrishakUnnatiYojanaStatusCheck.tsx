@@ -114,7 +114,7 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
         aur Chhattisgarh sarkar ne kisanon se vaada kiya hai ki unke dhan ka daam
         <strong> ₹3,100 prati quintal</strong> tak pahunchega. Support price aur ₹3,100 ke
         beech ka jo antar hai, wahi antar rashi ke roop mein alag se khaate mein aata hai.
-        Samajh lein to hisaab aasan hai, na samjhein to har saal confusion.
+        Jaan lo to hisaab aasan hai, na jaano to har saal confusion.
       </p>
 
       <p>
@@ -159,7 +159,7 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
       <p>
         Paisa nahi aaya to sabse pehle kahan jaate hain log? Bank. Aur wahi galti hai.
         Payment ki file teen kadiyon se hokar chalti hai — samiti, sarkar, phir bank.
-        Kaunsi kadi par mamla atka hai, ye samajh lein to aadhe chakkar bach jaate hain,
+        Kaunsi kadi par mamla atka hai, ye dekh lo to aadhe chakkar bach jaate hain,
         aur aadhi jhunjhlahat bhi.
       </p>
 
@@ -447,7 +447,7 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
 
       <p>
         Har rajya apni kisan yojana alag tarah chalata hai. Aapki zameen doosre rajya mein
-        hai to uska hisaab wahan ke page par milega:
+        hai to — doosre states mein:
       </p>
 
       <ul>
@@ -473,7 +473,7 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
         </li>
       </ul>
 
-      <h2>Krishak Unnati Yojana — Aksar Poochhe Jaane Wale Sawaal</h2>
+      <h2>Krishak Unnati Yojana — Kuch Aur Sawaal</h2>
 
       <script
         type="application/ld+json"
