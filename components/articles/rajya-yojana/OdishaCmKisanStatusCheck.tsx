@@ -4,7 +4,6 @@ import type { RajyaYojanaArticleMeta } from '@/lib/rajya-yojana-data';
 import ExternalLinkButton from '@/components/ui/ExternalLinkButton';
 import InfoBox from '@/components/ui/InfoBox';
 import SchemeTable from '@/components/ui/SchemeTable';
-import { FAQBlock } from '@/components/ArticleShared';
 import OdishaCmKisanChecker from '@/components/articles/rajya-yojana/tools/OdishaCmKisanChecker';
 
 const IMG_BASE = '/images/articles/rajya-yojna/odisha-cm-kisan-status-check-2026';
@@ -413,6 +412,27 @@ export default function OdishaCmKisanStatusCheck({
           caption="Rejected ya missing record ka kaaran sirf block agriculture office ki file par dikhta hai"
         />
 
+        <h2>Landless Track Ka Alag Raasta — Kise Kya Karna Hai</h2>
+
+        <p>
+          Zameen wale kisan ka raasta seedha hai — record saaf rakho, list mein naam aata
+          hai. Landless agricultural household ka raasta thoda alag hai, aur isi liye
+          wahan zyada log chhoot jaate hain. Yahan aadhaar zameen ka record nahi, balki ye
+          pehchaan hai ki parivaar kheti-mazdoori ya allied activities (bakri-murgi paalan,
+          machhli, madhumakkhi jaise kaam) se juda hai. Iski pushti gram panchayat ke level
+          par hoti hai, isliye pehla darwaza patwari nahi, panchayat hai.
+        </p>
+
+        <p>
+          Landless track ke liye teen cheezein taiyaar rakhein: parivaar ki pehchaan ke
+          kagaz (Aadhaar sab sadasyon ke), kheti-mazdoori se judaav ka koi bhi saboot ya
+          panchayat ka certificate, aur ek active Aadhaar-linked bank khaata. Raqam yahan
+          ₹12,500 ki hai — allied activity shuru karne ki madad ke roop mein — isliye
+          verification bhi zameen wale track se zyada baareek hota hai. Naam list mein na
+          aaye to block agriculture office mein likhit shikayat dein aur paavti lein;
+          zubaani poochhne ka record nahi banta.
+        </p>
+
         <h2>Chhoti Baatein Jo Bade Kaam Aati Hain</h2>
 
         <ul>
@@ -437,6 +457,20 @@ export default function OdishaCmKisanStatusCheck({
             maaniye — enrolment aur verification dono sarkari raste se hi hote hain.
           </li>
         </ul>
+
+        <h2>Kist Aayi Par Kam Lagi — Hisaab Kaise Milaayein</h2>
+
+        <p>
+          Zameen wale track mein saal ka ₹4,000 do kiston mein aata hai — Akshaya Tritiya
+          aur Nuakhai ke aas-paas ₹2,000 karke. Passbook mein credit dekhte waqt yahi
+          figure milaayein; PM Kisan ki ₹2,000 wali kist alag entry hai aur aksar dono ko
+          jod kar log confuse ho jaate hain ki kitna kis scheme se aaya. Entry ke saath
+          likha reference dekhein — CM Kisan ka credit state treasury ke reference se aata
+          hai, PM Kisan ka “PMKISAN” naam se. Raqam scheme ke hisaab se kam aaye to pehle
+          ye confirm karein ki aap kaunse track mein gine gaye hain — kyunki landless track
+          ki raqam aur schedule dono alag hain, aur galat track mein ginti hona hi kam
+          raqam ki sabse aam wajah hai.
+        </p>
 
         <h2>Odisha Se Bahar Ke Kisan Yahan Dekhein</h2>
 
@@ -471,7 +505,41 @@ export default function OdishaCmKisanStatusCheck({
 
         <h2>CM Kisan Odisha — Aksar Poochhe Jaane Wale Sawaal</h2>
 
-        <FAQBlock faqs={FAQS_DATA} caption="Odisha CM Kisan status aur eligibility FAQ 2026" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: FAQS_DATA.map((f) => ({
+                '@type': 'Question',
+                name: f.q,
+                acceptedAnswer: { '@type': 'Answer', text: f.a },
+              })),
+            }),
+          }}
+        />
+        <section className="mb-8 not-prose">
+          <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">Odisha CM Kisan status aur eligibility FAQ 2026</p>
+          <div className="space-y-3">
+            {FAQS_DATA.map(({ q, a }) => (
+              <details
+                key={q}
+                className="border border-[var(--color-border)] rounded-xl overflow-hidden group"
+              >
+                <summary className="p-4 font-semibold text-[var(--color-text)] cursor-pointer bg-[var(--color-bg-alt)] hover:bg-green-50 dark:hover:bg-green-900/20 text-sm flex justify-between items-center gap-3 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">
+                  <span>{q}</span>
+                  <span className="text-green-600 dark:text-green-400 text-xl group-open:rotate-45 transition-transform shrink-0">
+                    +
+                  </span>
+                </summary>
+                <div className="p-4 text-sm text-[var(--color-text-muted)] leading-relaxed border-t border-[var(--color-border)]">
+                  {a}
+                </div>
+              </details>
+            ))}
+          </div>
+        </section>
 
         {article.officialPortal && (
           <p>
