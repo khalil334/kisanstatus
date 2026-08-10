@@ -282,7 +282,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         <li>Apne browser mein official website <code>nsmny.mahait.org</code> kholein.</li>
         <li>Homepage par "Beneficiary Status" ya "अपनी स्थिति जांचें" ke option par click karein.</li>
         <li>Apna Aadhaar Number enter karein.</li>
-        <li>Screen par dikh raha CAPTCHA code enter karein.</li>
+        <li>Jo CAPTCHA screen par aaye, wahi type karein.</li>
         <li>"Get Status" ya "Search" button par click karein.</li>
         <li>Ab aapke saamne ek detail page khulega jisme aapka naam, gaon, taluka, zila, aur payment status (Released, Pending, ya Failed) dikhayi dega.</li>
       </ol>
