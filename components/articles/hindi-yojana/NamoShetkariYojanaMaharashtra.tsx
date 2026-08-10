@@ -377,7 +377,7 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
         एक आम scenario लीजिए: मान लीजिए आपने आज eKYC पूरी की, क्योंकि उसी की वजह से किस्त रुकी थी।
         अब क्या उम्मीद रखें? Portal पर eKYC का status आमतौर पर कुछ ही दिनों में update दिखने लगता है,
         लेकिन रुकी हुई रकम उसी दिन नहीं आती — वह अगली release की प्रक्रिया में जुड़कर आती है। बीच के
-        हफ्तों में &ldquo;पैसा अब भी नहीं आया&rdquo; देखकर घबराने की जरूरत नहीं है। यही बात NPCI seeding
+        हफ्तों में &ldquo;पैसा अब भी नहीं आया&rdquo; देखकर घबराने की जरूरत नहीं है। यह बात NPCI seeding
         पर भी लागू होती है — branch में form भरने के बाद mapper में update होने में समय लगता है।
       </p>
       <p>
