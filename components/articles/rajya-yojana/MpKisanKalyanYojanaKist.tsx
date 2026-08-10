@@ -145,6 +145,10 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         fraud hai. Status sirf SAARA portal se dekhein.
       </InfoBox>
 
+      <p>
+        <strong>Dono Yojana Ka Amount Ek Saath</strong>
+      </p>
+
       <SchemeTable>
         <tr>
           <th>Yojana</th>
@@ -348,7 +352,7 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         caption="Payment Failed dikhe to Janpad Panchayat ya Tehsil office mein ADO/Patwari se details update karwao"
       />
 
-      <h2>Beneficiary List Mein Naam Dhoondhna</h2>
+      <h2>Gaon Ki List Mein Apna Naam</h2>
 
       <p>
         Khud eligible lagte hain par paisa nahi aaya? Pehle list mein naam hai ya nahi, ye
@@ -476,12 +480,12 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         jaldi kaam.
       </p>
 
-      <h2>MP Se Bahar Ke Kisan Yahan Dekhein</h2>
+      <h2>Baaki States Mein Kitna Milta Hai</h2>
 
       <p>
         MP ke bahar rehte hain to ye top-up aap par laagu nahi hota, aur girdawari-based
         shart bhi sirf MP mein hai. Kai rajyon ka top-up MP se kai guna bada hai, kuch mein
-        bilkul nahi hai — aur states ka hisaab:
+        bilkul nahi hai.
       </p>
 
       <ul>
@@ -500,14 +504,9 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
             Namo Shetkari Mahasanman Nidhi (Maharashtra)
           </Link>
         </li>
-      </ul>
-
-      <p>Sabhi rajyon ka amount aur portal ek saath:</p>
-
-      <ul>
         <li>
           <Link href="/rajya-yojana/state-kisan-yojana-list-all-states-2026">
-            State Kisan Yojana List — Sabhi States Ka Comparison Table
+            State Kisan Yojana List — Sabhi States Ka Comparison Table, amount aur portal ek saath
           </Link>
         </li>
       </ul>

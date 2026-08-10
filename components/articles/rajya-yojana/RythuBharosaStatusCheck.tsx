@@ -191,7 +191,7 @@ export default function RythuBharosaStatusCheck2026() {
         phase aana baaki hai. Bas itna.
       </p>
 
-      <h2>Apna Status Kaise Dekhein</h2>
+      <h2>Apna Hisaab Dekho</h2>
 
       <p>
         Portal par ye jaldi ho jaayega. Aadhaar number saath rakhein. Account number se bhi hota
@@ -413,12 +413,7 @@ export default function RythuBharosaStatusCheck2026() {
         hai.
       </p>
 
-      <h2>Telangana Se Bahar Ke Kisan Yahan Dekhein</h2>
-
-      <p>
-        Per-acre wala hisaab Telangana ki khaas baat hai. Baaki rajyon mein amount fixed hota hai,
-        chahe zameen kitni bhi ho. Baaki jagah kya chal raha hai:
-      </p>
+      <h2>Baaki Rajyon Ka Hisaab</h2>
 
       <ul>
         <li>
@@ -436,19 +431,17 @@ export default function RythuBharosaStatusCheck2026() {
             Maharashtra ki Namo Shetkari Mahasanman Nidhi
           </Link>
         </li>
-      </ul>
-
-      <p>
-        Kis rajya mein kitna milta hai, ek nazar mein:
-      </p>
-
-      <ul>
         <li>
           <Link href="/rajya-yojana/state-kisan-yojana-list-all-states-2026">
-            Har state ki kisan yojana ka comparison ek hi table mein
+            Har state ki kisan yojana ka comparison ek hi table mein — kis rajya mein kitna milta hai, ek nazar mein
           </Link>
         </li>
       </ul>
+
+      <p>
+        Per-acre wala hisaab Telangana ki khaas baat hai. Baaki rajyon mein amount fixed hota hai,
+        chahe zameen kitni bhi ho.
+      </p>
 
       <h2>Rythu Bharosa — Jo Log Aksar Poochhte Hain</h2>
 
