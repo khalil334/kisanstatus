@@ -90,9 +90,9 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       </p>
 
       <p>
-        Do sawaal har baar wahi hote hain: paisa kab aayega, aur list mein naam hai ya
-        nahi. Neeche dono ka jawab hai: status dekhne ka tareeka, hapte ka waqt, aur naam
-        kat jaane ki asli wajahein.
+        Do sawaal har baar wahi hote hain. Paisa kab aayega? List mein naam hai ya nahi?
+        Neeche dono ka jawab hai: status dekhne ka tareeka, hapte ka waqt, aur naam kat
+        jaane ki asli wajahein — bina ghumaye, seedhi baat.
       </p>
 
       <Fig
@@ -155,8 +155,9 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       </p>
 
       <p>
-        PM Kisan ki list mein naam hai aur domicile Maharashtra ka hai? Bas itne se aap
-        eligible ho jaate hain. Paisa seedha bank account mein aata hai.
+        PM Kisan ki list mein naam hai aur domicile Maharashtra ka hai? Bas. Itne se aap
+        eligible ho jaate hain. Paisa seedha bank account mein aata hai — na form, na
+        line, na agent.
       </p>
 
       <p>
@@ -320,10 +321,10 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       </p>
 
       <p>
-        Isliye jab koi kahe "paisa aa gaya", toh pehle entry dekh lein kaun si aayi hai.
-        Aadhi shikayatein sirf is galatfehmi ki hoti hain ki ₹2,000 aane ko log poori
-        payment samajh lete hain, jabki state ke ₹3,000 abhi pipeline mein hote hain.
-        Mobile banking ya SMS alert mein bhi yahi codes dikhte hain.
+        Isliye jab koi kahe "paisa aa gaya", toh pehle entry dekh lein — kaun si aayi
+        hai? Aadhi shikayatein sirf is galatfehmi ki hoti hain: ₹2,000 aaya, log samajh
+        lete hain poori payment aa gayi, jabki state ke ₹3,000 abhi pipeline mein hote
+        hain. Mobile banking ya SMS alert mein bhi yahi codes dikhte hain.
       </p>
 
       <h2>Payment Fail Ho Gayi — Ab Kya</h2>
@@ -373,20 +374,21 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         hota hai.
       </p>
 
-      <h2>Ek Kisan Ki Timeline — Vidarbha Ke Ganesh Ka Case</h2>
+      <h2>Ek Aam Timeline — Do Acre Wale Kisan Ka Hisaab</h2>
 
       <p>
-        Rule sookhe lagte hain, isliye ek aam case se samajhein. Ganesh ke paas do acre hai,
-        PM Kisan 2019 se aa raha hai. Namo Shetkari shuru hone par usne kuch nahi kiya —
-        aur pehli kist apne aap aa gayi, kyunki list PM Kisan ke data se bani thi. Doosri
-        kist ke waqt problem hui: PM Kisan ki e-KYC expire ho gayi thi. Central wali kist
-        bhi ruki aur state wali bhi — dono ek hi record par khadi hain. CSC par biometric
-        e-KYC karwane ke baad agli release mein dono kistein ek saath aayi — ruki hui
-        raqam scheme ke record mein rehti hai, khatam nahi hoti.
+        Rule sookhe lagte hain, isliye ek aam pattern se samajhein — ye kahani taluka
+        krishi office mein har season dohrayi jaati hai. Do acre wala kisan, PM Kisan
+        2019 se aa raha hai. Namo Shetkari shuru hone par usne kuch nahi kiya — aur pehli
+        kist apne aap aa gayi, kyunki list PM Kisan ke data se bani thi. Doosri kist ke
+        waqt problem: PM Kisan ki e-KYC expire ho gayi thi. Central wali kist bhi ruki
+        aur state wali bhi — dono ek hi record par khadi hain. CSC par biometric e-KYC
+        karwane ke baad agli release mein dono kistein ek saath aayi — ruki hui raqam
+        scheme ke record mein rehti hai, khatam nahi hoti.
       </p>
 
       <p>
-        Iske baad Ganesh ne teen aadatein bana leen, jo har Maharashtra ke kisan ke kaam ki
+        Aise case se teen aadatein nikalti hain, jo har Maharashtra ke kisan ke kaam ki
         hain: har season se pehle e-KYC ka status dekhna, 7/12 mein naam ki spelling
         Aadhaar se milana, aur passbook mein dono entries (PMKISAN aur state wali) alag
         pehchaan kar likhna. In teen kaamon ke baad status check karna sirf tasalli ka
