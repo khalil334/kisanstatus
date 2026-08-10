@@ -90,7 +90,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       </p>
 
       <p>
-        Dekho, do sawaal har baar wahi hote hain. Paisa kab aayega? List mein naam hai ya nahi?
+        Suno zara, do sawaal har baar wahi hote hain. Paisa kab aayega? List mein naam hai ya nahi?
         Neeche dono ka jawab hai — status dekhne ka tareeka, hapte ka waqt, aur naam kat
         jaane ki asli wajahein, bina ghumaye, seedhi baat, jaise koi apna hi samjha raha ho.
       </p>

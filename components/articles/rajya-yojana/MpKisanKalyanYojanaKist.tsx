@@ -432,7 +432,7 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         </tr>
       </SchemeTable>
 
-      <h2>Routine</h2>
+      <h2>Saal Bhar Ke Chhote Kaam</h2>
 
       <p>
         Is scheme mein application nahi hai, lekin iska matlab ye nahi ki kuch karna hi nahi
