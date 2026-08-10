@@ -1,36 +1,60 @@
-https://github.com/khalil334/kisanstatus/tree/main/components%2Farticles%2Frajya-yojana
-token ke lye card do
-3 articles fix karny ke bad direct merge karke phr next 3 py start kam start karo har 3 articles fix karny ke bad auto merge karke ye file update kardia karo
- मेरे KisanStatus.com के components/articles/rajya-yojana folder के 10 articles को fix करो। 2 problems hain:
+# Task: Fix rajya-yojana articles (KisanStatus.com)
 
-## Problem 1: Word Count 2000+ नहीं है
-सिर्फ 1/10 files 2000+ words है। Baaki 9 thin content हैं:
+**Folder:** `components/articles/rajya-yojana/` — 10 article files (`.tsx`).
+**Goal:** every article ≥ 2,000 words of useful prose + remove the shared FAQ component.
 
-| File | Current Words | Target |
-|------|---------------|--------|
-| KrishakUnnatiYojanaStatusCheck.tsx | 606 | ~2,000+ |
-| StateKisanYojanaHub.tsx | 653 | ~2,000+ |
-| OdishaCmKisanStatusCheck.tsx | 945 | ~2,000+ |
-| PmKisanPatiPatniRule.tsx | 1,078 | ~2,000+ |
-| MpKisanKalyanYojanaKist.tsx | 1,377 | ~2,000+ |
-| RythuBharosaStatusCheck.tsx | 1,460 | ~2,000+ |
-| AnnadataSukhibhavaStatusCheck.tsx | 1,606 | ~2,000+ |
-| NamoShetkariYojanaStatus.tsx | 1,622 | ~2,000+ |
-| KrishakBandhuStatusCheck.tsx | 1,775 | ~2,100+ |
+## Progress tracker
 
-Fix: Words delete मत करो — genuinely useful detail add karo: state-specific examples, district-wise differences, document checklists, real farmer experiences, timeline scenarios, common mistakes.
+Update this table after every batch. Status: `todo` → `in-progress` → `done (PR #n / commit)`.
 
-## Problem 2: ArticleShared Component हटाओ
-सभी 10 files में `@/components/ArticleShared` import है और FAQBlock use ho raha hai:
+| # | Batch | File | Words (verified 2026-08-10) | Status |
+|---|-------|------|------------------------------|--------|
+| 1 | 1 | KrishakUnnatiYojanaStatusCheck.tsx | ~1,300 | todo |
+| 2 | 1 | StateKisanYojanaHub.tsx | ~1,259 | todo |
+| 3 | 1 | PmKisanPatiPatniRule.tsx | ~1,548 | todo |
+| 4 | 2 | MpKisanKalyanYojanaKist.tsx | ~1,725 | todo |
+| 5 | 2 | RythuBharosaStatusCheck.tsx | ~1,727 | todo |
+| 6 | 2 | OdishaCmKisanStatusCheck.tsx | ~1,790 | todo |
+| 7 | 3 | NamoShetkariYojanaStatus.tsx | ~1,846 | todo |
+| 8 | 3 | AnnadataSukhibhavaStatusCheck.tsx | ~1,987 | todo |
+| 9 | 3 | KrishakBandhuStatusCheck.tsx | ~2,103 | todo |
+| 10 | 4 | RajasthanKisanSammanNidhi9000.tsx | ~2,388 (length OK) | todo — Fix 2 only |
 
-- `@/components/ArticleShared` import hatao
-- `FAQBlock` component hatao — FAQ content directly inline JSX mein likho
-- Tool components (jaise `KrishakBandhuChecker`, `OdishaCmKisanChecker`, `PmKisanFamilyChecker`) unchanged रहें
-- Baaki imports (React, Next, images) unchanged रहें
-repeative keywords se strictly avoid karo or low competitive keywords add karo 
-## Rules:
-- Content length same या बढ़नी चाहिए — कम नहीं
-- Facts, dates, amounts, official links unchanged
-- Image paths (`hero.webp`, `status-check-phone.webp` etc.) unchanged रहें
-- Opening style diverse रहे — har article ka intro unique रहे
-- Same TSX format में output do
+Word counts = prose words (JSX tags/imports stripped), measured from source on 2026-08-10.
+Counting method: strip `{…}` expressions, `<…>` tags, and import lines; count remaining
+`\w` + Devanagari word tokens.
+
+## Fix 1 — Expand thin content to 2,000+ words
+
+- **Never delete existing content.** Only add.
+- Add genuinely useful material: state-specific examples, district-wise differences,
+  document checklists, real farmer timeline scenarios, common mistakes & fixes.
+- Avoid repetitive keywords; prefer low-competition long-tail phrasing.
+- Each article's intro must stay/become unique — no shared opening template.
+
+## Fix 2 — Remove ArticleShared / FAQBlock (all 10 files)
+
+Every file currently has:
+- `import { FAQBlock } from '@/components/ArticleShared';` (line ~7)
+- One `<FAQBlock faqs={FAQS_DATA} caption="…" />` usage near the end.
+
+Change to:
+- Delete the `ArticleShared` import.
+- Replace `<FAQBlock …/>` with inline JSX rendering the same FAQ content
+  (keep the existing `FAQS_DATA` questions/answers; render them directly).
+- **Do NOT touch:** tool components (`KrishakBandhuChecker`, `OdishaCmKisanChecker`,
+  `PmKisanFamilyChecker`, etc.), other imports (React/Next/Image/`ui/*`), image paths
+  (`hero.webp`, `status-check-phone.webp`, …), facts, dates, amounts, official links.
+
+## Workflow
+
+1. Work in batches of 3 files (see tracker), thinnest first.
+2. Branch per batch → commit → push → PR to `main`.
+3. After each batch is merged, update the tracker table above in the same or next PR.
+4. Output stays valid TSX in the same format as the original file.
+
+## Notes for the agent (next session)
+
+- Repo worktree: use `repo-worktree.sh enter https://github.com/khalil334/kisanstatus.git`.
+- GitHub secret name: `github_kisanstatus` (fine-grained PAT, contents+PR write).
+- Verify word counts yourself before/after editing — don't trust stale numbers here.
