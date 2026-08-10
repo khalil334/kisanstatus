@@ -38,3 +38,18 @@ folder के 10 articles को completely humanize करो। ये problem
 - Facts, dates, amounts, official links unchanged रहें
 - Same TSX format में output do
 - Words delete मत करो — सिर्फ add और replace करो
+
+---
+
+## Progress Tracker (updated 2026-08-10)
+
+Word counts re-verified from source on 2026-08-10 (prose words, JSX/imports stripped) —
+all 10 files were already 2,000+ after PRs #188–191, so this pass focused on
+Problems 2–4 (AI uniformity, no fake names, human voice). No facts/amounts/links/images changed.
+
+| Batch | Files | Status |
+|-------|-------|--------|
+| 1 | KrishakUnnati (2,222), OdishaCmKisan (2,134), StateKisanHub (2,383) | done — PR #192 merged |
+| 2 | PmKisanPatiPatni (2,187), MpKisanKalyan (2,104), RythuBharosa (2,133) | done — PR #193 merged |
+| 3 | KrishakBandhu (2,133), Annadata (2,203), NamoShetkari (2,153) — fictional "Ganesh" example removed | done — PR #194 merged |
+| 4 | RajasthanKisanSammanNidhi9000 (2,423) + this tracker update | done — PR #195 |

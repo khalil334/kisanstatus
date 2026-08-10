@@ -93,13 +93,17 @@ export default function RajasthanKisanSammanNidhi9000() {
         </p>
 
         <p>
-          Confusion wahan shuru hoti hai jahan log ₹12,000 wale number ke peeche bhaagte hain — jo abhi tak sirf ek ghoshna hai, khaate mein aane wali raashi nahi. Neeche dono baatein saaf-saaf alag karke rakhi hain: kya pakka hai, aur kya sirf umeed.
+          Confusion wahan shuru hoti hai jahan log ₹12,000 wale number ke peeche bhaagte
+          hain. Wo abhi tak sirf ek ghoshna hai — khaate mein aane wali raashi nahi.
+          Umeed rakhna galat nahi, par usi par budget banana galat hai. Neeche dono
+          baatein saaf-saaf alag karke rakhi hain: kya pakka hai, aur kya sirf umeed.
         </p>
 
         <h2>Scheme Kaam Kaise Karti Hai</h2>
 
         <p>
-          Alag se apply karne ki zaroorat nahi. Jo PM Kisan mein hai, wo yahan bhi hai — bas itna simple hai.
+          Alag se apply karne ki zaroorat nahi. Jo PM Kisan mein hai, wo yahan bhi hai.
+          Bas. Itna simple.
         </p>
 
         <p>
@@ -252,7 +256,10 @@ export default function RajasthanKisanSammanNidhi9000() {
         <h2>6vi Kist — Ruki Kyun Hai</h2>
 
         <p>
-          Pehli paanch kiste time par aa chuki hain, koi issue nahi hua. 6vi kist verification aur data-matching mein atki hai. Next kist date officially announce nahi hua. Jan Soochna portal check karte rahein.
+          Pehli paanch kiste time par aa chuki hain — koi issue nahi hua. 6vi kist
+          verification aur data-matching mein atki hai. Kab aayegi? Next kist ki date
+          officially announce nahi hui. Intezaar khalta hai, par afwaahon se date nahi
+          banti — Jan Soochna portal check karte rahein.
         </p>
 
         <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-5 my-6 not-prose">
@@ -264,8 +271,9 @@ export default function RajasthanKisanSammanNidhi9000() {
         <h2>Jan Aadhaar — Rajasthan Ka Asli Gatekeeper</h2>
 
         <p>
-          Dusre rajyon ke kisan sirf Aadhaar aur bank ki chinta karte hain. Rajasthan mein ek teesri
-          cheez hai jo utni hi zaroori hai, aur zyadatar log ise halke mein lete hain.
+          Dusre rajyon ke kisan sirf Aadhaar aur bank ki chinta karte hain. Rajasthan mein
+          ek teesri cheez hai. Utni hi zaroori. Aur zyadatar log ise halke mein lete hain —
+          jab tak kist atak na jaaye.
         </p>
 
         <p>
@@ -336,7 +344,9 @@ export default function RajasthanKisanSammanNidhi9000() {
         <h2>Paisa Nahi Aaya — Ab Kya</h2>
 
         <p>
-          Sabse pehle bank statement khud check karo — SMS kabhi-kabhi miss ho jaata hai lekin paisa phir bhi aa chuka hota hai. "NEFT", "DBT" ya "Rajasthan Govt" naam ki entry dhundo.
+          Ghabraane se pehle ek kaam karo: bank statement khud check karo. SMS kabhi-kabhi
+          miss ho jaata hai lekin paisa phir bhi aa chuka hota hai. "NEFT", "DBT" ya
+          "Rajasthan Govt" naam ki entry dhundo — mil gayi to shikayat ki zaroorat hi nahi.
         </p>
 
         <p>
