@@ -86,7 +86,7 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
       />
 
       <p>
-        Chhattisgarh mein dhan bechna aadha kaam hai. Baaki aadha? Intezaar.
+        Bhai, Chhattisgarh mein dhan bechna aadha kaam hai. Baaki aadha? Intezaar.
       </p>
 
       <p>
@@ -164,7 +164,8 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
       </p>
 
       <p>
-        Ek kisan ne mujhe Mahasamund se apna kissa bataya tha — usne 38 quintal becha tha,
+        Mandi mein khade-khade ek kisan ne pucha tha, aur baat wahin khul gayi — Mahasamund ka
+        tha, 38 quintal becha tha,
         par samiti ki entry mein 30 hi darj hua. Uske paas taul parchiyan sambhali hui theen,
         isliye khadya vibhag mein baat ek hi chakkar mein ban gayi. Parchi na hoti to shikayat
         zubaani reh jaati.
@@ -330,6 +331,12 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
 
       <h2>Kagaz Jo Har Season Kaam Aate Hain</h2>
 
+      <p>
+        Achha haan, ek aur baat — in kagzon ki photo phone mein bhi rakh lijiye. Aap soch rahe
+        honge ki original hi kaafi hai; hai, par mandi mein original nikaalna hamesha aasan
+        nahi hota. Aur bas, yehi tha.
+      </p>
+
       <Fig
         src="kisan-documents.webp"
         alt="Mez par rakhe kisan ke kagzaat — zameen ka record, passbook aur notebook"
@@ -452,7 +459,7 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
 
       <h2>Zameen Doosre Rajya Mein Hai?</h2>
 
-      <p>Har rajya apni kisan yojana alag tarah chalata ha. Ye dekh lo:</p>
+      <p>Har rajya apni kisan yojana alag tarah chalata ha. Ek-ek karke dekh lijiye:</p>
 
       <ul>
         <li>
