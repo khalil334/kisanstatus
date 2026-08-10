@@ -4,7 +4,6 @@ import type { RajyaYojanaArticleMeta } from '@/lib/rajya-yojana-data';
 import ExternalLinkButton from '@/components/ui/ExternalLinkButton';
 import InfoBox from '@/components/ui/InfoBox';
 import SchemeTable from '@/components/ui/SchemeTable';
-import { FAQBlock } from '@/components/ArticleShared';
 import KrishakBandhuChecker from '@/components/articles/rajya-yojana/tools/KrishakBandhuChecker';
 
 const IMG_BASE = '/images/articles/rajya-yojna/krishak-bandhu-status-check-2026';
@@ -493,7 +492,41 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
 
         <h2>Krishak Bandhu — Aksar Poochhe Jaane Wale Sawaal</h2>
 
-        <FAQBlock faqs={FAQS_DATA} caption="Krishak Bandhu status, slab aur death benefit FAQ 2026" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: FAQS_DATA.map((f) => ({
+                '@type': 'Question',
+                name: f.q,
+                acceptedAnswer: { '@type': 'Answer', text: f.a },
+              })),
+            }),
+          }}
+        />
+        <section className="mb-8 not-prose">
+          <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">Krishak Bandhu status, slab aur death benefit FAQ 2026</p>
+          <div className="space-y-3">
+            {FAQS_DATA.map(({ q, a }) => (
+              <details
+                key={q}
+                className="border border-[var(--color-border)] rounded-xl overflow-hidden group"
+              >
+                <summary className="p-4 font-semibold text-[var(--color-text)] cursor-pointer bg-[var(--color-bg-alt)] hover:bg-green-50 dark:hover:bg-green-900/20 text-sm flex justify-between items-center gap-3 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">
+                  <span>{q}</span>
+                  <span className="text-green-600 dark:text-green-400 text-xl group-open:rotate-45 transition-transform shrink-0">
+                    +
+                  </span>
+                </summary>
+                <div className="p-4 text-sm text-[var(--color-text-muted)] leading-relaxed border-t border-[var(--color-border)]">
+                  {a}
+                </div>
+              </details>
+            ))}
+          </div>
+        </section>
 
         <p>
           <Link href="/rajya-yojana">← Sabhi rajya ki kisan yojana</Link>
