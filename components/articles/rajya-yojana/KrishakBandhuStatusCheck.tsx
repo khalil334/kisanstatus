@@ -110,14 +110,14 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
 
         <p>
           Naam ek hai, kaam do. Krishak Bandhu ke andar do component
-          hain jo alag-alag chalte hain. Pehla hai <strong>assured income support</strong> —
+          hain jo alag-alag chalte hain. Pehla hai assured income support —
           saal mein do baar, Kharif aur Rabi season par, aapke bank account mein seedha
-          paisa. Doosra hai <strong>death benefit</strong> — registered kisan ki mrityu par
+          paisa. Doosra hai death benefit — registered kisan ki mrityu par
           uske parivaar ko ek baar milne wali ek-mushht raqam.
         </p>
 
         <p>
-          Farak dekh lo, samjho, kyunki dono ke rules ek jaise nahi hain. Income support
+          Baat yeh hai, farak samajhna zaroori hai, kyunki dono ke rules ek jaise nahi hain. Income support
           zameen ke area par nirbhar karta hai aur umar se koi lena-dena nahi rakhta. Death
           benefit ka poora dhaancha ulta hai — usmein umar ki ek band hai (18 se 60 saal) aur
           zameen ka area maayne nahi rakhta. Ek hi kisan pehle component mein ho sakta hai aur
@@ -142,38 +142,56 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
           </tr>
         </SchemeTable>
 
-        <h2>Kitna Paisa Banta Hai — Slab Ka Asli Logic</h2>
+        <h2>Paisa Ruk Jaane Ki Aam Wajahein</h2>
 
+        <h3>Land record mein mutation nahi hua</h3>
         <p>
-          Income support ka hisaab per-acre chalta hai, lekin usmein neeche ek floor aur upar ek
-          ceiling — dono lage hue hain. Ek acre ya usse zyada cultivable land par poora annual
-          grant banta hai. Ek acre se kam par hisaab pro-rata hota hai, magar ek nyoontam raqam
-          se neeche nahi jaata. Aur bahut zyada zameen hone par bhi grant upar ki limit paar
-          nahi karta — is scheme ka jhukav chhote aur seemant kisan ki taraf hai.
+          Zameen kharidi ya virasat mein mili, magar khatian mein naam nahi chadha — to
+          scheme ki nazar mein zameen ka malik aap nahi hain. Sach mano toh ye thoda tough hai, par niyam
+          yahi hai. Ye sabse aam aur sabse zyada nazarandaaz ki jaane wali wajah hai. Hal
+          BL&amp;LRO office mein mutation karwana hai; portal par kuch bharne se ye theek
+          nahi hota.
         </p>
 
+        <Fig
+          src="blro-land-record-office.webp"
+          alt="BL&LRO office mein kisan khatian ke kagaz officer ke saath milaa raha hai"
+          caption="Khatian ka har badlaav — kharid, batwara, virasat — BL&LRO office se hi durust hota hai"
+        />
+
+        <h3>Bank account dormant ho gaya</h3>
         <p>
-          Yahi wajah hai ki do padosi kisanon ko alag-alag raqam mil sakti hai aur dono hi
-          &ldquo;sahi&rdquo; ho sakte hain. Bhagchasi (sharecropper) bhi is scheme mein aate
-          hain — bas unka record panchayat/department ke paas recorded hona chahiye. Aur jinke
-          paas apni zameen bilkul nahi hai, unke liye landless khetmajur wala alag track banaya
-          gaya hai, jiska enrolment camp ke zariye hota hai aur portal par section bhi alag hai.
+          Jis account mein saal mein do baar hi paisa aata hai, wo aksar bahut kam chalta hai
+          aur bank use dormant kar deta hai. Aise account mein credit fail ho jaata hai. Bank ki
+          branch mein KYC dobara karwa kar account active karwana padta hai.
         </p>
 
+        <h3>Naam ki spelling mismatch</h3>
         <p>
-          Ye tool aapki zameen aur umar par yahi slab logic laga kar batata hai ki
-          annual grant kitna banega, ek kist mein kitna aayega, death benefit lagu hai ya nahi,
-          aur aapke case mein kaun-kaun se kagaz lagenge. Sab hisaab aapke phone mein hota hai —
-          na koi login, na koi data kahin bhejna.
+          Voter ID mein ek spelling, bank mein doosri, khatian mein teesri — verification isi
+          par ruk jaata hai. Sudhaar ka sabse asaan raasta ye hai ki aap ek document ko
+          &ldquo;master&rdquo; maan lein aur baaki do ko uske hisaab se theek karwaayein.
         </p>
 
-        <KrishakBandhuChecker />
+        <h3>Ek hi zameen par do dawe</h3>
+        <p>
+          Batware ke baad bhai-bhai ek hi plot par alag-alag registration kara dete hain.
+          Verification drive mein aisa duplicate pakda jaata hai aur dono ki payment tab tak ruk
+          jaati hai jab tak record saaf na ho. Ye block office mein hi sulajhta hai.
+        </p>
+
+        <h3>Joint khatian mein hissa saaf nahi</h3>
+        <p>
+          Kai gharon mein khatian sabhe bhaiyon ke naam saath hai, hissa alag likha nahi hota.
+          Aise mein per-acre hisaab lagana mushkil ho jaata hai aur file pending pad jaati hai.
+          Ek baar hissa record mein darj ho jaaye, to har saal ka jhanjhat khatam ho jaata hai.
+        </p>
 
         <h2>Krishak Bandhu Status Check Voter ID Se — Poora Tareeka</h2>
 
         <p>
           Baaki state schemes Aadhaar ko primary key banati hain, lekin Krishak Bandhu ki
-          pehchaan ka mukhya zariya <strong>Voter ID (EPIC number)</strong> hai. Isliye search
+          pehchaan ka mukhya zariya Voter ID (EPIC number) hai. Isliye search
           karte waqt EPIC number sabse bharosemand option rehta hai.
         </p>
 
@@ -184,10 +202,10 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
         />
 
         <p>
-          Ek baar ek kisan ne mujhe message kiya, uska EPIC number mein &lsquo;O&rsquo; ki jagah
-          &lsquo;0&rsquo; tha — portal bar-bar &ldquo;no record found&rdquo; dikha raha tha aur
+          Ek baar comment section mein ek sawaal tha — kisan ke EPIC number mein &lsquo;O&rsquo; ki jagah
+          &lsquo;0&rsquo; tha, portal bar-bar &ldquo;no record found&rdquo; dikha raha tha aur
           wo samajh baitha ki naam kat gaya. Card se milaa kar dobara bhara, record turant khul
-          gaya. Bas itni si baat thi.
+          gaya. Bas itni si baat thi. Haan, toh wahi.
         </p>
 
         <ol>
@@ -271,20 +289,48 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
           intezaar karna hai.
         </p>
 
+        <h2>Kitna Paisa Banta Hai — Slab Ka Asli Logic</h2>
+
+        <p>
+          Income support ka hisaab per-acre chalta hai, lekin usmein neeche ek floor aur upar ek
+          ceiling — dono lage hue hain. Ek acre ya usse zyada cultivable land par poora annual
+          grant banta hai. Ek acre se kam par hisaab pro-rata hota hai, magar ek nyoontam raqam
+          se neeche nahi jaata. Aur bahut zyada zameen hone par bhi grant upar ki limit paar
+          nahi karta — is scheme ka jhukav chhote aur seemant kisan ki taraf hai.
+        </p>
+
+        <p>
+          Yahi wajah hai ki do padosi kisanon ko alag-alag raqam mil sakti hai aur dono hi
+          &ldquo;sahi&rdquo; ho sakte hain. Bhagchasi (sharecropper) bhi is scheme mein aate
+          hain — bas unka record panchayat/department ke paas recorded hona chahiye. Aur jinke
+          paas apni zameen bilkul nahi hai, unke liye landless khetmajur wala alag track banaya
+          gaya hai, jiska enrolment camp ke zariye hota hai aur portal par section bhi alag hai.
+        </p>
+
+        <p>
+          Ye tool aapki zameen aur umar par yahi slab logic laga kar batata hai ki
+          annual grant kitna banega, ek kist mein kitna aayega, death benefit lagu hai ya nahi,
+          aur aapke case mein kaun-kaun se kagaz lagenge. Sab hisaab aapke phone mein hota hai —
+          na koi login, na koi data kahin bhejna.
+        </p>
+
+        <KrishakBandhuChecker />
+
         <h2>Padosi Ko Mil Gaya, Mujhe Nahi — Ye Kyun Hota Hai</h2>
 
         <p>
-          Log sabse zyada yahi poochhte hain, aur iska jawab PM Kisan aur Krishak Bandhu
+          Ye wala sawaal sabse zyada aata hai, aur iska jawab PM Kisan aur Krishak Bandhu
           ke bilkul alag paisa-bhejne ke tareeke mein hai. PM Kisan central DBT switch se chalta
           hai — release hone par desh bhar mein lagbhag ek hi samay paisa girta hai. Krishak
-          Bandhu ka paisa <strong>district treasury</strong> ke raste jaata hai. State release
+          Bandhu ka paisa district treasury ke raste jaata hai. State release
           ka aadesh deta hai, phir har zile ki treasury apni raftaar se file process karti hai.
         </p>
 
         <p>
           Nateeja? Ek zile ka kisan aaj paisa dekh leta hai, padosi zile ka teen din baad,
           aur kisi ka poora hafta lag jaata hai. Ye kharaabi nahi, system ka dhaancha hai.
-          Isi liye release ki khabar aane ke baad pehle hafte mein ghabraana zaroori nahi —
+          Maine bhi pehle yahi socha tha ki kuch gadbad hai — par nahi, dhaancha hi aisa hai.
+          Isi liye release ki khabar aane ke baad pehle hafte mein pareshaan hona zaroori nahi —
           us dauran bank ki line mein lagne se kuch hasil nahi hota. Sivaay thakaan ke.
         </p>
 
@@ -322,7 +368,7 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
         <h2>Kist Ka Time Kaisa Rehta Hai</h2>
 
         <p>
-          Saal mein do release hote hain — ek Kharif season ke aas-paas aur doosra Rabi ke
+          Achha haan, ek aur baat — timing ki. Saal mein do release hote hain — ek Kharif season ke aas-paas aur doosra Rabi ke
           aas-paas. Dates? Har saal thodi aage-peeche. Verification aur treasury processing
           ka waqt lagta hai, aur wo waqt kisi ke haath mein nahi. Isliye kisi bhi &ldquo;pakki
           tareekh&rdquo; wale WhatsApp forward par bharosa karna theek nahi — wo forward
@@ -334,51 +380,6 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
           account valid dikh raha hai to hafta bhar sabr karein. Isi dauran passbook update
           karwaate rahein — kai baar paisa aa jaata hai aur SMS aata hi nahi, khaas kar jab bank
           mein purana mobile number chadha ho.
-        </p>
-
-        <h2>Paisa Ruk Jaane Ki Aam Wajahein</h2>
-
-        <h3>Land record mein mutation nahi hua</h3>
-        <p>
-          Zameen kharidi ya virasat mein mili, magar khatian mein naam nahi chadha — to
-          scheme ki nazar mein zameen ka malik aap nahi hain. Sach mano toh ye thoda tough hai, par niyam
-          yahi hai. Ye sabse aam aur sabse zyada nazarandaaz ki jaane wali wajah hai. Hal
-          BL&amp;LRO office mein mutation karwana hai; portal par kuch bharne se ye theek
-          nahi hota.
-        </p>
-
-        <Fig
-          src="blro-land-record-office.webp"
-          alt="BL&LRO office mein kisan khatian ke kagaz officer ke saath milaa raha hai"
-          caption="Khatian ka har badlaav — kharid, batwara, virasat — BL&LRO office se hi durust hota hai"
-        />
-
-        <h3>Bank account dormant ho gaya</h3>
-        <p>
-          Jis account mein saal mein do baar hi paisa aata hai, wo aksar bahut kam chalta hai
-          aur bank use dormant kar deta hai. Aise account mein credit fail ho jaata hai. Bank ki
-          branch mein KYC dobara karwa kar account active karwana padta hai.
-        </p>
-
-        <h3>Naam ki spelling mismatch</h3>
-        <p>
-          Voter ID mein ek spelling, bank mein doosri, khatian mein teesri — verification isi
-          par ruk jaata hai. Sudhaar ka sabse asaan raasta ye hai ki aap ek document ko
-          &ldquo;master&rdquo; maan lein aur baaki do ko uske hisaab se theek karwaayein.
-        </p>
-
-        <h3>Ek hi zameen par do dawe</h3>
-        <p>
-          Batware ke baad bhai-bhai ek hi plot par alag-alag registration kara dete hain.
-          Verification drive mein aisa duplicate pakda jaata hai aur dono ki payment tab tak ruk
-          jaati hai jab tak record saaf na ho. Ye block office mein hi sulajhta hai.
-        </p>
-
-        <h3>Joint khatian mein hissa saaf nahi</h3>
-        <p>
-          Kai gharon mein khatian sabhe bhaiyon ke naam saath hai, hissa alag likha nahi hota.
-          Aise mein per-acre hisaab lagana mushkil ho jaata hai aur file pending pad jaati hai.
-          Ek baar hissa record mein darj ho jaaye, to har saal ka jhanjhat khatam ho jaata hai.
         </p>
 
         <h2>Death Benefit — Parivaar Ke Liye Kya Karna Hota Hai</h2>
@@ -470,38 +471,6 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
           </li>
         </ul>
 
-        <h2>Bengal Ke Bahar</h2>
-
-        <p>Aur states ka hisaab niche hai:</p>
-
-        <ul>
-          <li>
-            <Link href="/rajya-yojana/odisha-cm-kisan-status-check-2026">
-              Odisha CM Kisan — KALIA ka naya roop aur bhoomiheen parivaar ka benefit
-            </Link>
-          </li>
-          <li>
-            <Link href="/rajya-yojana/annadata-sukhibhava-status-check-2026">
-              Andhra Pradesh Annadata Sukhibhava — bataidar kisan bhi cover hote hain
-            </Link>
-          </li>
-          <li>
-            <Link href="/rajya-yojana/mp-kisan-kalyan-yojana-kist-status">
-              Madhya Pradesh CM Kisan Kalyan Yojana — kist aur SAARA portal status
-            </Link>
-          </li>
-          <li>
-            <Link href="/rajya-yojana/state-kisan-yojana-list-all-states-2026">
-              Sabhi rajyon ka amount aur portal ek saath — comparison table
-            </Link>
-          </li>
-        </ul>
-
-        <p>
-          West Bengal ka nivasi nahi hain to Krishak Bandhu aap par laagu nahi hoti, aur Voter
-          ID wali pehchaan ka tareeka bhi kisi doosre rajya mein nahi milta.
-        </p>
-
         <h2>Krishak Bandhu — Common Doubts</h2>
 
         <script
@@ -539,6 +508,39 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
             ))}
           </div>
         </section>
+
+        <h2>Bengal Ke Bahar</h2>
+
+        <p>Aur states ka hisaab niche hai:</p>
+
+        <ul>
+          <li>
+            <Link href="/rajya-yojana/odisha-cm-kisan-status-check-2026">
+              Odisha CM Kisan — KALIA ka naya roop aur bhoomiheen parivaar ka benefit
+            </Link>
+          </li>
+          <li>
+            <Link href="/rajya-yojana/annadata-sukhibhava-status-check-2026">
+              Andhra Pradesh Annadata Sukhibhava — bataidar kisan bhi cover hote hain
+            </Link>
+          </li>
+          <li>
+            <Link href="/rajya-yojana/mp-kisan-kalyan-yojana-kist-status">
+              Madhya Pradesh CM Kisan Kalyan Yojana — kist aur SAARA portal status
+            </Link>
+          </li>
+          <li>
+            <Link href="/rajya-yojana/state-kisan-yojana-list-all-states-2026">
+              Sabhi rajyon ka amount aur portal ek saath — comparison table
+            </Link>
+          </li>
+        </ul>
+
+        <p>
+          West Bengal ka nivasi nahi hain to Krishak Bandhu aap par laagu nahi hoti, aur Voter
+          ID wali pehchaan ka tareeka bhi kisi doosre rajya mein nahi milta.
+        </p>
+
 
         <p>
           <Link href="/rajya-yojana">← Sabhi rajya ki kisan yojana</Link>
