@@ -2,7 +2,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import InfoBox from '@/components/ui/InfoBox';
 import SchemeTable from '@/components/ui/SchemeTable';
-import { FAQBlock } from '@/components/ArticleShared';
 
 const IMG_BASE = '/images/articles/rajya-yojna/state-kisan-yojana-list-all-states-2026';
 
@@ -307,6 +306,74 @@ export default function StateKisanYojanaHub() {
         caption="Ek jaisi zameen, alag state, alag paisa. Model ka farak samajhna zaroori hai"
       />
 
+      <h2>Do Kisan, Do State — Hisaab Ka Farak Ek Misaal Se</h2>
+
+      <p>
+        Model ka farak numbers mein sabse saaf dikhta hai. Maan lijiye do kisan hain, dono ke
+        paas teen-teen acre zameen hai. Pehla Madhya Pradesh mein hai: use PM Kisan ka ₹6,000
+        aur state ka ₹6,000 — kul ₹12,000 saalana milega, zameen teen acre ho ya paanch,
+        raqam wahi rahegi. Doosra Telangana mein hai: wahan hisaab per acre hai, isliye teen
+        acre par ₹36,000 saalana banta hai — lekin ek acre wale padosi ko sirf ₹12,000.
+      </p>
+
+      <p>
+        Ab teesra kisan jodein — Chhattisgarh ka, jo dhan bechta hai. Uski raqam na fixed hai
+        na per acre; wo is par nirbhar hai ki samiti mein kitne quintal dhan darj hua. Achhi
+        fasal ke saal zyada, kam kharidi ke saal kam. Teeno kisan barabar mehnat karte hain,
+        lekin teeno ka “status check” bilkul alag cheez hai — pehle ko sirf kist ki date
+        dekhni hai, doosre ko apna land record, aur teesre ko kharidi ki entry. Isi liye is
+        page par har state ka guide alag hai; ek hi formula sab par nahi chalta.
+      </p>
+
+      <h2>Application Ka Farak — Kahan Khud Karna Hai, Kahan Apne Aap Hota Hai</h2>
+
+      <p>
+        States do tarah se list banati hain, aur ye farak jaanna zaroori hai kyunki isi se
+        tay hota hai ki aapko kuch karna hai ya nahi.
+      </p>
+
+      <p>
+        <strong>Apne aap judne wale states:</strong> MP aur Maharashtra apni list PM Kisan ke
+        data se banate hain. Yahan alag application ka koi form hi nahi hai — PM Kisan mein
+        active hain to state ki list mein naam aa jaata hai. Iska doosra pehlu ye hai ki PM
+        Kisan ki koi bhi problem (e-KYC expire, land seeding pending) yahan double nuksan
+        karti hai: dono kist ek saath rukti hain.
+      </p>
+
+      <p>
+        <strong>Alag registration wale states:</strong> West Bengal (Krishak Bandhu), Odisha
+        (CM Kisan) aur Andhra Pradesh apna registration alag chalate hain. Yahan PM Kisan
+        mein hona kaafi nahi — state ke portal ya camp mein apna naam alag se judwana padta
+        hai. Naye kisan, virasat mein zameen paane wale, ya state badal kar aane wale log
+        aksar isi kadam par chook jaate hain aur saalon tak sochte rehte hain ki paisa apne
+        aap aayega.
+      </p>
+
+      <p>
+        Agar aapko yaad nahi ki aapke state mein kaunsa model hai, to upar wale table se apne
+        state ka guide kholiye — har guide mein registration ka poora tareeka alag se likha
+        hai.
+      </p>
+
+      <h2>Naye Kisan Ke Liye Pehla Kadam — State Koi Bhi Ho</h2>
+
+      <p>
+        Zameen abhi naam par aayi hai — kharidi ho, virasat ho ya batwaara — to income-support
+        ka raasta har state mein ek hi jagah se shuru hota hai: <strong>revenue record mein
+        apna naam durust karwana</strong>. Mutation jab tak poora nahi hota, koi bhi portal
+        aapko khatedar nahi maanta, aur bina khatedar bane na PM Kisan banta hai na state ki
+        yojana.
+      </p>
+
+      <p>
+        Mutation ke baad ka kram simple hai: pehle PM Kisan ka registration (kyunki kai
+        states isi se list banati hain), phir apne state ke model ke hisaab se state ka
+        registration ya intezaar. Aur registration ke waqt hi teen cheezein milaa lein —
+        Aadhaar ki spelling, bank khaate ka naam, aur land record ka naam. Teeno ek jaise
+        hue to aage ka safar bina rukavat ka rehta hai; ek bhi alag hua to kisi na kisi
+        kist par file atkegi.
+      </p>
+
       <h2>Aapka State List Mein Nahi Hai?</h2>
 
       <p>
@@ -324,6 +391,19 @@ export default function StateKisanYojanaHub() {
         kar denge.
       </p>
 
+      <h2>Zameen Do States Mein Ho To Kya Hota Hai</h2>
+
+      <p>
+        Border ke gaon mein ye sawaal aam hai — kuch zameen ek state mein, kuch doosre mein.
+        PM Kisan ke liye is se farak nahi padta; wo central scheme hai aur parivaar ko ek hi
+        grant deti hai, zameen chahe jahan ho. Lekin state yojana ka niyam alag hai: har
+        state sirf apne yahan ki zameen aur apne nivasi ko ginti hai. Matlab MP ki zameen
+        par MP ki scheme ka claim banega aur Rajasthan wali zameen us hisaab se Rajasthan
+        ke niyam par jaayegi — lekin nivasi to aap ek hi state ke hain, isliye vyavhaar
+        mein aam taur par ek hi state ki yojana milti hai. Aise case mein apne dono taraf
+        ke patwari se record saaf karwa lena hi sabse pehla kadam hai.
+      </p>
+
       <h2>Status Check Se Pehle Ye Teen Cheezein Har State Mein Common Hain</h2>
 
       <p>
@@ -337,6 +417,46 @@ export default function StateKisanYojanaHub() {
         In teeno mein se koi bhi problem ho to pehle use theek karayein, uske baad hi kist ka
         intezaar karein. Ye kaam CSC, bank branch aur tehsil se ho jaate hain aur ek baar theek
         hone par saalon chalte hain.
+      </p>
+
+      <h2>Kist Ka Calendar — Saal Bhar Mein Kab Kya Aata Hai</h2>
+
+      <p>
+        Har state ka apna schedule hai, lekin ek mota pattern samajh lena kaam aata hai. PM
+        Kisan ki teen kistein aam taur par April–July, August–November aur December–March ke
+        windows mein aati hain. MP aur Maharashtra jaise states apni kistein inhi ke
+        aas-paas, lekin apne alag dinon par bhejte hain — isliye mahine mein do alag credit
+        dikhna bilkul normal hai. Telangana ka per-acre model Kharif aur Rabi ke season se
+        juda hai, to wahan saal mein do bade credit aate hain. Aur Chhattisgarh ki antar
+        rashi ka time dhan kharidi ke season ke baad ka hai — kist ka nahi, release ka
+        intezaar hota hai.
+      </p>
+
+      <p>
+        Iska practical matlab: apne state ke pichle saal ke credit ki dates passbook se
+        nikaal kar likh lein. Agla saal lagbhag usi pattern par chalega, aur “kist late
+        hai ya meri file atki hai” ka farak aap khud pehchaan lenge — poore gaon mein kisi
+        ko nahi aayi to wo late release hai, sirf aapko nahi aayi to wo aapki file ka
+        mamla hai. Dono ka ilaaj alag hai: pehle mein intezaar, doosre mein bank ya portal
+        ki jaanch.
+      </p>
+
+      <h2>Status Check Karte Waqt Kya Kya Saath Rakhein</h2>
+
+      <p>
+        Portal koi bhi ho, poochhi jaane wali cheezein lagbhag wahi hoti hain. Ek baar ye
+        chaar cheezein ek jagah likh kar rakh lein to har season ka status check do minute
+        ka kaam ban jaata hai: apna registration/application number (har state ka apna
+        format hai), Aadhaar number, bank khaate ke aakhri chaar ank, aur wo mobile number
+        jo record mein darj hai. West Bengal mein Aadhaar ki jagah Voter ID (EPIC) chalta
+        hai — wahan wo number likhein.
+      </p>
+
+      <p>
+        Aur ek aadat jo har state mein kaam aati hai: status check ka screenshot le lein,
+        khaas kar jab status mein koi problem dikhe. Baad mein CSC ya krishi karyalay mein
+        baat karte waqt “us din portal ye dikha raha tha” ka saboot yahi screenshot hota
+        hai. Portal ka data update hota rehta hai, aur purani screen dobara nahi milti.
       </p>
 
       <h2>Sources</h2>
@@ -391,12 +511,52 @@ export default function StateKisanYojanaHub() {
 
       <h2>State Kisan Yojana — Aksar Poochhe Jaane Wale Sawaal</h2>
 
-      <FAQBlock faqs={FAQS_DATA} caption="State-wise kisan yojana comparison FAQ 2026" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: FAQS_DATA.map((f) => ({
+              '@type': 'Question',
+              name: f.q,
+              acceptedAnswer: { '@type': 'Answer', text: f.a },
+            })),
+          }),
+        }}
+      />
+      <section className="mb-8 not-prose">
+        <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">State-wise kisan yojana comparison FAQ 2026</p>
+        <div className="space-y-3">
+          {FAQS_DATA.map(({ q, a }) => (
+            <details
+              key={q}
+              className="border border-[var(--color-border)] rounded-xl overflow-hidden group"
+            >
+              <summary className="p-4 font-semibold text-[var(--color-text)] cursor-pointer bg-[var(--color-bg-alt)] hover:bg-green-50 dark:hover:bg-green-900/20 text-sm flex justify-between items-center gap-3 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">
+                <span>{q}</span>
+                <span className="text-green-600 dark:text-green-400 text-xl group-open:rotate-45 transition-transform shrink-0">
+                  +
+                </span>
+              </summary>
+              <div className="p-4 text-sm text-[var(--color-text-muted)] leading-relaxed border-t border-[var(--color-border)]">
+                {a}
+              </div>
+            </details>
+          ))}
+        </div>
+      </section>
 
       <InfoBox type="tip">
         <strong>Fraud se bachein:</strong> Koi bhi sarkari yojana registration ya status theek
         karne ke naam par paise nahi maangti. Koi "fees" maange to wo fraud hai. Shikayat apne
-        state ke krishi vibhag ya panchayat karyalay mein darj karein.
+        state ke krishi vibhag ya panchayat karyalay mein darj karein. Ek aur aam tareeka
+        WhatsApp par ghoomta "nayi yojana, itna paisa milega" wala message hai jisme link kisi
+        private website ka hota hai — aisi kisi bhi khabar ko pehle apne state ke official
+        portal par milaayein. Sarkari announcement hamesha .gov.in ya .nic.in wale pate par
+        milti hai, aur Aadhaar ya bank ki jaankari kisi link par bharne ki zaroorat kabhi
+        nahi hoti. Jo scheme is page ki list mein nahi hai aur portal par bhi nahi dikh rahi,
+        use lekar CSC ya kisi agent ko paisa dena seedha nuksan hai.
       </InfoBox>
 
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
