@@ -259,7 +259,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
 
       <p>
         9va hapta (9th instalment) kab aayega — yeh sawaal aajkal sabse zyada
-        poochha ja raha hai. Achha haan, ek aur baat — Scheme 2023 se chal rahi hai, har saal do-teen kist aati hain, toh
+        poochha ja raha hai. Haan, yaad aaya — Scheme 2023 se chal rahi hai, har saal do-teen kist aati hain, toh
         ginti ab aage badh chuki hai. Official date sirf portal aur sarkari announcement se
         confirm hoti hai — aur pichhla pattern yahi raha hai ki nayi kist PM Kisan ki latest
         kist ke kuch hafte baad aati hai. Status check ka tareeka har kist ke liye same rehta
@@ -388,7 +388,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       <h2>Ek Aam Timeline — Do Acre Wale Kisan Ka Hisaab</h2>
 
       <p>
-        Rule sookhe lagte hain — ye baat samajhna zaroori hai, kyunki ye samajhne se hi aage ka kaam banta hai. Isliye ek aam pattern se samajhein — ye kahani taluka
+        Rule sookhe lagte hain — ye baat pallu se baandhne wali hai, kyunki isse hi aage ka kaam banta hai. Isliye ek aam pattern se samajhein — ye kahani taluka
         krishi office mein har season dohrayi jaati hai. Do acre wala kisan, PM Kisan
         2019 se aa raha hai. Namo Shetkari shuru hone par usne kuch nahi kiya — aur pehli
         kist apne aap aa gayi, kyunki list PM Kisan ke data se bani thi. Doosri kist ke
