@@ -172,8 +172,8 @@ export default function OdishaCmKisanStatusCheck({
           zameen nahi thi, phir bhi
           unhone cultivator wala form bhar diya kyunki gaon mein sabne wahi bhara tha. File
           reject hui. Panchayat se landless certificate banwa kar sahi track mein dobara gaye,
-          tab jaakar naam aaya. Track pehle tay karna isi liye zaroori hai. Samajh gaye? Achha,
-          aage badhte hain.
+          tab jaakar naam aaya. Track pehle tay karna isi liye zaroori hai. Baat ban gayi? Chalo,
+          aage.
         </p>
 
         <Fig
@@ -297,7 +297,7 @@ export default function OdishaCmKisanStatusCheck({
 
         <h3>e-KYC pending pada hai</h3>
         <p>
-          Ye number ek wajah hai. Ye baat samajhna zaroori hai, kyunki ye samajh lene se aadha
+          Ye number ek wajah hai. Isko jaan lena zaroori hai, kyunki jaan lene se aadha
           kaam wahin ban jaata hai. Eligibility poori, naam list mein, phir bhi paisa hold —
           kyunki Aadhaar authentication adhoora hai. Khijh hoti hai, par hal aasan hai:
           portal se OTP ke zariye, ya nazdeeki CSC center par biometric se poora karaya ja

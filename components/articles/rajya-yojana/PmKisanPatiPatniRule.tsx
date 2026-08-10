@@ -147,7 +147,7 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
 
         <p>
           Wait, pehle ek baat bata deta hoon — aap soch rahe honge ki ye niyam sirf kagaz par
-          hai. Maine bhi pehle yahi socha tha. Nahi hai; verification isi par tikta hai.
+          hai. Mujhe bhi shuru mein aisa hi laga tha. Nahi hai; verification isi par tikta hai.
         </p>
 
         <p>
@@ -162,7 +162,7 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
           bharwa liya tha, do saal tak dono khaton mein kist aati rahi. Phir ek din patni
           wale registration par recovery notice aa gaya — chaar kist ka poora paisa wapas.
           Usne kaha hota to pehle hi ek surrender kar dete. Yahi is page ka maqsad hai.
-          Haan, toh wahi.
+          Bas, itni si baat.
         </p>
 
         <p>
