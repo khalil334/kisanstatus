@@ -146,7 +146,7 @@ export default function StateKisanYojanaHub() {
       <h1>State Kisan Yojana List 2026: Sabhi Rajya Ka Amount, Portal Aur Status Link Ek Jagah</h1>
 
       <p>
-        Dekho, PM Kisan ka ₹6,000 to poore desh mein ek jaisa hai. Asli farak state ki apni yojana
+        Matlab, PM Kisan ka ₹6,000 to poore desh mein ek jaisa hai. Asli farak state ki apni yojana
         se padta hai. Rajasthan ka kisan saal mein ₹9,000 tak pahunchta hai, Maharashtra ka
         ₹12,000, aur Andhra Pradesh ka ₹20,000 tak. Sochiye — wahi zameen, wahi mehnat, aur
         income-support mein itna antar bas is baat se ki khet kis state ki seema mein hai.
@@ -309,10 +309,11 @@ export default function StateKisanYojanaHub() {
       <h2>Do Kisan, Do State — Hisaab Ka Farak Ek Misaal Se</h2>
 
       <p>
-        Mujhe ek baar do bhaiyon ne message kiya tha — ek MP mein basa tha, doosra border
+        Do bhai, do alag message, aur dono ke sawaal ka jawab ek hi tha. Ek MP mein basa tha,
+        doosra border
         paar Maharashtra mein. Dono ke paas lagbhag barabar zameen, par saal ke ant mein
         credit ka jod alag nikla. Dono ko laga kisi ek ke saath galti hui hai. Galti nahi
-        thi — bas do states ke do model the.
+        thi — bas do states ke do model the. Chhodo, wo alag baat hai; hisaab dekhiye.
       </p>
 
       <p>
@@ -424,7 +425,8 @@ export default function StateKisanYojanaHub() {
 
       <p>
         In teeno mein se koi bhi problem ho to pehle use theek karayein, uske baad hi kist ka
-        intezaar karein. Ye kaam CSC, bank branch aur tehsil se ho jaate hain. Ek baar theek
+        intezaar karein. Galati mat karna, maine dekha hai log ulta karte hain — pehle intezaar,
+        baad mein sudhaar. Ye kaam CSC, bank branch aur tehsil se ho jaate hain. Ek baar theek
         hone par saalon chalte hain, toh der mat karo.
       </p>
 
@@ -450,7 +452,7 @@ export default function StateKisanYojanaHub() {
         ki jaanch.
       </p>
 
-      <h2>Status Check Karte Waqt Kya Kya Saath Rakhein</h2>
+      <h2>Chaar Cheezein Jo Haath Ke Paas Rehni Chahiye</h2>
 
       <p>
         Portal koi bhi ho, poochhi jaane wali cheezein lagbhag wahi hoti hain. Ek baar ye
