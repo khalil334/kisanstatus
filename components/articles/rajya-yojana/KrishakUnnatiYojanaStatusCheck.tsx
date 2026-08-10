@@ -332,7 +332,7 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
       <h2>Kagaz Jo Har Season Kaam Aate Hain</h2>
 
       <p>
-        Achha haan, ek aur baat — in kagzon ki photo phone mein bhi rakh lijiye. Aap soch rahe
+        Ek cheez reh gayi — in kagzon ki photo phone mein bhi rakh lijiye. Aap soch rahe
         honge ki original hi kaafi hai; hai, par mandi mein original nikaalna hamesha aasan
         nahi hota. Aur bas, yehi tha.
       </p>

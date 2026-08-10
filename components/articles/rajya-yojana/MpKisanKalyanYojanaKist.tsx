@@ -313,7 +313,7 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
 
       <p>
         Sabse zyada confusion isi baat pe hota hai: portal par status green, passbook khaali. Dil toot jaata hai
-        thoda. Maine bhi pehle yahi socha tha ki portal galat hai — par nahi, kahani aage hoti hai. Ya phir seedha "Rejected" aa jaata hai — bina ye bataye ki kyun. Teen jagah
+        thoda. Pehle mujhe bhi lagta tha ki portal galat hai — par nahi, kahani aage hoti hai. Ya phir seedha "Rejected" aa jaata hai — bina ye bataye ki kyun. Teen jagah
         check karni hoti hai, isi order mein:
       </p>
 

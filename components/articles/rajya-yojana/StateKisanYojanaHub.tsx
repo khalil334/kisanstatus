@@ -313,7 +313,7 @@ export default function StateKisanYojanaHub() {
         doosra border
         paar Maharashtra mein. Dono ke paas lagbhag barabar zameen, par saal ke ant mein
         credit ka jod alag nikla. Dono ko laga kisi ek ke saath galti hui hai. Galti nahi
-        thi — bas do states ke do model the. Chhodo, wo alag baat hai; hisaab dekhiye.
+        thi — bas do states ke do model the. Rehne do, wo baat alag hai; hisaab dekhiye.
       </p>
 
       <p>
@@ -425,7 +425,7 @@ export default function StateKisanYojanaHub() {
 
       <p>
         In teeno mein se koi bhi problem ho to pehle use theek karayein, uske baad hi kist ka
-        intezaar karein. Galati mat karna, maine dekha hai log ulta karte hain — pehle intezaar,
+        intezaar karein. Ulta mat karna — log yahi ulta karte hain, maine dekha hai — pehle intezaar,
         baad mein sudhaar. Ye kaam CSC, bank branch aur tehsil se ho jaate hain. Ek baar theek
         hone par saalon chalte hain, toh der mat karo.
       </p>

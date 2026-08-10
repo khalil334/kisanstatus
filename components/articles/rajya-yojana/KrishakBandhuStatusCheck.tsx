@@ -205,7 +205,7 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
           Ek baar comment section mein ek sawaal tha — kisan ke EPIC number mein &lsquo;O&rsquo; ki jagah
           &lsquo;0&rsquo; tha, portal bar-bar &ldquo;no record found&rdquo; dikha raha tha aur
           wo samajh baitha ki naam kat gaya. Card se milaa kar dobara bhara, record turant khul
-          gaya. Bas itni si baat thi. Haan, toh wahi.
+          gaya. Bas itni si baat thi. Yehi tha poora maamla.
         </p>
 
         <ol>
@@ -368,7 +368,7 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
         <h2>Kist Ka Time Kaisa Rehta Hai</h2>
 
         <p>
-          Achha haan, ek aur baat — timing ki. Saal mein do release hote hain — ek Kharif season ke aas-paas aur doosra Rabi ke
+          Ab timing ki baat bhi kar lein. Saal mein do release hote hain — ek Kharif season ke aas-paas aur doosra Rabi ke
           aas-paas. Dates? Har saal thodi aage-peeche. Verification aur treasury processing
           ka waqt lagta hai, aur wo waqt kisi ke haath mein nahi. Isliye kisi bhi &ldquo;pakki
           tareekh&rdquo; wale WhatsApp forward par bharosa karna theek nahi — wo forward
