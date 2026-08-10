@@ -99,7 +99,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
       <h2>Rythu Bharosa Se Annadata Sukhibhava Tak — Naam Kyun Badla</h2>
 
       <p>
-        Thoda background samajh lein, kyunki isi confusion mein bahut log galat portal par status
+        Thoda background jaan lein, kyunki isi confusion mein bahut log galat portal par status
         dhoondhte reh jaate hain. 2019 mein jab YSR sarkar aayi thi, tab scheme ka naam tha
         <em> YSR Rythu Bharosa</em> aur portal tha <code>ysrrythubharosa.ap.gov.in</code>. 2024 mein
         sarkar badli, aur nayi TDP-led coalition sarkar ne scheme ko continue rakha lekin naam badal
@@ -112,7 +112,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         data naye system mein migrate ho chuka hai. Naye siray se apply karne ki zaroorat
         nahi. Lekin status ab naye portal <code>annadathasukhibhava.ap.gov.in</code> par hi
         milega. Purana portal ya toh redirect karega ya purana data dikhayega — aur wahi
-        dekh kar log ghabra jaate hain ki naam kat gaya. Ghabraiye mat. Naam kata nahi hai,
+        dekh kar log ghabra jaate hain ki naam kat gaya. Tension mat lijiye. Naam kata nahi hai,
         sirf ghar badla hai.
       </p>
 
@@ -233,7 +233,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         Exclusion parivar ke level par lagta hai, sirf applicant par nahi. Maan lijiye aap
         kheti karte hain lekin aapki patni government school mein teacher hai. Aap dono ek
         hi parivar (husband, wife, minor children) mein aate hain — isliye aap exclusion
-        mein aa jayenge. Kadwa sach ye hai ki kai kisanon ko ye baat tab pata chalti hai
+        mein aa jayenge. Ye baat sunne mein buri lagti hai, par kai kisanon ko ye tab pata chalti hai
         jab do-teen kist aane ke baad recovery notice aata hai. Tab tak paisa kharch ho
         chuka hota hai. Isliye pehle hi check kar lena behtar hai.
       </p>
@@ -274,7 +274,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
       </SchemeTable>
 
       <InfoBox type="info">
-        <strong>Note:</strong> Kabhi-kabhi state aur central government ki payment alag-alag dates par aati hai. Agar aapko sirf ₹2,000 ya ₹5,000 hi mila hai, toh ghabrayein nahi. Dono components alag-alag transaction IDs ke saath aate hain.
+        <strong>Note:</strong> Kabhi-kabhi state aur central government ki payment alag-alag dates par aati hai. Agar aapko sirf ₹2,000 ya ₹5,000 hi mila hai, toh chinta chhodiye. Dono components alag-alag transaction IDs ke saath aate hain.
       </InfoBox>
 
       <h2>Apna Status Kaise Dekhein</h2>
@@ -377,12 +377,12 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
 
       <h3>3. Mobile Number Change Ho Gaya Hai</h3>
       <p>
-        <strong>Solution:</strong> OTP na aane ki wajah se aap status check nahi kar pa rahe honge. Pehle Aadhaar center jaakar mobile number update karein, phir portal par try karein.
+        Solution: OTP na aane ki wajah se aap status check nahi kar pa rahe honge. Pehle Aadhaar center jaakar mobile number update karein, phir portal par try karein.
       </p>
 
       <h3>4. CCRC Card Expired Ya Invalid Hai</h3>
       <p>
-        <strong>Solution:</strong> Tenant farmers ke liye CCRC card ka valid hona zaroori hai. Agar card expire ho gaya hai, toh apne local Agriculture Officer (AO) se contact karke renewal karwayein.
+        Solution: Tenant farmers ke liye CCRC card ka valid hona zaroori hai. Agar card expire ho gaya hai, toh apne local Agriculture Officer (AO) se contact karke renewal karwayein.
       </p>
 
       <h2>PM Kisan Aur Annadata Sukhibhava — Saath Rakhkar Dekhein</h2>
@@ -428,7 +428,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
 
       <p>
         Bataidar wala niyam sirf AP mein hai. Baaki rajyon mein khata malik ke naam hona zaroori
-        rehta hai. Apne rajya ka niyam yahan dekh lein:
+        rehta hai. Aur states ka hisaab:
       </p>
 
       <ul>
@@ -461,7 +461,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         </li>
       </ul>
 
-      <h2>Season Se Pehle Ka Chhota Audit — Paanch Minute Ka Kaam</h2>
+      <h2>Season Se Pehle Ka Chhota Audit — Itna Time Nahi Lagta</h2>
 
       <p>
         AP mein scheme ka dhaancha aisa hai ki zyadatar rukavat pehle se dikh jaati hai —
@@ -501,7 +501,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         caption="Online na ho paaye to Gram Sachivalayam mein Agriculture Assistant free madad karta hai"
       />
 
-      <h2>Annadata Sukhibhava — Aksar Poochhe Jaane Wale Sawaal</h2>
+      <h2>Annadata Sukhibhava — Kuch Aur Sawaal</h2>
 
       <script
         type="application/ld+json"

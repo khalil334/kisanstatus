@@ -156,7 +156,7 @@ export default function RajasthanKisanSammanNidhi9000() {
         <h2>Scheme Ka Safar — ₹2,000 Se ₹3,000 Tak</h2>
 
         <p>
-          Aaj jo ₹3,000 milte hain, wo shuru se ₹3,000 nahi the. Ye baat samajhna zaroori hai, kyunki
+          Aaj jo ₹3,000 milte hain, wo shuru se ₹3,000 nahi the. Baat yeh hai ki ye jaan lena kaam aata hai, kyunki
           purane articles aur purane YouTube videos aaj bhi purani raqam bata rahe hain — aur wahi
           confusion ka ek bada source hai.
         </p>
@@ -264,7 +264,7 @@ export default function RajasthanKisanSammanNidhi9000() {
 
         <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-5 my-6 not-prose">
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
-            <strong>Yaad rakho:</strong> Rajasthan wali kist PM Kisan ki kist se bilkul alag time par aati hai — dono ka koi connection nahi. PM Kisan aa gaya aur state wala nahi, to ghabrane ki baat nahi, ye normal hi hai.
+            <strong>Yaad rakho:</strong> Rajasthan wali kist PM Kisan ki kist se bilkul alag time par aati hai — dono ka koi connection nahi. PM Kisan aa gaya aur state wala nahi, to chinta chhodo, ye normal hi hai.
           </p>
         </div>
 

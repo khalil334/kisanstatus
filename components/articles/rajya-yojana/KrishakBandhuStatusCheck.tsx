@@ -90,8 +90,9 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
         />
 
         <p>
-          Bengal ke gaon mein kist ke dinon ka ek apna hi mahaul hota hai. Kisi ke phone
-          par SMS aa jaata hai. Kisi ke padosi ke account mein paisa dikh jaata hai. Aur
+          Bengal mein Krishak Bandhu ki kist dhaan ke season se bandhi hai — Kharif se
+          pehle ek, Rabi se pehle ek. Unhi hafton mein kisi ke phone par SMS aa jaata hai,
+          kisi ke padosi ke account mein paisa dikh jaata hai. Aur
           teesra aadmi? Uska account waisa hi khaali pada rehta hai. Wahi se sawaal shuru
           hota hai — mera kyun nahi aaya? Krishak Bandhu mein iska jawab lagbhag hamesha
           teen jagah chhupa hota hai: aapke land record mein, aapke bank account ki halat
@@ -108,7 +109,7 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
         <h2>Ye Scheme Asal Mein Do Alag Cheezein Hain</h2>
 
         <p>
-          Log ise ek scheme samajhte hain. Hai do. Krishak Bandhu ke andar do component
+          Naam ek hai, kaam do. Krishak Bandhu ke andar do component
           hain jo alag-alag chalte hain. Pehla hai <strong>assured income support</strong> —
           saal mein do baar, Kharif aur Rabi season par, aapke bank account mein seedha
           paisa. Doosra hai <strong>death benefit</strong> — registered kisan ki mrityu par
@@ -116,7 +117,7 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
         </p>
 
         <p>
-          Farak samajhna zaroori hai, kyunki dono ke rules ek jaise nahi hain. Income support
+          Farak dekh lo, kyunki dono ke rules ek jaise nahi hain. Income support
           zameen ke area par nirbhar karta hai aur umar se koi lena-dena nahi rakhta. Death
           benefit ka poora dhaancha ulta hai — usmein umar ki ek band hai (18 se 60 saal) aur
           zameen ka area maayne nahi rakhta. Ek hi kisan pehle component mein ho sakta hai aur
@@ -160,7 +161,7 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
         </p>
 
         <p>
-          Neeche diya tool aapki zameen aur umar par yahi slab logic laga kar batata hai ki
+          Ye tool aapki zameen aur umar par yahi slab logic laga kar batata hai ki
           annual grant kitna banega, ek kist mein kitna aayega, death benefit lagu hai ya nahi,
           aur aapke case mein kaun-kaun se kagaz lagenge. Sab hisaab aapke phone mein hota hai —
           na koi login, na koi data kahin bhejna.
@@ -266,7 +267,7 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
         <h2>Padosi Ko Mil Gaya, Mujhe Nahi — Ye Kyun Hota Hai</h2>
 
         <p>
-          Yahi sawaal sabse zyada poocha jaata hai, aur iska jawab PM Kisan aur Krishak Bandhu
+          Log sabse zyada yahi poochhte hain, aur iska jawab PM Kisan aur Krishak Bandhu
           ke bilkul alag paisa-bhejne ke tareeke mein hai. PM Kisan central DBT switch se chalta
           hai — release hone par desh bhar mein lagbhag ek hi samay paisa girta hai. Krishak
           Bandhu ka paisa <strong>district treasury</strong> ke raste jaata hai. State release
@@ -316,7 +317,7 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
         <h3>Land record mein mutation nahi hua</h3>
         <p>
           Zameen kharidi ya virasat mein mili, magar khatian mein naam nahi chadha — to
-          scheme ki nazar mein zameen ka malik aap nahi hain. Kadwa lagta hai, par niyam
+          scheme ki nazar mein zameen ka malik aap nahi hain. Sach mano toh ye thoda tough hai, par niyam
           yahi hai. Ye sabse aam aur sabse zyada nazarandaaz ki jaane wali wajah hai. Hal
           BL&amp;LRO office mein mutation karwana hai; portal par kuch bharne se ye theek
           nahi hota.
@@ -467,7 +468,7 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
         <p>
           West Bengal ka nivasi nahi hain to Krishak Bandhu aap par laagu nahi hoti — aur Voter
           ID wali pehchaan ka tareeka bhi kisi doosre rajya mein nahi milta. Apne rajya ka
-          hisaab yahan padhein:
+          hisaab — doosre states mein:
         </p>
 
         <ul>
@@ -493,7 +494,7 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
           </li>
         </ul>
 
-        <h2>Krishak Bandhu — Aksar Poochhe Jaane Wale Sawaal</h2>
+        <h2>Krishak Bandhu — Common Doubts</h2>
 
         <script
           type="application/ld+json"
