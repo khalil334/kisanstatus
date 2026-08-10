@@ -27,7 +27,7 @@ Fix: Words delete मत करो — genuinely useful detail add karo: state-s
 - `FAQBlock` component hatao — FAQ content directly inline JSX mein likho
 - Tool components (jaise `KrishakBandhuChecker`, `OdishaCmKisanChecker`, `PmKisanFamilyChecker`) unchanged रहें
 - Baaki imports (React, Next, images) unchanged रहें
-
+repeative keywords se strictly avoid karo or low competitive keywords add karo 
 ## Rules:
 - Content length same या बढ़नी चाहिए — कम नहीं
 - Facts, dates, amounts, official links unchanged
