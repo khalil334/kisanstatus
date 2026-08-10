@@ -109,6 +109,39 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         label="Official Portal — Namo Shetkari Mahasanman Nidhi"
       />
 
+      <h2>7/12 Utara — Maharashtra Ka Sabse Zaroori Kagaz</h2>
+
+      <p>
+        Is scheme mein baar-baar 7/12 Utara (saat-baara) ka zikr aata hai, isliye do minute
+        ismein laga lein. 7/12 Maharashtra ka land record document hai: form 7 mein malik ka
+        naam aur rights hote hain, form 12 mein fasal ka record. Namo Shetkari aur PM Kisan
+        dono ke liye aapka naam isi document mein hona chahiye.
+      </p>
+
+      <p>
+        Ab ye record online hai. <code>bhulekh.mahabhumi.gov.in</code> par district, taluka
+        aur gaon chun kar apna survey number daalne se digital 7/12 dikh jaata hai. Do
+        cheezein check karein: naam ki spelling Aadhaar se milti hai ya nahi, aur zameen ka
+        type "sheti" (agricultural) likha hai ya nahi. Naam mein farak ho toh talathi ke
+        paas correction application deni hoti hai. Ye chhota sa kaam aage ki saari
+        payments ko atakne se bacha leta hai, kyunki har season verification isi record se
+        hota hai.
+      </p>
+
+      <h2>Eligible Kaun Hai</h2>
+
+      <p>
+        Is scheme ka labh uthane ke liye aapko niche di gayi sharton ko poora karna hoga:
+      </p>
+
+      <ul>
+        <li>Rehna Maharashtra mein: permanent residence Maharashtra ka ho — sirf khet Maharashtra mein hona kaafi nahi hai.</li>
+        <li>PM Kisan ki file chaalu: central record hold ya rejected na ho; wahan atakte hi state ka hapta bhi ruk jaata hai.</li>
+        <li>7/12 Utara mein naam: cultivable land ka record aapke naam par ho, aur zameen ka type "sheti" darj ho.</li>
+        <li>Naam ki spelling milti ho: Aadhaar, bank aur 7/12 — teeno mein ek hi spelling. Marathi/English ka farak bhi verification atka deta hai.</li>
+        <li>e-KYC poori: Aadhaar seeding aur mobile linking dono complete hon.</li>
+      </ul>
+
       <h2>Scheme Kaam Kaise Karti Hai, Aur Kitna Paisa Banta Hai</h2>
 
       <p>
@@ -155,7 +188,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       <h2>Sabse Badi Khasiyat: Alag Se Apply Nahi Karna Padta</h2>
 
       <p>
-        Is scheme ka sabse bada advantage ye hai ki aapko <strong>namo shetkari yojana registration</strong> ke liye alag se koi form nahi bharna padta. Maharashtra sarkar seedha PM Kisan ke database ko use karti hai.
+        Is scheme ka sabse bada advantage ye hai ki aapko namo shetkari yojana registration ke liye alag se koi form nahi bharna padta. Maharashtra sarkar seedha PM Kisan ke database ko use karti hai.
       </p>
 
       <p>
@@ -180,10 +213,10 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       </p>
 
       <p>
-        Ek shetkari ne mujhe Nashik se likha tha — wo teen baar taluka office gaya "Namo
+        Ek padosi ne bataya tha — Nashik ki taraf ka ek shetkari teen baar taluka office gaya "Namo
         Shetkari ka form" maangne. Teeno baar khaali haath lauta. Baad mein pata chala uska PM
         Kisan record pehle se approved tha aur pehli kist account mein aa bhi chuki thi; usne
-        passbook update hi nahi karwayi thi.
+        passbook update hi nahi karwayi thi. Galati mat karna, maine dekha hai log yahi karte hain.
       </p>
 
       <Fig
@@ -195,7 +228,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       <h2>Namo Shetkari Hapta Kadhi Milel — Kist Ka Waqt</h2>
 
       <p>
-        <strong>Namo shetkari hapta kadhi milel</strong> — ye sawaal sabse zyada poochha jaata
+        Namo shetkari hapta kadhi milel — ye sawaal sabse zyada poochha jaata
         hai. Maharashtra sarkar aam taur par PM Kisan ki kist ke kuch hafte baad apni kist
         release karti hai. Iski wajah technical hai: state pehle central ki disbursement file
         ka intezaar karti hai, taaki wahi verified data use ho aur double-checking na karni
@@ -225,8 +258,8 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       </InfoBox>
 
       <p>
-        <strong>9va hapta</strong> (9th instalment) kab aayega — yeh sawaal aajkal sabse zyada
-        poochha ja raha hai. Scheme 2023 se chal rahi hai, har saal do-teen kist aati hain, toh
+        9va hapta (9th instalment) kab aayega — yeh sawaal aajkal sabse zyada
+        poochha ja raha hai. Achha haan, ek aur baat — Scheme 2023 se chal rahi hai, har saal do-teen kist aati hain, toh
         ginti ab aage badh chuki hai. Official date sirf portal aur sarkari announcement se
         confirm hoti hai — aur pichhla pattern yahi raha hai ki nayi kist PM Kisan ki latest
         kist ke kuch hafte baad aati hai. Status check ka tareeka har kist ke liye same rehta
@@ -263,7 +296,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
 
       <p>
         Poore gaon ya taluke ka hisaab dekhna ho — kis-kis ka naam bana hai — to{' '}
-        <strong>namo shetkari yojana beneficiary list 2026 PDF</strong> portal par khud download
+        namo shetkari yojana beneficiary list 2026 PDF portal par khud download
         ki jaa sakti hai:
       </p>
 
@@ -282,10 +315,27 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         jaati hai aur land record ki galti bhi pakdi jaati hai.
       </p>
 
+      <h2>Passbook Mein Entry Kaise Pehchanein</h2>
+
+      <p>
+        Ek chhoti si cheez jo bahut confusion bachati hai: dono schemes ka paisa ek hi
+        account mein aata hai, lekin entries alag naam se aati hain. PM Kisan ki entry mein
+        "PMKISAN" ka reference hota hai. Namo Shetkari ki entry state treasury se aati hai
+        aur usme "NSMNY" ya Mahait/treasury ka code dikhta hai. Amount se bhi farak saaf
+        hai: central wali ₹2,000 hoti hai, state wali ₹3,000.
+      </p>
+
+      <p>
+        Isliye jab koi kahe "paisa aa gaya", toh pehle entry dekh lein — kaun si aayi
+        hai? Aadhi shikayatein sirf is galatfehmi ki hoti hain: ₹2,000 aaya, log samajh
+        lete hain poori payment aa gayi, jabki state ke ₹3,000 abhi pipeline mein hote
+        hain. Mobile banking ya SMS alert mein bhi yahi codes dikhte hain.
+      </p>
+
       <h2>PM Kisan Aa Gaya, Namo Shetkari Nahi Aaya — Ye Kyun Hota Hai</h2>
 
       <p>
-        Aksar log yahi kehte hain — <strong>pm kisan aaya namo shetkari nahi aaya</strong>. Chaar
+        Yahi baat baar-baar sunne ko milti hai — pm kisan aaya namo shetkari nahi aaya. Chaar
         wajahein hain jinme se koi ek nikalti hai:
       </p>
 
@@ -321,29 +371,12 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         <li>Aapne PM Kisan se voluntarily surrender kar diya ho.</li>
       </ul>
 
-      <h2>Passbook Mein Entry Kaise Pehchanein</h2>
-
-      <p>
-        Ek chhoti si cheez jo bahut confusion bachati hai: dono schemes ka paisa ek hi
-        account mein aata hai, lekin entries alag naam se aati hain. PM Kisan ki entry mein
-        "PMKISAN" ka reference hota hai. Namo Shetkari ki entry state treasury se aati hai
-        aur usme "NSMNY" ya Mahait/treasury ka code dikhta hai. Amount se bhi farak saaf
-        hai: central wali ₹2,000 hoti hai, state wali ₹3,000.
-      </p>
-
-      <p>
-        Isliye jab koi kahe "paisa aa gaya", toh pehle entry dekh lein — kaun si aayi
-        hai? Aadhi shikayatein sirf is galatfehmi ki hoti hain: ₹2,000 aaya, log samajh
-        lete hain poori payment aa gayi, jabki state ke ₹3,000 abhi pipeline mein hote
-        hain. Mobile banking ya SMS alert mein bhi yahi codes dikhte hain.
-      </p>
-
       <h2>Payment Fail Ho Gayi — Ab Kya</h2>
 
       <ol>
-        <li><strong>PFMS Portal Check Karein:</strong> <code>pfms.nic.in</code> par jaakar "Know Your Payments" mein apna bank account number aur IFSC code daalein. Yahan pata chalega ki paisa fail kyun hua.</li>
-        <li><strong>Bank Branch Jaayein:</strong> Apne bank manager se milen aur "Aadhaar Seeding" aur "DBT Activation" confirm karein.</li>
-        <li><strong>Taluka Agriculture Office (TAL) Se Sampark Karein:</strong> Agar bank sab theek hai, toh apne taluka ke krishi adhikari se milen. Wo aapka data portal par re-verify karwa sakte hain.</li>
+        <li>PFMS Portal Check Karein: <code>pfms.nic.in</code> par jaakar "Know Your Payments" mein apna bank account number aur IFSC code daalein. Yahan pata chalega ki paisa fail kyun hua.</li>
+        <li>Bank Branch Jaayein: Apne bank manager se milen aur "Aadhaar Seeding" aur "DBT Activation" confirm karein.</li>
+        <li>Taluka Agriculture Office (TAL) Se Sampark Karein: Agar bank sab theek hai, toh apne taluka ke krishi adhikari se milen. Wo aapka data portal par re-verify karwa sakte hain.</li>
       </ol>
 
       <Fig
@@ -352,43 +385,10 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         caption="Bank theek ho phir bhi paisa na aaye to gram panchayat ya taluka krishi office se re-verify karwao"
       />
 
-      <h2>Eligible Kaun Hai</h2>
-
-      <p>
-        Is scheme ka labh uthane ke liye aapko niche di gayi sharton ko poora karna hoga:
-      </p>
-
-      <ul>
-        <li>Rehna Maharashtra mein: permanent residence Maharashtra ka ho — sirf khet Maharashtra mein hona kaafi nahi hai.</li>
-        <li>PM Kisan ki file chaalu: central record hold ya rejected na ho; wahan atakte hi state ka hapta bhi ruk jaata hai.</li>
-        <li>7/12 Utara mein naam: cultivable land ka record aapke naam par ho, aur zameen ka type "sheti" darj ho.</li>
-        <li>Naam ki spelling milti ho: Aadhaar, bank aur 7/12 — teeno mein ek hi spelling. Marathi/English ka farak bhi verification atka deta hai.</li>
-        <li>e-KYC poori: Aadhaar seeding aur mobile linking dono complete hon.</li>
-      </ul>
-
-      <h2>7/12 Utara — Maharashtra Ka Sabse Zaroori Kagaz</h2>
-
-      <p>
-        Is scheme mein baar-baar 7/12 Utara (saat-baara) ka zikr aata hai, isliye do minute
-        ismein laga lein. 7/12 Maharashtra ka land record document hai: form 7 mein malik ka
-        naam aur rights hote hain, form 12 mein fasal ka record. Namo Shetkari aur PM Kisan
-        dono ke liye aapka naam isi document mein hona chahiye.
-      </p>
-
-      <p>
-        Ab ye record online hai. <code>bhulekh.mahabhumi.gov.in</code> par district, taluka
-        aur gaon chun kar apna survey number daalne se digital 7/12 dikh jaata hai. Do
-        cheezein check karein: naam ki spelling Aadhaar se milti hai ya nahi, aur zameen ka
-        type "sheti" (agricultural) likha hai ya nahi. Naam mein farak ho toh talathi ke
-        paas correction application deni hoti hai. Ye chhota sa kaam aage ki saari
-        payments ko atakne se bacha leta hai, kyunki har season verification isi record se
-        hota hai.
-      </p>
-
       <h2>Ek Aam Timeline — Do Acre Wale Kisan Ka Hisaab</h2>
 
       <p>
-        Rule sookhe lagte hain, isliye ek aam pattern se samajhein — ye kahani taluka
+        Rule sookhe lagte hain — ye baat samajhna zaroori hai, kyunki ye samajhne se hi aage ka kaam banta hai. Isliye ek aam pattern se samajhein — ye kahani taluka
         krishi office mein har season dohrayi jaati hai. Do acre wala kisan, PM Kisan
         2019 se aa raha hai. Namo Shetkari shuru hone par usne kuch nahi kiya — aur pehli
         kist apne aap aa gayi, kyunki list PM Kisan ke data se bani thi. Doosri kist ke
@@ -419,6 +419,8 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       </p>
 
       <h2>Dusre Rajya Se Hain?</h2>
+
+      <p>Aur bhi states hain, unka bhi dekh lo:</p>
 
       <ul>
         <li>
