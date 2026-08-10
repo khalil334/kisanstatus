@@ -112,6 +112,52 @@ export default function OdishaCmKisanStatusCheck({
           har haal mein zaroori hai.
         </InfoBox>
 
+        <h2>PM Kisan Aur CM Kisan — Dono Sath Chalte Hain</h2>
+
+        <p>
+          Arre, ye sawaal bahut aata hai: CM Kisan lene se PM Kisan band ho jaayega? Nahi, bilkul
+          nahi — dono apni-apni sarkar ki scheme hain aur ek dusre ko cancel nahi
+          karti. Bahut se Odisha ke log dono se paisa lete hain — central wala PM Kisan se,
+          state wala CM Kisan se.
+        </p>
+
+        <p>
+          Lekin ek zaroori farak hai. PM Kisan mein zameen ki koi upper limit nahi hai,
+          jabki CM Kisan ka cultivator track chhoti jotdaari tak seemit hai. Isliye aisa ho
+          sakta hai ki central wala paisa mile aur state wala nahi — ye bilkul normal hai,
+          koi galti nahi. Iska ulta bhi mumkin hai: bhoomiheen parivaar ko landless benefit
+          milta hai, jabki PM Kisan landholding wali scheme hone ke naate wahan lagu nahi
+          hoti.
+        </p>
+
+        <SchemeTable>
+          <tr>
+            <th>Baat</th>
+            <th>PM Kisan</th>
+            <th>CM Kisan (Odisha)</th>
+          </tr>
+          <tr>
+            <td>Kaun chalata hai</td>
+            <td>Central sarkar</td>
+            <td>Odisha sarkar</td>
+          </tr>
+          <tr>
+            <td>Land ceiling</td>
+            <td>Koi upper limit nahi</td>
+            <td>Chhoti/seemant jotdaari tak seemit</td>
+          </tr>
+          <tr>
+            <td>Bhoomiheen parivaar</td>
+            <td>Shamil nahi</td>
+            <td>Landless track mein shamil</td>
+          </tr>
+          <tr>
+            <td>Paisa kaise aata hai</td>
+            <td>Central DBT — sab jagah lagbhag ek saath</td>
+            <td>State release — har zile ki apni raftaar</td>
+          </tr>
+        </SchemeTable>
+
         <h2>KALIA Se CM Kisan — Kya Badla Aur Kya Waisa Hi Raha</h2>
 
         <p>
@@ -159,6 +205,42 @@ export default function OdishaCmKisanStatusCheck({
           </tr>
         </SchemeTable>
 
+        <h2>Padosi Rajyon Mein Kya Ho Raha Hai</h2>
+
+        <p>
+          Waise, ye maine aapko bataya tha na — raqam har rajya mein ek jaisi nahi hoti. Apne
+          aas-paas ka haal khud padh lo:
+        </p>
+
+        <ul>
+          <li>
+            <Link href="/rajya-yojana/krishak-bandhu-status-check-2026">
+              West Bengal Krishak Bandhu — Voter ID se status aur death benefit
+            </Link>
+          </li>
+          <li>
+            <Link href="/rajya-yojana/annadata-sukhibhava-status-check-2026">
+              Andhra Pradesh Annadata Sukhibhava — bataidar kisan bhi cover hote hain
+            </Link>
+          </li>
+          <li>
+            <Link href="/rajya-yojana/rythu-bharosa-status-check-2026">
+              Telangana Rythu Bharosa — per-acre raqam ka hisaab
+            </Link>
+          </li>
+          <li>
+            <Link href="/rajya-yojana/state-kisan-yojana-list-all-states-2026">
+              Sabhi rajyon ka amount aur portal ek saath — comparison table
+            </Link>
+          </li>
+        </ul>
+
+        <p>
+          (Odisha ka domicile nahi hai to CM Kisan aap par laagu nahi hoti — lekin landless
+          track jaisa intezaam har rajya mein nahi milta, aur raqam bhi jagah-jagah badalti
+          hai.)
+        </p>
+
         <h2>Do Track Hain — Pehle Ye Tay Karein Aap Kis Mein Hain</h2>
 
         <p>
@@ -204,6 +286,50 @@ export default function OdishaCmKisanStatusCheck({
         </p>
 
         <OdishaCmKisanChecker />
+
+        <h2>Landless Track Ka Alag Raasta — Kise Kya Karna Hai</h2>
+
+        <p>
+          Zameen wale kisan ka raasta seedha hai — record saaf rakho, list mein naam aata
+          hai. Landless agricultural household ka raasta thoda alag hai, aur isi liye
+          wahan zyada log chhoot jaate hain. Yahan aadhaar zameen ka record nahi, balki ye
+          pehchaan hai ki parivaar kheti-mazdoori ya allied activities (bakri-murgi paalan,
+          machhli, madhumakkhi jaise kaam) se juda hai. Iski pushti gram panchayat ke level
+          par hoti hai, isliye pehla darwaza patwari nahi, panchayat hai.
+        </p>
+
+        <p>
+          Landless track ke liye teen cheezein taiyaar rakhein: parivaar ki pehchaan ke
+          kagaz (Aadhaar sab sadasyon ke), kheti-mazdoori se judaav ka koi bhi saboot ya
+          panchayat ka certificate, aur ek active Aadhaar-linked bank khaata. Raqam yahan
+          ₹12,500 ki hai — allied activity shuru karne ki madad ke roop mein — isliye
+          verification bhi zameen wale track se zyada baareek hota hai. Naam list mein na
+          aaye to block agriculture office mein likhit shikayat dein aur paavti lein;
+          zubaani poochhne ka record nahi banta.
+        </p>
+
+        <ul>
+          <li>
+            Season shuru hone se pehle ek baar status dekh lein — pending e-KYC waqt rehte
+            pakad mein aa jaati hai.
+          </li>
+          <li>
+            Bank aur Aadhaar mein ek hi mobile number rakhein, warna SMS aur OTP idhar-udhar
+            jaayenge.
+          </li>
+          <li>
+            Status page ka screenshot rakh lein; office mein baat karte waqt yahi sabse
+            seedha proof hota hai.
+          </li>
+          <li>
+            Zameen ka koi bhi badlaav hone par mutation turant karwaayein, kist ka intezaar na
+            karein.
+          </li>
+          <li>
+            Kisi bhi &ldquo;agent&rdquo; ko paisa dekar list mein naam chadhaane ka wada mat
+            maaniye — enrolment aur verification dono sarkari raste se hi hote hain.
+          </li>
+        </ul>
 
         <h2>Exclusion List — Zameen Kam Hone Par Bhi Naam Kat Sakta Hai</h2>
 
@@ -293,6 +419,24 @@ export default function OdishaCmKisanStatusCheck({
           par bhi lagti hai, toh internet na chale toh wahan bhi dekh sakte hain.
         </p>
 
+        <h2>Kist Ka Waqt — Kya Umeed Rakhein</h2>
+
+        <p>
+          Cultivator track ke tranche kheti ke season ke saath chalte hain — saal mein do
+          baar. Landless track ke teen hote hain, allied kaam ki zaroorat ke hisaab se.
+          Exact tareekh? Har saal badalti hai. Release se pehle verification aur fund
+          clearance ka apna waqt lagta hai, aur wo waqt kisi calendar mein nahi likha hota.
+        </p>
+
+        <p>
+          Odisha mein ek baat khaas hai: release state ke haath mein hoti hai, is liye ek hi
+          tranche har zile mein apni raftaar se pahunchta hai. Padosi ke account mein paisa
+          aa gaya aur aapke mein nahi — ye apne aap mein kisi gadbad ka saboot nahi hai.
+          Pakki tareekh batane wale forward par plan banane ke bajaye, apne record ki teen
+          lines (stage, bank mapping, e-KYC) durust rakhein; wahi tay karti hain ki release
+          ke din aapki file uthegi ya nahi.
+        </p>
+
         <h2>Paisa Na Aane Ki Sabse Aam Wajahein</h2>
 
         <h3>e-KYC pending pada hai</h3>
@@ -331,68 +475,18 @@ export default function OdishaCmKisanStatusCheck({
           pakda jaata hai aur dono ki file ruk jaati hai jab tak ek withdraw na ho.
         </p>
 
-        <h2>PM Kisan Aur CM Kisan — Dono Sath Chalte Hain</h2>
+        <h2>Kist Aayi Par Kam Lagi — Hisaab Kaise Milaayein</h2>
 
         <p>
-          Arre, ye sawaal bahut aata hai: CM Kisan lene se PM Kisan band ho jaayega? Nahi, bilkul
-          nahi — dono apni-apni sarkar ki scheme hain aur ek dusre ko cancel nahi
-          karti. Bahut se Odisha ke log dono se paisa lete hain — central wala PM Kisan se,
-          state wala CM Kisan se.
-        </p>
-
-        <p>
-          Lekin ek zaroori farak hai. PM Kisan mein zameen ki koi upper limit nahi hai,
-          jabki CM Kisan ka cultivator track chhoti jotdaari tak seemit hai. Isliye aisa ho
-          sakta hai ki central wala paisa mile aur state wala nahi — ye bilkul normal hai,
-          koi galti nahi. Iska ulta bhi mumkin hai: bhoomiheen parivaar ko landless benefit
-          milta hai, jabki PM Kisan landholding wali scheme hone ke naate wahan lagu nahi
-          hoti.
-        </p>
-
-        <SchemeTable>
-          <tr>
-            <th>Baat</th>
-            <th>PM Kisan</th>
-            <th>CM Kisan (Odisha)</th>
-          </tr>
-          <tr>
-            <td>Kaun chalata hai</td>
-            <td>Central sarkar</td>
-            <td>Odisha sarkar</td>
-          </tr>
-          <tr>
-            <td>Land ceiling</td>
-            <td>Koi upper limit nahi</td>
-            <td>Chhoti/seemant jotdaari tak seemit</td>
-          </tr>
-          <tr>
-            <td>Bhoomiheen parivaar</td>
-            <td>Shamil nahi</td>
-            <td>Landless track mein shamil</td>
-          </tr>
-          <tr>
-            <td>Paisa kaise aata hai</td>
-            <td>Central DBT — sab jagah lagbhag ek saath</td>
-            <td>State release — har zile ki apni raftaar</td>
-          </tr>
-        </SchemeTable>
-
-        <h2>Kist Ka Waqt — Kya Umeed Rakhein</h2>
-
-        <p>
-          Cultivator track ke tranche kheti ke season ke saath chalte hain — saal mein do
-          baar. Landless track ke teen hote hain, allied kaam ki zaroorat ke hisaab se.
-          Exact tareekh? Har saal badalti hai. Release se pehle verification aur fund
-          clearance ka apna waqt lagta hai, aur wo waqt kisi calendar mein nahi likha hota.
-        </p>
-
-        <p>
-          Odisha mein ek baat khaas hai: release state ke haath mein hoti hai, is liye ek hi
-          tranche har zile mein apni raftaar se pahunchta hai. Padosi ke account mein paisa
-          aa gaya aur aapke mein nahi — ye apne aap mein kisi gadbad ka saboot nahi hai.
-          Pakki tareekh batane wale forward par plan banane ke bajaye, apne record ki teen
-          lines (stage, bank mapping, e-KYC) durust rakhein; wahi tay karti hain ki release
-          ke din aapki file uthegi ya nahi.
+          Zameen wale track mein saal ka ₹4,000 do kiston mein aata hai — Akshaya Tritiya
+          aur Nuakhai ke aas-paas ₹2,000 karke. Passbook mein credit dekhte waqt yahi
+          figure milaayein; PM Kisan ki ₹2,000 wali kist alag entry hai aur aksar dono ko
+          jod kar log confuse ho jaate hain ki kitna kis scheme se aaya. Entry ke saath
+          likha reference dekhein — CM Kisan ka credit state treasury ke reference se aata
+          hai, PM Kisan ka “PMKISAN” naam se. Raqam scheme ke hisaab se kam aaye to pehle
+          ye confirm karein ki aap kaunse track mein gine gaye hain — kyunki landless track
+          ki raqam aur schedule dono alag hain, aur galat track mein ginti hona hi kam
+          raqam ki sabse aam wajah hai.
         </p>
 
         <h2>Kahan Jaana Hai Jab Kuch Atak Jaaye</h2>
@@ -429,100 +523,6 @@ export default function OdishaCmKisanStatusCheck({
           alt="Kisan block agriculture office ke counter par apni file ke baare mein pooch rahe hain"
           caption="Rejected ya missing record ka kaaran sirf block agriculture office ki file par dikhta hai"
         />
-
-        <h2>Landless Track Ka Alag Raasta — Kise Kya Karna Hai</h2>
-
-        <p>
-          Zameen wale kisan ka raasta seedha hai — record saaf rakho, list mein naam aata
-          hai. Landless agricultural household ka raasta thoda alag hai, aur isi liye
-          wahan zyada log chhoot jaate hain. Yahan aadhaar zameen ka record nahi, balki ye
-          pehchaan hai ki parivaar kheti-mazdoori ya allied activities (bakri-murgi paalan,
-          machhli, madhumakkhi jaise kaam) se juda hai. Iski pushti gram panchayat ke level
-          par hoti hai, isliye pehla darwaza patwari nahi, panchayat hai.
-        </p>
-
-        <p>
-          Landless track ke liye teen cheezein taiyaar rakhein: parivaar ki pehchaan ke
-          kagaz (Aadhaar sab sadasyon ke), kheti-mazdoori se judaav ka koi bhi saboot ya
-          panchayat ka certificate, aur ek active Aadhaar-linked bank khaata. Raqam yahan
-          ₹12,500 ki hai — allied activity shuru karne ki madad ke roop mein — isliye
-          verification bhi zameen wale track se zyada baareek hota hai. Naam list mein na
-          aaye to block agriculture office mein likhit shikayat dein aur paavti lein;
-          zubaani poochhne ka record nahi banta.
-        </p>
-
-        <ul>
-          <li>
-            Season shuru hone se pehle ek baar status dekh lein — pending e-KYC waqt rehte
-            pakad mein aa jaati hai.
-          </li>
-          <li>
-            Bank aur Aadhaar mein ek hi mobile number rakhein, warna SMS aur OTP idhar-udhar
-            jaayenge.
-          </li>
-          <li>
-            Status page ka screenshot rakh lein; office mein baat karte waqt yahi sabse
-            seedha proof hota hai.
-          </li>
-          <li>
-            Zameen ka koi bhi badlaav hone par mutation turant karwaayein, kist ka intezaar na
-            karein.
-          </li>
-          <li>
-            Kisi bhi &ldquo;agent&rdquo; ko paisa dekar list mein naam chadhaane ka wada mat
-            maaniye — enrolment aur verification dono sarkari raste se hi hote hain.
-          </li>
-        </ul>
-
-        <h2>Kist Aayi Par Kam Lagi — Hisaab Kaise Milaayein</h2>
-
-        <p>
-          Zameen wale track mein saal ka ₹4,000 do kiston mein aata hai — Akshaya Tritiya
-          aur Nuakhai ke aas-paas ₹2,000 karke. Passbook mein credit dekhte waqt yahi
-          figure milaayein; PM Kisan ki ₹2,000 wali kist alag entry hai aur aksar dono ko
-          jod kar log confuse ho jaate hain ki kitna kis scheme se aaya. Entry ke saath
-          likha reference dekhein — CM Kisan ka credit state treasury ke reference se aata
-          hai, PM Kisan ka “PMKISAN” naam se. Raqam scheme ke hisaab se kam aaye to pehle
-          ye confirm karein ki aap kaunse track mein gine gaye hain — kyunki landless track
-          ki raqam aur schedule dono alag hain, aur galat track mein ginti hona hi kam
-          raqam ki sabse aam wajah hai.
-        </p>
-
-        <h2>Padosi Rajyon Mein Kya Ho Raha Hai</h2>
-
-        <p>
-          Waise, ye maine aapko bataya tha na — raqam har rajya mein ek jaisi nahi hoti. Apne
-          aas-paas ka haal khud padh lo:
-        </p>
-
-        <ul>
-          <li>
-            <Link href="/rajya-yojana/krishak-bandhu-status-check-2026">
-              West Bengal Krishak Bandhu — Voter ID se status aur death benefit
-            </Link>
-          </li>
-          <li>
-            <Link href="/rajya-yojana/annadata-sukhibhava-status-check-2026">
-              Andhra Pradesh Annadata Sukhibhava — bataidar kisan bhi cover hote hain
-            </Link>
-          </li>
-          <li>
-            <Link href="/rajya-yojana/rythu-bharosa-status-check-2026">
-              Telangana Rythu Bharosa — per-acre raqam ka hisaab
-            </Link>
-          </li>
-          <li>
-            <Link href="/rajya-yojana/state-kisan-yojana-list-all-states-2026">
-              Sabhi rajyon ka amount aur portal ek saath — comparison table
-            </Link>
-          </li>
-        </ul>
-
-        <p>
-          (Odisha ka domicile nahi hai to CM Kisan aap par laagu nahi hoti — lekin landless
-          track jaisa intezaam har rajya mein nahi milta, aur raqam bhi jagah-jagah badalti
-          hai.)
-        </p>
 
         <h2>CM Kisan Odisha — Aur Kuch Jaanna Hai?</h2>
 

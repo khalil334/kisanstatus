@@ -113,6 +113,39 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
           paisa kisi bhi haalat mein nahi banta.
         </InfoBox>
 
+        <h2>Teen Ghar, Teen Faisle — Rule Ko Misaal Se Samajhein</h2>
+
+        <p>
+          <strong>Pehla ghar:</strong> pati ke naam do bigha, patni ke naam teen bigha.
+          Dono ke registration alag-alag CSC se ho gaye the aur dono khaton mein kist aa
+          rahi thi. Verification mein dono Aadhaar ek hi parivaar se jude nikle. Sahi
+          raasta yahan ye tha ki jiski teeno kagaz (land record, Aadhaar, bank) ek jaise
+          the — patni ke the — uska registration rehta aur pati apna surrender karta.
+          Unhone yahi kiya, refund challan se pichli kistein lautayi, aur patni ka
+          registration bina rukavat chal raha hai.
+        </p>
+
+        <p>
+          <strong>Doosra ghar:</strong> pita aur do baalig bete. Zameen abhi poori pita ke
+          naam hai, batwaara sirf zubaani hua hai. Teeno ke registration ho gaye the — do
+          gir gaye. Yahan jaldi ka raasta koi nahi hai: pehle tehsil mein batwaara aur
+          mutation, uske baad hi beton ke apne claim banenge. Jab tak record ek hai, claim
+          ek hai.
+        </p>
+
+        <p>
+          <strong>Teesra ghar:</strong> vidhwa maa aur uska baalig beta, dono ke naam par
+          virasat ki zameen mutation ke saath alag-alag darj ho chuki hai. Ye do alag
+          family unit hain — maa apna registration rakh sakti hai aur beta apna. Yahan do
+          registration hona bilkul jaayaz hai, aur kisi surrender ki zaroorat nahi.
+        </p>
+
+        <p>
+          In teeno mein farak sirf ek cheez ka hai — revenue record. Ghar ka batwara,
+          ration card, ya rehne ka alag intezaam scheme ki nazar mein kuch nahi badalta;
+          jo tehsil ke kagaz mein hai, wahi sach hai.
+        </p>
+
         <h2>Rule Ek Line Mein: Ginti Aadmi Ki Nahi, Ghar Ki Hoti Hai</h2>
 
         <p>
@@ -259,6 +292,64 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
           hai aur ab tak ka paisa wapas maanga jaata hai.
         </InfoBox>
 
+        <h2>Shaadi, Virasat, Batwaara — Zindagi Ke Mod Par Registration Ka Kya Ho</h2>
+
+        <p>
+          Family rule ka asli imtihaan tab aata hai jab ghar ki haalat badalti hai. Teen
+          mod sabse aam hain, aur teeno par karna alag-alag hai.
+        </p>
+
+        <p>
+          <strong>Shaadi:</strong> beti ka registration mayke ki zameen par tha aur shaadi
+          ho gayi — ab wo apne pati ke saath naya family unit hai. Mayke wali zameen agar
+          record mein uske naam par hai to claim ban sakta hai, lekin sasural ke unit mein
+          pehle se koi registration hai to dono mein se ek hi chalega. Yahan bhi wahi kasauti
+          hai: record kis ke naam, unit kaun sa.
+        </p>
+
+        <p>
+          <strong>Virasat:</strong> registration wale sadasya ke guzar jaane par purani
+          entry par kist lena band karein — wo recovery ka seedha raasta hai. Pehle mutation
+          se zameen waaris ke naam ho, phir waaris apna naya registration kare. Beech ke
+          mahinon ki kistein chhod deni padti hain; ye nuksan nahi, niyam hai.
+        </p>
+
+        <p>
+          <strong>Batwaara:</strong> upar vistaar se likha hai — zubaani ya panchayat ke
+          kagaz se kuch nahi hota, tehsil ka mutation hi batwaara hai. Mutation ke baad har
+          naya khatedar apna registration alag se karega; purana registration apne aap
+          update nahi hota.
+        </p>
+
+        <h2>Kaise Pakda Jaata Hai — Data Ab Aapas Mein Juda Hua Hai</h2>
+
+        <Fig
+          src="aadhaar-ekyc-couple.webp"
+          alt="Pati-patni gaon ke kiosk par Aadhaar biometric e-KYC karwa rahe hain"
+          caption="Aadhaar e-KYC ke baad har beneficiary unique identity se juda hai — duplicate registration ab data mein hi pakda jaata hai"
+        />
+
+        <p>
+          Pehle log soch lete the ki alag bank account aur alag mobile number rakhne se do
+          registration pakde nahi jaayenge. Wo daur gaya. Aadhaar e-KYC anivaarya hone ke
+          baad har beneficiary ek unique identity se juda hai, land record digitize ho chuke
+          hain, aur payment Aadhaar-linked NPCI mapper se hoti hai. System ko ab aankh nahi,
+          data chahiye — aur data jhooth nahi bolta.
+        </p>
+
+        <p>
+          Verification mein aam taur par teen cheezein match ki jaati hain — ek hi khasra ya
+          khata number do file mein hai kya, ek hi parivaar ke do Aadhaar par kist ja rahi
+          hai kya, aur income tax ya sarkari salary ka data kisi member ke Aadhaar se match
+          ho raha hai kya. Teeno mein se koi ek hit ho jaaye, to file hold ho jaati hai.
+        </p>
+
+        <p>
+          Isi liye kai baar saal-do saal chalne ke baad achanak paisa rukta hai. Us waqt
+          naya rule nahi lagta — bas purana record cross-check hota hai. Der se pakda gaya,
+          par pakda gaya.
+        </p>
+
         <h2>Dono Taraf Paisa Aa Gaya Hai — Ab Kya Karein</h2>
 
         <p>
@@ -351,62 +442,29 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
           kyunki wo tehsil aur bank dono jagah karana padta hai.
         </p>
 
-        <h2>Shaadi, Virasat, Batwaara — Zindagi Ke Mod Par Registration Ka Kya Ho</h2>
+        <h2>Surrender Ka Faisla Lene Se Pehle — Kya Kya Milaa Lein</h2>
 
         <p>
-          Family rule ka asli imtihaan tab aata hai jab ghar ki haalat badalti hai. Teen
-          mod sabse aam hain, aur teeno par karna alag-alag hai.
+          Jis ghar mein do registration chal rahe hain, wahan surrender se pehle ek chhota
+          sa audit kaam aata hai. Dono registration ke against ye chaar cheezein likh kar
+          milaayein: kis par kitni kistein aa chuki hain, kiske land record ki seeding
+          complete hai, kiske Aadhaar ki spelling teeno jagah ek jaisi hai, aur kiska
+          mobile number aaj bhi active hai.
         </p>
 
         <p>
-          <strong>Shaadi:</strong> beti ka registration mayke ki zameen par tha aur shaadi
-          ho gayi — ab wo apne pati ke saath naya family unit hai. Mayke wali zameen agar
-          record mein uske naam par hai to claim ban sakta hai, lekin sasural ke unit mein
-          pehle se koi registration hai to dono mein se ek hi chalega. Yahan bhi wahi kasauti
-          hai: record kis ke naam, unit kaun sa.
+          Aam taur par jawab khud saamne aa jaata hai — ek registration har jagah saaf
+          hota hai aur doosra kahin na kahin atka hua. Saaf wala rakhein, atka hua
+          surrender karein. Refund ka hisaab bhi isi audit se nikal aata hai: jo kistein
+          surrender wale registration par aayi hain, wahi lautani hain — rakhe gaye
+          registration ki kistein jaayaz hain, unka refund nahi banta.
         </p>
 
         <p>
-          <strong>Virasat:</strong> registration wale sadasya ke guzar jaane par purani
-          entry par kist lena band karein — wo recovery ka seedha raasta hai. Pehle mutation
-          se zameen waaris ke naam ho, phir waaris apna naya registration kare. Beech ke
-          mahinon ki kistein chhod deni padti hain; ye nuksan nahi, niyam hai.
-        </p>
-
-        <p>
-          <strong>Batwaara:</strong> upar vistaar se likha hai — zubaani ya panchayat ke
-          kagaz se kuch nahi hota, tehsil ka mutation hi batwaara hai. Mutation ke baad har
-          naya khatedar apna registration alag se karega; purana registration apne aap
-          update nahi hota.
-        </p>
-
-        <h2>Kaise Pakda Jaata Hai — Data Ab Aapas Mein Juda Hua Hai</h2>
-
-        <Fig
-          src="aadhaar-ekyc-couple.webp"
-          alt="Pati-patni gaon ke kiosk par Aadhaar biometric e-KYC karwa rahe hain"
-          caption="Aadhaar e-KYC ke baad har beneficiary unique identity se juda hai — duplicate registration ab data mein hi pakda jaata hai"
-        />
-
-        <p>
-          Pehle log soch lete the ki alag bank account aur alag mobile number rakhne se do
-          registration pakde nahi jaayenge. Wo daur gaya. Aadhaar e-KYC anivaarya hone ke
-          baad har beneficiary ek unique identity se juda hai, land record digitize ho chuke
-          hain, aur payment Aadhaar-linked NPCI mapper se hoti hai. System ko ab aankh nahi,
-          data chahiye — aur data jhooth nahi bolta.
-        </p>
-
-        <p>
-          Verification mein aam taur par teen cheezein match ki jaati hain — ek hi khasra ya
-          khata number do file mein hai kya, ek hi parivaar ke do Aadhaar par kist ja rahi
-          hai kya, aur income tax ya sarkari salary ka data kisi member ke Aadhaar se match
-          ho raha hai kya. Teeno mein se koi ek hit ho jaaye, to file hold ho jaati hai.
-        </p>
-
-        <p>
-          Isi liye kai baar saal-do saal chalne ke baad achanak paisa rukta hai. Us waqt
-          naya rule nahi lagta — bas purana record cross-check hota hai. Der se pakda gaya,
-          par pakda gaya.
+          Ek baat aur — surrender ke baad usi season ki agli kist ka schedule nahi
+          badalta. Rakhe gaye registration par kist apne time par hi aayegi; surrender
+          karne se koi “nayi” kist ya adjust hua paisa nahi milta. Agent log kabhi-kabhi
+          iske ulte dawe karte hain — unse door rahein.
         </p>
 
         <h2>Baaki Doubts</h2>
@@ -450,64 +508,6 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
         <p>
           Apne rajya ki scheme mein bataidar kisan ko jagah milti hai ya nahi, ye{' '}
           <Link href="/rajya-yojana">rajya kisan yojana list</Link> mein dekh sakte hain.
-        </p>
-
-        <h2>Teen Ghar, Teen Faisle — Rule Ko Misaal Se Samajhein</h2>
-
-        <p>
-          <strong>Pehla ghar:</strong> pati ke naam do bigha, patni ke naam teen bigha.
-          Dono ke registration alag-alag CSC se ho gaye the aur dono khaton mein kist aa
-          rahi thi. Verification mein dono Aadhaar ek hi parivaar se jude nikle. Sahi
-          raasta yahan ye tha ki jiski teeno kagaz (land record, Aadhaar, bank) ek jaise
-          the — patni ke the — uska registration rehta aur pati apna surrender karta.
-          Unhone yahi kiya, refund challan se pichli kistein lautayi, aur patni ka
-          registration bina rukavat chal raha hai.
-        </p>
-
-        <p>
-          <strong>Doosra ghar:</strong> pita aur do baalig bete. Zameen abhi poori pita ke
-          naam hai, batwaara sirf zubaani hua hai. Teeno ke registration ho gaye the — do
-          gir gaye. Yahan jaldi ka raasta koi nahi hai: pehle tehsil mein batwaara aur
-          mutation, uske baad hi beton ke apne claim banenge. Jab tak record ek hai, claim
-          ek hai.
-        </p>
-
-        <p>
-          <strong>Teesra ghar:</strong> vidhwa maa aur uska baalig beta, dono ke naam par
-          virasat ki zameen mutation ke saath alag-alag darj ho chuki hai. Ye do alag
-          family unit hain — maa apna registration rakh sakti hai aur beta apna. Yahan do
-          registration hona bilkul jaayaz hai, aur kisi surrender ki zaroorat nahi.
-        </p>
-
-        <p>
-          In teeno mein farak sirf ek cheez ka hai — revenue record. Ghar ka batwara,
-          ration card, ya rehne ka alag intezaam scheme ki nazar mein kuch nahi badalta;
-          jo tehsil ke kagaz mein hai, wahi sach hai.
-        </p>
-
-        <h2>Surrender Ka Faisla Lene Se Pehle — Kya Kya Milaa Lein</h2>
-
-        <p>
-          Jis ghar mein do registration chal rahe hain, wahan surrender se pehle ek chhota
-          sa audit kaam aata hai. Dono registration ke against ye chaar cheezein likh kar
-          milaayein: kis par kitni kistein aa chuki hain, kiske land record ki seeding
-          complete hai, kiske Aadhaar ki spelling teeno jagah ek jaisi hai, aur kiska
-          mobile number aaj bhi active hai.
-        </p>
-
-        <p>
-          Aam taur par jawab khud saamne aa jaata hai — ek registration har jagah saaf
-          hota hai aur doosra kahin na kahin atka hua. Saaf wala rakhein, atka hua
-          surrender karein. Refund ka hisaab bhi isi audit se nikal aata hai: jo kistein
-          surrender wale registration par aayi hain, wahi lautani hain — rakhe gaye
-          registration ki kistein jaayaz hain, unka refund nahi banta.
-        </p>
-
-        <p>
-          Ek baat aur — surrender ke baad usi season ki agli kist ka schedule nahi
-          badalta. Rakhe gaye registration par kist apne time par hi aayegi; surrender
-          karne se koi “nayi” kist ya adjust hua paisa nahi milta. Agent log kabhi-kabhi
-          iske ulte dawe karte hain — unse door rahein.
         </p>
 
         <h2>Ghar Ka Hisaab Saaf Rakhne Ki Aadatein</h2>
