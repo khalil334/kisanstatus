@@ -96,6 +96,193 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         label="Official Portal — Annadatha Sukhibhava AP"
       />
 
+      <h2>Status "Rejected" Dikhaye Toh Kya Karein</h2>
+
+      <p>
+        Pending aur Rejected mein bada fark hai. Pending ka matlab file process mein hai, intezaar
+        kaafi hai. Rejected ka matlab system ne aapka record verify karke actively mana kar diya
+        hai, aur bina action ke ye apne aap theek nahi hoga. Rejected ke teen sabse common reasons:
+      </p>
+
+      <ul>
+        <li>
+          Land record mismatch: Webland (AP ka online land records system) mein
+          aapki zameen ka data scheme database se match nahi kar raha. Aksar aisa tab hota hai jab
+          zameen ka mutation (naam transfer) recently hua ho. Aise case mein apne Tahsildar office se
+          Webland record update karwayein, phir Gram Sachivalayam mein re-verification request dein.
+        </li>
+        <li>
+          Duplicate Aadhaar entry: Ek hi Aadhaar do jagah registered hai, jaise
+          purane Rythu Bharosa data aur naye CCRC registration dono mein. System dono ko dekh kar
+          duplicate flag laga deta hai. Raasta: VAA se milkar purani entry cancel karwayein.
+        </li>
+        <li>
+          Exclusion criteria hit: Income tax record ya employment data ke against
+          match aaya hai. Agar ye galat hai (jaise aapke naam ka koi aur ITR file karta hai), toh
+          DAO office mein grievance file karke documents ke saath appeal kar sakte hain.
+        </li>
+      </ul>
+
+      <h2>List Mein Naam Hai Par Paisa Nahi Aaya</h2>
+
+      <p>
+        Ye alag samasya hai aur iski wajah aksar scheme mein nahi, bank ya Aadhaar ke record mein hoti
+        hai. Chaar cheezein check karni hoti hain:
+      </p>
+
+      <Fig
+        src="dbt-bank-account.webp"
+        alt="Kisan bank branch mein passbook lekar DBT aur NPCI Aadhaar mapping check karwa raha hai"
+        caption="Naam list mein hai par paisa nahi aaya — pehla check bank branch mein NPCI mapping ka"
+      />
+
+      <h3>1. Bank Account DBT Enabled Nahi Hai</h3>
+      <p>
+        Karna kya hai: apne bank branch jaakar pata karein ki aapka account "NPCI Mapper" mein Aadhaar ke saath linked hai ya nahi. Agar nahi hai, toh turant DBT enable karwayein.
+      </p>
+
+      <h3>2. Aadhaar Name aur Bank Account Name Match Nahi Kar Rahe</h3>
+      <p>
+        Agar Aadhaar mein "Ram Kumar" hai aur bank account mein "Ram Kumar Singh", toh payment fail ho sakti hai. Bank mein naam correction karwayein ya Aadhaar mein update karwayein.
+      </p>
+
+      <h3>3. Mobile Number Change Ho Gaya Hai</h3>
+      <p>
+        Iska ilaaj: OTP na aane ki wajah se aap status check nahi kar pa rahe honge. Pehle Aadhaar center jaakar mobile number update karein, phir portal par try karein.
+      </p>
+
+      <h3>4. CCRC Card Expired Ya Invalid Hai</h3>
+      <p>
+        Tenant farmers ke liye CCRC card ka valid hona zaroori hai. Agar card expire ho gaya hai, toh apne local Agriculture Officer (AO) se contact karke renewal karwayein.
+      </p>
+
+      <h2>Apna Status Kaise Dekhein</h2>
+
+      <p>
+        Aadhaar number ya Application ID paas rakhein, aur financial year sahi select karein. Galat
+        year select hua to purana record dikh jaata hai:
+      </p>
+
+      <Fig
+        src="documents-checklist.webp"
+        alt="Annadata Sukhibhava status check ke liye zaroori documents — bank passbook, Aadhaar card, CCRC card aur mobile"
+        caption="Status check se pehle yeh saath rakho — Aadhaar, bank passbook, CCRC card aur registered mobile"
+      />
+
+      <ol>
+        <li>Official website <code>annadathasukhibhava.ap.gov.in</code> kholein.</li>
+        <li>Homepage par "Know Your Status" ya "Beneficiary Status" ke option par click karein.</li>
+        <li>Financial Year select karein (Example: 2026-27).</li>
+        <li>Apna Aadhaar Number ya Application ID enter karein.</li>
+        <li>Screen par dikh raha CAPTCHA code enter karein aur "Verify" ya "Search" par click karein.</li>
+        <li>Ab aapke saamne ek detail page khulega jisme aapka naam, gaon, district, aur अन्नदाता सुखीभव status (Payment Successful, Pending, ya Rejected) dikhayi dega.</li>
+      </ol>
+
+      <ExternalLinkButton
+        href="https://annadathasukhibhava.ap.gov.in/know-your-status/"
+        label="Check Status Now — Official AP Portal"
+      />
+
+      <h2>Beneficiary List Mein Naam Dhoondhna</h2>
+
+      <p>
+        District aur mandal chunkar poori list PDF mein nikal aati hai. Ctrl+F se apna naam dhoondh
+        lein:
+      </p>
+
+      <ol>
+        <li>Portal par login kiye bina hi "Reports" section khulta hai. Wahan "Beneficiary List" chunein.</li>
+        <li>Apna District, Mandal, aur Panchayat select karein.</li>
+        <li>"Search" par click karein.</li>
+        <li>Aapke gaon ki puri list khul jayegi ya PDF mein download hogi. Ctrl+F (mobile par browser ka "Find in page") se apna naam ya parivar ke kisi sadasya ka naam dhoondh lein.</li>
+      </ol>
+
+      <p>
+        List Telugu mein bhi ho sakti hai. Agar naam Telugu script mein dhoondhna mushkil lag raha
+        hai, toh Aadhaar number ke aakhri 4 digits se search karein. Zyada tar lists mein masked
+        Aadhaar (XXXX-XXXX-1234 format) hota hai, aur wahi sabse bharosemand tareeka hai apni entry
+        pakadne ka.
+      </p>
+
+      <h2>PM Kisan Aur Annadata Sukhibhava — Saath Rakhkar Dekhein</h2>
+
+      <p>
+        Dono ek saath milte hain, isliye log ise ek hi scheme samajh lete hain. Fark yahan saaf hai:
+      </p>
+
+      <SchemeTable>
+        <tr>
+          <th>Feature</th>
+          <th>PM Kisan Samman Nidhi</th>
+          <th>Annadata Sukhibhava (AP)</th>
+        </tr>
+        <tr>
+          <td>Governing Body</td>
+          <td>Central Govt (India)</td>
+          <td>Andhra Pradesh State Govt</td>
+        </tr>
+        <tr>
+          <td>Max Annual Amount</td>
+          <td>₹6,000</td>
+          <td>₹20,000 (Combined)</td>
+        </tr>
+        <tr>
+          <td>Tenant Farmers Eligible?</td>
+          <td>❌ Nahi</td>
+          <td>✅ Haan (with CCRC Card)</td>
+        </tr>
+        <tr>
+          <td>Landless Laborers?</td>
+          <td>❌ Nahi</td>
+          <td>❌ Nahi (Except specific state sub-schemes)</td>
+        </tr>
+        <tr>
+          <td>Application Process</td>
+          <td>CSC / Online Self</td>
+          <td>Auto-mapped from existing Rythu Bharosa data + New CCRC registrations</td>
+        </tr>
+      </SchemeTable>
+
+      <h2>Shikayat Kahan Likhwayein</h2>
+
+      <p>
+        Online status nahi khul raha, naam sudharwana hai, ya payment atki hai? Teen official raste
+        hain:
+      </p>
+      <ul>
+        <li>Official portal: <code>annadathasukhibhava.ap.gov.in</code> — helpline number portal ke &ldquo;Contact&rdquo; section mein diya hota hai; wahi se lein, kyunki numbers samay samay par badalte hain.</li>
+        <li>District Agriculture Officer (DAO): Apne district ke DAO office mein personal visit karein.</li>
+        <li>Gram Sachivalayam: Apne nearest Village Secretariat mein Agriculture Assistant se milen.</li>
+      </ul>
+
+      <Fig
+        src="village-secretariat-help.webp"
+        alt="Gram Sachivalayam mein village volunteer kisan ki Annadata Sukhibhava status check aur correction mein madad kar rahi hai"
+        caption="Online na ho paaye to Gram Sachivalayam mein Agriculture Assistant free madad karta hai"
+      />
+
+      <h2>Pehle Se Taiyaari — Phir Der Nahi Lagti</h2>
+
+      <p>
+        AP mein scheme ka dhaancha aisa hai ki zyadatar rukavat pehle se dikh jaati hai —
+        bas koi dekhta nahi. Har season shuru hone se pehle ye paanch cheezein milaa lein:
+        zameen wale kisan apna khata number land record se, bataidar apna CCRC card ki
+        validity (wo har saal renew hota hai — purana card season badalte hi bekar ho
+        jaata hai), bank khaate ki Aadhaar seeding, PM Kisan ki e-KYC (kyunki combined
+        ₹20,000 ka central hissa usi par khada hai), aur mobile number jo record mein darj
+        hai. Paanchon durust hon to kist ka intezaar sirf release ki tareekh ka intezaar
+        hai.
+      </p>
+
+      <p>
+        Achha haan, ek aur baat. Bataidar kisan ke liye ek extra cheez: CCRC renewal ka sahi waqt bawai se pehle ka
+        hai, jab malik ke saath naya season tay hota hai. Season ke beech mein renewal
+        karwana mushkil hota hai kyunki VAA ka field verification fasal khadi hone par hi
+        aasaan hota hai — aur bina valid card ke us season ki kist ka claim nahi banta.
+        Card ke kagaz ki photo phone mein rakh lein; Rythu Seva Kendra par baat karte waqt
+        wahi sabse pehle maanga jaata hai.
+      </p>
+
       <h2>Kon-Kon Aata Hai</h2>
 
       <p>
@@ -284,175 +471,6 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         <strong>Note:</strong> Kabhi-kabhi state aur central government ki payment alag-alag dates par aati hai. Agar aapko sirf ₹2,000 ya ₹5,000 hi mila hai, toh chinta chhodiye. Dono components alag-alag transaction IDs ke saath aate hain.
       </InfoBox>
 
-      <h2>Status "Rejected" Dikhaye Toh Kya Karein</h2>
-
-      <p>
-        Pending aur Rejected mein bada fark hai. Pending ka matlab file process mein hai, intezaar
-        kaafi hai. Rejected ka matlab system ne aapka record verify karke actively mana kar diya
-        hai, aur bina action ke ye apne aap theek nahi hoga. Rejected ke teen sabse common reasons:
-      </p>
-
-      <ul>
-        <li>
-          Land record mismatch: Webland (AP ka online land records system) mein
-          aapki zameen ka data scheme database se match nahi kar raha. Aksar aisa tab hota hai jab
-          zameen ka mutation (naam transfer) recently hua ho. Aise case mein apne Tahsildar office se
-          Webland record update karwayein, phir Gram Sachivalayam mein re-verification request dein.
-        </li>
-        <li>
-          Duplicate Aadhaar entry: Ek hi Aadhaar do jagah registered hai, jaise
-          purane Rythu Bharosa data aur naye CCRC registration dono mein. System dono ko dekh kar
-          duplicate flag laga deta hai. Raasta: VAA se milkar purani entry cancel karwayein.
-        </li>
-        <li>
-          Exclusion criteria hit: Income tax record ya employment data ke against
-          match aaya hai. Agar ye galat hai (jaise aapke naam ka koi aur ITR file karta hai), toh
-          DAO office mein grievance file karke documents ke saath appeal kar sakte hain.
-        </li>
-      </ul>
-
-      <h2>List Mein Naam Hai Par Paisa Nahi Aaya</h2>
-
-      <p>
-        Ye alag samasya hai aur iski wajah aksar scheme mein nahi, bank ya Aadhaar ke record mein hoti
-        hai. Chaar cheezein check karni hoti hain:
-      </p>
-
-      <Fig
-        src="dbt-bank-account.webp"
-        alt="Kisan bank branch mein passbook lekar DBT aur NPCI Aadhaar mapping check karwa raha hai"
-        caption="Naam list mein hai par paisa nahi aaya — pehla check bank branch mein NPCI mapping ka"
-      />
-
-      <h3>1. Bank Account DBT Enabled Nahi Hai</h3>
-      <p>
-        Karna kya hai: apne bank branch jaakar pata karein ki aapka account "NPCI Mapper" mein Aadhaar ke saath linked hai ya nahi. Agar nahi hai, toh turant DBT enable karwayein.
-      </p>
-
-      <h3>2. Aadhaar Name aur Bank Account Name Match Nahi Kar Rahe</h3>
-      <p>
-        Agar Aadhaar mein "Ram Kumar" hai aur bank account mein "Ram Kumar Singh", toh payment fail ho sakti hai. Bank mein naam correction karwayein ya Aadhaar mein update karwayein.
-      </p>
-
-      <h3>3. Mobile Number Change Ho Gaya Hai</h3>
-      <p>
-        Iska ilaaj: OTP na aane ki wajah se aap status check nahi kar pa rahe honge. Pehle Aadhaar center jaakar mobile number update karein, phir portal par try karein.
-      </p>
-
-      <h3>4. CCRC Card Expired Ya Invalid Hai</h3>
-      <p>
-        Tenant farmers ke liye CCRC card ka valid hona zaroori hai. Agar card expire ho gaya hai, toh apne local Agriculture Officer (AO) se contact karke renewal karwayein.
-      </p>
-
-      <h2>Apna Status Kaise Dekhein</h2>
-
-      <p>
-        Aadhaar number ya Application ID paas rakhein, aur financial year sahi select karein. Galat
-        year select hua to purana record dikh jaata hai:
-      </p>
-
-      <Fig
-        src="documents-checklist.webp"
-        alt="Annadata Sukhibhava status check ke liye zaroori documents — bank passbook, Aadhaar card, CCRC card aur mobile"
-        caption="Status check se pehle yeh saath rakho — Aadhaar, bank passbook, CCRC card aur registered mobile"
-      />
-
-      <ol>
-        <li>Official website <code>annadathasukhibhava.ap.gov.in</code> kholein.</li>
-        <li>Homepage par "Know Your Status" ya "Beneficiary Status" ke option par click karein.</li>
-        <li>Financial Year select karein (Example: 2026-27).</li>
-        <li>Apna Aadhaar Number ya Application ID enter karein.</li>
-        <li>Screen par dikh raha CAPTCHA code enter karein aur "Verify" ya "Search" par click karein.</li>
-        <li>Ab aapke saamne ek detail page khulega jisme aapka naam, gaon, district, aur अन्नदाता सुखीभव status (Payment Successful, Pending, ya Rejected) dikhayi dega.</li>
-      </ol>
-
-      <ExternalLinkButton
-        href="https://annadathasukhibhava.ap.gov.in/know-your-status/"
-        label="Check Status Now — Official AP Portal"
-      />
-
-      <h2>Beneficiary List Mein Naam Dhoondhna</h2>
-
-      <p>
-        District aur mandal chunkar poori list PDF mein nikal aati hai. Ctrl+F se apna naam dhoondh
-        lein:
-      </p>
-
-      <ol>
-        <li>Portal par login kiye bina hi "Reports" section khulta hai. Wahan "Beneficiary List" chunein.</li>
-        <li>Apna District, Mandal, aur Panchayat select karein.</li>
-        <li>"Search" par click karein.</li>
-        <li>Aapke gaon ki puri list khul jayegi ya PDF mein download hogi. Ctrl+F (mobile par browser ka "Find in page") se apna naam ya parivar ke kisi sadasya ka naam dhoondh lein.</li>
-      </ol>
-
-      <p>
-        List Telugu mein bhi ho sakti hai. Agar naam Telugu script mein dhoondhna mushkil lag raha
-        hai, toh Aadhaar number ke aakhri 4 digits se search karein. Zyada tar lists mein masked
-        Aadhaar (XXXX-XXXX-1234 format) hota hai, aur wahi sabse bharosemand tareeka hai apni entry
-        pakadne ka.
-      </p>
-
-      <h2>PM Kisan Aur Annadata Sukhibhava — Saath Rakhkar Dekhein</h2>
-
-      <p>
-        Dono ek saath milte hain, isliye log ise ek hi scheme samajh lete hain. Fark yahan saaf hai:
-      </p>
-
-      <SchemeTable>
-        <tr>
-          <th>Feature</th>
-          <th>PM Kisan Samman Nidhi</th>
-          <th>Annadata Sukhibhava (AP)</th>
-        </tr>
-        <tr>
-          <td>Governing Body</td>
-          <td>Central Govt (India)</td>
-          <td>Andhra Pradesh State Govt</td>
-        </tr>
-        <tr>
-          <td>Max Annual Amount</td>
-          <td>₹6,000</td>
-          <td>₹20,000 (Combined)</td>
-        </tr>
-        <tr>
-          <td>Tenant Farmers Eligible?</td>
-          <td>❌ Nahi</td>
-          <td>✅ Haan (with CCRC Card)</td>
-        </tr>
-        <tr>
-          <td>Landless Laborers?</td>
-          <td>❌ Nahi</td>
-          <td>❌ Nahi (Except specific state sub-schemes)</td>
-        </tr>
-        <tr>
-          <td>Application Process</td>
-          <td>CSC / Online Self</td>
-          <td>Auto-mapped from existing Rythu Bharosa data + New CCRC registrations</td>
-        </tr>
-      </SchemeTable>
-
-      <h2>Pehle Se Taiyaari — Phir Der Nahi Lagti</h2>
-
-      <p>
-        AP mein scheme ka dhaancha aisa hai ki zyadatar rukavat pehle se dikh jaati hai —
-        bas koi dekhta nahi. Har season shuru hone se pehle ye paanch cheezein milaa lein:
-        zameen wale kisan apna khata number land record se, bataidar apna CCRC card ki
-        validity (wo har saal renew hota hai — purana card season badalte hi bekar ho
-        jaata hai), bank khaate ki Aadhaar seeding, PM Kisan ki e-KYC (kyunki combined
-        ₹20,000 ka central hissa usi par khada hai), aur mobile number jo record mein darj
-        hai. Paanchon durust hon to kist ka intezaar sirf release ki tareekh ka intezaar
-        hai.
-      </p>
-
-      <p>
-        Achha haan, ek aur baat. Bataidar kisan ke liye ek extra cheez: CCRC renewal ka sahi waqt bawai se pehle ka
-        hai, jab malik ke saath naya season tay hota hai. Season ke beech mein renewal
-        karwana mushkil hota hai kyunki VAA ka field verification fasal khadi hone par hi
-        aasaan hota hai — aur bina valid card ke us season ki kist ka claim nahi banta.
-        Card ke kagaz ki photo phone mein rakh lein; Rythu Seva Kendra par baat karte waqt
-        wahi sabse pehle maanga jaata hai.
-      </p>
-
       <h2>Aur Bhi States Hain</h2>
 
       <p>
@@ -482,24 +500,6 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
           </Link>
         </li>
       </ul>
-
-      <h2>Shikayat Kahan Likhwayein</h2>
-
-      <p>
-        Online status nahi khul raha, naam sudharwana hai, ya payment atki hai? Teen official raste
-        hain:
-      </p>
-      <ul>
-        <li>Official portal: <code>annadathasukhibhava.ap.gov.in</code> — helpline number portal ke &ldquo;Contact&rdquo; section mein diya hota hai; wahi se lein, kyunki numbers samay samay par badalte hain.</li>
-        <li>District Agriculture Officer (DAO): Apne district ke DAO office mein personal visit karein.</li>
-        <li>Gram Sachivalayam: Apne nearest Village Secretariat mein Agriculture Assistant se milen.</li>
-      </ul>
-
-      <Fig
-        src="village-secretariat-help.webp"
-        alt="Gram Sachivalayam mein village volunteer kisan ki Annadata Sukhibhava status check aur correction mein madad kar rahi hai"
-        caption="Online na ho paaye to Gram Sachivalayam mein Agriculture Assistant free madad karta hai"
-      />
 
       <h2>Annadata Sukhibhava — Kuch Aur Sawaal</h2>
 

@@ -105,6 +105,87 @@ export default function RythuBharosaStatusCheck2026() {
         label="Official Portal — Rythu Bharosa Telangana"
       />
 
+      <h2>Routine — Status Check Se Pehle Ye Teen Cheezein Saath Rakhein</h2>
+
+      <ul>
+        <li>
+          <strong>Pattadar Passbook:</strong> Ismein aapka khata number aur land extent likha hota
+          hai. Portal ka data isi se milana hai.
+        </li>
+        <li>
+          <strong>Aadhaar Card:</strong> Status search Aadhaar se hi sabse sahi baithti hai. Number
+          yaad ho toh bhi card saath rakhein, kyunki spelling milani pad sakti hai.
+        </li>
+        <li>
+          <strong>Bank Passbook (updated):</strong> Payment aayi ya nahi, iska final proof passbook
+          ki entry hai. Portal par "Disbursed" aur account mein credit ke beech 2-3 din ka gap
+          normal hai.
+        </li>
+      </ul>
+
+      <h2>Naye Kisan Ka Pehla Season — Kis Kram Mein Kya Karein</h2>
+
+      <p>
+        Zameen abhi naam par aayi hai — kharidi ya virasat se — to Rythu Bharosa ka safar
+        Dharani se shuru hota hai, portal se nahi. Kram ye hai: pehle registration ya
+        succession ke zariye Dharani mein apna naam pattadar ke roop mein darj karwaayein
+        aur nayi pattadar passbook lein. Phir bank mein Aadhaar seeding confirm karein —
+        payment NPCI mapper se hoti hai, sirf khaata khula hona kaafi nahi. Iske baad kuch
+        karna nahi hai; list Dharani ke record se banti hai aur naya khata agle season ke
+        phase mein apne aap ginti mein aa jaata hai.
+      </p>
+
+      <p>
+        Pehle season mein sabse aam galti intezaar ki disha galat hona hai — log portal
+        par apna naam dhoondhte rehte hain jabki asli rukavat Dharani ke record ya bank
+        seeding mein hoti hai. Passbook mil gayi, seeding ho gayi, phir bhi do season tak
+        kuch na aaye — tab MRO office mein apne khate ki sthiti likhit mein poochhein.
+        Wahan ke record mein hi dikhega ki khata kis phase mein hai ya kis wajah se ruka
+        hai.
+      </p>
+
+      <h2>Apna Hisaab Dekho</h2>
+
+      <p>
+        Portal par ye jaldi ho jaayega. Aadhaar number saath rakhein. Account number se bhi hota
+        hai, par Aadhaar zyada reliable nikalta hai:
+      </p>
+
+      <Fig
+        src="dharani-land-record.webp"
+        alt="Kisan Mandal Revenue Office mein adhikari ke saath computer par Dharani portal ka land record dekh raha hai"
+        caption="Rythu Bharosa ka data Dharani portal se aata hai — record galat hoga to status bhi galat dikhega"
+      />
+
+      <ol>
+        <li>Apne mobile ya computer ke browser mein official website <code>rytubharosa.cgg.gov.in</code> kholein.</li>
+        <li>Homepage par "Rythu Bharosa Status" ya "Beneficiary Status" ke option par click karein.</li>
+        <li>Aapke paas do options honge: "Aadhaar Number" ya "Account Number" se search karna. Aadhaar number sabse reliable hai.</li>
+        <li>Apna 12-digit Aadhaar Number enter karein.</li>
+        <li>CAPTCHA jaisa dikh raha hai waisa bhar dein, phir "Get Details" ya "Submit" par click karein.</li>
+        <li>Ek naya page khulega jisme aapka naam, father/husband ka naam, gaon, mandal, district, land extent (acreage), aur current <strong>rythu bharosa payment status</strong> (Sanctioned, Disbursed, ya Pending) dikhayi dega.</li>
+      </ol>
+
+      <ExternalLinkButton
+        href="https://rytubharosa.cgg.gov.in"
+        label="Check Status on Official Rythu Bharosa Portal"
+      />
+
+      <h2>Gaon Ki List Mein Naam Dhoondhna</h2>
+
+      <p>
+        Lagta hai naam chhoot gaya hai? To gaon ki poori list dekh lein. Notice board par bhi lagti
+        hai, par portal se PDF nikaal lena aasan padta hai:
+      </p>
+
+      <ol>
+        <li>Rythu Bharosa portal par "Reports" ya "Beneficiary List" section mein jaayein.</li>
+        <li>Apna Zila (District), Mandal, aur Panchayat/Village select karein.</li>
+        <li>Financial Year aur Season (Kharif/Rabi) select karein.</li>
+        <li>"Get List" par click karein.</li>
+        <li>Ek PDF ya table generate hoga jisme aapke gaon ke sabhi beneficiaries ke naam, account numbers (masked), aur amount likha hoga. Apna naam dhundhein.</li>
+      </ol>
+
       <h2>Padosi Ko Mil Gaya, Mujhe Nahi — Phase System Samjhein</h2>
 
       <p>
@@ -134,33 +215,6 @@ export default function RythuBharosaStatusCheck2026() {
         Matlab "Processing" dikhne ka arth paisa atak jaana nahi hai. Aapke mandal ka
         phase aana baaki hai, bas itna, toh fikar chhodo aur thoda ruk jao. Haan, toh wahi — phase ka khel hai.
       </p>
-
-      <h2>Apna Hisaab Dekho</h2>
-
-      <p>
-        Portal par ye jaldi ho jaayega. Aadhaar number saath rakhein. Account number se bhi hota
-        hai, par Aadhaar zyada reliable nikalta hai:
-      </p>
-
-      <Fig
-        src="dharani-land-record.webp"
-        alt="Kisan Mandal Revenue Office mein adhikari ke saath computer par Dharani portal ka land record dekh raha hai"
-        caption="Rythu Bharosa ka data Dharani portal se aata hai — record galat hoga to status bhi galat dikhega"
-      />
-
-      <ol>
-        <li>Apne mobile ya computer ke browser mein official website <code>rytubharosa.cgg.gov.in</code> kholein.</li>
-        <li>Homepage par "Rythu Bharosa Status" ya "Beneficiary Status" ke option par click karein.</li>
-        <li>Aapke paas do options honge: "Aadhaar Number" ya "Account Number" se search karna. Aadhaar number sabse reliable hai.</li>
-        <li>Apna 12-digit Aadhaar Number enter karein.</li>
-        <li>CAPTCHA jaisa dikh raha hai waisa bhar dein, phir "Get Details" ya "Submit" par click karein.</li>
-        <li>Ek naya page khulega jisme aapka naam, father/husband ka naam, gaon, mandal, district, land extent (acreage), aur current <strong>rythu bharosa payment status</strong> (Sanctioned, Disbursed, ya Pending) dikhayi dega.</li>
-      </ol>
-
-      <ExternalLinkButton
-        href="https://rytubharosa.cgg.gov.in"
-        label="Check Status on Official Rythu Bharosa Portal"
-      />
 
       <h2>Phase Aa Gaya Par Paisa Nahi — Chaar Wajahein</h2>
 
@@ -194,6 +248,32 @@ export default function RythuBharosaStatusCheck2026() {
       <p>
         Hal: Agar zameen par koi court case ya parivarik vivad (family dispute) hai, toh Dharani portal par us par "Disputed" ka tag lag jata hai. Aise cases mein payment tab tak roki jaati hai jab tak vivad khatam nahi ho jata.
       </p>
+
+      <h2>Virasat Ki Zameen — Sabse Zyada Atakne Wala Case</h2>
+
+      <p>
+        Waise, iske baare mein maine upar seedha nahi bataya, par ek scenario itna common hai ki alag se likhna zaroori hai. Pita ka dehant ho gaya.
+        Zameen ab bete-betiyon ke naam aani hai, lekin Dharani par mutation abhi purane
+        naam par hi hai. Aise mein Rythu Bharosa ka paisa purane record ke hisaab se
+        process hota hai, aur dehant ke baad account freeze hone se payment fail ho jaati
+        hai. Ghar pehle hi dukh mein hai, upar se ye jhamela.
+      </p>
+
+      <p>
+        Iska rasta succession mutation hai. Dharani portal par "Succession" module se online
+        application hoti hai. Chahiye hota hai: death certificate, family member certificate
+        (Meeseva se banta hai), sabhi legal heirs ke Aadhaar, aur agar koi heir apna hissa chhod
+        raha hai toh registered relinquishment deed. MRO verification ke baad naye pattadar
+        passbooks bante hain. Process mein aam taur par 3 se 6 hafte lagte hain. Jab tak mutation
+        complete nahi hota, us zameen ki Rythu Bharosa payment rukegi — isliye is kaam ko season
+        shuru hone se pehle nipta lena sabse samajhdari ka kadam hai.
+      </p>
+
+      <Fig
+        src="mandal-revenue-office.webp"
+        alt="Kisan Mandal Revenue Office ke bahar line mein khade hain mutation aur Dharani correction ke liye"
+        caption="Mutation, disputed tag ya naam ki galti — yeh sirf MRO office mein hi theek hota hai"
+      />
 
       <h2>Per Acre Ke Hisaab Se Paisa — Ganit Kya Hai</h2>
 
@@ -258,6 +338,26 @@ export default function RythuBharosaStatusCheck2026() {
         caption="Zameen jitni zyada, madad utni badi — isi liye har kisan ke account mein alag raqam aati hai"
       />
 
+      <h2>Guntas Ka Hisaab — Apni Raqam Khud Nikaalein</h2>
+
+      <p>
+        Telangana mein zameen acre aur guntas mein boli jaati hai — ek acre mein 40 guntas.
+        Scheme ka hisaab bhi isi par chalta hai, isliye apna anumaanit figure nikaalna aasan
+        hai. Pattadar passbook mein likha extent lein — maan lijiye 2 acre 20 guntas, yaani
+        2.5 acre. Saal ka ₹12,000 prati acre matlab ₹30,000, aur ek season (Kharif ya Rabi)
+        ka credit iska aadha — ₹15,000. Credit is hisaab se kam aaye to pehla shak extent
+        par karein: Dharani mein darj rakba passbook se milaayein, kyunki payment Dharani
+        ke record par banti hai, aapki yaaddasht par nahi.
+      </p>
+
+      <p>
+        Do baatein is hisaab mein aksar bhool hoti hain. Pehli — payment sirf un khaton par
+        banti hai jo Dharani mein saaf hain; disputed ya prohibited list wali zameen ka
+        hissa apne aap kat jaata hai. Doosri — alag-alag gaon mein zameen ke tukde hon to
+        har khata alag process hota hai, aur alag dinon par alag credit aa sakte hain.
+        Poora jod milaane se pehle sab khaton ke credit gin lein.
+      </p>
+
       <h2>Rythu Bandhu Se Rythu Bharosa — Kya Badla</h2>
 
       <p>
@@ -301,47 +401,6 @@ export default function RythuBharosaStatusCheck2026() {
         </tr>
       </SchemeTable>
 
-      <h2>Gaon Ki List Mein Naam Dhoondhna</h2>
-
-      <p>
-        Lagta hai naam chhoot gaya hai? To gaon ki poori list dekh lein. Notice board par bhi lagti
-        hai, par portal se PDF nikaal lena aasan padta hai:
-      </p>
-
-      <ol>
-        <li>Rythu Bharosa portal par "Reports" ya "Beneficiary List" section mein jaayein.</li>
-        <li>Apna Zila (District), Mandal, aur Panchayat/Village select karein.</li>
-        <li>Financial Year aur Season (Kharif/Rabi) select karein.</li>
-        <li>"Get List" par click karein.</li>
-        <li>Ek PDF ya table generate hoga jisme aapke gaon ke sabhi beneficiaries ke naam, account numbers (masked), aur amount likha hoga. Apna naam dhundhein.</li>
-      </ol>
-
-      <h2>Virasat Ki Zameen — Sabse Zyada Atakne Wala Case</h2>
-
-      <p>
-        Waise, iske baare mein maine upar seedha nahi bataya, par ek scenario itna common hai ki alag se likhna zaroori hai. Pita ka dehant ho gaya.
-        Zameen ab bete-betiyon ke naam aani hai, lekin Dharani par mutation abhi purane
-        naam par hi hai. Aise mein Rythu Bharosa ka paisa purane record ke hisaab se
-        process hota hai, aur dehant ke baad account freeze hone se payment fail ho jaati
-        hai. Ghar pehle hi dukh mein hai, upar se ye jhamela.
-      </p>
-
-      <p>
-        Iska rasta succession mutation hai. Dharani portal par "Succession" module se online
-        application hoti hai. Chahiye hota hai: death certificate, family member certificate
-        (Meeseva se banta hai), sabhi legal heirs ke Aadhaar, aur agar koi heir apna hissa chhod
-        raha hai toh registered relinquishment deed. MRO verification ke baad naye pattadar
-        passbooks bante hain. Process mein aam taur par 3 se 6 hafte lagte hain. Jab tak mutation
-        complete nahi hota, us zameen ki Rythu Bharosa payment rukegi — isliye is kaam ko season
-        shuru hone se pehle nipta lena sabse samajhdari ka kadam hai.
-      </p>
-
-      <Fig
-        src="mandal-revenue-office.webp"
-        alt="Kisan Mandal Revenue Office ke bahar line mein khade hain mutation aur Dharani correction ke liye"
-        caption="Mutation, disputed tag ya naam ki galti — yeh sirf MRO office mein hi theek hota hai"
-      />
-
       <h2>Rythu Bharosa Aur PM Kisan — Dono Ek Saath Milte Hain</h2>
 
       <p>
@@ -359,65 +418,6 @@ export default function RythuBharosaStatusCheck2026() {
         wali. Passbook mein entry dekhte waqt bhi dhyan rakhein: Rythu Bharosa ki entry mein
         "RYTHU" ya treasury ka reference hota hai, jabki PM Kisan ki entry "PMKISAN" naam se aati
         hai. Isse turant pata chal jaata hai ki kaun sa paisa aaya aur kaun sa atka hai.
-      </p>
-
-      <h2>Guntas Ka Hisaab — Apni Raqam Khud Nikaalein</h2>
-
-      <p>
-        Telangana mein zameen acre aur guntas mein boli jaati hai — ek acre mein 40 guntas.
-        Scheme ka hisaab bhi isi par chalta hai, isliye apna anumaanit figure nikaalna aasan
-        hai. Pattadar passbook mein likha extent lein — maan lijiye 2 acre 20 guntas, yaani
-        2.5 acre. Saal ka ₹12,000 prati acre matlab ₹30,000, aur ek season (Kharif ya Rabi)
-        ka credit iska aadha — ₹15,000. Credit is hisaab se kam aaye to pehla shak extent
-        par karein: Dharani mein darj rakba passbook se milaayein, kyunki payment Dharani
-        ke record par banti hai, aapki yaaddasht par nahi.
-      </p>
-
-      <p>
-        Do baatein is hisaab mein aksar bhool hoti hain. Pehli — payment sirf un khaton par
-        banti hai jo Dharani mein saaf hain; disputed ya prohibited list wali zameen ka
-        hissa apne aap kat jaata hai. Doosri — alag-alag gaon mein zameen ke tukde hon to
-        har khata alag process hota hai, aur alag dinon par alag credit aa sakte hain.
-        Poora jod milaane se pehle sab khaton ke credit gin lein.
-      </p>
-
-      <h2>Routine — Status Check Se Pehle Ye Teen Cheezein Saath Rakhein</h2>
-
-      <ul>
-        <li>
-          <strong>Pattadar Passbook:</strong> Ismein aapka khata number aur land extent likha hota
-          hai. Portal ka data isi se milana hai.
-        </li>
-        <li>
-          <strong>Aadhaar Card:</strong> Status search Aadhaar se hi sabse sahi baithti hai. Number
-          yaad ho toh bhi card saath rakhein, kyunki spelling milani pad sakti hai.
-        </li>
-        <li>
-          <strong>Bank Passbook (updated):</strong> Payment aayi ya nahi, iska final proof passbook
-          ki entry hai. Portal par "Disbursed" aur account mein credit ke beech 2-3 din ka gap
-          normal hai.
-        </li>
-      </ul>
-
-      <h2>Naye Kisan Ka Pehla Season — Kis Kram Mein Kya Karein</h2>
-
-      <p>
-        Zameen abhi naam par aayi hai — kharidi ya virasat se — to Rythu Bharosa ka safar
-        Dharani se shuru hota hai, portal se nahi. Kram ye hai: pehle registration ya
-        succession ke zariye Dharani mein apna naam pattadar ke roop mein darj karwaayein
-        aur nayi pattadar passbook lein. Phir bank mein Aadhaar seeding confirm karein —
-        payment NPCI mapper se hoti hai, sirf khaata khula hona kaafi nahi. Iske baad kuch
-        karna nahi hai; list Dharani ke record se banti hai aur naya khata agle season ke
-        phase mein apne aap ginti mein aa jaata hai.
-      </p>
-
-      <p>
-        Pehle season mein sabse aam galti intezaar ki disha galat hona hai — log portal
-        par apna naam dhoondhte rehte hain jabki asli rukavat Dharani ke record ya bank
-        seeding mein hoti hai. Passbook mil gayi, seeding ho gayi, phir bhi do season tak
-        kuch na aaye — tab MRO office mein apne khate ki sthiti likhit mein poochhein.
-        Wahan ke record mein hi dikhega ki khata kis phase mein hai ya kis wajah se ruka
-        hai.
       </p>
 
       <h2>Baaki Rajyon Ka Hisaab</h2>
