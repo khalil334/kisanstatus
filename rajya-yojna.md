@@ -1,4 +1,5 @@
-Task: In 10 existing kisan yojana articles ka sirf STRUCTURE change karna hai. 
+https://github.com/khalil334/kisanstatus/tree/main/components%2Farticles%2Frajya-yojana
+Task: In 10 existing rajya yojana articles ka sirf STRUCTURE change karna hai. 
 Content rewrite NAHI karna, trim NAHI karna, information delete NAHI karni.
 
 Rules:
