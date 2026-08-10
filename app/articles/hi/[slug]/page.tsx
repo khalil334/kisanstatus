@@ -54,7 +54,9 @@ export async function generateMetadata({
 
   return {
     metadataBase: new URL(SITE_URL),
-    title: article.titleHi,
+    // seoTitleHi (when set) keeps the SERP <title> ≤ 60 chars incl. the
+    // " | KisanStatus" template suffix; titleHi stays the H1 / og:title.
+    title: article.seoTitleHi ?? article.titleHi,
     description: article.desc,
     keywords: [...article.keywords],
     // hreflang: pairs this Devanagari page with its indexed Hinglish counterpart

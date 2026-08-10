@@ -349,7 +349,7 @@ export default function PmKisanNewRegistration2027({ article }: { article: Hindi
         <p>
           Status check करने के लिए portal पर <strong>Status of Self Registered Farmer</strong> का option है
           — आधार नंबर डालिए और देखिए आवेदन किस table पर पड़ा है। Table-दर-table उसकी व्याख्या{' '}
-          <Link href="/articles/PmKisanSelfRegisteredStatusCheck">अलग लेख में खोलकर समझाई है</Link>।
+          <Link href="/articles/pm-kisan-self-registered-status-check">अलग लेख में खोलकर समझाई है</Link>।
         </p>
         <p>
           UP के एक किसान का experience बताते हैं — आवेदन May में किया, approval September में आया, पहला पैसा
@@ -517,7 +517,7 @@ export default function PmKisanNewRegistration2027({ article }: { article: Hindi
             <Link href="/articles/PmKisanEkycOnline2026">🔐 eKYC Online Guide</Link>
           </li>
           <li>
-            <Link href="/articles/PmKisanSelfRegisteredStatusCheck">🔎 Self-Registered Status Check</Link>
+            <Link href="/articles/pm-kisan-self-registered-status-check">🔎 Self-Registered Status Check</Link>
           </li>
           <li>
             <Link href="/articles/PmKisanCscRegistrationCharges">💰 CSC Registration Charges</Link>
