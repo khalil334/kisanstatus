@@ -5,7 +5,6 @@ import ExternalLinkButton from '@/components/ui/ExternalLinkButton';
 import InfoBox from '@/components/ui/InfoBox';
 import SchemeTable from '@/components/ui/SchemeTable';
 import PmKisanFamilyChecker from '@/components/articles/rajya-yojana/tools/PmKisanFamilyChecker';
-import { FAQBlock } from '@/components/ArticleShared';
 
 const FAQS_DATA = [
   {
@@ -338,6 +337,35 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
           kyunki wo tehsil aur bank dono jagah karana padta hai.
         </p>
 
+        <h2>Shaadi, Virasat, Batwaara — Zindagi Ke Mod Par Registration Ka Kya Ho</h2>
+
+        <p>
+          Family rule ka asli imtihaan tab aata hai jab ghar ki haalat badalti hai. Teen
+          mod sabse aam hain, aur teeno par karna alag-alag hai.
+        </p>
+
+        <p>
+          <strong>Shaadi:</strong> beti ka registration mayke ki zameen par tha aur shaadi
+          ho gayi — ab wo apne pati ke saath naya family unit hai. Mayke wali zameen agar
+          record mein uske naam par hai to claim ban sakta hai, lekin sasural ke unit mein
+          pehle se koi registration hai to dono mein se ek hi chalega. Yahan bhi wahi kasauti
+          hai: record kis ke naam, unit kaun sa.
+        </p>
+
+        <p>
+          <strong>Virasat:</strong> registration wale sadasya ke guzar jaane par purani
+          entry par kist lena band karein — wo recovery ka seedha raasta hai. Pehle mutation
+          se zameen waaris ke naam ho, phir waaris apna naya registration kare. Beech ke
+          mahinon ki kistein chhod deni padti hain; ye nuksan nahi, niyam hai.
+        </p>
+
+        <p>
+          <strong>Batwaara:</strong> upar vistaar se likha hai — zubaani ya panchayat ke
+          kagaz se kuch nahi hota, tehsil ka mutation hi batwaara hai. Mutation ke baad har
+          naya khatedar apna registration alag se karega; purana registration apne aap
+          update nahi hota.
+        </p>
+
         <h2>Kaise Pakda Jaata Hai — Data Ab Aapas Mein Juda Hua Hai</h2>
 
         <Fig
@@ -367,11 +395,103 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
 
         <h2>Wo Sawaal Jo Har Roz Poochhe Jaate Hain</h2>
 
-        <FAQBlock faqs={FAQS_DATA} caption="PM Kisan pati-patni rule — ground-level sawaal jawab" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: FAQS_DATA.map((f) => ({
+                '@type': 'Question',
+                name: f.q,
+                acceptedAnswer: { '@type': 'Answer', text: f.a },
+              })),
+            }),
+          }}
+        />
+        <section className="mb-8 not-prose">
+          <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">PM Kisan pati-patni rule — ground-level sawaal jawab</p>
+          <div className="space-y-3">
+            {FAQS_DATA.map(({ q, a }) => (
+              <details
+                key={q}
+                className="border border-[var(--color-border)] rounded-xl overflow-hidden group"
+              >
+                <summary className="p-4 font-semibold text-[var(--color-text)] cursor-pointer bg-[var(--color-bg-alt)] hover:bg-green-50 dark:hover:bg-green-900/20 text-sm flex justify-between items-center gap-3 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">
+                  <span>{q}</span>
+                  <span className="text-green-600 dark:text-green-400 text-xl group-open:rotate-45 transition-transform shrink-0">
+                    +
+                  </span>
+                </summary>
+                <div className="p-4 text-sm text-[var(--color-text-muted)] leading-relaxed border-t border-[var(--color-border)]">
+                  {a}
+                </div>
+              </details>
+            ))}
+          </div>
+        </section>
 
         <p>
           Apne rajya ki scheme mein bataidar kisan ko jagah milti hai ya nahi, ye{' '}
           <Link href="/rajya-yojana">rajya kisan yojana list</Link> mein dekh sakte hain.
+        </p>
+
+        <h2>Teen Ghar, Teen Faisle — Rule Ko Misaal Se Samajhein</h2>
+
+        <p>
+          <strong>Pehla ghar:</strong> pati ke naam do bigha, patni ke naam teen bigha.
+          Dono ke registration alag-alag CSC se ho gaye the aur dono khaton mein kist aa
+          rahi thi. Verification mein dono Aadhaar ek hi parivaar se jude nikle. Sahi
+          raasta yahan ye tha ki jiski teeno kagaz (land record, Aadhaar, bank) ek jaise
+          the — patni ke the — uska registration rehta aur pati apna surrender karta.
+          Unhone yahi kiya, refund challan se pichli kistein lautayi, aur patni ka
+          registration bina rukavat chal raha hai.
+        </p>
+
+        <p>
+          <strong>Doosra ghar:</strong> pita aur do baalig bete. Zameen abhi poori pita ke
+          naam hai, batwaara sirf zubaani hua hai. Teeno ke registration ho gaye the — do
+          gir gaye. Yahan jaldi ka raasta koi nahi hai: pehle tehsil mein batwaara aur
+          mutation, uske baad hi beton ke apne claim banenge. Jab tak record ek hai, claim
+          ek hai.
+        </p>
+
+        <p>
+          <strong>Teesra ghar:</strong> vidhwa maa aur uska baalig beta, dono ke naam par
+          virasat ki zameen mutation ke saath alag-alag darj ho chuki hai. Ye do alag
+          family unit hain — maa apna registration rakh sakti hai aur beta apna. Yahan do
+          registration hona bilkul jaayaz hai, aur kisi surrender ki zaroorat nahi.
+        </p>
+
+        <p>
+          In teeno mein farak sirf ek cheez ka hai — revenue record. Ghar ka batwara,
+          ration card, ya rehne ka alag intezaam scheme ki nazar mein kuch nahi badalta;
+          jo tehsil ke kagaz mein hai, wahi sach hai.
+        </p>
+
+        <h2>Surrender Ka Faisla Lene Se Pehle — Kya Kya Milaa Lein</h2>
+
+        <p>
+          Jis ghar mein do registration chal rahe hain, wahan surrender se pehle ek chhota
+          sa audit kaam aata hai. Dono registration ke against ye chaar cheezein likh kar
+          milaayein: kis par kitni kistein aa chuki hain, kiske land record ki seeding
+          complete hai, kiske Aadhaar ki spelling teeno jagah ek jaisi hai, aur kiska
+          mobile number aaj bhi active hai.
+        </p>
+
+        <p>
+          Aam taur par jawab khud saamne aa jaata hai — ek registration har jagah saaf
+          hota hai aur doosra kahin na kahin atka hua. Saaf wala rakhein, atka hua
+          surrender karein. Refund ka hisaab bhi isi audit se nikal aata hai: jo kistein
+          surrender wale registration par aayi hain, wahi lautani hain — rakhe gaye
+          registration ki kistein jaayaz hain, unka refund nahi banta.
+        </p>
+
+        <p>
+          Ek baat aur — surrender ke baad usi season ki agli kist ka schedule nahi
+          badalta. Rakhe gaye registration par kist apne time par hi aayegi; surrender
+          karne se koi “nayi” kist ya adjust hua paisa nahi milta. Agent log kabhi-kabhi
+          iske ulte dawe karte hain — unse door rahein.
         </p>
 
         <h2>Chhoti Aadatein Jo Recovery Se Bacha Leti Hain</h2>

@@ -4,7 +4,6 @@ import type { RajyaYojanaArticleMeta } from '@/lib/rajya-yojana-data';
 import ExternalLinkButton from '@/components/ui/ExternalLinkButton';
 import InfoBox from '@/components/ui/InfoBox';
 import SchemeTable from '@/components/ui/SchemeTable';
-import { FAQBlock } from '@/components/ArticleShared';
 
 const IMG_BASE = '/images/articles/rajya-yojna/krishak-unnati-yojana-status-check-2026';
 
@@ -293,6 +292,24 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
         koi fees nahi lagti.
       </InfoBox>
 
+      <h2>Antar Rashi Ka Apna Hisaab Kaise Lagayein</h2>
+
+      <p>
+        Credit aane se pehle apna anumaanit figure nikaal lena sabse kaam ki aadat hai. Iske
+        liye do numbers chahiye: bechi gayi kul maatra (taul parchiyon ka jod, quintal mein)
+        aur us saal ki prati quintal antar rashi (support price aur ₹3,100 ka farak, jo
+        release ke waqt announcements mein saaf likha hota hai). Dono ka guna kar lein —
+        wahi aapki antar rashi hai. Misaal ke taur par, 40 quintal becha aur antar ₹800
+        prati quintal nikla, to khaate mein ₹32,000 aana chahiye.
+      </p>
+
+      <p>
+        Credit is hisaab se kam aaye to farak do hi jagah ho sakta hai — ya kharidi ki
+        entry mein maatra kam darj hai (samiti ka mamla), ya bank side mein koi katauti hui
+        hai (passbook ki debit entries dekhein). Farak jahan ka hai, shikayat wahin le
+        jaayein; galat darwaze par khada hona hi sabse zyada waqt kha jaata hai.
+      </p>
+
       <h2>Kagaz Jo Har Season Kaam Aate Hain</h2>
 
       <Fig
@@ -318,6 +335,100 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
           AgriStack registration ke liye zaroori.
         </li>
       </ul>
+
+      <h2>Season Ki Poori Timeline — Ek Kisan Ki Nazar Se</h2>
+
+      <p>
+        Scheme ko kagaz par samajhna ek baat hai, season ke hisaab se jeena doosri. Neeche
+        wahi kram hai jis kram mein ek aam kisan ka saal chalta hai — kaunsa kaam kis mausam
+        mein aata hai aur kis kadam par laaparwahi baad mein bhaari padti hai.
+      </p>
+
+      <p>
+        <strong>Bawai se pehle:</strong> kisan panjiyan ki jaanch. Naya khaata kharida ho,
+        batwaara hua ho, ya pichle saal koi entry galat rahi ho — sudhaar ka sahi waqt yahi
+        hai. Season shuru hone ke baad panjiyan mein badlav karwana lambi line ka kaam ban
+        jaata hai, aur kharidi ke waqt tak galti reh gayi to uska asar seedha antar rashi
+        par padta hai.
+      </p>
+
+      <p>
+        <strong>Kharidi ke dauraan:</strong> token, taul, parchi — teeno ka record apne paas.
+        Samiti par bheed ke dinon mein entry ki galti sabse zyada hoti hai. Taul ke turant
+        baad parchi ki maatra apni aankhon se milaayein; ghar aakar milaane par galti pakdi
+        bhi jaaye to saabit karna mushkil ho jaata hai. Ek hi season mein kai baar dhan
+        bechne wale kisan har trip ki parchi alag sambhaalein — antar rashi kul maatra par
+        banti hai, aur ek parchi kho jaana seedha nuksan hai.
+      </p>
+
+      <p>
+        <strong>Kharidi ke baad, release se pehle:</strong> ye intezaar ka daur hai, lekin
+        khaali intezaar nahi. Isi beech bank ka kaam nipta lein — khaata active hai ya nahi,
+        Aadhaar seeding hui hai ya nahi, mobile number bank record mein current hai ya nahi.
+        Release ke din ye sab pehle se durust ho to paisa seedha aata hai; release ke baad
+        bhaagdaud shuru karne par hafte nikal jaate hain.
+      </p>
+
+      <p>
+        <strong>Release ke baad:</strong> passbook ya statement mein credit ki jaanch, aur
+        raqam ka apna hisaab. Bechi gayi kul maatra aapko pata hai, prati quintal ka antar
+        sarkar ne bata diya hai — dono ko guna karke apna anumaanit figure nikaal lein.
+        Credit us se kam aaye to farak ki wajah dhoondhne ka aadhaar yahi hisaab banta hai.
+      </p>
+
+      <h2>Aam Galtiyan Jo Har Season Dohraayi Jaati Hain</h2>
+
+      <p>
+        Khadya vibhag ke daftar mein aane wali shikayaton ka bada hissa kuch hi tarah ki
+        galtiyon se banta hai. Inhe pehle se jaan lena aadhi pareshani se bacha leta hai.
+      </p>
+
+      <ul>
+        <li>
+          <strong>Parchi ko raddi samajhna.</strong> Taul parchi kharidi ke mahinon baad kaam
+          aati hai, jab antar rashi ka farak dikhta hai. Jo kisan parchi sambhaal kar nahi
+          rakhte, unki shikayat zubaani reh jaati hai.
+        </li>
+        <li>
+          <strong>Doosre ke khaate mein bechna.</strong> Apni panjiyan ki seema ke baad
+          rishtedaar ya padosi ki panjiyan par dhan bechna — payment us ke khaate mein
+          jaayegi, aur wapas lena aapsi mamla ban jaata hai jisme scheme koi madad nahi
+          karti.
+        </li>
+        <li>
+          <strong>Band khaata dena.</strong> Kai kisan panjiyan mein wahi purana khaata
+          chhod dete hain jo kabhi ka band ya dormant ho chuka hai. DBT wahan se laut jaati
+          hai aur credit ka intezaar bekar chalta rehta hai.
+        </li>
+        <li>
+          <strong>SMS ko hi saboot maanna.</strong> SMS aana ya na aana bank ke record par
+          nirbhar hai. Credit ki pushti hamesha passbook ya statement se karein, message se
+          nahi.
+        </li>
+        <li>
+          <strong>Agent ke bharose file chhodna.</strong> Scheme mein kisi agent ki koi
+          bhoomika hai hi nahi. Samiti, khadya vibhag aur bank — teeno kaam kisan khud ya
+          parivaar ka koi sadasya kar sakta hai, bina kisi kharch ke.
+        </li>
+      </ul>
+
+      <h2>Shikayat Likhwani Ho To Kaise — Kaam Ka Tareeka</h2>
+
+      <p>
+        Zubaani shikayat ka koi record nahi banta, isliye jab bhi baat samiti ya vibhag tak
+        le jaani ho, likhit mein dein aur paavti (receiving) lein. Shikayat mein teen cheezein
+        zaroor likhein: apna kisan code, kharidi ki tareekh aur maatra (parchi ke hisaab se),
+        aur samasya ek line mein — entry kam darj hai, credit nahi aaya, ya raqam kam aayi.
+      </p>
+
+      <p>
+        Kis level par kaunsi baat sunayi jaati hai, ye bhi tay hai. Kharidi ki entry ka
+        mamla samiti aur khadya vibhag ke kshetra karyalay ka hai. Bank credit ka mamla
+        apni branch ka. Aur dono jagah se jawab na mile to jila level par khadya vibhag ya
+        collector karyalay mein wahi likhit shikayat, purani paavti ke saath, aage badhayi
+        ja sakti hai. Har kadam ka kagaz sambhaal kar rakhein — agla kadam usi par khada
+        hota hai.
+      </p>
 
       <h2>Chhattisgarh Se Bahar Ke Kisan Yahan Dekhein</h2>
 
@@ -351,7 +462,41 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
 
       <h2>Krishak Unnati Yojana — Aksar Poochhe Jaane Wale Sawaal</h2>
 
-      <FAQBlock faqs={FAQS_DATA} caption="Krishak Unnati Yojana FAQ 2026" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: FAQS_DATA.map((f) => ({
+              '@type': 'Question',
+              name: f.q,
+              acceptedAnswer: { '@type': 'Answer', text: f.a },
+            })),
+          }),
+        }}
+      />
+      <section className="mb-8 not-prose">
+        <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">Krishak Unnati Yojana FAQ 2026</p>
+        <div className="space-y-3">
+          {FAQS_DATA.map(({ q, a }) => (
+            <details
+              key={q}
+              className="border border-[var(--color-border)] rounded-xl overflow-hidden group"
+            >
+              <summary className="p-4 font-semibold text-[var(--color-text)] cursor-pointer bg-[var(--color-bg-alt)] hover:bg-green-50 dark:hover:bg-green-900/20 text-sm flex justify-between items-center gap-3 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">
+                <span>{q}</span>
+                <span className="text-green-600 dark:text-green-400 text-xl group-open:rotate-45 transition-transform shrink-0">
+                  +
+                </span>
+              </summary>
+              <div className="p-4 text-sm text-[var(--color-text-muted)] leading-relaxed border-t border-[var(--color-border)]">
+                {a}
+              </div>
+            </details>
+          ))}
+        </div>
+      </section>
 
       <InfoBox type="tip">
         <strong>Fraud se bachein:</strong> Antar rashi dilwane, naam judwane ya "file aage
