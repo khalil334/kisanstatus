@@ -371,7 +371,6 @@ export default function KisanCalculatorPage() {
   return (
     <main className="min-h-screen bg-gray-50">
 
-      {}
       <section className="bg-gradient-to-br from-green-800 via-green-700 to-green-600 text-white py-12 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-green-200 text-xs font-bold px-4 py-2 rounded-full mb-4">
@@ -389,7 +388,6 @@ export default function KisanCalculatorPage() {
         </div>
       </section>
 
-      {}
       <div className="sticky top-0 z-20 bg-white shadow-sm border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4 py-3">
           <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-hide">
@@ -409,11 +407,9 @@ export default function KisanCalculatorPage() {
         </div>
       </div>
 
-      {}
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
-          {}
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
               <div className="flex items-center gap-3 mb-6">
@@ -427,9 +423,7 @@ export default function KisanCalculatorPage() {
             </div>
           </div>
 
-          {}
           <div className="space-y-4">
-            {}
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
               <h3 className="font-bold text-gray-700 text-sm mb-3">🧮 Doosre Utilities</h3>
               <div className="space-y-2">
@@ -446,7 +440,6 @@ export default function KisanCalculatorPage() {
               </div>
             </div>
 
-            {}
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
               <h3 className="font-bold text-gray-700 text-sm mb-3">📚 Related Guides</h3>
               <div className="space-y-2">
@@ -462,7 +455,6 @@ export default function KisanCalculatorPage() {
               </div>
             </div>
 
-            {}
             <div className="bg-green-50 border border-green-200 rounded-2xl p-5">
               <p className="text-xs font-bold text-green-800 mb-2">🌐 Official Portal</p>
               <a
@@ -478,7 +470,6 @@ export default function KisanCalculatorPage() {
           </div>
         </div>
 
-        {}
         <div className="mt-10">
           <h2 className="text-xl font-black text-gray-800 mb-4">Saare Utilities</h2>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
@@ -497,7 +488,6 @@ export default function KisanCalculatorPage() {
           </div>
         </div>
 
-        {}
         <div className="mt-8 p-4 bg-gray-100 rounded-2xl text-xs text-gray-500">
           <strong>⚠️ Disclaimer:</strong> Yeh utilities sirf estimate ke liye hain. Actual amounts government rules, bank policies aur local conditions ke hisaab se alag ho sakte hain. Financial decisions lene se pehle apne bank, CSC center ya agriculture officer se confirm karein.
         </div>

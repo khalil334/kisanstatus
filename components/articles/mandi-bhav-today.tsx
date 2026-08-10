@@ -6,10 +6,6 @@ import Image from 'next/image';
 import { IB, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock } from '@/components/ArticleShared';
 import CountdownModal from '@/components/CountdownModal';
 
-// Both external feeds go through our own server-side routes so the data.gov.in and
-// OpenWeatherMap keys stay on the server instead of shipping in the client bundle
-// (BUG-8). Each route answers 503 when no key is configured, which is the old
-// "no key" path — the component then renders its static fallback.
 const MANDI_PROXY_URL = (state: string) => `/api/mandi?state=${encodeURIComponent(state)}`;
 const WEATHER_PROXY_URL = (state: string) => `/api/weather?state=${encodeURIComponent(state)}`;
 
@@ -53,7 +49,6 @@ interface WeatherData {
   rain: string;
 }
 
-/** One 3-hourly entry of the OpenWeatherMap `/data/2.5/forecast` response. */
 interface ForecastEntry {
   dt: number;
   main: { temp: number; temp_min: number };
@@ -437,10 +432,6 @@ export default function MandiBhavToday() {
 
   const stateFactor = STATE_PRICE_FACTOR[selectedState] ?? 1;
 
-  // Live API results only; `null` means "nothing fetched yet / fetch failed", in which
-  // case the rendered lists fall back to the state-adjusted static data below. Keeping
-  // the fallback derived instead of pushed into state is what removes the
-  // setState-in-effect calls (react-hooks/set-state-in-effect).
   const [liveVegetables, setLiveVegetables] = useState<CommodityItem[] | null>(null);
   const [liveFruits, setLiveFruits] = useState<CommodityItem[] | null>(null);
   const [liveWeather, setLiveWeather] = useState<readonly WeatherData[] | null>(null);
@@ -467,9 +458,6 @@ export default function MandiBhavToday() {
   }, []);
 
   useEffect(() => {
-    // Whether a key exists is now a server-side fact, so we always ask the proxy; a 503
-    // means "not configured" and lands in the catch below, where the rendered lists fall
-    // back to the state-adjusted static data exactly as before.
     let cancelled = false;
 
     async function fetchMandi() {
@@ -525,7 +513,6 @@ export default function MandiBhavToday() {
         }
       } catch {
         if (!cancelled) {
-          // Drop back to the derived static fallback for this state.
           setLiveVegetables(null);
           setLiveFruits(null);
           setIsLive(false);
@@ -541,9 +528,6 @@ export default function MandiBhavToday() {
   }, [selectedState]);
 
   useEffect(() => {
-    // Whether a key exists is now a server-side fact, so we always ask the proxy; a 503
-    // ("not configured") lands in the catch below and the rendered forecast falls back
-    // to WEATHER_FALLBACK exactly as before.
     let cancelled = false;
 
     async function fetchWeather() {

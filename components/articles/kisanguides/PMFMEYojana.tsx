@@ -3,13 +3,6 @@ import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
 
-// ⚠️ DEAD CODE — Next.js is metadata export ko ignore karta hai.
-// `export const metadata` sirf app/**/page.tsx ya layout.tsx mein kaam karta hai;
-// ye ek client-imported article component hai, isliye ye block render HI nahi hota.
-// Live <title>/description/canonical/OG `app/articles/[slug]/page.tsx` ke
-// generateMetadata() se aate hain, jo lib/articles-data.ts padhta hai.
-// >>> Title/description/canonical badalna hai to lib/articles-data.ts edit karo. <<<
-// Yahan edit karne se live page pe KUCHH nahi badlega. (Ref: fixplan.md BUG-3)
 export const metadata: Metadata = {
   title: 'PM FME Yojana 2026: Chhote Food Business Ke Liye 35% Subsidy Guide',
   description: 'PM FME Yojana complete guide. Janein micro food processing subsidy kaise lein, ODOP benefits, loan process, aur real ground reality.',
@@ -97,33 +90,31 @@ const jsonLd = {
 export default function PMFMEYojana() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-8 text-gray-800 dark:text-gray-200 leading-relaxed prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-blue-600 dark:prose-a:text-blue-400">
-      {}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {}
-      <Image 
-        src="/images/kisanguides/pmfhero.webp" 
-        alt="Small Food Processing Unit Making Pickle - PM FME Yojana Subsidy Guide" 
-        width={1200} 
-        height={630} 
+      <Image
+        src="/images/kisanguides/pmfhero.webp"
+        alt="Small Food Processing Unit Making Pickle - PM FME Yojana Subsidy Guide"
+        width={1200}
+        height={630}
         priority
         sizes="(max-width: 768px) 100vw, 1200px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose"
       />
-      
+
       <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100 leading-tight">
         PM FME Yojana 2026: Chhote Food Business Ke Liye 35% Subsidy Guide
       </h1>
-      
+
       <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
         <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
           <strong>Sach kahoon toh:</strong> Bharat mein hazaron chhote food businesses (jaise achar, papad, bakery, ya namkeen) sirf isliye local market tak seemit reh jate hain kyunki unke paas proper branding, FSSAI license, ya modern packaging ka budget nahi hota. Aksar dekha jata hai ki jab aise micro units ko thoda financial support aur technical guidance milta hai, toh unka turnover 3-4 guna tak badh sakta hai.
         </p>
       </div>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
         PM FME (PM Formalisation of Micro food processing Enterprises) Yojana ka maqsad bilkul yahi hai. Yeh scheme specifically un logon ke liye design ki gayi hai jo pehle se chhote level par kaam kar rahe hain, lekin ab apne business ko ek proper brand mein badalna chahte hain. Isme 35% tak ki credit-linked subsidy milti hai, jo ek chhote entrepreneur ke liye game-changer sabit ho sakti hai.
       </p>
@@ -131,7 +122,7 @@ export default function PMFMEYojana() {
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         PM FME Kya Hai? Aur Kaun Apply Kar Sakta Hai?
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         PM FME Yojana 2020 mein launch hui thi, jiska mukhya uddeshya unregistered micro food processing units ko formal economy mein lana hai. India mein 2.5 crore se zyada aise chhote units hain, lekin unmein se 90% se zyada bina kisi legal registration ya quality certification ke chal rahe hain. Iska seedha asar unki earning par padta hai, kyunki bina FSSAI license ke wo bade retailers ya online platforms par apna product nahi bech sakte.
       </p>
@@ -155,7 +146,7 @@ export default function PMFMEYojana() {
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         ODOP: Ek Zila, Ek Utpaad - Iska Kya Matlab Hai?
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         PM FME ka sabse unique aur powerful feature hai ODOP (One District One Product) concept. Iske tahat, har district ne ek specific food product choose kiya hai jo wahan traditionally banta hai ya jiske liye wahan ka raw material sabse achha hai.
       </p>
@@ -173,14 +164,13 @@ export default function PMFMEYojana() {
         </ul>
       </div>
 
-      {}
-      <Image 
-        src="/images/kisanguides/odop-products.webp" 
-        alt="ODOP Regional Food Products - Makhana, Papad, Pickle Display" 
-        width={800} 
-        height={450} 
+      <Image
+        src="/images/kisanguides/odop-products.webp"
+        alt="ODOP Regional Food Products - Makhana, Papad, Pickle Display"
+        width={800}
+        height={450}
         sizes="(max-width: 768px) 100vw, 800px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose"
       />
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
@@ -200,7 +190,7 @@ export default function PMFMEYojana() {
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Subsidy Kitni Milti Hai? Realistic Numbers
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         PM FME ke under 35% credit-linked subsidy milti hai. "Credit-linked" ka matlab yeh hai ki pehle aapko bank se loan lena padega, aur jab bank loan disburse karega, tab government aapko 35% amount subsidy ke roop mein wapas karegi (jo bank aapke loan principal mein adjust kar dega).
       </p>
@@ -249,7 +239,7 @@ export default function PMFMEYojana() {
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Kis Kis Cheez Par Subsidy Milti Hai?
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         PM FME ke under yeh sab expenses cover hote hain:
       </p>
@@ -310,19 +300,18 @@ export default function PMFMEYojana() {
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Application Process: Step-by-Step Ground Reality
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         PM FME ke under apply karne ka process thoda detailed hai, lekin agar aap step-by-step follow karein, toh mushkil nahi hai. Poore process mein 4-6 mahine lag sakte hain, isliye patience rakhein.
       </p>
 
-      {}
-      <Image 
-        src="/images/kisanguides/application-process.webp" 
-        alt="Entrepreneur Applying for PM FME Loan at Bank Branch" 
-        width={800} 
-        height={450} 
+      <Image
+        src="/images/kisanguides/application-process.webp"
+        alt="Entrepreneur Applying for PM FME Loan at Bank Branch"
+        width={800}
+        height={450}
         sizes="(max-width: 768px) 100vw, 800px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose"
       />
 
       <div className="space-y-6 mb-8 not-prose">
@@ -394,15 +383,15 @@ export default function PMFMEYojana() {
         Application fee ₹1,000 - ₹2,000 lagti hai (non-refundable). Process ko jaldi complete karne ke liye apne saare documents pehle se ready rakhein.
       </p>
 
-      <ExternalLinkButton 
-        url="https://pmfme.mofpi.gov.in/" 
-        label="PM FME Official Portal - Apply Karein" 
+      <ExternalLinkButton
+        url="https://pmfme.mofpi.gov.in/"
+        label="PM FME Official Portal - Apply Karein"
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Ground Reality: PM FME Se Business Kaise Transform Hota Hai
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Sirf theory nahi, ek typical scenario dekhte hain jo field mein aksar dekha jata hai:
       </p>
@@ -421,14 +410,13 @@ export default function PMFMEYojana() {
         </div>
       </div>
 
-      {}
-      <Image 
-        src="/images/kisanguides/packaged-products.webp" 
-        alt="Branded Packaged Food Products Ready for Market - PM FME Success" 
-        width={800} 
-        height={450} 
+      <Image
+        src="/images/kisanguides/packaged-products.webp"
+        alt="Branded Packaged Food Products Ready for Market - PM FME Success"
+        width={800}
+        height={450}
         sizes="(max-width: 768px) 100vw, 800px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose"
       />
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
@@ -438,7 +426,7 @@ export default function PMFMEYojana() {
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Documents Required: Complete Checklist
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         PM FME application ke liye yeh documents chahiye:
       </p>
@@ -473,14 +461,13 @@ export default function PMFMEYojana() {
         </ul>
       </div>
 
-      {}
-      <Image 
-        src="/images/kisanguides/documents-checklist.webp" 
-        alt="PM FME Application Documents - Aadhaar, FSSAI, Udyam Certificate" 
-        width={800} 
-        height={450} 
+      <Image
+        src="/images/kisanguides/documents-checklist.webp"
+        alt="PM FME Application Documents - Aadhaar, FSSAI, Udyam Certificate"
+        width={800}
+        height={450}
         sizes="(max-width: 768px) 100vw, 800px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose"
       />
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
@@ -490,7 +477,7 @@ export default function PMFMEYojana() {
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Common Mistakes Jo Applicants Karte Hain
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Kai applications sirf chhoti chookon ki wajah se reject ho jati hain. In common mistakes se bachein:
       </p>
@@ -520,7 +507,7 @@ export default function PMFMEYojana() {
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         PM FME vs PMEGP: Kaunsi Scheme Better Hai?
       </h2>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Do similar schemes hain - PM FME aur PMEGP. Dono mein confusion hota hai. Clear karte hain:
       </p>
@@ -576,7 +563,7 @@ export default function PMFMEYojana() {
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Kya Aapke Liye Sahi Hai? Final Decision Framework
       </h2>
-      
+
       <div className="grid md:grid-cols-2 gap-6 mb-8 not-prose">
         <div className="bg-green-50 dark:bg-green-900/20 p-5 rounded-lg border border-green-200 dark:border-green-800">
           <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">✅ Haan, agar:</h3>
@@ -604,7 +591,6 @@ export default function PMFMEYojana() {
         <strong>Meri advice:</strong> Pehle apne district ka ODOP product pata karein. Agar aap wahi product process karte hain, toh extra benefits milenge. Phir Udyam registration aur FSSAI lein. Uske baad bank jayein, loan apply karein, aur phir PM FME portal par apply karein. Apne nazdeeki District Industries Center (DIC) ke officers se zaroor consult karein, wo application mein bahut help kar sakte hain.
       </p>
 
-      {}
       <h2 id="faq" className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Frequently Asked Questions (FAQs)
       </h2>

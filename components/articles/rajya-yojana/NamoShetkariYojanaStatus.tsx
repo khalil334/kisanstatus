@@ -151,7 +151,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       <h2>Sabse Badi Khasiyat: Alag Se Apply Nahi Karna Padta</h2>
 
       <p>
-        Is scheme ka sabse bada advantage ye hai ki aapko <strong>namo shetkari yojana registration</strong> ke liye alag se koi form nahi bharna padta. Maharashtra sarkar seedha PM Kisan ke database ko use karti hai. 
+        Is scheme ka sabse bada advantage ye hai ki aapko <strong>namo shetkari yojana registration</strong> ke liye alag se koi form nahi bharna padta. Maharashtra sarkar seedha PM Kisan ke database ko use karti hai.
       </p>
 
       <p>

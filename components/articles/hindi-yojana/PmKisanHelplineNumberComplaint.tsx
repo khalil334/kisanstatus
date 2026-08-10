@@ -2,9 +2,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
-// यह article जानबूझकर self-contained है — कोई shared component import नहीं।
-// Structure variant: escalation-ladder (सीढ़ी) sections + inline FAQ.
-
 const FAQS = [
   {
     q: 'पीएम किसान का हेल्पलाइन नंबर क्या है?',

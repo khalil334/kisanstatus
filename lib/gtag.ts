@@ -1,4 +1,4 @@
-export type GA4Event = 
+export type GA4Event =
   | 'page_view'
   | 'scroll'
   | 'click'
@@ -73,8 +73,6 @@ export type GTagEvent = {
   value?: string | number;
 };
 
-// BUG-4: no hardcoded fallback ID. Set NEXT_PUBLIC_GA_ID in the environment
-// (Vercel project settings); without it GA is simply disabled.
 export const GA_MEASUREMENT_ID: string = process.env.NEXT_PUBLIC_GA_ID ?? '';
 
 export function isGAEnabled(): boolean {

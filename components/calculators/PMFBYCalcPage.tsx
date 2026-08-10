@@ -41,16 +41,11 @@ export default function PMFBYCalcPage() {
   const insured    = Number(sumInsured)||0;
   const areaHa     = Number(area)||1;
   const totalCover = insured * areaHa;
-  // Under PMFBY the listed rate IS the farmer's share (capped % of sum insured).
-  // Government pays the remainder of the actuarial premium, which varies by
-  // district notification — it cannot be computed from the rate alone.
   const farmerPays = (totalCover * rate)/100;
-
-
 
   return (
     <>
-      
+
       <CalcHeader
         emoji="🛡️"
         title="Fasal Bima Premium Calculator 2026"
@@ -60,14 +55,12 @@ export default function PMFBYCalcPage() {
 
       <div className="container-site max-w-2xl py-8">
 
-        {}
         <div className="flex flex-wrap gap-3 text-xs text-gray-500 mb-4">
           <span>✍️ <Link href="/about" className="underline hover:text-gray-700">{AUTHOR_NAME}</Link></span>
           <span>📅 {fmtDate(PUBLISHED)}</span>
           <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
         </div>
 
-        {}
         <div className="mb-6 p-5 bg-amber-50 border border-amber-200 rounded-xl text-sm text-gray-700 leading-relaxed">
           <p className="font-bold text-amber-900 mb-2">🛡️ Fasal Bima — Kharab Fasal Par Bhi Paisa Milega</p>
           <p className="mb-2">
@@ -122,7 +115,7 @@ export default function PMFBYCalcPage() {
               <ResultRow label="Total Coverage Amount" value={fmt(totalCover)} />
               <ResultRow label="Aap Kitna Denge (Aapka Premium)" value={fmt(Math.max(0,farmerPays))} bold highlight />
               <p className="text-[11px] text-amber-700 mt-2">🎁 Actual premium isse zyada hota hai — baaki hissa government bharti hai (amount district notification par depend karta hai)</p>
-              
+
               <div className="mt-3 pt-3 border-t border-amber-200">
                 <p className="text-xs text-amber-800">
                   🛡️ Agar fasal kharab hui to maximum compensation: <strong>{fmt(totalCover)}</strong>
@@ -136,7 +129,6 @@ export default function PMFBYCalcPage() {
             </div>
           )}
 
-          {}
           <div className="mt-5">
             <p className="font-bold text-gray-900 text-xs mb-3">📋 Sabhi Fasal Ka Premium Rate</p>
             <div className="overflow-x-auto rounded-xl border border-gray-200">
@@ -162,7 +154,6 @@ export default function PMFBYCalcPage() {
           </div>
         </div>
 
-        {}
         <div className="mt-6 bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
           <h3 className="font-black text-gray-900 text-sm mb-4">⚡ Fasal Kharab Ho Jaye To Claim Kaise Le?</h3>
           <div className="space-y-3">
@@ -194,7 +185,6 @@ export default function PMFBYCalcPage() {
           </div>
         </div>
 
-        {}
         <div className="mt-6 bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
           <h3 className="font-black text-gray-900 text-sm mb-3">✅ Kaun Fasal Bima Le Sakta Hai?</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
@@ -210,14 +200,13 @@ export default function PMFBYCalcPage() {
               </div>
             ))}
           </div>
-          
+
           <Link href="/articles/PmfbyCropInsurance2026"
             className="mt-4 inline-flex items-center gap-2 text-xs font-bold text-amber-700 hover:text-amber-900">
             📖 Fasal Bima Complete Guide Padho →
           </Link>
         </div>
 
-        {}
         <div className="mt-6">
           <h3 className="font-black text-gray-900 text-sm mb-3">💡 Fasal Bima Se Maximum Fayda Kaise Uthao</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
@@ -240,7 +229,6 @@ export default function PMFBYCalcPage() {
           </div>
         </div>
 
-        {}
         <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-xl">
           <p className="font-bold text-yellow-900 text-sm mb-2">⚠️ Fasal Bima Mein Aksar Yeh Galtiyan Hoti Hain:</p>
           <ul className="space-y-1.5 text-xs text-yellow-800">
@@ -253,10 +241,9 @@ export default function PMFBYCalcPage() {
         </div>
 
         <CalcDisclaimer note="Premium rates district-wise alag ho sakte hain. Sum insured bhi alag hota hai. Exact figures ke liye apni bank branch, CSC center ya pmfby.gov.in se confirm karo." />
-        
+
         <OtherCalcs current="/calculator/pmfby-premium" />
 
-        {}
         <div className="mt-6 p-5 bg-amber-50 border border-amber-200 rounded-xl">
           <p className="font-bold text-amber-900 text-sm mb-3">📖 Fasal Bima Se Related Guides</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -281,7 +268,6 @@ export default function PMFBYCalcPage() {
           </div>
         </div>
 
-        {}
         <div className="mt-6 p-5 bg-gray-50 border border-gray-200 rounded-xl">
           <p className="font-bold text-gray-900 text-sm mb-3">❓ Fasal Bima Ke Baare Mein Aksar Sawaal</p>
           <div className="space-y-3 text-xs">

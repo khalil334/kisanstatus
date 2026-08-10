@@ -38,18 +38,14 @@ export default function KCCLoanCalcPage() {
     emi=P/N; totalPayable=P; totalInterest=0;
   }
 
-  // 2% interest subvention is per annum on the principal, so it scales with the
-  // loan tenure — and it is capped by the interest actually payable.
   const subsidy = Number(rate)<=7
     ? Math.min(P*0.02*(N/12), totalInterest)
     : 0;
   const effectiveCost = totalPayable - subsidy;
 
-
-
   return (
     <>
-      
+
       <CalcHeader
         emoji="🏦"
         title="KCC Loan EMI Calculator 2026"
@@ -59,14 +55,12 @@ export default function KCCLoanCalcPage() {
 
       <div className="container-site max-w-2xl py-8">
 
-        {}
         <div className="flex flex-wrap gap-3 text-xs text-gray-500 mb-4">
           <span>✍️ <Link href="/about" className="underline hover:text-gray-700">{AUTHOR_NAME}</Link></span>
           <span>📅 {fmtDate(PUBLISHED)}</span>
           <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
         </div>
 
-        {}
         <div className="mb-6 p-5 bg-blue-50 border border-blue-200 rounded-xl text-sm text-gray-700 leading-relaxed">
           <p className="font-bold text-blue-900 mb-2">🏦 KCC Loan Lene Se Pehle EMI Jaan Lo</p>
           <p className="mb-2">
@@ -126,8 +120,7 @@ export default function KCCLoanCalcPage() {
                   <p className="text-xs text-blue-600 mt-2">✅ Time par repay karo — ₹{fmt(subsidy).replace('₹','')} extra bachenge!</p>
                 </>
               )}
-              
-              {}
+
               <div className="mt-4 p-3 bg-white rounded-xl text-xs text-gray-700">
                 <p className="font-bold mb-1">📖 Iska Matlab Kya Hai?</p>
                 <p>Aapne {fmt(P)} ka loan liya {rate}% interest par {months} mahine ke liye. Har mahine {fmt(emi)} dena hoga. Total {fmt(totalInterest)} interest dena padega. Par agar time par repay kiya to {fmt(subsidy)} ki subsidy milegi — effective cost sirf {fmt(effectiveCost)} hogi.</p>
@@ -135,7 +128,6 @@ export default function KCCLoanCalcPage() {
             </div>
           )}
 
-          {}
           <div className="mt-5 grid grid-cols-2 gap-2">
             {[
               {t:'₹3 Lakh',d:'Maximum loan limit'},
@@ -151,7 +143,6 @@ export default function KCCLoanCalcPage() {
           </div>
         </div>
 
-        {}
         <div className="mt-6 bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
           <h3 className="font-black text-gray-900 text-sm mb-4">📋 KCC Loan Kaise Le — Step by Step</h3>
           <div className="space-y-3">
@@ -169,7 +160,7 @@ export default function KCCLoanCalcPage() {
               </div>
             ))}
           </div>
-          
+
           <div className="mt-4 p-3 bg-green-50 border border-green-200 rounded-xl">
             <p className="text-xs text-green-800 font-bold mb-1">📄 Documents Checklist:</p>
             <ul className="text-xs text-green-700 space-y-0.5 ml-4">
@@ -187,7 +178,6 @@ export default function KCCLoanCalcPage() {
           </Link>
         </div>
 
-        {}
         <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-xl">
           <p className="font-bold text-yellow-900 text-sm mb-2">⚠️ KCC Loan Mein Aksar Yeh Galtiyan Hoti Hain:</p>
           <ul className="space-y-1.5 text-xs text-yellow-800">
@@ -199,7 +189,6 @@ export default function KCCLoanCalcPage() {
           </ul>
         </div>
 
-        {}
         <div className="mt-6">
           <h3 className="font-black text-gray-900 text-sm mb-3">💡 KCC Loan Se Maximum Fayda Kaise Uthao</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
@@ -223,10 +212,9 @@ export default function KCCLoanCalcPage() {
         </div>
 
         <CalcDisclaimer note="Interest rates bank-wise alag hote hain. Kuch banks 9% tak charge karte hain. Actual EMI aur terms ke liye apni bank branch se confirm karo. Yeh calculator sirf estimate hai." />
-        
+
         <OtherCalcs current="/calculator/kcc-loan-emi" />
 
-        {}
         <div className="mt-6 p-5 bg-blue-50 border border-blue-200 rounded-xl">
           <p className="font-bold text-blue-900 text-sm mb-3">📖 KCC Loan Se Related Guides</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -251,7 +239,6 @@ export default function KCCLoanCalcPage() {
           </div>
         </div>
 
-        {}
         <div className="mt-6 p-5 bg-gray-50 border border-gray-200 rounded-xl">
           <p className="font-bold text-gray-900 text-sm mb-3">❓ KCC Loan Ke Baare Mein Aksar Sawaal</p>
           <div className="space-y-3 text-xs">

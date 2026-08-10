@@ -104,7 +104,6 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    // BUG-4: tokens come from env only; omit empty ones so no blank meta tags render.
     ...(GOOGLE_SITE_VERIFICATION ? { google: GOOGLE_SITE_VERIFICATION } : {}),
     other: {
       ...(BING_VERIFICATION ? { 'msvalidate.01': BING_VERIFICATION } : {}),
@@ -117,9 +116,6 @@ export const metadata: Metadata = {
     'geo.position': '20.5937;78.9629',
     'ICBM': '20.5937, 78.9629',
     'format-detection': 'telephone=no',
-    // apple-mobile-web-app-* entries removed — metadata.appleWebApp below is
-    // the canonical Next.js API and already emits them; keeping both caused
-    // duplicate tags in <head> (FIX-5 in fix.md).
     'application-name': SITE_NAME,
     'msapplication-TileColor': '#16A34A',
     'msapplication-config': '/browserconfig.xml',
@@ -184,7 +180,6 @@ export default function RootLayout({
           <Footer />
         </LanguageProvider>
 
-        {/* BUG-4: only load GA when NEXT_PUBLIC_GA_ID is set — no hardcoded ID. */}
         {GA_MEASUREMENT_ID && (
           <>
             <Script

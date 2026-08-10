@@ -68,7 +68,6 @@ const SEARCH_INDEX: readonly SearchEntry[] = [
     href: `/maandhan/${a.slug}`,
     title: a.title,
     desc: a.description,
-    // maandhan-data has no keywords field; title/desc/category still match.
     keywords: ['maandhan', 'pension'] as readonly string[],
     category: a.category,
     date: a.published || '',
@@ -108,9 +107,6 @@ function SearchModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
   const inputRef = useRef<HTMLInputElement>(null);
   const results = fuzzySearch(query);
 
-  // The parent only mounts this component while the modal is open, so the query
-  // resets on unmount — no setQuery('') in the effect body
-  // (react-hooks/set-state-in-effect).
   useEffect(() => {
     if (!isOpen) return;
     const focusTimer = setTimeout(() => inputRef.current?.focus(), 100);
@@ -131,8 +127,8 @@ function SearchModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
 
   return (
     <div className="fixed inset-0 z-[60]" role="dialog" aria-modal="true" aria-label="Search articles">
-      <div 
-        className="absolute inset-0 bg-black/50 backdrop-blur-sm" 
+      <div
+        className="absolute inset-0 bg-black/50 backdrop-blur-sm"
         onClick={onClose}
       />
       <div className="relative max-w-lg mx-auto mt-20 md:mt-32 px-4">
@@ -205,10 +201,6 @@ function SearchModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
   );
 }
 
-// --- external theme store (hydration-safe, no setState-in-effect) ---
-// The server can't know the visitor's theme, so it renders nothing; on the client
-// React reads localStorage / prefers-color-scheme right after hydration via
-// useSyncExternalStore, exactly like lib/LanguageContext.tsx does for language.
 let clientIsDark: boolean | null = null;
 const themeListeners = new Set<() => void>();
 
@@ -237,8 +229,6 @@ function setClientIsDark(next: boolean): void {
 
 const subscribeThemeNoop = () => () => {};
 
-// --- Ctrl/⌘+K hint (hydration-safe, no setState-in-effect) ---
-// Desktop-only, and only knowable on the client, so the server renders no hint.
 const subscribeShortcutNoop = () => () => {};
 
 function getClientShortcutKey(): string | null {
@@ -256,12 +246,8 @@ function getServerShortcutKey(): string | null {
 
 function ThemeToggle() {
   const isDark = useSyncExternalStore(subscribeTheme, getClientIsDark, getServerIsDark);
-  // false during SSR/hydration, true on the client — same semantics as the old
-  // `mounted` state, without setting state in an effect.
   const mounted = useSyncExternalStore(subscribeThemeNoop, () => true, () => false);
 
-  // Apply the resolved theme to <html>. This only touches the DOM (an external
-  // system), which is what effects are for — no setState here.
   useEffect(() => {
     const stored = localStorage.getItem('theme');
     const html = document.documentElement;
@@ -312,8 +298,6 @@ function ThemeToggle() {
 }
 
 export default function Header() {
-  // The mobile menu is derived from the route it was opened on, so navigating to a
-  // new page closes it automatically without a setState-in-effect.
   const [menuOpenedOn, setMenuOpenedOn] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -325,7 +309,7 @@ export default function Header() {
   useEffect(() => {
     let ticking = false;
     let lastScrollY = 0;
-    
+
     const onScroll = () => {
       lastScrollY = window.scrollY;
       if (!ticking) {
@@ -368,7 +352,7 @@ export default function Header() {
       {searchOpen && <SearchModal isOpen onClose={() => setSearchOpen(false)} />}
 
       {mobileOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/50 z-40 lg:hidden"
           onClick={() => setMobileOpen(false)}
           aria-hidden="true"
@@ -394,8 +378,8 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
-                    active 
-                      ? 'text-[var(--color-primary)] bg-[var(--color-bg-alt)]' 
+                    active
+                      ? 'text-[var(--color-primary)] bg-[var(--color-bg-alt)]'
                       : 'text-[var(--color-text)] hover:text-[var(--color-primary)] hover:bg-[var(--color-bg-alt)]'
                   }`}
                   aria-current={active ? 'page' : undefined}
@@ -502,8 +486,8 @@ export default function Header() {
                     href={link.href}
                     onClick={() => setMobileOpen(false)}
                     className={`block px-4 py-3 text-sm font-medium transition-colors ${
-                      active 
-                        ? 'text-[var(--color-primary)] bg-[var(--color-bg-alt)] border-l-4 border-[var(--color-primary)]' 
+                      active
+                        ? 'text-[var(--color-primary)] bg-[var(--color-bg-alt)] border-l-4 border-[var(--color-primary)]'
                         : 'text-[var(--color-text)] hover:bg-[var(--color-bg-alt)]'
                     }`}
                     aria-current={active ? 'page' : undefined}

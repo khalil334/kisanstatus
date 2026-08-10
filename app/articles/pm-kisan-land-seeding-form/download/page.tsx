@@ -39,7 +39,7 @@ export default function LandSeedingDownloadPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      
+
       <div className="min-h-screen bg-gradient-to-b from-green-50 to-white dark:from-gray-900 dark:to-gray-800">
         <div className="bg-[var(--color-primary)] py-6">
           <div className="container-site max-w-3xl">

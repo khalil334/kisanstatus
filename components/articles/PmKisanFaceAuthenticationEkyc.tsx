@@ -66,7 +66,6 @@ export default function PmKisanFaceAuthenticationEkyc() {
 
       <div className="container-site max-w-3xl py-8">
 
-        {}
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-face-authentication-ekyc/face-auth-hero.webp"
@@ -82,7 +81,6 @@ export default function PmKisanFaceAuthenticationEkyc() {
           </p>
         </div>
 
-        {}
         <section className="mb-8">
           <SH>OTP Nahi Aa Raha To Kya Karein</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -91,7 +89,7 @@ export default function PmKisanFaceAuthenticationEkyc() {
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Khushkhabri ye hai ki sarkar ne iska hal nikala hai — <strong>Face Authentication</strong>. Ab camera ke samne aakar, bina OTP ke apni eKYC complete kar sakte ho. Ye process PMKisan app par available hai aur bilkul free hai.
           </p>
-          
+
           <Image
             src="/images/articles/pm-kisan-face-authentication-ekyc/face-scan-screen.webp"
             alt="Face authentication screen in PM Kisan app showing live face scan process"
@@ -112,7 +110,6 @@ export default function PmKisanFaceAuthenticationEkyc() {
           </DB>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Face Authentication Kya Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -132,7 +129,6 @@ export default function PmKisanFaceAuthenticationEkyc() {
           </p>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Kaun Logon Ko Use Karna Chahiye?</SH>
           <div className="bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 rounded-xl p-5 mb-6">
@@ -156,7 +152,6 @@ export default function PmKisanFaceAuthenticationEkyc() {
           />
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Step-by-Step: Face Authentication Kaise Karein?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -207,7 +202,6 @@ export default function PmKisanFaceAuthenticationEkyc() {
           />
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Common Errors Aur Unka Fix</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -215,28 +209,28 @@ export default function PmKisanFaceAuthenticationEkyc() {
           </p>
           <div className="space-y-3">
             {[
-              { 
-                error: 'Face not detected', 
+              {
+                error: 'Face not detected',
                 fix: 'Camera saaf karo aur roshni mein aao. Window ke paas jakar try karo. Agar phir bhi na ho toh torch on karke try karo.',
                 extra: 'Ye sabse common error hai. 80% cases mein roshni ki kami hoti hai.'
               },
-              { 
-                error: 'Network timeout', 
+              {
+                error: 'Network timeout',
                 fix: 'WiFi ya 4G check karo. Airplane mode on karke 10 second baad off karo. Phir try karo.',
                 extra: 'Gaon mein network slow hota hai. Subah 6-8 baje ya raat 10 baje ke baad try karo jab network kam busy hota hai.'
               },
-              { 
-                error: 'Aadhaar mismatch', 
+              {
+                error: 'Aadhaar mismatch',
                 fix: 'Agar photo purani hai aur bilkul alag lag rahi hai, toh CSC jakar Aadhaar update karo pehle.',
                 extra: 'Agar 10 saal se zyada purani photo hai toh pehle Aadhaar center jakar photo update karna padega.'
               },
-              { 
-                error: 'Multiple attempts fail', 
+              {
+                error: 'Multiple attempts fail',
                 fix: '2-3 baar fail hone par turant CSC center par chale jao. Wahan biometric device se karwa lo.',
                 extra: 'Bar bar try karne se account temporarily lock ho sakta hai. 3 attempts ke baad ruk jao.'
               },
-              { 
-                error: 'App crash ho raha hai', 
+              {
+                error: 'App crash ho raha hai',
                 fix: 'App ka cache clear karo. Settings &gt; Apps &gt; PMKisan &gt; Storage &gt; Clear Cache. Phir try karo.',
                 extra: 'Agar phir bhi crash ho toh app uninstall karke dobara install karo.'
               },
@@ -253,7 +247,6 @@ export default function PmKisanFaceAuthenticationEkyc() {
           </p>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>CSC Center Se Bhi Karwa Sakte Ho</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -283,7 +276,6 @@ export default function PmKisanFaceAuthenticationEkyc() {
           </IB>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Face Authentication Ke Fayde</SH>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
@@ -304,7 +296,6 @@ export default function PmKisanFaceAuthenticationEkyc() {
           </div>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Authentication Ke Baad Kya Karein?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -335,7 +326,6 @@ export default function PmKisanFaceAuthenticationEkyc() {
           />
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Kya Har State Mein Available Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -369,7 +359,6 @@ export default function PmKisanFaceAuthenticationEkyc() {
           </div>
         </section>
 
-        {}
         <section className="mb-8">
           <SH>Advanced Troubleshooting</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -400,7 +389,6 @@ export default function PmKisanFaceAuthenticationEkyc() {
           </div>
         </section>
 
-        {}
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Aksar Puche Jane Wale Sawal

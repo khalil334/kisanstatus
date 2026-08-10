@@ -153,7 +153,7 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Bahut se kisan sochte hain, "jab paisa har mahine mere bank account se auto-cut ho raha hai, to alag se card ka kya kaam?" Ye ek bahut badi galatfehmi hai. Auto-debit sirf itna batata hai ki paisa ja raha hai, lekin ye confirm nahi karta ki aapka account technically active hai, aapki date of birth sahi register hui hai, aur aap 60 saal ke baad 3000 rupaye mahina paayenge hi.
           </p>
-          
+
           <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-r-xl">
             <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-3">📄 Scheme Ke Documented Rules — Jinke Liye Ye Kagaz Chahiye Hoga</h3>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-3">
@@ -189,7 +189,7 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Website kholne se pehle ye cheezein apne paas ready rakhein. Warna beech me process atak jayega aur phir wahi purani pareshani — "bhaiya aap hi kar do" kehkar phir se CSC wale ke darwaze par jaana padega.
           </p>
-          
+
           <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
             <Image
               src="/images/articles/maandhan/documents-ready.webp"
@@ -252,7 +252,7 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Har kisan ke paas smartphone ya stable internet nahi hota, aur ye bilkul theek hai. Aap apne nazdeeki Common Service Centre (CSC) par jaakar bhi ye document print karwa sakte hain. Bas apna Aadhaar le jaaiye, aur VLE (CSC operator) ko saaf shabdon me boliye ki "PM Kisan Maandhan ka pension acknowledgement print karwana hai."
           </p>
-          
+
           <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
             <Image
               src="/images/articles/maandhan/csc-bank-visit.webp"

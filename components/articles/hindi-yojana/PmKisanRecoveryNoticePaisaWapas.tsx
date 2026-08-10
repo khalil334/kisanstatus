@@ -2,9 +2,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
-// Self-contained article — कोई shared component import नहीं (Rule 2)।
-// Structure variant: decision-tree (तीन रास्ते) + case-file कहानियां + day-by-day timeline + dotted-card FAQ (Rule 3)।
-
 const FAQS = [
   {
     q: 'Notice मिला है पर मैं पात्र हूं — क्या फिर भी लौटाना पड़ेगा?',
@@ -66,7 +63,6 @@ const FAQ_SCHEMA = {
   })),
 };
 
-// Local building blocks — सब इसी file में (Rule 2)।
 function Figure({ src, alt, caption }: { src: string; alt: string; caption: string }) {
   return (
     <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">

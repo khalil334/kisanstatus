@@ -55,10 +55,10 @@ const FAQS_DATA = [
 ];
 
 export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: ArticleMeta }) {
-  const [modal, setModal] = useState<{ 
-    title: string; 
-    message: string; 
-    url: string; 
+  const [modal, setModal] = useState<{
+    title: string;
+    message: string;
+    url: string;
   } | null>(null);
 
   const handleOfficialLink = (title: string, message: string, url: string) => {

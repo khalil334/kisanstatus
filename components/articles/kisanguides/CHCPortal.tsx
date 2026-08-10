@@ -2,13 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
-// ⚠️ DEAD CODE — Next.js is metadata export ko ignore karta hai.
-// `export const metadata` sirf app/**/page.tsx ya layout.tsx mein kaam karta hai;
-// ye ek client-imported article component hai, isliye ye block render HI nahi hota.
-// Live <title>/description/canonical/OG `app/articles/[slug]/page.tsx` ke
-// generateMetadata() se aate hain, jo lib/articles-data.ts padhta hai.
-// >>> Title/description/canonical badalna hai to lib/articles-data.ts edit karo. <<<
-// Yahan edit karne se live page pe KUCHH nahi badlega. (Ref: fixplan.md BUG-3)
 export const metadata: Metadata = {
   title: 'Custom Hiring Centre (CHC) 2026: Tractor Rental Business Guide',
   description: 'CHC portal guide. Janein tractor aur farm implements kiraye par dekar paisa kaise kamayein, SMAM subsidy, aur real profit calculation.',
@@ -23,40 +16,39 @@ export const metadata: Metadata = {
     url: 'https://kisanstatus.com/articles/custom-hiring-centre-chc-portal',
     images: [{ url: 'https://kisanstatus.com/images/kisanguides/chc-portal-hero.webp', width: 1200, height: 630, alt: 'Custom Hiring Centre with Tractor and Farm Implements' }],
   },
-  twitter: { 
-    card: 'summary_large_image', 
-    title: 'Custom Hiring Centre (CHC) 2026: Tractor Rental Business Guide', 
-    description: 'CHC portal guide. Janein tractor aur farm implements kiraye par dekar paisa kaise kamayein.', 
-    images: ['https://kisanstatus.com/images/kisanguides/chc-portal-hero.webp'] 
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Custom Hiring Centre (CHC) 2026: Tractor Rental Business Guide',
+    description: 'CHC portal guide. Janein tractor aur farm implements kiraye par dekar paisa kaise kamayein.',
+    images: ['https://kisanstatus.com/images/kisanguides/chc-portal-hero.webp']
   },
   alternates: { canonical: 'https://kisanstatus.com/articles/custom-hiring-centre-chc-portal' },
 };
 
-
 export default function CHCPortal() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-8 text-gray-800 dark:text-gray-200 leading-relaxed prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-blue-600 dark:prose-a:text-blue-400">
-      
-      <Image 
-        src="/images/kisanguides/chc-portal-hero.webp" 
-        alt="Custom Hiring Centre CHC with Tractor and Farm Implements - Tractor Rental Business India" 
-        width={1200} 
-        height={630} 
+
+      <Image
+        src="/images/kisanguides/chc-portal-hero.webp"
+        alt="Custom Hiring Centre CHC with Tractor and Farm Implements - Tractor Rental Business India"
+        width={1200}
+        height={630}
         priority
         sizes="(max-width: 768px) 100vw, 1200px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose"
       />
-      
+
       <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100 leading-tight">
         Custom Hiring Centre (CHC) 2026: Tractor aur Implements Kiraye Par De Kar Paisa Kamayein
       </h1>
-      
+
       <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
         <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
           <strong>Dhyan rakhein:</strong> Bina proper market research seedha 5-10 lakh ka equipment kharidne par pehle saal mein dikkat aana aam hai. Lekin agar sahi planning, location selection aur driver management ho, toh Custom Hiring Centre (CHC) ek highly profitable, long-term business ban sakta hai.
         </p>
       </div>
-      
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
         Bharat mein 85% se zyada kisaanon ke paas 2 hectare (5 acre) se kam zameen hai. Aise chhote kisaan ke liye ₹8-10 lakh ka naya tractor khareedna namumkin hai. Yahan aapka role aata hai - aap machinery khareedte hain, aur unhe ghanton ya acre ke hisaab se kiraye par dete hain. Yeh model na sirf chhote kisaan ki madad karta hai, balki aapko ek stable farm machinery rental business bhi provide karta hai.
       </p>
@@ -111,7 +103,7 @@ export default function CHCPortal() {
         Kaunsa Samaan Khareedein? (Regional Demand)
       </h2>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Har ilake ki demand alag hoti hai. Punjab aur Haryana mein Happy Seeder aur Straw Management ki bhookh hai, jabki MP, UP, ya Bihar mein Rotavator, Cultivator aur Seed Drill zyada chalte hain. Blindly koi bhi machine mat khareediye. 
+        Har ilake ki demand alag hoti hai. Punjab aur Haryana mein Happy Seeder aur Straw Management ki bhookh hai, jabki MP, UP, ya Bihar mein Rotavator, Cultivator aur Seed Drill zyada chalte hain. Blindly koi bhi machine mat khareediye.
       </p>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Meri salah yehi rahegi: Apne nazdeeki Krishi Vigyan Kendra (KVK) ya progressive farmers se baat karke pata karein ki aapke block mein kis agricultural equipment ki sabse zyada kami hai. Wahi aapka pehla investment hona chahiye.
@@ -191,13 +183,13 @@ export default function CHCPortal() {
         Is initial capital ko manage karne ke liye, aap <Link href="/articles/KisanTractorLoan2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Tractor Loan Guide</Link> mein detail mein padh sakte hain ki kaise aap 7-8 saal ke liye kam byaaj (9-11%) par loan le sakte hain.
       </p>
 
-      <Image 
-        src="/images/kisanguides/chc-portal-registration.webp" 
-        alt="CHC Portal Registration and Application Process - SMAM Subsidy Online Apply" 
-        width={800} 
-        height={450} 
+      <Image
+        src="/images/kisanguides/chc-portal-registration.webp"
+        alt="CHC Portal Registration and Application Process - SMAM Subsidy Online Apply"
+        width={800}
+        height={450}
         sizes="(max-width: 768px) 100vw, 800px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose"
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
@@ -216,13 +208,13 @@ export default function CHCPortal() {
         <li>Approval aane par hi machinery khareedein aur bills submit karein.</li>
       </ol>
 
-      <Image 
-        src="/images/kisanguides/chc-portal-application.webp" 
-        alt="Site Verification aur Physical Inspection Process - CHC Field Visit by Agriculture Officer" 
-        width={800} 
-        height={450} 
+      <Image
+        src="/images/kisanguides/chc-portal-application.webp"
+        alt="Site Verification aur Physical Inspection Process - CHC Field Visit by Agriculture Officer"
+        width={800}
+        height={450}
         sizes="(max-width: 768px) 100vw, 800px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose"
       />
 
       <div className="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
@@ -275,13 +267,13 @@ export default function CHCPortal() {
         </table>
       </div>
 
-      <Image 
-        src="/images/kisanguides/chc-portal-profit.webp" 
-        alt="CHC Business Profit Calculation and ROI Analysis - Monthly income expense breakdown" 
-        width={800} 
-        height={450} 
+      <Image
+        src="/images/kisanguides/chc-portal-profit.webp"
+        alt="CHC Business Profit Calculation and ROI Analysis - Monthly income expense breakdown"
+        width={800}
+        height={450}
         sizes="(max-width: 768px) 100vw, 800px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose"
       />
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 font-semibold">Ab isme se kharcha nikalte hain:</p>
@@ -299,13 +291,13 @@ export default function CHCPortal() {
         </p>
       </div>
 
-      <Image 
-        src="/images/kisanguides/chc-portal-scale.webp" 
-        alt="CHC Business Scaling and Growth Strategy - Phase wise expansion plan" 
-        width={800} 
-        height={450} 
+      <Image
+        src="/images/kisanguides/chc-portal-scale.webp"
+        alt="CHC Business Scaling and Growth Strategy - Phase wise expansion plan"
+        width={800}
+        height={450}
         sizes="(max-width: 768px) 100vw, 800px"
-        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose" 
+        className="rounded-xl mb-8 shadow-md w-full h-auto object-cover not-prose"
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
