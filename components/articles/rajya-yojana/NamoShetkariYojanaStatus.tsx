@@ -128,19 +128,22 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         hota hai.
       </p>
 
-      <h2>Eligible Kaun Hai</h2>
+      <h2>Passbook Mein Entry Kaise Pehchanein</h2>
 
       <p>
-        Is scheme ka labh uthane ke liye aapko niche di gayi sharton ko poora karna hoga:
+        Ek chhoti si cheez jo bahut confusion bachati hai: dono schemes ka paisa ek hi
+        account mein aata hai, lekin entries alag naam se aati hain. PM Kisan ki entry mein
+        "PMKISAN" ka reference hota hai. Namo Shetkari ki entry state treasury se aati hai
+        aur usme "NSMNY" ya Mahait/treasury ka code dikhta hai. Amount se bhi farak saaf
+        hai: central wali ₹2,000 hoti hai, state wali ₹3,000.
       </p>
 
-      <ul>
-        <li>Rehna Maharashtra mein: permanent residence Maharashtra ka ho — sirf khet Maharashtra mein hona kaafi nahi hai.</li>
-        <li>PM Kisan ki file chaalu: central record hold ya rejected na ho; wahan atakte hi state ka hapta bhi ruk jaata hai.</li>
-        <li>7/12 Utara mein naam: cultivable land ka record aapke naam par ho, aur zameen ka type "sheti" darj ho.</li>
-        <li>Naam ki spelling milti ho: Aadhaar, bank aur 7/12 — teeno mein ek hi spelling. Marathi/English ka farak bhi verification atka deta hai.</li>
-        <li>e-KYC poori: Aadhaar seeding aur mobile linking dono complete hon.</li>
-      </ul>
+      <p>
+        Isliye jab koi kahe "paisa aa gaya", toh pehle entry dekh lein — kaun si aayi
+        hai? Aadhi shikayatein sirf is galatfehmi ki hoti hain: ₹2,000 aaya, log samajh
+        lete hain poori payment aa gayi, jabki state ke ₹3,000 abhi pipeline mein hote
+        hain. Mobile banking ya SMS alert mein bhi yahi codes dikhte hain.
+      </p>
 
       <h2>Scheme Kaam Kaise Karti Hai, Aur Kitna Paisa Banta Hai</h2>
 
@@ -184,6 +187,20 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         ₹6,000 central se aur ₹6,000 state se. Ye raqam beej, khaad aur diesel jaise
         kharchon ke waqt kaam aati hai.
       </p>
+
+      <h2>Eligible Kaun Hai</h2>
+
+      <p>
+        Is scheme ka labh uthane ke liye aapko niche di gayi sharton ko poora karna hoga:
+      </p>
+
+      <ul>
+        <li>Rehna Maharashtra mein: permanent residence Maharashtra ka ho — sirf khet Maharashtra mein hona kaafi nahi hai.</li>
+        <li>PM Kisan ki file chaalu: central record hold ya rejected na ho; wahan atakte hi state ka hapta bhi ruk jaata hai.</li>
+        <li>7/12 Utara mein naam: cultivable land ka record aapke naam par ho, aur zameen ka type "sheti" darj ho.</li>
+        <li>Naam ki spelling milti ho: Aadhaar, bank aur 7/12 — teeno mein ek hi spelling. Marathi/English ka farak bhi verification atka deta hai.</li>
+        <li>e-KYC poori: Aadhaar seeding aur mobile linking dono complete hon.</li>
+      </ul>
 
       <h2>Sabse Badi Khasiyat: Alag Se Apply Nahi Karna Padta</h2>
 
@@ -315,21 +332,25 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         jaati hai aur land record ki galti bhi pakdi jaati hai.
       </p>
 
-      <h2>Passbook Mein Entry Kaise Pehchanein</h2>
+      <h2>Ek Aam Timeline — Do Acre Wale Kisan Ka Hisaab</h2>
 
       <p>
-        Ek chhoti si cheez jo bahut confusion bachati hai: dono schemes ka paisa ek hi
-        account mein aata hai, lekin entries alag naam se aati hain. PM Kisan ki entry mein
-        "PMKISAN" ka reference hota hai. Namo Shetkari ki entry state treasury se aati hai
-        aur usme "NSMNY" ya Mahait/treasury ka code dikhta hai. Amount se bhi farak saaf
-        hai: central wali ₹2,000 hoti hai, state wali ₹3,000.
+        Rule sookhe lagte hain — ye baat pallu se baandhne wali hai, kyunki isse hi aage ka kaam banta hai. Isliye ek aam pattern se samajhein — ye kahani taluka
+        krishi office mein har season dohrayi jaati hai. Do acre wala kisan, PM Kisan
+        2019 se aa raha hai. Namo Shetkari shuru hone par usne kuch nahi kiya — aur pehli
+        kist apne aap aa gayi, kyunki list PM Kisan ke data se bani thi. Doosri kist ke
+        waqt problem: PM Kisan ki e-KYC expire ho gayi thi. Central wali kist bhi ruki
+        aur state wali bhi — dono ek hi record par khadi hain. CSC par biometric e-KYC
+        karwane ke baad agli release mein dono kistein ek saath aayi — ruki hui raqam
+        scheme ke record mein rehti hai, khatam nahi hoti.
       </p>
 
       <p>
-        Isliye jab koi kahe "paisa aa gaya", toh pehle entry dekh lein — kaun si aayi
-        hai? Aadhi shikayatein sirf is galatfehmi ki hoti hain: ₹2,000 aaya, log samajh
-        lete hain poori payment aa gayi, jabki state ke ₹3,000 abhi pipeline mein hote
-        hain. Mobile banking ya SMS alert mein bhi yahi codes dikhte hain.
+        Aise case se teen aadatein nikalti hain, jo har Maharashtra ke kisan ke kaam ki
+        hain: har season se pehle e-KYC ka status dekhna, 7/12 mein naam ki spelling
+        Aadhaar se milana, aur passbook mein dono entries (PMKISAN aur state wali) alag
+        pehchaan kar likhna. In teen kaamon ke baad status check karna sirf tasalli ka
+        kaam reh jaata hai — rukavat aane ki jagah hi nahi bachti.
       </p>
 
       <h2>PM Kisan Aa Gaya, Namo Shetkari Nahi Aaya — Ye Kyun Hota Hai</h2>
@@ -384,27 +405,6 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         alt="Shetkari gram panchayat office ke bahar krishi adhikari se Namo Shetkari payment fail hone ki baat kar rahe hain"
         caption="Bank theek ho phir bhi paisa na aaye to gram panchayat ya taluka krishi office se re-verify karwao"
       />
-
-      <h2>Ek Aam Timeline — Do Acre Wale Kisan Ka Hisaab</h2>
-
-      <p>
-        Rule sookhe lagte hain — ye baat pallu se baandhne wali hai, kyunki isse hi aage ka kaam banta hai. Isliye ek aam pattern se samajhein — ye kahani taluka
-        krishi office mein har season dohrayi jaati hai. Do acre wala kisan, PM Kisan
-        2019 se aa raha hai. Namo Shetkari shuru hone par usne kuch nahi kiya — aur pehli
-        kist apne aap aa gayi, kyunki list PM Kisan ke data se bani thi. Doosri kist ke
-        waqt problem: PM Kisan ki e-KYC expire ho gayi thi. Central wali kist bhi ruki
-        aur state wali bhi — dono ek hi record par khadi hain. CSC par biometric e-KYC
-        karwane ke baad agli release mein dono kistein ek saath aayi — ruki hui raqam
-        scheme ke record mein rehti hai, khatam nahi hoti.
-      </p>
-
-      <p>
-        Aise case se teen aadatein nikalti hain, jo har Maharashtra ke kisan ke kaam ki
-        hain: har season se pehle e-KYC ka status dekhna, 7/12 mein naam ki spelling
-        Aadhaar se milana, aur passbook mein dono entries (PMKISAN aur state wali) alag
-        pehchaan kar likhna. In teen kaamon ke baad status check karna sirf tasalli ka
-        kaam reh jaata hai — rukavat aane ki jagah hi nahi bachti.
-      </p>
 
       <h2>Shikayat Ka Raasta — Kisse Kya Poochhein</h2>
 

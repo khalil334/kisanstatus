@@ -99,6 +99,245 @@ export default function RajasthanKisanSammanNidhi9000() {
           baatein saaf-saaf alag karke rakhi hain: kya pakka hai, aur kya sirf umeed.
         </p>
 
+        <h2>6vi Kist — Ruki Kyun Hai</h2>
+
+        <p>
+          Pehli paanch kiste time par aa chuki hain — koi issue nahi hua. 6vi kist
+          verification aur data-matching mein atki hai. Kab aayegi? Next kist ki date
+          officially announce nahi hui. Intezaar khalta hai, samajh sakta hoon, par afwaahon se date nahi
+          banti — Jan Soochna portal check karte rahein. Aur bas, yehi tha is kist ka scene.
+        </p>
+
+        <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-5 my-6 not-prose">
+          <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
+            <strong>Yaad rakho:</strong> Rajasthan wali kist PM Kisan ki kist se bilkul alag time par aati hai — dono ka koi connection nahi. PM Kisan aa gaya aur state wala nahi, to chinta chhodo, ye normal hi hai.
+          </p>
+        </div>
+
+        <h2>Status Kaise Check Karein</h2>
+
+        <p>Do tareeke hain, dono free hain, dono online hote hain.</p>
+
+        <Fig
+          src="status-check-phone.webp"
+          alt="Kisan mobile par Jan Soochna portal kholkar Kisan Samman Nidhi ka payment status check kar raha hai"
+          caption="Status check bilkul free hai — Jan Soochna portal mobile par bhi khul jaata hai"
+        />
+
+        <h3>Jan Soochna Portal</h3>
+
+        <ol>
+          <li><code>jansoochna.rajasthan.gov.in</code> kholo</li>
+          <li>"Mukhyamantri Kisan Samman Nidhi" search karke scheme select karo</li>
+          <li>Aadhaar ya Jan Aadhaar number daalo</li>
+          <li>Registered mobile par aaya OTP verify karo</li>
+          <li>Status saamne aa jaayega — Payment Successful, Pending, ya Rejected</li>
+        </ol>
+
+        <ExternalLinkButton url="https://jansoochna.rajasthan.gov.in" label="Jan Soochna Portal — Status Check" />
+
+        <h3>Rajasthan Cooperative Portal</h3>
+
+        <ol>
+          <li><code>rajsahakar.rajasthan.gov.in</code> par jao</li>
+          <li>"Know Your Status" mein "CM Kisan Status" chuno</li>
+          <li>Details bharkar status dekh lo</li>
+        </ol>
+
+        <ExternalLinkButton url="https://rajsahakar.rajasthan.gov.in/citizen/cmkisanstatus" label="Cooperative Portal — CM Kisan Status" />
+
+        <h2>Eligible Kaun Hai, Kaun Nahi</h2>
+
+        <p>
+          Yahan koi alag test nahi hai — jo PM Kisan pass karta hai, wahi yahan bhi eligible hota hai. Bas kuch bunyaadi sharten:
+        </p>
+
+        <ul>
+          <li>PM Kisan mein registered ho, e-KYC bhi complete ho. Wahan koi gadbad hai to yahan bhi wahi gadbad chalegi.</li>
+          <li>Rajasthan ka permanent resident ho. Bahar se aakar yahan kheti karne wale is scheme mein nahi aate.</li>
+          <li>Zameen apni ho. Landless mazdoor aur bataidar (tenant farmers) is scheme se bahar hain.</li>
+          <li>Bank account DBT-enabled ho — yahin paisa aata hai, kahin aur nahi.</li>
+        </ul>
+
+        <p>
+          Bahar rehne wale bhi hain: sarkari-mandir-trust zameen, wo family jisme koi MP-MLA-Mayor jaisa post raha ho, ₹10,000 se zyada pension paane wale retired officers, income tax bharne wale, aur registered doctors-engineers-CAs-lawyers. Inme se kisi bhi category mein aate ho to yahan naam nahi aayega.
+        </p>
+
+        <p>
+          Naye kisan ho aur abhi shuruaat ki hai? Pehle PM Kisan mein register karo (CSC centre ya online), e-KYC karwao, Patwari se land record verify karwao. Approval milte hi state wali list mein khud aa jaoge. Poora process district ke hisaab se 1-3 mahine le sakta hai — jaldi mat karna, ye normal speed hai.
+        </p>
+
+        <h3>Pati-Patni Dono Le Sakte Hain?</h3>
+        <p>
+          Nahi. Ek family — pati, patni, aur unmarried bachche — mein sirf ek hi vyakti eligible hota hai. Dono ne register karwa liya to ek registration cancel hoga, aur jitna extra le liya wo wapas bhi karna pad sakta hai. Detail mein <Link href="/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega">is article</Link> mein padho.
+        </p>
+
+        <h2>Paisa Nahi Aaya — Ab Kya</h2>
+
+        <p>
+          Pareshaan hone se pehle ek kaam karo: bank statement khud check karo. SMS kabhi-kabhi
+          miss ho jaata hai lekin paisa phir bhi aa chuka hota hai. "NEFT", "DBT" ya
+          "Rajasthan Govt" naam ki entry dhundo — mil gayi to shikayat ki zaroorat hi nahi.
+        </p>
+
+        <p>
+          Kuch nahi mila to PFMS portal par dispatch status dekho. Wahan "Successful" dikhe aur bank mein na aaya ho, to branch jaakar NPCI mapping check karwao — zyadatar yahi wajah nikalti hai.
+        </p>
+
+        <Fig
+          src="bank-visit.webp"
+          alt="Kisan bank branch mein passbook lekar DBT payment aur NPCI mapping check karwa raha hai"
+          caption={'Portal par "Successful" dikhe par paisa na aaya ho — bank branch mein NPCI mapping check karwao'}
+        />
+
+        <p>
+          Fir bhi kuch samajh na aaye to Jan Soochna portal ki helpline 1800-180-6127 par call karein (ye number portal ke homepage par hi likha hai). Ya apne District Agriculture Office ya e-Mitra kiosk par jaakar case dikhaayein — status ka screenshot aur passbook saath rakhein.
+        </p>
+
+        <p>
+          Aur agar online sab sahi dikh raha hai fir bhi paisa nahi aa raha — seedhe Patwari ya Tehsildar ke paas chale jao. Kai baar land record ka koi purana jhanjhat hota hai jo sirf ground level par hi sulajhta hai.
+        </p>
+
+        <h3>Patwari Ke Paas Jaane Se Pehle Ye Kaam Ghar Baithe Ho Jaata Hai</h3>
+
+        <p>
+          Tehsil ke chakkar lagane se pehle apna land record khud padh lena samajhdari hai — Rajasthan
+          mein ye bilkul free hai. <code>apnakhata.rajasthan.gov.in</code> (jise e-Dharti bhi kehte hain)
+          kholein, apna zila chunein, phir tehsil aur gaon, aur khata number, khasra number ya malik ke
+          naam se apni jamabandi nikaal lein.
+        </p>
+
+        <p>
+          Isse aap khud dekh sakte hain ki dikkat kahan hai: naam ki spelling galat hai, area kam-zyada
+          dikh raha hai, ya virasat ke baad naam abhi tak purane malik ka hi chal raha hai. Yahi teen
+          cheezein zyadatar rejection ke peeche hoti hain. Jab aap Patwari ke paas jaate hain to seedha
+          bata sakte hain ki kya theek karana hai — ye poori baat ek chakkar mein khatam kara deta hai.
+        </p>
+
+        <p>
+          Online dekhna free hai, lekin agar kisi kaam ke liye certified copy chahiye to
+          wo e-Mitra se milti hai — lagbhag ₹10 per page. Portal se print nikaal kar reference ke liye
+          rakh sakte hain, magar office mein certified copy hi chalti hai. Mutation (naam badalne) ki
+          arzi bhi isi portal se lagti hai; Rajasthan ka apna record batata hai ki mutation case average
+          taur par lagbhag 24 din mein nipat jaate hain — matlab kist ka intezaar karne se behtar hai ki
+          season se pehle hi arzi laga dein.
+        </p>
+
+        <Fig
+          src="patwari-office.webp"
+          alt="Do kisan gaon ke patwari office mein land record aur jamabandi ki entry verify karwa rahe hain"
+          caption="Land record ka jhanjhat sirf Patwari ya Tehsil office mein hi theek hota hai"
+        />
+
+        <h2>₹12,000 Ka Sach — Announcement Aur Notification Mein Fark Hai</h2>
+
+        <p>
+          CM Bhajanlal Sharma ne prastaav rakha hai ki state apna ₹3,000 wala hissa badhakar ₹6,000 kar de — jisse total ₹12,000 tak pahunch jaaye. ⚠️ Ye abhi sirf ghoshna hai, official notification nahi aaya.
+        </p>
+
+        <p>
+          Par ghoshna aur notification do alag cheezein hain. Jab tak Finance ya Agriculture Department ka gazette notification nahi aata, ye sirf ek plan hai, benefit nahi. Kisi bhi kagaz par ye ₹12,000 nazar nahi aayega abhi.
+        </p>
+
+        <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
+          <h3 className="font-bold text-yellow-800 dark:text-yellow-300 mb-2 text-sm">⚠️ Savdhaan</h3>
+          <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
+            WhatsApp aur YouTube par "₹12,000 aa gaye" jaisi khabrein ghoom rahi hain — ye sach nahi hain. Apna budget ₹9,000 ke hisaab se hi rakho. Badhotri aayi to bonus samjho, plan mat karo.
+          </p>
+        </div>
+
+        <h2>PM Kisan vs Rajasthan Wali Scheme — Kya Fark Hai</h2>
+
+        <div className="overflow-x-auto my-8 not-prose">
+          <table className="w-full border-collapse border border-gray-300 dark:border-gray-600 rounded-xl overflow-hidden text-sm shadow-sm">
+            <thead>
+              <tr className="bg-gray-100 dark:bg-gray-700">
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left">Parameter</th>
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left">PM Kisan</th>
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left">Rajasthan Scheme</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="bg-white dark:bg-gray-800">
+                <td className="border border-gray-300 dark:border-gray-600 p-3">Source</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">Central Government</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">State Government</td>
+              </tr>
+              <tr className="bg-gray-50 dark:bg-gray-700">
+                <td className="border border-gray-300 dark:border-gray-600 p-3">Annual Amount</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">₹6,000</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">₹3,000</td>
+              </tr>
+              <tr className="bg-white dark:bg-gray-800">
+                <td className="border border-gray-300 dark:border-gray-600 p-3">Registration</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">Separate karna padta hai</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">Auto (PM Kisan-linked)</td>
+              </tr>
+              <tr className="bg-gray-50 dark:bg-gray-700">
+                <td className="border border-gray-300 dark:border-gray-600 p-3">Portal</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">pmkisan.gov.in</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">jansoochna.rajasthan.gov.in</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Yaad rakhne wali baat sirf ek hai: PM Kisan mein eligible ho to state wali mein bhi ho. Wahan koi issue (e-KYC pending, Aadhaar mismatch) hai to wahi issue yahan bhi chalega — dono ek doosre se juda hua hai.
+        </p>
+
+        <h2>Aksar Aane Wale Problems</h2>
+
+        <p>
+          "PM Kisan aa gaya, Rajasthan wala nahi aaya" — normal hai, dono alag time par release hote hain. 15-20 din ka gap chalta hai. Ek mahine se zyada ho jaaye tab portal check karo.
+        </p>
+
+        <p>
+          "Status mein Rejected dikha raha hai" — usually Aadhaar aur land record ka naam match nahi karta, ya bank DBT-enabled nahi, ya family mein koi income tax payer hai, ya duplicate entry ban gayi hai. Patwari ke paas jaakar records theek karwao.
+        </p>
+
+        <p>
+          "Amount kam ya zyada aaya" — kabhi purani kist ka arrear naye payment ke saath jud jaata hai. Jan Soochna portal ki transaction history mein poora hisaab mil jaayega.
+        </p>
+
+        <p>
+          &quot;Ghar mein do logon ke naam zameen hai, kist ek ko hi aayi&quot; &mdash; ye galti
+          nahi hai. Ek parivaar se ek hi benefit banta hai, aur Jan Aadhaar family record hi tay karta
+          hai ki &ldquo;parivaar&rdquo; kaun hai. Zameen batwaare ke baad bhi agar Jan Aadhaar mein sab ek hi
+          family ID mein hain, to system ek hi ghar ginta hai. Alag benefit chahiye to pehle Jan Aadhaar
+          mein parivaar alag hona chahiye — aur wo tabhi hota hai jab waqai alag ghar ho, kaagaz par
+          dikhawe se nahi.
+        </p>
+
+        <p>
+          &quot;OTP us mobile par aa raha hai jo ab mera nahi hai&quot; &mdash; Rajasthan mein ye
+          do jagah theek karna padta hai, ek jagah nahi. Pehle Aadhaar mein number update karayein, phir
+          Jan Aadhaar ke record mein. Sirf ek jagah badalne se status page khulta rahega magar state ka
+          verification purane number par hi atka rahega.
+        </p>
+
+        <h2>Documents Jo Kaam Aa Sakte Hain</h2>
+
+        <ul>
+          <li>Aadhaar Card (PM Kisan se linked)</li>
+          <li>Jan Aadhaar (Rajasthan-specific ID)</li>
+          <li>Bank Passbook, DBT-enabled account ka</li>
+          <li>Land Records — Jamabandi ya Khatauni</li>
+          <li>Mobile Number, Aadhaar se linked (OTP ke liye)</li>
+        </ul>
+
+        <Fig
+          src="documents-checklist.webp"
+          alt="Rajasthan Kisan Samman Nidhi ke liye zaroori documents — bank passbook, Aadhaar, Jan Aadhaar aur land record"
+          caption="Status check ya correction ke waqt yeh kagaz saath rakho — passbook, Aadhaar, Jan Aadhaar aur jamabandi"
+        />
+
+        <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
+          <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
+            <strong>Fraud se bachein:</strong> ye scheme poori tarah free aur automatic hai. Koi agent "registration karwane" ke naam par paisa maange, to wo fraud hai. Paisa mat do — Rajasthan Anti-Corruption Bureau ki helpline <strong>1064</strong> par shikayat darj karwaayein.
+          </p>
+        </div>
+
         <h2>Jan Aadhaar — Rajasthan Ka Asli Gatekeeper</h2>
 
         <p>
@@ -200,49 +439,6 @@ export default function RajasthanKisanSammanNidhi9000() {
           label="Official Portal — Jan Soochna Rajasthan"
         />
 
-        <h2>Eligible Kaun Hai, Kaun Nahi</h2>
-
-        <p>
-          Yahan koi alag test nahi hai — jo PM Kisan pass karta hai, wahi yahan bhi eligible hota hai. Bas kuch bunyaadi sharten:
-        </p>
-
-        <ul>
-          <li>PM Kisan mein registered ho, e-KYC bhi complete ho. Wahan koi gadbad hai to yahan bhi wahi gadbad chalegi.</li>
-          <li>Rajasthan ka permanent resident ho. Bahar se aakar yahan kheti karne wale is scheme mein nahi aate.</li>
-          <li>Zameen apni ho. Landless mazdoor aur bataidar (tenant farmers) is scheme se bahar hain.</li>
-          <li>Bank account DBT-enabled ho — yahin paisa aata hai, kahin aur nahi.</li>
-        </ul>
-
-        <p>
-          Bahar rehne wale bhi hain: sarkari-mandir-trust zameen, wo family jisme koi MP-MLA-Mayor jaisa post raha ho, ₹10,000 se zyada pension paane wale retired officers, income tax bharne wale, aur registered doctors-engineers-CAs-lawyers. Inme se kisi bhi category mein aate ho to yahan naam nahi aayega.
-        </p>
-
-        <p>
-          Naye kisan ho aur abhi shuruaat ki hai? Pehle PM Kisan mein register karo (CSC centre ya online), e-KYC karwao, Patwari se land record verify karwao. Approval milte hi state wali list mein khud aa jaoge. Poora process district ke hisaab se 1-3 mahine le sakta hai — jaldi mat karna, ye normal speed hai.
-        </p>
-
-        <h3>Pati-Patni Dono Le Sakte Hain?</h3>
-        <p>
-          Nahi. Ek family — pati, patni, aur unmarried bachche — mein sirf ek hi vyakti eligible hota hai. Dono ne register karwa liya to ek registration cancel hoga, aur jitna extra le liya wo wapas bhi karna pad sakta hai. Detail mein <Link href="/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega">is article</Link> mein padho.
-        </p>
-
-        <h2>₹12,000 Ka Sach — Announcement Aur Notification Mein Fark Hai</h2>
-
-        <p>
-          CM Bhajanlal Sharma ne prastaav rakha hai ki state apna ₹3,000 wala hissa badhakar ₹6,000 kar de — jisse total ₹12,000 tak pahunch jaaye. ⚠️ Ye abhi sirf ghoshna hai, official notification nahi aaya.
-        </p>
-
-        <p>
-          Par ghoshna aur notification do alag cheezein hain. Jab tak Finance ya Agriculture Department ka gazette notification nahi aata, ye sirf ek plan hai, benefit nahi. Kisi bhi kagaz par ye ₹12,000 nazar nahi aayega abhi.
-        </p>
-
-        <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
-          <h3 className="font-bold text-yellow-800 dark:text-yellow-300 mb-2 text-sm">⚠️ Savdhaan</h3>
-          <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
-            WhatsApp aur YouTube par "₹12,000 aa gaye" jaisi khabrein ghoom rahi hain — ye sach nahi hain. Apna budget ₹9,000 ke hisaab se hi rakho. Badhotri aayi to bonus samjho, plan mat karo.
-          </p>
-        </div>
-
         <h2>Scheme Ka Safar — ₹2,000 Se ₹3,000 Tak</h2>
 
         <p>
@@ -299,202 +495,6 @@ export default function RajasthanKisanSammanNidhi9000() {
           karne mein waqt lagta hai, aur yahi wajah hai ki kist ki tareekh aage-peeche hoti rehti hai.
           Ye kisi ek kisan ki file ka issue nahi, poore system ka size hai.
         </p>
-
-        <h2>6vi Kist — Ruki Kyun Hai</h2>
-
-        <p>
-          Pehli paanch kiste time par aa chuki hain — koi issue nahi hua. 6vi kist
-          verification aur data-matching mein atki hai. Kab aayegi? Next kist ki date
-          officially announce nahi hui. Intezaar khalta hai, samajh sakta hoon, par afwaahon se date nahi
-          banti — Jan Soochna portal check karte rahein. Aur bas, yehi tha is kist ka scene.
-        </p>
-
-        <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-5 my-6 not-prose">
-          <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
-            <strong>Yaad rakho:</strong> Rajasthan wali kist PM Kisan ki kist se bilkul alag time par aati hai — dono ka koi connection nahi. PM Kisan aa gaya aur state wala nahi, to chinta chhodo, ye normal hi hai.
-          </p>
-        </div>
-
-        <h2>Status Kaise Check Karein</h2>
-
-        <p>Do tareeke hain, dono free hain, dono online hote hain.</p>
-
-        <Fig
-          src="status-check-phone.webp"
-          alt="Kisan mobile par Jan Soochna portal kholkar Kisan Samman Nidhi ka payment status check kar raha hai"
-          caption="Status check bilkul free hai — Jan Soochna portal mobile par bhi khul jaata hai"
-        />
-
-        <h3>Jan Soochna Portal</h3>
-
-        <ol>
-          <li><code>jansoochna.rajasthan.gov.in</code> kholo</li>
-          <li>"Mukhyamantri Kisan Samman Nidhi" search karke scheme select karo</li>
-          <li>Aadhaar ya Jan Aadhaar number daalo</li>
-          <li>Registered mobile par aaya OTP verify karo</li>
-          <li>Status saamne aa jaayega — Payment Successful, Pending, ya Rejected</li>
-        </ol>
-
-        <ExternalLinkButton url="https://jansoochna.rajasthan.gov.in" label="Jan Soochna Portal — Status Check" />
-
-        <h3>Rajasthan Cooperative Portal</h3>
-
-        <ol>
-          <li><code>rajsahakar.rajasthan.gov.in</code> par jao</li>
-          <li>"Know Your Status" mein "CM Kisan Status" chuno</li>
-          <li>Details bharkar status dekh lo</li>
-        </ol>
-
-        <ExternalLinkButton url="https://rajsahakar.rajasthan.gov.in/citizen/cmkisanstatus" label="Cooperative Portal — CM Kisan Status" />
-
-        <h2>Paisa Nahi Aaya — Ab Kya</h2>
-
-        <p>
-          Pareshaan hone se pehle ek kaam karo: bank statement khud check karo. SMS kabhi-kabhi
-          miss ho jaata hai lekin paisa phir bhi aa chuka hota hai. "NEFT", "DBT" ya
-          "Rajasthan Govt" naam ki entry dhundo — mil gayi to shikayat ki zaroorat hi nahi.
-        </p>
-
-        <p>
-          Kuch nahi mila to PFMS portal par dispatch status dekho. Wahan "Successful" dikhe aur bank mein na aaya ho, to branch jaakar NPCI mapping check karwao — zyadatar yahi wajah nikalti hai.
-        </p>
-
-        <Fig
-          src="bank-visit.webp"
-          alt="Kisan bank branch mein passbook lekar DBT payment aur NPCI mapping check karwa raha hai"
-          caption={'Portal par "Successful" dikhe par paisa na aaya ho — bank branch mein NPCI mapping check karwao'}
-        />
-
-        <p>
-          Fir bhi kuch samajh na aaye to Jan Soochna portal ki helpline 1800-180-6127 par call karein (ye number portal ke homepage par hi likha hai). Ya apne District Agriculture Office ya e-Mitra kiosk par jaakar case dikhaayein — status ka screenshot aur passbook saath rakhein.
-        </p>
-
-        <p>
-          Aur agar online sab sahi dikh raha hai fir bhi paisa nahi aa raha — seedhe Patwari ya Tehsildar ke paas chale jao. Kai baar land record ka koi purana jhanjhat hota hai jo sirf ground level par hi sulajhta hai.
-        </p>
-
-        <h3>Patwari Ke Paas Jaane Se Pehle Ye Kaam Ghar Baithe Ho Jaata Hai</h3>
-
-        <p>
-          Tehsil ke chakkar lagane se pehle apna land record khud padh lena samajhdari hai — Rajasthan
-          mein ye bilkul free hai. <code>apnakhata.rajasthan.gov.in</code> (jise e-Dharti bhi kehte hain)
-          kholein, apna zila chunein, phir tehsil aur gaon, aur khata number, khasra number ya malik ke
-          naam se apni jamabandi nikaal lein.
-        </p>
-
-        <p>
-          Isse aap khud dekh sakte hain ki dikkat kahan hai: naam ki spelling galat hai, area kam-zyada
-          dikh raha hai, ya virasat ke baad naam abhi tak purane malik ka hi chal raha hai. Yahi teen
-          cheezein zyadatar rejection ke peeche hoti hain. Jab aap Patwari ke paas jaate hain to seedha
-          bata sakte hain ki kya theek karana hai — ye poori baat ek chakkar mein khatam kara deta hai.
-        </p>
-
-        <p>
-          Online dekhna free hai, lekin agar kisi kaam ke liye certified copy chahiye to
-          wo e-Mitra se milti hai — lagbhag ₹10 per page. Portal se print nikaal kar reference ke liye
-          rakh sakte hain, magar office mein certified copy hi chalti hai. Mutation (naam badalne) ki
-          arzi bhi isi portal se lagti hai; Rajasthan ka apna record batata hai ki mutation case average
-          taur par lagbhag 24 din mein nipat jaate hain — matlab kist ka intezaar karne se behtar hai ki
-          season se pehle hi arzi laga dein.
-        </p>
-
-        <Fig
-          src="patwari-office.webp"
-          alt="Do kisan gaon ke patwari office mein land record aur jamabandi ki entry verify karwa rahe hain"
-          caption="Land record ka jhanjhat sirf Patwari ya Tehsil office mein hi theek hota hai"
-        />
-
-        <h2>PM Kisan vs Rajasthan Wali Scheme — Kya Fark Hai</h2>
-
-        <div className="overflow-x-auto my-8 not-prose">
-          <table className="w-full border-collapse border border-gray-300 dark:border-gray-600 rounded-xl overflow-hidden text-sm shadow-sm">
-            <thead>
-              <tr className="bg-gray-100 dark:bg-gray-700">
-                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left">Parameter</th>
-                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left">PM Kisan</th>
-                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left">Rajasthan Scheme</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="bg-white dark:bg-gray-800">
-                <td className="border border-gray-300 dark:border-gray-600 p-3">Source</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">Central Government</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">State Government</td>
-              </tr>
-              <tr className="bg-gray-50 dark:bg-gray-700">
-                <td className="border border-gray-300 dark:border-gray-600 p-3">Annual Amount</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">₹6,000</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">₹3,000</td>
-              </tr>
-              <tr className="bg-white dark:bg-gray-800">
-                <td className="border border-gray-300 dark:border-gray-600 p-3">Registration</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">Separate karna padta hai</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">Auto (PM Kisan-linked)</td>
-              </tr>
-              <tr className="bg-gray-50 dark:bg-gray-700">
-                <td className="border border-gray-300 dark:border-gray-600 p-3">Portal</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">pmkisan.gov.in</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">jansoochna.rajasthan.gov.in</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p>
-          Yaad rakhne wali baat sirf ek hai: PM Kisan mein eligible ho to state wali mein bhi ho. Wahan koi issue (e-KYC pending, Aadhaar mismatch) hai to wahi issue yahan bhi chalega — dono ek doosre se juda hua hai.
-        </p>
-
-        <h2>Aksar Aane Wale Problems</h2>
-
-        <p>
-          "PM Kisan aa gaya, Rajasthan wala nahi aaya" — normal hai, dono alag time par release hote hain. 15-20 din ka gap chalta hai. Ek mahine se zyada ho jaaye tab portal check karo.
-        </p>
-
-        <p>
-          "Status mein Rejected dikha raha hai" — usually Aadhaar aur land record ka naam match nahi karta, ya bank DBT-enabled nahi, ya family mein koi income tax payer hai, ya duplicate entry ban gayi hai. Patwari ke paas jaakar records theek karwao.
-        </p>
-
-        <p>
-          "Amount kam ya zyada aaya" — kabhi purani kist ka arrear naye payment ke saath jud jaata hai. Jan Soochna portal ki transaction history mein poora hisaab mil jaayega.
-        </p>
-
-        <p>
-          &quot;Ghar mein do logon ke naam zameen hai, kist ek ko hi aayi&quot; &mdash; ye galti
-          nahi hai. Ek parivaar se ek hi benefit banta hai, aur Jan Aadhaar family record hi tay karta
-          hai ki &ldquo;parivaar&rdquo; kaun hai. Zameen batwaare ke baad bhi agar Jan Aadhaar mein sab ek hi
-          family ID mein hain, to system ek hi ghar ginta hai. Alag benefit chahiye to pehle Jan Aadhaar
-          mein parivaar alag hona chahiye — aur wo tabhi hota hai jab waqai alag ghar ho, kaagaz par
-          dikhawe se nahi.
-        </p>
-
-        <p>
-          &quot;OTP us mobile par aa raha hai jo ab mera nahi hai&quot; &mdash; Rajasthan mein ye
-          do jagah theek karna padta hai, ek jagah nahi. Pehle Aadhaar mein number update karayein, phir
-          Jan Aadhaar ke record mein. Sirf ek jagah badalne se status page khulta rahega magar state ka
-          verification purane number par hi atka rahega.
-        </p>
-
-        <h2>Documents Jo Kaam Aa Sakte Hain</h2>
-
-        <ul>
-          <li>Aadhaar Card (PM Kisan se linked)</li>
-          <li>Jan Aadhaar (Rajasthan-specific ID)</li>
-          <li>Bank Passbook, DBT-enabled account ka</li>
-          <li>Land Records — Jamabandi ya Khatauni</li>
-          <li>Mobile Number, Aadhaar se linked (OTP ke liye)</li>
-        </ul>
-
-        <Fig
-          src="documents-checklist.webp"
-          alt="Rajasthan Kisan Samman Nidhi ke liye zaroori documents — bank passbook, Aadhaar, Jan Aadhaar aur land record"
-          caption="Status check ya correction ke waqt yeh kagaz saath rakho — passbook, Aadhaar, Jan Aadhaar aur jamabandi"
-        />
-
-        <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
-          <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
-            <strong>Fraud se bachein:</strong> ye scheme poori tarah free aur automatic hai. Koi agent "registration karwane" ke naam par paisa maange, to wo fraud hai. Paisa mat do — Rajasthan Anti-Corruption Bureau ki helpline <strong>1064</strong> par shikayat darj karwaayein.
-          </p>
-        </div>
 
         <h2>Dusre States Mein Kya Chal Raha Hai</h2>
 
