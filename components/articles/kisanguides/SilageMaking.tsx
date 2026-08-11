@@ -259,11 +259,11 @@ export default function SilageMaking() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Is investment ke liye <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Kisan Credit Card (KCC)</Link> ek badhiya option hai — working capital ke liye limit badhwa sakte ho.
+        Is investment ke liye <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">KCC (Kisan Credit Card) guide</Link> ek badhiya option hai — working capital ke liye limit badhwa sakte ho.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Machinery ke liye <a href="https://www.mudra.org.in/" className="text-blue-600 hover:underline dark:text-blue-400 font-medium" target="_blank" rel="noopener noreferrer">Mudra Loan</a> bhi le sakte ho — Tarun category mein ₹10 lakh tak bina collateral ke milta hai.
+        Machinery ke liye <a href="https://www.mudra.org.in/" className="text-blue-600 hover:underline dark:text-blue-400 font-medium" target="_blank" rel="noopener noreferrer">Mudra Loan scheme</a> bhi le sakte ho — Tarun category mein ₹10 lakh tak bina collateral ke milta hai.
       </p>
 
       <Image
@@ -550,7 +550,7 @@ export default function SilageMaking() {
 
       <div className="grid md:grid-cols-2 gap-6 mb-8 not-prose">
         <div className="bg-green-50 dark:bg-green-900/20 p-5 rounded-lg border border-green-200 dark:border-green-800">
-          <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">✅ Haan, agar:</h3>
+          <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">✅ Bilkul Karein, agar:</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>• Dairy belt mein rehte ho (Haryana, Punjab, Gujarat, UP west, Maharashtra).</li>
             <li>• 5-10 acre zameen hai, ya contract farming kar sakte ho.</li>
@@ -561,7 +561,7 @@ export default function SilageMaking() {
         </div>
 
         <div className="bg-red-50 dark:bg-red-900/20 p-5 rounded-lg border border-red-200 dark:border-red-800">
-          <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">❌ Nahi, agar:</h3>
+          <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">❌ Sochna Padega, agar:</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>• Non-dairy area mein ho — grahak milna mushkil hoga.</li>
             <li>• Zameen nahi hai aur contract farming bhi option nahi hai.</li>
@@ -623,7 +623,7 @@ export default function SilageMaking() {
 
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-lg border-l-4 border-orange-500 not-prose">
         <p className="text-sm text-gray-700 dark:text-gray-300">
-          <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
+          <strong className="text-orange-600 dark:text-orange-400 block mb-2">Zaroori Jaankari:</strong>
           Yeh article general information ke liye hai. Actual costs, subsidies, aur procedures location aur circumstances ke hisaab se badal sakte hain. Koi bhi financial decision lene se pehle qualified professionals (agriculture officers, CAs) se consult karein. Latest information ke liye official sources se verify karte rahein. Last updated: July 2026.
         </p>
       </div>

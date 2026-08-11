@@ -224,7 +224,20 @@ Files (`components/articles/`, root level):
 
 ---
 
-## Group 6 — Kisanguides template (9 articles)
+## Group 6 — Kisanguides template (9 articles) — ✅ BATCH 6 COMPLETE (uniqueness pass done)
+
+> **Status (Batch 6 done, 11 Aug 2026):** Sab 9 articles ab ek dusre se unique hain.
+> Kya badla (replace-only, kuch delete nahi): (1) duplicate H2s — "Frequently Asked Questions (FAQs)" ×4
+> (SilageMaking original), "Kya Aapke Liye Sahi Hai? Final Decision Framework" ×3 (VerminCompost original),
+> "Related Guides & Financial Support" ×3, "Sources & References" ×2, "Real Risks - Jo Koi Nahi Batata" ×2
+> — har file ka apna heading; (2) decision-framework H3s — "✅ Haan, agar:" ×5 / "❌ Nahi, agar:" ×6
+> (MushroomKheti originals) — baaki sab unique variants; (3) duplicate anchors — "PM FME Yojana" ×4,
+> "Kisan Credit Card (KCC)" ×4, "PMEGP portal" ×2, "Mudra Loan" ×2, card CTAs "KCC Guide Padhein →" /
+> "PM FME Details Dekhein →" ×2 — anchors reword, href/URL unchanged; (4) bold opener labels —
+> "Disclaimer:" ×8 (BakriPalanYojana original), "Sach kahoon toh:" ×4, "KVK:" ×3, aur 5 chhote patterns
+> — sab unique. ExternalLinkButton labels, captions, sentences pehle se unique the — verified.
+> Facts, ₹ amounts, subsidy %, URLs, hrefs, slugs, exports unchanged; word count kam nahi hua (+63 net).
+> `next build --webpack` pass (126 pages).
 
 **Shared frame:** `ExternalLinkButton` (2–3 per article) · no FAQ consts · same
 business-guide flow (yojana intro → subsidy amount → apply portal button → process steps).
@@ -251,7 +264,7 @@ Files (`components/articles/kisanguides/`):
 | 3 | Maandhan | 13 | ✅ DONE — Batch 3 uniqueness pass complete (unique FAQ H2s, openers, captions, dup sentences reworded) |
 | 4 | Loan/Mandi/Pashupalan | 11 | ✅ DONE — Batch 4 uniqueness pass complete (unique TL;DR openers, card titles, nav labels, prose anchors) |
 | 5 | Core PM-Kisan | 27 | ✅ DONE — Batch 5 uniqueness pass complete (unique FAQ H2s, opener labels, link anchors, card titles, portal strings) |
-| 6 | Kisanguides | 9 | Medium — ExternalLinkButton guide frame |
+| 6 | Kisanguides | 9 | ✅ DONE — Batch 6 uniqueness pass complete (unique H2s, decision H3s, anchors, opener labels) |
 
 Total audited: **90 article components.**
 
