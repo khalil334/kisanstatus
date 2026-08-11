@@ -8,7 +8,7 @@ import CountdownModal from '@/components/CountdownModal';
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const PUBLISHED = '2026-07-15T08:00:00+05:30';
-const MODIFIED = '2026-07-11T08:00:00+05:30';
+const MODIFIED = '2026-07-15T10:00:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Complete Guide', emoji: '📚' },

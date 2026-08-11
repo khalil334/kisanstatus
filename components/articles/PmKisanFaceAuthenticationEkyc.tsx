@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 
-const PUBLISHED = '2026-07-10T08:00:00+05:30';
+const PUBLISHED = '2026-07-01T13:47:00+05:30';
 const MODIFIED = '2026-08-11T08:00:00+05:30';
 
 const RELATED = [

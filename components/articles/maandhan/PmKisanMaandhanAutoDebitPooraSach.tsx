@@ -4,7 +4,7 @@ import { SI, StepList, IB, WB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FA
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
 
 const PUBLISHED = '2026-07-24T08:00:00+05:30';
-const MODIFIED = '2026-08-08T09:00:00+05:30';
+const MODIFIED = '2026-08-05T06:13:00+05:30';
 
 const RELATED_CARDS = [
   {
