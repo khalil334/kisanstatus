@@ -1,4 +1,4 @@
-import type { ArticleMeta } from './articles-data';
+import type { ArticleMeta } from './categories';
 
 export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   {
