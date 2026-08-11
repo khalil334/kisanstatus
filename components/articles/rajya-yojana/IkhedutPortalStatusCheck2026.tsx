@@ -52,7 +52,7 @@ const FAQS: { q: string; quick: string; detail: string }[] = [
     q: 'iKhedut par arji karne ke baad status kahan dikhta hai?',
     quick: 'Portal ke "Arji Status" wale page par — arji (application) number aur mobile number daal kar.',
     detail:
-      'Arji number wahi hai jo submit karte waqt screen par aata hai aur print par chhapa hota hai. Wo number kho gaya to arji print, SMS ya jis VCE/cyber cafe se bhari thi wahan se dobara nikalwa lijiye. Bina arji number status search nahi hota — isliye number ko phone me note karke rakhna sabse pehla kaam hai.',
+      'Arji number wahi hai jo submit karte waqt screen par aata hai aur print par chhapa hota hai. Wo number kho gaya to purana print, SMS ya jis VCE/cyber cafe se bhari thi wahan se dobara nikalwa lijiye. Bina is number ke status search nahi hota — isliye number ko phone me note karke rakhna sabse pehla kaam hai.',
   },
   {
     q: 'Arji online bhar di, par print jama nahi kiya — kya hoga?',
@@ -64,25 +64,25 @@ const FAQS: { q: string; quick: string; detail: string }[] = [
     q: 'Purv manjuri (pre-approval) ke pehle tractor kharid liya to subsidy milegi?',
     quick: 'Aam taur par nahi — kharidi purv manjuri ke baad honi chahiye.',
     detail:
-      'Sahay ka poora logic hi ye hai: pehle manjuri, phir kharidi, phir bill upload, phir verification. Manjuri se pehle ki kharidi ka bill zyada tar ghatak me manya nahi hota. Apne ghatak ki shart arji karne se pehle ikhedut.gujarat.gov.in par padh lijiye — har ghatak ki guideline alag hai.',
+      'Sahay ka poora logic hi ye hai: pehle manjuri, phir kharidi, phir bill upload, phir verification. Manjuri se pehle ki kharidi ka bill zyada tar ghatak me manya nahi hota. Apne ghatak ki shart apply karne se pehle ikhedut.gujarat.gov.in par padh lijiye — har ghatak ki guideline alag hai.',
   },
   {
     q: 'Target khatam ho gaya to arji ka kya hota hai?',
     quick: 'Arji waiting me rehti hai ya us varsh ke liye radd ho jaati hai.',
     detail:
-      'iKhedut par har ghatak ka varshik target hota hai. Applications target se zyada aa gayin to draw ya priority ke hisaab se selection hota hai, baki arji us saal nahi chalti. Agli window me nayi arji karni padti hai — purani apne aap forward nahi hoti.',
+      'iKhedut par har ghatak ka varshik target hota hai. Applications target se zyada aa gayin to draw ya priority ke hisaab se selection hota hai, baki file us saal nahi chalti. Agli window me nayi arji karni padti hai — purani apne aap forward nahi hoti.',
   },
   {
     q: 'Kitni subsidy milti hai — 25%, 40% ya 50%?',
     quick: 'Ghatak aur kisan ki shreni par depend karta hai; portal par likha rate hi final hai.',
     detail:
-      'Misaal ke liye tractor sahay (AGR-50) me 20 se 60 PTO HP tak ke model par kharch ka 25% ya adhiktam ₹1,00,000 — jo kam ho — wali shart chali hai, aur khaate dinth ek tractor. Anusuchit jaati/janjaati, mahila aur chhote-simant kisan ke liye alag ghatak me rate zyada ho sakta hai. Amount aur % har varsh ki guideline se badalte hain, isliye arji se pehle us ghatak ka page khol kar padhna hi sahi tareeka hai.',
+      'Misaal ke liye tractor sahay (AGR-50) me 20 se 60 PTO HP tak ke model par kharch ka 25% ya adhiktam ₹1,00,000 — jo kam ho — wali shart chali hai, aur khaate dinth ek tractor. Anusuchit jaati/janjaati, mahila aur chhote-simant kisan ke liye alag ghatak me rate zyada ho sakta hai. Amount aur % har varsh ki guideline se badalte hain, isliye form bharne se pehle us ghatak ka page khol kar padhna hi sahi tareeka hai.',
   },
   {
     q: 'Ek hi saal me do-teen ghatak me arji kar sakte hain?',
     quick: 'Haan, alag-alag ghatak me — par ek hi ghatak me do arji nahi.',
     detail:
-      'Drip ke liye alag, godown ke liye alag, tar fencing ke liye alag — ye chalta hai. Par ek ghatak me duplicate arji (ya ek hi survey number par dubara) pakdi jaati hai aur dono atak sakti hain. Aur kuch ghatak me "khaate dinth ek baar" ya "X saal me ek baar" ki shart hoti hai — wo shart uske page par likhi hoti hai.',
+      'Drip ke liye alag, godown ke liye alag, tar fencing ke liye alag — ye chalta hai. Par ek ghatak me duplicate aavedan (ya ek hi survey number par dubara) pakda jaata hai aur dono atak sakte hain. Aur kuch ghatak me "khaate dinth ek baar" ya "X saal me ek baar" ki shart hoti hai — wo shart uske page par likhi hoti hai.',
   },
   {
     q: 'Bill upload karne ke baad paisa kitne din me aata hai?',
@@ -94,7 +94,7 @@ const FAQS: { q: string; quick: string; detail: string }[] = [
     q: 'Arji reject ho gayi to dobara mauka milta hai?',
     quick: 'Haan — wajah sudhaar kar agli window me nayi arji ho jaati hai.',
     detail:
-      'Reject ki wajah zyada tar sudhaarne layak hoti hai: print jama nahi, quotation mismatch, 7/12 me naam alag, bank detail galat, blur documnet. Reject ka karan taluka office se likhit ya mobile par pata kijiye, wo cheez theek karaiye, aur agli window me nayi arji kijiye. Purani arji ko dobara zinda karne ka koi shortcut nahi hai.',
+      'Reject ki wajah zyada tar sudhaarne layak hoti hai: print jama nahi, quotation mismatch, 7/12 me naam alag, bank detail galat, blur documnet. Reject ka karan taluka office se likhit ya mobile par pata kijiye, wo cheez theek karaiye, aur agli window me nayi arji kijiye. Purani file ko dobara zinda karne ka koi shortcut nahi hai.',
   },
 ];
 
@@ -239,7 +239,7 @@ export default function IkhedutPortalStatusCheck2026({
       <Fig
         src="arji-print-vce.webp"
         alt="Gujarat ke panchayat karyalay me gram sevak arji ka print nikaal raha hai aur khedut documents ki file le kar khada hai"
-        caption="Gram sevak / VCE ke paas arji ka print aur documents — Stage 3 ka asli kaam yahi hai"
+        caption="Gram sevak / VCE ke paas form ka print aur documents — Stage 3 ka asli kaam yahi hai"
       />
 
       <p>Form bharne baithne se pehle ye kagaz haath me rakhiye:</p>
@@ -291,7 +291,7 @@ export default function IkhedutPortalStatusCheck2026({
         </li>
         <li>
           Arji ko <strong>&quot;confirm&quot;</strong> kijiye. Dhyan se — confirm kiye bina
-          arji aage nahi jaati, aur confirm ke baad usme sudhaar bhi nahi hota. Isliye
+          file aage nahi jaati, aur confirm ke baad usme sudhaar bhi nahi hota. Isliye
           confirm dabane se pehle poori detail ek baar padh lijiye.
         </li>
         <li>Arji ka print nikaliye.</li>
@@ -310,7 +310,7 @@ export default function IkhedutPortalStatusCheck2026({
         Aur jama karte waqt ek cheez maang kar lijiye — <strong>receiving</strong> (pahonch /
         acknowledgement). Baad me &quot;aapki file mili hi nahi&quot; wali baat aaye, to wahi
         ek kagaz aapka saboot hai. Bahut se kisan yahan pe hi maar khaa jaate hain: form bhara,
-        arji number bhi mila, par print jama nahi kiya — aur arji khud-ba-khud nikal gayi.
+        arji number bhi mila, par print jama nahi kiya — aur file khud-ba-khud nikal gayi.
       </p>
 
       <h2>Stage 4 — Arji Status Check: Portal Par Kahan Dekhna Hai</h2>
@@ -333,16 +333,16 @@ export default function IkhedutPortalStatusCheck2026({
       </ol>
 
       <p>
-        Screen par arji kis stage par hai wo dikhega — pending, verified, purv manjuri, bill
-        verification, payment ya reject. Same page se arji ki nakal dobara print bhi ho jaati
+        Screen par aapki file kis stage par hai wo dikhega — pending, verified, purv manjuri, bill
+        verification, payment ya reject. Same page se uski nakal dobara print bhi ho jaati
         hai (agar aapne pehle print gum kar diya ho).
       </p>
 
       <p>
-        <strong>Arji number kho gaya to?</strong> Teen raaste — (a) arji ka purana print
-        dekhiye, uspar number chhapa hota hai; (b) jis VCE / gram sevak / cyber cafe se arji
-        bhari thi wahan record hota hai; (c) apne taluka ke vistaran adhikari ke office me
-        Aadhaar aur 7/12 le kar jaiye, wo record se nikal denge. Naya arji bhar dena{' '}
+        <strong>Arji number kho gaya to?</strong> Teen raaste — (a) purana print
+        dekhiye, uspar number chhapa hota hai; (b) jis VCE / gram sevak / cyber cafe se form
+        bhara thi wahan record hota hai; (c) apne taluka ke vistaran adhikari ke office me
+        Aadhaar aur 7/12 le kar jaiye, wo record se nikal denge. Naya aavedan bhar dena{' '}
         <strong>sabse buri</strong> soch hai — duplicate arji dono ko atka deti hai.
       </p>
 
@@ -401,7 +401,7 @@ export default function IkhedutPortalStatusCheck2026({
 
       <p>
         Table me ek line par gaur kijiye — <strong>purv manjuri ke baad kharidi</strong>. Ye
-        ulta karne wale kisan har saal milte hain: tractor pehle ghar aa gaya, sahay ki arji
+        ulta karne wale kisan har saal milte hain: tractor pehle ghar aa gaya, sahay ka aavedan
         baad me. Us case me bill zyada tar manya nahi hota, aur poora paisa apni jeb se
         jaata hai.
       </p>
@@ -431,7 +431,7 @@ export default function IkhedutPortalStatusCheck2026({
 
       <h3>Drip / micro-irrigation — Bagayat aur GGRC ka raasta</h3>
       <p>
-        Drip aur sprinkler ki arji iKhedut se shuru hoti hai, par uska aage ka kaam GGRC
+        Drip aur sprinkler ka aavedan iKhedut se shuru hota hai, par uska aage ka kaam GGRC
         (Gujarat Green Revolution Company) ke system aur manya dealer ke through chalta hai.
         Isliye is ghatak me do jagah nazar rakhni padti hai — iKhedut ka arji status, aur
         dealer/GGRC ke paas file ki sthiti. Dealer se hamesha likhit kagaz lijiye.
@@ -478,17 +478,17 @@ export default function IkhedutPortalStatusCheck2026({
           din ke andar hi print aur documents jama karo, receiving lo.
         </li>
         <li>
-          <strong>Quotation aur bill mel nahi khaate</strong> — arji me ek model, bill me
+          <strong>Quotation aur bill mel nahi khaate</strong> — form me ek model, bill me
           doosra. Ilaaj: quotation wahi model ka lo jo aap asal me kharidoge; badalna pade to
           pehle office ko batao.
         </li>
         <li>
           <strong>Target khatam / draw me naam nahi</strong> — aapki galti nahi hai. Ilaaj:
-          agli window ke pehle din arji karo; late arji ka matlab hi waiting hai.
+          agli window ke pehle din arji karo; der se bhari file ka matlab hi waiting hai.
         </li>
         <li>
           <strong>Duplicate survey number ya duplicate arji</strong> — ek hi zameen par do
-          arji. Ilaaj: parivaar me kisi ne pehle arji ki hai kya, wo pehle confirm karo.
+          aavedan. Ilaaj: parivaar me kisi ne pehle apply kiya hai kya, wo pehle confirm karo.
         </li>
         <li>
           <strong>Bank detail galat</strong> — account number me ek anka galat, ya IFSC bank
@@ -507,14 +507,14 @@ export default function IkhedutPortalStatusCheck2026({
 
       <p>
         Ye samajhna zaroori hai kyunki isse gussa kam hota hai. Kisi ghatak me maan lijiye
-        1,000 unit ka target hai aur 4,000 arji aa gayi. Ab sab ko sahay dena mumkin nahi.
+        1,000 unit ka target hai aur 4,000 aavedan aa gaye. Ab sab ko sahay dena mumkin nahi.
         Aise waqt me priority aur draw ke niyam lagte hain — anusuchit jaati/janjaati, mahila,
         chhote-simant khedut jaise varg ko alag ghatak ya priority milti hai, aur baaki me
         computer se draw hota hai.
       </p>
 
       <p>
-        Matlab: arji reject hone ka matlab hamesha &quot;aapka kagaz galat tha&quot; nahi
+        Matlab: file reject hone ka matlab hamesha &quot;aapka kagaz galat tha&quot; nahi
         hota. Kabhi bas number nahi laga. Us case me agli window ka intezaar hi raasta hai —
         aur agli baar pehle din arji karna aapka fayda badha deta hai.
       </p>
