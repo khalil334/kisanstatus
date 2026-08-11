@@ -322,7 +322,7 @@ export default function CHCPortal() {
           <span className="flex-shrink-0 w-8 h-8 bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 rounded-full flex items-center justify-center font-bold text-sm">P3</span>
           <div>
             <strong className="block text-gray-900 dark:text-gray-100">Phase 3: Expansion (Mahine 18+)</strong>
-            <span className="text-sm text-gray-700 dark:text-gray-300">Doosra tractor ya bada machine add karein. Agar aap FPO ke through kaam kar rahe hain, toh <Link href="/articles/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME Yojana</Link> ke tahat chhoti food processing unit bhi laga sakte hain.</span>
+            <span className="text-sm text-gray-700 dark:text-gray-300">Doosra tractor ya bada machine add karein. Agar aap FPO ke through kaam kar rahe hain, toh <Link href="/articles/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME wali food processing scheme</Link> ke tahat chhoti food processing unit bhi laga sakte hain.</span>
           </div>
         </li>
       </ul>
@@ -339,7 +339,7 @@ export default function CHCPortal() {
         </div>
 
         <div className="bg-red-50 dark:bg-red-900/20 p-5 rounded-lg border border-red-200 dark:border-red-800">
-          <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">❌ Nahi, agar:</h3>
+          <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">❌ Ruk Jaiye, agar:</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>• Aapko sirf "Passive income" ki expectation hai. CHC mein active involvement chahiye.</li>
             <li>• Aap machinery ke technical mamlon se darte hain ya ignore karte hain.</li>
@@ -351,7 +351,7 @@ export default function CHCPortal() {
 
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
         <p className="text-sm text-gray-700 dark:text-gray-300">
-          <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
+          <strong className="text-orange-600 dark:text-orange-400 block mb-2">Zaroori Suchna:</strong>
           Yeh article sirf jankari aur guidance ke liye hai. Machinery ke daam, subsidy ke pratishat, aur sarkari rules samay-samay par badal sakte hain. Koi bhi paisa invest karne se pehle qualified professionals ya apne local Krishi Vibhag se consult karein. Last updated: July 2026.
         </p>
       </div>

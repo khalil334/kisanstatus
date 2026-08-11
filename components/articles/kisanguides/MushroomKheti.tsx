@@ -173,7 +173,7 @@ export default function MushroomKheti() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Is capital ko manage karne ke liye <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Kisan Credit Card (KCC)</Link> ek behtareen vikalp hai. Mushroom farming ko officially horticulture activity ke under cover kiya jata hai. Chhote scale par food processing ke liye <Link href="/articles/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME Yojana</Link> se 35% tak ki subsidy claim ki ja sakti hai.
+        Is capital ko manage karne ke liye <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">KCC card</Link> ek behtareen vikalp hai. Mushroom farming ko officially horticulture activity ke under cover kiya jata hai. Chhote scale par food processing ke liye <Link href="/articles/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME subsidy guide</Link> se 35% tak ki subsidy claim ki ja sakti hai.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
@@ -421,7 +421,7 @@ export default function MushroomKheti() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        <strong>Dhyan rakhein:</strong> Bina research ke kisi private vendor ki baaton mein aakar decision na lein jo "lakhon ka profit" ka wada karein. Pehle apne nazdeeki Krishi Vigyan Kendra (KVK) jayein. Wahan ke officers aapko exact subsidy, eligible vendors ki list, aur free practical training ke baare mein guide karenge. Uske baad kam se kam 3 vendors se quotation lein, unke purane installations dekhne jayein, aur phir hi apply karein.
+        <strong>Ek Cheez Ka Khayal Rakhein:</strong> Bina research ke kisi private vendor ki baaton mein aakar decision na lein jo "lakhon ka profit" ka wada karein. Pehle apne nazdeeki Krishi Vigyan Kendra (KVK) jayein. Wahan ke officers aapko exact subsidy, eligible vendors ki list, aur free practical training ke baare mein guide karenge. Uske baad kam se kam 3 vendors se quotation lein, unke purane installations dekhne jayein, aur phir hi apply karein.
       </p>
 
       <Image
@@ -434,18 +434,18 @@ export default function MushroomKheti() {
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Sources & References
+        Jankari Ke Official Sources
       </h2>
       <ul className="list-disc pl-5 space-y-2 mb-8 text-sm text-gray-600 dark:text-gray-400 not-prose">
         <li><strong>National Horticulture Board (NHB):</strong> Official guidelines for mushroom farming subsidies, training modules, and back-ended capital assistance.</li>
         <li><strong>Directorate of Mushroom Research (DMR), Solan:</strong> Government of India premier portal for scheme details, spawn quality standards, and application protocols.</li>
-        <li><strong>Krishi Vigyan Kendra (KVK):</strong> District-level practical training modules, hands-on mushroom cultivation support, and local vendor verification.</li>
-        <li><strong>FSSAI:</strong> Regulatory guidelines for packaged mushroom, food safety licensing, and value-added product norms.</li>
+        <li><strong>Apne Zile Ka KVK:</strong> District-level practical training modules, hands-on mushroom cultivation support, and local vendor verification.</li>
+        <li><strong>FSSAI Ka License:</strong> Regulatory guidelines for packaged mushroom, food safety licensing, and value-added product norms.</li>
       </ul>
 
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
         <p className="text-sm text-gray-700 dark:text-gray-300">
-          <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
+          <strong className="text-orange-600 dark:text-orange-400 block mb-2">Pehle Padh Lein:</strong>
           Yeh article general educational purpose ke liye hai. Actual costs, subsidies, aur procedures aapke location, state policies, aur specific circumstances ke hisaab se vary kar sakte hain. Koi bhi financial investment karne se pehle qualified professionals (horticulture officers, NHB officials, ya bank managers) se consult karein. Last updated: August 2026.
         </p>
       </div>

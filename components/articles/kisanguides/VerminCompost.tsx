@@ -110,7 +110,7 @@ export default function VerminCompost() {
 
       <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
         <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
-          <strong>Sach kahoon toh:</strong> Chemical fertilizers ke daam lagatar badhne se kisaanon ki lagat badh rahi hai. Aise mein, apne hi khet ke gobar aur kachre ko khaad mein badalna ek practical aur sasta solution ban gaya hai.
+          <strong>Dil Se Bataun Toh:</strong> Chemical fertilizers ke daam lagatar badhne se kisaanon ki lagat badh rahi hai. Aise mein, apne hi khet ke gobar aur kachre ko khaad mein badalna ek practical aur sasta solution ban gaya hai.
         </p>
       </div>
 
@@ -281,7 +281,7 @@ export default function VerminCompost() {
           </li>
         </ul>
         <p className="mt-4 text-xs text-gray-600 dark:text-gray-400 italic border-t border-blue-200 dark:border-blue-800 pt-3">
-          <strong>Note:</strong> In schemes ki guidelines state ke hisaab se vary karti hain. Apply karne se pehle apne nazdeeki Agriculture Department se latest norms zaroor confirm karein.
+          <strong>Chhota Sa Note:</strong> In schemes ki guidelines state ke hisaab se vary karti hain. Apply karne se pehle apne nazdeeki Agriculture Department se latest norms zaroor confirm karein.
         </p>
       </div>
 
@@ -419,7 +419,7 @@ export default function VerminCompost() {
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Real Risks - Jo Koi Nahi Batata
+        Vermi Compost Ke Chhupe Hue Risks
       </h2>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
@@ -481,10 +481,10 @@ export default function VerminCompost() {
       </p>
 
       <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-8">
-        <li><strong>Udyam Registration:</strong> Free hai, online ho jata hai. MSME benefits milte hain.</li>
+        <li><strong>Udyam (MSME) Registration:</strong> Free hai, online ho jata hai. MSME benefits milte hain.</li>
         <li><strong>FCO Registration:</strong> Fertilizer Control Order ke under state agriculture department se registration zaroori hai.</li>
         <li><strong>Lab Testing:</strong> Har batch ko test karna padega - NPK content, heavy metals, pH. ₹2,000 - ₹5,000 per sample.</li>
-        <li><strong>NOC from Local Authorities:</strong> Gram panchayat ya municipal corporation se.</li>
+        <li><strong>Local Authority Se NOC:</strong> Gram panchayat ya municipal corporation se.</li>
       </ul>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
@@ -497,7 +497,7 @@ export default function VerminCompost() {
           </h4>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Working capital aur setup cost ke liye low-interest loan. 4% interest rate with timely repayment.</p>
           <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 text-sm font-medium flex items-center gap-1">
-            KCC Guide Padhein <span>→</span>
+            KCC Ki Puri Jankari Lein <span>→</span>
           </Link>
         </div>
 
@@ -507,7 +507,7 @@ export default function VerminCompost() {
           </h4>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Branded packaging aur value addition ke liye 35% tak subsidy. Maximum ₹10 lakh.</p>
           <Link href="/articles/pm-fme-yojana-food-processing" className="text-green-600 hover:underline dark:text-green-400 text-sm font-medium flex items-center gap-1">
-            PM FME Details Dekhein <span>→</span>
+            PM FME Scheme Samjhein <span>→</span>
           </Link>
         </div>
 
@@ -528,7 +528,7 @@ export default function VerminCompost() {
 
       <div className="grid md:grid-cols-2 gap-6 mb-8 not-prose">
         <div className="bg-green-50 dark:bg-green-900/20 p-5 rounded-lg border border-green-200 dark:border-green-800">
-          <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">✅ Haan, agar:</h3>
+          <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">✅ Sahi Choice Hai, agar:</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>• Gaon ya semi-urban area mein rehte hain.</li>
             <li>• 5-10 gaaye/bhains hain (ya dairy farms se gobar mil sakta hai).</li>
@@ -539,7 +539,7 @@ export default function VerminCompost() {
         </div>
 
         <div className="bg-red-50 dark:bg-red-900/20 p-5 rounded-lg border border-red-200 dark:border-red-800">
-          <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">❌ Nahi, agar:</h3>
+          <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">❌ Risk Hai, agar:</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>• Urban area mein hain jahan raw material nahi milta.</li>
             <li>• Raw material (gobar, organic waste) available nahi hai.</li>
@@ -562,7 +562,7 @@ export default function VerminCompost() {
       </p>
 
       <h2 id="faq" className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Frequently Asked Questions (FAQs)
+        Vermi Compost Business Ke Common Doubts
       </h2>
       <div className="grid md:grid-cols-2 gap-4 mb-8 not-prose">
         <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
@@ -585,7 +585,7 @@ export default function VerminCompost() {
 
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-lg border-l-4 border-orange-500 not-prose">
         <p className="text-sm text-gray-700 dark:text-gray-300">
-          <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
+          <strong className="text-orange-600 dark:text-orange-400 block mb-2">Kaam Ki Suchna:</strong>
           Yeh article general information ke liye hai. Actual costs, subsidies, aur procedures aapke location aur specific circumstances ke hisaab se vary kar sakte hain. Koi bhi financial decision lene se pehle qualified professionals (agriculture officers, CAs) se consult karein. Prices aur guidelines change hote rehte hain, isliye latest information ke liye official sources se verify karein. Last updated: July 2026.
         </p>
       </div>

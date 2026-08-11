@@ -110,7 +110,7 @@ export default function PMatsyaSampada() {
 
       <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
         <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
-          <strong>Sach kahoon toh:</strong> Machli palan mein pehle saal oxygen management ya disease control mein chhoti galtiyan 20-30% tak crop loss karwa sakti hain. Par experience ke saath, doosre-teesre saal tak returns stabilize ho jate hain aur profit consistent hone lagta hai.
+          <strong>Bina Lag Lapet Ke:</strong> Machli palan mein pehle saal oxygen management ya disease control mein chhoti galtiyan 20-30% tak crop loss karwa sakti hain. Par experience ke saath, doosre-teesre saal tak returns stabilize ho jate hain aur profit consistent hone lagta hai.
         </p>
       </div>
 
@@ -243,7 +243,7 @@ export default function PMatsyaSampada() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Yeh investment lagti hai. Par agar aapke paas <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Kisan Credit Card (KCC)</Link> hai, toh fisheries ke liye bhi loan mil jata hai. KCC ke under ₹3 lakh tak loan milta hai, aur interest rate 4% (timely repayment par) hai.
+        Yeh investment lagti hai. Par agar aapke paas <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Kisan Credit Card</Link> hai, toh fisheries ke liye bhi loan mil jata hai. KCC ke under ₹3 lakh tak loan milta hai, aur interest rate 4% (timely repayment par) hai.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
@@ -270,7 +270,7 @@ export default function PMatsyaSampada() {
           </li>
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">3. Cold Storage aur Processing Unit:</strong>
-            Agar aap fish processing unit ya cold storage lagana chahte hain, toh 35-50% subsidy mil sakti hai. <Link href="/articles/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME Yojana</Link> ke under bhi food processing units par 35% subsidy milti hai.
+            Agar aap fish processing unit ya cold storage lagana chahte hain, toh 35-50% subsidy mil sakti hai. <Link href="/articles/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME Yojana ki poori detail</Link> ke under bhi food processing units par 35% subsidy milti hai.
           </li>
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">4. Feed Mill Setup:</strong>
@@ -282,7 +282,7 @@ export default function PMatsyaSampada() {
           </li>
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">6. PMEGP (Prime Minister's Employment Generation Programme):</strong>
-            Chhote fish farming units par 25-35% subsidy mil sakti hai (rural areas mein zyada). Maximum project cost ₹25 lakh hai. KVIC ke through apply hota hai. Official <a href="https://www.pmegp.in/" className="text-blue-600 hover:underline dark:text-blue-400 font-medium" target="_blank" rel="noopener noreferrer">PMEGP portal</a> par details check karein.
+            Chhote fish farming units par 25-35% subsidy mil sakti hai (rural areas mein zyada). Maximum project cost ₹25 lakh hai. KVIC ke through apply hota hai. Official <a href="https://www.pmegp.in/" className="text-blue-600 hover:underline dark:text-blue-400 font-medium" target="_blank" rel="noopener noreferrer">PMEGP ki official site</a> par details check karein.
           </li>
         </ul>
         <p className="mt-4 text-xs text-gray-600 dark:text-gray-400 italic border-t border-blue-200 dark:border-blue-800 pt-3">
@@ -578,7 +578,7 @@ export default function PMatsyaSampada() {
           <strong>Central Institute of Brackishwater Aquaculture (CIBA), Chennai:</strong> Agar aap shrimp farming karna chahte hain, toh yeh best institute hai.
         </li>
         <li>
-          <strong>Krishi Vigyan Kendra (KVK):</strong> Har district mein KVK fish farming training deta hai. Free ya nominal fee mein. Practical hands-on training hoti hai.
+          <strong>KVK (Krishi Vigyan Kendra) Se Training:</strong> Har district mein KVK fish farming training deta hai. Free ya nominal fee mein. Practical hands-on training hoti hai.
         </li>
         <li>
           <strong>State Fisheries Departments:</strong> Har state ki apni training centers hain. Wo regular training programs karte hain.
@@ -617,7 +617,7 @@ export default function PMatsyaSampada() {
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Related Guides & Financial Support
+        Fisheries Ke Saath Kaam Aane Wali Guides Aur Funding
       </h2>
       <div className="grid md:grid-cols-2 gap-4 mb-8 not-prose">
         <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800 hover:shadow-md transition-shadow">
@@ -662,12 +662,12 @@ export default function PMatsyaSampada() {
       </div>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Kya Aapke Liye Sahi Hai? Final Decision Framework
+        Machli Palan Aapke Liye Hai Ya Nahi — Khud Check Karein
       </h2>
 
       <div className="grid md:grid-cols-2 gap-6 mb-8 not-prose">
         <div className="bg-green-50 dark:bg-green-900/20 p-5 rounded-lg border border-green-200 dark:border-green-800">
-          <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">✅ Haan, agar:</h3>
+          <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">✅ Shuru Kar Dein, agar:</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>• Zameen hai (preferably low-lying area jahan paani bhara rehta hai)</li>
             <li>• Water source available hai (borewell, canal, ya natural water body)</li>
@@ -680,7 +680,7 @@ export default function PMatsyaSampada() {
         </div>
 
         <div className="bg-red-50 dark:bg-red-900/20 p-5 rounded-lg border border-red-200 dark:border-red-800">
-          <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">❌ Nahi, agar:</h3>
+          <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">❌ Door Rahein, agar:</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>• Water availability nahi hai</li>
             <li>• Daily monitoring nahi kar sakte</li>
@@ -708,7 +708,7 @@ export default function PMatsyaSampada() {
       </p>
 
       <h2 id="faq" className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Frequently Asked Questions (FAQs)
+        Matsya Sampada Yojana — Sawal Jawab Corner
       </h2>
       <div className="space-y-4 mb-8 not-prose">
         <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
@@ -731,7 +731,7 @@ export default function PMatsyaSampada() {
 
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-lg border-l-4 border-orange-500 not-prose">
         <p className="text-sm text-gray-700 dark:text-gray-300">
-          <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
+          <strong className="text-orange-600 dark:text-orange-400 block mb-2">Suchna:</strong>
           Yeh article general information ke liye hai. Actual costs, subsidies, aur procedures aapke location aur specific circumstances ke hisaab se vary kar sakte hain. Koi bhi financial decision lene se pehle qualified professionals (fisheries officers, aquaculture experts) se consult karein. Prices aur guidelines change hote rehte hain, isliye latest information ke liye official sources se verify karein. Last updated: July 2026.
         </p>
       </div>
