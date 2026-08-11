@@ -523,7 +523,7 @@ export default function RajasthanKisanSammanNidhi9000() {
           }}
         />
         <section className="mb-8 not-prose">
-          <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">Rajasthan Kisan Samman Nidhi FAQ 2026</p>
+          <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">Rajasthan Kisan Samman Nidhi — ₹9,000 wale sawaal jo sab poochhte hain</p>
           <div className="space-y-3">
             {faqs.map(({ q, a }) => (
               <details
@@ -557,7 +557,7 @@ export default function RajasthanKisanSammanNidhi9000() {
         <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
             <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
-            Ye article sirf madad ke liye hai. Final decision ke liye official portal ya krishi office se sampark karein.
+            Ye lekh jaankari ka saathi hai, sarkari dastavez nahi. ₹9,000 se judi har baat Raj Kisan Sathi portal ya nazdeeki krishi paryavekshak se jaanch lein.
           </p>
         </div>
 
@@ -569,7 +569,7 @@ export default function RajasthanKisanSammanNidhi9000() {
               <p className="text-xs text-gray-600 dark:text-gray-400">Next installment kab aayegi.</p>
             </Link>
             <Link href="/rajya-yojana/state-kisan-yojana-list-all-states-2026" className="group flex flex-col bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 hover:shadow-lg transition-all">
-              <h4 className="font-bold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 transition-colors mb-1">State Kisan Yojana List</h4>
+              <h4 className="font-bold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 transition-colors mb-1">Sabhi Rajyon Ki Kisan Yojanaen</h4>
               <p className="text-xs text-gray-600 dark:text-gray-400">Sab states ka comparison ek jagah.</p>
             </Link>
             <Link href="/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega" className="group flex flex-col bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-purple-500 hover:shadow-lg transition-all">
