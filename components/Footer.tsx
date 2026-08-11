@@ -52,11 +52,6 @@ export default function Footer() {
               <ul className="space-y-2 text-sm" role="list">
                 {[
                   { href: '/', label: '🏠 Home' },
-                  { href: '/about', label: '👤 About Us' },
-                  { href: '/disclaimer', label: '⚠️ Disclaimer' },
-                  { href: '/privacy-policy', label: '🔒 Privacy Policy' },
-                  { href: '/terms-of-service', label: '📜 Terms of Service' },
-                  { href: '/contact', label: '📧 Contact Us' },
                   { href: '/articles', label: '📚 All Articles' },
                   { href: '/articles/hi', label: '🇮🇳 हिंदी योजना गाइड' },
                   { href: '/rajya-yojana', label: '🏛️ Rajya Yojana' },
@@ -77,33 +72,27 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-white text-base mb-4 flex items-center gap-2">
-              <span aria-hidden="true">🏛️</span>
-              Official Government Links
-            </h4>
-            <ul className="space-y-2 text-sm mb-6" role="list">
-              {[
-                { href: 'https://pmkisan.gov.in/', label: 'PM Kisan Portal' },
-                { href: 'https://pmkisan.gov.in/BeneficiaryStatus.aspx', label: 'Beneficiary Status' },
-                { href: 'https://pmkisan.gov.in/NewFarmerRegistration.aspx', label: 'New Registration' },
-                { href: 'https://pmkisan.gov.in/FarmersCorner.aspx', label: 'Farmers Corner' },
-                { href: 'https://pmkisan.gov.in/Dashboard.aspx', label: 'Dashboard' },
-                { href: 'https://pmkisan.gov.in/Help.aspx', label: 'Help & Support' },
-              ].map((link) => (
-                <li key={link.href}>
-                  <a
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer nofollow"
-                    className="text-gray-400 hover:text-green-400 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 rounded inline-flex items-center gap-1 py-0.5"
-                    aria-label={`${link.label} (opens in new tab)`}
-                  >
-                    {link.label}
-                    {EXTERNAL_ICON}
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <h4 className="font-semibold text-white text-base mb-4">Company & Legal</h4>
+            <nav aria-label="Company and legal pages">
+              <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm" role="list">
+                {[
+                  { href: '/about', label: '👤 About Us' },
+                  { href: '/contact', label: '📧 Contact Us' },
+                  { href: '/privacy-policy', label: '🔒 Privacy Policy' },
+                  { href: '/terms-of-service', label: '📜 Terms of Service' },
+                  { href: '/disclaimer', label: '⚠️ Disclaimer' },
+                ].map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-gray-400 hover:text-green-400 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 rounded inline-block py-0.5"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
           </div>
 
           <div>
@@ -188,6 +177,36 @@ export default function Footer() {
               👍 Facebook Page Par Follow Karein ↗
             </a>
           </div>
+        </div>
+
+        <div className="border-t border-white/10 pt-6 pb-6">
+          <h4 className="font-semibold text-white text-base mb-4 flex items-center gap-2">
+            <span aria-hidden="true">🏛️</span>
+            Official Government Links
+          </h4>
+          <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm" role="list">
+            {[
+              { href: 'https://pmkisan.gov.in/', label: 'PM Kisan Portal' },
+              { href: 'https://pmkisan.gov.in/BeneficiaryStatus.aspx', label: 'Beneficiary Status' },
+              { href: 'https://pmkisan.gov.in/NewFarmerRegistration.aspx', label: 'New Registration' },
+              { href: 'https://pmkisan.gov.in/FarmersCorner.aspx', label: 'Farmers Corner' },
+              { href: 'https://pmkisan.gov.in/Dashboard.aspx', label: 'Dashboard' },
+              { href: 'https://pmkisan.gov.in/Help.aspx', label: 'Help & Support' },
+            ].map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="text-gray-400 hover:text-green-400 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 rounded inline-flex items-center gap-1 py-0.5"
+                  aria-label={`${link.label} (opens in new tab)`}
+                >
+                  {link.label}
+                  {EXTERNAL_ICON}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div className="border-t border-white/10 pt-8">
