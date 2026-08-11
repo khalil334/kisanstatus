@@ -28,7 +28,8 @@ export default function Logo({ variant = 'light', size = 'md' }: LogoProps) {
           alt="KisanStatus.com logo"
           width={sizes.imgSize}
           height={sizes.imgSize}
-          priority
+          loading="eager"
+          fetchPriority="low"
           className={`${sizes.image} object-contain`}
         />
       </div>
