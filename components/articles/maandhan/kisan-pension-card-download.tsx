@@ -140,7 +140,7 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
 
         <div className="my-6 p-5 bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 rounded-r-xl">
           <p className="text-sm md:text-base text-red-900 dark:text-red-100 leading-relaxed font-medium">
-            <strong>Seedhi baat:</strong> Is scheme me enrollment ke waqt bas ek acknowledgement slip milti hai — aur zyadatar cases me wo CSC par hi print hoti hai. Saalon tak contribution auto-debit se katta rehta hai, lekin haath me koi document nahi hota. Phir jab proof ki zaroorat padti hai — status verify karna ho, bank me sawal puchna ho, ya 60 ke baad pension claim karni ho — tab pata chalta hai ki na slip hai, na KPAN number yaad hai. Yehi is guide ka kaam hai: bina purani slip ke apna pension record (KPAN samet) wapas kaise nikalein.
+            <strong>Asli Dikkat:</strong> Is scheme me enrollment ke waqt bas ek acknowledgement slip milti hai — aur zyadatar cases me wo CSC par hi print hoti hai. Saalon tak contribution auto-debit se katta rehta hai, lekin haath me koi document nahi hota. Phir jab proof ki zaroorat padti hai — status verify karna ho, bank me sawal puchna ho, ya 60 ke baad pension claim karni ho — tab pata chalta hai ki na slip hai, na KPAN number yaad hai. Yehi is guide ka kaam hai: bina purani slip ke apna pension record (KPAN samet) wapas kaise nikalein.
           </p>
         </div>
 
@@ -402,7 +402,7 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Poochhe Jaane Wale Sawal (FAQs)
+            Pension Card Par Chhote Sawal, Kaam Ke Jawab
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="PM-KMY Pension Card Download — Sawal Jawab" />
         </section>
@@ -423,7 +423,7 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
         />
 
         <section className="my-10">
-          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Ye Bhi Padhein</h3>
+          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Kaam Ke Aur Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {RELATED_CARDS.map((card) => (
               <Link

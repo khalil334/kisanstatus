@@ -350,7 +350,7 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
           <div className="space-y-3 mb-4">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
               <p className="font-black text-sm text-green-800 dark:text-green-300 mb-1">🟢 Pehle 1 Mahine Tak</p>
-              <p className="text-xs text-[var(--color-text-muted)]">Koi late fee nahi. Sirf due amount jama karke account regular karwa sakte hain. Teen payment cycles tak demand raise hoti hai bina kisi interest ke.</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Koi late fee nahi. Sirf due amount jama karke account regular karwa sakte hain. Demand teen payment cycles tak dobara uthai jaati hai, aur is par koi interest nahi lagta.</p>
             </div>
 
             <p className="text-xs text-[var(--color-text-muted)] leading-relaxed">
@@ -415,7 +415,7 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Poochhe Jaane Wale Sawal
+            Contribution Ko Lekar Poochhe Gaye Sawal
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Maandhan — Common Sawal" />
         </section>
@@ -439,7 +439,7 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
         />
 
         <section className="my-10">
-          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Ye Bhi Padhein</h3>
+          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Aage Ki Padhai</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {RELATED_CARDS.map((card) => (
               <Link

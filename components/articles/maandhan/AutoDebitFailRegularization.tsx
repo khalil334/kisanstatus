@@ -417,13 +417,13 @@ export default function AutoDebitFailRegularization() {
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Poochhe Jaane Wale Sawal (FAQs)
+            Regularization Par Aapke Sawal, Seedhe Jawab
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="Auto Debit Regularization — Sawal Jawab" />
         </section>
 
         <section className="my-10">
-          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Related Articles</h3>
+          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Aage Kya Padhein</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {RELATED_CARDS.map((card) => (
               <Link

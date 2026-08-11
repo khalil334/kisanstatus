@@ -378,7 +378,7 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Poochhe Jaane Wale Sawal (FAQs)
+            Eligibility Aur Documents Par Quick Jawab
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="PM-KMY Eligibility Aur Zaroori Kagazat — Sawal Jawab" />
         </section>
@@ -399,7 +399,7 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
         />
 
         <section className="my-10">
-          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Ye Bhi Padhein</h3>
+          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Yeh Guides Bhi Kaam Aayengi</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {RELATED_CARDS.map((card) => (
               <Link
