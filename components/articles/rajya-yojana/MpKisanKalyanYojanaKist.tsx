@@ -201,8 +201,8 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
           nahi, us season ki state kist atak sakti hai — ye MP ki apni extra shart hai.
         </li>
         <li>
-          <strong>e-KYC poori:</strong> Aadhaar seeding aur mobile linking dono complete
-          hon.
+          <strong>e-KYC poori:</strong> PM Kisan wali e-KYC ho chuki ho — Aadhaar bank se seeded
+          ho aur mobile number link ho, dono shartein zaroori hain.
         </li>
       </ul>
 
@@ -534,7 +534,7 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         }}
       />
       <section className="mb-8 not-prose">
-        <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">MP CM Kisan Kalyan Yojana FAQ 2026</p>
+        <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">MP ke kisano ne jo poochha — CM Kisan Kalyan Yojana par seedhe jawab</p>
         <div className="space-y-3">
           {FAQS_DATA.map(({ q, a }) => (
             <details
@@ -566,7 +566,7 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
           <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
-          Ye article sirf madad ke liye hai. Final decision ke liye official portal ya krishi office se sampark karein.
+          Ye sirf ek margdarshak lekh hai. Kist ki tareekh aur raqam par bharosa Saara portal ki official suchna ya patwari/tehsil office se hi karein.
         </p>
       </div>
 
