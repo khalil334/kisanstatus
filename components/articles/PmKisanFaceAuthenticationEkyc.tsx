@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 
 const PUBLISHED = '2026-07-10T08:00:00+05:30';
-const MODIFIED = '2026-07-10T08:00:00+05:30';
+const MODIFIED = '2026-08-11T08:00:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisanEkycOnline2026', title: 'Normal eKYC Guide', emoji: '🔐' },
@@ -15,11 +15,11 @@ const RELATED = [
 const FAQS_DATA = [
   {
     q: 'Face authentication ke liye kaunsa app use karein?',
-    a: 'Sirf official PMKisan App hi use karna hai (pmkisan.gov.in se download karo). Play Store par koi third party app dikhe toh usse door raho — wo aapka data chura sakti hain.',
+    a: 'Sirf official PMKisan app, aur uske saath AadhaarFaceRD app (dono Play Store par sarkari publisher se). Play Store par milte-julte naam ki koi third-party app dikhe toh usse door raho — wo aapka data chura sakti hain.',
   },
   {
     q: 'Bina OTP ke eKYC ho sakti hai?',
-    a: 'Haan, bilkul. Face authentication mein OTP ki koi zaroorat nahi. Bas camera ke samne chehra dikhana hai aur jo instructions screen par aayein wo follow karne hain.',
+    a: 'Haan. Chehre wale tarike mein OTP ki koi zaroorat nahi. Camera ke samne aana hai, screen par jo instructions aayein (palak jhapkana waghera) wo follow karni hain — bas.',
   },
   {
     q: 'Face scan fail ho raha hai, kya karein?',
@@ -27,15 +27,15 @@ const FAQS_DATA = [
   },
   {
     q: 'Kya CSC jakar bhi karwa sakte hain?',
-    a: 'Haan, nazdiki CSC center par biometric device se face authentication ho jata hai. ₹20 se ₹30 lag sakte hain. 5 minute mein kaam ho jata hai.',
+    a: 'Haan, nazdiki CSC center par biometric device se yahi kaam ho jata hai. ₹20 se ₹30 lag sakte hain. 5 minute mein ho jata hai.',
   },
   {
-    q: 'Face authentication ke baad kya karein?',
-    a: '2-3 din wait karo taaki database update ho. Phir beneficiary list mein apna naam check karo. Wahan status "Active" dikhna chahiye.',
+    q: 'Chehra verify hone ke baad kya karein?',
+    a: '2-3 din wait karo taaki database update ho. Phir beneficiary list mein apna naam check karo. Wahan eKYC status "YES" ya "Active" dikhna chahiye.',
   },
   {
     q: 'Agar Aadhaar mein photo bahut purani hai toh?',
-    a: 'Aise mein face match nahi ho pata. Pehle nazdiki Aadhaar center jakar photo update karwao, uske baad hi face authentication try karna.',
+    a: 'Aise mein chehra match nahi ho pata. Pehle nazdiki Aadhaar center jakar photo update karwao, uske baad hi dobara try karna.',
   },
 ];
 
@@ -49,7 +49,7 @@ export default function PmKisanFaceAuthenticationEkyc() {
             <span>/</span>
             <Link href="/articles" className="hover:text-white transition-colors">Articles</Link>
             <span>/</span>
-            <span className="text-white font-bold">Face Authentication</span>
+            <span className="text-white font-bold">Face eKYC</span>
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">New Feature</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
@@ -77,17 +77,42 @@ export default function PmKisanFaceAuthenticationEkyc() {
             priority
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)]">
-            Face Authentication — Bina OTP Ke eKYC
+            Chehre se eKYC — bina OTP ke
           </p>
         </div>
 
         <section className="mb-8">
-          <SH>OTP Nahi Aa Raha To Kya Karein</SH>
+          <SH>OTP vs Face vs Biometric — Aapke Liye Kaunsa Tarika Sahi Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Roz mere paas aise messages aate hain — "Bhaiya OTP hi nahi aa raha, kya karein?" Mobile number purana ho gaya hai, ya network sahi nahi chal raha. Aise mein <Link href="/articles/PmKisanEkycOnline2026" className="underline text-green-700 dark:text-green-400">normal eKYC</Link> ruk jaati hai aur kist aane mein dikkat hoti hai.
+            eKYC karne ke teen raaste hain, aur galat raasta pakadne mein hi zyadatar logon ka time barbaad hota hai. Isliye pehle 30 second mein ye decide karo ki aapka case kaunsa hai. Face authentication unhi ke liye bana hai jinke paas baaki do raaste band hain.
           </p>
+          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-[var(--color-primary)] text-white">
+                  <th className="p-3 text-left">Aapki Situation</th>
+                  <th className="p-3 text-left">Best Tarika</th>
+                  <th className="p-3 text-left">Kahan Hoga</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['Mobile number Aadhaar se link hai, OTP aa jata hai', 'OTP wali eKYC', 'pmkisan.gov.in par khud, free'],
+                  ['Number link nahi / OTP nahi aa raha, smartphone hai', 'Chehre se verification', 'PMKisan app se khud, free'],
+                  ['Smartphone nahi hai ya camera kharab hai', 'Biometric (fingerprint)', 'CSC center, ₹20-30'],
+                  ['Aadhaar ki photo 10+ saal purani hai', 'Pehle Aadhaar photo update, phir koi bhi tarika', 'Aadhaar Seva Kendra'],
+                ].map(([sit, best, where], i) => (
+                  <tr key={i} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text)]">{sit}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs font-medium text-green-700 dark:text-green-400">{best}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{where}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Khushkhabri ye hai ki sarkar ne iska hal nikala hai — <strong>Face Authentication</strong>. Ab camera ke samne aakar, bina OTP ke apni eKYC complete kar sakte ho. Ye process PMKisan app par available hai aur bilkul free hai.
+            Pehli line wale ho? Toh ye page aapke liye nahi hai — seedha <Link href="/articles/PmKisanEkycOnline2026" className="underline text-green-700 dark:text-green-400">normal eKYC guide</Link> kholo, OTP se 2 minute mein kaam ho jayega. Doosri line wale yahin ruko. Roz aise messages aate hain — "Bhaiya OTP hi nahi aa raha, kya karein?" Number purana band ho gaya, naya Aadhaar se link nahi karaya. Unhi ke liye ye poora page hai.
           </p>
 
           <Image
@@ -98,98 +123,92 @@ export default function PmKisanFaceAuthenticationEkyc() {
             className="w-full rounded-xl my-4"
           />
 
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Ye feature un kisanon ke liye vardaan hai jinka mobile number Aadhaar se link nahi hai ya jinhe OTP receive nahi ho raha. <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">Beneficiary list</Link> mein naam check karne se pehle ye live face verification zaroor kar lena.
-          </p>
-
           <DB>
             <strong>Real Example:</strong>
             <p className="text-xs text-gray-700 dark:text-gray-300 mt-2">
-              Patna ke Rajesh Kumar ji ka experience: "Mera mobile number 5 saal pehle band ho gaya tha. Naya number liya lekin Aadhaar se link nahi karaya. Jab PM Kisan ke liye apply kiya toh OTP nahi aaya. Face authentication se 5 minute mein eKYC ho gaya. Ab har 4 mahine mein paisa aa raha hai."
+              Patna ke Rajesh Kumar ji ka experience: "Mera mobile number 5 saal pehle band ho gaya tha. Naya number liya lekin Aadhaar se link nahi karaya. Jab PM Kisan ke liye apply kiya toh OTP nahi aaya. Chehre wale tarike se 5 minute mein eKYC ho gayi. Ab har 4 mahine mein paisa aa raha hai."
             </p>
           </DB>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-3">
+            Ye kaam karta kaise hai? Simple biometric verification hai — jaise fingerprint se Aadhaar verify hota hai, waise hi camera aapka chehra scan karke Aadhaar database ki photo se milata hai. Match hua toh verified. Sarkari system hai, data UIDAI ke through hi jata hai. Bas ek shart hai: sirf official app use karni hai, koi milti-julti third-party app nahi.
+          </p>
         </section>
 
         <section className="mb-8">
-          <SH>Face Authentication Kya Hai?</SH>
+          <SH>Do App Chahiye — PMKisan + AadhaarFaceRD (Setup Aur Install Errors)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Pehle ye samajhte hain ki ye hai kya. Face authentication ek tarah ka biometric verification hai. Jaise fingerprint se Aadhaar verify hota hai, waise hi ab chehra dikha kar verify kar sakte ho. Isko PM Kisan photo verification bhi kehte hain.
-          </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            <strong>Kaise kaam karta hai?</strong>
+            Yahan zyadatar log atakte hain, kyunki koi batata nahi ki app <strong>ek nahi, do</strong> chahiye. PMKisan app toh sabko pata hai, lekin chehra scan asal mein <strong>AadhaarFaceRD</strong> naam ki UIDAI wali app karti hai — wo background mein chalti hai, uska koi icon-screen nahi dikhta. Agar wo install nahi hai, toh scan shuru hote hi error aa jata hai aur log samajhte hain ki unka phone kharab hai.
           </p>
           <ul className="list-disc list-inside text-sm text-[var(--color-text-muted)] space-y-2 mb-4">
-            <li>App camera on karta hai</li>
-            <li>Tumhara chehra scan karta hai</li>
-            <li>Aadhaar database se match karta hai</li>
-            <li>Agar match hua toh verified</li>
+            <li><strong>PMKisan app</strong> — Play Store se, publisher "Government of India" check karo. Play Store par na mile toh pmkisan.gov.in se APK download karo.</li>
+            <li><strong>AadhaarFaceRD</strong> — Play Store par isi naam se hai, publisher UIDAI. Install karke bhoolo — kholne ki zaroorat nahi, ye service ki tarah kaam karti hai.</li>
           </ul>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Ye process bilkul safe hai. Government ki official app hai. Koi third party app use mat karna — wo aapka data chura sakti hain.
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Install ke waqt jo errors aate hain, unka seedha fix:
           </p>
-        </section>
-
-        <section className="mb-8">
-          <SH>Kaun Logon Ko Use Karna Chahiye?</SH>
-          <div className="bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 rounded-xl p-5 mb-6">
-            <p className="text-sm font-black text-blue-800 dark:text-blue-300 mb-3">
-              Face authentication un kisanon ke liye hai jo:
-            </p>
-            <ul className="list-disc list-inside text-xs text-blue-800 dark:text-blue-300 space-y-2">
-              <li>Jinka mobile number Aadhaar se link nahi hai</li>
-              <li>Jinhe OTP nahi mil raha hai</li>
-              <li>Jinka number change ho gaya hai</li>
-              <li>Jo gaon mein rehte hain aur network problem hai</li>
-              <li>Jo CSC center nahi jaana chahte</li>
-            </ul>
+          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-[var(--color-primary)] text-white">
+                  <th className="p-3 text-left">Error Message</th>
+                  <th className="p-3 text-left">Matlab</th>
+                  <th className="p-3 text-left">Fix</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['"RD service not found" / "FaceRD not installed"', 'AadhaarFaceRD app missing hai', 'Play Store se AadhaarFaceRD install karo, phone restart karo, dobara try karo'],
+                  ['"App not compatible with your device"', 'Android version purana hai', 'Kisi ghar wale ke naye phone se karo — aapka Aadhaar, phone kisi ka bhi chalega'],
+                  ['"Capture failed"', 'Scan beech mein toot gaya', 'Camera permission check karo (Settings > Apps > PMKisan > Permissions), phir dobara'],
+                  ['Download hi nahi ho raha / "Pending"', 'Play Store ka storage/net issue', 'Phone storage khali karo (1GB+), WiFi par try karo'],
+                ].map(([err, meaning, fix], i) => (
+                  <tr key={i} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs font-medium text-red-600 dark:text-red-400">{err}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text)]">{meaning}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{fix}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
-          <Image
-            src="/images/articles/pm-kisan-face-authentication-ekyc/who-should-use.webp"
-            alt="Farmer using face authentication on mobile phone for PM Kisan kisan eKYC"
-            width={800}
-            height={450}
-            className="w-full rounded-xl"
-          />
+          <IB>
+            <strong>Important:</strong> Dono app free hain. Koi app ya website is kaam ke paise maange (khud karne par), toh wo fraud hai. CSC par karwane ka charge alag baat hai — uski receipt milti hai.
+          </IB>
         </section>
 
         <section className="mb-8">
-          <SH>Step-by-Step: Face Authentication Kaise Karein?</SH>
+          <SH>Scan Kaise Karein — Step by Step</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Process bahut simple hai. Neeche diye gaye steps follow karo:
+            Dono app install ho gayi? Ab asli kaam. Poora process 5 minute ka hai:
           </p>
           <StepList>
             <SI n={1}>
-              <strong>App Download Karo:</strong> Play Store se <strong>PMKisan App</strong> download karo. Agar Play Store par nahi mil raha toh pmkisan.gov.in par jao. Wahan se APK file download karke install karo.
+              <strong>PMKisan app kholo:</strong> Home screen par "Face Authentication" ka option dikhega. Us par tap karo. (Option na dikhe toh app update karo — purane version mein ye feature nahi tha.)
             </SI>
             <SI n={2}>
-              <strong>App Kholo:</strong> App install hone ke baad kholo. Home screen par "Face Authentication" ka option dikhega. Us par tap karo.
+              <strong>Aadhaar number daalo:</strong> Apna 12 digit ka Aadhaar number daalo. Dhyan se — ek number bhi galat hua toh error aayega. "Search" dabao.
             </SI>
             <SI n={3}>
-              <strong>Aadhaar Number Daalo:</strong> Apna 12 digit ka Aadhaar number daalo. Dhyan se daalna, ek number bhi galat hua toh error aayega. "Search" button dabao.
+              <strong>Details confirm karo:</strong> Screen par tumhara naam aur photo dikhegi. Check karo ki ye aap hi ho. Photo purani hai lekin pehchan mein aa rahi hai toh "Yes" dabao.
             </SI>
             <SI n={4}>
-              <strong>Details Confirm Karo:</strong> Screen par tumhara naam aur photo dikhegi. Check karo ki ye aap hi ho. Agar photo purani hai lekin pehchan mein aa rahi hai toh "Yes" dabao.
+              <strong>Camera on hoga:</strong> Chehra frame ke gol ghere mein rakho. Roshni saamne se aani chahiye, peeche se nahi. Background plain rakho.
             </SI>
             <SI n={5}>
-              <strong>Camera On Hoga:</strong> Ab camera on hoga. Apna chehra frame mein rakho. Roshni achhi honi chahiye. Peeche plain background rakho.
+              <strong>Instructions follow karo:</strong> Screen par likha aayega "Blink your eyes" — palak jhapkao. Ye isliye taaki koi photo dikha kar verify na kar le; system live insaan check karta hai.
             </SI>
             <SI n={6}>
-              <strong>Instructions Follow Karo:</strong> Screen par likha aayega "Blink your eyes" ya "Turn your head". Jaise bola waise karo. Ye security ke liye hai taaki photo se verify na ho. Ise PM Kisan live face verification kehte hain.
-            </SI>
-            <SI n={7}>
-              <strong>Success Message:</strong> Agar sab sahi hua toh "Successfully Authenticated" ka message aayega. Green tick dikhega. Screenshot le lo apne record ke liye.
+              <strong>Success message:</strong> Sab sahi hua toh "Successfully Authenticated" aayega, green tick ke saath. Screenshot le lo apne record ke liye.
             </SI>
           </StepList>
 
           <WB>
             <strong>Zaroori Tips:</strong>
             <ul className="list-disc list-inside mt-2 space-y-1 text-xs">
-              <li>Roshni achhi honi chahiye, andhere mein scan fail ho jayega</li>
-              <li>Chashma (glasses) utaar do scan ke time</li>
-              <li>Background plain rakho, peeche koi aur na khada ho</li>
-              <li>Net connection tez hona chahiye (4G/WiFi)</li>
-              <li>Camera saaf hona chahiye</li>
-              <li>Agar 3 baar fail ho toh 1 ghante baad try karo</li>
+              <li>Din mein khidki ke paas karo — andhere mein scan fail ho jata hai</li>
+              <li>Chashma utaar do scan ke time</li>
+              <li>Net tez hona chahiye (4G/WiFi)</li>
+              <li>3 baar fail ho toh 1 ghanta ruko — bar-bar try karne se attempt block ho sakta hai</li>
             </ul>
           </WB>
 
@@ -200,70 +219,25 @@ export default function PmKisanFaceAuthenticationEkyc() {
             height={600}
             className="w-full rounded-xl my-6"
           />
-        </section>
 
-        <section className="mb-8">
-          <SH>Common Errors Aur Unka Fix</SH>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Kabhi kabhi error aa jata hai. Ghabrana mat. Har error ka solution hai:
-          </p>
-          <div className="space-y-3">
-            {[
-              {
-                error: 'Face not detected',
-                fix: 'Camera saaf karo aur roshni mein aao. Window ke paas jakar try karo. Agar phir bhi na ho toh torch on karke try karo.',
-                extra: 'Ye sabse common error hai. 80% cases mein roshni ki kami hoti hai.'
-              },
-              {
-                error: 'Network timeout',
-                fix: 'WiFi ya 4G check karo. Airplane mode on karke 10 second baad off karo. Phir try karo.',
-                extra: 'Gaon mein network slow hota hai. Subah 6-8 baje ya raat 10 baje ke baad try karo jab network kam busy hota hai.'
-              },
-              {
-                error: 'Aadhaar mismatch',
-                fix: 'Agar photo purani hai aur bilkul alag lag rahi hai, toh CSC jakar Aadhaar update karo pehle.',
-                extra: 'Agar 10 saal se zyada purani photo hai toh pehle Aadhaar center jakar photo update karna padega.'
-              },
-              {
-                error: 'Multiple attempts fail',
-                fix: '2-3 baar fail hone par turant CSC center par chale jao. Wahan biometric device se karwa lo.',
-                extra: 'Bar bar try karne se account temporarily lock ho sakta hai. 3 attempts ke baad ruk jao.'
-              },
-              {
-                error: 'App crash ho raha hai',
-                fix: 'App ka cache clear karo. Settings &gt; Apps &gt; PMKisan &gt; Storage &gt; Clear Cache. Phir try karo.',
-                extra: 'Agar phir bhi crash ho toh app uninstall karke dobara install karo.'
-              },
-            ].map(({ error, fix, extra }, i) => (
-              <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
-                <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">❌ {error}</p>
-                <p className="text-xs text-green-700 dark:text-green-400 mb-2"><strong>✅ Fix:</strong> {fix}</p>
-                <p className="text-xs text-gray-600 dark:text-gray-400 italic"><strong>💡 Tip:</strong> {extra}</p>
-              </div>
-            ))}
-          </div>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
-            Agar phir bhi dikkat aa rahi hai, toh <Link href="/articles/PmKisanMasterGuide2026" className="underline text-green-700 dark:text-green-400">Master Guide</Link> padho ya nazdiki CSC center par chale jao.
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Green tick ke baad kaam khatam nahi hota. 2-3 din mein database update hota hai — phir <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">beneficiary list</Link> mein naam check karo, eKYC "YES" dikhna chahiye. Agar hai, toh agli kist mein aapka paisa rukega nahi. Nahi dikha ek hafte tak, toh helpline <strong>155261</strong> par reference ke saath baat karo.
           </p>
         </section>
 
         <section className="mb-8">
-          <SH>CSC Center Se Bhi Karwa Sakte Ho</SH>
+          <SH>Ghar Ke Buzurg Ya Feature-Phone Wale Kisan — Aapka Raasta Alag Hai</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Agar app se nahi ho pa raha, toh koi baat nahi. Nazdiki <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">CSC center</Link> par jakar bhi PM Kisan camera scan karwa sakte ho.
+            Sach baat: 60-65 saal ke kisan ke liye app download, permission, scan — ye sab jhanjhat hai. Aur jinke paas button wala phone hai, unke liye ye tarika hai hi nahi. Aise mein do practical raaste:
           </p>
-          <div className="bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl p-5 mb-6">
-            <p className="text-sm text-green-800 dark:text-green-300 mb-3">
-              <strong>CSC Process:</strong>
-            </p>
-            <ul className="list-disc list-inside text-xs text-green-800 dark:text-green-300 space-y-1 mb-3">
-              <li>Aadhaar card le jao (original)</li>
-              <li>CSC wala biometric device se scan karega</li>
-              <li>₹20-30 fees lag sakti hai</li>
-              <li>5 minute mein ho jayega</li>
-              <li>Receipt milegi, usko sambhal kar rakho</li>
-            </ul>
-          </div>
+          <ul className="list-disc list-inside text-sm text-[var(--color-text-muted)] space-y-2 mb-4">
+            <li>
+              <strong>Ghar ke kisi jawaan ka smartphone use karo.</strong> App mein login aapke Aadhaar se hota hai, phone kiska hai isse fark nahi padta. Beta/beti/pota — kisi ka bhi phone, 5 minute ka kaam. Kai gharon mein ek hi phone se dada, dadi, chacha sabki eKYC hui hai — ye bilkul allowed hai.
+            </li>
+            <li>
+              <strong>Ya seedha <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">CSC center</Link> jao.</strong> Aadhaar card original le jao. Operator biometric device se fingerprint ya chehra scan karega. ₹20-30 lagenge, receipt zaroor lo. 5 minute mein kaam hota hai — line ka time alag.
+            </li>
+          </ul>
           <Image
             src="/images/articles/pm-kisan-face-authentication-ekyc/csc-face-auth.webp"
             alt="CSC center operator doing PM Kisan face authentication for farmer with biometric device"
@@ -272,54 +246,11 @@ export default function PmKisanFaceAuthenticationEkyc() {
             className="w-full rounded-xl my-4"
           />
           <IB>
-            <strong>Important:</strong> CSC wale ko bolo ki wo "PM Kisan Face Authentication" kar raha hai. Normal eKYC mat karwana. Dono alag hain.
+            <strong>CSC par ye zaroor bolna:</strong> "PM Kisan ki eKYC karni hai." Operator ko pata hota hai kaunsa portal kholna hai. Receipt lena mat bhoolna — baad mein dikkat aayi toh yahi proof hai.
           </IB>
-        </section>
-
-        <section className="mb-8">
-          <SH>Face Authentication Ke Fayde</SH>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-            {[
-              { icon: '🚫', title: 'No OTP Needed', desc: 'Mobile number link nahi? Koi problem nahi. Bina OTP ke ho jayega.' },
-              { icon: '⚡', title: 'Fast Process', desc: '2 minute mein complete. Lambi line mein khade hone ki zaroorat nahi.' },
-              { icon: '🏠', title: 'Ghar Baithe', desc: 'CSC jane ki zaroorat nahi. Mobile se hi kar lo.' },
-              { icon: '✅', title: '100% Accurate', desc: 'Biometric verification hai. Galati ka chance nahi.' },
-              { icon: '💰', title: 'Bilkul Free', desc: 'Agar khud karo toh ek rupya bhi nahi lagega.' },
-              { icon: '🔒', title: 'Safe & Secure', desc: 'Government ki official app hai. Data safe hai.' },
-            ].map(({ icon, title, desc }) => (
-              <div key={title} className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl hover:border-green-300 dark:hover:border-green-700 transition-all">
-                <span className="text-2xl block mb-2">{icon}</span>
-                <p className="font-black text-sm text-[var(--color-text)] mb-1">{title}</p>
-                <p className="text-xs text-[var(--color-text-muted)]">{desc}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="mb-8">
-          <SH>Authentication Ke Baad Kya Karein?</SH>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Face authentication successful hone ke baad kuch steps aur hain:
-          </p>
-          <ol className="space-y-2 mb-4">
-            {[
-              'Screenshot le lo confirmation ka. Future mein kaam aayega.',
-              '2-3 din wait karo. Database update hone mein time lagta hai.',
-              '<a href="/articles/PmKisanBeneficiaryList2026" class="underline text-green-700 dark:text-green-400">Beneficiary list</a> mein apna naam check karo.',
-              'Status "Active" dikhna chahiye.',
-              'Agar active hai toh agle 4 mahine mein paisa aa jayega.',
-            ].map((step, i) => (
-              <li key={i} className="flex gap-3 items-start">
-                <span className="shrink-0 w-7 h-7 rounded-full bg-green-600 text-white text-xs font-black flex items-center justify-center">
-                  {i + 1}
-                </span>
-                <span className="text-sm text-[var(--color-text-muted)] pt-0.5" dangerouslySetInnerHTML={{ __html: step }} />
-              </li>
-            ))}
-          </ol>
           <Image
-            src="/images/articles/pm-kisan-face-authentication-ekyc/success-screen.webp"
-            alt="Successful PM Kisan face authentication confirmation screen with green tick"
+            src="/images/articles/pm-kisan-face-authentication-ekyc/who-should-use.webp"
+            alt="Farmer using face authentication on mobile phone for PM Kisan kisan eKYC"
             width={800}
             height={450}
             className="w-full rounded-xl my-4"
@@ -327,73 +258,56 @@ export default function PmKisanFaceAuthenticationEkyc() {
         </section>
 
         <section className="mb-8">
-          <SH>Kya Har State Mein Available Hai?</SH>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Haan, ye feature ab har state mein available hai. Lekin kuch states mein alag process hai:
-          </p>
-          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
-            <table className="w-full text-sm border-collapse">
-              <thead>
-                <tr className="bg-[var(--color-primary)] text-white">
-                  <th className="p-3 text-left">State</th>
-                  <th className="p-3 text-left">Status</th>
-                  <th className="p-3 text-left">Note</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  ['UP, Bihar, MP', '✅ Available', 'Direct app se karo'],
-                  ['Maharashtra', '✅ Available', 'App + CSC dono'],
-                  ['Rajasthan, Gujarat', '✅ Available', 'App se preferred'],
-                  ['South States', '✅ Available', 'Sabhi states mein'],
-                  ['North East', '✅ Available', 'CSC recommended'],
-                ].map(([state, status, note], i) => (
-                  <tr key={state} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
-                    <td className="p-3 border-b border-[var(--color-border)] font-medium text-xs text-[var(--color-text)]">{state}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-green-600 dark:text-green-400">{status}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{note}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <section className="mb-8">
-          <SH>Advanced Troubleshooting</SH>
+          <SH>"Photo Match Nahi Ho Raha" — Asli Kaaran Aur Fix</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Agar basic fixes se kaam nahi bana toh ye try karo:
+            App sahi chal rahi hai, scan bhi ho raha hai, lekin aakhir mein fail — "Authentication failed" ya "Face not matched". Iske gine-chune kaaran hote hain:
           </p>
           <div className="space-y-3">
-            <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
-              <p className="font-black text-sm text-[var(--color-text)] mb-2">📱 Phone Settings Check Karo:</p>
-              <ul className="list-disc list-inside text-xs text-[var(--color-text-muted)] space-y-1">
-                <li>Camera permission on hai? (Settings &gt; Apps &gt; PMKisan &gt; Permissions)</li>
-                <li>Storage permission on hai?</li>
-                <li>Internet permission on hai?</li>
-                <li>Battery optimization off karo app ke liye</li>
-              </ul>
-            </div>
-            <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
-              <p className="font-black text-sm text-[var(--color-text)] mb-2">🔄 App Update Karo:</p>
-              <p className="text-xs text-[var(--color-text-muted)]">
-                Purani version use kar rahe ho toh update karo. Play Store par jao aur check karo ki koi update available hai ya nahi.
-              </p>
-            </div>
-            <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
-              <p className="font-black text-sm text-[var(--color-text)] mb-2">📞 Helpline Number:</p>
-              <p className="text-xs text-[var(--color-text-muted)]">
-                Agar kuch bhi kaam nahi kar raha toh <strong>155261</strong> par call karo. Ya <Link href="/articles/PmKisanStateNodalOfficerList" className="underline text-green-700 dark:text-green-400">state nodal officer</Link> se contact karo.
-              </p>
-            </div>
+            {[
+              {
+                error: 'Aadhaar ki photo bahut purani hai',
+                fix: 'Ye sabse bada kaaran hai. 10-15 saal purani photo se aaj ka chehra system match nahi kar pata — umar, daadhi, chashma, sab badal jata hai. Iska ek hi ilaaj: Aadhaar Seva Kendra jakar photo update karwao (₹50 ki official fees), 2-4 din mein update hota hai, phir scan karo.',
+              },
+              {
+                error: 'Face not detected — chehra pakad hi nahi raha',
+                fix: 'Roshni ka issue hai. Khidki ke paas jao, roshni chehre par ho (peeche se nahi). Camera ka lens saaf karo. Topi/gamchha hatao, chashma utaro.',
+              },
+              {
+                error: 'Blink karne par bhi aage nahi badh raha',
+                fix: 'Phone ko sthir pakdo (table par kohni tika lo), aankhein saaf dikhni chahiye. Dhoop ka chashma toh bilkul nahi.',
+              },
+              {
+                error: 'Network timeout',
+                fix: 'Scan ke waqt data UIDAI tak jata hai — net toota toh fail. WiFi ya achha 4G pakdo. Gaon mein subah 6-8 baje network sabse khali hota hai.',
+              },
+              {
+                error: 'Baar-baar fail — 3+ attempts',
+                fix: 'Ab zid mat karo, attempt lock ho sakta hai. Seedha CSC jao aur fingerprint se karwa lo — wahan chehre ki zaroorat hi nahi.',
+              },
+            ].map(({ error, fix }, i) => (
+              <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
+                <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">❌ {error}</p>
+                <p className="text-xs text-[var(--color-text-muted)]"><strong className="text-green-700 dark:text-green-400">✅ Fix:</strong> {fix}</p>
+              </div>
+            ))}
           </div>
+          <Image
+            src="/images/articles/pm-kisan-face-authentication-ekyc/success-screen.webp"
+            alt="Successful PM Kisan face authentication confirmation screen with green tick"
+            width={800}
+            height={450}
+            className="w-full rounded-xl my-4"
+          />
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
+            Ek aur cheez jo log miss karte hain: app ka version. Purani version mein bugs the jo ab fix ho chuke hain — Play Store kholkar update check kar lo, cache clear kar lo (Settings &gt; Apps &gt; PMKisan &gt; Storage &gt; Clear Cache). Aur agar kuch bhi kaam na kare, toh helpline <strong>155261</strong> ya apne <Link href="/articles/PmKisanStateNodalOfficerList" className="underline text-green-700 dark:text-green-400">state nodal officer</Link> se baat karo. Poori process ki detail ke liye <Link href="/articles/PmKisanMasterGuide2026" className="underline text-green-700 dark:text-green-400">Master Guide</Link> bhi hai.
+          </p>
         </section>
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Aksar Puche Jane Wale Sawal
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="Face Authentication FAQ" />
+          <FAQBlock faqs={FAQS_DATA} caption="Chehre se eKYC — FAQ" />
         </section>
 
         <GovLink
