@@ -14,6 +14,29 @@ same section flow, same hook style, same intro pattern, same internal-linking sc
 > hub-link anchors sab unique. Kuch bhi delete nahi hua — sirf replace. Facts/slugs/exports unchanged.
 > Build pass (next build).
 
+> **Status (Batch 1 — keyword-density pass, 4/15 files done):** `docs/keyword-repetition-report.md` mein
+> jo over-optimization mili thi, uska fix shuru. **Sakht niyam jo is pass mein follow ho rahe hain:**
+> (1) **ranking keyword kabhi delete nahi** — pehle `lib/rajya-yojana-data.ts` se us page ka `mainKeyword`
+> + `secondaryKeywords` padhe jaate hain, wo H1 / 1-2 H2 / intro / FAQ mein poore rehte hain;
+> (2) sirf **filler repeats** replace hote hain (wahi shabd jo ek hi paragraph mein 3-4 baar bina
+> matlab aaya ho); (3) **word count kabhi kam nahi** — har file ka before/after count compare hota hai
+> aur 2000 se neeche kabhi nahi; (4) target density ~0.8–1.5% (na stuffing, na keyword loss).
+>
+> | File | Keyword | Pehle | Ab | Words |
+> |---|---|---|---|---|
+> | StateKisanYojanaHub | `state` (main kw) | ×88 (2.74%) | ×36 (1.11%) | 3215 → 3236 |
+> | IkhedutPortalStatusCheck2026 | `arji` (main kw) | ×84 (2.56%) | ×62 (1.89%) | 3277 → 3279 |
+> | BiharKisanRegistrationStatusCheck2026 | `registration` (main kw) | ×43 (1.77%) | ×33 (1.35%) | 2436 → 2437 |
+> | NamoShetkariYojanaStatus | `kisan` (filler) | ×49 (1.84%) | ×40 (1.51%) | 2657 → 2696 |
+>
+> Verified per file: hrefs, ₹ amounts, .gov.in URLs, export name, image src, H1 text, H2 count,
+> FAQ count — **sab byte-identical**. `next build --webpack` pass (126 pages).
+>
+> **Pending (11 files):** MpKisanKalyanYojanaKist, UpKisanKarjRahatList2026, OdishaCmKisanStatusCheck,
+> RajasthanKisanSammanNidhi9000, RythuBharosaStatusCheck, MeriFasalMeraByoraStatusCheck2026,
+> PmKisanPatiPatniRule, PariharaPaymentStatusCheck2026, AnnadataSukhibhavaStatusCheck,
+> KrishakUnnatiYojanaStatusCheck, KrishakBandhuStatusCheck (last one already clean — no unigram >1%).
+
 **Shared frame:** local `Fig()` helper (Image + figcaption card) · `InfoBox` · `SchemeTable` ·
 `ExternalLinkButton` · hero.webp with priority · H1 → intro paras → status-check steps →
 beneficiary list section → "Padosi ko mil gaya, mujhe nahi" style hook section →
@@ -185,7 +208,7 @@ Files (`components/articles/kisanguides/`):
 
 | Group | Template | Articles | Sameness |
 |---|---|---|---|
-| 1 | Rajya Yojana | 15 | ✅ DONE — Batch 1 uniqueness pass complete (no dup H2/FAQ/sentence/anchor) |
+| 1 | Rajya Yojana | 15 | ✅ uniqueness pass done · 🟡 keyword-density pass 4/15 (ranking kws preserved, word count never reduced) |
 | 2 | Hindi Yojana | 15 | ✅ DONE — Batch 2 uniqueness pass complete (unique anchors/CTA/captions, no dup H2/FAQ/hook) |
 | 3 | Maandhan | 13 | High — 3-FAQ frame, pension flow |
 | 4 | Loan/Mandi/Pashupalan | 11 | High — FAQBlock + ArticleMeta frame |

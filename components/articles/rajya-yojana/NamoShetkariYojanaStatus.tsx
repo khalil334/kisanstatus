@@ -42,15 +42,15 @@ function Fig({
 const FAQS_DATA = [
   {
     q: 'Kya mujhe Namo Shetkari ke liye alag se registration karna padega?',
-    a: 'Is scheme ka apna koi application form hi nahi hai — beneficiary list PM Kisan ke Maharashtra wale database se uthai jaati hai. Is liye aapka kaam do jagah hai: PM Kisan mein record chaalu rakhein aur 7/12 Utara mein apna naam durust rakhein. Portal par "registration" ka wada karne wali site private hai, official nahi.',
+    a: 'Is scheme ka apna koi application form hi nahi hai — beneficiary list PM Kisan ke Maharashtra wale database se uthai jaati hai. Is liye aapka kaam do jagah hai: kendriya record chaalu rakhein aur 7/12 Utara mein apna naam durust rakhein. Portal par "registration" ka wada karne wali site private hai, official nahi.',
   },
   {
     q: 'Namo Shetkari hapta kadhi milel?',
-    a: 'Pattern ye raha hai ki state ka hapta PM Kisan ki kist aane ke kuch hafton baad release hota hai — kyunki list PM Kisan ke verified data se banti hai. ⚠️ Agle hapte ki koi date officially announce nahi hui hai; GR (Government Resolution) nikalne ke baad hi tareekh pakki hoti hai.',
+    a: 'Pattern ye raha hai ki state ka hapta PM Kisan ki kist aane ke kuch hafton baad release hota hai — kyunki list wahi verified data se banti hai. ⚠️ Agle hapte ki koi date officially announce nahi hui hai; GR (Government Resolution) nikalne ke baad hi tareekh pakki hoti hai.',
   },
   {
     q: 'Mera naam beneficiary list mein nahi hai, kya karein?',
-    a: 'Pehle check karein ki aap PM Kisan mein eligible hain ya nahi. Agar PM Kisan mein hain, toh apne taluka krishi adhikari (TAL) se sampark karein aur apna 7/12 Utara aur Aadhaar details verify karwayein.',
+    a: 'Pehle check karein ki aap PM Kisan mein eligible hain ya nahi. Agar wahan darj hain, toh apne taluka krishi adhikari (TAL) se sampark karein aur apna 7/12 Utara aur Aadhaar details verify karwayein. Verification ke baad naam agli list mein chadh jaata hai, is liye ek baar office ka receiving zaroor le lijiye.',
   },
   {
     q: 'nsmny.mahait.org phone par nahi khul raha — doosra raasta kya hai?',
@@ -336,10 +336,10 @@ export default function NamoShetkariYojanaStatusCheck2026() {
 
       <p>
         Rule sookhe lagte hain — ye baat pallu se baandhne wali hai, kyunki isse hi aage ka kaam banta hai. Isliye ek aam pattern se samajhein — ye kahani taluka
-        krishi office mein har season dohrayi jaati hai. Do acre wala kisan, PM Kisan
+        krishi office mein har season dohrayi jaati hai. Do acre wala khetihar, PM Kisan
         2019 se aa raha hai. Namo Shetkari shuru hone par usne kuch nahi kiya — aur pehli
-        kist apne aap aa gayi, kyunki list PM Kisan ke data se bani thi. Doosri kist ke
-        waqt problem: PM Kisan ki e-KYC expire ho gayi thi. Central wali kist bhi ruki
+        kist apne aap aa gayi, kyunki list central data se bani thi. Doosri kist ke
+        waqt problem: PM Kisan ki e-KYC expire ho gayi thi. Kendriya kist bhi ruki
         aur state wali bhi — dono ek hi record par khadi hain. CSC par biometric e-KYC
         karwane ke baad agli release mein dono kistein ek saath aayi — ruki hui raqam
         scheme ke record mein rehti hai, khatam nahi hoti.
@@ -368,17 +368,17 @@ export default function NamoShetkariYojanaStatusCheck2026() {
 
       <h3>1. Bank Account DBT Enabled Nahi Hai</h3>
       <p>
-        Agar aapka bank account NPCI (National Payments Corporation of India) mapper mein Aadhaar ke saath linked nahi hai, toh state government ka paisa fail ho jayega, bhale hi PM Kisan ka paisa aa gaya ho (kyunki kabhi-kabhi PM Kisan account number se bhi process ho jata hai, lekin state schemes strict DBT follow karti hain).
+        Agar aapka bank account NPCI (National Payments Corporation of India) mapper mein Aadhaar ke saath linked nahi hai, toh state government ka paisa fail ho jayega, bhale hi PM Kisan ka paisa aa gaya ho (kyunki kabhi-kabhi kendriya transfer account number se bhi process ho jata hai, lekin state schemes strict DBT follow karti hain).
       </p>
 
       <h3>2. Naam Mein Mismatch</h3>
       <p>
-        Agar Aadhaar card, bank account, aur PM Kisan database mein aapka naam bilkul same nahi hai (jaise "Ramesh Kumar" vs "Ramesh K."), toh payment reject ho sakti hai.
+        Agar Aadhaar card, bank account, aur kendriya database mein aapka naam bilkul same nahi hai (jaise "Ramesh Kumar" vs "Ramesh K."), toh payment reject ho sakti hai.
       </p>
 
       <h3>3. PM Kisan Status Mein Koi Dikkat</h3>
       <p>
-        Kyunki ye scheme PM Kisan par dependent hai, agar aapka PM Kisan status "Rejected" ya "On Hold" hai, toh Namo Shetkari ka paisa bhi nahi aayega. Pehle PM Kisan portal par apna status theek karein.
+        Kyunki ye scheme PM Kisan par dependent hai, agar wahan aapka status "Rejected" ya "On Hold" hai, toh Namo Shetkari ka paisa bhi nahi aayega. Pehle central portal par apni sthiti theek karein, kyunki jab tak wahan ka record saaf nahi hota, rajya ka hapta aage nahi badhta — aur ye sudhaar hone ke baad agli release mein paisa apne aap jud jaata hai.
       </p>
 
       <h3>4. List Se Naam Kat Jane Ki Wajah</h3>
