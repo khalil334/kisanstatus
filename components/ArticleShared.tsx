@@ -3,7 +3,7 @@ import React from 'react';
 import { AUTHOR_NAME, AUTHOR_BIO, DISCLAIMER_TEXT } from '@/lib/site-config';
 
 export function fmtDate(iso: string) {
-  return new Date(iso).toLocaleDateString('hi-IN', {
+  return new Date(iso).toLocaleDateString('en-IN', {
     day: 'numeric',
     month: 'long',
     year: 'numeric',
