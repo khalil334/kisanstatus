@@ -312,7 +312,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Ek baar fail hone se account default nahi hota. LIC demand ko agle payment cycle mein dobara raise karti hai. Payment cycles har mahine 1st, 11th, aur 21st ko hote hain. Lekin agar payment miss hone ke baad bhi contribution successfully raise nahi hoti aur outstanding rehti hai, toh account default status mein chala jata hai. Auto-debit baar-baar fail ho raha hai aur account regularize karna hai, toh iska poora process alag guide mein step-by-step likha hai: <Link href="/maandhan/auto-debit-fail-hone-par-regularization-kaise-karein" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Auto-Debit Fail Hone Par Regularization Kaise Karein</Link>.
+        Ek baar fail hone se account default nahi hota. Agle cycle mein LIC wahi demand dobara uthati hai — yeh cycles mahine ki 1, 11 aur 21 tareekh ko chalte hain. Lekin agar payment miss hone ke baad bhi contribution successfully raise nahi hoti aur outstanding rehti hai, toh account default status mein chala jata hai. Auto-debit baar-baar fail ho raha hai aur account regularize karna hai, toh iska poora process alag guide mein step-by-step likha hai: <Link href="/maandhan/auto-debit-fail-hone-par-regularization-kaise-karein" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Auto-Debit Fail Hone Par Regularization Kaise Karein</Link>.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">

@@ -304,7 +304,7 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Poochhe Jaane Wale Sawal
+            Compare Karte Waqt Ke Zaroori Sawal
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="PMKMY vs APY — Common Confusions" />
         </section>
@@ -328,7 +328,7 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
         />
 
         <section className="my-10">
-          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Ye Bhi Padhein</h3>
+          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Scheme Samajhne Ke Aur Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <Link href="/maandhan/pm-kisan-maandhan-auto-debit-poora-sach" className="group block p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:border-green-500 transition-all duration-300">
               <div className="text-2xl mb-2">💳</div>

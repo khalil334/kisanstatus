@@ -105,7 +105,18 @@ Files (`components/articles/hindi-yojana/`):
 
 ---
 
-## Group 3 — Maandhan template (13 articles)
+## Group 3 — Maandhan template (13 articles) — ✅ BATCH 3 COMPLETE (uniqueness pass done)
+
+> **Status (Batch 3 done, 11 Aug 2026):** Sab 13 articles ab ek dusre se unique hain.
+> Kya badla (replace-only, kuch delete nahi): (1) FAQ-section H2 headings — pehle 3 duplicate
+> patterns the ("Aksar Poochhe Jaane Wale Sawal (FAQs)" ×3, "Aksar Poochhe Jaane Wale Sawal" ×3,
+> "Poochhe Jaane Wale Sawal (FAQs)" ×3) — ab har file ka apna unique heading; (2) "Seedhi baat:"
+> opener ×4 tha — ek rakha (StatusCheckOnline), baaki 3 mein alag labels ("Ek Case Samjhiye:",
+> "Asli Dikkat:", "Sach Pehle Jaan Lijiye:"); (3) cross-file duplicate sentences (payment-cycle /
+> LIC demand wali lines) — ek copy reword; (4) related-cards captions ("Ye Bhi Padhein" ×6,
+> "Related Articles" ×4) — sab 13 unique. FAQ sawaal aur in-body link anchors pehle se unique
+> the — verify karke as-is chhode. Facts, slugs, exports, JSON-LD, hrefs unchanged.
+> `next build --webpack` pass.
 
 **Shared frame:** `FAQS_DATA` const (3 FAQs typical) · same pension-scheme section flow
 (eligibility → contribution → status → withdrawal) · `article` prop (`MaandhanArticleMeta`) ·
@@ -210,7 +221,7 @@ Files (`components/articles/kisanguides/`):
 |---|---|---|---|
 | 1 | Rajya Yojana | 15 | ✅ uniqueness pass done · 🟡 keyword-density pass 4/15 (ranking kws preserved, word count never reduced) |
 | 2 | Hindi Yojana | 15 | ✅ DONE — Batch 2 uniqueness pass complete (unique anchors/CTA/captions, no dup H2/FAQ/hook) |
-| 3 | Maandhan | 13 | High — 3-FAQ frame, pension flow |
+| 3 | Maandhan | 13 | ✅ DONE — Batch 3 uniqueness pass complete (unique FAQ H2s, openers, captions, dup sentences reworded) |
 | 4 | Loan/Mandi/Pashupalan | 11 | High — FAQBlock + ArticleMeta frame |
 | 5 | Core PM-Kisan | 27 | Medium — older 2-FAQ skeleton |
 | 6 | Kisanguides | 9 | Medium — ExternalLinkButton guide frame |
