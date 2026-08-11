@@ -556,7 +556,7 @@ const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'PmKisanFaceAuthenticationEkyc',
     category: 'status-check',
     publishedTime: '2026-07-09T03:27:50+03:00',
-    modifiedTime: '2026-08-06T22:01:17+00:00',
+    modifiedTime: '2026-08-11T08:00:00+05:30',
     readingTime: 10,
     author: 'KisanStatus Editorial Team',
     authorBio: 'Agricultural content experts with 5+ years experience in government scheme research',

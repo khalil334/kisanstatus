@@ -55,7 +55,7 @@ Companion to [`content-audit-red-flags.md`](./content-audit-red-flags.md). **Har
 #### 4. `components/articles/PmKisanCscRegistrationCharges.tsx`
 > Same 100%-clone skeleton group ka member. Naya angle: **"CSC par kya free, kya paid, overcharging kaise pakdo."** Skeleton: (1) official CSC rate list table with source (unique module); (2) kaunse kaam ghar se free vs CSC zaroori; (3) "CSC wala zyada maang raha hai" — complaint process + helpline; (4) receipt kyun lo. Rates sirf official CSC/scheme source se — confirm nahi to "rate state-wise vary karta hai, receipt se milao" likho. `keywords[]` me 5/6 "pm kisan" stem — dedupe.
 
-#### 5. `components/articles/PmKisanFaceAuthenticationEkyc.tsx`
+#### 5. `components/articles/PmKisanFaceAuthenticationEkyc.tsx` — ✅ Done (2026-08-11)
 > "face authentication" **52×** — pehle ise ≤6 karo ("chehre se eKYC", "FaceRD wala tarika", "ye method"). Skeleton clone hai — naya: (1) decision-first opening "OTP vs Face vs Biometric — aapke liye kaunsa"; (2) FaceRD app setup with install errors — error-message → fix table (unique module); (3) buzurg/feature-phone walon ka alternate raasta; (4) "photo match nahi ho raha" troubleshooting. Error messages real app ke hone chahiye, gadhe hue nahi.
 
 #### 6. `components/articles/PmKisanBankAccountChangeProcess.tsx`
@@ -128,7 +128,7 @@ Companion to [`content-audit-red-flags.md`](./content-audit-red-flags.md). **Har
 #### 27. `kisanguides/PMatsyaSampada.tsx`
 > "matsya sampada yojana" 17× — ≤6 ("PMMSY", "is scheme", "matsya yojana"). Skeleton: beneficiary-type-first (naya talab kholne wala vs existing pond wala vs seller — har ek ka apna raasta). Unique module: **component-wise subsidy table** (general vs SC/ST/women rates — guidelines PDF se verified).
 
-#### 28. `maandhan/pmkmy-bank-account-change.tsx`
+#### 28. `maandhan/pmkmy-bank-account-change.tsx` — ✅ Done (2026-08-11)
 > **"bank account change" 48× — repo ka worst.** ≤6 karo. Page sirf **Maandhan pension** account change par; pehle para me PM-Kisan walon ko root `PmKisanBankAccountChangeProcess` ka existing link. Unique module: **"auto-debit naye account se kab shuru hoga" timeline**. "span span span" ×20 filler delete. Skeleton root bank-change page se alag: timeline/consequence-first, process-first nahi.
 
 #### 29. `maandhan/AutoDebitFailRegularization.tsx`
