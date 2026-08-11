@@ -343,7 +343,7 @@ export default function BiharKisanRegistrationStatusCheck2026({
             — bank rejection ke har code ka ilaaj
           </li>
           <li>
-            → <Link href="/rajya-yojana/state-kisan-yojana-list-all-states-2026">State Kisan Yojana List</Link>{' '}
+            → <Link href="/rajya-yojana/state-kisan-yojana-list-all-states-2026">Har Rajya Ki Kisan Yojana — Poori Soochi</Link>{' '}
             — har rajya ki yojana ka status ek jagah
           </li>
           <li>
@@ -502,7 +502,7 @@ export default function BiharKisanRegistrationStatusCheck2026({
           <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
           Anudan ki raqam, rate aur window har season ki adhisoochna se badalte hain —
           aavedan se pehle official portal ki taaza notice ya apne Kisan Salahkar se zaroor
-          confirm karein. Ye article sirf raasta dikhane ke liye hai.
+          confirm karein. Is page ka kaam bas process samjhana hai — sarkari suchna ka darja isse na dein.
         </p>
       </div>
 
