@@ -518,7 +518,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         }}
       />
       <section className="mb-8 not-prose">
-        <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">Annadata Sukhibhava FAQ 2026</p>
+        <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">Annadata Sukhibhava — kisano ke aam sawaal (2026)</p>
         <div className="space-y-3">
           {FAQS_DATA.map(({ q, a }) => (
             <details
@@ -546,7 +546,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
           <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
-          Ye article sirf madad ke liye hai. Final decision ke liye official portal ya krishi office se sampark karein.
+          Ye guide sirf jaankari ke iraade se likhi gayi hai. Aakhri faisla hamesha official portal ya apne mandal ke krishi adhikari se poochh kar hi lein.
         </p>
       </div>
 
