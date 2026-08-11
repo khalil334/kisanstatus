@@ -42,44 +42,47 @@ const FAQS_DATA = [
   },
 ];
 
+// Har state ka OFFICIAL land-records (Bhulekh) portal — DILRMP (dilrmp.gov.in) ki
+// state-wise RoR list se verify kiya gaya. Jin states/UTs ka dedicated portal nahi
+// hai (DILRMP me "Not Available"), wahan state ka official govt portal diya hai.
 const STATE_LINKS = [
   { name: 'Uttar Pradesh', url: 'https://upbhulekh.gov.in', slug: 'uttar-pradesh' },
   { name: 'Bihar', url: 'https://biharbhumi.bihar.gov.in', slug: 'bihar' },
-  { name: 'Madhya Pradesh', url: 'https://bhu-abhilekh.nic.in', slug: 'madhya-pradesh' },
-  { name: 'Rajasthan', url: 'https://apnakhata.raj.nic.in', slug: 'rajasthan' },
+  { name: 'Madhya Pradesh', url: 'https://mpbhulekh.gov.in', slug: 'madhya-pradesh' },
+  { name: 'Rajasthan', url: 'https://apnakhata.rajasthan.gov.in', slug: 'rajasthan' },
   { name: 'Maharashtra', url: 'https://bhulekh.mahabhumi.gov.in', slug: 'maharashtra' },
   { name: 'West Bengal', url: 'https://banglarbhumi.gov.in', slug: 'west-bengal' },
   { name: 'Gujarat', url: 'https://anyror.gujarat.gov.in', slug: 'gujarat' },
-  { name: 'Karnataka', url: 'https://bhoomi.karnataka.gov.in', slug: 'karnataka' },
+  { name: 'Karnataka', url: 'https://landrecords.karnataka.gov.in', slug: 'karnataka' },
   { name: 'Tamil Nadu', url: 'https://eservices.tn.gov.in', slug: 'tamil-nadu' },
   { name: 'Telangana', url: 'https://dharani.telangana.gov.in', slug: 'telangana' },
-  { name: 'Andhra Pradesh', url: 'https://meeseva.gov.in', slug: 'andhra-pradesh' },
+  { name: 'Andhra Pradesh', url: 'https://meebhoomi.ap.gov.in', slug: 'andhra-pradesh' },
   { name: 'Odisha', url: 'https://bhulekh.ori.nic.in', slug: 'odisha' },
   { name: 'Punjab', url: 'https://jamabandi.punjab.gov.in', slug: 'punjab' },
   { name: 'Haryana', url: 'https://jamabandi.nic.in', slug: 'haryana' },
   { name: 'Jharkhand', url: 'https://jharbhoomi.jharkhand.gov.in', slug: 'jharkhand' },
-  { name: 'Chhattisgarh', url: 'https://bhunaksha.cg.nic.in', slug: 'chhattisgarh' },
-  { name: 'Assam', url: 'https://revenue.assam.gov.in', slug: 'assam' },
-  { name: 'Uttarakhand', url: 'https://ukbhulekh.uk.gov.in', slug: 'uttarakhand' },
-  { name: 'Himachal Pradesh', url: 'https://landrecords.hp.gov.in', slug: 'himachal-pradesh' },
-  { name: 'Jammu & Kashmir', url: 'https://jklandrecords.jk.gov.in', slug: 'jammu-kashmir' },
-  { name: 'Kerala', url: 'https://erevenue.kerala.gov.in', slug: 'kerala' },
-  { name: 'Goa', url: 'https://dlss.goa.gov.in', slug: 'goa' },
+  { name: 'Chhattisgarh', url: 'https://bhuiyan.cg.nic.in', slug: 'chhattisgarh' },
+  { name: 'Assam', url: 'https://ilrms.assam.gov.in', slug: 'assam' },
+  { name: 'Uttarakhand', url: 'https://bhulekh.uk.gov.in', slug: 'uttarakhand' },
+  { name: 'Himachal Pradesh', url: 'https://lrc.hp.nic.in', slug: 'himachal-pradesh' },
+  { name: 'Jammu & Kashmir', url: 'https://landrecords.jk.gov.in', slug: 'jammu-kashmir' },
+  { name: 'Kerala', url: 'https://erekha.kerala.gov.in', slug: 'kerala' },
+  { name: 'Goa', url: 'https://dslr.goa.gov.in', slug: 'goa' },
 
-  { name: 'Tripura', url: 'https://landrecords.tripura.gov.in', slug: 'tripura' },
-  { name: 'Manipur', url: 'https://landrecords.manipur.gov.in', slug: 'manipur' },
-  { name: 'Meghalaya', url: 'https://landrecords.meghalaya.gov.in', slug: 'meghalaya' },
-  { name: 'Nagaland', url: 'https://landrecords.nagaland.gov.in', slug: 'nagaland' },
-  { name: 'Arunachal Pradesh', url: 'https://landrecords.arunachal.gov.in', slug: 'arunachal-pradesh' },
-  { name: 'Mizoram', url: 'https://landrecords.mizoram.gov.in', slug: 'mizoram' },
-  { name: 'Sikkim', url: 'https://landrecords.sikkim.gov.in', slug: 'sikkim' },
+  { name: 'Tripura', url: 'https://jami.tripura.gov.in', slug: 'tripura' },
+  { name: 'Manipur', url: 'https://louchapathap.nic.in', slug: 'manipur' },
+  { name: 'Meghalaya', url: 'https://meghalaya.gov.in', slug: 'meghalaya' },
+  { name: 'Nagaland', url: 'https://nagaland.gov.in', slug: 'nagaland' },
+  { name: 'Arunachal Pradesh', url: 'https://arunachalpradesh.gov.in', slug: 'arunachal-pradesh' },
+  { name: 'Mizoram', url: 'https://landrevenue.mizoram.gov.in', slug: 'mizoram' },
+  { name: 'Sikkim', url: 'https://sikkim.gov.in', slug: 'sikkim' },
 
   { name: 'Delhi', url: 'https://dlrc.delhi.gov.in', slug: 'delhi' },
   { name: 'Puducherry', url: 'https://revenue.py.gov.in', slug: 'puducherry' },
-  { name: 'Chandigarh', url: 'https://chandigarhrevenue.gov.in', slug: 'chandigarh' },
-  { name: 'Andaman & Nicobar', url: 'https://landrecords.andaman.gov.in', slug: 'andaman-nicobar' },
-  { name: 'Dadra & Nagar Haveli', url: 'https://dnh.gov.in', slug: 'dadra-nagar-haveli' },
-  { name: 'Daman & Diu', url: 'https://daman.gov.in', slug: 'daman-diu' },
+  { name: 'Chandigarh', url: 'https://chandigarh.gov.in', slug: 'chandigarh' },
+  { name: 'Andaman & Nicobar', url: 'https://andaman.gov.in', slug: 'andaman-nicobar' },
+  { name: 'Dadra & Nagar Haveli', url: 'https://ddd.gov.in', slug: 'dadra-nagar-haveli' },
+  { name: 'Daman & Diu', url: 'https://ddd.gov.in', slug: 'daman-diu' },
   { name: 'Lakshadweep', url: 'https://lakshadweep.gov.in', slug: 'lakshadweep' },
   { name: 'Ladakh', url: 'https://ladakh.gov.in', slug: 'ladakh' },
 ];
@@ -199,7 +202,7 @@ export default function PmKisanLandSeedingFormPdf2026() {
 
           <h3 className="font-black text-[var(--color-text)] text-base mb-2 mt-6">2. State Ke Bhulekh Portal Par (Land Record Seeding Status)</h3>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Kabhi kabhi PM Kisan portal par "Seeded" dikhata hai, par actual record galat link hota hai — naam ya khasra number mismatch ki wajah se. Isliye apne state ke Bhulekh portal (jaise UP ke liye upbhulekh.gov.in, Rajasthan ke liye apnakhata.raj.nic.in) par jaakar apna khasra-khatauni nikaal kar khud verify kar lena zyada safe rehta hai.
+            Kabhi kabhi PM Kisan portal par "Seeded" dikhata hai, par actual record galat link hota hai — naam ya khasra number mismatch ki wajah se. Isliye apne state ke Bhulekh portal (jaise UP ke liye upbhulekh.gov.in, Rajasthan ke liye apnakhata.rajasthan.gov.in) par jaakar apna khasra-khatauni nikaal kar khud verify kar lena zyada safe rehta hai.
           </p>
 
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
@@ -286,7 +289,7 @@ export default function PmKisanLandSeedingFormPdf2026() {
         <section className="mb-8">
           <SH>State Wise Land Seeding Form Details</SH>
 
-          <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">🏔️ Uttar Pradesh</h3>
+          <h3 id="uttar-pradesh" className="font-black text-[var(--color-text)] text-base mb-3 mt-6 scroll-mt-24">🏔️ Uttar Pradesh</h3>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             UP mein sabse zyada kisan online hi kaam nipta lete hain — upbhulekh portal kaafi seedha aur accessible hai, isliye Patwari ke paas jaane ki zaroorat kam hi padti hai.
           </p>
@@ -321,7 +324,7 @@ export default function PmKisanLandSeedingFormPdf2026() {
             className="w-full rounded-xl mb-4"
           />
 
-          <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">🌊 Bihar</h3>
+          <h3 id="bihar" className="font-black text-[var(--color-text)] text-base mb-3 mt-6 scroll-mt-24">🌊 Bihar</h3>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Bihar mein process thoda dheema hai, khaaskar monsoon mein — nadiyon ke aas-paas ke ilakon mein Circle Officer records verify karne mein zyada waqt lagate hain. Isliye jitni jaldi ho sake apply kar dein.
           </p>
@@ -342,7 +345,7 @@ export default function PmKisanLandSeedingFormPdf2026() {
             </p>
           </div>
 
-          <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">🌿 Madhya Pradesh</h3>
+          <h3 id="madhya-pradesh" className="font-black text-[var(--color-text)] text-base mb-3 mt-6 scroll-mt-24">🌿 Madhya Pradesh</h3>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             MP ka system in charon states mein sabse zyada digital-friendly hai — Khasra number daalte hi baaki details khud-ba-khud fill ho jaati hain, manual entry ki galti ki gunjaish kam rehti hai.
           </p>
@@ -354,14 +357,14 @@ export default function PmKisanLandSeedingFormPdf2026() {
               <strong>Online Process:</strong>
             </p>
             <ul className="list-disc list-inside text-xs text-purple-800 dark:text-purple-300 space-y-1">
-              <li><Link href="https://bhu-abhilekh.nic.in" className="underline">bhu-abhilekh.nic.in</Link> par jaayein</li>
-              <li>Land Seeding option chunein</li>
-              <li>Apna Khasra number darj karein</li>
-              <li>Form ki details apne aap fill ho jayengi</li>
+              <li><Link href="https://mpbhulekh.gov.in" className="underline">mpbhulekh.gov.in</Link> par jaayein</li>
+              <li>Services me <strong>Bhu-Abhilekh (Khasra/Khatauni)</strong> chunein — saadharan copy free milti hai</li>
+              <li>Zila, tehsil, gaon select karke apna Khasra number darj karein</li>
+              <li>Khasra-Khatauni ki copy nikaal kar form ke saath lagayein</li>
             </ul>
           </div>
 
-          <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">☀️ Rajasthan</h3>
+          <h3 id="rajasthan" className="font-black text-[var(--color-text)] text-base mb-3 mt-6 scroll-mt-24">☀️ Rajasthan</h3>
           <div className="bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-500 dark:border-amber-700 rounded-xl p-5 mb-6">
             <p className="text-sm text-amber-800 dark:text-amber-300 mb-3">
               <strong>Form Ka Naam:</strong> Rajasthan PM Kisan Land Seeding Form (PDF)
@@ -370,7 +373,7 @@ export default function PmKisanLandSeedingFormPdf2026() {
               <strong>Kahan Se Milega:</strong>
             </p>
             <ul className="list-disc list-inside text-xs text-amber-800 dark:text-amber-300 space-y-1">
-              <li><Link href="https://apnakhata.raj.nic.in" className="underline">apnakhata.raj.nic.in</Link> — yahin se PDF bhi mil jaata hai</li>
+              <li><Link href="https://apnakhata.rajasthan.gov.in" className="underline">apnakhata.rajasthan.gov.in</Link> — yahin se PDF bhi mil jaata hai</li>
               <li>E-Mitra center</li>
               <li>Tehsil office</li>
             </ul>
