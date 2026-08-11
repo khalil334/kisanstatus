@@ -178,3 +178,115 @@ Files (`components/articles/kisanguides/`):
 | 6 | Kisanguides | 9 | Medium — ExternalLinkButton guide frame |
 
 Total audited: **90 article components.**
+
+---
+
+# TASK PROMPT — Har Article Ko Ek Dusre Se Unique Banana Hai
+
+> Ye prompt kisi bhi AI agent / developer ko dena hai jo in articles par kaam karega.
+> Upar wale 6 groups ke andar articles aapas mein same template share karte hain —
+> ab har article ka style, skeleton, FAQs, frame aur internal links **ek dusre se
+> unique** karne hain.
+
+## Sakht Rules (kabhi na todein)
+
+1. **DELETE KUCH BHI NAHI.** Koi section, para, FAQ, image, link, ya file delete nahi
+   karni. Sirf **REPLACE** karna hai — purani cheez ki jagah nayi unique cheez.
+   Content ki length aur information same ya zyada rahe, kam kabhi nahi.
+2. **Language fix hai:**
+   - Hinglish (Roman script) wale articles **Hinglish mein hi rahenge** — Groups 1, 3, 4, 5, 6
+     (rajya-yojana, maandhan, loan-mandi-pashupalan, core PM-Kisan, kisanguides).
+   - Hindi (Devanagari) wale articles **Hindi mein hi rahenge** — Group 2 (hindi-yojana,
+     `/articles/hi/...`).
+   - Language switch karna mana hai.
+3. **Facts nahi badalne** — amounts, dates, portal URLs, helpline numbers, eligibility
+   rules jaise the waise rahenge. Sirf presentation/structure unique karni hai.
+4. **Slugs, routes, file names, exports nahi badalne** — SEO URLs same rahenge.
+   Component ka export name aur props (`article` meta) waise hi rahenge.
+5. Ek article par kaam karte waqt **doosre articles ko touch nahi karna.**
+
+## Kya-Kya Unique Karna Hai (har article mein)
+
+### 1. Hook / Intro
+- Abhi: har group mein same opening pattern (e.g. "Suno zara…", "…का आंकड़ा देखिए",
+  bold question + "यह guide आपके लिए है").
+- Karna kya hai: **har article ka apna alag hook** — koi ek chunein aur group mein repeat na karein:
+  - real-life scene/kahani se shuru (kisan mandi mein, CSC ki line mein…)
+  - chaunkane wala aankda ya date
+  - seedha problem-statement ("Status Rejected dikha raha hai? …")
+  - myth-busting opening ("Log samajhte hain ki… lekin sach ye hai")
+  - sawaal-jawab opening
+  - season/timeline hook ("Rabi ki kist ka waqt aa gaya hai…")
+- Intro ki para count, sentence rhythm, aur short-answer box ka style bhi vary karein
+  (kabhi box pehle, kabhi baad mein, kabhi bullet-summary, kabhi bold one-liner).
+
+### 2. Skeleton / Section Flow
+- Abhi: group ke sab articles ka H2 flow same hai (status steps → list → "padosi" section →
+  reasons → FAQ → other states).
+- Karna kya hai: **har article ka section order aur H2 headings alag** karein:
+  - sections ko reorder karein (jahan logic allow kare)
+  - H2 wording har article mein alag ho — same heading do articles mein na ho
+    (e.g. "Padosi Ko Mil Gaya, Mujhe Nahi" sirf EK article mein rahe; baaki mein
+    "Gaon Mein Sabko Aaya, Aapko Nahi?" / "List Mein Naam, Khaate Mein Sannata" jaise variants)
+  - kuch articles mein extra unique section add karein (checklist, timeline table,
+    do's & don'ts, case study, step-by-step troubleshooting tree) — add allowed hai, delete nahi.
+
+### 3. FAQs
+- Abhi: same FAQ count, same italic caption pattern ("… FAQ 2026"), overlapping sawaal.
+- Karna kya hai:
+  - **FAQ count vary** karein (4–8 ke beech, har article alag)
+  - sawaal ki **wording har article mein unique** — do articles mein same sawaal na ho;
+    same topic ho to angle badlein
+  - jawab ka style vary karein (kahin short, kahin step wale, kahin example ke saath)
+  - caption/label har jagah alag ("Aksar Poochhe Jaane Wale Sawaal", "Aapke Sawaal — Seedhe Jawab",
+    "आपके सवालों के जवाब", etc.)
+  - FAQ replace karte waqt purane sawaal ki information naye sawaal/jawab mein cover ho
+    (info loss nahi).
+
+### 4. Frame / Visual Components
+- Abhi: same local `Fig()` helper, same InfoBox/SchemeTable/ExternalLinkButton placement,
+  same figcaption style.
+- Karna kya hai:
+  - Fig caption style aur placement vary karein (kabhi hero top par, kabhi pehle H2 ke baad)
+  - InfoBox types aur positions mix karein (update/info/warning alag-alag jagah)
+  - tables ka format vary karein (kahin SchemeTable, kahin simple list, kahin 2-column
+    comparison) — data same rahe
+  - button placement/label text har article mein alag ho.
+
+### 5. Internal Links
+- Abhi: sab articles same hub ko same anchor se link karte hain; cross-links ka pattern same.
+- Karna kya hai:
+  - **anchor text har link ka unique** ho (same URL ho to bhi anchor alag likhen)
+  - link placement vary karein (intro mein, beech ke section mein, end mein — har article alag mix)
+  - har article ka **related-links set alag** ho — sab 15 ek hi hub ko ek hi jagah link
+    na karein; contextual links banayein (Rythu Bharosa ↔ Annadata Sukhibhava jaisa
+    natural pairing)
+  - koi existing link **delete nahi** — sirf anchor/position/wording replace.
+
+### 6. Writing Style / Voice
+- Sentence length, tone, aur transitions har article mein vary karein:
+  kuch articles zyada conversational, kuch checklist-style, kuch narrative,
+  kuch Q&A-heavy. Ek group ke andar do articles padh kar same writer ka
+  template feel nahi aana chahiye.
+
+## Kaise Kaam Karein (process)
+
+1. Ek group uthayein (pehle Group 1 — Rajya Yojana, sabse zyada same hai).
+2. Group ke har article ko ek **uniqueness plan** assign karein (hook type, section order,
+   FAQ count, FAQ caption, link placement) — table bana kar ensure karein ki
+   koi do articles ka plan same na ho.
+3. Ek article = ek commit. Replace karein, delete nahi.
+4. Har commit ke baad check: language wahi hai? facts wahi hain? koi content loss nahi?
+   slug/export same? build pass (`npm run build`)?
+5. Group khatam ho to agle group par jayein (2 → 3 → 4 → 5 → 6).
+
+## Verification Checklist (har article ke baad)
+
+- [ ] Hook group ke kisi doosre article se match nahi karta
+- [ ] Koi H2 heading kisi doosre article mein repeat nahi hoti
+- [ ] FAQ sawaal 100% unique wording mein hain
+- [ ] Internal links ke anchors unique hain, koi link delete nahi hua
+- [ ] Language same hai (Hinglish → Hinglish, हिन्दी → हिन्दी)
+- [ ] Word count purane se kam nahi hua
+- [ ] Facts/URLs/amounts unchanged
+- [ ] `npm run build` pass
