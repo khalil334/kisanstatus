@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { SI, StepList, IB, WB, SH, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
 
-const PUBLISHED = '2024-01-15T08:00:00+05:30';
+const PUBLISHED = '2024-01-21T10:11:00+05:30';
 const MODIFIED = '2026-07-21T08:00:00+05:30';
 
 const RELATED_CARDS = [

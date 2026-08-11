@@ -4,7 +4,7 @@ import { SI, StepList, IB, WB, SH, GovLink, RelatedArticles, AuthorBox, BottomNa
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const PUBLISHED = '2026-03-20T08:00:00+05:30';
-const MODIFIED = '2026-07-06T08:00:00+05:30';
+const MODIFIED = '2026-07-03T11:38:00+05:30';
 
 const IMG_BASE = '/images/articles/pm-kisan-self-registered-status-check';
 

@@ -8,7 +8,7 @@ import CountdownModal from '@/components/CountdownModal';
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const PUBLISHED = '2026-06-23T08:00:00+05:30';
-const MODIFIED = '2026-08-02T08:00:00+05:30';
+const MODIFIED = '2026-07-26T06:36:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '📅' },
