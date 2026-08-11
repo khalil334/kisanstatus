@@ -77,6 +77,37 @@ export async function generateMetadata({
   };
 }
 
+function RelatedHindiGuides({ currentSlug }: { currentSlug: string }) {
+  const others = HINDI_ARTICLES.filter((a) => a.slug !== currentSlug);
+  const startIndex = HINDI_ARTICLES.findIndex((a) => a.slug === currentSlug);
+  const related = [...others.slice(startIndex), ...others.slice(0, startIndex)].slice(0, 4);
+
+  return (
+    <aside aria-labelledby="related-hindi-guides" className="mt-10 border-t pt-8">
+      <h2 id="related-hindi-guides" className="mb-4 text-xl font-bold">
+        और हिंदी गाइड पढ़ें
+      </h2>
+      <ul className="grid gap-3 sm:grid-cols-2" role="list">
+        {related.map((a) => (
+          <li key={a.slug}>
+            <Link
+              href={`/articles/${a.slug}`}
+              className="block rounded-lg border border-gray-200 p-4 text-sm font-medium text-gray-800 transition-colors hover:border-green-500 hover:text-green-700"
+            >
+              {a.titleHi}
+            </Link>
+          </li>
+        ))}
+      </ul>
+      <p className="mt-4 text-sm">
+        <Link href="/articles/hi" className="font-semibold text-green-700 hover:underline">
+          सभी हिंदी योजना गाइड देखें →
+        </Link>
+      </p>
+    </aside>
+  );
+}
+
 export default async function HindiArticlePage({
   params,
 }: {
@@ -115,6 +146,8 @@ export default async function HindiArticlePage({
         <Link href="/" className="hover:underline">Home</Link>
         {' › '}
         <Link href="/articles" className="hover:underline">Articles</Link>
+        {' › '}
+        <Link href="/articles/hi" className="hover:underline">हिंदी गाइड</Link>
       </nav>
       <article lang="hi">
         <h1 className="mb-4 text-2xl font-bold leading-snug md:text-3xl">
@@ -127,6 +160,7 @@ export default async function HindiArticlePage({
           <ArticleBody article={article} />
         </div>
       </article>
+      <RelatedHindiGuides currentSlug={article.slug} />
     </main>
   );
 }
