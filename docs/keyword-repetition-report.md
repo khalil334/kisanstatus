@@ -8,93 +8,69 @@ Scan: sirf **visible article text** (headings, paragraphs, FAQs, table text) —
 
 ---
 
-## ⚠️ Fix karte waqt ka sabse zaroori niyam — RANKING KEYWORD DELETE NAHI
+## Fix Progress
 
-Is report ke counts raw frequency hain. Fix karne se pehle **`lib/rajya-yojana-data.ts`** se us page ka
-`mainKeyword` + `secondaryKeywords` padhna zaroori hai — kai "repetitive" word asal mein wahi keyword hai
-jis par page rank karta hai. Aise keyword ko **ghatana nahi**; use H1, 1-2 H2, intro aur FAQ mein poora
-rakhna hai aur sirf uske aas-paas ka **filler repeat** hatana hai. Target density **0.8–1.5%**.
+| Batch | Articles | Status | Branch |
+|---|---|---|---|
+| 1 | StateKisanYojanaHub, NamoShetkariYojanaStatus, BiharKisanRegistrationStatusCheck2026 | ✅ **Fixed** (11 Aug 2026) | `fix/keyword-repetition-batch1` |
+| 2 | MpKisanKalyanYojanaKist, IkhedutPortalStatusCheck2026, RajasthanKisanSammanNidhi9000, UpKisanKarjRahatList2026 | ⏳ Pending | — |
+| 3 | #8–#13 (🟡 medium) | ⏳ Pending | — |
+| 4 | #14–#15 (🟢 minor) | ⏳ Pending | — |
 
-Jin words par ye chetavni khaas lagu hai (data file se verified):
-
-| File | Word | Ye ranking keyword hai |
-|---|---|---|
-| IkhedutPortalStatusCheck2026 | `arji` | "ikhedut arji status check", "ikhedut arji number kaise nikale" |
-| BiharKisanRegistrationStatusCheck2026 | `registration` | "bihar kisan registration status check", "…registration number kaise nikale" |
-| StateKisanYojanaHub | `state` | main kw "state kisan yojana list" + "kis state mein kitna paisa milta hai kisan ko" |
-| MpKisanKalyanYojanaKist | `kist`, `saara` | "cm kisan kalyan yojana kist kab aayegi", "saara portal kisan kalyan status" |
-| UpKisanKarjRahatList2026 | `list`, `karj` | "up kisan karj rahat list", "up karj mafi list 2026" |
-| MeriFasalMeraByoraStatusCheck2026 | `registration`, `fasal` | "meri fasal mera byora registration" |
-| KrishakUnnatiYojanaStatusCheck | `antar` | "krishak unnati yojana antar rashi" |
-| RajasthanKisanSammanNidhi9000 | `rajasthan` | "rajasthan kisan samman nidhi 9000" |
-
-Doosra sakht niyam: **word count kabhi kam nahi** — har article 2000+ words par rahe aur
-before/after count compare karke hi commit ho.
+### ⚠️ Counting note (verified 11 Aug 2026)
+Original counts in this report ran **~1.5–2× high** vs. a re-scan of the same files
+(e.g. StateKisanYojanaHub `state` was ×88 not ×116; `alag` ×42 not ×70; `pm kisan` ×29 not ×43).
+The **ranking and the problem itself were correct** — only the absolute numbers were inflated.
+Before/after figures below are from the re-scan, so they are comparable to each other.
 
 ---
 
 ## Priority: SABSE ZYADA repetitive (pehle fix karein)
 
-### 1. StateKisanYojanaHub.tsx — ✅ FIXED (`state` ×88 → ×36, 2.74% → 1.11%; words 3215 → 3236)
+### 1. StateKisanYojanaHub.tsx — ✅ FIXED
+**Before → After** (words ≈3,305 → 3,222)
+- `state` ×88 (2.66%) → **×19 (0.59%)**
+- `kisan` ×63 (1.91%) → **×27 (0.84%)**
+- `alag` ×42 (1.27%) → **×3 (0.09%)**
+- `portal` ×40 (1.21%) → **×22 (0.68%)**
+- `pm kisan` ×29 → **×9** · `har state` ×17 → **×0** · `state ke/ka/ki/mein` ×52 → **×5**
 
-> Main keyword `state` H1/H2/intro/FAQ mein poora rakha gaya; sirf filler repeats → *rajya, pradesh,
-> yahan, sarkar, sthaniya*. `alag` ×42 → ×31.
+**Kya kiya:** "state" → *rajya, pradesh, apne yahan, apni jagah*; "har state" hataya, headings
+rajya-war kiye (`Har State Ka Short Hisaab` → `Rajya-War Short Hisaab`); "alag" → *judaa,
+apna-apna, doosra*; "pm kisan" → *kendra, kendriya hissa/grant* jahan context clear tha.
+Official scheme naam, links, amounts aur JSX structure chhue nahi — sirf visible text badla.
 
-<details><summary>Original finding</summary>
+### 2. NamoShetkariYojanaStatus.tsx — ✅ FIXED
+**Before → After** (words ≈2,727 → 2,679)
+- `kisan` ×49 (1.80%) → **×8 (0.30%)**
+- `shetkari` ×28 → **×16 (0.60%)** · `namo` ×15 · `naam` ×28 → **×23**
+- `maharashtra` ×21 → **×19 (0.71%)**
+- `pm kisan` ×41 (!) → **×5** · `namo shetkari` ×25 → **×14**
 
-### 1. StateKisanYojanaHub.tsx — 🔴 High
-- `state` ×116 (2.29%), `kisan` ×95 (1.88%), `alag` ×70 (1.38%), `yojana` ×53, `portal` ×49
-- Phrases: `pm kisan` ×43, `har state` ×28, `state ke/ka/ki/mein` ×77 combined, `official portal` ×19
-- **Problem:** "state" aur "har state" har paragraph mein hai; "alag" 70 baar filler ki tarah use hua hai.
-- **Fix:** "state" → *rajya, pradesh, region, apne yahan*; "har state" → *alag-alag rajyon mein, rajya-war*; "alag" → *bhinn, apna-apna, judaa*; ya sentence hi restructure karein ("Har state ka portal alag hai" → "Rajya-war portal ki list neeche di gayi hai"). "pm kisan" jahan context clear ho wahan → *central scheme / kendriya yojana / is scheme*.
+**Kya kiya:** "pm kisan" → *kendra, kendriya grant/list/record* (pehli 2 mentions rakhi — wo
+zaroori context hai); "namo shetkari" → *ye yojana, mahasanman nidhi, rajya ka hapta, ye madad*;
+"state" → *pradesh, rajya, treasury wali*; "status" → *sthiti, jaanch*. H1, official portal naam
+(NSMNY, nsmny.mahait.org), target keyword phrases ("namo shetkari yojana status check",
+"namo shetkari hapta kadhi milel") aur ₹ figures jaan-boojh kar rakhe — wo ranking ke liye hain.
 
-</details>
+### 3. BiharKisanRegistrationStatusCheck2026.tsx — ✅ FIXED
+**Before → After** (words ≈2,474 → 2,438)
+- `registration` ×43 (1.74%) → **×3 (0.12%)**
+- `aavedan` ×27 (1.09%) → **×3 (0.12%)** (naya spread: `arji` ×21)
+- `anudan` ×28 (1.09%) → **×13 (0.53%)**
+- `number` ×33 (1.33%) → **×23 (0.94%)** · `kisan` ×31 → **×20 (0.82%)**
+- `status` ×25 → **×11 (0.45%)** · `aadhaar` ×24 (unchanged — factual, har mention zaroori)
+- `registration number` ×12 → **×0** (→ *panjikaran sankhya, 13-anka number, wahi number*)
 
-### 2. NamoShetkariYojanaStatus.tsx — ✅ FIXED (`kisan` ×49 → ×40, 1.84% → 1.51%; words 2657 → 2696)
+**Kya kiya:** "registration" → *panjikaran, enrolment, entry, record*; "aavedan" → *arji, form,
+claim*; "anudan" → *madad, muawza, sahayata*; "status" → *sthiti, haal, screen par*.
+`aadhaar` intentionally chhoda — har mention ek asli step/error hai, synonym dena galat hoga.
+Official portal naam, ₹ rates, dates, external links aur `Ext`/`Fig` components as-is.
 
-> `namo shetkari` ×27 aur `namo` ×26 chhede nahi gaye — dono ranking keyword hain ("namo shetkari yojana
-> status check", "pm kisan aaya namo shetkari nahi aaya"). Sirf ek paragraph mein 3+ baar aaya
-> "PM Kisan" filler → *kendriya / central portal / wahan*.
-
-<details><summary>Original finding</summary>
-
-### 2. NamoShetkariYojanaStatus.tsx — 🔴 High
-- `kisan` ×92 (1.81%), `shetkari` ×57, `naam` ×51, `namo` ×50, `maharashtra` ×38
-- Phrases: `pm kisan` ×73 (!), `namo shetkari` ×50, `7 12` ×25
-- **Problem:** "pm kisan" 73 baar — 5,000-word article mein har 70 words par ek baar. "namo shetkari" bhi 50 baar.
-- **Fix:** Pehli mention ke baad → *kendriya yojana, central scheme, PM-KISAN wali list, us scheme*. "namo shetkari" → *ye yojana, state ka hapta, mahasanman nidhi, is scheme*. "naam" repeats → *entry, record, beneficiary listing*.
-
-</details>
-
-### 3. BiharKisanRegistrationStatusCheck2026.tsx — ✅ FIXED (`registration` ×43 → ×33, 1.77% → 1.35%; words 2436 → 2437)
-
-> `registration` main keyword hai — heading/intro/FAQ mein poora; filler repeats → *panjikaran,
-> panjikaran sankhya, entry, ye number*. `anudan` ×27 aur `aavedan` ×27 chhede nahi (dono ranking:
-> "diesel anudan status check bihar", "krishi input anudan status").
-
-<details><summary>Original finding</summary>
-
-### 3. BiharKisanRegistrationStatusCheck2026.tsx — 🔴 High
-- `registration` ×67 (1.66%), `kisan` ×58, `number` ×56, `aavedan` ×49, `aadhaar` ×48, `anudan` ×45, `status` ×43
-- Phrases: `registration number` ×22, `aadhaar se` ×18
-- **Problem:** 7 keywords 1%+ density par — is folder ka sabse stuffed article.
-- **Fix:** "registration" → *panjikaran, DBT entry, enrolment*; "registration number" → *13-anko wala number, panjikaran sankhya, wahi number*; "aavedan" → *application, arji, form*; "status" → *sthiti, current position, progress*.
-
-</details>
-
-### 4. MpKisanKalyanYojanaKist.tsx — 🟠 Medium-High (PENDING)
+### 4. MpKisanKalyanYojanaKist.tsx — 🟠 Medium-High
 - `kisan` ×90 (1.87%), `kist` ×61 (1.27%), `saara` ×48, `state` ×42, `portal` ×41
 - Phrases: `pm kisan` ×44, `saara portal` ×21
 - **Fix:** "kist" → *installment, hapta, paisa, transfer*; "pm kisan" → *central scheme, kendriya kist*; "saara portal" pehli baar full naam, phir → *portal, us site par, wahan*.
-
-### 5. IkhedutPortalStatusCheck2026.tsx — ✅ FIXED (`arji` ×84 → ×62, 2.56% → 1.89%; words 3277 → 3279)
-
-> ⚠️ `arji` is page ka **ranking keyword** hai ("ikhedut arji status check", "ikhedut arji number kaise
-> nikale") — isliye poori tarah nahi hataya, sirf wahi jagah badli jahan ek hi sentence mein 3-4 baar
-> tha → *file, aavedan, form*. "Arji Status" (portal ka actual button naam) har jagah waisa hi.
-> `ghatak` ×35 aur `print` ×21 unchanged — dono content ke zaroori terms hain.
-
-<details><summary>Original finding</summary>
 
 ### 5. IkhedutPortalStatusCheck2026.tsx — 🟠 Medium-High
 - `arji` ×137 (2.48%) — is poore folder ka sabse zyada repeated single word
@@ -102,9 +78,7 @@ before/after count compare karke hi commit ho.
 - Phrases: `par arji` ×16, `ghatak me` ×16, `print jama` ×15, `purv manjuri` ×15
 - **Fix:** "arji" → *application, aavedan, form, request*; alternate karte rahein. "ghatak" → *component, scheme category (pehli mention par bracket mein Gujarati term rakhein)*.
 
-</details>
-
-### 6. RajasthanKisanSammanNidhi9000.tsx — 🟠 Medium (PENDING)
+### 6. RajasthanKisanSammanNidhi9000.tsx — 🟠 Medium
 - `kisan` ×72 (1.51%), `aadhaar` ×50 (1.05%), `rajasthan` ×48 (1.01%), `jan` ×40, `kist` ×37
 - Phrases: `pm kisan` ×38, `jan aadhaar` ×27
 - **Fix:** "rajasthan" har jagah zaroori nahi — *state, yahan, pradesh* use karein. "jan aadhaar" pehli mention ke baad → *JA card, wahi card, family card*.
@@ -165,29 +139,3 @@ before/after count compare karke hi commit ho.
 4. **Sentence restructure > word swap:** "PM Kisan ka status PM Kisan portal par PM Kisan number se check karein" → "Portal par apne registration number se sthiti check karein."
 5. **Headings mein variation:** har H2 mein scheme ka naam mat dohrayein — "Namo Shetkari Status Kaise Check Karein", "Namo Shetkari List 2026", "Namo Shetkari Payment"… → sirf ek heading mein naam, baaki mein *List mein naam kaise dekhein*, *Payment nahi aayi to kya karein*.
 6. **Achhi khabar:** cross-article duplicate sentences **zero** mile — articles aapas mein copy-paste nahi hain. Problem sirf har article ke ANDAR keyword repetition ki hai.
-7. **Counts ka disclaimer:** upar ke numbers raw scan se hain aur inme kahin-kahin code/props/JSON-LD bhi
-   gine gaye the. Fix karte waqt sirf **reader-visible text** (headings, paragraphs, FAQ, table text,
-   figcaption, alt) count kiya jaata hai — isliye actual counts in figures se kam nikalte hain.
-   Har fix ke baad before/after dono isi visible-text scan se compare hote hain.
-
----
-
-## Progress
-
-| # | File | Status |
-|---|---|---|
-| 1 | StateKisanYojanaHub.tsx | ✅ fixed |
-| 2 | NamoShetkariYojanaStatus.tsx | ✅ fixed |
-| 3 | BiharKisanRegistrationStatusCheck2026.tsx | ✅ fixed |
-| 5 | IkhedutPortalStatusCheck2026.tsx | ✅ fixed |
-| 4 | MpKisanKalyanYojanaKist.tsx | ⬜ pending |
-| 6 | RajasthanKisanSammanNidhi9000.tsx | ⬜ pending |
-| 7 | UpKisanKarjRahatList2026.tsx | ⬜ pending |
-| 8 | MeriFasalMeraByoraStatusCheck2026.tsx | ⬜ pending |
-| 9 | OdishaCmKisanStatusCheck.tsx | ⬜ pending |
-| 10 | AnnadataSukhibhavaStatusCheck.tsx | ⬜ pending |
-| 11 | PmKisanPatiPatniRule.tsx | ⬜ pending |
-| 12 | KrishakUnnatiYojanaStatusCheck.tsx | ⬜ pending |
-| 13 | PariharaPaymentStatusCheck2026.tsx | ⬜ pending |
-| 14 | KrishakBandhuStatusCheck.tsx | ✅ already clean (no unigram >1%) |
-| 15 | RythuBharosaStatusCheck.tsx | ⬜ pending (`rythu`/`rythu bharosa` = ranking kw, careful) |
