@@ -136,7 +136,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
             Kaun le sakta hai? Jo kheti karta hai. Chahe zameen 0.1 acre ho ya 50 acre - farak nahi padta. Tenant farmer bhi le sakta hai, bas zameen wale ka NOC chahiye.
           </p>
           <IB>
-            <strong>Important:</strong> Ye loan nahi hai bhai. Wapas nahi karna padega. Pure tarah free hai. Government ka gift hai kisanon ke liye.
+            <strong>Gaur Karein:</strong> Ye loan nahi hai bhai. Wapas nahi karna padega. Pure tarah free hai. Government ka gift hai kisanon ke liye.
           </IB>
         </section>
 
@@ -192,7 +192,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
             </ul>
           </div>
           <WB>
-            <strong>Tip:</strong> Registration karne ke baad 7-10 din mein status check karo. "Pending" dikhe toh wait karo - normal hai. "Rejected" dikhe toh reason dekho - kya problem hai.
+            <strong>Ye Baat Gaanth Baandh Lo:</strong> Registration karne ke baad 7-10 din mein status check karo. "Pending" dikhe toh wait karo - normal hai. "Rejected" dikhe toh reason dekho - kya problem hai.
           </WB>
         </section>
 
@@ -231,7 +231,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
             CSC center jaao. Wahan fingerprint scan hoga. ₹20-30 charge lag sakta hai. 24 ghante mein complete ho jata hai.
           </p>
           <DB>
-            <strong>Warning:</strong> eKYC free hai - ye government ne bola hai. Koi ₹100+ maange toh fraud hai. 155261 par complaint karo turant.
+            <strong>Khatre Ki Ghanti:</strong> eKYC free hai - ye government ne bola hai. Koi ₹100+ maange toh fraud hai. 155261 par complaint karo turant.
           </DB>
         </section>
 
@@ -352,7 +352,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
             <SI n={6}>Submit karo - 15-20 din mein update ho jayega</SI>
           </StepList>
           <IB>
-            <strong>Important:</strong> Aadhaar mein jo likha hai, wahi daalna hai. "RAMESH KUMAR" hai toh "RAMESH KUAMR" mat likhna. Ek letter bhi galat hua toh phir se problem aayegi.
+            <strong>Bhoolna Mat:</strong> Aadhaar mein jo likha hai, wahi daalna hai. "RAMESH KUMAR" hai toh "RAMESH KUAMR" mat likhna. Ek letter bhi galat hua toh phir se problem aayegi.
           </IB>
         </section>
 
@@ -375,7 +375,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
             ))}
           </div>
           <WB>
-            <strong>Tip:</strong> CSC ya Block Agriculture Office se help lo. Wo log manually check karke bata denge ki exactly kya problem hai aur kaise fix karni hai.
+            <strong>Chhoti Baat, Bade Kaam Ki:</strong> CSC ya Block Agriculture Office se help lo. Wo log manually check karke bata denge ki exactly kya problem hai aur kaise fix karni hai.
           </WB>
         </section>
 

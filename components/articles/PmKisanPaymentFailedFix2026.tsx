@@ -15,7 +15,7 @@ const RELATED_CARDS = [
   },
   {
     slug: 'PmKisanEkycOnline2026',
-    title: 'PM Kisan eKYC Complete Guide',
+    title: 'eKYC Karne Ka Poora Tarika',
     desc: 'Payment fail hone ka ek bada karan eKYC pending hona bhi ho sakta hai.',
     emoji: '🔐'
   },
@@ -97,7 +97,7 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
 
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-r-xl">
           <p className="text-sm md:text-base text-blue-900 dark:text-blue-100 leading-relaxed font-medium">
-            <strong>Seedha Jawab:</strong> PM Kisan payment failed hone ka sabse bada karan <strong>Aadhaar NPCI seeding</strong> ka na hona, galat IFSC code, ya dormant bank account hai. Paisa gaya nahi hai, bas bank tak pahunchne se pehle atak gaya hai. Apni branch jaakar "DBT Seeding" karwayein ya portal par bank details correct karein. Pending kistein problem fix hone ke baad mil jaayengi.
+            <strong>Bina Ghuma Phira Ke:</strong> PM Kisan payment failed hone ka sabse bada karan <strong>Aadhaar NPCI seeding</strong> ka na hona, galat IFSC code, ya dormant bank account hai. Paisa gaya nahi hai, bas bank tak pahunchne se pehle atak gaya hai. Apni branch jaakar "DBT Seeding" karwayein ya portal par bank details correct karein. Pending kistein problem fix hone ke baad mil jaayengi.
           </p>
         </div>
 
@@ -205,7 +205,7 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
             <SI n={5}>3-7 din mein seeding ho jaati hai generally.</SI>
           </StepList>
           <IB>
-            <strong>Pro Tip:</strong> SBI, PNB aur BOB jaise kuch banks net banking ya mobile app se bhi seeding allow kar dete hain. Branch jaane se pehle app check kar lena, waqt bach jaayega. NPCI ki website (<strong>npci.org.in</strong>) par bhi "Aadhaar Seeding Status" check karne ka option hota hai.
+            <strong>Experience Se Sikha:</strong> SBI, PNB aur BOB jaise kuch banks net banking ya mobile app se bhi seeding allow kar dete hain. Branch jaane se pehle app check kar lena, waqt bach jaayega. NPCI ki website (<strong>npci.org.in</strong>) par bhi "Aadhaar Seeding Status" check karne ka option hota hai.
           </IB>
         </section>
 
@@ -347,7 +347,7 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
             <SI n={4}>Yahan aapko dikhega ki kya koi transaction aapke account ke liye pending hai ya fail hua hai.</SI>
           </StepList>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-3">
-            <strong>Note:</strong> PFMS par sirf wo transactions dikhte hain jo government ne already bhej diye hain. Agar yahan bhi kuch nahi dikhta, matlab government ne abhi FTO generate hi nahi kiya hai.
+            <strong>Side Note:</strong> PFMS par sirf wo transactions dikhte hain jo government ne already bhej diye hain. Agar yahan bhi kuch nahi dikhta, matlab government ne abhi FTO generate hi nahi kiya hai.
           </p>
         </section>
 
@@ -384,7 +384,7 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Puche Jane Wale Sawal (FAQs)
+            Payment Fail Hone Par Sabse Common Sawal
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Payment Failed FAQ 2026 — Ground-Level Answers" />
         </section>
@@ -413,7 +413,7 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
         />
 
         <section className="my-10">
-          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Aapke Liye Zaroori Articles</h3>
+          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Aage Kaam Aayenge Ye Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {RELATED_CARDS.map((card) => (
               <Link

@@ -393,7 +393,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             </div>
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            <strong>Pro Tip:</strong> Hamesha 2 photocopies aur 1 digital scan apne phone mein ready rakhein. Branch ke bahar xerox machine aksar kharab hoti hai. Original documents wapas lene ke liye hamesha remind karein.
+            <strong>Ek Kaam Ki Baat:</strong> Hamesha 2 photocopies aur 1 digital scan apne phone mein ready rakhein. Branch ke bahar xerox machine aksar kharab hoti hai. Original documents wapas lene ke liye hamesha remind karein.
           </p>
         </section>
 

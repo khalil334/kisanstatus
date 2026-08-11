@@ -250,7 +250,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             </table>
           </div>
           <p className="text-xs text-[var(--color-text-muted)] mt-2">
-             <strong>Tip:</strong> Har kist mein exactly ₹2,000 aate hain. Agar tumhari koi kist fail hui thi toh arrears ke roop mein mil jayenge.
+             <strong>Kaam Ki Salah:</strong> Har kist mein exactly ₹2,000 aate hain. Agar tumhari koi kist fail hui thi toh arrears ke roop mein mil jayenge.
           </p>
         </section>
 
@@ -359,7 +359,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             </div>
           </div>
           <IB>
-            <strong>Detailed Guide:</strong> Step-by-step madad chahiye toh <Link href="/articles/PmKisanMasterGuide2026" className="underline font-bold">PM Kisan Complete Guide</Link> padho. Screenshots ke saath samjhaya hai.
+            <strong>Detailed Guide:</strong> Step-by-step madad chahiye toh <Link href="/articles/PmKisanMasterGuide2026" className="underline font-bold">step-by-step PM Kisan guide</Link> padho. Screenshots ke saath samjhaya hai.
           </IB>
         </section>
 
@@ -418,7 +418,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Puche Jane Wale Sawal
+            24vi Kist — Jo Sawal Sab Puch Rahe Hain
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="24vi Kist FAQ 2026 — Verified Answers" />
         </section>

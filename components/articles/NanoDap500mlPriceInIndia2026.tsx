@@ -328,7 +328,7 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
             <SI n={6}>Kisi bhi pesticide ke saath mix karne se pehle chhote patch par test kar lein</SI>
           </StepList>
           <IB>
-            <strong>Tip:</strong> Fine spray nozzle use karein — absorption behtar hoti hai. Coarse droplets zyadatar waste ho jaate hain.
+            <strong>Dhyan Dein:</strong> Fine spray nozzle use karein — absorption behtar hoti hai. Coarse droplets zyadatar waste ho jaate hain.
           </IB>
         </section>
 
@@ -404,7 +404,7 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
             ))}
           </div>
           <WB>
-            <strong>Fraud Alert:</strong> Original packaging ka QR code hamesha scan karein. Bohot sasta rate dikhe toh saavdhan rahein. Fertilizer ke liye loan chahiye toh <Link href="/articles/KisanCreditCardOnlineApply2026" className="underline font-bold">KCC guide</Link> padh lein.
+            <strong>Nakli Se Bacho:</strong> Original packaging ka QR code hamesha scan karein. Bohot sasta rate dikhe toh saavdhan rahein. Fertilizer ke liye loan chahiye toh <Link href="/articles/KisanCreditCardOnlineApply2026" className="underline font-bold">KCC guide</Link> padh lein.
           </WB>
         </section>
 
@@ -444,7 +444,7 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Puche Jane Wale Sawal
+            Nano DAP Par Aapke Sawaal, Seedhe Jawab
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="Nano DAP FAQ 2026 — Verified Answers" />
         </section>

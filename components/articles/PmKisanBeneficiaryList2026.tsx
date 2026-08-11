@@ -295,7 +295,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
             </ul>
           </WB>
           <IB>
-            <strong>Pro Tip:</strong> Kisi bhi state/district/block/village ki list publicly accessible hai. Padosi gaon ki list bhi dekh sakte ho — comparison ke liye achha hai.
+            <strong>Kaam Aane Wali Trick:</strong> Kisi bhi state/district/block/village ki list publicly accessible hai. Padosi gaon ki list bhi dekh sakte ho — comparison ke liye achha hai.
           </IB>
         </section>
 
@@ -378,7 +378,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
           </div>
           <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-300 dark:border-blue-700 rounded-lg">
             <p className="text-xs text-blue-800 dark:text-blue-300">
-              <strong>💡 Note:</strong> Har state button par click karne ke baad 10 second ka countdown hoga, phir aapko official government portal (`pmkisan.gov.in`) par PDF download ka button milega. Wahan se aap apne district/block/village ki list select karke download kar sakte hain.
+              <strong>💡 Halki Si Baat:</strong> Har state button par click karne ke baad 10 second ka countdown hoga, phir aapko official government portal (`pmkisan.gov.in`) par PDF download ka button milega. Wahan se aap apne district/block/village ki list select karke download kar sakte hain.
             </p>
           </div>
         </section>
@@ -420,7 +420,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Puche Jane Wale Sawal
+            List Se Jude Sawal, Seedhi Baat Mein
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Beneficiary List FAQ 2026 — Verified Answers" />
         </section>

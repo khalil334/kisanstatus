@@ -228,7 +228,7 @@ export default function PmKisanBankAccountChangeProcess() {
             className="w-full rounded-xl my-4"
           />
           <IB>
-            <strong>Pro Tip:</strong> Bank branch wale aksar bolte hain "server down hai, kal aana". Aise mein gussa mat hone ka. Unse pre-printed Aadhaar seeding form maang lijiye, ghar par fill karke agle din jama kar aaiye. Form par receipt zaroor lijiye. Bank se bahar aane ke baad *99# dial karke check kar lijiye ki seeding successful hui ya nahi.
+            <strong>Andar Ki Baat:</strong> Bank branch wale aksar bolte hain "server down hai, kal aana". Aise mein gussa mat hone ka. Unse pre-printed Aadhaar seeding form maang lijiye, ghar par fill karke agle din jama kar aaiye. Form par receipt zaroor lijiye. Bank se bahar aane ke baad *99# dial karke check kar lijiye ki seeding successful hui ya nahi.
           </IB>
         </section>
 
@@ -395,7 +395,7 @@ export default function PmKisanBankAccountChangeProcess() {
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Puche Jane Wale Sawal
+            Bank Account Change Ke Sawaal — Jawab Yahin
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="Bank Account Change FAQ" />
         </section>

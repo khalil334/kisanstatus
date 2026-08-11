@@ -171,7 +171,23 @@ Files (`components/articles/loan-mandi-pashupalan/`):
 
 ---
 
-## Group 5 — Core PM-Kisan template (26 articles)
+## Group 5 — Core PM-Kisan template (27 articles) — ✅ BATCH 5 COMPLETE (uniqueness pass done)
+
+> **Status (Batch 5 done, 11 Aug 2026):** Sab 27 articles ab ek dusre se unique hain.
+> Kya badla (replace-only, kuch delete nahi): (1) FAQ-section H2 — "Aksar Puche Jane Wale Sawal"
+> (±FAQs/FAQ variants) 19 files mein tha — MasterGuide ka original rakha, baaki 18 + KisanTractorLoan
+> ke "Real Sawal — Seedhe Jawaab" dup ko har file mein apna unique heading; (2) bold opener labels —
+> "Pro Tip:" ×7, "Tip:" ×6, "Important:" ×5, "Warning:" ×4, "Real Story:" ×4, "Seedha Jawab:" ×4,
+> "✅ Fix:" ×4, aur 9 chhote patterns — har file mein ek original rakha, baaki unique Hinglish labels;
+> (3) duplicate link anchors — "CSC center" ×6, "Beneficiary list"/"beneficiary list" ×6,
+> "Master Guide" ×3, "PM Kisan Complete Guide" ×2, "State Nodal Officer" ×2, "state-wise page" ×2 —
+> pehli file ka original rakha, baaki anchors reword (href unchanged); (4) related-cards duplicate
+> titles ("PM Kisan 24vi Kist Status" ×2, "PM Kisan eKYC Complete Guide" ×2) aur section H3
+> ("Aapke Liye Zaroori Articles" ×3) unique; (5) duplicate portal-redirect strings
+> ("PM Kisan portal khulne wala hai…" 3 files) — MasterGuide original, baaki 2 reword.
+> Nav breadcrumbs (Home/Articles) aur author byline site-wide hain — untouched.
+> FAQ sawaal, captions pehle se unique the — verify karke as-is. Facts, ₹ amounts, .gov.in URLs,
+> slugs, hrefs, exports unchanged; word count kam nahi hua (+119 words net). `next build` pass (126 pages).
 
 **Shared frame:** `FAQS_DATA` (2 blocks) · same PM-Kisan guide skeleton (problem intro →
 portal steps → status meanings → fix steps → FAQ) · internal links to other core PM-Kisan
@@ -234,7 +250,7 @@ Files (`components/articles/kisanguides/`):
 | 2 | Hindi Yojana | 15 | ✅ DONE — Batch 2 uniqueness pass complete (unique anchors/CTA/captions, no dup H2/FAQ/hook) |
 | 3 | Maandhan | 13 | ✅ DONE — Batch 3 uniqueness pass complete (unique FAQ H2s, openers, captions, dup sentences reworded) |
 | 4 | Loan/Mandi/Pashupalan | 11 | ✅ DONE — Batch 4 uniqueness pass complete (unique TL;DR openers, card titles, nav labels, prose anchors) |
-| 5 | Core PM-Kisan | 27 | Medium — older 2-FAQ skeleton |
+| 5 | Core PM-Kisan | 27 | ✅ DONE — Batch 5 uniqueness pass complete (unique FAQ H2s, opener labels, link anchors, card titles, portal strings) |
 | 6 | Kisanguides | 9 | Medium — ExternalLinkButton guide frame |
 
 Total audited: **90 article components.**
