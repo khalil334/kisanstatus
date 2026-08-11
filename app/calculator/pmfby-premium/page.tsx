@@ -52,11 +52,6 @@ export default function Page() {
       price: '0',
       priceCurrency: 'INR',
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.7',
-      ratingCount: '987',
-    },
   };
 
   const breadcrumbSchema = {
