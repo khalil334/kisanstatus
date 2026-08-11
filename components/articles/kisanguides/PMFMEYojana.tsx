@@ -111,7 +111,7 @@ export default function PMFMEYojana() {
 
       <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
         <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
-          <strong>Sach kahoon toh:</strong> Bharat mein hazaron chhote food businesses (jaise achar, papad, bakery, ya namkeen) sirf isliye local market tak seemit reh jate hain kyunki unke paas proper branding, FSSAI license, ya modern packaging ka budget nahi hota. Aksar dekha jata hai ki jab aise micro units ko thoda financial support aur technical guidance milta hai, toh unka turnover 3-4 guna tak badh sakta hai.
+          <strong>Seedhi Baat Karein Toh:</strong> Bharat mein hazaron chhote food businesses (jaise achar, papad, bakery, ya namkeen) sirf isliye local market tak seemit reh jate hain kyunki unke paas proper branding, FSSAI license, ya modern packaging ka budget nahi hota. Aksar dekha jata hai ki jab aise micro units ko thoda financial support aur technical guidance milta hai, toh unka turnover 3-4 guna tak badh sakta hai.
         </p>
       </div>
 
@@ -561,12 +561,12 @@ export default function PMFMEYojana() {
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Kya Aapke Liye Sahi Hai? Final Decision Framework
+        Apply Karein Ya Nahi? Aakhri Faisla Aise Lein
       </h2>
 
       <div className="grid md:grid-cols-2 gap-6 mb-8 not-prose">
         <div className="bg-green-50 dark:bg-green-900/20 p-5 rounded-lg border border-green-200 dark:border-green-800">
-          <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">✅ Haan, agar:</h3>
+          <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">✅ Aage Badhein, agar:</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>• Already food processing business chala rahe hain (chahe chhote level par).</li>
             <li>• Business ko formal banana chahte hain (FSSAI, GST, branding).</li>
@@ -577,7 +577,7 @@ export default function PMFMEYojana() {
         </div>
 
         <div className="bg-red-50 dark:bg-red-900/20 p-5 rounded-lg border border-red-200 dark:border-red-800">
-          <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">❌ Nahi, agar:</h3>
+          <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">❌ Abhi Mat Karein, agar:</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>• Abhi tak koi business nahi kiya (pehle PMEGP try karein).</li>
             <li>• Food processing mein interested nahi hain.</li>
@@ -592,7 +592,7 @@ export default function PMFMEYojana() {
       </p>
 
       <h2 id="faq" className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Frequently Asked Questions (FAQs)
+        PM FME Par Poochhe Gaye Asli Sawal
       </h2>
       <div className="space-y-4 mb-8 not-prose">
         <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
@@ -614,7 +614,7 @@ export default function PMFMEYojana() {
       </div>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Related Guides & Financial Support
+        Aage Padhne Layak Guides Aur Paise Ka Intezam
       </h2>
       <div className="grid md:grid-cols-2 gap-4 mb-8 not-prose">
         <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800 hover:shadow-md transition-shadow">
@@ -670,7 +670,7 @@ export default function PMFMEYojana() {
 
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-lg border-l-4 border-orange-500 not-prose">
         <p className="text-sm text-gray-700 dark:text-gray-300">
-          <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
+          <strong className="text-orange-600 dark:text-orange-400 block mb-2">Dhyan Se Padhein:</strong>
           Yeh article general information ke liye hai. PM FME ki guidelines aur eligibility criteria change ho sakti hain. Latest information ke liye hamesha official website pmfme.mofpi.gov.in ya apne zila ke District Industries Center se confirm karein. Kisi bhi financial decision lene se pehle qualified professionals (CAs, business consultants) se consult karein. Last updated: July 2026.
         </p>
       </div>
