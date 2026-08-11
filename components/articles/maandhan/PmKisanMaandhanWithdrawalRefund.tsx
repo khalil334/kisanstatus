@@ -345,7 +345,7 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Poochhe Jaane Wale Sawal
+            Withdrawal Aur Refund — Uthne Wale Sawal
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="Withdrawal aur Refund se judi FAQs" />
         </section>
@@ -402,7 +402,7 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
         </div>
 
         <section className="my-10">
-          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Ye Bhi Padhein</h3>
+          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Milte-Julte Topics</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {RELATED_CARDS.map((card) => (
               <Link

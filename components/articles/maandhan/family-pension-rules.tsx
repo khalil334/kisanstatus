@@ -145,7 +145,7 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
 
         <div className="my-6 p-5 bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 rounded-r-xl">
           <p className="text-sm md:text-base text-red-900 dark:text-red-100 leading-relaxed font-medium">
-            <strong>Seedhi baat:</strong> Maan lijiye ek kisan ne 40 ki umar mein PM Kisan Maandhan Yojana (PMKMY) join ki. Har mahine unke account se premium kata. Lekin 55 ki umar mein unka achanak dehant ho gaya. Ab unke parivar ke man mein ek hi sawal hai: <em>"Kya jama kiya hua paisa wapas milega ya pension shuru hogi?"</em> Yeh confusion bahut common hai, aur iska jawab scheme ke rules mein chhupa hai.
+            <strong>Ek Case Samjhiye:</strong> Maan lijiye ek kisan ne 40 ki umar mein PM Kisan Maandhan Yojana (PMKMY) join ki. Har mahine unke account se premium kata. Lekin 55 ki umar mein unka achanak dehant ho gaya. Ab unke parivar ke man mein ek hi sawal hai: <em>"Kya jama kiya hua paisa wapas milega ya pension shuru hogi?"</em> Yeh confusion bahut common hai, aur iska jawab scheme ke rules mein chhupa hai.
           </p>
         </div>
 
