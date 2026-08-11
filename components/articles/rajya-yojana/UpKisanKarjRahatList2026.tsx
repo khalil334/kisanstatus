@@ -477,7 +477,7 @@ export default function UpKisanKarjRahatList2026({
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
           <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
-          Ye article sirf madad ke liye hai. Patrata ki shartein aur cut-off ki tareekh
+          Is lekh ka mool kaam karj rahat ki prakriya asaan bhasha mein samjhana hai. Patrata ki shartein aur cut-off ki tareekh
           official portal/GO se hi confirm karein — final decision ke liye apni bank shaakha
           ya zila krishi adhikari se sampark karein.
         </p>
