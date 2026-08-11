@@ -4,7 +4,7 @@ import { SI, StepList, IB, WB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FA
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
 
 const PUBLISHED = '2026-07-27T08:00:00+05:30';
-const MODIFIED = '2026-07-28T08:00:00+05:30';
+const MODIFIED = '2026-08-11T08:00:00+05:30';
 
 const RELATED_CARDS = [
   {
@@ -33,28 +33,28 @@ const FAQS_DATA = [
     a: 'Nahi, PM Kisan Maandhan Yojana me ek samay me sirf ek hi bank account register ho sakta hai. Agar aap account change karna chahte hain, to pehle purana account hatakar naya account add karna padega.',
   },
   {
-    q: 'Bank account change karne ka koi charge hai?',
+    q: 'Account details update karne ka koi charge hai?',
     a: 'Government ki taraf se koi charge nahi hai. Lekin agar aap CSC se service le rahe hain, to wo ₹20-50 ki standard service charge le sakte hain. Bank branch me usually ye service free hoti hai.',
   },
   {
-    q: 'Kya bank account change karne se meri pension amount kam/zyada ho jayegi?',
-    a: 'Bilkul nahi. Bank account change karne se aapki pension amount par koi asar nahi padta. Aapki monthly contribution aur future pension same rahegi — sirf paisa naye account me jayega.',
+    q: 'Kya account badalne se meri pension amount kam/zyada ho jayegi?',
+    a: 'Bilkul nahi. Isse aapki pension amount par koi asar nahi padta. Aapki monthly contribution aur future pension same rahegi — sirf paisa naye account me jayega.',
   },
   {
-    q: 'Agar mera bank account change ho gaya, to kya mujhe phir se enrollment karni padegi?',
+    q: 'Agar mera khata badal gaya, to kya mujhe phir se enrollment karni padegi?',
     a: 'Nahi, bilkul nahi. Aapko phir se enrollment karne ki zaroorat nahi hai. Sirf bank account details update karni hain. Aapka purana contribution record, age, aur sab kuch same rahega.',
   },
   {
-    q: 'Kitne din me bank account change ho jata hai?',
+    q: 'Kitne din me naya khata link ho jata hai?',
     a: 'Usually 15-20 working days lagte hain. Minimum 7 din aur maximum 30 din tak ka samay lag sakta hai. Confirmation SMS aapke registered mobile par aayega. Samay state aur bank ke hisab se thoda alag ho sakta hai.',
   },
   {
-    q: 'Kya main online bank account change kar sakta hoon?',
+    q: 'Kya main ye kaam online ghar baithe kar sakta hoon?',
     a: 'Kuch states me online facility available hai, lekin zyadatar cases me physical verification zaroori hoti hai. Isliye CSC ya bank branch me jaakar application dena behtar hai.',
   },
   {
-    q: 'Bank account change ke baad purane account se paisa katna kab band hoga?',
-    a: 'Jab bank account change confirm ho jayega, to usi mahine se naye account se paisa katna shuru ho jayega. Purane account se auto-debit automatically band ho jayega.',
+    q: 'Naya khata judne ke baad purane account se paisa katna kab band hoga?',
+    a: 'Jab update confirm ho jayega, to usi mahine se naye account se paisa katna shuru ho jayega. Purane account se auto-debit automatically band ho jayega.',
   },
   {
     q: 'Kya joint account PMKMY me use kar sakta hoon?',
@@ -149,26 +149,64 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
 
         <div className="my-6 p-5 bg-green-50 dark:bg-green-900/20 border-l-4 border-green-600 rounded-r-xl">
           <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3">
-            Short Answer: PMKMY Bank Account Change Kaise Karein?
+            Short Answer: PMKMY Me Bank Account Change Kaise Hota Hai?
           </h2>
           <p className="text-sm md:text-base text-gray-800 dark:text-gray-200 leading-relaxed font-medium">
-            Official PMKMY guidelines ke mutabik, bank account badalne ke liye sabse recommended tarika hai apne nazdeeki CSC center me jaakar application dena (PMKMY number aur Aadhaar ke saath). Alternative ke roop me aap bank branch me bhi ja sakte hain. Process complete hone me 15-30 din lagte hain.
+            Official PMKMY guidelines ke mutabik, khata badalne ke liye sabse recommended tarika hai apne nazdeeki CSC center me jaakar application dena (PMKMY number aur Aadhaar ke saath). Alternative ke roop me aap bank branch me bhi ja sakte hain. Process complete hone me 15-30 din lagte hain — aur is beech aapki pension ke saath kya hota hai, wahi is page ka asli topic hai.
           </p>
         </div>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-          Kuch mahine pehle ek kisan dost ne phone karke pucha — "bhaiya, mera bank branch band ho gaya, ab PM Kisan Maandhan ka paisa kahan se katega?" Ye sawal aajkal bahut common hai. Gaon me branch merger, shehar me location change, ya passbook kho jaana — kisi bhi wajah se bank account update karna pad sakta hai.
+          Pehle ek zaroori baat: ye page sirf <strong>PM Kisan Maandhan (pension wali scheme)</strong> ke liye hai. Agar aapko ₹2000 wali PM-Kisan kist ka khata badalna hai, to wo bilkul alag process hai — uske liye <Link href="/articles/PmKisanBankAccountChangeProcess" className="underline text-green-700 dark:text-green-400">PM-Kisan bank account change guide</Link> padhein.
         </p>
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-          Achhi baat ye hai ki PMKMY me bank account change bilkul possible hai, aur aapko phir se enrollment nahi karni padti. Purana contribution record, age calculation, aur pension amount — sab kuch same rehta hai. Bas account details update karni hoti hain.
+          Ab asli sawal jo sabko pareshan karta hai — "is beech mera auto-debit ka kya hoga?" Seedha jawab: application dene ke baad bhi 15-30 din tak paisa <strong>purane account se hi</strong> katega. Naya khata judne ke baad hi debit shift hota hai. Isliye sabse badi galti hai application dete hi purana account khali kar dena ya band kar dena — aisa kiya to contribution miss hogi, aur miss hui contribution ko regularize karana alag jhanjhat hai.
+        </p>
+        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+          Achhi baat ye hai ki khata badalne par aapko phir se enrollment nahi karni padti. Purana contribution record, age calculation, aur pension amount — sab kuch same rehta hai. Bas account details update hoti hain.
         </p>
 
         <IB>
-          <strong>Zaroori Baat:</strong> Bank account change process 15-30 din ka hota hai. Is dauran purane account se auto-debit chalu rahega, isliye purane account me sufficient balance rakhein jab tak confirmation SMS na aa jaye.
+          <strong>Zaroori Baat:</strong> Poora process 15-30 din ka hota hai. Is dauran purane account se auto-debit chalu rahega, isliye purane account me sufficient balance rakhein jab tak confirmation SMS na aa jaye.
         </IB>
 
         <section className="mb-8">
-          <SH>Kin Situations Me Bank Account Change Karna Padta Hai?</SH>
+          <SH>Auto-Debit Naye Account Se Kab Shuru Hoga? — Din-Ba-Din Timeline</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Ye timeline application dene ke din se count hoti hai. State aur bank ke hisab se thoda aage-peeche ho sakta hai, lekin pattern yahi rehta hai:
+          </p>
+          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-[var(--color-primary)] text-white">
+                  <th className="p-3 text-left">Din</th>
+                  <th className="p-3 text-left">Kya Hota Hai</th>
+                  <th className="p-3 text-left">Paisa Kahan Se Katega</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['Din 0', 'CSC/bank me application + biometric verification, acknowledgement slip milti hai', 'Purana account'],
+                  ['Din 1-15', 'Request portal par process hoti hai, naye account ka Aadhaar-link verify hota hai', 'Purana account — balance rakhein'],
+                  ['Din 15-30', 'Update complete hone par registered mobile par confirmation SMS aata hai', 'Confirmation ke baad wale cycle se naya account'],
+                  ['Agla debit cycle', 'Pehla auto-debit naye account se katta hai — passbook/SMS se khud verify karein', 'Naya account'],
+                ].map(([day, what, from], i) => (
+                  <tr key={i} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs font-medium text-[var(--color-text)]">{day}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{what}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-green-700 dark:text-green-400">{from}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Do cheezein is table se yaad rakhni hain. Ek — confirmation SMS aane tak purana account zinda aur balance-wala rehna chahiye. Do — SMS aane ke baad bhi pehla naya debit khud check karo; agar agle cycle me kisi bhi account se paisa nahi kata, to turant CSC par acknowledgement slip lekar jao.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Kin Situations Me Khata Badalna Padta Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Pichle kuch saalon me maine dekha hai ki kisan bhai-behen in wajahon se account update karwana chahte hain:
           </p>
@@ -201,7 +239,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
         </section>
 
         <section className="mb-8">
-          <SH>Bank Account Change Ke Liye Zaroori Documents</SH>
+          <SH>Zaroori Documents — Ye 6 Cheezein Pehle Ready Karo</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Application submit karne se pehle ye documents ready rakhein. Inme se koi bhi missing ho to process delay ho sakta hai:
           </p>
@@ -209,7 +247,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
             <SI n={1}><strong>Naye Bank Ki Passbook:</strong> Clear copy jisme account number, IFSC code, account holder ka naam aur bank ka stamp ho.</SI>
             <SI n={2}><strong>Aadhaar Card:</strong> Self-attested copy jo naye bank account se linked ho.</SI>
             <SI n={3}><strong>PMKMY Pension Card/Acknowledgement:</strong> Purana pension card jisme purana account number likha hai.</SI>
-            <SI n={4}><strong>Bank Account Change Application:</strong> Prescribed format me likhi hui application (sample niche diya gaya hai).</SI>
+            <SI n={4}><strong>Application:</strong> Prescribed format me likhi hui application (sample niche diya gaya hai).</SI>
             <SI n={5}><strong>Passport Size Photograph:</strong> 2 recent photographs.</SI>
             <SI n={6}><strong>Mobile Number:</strong> Wahi mobile number jo PMKMY me registered hai (OTP verification ke liye).</SI>
           </StepList>
@@ -231,7 +269,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
         </section>
 
         <section className="mb-8">
-          <SH>Bank Account Change Karne Ka Step-by-Step Process</SH>
+          <SH>Bank Account Change Ka Step-by-Step Process</SH>
 
           <StepList>
             <SI n={1}><strong>Naye Bank Me Active Account Ensure Karein:</strong> Sabse pehle confirm karein ki aapke naye bank account me ye sab hai: Aadhaar linking (mandatory hai), Mobile number linking, Active status aur transactions allow karta ho, aur Valid IFSC code.</SI>
@@ -259,7 +297,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
             <SI n={3}><strong>CSC Center Ya Bank Branch Me Visit Karein:</strong> Official PMKMY guidelines ke mutabik, bank details update karne ke liye sabse standard aur recommended tarika hai apne nazdeeki Common Service Centre (CSC) ya VLE (Village Level Entrepreneur) ke paas jaana. <strong>Option A (Recommended - Official Channel):</strong> Nazdeeki CSC center par jaayein. Apna PMKMY pension account number, Aadhaar card, aur naye bank ki passbook ki copy le jaayein. VLE operator aapki biometric verification karke seedha PMKMY portal par request raise karega. (Note: CSC par standard nominal service charge ₹20-₹50 lag sakta hai, jo ki official hai). <strong>Option B (Alternative):</strong> Agar CSC accessible nahi hai, to aap apne naye bank branch me bhi ja sakte hain, lekin wahan se bhi request ultimately CSC/portal ke through hi process hoti hai, isliye pehle bank manager se confirm karein ki wo PMKMY update directly kar sakte hain ya nahi.</SI>
             <SI n={4}><strong>Verification Process:</strong> CSC ya Bank wale ye verification karenge: Aadhaar se biometric verification (fingerprint/iris), Mobile number par OTP bhejkar confirm karenge, Naye bank account ki details cross-check karenge, aur Purana PMKMY account verify karenge.</SI>
             <SI n={5}><strong>Acknowledgement Slip Lein:</strong> Application submit karne ke baad ek acknowledgement slip zaroor lein jisme ye details hon: Application reference number, Submission date, aur CSC/Bank ka stamp aur signature. Is slip ko safe rakhein — status check karne me kaam aayegi.</SI>
-            <SI n={6}><strong>Confirmation Ka Wait Karein:</strong> Bank account change process complete hone me time lagta hai: Minimum 7-10 working days, Maximum 30 working days, Average 15-20 din. Confirmation SMS aapke registered mobile par aayega jab account change ho jayega. Samay state aur bank ke hisab se thoda alag ho sakta hai.</SI>
+            <SI n={6}><strong>Confirmation Ka Wait Karein:</strong> Update complete hone me time lagta hai: Minimum 7-10 working days, Maximum 30 working days, Average 15-20 din. Confirmation SMS aapke registered mobile par aayega jab account change ho jayega. Samay state aur bank ke hisab se thoda alag ho sakta hai.</SI>
           </StepList>
 
           <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
@@ -308,7 +346,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
         </section>
 
         <section className="mb-8">
-          <SH>Bank Account Change Me Aane Wali Common Problems Aur Solutions</SH>
+          <SH>Common Problems Aur Unka Hal</SH>
 
           <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
             <Image
@@ -335,13 +373,13 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
             <div className="border border-orange-200 dark:border-orange-800 rounded-lg p-5 bg-orange-50 dark:bg-orange-900/20">
               <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">Problem 2: OTP Nahi Aa Raha</h3>
               <p className="text-sm text-[var(--color-text-muted)] mb-2"><strong>Scenario:</strong> Aapka registered mobile number badal gaya hai, aur naye number par OTP nahi aa raha.</p>
-              <p className="text-sm text-[var(--color-text-muted)]"><strong>Solution:</strong> Pehle mobile number update karwana padega PMKMY portal par. Iske liye CSC ya bank branch me jaakar mobile number change application dein. Mobile number update hone ke baad hi bank account change kar payenge.</p>
+              <p className="text-sm text-[var(--color-text-muted)]"><strong>Solution:</strong> Pehle mobile number update karwana padega PMKMY portal par. Iske liye CSC ya bank branch me jaakar mobile number change application dein. Number update hone ke baad hi khata badal payenge.</p>
             </div>
 
             <div className="border border-yellow-200 dark:border-yellow-800 rounded-lg p-5 bg-yellow-50 dark:bg-yellow-900/20">
               <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">Problem 3: Aadhaar Linking Issue</h3>
               <p className="text-sm text-[var(--color-text-muted)] mb-2"><strong>Scenario:</strong> Naye bank account me Aadhaar link nahi hai.</p>
-              <p className="text-sm text-[var(--color-text-muted)]"><strong>Solution:</strong> Bank account change se pehle Aadhaar linking zaroori hai. Apne bank branch me jaakar Aadhaar seeding form bharein. 24-48 ghante me linking ho jayegi, uske baad hi PMKMY me account change karein.</p>
+              <p className="text-sm text-[var(--color-text-muted)]"><strong>Solution:</strong> Khata badalne se pehle Aadhaar linking zaroori hai. Apne bank branch me jaakar Aadhaar seeding form bharein. 24-48 ghante me linking ho jayegi, uske baad hi PMKMY me account change karein.</p>
             </div>
 
             <div className="border border-blue-200 dark:border-blue-800 rounded-lg p-5 bg-blue-50 dark:bg-blue-900/20">
@@ -413,7 +451,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
         </section>
 
         <section className="mb-8">
-          <SH>Bank Account Change Ka Status Kaise Check Karein?</SH>
+          <SH>Application Ka Status Kaise Check Karein?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Application submit karne ke baad aap ye tareeke try kar sakte hain:
           </p>
@@ -438,7 +476,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
           <div className="space-y-3">
             <div className="flex items-start">
               <span className="text-red-600 mr-3 font-bold text-xl">!</span>
-              <p className="text-sm text-[var(--color-text-muted)]"><strong>Tip 1:</strong> Bank account change karne se pehle purane account me kam se kam 3 mahine ka contribution balance rakhein.</p>
+              <p className="text-sm text-[var(--color-text-muted)]"><strong>Tip 1:</strong> Application dene se pehle purane account me kam se kam 3 mahine ka contribution balance rakhein.</p>
             </div>
             <div className="flex items-start">
               <span className="text-red-600 mr-3 font-bold text-xl">!</span>
@@ -471,13 +509,13 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Aksar Poochhe Jaane Wale Sawal (FAQs)
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="PM-KMY Bank Account Change — Sawal Jawab" />
+          <FAQBlock faqs={FAQS_DATA} caption="PM-KMY Khata Update — Sawal Jawab" />
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Ek Baat Yaad Rakhein</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Bank account change karna shuru me thoda complicated lag sakta hai, lekin agar aap sahi documents aur official CSC process follow karein, to ye bahut aasan hai. Ye ek baar ka process hai, aur uske baad aapki pension life-time naye account me aayegi. Agar aapko koi confusion hai ya process me koi dikkat aa rahi hai, to apne nazdeeki CSC ya bank branch par zaroor jaayein.
+            Khata badalna shuru me thoda complicated lag sakta hai, lekin agar aap sahi documents aur official CSC process follow karein, to ye bahut aasan hai. Ye ek baar ka process hai, aur uske baad aapki pension life-time naye account me aayegi. Agar aapko koi confusion hai ya process me koi dikkat aa rahi hai, to apne nazdeeki CSC ya bank branch par zaroor jaayein.
           </p>
         </div>
 
