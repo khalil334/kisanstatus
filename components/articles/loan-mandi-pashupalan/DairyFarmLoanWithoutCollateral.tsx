@@ -4,12 +4,12 @@ import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, Bott
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const RELATED = [
-  { slug: 'sbi-dairy-loan-interest-rate', title: 'SBI Dairy Loan Interest Rate', emoji: '🏦' },
+  { slug: 'sbi-dairy-loan-interest-rate', title: 'SBI Dairy Loan Ka Byaj Kitna', emoji: '🏦' },
   { slug: 'bihar-pashupalan-loan-yojana', title: 'Bihar Pashupalan Loan Yojana', emoji: '🐃' },
   { slug: 'murgi-palan-loan-nlm-subsidy', title: 'Murgi Palan Loan & NLM Subsidy', emoji: '🐔' },
   { slug: 'rashtriya-gokul-mission-subsidy', title: 'Rashtriya Gokul Mission Subsidy', emoji: '🐄' },
   { slug: 'jansamarth-portal-loan-apply', title: 'JanSamarth Portal Loan Apply', emoji: '💻' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply', emoji: '💳' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Se Working Capital', emoji: '💳' },
 ];
 
 const FAQS_DATA = [

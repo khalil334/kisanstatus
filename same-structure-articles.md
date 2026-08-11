@@ -139,7 +139,18 @@ Files (`components/articles/maandhan/`):
 
 ---
 
-## Group 4 — Loan / Mandi / Pashupalan template (11 articles)
+## Group 4 — Loan / Mandi / Pashupalan template (11 articles) — ✅ BATCH 4 COMPLETE (uniqueness pass done)
+
+> **Status (Batch 4 done, 11 Aug 2026):** Sab 11 articles ab ek dusre se unique hain.
+> Kya badla (replace-only, kuch delete nahi): (1) "TL;DR — seedha faisla:" opener ×7 (+2 aur
+> TL;DR variants) — ek rakha, baaki 8 mein alag labels ("Nichod — padhne se pehle:",
+> "Kaam Ki Baat — bechne se pehle:", "Jaldi Mein Hain? Ye 3 Baatein:", etc.); (2) related-card
+> titles — same slug par same title 2–11 files mein repeat ho raha tha (KCC ×11, dairy-loan ×5,
+> bihar-pashupalan ×5, mandi-bhav-today ×5…) — ab har file ka anchor-title unique, slug/URL
+> unchanged; (3) footer nav-button labels ("📚 Sabhi Articles" ×7, category buttons) — sab unique;
+> (4) in-body prose anchors — same URL ke duplicate anchor texts reword (ek original rakha).
+> H2 headings, FAQ sawaal aur cross-file sentences pehle se unique the — verify karke as-is.
+> Facts, ₹ amounts, .gov.in URLs, slugs, exports unchanged. `next build --webpack` pass (126 pages).
 
 **Shared frame:** `FAQS_DATA` const (2 FAQ blocks) · `article: ArticleMeta` prop ·
 `FAQBlock` component at end · same guide flow (kya hai → eligibility → apply steps →
@@ -222,7 +233,7 @@ Files (`components/articles/kisanguides/`):
 | 1 | Rajya Yojana | 15 | ✅ uniqueness pass done · 🟡 keyword-density pass 4/15 (ranking kws preserved, word count never reduced) |
 | 2 | Hindi Yojana | 15 | ✅ DONE — Batch 2 uniqueness pass complete (unique anchors/CTA/captions, no dup H2/FAQ/hook) |
 | 3 | Maandhan | 13 | ✅ DONE — Batch 3 uniqueness pass complete (unique FAQ H2s, openers, captions, dup sentences reworded) |
-| 4 | Loan/Mandi/Pashupalan | 11 | High — FAQBlock + ArticleMeta frame |
+| 4 | Loan/Mandi/Pashupalan | 11 | ✅ DONE — Batch 4 uniqueness pass complete (unique TL;DR openers, card titles, nav labels, prose anchors) |
 | 5 | Core PM-Kisan | 27 | Medium — older 2-FAQ skeleton |
 | 6 | Kisanguides | 9 | Medium — ExternalLinkButton guide frame |
 
