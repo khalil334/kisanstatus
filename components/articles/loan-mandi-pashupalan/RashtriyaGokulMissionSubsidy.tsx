@@ -4,12 +4,12 @@ import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, Bott
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const RELATED = [
-  { slug: 'bihar-pashupalan-loan-yojana', title: 'Bihar Pashupalan Loan Yojana', emoji: '🐃' },
-  { slug: 'dairy-farm-loan-without-collateral', title: 'Dairy Loan Bina Collateral', emoji: '🐄' },
+  { slug: 'bihar-pashupalan-loan-yojana', title: 'Bihar Ki Pashupalan Yojana', emoji: '🐃' },
+  { slug: 'dairy-farm-loan-without-collateral', title: 'Dairy Ke Liye Bina Zamanat Loan', emoji: '🐄' },
   { slug: 'murgi-palan-loan-nlm-subsidy', title: 'Murgi Palan NLM Subsidy', emoji: '🐔' },
-  { slug: 'bakri-palan-yojana-nlm-subsidy', title: 'Bakri Palan NLM Subsidy', emoji: '🐐' },
-  { slug: 'sbi-dairy-loan-interest-rate', title: 'SBI Dairy Loan Interest Rate', emoji: '🏦' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply', emoji: '💳' },
+  { slug: 'bakri-palan-yojana-nlm-subsidy', title: 'Bakri Palan Par NLM Madad', emoji: '🐐' },
+  { slug: 'sbi-dairy-loan-interest-rate', title: 'SBI Dairy Loan EMI Aur Rate', emoji: '🏦' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'Kisan Credit Card 2026', emoji: '💳' },
 ];
 
 const FAQS_DATA = [
@@ -379,8 +379,8 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[
-          { href: '/articles', l: '📚 Sabhi Articles' },
-          { href: '/articles/category/pashupalan', l: '📂 Pashupalan Guides' },
+          { href: '/articles', l: '📚 Article Hub' },
+          { href: '/articles/category/pashupalan', l: '📂 Dudh-Dairy-Pashu Guides' },
         ]} />
         <Disclaimer />
       </div>

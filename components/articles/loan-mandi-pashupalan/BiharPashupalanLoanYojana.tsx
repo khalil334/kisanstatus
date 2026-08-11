@@ -73,7 +73,7 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
         </div>
 
         <DB>
-          <strong>TL;DR — 30 second mein faisla:</strong>
+          <strong>Aadha Minute — poori picture:</strong>
           <ul className="list-disc pl-5 mt-2 space-y-1">
             <li>Bihar sarkar dairy unit ki project cost par <strong>EBC/SC/ST ko 75% tak, baaki ko 50% tak</strong> subsidy deti hai (2-4 pashu units); badi 15-20 pashu units par sab ke liye ~40% ka slab.</li>
             <li>Application <strong>sirf online, bilkul free</strong> — dairy.bihar.gov.in par, notification window ke andar. Agent ki zaroorat nahi.</li>

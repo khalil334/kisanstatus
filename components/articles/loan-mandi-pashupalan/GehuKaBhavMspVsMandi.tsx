@@ -4,12 +4,12 @@ import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, Bott
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const RELATED = [
-  { slug: 'msp-list-2026-27', title: 'MSP List 2026-27', emoji: '📋' },
-  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav', emoji: '📊' },
+  { slug: 'msp-list-2026-27', title: 'Sabhi Faslon Ki MSP 2026-27', emoji: '📋' },
+  { slug: 'mandi-bhav-today', title: 'Mandi Bhav Live Rates', emoji: '📊' },
   { slug: 'enam-registration-kaise-kare', title: 'eNAM Registration Guide', emoji: '🖥️' },
-  { slug: 'mandi-bhav-app-comparison', title: 'Best Mandi Bhav Apps', emoji: '📱' },
+  { slug: 'mandi-bhav-app-comparison', title: 'Mandi Rate Apps Comparison', emoji: '📱' },
   { slug: 'sabzi-bhav-guide-pyaz-aloo-tamatar', title: 'Sabzi Bhav Guide', emoji: '🥔' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply', emoji: '💳' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Apply Guide 2026', emoji: '💳' },
 ];
 
 const FAQS_DATA = [
@@ -97,7 +97,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
         </div>
 
         <DB>
-          <strong>TL;DR — seedha faisla:</strong>
+          <strong>Kaam Ki Baat — bechne se pehle:</strong>
           <ul className="list-disc pl-5 mt-2 space-y-1">
             <li>Gehu ka MSP RMS 2026-27 mein <strong>₹2,585/quintal</strong> hai (pichhle saal se ₹160 zyada). State bonus alag: MP +₹40 = ₹2,625, Rajasthan +₹150 = ₹2,735, UP mein koi bonus nahi.</li>
             <li>Mandi ka rate MSP se <strong>neeche</strong> chal raha hai → sarkari kendra. <strong>Upar</strong> hai aur maal saaf-sookha hai → mandi/eNAM.</li>
@@ -138,7 +138,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
 
         <IB>
           MSP ka poora table (dhan, chana, sarson samet) aur kharid ka process humne alag guide mein diya hai:{' '}
-          <Link href="/articles/msp-list-2026-27" className="underline font-bold">MSP List 2026-27</Link>. Yahan hum
+          <Link href="/articles/msp-list-2026-27" className="underline font-bold">sabhi faslon ki MSP wali list</Link>. Yahan hum
           sirf gehu ke faisle par focus karenge.
         </IB>
 
@@ -352,7 +352,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[
-          { href: '/articles', l: '📚 Sabhi Articles' },
+          { href: '/articles', l: '📚 Poori Article Library' },
           { href: '/articles/category/mandi', l: '📂 Mandi Guides' },
         ]} />
         <Disclaimer />
