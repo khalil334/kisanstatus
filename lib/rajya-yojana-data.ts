@@ -301,6 +301,31 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
     relatedPaths: ['/articles/PmKisanMasterGuide2026', '/articles/PmKisanPaymentFailedFix2026'],
   },
   {
+    slug: 'parihara-payment-status-check-2026',
+    mainKeyword: 'parihara payment status check',
+    secondaryKeywords: [
+      'parihara payment status village wise',
+      'bele parihara list 2026',
+      'parihara karnataka gov in',
+      'parihara status check aadhaar number',
+      'bele hani parihara payment',
+      'fruits id parihara status',
+    ],
+    title: 'Parihara Payment Status Check 2026 Village Wise',
+    description:
+      'Parihara payment status Aadhaar se ya village wise list se check karein — naam na hone, pending ya bank me paisa na aane par har branch ka fix yahan hai.',
+    ogTitle: 'Parihara Payment Status — Village Wise List Aur Fix',
+    component: 'PariharaPaymentStatusCheck2026',
+    state: 'Karnataka',
+    officialPortal: 'https://parihara.karnataka.gov.in',
+    status: 'live',
+    published: '2026-08-11T18:00:00+05:30',
+    modified: '2026-08-11T18:00:00+05:30',
+    readTime: '12 min read',
+    ogImage: '/images/articles/rajya-yojna/parihara-payment-status-check-2026/hero.webp',
+    relatedPaths: ['/articles/PmKisanMasterGuide2026', '/articles/PmKisanPaymentFailedFix2026'],
+  },
+  {
     slug: 'up-kisan-karj-rahat-list-2026',
     mainKeyword: 'up kisan karj rahat list',
     secondaryKeywords: [
