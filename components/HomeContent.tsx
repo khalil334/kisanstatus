@@ -197,10 +197,6 @@ export default function HomeContent() {
               </span>
               <span className="px-3 py-1.5 bg-white/10 rounded-full flex items-center gap-1">
                 <IconCheck className="w-3 h-3" />
-                50+ Govt Schemes
-              </span>
-              <span className="px-3 py-1.5 bg-white/10 rounded-full flex items-center gap-1">
-                <IconCheck className="w-3 h-3" />
                 100% Free Tools
               </span>
             </div>
@@ -211,12 +207,11 @@ export default function HomeContent() {
       <section className="py-12 bg-gray-50 dark:bg-gray-800/50 border-b border-gray-200 dark:border-gray-700" aria-labelledby="trust-heading">
         <h2 id="trust-heading" className="sr-only">Trust Indicators</h2>
         <div className="container-site mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
               { value: '11 Cr+', label: 'Registered Kisan' },
-              { value: '50+', label: 'Govt Schemes' },
               { value: '₹6,000', label: 'Annual Benefit' },
-              { value: '4.8★', label: 'User Rating' },
+              { value: '100%', label: 'Free Tools' },
             ].map((stat, i) => (
               <div key={i} className="text-center">
                 <div className="text-2xl md:text-3xl font-black text-green-600 dark:text-green-400">{stat.value}</div>
