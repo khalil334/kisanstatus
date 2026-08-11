@@ -335,7 +335,7 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
           mein purana mobile number chadha ho.
         </p>
 
-        <h2>Padosi Ko Mil Gaya, Mujhe Nahi — Ye Kyun Hota Hai</h2>
+        <h2>Gaon Mein Sabke Khaate Mein Aaya, Aapke Mein Nahi — Wajah Ye Hai</h2>
 
         <p>
           Ye wala sawaal sabse zyada aata hai, aur iska jawab PM Kisan aur Krishak Bandhu
@@ -488,7 +488,7 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
           }}
         />
         <section className="mb-8 not-prose">
-          <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">Krishak Bandhu status, slab aur death benefit FAQ 2026</p>
+          <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">Krishak Bandhu par sabse zyada poochhe gaye prashn — status, slab, death benefit</p>
           <div className="space-y-3">
             {FAQS_DATA.map(({ q, a }) => (
               <details
@@ -549,7 +549,7 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
           <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
-          Ye article sirf madad ke liye hai. Final decision ke liye official portal ya krishi office se sampark karein.
+          Yahan di gayi jaankari samajhne-samjhaane ke liye hai. Kisi bhi kadam se pehle Krishak Bandhu portal ya block ke ADA office se pushti zaroor kar lein.
         </p>
       </div>
 

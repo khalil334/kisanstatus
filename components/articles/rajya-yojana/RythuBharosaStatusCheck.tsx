@@ -186,7 +186,7 @@ export default function RythuBharosaStatusCheck2026() {
         <li>Ek PDF ya table generate hoga jisme aapke gaon ke sabhi beneficiaries ke naam, account numbers (masked), aur amount likha hoga. Apna naam dhundhein.</li>
       </ol>
 
-      <h2>Padosi Ko Mil Gaya, Mujhe Nahi — Phase System Samjhein</h2>
+      <h2>List Mein Naam, Khaate Mein Sannata? Pehle Phase System Samjhein</h2>
 
       <p>
         Padosi ke account mein credit, aapke mein sannata — gussa aana laazmi hai. Lekin
@@ -469,7 +469,7 @@ export default function RythuBharosaStatusCheck2026() {
         }}
       />
       <section className="mb-8 not-prose">
-        <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">Rythu Bharosa FAQ 2026</p>
+        <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">Rythu Bharosa par Telangana ke kisano ke chune hue sawaal</p>
         <div className="space-y-3">
           {FAQS_DATA.map(({ q, a }) => (
             <details
@@ -497,7 +497,7 @@ export default function RythuBharosaStatusCheck2026() {
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
           <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
-          Ye article sirf madad ke liye hai. Final decision ke liye official portal ya krishi office se sampark karein.
+          Is article ko sahayak samjhein, pramaan nahi. Payment aur patrata ka aakhri sach Rythu Bharosa portal ya MRO office ke record mein hi hota hai.
         </p>
       </div>
 
