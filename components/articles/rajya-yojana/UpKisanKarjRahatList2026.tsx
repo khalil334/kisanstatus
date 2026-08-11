@@ -83,9 +83,9 @@ const QUIZ = [
     e: 'Dono alag scheme hain. Karj mafi state ki yojana hai, PM-Kisan kendra ki — ek ka doosre par seedha asar nahi.',
   },
   {
-    s: 'Private bank ke loan bhi yojana me shamil the.',
+    s: 'Private finance company ya microfinance ke loan bhi is yojana me shamil the.',
     v: false,
-    e: 'Yojana me scheduled commercial bank, sahkari bank aur kshetriya gramin bank ke fasali rin shamil the — apne loan ka type bank se confirm kariye.',
+    e: 'Yojana me scheduled commercial bank, sahkari bank aur kshetriya gramin bank ke fasali rin shamil the. NBFC, microfinance ya sahukaar ka karza iske dayre se bahar hai — apne loan ka type bank se confirm kariye.',
   },
   {
     s: 'WhatsApp par aaya "karj mafi registration link" kabhi-kabhi sahi bhi hota hai.',
@@ -365,7 +365,7 @@ export default function UpKisanKarjRahatList2026({
         Karj mafi ke naam par thagi ka pattern hamesha ek jaisa hota hai — jaldi ka dabav
         (&quot;aaj raat tak hi list khuli hai&quot;), paise ki maang (&quot;500 me naam
         chadhwa denge&quot;), ya link/APK ka jhansa.{' '}
-        <Ext href="https://tractornews.in/webstories/pm-kisan-tractor-yojana-fact-check.html">
+        <Ext href="https://krishijagran.com/news/fact-check-no-pradhan-mantri-kisan-tractor-scheme-pib-debunks-viral-message/">
           PIB Fact Check aise fake yojana portals ka bhandafod pehle bhi kar chuka hai
         </Ext>{' '}
         — sarkari naam ki milti-julti website banana inka purana khel hai. Thagi ho jaaye to

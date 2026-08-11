@@ -370,7 +370,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
     officialPortal: 'https://upkisankarjrahat.upsdc.gov.in',
     status: 'live',
     published: '2026-08-11T09:00:00+05:30',
-    modified: '2026-08-11T09:00:00+05:30',
+    modified: '2026-08-12T09:00:00+05:30',
     readTime: '12 min read',
     ogImage: '/images/articles/rajya-yojna/up-kisan-karj-rahat-list-2026/hero.webp',
     relatedPaths: ['/articles/PmKisanMasterGuide2026', '/articles/PmKisanPaymentFailedFix2026'],
