@@ -530,7 +530,7 @@ export default function MeriFasalMeraByoraStatusCheck2026({
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
           <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
-          Ye article sirf madad ke liye hai. Window ki tareekh, incentive ki raqam aur
+          Ye guide registration ki uljhan door karne ke liye banayi gayi hai. Window ki tareekh, incentive ki raqam aur
           shartein har season badal sakti hain — final decision se pehle official portal ya
           krishi office se zaroor confirm karein.
         </p>
