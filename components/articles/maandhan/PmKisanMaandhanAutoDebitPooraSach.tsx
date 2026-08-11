@@ -134,7 +134,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
 
         <div className="my-6 p-5 bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 rounded-r-xl">
           <p className="text-sm md:text-base text-red-900 dark:text-red-100 leading-relaxed font-medium">
-            <strong>Seedhi baat:</strong> Agar aapke PM Kisan ke ₹2000 mein se ₹55, ₹100, ya ₹200 kat rahe hain aur aapko samajh nahi aa raha ke yeh kahan jaa raha hai — toh ghabraiye mat. Aapne hi CSC center pe ek form sign kiya tha jismein likha tha ke PM Kisan ki kist se aapka Maandhan share kat jaye. Yeh chori nahi hai, yeh aapki khud ki pension ka hissa hai.
+            <strong>Sach Pehle Jaan Lijiye:</strong> Agar aapke PM Kisan ke ₹2000 mein se ₹55, ₹100, ya ₹200 kat rahe hain aur aapko samajh nahi aa raha ke yeh kahan jaa raha hai — toh ghabraiye mat. Aapne hi CSC center pe ek form sign kiya tha jismein likha tha ke PM Kisan ki kist se aapka Maandhan share kat jaye. Yeh chori nahi hai, yeh aapki khud ki pension ka hissa hai.
           </p>
         </div>
 
@@ -398,7 +398,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Poochhe Jaane Wale Sawal (FAQs)
+            Auto-Debit Ko Lekar Kisan Kya Poochhte Hain
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="PM-KMY Auto Debit Aur Contribution — Sawal Jawab" />
         </section>
@@ -419,7 +419,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
         />
 
         <section className="my-10">
-          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Ye Bhi Padhein</h3>
+          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Aur Jaankari Ke Liye</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {RELATED_CARDS.map((card) => (
               <Link
