@@ -120,7 +120,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
 
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-r-xl">
           <p className="text-sm md:text-base text-blue-900 dark:text-blue-100 leading-relaxed font-medium">
-            <strong>Seedha Jawab:</strong> Agar aapka purana SIM band ho gaya hai, toh <strong>PM Kisan mobile number change</strong> online nahi ho sakta — OTP purane number par hi jaata hai. Aapko nazdiki CSC (Common Service Centre) jaakar Aadhaar biometric verification ke through naya number link karwana hoga. Database update hone mein kuch din lag sakte hain, isliye receipt sambhal kar rakhein.
+            <strong>Do Took Jawab:</strong> Agar aapka purana SIM band ho gaya hai, toh <strong>PM Kisan mobile number change</strong> online nahi ho sakta — OTP purane number par hi jaata hai. Aapko nazdiki CSC (Common Service Centre) jaakar Aadhaar biometric verification ke through naya number link karwana hoga. Database update hone mein kuch din lag sakte hain, isliye receipt sambhal kar rakhein.
           </p>
         </div>
 
@@ -205,7 +205,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
         <section className="mb-8">
           <SH>Method 1: CSC Center Se Karo (Sabse Fast Aur Aasan)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Bhai, 90% logon ka kaam CSC (Common Service Center) se hi ban jata hai. Ye sabse fast aur reliable tarika hai. Nazdiki <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">CSC center</Link> par chale jao.
+            Bhai, 90% logon ka kaam CSC (Common Service Center) se hi ban jata hai. Ye sabse fast aur reliable tarika hai. Nazdiki <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">Common Service Center (CSC)</Link> par chale jao.
           </p>
           <StepList>
             <SI n={1}>
@@ -388,7 +388,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
             </div>
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
-            <strong>Meri Salah:</strong> Dono jagah ek hi active number rakho. Pehle bank jaakar account ka number update karo, phir CSC jaakar PM Kisan ka number update karo. Isse DBT (Direct Benefit Transfer) mein kabhi dikkat nahi aayegi.
+            <strong>Meri Taraf Se Rai:</strong> Dono jagah ek hi active number rakho. Pehle bank jaakar account ka number update karo, phir CSC jaakar PM Kisan ka number update karo. Isse DBT (Direct Benefit Transfer) mein kabhi dikkat nahi aayegi.
           </p>
         </section>
 
@@ -436,7 +436,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
             ].map(({ mistake, fix }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
                 <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">❌ {mistake}</p>
-                <p className="text-xs text-green-700 dark:text-green-400"><strong>✅ Sahi Tarika:</strong> {fix}</p>
+                <p className="text-xs text-green-700 dark:text-green-400"><strong>✅ Aise Karo Sahi Se:</strong> {fix}</p>
               </div>
             ))}
           </div>

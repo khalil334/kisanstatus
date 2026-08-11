@@ -454,7 +454,7 @@ export default function PmKisanVillageWiseListPdfDownload() {
             ].map(({ reason, fix }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
                 <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">❌ {reason}</p>
-                <p className="text-xs text-green-700 dark:text-green-400"><strong>✅ Fix:</strong> {fix}</p>
+                <p className="text-xs text-green-700 dark:text-green-400"><strong>✅ Solution Ye Hai:</strong> {fix}</p>
               </div>
             ))}
           </div>

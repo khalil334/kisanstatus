@@ -150,7 +150,7 @@ export default function PmKisanCorrectionForm2026({ article }: { article: Articl
             <SI n={6}>Sahi karne ke baad niche <strong>"Update"</strong> button par click kar do. OTP aayega, verify karo. Bas ho gaya!</SI>
           </StepList>
           <IB>
-            <strong>Pro Tip:</strong> Naam edit karte waqt dhyan rakhna — spelling bilkul wahi likho jo Aadhaar card aur bank passbook par hai. Ek space ya comma ka bhi fark payment rok sakta hai. Agar OTP nahi aa raha toh iske liye CSC jana padega, online koi doosra rasta nahi hai. Kabhi kabhi bank details update karte waqt server issue ki wajah se page kaam nahi karta — aise mein 2-3 ghante baad try karo.
+            <strong>Chhota Sa Nuskha:</strong> Naam edit karte waqt dhyan rakhna — spelling bilkul wahi likho jo Aadhaar card aur bank passbook par hai. Ek space ya comma ka bhi fark payment rok sakta hai. Agar OTP nahi aa raha toh iske liye CSC jana padega, online koi doosra rasta nahi hai. Kabhi kabhi bank details update karte waqt server issue ki wajah se page kaam nahi karta — aise mein 2-3 ghante baad try karo.
           </IB>
         </section>
 
@@ -274,7 +274,7 @@ export default function PmKisanCorrectionForm2026({ article }: { article: Articl
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Puche Jane Wale Sawal
+            Correction Form — Puchhe Gaye Sawal
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Correction Form FAQ 2026 — Real Answers" />
         </section>

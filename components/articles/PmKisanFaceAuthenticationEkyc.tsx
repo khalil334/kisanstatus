@@ -124,7 +124,7 @@ export default function PmKisanFaceAuthenticationEkyc() {
           />
 
           <DB>
-            <strong>Real Example:</strong>
+            <strong>Ek Jeeta Jaagta Case:</strong>
             <p className="text-xs text-gray-700 dark:text-gray-300 mt-2">
               Patna ke Rajesh Kumar ji ka experience: "Mera mobile number 5 saal pehle band ho gaya tha. Naya number liya lekin Aadhaar se link nahi karaya. Jab PM Kisan ke liye apply kiya toh OTP nahi aaya. Chehre wale tarike se 5 minute mein eKYC ho gayi. Ab har 4 mahine mein paisa aa raha hai."
             </p>
@@ -172,7 +172,7 @@ export default function PmKisanFaceAuthenticationEkyc() {
             </table>
           </div>
           <IB>
-            <strong>Important:</strong> Dono app free hain. Koi app ya website is kaam ke paise maange (khud karne par), toh wo fraud hai. CSC par karwane ka charge alag baat hai — uski receipt milti hai.
+            <strong>Kaam Shuru Karne Se Pehle:</strong> Dono app free hain. Koi app ya website is kaam ke paise maange (khud karne par), toh wo fraud hai. CSC par karwane ka charge alag baat hai — uski receipt milti hai.
           </IB>
         </section>
 
@@ -221,7 +221,7 @@ export default function PmKisanFaceAuthenticationEkyc() {
           />
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Green tick ke baad kaam khatam nahi hota. 2-3 din mein database update hota hai — phir <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">beneficiary list</Link> mein naam check karo, eKYC "YES" dikhna chahiye. Agar hai, toh agli kist mein aapka paisa rukega nahi. Nahi dikha ek hafte tak, toh helpline <strong>155261</strong> par reference ke saath baat karo.
+            Green tick ke baad kaam khatam nahi hota. 2-3 din mein database update hota hai — phir <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">list wale page</Link> mein naam check karo, eKYC "YES" dikhna chahiye. Agar hai, toh agli kist mein aapka paisa rukega nahi. Nahi dikha ek hafte tak, toh helpline <strong>155261</strong> par reference ke saath baat karo.
           </p>
         </section>
 
@@ -235,7 +235,7 @@ export default function PmKisanFaceAuthenticationEkyc() {
               <strong>Ghar ke kisi jawaan ka smartphone use karo.</strong> App mein login aapke Aadhaar se hota hai, phone kiska hai isse fark nahi padta. Beta/beti/pota — kisi ka bhi phone, 5 minute ka kaam. Kai gharon mein ek hi phone se dada, dadi, chacha sabki eKYC hui hai — ye bilkul allowed hai.
             </li>
             <li>
-              <strong>Ya seedha <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">CSC center</Link> jao.</strong> Aadhaar card original le jao. Operator biometric device se fingerprint ya chehra scan karega. ₹20-30 lagenge, receipt zaroor lo. 5 minute mein kaam hota hai — line ka time alag.
+              <strong>Ya seedha <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">CSC seva kendra</Link> jao.</strong> Aadhaar card original le jao. Operator biometric device se fingerprint ya chehra scan karega. ₹20-30 lagenge, receipt zaroor lo. 5 minute mein kaam hota hai — line ka time alag.
             </li>
           </ul>
           <Image
@@ -305,7 +305,7 @@ export default function PmKisanFaceAuthenticationEkyc() {
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Puche Jane Wale Sawal
+            Face eKYC — Har Sawal Ka Jawab
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="Chehre se eKYC — FAQ" />
         </section>

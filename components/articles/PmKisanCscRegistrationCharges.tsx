@@ -114,7 +114,7 @@ export default function PmKisanCscRegistrationCharges() {
           />
 
           <DB>
-            <strong>Real Story:</strong>
+            <strong>Sachcha Kissa:</strong>
             <p className="text-xs text-gray-700 dark:text-gray-300 mt-2">
               Etawah ke Rakesh bhai ko CSC wale ne ₹300 maange. Unhone diye. Baad mein pata chala ki sarkari rate sirf ₹25 hai. Unne CSC portal par complaint ki. 3 din mein paise wapas hue aur us operator ka license suspend ho gaya.
             </p>
@@ -220,7 +220,7 @@ export default function PmKisanCscRegistrationCharges() {
             ))}
           </ol>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            <strong>Pro Tip:</strong> Receipt maangna mat bhoolna. Bina receipt ke kaam hua hi nahi maana jata. Agar wo kahe "system mein hai, receipt nahi dega", toh samajh jao kuch gadbad hai.
+            <strong>Smart Tareeka:</strong> Receipt maangna mat bhoolna. Bina receipt ke kaam hua hi nahi maana jata. Agar wo kahe "system mein hai, receipt nahi dega", toh samajh jao kuch gadbad hai.
           </p>
         </section>
 
@@ -350,14 +350,14 @@ export default function PmKisanCscRegistrationCharges() {
           </p>
           <div className="bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl p-5">
             <p className="text-sm text-green-800 dark:text-green-300">
-              <strong> Tip:</strong> Apne block ke Krishi Vigyan Kendra (KVK) ya Agriculture Office par puch lo ki koi free camp chal raha hai ya nahi. Gaon ke pradhan ko bhi pata hota hai.
+              <strong> Free Ka Jugaad:</strong> Apne block ke Krishi Vigyan Kendra (KVK) ya Agriculture Office par puch lo ki koi free camp chal raha hai ya nahi. Gaon ke pradhan ko bhi pata hota hai.
             </p>
           </div>
         </section>
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Puche Jane Wale Sawal
+            CSC Charges Par Aapke Doubts Clear
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="CSC Registration & Charges FAQ" />
         </section>
