@@ -501,7 +501,7 @@ export default function MeriFasalMeraByoraStatusCheck2026({
 
       <section className="mb-8 not-prose">
         <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">
-          Meri Fasal Mera Byora FAQ 2026 — counter par roz poochhe jaane wale sawaal
+          Meri Fasal Mera Byora: CSC counter par roz uthne wale sawaal, seedhe jawab ke saath
         </p>
         <div className="space-y-4">
           {FAQS.map(({ q, a }) => (
