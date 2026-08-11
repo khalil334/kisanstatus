@@ -56,7 +56,7 @@ const FAQS = [
 const RELATED = [
   { slug: 'PmKisanMobileNumberChangeUpdate', title: 'Mobile Number Change/Update', emoji: '📱' },
   { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Ka Matlab', emoji: '💳' },
-  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide', emoji: '📚' },
+  { slug: 'PmKisanMasterGuide2026', title: 'योजना की A-to-Z Master Guide', emoji: '📚' },
   { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '📅' },
 ];
 
@@ -368,22 +368,22 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
 
       <div className="my-8 p-6 bg-gradient-to-r from-green-800 to-green-600 rounded-2xl text-white text-center">
         <p className="text-2xl mb-2">📆</p>
-        <p className="font-black text-lg mb-1">Kist Ruki Hai? Pata Karo Kyun</p>
+        <p className="font-black text-lg mb-1">Status Se Aage — Kist Kahan Atki?</p>
         <p className="text-green-100 text-sm mb-4">
-          eKYC, bank seeding, land seeding check karo — 4 sawaal mein exact reason.
+          Teenon jaanch ka result tracker mein turant dekho.
         </p>
         <div className="flex flex-wrap justify-center gap-2.5">
           <Link
             href="/calculator/installment-tracker"
             className="inline-flex items-center gap-2 bg-white text-green-800 font-black px-6 py-3 rounded-xl text-sm hover:bg-green-50 transition-colors"
           >
-            📆 Kist Tracker Kholo →
+            📆 Kist Tracker try karo →
           </Link>
           <Link
             href="/calculator"
             className="inline-flex items-center gap-2 bg-white/15 border border-white/30 text-white font-bold px-6 py-3 rounded-xl text-sm hover:bg-white/25 transition-colors"
           >
-            🧮 Sab Utilities Dekho
+            🧮 Aur bhi utilities yahan
           </Link>
         </div>
       </div>
@@ -537,7 +537,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
       <p>
         Honestly, यह article सिर्फ mobile-number वाले रास्ते पर focused है। अगर आपको पूरी योजना की A-to-Z
         जानकारी चाहिए — eligibility, नई registration, exclusion rules — तो उसके लिए हमारी{' '}
-        <Link href="/articles/PmKisanMasterGuide2026">Master Guide</Link> बनी हुई है। और अगर सवाल यह है कि
+        <Link href="/articles/PmKisanMasterGuide2026">A-to-Z master guide</Link> बनी हुई है। और अगर सवाल यह है कि
         अगली किस्त कब आएगी, तो <Link href="/articles/PmKisan24viKist2026">किस्त वाला article</Link> पढ़ें।
         यहां वो सब दोहराने की जरूरत नहीं।
       </p>

@@ -420,7 +420,7 @@ export default function PmKisanRecoveryNoticePaisaWapas({ article }: { article: 
         ऊपर की UP वाली कहानी का दूसरा पहलू भी याद रखिए — जांच में अपात्र निकले लाखों लोगों में बहुतों को
         पता ही नहीं था कि income tax भरने से पात्रता चली जाती है। नियम पढ़े बिना योजना में बने रहना ही
         जोखिम है — पात्रता की पूरी सूची{' '}
-        <Link href="/articles/PmKisanMasterGuide2026">Master Guide</Link> में देख लें।
+        <Link href="/articles/PmKisanMasterGuide2026">पात्रता के नियमों वाली guide</Link> में देख लें।
       </Panel>
 
       <T>Notice मिलने के बाद उठने वाले सवाल — सीधे जवाब</T>
@@ -461,8 +461,8 @@ export default function PmKisanRecoveryNoticePaisaWapas({ article }: { article: 
         <ul className="list-disc pl-5 space-y-1.5 text-sm">
           <li><Link href="/articles/PmKisanVoluntarySurrenderGuide">🙏 Voluntary Surrender Guide</Link></li>
           <li><Link href="/articles/PmKisanRejectedStatusReApplyGuide">🔁 Rejected Status — Re-apply</Link></li>
-          <li><Link href="/articles/hi/helpline-shikayat">📞 हेल्पलाइन और शिकायत</Link></li>
-          <li><Link href="/articles/PmKisanMasterGuide2026">📚 PM Kisan Master Guide</Link></li>
+          <li><Link href="/articles/hi/helpline-shikayat">📞 शिकायत कहां और कैसे करें</Link></li>
+          <li><Link href="/articles/PmKisanMasterGuide2026">📚 योजना का पूरा नक्शा — Master Guide</Link></li>
         </ul>
       </div>
     </>

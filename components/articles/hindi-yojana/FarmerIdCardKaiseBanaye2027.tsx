@@ -177,7 +177,7 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
         इन तीनों के मिलान के बाद एक unique <strong>Farmer ID</strong> generate होती है। फायदा साफ है — बार-बार
         कागज जमा करने का झंझट खत्म। Subsidy, बीमा (PMFBY), KCC loan, PM Kisan — हर जगह यही एक आईडी काम
         करेगी। AgriStack आखिर है क्या बला — यह अलग से{' '}
-        <Link href="/articles/AgriStackKyaHai2026">इस page पर समझाया है</Link>।
+        <Link href="/articles/AgriStackKyaHai2026">अलग लेख में विस्तार से पढ़ सकते हैं</Link>।
       </p>
 
       <Sec>पहले यह 5 चीजें तैयार रखिए</Sec>
@@ -590,13 +590,13 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
             <Link href="/articles/AgriStackKyaHai2026">🗂️ AgriStack Kya Hai?</Link>
           </li>
           <li>
-            <Link href="/articles/PmKisanMasterGuide2026">📚 PM Kisan Master Guide</Link>
+            <Link href="/articles/PmKisanMasterGuide2026">📚 PM Kisan की A-to-Z पूरी guide</Link>
           </li>
           <li>
-            <Link href="/articles/PmKisanEkycOnline2026">🔐 eKYC Online Guide</Link>
+            <Link href="/articles/PmKisanEkycOnline2026">🔐 eKYC पूरा करने का तरीका</Link>
           </li>
           <li>
-            <Link href="/articles/KisanCreditCardOnlineApply2026">💳 KCC Online Apply</Link>
+            <Link href="/articles/KisanCreditCardOnlineApply2026">💳 KCC के लिए online आवेदन</Link>
           </li>
         </ul>
       </div>
