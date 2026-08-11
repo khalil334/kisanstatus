@@ -32,6 +32,7 @@ import MeriFasalMeraByoraStatusCheck2026 from '@/components/articles/rajya-yojan
 import UpKisanKarjRahatList2026 from '@/components/articles/rajya-yojana/UpKisanKarjRahatList2026';
 import PariharaPaymentStatusCheck2026 from '@/components/articles/rajya-yojana/PariharaPaymentStatusCheck2026';
 import BiharKisanRegistrationStatusCheck2026 from '@/components/articles/rajya-yojana/BiharKisanRegistrationStatusCheck2026';
+import IkhedutPortalStatusCheck2026 from '@/components/articles/rajya-yojana/IkhedutPortalStatusCheck2026';
 
 const COMPONENTS: Record<string, React.ComponentType<{ article: RajyaYojanaArticleMeta }>> = {
   RajasthanKisanSammanNidhi9000,
@@ -48,6 +49,7 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: RajyaYojanaArtic
   UpKisanKarjRahatList2026,
   PariharaPaymentStatusCheck2026,
   BiharKisanRegistrationStatusCheck2026,
+  IkhedutPortalStatusCheck2026,
 };
 
 function buildSchemas(
