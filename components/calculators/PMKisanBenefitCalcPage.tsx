@@ -12,7 +12,7 @@ const PUBLISHED = '2026-02-25T08:00:00+05:30';
 const MODIFIED = '2026-07-09T08:00:00+05:30';
 
 function fmtDate(iso: string) {
-  return new Date(iso).toLocaleDateString('hi-IN', {
+  return new Date(iso).toLocaleDateString('en-IN', {
     day: 'numeric',
     month: 'long',
     year: 'numeric',
