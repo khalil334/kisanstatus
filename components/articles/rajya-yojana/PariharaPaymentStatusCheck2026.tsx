@@ -537,7 +537,7 @@ export default function PariharaPaymentStatusCheck2026({
           <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
           Relief ki raqam, round aur declared taluk ki list har calamity me alag hoti hai —
           final jaankari ke liye official portal ya tehsildar office se zaroor confirm
-          karein. Ye article sirf raasta dikhane ke liye hai.
+          karein. Is guide ko naksha samjhein — manzil ki pushti sarkari zariye se hi hogi.
         </p>
       </div>
 
