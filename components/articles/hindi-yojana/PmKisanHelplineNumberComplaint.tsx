@@ -252,7 +252,7 @@ export default function PmKisanHelplineNumberComplaint({ article }: { article: H
             PM Kisan Official Portal — Help Desk
           </p>
           <p className="text-xs text-[var(--color-text-muted)] mt-0.5 mb-0">
-            Government of India — pmkisan.gov.in
+            आधिकारिक स्रोत: pmkisan.gov.in (भारत सरकार)
           </p>
         </div>
         <a
@@ -501,7 +501,7 @@ export default function PmKisanHelplineNumberComplaint({ article }: { article: H
             <Link href="/articles/PmKisanRejectedStatusReApplyGuide">🔄 Rejected Status Re-Apply</Link>
           </li>
           <li>
-            <Link href="/articles/PmKisanEkycOnline2026">🔐 eKYC Online Guide</Link>
+            <Link href="/articles/PmKisanEkycOnline2026">🔐 eKYC कैसे पूरी करें</Link>
           </li>
         </ul>
       </div>

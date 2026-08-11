@@ -314,7 +314,7 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
         <li>
           <strong>बैंक खाता आधार से linked नहीं / DBT off</strong> — यह NPCI seeding का मामला है, branch
           जाकर form भरना पड़ता है। Seeding का पूरा खेल{' '}
-          <Link href="/articles/hi/npci-aadhaar-seeding">इस page पर समझाया है</Link>।
+          <Link href="/articles/hi/npci-aadhaar-seeding">इस लेख में खोलकर बताया है</Link>।
         </li>
         <li>
           <strong>Land record verification pending</strong> — तलाठी/कृषि सहायक के स्तर पर अटका होता है;
@@ -450,9 +450,9 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
         <h3 className="font-black text-[var(--color-text)] mb-3 text-base">🔗 आगे पढ़ने लायक</h3>
         <ul className="list-disc pl-5 space-y-1.5 text-sm">
           <li><Link href="/articles/hi/mp-kisan-kalyan-yojana">🌾 MP किसान कल्याण योजना ₹12000</Link></li>
-          <li><Link href="/articles/PmKisanMasterGuide2026">📚 PM Kisan Master Guide</Link></li>
-          <li><Link href="/articles/PmKisanEkycOnline2026">🔐 eKYC Online Guide</Link></li>
-          <li><Link href="/articles/hi/npci-aadhaar-seeding">🏦 NPCI आधार सीडिंग</Link></li>
+          <li><Link href="/articles/PmKisanMasterGuide2026">📚 PM Kisan की मुख्य guide</Link></li>
+          <li><Link href="/articles/PmKisanEkycOnline2026">🔐 eKYC step-by-step process</Link></li>
+          <li><Link href="/articles/hi/npci-aadhaar-seeding">🏦 NPCI seeding — पूरा process</Link></li>
         </ul>
       </div>
     </>
