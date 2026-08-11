@@ -301,6 +301,31 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
     relatedPaths: ['/articles/PmKisanMasterGuide2026', '/articles/PmKisanPaymentFailedFix2026'],
   },
   {
+    slug: 'bihar-kisan-registration-status-check-2026',
+    mainKeyword: 'dbt agriculture bihar status check',
+    secondaryKeywords: [
+      'bihar kisan registration status check',
+      'dbt agriculture bihar gov in registration',
+      'kisan panjikaran sankhya bihar',
+      'diesel anudan status check bihar',
+      'krishi input anudan status',
+      'bihar kisan registration number kaise nikale',
+    ],
+    title: 'DBT Agriculture Bihar Status Check 2026 — Kisan Guide',
+    description:
+      'DBT Agriculture Bihar par registration number se anudan status check karein — diesel, krishi input, beej anudan aur kho gaya number nikalne ka poora raasta.',
+    ogTitle: 'DBT Agriculture Bihar — Registration Aur Anudan Status',
+    component: 'BiharKisanRegistrationStatusCheck2026',
+    state: 'Bihar',
+    officialPortal: 'https://dbtagriculture.bihar.gov.in',
+    status: 'live',
+    published: '2026-08-11T19:00:00+05:30',
+    modified: '2026-08-11T19:00:00+05:30',
+    readTime: '13 min read',
+    ogImage: '/images/articles/rajya-yojna/bihar-kisan-registration-status-check-2026/hero.webp',
+    relatedPaths: ['/articles/PmKisanMasterGuide2026', '/articles/PmKisanPaymentFailedFix2026'],
+  },
+  {
     slug: 'parihara-payment-status-check-2026',
     mainKeyword: 'parihara payment status check',
     secondaryKeywords: [
