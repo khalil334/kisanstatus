@@ -5,7 +5,7 @@ import { EXTERNAL_LINK_PROPS } from '@/lib/site-config';
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
 
 const PUBLISHED = '2024-01-15T08:00:00+05:30';
-const MODIFIED = '2026-08-08T21:45:00+05:30';
+const MODIFIED = '2026-08-06T22:11:00+05:30';
 
 const RELATED_CARDS = [
   {

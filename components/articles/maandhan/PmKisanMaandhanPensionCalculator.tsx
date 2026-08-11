@@ -7,7 +7,7 @@ import { SI, StepList, WB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlo
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
 
 const PUBLISHED = '2026-07-21T08:00:00+05:30';
-const MODIFIED = '2026-08-08T09:00:00+05:30';
+const MODIFIED = '2026-08-06T12:38:00+05:30';
 
 const RELATED_CARDS = [
   {

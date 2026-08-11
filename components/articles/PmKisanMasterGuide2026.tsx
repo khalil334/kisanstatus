@@ -8,7 +8,7 @@ import CountdownModal from '@/components/CountdownModal';
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const PUBLISHED = '2026-07-05T08:00:00+05:30';
-const MODIFIED = '2026-07-11T08:00:00+05:30';
+const MODIFIED = '2026-07-09T08:27:00+05:30';
 
 const RELATED = [
   { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply', emoji: '💳' },
