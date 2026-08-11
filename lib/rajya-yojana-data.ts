@@ -83,7 +83,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
       'kisan kalyan yojana beneficiary list mp',
       'mp kisan kalyan yojana amount',
     ],
-    title: 'MP CM Kisan Kalyan Yojana Kist Kab Aayegi',
+    title: 'MP Kisan Kalyan Yojana Kist Status',
     description:
       'Madhya Pradesh CM Kisan Kalyan Yojana ki kist kab aayegi, SAARA portal se status check aur beneficiary list dekhne ka process.',
     ogTitle: 'MP Kisan Kalyan Yojana — Kist Aur Status Check',
