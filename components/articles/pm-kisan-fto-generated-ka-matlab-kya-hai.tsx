@@ -59,7 +59,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
           message={modal.message}
           redirectUrl={modal.url}
           onClose={() => setModal(null)}
-          infoNote="📌 Thoda wait karo. Official PM Kisan portal khulne wala hai."
+          infoNote="📌 Seedha pmkisan.gov.in par ja rahe ho, thoda sabr."
         />
       )}
 
@@ -340,7 +340,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             <button
               onClick={() => handleOfficialLink(
                 'PM Kisan Beneficiary Status',
-                'PM Kisan portal khulne wala hai. Thoda wait karo...',
+                'pmkisan.gov.in khul raha hai, ruk jao thoda...',
                 'https://pmkisan.gov.in/BeneficiaryStatus.aspx'
               )}
               className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
@@ -488,7 +488,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Puche Jane Wale Sawal
+            FTO Status Ke Confusions — Saaf Jawab
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="FTO Status FAQ 2026" />
         </section>
@@ -516,7 +516,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
           <button
             onClick={() => handleOfficialLink(
               'PM Kisan Official Portal',
-              'PM Kisan portal khulne wala hai. Thoda wait karo...',
+              'pmkisan.gov.in khul raha hai, ruk jao thoda...',
               'https://pmkisan.gov.in/BeneficiaryStatus.aspx'
             )}
             className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"

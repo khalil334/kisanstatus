@@ -410,7 +410,7 @@ return (
          </div>
        </div>
        <DB>
-         <strong>Warning:</strong> EMI miss karke phone uthana band mat karo. Communication break = NPA declaration. 90 din mein seizure notice. Hamesha written record maintain karo.
+         <strong>Savdhan:</strong> EMI miss karke phone uthana band mat karo. Communication break = NPA declaration. 90 din mein seizure notice. Hamesha written record maintain karo.
        </DB>
      </section>
 
@@ -460,7 +460,7 @@ return (
 
      <section className="mb-8">
        <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-         Real Sawal — Seedhe Jawaab
+         Tractor Loan — Aapke Asli Sawal
        </h2>
        <FAQBlock faqs={FAQS_DATA} caption="Tractor Loan FAQ 2026 — Ground-Level Verified Answers" />
      </section>

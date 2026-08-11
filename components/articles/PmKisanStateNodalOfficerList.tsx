@@ -126,7 +126,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
 
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-r-xl">
           <p className="text-sm md:text-base text-blue-900 dark:text-blue-100 leading-relaxed font-medium">
-            <strong>Seedha Jawab:</strong> PM Kisan State Nodal Officer har state ke Agriculture Department mein appointed ek senior official hote hain jo kisanon ki unresolved shikayaton (jaise payment fail, name mismatch) ko solve karte hain. Agar 155261 helpline se madad nahi milti, toh aap direct apne state ke Nodal Officer ko email kar sakte hain. Neeche 2026 ki updated contact guidelines aur complaint escalate karne ka poora tarika diya gaya hai.
+            <strong>Saaf Saaf Suno:</strong> PM Kisan State Nodal Officer har state ke Agriculture Department mein appointed ek senior official hote hain jo kisanon ki unresolved shikayaton (jaise payment fail, name mismatch) ko solve karte hain. Agar 155261 helpline se madad nahi milti, toh aap direct apne state ke Nodal Officer ko email kar sakte hain. Neeche 2026 ki updated contact guidelines aur complaint escalate karne ka poora tarika diya gaya hai.
           </p>
         </div>
 
@@ -164,7 +164,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
           />
 
           <DB>
-            <strong>Real Story:</strong>
+            <strong>Zameen Ki Kahani:</strong>
             <p className="text-xs text-gray-700 dark:text-gray-300 mt-2">
               Varanasi ke Ramesh ji ki 23vi kist nahi aayi. 155261 par 5 baar call kiya, har baar "wait karo" bola. Phir unhone UP ke nodal officer ko email kiya aur subject mein apna Registration Number likha. Kuch din mein reply aaya, district officer ko instruction mili, problem resolve hui, aur pending kist bhi mil gayi.
             </p>
@@ -400,7 +400,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Puche Jane Wale Sawal (FAQs)
+            Nodal Officer Se Jude Sawal-Jawab
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Nodal Officer Contact FAQ 2026" />
         </section>
@@ -429,7 +429,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
         />
 
         <section className="my-10">
-          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Aapke Liye Zaroori Articles</h3>
+          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Inhe Bhi Padh Lena</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {RELATED_CARDS.map((card) => (
               <Link

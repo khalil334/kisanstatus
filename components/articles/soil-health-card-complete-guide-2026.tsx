@@ -329,7 +329,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">
-            Aksar Puche Jane Wale Sawal
+            Soil Health Card — Aam Sawalon Ke Jawab
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="Soil Health Card FAQ 2026" />
         </section>

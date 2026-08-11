@@ -389,7 +389,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Puche Jane Wale Sawal
+            Fasal Bima Se Jude Sawaal-Jawab
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="PMFBY FAQ 2026" />
         </section>

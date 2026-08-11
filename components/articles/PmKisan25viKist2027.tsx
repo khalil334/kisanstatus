@@ -233,13 +233,13 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           </p>
 
           <DB>
-            <strong>Warning:</strong> Baaki jo suna hai — amount badhna, eligibility rules change hona — inka koi official confirmation nahi hai. Jab tak sarkar na bole, inpar bharosa mat karo.
+            <strong>Hoshiyar Raho:</strong> Baaki jo suna hai — amount badhna, eligibility rules change hona — inka koi official confirmation nahi hai. Jab tak sarkar na bole, inpar bharosa mat karo.
           </DB>
         </section>
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Puche Jane Wale Sawal (FAQ)
+            25vi Kist Ke Common Doubts, Ek Jagah
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="PM Kisan 25vi Kist 2027 — FAQ" />
         </section>

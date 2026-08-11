@@ -99,14 +99,14 @@ export default function PmKisanVoluntarySurrenderGuide() {
           />
 
           <DB>
-            <strong>Field Observation:</strong>
+            <strong>Maidan Se Dekha Hua:</strong>
             <p className="text-xs text-gray-700 dark:text-gray-300 mt-2">
               Kai baar government employees, pensioners ya income tax filers galti se register ho jate hain. Voluntary surrender karne se unki future kist turant band ho jati hai aur sarkari rules ke tahat unpar hone wali karrawai ya penalty se bacha ja sakta hai.
             </p>
           </DB>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
-            Dhyan rahe, agar aap eligible nahi the toh sarkar pehle se mile hue paiso ki recovery kar sakti hai. Surrender karne se future ki kist aana band ho jayegi aur <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">Beneficiary list</Link> se naam hat jayega.
+            Dhyan rahe, agar aap eligible nahi the toh sarkar pehle se mile hue paiso ki recovery kar sakti hai. Surrender karne se future ki kist aana band ho jayegi aur <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">labharthi list</Link> se naam hat jayega.
           </p>
         </section>
 
@@ -132,7 +132,7 @@ export default function PmKisanVoluntarySurrenderGuide() {
             ))}
           </div>
           <IB>
-            <strong>Important:</strong> Agar aap inme se kisi category mein aate hain, toh turant surrender kar do. Baad mein problem ho sakti hai.
+            <strong>Sabse Zaroori:</strong> Agar aap inme se kisi category mein aate hain, toh turant surrender kar do. Baad mein problem ho sakti hai.
           </IB>
         </section>
 
@@ -184,7 +184,7 @@ export default function PmKisanVoluntarySurrenderGuide() {
               <li>Mobile number wahi hona chahiye jo registration time par diya tha</li>
               <li>OTP aayega, usko enter karna padega</li>
               <li>Ek baar submit karne ke baad undo nahi ho sakta</li>
-              <li>15 din baad <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">beneficiary list</Link> check karo</li>
+              <li>15 din baad <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">official list</Link> check karo</li>
             </ul>
           </WB>
         </section>
@@ -216,14 +216,14 @@ export default function PmKisanVoluntarySurrenderGuide() {
             loading="lazy"
           />
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            15 din ke andar aapka naam list se hat jayega. <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">Beneficiary list</Link> check karke confirm kar lena.
+            15 din ke andar aapka naam list se hat jayega. <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">sarkari beneficiary record</Link> check karke confirm kar lena.
           </p>
         </section>
 
         <section className="mb-8">
           <SH>CSC Center Se Bhi Karwa Sakte Ho</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Agar online nahi ho pa raha aur BAO jane ka time nahi hai, toh <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">CSC center</Link> par chale jao.
+            Agar online nahi ho pa raha aur BAO jane ka time nahi hai, toh <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">paas ke CSC outlet</Link> par chale jao.
           </p>
           <div className="bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl p-5">
             <p className="text-sm text-green-800 dark:text-green-300 mb-3">
@@ -307,7 +307,7 @@ export default function PmKisanVoluntarySurrenderGuide() {
             </div>
             <div className="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 p-4 rounded-r-xl">
               <p className="text-sm text-blue-800 dark:text-blue-300">
-                <strong>✅ List Check Karo:</strong> 30 din baad <Link href="/articles/PmKisanBeneficiaryList2026" className="underline">beneficiary list</Link> mein apna naam check karo. Hat gaya hona chahiye.
+                <strong>✅ List Check Karo:</strong> 30 din baad <Link href="/articles/PmKisanBeneficiaryList2026" className="underline">updated list</Link> mein apna naam check karo. Hat gaya hona chahiye.
               </p>
             </div>
             <div className="bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500 p-4 rounded-r-xl">
@@ -337,13 +337,13 @@ export default function PmKisanVoluntarySurrenderGuide() {
             ))}
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
-            Isliye agar eligible nahi ho toh turant surrender kar do. <Link href="/articles/PmKisanMasterGuide2026" className="underline text-green-700 dark:text-green-400">Master Guide</Link> mein eligibility criteria check karo.
+            Isliye agar eligible nahi ho toh turant surrender kar do. <Link href="/articles/PmKisanMasterGuide2026" className="underline text-green-700 dark:text-green-400">Master Guide 2026 wala article</Link> mein eligibility criteria check karo.
           </p>
         </section>
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Puche Jane Wale Sawal
+            Surrender Se Pehle Ke Sawal, Yahan Jawab
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="Voluntary Surrender FAQ" />
         </section>

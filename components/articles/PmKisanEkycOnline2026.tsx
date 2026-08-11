@@ -10,7 +10,7 @@ const MODIFIED = '2026-08-08T21:45:00+05:30';
 const RELATED_CARDS = [
   {
     slug: 'PmKisan24viKist2026',
-    title: 'PM Kisan 24vi Kist Status',
+    title: 'October Wali 24vi Kist Ka Update',
     desc: 'Apna ₹2000 installment status aur eKYC errors abhi check karein.',
     emoji: '📅'
   },
@@ -187,7 +187,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
             <SI n={5}>"Submit" dabao. Screen par hara rang ka "eKYC Successful" message dikhega! ✅</SI>
           </StepList>
           <WB>
-            <strong>Pro Tip:</strong> OTP sirf 5 minute ke liye valid hota hai. Jaldi dalo. Agar network ki wajah se na aaye, toh "Resend OTP" par click karo, lekin 2-3 baar se zyada try mat karna warna number temporary block ho sakta hai.
+            <strong>Ek Secret Tip:</strong> OTP sirf 5 minute ke liye valid hota hai. Jaldi dalo. Agar network ki wajah se na aaye, toh "Resend OTP" par click karo, lekin 2-3 baar se zyada try mat karna warna number temporary block ho sakta hai.
           </WB>
         </section>
 
@@ -236,7 +236,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
             <SI n={5}>Match successful hote hi eKYC complete ho jayegi.</SI>
           </StepList>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            <strong>Note:</strong> Face authentication UIDAI ki <a href="https://uidai.gov.in" {...EXTERNAL_LINK_PROPS} className="underline">Aadhaar FaceRD service</a> par chalta hai — app pehli baar use karne par FaceRD install karne ko keh sakti hai, ye normal hai. Ye tarika un kisanon ke liye sabse kaam ka hai jinke haath kaam karne ki wajah se fingerprint clear nahi aata.
+            <strong>Ek Baat Aur:</strong> Face authentication UIDAI ki <a href="https://uidai.gov.in" {...EXTERNAL_LINK_PROPS} className="underline">Aadhaar FaceRD service</a> par chalta hai — app pehli baar use karne par FaceRD install karne ko keh sakti hai, ye normal hai. Ye tarika un kisanon ke liye sabse kaam ka hai jinke haath kaam karne ki wajah se fingerprint clear nahi aata.
           </p>
         </section>
 
