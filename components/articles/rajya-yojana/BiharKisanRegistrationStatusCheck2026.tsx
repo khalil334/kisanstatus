@@ -49,27 +49,27 @@ function Ext({ href, children }: { href: string; children: React.ReactNode }) {
 
 const MYTHS: { myth: string; sach: string }[] = [
   {
-    myth: 'Ek baar registration ho gaya to har scheme ka paisa apne aap aa jaayega.',
-    sach: 'Panjikaran sirf chaabi hai. Har scheme (diesel anudan, input anudan, beej) ke liye uski window me alag se apply karna padta hai — registration number wahi rehta hai, arji nayi hoti hai.',
+    myth: 'Ek baar panjikaran ho gaya to har scheme ka paisa apne aap aa jaayega.',
+    sach: 'Panjikaran sirf chaabi hai. Har madad (diesel anudan, input sahayata, beej) ke liye uski window me alag se apply karna padta hai — wahi 13-anka number chalta hai, arji nayi hoti hai.',
   },
   {
-    myth: 'DBT registration ke liye CSC wale ko 300-500 rupay dena hi padta hai.',
-    sach: 'Portal par registration bilkul free hai. CSC ka mamooli service charge alag baat hai, par "file pass karane" ke naam par moti raqam maangna seedha thagi hai.',
+    myth: 'DBT panjikaran ke liye CSC wale ko 300-500 rupay dena hi padta hai.',
+    sach: 'Portal par ye kaam bilkul free hai. CSC ka mamooli service charge alag baat hai, par "file pass karane" ke naam par moti raqam maangna seedha thagi hai.',
   },
   {
-    myth: 'Gair-raiyat (batayidar) kisan ka registration ho hi nahi sakta.',
-    sach: 'Ho sakta hai — registration ke teen type hain: raiyat, gair-raiyat, aur dono. Gair-raiyat wale ko swa-ghoshna (self-declaration) ke saath apply karna hota hai.',
+    myth: 'Gair-raiyat (batayidar) khetihar ka panjikaran ho hi nahi sakta.',
+    sach: 'Ho sakta hai — enrolment ke teen type hain: raiyat, gair-raiyat, aur dono. Gair-raiyat wale ko swa-ghoshna (self-declaration) ke saath apply karna hota hai.',
   },
   {
-    myth: 'Registration number kho gaya to naya registration karana padega.',
-    sach: 'Bilkul nahi — duplicate panjikaran to sabse badi galti hai, isse dono entry atak jaati hain. Purana number Aadhaar se search karke nikala ja sakta hai.',
+    myth: 'Panjikaran sankhya kho gayi to nayi banwani padegi.',
+    sach: 'Bilkul nahi — duplicate entry to sabse badi galti hai, isse dono record atak jaate hain. Purana number Aadhaar se search karke nikala ja sakta hai.',
   },
   {
     myth: 'PM-Kisan ka paisa bhi DBT Bihar portal se hi aata hai.',
-    sach: 'PM-Kisan central scheme hai, uska paisa pmkisan.gov.in ke system se aata hai. Haan, Bihar me uske aavedan ka raasta DBT registration se hoke jaata hai — isliye dono ka rishta hai, par status alag-alag jagah dikhta hai.',
+    sach: 'PM-Kisan kendriya scheme hai, uska paisa pmkisan.gov.in ke system se aata hai. Haan, Bihar me uski arji ka raasta DBT panjikaran se hoke jaata hai — isliye dono ka rishta hai, par sthiti alag-alag jagah dikhti hai.',
   },
   {
-    myth: 'Aavedan reject ho gaya matlab hamesha ke liye patta kat gaya.',
+    myth: 'Arji reject ho gayi matlab hamesha ke liye patta kat gaya.',
     sach: 'Zyada tar rejection sudhaar layak hote hain — bank detail, naam mismatch, LPC. Wajah theek karke agli window me dobara apply ho jaata hai.',
   },
   {
@@ -98,62 +98,62 @@ export default function BiharKisanRegistrationStatusCheck2026({
     <article className="max-w-3xl mx-auto px-4 py-8 prose prose-lg dark:prose-invert prose-headings:font-bold prose-a:text-blue-600 dark:prose-a:text-blue-400">
       <h1 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
         Bihar Kisan Registration Status Check 2026 — DBT Agriculture Ka Ek Number, Saari
-        Scheme Ka Darwaza
+        Yojana Ka Darwaza
       </h1>
 
       <Fig
         src="hero.webp"
         alt="Baadh ke baad Bihar ke do kisan pani se ghire dhaan ke khet ke kinare khade hain, ek ke haath me kagaz aur mobile hai"
-        caption="Baadh ke baad anudan ki line me farq sirf ek cheez ka hota hai — kiska registration durust hai"
+        caption="Baadh ke baad muawze ki line me farq sirf ek cheez ka hota hai — kiska record durust hai"
       />
 
       <p>
         2024 ki baadh yaad hai? Kosi-Ganga ke ilaake me pani utra to prakhand karyalay ke
-        bahar krishi input anudan ki line lag gayi. Us line me do kisan aise khade the jinki
+        bahar krishi input anudan ki line lag gayi. Us line me do khetihar aise khade the jinki
         kahani hamesha yaad rahegi. Dono ke khet barabar doobe the, dono ek hi panchayat ke.
-        Ek ke khate me 12 din me paisa aa gaya. Doosre ka aavedan chaar mahine latka raha.
+        Ek ke khate me 12 din me paisa aa gaya. Doosre ki arji chaar mahine latki rahi.
       </p>
 
       <p>
-        Farq kya tha? Na sifarish, na kismat. Pehle wale ka DBT registration ekdum durust
+        Farq kya tha? Na sifarish, na kismat. Pehle wale ka DBT record ekdum durust
         tha — Aadhaar se naam milta tha, bank khata chalu tha, zameen ki detail sahi thi.
-        Doosre ke registration me naam ki spelling Aadhaar se nahi milti thi. Bas itni si
+        Doosre ki entry me spelling Aadhaar se nahi milti thi. Bas itni si
         baat, aur chaar mahine ka intezaar.
       </p>
 
       <p>
-        Isliye aaj hum is number ki poori kundli kholenge — banwana, kho jaaye to
-        nikaalna, status check karna, aur us ek number se judi har scheme (diesel anudan,
-        input anudan, beej, PM-Kisan, KCC) ka hisaab. Ek number, saari scheme — yahi Bihar
+        Isliye aaj hum us 13-anke number ki poori kundli kholenge — banwana, kho jaaye to
+        nikaalna, sthiti dekhna, aur us ek number se judi har yojana (diesel anudan,
+        input sahayata, beej, PM-Kisan, KCC) ka hisaab. Ek number, saara darwaza — yahi Bihar
         ke DBT system ka asli formula hai.
       </p>
 
       <InfoBox type="info">
-        <strong>Last updated: August 2026.</strong> Ye guide official portal{' '}
+        <strong>Last updated: August 2026.</strong> Ye guide official site{' '}
         <Ext href="https://dbtagriculture.bihar.gov.in">dbtagriculture.bihar.gov.in</Ext> ke
-        steps par based hai. Registration aur har anudan ka aavedan free hai — kisi agent ko
+        steps par based hai. Panjikaran aur har arji free hai — kisi agent ko
         paisa na dein.
       </InfoBox>
 
       <h2>DBT Agriculture Bihar Portal Aakhir Hai Kya, Aur Iske Bina Anudan Kyu Nahi Milta?</h2>
 
       <p>
-        DBT matlab Direct Benefit Transfer — sarkar ka paisa seedha kisan ke bank khate me.
+        DBT matlab Direct Benefit Transfer — sarkar ka paisa seedha khetihar ke bank khate me.
         Bihar krishi vibhag ne iske liye ek hi darwaza rakha hai:{' '}
         <Ext href="https://dbtagriculture.bihar.gov.in">dbtagriculture.bihar.gov.in</Ext>.
-        Yahan kisan ek baar registration karta hai aur use 13-anka{' '}
-        <strong>kisan panjikaran sankhya</strong> (registration number) milti hai.
+        Yahan ek baar enrolment hota hai aur 13-anka{' '}
+        <strong>kisan panjikaran sankhya</strong> milti hai.
       </p>
 
       <p>
-        Ab samajh lijiye — krishi vibhag ki koi bhi yojana ho, aavedan me sabse pehla khana
-        yahi number maangta hai. Number nahi to form aage badhta hi nahi. Isliye jo kisan
-        soch raha hai ki &quot;jab zaroorat padegi tab register kar lenge&quot;, wo galti
-        kar raha hai — baadh ya sukhad ke baad window sirf 2 hafte ki hoti hai, aur us waqt
-        naya panjikaran karane me hi din nikal jaate hain. Ye number pehle se tayyar rakhiye.
+        Ab samajh lijiye — krishi vibhag ki koi bhi yojana ho, form me sabse pehla khana
+        yahi number maangta hai. Number nahi to arji aage badhti hi nahi. Isliye jo log
+        sochte hain ki &quot;jab zaroorat padegi tab register kar lenge&quot;, wo galti
+        karte hain — baadh ya sukhad ke baad window sirf 2 hafte ki hoti hai, aur us waqt
+        nayi entry banwane me hi din nikal jaate hain. Number pehle se tayyar rakhiye.
       </p>
 
-      <h2>Registration Ke 3 Type — Raiyat, Gair-Raiyat, Dono. Aap Kaun Se Ho?</h2>
+      <h2>Panjikaran Ke 3 Type — Raiyat, Gair-Raiyat, Dono. Aap Kaun Se Ho?</h2>
 
       <p>Form me sabse pehla confusion yahi aata hai. Seedha hisaab:</p>
 
@@ -164,7 +164,7 @@ export default function BiharKisanRegistrationStatusCheck2026({
         </li>
         <li>
           <strong>Gair-raiyat</strong> — zameen kisi aur ki hai, kheti aap karte ho (bataiya
-          / hunda par). Aavedan swa-ghoshna ke saath jaata hai.
+          / hunda par). Arji swa-ghoshna ke saath jaati hai.
         </li>
         <li>
           <strong>Dono</strong> — kuch zameen apni, kuch bataiya par. Yahi option chuniye,
@@ -173,34 +173,34 @@ export default function BiharKisanRegistrationStatusCheck2026({
       </ul>
 
       <p>
-        Galat type chunne par kya hota hai? Anudan ka hisaab galat banta hai — jaise raiyat
-        chun liya par jamabandi kisi aur ke naam ki hai, to verification me arji wahi atak
-        jaati hai. Aur baad me type badalwana registration sudhaarne ka lamba chakkar hai.
+        Galat type chunne par kya hota hai? Muawze ka hisaab galat banta hai — jaise raiyat
+        chun liya par jamabandi kisi aur ke naam ki hai, to verification me form wahi atak
+        jaata hai. Aur baad me type badalwana record sudhaarne ka lamba chakkar hai.
         Do minute soch ke sahi option chunna aadhi pareshani bacha leta hai.
       </p>
 
-      <h2>Naya Registration Kaise Hota Hai — Aur Sabse Zyada Log Kahan Fass-te Hain?</h2>
+      <h2>Nayi Entry Kaise Banti Hai — Aur Sabse Zyada Log Kahan Fass-te Hain?</h2>
 
       <Fig
         src="aadhaar-auth-csc.webp"
-        alt="Bihar ke CSC me kisan biometric device par angutha laga kar Aadhaar authentication kar raha hai"
-        caption="Aadhaar demographic authentication — yahi wo step hai jahan sabse zyada registration atakte hain"
+        alt="Bihar ke CSC me khetihar biometric device par angutha laga kar Aadhaar authentication kar raha hai"
+        caption="Aadhaar demographic authentication — yahi wo step hai jahan sabse zyada form atakte hain"
       />
 
-      <p>Portal par flow aisa chalta hai:</p>
+      <p>Site par flow aisa chalta hai:</p>
 
       <ol>
         <li>
           <Ext href="https://dbtagriculture.bihar.gov.in">dbtagriculture.bihar.gov.in</Ext>{' '}
-          kholiye aur panjikaran (Registration) section me nayi entry chuniye.
+          kholiye aur panjikaran (Registration) section me naya enrolment chuniye.
         </li>
         <li>
           <strong>Aadhaar authentication</strong> — Aadhaar number aur naam daaliye. System
           UIDAI se aapka naam milaata hai. OTP Aadhaar se jude mobile par aayega.
         </li>
-        <li>Kisan ki detail bhariye — naam, pata, category, kheti ka type (raiyat/gair-raiyat/dono).</li>
+        <li>Apni detail bhariye — naam, pata, category, kheti ka type (raiyat/gair-raiyat/dono).</li>
         <li>Bank detail — account number, IFSC. Wahi khata dijiye jo Aadhaar se juda aur chalu hai.</li>
-        <li>Submit karte hi 13-anka registration number milega — SMS bhi aayega. Number ka screenshot aur ek kagaz par copy, dono rakhiye.</li>
+        <li>Submit karte hi 13-anka number milega — SMS bhi aayega. Uska screenshot aur ek kagaz par copy, dono rakhiye.</li>
       </ol>
 
       <p>
@@ -208,78 +208,78 @@ export default function BiharKisanRegistrationStatusCheck2026({
         authentication</strong>. System naam ko akshar-akshar milaata hai. Aadhaar me
         &quot;Md. Salim&quot; hai aur aap &quot;Mohammad Salim&quot; likh rahe ho — fail.
         Aadhaar me naam ke aage &quot;Kumar&quot; hai aur aap chhod de rahe ho — fail. OTP
-        us mobile par jaata hai jo Aadhaar se juda hai; wo number band ho chuka hai to
-        pehle Aadhaar centre ja kar mobile update karaiye, phir registration hoga. Ye do
-        cheezein pehle se jaanch lo to registration 10 minute ka kaam hai.
+        us mobile par jaata hai jo Aadhaar se juda hai; wo band ho chuka hai to
+        pehle Aadhaar centre ja kar mobile update karaiye, phir aage badhiye. Ye do
+        cheezein pehle se jaanch lo to poora kaam 10 minute ka hai.
       </p>
 
-      <h2>Registration Status Check Kaise Karein — Aur &quot;Application Status&quot; Se Iska Farq Kya Hai?</h2>
+      <h2>Apna Record Kaise Dekhein — Aur &quot;Application Status&quot; Se Iska Farq Kya Hai?</h2>
 
       <Fig
         src="status-check-mobile.webp"
-        alt="Dhaan ke khet ke saamne kisan ke haath me mobile jisme sarkari portal ka form khula hai"
-        caption="Registration number ya Aadhaar se — status khet ke kinare khade-khade check ho jaata hai"
+        alt="Dhaan ke khet ke saamne khetihar ke haath me mobile jisme sarkari site ka form khula hai"
+        caption="Panjikaran sankhya ya Aadhaar se — sthiti khet ke kinare khade-khade dikh jaati hai"
       />
 
-      <p>Portal par do alag cheezein hain, inko mat gadd-madd kijiye:</p>
+      <p>Site par do alag cheezein hain, inko mat gadd-madd kijiye:</p>
 
       <ul>
         <li>
-          <strong>Panjikaran ka poora record (vivaran)</strong> — aapka registration
-          hua hai ya nahi, kis type ka hai, kaunsa bank khata juda hai. Ye kisan panjikaran
-          / vivaran wale section me registration number ya Aadhaar daal kar dikhta hai.
+          <strong>Panjikaran vivaran</strong> — aapka enrolment
+          hua hai ya nahi, kis type ka hai, kaunsa bank khata juda hai. Ye vivaran wale
+          section me apna number ya Aadhaar daal kar dikhta hai.
         </li>
         <li>
-          <strong>Application Status (aavedan ki sthiti)</strong> — kisi khaas scheme me
-          diye gaye aavedan ka haal — diesel anudan ka claim kahan pahuncha, input anudan
-          approve hua ya nahi. Yahan aavedan sankhya (application ID) se search hota hai,
-          jo har scheme ke aavedan par alag milti hai.
+          <strong>Application Status (aavedan ki sthiti)</strong> — kisi khaas yojana me
+          di gayi arji ka haal — diesel wala claim kahan pahuncha, input sahayata
+          approve hui ya nahi. Yahan aavedan sankhya (application ID) se search hota hai,
+          jo har arji par alag milti hai.
         </li>
       </ul>
 
       <p>
-        Matlab saaf hai — panjikaran sankhya ek hi hai, par har scheme ke aavedan ki apni
-        ID hoti hai. Diesel anudan ka claim dala to uski receipt par likhi application ID
-        sambhal ke rakhiye; status usi se niklega.
+        Matlab saaf hai — panjikaran sankhya ek hi hai, par har arji ki apni
+        ID hoti hai. Diesel wala claim dala to uski receipt par likhi application ID
+        sambhal ke rakhiye; sthiti usi se niklegi.
       </p>
 
-      <h2>Registration Number Kho Gaya To Kaise Nikale?</h2>
+      <h2>Panjikaran Sankhya Kho Gayi To Kaise Nikale?</h2>
 
       <p>Ghabraiye mat, teen raaste hain:</p>
 
       <ol>
         <li>
-          <strong>Aadhaar se:</strong> portal ke search/vivaran section me Aadhaar number
-          daaliye — aapki registration detail nikal aayegi, number samet.
+          <strong>Aadhaar se:</strong> site ke search/vivaran section me Aadhaar number
+          daaliye — aapki poori detail nikal aayegi, number samet.
         </li>
         <li>
-          <strong>Purane SMS se:</strong> panjikaran ke waqt jo SMS aaya tha usme number
+          <strong>Purane SMS se:</strong> enrolment ke waqt jo SMS aaya tha usme number
           hota hai. Phone ka message box ek baar khangaliye.
         </li>
         <li>
           <strong>CSC ya Kisan Salahkar ke paas:</strong> apna Aadhaar le kar jaiye — wo
           system se aapka number nikaal denge. Panchayat ke Kisan Salahkar ke paas gaon ke
-          registrations ka record rehta hai.
+          saare enrolments ka record rehta hai.
         </li>
       </ol>
 
       <p>
         Aur ek baar phir — number nahi mil raha to nayi entry <strong>bilkul mat</strong>{' '}
-        banaiye. Duplicate entry pakdi jaati hai aur dono block ho jaati hain; phir wahi
+        banaiye. Duplicate pakda jaata hai aur dono block ho jaate hain; phir wahi
         prakhand office ke chakkar.
       </p>
 
-      <h2>Ek Number Se Kaun-Kaun Si Scheme Khulti Hai? — Spoke By Spoke</h2>
+      <h2>Ek Number Se Kaun-Kaun Si Yojana Khulti Hai? — Spoke By Spoke</h2>
 
       <Fig
         src="kisan-salahkar-panchayat.webp"
-        alt="Panchayat karyalay me Kisan Salahkar teen kisano ke saath table par baith kar anudan ke kagaz dekh raha hai"
-        caption="Panchayat ka Kisan Salahkar — har aavedan ki verification chain ki pehli kadi"
+        alt="Panchayat karyalay me Kisan Salahkar teen logon ke saath table par baith kar kagaz dekh raha hai"
+        caption="Panchayat ka Kisan Salahkar — har arji ki verification chain ki pehli kadi"
       />
 
       <p>
         Ab wahi hub-and-spoke wali baat. Beech me aapki panjikaran sankhya, aur uske
-        chaaro taraf ye scheme:
+        chaaro taraf ye yojanaein:
       </p>
 
       <h3>Diesel Anudan — sinchai ka paisa wapas</h3>
@@ -291,47 +291,47 @@ export default function BiharKisanRegistrationStatusCheck2026({
           par 3 sinchai tak, aur aavedan ki aakhri tareekh 10 October 2025 thi
         </Ext>
         . Har season ka rate aur window alag notify hoti hai. Claim online jaata hai —
-        authorized pump ki receipt ke saath, window ke andar. Status: Application Status me
-        apni diesel anudan wali application ID se.
+        authorized pump ki receipt ke saath, window ke andar. Sthiti: Application Status me
+        apni diesel wali application ID se.
       </p>
 
       <h3>Krishi Input Anudan — baadh/sukhad ka muawza</h3>
       <p>
         Jab baadh ya atibrishti se fasal 33% se zyada barbaad hoti hai, sarkar prabhavit
-        panchayaton ko notify karke input anudan kholti hai. Kharif 2025 ke round me{' '}
+        panchayaton ko notify karke ye madad kholti hai. Kharif 2025 ke round me{' '}
         <Ext href="https://technicalbihar.com/bihar-krishi-input-anudan-2025-panchayat-list/">
           14 zilon ke 64 prakhand ki 577 panchayat notify hui thin — asinchit fasal par
           ₹8,500 aur sinchit par ₹17,000 prati hectare, 2 hectare tak
         </Ext>
-        . Dhyan dijiye: laabh sirf notified panchayat ke kisano ko milta hai — pehle list
-        me apni panchayat ka naam dekhiye, phir apply kijiye. Status: usi Application
-        Status se, aavedan ID daal kar.
+        . Dhyan dijiye: laabh sirf notified panchayat walon ko milta hai — pehle suchi
+        me apni panchayat ka naam dekhiye, phir apply kijiye. Sthiti: usi Application
+        Status se, arji ki ID daal kar.
       </p>
 
       <h3>Beej Anudan (BRBN) — sasta beej ghar tak</h3>
       <p>
-        Bihar Rajya Beej Nigam (BRBN) har season anudanit rate par beej deta hai — aavedan
-        DBT registration number se hi hota hai. Home delivery ka option bhi milta hai.
-        Season shuru hone se pehle window khulti hai; status BRBN ke aavedan record me
-        dikhta hai.
+        Bihar Rajya Beej Nigam (BRBN) har season anudanit rate par beej deta hai — arji
+        usi 13-anke number se hoti hai. Home delivery ka option bhi milta hai.
+        Season shuru hone se pehle window khulti hai; sthiti BRBN ke record me
+        dikhti hai.
       </p>
 
       <h3>PM-Kisan Ka Rishta — juda hai, par alag hai</h3>
       <p>
-        Bihar me PM-Kisan ke naye aavedan ka raasta bhi DBT portal se hoke jaata hai, par
-        kist ka paisa aur uska status central system{' '}
-        <Ext href="https://pmkisan.gov.in">pmkisan.gov.in</Ext> par chalta hai — Bihar is
-        scheme ke sabse bade rajyon me hai, PM-Kisan dashboard par har kist me rajya ke
-        75-80 lakh se zyada beneficiary dikhte hain. To yaad rakhiye: PM-Kisan ki kist ka
-        status DBT Bihar portal par nahi, pmkisan.gov.in ke Know Your Status me dikhega.
+        Bihar me PM-Kisan ki nayi arji ka raasta bhi DBT portal se hoke jaata hai, par
+        kist ka paisa aur uski sthiti kendriya system{' '}
+        <Ext href="https://pmkisan.gov.in">pmkisan.gov.in</Ext> par chalti hai — Bihar is
+        yojana ke sabse bade rajyon me hai, us dashboard par har kist me rajya ke
+        75-80 lakh se zyada laabharthi dikhte hain. To yaad rakhiye: kist ka haal
+        DBT Bihar portal par nahi, pmkisan.gov.in ke Know Your Status me dikhega.
         Poora tareeka <Link href="/articles/PmKisanMasterGuide2026">PM Kisan Master Guide</Link>{' '}
         me hai.
       </p>
 
       <h3>KCC — Kisan Credit Card ka raasta bhi yahin se</h3>
       <p>
-        KCC ke liye bank jaate waqt DBT registration number saath rakhiye — Bihar me KCC
-        campaign ke aavedan isi number se jude hote hain. Loan bank deta hai, par kisan ki
+        KCC ke liye bank jaate waqt apni panjikaran sankhya saath rakhiye — Bihar me KCC
+        campaign ki arjiyan isi se judi hoti hain. Loan bank deta hai, par khetihar ki
         pehchaan yahi number hai.
       </p>
 
@@ -353,42 +353,42 @@ export default function BiharKisanRegistrationStatusCheck2026({
         </ul>
       </div>
 
-      <h2>Scheme-Wise Status Ka Naksha — Kahan Dekhna Hai, Kitna Time Lagta Hai?</h2>
+      <h2>Yojana-Wise Sthiti Ka Naksha — Kahan Dekhna Hai, Kitna Time Lagta Hai?</h2>
 
       <SchemeTable>
         <tr>
-          <th>Scheme</th>
-          <th>Status kahan dikhega</th>
+          <th>Yojana</th>
+          <th>Kahan dikhega</th>
           <th>Kitne din lagte hain</th>
         </tr>
         <tr>
           <td>Diesel Anudan</td>
-          <td>DBT portal → Application Status → diesel anudan aavedan ID</td>
-          <td>Verification ke baad DBT se — official timeline har season portal par</td>
+          <td>DBT portal → Application Status → diesel wali arji ki ID</td>
+          <td>Verification ke baad DBT se — official timeline har season site par</td>
         </tr>
         <tr>
           <td>Krishi Input Anudan</td>
-          <td>DBT portal → Application Status → input anudan aavedan ID</td>
-          <td>Panchayat verification ke baad — round ke hisaab se, portal notice dekhiye</td>
+          <td>DBT portal → Application Status → input sahayata ki arji ID</td>
+          <td>Panchayat verification ke baad — round ke hisaab se, notice dekhiye</td>
         </tr>
         <tr>
           <td>Beej Anudan (BRBN)</td>
-          <td>BRBN aavedan record, DBT registration number se</td>
-          <td>Season ke supply schedule par — portal par window ke saath likha hota hai</td>
+          <td>BRBN record, panjikaran sankhya se</td>
+          <td>Season ke supply schedule par — site par window ke saath likha hota hai</td>
         </tr>
         <tr>
           <td>PM-Kisan</td>
           <td>pmkisan.gov.in → Know Your Status</td>
-          <td>Kist saal me 3 baar — central release ke din</td>
+          <td>Kist saal me 3 baar — kendriya release ke din</td>
         </tr>
         <tr>
           <td>KCC</td>
-          <td>Jis bank me aavedan diya, wahi branch</td>
+          <td>Jis bank me arji di, wahi branch</td>
           <td>Bank ke process par — likhit pawti zaroor lijiye</td>
         </tr>
       </SchemeTable>
 
-      <h2>Status Me Ye Error Aaye To Kya Samjhein?</h2>
+      <h2>Screen Par Ye Error Aaye To Kya Samjhein?</h2>
 
       <ul>
         <li>
@@ -398,28 +398,28 @@ export default function BiharKisanRegistrationStatusCheck2026({
         </li>
         <li>
           <strong>&quot;Name mismatch&quot; (bank)</strong> — bank khate me naam Aadhaar se
-          alag hai. Fix: bank me naam sudhaar ka form bhariye, phir portal par bank detail
+          alag hai. Fix: bank me naam sudhaar ka form bhariye, phir site par bank detail
           dobara verify karaiye.
         </li>
         <li>
           <strong>&quot;Account invalid / inactive&quot;</strong> — khata band, dormant ya
-          IFSC purana (bank merge ke baad). Fix: bank se naya IFSC aur khate ki sthiti
-          likhwa kar portal me update karaiye.
+          IFSC purana (bank merge ke baad). Fix: bank se naya IFSC aur khate ka haal
+          likhwa kar record me update karaiye.
         </li>
         <li>
           <strong>&quot;LPC pending&quot;</strong> — zameen ka Land Possession Certificate
           verification me atka hai. Fix: anchal (circle) karyalay me LPC ke liye online
-          aavedan kijiye; jamabandi durust hai to LPC jaldi banta hai.
+          arji dijiye; jamabandi durust hai to LPC jaldi banta hai.
         </li>
       </ul>
 
       <h2>Verification Chain Kaun-Kaun Dekhta Hai — Aur Kis Level Par Shor Machana Hai?</h2>
 
-      <p>Aavedan ka safar teen kadi se guzarta hai:</p>
+      <p>Arji ka safar teen kadi se guzarta hai:</p>
 
       <ol>
         <li>
-          <strong>Kisan Salahkar</strong> (panchayat level) — pehli jaanch. Aavedan ke 7-10
+          <strong>Kisan Salahkar</strong> (panchayat level) — pehli jaanch. Form dene ke 7-10
           din baad kuch na hile to pehle inhi se pata kijiye.
         </li>
         <li>
@@ -428,25 +428,25 @@ export default function BiharKisanRegistrationStatusCheck2026({
         </li>
         <li>
           <strong>BAO — Block Agriculture Officer</strong> (prakhand level) — final
-          approval yahi hota hai. Do hafte se zyada atka aavedan seedha BAO ke office me
-          likhit application ke saath uthaiye — receiving copy lena mat bhooliye.
+          approval yahi hota hai. Do hafte se zyada atki arji seedha BAO ke office me
+          likhit prarthna ke saath uthaiye — receiving copy lena mat bhooliye.
         </li>
       </ol>
 
       <p>
         Aur BAO ke baad bhi sunwai na ho to zila krishi padadhikari (DAO) hain. Par tajurba
         yahi kehta hai — 80% mamle Kisan Salahkar ke level par hi suljh jaate hain, bas
-        kisan wahan tak pahunchta nahi.
+        log wahan tak pahunchte nahi.
       </p>
 
       <h2>Bank Se Paisa Reject Ho Gaya — Ab Dobara Kaise Aayega?</h2>
 
       <p>
-        Status me &quot;payment failed / rejected by bank&quot; dikhe to samajhiye paisa
+        Screen par &quot;payment failed / rejected by bank&quot; dikhe to samajhiye paisa
         chala tha par khata ne lauta diya. Pehle wajah pakdiye — khata band tha, KYC
         adhoora, naam mismatch, ya Aadhaar seeding nahi. Bank ja kar wo cheez theek karaiye
         aur uska saboot (passbook entry, seeding slip) lijiye. Phir Kisan Salahkar ya BAO
-        office ke through <strong>re-process ki request</strong> dijiye — scheme ke agle
+        office ke through <strong>re-process ki request</strong> dijiye — agle
         payment cycle me aapka naam phir chadhta hai. Khud se kuch nahi hota, request dena
         zaroori hai. Bank rejection ke codes ki poori list{' '}
         <Link href="/articles/PmKisanPaymentFailedFix2026">payment failed fix guide</Link> me hai
@@ -456,8 +456,8 @@ export default function BiharKisanRegistrationStatusCheck2026({
       <h2>Aakhri Baat — Agent Ko Paisa Kyu Nahi Dena Hai?</h2>
 
       <p>
-        Kyunki is poore system me sarkari fees kahin hai hi nahi. Registration free,
-        aavedan free, verification free, DBT free. Jo aadmi &quot;paisa do, anudan pakka
+        Kyunki is poore system me sarkari fees kahin hai hi nahi. Panjikaran free,
+        arji free, verification free, DBT free. Jo aadmi &quot;paisa do, muawza pakka
         karwa denge&quot; keh raha hai, wo ya to jhooth bol raha hai ya aapke documnet ka
         galat istemal karega. Kaam khud kijiye ya CSC ke mamooli service charge me karaiye
         — aur koi bhi zyada maange to uski shikayat BAO ya zila krishi padadhikari se
@@ -491,17 +491,17 @@ export default function BiharKisanRegistrationStatusCheck2026({
       </section>
 
       <InfoBox type="warning">
-        <strong>Yaad rakhiye:</strong> DBT registration se le kar anudan ke bhugtan tak —
+        <strong>Yaad rakhiye:</strong> DBT panjikaran se le kar bhugtan tak —
         poori chain free hai. Beech me paisa maangne wala har shakhs system ke bahar ka
-        hai. Apna Aadhaar, OTP aur bank detail sirf official portal ya bharosemand CSC par
+        hai. Apna Aadhaar, OTP aur bank detail sirf official site ya bharosemand CSC par
         hi dijiye.
       </InfoBox>
 
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
           <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
-          Anudan ki raqam, rate aur window har season ki adhisoochna se badalte hain —
-          aavedan se pehle official portal ki taaza notice ya apne Kisan Salahkar se zaroor
+          Madad ki raqam, rate aur window har season ki adhisoochna se badalte hain —
+          arji se pehle official site ki taaza notice ya apne Kisan Salahkar se zaroor
           confirm karein. Is page ka kaam bas process samjhana hai — sarkari suchna ka darja isse na dein.
         </p>
       </div>
