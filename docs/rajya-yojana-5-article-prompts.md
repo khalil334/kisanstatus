@@ -1,5 +1,5 @@
 # Rajya Yojana — 5 New Articles ke Writing Prompts
-
+strictly rules no repeative keywords no copy paste unique style and unique words real words helpful words natural human style 
 **Repo:** github.com/khalil334/kisanstatus · **Folder:** `components/articles/rajya-yojana/`
 **Source plan:** `docs/rajya-yojana-5-new-articles.md`
 
