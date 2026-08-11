@@ -6,7 +6,13 @@ same section flow, same hook style, same intro pattern, same internal-linking sc
 
 ---
 
-## Group 1 — Rajya Yojana template (15 articles) — SABSE ZYADA SAME
+## Group 1 — Rajya Yojana template (15 articles) — ✅ BATCH 1 COMPLETE (uniqueness pass done)
+
+> **Status (Batch 1 done):** Sab 15 articles ab ek dusre se unique hain — koi duplicate H2 heading nahi,
+> koi duplicate sentence nahi (disclaimers included), koi duplicate FAQ sawaal nahi, "… FAQ 2026" italic
+> caption pattern har file mein alag caption se replace, "Padosi Ko Mil Gaya…" H2 ab sirf variants mein,
+> hub-link anchors sab unique. Kuch bhi delete nahi hua — sirf replace. Facts/slugs/exports unchanged.
+> Build pass (next build).
 
 **Shared frame:** local `Fig()` helper (Image + figcaption card) · `InfoBox` · `SchemeTable` ·
 `ExternalLinkButton` · hero.webp with priority · H1 → intro paras → status-check steps →
@@ -170,7 +176,7 @@ Files (`components/articles/kisanguides/`):
 
 | Group | Template | Articles | Sameness |
 |---|---|---|---|
-| 1 | Rajya Yojana | 15 | Highest — same Fig/InfoBox/SchemeTable frame, hook, hub links |
+| 1 | Rajya Yojana | 15 | ✅ DONE — Batch 1 uniqueness pass complete (no dup H2/FAQ/sentence/anchor) |
 | 2 | Hindi Yojana | 15 | High — FAQ_SCHEMA + Fig + short-answer box + `/articles/hi/` links |
 | 3 | Maandhan | 13 | High — 3-FAQ frame, pension flow |
 | 4 | Loan/Mandi/Pashupalan | 11 | High — FAQBlock + ArticleMeta frame |
