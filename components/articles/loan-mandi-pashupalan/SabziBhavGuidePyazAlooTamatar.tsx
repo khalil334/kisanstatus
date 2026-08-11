@@ -4,12 +4,12 @@ import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, Bott
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const RELATED = [
-  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav', emoji: '📊' },
+  { slug: 'mandi-bhav-today', title: 'Mandi Ka Taaza Bhav', emoji: '📊' },
   { slug: 'mandi-bhav-app-comparison', title: 'Mandi Bhav Apps Comparison', emoji: '📱' },
   { slug: 'gehu-ka-bhav-msp-vs-mandi', title: 'Gehu: MSP vs Mandi Bhav', emoji: '🌾' },
-  { slug: 'msp-list-2026-27', title: 'MSP List 2026-27', emoji: '📋' },
-  { slug: 'enam-registration-kaise-kare', title: 'eNAM Registration Guide', emoji: '💻' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply', emoji: '💳' },
+  { slug: 'msp-list-2026-27', title: 'MSP 2026-27 Ka Poora Chart', emoji: '📋' },
+  { slug: 'enam-registration-kaise-kare', title: 'eNAM Se Online Bikri Shuru Karein', emoji: '💻' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Se Sasta Karj', emoji: '💳' },
 ];
 
 const FAQS_DATA = [
@@ -93,7 +93,7 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
         </div>
 
         <DB>
-          <strong>TL;DR — seedha faisla:</strong>
+          <strong>Seedha Nichod:</strong>
           <ul className="list-disc pl-5 mt-2 space-y-1">
             <li>Pyaz-aloo-tamatar par <strong>MSP nahi hota</strong> — bhav pura demand-supply ka khel hai, timing hi hathiyar hai.</li>
             <li>Sirf <strong>rabi pyaz aur aloo store</strong> hote hain — tamatar mein hold ki strategy hai hi nahi, wahan planting ki timing hi game hai.</li>
@@ -123,8 +123,8 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
         <IB>
           Pehli baat note kar lo — pyaz, aloo, tamatar par <strong>MSP nahi hota</strong>. MSP sirf 23 notified
           crops par hai. Sabzi ka bhav pura demand-supply ka khel hai, isliye timing hi sab kuch hai. MSP wali
-          fasal ka hisaab samajhna ho toh <Link href="/articles/msp-list-2026-27" className="underline font-bold">MSP
-          List 2026-27</Link> dekho.
+          fasal ka hisaab samajhna ho toh <Link href="/articles/msp-list-2026-27" className="underline font-bold">MSP ka
+          poora rate chart</Link> dekho.
         </IB>
 
         <SH>🧅 Pyaz — Do Fasal, Ek Gap, Aur Wahi Kahani Har Saal</SH>
@@ -311,8 +311,8 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
           Kaunsa app sabse kaam ka hai — iska poora comparison{' '}
           <Link href="/articles/mandi-bhav-app-comparison" className="underline font-bold">Mandi Bhav Apps
           Guide</Link> mein hai. Aur agar aap eNAM ke through doosri mandiyon mein bechne ka rasta kholna chahte
-          ho toh <Link href="/articles/enam-registration-kaise-kare" className="underline font-bold">eNAM
-          Registration Guide</Link> dekho — registration ek baar ka kaam hai, option hamesha ke liye khul jaata hai.
+          ho toh <Link href="/articles/enam-registration-kaise-kare" className="underline font-bold">eNAM par
+          panjikaran ki step-by-step guide</Link> dekho — registration ek baar ka kaam hai, option hamesha ke liye khul jaata hai.
         </p>
 
         <SH>⚠️ 5 Galtiyan Jo Sabzi Kisan Ka Munafa Kha Jaati Hain</SH>
@@ -355,7 +355,7 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[
-          { href: '/articles', l: '📚 Sabhi Articles' },
+          { href: '/articles', l: '📚 Sabhi Guides' },
           { href: '/articles/category/mandi', l: '📂 Mandi Bhav Guides' },
         ]} />
         <Disclaimer />

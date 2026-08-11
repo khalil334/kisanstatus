@@ -4,12 +4,12 @@ import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, Bott
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const RELATED = [
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply', emoji: '💳' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Ka Online Process', emoji: '💳' },
   { slug: 'KisanRinKahaSeLe2026', title: 'Kisan Loan Kahan Se Le', emoji: '📚' },
-  { slug: 'dairy-farm-loan-without-collateral', title: 'Dairy Loan Bina Collateral', emoji: '🐄' },
-  { slug: 'sbi-dairy-loan-interest-rate', title: 'SBI Dairy Loan Interest Rate', emoji: '🏦' },
-  { slug: 'AgriStackKyaHai2026', title: 'AgriStack Kya Hai', emoji: '🆔' },
-  { slug: 'bihar-pashupalan-loan-yojana', title: 'Bihar Pashupalan Loan Yojana', emoji: '🐃' },
+  { slug: 'dairy-farm-loan-without-collateral', title: 'Bina Guarantee Dairy Loan', emoji: '🐄' },
+  { slug: 'sbi-dairy-loan-interest-rate', title: 'SBI Se Dairy Loan — Rate Guide', emoji: '🏦' },
+  { slug: 'AgriStackKyaHai2026', title: 'AgriStack Samjhein 2026', emoji: '🆔' },
+  { slug: 'bihar-pashupalan-loan-yojana', title: 'Bihar Mein Pashupalan Loan', emoji: '🐃' },
 ];
 
 const FAQS_DATA = [
@@ -93,7 +93,7 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
         </div>
 
         <DB>
-          <strong>TL;DR — seedha faisla:</strong>
+          <strong>Short Mein — apply karne se pehle:</strong>
           <ul className="list-disc pl-5 mt-2 space-y-1">
             <li>JanSamarth (jansamarth.in) sarkar ka <strong>free</strong> portal hai — KCC, Mudra, education/livelihood schemes ki eligibility ek jagah check hoti hai; loan bank hi deta hai.</li>
             <li>Apply se pehle 3 cheezein: <strong>Aadhaar-mobile link, Farmer ID (AgriStack), bank details + PAN</strong>. Inke bina file aage nahi badhti.</li>
@@ -309,8 +309,8 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           KCC ke rate, subvention aur limit ka poora ganit humne alag guides mein samjhaya hai —{' '}
           <Link href="/articles/KisanCreditCardOnlineApply2026" className="underline font-bold">KCC Online Apply</Link>{' '}
-          aur <Link href="/articles/sbi-dairy-loan-interest-rate" className="underline font-bold">SBI Dairy Loan
-          Interest Rate</Link> zaroor padho, taaki bank mein sahi sawaal pooch sako.
+          aur <Link href="/articles/sbi-dairy-loan-interest-rate" className="underline font-bold">SBI ke dairy loan
+          rates wali guide</Link> zaroor padho, taaki bank mein sahi sawaal pooch sako.
         </p>
 
         <WB>
@@ -342,8 +342,8 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[
-          { href: '/articles', l: '📚 Sabhi Articles' },
-          { href: '/articles/category/loan', l: '📂 Loan Guides' },
+          { href: '/articles', l: '📚 Aur Guides Padhein' },
+          { href: '/articles/category/loan', l: '📂 Karj Aur Loan Articles' },
         ]} />
         <Disclaimer />
       </div>
