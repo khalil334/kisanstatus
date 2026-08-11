@@ -537,7 +537,7 @@ export default function StateKisanYojanaHub() {
         }}
       />
       <section className="mb-8 not-prose">
-        <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">State-wise kisan yojana comparison FAQ 2026</p>
+        <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">Rajya-war yojana comparison — jo uljhanein sabse common hain</p>
         <div className="space-y-3">
           {FAQS_DATA.map(({ q, a }) => (
             <details
