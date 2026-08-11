@@ -501,7 +501,7 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
         }}
       />
       <section className="mb-8 not-prose">
-        <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">Krishak Unnati Yojana FAQ 2026</p>
+        <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">Krishak Unnati Yojana — jo sawaal har chaupal par uthte hain</p>
         <div className="space-y-3">
           {FAQS_DATA.map(({ q, a }) => (
             <details
@@ -532,7 +532,7 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
           <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
-          Ye article sirf madad ke liye hai. Final decision ke liye official portal ya krishi office se sampark karein.
+          Is lekh ka maqsad sirf rasta dikhana hai. Raqam ya patrata se juda koi bhi antim nirnay official portal aur apne RAEO se hi confirm karein.
         </p>
       </div>
 
