@@ -375,6 +375,31 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
     ogImage: '/images/articles/rajya-yojna/up-kisan-karj-rahat-list-2026/hero.webp',
     relatedPaths: ['/articles/PmKisanMasterGuide2026', '/articles/PmKisanPaymentFailedFix2026'],
   },
+  {
+    slug: 'ikhedut-portal-status-check-2026',
+    mainKeyword: 'ikhedut portal status check',
+    secondaryKeywords: [
+      'ikhedut arji status check',
+      'ikhedut portal yojana list 2026',
+      'ikhedut gujarat gov in login',
+      'tractor sahay yojana status gujarat',
+      'ikhedut subsidy status check',
+      'ikhedut arji number kaise nikale',
+    ],
+    title: 'iKhedut Portal Status Check 2026 — Arji Status',
+    description:
+      'iKhedut portal par arji status check karein, yojana list ki window dekhein aur reject hone ke 6 karan samjhein — subsidy ka stage-wise poora hisaab.',
+    ogTitle: 'iKhedut Portal Status Check — Arji Se Subsidy Tak',
+    component: 'IkhedutPortalStatusCheck2026',
+    state: 'Gujarat',
+    officialPortal: 'https://ikhedut.gujarat.gov.in',
+    status: 'live',
+    published: '2026-08-11T20:00:00+05:30',
+    modified: '2026-08-11T20:00:00+05:30',
+    readTime: '14 min read',
+    ogImage: '/images/articles/rajya-yojna/ikhedut-portal-status-check-2026/hero.webp',
+    relatedPaths: ['/articles/PmKisanMasterGuide2026', '/articles/PmKisanPaymentFailedFix2026'],
+  },
 ];
 
 export const LIVE_RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] =
