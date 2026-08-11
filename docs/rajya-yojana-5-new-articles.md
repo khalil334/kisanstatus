@@ -1,100 +1,48 @@
-# Rajya Yojana — 5 New Article Plan (Traffic Growth)
+components/articles/rajya-yojna
+read this and complete the article and push to GitHub.com/Khalil334/kisanstatus
+send card for token
+article:
+ UP Kisan Karj Rahat List 2026 (Uttar Pradesh)
+Slug: up-kisan-karj-rahat-list-2026 · Portal: upkisankarjrahat.upsdc.gov.in Primary keyword: up kisan karj rahat list
 
-**Repo:** github.com/khalil334/kisanstatus · **Folder:** `components/articles/rajya-yojana/`
-**Basis:** Existing 10 live articles cover Rajasthan, AP, MP, Maharashtra, Telangana, WB, Odisha, Chhattisgarh. Ye 5 articles un bade states ko cover karte hain jo abhi MISSING hain — Haryana, Bihar, Karnataka, Gujarat, UP — sab me kisan-scheme status-check searches bahut high hain aur competition mostly low-quality sarkari-result sites hain.
+PROMPT
+Tum ek UP ke sahkari samiti (co-operative society) ke purane karyakarta ho jisne karj rahat yojana ke time hazaro kisano ki list check ki hai aur shikayat (complaint) file ki hai. Awadhi/Purvanchali touch wala Hinglish — respectful, thoda dheema, "dekhiye bhaisaab" wala tone.
 
-> Note: Search volumes exact nahi diye — keywords real search patterns se liye gaye hain (web research), fabricated numbers nahi.
+ARTICLE: "UP Kisan Karj Rahat List 2026 — Karj Mafi Status Kaise Dekhe" — Hinglish, 2400+ words.
 
----
+FRAME (sirf isi article ka): **MYTH-CLEARING + ELIGIBILITY REALITY-CHECK frame.**
+Ye article pehle expectation set karta hai (karj mafi kiske liye thi, kitne ka loan, kab tak ka — ye scheme ke official criteria ke hisaab se, guess se nahi), phir list check karata hai, phir complaint route deta hai. Kyunki is keyword par aane wale 60% log actually eligible hi nahi hote — unko honest jawab dena hi is page ki USP hai.
+Headings **conversational address style** ("Chaliye pehle ye samajh lijiye ki list me naam kab aata hai") — baaki chaar se alag.
 
-## 1. Meri Fasal Mera Byora Status Check 2026 (Haryana)
+INTRO HOOK (unique): **Ek WhatsApp forward ka reality check** se shuru — "aapke gaon ke group me bhi wo message aaya hoga: 'sabka karz maaf, list check karo, link par click karo'. Ruk jaiye." Phir batao ki asli portal ek hi hai aur fake link se kya nuksan hota hai. Phir promise.
+Mandi (#1), flood story (#2), weather (#3), countdown (#4) — sabse alag. Fake-link warning is article ka signature opening hai.
 
-- **Suggested slug:** `meri-fasal-mera-byora-status-check-2026`
-- **State:** Haryana · **Portal:** fasal.haryana.gov.in
-- **Primary keyword:** `meri fasal mera byora status check`
-- **Secondary keywords:**
-  - meri fasal mera byora registration 2026
-  - fasal haryana gov in login
-  - meri fasal mera byora last date
-  - meri fasal mera byora payment status
-  - mfmb registration kaise kare
-  - meri fasal mera byora kharif 2026
-  - मेरी फसल मेरा ब्यौरा
-- **Angle:** Registration + status + MSP payment — seasonal spikes (Rabi/Kharif deadline ke time traffic explode hota hai). Dhaan seedha bijai ₹4500/acre + Mera Pani Meri Virasat ₹8000/acre subsections add karo.
+MUST-COVER SECTIONS:
+1. UP Kisan Karj Rahat Yojana asal me kya hai — kis category ke loan, kis cut-off date tak, kis limit tak (sirf official criteria; jo confirm nahi wo "official portal/GO par verify karein")
+2. **Kaun eligible hai aur kaun nahi** — honest list, aur "agar aapka loan private bank / gold loan / KCC renewal ke baad ka hai to..." wale reality checks
+3. Asli portal kaunsa hai — upkisankarjrahat.upsdc.gov.in — aur fake sites/APK ki pehchan (URL check karne ka 3-point method)
+4. **Karj Rahat list kaise dekhe** — step by step (district → bank → branch → kisan credit card / loan account number)
+5. Loan account number kahan milta hai — passbook, sanction letter, samiti record
+6. List me naam hai — aage kya hoga (bank me entry, NOC, statement kaise le)
+7. **Naam nahi hai to — complaint (shikayat) darj karne ka pura process** + complaint status check + realistic timeline
+8. Common reasons for exclusion — loan date criteria se bahar, account NPA classification, aadhaar-loan mismatch, ek se zyada account, bank data upload pending
+9. Karj mafi ke naam par thagi — kaise pehchane, kahan report karein (cyber crime + bank)
+10. PM-Kisan / KCC ke saath rishta — karj rahat milne se PM-Kisan par asar padta hai ya nahi (clear, honest answer)
+11. Aage kya — agar aap eligible nahi to konsi doosri UP/central scheme kaam aa sakti hai (sirf real schemes, links ke saath)
 
-## 2. Bihar Kisan Registration Status Check 2026 (DBT Agriculture)
+REAL EXAMPLES (3, source link ke saath):
+- UP Kisan Karj Rahat Yojana ka official portal/GO page link with its stated criteria
+- PM-Kisan UP beneficiary scale ka official data point (pmkisan.gov.in ya PIB link)
+- Ek real fraud/fake-link advisory (police cyber cell, PIB Fact Check, ya credible news link)
 
-- **Suggested slug:** `bihar-kisan-registration-status-check-2026`
-- **State:** Bihar · **Portal:** dbtagriculture.bihar.gov.in
-- **Primary keyword:** `dbt agriculture bihar status check`
-- **Secondary keywords:**
-  - bihar kisan registration status
-  - dbtagriculture bihar gov in registration
-  - kisan panjikaran number kaise nikale
-  - krishi input anudan status bihar
-  - bihar kisan registration number search
-  - diesel anudan bihar status
-  - बिहार किसान पंजीकरण
-- **Angle:** Bihar PM-Kisan ka sabse bada beneficiary-base states me hai; DBT portal registration har scheme (diesel anudan, input anudan, beej anudan) ka gateway hai — evergreen + multi-scheme internal linking.
+FAQ STYLE (sirf isi article ka): **"Sach ya Jhooth" (True/False) rapid-fire quiz format** — 10 statements, har ek par "Sach ✔" ya "Jhooth ✘" + 1-2 line explanation. Baaki chaar FAQ styles se completely alag.
 
-## 3. Parihara Payment Status Check 2026 — Village Wise (Karnataka)
+INTERNAL LINK STYLE (sirf isi article ka): **do-do links ke chhote inline "pair" clusters**, 2 jagah article ke beech me (ek eligibility section ke baad, ek complaint section ke baad), plus 1 link intro me. Total 5. PM Kisan Master Guide + Payment Failed Fix include.
 
-- **Suggested slug:** `parihara-payment-status-check-2026`
-- **State:** Karnataka · **Portal:** parihara.karnataka.gov.in / landrecords.karnataka.gov.in
-- **Primary keyword:** `parihara payment status check`
-- **Secondary keywords:**
-  - parihara payment village wise
-  - bele parihara list 2026
-  - parihara payment status by aadhaar
-  - parihara karnataka gov in
-  - bele hani parihara status
-  - bhoomi parihara report
-  - ಪರಿಹಾರ ಹಣ ಸ್ಟೇಟಸ್
-- **Angle:** Drought/flood relief — calamity season me massive village-wise search spikes. Aadhaar-based + village-wise dono methods cover karo. Competition weak hai.
+METADATA:
+- Title: "UP Kisan Karj Rahat List 2026" + "Karj Mafi Status" (60 char cap)
+- Meta description: list check + complaint — dono intent, 158 char ke andar
+- JSON-LD: **FAQPage** + **GovernmentService**
 
-## 4. iKhedut Portal Status Check 2026 (Gujarat)
-
-- **Suggested slug:** `ikhedut-portal-status-check-2026`
-- **State:** Gujarat · **Portal:** ikhedut.gujarat.gov.in
-- **Primary keyword:** `ikhedut portal status check`
-- **Secondary keywords:**
-  - ikhedut arji status
-  - ikhedut portal registration 2026
-  - ikhedut yojana list 2026
-  - i khedut subsidy status
-  - ikhedut gujarat gov in application status
-  - tractor sahay yojana gujarat status
-  - આઈ ખેડૂત પોર્ટલ
-- **Angle:** 100+ subsidy schemes ka single portal (tractor, drip, tar fencing) — har scheme window khulne par traffic aata hai. Application-status types (pending/approved/payment released) explain karo.
-
-## 5. UP Kisan Karj Rahat List 2026 (Uttar Pradesh)
-
-- **Suggested slug:** `up-kisan-karj-rahat-list-2026`
-- **State:** Uttar Pradesh · **Portal:** upkisankarjrahat.upsdc.gov.in
-- **Primary keyword:** `up kisan karj rahat list`
-- **Secondary keywords:**
-  - kisan karj mafi list 2026 up
-  - up kisan karj rahat yojana status
-  - kisan karj mafi yojana list kaise dekhe
-  - upkisankarjrahat upsdc gov in
-  - kisan karj mafi complaint status
-  - किसान कर्ज माफी लिस्ट यूपी
-- **Angle:** UP = PM-Kisan ka sabse bada state (2.5 crore+ beneficiaries) — abhi site par UP-specific ek bhi article nahi. Karj-mafi searches evergreen hain; PM-Kisan articles se strong internal-link juice milega.
-
----
-
-## Priority Order (traffic potential ke hisaab se)
-
-1. **Meri Fasal Mera Byora** — seasonal spike + registration mandatory for MSP
-2. **UP Kisan Karj Rahat** — biggest state, zero UP coverage abhi
-3. **Parihara Karnataka** — weak competition, village-wise long-tail
-4. **Bihar DBT Agriculture** — evergreen gateway keyword
-5. **iKhedut Gujarat** — scheme-window spikes
-
-## Har article me (existing pattern follow karo)
-
-- `lib/rajya-yojana-data.ts` me entry (slug, mainKeyword, secondaryKeywords, officialPortal)
-- Component: `components/articles/rajya-yojana/<Name>.tsx`
-- Hero + 4-5 webp images: `public/images/articles/rajya-yojna/<slug>/`
-- Related links: PM Kisan Master Guide + Payment Failed Fix
-- FAQ section (status check, helpline, documents)
+2-4 typo (scheme naam / portal / number me NAHI) + `<!-- typos: ... -->` list. Zero fake amount, zero fake date, zero fake list link.
+Uniqueness Matrix (quick check — koi bhi cell repeat na ho)
