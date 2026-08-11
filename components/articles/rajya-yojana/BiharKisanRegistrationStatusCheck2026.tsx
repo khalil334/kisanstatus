@@ -50,7 +50,7 @@ function Ext({ href, children }: { href: string; children: React.ReactNode }) {
 const MYTHS: { myth: string; sach: string }[] = [
   {
     myth: 'Ek baar registration ho gaya to har scheme ka paisa apne aap aa jaayega.',
-    sach: 'Registration sirf chaabi hai. Har scheme (diesel anudan, input anudan, beej) ke liye uski window me alag se apply karna padta hai — registration number wahi rehta hai, arji nayi hoti hai.',
+    sach: 'Panjikaran sirf chaabi hai. Har scheme (diesel anudan, input anudan, beej) ke liye uski window me alag se apply karna padta hai — registration number wahi rehta hai, arji nayi hoti hai.',
   },
   {
     myth: 'DBT registration ke liye CSC wale ko 300-500 rupay dena hi padta hai.',
@@ -62,7 +62,7 @@ const MYTHS: { myth: string; sach: string }[] = [
   },
   {
     myth: 'Registration number kho gaya to naya registration karana padega.',
-    sach: 'Bilkul nahi — duplicate registration to sabse badi galti hai, isse dono entry atak jaati hain. Purana number Aadhaar se search karke nikala ja sakta hai.',
+    sach: 'Bilkul nahi — duplicate panjikaran to sabse badi galti hai, isse dono entry atak jaati hain. Purana number Aadhaar se search karke nikala ja sakta hai.',
   },
   {
     myth: 'PM-Kisan ka paisa bhi DBT Bihar portal se hi aata hai.',
@@ -122,7 +122,7 @@ export default function BiharKisanRegistrationStatusCheck2026({
       </p>
 
       <p>
-        Isliye aaj hum registration number ki poori kundli kholenge — banwana, kho jaaye to
+        Isliye aaj hum is number ki poori kundli kholenge — banwana, kho jaaye to
         nikaalna, status check karna, aur us ek number se judi har scheme (diesel anudan,
         input anudan, beej, PM-Kisan, KCC) ka hisaab. Ek number, saari scheme — yahi Bihar
         ke DBT system ka asli formula hai.
@@ -150,7 +150,7 @@ export default function BiharKisanRegistrationStatusCheck2026({
         yahi number maangta hai. Number nahi to form aage badhta hi nahi. Isliye jo kisan
         soch raha hai ki &quot;jab zaroorat padegi tab register kar lenge&quot;, wo galti
         kar raha hai — baadh ya sukhad ke baad window sirf 2 hafte ki hoti hai, aur us waqt
-        naya registration karane me hi din nikal jaate hain. Number pehle se tayyar rakhiye.
+        naya panjikaran karane me hi din nikal jaate hain. Ye number pehle se tayyar rakhiye.
       </p>
 
       <h2>Registration Ke 3 Type — Raiyat, Gair-Raiyat, Dono. Aap Kaun Se Ho?</h2>
@@ -192,7 +192,7 @@ export default function BiharKisanRegistrationStatusCheck2026({
       <ol>
         <li>
           <Ext href="https://dbtagriculture.bihar.gov.in">dbtagriculture.bihar.gov.in</Ext>{' '}
-          kholiye aur panjikaran (Registration) section me naya registration chuniye.
+          kholiye aur panjikaran (Registration) section me nayi entry chuniye.
         </li>
         <li>
           <strong>Aadhaar authentication</strong> — Aadhaar number aur naam daaliye. System
@@ -225,7 +225,7 @@ export default function BiharKisanRegistrationStatusCheck2026({
 
       <ul>
         <li>
-          <strong>Registration ka record (panjikaran vivaran)</strong> — aapka registration
+          <strong>Panjikaran ka poora record (vivaran)</strong> — aapka registration
           hua hai ya nahi, kis type ka hai, kaunsa bank khata juda hai. Ye kisan panjikaran
           / vivaran wale section me registration number ya Aadhaar daal kar dikhta hai.
         </li>
@@ -238,7 +238,7 @@ export default function BiharKisanRegistrationStatusCheck2026({
       </ul>
 
       <p>
-        Matlab saaf hai — registration number ek hi hai, par har scheme ke aavedan ki apni
+        Matlab saaf hai — panjikaran sankhya ek hi hai, par har scheme ke aavedan ki apni
         ID hoti hai. Diesel anudan ka claim dala to uski receipt par likhi application ID
         sambhal ke rakhiye; status usi se niklega.
       </p>
@@ -253,7 +253,7 @@ export default function BiharKisanRegistrationStatusCheck2026({
           daaliye — aapki registration detail nikal aayegi, number samet.
         </li>
         <li>
-          <strong>Purane SMS se:</strong> registration ke waqt jo SMS aaya tha usme number
+          <strong>Purane SMS se:</strong> panjikaran ke waqt jo SMS aaya tha usme number
           hota hai. Phone ka message box ek baar khangaliye.
         </li>
         <li>
@@ -264,7 +264,7 @@ export default function BiharKisanRegistrationStatusCheck2026({
       </ol>
 
       <p>
-        Aur ek baar phir — number nahi mil raha to naya registration <strong>bilkul mat</strong>{' '}
+        Aur ek baar phir — number nahi mil raha to nayi entry <strong>bilkul mat</strong>{' '}
         banaiye. Duplicate entry pakdi jaati hai aur dono block ho jaati hain; phir wahi
         prakhand office ke chakkar.
       </p>
@@ -278,7 +278,7 @@ export default function BiharKisanRegistrationStatusCheck2026({
       />
 
       <p>
-        Ab wahi hub-and-spoke wali baat. Beech me aapka registration number, aur uske
+        Ab wahi hub-and-spoke wali baat. Beech me aapki panjikaran sankhya, aur uske
         chaaro taraf ye scheme:
       </p>
 
