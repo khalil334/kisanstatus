@@ -5,10 +5,10 @@ import type { ArticleMeta } from '@/lib/articles-data';
 
 const RELATED = [
   { slug: 'bakri-palan-yojana-nlm-subsidy', title: 'Bakri Palan NLM Subsidy', emoji: '🐐' },
-  { slug: 'dairy-farm-loan-without-collateral', title: 'Dairy Loan Bina Collateral', emoji: '🐄' },
-  { slug: 'bihar-pashupalan-loan-yojana', title: 'Bihar Pashupalan Loan Yojana', emoji: '🐃' },
-  { slug: 'jansamarth-portal-loan-apply', title: 'JanSamarth Portal Apply', emoji: '💻' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply', emoji: '💳' },
+  { slug: 'dairy-farm-loan-without-collateral', title: 'Collateral-Free Dairy Loan Guide', emoji: '🐄' },
+  { slug: 'bihar-pashupalan-loan-yojana', title: 'Bihar Pashu Loan Scheme', emoji: '🐃' },
+  { slug: 'jansamarth-portal-loan-apply', title: 'JanSamarth Se Loan Kaise Le', emoji: '💻' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC 2026 Application', emoji: '💳' },
   { slug: 'pm-matsya-sampada-yojana-fish-farming', title: 'PM Matsya Sampada Yojana', emoji: '🐟' },
 ];
 
@@ -93,7 +93,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
         </div>
 
         <DB>
-          <strong>TL;DR — seedha faisla:</strong>
+          <strong>Ek Nazar Mein — poora hisaab:</strong>
           <ul className="list-disc pl-5 mt-2 space-y-1">
             <li>NLM-EDP mein poultry project par <strong>50% capital subsidy, ₹25 lakh tak</strong> — parent farm, hatchery, brooder unit.</li>
             <li>Subsidy <strong>back-ended</strong> hai: pehle apna margin + bank loan, subsidy verification ke baad. Advance nahi milti.</li>
@@ -282,8 +282,8 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           Doosra bada kharcha working capital hai — har batch ke liye chooza, feed, dawai ka paisa chahiye. Iske
           liye KCC (Animal Husbandry) sabse sasta rasta hai. Capital cost NLM + term loan se, chalane ka kharcha
           KCC se — yeh combination yahan bhi wahi hai jo har livestock project mein kaam karta hai. Working capital
-          ke options ke liye <Link href="/articles/KisanCreditCardOnlineApply2026" className="underline font-bold">KCC
-          Online Apply</Link> guide dekho.
+          ke options ke liye <Link href="/articles/KisanCreditCardOnlineApply2026" className="underline font-bold">KCC banwane
+          ke online process</Link> wali guide dekho.
         </p>
 
         <Image
@@ -385,8 +385,8 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[
-          { href: '/articles', l: '📚 Sabhi Articles' },
-          { href: '/articles/category/pashupalan', l: '📂 Pashupalan Guides' },
+          { href: '/articles', l: '📚 Baaki Articles Dekhein' },
+          { href: '/articles/category/pashupalan', l: '📂 Pashu Palan Ke Sab Articles' },
         ]} />
         <Disclaimer />
       </div>

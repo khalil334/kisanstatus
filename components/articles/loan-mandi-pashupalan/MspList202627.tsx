@@ -5,11 +5,11 @@ import type { ArticleMeta } from '@/lib/articles-data';
 
 const RELATED = [
   { slug: 'gehu-ka-bhav-msp-vs-mandi', title: 'Gehu Ka Bhav — MSP vs Mandi', emoji: '🌾' },
-  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav', emoji: '📊' },
+  { slug: 'mandi-bhav-today', title: 'Daily Mandi Bhav Dekhein', emoji: '📊' },
   { slug: 'enam-registration-kaise-kare', title: 'eNAM Registration', emoji: '🏪' },
-  { slug: 'mandi-bhav-app-comparison', title: 'Best Mandi Bhav Apps', emoji: '📱' },
-  { slug: 'sabzi-bhav-guide-pyaz-aloo-tamatar', title: 'Sabzi Bhav Guide', emoji: '🧅' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply', emoji: '💳' },
+  { slug: 'mandi-bhav-app-comparison', title: 'Kaunsa Mandi App Sahi', emoji: '📱' },
+  { slug: 'sabzi-bhav-guide-pyaz-aloo-tamatar', title: 'Sabzi Ke Rate Kaise Samjhein', emoji: '🧅' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Kaise Banega', emoji: '💳' },
 ];
 
 const FAQS_DATA = [
@@ -530,9 +530,9 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[
-          { href: '/articles/mandi-bhav-today', l: '📊 Aaj Ka Mandi Bhav' },
+          { href: '/articles/mandi-bhav-today', l: '📊 Mandi Ke Aaj Ke Rates' },
           { href: '/articles/gehu-ka-bhav-msp-vs-mandi', l: '🌾 Gehu MSP vs Mandi' },
-          { href: '/articles/category/mandi', l: '📂 Market Rates' },
+          { href: '/articles/category/mandi', l: '📂 Mandi-Bhav Section' },
         ]} />
         <Disclaimer />
       </div>

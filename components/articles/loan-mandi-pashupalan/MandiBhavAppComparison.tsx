@@ -4,12 +4,12 @@ import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, Bott
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const RELATED = [
-  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav', emoji: '📊' },
-  { slug: 'enam-registration-kaise-kare', title: 'eNAM Registration Guide', emoji: '🖥️' },
-  { slug: 'msp-list-2026-27', title: 'MSP List 2026-27', emoji: '📋' },
+  { slug: 'mandi-bhav-today', title: 'Aaj Ke Mandi Rates', emoji: '📊' },
+  { slug: 'enam-registration-kaise-kare', title: 'eNAM Par Panjikaran Steps', emoji: '🖥️' },
+  { slug: 'msp-list-2026-27', title: 'MSP Rate List Dekhein', emoji: '📋' },
   { slug: 'gehu-ka-bhav-msp-vs-mandi', title: 'Gehu Ka Bhav: MSP vs Mandi', emoji: '🌾' },
-  { slug: 'sabzi-bhav-guide-pyaz-aloo-tamatar', title: 'Sabzi Bhav Guide', emoji: '🥔' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply', emoji: '💳' },
+  { slug: 'sabzi-bhav-guide-pyaz-aloo-tamatar', title: 'Pyaz-Aloo-Tamatar Bhav Guide', emoji: '🥔' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'Kisan Credit Card Guide', emoji: '💳' },
 ];
 
 const FAQS_DATA = [
@@ -93,7 +93,7 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
         </div>
 
         <DB>
-          <strong>TL;DR — seedha faisla:</strong>
+          <strong>Jaldi Mein Hain? Ye 3 Baatein:</strong>
           <ul className="list-disc pl-5 mt-2 space-y-1">
             <li>Phone mein sirf <strong>2 apps</strong> chahiye: ek sarkari (eNAM app ya AgMarknet) + ek jo aapki local mandiyan cover kare. Baaki uninstall.</li>
             <li>Sab apps ka rate ek hi jagah se aata hai — <strong>sarkari mandi records</strong>. Accuracy ka sawaal hi galat hai; sawaal speed aur coverage ka hai.</li>
@@ -294,7 +294,7 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
           Aur bhav dekhne ka tareeka bhi seekho — sirf aaj ka number mat dekho. Hafte bhar ka trend dekho (rate chadh
           raha hai ya gir raha hai), aavak dekho (aavak badhegi toh rate dabega), aur apne kharche ka ganit saath
           rakho. Kab bechna hai iska faisla in teeno se milkar hota hai — is par humne alag guides likhi hain:{' '}
-          <Link href="/articles/gehu-ka-bhav-msp-vs-mandi" className="underline font-bold">Gehu: MSP vs Mandi</Link>{' '}
+          <Link href="/articles/gehu-ka-bhav-msp-vs-mandi" className="underline font-bold">gehu bechne ka MSP-vs-mandi hisaab</Link>{' '}
           aur <Link href="/articles/sabzi-bhav-guide-pyaz-aloo-tamatar" className="underline font-bold">Pyaz-Aloo-Tamatar
           Bhav Guide</Link>.
         </p>
@@ -357,8 +357,8 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[
-          { href: '/articles', l: '📚 Sabhi Articles' },
-          { href: '/articles/category/mandi', l: '📂 Mandi Guides' },
+          { href: '/articles', l: '📚 Sab Guides Ek Jagah' },
+          { href: '/articles/category/mandi', l: '📂 Mandi Ki Sab Guides' },
         ]} />
         <Disclaimer />
       </div>

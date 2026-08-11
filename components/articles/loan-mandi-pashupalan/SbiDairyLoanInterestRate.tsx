@@ -4,12 +4,12 @@ import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, Bott
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const RELATED = [
-  { slug: 'dairy-farm-loan-without-collateral', title: 'Dairy Loan Bina Collateral', emoji: '🐄' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply', emoji: '💳' },
-  { slug: 'bihar-pashupalan-loan-yojana', title: 'Bihar Pashupalan Loan Yojana', emoji: '🐃' },
-  { slug: 'rashtriya-gokul-mission-subsidy', title: 'Rashtriya Gokul Mission', emoji: '🐮' },
-  { slug: 'jansamarth-portal-loan-apply', title: 'JanSamarth Portal Apply', emoji: '💻' },
-  { slug: 'KisanRinKahaSeLe2026', title: 'Kisan Loan Kahan Se Le', emoji: '📚' },
+  { slug: 'dairy-farm-loan-without-collateral', title: 'Zamanat Ke Bina Dairy Loan', emoji: '🐄' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Banane Ka Tarika', emoji: '💳' },
+  { slug: 'bihar-pashupalan-loan-yojana', title: 'Pashupalan Loan (Bihar)', emoji: '🐃' },
+  { slug: 'rashtriya-gokul-mission-subsidy', title: 'Gokul Mission Subsidy Guide', emoji: '🐮' },
+  { slug: 'jansamarth-portal-loan-apply', title: 'JanSamarth Loan Application Guide', emoji: '💻' },
+  { slug: 'KisanRinKahaSeLe2026', title: 'Kisan Rin Ke Sab Options', emoji: '📚' },
 ];
 
 const FAQS_DATA = [
@@ -97,7 +97,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
         </div>
 
         <DB>
-          <strong>TL;DR — seedha faisla:</strong>
+          <strong>Turant Jawab — rate aur EMI:</strong>
           <ul className="list-disc pl-5 mt-2 space-y-1">
             <li>SBI ke paas &ldquo;dairy loan&rdquo; naam ka fixed-rate product nahi hai — rate = <strong>MCLR + spread</strong>, branch aur profile ke hisaab se banta hai.</li>
             <li>Roz ka kharcha <strong>KCC (Animal Husbandry)</strong> se — subvention + prompt repayment se effective rate ~4% tak. Pashu/shed kharid <strong>term loan</strong> se.</li>
@@ -433,7 +433,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
             Structure yeh rakho: pashu aur shed ke liye <strong>term loan</strong>, roz ke kharch ke liye{' '}
-            <Link href="/articles/KisanCreditCardOnlineApply2026" className="underline font-bold">KCC</Link>. Bina
+            <Link href="/articles/KisanCreditCardOnlineApply2026" className="underline font-bold">Kisan Credit Card</Link>. Bina
             zameen wale raaste dekhne hain toh{' '}
             <Link href="/articles/dairy-farm-loan-without-collateral" className="underline font-bold">
               bina collateral dairy loan
@@ -467,7 +467,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
         <BottomNav extraLinks={[
           { href: '/articles/dairy-farm-loan-without-collateral', l: '🐄 Dairy Loan Bina Collateral' },
           { href: '/articles/KisanCreditCardOnlineApply2026', l: '💳 KCC Online Apply' },
-          { href: '/articles/category/loan', l: '📂 Loan Guides' },
+          { href: '/articles/category/loan', l: '📂 Loan Ki Aur Jaankari' },
         ]} />
         <Disclaimer />
       </div>

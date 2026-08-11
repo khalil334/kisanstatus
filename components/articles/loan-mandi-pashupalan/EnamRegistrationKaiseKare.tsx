@@ -7,7 +7,7 @@ const RELATED = [
   { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav', emoji: '📊' },
   { slug: 'msp-list-2026-27', title: 'MSP List 2026-27', emoji: '📋' },
   { slug: 'mandi-bhav-app-comparison', title: 'Best Mandi Bhav Apps', emoji: '📱' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply', emoji: '💳' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'Kisan Credit Card Banwayein', emoji: '💳' },
   { slug: 'AgriStackKyaHai2026', title: 'AgriStack Kya Hai', emoji: '🆔' },
   { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide', emoji: '📚' },
 ];
@@ -93,7 +93,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
         </div>
 
         <DB>
-          <strong>TL;DR — 30 second mein:</strong>
+          <strong>Nichod — padhne se pehle:</strong>
           <ul className="list-disc pl-5 mt-2 space-y-1">
             <li>eNAM registration <strong>bilkul free</strong> — enam.gov.in par ya mandi ke help desk par; documents sirf 3 (Aadhaar, bank passbook, mobile).</li>
             <li>Fasal apni hi mandi le jaani hai — sirf <strong>boli online</strong> hoti hai; zyada buyers, behtar rate, payment seedha bank mein.</li>
