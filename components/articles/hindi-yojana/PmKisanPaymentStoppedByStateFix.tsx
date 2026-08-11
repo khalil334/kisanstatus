@@ -258,20 +258,20 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
 
       <div className="my-8 p-6 bg-gradient-to-r from-green-800 to-green-600 rounded-2xl text-white text-center">
         <p className="text-2xl mb-2">📆</p>
-        <p className="font-black text-lg mb-1">Kist Ruki Hai? Pata Karo Kyun</p>
-        <p className="text-green-100 text-sm mb-4">eKYC, bank seeding, land seeding check karo — 4 sawaal mein exact reason.</p>
+        <p className="font-black text-lg mb-1">State Ne Payment Roka? Reason Dhundo</p>
+        <p className="text-green-100 text-sm mb-4">Char quick jaanch — eKYC, seeding, land record aur list mein naam.</p>
         <div className="flex flex-wrap justify-center gap-2.5">
           <Link
             href="/calculator/installment-tracker"
             className="inline-flex items-center gap-2 bg-white text-green-800 font-black px-6 py-3 rounded-xl text-sm hover:bg-green-50 transition-colors"
           >
-            📆 Kist Tracker Kholo →
+            📆 Tracker mein reason dhundo →
           </Link>
           <Link
             href="/calculator"
             className="inline-flex items-center gap-2 bg-white/15 border border-white/30 text-white font-bold px-6 py-3 rounded-xl text-sm hover:bg-white/25 transition-colors"
           >
-            🧮 Sab Utilities Dekho
+            🧮 Sabhi tools browse karo
           </Link>
         </div>
       </div>
@@ -400,7 +400,7 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
         <div className="p-4 flex flex-col sm:flex-row items-start sm:items-center gap-3 justify-between">
           <div>
             <p className="font-bold text-[var(--color-text)] text-sm">PM Kisan Portal — Know Your Status</p>
-            <p className="text-xs text-[var(--color-text-muted)] mt-0.5">Government of India — pmkisan.gov.in</p>
+            <p className="text-xs text-[var(--color-text-muted)] mt-0.5">pmkisan.gov.in · भारत सरकार</p>
           </div>
           <a
             href="https://pmkisan.gov.in"
@@ -480,7 +480,7 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
         <ul className="list-disc pl-5 space-y-1.5 text-sm">
           <li><Link href="/articles/PmKisanCorrectionForm2026">📝 Correction Form Guide</Link></li>
           <li><Link href="/articles/hi/helpline-shikayat">📞 हेल्पलाइन और शिकायत</Link></li>
-          <li><Link href="/articles/hi/npci-aadhaar-seeding">🏦 NPCI आधार सीडिंग</Link></li>
+          <li><Link href="/articles/hi/npci-aadhaar-seeding">🏦 बैंक में आधार सीडिंग कैसे कराएं</Link></li>
           <li><Link href="/articles/PmKisanStateNodalOfficerList">🏛️ State Nodal Officer List</Link></li>
         </ul>
       </div>

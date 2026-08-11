@@ -496,7 +496,7 @@ export default function TractorSubsidy2027StateWiseList({ article }: { article: 
           <li><Link href="/articles/KisanTractorLoan2026">🚜 Kisan Tractor Loan Guide</Link></li>
           <li><Link href="/articles/custom-hiring-centre-chc-portal">🔧 CHC Portal — किराये पर मशीन</Link></li>
           <li><Link href="/articles/KisanRinKahaSeLe2026">🏦 किसान ऋण कहां से लें</Link></li>
-          <li><Link href="/articles/hi/kcc-limit-kaise-badhaye">💳 KCC लिमिट कैसे बढ़ाएं</Link></li>
+          <li><Link href="/articles/hi/kcc-limit-kaise-badhaye">💳 KCC की limit बढ़ाने का तरीका</Link></li>
         </ul>
       </div>
     </>

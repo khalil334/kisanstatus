@@ -44,7 +44,16 @@ Files (`components/articles/rajya-yojana/`):
 
 ---
 
-## Group 2 — Hindi Yojana template (15 articles) — SAME FRAME
+## Group 2 — Hindi Yojana template (15 articles) — ✅ BATCH 2 COMPLETE (uniqueness pass done)
+
+> **Status (Batch 2 done):** Sab 15 articles ke internal-link anchors ab unique hain — koi bhi anchor
+> text do files mein repeat nahi hota ("PM Kisan Master Guide", "eKYC Online Guide", "Sab Utilities
+> Dekho", "Kist Tracker Kholo", "इस page पर समझाया है" jaise repeated anchors har file mein alag
+> wording se replace). Repeated CTA-box copy ("Kist Ruki Hai? Pata Karo Kyun" + subtitle, 5 files)
+> ab har file mein unique. Repeated portal-card caption ("Government of India — pmkisan.gov.in",
+> 6 files) har file mein alag. Hooks, H2 headings, FAQ sawaal aur figcaptions pehle se hi unique thay
+> (verified — 0 duplicates). Kuch bhi delete nahi hua — sirf replace. Facts/slugs/URLs/exports
+> unchanged. Build pass (next build).
 
 **Shared frame:** `FAQ_SCHEMA` JSON-LD script tag sabse upar · local `Fig()`/`Figure` helper ·
 green "छोटा जवाब / एक line में" short-answer box · Devanagari Hindi body ·
@@ -177,7 +186,7 @@ Files (`components/articles/kisanguides/`):
 | Group | Template | Articles | Sameness |
 |---|---|---|---|
 | 1 | Rajya Yojana | 15 | ✅ DONE — Batch 1 uniqueness pass complete (no dup H2/FAQ/sentence/anchor) |
-| 2 | Hindi Yojana | 15 | High — FAQ_SCHEMA + Fig + short-answer box + `/articles/hi/` links |
+| 2 | Hindi Yojana | 15 | ✅ DONE — Batch 2 uniqueness pass complete (unique anchors/CTA/captions, no dup H2/FAQ/hook) |
 | 3 | Maandhan | 13 | High — 3-FAQ frame, pension flow |
 | 4 | Loan/Mandi/Pashupalan | 11 | High — FAQBlock + ArticleMeta frame |
 | 5 | Core PM-Kisan | 27 | Medium — older 2-FAQ skeleton |

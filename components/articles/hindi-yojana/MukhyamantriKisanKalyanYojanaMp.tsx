@@ -470,10 +470,10 @@ export default function MukhyamantriKisanKalyanYojanaMp({ article }: { article: 
             <Link href="/articles/hi/namo-shetkari-yojana">🌾 नमो शेतकरी योजना Maharashtra</Link>
           </li>
           <li>
-            <Link href="/articles/PmKisanMasterGuide2026">📚 PM Kisan Master Guide</Link>
+            <Link href="/articles/PmKisanMasterGuide2026">📚 योजना की master guide (केंद्र)</Link>
           </li>
           <li>
-            <Link href="/articles/PmKisanEkycOnline2026">🔐 eKYC Online Guide</Link>
+            <Link href="/articles/PmKisanEkycOnline2026">🔐 eKYC online करने की विधि</Link>
           </li>
           <li>
             <Link href="/articles/PmKisanBeneficiaryList2026">📋 Beneficiary List Guide</Link>

@@ -51,9 +51,9 @@ const FAQS = [
 
 const RELATED = [
   { slug: 'hi/status-check-mobile-se', title: 'मोबाइल नंबर से स्टेटस चेक', emoji: '📱' },
-  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Online Guide', emoji: '🔐' },
+  { slug: 'PmKisanEkycOnline2026', title: 'eKYC पूरी करने की guide', emoji: '🔐' },
   { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List Guide', emoji: '📋' },
-  { slug: 'hi/npci-aadhaar-seeding', title: 'NPCI आधार सीडिंग', emoji: '🏦' },
+  { slug: 'hi/npci-aadhaar-seeding', title: 'आधार-DBT seeding guide', emoji: '🏦' },
 ];
 
 const FAQ_SCHEMA = {
@@ -277,7 +277,7 @@ export default function PmKisan25viKistKabAayegi({ article }: { article: HindiAr
           <div>
             <p className="font-bold text-[var(--color-text)] text-sm">PM Kisan Portal — Farmers Corner</p>
             <p className="text-xs text-[var(--color-text-muted)] mt-0.5">
-              Government of India — pmkisan.gov.in
+              भारत सरकार का आधिकारिक portal — pmkisan.gov.in
             </p>
           </div>
           <a

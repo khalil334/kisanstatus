@@ -423,7 +423,7 @@ export default function GehuKaRateAajMspVsMandiBhav({ article }: { article: Hind
             href="/calculator"
             className="inline-flex items-center gap-2 bg-white/15 border border-white/30 text-white font-bold px-6 py-3 rounded-xl text-sm hover:bg-white/25 transition-colors focus:outline-none focus:ring-2 focus:ring-white"
           >
-            🧮 Sab Utilities Dekho
+            🧮 सारे किसान tools एक जगह
           </Link>
         </div>
       </div>
@@ -489,13 +489,13 @@ export default function GehuKaRateAajMspVsMandiBhav({ article }: { article: Hind
             <Link href="/articles/mandi-bhav-today">📈 Mandi Bhav Today</Link>
           </li>
           <li>
-            <Link href="/articles/hi/npci-aadhaar-seeding">🏦 NPCI आधार सीडिंग</Link>
+            <Link href="/articles/hi/npci-aadhaar-seeding">🏦 आधार सीडिंग और DBT की guide</Link>
           </li>
           <li>
-            <Link href="/articles/hi/kcc-limit-kaise-badhaye">💳 KCC लिमिट कैसे बढ़ाएं</Link>
+            <Link href="/articles/hi/kcc-limit-kaise-badhaye">💳 KCC limit ₹5 लाख तक ले जाने का रास्ता</Link>
           </li>
           <li>
-            <Link href="/articles/KisanRinKahaSeLe2026">🏦 Kisan Rin — कहां से लें</Link>
+            <Link href="/articles/KisanRinKahaSeLe2026">🏦 खेती के loan के सब विकल्प</Link>
           </li>
         </ul>
       </div>
