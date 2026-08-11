@@ -433,7 +433,7 @@ export default function KisanKarjMafiList2027({ article }: { article: HindiArtic
       </p>
       <ol className="my-4 pl-5 space-y-2 list-decimal">
         <li className="text-sm text-[var(--color-text)] leading-relaxed pl-1">
-          कर्ज महंगे साहूकार से है तो पहले उसे <Link href="/articles/KisanCreditCardOnlineApply2026">KCC</Link>{' '}
+          कर्ज महंगे साहूकार से है तो पहले उसे <Link href="/articles/KisanCreditCardOnlineApply2026">Kisan Credit Card</Link>{' '}
           की तरह के सस्ते रास्ते में shift करने की सोचें — 4% तक effective interest वाला crop loan हर हाल में
           बेहतर है।
         </li>
@@ -531,21 +531,21 @@ export default function KisanKarjMafiList2027({ article }: { article: HindiArtic
             className="flex items-center gap-3 p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors text-sm font-medium text-[var(--color-text)] no-underline"
           >
             <span className="text-xl shrink-0">💳</span>
-            <span>KCC Online Apply</span>
+            <span>KCC बनवाने का online तरीका</span>
           </Link>
           <Link
             href="/articles/KisanTractorLoan2026"
             className="flex items-center gap-3 p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors text-sm font-medium text-[var(--color-text)] no-underline"
           >
             <span className="text-xl shrink-0">🚜</span>
-            <span>Tractor Loan Guide</span>
+            <span>Tractor loan — ब्याज और subsidy</span>
           </Link>
           <Link
             href="/articles/PmKisanMasterGuide2026"
             className="flex items-center gap-3 p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors text-sm font-medium text-[var(--color-text)] no-underline"
           >
             <span className="text-xl shrink-0">📚</span>
-            <span>PM Kisan Master Guide</span>
+            <span>PM Kisan की संपूर्ण guide</span>
           </Link>
         </div>
       </div>
