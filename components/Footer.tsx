@@ -97,8 +97,8 @@ export default function Footer() {
 
           <div>
             <h4 className="font-semibold text-white text-base mb-4 flex items-center gap-2">
-              <span aria-hidden="true">📞</span>
-              Helpline & Support
+              <span aria-hidden="true">📧</span>
+              Website Contact
             </h4>
 
             <address className="bg-white/10 border border-white/10 rounded-lg p-4 mb-4 not-italic" itemProp="contactPoint" itemScope itemType="https://schema.org/ContactPoint">
@@ -107,35 +107,9 @@ export default function Footer() {
               <meta itemProp="availableLanguage" content="Hindi" />
               <meta itemProp="availableLanguage" content="English" />
               <h5 className="text-sm font-bold text-green-400 mb-3 flex items-center gap-2">
-                📢 Helpline Jankari
+                💬 KisanStatus Se Sampark
               </h5>
               <div className="space-y-2.5 text-xs text-gray-300">
-                <p className="flex items-start gap-2">
-                  <span className="shrink-0 mt-0.5" aria-hidden="true">📞</span>
-                  <span>
-                    PM Kisan Helpline:{' '}
-                    <a
-                      href={`tel:${HELPLINE}`}
-                      className="text-white font-bold hover:underline focus:outline-none focus:ring-2 focus:ring-green-500 rounded"
-                      itemProp="telephone"
-                    >
-                      {HELPLINE}
-                    </a>{' '}
-                    (Toll-Free)
-                  </span>
-                </p>
-                <p className="flex items-start gap-2">
-                  <span className="shrink-0 mt-0.5" aria-hidden="true">📞</span>
-                  <span>
-                    Alt Helpline:{' '}
-                    <a
-                      href={`tel:${HELPLINE_ALT.replace(/-/g, '')}`}
-                      className="text-white font-bold hover:underline focus:outline-none focus:ring-2 focus:ring-green-500 rounded"
-                    >
-                      {HELPLINE_ALT}
-                    </a>
-                  </span>
-                </p>
                 <p className="flex items-start gap-2">
                   <span className="shrink-0 mt-0.5" aria-hidden="true">📧</span>
                   <span>
@@ -147,6 +121,17 @@ export default function Footer() {
                     >
                       {SUPPORT_EMAIL}
                     </a>
+                  </span>
+                </p>
+                <p className="flex items-start gap-2">
+                  <span className="shrink-0 mt-0.5" aria-hidden="true">📝</span>
+                  <span>
+                    <Link
+                      href="/contact"
+                      className="text-white hover:underline focus:outline-none focus:ring-2 focus:ring-green-500 rounded"
+                    >
+                      Contact form se message bhejein
+                    </Link>
                   </span>
                 </p>
                 <p className="flex items-start gap-2">
@@ -182,8 +167,43 @@ export default function Footer() {
         <div className="border-t border-white/10 pt-6 pb-6">
           <h4 className="font-semibold text-white text-base mb-4 flex items-center gap-2">
             <span aria-hidden="true">🏛️</span>
-            Official Government Links
+            Official Government Links & Helpline
           </h4>
+          <div className="bg-white/5 border border-white/10 rounded-lg p-4 mb-4">
+            <h5 className="text-sm font-bold text-green-400 mb-3 flex items-center gap-2">
+              📞 Sarkari Helpline (PM Kisan — Official)
+            </h5>
+            <div className="flex flex-wrap gap-x-8 gap-y-2 text-xs text-gray-300">
+              <p className="flex items-start gap-2">
+                <span className="shrink-0 mt-0.5" aria-hidden="true">📞</span>
+                <span>
+                  PM Kisan Helpline:{' '}
+                  <a
+                    href={`tel:${HELPLINE}`}
+                    className="text-white font-bold hover:underline focus:outline-none focus:ring-2 focus:ring-green-500 rounded"
+                  >
+                    {HELPLINE}
+                  </a>{' '}
+                  (Toll-Free)
+                </span>
+              </p>
+              <p className="flex items-start gap-2">
+                <span className="shrink-0 mt-0.5" aria-hidden="true">📞</span>
+                <span>
+                  Alt Helpline:{' '}
+                  <a
+                    href={`tel:${HELPLINE_ALT.replace(/-/g, '')}`}
+                    className="text-white font-bold hover:underline focus:outline-none focus:ring-2 focus:ring-green-500 rounded"
+                  >
+                    {HELPLINE_ALT}
+                  </a>
+                </span>
+              </p>
+            </div>
+            <p className="mt-2 text-[11px] text-gray-500">
+              Ye numbers Government of India (PM Kisan) ke official helpline hain — KisanStatus ke nahi.
+            </p>
+          </div>
           <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm" role="list">
             {[
               { href: 'https://pmkisan.gov.in/', label: 'PM Kisan Portal' },
