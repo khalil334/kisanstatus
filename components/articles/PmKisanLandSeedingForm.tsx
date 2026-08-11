@@ -427,7 +427,7 @@ export default function PmKisanLandSeedingFormPdf2026() {
             ].map(({ problem, solution }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
                 <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">❌ {problem}</p>
-                <p className="text-xs text-green-700 dark:text-green-400"><strong>✅ Fix:</strong> {solution}</p>
+                <p className="text-xs text-green-700 dark:text-green-400"><strong>✅ Aise Sudharein:</strong> {solution}</p>
               </div>
             ))}
           </div>
@@ -471,7 +471,7 @@ export default function PmKisanLandSeedingFormPdf2026() {
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Puche Jane Wale Sawal
+            Land Seeding Ke Baare Mein Log Kya Puchte Hain
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Land Seeding Form FAQ 2026" />
         </section>

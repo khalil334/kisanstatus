@@ -73,7 +73,7 @@ export default function PmKisanRejectedStatusReApplyGuide() {
           message={modal.message}
           redirectUrl={modal.url}
           onClose={() => setModal(null)}
-          infoNote="📌 Thoda wait karo. Official PM Kisan portal khulne wala hai."
+          infoNote="📌 Bas kuch pal — official portal abhi khulega."
         />
       )}
 
@@ -134,14 +134,14 @@ export default function PmKisanRejectedStatusReApplyGuide() {
           />
 
           <DB>
-            <strong>Real Story:</strong>
+            <strong>Ek Kisan Ki Aap Beeti:</strong>
             <p className="text-xs text-gray-700 dark:text-gray-300 mt-2">
               Jaipur ke Bhanwar Lal ji ka status achanak reject ho gaya. Wo pareshan ho gaye. Patwari ke paas gaye, BAO ke paas gaye. Pata chala ki unki zameen ka record digital nahi tha aur bank account mein IFSC code purana tha. Dono cheezein theek karke CSC se dobara form bhara. 25 din baad status active ho gaya aur pichli ruki hui kist bhi mil gayi.
             </p>
           </DB>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
-            Neeche har rejection reason alag-alag diya hai, aur saath mein ye bhi ki <strong>pm kisan dobara apply kaise karein</strong> ka sahi tarika kya hai. <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">Beneficiary list</Link> check karne se pehle ye guide zaroor padh lena.
+            Neeche har rejection reason alag-alag diya hai, aur saath mein ye bhi ki <strong>pm kisan dobara apply kaise karein</strong> ka sahi tarika kya hai. <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">beneficiary status page</Link> check karne se pehle ye guide zaroor padh lena.
           </p>
         </section>
 
@@ -221,22 +221,22 @@ export default function PmKisanRejectedStatusReApplyGuide() {
           </p>
           <StepList>
             <SI n={1}>
-              <strong>Galti Pehchano:</strong> Upar diye gaye 7 reasons mein se apni problem dhundo. Agar samajh na aaye toh <Link href="/articles/PmKisanMasterGuide2026" className="underline text-green-700 dark:text-green-400">Master Guide</Link> padho ya nazdiki CSC wale se pucho.
+              <strong>Galti Pehchano:</strong> Upar diye gaye 7 reasons mein se apni problem dhundo. Agar samajh na aaye toh <Link href="/articles/PmKisanMasterGuide2026" className="underline text-green-700 dark:text-green-400">poora PM Kisan guide</Link> padho ya nazdiki CSC wale se pucho.
             </SI>
             <SI n={2}>
               <strong>Documents Theek Karo:</strong> Agar naam galat hai toh patwari se Khatauni theek karwao. Agar bank account mein dikkat hai toh bank branch jakar NPCI seeding aur IFSC update karwao.
             </SI>
             <SI n={3}>
-              <strong>CSC Center Par Jao:</strong> Apne nazdiki <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">CSC center</Link> par jao. Unhe bolo "PM Kisan Correction aur Re-Application" karna hai.
+              <strong>CSC Center Par Jao:</strong> Apne nazdiki <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">CSC digital seva kendra</Link> par jao. Unhe bolo "PM Kisan Correction aur Re-Application" karna hai.
             </SI>
             <SI n={4}>
               <strong>Correction Form Bharo:</strong> CSC wala portal par <strong>PM Kisan correction form</strong> open karega. Usme aapki purani details hongi. Galat details ko mita kar sahi details daalo.
             </SI>
             <SI n={5}>
-              <strong>OTP Verification:</strong> Mobile par OTP aayega. Verify karo. Form submit ho jayega.
+              <strong>OTP Se Pushti:</strong> Mobile par OTP aayega. Verify karo. Form submit ho jayega.
             </SI>
             <SI n={6}>
-              <strong>Receipt Lo:</strong> Ek nayi acknowledgement slip milegi. Us par "Correction Request Submitted" likha hoga. Usko sambhal kar rakho.
+              <strong>Parchi Zaroor Lena:</strong> Ek nayi acknowledgement slip milegi. Us par "Correction Request Submitted" likha hoga. Usko sambhal kar rakho.
             </SI>
           </StepList>
 
@@ -250,7 +250,7 @@ export default function PmKisanRejectedStatusReApplyGuide() {
             <button
               onClick={() => handleOfficialLink(
                 'PM Kisan Official Portal',
-                'PM Kisan portal khulne wala hai. Thoda wait karo...',
+                'Official portal load ho raha hai, bas kuch second...',
                 'https://pmkisan.gov.in/BeneficiaryStatus.aspx'
               )}
               className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
@@ -347,7 +347,7 @@ export default function PmKisanRejectedStatusReApplyGuide() {
             </div>
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
-            Apne state ki specific jankari ke liye <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">state-wise page</Link> par jao.
+            Apne state ki specific jankari ke liye <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">state ke hisab se list page</Link> par jao.
           </p>
         </section>
 
@@ -374,7 +374,7 @@ export default function PmKisanRejectedStatusReApplyGuide() {
             ].map(({ mistake, fix }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
                 <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">❌ {mistake}</p>
-                <p className="text-xs text-green-700 dark:text-green-400"><strong>✅ Sahi Tarika:</strong> {fix}</p>
+                <p className="text-xs text-green-700 dark:text-green-400"><strong>✅ Ye Raha Sahi Rasta:</strong> {fix}</p>
               </div>
             ))}
           </div>
@@ -392,13 +392,13 @@ export default function PmKisanRejectedStatusReApplyGuide() {
             <SI n={4}>Agar sab sahi hai, toh status "Active" dikhne lagega.</SI>
           </StepList>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
-            Agar 30 din baad bhi status active na ho, toh samajh jao file kahin atki hai. Ab time aa gaya hai ki aap <Link href="/articles/PmKisanStateNodalOfficerList" className="underline text-green-700 dark:text-green-400">State Nodal Officer</Link> ko email karo ya physical complaint do.
+            Agar 30 din baad bhi status active na ho, toh samajh jao file kahin atki hai. Ab time aa gaya hai ki aap <Link href="/articles/PmKisanStateNodalOfficerList" className="underline text-green-700 dark:text-green-400">apne state ke nodal officer</Link> ko email karo ya physical complaint do.
           </p>
         </section>
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Puche Jane Wale Sawal
+            Rejection Ke Baad Ke Sawal — Jawab Ke Saath
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Rejected Status Re-Apply FAQ 2026" />
         </section>
@@ -428,7 +428,7 @@ export default function PmKisanRejectedStatusReApplyGuide() {
           <button
             onClick={() => handleOfficialLink(
               'PM Kisan Official Portal',
-              'PM Kisan portal khulne wala hai. Thoda wait karo...',
+              'Official portal load ho raha hai, bas kuch second...',
               'https://pmkisan.gov.in'
             )}
             className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"

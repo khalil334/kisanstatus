@@ -188,7 +188,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
           </div>
 
           <WB>
-            <strong>Tip:</strong> "Not Found" dikh raha hai? Do baar check karo — Aadhaar sahi type kiya? Agar phir bhi nahi mil raha toh registration hi nahi hua hoga — kabhi-kabhi form submit hote waqt session timeout ho jaata hai aur data save nahi hota, lekin farmer ko lagta hai ho gaya. Dobara apply karo.
+            <strong>Ek Suggestion:</strong> "Not Found" dikh raha hai? Do baar check karo — Aadhaar sahi type kiya? Agar phir bhi nahi mil raha toh registration hi nahi hua hoga — kabhi-kabhi form submit hote waqt session timeout ho jaata hai aur data save nahi hota, lekin farmer ko lagta hai ho gaya. Dobara apply karo.
           </WB>
         </section>
 
@@ -419,7 +419,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Puche Jane Wale Sawal
+            Self Registration Wale Kisano Ke Sawal
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Self Registration Status FAQ 2026 — Real Answers" />
         </section>

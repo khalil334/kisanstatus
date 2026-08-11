@@ -289,7 +289,7 @@ export default function PmKisanMaandhanYojanaPension() {
           />
 
           <IB>
-            <strong>Important:</strong> Agar aap <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">PM Kisan Samman Nidhi</Link> ke beneficiary hain, toh aap automatically Maandhan Yojana ke liye bhi eligible hain. Dono schemes ek saath chal sakti hain.
+            <strong>Pehle Ye Samajh Lo:</strong> Agar aap <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">PM Kisan Samman Nidhi</Link> ke beneficiary hain, toh aap automatically Maandhan Yojana ke liye bhi eligible hain. Dono schemes ek saath chal sakti hain.
           </IB>
         </section>
 
@@ -351,7 +351,7 @@ export default function PmKisanMaandhanYojanaPension() {
 
           <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">🏪 Method 1: CSC Center Se (Sabse Aasan)</h3>
           <StepList>
-            <SI n={1}>Nazdiki <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">CSC center</Link> par jao.</SI>
+            <SI n={1}>Nazdiki <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">apne gaon ke paas wale CSC</Link> par jao.</SI>
             <SI n={2}>Aadhaar card, bank passbook, aur passport size photo le jao.</SI>
             <SI n={3}>CSC operator ko bolo "PM Kisan Maandhan Yojana mein enroll karna hai".</SI>
             <SI n={4}>Wo aapki details portal par dalega.</SI>
@@ -498,7 +498,7 @@ export default function PmKisanMaandhanYojanaPension() {
             ].map(({ problem, solution }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
                 <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2"> {problem}</p>
-                <p className="text-xs text-green-700 dark:text-green-400"><strong>✅ Fix:</strong> {solution}</p>
+                <p className="text-xs text-green-700 dark:text-green-400"><strong>✅ Iska Hal:</strong> {solution}</p>
               </div>
             ))}
           </div>
@@ -640,7 +640,7 @@ export default function PmKisanMaandhanYojanaPension() {
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Puche Jane Wale Sawal
+            Pension Yojana — Doubts Aur Unke Jawab
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Maandhan Yojana FAQ" />
         </section>
