@@ -281,12 +281,16 @@ export default function PmKisanCorrectionForm2026({ article }: { article: Articl
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Aaj Hi Correction Kar Do</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Is Kaam Ka Rate ₹30 Hai, ₹500 Nahi</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Bhai, der mat karo. Jitni jaldi details theek karoge, utni jaldi agli kist aa jayegi. Aur haan — CSC wale ya koi agent ko ₹500-1000 mat do. Ye kaam ₹30 mein ho jata hai, ya ghar baithe free mein.
+            Correction ka poora kaam portal par khud karne par free hai aur CSC par lagbhag ₹30 ka. Agent ₹500-1000
+            isliye maang lete hain kyunki kist rukne ka dabaav aapke paas hota hai, unke paas nahi — rate pata hona
+            hi is page ka sabse mehenga hissa hai.
           </p>
           <p className="text-xs text-green-700 dark:text-green-400 italic">
-             Agar koi dikkat aaye toh helpline 155261 par call karna ya district agriculture office ka chakkar laga lena. Written complaint sabse tez kaam karti hai.
+            Correction submit hone ke baad bhi status na badle toh helpline 155261 par call karein, aur uske baad
+            district agriculture office mein written complaint dein — likhi hui shikayat par diary number milta hai,
+            jisse aap aage follow-up kar sakte hain.
           </p>
         </div>
 

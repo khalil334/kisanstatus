@@ -426,7 +426,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
         </p>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Sabse Kaam Ki Baat</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Rate Nahi, Sanction Letter Ki Teen Lines Padho</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
             Koi ek &ldquo;SBI dairy loan rate&rdquo; nahi hota. Aapka rate = us mahine ka MCLR + aapka spread, aur KCC par
             subvention lagne se effective rate isse kaafi kam baithta hai. Isliye rate dhoondhne ke bajaye sanction

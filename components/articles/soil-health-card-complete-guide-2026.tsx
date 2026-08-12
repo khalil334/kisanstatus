@@ -336,12 +336,16 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
         </section>
 
         <div className="my-8 p-6 bg-green-50 border-2 border-green-400 rounded-2xl">
-          <h3 className="font-black text-green-800 text-lg mb-3">Seedhi Baat</h3>
+          <h3 className="font-black text-green-800 text-lg mb-3">Card Aane Ke Baad Ka Kaam Hi Asli Kaam Hai</h3>
           <p className="text-sm text-green-900 leading-relaxed mb-3">
-            Soil health card chhoti cheez lag sakti hai lekin pura farming setup improve kar deta hai. Government ye free diye hain to use kar lo. 30 minute ka kaam hai, lekin 3 saal ke liye benefit milega.
+            Sample dena 30 minute ka kaam hai, aur card 3 saal chalta hai — par zyadatar kisano ke ghar mein yeh
+            card padha hi nahi jaata, isliye kharch ghatta nahi. Card ki value uski recommendation sheet mein hai,
+            jahan aapke khet ke liye NPK ki matra likhi hoti hai.
           </p>
           <p className="text-sm text-green-900 leading-relaxed">
-            Aur ek baat — jo farmers soil test karate hain, unka production aur quality dono badhta hai. Buyer bhi premium price deta hai agar quality acha ho.
+            Card haath mein aate hi ek kaam karein: dukaan par jo urea-DAP aap har season lete hain, uski matra
+            card wali sifarish se milaayein. Farak dikhega — aur wahi farak aapki fertilizer lagat ka faisla karta
+            hai, kisi general advice se zyada.
           </p>
         </div>
 

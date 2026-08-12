@@ -360,9 +360,11 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Seedhi Baat</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Farmer ID Ka Kaam Rabi Season Se Pehle Nikaal Lein</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Yeh seva free hai, 20 minute lagte hain, aur future mein zaroori hone wali hai. Abhi centers par crowd kam hai. October-November mein rush shuru ho jayega.
+            Registry free hai aur 20 minute ki hai, par yeh ek aisi ID hai jiske bina aage scheme applications
+            atakne lagti hain. October-November mein jab rabi ki scheme windows khulti hain, tab hi centers par
+            sabse zyada bheed hoti hai — usse pehle ka koi bhi hafta sasta padta hai:
           </p>
           <ol className="space-y-2 text-sm text-green-800 dark:text-green-300 list-decimal list-inside">
             <li>Is hafte center jao ya online try karo.</li>

@@ -109,7 +109,7 @@ export default function CHCPortal() {
         Har ilake ki demand alag hoti hai. Punjab aur Haryana mein Happy Seeder aur Straw Management ki bhookh hai, jabki MP, UP, ya Bihar mein Rotavator, Cultivator aur Seed Drill zyada chalte hain. Blindly koi bhi machine mat khareediye.
       </p>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Meri salah yehi rahegi: Apne nazdeeki Krishi Vigyan Kendra (KVK) ya progressive farmers se baat karke pata karein ki aapke block mein kis agricultural equipment ki sabse zyada kami hai. Wahi aapka pehla investment hona chahiye.
+        Iska sabse sasta pata lagane ka tareeka: apne nazdeeki Krishi Vigyan Kendra (KVK) ya block ke progressive farmers se poochhein ki season mein kis machine ke liye sabse lambi waiting chalti hai. Jis implement ke liye kisan doosre gaon jaate hain, wahi aapka pehla investment hona chahiye.
       </p>
 
       <div className="overflow-x-auto mb-8 not-prose">
