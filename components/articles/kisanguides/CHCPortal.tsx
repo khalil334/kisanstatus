@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { getArticleBySlug } from '@/lib/articles-data';
+import { AuthorBox } from '@/components/ArticleShared';
 import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
 export const metadata: Metadata = {
@@ -349,6 +351,8 @@ export default function CHCPortal() {
           </ul>
         </div>
       </div>
+
+      <AuthorBox modified={getArticleBySlug('custom-hiring-centre-chc-portal')!.modifiedTime} />
 
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
         <p className="text-sm text-gray-700 dark:text-gray-300">

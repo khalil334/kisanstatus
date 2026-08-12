@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
+import { AuthorBox } from '@/components/ArticleShared';
 import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 import GuideDisclaimer from '@/components/GuideDisclaimer';
 import { getArticleBySlug } from '@/lib/articles-data';
@@ -623,6 +624,8 @@ export default function SilageMaking() {
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Related reading: <Link href="/articles/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME Yojana guide</Link> aur <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">KCC online apply karne ka tarika</Link> bhi zaroor padhein, agar aap silage unit ke liye funding plan kar rahe ho.
       </p>
+
+      <AuthorBox modified={getArticleBySlug('silage-making-business-guide')!.modifiedTime} />
 
       <GuideDisclaimer
         consult="agriculture officers, CAs"

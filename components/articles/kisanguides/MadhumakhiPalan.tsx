@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
+import { AuthorBox } from '@/components/ArticleShared';
 import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 import GuideDisclaimer from '@/components/GuideDisclaimer';
 import { getArticleBySlug } from '@/lib/articles-data';
@@ -331,6 +332,8 @@ export default function MadhumakhiPalan() {
         <li><strong>Krishi Vigyan Kendra (KVK):</strong> District-level practical training modules and apiculture support.</li>
         <li><strong>FSSAI:</strong> Regulatory guidelines for packaged honey and food safety licensing.</li>
       </ul>
+
+      <AuthorBox modified={getArticleBySlug('madhumakhi-palan-kvic-subsidy')!.modifiedTime} />
 
       <GuideDisclaimer
         consult="apiculture officers, KVIC officials, ya bank managers"
