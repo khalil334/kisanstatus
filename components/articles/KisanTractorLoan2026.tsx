@@ -467,9 +467,11 @@ return (
      </section>
 
      <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-       <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Bottom Line</h3>
+       <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Ex-Showroom Nahi, On-Road Breakup Par Mol-Bhav Karo</h3>
        <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-         Tractor loan mushkil nahi hai agar planning sahi ho. Down payment 10-15% se manage ho sakta hai. Subsidy mil jaaye toh aur kam. Hidden costs pehle se jaano — surprise na mile.
+         Down payment 10-15% dikhta hai, par woh hisaab ex-showroom par hota hai — insurance, registration,
+         accessories aur processing fee jud kar aapki jeb se jaane wali rakam upar chali jaati hai. Isliye
+         dealer se likhit on-road breakup lo, phir usi number par loan aur subsidy set karo:
        </p>
        <ol className="space-y-2 text-sm text-green-800 dark:text-green-300 list-decimal list-inside">
          <li>CIBIL check karo (700+ target)</li>

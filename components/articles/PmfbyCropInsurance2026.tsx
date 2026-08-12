@@ -396,9 +396,12 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Seedhi Baat</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Claim 48 Ghante Ki Ghadi Par Tikta Hai</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
-            Kheti mein mausam ka koi bharosa nahi hota, aur PMFBY isi anishchitta ke against ek sasta cover hai. Deadline se pehle enroll karein, receipt sambhal ke rakhein, aur nuksan ho toh 48 ghante ke andar report karna na bhoolein — bas itna dhyan rakhne se ye scheme apna kaam poora kar degi.
+            PMFBY mein premium bhar dena aadha kaam hai. Zyadatar claim isliye atakte hain ki nuksan ki soochna
+            48 ghante ke andar nahi di gayi — uske baad khet ka survey hone tak sabooti khud badal jaati hai.
+            Isliye enrollment ki receipt aur crop insurance app / 14447 dono phone mein pehle se rakhein, taaki
+            barbaadi wale din dhoondhna na pade.
           </p>
         </div>
 

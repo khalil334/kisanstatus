@@ -376,9 +376,11 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Bottom Line</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Byaj Ka Farak: 4% Bhi Ho Sakta Hai, 36% Bhi</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Sahukar last resort hona chahiye. First resort government-backed credit hona chahiye. Process thoda lamba hai shuru mein — par ek baar KCC mil gaya toh zindagi badal jaati hai.
+            Isi article ka poora ganit ek hi tulna par tika hai — KCC par time se chukane wale kisan ko effective
+            4% padta hai, jabki sahukar ka mahine wala 3% saal bhar mein 36% ban jaata hai. Yani ek hi ₹1 lakh
+            saal bhar mein ₹4,000 ya ₹36,000 maang sakta hai. Isliye kaagaz ka jhanjhat pehle nipta lo:
           </p>
           <ol className="space-y-2 text-sm text-green-800 dark:text-green-300 list-decimal list-inside">
             <li>Khatauni update karwao</li>

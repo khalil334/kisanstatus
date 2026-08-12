@@ -509,15 +509,16 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Bhai, Ab Socho Mat</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Yeh Scheme Deadline Par Nahi, Quota Par Band Hoti Hai</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Solar pump ek baar lagao, agle 25 saal sukoon se kheti karo. Diesel ka kharcha khatam, bijli ka bill zero, paani jab chahiye tab milega.
+            PM-KUSUM mein aam galatfehmi yeh hai ki koi ek last date hai. Hota ulta hai — state ko pumps ka quota
+            milta hai, aur applications usi hisaab se lete hain. Quota bhar gaya toh portal aapka form le lega par
+            number agli window mein lagega, chahe aapke documents poore hon.
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Lekin ek cheez yaad rakho — <strong>subsidy quota limited hota hai</strong>. Jab state ka quota fill ho jata hai toh agli window ka wait karna padta hai. Isliye aaj hi apply karo. Kal ka intezaar mat karo.
-          </p>
-          <p className="text-xs text-green-700 dark:text-green-400 italic mt-2">
-             Meri personal advice: Documents aaj ready karo, kal subah portal par apply karo. Jitni jaldi form jayegi, utni jaldi pump lagega.
+            Isliye is page ka kaam ki cheez woh 60% subsidy nahi, apne state ki current window ka status hai.
+            Portal par jaake pehle yeh dekhein ki Component B ke liye registration khula hai ya waitlist chal rahi
+            hai — phir hi pump ki capacity aur apna hissa tay karein.
           </p>
         </div>
 

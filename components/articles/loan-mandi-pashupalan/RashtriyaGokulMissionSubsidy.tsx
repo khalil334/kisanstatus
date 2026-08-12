@@ -111,7 +111,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           Rashtriya Gokul Mission (RGM) ka naam suna sabne hai, par zyada tar kisan yeh nahi jaante ki isme unke
           liye asal mein kya rakha hai. Kuch log samajhte hain ki yeh gay kharidne ki subsidy hai — nahi hai. Kuch
-          samajhte hain ki yeh sirf sarkari farms ki scheme hai — yeh bhi adhoora sach hai. Asli baat yeh hai ki
+          samajhte hain ki yeh sirf sarkari farms ki scheme hai — yeh bhi adhoora sach hai. Hota yeh hai ki
           RGM ke teen components <strong>seedha kisan ki jeb tak</strong> pahunchte hain: IVF pregnancy par ₹5,000,
           sex-sorted semen par 50% subsidy, aur darwaze par muft artificial insemination.
         </p>

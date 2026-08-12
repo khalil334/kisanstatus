@@ -458,8 +458,8 @@ export default function DripSprinkler() {
         </a>{' '}
         Isi statement mein ye bhi hai ki states ko ab kharch limits se aage jaane ki zyada
         flexibility di gayi hai — yani aane wale saalon mein state-level variation aur badh sakta
-        hai. Isliye is page ka number nahi, <em>tareeka</em> yaad rakhein: apne state ka current
-        order hi aapka sach hai.
+        hai. Isliye is page ke number par mat rukein — <em>tareeka</em> hi kaam aayega: apne state ka
+        current order hi aapka sach hai.
       </p>
 
       <div className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-5 mb-8 not-prose">
