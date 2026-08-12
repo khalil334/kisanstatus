@@ -4,6 +4,22 @@ Repo (`khalil334/kisanstatus`) aur kisanstatus.com ke sabhi article components k
 Neeche har group ke articles ek hi template/frame share karte hain — same helper components,
 same section flow, same hook style, same intro pattern, same internal-linking scheme.
 
+> **Note (2026-08-12):** this audit measures *structural* sameness — shared helper
+> components, section flow, hook and intro pattern. It is **not** the related-cards audit.
+> Two earlier claims that circulated alongside it have since been disproved and are
+> deliberately **not** repeated here:
+>
+> - the supposed "byte-identical" clusters in `hindi-yojana/` and the `rajya-yojana/`
+>   status-check family were a tokenizer artefact (local components like `Hd`, `Sec`,
+>   `Tip`, `Figure` were not recognised, so every file collapsed to the same signature).
+>   With a generic tokenizer both families score **0 pairs >=0.80**.
+> - "one related-section label site-wide" is already resolved — `RelatedArticles`
+>   hardcodes a single heading by design.
+>
+> Duplicate *related-card sets* were fixed separately in PR #268 (Part 6a) and PR #270
+> (Part 6f); as of `main` after #270 there are **0 byte-identical `RELATED` sets** and
+> **0 pairs with >=0.6 slug overlap**.
+
 ---
 
 ## Group 1 — Rajya Yojana template (15 articles) — SABSE ZYADA SAME
@@ -111,7 +127,7 @@ Files (`components/articles/loan-mandi-pashupalan/`):
 
 ---
 
-## Group 5 — Core PM-Kisan template (26 articles)
+## Group 5 — Core PM-Kisan template (28 articles)
 
 **Shared frame:** `FAQS_DATA` (2 blocks) · same PM-Kisan guide skeleton (problem intro →
 portal steps → status meanings → fix steps → FAQ) · internal links to other core PM-Kisan
@@ -144,7 +160,11 @@ Files (`components/articles/`, root level):
 24. PmKisanStateNodalOfficerList.tsx
 25. PmKisanVillageWiseListPdfDownload.tsx
 26. PmKisanVoluntarySurrenderGuide.tsx
-27. soil-health-card-complete-guide-2026.tsx
+27. PmKusumYojanaSolarSubsidy2026.tsx
+28. soil-health-card-complete-guide-2026.tsx
+
+(`components/articles/ArticleStub.tsx` is the shared fallback renderer, not an article —
+excluded from the counts above.)
 
 ---
 
@@ -174,7 +194,8 @@ Files (`components/articles/kisanguides/`):
 | 2 | Hindi Yojana | 15 | High — FAQ_SCHEMA + Fig + short-answer box + `/articles/hi/` links |
 | 3 | Maandhan | 13 | High — 3-FAQ frame, pension flow |
 | 4 | Loan/Mandi/Pashupalan | 11 | High — FAQBlock + ArticleMeta frame |
-| 5 | Core PM-Kisan | 27 | Medium — older 2-FAQ skeleton |
+| 5 | Core PM-Kisan | 28 | Medium — older 2-FAQ skeleton |
 | 6 | Kisanguides | 9 | Medium — ExternalLinkButton guide frame |
 
-Total audited: **90 article components.**
+Total audited: **91 article components** (96 `.tsx` files under `components/articles/`,
+minus `ArticleStub.tsx` and the 4 interactive widgets in `rajya-yojana/tools/`).
