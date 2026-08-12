@@ -403,17 +403,17 @@ export default function PmKisanRejectedStatusReApplyGuide() {
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Seedhi Baat</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Reject Hua Hai, Band Nahi — Order Ka Dhyan Rakhein</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Bhai, PM Kisan rejected status fix karna mushkil nahi hai. Bas teen cheezein yaad rakho:
+            Sabse common galti: log pehle dobara apply kar dete hain aur reason baad mein dekhte hain — toh wahi wajah dobara reject karwa deti hai. Sahi order yeh hai:
           </p>
           <ol className="space-y-2 text-sm text-green-800 dark:text-green-300 list-decimal list-inside">
-            <li>Pehle reason dhundo — kyun reject hua</li>
-            <li>Us galti ko theek karo — bank, land, ya eKYC</li>
-            <li>CSC se correction form bharke dobara apply karo</li>
+            <li>Portal par rejection reason note karein — bank, land record ya eKYC, teeno ke fix alag hain</li>
+            <li>Pehle woh galti theek karwayein (upar reason-wise steps diye hain)</li>
+            <li>Uske baad hi CSC se correction form bharke dobara apply karein</li>
           </ol>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mt-3">
-            15-30 din mein status active ho jayega. Simple hai!
+            Is order mein karne par status aam taur par 15-30 din mein Active ho jaata hai.
           </p>
         </div>
 

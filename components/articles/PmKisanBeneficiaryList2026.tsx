@@ -247,7 +247,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
         <section className="mb-8">
           <SH>PM Kisan Beneficiary List Kya Hoti Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Bhai, seedhi baat karte hain. Sirf wahi kisan is list mein aate hain jinka verification pura ho gaya hai. Government har kist release karne se pehle isko update karti hai.
+            Sirf wahi kisan is list mein aate hain jinka verification pura ho gaya hai. Government har kist release karne se pehle isko update karti hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Naam hona matlab paisa aayega. Nahi hona matlab koi na koi adchkan hai. Registration ke baad <strong>state verification + land seeding + eKYC</strong> — ye teeno kaam hone ke baad hi naam aata hai. Isme 15-30 din lagte hain.
@@ -414,7 +414,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            List Se Jude Sawal, Seedhi Baat Mein
+            List Se Jude Sawal Aur Unke Jawab
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Beneficiary List FAQ 2026 — Verified Answers" />
         </section>

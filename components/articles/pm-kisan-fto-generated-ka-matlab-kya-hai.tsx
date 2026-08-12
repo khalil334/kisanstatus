@@ -493,9 +493,9 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Seedhi Baat</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">FTO Ke Baad Ki Timeline</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            FTO dikh raha hai toh ghabraane ki koi baat nahi — paisa confirm hai, bas process mein hai. 7-15 din wait karein. Uske baad bhi na aaye toh:
+            “FTO is Generated” ka matlab hai payment order ban chuka hai — paisa sanction ho gaya, ab sirf bank transfer baaki hai. Normal case mein 7-15 din lagte hain. Din 15 ke baad bhi credit na aaye, tab yeh order follow karein:
           </p>
           <ol className="space-y-2 text-sm text-green-800 dark:text-green-300 list-decimal list-inside">
             <li>Bank jaakar <strong>Aadhaar seeding</strong> aur <strong>land seeding</strong> dono check karein</li>

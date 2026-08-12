@@ -402,9 +402,9 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Seedhi Baat (Bottom Line)</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">eKYC Ke Baad Ek Kaam Aur Bacha Hai</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Aaj hi kar lo bhai. Kal ka wait mat karo. Phone se 2 minute lagte hain. Phone na ho toh CSC free hai. Bahana mat banao — yeh ₹6000 saalana aapka haq hai, bas ek baar verify karna hai taake sarkar ka system aapko rok na sake. Agar koi dikkat aaye, toh upar diye gaye error fixes ko dhyan se padhein.
+            OTP wala tarika 2 minute ka hai, lekin woh sirf tab chalega jab Aadhaar mein mobile number linked ho — warna seedha CSC jaayein, wahan biometric se ho jayega. Aur eKYC “YES” ho jaane par bhi paisa tabhi aata hai jab bank mein NPCI seeding bhi ho — yeh dono alag kaam hain, dono check karein. Error aaye toh upar wali table mein 108, demographic mismatch aur server-timing wale fixes diye hain.
           </p>
         </div>
 

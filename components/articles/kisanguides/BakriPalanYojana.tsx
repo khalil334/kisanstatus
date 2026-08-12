@@ -1,5 +1,6 @@
 import ExternalLinkButton from '@/components/ExternalLinkButton';
-import { FAQBlock } from '@/components/ArticleShared';
+import { FAQBlock, AuthorBox } from '@/components/ArticleShared';
+import { getArticleBySlug } from '@/lib/articles-data';
 import Image from 'next/image';
 import Link from 'next/link';
 

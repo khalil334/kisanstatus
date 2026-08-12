@@ -404,17 +404,17 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Seedhi Baat (Bottom Line)</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Shikayat Ka Sahi Raasta — Aur Diary Number Kyun Sabse Zaroori Hai</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Bhai, PM Kisan shikayat karna mushkil nahi hai agar aap sahi hierarchy follow karein. Bas teen cheezein yaad rakho:
+            Nodal officer ko seedha email karna aksar bekar jaata hai agar helpline ka record nahi hai — isliye hierarchy ka order matter karta hai:
           </p>
           <ol className="space-y-2 text-sm text-green-800 dark:text-green-300 list-decimal list-inside">
-            <li>Pehle 155261 par call karo (Diary number lo).</li>
-            <li>Kaam na bane toh state nodal officer ko proper format mein email karo.</li>
-            <li>Uske baad bhi kaam na bane toh Twitter par tag karo ya RTI daal do.</li>
+            <li>Pehle 155261 par call karke <strong>Diary number</strong> lein — yahi number aage har level par aapka proof hai.</li>
+            <li>15 din mein hal na ho toh state nodal officer ko email mein wahi Diary number, registration number aur date daalein.</li>
+            <li>Uske baad bhi jawab na aaye toh RTI daalein — usme bhi Diary number quote karein.</li>
           </ol>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mt-3">
-            Dairya (patience) rakho, documents clear rakho, aur politely baat karo. Aapka haq aapko zaroor milega!
+            Bina Diary number ke complaint ka koi trail nahi banta — wahi ek cheez hai jo aapki shikayat ko “suni gayi” se “darj hui” banati hai.
           </p>
         </div>
 

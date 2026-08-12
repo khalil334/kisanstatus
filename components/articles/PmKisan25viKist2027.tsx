@@ -98,7 +98,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
         </p>
 
         <WB>
-          <strong>Seedhi baat:</strong> Yeh article predictions de raha hai, promises nahi. Jo hum definitely jaante hain woh likhenge. Baaki sab andaza hai.
+          <strong>Pehle hi bata dein:</strong> Yeh article predictions de raha hai, promises nahi. Jo hum definitely jaante hain woh likhenge. Baaki sab andaza hai.
         </WB>
 
         <section className="mb-8 mt-8">
@@ -261,12 +261,12 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
         </div>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Bottom Line</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">25vi Kist Ka Sahi Hisaab</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            23vi ho chuki hai. 24vi ka intezaar hai. 25vi abhi bahut door ki baat hai.
+            23vi ho chuki hai, 24vi ka intezaar hai — matlab 25vi tak kam se kam do release cycles baaki hain, yaani 2027 ki pehli chhamahi se pehle iski umeed rakhna bekar hai.
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
-            Jo control mein hai — eKYC, bank, zameen — woh abhi theek kar lo. Baaki, jab date aayegi, khud pata chal jayega.
+            Is beech jo aapke haath mein hai — eKYC, NPCI seeding, land record — wahi 25vi aane par payment atakne se bachayega. Date ka andaza lagane se zyada kaam ka yahi hai.
           </p>
         </div>
 
