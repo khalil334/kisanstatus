@@ -315,7 +315,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
                Abhi Apply Karo
             </p>
             <p className="text-xs text-green-700 dark:text-green-400 mb-3">
-              Official PM Kusum portal par jakar apna <strong>pm kusum yojana registration form</strong> bharo. 10 second baad portal khulega.
+              Official PM Kusum portal par jakar apna <strong>pm kusum yojana registration form</strong> bharo — 10 second ke countdown ke baad aap pmkusum portal par pahunch jaoge.
             </p>
             <button
               onClick={() => handleOfficialLink(
@@ -377,7 +377,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
                Status Check Karo
             </p>
             <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
-              Official portal par jakar apna <strong>pm kusum yojana status check</strong> karo. 10 second baad portal khulega.
+              Official portal par jakar apna <strong>pm kusum yojana status check</strong> karo. Redirect mein 10 second lagte hain.
             </p>
             <button
               onClick={() => handleOfficialLink(
@@ -526,7 +526,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
              PM Kusum Official Portal
           </h3>
           <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
-            <strong>PM Kusum yojana apply online</strong> karne ke liye, <strong>PM Kusum yojana status check</strong> karne ke liye, ya helpline number ke liye official portal par jaayein. 10 second baad portal khulega.
+            <strong>PM Kusum yojana apply online</strong> karne ke liye, <strong>PM Kusum yojana status check</strong> karne ke liye, ya helpline number ke liye official portal par jaayein; button ke baad portal apne aap khulta hai.
           </p>
           <button
             onClick={() => handleOfficialLink(

@@ -3,6 +3,8 @@ import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
 import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
+import GuideDisclaimer from '@/components/GuideDisclaimer';
+import { getArticleBySlug } from '@/lib/articles-data';
 
 export const metadata: Metadata = {
   title: 'Madhumakhi Palan 2026: KVIC Subsidy, Profit & Complete Guide',
@@ -330,12 +332,10 @@ export default function MadhumakhiPalan() {
         <li><strong>FSSAI:</strong> Regulatory guidelines for packaged honey and food safety licensing.</li>
       </ul>
 
-      <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
-        <p className="text-sm text-gray-700 dark:text-gray-300">
-          <strong className="text-orange-600 dark:text-orange-400 block mb-2">Ek Saaf Baat:</strong>
-          Yeh article general educational purpose ke liye hai. Actual costs, subsidies, aur procedures aapke location, state policies, aur specific circumstances ke hisaab se vary kar sakte hain. Koi bhi financial investment karne se pehle qualified professionals (apiculture officers, KVIC officials, ya bank managers) se consult karein. Last updated: July 2026.
-        </p>
-      </div>
+      <GuideDisclaimer
+        consult="apiculture officers, KVIC officials, ya bank managers"
+        modified={getArticleBySlug('madhumakhi-palan-kvic-subsidy')!.modifiedTime}
+      />
     </article>
   );
 }
