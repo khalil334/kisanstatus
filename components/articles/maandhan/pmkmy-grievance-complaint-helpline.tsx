@@ -507,12 +507,12 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
         </div>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Aakhri Salah</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Escalation Ki Seedhi: Portal → 18002676888 → Email</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Madad maangna aapka haq hai. Lekin request tabhi kaam karegi jab aap sahi tareeke se, sahi jagah, aur sahi information ke saath karenge. Upar bataye gaye sabhi contacts official sources se verify kiye gaye hain (Last Updated: July 2026).
+            Complaint ka asar is baat par depend karta hai ki aap kis channel se shuru karte hain. Online grievance sabse pehle isliye, kyunki sirf wahi reference number deta hai jise aage ke har step mein quote kiya ja sakta hai — bina number ki phone complaint ka koi trail nahi banta. Upar diye gaye sabhi contacts official sources se verify kiye gaye hain (Last Updated: July 2026).
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
-            <strong>Recommended Approach:</strong> Pehle online grievance try karein (sabse trackable). Agar kaam na bane, to helpline 18002676888 par call karein. Agar fir bhi solution na mile, to scpms@licindia.com par email karein. Himmat na haarein — aapki pension aapka haq hai.
+            Toh seedi aise chadhein: pehle portal par grievance darj karein aur reference number note karein; 7–10 din mein jawab na aaye toh 18002676888 par call karke wahi number batayein; phir bhi hal na nikle toh scpms@licindia.com par email mein number, KPAN aur poori timeline likhein. Har step ka record agle step ki taakat hai.
           </p>
         </div>
 

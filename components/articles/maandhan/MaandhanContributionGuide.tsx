@@ -422,12 +422,12 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Aakhri Baat</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">"3 Mahine Grace" Wali Galatfehmi Se Bachein</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Dekhiye, budhape ki taiyari aaj se shuru hoti hai — kal par mat chhodiye. ₹55 se ₹200 har mahine — yeh koi badi rakam nahi hai, ek chai-pakode ke kharche se bhi kam. Lekin 60 saal ke baad ₹3000 har mahine aana… yeh woh sahara hai jo aapke bacchon par burden kam karega.
+            Is guide ka sabse kaam ka hissa woh hai jo zyada tar VLE bhi galat batate hain: grace period 3 mahine ka nahi, <strong>sirf 1 mahine</strong> ka hai. Uske baad savings-rate ke barabar late fee lagti hai — pehle 12 mahine simple interest, phir compounding. Contribution miss ho jaye toh ghabraane ki zaroorat nahi (account 3 saal tak regularize ho sakta hai), lekin 1 mahine ke andar bharna sabse sasta rasta hai.
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
-            Agar aap 18-40 saal ke beech hain aur 2 hectare se kam zameen hai, toh sochne ki baat nahi — agle hafte CSC center chale jayein. Bas ek request hai: form sign karte waqt har line padh lena, VLE se clear kar lena. Aapka paisa hai, aapka haq hai. Koi bhi doubt ho toh pehle poochh lena, baad mein pareshani se behtar hai.
+            Slab ka hisaab bhi ek baar upar wali table se milaa lein — 18 par ₹55, 40 par ₹200 — aur enrollment form sign karne se pehle auto-debit wala box khud padhein, kyunki woh 100% optional hai; PM Kisan ki ₹2000 ki kist se apne aap kuch nahi kat-ta jab tak aap likh kar allow na karein.
           </p>
         </div>
 

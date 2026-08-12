@@ -536,7 +536,7 @@ P0/P1 are where the AI feel actually lives. P2/P3 are polish.
 
 - Migrate the 8 hand-typed `FAQPage` JSON-LD files (`kisanguides/` ×7 + `hindi-yojana/KisanKarjMafiList2027.tsx`) to `<FAQBlock>` — one Q&A array, schema derived from visible text. Fixes the drift (e.g. `VerminCompost.tsx`). FAQ wording itself is not changed beyond picking the correct single version.
 
-### Part 3 — Closing blocks ("Seedhi Baat" formula), 4 batches — 3a ✅ DONE (2026-08-12, PR #253)
+### Part 3 — Closing blocks ("Seedhi Baat" formula), 4 batches — 3a ✅ · 3b ✅ DONE (2026-08-12)
 
 *Files: 47 total · Type: per-article copy*
 
@@ -567,6 +567,14 @@ P0/P1 are where the AI feel actually lives. P2/P3 are polish.
 Part 1 → Part 2 → Part 3 (a–d) → Part 4 → Part 5 → Part 6. Each part ships as its own PR and waits for owner review before the next starts.
 
 ## 12. Changelog
+
+### 2026-08-12 — Part 3b complete (`fix/part-3b-closing-blocks-maandhan`)
+
+- **12 `maandhan/` closing blocks rewritten.** All shared labels removed ("Ek Baat Yaad Rakhein" ×4, "Aakhri Baat" ×3, "Seedhi Baat" ×2, "Aakhri Salah", "Nichod Ye Hai") plus the shared green-box pep-talk rhythm. Each file now closes on something only true for that article: claim order Certificate→Nomination→Bank (`family-pension-rules`), post-download Aadhaar spelling/DOB match (`kisan-pension-card-download`), the "1 month not 3" grace-period correction (`MaandhanContributionGuide`), SMS-trail before cancelling auto-debit (`PmKisanMaandhanAutoDebitPooraSach`), three-documents-three-names pre-check (`PmKisanMaandhanEligibilityDocuments`), age-as-interest-rate framing ₹80→₹200 (`PmKisanMaandhanPensionCalculator`), first-debit-as-completion-certificate (`pmkmy-bank-account-change`), 1:1-match verdict with the two APY exceptions (`PmkmyVsApyComparison2026`), portal→18002676888→email escalation ladder (`pmkmy-grievance-complaint-helpline`), forfeited co-contribution as the real exit cost (`PmKisanMaandhanWithdrawalRefund`).
+- Also de-labelled: "Seedhi Baat" heading (`PmKisanMaandhanRegistration2026`, body kept), inline "Seedhi baat:" intro tag (`PmKisanMaandhanStatusCheckOnline`), "Ye 7 Baatein Hamesha Yaad Rakhein" heading (`pmkmy-bank-account-change`), "Sach Kya Hai?" heading (`AutoDebitFailRegularization`).
+- Similar length kept; no keyword anchors, FAQs or unrelated prose touched. `tsc --noEmit` clean.
+
+**Pages to re-check in a browser after deploy:** /maandhan/family-pension-rules, /maandhan/kisan-pension-card-download, /maandhan/maandhan-contribution-guide, /maandhan/pm-kisan-maandhan-auto-debit-poora-sach, /maandhan/pm-kisan-maandhan-eligibility-documents, /maandhan/pm-kisan-maandhan-pension-calculator, /maandhan/pm-kisan-maandhan-registration-2026, /maandhan/pm-kisan-maandhan-status-check-online, /maandhan/pmkmy-bank-account-change, /maandhan/pmkmy-vs-apy-comparison-2026, /maandhan/pmkmy-grievance-complaint-helpline, /maandhan/pm-kisan-maandhan-withdrawal-refund-rules, /maandhan/auto-debit-fail-hone-par-regularization-kaise-karein.
 
 ### 2026-08-12 — Part 3a complete (`fix/part-3a-closing-blocks-root`, PR #253)
 
