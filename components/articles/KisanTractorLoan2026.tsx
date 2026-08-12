@@ -3,8 +3,8 @@ import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 
-const PUBLISHED = '2026-01-20T08:00:00+05:30';
-const MODIFIED = '2026-07-19T21:00:00+05:30';
+const PUBLISHED = '2025-12-19T13:12:12+05:30';
+const MODIFIED = '2026-01-18T07:59:28+05:30';
 
 const RELATED = [
 { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply — ₹5 Lakh Loan, 4% Interest', emoji: '💳' },

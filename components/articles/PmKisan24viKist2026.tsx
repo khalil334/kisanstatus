@@ -17,8 +17,8 @@ const KIST = {
   recipients: '~9 Crore+',
 };
 
-const PUBLISHED = '2026-06-24T08:00:00+05:30';
-const MODIFIED = '2026-07-02T05:05:00+05:30';
+const PUBLISHED = '2026-01-01T10:21:39+05:30';
+const MODIFIED = '2026-01-15T08:43:23+05:30';
 
 const RELATED = [
   { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Complete Guide', emoji: '📚' },

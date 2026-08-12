@@ -7,8 +7,8 @@ import { SI, StepList, IB, WB, DB, SH, GovLink, AuthorBox, BottomNav, Disclaimer
 import type { ArticleMeta } from '@/lib/articles-data';
 import CountdownModal from '@/components/CountdownModal';
 
-const PUBLISHED = '2026-07-07T09:55:00+05:30';
-const MODIFIED = '2026-08-03T06:40:00+05:30';
+const PUBLISHED = '2026-02-22T13:03:46+05:30';
+const MODIFIED = '2026-03-03T10:37:18+05:30';
 
 const RELATED_CARDS = [
   {

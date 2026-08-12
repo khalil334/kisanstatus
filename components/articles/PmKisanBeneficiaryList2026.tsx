@@ -11,8 +11,8 @@ import CountdownModal from '@/components/CountdownModal';
 import type { ArticleMeta } from '@/lib/articles-data';
 import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
-const PUBLISHED = '2026-02-10T08:00:00+05:30';
-const MODIFIED = '2026-07-09T08:00:00+05:30';
+const PUBLISHED = '2025-12-22T20:13:22+05:30';
+const MODIFIED = '2025-12-31T07:46:21+05:30';
 
 const RELATED = [
   { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide', emoji: '📚' },

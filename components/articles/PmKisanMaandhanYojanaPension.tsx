@@ -5,8 +5,8 @@ import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import { useState, useEffect } from 'react';
 
-const PUBLISHED = '2026-07-20T11:40:00+05:30';
-const MODIFIED = '2026-07-23T16:05:00+05:30';
+const PUBLISHED = '2026-02-13T17:44:35+05:30';
+const MODIFIED = '2026-02-18T06:27:23+05:30';
 
 const RELATED = [
   { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide', emoji: '📚' },

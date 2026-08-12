@@ -3,8 +3,8 @@ import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 
-const PUBLISHED = '2026-07-06T08:00:00+05:30';
-const MODIFIED = '2026-07-06T08:00:00+05:30';
+const PUBLISHED = '2026-02-09T08:58:39+05:30';
+const MODIFIED = '2026-03-11T09:19:18+05:30';
 
 const RELATED = [
   { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '📅' },

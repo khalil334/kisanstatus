@@ -6,8 +6,8 @@ import Image from 'next/image';
 import { SI, StepList, IB, WB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import CountdownModal from '@/components/CountdownModal';
 
-const PUBLISHED = '2026-06-29T09:34:00+05:30';
-const MODIFIED = '2026-08-01T09:37:00+05:30';
+const PUBLISHED = '2026-01-15T16:32:11+05:30';
+const MODIFIED = '2026-02-05T18:12:48+05:30';
 
 const RELATED = [
   { slug: 'PmKisanBeneficiaryList2026', title: 'PM Kisan Beneficiary List', emoji: '' },

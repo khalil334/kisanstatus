@@ -2,8 +2,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, SH, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 
-const PUBLISHED = '2026-07-29T08:00:00+05:30';
-const MODIFIED = '2026-07-29T08:00:00+05:30';
+const PUBLISHED = '2026-05-13T14:48:09+05:30';
+const MODIFIED = '2026-05-18T07:04:01+05:30';
 
 const FAQS_DATA = [
   {
