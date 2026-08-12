@@ -5,7 +5,7 @@ import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '@/lib/site-config';
 export const metadata: Metadata = {
   title: `Legal Notice & Disclaimer – Unofficial Portal`,
   description: `${SITE_NAME} ek independent informational portal hai, sarkar se affiliated nahi. Official jankari ke liye hamesha pmkisan.gov.in par hi vishwas karein.`,
-  authors: [{ name: 'KisanStatus Team', url: `${SITE_URL}/about` }],
+  authors: [{ name: 'Manish Kumar', url: `${SITE_URL}/about` }],
   alternates: { canonical: `${SITE_URL}/disclaimer` },
   robots: { index: true, follow: true },
   openGraph: {

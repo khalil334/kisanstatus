@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     'fish pond setup',
     'aquaculture business'
   ],
-  authors: [{ name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' }],
+  authors: [{ name: 'Manish Kumar', url: 'https://kisanstatus.com/about' }],
   openGraph: {
     title: 'PM Matsya Sampada Yojana 2026: 60% Subsidy & Complete Guide',
     description: 'PM Matsya Sampada Yojana complete guide. Janein fish farming subsidy, biofloc technology, pond setup aur real profit calculation ke baare mein.',

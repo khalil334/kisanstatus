@@ -115,7 +115,7 @@ export default function FAQSection({
               <span className="text-3xl shrink-0" aria-hidden="true">📞</span>
               <div className="flex-1">
                 <h3 className="font-bold text-green-900 dark:text-green-300 text-base md:text-lg mb-2">
-                  Koi Aur Sawal Hai? Humari Team Se Baat Karein
+                  Koi Aur Sawal Hai? Humse Baat Karein
                 </h3>
                 <div className="space-y-2 text-sm md:text-base text-green-800 dark:text-green-400">
                   <p className="flex flex-wrap items-center gap-2">

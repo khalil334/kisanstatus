@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     'earthworm farming',
     'gobar se khaad banana'
   ],
-  authors: [{ name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' }],
+  authors: [{ name: 'Manish Kumar', url: 'https://kisanstatus.com/about' }],
   openGraph: {
     title: 'Vermi Compost Business 2026: PKVY Subsidy & Profit Guide',
     description: 'Vermi compost business complete guide. Janein organic fertilizer kaise banayein, PKVY subsidy, machinery cost aur real profit calculation ke baare mein sab kuch.',

@@ -6,7 +6,7 @@ import { InputField, SelectField, ResultRow, fmt, OtherCalcs, CalcHeader, CalcDi
 
 const SITE_URL = 'https://kisanstatus.com';
 const SITE_NAME = 'KisanStatus';
-const AUTHOR_NAME = 'KisanStatus Team';
+const AUTHOR_NAME = 'Manish Kumar';
 const AUTHOR_URL = `${SITE_URL}/about`;
 const PUBLISHED = '2026-03-10T19:42:43+05:30';
 const MODIFIED = '2026-05-20T09:33:04+05:30';

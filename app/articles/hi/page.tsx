@@ -92,7 +92,7 @@ export default function HindiArticlesHubPage() {
             inLanguage: 'hi-IN',
             datePublished: a.publishedTime,
             dateModified: a.modifiedTime,
-            author: { '@type': 'Organization', name: a.author, url: AUTHOR_URL },
+            author: { '@type': 'Person', name: a.author, url: AUTHOR_URL },
             publisher: orgPublisher,
             mainEntityOfPage: { '@type': 'WebPage', '@id': url },
           },
@@ -190,7 +190,7 @@ export default function HindiArticlesHubPage() {
                     </h2>
                     <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-2 flex-1 mb-5">{a.desc}</p>
                     <div className="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-700/50">
-                      <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">✍️ KisanStatus Team</span>
+                      <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">✍️ Manish Kumar</span>
                       <Link
                         href={`/articles/${a.slug}`}
                         className="text-sm font-bold text-amber-700 dark:text-amber-400 group-hover:translate-x-2 transition-transform duration-300 inline-flex items-center gap-1.5"

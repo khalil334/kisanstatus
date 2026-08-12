@@ -71,7 +71,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
             Murgi Palan Loan 2026: NLM Se 50% Subsidy (₹25 Lakh Tak) — Eligibility, Layer vs Broiler Aur Apply Ka Poora Process
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
+            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">Manish Kumar</Link></span>
             <span>📅 {fmtDate(article.publishedTime)}</span>
             <span>🔄 Last Updated: 5 August 2026</span>
             <span>⏱️ 11 min read</span>

@@ -25,7 +25,7 @@ const orgSchema = {
   name: SITE_NAME,
   url: SITE_URL,
   foundingDate: '2025',
-  founder: { '@type': 'Organization', name: AUTHOR_NAME },
+  founder: { '@type': 'Person', name: AUTHOR_NAME },
   contactPoint: {
     '@type': 'ContactPoint',
     email: 'kisanstatus.support@gmail.com',
