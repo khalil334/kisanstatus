@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
-import { AuthorBox } from '@/components/ArticleShared';
+import { AuthorBox, FAQBlock } from '@/components/ArticleShared';
 import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 import GuideDisclaimer from '@/components/GuideDisclaimer';
 import { getArticleBySlug } from '@/lib/articles-data';
@@ -47,58 +47,28 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'FAQPage',
-      '@id': 'https://kisanstatus.com/articles/pm-fme-yojana-food-processing/#faq',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Kya rented jagah par kaam karne walon ko PM FME subsidy milti hai?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Haan, lekin shart yeh hai ki rent agreement valid ho. Subsidy kiraye (rent) par nahi milti, lekin agar aap us rented space mein renovation, electrical work, ya machinery installation karte hain, toh un expenses par 35% subsidy claim ki ja sakti hai.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Agar bank loan reject ho jaye, toh kya PM FME subsidy mil sakti hai?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Nahi. PM FME ek "credit-linked" subsidy scheme hai. Iska matlab hai ki subsidy tabhi release hoti hai jab bank aapka loan approve aur disburse kar deta hai. Bina loan sanction ke subsidy claim nahi ki ja sakti.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Kya PM FME mein working capital ke liye alag se collateral (girvi) dena padta hai?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Zyadatar cases mein nahi. PM FME ke under working capital loan CGTMSE (Credit Guarantee Fund Trust for Micro and Small Enterprises) ke cover mein aata hai, jisme ₹2 crore tak ke loan par collateral ki requirement waive ho sakti hai. Lekin final decision bank ki internal credit policy par depend karta hai.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Kya purani machinery ko replace karne par bhi subsidy milti hai?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Haan, PM FME "Technology Upgradation" ko bhi support karti hai. Agar aap purani, inefficient machinery ki jagah nayi, automated, ya food-safe equipment lagate hain, toh uski cost par bhi 35% subsidy claim ki ja sakti hai.',
-          },
-        },
-      ],
-    },
-  ],
-};
+const pMFMEYojanaFaqs = [
+  {
+    q: 'Kya rented jagah par kaam karne walon ko PM FME subsidy milti hai?',
+    a: 'Haan, lekin shart yeh hai ki rent agreement valid ho. Subsidy kiraye (rent) par nahi milti, lekin agar aap us rented space mein renovation, electrical work, ya machinery installation karte hain, toh un expenses par 35% subsidy claim ki ja sakti hai.',
+  },
+  {
+    q: 'Agar bank loan reject ho jaye, toh kya PM FME subsidy mil sakti hai?',
+    a: 'Nahi. PM FME ek "credit-linked" subsidy scheme hai. Iska matlab hai ki subsidy tabhi release hoti hai jab bank aapka loan approve aur disburse kar deta hai. Bina loan sanction ke subsidy claim nahi ki ja sakti.',
+  },
+  {
+    q: 'Kya PM FME mein working capital ke liye alag se collateral (girvi) dena padta hai?',
+    a: 'Zyadatar cases mein nahi. PM FME ke under working capital loan CGTMSE (Credit Guarantee Fund Trust for Micro and Small Enterprises) ke cover mein aata hai, jisme ₹2 crore tak ke loan par collateral ki requirement waive ho sakti hai. Lekin final decision bank ki internal credit policy par depend karta hai.',
+  },
+  {
+    q: 'Kya purani machinery ko replace karne par bhi subsidy milti hai?',
+    a: 'Haan, PM FME "Technology Upgradation" ko bhi support karti hai. Agar aap purani, inefficient machinery ki jagah nayi, automated, ya food-safe equipment lagate hain, toh uski cost par bhi 35% subsidy claim ki ja sakti hai.',
+  },
+];
 
 export default function PMFMEYojana() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-8 text-gray-800 dark:text-gray-200 leading-relaxed prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-blue-600 dark:prose-a:text-blue-400">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-
       <Image
         src="/images/kisanguides/pmfhero.webp"
         alt="Small Food Processing Unit Making Pickle - PM FME Yojana Subsidy Guide"
@@ -598,24 +568,7 @@ export default function PMFMEYojana() {
       <h2 id="faq" className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         PM FME Par Poochhe Gaye Asli Sawal
       </h2>
-      <div className="space-y-4 mb-8 not-prose">
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">1. Kya rented jagah par kaam karne walon ko PM FME subsidy milti hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Haan, lekin shart yeh hai ki rent agreement valid ho. Subsidy kiraye (rent) par nahi milti, lekin agar aap us rented space mein renovation, electrical work, ya machinery installation karte hain, toh un expenses par 35% subsidy claim ki ja sakti hai.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">2. Agar bank loan reject ho jaye, toh kya PM FME subsidy mil sakti hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Nahi. PM FME ek "credit-linked" subsidy scheme hai. Iska matlab hai ki subsidy tabhi release hoti hai jab bank aapka loan approve aur disburse kar deta hai. Bina loan sanction ke subsidy claim nahi ki ja sakti.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">3. Kya PM FME mein working capital ke liye alag se collateral (girvi) dena padta hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Zyadatar cases mein nahi. PM FME ke under working capital loan CGTMSE (Credit Guarantee Fund Trust for Micro and Small Enterprises) ke cover mein aata hai, jisme ₹2 crore tak ke loan par collateral ki requirement waive ho sakti hai. Lekin final decision bank ki internal credit policy par depend karta hai.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">4. Kya purani machinery ko replace karne par bhi subsidy milti hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Haan, PM FME "Technology Upgradation" ko bhi support karti hai. Agar aap purani, inefficient machinery ki jagah nayi, automated, ya food-safe equipment lagate hain, toh uski cost par bhi 35% subsidy claim ki ja sakti hai.</p>
-        </div>
-      </div>
+      <FAQBlock faqs={pMFMEYojanaFaqs} variant="inline" />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Aage Padhne Layak Guides Aur Paise Ka Intezam
