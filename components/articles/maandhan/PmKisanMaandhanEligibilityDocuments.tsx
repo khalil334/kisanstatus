@@ -379,9 +379,9 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Ek Baat Yaad Rakhein</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">CSC Jaane Se Ek Din Pehle: Teen Documents, Teen Naam</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Eligibility aur documents mein chhoti si chook bhi budhape ki pension rok sakti hai. CSC jane se ek din pehle Aadhaar, Bank aur Khatauni teeno alag-alag check kar lein. Confusion ho toh apply karne se pehle hamari <Link href="/maandhan/pm-kisan-maandhan-registration-2026" className="underline text-blue-600 dark:text-blue-400 font-medium">Registration Guide</Link> ek baar padh lein.
+            Reject hone wale applications mein sabse aam wajah documents ka aapas mein na milna hai — Aadhaar par ek naam, bank passbook par doosri spelling, khatauni par teesri. CSC jaane se ek din pehle teeno kagaz saath rakh kar naam, spelling aur date of birth khud milaa lein; jo bhi alag ho, pehle use theek karwayein, phir enrollment karwayein. Confusion ho toh apply karne se pehle hamari <Link href="/maandhan/pm-kisan-maandhan-registration-2026" className="underline text-blue-600 dark:text-blue-400 font-medium">Registration Guide</Link> ek baar padh lein.
           </p>
         </div>
 

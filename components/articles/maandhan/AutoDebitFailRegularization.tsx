@@ -223,7 +223,7 @@ export default function AutoDebitFailRegularization() {
         </section>
 
         <section className="mb-8">
-          <SH>CIBIL Score Ka Kya Hoga — Sach Kya Hai?</SH>
+          <SH>CIBIL Score Par Asar — Kab Girta Hai, Kab Nahi</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Yahi sabse zyada tension deta hai logo ko. Achi khabar ye hai — ek baar auto-debit fail hone se score turant nahi girta. Bura tab hota hai jab isse latka ke rakh do.
           </p>

@@ -404,9 +404,9 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Ek Baat Yaad Rakhein</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Band Karwane Se Pehle SMS Trail Set Kar Lein</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Auto-debit ek facility hai, ek zabardasti nahi. Aapne enrollment ke waqt chuna tha, aur aap kabhi bhi band karwa sakte hain. Lekin band karne se monthly contribution ki responsibility aapki ban jati hai. Har mahine time par payment karna na bhoolein, warna default hone se aapki 60 saal ki pension khatre mein pad sakti hai.
+            Auto-debit consent aapne enrollment par diya tha aur kabhi bhi wapas le sakte hain — lekin band karwane ke baad har mahine khud jama karne ki zimmedari aap par aa jaati hai, aur wahi woh mod hai jahan zyada tar accounts dormant hote hain. Isliye band karwane se pehle registered mobile number active karwa lein: har jama contribution ka SMS aata hai, aur jis mahine SMS na aaye, usi hafte KPAN se maandhan.in par balance check kar lein. Ye chhota sa trail 60 saal wali ₹3000 pension ko default se bachaata hai.
           </p>
         </div>
 
