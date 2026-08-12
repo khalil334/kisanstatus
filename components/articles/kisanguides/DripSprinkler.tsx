@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { Disclaimer } from '@/components/ArticleShared';
+import { getArticleBySlug } from '@/lib/articles-data';
+import { Disclaimer, AuthorBox } from '@/components/ArticleShared';
 import { EXTERNAL_LINK_PROPS, AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
 export const metadata: Metadata = {
@@ -472,6 +473,7 @@ export default function DripSprinkler() {
       </div>
 
       <Disclaimer />
+      <AuthorBox modified={getArticleBySlug('drip-sprinkler-irrigation-subsidy')!.modifiedTime} />
     </article>
   );
 }

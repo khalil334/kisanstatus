@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
+import { AuthorBox } from '@/components/ArticleShared';
 import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 import GuideDisclaimer from '@/components/GuideDisclaimer';
 import { getArticleBySlug } from '@/lib/articles-data';
@@ -585,6 +586,8 @@ export default function VerminCompost() {
           <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Normal gobar ki khaad (FYM) mein bhi nutrients hote hain, lekin vermi compost mein earthworms ki wajah se enzymes aur beneficial microbes ki matra 10-20 guna zyada hoti hai. Yeh mitti ki structure ko FYM ke mukable jaldi aur behtar tarike se improve karti hai.</p>
         </div>
       </div>
+
+      <AuthorBox modified={getArticleBySlug('vermi-compost-business-guide')!.modifiedTime} />
 
       <GuideDisclaimer
         consult="agriculture officers, CAs"
