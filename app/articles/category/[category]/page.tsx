@@ -282,7 +282,7 @@ export default async function CategoryPage({
             ...(a.publishedTime ? { datePublished: a.publishedTime } : {}),
             ...(a.modifiedTime ? { dateModified: a.modifiedTime } : {}),
             author: {
-              '@type': 'Organization',
+              '@type': 'Person',
               name: a.author || AUTHOR_NAME,
               url: AUTHOR_URL,
             },

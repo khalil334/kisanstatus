@@ -10,7 +10,7 @@ export const AUTHOR_NAME = 'Manish Kumar';
 export const AUTHOR_URL = `${SITE_URL}/about`;
 export const AUTHOR_IMAGE = '/images/author-manish-kumar.webp';
 export const AUTHOR_IMAGE_URL = `${SITE_URL}${AUTHOR_IMAGE}`;
-export const AUTHOR_BIO = 'Sarkari kisan yojnaon ki official websites (pmkisan.gov.in, state portals) se information collect karke simple Hindi mein present karta hoon. Yahan di gayi har detail official source se cross-check ki jati hai.';
+export const AUTHOR_BIO = 'Main pichhle kai saalon se PM Kisan aur doosri sarkari yojanaon ko track kar raha hoon. Jo bhi likhta hoon, pehle pmkisan.gov.in aur state portals par khud check karta hoon — phir aasan bhasha mein samjhata hoon, taaki aapko sahi jankari ke liye idhar-udhar bhatakna na pade.';
 
 export const TWITTER_HANDLE = '@kisanstatus';
 
