@@ -14,9 +14,13 @@ export const AUTHOR_BIO = 'Sarkari kisan yojnaon ki official websites (pmkisan.g
 
 export const TWITTER_HANDLE = '@kisanstatus';
 
+export const WHATSAPP_CHANNEL_URL =
+  'https://whatsapp.com/channel/0029VbDvYxx8kyyS2jexHM0k';
+
 export const SOCIAL_LINKS = {
   facebook: 'https://www.facebook.com/profile.php?id=61590430994270',
   twitter: 'https://twitter.com/kisanstatus',
+  whatsapp: WHATSAPP_CHANNEL_URL,
 } as const;
 
 export const LOGO_URL = `${SITE_URL}/logo.png`;
