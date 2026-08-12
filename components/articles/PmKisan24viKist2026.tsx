@@ -21,14 +21,14 @@ const PUBLISHED = '2026-01-01T10:21:39+05:30';
 const MODIFIED = '2026-01-15T08:43:23+05:30';
 
 const RELATED = [
-  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Complete Guide', emoji: '📚' },
-  { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Matlab Kya Hai', emoji: '💳' },
-  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List Mein Naam Dekho', emoji: '📋' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Loan Apply Online', emoji: '💰' },
+  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Complete Guide' },
+  { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Matlab Kya Hai' },
+  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List Mein Naam Dekho' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Loan Apply Online' },
   { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price Guide', emoji: '🌱' },
-  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav', emoji: '📈' },
-  { slug: 'PmKisan25viKist2027', title: '25vi Kist 2027 Kab Aayegi', emoji: '📅' },
-  { slug: 'pm-kisan-self-registered-status-check', title: 'Self Registration Status', emoji: '✅' },
+  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav' },
+  { slug: 'PmKisan25viKist2027', title: '25vi Kist 2027 Kab Aayegi' },
+  { slug: 'pm-kisan-self-registered-status-check', title: 'Self Registration Status' },
 ];
 
 const FAQS_DATA = [
@@ -87,10 +87,10 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             PM Kisan 24vi Kist Kab Aayegi? {KIST.expectedDate} Release Date, Status Check Aur Tayyari Ka Pura Guide
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 10 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>10 min read</span>
           </div>
         </div>
       </div>
@@ -104,7 +104,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
         }`}>
           <div className="flex items-start gap-3">
             <span className="text-2xl shrink-0" aria-hidden="true">
-              {isReleased ? '✅' : isConfirmed ? '📅' : '⏳'}
+              {isReleased ? '' : isConfirmed ? '' : ''}
             </span>
             <div>
               <p className={`font-black text-base sm:text-lg leading-snug ${
@@ -130,7 +130,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
                   : 'Abhi official date announce nahi hui. Page bookmark kar lo.'}
               </p>
               <p className="text-xs text-[var(--color-text-muted)] mt-1.5">
-                🗓️ Last Updated: {fmtDate(MODIFIED)}
+                 Last Updated: {fmtDate(MODIFIED)}
               </p>
             </div>
           </div>
@@ -172,15 +172,15 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             Sach bataun toh official date abhi tak announce nahi hui hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Pichhla pattern itna hai: kist aam taur par 4 mahine ke antar par aati hai, aur 23vi kist 20 June 2026 ko aayi thi. Is hisaab se agli kist October 2026 ke aas-paas pad sakti hai, lekin <strong>⚠️ Proposed — ye sirf pattern se nikala anumaan hai, official notification nahi.</strong> Jab tak pmkisan.gov.in par notification na aaye, koi tareekh pakki na maanein.
+            Pichhla pattern itna hai: kist aam taur par 4 mahine ke antar par aati hai, aur 23vi kist 20 June 2026 ko aayi thi. Is hisaab se agli kist October 2026 ke aas-paas pad sakti hai, lekin <strong>Proposed — ye sirf pattern se nikala anumaan hai, official notification nahi.</strong> Jab tak pmkisan.gov.in par notification na aaye, koi tareekh pakki na maanein.
           </p>
 
           <div className="bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 rounded-xl p-4 mb-4">
             <p className="font-black text-orange-800 dark:text-orange-300 text-sm mb-2">Recent Release Pattern:</p>
             <ul className="text-xs text-orange-700 dark:text-orange-400 space-y-1">
-              <li>• 21vi → November 2025 ✅</li>
-              <li>• 22vi → 13 March 2026 ✅</li>
-              <li>• 23vi → 20 June 2026 ✅</li>
+              <li>• 21vi → November 2025</li>
+              <li>• 22vi → 13 March 2026</li>
+              <li>• 23vi → 20 June 2026</li>
               <li>• <strong>24vi → October 2026 (Expected)</strong></li>
             </ul>
           </div>
@@ -261,7 +261,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl p-4">
-              <p className="font-black text-green-800 dark:text-green-300 text-sm mb-2">✅ Eligible Ho</p>
+              <p className="font-black text-green-800 dark:text-green-300 text-sm mb-2">Eligible Ho</p>
               <ul className="text-xs text-[var(--color-text-muted)] space-y-1">
                 <li>✓ Chhota ya marginal kisan ho</li>
                 <li>✓ Kheti ki zameen registered hai naam par</li>
@@ -271,7 +271,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
               </ul>
             </div>
             <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl p-4">
-              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-2">❌ Eligible Nahi Ho</p>
+              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-2">Eligible Nahi Ho</p>
               <ul className="text-xs text-[var(--color-text-muted)] space-y-1">
                 <li>✗ Income tax dete ho (kisi bhi saal)</li>
                 <li>✗ Government employee ho (central/state)</li>
@@ -343,7 +343,6 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
-              <span className="text-2xl block mb-2" aria-hidden="true">📱</span>
               <p className="font-black text-green-800 dark:text-green-300 text-sm mb-1">OTP Based</p>
               <p className="text-xs text-[var(--color-text-muted)]">Portal par Aadhaar daalo, OTP code verify karo. Sabse aasaan tarika — ghar baithe ho jata hai.</p>
             </div>
@@ -378,7 +377,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             ].map(({ err, fix }) => (
               <div key={err} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl overflow-hidden">
                 <div className="bg-red-50 dark:bg-red-900/20 border-b border-red-100 dark:border-red-800 px-4 py-2.5">
-                  <p className="font-black text-red-800 dark:text-red-300 text-sm">❌ {err}</p>
+                  <p className="font-black text-red-800 dark:text-red-300 text-sm">{err}</p>
                 </div>
                 <div className="p-4">
                   <div className="flex items-start gap-2 bg-green-50 dark:bg-green-900/20 rounded-lg p-3">
@@ -393,10 +392,10 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
           <div className="mt-4 p-4 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-xl">
             <p className="font-black text-[var(--color-text)] text-sm mb-2">Official Helpline:</p>
             <div className="text-xs text-[var(--color-text-muted)] space-y-1">
-              <p>📞 <strong>155261</strong> (24×7 Toll Free)</p>
-              <p>📞 <strong>1800-115-526</strong> (Toll Free)</p>
-              <p>📧 <strong>pmkisan-ict@gov.in</strong></p>
-              <p className="mt-2 text-[10px] italic">💡 Tip: Phone par 100 baar try karo — kabhi kabhi line busy hoti hai. Email bhi karo agar phone na lage.</p>
+              <p><strong>155261</strong> (24×7 Toll Free)</p>
+              <p><strong>1800-115-526</strong> (Toll Free)</p>
+              <p><strong>pmkisan-ict@gov.in</strong></p>
+              <p className="mt-2 text-[10px] italic">Tip: Phone par 100 baar try karo — kabhi kabhi line busy hoti hai. Email bhi karo agar phone na lage.</p>
             </div>
           </div>
         </section>
@@ -435,7 +434,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             <li>Yeh page bookmark karo — date confirm hote hi update hoga</li>
           </ol>
           <p className="text-xs text-green-700 dark:text-green-400 mt-4 italic">
-            💡 Meri personal advice: Aaj hi check karo — kal par mat chhodo. Bahut se kisan der kar dete hain aur kist ruk jati hai.
+             Meri personal advice: Aaj hi check karo — kal par mat chhodo. Bahut se kisan der kar dete hain aur kist ruk jati hai.
           </p>
         </div>
 
@@ -448,19 +447,18 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
         />
 
         <CalcBanner
-          icon="📅"
           title="Apni Kist Track Karo"
           desc="Kitni kist aayi, kitni pending — complete history jaano"
           primaryCta={{ href: '/calculator/installment-tracker', label: ' Tracker Kholo →' }}
-          secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: '💰 Benefit Calculator' }}
+          secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: 'Benefit Calculator' }}
         />
 
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
           { href: '/articles/pm-kisan-fto-generated-ka-matlab-kya-hai', l: ' FTO Guide' },
-          { href: '/articles/PmKisanBeneficiaryList2026', l: '📋 Beneficiary List' },
+          { href: '/articles/PmKisanBeneficiaryList2026', l: 'Beneficiary List' },
         ]} />
         <Disclaimer />
       </div>

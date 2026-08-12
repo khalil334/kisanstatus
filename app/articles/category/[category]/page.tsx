@@ -142,19 +142,19 @@ function CategoryIntro({ category }: { category: CategorySlug }) {
 const CATEGORY_DATA: Record<CategorySlug, {
   title: string;
   description: string;
-  emoji: string;
+  emoji?: string;
   keywords: string[];
 }> = {
   'status-check': {
     title: 'PM Kisan Status Check & Verification 2026',
     description: 'PM Kisan status check, beneficiary list verification, aur FTO generated ka matlab jaanein. 2026 ki latest, verified step-by-step guides.',
-    emoji: '📊',
+    
     keywords: ['pm kisan status check', 'beneficiary verification', 'installment status 2026', 'FTO generated', 'kist status'],
   },
   'loan': {
     title: 'Kisan Credit & Loan Guides 2026 — KCC',
     description: 'Kisan Credit Card (KCC), tractor loan, aur 4% interest par personal loan kaise lein. 2026 ki complete application process aur eligibility guides.',
-    emoji: '💰',
+    
     keywords: ['kisan credit card', 'KCC loan 2026', 'tractor loan', 'kisan personal loan', '4% interest loan'],
   },
   'farming': {
@@ -166,7 +166,7 @@ const CATEGORY_DATA: Record<CategorySlug, {
   'mandi': {
     title: 'Mandi Bhav & Market Rates 2026',
     description: 'Aaj ka mandi bhav aur daily updated wholesale rates. Apne shehar ke sabzi, anaj aur fruit ke aaj ke bhav aur market trends yahan check karein.',
-    emoji: '📈',
+    
     keywords: ['mandi bhav today', 'sabzi bhav', 'fruit rates 2026', 'wholesale prices', 'aaj ka bhav'],
   },
   'pashupalan': {
@@ -335,7 +335,7 @@ export default async function CategoryPage({
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <span className="inline-flex items-center gap-1.5 bg-white/20 border border-white/30 text-white text-xs font-bold px-3 py-1.5 rounded-full backdrop-blur-sm">
-              📚 {categoryArticles.length} Verified Guides
+               {categoryArticles.length} Verified Guides
             </span>
             <Link
               href="/articles"
@@ -352,7 +352,7 @@ export default async function CategoryPage({
           <div className="flex flex-wrap justify-center gap-2">
             {Object.entries(CATEGORIES).map(([slug, cat]) => {
               const isActive = slug === category;
-              const catInfo = cat as { name: string; nameHi: string; icon: string };
+              const catInfo = cat as { name: string; nameHi: string; icon?: string };
               return (
                 <Link
                   key={slug}
@@ -377,7 +377,6 @@ export default async function CategoryPage({
       <div className="container-site mx-auto py-10">
         {categoryArticles.length === 0 ? (
           <div className="text-center py-16">
-            <div className="text-6xl mb-4" aria-hidden="true">🔍</div>
             <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
               Is category mein abhi koi guide available nahi hai
             </h2>

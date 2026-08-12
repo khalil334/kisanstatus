@@ -7,9 +7,9 @@ const PUBLISHED = '2026-01-17T07:41:23+05:30';
 const MODIFIED = '2026-01-22T12:01:39+05:30';
 
 const RELATED = [
-  { slug: 'PmKisanEkycOnline2026', title: 'Normal eKYC Guide', emoji: '🔐' },
-  { slug: 'PmKisanMasterGuide2026', title: 'Master Guide', emoji: '📚' },
-  { slug: 'PmKisanPaymentFailedFix2026', title: 'Payment Fix', emoji: '💸' },
+  { slug: 'PmKisanEkycOnline2026', title: 'Normal eKYC Guide' },
+  { slug: 'PmKisanMasterGuide2026', title: 'Master Guide' },
+  { slug: 'PmKisanPaymentFailedFix2026', title: 'Payment Fix' },
   { slug: 'PmKisanCscRegistrationCharges', title: 'CSC Registration', emoji: '🏪' },
 ];
 
@@ -57,10 +57,10 @@ export default function PmKisanFaceAuthenticationEkyc() {
             PM Kisan Face Authentication eKYC 2026: Bina OTP Ke Ghar Baithe Photo Verification
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
+            <span><Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
             <span> Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 15 min read</span>
+            <span>15 min read</span>
           </div>
         </div>
       </div>
@@ -287,8 +287,8 @@ export default function PmKisanFaceAuthenticationEkyc() {
               },
             ].map(({ error, fix }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
-                <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">❌ {error}</p>
-                <p className="text-xs text-[var(--color-text-muted)]"><strong className="text-green-700 dark:text-green-400">✅ Fix:</strong> {fix}</p>
+                <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">{error}</p>
+                <p className="text-xs text-[var(--color-text-muted)]"><strong className="text-green-700 dark:text-green-400">Fix:</strong> {fix}</p>
               </div>
             ))}
           </div>
@@ -322,9 +322,9 @@ export default function PmKisanFaceAuthenticationEkyc() {
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/PmKisanEkycOnline2026', l: '🔐 Normal eKYC' },
-          { href: '/articles/PmKisanPaymentFailedFix2026', l: '💸 Payment Fix' },
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
+          { href: '/articles/PmKisanEkycOnline2026', l: 'Normal eKYC' },
+          { href: '/articles/PmKisanPaymentFailedFix2026', l: 'Payment Fix' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
         ]} />
         <Disclaimer />
       </div>

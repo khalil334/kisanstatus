@@ -5,12 +5,12 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const RELATED = [
-  { slug: 'msp-list-2026-27', title: 'Sabhi Faslon Ki MSP 2026-27', emoji: '📋' },
-  { slug: 'mandi-bhav-today', title: 'Mandi Bhav Live Rates', emoji: '📊' },
-  { slug: 'enam-registration-kaise-kare', title: 'eNAM Registration Guide', emoji: '🖥️' },
-  { slug: 'mandi-bhav-app-comparison', title: 'Mandi Rate Apps Comparison', emoji: '📱' },
+  { slug: 'msp-list-2026-27', title: 'Sabhi Faslon Ki MSP 2026-27' },
+  { slug: 'mandi-bhav-today', title: 'Mandi Bhav Live Rates' },
+  { slug: 'enam-registration-kaise-kare', title: 'eNAM Registration Guide' },
+  { slug: 'mandi-bhav-app-comparison', title: 'Mandi Rate Apps Comparison' },
   { slug: 'sabzi-bhav-guide-pyaz-aloo-tamatar', title: 'Sabzi Bhav Guide', emoji: '🥔' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Apply Guide 2026', emoji: '💳' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Apply Guide 2026' },
 ];
 
 const FAQS_DATA = [
@@ -76,10 +76,10 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
             Gehu Ka Bhav 2026: MSP Par Bechein Ya Mandi Mein — Faisla Kaise Karein, Kab Bechein, Kab Rokein
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(article.publishedTime)}</span>
-            <span>🔄 Last Updated: 5 August 2026</span>
-            <span>⏱️ 10 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(article.publishedTime)}</span>
+            <span>Last Updated: 5 August 2026</span>
+            <span>10 min read</span>
           </div>
         </div>
       </div>
@@ -334,7 +334,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
 
         <FAQBlock faqs={FAQS_DATA} />
 
-        <SH>📚 Sources</SH>
+        <SH>Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
             Agmarknet — daily mandi rates, Govt of India.{' '}
@@ -353,8 +353,8 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[
-          { href: '/articles', l: '📚 Poori Article Library' },
-          { href: '/articles/category/mandi', l: '📂 Mandi Guides' },
+          { href: '/articles', l: 'Poori Article Library' },
+          { href: '/articles/category/mandi', l: 'Mandi Guides' },
         ]} />
         <Disclaimer />
       </div>

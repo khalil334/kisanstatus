@@ -12,13 +12,13 @@ const RELATED_CARDS = [
     slug: 'pm-kisan-maandhan-withdrawal-refund-rules',
     title: 'Withdrawal & Refund Rules',
     desc: 'Agar 60 saal se pehle scheme chhodni pade ya death ho jaye, toh paisa kaise wapas milta hai.',
-    emoji: '💸',
+    
   },
   {
     slug: 'pm-kisan-maandhan-status-check-online',
     title: 'Apna Status Check Karein',
     desc: 'Pension card download karne ke baad apna contribution history aur active status verify karein.',
-    emoji: '🔍',
+    
   },
   {
     slug: 'pmkmy-bank-account-change',
@@ -118,10 +118,10 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
           </h1>
 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 12 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>12 min read</span>
           </div>
         </div>
       </div>
@@ -185,14 +185,14 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
 
             <div className="space-y-3 mb-4">
               <div className="p-4 bg-white dark:bg-gray-800 border-l-4 border-green-500 rounded">
-                <p className="font-bold text-sm text-green-700 dark:text-green-400 mb-2">✅ Option 1: Scheme Continue Karein</p>
+                <p className="font-bold text-sm text-green-700 dark:text-green-400 mb-2">Option 1: Scheme Continue Karein</p>
                 <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
                   Surviving spouse scheme ko continue kar sakte hain. Is case mein, unhe regular monthly contributions deni hongi jab tak woh 60 saal ki umar tak nahi pahunch jate. 60 saal hone par, unhe ₹3,000 monthly pension milna shuru ho jayegi — bilkul waise hi jaise original subscriber ko milta.
                 </p>
               </div>
 
               <div className="p-4 bg-white dark:bg-gray-800 border-l-4 border-blue-500 rounded">
-                <p className="font-bold text-sm text-blue-700 dark:text-blue-400 mb-2">💰 Option 2: Exit Karein Aur Lump-Sum Le Lein</p>
+                <p className="font-bold text-sm text-blue-700 dark:text-blue-400 mb-2">Option 2: Exit Karein Aur Lump-Sum Le Lein</p>
                 <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
                   Agar spouse scheme continue nahi karna chahte, to woh exit kar sakte hain. Is case mein, unhe accumulated corpus (jama kiya hua fund + sarkar ka matching share + earned interest) ek saath lump-sum refund ke roop mein mil jata hai.
                 </p>
@@ -303,23 +303,23 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
 
           <div className="space-y-3 mb-4">
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
-              <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">❌ Galti 1: Nominee Ko Update Na Karna</p>
+              <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">Galti 1: Nominee Ko Update Na Karna</p>
               <p className="text-xs text-[var(--color-text-muted)]">Enrolment ke waqt parent ya sibling ko nominee banana, aur baad mein unke guzarne par use update na karna. Shadi ya kisi bhi major life event ke baad CSC jakar nomination update zaroor karein.</p>
             </div>
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
-              <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">❌ Galti 2: Bank Account Ko Dormant Hone Dena</p>
+              <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">Galti 2: Bank Account Ko Dormant Hone Dena</p>
               <p className="text-xs text-[var(--color-text-muted)]">Agar linked savings account mein 2 saal se koi transaction nahi hua, to bank use 'dormant' mark kar deta hai. Claim process ke waqt transfer fail ho jata hai. Account ko active rakhne ke liye chote transactions (jaise ₹100) karte rahein.</p>
             </div>
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
-              <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">❌ Galti 3: Enrolment Receipt Phenk Dena</p>
+              <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">Galti 3: Enrolment Receipt Phenk Dena</p>
               <p className="text-xs text-[var(--color-text-muted)]">Enrolment receipt mein aapka unique number aur contribution history hoti hai. Ise hamesha safe rakhein ya uski photo apne phone mein save kar lein. Har query mein yeh number kaam aata hai.</p>
             </div>
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
-              <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">❌ Galti 4: Marriage Ko Legally Register Na Karwana</p>
+              <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">Galti 4: Marriage Ko Legally Register Na Karwana</p>
               <p className="text-xs text-[var(--color-text-muted)]">Gaon mein traditional shadi ke baad legal registration na karwana baad mein marital relationship prove karne mein rukawat ban sakta hai. Ration card ya voter list mein dono ke naam ek saath hone se madad milti hai.</p>
             </div>
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
-              <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">❌ Galti 5: Claim File Karne Mein Bahut Deri Karna</p>
+              <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">Galti 5: Claim File Karne Mein Bahut Deri Karna</p>
               <p className="text-xs text-[var(--color-text-muted)]">Grief ke waqt delay natural hai, lekin mahino tak deri karne se documents degrade hote hain aur bank staff change ho jate hain. Ideal yahi hai ki death ke 30 din ke andar process shuru kar dein.</p>
             </div>
           </div>
@@ -433,8 +433,8 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
 
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/maandhan/pm-kisan-maandhan-withdrawal-refund-rules', l: '💸 Withdrawal Rules' },
-          { href: '/maandhan/pm-kisan-maandhan-status-check-online', l: '🔍 Status Check' },
+          { href: '/maandhan/pm-kisan-maandhan-withdrawal-refund-rules', l: 'Withdrawal Rules' },
+          { href: '/maandhan/pm-kisan-maandhan-status-check-online', l: 'Status Check' },
           { href: '/maandhan/pmkmy-bank-account-change', l: '🏦 Bank Change' },
         ]} />
         <Disclaimer />

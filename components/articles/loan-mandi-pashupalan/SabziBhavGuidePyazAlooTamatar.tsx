@@ -5,12 +5,12 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const RELATED = [
-  { slug: 'mandi-bhav-today', title: 'Mandi Ka Taaza Bhav', emoji: '📊' },
-  { slug: 'mandi-bhav-app-comparison', title: 'Mandi Bhav Apps Comparison', emoji: '📱' },
+  { slug: 'mandi-bhav-today', title: 'Mandi Ka Taaza Bhav' },
+  { slug: 'mandi-bhav-app-comparison', title: 'Mandi Bhav Apps Comparison' },
   { slug: 'gehu-ka-bhav-msp-vs-mandi', title: 'Gehu: MSP vs Mandi Bhav', emoji: '🌾' },
-  { slug: 'msp-list-2026-27', title: 'MSP 2026-27 Ka Poora Chart', emoji: '📋' },
-  { slug: 'enam-registration-kaise-kare', title: 'eNAM Se Online Bikri Shuru Karein', emoji: '💻' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Se Sasta Karj', emoji: '💳' },
+  { slug: 'msp-list-2026-27', title: 'MSP 2026-27 Ka Poora Chart' },
+  { slug: 'enam-registration-kaise-kare', title: 'eNAM Se Online Bikri Shuru Karein' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Se Sasta Karj' },
 ];
 
 const FAQS_DATA = [
@@ -72,10 +72,10 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
             Pyaz, Aloo, Tamatar Kab Bechein? Seasonal Price Cycle, Cold Storage Ka Hisaab Aur NAFED Ka Asar — Poori Guide
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(article.publishedTime)}</span>
-            <span>🔄 Last Updated: 5 August 2026</span>
-            <span>⏱️ 11 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(article.publishedTime)}</span>
+            <span>Last Updated: 5 August 2026</span>
+            <span>11 min read</span>
           </div>
         </div>
       </div>
@@ -269,7 +269,7 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
           retail/direct supply jahan mandi se behtar rate milta hai.
         </DB>
 
-        <SH>📰 2026 Ka Asli Scene — Nashik Se Seedha Sabak</SH>
+        <SH>2026 Ka Asli Scene — Nashik Se Seedha Sabak</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Yeh cycle kitaabi baat nahi hai — 2026 ka rabi season khud dekho. May 2026 mein rabi harvest ke flood
           mein Nashik belt ki mandiyon mein average pyaz ₹800-1,000 per quintal tak gira, aur Nandgaon APMC ke
@@ -286,7 +286,7 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
           hafte ka bhi sabr rakh saka, uska average behtar nikla.
         </p>
 
-        <SH>📊 Roz Ka Bhav Check Karna — 5 Minute Ki Aadat</SH>
+        <SH>Roz Ka Bhav Check Karna — 5 Minute Ki Aadat</SH>
         <Image
           src="/images/articles/loan-mandi-pashupalan/sabzi-bhav-guide-pyaz-aloo-tamatar/bhav-check.webp"
           alt="Mandi jaane se pehle kisan phone par bhav check karta hua"
@@ -316,7 +316,7 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
           panjikaran ki step-by-step guide</Link> dekho — registration ek baar ka kaam hai, option hamesha ke liye khul jaata hai.
         </p>
 
-        <SH>⚠️ 5 Galtiyan Jo Sabzi Kisan Ka Munafa Kha Jaati Hain</SH>
+        <SH>5 Galtiyan Jo Sabzi Kisan Ka Munafa Kha Jaati Hain</SH>
         <Image
           src="/images/articles/loan-mandi-pashupalan/sabzi-bhav-guide-pyaz-aloo-tamatar/sabzi-boli.webp"
           alt="Sabzi mandi mein boli — buyers crate ke aas-paas"
@@ -334,10 +334,10 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
           <SI n={5}><strong>NAFED/buffer stock ko ignore karna</strong> — pyaz mein bade boom ka intezaar karne walo ka stock aksar tab bikta hai jab sarkar buffer utar chuki hoti hai. Sarkari intervention ab cycle ka permanent hissa hai — strategy usi ke hisaab se banao.</SI>
         </StepList>
 
-        <SH>❓ FAQ — Aksar Puche Jaane Wale Sawal</SH>
+        <SH>FAQ — Aksar Puche Jaane Wale Sawal</SH>
         <FAQBlock faqs={FAQS_DATA} />
 
-        <SH>📚 Sources</SH>
+        <SH>Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
             Free Press Journal — Nashik onion MAPP ₹1,580 order, May 2026.{' '}
@@ -356,8 +356,8 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[
-          { href: '/articles', l: '📚 Sabhi Guides' },
-          { href: '/articles/category/mandi', l: '📂 Mandi Bhav Guides' },
+          { href: '/articles', l: 'Sabhi Guides' },
+          { href: '/articles/category/mandi', l: 'Mandi Bhav Guides' },
         ]} />
         <Disclaimer />
       </div>

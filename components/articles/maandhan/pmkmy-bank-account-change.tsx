@@ -12,19 +12,19 @@ const RELATED_CARDS = [
     slug: 'pm-kisan-maandhan-pension-card-download',
     title: 'Pension Card Download',
     desc: 'PMKMY pension card/acknowledgement ghar baithe kaise download karein.',
-    emoji: '📄',
+    
   },
   {
     slug: 'pm-kisan-maandhan-status-check-online',
     title: 'Status Check Online',
     desc: 'PM Kisan Maandhan Yojana mein apna status kaise verify kijiye aur contribution history dekhein.',
-    emoji: '🔍',
+    
   },
   {
     slug: 'pm-kisan-maandhan-eligibility-documents',
     title: 'Eligibility & Documents',
     desc: 'Kaun PM Kisan Maandhan Yojana ke liye eligible hai aur kaun se documents zaroori hain.',
-    emoji: '✅',
+    
   },
 ];
 
@@ -122,10 +122,10 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
           </h1>
 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 11 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>11 min read</span>
           </div>
         </div>
       </div>
@@ -217,15 +217,15 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
               <p className="text-sm text-[var(--color-text-muted)]">Chhoti branches ka merger ya permanent closure — gaon me ye ab common ho gaya hai.</p>
             </div>
             <div className="bg-green-50 dark:bg-green-900/20 p-5 rounded-lg border border-green-100 dark:border-green-800">
-              <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">📍 Location Shift</h3>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">Location Shift</h3>
               <p className="text-sm text-[var(--color-text-muted)]">Dusra sheher ya gaon me shift hone par purani branch accessible nahi rehti.</p>
             </div>
             <div className="bg-yellow-50 dark:bg-yellow-900/20 p-5 rounded-lg border border-yellow-100 dark:border-yellow-800">
-              <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">📕 Passbook Lost/Theft</h3>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">Passbook Lost/Theft</h3>
               <p className="text-sm text-[var(--color-text-muted)]">Passbook kho jaane ya chori hone par bank naya account number issue kar deta hai.</p>
             </div>
             <div className="bg-red-50 dark:bg-red-900/20 p-5 rounded-lg border border-red-100 dark:border-red-800">
-              <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">🔄 IFSC Code Change</h3>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">IFSC Code Change</h3>
               <p className="text-sm text-[var(--color-text-muted)]">Bank merger ya technology upgrade se IFSC code badal jata hai.</p>
             </div>
             <div className="bg-purple-50 dark:bg-purple-900/20 p-5 rounded-lg border border-purple-100 dark:border-purple-800">
@@ -233,7 +233,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
               <p className="text-sm text-[var(--color-text-muted)]">Joint account se individual account me shift karna — especially widow/divorce cases me.</p>
             </div>
             <div className="bg-pink-50 dark:bg-pink-900/20 p-5 rounded-lg border border-pink-100 dark:border-pink-800">
-              <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">💰 Better Services</h3>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">Better Services</h3>
               <p className="text-sm text-[var(--color-text-muted)]">Nearby branch, lower charges, ya better customer service ke liye bank change.</p>
             </div>
           </div>
@@ -466,7 +466,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
               <p className="text-xs text-[var(--color-text-muted)]">Apne nazdeeki CSC ya naye bank branch me jaakar puchhein ki PMKMY account update ho gaya hai ya nahi.</p>
             </div>
             <div className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg border border-yellow-100 dark:border-yellow-800">
-              <h3 className="font-bold text-gray-900 dark:text-gray-100 mb-2">💻 Online Portal</h3>
+              <h3 className="font-bold text-gray-900 dark:text-gray-100 mb-2">Online Portal</h3>
               <p className="text-xs text-[var(--color-text-muted)]">PMKMY official portal par login karke apni updated details check karein.</p>
             </div>
           </div>
@@ -537,7 +537,6 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
                 href={`/maandhan/${card.slug}`}
                 className="group block p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:border-green-500 transition-all duration-300"
               >
-                <div className="text-2xl mb-2">{card.emoji}</div>
                 <h4 className="font-bold text-gray-900 dark:text-white text-sm mb-1 group-hover:text-green-600 transition-colors">
                   {card.title}
                 </h4>
@@ -554,9 +553,9 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
 
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/maandhan/pm-kisan-maandhan-pension-card-download', l: '📄 Pension Card' },
-          { href: '/maandhan/pm-kisan-maandhan-status-check-online', l: '🔍 Status Check' },
-          { href: '/maandhan/pm-kisan-maandhan-eligibility-documents', l: '✅ Eligibility' },
+          { href: '/maandhan/pm-kisan-maandhan-pension-card-download', l: 'Pension Card' },
+          { href: '/maandhan/pm-kisan-maandhan-status-check-online', l: 'Status Check' },
+          { href: '/maandhan/pm-kisan-maandhan-eligibility-documents', l: 'Eligibility' },
         ]} />
         <Disclaimer />
       </div>

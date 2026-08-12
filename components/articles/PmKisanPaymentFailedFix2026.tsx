@@ -12,19 +12,16 @@ const RELATED_CARDS = [
     slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai',
     title: 'FTO Generated Matlab Kya Hai',
     desc: 'FTO aur PFMS ke beech ka farak aur payment kab tak aayegi, jaane.',
-    emoji: '💳'
   },
   {
     slug: 'PmKisanEkycOnline2026',
     title: 'eKYC Karne Ka Poora Tarika',
     desc: 'Payment fail hone ka ek bada karan eKYC pending hona bhi ho sakta hai.',
-    emoji: '🔐'
   },
   {
     slug: 'PmKisan24viKist2026',
     title: '24vi Kist Status Check',
     desc: 'Apna latest installment status aur error codes abhi verify karein.',
-    emoji: '📅'
   },
 ];
 
@@ -79,17 +76,17 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
             <span>/</span>
             <span className="text-white font-bold">Payment Fix Guide</span>
           </nav>
-          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">💸 Payment Troubleshooting</span>
+          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Payment Troubleshooting</span>
 
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
             PM Kisan Payment Failed 2026: 7 Reasons & Quick Fix
           </h1>
 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 14 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>14 min read</span>
           </div>
         </div>
       </div>
@@ -290,14 +287,14 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
           <SH>Reason #6 Aur #7: Chhoti Cheezein Jo Nazarandaz Ho Jaati Hain</SH>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="p-5 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl">
-              <p className="font-black text-amber-800 dark:text-amber-300 text-sm mb-2">❌ Account Number Galat Daala Gaya</p>
+              <p className="font-black text-amber-800 dark:text-amber-300 text-sm mb-2">Account Number Galat Daala Gaya</p>
               <p className="text-xs text-[var(--color-text-muted)] mb-3">
                 Registration ke waqt ek digit chhut gaya ya extra aa gayi. Passbook se number match kar lo, phir portal se edit kar do ya CSC ki madad le lo.
               </p>
               <p className="text-xs text-green-700 dark:text-green-400 font-bold">Fix: Edit Bank Details mein sahi number daalo</p>
             </div>
             <div className="p-5 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-xl">
-              <p className="font-black text-purple-800 dark:text-purple-300 text-sm mb-2">❌ PFMS Server Ki Dikkat</p>
+              <p className="font-black text-purple-800 dark:text-purple-300 text-sm mb-2">PFMS Server Ki Dikkat</p>
               <p className="text-xs text-[var(--color-text-muted)] mb-3">
                 Kist release wale din server par load zyada ho jaata hai kabhi kabhi, transaction beech mein atak jaata hai. Ye khud hi 2-3 din mein theek ho jaata hai.
               </p>
@@ -406,11 +403,10 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
         />
 
         <CalcBanner
-          icon="💰"
           title="Kist Ka Poora Hisaab Nikaalo"
           desc="Ab tak kitna mila, kitna baaki — sab ek jagah calculate karo"
-          primaryCta={{ href: '/calculator/installment-tracker', label: '📅 Tracker Kholo →' }}
-          secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: '💰 Benefit Calculator' }}
+          primaryCta={{ href: '/calculator/installment-tracker', label: 'Tracker Kholo →' }}
+          secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: 'Benefit Calculator' }}
         />
 
         <section className="my-10">
@@ -422,7 +418,6 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
                 href={`/articles/${card.slug}`}
                 className="group block p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:border-green-500 transition-all duration-300"
               >
-                <div className="text-2xl mb-2">{card.emoji}</div>
                 <h4 className="font-bold text-gray-900 dark:text-white text-sm mb-1 group-hover:text-green-600 transition-colors">
                   {card.title}
                 </h4>
@@ -440,9 +435,9 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
         <AuthorBox modified={MODIFIED} />
 
         <BottomNav extraLinks={[
-          { href: '/articles/PmKisanEkycOnline2026', l: '🔐 eKYC Guide' },
-          { href: '/articles/PmKisanBeneficiaryList2026', l: '📋 Beneficiary List' },
-          { href: '/articles/PmKisan24viKist2026', l: '📅 24vi Kist Status' },
+          { href: '/articles/PmKisanEkycOnline2026', l: 'eKYC Guide' },
+          { href: '/articles/PmKisanBeneficiaryList2026', l: 'Beneficiary List' },
+          { href: '/articles/PmKisan24viKist2026', l: '24vi Kist Status' },
         ]} />
         <Disclaimer />
       </div>

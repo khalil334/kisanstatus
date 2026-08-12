@@ -336,7 +336,7 @@ export default function BiharKisanRegistrationStatusCheck2026({
       </p>
 
       <div className="not-prose my-8 p-5 border-2 border-green-600 rounded-2xl bg-green-50 dark:bg-green-950/30">
-        <p className="font-bold text-[var(--color-text)] mb-3 text-sm">📚 Aage kya padhna hai</p>
+        <p className="font-bold text-[var(--color-text)] mb-3 text-sm">Aage kya padhna hai</p>
         <ul className="space-y-2 text-sm m-0 list-none p-0">
           <li>
             → <Link href="/articles/PmKisanPaymentFailedFix2026">PM Kisan Payment Failed Fix</Link>{' '}
@@ -483,8 +483,8 @@ export default function BiharKisanRegistrationStatusCheck2026({
               key={myth}
               className="border border-[var(--color-border)] rounded-xl p-4 text-sm space-y-1.5"
             >
-              <p className="font-semibold text-[var(--color-text)] m-0">❌ Log kehte hain: {myth}</p>
-              <p className="text-[var(--color-text-muted)] m-0">✅ Asal baat: {sach}</p>
+              <p className="font-semibold text-[var(--color-text)] m-0">Log kehte hain: {myth}</p>
+              <p className="text-[var(--color-text-muted)] m-0">Asal baat: {sach}</p>
             </div>
           ))}
         </div>

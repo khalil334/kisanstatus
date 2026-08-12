@@ -7,9 +7,9 @@ const PUBLISHED = '2026-01-20T17:46:17+05:30';
 const MODIFIED = '2026-01-29T19:09:12+05:30';
 
 const RELATED = [
-  { slug: 'PmKisanMasterGuide2026', title: 'Master Guide', emoji: '📚' },
-  { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form', emoji: '📝' },
-  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List', emoji: '📋' },
+  { slug: 'PmKisanMasterGuide2026', title: 'Master Guide' },
+  { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form' },
+  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List' },
 ];
 
 const FAQS_DATA = [
@@ -56,10 +56,10 @@ export default function PmKisanVoluntarySurrenderGuide() {
             PM Kisan Voluntary Surrender: Galti Se Register Ho Gaye Toh Kaise Hatte?
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 12 min read</span>
+            <span><Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>12 min read</span>
           </div>
         </div>
       </div>
@@ -119,14 +119,14 @@ export default function PmKisanVoluntarySurrenderGuide() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
             {[
               { icon: '👨‍🏫', title: 'Government Employees', desc: 'Teachers, clerks, officers — sabhi government jobs wale' },
-              { icon: '💰', title: 'Income Tax Filers', desc: 'Jo log income tax return file karte hain' },
+              { title: 'Income Tax Filers', desc: 'Jo log income tax return file karte hain' },
               { icon: '👴', title: 'Pensioners', desc: 'Old age pension ya family pension lene wale' },
               { icon: '🏛️', title: 'MP/MLA/Officials', desc: 'Elected representatives aur unke family members' },
-              { icon: '👨‍💼', title: 'Professionals', desc: 'CA, Doctor, Lawyer, Engineer — registered professionals' },
+              { icon: '👨‍', title: 'Professionals', desc: 'CA, Doctor, Lawyer, Engineer — registered professionals' },
               { icon: '🏢', title: 'Institutional Land', desc: 'Jinki zameen trust ya company ke naam par hai' },
             ].map(({ icon, title, desc }) => (
               <div key={title} className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
-                <span className="text-2xl block mb-2">{icon}</span>
+                {icon ? <span className="text-2xl block mb-2">{icon}</span> : null}
                 <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">{title}</p>
                 <p className="text-xs text-red-700 dark:text-red-400">{desc}</p>
               </div>
@@ -256,7 +256,7 @@ export default function PmKisanVoluntarySurrenderGuide() {
               { doc: 'Registration Number', note: 'Agar yaad ho toh' },
             ].map(({ doc, note }) => (
               <div key={doc} className="p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-                <p className="font-black text-sm text-[var(--color-text)] mb-1">📄 {doc}</p>
+                <p className="font-black text-sm text-[var(--color-text)] mb-1">{doc}</p>
                 <p className="text-xs text-[var(--color-text-muted)]">{note}</p>
               </div>
             ))}
@@ -298,22 +298,22 @@ export default function PmKisanVoluntarySurrenderGuide() {
           <div className="space-y-3">
             <div className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 p-4 rounded-r-xl">
               <p className="text-sm text-amber-800 dark:text-amber-300">
-                <strong>⚠️ Recovery Ka Niyam:</strong> Agar aap eligible nahi the, toh sarkar pehle se disbursed kiye gaye paiso ki recovery kar sakti hai. Surrender karne se sirf future ki kist rukti hai aur legal penalty se bacha ja sakta hai.
+                <strong>Recovery Ka Niyam:</strong> Agar aap eligible nahi the, toh sarkar pehle se disbursed kiye gaye paiso ki recovery kar sakti hai. Surrender karne se sirf future ki kist rukti hai aur legal penalty se bacha ja sakta hai.
               </p>
             </div>
             <div className="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 p-4 rounded-r-xl">
               <p className="text-sm text-red-800 dark:text-red-300">
-                <strong>❌ Ek Baar Ka Decision:</strong> Surrender karne ke baad usi Aadhaar/zameen par dobara register karna mushkil ho sakta hai aur portal par restriction lag sakti hai. Soch samajh kar karo.
+                <strong>Ek Baar Ka Decision:</strong> Surrender karne ke baad usi Aadhaar/zameen par dobara register karna mushkil ho sakta hai aur portal par restriction lag sakti hai. Soch samajh kar karo.
               </p>
             </div>
             <div className="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 p-4 rounded-r-xl">
               <p className="text-sm text-blue-800 dark:text-blue-300">
-                <strong>✅ List Check Karo:</strong> 30 din baad <Link href="/articles/PmKisanBeneficiaryList2026" className="underline">updated list</Link> mein apna naam check karo. Hat gaya hona chahiye.
+                <strong>List Check Karo:</strong> 30 din baad <Link href="/articles/PmKisanBeneficiaryList2026" className="underline">updated list</Link> mein apna naam check karo. Hat gaya hona chahiye.
               </p>
             </div>
             <div className="bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500 p-4 rounded-r-xl">
               <p className="text-sm text-green-800 dark:text-green-300">
-                <strong>📝 Receipt Rakhein:</strong> Online ho ya offline, receipt ka screenshot/photo zaroor lein. Future mein kaam aayega.
+                <strong>Receipt Rakhein:</strong> Online ho ya offline, receipt ka screenshot/photo zaroor lein. Future mein kaam aayega.
               </p>
             </div>
           </div>
@@ -332,7 +332,7 @@ export default function PmKisanVoluntarySurrenderGuide() {
               { problem: 'Penalty', desc: 'Fine ya penalty lag sakti hai.' },
             ].map(({ problem, desc }, i) => (
               <div key={i} className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl p-4">
-                <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">❌ {problem}</p>
+                <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">{problem}</p>
                 <p className="text-xs text-red-700 dark:text-red-400">{desc}</p>
               </div>
             ))}
@@ -360,9 +360,9 @@ export default function PmKisanVoluntarySurrenderGuide() {
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
-          { href: '/articles/PmKisanCorrectionForm2026', l: '📝 Correction Form' },
-          { href: '/articles/PmKisanBeneficiaryList2026', l: '📋 Beneficiary List' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
+          { href: '/articles/PmKisanCorrectionForm2026', l: 'Correction Form' },
+          { href: '/articles/PmKisanBeneficiaryList2026', l: 'Beneficiary List' },
         ]} />
         <Disclaimer />
       </div>

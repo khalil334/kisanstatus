@@ -164,7 +164,7 @@ export default function MadhumakhiPalan() {
 
       <div className="grid md:grid-cols-2 gap-4 mb-8 not-prose">
         <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
-          <h4 className="font-semibold text-blue-900 dark:text-blue-200 mb-2">💳 Kisan Credit Card (KCC)</h4>
+          <h4 className="font-semibold text-blue-900 dark:text-blue-200 mb-2">Kisan Credit Card (KCC)</h4>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">Beekeeping ke liye low-interest loan. 4% interest rate with timely repayment.</p>
           <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 text-sm font-medium">KCC Guide →</Link>
         </div>
@@ -265,7 +265,7 @@ export default function MadhumakhiPalan() {
       />
 
       <div className="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
-        <h3 className="font-bold text-red-800 dark:text-red-300 mb-2 text-sm">⚠️ Common Mistakes Jo Naye Beekeepers Karte Hain:</h3>
+        <h3 className="font-bold text-red-800 dark:text-red-300 mb-2 text-sm">Common Mistakes Jo Naye Beekeepers Karte Hain:</h3>
         <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300">
           <li><strong>Overcrowding:</strong> Ek hi jagah par bahut saare boxes rakh dena, jisse bees mein competition aur disease failne ka khatra badh jata hai.</li>
           <li><strong>Ignoring Varroa Mite:</strong> Yeh sabse common disease hai. Iska regular treatment na karne se poori colony khatam ho sakti hai.</li>
@@ -275,7 +275,7 @@ export default function MadhumakhiPalan() {
       </div>
 
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-5 my-6 not-prose">
-        <h3 className="font-bold text-blue-800 dark:text-blue-300 mb-3 text-sm">🛡️ Biosecurity aur Disease Prevention Basics:</h3>
+        <h3 className="font-bold text-blue-800 dark:text-blue-300 mb-3 text-sm">Biosecurity aur Disease Prevention Basics:</h3>
         <ul className="list-disc pl-5 space-y-2 text-sm text-gray-700 dark:text-gray-300">
           <li>Farm mein entry par proper hygiene maintain karein.</li>
           <li>Naye colonies ko 15-30 din alag quarantine karein.</li>
@@ -315,7 +315,7 @@ export default function MadhumakhiPalan() {
       </p>
 
       <div className="bg-amber-50 dark:bg-amber-900/20 p-5 rounded-lg border border-amber-200 dark:border-amber-800 mb-8 not-prose">
-        <h4 className="font-semibold text-amber-900 dark:text-amber-200 mb-2">🛡️ Risk Management</h4>
+        <h4 className="font-semibold text-amber-900 dark:text-amber-200 mb-2">Risk Management</h4>
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">Subsidy ek bonus hai, guarantee nahi. Apna business plan aise banayein jaise subsidy milegi hi nahi. Risk management ke liye, kuch regions mein beekeeping units ke liye bhi insurance options explore kiye ja sakte hain.</p>
         <Link href="/articles/PmfbyCropInsurance2026" className="text-amber-700 hover:underline dark:text-amber-400 text-sm font-medium">PM Fasal Bima Yojana (PMFBY) →</Link>
       </div>

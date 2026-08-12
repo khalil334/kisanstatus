@@ -12,19 +12,19 @@ const RELATED_CARDS = [
     slug: 'pm-kisan-maandhan-registration-2026',
     title: 'Registration Kaise Karein',
     desc: 'CSC center ya online, dono tarike se apply karne ka poora tareeka.',
-    emoji: '📝',
+    
   },
   {
     slug: 'pm-kisan-maandhan-eligibility-documents',
     title: 'Kaun Apply Kar Sakta Hai',
     desc: 'Umar limit, zaroori documents aur kin farmers ko chhoot hai.',
-    emoji: '📄',
+    
   },
   {
     slug: 'pm-kisan-maandhan-pension-calculator',
     title: 'Contribution Calculator',
     desc: 'Apni umar daal kar dekhein har mahine kitna paisa jama karna hoga.',
-    emoji: '🧮',
+    
   },
 ];
 
@@ -112,14 +112,14 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
           </h1>
 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️{' '}
+            <span>{' '}
               <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">
                 {AUTHOR_NAME}
               </Link>
             </span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Update: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 9 min padhne mein</span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Update: {fmtDate(MODIFIED)}</span>
+            <span>9 min padhne mein</span>
           </div>
         </div>
       </div>
@@ -411,7 +411,6 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
                 href={`/maandhan/${card.slug}`}
                 className="group block p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:border-green-500 transition-all duration-300"
               >
-                <div className="text-2xl mb-2">{card.emoji}</div>
                 <h4 className="font-bold text-gray-900 dark:text-white text-sm mb-1 group-hover:text-green-600 transition-colors">
                   {card.title}
                 </h4>
@@ -427,9 +426,9 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
         <AuthorBox modified={MODIFIED} />
         <BottomNav
           extraLinks={[
-            { href: '/maandhan/pm-kisan-maandhan-registration-2026', l: '📝 Registration' },
-            { href: '/maandhan/pm-kisan-maandhan-eligibility-documents', l: '📄 Eligibility' },
-            { href: '/maandhan/pm-kisan-maandhan-pension-calculator', l: '🧮 Calculator' },
+            { href: '/maandhan/pm-kisan-maandhan-registration-2026', l: 'Registration' },
+            { href: '/maandhan/pm-kisan-maandhan-eligibility-documents', l: 'Eligibility' },
+            { href: '/maandhan/pm-kisan-maandhan-pension-calculator', l: 'Calculator' },
           ]}
         />
         <Disclaimer />

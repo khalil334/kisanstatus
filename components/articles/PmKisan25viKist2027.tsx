@@ -8,12 +8,12 @@ const PUBLISHED = '2026-02-09T08:58:39+05:30';
 const MODIFIED = '2026-03-11T09:19:18+05:30';
 
 const RELATED = [
-  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '📅' },
-  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide', emoji: '📚' },
-  { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Meaning', emoji: '💳' },
-  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List', emoji: '📋' },
-  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide', emoji: '🔐' },
-  { slug: 'PmKisanPaymentFailedFix2026', title: 'Payment Failed Fix', emoji: '💸' },
+  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status' },
+  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide' },
+  { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Meaning' },
+  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List' },
+  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide' },
+  { slug: 'PmKisanPaymentFailedFix2026', title: 'Payment Failed Fix' },
 ];
 
 const FAQS_DATA = [
@@ -63,10 +63,10 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
             PM Kisan 25vi Kist 2027: Kab Aayegi, Kitni Milegi — Sach Yeh Hai Ki Abhi Kisi Ko Pata Nahi
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 8 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>8 min read</span>
           </div>
         </div>
       </div>
@@ -279,19 +279,18 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
         />
 
         <CalcBanner
-          icon="📅"
           title="Ab Tak Ka Total Nikaalo"
           desc="21vi se ab tak kitna mila, kitna baaki — sab calculate karo"
-          primaryCta={{ href: '/calculator/installment-tracker', label: '📅 Tracker Kholo →' }}
-          secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: '💰 Benefit Calculator' }}
+          primaryCta={{ href: '/calculator/installment-tracker', label: 'Tracker Kholo →' }}
+          secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: 'Benefit Calculator' }}
         />
 
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/PmKisan24viKist2026', l: '📅 24vi Kist Status' },
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
-          { href: '/articles/PmKisanEkycOnline2026', l: '🔐 eKYC Guide' },
+          { href: '/articles/PmKisan24viKist2026', l: '24vi Kist Status' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
+          { href: '/articles/PmKisanEkycOnline2026', l: 'eKYC Guide' },
         ]} />
         <Disclaimer />
       </div>

@@ -11,12 +11,12 @@ const PUBLISHED = '2026-02-19T07:49:49+05:30';
 const MODIFIED = '2026-02-28T08:36:31+05:30';
 
 const RELATED = [
-  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List Check', emoji: '📋' },
-  { slug: 'PmKisanMasterGuide2026', title: 'Master Guide', emoji: '📚' },
-  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide', emoji: '🔐' },
-  { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form', emoji: '📝' },
-  { slug: 'PmKisanVoluntarySurrenderGuide', title: 'Voluntary Surrender Guide', emoji: '🚪' },
-  { slug: 'pm-kisan-self-registered-status-check', title: 'Self Registration Status Check', emoji: '✅' },
+  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List Check' },
+  { slug: 'PmKisanMasterGuide2026', title: 'Master Guide' },
+  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide' },
+  { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form' },
+  { slug: 'PmKisanVoluntarySurrenderGuide', title: 'Voluntary Surrender Guide' },
+  { slug: 'pm-kisan-self-registered-status-check', title: 'Self Registration Status Check' },
   { slug: 'PmKisanFaceAuthenticationEkyc', title: 'Face Auth eKYC Guide', emoji: '🤳' },
 ];
 
@@ -74,7 +74,7 @@ export default function PmKisanRejectedStatusReApplyGuide() {
           message={modal.message}
           redirectUrl={modal.url}
           onClose={() => setModal(null)}
-          infoNote="📌 Bas kuch pal — official portal abhi khulega."
+          infoNote="Bas kuch pal — official portal abhi khulega."
         />
       )}
 
@@ -92,10 +92,10 @@ export default function PmKisanRejectedStatusReApplyGuide() {
             PM Kisan Rejected Status: Naam List Se Kyun Kata, Dobara Apply Kaise Karein?
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 17 min read</span>
+            <span><Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>17 min read</span>
           </div>
         </div>
       </div>
@@ -156,12 +156,10 @@ export default function PmKisanRejectedStatusReApplyGuide() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 my-4">
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
-              <span className="text-2xl block mb-2">❌</span>
               <p className="font-black text-sm text-red-800 dark:text-red-300">Hamesha Ke Liye Reject</p>
               <p className="text-xs text-[var(--color-text-muted)] mt-1">Aap eligible hi nahi ho (Jaise Income Tax Filer).</p>
             </div>
             <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl">
-              <span className="text-2xl block mb-2">⚠️</span>
               <p className="font-black text-sm text-amber-800 dark:text-amber-300">Asthayi Reject - Theek Ho Sakta Hai</p>
               <p className="text-xs text-[var(--color-text-muted)] mt-1">Details galat hain. Theek karo, dobara apply karo.</p>
             </div>
@@ -208,7 +206,7 @@ export default function PmKisanRejectedStatusReApplyGuide() {
               },
             ].map(({ reason, desc }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4 hover:border-red-300 dark:hover:border-red-700 transition-all">
-                <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">❌ Reason {i + 1}: {reason}</p>
+                <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">Reason {i + 1}: {reason}</p>
                 <p className="text-xs text-[var(--color-text-muted)]">{desc}</p>
               </div>
             ))}
@@ -243,7 +241,7 @@ export default function PmKisanRejectedStatusReApplyGuide() {
 
           <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl">
             <p className="text-sm font-bold text-green-800 dark:text-green-300 mb-2">
-              🔍 PM Kisan Status Check Karo
+               PM Kisan Status Check Karo
             </p>
             <p className="text-xs text-green-700 dark:text-green-400 mb-3">
               Official PM Kisan portal par jakar apna <strong>pm kisan status check</strong> karo. 10 second baad portal khulega.
@@ -256,7 +254,7 @@ export default function PmKisanRejectedStatusReApplyGuide() {
               )}
               className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
-              📥 Yahan Click Karo → PM Kisan Portal Khulega
+               Yahan Click Karo → PM Kisan Portal Khulega
             </button>
           </div>
 
@@ -291,7 +289,7 @@ export default function PmKisanRejectedStatusReApplyGuide() {
               { doc: 'Rejection Screenshot', note: 'Mobile mein jo reject dikha raha hai uska screenshot.' },
             ].map(({ doc, note }) => (
               <div key={doc} className="p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-                <p className="font-black text-sm text-[var(--color-text)] mb-1">📄 {doc}</p>
+                <p className="font-black text-sm text-[var(--color-text)] mb-1">{doc}</p>
                 <p className="text-xs text-[var(--color-text-muted)]">{note}</p>
               </div>
             ))}
@@ -374,8 +372,8 @@ export default function PmKisanRejectedStatusReApplyGuide() {
               },
             ].map(({ mistake, fix }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
-                <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">❌ {mistake}</p>
-                <p className="text-xs text-green-700 dark:text-green-400"><strong>✅ Ye Raha Sahi Rasta:</strong> {fix}</p>
+                <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">{mistake}</p>
+                <p className="text-xs text-green-700 dark:text-green-400"><strong>Ye Raha Sahi Rasta:</strong> {fix}</p>
               </div>
             ))}
           </div>
@@ -421,7 +419,7 @@ export default function PmKisanRejectedStatusReApplyGuide() {
 
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 border-l-[6px] rounded-xl">
           <h3 className="text-base font-black text-blue-800 dark:text-blue-300 mb-2">
-            🔗 PM Kisan Official Portal
+             PM Kisan Official Portal
           </h3>
           <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
             <strong>PM Kisan status check</strong>, <strong>PM Kisan grievance</strong>, ya koi bhi kaam ke liye official portal par jaayein. 10 second baad portal khulega.
@@ -434,15 +432,15 @@ export default function PmKisanRejectedStatusReApplyGuide() {
             )}
             className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
           >
-            📥 Yahan Click Karo → PM Kisan Portal Khulega
+             Yahan Click Karo → PM Kisan Portal Khulega
           </button>
         </div>
 
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/PmKisanBeneficiaryList2026', l: '📋 Beneficiary List' },
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
+          { href: '/articles/PmKisanBeneficiaryList2026', l: 'Beneficiary List' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
           { href: '/articles/PmKisanCorrectionForm2026', l: ' Correction Form' },
         ]} />
         <Disclaimer />

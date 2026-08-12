@@ -80,7 +80,7 @@ export function GovLink({
     <div className="my-5 border-2 border-[var(--color-border)] rounded-2xl overflow-hidden bg-[var(--color-card)] shadow-sm">
       <div className="bg-green-50 dark:bg-green-900/20 border-b border-[var(--color-border)] px-4 py-2.5 flex items-center gap-2">
         <span className="text-green-700 dark:text-green-300 text-xs font-bold">
-          📖 Pehle guide padhi? Ab official site par jao:
+           Pehle guide padhi? Ab official site par jao:
         </span>
       </div>
       <div className="p-4 flex flex-col sm:flex-row items-start sm:items-center gap-3 justify-between">
@@ -96,7 +96,7 @@ export function GovLink({
               href={guideHref}
               className="text-xs px-3 py-2 bg-[var(--color-bg-alt)] text-[var(--color-text)] rounded-lg font-medium hover:bg-[var(--color-border)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
             >
-              📖 Guide Padho
+               Guide Padho
             </Link>
           )}
           <a
@@ -123,7 +123,7 @@ export function RelatedArticles({
   return (
     <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
       <h3 className="font-black text-[var(--color-text)] mb-4 text-base flex items-center gap-2">
-        <span>🔗</span> Related Articles — Yeh Bhi Padho
+        Related Articles — Yeh Bhi Padho
       </h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
         {articles.map((a) => (
@@ -173,7 +173,7 @@ export function AuthorBox({ modified }: { modified: string }) {
         </p>
         <p className="text-xs text-[var(--color-text-muted)] mt-1">{AUTHOR_BIO}</p>
         <p className="text-xs text-[var(--color-text-muted)] mt-1">
-          🔄 Last Updated: {formattedDate}
+           Last Updated: {formattedDate}
         </p>
       </div>
     </div>
@@ -182,7 +182,7 @@ export function AuthorBox({ modified }: { modified: string }) {
 
 const DEFAULT_NAV_LINKS = [
   { href: '/', l: '🏠 Home' },
-  { href: '/calculator', l: '🧮 Utilities' },
+  { href: '/calculator', l: 'Utilities' },
   { href: '/about', l: '👤 About' },
 ];
 
@@ -216,7 +216,7 @@ export function BottomNav({
 export function Disclaimer() {
   return (
     <div className="mt-6 p-4 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-xl text-xs text-[var(--color-text-muted)] leading-relaxed">
-      <strong>⚠️ Disclaimer:</strong> {DISCLAIMER_TEXT}
+      <strong>Disclaimer:</strong> {DISCLAIMER_TEXT}
     </div>
   );
 }
@@ -224,9 +224,9 @@ export function Disclaimer() {
 export function CalcBanner({
   title = 'Kist Ruki Hai? Pata Karo Kyun',
   desc = 'eKYC, bank seeding, land seeding check karo — 4 sawaal mein exact reason.',
-  primaryCta = { href: '/calculator/installment-tracker', label: '📆 Kist Tracker Kholo →' },
-  secondaryCta = { href: '/calculator', label: '🧮 Sab Utilities Dekho' },
-  icon = '📆',
+  primaryCta = { href: '/calculator/installment-tracker', label: 'Kist Tracker Kholo →' },
+  secondaryCta = { href: '/calculator', label: 'Sab Utilities Dekho' },
+  icon = '',
 }: {
   title?: string;
   desc?: string;
@@ -236,7 +236,7 @@ export function CalcBanner({
 }) {
   return (
     <div className="my-8 p-6 bg-gradient-to-r from-green-800 to-green-600 rounded-2xl text-white text-center">
-      <p className="text-2xl mb-2">{icon}</p>
+      {icon ? <p className="text-2xl mb-2">{icon}</p> : null}
       <p className="font-black text-lg mb-1">{title}</p>
       <p className="text-green-100 text-sm mb-4">{desc}</p>
       <div className="flex flex-wrap justify-center gap-2.5">

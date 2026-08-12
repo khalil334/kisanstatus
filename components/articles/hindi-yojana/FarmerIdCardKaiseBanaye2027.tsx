@@ -292,7 +292,7 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
       <div className="my-5 border-2 border-[var(--color-border)] rounded-2xl overflow-hidden bg-[var(--color-card)] shadow-sm">
         <div className="bg-green-50 dark:bg-green-900/20 border-b border-[var(--color-border)] px-4 py-2.5">
           <span className="text-green-700 dark:text-green-300 text-xs font-bold">
-            📖 Pehle guide padhi? Ab official site par jao:
+             Pehle guide padhi? Ab official site par jao:
           </span>
         </div>
         <div className="p-4 flex flex-col sm:flex-row items-start sm:items-center gap-3 justify-between">
@@ -587,16 +587,16 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
         <h3 className="font-black text-[var(--color-text)] mb-3 text-base">इस विषय से जुड़े बाकी page</h3>
         <ul className="list-disc pl-5 space-y-1.5 text-sm">
           <li>
-            <Link href="/articles/AgriStackKyaHai2026">🗂️ AgriStack Kya Hai?</Link>
+            <Link href="/articles/AgriStackKyaHai2026">AgriStack Kya Hai?</Link>
           </li>
           <li>
-            <Link href="/articles/PmKisanMasterGuide2026">📚 PM Kisan की A-to-Z पूरी guide</Link>
+            <Link href="/articles/PmKisanMasterGuide2026">PM Kisan की A-to-Z पूरी guide</Link>
           </li>
           <li>
-            <Link href="/articles/PmKisanEkycOnline2026">🔐 eKYC पूरा करने का तरीका</Link>
+            <Link href="/articles/PmKisanEkycOnline2026">eKYC पूरा करने का तरीका</Link>
           </li>
           <li>
-            <Link href="/articles/KisanCreditCardOnlineApply2026">💳 KCC के लिए online आवेदन</Link>
+            <Link href="/articles/KisanCreditCardOnlineApply2026">KCC के लिए online आवेदन</Link>
           </li>
         </ul>
       </div>

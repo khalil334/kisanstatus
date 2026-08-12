@@ -44,8 +44,8 @@ const SEARCH_INDEX: readonly Entry[] = [
 ];
 
 const CATEGORY_EMOJIS: Record<string, string> = {
-  'status-check': '📆',
-  loan: '💳',
+  'status-check': '',
+  loan: '',
   farming: '🌱',
   mandi: '🏪',
   'rajya-yojana': '🏛️',
@@ -97,7 +97,7 @@ export default function SearchResults() {
                 className="block bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4 hover:border-green-400 dark:hover:border-green-600 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500"
               >
                 <span className="font-bold text-[var(--color-text)]">
-                  {CATEGORY_EMOJIS[item.category] || '📄'} {item.title}
+                  {CATEGORY_EMOJIS[item.category] || ''} {item.title}
                 </span>
                 <p className="mt-1 text-sm text-[var(--color-text-muted)] line-clamp-2">{item.desc}</p>
               </Link>

@@ -443,7 +443,7 @@ export default function KccLimitKaiseBadhaye3Se5Lakh({ article }: { article: Hin
         <h3 className="font-black text-[var(--color-text)] mb-3 text-base">कर्ज से जुड़े बाकी लेख</h3>
         <ul className="list-disc pl-5 space-y-1.5 text-sm">
           <li>
-            <Link href="/articles/KisanCreditCardOnlineApply2026">💳 KCC Online Apply Guide</Link>
+            <Link href="/articles/KisanCreditCardOnlineApply2026">KCC Online Apply Guide</Link>
           </li>
           <li>
             <Link href="/articles/KisanRinKahaSeLe2026">🏦 Kisan Rin — कहां से लें</Link>
@@ -452,7 +452,7 @@ export default function KccLimitKaiseBadhaye3Se5Lakh({ article }: { article: Hin
             <Link href="/articles/KisanTractorLoan2026">🚜 Tractor के लिए loan guide</Link>
           </li>
           <li>
-            <Link href="/articles/hi/karj-mafi-list">📋 कर्ज माफी लिस्ट 2027</Link>
+            <Link href="/articles/hi/karj-mafi-list">कर्ज माफी लिस्ट 2027</Link>
           </li>
         </ul>
       </div>

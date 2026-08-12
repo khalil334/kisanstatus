@@ -257,7 +257,6 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
       </p>
 
       <div className="my-8 p-6 bg-gradient-to-r from-green-800 to-green-600 rounded-2xl text-white text-center">
-        <p className="text-2xl mb-2">📆</p>
         <p className="font-black text-lg mb-1">State Ne Payment Roka? Reason Dhundo</p>
         <p className="text-green-100 text-sm mb-4">Char quick jaanch — eKYC, seeding, land record aur list mein naam.</p>
         <div className="flex flex-wrap justify-center gap-2.5">
@@ -265,13 +264,13 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
             href="/calculator/installment-tracker"
             className="inline-flex items-center gap-2 bg-white text-green-800 font-black px-6 py-3 rounded-xl text-sm hover:bg-green-50 transition-colors"
           >
-            📆 Tracker mein reason dhundo →
+             Tracker mein reason dhundo →
           </Link>
           <Link
             href="/calculator"
             className="inline-flex items-center gap-2 bg-white/15 border border-white/30 text-white font-bold px-6 py-3 rounded-xl text-sm hover:bg-white/25 transition-colors"
           >
-            🧮 Sabhi tools browse karo
+             Sabhi tools browse karo
           </Link>
         </div>
       </div>
@@ -309,11 +308,11 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
         काम निकालना है तो ये साथ रखिए:
       </p>
       <ul className="my-4 space-y-2 list-none pl-0">
-        <li className="flex gap-2 text-sm leading-relaxed"><span className="shrink-0">🗂️</span><span>आधार कार्ड (original + एक photocopy)</span></li>
-        <li className="flex gap-2 text-sm leading-relaxed"><span className="shrink-0">🗂️</span><span>बैंक passbook का पहला पन्ना — जिस खाते में किस्त आती है</span></li>
-        <li className="flex gap-2 text-sm leading-relaxed"><span className="shrink-0">🗂️</span><span>खतौनी/खसरा की ताजा नकल — जमीन आपके नाम दिखनी चाहिए</span></li>
-        <li className="flex gap-2 text-sm leading-relaxed"><span className="shrink-0">🗂️</span><span>PM Kisan का registration number (status page से लिखकर या screenshot)</span></li>
-        <li className="flex gap-2 text-sm leading-relaxed"><span className="shrink-0">🗂️</span><span>Grievance का query number, अगर online शिकायत पहले डाल चुके हैं</span></li>
+        <li className="flex gap-2 text-sm leading-relaxed"><span>आधार कार्ड (original + एक photocopy)</span></li>
+        <li className="flex gap-2 text-sm leading-relaxed"><span>बैंक passbook का पहला पन्ना — जिस खाते में किस्त आती है</span></li>
+        <li className="flex gap-2 text-sm leading-relaxed"><span>खतौनी/खसरा की ताजा नकल — जमीन आपके नाम दिखनी चाहिए</span></li>
+        <li className="flex gap-2 text-sm leading-relaxed"><span>PM Kisan का registration number (status page से लिखकर या screenshot)</span></li>
+        <li className="flex gap-2 text-sm leading-relaxed"><span>Grievance का query number, अगर online शिकायत पहले डाल चुके हैं</span></li>
       </ul>
       <p>
         अधिकारी से मिलते समय एक ही साफ सवाल पूछिए — <em>&ldquo;मेरे registration number पर state verification
@@ -460,7 +459,7 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
       <div className="my-4 space-y-5">
         {FAQS.map((f) => (
           <div key={f.q} className="border-l-4 border-[var(--color-primary)] pl-4">
-            <p className="font-semibold text-[var(--color-text)] text-sm mb-1">❓ {f.q}</p>
+            <p className="font-semibold text-[var(--color-text)] text-sm mb-1">{f.q}</p>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">{f.a}</p>
           </div>
         ))}
@@ -476,10 +475,10 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
       </p>
 
       <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
-        <h3 className="font-black text-[var(--color-text)] mb-3 text-base">🔗 इस विषय से जुड़े और page</h3>
+        <h3 className="font-black text-[var(--color-text)] mb-3 text-base">इस विषय से जुड़े और page</h3>
         <ul className="list-disc pl-5 space-y-1.5 text-sm">
-          <li><Link href="/articles/PmKisanCorrectionForm2026">📝 Correction Form Guide</Link></li>
-          <li><Link href="/articles/hi/helpline-shikayat">📞 हेल्पलाइन और शिकायत</Link></li>
+          <li><Link href="/articles/PmKisanCorrectionForm2026">Correction Form Guide</Link></li>
+          <li><Link href="/articles/hi/helpline-shikayat">हेल्पलाइन और शिकायत</Link></li>
           <li><Link href="/articles/hi/npci-aadhaar-seeding">🏦 बैंक में आधार सीडिंग कैसे कराएं</Link></li>
           <li><Link href="/articles/PmKisanStateNodalOfficerList">🏛️ State Nodal Officer List</Link></li>
         </ul>
