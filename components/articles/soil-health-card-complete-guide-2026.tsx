@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { SI, StepList, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import CountdownModal from '@/components/CountdownModal';
 import type { ArticleMeta } from '@/lib/articles-data';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-01-11T14:57:53+05:30';
 const MODIFIED = '2026-01-25T13:34:27+05:30';
@@ -85,7 +86,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
             Soil Health Card 2026: Mitti Test Free Kaise Karwayein, State Wise Online Apply
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-amber-100">
-            <span>✍️ <Link href="/about" className="underline hover:text-white">Manish Kumar</Link></span>
+            <span>✍️ <Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
             <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
             <span>⏱️ 12 min read</span>

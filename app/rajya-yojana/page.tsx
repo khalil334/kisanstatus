@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { LIVE_RAJYA_YOJANA_ARTICLES } from '@/lib/rajya-yojana-data';
-import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE, EXTERNAL_LINK_PROPS } from '@/lib/site-config';
+import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE, EXTERNAL_LINK_PROPS, AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 import { Disclaimer } from '@/components/ArticleShared';
 
 const TITLE = 'Rajya Kisan Yojana — State Schemes Guide';
@@ -12,6 +12,8 @@ const DESCRIPTION =
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
+  authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
+  creator: AUTHOR_NAME,
   alternates: {
     canonical: `${SITE_URL}/rajya-yojana`,
   },

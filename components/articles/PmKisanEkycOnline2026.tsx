@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, WB, DB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
-import { EXTERNAL_LINK_PROPS } from '@/lib/site-config';
+import { EXTERNAL_LINK_PROPS, AUTHOR_NAME } from '@/lib/site-config';
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const PUBLISHED = '2025-12-29T10:12:36+05:30';
@@ -98,7 +98,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
           </h1>
 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">Manish Kumar</Link></span>
+            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
             <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
             <span>⏱️ 14 min read</span>

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import QuickStatusChecker from '@/components/calculators/QuickStatusChecker';
+import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
 const DOMAIN = 'https://kisanstatus.com';
 const PAGE_URL = `${DOMAIN}/calculator/quick-status-check`;
@@ -7,6 +8,8 @@ const PAGE_URL = `${DOMAIN}/calculator/quick-status-check`;
 export const metadata: Metadata = {
   title: 'PM Kisan Status Check 2026 — Aadhaar/Mobile',
   description: 'PM Kisan status check karein Aadhaar, mobile ya registration number se. Seedha official portal par redirect. Bilkul free, bina login ke.',
+  authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
+  creator: AUTHOR_NAME,
   keywords: [
     'pm kisan status check',
     'pm kisan aadhaar se check',

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ARTICLES, getArticlesByFreshness, CATEGORIES } from '@/lib/articles-data';
 import { getHindiArticlesByFreshness } from '@/lib/hindi-articles-data';
-import { SITE_URL } from '@/lib/site-config';
+import { SITE_URL, AUTHOR_NAME } from '@/lib/site-config';
 import SearchBar from './SearchBar';
 import FaqItem from './FaqItem';
 
@@ -99,7 +99,7 @@ function ArticleCard({ article, showNewBadge = false }: { article: typeof ARTICL
           {article.desc}
         </p>
         <div className="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-700/50">
-          <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">✍️ Manish Kumar</span>
+          <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">✍️ {AUTHOR_NAME}</span>
           <Link href={`/articles/${article.slug}`} className="text-sm font-bold text-green-700 dark:text-green-400 group-hover:translate-x-2 transition-transform duration-300 inline-flex items-center gap-1.5" aria-label={`Padhein: ${article.title}`}>
             Padhein
             <IconArrowRight className="w-4 h-4" />
@@ -439,7 +439,7 @@ export default function HomeContent() {
                     </h3>
                     <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-2 flex-1 mb-5">{a.desc}</p>
                     <div className="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-700/50">
-                      <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">✍️ Manish Kumar</span>
+                      <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">✍️ {AUTHOR_NAME}</span>
                       <Link href={`/articles/${a.slug}`} className="text-sm font-bold text-amber-700 dark:text-amber-400 group-hover:translate-x-2 transition-transform duration-300 inline-flex items-center gap-1.5" aria-label={`पढ़ें: ${a.titleHi}`}>
                         पढ़ें
                         <IconArrowRight className="w-4 h-4" />

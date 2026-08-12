@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, WB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
+import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
 const PUBLISHED = '2026-03-20T10:58:55+05:30';
 const MODIFIED = '2026-04-03T18:06:25+05:30';
@@ -166,8 +167,8 @@ export default function PmKisanMaandhanPensionCalculator({ article }: { article:
               "description": "Apni age ke hisaab se jaanein PM Kisan Maandhan Yojana mein har mahine kitna dena hoga aur 60 ke baad ₹3000 pension kaise milegi — poora hisaab table aur example ke saath.",
               "author": {
                 "@type": "Organization",
-                "name": "Manish Kumar",
-                "url": "https://kisanstatus.com/about"
+                "name": AUTHOR_NAME,
+                "url": AUTHOR_URL
               },
               "publisher": {
                 "@type": "Organization",
@@ -198,7 +199,7 @@ export default function PmKisanMaandhanPensionCalculator({ article }: { article:
           </h1>
 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">Manish Kumar</Link></span>
+            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
             <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
             <span>⏱️ 11 min read</span>
