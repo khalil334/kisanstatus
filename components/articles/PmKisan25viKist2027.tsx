@@ -8,9 +8,9 @@ const PUBLISHED = '2026-02-09T08:58:39+05:30';
 const MODIFIED = '2026-03-11T09:19:18+05:30';
 
 const RELATED = [
-  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status' },
-  { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Meaning' },
-  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide' },
+  { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Ka Matlab' },
+  { slug: 'pm-kisan-self-registered-status-check', title: 'Self-Registered Status Check' },
+  { slug: 'PmKisanVillageWiseListPdfDownload', title: 'Gaon Ki List PDF Mein Dekhein' },
 ];
 
 const FAQS_DATA = [

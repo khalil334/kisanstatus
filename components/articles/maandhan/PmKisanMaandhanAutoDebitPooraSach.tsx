@@ -9,21 +9,21 @@ const MODIFIED = '2026-05-02T08:42:07+05:30';
 
 const RELATED_CARDS = [
   {
-    slug: 'pm-kisan-maandhan-registration-2026',
-    title: 'Registration Kaise Karein',
-    desc: 'CSC ya online application se apply karne ka poora tarika, screenshot ke saath.',
+    slug: 'auto-debit-fail-hone-par-regularization-kaise-karein',
+    title: 'Auto Debit Fail Ho Gaya — Ab Kya',
+    desc: 'Chhooti hui kist ko regularize karne ka step-by-step rasta aur late charge ka hisaab.',
     
   },
   {
-    slug: 'pm-kisan-maandhan-pension-calculator',
-    title: 'Apna Contribution Nikalein',
-    desc: 'Umar daliye aur wahin dekhiye har mahine kitna jama karna hoga.',
+    slug: 'pmkmy-bank-account-change',
+    title: 'Auto Debit Wala Bank Badalna',
+    desc: 'Mandate naye account par shift karne ka process — purana account band hone se pehle.',
     
   },
   {
-    slug: 'pm-kisan-maandhan-withdrawal-refund-rules',
-    title: 'Beech Mein Chhodne Ke Niyam',
-    desc: 'Agar 60 saal se pehle scheme chhodni pade toh paisa kaise wapas milta hai.',
+    slug: 'pm-kisan-maandhan-age-wise-contribution-chart-2026',
+    title: 'Umar Ke Hisaab Se Contribution Chart',
+    desc: 'Aapke account se har mahine kitna kategi — poori age-wise list ek jagah.',
     
   },
 ];
