@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
+import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
 export const metadata: Metadata = {
   title: 'Vermi Compost Business 2026: PKVY Subsidy & Profit Guide',
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
     'earthworm farming',
     'gobar se khaad banana'
   ],
-  authors: [{ name: 'Manish Kumar', url: 'https://kisanstatus.com/about' }],
+  authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   openGraph: {
     title: 'Vermi Compost Business 2026: PKVY Subsidy & Profit Guide',
     description: 'Vermi compost business complete guide. Janein organic fertilizer kaise banayein, PKVY subsidy, machinery cost aur real profit calculation ke baare mein sab kuch.',

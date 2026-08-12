@@ -1,12 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
 export const metadata: Metadata = {
   title: 'Custom Hiring Centre (CHC) 2026: Tractor Rental Business Guide',
   description: 'CHC portal guide. Janein tractor aur farm implements kiraye par dekar paisa kaise kamayein, SMAM subsidy, aur real profit calculation.',
   keywords: ['custom hiring centre', 'CHC portal', 'tractor rental business', 'SMAM subsidy', 'farm machinery rental', 'agricultural equipment'],
-  authors: [{ name: 'Manish Kumar', url: 'https://kisanstatus.com/about' }],
+  authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   openGraph: {
     title: 'Custom Hiring Centre (CHC) 2026: Tractor Rental Business Guide',
     description: 'CHC portal guide. Janein tractor aur farm implements kiraye par dekar paisa kaise kamayein, SMAM subsidy, aur real profit calculation.',

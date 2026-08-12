@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-02-09T08:58:39+05:30';
 const MODIFIED = '2026-03-11T09:19:18+05:30';
@@ -62,7 +63,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
             PM Kisan 25vi Kist 2027: Kab Aayegi, Kitni Milegi — Sach Yeh Hai Ki Abhi Kisi Ko Pata Nahi
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">Manish Kumar</Link></span>
+            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
             <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
             <span>⏱️ 8 min read</span>

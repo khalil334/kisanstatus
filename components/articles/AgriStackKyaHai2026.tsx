@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { SI, StepList, IB, DB, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock } from '@/components/ArticleShared';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { ArticleMeta } from '@/lib/articles-data';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
 function fmtDate(dateString: string): string {
   const date = new Date(dateString);
@@ -64,7 +65,7 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
             AgriStack Digital Profile 2026: 14-Digit ID Banwane Ka Asli Tarika — Jo Operator Nahi Batate
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">Manish Kumar</Link></span>
+            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
             <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
             <span>⏱️ 12 min read</span>

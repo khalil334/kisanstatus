@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, SH, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
+import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
 const PUBLISHED = '2026-05-13T14:48:09+05:30';
 const MODIFIED = '2026-05-18T07:04:01+05:30';
@@ -72,8 +73,8 @@ export default function AutoDebitFailRegularization() {
               wordCount: 2800,
               author: {
                 '@type': 'Person',
-                name: 'Manish Kumar',
-                url: 'https://kisanstatus.com/about',
+                name: AUTHOR_NAME,
+                url: AUTHOR_URL,
               },
               publisher: {
                 '@type': 'Organization',
@@ -116,7 +117,7 @@ export default function AutoDebitFailRegularization() {
           </h1>
 
           <div className="hero-description flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">Manish Kumar</Link></span>
+            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
             <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
             <span>⏱️ 10 min read</span>
@@ -450,8 +451,7 @@ export default function AutoDebitFailRegularization() {
           <h3 className="font-black text-blue-800 dark:text-blue-300 text-lg mb-2">Article Verification Info</h3>
           <p className="text-xs text-[var(--color-text-muted)]">
             <strong>Last Verified:</strong> {fmtDate(MODIFIED)}<br />
-            <strong>Sources:</strong> RBI Guidelines (DPSS.CO.PD.No.116/02.14.003/2021-22), Major Indian Banks (SBI, HDFC, ICICI), NBFC Policies, CIBIL Bureau<br />
-            <strong>Author:</strong> Manish Kumar — Helping farmers and borrowers with verified, actionable information since 2024.
+            <strong>Sources:</strong> RBI Guidelines (DPSS.CO.PD.No.116/02.14.003/2021-22), Major Indian Banks (SBI, HDFC, ICICI), NBFC Policies, CIBIL Bureau
           </p>
         </div>
 

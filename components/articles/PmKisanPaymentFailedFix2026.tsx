@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, DB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-02-06T09:16:09+05:30';
 const MODIFIED = '2026-02-20T21:22:12+05:30';
@@ -85,7 +86,7 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
           </h1>
 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">Manish Kumar</Link></span>
+            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
             <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
             <span>⏱️ 14 min read</span>

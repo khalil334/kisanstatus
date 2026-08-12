@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import InstallmentTrackerCalcPage from '@/components/calculators/InstallmentTrackerCalcPage';
+import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
 const DOMAIN = 'https://kisanstatus.com';
 const PAGE_URL = `${DOMAIN}/calculator/installment-tracker`;
@@ -7,6 +8,8 @@ const PAGE_URL = `${DOMAIN}/calculator/installment-tracker`;
 export const metadata: Metadata = {
   title: 'PM Kisan Kist Tracker 2026 — Kist Kyun Ruki Hai?',
   description: 'PM Kisan ki kist kyun nahi aayi? 4 steps mein jaanein — eKYC, bank seeding, land seeding check karein. Bilkul free tool, bina registration ke.',
+  authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
+  creator: AUTHOR_NAME,
   keywords: [
     'pm kisan kist tracker',
     'kist kyun nahi aayi',

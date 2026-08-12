@@ -2,11 +2,8 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
-const SITE_URL = 'https://kisanstatus.com';
-const SITE_NAME = 'KisanStatus';
-const AUTHOR_NAME = 'Manish Kumar';
-const AUTHOR_URL = `${SITE_URL}/about`;
 const PUBLISHED = '2026-03-30T12:24:48+05:30';
 const MODIFIED = '2026-05-10T18:26:39+05:30';
 

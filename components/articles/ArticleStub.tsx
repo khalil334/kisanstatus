@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { IB, AuthorBox, BottomNav, Disclaimer, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 import { CATEGORIES } from '@/lib/articles-data';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
 export default function ArticleStub({ article }: { article: ArticleMeta }) {
   const category = CATEGORIES[article.category];
@@ -21,7 +22,7 @@ export default function ArticleStub({ article }: { article: ArticleMeta }) {
             {article.title}
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">Manish Kumar</Link></span>
+            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
             <span>📅 {fmtDate(article.publishedTime)}</span>
             <span>🔄 Updated: {fmtDate(article.modifiedTime)}</span>
           </div>
