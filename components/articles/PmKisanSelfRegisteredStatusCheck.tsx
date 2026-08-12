@@ -29,7 +29,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Khud registration kiya lekin abhi tak koi payment nahi aayi — kyun?',
-    a: 'Teen wajah ho sakti hain: (1) eKYC nahi hui — turant karo, (2) Bank account Aadhaar se link nahi — NPCI seeding karwao, (3) Land seeding pending hai — revenue office se contact karo. Sabse pehle status check karo portal par — wahan exact reason dikhega.',
+    a: 'Teen wajah ho sakti hain: (1) eKYC nahi hui — pehle wahi nipta lo, (2) Bank account Aadhaar se link nahi — NPCI seeding karwao, (3) Land seeding pending hai — revenue office se contact karo. Sabse pehle status check karo portal par — wahan exact reason dikhega.',
   },
   {
     q: 'Reference number kho gaya hai — ab kya karun?',
@@ -317,7 +317,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
               },
               {
                 problem: 'Bank account number wrong hai',
-                solution: 'Yeh serious hai — payment galat account mein jaayegi. Turant correct karo. Branch se IFSC code bhi verify karo — ek digit galat hone se bhi transfer fail ho jaata hai.',
+                solution: 'Yeh serious hai — payment galat account mein jaayegi. Bina der correct karo. Branch se IFSC code bhi verify karo — ek digit galat hone se bhi transfer fail ho jaata hai.',
               },
               {
                 problem: 'Pending dikh raha hai 30 din se zyada',
@@ -356,7 +356,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
 
             <div className="p-4 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-xl">
               <h3 className="font-black text-purple-800 dark:text-purple-300 text-sm mb-2">4. Regular Status Check</h3>
-              <p className="text-xs text-[var(--color-text-muted)]">Har 7-10 din mein check karo. Koi problem hai toh turant pata chalega.</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Har 7-10 din mein check karo. Koi problem hai toh shuru mein hi pata chal jaayega.</p>
             </div>
           </div>
         </section>

@@ -112,7 +112,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
         <div className="my-6 p-5 bg-amber-50 border-2 border-amber-400 border-l-[6px] rounded-xl">
           <h2 className="text-base font-black text-amber-900 mb-2">Jaldi Padho</h2>
           <p className="text-sm text-amber-950 leading-relaxed mb-2">
-            Soil health card ek government report hota jo batata hai — aapki zameen mein nutrients kaun se hain, kaun se kam hain. Test bilkul free hai. Har state ka apna process hai, lekin sabme ek jaise steps follow hote hain. Report ke base par sahi fertilizer lagao to production 30-40% tak badh jaata hai.
+            Soil health card ek government report hota jo batata hai — aapki zameen mein nutrients kaun se hain, kaun se kam hain. Test ka ek rupaya nahi lagta. Har state ka apna process hai, lekin sabme ek jaise steps follow hote hain. Report ke base par sahi fertilizer lagao to production 30-40% tak badh jaata hai.
           </p>
           <p className="text-sm text-amber-950 leading-relaxed">
             Ye guide mein har state ka seedha tareeka likha hai — link, offline process, sab kuch.
@@ -131,7 +131,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
           </p>
 
           <p className="text-sm text-gray-700 leading-relaxed">
-            Best part — ye sab bilkul free hai. Kharcha bas travel ka aata hai.
+            Best part — is poore process ka koi charge nahi. Kharcha bas travel ka aata hai.
           </p>
         </section>
 

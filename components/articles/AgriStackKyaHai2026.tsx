@@ -198,7 +198,7 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
             <SI n={4}>Fingerprint scan — haath saaf rakho, geeli ungli better read hoti hai.</SI>
             <SI n={5}>Land details — khasra number revenue records se match hona chahiye.</SI>
             <SI n={6}>Bank verify + NPCI seeding status bhi isi waqt check karwa lo.</SI>
-            <SI n={7}>14-digit number milega — <strong>screenshot, print, mobile save — teeno zaroor karo</strong>.</SI>
+            <SI n={7}>14-digit number milega — <strong>screenshot, print, mobile save — teeno kar ke rakho</strong>.</SI>
             <SI n={8}>Acknowledgement receipt le lo — future reference ke liye bahut kaam aayega.</SI>
           </StepList>
 
@@ -231,7 +231,7 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
             Agar center door hai toh try kar sakte ho. farmers.gov.in ya state specific portal par jao. OTP linked mobile par aayega.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Land details manually enter karni padengi — yahan galti ka chance zyada hota hai. Submit karne se pehle double-check zaroor kar lena.
+            Land details manually enter karni padengi — yahan galti ka chance zyada hota hai. Submit karne se pehle ek baar dobara padh lena.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             <strong>Kai states mein online portal abhi fully functional nahi hai.</strong> Error aaye toh physical center hi reliable option hai. Cache clear karo ya incognito mode try karo — kabhi-kabhi session issue hota hai.

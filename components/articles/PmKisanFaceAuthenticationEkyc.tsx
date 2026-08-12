@@ -236,7 +236,7 @@ export default function PmKisanFaceAuthenticationEkyc() {
               <strong>Ghar ke kisi jawaan ka smartphone use karo.</strong> App mein login aapke Aadhaar se hota hai, phone kiska hai isse fark nahi padta. Beta/beti/pota — kisi ka bhi phone, 5 minute ka kaam. Kai gharon mein ek hi phone se dada, dadi, chacha sabki eKYC hui hai — ye bilkul allowed hai.
             </li>
             <li>
-              <strong>Ya seedha <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">CSC seva kendra</Link> jao.</strong> Aadhaar card original le jao. Operator biometric device se fingerprint ya chehra scan karega. ₹20-30 lagenge, receipt zaroor lo. 5 minute mein kaam hota hai — line ka time alag.
+              <strong>Ya seedha <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">CSC seva kendra</Link> jao.</strong> Aadhaar card original le jao. Operator biometric device se fingerprint ya chehra scan karega. ₹20-30 lagenge, receipt lekar hi uthna. 5 minute mein kaam hota hai — line ka time alag.
             </li>
           </ul>
           <Image
@@ -247,7 +247,7 @@ export default function PmKisanFaceAuthenticationEkyc() {
             className="w-full rounded-xl my-4"
           />
           <IB>
-            <strong>CSC par ye zaroor bolna:</strong> "PM Kisan ki eKYC karni hai." Operator ko pata hota hai kaunsa portal kholna hai. Receipt lena mat bhoolna — baad mein dikkat aayi toh yahi proof hai.
+            <strong>CSC par ye line bol dena:</strong> "PM Kisan ki eKYC karni hai." Operator ko pata hota hai kaunsa portal kholna hai. Receipt lena mat bhoolna — baad mein dikkat aayi toh yahi proof hai.
           </IB>
           <Image
             src="/images/articles/pm-kisan-face-authentication-ekyc/who-should-use.webp"

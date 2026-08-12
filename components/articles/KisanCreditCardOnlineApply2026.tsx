@@ -175,7 +175,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             </div>
             <div className="flex gap-3 text-sm">
               <span className="font-black text-green-700 dark:text-green-400 whitespace-nowrap">Stage 2</span>
-              <p className="text-[var(--color-text-muted)]"><strong>Application + verification.</strong> Form ke saath bank PM Kisan beneficiary status aur KYC verify karta hai — agar aapka PM Kisan eKYC pehle se complete hai to ye step aasaan ho jaata hai. Acknowledgement receipt zaroor lein; follow-up isi se hota hai.</p>
+              <p className="text-[var(--color-text-muted)]"><strong>Application + verification.</strong> Form ke saath bank PM Kisan beneficiary status aur KYC verify karta hai — agar aapka PM Kisan eKYC pehle se complete hai to ye step aasaan ho jaata hai. Acknowledgement receipt le lein; follow-up isi se hota hai.</p>
             </div>
             <div className="flex gap-3 text-sm">
               <span className="font-black text-green-700 dark:text-green-400 whitespace-nowrap">Stage 3</span>
@@ -416,13 +416,13 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
 
           <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">Branch Visit (Recommended)</h3>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Online portals exist karte hain, lekin sach bolun? Branch visit zyada reliable hai. Kyun? Kyunki land record verification kai banks (khas kar Cooperative aur RRBs) mein abhi bhi manual hota hai. Online submit karne ke 2-3 hafte baad pata chalta hai ki document reject hua. Branch mein turant feedback milta hai aur galti wahin correct ho jaati hai.
+            Online portals exist karte hain, lekin sach bolun? Branch visit zyada reliable hai. Kyun? Kyunki land record verification kai banks (khas kar Cooperative aur RRBs) mein abhi bhi manual hota hai. Online submit karne ke 2-3 hafte baad pata chalta hai ki document reject hua. Branch mein feedback wahin mil jaata hai aur galti usi counter par correct ho jaati hai.
           </p>
           <StepList>
             <SI n={1}>Subah 10:00 - 11:00 baje jaayein (Officers fresh hote hain, dopahar mein rush).</SI>
             <SI n={2}>Direct Loan Officer ya Agriculture desk se miliye.</SI>
             <SI n={3}>Naam spelling triple-check karein: Aadhaar = Bank Passbook = Land Record.</SI>
-            <SI n={4}>Acknowledgement receipt with reference number zaroor collect karein.</SI>
+            <SI n={4}>Acknowledgement receipt with reference number counter se collect karein.</SI>
             <SI n={5}>7-10 din baad follow-up karein (call ya visit dono chalega).</SI>
           </StepList>
 
@@ -451,7 +451,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
         </div>
 
         <section className="mb-8">
-          <SH>Top 5 Rejection Reasons + Turant Fix</SH>
+          <SH>Top 5 Rejection Reasons Aur Unka Fix</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Yeh 5 reasons sabse zyada common hain jo bank counter par dekhe jaate hain.
           </p>

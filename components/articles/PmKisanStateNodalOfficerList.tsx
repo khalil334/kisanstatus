@@ -15,7 +15,7 @@ const RELATED_CARDS = [
   {
     slug: 'PmKisanPaymentFailedFix2026',
     title: 'Payment Failed Fix Guide',
-    desc: 'FTO generate hone ke baad bhi paisa nahi aaya? 7 reasons aur turant fix jaanein.',
+    desc: 'FTO generate hone ke baad bhi paisa nahi aaya? 7 reasons aur unka fix jaanein.',
   },
   {
     slug: 'PmKisanCorrectionForm2026',
@@ -287,7 +287,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
             <strong>Zaroori Baatein (Email Attachments):</strong>
             <ul className="list-disc list-inside mt-2 space-y-1 text-xs">
               <li>Aadhaar Card aur Bank Passbook ki clear PDF banakar hi attach karein (Blurry photos reject ho jaati hain).</li>
-              <li>PM Kisan Status page ka screenshot zaroor bhejein.</li>
+              <li>PM Kisan Status page ka screenshot attach kar ke bhejein.</li>
               <li>Agar pehle BAO ko koi application di thi, toh uski receiving copy bhi bhejein.</li>
             </ul>
           </WB>

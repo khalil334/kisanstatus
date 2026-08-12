@@ -190,7 +190,7 @@ export default function PmKisanLandSeedingFormPdf2026() {
         <section className="mb-8">
           <SH>Land Seeding Status Online Kaise Check Karein?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Form bharne se pehle ye zaroor pata karo ki abhi status kya hai — kahin aisa na ho ki jo pehle se ho chuka hai, wahi dobara bhar do. Do jagah check kar sakte ho:
+            Form bharne se pehle ye pata kar lo ki abhi status kya hai — kahin aisa na ho ki jo pehle se ho chuka hai, wahi dobara bhar do. Do jagah check kar sakte ho:
           </p>
 
           <h3 className="font-black text-[var(--color-text)] text-base mb-2 mt-4">1. PM Kisan Portal Par</h3>
@@ -408,7 +408,7 @@ export default function PmKisanLandSeedingFormPdf2026() {
               <li>Form ko hamesha black ya blue pen se hi bharein.</li>
               <li>Dhyan rahe ki Khasra number Khatauni se bilkul match kare.</li>
               <li>Patwari ka sign aur stamp hona anivarya hai.</li>
-              <li>Submit karne se pehle form ki ek photocopy zaroor apne paas rakh lein.</li>
+              <li>Submit karne se pehle form ki ek photocopy apne paas rakh lein.</li>
             </ul>
           </WB>
         </section>
