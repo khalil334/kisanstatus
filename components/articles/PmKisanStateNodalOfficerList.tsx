@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { SI, StepList, WB, DB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import CountdownModal from '@/components/CountdownModal';
 import type { ArticleMeta } from '@/lib/articles-data';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-01-25T13:09:31+05:30';
 const MODIFIED = '2026-02-15T14:31:22+05:30';
@@ -114,7 +115,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
           </h1>
 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">Manish Kumar</Link></span>
+            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
             <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
             <span>⏱️ 14 min read</span>

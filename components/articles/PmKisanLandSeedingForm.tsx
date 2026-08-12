@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import CountdownModal from '@/components/CountdownModal';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-01-15T16:32:11+05:30';
 const MODIFIED = '2026-02-05T18:12:48+05:30';
@@ -136,7 +137,7 @@ export default function PmKisanLandSeedingFormPdf2026() {
             PM Kisan Land Seeding Form PDF Download 2026: State Wise Guide
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white">Manish Kumar</Link></span>
+            <span>✍️ <Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
             <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
             <span>⏱️ 12 min read</span>

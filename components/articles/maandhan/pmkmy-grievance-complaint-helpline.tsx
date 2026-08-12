@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
+import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
 const PUBLISHED = '2026-05-11T20:55:01+05:30';
 const MODIFIED = '2026-05-25T09:56:39+05:30';
@@ -81,8 +82,8 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
               wordCount: 2400,
               author: {
                 '@type': 'Person',
-                name: 'Manish Kumar',
-                url: 'https://kisanstatus.com/about',
+                name: AUTHOR_NAME,
+                url: AUTHOR_URL,
               },
               publisher: {
                 '@type': 'Organization',
@@ -125,7 +126,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
           </h1>
 
           <div className="hero-description flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">Manish Kumar</Link></span>
+            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
             <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
             <span>⏱️ 10 min read</span>
@@ -552,8 +553,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
           <p className="text-xs text-[var(--color-text-muted)]">
             <strong>Last Verified:</strong> {fmtDate(MODIFIED)}<br />
             <strong>Sources:</strong> PMKMY Official Portal (pmkmy.gov.in), Ministry of Labour & Employment (maandhan.in),
-            LIC India Official Website (licindia.in), CSC Portal (csc.gov.in)<br />
-            <strong>Author:</strong> Manish Kumar — Helping farmers with verified information since 2024
+            LIC India Official Website (licindia.in), CSC Portal (csc.gov.in)
           </p>
         </div>
 

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
 const RELATED = [
   { slug: 'bakri-palan-yojana-nlm-subsidy', title: 'Bakri Palan NLM Subsidy', emoji: '🐐' },
@@ -71,7 +72,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
             Murgi Palan Loan 2026: NLM Se 50% Subsidy (₹25 Lakh Tak) — Eligibility, Layer vs Broiler Aur Apply Ka Poora Process
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">Manish Kumar</Link></span>
+            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
             <span>📅 {fmtDate(article.publishedTime)}</span>
             <span>🔄 Last Updated: 5 August 2026</span>
             <span>⏱️ 11 min read</span>
