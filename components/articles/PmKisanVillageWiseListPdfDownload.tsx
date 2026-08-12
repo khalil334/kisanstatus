@@ -517,7 +517,7 @@ export default function PmKisanVillageWiseListPdfDownload() {
 
         <CountdownButton
           title="PM Kisan Official Portal"
-          description="Beneficiary data access karne ke liye, ya saari jaankari ke liye government website par jaayein. 10 second baad portal khulega."
+          description="Beneficiary data access karne ke liye, ya saari jaankari ke liye government website par jaayein — countdown poora hote hi portal khulega."
           url="https://pmkisan.gov.in/BeneficiaryList.aspx"
           buttonText="Yahan Click Karo → PM Kisan Portal Khulega"
           variant="blue"

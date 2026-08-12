@@ -164,7 +164,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
                Abhi Registration Karo
             </p>
             <p className="text-xs text-green-700 dark:text-green-400 mb-3">
-              Official PM Kisan portal par jakar apna <strong>pm kisan online registration</strong> karo. 10 second baad portal khulega.
+              Official PM Kisan portal par jakar apna <strong>pm kisan online registration</strong> karo — redirect 10 second ka hai.
             </p>
             <button
               onClick={() => handleOfficialLink(
@@ -265,7 +265,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
                Status Check Karo
             </p>
             <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
-              Official portal par jakar apna <strong>pm kisan payment status check</strong> karo. 10 second baad portal khulega.
+              Official portal par jakar apna <strong>pm kisan payment status check</strong> karo (portal 10 second mein khul jaata hai).
             </p>
             <button
               onClick={() => handleOfficialLink(
@@ -539,7 +539,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
              PM Kisan Official Portal
           </h3>
           <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
-            <strong>PM Kisan registration</strong>, <strong>eKYC</strong>, <strong>payment status check</strong>, ya koi bhi kaam ke liye official portal par jaayein. 10 second baad portal khulega.
+            <strong>PM Kisan registration</strong>, <strong>eKYC</strong>, <strong>payment status check</strong>, ya koi bhi kaam ke liye official portal par jaayein — countdown ke baad aap seedhe pmkisan.gov.in par honge.
           </p>
           <button
             onClick={() => handleOfficialLink(
