@@ -6,8 +6,8 @@ import { useState } from 'react';
 import { SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
 
-const PUBLISHED = '2026-07-30T10:00:00+05:30';
-const MODIFIED = '2026-08-08T09:00:00+05:30';
+const PUBLISHED = '2026-05-22T17:41:10+05:30';
+const MODIFIED = '2026-05-31T07:51:01+05:30';
 
 const RELATED_CARDS = [
   {

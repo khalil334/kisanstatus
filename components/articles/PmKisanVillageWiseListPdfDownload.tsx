@@ -5,8 +5,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 
-const PUBLISHED = '2026-07-11T13:52:00+05:30';
-const MODIFIED = '2026-08-09T03:40:00+05:30';
+const PUBLISHED = '2026-02-17T09:13:27+05:30';
+const MODIFIED = '2026-03-19T22:46:55+05:30';
 
 const RELATED = [
   { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List Guide', emoji: '📋' },

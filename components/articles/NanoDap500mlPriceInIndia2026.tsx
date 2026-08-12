@@ -3,8 +3,8 @@ import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 
-const PUBLISHED = '2026-06-21T08:00:00+05:30';
-const MODIFIED = '2026-08-02T08:00:00+05:30';
+const PUBLISHED = '2026-01-03T08:52:27+05:30';
+const MODIFIED = '2026-01-12T09:57:33+05:30';
 
 const RELATED = [
   { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply Guide', emoji: '💳' },
