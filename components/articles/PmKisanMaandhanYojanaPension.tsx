@@ -11,9 +11,8 @@ const MODIFIED = '2026-02-18T06:27:23+05:30';
 
 const RELATED = [
   { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide' },
+  { slug: 'PmKisanBankAccountChangeProcess', title: 'Bank Account Change' },
   { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List' },
-  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide' },
-  { slug: 'PmfbyCropInsurance2026', title: 'PMFBY Insurance', emoji: '' },
 ];
 
 const FAQS_DATA = [

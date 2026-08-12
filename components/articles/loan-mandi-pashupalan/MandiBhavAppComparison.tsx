@@ -5,12 +5,9 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const RELATED = [
-  { slug: 'mandi-bhav-today', title: 'Aaj Ke Mandi Rates' },
-  { slug: 'enam-registration-kaise-kare', title: 'eNAM Par Panjikaran Steps' },
-  { slug: 'msp-list-2026-27', title: 'MSP Rate List Dekhein' },
-  { slug: 'gehu-ka-bhav-msp-vs-mandi', title: 'Gehu Ka Bhav: MSP vs Mandi', emoji: '' },
-  { slug: 'sabzi-bhav-guide-pyaz-aloo-tamatar', title: 'Pyaz-Aloo-Tamatar Bhav Guide', emoji: '' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'Kisan Credit Card Guide' },
+  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav' },
+  { slug: 'sabzi-bhav-guide-pyaz-aloo-tamatar', title: 'Pyaz-Aloo-Tamatar Bhav Guide' },
+  { slug: 'gehu-ka-bhav-msp-vs-mandi', title: 'Gehu Bhav: MSP vs Mandi' },
 ];
 
 const FAQS_DATA = [

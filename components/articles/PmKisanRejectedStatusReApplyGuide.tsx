@@ -11,13 +11,9 @@ const PUBLISHED = '2026-02-19T07:49:49+05:30';
 const MODIFIED = '2026-02-28T08:36:31+05:30';
 
 const RELATED = [
-  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List Check' },
-  { slug: 'PmKisanMasterGuide2026', title: 'Master Guide' },
+  { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form Guide' },
+  { slug: 'pm-kisan-self-registered-status-check', title: 'Self Registration Status' },
   { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide' },
-  { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form' },
-  { slug: 'PmKisanVoluntarySurrenderGuide', title: 'Voluntary Surrender Guide' },
-  { slug: 'pm-kisan-self-registered-status-check', title: 'Self Registration Status Check' },
-  { slug: 'PmKisanFaceAuthenticationEkyc', title: 'Face Auth eKYC Guide', emoji: '' },
 ];
 
 const FAQS_DATA = [

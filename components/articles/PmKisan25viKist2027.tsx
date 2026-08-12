@@ -9,11 +9,8 @@ const MODIFIED = '2026-03-11T09:19:18+05:30';
 
 const RELATED = [
   { slug: 'PmKisan24viKist2026', title: '24vi Kist Status' },
-  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide' },
   { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Meaning' },
-  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List' },
   { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide' },
-  { slug: 'PmKisanPaymentFailedFix2026', title: 'Payment Failed Fix' },
 ];
 
 const FAQS_DATA = [

@@ -12,10 +12,9 @@ const PUBLISHED = '2026-01-11T14:57:53+05:30';
 const MODIFIED = '2026-01-25T13:34:27+05:30';
 
 const RELATED = [
-  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Complete Guide' },
-  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status' },
-  { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Loan Apply' },
+  { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price & Rate' },
+  { slug: 'drip-sprinkler-irrigation-subsidy', title: 'Drip & Sprinkler Subsidy' },
+  { slug: 'vermi-compost-business-guide', title: 'Vermi Compost Business' },
 ];
 
 const FAQS_DATA = [

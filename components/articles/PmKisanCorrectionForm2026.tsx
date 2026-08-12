@@ -8,15 +8,9 @@ const PUBLISHED = '2026-02-25T21:37:17+05:30';
 const MODIFIED = '2026-03-18T14:49:39+05:30';
 
 const RELATED = [
-  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Complete Guide' },
-  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status Check' },
-  { slug: 'PmKisanPaymentFailedFix2026', title: 'Payment Failed Fix' },
-  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Kaise Karein' },
-  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List Check' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Loan Apply' },
-  { slug: 'PmKisanMobileNumberChangeUpdate', title: 'Mobile Number Change Guide' },
-  { slug: 'PmKisanFaceAuthenticationEkyc', title: 'Face Auth eKYC Guide', emoji: '' },
-  { slug: 'PmKisanLandSeedingForm', title: 'Land Seeding Form', emoji: '' },
+  { slug: 'PmKisanMobileNumberChangeUpdate', title: 'Mobile Number Change' },
+  { slug: 'PmKisanBankAccountChangeProcess', title: 'Bank Account Change' },
+  { slug: 'PmKisanLandSeedingForm', title: 'Land Seeding Form' },
 ];
 
 const FAQS_DATA = [

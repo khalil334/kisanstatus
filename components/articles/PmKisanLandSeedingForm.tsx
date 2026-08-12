@@ -11,9 +11,9 @@ const PUBLISHED = '2026-01-15T16:32:11+05:30';
 const MODIFIED = '2026-02-05T18:12:48+05:30';
 
 const RELATED = [
-  { slug: 'PmKisanBeneficiaryList2026', title: 'PM Kisan Beneficiary List' },
-  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Complete Guide' },
-  { slug: 'PmKisanMasterGuide2026', title: 'Master Guide' },
+  { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form Guide' },
+  { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Meaning' },
+  { slug: 'AgriStackKyaHai2026', title: 'AgriStack Farmer ID Guide' },
 ];
 
 const FAQS_DATA = [

@@ -5,12 +5,9 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const RELATED = [
-  { slug: 'sbi-dairy-loan-interest-rate', title: 'SBI Dairy Loan Ka Byaj Kitna', emoji: '' },
-  { slug: 'bihar-pashupalan-loan-yojana', title: 'Bihar Pashupalan Loan Yojana', emoji: '' },
-  { slug: 'murgi-palan-loan-nlm-subsidy', title: 'Murgi Palan Loan & NLM Subsidy', emoji: '' },
-  { slug: 'rashtriya-gokul-mission-subsidy', title: 'Rashtriya Gokul Mission Subsidy', emoji: '' },
-  { slug: 'jansamarth-portal-loan-apply', title: 'JanSamarth Portal Loan Apply' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Se Working Capital' },
+  { slug: 'sbi-dairy-loan-interest-rate', title: 'SBI Dairy Loan — Rate Guide' },
+  { slug: 'rashtriya-gokul-mission-subsidy', title: 'Gokul Mission Subsidy' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply' },
 ];
 
 const FAQS_DATA = [

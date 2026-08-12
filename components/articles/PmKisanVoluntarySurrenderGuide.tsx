@@ -7,9 +7,9 @@ const PUBLISHED = '2026-01-20T17:46:17+05:30';
 const MODIFIED = '2026-01-29T19:09:12+05:30';
 
 const RELATED = [
-  { slug: 'PmKisanMasterGuide2026', title: 'Master Guide' },
-  { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form' },
+  { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form Guide' },
   { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List' },
+  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide' },
 ];
 
 const FAQS_DATA = [

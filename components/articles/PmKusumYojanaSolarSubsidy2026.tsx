@@ -12,12 +12,9 @@ const PUBLISHED = '2026-02-15T21:25:25+05:30';
 const MODIFIED = '2026-02-24T14:27:25+05:30';
 
 const RELATED = [
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Loan Apply Online' },
-  { slug: 'KisanTractorLoan2026', title: 'Tractor Loan Bina Down Payment', emoji: '' },
-  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide' },
-  { slug: 'soil-health-card-complete-guide-2026', title: 'Soil Health Card Guide', emoji: '' },
-  { slug: 'PmfbyCropInsurance2026', title: 'Fasal Bima Yojana 2026' },
-  { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price Guide' },
+  { slug: 'drip-sprinkler-irrigation-subsidy', title: 'Drip & Sprinkler Subsidy' },
+  { slug: 'KisanRinKahaSeLe2026', title: 'Kisan Loan Kahan Se Le' },
+  { slug: 'custom-hiring-centre-chc-portal', title: 'CHC Machine Rental Guide' },
 ];
 
 const FAQS_DATA = [
