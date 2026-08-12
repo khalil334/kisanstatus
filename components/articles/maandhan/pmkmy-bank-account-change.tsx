@@ -202,7 +202,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
             </table>
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Do cheezein is table se yaad rakhni hain. Ek — confirmation SMS aane tak purana account zinda aur balance-wala rehna chahiye. Do — SMS aane ke baad bhi pehla naya debit khud check karo; agar agle cycle me kisi bhi account se paisa nahi kata, to turant CSC par acknowledgement slip lekar jao.
+            Do cheezein is table se yaad rakhni hain. Ek — confirmation SMS aane tak purana account zinda aur balance-wala rehna chahiye. Do — SMS aane ke baad bhi pehla naya debit khud check karo; agar agle cycle me kisi bhi account se paisa nahi kata, to bina rukey CSC par acknowledgement slip lekar jao.
           </p>
         </section>
 
@@ -297,7 +297,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
             </SI>
             <SI n={3}><strong>CSC Center Ya Bank Branch Me Visit Karein:</strong> Official PMKMY guidelines ke mutabik, bank details update karne ke liye sabse standard aur recommended tarika hai apne nazdeeki Common Service Centre (CSC) ya VLE (Village Level Entrepreneur) ke paas jaana. <strong>Option A (Recommended - Official Channel):</strong> Nazdeeki CSC center par jaayein. Apna PMKMY pension account number, Aadhaar card, aur naye bank ki passbook ki copy le jaayein. VLE operator aapki biometric verification karke seedha PMKMY portal par request raise karega. (Note: CSC par standard nominal service charge ₹20-₹50 lag sakta hai, jo ki official hai). <strong>Option B (Alternative):</strong> Agar CSC accessible nahi hai, to aap apne naye bank branch me bhi ja sakte hain, lekin wahan se bhi request ultimately CSC/portal ke through hi process hoti hai, isliye pehle bank manager se confirm karein ki wo PMKMY update directly kar sakte hain ya nahi.</SI>
             <SI n={4}><strong>Verification Process:</strong> CSC ya Bank wale ye verification karenge: Aadhaar se biometric verification (fingerprint/iris), Mobile number par OTP bhejkar confirm karenge, Naye bank account ki details cross-check karenge, aur Purana PMKMY account verify karenge.</SI>
-            <SI n={5}><strong>Acknowledgement Slip Lein:</strong> Application submit karne ke baad ek acknowledgement slip zaroor lein jisme ye details hon: Application reference number, Submission date, aur CSC/Bank ka stamp aur signature. Is slip ko safe rakhein — status check karne me kaam aayegi.</SI>
+            <SI n={5}><strong>Acknowledgement Slip Lein:</strong> Application submit karne ke baad ek acknowledgement slip le lein jisme ye details hon: Application reference number, Submission date, aur CSC/Bank ka stamp aur signature. Is slip ko safe rakhein — status check karne me kaam aayegi.</SI>
             <SI n={6}><strong>Confirmation Ka Wait Karein:</strong> Update complete hone me time lagta hai: Minimum 7-10 working days, Maximum 30 working days, Average 15-20 din. Confirmation SMS aapke registered mobile par aayega jab account change ho jayega. Samay state aur bank ke hisab se thoda alag ho sakta hai.</SI>
           </StepList>
 

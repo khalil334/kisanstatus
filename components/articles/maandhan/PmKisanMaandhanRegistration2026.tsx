@@ -197,7 +197,7 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
             <SI n={2}>Operator ko saaf-saaf kahein: "Maandhan Yojana mein register karna hai."</SI>
             <SI n={3}>Operator Aadhaar number daal kar details verify karega. OTP nahi aa raha toh pehle mobile number Aadhaar se link karwa lein.</SI>
             <SI n={4}>Umar ke hisaab se monthly contribution batayega — jaise 18 saal ke liye ₹55, 30 saal ke liye ₹100.</SI>
-            <SI n={5}>Pehla contribution UPI ya cash se pay karein aur receipt zaroor lein.</SI>
+            <SI n={5}>Pehla contribution UPI ya cash se pay karein aur receipt sambhal kar rakhein.</SI>
             <SI n={6}>Mobile par confirmation SMS aayega — screenshot lekar save kar lein, yahi aapka proof hai.</SI>
           </StepList>
 
@@ -331,7 +331,7 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
             Application pending reh jaye ya koi technical dikkat aa jaye, toh ghabrane wali baat nahi. Har state ke liye sarkar ne alag grievance mechanism banaya hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Official PM Kisan portal par apne state ke nodal officer ki updated contact details mil jayengi. Complaint karte waqt Registration Number aur Application Date zaroor mention karein taaki resolution jaldi ho.
+            Official PM Kisan portal par apne state ke nodal officer ki updated contact details mil jayengi. Complaint karte waqt Registration Number aur Application Date likh kar mention karein taaki resolution jaldi ho.
           </p>
           <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
             <p className="text-sm font-bold text-blue-800 dark:text-blue-300 mb-2">Official Grievance Links:</p>

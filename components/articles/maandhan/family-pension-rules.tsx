@@ -224,7 +224,7 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
             Udaharan ke liye, maan lijiye ek kisan ne enrolment ke waqt nomination mein apne bhai ya pita ka naam likh diya tha, lekin ab woh is duniya mein nahi hain. Aise mein bank bina legal no-objection certificate ya succession certificate ke wife ko paisa dene se inkar kar sakta hai, jisse process mein mahino ki deri ho sakti hai.
           </p>
           <WB>
-            <strong>Pro Tip:</strong> Apni nomination aaj hi check karein. Agar aapka naam nahi hai, ya listed person ab appropriate nahi hai, to nearest Common Service Centre (CSC) ya <Link href="/maandhan/pm-kisan-maandhan-eligibility-documents" className="text-green-700 underline hover:text-green-900">PMKMY portal</Link> ke through ise turant update karwayein. Yeh 15 minute ka kaam aapke parivar ko saalon ki pareshani se bacha sakta hai.
+            <strong>Pro Tip:</strong> Apni nomination aaj hi check karein. Agar aapka naam nahi hai, ya listed person ab appropriate nahi hai, to nearest Common Service Centre (CSC) ya <Link href="/maandhan/pm-kisan-maandhan-eligibility-documents" className="text-green-700 underline hover:text-green-900">PMKMY portal</Link> ke through ise bina taale update karwayein. Yeh 15 minute ka kaam aapke parivar ko saalon ki pareshani se bacha sakta hai.
           </WB>
         </section>
 
@@ -262,7 +262,7 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
           </div>
 
           <StepList>
-            <SI n={1}><strong>Death Certificate Prapt Karein:</strong> Yeh sabse pehla aur mandatory document hai. Ise municipal corporation ya gram panchayat office se turant banwayein. Iske bina koi bhi process aage nahi badhega.</SI>
+            <SI n={1}><strong>Death Certificate Prapt Karein:</strong> Yeh sabse pehla aur mandatory document hai. Ise municipal corporation ya gram panchayat office se pehle hi banwayein. Iske bina koi bhi process aage nahi badhega.</SI>
             <SI n={2}><strong>Enrolment Bank ya CSC Visit Karein:</strong> Claim form usi bank branch ya CSC mein submit karna hota hai jahan farmer ne originally enrolment kiya tha. Koi bhi random branch isme madad nahi kar sakti.</SI>
             <SI n={3}><strong>Survivor Claim Form Fill Karein:</strong> Form mein deceased, claimant, aur bank account ki details dhyan se bharein. Ek bhi spelling mistake ya account number ka galat digit pure file ko reject karwa sakta hai.</SI>
             <SI n={4}><strong>Supporting Documents Attach Karein:</strong> Death certificate, claimant ka ID proof (Aadhaar), address proof, original PMKMY card/receipt, cancelled cheque/passbook copy, aur marriage certificate. <br/><em>State-wise Variation:</em> Kuch states (jaise UP, Bihar, MP) mein Tehsil se 'Legal Heir Certificate' ya additional affidavit mandatory maang sakte hain. Apne district ke specific rules CSC ya bank se confirm karein.</SI>
@@ -304,7 +304,7 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
           <div className="space-y-3 mb-4">
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
               <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">Galti 1: Nominee Ko Update Na Karna</p>
-              <p className="text-xs text-[var(--color-text-muted)]">Enrolment ke waqt parent ya sibling ko nominee banana, aur baad mein unke guzarne par use update na karna. Shadi ya kisi bhi major life event ke baad CSC jakar nomination update zaroor karein.</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Enrolment ke waqt parent ya sibling ko nominee banana, aur baad mein unke guzarne par use update na karna. Shadi ya kisi bhi major life event ke baad CSC jakar nomination update kara lein.</p>
             </div>
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
               <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">Galti 2: Bank Account Ko Dormant Hone Dena</p>
@@ -328,7 +328,7 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
         <section className="mb-8">
           <SH>Red Flags: Kab Aur Kaise Karein Escalate?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Normal processing time 30 se 60 din hota hai. Lekin kuch situations mein aapko turant higher authorities ke paas jana chahiye:
+            Normal processing time 30 se 60 din hota hai. Lekin kuch situations mein aapko seedha higher authorities ke paas jana chahiye:
           </p>
           <ul className="list-disc pl-5 text-sm text-[var(--color-text-muted)] space-y-2 mb-4">
             <li><strong>Unreasonable Delay:</strong> Yadi bank ya CSC 45 din se zyada time le raha hai bina kisi likhit (written) reason ke.</li>
