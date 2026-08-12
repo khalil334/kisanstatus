@@ -100,7 +100,7 @@ function buildSchemas(
         description: AUTHOR_BIO,
       },
       creator: {
-        '@type': 'Organization',
+        '@type': 'Person',
         name: AUTHOR_NAME,
         url: AUTHOR_URL,
       },

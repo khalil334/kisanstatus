@@ -71,8 +71,8 @@ export default function AutoDebitFailRegularization() {
               articleSection: 'Banking & Finance',
               wordCount: 2800,
               author: {
-                '@type': 'Organization',
-                name: 'KisanStatus Editorial Team',
+                '@type': 'Person',
+                name: 'Manish Kumar',
                 url: 'https://kisanstatus.com/about',
               },
               publisher: {
@@ -116,7 +116,7 @@ export default function AutoDebitFailRegularization() {
           </h1>
 
           <div className="hero-description flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
+            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">Manish Kumar</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
             <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
             <span>⏱️ 10 min read</span>
@@ -451,7 +451,7 @@ export default function AutoDebitFailRegularization() {
           <p className="text-xs text-[var(--color-text-muted)]">
             <strong>Last Verified:</strong> {fmtDate(MODIFIED)}<br />
             <strong>Sources:</strong> RBI Guidelines (DPSS.CO.PD.No.116/02.14.003/2021-22), Major Indian Banks (SBI, HDFC, ICICI), NBFC Policies, CIBIL Bureau<br />
-            <strong>Author:</strong> KisanStatus Editorial Team — Helping farmers and borrowers with verified, actionable information since 2024.
+            <strong>Author:</strong> Manish Kumar — Helping farmers and borrowers with verified, actionable information since 2024.
           </p>
         </div>
 

@@ -106,7 +106,7 @@ export default function ContactPage() {
 
           <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
             <h2 className="text-lg font-black text-[var(--color-text)] mb-3 flex items-center gap-2">
-              <span aria-hidden="true">👨‍🌾</span> Hamari Team
+              <span aria-hidden="true">👨‍🌾</span> Author
             </h2>
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900/30 border-2 border-green-300 dark:border-green-700 flex items-center justify-center text-2xl">
@@ -114,14 +114,14 @@ export default function ContactPage() {
               </div>
               <div>
                 <p className="font-bold text-[var(--color-text)]">{AUTHOR_NAME}</p>
-                <p className="text-xs text-[var(--color-primary)]">PM Kisan Experts & Kisan Advocates</p>
+                <p className="text-xs text-[var(--color-primary)]">Sarkari yojana information — official sources se cross-checked</p>
               </div>
             </div>
             <Link
               href="/about"
               className="inline-flex items-center justify-center gap-2 w-full px-4 py-3 bg-[var(--color-bg-alt)] border border-[var(--color-border)] text-[var(--color-text)] text-sm font-bold rounded-xl hover:border-green-400 dark:hover:border-green-600 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500"
             >
-              Team Profile Dekhen →
+              Author Profile Dekhen →
             </Link>
           </div>
         </div>

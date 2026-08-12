@@ -72,7 +72,7 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
         description: AUTHOR_BIO,
       },
       creator: {
-        '@type': 'Organization',
+        '@type': 'Person',
         name: AUTHOR_NAME,
         url: AUTHOR_URL,
       },

@@ -172,7 +172,7 @@ export default function TermsPage() {
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
               {SITE_NAME} Google AdSense aur anya advertising networks ke madhyam se vigyaapan (ads) pradarshit kar sakta hai.
               Yeh ads humein is platform ko muft mein banaye rakhne aur behtar banane mein madad karte hain.
-              Vigyaapan editorial content se spasht roop se alag hote hain. Hum hamare platform par vigyapit kisi bhi
+              Vigyaapan website ke content se spasht roop se alag hote hain. Hum hamare platform par vigyapit kisi bhi
               product ya service ka samarthan nahi karte. Ads aapke data ka kaise upyog karte hain, iski jankari ke liye
               hamari{' '}
               <Link href="/privacy-policy" className="text-[var(--color-primary)] underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">
@@ -195,7 +195,7 @@ export default function TermsPage() {
           <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
             <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">9. Jimmedari Se Mukti (Limitation of Liability)</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-              {SITE_NAME} aur iski team platform ke upyog, ya yahan pradan ki gayi kisi bhi jankari par bharosa
+              {SITE_NAME} aur iske sanchalak platform ke upyog, ya yahan pradan ki gayi kisi bhi jankari par bharosa
               karne se utpann hone wale kisi bhi pratyaksh, apratyaksh, aakasmik, ya parinamik nuksan ke liye
               jimmedar nahi hogi. Hamari sevayein muft mein pradan ki jaati hain, isliye kisi bhi daave ke liye
               hamari kul jimmedari shunya (zero) tak simit hogi.
@@ -227,7 +227,7 @@ export default function TermsPage() {
             <div className="text-sm text-[var(--color-text-muted)] space-y-2">
               <p>📧 Email: <a href="mailto:kisanstatus.support@gmail.com" className="text-[var(--color-primary)] underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">kisanstatus.support@gmail.com</a></p>
               <p>🌐 Platform: <a href={SITE_URL} className="text-[var(--color-primary)] underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">{SITE_URL}</a></p>
-              <p>👤 Team: <Link href="/about" className="text-[var(--color-primary)] underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">KisanStatus Team</Link></p>
+              <p>👤 Author: <Link href="/about" className="text-[var(--color-primary)] underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">Manish Kumar</Link></p>
             </div>
           </section>
 

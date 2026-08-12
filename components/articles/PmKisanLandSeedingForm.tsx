@@ -136,7 +136,7 @@ export default function PmKisanLandSeedingFormPdf2026() {
             PM Kisan Land Seeding Form PDF Download 2026: State Wise Guide
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white">KisanStatus Team</Link></span>
+            <span>✍️ <Link href="/about" className="underline hover:text-white">Manish Kumar</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
             <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
             <span>⏱️ 12 min read</span>

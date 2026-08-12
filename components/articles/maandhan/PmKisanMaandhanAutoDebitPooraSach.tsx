@@ -65,8 +65,8 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
               articleSection: 'Agriculture & Pension Schemes',
               wordCount: 1800,
               author: {
-                '@type': 'Organization',
-                name: 'KisanStatus Team',
+                '@type': 'Person',
+                name: 'Manish Kumar',
                 url: 'https://kisanstatus.com/about',
               },
               publisher: {
@@ -106,7 +106,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
           </h1>
 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
+            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">Manish Kumar</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
             <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
             <span>⏱️ 12 min read</span>
