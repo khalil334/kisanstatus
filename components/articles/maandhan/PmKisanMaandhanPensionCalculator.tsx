@@ -57,7 +57,7 @@ function PensionCalculatorWidget() {
   return (
     <div className="my-6 rounded-2xl border-2 border-green-500 bg-green-50 dark:bg-green-900/20 p-5 md:p-6">
       <h3 className="font-black text-green-800 dark:text-green-300 text-base md:text-lg mb-3">
-         Apni Umar Daalkar Turant Hisaab Nikaalein
+         Apni Umar Daalkar Hisaab Nikaalein
       </h3>
       <label htmlFor="pmkmy-age-input" className="block text-xs font-medium text-[var(--color-text-muted)] mb-1">
         Apni current age (18–40) daalein

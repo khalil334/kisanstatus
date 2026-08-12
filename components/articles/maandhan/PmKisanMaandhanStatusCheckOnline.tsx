@@ -77,7 +77,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Is guide mein main aapko step-by-step bataunga ke mobile se status kaise verify kijiye, KPAN pension card kaise download kijiye, contribution history kaise dekhein, aur agar koi payment miss hui ho toh uska pata kaise lagayein. Saath hi yeh bhi bataya hai ke jab online portal kaam nahi karta, toh CSC center se kya-kya karwa sakte hain.
+        Neeche main aapko step-by-step bataunga ke mobile se status kaise verify kijiye, KPAN pension card kaise download kijiye, contribution history kaise dekhein, aur agar koi payment miss hui ho toh uska pata kaise lagayein. Saath hi yeh bhi bataya hai ke jab online portal kaam nahi karta, toh CSC center se kya-kya karwa sakte hain.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
@@ -255,7 +255,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
 
       <div className="bg-yellow-50 dark:bg-yellow-900/20 p-5 rounded-lg mb-8 border border-yellow-200 dark:border-yellow-800 not-prose">
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
-          <strong>Important:</strong> KPAN card download karne ke baad uska ek photocopy zaroor nikaal lein. Original card ko safe jagah rakhein. Aur KPAN number ko apne phone ke contacts mein Maandhan KPAN ke naam se save kar lein. Emergency mein kaam ayega.
+          <strong>Important:</strong> KPAN card download karne ke baad uska ek photocopy nikaal kar rakh lein. Original card ko safe jagah rakhein. Aur KPAN number ko apne phone ke contacts mein Maandhan KPAN ke naam se save kar lein. Emergency mein kaam ayega.
         </p>
       </div>
 
@@ -303,7 +303,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
             <tr className="border-b border-gray-100 dark:border-gray-700">
               <td className="py-3 px-4 font-semibold text-red-600">Failed / Bounced</td>
               <td className="py-3 px-4">Auto-debit fail ho gaya — balance nahi tha ya account issue tha</td>
-              <td className="py-3 px-4"><strong>Turant action lo!</strong> CSC jakar manual payment karo</td>
+              <td className="py-3 px-4"><strong>Der mat karo!</strong> CSC jakar manual payment karo</td>
             </tr>
             <tr className="bg-gray-50 dark:bg-gray-800/50">
               <td className="py-3 px-4 font-semibold text-gray-500">Not Available</td>
@@ -315,7 +315,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Failed ya Bounced dikhe to panic wali baat nahi hai — lekin delay bhi mat karein. Turant apne CSC center jayein aur manual payment jama karwayein.
+        Failed ya Bounced dikhe to panic wali baat nahi hai — lekin delay bhi mat karein. Usi hafte apne CSC center jayein aur manual payment jama karwayein.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
@@ -384,7 +384,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
 
       <div className="bg-blue-50 dark:bg-blue-900/20 p-5 rounded-lg mb-8 border border-blue-200 dark:border-blue-800 not-prose">
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
-          <strong>Salah:</strong> Har 3 mahine mein ek baar apna status zaroor check karein — chahe online ho ya CSC center ja kar. Isse pata chalta rahega ke aapka account active hai ya nahi. Aur contribution history ko screenshot le kar apne phone mein save kar lein. Future mein koi dispute ho toh proof kaam ayega.
+          <strong>Salah:</strong> Har 3 mahine mein ek baar apna status dekh lein — chahe online ho ya CSC center ja kar. Isse pata chalta rahega ke aapka account active hai ya nahi. Aur contribution history ko screenshot le kar apne phone mein save kar lein. Future mein koi dispute ho toh proof kaam ayega.
         </p>
       </div>
 
@@ -401,7 +401,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
           <p className="text-sm text-gray-700 dark:text-gray-300"><strong>Step 1 — CSC center (jahan se enroll kiya tha):</strong> Enrollment aur payment ka pehla record wahi hota hai. Receipt/transaction ID saath le jayein. Zyada tar dikkat yahi solve ho jati hai.</p>
         </div>
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-          <p className="text-sm text-gray-700 dark:text-gray-300"><strong>Step 2 — Official helpline / portal grievance:</strong> <a href="https://maandhan.in" target="_blank" rel="noopener noreferrer nofollow" className="text-blue-600 hover:underline dark:text-blue-400">maandhan.in</a> ke Contact Us section mein current helpline number aur grievance ka rasta diya hota hai — number time ke saath badal sakta hai, isliye hamesha portal se hi lein. Complaint karte waqt KPAN number, registered mobile aur problem ki date zaroor batayein.</p>
+          <p className="text-sm text-gray-700 dark:text-gray-300"><strong>Step 2 — Official helpline / portal grievance:</strong> <a href="https://maandhan.in" target="_blank" rel="noopener noreferrer nofollow" className="text-blue-600 hover:underline dark:text-blue-400">maandhan.in</a> ke Contact Us section mein current helpline number aur grievance ka rasta diya hota hai — number time ke saath badal sakta hai, isliye hamesha portal se hi lein. Complaint karte waqt KPAN number, registered mobile aur problem ki date saath mein batayein.</p>
         </div>
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
           <p className="text-sm text-gray-700 dark:text-gray-300"><strong>Step 3 — LIC branch:</strong> Pension fund LIC manage karti hai. Contribution jama hone ke baad bhi record mein na dikhe, toh nazdeeki LIC office mein KPAN aur payment proof ke saath written complaint dein aur acknowledgement lein.</p>
@@ -429,7 +429,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-        Isliye main kehta hoon — har 3 mahine mein ek baar status check karo. Bas 5 minute lagte hain. Mobile pe portal kholo, OTP daalo, dashboard dekho. Sab green dikha toh theek hai. Kuch red ya yellow dikha toh turant action lo. Yeh 5 minute aapke future ki 3000 rupees monthly pension bacha sakte hain.
+        Isliye main kehta hoon — har 3 mahine mein ek baar status check karo. Bas 5 minute lagte hain. Mobile pe portal kholo, OTP daalo, dashboard dekho. Sab green dikha toh theek hai. Kuch red ya yellow dikha toh usi din action lo. Yeh 5 minute aapke future ki 3000 rupees monthly pension bacha sakte hain.
       </p>
 
       <div className="bg-orange-50 dark:bg-orange-900/20 p-5 rounded-lg mb-8 border border-orange-200 dark:border-orange-800 not-prose">
@@ -438,7 +438,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
           <li><strong>Har 3 mahine:</strong> Status check on pmkmy.gov.in</li>
           <li><strong>Har 6 mahine:</strong> KPAN card ka backup banayein (PDF ko alag jagah save karein)</li>
           <li><strong>Har saal:</strong> LIC se annual statement maangein aur apne records se match karein</li>
-          <li><strong>Jab bhi mobile number change ho:</strong> Turant portal pe update karein ya CSC center jayein</li>
+          <li><strong>Jab bhi mobile number change ho:</strong> Usi waqt portal pe update karein ya CSC center jayein</li>
         </ul>
       </div>
 
