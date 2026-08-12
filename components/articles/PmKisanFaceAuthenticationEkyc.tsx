@@ -7,10 +7,9 @@ const PUBLISHED = '2026-01-17T07:41:23+05:30';
 const MODIFIED = '2026-01-22T12:01:39+05:30';
 
 const RELATED = [
-  { slug: 'PmKisanEkycOnline2026', title: 'Normal eKYC Guide' },
-  { slug: 'PmKisanMasterGuide2026', title: 'Master Guide' },
-  { slug: 'PmKisanPaymentFailedFix2026', title: 'Payment Fix' },
-  { slug: 'PmKisanCscRegistrationCharges', title: 'CSC Registration', emoji: '' },
+  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide' },
+  { slug: 'PmKisanCscRegistrationCharges', title: 'CSC Ki Sahi Fees' },
+  { slug: 'PmKisanMobileNumberChangeUpdate', title: 'Mobile Number Change' },
 ];
 
 const FAQS_DATA = [

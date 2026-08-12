@@ -7,10 +7,9 @@ const PUBLISHED = '2026-01-31T20:57:54+05:30';
 const MODIFIED = '2026-02-21T16:05:48+05:30';
 
 const RELATED = [
-  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Online Guide' },
-  { slug: 'PmKisanMasterGuide2026', title: 'Master Guide' },
-  { slug: 'PmKisanBankAccountChangeProcess', title: 'Bank Account Change', emoji: '' },
-  { slug: 'PmKisanStateNodalOfficerList', title: 'Nodal Officer List' },
+  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide' },
+  { slug: 'PmKisanFaceAuthenticationEkyc', title: 'Face Auth eKYC (Bina OTP)' },
+  { slug: 'PmKisanStateNodalOfficerList', title: 'Nodal Officer Contacts' },
 ];
 
 const FAQS_DATA = [

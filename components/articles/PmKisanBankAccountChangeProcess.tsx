@@ -24,11 +24,9 @@ function SafeImage({ src, alt, ...rest }: React.ComponentProps<typeof Image>) {
 }
 
 const RELATED = [
-  { slug: 'PmKisanPaymentFailedFix2026', title: 'Payment Failed Fix' },
-  { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Status Guide' },
-  { slug: 'PmKisanMasterGuide2026', title: 'Master Guide' },
-  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide' },
-  { slug: 'PmKisanBankAccountChangeProcess', title: 'Bank Change', emoji: '' },
+  { slug: 'PmKisanPaymentFailedFix2026', title: 'Payment Failed — 7 Fixes' },
+  { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Meaning' },
+  { slug: 'PmKisanMobileNumberChangeUpdate', title: 'Mobile Number Change' },
 ];
 
 const FAQS_DATA = [

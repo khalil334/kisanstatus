@@ -5,12 +5,9 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const RELATED = [
-  { slug: 'bakri-palan-yojana-nlm-subsidy', title: 'Bakri Palan NLM Subsidy', emoji: '' },
-  { slug: 'dairy-farm-loan-without-collateral', title: 'Collateral-Free Dairy Loan Guide', emoji: '' },
-  { slug: 'bihar-pashupalan-loan-yojana', title: 'Bihar Pashu Loan Scheme', emoji: '' },
-  { slug: 'jansamarth-portal-loan-apply', title: 'JanSamarth Se Loan Kaise Le' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC 2026 Application' },
-  { slug: 'pm-matsya-sampada-yojana-fish-farming', title: 'PM Matsya Sampada Yojana', emoji: '' },
+  { slug: 'bakri-palan-yojana-nlm-subsidy', title: 'Bakri Palan Yojana' },
+  { slug: 'rashtriya-gokul-mission-subsidy', title: 'Gokul Mission Subsidy' },
+  { slug: 'jansamarth-portal-loan-apply', title: 'JanSamarth Loan Apply' },
 ];
 
 const FAQS_DATA = [

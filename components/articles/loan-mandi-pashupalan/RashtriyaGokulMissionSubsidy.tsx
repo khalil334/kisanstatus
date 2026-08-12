@@ -5,12 +5,9 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const RELATED = [
-  { slug: 'bihar-pashupalan-loan-yojana', title: 'Bihar Ki Pashupalan Yojana', emoji: '' },
-  { slug: 'dairy-farm-loan-without-collateral', title: 'Dairy Ke Liye Bina Zamanat Loan', emoji: '' },
-  { slug: 'murgi-palan-loan-nlm-subsidy', title: 'Murgi Palan NLM Subsidy', emoji: '' },
-  { slug: 'bakri-palan-yojana-nlm-subsidy', title: 'Bakri Palan Par NLM Madad', emoji: '' },
-  { slug: 'sbi-dairy-loan-interest-rate', title: 'SBI Dairy Loan EMI Aur Rate', emoji: '' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'Kisan Credit Card 2026' },
+  { slug: 'murgi-palan-loan-nlm-subsidy', title: 'Murgi Palan NLM Subsidy' },
+  { slug: 'sbi-dairy-loan-interest-rate', title: 'SBI Dairy Loan — Rate Guide' },
+  { slug: 'dairy-farm-loan-without-collateral', title: 'Bina Guarantee Dairy Loan' },
 ];
 
 const FAQS_DATA = [

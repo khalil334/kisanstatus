@@ -16,14 +16,9 @@ function fmtDate(dateString: string): string {
 }
 
 const RELATED = [
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply Guide' },
-  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide' },
-  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status' },
-  { slug: 'AgriStackKyaHai2026', title: 'Digital Kisan ID' },
-  { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price Guide', emoji: '' },
-  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav' },
-  { slug: 'bakri-palan-yojana-nlm-subsidy', title: 'Bakri Palan Subsidy Guide', emoji: '' },
-  { slug: 'silage-making-business-guide', title: 'Silage Making Business', emoji: '' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply' },
+  { slug: 'KisanTractorLoan2026', title: 'Tractor Loan Guide' },
+  { slug: 'jansamarth-portal-loan-apply', title: 'JanSamarth Loan Apply' },
 ];
 
 const FAQS_DATA = [

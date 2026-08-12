@@ -5,12 +5,9 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const RELATED = [
-  { slug: 'msp-list-2026-27', title: 'Sabhi Faslon Ki MSP 2026-27' },
-  { slug: 'mandi-bhav-today', title: 'Mandi Bhav Live Rates' },
-  { slug: 'enam-registration-kaise-kare', title: 'eNAM Registration Guide' },
-  { slug: 'mandi-bhav-app-comparison', title: 'Mandi Rate Apps Comparison' },
-  { slug: 'sabzi-bhav-guide-pyaz-aloo-tamatar', title: 'Sabzi Bhav Guide', emoji: '' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Apply Guide 2026' },
+  { slug: 'msp-list-2026-27', title: 'MSP List 2026-27' },
+  { slug: 'sabzi-bhav-guide-pyaz-aloo-tamatar', title: 'Pyaz-Aloo-Tamatar Bhav Guide' },
+  { slug: 'enam-registration-kaise-kare', title: 'eNAM Registration' },
 ];
 
 const FAQS_DATA = [
