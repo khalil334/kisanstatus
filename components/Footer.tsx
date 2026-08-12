@@ -50,10 +50,10 @@ export default function Footer() {
             <nav aria-label="Footer navigation">
               <ul className="space-y-2 text-sm" role="list">
                 {[
-                  { href: '/', label: '🏠 Home' },
+                  { href: '/', label: 'Home' },
                   { href: '/articles', label: 'All Articles' },
-                  { href: '/articles/hi', label: '🇮🇳 हिंदी योजना गाइड' },
-                  { href: '/rajya-yojana', label: '🏛️ Rajya Yojana' },
+                  { href: '/articles/hi', label: 'हिंदी योजना गाइड' },
+                  { href: '/rajya-yojana', label: 'Rajya Yojana' },
                   { href: '/calculator', label: 'Calculators' },
                   { href: '/calculator/quick-status-check', label: 'Quick Status Check' },
                 ].map((link) => (
@@ -75,7 +75,7 @@ export default function Footer() {
             <nav aria-label="Company and legal pages">
               <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm" role="list">
                 {[
-                  { href: '/about', label: '👤 About Us' },
+                  { href: '/about', label: 'About Us' },
                   { href: '/contact', label: 'Contact Us' },
                   { href: '/privacy-policy', label: 'Privacy Policy' },
                   { href: '/terms-of-service', label: 'Terms of Service' },
@@ -154,14 +154,14 @@ export default function Footer() {
               aria-label="Follow KisanStatus on Facebook (opens in new tab)"
               itemProp="sameAs"
             >
-              👍 Facebook Page Par Follow Karein ↗
+              Facebook Page Par Follow Karein ↗
             </a>
           </div>
         </div>
 
         <div className="border-t border-white/10 pt-6 pb-6">
           <h4 className="font-semibold text-white text-base mb-4 flex items-center gap-2">
-            <span aria-hidden="true">🏛️</span>
+            <span aria-hidden="true"></span>
             Official Government Links & Helpline
           </h4>
           <div className="bg-white/5 border border-white/10 rounded-lg p-4 mb-4">
@@ -226,7 +226,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-center md:text-left">
               <p className="text-sm text-gray-400">
-                © {currentYear} {SITE_NAME} — Built with ❤️ for Indian Farmers
+                © {currentYear} {SITE_NAME} — Built with for Indian Farmers
               </p>
               <p className="mt-1 text-xs text-gray-500">
                 By{' '}

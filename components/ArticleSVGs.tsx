@@ -7,7 +7,7 @@ export function SvgLandSeeding({ caption }: { caption: string }) {
         <text x="125" y="120" textAnchor="middle" fill="#92400e" fontSize="10">Khasra Records</text>
         <text x="245" y="105" textAnchor="middle" fill="#d97706" fontSize="20">→</text>
         <rect x="290" y="40" width="170" height="120" rx="12" fill="#fff" stroke="#fcd34d" strokeWidth="2"/>
-        <text x="375" y="90" textAnchor="middle" fill="#d97706" fontSize="22">🏛️</text>
+        <text x="375" y="90" textAnchor="middle" fill="#d97706" fontSize="22"></text>
         <text x="375" y="120" textAnchor="middle" fill="#92400e" fontSize="10">Agriculture Office</text>
         <text x="510" y="105" textAnchor="middle" fill="#d97706" fontSize="20">→</text>
         <rect x="550" y="40" width="200" height="120" rx="12" fill="#fff" stroke="#86efac" strokeWidth="2"/>

@@ -407,7 +407,7 @@ export default function GehuKaRateAajMspVsMandiBhav({ article }: { article: Hind
       </div>
 
       <div className="my-8 p-6 bg-gradient-to-r from-green-800 to-green-600 rounded-2xl text-white text-center">
-        <p className="text-2xl mb-2">🌾</p>
+        <p className="text-2xl mb-2"></p>
         <p className="font-black text-lg mb-1">Mandi Bhav Roz Dekho</p>
         <p className="text-green-100 text-sm mb-4">
           Apni mandi ka taaza bhav aur rujhaan — bechne ka sahi din pakdo.
@@ -489,13 +489,13 @@ export default function GehuKaRateAajMspVsMandiBhav({ article }: { article: Hind
             <Link href="/articles/mandi-bhav-today">Mandi Bhav Today</Link>
           </li>
           <li>
-            <Link href="/articles/hi/npci-aadhaar-seeding">🏦 आधार सीडिंग और DBT की guide</Link>
+            <Link href="/articles/hi/npci-aadhaar-seeding">आधार सीडिंग और DBT की guide</Link>
           </li>
           <li>
             <Link href="/articles/hi/kcc-limit-kaise-badhaye">KCC limit ₹5 लाख तक ले जाने का रास्ता</Link>
           </li>
           <li>
-            <Link href="/articles/KisanRinKahaSeLe2026">🏦 खेती के loan के सब विकल्प</Link>
+            <Link href="/articles/KisanRinKahaSeLe2026">खेती के loan के सब विकल्प</Link>
           </li>
         </ul>
       </div>

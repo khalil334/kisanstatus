@@ -17,7 +17,7 @@ const RELATED = [
   { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form' },
   { slug: 'PmKisanVoluntarySurrenderGuide', title: 'Voluntary Surrender Guide' },
   { slug: 'pm-kisan-self-registered-status-check', title: 'Self Registration Status Check' },
-  { slug: 'PmKisanFaceAuthenticationEkyc', title: 'Face Auth eKYC Guide', emoji: '🤳' },
+  { slug: 'PmKisanFaceAuthenticationEkyc', title: 'Face Auth eKYC Guide', emoji: '' },
 ];
 
 const FAQS_DATA = [
@@ -329,19 +329,19 @@ export default function PmKisanRejectedStatusReApplyGuide() {
           </p>
           <div className="space-y-4">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
-              <p className="font-black text-sm text-green-800 dark:text-green-300 mb-2">🏔️ Uttar Pradesh & Bihar</p>
+              <p className="font-black text-sm text-green-800 dark:text-green-300 mb-2">Uttar Pradesh & Bihar</p>
               <p className="text-xs text-[var(--color-text-muted)]">Yahan sabse badi problem "Bhulekh/Khatauni" mein naam ka spelling galat hona hai. Patwari se spelling theek karwao, phir CSC jao.</p>
             </div>
             <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
-              <p className="font-black text-sm text-blue-800 dark:text-blue-300 mb-2">🌿 Madhya Pradesh & Rajasthan</p>
+              <p className="font-black text-sm text-blue-800 dark:text-blue-300 mb-2">Madhya Pradesh & Rajasthan</p>
               <p className="text-xs text-[var(--color-text-muted)]">Yahan "Bhu-Abhilekh" aur "Apna Khata" portal par zameen ka record digital nahi hota. Pehle patwari se record digitize karwao.</p>
             </div>
             <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl">
-              <p className="font-black text-sm text-amber-800 dark:text-amber-300 mb-2">🌾 Maharashtra & Gujarat</p>
+              <p className="font-black text-sm text-amber-800 dark:text-amber-300 mb-2">Maharashtra & Gujarat</p>
               <p className="text-xs text-[var(--color-text-muted)]">Yahan "7/12 Utara" aur "AnyROR" mein joint ownership ka masla aata hai. Agar zameen bhaiyon ke naam par hai, toh sirf ek bhai ka naam form mein hona chahiye.</p>
             </div>
             <div className="p-4 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-xl">
-              <p className="font-black text-sm text-purple-800 dark:text-purple-300 mb-2">🌊 South States (TN, Kerala, AP)</p>
+              <p className="font-black text-sm text-purple-800 dark:text-purple-300 mb-2">South States (TN, Kerala, AP)</p>
               <p className="text-xs text-[var(--color-text-muted)]">Yahan "Patta" aur "Chitta" records mein family head ka naam update nahi hota. Revenue office jakar patta transfer karwana padta hai.</p>
             </div>
           </div>

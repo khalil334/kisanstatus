@@ -54,7 +54,7 @@ function PmKisanCalc() {
         <ResultRow label={`${years} Saal Mein Total`} value={fmt(total)} highlight />
         {!eligible && (
           <p className="text-xs text-red-600 dark:text-red-400 pt-2">
-            {reg === 'no' ? '️ Pehle enrollment karo bhai — official portal par free' : 'eKYC complete karo — bina verification kist nahi milti'}
+            {reg === 'no' ? 'Pehle enrollment karo bhai — official portal par free' : 'eKYC complete karo — bina verification kist nahi milti'}
           </p>
         )}
         {eligible && (
@@ -331,7 +331,7 @@ function IrrigationCalc() {
       </div>
 
       <div className="p-3 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl text-xs text-green-800 dark:text-green-300">
-        <strong>💧 Tip:</strong> Drip ya sprinkler irrigation se 35-50% paani bachta hai bhai — PM Krishi Sinchai Yojana mein 55% subsidy milti hai!
+        <strong>Tip:</strong> Drip ya sprinkler irrigation se 35-50% paani bachta hai bhai — PM Krishi Sinchai Yojana mein 55% subsidy milti hai!
       </div>
     </div>
   );
@@ -341,11 +341,11 @@ export default function AgriCalculator() {
   const [tab, setTab] = useState<Tab>('pmkisan');
 
   const tabs: { id: Tab; label: string; emoji?: string; desc: string }[] = [
-    { id: 'pmkisan',    label: 'PM Kisan',         emoji: '🌾', desc: 'Labh Calculator' },
+    { id: 'pmkisan',    label: 'PM Kisan',         emoji: '', desc: 'Labh Calculator' },
     { id: 'msp',        label: 'MSP Rate', desc: 'Fasal Income'    },
     { id: 'profit',     label: 'Crop Profit', desc: 'Munafa Hisab'   },
     { id: 'emi',        label: 'KCC EMI', desc: 'EMI Calculator' },
-    { id: 'fertilizer', label: 'Fertilizer',       emoji: '🌿', desc: 'Khad Kharcha'   },
+    { id: 'fertilizer', label: 'Fertilizer',       emoji: '', desc: 'Khad Kharcha'   },
     { id: 'irrigation', label: 'Irrigation', desc: 'Paani Kharcha'  },
   ];
 

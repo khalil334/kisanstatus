@@ -20,10 +20,10 @@ const RELATED = [
   { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide' },
   { slug: 'PmKisan24viKist2026', title: '24vi Kist Status' },
   { slug: 'AgriStackKyaHai2026', title: 'Digital Kisan ID' },
-  { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price Guide', emoji: '🌱' },
+  { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price Guide', emoji: '' },
   { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav' },
-  { slug: 'bakri-palan-yojana-nlm-subsidy', title: 'Bakri Palan Subsidy Guide', emoji: '🐐' },
-  { slug: 'silage-making-business-guide', title: 'Silage Making Business', emoji: '🌾' },
+  { slug: 'bakri-palan-yojana-nlm-subsidy', title: 'Bakri Palan Subsidy Guide', emoji: '' },
+  { slug: 'silage-making-business-guide', title: 'Silage Making Business', emoji: '' },
 ];
 
 const FAQS_DATA = [
@@ -398,10 +398,10 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
         />
 
         <CalcBanner
-          icon="🏦"
+          icon=""
           title="Apni EMI Calculate Karo"
           desc="KCC ya term loan ki monthly payment jaano — bank jaane se pehle prepared raho"
-          primaryCta={{ href: '/calculator/kcc-loan-emi', label: '🏦 EMI Calculator →' }}
+          primaryCta={{ href: '/calculator/kcc-loan-emi', label: 'EMI Calculator →' }}
           secondaryCta={{ href: '/calculator', label: 'Sab Utilities' }}
         />
 

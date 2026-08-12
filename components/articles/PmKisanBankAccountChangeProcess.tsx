@@ -28,7 +28,7 @@ const RELATED = [
   { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Status Guide' },
   { slug: 'PmKisanMasterGuide2026', title: 'Master Guide' },
   { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide' },
-  { slug: 'PmKisanBankAccountChangeProcess', title: 'Bank Change', emoji: '🏦' },
+  { slug: 'PmKisanBankAccountChangeProcess', title: 'Bank Change', emoji: '' },
 ];
 
 const FAQS_DATA = [
@@ -85,7 +85,7 @@ export default function PmKisanBankAccountChangeProcess() {
             PM Kisan Bank Change 2026: Naya Account
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>️ <Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>
+            <span><Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>
             <span>{fmtDate(PUBLISHED)}</span>
             <span> Updated: {fmtDate(MODIFIED)}</span>
             <span>16 min read</span>
@@ -146,7 +146,7 @@ export default function PmKisanBankAccountChangeProcess() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
-              { icon: '🏦', title: 'Account Dormant/Band', desc: 'Do saal tak koi len-den na ho toh bank account ko dormant ya freeze kar deta hai. Jan Dhan account bhi istemal na hone par freeze ho jaata hai.' },
+              { icon: '', title: 'Account Dormant/Band', desc: 'Do saal tak koi len-den na ho toh bank account ko dormant ya freeze kar deta hai. Jan Dhan account bhi istemal na hone par freeze ho jaata hai.' },
               { title: 'IFSC Code Change', desc: 'Branches merge hone se IFSC badal jaata hai, aur purana code portal par kaam karna band kar deta hai.' },
               { title: 'Galat Account Link', desc: 'Registration ke waqt kabhi galat account number ya IFSC daal diya jaata hai, ya Current account de diya jaata hai jabki PM Kisan sirf Savings account mein aata hai.' },
               { title: 'Naam Mismatch', desc: 'Passbook aur Aadhaar mein naam thoda alag ho toh payment reject ho jaati hai — isko system "Name Mismatch" kehta hai.' },

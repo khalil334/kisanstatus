@@ -157,7 +157,7 @@ export default function MSPIncomeCalcPage() {
         </div>
 
         <div className="mt-6 bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
-          <h3 className="font-black text-gray-900 text-sm mb-4">🏪 MSP Par Fasal Kaise Bechein</h3>
+          <h3 className="font-black text-gray-900 text-sm mb-4">MSP Par Fasal Kaise Bechein</h3>
           <div className="space-y-3">
             {[
               {n:1,s:'Pehle fasal taiyar karo — safai, grading, moisture check, sab FCI standards ke hisaab se'},
@@ -194,7 +194,7 @@ export default function MSPIncomeCalcPage() {
               <p className="text-green-800">Moisture aur grading theek rakho — quality achhi hogi tabhi reject hone ka risk nahi rahega</p>
             </div>
             <div className="p-3 bg-blue-50 border border-blue-200 rounded-xl">
-              <p className="font-bold text-blue-900 mb-1">🏪 Sahi Center Chuno</p>
+              <p className="font-bold text-blue-900 mb-1">Sahi Center Chuno</p>
               <p className="text-blue-800">FCI, MARKFED ya state procurement centers hi MSP dete hain — private traders isse bachte hain</p>
             </div>
             <div className="p-3 bg-purple-50 border border-purple-200 rounded-xl">
@@ -236,7 +236,7 @@ export default function MSPIncomeCalcPage() {
                Fasal Bima — MSP Ke Sath Zaroori
             </Link>
             <Link href="/articles/soil-health-card-complete-guide-2026" className="p-3 bg-white border border-orange-200 rounded-xl text-xs font-semibold text-gray-700 hover:bg-orange-600 hover:text-white transition-colors">
-              🌱 Soil Health Card — Better Yield
+              Soil Health Card — Better Yield
             </Link>
             <Link href="/calculator/crop-profit" className="p-3 bg-white border border-orange-200 rounded-xl text-xs font-semibold text-gray-700 hover:bg-orange-600 hover:text-white transition-colors">
                Kheti Munafa Calculator

@@ -171,7 +171,7 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
               </div>
             </div>
             <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl flex gap-3">
-              <span className="text-2xl">🌾</span>
+              <span className="text-2xl"></span>
               <div>
                 <p className="font-black text-sm text-blue-800 dark:text-blue-300 mb-1">Doosri Shart — Zameen Ka Size</p>
                 <p className="text-xs text-[var(--color-text-muted)]">Kul milakar 2 hectare (lagbhag 5 acre) tak hi cultivable landholding honi chahiye — chahe ek jagah ho ya alag khaton mein bikhri ho, jod isi seema ke andar aana chahiye. Official guidelines ke mutabik scheme ka focus chhote aur seemant kisano par hai, isliye zameen ka total size dekha jaata hai, sirf ek khata nahi.</p>
@@ -270,7 +270,7 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
 
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
               <div className="flex items-start gap-3">
-                <span className="text-xl mt-0.5">🏦</span>
+                <span className="text-xl mt-0.5"></span>
                 <div>
                   <p className="font-black text-sm text-[var(--color-text)] mb-1">Bank Passbook, Individual Account Ki</p>
                   <p className="text-xs text-[var(--color-text-muted)]">Contribution aur baad mein pension, dono isi ek account se aana-jaana hai, isliye joint account yahan nahi chalta — malikana haq ka jhagda hone par claim atak sakta hai. Passbook ke pehle page par naam, account number aur IFSC saaf dikhna chahiye.</p>

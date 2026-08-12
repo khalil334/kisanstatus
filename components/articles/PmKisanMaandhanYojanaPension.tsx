@@ -13,7 +13,7 @@ const RELATED = [
   { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide' },
   { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List' },
   { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide' },
-  { slug: 'PmfbyCropInsurance2026', title: 'PMFBY Insurance', emoji: '🌾' },
+  { slug: 'PmfbyCropInsurance2026', title: 'PMFBY Insurance', emoji: '' },
 ];
 
 const FAQS_DATA = [
@@ -177,7 +177,7 @@ export default function PmKisanMaandhanYojanaPension() {
             <span><Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>
             <span> {fmtDate(PUBLISHED)}</span>
             <span>Updated: {fmtDate(MODIFIED)}</span>
-            <span>️ 16 min read</span>
+            <span>16 min read</span>
           </div>
         </div>
       </div>
@@ -349,7 +349,7 @@ export default function PmKisanMaandhanYojanaPension() {
             Apply karne ke 3 tareeke hain. Jo aapko aasan lage wo chuno:
           </p>
 
-          <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">🏪 Method 1: CSC Center Se (Sabse Aasan)</h3>
+          <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">Method 1: CSC Center Se (Sabse Aasan)</h3>
           <StepList>
             <SI n={1}>Nazdiki <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">apne gaon ke paas wale CSC</Link> par jao.</SI>
             <SI n={2}>Aadhaar card, bank passbook, aur passport size photo le jao.</SI>
@@ -359,7 +359,7 @@ export default function PmKisanMaandhanYojanaPension() {
             <SI n={6}>Ek acknowledgement slip milegi. Sambhal kar rakho.</SI>
           </StepList>
 
-          <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">🏦 Method 2: Bank Branch Se</h3>
+          <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">Method 2: Bank Branch Se</h3>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Agar CSC door hai, toh apne bank branch chale jao. Wahan bhi ye facility available hai. Form milega, bharo, submit karo.
           </p>
@@ -448,7 +448,7 @@ export default function PmKisanMaandhanYojanaPension() {
           <div className="space-y-3">
             <div className="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 p-4 rounded-r-xl">
               <p className="text-sm text-blue-800 dark:text-blue-300">
-                <strong>👤 Kisan Ki Maut:</strong> Agar kisan ki maut 60 saal se pehle ho jaye, toh uski <strong>patni ko 50% pension</strong> (₹1500 har mahine) milti hai. Ye pension bhi umar bhar milti rehti hai.
+                <strong>Kisan Ki Maut:</strong> Agar kisan ki maut 60 saal se pehle ho jaye, toh uski <strong>patni ko 50% pension</strong> (₹1500 har mahine) milti hai. Ye pension bhi umar bhar milti rehti hai.
               </p>
             </div>
             <div className="bg-purple-50 dark:bg-purple-900/20 border-l-4 border-purple-500 p-4 rounded-r-xl">
@@ -458,7 +458,7 @@ export default function PmKisanMaandhanYojanaPension() {
             </div>
             <div className="bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500 p-4 rounded-r-xl">
               <p className="text-sm text-green-800 dark:text-green-300">
-                <strong>👤 60 Ke Baad Maut:</strong> Agar pension shuru hone ke baad kisan ki maut ho jaye, toh <strong>patni ko 50% pension</strong> (₹1500 har mahine) umar bhar milti rehti hai. Official documents ke mutabik, pension corpus spouse ko family pension ke roop mein jaari rehta hai.
+                <strong>60 Ke Baad Maut:</strong> Agar pension shuru hone ke baad kisan ki maut ho jaye, toh <strong>patni ko 50% pension</strong> (₹1500 har mahine) umar bhar milti rehti hai. Official documents ke mutabik, pension corpus spouse ko family pension ke roop mein jaari rehta hai.
               </p>
             </div>
           </div>
@@ -583,7 +583,7 @@ export default function PmKisanMaandhanYojanaPension() {
           </div>
           <div className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 p-4 rounded-r-xl mb-3">
             <p className="text-sm text-amber-800 dark:text-amber-300">
-              <strong>️ Missed Contributions:</strong> Agar monthly paisa nahi diya toh baad mein penalty ke saath bharna padta hai. Consistent payment zaroori hai.
+              <strong>Missed Contributions:</strong> Agar monthly paisa nahi diya toh baad mein penalty ke saath bharna padta hai. Consistent payment zaroori hai.
             </p>
           </div>
           <div className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 p-4 rounded-r-xl">
@@ -630,7 +630,7 @@ export default function PmKisanMaandhanYojanaPension() {
               description="Nazdiki CSC center dhoondhein jahan jakar aap Maandhan Yojana mein enroll kar sakte hain."
               href="https://find.csc.gov.in"
               buttonText="CSC Dhoondhein"
-              icon="🏪"
+              icon=""
               variant="success"
             />
           </div>
@@ -648,7 +648,7 @@ export default function PmKisanMaandhanYojanaPension() {
         <BottomNav extraLinks={[
           { href: '/articles/PmKisanMasterGuide2026', l: ' Master Guide' },
           { href: '/articles/PmKisanBeneficiaryList2026', l: 'Beneficiary List' },
-          { href: '/articles/PmfbyCropInsurance2026', l: '🌾 PMFBY Insurance' },
+          { href: '/articles/PmfbyCropInsurance2026', l: 'PMFBY Insurance' },
         ]} />
         <Disclaimer />
       </div>

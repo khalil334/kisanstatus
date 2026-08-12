@@ -20,7 +20,7 @@ export const CATEGORIES = {
     nameHi: 'खेती और योजनाएं',
     description: 'Soil analysis, crop insurance, AgriStack, Nano DAP and other schemes',
     descriptionHi: 'मृदा विश्लेषण, फसल बीमा, एग्रीस्टैक, नैनो डीएपी और अन्य योजनाएं',
-    icon: '🌱',
+    icon: '',
     color: 'emerald',
   },
   'mandi': {
@@ -36,7 +36,7 @@ export const CATEGORIES = {
     nameHi: 'पशुपालन और मत्स्य पालन',
     description: 'Goat farming, beekeeping, fish farming and silage subsidy guides',
     descriptionHi: 'बकरी पालन, मधुमक्खी पालन, मछली पालन और साइलेज सब्सिडी गाइड',
-    icon: '🐄',
+    icon: '',
     color: 'orange',
   },
   'agri-business': {
@@ -44,7 +44,7 @@ export const CATEGORIES = {
     nameHi: 'कृषि व्यवसाय और सब्सिडी',
     description: 'Mushroom farming, vermicompost, food processing, CHC and irrigation subsidy guides',
     descriptionHi: 'मशरूम की खेती, वर्मी कम्पोस्ट, फूड प्रोसेसिंग, सीएचसी और सिंचाई सब्सिडी गाइड',
-    icon: '🏭',
+    icon: '',
     color: 'teal',
   },
 } as const;

@@ -25,7 +25,7 @@ const RELATED = [
   { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Matlab Kya Hai' },
   { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List Mein Naam Dekho' },
   { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Loan Apply Online' },
-  { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price Guide', emoji: '🌱' },
+  { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price Guide', emoji: '' },
   { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav' },
   { slug: 'PmKisan25viKist2027', title: '25vi Kist 2027 Kab Aayegi' },
   { slug: 'pm-kisan-self-registered-status-check', title: 'Self Registration Status' },
@@ -347,12 +347,12 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
               <p className="text-xs text-[var(--color-text-muted)]">Portal par Aadhaar daalo, OTP code verify karo. Sabse aasaan tarika — ghar baithe ho jata hai.</p>
             </div>
             <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
-              <span className="text-2xl block mb-2" aria-hidden="true">🖐️</span>
+              <span className="text-2xl block mb-2" aria-hidden="true"></span>
               <p className="font-black text-blue-800 dark:text-blue-300 text-sm mb-1">Biometric (CSC)</p>
               <p className="text-xs text-[var(--color-text-muted)]">OTP na aaye toh CSC center jao. Fingerprint se verify ho jayega. ₹20-30 lagte hain.</p>
             </div>
             <div className="p-4 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-xl">
-              <span className="text-2xl block mb-2" aria-hidden="true">🤳</span>
+              <span className="text-2xl block mb-2" aria-hidden="true"></span>
               <p className="font-black text-purple-800 dark:text-purple-300 text-sm mb-1">Face Auth</p>
               <p className="text-xs text-[var(--color-text-muted)]">Mobile app se face scan. Dono fail hon toh ye try karo. Latest option hai.</p>
             </div>

@@ -46,10 +46,10 @@ const SEARCH_INDEX: readonly Entry[] = [
 const CATEGORY_EMOJIS: Record<string, string> = {
   'status-check': '',
   loan: '',
-  farming: '🌱',
-  mandi: '🏪',
-  'rajya-yojana': '🏛️',
-  'pension-scheme': '👴',
+  farming: '',
+  mandi: '',
+  'rajya-yojana': '',
+  'pension-scheme': '',
 };
 
 function search(query: string): readonly Entry[] {

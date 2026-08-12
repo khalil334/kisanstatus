@@ -121,7 +121,7 @@ export default function QuickStatusChecker() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold px-4 py-2 rounded-lg transition-colors"
               >
-                🏛️ Official Portal Kholein →
+                Official Portal Kholein →
               </a>
             </div>
           )}
@@ -252,7 +252,7 @@ export default function QuickStatusChecker() {
               <p className="text-xs text-yellow-800">Isse turant nipta do — CSC center jao ya Aadhaar OTP se online kar lo. Bina eKYC ke kist nahi aayegi.</p>
             </div>
             <div className="p-3 bg-blue-50 border border-blue-200 rounded-xl">
-              <p className="font-bold text-blue-900 text-xs mb-1">🏦 "Bank Account Not Seeded" error</p>
+              <p className="font-bold text-blue-900 text-xs mb-1">"Bank Account Not Seeded" error</p>
               <p className="text-xs text-blue-800">Bank account ko PM Kisan se link karna padega — bank jao, Aadhaar seed karwao, phir portal par update kar do.</p>
             </div>
           </div>
@@ -267,7 +267,7 @@ export default function QuickStatusChecker() {
               rel="noopener noreferrer"
               className="text-[10px] font-bold text-blue-600 hover:text-blue-800 hover:underline flex items-center gap-1"
             >
-              🏛️ pmkisan.gov.in ↗
+              pmkisan.gov.in ↗
             </a>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">

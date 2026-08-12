@@ -633,7 +633,7 @@ export default function PMatsyaSampada() {
 
         <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border border-green-200 dark:border-green-800 hover:shadow-md transition-shadow">
           <h4 className="font-semibold text-green-900 dark:text-green-200 mb-2 flex items-center gap-2">
-            🏭 PM FME Yojana
+            PM FME Yojana
           </h4>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Fish processing aur cold storage units ke liye 35% tak subsidy. Branded packaging ke liye ideal.</p>
           <Link href="/articles/pm-fme-yojana-food-processing" className="text-green-600 hover:underline dark:text-green-400 text-sm font-medium flex items-center gap-1">

@@ -8,8 +8,8 @@ const RELATED = [
   { slug: 'mandi-bhav-today', title: 'Aaj Ke Mandi Rates' },
   { slug: 'enam-registration-kaise-kare', title: 'eNAM Par Panjikaran Steps' },
   { slug: 'msp-list-2026-27', title: 'MSP Rate List Dekhein' },
-  { slug: 'gehu-ka-bhav-msp-vs-mandi', title: 'Gehu Ka Bhav: MSP vs Mandi', emoji: '🌾' },
-  { slug: 'sabzi-bhav-guide-pyaz-aloo-tamatar', title: 'Pyaz-Aloo-Tamatar Bhav Guide', emoji: '🥔' },
+  { slug: 'gehu-ka-bhav-msp-vs-mandi', title: 'Gehu Ka Bhav: MSP vs Mandi', emoji: '' },
+  { slug: 'sabzi-bhav-guide-pyaz-aloo-tamatar', title: 'Pyaz-Aloo-Tamatar Bhav Guide', emoji: '' },
   { slug: 'KisanCreditCardOnlineApply2026', title: 'Kisan Credit Card Guide' },
 ];
 
@@ -149,7 +149,7 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
           loading="lazy"
         />
 
-        <SH>🏛️ Sarkari Apps — Base Yahi Rakho</SH>
+        <SH>Sarkari Apps — Base Yahi Rakho</SH>
         <div className="overflow-x-auto my-4">
           <table className="w-full text-sm border-collapse">
             <thead>

@@ -290,13 +290,13 @@ const FRUIT_BASE: readonly CommodityBase[] = [
 ];
 
 const WEATHER_FALLBACK: readonly WeatherData[] = [
-  { day: 'Aaj', date: '11 Jul', temp: '32°/26°', condition: '🌧️ Bharish', rain: '80%' },
-  { day: 'Kal', date: '12 Jul', temp: '31°/25°', condition: '🌦️ Halki Barish', rain: '65%' },
-  { day: 'Sat', date: '13 Jul', temp: '33°/26°', condition: '🌦️ Halki Barish', rain: '40%' },
-  { day: 'Sun', date: '14 Jul', temp: '34°/27°', condition: '⛅ Baadal', rain: '20%' },
-  { day: 'Mon', date: '15 Jul', temp: '35°/28°', condition: '☀️ Dhoop', rain: '5%' },
-  { day: 'Tue', date: '16 Jul', temp: '34°/27°', condition: '🌤️ Halki Dhoop', rain: '10%' },
-  { day: 'Wed', date: '17 Jul', temp: '33°/26°', condition: '🌦️ Halki Barish', rain: '35%' },
+  { day: 'Aaj', date: '11 Jul', temp: '32°/26°', condition: 'Bharish', rain: '80%' },
+  { day: 'Kal', date: '12 Jul', temp: '31°/25°', condition: 'Halki Barish', rain: '65%' },
+  { day: 'Sat', date: '13 Jul', temp: '33°/26°', condition: 'Halki Barish', rain: '40%' },
+  { day: 'Sun', date: '14 Jul', temp: '34°/27°', condition: 'Baadal', rain: '20%' },
+  { day: 'Mon', date: '15 Jul', temp: '35°/28°', condition: 'Dhoop', rain: '5%' },
+  { day: 'Tue', date: '16 Jul', temp: '34°/27°', condition: 'Halki Dhoop', rain: '10%' },
+  { day: 'Wed', date: '17 Jul', temp: '33°/26°', condition: 'Halki Barish', rain: '35%' },
 ];
 
 const VEG_NAME_MAP: Record<string, string> = {
@@ -313,7 +313,7 @@ const RELATED = [
   { slug: 'PmKisan24viKist2026', title: '24vi Kist Status' },
   { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide' },
   { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Loan Guide', emoji: '🏦' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Loan Guide', emoji: '' },
 ];
 
 const FAQS_DATA = [
@@ -645,7 +645,7 @@ export default function MandiBhavToday() {
                 <div className="text-sm font-black mb-1">{w.date}</div>
                 <div className="text-2xl mb-1">{w.condition.split(' ')[0]}</div>
                 <div className="text-sm font-black mb-1">{w.temp}</div>
-                <div className="text-[10px] font-bold text-blue-600">💧 {w.rain}</div>
+                <div className="text-[10px] font-bold text-blue-600">{w.rain}</div>
               </div>
             ))}
           </div>
@@ -679,7 +679,7 @@ export default function MandiBhavToday() {
             <div className="font-black text-lg mb-3">{currentStateData.state} — Mandi Checklist</div>
 
             <div className="mb-4">
-              <p className="text-sm font-bold text-green-800 mb-2">🏬 Badi Mandiyan:</p>
+              <p className="text-sm font-bold text-green-800 mb-2">Badi Mandiyan:</p>
               <ul className="text-xs text-green-700 space-y-1">
                 {currentStateData.mandis.map((mandi, i) => (
                   <li key={i}>• {mandi}</li>
@@ -689,7 +689,7 @@ export default function MandiBhavToday() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
               <div className="bg-white rounded-xl p-4 border-2 border-green-300">
-                <p className="text-xs font-bold text-green-800 mb-2">🥬 Top Sabziyan:</p>
+                <p className="text-xs font-bold text-green-800 mb-2">Top Sabziyan:</p>
                 <ul className="text-xs text-green-700 space-y-1">
                   {currentStateData.topVegetables.map((veg, i) => (
                     <li key={i}>• {veg}</li>
@@ -697,7 +697,7 @@ export default function MandiBhavToday() {
                 </ul>
               </div>
               <div className="bg-white rounded-xl p-4 border-2 border-amber-300">
-                <p className="text-xs font-bold text-amber-800 mb-2">🍎 Top Phal:</p>
+                <p className="text-xs font-bold text-amber-800 mb-2">Top Phal:</p>
                 <ul className="text-xs text-amber-700 space-y-1">
                   {currentStateData.topFruits.map((fruit, i) => (
                     <li key={i}>• {fruit}</li>

@@ -106,11 +106,11 @@ export default function ContactPage() {
 
           <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
             <h2 className="text-lg font-black text-[var(--color-text)] mb-3 flex items-center gap-2">
-              <span aria-hidden="true">👨‍🌾</span> Author
+              <span aria-hidden="true"></span> Author
             </h2>
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900/30 border-2 border-green-300 dark:border-green-700 flex items-center justify-center text-2xl">
-                🌾
+               
               </div>
               <div>
                 <p className="font-bold text-[var(--color-text)]">{AUTHOR_NAME}</p>
@@ -128,7 +128,7 @@ export default function ContactPage() {
 
         <section className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-2xl p-6 mb-8">
           <h2 className="text-lg font-black text-[var(--color-text)] mb-4 flex items-center gap-2">
-            <span aria-hidden="true">🏛️</span> PM Kisan Official Helpline
+            <span aria-hidden="true"></span> PM Kisan Official Helpline
           </h2>
           <p className="text-sm text-[var(--color-text-muted)] mb-4">
             Payment, status, enrollment ya kisi bhi sarkari kaam ke liye seedha official sources se hi sampark karein:

@@ -118,12 +118,12 @@ export default function PmKisanVoluntarySurrenderGuide() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
             {[
-              { icon: '👨‍🏫', title: 'Government Employees', desc: 'Teachers, clerks, officers — sabhi government jobs wale' },
+              { icon: '', title: 'Government Employees', desc: 'Teachers, clerks, officers — sabhi government jobs wale' },
               { title: 'Income Tax Filers', desc: 'Jo log income tax return file karte hain' },
-              { icon: '👴', title: 'Pensioners', desc: 'Old age pension ya family pension lene wale' },
-              { icon: '🏛️', title: 'MP/MLA/Officials', desc: 'Elected representatives aur unke family members' },
-              { icon: '👨‍', title: 'Professionals', desc: 'CA, Doctor, Lawyer, Engineer — registered professionals' },
-              { icon: '🏢', title: 'Institutional Land', desc: 'Jinki zameen trust ya company ke naam par hai' },
+              { icon: '', title: 'Pensioners', desc: 'Old age pension ya family pension lene wale' },
+              { icon: '', title: 'MP/MLA/Officials', desc: 'Elected representatives aur unke family members' },
+              { icon: '', title: 'Professionals', desc: 'CA, Doctor, Lawyer, Engineer — registered professionals' },
+              { icon: '', title: 'Institutional Land', desc: 'Jinki zameen trust ya company ke naam par hai' },
             ].map(({ icon, title, desc }) => (
               <div key={title} className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
                 {icon ? <span className="text-2xl block mb-2">{icon}</span> : null}

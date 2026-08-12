@@ -80,11 +80,11 @@ export default function CropProfitCalcPage() {
 
           <div className="mb-5 p-4 bg-red-50 border border-red-200 rounded-xl">
             <p className="font-bold text-red-800 text-xs mb-3 uppercase tracking-wide">Kharcha (Cost per Hectare)</p>
-            <InputField label="🌱 Beej ka kharcha (₹)" value={seed} onChange={setSeed} min={0} placeholder="2000" hint="Certified seeds mehenge hote hain par yield zyada"/>
+            <InputField label="Beej ka kharcha (₹)" value={seed} onChange={setSeed} min={0} placeholder="2000" hint="Certified seeds mehenge hote hain par yield zyada"/>
             <InputField label="Khad + spray (₹)" value={fertilizer} onChange={setFertilizer} min={0} placeholder="3000" hint="Urea, DAP, pesticide — sab mila ke"/>
-            <InputField label="👷 Mazdoori (₹)" value={labor} onChange={setLabor} min={0} placeholder="4000" hint="Jutai, buwai, katai — sab mazdoori"/>
-            <InputField label="💧 Sinchai (₹)" value={irrigation} onChange={setIrrigation} min={0} placeholder="1500" hint="Bijli, diesel, ya tube well ka kharcha"/>
-            <InputField label="🚜 Doosra kharcha (₹)" value={other} onChange={setOther} min={0} placeholder="1000" hint="Transport, godown rent, mandi commission"/>
+            <InputField label="Mazdoori (₹)" value={labor} onChange={setLabor} min={0} placeholder="4000" hint="Jutai, buwai, katai — sab mazdoori"/>
+            <InputField label="Sinchai (₹)" value={irrigation} onChange={setIrrigation} min={0} placeholder="1500" hint="Bijli, diesel, ya tube well ka kharcha"/>
+            <InputField label="Doosra kharcha (₹)" value={other} onChange={setOther} min={0} placeholder="1000" hint="Transport, godown rent, mandi commission"/>
           </div>
 
           {revenue>0 && (
@@ -134,7 +134,7 @@ export default function CropProfitCalcPage() {
             <h3 className="font-black text-gray-900 text-sm mb-3">Kheti Mein Munafa Badhane Ke Tarike</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
               <div className="p-3 bg-blue-50 border border-blue-200 rounded-xl">
-                <p className="font-bold text-blue-900 mb-1">🌱 Beej Bachat</p>
+                <p className="font-bold text-blue-900 mb-1">Beej Bachat</p>
                 <p className="text-blue-800">Certified seeds bulk mein lo — 15-20% sasta padega. Government subsidy bhi milti hai. CSC center se pata karo.</p>
               </div>
               <div className="p-3 bg-green-50 border border-green-200 rounded-xl">
@@ -142,7 +142,7 @@ export default function CropProfitCalcPage() {
                 <p className="text-green-800">Nano DAP use karo — kam mein zyada asar. Soil test karwao — sirf wahi khad dalo jo chahiye. Fertilizer subsidy check karo.</p>
               </div>
               <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl">
-                <p className="font-bold text-amber-900 mb-1">💧 Paani Bachat</p>
+                <p className="font-bold text-amber-900 mb-1">Paani Bachat</p>
                 <p className="text-amber-800">Drip irrigation — 40% paani bachta hai. PMKSY scheme mein subsidy milti hai. Solar pump lo — bijli bill zero.</p>
               </div>
               <div className="p-3 bg-purple-50 border border-purple-200 rounded-xl">
@@ -150,7 +150,7 @@ export default function CropProfitCalcPage() {
                 <p className="text-purple-800">E-NAM portal par daily rate dekho. FPO se judo — direct buyer milte hain. Mandi commission bachao — FPO se becho.</p>
               </div>
               <div className="p-3 bg-teal-50 border border-teal-200 rounded-xl">
-                <p className="font-bold text-teal-900 mb-1">🚜 Machine Hire Karo</p>
+                <p className="font-bold text-teal-900 mb-1">Machine Hire Karo</p>
                 <p className="text-teal-800">Tractor, harvester — khareedne ki jagah rent par lo. Custom hiring centers mein sasti mil jayegi. Subsidy bhi check karo.</p>
               </div>
               <div className="p-3 bg-orange-50 border border-orange-200 rounded-xl">
@@ -186,7 +186,7 @@ export default function CropProfitCalcPage() {
                Fasal Bima Yojana — Sirf 2% Premium
             </Link>
             <Link href="/articles/soil-health-card-complete-guide-2026" className="p-3 bg-white border border-green-200 rounded-xl text-xs font-semibold text-gray-700 hover:bg-green-600 hover:text-white transition-colors">
-              🌱 Soil Health Card — Mitti Test Karwao
+              Soil Health Card — Mitti Test Karwao
             </Link>
             <Link href="/articles/NanoDap500mlPriceInIndia2026" className="p-3 bg-white border border-green-200 rounded-xl text-xs font-semibold text-gray-700 hover:bg-green-600 hover:text-white transition-colors">
                Nano DAP — Kam Kharcha, Zyada Utpadan

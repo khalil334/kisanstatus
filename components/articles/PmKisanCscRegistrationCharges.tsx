@@ -9,7 +9,7 @@ const MODIFIED = '2026-02-21T16:05:48+05:30';
 const RELATED = [
   { slug: 'PmKisanEkycOnline2026', title: 'eKYC Online Guide' },
   { slug: 'PmKisanMasterGuide2026', title: 'Master Guide' },
-  { slug: 'PmKisanBankAccountChangeProcess', title: 'Bank Account Change', emoji: '🏦' },
+  { slug: 'PmKisanBankAccountChangeProcess', title: 'Bank Account Change', emoji: '' },
   { slug: 'PmKisanStateNodalOfficerList', title: 'Nodal Officer List' },
 ];
 
@@ -376,7 +376,7 @@ export default function PmKisanCscRegistrationCharges() {
         <BottomNav extraLinks={[
           { href: '/articles/PmKisanEkycOnline2026', l: 'Free Online eKYC' },
           { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
-          { href: '/articles/PmKisanBankAccountChangeProcess', l: '🏦 Bank Account Change' },
+          { href: '/articles/PmKisanBankAccountChangeProcess', l: 'Bank Account Change' },
         ]} />
         <Disclaimer />
       </div>

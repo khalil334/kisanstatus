@@ -10,7 +10,7 @@ const RELATED = [
   { slug: 'PmKisanEkycOnline2026', title: 'Normal eKYC Guide' },
   { slug: 'PmKisanMasterGuide2026', title: 'Master Guide' },
   { slug: 'PmKisanPaymentFailedFix2026', title: 'Payment Fix' },
-  { slug: 'PmKisanCscRegistrationCharges', title: 'CSC Registration', emoji: '🏪' },
+  { slug: 'PmKisanCscRegistrationCharges', title: 'CSC Registration', emoji: '' },
 ];
 
 const FAQS_DATA = [

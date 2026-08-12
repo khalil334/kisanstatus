@@ -13,9 +13,9 @@ const MODIFIED = '2026-02-24T14:27:25+05:30';
 
 const RELATED = [
   { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Loan Apply Online' },
-  { slug: 'KisanTractorLoan2026', title: 'Tractor Loan Bina Down Payment', emoji: '🚜' },
+  { slug: 'KisanTractorLoan2026', title: 'Tractor Loan Bina Down Payment', emoji: '' },
   { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide' },
-  { slug: 'soil-health-card-complete-guide-2026', title: 'Soil Health Card Guide', emoji: '🌱' },
+  { slug: 'soil-health-card-complete-guide-2026', title: 'Soil Health Card Guide', emoji: '' },
   { slug: 'PmfbyCropInsurance2026', title: 'Fasal Bima Yojana 2026' },
   { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price Guide' },
 ];
@@ -87,7 +87,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
             <span>/</span>
             <span className="text-white font-bold">Solar Pump Subsidy</span>
           </nav>
-          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">☀️ PM Kusum Yojana 2026</span>
+          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">PM Kusum Yojana 2026</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
             PM Kusum Yojana Solar Pump Subsidy 2026: 60% Subsidy Kaise Milegi, Apply Karne Ka Sahi Tarika
           </h1>
@@ -442,8 +442,8 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
               <thead>
                 <tr className="bg-[var(--color-primary)] text-white">
                   <th className="p-3 text-left">Cheez</th>
-                  <th className="p-3 text-left">Diesel Pump 😩</th>
-                  <th className="p-3 text-left">Solar Pump ☀️</th>
+                  <th className="p-3 text-left">Diesel Pump</th>
+                  <th className="p-3 text-left">Solar Pump</th>
                 </tr>
               </thead>
               <tbody>
@@ -541,7 +541,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
         </div>
 
         <CalcBanner
-          icon="☀️"
+          icon=""
           title="Kitna Bachoge? Calculate Karo"
           desc="Diesel vs Solar — 5 saal ka total saving jaano"
           primaryCta={{ href: '/calculator/crop-profit', label: 'Profit Calc →' }}
@@ -552,7 +552,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
           { href: '/articles/KisanCreditCardOnlineApply2026', l: 'KCC Loan' },
-          { href: '/articles/KisanTractorLoan2026', l: '🚜 Tractor Loan' },
+          { href: '/articles/KisanTractorLoan2026', l: 'Tractor Loan' },
           { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
         ]} />
         <Disclaimer />

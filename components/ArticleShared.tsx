@@ -181,9 +181,9 @@ export function AuthorBox({ modified }: { modified: string }) {
 }
 
 const DEFAULT_NAV_LINKS = [
-  { href: '/', l: '🏠 Home' },
+  { href: '/', l: 'Home' },
   { href: '/calculator', l: 'Utilities' },
-  { href: '/about', l: '👤 About' },
+  { href: '/about', l: 'About' },
 ];
 
 export function BottomNav({

@@ -349,7 +349,7 @@ export default function PmKisanMaandhanPensionCalculator({ article }: { article:
             Death ke baad spouse ke paas kya options hain — scheme continue karna, corpus lena ya ₹1,500 family pension — iska pura ganit family pension rules wale article mein worked examples ke saath hai:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <Link href="/maandhan/family-pension-rules" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">👨‍👩‍👧 Family Pension Rules & Claim Process →</Link>
+            <Link href="/maandhan/family-pension-rules" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">Family Pension Rules & Claim Process →</Link>
           </div>
         </section>
 
@@ -359,7 +359,7 @@ export default function PmKisanMaandhanPensionCalculator({ article }: { article:
             Contribution jis account se kat raha hai use badalna ho, ya registered mobile number update karna ho — dono ke step-by-step process alag guides mein hain:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <Link href="/maandhan/pmkmy-bank-account-change" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">🏦 Bank Account Change Process →</Link>
+            <Link href="/maandhan/pmkmy-bank-account-change" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">Bank Account Change Process →</Link>
             <Link href="/maandhan/pmkmy-grievance-complaint-helpline" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">Helpline & Grievance Guide →</Link>
           </div>
         </section>

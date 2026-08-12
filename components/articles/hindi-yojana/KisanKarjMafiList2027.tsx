@@ -523,7 +523,7 @@ export default function KisanKarjMafiList2027({ article }: { article: HindiArtic
             href="/articles/KisanRinKahaSeLe2026"
             className="flex items-center gap-3 p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors text-sm font-medium text-[var(--color-text)] no-underline"
           >
-            <span className="text-xl shrink-0">🏦</span>
+            <span className="text-xl shrink-0"></span>
             <span>Kisan Rin Kahan Se Le</span>
           </Link>
           <Link
@@ -536,7 +536,7 @@ export default function KisanKarjMafiList2027({ article }: { article: HindiArtic
             href="/articles/KisanTractorLoan2026"
             className="flex items-center gap-3 p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors text-sm font-medium text-[var(--color-text)] no-underline"
           >
-            <span className="text-xl shrink-0">🚜</span>
+            <span className="text-xl shrink-0"></span>
             <span>Tractor loan — ब्याज और subsidy</span>
           </Link>
           <Link

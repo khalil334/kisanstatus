@@ -9,13 +9,13 @@ const MODIFIED = '2026-01-18T07:59:28+05:30';
 
 const RELATED = [
 { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply — ₹5 Lakh Loan, 4% Interest' },
-{ slug: 'KisanRinKahaSeLe2026', title: 'Kisan Loan Kahan Se Le — SBI, CSC, Cooperative', emoji: '🏦' },
+{ slug: 'KisanRinKahaSeLe2026', title: 'Kisan Loan Kahan Se Le — SBI, CSC, Cooperative', emoji: '' },
 { slug: 'PmfbyCropInsurance2026', title: 'PMFBY Crop Insurance — 2% Premium Mein Suraksha' },
 { slug: 'AgriStackKyaHai2026', title: 'AgriStack Kya Hai — Digital Kisan ID' },
-{ slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP 500ml Price — IFFCO Rate 2026', emoji: '🌱' },
+{ slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP 500ml Price — IFFCO Rate 2026', emoji: '' },
 { slug: 'PmKisan24viKist2026', title: 'PM Kisan 24vi Kist — Kab Aayegi 2026?' },
-  { slug: 'custom-hiring-centre-chc-portal', title: 'CHC Machine Rental Portal', emoji: '🚜' },
-  { slug: 'silage-making-business-guide', title: 'Silage Business Guide', emoji: '🌾' },
+  { slug: 'custom-hiring-centre-chc-portal', title: 'CHC Machine Rental Portal', emoji: '' },
+  { slug: 'silage-making-business-guide', title: 'Silage Business Guide', emoji: '' },
 ];
 
 const FAQS_DATA = [
@@ -489,10 +489,10 @@ return (
      />
 
      <CalcBanner
-       icon="🚜"
+       icon=""
        title="Apni Tractor EMI Calculate Karo"
        desc="Loan amount, interest rate, tenure daalo — monthly payment turant jaano"
-       primaryCta={{ href: '/calculator/kcc-loan-emi', label: '🏦 EMI Calculator →' }}
+       primaryCta={{ href: '/calculator/kcc-loan-emi', label: 'EMI Calculator →' }}
        secondaryCta={{ href: '/calculator', label: 'Sab Utilities' }}
      />
 
@@ -500,7 +500,7 @@ return (
      <AuthorBox modified={MODIFIED} />
      <BottomNav extraLinks={[
        { href: '/articles/KisanCreditCardOnlineApply2026', l: 'KCC Guide' },
-       { href: '/articles/KisanRinKahaSeLe2026', l: '🏦 Credit Sources' },
+       { href: '/articles/KisanRinKahaSeLe2026', l: 'Credit Sources' },
        { href: '/calculator/kcc-loan-emi', l: 'EMI Calculator' },
      ]} />
      <Disclaimer />

@@ -53,7 +53,7 @@ const RELATED = [
   { slug: 'hi/status-check-mobile-se', title: 'मोबाइल नंबर से स्टेटस चेक' },
   { slug: 'PmKisanEkycOnline2026', title: 'eKYC पूरी करने की guide' },
   { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List Guide' },
-  { slug: 'hi/npci-aadhaar-seeding', title: 'आधार-DBT seeding guide', emoji: '🏦' },
+  { slug: 'hi/npci-aadhaar-seeding', title: 'आधार-DBT seeding guide', emoji: '' },
 ];
 
 const FAQ_SCHEMA = {
