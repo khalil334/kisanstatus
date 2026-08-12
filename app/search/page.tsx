@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Suspense } from 'react';
-import { SITE_URL } from '@/lib/site-config';
+import { SITE_URL, AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 import SearchBar from '@/components/SearchBar';
 import SearchResults from './SearchResults';
 
@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   title: `Search`,
   description: 'PM Kisan, KCC loan, subsidy aur mandi bhav guides search karein. 70+ verified Hinglish guides ek jagah.',
   robots: { index: false, follow: true },
+  authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
+  creator: AUTHOR_NAME,
   alternates: { canonical: SITE_URL },
 };
 

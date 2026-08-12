@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, SH, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
+import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
 const PUBLISHED = '2026-03-23T11:18:53+05:30';
 const MODIFIED = '2026-04-06T10:23:34+05:30';
@@ -67,7 +68,7 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
               headline: 'PM Kisan Maandhan Chhodne Ka Faisla Lene Se Pehle Ye Zaroor Padhein: Refund, Family Pension Aur Exit Ke Sach',
               description:
                 'Scheme beech mein chhodne par kitna paisa wapas milta hai, kisan ki mrityu par family ko kya milta hai, aur refund process mein kitna time lagta hai — sab kuch practical udaharan ke saath.',
-              author: { '@type': 'Person', name: 'Manish Kumar', url: 'https://kisanstatus.com/about' },
+              author: { '@type': 'Person', name: AUTHOR_NAME, url: AUTHOR_URL },
               publisher: {
                 '@type': 'Organization',
                 name: 'KisanStatus',
@@ -113,7 +114,7 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span>✍️{' '}
               <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">
-                Manish Kumar
+                {AUTHOR_NAME}
               </Link>
             </span>
             <span>📅 {fmtDate(PUBLISHED)}</span>

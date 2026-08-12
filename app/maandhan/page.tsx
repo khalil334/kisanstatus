@@ -1,13 +1,15 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { MAANDHAN_ARTICLES } from '@/lib/maandhan-data';
-import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE, EXTERNAL_LINK_PROPS } from '@/lib/site-config';
+import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE, EXTERNAL_LINK_PROPS, AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 import { Disclaimer } from '@/components/ArticleShared';
 
 export const metadata: Metadata = {
   title: 'PM Kisan Maandhan Yojana — Complete Guide',
   description:
     'PM Kisan Maandhan Yojana (PM-KMY) ki poori jaankari Hindi mein — ₹3000 pension ka hisaab, contribution chart, eligibility, registration aur sabhi guides.',
+  authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
+  creator: AUTHOR_NAME,
   alternates: {
     canonical: `${SITE_URL}/maandhan`,
   },

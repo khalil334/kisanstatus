@@ -1,6 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import ExternalLinkButton from "@/components/ExternalLinkButton";
+import { AuthorBox, fmtDate } from "@/components/ArticleShared";
+import { AUTHOR_NAME, AUTHOR_URL } from "@/lib/site-config";
+
+const PUBLISHED = "2026-07-24";
+const MODIFIED = "2026-08-08";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -10,10 +15,10 @@ const jsonLd = {
       "@id": "https://kisanstatus.com/maandhan/pm-kisan-maandhan-status-check-online/#article",
       "headline": "PM Kisan Maandhan Status Check Online: Pension Card, Passbook, Contribution History",
       "description": "PM Kisan Maandhan Yojana mein apna status kaise verify kijiye. Pension card download, passbook check, contribution history aur missed payment ka pura process.",
-      "author": { "@type": "Person", "name": "Manish Kumar", "url": "https://kisanstatus.com/about" },
+      "author": { "@type": "Person", "name": AUTHOR_NAME, "url": AUTHOR_URL },
       "publisher": { "@type": "Organization", "name": "KisanStatus.com", "logo": { "@type": "ImageObject", "url": "https://kisanstatus.com/logo.webp" } },
-      "datePublished": "2026-07-24",
-      "dateModified": "2026-08-08",
+      "datePublished": PUBLISHED,
+      "dateModified": MODIFIED,
       "mainEntityOfPage": { "@type": "WebPage", "@id": "https://kisanstatus.com/maandhan/pm-kisan-maandhan-status-check-online/" }
     },
     {
@@ -55,9 +60,11 @@ export default function PmKisanMaandhanStatusCheckOnline() {
         PM Kisan Maandhan Status Check Online: Pension Card, Passbook, Contribution History
       </h1>
 
-      <p className="text-sm text-gray-500 mb-6 not-prose">
-        <em>Written by Manish Kumar | Last updated: August 8, 2026 | Sources: maandhan.in, PM-KMY Operational Guidelines (DAC&FW, Ministry of Agriculture &amp; Farmers Welfare)</em>
-      </p>
+      <div className="flex flex-wrap gap-3 text-sm text-gray-500 mb-6 not-prose">
+        <span><Link href="/about" className="underline hover:text-gray-700">{AUTHOR_NAME}</Link></span>
+        <span>Published: {fmtDate(PUBLISHED)}</span>
+        <span>Update: {fmtDate(MODIFIED)}</span>
+      </div>
 
       <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
         <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
@@ -485,9 +492,11 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
         <p className="text-sm text-gray-700 dark:text-gray-300">
           <strong className="text-orange-600 dark:text-orange-400 block mb-2">Sources & Disclaimer:</strong>
-          Yeh article PM Kisan Maandhan Yojana ke official operational guidelines (DAC&FW, Ministry of Agriculture & Farmers Welfare) aur maandhan.in / pmkmy.gov.in portal ke data par based hai. Portal interface, URLs, aur processes time ke saath badal sakte hain. Hamesha official pmkmy.gov.in ya maandhan.in portal hi use karein. Kisi bhi third-party website pe apna OTP ya password share na karein. Sahayata ke liye official portal par diya gaya helpline number use karein. Last verified: July 24, 2026.
+          Yeh article PM Kisan Maandhan Yojana ke official operational guidelines (DAC&FW, Ministry of Agriculture & Farmers Welfare) aur maandhan.in / pmkmy.gov.in portal ke data par based hai. Portal interface, URLs, aur processes time ke saath badal sakte hain. Hamesha official pmkmy.gov.in ya maandhan.in portal hi use karein. Kisi bhi third-party website pe apna OTP ya password share na karein. Sahayata ke liye official portal par diya gaya helpline number use karein. Last verified: {fmtDate(MODIFIED)}.
         </p>
       </div>
+
+      <AuthorBox modified={MODIFIED} />
     </article>
   );
 }

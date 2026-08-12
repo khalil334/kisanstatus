@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import KCCLoanCalcPage from '@/components/calculators/KCCLoanCalcPage';
+import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
 const DOMAIN = 'https://kisanstatus.com';
 const PAGE_URL = `${DOMAIN}/calculator/kcc-loan-emi`;
@@ -7,6 +8,8 @@ const PAGE_URL = `${DOMAIN}/calculator/kcc-loan-emi`;
 export const metadata: Metadata = {
   title: 'KCC Loan EMI Calculator 2026',
   description: 'Kisan Credit Card (KCC) loan ki monthly EMI, interest aur subsidy calculate karein. Bilkul free tool, bina registration ke.',
+  authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
+  creator: AUTHOR_NAME,
   keywords: [
     'kcc loan emi calculator',
     'kisan credit card loan emi',

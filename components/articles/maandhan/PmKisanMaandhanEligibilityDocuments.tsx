@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
+import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
 const PUBLISHED = '2026-03-18T19:44:07+05:30';
 const MODIFIED = '2026-04-08T11:52:48+05:30';
@@ -78,8 +79,8 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
               wordCount: 1200,
               author: {
                 '@type': 'Person',
-                name: 'Manish Kumar',
-                url: 'https://kisanstatus.com/about',
+                name: AUTHOR_NAME,
+                url: AUTHOR_URL,
               },
               publisher: {
                 '@type': 'Organization',
@@ -118,7 +119,7 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
           </h1>
 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">Manish Kumar</Link></span>
+            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
             <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
             <span>⏱️ 15 min read</span>

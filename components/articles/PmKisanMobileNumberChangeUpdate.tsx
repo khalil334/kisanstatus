@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 import CountdownModal from '@/components/CountdownModal';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-02-22T13:03:46+05:30';
 const MODIFIED = '2026-03-03T10:37:18+05:30';
@@ -108,7 +109,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           </h1>
 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">Manish Kumar</Link></span>
+            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
             <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
             <span>⏱️ 15 min read</span>

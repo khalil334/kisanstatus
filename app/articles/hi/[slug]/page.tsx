@@ -3,8 +3,9 @@ import { notFound } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { HINDI_ARTICLES, HINDI_ARTICLES_MAP, type HindiArticle } from '@/lib/hindi-articles-data';
-import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '@/lib/site-config';
+import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE, AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 import { hindiAlternates } from '@/lib/hindi-hreflang';
+import { AuthorBox } from '@/components/ArticleShared';
 
 const COMPONENTS: Record<string, React.ComponentType<{ article: HindiArticle }>> = {
   PmKisan25viKistKabAayegi: dynamic(() => import('@/components/articles/hindi-yojana/PmKisan25viKistKabAayegi'), { ssr: true }),
@@ -53,6 +54,8 @@ export async function generateMetadata({
     title: article.seoTitleHi ?? article.titleHi,
     description: article.desc,
     keywords: [...article.keywords],
+    authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
+    creator: AUTHOR_NAME,
     alternates: {
       canonical: url,
       languages: hindiAlternates(slug),
@@ -160,6 +163,7 @@ export default async function HindiArticlePage({
           <ArticleBody article={article} />
         </div>
       </article>
+      <AuthorBox modified={article.modifiedTime} />
       <RelatedHindiGuides currentSlug={article.slug} />
     </main>
   );

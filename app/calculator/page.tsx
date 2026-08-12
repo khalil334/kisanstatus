@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '@/lib/site-config';
+import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE, AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: `Free PM Kisan Tools 2026 — EMI & MSP`,
   description: '7 free kisan tools: PM Kisan status check, KCC loan EMI, MSP income, aur fasal bima premium calculator. Bina registration ke, bilkul free.',
+  authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
+  creator: AUTHOR_NAME,
   alternates: { canonical: `${SITE_URL}/calculator` },
   keywords: [
     'pm kisan calculator', 'kcc loan emi calculator', 'crop insurance premium calculator',
