@@ -4,8 +4,8 @@ import { SI, StepList, WB, DB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, Ca
 import { EXTERNAL_LINK_PROPS } from '@/lib/site-config';
 import type { ArticleMeta } from '@/lib/articles-data';
 
-const PUBLISHED = '2026-03-15T08:00:00+05:30';
-const MODIFIED = '2026-08-08T21:45:00+05:30';
+const PUBLISHED = '2025-12-29T10:12:36+05:30';
+const MODIFIED = '2026-01-12T21:49:17+05:30';
 
 const RELATED_CARDS = [
   {

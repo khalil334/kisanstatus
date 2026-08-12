@@ -7,8 +7,8 @@ import { SI, StepList, IB, WB, DB, SH, RelatedArticles, AuthorBox, BottomNav, Di
 import CountdownModal from '@/components/CountdownModal';
 import type { ArticleMeta } from '@/lib/articles-data';
 
-const PUBLISHED = '2026-07-05T08:00:00+05:30';
-const MODIFIED = '2026-07-09T08:27:00+05:30';
+const PUBLISHED = '2026-02-02T15:44:39+05:30';
+const MODIFIED = '2026-02-16T10:13:52+05:30';
 
 const RELATED = [
   { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply', emoji: '💳' },

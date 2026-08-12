@@ -2,8 +2,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 
-const PUBLISHED = '2026-06-30T09:15:00+05:30';
-const MODIFIED = '2026-07-10T08:00:00+05:30';
+const PUBLISHED = '2026-01-31T20:57:54+05:30';
+const MODIFIED = '2026-02-21T16:05:48+05:30';
 
 const RELATED = [
   { slug: 'PmKisanEkycOnline2026', title: 'eKYC Online Guide', emoji: '🔐' },
