@@ -471,6 +471,8 @@ export default function BakriPalanYojana() {
           </div>
         </div>
 
+        <AuthorBox modified={getArticleBySlug('bakri-palan-yojana-nlm-subsidy')!.modifiedTime} />
+
         <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
           <p className="text-sm text-gray-700 dark:text-gray-300">
             <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
