@@ -14,14 +14,14 @@ const RELATED_CARDS = [
     desc: 'Payment fail hone ka ek bada karan eKYC pending hona bhi ho sakta hai.',
   },
   {
-    slug: 'PmKisanCorrectionForm2026',
-    title: 'Naam Aur Aadhaar Ki Galti Sudhaarein',
-    desc: 'Record mein spelling ya Aadhaar mismatch ho to kist wahin ruk jaati hai.',
+    slug: 'PmKisanRejectedStatusReApplyGuide',
+    title: 'Rejected Ho Gaya — Dobara Kaise Apply Karein',
+    desc: 'Application reject hone ki wajah pehchaan kar phir se apply karne ka rasta.',
   },
   {
-    slug: 'PmKisanBankAccountChangeProcess',
-    title: 'Bank Account Badalne Ka Process',
-    desc: 'Account band ya DBT-disabled hone par naya account jodna hi ekmatra rasta hai.',
+    slug: 'PmKisanStateNodalOfficerList',
+    title: 'Apne State Ke Nodal Officer Se Baat Karein',
+    desc: 'Portal par kuch na ho raha ho to state nodal officer hi aakhri sahara hai.',
   },
 ];
 
