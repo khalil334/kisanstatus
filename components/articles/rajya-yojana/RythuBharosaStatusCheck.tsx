@@ -225,7 +225,7 @@ export default function RythuBharosaStatusCheck2026() {
 
       <h3>1. Dharani Portal Mein Naam Update Nahi Hai</h3>
       <p>
-        <strong>Hal:</strong> Rythu Bharosa ka data seedha Dharani portal se aata hai. Agar aapne haal hi mein zameen khareedi hai ya virasat (inheritance) mein mili hai, lekin Dharani par mutation (namantaran) nahi hua, toh paisa purane malik ke account mein jaane ki koshish karega ya fail ho jayega. Turant MRO (Mandal Revenue Officer) office jaakar Dharani update karwayein.
+        <strong>Hal:</strong> Rythu Bharosa ka data seedha Dharani portal se aata hai. Agar aapne haal hi mein zameen khareedi hai ya virasat (inheritance) mein mili hai, lekin Dharani par mutation (namantaran) nahi hua, toh paisa purane malik ke account mein jaane ki koshish karega ya fail ho jayega. Bina der MRO (Mandal Revenue Officer) office jaakar Dharani update karwayein.
       </p>
 
       <Fig
@@ -417,7 +417,7 @@ export default function RythuBharosaStatusCheck2026() {
         kar lein: Rythu Bharosa portal par state wali, aur <code>pmkisan.gov.in</code> par central
         wali. Passbook mein entry dekhte waqt bhi dhyan rakhein: Rythu Bharosa ki entry mein
         "RYTHU" ya treasury ka reference hota hai, jabki PM Kisan ki entry "PMKISAN" naam se aati
-        hai. Isse turant pata chal jaata hai ki kaun sa paisa aaya aur kaun sa atka hai.
+        hai. Isse ek nazar mein pata chal jaata hai ki kaun sa paisa aaya aur kaun sa atka hai.
       </p>
 
       <h2>Baaki Rajyon Ka Hisaab</h2>
@@ -491,7 +491,7 @@ export default function RythuBharosaStatusCheck2026() {
       </section>
 
       <InfoBox type="tip">
-        <strong>Fraud se bachein:</strong> Rythu Bharosa registration ya status theek karne ke liye koi bhi sarkari officer ya agent aapse paise nahi maangta. Ye scheme 100% free hai. Agar koi "commission" maange, toh turant MRO office ya 1800-425-0888 (Telangana Kisan Call Center) par shikayat karein.
+        <strong>Fraud se bachein:</strong> Rythu Bharosa registration ya status theek karne ke liye koi bhi sarkari officer ya agent aapse paise nahi maangta. Ye scheme 100% free hai. Agar koi "commission" maange, toh seedha MRO office ya 1800-425-0888 (Telangana Kisan Call Center) par shikayat karein.
       </InfoBox>
 
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">

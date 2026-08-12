@@ -264,7 +264,7 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
         राज्य वाली अपने आप पटरी पर आ जाती है।
       </Note>
 
-      <Hd>Status check — step by step</Hd>
+      <Hd>Status check — क्रम से</Hd>
       <Figure
         src="/images/articles/hindi-yojna/namo-shetkari/status-portal.webp"
         alt="नमो शेतकरी योजना का beneficiary status page"

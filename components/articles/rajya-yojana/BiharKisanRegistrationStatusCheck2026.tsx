@@ -54,7 +54,7 @@ const MYTHS: { myth: string; sach: string }[] = [
   },
   {
     myth: 'DBT panjikaran ke liye CSC wale ko 300-500 rupay dena hi padta hai.',
-    sach: 'Portal par ye kaam bilkul free hai. CSC ka mamooli service charge alag baat hai, par "file pass karane" ke naam par moti raqam maangna seedha thagi hai.',
+    sach: 'Portal par ye kaam free mein hota hai. CSC ka mamooli service charge alag baat hai, par "file pass karane" ke naam par moti raqam maangna seedha thagi hai.',
   },
   {
     myth: 'Gair-raiyat (batayidar) khetihar ka panjikaran ho hi nahi sakta.',
@@ -384,7 +384,7 @@ export default function BiharKisanRegistrationStatusCheck2026({
         <tr>
           <td>KCC</td>
           <td>Jis bank me arji di, wahi branch</td>
-          <td>Bank ke process par — likhit pawti zaroor lijiye</td>
+          <td>Bank ke process par — likhit pawti maang kar lijiye</td>
         </tr>
       </SchemeTable>
 
@@ -501,7 +501,7 @@ export default function BiharKisanRegistrationStatusCheck2026({
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
           <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
           Madad ki raqam, rate aur window har season ki adhisoochna se badalte hain —
-          arji se pehle official site ki taaza notice ya apne Kisan Salahkar se zaroor
+          arji se pehle official site ki taaza notice ya apne Kisan Salahkar se ek baar
           confirm karein. Is page ka kaam bas process samjhana hai — sarkari suchna ka darja isse na dein.
         </p>
       </div>

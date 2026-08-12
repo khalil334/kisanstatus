@@ -338,7 +338,7 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
 
       <p>
         Fixed date? Koi nahi hai. State sarkar national calendar se nahi chalti. Zyada waqt nahi lagta
-        release ke baad, lekin pichhle saalon ka pattern itna zaroor batata hai:
+        release ke baad, lekin pichhle saalon ka pattern itna batata hai:
       </p>
 
       <ul>
@@ -387,7 +387,7 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
 
       <p>
         Agar aapki kist bina wajah atki lag rahi hai aur bank sab theek keh raha hai, toh
-        girdawari record zaroor check karwayein — ye wo kona hai jahan koi nahi dekhta.
+        girdawari record khud check karwayein — ye wo kona hai jahan koi nahi dekhta.
       </p>
 
       <h2>Saal Bhar Ke Chhote Kaam</h2>
