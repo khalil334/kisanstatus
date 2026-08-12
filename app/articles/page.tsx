@@ -154,7 +154,7 @@ export default function ArticlesPage() {
         ...(published ? { datePublished: published } : {}),
         ...(modified ? { dateModified: modified } : {}),
         author: {
-          '@type': 'Organization',
+          '@type': 'Person',
           name: authorName,
           url: AUTHOR_URL,
         },

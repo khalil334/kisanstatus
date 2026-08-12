@@ -163,7 +163,7 @@ export default function PmKisanMaandhanPensionCalculator({ article }: { article:
               "headline": "PM Kisan Maandhan Pension Calculator: Umar Ke Hisaab Se Kitna Jama Karna Hoga",
               "description": "Apni age ke hisaab se jaanein PM Kisan Maandhan Yojana mein har mahine kitna dena hoga aur 60 ke baad ₹3000 pension kaise milegi — poora hisaab table aur example ke saath.",
               "author": {
-                "@type": "Organization",
+                "@type": "Person",
                 "name": AUTHOR_NAME,
                 "url": AUTHOR_URL
               },
