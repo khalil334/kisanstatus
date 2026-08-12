@@ -543,7 +543,7 @@ P0/P1 are where the AI feel actually lives. P2/P3 are polish.
 - 3a: root `PmKisan*` files (~12) · 3b: `maandhan/` (~12) · 3c: `rajya-yojana/` + `hindi-yojana/` (~12) · 3d: `kisanguides/` + `loan-mandi-pashupalan/` + rest (~11)
 - Per file: drop the shared label + pep-talk rhythm ("aaj hi kar lo bhai", "bahana mat banao", "Period."); write a closing that only fits that article — a specific number, deadline, or mistake. Similar length, unique heading (or none), unique style per article. Only the closing block changes.
 
-### Part 4 — Filler-word pass (light touch)
+### Part 4 — Filler-word pass (light touch) ✅ DONE (2026-08-12, PRs #257 #258 #259 #260)
 
 *Files: ~76 · Type: copy, small diffs*
 
@@ -567,6 +567,22 @@ P0/P1 are where the AI feel actually lives. P2/P3 are polish.
 Part 1 → Part 2 → Part 3 (a–d) → Part 4 → Part 5 → Part 6. Each part ships as its own PR and waits for owner review before the next starts.
 
 ## 12. Changelog
+
+### 2026-08-12 — Part 4 complete (4 batches, PRs #257 / #258 / #259 / #260)
+
+- **181 filler-word replacements across 69 files, zero deletions.** Net word count **+129** (nothing was trimmed — every instance was reworded, never removed, per the owner's instruction "kuch delete mat karna, replacement kar sakte ho").
+- **Batches:** 4a root `components/articles/*.tsx` (23 files, 77 edits) · 4b `maandhan/` (12 files, 45) · 4c `rajya-yojana/` + `hindi-yojana/` (17 files, 46) · 4d `kisanguides/` + `loan-mandi-pashupalan/` (17 files, 43).
+- **Targets:** bare `zaroor` used as an intensifier, `turant`, `bilkul free hai`, body-prose `step by step` / `is guide mein` / `is article mein`. **`zaroori` and `zaroorat` were deliberately left alone** — they are ordinary Hindi words, not LLM filler, and the audit's 362× `zaroor` figure had conflated them.
+- **Ranking keywords verified untouched, not just assumed.** Every batch was diffed with a before/after occurrence count on that folder's head terms; all came back byte-identical — e.g. root: `pm kisan` 366, `ekyc` 207, `kist` 198, `csc` 280; maandhan: `maandhan` 381, `pmkmy` 156, `kpan` 48; rajya/hindi: `cm kisan` 60, `rythu bharosa` 46, `antar rashi` 29; guides/loan: `subsidy` 337, `msp` 155, `enam` 108, `kcc` 87, `complete guide` 23.
+- **SEO anchors excluded by design.** `Complete Guide` appears in `metadata.title` / `description` / `keywords` / `openGraph` / `twitter` / `<h1>` / image `alt=` across seven `kisanguides/` files — all left exactly as-is. Only body prose was edited. No `lib/*-data.ts` touched.
+- **FAQ questions untouched.** One draft edit in 4d had reworded the `MushroomKheti` green-mold question; it was caught in self-review and reverted before the PR. Two FAQ *answers* and one card `desc` were reworded in 4a.
+- **No new shared formula.** Each replacement is worded differently per file — e.g. `receipt zaroor lo` became "receipt leke hi hatna", "receipt lekar hi uthna", "receipt maang kar le lein", "receipt le lein", "receipt sambhal kar rakhein" in five different articles; the four `bilkul free hai` disclaimers in `rajya-yojana/` now phrase the free-of-cost point four different ways; the three `Step by Step` headings no longer share a label.
+- Sentence-level micro-edits only — no paragraph restructured, no section moved, no article rewritten. `tsc --noEmit` clean on every batch.
+
+**Pages to re-check in a browser after deploy:** all 69 edited articles; the per-batch lists are in PRs #257, #258, #259 and #260.
+
+**Next in the order:** Part 5 (keyword de-stuffing) — still blocked on the owner's ruling on the "0.90" protected-keyword rule noted in section 11 ground rule 3. Until that is clarified, all ranking keywords remain untouchable, which means Part 5 cannot start.
+
 
 ### 2026-08-12 — Part 3d complete (`fix/part-3d-closing-blocks-guides-loan`) — Part 3 finished
 
