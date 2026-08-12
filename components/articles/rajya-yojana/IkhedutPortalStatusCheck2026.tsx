@@ -58,7 +58,7 @@ const FAQS: { q: string; quick: string; detail: string }[] = [
     q: 'Arji online bhar di, par print jama nahi kiya — kya hoga?',
     quick: 'Zyada tar ghatak me arji apne aap radd (invalid) maani jaati hai.',
     detail:
-      'Online submit sirf aadha kaam hai. Signed print + documents nirdharit samay me apne taluka ke vistaran adhikari / gram sevak ke paas jama karna hota hai. Yahi wo ek galti hai jo har season hazaro kisano ka labh khaa jaati hai. Print jama karte waqt receiving (pahonch) zaroor lijiye.',
+      'Online submit sirf aadha kaam hai. Signed print + documents nirdharit samay me apne taluka ke vistaran adhikari / gram sevak ke paas jama karna hota hai. Yahi wo ek galti hai jo har season hazaro kisano ka labh khaa jaati hai. Print jama karte waqt receiving (pahonch) maang kar lijiye.',
   },
   {
     q: 'Purv manjuri (pre-approval) ke pehle tractor kharid liya to subsidy milegi?',
@@ -163,7 +163,7 @@ export default function IkhedutPortalStatusCheck2026({
       <InfoBox type="info">
         <strong>Last updated: August 2026.</strong> Ye guide official portal{' '}
         <Ext href="https://ikhedut.gujarat.gov.in/">ikhedut.gujarat.gov.in</Ext> ke steps
-        par based hai. iKhedut par arji karna bilkul free hai — kisi agent ko &quot;file
+        par based hai. iKhedut par arji karne ka koi shulk nahi — kisi agent ko &quot;file
         pass karava dau&quot; ke naam par paisa na dein.
       </InfoBox>
 
@@ -286,7 +286,7 @@ export default function IkhedutPortalStatusCheck2026({
         <li>Khedut ki detail — naam, taluka, gaam, survey number, jaati, zameen ka vivran.</li>
         <li>Bank detail aur ghatak-wise maangi gayi jaankari (quotation, saadhan ka type).</li>
         <li>
-          Submit → screen par <strong>arji number</strong> aayega. Isko turant likh lijiye.
+          Submit → screen par <strong>arji number</strong> aayega. Isko wahin likh lijiye.
           Photo bhi kheech lijiye.
         </li>
         <li>
@@ -641,7 +641,7 @@ export default function IkhedutPortalStatusCheck2026({
           iKhedut ke har ghatak ki sahay ki raqam, %, shart aur arji window sarkar ki
           waqt-waqt ki guideline se badalti hai. Arji karne se pehle{' '}
           <Ext href="https://ikhedut.gujarat.gov.in/">ikhedut.gujarat.gov.in</Ext> par us
-          ghatak ka page aur apne taluka ke vistaran adhikari se zaroor confirm karein. Ye
+          ghatak ka page aur apne taluka ke vistaran adhikari se ek baar confirm karein. Ye
           article sirf raasta dikhane ke liye hai, koi sarkari suchna nahi.
         </p>
       </div>

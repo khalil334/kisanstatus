@@ -54,7 +54,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Kya mujhe alag se PM Kisan ke liye apply karna padega?',
-    a: 'Aapka data state database mein hai toh sarkar PM Kisan ke liye bhi consider karti hai. Lekin apna PM Kisan status alag se pmkisan.gov.in par zaroor check kar lein, kyunki dono ke records alag chalte hain.',
+    a: 'Aapka data state database mein hai toh sarkar PM Kisan ke liye bhi consider karti hai. Lekin apna PM Kisan status alag se pmkisan.gov.in par alag se check kar lein, kyunki dono ke records alag chalte hain.',
   },
   {
     q: 'Agar main government employee hoon, kya mujhe ye paisa milega?',
@@ -138,7 +138,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
 
       <h3>1. Bank Account DBT Enabled Nahi Hai</h3>
       <p>
-        Karna kya hai: apne bank branch jaakar pata karein ki aapka account "NPCI Mapper" mein Aadhaar ke saath linked hai ya nahi. Agar nahi hai, toh turant DBT enable karwayein.
+        Karna kya hai: apne bank branch jaakar pata karein ki aapka account "NPCI Mapper" mein Aadhaar ke saath linked hai ya nahi. Agar nahi hai, toh usi visit mein DBT enable karwayein.
       </p>
 
       <h3>2. Aadhaar Name aur Bank Account Name Match Nahi Kar Rahe</h3>

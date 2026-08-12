@@ -123,7 +123,7 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
         <p>
           Ek baar comment section mein ek sawaal tha — kisan ke EPIC number mein &lsquo;O&rsquo; ki jagah
           &lsquo;0&rsquo; tha, portal bar-bar &ldquo;no record found&rdquo; dikha raha tha aur
-          wo samajh baitha ki naam kat gaya. Card se milaa kar dobara bhara, record turant khul
+          wo samajh baitha ki naam kat gaya. Card se milaa kar dobara bhara, record usi waqt khul
           gaya. Bas itni si baat thi. Yehi tha poora maamla.
         </p>
 
@@ -174,7 +174,7 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
           <li>Financial year aur season (Kharif ya Rabi) select karein.</li>
           <li>
             List generate karein — kai bar ye PDF ke roop mein aati hai. Naam ke saath area ka
-            column bhi zaroor mila lein.
+            column bhi saath mila lein.
           </li>
         </ol>
 
@@ -198,7 +198,7 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
             chalega.
           </li>
           <li>
-            Zameen ka koi bhi lena-den hone ke turant baad mutation karwaayein, kist ke season
+            Zameen ka koi bhi lena-den hone ke saath hi mutation karwaayein, kist ke season
             ka intezaar na karein.
           </li>
           <li>
@@ -548,7 +548,7 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
           <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
-          Yahan di gayi jaankari samajhne-samjhaane ke liye hai. Kisi bhi kadam se pehle Krishak Bandhu portal ya block ke ADA office se pushti zaroor kar lein.
+          Yahan di gayi jaankari samajhne-samjhaane ke liye hai. Kisi bhi kadam se pehle Krishak Bandhu portal ya block ke ADA office se pushti kar lein.
         </p>
       </div>
 

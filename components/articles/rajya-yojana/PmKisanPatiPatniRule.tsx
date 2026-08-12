@@ -522,7 +522,7 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
             check karein. Change ke baad kist lete rehna sabse mehnga padta hai.
           </li>
           <li>
-            Land record mein koi bhi transfer ya batwaara ho, to mutation turant karaayein.
+            Land record mein koi bhi transfer ya batwaara ho, to mutation bina taale karaayein.
             Kist ka intezaar na karein.
           </li>
           <li>

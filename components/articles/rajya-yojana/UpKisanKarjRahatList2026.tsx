@@ -60,7 +60,7 @@ const QUIZ = [
   {
     s: 'List me naam dekhne ke liye koi fees lagti hai.',
     v: false,
-    e: 'Status aur list dekhna bilkul free hai. Paisa maangne wala har aadmi ya website fraud hai.',
+    e: 'Status aur list dekhne ka koi paisa nahi lagta. Paisa maangne wala har aadmi ya website fraud hai.',
   },
   {
     s: 'Karj mafi ka paisa kisan ke haath me cash aata hai.',
@@ -95,7 +95,7 @@ const QUIZ = [
   {
     s: 'Karj maaf hone ke baad bank se NOC ya statement lena chahiye.',
     v: true,
-    e: 'Zaroor lena chahiye. Wahi kagaz aage naya KCC ya loan lene me kaam aayega, aur record ka pakka saboot rahega.',
+    e: 'Lena hi chahiye. Wahi kagaz aage naya KCC ya loan lene me kaam aayega, aur record ka pakka saboot rahega.',
   },
 ];
 
@@ -118,7 +118,7 @@ export default function UpKisanKarjRahatList2026({
       />
 
       <p>
-        Dekhiye bhaisaab, aapke gaon ke WhatsApp group me bhi wo message zaroor aaya hoga —
+        Dekhiye bhaisaab, aapke gaon ke WhatsApp group me bhi wo message aaya hi hoga —
         &quot;sabka karz maaf, list jaari, is link par click karke apna naam dekho.&quot;
         Ruk jaiye. Us link par ungli rakhne se pehle do minute ye padh lijiye.
       </p>
@@ -248,7 +248,7 @@ export default function UpKisanKarjRahatList2026({
         . Ek galat click, aur DBT ka paisa hi khatre me.
       </p>
 
-      <h2>List Kaise Dekhiye — Step By Step</h2>
+      <h2>List Kaise Dekhiye — Ek-Ek Kadam</h2>
 
       <Fig
         src="list-check-steps.webp"
@@ -331,7 +331,7 @@ export default function UpKisanKarjRahatList2026({
         </li>
         <li>
           Bhara hua form apne <strong>collectorate ke helpdesk / zila krishi adhikari</strong>{' '}
-          ke yahan jama kariye — receiving copy zaroor lijiye.
+          ke yahan jama kariye — receiving copy leke aaiye.
         </li>
         <li>
           Portal par hi <strong>&quot;शिकायत की स्थिति जानें&quot;</strong> se complaint ka
@@ -369,7 +369,7 @@ export default function UpKisanKarjRahatList2026({
           PIB Fact Check aise fake yojana portals ka bhandafod pehle bhi kar chuka hai
         </Ext>{' '}
         — sarkari naam ki milti-julti website banana inka purana khel hai. Thagi ho jaaye to
-        turant <strong>1930 (cyber crime helpline)</strong> par call kariye aur apne bank ko
+        usi waqt <strong>1930 (cyber crime helpline)</strong> par call kariye aur apne bank ko
         bhi khabar kariye — pehle ghante me paisa rukne ke chance sabse zyada hote hain.
       </p>
 
