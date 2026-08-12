@@ -78,7 +78,7 @@ export default function PmKisanFamilyChecker() {
           steps: [
             'Mutation ka record aur naya khata number sambhaal kar rakhein — verification mein yahi maanga jaata hai.',
             'Dono registration alag-alag Aadhaar aur alag bank account par rakhein.',
-            'Ek hi khasra number do file mein claim na ho, ye zaroor check karein.',
+            'Ek hi khasra number do file mein claim na ho, ye milaa kar dekh lein.',
           ],
         };
       }

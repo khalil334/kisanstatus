@@ -322,7 +322,7 @@ export default function OdishaCmKisanStatusCheck({
             seedha proof hota hai.
           </li>
           <li>
-            Zameen ka koi bhi badlaav hone par mutation turant karwaayein, kist ka intezaar na
+            Zameen ka koi bhi badlaav hone par mutation usi season karwaayein, kist ka intezaar na
             karein.
           </li>
           <li>

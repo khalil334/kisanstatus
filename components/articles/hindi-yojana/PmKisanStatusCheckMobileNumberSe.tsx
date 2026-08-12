@@ -369,7 +369,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
       <div className="my-8 p-6 bg-gradient-to-r from-green-800 to-green-600 rounded-2xl text-white text-center">
         <p className="font-black text-lg mb-1">Status Se Aage — Kist Kahan Atki?</p>
         <p className="text-green-100 text-sm mb-4">
-          Teenon jaanch ka result tracker mein turant dekho.
+          Teenon jaanch ka result tracker mein ek saath dekho.
         </p>
         <div className="flex flex-wrap justify-center gap-2.5">
           <Link

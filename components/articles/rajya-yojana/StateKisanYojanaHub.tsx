@@ -53,7 +53,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Mere state ki koi kisan yojana kyun nahi hai?',
-    a: 'Har sarkar apna budget dekh kar faisla karti hai. Kai jagah cash transfer ki jagah bijli subsidy, karz maafi ya fasal bonus jaise doosre raaste chune gaye hain. Apne yahan ka naam is list mein na ho to iska matlab ye nahi ki koi madad nahi milti, bas seedha income-support model nahi hai. Apne krishi vibhag ki website par current schemes zaroor dekh lein.',
+    a: 'Har sarkar apna budget dekh kar faisla karti hai. Kai jagah cash transfer ki jagah bijli subsidy, karz maafi ya fasal bonus jaise doosre raaste chune gaye hain. Apne yahan ka naam is list mein na ho to iska matlab ye nahi ki koi madad nahi milti, bas seedha income-support model nahi hai. Apne krishi vibhag ki website par current schemes khud dekh lein.',
   },
   {
     q: 'Rajya ki yojana ke liye kya alag se application deni padti hai?',
@@ -198,7 +198,7 @@ export default function StateKisanYojanaHub() {
       <InfoBox type="warning">
         <strong>Dhyan rakhein:</strong> Rajya schemes ke amounts cabinet decisions se badalte
         rehte hain, aur internet par purane figures saalon tak ghoomte hain. Payment se pehle
-        apne yahan ki official site par current raqam ek baar zaroor dekh lein.
+        apne yahan ki official site par current raqam ek baar dekh lein.
       </InfoBox>
 
       <h2>Rajya-War Short Hisaab</h2>

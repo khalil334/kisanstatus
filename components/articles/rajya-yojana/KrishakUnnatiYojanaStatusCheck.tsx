@@ -103,7 +103,7 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
         <strong>Do badi baatein:</strong> Kharif 2025-26 ki antar rashi is baar ekmusht release
         hui — lagbhag 25 lakh kisanon ko. Aur cabinet ne Kharif 2026 se scheme ka naya roop
         manzoor kiya hai: dhan ki jagah doosri fasal lene par ₹15,000 prati acre input
-        sahayata. Dono ka hisaab is article mein alag-alag samjhaya gaya hai.
+        sahayata. Dono ka hisaab neeche alag-alag samjhaya gaya hai.
       </InfoBox>
 
       <h2>Season Ki Poori Timeline — Ek Kisan Ki Nazar Se</h2>
@@ -124,8 +124,8 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
 
       <p>
         <strong>Kharidi ke dauraan:</strong> token, taul, parchi — teeno ka record apne paas.
-        Samiti par bheed ke dinon mein entry ki galti sabse zyada hoti hai. Taul ke turant
-        baad parchi ki maatra apni aankhon se milaayein; ghar aakar milaane par galti pakdi
+        Samiti par bheed ke dinon mein entry ki galti sabse zyada hoti hai. Taul ke saath hi
+        parchi ki maatra apni aankhon se milaayein; ghar aakar milaane par galti pakdi
         bhi jaaye to saabit karna mushkil ho jaata hai. Ek hi season mein kai baar dhan
         bechne wale kisan har trip ki parchi alag sambhaalein — antar rashi kul maatra par
         banti hai, aur ek parchi kho jaana seedha nuksan hai.
@@ -204,7 +204,7 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
         </li>
         <li>
           <strong>Aadhaar-linked bank passbook</strong> — DBT isi khaate mein aayega; seeding
-          bank jaakar ek baar zaroor confirm karein.
+          bank jaakar ek baar confirm kara lein.
         </li>
         <li>
           <strong>Zameen ka record (B1/khasra)</strong> — naye ₹15,000 wale component mein
@@ -443,7 +443,7 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
       <p>
         Zubaani shikayat ka koi record nahi banta. Kabhi nahi. Isliye jab bhi baat samiti ya
         vibhag tak le jaani ho, likhit mein dein aur paavti (receiving) lein. Shikayat mein
-        teen cheezein zaroor likhein: apna kisan code, kharidi ki tareekh aur maatra (parchi
+        teen cheezein likhna na chhodein: apna kisan code, kharidi ki tareekh aur maatra (parchi
         ke hisaab se), aur samasya ek line mein — entry kam darj hai, credit nahi aaya, ya
         raqam kam aayi. Lambi kahani likhne ki zaroorat nahi; saaf baat jaldi sunee jaati hai.
       </p>

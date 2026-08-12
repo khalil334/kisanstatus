@@ -121,7 +121,7 @@ export default function RajasthanKisanSammanNidhi9000() {
         <Fig
           src="status-check-phone.webp"
           alt="Kisan mobile par Jan Soochna portal kholkar Kisan Samman Nidhi ka payment status check kar raha hai"
-          caption="Status check bilkul free hai — Jan Soochna portal mobile par bhi khul jaata hai"
+          caption="Status check ka koi paisa nahi — Jan Soochna portal mobile par bhi khul jaata hai"
         />
 
         <h3>Jan Soochna Portal</h3>
@@ -202,7 +202,7 @@ export default function RajasthanKisanSammanNidhi9000() {
 
         <p>
           Tehsil ke chakkar lagane se pehle apna land record khud padh lena samajhdari hai — Rajasthan
-          mein ye bilkul free hai. <code>apnakhata.rajasthan.gov.in</code> (jise e-Dharti bhi kehte hain)
+          mein iska koi shulk nahi. <code>apnakhata.rajasthan.gov.in</code> (jise e-Dharti bhi kehte hain)
           kholein, apna zila chunein, phir tehsil aur gaon, aur khata number, khasra number ya malik ke
           naam se apni jamabandi nikaal lein.
         </p>
