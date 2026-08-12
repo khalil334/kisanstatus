@@ -3,8 +3,8 @@ import Image from 'next/image';
 import { SI, StepList, IB, WB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 
-const PUBLISHED = '2026-03-20T08:00:00+05:30';
-const MODIFIED = '2026-07-03T11:38:00+05:30';
+const PUBLISHED = '2026-02-11T18:34:34+05:30';
+const MODIFIED = '2026-03-04T16:41:58+05:30';
 
 const IMG_BASE = '/images/articles/pm-kisan-self-registered-status-check';
 

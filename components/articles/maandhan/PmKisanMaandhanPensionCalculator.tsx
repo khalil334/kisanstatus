@@ -6,8 +6,8 @@ import Image from 'next/image';
 import { SI, StepList, WB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
 
-const PUBLISHED = '2026-07-21T08:00:00+05:30';
-const MODIFIED = '2026-08-06T12:38:00+05:30';
+const PUBLISHED = '2026-03-20T10:58:55+05:30';
+const MODIFIED = '2026-04-03T18:06:25+05:30';
 
 const RELATED_CARDS = [
   {

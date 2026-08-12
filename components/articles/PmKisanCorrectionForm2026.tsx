@@ -3,8 +3,8 @@ import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 
-const PUBLISHED = '2026-07-08T08:00:00+05:30';
-const MODIFIED = '2026-07-30T08:37:00+05:30';
+const PUBLISHED = '2026-02-25T21:37:17+05:30';
+const MODIFIED = '2026-03-18T14:49:39+05:30';
 
 const RELATED = [
   { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Complete Guide', emoji: '📚' },

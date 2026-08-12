@@ -5,8 +5,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 
-const PUBLISHED = '2026-07-10T08:00:00+05:30';
-const MODIFIED = '2026-07-25T08:00:00+05:30';
+const PUBLISHED = '2026-01-28T12:49:15+05:30';
+const MODIFIED = '2026-03-11T06:46:19+05:30';
 
 const FALLBACK_IMG = '/images/articles/pm-kisan-bank-account-change/bank-change-hero.webp';
 
