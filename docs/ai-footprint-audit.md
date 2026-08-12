@@ -536,7 +536,7 @@ P0/P1 are where the AI feel actually lives. P2/P3 are polish.
 
 - Migrate the 8 hand-typed `FAQPage` JSON-LD files (`kisanguides/` ×7 + `hindi-yojana/KisanKarjMafiList2027.tsx`) to `<FAQBlock>` — one Q&A array, schema derived from visible text. Fixes the drift (e.g. `VerminCompost.tsx`). FAQ wording itself is not changed beyond picking the correct single version.
 
-### Part 3 — Closing blocks ("Seedhi Baat" formula), 4 batches — 3a ✅ · 3b ✅ DONE (2026-08-12)
+### Part 3 — Closing blocks ("Seedhi Baat" formula), 4 batches — 3a ✅ · 3b ✅ · 3c ✅ DONE (2026-08-12)
 
 *Files: 47 total · Type: per-article copy*
 
@@ -567,6 +567,14 @@ P0/P1 are where the AI feel actually lives. P2/P3 are polish.
 Part 1 → Part 2 → Part 3 (a–d) → Part 4 → Part 5 → Part 6. Each part ships as its own PR and waits for owner review before the next starts.
 
 ## 12. Changelog
+
+### 2026-08-12 — Part 3c complete (`fix/part-3c-closing-blocks-rajya-hindi`)
+
+- **`rajya-yojana/` + `hindi-yojana/` de-formulaised (11 files).** These folders never had the green-box closing component, but carried the same labels/tics inline. Removed/replaced: "सीधी बात" closing heading → article-specific "नमो शेतकरी = PM Kisan की परछाई" (`NamoShetkariYojanaMaharashtra`), "सीधी सलाह — तीन बातें याद रखिए" → "तीन आदतें जो Form Reject होने से बचाती हैं" (`TractorSubsidy2027StateWiseList`), "एक आखिरी बात…" / "आखिरी बात —" closers reworded to content-led sentences (`NpciAadhaarSeedingDbtPayment`, `PmKisanPaymentStoppedByStateFix`), "Aakhri Baat —" heading de-labelled (`BiharKisanRegistrationStatusCheck2026`), inline "Seedhi baat:" / "seedhi baat" / "Asli baat ye hai:" tags reworded (`MeriFasalMeraByoraStatusCheck2026`, `NamoShetkariYojanaStatus`, `UpKisanKarjRahatList2026`), and the four near-identical "Yaad rakhiye/rakho:" fraud-warning InfoBox openers differentiated (`UpKisanKarjRahatList2026`, `PariharaPaymentStatusCheck2026`, `IkhedutPortalStatusCheck2026`, `BiharKisanRegistrationStatusCheck2026`).
+- Two inline occurrences left intentionally (natural prose, not formula): `MeriFasalMeraByoraStatusCheck2026` ("…yahi is poore article ka nichod hai"), `KccLimitKaiseBadhaye3Se5Lakh` ("एक सीधी बात निकलती है…").
+- Similar length kept; no keyword anchors, FAQs or unrelated prose touched. `tsc --noEmit` clean.
+
+**Pages to re-check in a browser after deploy:** /rajya-yojana/up-kisan-karj-rahat-list-2026, /rajya-yojana/parihara-payment-status-check-2026, /rajya-yojana/ikhedut-portal-status-check-2026, /rajya-yojana/bihar-kisan-registration-status-check-2026, /rajya-yojana/meri-fasal-mera-byora-status-check-2026, /rajya-yojana/namo-shetkari-yojana-status-check-2026, /articles/hi/namo-shetkari-yojana-maharashtra, /articles/hi/tractor-subsidy-state-wise-list, /articles/hi/npci-aadhaar-seeding-dbt-payment, /articles/hi/payment-stopped-by-state.
 
 ### 2026-08-12 — Part 3b complete (`fix/part-3b-closing-blocks-maandhan`)
 

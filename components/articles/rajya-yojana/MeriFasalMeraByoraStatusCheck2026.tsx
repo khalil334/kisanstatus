@@ -178,7 +178,7 @@ export default function MeriFasalMeraByoraStatusCheck2026({
       </p>
 
       <p>
-        Seedhi baat: <strong>MFMB me register aur verify hui fasal hi e-Kharid ke through
+        Is portal ka poora matlab ek line mein: <strong>MFMB me register aur verify hui fasal hi e-Kharid ke through
         MSP par bikti hai.</strong> Mandi ka gate pass isi data se banta hai, taul ki entry
         isi se judti hai, aur payment isi record ke bank account me jaati hai. Iske alawa
         fasal kharaab hone par muawza, Bhavantar Bharpai, bima — sab isi byore se linked

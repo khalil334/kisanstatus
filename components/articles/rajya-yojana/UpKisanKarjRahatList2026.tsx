@@ -126,7 +126,7 @@ export default function UpKisanKarjRahatList2026({
       <p>
         Hum sahkari samiti me barson se yahi kaam karte aa rahe hain — list check karna,
         shikayat likhwana, aur sabse zyada... logon ko ye samjhana ki wo message jhooth hai.
-        Asli baat ye hai: UP me karj rahat ka ek hi official portal hai, aur is keyword par
+        Kaam ki baat pehle: UP me karj rahat ka ek hi official portal hai, aur is keyword par
         aane wale aadhe se zyada log asal me is yojana ke dayre me aate hi nahi. ( Kadwa
         lagega, par pehle yahi saaf karna zaroori hai — warna aap galat ummeed me mahino
         bhatakte rahenge. )
@@ -468,7 +468,7 @@ export default function UpKisanKarjRahatList2026({
       </section>
 
       <InfoBox type="warning">
-        <strong>Yaad rakhiye:</strong> list check, status, shikayat — is poore process me
+        <strong>Ek rupaya bhi mat dijiye:</strong> list check, status, shikayat — is poore process me
         kahin ek rupaya nahi lagta. &quot;Naam chadhwane&quot; ya &quot;file aage
         badhane&quot; ke naam par paisa maangne wala har aadmi thag hai. Aisi maang ki
         shikayat 1930 par aur apne thane me kariye.

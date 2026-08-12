@@ -570,7 +570,7 @@ export default function IkhedutPortalStatusCheck2026({
 
       <section className="mb-8 not-prose">
         <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">
-          Pehle chhota jawab, phir uski asli baat — jaldi me ho to bold line hi padh lijiye
+          Pehle chhota jawab, phir uska khulasa — jaldi me ho to bold line hi padh lijiye
         </p>
         <div className="space-y-3">
           {FAQS.map(({ q, quick, detail }) => (
@@ -587,7 +587,7 @@ export default function IkhedutPortalStatusCheck2026({
       </section>
 
       <InfoBox type="warning">
-        <strong>Do cheezein yaad rakhiye:</strong> arji ka print jama karna aur purv manjuri
+        <strong>Gujarat mein sahay atakne ki bas do wajahein hain:</strong> arji ka print jama karna aur purv manjuri
         ke baad hi kharidi karna. Bas ye do galtiyan hi Gujarat me sabse zyada sahay atkati
         hain — baaki sab sudhar jaata hai.
       </InfoBox>
