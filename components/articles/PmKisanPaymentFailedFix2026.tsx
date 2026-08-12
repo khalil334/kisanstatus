@@ -9,19 +9,19 @@ const MODIFIED = '2026-02-20T21:22:12+05:30';
 
 const RELATED_CARDS = [
   {
-    slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai',
-    title: 'FTO Generated Matlab Kya Hai',
-    desc: 'FTO aur PFMS ke beech ka farak aur payment kab tak aayegi, jaane.',
-  },
-  {
     slug: 'PmKisanEkycOnline2026',
     title: 'eKYC Karne Ka Poora Tarika',
     desc: 'Payment fail hone ka ek bada karan eKYC pending hona bhi ho sakta hai.',
   },
   {
-    slug: 'PmKisan24viKist2026',
-    title: '24vi Kist Status Check',
-    desc: 'Apna latest installment status aur error codes abhi verify karein.',
+    slug: 'PmKisanCorrectionForm2026',
+    title: 'Naam Aur Aadhaar Ki Galti Sudhaarein',
+    desc: 'Record mein spelling ya Aadhaar mismatch ho to kist wahin ruk jaati hai.',
+  },
+  {
+    slug: 'PmKisanBankAccountChangeProcess',
+    title: 'Bank Account Badalne Ka Process',
+    desc: 'Account band ya DBT-disabled hone par naya account jodna hi ekmatra rasta hai.',
   },
 ];
 
