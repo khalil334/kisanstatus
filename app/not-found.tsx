@@ -22,7 +22,7 @@ export default function NotFound() {
     <div className="min-h-[60vh] flex items-center justify-center px-4 py-12">
       <div className="max-w-2xl w-full text-center space-y-8">
         <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-green-100 dark:bg-green-900/30 text-5xl mb-2" aria-hidden="true">
-          🌾
+         
         </div>
 
         <div className="space-y-3">
@@ -76,7 +76,7 @@ export default function NotFound() {
             href="/"
             className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[var(--color-primary)] text-white font-bold rounded-xl hover:bg-green-700 transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500"
           >
-            🏠 Homepage Par Jaayein
+            Homepage Par Jaayein
           </Link>
           <Link
             href="/articles"

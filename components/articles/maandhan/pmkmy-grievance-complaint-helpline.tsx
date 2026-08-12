@@ -18,7 +18,7 @@ const RELATED_CARDS = [
     slug: 'pmkmy-bank-account-change',
     title: 'Bank Account Update',
     desc: 'Registered bank account change ya NACH mandate update karne ka complete step-by-step process.',
-    emoji: '🏦',
+    emoji: '',
   },
   {
     slug: 'pm-kisan-maandhan-pension-card-download',
@@ -560,7 +560,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
           { href: '/maandhan/pm-kisan-maandhan-status-check-online', l: ' Status Check' },
-          { href: '/maandhan/pmkmy-bank-account-change', l: '🏦 Bank Change' },
+          { href: '/maandhan/pmkmy-bank-account-change', l: 'Bank Change' },
           { href: '/maandhan/pm-kisan-maandhan-pension-card-download', l: 'Pension Card' },
         ]} />
         <Disclaimer />

@@ -510,7 +510,7 @@ export default function MeriFasalMeraByoraStatusCheck2026({
               className="border border-[var(--color-border)] rounded-xl overflow-hidden"
             >
               <p className="p-4 pb-2 font-semibold text-[var(--color-text)] text-sm m-0">
-                🧑‍🌾 Kisan: {q}
+                Kisan: {q}
               </p>
               <p className="px-4 pb-4 text-sm text-[var(--color-text-muted)] leading-relaxed m-0">
                  Operator: {a}

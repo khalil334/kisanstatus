@@ -25,7 +25,7 @@ const RELATED_CARDS = [
     slug: 'KisanRinKahaSeLe2026',
     title: 'Kisan Loan Kahan Se Milega',
     desc: 'Mudra aur KCC ke beech sahi agriculture loan choice kaise karein.',
-    emoji: '🏦'
+    emoji: ''
   },
   {
     slug: 'AgriStackKyaHai2026',
@@ -554,10 +554,10 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
         />
 
         <CalcBanner
-          icon="🏦"
+          icon=""
           title="Apni EMI Calculate Karo"
           desc="KCC loan ki monthly payment aur total interest jaano — 4% effective rate par"
-          primaryCta={{ href: '/calculator/kcc-loan-emi', label: '🏦 EMI Calculator →' }}
+          primaryCta={{ href: '/calculator/kcc-loan-emi', label: 'EMI Calculator →' }}
           secondaryCta={{ href: '/calculator', label: 'Sab Utilities Dekho' }}
         />
 
@@ -587,7 +587,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
 
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/KisanRinKahaSeLe2026', l: '🏦 Kisan Loan Guide' },
+          { href: '/articles/KisanRinKahaSeLe2026', l: 'Kisan Loan Guide' },
           { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
           { href: '/calculator/kcc-loan-emi', l: 'EMI Calculator' },
         ]} />

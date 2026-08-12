@@ -5,11 +5,11 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const RELATED = [
-  { slug: 'bihar-pashupalan-loan-yojana', title: 'Bihar Ki Pashupalan Yojana', emoji: '🐃' },
-  { slug: 'dairy-farm-loan-without-collateral', title: 'Dairy Ke Liye Bina Zamanat Loan', emoji: '🐄' },
-  { slug: 'murgi-palan-loan-nlm-subsidy', title: 'Murgi Palan NLM Subsidy', emoji: '🐔' },
-  { slug: 'bakri-palan-yojana-nlm-subsidy', title: 'Bakri Palan Par NLM Madad', emoji: '🐐' },
-  { slug: 'sbi-dairy-loan-interest-rate', title: 'SBI Dairy Loan EMI Aur Rate', emoji: '🏦' },
+  { slug: 'bihar-pashupalan-loan-yojana', title: 'Bihar Ki Pashupalan Yojana', emoji: '' },
+  { slug: 'dairy-farm-loan-without-collateral', title: 'Dairy Ke Liye Bina Zamanat Loan', emoji: '' },
+  { slug: 'murgi-palan-loan-nlm-subsidy', title: 'Murgi Palan NLM Subsidy', emoji: '' },
+  { slug: 'bakri-palan-yojana-nlm-subsidy', title: 'Bakri Palan Par NLM Madad', emoji: '' },
+  { slug: 'sbi-dairy-loan-interest-rate', title: 'SBI Dairy Loan EMI Aur Rate', emoji: '' },
   { slug: 'KisanCreditCardOnlineApply2026', title: 'Kisan Credit Card 2026' },
 ];
 
@@ -123,7 +123,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
           barbaad karti hain.
         </p>
 
-        <SH>🐄 RGM Hai Kya — Ek Line Mein Samjho</SH>
+        <SH>RGM Hai Kya — Ek Line Mein Samjho</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           December 2014 se chal rahi yeh scheme Ministry of Fisheries, Animal Husbandry &amp; Dairying ke under
           desi gay-bhains ki <strong>nasl sudhaarne</strong> ka national mission hai. Maqsad simple hai — Gir,
@@ -251,7 +251,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>🏗️ Breed Multiplication Farm — ₹2 Crore Tak Ka Bada Game</SH>
+        <SH>Breed Multiplication Farm — ₹2 Crore Tak Ka Bada Game</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Yeh RGM ka entrepreneurship component hai — un logon ke liye jo dairy ko business ki tarah dekhte hain.
           Breed Multiplication Farm ek structured commercial farm hota hai (aam taur par 200 milch animals tak ka
@@ -328,7 +328,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>🌾 Desi Nasl Ka Economics — Yeh Scheme Kyon Matter Karti Hai</SH>
+        <SH>Desi Nasl Ka Economics — Yeh Scheme Kyon Matter Karti Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Number khud bolte hain — sarkari record ke mutabik 10 saal mein desh ka doodh production <strong>63.55%</strong> badha,
           per capita availability 307 gram/din (2013-14) se <strong>471 gram/din</strong> (2023-24) hui, aur productivity

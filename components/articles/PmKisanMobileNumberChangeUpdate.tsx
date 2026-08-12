@@ -21,7 +21,7 @@ const RELATED_CARDS = [
     slug: 'PmKisanCscRegistrationCharges',
     title: 'CSC Registration & Charges',
     desc: 'CSC par kis service ka kitna sarkari rate hai, puri list dekhein.',
-    emoji: '🏪'
+    emoji: ''
   },
   {
     slug: 'PmKisanRejectedStatusReApplyGuide',
@@ -256,7 +256,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
               )}
               className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
-              🏪 Yahan Click Karo → Nazdiki CSC Center Ka Address Milega
+              Yahan Click Karo → Nazdiki CSC Center Ka Address Milega
             </button>
           </div>
         </section>
@@ -552,7 +552,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
 
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/PmKisanCscRegistrationCharges', l: '🏪 CSC Charges' },
+          { href: '/articles/PmKisanCscRegistrationCharges', l: 'CSC Charges' },
           { href: '/articles/PmKisanEkycOnline2026', l: 'eKYC Guide' },
           { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
         ]} />

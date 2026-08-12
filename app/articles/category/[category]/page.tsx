@@ -160,7 +160,7 @@ const CATEGORY_DATA: Record<CategorySlug, {
   'farming': {
     title: 'Modern Farming & Schemes Guides 2026',
     description: 'Soil Health Card, Nano DAP, PMFBY crop insurance aur AgriStack ki puri jankari. Modern kheti aur sarkari yojanaon ke liye verified Hindi guides.',
-    emoji: '🌱',
+    emoji: '',
     keywords: ['soil health card', 'nano DAP 2026', 'PMFBY crop insurance', 'AgriStack', 'modern farming'],
   },
   'mandi': {
@@ -172,13 +172,13 @@ const CATEGORY_DATA: Record<CategorySlug, {
   'pashupalan': {
     title: 'Pashupalan & Matsya Palan Subsidy Guides 2026',
     description: 'Bakri palan, madhumakhi palan, machli palan aur silage ki subsidy, loan aur profit ki puri jankari. NLM, KVIC aur PM Matsya Sampada Yojana ki guides.',
-    emoji: '🐄',
+    emoji: '',
     keywords: ['bakri palan yojana', 'madhumakhi palan subsidy', 'machli palan loan', 'PM Matsya Sampada Yojana', 'silage business'],
   },
   'agri-business': {
     title: 'Agri Business Subsidy Guides 2026 — Mushroom',
     description: 'Mushroom kheti, vermi compost, food processing aur drip irrigation subsidy kaise milegi. NHB, PM-FME aur CHC portal ki step-by-step guides.',
-    emoji: '🏭',
+    emoji: '',
     keywords: ['mushroom kheti subsidy', 'vermi compost business', 'PM FME yojana', 'custom hiring centre', 'drip irrigation subsidy'],
   },
 };

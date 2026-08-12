@@ -78,7 +78,7 @@ const TOPICS = [
 ];
 
 const STATS = [
-  { value: '12 Cr+', label: 'Kisan Labhanvit', icon: '👨‍🌾' },
+  { value: '12 Cr+', label: 'Kisan Labhanvit', icon: '' },
   { value: '₹6,000', label: 'Saalana Sahayata' },
   { value: `${ARTICLES.length}+`, label: 'Verified Guides' },
   { value: '36', label: 'States Covered' },
@@ -118,7 +118,7 @@ export default function AboutPage() {
 
         <section className="mb-8 bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            🌾 {SITE_NAME} Kya Hai?
+            {SITE_NAME} Kya Hai?
           </h2>
           <div className="space-y-3 text-sm text-[var(--color-text-muted)] leading-relaxed">
             <p>
@@ -159,7 +159,7 @@ export default function AboutPage() {
 
         <section id="author" className="mb-8 bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-5 pb-2 border-b-2 border-[var(--color-border)]">
-            👤 Author Ke Baare Mein
+            Author Ke Baare Mein
           </h2>
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5">
             <div className="w-28 h-28 rounded-full overflow-hidden shrink-0 shadow-lg border-4 border-[var(--color-primary)]">
@@ -188,13 +188,13 @@ export default function AboutPage() {
                   href={`mailto:${SUPPORT_EMAIL}`}
                   className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--color-bg-alt)] border border-[var(--color-border)] text-[var(--color-text)] text-xs font-bold rounded-xl hover:border-green-400 dark:hover:border-green-600 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500"
                 >
-                  📧 Email Karein
+                  Email Karein
                 </a>
                 <Link
                   href="/articles"
                   className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--color-primary)] text-white text-xs font-bold rounded-xl hover:bg-green-700 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500"
                 >
-                  📚 Sabhi Guides Padhein
+                  Sabhi Guides Padhein
                 </Link>
               </div>
             </div>

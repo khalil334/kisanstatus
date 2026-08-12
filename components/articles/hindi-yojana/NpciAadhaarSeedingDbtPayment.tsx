@@ -420,7 +420,7 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
         <h3 className="font-black text-[var(--color-text)] mb-3 text-base">इसी विषय की बाकी कड़ियां</h3>
         <ul className="list-disc pl-5 space-y-1.5 text-sm">
           <li>
-            <Link href="/articles/PmKisanBankAccountChangeProcess">🏦 Bank Account Change Process</Link>
+            <Link href="/articles/PmKisanBankAccountChangeProcess">Bank Account Change Process</Link>
           </li>
           <li>
             <Link href="/articles/PmKisanPaymentFailedFix2026">Payment Failed — Fix Guide</Link>

@@ -208,7 +208,7 @@ function PMFBYCalc() {
     <div>
       <p className="text-gray-500 text-sm mb-5">Crop protection scheme — aapka premium aur government contribution</p>
       <SelectField label="Fasal (Crop)" value={crop} onChange={setCrop} options={cropOptions} />
-      <SelectField label="Season" value={season} onChange={setSeason} options={[{ value: 'kharif', label: '🌧️ Kharif (June–Oct)' }, { value: 'rabi', label: '❄️ Rabi (Nov–Mar)' }]} />
+      <SelectField label="Season" value={season} onChange={setSeason} options={[{ value: 'kharif', label: 'Kharif (June–Oct)' }, { value: 'rabi', label: 'Rabi (Nov–Mar)' }]} />
       <InputField label="Sum Insured (₹ per hectare)" value={sumInsured} onChange={setSumInsured} min={1000} placeholder="50000" hint="Apne district ke liye actual sum insured bank ya CSC se poochein" />
 
       {insuredAmt > 0 && (
@@ -338,16 +338,16 @@ const RELATED_ARTICLES = [
   { href: '/articles/PmKisan24viKist2026', label: '24vi Tranche Verification' },
   { href: '/articles/PmKisanMasterGuide2026', label: 'Tranche History' },
   { href: '/articles/KisanRinKahaSeLe2026', label: 'Credit Facility Guide' },
-  { href: '/articles/PmfbyCropInsurance2026', label: '🌱 Crop Protection Guide' },
-  { href: '/articles/KisanTractorLoan2026', label: '🚜 Farm Equipment Loan' },
+  { href: '/articles/PmfbyCropInsurance2026', label: 'Crop Protection Guide' },
+  { href: '/articles/KisanTractorLoan2026', label: 'Farm Equipment Loan' },
   { href: '/articles/PmKisanMasterGuide2026', label: 'Scheme Enrollment' },
   { href: '/articles/PmKisanEkycOnline2026', label: 'Digital Verification Guide' },
   { href: '/articles/PmKisanPaymentFailedFix2026', label: 'Payment Fix Guide' },
 ];
 
 const CALCS: { id: CalcId; emoji?: string; title: string; shortTitle: string; color: string; component: React.ComponentType }[] = [
-  { id: 'pmkisan', emoji: '🌾', title: 'Welfare Benefit Estimator',  shortTitle: 'Benefit',    color: 'green',  component: PMKisanCalc  },
-  { id: 'kcc',     emoji: '🏦', title: 'Credit Facility EMI',        shortTitle: 'Credit',     color: 'blue',   component: KCCLoanCalc  },
+  { id: 'pmkisan', emoji: '', title: 'Welfare Benefit Estimator',  shortTitle: 'Benefit',    color: 'green',  component: PMKisanCalc  },
+  { id: 'kcc',     emoji: '', title: 'Credit Facility EMI',        shortTitle: 'Credit',     color: 'blue',   component: KCCLoanCalc  },
   { id: 'pmfby', title: 'Crop Protection Premium',    shortTitle: 'Protection', color: 'yellow', component: PMFBYCalc    },
   { id: 'msp', title: 'Procurement Rate Income',    shortTitle: 'Procurement',color: 'orange', component: MSPCalc      },
   { id: 'profit', title: 'Yield Profit/Loss',          shortTitle: 'Yield',      color: 'purple', component: CropProfitCalc },

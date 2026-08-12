@@ -314,7 +314,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
           <div className="space-y-3 mb-4">
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
               <div className="flex items-start gap-3">
-                <span className="text-xl mt-0.5">🏪</span>
+                <span className="text-xl mt-0.5"></span>
                 <div>
                   <p className="font-black text-sm text-[var(--color-text)] mb-1">CSC Center</p>
                   <p className="text-xs text-[var(--color-text-muted)]">Yeh sabse aasan tareeqa hai gaon mein rehne wale farmers ke liye. Apne nazdeeki CSC center jayein. VLE (Village Level Entrepreneur) ke paas PM-KMY portal ka access hota hai. Aap cash dekar apna due amount jama karwa sakte hain. CSC wala aapko ek receipt dega — usse sambhal kar rakhein.</p>
@@ -331,7 +331,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
             </div>
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
               <div className="flex items-start gap-3">
-                <span className="text-xl mt-0.5">🏦</span>
+                <span className="text-xl mt-0.5"></span>
                 <div>
                   <p className="font-black text-sm text-[var(--color-text)] mb-1">Bank Branch</p>
                   <p className="text-xs text-[var(--color-text-muted)]">Kuch banks direct contribution accept karti hain pension schemes ke liye. Apni bank branch mein poochhiye ke kya woh PM-KMY ka payment accept karti hain. Agar haan, toh aap wahan cash ya cheque se jama karwa sakte hain. Lekin yeh facility har bank mein available nahi hoti, isliye pehle confirm kar lein.</p>

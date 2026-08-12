@@ -150,11 +150,11 @@ export default function PmKisanNewRegistration2027({ article }: { article: Hindi
         कमी दूर कीजिए, क्योंकि अधूरी तैयारी पर डाला आवेदन महीनों लटकता है:
       </p>
       <ul className="list-none pl-0 my-4 space-y-2 text-sm leading-relaxed">
-        <li>☑️ खेती की जमीन खतौनी में <strong>मेरे नाम</strong> दर्ज है?</li>
-        <li>☑️ परिवार (पति/पत्नी) में कोई और यह लाभ <strong>नहीं</strong> ले रहा?</li>
-        <li>☑️ मैं income tax नहीं भरता, सरकारी सेवा/बड़ी pension में नहीं हूं?</li>
-        <li>☑️ आधार में mobile number जुड़ा है (या CSC जाने को तैयार हूं)?</li>
-        <li>☑️ बैंक खाता चालू हालत में है और आधार से seeded है?</li>
+        <li>खेती की जमीन खतौनी में <strong>मेरे नाम</strong> दर्ज है?</li>
+        <li>परिवार (पति/पत्नी) में कोई और यह लाभ <strong>नहीं</strong> ले रहा?</li>
+        <li>मैं income tax नहीं भरता, सरकारी सेवा/बड़ी pension में नहीं हूं?</li>
+        <li>आधार में mobile number जुड़ा है (या CSC जाने को तैयार हूं)?</li>
+        <li>बैंक खाता चालू हालत में है और आधार से seeded है?</li>
       </ul>
       <p>
         सवाल 1 पर अटके हैं तो पहले तहसील से वरासत/नामांतरण का काम कराइए — यह PM Kisan का नहीं, राजस्व विभाग

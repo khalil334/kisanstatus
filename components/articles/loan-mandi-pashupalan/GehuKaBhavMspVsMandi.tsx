@@ -9,7 +9,7 @@ const RELATED = [
   { slug: 'mandi-bhav-today', title: 'Mandi Bhav Live Rates' },
   { slug: 'enam-registration-kaise-kare', title: 'eNAM Registration Guide' },
   { slug: 'mandi-bhav-app-comparison', title: 'Mandi Rate Apps Comparison' },
-  { slug: 'sabzi-bhav-guide-pyaz-aloo-tamatar', title: 'Sabzi Bhav Guide', emoji: '🥔' },
+  { slug: 'sabzi-bhav-guide-pyaz-aloo-tamatar', title: 'Sabzi Bhav Guide', emoji: '' },
   { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Apply Guide 2026' },
 ];
 

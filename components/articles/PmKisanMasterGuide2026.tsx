@@ -13,11 +13,11 @@ const MODIFIED = '2026-02-16T10:13:52+05:30';
 
 const RELATED = [
   { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply' },
-  { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price', emoji: '🌱' },
-  { slug: 'soil-health-card-complete-guide-2026', title: 'Soil Health Card', emoji: '🌾' },
+  { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price', emoji: '' },
+  { slug: 'soil-health-card-complete-guide-2026', title: 'Soil Health Card', emoji: '' },
   { slug: 'PmKisan24viKist2026', title: '24vi Kist Status' },
   { slug: 'AgriStackKyaHai2026', title: 'Digital Kisan ID' },
-  { slug: 'KisanRinKahaSeLe2026', title: 'Kisan Loan Guide', emoji: '🏦' },
+  { slug: 'KisanRinKahaSeLe2026', title: 'Kisan Loan Guide', emoji: '' },
   { slug: 'PmKisanVoluntarySurrenderGuide', title: 'PM Kisan Surrender Guide' },
   { slug: 'PmKisanVillageWiseListPdfDownload', title: 'Village Wise List PDF' },
   { slug: 'PmKisanMobileNumberChangeUpdate', title: 'Mobile Number Change' },
@@ -87,7 +87,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
             <span>/</span>
             <span className="text-white font-bold">PM Kisan Complete Guide</span>
           </nav>
-          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">🌾 Master Guide 2026</span>
+          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Master Guide 2026</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
             PM Kisan Complete Guide 2026: Registration Se Lekar Payment Tak — Har Problem Ka Solution Ek Jagah
           </h1>
@@ -487,7 +487,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
               <p className="text-xs text-[var(--color-text-muted)]">pmkisan-ict@gov.in</p>
             </div>
             <div className="p-4 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-xl">
-              <p className="font-black text-purple-800 dark:text-purple-300 text-sm mb-2">🏢 Block Office</p>
+              <p className="font-black text-purple-800 dark:text-purple-300 text-sm mb-2">Block Office</p>
               <p className="text-xs text-[var(--color-text-muted)]">Block Agriculture Officer</p>
             </div>
             <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl">

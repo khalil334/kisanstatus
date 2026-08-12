@@ -494,7 +494,7 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
         <h3 className="font-black text-[var(--color-text)] mb-3 text-base">आगे किस page पर जाएं</h3>
         <ul className="list-disc pl-5 space-y-1.5 text-sm">
           <li>
-            <Link href="/articles/PmKisanFaceAuthenticationEkyc">🤳 Face Auth eKYC App Guide</Link>
+            <Link href="/articles/PmKisanFaceAuthenticationEkyc">Face Auth eKYC App Guide</Link>
           </li>
           <li>
             <Link href="/articles/PmKisanEkycOnline2026">eKYC Online — पूरी guide</Link>

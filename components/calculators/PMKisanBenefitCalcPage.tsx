@@ -33,7 +33,7 @@ export default function PMKisanBenefitCalcPage() {
     <>
 
       <CalcHeader
-        emoji="🌾"
+        emoji=""
         title="PM Kisan Calculator 2026"
         subtitle="Kitna paisa milega PM Kisan se — apne hisaab se calculate karo"
         breadcrumb="PM Kisan Paisa"
@@ -48,7 +48,7 @@ export default function PMKisanBenefitCalcPage() {
         </div>
 
         <div className="mb-6 p-5 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl text-sm text-[var(--color-text)] leading-relaxed">
-          <p className="font-bold text-green-900 dark:text-green-300 mb-2">🌾 PM Kisan Se Kitna Paisa Milega</p>
+          <p className="font-bold text-green-900 dark:text-green-300 mb-2">PM Kisan Se Kitna Paisa Milega</p>
           <p className="mb-2">
             <strong>PM Kisan Samman Nidhi</strong> ke tahat har eligible kisan ko saal mein <strong>₹6,000</strong> milte hain, <strong>₹2,000 ki teen kist</strong> mein — direct bank account mein (DBT ke through).
           </p>
@@ -234,7 +234,7 @@ export default function PMKisanBenefitCalcPage() {
               <p className="text-green-800 dark:text-green-400">Har kist se pehle eKYC dekh lo, complete nahi hai to kar lo — CSC center aur online, dono free hain</p>
             </div>
             <div className="p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
-              <p className="font-bold text-blue-900 dark:text-blue-300 mb-1">🏦 Bank Account Check Karo</p>
+              <p className="font-bold text-blue-900 dark:text-blue-300 mb-1">Bank Account Check Karo</p>
               <p className="text-blue-800 dark:text-blue-400">Bank account Aadhaar se linked aur active hona chahiye — PFMS portal se ek baar confirm kar lo</p>
             </div>
             <div className="p-3 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-xl">

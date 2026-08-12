@@ -21,7 +21,7 @@ const RELATED = [
   { slug: 'PmKisanEkycOnline2026', title: 'PM Kisan eKYC Online' },
   { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List 2026' },
   { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply' },
-  { slug: 'PmfbyCropInsurance2026', title: 'PMFBY Crop Insurance', emoji: '🌾' },
+  { slug: 'PmfbyCropInsurance2026', title: 'PMFBY Crop Insurance', emoji: '' },
   { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide' },
 ];
 

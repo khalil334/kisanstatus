@@ -5,7 +5,7 @@ export type InfoBoxType = 'info' | 'tip' | 'warning' | 'update';
 const STYLES: Record<InfoBoxType, { wrap: string; icon?: string; label: string }> = {
   info: {
     wrap: 'bg-green-50 dark:bg-green-900/20 border-green-600 dark:border-green-500',
-    icon: 'ℹ️',
+    icon: 'ℹ',
     label: 'Jaankari',
   },
   tip: {

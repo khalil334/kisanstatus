@@ -13,7 +13,7 @@ const MODIFIED = '2026-01-14T18:35:26+05:30';
 
 const RELATED = [
   { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide' },
-  { slug: 'soil-health-card-complete-guide-2026', title: 'Soil Health Card', emoji: '🌱' },
+  { slug: 'soil-health-card-complete-guide-2026', title: 'Soil Health Card', emoji: '' },
   { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price' },
   { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Loan Guide' },
   { slug: 'AgriStackKyaHai2026', title: 'Digital Kisan ID' },
@@ -424,7 +424,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
         <CalcBanner
           title="Premium Calculate Karo"
           desc="Crop value daalo — premium jaano"
-          primaryCta={{ href: '/calculator/crop-profit', label: '🌾 Calculator →' }}
+          primaryCta={{ href: '/calculator/crop-profit', label: 'Calculator →' }}
           secondaryCta={{ href: '/calculator', label: 'Utilities' }}
         />
 
@@ -432,7 +432,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
           { href: '/articles/PmKisanMasterGuide2026', l: 'Guide' },
-          { href: '/articles/soil-health-card-complete-guide-2026', l: '🌱 Soil' },
+          { href: '/articles/soil-health-card-complete-guide-2026', l: 'Soil' },
           { href: '/articles/KisanCreditCardOnlineApply2026', l: 'KCC' },
         ]} />
         <Disclaimer />

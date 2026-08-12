@@ -86,8 +86,8 @@ export default function PMFBYCalcPage() {
             label="Kaunsa season hai?"
             value={season} onChange={setSeason}
             options={[
-              {value:'kharif',label:'🌧️ Kharif (June–October) — Dhan, Makka, Kapas'},
-              {value:'rabi',  label:'❄️ Rabi (November–March) — Gehun, Sarson, Dal'},
+              {value:'kharif',label:'Kharif (June–October) — Dhan, Makka, Kapas'},
+              {value:'rabi',  label:'Rabi (November–March) — Gehun, Sarson, Dal'},
             ]}
             hint="Kharif aur Rabi ke rates alag hote hain"
           />
@@ -219,7 +219,7 @@ export default function PMFBYCalcPage() {
               <p className="text-purple-800">PMFBY mobile app se apply karna faster hota hai, aur status bhi wahi se track kar sakte ho</p>
             </div>
             <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl">
-              <p className="font-bold text-amber-900 mb-1">🏦 Bank Se Pucho</p>
+              <p className="font-bold text-amber-900 mb-1">Bank Se Pucho</p>
               <p className="text-amber-800">Sum insured district ke hisaab se badalta rahta hai, isliye apni bank branch se ek baar confirm kar lena behtar hai</p>
             </div>
           </div>
@@ -253,7 +253,7 @@ export default function PMFBYCalcPage() {
                KCC Loan — Insurance Ke Sath
             </Link>
             <Link href="/articles/soil-health-card-complete-guide-2026" className="p-3 bg-white border border-amber-200 rounded-xl text-xs font-semibold text-gray-700 hover:bg-amber-600 hover:text-white transition-colors">
-              🌱 Soil Health Card — Better Yield
+              Soil Health Card — Better Yield
             </Link>
             <Link href="/calculator/crop-profit" className="p-3 bg-white border border-amber-200 rounded-xl text-xs font-semibold text-gray-700 hover:bg-amber-600 hover:text-white transition-colors">
                Kheti Munafa Calculator
