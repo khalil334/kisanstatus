@@ -326,7 +326,7 @@ export default function BakriPalanYojana() {
         </div>
 
         <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-          Aakhri Baat
+          Do-Teen Saal Tikne Wale Hi Profit Dekhte Hain
         </h2>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
           Paisa tabhi banta hai jab bakri palan ko business ki tarah loge, shauk ki tarah nahi. Documentation pe dhyan do, vet ki baat suno, shuruat mein patience rakho. Raaton-raat kuch nahi hota. Jo 2-3 saal tik jaate hain, wahi profit dekhte hain.

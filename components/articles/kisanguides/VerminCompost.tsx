@@ -528,7 +528,7 @@ export default function VerminCompost() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Subsidy ka fayda zaroor uthayein. 50-75% subsidy mil rahi hai organic farming schemes mein. Par yaad rakho - subsidy milna guaranteed nahi hai. Application process mein 3-6 months lag sakte hain. Isliye apni planning subsidy ke bina karein. Agar mil gayi, toh bonus samjho.
+        Organic farming schemes mein 50-75% tak subsidy hai, aur uska form bharna banta hai — par pits ka kharch usi mahine aata hai jab aap unhe banate hain, aur subsidy ka paisa aksar 3-6 mahine baad. Vermi compost mein yeh gap aur chubhta hai kyunki pehla batch hi 60-90 din leta hai, yani do taraf se paisa ruka rehta hai. Isliye pits ka budget apni jeb ya KCC se planning karein aur subsidy ko baad mein aane wali rakam maanein, shuruaati punji nahi.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">

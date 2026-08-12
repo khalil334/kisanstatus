@@ -451,9 +451,11 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Bottom Line</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Nano DAP Replacement Nahi, Top-Up Hai</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Nano DAP ek convenient option hai — kam quantity, aasan application. Par ye akela sab kuch nahi kar sakta. Sahi beej, samay par paani aur balanced nutrition — inke bina koi bhi fertilizer poora asar nahi dikhayega.
+            Sabse mehengi galti yahi hoti hai ki 500 ml ki bottle ko bori wale DAP ka badal maan liya jaye.
+            Foliar spray patti se absorb hota hai, mitti ka phosphorus stock nahi bharta — isliye ise basal dose
+            ke saath chalayein, uski jagah nahi. Kharidne se pehle itna karein:
           </p>
           <ol className="space-y-2 text-sm text-green-800 dark:text-green-300 list-decimal list-inside">
             <li>Pehle chhote area par test karein</li>

@@ -94,7 +94,7 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
         </div>
 
         <DB>
-          <strong>Seedha Nichod:</strong>
+          <strong>Teen fasal, teen alag calendar:</strong>
           <ul className="list-disc pl-5 mt-2 space-y-1">
             <li>Pyaz-aloo-tamatar par <strong>MSP nahi hota</strong> — bhav pura demand-supply ka khel hai, timing hi hathiyar hai.</li>
             <li>Sirf <strong>rabi pyaz aur aloo store</strong> hote hain — tamatar mein hold ki strategy hai hi nahi, wahan planting ki timing hi game hai.</li>
@@ -139,7 +139,7 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
           loading="lazy"
         />
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Pyaz ki kahani samajhne ke liye bas do fasal yaad rakho. <strong>Rabi pyaz</strong> (March-May mein
+          Pyaz ki kahani do fasal par tiki hai. <strong>Rabi pyaz</strong> (March-May mein
           harvest) — saal ke total production ka sabse bada hissa, aur yahi woh pyaz hai jo 4-6 mahine store ho
           sakta hai. <strong>Kharif pyaz</strong> (October-December harvest) — nami wala, jaldi kharab hone
           wala, seedha mandi jaane wala.
@@ -233,7 +233,7 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Aloo ka price pattern bhi supply gap wala hi hai — harvest (Jan-March) par sabse sasta, phir jaise-jaise
           cold storage ka stock nikalta hai, August se November tak bhav aam taur par behtar hota jaata hai.
-          Lekin yaad rakho: jis saal storage mein maal zyada bhara hota hai, us saal ka September bhi thanda reh
+          Ek apwaad bhi hai: jis saal storage mein maal zyada bhara hota hai, us saal ka September bhi thanda reh
           sakta hai. Isliye storage bharne se pehle yeh zaroor pucho ki is saal aas-paas ke storages kitne bhare
           hain — yeh chhoti si jaankari aadhi strategy hai.
         </p>

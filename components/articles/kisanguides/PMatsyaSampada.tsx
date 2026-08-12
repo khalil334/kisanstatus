@@ -670,7 +670,7 @@ export default function PMatsyaSampada() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Subsidy ka fayda zaroor uthayein. 40-60% subsidy mil rahi hai, isse na lena bewakoofi hogi. Par yaad rakho - subsidy milna guaranteed nahi hai. Application process mein 3-6 months lag sakte hain. Isliye apni planning subsidy ke bina karein. Agar mil gayi, toh bonus samjho.
+        PMMSY ki 40-60% subsidy zaroor apply karein, lekin project ka ganit uske bina banayein. Sanction aur pehli installment ke beech aksar 3-6 mahine nikal jate hain, aur talab ki khudai, seed stocking aur feed ka kharch usse pehle shuru ho jata hai. Jo log subsidy ke paise se feed kharidne ka plan banate hain, unka pehla crop cycle wahin atak jata hai. Subsidy ko reimbursement maankar chalein — aa gayi toh working capital, na aayi toh bhi talab chalta rahe.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">

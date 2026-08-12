@@ -884,12 +884,15 @@ export default function MandiBhavToday() {
         </section>
 
         <div className="my-8 p-6 bg-green-50 border-2 border-green-400 rounded-2xl">
-          <h3 className="font-black text-green-800 text-lg mb-3">Seedhi Baat</h3>
+          <h3 className="font-black text-green-800 text-lg mb-3">Ek Mandi Ka Rate Adhoori Tasveer Hai</h3>
           <p className="text-sm text-green-800 leading-relaxed mb-3">
-            Mandi bhav dekhna luxury nahi, zaroorat hai — chahe aap apni fasal bech rahe ho ya ghar ke liye sabzi khareed rahe ho, rate pata hone se bargaining position better hoti hai.
+            Yahan diya rate mol-bhav ki shuruaat hai, ant nahi. Sirf apni mandi ka number dekhkar nikalne se aksar
+            nuksan hota hai — kai baar 30-40 km door wali mandi ka rate transport kharch nikaalne ke baad bhi upar
+            baithta hai.
           </p>
           <p className="text-sm text-green-800 leading-relaxed mb-3">
-            Page bookmark kar lo, apna state set kar lo, aur mausam ko bhi saath mein dekhte raho. Baaki decision aapka hai — hum sirf number saaf-saaf saamne rakhte hain.
+            Isliye bechne se pehle do-teen aas-paas ki mandiyon ka rate saath mein dekhein, aur usmein se dhulai aur
+            labour ghata kar tulna karein. Agar bacha hua farak dhulai se kam nikle, toh apni mandi hi theek hai.
           </p>
           <p className="text-xs text-green-700 italic mt-2">
             Base data sarkari agmarknet feed se aata hai. Mandi floor par thodi negotiation ho sakti hai, isliye final deal rate mein ₹1-2 ka farak sambhav hai.

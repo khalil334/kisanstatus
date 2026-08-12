@@ -72,7 +72,7 @@ export default function MushroomKheti() {
 
       <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
         <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
-          <strong>Seedhi baat:</strong> YouTube par "zero investment, mahine ke lakhon" wale videos dekhkar bahut se naujawan seedha 200-300 bags laga lete hain. Par 15 din baad jab green mold (hara fungus) puri batch kharab kar deta hai, tab pata chalta hai ki khumbi ugana sirf bags latakane ka naam nahi hai. Yeh ek controlled science hai. Jab aap sterilization aur humidity control ka practical tareeka samajh jate hain, tabhi yeh business ek stable income source ban pata hai.
+          <strong>Pehle yeh jaan lein:</strong> YouTube par "zero investment, mahine ke lakhon" wale videos dekhkar bahut se naujawan seedha 200-300 bags laga lete hain. Par 15 din baad jab green mold (hara fungus) puri batch kharab kar deta hai, tab pata chalta hai ki khumbi ugana sirf bags latakane ka naam nahi hai. Yeh ek controlled science hai. Jab aap sterilization aur humidity control ka practical tareeka samajh jate hain, tabhi yeh business ek stable income source ban pata hai.
         </p>
       </div>
 

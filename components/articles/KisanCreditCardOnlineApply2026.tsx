@@ -133,7 +133,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
         <section className="mb-8">
           <SH>Kisan Credit Card (KCC) Kya Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Seedhi baat karo. Yeh koi personal ya business loan nahi hai. RBI aur NABARD ne isse specifically kheti ke cash-flow gaps ko cover karne ke liye design kiya hai. Chahe Kharif ki buwai ho ya Rabi ki katai, KCC aapko local sahukar ke 24-36% byaj se bachata hai.
+            Ek galatfehmi pehle door kar lein. Yeh koi personal ya business loan nahi hai. RBI aur NABARD ne isse specifically kheti ke cash-flow gaps ko cover karne ke liye design kiya hai. Chahe Kharif ki buwai ho ya Rabi ki katai, KCC aapko local sahukar ke 24-36% byaj se bachata hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Banks ke paas directive hai ki eligible kisanon ko yeh facility deni hi hogi. Agar koi branch arbitrary reason dekar reject karti hai, toh unhe written justification dena padta hai.
@@ -532,9 +532,11 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Bottom Line</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Timing Hi Sab Kuch Hai: May-June Ya Agla Season</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Kharif June-July mein. Kisan Credit Card chahiye toh May-June mein apply karo. Last minute = planting miss.
+            Kharif ki bijai June-July mein hoti hai, aur naye applicants ki full verification mein 15-20 din tak
+            nikal sakte hain — upar se document reject hua toh cycle dobara. Isliye May-June wali window chook
+            gaye toh paisa bijai ke baad aayega, jab uska sabse zyada matlab tha. Neeche ka order isi wajah se hai:
           </p>
           <ol className="space-y-2 text-sm text-green-800 dark:text-green-300 list-decimal list-inside">
             <li>Documents ready karo (checklist upar hai)</li>
