@@ -155,7 +155,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
                Abhi Soil Health Card Apply Karo
             </p>
             <p className="text-xs text-green-700 dark:text-green-400 mb-3">
-              Official Soil Health portal par jakar apna <strong>soil health card online apply</strong> karo. 10 second baad portal khulega.
+              Official Soil Health portal par jakar apna <strong>soil health card online apply</strong> karo — 10 second ruko, portal khud khulega.
             </p>
             <button
               onClick={() => handleOfficialLink(
@@ -286,7 +286,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
                Status Check Karo
             </p>
             <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
-              Official portal par jakar apna <strong>soil health card status check</strong> karo. 10 second baad portal khulega.
+              Official portal par jakar apna <strong>soil health card status check</strong> karo (redirect timer 10 second ka hai).
             </p>
             <button
               onClick={() => handleOfficialLink(
@@ -350,7 +350,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
              National Soil Health Dashboard
           </h3>
           <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
-            <strong>Soil health card download</strong> karne ke liye, <strong>soil health card status check</strong> karne ke liye, ya state wise information ke liye official portal par jaayein. 10 second baad portal khulega.
+            <strong>Soil health card download</strong> karne ke liye, <strong>soil health card status check</strong> karne ke liye, ya state wise information ke liye official portal par jaayein. Countdown khatam hote hi soilhealth site khul jaayegi.
           </p>
           <button
             onClick={() => handleOfficialLink(

@@ -244,7 +244,7 @@ export default function PmKisanRejectedStatusReApplyGuide() {
                PM Kisan Status Check Karo
             </p>
             <p className="text-xs text-green-700 dark:text-green-400 mb-3">
-              Official PM Kisan portal par jakar apna <strong>pm kisan status check</strong> karo. 10 second baad portal khulega.
+              Official PM Kisan portal par jakar apna <strong>pm kisan status check</strong> karo; 10-second timer ke baad site khulegi.
             </p>
             <button
               onClick={() => handleOfficialLink(
@@ -422,7 +422,7 @@ export default function PmKisanRejectedStatusReApplyGuide() {
              PM Kisan Official Portal
           </h3>
           <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
-            <strong>PM Kisan status check</strong>, <strong>PM Kisan grievance</strong>, ya koi bhi kaam ke liye official portal par jaayein. 10 second baad portal khulega.
+            <strong>PM Kisan status check</strong>, <strong>PM Kisan grievance</strong>, ya koi bhi kaam ke liye official portal par jaayein. Button dabao, thoda ruk jao — portal khud khul jaayega.
           </p>
           <button
             onClick={() => handleOfficialLink(

@@ -237,7 +237,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
                Abhi Enroll Karo
             </p>
             <p className="text-xs text-green-700 dark:text-green-400 mb-3">
-              Official PMFBY portal par jakar apna enrollment complete karo. 10 second baad portal khulega.
+              Official PMFBY portal par jakar apna enrollment complete karo — button dabate hi 10-second countdown ke baad portal khul jaayega.
             </p>
             <button
               onClick={() => handleOfficialLink(

@@ -3,6 +3,8 @@ import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
 import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
+import GuideDisclaimer from '@/components/GuideDisclaimer';
+import { getArticleBySlug } from '@/lib/articles-data';
 
 export const metadata: Metadata = {
   title: 'PM FME Yojana 2026: Chhote Food Business Ke Liye 35% Subsidy Guide',
@@ -669,12 +671,11 @@ export default function PMFMEYojana() {
         </div>
       </div>
 
-      <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-lg border-l-4 border-orange-500 not-prose">
-        <p className="text-sm text-gray-700 dark:text-gray-300">
-          <strong className="text-orange-600 dark:text-orange-400 block mb-2">Dhyan Se Padhein:</strong>
-          Yeh article general information ke liye hai. PM FME ki guidelines aur eligibility criteria change ho sakti hain. Latest information ke liye hamesha official website pmfme.mofpi.gov.in ya apne zila ke District Industries Center se confirm karein. Kisi bhi financial decision lene se pehle qualified professionals (CAs, business consultants) se consult karein. Last updated: July 2026.
-        </p>
-      </div>
+      <GuideDisclaimer
+        consult="CAs, business consultants"
+        extra="PM FME ki guidelines aur eligibility criteria change ho sakti hain — official website pmfme.mofpi.gov.in ya apne zila ke District Industries Center se confirm karein."
+        modified={getArticleBySlug('pm-fme-yojana-food-processing')!.modifiedTime}
+      />
     </article>
   );
 }

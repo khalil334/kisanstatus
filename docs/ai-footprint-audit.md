@@ -522,7 +522,7 @@ P0/P1 are where the AI feel actually lives. P2/P3 are polish.
 4. **Every article keeps its own voice.** When a shared block is rewritten (closings, CTAs), each file gets a distinct wording and style — no new shared formula may replace the old one.
 5. **Unrelated issues are out of scope** for whichever part is running.
 
-### Part 1 — Shared boilerplate (mechanical, zero content risk)
+### Part 1 — Shared boilerplate (mechanical, zero content risk) ✅ DONE (2026-08-12, PR: fix/part-1-shared-boilerplate)
 
 *Files: ~14 · Type: template + copy*
 
@@ -565,3 +565,14 @@ P0/P1 are where the AI feel actually lives. P2/P3 are polish.
 ### Order
 
 Part 1 → Part 2 → Part 3 (a–d) → Part 4 → Part 5 → Part 6. Each part ships as its own PR and waits for owner review before the next starts.
+
+## 12. Changelog
+
+### 2026-08-12 — Part 1 complete (`fix/part-1-shared-boilerplate`)
+
+- **New `components/GuideDisclaimer.tsx`** — one canonical disclaimer wording; `Last updated` now rendered from the article's `modifiedTime` in `lib/core-articles-data.ts` (via `getArticleBySlug`), killing the 8 hand-typed "July/August 2026" stamps. Migrated 6 files: `kisanguides/MadhumakhiPalan`, `MushroomKheti`, `PMFMEYojana`, `PMatsyaSampada`, `SilageMaking`, `VerminCompost`. Article-specific notes preserved via the `extra` prop (PMFME portal reference kept). Rotating labels ("Kaam Ki Suchna" / "Ek Saaf Baat" / …) replaced by one label.
+- **Portal-CTA sentence de-duplicated** — "…10 second baad portal khulega." reworded uniquely in all 14 occurrences across 7 files (`PmfbyCropInsurance2026`, `pm-kisan-fto-…`, `PmKisanMasterGuide2026`, `PmKisanRejectedStatusReApplyGuide`, `PmKisanVillageWiseListPdfDownload`, `PmKusumYojanaSolarSubsidy2026`, `soil-health-card-complete-guide-2026`). Meaning (10s redirect countdown) kept; no two files share the wording now.
+- **Related-section label unified** — "Aapke Liye Zaroori Articles" (3 files), "आगे पढ़ने लायक" (3 files) and bare "Related Articles" (1 file) all now use the shared component's label "Related Articles — Yeh Bhi Padho".
+- No article prose was rewritten; no word-count trimming; no keyword touched.
+
+**Pages to re-check in a browser after deploy:** /articles/vermi-compost-business-guide, /articles/pm-fme-yojana-food-processing, /articles/mushroom-kheti-nhb-subsidy, /articles/madhumakhi-palan-kvic-subsidy, /articles/pm-matsya-sampada-yojana-fish-farming, /articles/silage-making-business-guide, /articles/PmKisanMasterGuide2026, /articles/soil-health-card-complete-guide-2026.
