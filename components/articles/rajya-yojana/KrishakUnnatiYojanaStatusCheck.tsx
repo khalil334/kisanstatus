@@ -47,7 +47,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Is baar paisa ek saath kyun aaya, kiston mein kyun nahi?',
-    a: 'Pehle antar rashi kai kiston mein aati thi. 2026 se sarkar ne ise ekmusht (single installment) kar diya — Kharif 2025-26 ki poori antar rashi Holi se pehle ek hi baar mein release karne ka faisla cabinet ne liya tha. Isliye agar aap purane pattern ka intezaar kar rahe hain ki "doosri kist kab aayegi", to samajh lein ki ab doosri kist hoti hi nahi.',
+    a: 'Pehle antar rashi kai kiston mein aati thi. 2026 se sarkar ne ise ekmusht (single installment) kar diya — Kharif 2025-26 ki poori raqam Holi se pehle ek hi baar mein release karne ka faisla cabinet ne liya tha. Isliye agar aap purane pattern ka intezaar kar rahe hain ki "doosri kist kab aayegi", to samajh lein ki ab doosri kist hoti hi nahi.',
   },
   {
     q: 'Maine dhan society mein becha, token bhi kata — phir bhi paisa nahi aaya. Kahan atka?',
@@ -63,7 +63,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Antar rashi par koi tax ya katauti hoti hai kya?',
-    a: 'Scheme ki taraf se koi katauti nahi hoti — jitni antar rashi banti hai utni hi DBT se khaate mein aati hai. Agar khaate mein kam raqam dikhe to wajah bank side ki ho sakti hai: minimum balance charge, loan ki EMI ka auto-debit, ya KCC ki vasooli. Passbook ki entry dhyan se padhein — scheme ka credit alag line mein dikhta hai.',
+    a: 'Scheme ki taraf se koi katauti nahi hoti — jitni raqam banti hai utni hi DBT se khaate mein aati hai. Agar khaate mein kam raqam dikhe to wajah bank side ki ho sakti hai: minimum balance charge, loan ki EMI ka auto-debit, ya KCC ki vasooli. Passbook ki entry dhyan se padhein — scheme ka credit alag line mein dikhta hai.',
   },
   {
     q: 'Samiti wale kehte hain "record bhej diya", bank kehta hai "kuch nahi aaya" — kis par bharosa karein?',
@@ -118,7 +118,7 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
         <strong>Bawai se pehle:</strong> kisan panjiyan ki jaanch. Naya khaata kharida ho,
         batwaara hua ho, ya pichle saal koi entry galat rahi ho — sudhaar ka sahi waqt yahi
         hai. Season shuru hone ke baad panjiyan mein badlav karwana lambi line ka kaam ban
-        jaata hai, aur kharidi ke waqt tak galti reh gayi to uska asar seedha antar rashi
+        jaata hai, aur kharidi ke waqt tak galti reh gayi to uska asar seedha is raqam
         par padta hai.
       </p>
 
@@ -127,7 +127,7 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
         Samiti par bheed ke dinon mein entry ki galti sabse zyada hoti hai. Taul ke saath hi
         parchi ki maatra apni aankhon se milaayein; ghar aakar milaane par galti pakdi
         bhi jaaye to saabit karna mushkil ho jaata hai. Ek hi season mein kai baar dhan
-        bechne wale kisan har trip ki parchi alag sambhaalein — antar rashi kul maatra par
+        bechne wale kisan har trip ki parchi alag sambhaalein — ye raqam kul maatra par
         banti hai, aur ek parchi kho jaana seedha nuksan hai.
       </p>
 
@@ -174,7 +174,7 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
       </p>
 
       <InfoBox type="warning">
-        Antar rashi wala component aur ₹15,000 wala component do alag cheezein hain. Dono ka
+        Differential wala component aur ₹15,000 wala component do alag cheezein hain. Dono ka
         paisa, process aur record alag chalega. Kisi agent ke ye kehne par ki "dono ek saath
         dilwa denge, kharcha lagega" — samajh jaayein ki baat galat hai. Scheme mein kahin
         koi fees nahi lagti.
@@ -224,7 +224,7 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
       </p>
 
       <p>
-        Seedha matlab? Jitna zyada dhan becha, utni badi antar rashi. Lekin ek seema ke
+        Seedha matlab? Jitna zyada dhan becha, utni badi raqam. Lekin ek seema ke
         saath — samiti prati acre <strong>21 quintal tak</strong> hi kharidti hai. Isi wajah se
         do kisanon ki raqam kabhi ek jaisi nahi hoti. "Mere padosi ko itna mila, mujhe kam
         kyun?" — is sawaal ka jawab gusse mein nahi, bechi gayi maatra ke record mein milta
@@ -267,7 +267,7 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
         Do numbers chahiye, bas. Ek — bechi gayi kul maatra (taul parchiyon ka jod, quintal
         mein). Do — us saal ki prati quintal antar rashi (support price aur ₹3,100 ka farak,
         jo release ke waqt announcements mein saaf likha hota hai). Dono ka guna kar lein —
-        wahi aapki antar rashi hai. Misaal: 40 quintal becha, antar ₹800 prati quintal
+        wahi aapka differential hai. Misaal: 40 quintal becha, antar ₹800 prati quintal
         nikla, to khaate mein ₹32,000 aana chahiye. Na kam, na zyada.
       </p>
 
@@ -281,10 +281,10 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
       <h2>Passbook Mein Credit Kaise Pehchanein</h2>
 
       <p>
-        Antar rashi ka credit passbook mein ek alag entry ke roop mein dikhta hai — dhan
+        Ye credit passbook mein ek alag entry ke roop mein dikhta hai — dhan
         bechne ke waqt mila support price pehle hi aa chuka hota hai, isliye do alag-alag
         credit hona bilkul normal hai. Yahan ek aam chook hoti hai. Kai kisan support price
-        ki entry dekh kar samajh lete hain ki poora paisa aa gaya, aur antar rashi ka
+        ki entry dekh kar samajh lete hain ki poora paisa aa gaya, aur differential ka
         intezaar hi chhod dete hain. Baad mein pata chale to afsos hi bachta hai.
       </p>
 
@@ -320,7 +320,7 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
 
       <p>
         <strong>Pehli kadi — samiti ki kharidi entry.</strong> Jis society mein dhan becha,
-        wahan aapke kisan panjiyan par kitne quintal darj hue — yahi aapki antar rashi ka
+        wahan aapke kisan panjiyan par kitne quintal darj hue — yahi aapke hisaab ka
         aadhaar hai. Token, taul parchi aur kharidi ki entry teeno ka aapas mein milna zaroori
         hai. Entry hi kam darj hui to payment bhi kam banegi, aur iska sudhaar sirf samiti
         aur khadya vibhag ke level par hota hai.
@@ -328,7 +328,7 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
 
       <p>
         <strong>Doosri kadi — sarkar se release.</strong> Kharidi ka season poora hone ke baad
-        state antar rashi ki file taiyaar karti hai. 2026 mein ye release Holi se pehle
+        state payment ki file taiyaar karti hai. 2026 mein ye release Holi se pehle
         ekmusht hui. Release ki khabar akhbaar aur sarkari announcements mein aati hai — us
         din se apne khaate par nazar rakhna shuru karein, usse pehle intezaar hi ekmatra kaam hai.
       </p>
@@ -361,7 +361,7 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
 
       <InfoBox type="tip">
         Taul parchi aur token ki photo usi din phone mein utaar lein jis din dhan bechein.
-        Antar rashi mein farq dikhne par yahi do kagaz sabse pehle kaam aate hain — bina
+        Raqam mein farq dikhne par yahi do kagaz sabse pehle kaam aate hain — bina
         inke shikayat sirf zubaani reh jaati hai.
       </InfoBox>
 
@@ -412,7 +412,7 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
       <ul>
         <li>
           <strong>Parchi ko raddi samajhna.</strong> Taul parchi kharidi ke mahinon baad kaam
-          aati hai, jab antar rashi ka farak dikhta hai. Jo kisan parchi sambhaal kar nahi
+          aati hai, jab paise ka farak dikhta hai. Jo kisan parchi sambhaal kar nahi
           rakhte, unki shikayat zubaani reh jaati hai.
         </li>
         <li>
@@ -523,7 +523,7 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
       </section>
 
       <InfoBox type="tip">
-        <strong>Fraud se bachein:</strong> Antar rashi dilwane, naam judwane ya "file aage
+        <strong>Fraud se bachein:</strong> Paisa dilwane, naam judwane ya "file aage
         badhwane" ke naam par koi bhi paisa maange to dena nahi hai — ye scheme poori tarah
         free hai. Aisi maang ki shikayat apne kshetra ke khadya vibhag karyalay ya jila
         collector office mein karein.
