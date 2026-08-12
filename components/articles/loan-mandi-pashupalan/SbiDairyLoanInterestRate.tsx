@@ -5,10 +5,10 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const RELATED = [
-  { slug: 'dairy-farm-loan-without-collateral', title: 'Zamanat Ke Bina Dairy Loan', emoji: '🐄' },
+  { slug: 'dairy-farm-loan-without-collateral', title: 'Zamanat Ke Bina Dairy Loan', emoji: '' },
   { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Banane Ka Tarika' },
-  { slug: 'bihar-pashupalan-loan-yojana', title: 'Pashupalan Loan (Bihar)', emoji: '🐃' },
-  { slug: 'rashtriya-gokul-mission-subsidy', title: 'Gokul Mission Subsidy Guide', emoji: '🐮' },
+  { slug: 'bihar-pashupalan-loan-yojana', title: 'Pashupalan Loan (Bihar)', emoji: '' },
+  { slug: 'rashtriya-gokul-mission-subsidy', title: 'Gokul Mission Subsidy Guide', emoji: '' },
   { slug: 'jansamarth-portal-loan-apply', title: 'JanSamarth Loan Application Guide' },
   { slug: 'KisanRinKahaSeLe2026', title: 'Kisan Rin Ke Sab Options' },
 ];
@@ -363,7 +363,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>🏦 Apply Ka Process — Step by Step</SH>
+        <SH>Apply Ka Process — Step by Step</SH>
         <StepList>
           <SI n={1}>
             <strong>Branch chuno soch kar</strong> — agri branch ya jahan aapka operative account hai. Agri officer wali
@@ -401,7 +401,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
           portalName="sbi.co.in"
         />
 
-        <SH>🌱 Zameen Ki Misaal — KCC Se Dairy Kaise Khadi Hoti Hai</SH>
+        <SH>Zameen Ki Misaal — KCC Se Dairy Kaise Khadi Hoti Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           KCC-AH ka asar sirf theory nahi hai. Kupwara (J&amp;K) district administration ke documented record mein
           Ramhall ke Harduna gaon ki <strong>Shaheena Begum</strong> ki kahani hai — 2016 mein 30 mahilaon ka group,
@@ -466,7 +466,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[
-          { href: '/articles/dairy-farm-loan-without-collateral', l: '🐄 Dairy Loan Bina Collateral' },
+          { href: '/articles/dairy-farm-loan-without-collateral', l: 'Dairy Loan Bina Collateral' },
           { href: '/articles/KisanCreditCardOnlineApply2026', l: 'KCC Online Apply' },
           { href: '/articles/category/loan', l: 'Loan Ki Aur Jaankari' },
         ]} />

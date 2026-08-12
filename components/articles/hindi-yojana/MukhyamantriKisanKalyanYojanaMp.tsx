@@ -467,7 +467,7 @@ export default function MukhyamantriKisanKalyanYojanaMp({ article }: { article: 
         <h3 className="font-black text-[var(--color-text)] mb-3 text-base">आगे किस page पर क्या मिलेगा</h3>
         <ul className="list-disc pl-5 space-y-1.5 text-sm">
           <li>
-            <Link href="/articles/hi/namo-shetkari-yojana">🌾 नमो शेतकरी योजना Maharashtra</Link>
+            <Link href="/articles/hi/namo-shetkari-yojana">नमो शेतकरी योजना Maharashtra</Link>
           </li>
           <li>
             <Link href="/articles/PmKisanMasterGuide2026">योजना की master guide (केंद्र)</Link>

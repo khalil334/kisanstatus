@@ -7,7 +7,7 @@ import { AUTHOR_NAME } from '@/lib/site-config';
 const RELATED = [
   { slug: 'mandi-bhav-today', title: 'Mandi Ka Taaza Bhav' },
   { slug: 'mandi-bhav-app-comparison', title: 'Mandi Bhav Apps Comparison' },
-  { slug: 'gehu-ka-bhav-msp-vs-mandi', title: 'Gehu: MSP vs Mandi Bhav', emoji: '🌾' },
+  { slug: 'gehu-ka-bhav-msp-vs-mandi', title: 'Gehu: MSP vs Mandi Bhav', emoji: '' },
   { slug: 'msp-list-2026-27', title: 'MSP 2026-27 Ka Poora Chart' },
   { slug: 'enam-registration-kaise-kare', title: 'eNAM Se Online Bikri Shuru Karein' },
   { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Se Sasta Karj' },
@@ -128,7 +128,7 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
           poora rate chart</Link> dekho.
         </IB>
 
-        <SH>🧅 Pyaz — Do Fasal, Ek Gap, Aur Wahi Kahani Har Saal</SH>
+        <SH>Pyaz — Do Fasal, Ek Gap, Aur Wahi Kahani Har Saal</SH>
         <Image
           src="/images/articles/loan-mandi-pashupalan/sabzi-bhav-guide-pyaz-aloo-tamatar/pyaz-khudai.webp"
           alt="Khet mein pyaz ki khudai — boriyon mein bharti hui fasal"
@@ -191,7 +191,7 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
           arrival aksar achha rate pakad leti hai.
         </WB>
 
-        <SH>🏛️ NAFED Buffer Stock — Jo Aapki Strategy Badal Deta Hai</SH>
+        <SH>NAFED Buffer Stock — Jo Aapki Strategy Badal Deta Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Sarkar ke liye pyaz political sabzi hai — bhav chadhte hi shor machta hai. Isliye Price Stabilisation
           Fund (PSF) ke under NAFED aur NCCF har saal rabi season mein kisano se pyaz kharid kar buffer stock
@@ -207,7 +207,7 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
           poora risk ek din par nahi lagta.
         </p>
 
-        <SH>🥔 Aloo — Cold Storage Ka Khel, Par Hisaab Ke Saath</SH>
+        <SH>Aloo — Cold Storage Ka Khel, Par Hisaab Ke Saath</SH>
         <Image
           src="/images/articles/loan-mandi-pashupalan/sabzi-bhav-guide-pyaz-aloo-tamatar/cold-storage.webp"
           alt="Aloo cold storage ke andar — boriyon ke oonche stack"
@@ -238,7 +238,7 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
           hain — yeh chhoti si jaankari aadhi strategy hai.
         </p>
 
-        <SH>🍅 Tamatar — Store Nahi Hota, Isliye Game Alag Hai</SH>
+        <SH>Tamatar — Store Nahi Hota, Isliye Game Alag Hai</SH>
         <Image
           src="/images/articles/loan-mandi-pashupalan/sabzi-bhav-guide-pyaz-aloo-tamatar/tamatar-crate.webp"
           alt="Crate mein taiyar pakka tamatar — mandi le jaane ke liye"

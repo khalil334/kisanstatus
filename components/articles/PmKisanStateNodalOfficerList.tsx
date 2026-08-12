@@ -329,7 +329,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
             <p className="text-xs font-mono text-[var(--color-text-muted)] mb-2">
               <strong>Twitter Post Format:</strong><br/><br/>
               @PMKisanOfficial @AgriGoIIndia<br/>
-              Meri PM Kisan kist pichle 3 mahine se ruki hai. Local BAO koi sunwai nahi kar raha. Registration No: [Aapka Number]. Kripya madad karein. 🙏<br/>
+              Meri PM Kisan kist pichle 3 mahine se ruki hai. Local BAO koi sunwai nahi kar raha. Registration No: [Aapka Number]. Kripya madad karein.<br/>
               [Status ka Screenshot Attach Karein]
             </p>
           </div>

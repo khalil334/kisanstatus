@@ -5,11 +5,11 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const RELATED = [
-  { slug: 'gehu-ka-bhav-msp-vs-mandi', title: 'Gehu Ka Bhav — MSP vs Mandi', emoji: '🌾' },
+  { slug: 'gehu-ka-bhav-msp-vs-mandi', title: 'Gehu Ka Bhav — MSP vs Mandi', emoji: '' },
   { slug: 'mandi-bhav-today', title: 'Daily Mandi Bhav Dekhein' },
-  { slug: 'enam-registration-kaise-kare', title: 'eNAM Registration', emoji: '🏪' },
+  { slug: 'enam-registration-kaise-kare', title: 'eNAM Registration', emoji: '' },
   { slug: 'mandi-bhav-app-comparison', title: 'Kaunsa Mandi App Sahi' },
-  { slug: 'sabzi-bhav-guide-pyaz-aloo-tamatar', title: 'Sabzi Ke Rate Kaise Samjhein', emoji: '🧅' },
+  { slug: 'sabzi-bhav-guide-pyaz-aloo-tamatar', title: 'Sabzi Ke Rate Kaise Samjhein', emoji: '' },
   { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Kaise Banega' },
 ];
 
@@ -163,7 +163,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           wagairah). Isliye ek hi &quot;2026-27 list&quot; mein dono announcements ke numbers aate hain.
         </IB>
 
-        <SH>🌾 Rabi MSP 2026-27 — Gehu, Chana, Sarson</SH>
+        <SH>Rabi MSP 2026-27 — Gehu, Chana, Sarson</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Rabi ki bo-ai October-December mein hoti hai aur katai March-April mein. Is season ki khaas baat:
           gehu ka margin 109% nikla — matlab MSP production cost se do guna se bhi upar hai. Safflower mein
@@ -212,7 +212,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           loading="lazy"
         />
 
-        <SH>☀️ Kharif MSP 2026-27 — Dhan, Kapas, Dalhan, Tilhan</SH>
+        <SH>Kharif MSP 2026-27 — Dhan, Kapas, Dalhan, Tilhan</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Kharif ki bo-ai monsoon ke saath June-July mein hoti hai. 14 faslon ke rate declare hote hain, lekin
           dhan, jowar aur kapas ki do-do grades hone ki wajah se table mein 17 entries banti hain.
@@ -324,7 +324,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           loading="lazy"
         />
 
-        <SH>🏪 MSP Par Bechna Hai Toh Kya Karna Padega</SH>
+        <SH>MSP Par Bechna Hai Toh Kya Karna Padega</SH>
         <StepList>
           <SI n={1}>
             <strong>State procurement portal par registration</strong> — window sowing ke baad khulti hai.
@@ -532,7 +532,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[
           { href: '/articles/mandi-bhav-today', l: 'Mandi Ke Aaj Ke Rates' },
-          { href: '/articles/gehu-ka-bhav-msp-vs-mandi', l: '🌾 Gehu MSP vs Mandi' },
+          { href: '/articles/gehu-ka-bhav-msp-vs-mandi', l: 'Gehu MSP vs Mandi' },
           { href: '/articles/category/mandi', l: 'Mandi-Bhav Section' },
         ]} />
         <Disclaimer />

@@ -93,14 +93,14 @@ export interface Translations {
 }
 
 export const LANGUAGES: LangMeta[] = [
-  { code: 'hi', label: 'हिंदी',      labelEn: 'Hindi',    flag: '🇮🇳', dir: 'ltr', enabled: true },
-  { code: 'en', label: 'English',    labelEn: 'English',  flag: '🇬🇧', dir: 'ltr', enabled: true },
-  { code: 'bn', label: 'বাংলা',      labelEn: 'Bengali',  flag: '🇧🇩', dir: 'ltr', enabled: true },
-  { code: 'ta', label: 'தமிழ்',     labelEn: 'Tamil',    flag: '🌺', dir: 'ltr', enabled: true },
+  { code: 'hi', label: 'हिंदी',      labelEn: 'Hindi',    flag: '', dir: 'ltr', enabled: true },
+  { code: 'en', label: 'English',    labelEn: 'English',  flag: '', dir: 'ltr', enabled: true },
+  { code: 'bn', label: 'বাংলা',      labelEn: 'Bengali',  flag: '', dir: 'ltr', enabled: true },
+  { code: 'ta', label: 'தமிழ்',     labelEn: 'Tamil',    flag: '', dir: 'ltr', enabled: true },
   { code: 'te', label: 'తెలుగు',    labelEn: 'Telugu',   flag: '', dir: 'ltr', enabled: true },
   { code: 'mr', label: 'मराठी',     labelEn: 'Marathi',  flag: '', dir: 'ltr', enabled: true },
-  { code: 'pa', label: 'ਪੰਜਾਬੀ',   labelEn: 'Punjabi',  flag: '🌾', dir: 'ltr', enabled: true },
-  { code: 'gu', label: 'ગુજરાતી',   labelEn: 'Gujarati', flag: '🦁', dir: 'ltr', enabled: true },
+  { code: 'pa', label: 'ਪੰਜਾਬੀ',   labelEn: 'Punjabi',  flag: '', dir: 'ltr', enabled: true },
+  { code: 'gu', label: 'ગુજરાતી',   labelEn: 'Gujarati', flag: '', dir: 'ltr', enabled: true },
 ];
 
 const t: Record<LangCode, Translations> = {
@@ -113,7 +113,7 @@ const t: Record<LangCode, Translations> = {
     nav_calculator: 'Calculator',
     nav_about: 'About',
     nav_contact: 'Contact',
-    announcement_bar: '🌾 PM Kisan 23vi Kist: 20 June 2026 ko release ho chuki hai — ₹2,000 seedha bank mein | 24vi kist October 2026 expected',
+    announcement_bar: 'PM Kisan 23vi Kist: 20 June 2026 ko release ho chuki hai — ₹2,000 seedha bank mein | 24vi kist October 2026 expected',
 
     hero_badge: 'PM Kisan Samman Nidhi 2026',
     hero_h1_line1: 'PM Kisan Status Check Karo',
@@ -195,7 +195,7 @@ const t: Record<LangCode, Translations> = {
     nav_calculator: 'Calculator',
     nav_about: 'About',
     nav_contact: 'Contact',
-    announcement_bar: '🌾 PM Kisan 23rd Installment: Released on 20 June 2026 — ₹2,000 directly in bank | 24th installment expected October 2026',
+    announcement_bar: 'PM Kisan 23rd Installment: Released on 20 June 2026 — ₹2,000 directly in bank | 24th installment expected October 2026',
 
     hero_badge: 'PM Kisan Samman Nidhi 2026',
     hero_h1_line1: 'PM Kisan Status Check 2026',
@@ -277,7 +277,7 @@ const t: Record<LangCode, Translations> = {
     nav_calculator: 'ক্যালকুলেটর',
     nav_about: 'সম্পর্কে',
     nav_contact: 'যোগাযোগ',
-    announcement_bar: '🌾 PM কিষাণ ২৩তম কিস্তি: ২০ জুন ২০২৬-এ প্রকাশিত — ₹২,০০০ সরাসরি ব্যাঙ্কে | ২৪তম কিস্তি অক্টোবর ২০২৬ প্রত্যাশিত',
+    announcement_bar: 'PM কিষাণ ২৩তম কিস্তি: ২০ জুন ২০২৬-এ প্রকাশিত — ₹২,০০০ সরাসরি ব্যাঙ্কে | ২৪তম কিস্তি অক্টোবর ২০২৬ প্রত্যাশিত',
 
     hero_badge: 'PM কিষাণ সম্মান নিধি ২০২৬',
     hero_h1_line1: 'PM কিষাণ স্ট্যাটাস চেক ২০২৬',
@@ -359,7 +359,7 @@ const t: Record<LangCode, Translations> = {
     nav_calculator: 'கணிப்பான்',
     nav_about: 'எங்களை பற்றி',
     nav_contact: 'தொடர்பு',
-    announcement_bar: '🌾 PM கிசான் 23வது தவணை: 20 ஜூன் 2026 அன்று வெளியிடப்பட்டது — ₹2,000 நேரடியாக வங்கியில் | 24வது தவணை அக்டோபர் 2026 எதிர்பார்க்கப்படுகிறது',
+    announcement_bar: 'PM கிசான் 23வது தவணை: 20 ஜூன் 2026 அன்று வெளியிடப்பட்டது — ₹2,000 நேரடியாக வங்கியில் | 24வது தவணை அக்டோபர் 2026 எதிர்பார்க்கப்படுகிறது',
 
     hero_badge: 'PM கிசான் சம்மான் நிதி 2026',
     hero_h1_line1: 'PM கிசான் நிலை சரிபார்ப்பு 2026',
@@ -441,7 +441,7 @@ const t: Record<LangCode, Translations> = {
     nav_calculator: 'కాలిక్యులేటర్',
     nav_about: 'గురించి',
     nav_contact: 'సంప్రదించండి',
-    announcement_bar: '🌾 PM కిసాన్ 23వ వాయిదా: 20 జూన్ 2026న విడుదల — ₹2,000 నేరుగా బ్యాంకులో | 24వ వాయిదా అక్టోబర్ 2026 ఆశించబడింది',
+    announcement_bar: 'PM కిసాన్ 23వ వాయిదా: 20 జూన్ 2026న విడుదల — ₹2,000 నేరుగా బ్యాంకులో | 24వ వాయిదా అక్టోబర్ 2026 ఆశించబడింది',
 
     hero_badge: 'PM కిసాన్ సమ్మాన్ నిధి 2026',
     hero_h1_line1: 'PM కిసాన్ స్టేటస్ చెక్ 2026',
@@ -523,7 +523,7 @@ const t: Record<LangCode, Translations> = {
     nav_calculator: 'कॅल्क्युलेटर',
     nav_about: 'आमच्याबद्दल',
     nav_contact: 'संपर्क',
-    announcement_bar: '🌾 PM किसान 23वा हप्ता: 20 जून 2026 रोजी प्रकाशित — ₹2,000 थेट बँकेत | 24वा हप्ता ऑक्टोबर 2026 अपेक्षित',
+    announcement_bar: 'PM किसान 23वा हप्ता: 20 जून 2026 रोजी प्रकाशित — ₹2,000 थेट बँकेत | 24वा हप्ता ऑक्टोबर 2026 अपेक्षित',
 
     hero_badge: 'PM किसान सन्मान निधी 2026',
     hero_h1_line1: 'PM किसान स्थिती तपासा 2026',
@@ -605,7 +605,7 @@ const t: Record<LangCode, Translations> = {
     nav_calculator: 'ਕੈਲਕੁਲੇਟਰ',
     nav_about: 'ਸਾਡੇ ਬਾਰੇ',
     nav_contact: 'ਸੰਪਰਕ',
-    announcement_bar: '🌾 PM ਕਿਸਾਨ 23ਵੀਂ ਕਿਸ਼ਤ: 20 ਜੂਨ 2026 ਨੂੰ ਜਾਰੀ — ₹2,000 ਸਿੱਧਾ ਬੈਂਕ ਵਿੱਚ | 24ਵੀਂ ਕਿਸ਼ਤ ਅਕਤੂਬਰ 2026 ਉਮੀਦ',
+    announcement_bar: 'PM ਕਿਸਾਨ 23ਵੀਂ ਕਿਸ਼ਤ: 20 ਜੂਨ 2026 ਨੂੰ ਜਾਰੀ — ₹2,000 ਸਿੱਧਾ ਬੈਂਕ ਵਿੱਚ | 24ਵੀਂ ਕਿਸ਼ਤ ਅਕਤੂਬਰ 2026 ਉਮੀਦ',
 
     hero_badge: 'PM ਕਿਸਾਨ ਸਨਮਾਨ ਨਿਧੀ 2026',
     hero_h1_line1: 'PM ਕਿਸਾਨ ਸਥਿਤੀ ਜਾਂਚ 2026',
@@ -687,7 +687,7 @@ const t: Record<LangCode, Translations> = {
     nav_calculator: 'કેલ્ક્યુલેટર',
     nav_about: 'અમારા વિશે',
     nav_contact: 'સંપર્ક',
-    announcement_bar: '🌾 PM કિસાન 23મો હપ્તો: 20 જૂન 2026 ના રોજ પ્રકાશિત — ₹2,000 સીધો બેંકમાં | 24મો હપ્તો ઓક્ટોબર 2026 અપેક્ષિત',
+    announcement_bar: 'PM કિસાન 23મો હપ્તો: 20 જૂન 2026 ના રોજ પ્રકાશિત — ₹2,000 સીધો બેંકમાં | 24મો હપ્તો ઓક્ટોબર 2026 અપેક્ષિત',
 
     hero_badge: 'PM કિસાન સન્માન નિધિ 2026',
     hero_h1_line1: 'PM કિસાન સ્ટેટસ ચેક 2026',

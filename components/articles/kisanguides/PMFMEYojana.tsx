@@ -630,7 +630,7 @@ export default function PMFMEYojana() {
 
         <div className="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-lg border border-amber-200 dark:border-amber-800 hover:shadow-md transition-shadow">
           <h4 className="font-semibold text-amber-900 dark:text-amber-200 mb-2 flex items-center gap-2">
-            ☀️ PM Kusum Solar Subsidy
+            PM Kusum Solar Subsidy
           </h4>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Solar pump aur solar plant lagane par bhaari subsidy. Bijli ka kharcha kam karein.</p>
           <Link href="/articles/PmKusumYojanaSolarSubsidy2026" className="text-amber-700 hover:underline dark:text-amber-400 text-sm font-medium flex items-center gap-1">
@@ -640,7 +640,7 @@ export default function PMFMEYojana() {
 
         <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border border-green-200 dark:border-green-800 hover:shadow-md transition-shadow">
           <h4 className="font-semibold text-green-900 dark:text-green-200 mb-2 flex items-center gap-2">
-            🐛 Vermi Compost Business
+            Vermi Compost Business
           </h4>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Kam lagat wala organic khaad business. Setup, licensing aur marketing ka poora guide.</p>
           <Link href="/articles/vermi-compost-business-guide" className="text-green-600 hover:underline dark:text-green-400 text-sm font-medium flex items-center gap-1">
@@ -650,7 +650,7 @@ export default function PMFMEYojana() {
 
         <div className="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg border border-purple-200 dark:border-purple-800 hover:shadow-md transition-shadow">
           <h4 className="font-semibold text-purple-900 dark:text-purple-200 mb-2 flex items-center gap-2">
-            🍄 Mushroom Kheti (NHB Subsidy)
+            Mushroom Kheti (NHB Subsidy)
           </h4>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Chhoti jagah mein high-value mushroom farming. NHB subsidy aur training ki jankari.</p>
           <Link href="/articles/mushroom-kheti-nhb-subsidy" className="text-purple-700 hover:underline dark:text-purple-400 text-sm font-medium flex items-center gap-1">
@@ -660,7 +660,7 @@ export default function PMFMEYojana() {
 
         <div className="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-lg border border-rose-200 dark:border-rose-800 hover:shadow-md transition-shadow md:col-span-2">
           <h4 className="font-semibold text-rose-900 dark:text-rose-200 mb-2 flex items-center gap-2">
-            👵 PM Kisan Maandhan Pension
+            PM Kisan Maandhan Pension
           </h4>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Chhote kisanon ke liye ₹3000 monthly pension scheme. Eligibility aur registration ka process.</p>
           <Link href="/articles/PmKisanMaandhanYojanaPension" className="text-rose-700 hover:underline dark:text-rose-400 text-sm font-medium flex items-center gap-1">

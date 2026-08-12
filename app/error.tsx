@@ -32,7 +32,7 @@ export default function Error({
             href="/"
             className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 font-bold rounded-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-400"
           >
-            🏠 Home Page Par Jaayein
+            Home Page Par Jaayein
           </Link>
         </div>
       </div>

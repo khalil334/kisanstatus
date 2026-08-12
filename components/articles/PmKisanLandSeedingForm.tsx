@@ -287,7 +287,7 @@ export default function PmKisanLandSeedingFormPdf2026() {
         <section className="mb-8">
           <SH>State Wise Land Seeding Form Details</SH>
 
-          <h3 id="uttar-pradesh" className="font-black text-[var(--color-text)] text-base mb-3 mt-6 scroll-mt-24">🏔️ Uttar Pradesh</h3>
+          <h3 id="uttar-pradesh" className="font-black text-[var(--color-text)] text-base mb-3 mt-6 scroll-mt-24">Uttar Pradesh</h3>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             UP mein sabse zyada kisan online hi kaam nipta lete hain — upbhulekh portal kaafi seedha aur accessible hai, isliye Patwari ke paas jaane ki zaroorat kam hi padti hai.
           </p>
@@ -322,7 +322,7 @@ export default function PmKisanLandSeedingFormPdf2026() {
             className="w-full rounded-xl mb-4"
           />
 
-          <h3 id="bihar" className="font-black text-[var(--color-text)] text-base mb-3 mt-6 scroll-mt-24">🌊 Bihar</h3>
+          <h3 id="bihar" className="font-black text-[var(--color-text)] text-base mb-3 mt-6 scroll-mt-24">Bihar</h3>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Bihar mein process thoda dheema hai, khaaskar monsoon mein — nadiyon ke aas-paas ke ilakon mein Circle Officer records verify karne mein zyada waqt lagate hain. Isliye jitni jaldi ho sake apply kar dein.
           </p>
@@ -343,7 +343,7 @@ export default function PmKisanLandSeedingFormPdf2026() {
             </p>
           </div>
 
-          <h3 id="madhya-pradesh" className="font-black text-[var(--color-text)] text-base mb-3 mt-6 scroll-mt-24">🌿 Madhya Pradesh</h3>
+          <h3 id="madhya-pradesh" className="font-black text-[var(--color-text)] text-base mb-3 mt-6 scroll-mt-24">Madhya Pradesh</h3>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             MP ka system in charon states mein sabse zyada digital-friendly hai — Khasra number daalte hi baaki details khud-ba-khud fill ho jaati hain, manual entry ki galti ki gunjaish kam rehti hai.
           </p>
@@ -362,7 +362,7 @@ export default function PmKisanLandSeedingFormPdf2026() {
             </ul>
           </div>
 
-          <h3 id="rajasthan" className="font-black text-[var(--color-text)] text-base mb-3 mt-6 scroll-mt-24">☀️ Rajasthan</h3>
+          <h3 id="rajasthan" className="font-black text-[var(--color-text)] text-base mb-3 mt-6 scroll-mt-24">Rajasthan</h3>
           <div className="bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-500 dark:border-amber-700 rounded-xl p-5 mb-6">
             <p className="text-sm text-amber-800 dark:text-amber-300 mb-3">
               <strong>Form Ka Naam:</strong> Rajasthan PM Kisan Land Seeding Form (PDF)

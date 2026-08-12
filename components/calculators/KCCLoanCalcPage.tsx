@@ -44,7 +44,7 @@ export default function KCCLoanCalcPage() {
     <>
 
       <CalcHeader
-        emoji="🏦"
+        emoji=""
         title="KCC Loan EMI Calculator 2026"
         subtitle="Kisan Credit Card loan ki monthly EMI, total interest aur government subsidy jaano"
         breadcrumb="KCC Loan EMI"
@@ -59,7 +59,7 @@ export default function KCCLoanCalcPage() {
         </div>
 
         <div className="mb-6 p-5 bg-blue-50 border border-blue-200 rounded-xl text-sm text-gray-700 leading-relaxed">
-          <p className="font-bold text-blue-900 mb-2">🏦 KCC Loan Lene Se Pehle EMI Jaan Lo</p>
+          <p className="font-bold text-blue-900 mb-2">KCC Loan Lene Se Pehle EMI Jaan Lo</p>
           <p className="mb-2">
             Loan lene se pehle sabse pehla sawaal yahi aata hai — <strong>monthly kitna dena padega</strong>, aur <strong>total kitna interest ban jayega</strong>. Neeche calculator mein daal ke turant pata chal jayega.
           </p>
@@ -78,10 +78,10 @@ export default function KCCLoanCalcPage() {
             label="Loan kis kaam ke liye chahiye?"
             value={purpose} onChange={setPurpose}
             options={[
-              {value:'crop',    label:'🌾 Kheti ke liye (beej, khad, mazdoori)'},
-              {value:'agri',    label:'🚜 Tractor, pump, equipment khareedne'},
-              {value:'allied',  label:'🐄 Dairy, fishery, poultry ke liye'},
-              {value:'personal',label:'🏠 Ghar ya personal kaam ke liye'},
+              {value:'crop',    label:'Kheti ke liye (beej, khad, mazdoori)'},
+              {value:'agri',    label:'Tractor, pump, equipment khareedne'},
+              {value:'allied',  label:'Dairy, fishery, poultry ke liye'},
+              {value:'personal',label:'Ghar ya personal kaam ke liye'},
             ]}
             hint="Kheti ke liye sabse sasta loan milta hai — 7% tak"
           />
@@ -198,7 +198,7 @@ export default function KCCLoanCalcPage() {
               <p className="text-blue-800">Fasal bik jaye toh der mat karo — jaldi chuka doge to subsidy ka fayda bhi milega aur CIBIL bhi accha rahega</p>
             </div>
             <div className="p-3 bg-purple-50 border border-purple-200 rounded-xl">
-              <p className="font-bold text-purple-900 mb-1">🏦 Sahi Bank Chuno</p>
+              <p className="font-bold text-purple-900 mb-1">Sahi Bank Chuno</p>
               <p className="text-purple-800">SBI, PNB, BoB jaise banks mein process fast hota hai, cooperative banks kai baar zyada flexible nikalte hain — dono compare karke dekho</p>
             </div>
             <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl">

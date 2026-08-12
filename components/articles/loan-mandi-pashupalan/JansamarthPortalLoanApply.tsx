@@ -7,10 +7,10 @@ import { AUTHOR_NAME } from '@/lib/site-config';
 const RELATED = [
   { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Ka Online Process' },
   { slug: 'KisanRinKahaSeLe2026', title: 'Kisan Loan Kahan Se Le' },
-  { slug: 'dairy-farm-loan-without-collateral', title: 'Bina Guarantee Dairy Loan', emoji: '🐄' },
-  { slug: 'sbi-dairy-loan-interest-rate', title: 'SBI Se Dairy Loan — Rate Guide', emoji: '🏦' },
+  { slug: 'dairy-farm-loan-without-collateral', title: 'Bina Guarantee Dairy Loan', emoji: '' },
+  { slug: 'sbi-dairy-loan-interest-rate', title: 'SBI Se Dairy Loan — Rate Guide', emoji: '' },
   { slug: 'AgriStackKyaHai2026', title: 'AgriStack Samjhein 2026' },
-  { slug: 'bihar-pashupalan-loan-yojana', title: 'Bihar Mein Pashupalan Loan', emoji: '🐃' },
+  { slug: 'bihar-pashupalan-loan-yojana', title: 'Bihar Mein Pashupalan Loan', emoji: '' },
 ];
 
 const FAQS_DATA = [
@@ -300,7 +300,7 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>🏦 KCC Ke Liye JanSamarth vs Branch — Kya Chunein</SH>
+        <SH>KCC Ke Liye JanSamarth vs Branch — Kya Chunein</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Agar aapki Farmer ID bani hai, zameen aapke naam hai aur Aadhaar-mobile linked hai — JanSamarth ka
           paperless flow aazmao, yahi sabse kam bhaag-daud wala raasta hai. Agar record mein koi bhi pech hai

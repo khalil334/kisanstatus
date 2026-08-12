@@ -145,11 +145,11 @@ function main() {
     for (const u of unresolved) console.log('  -', u);
   }
   if (branded.length) {
-    console.log(`\n✖ double-branded <title> (layout already appends "| KisanStatus"):`);
+    console.log(`\ndouble-branded <title> (layout already appends "| KisanStatus"):`);
     for (const b of branded) console.log('  -', b);
   }
   if (violations.length) {
-    console.log(`\n✖ ${violations.length} title/H1 pair(s) share no keyword in the first ${WINDOW} words:`);
+    console.log(`\n${violations.length} title/H1 pair(s) share no keyword in the first ${WINDOW} words:`);
     for (const v of violations) console.log('  -', v);
   }
   if (violations.length || branded.length) {

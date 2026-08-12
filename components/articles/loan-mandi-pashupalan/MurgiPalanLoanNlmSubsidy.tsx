@@ -5,12 +5,12 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const RELATED = [
-  { slug: 'bakri-palan-yojana-nlm-subsidy', title: 'Bakri Palan NLM Subsidy', emoji: '🐐' },
-  { slug: 'dairy-farm-loan-without-collateral', title: 'Collateral-Free Dairy Loan Guide', emoji: '🐄' },
-  { slug: 'bihar-pashupalan-loan-yojana', title: 'Bihar Pashu Loan Scheme', emoji: '🐃' },
+  { slug: 'bakri-palan-yojana-nlm-subsidy', title: 'Bakri Palan NLM Subsidy', emoji: '' },
+  { slug: 'dairy-farm-loan-without-collateral', title: 'Collateral-Free Dairy Loan Guide', emoji: '' },
+  { slug: 'bihar-pashupalan-loan-yojana', title: 'Bihar Pashu Loan Scheme', emoji: '' },
   { slug: 'jansamarth-portal-loan-apply', title: 'JanSamarth Se Loan Kaise Le' },
   { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC 2026 Application' },
-  { slug: 'pm-matsya-sampada-yojana-fish-farming', title: 'PM Matsya Sampada Yojana', emoji: '🐟' },
+  { slug: 'pm-matsya-sampada-yojana-fish-farming', title: 'PM Matsya Sampada Yojana', emoji: '' },
 ];
 
 const FAQS_DATA = [
@@ -121,7 +121,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           udyamimitra portal se apply ka process, aur woh galtiyan jo application ko latka deti hain.
         </p>
 
-        <SH>🐔 NLM-EDP Kya Hai — Structure Samjho</SH>
+        <SH>NLM-EDP Kya Hai — Structure Samjho</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           National Livestock Mission, Ministry of Fisheries, Animal Husbandry &amp; Dairying ki central scheme hai.
           Iske Entrepreneurship Development (EDP) component mein poultry, bakri-bhed, sukar (piggery) aur chara
@@ -185,7 +185,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>🥚 Layer vs Broiler — Pehla Bada Faisla</SH>
+        <SH>Layer vs Broiler — Pehla Bada Faisla</SH>
         <div className="overflow-x-auto my-4">
           <table className="w-full text-sm border-collapse">
             <thead>
@@ -296,7 +296,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>💔 Mortality Aur Vaccination — Jo Numbers Mein Nahi Dikhta</SH>
+        <SH>Mortality Aur Vaccination — Jo Numbers Mein Nahi Dikhta</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Har DPR mein mortality ka ek chhota sa percentage likha hota hai, par asli farm par yeh number
           discipline se banta hai. Ranikhet (Newcastle), Gumboro aur fowl pox ka vaccination schedule din ke
@@ -315,7 +315,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>🏗️ Shed Aur Setup — Jahan Paisa Sahi Lagana Hai</SH>
+        <SH>Shed Aur Setup — Jahan Paisa Sahi Lagana Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Naye log aksar paisa galat jagah lagate hain — chamakdaar gate aur pakki boundary par, jabki murgi ko
           chahiye <strong>hawa, sookha farsh aur sahi temperature</strong>. Shed ki disha east-west rakho taaki
@@ -340,7 +340,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           <SI n={5}><strong>Capacity se bada unit</strong> — pehli baar mein hi sabse bada project lene ka lalach. Chhota shuru karo, seekho, phir badhao — scheme baad mein bhi rahegi.</SI>
         </StepList>
 
-        <SH>🌱 Zameen Se Ek Misaal — Khagaria (Bihar) Ke Dayanand Singh</SH>
+        <SH>Zameen Se Ek Misaal — Khagaria (Bihar) Ke Dayanand Singh</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Yeh dhandha chhoti zameen par bhi khada hota hai — iska documented example KVK Khagaria (Bihar) ke
           record mein hai. Parbatta gaon ke <strong>Dayanand Singh</strong> ke paas sirf 1 acre zameen thi. 500
@@ -356,7 +356,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           KVK ke guidance ke saath hua, ek jhatke mein nahi.
         </p>
 
-        <SH>🐐 Bakri Ya Machhli Mein Bhi Interest Hai?</SH>
+        <SH>Bakri Ya Machhli Mein Bhi Interest Hai?</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           NLM ke isi structure mein bakri-bhed palan ka bhi component hai — uska poora ganit humne alag guide mein
           likha hai: <Link href="/articles/bakri-palan-yojana-nlm-subsidy" className="underline font-bold">Bakri Palan

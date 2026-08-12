@@ -81,7 +81,7 @@ function StateCard({ name, portal, children }: { name: string; portal: string; c
   return (
     <div className="my-4 border border-[var(--color-border)] rounded-xl overflow-hidden bg-[var(--color-card)]">
       <div className="flex flex-wrap items-center justify-between gap-2 bg-[var(--color-bg-alt)] px-4 py-2.5 border-b border-[var(--color-border)]">
-        <span className="font-black text-sm text-[var(--color-text)]">🚜 {name}</span>
+        <span className="font-black text-sm text-[var(--color-text)]">{name}</span>
         <span className="text-xs font-mono text-[var(--color-text-muted)]">{portal}</span>
       </div>
       <div className="px-4 py-3 text-sm text-[var(--color-text)] leading-relaxed">{children}</div>
@@ -302,7 +302,7 @@ export default function TractorSubsidy2027StateWiseList({ article }: { article: 
 
       <div className="my-5 border-2 border-[var(--color-border)] rounded-2xl overflow-hidden bg-[var(--color-card)] shadow-sm">
         <div className="bg-green-50 dark:bg-green-900/20 border-b border-[var(--color-border)] px-4 py-2.5">
-          <span className="text-green-700 dark:text-green-300 text-xs font-bold">🏛️ केंद्र का farm-machinery portal:</span>
+          <span className="text-green-700 dark:text-green-300 text-xs font-bold">केंद्र का farm-machinery portal:</span>
         </div>
         <div className="p-4 flex flex-col sm:flex-row items-start sm:items-center gap-3 justify-between">
           <div>
@@ -493,9 +493,9 @@ export default function TractorSubsidy2027StateWiseList({ article }: { article: 
       <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
         <h3 className="font-black text-[var(--color-text)] mb-3 text-base">इसी सिलसिले के और page</h3>
         <ul className="list-disc pl-5 space-y-1.5 text-sm">
-          <li><Link href="/articles/KisanTractorLoan2026">🚜 Kisan Tractor Loan Guide</Link></li>
+          <li><Link href="/articles/KisanTractorLoan2026">Kisan Tractor Loan Guide</Link></li>
           <li><Link href="/articles/custom-hiring-centre-chc-portal">CHC Portal — किराये पर मशीन</Link></li>
-          <li><Link href="/articles/KisanRinKahaSeLe2026">🏦 किसान ऋण कहां से लें</Link></li>
+          <li><Link href="/articles/KisanRinKahaSeLe2026">किसान ऋण कहां से लें</Link></li>
           <li><Link href="/articles/hi/kcc-limit-kaise-badhaye">KCC की limit बढ़ाने का तरीका</Link></li>
         </ul>
       </div>

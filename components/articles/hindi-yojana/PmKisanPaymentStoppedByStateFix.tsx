@@ -394,7 +394,7 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
 
       <div className="my-5 border-2 border-[var(--color-border)] rounded-2xl overflow-hidden bg-[var(--color-card)] shadow-sm">
         <div className="bg-green-50 dark:bg-green-900/20 border-b border-[var(--color-border)] px-4 py-2.5">
-          <span className="text-green-700 dark:text-green-300 text-xs font-bold">🏛️ Official portal:</span>
+          <span className="text-green-700 dark:text-green-300 text-xs font-bold">Official portal:</span>
         </div>
         <div className="p-4 flex flex-col sm:flex-row items-start sm:items-center gap-3 justify-between">
           <div>
@@ -479,8 +479,8 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
         <ul className="list-disc pl-5 space-y-1.5 text-sm">
           <li><Link href="/articles/PmKisanCorrectionForm2026">Correction Form Guide</Link></li>
           <li><Link href="/articles/hi/helpline-shikayat">हेल्पलाइन और शिकायत</Link></li>
-          <li><Link href="/articles/hi/npci-aadhaar-seeding">🏦 बैंक में आधार सीडिंग कैसे कराएं</Link></li>
-          <li><Link href="/articles/PmKisanStateNodalOfficerList">🏛️ State Nodal Officer List</Link></li>
+          <li><Link href="/articles/hi/npci-aadhaar-seeding">बैंक में आधार सीडिंग कैसे कराएं</Link></li>
+          <li><Link href="/articles/PmKisanStateNodalOfficerList">State Nodal Officer List</Link></li>
         </ul>
       </div>
     </>

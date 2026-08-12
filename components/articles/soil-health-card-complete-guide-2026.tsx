@@ -81,7 +81,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
             <span>/</span>
             <span className="text-white font-bold">Soil Health Card</span>
           </nav>
-          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">🌱 Soil Testing Guide 2026</span>
+          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Soil Testing Guide 2026</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
             Soil Health Card 2026: Mitti Test Free Kaise Karwayein, State Wise Online Apply
           </h1>
@@ -179,7 +179,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
 
           <div className="mb-8">
             <div className="bg-blue-50 rounded-xl p-5 border-2 border-blue-300 mb-4">
-              <h3 className="font-black text-blue-900 text-lg mb-3">🌾 Maharashtra</h3>
+              <h3 className="font-black text-blue-900 text-lg mb-3">Maharashtra</h3>
               <p className="text-sm text-gray-700 mb-3">
                 Maharashtra mein Jain Irrigation aur local krishi vibhag handle karte hain. Farmers directly agriculture office mein application de sakte hain ya CSC center se bhi kar sakte ho.
               </p>
@@ -193,7 +193,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
             </div>
 
             <div className="bg-green-50 rounded-xl p-5 border-2 border-green-300 mb-4">
-              <h3 className="font-black text-green-900 text-lg mb-3">🌾 Uttar Pradesh</h3>
+              <h3 className="font-black text-green-900 text-lg mb-3">Uttar Pradesh</h3>
               <p className="text-sm text-gray-700 mb-3">
                 UP mein State Agriculture Department sab sambhalta hai. Har district mein separate soil testing lab hote hain. Online registration available hai.
               </p>
@@ -207,7 +207,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
             </div>
 
             <div className="bg-purple-50 rounded-xl p-5 border-2 border-purple-300 mb-4">
-              <h3 className="font-black text-purple-900 text-lg mb-3">🌾 Rajasthan</h3>
+              <h3 className="font-black text-purple-900 text-lg mb-3">Rajasthan</h3>
               <p className="text-sm text-gray-700 mb-3">
                 Rajasthan mein khad ki shortage hoti thi, isliye Soil Health Card ko bahut serious lia gaya. Lab testing bilkul free + reliable hai.
               </p>
@@ -221,7 +221,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
             </div>
 
             <div className="bg-yellow-50 rounded-xl p-5 border-2 border-yellow-400 mb-4">
-              <h3 className="font-black text-yellow-900 text-lg mb-3">🌾 Punjab</h3>
+              <h3 className="font-black text-yellow-900 text-lg mb-3">Punjab</h3>
               <p className="text-sm text-gray-700 mb-3">
                 Punjab mein soil problem jada hai kyunki zyada chemical use hota hai. State ne mass scale par soil testing shuru ki hui. Government colleges bhi test karte hain.
               </p>
@@ -235,7 +235,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
             </div>
 
             <div className="bg-red-50 rounded-xl p-5 border-2 border-red-300 mb-4">
-              <h3 className="font-black text-red-900 text-lg mb-3">🌾 Karnataka</h3>
+              <h3 className="font-black text-red-900 text-lg mb-3">Karnataka</h3>
               <p className="text-sm text-gray-700 mb-3">
                 South India mein Karnataka ka program achha chal raha hai. Coffee aur sugarcane walon ko priority milti hai, lekin general farmers ko bhi service milti hai.
               </p>
@@ -318,7 +318,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
               <p className="text-xs text-gray-700">Waste fertilizer use nahi hota, cost 15-20% tak kam</p>
             </div>
             <div className="bg-amber-50 rounded-xl p-4 border border-amber-300">
-              <p className="font-black text-amber-800 text-sm mb-2">🌱 Soil Health</p>
+              <p className="font-black text-amber-800 text-sm mb-2">Soil Health</p>
               <p className="text-xs text-gray-700">Zameen ki quality improve hoti hai — long term benefit</p>
             </div>
             <div className="bg-purple-50 rounded-xl p-4 border border-purple-300">

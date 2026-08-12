@@ -45,7 +45,7 @@ function BannerEKYC() {
         <ellipse key={i} cx="730" cy="110" rx={20+i*14} ry={12+i*8}
           fill="none" stroke="#fff" strokeWidth="1.5" opacity={0.08+i*0.04}/>
       ))}
-      <text x="730" y="116" textAnchor="middle" fontSize="28" opacity="0.3">👆</text>
+      <text x="730" y="116" textAnchor="middle" fontSize="28" opacity="0.3"></text>
     </svg>
   );
 }
@@ -127,7 +127,7 @@ function BannerRegistration() {
       <text x="200" y="134" fontSize="10" fill="#d1fae5">Online ya CSC center se — koi bhi fee nahi lagti</text>
 
       <text x="200" y="158" fontSize="9" fontWeight="bold" fill="#a7f3d0">Zaruri Documents:</text>
-      {['Aadhaar Card', '🏦 Bank Passbook', 'Khasra/Khatauni', 'Mobile Number'].map((d,i)=>(
+      {['Aadhaar Card', 'Bank Passbook', 'Khasra/Khatauni', 'Mobile Number'].map((d,i)=>(
         <text key={d} x={200+i*148} y="176" fontSize="8" fill="#fff">{d}</text>
       ))}
       {['Apply','Verify','Approve','₹2000'].map((s,i)=>(
@@ -238,7 +238,7 @@ function BannerInsurance() {
       <ellipse cx="55" cy="42" rx="28" ry="18" fill="#374151" fillOpacity="0.5"/>
       <ellipse cx="110" cy="42" rx="28" ry="18" fill="#374151" fillOpacity="0.5"/>
 
-      <text x="220" y="52" fontSize="11" fill="#fde68a">🌱 PMFBY CROP INSURANCE GUIDE 2026</text>
+      <text x="220" y="52" fontSize="11" fill="#fde68a">PMFBY CROP INSURANCE GUIDE 2026</text>
       <text x="220" y="80" fontSize="22" fontWeight="900" fill="#fff">PMFBY — Fasal</text>
       <text x="220" y="108" fontSize="22" fontWeight="900" fill="#fde68a">Kharab? Paise Milenge!</text>
       <text x="220" y="135" fontSize="10" fill="#fef3c7">PMFBY — Sirf 2% premium mein poori fasal protect</text>

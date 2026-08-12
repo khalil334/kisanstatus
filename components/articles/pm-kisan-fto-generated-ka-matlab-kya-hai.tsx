@@ -16,7 +16,7 @@ const RELATED = [
   { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary Roster Check' },
   { slug: 'PmKisanMasterGuide2026', title: 'Master Guide' },
   { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Credit Card Guide' },
-  { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price Guide', emoji: '🌱' },
+  { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price Guide', emoji: '' },
   { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav' },
 ];
 
@@ -155,7 +155,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
               <p className="text-xs text-blue-700 dark:text-blue-400 mt-1">Order ban gaya (Generated)</p>
             </div>
             <div className="p-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-xl text-center">
-              <span className="text-2xl block mb-2">🏦</span>
+              <span className="text-2xl block mb-2"></span>
               <p className="font-black text-yellow-800 dark:text-yellow-300 text-sm">Step 2</p>
               <p className="text-xs text-yellow-700 dark:text-yellow-400 mt-1">Bank process kar raha (Processed)</p>
             </div>
