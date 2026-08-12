@@ -536,7 +536,7 @@ P0/P1 are where the AI feel actually lives. P2/P3 are polish.
 
 - Migrate the 8 hand-typed `FAQPage` JSON-LD files (`kisanguides/` ×7 + `hindi-yojana/KisanKarjMafiList2027.tsx`) to `<FAQBlock>` — one Q&A array, schema derived from visible text. Fixes the drift (e.g. `VerminCompost.tsx`). FAQ wording itself is not changed beyond picking the correct single version.
 
-### Part 3 — Closing blocks ("Seedhi Baat" formula), 4 batches — 3a ✅ · 3b ✅ · 3c ✅ DONE (2026-08-12)
+### Part 3 — Closing blocks ("Seedhi Baat" formula), 4 batches — 3a ✅ · 3b ✅ · 3c ✅ · 3d ✅ DONE (2026-08-12)
 
 *Files: 47 total · Type: per-article copy*
 
@@ -567,6 +567,19 @@ P0/P1 are where the AI feel actually lives. P2/P3 are polish.
 Part 1 → Part 2 → Part 3 (a–d) → Part 4 → Part 5 → Part 6. Each part ships as its own PR and waits for owner review before the next starts.
 
 ## 12. Changelog
+
+### 2026-08-12 — Part 3d complete (`fix/part-3d-closing-blocks-guides-loan`) — Part 3 finished
+
+- **22 files de-formulaised** across `kisanguides/`, `loan-mandi-pashupalan/` and the remaining root articles. Scope came out larger than the doc's ~11 estimate: a repo-wide sweep for the formula markers found 20 files still carrying them after 3a–3c, plus 2 files sharing a verbatim paragraph.
+- **Shared green-box closings rewritten** (label + body, each on something only that article can claim): eNAM registration now closes on checking the mandi list *before* registering (`EnamRegistrationKaiseKare`), MSP on the moisture limit rather than the rate table (`MspList202627`), KCC on the May-June window vs. the 15-20 day verification (`KisanCreditCardOnlineApply2026`), farm credit on the 4% vs 36% comparison (`KisanRinKahaSeLe2026`), tractor loans on the on-road breakup vs. ex-showroom (`KisanTractorLoan2026`), Nano DAP on top-up-not-replacement (`NanoDap500mlPriceInIndia2026`), PM-KUSUM on quota-not-deadline (`PmKusumYojanaSolarSubsidy2026`), correction form on the ₹30 vs ₹500 agent rate (`PmKisanCorrectionForm2026`), PMFBY on the 48-hour reporting window (`PmfbyCropInsurance2026`), soil health card on reading the recommendation sheet (`soil-health-card-complete-guide-2026`), mandi bhav on comparing neighbouring mandis net of transport (`mandi-bhav-today`), AgriStack on beating the Oct-Nov rabi rush (`AgriStackKyaHai2026`).
+- **Labels de-formulaised where the body was already article-specific:** "Bottom Line" → content-led headings (`EnamRegistrationKaiseKare`, `MspList202627`), "Sabse Kaam Ki Baat" → "Rate Nahi, Sanction Letter Ki Teen Lines Padho" (`SbiDairyLoanInterestRate`), "Aakhri Baat" → "Do-Teen Saal Tikne Wale Hi Profit Dekhte Hain" (`BakriPalanYojana`).
+- **Verbatim shared paragraph split (was section 5c/5d):** the identical "Subsidy ka fayda zaroor uthayein … Agar mil gayi, toh bonus samjho" paragraph in `PMatsyaSampada` and `VerminCompost` is now two different paragraphs, each tied to that business's own cash-flow gap (fish: seed/feed spend before reimbursement; vermi: 60-90 day first batch).
+- **Inline tics reworded:** "Seedhi baat:" openers (`MushroomKheti`, `PMFMEYojana`, `KisanCreditCardOnlineApply2026`), "Nichod —"/"Seedha Nichod" (`EnamRegistrationKaiseKare`, `SabziBhavGuidePyazAlooTamatar`), "Meri salah yehi rahegi" (`CHCPortal`), "Asli baat yeh hai" (`RashtriyaGokulMissionSubsidy`), and three "yaad rakho/rakhein" intensifiers (`DripSprinkler`, `SabziBhavGuidePyazAlooTamatar` ×2).
+- **Pep-talk deleted:** "Bhai, Ab Socho Mat", "aaj hi apply karo. Kal ka intezaar mat karo", "Meri personal advice", "Bhai, der mat karo".
+- **Every inserted figure was verified against the same article before use** — one draft claim ("KCC sanction 15-30 din") was corrected to the article's own "15-20 din full verification" wording, since the article explicitly refuses to promise a fixed approval time. No new numbers were invented.
+- Similar length kept; no keyword anchors, FAQ answers or unrelated prose touched. Remaining `der mat karo` / `zaroor` filler instances are Part 4 scope and were deliberately left. `tsc --noEmit` clean.
+
+**Pages to re-check in a browser after deploy:** /articles/enam-registration-kaise-kare, /articles/msp-list-2026-27, /articles/sbi-dairy-loan-interest-rate, /articles/dairy-farm-loan-without-collateral, /articles/sabzi-bhav-guide-pyaz-aloo-tamatar, /articles/rashtriya-gokul-mission-subsidy, /articles/bakri-palan-yojana-nlm-subsidy, /articles/custom-hiring-centre-chc-portal, /articles/drip-sprinkler-irrigation-subsidy, /articles/mushroom-kheti-nhb-subsidy, /articles/pm-fme-yojana-food-processing, /articles/pm-matsya-sampada-yojana-fish-farming, /articles/vermi-compost-business-guide, /articles/KisanCreditCardOnlineApply2026, /articles/KisanRinKahaSeLe2026, /articles/KisanTractorLoan2026, /articles/NanoDap500mlPriceInIndia2026, /articles/PmKusumYojanaSolarSubsidy2026, /articles/PmKisanCorrectionForm2026, /articles/PmfbyCropInsurance2026, /articles/soil-health-card-complete-guide-2026, /articles/mandi-bhav-today, /articles/AgriStackKyaHai2026.
 
 ### 2026-08-12 — Part 3c complete (`fix/part-3c-closing-blocks-rajya-hindi`)
 

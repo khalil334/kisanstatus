@@ -492,16 +492,17 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
         </StepList>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Bottom Line</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">MSP Ki Table Se Zyada Kaam Ki Cheez: Nami Ka Meter</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            2026-27 mein gehu ₹2,585 aur dhan ₹2,441 (common) par hai. Badhotri sabse zyada tilhan mein hui —
-            sunflower ₹622, nigerseed ₹515, til ₹500. Makka aur moong lagbhag wahin rahe kyunki unka margin
-            pehle se upar tha.
+            2026-27 ki badhotri tilhan mein sabse mote paise laayi — sunflower ₹622, nigerseed ₹515, til ₹500 —
+            jabki gehu ₹2,585 aur dhan ₹2,441 (common) par hai aur makka-moong lagbhag wahin rahe. Par saal bhar
+            ka farak in numbers se nahi, kaante par tay hota hai.
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
-            MSP ko floor samjho, target nahi. Bechne se pehle mandi ka rate check karo, procurement portal par
-            registration time se karwa lo, aur nami ka dhyan rakho — sabse zyada paisa wahin katta hai.{' '}
-            <strong>Abhi apne state ke procurement portal par jao aur registration status check karo.</strong>
+            Poori MSP tab milti hai jab teen cheezein pehle se theek hon: procurement portal par registration
+            (window fasal katne se pehle band ho jaati hai), DBT ke liye active aur Aadhaar-mapped account, aur
+            nami limit — gehu ~12%, dhan ~17%. Nami ek-do percent upar nikli toh table ka rate kagaz par rehta
+            hai aur haath mein kata hua rate aata hai. Isliye bechne se pehle nami napwao, uske baad tarikh tay karo.
           </p>
         </div>
 

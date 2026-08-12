@@ -94,7 +94,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
         </div>
 
         <DB>
-          <strong>Nichod — padhne se pehle:</strong>
+          <strong>Ek line mein poori kahani:</strong>
           <ul className="list-disc pl-5 mt-2 space-y-1">
             <li>eNAM registration <strong>bilkul free</strong> — enam.gov.in par ya mandi ke help desk par; documents sirf 3 (Aadhaar, bank passbook, mobile).</li>
             <li>Fasal apni hi mandi le jaani hai — sirf <strong>boli online</strong> hoti hai; zyada buyers, behtar rate, payment seedha bank mein.</li>
@@ -324,7 +324,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
           states ke buyers bhi. Jitna bada pool, utna behtar rate milne ka chance.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Ab ek seedhi baat, jo koi brochure nahi batayega — inter-state trade abhi bhi bahut chhota hai. Financial
+          Ab woh baat, jo koi brochure nahi batayega — inter-state trade abhi bhi bahut chhota hai. Financial
           Express ki April 2025 report ke according FY25 mein inter-state eNAM trade sirf ₹21 crore ka tha (FY24 ke
           ₹42 crore se aadha), jabki state ke andar inter-mandi trade ₹1,769 crore aur total turnover ₹80,262 crore
           raha (<a href="https://www.financialexpress.com/policy/economy-enam-remains-local-inter-state-trade-minimal-halves-in-fy25-3817271/" target="_blank" rel="noopener noreferrer" className="underline font-bold">source: Financial Express</a>).
@@ -391,14 +391,17 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
         </div>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Bottom Line</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Pehla Kaam: Apni Mandi Ka Naam List Mein Dhoondho</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Registration free hai, documents sirf 3, aur process 10-15 minute ka. Agar aapki mandi eNAM se
-            judi hai toh register na karne ki koi wajah nahi.
+            eNAM registration ka faayda poora aapki mandi par tika hai, aapke form par nahi. Agar aapki local
+            mandi 1,400+ integrated mandis wali list mein nahi hai, toh ID ban jayegi par online bidding
+            aapke lot par nahi khulegi — kaagaz sahi, nateeja zero.
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
-            Ek baar register ho gaye toh har season online bidding ka fayda — zyada buyers, behtar rate,
-            aur payment seedha bank mein. <strong>Abhi enam.gov.in par apni mandi ki list check karo.</strong>
+            Isliye order ulta rakho: pehle <strong>enam.gov.in ki mandi list</strong> mein apna APMC dhoondho,
+            phir 3 documents lekar 10-15 minute ka registration karo. Mandi list mein hai toh ID us din se
+            kaam ki hai; nahi hai toh nazdeeki integrated mandi ka rate compare karke tay karo ki maal wahan
+            le jaana transport kharch ke baad bhi bachta hai ya nahi.
           </p>
         </div>
 
