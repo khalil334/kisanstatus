@@ -2,8 +2,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 
-const PUBLISHED = '2026-07-03T12:18:00+05:30';
-const MODIFIED = '2026-07-20T05:45:00+05:30';
+const PUBLISHED = '2026-01-20T17:46:17+05:30';
+const MODIFIED = '2026-01-29T19:09:12+05:30';
 
 const RELATED = [
   { slug: 'PmKisanMasterGuide2026', title: 'Master Guide', emoji: '📚' },

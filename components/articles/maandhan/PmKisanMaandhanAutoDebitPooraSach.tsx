@@ -3,8 +3,8 @@ import Image from 'next/image';
 import { SI, StepList, IB, WB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
 
-const PUBLISHED = '2026-07-24T08:00:00+05:30';
-const MODIFIED = '2026-08-05T06:13:00+05:30';
+const PUBLISHED = '2026-04-02T20:27:48+05:30';
+const MODIFIED = '2026-05-02T08:42:07+05:30';
 
 const RELATED_CARDS = [
   {

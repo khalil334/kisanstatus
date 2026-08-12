@@ -7,8 +7,8 @@ import { SI, StepList, IB, WB, DB, SH, RelatedArticles, AuthorBox, BottomNav, Di
 import CountdownModal from '@/components/CountdownModal';
 import type { ArticleMeta } from '@/lib/articles-data';
 
-const PUBLISHED = '2026-06-23T08:00:00+05:30';
-const MODIFIED = '2026-07-26T06:36:00+05:30';
+const PUBLISHED = '2025-12-26T11:27:11+05:30';
+const MODIFIED = '2026-01-04T13:42:17+05:30';
 
 const RELATED = [
   { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '📅' },

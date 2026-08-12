@@ -3,8 +3,8 @@ import Image from 'next/image';
 import { SI, StepList, IB, DB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 
-const PUBLISHED = '2026-07-14T10:23:00+05:30';
-const MODIFIED = '2026-07-22T08:00:00+05:30';
+const PUBLISHED = '2026-02-06T09:16:09+05:30';
+const MODIFIED = '2026-02-20T21:22:12+05:30';
 
 const RELATED_CARDS = [
   {

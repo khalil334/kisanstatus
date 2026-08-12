@@ -13,8 +13,8 @@ function fmtDate(dateString: string): string {
   });
 }
 
-const PUBLISHED = '2025-01-15T08:00:00+05:30';
-const MODIFIED = '2026-07-11T08:00:00+05:30';
+const PUBLISHED = '2026-01-08T22:33:23+05:30';
+const MODIFIED = '2026-01-17T19:59:30+05:30';
 
 const RELATED = [
   { slug: 'PmKisanEkycOnline2026', title: 'PM Kisan eKYC Online', emoji: '🔐' },
