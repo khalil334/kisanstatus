@@ -509,3 +509,59 @@ Of 148 titles in `lib/*-data.ts`: **68 contain a year** (2026/2027), **44 use a 
 
 P0/P1 are where the AI feel actually lives. P2/P3 are polish.
 
+## 11. Fix Plan — Parts (approved working plan)
+
+**Date added:** 2026-08-12
+**Execution model:** one part at a time, small PRs, review + manual merge (no auto-merge). Fix branch per part: `fix/part-<n>-<slug>`.
+
+### Ground rules (apply to every part)
+
+1. **No article rewrites.** Only targeted edits — the surrounding prose stays as written.
+2. **No word-count trimming.** Replacements keep roughly the same length; content is never cut for brevity.
+3. **Ranking keywords are protected.** Head phrases that rank stay in the title, H1, first paragraph, headings and FAQ questions. De-stuffing (Part 5) only replaces *surplus mid-paragraph repeats* with natural variants/pronouns — never the anchor placements. *(Pending owner clarification on the "0.90" rule — until clarified, treat ALL ranking keywords as untouchable.)*
+4. **Every article keeps its own voice.** When a shared block is rewritten (closings, CTAs), each file gets a distinct wording and style — no new shared formula may replace the old one.
+5. **Unrelated issues are out of scope** for whichever part is running.
+
+### Part 1 — Shared boilerplate (mechanical, zero content risk)
+
+*Files: ~14 · Type: template + copy*
+
+- Extract the 6 copy-pasted `kisanguides/` disclaimers into one `<GuideDisclaimer>` component; one canonical wording; date sourced from the article's modified-date constant (kills the hand-typed "July/August 2026" stamps).
+- Rewrite the 7-file portal CTA sentence ("…10 second baad portal khulega") so each file words it differently.
+- One related-section label site-wide (replaces the 4 rotating labels).
+
+### Part 2 — FAQ schema correctness (Google requirement)
+
+*Files: 8 · Type: template*
+
+- Migrate the 8 hand-typed `FAQPage` JSON-LD files (`kisanguides/` ×7 + `hindi-yojana/KisanKarjMafiList2027.tsx`) to `<FAQBlock>` — one Q&A array, schema derived from visible text. Fixes the drift (e.g. `VerminCompost.tsx`). FAQ wording itself is not changed beyond picking the correct single version.
+
+### Part 3 — Closing blocks ("Seedhi Baat" formula), 4 batches
+
+*Files: 47 total · Type: per-article copy*
+
+- 3a: root `PmKisan*` files (~12) · 3b: `maandhan/` (~12) · 3c: `rajya-yojana/` + `hindi-yojana/` (~12) · 3d: `kisanguides/` + `loan-mandi-pashupalan/` + rest (~11)
+- Per file: drop the shared label + pep-talk rhythm ("aaj hi kar lo bhai", "bahana mat banao", "Period."); write a closing that only fits that article — a specific number, deadline, or mistake. Similar length, unique heading (or none), unique style per article. Only the closing block changes.
+
+### Part 4 — Filler-word pass (light touch)
+
+*Files: ~76 · Type: copy, small diffs*
+
+- Cut/replace `zaroor` (362×) and `turant` (98×) where they are pure intensifiers; also `complete guide`, `bilkul free hai`, `step by step`, `is guide mein`. Sentence-level micro-edits only; no paragraph is restructured; word count stays ~same (replace, don't delete, where possible).
+
+### Part 5 — Keyword de-stuffing (careful, protected)
+
+*Files: 8 worst first (`soil-health-card…`, `PMFMEYojana`, `VerminCompost`, `PmKusum…`, `PmKisanStateNodalOfficerList`, `RythuBharosaStatusCheck`, `KrishakUnnatiYojanaStatusCheck`, `maandhan/…AutoDebitPooraSach`) · Type: per-article copy*
+
+- Target branded head phrases only, from 8–20/1000w down to ~5–6/1000w by swapping surplus mid-body repeats for variants ("is yojana", "iska", scheme short-forms). Anchor placements (title/H1/intro/headings/FAQ) untouched. Repeated bare URLs (`gov in` hits) handled as link-text cleanup, not keyword edits.
+
+### Part 6 — Structure + internal links (biggest, last)
+
+*Files: ~30 · Type: structural/editorial*
+
+- Vary section order/presence inside the 4 template families (worst: `loan-mandi-pashupalan/`, 10 of 11 files ≥0.80 similar).
+- Re-pick related cards per article (2 topically adjacent + 1 next-step); break the 2 byte-identical sets and the mandi-cluster overlap; stop templating `/articles/PmKisanMasterGuide2026` + KCC links into tangential articles.
+
+### Order
+
+Part 1 → Part 2 → Part 3 (a–d) → Part 4 → Part 5 → Part 6. Each part ships as its own PR and waits for owner review before the next starts.
