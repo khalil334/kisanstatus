@@ -6,9 +6,9 @@ export const SITE_DESCRIPTION = 'PM Kisan guides, farming subsidies, loans & cro
 export const COPYRIGHT_START_YEAR = 2024;
 export const CURRENT_YEAR = new Date().getFullYear();
 
-export const AUTHOR_NAME = 'KisanStatus Team';
+export const AUTHOR_NAME = 'Manish Kumar';
 export const AUTHOR_URL = `${SITE_URL}/about`;
-export const AUTHOR_BIO = 'Indian kisaanon ko government schemes navigate karne mein help karne wala independent expert team.';
+export const AUTHOR_BIO = 'Sarkari kisan yojnaon ki official websites (pmkisan.gov.in, state portals) se information collect karke simple Hindi mein present karta hoon. Yahan di gayi har detail official source se cross-check ki jati hai.';
 
 export const TWITTER_HANDLE = '@kisanstatus';
 

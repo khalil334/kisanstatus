@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     'fodder preservation technique india',
     'small scale chara processing unit'
   ],
-  authors: [{ name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' }],
+  authors: [{ name: 'Manish Kumar', url: 'https://kisanstatus.com/about' }],
   openGraph: {
     title: 'Silage Business Guide 2026: SMAM Subsidy & Profit',
     description: 'Silage banane ka business kaise shuru karein — chara storage tarika, chaff cutter cost, SMAM subsidy aur real profit calculation, sab kuch is guide mein.',

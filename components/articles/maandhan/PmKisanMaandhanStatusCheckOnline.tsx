@@ -10,7 +10,7 @@ const jsonLd = {
       "@id": "https://kisanstatus.com/maandhan/pm-kisan-maandhan-status-check-online/#article",
       "headline": "PM Kisan Maandhan Status Check Online: Pension Card, Passbook, Contribution History",
       "description": "PM Kisan Maandhan Yojana mein apna status kaise verify kijiye. Pension card download, passbook check, contribution history aur missed payment ka pura process.",
-      "author": { "@type": "Organization", "name": "KisanStatus Team", "url": "https://kisanstatus.com/about" },
+      "author": { "@type": "Person", "name": "Manish Kumar", "url": "https://kisanstatus.com/about" },
       "publisher": { "@type": "Organization", "name": "KisanStatus.com", "logo": { "@type": "ImageObject", "url": "https://kisanstatus.com/logo.webp" } },
       "datePublished": "2026-07-24",
       "dateModified": "2026-08-08",
@@ -56,7 +56,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       </h1>
 
       <p className="text-sm text-gray-500 mb-6 not-prose">
-        <em>Written by KisanStatus Research Team | Last updated: August 8, 2026 | Sources: maandhan.in, PM-KMY Operational Guidelines (DAC&FW, Ministry of Agriculture &amp; Farmers Welfare)</em>
+        <em>Written by Manish Kumar | Last updated: August 8, 2026 | Sources: maandhan.in, PM-KMY Operational Guidelines (DAC&FW, Ministry of Agriculture &amp; Farmers Welfare)</em>
       </p>
 
       <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">

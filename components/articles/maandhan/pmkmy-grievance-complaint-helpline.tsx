@@ -80,8 +80,8 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
               articleSection: 'Agriculture & Pension Schemes',
               wordCount: 2400,
               author: {
-                '@type': 'Organization',
-                name: 'KisanStatus Team',
+                '@type': 'Person',
+                name: 'Manish Kumar',
                 url: 'https://kisanstatus.com/about',
               },
               publisher: {
@@ -125,7 +125,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
           </h1>
 
           <div className="hero-description flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
+            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">Manish Kumar</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
             <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
             <span>⏱️ 10 min read</span>
@@ -553,7 +553,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
             <strong>Last Verified:</strong> {fmtDate(MODIFIED)}<br />
             <strong>Sources:</strong> PMKMY Official Portal (pmkmy.gov.in), Ministry of Labour & Employment (maandhan.in),
             LIC India Official Website (licindia.in), CSC Portal (csc.gov.in)<br />
-            <strong>Author:</strong> KisanStatus Team — Helping farmers with verified information since 2024
+            <strong>Author:</strong> Manish Kumar — Helping farmers with verified information since 2024
           </p>
         </div>
 

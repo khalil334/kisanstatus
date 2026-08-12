@@ -71,7 +71,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
             Rashtriya Gokul Mission 2026: Desi Gay Palan Par Kya-Kya Milta Hai — IVF ₹5,000, Sex-Sorted Semen 50%, Breed Farm ₹2 Crore Tak
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
+            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">Manish Kumar</Link></span>
             <span>📅 {fmtDate(article.publishedTime)}</span>
             <span>🔄 Last Updated: 5 August 2026</span>
             <span>⏱️ 11 min read</span>

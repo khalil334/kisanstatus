@@ -68,7 +68,7 @@ export default function PmKisanCscRegistrationCharges() {
             PM Kisan CSC Registration Charges: Sahi Fees, Kaise Karein?
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white">KisanStatus Team</Link></span>
+            <span>✍️ <Link href="/about" className="underline hover:text-white">Manish Kumar</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
             <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
             <span>⏱️ 14 min read</span>

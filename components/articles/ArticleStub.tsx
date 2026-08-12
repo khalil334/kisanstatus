@@ -21,7 +21,7 @@ export default function ArticleStub({ article }: { article: ArticleMeta }) {
             {article.title}
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
+            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">Manish Kumar</Link></span>
             <span>📅 {fmtDate(article.publishedTime)}</span>
             <span>🔄 Updated: {fmtDate(article.modifiedTime)}</span>
           </div>

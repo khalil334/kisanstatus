@@ -85,7 +85,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
             Soil Health Card 2026: Mitti Test Free Kaise Karwayein, State Wise Online Apply
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-amber-100">
-            <span>✍️ <Link href="/about" className="underline hover:text-white">KisanStatus Team</Link></span>
+            <span>✍️ <Link href="/about" className="underline hover:text-white">Manish Kumar</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
             <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
             <span>⏱️ 12 min read</span>
