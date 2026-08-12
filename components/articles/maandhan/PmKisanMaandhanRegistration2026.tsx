@@ -406,7 +406,7 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
         />
 
         <section className="my-10">
-          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Related Articles</h3>
+          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Related Articles — Yeh Bhi Padho</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {RELATED_CARDS.map((card) => (
               <Link

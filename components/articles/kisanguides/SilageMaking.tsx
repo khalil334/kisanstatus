@@ -3,6 +3,8 @@ import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
 import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
+import GuideDisclaimer from '@/components/GuideDisclaimer';
+import { getArticleBySlug } from '@/lib/articles-data';
 
 export const metadata: Metadata = {
   title: 'Silage Business Guide 2026: SMAM Subsidy & Profit',
@@ -622,12 +624,10 @@ export default function SilageMaking() {
         Related reading: <Link href="/articles/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME Yojana guide</Link> aur <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">KCC online apply karne ka tarika</Link> bhi zaroor padhein, agar aap silage unit ke liye funding plan kar rahe ho.
       </p>
 
-      <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-lg border-l-4 border-orange-500 not-prose">
-        <p className="text-sm text-gray-700 dark:text-gray-300">
-          <strong className="text-orange-600 dark:text-orange-400 block mb-2">Zaroori Jaankari:</strong>
-          Yeh article general information ke liye hai. Actual costs, subsidies, aur procedures location aur circumstances ke hisaab se badal sakte hain. Koi bhi financial decision lene se pehle qualified professionals (agriculture officers, CAs) se consult karein. Latest information ke liye official sources se verify karte rahein. Last updated: July 2026.
-        </p>
-      </div>
+      <GuideDisclaimer
+        consult="agriculture officers, CAs"
+        modified={getArticleBySlug('silage-making-business-guide')!.modifiedTime}
+      />
     </article>
   );
 }

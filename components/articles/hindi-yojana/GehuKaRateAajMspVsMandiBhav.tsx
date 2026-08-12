@@ -483,7 +483,7 @@ export default function GehuKaRateAajMspVsMandiBhav({ article }: { article: Hind
       </p>
 
       <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
-        <h3 className="font-black text-[var(--color-text)] mb-3 text-base">आगे पढ़ने लायक</h3>
+        <h3 className="font-black text-[var(--color-text)] mb-3 text-base">Related Articles — Yeh Bhi Padho</h3>
         <ul className="list-disc pl-5 space-y-1.5 text-sm">
           <li>
             <Link href="/articles/mandi-bhav-today">Mandi Bhav Today</Link>
