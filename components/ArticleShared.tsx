@@ -1,6 +1,7 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import React from 'react';
-import { AUTHOR_NAME, AUTHOR_BIO, DISCLAIMER_TEXT } from '@/lib/site-config';
+import { AUTHOR_NAME, AUTHOR_BIO, AUTHOR_IMAGE, DISCLAIMER_TEXT } from '@/lib/site-config';
 
 export function fmtDate(iso: string) {
   return new Date(iso).toLocaleDateString('en-IN', {
@@ -151,8 +152,14 @@ export function AuthorBox({ modified }: { modified: string }) {
 
   return (
     <div className="flex items-start gap-4 p-5 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/10 border border-[var(--color-border)] rounded-2xl my-8">
-      <div className="w-14 h-14 rounded-full bg-[var(--color-primary)] flex items-center justify-center text-2xl shrink-0 shadow-md">
-        🌾
+      <div className="w-14 h-14 rounded-full overflow-hidden shrink-0 shadow-md border-2 border-[var(--color-primary)]">
+        <Image
+          src={AUTHOR_IMAGE}
+          alt={AUTHOR_NAME}
+          width={56}
+          height={56}
+          className="w-full h-full object-cover"
+        />
       </div>
       <div>
         <Link
