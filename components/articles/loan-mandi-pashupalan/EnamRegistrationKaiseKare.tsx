@@ -71,7 +71,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
             eNAM Registration 2026: Online Mandi Mein Fasal Kaise Bechein — Step-by-Step Guide
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
+            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">Manish Kumar</Link></span>
             <span>📅 {fmtDate(article.publishedTime)}</span>
             <span>🔄 Last Updated: 5 August 2026</span>
             <span>⏱️ 9 min read</span>

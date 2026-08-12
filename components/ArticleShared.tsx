@@ -162,7 +162,7 @@ export function AuthorBox({ modified }: { modified: string }) {
           {AUTHOR_NAME}
         </Link>
         <p className="text-xs text-green-700 dark:text-green-400 font-semibold mt-0.5">
-          PM Kisan Experts & Annadata Advocates
+          Sarkari yojana information — official sources se verified
         </p>
         <p className="text-xs text-[var(--color-text-muted)] mt-1">{AUTHOR_BIO}</p>
         <p className="text-xs text-[var(--color-text-muted)] mt-1">

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Madhumakhi Palan 2026: KVIC Subsidy, Profit & Complete Guide',
   description: 'Madhumakhi palan (beekeeping) ka complete guide. Janein KVIC subsidy, bee box price, Apis mellifera farming aur honey business ki ground reality aur profit margin.',
   keywords: ['madhumakhi palan', 'beekeeping subsidy 2026', 'KVIC honey mission', 'chhote scale par bee farming kaise shuru karein', 'bee box price', 'honey business profit in india', 'apis mellifera farming'],
-  authors: [{ name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' }],
+  authors: [{ name: 'Manish Kumar', url: 'https://kisanstatus.com/about' }],
   openGraph: {
     title: 'Madhumakhi Palan 2026: KVIC Subsidy, Profit & Complete Guide',
     description: 'Madhumakhi palan ka complete guide. Janein bee farming, KVIC subsidy, bee box price aur honey business ki ground reality.',

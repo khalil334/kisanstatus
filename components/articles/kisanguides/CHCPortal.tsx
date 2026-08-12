@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Custom Hiring Centre (CHC) 2026: Tractor Rental Business Guide',
   description: 'CHC portal guide. Janein tractor aur farm implements kiraye par dekar paisa kaise kamayein, SMAM subsidy, aur real profit calculation.',
   keywords: ['custom hiring centre', 'CHC portal', 'tractor rental business', 'SMAM subsidy', 'farm machinery rental', 'agricultural equipment'],
-  authors: [{ name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' }],
+  authors: [{ name: 'Manish Kumar', url: 'https://kisanstatus.com/about' }],
   openGraph: {
     title: 'Custom Hiring Centre (CHC) 2026: Tractor Rental Business Guide',
     description: 'CHC portal guide. Janein tractor aur farm implements kiraye par dekar paisa kaise kamayein, SMAM subsidy, aur real profit calculation.',

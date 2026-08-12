@@ -131,7 +131,7 @@ export default async function HindiArticlePage({
     datePublished: article.publishedTime,
     dateModified: article.modifiedTime,
     inLanguage: 'hi-IN',
-    author: { '@type': 'Organization', name: article.author, url: `${SITE_URL}/about` },
+    author: { '@type': 'Person', name: article.author, url: `${SITE_URL}/about` },
     publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
   };

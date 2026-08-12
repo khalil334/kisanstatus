@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Drip aur Sprinkler Subsidy: PDMC ke 55% / 45% Niyam Aur Poora Process',
   description: 'Micro-irrigation subsidy ka asli structure — PDMC ke tahat small/marginal kisan ko 55% aur baaki kisan ko 45% assistance, unit cost norms, state top-up, application steps aur maintenance reality.',
   keywords: ['drip irrigation subsidy', 'sprinkler irrigation subsidy', 'PDMC per drop more crop', 'micro irrigation unit cost', 'water conservation', 'irrigation subsidy'],
-  authors: [{ name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' }],
+  authors: [{ name: 'Manish Kumar', url: 'https://kisanstatus.com/about' }],
   openGraph: {
     title: 'Drip aur Sprinkler Subsidy: PDMC ke 55% / 45% Niyam Aur Poora Process',
     description: 'Micro-irrigation subsidy ka asli structure — PDMC assistance rates, unit cost norms, state top-up aur application process.',
