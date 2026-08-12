@@ -23,7 +23,7 @@ const FAQS_DATA = [
   { q: 'Traditional DAP se ye kaise alag hai?', a: 'Liquid DAP ek foliar spray hai — nano particles seedhe pattiyon se absorb hote hain. Traditional DAP zameen mein daala jaata hai. Dono ko ek doosre ka replacement nahi, saathi samjhein — kai experts inka combination hi suggest karte hain.' },
   { q: 'Urea ya pesticide ke saath mix karna theek hai?', a: 'Pehle compatibility test kar lena zaroori hai — chhote patch par try karke dekhein. Kisi bhi mix se pehle KVK ya IFFCO guideline padh lena safe rahega, warna crop damage ka risk rehta hai.' },
   { q: 'Result kitne din mein dikhna shuru hota hai?', a: '7-10 din mein kuch farak nazar aa sakta hai. Do-teen sprays ke baad tasveer clearer hoti hai. Soil, mausam aur crop type par bhi kaafi kuch depend karta hai, isliye fixed timeline nahi de sakte.' },
-  { q: 'Online kahan se kharidna safe hai?', a: 'IFFCO ki official website sabse reliable option hai. Amazon-Flipkart par sirf verified seller se lein. Local Krishi Kendra mein subsidy milne ke chances bhi rehte hain — original packaging ka QR code zaroor check karein.' },
+  { q: 'Online kahan se kharidna safe hai?', a: 'IFFCO ki official website sabse reliable option hai. Amazon-Flipkart par sirf verified seller se lein. Local Krishi Kendra mein subsidy milne ke chances bhi rehte hain — original packaging ka QR code scan kar ke check karein.' },
 ];
 
 const howToSchema = {
@@ -218,7 +218,7 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
               { title: 'Dealer Commission', desc: 'Retailer apna margin jodta hai, isliye wholesale rate hamesha sasta padta hai.' },
               { title: 'Season Demand', desc: 'Sowing season shuru hote hi demand ek dum badh jaati hai aur rate bhi.' },
               { title: 'Online vs Offline', desc: 'E-commerce par kabhi kabhi discount mil jaata hai, local dukaan par usually fixed rate.' },
-              { title: 'Original vs Duplicate', desc: 'IFFCO ka asli product thoda mehnga zaroor hai, par quality guaranteed hai. Bohot sasta mila toh saavdhan rahein.' },
+              { title: 'Original vs Duplicate', desc: 'IFFCO ka asli product thoda mehnga padta hai, par quality guaranteed hai. Bohot sasta mila toh saavdhan rahein.' },
             ].map(({ title, desc }) => (
               <div key={title} className="border-l-4 border-green-400 dark:border-green-600 pl-4 py-1">
                 <p className="font-bold text-[var(--color-text)] text-sm">{title}</p>
@@ -391,9 +391,9 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
           <div className="space-y-3">
             {[
               { src: 'IFFCO Official Website', note: 'Sabse trustworthy source — original product ki guarantee milti hai.' },
-              { src: 'Amazon / Flipkart', note: 'Sirf official seller se lein, ratings zaroor padhein.' },
+              { src: 'Amazon / Flipkart', note: 'Sirf official seller se lein, ratings padh kar order karein.' },
               { src: 'Krishi Kendra / State Portals', note: 'Government authorized hai, subsidy milne ke chances rehte hain.' },
-              { src: 'Local Authorized Dealer', note: 'Zyadatar kisan offline lena prefer karte hain — receipt zaroor le lein.' },
+              { src: 'Local Authorized Dealer', note: 'Zyadatar kisan offline lena prefer karte hain — receipt maang kar le lein.' },
             ].map(({ src, note }) => (
               <div key={src} className="flex gap-3 p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
                 <span className="text-green-600 dark:text-green-400 font-bold shrink-0">✓</span>

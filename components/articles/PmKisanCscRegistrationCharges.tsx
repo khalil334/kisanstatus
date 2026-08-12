@@ -44,11 +44,11 @@ const FAQS_DATA = [
   },
   {
     q: 'Agar CSC wale ne galat data daal diya toh?',
-    a: 'Turant usi waqt screen par check karo. Agar galti ho gayi hai, toh <Link href="/articles/PmKisanCorrectionForm2026" class="underline">correction form</Link> se fix karo ya naye center par dobara try karo.',
+    a: 'Usi waqt screen par check karo, counter chhodne se pehle. Agar galti ho gayi hai, toh <Link href="/articles/PmKisanCorrectionForm2026" class="underline">correction form</Link> se fix karo ya naye center par dobara try karo.',
   },
   {
     q: 'Kya PM Kisan ka kaam sarkari office mein free hota hai?',
-    a: 'Haan, Block Agriculture Office (BAO) ya Tehsil mein ye kaam bilkul free hai. Lekin wahan bheed zyada hoti hai aur time lagta hai.',
+    a: 'Haan, Block Agriculture Office (BAO) ya Tehsil mein ye kaam free mein ho jaata hai. Lekin wahan bheed zyada hoti hai aur time lagta hai.',
   },
 ];
 
@@ -234,7 +234,7 @@ export default function PmKisanCscRegistrationCharges() {
             {[
               {
                 sign: '100 se zyada maangna',
-                action: 'Turant mana kar do. Sarkari rate ₹25 hai. Usse zyada dena kanoonan galat hai.',
+                action: 'Saaf mana kar do. Sarkari rate ₹25 hai. Usse zyada dena kanoonan galat hai.',
               },
               {
                 sign: 'Bina receipt ke paise lena',
@@ -250,7 +250,7 @@ export default function PmKisanCscRegistrationCharges() {
               },
               {
                 sign: 'Aadhaar number ya OTP chupke se note karna',
-                action: 'Ye data theft hai. Turant wahan se nikal jao aur complaint karo.',
+                action: 'Ye data theft hai. Wahan se uth kar nikal jao aur complaint karo.',
               },
             ].map(({ sign, action }, i) => (
               <div key={i} className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl p-4">

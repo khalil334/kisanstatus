@@ -35,7 +35,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Kya koi fees lagti hai?',
-    a: 'Official portal par bilkul free hai. Agar CSC se karwana ho toh nominal ₹20-30 service charge lag sakte hain.',
+    a: 'Official portal par iska koi charge nahi lagta. Agar CSC se karwana ho toh nominal ₹20-30 service charge lag sakte hain.',
   },
 ];
 
@@ -102,7 +102,7 @@ export default function PmKisanVoluntarySurrenderGuide() {
           <DB>
             <strong>Maidan Se Dekha Hua:</strong>
             <p className="text-xs text-gray-700 dark:text-gray-300 mt-2">
-              Kai baar government employees, pensioners ya income tax filers galti se register ho jate hain. Voluntary surrender karne se unki future kist turant band ho jati hai aur sarkari rules ke tahat unpar hone wali karrawai ya penalty se bacha ja sakta hai.
+              Kai baar government employees, pensioners ya income tax filers galti se register ho jate hain. Voluntary surrender karne se unki future kist agle cycle se band ho jati hai aur sarkari rules ke tahat unpar hone wali karrawai ya penalty se bacha ja sakta hai.
             </p>
           </DB>
 
@@ -114,7 +114,7 @@ export default function PmKisanVoluntarySurrenderGuide() {
         <section className="mb-8">
           <SH>Kaun Logon Ko Surrender Karna Chahiye?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Ye logon ko turant surrender karna chahiye:
+            In logon ko der kiye bina surrender karna chahiye:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
             {[
@@ -133,7 +133,7 @@ export default function PmKisanVoluntarySurrenderGuide() {
             ))}
           </div>
           <IB>
-            <strong>Sabse Zaroori:</strong> Agar aap inme se kisi category mein aate hain, toh turant surrender kar do. Baad mein problem ho sakti hai.
+            <strong>Sabse Zaroori:</strong> Agar aap inme se kisi category mein aate hain, toh khud aage badh kar surrender kar do. Baad mein problem ho sakti hai.
           </IB>
         </section>
 
@@ -313,7 +313,7 @@ export default function PmKisanVoluntarySurrenderGuide() {
             </div>
             <div className="bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500 p-4 rounded-r-xl">
               <p className="text-sm text-green-800 dark:text-green-300">
-                <strong>Receipt Rakhein:</strong> Online ho ya offline, receipt ka screenshot/photo zaroor lein. Future mein kaam aayega.
+                <strong>Receipt Rakhein:</strong> Online ho ya offline, receipt ka screenshot/photo apne phone mein rakh lein. Future mein kaam aayega.
               </p>
             </div>
           </div>
@@ -338,7 +338,7 @@ export default function PmKisanVoluntarySurrenderGuide() {
             ))}
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
-            Isliye agar eligible nahi ho toh turant surrender kar do. <Link href="/articles/PmKisanMasterGuide2026" className="underline text-green-700 dark:text-green-400">Master Guide 2026 wala article</Link> mein eligibility criteria check karo.
+            Isliye agar eligible nahi ho toh apni marzi se surrender kar do. <Link href="/articles/PmKisanMasterGuide2026" className="underline text-green-700 dark:text-green-400">Master Guide 2026 wala article</Link> mein eligibility criteria check karo.
           </p>
         </section>
 

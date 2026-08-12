@@ -493,7 +493,7 @@ return (
      <CalcBanner
        icon=""
        title="Apni Tractor EMI Calculate Karo"
-       desc="Loan amount, interest rate, tenure daalo — monthly payment turant jaano"
+       desc="Loan amount, interest rate, tenure daalo — monthly payment ek click mein jaano"
        primaryCta={{ href: '/calculator/kcc-loan-emi', label: 'EMI Calculator →' }}
        secondaryCta={{ href: '/calculator', label: 'Sab Utilities' }}
      />
