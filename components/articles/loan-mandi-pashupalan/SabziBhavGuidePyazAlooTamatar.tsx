@@ -44,7 +44,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Kya cold storage ke against loan milta hai?',
-    a: 'Haan — isko pledge finance ya warehouse receipt loan kehte hain. Aloo cold storage mein rakh kar uski receipt ke against bank se loan mil sakta hai. Isse fayda yeh hai ki turant paise ki zaroorat bhi poori ho jaati hai aur stock hold bhi rehta hai. KCC limit bhi working capital ke liye kaam aati hai — dono options apne bank se discuss karo.',
+    a: 'Haan — isko pledge finance ya warehouse receipt loan kehte hain. Aloo cold storage mein rakh kar uski receipt ke against bank se loan mil sakta hai. Isse fayda yeh hai ki haath-kharch ki zaroorat bhi poori ho jaati hai aur stock hold bhi rehta hai. KCC limit bhi working capital ke liye kaam aati hai — dono options apne bank se discuss karo.',
   },
   {
     q: 'Sabzi mandi mein commission aur katauti kitni hoti hai?',
@@ -234,7 +234,7 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
           Aloo ka price pattern bhi supply gap wala hi hai — harvest (Jan-March) par sabse sasta, phir jaise-jaise
           cold storage ka stock nikalta hai, August se November tak bhav aam taur par behtar hota jaata hai.
           Ek apwaad bhi hai: jis saal storage mein maal zyada bhara hota hai, us saal ka September bhi thanda reh
-          sakta hai. Isliye storage bharne se pehle yeh zaroor pucho ki is saal aas-paas ke storages kitne bhare
+          sakta hai. Isliye storage bharne se pehle yeh pata karo ki is saal aas-paas ke storages kitne bhare
           hain — yeh chhoti si jaankari aadhi strategy hai.
         </p>
 

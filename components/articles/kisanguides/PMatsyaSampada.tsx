@@ -260,7 +260,7 @@ export default function PMatsyaSampada() {
           </li>
         </ul>
         <p className="mt-4 text-xs text-gray-600 dark:text-gray-400 italic border-t border-blue-200 dark:border-blue-800 pt-3">
-          <strong>Note:</strong> PMMSY aur related schemes ki guidelines aur subsidy limits samay-samay par update hoti rehti hain. Apply karne se pehle apne nazdeeki Fisheries Department office se latest norms zaroor confirm karein.
+          <strong>Note:</strong> PMMSY aur related schemes ki guidelines aur subsidy limits samay-samay par update hoti rehti hain. Apply karne se pehle apne nazdeeki Fisheries Department office se latest norms confirm kara lein.
         </p>
       </div>
 
@@ -670,7 +670,7 @@ export default function PMatsyaSampada() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        PMMSY ki 40-60% subsidy zaroor apply karein, lekin project ka ganit uske bina banayein. Sanction aur pehli installment ke beech aksar 3-6 mahine nikal jate hain, aur talab ki khudai, seed stocking aur feed ka kharch usse pehle shuru ho jata hai. Jo log subsidy ke paise se feed kharidne ka plan banate hain, unka pehla crop cycle wahin atak jata hai. Subsidy ko reimbursement maankar chalein — aa gayi toh working capital, na aayi toh bhi talab chalta rahe.
+        PMMSY ki 40-60% subsidy ke liye apply karein, lekin project ka ganit uske bina banayein. Sanction aur pehli installment ke beech aksar 3-6 mahine nikal jate hain, aur talab ki khudai, seed stocking aur feed ka kharch usse pehle shuru ho jata hai. Jo log subsidy ke paise se feed kharidne ka plan banate hain, unka pehla crop cycle wahin atak jata hai. Subsidy ko reimbursement maankar chalein — aa gayi toh working capital, na aayi toh bhi talab chalta rahe.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">

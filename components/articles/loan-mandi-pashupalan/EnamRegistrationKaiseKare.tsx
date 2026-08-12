@@ -16,7 +16,7 @@ const RELATED = [
 const FAQS_DATA = [
   {
     q: 'eNAM registration free hai ya paisa lagta hai?',
-    a: 'Farmer registration bilkul free hai. enam.gov.in par ya mandi ke eNAM help desk par — kahin bhi paisa nahi lagta. Agar koi CSC ya agent charge maange toh woh sirf apni service fee hai, portal ki koi fee nahi.',
+    a: 'Farmer registration ka ek rupaya nahi lagta. enam.gov.in par ya mandi ke eNAM help desk par — kahin bhi paisa nahi lagta. Agar koi CSC ya agent charge maange toh woh sirf apni service fee hai, portal ki koi fee nahi.',
   },
   {
     q: 'eNAM par fasal bechne ke liye kya documents chahiye?',
@@ -114,7 +114,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
-          Registration ka kharcha zero, kagaz sirf teen. Is guide mein registration se le kar gate entry, boli
+          Registration ka kharcha zero, kagaz sirf teen. Neeche registration se le kar gate entry, boli
           aur payment tak ka poora rasta hai — aur woh atakne wali jagahein bhi jo pehli baar walon ko pareshan
           karti hain.
         </p>
