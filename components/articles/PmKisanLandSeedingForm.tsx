@@ -461,9 +461,9 @@ export default function PmKisanLandSeedingFormPdf2026() {
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Seedhi Baat</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Form Bharne Se Pehle Do Cheezein Milaa Lein</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
-            Land seeding koi bada technical kaam nahi hai — bas kaagaz sahi honi chahiye aur Khasra number Khatauni se match karna chahiye. Pehle status check karein, "Not Seeded" dikhe tabhi form bharein, aur Patwari ka sign lagwana kabhi mat bhoolein. Ek baar record link ho jaaye, toh dobara ye jhanjhat nahi hoti.
+            Land seeding mein sabse zyada forms isi wajah se atakte hain: Khasra number Khatauni se match nahi karta, ya Patwari ka sign chhut jaata hai. Isliye pehle status check karein — "Not Seeded" dikhe tabhi form bharein — aur jama karne se pehle yeh dono cheezein milaa lein. Ek baar record link ho jaaye, toh dobara ye jhanjhat nahi hoti.
           </p>
         </div>
 

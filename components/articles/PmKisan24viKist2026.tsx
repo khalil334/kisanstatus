@@ -186,7 +186,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
           </div>
 
           <IB>
-            <strong>Meri Salah:</strong> Ye prediction hai, guarantee nahi. Official announcement aate hi yeh page update hoga. Bookmark kar lo taaki miss na ho. Main roz check karta hoon.
+            <strong>Dhyan rahe:</strong> October wali date pichhli kisto ke 4-mahine pattern par based andaza hai, official date nahi. Announcement aate hi yeh page update hoga — bookmark karke rakhein.
           </IB>
         </section>
 
@@ -336,7 +336,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
         <section className="mb-8">
           <SH>eKYC — Mandatory Hai</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Seedhi baat — bina eKYC ke koi kist nahi milegi. Period.
+            Bina eKYC ke 24vi kist release nahi hogi — 2023 se yeh niyam har kist par lagu hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Ye problem sabse aam hai. Agar abhi tak eKYC nahi ki to agli kist se pehle complete kar lein. Teen tarike hain:
@@ -434,7 +434,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             <li>Yeh page bookmark karo — date confirm hote hi update hoga</li>
           </ol>
           <p className="text-xs text-green-700 dark:text-green-400 mt-4 italic">
-             Meri personal advice: Aaj hi check karo — kal par mat chhodo. Bahut se kisan der kar dete hain aur kist ruk jati hai.
+             23vi kist mein jinki payment atki thi, unme sabse badi wajah NPCI seeding nikli thi — October se pehle ka time isi ko theek karne ke liye hai.
           </p>
         </div>
 

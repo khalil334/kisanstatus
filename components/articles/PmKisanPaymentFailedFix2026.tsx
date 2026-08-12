@@ -388,9 +388,9 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Seedhi Baat (Bottom Line)</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Failed Payment Ka Sabse Chota Rasta</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Payment failed dekh ke ghabrane ki koi baat nahi. Zyadatar cases bank visit aur Aadhaar seeding se hi solve ho jaate hain. Aaj hi shuru kar do, jitni jaldi fix hoga utni jaldi paisa aayega. Aur ek baat — is kaam ke liye kisi middleman ko ek rupaya bhi mat do, sab kuch bilkul free hai.
+            “Payment Failed” ka matlab paisa cancel nahi hua — agli FTO cycle mein dobara try hota hai, isliye fix jitna jaldi hoga, utni jaldi wahi atki rakam aa jaati hai. Zyadatar cases ek hi bank visit mein sulajh jaate hain: Aadhaar seeding aur NPCI mapping dono ek saath confirm karwa lein. Iske liye kisi middleman ko paisa dene ki zaroorat nahi — na bank iske charge leta hai, na portal.
           </p>
         </div>
 
