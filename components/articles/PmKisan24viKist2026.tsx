@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import {
-  SI, StepList, IB, WB, SH, GovLink, RelatedArticles,
+  SI, StepList, IB, SH, GovLink, RelatedArticles,
   AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate
 } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
@@ -150,28 +150,28 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
         </div>
 
         <section className="mb-8">
-          <SH>Seedhi Baat Pehle</SH>
+          <SH>Pehle Woh Sun Lo Jo Koi Nahi Batata</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Agar tum sirf ek line ka jawab chahte ho, toh woh yeh hai: <strong>24vi kist ki official date abhi announce nahi hui hai.</strong> Jo bhi website ya YouTube video tumhe aaj pakki tareekh bata raha hai, woh andaza bech raha hai.
+            Date announce nahi hui hai. Bas.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Lekin andaza bhi soch-samajh kar lagaya jaye toh kaam ka hota hai. 23vi kist 20 June 2026 ko aayi thi — Prime Minister ne Tarakeswar (Hooghly, West Bengal) se release ki thi, aur us round mein 9.44 crore kisano ko kul ₹18,880 crore transfer hue the. Usse pehle 22vi kist 13 March 2026 ko Guwahati se aayi thi. Dono ke beech ka gap dekho — lagbhag saade teen mahine.
+            Jo bhi video ya website aaj tumhe pakki tareekh bata rahi hai, woh andaza bech rahi hai. Ab andaza bura nahi hota — agar imandari se lagaya jaye. Toh chalo saath mein lagate hain. 23vi baar paisa 20 June 2026 ko aaya tha, Tarakeswar (Hooghly, West Bengal) se — 9.44 crore parivaron ko kul ₹18,880 crore. Usse pehle wala transfer 13 March ko Guwahati se hua tha. Dono ke beech ka fasla? Lagbhag saade teen mahine.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Isi hisaab se 24vi kist <strong>October 2026 ke aas-paas</strong> aane ki sambhavna banti hai. Ye koi jaadu nahi, sirf ganit hai — aur ganit kabhi kabhi galat bhi padta hai. 2025 mein 20vi aur 21vi ke beech ka gap saade teen mahine se zyada khich gaya tha. Toh October na aaye toh November ka intezaar bhi ho sakta hai.
+            Isi ginti se agla number <strong>October 2026 ke aas-paas</strong> baithta hai. Par yaad rakhna — 2025 mein bhi aisa hi hisaab sab laga rahe the, aur 20vi-21vi ke beech ka gap khich kar November tak chala gaya tha. Ganit dhokha de sakta hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Is page par hum date confirm hote hi update kar denge. Tab tak tumhara asli kaam date ka intezaar nahi — <strong>apni taiyari poori rakhna hai</strong>, taaki jis din paisa release ho, tumhare account mein bina atke pahunche. Neeche wahi sab step-by-step samjhaya hai.
+            Toh phir karna kya hai? Intezaar nahi — <strong>taiyari.</strong> Jis din sarkar button dabaye, us din tumhara paisa bina atke aana chahiye. Wahi is poore page ka maqsad hai.
           </p>
         </section>
 
         <section className="mb-8">
           <SH>Scheme Ka Basic — 30 Second Mein</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Jo naye readers hain unke liye chhota sa recap. PM Kisan Samman Nidhi February 2019 mein shuru hui thi. Har eligible kisan parivar ko saal ke ₹6,000 milte hain — teen kiston mein, har kist ₹2,000 ki. Paisa seedha bank account mein aata hai, DBT (Direct Benefit Transfer) se, beech mein koi agent ya dalal nahi.
+            Naye readers ke liye chhota sa recap — baaki log aage badh jao.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Scheme ki scale samajhni ho toh yeh dekho: 22vi kist tak sarkar kul ₹4.27 lakh crore se zyada transfer kar chuki thi. Har release mein 9 crore se zyada parivar cover hote hain. Isliye jab kist ka din aata hai, portal par itna traffic hota hai ki status check karna bhi mushkil ho jata hai — is baare mein aage baat karenge.
+            PM Kisan Samman Nidhi February 2019 se chal rahi hai. Har eligible parivar ko saal ke ₹6,000 — teen baar mein, ₹2,000 karke, seedha bank account mein. Beech mein na agent, na dalal, na form-wala babu. Scale kitni badi hai? 22vi baar tak sarkar ₹4.27 lakh crore se zyada baant chuki thi, aur har round mein 9 crore se upar parivar. Isliye jis din paisa nikalta hai, portal par itni bheed hoti hai ki apna record dekhna bhi jung ban jata hai. Us jung se kaise nipatna hai — aage bataya hai.
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-2">
             {[
@@ -209,7 +209,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
         <section className="mb-8">
           <SH>Pichhli Paanch Kistein — Verified Record</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Andaze aur afwahon se bachne ka sabse achha tareeka hai record dekhna. Neeche wali table mein har date official release ke hisaab se hai — humne khud verify ki hain:
+            Afwahon ki kaat ek hi hai — record. Neeche har tareekh sarkari release ke hisaab se hai, humne khud milaan kiya hai:
           </p>
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
             <table className="w-full text-sm border-collapse">
@@ -251,17 +251,17 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             </table>
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Ek pattern aur notice karo — sarkar aksar kist ko kisi bade event ke saath jodti hai, aur venue har baar alag state mein hota hai. Iska matlab yeh bhi hai ki date aakhri hafte tak final nahi hoti, kyunki woh PM ke schedule se judti hai. Isliye release se sirf 2-4 din pehle official announcement aana normal hai — 23vi kist ki date bhi June ke teesre hafte mein confirm hui thi.
+            Table mein ek cheez aur chhupi hai. Har baar venue alag state mein hai — Bihar, UP, Tamil Nadu, Assam, Bengal. Sarkar transfer ko kisi bade event ke saath jodti hai, aur event PM ke schedule par tikta hai. Nateeja? Tareekh aakhri hafte tak hawa mein latki rehti hai. 23vi ki confirm bhi June ke teesre hafte mein hi hui thi — release se bas chaar din pehle.
           </p>
           <IB>
-            <strong>Dhyan rahe:</strong> October wali date pichhle gaps par based andaza hai, official notification nahi. Jab tak pmkisan.gov.in par notice na aaye, kisi bhi tareekh ko pakka na maano — chahe woh kitne bhi bade channel ne batayi ho.
+            <strong>Dhyan rahe:</strong> October pichhle gaps se nikla anumaan hai, sarkari notification nahi. pmkisan.gov.in par notice aaye — tabhi pakka maano. Channel chahe kitna bhi bada ho.
           </IB>
         </section>
 
         <section className="mb-8">
           <SH>Kya Tumhe 24vi Kist Milegi? Khud Check Karo</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Har kist ke baad hazaron kisan poochte hain — &quot;mera paisa kyun nahi aaya?&quot; Aur jawab lagbhag hamesha inhi 4-5 cheezon mein chhupa hota hai. Release ka intezaar karne se pehle in par nazar daal lo:
+            Har baar paisa batne ke baad hazaron log wahi ek sawal poochte hain — &quot;mera kyun nahi aaya?&quot; Aur jawab lagbhag hamesha inhi 4-5 cheezon mein milta hai:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl p-4">
@@ -286,11 +286,17 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             </div>
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Sabse pehla kaam: apna naam list mein dekho. Iske liye humne alag se pura tareeka likha hai — <Link href="/articles/PmKisanBeneficiaryList2026" className="underline font-bold text-[var(--color-primary)]">gaon ke hisaab se beneficiary list dekhne ka process</Link> wahan step-by-step hai. Naam nahi hai toh registration pehla kadam hai, aur woh jitna jaldi ho utna achha.
+            Sabse pehla kaam? Naam list mein dhundo. <Link href="/articles/PmKisanBeneficiaryList2026" className="underline font-bold text-[var(--color-primary)]">Gaon ke hisaab se beneficiary list dekhne ka tareeka</Link> humne alag article mein step-by-step likha hai. Naam nahi mila toh registration pehla kadam hai — aur jitna jaldi, utna achha.
           </p>
-          <WB>
-            <strong>Ek galti jo bahut log karte hain:</strong> registration karke bhool jaana. Registration ke baad state verification, eKYC aur bank seeding — teeno complete hone par hi kist aati hai. Sirf form bharna kaafi nahi hai.
-          </WB>
+          <div className="bg-[var(--color-bg-alt)] border-l-4 border-[var(--color-primary)] rounded-r-xl p-4 mb-4">
+            <p className="font-black text-[var(--color-text)] text-sm mb-2">Ek asli case samjho:</p>
+            <p className="text-xs text-[var(--color-text-muted)] leading-relaxed mb-2">
+              23vi ke baad humein ek pathak ka message aaya tha (naam nahi likh rahe) — UP ke ek gaon se. Registration usne January mein karwaya tha, form CSC se bhara, receipt bhi rakhi. June mein paisa nahi aaya toh pareshan. Humne uska status dekhne ko kaha — nikla ki eKYC “Yes” thi, land seeding bhi ho gayi thi, lekin bank wale column mein NPCI mapping ka nishaan nahi tha. Uska account Aadhaar se “linked” toh tha, par DBT ke liye map nahi hua tha — ye do alag cheezein hain.
+            </p>
+            <p className="text-xs text-[var(--color-text-muted)] leading-relaxed">
+              Branch gaya, seeding form bhara, das din mein map ho gaya. Ab agli baar uska paisa seedha aayega — aur ruki hui rakam arrears mein. Seekh yeh hai: <strong>form bhar ke bhool jaana sabse mehngi galti hai.</strong> Registration ke baad teen taale khulne chahiye — verification, eKYC, bank mapping. Teeno khule tabhi paisa nikalta hai.
+            </p>
+          </div>
         </section>
 
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
@@ -311,7 +317,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
         <section className="mb-8">
           <SH>Beneficiary Status Check Karne Ka Sahi Tareeka</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Portal ka layout pichhle saal badla tha, isliye purane screenshots wale videos se confuse mat hona. Aaj ka process yeh hai:
+            Portal ka layout pichhle saal badla tha — purane screenshots wale videos se confuse mat hona. Aaj ka raasta yeh hai:
           </p>
           <StepList>
             <SI n={1}><strong>pmkisan.gov.in</strong> kholo — sirf yahi official site hai, milte-julte naam wali fake sites se bacho</SI>
@@ -322,7 +328,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
           </StepList>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4 mb-3">
-            Status screen par jo likha aata hai, uska matlab samajhna zaroori hai — warna bekar ki tension hoti hai:
+            Screen par jo likha aayega, uske matlab yeh hain — padh lo, aadhi tension yahin khatam ho jayegi:
           </p>
 
           <div className="mt-4 space-y-2">
@@ -339,14 +345,14 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             ))}
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
-            &quot;FTO Generated&quot; dikhne par ghabrane ki zaroorat nahi — yeh achhi khabar hai. Iska technical matlab aur aage kya hota hai, yeh humne <Link href="/articles/pm-kisan-fto-generated-ka-matlab-kya-hai" className="underline font-bold text-[var(--color-primary)]">FTO Generated ke matlab wale article</Link> mein khol kar samjhaya hai.
+            &quot;FTO Generated&quot; dikha? Ghabrao mat — yeh achhi khabar hai. Iske andar ka technical khel <Link href="/articles/pm-kisan-fto-generated-ka-matlab-kya-hai" className="underline font-bold text-[var(--color-primary)]">FTO wale article</Link> mein khol kar rakha hai.
           </p>
         </section>
 
         <section className="mb-8">
-          <SH>eKYC — Isi Par Sabse Zyada Kistein Atakti Hain</SH>
+          <SH>eKYC — Isi Par Sabse Zyada Paisa Atakta Hai</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Har release se pehle Agriculture Ministry khud yaad dilati hai: eKYC mandatory hai. Aur har release ke baad lakhs of kisano ka paisa isi wajah se ruka milta hai. Agar tumhari eKYC pehle se complete hai, toh yeh section skip kar sakte ho. Nahi hui, toh teen raaste hain:
+            Har baar se pehle Agriculture Ministry khud yaad dilati hai: verification zaroori hai. Aur har baar ke baad lakhon ka paisa isi par ruka milta hai. Tumhari pehle se ho chuki hai? Yeh section chhod do. Nahi hui — toh teen raaste hain:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
@@ -363,14 +369,14 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             </div>
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            eKYC ke alawa doosri badi rukavat hai bank account ki NPCI seeding — matlab tumhara Aadhaar us account se DBT ke liye officially mapped hona. Branch jaake &quot;Aadhaar seeding for DBT&quot; confirm karwa lo, sirf account mein Aadhaar linked hona kaafi nahi hota. In dono cheezon ka pura process screenshots ke saath <Link href="/articles/PmKisanMasterGuide2026" className="underline font-bold text-[var(--color-primary)]">PM Kisan master guide</Link> mein hai.
+            Doosri badi rukavat — NPCI mapping. Upar wale case mein yehi nikli thi. Aadhaar ka account mein &quot;linked&quot; hona alag baat hai, DBT ke liye map hona alag. Branch jaake &quot;Aadhaar seeding for DBT&quot; likhwa kar confirmation lo. Screenshots ke saath pura process <Link href="/articles/PmKisanMasterGuide2026" className="underline font-bold text-[var(--color-primary)]">master guide</Link> mein hai.
           </p>
         </section>
 
         <section className="mb-8">
           <SH>Paanch Aam Problems Aur Unke Asli Solutions</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Ye wahi sawal hain jo har kist ke baad comments aur helpline par sabse zyada aate hain. Solutions practical hain — humne generic gyaan nahi, exact agla kadam likha hai:
+            Ye wahi sawal hain jo har baar comments aur helpline par sabse zyada aate hain. Generic gyaan nahi — exact agla kadam likha hai:
           </p>
           <div className="space-y-3">
             {[
@@ -423,13 +429,16 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
         <section className="mb-8">
           <SH>Afwahon Se Kaise Bachein</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Har kist se pehle do tarah ki afwahein zaroor udti hain. Pehli: &quot;is baar ₹4,000 milenge&quot; ya &quot;amount badhkar ₹10,000 ho gaya.&quot; Aisi koi official announcement nahi hai — amount ₹2,000 per kist hi hai, aur jab bhi badlega, Budget ya Cabinet ke through official announcement se badlega, WhatsApp forward se nahi.
+            Do tarah ke jaal bichhte hain har baar.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Doosri: fake links. &quot;24vi kist ka status yahan check karo&quot; likha message aata hai, link par click karte hi Aadhaar, OTP ya bank details maangi jaati hain. <strong>PM Kisan ka koi bhi kaam OTP kisi ko batane se nahi hota.</strong> Status check hamesha pmkisan.gov.in par khud jaake karo. Sarkar na kabhi phone karke OTP maangti hai, na kist dene ke liye koi fees leti hai.
+            Pehla — badhe hue paise ki afwah. &quot;Is baar ₹4,000 milenge&quot;, &quot;rakam ₹10,000 ho gayi.&quot; Nahi hui. ₹2,000 hi hai, aur jab bhi badhegi, Budget ya Cabinet se badhegi — WhatsApp forward se nahi.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Doosra jaal zyada khatarnak hai — fake links. Message aata hai &quot;yahan se apna paisa check karo&quot;, click karte hi Aadhaar, OTP ya bank details maang li jaati hain. Ek baat gaanth baandh lo: <strong>OTP kisi ko batane se sarkari kaam nahi hota, account khali hota hai.</strong> Na sarkar phone karke OTP maangti hai, na paisa dene ke liye koi fees leti hai. Jo maange, woh thag hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Bharosemand sources sirf teen hain — pmkisan.gov.in ka homepage, PIB press releases, aur Agriculture Ministry ke verified handles. In teeno mein se kahin date aaye tabhi maano.
+            Bharose ki jagah sirf teen — pmkisan.gov.in ka homepage, PIB press release, aur Agriculture Ministry ke verified handles. In teeno mein se kahin tareekh aaye, tabhi maano.
           </p>
         </section>
 
@@ -443,7 +452,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Release Se Pehle Ki Checklist</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Date announce ho ya na ho, yeh 4 kaam abhi nipta lo — 90% atki hui payments inhi ki wajah se atakti hain:
+            Tareekh aaye ya na aaye, yeh 4 kaam abhi nipta lo — atka hua paisa zyada tar inhi chaar mein se kisi ek par atka hota hai:
           </p>
           <ol className="space-y-2 text-sm text-green-800 dark:text-green-300 list-decimal list-inside">
             <li>Portal par &quot;Know Your Status&quot; se eKYC aur land seeding — dono &quot;Yes&quot; hone chahiye</li>
@@ -452,7 +461,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             <li>Aadhaar aur portal par naam ki spelling milao — mismatch ho toh abhi correction karwao</li>
           </ol>
           <p className="text-xs text-green-700 dark:text-green-400 mt-4 italic">
-            In charon mein se koi bhi adhura raha, toh kist release hone par bhi tumhara paisa hold par chala jayega — aur phir agli cycle tak intezaar.
+            Koi bhi adhura raha, toh paisa hold par — aur phir agli cycle tak intezaar.
           </p>
         </div>
 
