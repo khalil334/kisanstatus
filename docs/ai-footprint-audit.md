@@ -536,7 +536,7 @@ P0/P1 are where the AI feel actually lives. P2/P3 are polish.
 
 - Migrate the 8 hand-typed `FAQPage` JSON-LD files (`kisanguides/` ×7 + `hindi-yojana/KisanKarjMafiList2027.tsx`) to `<FAQBlock>` — one Q&A array, schema derived from visible text. Fixes the drift (e.g. `VerminCompost.tsx`). FAQ wording itself is not changed beyond picking the correct single version.
 
-### Part 3 — Closing blocks ("Seedhi Baat" formula), 4 batches
+### Part 3 — Closing blocks ("Seedhi Baat" formula), 4 batches — 3a ✅ DONE (2026-08-12, PR #253)
 
 *Files: 47 total · Type: per-article copy*
 
@@ -567,6 +567,14 @@ P0/P1 are where the AI feel actually lives. P2/P3 are polish.
 Part 1 → Part 2 → Part 3 (a–d) → Part 4 → Part 5 → Part 6. Each part ships as its own PR and waits for owner review before the next starts.
 
 ## 12. Changelog
+
+### 2026-08-12 — Part 3a complete (`fix/part-3a-closing-blocks-root`, PR #253)
+
+- **12 root `PmKisan*` closing blocks rewritten.** Every shared "Seedhi Baat" / "Bottom Line" / "Meri Salah" label removed; each article now closes on something only true for that article: FTO post-generation timeline (`pm-kisan-fto-…`), Diary-number complaint hierarchy (`PmKisanStateNodalOfficerList`), eKYC→NPCI-seeding gotcha (`PmKisanEkycOnline2026`), self-registration checklist (`PmKisanSelfRegisteredStatusCheck`), Khasra/Patwari pre-checks (`PmKisanLandSeedingForm`), pre-kist checklist (`PmKisan24viKist2026`), release-cycle math (`PmKisan25viKist2027`), list-audit framing (`PmKisanVillageWiseListPdfDownload`, `PmKisanBeneficiaryList2026`), fix-order-first framing (`PmKisanRejectedStatusReApplyGuide`), FTO-retry framing (`PmKisanPaymentFailedFix2026`), three-causes closing (`PmKisanMasterGuide2026`).
+- Pep-talk tics deleted ("aaj hi kar lo bhai", "bahana mat banao", "Period.", "Simple hai!"); similar length kept; no keyword anchors, FAQs or unrelated prose touched. Also de-labelled inline "Seedhi baat"/"Bottom Line" strong-tags, one "Sach ye hai" (`PmKisanMaandhanYojanaPension`), and renamed the `PmKisanVoluntarySurrenderGuide` "Zaroori Baatein Jo Yaad Rakhein" heading.
+- **Build fix:** `kisanguides/BakriPalanYojana.tsx` was missing `AuthorBox` + `getArticleBySlug` imports since Part 2 — `tsc --noEmit` failed on main; now clean.
+
+**Pages to re-check in a browser after deploy:** /articles/PmKisan24viKist2026, /articles/PmKisan25viKist2027, /articles/PmKisanBeneficiaryList2026, /articles/PmKisanEkycOnline2026, /articles/PmKisanLandSeedingForm, /articles/PmKisanMasterGuide2026, /articles/PmKisanPaymentFailedFix2026, /articles/PmKisanRejectedStatusReApplyGuide, /articles/PmKisanSelfRegisteredStatusCheck, /articles/PmKisanStateNodalOfficerList, /articles/PmKisanVillageWiseListPdfDownload, /articles/PmKisanVoluntarySurrenderGuide, /articles/pm-kisan-fto-generated-ka-matlab-kya-hai, /articles/pm-kisan-maandhan-yojana-pension, /articles/bakri-palan-yojana-nlm-subsidy.
 
 ### 2026-08-12 — Part 2 complete (`fix/part-2-faq-schema`)
 
