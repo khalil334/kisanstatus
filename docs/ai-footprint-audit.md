@@ -530,7 +530,7 @@ P0/P1 are where the AI feel actually lives. P2/P3 are polish.
 - Rewrite the 7-file portal CTA sentence ("…10 second baad portal khulega") so each file words it differently.
 - One related-section label site-wide (replaces the 4 rotating labels).
 
-### Part 2 — FAQ schema correctness (Google requirement)
+### Part 2 — FAQ schema correctness (Google requirement) ✅ DONE (2026-08-12, PR: fix/part-2-faq-schema)
 
 *Files: 8 · Type: template*
 
@@ -567,6 +567,17 @@ P0/P1 are where the AI feel actually lives. P2/P3 are polish.
 Part 1 → Part 2 → Part 3 (a–d) → Part 4 → Part 5 → Part 6. Each part ships as its own PR and waits for owner review before the next starts.
 
 ## 12. Changelog
+
+### 2026-08-12 — Part 2 complete (`fix/part-2-faq-schema`)
+
+- **Verified the drift before fixing.** Of the 8 hand-typed `FAQPage` JSON-LD files, **3 had genuine schema/visible-text mismatch** — a real Google structured-data violation: `kisanguides/VerminCompost.tsx` (all 4 questions differed), `kisanguides/BakriPalanYojana.tsx` (4 of 7 questions *and* their answers differed), `kisanguides/MadhumakhiPalan.tsx` (3 of 4 questions differed). The other 5 (`MushroomKheti`, `PMatsyaSampada`, `PMFMEYojana`, `SilageMaking`, `hindi-yojana/KisanKarjMafiList2027`) matched but still duplicated their FAQ text in two places, so they were one edit away from drifting.
+- **All 8 migrated to `<FAQBlock>`** — schema is now generated from the same array that renders, so drift is structurally impossible. Where the two versions disagreed, the **visible on-page wording won** and the schema follows it. All 44 FAQs preserved verbatim; none reworded, added or removed.
+- **`FAQBlock` extended** (`components/ArticleShared.tsx`) — `faqs[].a` widened from `string` to `React.ReactNode` plus a new optional `schemaText`, so an answer containing an internal `<Link>` renders as JSX while contributing plain text to the JSON-LD. Used by `MadhumakhiPalan` (organic-farming-zones link) and `BakriPalanYojana` (KCC guide link). The other 59 existing string-only callers are unaffected.
+- **`BakriPalanYojana.tsx` is a server component again** — its file-local `FaqItem` accordion, `useState` and `'use client'` directive were removed in favour of `FAQBlock variant="accordion"`.
+- Removed the 6 now-empty `jsonLd` `@graph` objects and their `<script type="application/ld+json">` tags from the `kisanguides/` files. Visible FAQ headings, section order and card/inline styling per article were left as they were.
+- No article prose was rewritten; no word-count trimming; no keyword touched.
+
+**Pages to re-check in a browser after deploy:** /articles/vermi-compost-business-guide, /articles/bakri-palan-yojana-nlm-subsidy, /articles/madhumakhi-palan-kvic-subsidy, /articles/mushroom-kheti-nhb-subsidy, /articles/pm-matsya-sampada-yojana-fish-farming, /articles/pm-fme-yojana-food-processing, /articles/silage-making-business-guide, /articles/hi/karj-mafi-list.
 
 ### 2026-08-12 — Part 1 complete (`fix/part-1-shared-boilerplate`)
 
