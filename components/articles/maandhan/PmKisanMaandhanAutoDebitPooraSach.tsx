@@ -144,7 +144,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
-          Aaj main aapko yahan bataunga ke yeh auto-debit kaise kaam karta hai, kyun kat ta hai, kitna kat ta hai, aur agar aap chahein toh is process ko kaise control kar sakte hain. Saath hi yeh bhi samjhaunga ke agar kisi mahine payment miss ho jaye toh kya hota hai, aur default hone se kaise bacha jaye. Sab kuch official sources — PIB release, DAC&amp;FW operational guidelines, aur maandhan.in portal — se verify karke.
+          Aaj main aapko yahan bataunga ke yeh katauti kaise kaam karti hai, kyun kat ta hai, kitna kat ta hai, aur agar aap chahein toh is process ko kaise control kar sakte hain. Saath hi yeh bhi samjhaunga ke agar kisi mahine payment miss ho jaye toh kya hota hai, aur default hone se kaise bacha jaye. Sab kuch official sources — PIB release, DAC&amp;FW operational guidelines, aur maandhan.in portal — se verify karke.
         </p>
 
         <section className="mb-8">
@@ -240,13 +240,13 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
         <section className="mb-8">
           <SH>Agar Bank Account Mein Balance Nahi Hai Toh Kya Hota Hai? Default Ka Exact Process</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Yeh sabse important section hai. Kai kisan sochte hain ke "Maine toh auto-debit band kar diya tha apne man se, ab kuch nahi hoga." Lekin aisa nahi chalta. NACH mandate aapke bank mein tab tak active rehta hai jab tak aap officially cancel nahi karwate.
+            Yeh sabse important section hai. Kai kisan sochte hain ke "Maine toh mandate band kar diya tha apne man se, ab kuch nahi hoga." Lekin aisa nahi chalta. NACH mandate aapke bank mein tab tak active rehta hai jab tak aap officially cancel nahi karwate.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Jab aapka monthly share due hota hai, toh LIC demand generate karti hai. Sponsor bank IDBI usse NPCI ke through aapke bank ko bhejta hai. Aapke bank try karta hai amount debit karne ka. Agar balance nahi hai, toh debit fail ho jata hai. Isko "bounced debit" kehte hain.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Ab yahan official guidelines ka exact process samajhna zaroori hai. DAC&amp;FW ke operational guidelines ke hisaab se, agar auto-debit fail hota hai, toh account "default" mein chala jata hai. Lekin usi waqt khatra nahi hai. LIC demand ko agle payment cycle mein dobara raise karti hai. Payment cycles har mahine 1st, 11th, aur 21st ko hote hain. Agar yeh dates public holiday hain, toh agla working day hota hai.
+            Ab yahan official guidelines ka exact process samajhna zaroori hai. DAC&amp;FW ke operational guidelines ke hisaab se, agar debit fail hota hai, toh account "default" mein chala jata hai. Lekin usi waqt khatra nahi hai. LIC demand ko agle payment cycle mein dobara raise karti hai. Payment cycles har mahine 1st, 11th, aur 21st ko hote hain. Agar yeh dates public holiday hain, toh agla working day hota hai.
           </p>
 
           <div className="space-y-3 mb-4">
@@ -269,14 +269,14 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
           </div>
 
           <WB>
-            <strong>Default hone se bachne ke liye:</strong> Har hafte apne bank account ka balance check karein. Agar auto-debit fail ho, toh us hafte hi CSC center jakar manual payment karein. 3 mahine se zyada gap mat dein. Agar kisi mahine PM Kisan ki kist late aayi, toh manual payment ka option use karein.
+            <strong>Default hone se bachne ke liye:</strong> Har hafte apne bank account ka balance check karein. Agar debit fail ho, toh us hafte hi CSC center jakar manual payment karein. 3 mahine se zyada gap mat dein. Agar kisi mahine PM Kisan ki kist late aayi, toh manual payment ka option use karein.
           </WB>
         </section>
 
         <section className="mb-8">
           <SH>Auto-Debit Band Kaise Karein? NACH Mandate Cancellation Ka Exact Process</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Agar aap chahte hain ke PM Kisan ke paise se share na kata jaye, balki aap khud alag se jama karein, toh aap auto-debit band karwa sakte hain. Lekin band karne se aapka monthly payment band nahi hota — aapko khud se jama karna padta hai, warna default ho jayega.
+            Agar aap chahte hain ke PM Kisan ke paise se share na kata jaye, balki aap khud alag se jama karein, toh aap ye mandate band karwa sakte hain. Lekin band karne se aapka monthly payment band nahi hota — aapko khud se jama karna padta hai, warna default ho jayega.
           </p>
 
           <StepList>
@@ -286,7 +286,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
           </StepList>
 
           <IB>
-            Mandate cancel karne se aapka PM-KMY account band nahi hota. Sirf auto-debit band hota hai. Aapko ab har mahine khud se payment karni hogi — chahe CSC center ja kar cash dein, ya maandhan.in pe online pay karein, ya bank branch mein jama karwayein. Agar payment miss hui, toh wohi default process shuru ho jayega.
+            Mandate cancel karne se aapka PM-KMY account band nahi hota. Sirf katauti rukti hai. Aapko ab har mahine khud se payment karni hogi — chahe CSC center ja kar cash dein, ya maandhan.in pe online pay karein, ya bank branch mein jama karwayein. Agar payment miss hui, toh wohi default process shuru ho jayega.
           </IB>
         </section>
 
@@ -308,7 +308,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
         <section className="mb-8">
           <SH>Manual Payment Ke Tareeke: Jab Auto-Debit Band Ho Gaya</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Auto-debit band karne ke baad aapke paas 3 tareeke hain apna share jama karne ke.
+            Mandate band karne ke baad aapke paas 3 tareeke hain apna share jama karne ke.
           </p>
 
           <div className="space-y-3 mb-4">
@@ -341,7 +341,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
           </div>
 
           <IB>
-            Agar aap gaon mein hain aur CSC center aasani se available hai, toh auto-debit band mat karo. Kyunki har mahine CSC jana ya online payment karna ek extra responsibility hai. Auto-debit mein aapka share time par chala jata hai aur account active rehta hai. Sirf tab band karo jab aapko sach mein problem ho rahi ho — jaise account change karna hai ya PM Kisan ki kist irregular aati hai.
+            Agar aap gaon mein hain aur CSC center aasani se available hai, toh ise band mat karo. Kyunki har mahine CSC jana ya online payment karna ek extra responsibility hai. Auto-debit mein aapka share time par chala jata hai aur account active rehta hai. Sirf tab band karo jab aapko sach mein problem ho rahi ho — jaise account change karna hai ya PM Kisan ki kist irregular aati hai.
           </IB>
         </section>
 
@@ -406,7 +406,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Band Karwane Se Pehle SMS Trail Set Kar Lein</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Auto-debit consent aapne enrollment par diya tha aur kabhi bhi wapas le sakte hain — lekin band karwane ke baad har mahine khud jama karne ki zimmedari aap par aa jaati hai, aur wahi woh mod hai jahan zyada tar accounts dormant hote hain. Isliye band karwane se pehle registered mobile number active karwa lein: har jama contribution ka SMS aata hai, aur jis mahine SMS na aaye, usi hafte KPAN se maandhan.in par balance check kar lein. Ye chhota sa trail 60 saal wali ₹3000 pension ko default se bachaata hai.
+            Ye consent aapne enrollment par diya tha aur kabhi bhi wapas le sakte hain — lekin band karwane ke baad har mahine khud jama karne ki zimmedari aap par aa jaati hai, aur wahi woh mod hai jahan zyada tar accounts dormant hote hain. Isliye band karwane se pehle registered mobile number active karwa lein: har jama contribution ka SMS aata hai, aur jis mahine SMS na aaye, usi hafte KPAN se maandhan.in par balance check kar lein. Ye chhota sa trail 60 saal wali ₹3000 pension ko default se bachaata hai.
           </p>
         </div>
 

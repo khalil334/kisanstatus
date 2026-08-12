@@ -49,7 +49,7 @@ const OFFICERS = ALL_REGIONS.map(region => ({
 const FAQS_DATA = [
   {
     q: '155261 helpline se kaam nahi ban raha, ab kya karein?',
-    a: '155261 ek national call center hai. Agar wahan se solution na mile, toh direct apne State Nodal Officer ko email karein ya official grievance portal par shikayat darj karein. Nodal officer ke paas district administration ko order dene ki power hoti hai.',
+    a: '155261 ek national call center hai. Agar wahan se solution na mile, toh direct state ke is adhikari ko email karein ya official grievance portal par shikayat darj karein. Nodal officer ke paas district administration ko order dene ki power hoti hai.',
   },
   {
     q: 'Nodal officer ko email likhne ka sahi format kya hai?',
@@ -164,7 +164,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
           <DB>
             <strong>Zameen Ki Kahani:</strong>
             <p className="text-xs text-gray-700 dark:text-gray-300 mt-2">
-              Varanasi ke Ramesh ji ki 23vi kist nahi aayi. 155261 par 5 baar call kiya, har baar "wait karo" bola. Phir unhone UP ke nodal officer ko email kiya aur subject mein apna Registration Number likha. Kuch din mein reply aaya, district officer ko instruction mili, problem resolve hui, aur pending kist bhi mil gayi.
+              Varanasi ke Ramesh ji ki 23vi kist nahi aayi. 155261 par 5 baar call kiya, har baar "wait karo" bola. Phir unhone UP ke adhikari ko email kiya aur subject mein apna Registration Number likha. Kuch din mein reply aaya, district officer ko instruction mili, problem resolve hui, aur pending kist bhi mil gayi.
             </p>
           </DB>
         </section>
@@ -181,7 +181,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
             <li>District officers (DAO/BAO) ki jawabdehi tay kar sakta hai.</li>
           </ul>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Isliye jab local level (Lekhpal ya BAO) par kaam nahi banta, toh nodal officer se contact karna sabse effective tarika hai.
+            Isliye jab local level (Lekhpal ya BAO) par kaam nahi banta, toh state-level adhikari se contact karna sabse effective tarika hai.
           </p>
         </section>
 
@@ -193,7 +193,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
 
           <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl p-4 mb-4">
             <p className="text-xs text-amber-800 dark:text-amber-300">
-              <strong>Important Notice:</strong> Specific State Nodal Officer ke direct email IDs aur phone numbers frequently update hote hain. Fake ya outdated numbers se bachne ke liye, humne neeche central PM Kisan ICT email aur helpline di hai. Apne state ke exact current officer ka direct contact jaanne ke liye neeche diye gaye official link ka upyog karein.
+              <strong>Important Notice:</strong> In adhikariyon ke direct email IDs aur phone numbers frequently update hote hain. Fake ya outdated numbers se bachne ke liye, humne neeche central PM Kisan ICT email aur helpline di hai. Apne state ke exact current officer ka direct contact jaanne ke liye neeche diye gaye official link ka upyog karein.
             </p>
           </div>
 
@@ -229,12 +229,12 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
                Official Nodal Officers List Dekhein
             </p>
             <p className="text-xs text-green-700 dark:text-green-400 mb-3">
-              Sabhi states ke updated Nodal Officer names, direct email IDs, aur phone numbers ke liye official PM Kisan portal par jaayein.
+              Sabhi states ke updated names, direct email IDs, aur phone numbers ke liye official PM Kisan portal par jaayein.
             </p>
             <button
               onClick={() => handleOfficialLink(
                 'PM Kisan Nodal Officers List',
-                'Official PM Kisan Nodal Officers list khulne wali hai. Thoda wait karo...',
+                'Official list khulne wali hai. Thoda wait karo...',
                 'https://pmkisan.gov.in/NodalOfficers.aspx'
               )}
               className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
@@ -354,7 +354,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
         <section className="mb-8">
           <SH>Kis Type Ki Problems Ke Liye Contact Karein?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Har choti-moti problem (jaise eKYC kaise karein) ke liye nodal officer ko pareshan mat karo. Ye serious problems ke liye contact karo:
+            Har choti-moti problem (jaise eKYC kaise karein) ke liye inhe pareshan mat karo. Ye serious problems ke liye contact karo:
           </p>
           <div className="space-y-3">
             {[
@@ -406,11 +406,11 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Shikayat Ka Sahi Raasta — Aur Diary Number Kyun Sabse Zaroori Hai</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Nodal officer ko seedha email karna aksar bekar jaata hai agar helpline ka record nahi hai — isliye hierarchy ka order matter karta hai:
+            Seedha email karna aksar bekar jaata hai agar helpline ka record nahi hai — isliye hierarchy ka order matter karta hai:
           </p>
           <ol className="space-y-2 text-sm text-green-800 dark:text-green-300 list-decimal list-inside">
             <li>Pehle 155261 par call karke <strong>Diary number</strong> lein — yahi number aage har level par aapka proof hai.</li>
-            <li>15 din mein hal na ho toh state nodal officer ko email mein wahi Diary number, registration number aur date daalein.</li>
+            <li>15 din mein hal na ho toh state adhikari ko email mein wahi Diary number, registration number aur date daalein.</li>
             <li>Uske baad bhi jawab na aaye toh RTI daalein — usme bhi Diary number quote karein.</li>
           </ol>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mt-3">

@@ -49,19 +49,19 @@ export const metadata: Metadata = {
 const verminCompostFaqs = [
   {
     q: 'Chemical fertilizer ke saath mix kar sakte hain?',
-    a: 'Haan, shuruat mein aap vermi compost ko chemical fertilizer ke saath 50:50 ratio mein mix karke use kar sakte hain. Isse mitti ko organic matter milta hai aur chemical ka shock bhi kam hota hai. Dheere-dheere chemical ki matra kam karke sirf organic par shift ho sakte hain.',
+    a: 'Haan, shuruat mein aap ise chemical fertilizer ke saath 50:50 ratio mein mix karke use kar sakte hain. Isse mitti ko organic matter milta hai aur chemical ka shock bhi kam hota hai. Dheere-dheere chemical ki matra kam karke sirf organic par shift ho sakte hain.',
   },
   {
     q: 'Earthworms mar jayein toh batch kharab?',
-    a: 'Agar worms mar bhi jayein, toh organic material phir bhi decompose hota hai, lekin usme vermi compost wali premium quality nahi aati. Usse aap normal FYM ke roop mein bech sakte hain (₹5 - ₹8/kg). Agli batch ke liye naye worms lene padenge.',
+    a: 'Agar worms mar bhi jayein, toh organic material phir bhi decompose hota hai, lekin usme wo premium quality nahi aati. Usse aap normal FYM ke roop mein bech sakte hain (₹5 - ₹8/kg). Agli batch ke liye naye worms lene padenge.',
   },
   {
     q: 'Branded packaging ke liye FSSAI zaroori hai?',
-    a: 'Vermi compost ek "fertilizer" hai, "food" nahi, isliye iske liye FSSAI ki zaroorat nahi hoti. Iske liye FCO (Fertilizer Control Order) ke under state agriculture department se registration aur authorized lab se quality testing report kaafi hoti hai.',
+    a: 'Yeh ek "fertilizer" hai, "food" nahi, isliye iske liye FSSAI ki zaroorat nahi hoti. Iske liye FCO (Fertilizer Control Order) ke under state agriculture department se registration aur authorized lab se quality testing report kaafi hoti hai.',
   },
   {
     q: 'Normal gobar ki khaad (FYM) use nahi kar sakte?',
-    a: 'Normal gobar ki khaad (FYM) mein bhi nutrients hote hain, lekin vermi compost mein earthworms ki wajah se enzymes aur beneficial microbes ki matra 10-20 guna zyada hoti hai. Yeh mitti ki structure ko FYM ke mukable jaldi aur behtar tarike se improve karti hai.',
+    a: 'Normal gobar ki khaad (FYM) mein bhi nutrients hote hain, lekin kenchua khaad mein earthworms ki wajah se enzymes aur beneficial microbes ki matra 10-20 guna zyada hoti hai. Yeh mitti ki structure ko FYM ke mukable jaldi aur behtar tarike se improve karti hai.',
   },
 ];
 
@@ -236,22 +236,22 @@ export default function VerminCompost() {
         <ul className="space-y-4 text-sm text-gray-800 dark:text-gray-200">
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">1. Paramparagat Krishi Vikas Yojana (PKVY):</strong>
-            Yeh scheme organic farming ko promote karti hai. Vermi compost units par 50-75% subsidy milti hai. Maximum subsidy ₹50,000 - ₹1 lakh per unit. FPOs aur SHGs ko priority milti hai.
+            Yeh scheme organic farming ko promote karti hai. In units par 50-75% subsidy milti hai. Maximum subsidy ₹50,000 - ₹1 lakh per unit. FPOs aur SHGs ko priority milti hai.
           </li>
 
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">2. Mission Organic Value Chain Development (MOVCDNER):</strong>
-            North-East states ke liye special scheme. Vermi compost units par 75-90% subsidy milti hai. Maximum subsidy ₹2 lakh tak.
+            North-East states ke liye special scheme. Compost units par 75-90% subsidy milti hai. Maximum subsidy ₹2 lakh tak.
           </li>
 
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">3. Soil Health Management Scheme:</strong>
-            Organic matter badhane ke liye yeh scheme hai. Vermi compost units par 50% subsidy milti hai. Maximum subsidy ₹25,000 - ₹50,000.
+            Organic matter badhane ke liye yeh scheme hai. Isme units par 50% subsidy milti hai. Maximum subsidy ₹25,000 - ₹50,000.
           </li>
 
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">4. PM FME Yojana:</strong>
-            Agar aap vermi compost ko branded packaging mein bechna chahte hain, toh PM FME ke under 35% subsidy mil sakti hai (maximum ₹10 lakh).
+            Agar aap apni khaad ko branded packaging mein bechna chahte hain, toh PM FME ke under 35% subsidy mil sakti hai (maximum ₹10 lakh).
           </li>
         </ul>
         <p className="mt-4 text-xs text-gray-600 dark:text-gray-400 italic border-t border-blue-200 dark:border-blue-800 pt-3">
@@ -528,11 +528,11 @@ export default function VerminCompost() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Organic farming schemes mein 50-75% tak subsidy hai, aur uska form bharna banta hai — par pits ka kharch usi mahine aata hai jab aap unhe banate hain, aur subsidy ka paisa aksar 3-6 mahine baad. Vermi compost mein yeh gap aur chubhta hai kyunki pehla batch hi 60-90 din leta hai, yani do taraf se paisa ruka rehta hai. Isliye pits ka budget apni jeb ya KCC se planning karein aur subsidy ko baad mein aane wali rakam maanein, shuruaati punji nahi.
+        Organic farming schemes mein 50-75% tak subsidy hai, aur uska form bharna banta hai — par pits ka kharch usi mahine aata hai jab aap unhe banate hain, aur subsidy ka paisa aksar 3-6 mahine baad. Is business mein yeh gap aur chubhta hai kyunki pehla batch hi 60-90 din leta hai, yani do taraf se paisa ruka rehta hai. Isliye pits ka budget apni jeb ya KCC se planning karein aur subsidy ko baad mein aane wali rakam maanein, shuruaati punji nahi.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Agar aap seriously interested hain, toh pehle apne area ke 5-10 organic farmers se baat karein. Unse pata karein ki wo vermi compost use karte hain ya nahi, kahan se khareedte hain, rate kya hai. Market research karo, phir decision lo.
+        Agar aap seriously interested hain, toh pehle apne area ke 5-10 organic farmers se baat karein. Unse pata karein ki wo kenchua khaad use karte hain ya nahi, kahan se khareedte hain, rate kya hai. Market research karo, phir decision lo.
       </p>
 
       <h2 id="faq" className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
