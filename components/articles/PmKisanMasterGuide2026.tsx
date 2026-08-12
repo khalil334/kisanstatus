@@ -31,7 +31,7 @@ const FAQS_DATA = [
   },
   {
     q: 'eKYC nahi karwai toh kya hoga mere saath?',
-    a: 'Seedhi baat - payment atak jayegi. 2023 se ye compulsory ho gaya hai. Agar aapne abhi tak nahi ki, toh jaldi karo. pmkisan.gov.in par jao, eKYC section mein, OTP verify karo. Bas 2 minute ka kaam hai. Agar mobile Aadhaar se linked nahi hai, toh CSC center jao - fingerprint scan hoga. Free hai ye process, koi paisa nahi lagta.'
+    a: 'Payment atak jayegi. 2023 se ye compulsory ho gaya hai. Agar aapne abhi tak nahi ki, toh jaldi karo. pmkisan.gov.in par jao, eKYC section mein, OTP verify karo. Bas 2 minute ka kaam hai. Agar mobile Aadhaar se linked nahi hai, toh CSC center jao - fingerprint scan hoga. Free hai ye process, koi paisa nahi lagta.'
   },
   {
     q: 'Bina OTP ke payment status kaise check karu?',
@@ -520,17 +520,17 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Seedhi Baat</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Payment Rukne Ki Teen Wajahein — Aur Teeno Ka Ilaaj</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            PM Kisan simple scheme hai. Bas teen cheezein yaad rakho:
+            Is guide mein jitne bhi problems cover hue, unme se lagbhag har atki payment in teen mein se kisi ek par jaakar rukti hai:
           </p>
           <ol className="space-y-2 text-sm text-green-800 dark:text-green-300 list-decimal list-inside">
-            <li>eKYC complete karo - ye sabse important hai</li>
-            <li>Bank account Aadhaar se link karo (NPCI seeding)</li>
-            <li>Naam teeno jagah same rakho (Aadhaar = Bank = PM Kisan)</li>
+            <li>eKYC pending — portal par OTP se ya CSC par biometric se complete karein</li>
+            <li>NPCI seeding nahi hui — bank branch se “DBT enabled” confirm karwayein</li>
+            <li>Naam teeno record mein alag — Aadhaar, bank aur PM Kisan mein spelling tak same karwayein</li>
           </ol>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mt-3">
-            In teeno ka dhyan rakha toh payment kabhi nahi rukegi. Simple hai!
+            Naye registration se pehle bhi yahi teen cheezein pehle se durust kar lena sabse zyada time bachata hai.
           </p>
         </div>
 

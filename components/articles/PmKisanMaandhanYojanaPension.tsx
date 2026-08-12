@@ -596,7 +596,7 @@ export default function PmKisanMaandhanYojanaPension() {
         <section className="mb-8">
           <SH>Kuch Galat Fahmiyan Jo Door Karni Zaroori Hain</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Kuch log sochte hain ki ye scheme fraud hai ya pension kabhi nahi milegi. Sach ye hai ki ye LIC aur government jointly manage karti hain, aur ab tak lakhon kisanon ko regular pension mil rahi hai.
+            Kuch log sochte hain ki ye scheme fraud hai ya pension kabhi nahi milegi. Jabki is scheme ko LIC aur government jointly manage karti hain, aur ab tak lakhon kisanon ko regular pension mil rahi hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Ek aur common confusion hai ki ₹3000 bahut kam hai. Lekin gaon ke expenses ke hisaab se ye amount bijli, paani, aur dawai ke liye kaafi helpful hota hai — aur ye har mahine guaranteed milega.

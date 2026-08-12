@@ -294,7 +294,7 @@ export default function PmKisanVoluntarySurrenderGuide() {
         </section>
 
         <section className="mb-8">
-          <SH>Zaroori Baatein Jo Yaad Rakhein</SH>
+          <SH>Surrender Se Pehle Ke Chaar Checkpoints</SH>
           <div className="space-y-3">
             <div className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 p-4 rounded-r-xl">
               <p className="text-sm text-amber-800 dark:text-amber-300">
