@@ -15,14 +15,9 @@ const PUBLISHED = '2025-12-22T20:13:22+05:30';
 const MODIFIED = '2025-12-31T07:46:21+05:30';
 
 const RELATED = [
-  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide' },
-  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status' },
-  { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Meaning' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Credit Card Guide' },
-  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Complete Guide' },
-  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav' },
-  { slug: 'PmKisanVillageWiseListPdfDownload', title: 'Village Wise List PDF Download' },
-  { slug: 'PmKisanLandSeedingForm', title: 'Land Seeding Form PDF', emoji: '' },
+  { slug: 'PmKisanVillageWiseListPdfDownload', title: 'Village Wise List PDF' },
+  { slug: 'PmKisanRejectedStatusReApplyGuide', title: 'Rejected Status — Dobara Apply' },
+  { slug: 'PmKisanLandSeedingForm', title: 'Land Seeding Form' },
 ];
 
 const FAQS_DATA = [

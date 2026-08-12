@@ -12,12 +12,9 @@ const PUBLISHED = '2026-01-05T09:36:58+05:30';
 const MODIFIED = '2026-01-14T18:35:26+05:30';
 
 const RELATED = [
-  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide' },
-  { slug: 'soil-health-card-complete-guide-2026', title: 'Soil Health Card', emoji: '' },
-  { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Loan Guide' },
-  { slug: 'AgriStackKyaHai2026', title: 'Digital Kisan ID' },
-  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply' },
+  { slug: 'AgriStackKyaHai2026', title: 'AgriStack Farmer ID Guide' },
+  { slug: 'soil-health-card-complete-guide-2026', title: 'Soil Health Card Guide' },
 ];
 
 const FAQS_DATA = [

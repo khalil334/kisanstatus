@@ -5,12 +5,9 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const RELATED = [
-  { slug: 'dairy-farm-loan-without-collateral', title: 'Dairy Loan Bina Collateral', emoji: '' },
-  { slug: 'sbi-dairy-loan-interest-rate', title: 'SBI Dairy Loan Interest Rate', emoji: '' },
-  { slug: 'murgi-palan-loan-nlm-subsidy', title: 'Murgi Palan Loan NLM Subsidy', emoji: '' },
-  { slug: 'rashtriya-gokul-mission-subsidy', title: 'Rashtriya Gokul Mission', emoji: '' },
-  { slug: 'jansamarth-portal-loan-apply', title: 'JanSamarth Portal Apply' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply' },
+  { slug: 'dairy-farm-loan-without-collateral', title: 'Bina Guarantee Dairy Loan' },
+  { slug: 'murgi-palan-loan-nlm-subsidy', title: 'Murgi Palan NLM Subsidy' },
+  { slug: 'jansamarth-portal-loan-apply', title: 'JanSamarth Loan Apply' },
 ];
 
 const FAQS_DATA = [

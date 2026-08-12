@@ -10,10 +10,9 @@ const PUBLISHED = '2026-02-17T09:13:27+05:30';
 const MODIFIED = '2026-03-19T22:46:55+05:30';
 
 const RELATED = [
-  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List Guide' },
-  { slug: 'PmKisanRejectedStatusReApplyGuide', title: 'Rejected Status Fix' },
-  { slug: 'PmKisanMasterGuide2026', title: 'Master Guide' },
-  { slug: 'PmKisanStateNodalOfficerList', title: 'Nodal Officer List' },
+  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List' },
+  { slug: 'PmKisanRejectedStatusReApplyGuide', title: 'Rejected Status — Dobara Apply' },
+  { slug: 'PmKisanStateNodalOfficerList', title: 'Nodal Officer Contacts' },
 ];
 
 const FAQS_DATA = [

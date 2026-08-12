@@ -12,16 +12,12 @@ const PUBLISHED = '2026-02-02T15:44:39+05:30';
 const MODIFIED = '2026-02-16T10:13:52+05:30';
 
 const RELATED = [
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply' },
-  { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price', emoji: '' },
-  { slug: 'soil-health-card-complete-guide-2026', title: 'Soil Health Card', emoji: '' },
   { slug: 'PmKisan24viKist2026', title: '24vi Kist Status' },
-  { slug: 'AgriStackKyaHai2026', title: 'Digital Kisan ID' },
-  { slug: 'KisanRinKahaSeLe2026', title: 'Kisan Loan Guide', emoji: '' },
-  { slug: 'PmKisanVoluntarySurrenderGuide', title: 'PM Kisan Surrender Guide' },
-  { slug: 'PmKisanVillageWiseListPdfDownload', title: 'Village Wise List PDF' },
-  { slug: 'PmKisanMobileNumberChangeUpdate', title: 'Mobile Number Change' },
-  { slug: 'PmKisan25viKist2027', title: '25vi Kist 2027 Update' },
+  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide' },
+  { slug: 'PmKisanPaymentFailedFix2026', title: 'Payment Failed — 7 Fixes' },
+  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List' },
+  { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form Guide' },
+  { slug: 'PmKisanVoluntarySurrenderGuide', title: 'Voluntary Surrender Guide' },
 ];
 
 const FAQS_DATA = [
