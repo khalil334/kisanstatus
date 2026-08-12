@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import CountdownModal from '@/components/CountdownModal';
 import type { ArticleMeta } from '@/lib/articles-data';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-02-15T21:25:25+05:30';
 const MODIFIED = '2026-02-24T14:27:25+05:30';
@@ -91,7 +92,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
             PM Kusum Yojana Solar Pump Subsidy 2026: 60% Subsidy Kaise Milegi, Apply Karne Ka Sahi Tarika
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">Manish Kumar</Link></span>
+            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
             <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
             <span>⏱️ 12 min read</span>

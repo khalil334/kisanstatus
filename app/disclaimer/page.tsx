@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '@/lib/site-config';
+import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE, AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
 export const metadata: Metadata = {
   title: `Legal Notice & Disclaimer – Unofficial Portal`,
   description: `${SITE_NAME} ek independent informational portal hai, sarkar se affiliated nahi. Official jankari ke liye hamesha pmkisan.gov.in par hi vishwas karein.`,
-  authors: [{ name: 'Manish Kumar', url: `${SITE_URL}/about` }],
+  authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   alternates: { canonical: `${SITE_URL}/disclaimer` },
   robots: { index: true, follow: true },
   openGraph: {

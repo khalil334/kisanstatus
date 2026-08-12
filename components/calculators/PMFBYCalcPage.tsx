@@ -3,11 +3,8 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { InputField, SelectField, ResultRow, fmt, OtherCalcs, CalcHeader, CalcDisclaimer } from './CalcShared';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
-const SITE_URL = 'https://kisanstatus.com';
-const SITE_NAME = 'KisanStatus';
-const AUTHOR_NAME = 'Manish Kumar';
-const AUTHOR_URL = `${SITE_URL}/about`;
 const PUBLISHED = '2026-03-21T11:24:58+05:30';
 const MODIFIED = '2026-04-24T14:51:23+05:30';
 

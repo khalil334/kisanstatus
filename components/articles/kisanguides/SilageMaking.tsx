@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
+import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
 export const metadata: Metadata = {
   title: 'Silage Business Guide 2026: SMAM Subsidy & Profit',
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
     'fodder preservation technique india',
     'small scale chara processing unit'
   ],
-  authors: [{ name: 'Manish Kumar', url: 'https://kisanstatus.com/about' }],
+  authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   openGraph: {
     title: 'Silage Business Guide 2026: SMAM Subsidy & Profit',
     description: 'Silage banane ka business kaise shuru karein — chara storage tarika, chaff cutter cost, SMAM subsidy aur real profit calculation, sab kuch is guide mein.',
