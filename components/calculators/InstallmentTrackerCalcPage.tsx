@@ -8,8 +8,8 @@ const SITE_NAME = 'KisanStatus';
 const AUTHOR_NAME = 'KisanStatus Team';
 const AUTHOR_URL = `${SITE_URL}/about`;
 
-const PUBLISHED = '2026-02-15T08:00:00+05:30';
-const MODIFIED = '2026-07-08T06:44:00+05:30';
+const PUBLISHED = '2026-02-12T19:31:09+05:30';
+const MODIFIED = '2026-03-10T15:28:21+05:30';
 
 function fmtDate(iso: string) {
   return new Date(iso).toLocaleDateString('en-IN', {
