@@ -5,12 +5,9 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const RELATED = [
-  { slug: 'mandi-bhav-today', title: 'Mandi Ka Taaza Bhav' },
-  { slug: 'mandi-bhav-app-comparison', title: 'Mandi Bhav Apps Comparison' },
-  { slug: 'gehu-ka-bhav-msp-vs-mandi', title: 'Gehu: MSP vs Mandi Bhav', emoji: '' },
-  { slug: 'msp-list-2026-27', title: 'MSP 2026-27 Ka Poora Chart' },
-  { slug: 'enam-registration-kaise-kare', title: 'eNAM Se Online Bikri Shuru Karein' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Se Sasta Karj' },
+  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav' },
+  { slug: 'mandi-bhav-app-comparison', title: 'Best Mandi Bhav Apps' },
+  { slug: 'msp-list-2026-27', title: 'MSP List 2026-27' },
 ];
 
 const FAQS_DATA = [

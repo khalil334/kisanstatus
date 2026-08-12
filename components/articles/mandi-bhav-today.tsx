@@ -310,10 +310,9 @@ const FRUIT_NAME_MAP: Record<string, string> = {
 };
 
 const RELATED = [
-  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status' },
-  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide' },
-  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Loan Guide', emoji: '' },
+  { slug: 'sabzi-bhav-guide-pyaz-aloo-tamatar', title: 'Pyaz-Aloo-Tamatar Bhav Guide' },
+  { slug: 'mandi-bhav-app-comparison', title: 'Best Mandi Bhav Apps' },
+  { slug: 'msp-list-2026-27', title: 'MSP List 2026-27' },
 ];
 
 const FAQS_DATA = [

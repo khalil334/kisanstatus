@@ -21,14 +21,9 @@ const PUBLISHED = '2026-01-01T10:21:39+05:30';
 const MODIFIED = '2026-08-12T11:30:00+05:30';
 
 const RELATED = [
-  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Complete Guide' },
-  { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Matlab Kya Hai' },
-  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List Mein Naam Dekho' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Loan Apply Online' },
-  { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price Guide', emoji: '' },
-  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav' },
-  { slug: 'PmKisan25viKist2027', title: '25vi Kist 2027 Kab Aayegi' },
-  { slug: 'pm-kisan-self-registered-status-check', title: 'Self Registration Status' },
+  { slug: 'PmKisan25viKist2027', title: '25vi Kist Date & Amount' },
+  { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Meaning' },
+  { slug: 'PmKisanPaymentFailedFix2026', title: 'Payment Failed — 7 Fixes' },
 ];
 
 const FAQS_DATA = [

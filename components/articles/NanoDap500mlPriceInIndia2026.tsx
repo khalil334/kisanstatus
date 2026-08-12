@@ -8,12 +8,9 @@ const PUBLISHED = '2026-01-03T08:52:27+05:30';
 const MODIFIED = '2026-01-12T09:57:33+05:30';
 
 const RELATED = [
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply Guide' },
-  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary Roster 2026' },
-  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status' },
-  { slug: 'soil-health-card-complete-guide-2026', title: 'Soil Health Card', emoji: '' },
-  { slug: 'KisanRinKahaSeLe2026', title: 'Kisan Loan Guide', emoji: '' },
-  { slug: 'AgriStackKyaHai2026', title: 'Digital Kisan ID' },
+  { slug: 'soil-health-card-complete-guide-2026', title: 'Soil Health Card Guide' },
+  { slug: 'vermi-compost-business-guide', title: 'Vermi Compost Business' },
+  { slug: 'drip-sprinkler-irrigation-subsidy', title: 'Drip & Sprinkler Subsidy' },
 ];
 
 const FAQS_DATA = [

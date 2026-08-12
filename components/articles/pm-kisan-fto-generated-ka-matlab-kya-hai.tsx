@@ -13,11 +13,8 @@ const MODIFIED = '2026-01-04T13:42:17+05:30';
 
 const RELATED = [
   { slug: 'PmKisan24viKist2026', title: '24vi Kist Status' },
-  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary Roster Check' },
-  { slug: 'PmKisanMasterGuide2026', title: 'Master Guide' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Credit Card Guide' },
-  { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price Guide', emoji: '' },
-  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav' },
+  { slug: 'PmKisanPaymentFailedFix2026', title: 'Payment Failed — 7 Fixes' },
+  { slug: 'PmKisanBankAccountChangeProcess', title: 'Bank Account Change' },
 ];
 
 const FAQS_DATA = [

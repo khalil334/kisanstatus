@@ -7,10 +7,7 @@ import { AUTHOR_NAME } from '@/lib/site-config';
 const RELATED = [
   { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav' },
   { slug: 'msp-list-2026-27', title: 'MSP List 2026-27' },
-  { slug: 'mandi-bhav-app-comparison', title: 'Best Mandi Bhav Apps' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'Kisan Credit Card Banwayein' },
-  { slug: 'AgriStackKyaHai2026', title: 'AgriStack Kya Hai' },
-  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide' },
+  { slug: 'gehu-ka-bhav-msp-vs-mandi', title: 'Gehu Bhav: MSP vs Mandi' },
 ];
 
 const FAQS_DATA = [

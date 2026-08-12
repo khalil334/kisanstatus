@@ -10,12 +10,9 @@ const MODIFIED = '2026-03-04T16:41:58+05:30';
 const IMG_BASE = '/images/articles/pm-kisan-self-registered-status-check';
 
 const RELATED = [
-  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status' },
-  { slug: 'PmKisanMasterGuide2026', title: 'Complete Guide' },
-  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List' },
-  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide' },
-  { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Status' },
-  { slug: 'PmKisanPaymentFailedFix2026', title: 'Payment Failed Fix' },
+  { slug: 'PmKisanRejectedStatusReApplyGuide', title: 'Rejected Status — Dobara Apply' },
+  { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form Guide' },
+  { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Meaning' },
 ];
 
 const FAQS_DATA = [

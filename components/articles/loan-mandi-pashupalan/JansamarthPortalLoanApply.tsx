@@ -5,12 +5,9 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const RELATED = [
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Ka Online Process' },
   { slug: 'KisanRinKahaSeLe2026', title: 'Kisan Loan Kahan Se Le' },
-  { slug: 'dairy-farm-loan-without-collateral', title: 'Bina Guarantee Dairy Loan', emoji: '' },
-  { slug: 'sbi-dairy-loan-interest-rate', title: 'SBI Se Dairy Loan — Rate Guide', emoji: '' },
-  { slug: 'AgriStackKyaHai2026', title: 'AgriStack Samjhein 2026' },
-  { slug: 'bihar-pashupalan-loan-yojana', title: 'Bihar Mein Pashupalan Loan', emoji: '' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply' },
+  { slug: 'AgriStackKyaHai2026', title: 'AgriStack Farmer ID Guide' },
 ];
 
 const FAQS_DATA = [

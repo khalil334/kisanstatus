@@ -18,11 +18,9 @@ const PUBLISHED = '2026-01-08T22:33:23+05:30';
 const MODIFIED = '2026-01-17T19:59:30+05:30';
 
 const RELATED = [
-  { slug: 'PmKisanEkycOnline2026', title: 'PM Kisan eKYC Online' },
-  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List 2026' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply' },
-  { slug: 'PmfbyCropInsurance2026', title: 'PMFBY Crop Insurance', emoji: '' },
-  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide' },
+  { slug: 'PmKisanLandSeedingForm', title: 'Land Seeding Form' },
+  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide' },
+  { slug: 'PmKisanFaceAuthenticationEkyc', title: 'Face Auth eKYC (Bina OTP)' },
 ];
 
 const FAQS_DATA = [

@@ -8,14 +8,9 @@ const PUBLISHED = '2025-12-19T13:12:12+05:30';
 const MODIFIED = '2026-01-18T07:59:28+05:30';
 
 const RELATED = [
-{ slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply — ₹5 Lakh Loan, 4% Interest' },
-{ slug: 'KisanRinKahaSeLe2026', title: 'Kisan Loan Kahan Se Le — SBI, CSC, Cooperative', emoji: '' },
-{ slug: 'PmfbyCropInsurance2026', title: 'PMFBY Crop Insurance — 2% Premium Mein Suraksha' },
-{ slug: 'AgriStackKyaHai2026', title: 'AgriStack Kya Hai — Digital Kisan ID' },
-{ slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP 500ml Price — IFFCO Rate 2026', emoji: '' },
-{ slug: 'PmKisan24viKist2026', title: 'PM Kisan 24vi Kist — Kab Aayegi 2026?' },
-  { slug: 'custom-hiring-centre-chc-portal', title: 'CHC Machine Rental Portal', emoji: '' },
-  { slug: 'silage-making-business-guide', title: 'Silage Business Guide', emoji: '' },
+  { slug: 'KisanRinKahaSeLe2026', title: 'Kisan Loan Kahan Se Le' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply' },
+  { slug: 'custom-hiring-centre-chc-portal', title: 'CHC Machine Rental Guide' },
 ];
 
 const FAQS_DATA = [
