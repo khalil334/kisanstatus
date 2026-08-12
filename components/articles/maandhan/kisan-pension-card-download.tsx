@@ -39,7 +39,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Download kiye hue PDF me naam ki spelling galat hai — ab kya karun?',
-    a: 'Chhoti spelling mistakes (jaise "Ram" ki jagah "Raam") aksar ignore ho jaati hain aur kaam chal jata hai. Lekin agar poora naam hi galat hai ya date of birth wrong hai, to CSC ya apni bank branch me jaakar correction request karni padegi — isme kitna time lagega ye branch/CSC ke process par depend karta hai, koi fixed SLA publish nahi hai. Isliye deri na karein aur receiving/acknowledgement zaroor lein.',
+    a: 'Chhoti spelling mistakes (jaise "Ram" ki jagah "Raam") aksar ignore ho jaati hain aur kaam chal jata hai. Lekin agar poora naam hi galat hai ya date of birth wrong hai, to CSC ya apni bank branch me jaakar correction request karni padegi — isme kitna time lagega ye branch/CSC ke process par depend karta hai, koi fixed SLA publish nahi hai. Isliye deri na karein aur receiving/acknowledgement leke aayein.',
   },
   {
     q: 'PMKMY ka pension card aur APY (Atal Pension Yojana) ka PRAN card ek hi cheez hai kya?',
@@ -221,7 +221,7 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
           </p>
 
           <StepList>
-            <SI n={1}><strong>Sahi Portal Kholiye:</strong> Browser me official scheme website type karein. Google par search karte waqt pehla result chunein, lekin dhyan rahe ki URL ke end me <code className="bg-gray-100 px-1 rounded text-red-600 font-mono text-xs">.gov.in</code> zaroor ho. Internet par kai fake websites hain jo aapki details chura sakti hain, isliye URL check karna sabse pehla kadam hai.</SI>
+            <SI n={1}><strong>Sahi Portal Kholiye:</strong> Browser me official scheme website type karein. Google par search karte waqt pehla result chunein, lekin dhyan rahe ki URL ke end me <code className="bg-gray-100 px-1 rounded text-red-600 font-mono text-xs">.gov.in</code> hona chahiye. Internet par kai fake websites hain jo aapki details chura sakti hain, isliye URL check karna sabse pehla kadam hai.</SI>
             <SI n={2}><strong>Self-Service Section Me Jaayein:</strong> Homepage par aapko "Self Service", "Subscriber Login", ya "Farmer Corner" jaisa tab dikhega. Us par click karein. Yahan kuch log confuse ho jaate hain kyunki do-teen options milte hain. Aapko wo chahiye jisme "View / Print Pensioner Details" ya "Acknowledgement Slip" likha ho.</SI>
             <SI n={3}><strong>Apni Details Dhyan Se Bhariye:</strong> Ab aapse pucha jayega — Aadhaar number, ya pension account number (agar yaad ho), ya registered mobile number. Yahan sabse common galti ye hoti hai ki log apna naya mobile number daal dete hain jo unhone baad me banwaya. OTP purane number par jayega, aur aap atak jaoge. Isliye wahi number daalein jo enrollment time par diya tha.</SI>
             <SI n={4}><strong>OTP Verify Kijiye (Sabr Se Kaam Lein):</strong> OTP aane me kabhi-kabhi 2 se 3 minute lag jaate hain. Jaldi me "Resend OTP" baar baar mat dabaiye — system aapko 15 minute ke liye temporarily lock kar deta hai. Ek baar OTP aane ka wait karein. Agar 5 minute me na aaye, to apna network check karein, ya DND service band karke dekhein.</SI>
@@ -244,7 +244,7 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
           </div>
 
           <WB>
-            <strong>Pro Tip:</strong> PDF download hone ke baad turant uska naam badal dijiye — jaise "Brijesh-Pension-Card-2026.pdf" — aur ek alag folder me daal dijiye. Bahut se log download to kar lete hain lekin "Downloads" folder me chhod dete hain, phir baad me wo file milti hi nahi.
+            <strong>Pro Tip:</strong> PDF download hone ke saath hi uska naam badal dijiye — jaise "Brijesh-Pension-Card-2026.pdf" — aur ek alag folder me daal dijiye. Bahut se log download to kar lete hain lekin "Downloads" folder me chhod dete hain, phir baad me wo file milti hi nahi.
           </WB>
         </section>
 
@@ -378,7 +378,7 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
             Ye sabse common aur frustrating problem hai. 2019-20 me jab scheme shuru hui, to kai CSC walon ne jaldi-baazi me form bhare, aur galti se apna khud ka number ya kisi aur ka number daal diya. Ab kisan ko OTP hi nahi mil raha, aur wo bechaara hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Iska ek hi solid solution hai — aapko apni nazdeeki bank branch jaana hoga jahan aapka pension account linked hai. Wahan ek chhoti si application likhni hoti hai ki "mera registered mobile number update kiya jaye." Sath me Aadhaar ki copy aur naye number ka proof lagana hota hai. Bank verify karke update kar deta hai — kitne din lagenge iska koi fixed publish SLA nahi hai, isliye application ki receiving zaroor lein aur usi se follow-up karein.
+            Iska ek hi solid solution hai — aapko apni nazdeeki bank branch jaana hoga jahan aapka pension account linked hai. Wahan ek chhoti si application likhni hoti hai ki "mera registered mobile number update kiya jaye." Sath me Aadhaar ki copy aur naye number ka proof lagana hota hai. Bank verify karke update kar deta hai — kitne din lagenge iska koi fixed publish SLA nahi hai, isliye application ki receiving apne paas rakhein aur usi se follow-up karein.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Ek aur rasta — aap scheme ke toll-free number par call karke bhi guidance le sakte hain. Lekin dhyan rahe, call par wo aapka mobile number update nahi karenge (security reasons ki wajah se), sirf bataenge ki aapko kis form ke sath kahan jaana hai. Physical verification zaroori hoti hai fraud rokne ke liye.
@@ -393,7 +393,7 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
           <StepList>
             <SI n={1}>Ek print nikalke halka sa lamination karwa lijiye — ₹20 lagenge, lekin ye saalon tak chalega aur phatne se bach jayega.</SI>
             <SI n={2}>Har saal ek baar apni status check karein — ki contribution sahi se kat raha hai ya nahi, aur account active hai ya nahi.</SI>
-            <SI n={3}>Apne parivaar ke kisi bharosemand sadasya ko bata dijiye ki ye card kahan rakha hai, taaki zaroorat padne par wo turant dhoondh sakein.</SI>
+            <SI n={3}>Apne parivaar ke kisi bharosemand sadasya ko bata dijiye ki ye card kahan rakha hai, taaki zaroorat padne par wo bina bhaag-daud dhoondh sakein.</SI>
             <SI n={4}>Agar aapki income badh gayi hai ya aap income tax return file karte hain, to scheme ke rules ke mutabiq aapka naam hat sakta hai — isliye apni eligibility check karte rahein.</SI>
           </StepList>
           <IB>
@@ -409,7 +409,7 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Download Ke Turant Baad Ye Do Cheezein Milaayen</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Download Ke Saath Hi Ye Do Cheezein Milaayen</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
             Card download hote hi file band mat kijiye — do cheezein Aadhaar se milaa lijiye: naam ki spelling aur date of birth. Chhota sa spelling farak (Ram/Raam) chalta hai, lekin poora naam ya janm tithi galat hai toh correction request CSC ya bank branch se abhi karwa lijiye, kyunki iska koi fixed SLA nahi hai aur 60 saal ke waqt yehi mismatch pension release rok sakta hai. Correction dete waqt acknowledgement lena mat bhooliye — wahi aapka proof hai.
           </p>

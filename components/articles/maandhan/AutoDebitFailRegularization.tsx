@@ -65,7 +65,7 @@ export default function AutoDebitFailRegularization() {
             {
               '@type': 'Article',
               headline: 'Auto Debit Fail Hone Par Regularization Kaise Karein: Complete Guide 2026',
-              description: 'Agar aapka EMI ya SIP auto-debit fail ho gaya hai, toh ghabrayein nahi. Janiye ise turant regularize karne ka aasan tarika, bank charges bachane ke upay aur CIBIL score ko safe rakhne ke tips.',
+              description: 'Agar aapka EMI ya SIP auto-debit fail ho gaya hai, toh ghabrayein nahi. Janiye ise bina der regularize karne ka aasan tarika, bank charges bachane ke upay aur CIBIL score ko safe rakhne ke tips.',
               image: 'https://kisanstatus.com/images/articles/maandhan/auto-debit-fail-hone-par-regularization-kaise-karein/kisan-emi-tension.webp',
               inLanguage: 'hi-IN',
               keywords: 'auto debit fail hone par regularization kaise kare, EMI bounce solution, NACH mandate fail, CIBIL score impact, bank charges waiver',
@@ -193,7 +193,7 @@ export default function AutoDebitFailRegularization() {
         </section>
 
         <section className="mb-8">
-          <SH>Ab Regularize Kaise Karein — Step by Step</SH>
+          <SH>Ab Regularize Kaise Karein — Ek-Ek Step</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Yahan se dikhta hai mushkil hai, par actual mein 10-15 minute ka kaam hai. Ek ek karke steps follow karte jao.
           </p>
@@ -225,7 +225,7 @@ export default function AutoDebitFailRegularization() {
         <section className="mb-8">
           <SH>CIBIL Score Par Asar — Kab Girta Hai, Kab Nahi</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Yahi sabse zyada tension deta hai logo ko. Achi khabar ye hai — ek baar auto-debit fail hone se score turant nahi girta. Bura tab hota hai jab isse latka ke rakh do.
+            Yahi sabse zyada tension deta hai logo ko. Achi khabar ye hai — ek baar auto-debit fail hone se score usi mahine nahi girta. Bura tab hota hai jab isse latka ke rakh do.
           </p>
 
           <div className="my-6 rounded-xl overflow-hidden border border-[var(--color-border)]">
@@ -372,7 +372,7 @@ export default function AutoDebitFailRegularization() {
             </div>
             <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-4 shadow-sm">
               <h4 className="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2">Grace Period Bhi Milta Hai Kai Baar</h4>
-              <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">Kuch banks 3-7 din ka grace period dete hain jisme late fee nahi lagti. Apni bank se ek baar confirm zaroor kar lena.</p>
+              <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">Kuch banks 3-7 din ka grace period dete hain jisme late fee nahi lagti. Apni bank se ek baar confirm kar lena.</p>
             </div>
             <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-4 shadow-sm">
               <h4 className="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2">₹5,000 Se Upar OTP Zaroori</h4>

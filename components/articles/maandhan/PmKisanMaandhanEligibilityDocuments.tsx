@@ -17,7 +17,7 @@ const RELATED_CARDS = [
   {
     slug: 'pm-kisan-maandhan-pension-calculator',
     title: 'Apna Contribution Nikalein',
-    desc: 'Umar daliye aur turant dekhiye har mahine kitna jama karna hoga.',
+    desc: 'Umar daliye aur saath mein dekhiye har mahine kitna jama karna hoga.',
     
   },
   {

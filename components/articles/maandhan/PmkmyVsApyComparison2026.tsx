@@ -26,7 +26,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Agar main beech mein payment karna band kar dun toh kya hoga?',
-    a: 'Ghabraiye mat, aapka pura paisa nahi doobta, lekin nuksan zaroor hota hai. Aapko aapka apna jama kiya hua contribution aur uspar bana simple interest wapas mil jayega. Lekin dhyan rahe, government ka diya hua hissa pension fund mein hi chala jata hai. Isliye main hamesha kehta hoon ki beech mein chhodna financially nuksan deh hai.',
+    a: 'Ghabraiye mat, aapka pura paisa nahi doobta, lekin nuksan hota hai. Aapko aapka apna jama kiya hua contribution aur uspar bana simple interest wapas mil jayega. Lekin dhyan rahe, government ka diya hua hissa pension fund mein hi chala jata hai. Isliye main hamesha kehta hoon ki beech mein chhodna financially nuksan deh hai.',
   },
   {
     q: 'Kya APY wale ko bhi PM Kisan Samman Nidhi ka fayda milta hai?',
@@ -270,7 +270,7 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
             <strong>APY mein:</strong> Yahan bhi premature exit par aapko corpus mil sakta hai, lekin iske liye bhi strict conditions hain aur process thoda lamba ho sakta hai.
           </p>
           <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-            <em>Ek limitation acknowledge karun:</em> Exact exit calculation har individual case par depend karti hai (kitne saal contribution diya, interest rate kya tha). Isliye beech mein nikalne ka sochne se pehle apne nazdeeki CSC ya bank branch se ek baar written mein confirm zaroor kar lein.
+            <em>Ek limitation acknowledge karun:</em> Exact exit calculation har individual case par depend karti hai (kitne saal contribution diya, interest rate kya tha). Isliye beech mein nikalne ka sochne se pehle apne nazdeeki CSC ya bank branch se ek baar written mein confirm kara lein.
           </p>
         </section>
 
