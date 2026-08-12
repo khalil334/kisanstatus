@@ -16,12 +16,12 @@ function fmtDate(dateString: string): string {
 }
 
 const RELATED = [
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply Guide', emoji: '💳' },
-  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide', emoji: '📚' },
-  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '📅' },
-  { slug: 'AgriStackKyaHai2026', title: 'Digital Kisan ID', emoji: '🆔' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply Guide' },
+  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide' },
+  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status' },
+  { slug: 'AgriStackKyaHai2026', title: 'Digital Kisan ID' },
   { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price Guide', emoji: '🌱' },
-  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav', emoji: '📈' },
+  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav' },
   { slug: 'bakri-palan-yojana-nlm-subsidy', title: 'Bakri Palan Subsidy Guide', emoji: '🐐' },
   { slug: 'silage-making-business-guide', title: 'Silage Making Business', emoji: '🌾' },
 ];
@@ -74,10 +74,10 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
             Kisan Rin Kaha Se Le 2026: KCC, Bank, CSC, Cooperative — Sahukar Se Bachne Ka Rasta
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 12 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>12 min read</span>
           </div>
         </div>
       </div>
@@ -402,15 +402,15 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
           title="Apni EMI Calculate Karo"
           desc="KCC ya term loan ki monthly payment jaano — bank jaane se pehle prepared raho"
           primaryCta={{ href: '/calculator/kcc-loan-emi', label: '🏦 EMI Calculator →' }}
-          secondaryCta={{ href: '/calculator', label: '🧮 Sab Utilities' }}
+          secondaryCta={{ href: '/calculator', label: 'Sab Utilities' }}
         />
 
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/KisanCreditCardOnlineApply2026', l: '💳 KCC Guide' },
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
-          { href: '/calculator/kcc-loan-emi', l: '🧮 EMI Calculator' },
+          { href: '/articles/KisanCreditCardOnlineApply2026', l: 'KCC Guide' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
+          { href: '/calculator/kcc-loan-emi', l: 'EMI Calculator' },
         ]} />
         <Disclaimer />
       </div>

@@ -16,7 +16,6 @@ const RELATED_CARDS = [
     slug: 'PmKisanEkycOnline2026',
     title: 'PM Kisan eKYC Complete Guide',
     desc: 'Naya number link karne ke baad eKYC kaise karein, step-by-step jaane.',
-    emoji: '🔐'
   },
   {
     slug: 'PmKisanCscRegistrationCharges',
@@ -28,7 +27,6 @@ const RELATED_CARDS = [
     slug: 'PmKisanRejectedStatusReApplyGuide',
     title: 'Rejected Status Fix Guide',
     desc: 'Agar number change ke baad bhi status rejected dikhaye toh kya karein.',
-    emoji: '❌'
   },
 ];
 
@@ -86,9 +84,8 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           message={modal.message}
           redirectUrl={modal.url}
           onClose={() => setModal(null)}
-          icon="🔗"
           countdownNote="seconds mein redirect hoga..."
-          infoNote="📌 Kripya dhairya rakhein. Aapko official sarkari portal par le jaaya ja raha hai."
+          infoNote="Kripya dhairya rakhein. Aapko official sarkari portal par le jaaya ja raha hai."
           cancelLabel="Cancel / Raho Yahi"
         />
       )}
@@ -109,10 +106,10 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           </h1>
 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 15 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>15 min read</span>
           </div>
         </div>
       </div>
@@ -178,7 +175,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           </p>
           <div className="bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-500 dark:border-amber-700 rounded-xl p-5 mb-6">
             <p className="text-sm font-black text-amber-800 dark:text-amber-300 mb-2">
-              ⚠️ Self Service Portal Trap:
+               Self Service Portal Trap:
             </p>
             <p className="text-xs text-amber-800 dark:text-amber-300 mb-3">
               Bahut sare YouTube videos mein bataya jata hai ki "Ghar baithe mobile number change karo". Bhai, wo videos tab kaam karti hain jab purana SIM aapke hath mein ho. Agar SIM dead hai, toh wo videos dekh kar time waste mat karo. Seedha CSC ya BAO jao.
@@ -191,7 +188,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
               )}
               className="w-full px-4 py-3 bg-amber-600 hover:bg-amber-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
-              🔗 Yahan Click Karo → Agar Purana SIM Active Hai To Mobile Update Hoga
+               Yahan Click Karo → Agar Purana SIM Active Hai To Mobile Update Hoga
             </button>
           </div>
           <Image
@@ -246,7 +243,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
 
           <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl">
             <p className="text-sm font-bold text-green-800 dark:text-green-300 mb-2">
-              🔍 Nazdiki CSC Center Kaise Dhundhein?
+               Nazdiki CSC Center Kaise Dhundhein?
             </p>
             <p className="text-xs text-green-700 dark:text-green-400 mb-3">
               Official CSC portal par jakar apne area ka nearest center dhundh sakte hain.
@@ -297,7 +294,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
 
           <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 rounded-xl">
             <p className="text-sm font-bold text-blue-800 dark:text-blue-300 mb-2">
-              📞 State Nodal Officer Se Sampark Karein
+               State Nodal Officer Se Sampark Karein
             </p>
             <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
               Agar BAO office se bhi kaam na bane ya wo form lene se mana karein, toh apne state ke Nodal Officer se direct contact kar sakte hain.
@@ -310,7 +307,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
               )}
               className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
-              📋 Yahan Click Karo → Apne State Ke Nodal Officer Ka Number Milega
+               Yahan Click Karo → Apne State Ke Nodal Officer Ka Number Milega
             </button>
           </div>
         </section>
@@ -380,11 +377,11 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
-              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-2">❌ Galat Fahmi</p>
+              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-2">Galat Fahmi</p>
               <p className="text-xs text-[var(--color-text-muted)]">"Bank mein number badal diya, ab PM Kisan ka OTP naye number par aayega."</p>
             </div>
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
-              <p className="font-black text-green-800 dark:text-green-300 text-sm mb-2">✅ Sachai</p>
+              <p className="font-black text-green-800 dark:text-green-300 text-sm mb-2">Sachai</p>
               <p className="text-xs text-[var(--color-text-muted)]">Bank ka mobile number aur PM Kisan portal ka mobile number dono alag-alag databases mein hote hain. Dono ko alag-alag update karna padta hai.</p>
             </div>
           </div>
@@ -407,7 +404,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
               { doc: 'Ek Passport Size Photo', note: 'Offline form par lagane ke liye kaam aa jati hai.' },
             ].map(({ doc, note }) => (
               <div key={doc} className="p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-                <p className="font-black text-sm text-[var(--color-text)] mb-1">📄 {doc}</p>
+                <p className="font-black text-sm text-[var(--color-text)] mb-1">{doc}</p>
                 <p className="text-xs text-[var(--color-text-muted)]">{note}</p>
               </div>
             ))}
@@ -436,8 +433,8 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
               },
             ].map(({ mistake, fix }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
-                <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">❌ {mistake}</p>
-                <p className="text-xs text-green-700 dark:text-green-400"><strong>✅ Aise Karo Sahi Se:</strong> {fix}</p>
+                <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">{mistake}</p>
+                <p className="text-xs text-green-700 dark:text-green-400"><strong>Aise Karo Sahi Se:</strong> {fix}</p>
               </div>
             ))}
           </div>
@@ -492,7 +489,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
               )}
               className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
-              ✅ Yahan Click Karo → Apna Naam List Mein Check Kar Sakte Hain
+               Yahan Click Karo → Apna Naam List Mein Check Kar Sakte Hain
             </button>
           </div>
         </section>
@@ -556,8 +553,8 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
           { href: '/articles/PmKisanCscRegistrationCharges', l: '🏪 CSC Charges' },
-          { href: '/articles/PmKisanEkycOnline2026', l: '🔐 eKYC Guide' },
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
+          { href: '/articles/PmKisanEkycOnline2026', l: 'eKYC Guide' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
         ]} />
         <Disclaimer />
       </div>

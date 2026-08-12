@@ -4,7 +4,7 @@ export const CATEGORIES = {
     nameHi: 'सत्यापन और स्थिति',
     description: 'Kist verification, beneficiary roster, FTO, eKYC, land seeding guides',
     descriptionHi: 'किस्त सत्यापन, लाभार्थी सूची, एफटीओ, ईकेवाईसी, भूमि सीडिंग गाइड',
-    icon: '',
+    
     color: 'blue',
   },
   'loan': {
@@ -12,7 +12,7 @@ export const CATEGORIES = {
     nameHi: 'ऋण और क्रेडिट',
     description: 'KCC loan, farm equipment loan, and bank credit guides',
     descriptionHi: 'केसीसी लोन, कृषि उपकरण ऋण, और बैंक क्रेडिट गाइड',
-    icon: '💰',
+    
     color: 'amber',
   },
   'farming': {
@@ -28,7 +28,7 @@ export const CATEGORIES = {
     nameHi: 'बाजार दरें',
     description: 'Daily vegetable and fruit market rates, wholesale prices',
     descriptionHi: 'दैनिक सब्जी और फल बाजार दरें, थोक कीमतें',
-    icon: '',
+    
     color: 'yellow',
   },
   'pashupalan': {

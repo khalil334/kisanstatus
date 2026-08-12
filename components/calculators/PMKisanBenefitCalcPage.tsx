@@ -42,9 +42,9 @@ export default function PMKisanBenefitCalcPage() {
       <div className="container-site max-w-2xl py-8">
 
         <div className="flex flex-wrap gap-3 text-xs text-[var(--color-text-muted)] mb-4">
-          <span>✍️ <Link href="/about" className="underline hover:text-[var(--color-text)]">{AUTHOR_NAME}</Link></span>
-          <span>📅 {fmtDate(PUBLISHED)}</span>
-          <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
+          <span><Link href="/about" className="underline hover:text-[var(--color-text)]">{AUTHOR_NAME}</Link></span>
+          <span>{fmtDate(PUBLISHED)}</span>
+          <span>Updated: {fmtDate(MODIFIED)}</span>
         </div>
 
         <div className="mb-6 p-5 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl text-sm text-[var(--color-text)] leading-relaxed">
@@ -56,13 +56,13 @@ export default function PMKisanBenefitCalcPage() {
             Hisaab lagayen to agar aap 3 saal se enrolled ho aur sab kist time par aayi hain, toh ab tak <strong>₹18,000</strong> mil chuke honge. 5 saal poore ho jayein toh ye figure <strong>₹30,000</strong> tak pahunch jata hai.
           </p>
           <p className="text-xs text-green-700 dark:text-green-300 mt-3">
-            💡 Koi kist miss ho gayi ho toh ghabrao mat — eKYC aur bank seeding complete karo, arrears mein wapas mil jati hai.
+             Koi kist miss ho gayi ho toh ghabrao mat — eKYC aur bank seeding complete karo, arrears mein wapas mil jati hai.
           </p>
         </div>
 
         <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6 shadow-sm">
           <h2 className="font-black text-[var(--color-text)] text-base mb-5 flex items-center gap-2">
-            <span>🧮</span> Apna Detail Bharo
+            Apna Detail Bharo
           </h2>
 
           <InputField
@@ -79,8 +79,8 @@ export default function PMKisanBenefitCalcPage() {
             label="eKYC ho gaya hai?"
             value={hasEkyc} onChange={setHasEkyc}
             options={[
-              {value:'yes',label:'✅ Haan — eKYC complete hai'},
-              {value:'no', label:'❌ Nahi — abhi pending hai'},
+              {value:'yes',label:'Haan — eKYC complete hai'},
+              {value:'no', label:'Nahi — abhi pending hai'},
             ]}
             hint="eKYC nahi hai to kist nahi aayegi"
           />
@@ -92,14 +92,13 @@ export default function PMKisanBenefitCalcPage() {
 
           {!eligible ? (
             <div className="mt-4 p-5 bg-orange-50 dark:bg-orange-900/20 border-2 border-orange-300 dark:border-orange-800 rounded-2xl text-center">
-              <span className="text-3xl block mb-2">⚠️</span>
               {hasEkyc==='no' ? (
                 <>
                   <p className="font-black text-orange-800 dark:text-orange-300 mb-1">eKYC Nahi Hua — Kist Ruki Hui Hai!</p>
                   <p className="text-sm text-orange-700 dark:text-orange-400 mb-3">Jab tak eKYC nahi hogi, payment nahi aayegi — chahe sab kuch sahi ho.</p>
                   <Link href="/articles/PmKisanEkycOnline2026"
                     className="inline-flex items-center gap-2 bg-green-700 text-white font-bold px-5 py-2.5 rounded-xl text-sm hover:bg-green-600 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
-                    🔐 eKYC Kaise Karein — Free Guide →
+                     eKYC Kaise Karein — Free Guide →
                   </Link>
                 </>
               ) : (
@@ -111,7 +110,7 @@ export default function PMKisanBenefitCalcPage() {
             </div>
           ) : (
             <div className="mt-4 bg-green-50 dark:bg-green-900/20 border-2 border-green-300 dark:border-green-800 rounded-2xl p-5">
-              <p className="text-xs text-green-700 dark:text-green-300 font-bold uppercase tracking-wide mb-3">📊 Aapka PM Kisan Paisa</p>
+              <p className="text-xs text-green-700 dark:text-green-300 font-bold uppercase tracking-wide mb-3">Aapka PM Kisan Paisa</p>
               <ResultRow label="Har Kist Mein" value={fmt(2000)} />
               <ResultRow label="Saal Mein (3 Kist)" value={fmt(6000)} />
               <ResultRow label={`${y} Saal Ki Kul Kist`} value={`${totalI} kist`} />
@@ -119,12 +118,12 @@ export default function PMKisanBenefitCalcPage() {
               <ResultRow label={`${y} Saal Ka Kul Paisa`} value={fmt(total + arrears)} bold highlight />
 
               <div className="mt-3 p-3 bg-white dark:bg-gray-800 rounded-xl text-xs text-[var(--color-text)]">
-                <p className="font-bold mb-1">📖 Iska Matlab:</p>
+                <p className="font-bold mb-1">Iska Matlab:</p>
                 <p>Aap {y} saal se PM Kisan mein ho. Har saal ₹6,000 milte hain (₹2,000 ki 3 kist). Total {totalI} kist aa chuki hain ya aayengi. Kul {fmt(total)} mile hain. Agar {missed} kist miss hui thi to arrears mein {fmt(arrears)} milenge. Total {fmt(total + arrears)} milenge.</p>
               </div>
 
               <div className="mt-3 pt-3 border-t border-green-200 dark:border-green-800 text-xs text-green-700 dark:text-green-300">
-                ✅ eKYC done + zameen 2 hectare tak = <strong>Aap eligible hain!</strong>
+                 eKYC done + zameen 2 hectare tak = <strong>Aap eligible hain!</strong>
               </div>
             </div>
           )}
@@ -132,12 +131,11 @@ export default function PMKisanBenefitCalcPage() {
 
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
           {[
-            {icon:'💰',title:'₹6,000 Saalana',desc:'₹2,000 ki 3 kist — DBT se seedha bank mein'},
-            {icon:'📅',title:'24vi Kist',desc:'October 2026 mein aane wali hai — eKYC complete karo'},
-            {icon:'🔐',title:'eKYC Zaroori',desc:'Bina eKYC ke kist nahi aayegi — abhi free mein karo'},
-          ].map(({icon,title,desc})=>(
+            {title:'₹6,000 Saalana',desc:'₹2,000 ki 3 kist — DBT se seedha bank mein'},
+            {title:'24vi Kist',desc:'October 2026 mein aane wali hai — eKYC complete karo'},
+            {title:'eKYC Zaroori',desc:'Bina eKYC ke kist nahi aayegi — abhi free mein karo'},
+          ].map(({ title,desc})=>(
             <div key={title} className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-center shadow-sm">
-              <span className="text-2xl block mb-1">{icon}</span>
               <p className="font-black text-[var(--color-text)] text-xs">{title}</p>
               <p className="text-[11px] text-[var(--color-text-muted)] mt-1">{desc}</p>
             </div>
@@ -145,7 +143,7 @@ export default function PMKisanBenefitCalcPage() {
         </div>
 
         <div className="mt-6 bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-5 shadow-sm">
-          <h3 className="font-black text-[var(--color-text)] text-sm mb-4">📊 Saal-War Breakdown</h3>
+          <h3 className="font-black text-[var(--color-text)] text-sm mb-4">Saal-War Breakdown</h3>
           <div className="overflow-x-auto">
             <table className="w-full text-xs border-collapse">
               <thead>
@@ -183,7 +181,7 @@ export default function PMKisanBenefitCalcPage() {
         </div>
 
         <div className="mt-6 bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-5 shadow-sm">
-          <h3 className="font-black text-[var(--color-text)] text-sm mb-4">📝 PM Kisan Mein Register Kaise Ho</h3>
+          <h3 className="font-black text-[var(--color-text)] text-sm mb-4">PM Kisan Mein Register Kaise Ho</h3>
           <div className="space-y-3">
             {[
               {n:1,s:'Nazdiki CSC center jao, ya seedha pmkisan.gov.in par online apply kar do'},
@@ -201,7 +199,7 @@ export default function PMKisanBenefitCalcPage() {
           </div>
 
           <div className="mt-4 p-3 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
-            <p className="text-xs text-green-800 dark:text-green-300 font-bold mb-1">📄 Documents Checklist:</p>
+            <p className="text-xs text-green-800 dark:text-green-300 font-bold mb-1">Documents Checklist:</p>
             <ul className="text-xs text-green-700 dark:text-green-400 space-y-0.5 ml-4">
               <li>✓ Aadhaar card (mobile linked)</li>
               <li>✓ Bank passbook (Aadhaar linked)</li>
@@ -213,26 +211,26 @@ export default function PMKisanBenefitCalcPage() {
 
           <Link href="/articles/PmKisanMasterGuide2026"
             className="mt-4 inline-flex items-center gap-2 text-xs font-bold text-green-700 hover:text-green-900">
-            📖 PM Kisan Complete Guide Padho →
+             PM Kisan Complete Guide Padho →
           </Link>
         </div>
 
         <div className="mt-6 p-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-xl">
-          <p className="font-bold text-yellow-900 dark:text-yellow-300 text-sm mb-2">⚠️ PM Kisan Mein Aksar Yeh Galtiyan Hoti Hain:</p>
+          <p className="font-bold text-yellow-900 dark:text-yellow-300 text-sm mb-2">PM Kisan Mein Aksar Yeh Galtiyan Hoti Hain:</p>
           <ul className="space-y-1.5 text-xs text-yellow-800 dark:text-yellow-400">
-            <li>❌ eKYC ko taalna — isse kist rukti hai aur arrears mein fasna padta hai</li>
-            <li>❌ Bank account Aadhaar se link na hona — jiski wajah se payment fail ho jati hai</li>
-            <li>❌ Land records mein galti — naam ya area match na hone par application reject ho jata hai</li>
-            <li>❌ Mobile number badal jana bina update kiye — OTP nahi aata, eKYC atak jati hai</li>
-            <li>❌ Status kabhi check hi na karna — pata hi nahi chalta ki kist aayi ya nahi</li>
+            <li>eKYC ko taalna — isse kist rukti hai aur arrears mein fasna padta hai</li>
+            <li>Bank account Aadhaar se link na hona — jiski wajah se payment fail ho jati hai</li>
+            <li>Land records mein galti — naam ya area match na hone par application reject ho jata hai</li>
+            <li>Mobile number badal jana bina update kiye — OTP nahi aata, eKYC atak jati hai</li>
+            <li>Status kabhi check hi na karna — pata hi nahi chalta ki kist aayi ya nahi</li>
           </ul>
         </div>
 
         <div className="mt-6">
-          <h3 className="font-black text-[var(--color-text)] text-sm mb-3">💡 PM Kisan Se Maximum Fayda Kaise Uthao</h3>
+          <h3 className="font-black text-[var(--color-text)] text-sm mb-3">PM Kisan Se Maximum Fayda Kaise Uthao</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
             <div className="p-3 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
-              <p className="font-bold text-green-900 dark:text-green-300 mb-1">⏰ Time Par eKYC Karo</p>
+              <p className="font-bold text-green-900 dark:text-green-300 mb-1">Time Par eKYC Karo</p>
               <p className="text-green-800 dark:text-green-400">Har kist se pehle eKYC dekh lo, complete nahi hai to kar lo — CSC center aur online, dono free hain</p>
             </div>
             <div className="p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
@@ -240,11 +238,11 @@ export default function PMKisanBenefitCalcPage() {
               <p className="text-blue-800 dark:text-blue-400">Bank account Aadhaar se linked aur active hona chahiye — PFMS portal se ek baar confirm kar lo</p>
             </div>
             <div className="p-3 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-xl">
-              <p className="font-bold text-purple-900 dark:text-purple-300 mb-1">📊 Status Regular Check Karo</p>
+              <p className="font-bold text-purple-900 dark:text-purple-300 mb-1">Status Regular Check Karo</p>
               <p className="text-purple-800 dark:text-purple-400">pmkisan.gov.in par mahine mein ek baar status dekh lena achhi aadat hai, problem miley toh turant fix karo</p>
             </div>
             <div className="p-3 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl">
-              <p className="font-bold text-amber-900 dark:text-amber-300 mb-1">📄 Documents Update Rakho</p>
+              <p className="font-bold text-amber-900 dark:text-amber-300 mb-1">Documents Update Rakho</p>
               <p className="text-amber-800 dark:text-amber-400">Naam, pata ya bank details badle to turant update kar do, warna payment fail ho sakti hai</p>
             </div>
           </div>
@@ -255,31 +253,31 @@ export default function PMKisanBenefitCalcPage() {
         <OtherCalcs current="/calculator/pm-kisan-benefit" />
 
         <div className="mt-6 p-5 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
-          <p className="font-bold text-green-900 dark:text-green-300 text-sm mb-3">📖 PM Kisan Se Related Guides</p>
+          <p className="font-bold text-green-900 dark:text-green-300 text-sm mb-3">PM Kisan Se Related Guides</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             <Link href="/articles/PmKisan24viKist2026" className="p-3 bg-[var(--color-card)] border border-green-200 dark:border-green-800 rounded-xl text-xs font-semibold text-[var(--color-text)] hover:bg-green-600 hover:text-white transition-colors">
-              📆 24vi Kist Status — October 2026
+               24vi Kist Status — October 2026
             </Link>
             <Link href="/articles/PmKisanEkycOnline2026" className="p-3 bg-[var(--color-card)] border border-green-200 dark:border-green-800 rounded-xl text-xs font-semibold text-[var(--color-text)] hover:bg-green-600 hover:text-white transition-colors">
-              🔐 eKYC Kaise Karein — Free Guide
+               eKYC Kaise Karein — Free Guide
             </Link>
             <Link href="/articles/PmKisanBeneficiaryList2026" className="p-3 bg-[var(--color-card)] border border-green-200 dark:border-green-800 rounded-xl text-xs font-semibold text-[var(--color-text)] hover:bg-green-600 hover:text-white transition-colors">
-              📋 Beneficiary List — Naam Check Karo
+               Beneficiary List — Naam Check Karo
             </Link>
             <Link href="/articles/PmKisanPaymentFailedFix2026" className="p-3 bg-[var(--color-card)] border border-green-200 dark:border-green-800 rounded-xl text-xs font-semibold text-[var(--color-text)] hover:bg-green-600 hover:text-white transition-colors">
-              💸 Payment Failed Fix — Turant
+               Payment Failed Fix — Turant
             </Link>
             <Link href="/articles/PmKisanMasterGuide2026" className="p-3 bg-[var(--color-card)] border border-green-200 dark:border-green-800 rounded-xl text-xs font-semibold text-[var(--color-text)] hover:bg-green-600 hover:text-white transition-colors">
-              📚 PM Kisan Complete Guide
+               PM Kisan Complete Guide
             </Link>
             <Link href="/calculator/installment-tracker" className="p-3 bg-[var(--color-card)] border border-green-200 dark:border-green-800 rounded-xl text-xs font-semibold text-[var(--color-text)] hover:bg-green-600 hover:text-white transition-colors">
-              📆 Kist Status Tracker
+               Kist Status Tracker
             </Link>
           </div>
         </div>
 
         <div className="mt-6 p-5 bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-xl">
-          <p className="font-bold text-[var(--color-text)] text-sm mb-3">❓ PM Kisan Ke Baare Mein Aksar Sawaal</p>
+          <p className="font-bold text-[var(--color-text)] text-sm mb-3">PM Kisan Ke Baare Mein Aksar Sawaal</p>
           <div className="space-y-3 text-xs">
             <details className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-lg p-3">
               <summary className="font-bold text-[var(--color-text)] cursor-pointer">PM Kisan mein kitna paisa milta hai?</summary>

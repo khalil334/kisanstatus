@@ -32,7 +32,6 @@ export default function Footer() {
               Bharat ke kisaanon ke liye — PM Kisan, eKYC, kist status, aur free agricultural calculators.
             </p>
             <div className="flex items-center gap-2 text-sm text-gray-400">
-              <span aria-hidden="true">✍️</span>
               <span>
                 By{' '}
                 <Link
@@ -52,11 +51,11 @@ export default function Footer() {
               <ul className="space-y-2 text-sm" role="list">
                 {[
                   { href: '/', label: '🏠 Home' },
-                  { href: '/articles', label: '📚 All Articles' },
+                  { href: '/articles', label: 'All Articles' },
                   { href: '/articles/hi', label: '🇮🇳 हिंदी योजना गाइड' },
                   { href: '/rajya-yojana', label: '🏛️ Rajya Yojana' },
-                  { href: '/calculator', label: '🧮 Calculators' },
-                  { href: '/calculator/quick-status-check', label: '⚡ Quick Status Check' },
+                  { href: '/calculator', label: 'Calculators' },
+                  { href: '/calculator/quick-status-check', label: 'Quick Status Check' },
                 ].map((link) => (
                   <li key={link.href}>
                     <Link
@@ -77,10 +76,10 @@ export default function Footer() {
               <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm" role="list">
                 {[
                   { href: '/about', label: '👤 About Us' },
-                  { href: '/contact', label: '📧 Contact Us' },
-                  { href: '/privacy-policy', label: '🔒 Privacy Policy' },
-                  { href: '/terms-of-service', label: '📜 Terms of Service' },
-                  { href: '/disclaimer', label: '⚠️ Disclaimer' },
+                  { href: '/contact', label: 'Contact Us' },
+                  { href: '/privacy-policy', label: 'Privacy Policy' },
+                  { href: '/terms-of-service', label: 'Terms of Service' },
+                  { href: '/disclaimer', label: 'Disclaimer' },
                 ].map((link) => (
                   <li key={link.href}>
                     <Link
@@ -97,7 +96,6 @@ export default function Footer() {
 
           <div>
             <h4 className="font-semibold text-white text-base mb-4 flex items-center gap-2">
-              <span aria-hidden="true">📧</span>
               Website Contact
             </h4>
 
@@ -107,11 +105,10 @@ export default function Footer() {
               <meta itemProp="availableLanguage" content="Hindi" />
               <meta itemProp="availableLanguage" content="English" />
               <h5 className="text-sm font-bold text-green-400 mb-3 flex items-center gap-2">
-                💬 KisanStatus Se Sampark
+                 KisanStatus Se Sampark
               </h5>
               <div className="space-y-2.5 text-xs text-gray-300">
                 <p className="flex items-start gap-2">
-                  <span className="shrink-0 mt-0.5" aria-hidden="true">📧</span>
                   <span>
                     Email:{' '}
                     <a
@@ -124,7 +121,6 @@ export default function Footer() {
                   </span>
                 </p>
                 <p className="flex items-start gap-2">
-                  <span className="shrink-0 mt-0.5" aria-hidden="true">📝</span>
                   <span>
                     <Link
                       href="/contact"
@@ -135,7 +131,6 @@ export default function Footer() {
                   </span>
                 </p>
                 <p className="flex items-start gap-2">
-                  <span className="shrink-0 mt-0.5" aria-hidden="true">⏰</span>
                   <span itemProp="hoursAvailable" itemScope itemType="https://schema.org/OpeningHoursSpecification">
                     <meta itemProp="dayOfWeek" content="https://schema.org/Monday" />
                     <meta itemProp="dayOfWeek" content="https://schema.org/Tuesday" />
@@ -171,11 +166,10 @@ export default function Footer() {
           </h4>
           <div className="bg-white/5 border border-white/10 rounded-lg p-4 mb-4">
             <h5 className="text-sm font-bold text-green-400 mb-3 flex items-center gap-2">
-              📞 Sarkari Helpline (PM Kisan — Official)
+               Sarkari Helpline (PM Kisan — Official)
             </h5>
             <div className="flex flex-wrap gap-x-8 gap-y-2 text-xs text-gray-300">
               <p className="flex items-start gap-2">
-                <span className="shrink-0 mt-0.5" aria-hidden="true">📞</span>
                 <span>
                   PM Kisan Helpline:{' '}
                   <a
@@ -188,7 +182,6 @@ export default function Footer() {
                 </span>
               </p>
               <p className="flex items-start gap-2">
-                <span className="shrink-0 mt-0.5" aria-hidden="true">📞</span>
                 <span>
                   Alt Helpline:{' '}
                   <a

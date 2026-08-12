@@ -12,19 +12,19 @@ const RELATED_CARDS = [
     slug: 'pm-kisan-maandhan-registration-2026',
     title: 'Registration Kaise Karein',
     desc: 'CSC ya online application se apply karne ka poora tarika, screenshot ke saath.',
-    emoji: '📝',
+    
   },
   {
     slug: 'pm-kisan-maandhan-pension-calculator',
     title: 'Apna Contribution Nikalein',
     desc: 'Umar daliye aur turant dekhiye har mahine kitna jama karna hoga.',
-    emoji: '🧮',
+    
   },
   {
     slug: 'pm-kisan-maandhan-withdrawal-refund-rules',
     title: 'Beech Mein Chhodne Ke Niyam',
     desc: 'Agar 60 saal se pehle scheme chhodni pade toh paisa kaise wapas milta hai.',
-    emoji: '💸',
+    
   },
 ];
 
@@ -119,10 +119,10 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
           </h1>
 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 15 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>15 min read</span>
           </div>
         </div>
       </div>
@@ -165,7 +165,6 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
           <SH>Teen Zaroori Shartein — Inme Se Koi Bhi Miss Nahi Honi Chahiye</SH>
           <div className="space-y-3 mb-6">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl flex gap-3">
-              <span className="text-2xl">🎂</span>
               <div>
                 <p className="font-black text-sm text-green-800 dark:text-green-300 mb-1">Pehli Shart — Umar</p>
                 <p className="text-xs text-[var(--color-text-muted)]">Registration ke waqt umar poori 18 se 40 saal ke beech honi chahiye. Ye seema isliye rakhi gayi hai taaki 60 tak pahunchte-pahunchte kaafi saal contribution ho sake aur pension fund thik se banta rahe — 41 saal ke baad naya enrolment ruk jaata hai, koi relaxation nahi milti.</p>
@@ -179,7 +178,6 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
               </div>
             </div>
             <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl flex gap-3">
-              <span className="text-2xl">✅</span>
               <div>
                 <p className="font-black text-sm text-amber-800 dark:text-amber-300 mb-1">Teesri Shart — PM Kisan Ka Beneficiary Hona</p>
                 <p className="text-xs text-[var(--color-text-muted)]">Aapka naam <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-blue-600 dark:text-blue-400 font-medium">PM Kisan Samman Nidhi</Link> ki active list mein pehle se hona chahiye. Wajah simple hai — Maandhan wahi zameen aur bank verification dobara istemal karta hai jo PM Kisan mein already ho chuki hoti hai, isliye naam list mein na hone par application entry hi nahi lene deta.</p>
@@ -213,7 +211,7 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
             Shartein poori hone ke baad aapka monthly contribution sirf aapki aaj ki umar tay karti hai — 18 saal walon ka ₹55 aur 40 saal walon ka ₹200. Har umar ka exact official figure reference chart mein hai:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <Link href="/maandhan/pm-kisan-maandhan-age-wise-contribution-chart-2026" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">📊 Age-Wise Contribution Chart Dekhen →</Link>
+            <Link href="/maandhan/pm-kisan-maandhan-age-wise-contribution-chart-2026" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">Age-Wise Contribution Chart Dekhen →</Link>
           </div>
         </section>
 
@@ -232,7 +230,7 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
               { title: 'Doosri Maandhan Scheme Wale', desc: 'Jo pehle se PM Shram Yogi Maandhan (PM-SYM) ya PM Laghu Vyapari Maandhan (PM-LVM) mein enrolled hain.' },
             ].map(({ title, desc }) => (
               <div key={title} className="p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
-                <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">❌ {title}</p>
+                <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">{title}</p>
                 <p className="text-xs text-red-700 dark:text-red-400">{desc}</p>
               </div>
             ))}
@@ -263,7 +261,6 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
           <div className="space-y-4 mb-6">
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
               <div className="flex items-start gap-3">
-                <span className="text-xl mt-0.5">🪪</span>
                 <div>
                   <p className="font-black text-sm text-[var(--color-text)] mb-1">Aadhaar Card, Original Aur Ek Copy</p>
                   <p className="text-xs text-[var(--color-text-muted)]">Aadhaar hi wo unique ID hai jisse system aapki PM Kisan entry, bank account aur land record teeno ko jodta hai — isliye copy dhundhli ya purani na ho, warna operator scan karke upload nahi kar payega aur naya print nikalwana padega.</p>
@@ -283,7 +280,6 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
 
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
               <div className="flex items-start gap-3">
-                <span className="text-xl mt-0.5">📜</span>
                 <div>
                   <p className="font-black text-sm text-[var(--color-text)] mb-1">Zameen Ka Record — Khatauni Ya Khasra</p>
                   <p className="text-xs text-[var(--color-text-muted)]">Isi se 2 hectare wali seema prove hoti hai. Yad rakhein ki record mein zameen "krishi yogya" (cultivable) darj ho — agar classification banjar ya non-agricultural dikha rahi hai toh eligibility hi nahi banegi, chahe size sahi ho. Lease par li gayi zameen ke liye registered lease deed bhi saath rakhein.</p>
@@ -293,7 +289,6 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
 
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
               <div className="flex items-start gap-3">
-                <span className="text-xl mt-0.5">📱</span>
                 <div>
                   <p className="font-black text-sm text-[var(--color-text)] mb-1">Chalu Mobile Number</p>
                   <p className="text-xs text-[var(--color-text-muted)]">Registration ke waqt bhi zaroori hai aur baad mein contribution reminders ke liye bhi. Wahi number rakhein jo Aadhaar aur PM Kisan dono mein already registered hai.</p>
@@ -303,7 +298,6 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
 
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
               <div className="flex items-start gap-3">
-                <span className="text-xl mt-0.5">🖼️</span>
                 <div>
                   <p className="font-black text-sm text-[var(--color-text)] mb-1">Do-Teen Passport Size Photo</p>
                   <p className="text-xs text-[var(--color-text-muted)]">Offline form bharte waqt ya CSC record ke liye rakh lein, kaam aa jaata hai — kai centre digitally hi le lete hain lekin printed copy saath hona nuksaan nahi karta.</p>
@@ -370,8 +364,8 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
               },
             ].map(({ reason, solution }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
-                <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">❌ {reason}</p>
-                <p className="text-xs text-green-700 dark:text-green-400"><strong>✅ Solution:</strong> {solution}</p>
+                <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">{reason}</p>
+                <p className="text-xs text-green-700 dark:text-green-400"><strong>Solution:</strong> {solution}</p>
               </div>
             ))}
           </div>
@@ -408,7 +402,6 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
                 href={`/maandhan/${card.slug}`}
                 className="group block p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:border-green-500 transition-all duration-300"
               >
-                <div className="text-2xl mb-2">{card.emoji}</div>
                 <h4 className="font-bold text-gray-900 dark:text-white text-sm mb-1 group-hover:text-green-600 transition-colors">
                   {card.title}
                 </h4>
@@ -425,9 +418,9 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
 
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/maandhan/pm-kisan-maandhan-registration-2026', l: '📝 Registration Guide' },
-          { href: '/maandhan/pm-kisan-maandhan-pension-calculator', l: '🧮 Calculator' },
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
+          { href: '/maandhan/pm-kisan-maandhan-registration-2026', l: 'Registration Guide' },
+          { href: '/maandhan/pm-kisan-maandhan-pension-calculator', l: 'Calculator' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
         ]} />
         <Disclaimer />
       </div>

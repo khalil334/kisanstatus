@@ -61,7 +61,6 @@ export default function LandSeedingDownloadPage() {
         <div className="container-site max-w-3xl py-12 px-4">
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl border-2 border-green-500 dark:border-green-700 p-6 md:p-8 mb-8">
             <div className="text-center mb-6">
-              <div className="text-6xl mb-4" aria-hidden="true">📄</div>
               <h2 className="text-xl md:text-2xl font-black text-gray-800 dark:text-white mb-3">
                 {state} Land Seeding Form PDF Download Link
               </h2>
@@ -89,7 +88,7 @@ export default function LandSeedingDownloadPage() {
                   </span>
                 ) : (
                   <span className="flex items-center justify-center gap-2">
-                    📥 {state} Land Seeding Form PDF Download Karein
+                     {state} Land Seeding Form PDF Download Karein
                   </span>
                 )}
               </button>
@@ -100,7 +99,7 @@ export default function LandSeedingDownloadPage() {
 
             <div className="bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-200 dark:border-blue-800 rounded-xl p-4 mb-6">
               <h3 className="font-bold text-blue-800 dark:text-blue-300 mb-3 text-sm flex items-center gap-2">
-                <span aria-hidden="true">📌</span> Zaroori Jaankari aur Process:
+                Zaroori Jaankari aur Process:
               </h3>
               <ul className="text-xs text-blue-700 dark:text-blue-400 space-y-2 list-disc list-inside">
                 <li>Yeh form PDF format mein hota hai aur ise download karna bilkul <strong>free</strong> hai. Kisi bhi agent ya middleman ko paise na dein.</li>
@@ -118,7 +117,7 @@ export default function LandSeedingDownloadPage() {
 
             <div className="border-t-2 border-gray-200 dark:border-gray-700 pt-6">
               <h3 className="font-bold text-gray-800 dark:text-white mb-4 text-center text-sm">
-                🗺️ Anya Rajya (Other States) Ke Liye Link:
+                 Anya Rajya (Other States) Ke Liye Link:
               </h3>
               <div className="grid grid-cols-2 gap-3">
                 <Link

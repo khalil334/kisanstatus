@@ -8,13 +8,13 @@ const PUBLISHED = '2026-02-25T21:37:17+05:30';
 const MODIFIED = '2026-03-18T14:49:39+05:30';
 
 const RELATED = [
-  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Complete Guide', emoji: '📚' },
-  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status Check', emoji: '📅' },
-  { slug: 'PmKisanPaymentFailedFix2026', title: 'Payment Failed Fix', emoji: '💸' },
-  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Kaise Karein', emoji: '🔐' },
-  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List Check', emoji: '📋' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Loan Apply', emoji: '💳' },
-  { slug: 'PmKisanMobileNumberChangeUpdate', title: 'Mobile Number Change Guide', emoji: '📱' },
+  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Complete Guide' },
+  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status Check' },
+  { slug: 'PmKisanPaymentFailedFix2026', title: 'Payment Failed Fix' },
+  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Kaise Karein' },
+  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List Check' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Loan Apply' },
+  { slug: 'PmKisanMobileNumberChangeUpdate', title: 'Mobile Number Change Guide' },
   { slug: 'PmKisanFaceAuthenticationEkyc', title: 'Face Auth eKYC Guide', emoji: '🤳' },
   { slug: 'PmKisanLandSeedingForm', title: 'Land Seeding Form', emoji: '🌱' },
 ];
@@ -67,10 +67,10 @@ export default function PmKisanCorrectionForm2026({ article }: { article: Articl
             PM Kisan Correction Form Kaise Bharein — Naam, Aadhaar, Bank Details Galat Hai To Kya Karein 2026
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 8 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>8 min read</span>
           </div>
         </div>
       </div>
@@ -113,19 +113,19 @@ export default function PmKisanCorrectionForm2026({ article }: { article: Articl
           </p>
           <div className="space-y-3 mb-4">
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
-              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-1">❌ Naam Spelling Mismatch</p>
+              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-1">Naam Spelling Mismatch</p>
               <p className="text-xs text-[var(--color-text-muted)]">Portal par ek spelling, bank mein dusri, Aadhaar par teesri. PFMS ko exact match chahiye. "Kumar" aur "Kumaar" mein bhi fark padta hai bhai.</p>
             </div>
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
-              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-1">❌ Wrong IFSC Code / Bank Account Issue</p>
+              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-1">Wrong IFSC Code / Bank Account Issue</p>
               <p className="text-xs text-[var(--color-text-muted)]">Registration ke waqt jaldi mein ek digit galat daal diya, ya phir bank merge ho gaya toh purana IFSC kaam nahi karta. Ise fix karwana zaroori hai warna paisa bounce ho jayega.</p>
             </div>
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
-              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-1">❌ Aadhaar Seeding Nahi Hui</p>
+              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-1">Aadhaar Seeding Nahi Hui</p>
               <p className="text-xs text-[var(--color-text-muted)]">Aadhaar link toh hai lekin NPCI mapper mein seeding nahi hui. Ye alag cheez hai bhai. Aksar log sochte hain ki Aadhaar link hone ke baad bhi payment kyun fail hua — yahi wajah hoti hai.</p>
             </div>
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
-              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-1">❌ Gender/DOB ya Mobile Number Galat</p>
+              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-1">Gender/DOB ya Mobile Number Galat</p>
               <p className="text-xs text-[var(--color-text-muted)]">Kabhi kabhi gender galat select ho jata hai, ya purana mobile number band ho gaya aur naya update nahi hai.</p>
             </div>
           </div>
@@ -249,25 +249,25 @@ export default function PmKisanCorrectionForm2026({ article }: { article: Articl
           </p>
           <div className="space-y-3 mb-4">
             <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl">
-              <p className="font-black text-amber-800 dark:text-amber-300 text-sm mb-1">⚠️ PM Kisan Mobile Number Update Bhool Jana</p>
+              <p className="font-black text-amber-800 dark:text-amber-300 text-sm mb-1">PM Kisan Mobile Number Update Bhool Jana</p>
               <p className="text-xs text-[var(--color-text-muted)]">Agar purana number band hai aur naya portal par update nahi kiya, toh OTP nahi aayega. Hamesha active number rakho. Purana sim na ho toh mobile number sirf CSC par biometric se hi badla ja sakta hai.</p>
             </div>
 
             <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl">
-              <p className="font-black text-amber-800 dark:text-amber-300 text-sm mb-1">⚠️ Naam Correction Ke Liye Sahi Proof Na Hona</p>
+              <p className="font-black text-amber-800 dark:text-amber-300 text-sm mb-1">Naam Correction Ke Liye Sahi Proof Na Hona</p>
               <p className="text-xs text-[var(--color-text-muted)]">Agar naam badla hai toh Gazette notification ya affidavit jaisa koi valid proof zaroori ho sakta hai. Bina proper proof ke portal par naam change approve nahi hoga.</p>
             </div>
 
             <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl">
-              <p className="font-black text-amber-800 dark:text-amber-300 text-sm mb-1">⚠️ PM Kisan Gender/DOB Correction Ignore Karna</p>
+              <p className="font-black text-amber-800 dark:text-amber-300 text-sm mb-1">PM Kisan Gender/DOB Correction Ignore Karna</p>
               <p className="text-xs text-[var(--color-text-muted)]">Agar Aadhaar par DOB alag hai aur portal par alag, toh verification fail ho jayega. Dono jagah same hona chahiye.</p>
             </div>
             <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl">
-              <p className="font-black text-amber-800 dark:text-amber-300 text-sm mb-1">⚠️ PM Kisan Land Record Mismatch Solution Na Dhundhna</p>
+              <p className="font-black text-amber-800 dark:text-amber-300 text-sm mb-1">PM Kisan Land Record Mismatch Solution Na Dhundhna</p>
               <p className="text-xs text-[var(--color-text-muted)]">Agar zameen ka record sarkari database (Bhulekh/Bhoomi) mein galat hai, toh portal par correction kaam nahi karega. Pehle Patwari se land record theek karwao.</p>
             </div>
             <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl">
-              <p className="font-black text-amber-800 dark:text-amber-300 text-sm mb-1">⚠️ PM Kisan Beneficiary Status Inactive Reason Samjhe Bina Chhod Dena</p>
+              <p className="font-black text-amber-800 dark:text-amber-300 text-sm mb-1">PM Kisan Beneficiary Status Inactive Reason Samjhe Bina Chhod Dena</p>
               <p className="text-xs text-[var(--color-text-muted)]">Agar status "Inactive" dikh raha hai toh samjho koi detail galat hai. Iski asli wajah jaanne ke liye helpline 155261 par call karo ya CSC se check karwao. Ise ignore mat karo.</p>
             </div>
           </div>
@@ -286,7 +286,7 @@ export default function PmKisanCorrectionForm2026({ article }: { article: Articl
             Bhai, der mat karo. Jitni jaldi details theek karoge, utni jaldi agli kist aa jayegi. Aur haan — CSC wale ya koi agent ko ₹500-1000 mat do. Ye kaam ₹30 mein ho jata hai, ya ghar baithe free mein.
           </p>
           <p className="text-xs text-green-700 dark:text-green-400 italic">
-            💡 Agar koi dikkat aaye toh helpline 155261 par call karna ya district agriculture office ka chakkar laga lena. Written complaint sabse tez kaam karti hai.
+             Agar koi dikkat aaye toh helpline 155261 par call karna ya district agriculture office ka chakkar laga lena. Written complaint sabse tez kaam karti hai.
           </p>
         </div>
 
@@ -299,19 +299,18 @@ export default function PmKisanCorrectionForm2026({ article }: { article: Articl
         />
 
         <CalcBanner
-          icon="📅"
           title="Apni Kist Track Karo"
           desc="Correction ke baad kitni kist pending hai — jaano"
-          primaryCta={{ href: '/calculator/installment-tracker', label: '📅 Tracker Kholo →' }}
-          secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: '💰 Benefit Calculator' }}
+          primaryCta={{ href: '/calculator/installment-tracker', label: 'Tracker Kholo →' }}
+          secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: 'Benefit Calculator' }}
         />
 
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
-          { href: '/articles/PmKisanPaymentFailedFix2026', l: '💸 Payment Fix' },
-          { href: '/articles/PmKisanEkycOnline2026', l: '🔐 eKYC' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
+          { href: '/articles/PmKisanPaymentFailedFix2026', l: 'Payment Fix' },
+          { href: '/articles/PmKisanEkycOnline2026', l: 'eKYC' },
         ]} />
         <Disclaimer />
       </div>

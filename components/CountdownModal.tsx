@@ -23,7 +23,7 @@ export default function CountdownModal({
   redirectUrl,
   onClose,
   seconds = 10,
-  icon = '⏳',
+  icon = '',
   countdownNote = 'seconds mein official portal khulega...',
   infoNote,
   cancelLabel = 'Cancel',
@@ -59,7 +59,7 @@ export default function CountdownModal({
         onClick={(e) => e.stopPropagation()}
       >
         <div className="text-center">
-          <div className="text-5xl mb-3" aria-hidden="true">{icon}</div>
+          {icon ? <div className="text-5xl mb-3" aria-hidden="true">{icon}</div> : null}
           <h3 className="text-lg font-black text-gray-800 dark:text-white mb-2">
             {title}
           </h3>

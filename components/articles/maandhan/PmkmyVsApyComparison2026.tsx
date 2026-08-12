@@ -93,10 +93,10 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
           </h1>
 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 12 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>12 min read</span>
           </div>
         </div>
       </div>
@@ -332,19 +332,16 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
           <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Scheme Samajhne Ke Aur Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <Link href="/maandhan/pm-kisan-maandhan-auto-debit-poora-sach" className="group block p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:border-green-500 transition-all duration-300">
-              <div className="text-2xl mb-2">💳</div>
               <h4 className="font-bold text-gray-900 dark:text-white text-sm mb-1 group-hover:text-green-600 transition-colors">Auto Debit Ka Sach</h4>
               <p className="text-xs text-gray-500 dark:text-gray-400 mb-3 line-clamp-2">PM Kisan ki kist se paisa kyun kat raha hai? NACH mandate samjhiye.</p>
               <span className="text-xs font-semibold text-green-600 flex items-center gap-1">Read More →</span>
             </Link>
             <Link href="/maandhan/pm-kisan-maandhan-withdrawal-refund-rules" className="group block p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:border-green-500 transition-all duration-300">
-              <div className="text-2xl mb-2">💸</div>
               <h4 className="font-bold text-gray-900 dark:text-white text-sm mb-1 group-hover:text-green-600 transition-colors">Withdrawal Rules</h4>
               <p className="text-xs text-gray-500 dark:text-gray-400 mb-3 line-clamp-2">Beech mein nikalne par kitna paisa wapas milta hai, jaaniye sach.</p>
               <span className="text-xs font-semibold text-green-600 flex items-center gap-1">Read More →</span>
             </Link>
             <Link href="/articles/PmKisanMasterGuide2026" className="group block p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:border-green-500 transition-all duration-300">
-              <div className="text-2xl mb-2">📚</div>
               <h4 className="font-bold text-gray-900 dark:text-white text-sm mb-1 group-hover:text-green-600 transition-colors">Master Guide</h4>
               <p className="text-xs text-gray-500 dark:text-gray-400 mb-3 line-clamp-2">PM Kisan se judi har chhoti-badi jankari ek hi jagah.</p>
               <span className="text-xs font-semibold text-green-600 flex items-center gap-1">Read More →</span>
@@ -354,9 +351,9 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
 
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/maandhan/pm-kisan-maandhan-registration-2026', l: '📝 Registration Guide' },
-          { href: '/maandhan/pm-kisan-maandhan-auto-debit-poora-sach', l: '💳 Auto Debit' },
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
+          { href: '/maandhan/pm-kisan-maandhan-registration-2026', l: 'Registration Guide' },
+          { href: '/maandhan/pm-kisan-maandhan-auto-debit-poora-sach', l: 'Auto Debit' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
         ]} />
         <Disclaimer />
       </div>

@@ -38,7 +38,7 @@ const RELATED_CARDS = [
     href: '/articles/KisanTractorLoan2026',
     title: 'Tractor Loan aur CIBIL Score',
     desc: 'EMI bounce CIBIL par kaise asar karta hai, aur tractor loan ke liye kaun sa score chahiye — poori jankari.',
-    emoji: '📈',
+    
   },
   {
     href: '/articles/PmKisanMaandhanYojanaPension',
@@ -117,10 +117,10 @@ export default function AutoDebitFailRegularization() {
           </h1>
 
           <div className="hero-description flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 10 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>10 min read</span>
           </div>
         </div>
       </div>
@@ -148,7 +148,7 @@ export default function AutoDebitFailRegularization() {
         </p>
 
         <div className="my-6 p-5 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 rounded-xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">✅ ABHI AUTO-DEBIT FAIL HUA HAI TOH YE 6 KAAM KAR LO</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">ABHI AUTO-DEBIT FAIL HUA HAI TOH YE 6 KAAM KAR LO</h3>
           <div className="space-y-3 text-sm text-[var(--color-text-muted)]">
             <p>1. <strong>SMS Padho Pehle:</strong> Bank ka message dobara padho, usme reason likha hota hai — zyadatar 'Insufficient Funds' hi nikalta hai.</p>
             <p>2. <strong>Paisa Daalo:</strong> Account mein EMI/SIP ka amount daal do, saath mein thoda extra bhi rakh lo — safe side ke liye.</p>
@@ -241,13 +241,13 @@ export default function AutoDebitFailRegularization() {
 
           <div className="grid md:grid-cols-2 gap-4 mb-6">
             <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border-2 border-green-500">
-              <h4 className="font-bold text-green-900 dark:text-green-300 mb-2 flex items-center gap-2">✅ 30 Din Ke Andar Sort Kar Diya</h4>
+              <h4 className="font-bold text-green-900 dark:text-green-300 mb-2 flex items-center gap-2">30 Din Ke Andar Sort Kar Diya</h4>
               <p className="text-sm text-green-800 dark:text-green-200 leading-relaxed">
                 Toh CIBIL report bilkul saaf rehti hai, koi negative mark nahi aata. Bounce charge shayad lag jaye, par credit history untouched rehti hai.
               </p>
             </div>
             <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg border-2 border-red-500">
-              <h4 className="font-bold text-red-900 dark:text-red-300 mb-2 flex items-center gap-2">⚠️ 90 Din Se Zyada Nikal Gaye</h4>
+              <h4 className="font-bold text-red-900 dark:text-red-300 mb-2 flex items-center gap-2">90 Din Se Zyada Nikal Gaye</h4>
               <p className="text-sm text-red-800 dark:text-red-200 leading-relaxed">
                 Ab dikkat hai — score 50 se 100 points tak gir sakta hai, aur account NPA (Non-Performing Asset) ban sakta hai. Iske baad naya loan lena mushkil ho jaata hai.
               </p>
@@ -316,7 +316,7 @@ export default function AutoDebitFailRegularization() {
           </div>
 
           <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl p-5">
-            <h4 className="font-bold text-amber-900 dark:text-amber-300 mb-3">💰 Charges Ka Rough Idea (India 2026)</h4>
+            <h4 className="font-bold text-amber-900 dark:text-amber-300 mb-3">Charges Ka Rough Idea (India 2026)</h4>
             <div className="overflow-x-auto">
               <table className="w-full text-sm text-left">
                 <thead className="text-amber-900 dark:text-amber-300 font-semibold border-b border-amber-200 dark:border-amber-800">
@@ -367,19 +367,19 @@ export default function AutoDebitFailRegularization() {
 
           <div className="grid md:grid-cols-2 gap-4 mb-6">
             <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-4 shadow-sm">
-              <h4 className="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2">📋 24 Ghante Pehle Notification Zaroori Hai</h4>
+              <h4 className="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2">24 Ghante Pehle Notification Zaroori Hai</h4>
               <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">Debit katne se pehle SMS ya email aana hi chahiye — ye bank ki legal responsibility hai. Nahi aaya toh charge dispute kar sakte ho.</p>
             </div>
             <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-4 shadow-sm">
-              <h4 className="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2">⏰ Grace Period Bhi Milta Hai Kai Baar</h4>
+              <h4 className="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2">Grace Period Bhi Milta Hai Kai Baar</h4>
               <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">Kuch banks 3-7 din ka grace period dete hain jisme late fee nahi lagti. Apni bank se ek baar confirm zaroor kar lena.</p>
             </div>
             <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-4 shadow-sm">
-              <h4 className="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2">🔒 ₹5,000 Se Upar OTP Zaroori</h4>
+              <h4 className="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2">₹5,000 Se Upar OTP Zaroori</h4>
               <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">Bina aapki explicit approval ke ₹5,000 se zyada ka recurring payment ho hi nahi sakta.</p>
             </div>
             <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-4 shadow-sm">
-              <h4 className="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2">🛡️ Bank Ki Galti Ki Saza Aapko Nahi</h4>
+              <h4 className="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2">Bank Ki Galti Ki Saza Aapko Nahi</h4>
               <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">Paise account mein the aur sirf technical issue ki wajah se debit fail hua, toh penalty lagana ban hi nahi karta.</p>
             </div>
           </div>
@@ -457,7 +457,7 @@ export default function AutoDebitFailRegularization() {
 
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/KisanTractorLoan2026', l: '📈 CIBIL & Tractor Loan' },
+          { href: '/articles/KisanTractorLoan2026', l: 'CIBIL & Tractor Loan' },
           { href: '/articles/PmKisanMaandhanYojanaPension', l: '👨‍🌾 Maandhan Yojana' },
           { href: '/maandhan/pmkmy-bank-account-change', l: '🏦 Bank Change' },
         ]} />

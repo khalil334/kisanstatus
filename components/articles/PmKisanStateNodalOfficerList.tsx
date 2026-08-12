@@ -16,19 +16,16 @@ const RELATED_CARDS = [
     slug: 'PmKisanPaymentFailedFix2026',
     title: 'Payment Failed Fix Guide',
     desc: 'FTO generate hone ke baad bhi paisa nahi aaya? 7 reasons aur turant fix jaanein.',
-    emoji: '💸'
   },
   {
     slug: 'PmKisanCorrectionForm2026',
     title: 'PM Kisan Correction Form',
     desc: 'Naam, IFSC ya Aadhaar mein galti sudharne ka offline aur online tarika.',
-    emoji: '📝'
   },
   {
     slug: 'PmKisanBeneficiaryList2026',
     title: 'Beneficiary List Check',
     desc: 'Apna naam state aur district wise nayi list mein kaise dhundhein.',
-    emoji: '📋'
   },
 ];
 
@@ -95,7 +92,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
           message={modal.message}
           redirectUrl={modal.url}
           onClose={() => setModal(null)}
-          infoNote="📌 Thoda wait karo. Official PM Kisan portal khulne wala hai."
+          infoNote="Thoda wait karo. Official PM Kisan portal khulne wala hai."
         />
       )}
 
@@ -115,10 +112,10 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
           </h1>
 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 14 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>14 min read</span>
           </div>
         </div>
       </div>
@@ -196,7 +193,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
 
           <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl p-4 mb-4">
             <p className="text-xs text-amber-800 dark:text-amber-300">
-              <strong>⚠️ Important Notice:</strong> Specific State Nodal Officer ke direct email IDs aur phone numbers frequently update hote hain. Fake ya outdated numbers se bachne ke liye, humne neeche central PM Kisan ICT email aur helpline di hai. Apne state ke exact current officer ka direct contact jaanne ke liye neeche diye gaye official link ka upyog karein.
+              <strong>Important Notice:</strong> Specific State Nodal Officer ke direct email IDs aur phone numbers frequently update hote hain. Fake ya outdated numbers se bachne ke liye, humne neeche central PM Kisan ICT email aur helpline di hai. Apne state ke exact current officer ka direct contact jaanne ke liye neeche diye gaye official link ka upyog karein.
             </p>
           </div>
 
@@ -229,7 +226,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
 
           <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl">
             <p className="text-sm font-bold text-green-800 dark:text-green-300 mb-2">
-              🔍 Official Nodal Officers List Dekhein
+               Official Nodal Officers List Dekhein
             </p>
             <p className="text-xs text-green-700 dark:text-green-400 mb-3">
               Sabhi states ke updated Nodal Officer names, direct email IDs, aur phone numbers ke liye official PM Kisan portal par jaayein.
@@ -242,7 +239,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
               )}
               className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
-              📥 Yahan Click Karo → Official List Dekhein
+               Yahan Click Karo → Official List Dekhein
             </button>
           </div>
         </section>
@@ -255,7 +252,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
 
           <div className="bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 rounded-xl p-5 mb-6">
             <p className="text-sm font-black text-blue-800 dark:text-blue-300 mb-3">
-              📧 Template 1: Payment FTO Generated Hai Par Paisa Nahi Aaya
+               Template 1: Payment FTO Generated Hai Par Paisa Nahi Aaya
             </p>
             <div className="bg-white dark:bg-gray-800 p-4 rounded-lg text-xs font-mono text-gray-800 dark:text-gray-200 space-y-2">
               <p><strong>Subject:</strong> URGENT: Payment Not Credited - Reg No. [Aapka Number]</p>
@@ -267,7 +264,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
 
           <div className="bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-500 dark:border-amber-700 rounded-xl p-5 mb-6">
             <p className="text-sm font-black text-amber-800 dark:text-amber-300 mb-3">
-              📧 Template 2: Naam/Aadhaar Correction BAO Ne Nahi Kiya
+               Template 2: Naam/Aadhaar Correction BAO Ne Nahi Kiya
             </p>
             <div className="bg-white dark:bg-gray-800 p-4 rounded-lg text-xs font-mono text-gray-800 dark:text-gray-200 space-y-2">
               <p><strong>Subject:</strong> Correction Ignored by Local BAO - Reg No. [Aapka Number]</p>
@@ -438,7 +435,6 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
                 href={`/articles/${card.slug}`}
                 className="group block p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:border-green-500 transition-all duration-300"
               >
-                <div className="text-2xl mb-2">{card.emoji}</div>
                 <h4 className="font-bold text-gray-900 dark:text-white text-sm mb-1 group-hover:text-green-600 transition-colors">
                   {card.title}
                 </h4>
@@ -455,9 +451,9 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
 
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/PmKisanPaymentFailedFix2026', l: '💸 Payment Fix' },
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
-          { href: '/articles/PmKisanBeneficiaryList2026', l: '📋 Beneficiary List' },
+          { href: '/articles/PmKisanPaymentFailedFix2026', l: 'Payment Fix' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
+          { href: '/articles/PmKisanBeneficiaryList2026', l: 'Beneficiary List' },
         ]} />
         <Disclaimer />
       </div>

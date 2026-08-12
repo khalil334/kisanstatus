@@ -55,19 +55,19 @@ const breadcrumbSchema = {
 };
 
 const TOPICS = [
-  { icon: '✅', title: 'Beneficiary Verification', desc: 'Status check aur payment history guide' },
-  { icon: '📅', title: 'Installment Dates', desc: 'Har tranche ki date aur update' },
-  { icon: '🔐', title: 'Digital Authentication', desc: 'eKYC OTP aur biometric step-by-step' },
-  { icon: '📋', title: 'Beneficiary Roster', desc: 'State aur district wise naam check' },
-  { icon: '📝', title: 'New Enrollment', desc: 'Registration poora tarika' },
-  { icon: '💸', title: 'Payment Issues Fix', desc: 'Credit nahi aayi? Karan aur hal' },
+  { title: 'Beneficiary Verification', desc: 'Status check aur payment history guide' },
+  { title: 'Installment Dates', desc: 'Har tranche ki date aur update' },
+  { title: 'Digital Authentication', desc: 'eKYC OTP aur biometric step-by-step' },
+  { title: 'Beneficiary Roster', desc: 'State aur district wise naam check' },
+  { title: 'New Enrollment', desc: 'Registration poora tarika' },
+  { title: 'Payment Issues Fix', desc: 'Credit nahi aayi? Karan aur hal' },
 ];
 
 const STATS = [
   { value: '12 Cr+', label: 'Kisan Labhanvit', icon: '👨‍🌾' },
-  { value: '₹6,000', label: 'Saalana Sahayata', icon: '💰' },
-  { value: `${ARTICLES.length}+`, label: 'Verified Guides', icon: '📚' },
-  { value: '36', label: 'States Covered', icon: '🗺️' },
+  { value: '₹6,000', label: 'Saalana Sahayata' },
+  { value: `${ARTICLES.length}+`, label: 'Verified Guides' },
+  { value: '36', label: 'States Covered' },
 ];
 
 export default function AboutPage() {
@@ -129,7 +129,7 @@ export default function AboutPage() {
           </div>
           <div className="mt-4 p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl">
             <p className="text-sm text-amber-900 dark:text-amber-300">
-              <strong>⚠️ Zaruri Suchna:</strong> Hum aapka Aadhaar, bank account ya koi personal data collect nahi karte.
+              <strong>Zaruri Suchna:</strong> Hum aapka Aadhaar, bank account ya koi personal data collect nahi karte.
               Official kaam ke liye hamesha{' '}
               <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer" className="underline font-bold hover:text-amber-700 dark:hover:text-amber-200">
                 pmkisan.gov.in ↗
@@ -141,12 +141,11 @@ export default function AboutPage() {
 
         <section className="mb-8 bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            📋 Hum Kya Cover Karte Hain
+             Hum Kya Cover Karte Hain
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {TOPICS.map((item) => (
               <div key={item.title} className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded-xl border border-green-200 dark:border-green-800">
-                <span className="text-xl shrink-0" aria-hidden="true">{item.icon}</span>
                 <div>
                   <p className="font-bold text-[var(--color-text)] text-sm">{item.title}</p>
                   <p className="text-xs text-[var(--color-text-muted)] mt-0.5">{item.desc}</p>
@@ -167,31 +166,31 @@ export default function AboutPage() {
         </div>
 
         <section className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-2xl p-6 mb-8">
-          <h2 className="text-lg font-black text-[var(--color-text)] mb-4">🔗 Useful Links</h2>
+          <h2 className="text-lg font-black text-[var(--color-text)] mb-4">Useful Links</h2>
           <div className="flex flex-wrap gap-3">
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--color-card)] border border-[var(--color-border)] text-[var(--color-text)] text-sm font-bold rounded-xl hover:border-green-400 dark:hover:border-green-600 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500"
             >
-              📧 Contact Us
+               Contact Us
             </Link>
             <Link
               href="/articles"
               className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--color-card)] border border-[var(--color-border)] text-[var(--color-text)] text-sm font-bold rounded-xl hover:border-green-400 dark:hover:border-green-600 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500"
             >
-              📚 All Articles
+               All Articles
             </Link>
             <Link
               href="/calculator"
               className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--color-primary)] text-white text-sm font-bold rounded-xl hover:bg-green-700 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500"
             >
-              🧮 Free Calculators
+               Free Calculators
             </Link>
           </div>
         </section>
 
         <div className="p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl text-xs text-[var(--color-text-muted)] leading-relaxed">
-          <p className="font-bold text-[var(--color-text)] mb-2">⚠️ Disclaimer</p>
+          <p className="font-bold text-[var(--color-text)] mb-2">Disclaimer</p>
           <p className="mb-2">
             {SITE_NAME} ek independent informational website hai. Hum Government of India, PM Kisan, ya kisi sarkari vibhag se affiliated nahi hain.
           </p>

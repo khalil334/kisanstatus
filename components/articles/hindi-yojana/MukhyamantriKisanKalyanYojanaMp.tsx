@@ -283,7 +283,7 @@ export default function MukhyamantriKisanKalyanYojanaMp({ article }: { article: 
       <div className="my-5 border-2 border-[var(--color-border)] rounded-2xl overflow-hidden bg-[var(--color-card)] shadow-sm">
         <div className="bg-green-50 dark:bg-green-900/20 border-b border-[var(--color-border)] px-4 py-2.5">
           <span className="text-green-700 dark:text-green-300 text-xs font-bold">
-            📖 Pehle guide padhi? Ab official site par jao:
+             Pehle guide padhi? Ab official site par jao:
           </span>
         </div>
         <div className="p-4 flex flex-col sm:flex-row items-start sm:items-center gap-3 justify-between">
@@ -470,16 +470,16 @@ export default function MukhyamantriKisanKalyanYojanaMp({ article }: { article: 
             <Link href="/articles/hi/namo-shetkari-yojana">🌾 नमो शेतकरी योजना Maharashtra</Link>
           </li>
           <li>
-            <Link href="/articles/PmKisanMasterGuide2026">📚 योजना की master guide (केंद्र)</Link>
+            <Link href="/articles/PmKisanMasterGuide2026">योजना की master guide (केंद्र)</Link>
           </li>
           <li>
-            <Link href="/articles/PmKisanEkycOnline2026">🔐 eKYC online करने की विधि</Link>
+            <Link href="/articles/PmKisanEkycOnline2026">eKYC online करने की विधि</Link>
           </li>
           <li>
-            <Link href="/articles/PmKisanBeneficiaryList2026">📋 Beneficiary List Guide</Link>
+            <Link href="/articles/PmKisanBeneficiaryList2026">Beneficiary List Guide</Link>
           </li>
           <li>
-            <Link href="/articles/PmKisanPaymentFailedFix2026">💸 Payment Failed Fix</Link>
+            <Link href="/articles/PmKisanPaymentFailedFix2026">Payment Failed Fix</Link>
           </li>
         </ul>
       </div>
