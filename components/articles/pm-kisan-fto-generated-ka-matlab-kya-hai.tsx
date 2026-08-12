@@ -334,7 +334,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
                Abhi FTO Status Check Karein
             </p>
             <p className="text-xs text-green-700 dark:text-green-400 mb-3">
-              Official PM Kisan portal par jaakar apna payment status check karein. 10 second baad portal khulega.
+              Official PM Kisan portal par jaakar apna payment status check karein. Neeche ke button se 10 second mein portal khulta hai.
             </p>
             <button
               onClick={() => handleOfficialLink(

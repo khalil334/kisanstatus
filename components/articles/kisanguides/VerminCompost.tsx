@@ -3,6 +3,8 @@ import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
 import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
+import GuideDisclaimer from '@/components/GuideDisclaimer';
+import { getArticleBySlug } from '@/lib/articles-data';
 
 export const metadata: Metadata = {
   title: 'Vermi Compost Business 2026: PKVY Subsidy & Profit Guide',
@@ -584,12 +586,10 @@ export default function VerminCompost() {
         </div>
       </div>
 
-      <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-lg border-l-4 border-orange-500 not-prose">
-        <p className="text-sm text-gray-700 dark:text-gray-300">
-          <strong className="text-orange-600 dark:text-orange-400 block mb-2">Kaam Ki Suchna:</strong>
-          Yeh article general information ke liye hai. Actual costs, subsidies, aur procedures aapke location aur specific circumstances ke hisaab se vary kar sakte hain. Koi bhi financial decision lene se pehle qualified professionals (agriculture officers, CAs) se consult karein. Prices aur guidelines change hote rehte hain, isliye latest information ke liye official sources se verify karein. Last updated: July 2026.
-        </p>
-      </div>
+      <GuideDisclaimer
+        consult="agriculture officers, CAs"
+        modified={getArticleBySlug('vermi-compost-business-guide')!.modifiedTime}
+      />
     </article>
   );
 }
