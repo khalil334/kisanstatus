@@ -463,7 +463,7 @@ export default function TractorSubsidy2027StateWiseList({ article }: { article: 
         सुनें तो समझ जाइए सामने वाला आपकी जेब देख रहा है, आपका खेत नहीं।
       </p>
 
-      <H2>सीधी सलाह — तीन बातें याद रखिए</H2>
+      <H2>तीन आदतें जो Form Reject होने से बचाती हैं</H2>
       <p>
         पहली — सब्सिडी मिलती है, पर <strong>window में आवेदन करने वालों को</strong>, इसके चलते अपने राज्य
         के portal का notification section महीने में एक बार जरूर देखिए। दूसरी — श्रेणी के हिसाब से जो

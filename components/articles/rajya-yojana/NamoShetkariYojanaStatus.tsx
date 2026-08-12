@@ -92,7 +92,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       <p>
         Suno zara, do sawaal har baar wahi hote hain. Paisa kab aayega? Suchi mein entry hai ya nahi?
         Neeche dono ka jawab hai — sthiti dekhne ka tareeka, hapte ka waqt, aur naam kat
-        jaane ki asli wajahein, bina ghumaye, seedhi baat, jaise koi apna hi samjha raha ho.
+        jaane ki wajahein — bina ghumaye, jaise koi apna hi samjha raha ho.
       </p>
 
       <Fig

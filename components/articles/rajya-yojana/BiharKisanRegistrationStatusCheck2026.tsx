@@ -453,7 +453,7 @@ export default function BiharKisanRegistrationStatusCheck2026({
         — wahi logic yahan bhi lagta hai.
       </p>
 
-      <h2>Aakhri Baat — Agent Ko Paisa Kyu Nahi Dena Hai?</h2>
+      <h2>Agent Ko Paisa Kyu Nahi Dena Hai?</h2>
 
       <p>
         Kyunki is poore system me sarkari fees kahin hai hi nahi. Panjikaran free,
@@ -491,7 +491,7 @@ export default function BiharKisanRegistrationStatusCheck2026({
       </section>
 
       <InfoBox type="warning">
-        <strong>Yaad rakhiye:</strong> DBT panjikaran se le kar bhugtan tak —
+        <strong>Poori chain muft hai:</strong> DBT panjikaran se le kar bhugtan tak —
         poori chain free hai. Beech me paisa maangne wala har shakhs system ke bahar ka
         hai. Apna Aadhaar, OTP aur bank detail sirf official site ya bharosemand CSC par
         hi dijiye.
