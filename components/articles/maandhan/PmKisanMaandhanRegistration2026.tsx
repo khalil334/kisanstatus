@@ -391,7 +391,7 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Seedhi Baat</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Enroll Karne Se Pehle Ka Sequence</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
             Umar 40 se kam hai, zameen 2 hectare ke andar hai aur naam land records mein hai — toh deri ka seedha nuksan hai: har birthday ke saath monthly slab badh jaata hai (18 par ₹55, 40 par ₹200). Pehle exit rules upar wali table se samajh lein, phir documents lekar CSC jayein ya maandhan.in se khud enroll karein. Aur ek scheme ka niyam yaad rakhein: NPS/EPFO/ESIC member ya income tax payer hain toh ye scheme aapke liye nahi hai — galat enrollment baad mein reject hota hai.
           </p>

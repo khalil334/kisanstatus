@@ -352,18 +352,20 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Nichod Ye Hai</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Exit Ki Asli Keemat Sarkari Hissa Hai</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Jab tak koi bahut majboori na ho, is scheme ko beech mein mat todiye — jo sarkari hissa aap chhod denge
-            wo asal mein aapki hi retirement security tha. Aur agar ghar mein koi hadsa ho jaye, toh ghabrane ki
-            zaroorat nahi: spouse ke paas hamesha koi na koi rasta khula rehta hai.
+            Withdrawal form bharne se pehle ek hisaab zaroor kar lein: voluntary exit par sirf aapka apna jama hissa
+            (+ interest) wapas aata hai — sarkar ka 1:1 co-contribution fund mein hi reh jaata hai. Yaani jitne saal
+            aap scheme mein rahe, utne saal ka matching paisa exit ke din chhod dete hain. Majboori ho toh yeh rasta
+            khula hai, lekin "paisa phas gaya" wali ghabrahat mein exit karna aadha corpus chhod kar jaana hai — aur
+            subscriber ki death par spouse ke paas continue karne se lekar corpus lene tak ke alag options waise bhi maujood hain.
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
-            Abhi tak registration nahi karwaya? Hamari{' '}
+            Exit rules pehle se samajh kar enroll karna hi sabse achha bachav hai — hamari{' '}
             <Link href="/maandhan/pm-kisan-maandhan-registration-2026" className="underline text-blue-600 dark:text-blue-400 font-medium">
               step-by-step registration guide
             </Link>{' '}
-            padh kar aaj hi shuru karein.
+            mein yeh section alag se diya gaya hai.
           </p>
         </div>
 
