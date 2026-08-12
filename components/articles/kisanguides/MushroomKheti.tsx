@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
-import { AuthorBox } from '@/components/ArticleShared';
+import { AuthorBox, FAQBlock } from '@/components/ArticleShared';
 import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 import GuideDisclaimer from '@/components/GuideDisclaimer';
 import { getArticleBySlug } from '@/lib/articles-data';
@@ -30,25 +30,32 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://kisanstatus.com/articles/mushroom-kheti-nhb-subsidy' },
 };
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    { '@type': 'FAQPage', '@id': 'https://kisanstatus.com/articles/mushroom-kheti-nhb-subsidy/#faq', mainEntity: [
-        { '@type': 'Question', name: 'Kya 10x10 feet ke chhote kamre mein mushroom farming profitable hai?', acceptedAnswer: { '@type': 'Answer', text: 'Haan, 100-150 bags aaram se aa jate hain. Pehle saal seekhne ka hota hai, isliye break-even hona bhi badi baat hai. Doosre saal se direct marketing karke 20-25% net margin nikalna shuru ho jata hai.' } },
-        { '@type': 'Question', name: 'Khumbi ke kamre mein badboo ya smell kyun aati hai?', acceptedAnswer: { '@type': 'Answer', text: 'Agar sterilization sahi se hua ho toh smell minimal hoti hai. Lekin agar straw zyada geela chhod diya ya koi bag kharab ho gaya aur use turant bahar nahi nikala, toh ammonia ya sadan ki badboo aane lagti hai.' } },
-        { '@type': 'Question', name: 'Green mold (hara fungus) dikhe toh turant kya karein?', acceptedAnswer: { '@type': 'Answer', text: 'Us bag ko chupke se kamre se bahar nikal kar jala dein ya gehra gaad dein. Bachaye hue bags ke aas-paas Neem oil (5ml/litre) ya Trichoderma viride spray karein. Bleaching powder se farsh saaf karein.' } },
-        { '@type': 'Question', name: 'Asli mushroom beej (spawn) kahan se aur kitne mein milega?', acceptedAnswer: { '@type': 'Answer', text: '2026 mein certified labs se oyster spawn ka rate ₹180 se ₹250 per kg hai. Hamesha DMR Solan ya state agricultural university ke authorized vendors se hi lein. Local mandi ke anjaam sources se bachein.' } },
-        { '@type': 'Question', name: 'NHB mushroom subsidy kitni milti hai aur kaise apply karein?', acceptedAnswer: { '@type': 'Answer', text: 'NHB back-ended capital subsidy deta hai, jiska percentage state aur unit size ke hisaab se badalta hai — zyadatar general category ke liye 40% ke aas-paas rehta hai. Apply apne zila Horticulture Office se ya NHB ke online portal se hota hai, project report ke saath.' } }
-      ]
-    }
-  ]
-};
+const mushroomKhetiFaqs = [
+  {
+    q: 'Kya 10x10 feet ke chhote kamre mein mushroom farming profitable hai?',
+    a: 'Haan, 100-150 bags aaram se aa jate hain. Pehle saal seekhne ka hota hai, isliye break-even hona bhi badi baat hai. Doosre saal se direct marketing karke 20-25% net margin nikalna shuru ho jata hai.',
+  },
+  {
+    q: 'Khumbi ke kamre mein badboo ya smell kyun aati hai?',
+    a: 'Agar sterilization sahi se hua ho toh smell minimal hoti hai. Lekin agar straw zyada geela chhod diya ya koi bag kharab ho gaya aur use turant bahar nahi nikala, toh ammonia ya sadan ki badboo aane lagti hai.',
+  },
+  {
+    q: 'Green mold (hara fungus) dikhe toh turant kya karein?',
+    a: 'Us bag ko chupke se kamre se bahar nikal kar jala dein ya gehra gaad dein. Bachaye hue bags ke aas-paas Neem oil (5ml/litre) ya Trichoderma viride spray karein. Bleaching powder se farsh saaf karein.',
+  },
+  {
+    q: 'Asli mushroom beej (spawn) kahan se aur kitne mein milega?',
+    a: '2026 mein certified labs se oyster spawn ka rate ₹180 se ₹250 per kg hai. Hamesha DMR Solan ya state agricultural university ke authorized vendors se hi lein. Local mandi ke anjaam sources se bachein.',
+  },
+  {
+    q: 'NHB mushroom subsidy kitni milti hai aur kaise apply karein?',
+    a: 'NHB back-ended capital subsidy deta hai, jiska percentage state aur unit size ke hisaab se badalta hai — zyadatar general category ke liye 40% ke aas-paas rehta hai. Apply apne zila Horticulture Office se ya NHB ke online portal se hota hai, project report ke saath.',
+  },
+];
 
 export default function MushroomKheti() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-8 text-gray-800 dark:text-gray-200 leading-relaxed prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-blue-600 dark:prose-a:text-blue-400">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-
       <Image
         src="/images/kisanguides/Mushroomhero.webp"
         alt="Oyster Mushroom Farming Setup in Dark Room"
@@ -374,28 +381,7 @@ export default function MushroomKheti() {
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Frequently Asked Questions
       </h2>
-      <div className="space-y-4 mb-8 not-prose">
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">1. Kya 10x10 feet ke chhote kamre mein mushroom farming profitable hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Haan, 100-150 bags aaram se aa jate hain. Pehle saal seekhne ka hota hai, isliye break-even hona bhi badi baat hai. Doosre saal se direct marketing karke 20-25% net margin nikalna shuru ho jata hai.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">2. Khumbi ke kamre mein badboo ya smell kyun aati hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Agar sterilization sahi se hua ho toh smell minimal hoti hai. Lekin agar straw zyada geela chhod diya ya koi bag kharab ho gaya aur use turant bahar nahi nikala, toh ammonia ya sadan ki badboo aane lagti hai.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">3. Green mold (hara fungus) dikhe toh turant kya karein?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Us bag ko chupke se kamre se bahar nikal kar jala dein ya gehra gaad dein. Bachaye hue bags ke aas-paas Neem oil (5ml/litre) ya Trichoderma viride spray karein. Bleaching powder se farsh saaf karein.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">4. Asli mushroom beej (spawn) kahan se aur kitne mein milega?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">2026 mein certified labs se oyster spawn ka rate ₹180 se ₹250 per kg hai. Hamesha DMR Solan ya state agricultural university ke authorized vendors se hi lein. Local mandi ke anjaam sources se bachein.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">5. NHB mushroom subsidy kitni milti hai aur kaise apply karein?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">NHB back-ended capital subsidy deta hai, jiska percentage state aur unit size ke hisaab se badalta hai — zyadatar general category ke liye 40% ke aas-paas rehta hai. Apply apne zila Horticulture Office se ya NHB ke online portal se hota hai, project report ke saath.</p>
-        </div>
-      </div>
+      <FAQBlock faqs={mushroomKhetiFaqs} variant="inline" />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Final Decision: Kya Yeh Aapke Liye Sahi Hai?

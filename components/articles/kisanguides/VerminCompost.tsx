@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
-import { AuthorBox } from '@/components/ArticleShared';
+import { AuthorBox, FAQBlock } from '@/components/ArticleShared';
 import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 import GuideDisclaimer from '@/components/GuideDisclaimer';
 import { getArticleBySlug } from '@/lib/articles-data';
@@ -46,58 +46,28 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'FAQPage',
-      '@id': 'https://kisanstatus.com/articles/vermi-compost-business-guide/#faq',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Kya vermi compost ko chemical fertilizer ke saath mix karke use kar sakte hain?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Haan, shuruat mein aap vermi compost ko chemical fertilizer ke saath 50:50 ratio mein mix karke use kar sakte hain. Isse mitti ko organic matter milta hai aur chemical ka shock bhi kam hota hai. Dheere-dheere chemical ki matra kam karke sirf organic par shift ho sakte hain.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Agar galti se earthworms mar jayein, toh poori batch kharab ho jati hai ya bachayi ja sakti hai?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Agar worms mar bhi jayein, toh organic material phir bhi decompose hota hai, lekin usme vermi compost wali premium quality (microbial activity) nahi aati. Usse aap normal FYM (Farm Yard Manure) ke roop mein bech sakte hain, jiska rate thoda kam (₹5-8/kg) hota hai. Agli batch ke liye naye worms lene padenge.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Branded packaging mein bechne ke liye FSSAI zaroori hai ya sirf lab report kaafi hai?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Vermi compost ek "fertilizer" hai, "food" nahi, isliye iske liye FSSAI ki zaroorat nahi hoti. Iske liye FCO (Fertilizer Control Order) ke under state agriculture department se registration aur authorized lab se quality testing report kaafi hoti hai.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Kya vermi compost ki jagah normal gobar ki khaad (FYM) use nahi ki ja sakti?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Normal gobar ki khaad (FYM) mein bhi nutrients hote hain, lekin vermi compost mein earthworms ki wajah se enzymes aur beneficial microbes ki matra 10-20 guna zyada hoti hai. Yeh mitti ki structure ko FYM ke mukable jaldi aur behtar tarike se improve karti hai, isliye iska market rate aur demand dono zyada hain.',
-          },
-        },
-      ],
-    },
-  ],
-};
+const verminCompostFaqs = [
+  {
+    q: 'Chemical fertilizer ke saath mix kar sakte hain?',
+    a: 'Haan, shuruat mein aap vermi compost ko chemical fertilizer ke saath 50:50 ratio mein mix karke use kar sakte hain. Isse mitti ko organic matter milta hai aur chemical ka shock bhi kam hota hai. Dheere-dheere chemical ki matra kam karke sirf organic par shift ho sakte hain.',
+  },
+  {
+    q: 'Earthworms mar jayein toh batch kharab?',
+    a: 'Agar worms mar bhi jayein, toh organic material phir bhi decompose hota hai, lekin usme vermi compost wali premium quality nahi aati. Usse aap normal FYM ke roop mein bech sakte hain (₹5 - ₹8/kg). Agli batch ke liye naye worms lene padenge.',
+  },
+  {
+    q: 'Branded packaging ke liye FSSAI zaroori hai?',
+    a: 'Vermi compost ek "fertilizer" hai, "food" nahi, isliye iske liye FSSAI ki zaroorat nahi hoti. Iske liye FCO (Fertilizer Control Order) ke under state agriculture department se registration aur authorized lab se quality testing report kaafi hoti hai.',
+  },
+  {
+    q: 'Normal gobar ki khaad (FYM) use nahi kar sakte?',
+    a: 'Normal gobar ki khaad (FYM) mein bhi nutrients hote hain, lekin vermi compost mein earthworms ki wajah se enzymes aur beneficial microbes ki matra 10-20 guna zyada hoti hai. Yeh mitti ki structure ko FYM ke mukable jaldi aur behtar tarike se improve karti hai.',
+  },
+];
 
 export default function VerminCompost() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-8 text-gray-800 dark:text-gray-200 leading-relaxed prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-blue-600 dark:prose-a:text-blue-400">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-
       <Image
         src="/images/kisanguides/vermi-compost-hero.webp"
         alt="Vermi Compost Pit with Earthworms - Organic Fertilizer Business Guide"
@@ -568,24 +538,7 @@ export default function VerminCompost() {
       <h2 id="faq" className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Vermi Compost Business Ke Common Doubts
       </h2>
-      <div className="grid md:grid-cols-2 gap-4 mb-8 not-prose">
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">1. Chemical fertilizer ke saath mix kar sakte hain?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Haan, shuruat mein aap vermi compost ko chemical fertilizer ke saath 50:50 ratio mein mix karke use kar sakte hain. Isse mitti ko organic matter milta hai aur chemical ka shock bhi kam hota hai. Dheere-dheere chemical ki matra kam karke sirf organic par shift ho sakte hain.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">2. Earthworms mar jayein toh batch kharab?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Agar worms mar bhi jayein, toh organic material phir bhi decompose hota hai, lekin usme vermi compost wali premium quality nahi aati. Usse aap normal FYM ke roop mein bech sakte hain (₹5 - ₹8/kg). Agli batch ke liye naye worms lene padenge.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">3. Branded packaging ke liye FSSAI zaroori hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Vermi compost ek "fertilizer" hai, "food" nahi, isliye iske liye FSSAI ki zaroorat nahi hoti. Iske liye FCO (Fertilizer Control Order) ke under state agriculture department se registration aur authorized lab se quality testing report kaafi hoti hai.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">4. Normal gobar ki khaad (FYM) use nahi kar sakte?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Normal gobar ki khaad (FYM) mein bhi nutrients hote hain, lekin vermi compost mein earthworms ki wajah se enzymes aur beneficial microbes ki matra 10-20 guna zyada hoti hai. Yeh mitti ki structure ko FYM ke mukable jaldi aur behtar tarike se improve karti hai.</p>
-        </div>
-      </div>
+      <FAQBlock faqs={verminCompostFaqs} variant="cards" />
 
       <AuthorBox modified={getArticleBySlug('vermi-compost-business-guide')!.modifiedTime} />
 

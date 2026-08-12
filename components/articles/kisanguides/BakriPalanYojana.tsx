@@ -1,108 +1,10 @@
-'use client';
-
-import { useState } from 'react';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
+import { FAQBlock } from '@/components/ArticleShared';
 import Image from 'next/image';
 import Link from 'next/link';
 
-function FaqItem({ question, answer }: { question: string; answer: React.ReactNode }) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <div className="border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden bg-white dark:bg-gray-800 mb-3 shadow-sm hover:shadow-md transition-shadow">
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between p-4 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-inset"
-        aria-expanded={isOpen}
-      >
-        <span className="font-semibold text-gray-900 dark:text-gray-100 pr-4 text-sm md:text-base">{question}</span>
-        <span
-          className={`text-xl text-green-600 dark:text-green-400 transition-transform duration-300 shrink-0 ${
-            isOpen ? 'rotate-45' : ''
-          }`}
-          aria-hidden="true"
-        >
-          +
-        </span>
-      </button>
-      <div
-        className={`transition-all duration-300 ease-in-out overflow-hidden ${
-          isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
-        }`}
-      >
-        <div className="p-4 pt-0 text-sm text-gray-700 dark:text-gray-300 leading-relaxed border-t border-gray-100 dark:border-gray-700">
-          {answer}
-        </div>
-      </div>
-    </div>
-  );
-}
-
 export default function BakriPalanYojana() {
   const canonicalUrl = 'https://kisanstatus.com/articles/bakri-palan-yojana-nlm-subsidy';
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Kya main bina zameen ke bakri palan subsidy le sakta hoon?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Nahi. Apni zameen ya kam se kam 5 saal ka registered lease agreement dikhana padta hai. Land proof ke bina application shuru mein hi ruk jaati hai.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Backyard mein 10-15 bakriyan hain, kya mujhe NLM subsidy milegi?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Nahi milegi. National Livestock Mission ka threshold 100 female aur 5 male bakriyan hai. Chhote setup ke liye apne district ke Pashu Palan vibhag ki alag schemes dekhni padegi.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Subsidy ka paisa kitne din mein bank account mein aata hai?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Jaldi nahi aata. Approval aur site visit mein hi 2-3 mahine nikal jaate hain, aur paisa do tranches mein aata hai. Poore 4-6 mahine ka wait dhyan mein rakhein.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Kya main bank loan ke saath NLM subsidy le sakta hoon?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Haan, aur zyadatar log yahi karte hain. 50% sarkar deti hai, baaki 50% KCC ya normal loan se. Subsidy seedhe account mein aati hai, bank beech mein nahi rukti.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Bihar ya UP se bahar ke state se bakriyan mangwa sakte hain kya?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Mangwa sakte hain, par quarantine certificate aur vehicle fitness certificate saath rakhna padega. Warna transport illegal maana jata hai aur checkpoint par pakde jaate hain.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Agar meri NLM application reject ho gayi, toh kya main dobara apply kar sakta hoon?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Haan. Portal par reject hone ki wajah likhi milti hai. Wo galti thik karo, dobara documents lagao, submit kar do. Koi ban nahi lagta.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Bakri Palan Yojana 2026 ki last date kya hai?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'NLM mein ek fixed last date nahi hoti — portal financial year ke hisab se saal bhar applications leta hai, jab tak us cycle ka budget khatam nahi ho jata. State ke Pashu Palan office se current status confirm kar lena sabse safe rahega.',
-        },
-      },
-    ],
-  };
 
   const faqs = [
     {
@@ -128,6 +30,8 @@ export default function BakriPalanYojana() {
           mein poora tarika likha hai.
         </>
       ),
+      schemaText:
+        'Bilkul, aur ye common practice hai. 50% subsidy, 50% loan. KCC Loan Guide mein poora tarika likha hai.',
     },
     {
       q: 'Bahar ke state se bakriyan mangwane par kya documents chahiye?',
@@ -145,8 +49,6 @@ export default function BakriPalanYojana() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-
       <article className="max-w-4xl mx-auto px-4 py-8 prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-blue-600 dark:prose-a:text-blue-400">
         <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100 leading-tight">
           Bakri Palan Yojana 2026: 50% NLM Subsidy Lene Ka Sahi Tarika aur Complete Guide
@@ -401,11 +303,7 @@ export default function BakriPalanYojana() {
         <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
           FAQs
         </h2>
-        <div className="space-y-3 my-8 not-prose">
-          {faqs.map((faq, index) => (
-            <FaqItem key={index} question={faq.q} answer={faq.a} />
-          ))}
-        </div>
+        <FAQBlock faqs={faqs} variant="accordion" />
 
         <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-xl my-8 not-prose border border-blue-200 dark:border-blue-800 shadow-sm">
           <h3 className="font-semibold text-blue-800 dark:text-blue-300 mb-4 text-sm uppercase tracking-wide">Official Links</h3>

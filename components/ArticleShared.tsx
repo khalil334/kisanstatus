@@ -262,18 +262,26 @@ export function FAQBlock({
   caption,
   variant = 'accordion',
 }: {
-  faqs: { q: string; a: string }[];
+  // `a` may be rich JSX (e.g. an internal <Link>). When it is not a plain
+  // string, supply `schemaText` — the plain-text equivalent that goes into the
+  // FAQPage JSON-LD, so the schema still mirrors the visible answer.
+  faqs: { q: string; a: React.ReactNode; schemaText?: string }[];
   caption?: string;
   variant?: 'accordion' | 'inline' | 'cards';
 }) {
+  const schemaAnswer = (f: { a: React.ReactNode; schemaText?: string }) =>
+    f.schemaText ?? (typeof f.a === 'string' ? f.a : '');
+
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: faqs.map((f) => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
-    })),
+    mainEntity: faqs
+      .filter((f) => schemaAnswer(f).length > 0)
+      .map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: schemaAnswer(f) },
+      })),
   };
 
   if (faqs.length === 0) return null;
