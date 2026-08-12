@@ -4,7 +4,6 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
-
 const PUBLISHED = '2026-02-12T19:31:09+05:30';
 const MODIFIED = '2026-03-10T15:28:21+05:30';
 
@@ -56,7 +55,7 @@ export default function InstallmentTrackerCalcPage() {
     progress === 'active';
 
   const blockers: {
-    icon: string;
+    icon?: string;
     title: string;
     desc: string;
     href: string;
@@ -65,7 +64,7 @@ export default function InstallmentTrackerCalcPage() {
 
   if (ekyc === 'no')
     blockers.push({
-      icon: '🔐',
+      
       title: 'eKYC Nahi Hua Hai',
       desc: 'Bina eKYC ke kist nahi aayegi. Turant complete karo.',
       href: '/articles/PmKisanEkycOnline2026',
@@ -92,7 +91,7 @@ export default function InstallmentTrackerCalcPage() {
 
   if (progress === 'rejected')
     blockers.push({
-      icon: '❌',
+      
       title: 'Application Reject Ho Gayi',
       desc: 'Kisi wajah se application reject hui. Reason check karo.',
       href: '/articles/PmKisanPaymentFailedFix2026',
@@ -117,7 +116,7 @@ export default function InstallmentTrackerCalcPage() {
             <span className="text-white font-bold">Kist Tracker</span>
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">
-            📆 Kist Status Tracker
+             Kist Status Tracker
           </span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
             PM Kisan Kist Tracker 2026
@@ -126,16 +125,16 @@ export default function InstallmentTrackerCalcPage() {
             Kist kyun ruki hai? 4 sawaal mein pata karo — eKYC, bank seeding, land seeding sab check karo
           </p>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
+            <span><Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
           </div>
         </div>
       </div>
 
       <div className="container-site max-w-2xl py-8">
         <div className="mb-6 p-5 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl text-sm text-[var(--color-text)] leading-relaxed">
-          <p className="font-bold text-green-900 dark:text-green-300 mb-2">📆 Kist Kyun Nahi Aayi?</p>
+          <p className="font-bold text-green-900 dark:text-green-300 mb-2">Kist Kyun Nahi Aayi?</p>
           <p className="mb-2">
             <strong>{KIST_CONFIG.current.name}</strong> {releaseDateStr} ko aa chuki hai, {KIST_CONFIG.current.beneficiaries} kisanon ke account mein {KIST_CONFIG.current.amount} pahunch bhi gaye. Agar aapke account mein abhi tak nahi dikh raha, ghabrane wali baat nahi — zyadatar cases mein wajah wahi teen hoti hai jo hum roz suno karte hain.
           </p>
@@ -143,17 +142,17 @@ export default function InstallmentTrackerCalcPage() {
             Sabse zyada log <strong>eKYC</strong> pe atakte hain — Aadhaar OTP verify nahi hua toh paisa ruk jata hai. Doosra number <strong>bank seeding</strong> ka aata hai, matlab Aadhaar aur bank account link nahi. Aur teesra, <strong>land seeding</strong> — zameen ka record abhi tak portal se match nahi hua.
           </p>
           <p className="text-xs text-green-700 dark:text-green-300">
-            💡 Neeche 4 sawaalon ka jawab de do, hum bata denge exact wajah kya hai aur usko fix kaise karna hai.
+             Neeche 4 sawaalon ka jawab de do, hum bata denge exact wajah kya hai aur usko fix kaise karna hai.
           </p>
         </div>
 
         <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6 shadow-sm">
           <h2 className="font-black text-[var(--color-text)] text-base mb-5 flex items-center gap-2">
-            <span>🧮</span> 4 Sawaal Mein Pata Karo
+            4 Sawaal Mein Pata Karo
           </h2>
 
           <div className="mb-4 p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl text-xs text-blue-800 dark:text-blue-300">
-            <strong>💡 Pehle ye karo:</strong> Apna status pehle{' '}
+            <strong>Pehle ye karo:</strong> Apna status pehle{' '}
             <a
               href="https://pmkisan.gov.in/BeneficiaryStatus.aspx"
               target="_blank"
@@ -175,9 +174,9 @@ export default function InstallmentTrackerCalcPage() {
                 onChange={(e) => setEkyc(e.target.value)}
                 className="w-full border border-[var(--color-border)] rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-[var(--color-primary)] focus:ring-1 focus:ring-[var(--color-primary-light)] bg-[var(--color-card)] text-[var(--color-text)]"
               >
-                <option value="unknown">❓ Pata nahi — pehle check karo</option>
-                <option value="yes">✅ Haan — eKYC complete hai</option>
-                <option value="no">❌ Nahi — abhi pending hai</option>
+                <option value="unknown">Pata nahi — pehle check karo</option>
+                <option value="yes">Haan — eKYC complete hai</option>
+                <option value="no">Nahi — abhi pending hai</option>
               </select>
             </div>
 
@@ -190,9 +189,9 @@ export default function InstallmentTrackerCalcPage() {
                 onChange={(e) => setSeeding(e.target.value)}
                 className="w-full border border-[var(--color-border)] rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-[var(--color-primary)] focus:ring-1 focus:ring-[var(--color-primary-light)] bg-[var(--color-card)] text-[var(--color-text)]"
               >
-                <option value="unknown">❓ Pata nahi — bank se pata karo</option>
-                <option value="yes">✅ Haan — bank ne confirm kiya</option>
-                <option value="no">❌ Nahi / Pata nahi</option>
+                <option value="unknown">Pata nahi — bank se pata karo</option>
+                <option value="yes">Haan — bank ne confirm kiya</option>
+                <option value="no">Nahi / Pata nahi</option>
               </select>
             </div>
 
@@ -205,9 +204,9 @@ export default function InstallmentTrackerCalcPage() {
                 onChange={(e) => setLand(e.target.value)}
                 className="w-full border border-[var(--color-border)] rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-[var(--color-primary)] focus:ring-1 focus:ring-[var(--color-primary-light)] bg-[var(--color-card)] text-[var(--color-text)]"
               >
-                <option value="unknown">❓ Pata nahi — portal par dekho</option>
-                <option value="yes">✅ Haan — land seeding theek hai</option>
-                <option value="no">❌ Nahi — problem dikh rahi hai</option>
+                <option value="unknown">Pata nahi — portal par dekho</option>
+                <option value="yes">Haan — land seeding theek hai</option>
+                <option value="no">Nahi — problem dikh rahi hai</option>
               </select>
             </div>
 
@@ -220,9 +219,9 @@ export default function InstallmentTrackerCalcPage() {
                 onChange={(e) => setProgress(e.target.value)}
                 className="w-full border border-[var(--color-border)] rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-[var(--color-primary)] focus:ring-1 focus:ring-[var(--color-primary-light)] bg-[var(--color-card)] text-[var(--color-text)]"
               >
-                <option value="unknown">❓ Pata nahi — portal par dekho</option>
-                <option value="active">✅ Active dikh raha hai</option>
-                <option value="rejected">❌ Rejected dikh raha hai</option>
+                <option value="unknown">Pata nahi — portal par dekho</option>
+                <option value="active">Active dikh raha hai</option>
+                <option value="rejected">Rejected dikh raha hai</option>
               </select>
             </div>
           </div>
@@ -247,7 +246,6 @@ export default function InstallmentTrackerCalcPage() {
             </div>
           ) : allGood ? (
             <div className="mt-6 p-5 bg-green-50 dark:bg-green-900/20 border-2 border-green-300 dark:border-green-700 rounded-2xl text-center">
-              <span className="text-3xl block mb-2">🎉</span>
               <p className="font-black text-green-800 dark:text-green-300 mb-1">
                 Sab Kuch Sahi Hai!
               </p>
@@ -269,7 +267,7 @@ export default function InstallmentTrackerCalcPage() {
           ) : (
             <div className="mt-6 bg-orange-50 dark:bg-orange-900/20 border-2 border-orange-300 dark:border-orange-700 rounded-2xl p-5">
               <p className="text-xs text-orange-700 dark:text-orange-300 font-bold uppercase tracking-wide mb-3">
-                ⚠️ {blockers.length} Problem{blockers.length > 1 ? 's' : ''} Mili
+                 {blockers.length} Problem{blockers.length > 1 ? 's' : ''} Mili
               </p>
               <div className="space-y-3">
                 {blockers.map((b) => (
@@ -302,7 +300,6 @@ export default function InstallmentTrackerCalcPage() {
         </div>
 
         <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl flex items-center gap-3">
-          <span className="text-2xl">⏳</span>
           <div>
             <p className="font-bold text-blue-900 dark:text-blue-300 text-sm">Agli Kist</p>
             <p className="text-xs text-blue-700 dark:text-blue-400">
@@ -312,10 +309,10 @@ export default function InstallmentTrackerCalcPage() {
         </div>
 
         <div className="mt-6 bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-5 shadow-sm">
-          <h3 className="font-black text-[var(--color-text)] text-sm mb-4">⚠️ Kist Kyun Rukti Hai? Common Reasons</h3>
+          <h3 className="font-black text-[var(--color-text)] text-sm mb-4">Kist Kyun Rukti Hai? Common Reasons</h3>
           <div className="space-y-3 text-sm">
             <div className="p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
-              <p className="font-bold text-red-900 dark:text-red-300 text-xs mb-1">❌ eKYC Nahi Hua (90% Cases)</p>
+              <p className="font-bold text-red-900 dark:text-red-300 text-xs mb-1">eKYC Nahi Hua (90% Cases)</p>
               <p className="text-xs text-red-800 dark:text-red-400">Ye sabse zyada dikhne wali wajah hai. Fix simple hai — Aadhaar OTP se verify karo, 5 minute ka kaam hai, aur CSC center ya online dono jagah free milta hai.</p>
             </div>
             <div className="p-3 bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 rounded-xl">
@@ -327,14 +324,14 @@ export default function InstallmentTrackerCalcPage() {
               <p className="text-xs text-yellow-800 dark:text-yellow-400">Zameen ka record abhi tak portal se match nahi hua — is baare mein patwari ya revenue office se baat karni padegi. Thoda time lagta hai, 7-14 din tak.</p>
             </div>
             <div className="p-3 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-xl">
-              <p className="font-bold text-purple-900 dark:text-purple-300 text-xs mb-1">❌ Application Reject</p>
+              <p className="font-bold text-purple-900 dark:text-purple-300 text-xs mb-1">Application Reject</p>
               <p className="text-xs text-purple-800 dark:text-purple-400">Kabhi galat document, kabhi zameen ka mismatch, kabhi duplicate entry — reason alag alag ho sakti hai. Status page pe exact reason likha hota hai, wahi check karke re-apply karo.</p>
             </div>
           </div>
         </div>
 
         <div className="mt-6 bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-5 shadow-sm">
-          <h3 className="font-black text-[var(--color-text)] text-sm mb-4">🔧 Kist Ruki Hai To Kya Karein?</h3>
+          <h3 className="font-black text-[var(--color-text)] text-sm mb-4">Kist Ruki Hai To Kya Karein?</h3>
           <div className="space-y-3">
             {[
               {n:1, s:'Pehle status check karo — pmkisan.gov.in par. Wahan reason dikhega'},
@@ -355,26 +352,25 @@ export default function InstallmentTrackerCalcPage() {
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
           {[
             {
-              icon: '💰',
+              
               title: `${KIST_CONFIG.current.amount} Har Kist`,
               desc: `${releaseDateStr} ko ${KIST_CONFIG.current.name} release hui`,
             },
             {
-              icon: '🔐',
+              
               title: 'eKYC Sabse Zaroori',
               desc: '90% pending cases eKYC na hone ki wajah se hain',
             },
             {
-              icon: '📞',
+              
               title: 'Helpline: 155261',
               desc: 'Koi bhi problem ho — free government helpline',
             },
-          ].map(({ icon, title, desc }) => (
+          ].map(({ title, desc }) => (
             <div
               key={title}
               className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-center shadow-sm"
             >
-              <span className="text-2xl block mb-1">{icon}</span>
               <p className="font-black text-[var(--color-text)] text-xs">{title}</p>
               <p className="text-[11px] text-[var(--color-text-muted)] mt-1">{desc}</p>
             </div>
@@ -382,7 +378,7 @@ export default function InstallmentTrackerCalcPage() {
         </div>
 
         <div className="mt-6 p-5 bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-xl">
-          <p className="font-bold text-[var(--color-text)] text-sm mb-3">❓ Kist Ke Baare Mein Aksar Sawaal</p>
+          <p className="font-bold text-[var(--color-text)] text-sm mb-3">Kist Ke Baare Mein Aksar Sawaal</p>
           <div className="space-y-3 text-xs">
             <details className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-lg p-3">
               <summary className="font-bold text-[var(--color-text)] cursor-pointer">Kist kab aati hai?</summary>
@@ -408,14 +404,14 @@ export default function InstallmentTrackerCalcPage() {
         </div>
 
         <div className="mt-6 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
-          <p className="font-bold text-green-900 dark:text-green-300 text-sm mb-2">📖 Related Guides</p>
+          <p className="font-bold text-green-900 dark:text-green-300 text-sm mb-2">Related Guides</p>
           <div className="flex flex-wrap gap-2">
             {[
-              { href: '/articles/PmKisan24viKist2026', label: '📆 24vi Kist Status' },
-              { href: '/articles/PmKisanEkycOnline2026', label: '🔐 eKYC Guide' },
-              { href: '/articles/PmKisanPaymentFailedFix2026', label: '💸 Payment Fix' },
-              { href: '/articles/PmKisanMasterGuide2026', label: '📚 Complete Guide' },
-              { href: '/articles/PmKisanBeneficiaryList2026', label: '📋 Beneficiary List' },
+              { href: '/articles/PmKisan24viKist2026', label: '24vi Kist Status' },
+              { href: '/articles/PmKisanEkycOnline2026', label: 'eKYC Guide' },
+              { href: '/articles/PmKisanPaymentFailedFix2026', label: 'Payment Fix' },
+              { href: '/articles/PmKisanMasterGuide2026', label: 'Complete Guide' },
+              { href: '/articles/PmKisanBeneficiaryList2026', label: 'Beneficiary List' },
             ].map(({ href, label }) => (
               <Link
                 key={href}
@@ -429,7 +425,7 @@ export default function InstallmentTrackerCalcPage() {
         </div>
 
         <div className="mt-6 p-3 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl text-xs text-amber-800 dark:text-amber-300">
-          <strong>⚠️ Disclaimer:</strong> Yeh tracker aapke jawabon ke basis par common reasons batata hai. Final status official portal par hi check karo.
+          <strong>Disclaimer:</strong> Yeh tracker aapke jawabon ke basis par common reasons batata hai. Final status official portal par hi check karo.
         </div>
       </div>
     </>

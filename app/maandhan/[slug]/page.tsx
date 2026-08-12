@@ -174,7 +174,7 @@ export default async function MaandhanArticlePage({ params }: { params: Promise<
       <section aria-label="Related maandhan articles" className="container-site max-w-3xl mx-auto px-4 pb-10">
         <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
           <h2 className="font-black text-[var(--color-text)] mb-4 text-base flex items-center gap-2">
-            <span>🔗</span> Related Articles — Yeh Bhi Padho
+            Related Articles — Yeh Bhi Padho
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             {related.map((a) => (

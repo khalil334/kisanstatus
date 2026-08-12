@@ -8,8 +8,8 @@ const RELATED = [
   { slug: 'bakri-palan-yojana-nlm-subsidy', title: 'Bakri Palan NLM Subsidy', emoji: '🐐' },
   { slug: 'dairy-farm-loan-without-collateral', title: 'Collateral-Free Dairy Loan Guide', emoji: '🐄' },
   { slug: 'bihar-pashupalan-loan-yojana', title: 'Bihar Pashu Loan Scheme', emoji: '🐃' },
-  { slug: 'jansamarth-portal-loan-apply', title: 'JanSamarth Se Loan Kaise Le', emoji: '💻' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC 2026 Application', emoji: '💳' },
+  { slug: 'jansamarth-portal-loan-apply', title: 'JanSamarth Se Loan Kaise Le' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC 2026 Application' },
   { slug: 'pm-matsya-sampada-yojana-fish-farming', title: 'PM Matsya Sampada Yojana', emoji: '🐟' },
 ];
 
@@ -72,10 +72,10 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
             Murgi Palan Loan 2026: NLM Se 50% Subsidy (₹25 Lakh Tak) — Eligibility, Layer vs Broiler Aur Apply Ka Poora Process
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(article.publishedTime)}</span>
-            <span>🔄 Last Updated: 5 August 2026</span>
-            <span>⏱️ 11 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(article.publishedTime)}</span>
+            <span>Last Updated: 5 August 2026</span>
+            <span>11 min read</span>
           </div>
         </div>
       </div>
@@ -168,7 +168,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           subsidy baad mein — yahi order hai.
         </DB>
 
-        <SH>✅ Eligibility — Chaar Cheezein Chahiye</SH>
+        <SH>Eligibility — Chaar Cheezein Chahiye</SH>
         <StepList>
           <SI n={1}><strong>Training ya anubhav:</strong> poultry ki training, livestock ka anubhav, ya trained staff — teeno mein se kuch ek. KVK ya sarkari poultry training centre ka certificate file ko mazboot karta hai.</SI>
           <SI n={2}><strong>Zameen:</strong> khud ki ya registered lease par. Location bhi socho — hatchery/farm ke liye bijli-paani aur market ki doori matter karti hai.</SI>
@@ -240,7 +240,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>💻 Apply Kaise Karein — udyamimitra Portal</SH>
+        <SH>Apply Kaise Karein — udyamimitra Portal</SH>
         <StepList>
           <SI n={1}><strong>Project report (DPR) banao:</strong> unit ka type, capacity, cost breakdown, income projection, repayment plan. DPR jitni realistic, file utni mazboot. Hawai numbers wali DPR verification mein pakdi jaati hai.</SI>
           <SI n={2}><strong>nlm.udyamimitra.in par registration karo</strong> — apni details bharo aur applicant type chuno (individual/SHG/FPO...).</SI>
@@ -272,7 +272,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>🧮 Kharche Ka Sach — Feed Hi Asli Game Hai</SH>
+        <SH>Kharche Ka Sach — Feed Hi Asli Game Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Poultry ke chalu kharche ka 60-70% sirf feed hota hai. Iska matlab: aapke munafe ka faisla shed ki
           chamak se nahi, feed conversion se hota hai — kitna feed kha kar murgi kitna anda/weight deti hai. Achhi
@@ -331,7 +331,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           chahiye — appraisal karne wala bhi samajh jaata hai ki plan zameen se juda hai ya internet se utha hai.
         </p>
 
-        <SH>⚠️ 5 Galtiyan Jo Application Aur Farm Dono Dubati Hain</SH>
+        <SH>5 Galtiyan Jo Application Aur Farm Dono Dubati Hain</SH>
         <StepList>
           <SI n={1}><strong>Subsidy ko advance samajhna</strong> — pehle financing, phir subsidy. Ulta socha toh project shuru hi nahi hoga.</SI>
           <SI n={2}><strong>Copy-paste DPR</strong> — internet se uthai DPR mein local rates nahi hote; appraisal mein pakdi jaati hai. Apne district ke asli rates par banao.</SI>
@@ -367,7 +367,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
 
         <FAQBlock faqs={FAQS_DATA} />
 
-        <SH>📚 Sources</SH>
+        <SH>Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
             NLM Entrepreneurship — Udyamimitra portal, scheme guidelines.{' '}
@@ -386,8 +386,8 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[
-          { href: '/articles', l: '📚 Baaki Articles Dekhein' },
-          { href: '/articles/category/pashupalan', l: '📂 Pashu Palan Ke Sab Articles' },
+          { href: '/articles', l: 'Baaki Articles Dekhein' },
+          { href: '/articles/category/pashupalan', l: 'Pashu Palan Ke Sab Articles' },
         ]} />
         <Disclaimer />
       </div>

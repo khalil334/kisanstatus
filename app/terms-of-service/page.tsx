@@ -59,7 +59,7 @@ export default function TermsPage() {
         <div className="max-w-3xl mx-auto space-y-6">
 
           <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-300 dark:border-amber-800 rounded-xl text-sm text-amber-900 dark:text-amber-200">
-            <strong>⚠️ Zaruri Suchna:</strong> {SITE_NAME} ek independent informational platform hai.
+            <strong>Zaruri Suchna:</strong> {SITE_NAME} ek independent informational platform hai.
             Yeh Bharat Sarkar ya kisi bhi krishi yojana se affiliated nahi hai.
             Official kaam ke liye hamesha{' '}
             <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer" className="underline font-semibold focus:outline-none focus:ring-2 focus:ring-amber-500 rounded">
@@ -225,8 +225,8 @@ export default function TermsPage() {
               In sharton ke baare mein koi sawal? Humse sampark karein:
             </p>
             <div className="text-sm text-[var(--color-text-muted)] space-y-2">
-              <p>📧 Email: <a href="mailto:kisanstatus.support@gmail.com" className="text-[var(--color-primary)] underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">kisanstatus.support@gmail.com</a></p>
-              <p>🌐 Platform: <a href={SITE_URL} className="text-[var(--color-primary)] underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">{SITE_URL}</a></p>
+              <p>Email: <a href="mailto:kisanstatus.support@gmail.com" className="text-[var(--color-primary)] underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">kisanstatus.support@gmail.com</a></p>
+              <p>Platform: <a href={SITE_URL} className="text-[var(--color-primary)] underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">{SITE_URL}</a></p>
               <p>👤 Author: <Link href="/about" className="text-[var(--color-primary)] underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">{AUTHOR_NAME}</Link></p>
             </div>
           </section>

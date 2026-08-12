@@ -34,7 +34,7 @@ function FeaturedImageCard({ src, title, desc, border }: { src: string; title: s
   );
 }
 
-function ArticleImage({ image, emoji, title }: { image: string; emoji: string; title: string }) {
+function ArticleImage({ image, emoji, title }: { image: string; emoji?: string; title: string }) {
   return (
     <div className="relative w-full overflow-hidden bg-gray-100 dark:bg-gray-800 shrink-0" style={{ aspectRatio: '16/9' }}>
       {image ? (
@@ -50,17 +50,17 @@ function ArticleImage({ image, emoji, title }: { image: string; emoji: string; t
         />
       ) : (
         <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-green-50 to-emerald-100 dark:from-gray-800 dark:to-gray-700" role="img" aria-label={title}>
-          <span className="text-6xl" aria-hidden="true">{emoji}</span>
+          {emoji ? <span className="text-6xl" aria-hidden="true">{emoji}</span> : null}
         </div>
       )}
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-10 pointer-events-none" aria-hidden="true" />
-      <span className="absolute bottom-3 left-4 text-2xl drop-shadow-lg z-20" aria-hidden="true">{emoji}</span>
+      {emoji ? <span className="absolute bottom-3 left-4 text-2xl drop-shadow-lg z-20" aria-hidden="true">{emoji}</span> : null}
     </div>
   );
 }
 
 function ArticleCard({ article, showNewBadge = false }: { article: typeof ARTICLES[0]; showNewBadge?: boolean }) {
-  const categoryInfo = CATEGORIES[article.category] as { name: string; nameHi: string; icon: string } | undefined;
+  const categoryInfo = CATEGORIES[article.category] as { name: string; nameHi: string; icon?: string } | undefined;
   const emoji = categoryInfo?.icon || '';
   const categoryName = categoryInfo?.nameHi || categoryInfo?.name || 'Article';
 
@@ -79,8 +79,6 @@ function ArticleCard({ article, showNewBadge = false }: { article: typeof ARTICL
           <div className="absolute top-4 right-4 z-30">
             <span className="relative inline-flex items-center gap-1.5 bg-gradient-to-r from-green-500 to-emerald-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
               </span>
               NEW
             </span>
@@ -89,7 +87,7 @@ function ArticleCard({ article, showNewBadge = false }: { article: typeof ARTICL
       </div>
       <div className="p-6 flex flex-col flex-1">
         <span className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-lg bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/30 dark:to-emerald-900/30 text-green-700 dark:text-green-300 w-fit mb-4 border border-green-200/50 dark:border-green-700/50">
-          <span className="text-base" aria-hidden="true">{emoji}</span>
+          {emoji ? <span className="text-base" aria-hidden="true">{emoji}</span> : null}
           <span>{categoryName}</span>
         </span>
         <h3 className="font-bold text-gray-900 dark:text-white text-lg leading-snug group-hover:text-green-700 dark:group-hover:text-green-400 transition-colors duration-300 mb-3 line-clamp-2">
@@ -99,7 +97,7 @@ function ArticleCard({ article, showNewBadge = false }: { article: typeof ARTICL
           {article.desc}
         </p>
         <div className="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-700/50">
-          <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">✍️ {AUTHOR_NAME}</span>
+          <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">{AUTHOR_NAME}</span>
           <Link href={`/articles/${article.slug}`} className="text-sm font-bold text-green-700 dark:text-green-400 group-hover:translate-x-2 transition-transform duration-300 inline-flex items-center gap-1.5" aria-label={`Padhein: ${article.title}`}>
             Padhein
             <IconArrowRight className="w-4 h-4" />
@@ -377,8 +375,6 @@ export default function HomeContent() {
             </div>
             <span className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-bold px-5 py-2.5 rounded-full shadow-lg self-start md:self-auto">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
               </span>
               {latestArticles.length} latest
             </span>
@@ -415,7 +411,7 @@ export default function HomeContent() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {getHindiArticlesByFreshness().slice(0, TOP_ARTICLES_LIMIT).map((a) => {
-              const categoryInfo = CATEGORIES[a.category] as { name: string; nameHi: string; icon: string } | undefined;
+              const categoryInfo = CATEGORIES[a.category] as { name: string; nameHi: string; icon?: string } | undefined;
               const emoji = categoryInfo?.icon || '';
               const categoryName = categoryInfo?.nameHi || categoryInfo?.name || 'Guide';
               return (
@@ -431,7 +427,7 @@ export default function HomeContent() {
                   </div>
                   <div className="p-6 flex flex-col flex-1">
                     <span className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-lg bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-900/30 dark:to-orange-900/30 text-amber-700 dark:text-amber-300 w-fit mb-4 border border-amber-200/50 dark:border-amber-700/50">
-                      <span className="text-base" aria-hidden="true">{emoji}</span>
+                      {emoji ? <span className="text-base" aria-hidden="true">{emoji}</span> : null}
                       <span>{categoryName}</span>
                     </span>
                     <h3 className="font-bold text-gray-900 dark:text-white text-lg leading-snug group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors duration-300 mb-3 line-clamp-2">
@@ -439,7 +435,7 @@ export default function HomeContent() {
                     </h3>
                     <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-2 flex-1 mb-5">{a.desc}</p>
                     <div className="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-700/50">
-                      <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">✍️ {AUTHOR_NAME}</span>
+                      <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">{AUTHOR_NAME}</span>
                       <Link href={`/articles/${a.slug}`} className="text-sm font-bold text-amber-700 dark:text-amber-400 group-hover:translate-x-2 transition-transform duration-300 inline-flex items-center gap-1.5" aria-label={`पढ़ें: ${a.titleHi}`}>
                         पढ़ें
                         <IconArrowRight className="w-4 h-4" />
@@ -561,16 +557,15 @@ export default function HomeContent() {
           <nav aria-label="Quick links to popular articles">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-5 max-w-6xl mx-auto">
               {[
-                { href: '/articles/PmKisan24viKist2026', icon: '📊', title: 'Status Check', desc: 'Kist aayi ya nahi', color: 'from-blue-500 to-cyan-500' },
-                { href: '/articles/KisanCreditCardOnlineApply2026', icon: '💳', title: 'KCC Apply', desc: '₹5 Lakh Loan', color: 'from-green-500 to-emerald-500' },
-                { href: '/articles/PmKisanBeneficiaryList2026', icon: '📋', title: 'Beneficiary List', desc: 'Naam check karo', color: 'from-red-500 to-pink-500' },
-                { href: '/articles/soil-health-card-complete-guide-2026', icon: '🧪', title: 'Soil Health Card', desc: 'Mitti test karo', color: 'from-purple-500 to-indigo-500' },
+                { href: '/articles/PmKisan24viKist2026', title: 'Status Check', desc: 'Kist aayi ya nahi', color: 'from-blue-500 to-cyan-500' },
+                { href: '/articles/KisanCreditCardOnlineApply2026', title: 'KCC Apply', desc: '₹5 Lakh Loan', color: 'from-green-500 to-emerald-500' },
+                { href: '/articles/PmKisanBeneficiaryList2026', title: 'Beneficiary List', desc: 'Naam check karo', color: 'from-red-500 to-pink-500' },
+                { href: '/articles/soil-health-card-complete-guide-2026', title: 'Soil Health Card', desc: 'Mitti test karo', color: 'from-purple-500 to-indigo-500' },
               ].map((link, i) => (
                 <Link key={i} href={link.href} className="group relative bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-2xl p-8 text-center hover:shadow-2xl hover:border-transparent transition-all duration-500 hover:-translate-y-2 overflow-hidden" aria-label={`${link.title}: ${link.desc}`}>
                   <div className={`absolute inset-0 bg-gradient-to-br ${link.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} aria-hidden="true" />
                   <div className="relative">
                     <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br ${link.color} mb-5 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`} aria-hidden="true">
-                      <div className="text-4xl">{link.icon}</div>
                     </div>
                     <h3 className="font-bold text-gray-900 dark:text-white text-lg mb-2">{link.title}</h3>
                     <p className="text-sm text-gray-600 dark:text-gray-400">{link.desc}</p>
@@ -581,7 +576,6 @@ export default function HomeContent() {
           </nav>
         </div>
       </section>
-
 
     </div>
   );

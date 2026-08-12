@@ -513,7 +513,7 @@ export default function PariharaPaymentStatusCheck2026({
               key={error}
               className="border border-[var(--color-border)] rounded-xl p-4 text-sm space-y-1.5"
             >
-              <p className="font-semibold text-[var(--color-text)] m-0">⚠️ {error}</p>
+              <p className="font-semibold text-[var(--color-text)] m-0">{error}</p>
               <p className="text-[var(--color-text-muted)] m-0">
                 <strong>Matlab:</strong> {matlab}
               </p>

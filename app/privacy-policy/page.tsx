@@ -67,7 +67,7 @@ export default function PrivacyPolicyPage() {
               Hamari Site ka upyog karke, aap is policy ke anusaar jankari ke collection aur upyog se sahmat hote hain.
             </p>
             <div className="mt-4 p-3 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-xl text-sm text-yellow-900 dark:text-yellow-300">
-              <strong>⚠️ Zaruri Suchna:</strong> {SITE_NAME} Bharat Sarkar ya kisi bhi krishi yojana se affiliated nahi hai.
+              <strong>Zaruri Suchna:</strong> {SITE_NAME} Bharat Sarkar ya kisi bhi krishi yojana se affiliated nahi hai.
               Hum ek independent informational platform hain.
             </div>
           </section>
@@ -251,8 +251,8 @@ export default function PrivacyPolicyPage() {
               Agar aapke paas is privacy policy ke baare mein koi sawal ya chinta hai, toh kripya humse sampark karein:
             </p>
             <div className="text-sm text-[var(--color-text-muted)] space-y-2">
-              <p>📧 Email: <a href="mailto:kisanstatus.support@gmail.com" className="text-[var(--color-primary)] underline hover:no-underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">kisanstatus.support@gmail.com</a></p>
-              <p>🌐 Website: <a href={SITE_URL} className="text-[var(--color-primary)] underline hover:no-underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">{SITE_URL}</a></p>
+              <p>Email: <a href="mailto:kisanstatus.support@gmail.com" className="text-[var(--color-primary)] underline hover:no-underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">kisanstatus.support@gmail.com</a></p>
+              <p>Website: <a href={SITE_URL} className="text-[var(--color-primary)] underline hover:no-underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">{SITE_URL}</a></p>
               <p className="mt-3">
                 Ya adhik jankari ke liye hamara{' '}
                 <Link href="/contact" className="text-[var(--color-primary)] font-bold underline hover:no-underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">

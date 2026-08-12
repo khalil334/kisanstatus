@@ -63,7 +63,7 @@ export default function CHCPortal() {
 
       <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-5 mb-6 not-prose">
         <h3 className="font-bold text-lg mb-3 text-red-900 dark:text-red-200 flex items-center gap-2">
-          <span>⚠️</span> Sabse Bada Jhooth: "Free Tractor"
+          Sabse Bada Jhooth: "Free Tractor"
         </h3>
         <p className="text-sm text-red-800 dark:text-red-300">
           Koi bhi sarkari scheme aapko <strong>Tractor par subsidy nahi deti</strong>. Subsidy sirf tractor ke peeche lagne wale implements (jaise Rotavator, Happy Seeder, Laser Leveler, etc.) par milti hai. Agar koi local agent aapse kehta hai ki "₹50,000 do, free tractor dilwa dunga", toh wo 100% scam hai. Aapko pehle tractor apne paiso ya bank loan se khareedna hoga, phir implements par subsidy claim karni hogi.
@@ -219,7 +219,7 @@ export default function CHCPortal() {
       />
 
       <div className="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
-        <h3 className="font-bold text-red-800 dark:text-red-300 mb-2 text-sm">⚠️ Common Mistakes During Execution:</h3>
+        <h3 className="font-bold text-red-800 dark:text-red-300 mb-2 text-sm">Common Mistakes During Execution:</h3>
         <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300">
           <li><strong>Driver ka jhagda:</strong> Achha aur imaandar driver dhoondhna sabse mushkil kaam hai. Hamesha "Base Salary + Incentive" model banayein taaki wo machine ki care kare.</li>
           <li><strong>Udhaari ka chakkar:</strong> Naye customers se hamesha 50% advance lein. Gaon mein udhaari phailne se cash flow ruk jata hai.</li>
@@ -330,7 +330,7 @@ export default function CHCPortal() {
 
       <div className="grid md:grid-cols-2 gap-6 mb-8 not-prose">
         <div className="bg-green-50 dark:bg-green-900/20 p-5 rounded-lg border border-green-200 dark:border-green-800">
-          <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">✅ Haan, yeh business aapke liye hai agar:</h3>
+          <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">Haan, yeh business aapke liye hai agar:</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>• Aapke paas khud ki zameen aur secure storage hai.</li>
             <li>• Aap machinery ki basic maintenance aur troubleshooting samajh sakte hain.</li>
@@ -340,7 +340,7 @@ export default function CHCPortal() {
         </div>
 
         <div className="bg-red-50 dark:bg-red-900/20 p-5 rounded-lg border border-red-200 dark:border-red-800">
-          <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">❌ Ruk Jaiye, agar:</h3>
+          <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">Ruk Jaiye, agar:</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>• Aapko sirf "Passive income" ki expectation hai. CHC mein active involvement chahiye.</li>
             <li>• Aap machinery ke technical mamlon se darte hain ya ignore karte hain.</li>

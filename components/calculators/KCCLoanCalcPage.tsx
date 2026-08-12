@@ -53,9 +53,9 @@ export default function KCCLoanCalcPage() {
       <div className="container-site max-w-2xl py-8">
 
         <div className="flex flex-wrap gap-3 text-xs text-gray-500 mb-4">
-          <span>✍️ <Link href="/about" className="underline hover:text-gray-700">{AUTHOR_NAME}</Link></span>
-          <span>📅 {fmtDate(PUBLISHED)}</span>
-          <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
+          <span><Link href="/about" className="underline hover:text-gray-700">{AUTHOR_NAME}</Link></span>
+          <span>{fmtDate(PUBLISHED)}</span>
+          <span>Updated: {fmtDate(MODIFIED)}</span>
         </div>
 
         <div className="mb-6 p-5 bg-blue-50 border border-blue-200 rounded-xl text-sm text-gray-700 leading-relaxed">
@@ -67,12 +67,12 @@ export default function KCCLoanCalcPage() {
             Waise KCC dusre loans se kaafi sasta padta hai — <strong>₹3 lakh tak bina collateral</strong> mil jata hai, interest bhi <strong>7%</strong> se shuru hota hai, aur agar time pe chuka do to <strong>2% ki subsidy</strong> upar se milti hai. Yani effective rate <strong>4-5%</strong> tak neeche aa jata hai — market ke doosre loans se kaafi kam.
           </p>
           <p className="text-xs text-blue-700 mt-3">
-            💡 Ek example se samjho: ₹1 lakh 7% par 12 mahine ke liye lo to EMI ₹8,653 banti hai, total interest ₹3,832. Par subsidy mil jaye to us mein se ₹2,000 wapas bach jate hain.
+             Ek example se samjho: ₹1 lakh 7% par 12 mahine ke liye lo to EMI ₹8,653 banti hai, total interest ₹3,832. Par subsidy mil jaye to us mein se ₹2,000 wapas bach jate hain.
           </p>
         </div>
 
         <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
-          <h2 className="font-black text-gray-900 text-base mb-5">🧮 Loan Details Bharo</h2>
+          <h2 className="font-black text-gray-900 text-base mb-5">Loan Details Bharo</h2>
 
           <SelectField
             label="Loan kis kaam ke liye chahiye?"
@@ -103,23 +103,23 @@ export default function KCCLoanCalcPage() {
 
           {emi>0 && (
             <div className="mt-4 bg-blue-50 border-2 border-blue-200 rounded-2xl p-5">
-              <p className="text-xs text-blue-700 font-bold uppercase tracking-wide mb-3">📊 Aapki EMI Details</p>
+              <p className="text-xs text-blue-700 font-bold uppercase tracking-wide mb-3">Aapki EMI Details</p>
               <ResultRow label="Monthly EMI" value={fmt(emi)} bold />
               <ResultRow label="Total Interest" value={fmt(totalInterest)} />
               <ResultRow label="Total Repayment" value={fmt(totalPayable)} />
               {subsidy>0 && (
                 <>
                   <div className="my-2 pt-2 border-t border-blue-200">
-                    <p className="text-xs text-blue-600 font-semibold mb-2">🎁 Government Subsidy (2% Interest Subvention)</p>
+                    <p className="text-xs text-blue-600 font-semibold mb-2">Government Subsidy (2% Interest Subvention)</p>
                     <ResultRow label="2% Subsidy Bachat" value={`-${fmt(subsidy)}`} />
                     <ResultRow label="Effective Cost (Subsidy ke baad)" value={fmt(effectiveCost)} bold highlight />
                   </div>
-                  <p className="text-xs text-blue-600 mt-2">✅ Time par repay karo — ₹{fmt(subsidy).replace('₹','')} extra bachenge!</p>
+                  <p className="text-xs text-blue-600 mt-2">Time par repay karo — ₹{fmt(subsidy).replace('₹','')} extra bachenge!</p>
                 </>
               )}
 
               <div className="mt-4 p-3 bg-white rounded-xl text-xs text-gray-700">
-                <p className="font-bold mb-1">📖 Iska Matlab Kya Hai?</p>
+                <p className="font-bold mb-1">Iska Matlab Kya Hai?</p>
                 <p>Aapne {fmt(P)} ka loan liya {rate}% interest par {months} mahine ke liye. Har mahine {fmt(emi)} dena hoga. Total {fmt(totalInterest)} interest dena padega. Par agar time par repay kiya to {fmt(subsidy)} ki subsidy milegi — effective cost sirf {fmt(effectiveCost)} hogi.</p>
               </div>
             </div>
@@ -141,7 +141,7 @@ export default function KCCLoanCalcPage() {
         </div>
 
         <div className="mt-6 bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
-          <h3 className="font-black text-gray-900 text-sm mb-4">📋 KCC Loan Kaise Le — Step by Step</h3>
+          <h3 className="font-black text-gray-900 text-sm mb-4">KCC Loan Kaise Le — Step by Step</h3>
           <div className="space-y-3">
             {[
               {n:1,s:'Nazdiki bank jao — SBI, PNB, Bank of Baroda, ya koi cooperative bank jo kisan loan deta ho'},
@@ -159,7 +159,7 @@ export default function KCCLoanCalcPage() {
           </div>
 
           <div className="mt-4 p-3 bg-green-50 border border-green-200 rounded-xl">
-            <p className="text-xs text-green-800 font-bold mb-1">📄 Documents Checklist:</p>
+            <p className="text-xs text-green-800 font-bold mb-1">Documents Checklist:</p>
             <ul className="text-xs text-green-700 space-y-0.5 ml-4">
               <li>✓ Aadhaar card + PAN card</li>
               <li>✓ Land records (7/12 extract, khasra, khatauni)</li>
@@ -171,30 +171,30 @@ export default function KCCLoanCalcPage() {
 
           <Link href="/articles/KisanCreditCardOnlineApply2026"
             className="mt-4 inline-flex items-center gap-2 text-xs font-bold text-blue-700 hover:text-blue-900">
-            📖 KCC Loan Complete Guide Padho →
+             KCC Loan Complete Guide Padho →
           </Link>
         </div>
 
         <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-xl">
-          <p className="font-bold text-yellow-900 text-sm mb-2">⚠️ KCC Loan Mein Aksar Yeh Galtiyan Hoti Hain:</p>
+          <p className="font-bold text-yellow-900 text-sm mb-2">KCC Loan Mein Aksar Yeh Galtiyan Hoti Hain:</p>
           <ul className="space-y-1.5 text-xs text-yellow-800">
-            <li>❌ Time par repay nahi karna — isse na sirf subsidy chhoot jati hai, interest bhi badh jata hai</li>
-            <li>❌ Zaroorat se zyada loan le lena — jitna lo utna hi wapas karna aasan rahega</li>
-            <li>❌ Purpose galat bata dena — bank verify karta hai, pakde gaye to blacklist ho sakte ho</li>
-            <li>❌ Land records mein gadbad — ye bhi verify hote hain, fraud case tak ban sakta hai</li>
-            <li>❌ EMI baar baar miss karna — CIBIL kharab hota hai, aage loan milna mushkil ho jata hai</li>
+            <li>Time par repay nahi karna — isse na sirf subsidy chhoot jati hai, interest bhi badh jata hai</li>
+            <li>Zaroorat se zyada loan le lena — jitna lo utna hi wapas karna aasan rahega</li>
+            <li>Purpose galat bata dena — bank verify karta hai, pakde gaye to blacklist ho sakte ho</li>
+            <li>Land records mein gadbad — ye bhi verify hote hain, fraud case tak ban sakta hai</li>
+            <li>EMI baar baar miss karna — CIBIL kharab hota hai, aage loan milna mushkil ho jata hai</li>
           </ul>
         </div>
 
         <div className="mt-6">
-          <h3 className="font-black text-gray-900 text-sm mb-3">💡 KCC Loan Se Maximum Fayda Kaise Uthao</h3>
+          <h3 className="font-black text-gray-900 text-sm mb-3">KCC Loan Se Maximum Fayda Kaise Uthao</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
             <div className="p-3 bg-green-50 border border-green-200 rounded-xl">
-              <p className="font-bold text-green-900 mb-1">💰 Sahi Amount Lo</p>
+              <p className="font-bold text-green-900 mb-1">Sahi Amount Lo</p>
               <p className="text-green-800">Zaroorat jitna hi lo — ₹1 lakh chahiye to ₹1 lakh lo, poori limit use karne ki zaroorat nahi. Zyada loan matlab zyada interest bhi</p>
             </div>
             <div className="p-3 bg-blue-50 border border-blue-200 rounded-xl">
-              <p className="font-bold text-blue-900 mb-1">⏰ Time Par Repay Karo</p>
+              <p className="font-bold text-blue-900 mb-1">Time Par Repay Karo</p>
               <p className="text-blue-800">Fasal bik jaye toh der mat karo — jaldi chuka doge to subsidy ka fayda bhi milega aur CIBIL bhi accha rahega</p>
             </div>
             <div className="p-3 bg-purple-50 border border-purple-200 rounded-xl">
@@ -202,7 +202,7 @@ export default function KCCLoanCalcPage() {
               <p className="text-purple-800">SBI, PNB, BoB jaise banks mein process fast hota hai, cooperative banks kai baar zyada flexible nikalte hain — dono compare karke dekho</p>
             </div>
             <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl">
-              <p className="font-bold text-amber-900 mb-1">📊 Hisab Rakho</p>
+              <p className="font-bold text-amber-900 mb-1">Hisab Rakho</p>
               <p className="text-amber-800">Loan ka paisa kahan gaya, iska record rakho — bank kabhi audit kar sakta hai, toh receipts sambhal ke rakhna behtar hai</p>
             </div>
           </div>
@@ -213,31 +213,31 @@ export default function KCCLoanCalcPage() {
         <OtherCalcs current="/calculator/kcc-loan-emi" />
 
         <div className="mt-6 p-5 bg-blue-50 border border-blue-200 rounded-xl">
-          <p className="font-bold text-blue-900 text-sm mb-3">📖 KCC Loan Se Related Guides</p>
+          <p className="font-bold text-blue-900 text-sm mb-3">KCC Loan Se Related Guides</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             <Link href="/articles/KisanCreditCardOnlineApply2026" className="p-3 bg-white border border-blue-200 rounded-xl text-xs font-semibold text-gray-700 hover:bg-blue-600 hover:text-white transition-colors">
-              💳 KCC Loan Apply — Complete Guide
+               KCC Loan Apply — Complete Guide
             </Link>
             <Link href="/articles/KisanRinKahaSeLe2026" className="p-3 bg-white border border-blue-200 rounded-xl text-xs font-semibold text-gray-700 hover:bg-blue-600 hover:text-white transition-colors">
-              💰 Kisan Loan Kahan Se Le — 5 Options
+               Kisan Loan Kahan Se Le — 5 Options
             </Link>
             <Link href="/articles/PmKisan24viKist2026" className="p-3 bg-white border border-blue-200 rounded-xl text-xs font-semibold text-gray-700 hover:bg-blue-600 hover:text-white transition-colors">
-              📆 PM Kisan Status — ₹6,000 Free
+               PM Kisan Status — ₹6,000 Free
             </Link>
             <Link href="/articles/PmfbyCropInsurance2026" className="p-3 bg-white border border-blue-200 rounded-xl text-xs font-semibold text-gray-700 hover:bg-blue-600 hover:text-white transition-colors">
-              🛡️ Fasal Bima — Loan ke sath zaroori
+               Fasal Bima — Loan ke sath zaroori
             </Link>
             <Link href="/calculator/crop-profit" className="p-3 bg-white border border-blue-200 rounded-xl text-xs font-semibold text-gray-700 hover:bg-blue-600 hover:text-white transition-colors">
-              📊 Kheti Munafa Calculator
+               Kheti Munafa Calculator
             </Link>
             <Link href="/calculator/installment-tracker" className="p-3 bg-white border border-blue-200 rounded-xl text-xs font-semibold text-gray-700 hover:bg-blue-600 hover:text-white transition-colors">
-              📆 Kist Status Tracker
+               Kist Status Tracker
             </Link>
           </div>
         </div>
 
         <div className="mt-6 p-5 bg-gray-50 border border-gray-200 rounded-xl">
-          <p className="font-bold text-gray-900 text-sm mb-3">❓ KCC Loan Ke Baare Mein Aksar Sawaal</p>
+          <p className="font-bold text-gray-900 text-sm mb-3">KCC Loan Ke Baare Mein Aksar Sawaal</p>
           <div className="space-y-3 text-xs">
             <details className="bg-white border border-gray-200 rounded-lg p-3">
               <summary className="font-bold text-gray-900 cursor-pointer">KCC loan kitne din mein milta hai?</summary>

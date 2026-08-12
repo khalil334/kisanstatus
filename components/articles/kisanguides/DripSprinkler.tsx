@@ -343,7 +343,7 @@ export default function DripSprinkler() {
       />
 
       <div className="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
-        <h3 className="font-bold text-red-800 dark:text-red-300 mb-2 text-sm">⚠️ Jahan log sabse zyada phanste hain</h3>
+        <h3 className="font-bold text-red-800 dark:text-red-300 mb-2 text-sm">Jahan log sabse zyada phanste hain</h3>
         <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300">
           <li><strong>Quotation vs unit cost ka gap:</strong> subsidy notified cost par hai. Vendor ka bill upar gaya to farak poora aapka.</li>
           <li><strong>Approval se pehle kharidari:</strong> file mein pre-approval nahi hai to claim atak jaata hai.</li>
@@ -426,7 +426,7 @@ export default function DripSprinkler() {
 
       <div className="grid md:grid-cols-2 gap-6 mb-8 not-prose">
         <div className="bg-green-50 dark:bg-green-900/20 p-5 rounded-lg border border-green-200 dark:border-green-800">
-          <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">✅ Aapke liye theek hai, agar</h3>
+          <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">Aapke liye theek hai, agar</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>• Aapke ilake mein paani ki kami hai ya water table gir raha hai.</li>
             <li>• Pumping ka bijli/diesel kharcha aapke input cost mein bada hissa hai.</li>
@@ -436,7 +436,7 @@ export default function DripSprinkler() {
         </div>
 
         <div className="bg-red-50 dark:bg-red-900/20 p-5 rounded-lg border border-red-200 dark:border-red-800">
-          <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">❌ Ruk kar sochein, agar</h3>
+          <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">Ruk kar sochein, agar</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>• Har season crop aur spacing badalta hai (layout dobara karna padega).</li>
             <li>• Water source hi bharosemand nahi hai — system paani banata nahi, bachata hai.</li>

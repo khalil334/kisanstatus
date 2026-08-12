@@ -12,19 +12,19 @@ const RELATED_CARDS = [
     slug: 'pm-kisan-maandhan-registration-2026',
     title: 'Registration Kaise Karein',
     desc: 'CSC ya online application se apply karne ka poora tarika, screenshot ke saath.',
-    emoji: '📝',
+    
   },
   {
     slug: 'pm-kisan-maandhan-pension-calculator',
     title: 'Apna Contribution Nikalein',
     desc: 'Umar daliye aur turant dekhiye har mahine kitna jama karna hoga.',
-    emoji: '🧮',
+    
   },
   {
     slug: 'pm-kisan-maandhan-withdrawal-refund-rules',
     title: 'Beech Mein Chhodne Ke Niyam',
     desc: 'Agar 60 saal se pehle scheme chhodni pade toh paisa kaise wapas milta hai.',
-    emoji: '💸',
+    
   },
 ];
 
@@ -107,10 +107,10 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
           </h1>
 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 12 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>12 min read</span>
           </div>
         </div>
       </div>
@@ -218,7 +218,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
             Aapke account se jo amount kat raha hai wo aapki entry age par fix hua tha — ₹55 (18 saal) se ₹200 (40 saal) tak. Har ek umar ka exact figure, government match ke saath, reference chart mein dekhein aur apni passbook entry se milayein:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <Link href="/maandhan/pm-kisan-maandhan-age-wise-contribution-chart-2026" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">📊 Age-Wise Contribution Chart (18–40) →</Link>
+            <Link href="/maandhan/pm-kisan-maandhan-age-wise-contribution-chart-2026" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">Age-Wise Contribution Chart (18–40) →</Link>
           </div>
         </section>
 
@@ -251,19 +251,19 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
 
           <div className="space-y-3 mb-4">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
-              <p className="font-black text-sm text-green-800 dark:text-green-300 mb-1">🟢 Pehle Mahine (First Unpaid)</p>
+              <p className="font-black text-sm text-green-800 dark:text-green-300 mb-1">Pehle Mahine (First Unpaid)</p>
               <p className="text-xs text-[var(--color-text-muted)]">Koi late fee nahi lagti. Aap sirf due amount pay karke account regular karwa sakte hain. Teen payment cycles tak demand raise hoti hai bina kisi interest ke.</p>
             </div>
             <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl">
-              <p className="font-black text-sm text-amber-800 dark:text-amber-300 mb-1">🟡 1 Mahine Ke Baad</p>
+              <p className="font-black text-sm text-amber-800 dark:text-amber-300 mb-1">1 Mahine Ke Baad</p>
               <p className="text-xs text-[var(--color-text-muted)]">Late fee lagti hai jo savings bank interest rate ke barabar hoti hai. Agar default 12 mahine se kam hai, toh simple interest calculate hota hai. Agar 12 mahine se zyada ho gaya, toh completed years ke liye compounding interest aur bache hue months ke liye simple interest lagta hai.</p>
             </div>
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
-              <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">🔴 6 Mahine Tak Payment Nahi Hui</p>
+              <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">6 Mahine Tak Payment Nahi Hui</p>
               <p className="text-xs text-[var(--color-text-muted)]">Account status "dormant" ho jata hai. Ab further demand raise nahi hoti, lekin 3 saal tak SMS alerts aate rehte hain. Is dauran bhi aap entire outstanding amount + interest jama karke account regular karwa sakte hain.</p>
             </div>
             <div className="p-4 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl">
-              <p className="font-black text-sm text-gray-800 dark:text-gray-300 mb-1">⚪ 3 Saal Ke Baad</p>
+              <p className="font-black text-sm text-gray-800 dark:text-gray-300 mb-1">3 Saal Ke Baad</p>
               <p className="text-xs text-[var(--color-text-muted)]">SMS alerts band ho jate hain, lekin aap phir bhi call center ya online inquiry karke status check kar sakte hain. Account regularize karne ka option ab bhi available hai — poora due amount + applicable interest jama karke.</p>
             </div>
           </div>
@@ -323,7 +323,6 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
             </div>
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
               <div className="flex items-start gap-3">
-                <span className="text-xl mt-0.5">💻</span>
                 <div>
                   <p className="font-black text-sm text-[var(--color-text)] mb-1">Online (maandhan.in)</p>
                   <p className="text-xs text-[var(--color-text-muted)]">Agar aapke paas smartphone hai aur thodi internet samajh hai, toh aap official portal pe login karke payment kar sakte hain. Debit card, UPI, ya net banking se transaction ho jata hai. Login ke liye aapka registered mobile number aur OTP chahiye hoga.</p>
@@ -356,7 +355,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
               { title: '"Kya main apna share amount baad mein badal sakta hoon?"', desc: 'Nahi. Entry age ke hisaab se jo amount fix hua hai, woh poori scheme duration ke liye wahi rehta hai. Isliye enrollment se pehle apni financial situation zaroor dekh lein.' },
             ].map(({ title, desc }) => (
               <div key={title} className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-                <p className="font-black text-sm text-[var(--color-text)] mb-1">❓ {title}</p>
+                <p className="font-black text-sm text-[var(--color-text)] mb-1">{title}</p>
                 <p className="text-xs text-[var(--color-text-muted)]">{desc}</p>
               </div>
             ))}
@@ -428,7 +427,6 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
                 href={`/maandhan/${card.slug}`}
                 className="group block p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:border-green-500 transition-all duration-300"
               >
-                <div className="text-2xl mb-2">{card.emoji}</div>
                 <h4 className="font-bold text-gray-900 dark:text-white text-sm mb-1 group-hover:text-green-600 transition-colors">
                   {card.title}
                 </h4>
@@ -445,9 +443,9 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
 
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/maandhan/pm-kisan-maandhan-registration-2026', l: '📝 Registration Guide' },
-          { href: '/maandhan/pm-kisan-maandhan-pension-calculator', l: '🧮 Calculator' },
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
+          { href: '/maandhan/pm-kisan-maandhan-registration-2026', l: 'Registration Guide' },
+          { href: '/maandhan/pm-kisan-maandhan-pension-calculator', l: 'Calculator' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
         ]} />
         <Disclaimer />
       </div>

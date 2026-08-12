@@ -242,7 +242,7 @@ export default function BakriPalanYojana() {
         />
 
         <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
-          <h3 className="font-bold text-yellow-800 dark:text-yellow-300 mb-2 text-sm">⚠️ Breed Final Karne Se Pehle:</h3>
+          <h3 className="font-bold text-yellow-800 dark:text-yellow-300 mb-2 text-sm">Breed Final Karne Se Pehle:</h3>
           <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300">
             <li>Local climate suit karta hai ya nahi, dekh lo.</li>
             <li>Mandi mein us breed ka rate stable rehta hai ya upar-neeche hota rehta hai.</li>
@@ -355,7 +355,7 @@ export default function BakriPalanYojana() {
         </ul>
 
         <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
-          <h3 className="font-bold text-yellow-800 dark:text-yellow-300 mb-2 text-sm">💰 Cash-Flow Se Pehle Ye Soch Lo:</h3>
+          <h3 className="font-bold text-yellow-800 dark:text-yellow-300 mb-2 text-sm">Cash-Flow Se Pehle Ye Soch Lo:</h3>
           <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300">
             <li>Subsidy aane mein 4-6 mahine lag sakte hain, sabr rakho.</li>
             <li>Pehle 6 mahine ka kharcha apni pocket ya loan se pehle hi plan kar lo.</li>
@@ -389,7 +389,7 @@ export default function BakriPalanYojana() {
         />
 
         <div className="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
-          <h3 className="font-bold text-red-800 dark:text-red-300 mb-2 text-sm">⚠️ Site Inspection Mein Ye Galtiyan Baar-Baar Hoti Hain:</h3>
+          <h3 className="font-bold text-red-800 dark:text-red-300 mb-2 text-sm">Site Inspection Mein Ye Galtiyan Baar-Baar Hoti Hain:</h3>
           <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300">
             <li>Officer aane tak shed poora ready nahi hota.</li>
             <li>Quotation mein dikhaya equipment asal mein khareeda nahi gaya.</li>
@@ -438,7 +438,6 @@ export default function BakriPalanYojana() {
 
         <div className="mt-12 pt-8 border-t-2 border-gray-200 dark:border-gray-700 not-prose">
           <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2 flex items-center gap-2">
-            <span className="text-3xl" aria-hidden="true">📚</span>
             Aage Kya Padhein?
           </h3>
           <p className="text-gray-600 dark:text-gray-400 mb-6 text-sm">

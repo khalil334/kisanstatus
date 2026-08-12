@@ -12,12 +12,12 @@ const PUBLISHED = '2026-02-15T21:25:25+05:30';
 const MODIFIED = '2026-02-24T14:27:25+05:30';
 
 const RELATED = [
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Loan Apply Online', emoji: '💳' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Loan Apply Online' },
   { slug: 'KisanTractorLoan2026', title: 'Tractor Loan Bina Down Payment', emoji: '🚜' },
-  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide', emoji: '📚' },
+  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide' },
   { slug: 'soil-health-card-complete-guide-2026', title: 'Soil Health Card Guide', emoji: '🌱' },
-  { slug: 'PmfbyCropInsurance2026', title: 'Fasal Bima Yojana 2026', emoji: '🛡️' },
-  { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price Guide', emoji: '🧪' },
+  { slug: 'PmfbyCropInsurance2026', title: 'Fasal Bima Yojana 2026' },
+  { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price Guide' },
 ];
 
 const FAQS_DATA = [
@@ -74,7 +74,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
           message={modal.message}
           redirectUrl={modal.url}
           onClose={() => setModal(null)}
-          infoNote="📌 Thoda wait karo. Official PM Kusum portal khulne wala hai."
+          infoNote="Thoda wait karo. Official PM Kusum portal khulne wala hai."
         />
       )}
 
@@ -92,10 +92,10 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
             PM Kusum Yojana Solar Pump Subsidy 2026: 60% Subsidy Kaise Milegi, Apply Karne Ka Sahi Tarika
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 12 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>12 min read</span>
           </div>
         </div>
       </div>
@@ -147,7 +147,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
             </div>
 
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-600 rounded-xl relative">
-              <span className="absolute -top-3 right-4 bg-green-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">TUMHARA YE HAI ⭐</span>
+              <span className="absolute -top-3 right-4 bg-green-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">TUMHARA YE HAI</span>
               <p className="font-black text-green-800 dark:text-green-300 text-sm mb-1">Component B — Standalone Solar Pump</p>
               <p className="text-xs text-[var(--color-text-muted)]">Apne khet mein akela solar pump lagao. 60% tak subsidy. Diesel/grid replace karne walon ko priority milti hai. <strong>Kusum yojana component b standalone solar pump</strong> yahi hai jiske liye tum yahan aaye ho.</p>
             </div>
@@ -167,7 +167,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl p-4">
-              <p className="font-black text-green-800 dark:text-green-300 text-sm mb-3">✅ Haan, Apply Kar Sakte Ho</p>
+              <p className="font-black text-green-800 dark:text-green-300 text-sm mb-3">Haan, Apply Kar Sakte Ho</p>
               <ul className="text-xs text-[var(--color-text-muted)] space-y-1.5">
                 <li>✓ Indian citizen ho</li>
                 <li>✓ Zameen tumhare naam par registered hai</li>
@@ -178,7 +178,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
               </ul>
             </div>
             <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl p-4">
-              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-3">❌ Sorry, Eligible Nahi Ho</p>
+              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-3">Sorry, Eligible Nahi Ho</p>
               <ul className="text-xs text-[var(--color-text-muted)] space-y-1.5">
                 <li>✗ Zameen kiraye/lease par hai (owner consent nahi)</li>
                 <li>✗ Land record mein naam galat/purana hai</li>
@@ -277,7 +277,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
             ))}
           </div>
           <p className="text-xs text-[var(--color-text-muted)] italic">
-            💡 Blur photo upload mat karna bhai. Reject hone ka #1 reason yahi hai. Clear scan ya acche phone se click karo.
+             Blur photo upload mat karna bhai. Reject hone ka #1 reason yahi hai. Clear scan ya acche phone se click karo.
           </p>
         </section>
 
@@ -312,7 +312,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
 
           <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl">
             <p className="text-sm font-bold text-green-800 dark:text-green-300 mb-2">
-              🔍 Abhi Apply Karo
+               Abhi Apply Karo
             </p>
             <p className="text-xs text-green-700 dark:text-green-400 mb-3">
               Official PM Kusum portal par jakar apna <strong>pm kusum yojana registration form</strong> bharo. 10 second baad portal khulega.
@@ -325,7 +325,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
               )}
               className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
-              📥 Yahan Click Karo → PM Kusum Portal Khulega
+               Yahan Click Karo → PM Kusum Portal Khulega
             </button>
           </div>
 
@@ -374,7 +374,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
 
           <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 rounded-xl">
             <p className="text-sm font-bold text-blue-800 dark:text-blue-300 mb-2">
-              🔍 Status Check Karo
+               Status Check Karo
             </p>
             <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
               Official portal par jakar apna <strong>pm kusum yojana status check</strong> karo. 10 second baad portal khulega.
@@ -387,7 +387,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
               )}
               className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
-              📥 Yahan Click Karo → Status Check Hoga
+               Yahan Click Karo → Status Check Hoga
             </button>
           </div>
         </section>
@@ -407,7 +407,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
             ].map(({ err, fix }) => (
               <div key={err} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl overflow-hidden">
                 <div className="bg-red-50 dark:bg-red-900/20 px-4 py-2">
-                  <p className="font-black text-red-800 dark:text-red-300 text-xs">❌ {err}</p>
+                  <p className="font-black text-red-800 dark:text-red-300 text-xs">{err}</p>
                 </div>
                 <div className="p-3 bg-green-50 dark:bg-green-900/10">
                   <p className="text-xs text-green-800 dark:text-green-300"><span className="font-bold">FIX:</span> {fix}</p>
@@ -449,7 +449,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
               <tbody>
                 {[
                   { item: 'Khareedne Ka Kharcha', d: '₹25K-35K', s: '₹40K-55K (subsidy baad)' },
-                  { item: 'Saal Ka Fuel/Bijli', d: '₹40K-60K 💸', s: '₹0 FREE ✅' },
+                  { item: 'Saal Ka Fuel/Bijli', d: '₹40K-60K', s: '₹0 FREE' },
                   { item: 'Maintenance/Saal', d: '₹5K-8K', s: '₹500-1K' },
                   { item: 'Umar', d: '8-10 saal', s: '25 saal' },
                   { item: '5 Saal Total Kharcha', d: '₹2.5 Lakh+', s: '₹45K-60K' },
@@ -476,7 +476,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
             <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl p-4">
-              <p className="font-black text-green-800 dark:text-green-300 text-sm mb-2">✅ PM Kusum</p>
+              <p className="font-black text-green-800 dark:text-green-300 text-sm mb-2">PM Kusum</p>
               <ul className="text-xs text-[var(--color-text-muted)] space-y-1">
                 <li>• 60-90% subsidy</li>
                 <li>• Govt approved vendor</li>
@@ -486,7 +486,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
               </ul>
             </div>
             <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl p-4">
-              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-2">❌ Private Dealer</p>
+              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-2">Private Dealer</p>
               <ul className="text-xs text-[var(--color-text-muted)] space-y-1">
                 <li>• Full price (no subsidy)</li>
                 <li>• Quality uncertain</li>
@@ -517,13 +517,13 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
             Lekin ek cheez yaad rakho — <strong>subsidy quota limited hota hai</strong>. Jab state ka quota fill ho jata hai toh agli window ka wait karna padta hai. Isliye aaj hi apply karo. Kal ka intezaar mat karo.
           </p>
           <p className="text-xs text-green-700 dark:text-green-400 italic mt-2">
-            💡 Meri personal advice: Documents aaj ready karo, kal subah portal par apply karo. Jitni jaldi form jayegi, utni jaldi pump lagega.
+             Meri personal advice: Documents aaj ready karo, kal subah portal par apply karo. Jitni jaldi form jayegi, utni jaldi pump lagega.
           </p>
         </div>
 
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 border-l-[6px] rounded-xl">
           <h3 className="text-base font-black text-blue-800 dark:text-blue-300 mb-2">
-            🔗 PM Kusum Official Portal
+             PM Kusum Official Portal
           </h3>
           <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
             <strong>PM Kusum yojana apply online</strong> karne ke liye, <strong>PM Kusum yojana status check</strong> karne ke liye, ya helpline number ke liye official portal par jaayein. 10 second baad portal khulega.
@@ -536,7 +536,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
             )}
             className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
           >
-            📥 Yahan Click Karo → PM Kusum Portal Khulega
+             Yahan Click Karo → PM Kusum Portal Khulega
           </button>
         </div>
 
@@ -544,16 +544,16 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
           icon="☀️"
           title="Kitna Bachoge? Calculate Karo"
           desc="Diesel vs Solar — 5 saal ka total saving jaano"
-          primaryCta={{ href: '/calculator/crop-profit', label: '📊 Profit Calc →' }}
-          secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: '💰 Benefit Calc' }}
+          primaryCta={{ href: '/calculator/crop-profit', label: 'Profit Calc →' }}
+          secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: 'Benefit Calc' }}
         />
 
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/KisanCreditCardOnlineApply2026', l: '💳 KCC Loan' },
+          { href: '/articles/KisanCreditCardOnlineApply2026', l: 'KCC Loan' },
           { href: '/articles/KisanTractorLoan2026', l: '🚜 Tractor Loan' },
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
         ]} />
         <Disclaimer />
       </div>
