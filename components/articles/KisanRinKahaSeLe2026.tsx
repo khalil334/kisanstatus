@@ -41,7 +41,7 @@ const FAQS_DATA = [
   },
   {
     q: 'CSC center par loan apply karne ka charge kitna hai?',
-    a: 'Nominal service charge ₹20-50 ho sakta hai form filling ke liye. Loan amount par koi commission nahi dena padta. Agar operator ₹500+ maange toh fraud hai — 1800-1214-060 par complaint karo turant.',
+    a: 'Nominal service charge ₹20-50 ho sakta hai form filling ke liye. Loan amount par koi commission nahi dena padta. Agar operator ₹500+ maange toh fraud hai — 1800-1214-060 par usi din complaint karo.',
   },
   {
     q: 'Pichle saal KCC tha lekin renew nahi hua — ab fresh apply karna padega?',
@@ -49,11 +49,11 @@ const FAQS_DATA = [
   },
   {
     q: 'Tractor loan ke liye KCC pehle lena zaroori hai?',
-    a: 'Zaroori nahi hai lekin helpful zaroor hai. Banks prefer karte hain ki borrower ka 1 saal ka repayment track record ho. KCC lekar time par repay karo, phir term loan easily approve hota hai. Direct term loan bhi possible hai agar income proof strong ho.',
+    a: 'Zaroori nahi hai lekin helpful bahut hai. Banks prefer karte hain ki borrower ka 1 saal ka repayment track record ho. KCC lekar time par repay karo, phir term loan easily approve hota hai. Direct term loan bhi possible hai agar income proof strong ho.',
   },
   {
     q: 'Loan reject ho gaya — dobara kab apply kar sakte hain?',
-    a: 'Pehle rejection reason samjho. Name mismatch tha toh fix karke turant reapply karo. CIBIL issue tha toh 3-6 mahine wait karo score improve hone tak. Documents incomplete the toh complete set lekar jao. Bank se written rejection letter maango — specific reason likha hota hai.',
+    a: 'Pehle rejection reason samjho. Name mismatch tha toh fix karke usi hafte reapply karo. CIBIL issue tha toh 3-6 mahine wait karo score improve hone tak. Documents incomplete the toh complete set lekar jao. Bank se written rejection letter maango — specific reason likha hota hai.',
   },
 ];
 

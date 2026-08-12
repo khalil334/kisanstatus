@@ -355,7 +355,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Fasal bechne ka sahi time kaise tay karein?',
-    a: 'Agar paise ki turant zaroorat hai, current rate par bech dena hi safe hai — market kabhi bhi neeche ja sakta hai. Aloo-pyaaz jaisi cheezein thodi der store ho sakti hain, isliye agar rate badhne ka pattern dikh raha ho toh 2-3 hafte rukna ek option hai. Lekin yeh gamble bhi hai.',
+    a: 'Agar paise ki abhi zaroorat hai, current rate par bech dena hi safe hai — market kabhi bhi neeche ja sakta hai. Aloo-pyaaz jaisi cheezein thodi der store ho sakti hain, isliye agar rate badhne ka pattern dikh raha ho toh 2-3 hafte rukna ek option hai. Lekin yeh gamble bhi hai.',
   },
   {
     q: 'Data kahan se aata hai — bharosemand hai kya?',
@@ -657,7 +657,7 @@ export default function MandiBhavToday() {
         <section className="mb-8">
           <SH>Apna State Chuno — Har State Ka Rate Alag Hai</SH>
           <p className="text-gray-700 text-sm leading-relaxed mb-4">
-            Transport, local demand aur us jagah ki apni upaj — teeno factor state ke rate ko national average se upar ya neeche le jaate hain. Neeche button dabao, sabzi-phal ke rate aur mausam dono turant refresh honge.
+            Transport, local demand aur us jagah ki apni upaj — teeno factor state ke rate ko national average se upar ya neeche le jaate hain. Neeche button dabao, sabzi-phal ke rate aur mausam dono ek saath refresh honge.
           </p>
           <div className="flex flex-wrap gap-2 mb-4 max-h-64 overflow-y-auto p-2 border-2 border-gray-300 rounded-xl">
             {STATE_CHECKLISTS.map((s) => (
@@ -818,7 +818,7 @@ export default function MandiBhavToday() {
           <div className="space-y-3">
             <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-xl">
               <p className="text-sm text-green-800">
-                <strong>Rate achha hai:</strong> Agar paisa turant chahiye aur aaj ka rate theek dikh raha hai, bech dena hi safe rehta hai — market kal kya karega, koi guarantee nahi.
+                <strong>Rate achha hai:</strong> Agar paisa is hafte chahiye aur aaj ka rate theek dikh raha hai, bech dena hi safe rehta hai — market kal kya karega, koi guarantee nahi.
               </p>
             </div>
             <div className="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-xl">
@@ -870,7 +870,7 @@ export default function MandiBhavToday() {
               <span className="text-green-600 font-black text-lg shrink-0">04</span>
               <div>
                 <p className="font-bold text-sm mb-1">Direct search karo</p>
-                <p className="text-xs text-gray-600">Ek specific item ka rate chahiye? Naam type karo, list turant filter ho jaayegi.</p>
+                <p className="text-xs text-gray-600">Ek specific item ka rate chahiye? Naam type karo, list saath-saath filter hoti jaayegi.</p>
               </div>
             </div>
           </div>

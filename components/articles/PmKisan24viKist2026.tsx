@@ -322,8 +322,8 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             {[
               { status: 'FTO Generated', meaning: 'Government ne release kiya. Bank process mein hai. 24-48h wait karo — paisa aa jayega.' },
               { status: 'Payment Success', meaning: 'Account mein aa gaya. Bank statement verify kar lo. Agar nahi dikh raha toh mini-statement le lo.' },
-              { status: 'Payment Failed', meaning: 'Bank/NPCI issue hai. Payment failed guide padho — turant fix karo.' },
-              { status: 'eKYC Pending', meaning: 'Turant eKYC karo warna kist rukegi. October se pehle complete kar lo.' },
+              { status: 'Payment Failed', meaning: 'Bank/NPCI issue hai. Payment failed guide padho aur wajah pakad kar fix karo.' },
+              { status: 'eKYC Pending', meaning: 'eKYC pehle nipta lo warna kist rukegi. October se pehle complete kar lo.' },
             ].map(({ status, meaning }) => (
               <div key={status} className="flex gap-3 p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-lg">
                 <span className="font-black text-[var(--color-primary)] text-xs shrink-0 w-28">{status}</span>

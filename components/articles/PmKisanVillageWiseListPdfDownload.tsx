@@ -43,7 +43,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Document download kar li, ab isme se apna naam kaise dhoondhun?',
-    a: 'File khol kar upar right corner mein search () icon par tap karein aur apna naam type karein. Suggestions turant dikhne lagenge.',
+    a: 'File khol kar upar right corner mein search () icon par tap karein aur apna naam type karein. Suggestions type karte hi dikhne lagenge.',
   },
   {
     q: 'List mein sirf 10-12 naam hain, mere gaon mein toh 200 se zyada log hain?',

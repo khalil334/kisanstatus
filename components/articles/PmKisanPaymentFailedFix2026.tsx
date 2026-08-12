@@ -44,7 +44,7 @@ const FAQS_DATA = [
   },
   {
     q: 'IFSC code galat daal diya — ab pm kisan bank account change online kaise karein?',
-    a: 'Portal khol kar "Farmers Corner" mein "Edit Bank Details" wale option se sahi IFSC daal do. Agar OTP purane number par nahi aa raha, toh CSC waale bhai se correction karwa lo. Bank merger hua hai toh cheque book se naya IFSC zaroor check karein.',
+    a: 'Portal khol kar "Farmers Corner" mein "Edit Bank Details" wale option se sahi IFSC daal do. Agar OTP purane number par nahi aa raha, toh CSC waale bhai se correction karwa lo. Bank merger hua hai toh cheque book se naya IFSC milaa kar check karein.',
   },
   {
     q: 'Account dormant ho gaya hai — kya paisa aayega?',
@@ -56,7 +56,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Status mein "Rejected by Bank" likha hai, ab kya karein?',
-    a: 'Bank ne transaction wapas bhej diya hai. Iski 3 mukhya wajah ho sakti hain: seeding missing, account dormant, ya account type galat. Branch jaakar "Rejection Reason" zaroor puchein, unke system mein exact code dikhta hai.',
+    a: 'Bank ne transaction wapas bhej diya hai. Iski 3 mukhya wajah ho sakti hain: seeding missing, account dormant, ya account type galat. Branch jaakar "Rejection Reason" pooch kar aayein, unke system mein exact code dikhta hai.',
   },
   {
     q: 'Helpline 155261 par baat nahi ho rahi — kya karun?',
@@ -121,7 +121,7 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
             "Payment Failed" ya "Payment Not Credited" likha dekh ke ghabrane ki bilkul zaroorat nahi hai. Paisa gaya nahi hai kahin — government ne toh release kar diya tha, bas bank tak pahunchne se pehle kahin technical ya procedural wajah se atak gaya.
           </p>
           <p className="text-sm text-red-900 dark:text-red-200 leading-relaxed">
-            Jis din bhi problem fix hogi, pending kistein (arrears) ek saath ya alag-alag transactions mein aapke account mein aa jaayengi. Neeche har wajah alag se samjhayi hai, apni waali dhundh lo aur turant fix karo.
+            Jis din bhi problem fix hogi, pending kistein (arrears) ek saath ya alag-alag transactions mein aapke account mein aa jaayengi. Neeche har wajah alag se samjhayi hai, apni waali dhundh lo aur usi wajah par kaam shuru karo.
           </p>
         </div>
 
@@ -199,7 +199,7 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
             <SI n={1}>Passbook aur Aadhaar card (original) lekar apni branch jao.</SI>
             <SI n={2}>Counter par bolo: <strong>"DBT ke liye Aadhaar seeding karni hai."</strong></SI>
             <SI n={3}>Form milega, bharo aur submit kar do.</SI>
-            <SI n={4}>Acknowledgement receipt zaroor lena — proof ke kaam aayega.</SI>
+            <SI n={4}>Acknowledgement receipt leke aana — proof ke kaam aayega.</SI>
             <SI n={5}>3-7 din mein seeding ho jaati hai generally.</SI>
           </StepList>
           <IB>
@@ -244,7 +244,7 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
             RBI ke rules ke mutabik, agar kisi savings account mein pichhle 12 mahine se koi customer-induced transaction (jama ya nikasi) nahi hui, bank use "Dormant" (Nishkriya) kar deta hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Dormant account mein DBT credit hota hi nahi — paisa turant waapas PFMS ke paas chala jaata hai aur status "Rejected" dikhata hai. Aisa un logon ke saath zyada hota hai jo ye account sirf PM Kisan ke liye rakhte hain aur baaki koi lena-dena nahi karte.
+            Dormant account mein DBT credit hota hi nahi — paisa usi din waapas PFMS ke paas chala jaata hai aur status "Rejected" dikhata hai. Aisa un logon ke saath zyada hota hai jo ye account sirf PM Kisan ke liye rakhte hain aur baaki koi lena-dena nahi karte.
           </p>
           <StepList>
             <SI n={1}>Branch mein "KYC Update / Account Reactivation" form maango.</SI>
@@ -263,7 +263,7 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
             Kai kisan anjaane mein joint account de dete hain registration ke waqt. Fix karne ke liye naya individual account kholna padega — zero balance waala Jan Dhan account bhi chal jaayega. Fir portal par naye details daalo aur seeding karwao.
           </p>
           <DB>
-            <strong>Zaroori Note:</strong> Naya account khulwane ke turant baad portal update mat karo. 24-48 ghante wait karo, tab tak NPCI mapper mein entry set ho jaati hai, warna phir se fail ho sakta hai.
+            <strong>Zaroori Note:</strong> Naya account khulwane ke agle hi pal portal update mat karo. 24-48 ghante wait karo, tab tak NPCI mapper mein entry set ho jaati hai, warna phir se fail ho sakta hai.
           </DB>
         </section>
 

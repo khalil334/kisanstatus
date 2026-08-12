@@ -286,7 +286,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
             <ul className="list-disc list-inside mt-2 space-y-1 text-xs">
               <li><strong>PC/Laptop:</strong> List kholne ke baad <strong>Ctrl+P</strong> dabao → "Save as PDF" select karo → Save button</li>
               <li><strong>Mobile:</strong> Share button → Print → "Save as PDF" → Download</li>
-              <li>Ya upar wala <strong>green button</strong> dabao — turant official portal par PDF ban jayegi!</li>
+              <li>Ya upar wala <strong>green button</strong> dabao — official portal par PDF wahin ban jayegi!</li>
             </ul>
           </WB>
           <IB>

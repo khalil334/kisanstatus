@@ -39,11 +39,11 @@ const FAQS_DATA = [
   },
   {
     q: 'Naam correction karne ke baad payment kab aayegi?',
-    a: 'Dekho, naam sudharne ke baad thoda time lagta hai - kareeb 15-20 din. System update hone mein itna time leta hai. Uske baad jo bhi installments pending hain, wo arrears ke roop mein ek saath mil jayenge. Reference number zaroor save rakhna - baad mein tracking ke kaam aata hai.'
+    a: 'Dekho, naam sudharne ke baad thoda time lagta hai - kareeb 15-20 din. System update hone mein itna time leta hai. Uske baad jo bhi installments pending hain, wo arrears ke roop mein ek saath mil jayenge. Reference number save rakhna - baad mein tracking ke kaam aata hai.'
   },
   {
     q: 'Rejected list mein naam aa gaya, ab kya karu?',
-    a: 'Ghabrao mat. Pehle portal par reason dekho - kyun reject hua. Land record mein kuch dikkat hai? Khatauni update karwao. eKYC pending hai? Turant complete karo. Documents clear nahi the? Dobara clear scan upload karo. Fix karne ke baad dobara apply kar do. CSC center par jaake help le sakte ho - wo log manually check karke bata denge ki exactly kya problem hai.'
+    a: 'Ghabrao mat. Pehle portal par reason dekho - kyun reject hua. Land record mein kuch dikkat hai? Khatauni update karwao. eKYC pending hai? Pehle wahi complete karo. Documents clear nahi the? Dobara clear scan upload karo. Fix karne ke baad dobara apply kar do. CSC center par jaake help le sakte ho - wo log manually check karke bata denge ki exactly kya problem hai.'
   },
   {
     q: 'Mobile number change karne ka kitna charge lagta hai?',
@@ -156,7 +156,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
             <SI n={5}>Land details - Khasra number, kitna area hai, kaunsa village</SI>
             <SI n={6}>Bank account number + IFSC code daalna mat bhoolna</SI>
             <SI n={7}>Documents upload karo - Aadhaar, Khatauni, Passbook ki photo</SI>
-            <SI n={8}>Submit karo - reference number ka screenshot zaroor le lo</SI>
+            <SI n={8}>Submit karo - reference number ka screenshot le kar rakh lo</SI>
           </StepList>
 
           <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl">
@@ -232,7 +232,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
             CSC center jaao. Wahan fingerprint scan hoga. ₹20-30 charge lag sakta hai. 24 ghante mein complete ho jata hai.
           </p>
           <DB>
-            <strong>Khatre Ki Ghanti:</strong> eKYC free hai - ye government ne bola hai. Koi ₹100+ maange toh fraud hai. 155261 par complaint karo turant.
+            <strong>Khatre Ki Ghanti:</strong> eKYC free hai - ye government ne bola hai. Koi ₹100+ maange toh fraud hai. 155261 par usi din complaint karo.
           </DB>
         </section>
 
@@ -310,7 +310,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
           <SH>Payment Kyun Nahi Aayi? — 5 Reasons</SH>
           <div className="space-y-3">
             {[
-              { reason: 'eKYC Pending', fix: 'Turant eKYC karo - portal ya CSC se, dono mein se koi bhi' },
+              { reason: 'eKYC Pending', fix: 'eKYC nipta lo - portal ya CSC se, dono mein se koi bhi' },
               { reason: 'Bank Account Aadhaar Se Linked Nahi', fix: 'Bank branch jao - NPCI seeding form bharo - 7 din mein ho jayega' },
               { reason: 'Naam Mismatch (Aadhaar ≠ Bank)', fix: 'Bank mein jaake naam Aadhaar jaisa karwao - exact match hona chahiye' },
               { reason: 'Land Record Issue', fix: 'Pehle portal par land seeding status dekho - pending hai toh Khatauni update karwao patwari se, phir dobara apply karo' },
@@ -365,7 +365,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
             {[
               { issue: 'Land Record Problem', solution: 'Khatauni update karwao - phir Re-apply karo' },
-              { issue: 'eKYC Nahi Hui', solution: 'Turant eKYC complete karo - 2 minute ka kaam hai' },
+              { issue: 'eKYC Nahi Hui', solution: 'eKYC complete karo - 2 minute ka kaam hai' },
               { issue: 'Bank Account Issue', solution: 'NPCI seeding karwao bank se' },
               { issue: 'Documents Clear Nahi', solution: 'Clear scan upload karo - dhundhla mat hona chahiye' },
             ].map(({ issue, solution }) => (

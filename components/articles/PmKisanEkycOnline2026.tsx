@@ -28,7 +28,7 @@ const RELATED_CARDS = [
 const FAQS_DATA = [
   {
     q: 'PM Kisan eKYC bina mobile number ke kaise karein?',
-    a: 'Agar Aadhaar mein mobile number link nahi hai, toh online OTP wala tarika kaam nahi karega. Aapko apne nazdeeki CSC (Common Service Centre) jaana hoga. Wahan fingerprint (biometric) scan karke eKYC ho jayegi. Yeh process bilkul free hai.',
+    a: 'Agar Aadhaar mein mobile number link nahi hai, toh online OTP wala tarika kaam nahi karega. Aapko apne nazdeeki CSC (Common Service Centre) jaana hoga. Wahan fingerprint (biometric) scan karke eKYC ho jayegi. Yeh process free mein hoti hai.',
   },
   {
     q: 'PM Kisan Face Authentication kya hai aur kaise karein?',
@@ -36,7 +36,7 @@ const FAQS_DATA = [
   },
   {
     q: 'CSC par PM Kisan eKYC ke liye kitna paisa dena chahiye?',
-    a: 'Bilkul ZERO. Government ne ise free service declare kiya hai. Agar koi operator ₹10, ₹20 ya ₹50 maangta hai, toh woh galat hai. Turant 1800-1214-060 par complaint karein.',
+    a: 'Bilkul ZERO. Government ne ise free service declare kiya hai. Agar koi operator ₹10, ₹20 ya ₹50 maangta hai, toh woh galat hai. Usi waqt 1800-1214-060 par complaint karein.',
   },
   {
     q: 'Mera naam Aadhaar mein "Sunita Devi" hai aur PM Kisan mein "Sunita" — kya eKYC hogi?',
@@ -143,7 +143,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
             Simple shabdon mein samjhein — sarkar yeh confirm karna chahti hai ki jo insaan PM Kisan Samman Nidhi ka paisa le raha hai, woh sach mein wahi kisan hai jiske naam par zameen hai. Pehle ke saalon mein bahut se fake ya duplicate beneficiaries ne system ka faayda uthaya tha.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            eKYC (Electronic Know Your Customer) ka matlab hai aapki Aadhaar details ko PM Kisan database se live match karna. Jab aap OTP dalte hain ya fingerprint scan karte hain, toh UIDAI (Aadhaar wale) sarkar ko turant "Haan" ya "Na" mein jawab dete hain.
+            eKYC (Electronic Know Your Customer) ka matlab hai aapki Aadhaar details ko PM Kisan database se live match karna. Jab aap OTP dalte hain ya fingerprint scan karte hain, toh UIDAI (Aadhaar wale) sarkar ko wahin "Haan" ya "Na" mein jawab dete hain.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
             <strong>Ek baar ka kaam:</strong> Ek baar eKYC successful ho gayi, toh aapko baar-baar nahi karni padti. Haan, agar aapne haal hi mein apna mobile number badla hai, naam mein sudhaar karaya hai, ya naya bank account khulwaya hai, toh system dobara verification maang sakta hai.
@@ -213,7 +213,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
             <SI n={2}>Aadhaar card ki original ya ek clear photocopy saath le jao.</SI>
             <SI n={3}>Operator ko saaf shabdon mein bolo — "Mujhe PM Kisan eKYC karna hai".</SI>
             <SI n={4}>Woh aapse machine par apna fingerprint (anguthe ya ungli ka nishaan) scan karne ko kahenge.</SI>
-            <SI n={5}>Scan successful hote hi confirmation message aayega. Transaction ki chhoti si receipt zaroor le lo.</SI>
+            <SI n={5}>Scan successful hote hi confirmation message aayega. Transaction ki chhoti si receipt sambhal kar le lo.</SI>
           </StepList>
           <DB>
             <strong>Chetawani (Warning):</strong> Yeh service sarkar ki taraf se bilkul FREE (shulk mukt) hai. Koi bhi operator ₹10, ₹20 ya ₹50 maange, toh woh galat hai. Seedha 1800-1214-060 (CSC Helpline) par call karke us operator ki complaint karo. Complaint karte waqt CSC centre ka naam/location aur date batayein — tabhi action possible hota hai.
@@ -326,7 +326,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
               <h4 className="font-bold text-[var(--color-text)] text-sm mb-2">Beneficiary Ki Mrityu Ho Chuki Hai</h4>
               <p className="text-xs text-[var(--color-text-muted)] leading-relaxed">
-                Turant apne nazdeeki Jan Seva Kendra ya Tehsil office jaakar "Beneficiary Death Status" update karein. Iske baad, legal heir (uttaradhikari) ko naye sire se application karni hogi. Purane account par eKYC karne ki koshish na karein, yeh fraud ki shreni mein aa sakta hai.
+                Bina der apne nazdeeki Jan Seva Kendra ya Tehsil office jaakar "Beneficiary Death Status" update karein. Iske baad, legal heir (uttaradhikari) ko naye sire se application karni hogi. Purane account par eKYC karne ki koshish na karein, yeh fraud ki shreni mein aa sakta hai.
               </p>
             </div>
           </div>
