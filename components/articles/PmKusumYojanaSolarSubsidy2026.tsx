@@ -190,7 +190,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
           </div>
 
           <WB>
-            <strong>Sabse Badi Galti Jo Log Karte Hain:</strong> Apply kar dete hain bina <strong>pm kusum yojana land record verification</strong> kiye. Phir 2 mahine baad rejection letter aata hai. Pehle Patwari/Tehsildar se Khatauni update karwao, naam match karwao Aadhaar se, tabhi form bharo.
+            <strong>Sabse Badi Galti Jo Log Karte Hain:</strong> Apply kar dete hain bina <strong>land record verification</strong> kiye. Phir 2 mahine baad rejection letter aata hai. Pehle Patwari/Tehsildar se Khatauni update karwao, naam match karwao Aadhaar se, tabhi form bharo.
           </WB>
         </section>
 
@@ -299,7 +299,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
         <section className="mb-8">
           <SH>Ghar Baithe Apply Kaise Karein (Portal Se)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            <strong>Pm kusum yojana online apply kaise kare 2026</strong> — bahut simple hai. Agent ko ₹500 dene ki zaroorat nahi:
+            <strong>Online apply kaise kare 2026</strong> — bahut simple hai. Agent ko ₹500 dene ki zaroorat nahi:
           </p>
           <StepList>
             <SI n={1}>Apne state ka PM Kusum portal kholo (links neeche hain)</SI>
@@ -315,7 +315,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
                Abhi Apply Karo
             </p>
             <p className="text-xs text-green-700 dark:text-green-400 mb-3">
-              Official PM Kusum portal par jakar apna <strong>pm kusum yojana registration form</strong> bharo — 10 second ke countdown ke baad aap pmkusum portal par pahunch jaoge.
+              Official portal par jakar apna <strong>registration form</strong> bharo — 10 second ke countdown ke baad aap pmkusum portal par pahunch jaoge.
             </p>
             <button
               onClick={() => handleOfficialLink(
@@ -330,7 +330,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
           </div>
 
           <IB>
-            <strong>Zaruri Tip:</strong> <strong>Pm kusum yojana registration form kaise bhare</strong> mein sabse important field hai "Survey/Khasra Number." Ise Khatauni se exactly copy karo. Ek digit bhi galat = rejection.
+            <strong>Zaruri Tip:</strong> <strong>Registration form bharte waqt</strong> sabse important field hai "Survey/Khasra Number." Ise Khatauni se exactly copy karo. Ek digit bhi galat = rejection.
           </IB>
         </section>
 
@@ -369,7 +369,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
             State portal par "Track Application" ya "Check Status" option hota hai. Reference number ya Aadhaar daalo. Status dikhega: <em>Pending Verification → Approved → Vendor Assigned → Installed → Subsidy Released.</em>
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            <strong>Pm kusum yojana status check online</strong> karne par agar 30 din se zyada "Pending" dikhe toh helpline par call karo. Kabhi kabhi file atak jaati hai — follow up zaroori hai.
+            <strong>Status online check</strong> karne par agar 30 din se zyada "Pending" dikhe toh helpline par call karo. Kabhi kabhi file atak jaati hai — follow up zaroori hai.
           </p>
 
           <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 rounded-xl">
@@ -377,7 +377,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
                Status Check Karo
             </p>
             <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
-              Official portal par jakar apna <strong>pm kusum yojana status check</strong> karo. Redirect mein 10 second lagte hain.
+              Official portal par jakar apna <strong>application status</strong> dekho. Redirect mein 10 second lagte hain.
             </p>
             <button
               onClick={() => handleOfficialLink(
@@ -395,7 +395,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
         <section className="mb-8">
           <SH>Reject Kyu Hoti Hai? Ye 5 Galtiyan Mat Karna</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            <strong>Pm kusum yojana application rejected reasons</strong> jaan lo pehle se. 90% rejections inhi wajah se hote hain:
+            <strong>Application reject hone ki wajahein</strong> jaan lo pehle se. 90% rejections inhi wajah se hote hain:
           </p>
           <div className="space-y-2">
             {[
@@ -472,7 +472,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
         <section className="mb-8">
           <SH>Private Company Se Mat Lagwana!</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Kuch dealers bolenge "hum sasta laga denge." Suno mat. <strong>Pm kusum yojana vs private solar company</strong> ka farq samjho:
+            Kuch dealers bolenge "hum sasta laga denge." Suno mat. <strong>Sarkari scheme vs private solar company</strong> ka farq samjho:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
             <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl p-4">
@@ -527,7 +527,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
              PM Kusum Official Portal
           </h3>
           <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
-            <strong>PM Kusum yojana apply online</strong> karne ke liye, <strong>PM Kusum yojana status check</strong> karne ke liye, ya helpline number ke liye official portal par jaayein; button ke baad portal apne aap khulta hai.
+            <strong>Apply online</strong> karne ke liye, <strong>status check</strong> karne ke liye, ya helpline number ke liye official portal par jaayein; button ke baad portal apne aap khulta hai.
           </p>
           <button
             onClick={() => handleOfficialLink(
