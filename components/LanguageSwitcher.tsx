@@ -193,7 +193,7 @@ export default function LanguageSwitcher() {
 
           <div className="px-4 py-2 border-t border-gray-100 bg-gray-50">
             <p className="text-xs text-gray-500 text-center">
-              🌐 {LANGUAGES.length} languages available
+               {LANGUAGES.length} languages available
             </p>
           </div>
         </div>

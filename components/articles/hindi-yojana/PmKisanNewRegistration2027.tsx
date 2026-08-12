@@ -311,7 +311,6 @@ export default function PmKisanNewRegistration2027({ article }: { article: Hindi
       </p>
 
       <div className="my-8 p-6 bg-gradient-to-r from-green-800 to-green-600 rounded-2xl text-white text-center">
-        <p className="text-2xl mb-2">📆</p>
         <p className="font-black text-lg mb-1">Registration Ke Baad Kist Ka Intezaar?</p>
         <p className="text-green-100 text-sm mb-4">
           Tracker batayega aapki application kis stage par hai.
@@ -321,13 +320,13 @@ export default function PmKisanNewRegistration2027({ article }: { article: Hindi
             href="/calculator/installment-tracker"
             className="inline-flex items-center gap-2 bg-white text-green-800 font-black px-6 py-3 rounded-xl text-sm hover:bg-green-50 transition-colors"
           >
-            📆 Kist ka hisaab yahan dekho →
+             Kist ka hisaab yahan dekho →
           </Link>
           <Link
             href="/calculator"
             className="inline-flex items-center gap-2 bg-white/15 border border-white/30 text-white font-bold px-6 py-3 rounded-xl text-sm hover:bg-white/25 transition-colors"
           >
-            🧮 Kisan utilities kholo
+             Kisan utilities kholo
           </Link>
         </div>
       </div>
@@ -508,16 +507,16 @@ export default function PmKisanNewRegistration2027({ article }: { article: Hindi
         <h3 className="font-black text-[var(--color-text)] mb-3 text-base">आगे पढ़ने लायक</h3>
         <ul className="list-disc pl-5 space-y-1.5 text-sm">
           <li>
-            <Link href="/articles/PmKisanCorrectionForm2026">📝 Record सुधारने वाला form</Link>
+            <Link href="/articles/PmKisanCorrectionForm2026">Record सुधारने वाला form</Link>
           </li>
           <li>
-            <Link href="/articles/PmKisanEkycOnline2026">🔐 eKYC online — पूरा process</Link>
+            <Link href="/articles/PmKisanEkycOnline2026">eKYC online — पूरा process</Link>
           </li>
           <li>
-            <Link href="/articles/pm-kisan-self-registered-status-check">🔎 Self-Registered Status Check</Link>
+            <Link href="/articles/pm-kisan-self-registered-status-check">Self-Registered Status Check</Link>
           </li>
           <li>
-            <Link href="/articles/PmKisanCscRegistrationCharges">💰 CSC Registration Charges</Link>
+            <Link href="/articles/PmKisanCscRegistrationCharges">CSC Registration Charges</Link>
           </li>
         </ul>
       </div>

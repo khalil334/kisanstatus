@@ -344,7 +344,6 @@ export default async function ArticlePage({
             className="inline-flex items-center gap-2 bg-green-100 hover:bg-green-200 text-green-800 dark:bg-green-900/30 dark:text-green-300 dark:hover:bg-green-900/50 text-sm font-bold px-4 py-2 rounded-full transition-colors focus:ring-2 focus:ring-green-500 focus:outline-none"
             aria-label={`View all ${catName} articles`}
           >
-            <span aria-hidden="true">📂</span>
             <span>{catName}</span>
             <span className="text-green-600 dark:text-green-400" aria-hidden="true">→</span>
           </Link>
@@ -357,7 +356,7 @@ export default async function ArticlePage({
         <section aria-label="Related articles" className="container-site max-w-3xl mx-auto px-4 pb-10">
           <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
             <h2 className="font-black text-[var(--color-text)] mb-4 text-base flex items-center gap-2">
-              <span>🔗</span> Related Articles — Yeh Bhi Padho
+              Related Articles — Yeh Bhi Padho
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               {related.map((r) => (

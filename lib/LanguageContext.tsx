@@ -171,5 +171,5 @@ export function getLanguageName(lang: LangCode): string {
 }
 
 export function getLanguageFlag(lang: LangCode): string {
-  return LANGUAGE_META[lang as keyof typeof LANGUAGE_META]?.flag || '🌐';
+  return LANGUAGE_META[lang as keyof typeof LANGUAGE_META]?.flag || '';
 }

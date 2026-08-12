@@ -58,7 +58,7 @@ export function StepCardList({ steps, color = 'green', compact = false }: StepCa
 }
 
 interface QuickSummaryItem {
-  icon: string;
+  icon?: string;
   label: string;
   value?: string;
 }

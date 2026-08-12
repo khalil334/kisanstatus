@@ -10,7 +10,7 @@ const RELATED = [
   { slug: 'murgi-palan-loan-nlm-subsidy', title: 'Murgi Palan NLM Subsidy', emoji: '🐔' },
   { slug: 'bakri-palan-yojana-nlm-subsidy', title: 'Bakri Palan Par NLM Madad', emoji: '🐐' },
   { slug: 'sbi-dairy-loan-interest-rate', title: 'SBI Dairy Loan EMI Aur Rate', emoji: '🏦' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'Kisan Credit Card 2026', emoji: '💳' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'Kisan Credit Card 2026' },
 ];
 
 const FAQS_DATA = [
@@ -72,10 +72,10 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
             Rashtriya Gokul Mission 2026: Desi Gay Palan Par Kya-Kya Milta Hai — IVF ₹5,000, Sex-Sorted Semen 50%, Breed Farm ₹2 Crore Tak
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(article.publishedTime)}</span>
-            <span>🔄 Last Updated: 5 August 2026</span>
-            <span>⏱️ 11 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(article.publishedTime)}</span>
+            <span>Last Updated: 5 August 2026</span>
+            <span>11 min read</span>
           </div>
         </div>
       </div>
@@ -149,7 +149,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>💰 Kisan Ko Seedha Kya Milta Hai — 3 Cheezein</SH>
+        <SH>Kisan Ko Seedha Kya Milta Hai — 3 Cheezein</SH>
         <div className="overflow-x-auto my-4">
           <table className="w-full text-sm border-collapse">
             <thead>
@@ -195,7 +195,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>🧬 Sex-Sorted Semen — Bachhiya Ki Guarantee Jaisi Cheez</SH>
+        <SH>Sex-Sorted Semen — Bachhiya Ki Guarantee Jaisi Cheez</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Normal AI mein 50-50 hota hai — bachhda bhi ho sakta hai, bachhiya bhi. Dairy kisan ke liye bachhda
           matlab do saal khilao aur phir bhi income kuch nahi. Sex-sorted semen mein lab technology se sirf female
@@ -222,7 +222,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>🔬 IVF Se ₹5,000 — Kaise Kaam Karta Hai</SH>
+        <SH>IVF Se ₹5,000 — Kaise Kaam Karta Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           IVF (In Vitro Fertilization) mein high genetic merit gay ke embryo lab mein taiyar karke aapki gay/bhains
           mein transfer kiye jaate hain. Aapki apni gay average nasl ki bhi ho, paida hone wali bachhiya top
@@ -304,7 +304,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
           Husbandry)</Link> sabse sasta option rehta hai.
         </p>
 
-        <SH>💻 Apply Kaise Karein — Component-Wise Rasta</SH>
+        <SH>Apply Kaise Karein — Component-Wise Rasta</SH>
         <StepList>
           <SI n={1}><strong>Muft AI chahiye:</strong> koi application nahi. Apne gaon ke MAITRI technician ya nazdeeki pashu chikitsalay se sampark karo. AI hone par pashu ka ear tag aur record automatically ban jaata hai.</SI>
           <SI n={2}><strong>Sex-sorted semen chahiye:</strong> district pashupalan vibhag ya AI technician se pucho ki aapke state mein kis rate par available hai. Subsidy rate state-wise alag hota hai.</SI>
@@ -346,7 +346,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
           zyada return deta hai.
         </p>
 
-        <SH>⚠️ 4 Galatfehmiyan Jo Time Barbaad Karti Hain</SH>
+        <SH>4 Galatfehmiyan Jo Time Barbaad Karti Hain</SH>
         <StepList>
           <SI n={1}><strong>&ldquo;RGM se gay kharidne ka paisa milega&rdquo;</strong> — nahi. Yeh breeding scheme hai. Pashu kharid ke liye state schemes ya bank loan dekho. Sirf HGM IVF bachhiya ke loan par 3% interest subvention RGM se milta hai.</SI>
           <SI n={2}><strong>&ldquo;Application kisi agent se karani padegi&rdquo;</strong> — NAIP ki AI ke liye koi application hi nahi hai, aur BMF ki EOI khud online hoti hai. Agent sirf paisa khaate hain.</SI>
@@ -354,10 +354,10 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
           <SI n={4}><strong>&ldquo;Sex-sorted semen se 100% bachhiya hogi&rdquo;</strong> — 90%+ hai, 100% nahi. Aur conception mein repeat lag sakta hai. Realistic expectation ke saath jao, tabhi faida dikhega.</SI>
         </StepList>
 
-        <SH>❓ FAQ — Aksar Puche Jaane Wale Sawal</SH>
+        <SH>FAQ — Aksar Puche Jaane Wale Sawal</SH>
         <FAQBlock faqs={FAQS_DATA} />
 
-        <SH>📚 Sources</SH>
+        <SH>Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
             Rashtriya Gokul Mission — official page, Dept of Animal Husbandry & Dairying.{' '}
@@ -380,8 +380,8 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[
-          { href: '/articles', l: '📚 Article Hub' },
-          { href: '/articles/category/pashupalan', l: '📂 Dudh-Dairy-Pashu Guides' },
+          { href: '/articles', l: 'Article Hub' },
+          { href: '/articles/category/pashupalan', l: 'Dudh-Dairy-Pashu Guides' },
         ]} />
         <Disclaimer />
       </div>

@@ -22,9 +22,9 @@ export default function ArticleStub({ article }: { article: ArticleMeta }) {
             {article.title}
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(article.publishedTime)}</span>
-            <span>🔄 Updated: {fmtDate(article.modifiedTime)}</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(article.publishedTime)}</span>
+            <span>Updated: {fmtDate(article.modifiedTime)}</span>
           </div>
         </div>
       </div>
@@ -48,8 +48,8 @@ export default function ArticleStub({ article }: { article: ArticleMeta }) {
 
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[
-          { href: '/articles', l: '📚 Sabhi Articles' },
-          { href: `/articles/category/${article.category}`, l: `📂 ${category?.name ?? 'Category'}` },
+          { href: '/articles', l: 'Sabhi Articles' },
+          { href: `/articles/category/${article.category}`, l: `${category?.name ?? 'Category'}` },
         ]} />
         <Disclaimer />
       </div>

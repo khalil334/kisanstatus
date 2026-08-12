@@ -76,7 +76,7 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
 
       <InfoBox type="update" date="4 August 2026">
         <strong>Latest Update:</strong> Agli kist ki date SAARA portal par abhi announce nahi hui hai.
-        Har kist ₹2,000 ki hoti hai. ⚠️ WhatsApp par ghoom rahi "confirmed date" ka koi aadhaar nahi hai —
+        Har kist ₹2,000 ki hoti hai.  WhatsApp par ghoom rahi "confirmed date" ka koi aadhaar nahi hai —
         jab tak SAARA portal par notification na dikhe, koi bhi tareekh pakki na maanein.
       </InfoBox>
 

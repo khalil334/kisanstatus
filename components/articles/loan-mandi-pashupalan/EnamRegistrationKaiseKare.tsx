@@ -5,12 +5,12 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const RELATED = [
-  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav', emoji: '📊' },
-  { slug: 'msp-list-2026-27', title: 'MSP List 2026-27', emoji: '📋' },
-  { slug: 'mandi-bhav-app-comparison', title: 'Best Mandi Bhav Apps', emoji: '📱' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'Kisan Credit Card Banwayein', emoji: '💳' },
-  { slug: 'AgriStackKyaHai2026', title: 'AgriStack Kya Hai', emoji: '🆔' },
-  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide', emoji: '📚' },
+  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav' },
+  { slug: 'msp-list-2026-27', title: 'MSP List 2026-27' },
+  { slug: 'mandi-bhav-app-comparison', title: 'Best Mandi Bhav Apps' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'Kisan Credit Card Banwayein' },
+  { slug: 'AgriStackKyaHai2026', title: 'AgriStack Kya Hai' },
+  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide' },
 ];
 
 const FAQS_DATA = [
@@ -72,10 +72,10 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
             eNAM Registration 2026: Online Mandi Mein Fasal Kaise Bechein — Step-by-Step Guide
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(article.publishedTime)}</span>
-            <span>🔄 Last Updated: 5 August 2026</span>
-            <span>⏱️ 9 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(article.publishedTime)}</span>
+            <span>Last Updated: 5 August 2026</span>
+            <span>9 min read</span>
           </div>
         </div>
       </div>
@@ -405,7 +405,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
         <SH>Aapke Sawaal</SH>
         <FAQBlock faqs={FAQS_DATA} />
 
-        <SH>📚 Sources</SH>
+        <SH>Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
             eNAM — National Agriculture Market official portal & blog (Adoni mandi case).{' '}
@@ -420,9 +420,9 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[
-          { href: '/articles/mandi-bhav-today', l: '📊 Aaj Ka Mandi Bhav' },
-          { href: '/articles/msp-list-2026-27', l: '📋 MSP List 2026-27' },
-          { href: '/articles/category/mandi', l: '📂 Market Rates' },
+          { href: '/articles/mandi-bhav-today', l: 'Aaj Ka Mandi Bhav' },
+          { href: '/articles/msp-list-2026-27', l: 'MSP List 2026-27' },
+          { href: '/articles/category/mandi', l: 'Market Rates' },
         ]} />
         <Disclaimer />
       </div>

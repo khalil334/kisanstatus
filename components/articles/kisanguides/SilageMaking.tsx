@@ -551,7 +551,7 @@ export default function SilageMaking() {
 
       <div className="grid md:grid-cols-2 gap-6 mb-8 not-prose">
         <div className="bg-green-50 dark:bg-green-900/20 p-5 rounded-lg border border-green-200 dark:border-green-800">
-          <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">✅ Bilkul Karein, agar:</h3>
+          <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">Bilkul Karein, agar:</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>• Dairy belt mein rehte ho (Haryana, Punjab, Gujarat, UP west, Maharashtra).</li>
             <li>• 5-10 acre zameen hai, ya contract farming kar sakte ho.</li>
@@ -562,7 +562,7 @@ export default function SilageMaking() {
         </div>
 
         <div className="bg-red-50 dark:bg-red-900/20 p-5 rounded-lg border border-red-200 dark:border-red-800">
-          <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">❌ Sochna Padega, agar:</h3>
+          <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">Sochna Padega, agar:</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>• Non-dairy area mein ho — grahak milna mushkil hoga.</li>
             <li>• Zameen nahi hai aur contract farming bhi option nahi hai.</li>

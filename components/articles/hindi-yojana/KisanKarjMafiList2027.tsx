@@ -516,7 +516,7 @@ export default function KisanKarjMafiList2027({ article }: { article: HindiArtic
 
       <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
         <h3 className="font-black text-[var(--color-text)] mb-4 text-base flex items-center gap-2">
-          <span>🔗</span> Related Articles — Yeh Bhi Padho
+          Related Articles — Yeh Bhi Padho
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
           <Link
@@ -530,7 +530,6 @@ export default function KisanKarjMafiList2027({ article }: { article: HindiArtic
             href="/articles/KisanCreditCardOnlineApply2026"
             className="flex items-center gap-3 p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors text-sm font-medium text-[var(--color-text)] no-underline"
           >
-            <span className="text-xl shrink-0">💳</span>
             <span>KCC बनवाने का online तरीका</span>
           </Link>
           <Link
@@ -544,7 +543,6 @@ export default function KisanKarjMafiList2027({ article }: { article: HindiArtic
             href="/articles/PmKisanMasterGuide2026"
             className="flex items-center gap-3 p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors text-sm font-medium text-[var(--color-text)] no-underline"
           >
-            <span className="text-xl shrink-0">📚</span>
             <span>PM Kisan की संपूर्ण guide</span>
           </Link>
         </div>

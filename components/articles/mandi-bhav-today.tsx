@@ -310,9 +310,9 @@ const FRUIT_NAME_MAP: Record<string, string> = {
 };
 
 const RELATED = [
-  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '💰' },
-  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide', emoji: '📚' },
-  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List', emoji: '📋' },
+  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status' },
+  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide' },
+  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List' },
   { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Loan Guide', emoji: '🏦' },
 ];
 
@@ -582,7 +582,6 @@ export default function MandiBhavToday() {
           message={modal.message}
           redirectUrl={modal.url}
           onClose={() => setModal(null)}
-          icon="🔗"
           countdownNote="seconds mein official website khulega..."
           infoNote="Thoda wait karo. Official government website khulne wala hai."
         />
@@ -599,8 +598,8 @@ export default function MandiBhavToday() {
             {selectedState} Mandi Bhav Aaj Ka Rate — Sabzi, Phal Aur 7 Din Ka Mausam
           </h1>
           <div className="flex gap-3 text-xs text-green-100">
-            <span>🕐 {currentTime}</span>
-            <span>{isLive ? '🟢 Live' : '🔄 Updated'}: {lastUpdated}</span>
+            <span>{currentTime}</span>
+            <span>{isLive ? 'Live' : 'Updated'}: {lastUpdated}</span>
           </div>
         </div>
       </div>
@@ -709,7 +708,7 @@ export default function MandiBhavToday() {
 
             <div className="bg-blue-50 rounded-lg p-3 border border-blue-300">
               <p className="text-xs text-blue-800">
-                <strong>💡 Note:</strong> {currentStateData.notes}
+                <strong>Note:</strong> {currentStateData.notes}
               </p>
             </div>
           </div>
@@ -819,22 +818,22 @@ export default function MandiBhavToday() {
           <div className="space-y-3">
             <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-xl">
               <p className="text-sm text-green-800">
-                <strong>✅ Rate achha hai:</strong> Agar paisa turant chahiye aur aaj ka rate theek dikh raha hai, bech dena hi safe rehta hai — market kal kya karega, koi guarantee nahi.
+                <strong>Rate achha hai:</strong> Agar paisa turant chahiye aur aaj ka rate theek dikh raha hai, bech dena hi safe rehta hai — market kal kya karega, koi guarantee nahi.
               </p>
             </div>
             <div className="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-xl">
               <p className="text-sm text-amber-800">
-                <strong>📦 Store kiya ja sakta hai:</strong> Aloo, pyaaz jaisi sabzi thodi der rukwaayi ja sakti hai. Rate badhne ka pattern dikhe toh 2-3 hafte wait karna ek reasonable gamble hai.
+                <strong>Store kiya ja sakta hai:</strong> Aloo, pyaaz jaisi sabzi thodi der rukwaayi ja sakti hai. Rate badhne ka pattern dikhe toh 2-3 hafte wait karna ek reasonable gamble hai.
               </p>
             </div>
             <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-xl">
               <p className="text-sm text-red-800">
-                <strong>⚠️ Barish aane wali hai:</strong> Forecast check karo. Transport ruka toh rate upar-neeche dono ho sakta hai, isliye stock jaldi clear karna behtar.
+                <strong>Barish aane wali hai:</strong> Forecast check karo. Transport ruka toh rate upar-neeche dono ho sakta hai, isliye stock jaldi clear karna behtar.
               </p>
             </div>
             <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-xl">
               <p className="text-sm text-blue-800">
-                <strong>📊 Roz track karo:</strong> Ek hafta bhi daily check karoge toh pattern dikhne lagega — kaun se din rate upar jaata hai, kab neeche.
+                <strong>Roz track karo:</strong> Ek hafta bhi daily check karoge toh pattern dikhne lagega — kaun se din rate upar jaata hai, kab neeche.
               </p>
             </div>
           </div>
@@ -898,7 +897,7 @@ export default function MandiBhavToday() {
         </div>
 
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 border-l-[6px] rounded-xl">
-          <h3 className="text-base font-black text-blue-800 dark:text-blue-300 mb-2">🔗 Official Government Data</h3>
+          <h3 className="text-base font-black text-blue-800 dark:text-blue-300 mb-2">Official Government Data</h3>
           <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
             <strong>Agmarknet</strong> par jaake raw sarkari mandi data dekho. Click karne ke 10 second baad website naye tab mein khulegi.
           </p>

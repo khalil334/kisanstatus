@@ -29,7 +29,7 @@ export default function SearchPage() {
       <div className="bg-[var(--color-primary)] py-12">
         <div className="container-site max-w-3xl text-center">
           <h1 className="text-2xl md:text-3xl font-black text-white mb-3">
-            🔍 Guides Search Karein
+             Guides Search Karein
           </h1>
           <p className="text-green-200 text-sm mb-8">
             PM Kisan, loans, subsidy aur mandi bhav — apna sawal search karein
@@ -53,7 +53,7 @@ export default function SearchPage() {
               href={`/articles?search=${encodeURIComponent(item.query)}`}
               className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-bold bg-[var(--color-card)] text-[var(--color-text)] border border-[var(--color-border)] hover:border-green-400 dark:hover:border-green-600 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500"
             >
-              🔍 {item.label}
+               {item.label}
             </Link>
           ))}
         </div>
@@ -63,13 +63,13 @@ export default function SearchPage() {
             href="/articles"
             className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[var(--color-primary)] text-white font-bold rounded-xl hover:bg-green-700 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500"
           >
-            📚 Sabhi Guides Dekhein
+             Sabhi Guides Dekhein
           </Link>
           <Link
             href="/calculator"
             className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[var(--color-card)] border border-[var(--color-border)] text-[var(--color-text)] font-bold rounded-xl hover:border-green-400 dark:hover:border-green-600 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500"
           >
-            🧮 Free Calculators
+             Free Calculators
           </Link>
         </div>
       </div>

@@ -11,9 +11,9 @@ const PUBLISHED = '2026-01-15T16:32:11+05:30';
 const MODIFIED = '2026-02-05T18:12:48+05:30';
 
 const RELATED = [
-  { slug: 'PmKisanBeneficiaryList2026', title: 'PM Kisan Beneficiary List', emoji: '' },
-  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Complete Guide', emoji: '🔐' },
-  { slug: 'PmKisanMasterGuide2026', title: 'Master Guide', emoji: '' },
+  { slug: 'PmKisanBeneficiaryList2026', title: 'PM Kisan Beneficiary List' },
+  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Complete Guide' },
+  { slug: 'PmKisanMasterGuide2026', title: 'Master Guide' },
 ];
 
 const FAQS_DATA = [
@@ -101,18 +101,18 @@ export default function PmKisanLandSeedingFormPdf2026() {
           onClose={() => setModal(null)}
           borderColorClass="border-blue-500"
           countdownNote="seconds baad download link milega"
-          infoNote={`📌 ${modal.stateName} bhulekh portal se aap land seeding form, khasra khatauni details aur PM Kisan se judi saari jaankari le sakte hain.`}
+          infoNote={`${modal.stateName} bhulekh portal se aap land seeding form, khasra khatauni details aur PM Kisan se judi saari jaankari le sakte hain.`}
           readyContent={
             <>
               <div className="bg-green-50 dark:bg-green-900/30 border-2 border-green-500 rounded-lg p-4">
                 <p className="text-sm font-bold text-green-800 dark:text-green-300 mb-2">
-                  ✅ {modal.stateName} Land Seeding Form Ready Hai!
+                   {modal.stateName} Land Seeding Form Ready Hai!
                 </p>
                 <Link
                   href={`/articles/pm-kisan-land-seeding-form/download?state=${modal.slug}&redirect=${encodeURIComponent(modal.url)}`}
                   className="inline-block w-full px-6 py-3 bg-green-600 hover:bg-green-700 text-white text-base font-bold rounded-lg transition-colors animate-pulse"
                 >
-                  📥 Click to Download PDF
+                   Click to Download PDF
                 </Link>
               </div>
               <p className="text-xs text-gray-500 dark:text-gray-400">
@@ -137,10 +137,10 @@ export default function PmKisanLandSeedingFormPdf2026() {
             PM Kisan Land Seeding Form PDF Download 2026: State Wise Guide
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 12 min read</span>
+            <span><Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>12 min read</span>
           </div>
         </div>
       </div>
@@ -237,7 +237,7 @@ export default function PmKisanLandSeedingFormPdf2026() {
 
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 border-l-[6px] rounded-xl">
           <h2 className="text-base font-black text-blue-800 dark:text-blue-300 mb-3">
-            📥 State Wise Land Seeding Form - Official Links
+             State Wise Land Seeding Form - Official Links
           </h2>
           <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
             Status "Not Seeded" dikha? Apne state ka form download karne ke liye niche diye gaye button par click karein. 10 second countdown ke baad download page khulega.
@@ -270,17 +270,14 @@ export default function PmKisanLandSeedingFormPdf2026() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 my-4">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl text-center">
-              <span className="text-3xl block mb-2"></span>
               <p className="font-black text-sm text-green-800 dark:text-green-300">Form Bharo</p>
               <p className="text-xs text-[var(--color-text-muted)] mt-1">Khasra-Khatauni details</p>
             </div>
             <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl text-center">
-              <span className="text-3xl block mb-2">✅</span>
               <p className="font-black text-sm text-blue-800 dark:text-blue-300">Verification</p>
               <p className="text-xs text-[var(--color-text-muted)] mt-1">Patwari check karega</p>
             </div>
             <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl text-center">
-              <span className="text-3xl block mb-2">💰</span>
               <p className="font-black text-sm text-amber-800 dark:text-amber-300">Paisa Milega</p>
               <p className="text-xs text-[var(--color-text-muted)] mt-1">15-30 din mein</p>
             </div>
@@ -427,8 +424,8 @@ export default function PmKisanLandSeedingFormPdf2026() {
               { problem: 'Status "Seeded" dikha raha hai par paisa phir bhi nahi aaya', solution: 'Ho sakta hai land seeding aur payment ke beech koi aur rukawat ho — Aadhaar seeding ya bank details bhi check karwa lein.' },
             ].map(({ problem, solution }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
-                <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">❌ {problem}</p>
-                <p className="text-xs text-green-700 dark:text-green-400"><strong>✅ Aise Sudharein:</strong> {solution}</p>
+                <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">{problem}</p>
+                <p className="text-xs text-green-700 dark:text-green-400"><strong>Aise Sudharein:</strong> {solution}</p>
               </div>
             ))}
           </div>
@@ -488,8 +485,8 @@ export default function PmKisanLandSeedingFormPdf2026() {
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/PmKisanBeneficiaryList2026', l: '📋 Beneficiary List' },
-          { href: '/articles/PmKisanEkycOnline2026', l: '🔐 eKYC Guide' },
+          { href: '/articles/PmKisanBeneficiaryList2026', l: 'Beneficiary List' },
+          { href: '/articles/PmKisanEkycOnline2026', l: 'eKYC Guide' },
         ]} />
         <Disclaimer />
       </div>

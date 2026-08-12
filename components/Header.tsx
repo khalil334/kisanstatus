@@ -19,15 +19,15 @@ const navLinks = [
 ];
 
 const quickLinks = [
-  { href: '/articles/PmKisan24viKist2026', label: '24vi Kist Status', emoji: '📆' },
-  { href: '/articles/pm-kisan-fto-generated-ka-matlab-kya-hai', label: 'FTO Guide', emoji: '📋' },
+  { href: '/articles/PmKisan24viKist2026', label: '24vi Kist Status' },
+  { href: '/articles/pm-kisan-fto-generated-ka-matlab-kya-hai', label: 'FTO Guide' },
   { href: '/articles/soil-health-card-complete-guide-2026', label: 'Soil Health Card', emoji: '🌱' },
-  { href: '/articles/KisanCreditCardOnlineApply2026', label: 'KCC Loan', emoji: '💳' },
+  { href: '/articles/KisanCreditCardOnlineApply2026', label: 'KCC Loan' },
 ];
 
 const CATEGORY_EMOJIS: Record<string, string> = {
-  'status-check': '📆',
-  'loan': '💳',
+  'status-check': '',
+  'loan': '',
   'farming': '🌱',
   'mandi': '🏪',
   'rajya-yojana': '🏛️',
@@ -97,7 +97,7 @@ function fuzzySearch(query: string) {
       slug: a.slug,
       href: a.href,
       title: a.title,
-      emoji: CATEGORY_EMOJIS[a.category] || '📄',
+      emoji: CATEGORY_EMOJIS[a.category] || '',
       category: a.category,
     }));
 }
@@ -153,7 +153,6 @@ function SearchModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
           <div className="max-h-[60vh] overflow-y-auto">
             {!query.trim() && (
               <div className="p-6 text-center">
-                <span className="text-3xl block mb-2">🔍</span>
                 <p className="text-sm text-[var(--color-text-muted)]">Type karke search karo — articles, guides, calculators</p>
               </div>
             )}

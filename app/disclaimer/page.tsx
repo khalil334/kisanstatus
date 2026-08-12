@@ -57,7 +57,6 @@ export default function DisclaimerPage() {
         <div className="max-w-3xl mx-auto space-y-6">
 
           <div className="rounded-xl border-2 border-red-400 bg-red-50 dark:bg-red-900/20 dark:border-red-800 p-6 text-center">
-            <div className="text-4xl mb-3" aria-hidden="true">⚠️</div>
             <h2 className="text-xl font-bold text-red-800 dark:text-red-300 mb-3">
               YEH KOI OFFICIAL SARKARI PORTAL NAHI HAI
             </h2>
@@ -156,7 +155,7 @@ export default function DisclaimerPage() {
               Is portal se juda koi bhi sawaal ya sujhav ke liye humse sampark karein:
             </p>
             <p className="text-sm mb-3">
-              📧{' '}
+              {' '}
               <a href="mailto:kisanstatus.support@gmail.com" className="text-[var(--color-primary)] underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">
                 kisanstatus.support@gmail.com
               </a>
@@ -171,7 +170,7 @@ export default function DisclaimerPage() {
 
           <div className="news-box bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-2xl p-6">
             <h3 className="font-semibold text-green-800 dark:text-green-300 mb-3 text-lg">
-              🔗 Official Sarkari Resources
+               Official Sarkari Resources
             </h3>
             <ul className="text-sm text-green-900 dark:text-green-200 space-y-2">
               <li>

@@ -20,7 +20,6 @@ const RELATED_CARDS = [
     slug: 'PmKisan24viKist2026',
     title: 'PM Kisan 24vi Kist Status',
     desc: 'Apna ₹2000 installment status aur eKYC errors abhi fix karein.',
-    emoji: '📅'
   },
   {
     slug: 'KisanRinKahaSeLe2026',
@@ -32,7 +31,6 @@ const RELATED_CARDS = [
     slug: 'AgriStackKyaHai2026',
     title: 'Digital Kisan ID (AgriStack)',
     desc: 'Unified ID banakar fast-track loan approval kaise paayein.',
-    emoji: '🆔'
   },
 ];
 
@@ -90,10 +88,10 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </h1>
 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 12 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>12 min read</span>
           </div>
         </div>
       </div>
@@ -560,7 +558,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           title="Apni EMI Calculate Karo"
           desc="KCC loan ki monthly payment aur total interest jaano — 4% effective rate par"
           primaryCta={{ href: '/calculator/kcc-loan-emi', label: '🏦 EMI Calculator →' }}
-          secondaryCta={{ href: '/calculator', label: '🧮 Sab Utilities Dekho' }}
+          secondaryCta={{ href: '/calculator', label: 'Sab Utilities Dekho' }}
         />
 
         <section className="my-10">
@@ -590,8 +588,8 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
           { href: '/articles/KisanRinKahaSeLe2026', l: '🏦 Kisan Loan Guide' },
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
-          { href: '/calculator/kcc-loan-emi', l: '🧮 EMI Calculator' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
+          { href: '/calculator/kcc-loan-emi', l: 'EMI Calculator' },
         ]} />
         <Disclaimer />
       </div>
