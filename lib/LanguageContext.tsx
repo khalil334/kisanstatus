@@ -137,7 +137,7 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
   const contextValue = useMemo<LangContextType>(() => ({
     lang,
     setLang,
-    tr: t[lang] || t[DEFAULT_LANG],
+    tr: lang === 'en' ? t.en : t.hi,
     isLoaded,
     getLangName,
     supportedLangs: SUPPORTED_LANGS,
