@@ -459,7 +459,7 @@ export default function PmKisanRecoveryNoticePaisaWapas({ article }: { article: 
       <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
         <h3 className="font-black text-[var(--color-text)] mb-3 text-base">आगे काम आने वाले page</h3>
         <ul className="list-disc pl-5 space-y-1.5 text-sm">
-          <li><Link href="/articles/PmKisanVoluntarySurrenderGuide">🙏 Voluntary Surrender Guide</Link></li>
+          <li><Link href="/articles/PmKisanVoluntarySurrenderGuide">Voluntary Surrender Guide</Link></li>
           <li><Link href="/articles/PmKisanRejectedStatusReApplyGuide">Rejected Status — Re-apply</Link></li>
           <li><Link href="/articles/hi/helpline-shikayat">शिकायत कहां और कैसे करें</Link></li>
           <li><Link href="/articles/PmKisanMasterGuide2026">योजना का पूरा नक्शा — Master Guide</Link></li>

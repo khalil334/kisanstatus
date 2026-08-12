@@ -200,13 +200,13 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
 
           <div className="grid md:grid-cols-2 gap-4 mb-4">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
-              <h4 className="font-black text-green-800 dark:text-green-300 mb-2">👨🏾‍🌾 Ramesh (PMKMY choose kiya)</h4>
+              <h4 className="font-black text-green-800 dark:text-green-300 mb-2">Ramesh (PMKMY choose kiya)</h4>
               <p className="text-xs text-[var(--color-text-muted)] mb-2">Ramesh ke paas 1.5 acre zameen hai. 25 saal ki umar mein uska monthly contribution <strong>₹80</strong> hai. Government bhi ₹80 degi. Total fund mein har mahine ₹160 jayenge. 35 saal tak yeh silsila chala.</p>
               <p className="text-xs font-bold text-green-800 dark:text-green-300">Result: Kam monthly bojh uthakar, government ke bharose ₹3000/month pension pakki.</p>
             </div>
 
             <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
-              <h4 className="font-black text-blue-800 dark:text-blue-300 mb-2">👨🏽‍🌾 Suresh (APY choose kiya)</h4>
+              <h4 className="font-black text-blue-800 dark:text-blue-300 mb-2">Suresh (APY choose kiya)</h4>
               <p className="text-xs text-[var(--color-text-muted)] mb-2">Suresh ne APY mein ₹3000 pension ka slab chuna. 25 saal ki umar mein uska monthly contribution lagbhag <strong>₹210</strong> hai. Government ka koi match nahi milega. 35 saal tak yeh amount uski jeb se jayega.</p>
               <p className="text-xs font-bold text-blue-800 dark:text-blue-300">Result: Zyada monthly bojh uthakar same ₹3000/month pension, bina kisi extra help ke.</p>
             </div>

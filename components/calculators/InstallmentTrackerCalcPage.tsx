@@ -73,7 +73,7 @@ export default function InstallmentTrackerCalcPage() {
 
   if (seeding === 'no')
     blockers.push({
-      icon: '🏦',
+      icon: '',
       title: 'Bank Seeding Nahi Hui',
       desc: 'Aadhaar bank account se link nahi hai. Bank jao aur link karwao.',
       href: '/articles/PmKisanPaymentFailedFix2026',
@@ -82,7 +82,7 @@ export default function InstallmentTrackerCalcPage() {
 
   if (land === 'no')
     blockers.push({
-      icon: '🌾',
+      icon: '',
       title: 'Land Seeding Problem',
       desc: 'Zameen ka record portal se link nahi hua. Patwari se baat karo.',
       href: '/articles/PmKisanMasterGuide2026',
@@ -228,7 +228,7 @@ export default function InstallmentTrackerCalcPage() {
 
           {!allAnswered ? (
             <div className="mt-6 p-5 bg-[var(--color-bg-alt)] border-2 border-[var(--color-border)] rounded-2xl text-center">
-              <span className="text-3xl block mb-2">🤔</span>
+              <span className="text-3xl block mb-2"></span>
               <p className="font-bold text-[var(--color-text)] mb-2">
                 Sabhi Sawaalon Ke Jawab Do
               </p>
@@ -241,7 +241,7 @@ export default function InstallmentTrackerCalcPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-5 py-2.5 rounded-xl text-sm transition-colors mt-3"
               >
-                🏛️ Pehle Official Status Check Karo →
+                Pehle Official Status Check Karo →
               </a>
             </div>
           ) : allGood ? (
@@ -258,7 +258,7 @@ export default function InstallmentTrackerCalcPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-green-700 hover:bg-green-600 text-white font-bold px-5 py-2.5 rounded-xl text-sm transition-colors"
               >
-                🏛️ Official Status Check Karo →
+                Official Status Check Karo →
               </a>
               <p className="text-xs text-green-600 dark:text-green-400 mt-3">
                 Last release: {KIST_CONFIG.current.name} — {releaseDateStr} ({daysSince} din pehle)
@@ -316,11 +316,11 @@ export default function InstallmentTrackerCalcPage() {
               <p className="text-xs text-red-800 dark:text-red-400">Ye sabse zyada dikhne wali wajah hai. Fix simple hai — Aadhaar OTP se verify karo, 5 minute ka kaam hai, aur CSC center ya online dono jagah free milta hai.</p>
             </div>
             <div className="p-3 bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 rounded-xl">
-              <p className="font-bold text-orange-900 dark:text-orange-300 text-xs mb-1">🏦 Bank Seeding Nahi Hui</p>
+              <p className="font-bold text-orange-900 dark:text-orange-300 text-xs mb-1">Bank Seeding Nahi Hui</p>
               <p className="text-xs text-orange-800 dark:text-orange-400">Matlab Aadhaar aapke bank account se abhi link nahi hai. Nazdiki branch mein jaake seeding form bhar do, ya NPCI mapper se bhi try kar sakte ho.</p>
             </div>
             <div className="p-3 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-xl">
-              <p className="font-bold text-yellow-900 dark:text-yellow-300 text-xs mb-1">🌾 Land Seeding Problem</p>
+              <p className="font-bold text-yellow-900 dark:text-yellow-300 text-xs mb-1">Land Seeding Problem</p>
               <p className="text-xs text-yellow-800 dark:text-yellow-400">Zameen ka record abhi tak portal se match nahi hua — is baare mein patwari ya revenue office se baat karni padegi. Thoda time lagta hai, 7-14 din tak.</p>
             </div>
             <div className="p-3 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-xl">

@@ -312,19 +312,19 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
           </p>
           <div className="space-y-4">
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-              <h4 className="font-bold text-[var(--color-text)] text-sm mb-2">👴 Kisan Bedridden (Bimaar) Hai, Ghar Par Kaise Hoga?</h4>
+              <h4 className="font-bold text-[var(--color-text)] text-sm mb-2">Kisan Bedridden (Bimaar) Hai, Ghar Par Kaise Hoga?</h4>
               <p className="text-xs text-[var(--color-text-muted)] leading-relaxed">
                 Aise cases mein, family member ke phone se online eKYC nahi ho sakti (kyunki face/fingerprint match nahi hoga). Aapko apne nazdeeki bank branch ya CSC ko call karke "Doorstep Banking" ya "Home Visit" ki special request karni hogi. Bahut se nationalised banks ab yeh suvidha dete hain.
               </p>
             </div>
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-              <h4 className="font-bold text-[var(--color-text)] text-sm mb-2">👰 Shaadi Ke Baad Naam Badal Gaya Hai</h4>
+              <h4 className="font-bold text-[var(--color-text)] text-sm mb-2">Shaadi Ke Baad Naam Badal Gaya Hai</h4>
               <p className="text-xs text-[var(--color-text-muted)] leading-relaxed">
                 Agar PM Kisan mein purana naam (maike ka) hai aur Aadhaar mein naya naam (sasural ka), toh eKYC fail ho jayegi. Pehle apne patwari/tehsil office jaakar PM Kisan portal par naam update (mutation) karwayein, uske baad hi eKYC ka try karein.
               </p>
             </div>
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-              <h4 className="font-bold text-[var(--color-text)] text-sm mb-2">👨‍🌾 Beneficiary Ki Mrityu Ho Chuki Hai</h4>
+              <h4 className="font-bold text-[var(--color-text)] text-sm mb-2">Beneficiary Ki Mrityu Ho Chuki Hai</h4>
               <p className="text-xs text-[var(--color-text-muted)] leading-relaxed">
                 Turant apne nazdeeki Jan Seva Kendra ya Tehsil office jaakar "Beneficiary Death Status" update karein. Iske baad, legal heir (uttaradhikari) ko naye sire se application karni hogi. Purane account par eKYC karne ki koshish na karein, yeh fraud ki shreni mein aa sakta hai.
               </p>

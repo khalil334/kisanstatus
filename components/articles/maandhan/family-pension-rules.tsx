@@ -24,7 +24,7 @@ const RELATED_CARDS = [
     slug: 'pmkmy-bank-account-change',
     title: 'Bank Account Change Karein',
     desc: 'Agar purana bank band ho gaya hai, to naye account me pension details kaise update karein.',
-    emoji: '🏦',
+    emoji: '',
   },
 ];
 
@@ -435,7 +435,7 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
         <BottomNav extraLinks={[
           { href: '/maandhan/pm-kisan-maandhan-withdrawal-refund-rules', l: 'Withdrawal Rules' },
           { href: '/maandhan/pm-kisan-maandhan-status-check-online', l: 'Status Check' },
-          { href: '/maandhan/pmkmy-bank-account-change', l: '🏦 Bank Change' },
+          { href: '/maandhan/pmkmy-bank-account-change', l: 'Bank Change' },
         ]} />
         <Disclaimer />
       </div>

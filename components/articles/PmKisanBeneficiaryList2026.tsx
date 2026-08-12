@@ -22,7 +22,7 @@ const RELATED = [
   { slug: 'PmKisanEkycOnline2026', title: 'eKYC Complete Guide' },
   { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav' },
   { slug: 'PmKisanVillageWiseListPdfDownload', title: 'Village Wise List PDF Download' },
-  { slug: 'PmKisanLandSeedingForm', title: 'Land Seeding Form PDF', emoji: '🌱' },
+  { slug: 'PmKisanLandSeedingForm', title: 'Land Seeding Form PDF', emoji: '' },
 ];
 
 const FAQS_DATA = [
@@ -69,43 +69,43 @@ const FAQS_DATA = [
 ];
 
 const STATES_LIST = [
-  ['🌾', 'Uttar Pradesh', 'uttar-pradesh'],
-  ['🏛️', 'Bihar', 'bihar'],
-  ['🌾', 'Madhya Pradesh', 'madhya-pradesh'],
-  ['🏜️', 'Rajasthan', 'rajasthan'],
-  ['🏙️', 'Maharashtra', 'maharashtra'],
-  ['🌊', 'West Bengal', 'west-bengal'],
-  ['🌴', 'Karnataka', 'karnataka'],
-  ['🛕', 'Odisha', 'odisha'],
-  ['🏛️', 'Tamil Nadu', 'tamil-nadu'],
-  ['🌾', 'Punjab', 'punjab'],
-  ['🚜', 'Haryana', 'haryana'],
-  ['🌶️', 'Andhra Pradesh', 'andhra-pradesh'],
-  ['🌴', 'Kerala', 'kerala'],
-  ['🏛️', 'Telangana', 'telangana'],
-  ['🏭', 'Gujarat', 'gujarat'],
-  ['🍵', 'Assam', 'assam'],
-  ['⛰️', 'Jharkhand', 'jharkhand'],
-  ['🏔️', 'Uttarakhand', 'uttarakhand'],
-  ['🌳', 'Chhattisgarh', 'chhattisgarh'],
-  ['🏔️', 'Himachal Pradesh', 'himachal-pradesh'],
-  ['🏔️', 'Jammu & Kashmir', 'jammu-and-kashmir'],
-  ['🏖️', 'Goa', 'goa'],
-  ['🏔️', 'Sikkim', 'sikkim'],
-  ['🌿', 'Tripura', 'tripura'],
-  ['🌧️', 'Meghalaya', 'meghalaya'],
-  ['🌿', 'Manipur', 'manipur'],
-  ['⛰️', 'Nagaland', 'nagaland'],
-  ['🏔️', 'Arunachal Pradesh', 'arunachal-pradesh'],
-  ['🌿', 'Mizoram', 'mizoram'],
-  ['🏛️', 'Delhi', 'delhi'],
-  ['🏖️', 'Puducherry', 'puducherry'],
-  ['🏝️', 'Andaman & Nicobar', 'andaman-nicobar'],
-  ['🏔️', 'Ladakh', 'ladakh'],
-  ['🏝️', 'Lakshadweep', 'lakshadweep'],
-  ['🏙️', 'Chandigarh', 'chandigarh'],
-  ['🌳', 'Dadra & Nagar Haveli', 'dadra-nagar-haveli'],
-  ['🏖️', 'Daman & Diu', 'daman-diu'],
+  ['', 'Uttar Pradesh', 'uttar-pradesh'],
+  ['', 'Bihar', 'bihar'],
+  ['', 'Madhya Pradesh', 'madhya-pradesh'],
+  ['', 'Rajasthan', 'rajasthan'],
+  ['', 'Maharashtra', 'maharashtra'],
+  ['', 'West Bengal', 'west-bengal'],
+  ['', 'Karnataka', 'karnataka'],
+  ['', 'Odisha', 'odisha'],
+  ['', 'Tamil Nadu', 'tamil-nadu'],
+  ['', 'Punjab', 'punjab'],
+  ['', 'Haryana', 'haryana'],
+  ['', 'Andhra Pradesh', 'andhra-pradesh'],
+  ['', 'Kerala', 'kerala'],
+  ['', 'Telangana', 'telangana'],
+  ['', 'Gujarat', 'gujarat'],
+  ['', 'Assam', 'assam'],
+  ['', 'Jharkhand', 'jharkhand'],
+  ['', 'Uttarakhand', 'uttarakhand'],
+  ['', 'Chhattisgarh', 'chhattisgarh'],
+  ['', 'Himachal Pradesh', 'himachal-pradesh'],
+  ['', 'Jammu & Kashmir', 'jammu-and-kashmir'],
+  ['', 'Goa', 'goa'],
+  ['', 'Sikkim', 'sikkim'],
+  ['', 'Tripura', 'tripura'],
+  ['', 'Meghalaya', 'meghalaya'],
+  ['', 'Manipur', 'manipur'],
+  ['', 'Nagaland', 'nagaland'],
+  ['', 'Arunachal Pradesh', 'arunachal-pradesh'],
+  ['', 'Mizoram', 'mizoram'],
+  ['', 'Delhi', 'delhi'],
+  ['', 'Puducherry', 'puducherry'],
+  ['', 'Andaman & Nicobar', 'andaman-nicobar'],
+  ['', 'Ladakh', 'ladakh'],
+  ['', 'Lakshadweep', 'lakshadweep'],
+  ['', 'Chandigarh', 'chandigarh'],
+  ['', 'Dadra & Nagar Haveli', 'dadra-nagar-haveli'],
+  ['', 'Daman & Diu', 'daman-diu'],
 ] as const;
 
 export default function PmKisanBeneficiaryList2026({ article }: { article: ArticleMeta }) {
@@ -269,7 +269,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
         </section>
 
         <section className="mb-8">
-          <SH>🏘️ Village Wise List Kaise Dekhen? (Poore Gaon Ki List)</SH>
+          <SH>Village Wise List Kaise Dekhen? (Poore Gaon Ki List)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Apne poore gaon ki list dekhni hai? Portal par yeh feature available hai — transparency ke liye government ne diya hai.
           </p>

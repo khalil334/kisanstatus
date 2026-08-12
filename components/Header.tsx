@@ -21,17 +21,17 @@ const navLinks = [
 const quickLinks = [
   { href: '/articles/PmKisan24viKist2026', label: '24vi Kist Status' },
   { href: '/articles/pm-kisan-fto-generated-ka-matlab-kya-hai', label: 'FTO Guide' },
-  { href: '/articles/soil-health-card-complete-guide-2026', label: 'Soil Health Card', emoji: '🌱' },
+  { href: '/articles/soil-health-card-complete-guide-2026', label: 'Soil Health Card', emoji: '' },
   { href: '/articles/KisanCreditCardOnlineApply2026', label: 'KCC Loan' },
 ];
 
 const CATEGORY_EMOJIS: Record<string, string> = {
   'status-check': '',
   'loan': '',
-  'farming': '🌱',
-  'mandi': '🏪',
-  'rajya-yojana': '🏛️',
-  'pension-scheme': '👴',
+  'farming': '',
+  'mandi': '',
+  'rajya-yojana': '',
+  'pension-scheme': '',
 };
 
 type SearchEntry = {
@@ -159,7 +159,7 @@ function SearchModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
 
             {query.trim() && results.length === 0 && (
               <div className="p-6 text-center">
-                <span className="text-3xl block mb-2">😕</span>
+                <span className="text-3xl block mb-2"></span>
                 <p className="text-sm text-[var(--color-text-muted)]">"<strong>{query}</strong>" ke liye kuch nahi mila</p>
                 <Link href="/articles" onClick={onClose} className="text-[var(--color-primary)] text-xs font-bold mt-2 inline-block hover:underline">
                   Saare Articles Dekho →

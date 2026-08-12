@@ -447,7 +447,7 @@ export default function BakriPalanYojana() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <Link href="/articles/madhumakhi-palan-kvic-subsidy" className="group flex flex-col bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-green-500 dark:hover:border-green-500 hover:shadow-lg transition-all duration-300">
               <div className="flex items-center gap-3 mb-3">
-                <span className="text-2xl group-hover:scale-110 transition-transform" aria-hidden="true">🐝</span>
+                <span className="text-2xl group-hover:scale-110 transition-transform" aria-hidden="true"></span>
                 <h4 className="font-bold text-gray-900 dark:text-gray-100 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">Madhumakhi Palan</h4>
               </div>
               <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">KVIC subsidy ke saath shahad ka business.</p>
@@ -455,7 +455,7 @@ export default function BakriPalanYojana() {
 
             <Link href="/articles/pm-matsya-sampada-yojana-fish-farming" className="group flex flex-col bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-lg transition-all duration-300">
               <div className="flex items-center gap-3 mb-3">
-                <span className="text-2xl group-hover:scale-110 transition-transform" aria-hidden="true">🐟</span>
+                <span className="text-2xl group-hover:scale-110 transition-transform" aria-hidden="true"></span>
                 <h4 className="font-bold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">PM Matsya Sampada</h4>
               </div>
               <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">Machli palan par 60% tak subsidy.</p>
@@ -463,7 +463,7 @@ export default function BakriPalanYojana() {
 
             <Link href="/articles/drip-sprinkler-irrigation-subsidy" className="group flex flex-col bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-purple-500 dark:hover:border-purple-500 hover:shadow-lg transition-all duration-300">
               <div className="flex items-center gap-3 mb-3">
-                <span className="text-2xl group-hover:scale-110 transition-transform" aria-hidden="true">💧</span>
+                <span className="text-2xl group-hover:scale-110 transition-transform" aria-hidden="true"></span>
                 <h4 className="font-bold text-gray-900 dark:text-gray-100 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">Drip Irrigation</h4>
               </div>
               <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">Chara ugane ke liye 75% tak subsidy.</p>

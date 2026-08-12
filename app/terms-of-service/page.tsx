@@ -227,7 +227,7 @@ export default function TermsPage() {
             <div className="text-sm text-[var(--color-text-muted)] space-y-2">
               <p>Email: <a href="mailto:kisanstatus.support@gmail.com" className="text-[var(--color-primary)] underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">kisanstatus.support@gmail.com</a></p>
               <p>Platform: <a href={SITE_URL} className="text-[var(--color-primary)] underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">{SITE_URL}</a></p>
-              <p>👤 Author: <Link href="/about" className="text-[var(--color-primary)] underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">{AUTHOR_NAME}</Link></p>
+              <p>Author: <Link href="/about" className="text-[var(--color-primary)] underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">{AUTHOR_NAME}</Link></p>
             </div>
           </section>
 

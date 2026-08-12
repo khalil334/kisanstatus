@@ -504,7 +504,7 @@ export default function VerminCompost() {
 
         <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border border-green-200 dark:border-green-800 hover:shadow-md transition-shadow">
           <h4 className="font-semibold text-green-900 dark:text-green-200 mb-2 flex items-center gap-2">
-            🏭 PM FME Yojana
+            PM FME Yojana
           </h4>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Branded packaging aur value addition ke liye 35% tak subsidy. Maximum ₹10 lakh.</p>
           <Link href="/articles/pm-fme-yojana-food-processing" className="text-green-600 hover:underline dark:text-green-400 text-sm font-medium flex items-center gap-1">
@@ -514,7 +514,7 @@ export default function VerminCompost() {
 
         <div className="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-lg border border-amber-200 dark:border-amber-800 hover:shadow-md transition-shadow">
           <h4 className="font-semibold text-amber-900 dark:text-amber-200 mb-2 flex items-center gap-2">
-            ️ PM Fasal Bima Yojana
+            PM Fasal Bima Yojana
           </h4>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Agricultural business ke liye crop insurance coverage. Natural calamities se protection.</p>
           <Link href="/articles/PmfbyCropInsurance2026" className="text-amber-700 hover:underline dark:text-amber-400 text-sm font-medium flex items-center gap-1">

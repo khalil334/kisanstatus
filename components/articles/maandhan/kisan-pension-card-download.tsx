@@ -18,7 +18,7 @@ const RELATED_CARDS = [
     slug: 'pmkmy-bank-account-change',
     title: 'Bank Account Change Karein',
     desc: 'Agar purana bank band ho gaya hai, to naye account me pension details kaise update karein.',
-    emoji: '🏦',
+    emoji: '',
   },
   {
     slug: 'pm-kisan-maandhan-eligibility-documents',

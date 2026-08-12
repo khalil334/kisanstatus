@@ -11,8 +11,8 @@ const RELATED = [
   { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply Guide' },
   { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary Roster 2026' },
   { slug: 'PmKisan24viKist2026', title: '24vi Kist Status' },
-  { slug: 'soil-health-card-complete-guide-2026', title: 'Soil Health Card', emoji: '🌱' },
-  { slug: 'KisanRinKahaSeLe2026', title: 'Kisan Loan Guide', emoji: '🏦' },
+  { slug: 'soil-health-card-complete-guide-2026', title: 'Soil Health Card', emoji: '' },
+  { slug: 'KisanRinKahaSeLe2026', title: 'Kisan Loan Guide', emoji: '' },
   { slug: 'AgriStackKyaHai2026', title: 'Digital Kisan ID' },
 ];
 
@@ -473,7 +473,7 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
         />
 
         <CalcBanner
-          icon="🌾"
+          icon=""
           title="Apni Fasal Ki Income Calculate Karo"
           desc="MSP income, crop profit, KCC EMI — sab free calculators se"
           primaryCta={{ href: '/calculator/msp-income', label: 'MSP Calculator →' }}
@@ -483,7 +483,7 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/soil-health-card-complete-guide-2026', l: '🌱 Soil Card' },
+          { href: '/articles/soil-health-card-complete-guide-2026', l: 'Soil Card' },
           { href: '/articles/KisanCreditCardOnlineApply2026', l: 'KCC Guide' },
           { href: '/calculator/crop-profit', l: 'Crop Profit' },
         ]} />

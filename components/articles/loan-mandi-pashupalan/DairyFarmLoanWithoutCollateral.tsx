@@ -5,10 +5,10 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const RELATED = [
-  { slug: 'sbi-dairy-loan-interest-rate', title: 'SBI Dairy Loan Ka Byaj Kitna', emoji: '🏦' },
-  { slug: 'bihar-pashupalan-loan-yojana', title: 'Bihar Pashupalan Loan Yojana', emoji: '🐃' },
-  { slug: 'murgi-palan-loan-nlm-subsidy', title: 'Murgi Palan Loan & NLM Subsidy', emoji: '🐔' },
-  { slug: 'rashtriya-gokul-mission-subsidy', title: 'Rashtriya Gokul Mission Subsidy', emoji: '🐄' },
+  { slug: 'sbi-dairy-loan-interest-rate', title: 'SBI Dairy Loan Ka Byaj Kitna', emoji: '' },
+  { slug: 'bihar-pashupalan-loan-yojana', title: 'Bihar Pashupalan Loan Yojana', emoji: '' },
+  { slug: 'murgi-palan-loan-nlm-subsidy', title: 'Murgi Palan Loan & NLM Subsidy', emoji: '' },
+  { slug: 'rashtriya-gokul-mission-subsidy', title: 'Rashtriya Gokul Mission Subsidy', emoji: '' },
   { slug: 'jansamarth-portal-loan-apply', title: 'JanSamarth Portal Loan Apply' },
   { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Se Working Capital' },
 ];
@@ -595,8 +595,8 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[
-          { href: '/articles/sbi-dairy-loan-interest-rate', l: '🏦 SBI Dairy Loan Rate' },
-          { href: '/articles/bihar-pashupalan-loan-yojana', l: '🐃 Bihar Pashupalan Loan' },
+          { href: '/articles/sbi-dairy-loan-interest-rate', l: 'SBI Dairy Loan Rate' },
+          { href: '/articles/bihar-pashupalan-loan-yojana', l: 'Bihar Pashupalan Loan' },
           { href: '/articles/category/loan', l: 'Loan Guides' },
         ]} />
         <Disclaimer />

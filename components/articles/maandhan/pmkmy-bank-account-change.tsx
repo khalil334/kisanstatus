@@ -213,7 +213,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
           </p>
           <div className="grid md:grid-cols-2 gap-4 mb-4">
             <div className="bg-blue-50 dark:bg-blue-900/20 p-5 rounded-lg border border-blue-100 dark:border-blue-800">
-              <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">🏦 Bank Branch Band Hona</h3>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">Bank Branch Band Hona</h3>
               <p className="text-sm text-[var(--color-text-muted)]">Chhoti branches ka merger ya permanent closure — gaon me ye ab common ho gaya hai.</p>
             </div>
             <div className="bg-green-50 dark:bg-green-900/20 p-5 rounded-lg border border-green-100 dark:border-green-800">
@@ -229,7 +229,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
               <p className="text-sm text-[var(--color-text-muted)]">Bank merger ya technology upgrade se IFSC code badal jata hai.</p>
             </div>
             <div className="bg-purple-50 dark:bg-purple-900/20 p-5 rounded-lg border border-purple-100 dark:border-purple-800">
-              <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">👥 Joint Account Issue</h3>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">Joint Account Issue</h3>
               <p className="text-sm text-[var(--color-text-muted)]">Joint account se individual account me shift karna — especially widow/divorce cases me.</p>
             </div>
             <div className="bg-pink-50 dark:bg-pink-900/20 p-5 rounded-lg border border-pink-100 dark:border-pink-800">

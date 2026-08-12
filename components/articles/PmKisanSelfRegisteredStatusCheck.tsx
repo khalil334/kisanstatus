@@ -370,7 +370,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
               <p className="text-xs text-[var(--color-text-muted)]">Mon-Sat, 9 AM - 6 PM</p>
             </div>
             <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
-              <p className="font-black text-blue-800 dark:text-blue-300 text-sm mb-2">🏢 Block Office</p>
+              <p className="font-black text-blue-800 dark:text-blue-300 text-sm mb-2">Block Office</p>
               <p className="text-xs text-[var(--color-text-muted)]">Agriculture Officer se milo</p>
               <p className="text-xs text-[var(--color-text-muted)]">Written complaint do</p>
             </div>

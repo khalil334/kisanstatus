@@ -15,8 +15,8 @@ const RELATED = [
   { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List Check' },
   { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Loan Apply' },
   { slug: 'PmKisanMobileNumberChangeUpdate', title: 'Mobile Number Change Guide' },
-  { slug: 'PmKisanFaceAuthenticationEkyc', title: 'Face Auth eKYC Guide', emoji: '🤳' },
-  { slug: 'PmKisanLandSeedingForm', title: 'Land Seeding Form', emoji: '🌱' },
+  { slug: 'PmKisanFaceAuthenticationEkyc', title: 'Face Auth eKYC Guide', emoji: '' },
+  { slug: 'PmKisanLandSeedingForm', title: 'Land Seeding Form', emoji: '' },
 ];
 
 const FAQS_DATA = [
@@ -185,7 +185,7 @@ export default function PmKisanCorrectionForm2026({ article }: { article: Articl
             <strong>Kitna Kharcha?</strong> CSC wale ₹20 se ₹30 lete hain is kaam ke liye. Ye official charge hai. Agar koi ₹100-200 maang raha hai toh usko mat do, dusre center par chale jao. Kuch log form ka PDF khud download karke offline bharne ki koshish karte hain, lekin online submission ke liye CSC ya portal hi zaroori hai.
           </WB>
           <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
-            <p className="font-black text-blue-800 dark:text-blue-300 text-sm mb-2">🤔 Self Correction vs CSC Correction — Kaunsa Behtar?</p>
+            <p className="font-black text-blue-800 dark:text-blue-300 text-sm mb-2">Self Correction vs CSC Correction — Kaunsa Behtar?</p>
             <p className="text-xs text-[var(--color-text-muted)] leading-relaxed">
               Farq sirf speed ka hai. Online khud karo toh free hai par OTP chahiye. CSC se karo toh ₹30 lagte hain par biometric se instant verify ho jata hai. Agar mobile number active hai toh khud karo, agar band hai toh CSC jao.
             </p>

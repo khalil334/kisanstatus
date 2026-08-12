@@ -44,13 +44,13 @@ const RELATED_CARDS = [
     href: '/articles/PmKisanMaandhanYojanaPension',
     title: 'PM Kisan Maandhan Details',
     desc: 'Agar aap kisan hain, toh janien Maandhan pension scheme mein auto-debit kaise set aur manage karein.',
-    emoji: '👨‍🌾',
+    emoji: '',
   },
   {
     href: '/maandhan/pmkmy-bank-account-change',
     title: 'Bank Account Update',
     desc: 'Registered bank account change ya NACH mandate update karne ka complete step-by-step process.',
-    emoji: '🏦',
+    emoji: '',
   },
 ];
 
@@ -458,8 +458,8 @@ export default function AutoDebitFailRegularization() {
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
           { href: '/articles/KisanTractorLoan2026', l: 'CIBIL & Tractor Loan' },
-          { href: '/articles/PmKisanMaandhanYojanaPension', l: '👨‍🌾 Maandhan Yojana' },
-          { href: '/maandhan/pmkmy-bank-account-change', l: '🏦 Bank Change' },
+          { href: '/articles/PmKisanMaandhanYojanaPension', l: 'Maandhan Yojana' },
+          { href: '/maandhan/pmkmy-bank-account-change', l: 'Bank Change' },
         ]} />
         <Disclaimer />
       </div>
