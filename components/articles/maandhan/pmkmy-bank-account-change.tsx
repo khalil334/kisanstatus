@@ -473,7 +473,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
         </section>
 
         <section className="mb-8">
-          <SH>Ye 7 Baatein Hamesha Yaad Rakhein</SH>
+          <SH>Application Se Pehle Aur Baad Ki 7 Checks</SH>
           <div className="space-y-3">
             <div className="flex items-start">
               <span className="text-red-600 mr-3 font-bold text-xl">!</span>
@@ -514,9 +514,9 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Ek Baat Yaad Rakhein</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Purana Account Kab Band Karein — Iska Jawab Pehla Debit Hai</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Khata badalna shuru me thoda complicated lag sakta hai, lekin agar aap sahi documents aur official CSC process follow karein, to ye bahut aasan hai. Ye ek baar ka process hai, aur uske baad aapki pension life-time naye account me aayegi. Agar aapko koi confusion hai ya process me koi dikkat aa rahi hai, to apne nazdeeki CSC ya bank branch par zaroor jaayein.
+            Is process ki ek hi galti mehengi padti hai: confirmation aane se pehle purana account band kar dena. Sahi sequence yeh hai — change application ke waqt purane account mein 3 mahine ka contribution balance rakhein, naye account ka Aadhaar-link aur IFSC do baar milaayein, aur jab tak pehla contribution naye account se kat-ta hua na dikhe, purana account chalu rakhein. Wahi pehla debit is transfer ka asli "completion certificate" hai; acknowledgement slip uske record ke saath sambhaal kar rakh lein.
           </p>
         </div>
 

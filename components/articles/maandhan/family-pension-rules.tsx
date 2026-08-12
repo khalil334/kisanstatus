@@ -393,9 +393,9 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Ek Baat Yaad Rakhein</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Claim Ka Sahi Order: Certificate → Nomination → Bank</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Aapke loved one ne jo paisa jama kiya, woh ek right hai, koi ehsaan nahi. System thoda slow ho sakta hai, lekin persistence se kaam zaroor hota hai. Ek step ek time lein. Pehle death certificate, phir nomination check, phir bank visit. Kisi bhi official ko aapko darane na dein. Aapka haq hai wahan khade hone ka.
+            Family pension ke claim atakne ki sabse badi wajah order ka ulta hona hai — log pehle bank jaate hain aur wahan se nomination record dekhne wapas bheje jaate hain. Sahi kram yeh hai: pehle death certificate banwayein, phir CSC/maandhan record mein nominee ka naam aur spelling check karein, tabhi bank jaayein. Spouse ko milne wali ₹1,500 (50%) pension inhi teen kadmon ke sahi order par tikti hai — jama kiya hua paisa parivaar ka adhikaar hai, aur record saaf ho toh koi official use rok nahi sakta.
           </p>
         </div>
 

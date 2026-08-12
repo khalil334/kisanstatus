@@ -388,12 +388,12 @@ export default function PmKisanMaandhanPensionCalculator({ article }: { article:
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Aakhri Baat</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Calculator Ka Asli Sabak: Har Birthday Mehenga Hai</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Hisaab seedha hai: jitni jaldi judenge, utna kam bharna padega. 18 saal ki age mein ₹55 chhoti si rakam lagti hai, lekin yahi faisla 60 ki umar mein ₹3,000 ki pakki income mein badal jata hai. Sirf amount hi nahi, family ke liye continuation aur nominee wali suvidha bhi ise ek balanced choice banati hai.
+            Upar ke calculations mein ek pattern chhupa hai jo table dekhe bina nahi dikhta: 25 se 40 ke beech monthly contribution ₹80 se ₹200 ho jaata hai — yaani wahi ₹3,000 pension, dhaai guna daam par. Enrollment ki umar hi is scheme ka asli "interest rate" hai. Calculator se apni exact umar ka slab nikaal lein aur usi ko final maan kar plan karein — andaaze ka slab aur asli slab mein farak aksar form bharte waqt hi pata chalta hai.
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
-            Agar abhi tak <Link href="/maandhan/pm-kisan-maandhan-registration-2026" className="underline text-blue-600 dark:text-blue-400 font-medium">registration</Link> nahi karwaya, to documents ek baar check karke aaj hi apply kar dein.
+            Slab confirm ho jaye toh <Link href="/maandhan/pm-kisan-maandhan-registration-2026" className="underline text-blue-600 dark:text-blue-400 font-medium">registration</Link> se pehle nominee ka naam bhi tay kar lein — spouse continuation aur ₹1,500 family pension ka poora ganit usi entry par depend karta hai.
           </p>
         </div>
 

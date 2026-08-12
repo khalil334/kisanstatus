@@ -409,9 +409,9 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Ek Baat Yaad Rakhein</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Download Ke Turant Baad Ye Do Cheezein Milaayen</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Dekhiye, sarkari schemeon me kagaz sambhaalna thoda thaka dene wala kaam zaroor hai. Lekin jab 60 saal ki umar me har mahine 3000 rupaye aapke account me aayenge bina kisi bheek ya bhaag-daud ke — tab aapko ye chhoti si mehnat yaad aayegi aur achha lagega. Agar aapke koi aur sawal hain jo yahan cover nahi hue, to apne nazdeeki CSC ya bank branch me jaakar zaroor puchiye.
+            Card download hote hi file band mat kijiye — do cheezein Aadhaar se milaa lijiye: naam ki spelling aur date of birth. Chhota sa spelling farak (Ram/Raam) chalta hai, lekin poora naam ya janm tithi galat hai toh correction request CSC ya bank branch se abhi karwa lijiye, kyunki iska koi fixed SLA nahi hai aur 60 saal ke waqt yehi mismatch pension release rok sakta hai. Correction dete waqt acknowledgement lena mat bhooliye — wahi aapka proof hai.
           </p>
         </div>
 
