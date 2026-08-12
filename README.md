@@ -71,7 +71,7 @@ npm start
 
 - [ ] Every page has unique title + meta description
 - [ ] Canonical URL matches actual page URL (no copy-pasted homepage canonical)
-- [ ] Author is consistently "KisanStatus Team" across all pages
+- [ ] Author is consistently "Manish Kumar" across all pages
 - [ ] No orphaned/legacy routes live outside this app's route structure
 - [ ] `sitemap.ts` only lists real, current URLs
 
