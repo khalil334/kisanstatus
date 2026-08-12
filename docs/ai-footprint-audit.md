@@ -549,7 +549,7 @@ P0/P1 are where the AI feel actually lives. P2/P3 are polish.
 
 - Cut/replace `zaroor` (362×) and `turant` (98×) where they are pure intensifiers; also `complete guide`, `bilkul free hai`, `step by step`, `is guide mein`. Sentence-level micro-edits only; no paragraph is restructured; word count stays ~same (replace, don't delete, where possible).
 
-### Part 5 — Keyword de-stuffing (careful, protected)
+### Part 5 — Keyword de-stuffing (careful, protected) ✅ DONE (2026-08-12, PR #262)
 
 *Files: 8 worst first (`soil-health-card…`, `PMFMEYojana`, `VerminCompost`, `PmKusum…`, `PmKisanStateNodalOfficerList`, `RythuBharosaStatusCheck`, `KrishakUnnatiYojanaStatusCheck`, `maandhan/…AutoDebitPooraSach`) · Type: per-article copy*
 
@@ -567,6 +567,12 @@ P0/P1 are where the AI feel actually lives. P2/P3 are polish.
 Part 1 → Part 2 → Part 3 (a–d) → Part 4 → Part 5 → Part 6. Each part ships as its own PR and waits for owner review before the next starts.
 
 ## 12. Changelog
+
+### 2026-08-12 — Part 5 complete (`fix/part-5-keyword-destuffing`, PR #262)
+
+- Reduced surplus mid-body repeats of the 8 branded head phrases to natural variants ("is scheme", "yeh", "raqam", "adhikari", short forms, pronouns). Anchor placements (title, H1, intro, headings, FAQ questions, metadata, alt text, keywords arrays, URLs) untouched, per ground rule 3's conservative reading.
+- Total file occurrences before → after: soil health 29→18 · pm fme 48→32 · vermi compost 40→30 · pm kusum 35→24 · nodal officer 34→21 · rythu bharosa 31→20 · antar rashi 28→13 · auto debit 35→26. Remaining hits are dominated by anchors and structural strings; body-prose density is now in the ~5–7/1000w range.
+- 8 files, 86 lines changed, no sentences removed.
 
 ### 2026-08-12 — Part 4 complete (4 batches, PRs #257 / #258 / #259 / #260)
 
