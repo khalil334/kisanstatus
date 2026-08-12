@@ -35,7 +35,7 @@ const FAQS_DATA = [
   },
   {
     q: 'PMKMY grievance ka email address kya hai?',
-    a: 'Official grievance email hai: scpms@licindia.com (PMKMY ke liye specific). Agar aap LIC se directly contact karna chahte hain to co_complaints@licindia.com par bhi email kar sakte hain. Email mein apna Subscriber ID, registered mobile number, aur clear issue zaroor likhein.',
+    a: 'Official grievance email hai: scpms@licindia.com (PMKMY ke liye specific). Agar aap LIC se directly contact karna chahte hain to co_complaints@licindia.com par bhi email kar sakte hain. Email mein apna Subscriber ID, registered mobile number, aur clear issue likh kar bhejein.',
   },
   {
     q: 'Online grievance file karne ke baad reply aane mein kitna samay lagta hai?',
@@ -281,7 +281,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
               sizes="(max-width: 768px) 100vw, 768px"
             />
             <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-              Online grievance form — Complaint reference number zaroor note karein
+              Online grievance form — Complaint reference number likh lein
             </p>
           </div>
 
@@ -331,7 +331,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
               sizes="(max-width: 768px) 100vw, 768px"
             />
             <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-              CSC center par jaate waqt acknowledgement slip zaroor lein
+              CSC center par jaate waqt acknowledgement slip maang kar lein
             </p>
           </div>
 
@@ -464,7 +464,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
               <span className="text-red-600 mr-3 font-bold text-xl">✗</span>
               <div>
                 <p className="text-sm font-bold text-gray-900 dark:text-white">Ek baar request karke chhod dena</p>
-                <p className="text-xs text-[var(--color-text-muted)]">Agar 7 din mein reply na aaye, to follow-up zaroor karein.</p>
+                <p className="text-xs text-[var(--color-text-muted)]">Agar 7 din mein reply na aaye, to follow-up kar lein.</p>
               </div>
             </div>
             <div className="flex items-start bg-red-50 dark:bg-red-900/10 p-3 rounded-lg">
@@ -478,7 +478,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
               <span className="text-red-600 mr-3 font-bold text-xl">✗</span>
               <div>
                 <p className="text-sm font-bold text-gray-900 dark:text-white">Documents attach nahi karna</p>
-                <p className="text-xs text-[var(--color-text-muted)]">Bank statement, screenshot, receipt — jo bhi proof ho, use zaroor attach karein.</p>
+                <p className="text-xs text-[var(--color-text-muted)]">Bank statement, screenshot, receipt — jo bhi proof ho, use saath attach karein.</p>
               </div>
             </div>
           </div>

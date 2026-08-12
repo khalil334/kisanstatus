@@ -17,7 +17,7 @@ const RELATED_CARDS = [
   {
     slug: 'pm-kisan-maandhan-pension-calculator',
     title: 'Apna Contribution Nikalein',
-    desc: 'Umar daliye aur turant dekhiye har mahine kitna jama karna hoga.',
+    desc: 'Umar daliye aur wahin dekhiye har mahine kitna jama karna hoga.',
     
   },
   {
@@ -35,7 +35,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Auto-debit band kaise karein PM Kisan Maandhan se?',
-    a: 'Apni bank branch jakar NACH mandate cancellation form submit karein, ya net banking/mobile banking ke "Mandates" section se cancel karein. 5-7 din mein process complete ho jata hai. Cancellation ka acknowledgement receipt zaroor lein.',
+    a: 'Apni bank branch jakar NACH mandate cancellation form submit karein, ya net banking/mobile banking ke "Mandates" section se cancel karein. 5-7 din mein process complete ho jata hai. Cancellation ka acknowledgement receipt maang kar lein.',
   },
   {
     q: 'Kya PM Kisan aur PM Kisan Maandhan alag scheme hain?',
@@ -144,7 +144,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
-          Aaj ke is guide mein main aapko bataunga ke yeh auto-debit kaise kaam karta hai, kyun kat ta hai, kitna kat ta hai, aur agar aap chahein toh is process ko kaise control kar sakte hain. Saath hi yeh bhi samjhaunga ke agar kisi mahine payment miss ho jaye toh kya hota hai, aur default hone se kaise bacha jaye. Sab kuch official sources — PIB release, DAC&amp;FW operational guidelines, aur maandhan.in portal — se verify karke.
+          Aaj main aapko yahan bataunga ke yeh auto-debit kaise kaam karta hai, kyun kat ta hai, kitna kat ta hai, aur agar aap chahein toh is process ko kaise control kar sakte hain. Saath hi yeh bhi samjhaunga ke agar kisi mahine payment miss ho jaye toh kya hota hai, aur default hone se kaise bacha jaye. Sab kuch official sources — PIB release, DAC&amp;FW operational guidelines, aur maandhan.in portal — se verify karke.
         </p>
 
         <section className="mb-8">
@@ -246,7 +246,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
             Jab aapka monthly share due hota hai, toh LIC demand generate karti hai. Sponsor bank IDBI usse NPCI ke through aapke bank ko bhejta hai. Aapke bank try karta hai amount debit karne ka. Agar balance nahi hai, toh debit fail ho jata hai. Isko "bounced debit" kehte hain.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Ab yahan official guidelines ka exact process samajhna zaroori hai. DAC&amp;FW ke operational guidelines ke hisaab se, agar auto-debit fail hota hai, toh account "default" mein chala jata hai. Lekin turant khatra nahi hai. LIC demand ko agle payment cycle mein dobara raise karti hai. Payment cycles har mahine 1st, 11th, aur 21st ko hote hain. Agar yeh dates public holiday hain, toh agla working day hota hai.
+            Ab yahan official guidelines ka exact process samajhna zaroori hai. DAC&amp;FW ke operational guidelines ke hisaab se, agar auto-debit fail hota hai, toh account "default" mein chala jata hai. Lekin usi waqt khatra nahi hai. LIC demand ko agle payment cycle mein dobara raise karti hai. Payment cycles har mahine 1st, 11th, aur 21st ko hote hain. Agar yeh dates public holiday hain, toh agla working day hota hai.
           </p>
 
           <div className="space-y-3 mb-4">
@@ -269,7 +269,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
           </div>
 
           <WB>
-            <strong>Default hone se bachne ke liye:</strong> Har hafte apne bank account ka balance check karein. Agar auto-debit fail ho, toh turant CSC center jakar manual payment karein. 3 mahine se zyada gap mat dein. Agar kisi mahine PM Kisan ki kist late aayi, toh manual payment ka option use karein.
+            <strong>Default hone se bachne ke liye:</strong> Har hafte apne bank account ka balance check karein. Agar auto-debit fail ho, toh us hafte hi CSC center jakar manual payment karein. 3 mahine se zyada gap mat dein. Agar kisi mahine PM Kisan ki kist late aayi, toh manual payment ka option use karein.
           </WB>
         </section>
 
@@ -281,7 +281,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
 
           <StepList>
             <SI n={1}><strong>Net Banking / Mobile Banking Se:</strong> Apne bank ke net banking ya mobile banking app mein login karein. "Mandates" ya "Standing Instructions" section mein jayein. Active mandates ki list mein PM-KMY ya LIC wala mandate dhundein. Uspe "Cancel" ya "Delete" karein. Confirmation ke baad ek reference number milega — usse save kar lein. NPCI guidelines ke hisaab se cancellation 5 working days mein complete ho jata hai.</SI>
-            <SI n={2}><strong>Bank Branch Ja Kar:</strong> Apni bank branch mein jayein aur NACH mandate cancellation form maangein. Form mein account number, mandate reference number (agar pata ho), scheme name (PM Kisan Maandhan Yojana), aur cancellation reason likhein. Saath mein Aadhaar card aur bank passbook le jayein. Form submit karne ke baad bank se acknowledgement receipt zaroor lein. RBI aur NPCI guidelines ke hisaab se koi cancellation charge nahi lagti.</SI>
+            <SI n={2}><strong>Bank Branch Ja Kar:</strong> Apni bank branch mein jayein aur NACH mandate cancellation form maangein. Form mein account number, mandate reference number (agar pata ho), scheme name (PM Kisan Maandhan Yojana), aur cancellation reason likhein. Saath mein Aadhaar card aur bank passbook le jayein. Form submit karne ke baad bank se acknowledgement receipt le lein. RBI aur NPCI guidelines ke hisaab se koi cancellation charge nahi lagti.</SI>
             <SI n={3}><strong>Confirmation:</strong> Aapko confirmation SMS aayega jismein UMR number, entity name, account ke last 4 digits, aur cancellation date likhi hogi. Process 5-7 working days mein complete hota hai.</SI>
           </StepList>
 
@@ -301,7 +301,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Bank se cancellation ka acknowledgement receipt zaroor lein
+            Bank se cancellation ka acknowledgement receipt leke aaiye
           </p>
         </div>
 
@@ -352,7 +352,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
               { title: '"Kya government ne meri marzi ke bagair paisa kat liya?"', desc: 'Nahi. Aapne hi enrollment form mein consent di thi. Form mein clearly likha hota hai ke aap authorize kar rahe hain automatic debit ke liye. Agar aapko yaad nahi, toh shayad CSC operator ne theek se explain nahi kiya tha. Lekin legally aapne sign kiya hai, isliye bank debit karne ka haq rakhta hai.' },
               { title: '"Kya main Maandhan se nikal kar PM Kisan ka pura paisa le sakta hoon?"', desc: 'Dono schemes ka koi direct link nahi hai. PM Kisan ka paisa aapko milta hi rahega chahe aap Maandhan mein ho ya na ho. Maandhan se exit karne ke rules aapke joining ke saalon par depend karte hain: 10 saal se pehle exit karne par sirf aapka deposited amount + savings bank interest wapas milta hai. 10 saal ke baad (lekin 60 saal se pehle) exit karne par contribution + accumulated interest milta hai.' },
               { title: '"Mera share zyada kyun kat raha hai? Maine toh ₹55 bola tha."', desc: 'Share aapki entry age ke hisaab se fix hota hai. 18 saal pe ₹55, 25 pe ₹80, 30 pe ₹105, 40 pe ₹200. Agar zyada kat raha hai, toh ho sakta hai enrollment ke waqt aapki date of birth galat enter hui ho. Date of birth kabhi change nahi hoti, lekin agar genuine mistake hai toh CSC pe correction request daal sakte hain.' },
-              { title: '"Kya main apna share amount baad mein badal sakta hoon?"', desc: 'Nahi. Entry age ke hisaab se jo amount fix hua hai, woh poori scheme duration ke liye wahi rehta hai. Isliye enrollment se pehle apni financial situation zaroor dekh lein.' },
+              { title: '"Kya main apna share amount baad mein badal sakta hoon?"', desc: 'Nahi. Entry age ke hisaab se jo amount fix hua hai, woh poori scheme duration ke liye wahi rehta hai. Isliye enrollment se pehle apni financial situation thok-bajaa kar dekh lein.' },
             ].map(({ title, desc }) => (
               <div key={title} className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
                 <p className="font-black text-sm text-[var(--color-text)] mb-1">{title}</p>

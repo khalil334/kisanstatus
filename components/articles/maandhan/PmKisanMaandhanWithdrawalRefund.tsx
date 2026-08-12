@@ -137,7 +137,7 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Exit se pehle apni passbook aur contribution history zaroor check karein
+            Exit se pehle apni passbook aur contribution history milaa kar check karein
           </p>
         </div>
 
@@ -354,7 +354,7 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Exit Ki Asli Keemat Sarkari Hissa Hai</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Withdrawal form bharne se pehle ek hisaab zaroor kar lein: voluntary exit par sirf aapka apna jama hissa
+            Withdrawal form bharne se pehle ek hisaab kaagaz par kar lein: voluntary exit par sirf aapka apna jama hissa
             (+ interest) wapas aata hai — sarkar ka 1:1 co-contribution fund mein hi reh jaata hai. Yaani jitne saal
             aap scheme mein rahe, utne saal ka matching paisa exit ke din chhod dete hain. Majboori ho toh yeh rasta
             khula hai, lekin "paisa phas gaya" wali ghabrahat mein exit karna aadha corpus chhod kar jaana hai — aur
