@@ -4,7 +4,7 @@ import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
 import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 import GuideDisclaimer from '@/components/GuideDisclaimer';
-import { AuthorBox } from '@/components/ArticleShared';
+import { AuthorBox, FAQBlock } from '@/components/ArticleShared';
 import { getArticleBySlug } from '@/lib/articles-data';
 
 export const metadata: Metadata = {
@@ -46,58 +46,28 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'FAQPage',
-      '@id': 'https://kisanstatus.com/articles/pm-matsya-sampada-yojana-fish-farming/#faq',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Kya kiraye ki zameen par fish farming karne par subsidy milti hai?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Haan, lekin rent agreement kam se kam 7-10 saal ka hona chahiye. Subsidy ke liye aapka pond construction ya setup apni ownership mein hona chahiye. Rent par sirf operational costs cover hote hain.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Kya biofloc technology mein electricity ka kharcha bahut zyada hai?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Haan, biofloc mein aerators 24x7 chalne padte hain. Ek 10-tank setup ka monthly electricity bill ₹3,000 - ₹5,000 tak aa sakta hai. Solar panels lagane se yeh cost kam ki ja sakti hai.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Pehli baar fish farming karne wale ke liye kaunsi technology best hai?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Traditional pond farming sabse best hai beginners ke liye. Isme risk kam hai, technical complexity kam hai, aur PMMSY subsidy bhi ispar zyada milti hai (40-60%).',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Kya fish farming mein insurance available hai?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Kuch states mein PM Fasal Bima Yojana ke under fisheries ko cover kiya ja raha hai. Natural calamities, disease outbreak, aur flood ke liye insurance available hai. Apne zila ke fisheries office se pata karein.',
-          },
-        },
-      ],
-    },
-  ],
-};
+const pMatsyaSampadaFaqs = [
+  {
+    q: 'Kya kiraye ki zameen par fish farming karne par subsidy milti hai?',
+    a: 'Haan, lekin rent agreement kam se kam 7-10 saal ka hona chahiye. Subsidy ke liye aapka pond construction ya setup apni ownership mein hona chahiye. Rent par sirf operational costs cover hote hain.',
+  },
+  {
+    q: 'Kya biofloc technology mein electricity ka kharcha bahut zyada hai?',
+    a: 'Haan, biofloc mein aerators 24x7 chalne padte hain. Ek 10-tank setup ka monthly electricity bill ₹3,000 - ₹5,000 tak aa sakta hai. Solar panels lagane se yeh cost kam ki ja sakti hai.',
+  },
+  {
+    q: 'Pehli baar fish farming karne wale ke liye kaunsi technology best hai?',
+    a: 'Traditional pond farming sabse best hai beginners ke liye. Isme risk kam hai, technical complexity kam hai, aur PMMSY subsidy bhi ispar zyada milti hai (40-60%).',
+  },
+  {
+    q: 'Kya fish farming mein insurance available hai?',
+    a: 'Kuch states mein PM Fasal Bima Yojana ke under fisheries ko cover kiya ja raha hai. Natural calamities, disease outbreak, aur flood ke liye insurance available hai. Apne zila ke fisheries office se pata karein.',
+  },
+];
 
 export default function PMatsyaSampada() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-8 text-gray-800 dark:text-gray-200 leading-relaxed prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-blue-600 dark:prose-a:text-blue-400">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-
       <Image
         src="/images/kisanguides/fish-farming-hero.webp"
         alt="Fish Pond with Rohu and Catla - PM Matsya Sampada Yojana Subsidy Guide"
@@ -714,24 +684,7 @@ export default function PMatsyaSampada() {
       <h2 id="faq" className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Matsya Sampada Yojana — Sawal Jawab Corner
       </h2>
-      <div className="space-y-4 mb-8 not-prose">
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">1. Kya kiraye ki zameen par fish farming karne par subsidy milti hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Haan, lekin rent agreement kam se kam 7-10 saal ka hona chahiye. Subsidy ke liye aapka pond construction ya setup apni ownership mein hona chahiye. Rent par sirf operational costs cover hote hain.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">2. Kya biofloc technology mein electricity ka kharcha bahut zyada hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Haan, biofloc mein aerators 24x7 chalne padte hain. Ek 10-tank setup ka monthly electricity bill ₹3,000 - ₹5,000 tak aa sakta hai. Solar panels lagane se yeh cost kam ki ja sakti hai.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">3. Pehli baar fish farming karne wale ke liye kaunsi technology best hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Traditional pond farming sabse best hai beginners ke liye. Isme risk kam hai, technical complexity kam hai, aur PMMSY subsidy bhi ispar zyada milti hai (40-60%).</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">4. Kya fish farming mein insurance available hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Kuch states mein PM Fasal Bima Yojana ke under fisheries ko cover kiya ja raha hai. Natural calamities, disease outbreak, aur flood ke liye insurance available hai. Apne zila ke fisheries office se pata karein.</p>
-        </div>
-      </div>
+      <FAQBlock faqs={pMatsyaSampadaFaqs} variant="inline" />
 
       <AuthorBox modified={getArticleBySlug('pm-matsya-sampada-yojana-fish-farming')!.modifiedTime} />
 
