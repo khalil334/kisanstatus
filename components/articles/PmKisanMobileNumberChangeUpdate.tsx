@@ -45,7 +45,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Mobile number change karne ke baad OTP aane mein kitna time lagta hai?',
-    a: 'Iska koi official fixed time publish nahi hai. Database sync mein kuch din lag sakte hain — turant check karne par purana number hi dikh sakta hai. Din-do-din ruk kar test karo; agar hafta nikal jaye aur naya number reflect na ho, to usi CSC par receipt leke wapas jao ya PM Kisan helpline par transaction ID ke saath baat karo.',
+    a: 'Iska koi official fixed time publish nahi hai. Database sync mein kuch din lag sakte hain — usi din check karne par purana number hi dikh sakta hai. Din-do-din ruk kar test karo; agar hafta nikal jaye aur naya number reflect na ho, to usi CSC par receipt leke wapas jao ya PM Kisan helpline par transaction ID ke saath baat karo.',
   },
   {
     q: 'Kya pm kisan registered mobile change karne se meri kist rukegi?',
@@ -237,7 +237,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           <WB>
             <strong>Paise Ki Baat:</strong>
             <p className="text-xs text-[var(--color-text-muted)] mt-2">
-              Kitne paise lagenge? Har CSC center ko apna rate card display karna hota hai — kaam se pehle usi se charge confirm karo aur kaam ke baad <strong>receipt zaroor lo</strong> (us par amount aur transaction ID dono hote hain). Operator rate card se alag ya bahut zyada maang raha hai to behes karne ki zaroorat nahi — uski CSC ID note karo, digitalseva portal par complaint daalo, aur kaam kisi doosre center se karwa lo.
+              Kitne paise lagenge? Har CSC center ko apna rate card display karna hota hai — kaam se pehle usi se charge confirm karo aur kaam ke baad <strong>receipt leke hi hatna</strong> (us par amount aur transaction ID dono hote hain). Operator rate card se alag ya bahut zyada maang raha hai to behes karne ki zaroorat nahi — uski CSC ID note karo, digitalseva portal par complaint daalo, aur kaam kisi doosre center se karwa lo.
             </p>
           </WB>
 
@@ -278,7 +278,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
               <li>Form mein naya mobile number clearly likho.</li>
               <li>Form ke sath Aadhaar ki self-attested (khud se sign ki hui) copy lagao.</li>
               <li>Agar office wale bole, toh patwari ya Lekhpal se sign karwa kar lao (kabhi kabhi wo mangte hain).</li>
-              <li>Form counter par jama karo aur ek receiving (acknowledgement) zaroor lo.</li>
+              <li>Form counter par jama karo aur ek receiving (acknowledgement) maang kar lo.</li>
             </ol>
           </div>
           <Image
@@ -428,8 +428,8 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
                 fix: 'Bina receipt ke kaam hua hi nahi maana jata. Receipt par Transaction ID hoti hai, jisse aap baad mein track kar sakte ho ki kaam hua ya nahi.'
               },
               {
-                mistake: 'Turant Status Check Karne Chale Jana',
-                fix: 'Mobile update turant reflect nahi hota — database sync mein kuch din lag sakte hain. Turant check karne par purana number hi dikh sakta hai; ek-do din ruk kar test karo, aur receipt tab tak sambhal kar rakho.'
+                mistake: 'Usi Din Status Check Karne Chale Jana',
+                fix: 'Mobile update usi waqt reflect nahi hota — database sync mein kuch din lag sakte hain. Same-day check karne par purana number hi dikh sakta hai; ek-do din ruk kar test karo, aur receipt tab tak sambhal kar rakho.'
               },
             ].map(({ mistake, fix }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">

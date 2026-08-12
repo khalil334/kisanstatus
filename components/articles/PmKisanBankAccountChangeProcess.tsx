@@ -42,7 +42,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Agar purana account band ho gaya toh?',
-    a: 'Turant naya account khulwa kar link karwao. Beech ki kist fail hogi, lekin correction form ya CSC se update karwane ke baad agle cycle mein naye account mein aa jaayegi. Koshish karo account dormant hone se pehle hi ye kaam nipta lo.',
+    a: 'Naya account khulwa kar bina der link karwao. Beech ki kist fail hogi, lekin correction form ya CSC se update karwane ke baad agle cycle mein naye account mein aa jaayegi. Koshish karo account dormant hone se pehle hi ye kaam nipta lo.',
   },
   {
     q: 'Naya bank account kis naam par hona chahiye?',
@@ -173,7 +173,7 @@ export default function PmKisanBankAccountChangeProcess() {
               <strong>CSC Operator Ko Boliye:</strong> Saaf-saaf boliye "PM Kisan Bank Account Update karna hai". Jab operator details daal raha ho, screen ki ek photo le lo — kisi gadbad mein ye proof kaam aayega.
             </SI>
             <SI n={3}>
-              <strong>Details Enter:</strong> Naya account number aur IFSC daala jaayega, purana apne aap hat jaayega. Transaction ID zaroor note karo.
+              <strong>Details Enter:</strong> Naya account number aur IFSC daala jaayega, purana apne aap hat jaayega. Transaction ID likh kar rakh lo.
             </SI>
             <SI n={4}>
               <strong>OTP Verification:</strong> Mobile par OTP aayega, wo daalne ke baad hi process poora hoga.
@@ -229,7 +229,7 @@ export default function PmKisanBankAccountChangeProcess() {
             className="w-full rounded-xl my-4"
           />
           <IB>
-            <strong>Andar Ki Baat:</strong> Bank branch wale aksar bolte hain "server down hai, kal aana". Aise mein gussa mat hone ka. Unse pre-printed Aadhaar seeding form maang lijiye, ghar par fill karke agle din jama kar aaiye. Form par receipt zaroor lijiye. Bank se bahar aane ke baad *99# dial karke check kar lijiye ki seeding successful hui ya nahi.
+            <strong>Andar Ki Baat:</strong> Bank branch wale aksar bolte hain "server down hai, kal aana". Aise mein gussa mat hone ka. Unse pre-printed Aadhaar seeding form maang lijiye, ghar par fill karke agle din jama kar aaiye. Form par receipt lekar hi wapas aaiye. Bank se bahar aane ke baad *99# dial karke check kar lijiye ki seeding successful hui ya nahi.
           </IB>
         </section>
 
@@ -306,7 +306,7 @@ export default function PmKisanBankAccountChangeProcess() {
               },
               {
                 mistake: 'NPCI Seeding Bhool Gaye',
-                fix: 'Portal par account update karne ke baad bank jakar NPCI seeding zaroor karwani chahiye. Warna paisa aayega nahi.',
+                fix: 'Portal par account update karne ke baad bank jakar NPCI seeding bhi karwani chahiye. Warna paisa aayega nahi.',
               },
               {
                 mistake: 'Jan Dhan Account Bina Active Kiye Link Kar Diya',

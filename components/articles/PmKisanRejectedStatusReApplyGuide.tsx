@@ -39,7 +39,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Agar dobara apply karne par bhi reject ho jaye toh?',
-    a: 'Toh phir aapko apne district ke Agriculture Officer ya State Nodal Officer ko physical complaint deni padegi. Email ya phone par baat karo. Unke contact details is article mein neeche diye hain.',
+    a: 'Toh phir aapko apne district ke Agriculture Officer ya State Nodal Officer ko physical complaint deni padegi. Email ya phone par baat karo. Unke contact details neeche wali list mein diye hain.',
   },
   {
     q: 'Income tax filer hoon, kya main dobara apply karun?',
@@ -142,7 +142,7 @@ export default function PmKisanRejectedStatusReApplyGuide() {
           </DB>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
-            Neeche har rejection reason alag-alag diya hai, aur saath mein ye bhi ki <strong>pm kisan dobara apply kaise karein</strong> ka sahi tarika kya hai. <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">beneficiary status page</Link> check karne se pehle ye guide zaroor padh lena.
+            Neeche har rejection reason alag-alag diya hai, aur saath mein ye bhi ki <strong>pm kisan dobara apply kaise karein</strong> ka sahi tarika kya hai. <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">beneficiary status page</Link> check karne se pehle ye guide padh lena.
           </p>
         </section>
 
@@ -235,7 +235,7 @@ export default function PmKisanRejectedStatusReApplyGuide() {
               <strong>OTP Se Pushti:</strong> Mobile par OTP aayega. Verify karo. Form submit ho jayega.
             </SI>
             <SI n={6}>
-              <strong>Parchi Zaroor Lena:</strong> Ek nayi acknowledgement slip milegi. Us par "Correction Request Submitted" likha hoga. Usko sambhal kar rakho.
+              <strong>Parchi Leke Aana:</strong> Ek nayi acknowledgement slip milegi. Us par "Correction Request Submitted" likha hoga. Usko sambhal kar rakho.
             </SI>
           </StepList>
 
@@ -318,7 +318,7 @@ export default function PmKisanRejectedStatusReApplyGuide() {
             className="w-full rounded-xl my-4"
           />
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Isliye jab bhi status reject dikhe, turant action lo. Jitna time waste karoge, utne hi mahine ke paise doob sakte hain.
+            Isliye jab bhi status reject dikhe, usi hafte action lo. Jitna time waste karoge, utne hi mahine ke paise doob sakte hain.
           </p>
         </section>
 
@@ -364,7 +364,7 @@ export default function PmKisanRejectedStatusReApplyGuide() {
               },
               {
                 mistake: 'Bina Receipt Ke Wapas Aana',
-                fix: 'CSC wale se acknowledgement slip zaroor lo. Usi par aapka case track hoga.'
+                fix: 'CSC wale se acknowledgement slip maang kar lo. Usi par aapka case track hoga.'
               },
               {
                 mistake: 'Roz Roz Status Check Karna',

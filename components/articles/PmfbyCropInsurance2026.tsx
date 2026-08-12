@@ -59,7 +59,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Survey number ya khasra number galat register ho gaya, kya karein?',
-    a: 'CSC ya bank branch mein jaakar correction request karein, sahi Khatauni ki copy saath le jaayein. Galat survey number ki wajah se claim ke waqt problem aa sakti hai, isliye enrollment ke turant baad status verify kar lena chahiye.',
+    a: 'CSC ya bank branch mein jaakar correction request karein, sahi Khatauni ki copy saath le jaayein. Galat survey number ki wajah se claim ke waqt problem aa sakti hai, isliye enrollment hone ke saath hi status verify kar lena chahiye.',
   },
   {
     q: 'PMFBY app se enrollment ho sakta hai kya?',
@@ -292,7 +292,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
             <SI n={4}>Status table mein policy number, premium paid, aur coverage amount dikhega</SI>
           </StepList>
           <WB>
-            Status "Not Found" dikhe toh iska matlab enrollment complete nahi hua tha ya bank ne data submit hi nahi kiya — apni branch se turant confirm karwayein, deadline nikalne se pehle.
+            Status "Not Found" dikhe toh iska matlab enrollment complete nahi hua tha ya bank ne data submit hi nahi kiya — apni branch se usi din confirm karwayein, deadline nikalne se pehle.
           </WB>
         </section>
 
@@ -300,7 +300,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
           <SH>PMFBY Claim Kaise Milega? (Step by Step)</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Fasal kharab ho gayi toh ghabraane ki zaroorat nahi — ye steps turant follow karein:
+            Fasal kharab ho gayi toh ghabraane ki zaroorat nahi — ye steps bina der follow karein:
           </p>
           <StepList>
             <SI n={1}><strong>48 ghante mein</strong> insurance company ko batao</SI>
