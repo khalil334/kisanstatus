@@ -526,7 +526,7 @@ export default function PariharaPaymentStatusCheck2026({
       </section>
 
       <InfoBox type="warning">
-        <strong>Yaad rakho:</strong> survey, list, status check aur payment — is poori chain
+        <strong>Poori chain free hai:</strong> survey, list, status check aur payment — is poori chain
         me kahin bhi koi sarkari fees nahi hai. Goverment ka relief seedha DBT se aata hai;
         beech me paisa maangne wala har aadmi thag hai. Aisi maang ki shikayat cyber
         helpline 1930 ya nazdeeki police station me karo.
