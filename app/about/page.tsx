@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL, DEFAULT_OG_IMAGE } from '@/lib/site-config';
+import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL, AUTHOR_IMAGE_URL, DEFAULT_OG_IMAGE } from '@/lib/site-config';
 import { ARTICLES } from '@/lib/articles-data';
 
 export const metadata: Metadata = {
@@ -25,7 +25,7 @@ const orgSchema = {
   name: SITE_NAME,
   url: SITE_URL,
   foundingDate: '2025',
-  founder: { '@type': 'Person', name: AUTHOR_NAME },
+  founder: { '@type': 'Person', name: AUTHOR_NAME, url: AUTHOR_URL, image: AUTHOR_IMAGE_URL },
   contactPoint: {
     '@type': 'ContactPoint',
     email: 'kisanstatus.support@gmail.com',
