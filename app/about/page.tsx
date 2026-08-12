@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL, AUTHOR_IMAGE_URL, DEFAULT_OG_IMAGE } from '@/lib/site-config';
+import Image from 'next/image';
+import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL, AUTHOR_IMAGE, AUTHOR_IMAGE_URL, AUTHOR_BIO, SUPPORT_EMAIL, DEFAULT_OG_IMAGE } from '@/lib/site-config';
 import { ARTICLES } from '@/lib/articles-data';
 
 export const metadata: Metadata = {
@@ -33,6 +34,19 @@ const orgSchema = {
     availableLanguage: ['Hindi', 'English'],
   },
   description: 'PM Kisan beneficiary verification, installment dates, eKYC, payment solutions — India ka trusted independent agrarian welfare portal.',
+};
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: AUTHOR_NAME,
+  url: AUTHOR_URL,
+  image: AUTHOR_IMAGE_URL,
+  jobTitle: 'Agricultural Content Expert',
+  worksFor: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+  email: SUPPORT_EMAIL,
+  knowsAbout: ['PM Kisan Samman Nidhi', 'Kisan Credit Card', 'Krishi Yojana', 'Farm Subsidies India'],
+  description: AUTHOR_BIO,
 };
 
 const breadcrumbSchema = {
@@ -80,6 +94,10 @@ export default function AboutPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
       />
 
       <div className="bg-[var(--color-primary)] py-10">
@@ -136,6 +154,50 @@ export default function AboutPage() {
               </a>{' '}
               hi use karein.
             </p>
+          </div>
+        </section>
+
+        <section id="author" className="mb-8 bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
+          <h2 className="text-xl font-black text-[var(--color-text)] mb-5 pb-2 border-b-2 border-[var(--color-border)]">
+            👤 Author Ke Baare Mein
+          </h2>
+          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5">
+            <div className="w-28 h-28 rounded-full overflow-hidden shrink-0 shadow-lg border-4 border-[var(--color-primary)]">
+              <Image
+                src={AUTHOR_IMAGE}
+                alt={AUTHOR_NAME}
+                width={112}
+                height={112}
+                priority
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="text-center sm:text-left">
+              <h3 className="text-lg font-black text-[var(--color-text)]">{AUTHOR_NAME}</h3>
+              <p className="text-sm text-green-700 dark:text-green-400 font-semibold mt-0.5">
+                Founder &amp; Agricultural Content Expert
+              </p>
+              <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mt-3">{AUTHOR_BIO}</p>
+              <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mt-2">
+                PM Kisan, KCC loan, tractor subsidy aur mandi bhav jaise topics par har guide official
+                sources se verify karke likhta hoon, taaki kisan bhaiyon ko sahi aur updated jankari
+                ek hi jagah mil jaye.
+              </p>
+              <div className="flex flex-wrap justify-center sm:justify-start gap-2 mt-4">
+                <a
+                  href={`mailto:${SUPPORT_EMAIL}`}
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--color-bg-alt)] border border-[var(--color-border)] text-[var(--color-text)] text-xs font-bold rounded-xl hover:border-green-400 dark:hover:border-green-600 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500"
+                >
+                  📧 Email Karein
+                </a>
+                <Link
+                  href="/articles"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--color-primary)] text-white text-xs font-bold rounded-xl hover:bg-green-700 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500"
+                >
+                  📚 Sabhi Guides Padhein
+                </Link>
+              </div>
+            </div>
           </div>
         </section>
 
