@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
+import { AuthorBox } from '@/components/ArticleShared';
 import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 import GuideDisclaimer from '@/components/GuideDisclaimer';
 import { getArticleBySlug } from '@/lib/articles-data';
@@ -445,6 +446,8 @@ export default function MushroomKheti() {
         <li><strong>Apne Zile Ka KVK:</strong> District-level practical training modules, hands-on mushroom cultivation support, and local vendor verification.</li>
         <li><strong>FSSAI Ka License:</strong> Regulatory guidelines for packaged mushroom, food safety licensing, and value-added product norms.</li>
       </ul>
+
+      <AuthorBox modified={getArticleBySlug('mushroom-kheti-nhb-subsidy')!.modifiedTime} />
 
       <GuideDisclaimer
         consult="horticulture officers, NHB officials, ya bank managers"

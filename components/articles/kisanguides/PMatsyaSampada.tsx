@@ -4,6 +4,7 @@ import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
 import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 import GuideDisclaimer from '@/components/GuideDisclaimer';
+import { AuthorBox } from '@/components/ArticleShared';
 import { getArticleBySlug } from '@/lib/articles-data';
 
 export const metadata: Metadata = {
@@ -731,6 +732,8 @@ export default function PMatsyaSampada() {
           <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Kuch states mein PM Fasal Bima Yojana ke under fisheries ko cover kiya ja raha hai. Natural calamities, disease outbreak, aur flood ke liye insurance available hai. Apne zila ke fisheries office se pata karein.</p>
         </div>
       </div>
+
+      <AuthorBox modified={getArticleBySlug('pm-matsya-sampada-yojana-fish-farming')!.modifiedTime} />
 
       <GuideDisclaimer
         consult="fisheries officers, aquaculture experts"

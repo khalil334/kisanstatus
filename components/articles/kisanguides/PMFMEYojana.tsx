@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
+import { AuthorBox } from '@/components/ArticleShared';
 import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 import GuideDisclaimer from '@/components/GuideDisclaimer';
 import { getArticleBySlug } from '@/lib/articles-data';
@@ -670,6 +671,8 @@ export default function PMFMEYojana() {
           </Link>
         </div>
       </div>
+
+      <AuthorBox modified={getArticleBySlug('pm-fme-yojana-food-processing')!.modifiedTime} />
 
       <GuideDisclaimer
         consult="CAs, business consultants"
