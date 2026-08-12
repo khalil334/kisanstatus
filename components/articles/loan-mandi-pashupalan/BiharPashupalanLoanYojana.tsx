@@ -240,7 +240,7 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>Apply Kaise Karein — Step by Step</SH>
+        <SH>Apply Kaise Karein — Kadam Se Kadam</SH>
         <StepList>
           <SI n={1}><strong>Notification ka wait karo</strong> — application window saal bhar nahi khuli rehti; 2025 mein last date 25 July thi. dairy.bihar.gov.in aur akhbaar ke vigyapan par nazar rakho. Window aam taur par kuch hafton ki hoti hai.</SI>
           <SI n={2}><strong>Portal par registration karo</strong> — apna Aadhaar, mobile number aur basic details bharo, OTP verify karo.</SI>

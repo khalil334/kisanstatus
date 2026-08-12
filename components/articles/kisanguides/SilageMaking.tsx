@@ -528,7 +528,7 @@ export default function SilageMaking() {
             <li>• Non-dairy area mein ho — grahak milna mushkil hoga.</li>
             <li>• Zameen nahi hai aur contract farming bhi option nahi hai.</li>
             <li>• Marketing se bachte ho — sirf utpadan karke baithna nahi chalega.</li>
-            <li>• Turant returns chahte ho — pehle 6 mahine sirf setup karne mein jaate hain.</li>
+            <li>• Pehle mahine se returns chahte ho — pehle 6 mahine sirf setup karne mein jaate hain.</li>
           </ul>
         </div>
       </div>
@@ -538,7 +538,7 @@ export default function SilageMaking() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Subsidy ka fayda zaroor uthao — 40-50% tak machinery par mil rahi hai. Par ye guaranteed nahi hai. Application process mein 3-6 mahine lag sakte hain, isliye planning subsidy ke bina karo. Mil gayi toh bonus samajh lo.
+        Subsidy ka fayda uthao — 40-50% tak machinery par mil rahi hai. Par ye guaranteed nahi hai. Application process mein 3-6 mahine lag sakte hain, isliye planning subsidy ke bina karo. Mil gayi toh bonus samajh lo.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
@@ -551,7 +551,7 @@ export default function SilageMaking() {
       <FAQBlock faqs={silageMakingFaqs} variant="inline" />
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Related reading: <Link href="/articles/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME Yojana guide</Link> aur <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">KCC online apply karne ka tarika</Link> bhi zaroor padhein, agar aap silage unit ke liye funding plan kar rahe ho.
+        Related reading: <Link href="/articles/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME Yojana guide</Link> aur <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">KCC online apply karne ka tarika</Link> bhi dekh lo, agar aap silage unit ke liye funding plan kar rahe ho.
       </p>
 
       <AuthorBox modified={getArticleBySlug('silage-making-business-guide')!.modifiedTime} />

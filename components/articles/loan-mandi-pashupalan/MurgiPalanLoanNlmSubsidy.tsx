@@ -259,7 +259,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
 
         <WB>
           Subsidy pattern, unit-wise caps aur eligible project types scheme guidelines ke updates ke saath badal
-          sakte hain. Apply se pehle nlm.udyamimitra.in par current guidelines PDF zaroor dekho — aur kisi bhi
+          sakte hain. Apply se pehle nlm.udyamimitra.in par current guidelines PDF khol kar dekho — aur kisi bhi
           &ldquo;guaranteed approval&rdquo; wale agent se door raho. Application free hai aur khud ho jaati hai.
         </WB>
 

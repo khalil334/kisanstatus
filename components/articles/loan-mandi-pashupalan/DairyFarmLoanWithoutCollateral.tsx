@@ -405,7 +405,7 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
         <DB>
           <strong>Sabse aam galti:</strong> working capital DPR mein daala hi nahi jata. Pashu aa gaye, shed ban gaya,
           aur pehle mahine chara kharidne ke paise nahi bache. Bank se udhaar lena mushkil, aur doodh abhi shuru nahi
-          hua. Kam se kam 3 mahine ka chara kharch DPR mein zaroor jodwao.
+          hua. Kam se kam 3 mahine ka chara kharch DPR mein jodwa hi lo.
         </DB>
 
         <Image

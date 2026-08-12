@@ -293,7 +293,7 @@ export default function PMFMEYojana() {
           <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
           <div>
             <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">Udyam Registration Karwayein</h4>
-            <p className="text-sm text-gray-700 dark:text-gray-300">Sabse pehle aapka business MSME registered hona chahiye. <a href="https://udyamregistration.gov.in/" className="text-blue-600 hover:underline dark:text-blue-400 font-medium" target="_blank" rel="noopener noreferrer">Udyam Registration</a> bilkul free hai aur online ho jata hai. 1 din mein certificate mil jata hai. Yeh PM FME ke liye mandatory hai.</p>
+            <p className="text-sm text-gray-700 dark:text-gray-300">Sabse pehle aapka business MSME registered hona chahiye. <a href="https://udyamregistration.gov.in/" className="text-blue-600 hover:underline dark:text-blue-400 font-medium" target="_blank" rel="noopener noreferrer">Udyam Registration</a> ka koi shulk nahi aur online ho jata hai. 1 din mein certificate mil jata hai. Yeh PM FME ke liye mandatory hai.</p>
           </div>
         </div>
 
@@ -324,7 +324,7 @@ export default function PMFMEYojana() {
           <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">4</div>
           <div>
             <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">Bank Se Loan Apply Karein</h4>
-            <p className="text-sm text-gray-700 dark:text-gray-300">Apni nazdeeki bank branch jayein. PM FME ke under loan apply karein. Documents chahiye: Udyam certificate, FSSAI license, DPR, Aadhaar, PAN, bank statements (last 1 year), aur machinery quotations. Loan approval mein 30-60 din lag sakte hain. Agar aap working capital ke liye kam interest wala loan chahte hain, toh <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Kisan Credit Card (KCC) online apply karne ka tarika</Link> bhi zaroor padhein.</p>
+            <p className="text-sm text-gray-700 dark:text-gray-300">Apni nazdeeki bank branch jayein. PM FME ke under loan apply karein. Documents chahiye: Udyam certificate, FSSAI license, DPR, Aadhaar, PAN, bank statements (last 1 year), aur machinery quotations. Loan approval mein 30-60 din lag sakte hain. Agar aap working capital ke liye kam interest wala loan chahte hain, toh <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Kisan Credit Card (KCC) online apply karne ka tarika</Link> bhi padh lijiye.</p>
           </div>
         </div>
 
@@ -562,7 +562,7 @@ export default function PMFMEYojana() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        <strong>Meri advice:</strong> Pehle apne district ka ODOP product pata karein. Agar aap wahi product process karte hain, toh extra benefits milenge. Phir Udyam registration aur FSSAI lein. Uske baad bank jayein, loan apply karein, aur phir PM FME portal par apply karein. Apne nazdeeki District Industries Center (DIC) ke officers se zaroor consult karein, wo application mein bahut help kar sakte hain.
+        <strong>Meri advice:</strong> Pehle apne district ka ODOP product pata karein. Agar aap wahi product process karte hain, toh extra benefits milenge. Phir Udyam registration aur FSSAI lein. Uske baad bank jayein, loan apply karein, aur phir PM FME portal par apply karein. Apne nazdeeki District Industries Center (DIC) ke officers se baat kar lein, wo application mein bahut help kar sakte hain.
       </p>
 
       <h2 id="faq" className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
