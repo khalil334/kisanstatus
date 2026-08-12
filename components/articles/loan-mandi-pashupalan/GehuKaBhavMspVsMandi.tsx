@@ -28,7 +28,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Mandi mein rate MSP se neeche kyun chala jata hai?',
-    a: 'Harvest ke turant baad (April-May) sab kisan ek saath bechne aate hain — aavak ka pahad ban jata hai aur boli dab jaati hai. Buyers ko pata hai ki kisan ko paisa turant chahiye. Yahi woh waqt hai jab MSP ki sarkari kharid sabse zyada kaam aati hai.',
+    a: 'Harvest hote hi (April-May) sab kisan ek saath bechne aate hain — aavak ka pahad ban jata hai aur boli dab jaati hai. Buyers ko pata hai ki kisan ko paisa usi hafte chahiye. Yahi woh waqt hai jab MSP ki sarkari kharid sabse zyada kaam aati hai.',
   },
   {
     q: 'Gehu rok kar bechne se kitna fayda ho sakta hai?',
@@ -40,7 +40,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Kya main aadha MSP par aur aadha market mein bech sakta hoon?',
-    a: 'Haan, aur samajhdaar kisan aksar yahi karte hain. Turant kharche ke liye ek hissa MSP/mandi mein bech do, baaki quality wala maal rok lo. Isse risk bant jata hai — na poora maal daba, na poora sasta bika.',
+    a: 'Haan, aur samajhdaar kisan aksar yahi karte hain. Sar par khade kharche ke liye ek hissa MSP/mandi mein bech do, baaki quality wala maal rok lo. Isse risk bant jata hai — na poora maal daba, na poora sasta bika.',
   },
   {
     q: 'MSP kharid mein quality cut kya hota hai?',
@@ -52,7 +52,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Kya state apna bonus bhi deta hai MSP ke upar?',
-    a: 'Kuch states dete hain — jaise Madhya Pradesh ne 2026-27 season mein ₹40 per quintal ka state bonus diya, jisse kisan ko total ₹2,625 mila. Yeh har saal aur har state mein alag hota hai. Apne state ke procurement portal ya kharid kendra se current season ka bonus zaroor pucho — yeh seedha extra paisa hai.',
+    a: 'Kuch states dete hain — jaise Madhya Pradesh ne 2026-27 season mein ₹40 per quintal ka state bonus diya, jisse kisan ko total ₹2,625 mila. Yeh har saal aur har state mein alag hota hai. Apne state ke procurement portal ya kharid kendra se current season ka bonus pooch lo — yeh seedha extra paisa hai.',
   },
   {
     q: 'Premium variety (sharbati/lokwan) ka kya karein — MSP mein dena to ghata hai?',
@@ -239,7 +239,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
         <StepList>
           <SI n={1}><strong>Aaj mandi ka rate MSP se upar hai ya neeche?</strong> Neeche hai → MSP registration karke sarkari kendra ka rasta pakdo. Upar hai → agla sawaal.</SI>
           <SI n={2}><strong>Meri quality kaisi hai?</strong> Saaf, sookha, premium variety → open market mein behtar boli milegi. Nami/kachra wala maal → pehle saaf-sukha karo, warna dono jagah cut lagega.</SI>
-          <SI n={3}><strong>Paise ki zaroorat kitni urgent hai?</strong> Turant chahiye → jo rate aaj sahi mile, bech do; majboori mein rokna sabse mehenga sauda hai. Ruk sakte ho → hissa rok lo.</SI>
+          <SI n={3}><strong>Paise ki zaroorat kitni urgent hai?</strong> Abhi chahiye → jo rate aaj sahi mile, bech do; majboori mein rokna sabse mehenga sauda hai. Ruk sakte ho → hissa rok lo.</SI>
           <SI n={4}><strong>Storage ka intezam pukhta hai?</strong> Nahi hai → rokne ka khayal chhodo ya warehouse dekho. Kharab storage mein rokna nuksan ko time dena hai.</SI>
         </StepList>
 

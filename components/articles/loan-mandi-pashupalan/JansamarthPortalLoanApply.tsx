@@ -36,7 +36,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Application submit karne ke baad kitne din mein jawab aata hai?',
-    a: 'Digital flow mein initial approval kaafi tez milta hai — kai cases mein turant offer dikh jata hai. Lekin final sanction aur disbursement bank ke process par depend karta hai, jisme verification bhi shamil hai. Application ka status portal par real-time track hota hai, wahi dekhte raho.',
+    a: 'Digital flow mein initial approval kaafi tez milta hai — kai cases mein usi baithak mein offer dikh jata hai. Lekin final sanction aur disbursement bank ke process par depend karta hai, jisme verification bhi shamil hai. Application ka status portal par real-time track hota hai, wahi dekhte raho.',
   },
   {
     q: 'Mujhe portal par "not eligible" dikha raha hai, ab kya karoon?',
@@ -116,7 +116,7 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
           Lekin portal ka sahi istemal tabhi hota hai jab aapko pata ho ki yeh karta kya hai, kya nahi karta, aur
-          apply se pehle kaunsi teen cheezein taiyar rakhni hain. Is guide mein wahi sab step-by-step hai — bina
+          apply se pehle kaunsi teen cheezein taiyar rakhni hain. Aage wahi sab step-by-step hai — bina
           bank ki bhaasha ke.
         </p>
 
@@ -252,7 +252,7 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
 
         <SH>Kitna Time Lagta Hai — Sach Bataein</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Portal ka digital hissa tez hai — eligibility minutes mein, aur kai cases mein initial approval bhi turant
+          Portal ka digital hissa tez hai — eligibility minutes mein, aur kai cases mein initial approval bhi screen par hi
           dikh jata hai. Lekin yeh samajhna zaroori hai ki initial approval aur haath mein paisa — do alag stations
           hain. Beech mein bank ka verification hota hai: details ka milaan, kabhi-kabhi branch visit ya field check.
         </p>
@@ -311,7 +311,7 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
           KCC ke rate, subvention aur limit ka poora ganit humne alag guides mein samjhaya hai —{' '}
           <Link href="/articles/KisanCreditCardOnlineApply2026" className="underline font-bold">KCC Online Apply</Link>{' '}
           aur <Link href="/articles/sbi-dairy-loan-interest-rate" className="underline font-bold">SBI ke dairy loan
-          rates wali guide</Link> zaroor padho, taaki bank mein sahi sawaal pooch sako.
+          rates wali guide</Link> padh lo, taaki bank mein sahi sawaal pooch sako.
         </p>
 
         <WB>

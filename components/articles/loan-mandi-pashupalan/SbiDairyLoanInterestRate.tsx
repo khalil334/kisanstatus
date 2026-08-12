@@ -44,7 +44,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Moratorium ya gestation period milta hai?',
-    a: 'Dairy term loan mein aam taur par gestation period diya jata hai, kyunki naya pashu turant poora doodh nahi deta aur shed banne mein waqt lagta hai. Yeh period bank aur project ke hisaab se tay hota hai. Isko sanction letter mein likhit confirm karwana zaroori hai — warna disbursement ke agle mahine se hi kist shuru ho jayegi, aur income tab tak chalu nahi hui hogi.',
+    a: 'Dairy term loan mein aam taur par gestation period diya jata hai, kyunki naya pashu pehle din se poora doodh nahi deta aur shed banne mein waqt lagta hai. Yeh period bank aur project ke hisaab se tay hota hai. Isko sanction letter mein likhit confirm karwana zaroori hai — warna disbursement ke agle mahine se hi kist shuru ho jayegi, aur income tab tak chalu nahi hui hogi.',
   },
   {
     q: 'Pashu insurance zaroori hai kya?',
@@ -98,7 +98,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
         </div>
 
         <DB>
-          <strong>Turant Jawab — rate aur EMI:</strong>
+          <strong>Chhota Jawab — rate aur EMI:</strong>
           <ul className="list-disc pl-5 mt-2 space-y-1">
             <li>SBI ke paas &ldquo;dairy loan&rdquo; naam ka fixed-rate product nahi hai — rate = <strong>MCLR + spread</strong>, branch aur profile ke hisaab se banta hai.</li>
             <li>Roz ka kharcha <strong>KCC (Animal Husbandry)</strong> se — subvention + prompt repayment se effective rate ~4% tak. Pashu/shed kharid <strong>term loan</strong> se.</li>
@@ -120,7 +120,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
           Pashupalan ka finance do raaston se hota hai — KCC (Allied Activities) aur agri term loan — aur dono ka rate
-          MCLR ke upar branch ka spread lagne ke baad banta hai. Is guide mein wahi ganit khol kar samjhaya gaya hai,
+          MCLR ke upar branch ka spread lagne ke baad banta hai. Neeche wahi ganit khol kar samjhaya gaya hai,
           taaki branch mein aap sahi sawaal pooch sako aur andaze wale number par bharosa na karo.
         </p>
 
@@ -241,7 +241,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
 
         <WB>
           SoF mein margin already build-in hota hai, isliye alag se margin ka sawaal aksar nahi uthta. Phir bhi
-          sanction letter mein margin ka column zaroor dekh lo — kai baar bade project par bank apni policy ke hisaab
+          sanction letter mein margin ka column khud dekh lo — kai baar bade project par bank apni policy ke hisaab
           se contribution maangta hai.
         </WB>
 
@@ -363,7 +363,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>Apply Ka Process — Step by Step</SH>
+        <SH>Apply Ka Process — Kadam Se Kadam</SH>
         <StepList>
           <SI n={1}>
             <strong>Branch chuno soch kar</strong> — agri branch ya jahan aapka operative account hai. Agri officer wali

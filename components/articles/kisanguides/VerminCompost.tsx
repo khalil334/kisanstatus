@@ -255,7 +255,7 @@ export default function VerminCompost() {
           </li>
         </ul>
         <p className="mt-4 text-xs text-gray-600 dark:text-gray-400 italic border-t border-blue-200 dark:border-blue-800 pt-3">
-          <strong>Chhota Sa Note:</strong> In schemes ki guidelines state ke hisaab se vary karti hain. Apply karne se pehle apne nazdeeki Agriculture Department se latest norms zaroor confirm karein.
+          <strong>Chhota Sa Note:</strong> In schemes ki guidelines state ke hisaab se vary karti hain. Apply karne se pehle apne nazdeeki Agriculture Department se latest norms poochh kar confirm karein.
         </p>
       </div>
 

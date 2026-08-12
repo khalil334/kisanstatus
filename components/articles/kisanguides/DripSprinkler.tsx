@@ -298,7 +298,7 @@ export default function DripSprinkler() {
       </ul>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Apply kaise karein — step by step
+        Apply kaise karein — kadam se kadam
       </h2>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Application state ke portal se hota hai, central portal se nahi. Har state ka apna system
@@ -371,7 +371,7 @@ export default function DripSprinkler() {
               <li>✓ Filter aur pressure gauge par nazar rakhein — pressure girna pehla warning signal hai.</li>
               <li>✓ Filter backwash / cleaning routine follow karein.</li>
               <li>✓ Laterals ke end caps khol kar flushing karein.</li>
-              <li>✓ Leak ya toota pipe turant theek karein; ek leak poore block ka pressure kharab karti hai.</li>
+              <li>✓ Leak ya toota pipe usi din theek karein; ek leak poore block ka pressure kharab karti hai.</li>
             </ul>
           </div>
           <div>

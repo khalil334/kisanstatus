@@ -118,7 +118,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
           Aur agar aap bade level par sochte ho, toh Breed Multiplication Farm par 50% capital subsidy — ₹2 crore
-          tak — bhi isi mission ka hissa hai. Is guide mein poora naksha hai: kaunsa component kiske liye hai,
+          tak — bhi isi mission ka hissa hai. Aage poora naksha hai: kaunsa component kiske liye hai,
           paisa kaise aur kahan se milta hai, 2025 mein kya naya juda, aur woh galatfehmiyan jo logon ka time
           barbaad karti hain.
         </p>
@@ -204,7 +204,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Iski dose normal semen se mehngi hoti hai — isliye RGM cost ka 50% tak subsidy deti hai. Kai states
           (UP, Maharashtra, Gujarat samet) apni taraf se aur bhi ghata dete hain, toh kisan ko dose ₹100-₹250
-          jaise rate par mil jaati hai. Apne district ke pashupalan office se current rate zaroor pucho — yeh
+          jaise rate par mil jaati hai. Apne district ke pashupalan office se current rate pooch lo — yeh
           state-to-state alag hai.
         </p>
         <WB>
