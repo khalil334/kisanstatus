@@ -241,11 +241,15 @@ export default function HomeContent() {
                   id="whatsapp-heading"
                   className="text-2xl md:text-3xl font-black text-gray-900 dark:text-white mb-2 tracking-tight"
                 >
-                  Join Our WhatsApp Channel
+                  WhatsApp Channel Par Judein
                 </h2>
                 <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 max-w-xl">
-                  PM Kisan kist, beneficiary list aur nayi sarkari yojana ke update sabse
-                  pehle WhatsApp par paayein — bilkul free, koi spam nahi.
+                  Kist ki date announce hoti hai ya beneficiary list update hoti hai, to main
+                  wahi cheez channel par post kar deta hoon — bina afwaah, bina spam. Roz
+                  message nahi aayega, sirf jab kaam ki baat ho.
+                </p>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">
+                  — {AUTHOR_NAME}, KisanStatus
                 </p>
               </div>
 
