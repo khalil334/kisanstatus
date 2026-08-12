@@ -156,6 +156,20 @@ export default function Footer() {
             >
               Facebook Page Par Follow Karein ↗
             </a>
+
+            <a
+              href={SOCIAL_LINKS.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className="block text-center bg-[#25D366] hover:bg-[#1ebe5b] text-white font-bold py-2 px-3 rounded-lg transition-colors text-xs mt-2 focus:outline-none focus:ring-2 focus:ring-[#25D366]"
+              aria-label="KisanStatus WhatsApp Channel join karein (naye tab mein khulega)"
+              itemProp="sameAs"
+            >
+              WhatsApp Channel Join Karein ↗
+            </a>
+            <p className="text-[11px] text-gray-400 mt-2 leading-relaxed">
+              Nayi kist ki date ya list update aate hi main channel par bata deta hoon.
+            </p>
           </div>
         </div>
 

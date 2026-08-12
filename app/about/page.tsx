@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL, AUTHOR_IMAGE, AUTHOR_IMAGE_URL, AUTHOR_BIO, SUPPORT_EMAIL, DEFAULT_OG_IMAGE } from '@/lib/site-config';
+import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL, AUTHOR_IMAGE, AUTHOR_IMAGE_URL, AUTHOR_BIO, SUPPORT_EMAIL, DEFAULT_OG_IMAGE, SOCIAL_LINKS } from '@/lib/site-config';
 import { ARTICLES } from '@/lib/articles-data';
 
 export const metadata: Metadata = {
@@ -27,6 +27,7 @@ const orgSchema = {
   url: SITE_URL,
   foundingDate: '2025',
   founder: { '@type': 'Person', name: AUTHOR_NAME, url: AUTHOR_URL, image: AUTHOR_IMAGE_URL },
+  sameAs: [SOCIAL_LINKS.facebook, SOCIAL_LINKS.whatsapp],
   contactPoint: {
     '@type': 'ContactPoint',
     email: 'kisanstatus.support@gmail.com',
