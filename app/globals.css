@@ -642,7 +642,7 @@
     contain: layout style;
   }
 
-  /* ✅ FIX: Dark-mode safety net for article body content.
+  /*  FIX: Dark-mode safety net for article body content.
      Article content (components/articles/*) likely has hardcoded text
      colors (e.g. text-black, color:#000) that don't respond to dark
      mode. This forces all article/prose text to follow the theme

@@ -593,7 +593,7 @@ export default function IkhedutPortalStatusCheck2026({
       </InfoBox>
 
       <div className="not-prose my-8 p-5 border-2 border-green-600 rounded-2xl bg-green-50 dark:bg-green-950/30">
-        <p className="font-bold text-[var(--color-text)] mb-3 text-sm">📚 Ye bhi kaam aayega</p>
+        <p className="font-bold text-[var(--color-text)] mb-3 text-sm">Ye bhi kaam aayega</p>
         <ul className="space-y-3 text-sm m-0 list-none p-0">
           <li>
             <Link href="/articles/PmKisanMasterGuide2026">PM Kisan Master Guide 2026</Link>

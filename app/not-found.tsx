@@ -12,10 +12,10 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
   const popularArticles = [
-    { href: '/articles/PmKisan24viKist2026', label: '24vi Kist Status', emoji: '📅' },
-    { href: '/articles/KisanCreditCardOnlineApply2026', label: 'KCC Loan Apply', emoji: '💳' },
-    { href: '/articles/PmKisanBeneficiaryList2026', label: 'Beneficiary List', emoji: '📋' },
-    { href: '/calculator/pm-kisan-benefit', label: 'PM Kisan Calculator', emoji: '🧮' },
+    { href: '/articles/PmKisan24viKist2026', label: '24vi Kist Status' },
+    { href: '/articles/KisanCreditCardOnlineApply2026', label: 'KCC Loan Apply' },
+    { href: '/articles/PmKisanBeneficiaryList2026', label: 'Beneficiary List' },
+    { href: '/calculator/pm-kisan-benefit', label: 'PM Kisan Calculator' },
   ];
 
   return (
@@ -65,7 +65,6 @@ export default function NotFound() {
                 href={article.href}
                 className="flex items-center gap-3 p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] hover:shadow-md transition-all hover:scale-105"
               >
-                <span className="text-2xl" aria-hidden="true">{article.emoji}</span>
                 <span className="text-sm font-semibold text-[var(--color-text)]">{article.label}</span>
               </Link>
             ))}
@@ -83,7 +82,7 @@ export default function NotFound() {
             href="/articles"
             className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[var(--color-card)] border border-[var(--color-border)] text-[var(--color-text)] font-bold rounded-xl hover:border-green-400 dark:hover:border-green-600 transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500"
           >
-            📚 Sabhi Guides Dekhein
+             Sabhi Guides Dekhein
           </Link>
         </div>
       </div>

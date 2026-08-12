@@ -118,10 +118,10 @@ function MythPanel({ myth, truth }: { myth: string; truth: React.ReactNode }) {
   return (
     <div className="my-4 border border-[var(--color-border)] rounded-xl overflow-hidden">
       <div className="bg-red-50 dark:bg-red-900/20 px-4 py-2.5 text-sm font-semibold text-[var(--color-text)]">
-        ❌ गलतफहमी: {myth}
+         गलतफहमी: {myth}
       </div>
       <div className="px-4 py-3 text-sm text-[var(--color-text)] leading-relaxed bg-[var(--color-card)]">
-        ✅ सच: {truth}
+         सच: {truth}
       </div>
     </div>
   );
@@ -252,10 +252,10 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
 
       <Hd>पात्रता — शर्तें गिनती की हैं</Hd>
       <ul className="my-4 space-y-2 list-none pl-0">
-        <li className="flex gap-2 text-sm leading-relaxed"><span className="shrink-0">🔸</span><span>किसान <strong>महाराष्ट्र का निवासी</strong> हो और उसके नाम खेती की जमीन का record हो।</span></li>
-        <li className="flex gap-2 text-sm leading-relaxed"><span className="shrink-0">🔸</span><span><strong>PM Kisan का active beneficiary</strong> हो — यही असली शर्त है; राज्य अपनी अलग जांच नहीं करता, केंद्र का verified database ही उठाता है।</span></li>
-        <li className="flex gap-2 text-sm leading-relaxed"><span className="shrink-0">🔸</span><span><strong>eKYC पूरी</strong> हो और बैंक खाता आधार से seeded + DBT-enabled हो।</span></li>
-        <li className="flex gap-2 text-sm leading-relaxed"><span className="shrink-0">🔸</span><span>PM Kisan के exclusion नियम यहां भी लागू — income tax payer परिवार, सरकारी कर्मचारी, ₹10,000+ pension वाले बाहर।</span></li>
+        <li className="flex gap-2 text-sm leading-relaxed"><span>किसान <strong>महाराष्ट्र का निवासी</strong> हो और उसके नाम खेती की जमीन का record हो।</span></li>
+        <li className="flex gap-2 text-sm leading-relaxed"><span><strong>PM Kisan का active beneficiary</strong> हो — यही असली शर्त है; राज्य अपनी अलग जांच नहीं करता, केंद्र का verified database ही उठाता है।</span></li>
+        <li className="flex gap-2 text-sm leading-relaxed"><span><strong>eKYC पूरी</strong> हो और बैंक खाता आधार से seeded + DBT-enabled हो।</span></li>
+        <li className="flex gap-2 text-sm leading-relaxed"><span>PM Kisan के exclusion नियम यहां भी लागू — income tax payer परिवार, सरकारी कर्मचारी, ₹10,000+ pension वाले बाहर।</span></li>
       </ul>
 
       <Note tone="amber">
@@ -357,10 +357,10 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
         बंडल पहले से तैयार रखिए:
       </p>
       <ul className="my-4 space-y-2 list-none pl-0">
-        <li className="flex gap-2 text-sm leading-relaxed"><span className="shrink-0">📄</span><span><strong>आधार कार्ड</strong> — और वह mobile number जो आधार से linked है, क्योंकि हर verification OTP उसी पर आता है।</span></li>
-        <li className="flex gap-2 text-sm leading-relaxed"><span className="shrink-0">📄</span><span><strong>7/12 उतारा (सातबारा)</strong> — महाराष्ट्र का land record यही है; ताजा निकालकर रखें। साथ में <strong>8-अ</strong> का उतारा भी हो तो और अच्छा — holding का पूरा हिसाब उसी में दिखता है।</span></li>
-        <li className="flex gap-2 text-sm leading-relaxed"><span className="shrink-0">📄</span><span><strong>बैंक passbook</strong> — उसी खाते की जो आधार से seeded है। कौन सा खाता seeded है यह याद नहीं, तो branch में पूछ लें — अंदाज़े से passbook मत उठाइए।</span></li>
-        <li className="flex gap-2 text-sm leading-relaxed"><span className="shrink-0">📄</span><span><strong>PM Kisan registration number</strong> — SMS, पुरानी पावती या portal से नोट कर लें; शिकायत में पहला सवाल यही पूछा जाता है।</span></li>
+        <li className="flex gap-2 text-sm leading-relaxed"><span><strong>आधार कार्ड</strong> — और वह mobile number जो आधार से linked है, क्योंकि हर verification OTP उसी पर आता है।</span></li>
+        <li className="flex gap-2 text-sm leading-relaxed"><span><strong>7/12 उतारा (सातबारा)</strong> — महाराष्ट्र का land record यही है; ताजा निकालकर रखें। साथ में <strong>8-अ</strong> का उतारा भी हो तो और अच्छा — holding का पूरा हिसाब उसी में दिखता है।</span></li>
+        <li className="flex gap-2 text-sm leading-relaxed"><span><strong>बैंक passbook</strong> — उसी खाते की जो आधार से seeded है। कौन सा खाता seeded है यह याद नहीं, तो branch में पूछ लें — अंदाज़े से passbook मत उठाइए।</span></li>
+        <li className="flex gap-2 text-sm leading-relaxed"><span><strong>PM Kisan registration number</strong> — SMS, पुरानी पावती या portal से नोट कर लें; शिकायत में पहला सवाल यही पूछा जाता है।</span></li>
       </ul>
       <p>
         एक छोटा सा काम और — इन सबकी एक-एक photocopy और mobile में photo रखिए। सरकारी दफ्तर में
@@ -447,11 +447,11 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
       ))}
 
       <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
-        <h3 className="font-black text-[var(--color-text)] mb-3 text-base">🔗 आगे पढ़ने लायक</h3>
+        <h3 className="font-black text-[var(--color-text)] mb-3 text-base">आगे पढ़ने लायक</h3>
         <ul className="list-disc pl-5 space-y-1.5 text-sm">
           <li><Link href="/articles/hi/mp-kisan-kalyan-yojana">🌾 MP किसान कल्याण योजना ₹12000</Link></li>
-          <li><Link href="/articles/PmKisanMasterGuide2026">📚 PM Kisan की मुख्य guide</Link></li>
-          <li><Link href="/articles/PmKisanEkycOnline2026">🔐 eKYC step-by-step process</Link></li>
+          <li><Link href="/articles/PmKisanMasterGuide2026">PM Kisan की मुख्य guide</Link></li>
+          <li><Link href="/articles/PmKisanEkycOnline2026">eKYC step-by-step process</Link></li>
           <li><Link href="/articles/hi/npci-aadhaar-seeding">🏦 NPCI seeding — पूरा process</Link></li>
         </ul>
       </div>

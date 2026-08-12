@@ -137,7 +137,7 @@ const CATEGORY_ICONS: Record<string, React.FC<{ className?: string }>> = {
   ),
 };
 
-function ArticleImage({ image, emoji, title, priority = false }: { image: string; emoji: string; title: string; priority?: boolean }) {
+function ArticleImage({ image, emoji, title, priority = false }: { image: string; emoji?: string; title: string; priority?: boolean }) {
   const [error, setError] = useState(false);
   const [loaded, setLoaded] = useState(false);
 
@@ -161,18 +161,18 @@ function ArticleImage({ image, emoji, title, priority = false }: { image: string
         </>
       ) : (
         <div className="h-full w-full flex items-center justify-center" role="img" aria-label={title}>
-          <span className="text-5xl select-none" aria-hidden="true">{emoji}</span>
+          {emoji ? <span className="text-5xl select-none" aria-hidden="true">{emoji}</span> : null}
         </div>
       )}
       <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent z-10 pointer-events-none" aria-hidden="true" />
-      <span className="absolute bottom-2 left-3 text-xl drop-shadow-md z-20 select-none" aria-hidden="true">{emoji}</span>
+      {emoji ? <span className="absolute bottom-2 left-3 text-xl drop-shadow-md z-20 select-none" aria-hidden="true">{emoji}</span> : null}
     </div>
   );
 }
 
 function ArticleCard({ article, showNewBadge = false, priority = false }: { article: CombinedArticleMeta; showNewBadge?: boolean; priority?: boolean }) {
-  const categoryInfo = CATEGORIES[article.category as keyof typeof CATEGORIES] as { name: string; nameHi: string; icon: string } | undefined;
-  const emoji = categoryInfo?.icon || '📄';
+  const categoryInfo = CATEGORIES[article.category as keyof typeof CATEGORIES] as { name: string; nameHi: string; icon?: string } | undefined;
+  const emoji = categoryInfo?.icon || '';
   const categoryName = categoryInfo?.nameHi || categoryInfo?.name || article.categoryLabel || 'Guide';
   const showCategoryBadge = Boolean(categoryInfo || article.categoryLabel);
 
@@ -323,7 +323,7 @@ function ArticlesContent({ articles }: { articles: readonly CombinedArticleMeta[
           {Object.entries(CATEGORIES).map(([slug, cat]) => {
             const count = categoryCounts[slug] || 0;
             if (count === 0) return null;
-            const catInfo = cat as { name: string; nameHi: string; icon: string };
+            const catInfo = cat as { name: string; nameHi: string; icon?: string };
             const CatIcon = CATEGORY_ICONS[slug] || IconClipboard;
             return (
               <Link
@@ -367,7 +367,7 @@ function ArticlesContent({ articles }: { articles: readonly CombinedArticleMeta[
           <ul className="flex flex-wrap justify-center gap-x-4 gap-y-1.5">
             {Object.entries(CATEGORIES).map(([slug, cat]) => {
               if ((categoryCounts[slug] || 0) === 0) return null;
-              const catInfo = cat as { name: string; nameHi: string; icon: string };
+              const catInfo = cat as { name: string; nameHi: string; icon?: string };
               return (
                 <li key={slug}>
                   <Link

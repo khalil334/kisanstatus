@@ -67,7 +67,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
     <article className="prose prose-lg max-w-4xl mx-auto">
 
       <InfoBox type="update" date="4 August 2026">
-        <strong>Latest Update:</strong> Andhra Pradesh sarkar ne 20 June 2026 ko Annadata Sukhibhava ka pehla installment (₹7,000: ₹5,000 State + ₹2,000 PM Kisan) jaari kar diya hai. ⚠️ Agle installment ki koi date officially announce nahi hui hai. Apna <strong>annadata sukhibhava status check</strong> karne ke liye neeche diye gaye official steps follow karein.
+        <strong>Latest Update:</strong> Andhra Pradesh sarkar ne 20 June 2026 ko Annadata Sukhibhava ka pehla installment (₹7,000: ₹5,000 State + ₹2,000 PM Kisan) jaari kar diya hai.  Agle installment ki koi date officially announce nahi hui hai. Apna <strong>annadata sukhibhava status check</strong> karne ke liye neeche diye gaye official steps follow karein.
       </InfoBox>
 
       <h1>Annadata Sukhibhava Status Check 2026: Payment, Eligibility aur Beneficiary List</h1>
@@ -228,13 +228,13 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         </tr>
         <tr>
           <td>Tenant Farmers Eligible?</td>
-          <td>❌ Nahi</td>
-          <td>✅ Haan (with CCRC Card)</td>
+          <td>Nahi</td>
+          <td>Haan (with CCRC Card)</td>
         </tr>
         <tr>
           <td>Landless Laborers?</td>
-          <td>❌ Nahi</td>
-          <td>❌ Nahi (Except specific state sub-schemes)</td>
+          <td>Nahi</td>
+          <td>Nahi (Except specific state sub-schemes)</td>
         </tr>
         <tr>
           <td>Application Process</td>
@@ -456,13 +456,13 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         <tr>
           <td>2nd Installment</td>
           <td>Rabi 2026-27</td>
-          <td>⚠️ Announce nahi hui</td>
+          <td>Announce nahi hui</td>
           <td>Pending</td>
         </tr>
         <tr>
           <td>3rd Installment</td>
           <td>Summer 2026-27</td>
-          <td>⚠️ Announce nahi hui</td>
+          <td>Announce nahi hui</td>
           <td>Pending</td>
         </tr>
       </SchemeTable>

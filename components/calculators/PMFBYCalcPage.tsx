@@ -44,7 +44,6 @@ export default function PMFBYCalcPage() {
     <>
 
       <CalcHeader
-        emoji="🛡️"
         title="Fasal Bima Premium Calculator 2026"
         subtitle="PMFBY ka premium calculate karo — kitna dena padega, kitni subsidy milegi"
         breadcrumb="Fasal Bima Premium"
@@ -53,13 +52,13 @@ export default function PMFBYCalcPage() {
       <div className="container-site max-w-2xl py-8">
 
         <div className="flex flex-wrap gap-3 text-xs text-gray-500 mb-4">
-          <span>✍️ <Link href="/about" className="underline hover:text-gray-700">{AUTHOR_NAME}</Link></span>
-          <span>📅 {fmtDate(PUBLISHED)}</span>
-          <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
+          <span><Link href="/about" className="underline hover:text-gray-700">{AUTHOR_NAME}</Link></span>
+          <span>{fmtDate(PUBLISHED)}</span>
+          <span>Updated: {fmtDate(MODIFIED)}</span>
         </div>
 
         <div className="mb-6 p-5 bg-amber-50 border border-amber-200 rounded-xl text-sm text-gray-700 leading-relaxed">
-          <p className="font-bold text-amber-900 mb-2">🛡️ Fasal Bima — Kharab Fasal Par Bhi Paisa Milega</p>
+          <p className="font-bold text-amber-900 mb-2">Fasal Bima — Kharab Fasal Par Bhi Paisa Milega</p>
           <p className="mb-2">
             <strong>PMFBY (Pradhan Mantri Fasal Bima Yojana)</strong> ka idea simple hai — sukha, baadh, keede ya toofan se fasal kharab ho jaye, toh government aapko uska compensation deti hai.
           </p>
@@ -70,12 +69,12 @@ export default function PMFBYCalcPage() {
             Ek udaharan lein: gehun ke liye ₹50,000 per hectare ka insurance liya (1.5% rate par), toh aapki jeb se sirf <strong>₹750 per hectare</strong> jayega — actual premium isse kahin zyada hota hai, aur us baaki hisse ko government bharti hai.
           </p>
           <p className="text-xs text-amber-700 mt-3">
-            💡 KCC loan liya hai toh fasal bima automatically compulsory ho jata hai — loan ke saath hi premium kat jata hai.
+             KCC loan liya hai toh fasal bima automatically compulsory ho jata hai — loan ke saath hi premium kat jata hai.
           </p>
         </div>
 
         <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
-          <h2 className="font-black text-gray-900 text-base mb-5">🧮 Fasal Details Bharo</h2>
+          <h2 className="font-black text-gray-900 text-base mb-5">Fasal Details Bharo</h2>
 
           <SelectField
             label="Kaunsi fasal hai?"
@@ -106,28 +105,28 @@ export default function PMFBYCalcPage() {
           {insured>0 && (
             <div className="mt-4 bg-amber-50 border-2 border-amber-200 rounded-2xl p-5">
               <p className="text-xs text-amber-700 font-bold uppercase tracking-wide mb-3">
-                📊 {cropData.name} — Premium Details ({season==='kharif'?'Kharif':'Rabi'})
+                 {cropData.name} — Premium Details ({season==='kharif'?'Kharif':'Rabi'})
               </p>
               <ResultRow label="Premium Rate (Aapka Share)" value={`${rate}%`} />
               <ResultRow label="Total Coverage Amount" value={fmt(totalCover)} />
               <ResultRow label="Aap Kitna Denge (Aapka Premium)" value={fmt(Math.max(0,farmerPays))} bold highlight />
-              <p className="text-[11px] text-amber-700 mt-2">🎁 Actual premium isse zyada hota hai — baaki hissa government bharti hai (amount district notification par depend karta hai)</p>
+              <p className="text-[11px] text-amber-700 mt-2">Actual premium isse zyada hota hai — baaki hissa government bharti hai (amount district notification par depend karta hai)</p>
 
               <div className="mt-3 pt-3 border-t border-amber-200">
                 <p className="text-xs text-amber-800">
-                  🛡️ Agar fasal kharab hui to maximum compensation: <strong>{fmt(totalCover)}</strong>
+                   Agar fasal kharab hui to maximum compensation: <strong>{fmt(totalCover)}</strong>
                 </p>
               </div>
 
               <div className="mt-3 p-3 bg-white rounded-xl text-xs text-gray-700">
-                <p className="font-bold mb-1">📖 Iska Matlab:</p>
+                <p className="font-bold mb-1">Iska Matlab:</p>
                 <p>Aapne {cropData.name} ka insurance liya {fmt(totalCover)} ka. Aapka share {rate}% hai, yani aapko sirf {fmt(Math.max(0,farmerPays))} dena padega — baaki premium government bharti hai. Agar fasal kharab hui to {fmt(totalCover)} tak claim mil sakta hai.</p>
               </div>
             </div>
           )}
 
           <div className="mt-5">
-            <p className="font-bold text-gray-900 text-xs mb-3">📋 Sabhi Fasal Ka Premium Rate</p>
+            <p className="font-bold text-gray-900 text-xs mb-3">Sabhi Fasal Ka Premium Rate</p>
             <div className="overflow-x-auto rounded-xl border border-gray-200">
               <table className="w-full text-xs border-collapse">
                 <thead>
@@ -152,7 +151,7 @@ export default function PMFBYCalcPage() {
         </div>
 
         <div className="mt-6 bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
-          <h3 className="font-black text-gray-900 text-sm mb-4">⚡ Fasal Kharab Ho Jaye To Claim Kaise Le?</h3>
+          <h3 className="font-black text-gray-900 text-sm mb-4">Fasal Kharab Ho Jaye To Claim Kaise Le?</h3>
           <div className="space-y-3">
             {[
               {n:1,s:'Fasal kharab ho toh der mat karo — 72 ghante ke andar bank ya insurance company ko inform kar do'},
@@ -170,7 +169,7 @@ export default function PMFBYCalcPage() {
           </div>
 
           <div className="mt-4 p-3 bg-green-50 border border-green-200 rounded-xl">
-            <p className="text-xs text-green-800 font-bold mb-1">📄 Claim Ke Liye Documents:</p>
+            <p className="text-xs text-green-800 font-bold mb-1">Claim Ke Liye Documents:</p>
             <ul className="text-xs text-green-700 space-y-0.5 ml-4">
               <li>✓ Aadhaar card</li>
               <li>✓ Land records (khasra/khatauni)</li>
@@ -183,7 +182,7 @@ export default function PMFBYCalcPage() {
         </div>
 
         <div className="mt-6 bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
-          <h3 className="font-black text-gray-900 text-sm mb-3">✅ Kaun Fasal Bima Le Sakta Hai?</h3>
+          <h3 className="font-black text-gray-900 text-sm mb-3">Kaun Fasal Bima Le Sakta Hai?</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
             {[
               {t:'Sabhi Kisan',d:'Land owner aur tenant farmers dono'},
@@ -200,23 +199,23 @@ export default function PMFBYCalcPage() {
 
           <Link href="/articles/PmfbyCropInsurance2026"
             className="mt-4 inline-flex items-center gap-2 text-xs font-bold text-amber-700 hover:text-amber-900">
-            📖 Fasal Bima Complete Guide Padho →
+             Fasal Bima Complete Guide Padho →
           </Link>
         </div>
 
         <div className="mt-6">
-          <h3 className="font-black text-gray-900 text-sm mb-3">💡 Fasal Bima Se Maximum Fayda Kaise Uthao</h3>
+          <h3 className="font-black text-gray-900 text-sm mb-3">Fasal Bima Se Maximum Fayda Kaise Uthao</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
             <div className="p-3 bg-green-50 border border-green-200 rounded-xl">
-              <p className="font-bold text-green-900 mb-1">⏰ Time Par Apply Karo</p>
+              <p className="font-bold text-green-900 mb-1">Time Par Apply Karo</p>
               <p className="text-green-800">Enrollment window nikal gayi toh dobara mauka nahi milta — Kharif ke liye lagbhag July tak, Rabi ke liye December tak</p>
             </div>
             <div className="p-3 bg-blue-50 border border-blue-200 rounded-xl">
-              <p className="font-bold text-blue-900 mb-1">📸 Photos Rakho</p>
+              <p className="font-bold text-blue-900 mb-1">Photos Rakho</p>
               <p className="text-blue-800">Fasal healthy ho tab bhi aur kharab ho tab bhi photos lete rehna — claim ke waqt yahi proof kaam aata hai</p>
             </div>
             <div className="p-3 bg-purple-50 border border-purple-200 rounded-xl">
-              <p className="font-bold text-purple-900 mb-1">📱 App Use Karo</p>
+              <p className="font-bold text-purple-900 mb-1">App Use Karo</p>
               <p className="text-purple-800">PMFBY mobile app se apply karna faster hota hai, aur status bhi wahi se track kar sakte ho</p>
             </div>
             <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl">
@@ -227,13 +226,13 @@ export default function PMFBYCalcPage() {
         </div>
 
         <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-xl">
-          <p className="font-bold text-yellow-900 text-sm mb-2">⚠️ Fasal Bima Mein Aksar Yeh Galtiyan Hoti Hain:</p>
+          <p className="font-bold text-yellow-900 text-sm mb-2">Fasal Bima Mein Aksar Yeh Galtiyan Hoti Hain:</p>
           <ul className="space-y-1.5 text-xs text-yellow-800">
-            <li>❌ Enrollment period miss kar dena — uske baad us season ke liye apply nahi ho pata</li>
-            <li>❌ Photos na lena — claim ke waqt proof dikhane mein dikkat hoti hai</li>
-            <li>❌ 72 ghante ke andar inform na karna — isse claim reject bhi ho sakta hai</li>
-            <li>❌ Policy number ya receipt sambhal ke na rakhna — zaroorat par dhundna mushkil ho jata hai</li>
-            <li>❌ Crop area ya type galat bata dena — isse bhi claim atak sakta hai</li>
+            <li>Enrollment period miss kar dena — uske baad us season ke liye apply nahi ho pata</li>
+            <li>Photos na lena — claim ke waqt proof dikhane mein dikkat hoti hai</li>
+            <li>72 ghante ke andar inform na karna — isse claim reject bhi ho sakta hai</li>
+            <li>Policy number ya receipt sambhal ke na rakhna — zaroorat par dhundna mushkil ho jata hai</li>
+            <li>Crop area ya type galat bata dena — isse bhi claim atak sakta hai</li>
           </ul>
         </div>
 
@@ -242,31 +241,31 @@ export default function PMFBYCalcPage() {
         <OtherCalcs current="/calculator/pmfby-premium" />
 
         <div className="mt-6 p-5 bg-amber-50 border border-amber-200 rounded-xl">
-          <p className="font-bold text-amber-900 text-sm mb-3">📖 Fasal Bima Se Related Guides</p>
+          <p className="font-bold text-amber-900 text-sm mb-3">Fasal Bima Se Related Guides</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             <Link href="/articles/PmfbyCropInsurance2026" className="p-3 bg-white border border-amber-200 rounded-xl text-xs font-semibold text-gray-700 hover:bg-amber-600 hover:text-white transition-colors">
-              🛡️ Fasal Bima Complete Guide
+               Fasal Bima Complete Guide
             </Link>
             <Link href="/articles/PmKisan24viKist2026" className="p-3 bg-white border border-amber-200 rounded-xl text-xs font-semibold text-gray-700 hover:bg-amber-600 hover:text-white transition-colors">
-              📆 PM Kisan Status — ₹6,000 Free
+               PM Kisan Status — ₹6,000 Free
             </Link>
             <Link href="/articles/KisanCreditCardOnlineApply2026" className="p-3 bg-white border border-amber-200 rounded-xl text-xs font-semibold text-gray-700 hover:bg-amber-600 hover:text-white transition-colors">
-              💳 KCC Loan — Insurance Ke Sath
+               KCC Loan — Insurance Ke Sath
             </Link>
             <Link href="/articles/soil-health-card-complete-guide-2026" className="p-3 bg-white border border-amber-200 rounded-xl text-xs font-semibold text-gray-700 hover:bg-amber-600 hover:text-white transition-colors">
               🌱 Soil Health Card — Better Yield
             </Link>
             <Link href="/calculator/crop-profit" className="p-3 bg-white border border-amber-200 rounded-xl text-xs font-semibold text-gray-700 hover:bg-amber-600 hover:text-white transition-colors">
-              📊 Kheti Munafa Calculator
+               Kheti Munafa Calculator
             </Link>
             <Link href="/calculator/msp-income" className="p-3 bg-white border border-amber-200 rounded-xl text-xs font-semibold text-gray-700 hover:bg-amber-600 hover:text-white transition-colors">
-              💹 MSP Income Calculator
+               MSP Income Calculator
             </Link>
           </div>
         </div>
 
         <div className="mt-6 p-5 bg-gray-50 border border-gray-200 rounded-xl">
-          <p className="font-bold text-gray-900 text-sm mb-3">❓ Fasal Bima Ke Baare Mein Aksar Sawaal</p>
+          <p className="font-bold text-gray-900 text-sm mb-3">Fasal Bima Ke Baare Mein Aksar Sawaal</p>
           <div className="space-y-3 text-xs">
             <details className="bg-white border border-gray-200 rounded-lg p-3">
               <summary className="font-bold text-gray-900 cursor-pointer">PMFBY kya hai?</summary>

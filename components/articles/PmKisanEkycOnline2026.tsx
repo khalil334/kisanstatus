@@ -12,19 +12,16 @@ const RELATED_CARDS = [
     slug: 'PmKisan24viKist2026',
     title: 'October Wali 24vi Kist Ka Update',
     desc: 'Apna ₹2000 installment status aur eKYC errors abhi check karein.',
-    emoji: '📅'
   },
   {
     slug: 'PmKisanBeneficiaryList2026',
     title: 'PM Kisan Beneficiary List',
     desc: 'Apna naam naye list mein dhundhein aur status verify karein.',
-    emoji: '📋'
   },
   {
     slug: 'KisanCreditCardOnlineApply2026',
     title: 'Kisan Credit Card (KCC) Guide',
     desc: '4% byaj dar par ₹5 lakh tak ka agriculture loan kaise lein.',
-    emoji: '💳'
   },
 ];
 
@@ -91,17 +88,17 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
             <span>/</span>
             <span className="text-white font-bold">eKYC Guide</span>
           </nav>
-          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">🔐 eKYC Verification</span>
+          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">eKYC Verification</span>
 
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
             PM Kisan eKYC 2026: OTP Based eKYC, Biometric aur Face Auth Puri Jankari
           </h1>
 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 14 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>14 min read</span>
           </div>
         </div>
       </div>
@@ -131,7 +128,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
         </div>
 
         <div className="my-6 p-5 bg-red-50 dark:bg-red-900/20 border-2 border-red-400 dark:border-red-700 border-l-[6px] rounded-xl">
-          <h2 className="text-base font-black text-red-800 dark:text-red-300 mb-2">⚠️ Bina eKYC Ke Kist Ruk Jayegi (Ground Reality)</h2>
+          <h2 className="text-base font-black text-red-800 dark:text-red-300 mb-2">Bina eKYC Ke Kist Ruk Jayegi (Ground Reality)</h2>
           <p className="text-sm text-red-900 dark:text-red-200 leading-relaxed mb-3">
             Suno bhai, yeh koi optional ya "baad mein kar lenge" wali cheez nahi hai. Government ne DBT (Direct Benefit Transfer) rules ke under 2023 se ise sakhti se compulsory kar diya hai. Ab system automatically un accounts ko filter kar deta hai jinki eKYC pending hai.
           </p>
@@ -184,7 +181,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
             <SI n={2}>Right side mein "Farmers Corner" section mein "eKYC" option par click karo.</SI>
             <SI n={3}>Apna 12-digit Aadhaar number bina kisi galti ke dalo aur "Search" button dabao.</SI>
             <SI n={4}>Aapke registered mobile number par ek 6-digit ka OTP aayega. Use box mein enter karo.</SI>
-            <SI n={5}>"Submit" dabao. Screen par hara rang ka "eKYC Successful" message dikhega! ✅</SI>
+            <SI n={5}>"Submit" dabao. Screen par hara rang ka "eKYC Successful" message dikhega!</SI>
           </StepList>
           <WB>
             <strong>Ek Secret Tip:</strong> OTP sirf 5 minute ke liye valid hota hai. Jaldi dalo. Agar network ki wajah se na aaye, toh "Resend OTP" par click karo, lekin 2-3 baar se zyada try mat karna warna number temporary block ho sakta hai.
@@ -350,7 +347,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
             ].map(({ err, fix }) => (
               <div key={err} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl overflow-hidden shadow-sm">
                 <div className="bg-red-50 dark:bg-red-900/20 border-b border-red-100 dark:border-red-800 px-4 py-2.5">
-                  <p className="font-black text-red-800 dark:text-red-300 text-sm">❌ {err}</p>
+                  <p className="font-black text-red-800 dark:text-red-300 text-sm">{err}</p>
                 </div>
                 <div className="p-4">
                   <div className="flex items-start gap-2 bg-green-50 dark:bg-green-900/20 rounded-lg p-3">
@@ -375,11 +372,11 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
           </StepList>
           <div className="mt-4 grid grid-cols-2 gap-3">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl text-center">
-              <p className="font-black text-green-800 dark:text-green-300 text-sm">✅ eKYC: YES</p>
+              <p className="font-black text-green-800 dark:text-green-300 text-sm">eKYC: YES</p>
               <p className="text-xs text-[var(--color-text-muted)] mt-1">Sab theek hai, agla paisa aayega.</p>
             </div>
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl text-center">
-              <p className="font-black text-red-800 dark:text-red-300 text-sm">❌ eKYC: NO</p>
+              <p className="font-black text-red-800 dark:text-red-300 text-sm">eKYC: NO</p>
               <p className="text-xs text-[var(--color-text-muted)] mt-1">Ruko mat, upar diye tarike se abhi complete karo.</p>
             </div>
           </div>
@@ -420,11 +417,10 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
         />
 
         <CalcBanner
-          icon="🔐"
           title="Apna Benefit Calculate Karo"
           desc="Kitni kist mili, kitni pending — apna hisaab jaano"
-          primaryCta={{ href: '/calculator/pm-kisan-benefit', label: '💰 Calculator →' }}
-          secondaryCta={{ href: '/calculator', label: '🧮 Sab Utilities' }}
+          primaryCta={{ href: '/calculator/pm-kisan-benefit', label: 'Calculator →' }}
+          secondaryCta={{ href: '/calculator', label: 'Sab Utilities' }}
         />
 
         <section className="my-10">
@@ -436,7 +432,6 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
                 href={`/articles/${card.slug}`}
                 className="group block p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:border-green-500 transition-all duration-300"
               >
-                <div className="text-2xl mb-2">{card.emoji}</div>
                 <h4 className="font-bold text-gray-900 dark:text-white text-sm mb-1 group-hover:text-green-600 transition-colors">
                   {card.title}
                 </h4>
@@ -453,9 +448,9 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
 
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
-          { href: '/articles/PmKisan24viKist2026', l: '📅 24vi Kist' },
-          { href: '/articles/PmKisanBeneficiaryList2026', l: '📋 Beneficiary List' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
+          { href: '/articles/PmKisan24viKist2026', l: '24vi Kist' },
+          { href: '/articles/PmKisanBeneficiaryList2026', l: 'Beneficiary List' },
         ]} />
         <Disclaimer />
       </div>

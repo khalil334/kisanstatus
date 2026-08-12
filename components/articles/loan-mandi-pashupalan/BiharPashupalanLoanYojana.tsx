@@ -9,8 +9,8 @@ const RELATED = [
   { slug: 'sbi-dairy-loan-interest-rate', title: 'SBI Dairy Loan Interest Rate', emoji: '🏦' },
   { slug: 'murgi-palan-loan-nlm-subsidy', title: 'Murgi Palan Loan NLM Subsidy', emoji: '🐔' },
   { slug: 'rashtriya-gokul-mission-subsidy', title: 'Rashtriya Gokul Mission', emoji: '🐮' },
-  { slug: 'jansamarth-portal-loan-apply', title: 'JanSamarth Portal Apply', emoji: '💻' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply', emoji: '💳' },
+  { slug: 'jansamarth-portal-loan-apply', title: 'JanSamarth Portal Apply' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply' },
 ];
 
 const FAQS_DATA = [
@@ -52,10 +52,10 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
             Bihar Pashupalan Loan Yojana 2026: Samagra Gavya Vikas Yojana Se 50-75% Subsidy — Eligibility, Documents Aur Apply Ka Poora Process
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(article.publishedTime)}</span>
-            <span>🔄 Last Updated: 5 August 2026</span>
-            <span>⏱️ 11 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(article.publishedTime)}</span>
+            <span>Last Updated: 5 August 2026</span>
+            <span>11 min read</span>
           </div>
         </div>
       </div>
@@ -345,7 +345,7 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
 
         <FAQBlock faqs={FAQS_DATA} />
 
-        <SH>📚 Sources</SH>
+        <SH>Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
             Samagra Gavya Vikas Yojana — official portal, Directorate of Dairy Development, Bihar.{' '}
@@ -360,8 +360,8 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[
-          { href: '/articles', l: '📚 Sabhi Articles' },
-          { href: '/articles/category/pashupalan', l: '📂 Pashupalan Guides' },
+          { href: '/articles', l: 'Sabhi Articles' },
+          { href: '/articles/category/pashupalan', l: 'Pashupalan Guides' },
         ]} />
         <Disclaimer />
       </div>

@@ -9,8 +9,8 @@ const RELATED = [
   { slug: 'bihar-pashupalan-loan-yojana', title: 'Bihar Pashupalan Loan Yojana', emoji: '🐃' },
   { slug: 'murgi-palan-loan-nlm-subsidy', title: 'Murgi Palan Loan & NLM Subsidy', emoji: '🐔' },
   { slug: 'rashtriya-gokul-mission-subsidy', title: 'Rashtriya Gokul Mission Subsidy', emoji: '🐄' },
-  { slug: 'jansamarth-portal-loan-apply', title: 'JanSamarth Portal Loan Apply', emoji: '💻' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Se Working Capital', emoji: '💳' },
+  { slug: 'jansamarth-portal-loan-apply', title: 'JanSamarth Portal Loan Apply' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Se Working Capital' },
 ];
 
 const FAQS_DATA = [
@@ -125,10 +125,10 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
             Dairy Farm Loan Bina Collateral 2026: Zameen Girvi Rakhe Bina ₹20 Lakh Tak Kaise Milega
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(article.publishedTime)}</span>
-            <span>🔄 Last Updated: 5 August 2026</span>
-            <span>⏱️ 11 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(article.publishedTime)}</span>
+            <span>Last Updated: 5 August 2026</span>
+            <span>11 min read</span>
           </div>
         </div>
       </div>
@@ -572,7 +572,7 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
         <SH>Aapke Sawaal</SH>
         <FAQBlock faqs={FAQS_DATA} />
 
-        <SH>📚 Sources</SH>
+        <SH>Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
             PMEGP e-portal — Khadi and Village Industries Commission (KVIC).{' '}
@@ -597,7 +597,7 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
         <BottomNav extraLinks={[
           { href: '/articles/sbi-dairy-loan-interest-rate', l: '🏦 SBI Dairy Loan Rate' },
           { href: '/articles/bihar-pashupalan-loan-yojana', l: '🐃 Bihar Pashupalan Loan' },
-          { href: '/articles/category/loan', l: '📂 Loan Guides' },
+          { href: '/articles/category/loan', l: 'Loan Guides' },
         ]} />
         <Disclaimer />
       </div>

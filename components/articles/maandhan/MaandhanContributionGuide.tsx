@@ -15,19 +15,19 @@ const RELATED_CARDS = [
     slug: 'pm-kisan-maandhan-registration-2026',
     title: 'Registration Poora Tarika',
     desc: 'CSC center par VLE ke saath step-by-step enrollment kaise hota hai, documents list ke saath.',
-    emoji: '📝',
+    
   },
   {
     slug: 'pm-kisan-maandhan-auto-debit-poora-sach',
     title: 'Auto Debit Ka Sach',
     desc: 'PM Kisan ki kist se paisa kyun kat raha hai? NACH mandate ka matlab samjhiye.',
-    emoji: '💳',
+    
   },
   {
     slug: 'pm-kisan-maandhan-withdrawal-refund-rules',
     title: 'Beech Mein Nikalne Ke Niyam',
     desc: '10 saal se pehle ya baad mein exit karne par kitna paisa wapas milta hai.',
-    emoji: '💸',
+    
   },
 ];
 
@@ -73,7 +73,7 @@ function ContributionCalculator() {
 
   return (
     <div className="my-6 p-5 bg-white dark:bg-gray-900 border border-[var(--color-border)] rounded-2xl shadow-sm">
-      <h3 className="text-lg font-black text-[var(--color-text)] mb-4 flex items-center gap-2">🧮 Contribution Calculator</h3>
+      <h3 className="text-lg font-black text-[var(--color-text)] mb-4 flex items-center gap-2">Contribution Calculator</h3>
       <label className="block text-xs text-[var(--color-text-muted)] mb-2">Enrollment ke waqt aapki umar</label>
       <input
         type="range"
@@ -169,10 +169,10 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
           </h1>
 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 12 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>12 min read</span>
           </div>
         </div>
       </div>
@@ -285,7 +285,7 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
             Ye page sirf numbers ke liye hai — 18–40 saal entry, 2 hectare tak zameen, PM Kisan beneficiary hona zaroori. Shartein detail mein, exclusion list aur documents ke saath, alag guide mein hain:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <Link href="/maandhan/pm-kisan-maandhan-eligibility-documents" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">📋 Eligibility & Documents Ki Poori Checklist →</Link>
+            <Link href="/maandhan/pm-kisan-maandhan-eligibility-documents" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">Eligibility & Documents Ki Poori Checklist →</Link>
           </div>
         </section>
 
@@ -310,7 +310,7 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
             Contribution amount confirm karne ke baad agla kadam registration hai — CSC aur online app dono ke step-by-step screenshots wali guide alag se maujood hai:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <Link href="/maandhan/pm-kisan-maandhan-registration-2026" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">📝 Registration Ka Step-by-Step Process →</Link>
+            <Link href="/maandhan/pm-kisan-maandhan-registration-2026" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">Registration Ka Step-by-Step Process →</Link>
           </div>
         </section>
 
@@ -350,7 +350,7 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
 
           <div className="space-y-3 mb-4">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
-              <p className="font-black text-sm text-green-800 dark:text-green-300 mb-1">🟢 Pehle 1 Mahine Tak</p>
+              <p className="font-black text-sm text-green-800 dark:text-green-300 mb-1">Pehle 1 Mahine Tak</p>
               <p className="text-xs text-[var(--color-text-muted)]">Koi late fee nahi. Sirf due amount jama karke account regular karwa sakte hain. Demand teen payment cycles tak dobara uthai jaati hai, aur is par koi interest nahi lagta.</p>
             </div>
 
@@ -359,7 +359,7 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
             </p>
 
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
-              <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">🔴 6 Mahine Tak Payment Nahi Hui</p>
+              <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">6 Mahine Tak Payment Nahi Hui</p>
               <p className="text-xs text-[var(--color-text-muted)]">Account "dormant" ho jata hai, lekin 3 saal tak SMS alerts aate rehte hain. Is dauran bhi aap entire outstanding amount + interest jama karke account regular karwa sakte hain — account cancel nahi hota.</p>
             </div>
           </div>
@@ -375,7 +375,7 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
             Scheme chhodne par kitna refund milega, ye aapki exit ki timing par depend karta hai — teen alag halaat ke exact rules scenario-wise guide mein diye hain:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <Link href="/maandhan/pm-kisan-maandhan-withdrawal-refund-rules" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">💸 Withdrawal & Refund Ke Exact Rules →</Link>
+            <Link href="/maandhan/pm-kisan-maandhan-withdrawal-refund-rules" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">Withdrawal & Refund Ke Exact Rules →</Link>
           </div>
         </section>
 
@@ -400,7 +400,7 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
             Dono schemes ₹3000 pension deti hain lekin contribution aur government match bilkul alag hai — head-to-head scorecard alag article mein hai:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <Link href="/maandhan/pm-kisan-maandhan-vs-atal-pension-yojana" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">⚖️ PMKMY vs APY: Full Comparison →</Link>
+            <Link href="/maandhan/pm-kisan-maandhan-vs-atal-pension-yojana" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">PMKMY vs APY: Full Comparison →</Link>
           </div>
         </section>
 
@@ -410,7 +410,7 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
             Table se amount confirm karne ke baad ye bhi verify karein ki paisa har mahine sach mein kat raha hai — status, passbook aur contribution history check karne ka process yahan hai:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <Link href="/maandhan/pm-kisan-maandhan-status-check-online" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">🔍 Status Check Karne Ka Tarika →</Link>
+            <Link href="/maandhan/pm-kisan-maandhan-status-check-online" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">Status Check Karne Ka Tarika →</Link>
           </div>
         </section>
 
@@ -448,7 +448,6 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
                 href={`/maandhan/${card.slug}`}
                 className="group block p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:border-green-500 transition-all duration-300"
               >
-                <div className="text-2xl mb-2">{card.emoji}</div>
                 <h4 className="font-bold text-gray-900 dark:text-white text-sm mb-1 group-hover:text-green-600 transition-colors">
                   {card.title}
                 </h4>
@@ -465,9 +464,9 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
 
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/maandhan/pm-kisan-maandhan-registration-2026', l: '📝 Registration Guide' },
-          { href: '/maandhan/pm-kisan-maandhan-auto-debit-poora-sach', l: '💳 Auto Debit' },
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
+          { href: '/maandhan/pm-kisan-maandhan-registration-2026', l: 'Registration Guide' },
+          { href: '/maandhan/pm-kisan-maandhan-auto-debit-poora-sach', l: 'Auto Debit' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
         ]} />
         <Disclaimer />
       </div>

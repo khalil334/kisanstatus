@@ -15,19 +15,16 @@ const RELATED_CARDS = [
     slug: 'pm-kisan-maandhan-registration-2026',
     title: 'Complete Registration Guide',
     desc: 'Step-by-step process to apply online or at a CSC center.',
-    emoji: '📝'
   },
   {
     slug: 'pm-kisan-maandhan-eligibility-documents',
     title: 'Eligibility & Documents',
     desc: 'Detailed checklist of documents and exact eligibility rules.',
-    emoji: '📄'
   },
   {
     slug: 'pm-kisan-maandhan-withdrawal-refund-rules',
     title: 'Withdrawal & Refund Rules',
     desc: 'What happens to your money if you exit the scheme early?',
-    emoji: '💸'
   },
 ];
 
@@ -60,7 +57,7 @@ function PensionCalculatorWidget() {
   return (
     <div className="my-6 rounded-2xl border-2 border-green-500 bg-green-50 dark:bg-green-900/20 p-5 md:p-6">
       <h3 className="font-black text-green-800 dark:text-green-300 text-base md:text-lg mb-3">
-        🧮 Apni Umar Daalkar Turant Hisaab Nikaalein
+         Apni Umar Daalkar Turant Hisaab Nikaalein
       </h3>
       <label htmlFor="pmkmy-age-input" className="block text-xs font-medium text-[var(--color-text-muted)] mb-1">
         Apni current age (18–40) daalein
@@ -199,10 +196,10 @@ export default function PmKisanMaandhanPensionCalculator({ article }: { article:
           </h1>
 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 11 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>11 min read</span>
           </div>
         </div>
       </div>
@@ -255,7 +252,7 @@ export default function PmKisanMaandhanPensionCalculator({ article }: { article:
             Calculator tabhi kaam ka hai jab aap scheme join kar sakte hon — entry window 18–40 saal ki hai aur zameen 2 hectare tak. Poori shartein aur documents alag checklist mein:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <Link href="/maandhan/pm-kisan-maandhan-eligibility-documents" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">📋 Eligibility Checklist Kholein →</Link>
+            <Link href="/maandhan/pm-kisan-maandhan-eligibility-documents" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">Eligibility Checklist Kholein →</Link>
           </div>
         </section>
 
@@ -342,7 +339,7 @@ export default function PmKisanMaandhanPensionCalculator({ article }: { article:
             Same ₹3000 pension ke liye APY mein aapko apni jeb se lagbhag dugna dena padta hai kyunki wahan government match nahi hai — dono ke numbers side-by-side comparison article mein hain:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <Link href="/maandhan/pm-kisan-maandhan-vs-atal-pension-yojana" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">⚖️ PMKMY vs APY Scorecard →</Link>
+            <Link href="/maandhan/pm-kisan-maandhan-vs-atal-pension-yojana" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">PMKMY vs APY Scorecard →</Link>
           </div>
         </section>
 
@@ -363,7 +360,7 @@ export default function PmKisanMaandhanPensionCalculator({ article }: { article:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Link href="/maandhan/pmkmy-bank-account-change" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">🏦 Bank Account Change Process →</Link>
-            <Link href="/maandhan/pmkmy-grievance-complaint-helpline" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">📞 Helpline & Grievance Guide →</Link>
+            <Link href="/maandhan/pmkmy-grievance-complaint-helpline" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">Helpline & Grievance Guide →</Link>
           </div>
         </section>
 
@@ -417,7 +414,6 @@ export default function PmKisanMaandhanPensionCalculator({ article }: { article:
                 href={`/maandhan/${card.slug}`}
                 className="group block p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:border-green-500 transition-all duration-300"
               >
-                <div className="text-2xl mb-2">{card.emoji}</div>
                 <h4 className="font-bold text-gray-900 dark:text-white text-sm mb-1 group-hover:text-green-600 transition-colors">
                   {card.title}
                 </h4>
@@ -434,9 +430,9 @@ export default function PmKisanMaandhanPensionCalculator({ article }: { article:
 
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/maandhan/pm-kisan-maandhan-registration-2026', l: '📝 Registration' },
-          { href: '/maandhan/pm-kisan-maandhan-eligibility-documents', l: '📄 Eligibility' },
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
+          { href: '/maandhan/pm-kisan-maandhan-registration-2026', l: 'Registration' },
+          { href: '/maandhan/pm-kisan-maandhan-eligibility-documents', l: 'Eligibility' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
         ]} />
         <Disclaimer />
       </div>

@@ -6,11 +6,11 @@ import { AUTHOR_NAME } from '@/lib/site-config';
 
 const RELATED = [
   { slug: 'gehu-ka-bhav-msp-vs-mandi', title: 'Gehu Ka Bhav — MSP vs Mandi', emoji: '🌾' },
-  { slug: 'mandi-bhav-today', title: 'Daily Mandi Bhav Dekhein', emoji: '📊' },
+  { slug: 'mandi-bhav-today', title: 'Daily Mandi Bhav Dekhein' },
   { slug: 'enam-registration-kaise-kare', title: 'eNAM Registration', emoji: '🏪' },
-  { slug: 'mandi-bhav-app-comparison', title: 'Kaunsa Mandi App Sahi', emoji: '📱' },
+  { slug: 'mandi-bhav-app-comparison', title: 'Kaunsa Mandi App Sahi' },
   { slug: 'sabzi-bhav-guide-pyaz-aloo-tamatar', title: 'Sabzi Ke Rate Kaise Samjhein', emoji: '🧅' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Kaise Banega', emoji: '💳' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Kaise Banega' },
 ];
 
 const FAQS_DATA = [
@@ -109,10 +109,10 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
             MSP List 2026-27: Rabi &amp; Kharif Ki Poori Table, Pichhle Saal Se Comparison
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(article.publishedTime)}</span>
-            <span>🔄 Last Updated: 5 August 2026</span>
-            <span>⏱️ 11 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(article.publishedTime)}</span>
+            <span>Last Updated: 5 August 2026</span>
+            <span>11 min read</span>
           </div>
         </div>
       </div>
@@ -258,7 +258,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           loading="lazy"
         />
 
-        <SH>📈 Is Baar Kahan Sabse Zyada Fayda Hua</SH>
+        <SH>Is Baar Kahan Sabse Zyada Fayda Hua</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Table lambi hai, isliye seedhe kaam ki baat. Tilhan (oilseeds) mein badhotri sabse tez rahi —
           sunflower ₹622, til ₹500, nigerseed ₹515. Iski wajah policy hai: India abhi bhi khaane ka tel bahut
@@ -276,7 +276,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           desh mein ek hai, lekin uski sarkari kharid har district mein nahi hoti.
         </DB>
 
-        <SH>🧮 MSP Ka Number Kaise Banta Hai</SH>
+        <SH>MSP Ka Number Kaise Banta Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Process har saal ek jaisa chalta hai:
         </p>
@@ -376,7 +376,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           loading="lazy"
         />
 
-        <SH>⚖️ MSP Par Bechein Ya Mandi Mein — Faisla Kaise Karein</SH>
+        <SH>MSP Par Bechein Ya Mandi Mein — Faisla Kaise Karein</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Har season ye sawal aata hai. Seedha jawab: dono rate compare karo, aur sirf rate nahi — kharche aur
           risk bhi.
@@ -450,7 +450,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           loading="lazy"
         />
 
-        <SH>❌ Char Galat Baatein Jo Aksar Suni Jati Hain</SH>
+        <SH>Char Galat Baatein Jo Aksar Suni Jati Hain</SH>
         <div className="space-y-3 my-4">
           <div className="p-4 border border-[var(--color-border)] rounded-xl">
             <p className="font-bold text-sm text-[var(--color-text)] mb-1">&quot;MSP par bechna kanooni haq hai&quot;</p>
@@ -482,7 +482,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           </div>
         </div>
 
-        <SH>⚠️ Aam Galtiyan — Jo Registration Aur Kharid Mein Files Rukwati Hain</SH>
+        <SH>Aam Galtiyan — Jo Registration Aur Kharid Mein Files Rukwati Hain</SH>
         <StepList>
           <SI n={1}><strong>Naam ka mismatch:</strong> Aadhaar mein "Ram Kumar", khatauni mein "Ramkumar", bank mein "R. Kumar" — aur registration atak gaya. Portal par form bharne se pehle teeno kagaz saamne rakh kar naam ki spelling milao. Hazaron files isi ek wajah se rukti hain.</SI>
           <SI n={2}><strong>Registration window miss karna:</strong> window sowing ke baad khulti hai aur kharid shuru hone se pehle band ho jati hai. "Katai ke baad dekhenge" wali soch season kha jati hai — abhi apne state portal par dates check karo.</SI>
@@ -505,10 +505,10 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           </p>
         </div>
 
-        <SH>❓ FAQ — Aapke Sawaal</SH>
+        <SH>FAQ — Aapke Sawaal</SH>
         <FAQBlock faqs={FAQS_DATA} />
 
-        <SH>📚 Sources</SH>
+        <SH>Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
             CCEA press release, Rabi Marketing Season 2026-27 MSP — 1 October 2025.{' '}
@@ -531,9 +531,9 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[
-          { href: '/articles/mandi-bhav-today', l: '📊 Mandi Ke Aaj Ke Rates' },
+          { href: '/articles/mandi-bhav-today', l: 'Mandi Ke Aaj Ke Rates' },
           { href: '/articles/gehu-ka-bhav-msp-vs-mandi', l: '🌾 Gehu MSP vs Mandi' },
-          { href: '/articles/category/mandi', l: '📂 Mandi-Bhav Section' },
+          { href: '/articles/category/mandi', l: 'Mandi-Bhav Section' },
         ]} />
         <Disclaimer />
       </div>

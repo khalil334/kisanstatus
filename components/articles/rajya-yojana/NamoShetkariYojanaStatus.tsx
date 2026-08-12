@@ -46,7 +46,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Namo Shetkari hapta kadhi milel?',
-    a: 'Pattern ye raha hai ki rajya ka hapta kendriya kist aane ke kuch hafton baad release hota hai — kyunki suchi usi verified data se banti hai. ⚠️ Agle hapte ki koi date officially announce nahi hui hai; GR (Government Resolution) nikalne ke baad hi tareekh pakki hoti hai.',
+    a: 'Pattern ye raha hai ki rajya ka hapta kendriya kist aane ke kuch hafton baad release hota hai — kyunki suchi usi verified data se banti hai.  Agle hapte ki koi date officially announce nahi hui hai; GR (Government Resolution) nikalne ke baad hi tareekh pakki hoti hai.',
   },
   {
     q: 'Mera naam beneficiary list mein nahi hai, kya karein?',
@@ -75,7 +75,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
     <article className="prose prose-lg max-w-4xl mx-auto">
 
       <InfoBox type="update" date="4 August 2026">
-        <strong>Latest Update:</strong> ⚠️ Agle hapte ki koi official release date announce nahi hui hai.
+        <strong>Latest Update:</strong> Agle hapte ki koi official release date announce nahi hui hai.
         Maharashtra sarkar ne saaf kiya hai ki kendriya list ke eligible annadata ko judaa apply
         nahi karna hai. Paisa nahi aaya hai to neeche diye tareeke se apna{' '}
         <strong>namo shetkari yojana status check</strong> kar lein.
@@ -265,7 +265,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         </tr>
         <tr>
           <td>2nd Installment</td>
-          <td>⚠️ Date announce nahi hui</td>
+          <td>Date announce nahi hui</td>
           <td>Pending</td>
         </tr>
       </SchemeTable>

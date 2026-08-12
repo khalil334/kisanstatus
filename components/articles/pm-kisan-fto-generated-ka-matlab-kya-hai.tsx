@@ -12,12 +12,12 @@ const PUBLISHED = '2025-12-26T11:27:11+05:30';
 const MODIFIED = '2026-01-04T13:42:17+05:30';
 
 const RELATED = [
-  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '📅' },
-  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary Roster Check', emoji: '📋' },
-  { slug: 'PmKisanMasterGuide2026', title: 'Master Guide', emoji: '📚' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Credit Card Guide', emoji: '💳' },
+  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status' },
+  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary Roster Check' },
+  { slug: 'PmKisanMasterGuide2026', title: 'Master Guide' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Credit Card Guide' },
   { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price Guide', emoji: '🌱' },
-  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav', emoji: '📈' },
+  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav' },
 ];
 
 const FAQS_DATA = [
@@ -60,7 +60,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
           message={modal.message}
           redirectUrl={modal.url}
           onClose={() => setModal(null)}
-          infoNote="📌 Seedha pmkisan.gov.in par ja rahe ho, thoda sabr."
+          infoNote="Seedha pmkisan.gov.in par ja rahe ho, thoda sabr."
         />
       )}
 
@@ -78,10 +78,10 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             FTO Full Form Aur FTO Generated Ka Matlab — PM Kisan Guide
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 13 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>13 min read</span>
           </div>
         </div>
       </div>
@@ -151,7 +151,6 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
             <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl text-center">
-              <span className="text-2xl block mb-2">📝</span>
               <p className="font-black text-blue-800 dark:text-blue-300 text-sm">Step 1</p>
               <p className="text-xs text-blue-700 dark:text-blue-400 mt-1">Order ban gaya (Generated)</p>
             </div>
@@ -161,7 +160,6 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
               <p className="text-xs text-yellow-700 dark:text-yellow-400 mt-1">Bank process kar raha (Processed)</p>
             </div>
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl text-center">
-              <span className="text-2xl block mb-2">💰</span>
               <p className="font-black text-green-800 dark:text-green-300 text-sm">Step 3</p>
               <p className="text-xs text-green-700 dark:text-green-400 mt-1">Paisa account mein aa gaya</p>
             </div>
@@ -298,9 +296,9 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
               </thead>
               <tbody>
                 {[
-                  ['September se pehle', 'October ke pehle hafte', '✅ Pehle Aayega'],
-                  ['September mein', 'October ke end tak', '⏳ Thoda baad mein'],
-                  ['Abhi tak nahi ki', '25vi kist (Feb 2027)', '❌ 24vi nahi milegi'],
+                  ['September se pehle', 'October ke pehle hafte', 'Pehle Aayega'],
+                  ['September mein', 'October ke end tak', 'Thoda baad mein'],
+                  ['Abhi tak nahi ki', '25vi kist (Feb 2027)', '24vi nahi milegi'],
                 ].map(([cat, timing, status], i) => (
                   <tr key={i} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
                     <td className="p-3 border-b border-[var(--color-border)] font-medium text-xs text-[var(--color-text)]">{cat}</td>
@@ -333,7 +331,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
 
           <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl">
             <p className="text-sm font-bold text-green-800 dark:text-green-300 mb-2">
-              🔍 Abhi FTO Status Check Karein
+               Abhi FTO Status Check Karein
             </p>
             <p className="text-xs text-green-700 dark:text-green-400 mb-3">
               Official PM Kisan portal par jaakar apna payment status check karein. 10 second baad portal khulega.
@@ -346,7 +344,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
               )}
               className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
-              📥 Yahan Click Karein → FTO Status Check Hoga
+               Yahan Click Karein → FTO Status Check Hoga
             </button>
           </div>
 
@@ -402,7 +400,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             </div>
             <div className="border-l-4 border-blue-500 dark:border-blue-700 pl-4 py-1">
               <h3 className="font-black text-[var(--color-text)] text-sm mb-1">Helpline Try Karein</h3>
-              <p className="text-xs text-[var(--color-text-muted)]">📞 155261 ya 1800115526 — subah 9 se shaam 6 baje tak available hai. Call karte waqt Aadhaar number, enrollment number aur bank account number saath rakhein, sawal karte hi maangenge.</p>
+              <p className="text-xs text-[var(--color-text-muted)]">155261 ya 1800115526 — subah 9 se shaam 6 baje tak available hai. Call karte waqt Aadhaar number, enrollment number aur bank account number saath rakhein, sawal karte hi maangenge.</p>
             </div>
             <div className="border-l-4 border-green-500 dark:border-green-700 pl-4 py-1">
               <h3 className="font-black text-[var(--color-text)] text-sm mb-1">Kuch Na Ho Toh CSC Jaayein</h3>
@@ -509,7 +507,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
 
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 border-l-[6px] rounded-xl">
           <h3 className="text-base font-black text-blue-800 dark:text-blue-300 mb-2">
-            🔗 PM Kisan Official Portal
+             PM Kisan Official Portal
           </h3>
           <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
             FTO status, land seeding status, ya beneficiary list — teeno ki jaankari isi ek portal par mil jaayegi. 10 second baad khulega.
@@ -522,24 +520,23 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             )}
             className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
           >
-            📥 Yahan Click Karein → PM Kisan Portal Khulega
+             Yahan Click Karein → PM Kisan Portal Khulega
           </button>
         </div>
 
         <CalcBanner
-          icon="📅"
           title="Apni Kist Track Karein"
           desc="Kitni kist aayi, FTO status kya hai, arrears kitne — sab jaanein"
-          primaryCta={{ href: '/calculator/installment-tracker', label: '📅 Tracker Kholein →' }}
-          secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: '💰 Benefit Calculator' }}
+          primaryCta={{ href: '/calculator/installment-tracker', label: 'Tracker Kholein →' }}
+          secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: 'Benefit Calculator' }}
         />
 
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/PmKisan24viKist2026', l: '📅 24vi Kist' },
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
-          { href: '/articles/PmKisanBeneficiaryList2026', l: '📋 Beneficiary List' },
+          { href: '/articles/PmKisan24viKist2026', l: '24vi Kist' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
+          { href: '/articles/PmKisanBeneficiaryList2026', l: 'Beneficiary List' },
         ]} />
         <Disclaimer />
       </div>

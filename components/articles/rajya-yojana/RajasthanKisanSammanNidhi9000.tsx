@@ -41,7 +41,7 @@ export default function RajasthanKisanSammanNidhi9000() {
   const faqs = [
     {
       q: 'Kya ₹12,000 ki badhotri confirm ho chuki hai?',
-      a: '⚠️ Ye abhi sirf ghoshna hai, official notification nahi aaya. Jab tak Finance ya Agriculture Department ka gazette notification na aaye, paisa ₹9,000 wale hisaab se hi maano.',
+      a: 'Ye abhi sirf ghoshna hai, official notification nahi aaya. Jab tak Finance ya Agriculture Department ka gazette notification na aaye, paisa ₹9,000 wale hisaab se hi maano.',
     },
     {
       q: '6vi kist kab tak aa jaani chahiye?',
@@ -71,7 +71,7 @@ export default function RajasthanKisanSammanNidhi9000() {
 
         <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
           <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
-            <strong>Status (4 August 2026):</strong> 6vi kist abhi pending hai. ⚠️ Next kist date officially announce nahi hua. Jan Soochna portal check karte rahein — kisi bhi WhatsApp forward wali tareekh par bharosa na karein.
+            <strong>Status (4 August 2026):</strong> 6vi kist abhi pending hai.  Next kist date officially announce nahi hua. Jan Soochna portal check karte rahein — kisi bhi WhatsApp forward wali tareekh par bharosa na karein.
           </p>
         </div>
 
@@ -232,7 +232,7 @@ export default function RajasthanKisanSammanNidhi9000() {
         <h2>₹12,000 Ka Sach — Announcement Aur Notification Mein Fark Hai</h2>
 
         <p>
-          CM Bhajanlal Sharma ne prastaav rakha hai ki state apna ₹3,000 wala hissa badhakar ₹6,000 kar de — jisse total ₹12,000 tak pahunch jaaye. ⚠️ Ye abhi sirf ghoshna hai, official notification nahi aaya.
+          CM Bhajanlal Sharma ne prastaav rakha hai ki state apna ₹3,000 wala hissa badhakar ₹6,000 kar de — jisse total ₹12,000 tak pahunch jaaye.  Ye abhi sirf ghoshna hai, official notification nahi aaya.
         </p>
 
         <p>
@@ -240,7 +240,7 @@ export default function RajasthanKisanSammanNidhi9000() {
         </p>
 
         <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
-          <h3 className="font-bold text-yellow-800 dark:text-yellow-300 mb-2 text-sm">⚠️ Savdhaan</h3>
+          <h3 className="font-bold text-yellow-800 dark:text-yellow-300 mb-2 text-sm">Savdhaan</h3>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
             WhatsApp aur YouTube par "₹12,000 aa gaye" jaisi khabrein ghoom rahi hain — ye sach nahi hain. Apna budget ₹9,000 ke hisaab se hi rakho. Badhotri aayi to bonus samjho, plan mat karo.
           </p>

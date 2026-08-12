@@ -541,7 +541,6 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
           ID wali pehchaan ka tareeka bhi kisi doosre rajya mein nahi milta.
         </p>
 
-
         <p>
           <Link href="/rajya-yojana">← Sabhi rajya ki kisan yojana</Link>
         </p>

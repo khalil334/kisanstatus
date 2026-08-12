@@ -12,10 +12,10 @@ const PUBLISHED = '2026-01-11T14:57:53+05:30';
 const MODIFIED = '2026-01-25T13:34:27+05:30';
 
 const RELATED = [
-  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Complete Guide', emoji: '📚' },
-  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '📅' },
-  { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price', emoji: '🧪' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Loan Apply', emoji: '💳' },
+  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Complete Guide' },
+  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status' },
+  { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Loan Apply' },
 ];
 
 const FAQS_DATA = [
@@ -68,7 +68,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
           message={modal.message}
           redirectUrl={modal.url}
           onClose={() => setModal(null)}
-          infoNote="📌 Thoda wait karo. Official portal khulne wala hai."
+          infoNote="Thoda wait karo. Official portal khulne wala hai."
         />
       )}
 
@@ -86,10 +86,10 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
             Soil Health Card 2026: Mitti Test Free Kaise Karwayein, State Wise Online Apply
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-amber-100">
-            <span>✍️ <Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 12 min read</span>
+            <span><Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>12 min read</span>
           </div>
         </div>
       </div>
@@ -152,7 +152,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
 
           <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl">
             <p className="text-sm font-bold text-green-800 dark:text-green-300 mb-2">
-              🔍 Abhi Soil Health Card Apply Karo
+               Abhi Soil Health Card Apply Karo
             </p>
             <p className="text-xs text-green-700 dark:text-green-400 mb-3">
               Official Soil Health portal par jakar apna <strong>soil health card online apply</strong> karo. 10 second baad portal khulega.
@@ -165,7 +165,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
               )}
               className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
-              📥 Yahan Click Karo → Soil Health Card Portal Khulega
+               Yahan Click Karo → Soil Health Card Portal Khulega
             </button>
           </div>
         </section>
@@ -283,7 +283,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
 
           <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 rounded-xl">
             <p className="text-sm font-bold text-blue-800 dark:text-blue-300 mb-2">
-              🔍 Status Check Karo
+               Status Check Karo
             </p>
             <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
               Official portal par jakar apna <strong>soil health card status check</strong> karo. 10 second baad portal khulega.
@@ -296,7 +296,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
               )}
               className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
-              📥 Yahan Click Karo → Status Check Hoga
+               Yahan Click Karo → Status Check Hoga
             </button>
           </div>
         </section>
@@ -310,11 +310,11 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             <div className="bg-green-50 rounded-xl p-4 border border-green-300">
-              <p className="font-black text-green-800 text-sm mb-2">📈 Production Badha</p>
+              <p className="font-black text-green-800 text-sm mb-2">Production Badha</p>
               <p className="text-xs text-gray-700">Sahi fertilizer se 25-40% tak production badh jaata hai</p>
             </div>
             <div className="bg-blue-50 rounded-xl p-4 border border-blue-300">
-              <p className="font-black text-blue-800 text-sm mb-2">💰 Cost Kam Hota</p>
+              <p className="font-black text-blue-800 text-sm mb-2">Cost Kam Hota</p>
               <p className="text-xs text-gray-700">Waste fertilizer use nahi hota, cost 15-20% tak kam</p>
             </div>
             <div className="bg-amber-50 rounded-xl p-4 border border-amber-300">
@@ -322,7 +322,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
               <p className="text-xs text-gray-700">Zameen ki quality improve hoti hai — long term benefit</p>
             </div>
             <div className="bg-purple-50 rounded-xl p-4 border border-purple-300">
-              <p className="font-black text-purple-800 text-sm mb-2">📋 Record</p>
+              <p className="font-black text-purple-800 text-sm mb-2">Record</p>
               <p className="text-xs text-gray-700">Card future mein proof ke kaam aata hai — loan application mein</p>
             </div>
           </div>
@@ -347,7 +347,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
 
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 border-l-[6px] rounded-xl">
           <h3 className="text-base font-black text-blue-800 dark:text-blue-300 mb-2">
-            🔗 National Soil Health Dashboard
+             National Soil Health Dashboard
           </h3>
           <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
             <strong>Soil health card download</strong> karne ke liye, <strong>soil health card status check</strong> karne ke liye, ya state wise information ke liye official portal par jaayein. 10 second baad portal khulega.
@@ -360,7 +360,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
             )}
             className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
           >
-            📥 Yahan Click Karo → Official Portal Khulega
+             Yahan Click Karo → Official Portal Khulega
           </button>
         </div>
 

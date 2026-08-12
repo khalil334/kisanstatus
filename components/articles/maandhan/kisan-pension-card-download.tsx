@@ -12,7 +12,7 @@ const RELATED_CARDS = [
     slug: 'pm-kisan-maandhan-status-check-online',
     title: 'Apna Status Check Karein',
     desc: 'Pension card download karne ke baad apna contribution history aur active status verify karein.',
-    emoji: '🔍',
+    
   },
   {
     slug: 'pmkmy-bank-account-change',
@@ -24,7 +24,7 @@ const RELATED_CARDS = [
     slug: 'pm-kisan-maandhan-eligibility-documents',
     title: 'Eligibility Aur Documents',
     desc: 'Pension scheme ke liye kaun eligible hai aur kaun se documents zaroori hain, jaanein.',
-    emoji: '📄',
+    
   },
 ];
 
@@ -113,10 +113,10 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
           </h1>
 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 10 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>10 min read</span>
           </div>
         </div>
       </div>
@@ -156,7 +156,7 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
           </p>
 
           <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-r-xl">
-            <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-3">📄 Scheme Ke Documented Rules — Jinke Liye Ye Kagaz Chahiye Hoga</h3>
+            <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-3">Scheme Ke Documented Rules — Jinke Liye Ye Kagaz Chahiye Hoga</h3>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-3">
               Ye sirf "sambhal ke rakho" wali general salah nahi hai — scheme ke apne rules (
               <a href="https://maandhan.in" target="_blank" rel="noopener noreferrer nofollow" className="underline text-green-700 dark:text-green-400">maandhan.in</a>
@@ -180,8 +180,8 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
             Agar aap abhi scheme mein registered nahi hain to pehle wo step poora karein — card download registration ke baad hi possible hai. Eligibility aur registration dono ki alag guides yahan hain:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <Link href="/maandhan/pm-kisan-maandhan-eligibility-documents" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">✅ Kya Main Eligible Hoon? →</Link>
-            <Link href="/maandhan/pm-kisan-maandhan-registration-2026" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">📝 Registration Kaise Karein →</Link>
+            <Link href="/maandhan/pm-kisan-maandhan-eligibility-documents" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">Kya Main Eligible Hoon? →</Link>
+            <Link href="/maandhan/pm-kisan-maandhan-registration-2026" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">Registration Kaise Karein →</Link>
           </div>
         </section>
 
@@ -350,23 +350,23 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
 
           <div className="space-y-3 mb-4">
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-              <p className="font-black text-sm text-[var(--color-text)] mb-1">❌ Galt Aadhaar Daalna (Family Confusion)</p>
+              <p className="font-black text-sm text-[var(--color-text)] mb-1">Galt Aadhaar Daalna (Family Confusion)</p>
               <p className="text-xs text-[var(--color-text-muted)]">Kai parivaar me sabke Aadhaar number milte-julte hain ya yaad nahi rehte. Galti se bête ya patni ka number daal diya, to "No record found" aa jayega. Hamesha physical card dekh kar 12 digit type karein.</p>
             </div>
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-              <p className="font-black text-sm text-[var(--color-text)] mb-1">❌ Browser Cache Ka Ghost</p>
+              <p className="font-black text-sm text-[var(--color-text)] mb-1">Browser Cache Ka Ghost</p>
               <p className="text-xs text-[var(--color-text-muted)]">Kabhi-kabhi aap sahi details dalte hain, lekin purana data load ho jata hai kyunki browser me purani files saved hain. Agar error aaye, to "Incognito Mode" ya "Private Window" me try karein.</p>
             </div>
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-              <p className="font-black text-sm text-[var(--color-text)] mb-1">❌ PDF Download Karke Bhool Jaana</p>
+              <p className="font-black text-sm text-[var(--color-text)] mb-1">PDF Download Karke Bhool Jaana</p>
               <p className="text-xs text-[var(--color-text-muted)]">File "Downloads" me gayi, phir phone clean karte waqt ya gallery saaf karte waqt delete ho gayi. Hamesha download karte hi uska screenshot le lein, ya WhatsApp par apne hi number par forward kar dein.</p>
             </div>
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-              <p className="font-black text-sm text-[var(--color-text)] mb-1">❌ Naam ki Spelling Ka Mismatch</p>
+              <p className="font-black text-sm text-[var(--color-text)] mb-1">Naam ki Spelling Ka Mismatch</p>
               <p className="text-xs text-[var(--color-text-muted)]">Aadhaar me "Rameshwar" hai, lekin scheme me "Rameshwar Kumar" register ho gaya. Aisi chhoti si cheez bhi kabhi-kabhi automated verification rok deti hai. Is case me ghabrayein nahi, CSC wale ki madad se manual check karwayein.</p>
             </div>
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-              <p className="font-black text-sm text-[var(--color-text)] mb-1">❌ Screenshot Ko Official Document Samajhna</p>
+              <p className="font-black text-sm text-[var(--color-text)] mb-1">Screenshot Ko Official Document Samajhna</p>
               <p className="text-xs text-[var(--color-text-muted)]">Bahut se log screen ka photo le lete hain, lekin screenshot official document nahi maana jaata. Hamesha PDF hi rakhiye jisme scheme ka official logo, watermark, aur aapka account number clearly dikh raha ho.</p>
             </div>
           </div>
@@ -449,9 +449,9 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
 
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/maandhan/pm-kisan-maandhan-status-check-online', l: '🔍 Status Check' },
+          { href: '/maandhan/pm-kisan-maandhan-status-check-online', l: 'Status Check' },
           { href: '/maandhan/pmkmy-bank-account-change', l: ' Bank Change' },
-          { href: '/maandhan/pm-kisan-maandhan-eligibility-documents', l: '📄 Eligibility' },
+          { href: '/maandhan/pm-kisan-maandhan-eligibility-documents', l: 'Eligibility' },
         ]} />
         <Disclaimer />
       </div>

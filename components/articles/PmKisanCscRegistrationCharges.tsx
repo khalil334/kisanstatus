@@ -7,10 +7,10 @@ const PUBLISHED = '2026-01-31T20:57:54+05:30';
 const MODIFIED = '2026-02-21T16:05:48+05:30';
 
 const RELATED = [
-  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Online Guide', emoji: '🔐' },
-  { slug: 'PmKisanMasterGuide2026', title: 'Master Guide', emoji: '' },
+  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Online Guide' },
+  { slug: 'PmKisanMasterGuide2026', title: 'Master Guide' },
   { slug: 'PmKisanBankAccountChangeProcess', title: 'Bank Account Change', emoji: '🏦' },
-  { slug: 'PmKisanStateNodalOfficerList', title: 'Nodal Officer List', emoji: '📞' },
+  { slug: 'PmKisanStateNodalOfficerList', title: 'Nodal Officer List' },
 ];
 
 const FAQS_DATA = [
@@ -69,10 +69,10 @@ export default function PmKisanCscRegistrationCharges() {
             PM Kisan CSC Registration Charges: Sahi Fees, Kaise Karein?
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 14 min read</span>
+            <span><Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>14 min read</span>
           </div>
         </div>
       </div>
@@ -226,7 +226,7 @@ export default function PmKisanCscRegistrationCharges() {
         </section>
 
         <section className="mb-8">
-          <SH>⚠️ CSC Fraud Se Kaise Bachen? (Red Flags)</SH>
+          <SH>CSC Fraud Se Kaise Bachen? (Red Flags)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Bhai, kuch log CSC ka fayda utha kar gareeb kisanon ko loot te hain. In signs par dhyan do:
           </p>
@@ -254,8 +254,8 @@ export default function PmKisanCscRegistrationCharges() {
               },
             ].map(({ sign, action }, i) => (
               <div key={i} className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl p-4">
-                <p className="font-black text-sm text-red-600 dark:text-red-400 mb-1">🚩 {sign}</p>
-                <p className="text-xs text-red-700 dark:text-red-300"><strong>✅ Kya Karein:</strong> {action}</p>
+                <p className="font-black text-sm text-red-600 dark:text-red-400 mb-1">{sign}</p>
+                <p className="text-xs text-red-700 dark:text-red-300"><strong>Kya Karein:</strong> {action}</p>
               </div>
             ))}
           </div>
@@ -302,7 +302,7 @@ export default function PmKisanCscRegistrationCharges() {
               { doc: 'Pen', note: 'Form sign karne ke liye (agar offline form bharna ho).' },
             ].map(({ doc, note }) => (
               <div key={doc} className="p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-                <p className="font-black text-sm text-[var(--color-text)] mb-1">📄 {doc}</p>
+                <p className="font-black text-sm text-[var(--color-text)] mb-1">{doc}</p>
                 <p className="text-xs text-[var(--color-text-muted)]">{note}</p>
               </div>
             ))}
@@ -374,8 +374,8 @@ export default function PmKisanCscRegistrationCharges() {
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/PmKisanEkycOnline2026', l: '🔐 Free Online eKYC' },
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
+          { href: '/articles/PmKisanEkycOnline2026', l: 'Free Online eKYC' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
           { href: '/articles/PmKisanBankAccountChangeProcess', l: '🏦 Bank Account Change' },
         ]} />
         <Disclaimer />
