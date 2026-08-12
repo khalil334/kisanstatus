@@ -37,7 +37,7 @@ const mushroomKhetiFaqs = [
   },
   {
     q: 'Khumbi ke kamre mein badboo ya smell kyun aati hai?',
-    a: 'Agar sterilization sahi se hua ho toh smell minimal hoti hai. Lekin agar straw zyada geela chhod diya ya koi bag kharab ho gaya aur use turant bahar nahi nikala, toh ammonia ya sadan ki badboo aane lagti hai.',
+    a: 'Agar sterilization sahi se hua ho toh smell minimal hoti hai. Lekin agar straw zyada geela chhod diya ya koi bag kharab ho gaya aur use waqt par bahar nahi nikala, toh ammonia ya sadan ki badboo aane lagti hai.',
   },
   {
     q: 'Green mold (hara fungus) dikhe toh turant kya karein?',
@@ -241,8 +241,8 @@ export default function MushroomKheti() {
         Fungi cultivation mein rog tezi se failta hai. Prevention hi best cure hai.
       </p>
       <ul className="list-disc pl-5 space-y-3 mb-8 text-gray-700 dark:text-gray-300">
-        <li><strong>Green Mold (Trichoderma):</strong> Agar bag mein hara chhakka dikhayi de, toh us bag ko turant kamre se bahar nikal kar jala dein ya gehra gaad dein. Bachaye hue bags ke aas-paas <em>Trichoderma viride</em> ka live culture spray karein, jo is harmful fungus ko kha jata hai. Neem oil spray (5ml/litre) bhi ek asardaar upay hai.</li>
-        <li><strong>Bacterial Blotch:</strong> Mushroom ke cap par peele ya bhure dhabbe. Iska karan zyada nami aur hawa ka na rukna hai. Turant watering band karein, exhaust fan chalayein, aur bleaching powder ke halke solution se floor saaf karein.</li>
+        <li><strong>Green Mold (Trichoderma):</strong> Agar bag mein hara chhakka dikhayi de, toh us bag ko usi waqt kamre se bahar nikal kar jala dein ya gehra gaad dein. Bachaye hue bags ke aas-paas <em>Trichoderma viride</em> ka live culture spray karein, jo is harmful fungus ko kha jata hai. Neem oil spray (5ml/litre) bhi ek asardaar upay hai.</li>
+        <li><strong>Bacterial Blotch:</strong> Mushroom ke cap par peele ya bhure dhabbe. Iska karan zyada nami aur hawa ka na rukna hai. Watering foran band karein, exhaust fan chalayein, aur bleaching powder ke halke solution se floor saaf karein.</li>
       </ul>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
@@ -352,7 +352,7 @@ export default function MushroomKheti() {
         Ek kadwi sachai yeh hai ki subsidy process mein 3-6 mahine lag sakte hain, aur paperwork thoda complex hota hai.
       </p>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Mera strong suggestion hai: apna kaam subsidy ke intezaar mein na rokiye. Pehle apni pocket se chhota setup karein, bank se loan lein, aur application daal dein. Agar subsidy aa gayi, toh use future expansion mein lagayein. Apne zila ke Horticulture Officer se mil kar latest state-specific scheme ki jankari zaroor lein.
+        Mera strong suggestion hai: apna kaam subsidy ke intezaar mein na rokiye. Pehle apni pocket se chhota setup karein, bank se loan lein, aur application daal dein. Agar subsidy aa gayi, toh use future expansion mein lagayein. Apne zila ke Horticulture Officer se mil kar latest state-specific scheme ki jankari le lein.
       </p>
 
       <ExternalLinkButton

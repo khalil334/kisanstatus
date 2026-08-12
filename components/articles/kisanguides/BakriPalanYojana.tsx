@@ -44,7 +44,7 @@ export default function BakriPalanYojana() {
     },
     {
       q: 'Bakri Palan Yojana 2026 ki last date kya hai?',
-      a: 'Fixed last date nahi hai. Portal saal bhar applications leta hai, financial year ke budget khatam hone tak. Apne state ke Pashu Palan office se current status zaroor confirm kar lena.',
+      a: 'Fixed last date nahi hai. Portal saal bhar applications leta hai, financial year ke budget khatam hone tak. Apne state ke Pashu Palan office se current status ek baar confirm kar lena.',
     },
   ];
 

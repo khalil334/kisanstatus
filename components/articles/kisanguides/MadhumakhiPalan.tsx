@@ -39,11 +39,11 @@ const madhumakhiPalanFaqs = [
     q: 'Padosi pesticide spray kare toh?',
     a: (
       <>
-        Turant upay mushkil hai, lekin agar advance mein pata chal jaye, toh hive ke entrance ko temporary mesh se band karke 2-3 din ke liye dark, cool jagah par shift kar dena chahiye. Long-term mein <Link href="/articles/vermi-compost-business-guide" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">organic farming zones</Link> ke paas hi apiary setup karna safe hai.
+        Us waqt upay mushkil hai, lekin agar advance mein pata chal jaye, toh hive ke entrance ko temporary mesh se band karke 2-3 din ke liye dark, cool jagah par shift kar dena chahiye. Long-term mein <Link href="/articles/vermi-compost-business-guide" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">organic farming zones</Link> ke paas hi apiary setup karna safe hai.
       </>
     ),
     schemaText:
-      'Turant upay mushkil hai, lekin agar advance mein pata chal jaye, toh hive ke entrance ko temporary mesh se band karke 2-3 din ke liye dark, cool jagah par shift kar dena chahiye. Long-term mein organic farming zones ke paas hi apiary setup karna safe hai.',
+      'Us waqt upay mushkil hai, lekin agar advance mein pata chal jaye, toh hive ke entrance ko temporary mesh se band karke 2-3 din ke liye dark, cool jagah par shift kar dena chahiye. Long-term mein organic farming zones ke paas hi apiary setup karna safe hai.',
   },
   {
     q: 'Terrace par bee box rakhna safe hai?',
@@ -234,7 +234,7 @@ export default function MadhumakhiPalan() {
         <li><strong>Jan - March (Build-up Phase):</strong> Sarson aur litchi ke bloom ke dauran colony tezi se expand karti hai. Yahan <strong>bee swarm control</strong> ke practical tarike aana chahiye, jaise time par super chamber add karna taaki bees ko shahad store karne ki jagah mile aur wo bhage nahi.</li>
         <li><strong>April - June (Lean/Summer Period):</strong> Flora kam ho jata hai. Colony ko zinda rakhne ke liye 1:1 ratio ka sugar syrup feed karna padta hai. Paani ki availability ensure karein, warna bees paani dhoondhne ke chakkar mein mar jati hain.</li>
         <li><strong>July - September (Monsoon Risks):</strong> High humidity ke karan fungal infections aur wax moth ka khatra badh jata hai. Hive ko elevated (zameen se upar) rakhein aur ventilation achha rakhein.</li>
-        <li><strong>October - December (Main Honey Flow):</strong> Eucalyptus, Sunflower, aur Ber ke phoolon ke dauran main honey extraction hota hai. Is time Varroa mite treatment zaroor karein taaki winter colony strong rahe.</li>
+        <li><strong>October - December (Main Honey Flow):</strong> Eucalyptus, Sunflower, aur Ber ke phoolon ke dauran main honey extraction hota hai. Is time Varroa mite treatment kar hi lein taaki winter colony strong rahe.</li>
       </ul>
 
       <Image
@@ -293,7 +293,7 @@ export default function MadhumakhiPalan() {
           <li>Farm mein entry par proper hygiene maintain karein.</li>
           <li>Naye colonies ko 15-30 din alag quarantine karein.</li>
           <li>Regular hive cleaning aur disinfection karein.</li>
-          <li>Dead bees ya infected frames ko turant remove aur destroy karein.</li>
+          <li>Dead bees ya infected frames ko dekhte hi remove aur destroy karein.</li>
           <li>Visitors ko hive ke paas limited access dein.</li>
         </ul>
       </div>
