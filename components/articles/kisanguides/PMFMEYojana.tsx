@@ -567,7 +567,7 @@ export default function PMFMEYojana() {
 
       <div className="grid md:grid-cols-2 gap-6 mb-8 not-prose">
         <div className="bg-green-50 dark:bg-green-900/20 p-5 rounded-lg border border-green-200 dark:border-green-800">
-          <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">✅ Aage Badhein, agar:</h3>
+          <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">Aage Badhein, agar:</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>• Already food processing business chala rahe hain (chahe chhote level par).</li>
             <li>• Business ko formal banana chahte hain (FSSAI, GST, branding).</li>
@@ -578,7 +578,7 @@ export default function PMFMEYojana() {
         </div>
 
         <div className="bg-red-50 dark:bg-red-900/20 p-5 rounded-lg border border-red-200 dark:border-red-800">
-          <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">❌ Abhi Mat Karein, agar:</h3>
+          <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">Abhi Mat Karein, agar:</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>• Abhi tak koi business nahi kiya (pehle PMEGP try karein).</li>
             <li>• Food processing mein interested nahi hain.</li>
@@ -620,7 +620,7 @@ export default function PMFMEYojana() {
       <div className="grid md:grid-cols-2 gap-4 mb-8 not-prose">
         <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800 hover:shadow-md transition-shadow">
           <h4 className="font-semibold text-blue-900 dark:text-blue-200 mb-2 flex items-center gap-2">
-            💳 Kisan Credit Card (KCC)
+             Kisan Credit Card (KCC)
           </h4>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Working capital aur setup cost ke liye low-interest loan. Timely repayment par sirf 4% effective interest.</p>
           <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 text-sm font-medium flex items-center gap-1">

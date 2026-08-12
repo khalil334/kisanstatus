@@ -8,12 +8,12 @@ const PUBLISHED = '2025-12-19T13:12:12+05:30';
 const MODIFIED = '2026-01-18T07:59:28+05:30';
 
 const RELATED = [
-{ slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply — ₹5 Lakh Loan, 4% Interest', emoji: '💳' },
+{ slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply — ₹5 Lakh Loan, 4% Interest' },
 { slug: 'KisanRinKahaSeLe2026', title: 'Kisan Loan Kahan Se Le — SBI, CSC, Cooperative', emoji: '🏦' },
-{ slug: 'PmfbyCropInsurance2026', title: 'PMFBY Crop Insurance — 2% Premium Mein Suraksha', emoji: '🛡️' },
-{ slug: 'AgriStackKyaHai2026', title: 'AgriStack Kya Hai — Digital Kisan ID', emoji: '🆔' },
+{ slug: 'PmfbyCropInsurance2026', title: 'PMFBY Crop Insurance — 2% Premium Mein Suraksha' },
+{ slug: 'AgriStackKyaHai2026', title: 'AgriStack Kya Hai — Digital Kisan ID' },
 { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP 500ml Price — IFFCO Rate 2026', emoji: '🌱' },
-{ slug: 'PmKisan24viKist2026', title: 'PM Kisan 24vi Kist — Kab Aayegi 2026?', emoji: '📅' },
+{ slug: 'PmKisan24viKist2026', title: 'PM Kisan 24vi Kist — Kab Aayegi 2026?' },
   { slug: 'custom-hiring-centre-chc-portal', title: 'CHC Machine Rental Portal', emoji: '🚜' },
   { slug: 'silage-making-business-guide', title: 'Silage Business Guide', emoji: '🌾' },
 ];
@@ -66,10 +66,10 @@ return (
          Tractor Loan Bina Down Payment 2026: Hidden Costs, Subsidy Workflow, Aur Woh Baatein Jo Dealer Nahi Batata
        </h1>
        <div className="flex flex-wrap gap-3 text-xs text-green-200">
-         <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
-         <span>📅 {fmtDate(PUBLISHED)}</span>
-         <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-         <span>⏱️ 14 min read</span>
+         <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+         <span>{fmtDate(PUBLISHED)}</span>
+         <span>Updated: {fmtDate(MODIFIED)}</span>
+         <span>14 min read</span>
        </div>
      </div>
    </div>
@@ -429,7 +429,7 @@ return (
          ].map(({ err, fix }) => (
            <div key={err} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl overflow-hidden">
              <div className="bg-red-50 dark:bg-red-900/20 border-b border-red-100 dark:border-red-800 px-4 py-2.5">
-               <p className="font-black text-red-800 dark:text-red-300 text-sm">❌ {err}</p>
+               <p className="font-black text-red-800 dark:text-red-300 text-sm">{err}</p>
              </div>
              <div className="p-4">
                <div className="flex items-start gap-2 bg-green-50 dark:bg-green-900/20 rounded-lg p-3">
@@ -493,15 +493,15 @@ return (
        title="Apni Tractor EMI Calculate Karo"
        desc="Loan amount, interest rate, tenure daalo — monthly payment turant jaano"
        primaryCta={{ href: '/calculator/kcc-loan-emi', label: '🏦 EMI Calculator →' }}
-       secondaryCta={{ href: '/calculator', label: '🧮 Sab Utilities' }}
+       secondaryCta={{ href: '/calculator', label: 'Sab Utilities' }}
      />
 
      <RelatedArticles articles={RELATED} />
      <AuthorBox modified={MODIFIED} />
      <BottomNav extraLinks={[
-       { href: '/articles/KisanCreditCardOnlineApply2026', l: '💳 KCC Guide' },
+       { href: '/articles/KisanCreditCardOnlineApply2026', l: 'KCC Guide' },
        { href: '/articles/KisanRinKahaSeLe2026', l: '🏦 Credit Sources' },
-       { href: '/calculator/kcc-loan-emi', l: '🧮 EMI Calculator' },
+       { href: '/calculator/kcc-loan-emi', l: 'EMI Calculator' },
      ]} />
      <Disclaimer />
    </div>

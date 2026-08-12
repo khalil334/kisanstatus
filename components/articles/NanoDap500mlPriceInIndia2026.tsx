@@ -8,12 +8,12 @@ const PUBLISHED = '2026-01-03T08:52:27+05:30';
 const MODIFIED = '2026-01-12T09:57:33+05:30';
 
 const RELATED = [
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply Guide', emoji: '💳' },
-  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary Roster 2026', emoji: '📋' },
-  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '📅' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply Guide' },
+  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary Roster 2026' },
+  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status' },
   { slug: 'soil-health-card-complete-guide-2026', title: 'Soil Health Card', emoji: '🌱' },
   { slug: 'KisanRinKahaSeLe2026', title: 'Kisan Loan Guide', emoji: '🏦' },
-  { slug: 'AgriStackKyaHai2026', title: 'Digital Kisan ID', emoji: '🆔' },
+  { slug: 'AgriStackKyaHai2026', title: 'Digital Kisan ID' },
 ];
 
 const FAQS_DATA = [
@@ -60,10 +60,10 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
             Nano DAP 500ml Price 2026: Rate, Dosage Chart, Aur Woh Baatein Jo Dealer Nahi Batata
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 13 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>13 min read</span>
           </div>
         </div>
       </div>
@@ -476,16 +476,16 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
           icon="🌾"
           title="Apni Fasal Ki Income Calculate Karo"
           desc="MSP income, crop profit, KCC EMI — sab free calculators se"
-          primaryCta={{ href: '/calculator/msp-income', label: '📊 MSP Calculator →' }}
-          secondaryCta={{ href: '/calculator', label: '🧮 Sab Utilities' }}
+          primaryCta={{ href: '/calculator/msp-income', label: 'MSP Calculator →' }}
+          secondaryCta={{ href: '/calculator', label: 'Sab Utilities' }}
         />
 
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
           { href: '/articles/soil-health-card-complete-guide-2026', l: '🌱 Soil Card' },
-          { href: '/articles/KisanCreditCardOnlineApply2026', l: '💳 KCC Guide' },
-          { href: '/calculator/crop-profit', l: '📊 Crop Profit' },
+          { href: '/articles/KisanCreditCardOnlineApply2026', l: 'KCC Guide' },
+          { href: '/calculator/crop-profit', l: 'Crop Profit' },
         ]} />
         <Disclaimer />
       </div>

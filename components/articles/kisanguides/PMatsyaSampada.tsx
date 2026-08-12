@@ -623,7 +623,7 @@ export default function PMatsyaSampada() {
       <div className="grid md:grid-cols-2 gap-4 mb-8 not-prose">
         <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800 hover:shadow-md transition-shadow">
           <h4 className="font-semibold text-blue-900 dark:text-blue-200 mb-2 flex items-center gap-2">
-            💳 Kisan Credit Card (KCC)
+             Kisan Credit Card (KCC)
           </h4>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Fisheries ke liye low-interest loan. 4% interest rate with timely repayment aur flexible limits.</p>
           <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 text-sm font-medium flex items-center gap-1">
@@ -643,7 +643,7 @@ export default function PMatsyaSampada() {
 
         <div className="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-lg border border-amber-200 dark:border-amber-800 hover:shadow-md transition-shadow">
           <h4 className="font-semibold text-amber-900 dark:text-amber-200 mb-2 flex items-center gap-2">
-            🛡️ PM Fasal Bima Yojana (PMFBY)
+             PM Fasal Bima Yojana (PMFBY)
           </h4>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Natural calamities, disease outbreak, aur flood ke liye fisheries insurance coverage.</p>
           <Link href="/articles/PmfbyCropInsurance2026" className="text-amber-700 hover:underline dark:text-amber-400 text-sm font-medium flex items-center gap-1">
@@ -653,7 +653,7 @@ export default function PMatsyaSampada() {
 
         <div className="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg border border-purple-200 dark:border-purple-800 hover:shadow-md transition-shadow">
           <h4 className="font-semibold text-purple-900 dark:text-purple-200 mb-2 flex items-center gap-2">
-            ♻️ Vermi Compost Business
+             Vermi Compost Business
           </h4>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Fish waste aur pond sludge ko organic fertilizer mein badal kar extra income generate karein.</p>
           <Link href="/articles/vermi-compost-business-guide" className="text-purple-600 hover:underline dark:text-purple-400 text-sm font-medium flex items-center gap-1">
@@ -668,7 +668,7 @@ export default function PMatsyaSampada() {
 
       <div className="grid md:grid-cols-2 gap-6 mb-8 not-prose">
         <div className="bg-green-50 dark:bg-green-900/20 p-5 rounded-lg border border-green-200 dark:border-green-800">
-          <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">✅ Shuru Kar Dein, agar:</h3>
+          <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">Shuru Kar Dein, agar:</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>• Zameen hai (preferably low-lying area jahan paani bhara rehta hai)</li>
             <li>• Water source available hai (borewell, canal, ya natural water body)</li>
@@ -681,7 +681,7 @@ export default function PMatsyaSampada() {
         </div>
 
         <div className="bg-red-50 dark:bg-red-900/20 p-5 rounded-lg border border-red-200 dark:border-red-800">
-          <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">❌ Door Rahein, agar:</h3>
+          <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">Door Rahein, agar:</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>• Water availability nahi hai</li>
             <li>• Daily monitoring nahi kar sakte</li>

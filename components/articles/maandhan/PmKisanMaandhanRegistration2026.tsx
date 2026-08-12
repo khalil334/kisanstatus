@@ -12,19 +12,16 @@ const RELATED_CARDS = [
     slug: 'pm-kisan-maandhan-eligibility-documents',
     title: 'Eligibility & Documents',
     desc: 'Detailed checklist of documents and exact eligibility rules.',
-    emoji: '📄'
   },
   {
     slug: 'pm-kisan-maandhan-pension-calculator',
     title: 'Pension Calculator',
     desc: 'Calculate exact monthly contribution based on your current age.',
-    emoji: '🧮'
   },
   {
     slug: 'pm-kisan-maandhan-withdrawal-refund-rules',
     title: 'Withdrawal & Refund Rules',
     desc: 'What happens to your money if you exit the scheme early?',
-    emoji: '💸'
   },
 ];
 
@@ -109,10 +106,10 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
           </h1>
 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 12 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>12 min read</span>
           </div>
         </div>
       </div>
@@ -174,7 +171,7 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
             CSC jaane se pehle chaar baatein khud confirm karein: (1) umar 18–40 ke beech hai, (2) kheti ki zameen 2 hectare tak hai, (3) aapka naam state/UT ke land records mein <strong>01.08.2019 ki cut-off date</strong> ke hisaab se darj hai — ye scheme ki official condition hai, sirf zameen hona kaafi nahi, aur (4) aap income tax payer nahi hain aur NPS / EPFO / ESIC jaise kisi statutory pension scheme ke member nahi hain — ye sab exclusion list mein hain aur enrollment ke waqt nahi, verification ke waqt pakde jaate hain. Full checklist, exclusions aur joint-family zameen wale case ki detail alag guide mein hai:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <Link href="/maandhan/pm-kisan-maandhan-eligibility-documents" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">✅ Poora Eligibility Self-Check + Exclusion List →</Link>
+            <Link href="/maandhan/pm-kisan-maandhan-eligibility-documents" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">Poora Eligibility Self-Check + Exclusion List →</Link>
           </div>
         </section>
 
@@ -184,7 +181,7 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
             Sirf chaar cheezein: Aadhaar (mobile linked), Aadhaar-seeded bank passbook, mobile phone aur Khatauni. Kaunsa document kis step pe lagega aur seeding kaise verify karein — wo document-wise guide mein hai:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <Link href="/maandhan/pm-kisan-maandhan-eligibility-documents" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">📄 Document-Wise Taiyari Ki Guide →</Link>
+            <Link href="/maandhan/pm-kisan-maandhan-eligibility-documents" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">Document-Wise Taiyari Ki Guide →</Link>
           </div>
         </section>
 
@@ -261,8 +258,8 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
             Registration ke waqt operator jo amount bataye, use khud verify kar sakte hain. Har single age ka official figure aur total-till-60 ka hisaab in do pages par hai:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <Link href="/maandhan/pm-kisan-maandhan-age-wise-contribution-chart-2026" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">📊 Age-Wise Chart (Har Umar Ka Figure) →</Link>
-            <Link href="/maandhan/pm-kisan-maandhan-pension-calculator" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">🧮 Pension Calculator Guide →</Link>
+            <Link href="/maandhan/pm-kisan-maandhan-age-wise-contribution-chart-2026" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">Age-Wise Chart (Har Umar Ka Figure) →</Link>
+            <Link href="/maandhan/pm-kisan-maandhan-pension-calculator" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">Pension Calculator Guide →</Link>
           </div>
         </section>
 
@@ -324,7 +321,7 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
             Agar aap soch rahe hain ki Maandhan lein ya Atal Pension Yojana — register karne se PEHLE comparison padh lein, kyunki ek waqt mein ek hi pension scheme active reh sakti hai:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <Link href="/maandhan/pm-kisan-maandhan-vs-atal-pension-yojana" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">⚖️ PMKMY vs APY: Kaunsi Behtar Hai? →</Link>
+            <Link href="/maandhan/pm-kisan-maandhan-vs-atal-pension-yojana" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">PMKMY vs APY: Kaunsi Behtar Hai? →</Link>
           </div>
         </section>
 
@@ -337,7 +334,7 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
             Official PM Kisan portal par apne state ke nodal officer ki updated contact details mil jayengi. Complaint karte waqt Registration Number aur Application Date zaroor mention karein taaki resolution jaldi ho.
           </p>
           <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
-            <p className="text-sm font-bold text-blue-800 dark:text-blue-300 mb-2">🔗 Official Grievance Links:</p>
+            <p className="text-sm font-bold text-blue-800 dark:text-blue-300 mb-2">Official Grievance Links:</p>
             <ul className="list-disc list-inside text-xs text-blue-800 dark:text-blue-300 space-y-1">
               <li><Link href="https://pmkisan.gov.in/Grievance.aspx" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-600">PM Kisan Grievance Portal</Link></li>
               <li><Link href="https://pmkisan.gov.in/NodalOfficers.aspx" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-600">State-wise Nodal Officers List</Link></li>
@@ -379,8 +376,8 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
               },
             ].map(({ mistake, fix }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
-                <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">❌ {mistake}</p>
-                <p className="text-xs text-green-700 dark:text-green-400"><strong>✅ Fix:</strong> {fix}</p>
+                <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">{mistake}</p>
+                <p className="text-xs text-green-700 dark:text-green-400"><strong>Fix:</strong> {fix}</p>
               </div>
             ))}
           </div>
@@ -417,7 +414,6 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
                 href={`/maandhan/${card.slug}`}
                 className="group block p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:border-green-500 transition-all duration-300"
               >
-                <div className="text-2xl mb-2">{card.emoji}</div>
                 <h4 className="font-bold text-gray-900 dark:text-white text-sm mb-1 group-hover:text-green-600 transition-colors">
                   {card.title}
                 </h4>
@@ -434,9 +430,9 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
 
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/maandhan/pm-kisan-maandhan-eligibility-documents', l: '📄 Eligibility' },
-          { href: '/maandhan/pm-kisan-maandhan-pension-calculator', l: '🧮 Calculator' },
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
+          { href: '/maandhan/pm-kisan-maandhan-eligibility-documents', l: 'Eligibility' },
+          { href: '/maandhan/pm-kisan-maandhan-pension-calculator', l: 'Calculator' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
         ]} />
         <Disclaimer />
       </div>

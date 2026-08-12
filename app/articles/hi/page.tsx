@@ -153,8 +153,8 @@ export default function HindiArticlesHubPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {articles.map((a) => {
-              const categoryInfo = CATEGORIES[a.category] as { name: string; nameHi: string; icon: string } | undefined;
-              const emoji = categoryInfo?.icon || '📄';
+              const categoryInfo = CATEGORIES[a.category] as { name: string; nameHi: string; icon?: string } | undefined;
+              const emoji = categoryInfo?.icon || '';
               const categoryName = categoryInfo?.nameHi || categoryInfo?.name || 'Guide';
               return (
                 <article
@@ -177,12 +177,12 @@ export default function HindiArticlesHubPage() {
                         className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-10 pointer-events-none" aria-hidden="true" />
-                      <span className="absolute bottom-3 left-4 text-2xl drop-shadow-lg z-20" aria-hidden="true">{emoji}</span>
+                      {emoji ? <span className="absolute bottom-3 left-4 text-2xl drop-shadow-lg z-20" aria-hidden="true">{emoji}</span> : null}
                     </div>
                   </div>
                   <div className="p-6 flex flex-col flex-1">
                     <span className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-lg bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-900/30 dark:to-orange-900/30 text-amber-700 dark:text-amber-300 w-fit mb-4 border border-amber-200/50 dark:border-amber-700/50">
-                      <span className="text-base" aria-hidden="true">{emoji}</span>
+                      {emoji ? <span className="text-base" aria-hidden="true">{emoji}</span> : null}
                       <span>{categoryName}</span>
                     </span>
                     <h2 className="font-bold text-gray-900 dark:text-white text-lg leading-snug group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors duration-300 mb-3 line-clamp-2">
@@ -190,7 +190,7 @@ export default function HindiArticlesHubPage() {
                     </h2>
                     <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-2 flex-1 mb-5">{a.desc}</p>
                     <div className="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-700/50">
-                      <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">✍️ {AUTHOR_NAME}</span>
+                      <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">{AUTHOR_NAME}</span>
                       <Link
                         href={`/articles/${a.slug}`}
                         className="text-sm font-bold text-amber-700 dark:text-amber-400 group-hover:translate-x-2 transition-transform duration-300 inline-flex items-center gap-1.5"

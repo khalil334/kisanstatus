@@ -18,11 +18,11 @@ const PUBLISHED = '2026-01-08T22:33:23+05:30';
 const MODIFIED = '2026-01-17T19:59:30+05:30';
 
 const RELATED = [
-  { slug: 'PmKisanEkycOnline2026', title: 'PM Kisan eKYC Online', emoji: '🔐' },
-  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List 2026', emoji: '📋' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply', emoji: '💳' },
+  { slug: 'PmKisanEkycOnline2026', title: 'PM Kisan eKYC Online' },
+  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List 2026' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply' },
   { slug: 'PmfbyCropInsurance2026', title: 'PMFBY Crop Insurance', emoji: '🌾' },
-  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide', emoji: '📚' },
+  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide' },
 ];
 
 const FAQS_DATA = [
@@ -65,10 +65,10 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
             AgriStack Digital Profile 2026: 14-Digit ID Banwane Ka Asli Tarika — Jo Operator Nahi Batate
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 12 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>12 min read</span>
           </div>
         </div>
       </div>
@@ -121,17 +121,17 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
 
           <div className="space-y-3 mb-4">
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
-              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-1">❌ Payment Fail</p>
+              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-1">Payment Fail</p>
               <p className="text-xs text-[var(--color-text-muted)]">Digital identity verify nahi = Fund Transfer Order generate nahi hoga. Registration sahi, zameen sahi, bank active — phir bhi paisa account mein nahi aata. <Link href="/articles/PmKisanBeneficiaryList2026" className="underline font-bold text-red-700 dark:text-red-400">Beneficiary list</Link> mein naam check karo aur profile fix karwa lo, agle cycle mein payment aa jayegi.</p>
             </div>
 
             <div className="p-4 bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 rounded-xl">
-              <p className="font-black text-orange-800 dark:text-orange-300 text-sm mb-1">⏳ Loan Delay</p>
+              <p className="font-black text-orange-800 dark:text-orange-300 text-sm mb-1">Loan Delay</p>
               <p className="text-xs text-[var(--color-text-muted)]">Banks ab is digital record ko primary verification maante hain. Bina iske manual checking mein 2-3 mahine lag jate hain. Profile dikha di? Kaam 3-7 din mein. Yeh farq branches mein aksar dekha gaya hai.</p>
             </div>
 
             <div className="p-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-xl">
-              <p className="font-black text-yellow-800 dark:text-yellow-300 text-sm mb-1">⚠️ Insurance Rejection</p>
+              <p className="font-black text-yellow-800 dark:text-yellow-300 text-sm mb-1">Insurance Rejection</p>
               <p className="text-xs text-[var(--color-text-muted)]"><Link href="/articles/PmfbyCropInsurance2026" className="underline font-bold text-yellow-800 dark:text-yellow-400">PMFBY claims</Link> isliye reject hote hain kyunki crop sown registry mein fasal register nahi hoti. Is unified profile se crop data auto-link ho jata hai. Bina iske manually sabit karna padta hai — paperwork, patwari certificate, photos.</p>
             </div>
           </div>
@@ -245,7 +245,7 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
-              <p className="font-black text-green-800 dark:text-green-300 text-sm mb-2">✅ Mandatory</p>
+              <p className="font-black text-green-800 dark:text-green-300 text-sm mb-2">Mandatory</p>
               <ul className="text-xs text-[var(--color-text-muted)] space-y-1">
                 <li>✓ Original Aadhaar card</li>
                 <li>✓ Active linked SIM</li>
@@ -256,7 +256,7 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
               </ul>
             </div>
             <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
-              <p className="font-black text-blue-800 dark:text-blue-300 text-sm mb-2">📌 Extra (Situation Based)</p>
+              <p className="font-black text-blue-800 dark:text-blue-300 text-sm mb-2">Extra (Situation Based)</p>
               <ul className="text-xs text-[var(--color-text-muted)] space-y-1">
                 <li>✓ Tenant → NOC</li>
                 <li>✓ Joint → Consent letter</li>
@@ -276,19 +276,19 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
           </p>
           <div className="space-y-3">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
-              <h3 className="font-black text-green-800 dark:text-green-300 text-sm mb-1">🟢 UP, MP, Maharashtra</h3>
+              <h3 className="font-black text-green-800 dark:text-green-300 text-sm mb-1">UP, MP, Maharashtra</h3>
               <p className="text-xs text-[var(--color-text-muted)]">Smoothest process. Center density high, staff trained, land digitization mature. 15-20 minute. Best time: subah 9-11.</p>
             </div>
             <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
-              <h3 className="font-black text-blue-800 dark:text-blue-300 text-sm mb-1">🔵 Rajasthan, Gujarat</h3>
+              <h3 className="font-black text-blue-800 dark:text-blue-300 text-sm mb-1">Rajasthan, Gujarat</h3>
               <p className="text-xs text-[var(--color-text-muted)]">Moderate. State portal sync kabhi-kabhi fail hota hai. Land Not Found error aaye toh 2-3 din baad retry karein. Digital signature wali Khatauni helpful hoti hai.</p>
             </div>
             <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl">
-              <h3 className="font-black text-amber-800 dark:text-amber-300 text-sm mb-1">🟡 Bihar, Jharkhand, Odisha</h3>
+              <h3 className="font-black text-amber-800 dark:text-amber-300 text-sm mb-1">Bihar, Jharkhand, Odisha</h3>
               <p className="text-xs text-[var(--color-text-muted)]">Slow process. Land digitization incomplete. Verification 2-4 hafte lag sakte hain. BAO se pre-verification letter process fast karta hai. Mobile camps aate hain — Pradhan se puch lo.</p>
             </div>
             <div className="p-4 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-xl">
-              <h3 className="font-black text-purple-800 dark:text-purple-300 text-sm mb-1">🟣 Punjab, Haryana</h3>
+              <h3 className="font-black text-purple-800 dark:text-purple-300 text-sm mb-1">Punjab, Haryana</h3>
               <p className="text-xs text-[var(--color-text-muted)]">Strict verification. Tenant ke liye notarized NOC compulsory hai. Bina NOC ke process nahi hota. Records digitized hain lekin checking tight hai, PAMS cross-check hota hai.</p>
             </div>
           </div>
@@ -374,19 +374,18 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
         </div>
 
         <CalcBanner
-          icon="🆔"
           title="Apna Benefit Calculate Karein"
           desc="Samman nidhi benefit, credit EMI, crop profit — sab free calculators se check karein"
-          primaryCta={{ href: '/calculator/pm-kisan-benefit', label: '💰 Benefit Calculator →' }}
-          secondaryCta={{ href: '/calculator', label: '🧮 Sab Utilities' }}
+          primaryCta={{ href: '/calculator/pm-kisan-benefit', label: 'Benefit Calculator →' }}
+          secondaryCta={{ href: '/calculator', label: 'Sab Utilities' }}
         />
 
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/PmKisanEkycOnline2026', l: '🔐 eKYC Process' },
-          { href: '/articles/PmKisanBeneficiaryList2026', l: '📋 Beneficiary List' },
-          { href: '/articles/KisanCreditCardOnlineApply2026', l: '💳 KCC Guide' },
+          { href: '/articles/PmKisanEkycOnline2026', l: 'eKYC Process' },
+          { href: '/articles/PmKisanBeneficiaryList2026', l: 'Beneficiary List' },
+          { href: '/articles/KisanCreditCardOnlineApply2026', l: 'KCC Guide' },
         ]} />
         <Disclaimer />
       </div>

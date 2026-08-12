@@ -12,7 +12,7 @@ const RELATED_CARDS = [
     slug: 'pm-kisan-maandhan-status-check-online',
     title: 'Online Status Check',
     desc: 'Apna pension contribution history aur payment details ghar baithe kaise verify karein.',
-    emoji: '🔍',
+    
   },
   {
     slug: 'pmkmy-bank-account-change',
@@ -24,7 +24,7 @@ const RELATED_CARDS = [
     slug: 'pm-kisan-maandhan-pension-card-download',
     title: 'Pension Card Download',
     desc: 'PMKMY acknowledgement slip aur pension card ki soft copy kaise prapt karein.',
-    emoji: '📄',
+    
   },
 ];
 
@@ -126,10 +126,10 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
           </h1>
 
           <div className="hero-description flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 10 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>10 min read</span>
           </div>
         </div>
       </div>
@@ -153,7 +153,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
         </div>
 
         <div className="my-6 p-5 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 rounded-xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">✅ VERIFIED OFFICIAL CONTACTS (2026)</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">VERIFIED OFFICIAL CONTACTS (2026)</h3>
           <div className="space-y-3 text-sm">
             <div className="bg-white dark:bg-gray-800 p-4 rounded-lg">
               <p className="font-bold text-gray-900 dark:text-white mb-2"> Helpline Numbers:</p>
@@ -172,7 +172,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
               </ul>
             </div>
             <div className="bg-white dark:bg-gray-800 p-4 rounded-lg">
-              <p className="font-bold text-gray-900 dark:text-white mb-2">🌐 Official Portals:</p>
+              <p className="font-bold text-gray-900 dark:text-white mb-2">Official Portals:</p>
               <ul className="space-y-1 text-[var(--color-text-muted)]">
                 <li><strong>pmkmy.gov.in</strong> — Main portal for grievances</li>
                 <li><strong>maandhan.in</strong> — Ministry of Labour & Employment portal</li>
@@ -183,7 +183,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
 
         <div className="my-6 p-5 bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 rounded-r-xl">
           <p className="text-sm md:text-base text-amber-900 dark:text-amber-100 leading-relaxed font-medium">
-            <strong>⚠️ Fraud Alert:</strong> Internet par bahut saare fake numbers ghoom rahe hain. Sirf upar diye gaye verified numbers aur emails ka hi upayog karein. Koi bhi aapse "processing fee" ya "fast track charge" maange, to wo fraud hai.
+            <strong>Fraud Alert:</strong> Internet par bahut saare fake numbers ghoom rahe hain. Sirf upar diye gaye verified numbers aur emails ka hi upayog karein. Koi bhi aapse "processing fee" ya "fast track charge" maange, to wo fraud hai.
           </p>
         </div>
 
@@ -231,7 +231,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
         <section className="mb-8">
           <SH>Hypothetical Example — Step-by-Step Resolution Process</SH>
           <div className="bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-400 rounded-xl p-5 mb-6">
-            <h3 className="font-bold text-blue-900 dark:text-blue-300 mb-3">📋 Example Scenario: Payment Deduction Issue</h3>
+            <h3 className="font-bold text-blue-900 dark:text-blue-300 mb-3">Example Scenario: Payment Deduction Issue</h3>
             <div className="space-y-3 text-sm text-[var(--color-text-muted)]">
               <p><strong>Typical Problem:</strong> "Mere account se 3 mahine se ₹100 kat rahe hain, lekin portal par status 'Inactive' dikh raha hai."</p>
               <p><strong>Recommended Solution Steps:</strong></p>
@@ -244,7 +244,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
                 <li>Submit karne par Reference Number note karein</li>
                 <li>7 din baad portal par check karein — status "Under Process" ho sakta hai</li>
                 <li>12-15 din baad email aa sakta hai: "Your grievance has been resolved"</li>
-                <li>Portal par status check karein — "Active" dikhna chahiye ✅</li>
+                <li>Portal par status check karein — "Active" dikhna chahiye</li>
               </ol>
               <p className="text-green-700 dark:text-green-300 font-medium"><strong>Expected Time:</strong> 12-15 working days (official guidelines ke mutabiq)</p>
             </div>
@@ -298,7 +298,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
 
           <div className="grid md:grid-cols-2 gap-4 mb-6">
             <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border-2 border-green-500">
-              <h4 className="font-bold text-green-900 dark:text-green-300 mb-2">✅ CSC Helpdesk Tab Call Karein Jab:</h4>
+              <h4 className="font-bold text-green-900 dark:text-green-300 mb-2">CSC Helpdesk Tab Call Karein Jab:</h4>
               <ul className="text-xs text-[var(--color-text-muted)] space-y-1 list-disc pl-5">
                 <li>Enrollment form mein galti hui ho</li>
                 <li>Aadhaar number galat register ho gaya ho</li>
@@ -310,7 +310,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
             </div>
 
             <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg border-2 border-red-500">
-              <h4 className="font-bold text-red-900 dark:text-red-300 mb-2">❌ CSC Helpdesk Tab Na Call Karein Jab:</h4>
+              <h4 className="font-bold text-red-900 dark:text-red-300 mb-2">CSC Helpdesk Tab Na Call Karein Jab:</h4>
               <ul className="text-xs text-[var(--color-text-muted)] space-y-1 list-disc pl-5">
                 <li>Payment issue ho (ye bank/LIC ka matter hai)</li>
                 <li>Pension amount kam mil rahi ho</li>
@@ -347,7 +347,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
           </p>
 
           <div className="bg-blue-50 dark:bg-blue-900/20 p-5 rounded-xl border border-blue-200 dark:border-blue-800 mb-6">
-            <h3 className="font-bold text-blue-900 dark:text-blue-300 mb-3">📧 Email Format — Copy-Paste Ready:</h3>
+            <h3 className="font-bold text-blue-900 dark:text-blue-300 mb-3">Email Format — Copy-Paste Ready:</h3>
             <div className="bg-white dark:bg-gray-800 p-4 rounded-lg text-xs space-y-2 font-mono">
               <p><strong>Subject:</strong> PMKMY Grievance - [Aapka Naam] - [Mobile Number]</p>
               <br />
@@ -403,12 +403,12 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
               <p className="text-xs text-green-700 dark:text-green-300 font-medium">Sabse fast aur reliable</p>
             </div>
             <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border border-green-100 dark:border-green-800">
-              <h3 className="font-bold text-gray-900 dark:text-gray-100 mb-2">📞 Helpline Call</h3>
+              <h3 className="font-bold text-gray-900 dark:text-gray-100 mb-2">Helpline Call</h3>
               <p className="text-xs text-[var(--color-text-muted)] mb-2">18002676888 ya 14434 par call karke reference number batayein.</p>
               <p className="text-xs text-amber-700 dark:text-amber-300 font-medium">Lines busy ho sakti hain</p>
             </div>
             <div className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg border border-yellow-100 dark:border-yellow-800">
-              <h3 className="font-bold text-gray-900 dark:text-gray-100 mb-2">📧 Email Reply</h3>
+              <h3 className="font-bold text-gray-900 dark:text-gray-100 mb-2">Email Reply</h3>
               <p className="text-xs text-[var(--color-text-muted)] mb-2">scpms@licindia.com par reply check karein.</p>
               <p className="text-xs text-blue-700 dark:text-blue-300 font-medium">7-10 working days lag sakte hain</p>
             </div>
@@ -430,7 +430,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
           </div>
 
           <div className="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-lg border border-amber-300 dark:border-amber-700">
-            <h4 className="font-bold text-amber-900 dark:text-amber-300 mb-2">⏱️ Expected Resolution Timeline:</h4>
+            <h4 className="font-bold text-amber-900 dark:text-amber-300 mb-2">Expected Resolution Timeline:</h4>
             <ul className="text-sm text-[var(--color-text-muted)] space-y-1">
               <li><strong>Simple queries:</strong> 3-5 working days</li>
               <li><strong>Payment issues:</strong> 7-10 working days</li>
@@ -561,7 +561,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
         <BottomNav extraLinks={[
           { href: '/maandhan/pm-kisan-maandhan-status-check-online', l: ' Status Check' },
           { href: '/maandhan/pmkmy-bank-account-change', l: '🏦 Bank Change' },
-          { href: '/maandhan/pm-kisan-maandhan-pension-card-download', l: '📄 Pension Card' },
+          { href: '/maandhan/pm-kisan-maandhan-pension-card-download', l: 'Pension Card' },
         ]} />
         <Disclaimer />
       </div>

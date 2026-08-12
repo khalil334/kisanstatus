@@ -10,12 +10,12 @@ const MODIFIED = '2026-03-04T16:41:58+05:30';
 const IMG_BASE = '/images/articles/pm-kisan-self-registered-status-check';
 
 const RELATED = [
-  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '📅' },
-  { slug: 'PmKisanMasterGuide2026', title: 'Complete Guide', emoji: '📚' },
-  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List', emoji: '📋' },
-  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide', emoji: '🔐' },
-  { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Status', emoji: '💳' },
-  { slug: 'PmKisanPaymentFailedFix2026', title: 'Payment Failed Fix', emoji: '❌' },
+  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status' },
+  { slug: 'PmKisanMasterGuide2026', title: 'Complete Guide' },
+  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List' },
+  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide' },
+  { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Status' },
+  { slug: 'PmKisanPaymentFailedFix2026', title: 'Payment Failed Fix' },
 ];
 
 const FAQS_DATA = [
@@ -87,15 +87,15 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
             <span>/</span>
             <span className="text-white font-bold">Self Registration Status</span>
           </nav>
-          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">📝 Self Registration Guide</span>
+          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Self Registration Guide</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
             PM Kisan Self Registration Status Check 2026: Khud Kiya Registration? Yahan Se Pata Karo
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 10 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>10 min read</span>
           </div>
         </div>
       </div>
@@ -216,14 +216,14 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
 
           <div className="space-y-3">
             <div className="bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500 p-4 rounded-r-xl">
-              <h3 className="font-black text-green-800 dark:text-green-300 text-sm mb-2">✅ Active</h3>
+              <h3 className="font-black text-green-800 dark:text-green-300 text-sm mb-2">Active</h3>
               <p className="text-xs text-[var(--color-text-muted)] leading-relaxed">
                 Matlab sab theek hai. Aap verified ho, payment eligible ho. Agli kist aayegi automatically. Bas bank account active rakho, eKYC complete rakho.
               </p>
             </div>
 
             <div className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 p-4 rounded-r-xl">
-              <h3 className="font-black text-amber-800 dark:text-amber-300 text-sm mb-2">⏳ Pending / Under Verification</h3>
+              <h3 className="font-black text-amber-800 dark:text-amber-300 text-sm mb-2">Pending / Under Verification</h3>
               <p className="text-xs text-[var(--color-text-muted)] leading-relaxed mb-2">
                 Matlab application submit ho gayi hai lekin abhi verify nahi hui. Yeh normal hai — usually ek se do hafte ke andar clear ho jaata hai, kyunki verification State Nodal Officer ke through manually hota hai, automated nahi.
               </p>
@@ -233,7 +233,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
             </div>
 
             <div className="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 p-4 rounded-r-xl">
-              <h3 className="font-black text-red-800 dark:text-red-300 text-sm mb-2">❌ Rejected</h3>
+              <h3 className="font-black text-red-800 dark:text-red-300 text-sm mb-2">Rejected</h3>
               <p className="text-xs text-[var(--color-text-muted)] leading-relaxed mb-2">
                 Matlab koi problem hai. Portal par reason dikhega — woh dekho.
               </p>
@@ -325,7 +325,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
               },
             ].map(({ problem, solution }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
-                <p className="font-bold text-red-700 dark:text-red-400 text-sm mb-2">❌ {problem}</p>
+                <p className="font-bold text-red-700 dark:text-red-400 text-sm mb-2">{problem}</p>
                 <p className="text-xs text-green-700 dark:text-green-400"><strong>Solution:</strong> {solution}</p>
               </div>
             ))}
@@ -365,7 +365,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
           <SH>Help Kahan Se Le?</SH>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
-              <p className="font-black text-green-800 dark:text-green-300 text-sm mb-2">📞 Helpline</p>
+              <p className="font-black text-green-800 dark:text-green-300 text-sm mb-2">Helpline</p>
               <p className="text-xs text-[var(--color-text-muted)]">155261 (Toll Free)</p>
               <p className="text-xs text-[var(--color-text-muted)]">Mon-Sat, 9 AM - 6 PM</p>
             </div>
@@ -375,12 +375,12 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
               <p className="text-xs text-[var(--color-text-muted)]">Written complaint do</p>
             </div>
             <div className="p-4 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-xl">
-              <p className="font-black text-purple-800 dark:text-purple-300 text-sm mb-2">💻 CSC Center</p>
+              <p className="font-black text-purple-800 dark:text-purple-300 text-sm mb-2">CSC Center</p>
               <p className="text-xs text-[var(--color-text-muted)]">Nazdeeki CSC jaao</p>
               <p className="text-xs text-[var(--color-text-muted)]">₹20-30 charge lag sakta hai</p>
             </div>
             <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl">
-              <p className="font-black text-amber-800 dark:text-amber-300 text-sm mb-2">📧 Email</p>
+              <p className="font-black text-amber-800 dark:text-amber-300 text-sm mb-2">Email</p>
               <p className="text-xs text-[var(--color-text-muted)]">pmkisan-ict@gov.in</p>
               <p className="text-xs text-[var(--color-text-muted)]">Screenshot attach karo</p>
             </div>
@@ -389,7 +389,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
 
         <section className="mb-8">
           <div className="p-4 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-xl">
-            <p className="text-xs font-bold text-[var(--color-text)] mb-2">📌 Official Source</p>
+            <p className="text-xs font-bold text-[var(--color-text)] mb-2">Official Source</p>
             <ul className="text-xs text-[var(--color-text-muted)] space-y-1 list-disc list-inside">
               <li>
                 Status check ka process — Farmers Corner &gt; Know Your Status, official portal:{' '}
@@ -448,19 +448,18 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
         />
 
         <CalcBanner
-          icon="📊"
           title="Apna Total Benefit Calculate Karo"
           desc="Kitni installments mili, kitni pending — sab jaano"
-          primaryCta={{ href: '/calculator/pm-kisan-benefit', label: '💰 Benefit Calculator →' }}
-          secondaryCta={{ href: '/calculator', label: '🧮 Sab Utilities' }}
+          primaryCta={{ href: '/calculator/pm-kisan-benefit', label: 'Benefit Calculator →' }}
+          secondaryCta={{ href: '/calculator', label: 'Sab Utilities' }}
         />
 
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/PmKisan24viKist2026', l: '📅 24vi Kist' },
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
-          { href: '/articles/PmKisanEkycOnline2026', l: '🔐 eKYC Guide' },
+          { href: '/articles/PmKisan24viKist2026', l: '24vi Kist' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
+          { href: '/articles/PmKisanEkycOnline2026', l: 'eKYC Guide' },
         ]} />
         <Disclaimer />
       </div>
